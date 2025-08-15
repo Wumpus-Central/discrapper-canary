@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(856888),
     S = n(921801),
     T = n(246946),
-    I = n(663389),
-    N = n(351402),
+    N = n(663389),
+    I = n(351402),
     y = n(853872),
     A = n(78839),
     P = n(580130),
@@ -103,9 +103,9 @@ let q = function () {
             [e],
         ),
         m = (0, l.e7)([A.Z], () => A.Z.hasFetchedSubscriptions()),
-        _ = (0, l.e7)([N.Z], () => N.Z.isBusy),
+        _ = (0, l.e7)([I.Z], () => I.Z.isBusy),
         j = (0, x.V)(),
-        P = (0, l.e7)([I.Z], () => I.Z.getSubsection()),
+        P = (0, l.e7)([N.Z], () => N.Z.getSubsection()),
         Z = (0, l.e7)([A.Z], () => {
             var e, t;
             return null != (t = null == (e = A.Z.getActiveApplicationSubscriptions()) ? void 0 : e.length) ? t : 0;

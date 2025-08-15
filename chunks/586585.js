@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(793030),
-    o = n(179538),
-    a = n(159691),
+    a = n(179538),
+    o = n(159691),
     s = n(481060),
     l = n(600164),
     c = n(563132),
@@ -73,7 +73,7 @@ let E = (e) => {
                 primaryIcon: t,
                 primaryCTA: n,
                 primaryType: i,
-                primaryText: o,
+                primaryText: a,
                 primaryDisabled: s,
                 primarySubmitting: l,
                 onPrimary: c,
@@ -92,17 +92,17 @@ let E = (e) => {
                                   className: f.primaryIcon,
                               }),
                 loading: l,
-                text: o,
+                text: a,
             };
         return 2 === n
-            ? (0, r.jsx)(a.zx, p({ variant: "expressive" }, d, u))
-            : (0, r.jsx)(a.zx, p(m(p({}, d), { variant: 0 === n ? "primary" : "active" }), u));
+            ? (0, r.jsx)(o.zx, p({ variant: "expressive" }, d, u))
+            : (0, r.jsx)(o.zx, p(m(p({}, d), { variant: 0 === n ? "primary" : "active" }), u));
     },
     b = (e) => {
         let {
                 onBack: t,
                 backText: n,
-                primaryIcon: a,
+                primaryIcon: o,
                 primaryCTA: f,
                 primaryType: _,
                 primaryText: h,
@@ -115,7 +115,7 @@ let E = (e) => {
             I = () => {
                 if (null == f || null == h) return null;
                 let e = {
-                    primaryIcon: a,
+                    primaryIcon: o,
                     primaryCTA: f,
                     primaryType: _,
                     primaryText: h,
@@ -133,7 +133,7 @@ let E = (e) => {
             T = () =>
                 null == t
                     ? null
-                    : (0, r.jsx)(o.A, {
+                    : (0, r.jsx)(a.A, {
                           text: null != n ? n : d.intl.string(d.t["13/7kZ"]),
                           onClick: t,
                           variant: "secondary",

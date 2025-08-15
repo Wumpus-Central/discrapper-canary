@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(740594),
-    o = n(38273);
-function a(e, t, n) {
+    a = n(38273);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -60,9 +60,9 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -71,15 +71,15 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function f(e) {
     var {
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: a,
+            useShorterCTA: o,
             isPersistentCTA: l,
             buttonTextOverride: d,
             defaultTextOverride: f,
@@ -99,13 +99,13 @@ function f(e) {
     let m = {
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: a,
+            useShorterCTA: o,
             isPersistentCTA: l,
             buttonTextOverride: d,
             defaultTextOverride: f,
             iconOverride: _,
             variantOverride: p,
         },
-        { subscribeButtonProps: g, subscriptionTier: E } = (0, o.G)(m);
+        { subscribeButtonProps: g, subscriptionTier: E } = (0, a.G)(m);
     return (0, r.jsx)(i.Z, c(s({}, h, g), { subscriptionTier: E }));
 }

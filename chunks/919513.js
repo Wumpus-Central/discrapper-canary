@@ -1,7 +1,7 @@
 n.d(t, {
-    JP: () => a,
+    JP: () => o,
     sM: () => s,
-    up: () => o,
+    up: () => a,
 });
 var r = n(573654);
 function i(e) {
@@ -16,12 +16,12 @@ function i(e) {
                       : typeof e;
               })(e);
 }
-function o(e) {
+function a(e) {
     (0, r.k)("function" == typeof e.canDrag, "Expected canDrag to be a function."),
         (0, r.k)("function" == typeof e.beginDrag, "Expected beginDrag to be a function."),
         (0, r.k)("function" == typeof e.endDrag, "Expected endDrag to be a function.");
 }
-function a(e) {
+function o(e) {
     (0, r.k)("function" == typeof e.canDrop, "Expected canDrop to be a function."),
         (0, r.k)("function" == typeof e.hover, "Expected hover to be a function."),
         (0, r.k)("function" == typeof e.drop, "Expected beginDrag to be a function.");

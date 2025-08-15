@@ -1,21 +1,21 @@
-t.d(e, { default: () => c });
-var i = t(255367);
-t(73800);
-var l = t(481060),
-    a = t(239091),
-    r = t(358085),
-    d = t(905041),
-    s = t(388032);
-function c(n) {
-    let { href: e, textContent: t, onSelect: c } = n,
-        o = (0, d.Z)(e, t);
-    return r.isPlatformEmbedded && null != o
-        ? (0, i.jsx)(l.v2r, {
+e.d(n, { default: () => u });
+var l = e(255367);
+e(73800);
+var i = e(481060),
+    r = e(239091),
+    a = e(358085),
+    o = e(905041),
+    s = e(388032);
+function u(t) {
+    let { href: n, textContent: e, onSelect: u } = t,
+        c = (0, o.Z)(n, e);
+    return a.isPlatformEmbedded && null != c
+        ? (0, l.jsx)(i.v2r, {
               navId: "image-context",
-              onClose: a.Zy,
+              onClose: r.Zy,
               "aria-label": s.intl.string(s.t.Zow2V1),
-              onSelect: c,
-              children: (0, i.jsx)(l.kSQ, { children: o }),
+              onSelect: u,
+              children: (0, l.jsx)(i.kSQ, { children: c }),
           })
         : null;
 }

@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(278074),
+    a = n.n(i),
+    o = n(278074),
     s = n(442837),
     l = n(692547),
     c = n(780384),
@@ -88,7 +88,7 @@ function O(e) {
             name: t,
             className: n,
             style: i,
-            onSelect: a,
+            onSelect: o,
             isSelected: s = !1,
             tabIndex: l,
             children: c,
@@ -110,9 +110,9 @@ function O(e) {
                         u.P3F,
                         b(g({}, e, m), {
                             tabIndex: null != l ? l : m.tabIndex,
-                            className: o()(h.themeSelection, { [h.selected]: s }, n),
+                            className: a()(h.themeSelection, { [h.selected]: s }, n),
                             style: i,
-                            onClick: s ? _.dG4 : a,
+                            onClick: s ? _.dG4 : o,
                             children: c,
                         }),
                     ),
@@ -134,7 +134,7 @@ function v(e) {
     let { theme: t, isSelected: n, onSelect: i } = e,
         l = (0, s.e7)([d.Z], () => d.Z.systemTheme),
         c = d.Z.themePreferenceForSystemTheme(l),
-        f = (0, a.EQ)({
+        f = (0, o.EQ)({
             theme: t,
             themePreferenceForSystemTheme: c,
         })
@@ -171,7 +171,7 @@ function v(e) {
             .with({ theme: _.BRd.DARKER }, () => h.darkerIcon)
             .with({ theme: _.BRd.MIDNIGHT }, () => h.midnightIcon)
             .otherwise(() => h.darkIcon),
-        m = (0, a.EQ)(t)
+        m = (0, o.EQ)(t)
             .with(_.BRd.LIGHT, () => p.intl.string(p.t.K2sFfn))
             .with(_.BRd.DARK, () => p.intl.string(p.t.SMPT1t))
             .with(_.BRd.DARKER, () => p.intl.string(p.t.b8Cei4))
@@ -182,7 +182,7 @@ function v(e) {
         onSelect: i,
         isSelected: n,
         name: m,
-        className: o()(h.defaultThemeSelection, f),
+        className: a()(h.defaultThemeSelection, f),
         children:
             "system" === t &&
             (0, r.jsx)("div", {
@@ -195,7 +195,7 @@ function v(e) {
     });
 }
 function I(e) {
-    let { preset: t, isSelected: n, disabled: i, tabIndex: a, onSelect: s, showBadge: l, showLockedBadge: u } = e,
+    let { preset: t, isSelected: n, disabled: i, tabIndex: o, onSelect: s, showBadge: l, showLockedBadge: u } = e,
         { colors: d, angle: _, theme: p } = t,
         m = (0, f.VK)({
             colors: d,
@@ -205,9 +205,9 @@ function I(e) {
         onSelect: i ? void 0 : s,
         isSelected: n,
         name: t.getName(),
-        className: o()([i ? h.disabled : null, (0, c.wj)(p) ? h.darkOverlay : h.lightOverlay]),
+        className: a()([i ? h.disabled : null, (0, c.wj)(p) ? h.darkOverlay : h.lightOverlay]),
         style: { background: "var(--background-gradient), ".concat(m) },
-        tabIndex: a,
+        tabIndex: o,
         showBadge: l,
         showLockedBadge: u,
     });

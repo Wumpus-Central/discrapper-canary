@@ -2,18 +2,18 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(230711),
+    l = n(230711),
     a = n(549879),
-    s = n(906732),
-    l = n(981631),
+    o = n(906732),
+    s = n(981631),
     c = n(388032);
 function u(e) {
-    let { analyticsLocations: t } = (0, s.ZP)();
+    let { analyticsLocations: t } = (0, o.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: "voice-settings",
         label: c.intl.string(c.t.NiTd0d),
         action: () => {
-            o.Z.open(l.oAB.VOICE, null, {
+            l.Z.open(s.oAB.VOICE, null, {
                 analyticsLocations: t,
                 appContext: e,
             }),

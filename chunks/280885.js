@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(40966),
     c = n(580552),
@@ -15,7 +15,7 @@ function h(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHover: o = !1,
+            animateOnHover: a = !1,
             isHovering: h = !1,
             lineClamp: m = 6,
             setLineClamp: g = !0,
@@ -30,7 +30,7 @@ function h(e) {
     return null == O
         ? null
         : (0, r.jsxs)("section", {
-              className: a()(n, p.markup),
+              className: o()(n, p.markup),
               "aria-labelledby": y,
               children: [
                   (0, r.jsx)(s.nn4, {
@@ -45,7 +45,7 @@ function h(e) {
                       color: void 0 !== E ? E : void 0,
                       children: (0, r.jsx)(u.G.Provider, {
                           value: {
-                              disableAnimations: o && !h,
+                              disableAnimations: a && !h,
                               disableInteractions: !1,
                           },
                           children: O,

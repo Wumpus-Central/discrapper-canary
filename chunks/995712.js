@@ -1,18 +1,18 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(686546),
-    a = n(768581),
-    s = n(388032),
-    o = n(91709);
+var a = n(481060),
+    i = n(686546),
+    l = n(768581),
+    o = n(388032),
+    s = n(91709);
 let c = (e) => {
     var t;
     let { entry: n } = e,
         { id: c, icon: d, name: u } = n,
         m =
             null !=
-            (t = a.ZP.getGuildIconURL({
+            (t = l.ZP.getGuildIconURL({
                 id: c,
                 icon: d,
                 size: 32,
@@ -20,30 +20,30 @@ let c = (e) => {
                 ? t
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: s.container,
         children: [
-            (0, r.jsx)(i.X6q, {
-                className: o.header,
+            (0, r.jsx)(a.X6q, {
+                className: s.header,
                 variant: "heading-sm/semibold",
-                children: s.intl.string(s.t.nTe4HB),
+                children: o.intl.string(o.t.nTe4HB),
             }),
             (0, r.jsx)("div", {
-                className: o.guildContainer,
+                className: s.guildContainer,
                 children: (0, r.jsxs)("div", {
-                    className: o.guildInfo,
+                    className: s.guildInfo,
                     children: [
-                        (0, r.jsx)(l.ZP, {
-                            mask: l.ZP.Masks.SQUIRCLE,
+                        (0, r.jsx)(i.ZP, {
+                            mask: i.ZP.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: o.guildIconMask,
+                            className: s.guildIconMask,
                             children: (0, r.jsx)("img", {
                                 src: m,
                                 alt: "",
-                                className: o.guildIcon,
+                                className: s.guildIcon,
                             }),
                         }),
-                        (0, r.jsx)(i.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: u,

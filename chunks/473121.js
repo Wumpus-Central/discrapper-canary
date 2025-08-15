@@ -1,10 +1,10 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
-    i = n(73800),
-    l = n(481060),
-    a = n(454585),
-    s = n(273744),
-    o = n(388032),
+    a = n(73800),
+    i = n(481060),
+    l = n(454585),
+    o = n(273744),
+    s = n(388032),
     c = n(204800);
 let d = (e) => {
     var t, n;
@@ -12,9 +12,9 @@ let d = (e) => {
             node: { header: d, subheader: u, button: m },
             isModeratorReport: p,
         } = e,
-        g = (null == m ? void 0 : m.type) === "submit",
-        _ = i.useRef(
-            a.Z.reactParserFor(
+        _ = (null == m ? void 0 : m.type) === "submit",
+        g = a.useRef(
+            l.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,8 +39,8 @@ let d = (e) => {
                             });
                     }
                     return e;
-                })({}, a.Z.defaultRules)),
-                (n = n = { link: s.s }),
+                })({}, l.Z.defaultRules)),
+                (n = n = { link: o.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -60,24 +60,24 @@ let d = (e) => {
         className: c.headerContainer,
         children: [
             null != d && "" !== d
-                ? (0, r.jsx)(l.X6q, {
+                ? (0, r.jsx)(i.X6q, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
                       children: d,
                   })
                 : null,
             null != u && "" !== d
-                ? (0, r.jsx)(l.Text, {
+                ? (0, r.jsx)(i.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: _.current(u),
+                      children: g.current(u),
                   })
                 : null,
-            g &&
+            _ &&
                 !p &&
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
-                    children: o.intl.format(o.t.Q0tSKS, {}),
+                    children: s.intl.format(s.t.Q0tSKS, {}),
                 }),
         ],
     });

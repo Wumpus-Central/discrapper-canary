@@ -1,32 +1,32 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
-    s = n(622822),
-    o = n(665149),
+    o = n(622822),
+    s = n(665149),
     c = n(731290),
     u = n(594174),
     d = n(91159),
-    h = n(593130),
-    p = n(388032),
+    p = n(593130),
+    h = n(388032),
     f = n(568592);
-function g(e) {
+function m(e) {
     let { channel: t } = e,
-        [n, g] = i.useState(!1),
-        m = i.useRef(null),
+        [n, m] = i.useState(!1),
+        g = i.useRef(null),
         b = (0, l.e7)([c.Z, u.default], () => {
             let e = u.default.getCurrentUser();
-            return null == e || ((0, s.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
+            return null == e || ((0, o.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
         }, [t]),
         y = i.useCallback(() => {
-            g(!1);
+            m(!1);
         }, []),
-        x = i.useCallback(() => {
-            n || (0, d.U4)("Popout"), g(!n);
+        _ = i.useCallback(() => {
+            n || (0, d.U4)("Popout"), m(!n);
         }, [n]);
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: m,
+        targetElementRef: g,
         animation: a.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
@@ -35,7 +35,7 @@ function g(e) {
         onRequestClose: y,
         renderPopout: function () {
             return (0, r.jsx)(a.VqE, {
-                children: (0, r.jsx)(h.Z, {
+                children: (0, r.jsx)(p.Z, {
                     className: f.browser,
                     channel: t,
                     onClose: y,
@@ -47,7 +47,7 @@ function g(e) {
             var n, i;
             let { isShown: l } = t;
             return (0, r.jsx)(
-                o.JO,
+                s.JO,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,12 +75,12 @@ function g(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        ref: m,
+                        ref: g,
                         className: f.icon,
-                        onClick: x,
+                        onClick: _,
                         icon: a.or_,
-                        "aria-label": p.intl.string(p.t.B2panJ),
-                        tooltip: l ? null : p.intl.string(p.t.B2panJ),
+                        "aria-label": h.intl.string(h.t.B2panJ),
+                        tooltip: l ? null : h.intl.string(h.t.B2panJ),
                         disabled: b,
                         selected: l,
                     }),

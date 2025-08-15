@@ -1,4 +1,4 @@
-let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y;
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y;
 n.d(t, { Z: () => ed });
 var O,
     v = n(979554),
@@ -46,13 +46,13 @@ function M(e) {
     let { globalName: t } = e;
     i = t;
 }
-function j(e) {
+function k(e) {
     let { legacyUsernameDisabled: t } = e;
     _ = t;
 }
-function k(e) {
+function j(e) {
     let { avatarDecoration: t } = e;
-    o = t;
+    a = t;
 }
 function U(e) {
     let { nameplate: t } = e;
@@ -60,7 +60,7 @@ function U(e) {
 }
 function G(e) {
     let { profileEffectId: t } = e;
-    a = t;
+    o = t;
 }
 function B(e) {
     let { item: t } = e;
@@ -68,7 +68,7 @@ function B(e) {
         ? ((E = null), (b = null == t ? void 0 : t.id))
         : (null == t ? void 0 : t.type) === v.Z.AVATAR_DECORATION && ((b = null), (E = t));
 }
-function Z(e) {
+function V(e) {
     let { banner: t } = e;
     l = t;
 }
@@ -76,7 +76,7 @@ function F(e) {
     let { bio: t } = e;
     c = t;
 }
-function V(e) {
+function Z(e) {
     let { pronouns: t } = e;
     u = t;
 }
@@ -130,16 +130,16 @@ function en() {
     er(), ei(), es(), el(), (C = {});
 }
 function er() {
-    (r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0), (h = void 0);
+    (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0), (h = void 0);
 }
 function ei() {
-    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0);
-}
-function eo() {
-    (g = void 0), (E = void 0), (b = void 0), (y = void 0), (m = void 0);
+    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0);
 }
 function ea() {
-    o = void 0;
+    (g = void 0), (E = void 0), (b = void 0), (y = void 0), (m = void 0);
+}
+function eo() {
+    a = void 0;
 }
 function es() {
     _ = void 0;
@@ -148,7 +148,7 @@ function el() {
     p = void 0;
 }
 function ec() {
-    en(), eo(), P();
+    en(), ea(), P();
 }
 class eu extends (O = I.ZP.Store) {
     getFormState() {
@@ -165,8 +165,8 @@ class eu extends (O = I.ZP.Store) {
             void 0 !== u ||
             void 0 !== d ||
             void 0 !== f ||
-            void 0 !== o ||
             void 0 !== a ||
+            void 0 !== o ||
             void 0 !== i ||
             void 0 !== s ||
             void 0 !== _ ||
@@ -199,13 +199,13 @@ class eu extends (O = I.ZP.Store) {
         return f;
     }
     getPendingAvatarDecoration() {
-        return o;
+        return a;
     }
     getPendingNameplate() {
         return s;
     }
     getPendingProfileEffectId() {
-        return a;
+        return o;
     }
     getAllPending() {
         return {
@@ -215,8 +215,8 @@ class eu extends (O = I.ZP.Store) {
             pendingPronouns: u,
             pendingAccentColor: d,
             pendingThemeColors: f,
-            pendingAvatarDecoration: o,
-            pendingProfileEffectId: a,
+            pendingAvatarDecoration: a,
+            pendingProfileEffectId: o,
             pendingGlobalName: i,
             pendingNameplate: s,
             pendingLegacyUsernameDisabled: _,
@@ -261,14 +261,14 @@ let ed = new eu(T.Z, {
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: D,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: x,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: M,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: j,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: j,
     USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: U,
     USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: B,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: G,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: Z,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: V,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: F,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: V,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: Z,
     USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: H,
     USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: Y,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: q,
@@ -283,8 +283,8 @@ let ed = new eu(T.Z, {
     USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: er,
     USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: ei,
     USER_SETTINGS_RESET_ALL_PENDING: en,
-    USER_SETTINGS_RESET_ALL_TRY_IT_OUT: eo,
-    USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: ea,
+    USER_SETTINGS_RESET_ALL_TRY_IT_OUT: ea,
+    USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: eo,
     USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: es,
     USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: el,
     LOGOUT: ee,

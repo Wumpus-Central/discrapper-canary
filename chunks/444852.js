@@ -1,13 +1,13 @@
 n.d(t, {
     A: () => B,
-    Z: () => Z,
+    Z: () => V,
 }),
     n(539854),
     n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(46973),
-    a = n(846519),
+    a = n(46973),
+    o = n(846519),
     s = n(570140),
     l = n(861687),
     c = n(437263),
@@ -85,8 +85,8 @@ function M(e, t) {
         e
     );
 }
-let j = 10,
-    k = 1500000,
+let k = 10,
+    j = 1500000,
     U = 1500000,
     G = 5 * S.Z.Millis.SECOND;
 class B {
@@ -120,8 +120,8 @@ class B {
         streamSourceType: n,
         actionContext: r,
         numViewers: i,
-        goLiveModalDurationMs: o,
-        analyticsLocations: a,
+        goLiveModalDurationMs: a,
+        analyticsLocations: o,
     }) {
         D(this, "streamRegion", void 0),
             D(this, "streamApplication", void 0),
@@ -139,12 +139,12 @@ class B {
             (this.streamSourceType = n),
             (this.actionContext = r),
             (this.maxViewers = i),
-            (this.goLiveModalDurationMs = o),
+            (this.goLiveModalDurationMs = a),
             (this.numViewers = i),
-            (this.analyticsLocations = null != a ? a : []);
+            (this.analyticsLocations = null != o ? o : []);
     }
 }
-class Z extends l.Z {
+class V extends l.Z {
     get isOwner() {
         let { ownerId: e } = this.streamContext;
         return h.default.getId() === e;
@@ -172,8 +172,8 @@ class Z extends l.Z {
             var n, r;
             let {
                 duration: i,
-                avg_bitrate: o,
-                avg_fps: a,
+                avg_bitrate: a,
+                avg_fps: o,
                 avg_resolution: s,
                 inbound_bitrate_estimate_percentile99: l,
             } = this.isOwner
@@ -185,8 +185,8 @@ class Z extends l.Z {
                   : {};
             return {
                 duration: i,
-                avg_bitrate: o,
-                avg_fps: a,
+                avg_bitrate: a,
+                avg_fps: o,
                 avg_resolution: s,
                 inbound_bitrate_estimate_percentile99: l,
             };
@@ -203,7 +203,7 @@ class Z extends l.Z {
         return this.isOwner ? "streamer" : "receiver";
     }
     updateStats(e) {
-        var t, n, r, o, a, s, l, c, u, d, f, _;
+        var t, n, r, a, o, s, l, c, u, d, f, _;
         let p,
             h = !this.isOwner && (null == (t = this._goLiveQualityManager) ? void 0 : t.getUserID()) != null,
             m =
@@ -226,15 +226,15 @@ class Z extends l.Z {
             null != e &&
                 e < 100000000 &&
                 (this.bandwidthSamples.push(e),
-                this.bandwidthSamples.length > j && this.bandwidthSamples.shift(),
-                this.bandwidthSamples.length === j &&
-                    ((p = i().mean(this.bandwidthSamples)) > U ? (g = "HQ") : p < k && (g = "LQ")));
+                this.bandwidthSamples.length > k && this.bandwidthSamples.shift(),
+                this.bandwidthSamples.length === k &&
+                    ((p = i().mean(this.bandwidthSamples)) > U ? (g = "HQ") : p < j && (g = "LQ")));
         }
-        let b = null != (o = null == (r = this._goLiveQualityManager) ? void 0 : r.isDowngraded()) && o;
+        let b = null != (a = null == (r = this._goLiveQualityManager) ? void 0 : r.isDowngraded()) && a;
         if (
             ("HQ" === g && b
                 ? (this.logger.info("Attempting to upgrade to HQ simulcast stream, bandwidth estimate: ".concat(p)),
-                  null == (a = this._goLiveQualityManager) || a.setGoLiveStreamDowngraded(!1))
+                  null == (o = this._goLiveQualityManager) || o.setGoLiveStreamDowngraded(!1))
                 : "LQ" === g &&
                   !b &&
                   m &&
@@ -270,9 +270,9 @@ class Z extends l.Z {
                 ),
                 e === P.hes.RTC_CONNECTED)
             ) {
-                var r, i, a, l, c, u;
+                var r, i, o, l, c, u;
                 null == (r = this._connection) ||
-                    r.on(o.Sh.ScreenshareFinish, (e, t, n, r, i, o, a, s, l, c, u, d, f, h, m, g) => {
+                    r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, o, s, l, c, u, d, f, h, m, g) => {
                         let E = this.getMediaSessionId(),
                             b = this.getRTCConnectionId(),
                             y = this.getGoLiveSource();
@@ -295,7 +295,7 @@ class Z extends l.Z {
                                     (null != n ? n : 0) +
                                     (null != r ? r : 0) +
                                     (null != i ? i : 0) +
-                                    (null != o ? o : 0) +
+                                    (null != a ? a : 0) +
                                     (null != c ? c : 0) +
                                     (null != g ? g : 0) +
                                     (null != m ? m : 0),
@@ -313,8 +313,8 @@ class Z extends l.Z {
                                         hybrid_dxgi_frames: n,
                                         hybrid_gdi_frames: r,
                                         hybrid_videohook_frames: i,
-                                        hybrid_graphics_capture_frames: o,
-                                        hybrid_capture_method_switches: a,
+                                        hybrid_graphics_capture_frames: a,
+                                        hybrid_capture_method_switches: o,
                                         hybrid_gdi_bitblt_frames: s,
                                         hybrid_gdi_printwindow_frames: l,
                                         quartz_frames: c,
@@ -350,7 +350,7 @@ class Z extends l.Z {
                         });
                     }),
                     null == (i = this._connection) ||
-                        i.on(o.Sh.SoundshareAttached, () => {
+                        i.on(a.Sh.SoundshareAttached, () => {
                             let e = this.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 I.default.track(
@@ -362,14 +362,14 @@ class Z extends l.Z {
                                     ),
                                 );
                         }),
-                    null == (a = this._connection) ||
-                        a.on(o.Sh.SoundshareFailed, (e) => {
+                    null == (o = this._connection) ||
+                        o.on(a.Sh.SoundshareFailed, (e) => {
                             let { failureCode: t, failureReason: n, willRetry: r } = e,
                                 i = this.getGoLiveSource();
                             this.reportSoundshareFailure(null == i ? void 0 : i.desktopSource, t, n, r);
                         }),
                     null == (l = this._connection) ||
-                        l.on(o.Sh.SoundshareSpeaking, () => {
+                        l.on(a.Sh.SoundshareSpeaking, () => {
                             let e = this.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 (I.default.track(
@@ -384,7 +384,7 @@ class Z extends l.Z {
                                     s.Z.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                         }),
                     null == (c = this._connection) ||
-                        c.on(o.Sh.SoundshareTrace, (e) => {
+                        c.on(a.Sh.SoundshareTrace, (e) => {
                             let t = this.getGoLiveSource();
                             switch (e.type) {
                                 case "soundshare_attach_requested":
@@ -416,22 +416,22 @@ class Z extends l.Z {
                             }
                         }),
                     null == (u = this._connection) ||
-                        u.on(o.Sh.Destroy, () => {
+                        u.on(a.Sh.Destroy, () => {
                             this.errorTimer.stop();
                         });
             }
         }),
-            this.on(c.z.Video, (t, n, r, i, o) => {
-                let a = (0, N.my)(this.streamKey);
-                a.guildId === t &&
-                    a.channelId === n &&
-                    a.ownerId === r &&
+            this.on(c.z.Video, (t, n, r, i, a) => {
+                let o = (0, N.my)(this.streamKey);
+                o.guildId === t &&
+                    o.channelId === n &&
+                    o.ownerId === r &&
                     (null == this.getMediaSessionId() || e || (this.trackVideoStartStats(), (e = !0)),
-                    this.updateVideoStreamId(i, o));
+                    this.updateVideoStreamId(i, a));
             }),
-            this.on(c.z.VideoSourceQualityChanged, (e, t, n, r, i, o) => {
-                var a;
-                n === (null == (a = this._goLiveQualityManager) ? void 0 : a.getUserID()) &&
+            this.on(c.z.VideoSourceQualityChanged, (e, t, n, r, i, a) => {
+                var o;
+                n === (null == (o = this._goLiveQualityManager) ? void 0 : o.getUserID()) &&
                     (this.goliveCurrentMaxResolution = r),
                     s.Z.dispatch({
                         type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
@@ -440,7 +440,7 @@ class Z extends l.Z {
                         senderUserId: n,
                         maxResolution: r,
                         maxFrameRate: i,
-                        context: o,
+                        context: a,
                     });
             }),
             this.on(c.z.SecureFramesUpdate, () => {
@@ -455,11 +455,11 @@ class Z extends l.Z {
     }
     reportSoundshareFailure(e, t, n, r) {
         var i;
-        let o = null != (i = null == e ? void 0 : e.soundshareSession) ? i : "";
-        null == this.soundshareFailuresReported[o] && (this.soundshareFailuresReported[o] = new Set());
-        let a = null != t && !this.soundshareFailuresReported[o].has(t);
-        a && this.soundshareFailuresReported[o].add(t),
-            (null == t || a) &&
+        let a = null != (i = null == e ? void 0 : e.soundshareSession) ? i : "";
+        null == this.soundshareFailuresReported[a] && (this.soundshareFailuresReported[a] = new Set());
+        let o = null != t && !this.soundshareFailuresReported[a].has(t);
+        o && this.soundshareFailuresReported[a].add(t),
+            (null == t || o) &&
                 I.default.track(
                     P.rMx.SOUNDSHARE_FAILED,
                     L(
@@ -475,8 +475,8 @@ class Z extends l.Z {
     }
     getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r } = this.analyticsContext,
-            { ownerId: i, guildId: o } = this.streamContext,
-            a = O.Z.getRegion(y.Z.getHostname()),
+            { ownerId: i, guildId: a } = this.streamContext,
+            o = O.Z.getRegion(y.Z.getHostname()),
             { gameName: s, gameId: l, exe: c, distributor: u, sku: d, gameMetadata: f } = (0, _.G8)(t);
         return {
             channel_id: this.channelId,
@@ -485,10 +485,10 @@ class Z extends l.Z {
             parent_media_session_id: this.parentMediaSessionId,
             sender_user_id: i,
             context: w.Yn.STREAM,
-            guild_id: o,
+            guild_id: a,
             stream_region: e,
             stream_source_type: n,
-            guild_region: a,
+            guild_region: o,
             participant_type: this.isOwner ? "streamer" : "receiver",
             share_application_name: s,
             share_application_id: l,
@@ -526,11 +526,11 @@ class Z extends l.Z {
             n = null != t ? t.type : null,
             { ownerId: r } = this.streamContext,
             i = null,
-            o = null,
-            a = this._videoQuality;
-        if (null == a) return;
-        (i = a.getNetworkStats()),
-            (o = this.isOwner ? a.getCodecUsageStats("streamer", this.userId) : a.getCodecUsageStats("receiver", r));
+            a = null,
+            o = this._videoQuality;
+        if (null == o) return;
+        (i = o.getNetworkStats()),
+            (a = this.isOwner ? o.getCodecUsageStats("streamer", this.userId) : o.getCodecUsageStats("receiver", r));
         let s = null,
             l = (0, u.ln)(),
             c = d.Z.getSettings(),
@@ -541,7 +541,7 @@ class Z extends l.Z {
                   }
                 : {},
             p = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
-        a.getOutboundStats().forEach((t) => {
+        o.getOutboundStats().forEach((t) => {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 I.default.track(
@@ -549,7 +549,7 @@ class Z extends l.Z {
                     M(
                         L(
                             {},
-                            o,
+                            a,
                             i,
                             s,
                             this.videoStreamStats.getStats(),
@@ -572,16 +572,16 @@ class Z extends l.Z {
                     ),
                 );
         }),
-            a.getInboundParticipants().forEach((t) => {
+            o.getInboundParticipants().forEach((t) => {
                 var r;
-                let l = a.getInboundStats(t);
+                let l = o.getInboundStats(t);
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     I.default.track(
                         P.rMx.VIDEO_STREAM_ENDED,
                         M(
                             L(
                                 {},
-                                o,
+                                a,
                                 i,
                                 s,
                                 this.videoStreamStats.getStats(),
@@ -612,7 +612,7 @@ class Z extends l.Z {
         streamKey: t,
         serverId: n,
         initialLayout: r,
-        analyticsContext: o,
+        analyticsContext: a,
         isStreamer: l,
         parentMediaSessionId: c,
         channelId: u,
@@ -639,12 +639,12 @@ class Z extends l.Z {
             D(this, "bandwidthSamples", []),
             D(this, "goliveCurrentMaxResolution", void 0),
             D(this, "soundshareFailuresReported", {}),
-            D(this, "errorTimer", new a.V7()),
+            D(this, "errorTimer", new o.V7()),
             (this.streamContext = d),
             (this.streamKey = t),
             (this.isStreamer = l),
             (this.videoStreamStats = new A.Z(r, this.isOwner)),
-            (this.analyticsContext = o),
+            (this.analyticsContext = a),
             (this.updateVideoStreamId = i().debounce((e, t) => {
                 let { guildId: n, channelId: r, ownerId: i } = (0, N.my)(this.streamKey);
                 s.Z.dispatch({

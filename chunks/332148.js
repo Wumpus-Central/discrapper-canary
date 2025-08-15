@@ -1,44 +1,30 @@
-n.d(t, { Z: () => f }), n(784620), n(973216);
+n.d(t, { Z: () => d }), n(784620), n(973216);
 var r = n(544891),
     i = n(570140),
-    o = n(346479),
-    a = n(624453),
-    s = n(668781),
-    l = n(981631),
+    l = n(346479),
+    o = n(624453),
+    a = n(668781),
+    s = n(981631),
     c = n(388032);
-function u(e, t) {
-    let n = a.Z.getPins(e);
-    if (null == n) return !0;
-    switch (n.state) {
-        case a.M.FAILED:
-            return !0;
-        case a.M.LOADING:
-        case a.M.LOADED_FINISHED:
-            return !1;
-        case a.M.LOADED_HAS_MORE:
-            if (null == t) return 0 === n.items.length;
-            return n.items.at(-1).pinnedAt === t;
-    }
-}
-let d = {
+let u = {
         async pinMessage(e, t) {
             let { id: n, name: i } = e;
-            await o.Z.unarchiveThreadIfNecessary(e.id),
+            await l.Z.unarchiveThreadIfNecessary(e.id),
                 r.tn
                     .put({
-                        url: l.ANM.PIN(n, t),
+                        url: s.ANM.PIN(n, t),
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
                     .catch(() => {
                         let t;
                         (t = e.isPrivate()
-                            ? c.intl.formatToPlainString(c.t.Q89oQU, { maxPins: l.tG9 })
+                            ? c.intl.formatToPlainString(c.t.Q89oQU, { maxPins: s.tG9 })
                             : c.intl.formatToPlainString(c.t.NnO1S0, {
-                                  maxPins: l.tG9,
+                                  maxPins: s.tG9,
                                   channelName: i,
                               })),
-                            s.Z.show({
+                            a.Z.show({
                                 title: c.intl.string(c.t.HI88Q0),
                                 body: t,
                                 confirmText: c.intl.string(c.t.BddRzc),
@@ -46,20 +32,20 @@ let d = {
                     });
         },
         async unpinMessage(e, t) {
-            await o.Z.unarchiveThreadIfNecessary(e.id),
+            await l.Z.unarchiveThreadIfNecessary(e.id),
                 r.tn
                     .del({
-                        url: l.ANM.PIN(e.id, t),
+                        url: s.ANM.PIN(e.id, t),
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
                     .catch(() =>
-                        s.Z.show({
+                        a.Z.show({
                             title: c.intl.string(c.t.xFjBys),
                             body: c.intl.string(c.t["0R/Toa"]),
                             confirmText: c.intl.string(c.t["7NqTJi"]),
                             cancelText: c.intl.string(c.t["ETE/oK"]),
-                            onConfirm: d.unpinMessage.bind(d, e, t),
+                            onConfirm: u.unpinMessage.bind(u, e, t),
                         }),
                     );
         },
@@ -70,11 +56,25 @@ let d = {
             });
         },
         fetchPins(e, t) {
-            var n, o;
+            var n, l;
             let a = null != (n = null == t ? void 0 : t.reset) && n,
-                s = null != (o = null == t ? void 0 : t.limit) ? o : 25,
-                c = null == t ? void 0 : t.before;
-            (a || u(e, c)) &&
+                c = null != (l = null == t ? void 0 : t.limit) ? l : 25,
+                u = null == t ? void 0 : t.before;
+            (a ||
+                (function (e, t) {
+                    let n = o.Z.getPins(e);
+                    if (null == n) return !0;
+                    switch (n.state) {
+                        case o.M.FAILED:
+                            return !0;
+                        case o.M.LOADING:
+                        case o.M.LOADED_FINISHED:
+                            return !1;
+                        case o.M.LOADED_HAS_MORE:
+                            if (null == t) return 0 === n.items.length;
+                            return n.items.at(-1).pinnedAt === t;
+                    }
+                })(e, u)) &&
                 (i.Z.dispatch({
                     type: "LOAD_PINNED_MESSAGES",
                     channelId: e,
@@ -82,10 +82,10 @@ let d = {
                 }),
                 r.tn
                     .get({
-                        url: l.ANM.PINS(e),
+                        url: s.ANM.PINS(e),
                         query: {
-                            limit: s,
-                            before: null == c ? void 0 : c.toISOString(),
+                            limit: c,
+                            before: null == u ? void 0 : u.toISOString(),
                         },
                         retries: 2,
                         oldFormErrors: !0,
@@ -109,4 +109,4 @@ let d = {
                     ));
         },
     },
-    f = d;
+    d = u;

@@ -3,14 +3,14 @@ n.d(t, {
     Hr: () => f,
     N6: () => m,
     Su: () => l,
-    UX: () => o,
+    UX: () => a,
     Vr: () => i,
     _3: () => p,
     c: () => s,
     cZ: () => c,
     gV: () => d,
     kV: () => h,
-    t0: () => a,
+    t0: () => o,
     td: () => u,
     vO: () => _,
 });
@@ -29,7 +29,7 @@ var r = (function (e) {
     );
 })({});
 let i = "emoji-picker-grid";
-var o = (function (e) {
+var a = (function (e) {
         return (
             (e.RECENT = "recent"),
             (e.FAVORITES = "favorites"),
@@ -48,7 +48,7 @@ var o = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.NONE = ""), (e.TOP_GUILD_EMOJI = "top_server"), (e.NEWLY_ADDED_EMOJI = "newly_added"), e;
     })({});
 let s = -1;

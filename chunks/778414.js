@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => _,
-    Z: () => h,
+    Z: () => x,
 });
 var r = n(255367),
     i = n(73800),
@@ -19,7 +19,7 @@ var r = n(255367),
     j = n(430790),
     y = n(795990),
     O = n(830202);
-function x(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function x(e) {
     }
     return e;
 }
-function h(e) {
+function x(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -69,13 +69,13 @@ function h(e) {
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(m.Z, x({ widget: t }, n));
+            return (0, r.jsx)(m.Z, h({ widget: t }, n));
         case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(p.Z, x({ widget: t }, n));
+            return (0, r.jsx)(p.Z, h({ widget: t }, n));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(b.Z, x({ widget: t }, n));
+            return (0, r.jsx)(b.Z, h({ widget: t }, n));
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(g.Z, x({ widget: t }, n));
+            return (0, r.jsx)(g.Z, h({ widget: t }, n));
         default:
             return null;
     }
@@ -91,7 +91,7 @@ function v(e) {
               children: [
                   a.map((e) =>
                       (0, r.jsx)(
-                          h,
+                          x,
                           {
                               widget: e,
                               user: t,
@@ -115,7 +115,7 @@ function _(e) {
         (0, r.jsx)(a.Ttm, {
             className: O.scroller,
             fade: !0,
-            children: (0, r.jsx)(v, x({}, e)),
+            children: (0, r.jsx)(v, h({}, e)),
         })
     );
 }

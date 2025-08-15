@@ -1,30 +1,28 @@
 n.d(t, { s: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(886886);
-let l = 2;
+    l = n(120356),
+    a = n.n(l),
+    o = n(886886);
 function c() {
     let [e, t] = i.useState(!1);
-    function n(e) {
-        let { showAll: n = !1, className: i, children: o, lineClamp: c = l } = e,
-            u = {
-                lineClamp: c,
-                WebkitLineClamp: c,
-            },
-            d = (e) => {
-                null != e && t(e.scrollHeight - e.clientHeight > 1);
-            };
-        return (0, r.jsx)("div", {
-            ref: d,
-            className: a()(s.lineClamp, i),
-            style: n ? void 0 : u,
-            children: o,
-        });
-    }
     return {
         isTruncated: e,
-        ExpandableTextContainer: i.memo(n),
+        ExpandableTextContainer: i.memo(function (e) {
+            let { showAll: n = !1, className: i, children: l, lineClamp: c = 2 } = e;
+            return (0, r.jsx)("div", {
+                ref: (e) => {
+                    null != e && t(e.scrollHeight - e.clientHeight > 1);
+                },
+                className: a()(o.lineClamp, i),
+                style: n
+                    ? void 0
+                    : {
+                          lineClamp: c,
+                          WebkitLineClamp: c,
+                      },
+                children: l,
+            });
+        }),
     };
 }

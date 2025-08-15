@@ -1,10 +1,10 @@
-n.d(t, { c: () => o });
+n.d(t, { c: () => a });
 var r = n(73800);
 function i(e, t) {
     if ("function" == typeof e) return void e(t);
     null != e && "object" == typeof e && "current" in e && (e.current = t);
 }
-function o(e) {
+function a(e) {
     let t = r.useRef(null);
     return {
         triggerRef: r.useCallback(

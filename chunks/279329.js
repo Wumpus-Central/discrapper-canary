@@ -2,18 +2,18 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(196051),
-    s = n(441729),
-    l = n(388032);
+    o = n(441729),
+    s = n(388032);
 function c(e, t) {
-    let n = (0, i.e7)([s.Z], () => s.Z.isSpeakingMessage(t.id, e.id), [t, e]);
+    let n = (0, i.e7)([o.Z], () => o.Z.isSpeakingMessage(t.id, e.id), [t, e]);
     return "" === e.content
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: "tts",
-              label: n ? l.intl.string(l.t.CJ30BA) : l.intl.string(l.t.yGLjXF),
-              icon: o.J2R,
+              label: n ? s.intl.string(s.t.CJ30BA) : s.intl.string(s.t.yGLjXF),
+              icon: l.J2R,
               action: () => (n ? (0, a.NB)() : (0, a.LA)(t, e)),
           });
 }

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(481060),
-    o = n(194082),
+    o = n(481060),
+    s = n(194082),
     c = n(14338),
     u = n(982115);
 let d = i.memo(function (e) {
@@ -14,49 +14,49 @@ let d = i.memo(function (e) {
         onClick: i,
         className: l,
         collapsed: d,
-        speakers: h,
-        channel: p,
+        speakers: p,
+        channel: h,
         isStreamLive: f,
     } = e;
-    return (0, r.jsxs)(s.P3F, {
+    return (0, r.jsxs)(o.P3F, {
         onClick: i,
         className: a()(u.container, l),
         children: [
-            null == h
-                ? (0, r.jsx)(s.BFJ, {
+            null == p
+                ? (0, r.jsx)(o.BFJ, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
                       className: u.micIcon,
                   })
-                : (0, r.jsx)(s.S6n, {
+                : (0, r.jsx)(o.S6n, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
                       className: u.micIcon,
                   }),
-            (0, r.jsxs)(s.Text, {
+            (0, r.jsxs)(o.Text, {
                 color: "header-primary",
                 variant: "text-md/semibold",
                 className: u.text,
                 children: [t, " \u2014 ", n],
             }),
             d &&
-                null != p &&
                 null != h &&
-                h.length > 0 &&
+                null != p &&
+                p.length > 0 &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(c.Z, {
-                            channel: p,
-                            speakers: h,
+                            channel: h,
+                            speakers: p,
                         }),
-                        f && (0, r.jsx)(o.ZP, {}),
+                        f && (0, r.jsx)(s.ZP, {}),
                     ],
                 }),
-            (0, r.jsx)(s.CJ0, {
+            (0, r.jsx)(o.CJ0, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,

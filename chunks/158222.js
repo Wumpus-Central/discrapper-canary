@@ -1,19 +1,19 @@
 n.d(t, {
     V6: () => c,
-    fn: () => s,
-    xP: () => l,
+    fn: () => o,
+    xP: () => s,
 });
 var r = n(544891),
     i = n(570140),
-    o = n(881052),
+    l = n(881052),
     a = n(981631);
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: "DISMISS_MEDIA_POST_SHARE_PROMPT",
         threadId: e,
     });
 }
-async function l(e) {
+async function s(e) {
     i.Z.dispatch({
         type: "MEDIA_POST_EMBED_FETCH",
         threadId: e,
@@ -47,6 +47,6 @@ async function c(e) {
             })
         ).body;
     } catch (e) {
-        throw new o.Hx(e);
+        throw new l.Hx(e);
     }
 }

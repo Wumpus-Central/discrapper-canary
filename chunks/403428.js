@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(442837);
-function o(e, t, n) {
-    let o = e,
-        { name: a, kind: s, variations: l, defaultConfig: c } = o;
+function a(e, t, n) {
+    let a = e,
+        { name: o, kind: s, variations: l, defaultConfig: c } = a;
     return (
-        t.registerExperiment(o),
+        t.registerExperiment(a),
         {
-            definition: o,
+            definition: a,
             useConfig: function (e) {
-                let o = n(s, e),
-                    [u, d] = (0, i.Wu)([t], () => t.getEvaluationAndAssignment(s, o, a), [o]),
+                let a = n(s, e),
+                    [u, d] = (0, i.Wu)([t], () => t.getEvaluationAndAssignment(s, a, o), [a]),
                     f = null == d ? void 0 : d.variantId,
                     _ = null == d ? void 0 : d.revision,
                     p = null == d ? void 0 : d.isOverride;
@@ -20,8 +20,8 @@ function o(e, t, n) {
                             null != f &&
                             null != _ &&
                             !1 === p &&
-                            t.trackExperimentExposure(u, a, e.location, s, _, f);
-                    }, [o, u, f, _, e.location, p]),
+                            t.trackExperimentExposure(u, o, e.location, s, _, f);
+                    }, [a, u, f, _, e.location, p]),
                     null == f)
                 )
                     return c;
@@ -32,16 +32,16 @@ function o(e, t, n) {
             },
             getConfig: function (e) {
                 let r = n(s, e),
-                    [i, o] = t.getEvaluationAndAssignment(s, r, a),
-                    u = null == o ? void 0 : o.variantId,
-                    d = null == o ? void 0 : o.revision,
-                    f = null == o ? void 0 : o.isOverride;
+                    [i, a] = t.getEvaluationAndAssignment(s, r, o),
+                    u = null == a ? void 0 : a.variantId,
+                    d = null == a ? void 0 : a.revision,
+                    f = null == a ? void 0 : a.isOverride;
                 if (
                     (null != i &&
                         null != u &&
                         null != d &&
                         !1 === f &&
-                        t.trackExperimentExposure(i, a, e.location, s, d, u),
+                        t.trackExperimentExposure(i, o, e.location, s, d, u),
                     null == u)
                 )
                     return c;

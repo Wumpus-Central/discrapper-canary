@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var r = n(255367);
+n.d(t, { Z: () => l });
+var i = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(696936);
-function o(e) {
-    let { children: t, className: n, color: o = l.W.YELLOW } = e;
-    return (0, r.jsx)(l.Z, {
+var r = n(481060),
+    s = n(696936);
+function l(e) {
+    let { children: t, className: n, color: l = s.W.YELLOW } = e;
+    return (0, i.jsx)(s.Z, {
         className: n,
-        color: o,
-        icon: i.Mgn,
+        color: l,
+        icon: r.Mgn,
         children: t,
     });
 }

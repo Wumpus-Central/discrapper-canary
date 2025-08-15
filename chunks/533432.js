@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(94171),
     l = n(260866),
     c = n(481060),
@@ -15,7 +15,7 @@ var r = n(255367),
 let m = i.forwardRef(function (e, t) {
         let {
                 emojiListRef: n,
-                gridNavigatorId: o,
+                gridNavigatorId: a,
                 isFullRow: m,
                 onKeyDown: g,
                 onFocus: E,
@@ -66,13 +66,13 @@ let m = i.forwardRef(function (e, t) {
                 onKeyDown: C,
                 onFocus: E,
                 onChange: A,
-                className: a()(y, { [h.searchBarFullRow]: m }),
+                className: o()(y, { [h.searchBarFullRow]: m }),
                 inputProps: {
                     "aria-label": p.intl.string(p.t.tCauZW),
                     "aria-haspopup": "grid",
-                    "aria-controls": o,
+                    "aria-controls": a,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, l.NE)(o, T.columnIndex, T.rowIndex),
+                    "aria-activedescendant": (0, l.NE)(a, T.columnIndex, T.rowIndex),
                 },
             })
         );

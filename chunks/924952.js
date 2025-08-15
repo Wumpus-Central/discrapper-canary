@@ -6,17 +6,17 @@ var i = e(442837),
     o = e(357156),
     a = e(471253),
     c = e(924301),
-    s = e(482241),
-    u = e(765305),
+    u = e(482241),
+    s = e(765305),
     d = e(388032);
 function g(t, n, g) {
-    let { canManageGuildEvent: v } = (0, o.XJ)(null != g ? g : n),
+    let { canManageGuildEvent: f } = (0, o.XJ)(null != g ? g : n),
         b = (0, i.e7)([c.ZP], () => c.ZP.isActive(t)),
-        f = (0, i.e7)([c.ZP], () => c.ZP.getGuildScheduledEvent(t), [t]),
-        p = v(f);
-    if (null == t || !p || !b || (null == f ? void 0 : f.entity_type) === u.WX.EXTERNAL) return null;
-    let j = () => {
-        (null == g ? void 0 : g.isGuildStageVoice()) ? (0, a.NZ)(g) : null != t && s.Z.endEvent(t, n.id), (0, r.pTH)();
+        p = (0, i.e7)([c.ZP], () => c.ZP.getGuildScheduledEvent(t), [t]),
+        v = f(p);
+    if (null == t || !v || !b || (null == p ? void 0 : p.entity_type) === s.WX.EXTERNAL) return null;
+    let h = () => {
+        (null == g ? void 0 : g.isGuildStageVoice()) ? (0, a.NZ)(g) : null != t && u.Z.endEvent(t, n.id), (0, r.pTH)();
     };
     return (0, l.jsx)(r.sNh, {
         id: d.intl.string(d.t.qaYzPD),
@@ -38,7 +38,7 @@ function g(t, n, g) {
                                 text: d.intl.string(d.t["ETE/oK"]),
                             },
                             {
-                                onClick: j,
+                                onClick: h,
                                 variant: "critical-primary",
                                 text: d.intl.string(d.t.mjB9pa),
                             },

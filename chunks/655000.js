@@ -1,29 +1,29 @@
-var r = n(621796),
-    i = n(172367),
-    o = n(148727);
-e.exports = function (e) {
-    var t,
-        n,
-        a = e.getSelection();
-    if (!a.isCollapsed()) return e;
-    var s = a.getAnchorOffset();
-    if (0 === s) return e;
-    var l = a.getAnchorKey(),
-        c = e.getCurrentContent(),
-        u = c.getBlockForKey(l).getLength();
-    if (u <= 1) return e;
-    s === u
-        ? ((t = a.set("anchorOffset", s - 1)), (n = a))
-        : (n = (t = a.set("focusOffset", s + 1)).set("anchorOffset", s + 1));
-    var d = o(c, t),
-        f = r.removeRange(c, t, "backward"),
-        _ = f.getSelectionAfter(),
-        p = _.getAnchorOffset() - 1,
-        h = _.merge({
-            anchorOffset: p,
-            focusOffset: p,
+var n = r(621796),
+    i = r(172367),
+    o = r(148727);
+t.exports = function (t) {
+    var e,
+        r,
+        a = t.getSelection();
+    if (!a.isCollapsed()) return t;
+    var u = a.getAnchorOffset();
+    if (0 === u) return t;
+    var s = a.getAnchorKey(),
+        c = t.getCurrentContent(),
+        l = c.getBlockForKey(s).getLength();
+    if (l <= 1) return t;
+    u === l
+        ? ((e = a.set("anchorOffset", u - 1)), (r = a))
+        : (r = (e = a.set("focusOffset", u + 1)).set("anchorOffset", u + 1));
+    var f = o(c, e),
+        p = n.removeRange(c, e, "backward"),
+        h = p.getSelectionAfter(),
+        d = h.getAnchorOffset() - 1,
+        g = h.merge({
+            anchorOffset: d,
+            focusOffset: d,
         }),
-        m = r.replaceWithFragment(f, h, d),
-        g = i.push(e, m, "insert-fragment");
-    return i.acceptSelection(g, n);
+        y = n.replaceWithFragment(p, g, f),
+        v = i.push(t, y, "insert-fragment");
+    return i.acceptSelection(v, r);
 };

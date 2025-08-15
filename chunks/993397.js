@@ -1,103 +1,103 @@
-n.d(t, { Z: () => b }), n(314940), n(388685);
+n.d(t, { Z: () => y }), n(314940), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(278074),
-    l = n(481060),
+    l = n(120356),
+    a = n.n(l),
+    o = n(278074),
+    s = n(481060),
     c = n(492593),
     u = n(534469),
     d = n(511010),
-    f = n(834129),
-    _ = n(981631),
-    p = n(388032),
-    h = n(378661),
-    m = n(360514);
-function g(e) {
-    let { expanded: t, onClick: n, count: i, compact: o, collapsedReason: a } = e,
-        u = (0, s.EQ)({ collapsedReason: a })
-            .with({ collapsedReason: p.t.VFWjc3 }, () =>
-                (0, r.jsx)(l.kZF, {
+    p = n(834129),
+    h = n(981631),
+    f = n(388032),
+    m = n(378661),
+    g = n(360514);
+function b(e) {
+    let { expanded: t, onClick: n, count: i, compact: l, collapsedReason: a } = e,
+        u = (0, o.EQ)({ collapsedReason: a })
+            .with({ collapsedReason: f.t.VFWjc3 }, () =>
+                (0, r.jsx)(s.kZF, {
                     size: "md",
                     color: "currentColor",
-                    className: h.blockedIcon,
+                    className: m.blockedIcon,
                 }),
             )
-            .with({ collapsedReason: p.t["+FcYMz"] }, () =>
-                (0, r.jsx)(l.t6m, {
+            .with({ collapsedReason: f.t["+FcYMz"] }, () =>
+                (0, r.jsx)(s.t6m, {
                     size: "md",
                     color: "currentColor",
-                    className: h.blockedIcon,
+                    className: m.blockedIcon,
                 }),
             )
             .otherwise(() =>
-                (0, r.jsx)(l.Dio, {
+                (0, r.jsx)(s.Dio, {
                     size: "md",
                     color: "currentColor",
-                    className: h.blockedIcon,
+                    className: m.blockedIcon,
                 }),
             );
     return (0, r.jsx)(c.Z, {
-        compact: o,
+        compact: l,
         role: "group",
-        childrenMessageContent: (0, r.jsx)(f.Z, {
-            compact: o,
-            className: h.blockedSystemMessage,
+        childrenMessageContent: (0, r.jsx)(p.Z, {
+            compact: l,
+            className: m.blockedSystemMessage,
             iconNode: u,
             children: (0, r.jsxs)("div", {
-                className: h.blockedMessageText,
+                className: m.blockedMessageText,
                 children: [
-                    p.intl.format(a, { count: i }),
+                    f.intl.format(a, { count: i }),
                     " \u2014",
                     " ",
-                    (0, r.jsx)(l.P3F, {
+                    (0, r.jsx)(s.P3F, {
                         tag: "span",
                         onClick: n,
-                        className: h.blockedAction,
-                        children: t ? p.intl.string(p.t.fgq1go) : p.intl.string(p.t.XJuakJ),
+                        className: m.blockedAction,
+                        children: t ? f.intl.string(f.t.fgq1go) : f.intl.string(f.t.XJuakJ),
                     }),
                 ],
             }),
         }),
     });
 }
-function E(e) {
+let y = i.memo(function (e) {
     var t;
-    let { messages: n, channel: o, compact: s = !1, unreadId: l, collapsedReason: c } = e,
-        { hasJumpTarget: f = !1 } = n,
-        [p, E] = i.useState(f),
-        b = i.useCallback(() => E((e) => !e), []),
-        y = n.hasUnread ? n.content.length - 1 : n.content.length;
+    let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: c } = e,
+        { hasJumpTarget: p = !1 } = n,
+        [f, y] = i.useState(p),
+        _ = i.useCallback(() => y((e) => !e), []),
+        C = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)("div", {
         className: a()({
-            [m.groupStart]: !0,
-            [h.expanded]: p,
+            [g.groupStart]: !0,
+            [m.expanded]: f,
         }),
         children: [
-            n.hasUnread && (!p || (null == (t = n.content[0]) ? void 0 : t.type) === _.ys_.DIVIDER)
+            n.hasUnread && (!f || (null == (t = n.content[0]) ? void 0 : t.type) === h.ys_.DIVIDER)
                 ? (0, r.jsx)(
                       d.Z,
                       {
                           isUnread: !0,
-                          id: l,
+                          id: s,
                       },
                       "divider",
                   )
                 : null,
             (0, r.jsx)(
-                g,
+                b,
                 {
-                    count: y,
-                    compact: s,
-                    expanded: p,
-                    onClick: b,
+                    count: C,
+                    compact: o,
+                    expanded: f,
+                    onClick: _,
                     collapsedReason: c,
                 },
                 "collapsed-message-item",
             ),
-            p
+            f
                 ? n.content.map((e, t) => {
-                      if (e.type === _.ys_.DIVIDER && t > 0) {
+                      if (e.type === h.ys_.DIVIDER && t > 0) {
                           var i, a;
                           let e = null != (a = null == (i = n.content[t + 1]) ? void 0 : i.isGroupStart) && a;
                           return (0, r.jsx)(
@@ -105,19 +105,19 @@ function E(e) {
                               {
                                   isUnread: !0,
                                   isBeforeGroup: e,
-                                  id: l,
+                                  id: s,
                               },
                               "divider",
                           );
                       }
-                      if (e.type === _.ys_.MESSAGE || e.type === _.ys_.THREAD_STARTER_MESSAGE) {
-                          let t = e.type === _.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
+                      if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
+                          let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
                           return (0, r.jsx)(
                               t,
                               {
-                                  className: h.__invalid_blocked,
-                                  compact: s,
-                                  channel: o,
+                                  className: m.__invalid_blocked,
+                                  compact: o,
+                                  channel: l,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,
@@ -131,5 +131,4 @@ function E(e) {
                 : null,
         ],
     });
-}
-let b = i.memo(E);
+});

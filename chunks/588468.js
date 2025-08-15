@@ -1,5 +1,5 @@
 n.d(t, {
-    DJ: () => Z,
+    DJ: () => V,
     ZP: () => es,
     rp: () => F,
 }),
@@ -8,9 +8,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(392711),
     c = n.n(l),
     u = n(91192),
@@ -51,7 +51,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,7 +67,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -84,7 +84,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -96,9 +96,9 @@ function G(e, t) {
         r,
         i = B(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -107,18 +107,18 @@ function B(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function Z(e) {
+function V(e) {
     return null != e ? "autocomplete-".concat(e) : null;
 }
 function F(e) {
     return "autocomplete-".concat(e, "-title");
 }
-let V = o.createContext(null);
-class H extends o.PureComponent {
+let Z = a.createContext(null);
+class H extends a.PureComponent {
     isSelectable() {
         return this.selectable;
     }
@@ -129,14 +129,14 @@ class H extends o.PureComponent {
         var t;
         let {
                 layoutClass: n,
-                props: { className: r, index: o, selected: a },
+                props: { className: r, index: a, selected: o },
             } = this,
             l = this.isSelectable();
         return (0, i.jsx)(
             f.P3F,
-            U(j({}, e), {
+            U(k({}, e), {
                 className: s()(x.clickable, r, n),
-                id: null != (t = Z(o)) ? t : void 0,
+                id: null != (t = V(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l
                     ? () => {
@@ -146,7 +146,7 @@ class H extends o.PureComponent {
                 onMouseLeave: l ? () => this.setState({ hovered: !1 }) : void 0,
                 role: "option",
                 "aria-disabled": !l,
-                "aria-selected": l && a,
+                "aria-selected": l && o,
                 children: (0, i.jsx)("div", {
                     className: x.base,
                     children: this.renderContent(),
@@ -194,7 +194,7 @@ class Y extends H {
     }
 }
 function W(e) {
-    let t = o.useMemo(() => c().random(60, 120), []);
+    let t = a.useMemo(() => c().random(60, 120), []);
     return (0, i.jsx)("div", {
         className: x.base,
         "aria-busy": !0,
@@ -212,11 +212,11 @@ function W(e) {
 }
 function K(e) {
     let { title: t, className: n, children: r } = e,
-        a = o.useContext(V);
+        o = a.useContext(Z);
     return (0, i.jsx)("div", {
         className: x.base,
         children: (0, i.jsxs)(f.X6q, {
-            id: F(a.id),
+            id: F(o.id),
             className: s()(x.contentTitle, n),
             variant: "heading-deprecated-12/semibold",
             children: [t, r],
@@ -235,14 +235,14 @@ class z extends H {
 class q extends H {
     renderContent() {
         var e;
-        let { user: t, nick: n, status: r, hidePersonalInformation: o, guildId: a } = this.props,
-            s = null == a ? A.Z.getNickname(t.id) : null;
+        let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: o } = this.props,
+            s = null == o ? A.Z.getNickname(t.id) : null;
         return (0, i.jsxs)(P.RX, {
             children: [
                 (0, i.jsx)(P.Tw, {
                     children: (0, i.jsx)(f.qEK, {
                         size: f.EFr.SIZE_24,
-                        src: t.getAvatarURL(a, 24),
+                        src: t.getAvatarURL(o, 24),
                         "aria-hidden": !0,
                         status: r,
                     }),
@@ -254,9 +254,9 @@ class q extends H {
                     children: [
                         R.ZP.getUserTag(t, {
                             mode: "username",
-                            identifiable: o ? "never" : "always",
+                            identifiable: a ? "never" : "always",
                         }),
-                        o || t.hasUniqueUsername()
+                        a || t.hasUniqueUsername()
                             ? null
                             : (0, i.jsxs)("span", {
                                   className: x.descriptionDiscriminator,
@@ -271,24 +271,24 @@ class q extends H {
 class X extends H {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
-            { colorString: r, colorStrings: o } = e,
-            a = "dot" === _.Z.roleStyle,
-            l = "username" === _.Z.roleStyle && (null != r || null != o),
-            c = (0, y.AQ)(n, e, o),
+            { colorString: r, colorStrings: a } = e,
+            o = "dot" === _.Z.roleStyle,
+            l = "username" === _.Z.roleStyle && (null != r || null != a),
+            c = (0, y.AQ)(n, e, a),
             u = null != c && l,
             { gradientStyle: d, gradientClassname: p } = (0, f.JUn)({
-                colorStrings: o,
+                colorStrings: a,
                 useReducedMotion: _.Z.useReducedMotion,
                 roleStyle: "username",
                 includeConvenienceGlow: !0,
             }),
-            h = l ? j({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? k({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(P.RX, {
             children: [
                 (0, i.jsx)(P.z5, {
                     children: (0, i.jsxs)(P.BR, {
                         children: [
-                            a &&
+                            o &&
                                 (0, i.jsx)(f.FhE, {
                                     className: x.roleDot,
                                     color: r,
@@ -346,8 +346,8 @@ class $ extends H {
         return this.props.command.inputType !== p.iw.PLACEHOLDER;
     }
     renderContent() {
-        let { command: e, channel: t, showImage: n, section: r, selected: o } = this.props,
-            { hovered: a } = this.state,
+        let { command: e, channel: t, showImage: n, section: r, selected: a } = this.props,
+            { hovered: o } = this.state,
             s = this.isSelectable();
         return e.inputType === p.iw.PLACEHOLDER
             ? (0, i.jsx)(m.Z, {})
@@ -355,7 +355,7 @@ class $ extends H {
                   command: e,
                   channel: t,
                   showImage: n,
-                  showOptions: a || (s && o),
+                  showOptions: o || (s && a),
                   section: r,
                   isSelectable: s,
               });
@@ -365,7 +365,7 @@ class ee extends H {
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
             r = T.Yk.getSetting(),
-            o =
+            a =
                 null != e.id || "" !== e.url
                     ? (0, i.jsx)("img", {
                           alt: "",
@@ -383,16 +383,16 @@ class ee extends H {
                           className: x.emojiRaw,
                           children: e.surrogates,
                       }),
-            a = null != n ? (0, i.jsx)(P.dY, { children: n.name }) : null;
+            o = null != n ? (0, i.jsx)(P.dY, { children: n.name }) : null;
         return (0, i.jsxs)(P.RX, {
             children: [
-                (0, i.jsx)(P.Tw, { children: o }),
+                (0, i.jsx)(P.Tw, { children: a }),
                 (0, i.jsx)(P.z5, {
                     children: (0, i.jsxs)(P.BR, {
                         children: [t, e.name, t],
                     }),
                 }),
-                a,
+                o,
             ],
         });
     }
@@ -404,7 +404,7 @@ class et extends H {
     renderContent() {
         var e, t;
         let n,
-            { queryMatch: r, renderSticker: o, selected: a, sticker: s } = this.props,
+            { queryMatch: r, renderSticker: a, selected: o, sticker: s } = this.props,
             { hovered: l } = this.state;
         return (
             (0, I.jl)(s)
@@ -412,7 +412,7 @@ class et extends H {
                 : (0, I.J8)(s) && (n = null == (t = S.Z.getGuild(s.guild_id)) ? void 0 : t.name),
             (0, i.jsxs)(P.RX, {
                 children: [
-                    (0, i.jsx)(P.Tw, { children: o(s, l || !0 === a) }),
+                    (0, i.jsx)(P.Tw, { children: a(s, l || !0 === o) }),
                     (0, i.jsxs)(P.z5, {
                         children: [
                             (0, i.jsx)(P.BR, { children: s.name }),
@@ -449,10 +449,10 @@ class er extends H {
 }
 class ei extends H {
     renderContent() {
-        return (0, i.jsx)(O.Z, j({}, this.props));
+        return (0, i.jsx)(O.Z, k({}, this.props));
     }
 }
-class eo extends H {
+class ea extends H {
     renderContent() {
         let { game: e } = this.props,
             t = (0, i.jsx)("img", {
@@ -472,35 +472,35 @@ class eo extends H {
         });
     }
 }
-class ea extends (r = o.PureComponent) {
+class eo extends (r = a.PureComponent) {
     render() {
         let e = this.props,
-            { children: t, className: n, innerClassName: r, id: a } = e,
+            { children: t, className: n, innerClassName: r, id: o } = e,
             l = G(e, ["children", "className", "innerClassName", "id"]);
-        return o.Children.count(t) > 0
-            ? (0, i.jsx)(V.Provider, {
-                  value: { id: null != a ? a : "" },
+        return a.Children.count(t) > 0
+            ? (0, i.jsx)(Z.Provider, {
+                  value: { id: null != o ? o : "" },
                   children: (0, i.jsx)("div", {
                       className: s()(x.autocomplete, n),
-                      children: (0, i.jsx)("div", U(j({ className: s()(x.autocompleteInner, r) }, l), { children: t })),
+                      children: (0, i.jsx)("div", U(k({ className: s()(x.autocompleteInner, r) }, l), { children: t })),
                   }),
               })
             : null;
     }
 }
-M(ea, "Generic", Y),
-    M(ea, "Loading", W),
-    M(ea, "Title", K),
-    M(ea, "Divider", z),
-    M(ea, "User", q),
-    M(ea, "Role", X),
-    M(ea, "Channel", Q),
-    M(ea, "Command", J),
-    M(ea, "NewCommand", $),
-    M(ea, "Emoji", ee),
-    M(ea, "GIFIntegration", en),
-    M(ea, "Sticker", et),
-    M(ea, "EmojiUpsell", er),
-    M(ea, "Soundmoji", ei),
-    M(ea, "Game", eo);
-let es = ea;
+M(eo, "Generic", Y),
+    M(eo, "Loading", W),
+    M(eo, "Title", K),
+    M(eo, "Divider", z),
+    M(eo, "User", q),
+    M(eo, "Role", X),
+    M(eo, "Channel", Q),
+    M(eo, "Command", J),
+    M(eo, "NewCommand", $),
+    M(eo, "Emoji", ee),
+    M(eo, "GIFIntegration", en),
+    M(eo, "Sticker", et),
+    M(eo, "EmojiUpsell", er),
+    M(eo, "Soundmoji", ei),
+    M(eo, "Game", ea);
+let es = eo;

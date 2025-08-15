@@ -3,51 +3,51 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(91192),
     u = n(924826),
     d = n(873546),
-    h = n(876215),
-    p = n(442837),
+    p = n(876215),
+    h = n(442837),
     f = n(481060),
-    g = n(239091),
-    m = n(941028),
+    m = n(239091),
+    g = n(941028),
     b = n(144144),
     y = n(276264),
-    x = n(607070),
-    j = n(100527),
-    _ = n(367907),
-    O = n(906732),
-    v = n(493324),
-    C = n(611064),
+    _ = n(607070),
+    C = n(100527),
+    x = n(367907),
+    v = n(906732),
+    j = n(493324),
+    O = n(611064),
     E = n(677432),
     S = n(178762),
-    I = n(868671),
-    Z = n(82295),
-    P = n(91218),
+    P = n(868671),
+    I = n(82295),
+    Z = n(91218),
     T = n(313201),
     N = n(623624),
-    R = n(518738),
+    A = n(518738),
     w = n(570096),
-    A = n(850020),
-    D = n(155409),
+    R = n(850020),
+    M = n(155409),
     k = n(670188),
-    L = n(706454),
-    M = n(439170),
+    D = n(706454),
+    L = n(439170),
     U = n(485386),
-    F = n(944486),
-    H = n(111583),
-    G = n(594174),
-    B = n(979651),
-    W = n(585483),
-    V = n(823379),
-    z = n(51144),
+    B = n(944486),
+    F = n(111583),
+    H = n(594174),
+    G = n(979651),
+    V = n(585483),
+    z = n(823379),
+    W = n(51144),
     Y = n(998502),
     q = n(981631),
     K = n(388032),
-    Q = n(32482);
-function X(e, t, n) {
+    X = n(32482);
+function Q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -71,7 +71,7 @@ function J(e) {
                 }),
             )),
             r.forEach(function (t) {
-                X(e, t, n[t]);
+                Q(e, t, n[t]);
             });
     }
     return e;
@@ -132,20 +132,20 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 colorString: t,
                 colorStrings: l,
                 colorRoleName: a,
-                colorRoleId: s,
-                isOwner: o,
+                colorRoleId: o,
+                isOwner: s,
                 nick: c,
                 user: u,
-                currentUser: h,
-                activities: p,
+                currentUser: p,
+                activities: h,
                 applicationStream: f,
-                status: m,
-                channel: x,
-                guildId: j,
-                isTyping: _,
-                isMobileOnline: O,
-                premiumSince: v,
-                nameplate: C,
+                status: g,
+                channel: _,
+                guildId: C,
+                isTyping: x,
+                isMobileOnline: v,
+                premiumSince: j,
+                nameplate: O,
             } = e,
             E = ee(e, [
                 "colorString",
@@ -167,11 +167,11 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 "nameplate",
             ]),
             S = i.useRef(null),
-            [I, Z] = i.useState(!1),
-            P = null != v ? new Date(v) : null,
+            [P, I] = i.useState(!1),
+            Z = null != j ? new Date(j) : null,
             T = i.useCallback(
                 (e) => {
-                    (0, g.jW)(e, async () => {
+                    (0, m.jW)(e, async () => {
                         let { default: e } = await Promise.all([
                                 n.e("79695"),
                                 n.e("98783"),
@@ -179,96 +179,96 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                                 n.e("7717"),
                                 n.e("52021"),
                             ]).then(n.bind(n, 757387)),
-                            t = B.Z.isInChannel(F.Z.getVoiceChannelId(), u.id);
+                            t = G.Z.isInChannel(B.Z.getVoiceChannelId(), u.id);
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 $(J({}, n), {
                                     user: u,
-                                    guildId: j,
-                                    channel: x,
+                                    guildId: C,
+                                    channel: _,
                                     showMediaItems: t,
                                 }),
                             );
                     });
                 },
-                [u, j, x],
+                [u, C, _],
             ),
-            R = i.useCallback(() => {
-                let e = "@".concat(z.ZP.getUserTag(u, { decoration: "never" })),
+            A = i.useCallback(() => {
+                let e = "@".concat(W.ZP.getUserTag(u, { decoration: "never" })),
                     t = "<@".concat(u.id, ">");
-                W.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: x.id }),
-                    W.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
+                V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: _.id }),
+                    V.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
                     }),
-                    b.Z.startTyping(x.id);
-            }, [u, x.id]),
+                    b.Z.startTyping(_.id);
+            }, [u, _.id]),
             w = i.useCallback(
                 (e) => {
-                    null != j &&
+                    null != C &&
                         (e.stopPropagation(),
                         (0, N.f)({
-                            guildId: j,
+                            guildId: C,
                             location: {
                                 section: q.jXE.MEMBER_LIST,
                                 object: q.qAy.BOOST_GEM_ICON,
                             },
                         }));
                 },
-                [j],
+                [C],
             );
         return (0, r.jsx)(k.Z, {
             targetElementRef: S,
             user: u,
-            guildId: j,
-            channelId: x.id,
-            roleId: s,
+            guildId: C,
+            channelId: _.id,
+            roleId: o,
             position: d.tq ? "window_center" : "left",
             spacing: 16,
-            onShiftClick: R,
-            shouldShow: I,
+            onShiftClick: A,
+            shouldShow: P,
             onRequestClose: () => {
-                Z(!1);
+                I(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i } = e,
-                    s = ee(e, ["onClick", "onMouseDown"]);
+                    o = ee(e, ["onClick", "onMouseDown"]);
                 return (0, r.jsx)(
                     y.Z,
                     J(
                         {
                             ref: S,
-                            className: Q.member,
+                            className: X.member,
                             onContextMenu: T,
                             shouldAnimateStatus: et,
                             user: u,
-                            currentUser: h,
+                            currentUser: p,
                             nick: c,
-                            status: m,
-                            activities: p,
+                            status: g,
+                            activities: h,
                             applicationStream: f,
-                            isOwner: o,
-                            premiumSince: P,
+                            isOwner: s,
+                            premiumSince: Z,
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: _,
-                            channel: x,
-                            guildId: j,
-                            isMobile: O,
+                            isTyping: x,
+                            channel: _,
+                            guildId: C,
+                            isMobile: v,
                             onClickPremiumGuildIcon: w,
-                            selected: I,
+                            selected: P,
                             itemProps: E,
-                            nameplate: C,
+                            nameplate: O,
                             onClick: (e) => {
-                                e.shiftKey ? null == R || R() : Z((e) => !e);
+                                e.shiftKey ? null == A || A() : I((e) => !e);
                             },
                             onMouseDown: (e) => {
-                                I ? e.stopPropagation() : null == i || i(e);
+                                P ? e.stopPropagation() : null == i || i(e);
                             },
                         },
-                        s,
+                        o,
                     ),
                 );
             },
@@ -278,43 +278,43 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
         let { colorRoleId: t } = e,
             n = ee(e, ["colorRoleId"]),
             { channel: i, user: l, index: a } = e,
-            s = (0, c.JA)("".concat(a)),
-            o = (0, p.e7)([H.Z], () => H.Z.isTyping(i.id, l.id)),
-            u = (0, p.e7)([G.default], () => G.default.getCurrentUser()),
-            d = (0, p.e7)([U.Z], () => {
+            o = (0, c.JA)("".concat(a)),
+            s = (0, h.e7)([F.Z], () => F.Z.isTyping(i.id, l.id)),
+            u = (0, h.e7)([H.default], () => H.default.getCurrentUser()),
+            d = (0, h.e7)([U.Z], () => {
                 var e;
                 return null != t ? (null == (e = U.Z.getRole(i.guild_id, t)) ? void 0 : e.name) : void 0;
             }, [i, t]),
-            h = (0, A.K)({
+            p = (0, R.K)({
                 user: l,
                 guildId: i.guild_id,
                 location: "ChannelMembers",
             });
         return (0, r.jsx)(
             er,
-            $(J({}, n, s), {
-                isTyping: o,
+            $(J({}, n, o), {
+                isTyping: s,
                 currentUser: u,
                 colorRoleName: d,
-                nameplate: h,
+                nameplate: p,
             }),
         );
     }),
     el = i.memo(function (e) {
         let { id: t, title: n, count: i, guildId: l } = e,
-            a = (0, R.p9)({
+            a = (0, A.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
             }),
-            s = (0, p.e7)([L.default], () => new Intl.NumberFormat(L.default.locale).format(i), [i]);
+            o = (0, h.e7)([D.default], () => new Intl.NumberFormat(D.default.locale).format(i), [i]);
         return t === q.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
-                  className: Q.membersGroup,
-                  children: (0, r.jsx)("div", { className: Q.memberGroupsPlaceholder }),
+                  className: X.membersGroup,
+                  children: (0, r.jsx)("div", { className: X.memberGroupsPlaceholder }),
               })
-            : (0, r.jsxs)(Z.Z, {
-                  className: Q.membersGroup,
+            : (0, r.jsxs)(I.Z, {
+                  className: X.membersGroup,
                   children: [
                       (0, r.jsx)(f.nn4, {
                           children: K.intl.format(K.t.UaqbkZ, {
@@ -325,10 +325,10 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [
-                              null != a ? (0, r.jsx)(P.Z, J({ className: Q.roleIcon }, a)) : null,
+                              null != a ? (0, r.jsx)(Z.Z, J({ className: X.roleIcon }, a)) : null,
                               n,
                               " \u2014 ",
-                              s,
+                              o,
                           ],
                       }),
                   ],
@@ -339,7 +339,7 @@ function ea(e) {
         n = (0, c.JA)("".concat(t));
     return (0, r.jsx)(y.Z, { itemProps: n });
 }
-class es extends i.Component {
+class eo extends i.Component {
     shouldComponentUpdate(e) {
         return (
             e.channel.id !== this.props.channel.id ||
@@ -350,7 +350,7 @@ class es extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, v.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, j.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -392,37 +392,37 @@ class es extends i.Component {
         return (0, r.jsx)(f.Wdt, {
             children: (l) =>
                 (0, r.jsx)(T.FG, {
-                    children: (s) =>
+                    children: (o) =>
                         (0, r.jsx)("aside", {
-                            className: a()(Q.membersWrap, Q.hiddenMembers),
-                            "aria-labelledby": s,
+                            className: a()(X.membersWrap, X.hiddenMembers),
+                            "aria-labelledby": o,
                             children: (0, r.jsx)(f.y5t, {
                                 component: (0, r.jsx)(f.nn4, {
                                     children: (0, r.jsx)(f.H, {
-                                        id: s,
+                                        id: o,
                                         children: K.intl.format(K.t.JBQxV1, { channel: n.name }),
                                     }),
                                 }),
                                 children: (0, r.jsx)(c.SJ, {
                                     children: (n) => {
-                                        var { ref: s, role: o } = n,
+                                        var { ref: o, role: s } = n,
                                             c = ee(n, ["ref", "role"]);
                                         return (0, r.jsx)(
                                             f.aVo,
                                             J(
                                                 {
-                                                    innerRole: o,
+                                                    innerRole: s,
                                                     innerAriaLabel: K.intl.string(K.t["9Oq93t"]),
                                                     ref: (e) => {
                                                         var t;
                                                         (this._list = e),
                                                             (this.props.listRef.current = e),
-                                                            (s.current =
+                                                            (o.current =
                                                                 null != (t = null == e ? void 0 : e.getScrollerNode())
                                                                     ? t
                                                                     : null);
                                                     },
-                                                    className: a()(Q.members, { [Q.fullWidth]: d.tq }),
+                                                    className: a()(X.members, { [X.fullWidth]: d.tq }),
                                                     paddingTop: 0,
                                                     sectionHeight: i,
                                                     rowHeight: this.getRowHeightComputer(),
@@ -446,21 +446,21 @@ class es extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            X(this, "_list", null),
-            X(this, "_areActivitiesExperimentallyHidden", !1),
-            X(this, "lastReportedAnalyticsChannel", void 0),
-            X(this, "setList", (e) => {
+            Q(this, "_list", null),
+            Q(this, "_areActivitiesExperimentallyHidden", !1),
+            Q(this, "lastReportedAnalyticsChannel", void 0),
+            Q(this, "setList", (e) => {
                 (this._list = e), (this.props.listRef.current = e);
             }),
-            X(this, "renderSection", (e) => {
+            Q(this, "renderSection", (e) => {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, C.R)(a)) return (0, i.createElement)(C.Z, $(J({}, a), { key: "section-".concat(t) }));
+                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, $(J({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
-                        D.Z,
+                        M.Z,
                         {
                             tutorialId: "whos-online",
                             position: "left",
@@ -484,30 +484,30 @@ class es extends i.Component {
                     }),
                 );
             }),
-            X(this, "getRowProps", (e) => {
+            Q(this, "getRowProps", (e) => {
                 let { groups: t, rows: n } = this.props,
                     r = t[e.section];
                 if (null == r) return null;
                 let { index: i } = r;
                 return null == i || "row" !== e.type ? null : n[i + 1 + e.row];
             }),
-            X(this, "renderRow", (e) => {
+            Q(this, "renderRow", (e) => {
                 let { section: t, row: n, rowIndex: i } = e,
                     { channel: l } = this.props,
                     a = this.getRowProps(e);
                 if (null != a) {
-                    if (a.type === M.so.MEMBER && "user" in a) {
+                    if (a.type === L.so.MEMBER && "user" in a) {
                         let {
                             colorString: e,
                             colorStrings: t,
                             colorRoleId: n,
-                            user: s,
-                            status: o,
+                            user: o,
+                            status: s,
                             isOwner: c,
                             isMobileOnline: u,
                             nick: d,
-                            activities: h,
-                            applicationStream: p,
+                            activities: p,
+                            applicationStream: h,
                             premiumSince: f,
                         } = a;
                         return (0, r.jsx)(
@@ -516,12 +516,12 @@ class es extends i.Component {
                                 colorString: e,
                                 colorStrings: t,
                                 colorRoleId: n,
-                                user: s,
-                                status: o,
+                                user: o,
+                                status: s,
                                 isOwner: c,
                                 nick: d,
-                                activities: this._areActivitiesExperimentallyHidden ? [] : h,
-                                applicationStream: p,
+                                activities: this._areActivitiesExperimentallyHidden ? [] : p,
+                                applicationStream: h,
                                 channel: l,
                                 guildId: l.guild_id,
                                 premiumSince: f,
@@ -531,7 +531,7 @@ class es extends i.Component {
                             "member-".concat(a.user.id),
                         );
                     }
-                    if (a.type === M.so.CONTENT_INVENTORY) {
+                    if (a.type === L.so.CONTENT_INVENTORY) {
                         let e = "content-inventory-".concat(a.entry.id);
                         null != a.entry.original_id && (e += "-".concat(a.entry.original_id));
                         let t = (0, r.jsx)(
@@ -542,20 +542,20 @@ class es extends i.Component {
                             }),
                             e,
                         );
-                        return a.entry.content_type === h.s.LEADERBOARD ? (0, r.jsx)(w.N, { children: t }, e) : t;
+                        return a.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(w.N, { children: t }, e) : t;
                     }
-                    if (a.type === M.so.HIDDEN_CONTENT_INVENTORY)
+                    if (a.type === L.so.HIDDEN_CONTENT_INVENTORY)
                         return (0, r.jsx)(E.Z, {}, "content-inventory-hidden-entry");
                 }
                 return (0, r.jsx)(ea, { index: i }, "placeholder-".concat(t, ":").concat(n));
             }),
-            X(this, "handleScroll", () => {
+            Q(this, "handleScroll", () => {
                 this.updateSubscription(), this.updateMaxContentFeedRowSeen();
             }),
-            X(
+            Q(
                 this,
                 "updateMaxContentFeedRowSeen",
-                o().debounce(() => {
+                s().debounce(() => {
                     let e = this._list;
                     if (null == e) return;
                     let { offsetHeight: t, scrollTop: n } = e.getScrollerState(),
@@ -563,19 +563,19 @@ class es extends i.Component {
                     this.props.updateMaxContentFeedRowSeen(r);
                 }, 50),
             ),
-            X(this, "getContentFeedGroup", () => {
-                let e = this.props.groups[I.T];
-                if ((0, C.R)(e)) return e;
+            Q(this, "getContentFeedGroup", () => {
+                let e = this.props.groups[P.T];
+                if ((0, O.R)(e)) return e;
             }),
-            X(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
-            X(this, "getRowHeightComputer", () => {
+            Q(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
+            Q(this, "getRowHeightComputer", () => {
                 let e = this.getContentFeedGroup(),
                     { rowHeight: t } = this.props;
                 if (null != e) {
                     let { rows: n } = this.props,
                         r = e.index;
                     return function (e, i) {
-                        if (e === I.T) {
+                        if (e === P.T) {
                             let e = n[r + 1 + i];
                             return (0, S.iZ)(e);
                         }
@@ -584,18 +584,18 @@ class es extends i.Component {
                 }
                 return t;
             }),
-            X(this, "getContentFeedHeight", () => {
+            Q(this, "getContentFeedHeight", () => {
                 let e = this.getContentFeedGroup();
                 return null != e ? e.feedHeight + this.props.sectionHeight : 0;
             }),
-            X(
+            Q(
                 this,
                 "updateSubscription",
-                o().debounce(() => {
+                s().debounce(() => {
                     if (null == this._list) return;
                     let { channel: e } = this.props,
                         { rowHeight: t, y: n, height: r } = this.getDimensions();
-                    (0, m.TV)({
+                    (0, g.TV)({
                         guildId: e.guild_id,
                         channelId: e.id,
                         y: n,
@@ -604,23 +604,23 @@ class es extends i.Component {
                     });
                 }, 50),
             ),
-            X(this, "trackMemberListViewed", () => {
+            Q(this, "trackMemberListViewed", () => {
                 var e;
                 if (this.lastReportedAnalyticsChannel === this.props.channel.id) return;
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== I.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== P.T));
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
-                    .filter(V.lm);
+                    .filter(z.lm);
                 if (0 === r.length) return;
                 let i = r.reduce(
                     (e, t) => {
                         var n;
                         return (
-                            t.type !== M.so.MEMBER ||
+                            t.type !== L.so.MEMBER ||
                                 (e.num_users_visible++,
                                 t.isMobileOnline && e.num_users_visible_with_mobile_indicator++,
                                 null != t.activities &&
@@ -644,28 +644,28 @@ class es extends i.Component {
                     },
                 );
                 (this.lastReportedAnalyticsChannel = this.props.channel.id),
-                    _.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
+                    x.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
             });
     }
 }
-function eo(e) {
+function es(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, O.ZP)(j.Z.MEMBER_LIST),
-        s = (0, p.e7)([x.Z], () => x.Z.keyboardModeEnabled),
-        o = (0, p.cj)([M.ZP], () => M.ZP.getProps(t.guild_id, t.id)),
+        { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
+        o = (0, h.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        s = (0, h.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
-            groups: h,
-            version: g,
-            updateMaxRowSeen: m,
-        } = (0, I.H)({
-            memberStoreProps: o,
+            groups: p,
+            version: m,
+            updateMaxRowSeen: g,
+        } = (0, P.H)({
+            memberStoreProps: s,
             channelId: t.id,
             guildId: t.guild_id,
         }),
         b = i.useRef(null),
         y = (0, f.UBm)("lg") + (0, f.UBm)("xxs"),
-        _ = i.useCallback(
+        x = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -685,7 +685,7 @@ function eo(e) {
             },
             [42],
         ),
-        v = i.useCallback(
+        j = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -694,7 +694,7 @@ function eo(e) {
                 }),
             [],
         ),
-        C = i.useCallback(
+        O = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -709,25 +709,25 @@ function eo(e) {
         ),
         E = (0, u.ZP)({
             id: "members-".concat(t.id),
-            setFocus: _,
-            isEnabled: s,
-            scrollToStart: v,
-            scrollToEnd: C,
+            setFocus: x,
+            isEnabled: o,
+            scrollToStart: j,
+            scrollToEnd: O,
         });
-    return (0, r.jsx)(O.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
-            className: a()(Q.container, n),
+            className: a()(X.container, n),
             children: (0, r.jsx)(c.bG, {
                 navigator: E,
                 children: (0, r.jsx)(
-                    es,
-                    $(J({}, e, o), {
-                        version: g,
-                        groups: h,
+                    eo,
+                    $(J({}, e, s), {
+                        version: m,
+                        groups: p,
                         rows: d,
                         listRef: b,
-                        updateMaxContentFeedRowSeen: m,
+                        updateMaxContentFeedRowSeen: g,
                         sectionHeight: 18 + y,
                         rowHeight: 42,
                     }),
@@ -741,7 +741,7 @@ function ec(e) {
         l = i.useDeferredValue(t);
     return i.useMemo(
         () =>
-            (0, r.jsx)(eo, {
+            (0, r.jsx)(es, {
                 channel: l,
                 className: n,
             }),

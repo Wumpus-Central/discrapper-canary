@@ -27,8 +27,8 @@ var i,
     v = n(999675),
     S = n(238027),
     T = n(997585),
-    I = n(138431),
-    N = n(305516),
+    N = n(138431),
+    I = n(305516),
     y = n(980984),
     A = n(952842),
     P = n(38244),
@@ -116,8 +116,8 @@ let et = () => {
             $
                 ? {
                       referralProgram: {
-                          thumbnail: N.Z,
-                          assetUrl: n ? I.Z : y.Z,
+                          thumbnail: I.Z,
+                          assetUrl: n ? N.Z : y.Z,
                       },
                       showYourStyle: {
                           thumbnail: P.Z,

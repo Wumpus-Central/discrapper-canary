@@ -1,72 +1,72 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(565138),
-    s = n(246364),
-    l = n(602606),
+    o = n(246364),
+    s = n(602606),
     c = n(705563),
     u = n(594174),
     d = n(967128),
-    f = n(388032),
-    _ = n(496363);
-function p(e) {
+    p = n(388032),
+    h = n(496363);
+function f(e) {
     var t;
-    let { joinRequest: n, guild: l } = e,
+    let { joinRequest: n, guild: s } = e,
         c = (0, i.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, r.jsxs)("div", {
-        className: _.summaryContainer,
+        className: h.summaryContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: _.summaryHeader,
+                className: h.summaryHeader,
                 children: [
-                    null != l &&
+                    null != s &&
                         (0, r.jsxs)("div", {
-                            className: _.summaryHeaderClanInfo,
+                            className: h.summaryHeaderClanInfo,
                             children: [
                                 (0, r.jsx)(a.Z, {
-                                    guild: l,
+                                    guild: s,
                                     active: !0,
                                     size: a.Z.Sizes.SMOL,
-                                    className: _.guildIcon,
+                                    className: h.guildIcon,
                                 }),
-                                (0, r.jsx)(o.X6q, {
+                                (0, r.jsx)(l.X6q, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
-                                    children: l.name,
+                                    children: s.name,
                                 }),
                             ],
                         }),
                     null != c &&
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: "heading-xl/semibold",
                             color: "header-primary",
-                            children: f.intl.format(f.t.jDV3i4, { username: c.globalName }),
+                            children: p.intl.format(p.t.jDV3i4, { username: c.globalName }),
                         }),
                 ],
             }),
             null == (t = n.formResponses)
                 ? void 0
                 : t
-                      .filter((e) => e.field_type !== s.QJ.TERMS)
+                      .filter((e) => e.field_type !== o.QJ.TERMS)
                       .map((e) => {
                           let t =
-                              e.field_type === s.QJ.MULTIPLE_CHOICE && null != e.response
+                              e.field_type === o.QJ.MULTIPLE_CHOICE && null != e.response
                                   ? e.choices[e.response]
                                   : e.response;
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)("hr", { className: _.summarySeparator }),
+                                  (0, r.jsx)("hr", { className: h.summarySeparator }),
                                   (0, r.jsxs)("div", {
-                                      className: _.formResponseContainer,
+                                      className: h.formResponseContainer,
                                       children: [
-                                          (0, r.jsx)(o.Text, {
+                                          (0, r.jsx)(l.Text, {
                                               variant: "text-xs/semibold",
                                               color: "text-muted",
                                               children: e.label,
                                           }),
-                                          (0, r.jsx)(o.Text, {
+                                          (0, r.jsx)(l.Text, {
                                               variant: "text-md/medium",
                                               color: "text-primary",
                                               children: t,
@@ -79,19 +79,19 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: i, joinRequestGuild: a } = (0, l.Z)(t.id);
+        { loading: n, joinRequest: i, joinRequestGuild: a } = (0, s.Z)(t.id);
     return (0, r.jsx)(d.ZP, {
         channelId: t.id,
-        className: _.container,
+        className: h.container,
         children:
             null != i && null != i.formResponses
                 ? (0, r.jsxs)("div", {
-                      className: _.formContainer,
+                      className: h.formContainer,
                       children: [
                           (0, r.jsx)("div", {
-                              children: (0, r.jsx)(p, {
+                              children: (0, r.jsx)(f, {
                                   guild: a,
                                   joinRequest: i,
                               }),
@@ -103,7 +103,7 @@ function h(e) {
                       ],
                   })
                 : n
-                  ? (0, r.jsx)(o.$jN, {})
+                  ? (0, r.jsx)(l.$jN, {})
                   : null,
     });
 }

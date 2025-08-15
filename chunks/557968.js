@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(626135),
     i = n(360347),
-    o = n(981631);
-function a(e, t, n) {
+    a = n(981631);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,22 +26,22 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 function l(e) {
     let { tab_opened: t, source: n } = e,
-        a = (0, i.Z)();
+        o = (0, i.Z)();
     r.default.track(
-        o.rMx.FRIENDS_LIST_CLICKED,
+        a.rMx.FRIENDS_LIST_CLICKED,
         s(
             {
                 tab_opened: t,
                 source: n,
             },
-            a,
+            o,
         ),
     );
 }

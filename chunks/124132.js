@@ -1,12 +1,12 @@
-var r = n(733359).substr;
-e.exports = function (e, t) {
-    var n = Array(e.length).fill(null);
+var n = r(733359).substr;
+t.exports = function (t, e) {
+    var r = Array(t.length).fill(null);
     return (
-        t &&
-            t.forEach(function (t) {
-                for (var i = r(e, 0, t.offset).length, o = i + r(e, t.offset, t.length).length, a = i; a < o; a++)
-                    n[a] = t.key;
+        e &&
+            e.forEach(function (e) {
+                for (var i = n(t, 0, e.offset).length, o = i + n(t, e.offset, e.length).length, a = i; a < o; a++)
+                    r[a] = e.key;
             }),
-        n
+        r
     );
 };

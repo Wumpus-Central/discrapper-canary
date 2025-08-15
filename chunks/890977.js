@@ -1,19 +1,19 @@
-n.d(t, { b: () => b }), n(49124);
+n.d(t, { b: () => _ }), n(49124);
 var r,
     i,
-    o = n(255367),
+    l = n(255367),
     a = n(73800),
-    s = n(120356),
-    l = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(500923),
     u = n.n(c),
     d = n(442837),
-    f = n(607070),
-    _ = n(484334),
-    p = n(158877),
-    h = n(505723);
-function m(e) {
-    let t = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+    p = n(607070),
+    h = n(484334),
+    f = n(158877),
+    m = n(505723);
+function g(e) {
+    let t = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         n = a.useRef(null);
     return (
         a.useEffect(() => {
@@ -35,36 +35,36 @@ function m(e) {
         n
     );
 }
-function g(e) {
+function b(e) {
     let { className: t } = e;
-    return (0, o.jsx)("div", {
-        ref: m(r || (r = n.t(_, 2))),
-        className: l()(h.glow, t),
+    return (0, l.jsx)("div", {
+        ref: g(r || (r = n.t(h, 2))),
+        className: s()(m.glow, t),
     });
 }
-function E(e) {
+function y(e) {
     let { className: t } = e;
-    return (0, o.jsx)("div", {
-        ref: m(i || (i = n.t(p, 2))),
-        className: l()(h.trinkets, t),
+    return (0, l.jsx)("div", {
+        ref: g(i || (i = n.t(f, 2))),
+        className: s()(m.trinkets, t),
     });
 }
-let b = (e) => {
-    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: s } = e;
+let _ = (e) => {
+    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: o } = e;
     return (
         a.useEffect(() => {
-            s();
-        }, [s]),
-        (0, o.jsxs)("div", {
+            o();
+        }, [o]),
+        (0, l.jsxs)("div", {
             className: n,
             children: [
-                (0, o.jsx)(g, { className: r }),
-                (0, o.jsx)("div", { className: h.circleLayer }),
-                (0, o.jsx)("div", {
-                    className: h.entrypoint,
+                (0, l.jsx)(b, { className: r }),
+                (0, l.jsx)("div", { className: m.circleLayer }),
+                (0, l.jsx)("div", {
+                    className: m.entrypoint,
                     children: t,
                 }),
-                (0, o.jsx)(E, { className: i }),
+                (0, l.jsx)(y, { className: i }),
             ],
         })
     );

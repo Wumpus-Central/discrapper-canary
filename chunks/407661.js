@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(367907),
@@ -34,14 +34,14 @@ function T(e, t) {
     }, [n, r]);
 }
 function S(e) {
-    let { channel: t, message: n, replyChainLength: o } = e;
-    function a() {
+    let { channel: t, message: n, replyChainLength: a } = e;
+    function o() {
         (0, _.A6)(t.id), (0, m.R6)(t, n, "Reply Chain Nudge");
     }
-    let s = i.useRef(o);
+    let s = i.useRef(a);
     return (
         i.useEffect(() => {
-            s.current = o;
+            s.current = a;
         }),
         i.useEffect(() => {
             (0, c.yw)(b.rMx.THREAD_NUDGE_SHOWN, {
@@ -52,7 +52,7 @@ function S(e) {
             });
         }, [t]),
         (0, r.jsxs)(l.P3F, {
-            onClick: a,
+            onClick: o,
             className: O.threadSuggestionBar,
             focusProps: {
                 offset: {
@@ -65,7 +65,7 @@ function S(e) {
                     color: "header-secondary",
                     className: O.text,
                     variant: "text-sm/normal",
-                    children: y.intl.format(y.t.B3V0FB, { count: Math.min(I, o + 1) }),
+                    children: y.intl.format(y.t.B3V0FB, { count: Math.min(I, a + 1) }),
                 }),
                 (0, r.jsx)(l.Text, {
                     color: "text-link",
@@ -79,7 +79,7 @@ function S(e) {
 }
 function A(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: o, shouldMention: s, showMentionToggle: c } = t,
+        { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
         {
             guildId: m,
             nick: g,
@@ -88,17 +88,17 @@ function A(e) {
             colorRoleName: N,
             authorId: C,
             displayNameStyles: R,
-        } = (0, d.ZP)(o),
+        } = (0, d.ZP)(a),
         P = (0, f.X7)(m, C, A),
         w = (0, u.j)({ displayNameStyles: R }),
-        D = T(i, o),
-        L = (0, h.NE)(i, o),
+        D = T(i, a),
+        L = (0, h.NE)(i, a),
         x = n.showThreadPromptOnReply && D >= v && L,
-        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
-    function j(e) {
+        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function k(e) {
         e.stopPropagation(), (0, _.qx)(i.id, !s);
     }
-    function k(e) {
+    function j(e) {
         e.stopPropagation(), (0, _.A6)(i.id);
     }
     return (0, r.jsx)("div", {
@@ -121,7 +121,7 @@ function A(e) {
                             },
                             children: (0, r.jsx)(l.Text, {
                                 color: "header-secondary",
-                                className: a()(O.text, O.replyLabel),
+                                className: o()(O.text, O.replyLabel),
                                 variant: "text-sm/normal",
                                 children: y.intl.format(y.t["8E4Gxc"], {
                                     userHook: (e, t) =>
@@ -149,15 +149,15 @@ function A(e) {
                                             (0, r.jsx)(l.ua7, {
                                                 text: s ? y.intl.string(y.t.DH2o6e) : y.intl.string(y.t.utGGIS),
                                                 children: (e) => {
-                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: o } = e;
+                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: "switch",
                                                         "aria-checked": s,
-                                                        onClick: j,
+                                                        onClick: k,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
-                                                        onBlur: o,
+                                                        onBlur: a,
                                                         children: (0, r.jsxs)(l.Text, {
                                                             variant: "text-sm/bold",
                                                             color: s ? "text-link" : "text-muted",
@@ -183,7 +183,7 @@ function A(e) {
                                             }),
                                         ],
                                     }),
-                                (0, r.jsx)(E.B, { onClick: k }),
+                                (0, r.jsx)(E.B, { onClick: j }),
                             ],
                         }),
                     ],
@@ -191,7 +191,7 @@ function A(e) {
                 x &&
                     (0, r.jsx)(S, {
                         channel: i,
-                        message: o,
+                        message: a,
                         replyChainLength: D,
                     }),
             ],

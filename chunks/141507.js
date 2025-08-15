@@ -1,8 +1,8 @@
 n.d(t, { k: () => w });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(780384),
+    a = n(442837),
+    o = n(780384),
     s = n(481060),
     l = n(607070),
     c = n(339085),
@@ -37,7 +37,7 @@ let P = (e) => {
         let t,
             w,
             D,
-            { className: L, emojiGrid: x, guildId: M, pickerIntention: j, channel: k } = e,
+            { className: L, emojiGrid: x, guildId: M, pickerIntention: k, channel: j } = e,
             { enabled: U } = y.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             B = i.useMemo(() => {
@@ -67,13 +67,13 @@ let P = (e) => {
                     allNamesString: null == B ? void 0 : B.name,
                 };
         }
-        let Z = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
-            F = (0, o.e7)([E.Z], () => E.Z.isFocused()),
-            V = (0, o.e7)([l.Z], () => l.Z.useReducedMotion, []),
+        let V = (0, a.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
+            F = (0, a.e7)([E.Z], () => E.Z.isFocused()),
+            Z = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
             Y = (0, O.C1)(M, R(t) ? t : null),
-            W = (0, o.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: K } = (0, v.Z)(M, j),
+            W = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
+            { newlyAddedEmojis: K } = (0, v.Z)(M, k),
             z = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : S.t0.NONE;
         if (
             (i.useEffect(() => {
@@ -131,26 +131,26 @@ let P = (e) => {
         else if ("EXPAND_OR_COLLAPSE_EMOJI" === t.type) {
             let e = n(187119),
                 i = n(39874),
-                o = n(853871),
+                a = n(853871),
                 s = n(63149);
             w = W.has(t.guildId)
                 ? (0, r.jsx)("img", {
                       className: N.icon,
-                      src: (0, a.wj)(q) ? o : s,
+                      src: (0, o.wj)(q) ? a : s,
                       alt: "",
                   })
                 : (0, r.jsx)("img", {
                       className: N.icon,
-                      src: (0, a.wj)(q) ? e : i,
+                      src: (0, o.wj)(q) ? e : i,
                       alt: "",
                   });
         }
         let Q =
-            null != Z
+            null != V
                 ? (0, r.jsx)(I.Z, {
                       className: N.__invalid_guildIcon,
-                      guild: Z,
-                      shouldAnimate: !V && F,
+                      guild: V,
+                      shouldAnimate: !Z && F,
                   })
                 : null;
         D =
@@ -166,10 +166,10 @@ let P = (e) => {
                 ? A.intl.string(A.t["Z/r7IS"])
                 : P({
                       inspectedEmoji: t,
-                      channel: k,
+                      channel: j,
                       guildId: M,
-                      intention: j,
-                      guild: Z,
+                      intention: k,
+                      guild: V,
                   });
         return (0, r.jsx)(p.Z, {
             className: L,

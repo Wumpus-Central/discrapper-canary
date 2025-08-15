@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -23,11 +23,11 @@ var i = n(255367),
     v = n(981631),
     S = n(388032),
     T = n(677599),
-    I = n(865215);
-let N = (e) => {
+    N = n(865215);
+let I = (e) => {
     let t,
         n,
-        { isAllPerksVisible: s, setIsAllPerksVisible: N, previousComponent: y } = e,
+        { isAllPerksVisible: s, setIsAllPerksVisible: I, previousComponent: y } = e,
         A = (0, f.ZP)({ location: "SeeAllNitroPerks" }),
         P = r.useRef(null),
         R = r.useRef(null),
@@ -45,7 +45,7 @@ let N = (e) => {
         ? ((t = S.intl.string(S.t["+vt7w8"])), (n = S.intl.string(S.t.LgHbnJ)))
         : ((t = S.intl.string(S.t.LgHbnJ)), (n = S.intl.string(S.t["+vt7w8"])));
     let V = () => {
-        N(!1),
+        I(!1),
             g.default.track(v.rMx.NITRO_HOME_NAVIGATION, {
                 current_component: C.MQ.SEE_ALL,
                 next_component: y,
@@ -148,7 +148,7 @@ let N = (e) => {
                         }),
                     }),
                     (0, i.jsx)("img", {
-                        src: I,
+                        src: N,
                         className: T.bottomIllustration,
                         width: 112,
                         height: 85,

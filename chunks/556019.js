@@ -1,7 +1,7 @@
 n.d(t, { qt: () => l });
 var r = n(203311),
     i = n(818083);
-let o = (0, i.B)({
+let a = (0, i.B)({
         kind: "user",
         id: "2025-04_emoji_studio",
         label: "Emoji Studio",
@@ -36,7 +36,7 @@ let o = (0, i.B)({
             },
         ],
     }),
-    a = (0, i.B)({
+    o = (0, i.B)({
         kind: "user",
         id: "2025-07_emoji_studio_mobile",
         label: "Emoji Studio (Mobile)",
@@ -65,14 +65,14 @@ let o = (0, i.B)({
 function l(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
         l = (0, r.$u)(t),
-        { enabled: c, showExpressionPickerButton: u } = o.useExperiment(
+        { enabled: c, showExpressionPickerButton: u } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: l || i,
             },
         ),
-        { enabled: d } = a.useExperiment(
+        { enabled: d } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,

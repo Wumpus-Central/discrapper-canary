@@ -30,8 +30,8 @@ class i {
     }
     static getCalculatorOrCreate(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-            o = e[t.ssrc];
-        return null == o && ((o = new s(n, r, i)), (e[t.ssrc] = o)), o;
+            a = e[t.ssrc];
+        return null == a && ((a = new s(n, r, i)), (e[t.ssrc] = a)), a;
     }
     getInboundBytesRecevierCalculator(e) {
         return i.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
@@ -52,7 +52,7 @@ class i {
             r(this, "outboundEncodeFps", {});
     }
 }
-var o = (function (e) {
+var a = (function (e) {
     return (
         (e[(e.NONE = 0)] = "NONE"),
         (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = "MILLISECONDS_FROM_SECONDS"),
@@ -60,8 +60,8 @@ var o = (function (e) {
         (e[(e.ROUND = 4)] = "ROUND"),
         e
     );
-})(o || {});
-let a = {
+})(a || {});
+let o = {
     0: { multiplier: 1 },
     1: {
         postfix: "_in_ms",
@@ -82,10 +82,10 @@ class s {
         let r = t[this.accumulativeMetricKey],
             i = e[this.accumulativeMetricKey];
         if ("number" != typeof r || "number" != typeof i) return;
-        let o = t[this.samplesMetricKey],
-            a = e[this.samplesMetricKey];
-        if ("number" != typeof o || "number" != typeof a) return;
-        let s = ((i - r) / (a - o)) * this.multiplier;
+        let a = t[this.samplesMetricKey],
+            o = e[this.samplesMetricKey];
+        if ("number" != typeof a || "number" != typeof o) return;
+        let s = ((i - r) / (o - a)) * this.multiplier;
         return this.round ? Math.round(s) : s;
     }
     constructor(e, t, n = 0) {
@@ -98,13 +98,13 @@ class s {
         (this.samplesMetricKey = t),
         (this.multiplier = 1),
         (this.round = !1),
-        o)) {
+        a)) {
             var i, s;
             let e = Number(l);
             !isNaN(e) &&
                 (n & e) != 0 &&
-                l in a &&
-                (this.multiplier *= null != (s = null == (i = a[l]) ? void 0 : i.multiplier) ? s : 1);
+                l in o &&
+                (this.multiplier *= null != (s = null == (i = o[l]) ? void 0 : i.multiplier) ? s : 1);
         }
         this.round = (4 & n) != 0;
     }

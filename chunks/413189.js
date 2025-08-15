@@ -1,106 +1,106 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
+    l = n(442837),
     a = n(680018),
-    s = n(481060),
-    l = n(410030),
+    o = n(481060),
+    s = n(410030),
     c = n(739566),
     u = n(612659),
     d = n(703656),
-    f = n(594174),
-    _ = n(63063),
-    p = n(436952),
-    h = n(411149),
-    m = n(115215),
-    g = n(151480),
-    E = n(680783),
-    b = n(66420),
-    y = n(981631),
-    O = n(474936),
-    v = n(388032),
-    I = n(664677);
-function T(e) {
-    var t, n, T, S;
-    let A,
-        N,
-        C,
-        { message: R, channel: P, compact: w } = e,
-        D = null == (t = R.chatWallpaperInfo) ? void 0 : t.wallpaperId,
-        { enabled: L } = (0, p.sX)({ location: "ChatWallpaperSetSystemMessage" }),
-        x = p.qM.useExperiment({ location: "ChatWallpaperSetSystemMessage" }).lightMode,
-        M = (0, c.ZP)(R),
-        j = (0, s.wjy)((0, l.ZP)()),
+    p = n(594174),
+    m = n(63063),
+    f = n(436952),
+    _ = n(411149),
+    g = n(115215),
+    h = n(151480),
+    b = n(680783),
+    E = n(66420),
+    C = n(981631),
+    v = n(474936),
+    O = n(388032),
+    y = n(664677);
+function x(e) {
+    var t, n, x, j;
+    let I,
+        S,
+        T,
+        { message: P, channel: N, compact: A } = e,
+        w = null == (t = P.chatWallpaperInfo) ? void 0 : t.wallpaperId,
+        { enabled: Z } = (0, f.sX)({ location: "ChatWallpaperSetSystemMessage" }),
+        R = f.qM.useExperiment({ location: "ChatWallpaperSetSystemMessage" }).lightMode,
+        L = (0, c.ZP)(P),
+        D = (0, o.wjy)((0, s.ZP)()),
         {
-            chatWallpaper: k,
-            isUpdatingChatWallpaperFlag: U,
-            lastSetMessageId: G,
-        } = (0, o.cj)([h.Z], () => ({
-            chatWallpaper: h.Z.getWallpaperById(D),
-            isUpdatingChatWallpaperFlag: h.Z.isUpdatingChatWallpaperFlagForChannel(P.id),
-            lastSetMessageId: h.Z.getLastSetWallpaperMessageIdForChannel(P.id),
+            chatWallpaper: M,
+            isUpdatingChatWallpaperFlag: k,
+            lastSetMessageId: U,
+        } = (0, l.cj)([_.Z], () => ({
+            chatWallpaper: _.Z.getWallpaperById(w),
+            isUpdatingChatWallpaperFlag: _.Z.isUpdatingChatWallpaperFlagForChannel(N.id),
+            lastSetMessageId: _.Z.getLastSetWallpaperMessageIdForChannel(N.id),
         })),
-        B = (0, E.Z)(P.id),
-        Z = G === R.id,
-        F = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        V = (null == F ? void 0 : F.id) === R.author.id,
-        H = (0, u.m)(O.p9.TIER_2),
-        Y = m.t(P);
+        F = (0, b.Z)(N.id),
+        B = U === P.id,
+        G = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        H = (null == G ? void 0 : G.id) === P.author.id,
+        V = (0, u.m)(v.p9.TIER_2),
+        z = g.t(N);
     return (i.useEffect(() => {
-        null == k && h.Z.shouldFetchWallpapers && g.k9();
-    }, [k]),
-    null == D)
+        null == M && _.Z.shouldFetchWallpapers && h.k9();
+    }, [M]),
+    null == w)
         ? null
-        : ((A = V
-              ? v.intl.format(v.t.z847Tk, {
-                    wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t["UQMV/P"]),
+        : ((I = H
+              ? O.intl.format(O.t.z847Tk, {
+                    wallpaper_name: null != (n = null == M ? void 0 : M.label) ? n : O.intl.string(O.t["UQMV/P"]),
                 })
-              : v.intl.format(v.t["+lKndX"], {
-                    username: null == M ? void 0 : M.nick,
-                    wallpaper_name: null != (T = null == k ? void 0 : k.label) ? T : v.intl.string(v.t["UQMV/P"]),
+              : O.intl.format(O.t["+lKndX"], {
+                    username: null == L ? void 0 : L.nick,
+                    wallpaper_name: null != (x = null == M ? void 0 : M.label) ? x : O.intl.string(O.t["UQMV/P"]),
                 })),
-          L
-              ? j || x
-                  ? Y && Z
-                      ? (N = v.intl.formatToPlainString(v.t.PzTpVV, {
+          Z
+              ? D || R
+                  ? z && B
+                      ? (S = O.intl.formatToPlainString(O.t.PzTpVV, {
                             wallpaperName:
-                                null != (S = null == k ? void 0 : k.label) ? S : v.intl.string(v.t["UQMV/P"]),
+                                null != (j = null == M ? void 0 : M.label) ? j : O.intl.string(O.t["UQMV/P"]),
                         }))
-                      : V ||
-                        H ||
-                        !Z ||
-                        (N = v.intl.format(v.t.JwUhHh, {
+                      : H ||
+                        V ||
+                        !B ||
+                        (S = O.intl.format(O.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, d.uL)(y.Z5c.NITRO_HOME);
+                                (0, d.uL)(C.Z5c.NITRO_HOME);
                             },
                         }))
-                  : (N = v.intl.format(v.t.dBxFsL, { learnMoreLink: _.Z.getArticleURL(y.BhN.DM_WALLPAPERS) }))
-              : (N = v.intl.string(v.t["6JSOu7"])),
-          (null == B ? void 0 : B.isViewable) &&
-              Z &&
-              !V &&
-              (C = (0, r.jsx)("div", {
-                  className: I.action,
+                  : (S = O.intl.format(O.t.dBxFsL, { learnMoreLink: m.Z.getArticleURL(C.BhN.DM_WALLPAPERS) }))
+              : (S = O.intl.string(O.t["6JSOu7"])),
+          (null == F ? void 0 : F.isViewable) &&
+              B &&
+              !H &&
+              (T = (0, r.jsx)("div", {
+                  className: y.action,
                   children: (0, r.jsx)(a.z, {
                       variant: "primary",
-                      text: v.intl.string(Y ? v.t.o6850d : v.t["/ubFp6"]),
-                      loading: U,
+                      text: O.intl.string(z ? O.t.o6850d : O.t["/ubFp6"]),
+                      loading: k,
                       onClick: () => {
-                          g.X(P, D, {
-                              shouldClear: !Y,
+                          h.X(N, w, {
+                              shouldClear: !z,
                               onError: () => {
-                                  (0, s.showToast)((0, s.createToast)(v.intl.string(v.t.F8FvU1), s.ToastType.FAILURE));
+                                  (0, o.showToast)((0, o.createToast)(O.intl.string(O.t.F8FvU1), o.ToastType.FAILURE));
                               },
                           });
                       },
                   }),
               })),
-          (0, r.jsx)(b.Z, {
-              channel: P,
-              content: A,
-              subtitle: N,
-              action: C,
-              compact: w,
-              message: R,
+          (0, r.jsx)(E.Z, {
+              channel: N,
+              content: I,
+              subtitle: S,
+              action: T,
+              compact: A,
+              message: P,
           }));
 }

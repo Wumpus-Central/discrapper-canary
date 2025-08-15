@@ -1,4 +1,4 @@
-a.d(t, { Z: () => v }), a(388685);
+a.d(t, { Z: () => f }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(442837),
@@ -13,7 +13,7 @@ var n = a(255367),
     h = a(246992),
     p = a(981631),
     b = a(474936);
-let f = [
+let v = [
     {
         label: "1 Week",
         value: 0,
@@ -51,9 +51,9 @@ let f = [
         value: 72,
     },
 ];
-function v() {
+function f() {
     var e, t;
-    let [a, v] = r.useState(!1),
+    let [a, f] = r.useState(!1),
         j = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         g = (0, d.kG)(),
         _ = (0, l.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
@@ -67,7 +67,7 @@ function v() {
                     endedAt: void 0,
                     premium_streak_started_at: x.default.fromTimestamp(t.getTime()),
                 };
-                v(!0),
+                f(!0),
                     await i.tn.patch({
                         url: "/debug/subscriptions/".concat(_.id),
                         body: a,
@@ -75,7 +75,7 @@ function v() {
                     }),
                     await (0, c.In)(j.id),
                     await (0, o.jg)(),
-                    v(!1);
+                    f(!1);
             },
             [_, j],
         );
@@ -84,7 +84,7 @@ function v() {
             isDisabled: a,
             serialize: (e) => "".concat(e),
             isSelected: (e) => e === y,
-            options: f,
+            options: v,
             select: C,
             popoutLayerContext: h.O$,
             popoutWidth: 200,

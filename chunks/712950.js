@@ -1,11 +1,11 @@
 n.d(t, {
-    g: () => a,
-    p: () => s,
+    g: () => l,
+    p: () => a,
 });
 var r = n(399606),
     i = n(581883),
     o = n(592204);
-let a = () => {
+let l = () => {
         var e, t, n;
         let o = (0, r.cj)([i.Z], () => {
             var e, t;
@@ -17,8 +17,8 @@ let a = () => {
             slurs: null == (n = o.slurs) ? void 0 : n.value,
         };
     },
-    s = () => {
+    a = () => {
         var e;
-        let { profanity: t, sexualContent: n, slurs: r } = a();
+        let { profanity: t, sexualContent: n, slurs: r } = l();
         return !!(0, o.Xo)({ location: "use-should-filter-keywords" }) && null != (e = t || n || r) && e;
     };

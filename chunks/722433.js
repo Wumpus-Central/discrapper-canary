@@ -3,8 +3,8 @@ function r(e) {
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
 var i = r(n(715753)),
-    o = n(197812),
-    a = n(867309),
+    a = n(197812),
+    o = n(867309),
     s = n(179237),
     l = r(n(865481)),
     c = n(133874),
@@ -23,8 +23,8 @@ function h(e, t) {
     if (!e.nodeType || !e.setAttribute) return !1;
     var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
         r = t,
-        o = r.style,
-        a = r.children,
+        a = r.style,
+        o = r.children,
         s = r.scrollTop,
         l = r.scrollLeft,
         c = i(r, ["style", "children", "scrollTop", "scrollLeft"]),
@@ -38,9 +38,9 @@ function h(e, t) {
                       }));
         });
     u.Globals.frameLoop.onWrite(function () {
-        for (var t in (void 0 !== a && (e.textContent = a), o))
-            if (o.hasOwnProperty(t)) {
-                var n = _(t, o[t]);
+        for (var t in (void 0 !== o && (e.textContent = o), a))
+            if (a.hasOwnProperty(t)) {
+                var n = _(t, a[t]);
                 "float" === t ? (t = "cssFloat") : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
             }
         h.forEach(function (t, n) {
@@ -124,13 +124,13 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
         function t(t) {
             var n = t.x,
                 r = t.y,
-                o = t.z,
-                a = i(t, ["x", "y", "z"]),
+                a = t.z,
+                o = i(t, ["x", "y", "z"]),
                 s = [],
                 l = [];
             return (
-                (n || r || o) &&
-                    (s.push([n || 0, r || 0, o || 0]),
+                (n || r || a) &&
+                    (s.push([n || 0, r || 0, a || 0]),
                     l.push(function (e) {
                         return [
                             "translate3d(" +
@@ -143,14 +143,14 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                             I(e, 0),
                         ];
                     })),
-                u.each(a, function (e, t) {
+                u.each(o, function (e, t) {
                     if ("transform" === t)
                         s.push([e || ""]),
                             l.push(function (e) {
                                 return [e, "" === e];
                             });
                     else if (b.test(t)) {
-                        if ((delete a[t], u.is.und(e))) return;
+                        if ((delete o[t], u.is.und(e))) return;
                         var n = y.test(t) ? "px" : O.test(t) ? "deg" : "";
                         s.push(u.toArray(e)),
                             l.push(
@@ -159,8 +159,8 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                                           var t = e[0],
                                               r = e[1],
                                               i = e[2],
-                                              o = e[3];
-                                          return ["rotate3d(" + t + "," + r + "," + i + "," + v(o, n) + ")", I(o, 0)];
+                                              a = e[3];
+                                          return ["rotate3d(" + t + "," + r + "," + i + "," + v(a, n) + ")", I(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -178,8 +178,8 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                             );
                     }
                 }),
-                s.length && (a.transform = new S(s, l)),
-                e.call(this, a) || this
+                s.length && (o.transform = new S(s, l)),
+                e.call(this, o) || this
             );
         }
         return d(t, e), t;
@@ -207,10 +207,10 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                     n = !0;
                 return (
                     u.each(this.inputs, function (r, i) {
-                        var o = u.getFluidValue(r[0]),
-                            a = e.transforms[i](u.is.arr(o) ? o : r.map(u.getFluidValue)),
-                            s = a[0],
-                            l = a[1];
+                        var a = u.getFluidValue(r[0]),
+                            o = e.transforms[i](u.is.arr(a) ? a : r.map(u.getFluidValue)),
+                            s = o[0],
+                            l = o[1];
                         (t += " " + s), (n = n && l);
                     }),
                     n ? "none" : t
@@ -382,10 +382,10 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
         "text",
         "tspan",
     ];
-o.Globals.assign({
+a.Globals.assign({
     colorNames: l,
     createStringInterpolator: s.createStringInterpolator,
-    batchedUpdates: a.unstable_batchedUpdates,
+    batchedUpdates: o.unstable_batchedUpdates,
 });
 var N = c.createHost(A, {
     applyAnimatedValues: h,
@@ -396,12 +396,12 @@ var N = c.createHost(A, {
         return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
     },
 }).animated;
-Object.keys(o).forEach(function (e) {
+Object.keys(a).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return o[e];
+                return a[e];
             },
         });
 }),

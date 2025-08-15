@@ -1,29 +1,25 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r,
-    i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = new Map(),
-    l = (e) => {
-        let { roleId: t, roleConnectionEligibility: n } = e;
-        s.set(t, n);
-    };
-class c extends (r = i.ZP.Store) {
+    l,
+    o = n(442837),
+    i = n(570140);
+let a = new Map();
+class s extends (r = o.ZP.Store) {
     getGuildRoleConnectionEligibility(e) {
-        return null != e ? s.get(e) : void 0;
+        return null != e ? a.get(e) : void 0;
     }
 }
-a(c, "displayName", "GuildRoleConnectionEligibilityStore");
-let u = new c(o.Z, { GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: l });
+(l = "displayName") in s
+    ? Object.defineProperty(s, l, {
+          value: "GuildRoleConnectionEligibilityStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (s[l] = "GuildRoleConnectionEligibilityStore");
+let c = new s(i.Z, {
+    GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: (e) => {
+        let { roleId: t, roleConnectionEligibility: n } = e;
+        a.set(t, n);
+    },
+});

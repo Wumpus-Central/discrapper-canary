@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(731965);
-function a(e, t, n) {
+    a = n(731965);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,10 +32,10 @@ class c {
         i
             ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents]))
             : this.visibleComponents.add(e.target);
-        let o = i || this.animatingComponents.size < s;
-        o ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target),
-            t.updateState(o),
-            o && this.visibleComponents.size > s && this.stopNodeFromAnimating();
+        let a = i || this.animatingComponents.size < s;
+        a ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target),
+            t.updateState(a),
+            a && this.visibleComponents.size > s && this.stopNodeFromAnimating();
     }
     handleNotVisible(e, t) {
         this.visibleComponents.has(e.target) &&
@@ -91,16 +91,16 @@ class c {
     }
     constructor(e = !1) {
         if (
-            (a(this, "registeredNodes", new Map()),
-            a(this, "visibleComponents", new Set()),
-            a(this, "animatingComponents", new Set()),
-            a(this, "observer", void 0),
+            (o(this, "registeredNodes", new Map()),
+            o(this, "visibleComponents", new Set()),
+            o(this, "animatingComponents", new Set()),
+            o(this, "observer", void 0),
             e)
         )
             return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, o.j)(() => {
+                (0, a.j)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null != t &&

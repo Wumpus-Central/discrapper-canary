@@ -16,13 +16,13 @@ n.d(t, {
     QO: () => O,
     QP: () => l,
     Qx: () => d,
-    R$: () => j,
+    R$: () => k,
     Tr: () => X,
     UC: () => U,
     Uc: () => ee,
     V8: () => $,
     WA: () => y,
-    XR: () => Z,
+    XR: () => V,
     YE: () => G,
     Yh: () => f,
     Yn: () => i,
@@ -34,19 +34,19 @@ n.d(t, {
     ef: () => x,
     fC: () => c,
     fU: () => m,
-    h7: () => o,
+    h7: () => a,
     iA: () => K,
     jg: () => E,
     kS: () => F,
     mC: () => A,
     mN: () => S,
     n4: () => H,
-    pM: () => a,
-    pk: () => k,
+    pM: () => o,
+    pk: () => j,
     ru: () => M,
     u$: () => C,
     uA: () => Q,
-    ux: () => V,
+    ux: () => Z,
     vA: () => r.vA,
     w5: () => h,
     y7: () => D,
@@ -57,10 +57,10 @@ var r = n(268146),
     i = (function (e) {
         return (e.DEFAULT = "default"), (e.STREAM = "stream"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.AUDIO_INPUT = "audioinput"), (e.AUDIO_OUTPUT = "audiooutput"), (e.VIDEO_INPUT = "videoinput"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     s = (function (e) {
@@ -123,12 +123,12 @@ let d = 100,
     L = 50,
     x = 1280,
     M = 720,
-    j = 30,
-    k = 1500000,
+    k = 30,
+    j = 1500000,
     U = 500000,
     G = 3500000,
     B = 9000000,
-    Z = [
+    V = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -158,7 +158,7 @@ let d = 100,
         },
         videoBitrateFloor: 150000,
     },
-    V = 60000,
+    Z = 60000,
     H = ">=22.0.0";
 var Y = (function (e) {
         return (
@@ -240,6 +240,7 @@ var Y = (function (e) {
             (e.VP8 = "VP8"),
             (e.VP9 = "VP9"),
             (e.H264 = "H264"),
+            (e.H265 = "H265"),
             (e.RTX = "rtx"),
             (e.TEST = "TEST"),
             e
@@ -278,6 +279,7 @@ var Y = (function (e) {
             (e.RESET_DECODER_ON_ERRORS = "reset_decoder_on_errors"),
             (e.SOFTWARE_FALLBACK_ON_ERRORS = "software_fallback_on_errors"),
             (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = "software_fallback_on_consecutive_errors"),
+            (e.BROWSER_HEVC = "browser_hevc"),
             e
         );
     })({}),

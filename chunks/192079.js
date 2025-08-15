@@ -1,32 +1,32 @@
 n.d(t, {
     ER: () => d,
-    kk: () => f,
-    s$: () => _,
+    kk: () => p,
+    s$: () => m,
 }),
     n(388685),
     n(392711);
 var r = n(19780),
     i = n(5192),
-    o = n(700785),
+    l = n(700785),
     a = n(427679),
-    s = n(157925),
-    l = n(981631),
+    o = n(157925),
+    s = n(981631),
     c = n(71080),
     u = n(388032);
 function d(e, t, n, r) {
-    let o = t[0],
-        a = i.ZP.getName(e, n, o),
-        s = null != r ? r : t.length;
-    return 1 === s && null != o
+    let l = t[0],
+        a = i.ZP.getName(e, n, l),
+        o = null != r ? r : t.length;
+    return 1 === o && null != l
         ? a
-        : null == o
-          ? u.intl.formatToPlainString(u.t.chmM9P, { count: s })
+        : null == l
+          ? u.intl.formatToPlainString(u.t.chmM9P, { count: o })
           : u.intl.formatToPlainString(u.t.GhkJ29, {
                 name: a,
-                count: s - 1,
+                count: o - 1,
             });
 }
-function f(e, t) {
+function p(e, t) {
     switch (e) {
         case c.aC.OWNER:
             return u.intl.string(u.t.icuNBA);
@@ -39,14 +39,14 @@ function f(e, t) {
     }
     return null;
 }
-function _(e) {
+function m(e) {
     let t = a.Z.getStageInstanceByChannel(e.id);
     return {
         channel_id: e.id,
         guild_id: e.guild_id,
         topic: null == t ? void 0 : t.topic,
         media_session_id: r.Z.getMediaSessionId(),
-        request_to_speak_state: o.Uu(l.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
+        request_to_speak_state: l.Uu(s.Plq.REQUEST_TO_SPEAK, e) ? o.BM.EVERYONE : o.BM.NO_ONE,
         stage_instance_id: null == t ? void 0 : t.id,
     };
 }

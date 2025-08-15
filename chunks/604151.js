@@ -1,8 +1,8 @@
 n.d(t, { h: () => b });
 var r = n(772848),
     i = n(952265),
-    o = n(570140),
-    a = n(281956),
+    a = n(570140),
+    o = n(281956),
     s = n(200498),
     l = n(368442),
     c = n(672339),
@@ -49,7 +49,7 @@ let b = function (e, t) {
         O = d.Z.getChannel(e),
         v = h.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
         I = null != O ? _.Z.getCheck(O.guild_id) : null;
-    if (!(null != t && (0, a.n)(t)) && (null == I || I.canChat || (0, s.jU)(O))) {
+    if (!(null != t && (0, o.n)(t)) && (null == I || I.canChat || (0, s.jU)(O))) {
         if (null != O && !v) {
             let e = (0, m.rY)(O, h.Z, f.Z);
             if (e && O.isGuildStageVoice() && (0, l.xJ)(O.id))
@@ -67,7 +67,7 @@ let b = function (e, t) {
     }
     function T() {
         let n = (0, r.Z)();
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: "VOICE_CHANNEL_SELECT",
             guildId: t,
             channelId: e,

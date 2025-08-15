@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(755721),
+    a = n.n(i),
+    o = n(755721),
     s = n(7826);
 function l(e, t, n) {
     return (
@@ -40,9 +40,9 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -51,19 +51,19 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function f(e) {
     let { className: t, size: n } = e,
         i = u(e, ["className", "size"]);
     return (0, r.jsx)(
-        a.zx,
+        o.zx,
         c(
             {
-                className: o()(s.button, t),
-                size: o()(s.buttonSize, n),
+                className: a()(s.button, t),
+                size: a()(s.buttonSize, n),
             },
             i,
         ),

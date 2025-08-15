@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(392711),
     i = n.n(r),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(594174),
     l = n(621853);
 let c = null,
@@ -53,7 +53,7 @@ function T(e) {
     (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),
         (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class S extends o.ZP.Store {
+class S extends a.ZP.Store {
     getPendingWidgets() {
         return c;
     }
@@ -76,7 +76,7 @@ class S extends o.ZP.Store {
         return f;
     }
 }
-let A = new S(a.Z, {
+let A = new S(o.Z, {
     WIDGET_PENDING_SET: m,
     WIDGET_PENDING_SAVE_START: O,
     WIDGET_PENDING_SAVE_SUCCESS: v,

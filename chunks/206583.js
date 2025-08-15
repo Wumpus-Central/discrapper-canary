@@ -4,9 +4,9 @@ n.d(t, {
     Hw: () => c,
     Kd: () => i,
     YN: () => r,
-    k4: () => a,
+    k4: () => o,
     kG: () => d,
-    xP: () => o,
+    xP: () => a,
     yh: () => u,
 });
 var r = (function (e) {
@@ -15,7 +15,7 @@ var r = (function (e) {
     i = (function (e) {
         return (e[(e.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.CARD_POPOUT_OPEN = 2)] = "CARD_POPOUT_OPEN"),
             (e[(e.REACTION_EMOJI_REACT_SENT = 3)] = "REACTION_EMOJI_REACT_SENT"),
@@ -28,7 +28,7 @@ var r = (function (e) {
             e
         );
     })({});
-let a = 10000,
+let o = 10000,
     s = 7,
     l = "https://www.igdb.com/about",
     c = ["1395438911366627454"],

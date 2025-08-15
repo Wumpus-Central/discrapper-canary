@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(317261),
-    a = n(423875),
+    a = n(317261),
+    o = n(423875),
     s = n(442837),
     l = n(18323),
     c = n(594174),
@@ -21,16 +21,16 @@ var r = n(255367),
     v = n(616922),
     I = n(388032);
 function T(e) {
-    if (e === o._.WEEK) return I.t.SjOZfn;
+    if (e === a._.WEEK) return I.t.SjOZfn;
 }
 let S = (e, t, n, r) => {
         let i = T(r),
-            o = f.ZP.getName(t.guild_id, t.id, n),
-            a = e.extra.artist.name;
+            a = f.ZP.getName(t.guild_id, t.id, n),
+            o = e.extra.artist.name;
         return I.intl
             .formatToMarkdownString(i, {
-                artist: a,
-                userName: o,
+                artist: o,
+                userName: a,
             })
             .replaceAll("*", "");
     },
@@ -40,7 +40,7 @@ let S = (e, t, n, r) => {
             artist: e.extra.artist.name,
         }),
     N = (e) => {
-        let { channel: t, entry: n, onReaction: o, onVoiceChannelPreview: f } = e,
+        let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: f } = e,
             { parent_title: T, provider: N, image_url: C } = n.extra.media,
             R = n.extra.artist.name,
             P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
@@ -61,14 +61,14 @@ let S = (e, t, n, r) => {
             }, [C, R, t, n, w, L, D, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(L, g.y9)) return null;
-        let j = () => {
+        let k = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id)
                         : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
             },
-            k = () => {
+            j = () => {
                 let e = v.Hw.ARTIST,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.artist.external_id)
@@ -78,13 +78,13 @@ let S = (e, t, n, r) => {
         return (0, r.jsxs)(b.yR, {
             children: [
                 (0, r.jsx)(b.wG, {
-                    onClickTitle: j,
-                    onClickSubtitle: k,
-                    onClickThumbnail: j,
+                    onClickTitle: k,
+                    onClickSubtitle: j,
+                    onClickThumbnail: k,
                     channel: t,
                     entry: n,
                     headerIcons:
-                        N === a.p.SPOTIFY
+                        N === o.p.SPOTIFY
                             ? (0, r.jsx)(y.Z, {
                                   onClick: M,
                                   Icon: u.Z,
@@ -101,7 +101,7 @@ let S = (e, t, n, r) => {
                 }),
                 (0, r.jsx)(b.St, {
                     children: (0, r.jsx)(b.WT, {
-                        onReaction: o,
+                        onReaction: a,
                         onVoiceChannelPreview: f,
                         user: P,
                         channel: t,

@@ -1,17 +1,17 @@
-var r = n(172367),
-    i = n(808570),
-    o = n(924125);
-e.exports = function (e, t) {
-    var n = t.currentTarget.ownerDocument;
-    if (!e.props.preserveSelectionOnBlur && o(n) === n.body) {
-        var a = n.defaultView.getSelection(),
-            s = e.editor;
-        1 === a.rangeCount && i(s, a.anchorNode) && i(s, a.focusNode) && a.removeAllRanges();
+var n = r(172367),
+    i = r(808570),
+    o = r(924125);
+t.exports = function (t, e) {
+    var r = e.currentTarget.ownerDocument;
+    if (!t.props.preserveSelectionOnBlur && o(r) === r.body) {
+        var a = r.defaultView.getSelection(),
+            u = t.editor;
+        1 === a.rangeCount && i(u, a.anchorNode) && i(u, a.focusNode) && a.removeAllRanges();
     }
-    var l = e._latestEditorState,
-        c = l.getSelection();
+    var s = t._latestEditorState,
+        c = s.getSelection();
     if (c.getHasFocus()) {
-        var u = c.set("hasFocus", !1);
-        e.props.onBlur && e.props.onBlur(t), e.update(r.acceptSelection(l, u));
+        var l = c.set("hasFocus", !1);
+        t.props.onBlur && t.props.onBlur(e), t.update(n.acceptSelection(s, l));
     }
 };

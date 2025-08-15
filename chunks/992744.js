@@ -1,24 +1,24 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(780384),
     a = n(481060),
-    s = n(410030),
-    o = n(367907),
+    o = n(410030),
+    s = n(367907),
     c = n(984370),
     u = n(981631),
     d = n(388032),
-    h = n(503484),
-    p = n(66737),
+    p = n(503484),
+    h = n(66737),
     f = n(525377);
-let g = () => {
-    let e = (0, s.ZP)();
+let m = () => {
+    let e = (0, o.ZP)();
     i.useEffect(() => {
-        o.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
+        s.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, l.wj)(e) ? p : f;
+    let t = (0, l.wj)(e) ? h : f;
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: p.container,
         children: [
             (0, r.jsxs)(c.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
@@ -31,20 +31,20 @@ let g = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: h.content,
+                className: p.content,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: h.splashImage,
+                        className: p.splashImage,
                         src: t,
                     }),
                     (0, r.jsx)(a.X6q, {
-                        className: h.splashHeader,
+                        className: p.splashHeader,
                         variant: "heading-lg/medium",
                         children: d.intl.string(d.t.m9gRVF),
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: h.splashText,
+                        className: p.splashText,
                         variant: "text-md/normal",
                         children: d.intl.string(d.t["wC3j5+"]),
                     }),

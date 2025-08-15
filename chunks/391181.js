@@ -1,33 +1,20 @@
 n.d(t, {
-    Z: () => I,
-    m: () => v,
+    Z: () => C,
+    m: () => E,
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(481060),
-    l = n(239091),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    s = n(239091),
     c = n(166081),
     u = n(937615),
     d = n(942833),
-    f = n(48691),
-    _ = n(231338),
-    p = n(388032),
-    h = n(692316);
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    p = n(48691),
+    m = n(231338),
+    f = n(388032),
+    _ = n(692316);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,178 +26,180 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = 600;
-function O(e) {
+function b(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
         showCopyLink: i,
-        showTestDownload: o,
+        showTestDownload: l,
         showDeleteProduct: a,
-        showReportProduct: l,
+        showReportProduct: s,
         onEditProduct: c,
         onUnpublishProduct: u,
         onDeleteProduct: d,
-        onCopyLink: f,
-        onTestDownload: _,
-        onReportProduct: m,
-        closePopout: g,
-        onSelect: E,
+        onCopyLink: p,
+        onTestDownload: m,
+        onReportProduct: g,
+        closePopout: h,
+        onSelect: b,
     } = e;
     return (0, r.jsx)("div", {
-        className: h.menuContainer,
-        children: (0, r.jsxs)(s.v2r, {
+        className: _.menuContainer,
+        children: (0, r.jsxs)(o.v2r, {
             navId: "guild-product-context",
-            onClose: g,
-            "aria-label": p.intl.string(p.t.Z146dH),
-            onSelect: E,
+            onClose: h,
+            "aria-label": f.intl.string(f.t.Z146dH),
+            onSelect: b,
             children: [
-                (0, r.jsxs)(s.kSQ, {
+                (0, r.jsxs)(o.kSQ, {
                     children: [
                         t &&
-                            (0, r.jsx)(s.sNh, {
+                            (0, r.jsx)(o.sNh, {
                                 id: "guild-product-edit",
-                                label: p.intl.string(p.t.EEfce3),
+                                label: f.intl.string(f.t.EEfce3),
                                 action: c,
                             }),
                         i &&
-                            (0, r.jsx)(s.sNh, {
+                            (0, r.jsx)(o.sNh, {
                                 id: "guild-product-copy-link",
-                                label: p.intl.string(p.t.XR26ur),
-                                icon: s.xPt,
-                                action: f,
+                                label: f.intl.string(f.t.XR26ur),
+                                icon: o.xPt,
+                                action: p,
                             }),
-                        o &&
-                            (0, r.jsx)(s.sNh, {
+                        l &&
+                            (0, r.jsx)(o.sNh, {
                                 id: "guild-product-test-download",
-                                label: p.intl.string(p.t.aXoI6e),
-                                icon: s._8t,
-                                action: _,
+                                label: f.intl.string(f.t.aXoI6e),
+                                icon: o._8t,
+                                action: m,
                             }),
                     ],
                 }),
-                (0, r.jsxs)(s.kSQ, {
+                (0, r.jsxs)(o.kSQ, {
                     children: [
                         n &&
-                            (0, r.jsx)(s.sNh, {
+                            (0, r.jsx)(o.sNh, {
                                 id: "guild-product-unpublish",
-                                label: p.intl.string(p.t.QrkMlJ),
+                                label: f.intl.string(f.t.QrkMlJ),
                                 action: u,
                             }),
                         a &&
-                            (0, r.jsx)(s.sNh, {
+                            (0, r.jsx)(o.sNh, {
                                 id: "guild-product-delete",
-                                label: p.intl.string(p.t.zWjqvL),
+                                label: f.intl.string(f.t.zWjqvL),
                                 color: "danger",
                                 action: d,
                             }),
                     ],
                 }),
-                (0, r.jsx)(s.kSQ, {
+                (0, r.jsx)(o.kSQ, {
                     children:
-                        l &&
-                        (0, r.jsx)(s.sNh, {
+                        s &&
+                        (0, r.jsx)(o.sNh, {
                             id: "guild-product-report",
-                            label: p.intl.string(p.t["6yUzvL"]),
+                            label: f.intl.string(f.t["6yUzvL"]),
                             color: "danger",
-                            action: m,
+                            action: g,
                         }),
                 }),
             ],
         }),
     });
 }
-function v(e) {
+function E(e) {
     let {
             product: t,
             guildId: n,
-            showEditProduct: o,
+            showEditProduct: l,
             showUnpublishProduct: a,
-            showTestDownload: l,
+            showTestDownload: s,
             showCopyLink: c,
             showDeleteProduct: u,
             showReportProduct: d,
-            onEditProduct: f,
-            onUnpublishProduct: _,
-            onDeleteProduct: m,
-            onCopyProductLink: E,
-            onTestDownload: y,
-            onReportProduct: v,
+            onEditProduct: p,
+            onUnpublishProduct: m,
+            onDeleteProduct: E,
+            onCopyProductLink: C,
+            onTestDownload: v,
+            onReportProduct: O,
         } = e,
-        I = i.useRef(null),
-        T = (e) => {
-            e.stopPropagation();
-        };
+        y = i.useRef(null);
     return (0, r.jsx)("div", {
-        onClick: T,
-        children: (0, r.jsx)(s.yRy, {
-            targetElementRef: I,
+        onClick: (e) => {
+            e.stopPropagation();
+        },
+        children: (0, r.jsx)(o.yRy, {
+            targetElementRef: y,
             position: "right",
             align: "top",
             spacing: -8,
-            animation: s.yRy.Animation.FADE,
+            animation: o.yRy.Animation.FADE,
             renderPopout: (e) =>
                 (0, r.jsx)(
-                    O,
-                    b(g({}, e), {
+                    b,
+                    h(g({}, e), {
                         guildId: n,
                         productId: t.id,
-                        showEditProduct: o,
+                        showEditProduct: l,
                         showUnpublishProduct: a,
                         showCopyLink: c,
-                        showTestDownload: l,
+                        showTestDownload: s,
                         showReportProduct: d,
                         showDeleteProduct: u,
-                        onEditProduct: f,
-                        onUnpublishProduct: _,
-                        onDeleteProduct: m,
-                        onCopyLink: E,
-                        onTestDownload: y,
-                        onReportProduct: v,
+                        onEditProduct: p,
+                        onUnpublishProduct: m,
+                        onDeleteProduct: E,
+                        onCopyLink: C,
+                        onTestDownload: v,
+                        onReportProduct: O,
                     }),
                 ),
             children: (e, n) => {
                 let { isShown: i } = n;
                 return (0, r.jsx)(
-                    s.P3F,
-                    b(g({}, e), {
-                        innerRef: I,
-                        "aria-label": p.intl.formatToPlainString(p.t.RtqjeH, { productName: t.name }),
+                    o.P3F,
+                    h(g({}, e), {
+                        innerRef: y,
+                        "aria-label": f.intl.formatToPlainString(f.t.RtqjeH, { productName: t.name }),
                         "aria-haspopup": "listbox",
                         "aria-expanded": i,
-                        className: h.productActionMenuButton,
-                        children: (0, r.jsx)(s.Huf, {
+                        className: _.productActionMenuButton,
+                        children: (0, r.jsx)(o.Huf, {
                             size: "md",
                             color: "currentColor",
-                            className: h.productActionMenuIcon,
+                            className: _.productActionMenuIcon,
                             "aria-hidden": !0,
                         }),
                     }),
@@ -219,99 +208,98 @@ function v(e) {
         }),
     });
 }
-function I(e) {
+function C(e) {
     let {
             product: t,
             guildId: n,
             onEditProduct: i,
-            onUnpublishProduct: o,
-            onDeleteProduct: m,
-            onCopyProductLink: E,
-            onTestDownload: I,
-            disabled: T = !1,
+            onUnpublishProduct: l,
+            onDeleteProduct: C,
+            onCopyProductLink: v,
+            onTestDownload: O,
+            disabled: y = !1,
         } = e,
-        S = (0, c.U)(t, y),
-        A = null !== t.price_tier ? (0, u.T4)(t.price_tier, _.pK.USD) : void 0,
-        N = (0, d.C)(t);
-    function C(e) {
-        (0, l.jW)(e, () =>
-            Promise.resolve((e) =>
-                (0, r.jsx)(
-                    O,
-                    b(g({}, e), {
-                        closePopout: l.Zy,
-                        guildId: n,
-                        productId: t.id,
-                        showEditProduct: !0,
-                        showUnpublishProduct: t.published,
-                        showCopyLink: t.published,
-                        showTestDownload: null != t.attachments,
-                        showDeleteProduct: !0,
-                        showReportProduct: !1,
-                        onEditProduct: i,
-                        onUnpublishProduct: o,
-                        onDeleteProduct: m,
-                        onCopyLink: E,
-                        onTestDownload: I,
-                        onReportProduct: () => {},
-                    }),
-                ),
-            ),
-        );
-    }
-    return (0, r.jsxs)(s.kL8, {
+        x = (0, c.U)(t, 600),
+        j = null !== t.price_tier ? (0, u.T4)(t.price_tier, m.pK.USD) : void 0,
+        I = (0, d.C)(t);
+    return (0, r.jsxs)(o.kL8, {
         tag: "article",
-        className: a()(h.productCardClickable, h.productCard, { [h.disabled]: T }),
-        onClick: T ? void 0 : i,
-        onContextMenu: C,
-        "aria-label": p.intl.formatToPlainString(p.t["X/yAKi"], { productName: t.name }),
+        className: a()(_.productCardClickable, _.productCard, { [_.disabled]: y }),
+        onClick: y ? void 0 : i,
+        onContextMenu: function (e) {
+            (0, s.jW)(e, () =>
+                Promise.resolve((e) =>
+                    (0, r.jsx)(
+                        b,
+                        h(g({}, e), {
+                            closePopout: s.Zy,
+                            guildId: n,
+                            productId: t.id,
+                            showEditProduct: !0,
+                            showUnpublishProduct: t.published,
+                            showCopyLink: t.published,
+                            showTestDownload: null != t.attachments,
+                            showDeleteProduct: !0,
+                            showReportProduct: !1,
+                            onEditProduct: i,
+                            onUnpublishProduct: l,
+                            onDeleteProduct: C,
+                            onCopyLink: v,
+                            onTestDownload: O,
+                            onReportProduct: () => {},
+                        }),
+                    ),
+                ),
+            );
+        },
+        "aria-label": f.intl.formatToPlainString(f.t["X/yAKi"], { productName: t.name }),
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: S,
-                className: h.productThumbnail,
+                src: x,
+                className: _.productThumbnail,
             }),
             (0, r.jsxs)("div", {
-                className: h.productInfo,
+                className: _.productInfo,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: h.productInfoContent,
+                        className: _.productInfoContent,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
-                                className: h.productName,
+                                className: _.productName,
                                 children: t.name,
                             }),
-                            (0, r.jsx)(s.LZC, { size: 8 }),
+                            (0, r.jsx)(o.LZC, { size: 8 }),
                             (0, r.jsxs)("div", {
-                                className: h.productDetails,
+                                className: _.productDetails,
                                 children: [
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: A,
+                                        children: j,
                                     }),
-                                    null != N
+                                    null != I
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  (0, r.jsx)("div", { className: h.dotSeparator }),
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)("div", { className: _.dotSeparator }),
+                                                  (0, r.jsx)(o.Text, {
                                                       variant: "text-md/normal",
                                                       color: "header-secondary",
-                                                      children: N,
+                                                      children: I,
                                                   }),
                                               ],
                                           })
                                         : null,
                                 ],
                             }),
-                            (0, r.jsx)(s.LZC, { size: 16 }),
-                            t.published ? (0, r.jsx)(f.t, {}) : (0, r.jsx)(f.b, {}),
+                            (0, r.jsx)(o.LZC, { size: 16 }),
+                            t.published ? (0, r.jsx)(p.t, {}) : (0, r.jsx)(p.b, {}),
                         ],
                     }),
-                    !T &&
-                        (0, r.jsx)(v, {
+                    !y &&
+                        (0, r.jsx)(E, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,
@@ -321,10 +309,10 @@ function I(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: i,
-                            onUnpublishProduct: o,
-                            onDeleteProduct: m,
-                            onCopyProductLink: E,
-                            onTestDownload: I,
+                            onUnpublishProduct: l,
+                            onDeleteProduct: C,
+                            onCopyProductLink: v,
+                            onTestDownload: O,
                             onReportProduct: () => {},
                         }),
                 ],

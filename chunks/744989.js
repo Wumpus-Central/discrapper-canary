@@ -3,12 +3,12 @@ e.exports = function (e) {
         n = /(r#)?/,
         r = t.concat(n, e.UNDERSCORE_IDENT_RE),
         i = t.concat(n, e.IDENT_RE),
-        o = {
+        a = {
             className: "title.function.invoke",
             relevance: 0,
             begin: t.concat(/\b/, /(?!let|for|while|if|else|match\b)/, i, t.lookahead(/\s*\(/)),
         },
-        a = "([ui](8|16|32|64|128|size)|f(32|64))?",
+        o = "([ui](8|16|32|64|128|size)|f(32|64))?",
         s = [
             "abstract",
             "as",
@@ -194,10 +194,10 @@ e.exports = function (e) {
             {
                 className: "number",
                 variants: [
-                    { begin: "\\b0b([01_]+)" + a },
-                    { begin: "\\b0o([0-7_]+)" + a },
-                    { begin: "\\b0x([A-Fa-f0-9_]+)" + a },
-                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + a },
+                    { begin: "\\b0b([01_]+)" + o },
+                    { begin: "\\b0o([0-7_]+)" + o },
+                    { begin: "\\b0x([A-Fa-f0-9_]+)" + o },
+                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + o },
                 ],
                 relevance: 0,
             },
@@ -263,7 +263,7 @@ e.exports = function (e) {
                 className: "punctuation",
                 begin: "->",
             },
-            o,
+            a,
         ],
     };
 };

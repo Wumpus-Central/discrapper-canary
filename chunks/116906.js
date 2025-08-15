@@ -17,15 +17,15 @@ var i = n(442837),
     j = n(493043),
     y = n(864141),
     O = n(228168),
-    x = n(981631),
-    h = n(388032),
+    h = n(981631),
+    x = n(388032),
     v = n(7994),
     _ = n(878449);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: E, onClose: T } = e,
         { voiceActivityStatusEnabled: Z } = (0, o.U)({ location: "UserProfileModalActivity" }),
         N = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: S, recent: w, stream: A } = (0, f.Z)(t.id),
+        { live: w, recent: S, stream: A } = (0, f.Z)(t.id),
         { voiceChannel: C, voiceActivity: D } = (0, p.Z)({
             userId: t.id,
             guildId: P,
@@ -36,10 +36,10 @@ function I(e) {
             let e = R ? s.Z.getStatus() : c.Z.getStatus(t.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        k = S.length > 0 || null != A,
+        k = w.length > 0 || null != A,
         B = Z && null == A && null == D && null != C,
         M = !G && (k || B),
-        U = w.length > 0;
+        U = S.length > 0;
     return M || U || !L
         ? (0, r.jsxs)(l.zJl, {
               className: v.scroller,
@@ -47,7 +47,7 @@ function I(e) {
               children: [
                   M
                       ? (0, r.jsx)(m.Z, {
-                            "aria-label": h.intl.string(h.t.J6STd3),
+                            "aria-label": x.intl.string(x.t.J6STd3),
                             children: (0, r.jsxs)("ul", {
                                 className: v.activityList,
                                 children: [
@@ -72,7 +72,7 @@ function I(e) {
                                                 profileGuildId: null == I ? void 0 : I.guildId,
                                             }),
                                         }),
-                                    S.map((e, i) =>
+                                    w.map((e, i) =>
                                         (0, r.jsx)(
                                             "li",
                                             {
@@ -93,14 +93,14 @@ function I(e) {
                       : null,
                   U
                       ? (0, r.jsx)(m.Z, {
-                            heading: h.intl.string(h.t.M0zgnZ),
+                            heading: x.intl.string(x.t.M0zgnZ),
                             introText: R
-                                ? h.intl.format(h.t["4bk9Ag"], {
+                                ? x.intl.format(x.t["4bk9Ag"], {
                                       learnMoreHook: (e, t) =>
                                           (0, r.jsx)(
                                               l.eee,
                                               {
-                                                  href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               t,
@@ -110,7 +110,7 @@ function I(e) {
                             scrollIntoView: E === O.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: v.activityList,
-                                children: w.map((e) =>
+                                children: S.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {

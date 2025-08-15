@@ -1,47 +1,46 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(442837),
-    o = n(755721),
+    l = n(755721),
     a = n(481060),
-    s = n(257559),
-    l = n(946273),
+    o = n(257559),
+    s = n(946273),
     c = n(592125),
     u = n(375954),
     d = n(496675),
-    f = n(796263),
-    _ = n(764295),
-    p = n(388032);
-function h(e) {
-    let { message: t, user: n, guild: h, channel: m } = e,
-        g = (0, i.e7)([d.Z], () => null != n && null != h && (0, l.CX)(n, h, [d.Z])),
-        { messageReference: E } = t,
-        b = (0, i.e7)([u.Z], () => (null != E ? u.Z.getMessage(E.channel_id, E.message_id) : null)),
-        y = (0, i.e7)([c.Z], () => (null != b ? c.Z.getChannel(b.channel_id) : null)),
-        O = (0, i.e7)([c.Z], () => {
+    p = n(796263),
+    h = n(764295),
+    f = n(388032);
+function m(e) {
+    let { message: t, user: n, guild: m, channel: g } = e,
+        b = (0, i.e7)([d.Z], () => null != n && null != m && (0, s.CX)(n, m, [d.Z])),
+        { messageReference: y } = t,
+        _ = (0, i.e7)([u.Z], () => (null != y ? u.Z.getMessage(y.channel_id, y.message_id) : null)),
+        C = (0, i.e7)([c.Z], () => (null != _ ? c.Z.getChannel(_.channel_id) : null)),
+        x = (0, i.e7)([c.Z], () => {
             var e, t;
-            return null != (t = null == (e = c.Z.getChannel(m.id)) ? void 0 : e.isArchivedThread()) && t;
+            return null != (t = null == (e = c.Z.getChannel(g.id)) ? void 0 : e.isArchivedThread()) && t;
         });
-    if (!g) return null;
-    let v = () => {
-            null != y &&
-                null != b &&
-                s.Z.confirmDelete(y, b, !1, {
-                    isFlagResolved: O,
-                    moderatorReportChannelId: m.id,
-                });
-        },
-        I = null == b ? p.intl.string(_.default["0IZbwM"]) : p.intl.string(_.default.Uj6oDw),
-        T = null == b,
-        S = "delete-message-".concat(t.id);
+    if (!b) return null;
+    let v = null == _ ? f.intl.string(h.default["0IZbwM"]) : f.intl.string(h.default.Uj6oDw),
+        j = null == _,
+        O = "delete-message-".concat(t.id);
     return (0, r.jsx)(
-        f.Z,
+        p.Z,
         {
-            text: I,
+            text: v,
             icon: a.XHJ,
-            onClick: v,
-            disabled: T,
-            color: o.zx.Colors.RED,
+            onClick: () => {
+                null != C &&
+                    null != _ &&
+                    o.Z.confirmDelete(C, _, !1, {
+                        isFlagResolved: x,
+                        moderatorReportChannelId: g.id,
+                    });
+            },
+            disabled: j,
+            color: l.zx.Colors.RED,
         },
-        S,
+        O,
     );
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(600164),
     l = n(483444),
     c = n(599250),
@@ -39,9 +39,9 @@ let y = (e) => {
                 : s && (l = g.intl.string(g.t.gtNqJS)),
             (0, r.jsx)("div", {
                 className: E.trialBadgeContainer,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: "text-xs/bold",
-                    className: o()(E.trialOfferText, { [E.tier0TrialOffer]: t }),
+                    className: a()(E.trialOfferText, { [E.tier0TrialOffer]: t }),
                     children: l,
                 }),
             })
@@ -69,7 +69,7 @@ let y = (e) => {
             R = null == C || null == (t = C.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
             "aria-hidden": !0,
-            className: o()(
+            className: a()(
                 {
                     [E.headerBackground]: !N,
                     [E.tier2HeaderBackground]: N,
@@ -86,7 +86,7 @@ let y = (e) => {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(n, { className: o()(E.headerIcon, { [E.nonTier2]: !N }) }),
+                                (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !N }) }),
                                 (S || A) &&
                                     (0, r.jsx)(y, {
                                         isTier0: I === m.p9.TIER_0,
@@ -95,7 +95,7 @@ let y = (e) => {
                             ],
                         }),
                         !i &&
-                            (0, r.jsx)(a.olH, {
+                            (0, r.jsx)(o.olH, {
                                 hideOnFullscreen: f,
                                 onClick: O,
                                 className: E.closeButton,

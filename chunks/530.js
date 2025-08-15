@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(129861),
     l = n(406943),
     c = n(385499),
@@ -33,7 +33,7 @@ function g(e) {
         N = (e) =>
             null == T
                 ? e
-                : (0, r.jsx)(a.kL8, {
+                : (0, r.jsx)(o.kL8, {
                       onClick: T,
                       className: m.clickableUsername,
                       "aria-label": h.intl.string(h.t["+Xp3ho"]),
@@ -43,14 +43,14 @@ function g(e) {
         R = (0, l.D)(t),
         P = (0, u.Y)({ location: "UserProfileUsername" }) && null != b;
     return (0, r.jsxs)("div", {
-        className: o()(m.container, { [m.bot]: null != R }, O),
+        className: a()(m.container, { [m.bot]: null != R }, O),
         children: [
             (0, r.jsxs)("div", {
                 className: m.usernameRow,
                 children: [
                     N(
                         P
-                            ? (0, r.jsx)(a.Text, {
+                            ? (0, r.jsx)(o.Text, {
                                   variant: A,
                                   children: (0, r.jsx)(f.Z, {
                                       userName: g,
@@ -62,7 +62,7 @@ function g(e) {
                                       inProfile: !0,
                                   }),
                               })
-                            : (0, r.jsx)(a.Text, {
+                            : (0, r.jsx)(o.Text, {
                                   className: m.nickname,
                                   variant: A,
                                   children: g,
@@ -81,7 +81,7 @@ function g(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: o()(m.tags, {
+                className: a()(m.tags, {
                     [m.pronouns]: C,
                     [m.bot]: null != R,
                 }),
@@ -93,7 +93,7 @@ function g(e) {
                                 usernameIcon: n,
                                 forceUsername: !0,
                                 forcePomelo: I,
-                                className: o()(m.userTag, v),
+                                className: a()(m.userTag, v),
                                 usernameClass: m.userTagUsername,
                                 discriminatorClass: m.userTagDiscriminator,
                                 hideBotTag: !0,
@@ -106,12 +106,12 @@ function g(e) {
                                     "aria-hidden": "true",
                                     className: m.dotSpacer,
                                 }),
-                                (0, r.jsx)(a.DY3, {
+                                (0, r.jsx)(o.DY3, {
                                     className: m.pronounsTooltip,
                                     text: h.intl.string(h.t.GI2A8P),
                                     delay: p.vB,
-                                    children: (0, r.jsx)(a.Text, {
-                                        className: o()(m.pronounsText, v),
+                                    children: (0, r.jsx)(o.Text, {
+                                        className: a()(m.pronounsText, v),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
                                         children: y,

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(772848),
-    l = n(481060),
+    l = n(120356),
+    a = n.n(l),
+    o = n(772848),
+    s = n(481060),
     c = n(481051),
     u = n(753797);
 function d(e) {
-    let { width: t = 24, height: n = 24, isBadged: o = !1, isTyping: a = !1 } = e,
-        [c] = i.useState(() => (0, s.Z)());
+    let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: a = !1 } = e,
+        [c] = i.useState(() => (0, o.Z)());
     return (0, r.jsxs)("svg", {
         width: t,
         height: n,
@@ -28,13 +28,13 @@ function d(e) {
                             (0, r.jsx)("g", {
                                 fill: "black",
                                 transform: "translate(5.5, ".concat(10.5, ") scale(").concat(11 / 24, ")"),
-                                children: (0, r.jsx)(l.IJ0, {
+                                children: (0, r.jsx)(s.IJ0, {
                                     dotRadius: 3.5,
                                     spacing: 3,
                                     fill: "black",
                                 }),
                             }),
-                        o &&
+                        l &&
                             (0, r.jsx)("circle", {
                                 cx: "20",
                                 cy: "19",
@@ -46,7 +46,7 @@ function d(e) {
             }),
             (0, r.jsx)("g", {
                 mask: "url(#".concat(c, ")"),
-                children: (0, r.jsx)(l.kBi, {
+                children: (0, r.jsx)(s.kBi, {
                     size: "custom",
                     width: t,
                     height: n,
@@ -56,24 +56,23 @@ function d(e) {
         ],
     });
 }
-function f(e) {
+function p(e) {
     var t;
-    let { className: n, unreadCount: i, mentionCount: o, isTyping: s, canBadge: l } = e,
-        f = null != o && o > 0,
-        _ = null != (t = f ? o : i) ? t : 0,
-        p = _ > 99 ? "99+" : _,
-        h = l && null != i && i > 0;
+    let { className: n, unreadCount: i, mentionCount: l, isTyping: o, canBadge: s } = e,
+        p = null != l && l > 0,
+        h = null != (t = p ? l : i) ? t : 0,
+        f = s && null != i && i > 0;
     return (0, r.jsxs)("div", {
         className: a()(u.chatIcon, n),
         children: [
             (0, r.jsx)(d, {
-                isBadged: h,
-                isTyping: s,
+                isBadged: f,
+                isTyping: o,
             }),
-            h &&
+            f &&
                 (0, r.jsx)(c.Z, {
-                    hasMentions: f,
-                    truncatedCount: p,
+                    hasMentions: p,
+                    truncatedCount: h > 99 ? "99+" : h,
                     className: u.badge,
                 }),
         ],

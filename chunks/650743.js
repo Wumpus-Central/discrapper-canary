@@ -2,8 +2,8 @@ n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(399606),
-    o = n(704215),
-    a = n(481060),
+    a = n(704215),
+    o = n(481060),
     s = n(596454),
     l = n(607070),
     c = n(266454),
@@ -65,7 +65,7 @@ function T(e) {
                           emojiName: t.emojiName,
                           className: O.emoji,
                       })
-                    : (0, r.jsx)(a.XBm, {
+                    : (0, r.jsx)(o.XBm, {
                           size: "md",
                           color: "currentColor",
                           className: O.emoji,
@@ -83,20 +83,20 @@ function T(e) {
         });
     let P = () => {
             v(),
-                (0, a.ZDy)(async () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("58120").then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, I({}, t));
                 });
         },
-        w = (0, c.zu)(o.z.SOUNDBOARD_KEYBIND_TIP),
-        D = () => (0, c.Q3)(o.z.SOUNDBOARD_KEYBIND_TIP),
+        w = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        D = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
             null != R && (0, m.isWindows)() && !w
                 ? y.intl.format(y.t.udMTtr, {
                       keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
-                              a.eee,
+                              o.eee,
                               {
                                   onClick: P,
                                   children: e,
@@ -110,23 +110,23 @@ function T(e) {
         : (0, r.jsxs)("div", {
               className: O.keybindHint,
               children: [
-                  (0, r.jsx)(a.Mgn, {
+                  (0, r.jsx)(o.Mgn, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
                       className: O.warningIcon,
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: "text-sm/medium",
                       color: "text-default",
                       className: O.keybindHintText,
                       children: L,
                   }),
-                  (0, r.jsx)(a.P3F, {
+                  (0, r.jsx)(o.P3F, {
                       className: O.closeButton,
                       onClick: D,
-                      children: (0, r.jsx)(a.Dio, {
+                      children: (0, r.jsx)(o.Dio, {
                           size: "xs",
                           color: "currentColor",
                       }),

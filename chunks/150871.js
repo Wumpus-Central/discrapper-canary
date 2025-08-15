@@ -24,7 +24,7 @@ e.exports = function (e) {
             "cov_matrix|10",
             "void",
         ],
-        o = [
+        a = [
             "abs",
             "acos",
             "acosh",
@@ -277,7 +277,7 @@ e.exports = function (e) {
             "zeros_int_array",
             "zeros_row_vector",
         ],
-        a = [
+        o = [
             "bernoulli",
             "bernoulli_logit",
             "bernoulli_logit_glm",
@@ -379,7 +379,7 @@ e.exports = function (e) {
             title: n,
             type: i,
             keyword: r,
-            built_in: o,
+            built_in: a,
         },
         contains: [
             e.C_LINE_COMMENT_MODE,
@@ -400,7 +400,7 @@ e.exports = function (e) {
                 match: /\btarget(?=\s*\+=)/,
             },
             {
-                match: [/~\s*/, t.either(...a), /(?:\(\))/, /\s*T(?=\s*\[)/],
+                match: [/~\s*/, t.either(...o), /(?:\(\))/, /\s*T(?=\s*\[)/],
                 scope: {
                     2: "built_in",
                     4: "keyword",
@@ -408,15 +408,15 @@ e.exports = function (e) {
             },
             {
                 scope: "built_in",
-                keywords: a,
-                begin: t.concat(/\w*/, t.either(...a), /(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/),
+                keywords: o,
+                begin: t.concat(/\w*/, t.either(...o), /(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/),
             },
             {
-                begin: [/~/, /\s*/, t.concat(t.either(...a), /(?=\s*[\(.*\)])/)],
+                begin: [/~/, /\s*/, t.concat(t.either(...o), /(?=\s*[\(.*\)])/)],
                 scope: { 3: "built_in" },
             },
             {
-                begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...a) + ")\b)"],
+                begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...o) + ")\b)"],
                 scope: { 2: "title.function" },
             },
             {

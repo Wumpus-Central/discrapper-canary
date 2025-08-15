@@ -14,8 +14,8 @@ n.d(t, {
     n(388685);
 var r = n(593472),
     i = n(710845),
-    o = n(594190),
-    a = n(77498),
+    a = n(594190),
+    o = n(77498),
     s = n(998502),
     l = n(41534),
     c = n(837268),
@@ -29,7 +29,7 @@ function p(e) {
     return (0, u.hS)(e).shortTimeout;
 }
 function h(e) {
-    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP],
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.ZP],
         n = t.getGameOrTransformedSubgameForPID(e);
     try {
         return null == n
@@ -46,7 +46,7 @@ function h(e) {
 }
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.ZP];
+        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.ZP];
     return new Promise((r) => {
         setTimeout(() => {
             r(h(e, [n]));
@@ -93,20 +93,20 @@ async function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v,
         r = await m(e, n),
-        i = o.ZP.getGameOrTransformedSubgameForPID(e);
+        i = a.ZP.getGameOrTransformedSubgameForPID(e);
     if (null == i || null == i.name) return r;
-    let s = null == (t = a.Z.getGameByName(i.name)) ? void 0 : t.id;
+    let s = null == (t = o.Z.getGameByName(i.name)) ? void 0 : t.id;
     if (null == s) return r;
     let l = y[s];
     return null != l ? l(e, i, r) : r;
 }
 function S(e) {
     var t;
-    let n = null == (t = a.Z.getGameByName(e.name)) ? void 0 : t.id;
+    let n = null == (t = o.Z.getGameByName(e.name)) ? void 0 : t.id;
     return null != n && O.has(n);
 }
 function A(e) {
-    let t = o.ZP.getGameOrTransformedSubgameForPID(e);
+    let t = a.ZP.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && S(t);
 }
 let N = new Set([r.Jx.UNKNOWN, r.Jx.FULLSCREEN]);
@@ -139,5 +139,5 @@ function P(e) {
               enabledLegacy: !1,
               overlayMethod: c.gl.Disabled,
           }
-        : (0, o.b6)(e, I);
+        : (0, a.b6)(e, I);
 }

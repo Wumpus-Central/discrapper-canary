@@ -1,10 +1,10 @@
-n.d(t, { U: () => h }), n(388685), n(781311);
+n.d(t, { U: () => p }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(544891),
     a = n(481060),
-    s = n(466721),
-    o = n(375954),
+    o = n(466721),
+    s = n(375954),
     c = n(981631),
     u = n(388032);
 async function d(e) {
@@ -21,11 +21,11 @@ async function d(e) {
         return null;
     }
 }
-function h(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: c, textAreaState: h } = e,
-        [p, f] = i.useState(!1),
-        [g, m] = i.useState(!1),
-        { enableAIFeatures: b } = s.C.useExperiment({ location: "CreateThreadSidebar" }),
+function p(e) {
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: c, textAreaState: p } = e,
+        [h, f] = i.useState(!1),
+        [m, g] = i.useState(!1),
+        { enableAIFeatures: b } = o.C.useExperiment({ location: "CreateThreadSidebar" }),
         y = i.useCallback(async () => {
             if (b) {
                 f(!0);
@@ -33,9 +33,9 @@ function h(e) {
                     let r = null;
                     if (null != n) {
                         var e;
-                        let i = o.Z.getMessage(t.id, n);
+                        let i = s.Z.getMessage(t.id, n);
                         r = null != (e = null == i ? void 0 : i.content) ? e : null;
-                    } else h.textValue.trim().length >= 10 && (r = h.textValue);
+                    } else p.textValue.trim().length >= 10 && (r = p.textValue);
                     if (null != r) {
                         let e = await d(r);
                         null != e && "" !== e.trim() && l({ name: e });
@@ -44,14 +44,14 @@ function h(e) {
                     f(!1);
                 }
             }
-        }, [t.id, n, l, b, h.textValue]);
+        }, [t.id, n, l, b, p.textValue]);
     i.useEffect(() => {
-        m(!1), f(!1), t.id === c.parentChannelId && n !== c.parentMessageId && l({ name: "" });
+        g(!1), f(!1), t.id === c.parentChannelId && n !== c.parentMessageId && l({ name: "" });
     }, [n, l, t.id, c.parentChannelId, c.parentMessageId]),
         i.useEffect(() => {
-            (null == c.name || "" === c.name.trim()) && !g && b && null != n && (m(!0), y());
-        }, [t.id, n, l, c.name, g, b, y]);
-    let x = i.useCallback(
+            (null == c.name || "" === c.name.trim()) && !m && b && null != n && (g(!0), y());
+        }, [t.id, n, l, c.name, m, b, y]);
+    let _ = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return b
@@ -93,8 +93,8 @@ function h(e) {
                                       size: "sm",
                                       "aria-label": u.intl.string(u.t.ZF2oBg),
                                       onClick: y,
-                                      disabled: e || p || (null == n && h.textValue.trim().length < 10),
-                                      loading: p,
+                                      disabled: e || h || (null == n && p.textValue.trim().length < 10),
+                                      loading: h,
                                       type: "button",
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -115,12 +115,12 @@ function h(e) {
                   })
                 : null;
         },
-        [b, p, n, h.textValue, y],
+        [b, h, n, p.textValue, y],
     );
     return {
-        isGeneratingAI: p,
+        isGeneratingAI: h,
         generateAIName: y,
         enableAIFeatures: b,
-        renderAiGenerateButton: x,
+        renderAiGenerateButton: _,
     };
 }

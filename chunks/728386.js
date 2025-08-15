@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(94171),
     l = n(532772),
     c = n(28546),
@@ -63,23 +63,23 @@ function g(e, t) {
     );
 }
 function E(e, t) {
-    let { disabled: n, type: o } = e,
+    let { disabled: n, type: a } = e,
         [p, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], s.X),
         E = !1,
         b = p === d.X1.STICKER,
         y = !1,
         O = i.useCallback(() => {
-            (0, c.RO)(d.X1.STICKER, o);
-        }, [o]),
+            (0, c.RO)(d.X1.STICKER, a);
+        }, [a]),
         { Component: v, events: I, play: T } = (0, l.z)();
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: a()(d.CT, _.buttonContainer),
+              className: o()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(
                   u.Z,
-                  g(h({ className: a()(_.button, _.stickerButton) }, I), {
+                  g(h({ className: o()(_.button, _.stickerButton) }, I), {
                       onClick: () => {
                           O(), T();
                       },

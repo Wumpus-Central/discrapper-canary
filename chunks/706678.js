@@ -2,8 +2,8 @@ n(388685), n(415506), n(35282), n(781311);
 var r = n(579092);
 n(433517);
 let i = new r.Yd("useStateFromStores"),
-    o = a();
-function a() {
+    a = o();
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 60000;
     return e;
 }
@@ -28,7 +28,7 @@ function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e;
 }
-_ && (p = setInterval(b, o));
+_ && (p = setInterval(b, a));
 let m = new Map();
 function g(e) {
     return "anonymous" !== e.name && ("" === d || e.name === d) && (e.execCount > c || e.execTime > s);
@@ -46,7 +46,7 @@ let y = function () {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e + t + n + 6;
-    for (let [o, a] of (i.log("|".padEnd(r, "-") + "|"),
+    for (let [a, o] of (i.log("|".padEnd(r, "-") + "|"),
     i.log("| Consumers of `useStateFromStores` exceeding warning thresholds:".padEnd(r, " ") + "|"),
     i.log("|".padEnd(r, "-") + "|"),
     i.log(
@@ -56,11 +56,11 @@ let y = function () {
     ),
     i.log("|".padEnd(r, "-") + "|"),
     m))
-        (("" !== d && o === d) || g(a)) &&
+        (("" !== d && a === d) || g(o)) &&
             i.log(
-                "| ".concat(o.padEnd(e, " ")) +
-                    "| ".concat((a.execTime.toFixed(2) + "ms").padEnd(t, " ")) +
-                    "| ".concat(a.execCount.toString().padEnd(n, " "), "|"),
+                "| ".concat(a.padEnd(e, " ")) +
+                    "| ".concat((o.execTime.toFixed(2) + "ms").padEnd(t, " ")) +
+                    "| ".concat(o.execCount.toString().padEnd(n, " "), "|"),
             );
     i.log("|".padEnd(r, "-") + "|");
 };

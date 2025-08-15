@@ -1,63 +1,63 @@
-e.d(n, { default: () => c }), e(388685);
+e.d(n, { default: () => A }), e(388685);
 var l = e(255367),
-    i = e(73800),
-    a = e(82659),
+    r = e(73800),
+    i = e(82659),
     u = e(481060),
-    r = e(556012),
-    o = e(590433),
-    s = e(388032);
-let d = (t) => {
+    a = e(556012),
+    s = e(590433),
+    c = e(388032);
+let j = (t) => {
     var n;
-    let { duration: e, onSelectDuration: i } = t,
-        a = (0, o.tr)(),
-        r = a.find((t) => t.value === e);
+    let { duration: e, onSelectDuration: r } = t,
+        i = (0, s.tr)(),
+        a = i.find((t) => t.value === e);
     return (0, l.jsx)(u.xJW, {
         required: !0,
         children: (0, l.jsx)(u.VcW, {
-            value: null != (n = null == r ? void 0 : r.value) ? n : o.UK.DURATION_60_SEC,
-            options: a,
+            value: null != (n = null == a ? void 0 : a.value) ? n : s.UK.DURATION_60_SEC,
+            options: i,
             onChange: (t) => {
-                let n = a.find((n) => n.value === t);
-                null != n && i(n.value);
+                let n = i.find((n) => n.value === t);
+                null != n && r(n.value);
             },
-            placeholder: s.intl.string(s.t.k7yo6u),
+            placeholder: c.intl.string(c.t.k7yo6u),
         }),
     });
 };
-function c(t) {
-    let { action: n, triggerType: e, isEdit: u, onUpdateDuration: c, onClose: p, transitionState: h } = t,
-        [v, x] = i.useState(() =>
+function A(t) {
+    let { action: n, triggerType: e, isEdit: u, onUpdateDuration: A, onClose: E, transitionState: d } = t,
+        [o, _] = r.useState(() =>
             null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
                 ? n.metadata.durationSeconds
-                : o.UK.DURATION_60_SEC,
+                : s.UK.DURATION_60_SEC,
         ),
-        C = (0, r.c)(n.type, n, e);
-    if (null == C) return null;
-    let { headerText: S } = C;
-    return (0, l.jsx)(a.Modal, {
-        onClose: p,
-        transitionState: h,
+        N = (0, a.c)(n.type, n, e);
+    if (null == N) return null;
+    let { headerText: S } = N;
+    return (0, l.jsx)(i.Modal, {
+        onClose: E,
+        transitionState: d,
         title: S,
-        subtitle: s.intl.string(s.t.DWGBAg),
+        subtitle: c.intl.string(c.t.DWGBAg),
         actions: [
             {
-                text: s.intl.string(s.t["ETE/oK"]),
+                text: c.intl.string(c.t["ETE/oK"]),
                 onClick: () => {
-                    p();
+                    E();
                 },
                 variant: "secondary",
             },
             {
-                text: u ? s.intl.string(s.t.bt75u7) : s.intl.string(s.t.R3BPHx),
+                text: u ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx),
                 onClick: () => {
-                    c(v);
+                    A(o);
                 },
             },
         ],
-        children: (0, l.jsx)(d, {
-            duration: v,
+        children: (0, l.jsx)(j, {
+            duration: o,
             onSelectDuration: (t) => {
-                x(t);
+                _(t);
             },
         }),
     });

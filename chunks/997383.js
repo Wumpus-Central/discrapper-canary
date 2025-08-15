@@ -14,8 +14,8 @@ n.d(t, { Z: () => S }),
     n(642613);
 var r = n(392711),
     i = n.n(r),
-    o = n(159635),
-    a = n.n(o),
+    a = n(159635),
+    o = n.n(a),
     s = n(159299),
     l = n(675478),
     c = n(709302),
@@ -202,16 +202,16 @@ class S {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(E.h8.USER)) return;
         let { userFilters: i } = this.options,
-            o = T(E.h8.USER, this.options);
+            a = T(E.h8.USER, this.options);
         if ((null == i ? void 0 : i.thread) != null) {
             let t = s.Z.getMemberListSections(i.thread),
                 r = [];
             for (let e in t) {
                 let n = t[e];
                 for (let e of n.userIds) {
-                    var a, l, c;
+                    var o, l, c;
                     (null == i || !i.friends || d.Z.isFriend(e)) &&
-                        ((null != (c = null == (a = this._userBlacklist) ? void 0 : a.includes(e)) && c) ||
+                        ((null != (c = null == (o = this._userBlacklist) ? void 0 : o.includes(e)) && c) ||
                             r.push({
                                 userId: e,
                                 nick: null == (l = n.usersById[e]) ? void 0 : l.displayName,
@@ -222,7 +222,7 @@ class S {
                 query: e,
                 users: r,
                 limit: n,
-                boosters: o,
+                boosters: a,
             });
             return;
         }
@@ -232,7 +232,7 @@ class S {
                 query: e,
                 filters: i,
                 blacklist: this._userBlacklist,
-                boosters: o,
+                boosters: a,
             });
     }
     queryGroupDMs(e, t) {
@@ -260,14 +260,14 @@ class S {
     queryLink(e, t) {
         let n;
         if (!this._include(E.h8.LINK)) return [];
-        let r = a().sanitizeUrl(e);
+        let r = o().sanitizeUrl(e);
         try {
             n = new URL(r);
         } catch (e) {
             return [];
         }
-        let { pathname: i, hostname: o = "", host: s } = n,
-            l = h.Z.isDiscordHostname(o) || window.location.host === s;
+        let { pathname: i, hostname: a = "", host: s } = n,
+            l = h.Z.isDiscordHostname(a) || window.location.host === s;
         return null !== i && l && h.Z.isAppRoute(i)
             ? [
                   {

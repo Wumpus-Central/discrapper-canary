@@ -15,8 +15,8 @@ n.d(t, {
     n(781311);
 var r = n(392711),
     i = n.n(r),
-    o = n(31775),
-    a = n.n(o);
+    a = n(31775),
+    o = n.n(a);
 n(711739);
 var s = n(159635),
     l = n.n(s),
@@ -77,18 +77,18 @@ function g(e, t) {
         e
     );
 }
-let E = new (a())({ max: 50 });
+let E = new (o())({ max: 50 });
 function b(e) {
     let t = e,
         n = E.get(t);
     if (null != n) return n;
     let r = (0, _.yx)(e),
         i = (0, _.zq)(r),
-        o = {
+        a = {
             whitespaceSanitized: r,
             fullySanitized: i,
         };
-    return E.set(t, o), o;
+    return E.set(t, a), a;
 }
 let y = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
     O = [
@@ -190,10 +190,10 @@ function R(e) {
             throw Error("no hostname");
         let i = (0, _.MO)(n);
         (n.username = ""), (n.password = "");
-        let o = (0, _.MO)(n);
+        let a = (0, _.MO)(n);
         return {
             target: i,
-            displayTarget: o,
+            displayTarget: a,
         };
     } catch (e) {
         return null;
@@ -202,41 +202,41 @@ function R(e) {
 let P = g(h({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
-        let [r, o, a, s] = e,
+        let [r, a, o, s] = e,
             u = () => ({
                 type: f.b.TEXT,
                 content: r,
             });
-        if (C(a)) return u();
-        let d = b(a),
-            _ = b(o),
+        if (C(o)) return u();
+        let d = b(o),
+            _ = b(a),
             p = b(null != s ? s : ""),
             m = d.whitespaceSanitized,
             E = _.fullySanitized,
             y = p.fullySanitized,
             P = E.trim();
         if (0 === m.trim().length || 0 === P.length) return u();
-        let w = R(l().unescapeUrl(a)),
+        let w = R(l().unescapeUrl(o)),
             D = null == w,
-            L = (0, c.ZP)(o).length > 0 || (0, c.ZP)(s).length > 0;
+            L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
         if (D || L) return u();
         let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0,
             }),
             M = n.allowEmojiLinks ? v : O,
-            j = [...M, ...I],
-            k = [...T, ...S],
-            U = A(t(E, x), j, [f.b.EMOJI]),
-            G = A(t(y, x), k);
+            k = [...M, ...I],
+            j = [...T, ...S],
+            U = A(t(E, x), k, [f.b.EMOJI]),
+            G = A(t(y, x), j);
         if (null == U || null == G || 0 === N(U).trim().length) return u();
         let B = i().pick(t.rules, M),
-            Z = l().parserFor(B)(_.whitespaceSanitized, x),
+            V = l().parserFor(B)(_.whitespaceSanitized, x),
             F = p.whitespaceSanitized,
-            { target: V } = w;
+            { target: Z } = w;
         return {
-            content: Z,
-            target: V,
+            content: V,
+            target: Z,
             title: F,
         };
     },

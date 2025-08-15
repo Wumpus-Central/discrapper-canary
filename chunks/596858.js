@@ -7,7 +7,7 @@ e.exports = function (e) {
             /(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?[Li]?/,
         ),
         i = /[=!<>:]=|\|\||&&|:::?|<-|<<-|->>|->|\|>|[-+*\/?!$&|:<=>@^~]|\*\*/,
-        o = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
+        a = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
     return {
         name: "R",
         keywords: {
@@ -113,7 +113,7 @@ e.exports = function (e) {
                             1: "punctuation",
                             2: "number",
                         },
-                        match: [o, r],
+                        match: [a, r],
                     },
                     {
                         scope: { 2: "number" },
@@ -133,7 +133,7 @@ e.exports = function (e) {
             {
                 scope: "punctuation",
                 relevance: 0,
-                match: o,
+                match: a,
             },
             {
                 begin: "`",

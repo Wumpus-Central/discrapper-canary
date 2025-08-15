@@ -1,88 +1,75 @@
-n.d(t, { Z: () => m }), n(388685);
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    o = n(481060),
-    a = n(740492),
-    s = n(27584),
-    l = n(295510),
-    c = n(394059),
-    u = n(65154),
-    d = n(388032);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Yn.DEFAULT,
-        [n, f, p] = (0, s.Z)(e, t),
-        m = (0, i.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert),
-        g = () => {
-            if (m || f) return p(!f);
-            (0, o.h7j)((e) =>
-                (0, r.jsx)(
-                    l.Z,
-                    h(_({}, e), {
-                        type: c.K.VIDEO,
-                        onConfirm: () => p(!f),
-                    }),
-                ),
-            );
-        };
-    return n
-        ? (0, r.jsx)(o.S89, {
+t.d(n, { Z: () => f }), t(388685);
+var r = t(255367);
+t(73800);
+var i = t(442837),
+    l = t(481060),
+    o = t(740492),
+    a = t(27584),
+    c = t(295510),
+    s = t(394059),
+    u = t(65154),
+    d = t(388032);
+function f(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Yn.DEFAULT,
+        [t, f, h] = (0, a.Z)(e, n),
+        p = (0, i.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    return t
+        ? (0, r.jsx)(l.S89, {
               id: "self-video-hide",
               label: d.intl.string(d.t.MH8ESU),
               checked: !f,
-              action: g,
+              action: () => {
+                  if (p || f) return h(!f);
+                  (0, l.h7j)((e) => {
+                      var n, t;
+                      return (0, r.jsx)(
+                          c.Z,
+                          ((n = (function (e) {
+                              for (var n = 1; n < arguments.length; n++) {
+                                  var t = null != arguments[n] ? arguments[n] : {},
+                                      r = Object.keys(t);
+                                  "function" == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(t).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                          }),
+                                      )),
+                                      r.forEach(function (n) {
+                                          var r;
+                                          (r = t[n]),
+                                              n in e
+                                                  ? Object.defineProperty(e, n, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0,
+                                                    })
+                                                  : (e[n] = r);
+                                      });
+                              }
+                              return e;
+                          })({}, e)),
+                          (t = t =
+                              {
+                                  type: s.K.VIDEO,
+                                  onConfirm: () => h(!f),
+                              }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                              : (function (e, n) {
+                                    var t = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var r = Object.getOwnPropertySymbols(e);
+                                        t.push.apply(t, r);
+                                    }
+                                    return t;
+                                })(Object(t)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
+                                }),
+                          n),
+                      );
+                  });
+              },
           })
         : null;
 }

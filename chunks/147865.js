@@ -1,5 +1,5 @@
 n.d(t, { lY: () => i });
-var r = n(388032);
+var l = n(388032);
 function i(e) {
-    return e > 0 ? "1-".concat(e) : r.intl.string(r.t.zMNEiI);
+    return e > 0 ? "1-".concat(e) : l.intl.string(l.t.zMNEiI);
 }

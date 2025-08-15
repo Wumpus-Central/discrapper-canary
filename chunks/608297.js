@@ -19,16 +19,16 @@ function i(e, t) {
             configurable: !0,
         },
     })),
-        t && o(e, t);
+        t && a(e, t);
 }
-function o(e, t) {
-    return (o =
+function a(e, t) {
+    return (a =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function a(e) {
+function o(e) {
     var t = c();
     return function () {
         var n,
@@ -110,16 +110,16 @@ var h = 10,
     })(),
     g = (function (e) {
         i(n, e);
-        var t = a(n);
-        function n(e, r, i, o, a) {
+        var t = o(n);
+        function n(e, r, i, a, o) {
             var s;
             return (
                 d(this, n),
                 ((s = t.call(this)).value = e),
                 (s.validateValue = r),
                 (s.setValue = i),
-                (s.priority = o),
-                a && (s.subPriority = a),
+                (s.priority = a),
+                o && (s.subPriority = o),
                 s
             );
         }
@@ -143,11 +143,11 @@ var h = 10,
     })(m),
     E = (function (e) {
         i(n, e);
-        var t = a(n);
+        var t = o(n);
         function n() {
             var e;
             d(this, n);
-            for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+            for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
             return p(l((e = t.call.apply(t, [this].concat(i)))), "priority", h), p(l(e), "subPriority", -1), e;
         }
         return (

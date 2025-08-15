@@ -15,7 +15,7 @@ n.d(t, {
     f7: () => v,
     kF: () => E,
     kS: () => b,
-    l2: () => a,
+    l2: () => o,
     lE: () => g,
     mq: () => l,
     nS: () => C,
@@ -26,8 +26,8 @@ n.d(t, {
 });
 var r = n(722733),
     i = n(987170),
-    o = n(987338);
-let a = (0, i.Z)({
+    a = n(987338);
+let o = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__simple",
         kind: "user",
         label: "Apex AA Validation Connection Open Simple",
@@ -39,7 +39,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     s = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__hqdtesters",
@@ -53,7 +53,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     l = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__android",
@@ -67,7 +67,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     c = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__ios",
@@ -81,7 +81,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     u = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__userlocale",
@@ -95,7 +95,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     d = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__connectionopen__usercountry",
@@ -109,7 +109,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
     }),
     f = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__simple",
@@ -123,7 +123,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     _ = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__hqdtesters",
@@ -137,7 +137,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     p = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__android",
@@ -151,7 +151,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     h = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__ios",
@@ -165,7 +165,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     m = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__userlocale",
@@ -179,7 +179,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     g = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__voicecall__usercountry",
@@ -193,7 +193,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
     }),
     E = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__simple",
@@ -207,7 +207,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     b = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__hqdtesters",
@@ -221,7 +221,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     y = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__android",
@@ -235,7 +235,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     O = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__ios",
@@ -249,7 +249,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     v = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__userlocale",
@@ -263,7 +263,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     I = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__paymentflowstarted__usercountry",
@@ -277,7 +277,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     }),
     T = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__simple",
@@ -291,7 +291,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     }),
     S = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__hqdtesters",
@@ -305,7 +305,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     }),
     A = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__android",
@@ -319,7 +319,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     }),
     N = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__ios",
@@ -333,7 +333,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     }),
     C = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__userlocale",
@@ -347,7 +347,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     }),
     R = (0, i.Z)({
         id: "2025-07_apex_aa_validation__clientside__collectiblesshopopen__usercountry",
@@ -361,7 +361,7 @@ let a = (0, i.Z)({
                 config: { isEnabled: !0 },
             },
         ],
-        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
     });
 (0, r.Z)({
     name: "2025-07-apex-aa-validation--clientside--simple",

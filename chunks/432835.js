@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(311929),
     i = n(894276),
-    o = n(516888);
-function a(e, t, n) {
+    a = n(516888);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,12 +16,12 @@ function a(e, t, n) {
     );
 }
 let s = "Note";
-class l extends o.f {
+class l extends a.f {
     getNote(e) {
         return this.get(e);
     }
 }
-a(l, "displayName", "NoteStore");
+o(l, "displayName", "NoteStore");
 let c = new l(
     {
         CONNECTION_OPEN: (e, t) => t.reset(),

@@ -1,170 +1,170 @@
-var r = n(621796),
-    i = n(172367),
-    o = n(668370),
-    a = n(467159),
-    s = {
-        currentBlockContainsLink: function (e) {
-            var t = e.getSelection(),
-                n = e.getCurrentContent(),
-                r = n.getEntityMap();
-            return n
-                .getBlockForKey(t.getAnchorKey())
+var n = r(621796),
+    i = r(172367),
+    o = r(668370),
+    a = r(467159),
+    u = {
+        currentBlockContainsLink: function (t) {
+            var e = t.getSelection(),
+                r = t.getCurrentContent(),
+                n = r.getEntityMap();
+            return r
+                .getBlockForKey(e.getAnchorKey())
                 .getCharacterList()
-                .slice(t.getStartOffset(), t.getEndOffset())
-                .some(function (e) {
-                    var t = e.getEntity();
-                    return !!t && "LINK" === r.__get(t).getType();
+                .slice(e.getStartOffset(), e.getEndOffset())
+                .some(function (t) {
+                    var e = t.getEntity();
+                    return !!e && "LINK" === n.__get(e).getType();
                 });
         },
-        getCurrentBlockType: function (e) {
-            var t = e.getSelection();
-            return e.getCurrentContent().getBlockForKey(t.getStartKey()).getType();
+        getCurrentBlockType: function (t) {
+            var e = t.getSelection();
+            return t.getCurrentContent().getBlockForKey(e.getStartKey()).getType();
         },
-        getDataObjectForLinkURL: function (e) {
-            return { url: e.toString() };
+        getDataObjectForLinkURL: function (t) {
+            return { url: t.toString() };
         },
-        handleKeyCommand: function (e, t, n) {
-            switch (t) {
+        handleKeyCommand: function (t, e, r) {
+            switch (e) {
                 case "bold":
-                    return s.toggleInlineStyle(e, "BOLD");
+                    return u.toggleInlineStyle(t, "BOLD");
                 case "italic":
-                    return s.toggleInlineStyle(e, "ITALIC");
+                    return u.toggleInlineStyle(t, "ITALIC");
                 case "underline":
-                    return s.toggleInlineStyle(e, "UNDERLINE");
+                    return u.toggleInlineStyle(t, "UNDERLINE");
                 case "code":
-                    return s.toggleCode(e);
+                    return u.toggleCode(t);
                 case "backspace":
                 case "backspace-word":
                 case "backspace-to-start-of-line":
-                    return s.onBackspace(e);
+                    return u.onBackspace(t);
                 case "delete":
                 case "delete-word":
                 case "delete-to-end-of-block":
-                    return s.onDelete(e);
+                    return u.onDelete(t);
                 default:
                     return null;
             }
         },
-        insertSoftNewline: function (e) {
-            var t = r.insertText(e.getCurrentContent(), e.getSelection(), "\n", e.getCurrentInlineStyle(), null),
-                n = i.push(e, t, "insert-characters");
-            return i.forceSelection(n, t.getSelectionAfter());
+        insertSoftNewline: function (t) {
+            var e = n.insertText(t.getCurrentContent(), t.getSelection(), "\n", t.getCurrentInlineStyle(), null),
+                r = i.push(t, e, "insert-characters");
+            return i.forceSelection(r, e.getSelectionAfter());
         },
-        onBackspace: function (e) {
-            var t = e.getSelection();
-            if (!t.isCollapsed() || t.getAnchorOffset() || t.getFocusOffset()) return null;
-            var n = e.getCurrentContent(),
-                r = t.getStartKey(),
-                o = n.getBlockBefore(r);
+        onBackspace: function (t) {
+            var e = t.getSelection();
+            if (!e.isCollapsed() || e.getAnchorOffset() || e.getFocusOffset()) return null;
+            var r = t.getCurrentContent(),
+                n = e.getStartKey(),
+                o = r.getBlockBefore(n);
             if (o && "atomic" === o.getType()) {
-                var a = n.getBlockMap().delete(o.getKey()),
-                    l = n.merge({
+                var a = r.getBlockMap().delete(o.getKey()),
+                    s = r.merge({
                         blockMap: a,
-                        selectionAfter: t,
+                        selectionAfter: e,
                     });
-                if (l !== n) return i.push(e, l, "remove-range");
+                if (s !== r) return i.push(t, s, "remove-range");
             }
-            var c = s.tryToRemoveBlockStyle(e);
-            return c ? i.push(e, c, "change-block-type") : null;
+            var c = u.tryToRemoveBlockStyle(t);
+            return c ? i.push(t, c, "change-block-type") : null;
         },
-        onDelete: function (e) {
-            var t = e.getSelection();
-            if (!t.isCollapsed()) return null;
-            var n = e.getCurrentContent(),
-                o = t.getStartKey(),
-                a = n.getBlockForKey(o).getLength();
-            if (t.getStartOffset() < a) return null;
-            var s = n.getBlockAfter(o);
-            if (!s || "atomic" !== s.getType()) return null;
-            var l = t.merge({
-                    focusKey: s.getKey(),
-                    focusOffset: s.getLength(),
+        onDelete: function (t) {
+            var e = t.getSelection();
+            if (!e.isCollapsed()) return null;
+            var r = t.getCurrentContent(),
+                o = e.getStartKey(),
+                a = r.getBlockForKey(o).getLength();
+            if (e.getStartOffset() < a) return null;
+            var u = r.getBlockAfter(o);
+            if (!u || "atomic" !== u.getType()) return null;
+            var s = e.merge({
+                    focusKey: u.getKey(),
+                    focusOffset: u.getLength(),
                 }),
-                c = r.removeRange(n, l, "forward");
-            return c !== n ? i.push(e, c, "remove-range") : null;
+                c = n.removeRange(r, s, "forward");
+            return c !== r ? i.push(t, c, "remove-range") : null;
         },
-        onTab: function (e, t, n) {
-            var r = t.getSelection(),
-                a = r.getAnchorKey();
-            if (a !== r.getFocusKey()) return t;
-            var s = t.getCurrentContent(),
-                l = s.getBlockForKey(a),
-                c = l.getType();
-            if ("unordered-list-item" !== c && "ordered-list-item" !== c) return t;
-            e.preventDefault();
-            var u = l.getDepth();
-            if (!e.shiftKey && u === n) return t;
-            var d = o(s, r, e.shiftKey ? -1 : 1, n);
-            return i.push(t, d, "adjust-depth");
-        },
-        toggleBlockType: function (e, t) {
+        onTab: function (t, e, r) {
             var n = e.getSelection(),
-                o = n.getStartKey(),
-                s = n.getEndKey(),
-                l = e.getCurrentContent(),
-                c = n;
-            if (o !== s && 0 === n.getEndOffset()) {
-                var u = a(l.getBlockBefore(s));
-                (s = u.getKey()),
+                a = n.getAnchorKey();
+            if (a !== n.getFocusKey()) return e;
+            var u = e.getCurrentContent(),
+                s = u.getBlockForKey(a),
+                c = s.getType();
+            if ("unordered-list-item" !== c && "ordered-list-item" !== c) return e;
+            t.preventDefault();
+            var l = s.getDepth();
+            if (!t.shiftKey && l === r) return e;
+            var f = o(u, n, t.shiftKey ? -1 : 1, r);
+            return i.push(e, f, "adjust-depth");
+        },
+        toggleBlockType: function (t, e) {
+            var r = t.getSelection(),
+                o = r.getStartKey(),
+                u = r.getEndKey(),
+                s = t.getCurrentContent(),
+                c = r;
+            if (o !== u && 0 === r.getEndOffset()) {
+                var l = a(s.getBlockBefore(u));
+                (u = l.getKey()),
                     (c = c.merge({
                         anchorKey: o,
-                        anchorOffset: n.getStartOffset(),
-                        focusKey: s,
-                        focusOffset: u.getLength(),
+                        anchorOffset: r.getStartOffset(),
+                        focusKey: u,
+                        focusOffset: l.getLength(),
                         isBackward: !1,
                     }));
             }
             if (
-                l
+                s
                     .getBlockMap()
-                    .skipWhile(function (e, t) {
-                        return t !== o;
+                    .skipWhile(function (t, e) {
+                        return e !== o;
                     })
                     .reverse()
-                    .skipWhile(function (e, t) {
-                        return t !== s;
+                    .skipWhile(function (t, e) {
+                        return e !== u;
                     })
-                    .some(function (e) {
-                        return "atomic" === e.getType();
+                    .some(function (t) {
+                        return "atomic" === t.getType();
                     })
             )
-                return e;
-            var d = l.getBlockForKey(o).getType() === t ? "unstyled" : t;
-            return i.push(e, r.setBlockType(l, c, d), "change-block-type");
+                return t;
+            var f = s.getBlockForKey(o).getType() === e ? "unstyled" : e;
+            return i.push(t, n.setBlockType(s, c, f), "change-block-type");
         },
-        toggleCode: function (e) {
-            var t = e.getSelection(),
-                n = t.getAnchorKey(),
-                r = t.getFocusKey();
-            return t.isCollapsed() || n !== r ? s.toggleBlockType(e, "code-block") : s.toggleInlineStyle(e, "CODE");
+        toggleCode: function (t) {
+            var e = t.getSelection(),
+                r = e.getAnchorKey(),
+                n = e.getFocusKey();
+            return e.isCollapsed() || r !== n ? u.toggleBlockType(t, "code-block") : u.toggleInlineStyle(t, "CODE");
         },
-        toggleInlineStyle: function (e, t) {
-            var n,
-                o = e.getSelection(),
-                a = e.getCurrentInlineStyle();
-            if (o.isCollapsed()) return i.setInlineStyleOverride(e, a.has(t) ? a.remove(t) : a.add(t));
-            var s = e.getCurrentContent();
+        toggleInlineStyle: function (t, e) {
+            var r,
+                o = t.getSelection(),
+                a = t.getCurrentInlineStyle();
+            if (o.isCollapsed()) return i.setInlineStyleOverride(t, a.has(e) ? a.remove(e) : a.add(e));
+            var u = t.getCurrentContent();
             return (
-                (n = a.has(t) ? r.removeInlineStyle(s, o, t) : r.applyInlineStyle(s, o, t)),
-                i.push(e, n, "change-inline-style")
+                (r = a.has(e) ? n.removeInlineStyle(u, o, e) : n.applyInlineStyle(u, o, e)),
+                i.push(t, r, "change-inline-style")
             );
         },
-        toggleLink: function (e, t, n) {
-            var o = r.applyEntity(e.getCurrentContent(), t, n);
-            return i.push(e, o, "apply-entity");
+        toggleLink: function (t, e, r) {
+            var o = n.applyEntity(t.getCurrentContent(), e, r);
+            return i.push(t, o, "apply-entity");
         },
-        tryToRemoveBlockStyle: function (e) {
-            var t = e.getSelection(),
-                n = t.getAnchorOffset();
-            if (t.isCollapsed() && 0 === n) {
-                var i = t.getAnchorKey(),
-                    o = e.getCurrentContent(),
+        tryToRemoveBlockStyle: function (t) {
+            var e = t.getSelection(),
+                r = e.getAnchorOffset();
+            if (e.isCollapsed() && 0 === r) {
+                var i = e.getAnchorKey(),
+                    o = t.getCurrentContent(),
                     a = o.getBlockForKey(i).getType(),
-                    s = o.getBlockBefore(i);
-                if ("code-block" === a && s && "code-block" === s.getType() && 0 !== s.getLength()) return null;
-                if ("unstyled" !== a) return r.setBlockType(o, t, "unstyled");
+                    u = o.getBlockBefore(i);
+                if ("code-block" === a && u && "code-block" === u.getType() && 0 !== u.getLength()) return null;
+                if ("unstyled" !== a) return n.setBlockType(o, e, "unstyled");
             }
             return null;
         },
     };
-e.exports = s;
+t.exports = u;

@@ -16,7 +16,7 @@ n.r(t),
         extendSuperProperties: () => z,
         getCampaignParams: () => L,
         getDevice: () => U,
-        getOS: () => k,
+        getOS: () => j,
         getSuperProperties: () => X,
         getSuperPropertiesBase64: () => Q,
         isThrottled: () => K,
@@ -27,9 +27,9 @@ n.r(t),
     n(413496),
     n(433524),
     n(388685);
-var o,
-    a = n(348327),
-    s = n.n(a),
+var a,
+    o = n(348327),
+    s = n.n(o),
     l = n(512722),
     c = n.n(l),
     u = n(264344),
@@ -107,7 +107,7 @@ if (null != P) {
         t = P.remoteApp.getVersion(),
         n = P.process.platform,
         i = P.os.release,
-        a = P.os.arch,
+        o = P.os.arch,
         s = P.os.appArch,
         l = P.remoteApp.getReleaseChannel(),
         c = (0, _.qf)();
@@ -131,13 +131,13 @@ if (null != P) {
             release_channel: l || "unknown",
             client_version: t,
             os_version: i,
-            os_arch: a,
+            os_arch: o,
             app_arch: s,
             system_locale: c,
             has_client_mods: (0, f.e)(),
             client_launch_id: g.s,
         }),
-        (null == (o = d().name) ? void 0 : o.toLocaleLowerCase()) === "electron" &&
+        (null == (a = d().name) ? void 0 : a.toLocaleLowerCase()) === "electron" &&
             ((r.browser_user_agent = d().ua || ""), (r.browser_version = d().version || "")),
         "linux" === n)
     ) {
@@ -189,7 +189,7 @@ function M() {
     }
     return e;
 }
-function j() {
+function k() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
@@ -209,7 +209,7 @@ function j() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function k() {
+function j() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -236,15 +236,15 @@ function G() {
 function B() {
     let e = {};
     return (
-        (e.os = k()),
-        (e.browser = j()),
+        (e.os = j()),
+        (e.browser = k()),
         (e.device = U()),
         (e.system_locale = (0, _.qf)()),
         (e.has_client_mods = (0, f.e)()),
         e
     );
 }
-function Z() {
+function V() {
     var e, t;
     return S(
         I(
@@ -264,7 +264,7 @@ function F() {
     let e = {};
     return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M()));
 }
-function V(e, t) {
+function Z(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
 }
@@ -274,7 +274,7 @@ function H() {
     let t = p.K.get(N);
     null == t && ((t = F()), p.K.set(N, t));
     let n = h.x.get(N);
-    return null == n && ((n = V(F(), "_current")), h.x.set(N, n)), I({}, e, Z(), t, n);
+    return null == n && ((n = Z(F(), "_current")), h.x.set(N, n)), I({}, e, V(), t, n);
 }
 function Y() {
     try {
@@ -287,11 +287,11 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("432161", 10);
+    let i = parseInt("432211", 10);
     isNaN(i) || (n.client_build_number = i);
-    let o = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
+    let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (
-        isNaN(o) || (n.native_build_number = o),
+        isNaN(a) || (n.native_build_number = a),
         (n.client_event_source = Y()),
         (n.has_client_mods = (0, f.e)()),
         (n.client_launch_id = g.s),
@@ -313,31 +313,31 @@ function z(e) {
 z(W());
 let q = (e) => {
     let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: i } = e,
-        o = (0, m.$)(r, i);
+        a = (0, m.$)(r, i);
     return function (e, r) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
-        let a = null != r ? r : {},
+        let o = null != r ? r : {},
             l = t[e];
         if ("function" == typeof l) {
             var u;
-            l = null != (u = l(a)) ? u : null;
+            l = null != (u = l(o)) ? u : null;
         }
         if (null != l)
             if ("throttlePeriod" in l) {
-                let t = [e, ...l.throttleKeys(a)].join("_");
+                let t = [e, ...l.throttleKeys(o)].join("_");
                 if (K(t) || ("number" == typeof l.throttlePercent && Math.random() > l.throttlePercent))
                     return Promise.resolve();
                 if (l.deduplicate) {
                     let e = R[t];
-                    if (s()(e, a)) return Promise.resolve();
-                    R[t] = a;
+                    if (s()(e, o)) return Promise.resolve();
+                    R[t] = o;
                 }
                 C[t] = Date.now() + l.throttlePeriod;
             } else if ("throttlePercent" in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else c()(!1, "Unsupported analytics event config: ".concat(l));
-        return o(e, r, i);
+        return a(e, r, i);
     };
 };
 function X() {

@@ -1,5 +1,5 @@
 n.d(t, {
-    Dj: () => a,
+    Dj: () => o,
     NO: () => c,
     Pr: () => s,
     fn: () => i,
@@ -9,9 +9,9 @@ n.d(t, {
 var r = n(710845);
 function i() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return t.find((e) => null != e && o(e));
+    return t.find((e) => null != e && a(e));
 }
-function o(e) {
+function a(e) {
     return (
         null != e.requestFullscreen ||
         null != e.webkitRequestFullscreen ||
@@ -20,7 +20,7 @@ function o(e) {
         null != e.msRequestFullscreen
     );
 }
-function a(e) {
+function o(e) {
     "function" == typeof e.requestFullscreen
         ? e.requestFullscreen()
         : "function" == typeof e.webkitRequestFullscreen

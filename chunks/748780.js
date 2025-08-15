@@ -1,9 +1,9 @@
 n.d(t, { Z: () => A }), n(35282), n(539854), n(583741);
 var r = n(765085),
     i = n(937490),
-    o = n.n(i),
-    a = n(78650),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(78650),
+    s = n.n(o),
     l = n(505444),
     c = n.n(l);
 function u(e, t, n) {
@@ -64,9 +64,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
@@ -122,8 +122,8 @@ function I(e, t) {
     let n,
         {
             toValueMin: i,
-            toValueMax: o,
-            tension: a = 0,
+            toValueMax: a,
+            tension: o = 0,
             friction: s = 0,
             loop: l,
             reverse: c,
@@ -150,12 +150,12 @@ function I(e, t) {
         ]),
         y = e._value,
         O = v(t.duration, g, E),
-        T = v(t.toValue, i, o),
+        T = v(t.toValue, i, a),
         S = r[h](
             e,
             _(d({}, b), {
                 toValue: T,
-                tension: a,
+                tension: o,
                 friction: s,
                 duration: O,
             }),
@@ -167,7 +167,7 @@ function I(e, t) {
             e,
             _(d({}, b), {
                 toValue: c ? y : -T,
-                tension: a,
+                tension: o,
                 friction: s,
                 duration: i,
             }),
@@ -190,7 +190,7 @@ function T(e) {
 r.inject.ApplyAnimatedValues(y, (e) => e);
 let S = { CLAMP: "clamp" },
     A = _(d({}, r), {
-        Easing: o(),
+        Easing: a(),
         accelerate: O,
         animate: I,
         interpolate: T,

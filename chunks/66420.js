@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367),
     i = n(657707),
-    o = n(793030),
+    l = n(793030),
     a = n(834129),
-    s = n(664677);
-function l(e) {
-    let { channel: t, message: n, content: l, subtitle: c, compact: u, action: d } = e,
-        f = n.reactions.length > 0;
+    o = n(664677);
+function s(e) {
+    let { channel: t, message: n, content: s, subtitle: c, compact: u, action: d } = e,
+        p = n.reactions.length > 0;
     return (0, r.jsxs)(a.Z, {
         iconNode: t.isGroupDM()
             ? (0, r.jsx)(i.Dkj, {
@@ -17,21 +17,21 @@ function l(e) {
                   size: "md",
                   color: "var(--premium-tier-2-purple-for-gradients-2)",
               }),
-        iconContainerClassName: s.iconContainer,
+        iconContainerClassName: o.iconContainer,
         compact: u,
-        contentClassName: s.content,
-        className: f ? s.withReactions : s.noReactions,
+        contentClassName: o.content,
+        className: p ? o.withReactions : o.noReactions,
         children: [
             (0, r.jsxs)("div", {
-                className: s.textContainer,
+                className: o.textContainer,
                 children: [
-                    (0, r.jsx)(o.xv, {
+                    (0, r.jsx)(l.xv, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: l,
+                        children: s,
                     }),
                     null != c &&
-                        (0, r.jsx)(o.xv, {
+                        (0, r.jsx)(l.xv, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: c,

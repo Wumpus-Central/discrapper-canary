@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(206074),
-    o = n(915863),
-    a = n(388032);
+    a = n(915863),
+    o = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -62,9 +62,9 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,12 +73,12 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
-    var { ButtonComponent: t = o.Z, application: n, location: s } = e,
+    var { ButtonComponent: t = a.Z, application: n, location: s } = e,
         c = d(e, ["ButtonComponent", "application", "location"]);
     let f = (0, i.Z)({
             application: n,
@@ -97,7 +97,7 @@ function _(e) {
                 },
                 c,
             ),
-            { children: a.intl.string(a.t["jaYS/v"]) },
+            { children: o.intl.string(o.t["jaYS/v"]) },
         ),
         "cloud-play",
     );

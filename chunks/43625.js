@@ -1,10 +1,10 @@
-t.d(r, { s: () => o });
-var e = t(73800);
-function o(n) {
-    return (0, e.useMemo)(
+n.d(t, { s: () => i });
+var r = n(73800);
+function i(e) {
+    return (0, r.useMemo)(
         function () {
-            return n.hooks.dropTarget();
+            return e.hooks.dropTarget();
         },
-        [n],
+        [e],
     );
 }

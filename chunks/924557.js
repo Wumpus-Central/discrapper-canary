@@ -6,9 +6,9 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(441167),
-    o = n(131951);
+    a = n(131951);
 n(74538);
-var a = n(435064),
+var o = n(435064),
     s = n(779618);
 n(474936);
 let l = (0, r.B)({
@@ -81,24 +81,24 @@ let l = (0, r.B)({
         ],
     });
 function u() {
-    if (!(0, s.Z)(o.Z)) return !1;
+    if (!(0, s.Z)(a.Z)) return !1;
     let { enableClips: e } = c.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
         { enableClips: t } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        n = a.Z.isDecoupledGameClippingEnabled(),
+        n = o.Z.isDecoupledGameClippingEnabled(),
         { enableViewerClipping: r } = i.Z.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
     return e || t || n || r;
 }
 function d() {
-    let e = (0, s.Z)(o.Z),
+    let e = (0, s.Z)(a.Z),
         { enableClips: t } = c.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
         { enableClips: n } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        r = a.Z.isDecoupledGameClippingEnabled(),
+        r = o.Z.isDecoupledGameClippingEnabled(),
         { enableViewerClipping: u } = i.Z.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
     return (n || t || r || u) && e;
 }
 let f = (e) => {
     let { autoTrackExposure: t } = e,
-        n = (0, s.Z)(o.Z),
+        n = (0, s.Z)(a.Z),
         { enablePremiumEarlyAccessGoLiveRoadblock: r } = c.useExperiment(
             { location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock" },
             { autoTrackExposure: t && n },

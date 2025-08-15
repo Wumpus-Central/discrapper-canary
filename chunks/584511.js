@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(686546),
     c = n(131951),
@@ -58,7 +58,7 @@ function p(e) {
             onContextMenu: v,
             className: I,
         } = e,
-        T = (0, a.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
+        T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
         S = () => {
             let e = T ? s.v0G : _ ? s.wE8 : s.nRN;
             return d || _ || T
@@ -75,7 +75,7 @@ function p(e) {
                   })
                 : null;
         },
-        A = () => (0, r.jsx)("div", { className: o()(u.border, { [u.speaking]: i }) }, "border"),
+        A = () => (0, r.jsx)("div", { className: a()(u.border, { [u.speaking]: i }) }, "border"),
         N = () =>
             d && i
                 ? (0, r.jsxs)(r.Fragment, {
@@ -89,7 +89,7 @@ function p(e) {
                 t = (0, r.jsx)("img", {
                     src: p,
                     alt: " ",
-                    className: o()(u.voiceAvatar, E, { [u.ringingOutgoing]: m && 0 === g }),
+                    className: a()(u.voiceAvatar, E, { [u.ringingOutgoing]: m && 0 === g }),
                 });
             if (h) return t;
             let i = l.QS.AVATAR_DEFAULT;
@@ -112,7 +112,7 @@ function p(e) {
                 })
             );
         },
-        R = o()(
+        R = a()(
             u.wrapper,
             {
                 [u.clickable]: null != O,

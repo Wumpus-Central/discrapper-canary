@@ -1,87 +1,76 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    o = n(665149),
+var s = n(481060),
+    l = n(665149),
     a = n(388035),
-    s = n(453473),
-    l = n(388032);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function _(e) {
+    i = n(453473),
+    o = n(388032);
+function c(e) {
     let { onOpen: t, onClose: n, className: c } = e;
-    return (0, r.jsx)(s.P, {
+    return (0, r.jsx)(i.P, {
         onOpen: t,
         onClose: n,
         popoutPosition: "bottom",
         popoutAlign: "right",
-        children: (e, t, n, s, d) =>
-            (0, r.jsx)(a.U, {
+        children: (e, t, n, i, u) => {
+            var d, h;
+            return (0, r.jsx)(a.U, {
                 location: "bookmarks-button",
-                targetElementRef: d,
+                targetElementRef: u,
                 children: (0, r.jsx)(
-                    o.JO,
-                    f(u({}, n), {
-                        ref: d,
-                        className: c,
-                        onClick: e,
-                        icon: i.plf,
-                        "aria-label": l.intl.string(l.t["2pAkDA"]),
-                        tooltip: t ? null : l.intl.string(l.t["2pAkDA"]),
-                        selected: t,
-                        showBadge: s,
-                    }),
+                    l.JO,
+                    ((d = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (h = h =
+                        {
+                            ref: u,
+                            className: c,
+                            onClick: e,
+                            icon: s.plf,
+                            "aria-label": o.intl.string(o.t["2pAkDA"]),
+                            tooltip: t ? null : o.intl.string(o.t["2pAkDA"]),
+                            selected: t,
+                            showBadge: i,
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(h))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(h)).forEach(function (e) {
+                              Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(h, e));
+                          }),
+                    d),
                 ),
-            }),
+            });
+        },
     });
 }

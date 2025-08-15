@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685), n(539854);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(846519),
     l = n(570140),
     c = n(274616),
@@ -58,44 +58,44 @@ function M() {
     if (!(0, y.Q)()) return !1;
     for (let e of A) {
         let { applicationId: t, branchId: n } = (0, b.CP)(e);
-        null != f.Z.getApplication(t) && (A.delete(e), j(t, n));
+        null != f.Z.getApplication(t) && (A.delete(e), k(t, n));
     }
 }
-function j(e, t) {
+function k(e, t) {
     if (null != I[t] && g.Z.shouldBeInstalled(e, t)) {
         let n = I[t],
             r = n.manifestIds,
             i = m.Z.getState(e, t);
         null != i &&
             i.shouldPatch &&
-            (i.buildId !== n.id || !o().isEqual(i.manifestIds, r)) &&
+            (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
                 let i = f.Z.getApplication(e);
                 null != i ? (A.delete((0, b.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : A.add((0, b.Tu)(e, t));
             });
     }
 }
-function k(e) {
+function j(e) {
     let { branchId: t } = e;
     v.add(t);
 }
 function U(e) {
     let { applicationId: t, branchId: n, locale: r, build: i } = e;
     v.delete(n);
-    let o = i.manifests.map((e) => {
+    let a = i.manifests.map((e) => {
             let { id: t } = e;
             return t;
         }),
-        a = i.id;
+        o = i.id;
     T.delete(n),
         (I[n] = {
-            id: a,
+            id: o,
             applicationId: t,
             branchId: n,
             locale: r,
-            manifestIds: o,
+            manifestIds: a,
         }),
-        j(t, n);
+        k(t, n);
 }
 function G(e) {
     let { branchId: t } = e;
@@ -105,7 +105,7 @@ function B(e) {
     let { buildId: t } = e;
     S.hasOwnProperty(t) || (S[t] = null);
 }
-function Z(e) {
+function V(e) {
     let { buildId: t, sizeKB: n } = e;
     S[t] = n;
 }
@@ -113,7 +113,7 @@ function F(e) {
     let { buildId: t } = e;
     null == S[t] && delete S[t];
 }
-function V(e) {
+function Z(e) {
     let { branches: t } = e,
         n = {};
     for (let e in h.Z.libraryApplications) {
@@ -146,7 +146,7 @@ function W(e) {
         n.has(t.id) && (0, b.Je)(t) && l.Z.wait(() => u.l(t.id, t.branchId));
     }
 }
-class K extends (r = a.ZP.Store) {
+class K extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z);
     }
@@ -173,13 +173,13 @@ O(K, "displayName", "ApplicationBuildStore");
 let z = new K(l.Z, {
     CONNECTION_OPEN: L,
     GAMES_DATABASE_UPDATE: M,
-    APPLICATION_BUILD_FETCH_START: k,
+    APPLICATION_BUILD_FETCH_START: j,
     APPLICATION_BUILD_FETCH_SUCCESS: U,
     APPLICATION_BUILD_NOT_FOUND: G,
     APPLICATION_BUILD_SIZE_FETCH_START: B,
-    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: Z,
+    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: V,
     APPLICATION_BUILD_SIZE_FETCH_FAIL: F,
-    APPLICATION_BRANCHES_FETCH_SUCCESS: V,
+    APPLICATION_BRANCHES_FETCH_SUCCESS: Z,
     APPLICATION_BRANCHES_FETCH_FAIL: H,
     CONNECTION_CLOSED: Y,
     LOGOUT: Y,

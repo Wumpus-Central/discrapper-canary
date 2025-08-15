@@ -15,8 +15,8 @@ var f = n(377171),
     g = n(340541),
     m = n(768943),
     b = n(592125),
-    O = n(430824),
-    _ = n(375954),
+    _ = n(430824),
+    O = n(375954),
     y = n(306680),
     v = n(709054),
     j = n(821020),
@@ -24,8 +24,8 @@ var f = n(377171),
     E = n(804932),
     x = n(725739),
     S = n(787879),
-    P = n(370774),
-    I = n(334426),
+    I = n(370774),
+    P = n(334426),
     N = n(862149),
     w = n(207913),
     Z = n(553984),
@@ -78,30 +78,30 @@ function G(e) {
     let { includePanelSpacing: l } = e,
         a = (0, E.fJ)(),
         { selectedFilter: f } = (0, x.Z)(),
-        I = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
+        P = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
-        w = (0, s.Wu)([y.ZP, O.Z, S.Z], () =>
+        w = (0, s.Wu)([y.ZP, _.Z, S.Z], () =>
             N.filter(
                 (e) =>
-                    !(0, P.YH)({
+                    !(0, I.YH)({
                         messageId: e.id,
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.ZP,
-                        GuildStore_: O.Z,
-                    }) && !(0, P.Tj)(e, S.Z.selectedItemInfo),
+                        GuildStore_: _.Z,
+                    }) && !(0, I.Tj)(e, S.Z.selectedItemInfo),
             ),
         ),
-        D = (0, s.Wu)([y.ZP, O.Z, S.Z], () =>
+        D = (0, s.Wu)([y.ZP, _.Z, S.Z], () =>
             N.filter(
                 (e) =>
-                    (0, P.YH)({
+                    (0, I.YH)({
                         messageId: e.id,
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.ZP,
-                        GuildStore_: O.Z,
-                    }) || (0, P.Tj)(e, S.Z.selectedItemInfo),
+                        GuildStore_: _.Z,
+                    }) || (0, I.Tj)(e, S.Z.selectedItemInfo),
             ),
         ),
         G = i.useCallback(
@@ -122,12 +122,12 @@ function G(e) {
         W && !B && G(A.X.ON_OPEN);
     }, [W, B, G]),
         (function (e) {
-            let { unreadChannelIds: t } = (0, P.O4)();
+            let { unreadChannelIds: t } = (0, I.O4)();
             i.useEffect(() => {
                 null != e &&
                     t.forEach((e) => {
                         var t;
-                        let n = _.Z.getMessages(e),
+                        let n = O.Z.getMessages(e),
                             r = null == (t = n.last()) ? void 0 : t.id,
                             i = y.ZP.ackMessageId(e),
                             l = n.hasPresent() && n.ready && !n.cached;
@@ -167,7 +167,7 @@ function G(e) {
                 }),
             [K],
         ),
-        q = V(w, f, I),
+        q = V(w, f, P),
         X = V(D, f, null);
     (0, p.ZP)(() => {
         var e;
@@ -264,11 +264,11 @@ function G(e) {
                 $ && (0, r.jsx)(c.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
                     className: L.messageList,
-                    renderMessageGroup: H,
+                    renderMessageGroup: F,
                     messages: f === A.V5.BOOKMARKS ? Y : q,
                     unreadMessages: f === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
-                    renderLoadingState: F,
+                    renderLoadingState: H,
                     ignoreGrouping: f === A.V5.BOOKMARKS,
                     loadMore: G,
                 }),
@@ -293,10 +293,10 @@ function V(e, t, n) {
         [e, t, n],
     );
 }
-function F() {
+function H() {
     return (0, r.jsx)(N.Z, {});
 }
-function H(e, t) {
+function F(e, t) {
     return (0, r.jsx)(
         w.Z,
         {
@@ -309,7 +309,7 @@ function H(e, t) {
 }
 function z(e) {
     let { hideBanner: t } = e,
-        n = (0, I.d)((e) => e.shouldHide());
+        n = (0, P.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
         className: o()(L.caughtUpContainer, { [L.hide]: n || t }),
         children: (0, r.jsxs)("div", {

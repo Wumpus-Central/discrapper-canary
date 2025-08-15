@@ -1,220 +1,206 @@
-n.d(t, {
-    F: () => m,
-    Z: () => E,
+r.d(t, {
+    F: () => x,
+    Z: () => g,
 }),
-    n(539854),
-    n(388685);
-var r,
-    i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    l = n(481060),
-    c = n(565138),
-    u = n(981631),
-    d = n(388032),
-    f = n(599684);
-function _(e, t, n) {
+    r(539854),
+    r(388685);
+var a,
+    i,
+    s = r(255367),
+    l = r(73800),
+    n = r(120356),
+    o = r.n(n),
+    C = r(481060),
+    d = r(565138),
+    p = r(981631),
+    c = r(388032),
+    h = r(599684);
+function u(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let h = Object.freeze({
-    SMALL: f.small,
-    MEDIUM: f.medium,
-    LARGE: f.large,
+let f = Object.freeze({
+    SMALL: h.small,
+    MEDIUM: h.medium,
+    LARGE: h.large,
 });
-var m = (function (e) {
-    return (e.MEMBER = "MEMBER"), (e.ROLE = "ROLE"), (e.CHANNEL = "CHANNEL"), (e.GUILD = "GUILD"), (e.USER = "USER"), e;
-})({});
-class g extends (r = o.Component) {
+var x =
+    (((i = {}).MEMBER = "MEMBER"),
+    (i.ROLE = "ROLE"),
+    (i.CHANNEL = "CHANNEL"),
+    (i.GUILD = "GUILD"),
+    (i.USER = "USER"),
+    i);
+class _ extends (a = l.Component) {
     componentDidMount() {
         let e = this.containerRef.current;
         null != e && (this.previousHeight = e.offsetHeight);
     }
     componentDidUpdate(e) {
-        let { focusAfterReady: t, isReady: n } = this.props;
-        t && !e.isReady && n && this.focus(),
+        let { focusAfterReady: t, isReady: r } = this.props;
+        t && !e.isReady && r && this.focus(),
             (e.tags !== this.props.tags || e.query !== this.props.query) && this.handleHeightChange();
     }
     handleHeightChange() {
         let e = this.containerRef.current;
         if (null == e) return;
         let t = e.offsetHeight,
-            n = t - this.previousHeight;
-        if (0 !== n) {
-            var r, i;
-            (this.previousHeight = t), null == (r = (i = this.props).onHeightChange) || r.call(i, n);
+            r = t - this.previousHeight;
+        if (0 !== r) {
+            var a, i;
+            (this.previousHeight = t), null == (a = (i = this.props).onHeightChange) || a.call(i, r);
         }
     }
     handleKeyDownGrid(e) {
         let {
             selectedRow: t,
-            selectedColumn: n,
-            sections: r,
+            selectedColumn: r,
+            sections: a,
             query: i,
-            tags: o,
-            onSelectionChange: a,
-            onSelect: s,
-            onRemoveTag: l,
-            preventEscapePropagation: c,
+            tags: s,
+            onSelectionChange: l,
+            onSelect: n,
+            onRemoveTag: o,
+            preventEscapePropagation: C,
         } = this.props;
-        if (0 !== r.length) {
+        if (0 !== a.length) {
             switch (e.keyCode) {
-                case u.yXg.BACKSPACE:
+                case p.yXg.BACKSPACE:
                     (null == i || 0 === i.length) &&
-                        null != o &&
-                        o.length > 0 &&
-                        (e.preventDefault(), e.stopPropagation(), null == l || l(o.length - 1));
+                        null != s &&
+                        s.length > 0 &&
+                        (e.preventDefault(), e.stopPropagation(), null == o || o(s.length - 1));
                     break;
-                case u.yXg.ARROW_DOWN:
+                case p.yXg.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t
-                            ? ((t = 0), (n = 0))
-                            : ((t += 1) >= r.length && (t = r.length - 1), n >= r[t] && (n = r[t] - 1));
+                            ? ((t = 0), (r = 0))
+                            : ((t += 1) >= a.length && (t = a.length - 1), r >= a[t] && (r = a[t] - 1));
                     break;
-                case u.yXg.ARROW_UP:
+                case p.yXg.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
-                        (t -= 1),
-                        t < 0 ? ((t = 0), (n = 0)) : n >= r[t] && (n = r[t] - 1);
+                        (t -= 1) < 0 ? ((t = 0), (r = 0)) : r >= a[t] && (r = a[t] - 1);
                     break;
-                case u.yXg.ARROW_LEFT:
-                    e.preventDefault(),
-                        e.stopPropagation(),
-                        -1 === t && (t = 0),
-                        (n -= 1),
-                        n < 0 && ((t -= 1) >= 0 ? (n = r[t] - 1) : t < 0 && ((t = 0), (n = 0)));
-                    break;
-                case u.yXg.ARROW_RIGHT:
+                case p.yXg.ARROW_LEFT:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
-                        (n += 1),
-                        n >= r[t] && ((n = 0), (t += 1) >= r.length && ((t = r.length - 1), (n = r[t] - 1)));
+                        (r -= 1) < 0 && ((t -= 1) >= 0 ? (r = a[t] - 1) : t < 0 && ((t = 0), (r = 0)));
                     break;
-                case u.yXg.ENTER:
+                case p.yXg.ARROW_RIGHT:
+                    e.preventDefault(),
+                        e.stopPropagation(),
+                        -1 === t && (t = 0),
+                        (r += 1) >= a[t] && ((r = 0), (t += 1) >= a.length && ((t = a.length - 1), (r = a[t] - 1)));
+                    break;
+                case p.yXg.ENTER:
                     if (
                         (e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
-                        -1 === n && (n = 0),
-                        t >= r.length || n >= r[t])
+                        -1 === r && (r = 0),
+                        t >= a.length || r >= a[t])
                     )
                         return;
-                    null != s && s(t, n, e);
+                    null != n && n(t, r, e);
                     return;
-                case u.yXg.ESCAPE:
-                    e.preventDefault(), c && e.stopPropagation(), null != s && s(null, null, e);
+                case p.yXg.ESCAPE:
+                    e.preventDefault(), C && e.stopPropagation(), null != n && n(null, null, e);
                     return;
                 default:
                     return;
             }
-            null != a && a(t, n);
+            null != l && l(t, r);
         }
     }
     handleKeyDownList(e) {
         let {
                 sections: t,
-                selectedSection: n,
-                selectedRow: r,
+                selectedSection: r,
+                selectedRow: a,
                 onSelect: i,
-                onSelectionChange: o,
-                query: a,
-                tags: s,
-                preventEscapePropagation: l,
+                onSelectionChange: s,
+                query: l,
+                tags: n,
+                preventEscapePropagation: o,
             } = this.props,
-            { current: c } = this.ref;
-        if (null != c)
+            { current: C } = this.ref;
+        if (null != C)
             switch (e.keyCode) {
-                case u.yXg.BACKSPACE:
-                    if ((null == a || 0 === a.length) && null != s && s.length > 0) {
-                        var d, f;
+                case p.yXg.BACKSPACE:
+                    if ((null == l || 0 === l.length) && null != n && n.length > 0) {
+                        var d, c;
                         e.preventDefault(),
                             e.stopPropagation(),
-                            null == (d = (f = this.props).onRemoveTag) || d.call(f, s.length - 1);
+                            null == (d = (c = this.props).onRemoveTag) || d.call(c, n.length - 1);
                     }
                     break;
-                case u.yXg.ARROW_DOWN:
+                case p.yXg.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
-                        t.length > n && ++r >= t[n] && (++n >= t.length && (n = 0), (r = 0)),
-                        null == o || o(n, r);
+                        t.length > r && ++a >= t[r] && (++r >= t.length && (r = 0), (a = 0)),
+                        null == s || s(r, a);
                     break;
-                case u.yXg.ARROW_UP:
+                case p.yXg.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
-                        --r < 0 && (--n < 0 && (n = t.length - 1), (r = t[n] - 1)),
-                        null == o || o(n, r);
+                        --a < 0 && (--r < 0 && (r = t.length - 1), (a = t[r] - 1)),
+                        null == s || s(r, a);
                     break;
-                case u.yXg.ENTER:
-                    e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > r && (null == i || i(n, r, e));
+                case p.yXg.ENTER:
+                    e.preventDefault(), e.stopPropagation(), t.length > r && t[r] > a && (null == i || i(r, a, e));
                     break;
-                case u.yXg.ESCAPE:
-                    e.preventDefault(), l && e.stopPropagation(), null == i || i(null, null, e), c.blur();
+                case p.yXg.ESCAPE:
+                    e.preventDefault(), o && e.stopPropagation(), null == i || i(null, null, e), C.blur();
             }
     }
     render() {
         let {
                 autoFocus: e,
                 query: t,
-                placeholder: n = d.intl.string(d.t.LzcpeX),
-                themeOverride: r,
-                disabled: o,
-                size: a,
-                maxHeight: u,
-                tags: _,
-                onActivate: h,
-                className: m,
-                inputProps: g,
-                focusAfterReady: E,
+                placeholder: r = c.intl.string(c.t.LzcpeX),
+                themeOverride: a,
+                disabled: i,
+                size: l,
+                maxHeight: n,
+                tags: p,
+                onActivate: f,
+                className: x,
+                inputProps: _,
+                focusAfterReady: g,
             } = this.props,
-            b = !1,
-            y = [];
+            j = !1,
+            L = [];
         return (
-            null != _ &&
-                _.length > 0 &&
-                ("string" == typeof _[0]
-                    ? _.forEach((e, t) =>
-                          y.push(
-                              (0, i.jsxs)(
-                                  l.eee,
+            null != p &&
+                p.length > 0 &&
+                ("string" == typeof p[0]
+                    ? p.forEach((e, t) =>
+                          L.push(
+                              (0, s.jsxs)(
+                                  C.eee,
                                   {
                                       focusProps: { offset: 4 },
-                                      className: f.tag,
+                                      className: h.tag,
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           e,
-                                          (0, i.jsx)(l.Dio, {
+                                          (0, s.jsx)(C.Dio, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: f.close,
-                                              "aria-label": d.intl.string(d.t.N86XcH),
+                                              className: h.close,
+                                              "aria-label": c.intl.string(c.t.N86XcH),
                                           }),
                                       ],
                                   },
@@ -222,44 +208,44 @@ class g extends (r = o.Component) {
                               ),
                           ),
                       )
-                    : ((b = !0),
-                      _.forEach((e, t) =>
-                          y.push(
-                              (0, i.jsxs)(
-                                  l.eee,
+                    : ((j = !0),
+                      p.forEach((e, t) =>
+                          L.push(
+                              (0, s.jsxs)(
+                                  C.eee,
                                   {
-                                      className: s()(f.tag, f.richTag),
+                                      className: o()(h.tag, h.richTag),
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           ("MEMBER" === e.type || "USER" === e.type) &&
                                               null != e.avatar &&
-                                              (0, i.jsx)(l.qEK, {
+                                              (0, s.jsx)(C.qEK, {
                                                   src: e.avatar,
                                                   "aria-hidden": !0,
-                                                  size: l.EFr.SIZE_16,
+                                                  size: C.EFr.SIZE_16,
                                               }),
                                           "ROLE" === e.type &&
                                               null != e.color &&
-                                              (0, i.jsx)("span", {
-                                                  className: f.tagRoleColor,
+                                              (0, s.jsx)("span", {
+                                                  className: h.tagRoleColor,
                                                   style: { backgroundColor: e.color },
                                               }),
                                           "GUILD" === e.type &&
                                               null != e.guild &&
-                                              (0, i.jsx)(c.Z, {
+                                              (0, s.jsx)(d.Z, {
                                                   guild: e.guild,
                                                   active: !0,
-                                                  size: c.Z.Sizes.SMOL,
+                                                  size: d.Z.Sizes.SMOL,
                                               }),
-                                          (0, i.jsx)("span", {
-                                              className: f.tagLabel,
+                                          (0, s.jsx)("span", {
+                                              className: h.tagLabel,
                                               children: e.label,
                                           }),
-                                          (0, i.jsx)(l.Dio, {
+                                          (0, s.jsx)(C.Dio, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: f.close,
-                                              "aria-label": d.intl.string(d.t.N86XcH),
+                                              className: h.close,
+                                              "aria-label": c.intl.string(c.t.N86XcH),
                                           }),
                                       ],
                                   },
@@ -267,40 +253,55 @@ class g extends (r = o.Component) {
                               ),
                           ),
                       ))),
-            (0, i.jsx)(l.tEY, {
+            (0, s.jsx)(C.tEY, {
                 focusTarget: this.ref,
                 ringTarget: this.containerRef,
-                children: (0, i.jsx)(l.f6W, {
-                    theme: r,
-                    children: (r) =>
-                        (0, i.jsx)("div", {
+                children: (0, s.jsx)(C.f6W, {
+                    theme: a,
+                    children: (a) =>
+                        (0, s.jsx)("div", {
                             ref: this.containerRef,
-                            className: s()(m, f.container, a, r, { [f.disabled]: o }),
-                            children: (0, i.jsxs)(l.zJl, {
-                                className: f.inner,
-                                style: { maxHeight: u },
+                            className: o()(x, h.container, l, a, { [h.disabled]: i }),
+                            children: (0, s.jsxs)(C.zJl, {
+                                className: h.inner,
+                                style: { maxHeight: n },
                                 children: [
-                                    y,
-                                    (0, i.jsx)(
+                                    L,
+                                    (0, s.jsx)(
                                         "input",
-                                        p(
+                                        (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var r = null != arguments[t] ? arguments[t] : {},
+                                                    a = Object.keys(r);
+                                                "function" == typeof Object.getOwnPropertySymbols &&
+                                                    (a = a.concat(
+                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                        }),
+                                                    )),
+                                                    a.forEach(function (t) {
+                                                        u(e, t, r[t]);
+                                                    });
+                                            }
+                                            return e;
+                                        })(
                                             {
-                                                className: s()(f.input, { [f.richTagInput]: b }),
+                                                className: o()(h.input, { [h.richTagInput]: j }),
                                                 type: "text",
                                                 ref: this.ref,
                                                 spellCheck: "false",
-                                                placeholder: n,
+                                                placeholder: r,
                                                 value: t,
                                                 onChange: this.handleChange,
                                                 onKeyDown: this.handleKeyDown,
                                                 onFocus: this.handleFocus,
-                                                disabled: o,
-                                                "aria-disabled": o,
-                                                autoFocus: !E && e,
-                                                onMouseDown: h,
+                                                disabled: i,
+                                                "aria-disabled": i,
+                                                autoFocus: !g && e,
+                                                onMouseDown: f,
                                             },
                                             this.defaultInputProps,
-                                            g,
+                                            _,
                                         ),
                                     ),
                                 ],
@@ -312,49 +313,49 @@ class g extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "defaultInputProps", {
+            u(this, "defaultInputProps", {
                 role: "combobox",
                 "aria-haspopup": "listbox",
                 "aria-autocomplete": "list",
             }),
-            _(this, "ref", o.createRef()),
-            _(this, "containerRef", o.createRef()),
-            _(this, "previousHeight", 0),
-            _(this, "handleKeyDown", (e) => {
-                let { onActivate: t, onKeyDown: n, onQueryChange: r, useKeyboardNavigation: i } = this.props;
-                null != n && n(e);
-                let { current: o } = this.ref;
-                if (null == o || null != t) {
-                    e.keyCode !== u.yXg.TAB && null != t && t(e);
+            u(this, "ref", l.createRef()),
+            u(this, "containerRef", l.createRef()),
+            u(this, "previousHeight", 0),
+            u(this, "handleKeyDown", (e) => {
+                let { onActivate: t, onKeyDown: r, onQueryChange: a, useKeyboardNavigation: i } = this.props;
+                null != r && r(e);
+                let { current: s } = this.ref;
+                if (null == s || null != t) {
+                    e.keyCode !== p.yXg.TAB && null != t && t(e);
                     return;
                 }
-                if (e.keyCode === u.yXg.ESCAPE && null != o.value && "" !== o.value && o.value.length > 0) {
-                    (o.value = ""), null != r && r("");
+                if (e.keyCode === p.yXg.ESCAPE && null != s.value && "" !== s.value && s.value.length > 0) {
+                    (s.value = ""), null != a && a("");
                     return;
                 }
                 i && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e));
             }),
-            _(this, "handleChange", (e) => {
+            u(this, "handleChange", (e) => {
                 let { onQueryChange: t } = this.props;
                 null != t && t(e.currentTarget.value);
             }),
-            _(this, "handleFocus", (e) => {
+            u(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props;
                 null != t && t(e);
             }),
-            _(this, "handleRemoveTag", (e) => {
+            u(this, "handleRemoveTag", (e) => {
                 let { onRemoveTag: t } = this.props;
                 null == t || t(e);
             }),
-            _(this, "focus", () => {
+            u(this, "focus", () => {
                 let { current: e } = this.ref;
                 null != e && e.focus();
             });
     }
 }
-_(g, "Sizes", h),
-    _(g, "defaultProps", {
-        size: h.SMALL,
+u(_, "Sizes", f),
+    u(_, "defaultProps", {
+        size: f.SMALL,
         query: "",
         sections: [],
         selectedSection: 0,
@@ -366,4 +367,4 @@ _(g, "Sizes", h),
         preventEscapePropagation: !0,
         useKeyboardNavigation: !0,
     });
-let E = g;
+let g = _;

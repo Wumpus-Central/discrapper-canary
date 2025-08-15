@@ -1,41 +1,41 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
     a = n(961675),
-    s = n(883429),
-    o = n(238349),
+    o = n(883429),
+    s = n(238349),
     c = n(109434),
     u = n(456269),
     d = n(432771),
-    h = n(920303),
-    p = n(665149),
+    p = n(920303),
+    h = n(665149),
     f = n(388032);
-function g(e) {
+function m(e) {
     let { channel: t } = e,
         n = (0, u.r_)(t),
-        g = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
-        m = (0, d.c)(t.id),
-        { sortOrder: b, tagFilter: y, tagSetting: x } = (0, c.H)(t.id),
-        j = (0, i.e7)(
-            [o.Z, h.Z],
-            () => !!(o.Z.getThreadIds(t.id, b, y, x).length > 0) || !!(h.Z.getThreads(t.id, b, y, x).length > 0),
-            [t.id, b, y, x],
+        m = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
+        g = (0, d.c)(t.id),
+        { sortOrder: b, tagFilter: y, tagSetting: _ } = (0, c.H)(t.id),
+        C = (0, i.e7)(
+            [s.Z, p.Z],
+            () => !!(s.Z.getThreadIds(t.id, b, y, _).length > 0) || !!(p.Z.getThreads(t.id, b, y, _).length > 0),
+            [t.id, b, y, _],
         ),
-        _ = t.isMediaChannel();
-    if (!n || m || (_ && j)) return null;
-    let O = g
-        ? _
+        x = t.isMediaChannel();
+    if (!n || g || (x && C)) return null;
+    let v = m
+        ? x
             ? f.intl.string(f.t["WP/IEx"])
             : f.intl.string(f.t.zfq9V1)
-        : _
+        : x
           ? f.intl.string(f.t.p60yFx)
           : f.intl.string(f.t.SNOqYG);
-    return (0, r.jsx)(p.JO, {
-        tooltip: O,
+    return (0, r.jsx)(h.JO, {
+        tooltip: v,
         icon: l.d3s,
-        onClick: () => s.Z.hideAdminOnboarding(t.id, !g),
-        selected: !g,
+        onClick: () => o.Z.hideAdminOnboarding(t.id, !m),
+        selected: !m,
     });
 }

@@ -251,7 +251,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    o = [
+    a = [
         "after",
         "backdrop",
         "before",
@@ -269,7 +269,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    a = [
+    o = [
         "accent-color",
         "align-content",
         "align-items",
@@ -787,7 +787,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    s = i.concat(o).sort().reverse();
+    s = i.concat(a).sort().reverse();
 e.exports = function (e) {
     let l = t(e),
         c = s,
@@ -870,7 +870,7 @@ e.exports = function (e) {
                 l.CSS_VARIABLE,
                 {
                     className: "attribute",
-                    begin: "\\b(" + a.join("|") + ")\\b",
+                    begin: "\\b(" + o.join("|") + ")\\b",
                     end: /(?=:)/,
                     starts: {
                         endsWithParent: !0,
@@ -944,7 +944,7 @@ e.exports = function (e) {
                 },
                 {
                     className: "selector-pseudo",
-                    begin: ":(:)?(" + o.join("|") + ")",
+                    begin: ":(:)?(" + a.join("|") + ")",
                 },
                 {
                     begin: /\(/,

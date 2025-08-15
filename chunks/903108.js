@@ -1,22 +1,22 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(442837),
     i = n(358221),
     l = n(430824),
     a = n(496675),
-    s = n(431328),
-    o = n(501655),
+    o = n(431328),
+    s = n(501655),
     c = n(146085),
     u = n(368442),
     d = n(981631);
-function h(e) {
+function p(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.getStageVideoLimitBoostUpsellDismissed(e.id), [e.id]),
-        h = (0, s.Io)(e.id),
-        p = (0, s.Rk)(e.id, o.pV.AUDIENCE),
+        p = (0, o.Io)(e.id),
+        h = (0, o.Rk)(e.id, s.pV.AUDIENCE),
         f = (0, u.PK)(e.id),
-        g = (0, r.e7)([l.Z], () => l.Z.getGuild(e.guild_id), [e.guild_id]),
-        m = (0, r.e7)([a.Z], () => a.Z.can(c.yP, e), [e]),
-        b = null != (t = null == g ? void 0 : g.maxStageVideoChannelUsers) ? t : 0,
-        y = !(null != g && g.features.has(d.oNc.COMMUNITY)) && b > d.RcX;
-    return f && !n && m && !y && h + p >= b;
+        m = (0, r.e7)([l.Z], () => l.Z.getGuild(e.guild_id), [e.guild_id]),
+        g = (0, r.e7)([a.Z], () => a.Z.can(c.yP, e), [e]),
+        b = null != (t = null == m ? void 0 : m.maxStageVideoChannelUsers) ? t : 0,
+        y = !(null != m && m.features.has(d.oNc.COMMUNITY)) && b > d.RcX;
+    return f && !n && g && !y && p + h >= b;
 }

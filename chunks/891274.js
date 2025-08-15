@@ -2,9 +2,9 @@ n.d(t, { Z: () => f }), n(415506), n(570140);
 var r = n(147913);
 n(471518);
 var i = n(751189),
-    o = n(409059);
+    a = n(409059);
 n(652898);
-var a = n(728675);
+var o = n(728675);
 n(701190);
 var s = n(960904),
     l = n(213753),
@@ -18,7 +18,7 @@ function u(e) {
             if (t === s.g.INVITE);
             else if (t === s.g.TEMPLATE)
                 (0, l.V)(async () => {
-                    null == o.Z.getGuildTemplate(n) && (await i.Z.resolveGuildTemplate(n));
+                    null == a.Z.getGuildTemplate(n) && (await i.Z.resolveGuildTemplate(n));
                 });
             else if (t === s.g.BUILD_OVERRIDE || t === s.g.MANUAL_BUILD_OVERRIDE);
             else if (t === s.g.EVENT);
@@ -38,7 +38,7 @@ function u(e) {
 }
 class d extends r.Z {
     constructor() {
-        super(), (0, a.Z)(this, u);
+        super(), (0, o.Z)(this, u);
     }
 }
 let f = new d();

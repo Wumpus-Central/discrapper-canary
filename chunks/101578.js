@@ -1,33 +1,31 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(627861),
-    o = n(100527),
+    l = n(100527),
     a = n(906732),
-    s = n(728345),
-    l = n(973616),
+    o = n(728345),
+    s = n(973616),
     c = n(789407),
     u = n(616922);
-function d(e) {
-    return null != e.application
-        ? l.ZP.createFromServer(e.application)
-        : null != e.activity && null != e.activity.party_id && (0, u.Ps)(e.activity.party_id)
-          ? c.r9
-          : void 0;
-}
-let f = (e) => {
+let d = (e) => {
     var t;
-    let { channel: n, message: l, hideParty: c } = e,
-        { analyticsLocations: u } = (0, a.ZP)(o.Z.INVITE_EMBED),
-        f = d(l),
-        { data: _ } = (0, s.IX)(null == (t = l.application) ? void 0 : t.id),
-        p = null != _ ? _ : f;
-    return null == p
+    let { channel: n, message: d, hideParty: p } = e,
+        { analyticsLocations: m } = (0, a.ZP)(l.Z.INVITE_EMBED),
+        f =
+            null != d.application
+                ? s.ZP.createFromServer(d.application)
+                : null != d.activity && null != d.activity.party_id && (0, u.Ps)(d.activity.party_id)
+                  ? c.r9
+                  : void 0,
+        { data: _ } = (0, o.IX)(null == (t = d.application) ? void 0 : t.id),
+        g = null != _ ? _ : f;
+    return null == g
         ? null
         : (0, r.jsx)(i.c, {
-              app: p,
+              app: g,
               channel: n,
-              message: l,
-              hideParty: c,
-              analyticsLocations: u,
+              message: d,
+              hideParty: p,
+              analyticsLocations: m,
           });
 };

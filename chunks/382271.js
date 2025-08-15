@@ -1,68 +1,68 @@
-r.d(t, { m: () => S });
-var a = r(255367),
-    i = r(73800),
-    n = r(120356),
-    s = r.n(n),
-    l = r(442837),
-    o = r(257465),
-    c = r(667202),
-    d = r(780384),
-    u = r(481060),
-    m = r(493683),
-    f = r(37234),
-    p = r(518950),
-    x = r(819640),
-    b = r(626135),
-    h = r(63063),
-    _ = r(51144),
-    j = r(281494),
-    g = r(276444),
-    R = r(263885),
-    v = r(981631),
-    E = r(388032),
-    C = r(734501),
-    y = r(690813);
-let N = (e) => {
-        let { recipient: t, status: r, onClose: i } = e,
-            { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
+a.d(t, { m: () => Z });
+var r = a(255367),
+    i = a(73800),
+    s = a(120356),
+    n = a.n(s),
+    l = a(442837),
+    o = a(257465),
+    c = a(667202),
+    d = a(780384),
+    u = a(481060),
+    m = a(493683),
+    x = a(37234),
+    p = a(518950),
+    f = a(819640),
+    h = a(626135),
+    j = a(63063),
+    g = a(51144),
+    v = a(281494),
+    b = a(276444),
+    E = a(263885),
+    R = a(981631),
+    y = a(388032),
+    S = a(734501),
+    N = a(690813);
+let C = (e) => {
+        let { recipient: t, status: a, onClose: i } = e,
+            { avatarSrc: s, eventHandlers: l } = (0, p.Z)({
                 userId: null == t ? void 0 : t.id,
                 size: u.EFr.SIZE_56,
             }),
-            o = _.ZP.getName(t),
-            c = r === j.Fz.FAIL;
-        return (0, a.jsxs)("div", {
-            className: C.trialRecipientRow,
+            o = g.ZP.getName(t),
+            c = a === v.Fz.FAIL;
+        return (0, r.jsxs)("div", {
+            className: S.trialRecipientRow,
             children: [
-                (0, a.jsx)(
+                (0, r.jsx)(
                     u.qEK,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                a = Object.keys(r);
+                            var a = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(a);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (a = a.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(a).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
                                     }),
                                 )),
-                                a.forEach(function (t) {
-                                    var a;
-                                    (a = r[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = a[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: a,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = a);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })(
                         {
-                            imageClassName: s()({ [C.erroredAvatar]: c }),
-                            src: n,
+                            imageClassName: n()({ [S.erroredAvatar]: c }),
+                            src: s,
                             "aria-label": o,
                             size: u.EFr.SIZE_32,
                         },
@@ -70,55 +70,55 @@ let N = (e) => {
                     ),
                 ),
                 c
-                    ? (0, a.jsxs)(a.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, a.jsx)(u.Text, {
-                                  className: C.errorDisplayName,
+                              (0, r.jsx)(u.Text, {
+                                  className: S.errorDisplayName,
                                   variant: "text-md/medium",
                                   color: "text-primary",
                                   children: o,
                               }),
-                              (0, a.jsx)(u.Text, {
+                              (0, r.jsx)(u.Text, {
                                   variant: "text-md/medium",
-                                  className: C.userName,
+                                  className: S.userName,
                                   color: "text-primary",
-                                  children: E.intl.format(E.t.RO3T4O, { userName: o }),
+                                  children: y.intl.format(y.t.RO3T4O, { userName: o }),
                               }),
                           ],
                       })
-                    : (0, a.jsx)(u.Text, {
+                    : (0, r.jsx)(u.Text, {
                           variant: "text-md/medium",
-                          className: C.trialRecipientRowDisplayName,
+                          className: S.trialRecipientRowDisplayName,
                           color: "text-primary",
                           children: o,
                       }),
-                (0, a.jsx)(u.zxk, {
+                (0, r.jsx)(u.zxk, {
                     variant: "secondary",
                     size: "sm",
-                    text: E.intl.string(E.t["E+yYpq"]),
+                    text: y.intl.string(y.t["E+yYpq"]),
                     icon: u.kBi,
                     onClick: () => {
                         var e;
                         return (
                             (e = t.id),
-                            void (x.Z.hasLayers() && (0, f.xf)(), m.Z.openPrivateChannel({ recipientIds: e }), i())
+                            void (f.Z.hasLayers() && (0, x.xf)(), m.Z.openPrivateChannel({ recipientIds: e }), i())
                         );
                     },
                 }),
             ],
         });
     },
-    S = (e) => {
-        let { results: t, onClose: r } = e,
-            n = (0, l.e7)([g.Z], () => g.Z.getReferralsRemaining());
-        b.default.track(v.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-        let { reducedMotion: s } = i.useContext(d.Sf);
-        return null === n
-            ? (0, a.jsx)(u.$jN, {})
-            : (0, a.jsx)(c.I, {
-                  graphic: s.enabled
+    Z = (e) => {
+        let { results: t, onClose: a } = e,
+            s = (0, l.e7)([b.Z], () => b.Z.getReferralsRemaining());
+        h.default.track(R.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        let { reducedMotion: n } = i.useContext(d.Sf);
+        return null === s
+            ? (0, r.jsx)(u.$jN, {})
+            : (0, r.jsx)(c.I, {
+                  graphic: n.enabled
                       ? {
-                            src: y.Z,
+                            src: N.Z,
                             type: "image",
                         }
                       : {
@@ -127,29 +127,29 @@ let N = (e) => {
                         },
                   gradientColor: "nitro-pink",
                   title: (() => {
-                      let e = E.intl.string(E.t.Pcb7KC),
-                          r = t.filter((e) => e.status === j.Fz.SUCCESS).length;
+                      let e = y.intl.string(y.t.Pcb7KC),
+                          a = t.filter((e) => e.status === v.Fz.SUCCESS).length;
                       return (
-                          n > 0 && (e = E.intl.formatToPlainString(E.t.iWtOfH, { numReferrals: r })),
-                          0 === r && (e = E.intl.string(E.t["7VBEub"])),
+                          s > 0 && (e = y.intl.formatToPlainString(y.t.iWtOfH, { numReferrals: a })),
+                          0 === a && (e = y.intl.string(y.t["7VBEub"])),
                           e
                       );
                   })(),
-                  subtitle: E.intl.format(E.t.CZaMHh, {
-                      days: R.p,
-                      helpdeskArticle: h.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
+                  subtitle: y.intl.format(y.t.CZaMHh, {
+                      days: E.p,
+                      helpdeskArticle: j.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM),
                   }),
-                  onClose: r,
+                  onClose: a,
                   transitionState: o.D.ENTERED,
-                  children: (0, a.jsx)("div", {
-                      className: C.trialRecipientContainer,
+                  children: (0, r.jsx)("div", {
+                      className: S.trialRecipientContainer,
                       children: t.map((e) =>
-                          (0, a.jsx)(
-                              N,
+                          (0, r.jsx)(
+                              C,
                               {
                                   recipient: e.recipient,
                                   status: e.status,
-                                  onClose: r,
+                                  onClose: a,
                               },
                               e.recipient.id,
                           ),

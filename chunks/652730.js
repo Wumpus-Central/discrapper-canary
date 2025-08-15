@@ -1,34 +1,29 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r,
-    i = n(442837),
-    o = n(570140),
-    a = n(41776);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = null,
+    i,
+    l = n(442837),
+    a = n(570140),
+    o = n(41776);
+let s = null,
     c = null;
 function u() {
-    let e = a.Z.mostRecentLurkedGuildId();
-    null != e ? ((l = e), (c = null)) : ((c = null != l ? l : null), (l = null));
+    let e = o.Z.mostRecentLurkedGuildId();
+    null != e ? ((s = e), (c = null)) : ((c = null != s ? s : null), (s = null));
 }
-class d extends (r = i.ZP.Store) {
+class d extends (i = l.ZP.Store) {
     initialize() {
-        this.syncWith([a.Z], u);
+        this.syncWith([o.Z], u);
     }
     shouldShowPopout(e) {
         return c === e;
     }
 }
-s(d, "displayName", "LurkerModePopoutStore");
-let f = new d(o.Z);
+(r = "displayName") in d
+    ? Object.defineProperty(d, r, {
+          value: "LurkerModePopoutStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (d[r] = "LurkerModePopoutStore");
+let p = new d(a.Z);

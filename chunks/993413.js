@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(704826), n(35282), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -40,7 +40,7 @@ let b = i.forwardRef(function (e, t) {
     let {
             title: n,
             titleIcon: i,
-            titleId: o,
+            titleId: a,
             description: f,
             children: g,
             className: b,
@@ -63,7 +63,7 @@ let b = i.forwardRef(function (e, t) {
                 });
         };
     return (0, r.jsx)("div", {
-        className: a()(m.customizationSection, b, {
+        className: o()(m.customizationSection, b, {
             [m.disabled]: O,
             [m.hideDivider]: v,
             [m.showBorder]: I,
@@ -79,7 +79,7 @@ let b = i.forwardRef(function (e, t) {
             children: [
                 (0, r.jsxs)(c.vwX, {
                     className: m.title,
-                    id: o,
+                    id: a,
                     children: [
                         n,
                         N && (0, r.jsx)(_.Z, {}),

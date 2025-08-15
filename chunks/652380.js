@@ -19,9 +19,9 @@ var r = n(255367),
     f = n(497505),
     x = n(210724),
     h = n(130653),
-    j = n(415104),
-    b = n(110560),
-    _ = n(78826),
+    b = n(415104),
+    _ = n(110560),
+    j = n(78826),
     v = n(37303),
     C = n(134483),
     y = n(683650),
@@ -112,12 +112,12 @@ function L() {
         progress: {},
     };
 }
-let Z = "1193992107035983872",
-    W = {
-        id: Z,
+let W = "1193992107035983872",
+    Z = {
+        id: W,
         preview: !0,
         config: {
-            id: Z,
+            id: W,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
@@ -183,8 +183,8 @@ let Z = "1193992107035983872",
         targetedContent: [],
     };
 function U() {
-    var e, t, o, u, d, k, M, Z;
-    let [U, H] = s.useState(W),
+    var e, t, o, u, d, k, M, W;
+    let [U, H] = s.useState(Z),
         F = s.useCallback((e) => {
             H(I(q({}, e), { preview: !0 }));
         }, []),
@@ -193,8 +193,8 @@ function U() {
         [G, J] = s.useState(!1),
         [$, ee] = s.useState(null),
         et =
-            ((Z = U.config),
-            (0, i.EQ)(Z)
+            ((W = U.config),
+            (0, i.EQ)(W)
                 .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
     function en(e, t) {
@@ -319,7 +319,7 @@ function U() {
     function ec() {
         (0, g.Xv)(U.config)
             ? (0, E.m)(U, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
-            : (0, b.openQuestsRewardCodeModal)({
+            : (0, _.openQuestsRewardCodeModal)({
                   questId: U.id,
                   questContent: f.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
@@ -733,7 +733,7 @@ function U() {
                                         }),
                                     (0, r.jsx)("div", {
                                         className: B.questBarPreview,
-                                        children: (0, r.jsx)(_.p, {
+                                        children: (0, r.jsx)(j.p, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
@@ -748,11 +748,11 @@ function U() {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.vwX, { children: "Quest Home Card" }),
-                            (0, r.jsx)(_.p, {
+                            (0, r.jsx)(j.p, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, r.jsx)(j.Z, {
+                                children: (0, r.jsx)(b.Z, {
                                     quest: U,
                                     className: B.questTile,
                                     questContent: f.jn.QUEST_HOME_DESKTOP,
@@ -776,7 +776,7 @@ function U() {
                                 }),
                             (0, r.jsx)("div", {
                                 className: B.questBarPreviewWrapper,
-                                children: (0, r.jsx)(_.p, {
+                                children: (0, r.jsx)(j.p, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",

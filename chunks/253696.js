@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(367907),
-    o = n(339085),
-    a = n(689789),
+    a = n(339085),
+    o = n(689789),
     s = n(407477),
     l = n(592125),
     c = n(944486),
@@ -55,7 +55,7 @@ function b(e) {
     let { intention: n, containerWidth: r, rowSize: m, isBurstReaction: E, analyticsObject: b } = e,
         y = l.Z.getChannel(c.Z.getChannelId()),
         O = null == y ? void 0 : y.getGuildId(),
-        { canSplitFrecencyList: v } = a.Z.getCurrentConfig(
+        { canSplitFrecencyList: v } = o.Z.getCurrentConfig(
             { location: "trackOnEmojiPickerOpened" },
             { autoTrackExposure: !0 },
         ),
@@ -66,17 +66,17 @@ function b(e) {
     s.Xb.trackExposure({ location: "trackOnEmojiPickerOpened" });
     let T =
             (v || I) && n === p.Hz.REACTION
-                ? o.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice()
-                : o.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
-        S = null != y ? o.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
+                ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice()
+                : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        S = null != y ? a.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
         A =
             (v || I) && n === p.Hz.REACTION
-                ? o.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems
-                : o.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+                ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems
+                : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         N = T.slice(0, A),
-        C = null != O ? o.ZP.getGuildEmoji(O) : [],
+        C = null != O ? a.ZP.getGuildEmoji(O) : [],
         R = Object.values(
-            null != (t = o.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis)
+            null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis)
                 ? t
                 : {},
         ).reduce((e, t) => (e += t.length), 0),

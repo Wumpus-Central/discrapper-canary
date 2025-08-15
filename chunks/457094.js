@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(845767),
     U = n(620360),
     G = n(96051),
-    V = n(750995),
-    B = n(610278),
+    B = n(750995),
+    V = n(610278),
     H = n(696287),
     F = n(657030),
     z = n(408026),
@@ -91,8 +91,8 @@ var r = n(255367),
     eM = n(282506),
     eU = n(444961),
     eG = n(314897),
-    eV = n(433355),
-    eB = n(592125),
+    eB = n(433355),
+    eV = n(592125),
     eH = n(896797),
     eF = n(430824),
     ez = n(819640),
@@ -225,7 +225,7 @@ let e9 = (0, m.l)((e) => {
                     let e = ta(t);
                     return null == e ||
                         ((e.params.guildId === e3.ME || null != eF.Z.getGuild(e.params.guildId)) &&
-                            null != eB.Z.getChannel(e.params.channelId))
+                            null != eV.Z.getChannel(e.params.channelId))
                         ? (0, r.jsx)(a.l_, { to: t })
                         : (0, r.jsx)(a.l_, { to: i });
                 }
@@ -478,7 +478,7 @@ function to(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!q.Z.isConnected()) return;
     let { location: i } = (0, ev.s1)();
-    i.pathname === r && (null == eB.Z.getChannel(t) ? (0, ev.dL)(e3.Z5c.CHANNEL(n)) : (0, ev.dL)(r));
+    i.pathname === r && (null == eV.Z.getChannel(t) ? (0, ev.dL)(e3.Z5c.CHANNEL(n)) : (0, ev.dL)(r));
 }
 class ts extends i.PureComponent {
     componentDidMount() {
@@ -497,10 +497,10 @@ class ts extends i.PureComponent {
             Y.Z.init(),
             eu.Z.initialize(),
             I.Z.initialize(),
-            V.Z.initialize(),
+            B.Z.initialize(),
             e_.Z.initialize(),
             v.ZP.initialize(),
-            B.ZP.initialize(),
+            V.ZP.initialize(),
             eM.Z.initialize(),
             eh.Z.initialize(),
             y.Z.initialize(),
@@ -551,7 +551,7 @@ class ts extends i.PureComponent {
             eg.Z.terminate(),
             P.Z.terminate(),
             v.ZP.terminate(),
-            B.ZP.terminate(),
+            V.ZP.terminate(),
             eM.Z.terminate(),
             y.Z.terminate(),
             e_.Z.terminate(),
@@ -619,8 +619,8 @@ class ts extends i.PureComponent {
                         null != e && ex.ZP.setSelectedSummary(i, e);
                     }
                     if (null != s && f) {
-                        let e = eV.ZP.getCurrentSidebarChannelId(n) !== s,
-                            t = null != eV.ZP.getGuildSidebarState(r);
+                        let e = eB.ZP.getCurrentSidebarChannelId(n) !== s,
+                            t = null != eB.ZP.getGuildSidebarState(r);
                         if (null != i && null != s && e)
                             if (t) (0, ev.dL)(e3.Z5c.CHANNEL(r, s, o));
                             else {
@@ -656,7 +656,7 @@ class ts extends i.PureComponent {
         let { guildId: r, channelId: i, threadId: l } = ti(n),
             a = (0, ey.Ss)(r) && r !== e3.ME && r !== e3.I_8;
         if (null != i && (0, ey.cq)(i) && !(0, e8.AB)(i) && a) {
-            let n = eB.Z.getChannel(i);
+            let n = eV.Z.getChannel(i);
             if (null == n)
                 eA.Z.loadThread(i).then(() =>
                     to({
@@ -672,7 +672,7 @@ class ts extends i.PureComponent {
                 };
             if (null != l) {
                 if (!((0, ey.cq)(l) && !(0, e8.AB)(i))) return null;
-                let n = eB.Z.getChannel(l);
+                let n = eV.Z.getChannel(l);
                 if (null == n)
                     eA.Z.loadThread(l).then(() =>
                         to({

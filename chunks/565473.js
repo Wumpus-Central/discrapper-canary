@@ -1,7 +1,7 @@
-n.d(t, { y: () => o });
+n.d(t, { y: () => a });
 var r = n(927923),
     i = n(981631);
-function o(e) {
+function a(e) {
     switch (e) {
         case i.ABu.XBOX:
             return r.YE.XBOX;

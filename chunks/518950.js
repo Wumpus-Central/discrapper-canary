@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(73800),
     i = n(442837),
-    o = n(481060),
-    a = n(1585),
+    a = n(481060),
+    o = n(1585),
     s = n(125988),
     l = n(594174),
     c = n(287008);
@@ -25,7 +25,7 @@ function u(e) {
         } = (0, c.Z)({
             user: m,
             guildId: n,
-            size: (0, o.pxk)(u),
+            size: (0, a.pxk)(u),
             showPending: d,
             animateOnHover: _,
             avatarOverride: h,
@@ -37,7 +37,7 @@ function u(e) {
         } = (0, s.Z)({
             user: m,
             guildId: null != n ? n : void 0,
-            size: (0, a.y9)(u),
+            size: (0, o.y9)(u),
             showPending: d,
             onlyAnimateOnHover: _,
             avatarDecorationOverride: p,

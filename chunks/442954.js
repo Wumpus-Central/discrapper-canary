@@ -37,7 +37,7 @@ function b(e) {
     }
     return e;
 }
-function f(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +55,7 @@ function f(e, t) {
         e
     );
 }
-let v = {
+let f = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await a.e("77370").then(a.bind(a, 83950));
         return (t) => (0, n.jsx)(e, b({}, t));
@@ -65,7 +65,7 @@ let v = {
         return (t) =>
             (0, n.jsx)(
                 e,
-                f(b({}, t), {
+                v(b({}, t), {
                     headerText: x.intl.string(x.t.ZLRYGR),
                     confirmButtonText: x.intl.string(x.t.PDTjLC),
                     confirmButtonVariant: "primary",
@@ -77,7 +77,7 @@ let v = {
         return (t) =>
             (0, n.jsx)(
                 e,
-                f(b({}, t), {
+                v(b({}, t), {
                     headerText: x.intl.string(x.t.H3Q7U1),
                     onFormSubmit: () => {},
                     onResend: () => {},
@@ -89,21 +89,21 @@ let v = {
     },
     AgeVerificationRetryModal: async () => {
         let { default: e } = await a.e("22447").then(a.bind(a, 686768));
-        return (t) => (0, n.jsx)(e, f(b({}, t), { entryPoint: s.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
+        return (t) => (0, n.jsx)(e, v(b({}, t), { entryPoint: s.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
     },
     ExistingUserAgeGatePrompt: async () => {
         let { default: e } = await Promise.all([a.e("6583"), a.e("1337"), a.e("26328")]).then(a.bind(a, 746882));
-        return (t) => (0, n.jsx)(e, f(b({}, t), { source: m.L0.NSFW_SERVER }));
+        return (t) => (0, n.jsx)(e, v(b({}, t), { source: m.L0.NSFW_SERVER }));
     },
     AutomatedUnderageAppealModal: async () => {
         let { default: e } = await a.e("75435").then(a.bind(a, 751744));
-        return (t) => (0, n.jsx)(e, f(b({}, t), { classificationId: "123" }));
+        return (t) => (0, n.jsx)(e, v(b({}, t), { classificationId: "123" }));
     },
 };
 function j() {
     let e = r.useMemo(
             () =>
-                Object.keys(v)
+                Object.keys(f)
                     .map((e) => ({
                         label: e,
                         value: e,
@@ -138,7 +138,7 @@ function j() {
                                 (0, n.jsx)(i.zxk, {
                                     variant: "primary",
                                     text: "Open",
-                                    onClick: () => (0, i.ZDy)(v[t]),
+                                    onClick: () => (0, i.ZDy)(f[t]),
                                 }),
                             ],
                         }),

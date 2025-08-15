@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(209698),
     S = n(687158),
     T = n(892001),
-    I = n(899007),
-    N = n(648052),
+    N = n(899007),
+    I = n(648052),
     y = n(867176),
     A = n(537006),
     P = n(483517),
@@ -110,8 +110,8 @@ function ea(e) {
         ev = (0, E.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        eI = (0, v.b)({ location: "UserProfileAccountPopout" }),
-        eN = (0, g.Z)({ location: "UserProfileAccountPopout" }),
+        eN = (0, v.b)({ location: "UserProfileAccountPopout" }),
+        eI = (0, g.Z)({ location: "UserProfileAccountPopout" }),
         ey = r.useRef(null),
         [eA, eP] = r.useState(String(Date.now()));
     (0, G.fu)({
@@ -121,7 +121,7 @@ function ea(e) {
             t && eP(String(Date.now()));
         },
     });
-    let [eR, eD] = (0, x.US)(eN ? [l.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
+    let [eR, eD] = (0, x.US)(eI ? [l.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
         eZ = eR === l.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         ew = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         ek = r.useMemo(() => (0, f.Z)(), []),
@@ -171,7 +171,7 @@ function ea(e) {
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
                                     }),
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
@@ -212,7 +212,7 @@ function ea(e) {
                                         nickname: W.ZP.getName(null, null, t),
                                         onOpenProfile: ec ? void 0 : eM,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
-                                        tags: (0, i.jsx)(N.Z, {
+                                        tags: (0, i.jsx)(I.Z, {
                                             displayProfile: ed,
                                             themeType: et.lY.POPOUT,
                                             onClose: n,
@@ -239,7 +239,7 @@ function ea(e) {
                                         isPremiumUser: eS,
                                         onInteraction: n,
                                     }),
-                                    eI
+                                    eN
                                         ? (0, i.jsx)(Z.Z, {
                                               user: t,
                                               currentUser: t,

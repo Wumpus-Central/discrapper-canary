@@ -1,8 +1,8 @@
 n.d(t, { I: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(670596),
     l = n(743236),
     c = n(939350),
@@ -63,7 +63,7 @@ function h(e) {
     let {
             color: t = "default",
             label: n,
-            control: o,
+            control: a,
             disabled: d,
             isFocused: _,
             showDefaultFocus: h = !1,
@@ -83,7 +83,7 @@ function h(e) {
             var e, t;
             (null == (t = y.current) || null == (e = t.activate) ? void 0 : e.call(t)) && g();
         }, [g]),
-        v = o(
+        v = a(
             {
                 onClose: g,
                 disabled: d,
@@ -103,7 +103,7 @@ function h(e) {
             f(
                 {
                     onClick: O,
-                    className: a()(u.item, c._[t], {
+                    className: o()(u.item, c._[t], {
                         [u.disabled]: d,
                         [u.focused]: h && _,
                         [u.hideInteraction]: !h,

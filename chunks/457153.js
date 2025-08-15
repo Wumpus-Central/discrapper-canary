@@ -18,9 +18,9 @@ let x = s.forwardRef(function (e, t) {
             className: o,
             expansionSpring: x,
             isExpanded: h,
-            isExpansionAnimationComplete: j,
-            quest: b,
-            taskDetails: _,
+            isExpansionAnimationComplete: b,
+            quest: _,
+            taskDetails: j,
             useReducedMotion: v,
             onCtxMenuOpen: C,
             onCtxMenuClose: y,
@@ -28,10 +28,10 @@ let x = s.forwardRef(function (e, t) {
             overlayRef: O,
             shouldShowRewardsCTAWhenCollapsed: S,
         } = e,
-        T = (0, l.Jf)(b),
+        T = (0, l.Jf)(_),
         w = s.useRef(null),
-        P = (null == (n = b.userStatus) ? void 0 : n.enrolledAt) != null,
-        A = null != T ? T.percentComplete : _.percentComplete,
+        P = (null == (n = _.userStatus) ? void 0 : n.enrolledAt) != null,
+        A = null != T ? T.percentComplete : j.percentComplete,
         [N, R] = s.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -40,14 +40,14 @@ let x = s.forwardRef(function (e, t) {
                     expansionSpring: x,
                     overlayRef: O,
                     progressBarRef: w,
-                    quest: b,
+                    quest: _,
                     isExpanded: h,
                     isHovered: N,
                     shouldShowRewardsCTAWhenCollapsed: !0,
                 }),
             (0, r.jsx)(i.animated.div, {
                 ref: t,
-                "aria-hidden": h && j,
+                "aria-hidden": h && b,
                 className: a()(o, f.contentCollapsed, {
                     [f.contentCollapsedExpanded]: h,
                     [f.contentCollapsedAccepted]: P,
@@ -68,7 +68,7 @@ let x = s.forwardRef(function (e, t) {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(m.Z, {
-                                        quest: b,
+                                        quest: _,
                                         onCtxMenuOpen: C,
                                         onCtxMenuClose: y,
                                         onCtxMenuSelect: E,
@@ -79,7 +79,7 @@ let x = s.forwardRef(function (e, t) {
                         P
                             ? (0, r.jsx)(p.Z, {
                                   contentLocation: "collapsed",
-                                  quest: b,
+                                  quest: _,
                                   progressBarRef: w,
                                   isExpanded: !1,
                                   percentComplete: A,
@@ -87,7 +87,7 @@ let x = s.forwardRef(function (e, t) {
                             : null,
                         S &&
                             (0, r.jsx)(u.y, {
-                                quest: b,
+                                quest: _,
                                 useReducedMotion: v,
                                 isExpanded: !1,
                                 awaitingConsoleConnections: !1,
@@ -96,7 +96,7 @@ let x = s.forwardRef(function (e, t) {
                                 activeScreen: c.LI.DESKTOP,
                                 showBackButton: !1,
                                 onBack: () => {},
-                                taskDetails: _,
+                                taskDetails: j,
                                 sourceQuestContent: c.jn.QUEST_BAR_V2,
                                 shouldShowRewardsCTAWhenCollapsed: !0,
                             }),

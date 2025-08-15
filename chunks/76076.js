@@ -66,7 +66,7 @@ let b = {
         i.useEffect(() => {
             null !== l ? (g(!0), O(b[l]), s.uvj.announce(b[l].message)) : g(!1);
         }, [l]);
-        let x = (0, s.Yzy)(
+        let h = (0, s.Yzy)(
             p,
             {
                 from: {
@@ -100,7 +100,7 @@ let b = {
                 }
             }, [p, n]),
             (0, r.jsx)(r.Fragment, {
-                children: x(
+                children: h(
                     (e, n) =>
                         n &&
                         null !== y &&

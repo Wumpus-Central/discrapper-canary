@@ -23,8 +23,8 @@ var i,
     v = n(916001),
     S = n(539290),
     T = n(336197),
-    I = n(690221),
-    N = n(307643),
+    N = n(690221),
+    I = n(307643),
     y = n(378233),
     A = n(419922),
     P = n(46141),
@@ -197,7 +197,7 @@ function es(e) {
             null != l &&
                 (0, r.jsx)(er, {
                     description: Y.intl.string(Y.t.Wpn8z8),
-                    detail: (0, r.jsx)(I.Z, {
+                    detail: (0, r.jsx)(N.Z, {
                         onClick: c,
                         children: l.name,
                     }),
@@ -829,7 +829,7 @@ function eo(e) {
         }),
         x = (0, m.e7)([f.Z], () => (null != u ? f.Z.getApplication(u) : null));
     s.useEffect(() => {
-        p && null != u && (0, N.UM)(u);
+        p && null != u && (0, I.UM)(u);
     }, [u, p]);
     let _ = (0, m.e7)([D.Z], () => D.Z.getGuild(null == h ? void 0 : h.guildId)),
         j = c ? h : void 0,

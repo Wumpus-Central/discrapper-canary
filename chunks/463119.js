@@ -255,10 +255,10 @@ let L = (e) => {
                 },
                 [I.assetIds.length],
             ),
-            V = i.useCallback((e) => {
+            B = i.useCallback((e) => {
                 R(!1), null == e || e();
             }, []),
-            B = I.title();
+            V = I.title();
         return (0, r.jsx)(s.ua7, {
             text: (0, r.jsx)(M, {
                 displayOptions: I,
@@ -270,7 +270,7 @@ let L = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            "aria-label": "string" == typeof B ? B : j.intl.string(j.t.rSXaxc),
+            "aria-label": "string" == typeof V ? V : j.intl.string(j.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     D,
@@ -290,7 +290,7 @@ let L = (e) => {
                         ),
                         {
                             onMouseEnter: () => G(e.onMouseEnter),
-                            onMouseLeave: () => V(e.onMouseLeave),
+                            onMouseLeave: () => B(e.onMouseLeave),
                             children: [
                                 (0, r.jsx)("div", {
                                     className: x.marketingButtonBackground,
@@ -333,7 +333,7 @@ let L = (e) => {
             children: (e) => (0, r.jsx)(D, Z(A({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
         });
     },
-    V = (e) => {
+    B = (e) => {
         var { listScrollerRef: t } = e,
             n = w(e, ["listScrollerRef"]);
         let l = i.useRef(null),
@@ -363,7 +363,7 @@ let L = (e) => {
             ),
         );
     },
-    B = (e) => {
+    V = (e) => {
         var t,
             n,
             { displayOptions: l, dismissContent: a } = e,
@@ -426,7 +426,7 @@ let L = (e) => {
                 },
                 listItemRef: l,
             };
-        if (o) return (0, r.jsx)(V, Z(A({}, u), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(B, Z(A({}, u), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case S.k2.TOOLTIP:
@@ -436,7 +436,7 @@ let L = (e) => {
                 case S.k2.BADGE:
                     return (0, r.jsx)(k, A({}, u));
                 case S.k2.COACHMARK:
-                    return (0, r.jsx)(B, Z(A({ dismissContent: c }, u), { displayOptions: s }));
+                    return (0, r.jsx)(V, Z(A({ dismissContent: c }, u), { displayOptions: s }));
             }
         return (0, r.jsx)(D, A({}, u));
     };

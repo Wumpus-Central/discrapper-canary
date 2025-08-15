@@ -7,20 +7,20 @@ n.d(t, {
     n(539854);
 var r = n(512722),
     i = n.n(r),
-    o = n(869765),
-    a = n(598077),
+    a = n(869765),
+    o = n(598077),
     s = n(594174),
     l = n(48854),
     c = n(981631);
 function u(e) {
-    let { id: t, username: n, avatar: r, discriminator: i, bot: o, globalName: a } = e;
+    let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: o } = e;
     return {
         id: t,
         username: n,
         avatar: r,
         discriminator: i,
-        bot: o,
-        global_name: a,
+        bot: a,
+        global_name: o,
     };
 }
 function d(e) {
@@ -41,12 +41,12 @@ function d(e) {
         } = e,
         O = [];
     if (d === c.uaV.REPLY && (i()(null != f, "Replies must have a message reference"), null == _ || _.replied_user)) {
-        let e = o.Z.getMessageByReference(f);
-        (null == e ? void 0 : e.state) === o.Y.LOADED && O.push(u(e.message.author));
+        let e = a.Z.getMessageByReference(f);
+        (null == e ? void 0 : e.state) === a.Y.LOADED && O.push(u(e.message.author));
     }
     return (
         null == p && (p = s.default.getCurrentUser()),
-        p instanceof a.Z && (p = u(p)),
+        p instanceof o.Z && (p = u(p)),
         i()(null != p, "createMessage: author cannot be undefined"),
         {
             id: null != m ? m : (0, l.r)(),
@@ -75,7 +75,7 @@ function d(e) {
     );
 }
 function f(e) {
-    let { messageId: t, channelId: n, content: r, embeds: i, loggingName: o } = e;
+    let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {
         id: null != t ? t : (0, l.r)(),
         type: c.uaV.DEFAULT,
@@ -99,6 +99,6 @@ function f(e) {
         timestamp: new Date().toISOString(),
         state: c.yb.SENT,
         tts: !1,
-        loggingName: o,
+        loggingName: a,
     };
 }

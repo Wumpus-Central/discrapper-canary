@@ -1,10 +1,10 @@
 n.d(t, {
-    YK: () => o,
-    gJ: () => a,
+    YK: () => a,
+    gJ: () => o,
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_wow_moment_premium_brand_refresh_experiment",
     label: "Wow Moment Premium Brand Refresh Experiment",
@@ -18,6 +18,6 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
-    return o.getCurrentConfig({ location: e }).enabled;
+function o(e) {
+    return a.getCurrentConfig({ location: e }).enabled;
 }

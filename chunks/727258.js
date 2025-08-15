@@ -9,8 +9,8 @@ n.d(t, {
     n(794429);
 var r = n(512722),
     i = n.n(r),
-    o = n(392711);
-function a(e, t, n) {
+    a = n(392711);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -94,20 +94,20 @@ class f {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         this._pluckNode(e);
         let r = null != t.parentId ? this.nodes[t.parentId] : this.root,
-            o = r.children.indexOf(t);
+            a = r.children.indexOf(t);
         i()(
             "folder" !== e.type || "folder" !== r.type,
             "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(r.id, ")"),
         ),
             i()(
-                o >= 0,
+                a >= 0,
                 "[GUILDS TREE] target node ("
                     .concat(t.id, ") did not exist within its specified parent (")
                     .concat(t.parentId, ")"),
             );
-        let a = +!!n;
+        let o = +!!n;
         return (
-            (r.children = [...r.children]), r.children.splice(o + a, 0, e), (e.parentId = r.id), this.version++, this
+            (r.children = [...r.children]), r.children.splice(a + o, 0, e), (e.parentId = r.id), this.version++, this
         );
     }
     moveInto(e, t) {
@@ -162,7 +162,7 @@ class f {
         );
     }
     cloneNode(e) {
-        return (0, o.clone)(e);
+        return (0, a.clone)(e);
     }
     convertToFolder(e) {
         let t = d();
@@ -213,9 +213,9 @@ class f {
             this.version++;
     }
     constructor() {
-        a(this, "root", void 0),
-            a(this, "nodes", void 0),
-            a(this, "version", void 0),
+        o(this, "root", void 0),
+            o(this, "nodes", void 0),
+            o(this, "version", void 0),
             (this.root = {
                 type: "root",
                 children: [],
@@ -234,14 +234,14 @@ function _(e, t) {
     };
 }
 function p(e, t, n) {
-    var r, i, o;
+    var r, i, a;
     return {
         type: "folder",
         id: e.folderId,
         parentId: t,
         name: null != (r = e.folderName) ? r : void 0,
         color: null != (i = e.folderColor) ? i : void 0,
-        expanded: null != n ? n : null != (o = e.expanded) && o,
+        expanded: null != n ? n : null != (a = e.expanded) && a,
         children: [],
     };
 }

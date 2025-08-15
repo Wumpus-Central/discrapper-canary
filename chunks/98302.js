@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(846519),
     i = n(147913),
-    o = n(603113),
-    a = n(594190),
+    a = n(603113),
+    o = n(594190),
     s = n(509003),
     l = n(131951),
     c = n(19780),
@@ -109,9 +109,9 @@ class b extends i.Z {
     }
     getGameMetadata() {
         let e = u.Z.findActivity((e) => e.type === h.IIU.PLAYING),
-            t = a.ZP.getCurrentGameForAnalytics();
+            t = o.ZP.getCurrentGameForAnalytics();
         return {
-            game_platform: (0, o.Z)(e),
+            game_platform: (0, a.Z)(e),
             game_name: null != e ? e.name : null,
             game_exe_name: null != t ? t.exeName : null,
             game_id: null != e ? e.application_id : null,

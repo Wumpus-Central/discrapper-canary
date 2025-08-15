@@ -6,15 +6,15 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(154579);
-let o = {
+let a = {
         enabled: !1,
         inExperiment: !1,
     },
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: "user",
         id: "2025-06_search_desktop_xdm_experiment",
         label: "Search Desktop XDM Experiment",
-        defaultConfig: o,
+        defaultConfig: a,
         treatments: [
             {
                 id: 0,
@@ -40,14 +40,14 @@ function s(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: o } = a.getCurrentConfig(
+        { enabled: a } = o.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return o;
+    return a;
 }
 function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -55,14 +55,14 @@ function l(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: o } = a.useExperiment(
+        { enabled: a } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return o;
+    return a;
 }
 function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -70,14 +70,14 @@ function c(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { inExperiment: o } = a.useExperiment(
+        { inExperiment: a } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return o;
+    return a;
 }
 function u(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -85,12 +85,12 @@ function u(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { inExperiment: o } = a.getCurrentConfig(
+        { inExperiment: a } = o.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return o;
+    return a;
 }

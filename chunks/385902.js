@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => O,
+    K: () => _,
     _: () => b,
 });
 var r = n(73800),
@@ -34,10 +34,10 @@ function b(e, t) {
         notificationConfig: b,
     };
 }
-function O(e, t) {
+function _(e, t) {
     var n, d, h, b;
-    let O = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
-        _ = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
+    let _ = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
+        O = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
         y = null != (b = (0, u.Z)(e)) && b,
         v = (0, c.q8)(e, t),
         j = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
@@ -45,21 +45,21 @@ function O(e, t) {
         E = null == j || null == (d = j.allPowerups) ? void 0 : d[i.A$],
         x = null == E ? void 0 : E.storeRemovalDate,
         S = null == j || null == (h = j.allPowerups) ? void 0 : h[i.XW],
-        { onActivate: P } = (0, f._C)(e, S),
-        I = !_ && y && v && C && null != E && null != x && null != S && null != O,
+        { onActivate: I } = (0, f._C)(e, S),
+        P = !O && y && v && C && null != E && null != x && null != S && null != _,
         N = r.useCallback(
             (e) => {
-                P(e);
+                I(e);
             },
-            [P],
+            [I],
         ),
         w = r.useMemo(() => {
-            if (!I) return null;
+            if (!P) return null;
             let e = (0, p.Z)(x);
             return {
                 firstHeader: E.title,
                 secondHeader: m.intl.formatToPlainString(g.default["8imxAg"], { dateString: e }),
-                firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: O.name }),
+                firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: _.name }),
                 secondBody: m.intl.formatToPlainString(g.default.D09fdn, {
                     dateString: e,
                     boostCount: E.cost,
@@ -68,9 +68,9 @@ function O(e, t) {
                 primaryButtonText: m.intl.string(g.default["0uo/LC"]),
                 onPrimaryClick: N,
             };
-        }, [I, E, x, O, N]);
+        }, [P, E, x, _, N]);
     return {
-        shouldShow: I,
+        shouldShow: P,
         modalConfig: w,
     };
 }

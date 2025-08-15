@@ -1,8 +1,8 @@
 n.d(t, {
-    CT: () => o,
+    CT: () => a,
     Dv: () => i,
     u1: () => s,
-    z1: () => a,
+    z1: () => o,
     zM: () => l,
 });
 var r = n(73800),
@@ -16,8 +16,8 @@ var r = n(73800),
             e
         );
     })({});
-let o = 300,
-    a = "default",
+let a = 300,
+    o = "default",
     s = "popout",
     l = r.createContext({
         headerId: void 0,

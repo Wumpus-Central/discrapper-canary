@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(592125),
     i = n(594174),
-    o = n(636449),
-    a = n(337682),
+    a = n(636449),
+    o = n(337682),
     s = n(566620),
     l = n(224189),
     c = n(574952);
@@ -63,17 +63,17 @@ async function p(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        (t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)());
+        (t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, a.R)());
     } catch (e) {
         return !1;
     }
-    return (0, o.C)(n, () => h(_(d({}, e), { targetApplication: t })));
+    return (0, a.C)(n, () => h(_(d({}, e), { targetApplication: t })));
 }
 async function h(e) {
     let {
             targetApplication: t,
             locationObject: n,
-            channelId: o,
+            channelId: a,
             analyticsLocations: l,
             componentId: u,
             commandOrigin: d,
@@ -88,13 +88,13 @@ async function h(e) {
         b = (0, c.Z)(),
         y = i.default.getCurrentUser();
     return (
-        null != o &&
-        null != r.Z.getChannel(o) &&
+        null != a &&
+        null != r.Z.getChannel(a) &&
         null != y &&
         null != t &&
-        (a.tZ(t.id),
+        (o.tZ(t.id),
         await (0, s.G6)({
-            channelId: o,
+            channelId: a,
             applicationId: t.id,
             isStart: !0,
             embeddedActivitiesManager: b,

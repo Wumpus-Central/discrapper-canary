@@ -1,77 +1,74 @@
-let r;
-n.d(t, {
-    S: () => m,
-    j: () => g,
+let i;
+n.d(e, {
+    S: () => f,
+    j: () => y,
 }),
     n(415506);
-var i = n(544891),
-    o = n(570140),
-    a = n(710845),
-    s = n(893988),
-    l = n(314897),
-    c = n(417363),
-    u = n(780570),
-    d = n(358085),
-    f = n(998502),
-    _ = n(981631);
-function p() {
-    if (null == r) throw Error("Initialize cloud sync module before syncing.");
-    return r;
-}
-function h() {
-    return d.isPlatformEmbedded && ((0, d.isMac)() || ((0, d.isWindows)() && "arm64" !== f.ZP.architecture));
-}
-async function m() {
-    if (null == r) {
-        if (!h()) return void new a.Z("CloudSyncUtils").warn("CloudSync is not supported on this platform");
-        await f.ZP.ensureModule("discord_cloudsync"),
-            (r = new (f.ZP.getCloudSync())()).on("state", (e) =>
-                o.Z.dispatch({
+var r = n(544891),
+    l = n(570140),
+    o = n(710845),
+    a = n(893988),
+    c = n(314897),
+    s = n(417363),
+    d = n(780570),
+    u = n(358085),
+    p = n(998502),
+    h = n(981631);
+async function f() {
+    if (null == i) {
+        if (!(u.isPlatformEmbedded && ((0, u.isMac)() || ((0, u.isWindows)() && "arm64" !== p.ZP.architecture))))
+            return void new o.Z("CloudSyncUtils").warn("CloudSync is not supported on this platform");
+        await p.ZP.ensureModule("discord_cloudsync"),
+            (i = new (p.ZP.getCloudSync())()).on("state", (t) =>
+                l.Z.dispatch({
                     type: "GAME_CLOUD_SYNC_UPDATE",
-                    state: e,
+                    state: t,
                 }),
             );
     }
 }
-function g(e, t) {
+function y(t, e) {
     var n;
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    if (!c.Z.supportsCloudSync(e, t)) return Promise.resolve({ type: _.QCD.NONE });
-    let o = p(),
-        a = c.Z.getState(e, t);
-    if (null == a) throw Error("No dispatch state for ".concat(e, ":").concat(t));
-    let d = null != (n = a.storage) ? n : {},
-        f = (0, u.Tu)(e, t),
-        h = l.default.getToken();
-    if (null == h) throw Error("Cannot use cloud sync when not authenticated.");
-    let m = null != a.installPath ? (0, s.Z)(a.installPath) : null;
-    if (null == m) throw Error("No install path for ".concat(e, ":").concat(t));
-    let g = l.default.getId(),
-        E = {
-            forceHash: r,
-            manifestPath: _.SRg.STORAGE_MANIFEST(m, g),
+    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    if (!s.Z.supportsCloudSync(t, e)) return Promise.resolve({ type: h.QCD.NONE });
+    let o = (function () {
+            if (null == i) throw Error("Initialize cloud sync module before syncing.");
+            return i;
+        })(),
+        u = s.Z.getState(t, e);
+    if (null == u) throw Error("No dispatch state for ".concat(t, ":").concat(e));
+    let p = null != (n = u.storage) ? n : {},
+        f = (0, d.Tu)(t, e),
+        y = c.default.getToken();
+    if (null == y) throw Error("Cannot use cloud sync when not authenticated.");
+    let C = null != u.installPath ? (0, a.Z)(u.installPath) : null;
+    if (null == C) throw Error("No install path for ".concat(t, ":").concat(e));
+    let O = c.default.getId(),
+        m = {
+            forceHash: l,
+            manifestPath: h.SRg.STORAGE_MANIFEST(C, O),
             roots:
-                null != d.roots
-                    ? d.roots
+                null != p.roots
+                    ? p.roots
                     : [
                           {
-                              id: _.SRg.ROOT_ID,
-                              paths: Object.keys(_.SRg.ROOT_PLATFORMS).map((e) => ({
-                                  platform: e,
-                                  path: _.SRg.ROOT_STORAGE_PATH(m, g),
+                              id: h.SRg.ROOT_ID,
+                              paths: Object.keys(h.SRg.ROOT_PLATFORMS).map((t) => ({
+                                  platform: t,
+                                  path: h.SRg.ROOT_STORAGE_PATH(C, O),
                               })),
-                              patterns: _.SRg.ROOT_PATTERN,
+                              patterns: h.SRg.ROOT_PATTERN,
                           },
                       ],
             storage: {
-                baseURL: "".concat((0, i.K0)()).concat(_.ANM.APPLICATION_STORAGE(e, t)),
-                token: h,
+                baseURL: "".concat((0, r.K0)()).concat(h.ANM.APPLICATION_STORAGE(t, e)),
+                token: y,
             },
             replacements: {
-                INSTALLDIR: _.SRg.INSTALL_DIR(m),
-                USERID: g,
-                BRANCHID: t,
+                INSTALLDIR: h.SRg.INSTALL_DIR(C),
+                USERID: O,
+                BRANCHID: e,
             },
         };
-    return o.sync(f, E);
+    return o.sync(f, m);
 }

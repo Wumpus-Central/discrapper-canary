@@ -7,44 +7,44 @@ n(73800);
 var i = n(481060),
     l = n(144114),
     s = n(489813),
-    a = n(815660),
-    o = n(388032),
+    o = n(815660),
+    a = n(388032),
     c = n(624463);
 function u() {
     return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
         icon: i.AtH,
-        text: o.intl.string(o.t.woMjLS),
-        footnote: o.intl.string(o.t["jMh+TU"]),
+        text: a.intl.string(a.t.woMjLS),
+        footnote: a.intl.string(a.t["jMh+TU"]),
         meetsRequirement: !1,
         children: (0, r.jsx)(i.DY3, {
-            text: o.intl.string(o.t.mGlP39),
+            text: a.intl.string(a.t.mGlP39),
             children: (0, r.jsx)(i.zxk, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: o.intl.string(o.t["13ofGh"]),
+                text: a.intl.string(a.t["13ofGh"]),
             }),
         }),
     });
 }
 function d(e) {
     let { isUserVerified: t } = e,
-        u = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
+        u = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
     return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
         icon: i.AtH,
         text: u,
-        footnote: o.intl.string(o.t["jMh+TU"]),
+        footnote: a.intl.string(a.t["jMh+TU"]),
         meetsRequirement: t,
         children: (0, r.jsx)(i.zxk, {
             variant: "primary",
             size: "sm",
-            text: o.intl.string(o.t["13ofGh"]),
+            text: a.intl.string(a.t["13ofGh"]),
             onClick: () => {
                 (0, i.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("76540"), n.e("92304")]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.all([n.e("76540"), n.e("32103")]).then(n.bind(n, 607018));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
@@ -75,7 +75,7 @@ function d(e) {
                                 })({ reason: l.L.GUILD_PHONE_REQUIRED }, t),
                             );
                     },
-                    { modalKey: a.M },
+                    { modalKey: o.M },
                 );
             },
         }),

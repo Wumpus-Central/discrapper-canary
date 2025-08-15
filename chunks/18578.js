@@ -1,8 +1,8 @@
 n.d(t, { K: () => _ });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(607070),
     c = n(70097),
@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(388032),
     f = n(819838);
 function _(e) {
-    var t, n, o;
+    var t, n, a;
     let { videoActive: _, imageAsset: p, videoAsset: h, imageDimensions: m, onLoadComplete: g } = e,
         E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         b = null == p || p.asset.isAnimated ? null : p.asset.url,
@@ -50,12 +50,12 @@ function _(e) {
                           preload: "auto",
                           poster: I,
                           playsInline: !0,
-                          className: a()(h.className, f.video, { [f.hidden]: !_ }),
+                          className: o()(h.className, f.video, { [f.hidden]: !_ }),
                           controls: !1,
                           onProgress: g,
                           children: (0, r.jsx)("source", {
                               src: h.asset.url,
-                              type: null != (o = h.asset.mimetype) ? o : void 0,
+                              type: null != (a = h.asset.mimetype) ? a : void 0,
                           }),
                       }),
               ],

@@ -16,8 +16,8 @@ var r = n(255367),
     j = n(246016),
     y = n(680295),
     O = n(189156),
-    x = n(699516),
-    h = n(246946),
+    h = n(699516),
+    x = n(246946),
     v = n(585483),
     _ = n(5192),
     I = n(111361),
@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(687158),
     Z = n(771362),
     N = n(510659),
-    S = n(113557),
-    w = n(648052),
+    w = n(113557),
+    S = n(648052),
     A = n(867176),
     C = n(280885),
     D = n(537006),
@@ -43,8 +43,8 @@ var r = n(255367),
     Y = n(179828),
     W = n(993160),
     z = n(574887),
-    H = n(693408),
-    K = n(661462),
+    K = n(693408),
+    H = n(661462),
     X = n(76076),
     q = n(872269),
     J = n(768111),
@@ -84,8 +84,8 @@ function en(e) {
             showGuildProfile: em,
         }),
         eO = i.useRef(null),
-        ex = (0, s.Z)(eO),
-        [eh, ev] = i.useState(!1),
+        eh = (0, s.Z)(eO),
+        [ex, ev] = i.useState(!1),
         e_ = (0, N.$m)(),
         eI = (0, a.q_F)({
             opacity: +(null != e_.interactionType),
@@ -95,12 +95,12 @@ function en(e) {
     (0, d.$)(eP);
     let eE = (0, T.ZP)(n.id, em ? er : void 0),
         eT = _.ZP.useName(null == eE ? void 0 : eE.guildId, ei, n),
-        { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([x.Z], () => ({
-            relationshipType: x.Z.getRelationshipType(n.id),
-            originApplicationId: x.Z.getOriginApplicationId(n.id),
+        { relationshipType: eZ, originApplicationId: eN } = (0, o.cj)([h.Z], () => ({
+            relationshipType: h.Z.getRelationshipType(n.id),
+            originApplicationId: h.Z.getOriginApplicationId(n.id),
         })),
-        eS = (0, o.e7)([h.Z], () => h.Z.hidePersonalInformation),
-        ew =
+        ew = (0, o.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        eS =
             null == eE
                 ? void 0
                 : eE.getBannerURL({
@@ -144,7 +144,7 @@ function en(e) {
                 children: (0, r.jsx)(N.NJ, {
                     value: e_,
                     children: (0, r.jsx)(a.UkV, {
-                        isShaking: eh,
+                        isShaking: ex,
                         intensity: 1.4,
                         children: (0, r.jsxs)(a.Y0X, {
                             "data-migration-pending": !0,
@@ -196,10 +196,10 @@ function en(e) {
                                         displayProfile: eE,
                                         themeType: Q.lY.MODAL_V2,
                                         children: [
-                                            null != ew &&
+                                            null != eS &&
                                                 (0, r.jsx)("div", {
                                                     className: et.backgroundImage,
-                                                    style: { backgroundImage: "url(".concat(ew, ")") },
+                                                    style: { backgroundImage: "url(".concat(eS, ")") },
                                                 }),
                                             null != e_.interactionType &&
                                                 (0, r.jsx)(l.animated.div, {
@@ -227,7 +227,7 @@ function en(e) {
                                                                 onClose: ep,
                                                                 className: et.interactionToast,
                                                             }),
-                                                            (0, r.jsx)(S.Z, {
+                                                            (0, r.jsx)(w.Z, {
                                                                 location: "UserProfileModalV2",
                                                                 user: n,
                                                                 displayProfile: eE,
@@ -265,7 +265,7 @@ function en(e) {
                                                                 }),
                                                                 nicknameVariant: "heading-xl/semibold",
                                                                 pronouns: null == eE ? void 0 : eE.pronouns,
-                                                                tags: (0, r.jsx)(w.Z, {
+                                                                tags: (0, r.jsx)(S.Z, {
                                                                     displayProfile: eE,
                                                                     themeType: Q.lY.MODAL_V2,
                                                                     onClose: ep,
@@ -312,7 +312,7 @@ function en(e) {
                                                             n.isProvisional &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: et.profileOverlay,
-                                                                    children: (0, r.jsx)(H.Z, {
+                                                                    children: (0, r.jsx)(K.Z, {
                                                                         heading: ee.intl.string(ee.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(a.Mgn, {
@@ -349,17 +349,17 @@ function en(e) {
                                                             }),
                                                             (null == eE ? void 0 : eE.bio) != null &&
                                                                 (null == eE ? void 0 : eE.bio) !== "" &&
-                                                                !eS &&
+                                                                !ew &&
                                                                 (0, r.jsx)(C.Z, {
                                                                     userBio: eE.bio,
                                                                     setLineClamp: !1,
                                                                 }),
                                                             eL.length > 0 &&
-                                                                (0, r.jsx)(H.Z, {
+                                                                (0, r.jsx)(K.Z, {
                                                                     heading: ee.intl.string(ee.t["Uv/eT0"]),
                                                                     children: (0, r.jsx)(R.Z, { applicationIds: eL }),
                                                                 }),
-                                                            (0, r.jsx)(H.Z, {
+                                                            (0, r.jsx)(K.Z, {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
                                                                 children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
@@ -378,7 +378,7 @@ function en(e) {
                                                                     scrollIntoView: es === Q.Tb.ROLES,
                                                                 }),
                                                             eG.length > 0 &&
-                                                                (0, r.jsx)(H.Z, {
+                                                                (0, r.jsx)(K.Z, {
                                                                     heading: ee.intl.string(ee.t["3fe7U1"]),
                                                                     scrollIntoView: es === Q.Tb.CONNECTIONS,
                                                                     children: (0, r.jsx)(z.Z, {
@@ -387,7 +387,7 @@ function en(e) {
                                                                         className: et.profileAppConnections,
                                                                     }),
                                                                 }),
-                                                            (0, r.jsx)(H.Z, {
+                                                            (0, r.jsx)(K.Z, {
                                                                 heading: ee.intl.string(ee.t["mQKv+v"]),
                                                                 scrollIntoView: es === Q.Tb.NOTE,
                                                                 children: (0, r.jsx)(c.Z, {
@@ -449,11 +449,11 @@ function en(e) {
                                                     (null == eE ? void 0 : eE.profileEffectId) != null &&
                                                         (0, r.jsx)(y.Z, {
                                                             profileEffectId: null == eE ? void 0 : eE.profileEffectId,
-                                                            isHovering: ex,
+                                                            isHovering: eh,
                                                         }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(K.Z, {
+                                            (0, r.jsx)(H.Z, {
                                                 user: n,
                                                 currentUser: en,
                                                 displayProfile: eE,

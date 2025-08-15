@@ -1,9 +1,9 @@
-n.d(t, { P: () => a });
+n.d(t, { P: () => o });
 var r = n(73800),
     i = n(522942),
-    o = n(481060);
-function a(e) {
-    let t = (0, o.dQu)(o.TVs.colors.TEXT_DEFAULT).int();
+    a = n(481060);
+function o(e) {
+    let t = (0, a.dQu)(a.TVs.colors.TEXT_DEFAULT).int();
     return r.useMemo(() => {
         switch (e) {
             case i.m.GRADIENT:

@@ -3,7 +3,7 @@ var r = n(263016);
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-function o(e, t) {
+function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1),
@@ -12,8 +12,8 @@ function o(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
-    return t && o(e.prototype, t), n && o(e, n), e;
+function o(e, t, n) {
+    return t && a(e.prototype, t), n && a(e, n), e;
 }
 var s = (function () {
     function e(t, n) {
@@ -32,7 +32,7 @@ var s = (function () {
             t.subscribe(this.handleRefCountChange);
     }
     return (
-        a(e, [
+        o(e, [
             {
                 key: "receiveBackend",
                 value: function (e) {
@@ -64,9 +64,9 @@ var s = (function () {
                         t = this.store.dispatch;
                     function n(n) {
                         return function () {
-                            for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
-                            var a = n.apply(e, i);
-                            void 0 !== a && t(a);
+                            for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+                            var o = n.apply(e, i);
+                            void 0 !== o && t(o);
                         };
                     }
                     var i = (0, r.W1)(this);

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(243814),
-    o = n(993365),
-    a = n(481060),
+    a = n(993365),
+    o = n(481060),
     s = n(589414),
     l = n(63063),
     c = n(981631),
@@ -11,10 +11,10 @@ var i = n(243814),
     d = n(745339);
 function f(e) {
     let t,
-        { application: n, accountScopes: o } = e,
+        { application: n, accountScopes: a } = e,
         f = [],
         p = (0, s.Z)(n);
-    return (o.includes(i.x.SDK_SOCIAL_LAYER)
+    return (a.includes(i.x.SDK_SOCIAL_LAYER)
         ? ((t = p
               ? u.intl.format(u.t.GxjwZG, {
                     applicationName: n.name,
@@ -23,25 +23,25 @@ function f(e) {
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
-                  icon: a.iFz,
+                  icon: o.iFz,
                   text: p
                       ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X })
                       : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X }),
               },
               {
-                  icon: a.mrm,
+                  icon: o.mrm,
                   text: p ? u.intl.string(u.t.daY6xs) : u.intl.string(u.t.j7peBg),
               },
               {
-                  icon: a.iWm,
+                  icon: o.iWm,
                   text: p ? u.intl.string(u.t["/bdaND"]) : u.intl.string(u.t["feD3+v"]),
               },
               {
-                  icon: a.ewm,
+                  icon: o.ewm,
                   text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz),
               },
           ))
-        : o.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
+        : a.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = p
               ? u.intl.format(u.t.GxjwZG, {
                     applicationName: n.name,
@@ -50,17 +50,17 @@ function f(e) {
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
-                  icon: a.iFz,
+                  icon: o.iFz,
                   text: p
                       ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X })
                       : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X }),
               },
               {
-                  icon: a.iWm,
+                  icon: o.iWm,
                   text: p ? u.intl.string(u.t["/bdaND"]) : u.intl.string(u.t["feD3+v"]),
               },
               {
-                  icon: a.ewm,
+                  icon: o.ewm,
                   text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz),
               },
           )),
@@ -70,7 +70,7 @@ function f(e) {
               className: d.applicationEducation,
               children: [
                   null != t
-                      ? (0, r.jsx)(a.X6q, {
+                      ? (0, r.jsx)(o.X6q, {
                             variant: "heading-sm/normal",
                             className: d.sectionLabel,
                             children: t,
@@ -99,7 +99,7 @@ function _(e) {
                 className: d.entryIcon,
                 color: "currentColor",
             }),
-            (0, r.jsx)(o.x, {
+            (0, r.jsx)(a.x, {
                 variant: "text-md/normal",
                 className: d.entryText,
                 children: n,

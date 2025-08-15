@@ -1,62 +1,61 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var i = n(442837),
+var s = n(442837),
     o = n(481060),
-    a = n(204418),
-    s = n(594174),
+    i = n(204418),
+    a = n(594174),
     l = n(113434),
     c = n(182294),
     u = n(522226);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let _ = (e) => {
+let d = (e) => {
         let { questConfig: t, fallback: n, isFocused: d } = e,
-            f = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            { avatarDecoration: _, isFetching: p } = (0, l.DU)(t);
-        return p
+            m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
+            { avatarDecoration: p, isFetching: g } = (0, l.DU)(t);
+        return g
             ? (0, r.jsx)("div", {
                   className: u.questsCollectibleReward,
                   children: (0, r.jsx)(o.$jN, {}),
               })
-            : null == f || null == _
+            : null == m || null == p
               ? n
               : (0, r.jsx)("div", {
                     className: u.questsCollectibleReward,
-                    children: (0, r.jsx)(a.Z, {
+                    children: (0, r.jsx)(i.Z, {
                         avatarSize: c.EF.SIZE_56,
-                        user: f,
+                        user: m,
                         guildId: null,
-                        avatarDecorationOverride: _,
+                        avatarDecorationOverride: p,
                         animateOnHover: !d,
                     }),
                 });
     },
-    p = (e) => (0, r.jsx)(_, f({}, e));
+    m = (e) =>
+        (0, r.jsx)(
+            d,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            }),
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e),
+        );

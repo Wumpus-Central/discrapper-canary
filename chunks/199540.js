@@ -79,8 +79,8 @@ function b(e) {
             mentionCount: d = 0,
             isMentionLowImportance: g,
             tooltipName: b,
-            folderGroupId: O,
-            folderButtonContent: _,
+            folderGroupId: _,
+            folderButtonContent: O,
             onClick: y,
             onContextMenu: v,
             onHoverChange: j,
@@ -89,7 +89,7 @@ function b(e) {
             "aria-setsize": x,
             "aria-posinset": S,
         } = e,
-        P = (function (e, t) {
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -110,7 +110,7 @@ function b(e) {
             }
             return i;
         })(e.treeItemProps, ["onFocus"]),
-        [I, N] = i.useState(!1),
+        [P, N] = i.useState(!1),
         w = i.useCallback(() => {
             a || N(!0), null == j || j(!0);
         }, [a, j]),
@@ -157,7 +157,7 @@ function b(e) {
                     onFocus: E,
                     focusProps: { enabled: !1 },
                 },
-                P,
+                I,
             )),
             (n = n =
                 {
@@ -165,7 +165,7 @@ function b(e) {
                     "aria-setsize": x,
                     "aria-posinset": S,
                     "aria-expanded": o,
-                    "aria-owns": O,
+                    "aria-owns": _,
                     children: (0, r.jsxs)(s.aRk, {
                         isFolder: !0,
                         upperBadge: T,
@@ -181,14 +181,14 @@ function b(e) {
                             (0, r.jsx)("div", {
                                 className: h.folderButtonInner,
                                 children:
-                                    null != _
+                                    null != O
                                         ? (0, r.jsx)("div", {
                                               className: h.folderIconWrapper,
-                                              children: _,
+                                              children: O,
                                           })
                                         : (0, r.jsx)(m, {
                                               folderNode: l,
-                                              hovered: I,
+                                              hovered: P,
                                               sorting: a,
                                           }),
                             }),

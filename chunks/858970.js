@@ -16,8 +16,8 @@ var r = n(255367),
     j = n(848780),
     y = n(907179),
     O = n(228168),
-    x = n(981631),
-    h = n(388032),
+    h = n(981631),
+    x = n(388032),
     v = n(220566);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -54,16 +54,16 @@ function I(e) {
             transitionState: T,
             openedAt: Z,
             onHide: N,
-            sourceAnalyticsLocations: S = [],
+            sourceAnalyticsLocations: w = [],
         } = e,
-        w = n === x.ME ? void 0 : n,
+        S = n === h.ME ? void 0 : n,
         A = (0, i.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: C } = (0, c.ZP)([...S, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: C } = (0, c.ZP)([...w, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         D = (0, f.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             showGuildProfile: !0,
-            guildId: w,
+            guildId: S,
             channelId: I,
             messageId: P,
             roleId: E,
@@ -71,16 +71,16 @@ function I(e) {
         L = [
             {
                 icon: o.owK,
-                description: h.intl.string(h.t.kcuWvb),
+                description: x.intl.string(x.t.kcuWvb),
             },
             {
                 icon: o.owK,
-                description: h.intl.string(A ? h.t.QxrDY2 : h.t.W6fjkZ),
+                description: x.intl.string(A ? x.t.QxrDY2 : x.t.W6fjkZ),
             },
         ],
-        R = (0, m.ZP)(t.id, w),
+        R = (0, m.ZP)(t.id, S),
         G = u.ZP.getName(null == R ? void 0 : R.guildId, I, t),
-        k = h.intl.formatToPlainString(h.t.KRe1Fh, { name: G });
+        k = x.intl.formatToPlainString(x.t.KRe1Fh, { name: G });
     return (0, r.jsx)(c.Gt, {
         value: C,
         children: (0, r.jsx)(f.Mt, {
@@ -106,7 +106,7 @@ function I(e) {
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     user: t,
-                                    guildId: w,
+                                    guildId: S,
                                     iconColor: o.TVs.colors.TEXT_DEFAULT,
                                 }),
                                 (0, r.jsxs)("div", {
@@ -115,12 +115,12 @@ function I(e) {
                                         (0, r.jsx)(o.X6q, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: h.intl.string(h.t.b33pLC),
+                                            children: x.intl.string(x.t.b33pLC),
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: h.intl.format(A ? h.t.T7QiLi : h.t.MnEow8, { username: G }),
+                                            children: x.intl.format(A ? x.t.T7QiLi : x.t.MnEow8, { username: G }),
                                         }),
                                     ],
                                 }),

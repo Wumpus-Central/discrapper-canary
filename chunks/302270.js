@@ -1,54 +1,54 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => L });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(692547),
+    o = n(442837),
+    s = n(692547),
     c = n(481060),
     u = n(475179),
     d = n(100527),
-    h = n(906732),
-    p = n(358221),
+    p = n(906732),
+    h = n(358221),
     f = n(185935),
-    g = n(522651),
-    m = n(933557),
+    m = n(522651),
+    g = n(933557),
     b = n(236091),
     y = n(623624),
-    x = n(665149),
-    j = n(984370),
-    _ = n(616286),
-    O = n(975146),
-    v = n(430824),
-    C = n(496675),
+    _ = n(665149),
+    C = n(984370),
+    x = n(616286),
+    v = n(975146),
+    j = n(430824),
+    O = n(496675),
     E = n(626135),
     S = n(431328),
-    I = n(501655),
-    Z = n(200498),
-    P = n(146085),
+    P = n(501655),
+    I = n(200498),
+    Z = n(146085),
     T = n(427679),
     N = n(592473),
-    R = n(903108),
+    A = n(903108),
     w = n(981631),
-    A = n(474936),
-    D = n(388032),
+    R = n(474936),
+    M = n(388032),
     k = n(270479);
-function L(e) {
+function D(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.ZP)(d.Z.VOICE_CHANNEL_HEADER),
-        { chatOpen: c, participantsListOpen: m } = (0, s.cj)(
-            [p.Z],
+        { analyticsLocations: l, newestAnalyticsLocation: s } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),
+        { chatOpen: c, participantsListOpen: g } = (0, o.cj)(
+            [h.Z],
             () => ({
-                chatOpen: p.Z.getChatOpen(t.id),
-                participantsListOpen: p.Z.getParticipantsListOpen(t.id),
+                chatOpen: h.Z.getChatOpen(t.id),
+                participantsListOpen: h.Z.getParticipantsListOpen(t.id),
             }),
             [t.id],
         ),
-        y = (0, Z.B)(t.id),
-        x = (0, S.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: j } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        v = j && m;
-    return (0, r.jsxs)(h.Gt, {
+        y = (0, I.B)(t.id),
+        _ = (0, S.Rk)(t.id, P.pV.REQUESTED_TO_SPEAK_ONLY),
+        { hasParticipantsPanel: C } = (0, f.Z)({ location: "StageChannelCallHeader" }),
+        j = C && g;
+    return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
             (0, r.jsx)(b.Z, { channelId: t.id }, "clips-enabled-indicator"),
@@ -58,31 +58,31 @@ function L(e) {
                       children: (0, r.jsx)(N.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               c && u.Z.updateChatOpen(t.id, !1),
-                                  m && u.Z.toggleParticipantsList(t.id, !1),
-                                  (0, g.v)(o, g.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR),
+                                  g && u.Z.toggleParticipantsList(t.id, !1),
+                                  (0, m.v)(s, m.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR),
                                   n();
                           },
                           showRequestToSpeakSidebar: i,
-                          numRequestToSpeak: x,
+                          numRequestToSpeak: _,
                       }),
                   })
                 : null,
-            !m &&
-                j &&
+            !g &&
+                C &&
                 (0, r.jsx)(
-                    O.Z,
+                    v.Z,
                     {
                         className: a()(k.button, { [k.sidebarOpen]: c }),
                         onClick: () => {
-                            i && n(), u.Z.toggleParticipantsList(t.id, !m);
+                            i && n(), u.Z.toggleParticipantsList(t.id, !g);
                         },
                     },
                     "participants-list-button",
                 ),
             !c &&
                 (0, r.jsx)("div", {
-                    className: a()(k.button, { [k.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(_.T, {
+                    className: a()(k.button, { [k.sidebarOpen]: j || i }),
+                    children: (0, r.jsx)(x.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -92,88 +92,88 @@ function L(e) {
         ],
     });
 }
-function M(e) {
+function L(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: d } = e,
-        h = (0, m.ZP)(n),
-        p = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
+        p = (0, g.ZP)(n),
+        h = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
         f = (0, S.Io)(n.id),
-        g = (0, S.Rk)(n.id, I.pV.AUDIENCE),
-        b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        _ = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        O =
+        m = (0, S.Rk)(n.id, P.pV.AUDIENCE),
+        b = (0, o.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
+        x = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        v =
             null != b && b.features.has(w.oNc.COMMUNITY)
-                ? _ < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && _ <= w.eez,
-        Z = (0, R.Z)(n),
-        N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
-        M = () => {
+                ? x < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
+        I = (0, A.Z)(n),
+        N = (0, o.e7)([O.Z], () => O.Z.can(Z.yP, n)),
+        L = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                 E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: n.guild_id,
-                    type: A.cd.VIDEO_STAGE_LIMIT,
+                    type: R.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: N,
-                    action: A.T7.DISMISS,
+                    action: R.T7.DISMISS,
                 });
         },
-        F = {
+        B = {
             canModerate: N,
-            audienceCount: g,
+            audienceCount: m,
             channel: n,
             speakerCount: f,
         },
-        H = i.useRef(F);
+        F = i.useRef(B);
     i.useEffect(() => {
-        H.current = F;
+        F.current = B;
     }),
         i.useEffect(() => {
-            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = H.current;
-            Z &&
+            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = F.current;
+            I &&
                 E.default.track(w.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
-                    type: A.cd.VIDEO_STAGE_LIMIT,
+                    type: R.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
                     listener_count: r + t,
                 });
-        }, [Z]);
-    let G = (0, r.jsx)(c.f6W, {
+        }, [I]);
+    let H = (0, r.jsx)(c.f6W, {
         theme: w.BRd.DARK,
         children: (e) => {
             var t;
-            return (0, r.jsxs)(x.ZP, {
-                toolbar: (0, r.jsx)(L, {
+            return (0, r.jsxs)(_.ZP, {
+                toolbar: (0, r.jsx)(D, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: d,
                     channel: n,
                 }),
-                onDoubleClick: j.O,
+                onDoubleClick: C.O,
                 transparent: !0,
                 className: a()(e, k.participants),
                 children: [
-                    (0, r.jsx)(x.ZP.Icon, {
+                    (0, r.jsx)(_.ZP.Icon, {
                         icon: c.ewx,
                         disabled: !0,
-                        "aria-label": D.intl.string(D.t.EErMzM),
+                        "aria-label": M.intl.string(M.t.EErMzM),
                         className: k.icon,
-                        color: null != p ? o.Z.colors.HEADER_MUTED.css : void 0,
+                        color: null != h ? s.Z.colors.HEADER_MUTED.css : void 0,
                     }),
-                    (0, r.jsx)(x.ZP.Title, {
+                    (0, r.jsx)(_.ZP.Title, {
                         className: k.channelName,
                         wrapperClassName: k.channelNameWrapper,
-                        children: null != (t = null == p ? void 0 : p.topic) ? t : h,
+                        children: null != (t = null == h ? void 0 : h.topic) ? t : p,
                     }),
-                    (0, r.jsx)(x.ZP.Divider, { className: k.divider }),
-                    (0, r.jsxs)(x.ZP.Title, {
+                    (0, r.jsx)(_.ZP.Divider, { className: k.divider }),
+                    (0, r.jsxs)(_.ZP.Title, {
                         children: [
                             (0, r.jsx)(c.S6n, {
                                 size: "xs",
-                                color: o.Z.colors.TEXT_LOW_CONTRAST.css,
+                                color: s.Z.colors.TEXT_LOW_CONTRAST.css,
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: k.speakerCount,
-                                children: D.intl.format(D.t.chmM9P, { count: f }),
+                                children: M.intl.format(M.t.chmM9P, { count: f }),
                             }),
                             (0, r.jsx)(c.BFJ, {
                                 size: "xs",
@@ -184,7 +184,7 @@ function M(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: k.speakerCount,
-                                children: D.intl.format(D.t["+v2pNz"], { count: g }),
+                                children: M.intl.format(M.t["+v2pNz"], { count: m }),
                             }),
                         ],
                     }),
@@ -192,10 +192,10 @@ function M(e) {
             });
         },
     });
-    return Z
+    return I
         ? (0, r.jsxs)("div", {
               children: [
-                  G,
+                  H,
                   (0, r.jsxs)("div", {
                       className: k.boostUpsell,
                       children: [
@@ -206,25 +206,25 @@ function M(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       color: "header-primary",
-                                      children: O ? D.intl.string(D.t["T+zF9P"]) : D.intl.string(D.t["IZ+SVl"]),
+                                      children: v ? M.intl.string(M.t["T+zF9P"]) : M.intl.string(M.t["IZ+SVl"]),
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: O ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t["7FHbPD"]),
+                                      children: v ? M.intl.string(M.t.Izgpmp) : M.intl.string(M.t["7FHbPD"]),
                                   }),
                               ],
                           }),
                           (0, r.jsx)("div", {
                               className: k.buttons,
-                              children: O
+                              children: v
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
-                                                onClick: M,
+                                                onClick: L,
                                                 size: "sm",
                                                 variant: "secondary",
-                                                text: D.intl.string(D.t.L5eIZ2),
+                                                text: M.intl.string(M.t.L5eIZ2),
                                             }),
                                             (0, r.jsx)(c.zxk, {
                                                 variant: "expressive",
@@ -235,28 +235,28 @@ function M(e) {
                                                     }),
                                                         E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: n.guild_id,
-                                                            type: A.cd.VIDEO_STAGE_LIMIT,
+                                                            type: R.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: N,
-                                                            action: A.T7.BOOST,
+                                                            action: R.T7.BOOST,
                                                         });
                                                 },
                                                 size: "sm",
-                                                text: D.intl.string(D.t.Uj0md3),
+                                                text: M.intl.string(M.t.Uj0md3),
                                             }),
                                         ],
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         variant: "primary",
-                                        onClick: M,
+                                        onClick: L,
                                         size: "sm",
-                                        text: D.intl.string(D.t.WAI6xs),
+                                        text: M.intl.string(M.t.WAI6xs),
                                     }),
                           }),
                       ],
                   }),
               ],
           })
-        : G;
+        : H;
 }
 function U() {
     return (0, r.jsxs)("svg", {

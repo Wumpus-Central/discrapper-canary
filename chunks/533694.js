@@ -1,42 +1,42 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(399606),
-    o = n(481060),
+    l = n(481060),
     a = n(607070),
-    s = n(739566),
-    l = n(942951),
+    o = n(739566),
+    s = n(942951),
     c = n(834129),
     u = n(703656),
     d = n(331372),
-    f = n(981631),
-    _ = n(388032),
-    p = n(418783);
-function h(e) {
-    let { guildId: t, user: n, username: s } = e,
-        l = (0, i.e7)([a.Z], () => !a.Z.useReducedMotion),
-        c = n.getAvatarURL(t, 56, l),
+    p = n(981631),
+    m = n(388032),
+    f = n(418783);
+function _(e) {
+    let { guildId: t, user: n, username: o } = e,
+        s = (0, i.e7)([a.Z], () => !a.Z.useReducedMotion),
+        c = n.getAvatarURL(t, 56, s),
         u = (0, r.jsx)("img", {
             src: c,
-            className: p.userAvatar,
+            className: f.userAvatar,
             alt: "",
         });
     return (0, r.jsxs)("div", {
-        className: p.thankYouCard,
+        className: f.thankYouCard,
         role: "img",
-        "aria-label": _.intl.formatToPlainString(_.t["utf8+f"], { username: s }),
+        "aria-label": m.intl.formatToPlainString(m.t["utf8+f"], { username: o }),
         children: [
             (0, r.jsx)(d.Z, { avatar: u }),
-            (0, r.jsx)(o.Text, {
-                className: p.thankYouText,
+            (0, r.jsx)(l.Text, {
+                className: f.thankYouText,
                 tag: "p",
                 color: "status-positive-text",
                 variant: "heading-xl/medium",
-                children: _.intl.format(_.t["52BAtL"], {
-                    username: s,
+                children: m.intl.format(m.t["52BAtL"], {
+                    username: o,
                     usernameHook: (e, t) =>
                         (0, r.jsx)(
-                            o.Text,
+                            l.Text,
                             {
                                 tag: "span",
                                 color: "status-positive-text",
@@ -51,31 +51,31 @@ function h(e) {
         ],
     });
 }
-function m(e) {
-    var t, i, o;
-    let { channel: a, message: d, compact: p } = e,
-        m = (0, s.ZP)(d),
-        g = (0, l.l)({
+function g(e) {
+    var t, i, l;
+    let { channel: a, message: d, compact: f } = e,
+        g = (0, o.ZP)(d),
+        h = (0, s.l)({
             user: d.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: d.id,
-        })(m),
-        E = _.intl.format(_.t.TQs67u, {
-            username: m.nick,
-            usernameHook: g,
+        })(g),
+        b = m.intl.format(m.t.TQs67u, {
+            username: g.nick,
+            usernameHook: h,
             productName:
                 null !=
-                (o =
+                (l =
                     null == (i = d.purchaseNotification) || null == (t = i.guild_product_purchase)
                         ? void 0
                         : t.product_name)
-                    ? o
+                    ? l
                     : "",
             handleProductListingClick: () => {
                 var e, t, n;
                 (0, u.uL)(
-                    f.Z5c.GUILD_PRODUCT(
+                    p.Z5c.GUILD_PRODUCT(
                         a.guild_id,
                         null !=
                             (n =
@@ -93,11 +93,11 @@ function m(e) {
             (0, r.jsx)(c.Z, {
                 icon: n(570111),
                 timestamp: d.timestamp,
-                compact: p,
-                children: E,
+                compact: f,
+                children: b,
             }),
-            (0, r.jsx)(h, {
-                username: m.nick,
+            (0, r.jsx)(_, {
+                username: g.nick,
                 guildId: a.guild_id,
                 user: d.author,
             }),

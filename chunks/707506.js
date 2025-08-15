@@ -1,10 +1,10 @@
-n.d(t, { m: () => o });
+n.d(t, { m: () => a });
 var r = n(239189),
     i = n(217348),
-    o = function (e, t, n) {
+    a = function (e, t, n) {
         if (i.is.fun(e)) return e;
         if (i.is.arr(e))
-            return o({
+            return a({
                 range: e,
                 output: t,
                 extrapolate: n,
@@ -22,14 +22,14 @@ var r = n(239189),
                 };
         return function (e) {
             var t = s(e, u);
-            return a(e, u[t], u[t + 1], c[t], c[t + 1], _, d, f, l.map);
+            return o(e, u[t], u[t + 1], c[t], c[t + 1], _, d, f, l.map);
         };
     };
-function a(e, t, n, r, i, o, a, s, l) {
+function o(e, t, n, r, i, a, o, s, l) {
     var c = l ? l(e) : e;
     if (c < t)
-        if ("identity" === a) return c;
-        else "clamp" === a && (c = t);
+        if ("identity" === o) return c;
+        else "clamp" === o && (c = t);
     if (c > n)
         if ("identity" === s) return c;
         else "clamp" === s && (c = n);
@@ -40,7 +40,7 @@ function a(e, t, n, r, i, o, a, s, l) {
               ? r
               : i
           : (t === -1 / 0 ? (c = -c) : n === 1 / 0 ? (c -= t) : (c = (c - t) / (n - t)),
-            (c = o(c)),
+            (c = a(c)),
             r === -1 / 0 ? (c = -c) : i === 1 / 0 ? (c += r) : (c = c * (i - r) + r),
             c);
 }

@@ -11,8 +11,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(77498),
-    o = n(19780),
-    a = n(626135),
+    a = n(19780),
+    o = n(626135),
     s = n(837268),
     l = n(981631),
     c = (function (e) {
@@ -30,12 +30,12 @@ function u(e) {
     }
 }
 function d(e, t, r) {
-    var o, c, d;
+    var a, c, d;
     let f = null != r ? i.Z.getDetectableGame(r) : null,
         { default: _ } = n(371651),
-        p = null != (o = null == _ ? void 0 : _.getMostRecentOverlayRenderMethod()) ? o : void 0,
+        p = null != (a = null == _ ? void 0 : _.getMostRecentOverlayRenderMethod()) ? a : void 0,
         h = null != p ? s.gl[p] : void 0;
-    a.default.track(l.rMx.OVERLAY_TOGGLED, {
+    o.default.track(l.rMx.OVERLAY_TOGGLED, {
         enabled: e,
         setting_type: u(t),
         client_setting_type: t,
@@ -46,14 +46,14 @@ function d(e, t, r) {
 }
 function f(e, t) {
     let [n, i] = r.useState(e()),
-        o = r.useRef(e);
+        a = r.useRef(e);
     return (
         r.useEffect(() => {
-            o.current = e;
+            a.current = e;
         }, [e]),
         r.useEffect(() => {
             i((e) => {
-                let t = o.current();
+                let t = a.current();
                 if (e.size > t.size || e.size < t.size) return t;
                 for (let n of e) if (!t.has(n)) return t;
                 for (let n of t) if (!e.has(n)) return t;
@@ -69,18 +69,18 @@ function _(e, t) {
     ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 ||
         (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 ||
         (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
-        a.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
+        o.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
             overlay_locked: s,
             widget_type: e,
             shown_user_ids: c,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: o.Z.getMediaSessionId(),
+            media_session_id: a.Z.getMediaSessionId(),
         });
 }
 function p(e, t) {
     let { pinned: n, opacity: r } = t;
-    a.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
+    o.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
         pinned: n,
         opacity: r,
@@ -125,11 +125,11 @@ var h = (function (e) {
     })({});
 function g(e, t) {
     let { type: n, value: r, userId: i } = t;
-    a.default.track(l.rMx.WIDGET_INTERACTED, {
+    o.default.track(l.rMx.WIDGET_INTERACTED, {
         widget_type: e,
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: o.Z.getMediaSessionId(),
+        media_session_id: a.Z.getMediaSessionId(),
     });
 }

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(960048),
     i = n(837268);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -61,8 +61,8 @@ function c() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         n = arguments.length > 1 ? arguments[1] : void 0;
-    return l(a({}, n), {
-        tags: a(
+    return l(o({}, n), {
+        tags: o(
             {
                 source: "overlay",
                 overlayMethod: "".concat(null == t ? null : i.gl[null != t ? t : i.gl.Disabled]),

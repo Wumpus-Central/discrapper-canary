@@ -41,8 +41,8 @@ var n = a(255367),
     h = a(410030),
     p = a(705262),
     b = a(374794),
-    f = a(58755),
-    v = a(246992),
+    v = a(58755),
+    f = a(246992),
     j = a(500949),
     g = a(416825);
 function _(e) {
@@ -113,9 +113,9 @@ function T(e, t) {
 function E() {
     let e = (0, h.Fg)(),
         [t, a, l, s, d, u] = (0, j.zn)(),
-        { semanticColorOverrides: v, rawColorOverrides: C, tab: O, scales: E } = t,
+        { semanticColorOverrides: f, rawColorOverrides: C, tab: O, scales: E } = t,
         P = r.useMemo(() => {
-            let t = Object.entries(v).map((t) => {
+            let t = Object.entries(f).map((t) => {
                     let [a, n] = t,
                         { colors: r, highlight: l } = n,
                         i = r[e];
@@ -177,7 +177,7 @@ function E() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(a.join("\n"), "\n      }\n    ");
-        }, [C, E, v, e]);
+        }, [C, E, f, e]);
     return (0, n.jsxs)("div", {
         className: g.panel,
         children: [
@@ -286,7 +286,7 @@ function E() {
             (0, n.jsx)("div", {
                 className: g.tab,
                 hidden: O !== j.H8.PALETTES,
-                children: (0, n.jsx)(f.P, {
+                children: (0, n.jsx)(v.P, {
                     state: t,
                     setState: a,
                 }),
@@ -373,7 +373,7 @@ function S(e) {
             value: e,
             label: N(e),
         })),
-        f = Object.keys(u.b).map((e) => ({
+        v = Object.keys(u.b).map((e) => ({
             value: e,
             label: e,
         }));
@@ -396,7 +396,7 @@ function S(e) {
                               className: g.colorPreview,
                               style: { "--custom-color": "var(--".concat(e.label, ")") },
                           }),
-                popoutLayerContext: v.O$,
+                popoutLayerContext: f.O$,
             }),
             (0, n.jsx)("ul", {
                 className: g.overrides,
@@ -450,7 +450,7 @@ function S(e) {
                                                 style: { "--custom-color": "var(--".concat(t, ")") },
                                             });
                                         },
-                                        popoutLayerContext: v.O$,
+                                        popoutLayerContext: f.O$,
                                     }),
                                     (0, n.jsx)(x.oil, {
                                         inputClassName: g.opacityInput,
@@ -488,7 +488,7 @@ function S(e) {
                 children: "Raw Tokens",
             }),
             (0, n.jsx)(x.VcW, {
-                options: f,
+                options: v,
                 placeholder: "Search for a raw color...",
                 value: void 0,
                 onChange: d,
@@ -501,7 +501,7 @@ function S(e) {
                         style: { "--custom-color": "var(--".concat(t, ")") },
                     });
                 },
-                popoutLayerContext: v.O$,
+                popoutLayerContext: f.O$,
             }),
             (0, n.jsx)("ul", {
                 className: g.rawOverrides,

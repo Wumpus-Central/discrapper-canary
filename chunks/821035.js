@@ -44,12 +44,12 @@ function j(e) {
                 label: x.intl.string(x.t.S49UaW),
             },
         ],
-        I = {
+        N = {
             value: r.Q4.SHOW,
             label: x.intl.string(x.t["5k5OFh"]),
         };
     return (
-        j && (S.unshift(I), T.unshift(I)),
+        j && (S.unshift(N), T.unshift(N)),
         (0, i.jsx)(g.U, {
             setting: f.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,

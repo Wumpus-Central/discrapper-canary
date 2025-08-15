@@ -4,16 +4,16 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800);
-let o = { isRichTooltip: !1 },
-    a = i.createContext(o);
+let a = { isRichTooltip: !1 },
+    o = i.createContext(a);
 function s(e) {
     let { children: t, isRichTooltip: n = !1 } = e,
-        o = i.useMemo(() => ({ isRichTooltip: n }), [n]);
-    return (0, r.jsx)(a.Provider, {
-        value: o,
+        a = i.useMemo(() => ({ isRichTooltip: n }), [n]);
+    return (0, r.jsx)(o.Provider, {
+        value: a,
         children: t,
     });
 }
 function l() {
-    return i.useContext(a);
+    return i.useContext(o);
 }

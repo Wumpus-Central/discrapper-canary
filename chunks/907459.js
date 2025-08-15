@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(680018),
     c = n(755721),
@@ -30,17 +30,17 @@ var r = n(255367),
 let w = () => {
         var e, t, n;
         let i = (0, s.e7)([y.default], () => v.ZP.isPremium(y.default.getCurrentUser())),
-            o = (0, g.N)(),
-            a = (null == o || null == (e = o.subscription_trial) ? void 0 : e.sku_id) === C.Si.TIER_2;
+            a = (0, g.N)(),
+            o = (null == a || null == (e = a.subscription_trial) ? void 0 : e.sku_id) === C.Si.TIER_2;
         return (0, r.jsx)(E.Z, {
             size: c.zx.Sizes.MEDIUM,
             textOptions: {
                 textOverride: i
                     ? R.intl.string(R.t.IJI7ys)
-                    : a
+                    : o
                       ? (0, v.Rt)({
-                            intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
-                            intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count,
+                            intervalType: null == a || null == (t = a.subscription_trial) ? void 0 : t.interval,
+                            intervalCount: null == a || null == (n = a.subscription_trial) ? void 0 : n.interval_count,
                         })
                       : R.intl.string(R.t.mr4K7O),
             },
@@ -80,7 +80,7 @@ let w = () => {
     L = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([T.Z], () => T.Z.isUpsellPreview),
-            o = () => {
+            a = () => {
                 null == n || n(N.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open();
             };
         return (0, r.jsxs)("div", {
@@ -88,7 +88,7 @@ let w = () => {
             children: [
                 i && (0, r.jsx)(w, {}),
                 (0, r.jsx)(l.z, {
-                    onClick: o,
+                    onClick: a,
                     variant: "secondary",
                     fullWidth: !0,
                     text: i || t ? R.intl.string(R.t["dqH+qq"]) : R.intl.string(R.t.Olc2Ky),
@@ -98,7 +98,7 @@ let w = () => {
     };
 function x(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: o } = (0, h.ZP)(p.Z.APP_ICON_EDITOR),
+        { analyticsLocations: a } = (0, h.ZP)(p.Z.APP_ICON_EDITOR),
         l = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         { isUpsellPreview: c, shouldEditorAnimate: d } = (0, s.cj)([T.Z, _.Z], () => ({
             isUpsellPreview: T.Z.isUpsellPreview,
@@ -109,9 +109,9 @@ function x(e) {
         c &&
             O.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.APP_ICON_UPSELL,
-                location_stack: o,
+                location_stack: a,
             });
-    }, [c, o]);
+    }, [c, a]);
     let E = (0, f.Z)(null, c ? I.O : A.dG4);
     return (i.useEffect(() => {
         if (c && !g) return I.O;
@@ -119,10 +119,10 @@ function x(e) {
     null == l)
         ? null
         : (0, r.jsx)(h.Gt, {
-              value: o,
+              value: a,
               children: (0, r.jsx)("div", {
                   ref: E,
-                  className: a()(P.editor, d ? P.editorAnimate : null),
+                  className: o()(P.editor, d ? P.editorAnimate : null),
                   "data-app-right-panel": !0,
                   children: (0, r.jsxs)(u.y5t, {
                       children: [

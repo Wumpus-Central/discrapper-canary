@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(755721),
-    a = n(287734),
+    a = n(755721),
+    o = n(287734),
     s = n(622822),
     l = n(359110),
     c = n(922482),
@@ -44,19 +44,19 @@ function g(e) {
         v = (e) => {
             e.stopPropagation(),
                 null == n || n({ action: "PRESS_JOIN_CALL_BUTTON" }),
-                t.isGuildStageVoice() ? (0, c.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)),
+                t.isGuildStageVoice() ? (0, c.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)),
                 null == g || g();
         };
     return E === p.lY.MODAL_V2
         ? (0, r.jsx)(_.tG, {
               text: b ? y() : O(),
-              size: o.Ph.TINY,
+              size: a.Ph.TINY,
               themeColor: "secondary",
               onClick: v,
           })
         : (0, r.jsx)(_.tG, {
               text: b ? y() : O(),
-              size: o.Ph.SMALL,
+              size: a.Ph.SMALL,
               themeColor: "secondary",
               fullWidth: !0,
               onClick: v,

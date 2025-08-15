@@ -14,9 +14,9 @@ var r = n(255367),
     f = n(566078),
     x = n(472144),
     h = n(644646),
-    j = n(251360),
-    b = n(19148),
-    _ = n(69439),
+    b = n(251360),
+    _ = n(19148),
+    j = n(69439),
     v = n(46140),
     C = n(642145),
     y = n(388032),
@@ -38,9 +38,9 @@ function S(e) {
         D = Q.defaultRewardName,
         V = Q.defaultRewardNameWithArticle,
         M = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: L, scrollHeight: Z } = (0, u.kE)(),
-        W = 104 !== Z,
-        { onAssetLoadComplete: U } = s.useContext(j.k),
+        { ref: L, scrollHeight: W } = (0, u.kE)(),
+        Z = 104 !== W,
+        { onAssetLoadComplete: U } = s.useContext(b.k),
         { expansionSpring: H } = (0, c.q_F)({
             expansionSpring: +!!N,
             config:
@@ -149,11 +149,11 @@ function S(e) {
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: H.to([0, 1], [104, (null != Z ? Z : 0) + 12]),
+                    maxHeight: H.to([0, 1], [104, (null != W ? W : 0) + 12]),
                 },
                 className: E.rewardDescriptionContainer,
                 children: [
-                    (0, r.jsx)(b.E, {
+                    (0, r.jsx)(_.E, {
                         showPlaceholder: !k,
                         width: 80,
                         height: 80,
@@ -209,7 +209,7 @@ function S(e) {
                     }),
                     (0, r.jsxs)("div", {
                         ref: L,
-                        className: a()(E.textContainer, { [E.justifyCenter]: !W }),
+                        className: a()(E.textContainer, { [E.justifyCenter]: !Z }),
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: "eyebrow",
@@ -226,7 +226,7 @@ function S(e) {
                             ee,
                         ],
                     }),
-                    W &&
+                    Z &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
                                 opacity: H.to([0, 1], [1, 0]),
@@ -235,7 +235,7 @@ function S(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(j.Z, {
                 quest: P,
                 questContent: A,
                 contentPosition: R,

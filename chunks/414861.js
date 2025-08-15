@@ -2,8 +2,8 @@ e.exports = function (e) {
     var t = {},
         n = e.stopCallback;
     return (
-        (e.stopCallback = function (e, r, i, o) {
-            return !t[i] && !t[o] && n(e, r, i);
+        (e.stopCallback = function (e, r, i, a) {
+            return !t[i] && !t[a] && n(e, r, i);
         }),
         (e.bindGlobal = function (e, n, r) {
             if ((this.bind(e, n, r), e instanceof Array)) {

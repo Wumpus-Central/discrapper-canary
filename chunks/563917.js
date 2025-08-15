@@ -1,10 +1,10 @@
 n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
-    o = n(447543),
+    l = n(447543),
     a = n(100527),
-    s = n(906732),
-    l = n(792766),
+    o = n(906732),
+    s = n(792766),
     c = n(955415);
 let u = (e) => {
     let {
@@ -12,30 +12,30 @@ let u = (e) => {
             stageInstance: n,
             guild: u,
             message: d,
-            isMember: f,
-            onTransitionToInviteChannel: _,
-            onAcceptInstantInvite: p,
+            isMember: p,
+            onTransitionToInviteChannel: m,
+            onAcceptInstantInvite: f,
         } = e,
-        { analyticsLocations: h } = (0, s.ZP)(a.Z.INVITE_EMBED),
-        m = i.useCallback(() => {
+        { analyticsLocations: _ } = (0, o.ZP)(a.Z.INVITE_EMBED),
+        g = i.useCallback(() => {
             let e = "noop";
-            f ? (_(), (e = "transition")) : (p(), (e = "accept")),
-                (0, o.r$)(
+            p ? (m(), (e = "transition")) : (f(), (e = "accept")),
+                (0, l.r$)(
                     {
                         invite: t,
                         action: e,
                         inviter_id: d.author.id,
                         invite_message_id: d.id,
                     },
-                    h,
+                    _,
                 );
-        }, [t, d, h, f, _, p]);
+        }, [t, d, _, p, m, f]);
     return (0, r.jsx)(c.Z, {
-        children: (0, r.jsx)(l.Z, {
+        children: (0, r.jsx)(s.Z, {
             isEmbed: !0,
             stageInstance: n,
             guild: u,
-            onClick: m,
+            onClick: g,
         }),
     });
 };

@@ -6,9 +6,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(512722),
     c = n.n(l),
     u = n(866442),
@@ -61,15 +61,15 @@ let y = {
         top: h.alignTop,
         center: h.alignCenter,
     };
-class v extends (r = o.PureComponent) {
+class v extends (r = a.PureComponent) {
     render() {
         let {
                 disabled: e,
                 readOnly: t,
                 value: n,
                 align: r = "center",
-                className: o,
-                innerClassName: a,
+                className: a,
+                innerClassName: o,
                 children: l,
                 size: c,
                 reverse: u,
@@ -93,7 +93,7 @@ class v extends (r = o.PureComponent) {
             y = this.props.disabled ? h.inputDisabled : this.props.readOnly ? h.inputReadonly : h.inputDefault;
         return (0, i.jsxs)(b, {
             "data-toggleable-component": "checkbox",
-            className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], o, {
+            className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], a, {
                 [h.row]: "row" === _,
                 [h.checked]: n,
             }),
@@ -102,7 +102,7 @@ class v extends (r = o.PureComponent) {
                 !d &&
                     (0, i.jsx)(f.t, {
                         children: (0, i.jsx)("input", {
-                            className: s()(a, y),
+                            className: s()(o, y),
                             type: "checkbox",
                             onClick: m,
                             onChange: e || t ? p.dG4 : this.handleChange,
@@ -129,34 +129,34 @@ class v extends (r = o.PureComponent) {
 function I(e) {
     var t;
     let { value: n, type: r, color: i } = e,
-        o = null != (t = e.style) ? t : {};
-    if (!1 === n) return o;
-    if (((o = g({}, o)), null != i))
+        a = null != (t = e.style) ? t : {};
+    if (!1 === n) return a;
+    if (((a = g({}, a)), null != i))
         switch (r) {
             case "default":
-                o.borderColor = i;
+                a.borderColor = i;
                 break;
             case "ghost":
                 if (i.startsWith("var(--")) {
                     let e = "".concat(i.slice(0, -1), "-hsl)");
-                    (o.borderColor = "rgba(".concat(e, ", 0.15)")), (o.backgroundColor = "rgba(".concat(e, ", 0.15)"));
+                    (a.borderColor = "rgba(".concat(e, ", 0.15)")), (a.backgroundColor = "rgba(".concat(e, ", 0.15)"));
                 } else
                     c()((0, u.FX)(i), "Checkbox: ".concat(i, " is not a valid hex color")),
-                        (o.borderColor = (0, u.wK)(i, 0.15)),
-                        (o.backgroundColor = (0, u.wK)(i, 0.15));
+                        (a.borderColor = (0, u.wK)(i, 0.15)),
+                        (a.backgroundColor = (0, u.wK)(i, 0.15));
                 break;
             case "row":
             case "inverted":
-                (o.backgroundColor = i), (o.borderColor = i);
+                (a.backgroundColor = i), (a.borderColor = i);
         }
-    return o;
+    return a;
 }
 function T(e) {
-    let { indicatorClassName: t, value: n, size: r, shape: a, checkboxColor: l, disabled: c } = e,
+    let { indicatorClassName: t, value: n, size: r, shape: o, checkboxColor: l, disabled: c } = e,
         u = I(e),
-        f = o.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
+        f = a.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, i.jsx)("div", {
-        className: s()(h.checkbox, a, t, {
+        className: s()(h.checkbox, o, t, {
             [h.checked]: n,
             [h.checkboxDisabled]: c,
         }),

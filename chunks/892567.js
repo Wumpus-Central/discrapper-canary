@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(688619),
-    a = n.n(o),
+    a = n(688619),
+    o = n.n(a),
     s = n(120356),
     l = n.n(s),
     c = n(522942),
@@ -22,7 +22,7 @@ let v = i.memo(function (e) {
     var t;
     let {
             userName: n,
-            displayNameStyles: o,
+            displayNameStyles: a,
             effectDisplayType: s = g.F.STATIC,
             inProfile: v = !1,
             textClassName: T,
@@ -30,7 +30,7 @@ let v = i.memo(function (e) {
             shouldWrap: A = !1,
         } = e,
         N = (0, y.j)({
-            displayNameStyles: o,
+            displayNameStyles: a,
             inProfile: v,
         }),
         { useReducedMotion: C, saturation: R } = (0, u.cj)([_.Z], () => ({
@@ -40,26 +40,26 @@ let v = i.memo(function (e) {
         { includeNonProfile: P } = h.f.useExperiment({ location: "useDisplayNameStylesFont" }),
         w = (0, m.Y)({ location: "UserNameWithEffects" }),
         D = (0, f.dQu)(f.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-        L = (0, b.R)(null != (t = null == o ? void 0 : o.effectId) ? t : c.m.SOLID),
+        L = (0, b.R)(null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID),
         x = (0, f.qgQ)(n),
-        M = (0, d.EJ)(x, (null == o ? void 0 : o.effectId) === c.m.TOON ? O.emoji : void 0),
-        j = i.useMemo(
+        M = (0, d.EJ)(x, (null == a ? void 0 : a.effectId) === c.m.TOON ? O.emoji : void 0),
+        k = i.useMemo(
             () =>
-                null != o && w
-                    ? o.colors.map((e) =>
+                null != a && w
+                    ? a.colors.map((e) =>
                           (0, p.wh)({
-                              foreground: a()(e),
-                              background: (null == o ? void 0 : o.effectId) === c.m.TOON ? a()("#333") : a()(D),
+                              foreground: o()(e),
+                              background: (null == a ? void 0 : a.effectId) === c.m.TOON ? o()("#333") : o()(D),
                               ratio: L.minContrastRatio,
                               saturationFactor: R,
                           }).hex(),
                       )
                     : [],
-            [o, w, L.minContrastRatio, R, D],
+            [a, w, L.minContrastRatio, R, D],
         );
-    if (!w || (!v && !P) || null == o) return n;
-    let k = (0, E.K)(o.effectId, j, { shouldWrap: A }),
-        U = I(o.effectId);
+    if (!w || (!v && !P) || null == a) return n;
+    let j = (0, E.K)(a.effectId, k, { shouldWrap: A }),
+        U = I(a.effectId);
     return (0, r.jsxs)("div", {
         className: l()(O.container, N, T, {
             [O.showEffect]: s !== g.F.PLAIN,
@@ -67,7 +67,7 @@ let v = i.memo(function (e) {
             [O.loop]: S,
             [O.inProfile]: v,
         }),
-        style: k,
+        style: j,
         children: [
             (0, r.jsx)("span", {
                 "data-username-with-effects": x,

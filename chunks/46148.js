@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(680783),
     m = n(13186),
     b = n(981631),
-    O = n(921944),
-    _ = n(474936),
+    _ = n(921944),
+    O = n(474936),
     y = n(388032),
     v = n(865696),
     j = n(777091);
@@ -49,13 +49,13 @@ let E = i.memo(function (e) {
         n = e.selected,
         E = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
         x = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-        { canAccessPicker: S, entryPoint: P } = (0, h.m)({
+        { canAccessPicker: S, entryPoint: I } = (0, h.m)({
             location: "ChatWallpaperDMListCoachmark",
             channelId: t,
         }),
-        I = P === f.FN.CONTEXT_MENU,
-        [N, w] = (0, u.US)(E && I && n && S && !x ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-        Z = (0, d.m)(_.p9.TIER_2),
+        P = I === f.FN.CONTEXT_MENU,
+        [N, w] = (0, u.US)(E && P && n && S && !x ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+        Z = (0, d.m)(O.p9.TIER_2),
         T = (0, g.Z)(t),
         A = N === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
         R = (0, i.useRef)(null),
@@ -78,7 +78,7 @@ let E = i.memo(function (e) {
     )
         return (0, r.jsx)(s.ZP, C({}, e));
     let U = () => {
-            w(O.L.USER_DISMISS);
+            w(_.L.USER_DISMISS);
         },
         G = ((e, t) => {
             let n = null != t && !t.isPreview;

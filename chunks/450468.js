@@ -1,4 +1,4 @@
-n.d(t, { default: () => I }), n(388685), n(415506);
+n.d(t, { default: () => N }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -39,7 +39,7 @@ function S(e) {
         [m, h] = r.useState(!1),
         j = (0, l.e7)([_.Z], () => _.Z.theme),
         { analyticsLocations: S } = (0, f.ZP)(),
-        [T, I] = r.useState(null);
+        [T, N] = r.useState(null);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.xBx, {
@@ -71,7 +71,7 @@ function S(e) {
                         text: C.intl.string(C.t.etZP4O),
                         onClick: async () => {
                             try {
-                                h(!0), I(null);
+                                h(!0), N(null);
                                 let e = (0, x.g)(t, 1);
                                 a()(
                                     (0, E.uV)(e) <= (0, E.uV)(t.additionalPlans),
@@ -81,7 +81,7 @@ function S(e) {
                                     s();
                             } catch (t) {
                                 let e = t instanceof p.HF ? t : new p.HF(t, t.code);
-                                I(
+                                N(
                                     C.intl.string(
                                         e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t["5mlOCQ"],
                                     ),
@@ -134,7 +134,7 @@ function T(e) {
         ],
     });
 }
-function I(e) {
+function N(e) {
     let t,
         { guildBoostSlotId: n, transitionState: s, onClose: a } = e,
         { analyticsLocations: o } = (0, f.ZP)(h.Z.GUILD_BOOST_UNCANCELLATION_MODAL);

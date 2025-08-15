@@ -6,12 +6,14 @@ n.d(t, {
     Rv: () => p,
     TH: () => i,
     _5: () => l,
+    _i: () => g,
     cL: () => d,
-    dF: () => o,
+    dF: () => a,
     e5: () => h,
     fO: () => r,
     l8: () => f,
-    wR: () => a,
+    oo: () => m,
+    wR: () => o,
 });
 var r = (function (e) {
         return (
@@ -25,10 +27,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e.STREAM = "STREAM"), (e.USER = "USER"), (e.ACTIVITY = "ACTIVITY"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.NONE = "NONE"), (e.AUTO = "AUTO"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e[(e.DESKTOP = 0)] = "DESKTOP"),
             (e[(e.MOBILE = 1)] = "MOBILE"),
@@ -70,4 +72,6 @@ let f = {
         0: 200,
         1: 160,
     },
-    h = 8;
+    h = 8,
+    m = 550,
+    g = 230;

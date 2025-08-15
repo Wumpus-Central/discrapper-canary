@@ -10,8 +10,8 @@ n.d(t, {
     n(388685);
 var r = n(442837),
     i = n(622822),
-    o = n(387343),
-    a = n(258609),
+    a = n(387343),
+    o = n(258609),
     s = n(131704),
     l = n(984933),
     c = n(430824),
@@ -24,14 +24,14 @@ function h(e, t, n) {
     var r;
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
-    let a = t.getGuild(e.getGuildId()),
-        s = null != (r = null == a ? void 0 : a.maxStageVideoChannelUsers) ? r : 0;
+    let o = t.getGuild(e.getGuildId()),
+        s = null != (r = null == o ? void 0 : o.maxStageVideoChannelUsers) ? r : 0;
     return (
         (!e.isGuildStageVoice() || !(s <= 0)) &&
-        (!i || !!(0, o.Z)(e, n)) &&
+        (!i || !!(0, a.Z)(e, n)) &&
         !!n.can(_.Plq.STREAM, e) &&
-        null != a &&
-        a.afkChannelId !== e.id
+        null != o &&
+        o.afkChannelId !== e.id
     );
 }
 function m(e) {
@@ -62,20 +62,20 @@ function g(e) {
             return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t["9C444u"]));
     }
 }
-function E(e, t, n, r, a) {
+function E(e, t, n, r, o) {
     let l;
     if (null == e) return [!1, 2];
     let c = t.isInChannel(e.id),
         u = e instanceof s.Sf && (0, f.rY)(e, t, n),
-        d = (0, o.Z)(e, r),
-        _ = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId(),
+        d = (0, a.Z)(e, r),
+        _ = null != o.getAwaitingRemoteSessionInfo() || null != o.getRemoteSessionId(),
         p = (0, i.dl)() && (0, i.zd)(e.id);
     _ ? (l = 0) : p ? (l = 3) : d || c ? u && !c && (l = 1) : (l = 2);
     let h = d && !u;
     return [!__OVERLAY__ && !_ && !p && (c || h), l];
 }
 function b(e) {
-    return (0, r.Wu)([d.Z, c.Z, u.Z, a.Z], () => E(e, d.Z, c.Z, u.Z, a.Z));
+    return (0, r.Wu)([d.Z, c.Z, u.Z, o.Z], () => E(e, d.Z, c.Z, u.Z, o.Z));
 }
 function y(e, t, n) {
     let r = [];

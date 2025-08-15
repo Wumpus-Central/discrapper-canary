@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
     l = n(481060),
     c = n(907040),
@@ -18,10 +18,10 @@ let h = {
     m = f.Hz.GIFT;
 function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [o, d] = i.useState(!1),
+        [a, d] = i.useState(!1),
         f = i.useRef(null),
         g = (0, u.ZP)({ location: "GiftEmoji" }),
-        E = a()(p.text, g && p.refresh),
+        E = o()(p.text, g && p.refresh),
         b = (e) =>
             (0, r.jsxs)("div", {
                 className: p.customGiftContent,
@@ -48,7 +48,7 @@ function g(e) {
         };
     return (0, r.jsx)(l.yRy, {
         targetElementRef: f,
-        shouldShow: o,
+        shouldShow: a,
         position: "bottom",
         align: "left",
         onRequestClose: () => d(!1),
@@ -72,7 +72,7 @@ function g(e) {
         },
         children: () =>
             (0, r.jsx)(l.P3F, {
-                className: a()(p.container, g && p.refresh),
+                className: o()(p.container, g && p.refresh),
                 onClick: () => d(!0),
                 innerRef: f,
                 children:

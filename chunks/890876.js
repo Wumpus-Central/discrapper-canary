@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(892001),
-    o = n(732380),
-    a = n(955418),
+    a = n(732380),
+    o = n(955418),
     s = n(388032),
     l = n(116649);
 function c(e) {
@@ -13,7 +13,7 @@ function c(e) {
             ? null
             : (0, r.jsx)("div", {
                   className: l.footer,
-                  children: (0, r.jsx)(o.O1, {
+                  children: (0, r.jsx)(a.O1, {
                       variant: "primary",
                       text: s.intl.string(s.t["+Xp3ho"]),
                       onClick: () =>
@@ -27,6 +27,6 @@ function c(e) {
         : (0, r.jsx)("div", {
               className: l.footer,
               inert: !0,
-              children: (0, r.jsx)(a.Z, { user: t }),
+              children: (0, r.jsx)(o.Z, { user: t }),
           });
 }

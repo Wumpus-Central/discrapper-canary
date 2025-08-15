@@ -1,23 +1,10 @@
-n.d(t, { Z: () => d }), n(415506);
+n.d(t, { Z: () => l }), n(415506);
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(981631),
-    a = n(388032);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function l(e) {
+    a = n(981631),
+    o = n(388032);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,42 +15,28 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = {
+let l = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, i.ZDy)(async () => {
             let i = (await n.e("94904").then(n.bind(n, 660250))).default;
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    l(
+                    c(
                         {
                             streamKey: e,
                             channelId: t,
@@ -73,15 +46,15 @@ let d = {
                 );
         });
     },
-    openSecureFramesUserVerificationModal: function (e, t, a, s) {
-        a() &&
+    openSecureFramesUserVerificationModal: function (e, t, o, l) {
+        o() &&
             (0, i.ZDy)(
                 async () => {
                     let i = (await n.e("33397").then(n.bind(n, 963410))).default;
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            l(
+                            c(
                                 {
                                     userId: e,
                                     channelId: t,
@@ -90,35 +63,49 @@ let d = {
                             ),
                         );
                 },
-                { contextKey: s === o.IlC.POPOUT ? i.u1M : i.z1l },
+                { contextKey: l === a.IlC.POPOUT ? i.u1M : i.z1l },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: o, confirmText: s = a.intl.string(a.t["cY+Ooa"]), onConfirm: c } = e;
+        let { title: t, subtitle: a, confirmText: l = o.intl.string(o.t["cY+Ooa"]), onConfirm: u } = e;
         (0, i.ZDy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
-            return (n) =>
-                (0, r.jsx)(
+            return (n) => {
+                var s, E;
+                return (0, r.jsx)(
                     e,
-                    u(
-                        l(
-                            {
-                                header: t,
-                                confirmText: s,
-                                cancelText: a.intl.string(a.t["ETE/oK"]),
-                                onConfirm: c,
-                            },
-                            n,
-                        ),
+                    ((s = c(
+                        {
+                            header: t,
+                            confirmText: l,
+                            cancelText: o.intl.string(o.t["ETE/oK"]),
+                            onConfirm: u,
+                        },
+                        n,
+                    )),
+                    (E = E =
                         {
                             children: (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: o,
+                                children: a,
                             }),
-                        },
-                    ),
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(E))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(E)).forEach(function (e) {
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(E, e));
+                          }),
+                    s),
                 );
+            };
         });
     },
     handleSecureFramesUserVerificationLink: function (e) {

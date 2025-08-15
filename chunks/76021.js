@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(872810),
-    a = n(451467),
+    a = n(872810),
+    o = n(451467),
     s = n(592125),
     l = n(430824),
     c = n(131951),
@@ -65,7 +65,9 @@ function m(e, t) {
 function g(e, t, _) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("46746"), n.e("74304")]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e("70274"), n.e("38697"), n.e("46746"), n.e("1834")]).then(
+                n.bind(n, 60594),
+            );
             return (n) => {
                 var i;
                 return (0, r.jsx)(
@@ -81,7 +83,7 @@ function g(e, t, _) {
     else {
         var h;
         let n = s.Z.getChannel(t),
-            r = (0, a.Z)(
+            r = (0, o.Z)(
                 f.tI.PRESET_CUSTOM,
                 f.LY.RESOLUTION_1080,
                 f.ws.FPS_30,
@@ -100,7 +102,7 @@ function g(e, t, _) {
         c.Z.getMediaEngine()
             .getDesktopSource(r, !0)
             .then((n) => {
-                (0, o.WH)(e, t, {
+                (0, a.WH)(e, t, {
                     pid: null,
                     sourceId: n,
                     sourceName: null,

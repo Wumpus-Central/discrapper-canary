@@ -1,20 +1,20 @@
-n.d(t, { s: () => m }), n(388685), n(35282);
+n.d(t, { s: () => _ }), n(388685), n(35282);
 var l = n(73800),
     r = n(442837),
-    a = n(38618),
-    i = n(51596),
+    i = n(38618),
+    a = n(51596),
     s = n(516373),
     o = n(314897),
     c = n(580005),
     u = n(987509),
     d = n(601565),
-    h = n(41837);
-function f(e) {
-    let { query: t, queryMode: n } = (0, i.F_)(e),
-        l = h.M,
+    f = n(41837);
+function h(e) {
+    let { query: t, queryMode: n } = (0, a.F_)(e),
+        l = f.M,
         r = null;
     return (
-        null != n && h.M.includes(n) && ((l = [n]), (r = n)),
+        null != n && f.M.includes(n) && ((l = [n]), (r = n)),
         {
             query: t,
             queryMode: r,
@@ -22,57 +22,57 @@ function f(e) {
         }
     );
 }
-function m(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: i, includeMissingDMs: h = !1 } = e,
-        m = (0, r.e7)([o.default], () => o.default.getId()),
+function _(e) {
+    let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: f = !1 } = e,
+        _ = (0, r.e7)([o.default], () => o.default.getId()),
         g = l.useMemo(
             () => ({
                 searchOptions: {
-                    blacklist: new Set(["user:".concat(m)]),
+                    blacklist: new Set(["user:".concat(_)]),
                     frecencyBoosters: !0,
                     userFilters: null,
                 },
             }),
-            [m],
+            [_],
         ),
-        { search: _, query: p, results: b } = (0, d.Z)(g),
-        [y, v] = l.useState(f("")),
-        x = l.useCallback((e) => v(f(e)), [v]),
-        { queryMode: E } = y,
-        C = l.useRef(null),
-        S = l.useRef(n),
-        O = p !== C.current ? n : S.current;
+        { search: m, query: p, results: E } = (0, d.Z)(g),
+        [b, y] = l.useState(h("")),
+        I = l.useCallback((e) => y(h(e)), [y]),
+        { queryMode: S } = b,
+        A = l.useRef(null),
+        O = l.useRef(n),
+        v = p !== A.current ? n : O.current;
     l.useEffect(() => {
-        p !== C.current && (S.current = n), (C.current = p);
+        p !== A.current && (O.current = n), (A.current = p);
     }, [p, n]),
         l.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = y;
-            _({
+            let { query: e, resultTypes: t } = b;
+            m({
                 query: e,
                 resultTypes: t,
             });
-        }, [_, y]),
+        }, [m, b]),
         (0, s.D)();
-    let P = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
-        w = (0, r.e7)([a.Z], () => a.Z.isConnected()),
-        Z = "" !== p;
+    let C = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
+        x = (0, r.e7)([i.Z], () => i.Z.isConnected()),
+        P = "" !== p;
     return {
         results: l.useMemo(
             () =>
                 (0, u.ZP)({
-                    results: b,
-                    hasQuery: Z,
-                    queryMode: E,
+                    results: E,
+                    hasQuery: P,
+                    queryMode: S,
                     targetDestination: t,
-                    frequentChannels: P,
+                    frequentChannels: C,
                     selectedDestinations: n,
-                    pinnedDestinations: O,
-                    originDestination: i,
-                    includeMissingDMs: h,
-                    isConnected: w,
+                    pinnedDestinations: v,
+                    originDestination: a,
+                    includeMissingDMs: f,
+                    isConnected: x,
                 }),
-            [b, Z, E, t, P, n, O, i, h, w],
+            [E, P, S, t, C, n, v, a, f, x],
         ),
-        updateSearchText: x,
+        updateSearchText: I,
     };
 }

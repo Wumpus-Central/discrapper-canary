@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(239091),
-    o = n(644956),
-    a = n(819366),
+    a = n(644956),
+    o = n(819366),
     s = n(592125);
 function l(e, t, n) {
     return (
@@ -58,16 +58,19 @@ function d(e, t) {
     );
 }
 let f = {
-    handleUserContextMenu(e, t, o, a) {
+    handleUserContextMenu(e, t, a, o) {
         let l = s.Z.getChannel(t);
         null != l &&
-            (0, i.jW)(a, async () => {
+            (0, i.jW)(o, async () => {
                 let { default: t } = await Promise.all([
+                    n.e("14006"),
+                    n.e("70274"),
                     n.e("79695"),
+                    n.e("80417"),
                     n.e("98783"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("96306"),
+                    n.e("20180"),
                 ]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, r.jsx)(
@@ -75,7 +78,7 @@ let f = {
                         d(c({}, n), {
                             user: e,
                             channel: l,
-                            guildId: o,
+                            guildId: a,
                         }),
                     );
             });
@@ -83,9 +86,9 @@ let f = {
     react(e, t, n) {
         let { userId: i, channelId: s, parsedUserId: l, roleId: u, roleName: f, viewingChannelId: _ } = e;
         return null == i && (null != u || "@everyone" === f || "@here" === f)
-            ? (0, r.jsx)(o.Z, d(c({ inlinePreview: n.formatInline }, e), { children: t(e.content, n) }), n.key)
+            ? (0, r.jsx)(a.Z, d(c({ inlinePreview: n.formatInline }, e), { children: t(e.content, n) }), n.key)
             : (0, r.jsx)(
-                  a.Z,
+                  o.Z,
                   {
                       className: "mention",
                       userId: i,

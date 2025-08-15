@@ -1,7 +1,7 @@
 n.d(t, {
     R8: () => i,
     Us: () => r,
-    hy: () => o,
+    hy: () => a,
 });
 var r = (function (e) {
         return (
@@ -43,6 +43,6 @@ var r = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.HORIZONTAL = "horizontal"), (e.VERTICAL = "vertical"), e;
     })({});

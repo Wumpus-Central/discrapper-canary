@@ -24,8 +24,8 @@ var a = n(442837),
     v = n(944486),
     S = n(914010),
     T = n(449934),
-    I = n(576376),
-    N = n(38217),
+    N = n(576376),
+    I = n(38217),
     y = n(864631),
     A = n(981631);
 let P = new j.Z("CacheStore"),
@@ -94,13 +94,13 @@ async function V(e, t, n) {
                 ? Promise.resolve({})
                 : s.Z.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => b.Z.getAll(e)),
         T = null == e ? Promise.resolve([]) : s.Z.timeAsync("\uD83D\uDCBE", "cache: read_states", () => h.Z.getAll(e)),
-        I =
+        N =
             null == e
                 ? Promise.resolve([])
                 : s.Z.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => f.Z.getAll(e)),
-        [[N, A], R, D, Z, w, k, L] = await Promise.all([p, g, _, j, O, T, I]),
+        [[I, A], R, D, Z, w, k, L] = await Promise.all([p, g, _, j, O, T, N]),
         B = performance.now() - m;
-    if ((P.verbose("cache loaded in ".concat(B, "ms (channel_history ").concat(N, "ms)")), null == A))
+    if ((P.verbose("cache loaded in ".concat(B, "ms (channel_history ").concat(I, "ms)")), null == A))
         return (
             (0, y.Z)("database:history_cache_null"),
             P.verbose("finished without dispatching CACHE_LOADED"),
@@ -297,9 +297,9 @@ async function z(e, t, n, i) {
             initialGuildId: n,
         };
         C.Z.deserializeCache.measure(() => {
-            null != c.channels && (0, N.ZP)(c.channels),
-                null != c.privateChannels && (0, N.ZP)(c.privateChannels),
-                null != c.guildChannels && (0, N._$)(c.guildChannels);
+            null != c.channels && (0, I.ZP)(c.channels),
+                null != c.privateChannels && (0, I.ZP)(c.privateChannels),
+                null != c.guildChannels && (0, I._$)(c.guildChannels);
         }),
             C.Z.dispatchLazyCache.measure(() => o.Z.dispatch(c)),
             P.verbose("late lazy cache loaded (ok: true, took: ".concat(performance.now() - s, "ms)")),
@@ -396,7 +396,7 @@ class Y extends (i = a.ZP.Store) {
             : (P.log("Not writing cache because not authenticated"), !1);
     }
     async loadCacheAsync(e, t) {
-        let n = (0, I.h)(t);
+        let n = (0, N.h)(t);
         if ("initializing" !== Z) {
             (0, y.Z)("cache:lazy_cache_not_initializing"),
                 n(),

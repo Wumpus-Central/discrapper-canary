@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(898531),
+    a = n(481060),
+    o = n(898531),
     s = n(314897),
     l = n(131951),
     c = n(388032),
@@ -61,62 +61,92 @@ function p(e, t) {
     );
 }
 function h(e, t) {
-    let d = (0, o.vRw)(),
+    let d = (0, a.vRw)(),
         { videoEnabled: _, hasVideoDevice: h } = (0, i.cj)([l.Z], () => ({
             videoEnabled: l.Z.isVideoEnabled(),
             hasVideoDevice: l.Z.isVideoAvailable(),
         })),
         m = (0, i.e7)([s.default], () => s.default.getId() === e),
-        g = (0, a.Z)();
+        g = (0, o.Z)();
     function E() {
-        (0, o.ZDy)(
+        (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([
+                    n.e("14006"),
+                    n.e("8381"),
+                    n.e("95355"),
                     n.e("8895"),
-                    n.e("84605"),
+                    n.e("70791"),
+                    n.e("70274"),
+                    n.e("25292"),
                     n.e("8016"),
+                    n.e("80417"),
+                    n.e("31978"),
+                    n.e("22878"),
+                    n.e("74891"),
+                    n.e("85372"),
+                    n.e("6380"),
+                    n.e("28467"),
+                    n.e("8739"),
+                    n.e("86282"),
                     n.e("12830"),
-                    n.e("49508"),
                     n.e("17938"),
-                    n.e("94136"),
-                    n.e("62117"),
-                    n.e("25548"),
-                    n.e("99956"),
-                    n.e("22646"),
+                    n.e("38626"),
+                    n.e("30243"),
+                    n.e("37447"),
+                    n.e("53937"),
+                    n.e("63575"),
+                    n.e("34082"),
                     n.e("76540"),
+                    n.e("40694"),
+                    n.e("55719"),
+                    n.e("66866"),
+                    n.e("96750"),
+                    n.e("54157"),
+                    n.e("94136"),
+                    n.e("49508"),
+                    n.e("22646"),
+                    n.e("64838"),
                     n.e("25183"),
+                    n.e("79312"),
                     n.e("3940"),
                     n.e("27458"),
-                    n.e("9885"),
-                    n.e("77512"),
+                    n.e("42521"),
+                    n.e("81498"),
+                    n.e("48091"),
                     n.e("88712"),
                     n.e("30419"),
                     n.e("66317"),
                     n.e("89001"),
                     n.e("18824"),
+                    n.e("16766"),
                     n.e("88876"),
                     n.e("62332"),
-                    n.e("7384"),
+                    n.e("30202"),
+                    n.e("4067"),
+                    n.e("31253"),
+                    n.e("7171"),
                     n.e("35624"),
-                    n.e("18126"),
+                    n.e("3500"),
+                    n.e("47338"),
                 ]).then(n.bind(n, 601572));
                 return (t) => (0, r.jsx)(e, p(f({}, t), { videoEnabled: _ }));
             },
             {
                 modalKey: "camera-preview",
-                contextKey: null != t ? (0, o.VnL)(t) : d,
+                contextKey: null != t ? (0, a.VnL)(t) : d,
             },
         );
     }
     return (!_ || g) && m && h
-        ? (0, r.jsx)(o.sNh, {
+        ? (0, r.jsx)(a.sNh, {
               id: "change-video-background",
               label: (0, r.jsx)("div", {
                   className: u.item,
                   children: _ ? c.intl.string(c.t.mZKxHR) : c.intl.string(c.t.vkV939),
               }),
               action: E,
-              icon: _ ? o.yMH : o.tEF,
+              icon: _ ? a.yMH : a.tEF,
           })
         : null;
 }

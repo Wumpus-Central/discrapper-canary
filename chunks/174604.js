@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685), n(583741), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(793030),
     c = n(755721),
@@ -73,7 +73,7 @@ function b(e) {
     });
 }
 function y(e) {
-    let { guild: t, themeResponsive: n = !0, onButtonClick: o } = e,
+    let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
         h = (0, d.Z)(t.id),
         [g, y] = i.useState(!1),
         [O, v] = (0, u.q_F)(() => ({
@@ -110,13 +110,13 @@ function y(e) {
     return null == h || 0 === h.length
         ? null
         : (0, r.jsxs)(s.animated.div, {
-              className: a()(p.container, { [p.themeResponsiveContainer]: n }),
+              className: o()(p.container, { [p.themeResponsiveContainer]: n }),
               style: E(m({}, O), { opacity: +!!g }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: "span",
                       variant: "text-md/semibold",
-                      className: a()(p.description, {
+                      className: o()(p.description, {
                           [p.text]: !n,
                           [p.responsiveText]: n,
                       }),
@@ -124,7 +124,7 @@ function y(e) {
                   }),
                   (0, r.jsx)(c.zx, {
                       className: p.button,
-                      onClick: o,
+                      onClick: a,
                       children: _.intl.string(f.default.E5V5KC),
                   }),
               ],

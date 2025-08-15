@@ -2,9 +2,9 @@ n.d(t, { Z: () => s });
 var r = n(913527),
     i = n.n(r),
     l = n(626135),
-    o = n(981631);
+    a = n(981631);
 function s(e, t) {
-    l.default.track(o.rMx.AGE_GATE_SUBMITTED, {
+    l.default.track(a.rMx.AGE_GATE_SUBMITTED, {
         dob: 18 > i()().diff(e, "years") ? e.format("YYYY-MM-DD") : null,
         dob_day: e.date(),
         dob_month: e.month() + 1,

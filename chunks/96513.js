@@ -1,4 +1,3 @@
-n.d(t, { _: () => r });
-var r = (function (e) {
-    return (e[(e.EMBED = 1)] = "EMBED"), e;
-})({});
+r.d(t, { _: () => l });
+var n,
+    l = (((n = {})[(n.EMBED = 1)] = "EMBED"), n);

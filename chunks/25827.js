@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(75735),
     l = n(481060),
     c = n(40851),
@@ -71,9 +71,9 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,16 +82,16 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
     let t = (0, u.X)(e),
         {
             enabled: n,
-            cameraUnavailable: o,
-            onChange: a,
+            cameraUnavailable: a,
+            onChange: o,
             onCameraUnavailable: d,
             hasPermission: _,
             children: p,
@@ -99,7 +99,7 @@ function y(e) {
             join: m,
         } = e,
         g = (0, c.bp)(),
-        E = o ? () => d() : () => a(!e.enabled, g),
+        E = a ? () => d() : () => o(!e.enabled, g),
         { Component: b, play: y, events: O } = (0, s.o)(m || n ? "disable" : "enable");
     i.useEffect(() => () => y(), [n, y]);
     let v = m ? l.Odl : g === f.IlC.POPOUT ? (n ? l.Odl : l.Amn) : b;
@@ -111,7 +111,7 @@ function y(e) {
             iconComponent: v,
             iconColor: "currentColor",
             label: t,
-            unavailable: o,
+            unavailable: a,
             onMouseEnter: m ? void 0 : O.onMouseEnter,
             onMouseLeave: m ? void 0 : O.onMouseLeave,
         }),
@@ -122,7 +122,7 @@ function O(e) {
             enabled: t,
             join: n,
             channel: i,
-            onChange: o,
+            onChange: a,
             onCameraUnavailable: s,
             cameraUnavailable: l,
             hasPermission: c,
@@ -153,14 +153,14 @@ function O(e) {
         enabled: t,
         join: n,
         channel: i,
-        onChange: o,
+        onChange: a,
         onCameraUnavailable: s,
         cameraUnavailable: l,
         hasPermission: c,
         channelLimitReached: f,
         channelLimit: p,
         children: (e) => {
-            var { unavailable: t, onMouseEnter: i, onMouseLeave: o, isActive: s } = e,
+            var { unavailable: t, onMouseEnter: i, onMouseLeave: a, isActive: s } = e,
                 l = E(e, ["unavailable", "onMouseEnter", "onMouseLeave", "isActive"]);
             return (0, r.jsx)(
                 v,
@@ -174,9 +174,9 @@ function O(e) {
                     },
                     onMouseLeave: (e) => {
                         var t;
-                        null == (t = O.onMouseLeave) || t.call(O, e), null == o || o();
+                        null == (t = O.onMouseLeave) || t.call(O, e), null == a || a();
                     },
-                    className: a()(u, { [_.fauxDisabled]: t }),
+                    className: o()(u, { [_.fauxDisabled]: t }),
                     onPopoutClick: b,
                     isTrayButton: !n,
                 }),

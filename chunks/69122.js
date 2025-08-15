@@ -20,13 +20,13 @@ let i = (function () {
           }
         : void 0;
 })();
-function o(e) {
+function a(e) {
     if (!e)
         throw Error(
             "BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support",
         );
 }
-let a = /^-?[0-9]+$/,
+let o = /^-?[0-9]+$/,
     s = 4294967296;
 class l {
     constructor(e, t) {
@@ -62,10 +62,10 @@ class c extends l {
             switch (typeof e) {
                 case "string":
                     if ("0" == e) return this.ZERO;
-                    if (((e = e.trim()), !a.test(e))) throw Error("string is no integer");
-                    let [t, n, o] = (0, r.IL)(e);
+                    if (((e = e.trim()), !o.test(e))) throw Error("string is no integer");
+                    let [t, n, a] = (0, r.IL)(e);
                     if (t) throw Error("signed value");
-                    return new c(n, o);
+                    return new c(n, a);
                 case "number":
                     if (0 == e) return this.ZERO;
                     if (!Number.isSafeInteger(e)) throw Error("number is no integer");
@@ -78,7 +78,7 @@ class c extends l {
         return i ? this.toBigInt().toString() : (0, r.gn)(this.lo, this.hi);
     }
     toBigInt() {
-        return o(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigUint64(0, !0);
+        return a(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigUint64(0, !0);
     }
 }
 c.ZERO = new c(0, 0);
@@ -103,9 +103,9 @@ class u extends l {
             switch (typeof e) {
                 case "string":
                     if ("0" == e) return this.ZERO;
-                    if (((e = e.trim()), !a.test(e))) throw Error("string is no integer");
-                    let [t, n, o] = (0, r.IL)(e),
-                        l = new u(n, o);
+                    if (((e = e.trim()), !o.test(e))) throw Error("string is no integer");
+                    let [t, n, a] = (0, r.IL)(e),
+                        l = new u(n, a);
                     return t ? l.negate() : l;
                 case "number":
                     if (0 == e) return this.ZERO;
@@ -131,7 +131,7 @@ class u extends l {
         return (0, r.gn)(this.lo, this.hi);
     }
     toBigInt() {
-        return o(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigInt64(0, !0);
+        return a(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigInt64(0, !0);
     }
 }
 u.ZERO = new u(0, 0);

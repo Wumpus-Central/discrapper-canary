@@ -2,14 +2,14 @@ n.d(t, {
     B: () => l,
     Lc: () => c,
     hn: () => u,
-    zz: () => a,
+    zz: () => o,
 }),
     n(953529),
     n(415506),
     n(35282);
 var r = n(830496),
     i = n(959517);
-let o = [
+let a = [
         {
             reName: /\.jpe?g$/i,
             name: (e) => "image".concat(e, ".jpg"),
@@ -71,7 +71,7 @@ let o = [
             type: "image/webm",
         },
     ],
-    a = 524288000;
+    o = 524288000;
 function s(e) {
     let { spoiler: t } = e;
     return t ? i._j : "";
@@ -80,28 +80,28 @@ function l(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         i = arguments.length > 2 ? arguments[2] : void 0,
-        o = { id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id };
-    null != e.description && (o.description = e.description);
-    let a = s({ spoiler: e.spoiler });
+        a = { id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id };
+    null != e.description && (a.description = e.description);
+    let o = s({ spoiler: e.spoiler });
     return (
-        (o.filename = "".concat(a).concat(null != i ? i : e.filename)),
-        (o.uploaded_filename = e.uploadedFilename),
-        "durationSecs" in e && null != e.durationSecs && (o.duration_secs = e.durationSecs),
-        "waveform" in e && null != e.waveform && (o.waveform = e.waveform),
-        "isThumbnail" in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail),
-        "isRemix" in e && !0 === e.isRemix && (o.is_remix = e.isRemix),
+        (a.filename = "".concat(o).concat(null != i ? i : e.filename)),
+        (a.uploaded_filename = e.uploadedFilename),
+        "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs),
+        "waveform" in e && null != e.waveform && (a.waveform = e.waveform),
+        "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail),
+        "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix),
         "clip" in e &&
             null != e.clip &&
-            ((o.is_clip = !0),
-            (o.title = e.clip.name),
-            (o.application_id = e.clip.applicationId),
-            (o.clip_created_at = (0, r.U)(e.clip.id)),
-            (o.clip_participant_ids = (0, r.Z)(e.clip.users))),
+            ((a.is_clip = !0),
+            (a.title = e.clip.name),
+            (a.application_id = e.clip.applicationId),
+            (a.clip_created_at = (0, r.U)(e.clip.id)),
+            (a.clip_participant_ids = (0, r.Z)(e.clip.users))),
         "item" in e &&
             null != e.item &&
             "originalContentType" in e.item &&
-            (o.original_content_type = e.item.originalContentType),
-        o
+            (a.original_content_type = e.item.originalContentType),
+        a
     );
 }
 function c(e) {
@@ -120,14 +120,14 @@ function c(e) {
     });
 }
 function u(e) {
-    var t, n, r, i, a, s;
+    var t, n, r, i, o, s;
     let l,
         { uri: c, i: u, overrideFilename: d, overrideType: f } = e,
         _ = c.split("/"),
         p = _[_.length - 1];
     p = null != (r = null == (n = p.split("?")) || null == (t = n[0]) ? void 0 : t.toLowerCase()) ? r : "";
-    let h = o.find((e) => e.reName.test(p));
-    if ((null == h && null != d && (h = o.find((e) => e.reName.test(d))), null != h && null != d)) {
+    let h = a.find((e) => e.reName.test(p));
+    if ((null == h && null != d && (h = a.find((e) => e.reName.test(d))), null != h && null != d)) {
         let e = h.name(u).split(".").pop(),
             t = d.lastIndexOf(".");
         l = -1 !== t ? "".concat(d.substr(0, t), ".").concat(e) : "".concat(d, ".").concat(e);
@@ -136,7 +136,7 @@ function u(e) {
         uri: c,
         filename: l,
         type: null != (i = null != f ? f : null == h ? void 0 : h.type) ? i : "unknown",
-        isVideo: -1 !== (null != (a = null != f ? f : null == h ? void 0 : h.name(u)) ? a : "").indexOf("video"),
+        isVideo: -1 !== (null != (o = null != f ? f : null == h ? void 0 : h.name(u)) ? o : "").indexOf("video"),
         isImage: -1 !== (null != (s = null != f ? f : null == h ? void 0 : h.name(u)) ? s : "").indexOf("image"),
     };
 }

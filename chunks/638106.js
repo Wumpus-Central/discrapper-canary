@@ -15,11 +15,11 @@ var r = (function () {
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-function o(e, t) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-function a(e, t) {
+function o(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
@@ -45,7 +45,7 @@ e.exports = (function (e) {
     function t(e) {
         i(this, t);
         var n,
-            r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             (r._overshootClamping = f(e.overshootClamping, !1)),
             (r._restDisplacementThreshold = f(e.restDisplacementThreshold, 0.001)),
@@ -67,7 +67,7 @@ e.exports = (function (e) {
         );
     }
     return (
-        a(t, e),
+        o(t, e),
         r(t, [
             {
                 key: "start",
@@ -81,10 +81,10 @@ e.exports = (function (e) {
                         (this._lastTime = Date.now()),
                         i instanceof t)
                     ) {
-                        var o = i.getInternalState();
-                        (this._lastPosition = o.lastPosition),
-                            (this._lastVelocity = o.lastVelocity),
-                            (this._lastTime = o.lastTime);
+                        var a = i.getInternalState();
+                        (this._lastPosition = a.lastPosition),
+                            (this._lastVelocity = a.lastVelocity),
+                            (this._lastTime = a.lastTime);
                     }
                     void 0 !== this._initialVelocity &&
                         null !== this._initialVelocity &&
@@ -110,10 +110,10 @@ e.exports = (function (e) {
                         n = this._lastPosition,
                         r = this._lastVelocity,
                         i = 64,
-                        o = Date.now();
-                    o > this._lastTime + i && (o = this._lastTime + i);
-                    for (var a = 1, s = Math.floor((o - this._lastTime) / a), c = 0; c < s; ++c) {
-                        var u = a / 1000,
+                        a = Date.now();
+                    a > this._lastTime + i && (a = this._lastTime + i);
+                    for (var o = 1, s = Math.floor((a - this._lastTime) / o), c = 0; c < s; ++c) {
+                        var u = o / 1000,
                             d = t,
                             f = this._tension * (this._toValue - n) - this._friction * r,
                             n = e + (d * u) / 2,
@@ -131,7 +131,7 @@ e.exports = (function (e) {
                         (e += ((d + 2 * (_ + h) + g) / 6) * u), (t += b * u);
                     }
                     if (
-                        ((this._lastTime = o),
+                        ((this._lastTime = a),
                         (this._lastPosition = e),
                         (this._lastVelocity = t),
                         this._onUpdate(e),

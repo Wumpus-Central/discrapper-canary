@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    o = n(588468),
-    a = n(77498),
+    a = n(588468),
+    o = n(77498),
     s = n(483360),
     l = n(877565),
     c = n(590921),
@@ -16,20 +16,20 @@ function _(e) {
 }
 let p = {
     autocompleteInputElementType: "gameMentionInput",
-    stores: [a.Z],
+    stores: [o.Z],
     matches: (e, t, n, r, i) => !0,
     queryResults: (e, t, n) => ({ results: { games: s.ZP.queryGames(n).slice(0, 10) } }),
     renderResults(e) {
         let {
                 results: { games: t },
                 selectedIndex: n,
-                query: a,
+                query: o,
                 onHover: s,
                 onClick: c,
             } = e,
             f = t.map((e, t) =>
                 (0, r.jsx)(
-                    o.ZP.Game,
+                    a.ZP.Game,
                     {
                         onClick: c,
                         onHover: s,
@@ -49,7 +49,7 @@ let p = {
                     (0, l.gm)({
                         titleWithQuery: _,
                         titleWithoutQuery: p,
-                        query: a,
+                        query: o,
                         getQuery: (e) => "".concat(u.ME).concat(e),
                     }),
                     f,

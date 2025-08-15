@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(734934),
     S = n(223683),
     T = n(312400),
-    I = n(115345),
-    N = n(392888),
+    N = n(115345),
+    I = n(392888),
     y = n(106371),
     A = n(995774),
     P = n(921801),
@@ -630,7 +630,7 @@ function es() {
                                               variant: "primary",
                                               text: "Launch Migration",
                                               onClick: () => {
-                                                  (0, N.R)(!0);
+                                                  (0, I.R)(!0);
                                               },
                                           }),
                                       }),
@@ -659,13 +659,13 @@ async function ea(e) {
     e(!0);
     let t = await (0, S.Tn)();
     0 === t.length
-        ? await (0, I.oL)()
+        ? await (0, N.oL)()
         : m.Z.show({
               title: Y.intl.string(Y.t["cY+Ooa"]),
               body: Y.intl.format(Y.t["7zTJJS"], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: Y.intl.string(Y.t["ETE/oK"]),
               confirmText: Y.intl.string(Y.t.Rm96T0),
-              onConfirm: I.oL,
+              onConfirm: N.oL,
           }),
         e(!1);
 }

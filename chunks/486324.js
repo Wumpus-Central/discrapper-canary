@@ -1,12 +1,12 @@
 n.d(t, {
     Ff: () => v,
     Ij: () => h,
-    L0: () => a,
+    L0: () => o,
     MY: () => p,
     N8: () => f,
     SP: () => b,
     SW: () => E,
-    US: () => o,
+    US: () => a,
     Uo: () => _,
     X_: () => l,
     _T: () => c,
@@ -35,8 +35,8 @@ var r = n(678916),
             e
         );
     })({});
-let o = 552,
-    a = 2400,
+let a = 552,
+    o = 2400,
     s = 848,
     l = 2400,
     c = 1350,
@@ -53,7 +53,7 @@ let o = 552,
     y = 552 / (16 / 9),
     O = 220.8,
     v = r.HE.width / r.HE.height,
-    I = o / v;
+    I = a / v;
 var T = (function (e) {
     return (
         (e[(e.CROP_GIF_START = 0)] = "CROP_GIF_START"),

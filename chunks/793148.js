@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(755721),
     c = n(481060),
     u = n(540026),
@@ -23,7 +23,7 @@ function _(e, t, n) {
     );
 }
 let p = 150;
-class h extends (r = o.PureComponent) {
+class h extends (r = a.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
     }
@@ -41,8 +41,8 @@ class h extends (r = o.PureComponent) {
                 iconColor: t,
                 className: n,
                 sliderWrapperClassName: r,
-                sliderClassName: o,
-                currentWindow: a,
+                sliderClassName: a,
+                currentWindow: o,
                 muted: _,
                 minValue: h,
                 maxValue: m,
@@ -78,13 +78,13 @@ class h extends (r = o.PureComponent) {
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p));
                         },
                         children: (0, i.jsx)(u.Z, {
-                            sliderClassName: o,
+                            sliderClassName: a,
                             type: u.Z.Types.VOLUME,
                             value: g / m,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: a,
+                            currentWindow: o,
                             ref: this._mediaBar,
                         }),
                     }),
@@ -105,7 +105,7 @@ class h extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "_mediaBar", o.createRef()),
+            _(this, "_mediaBar", a.createRef()),
             _(this, "_hoverTimeout", void 0),
             _(this, "state", {
                 hovered: !1,
@@ -123,21 +123,21 @@ class h extends (r = o.PureComponent) {
             }),
             _(this, "handleKeyDown", (e) => {
                 let { minValue: t, value: n, maxValue: r, onValueChange: i } = this.props,
-                    o = 0.05 * (r - t);
+                    a = 0.05 * (r - t);
                 switch (e.key) {
                     case "ArrowUp":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                             this.setState({ focused: !0 });
                             break;
                         }
-                        null == i || i(Math.min(r, n + o));
+                        null == i || i(Math.min(r, n + a));
                         break;
                     case "ArrowDown":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                             this.setState({ focused: !0 });
                             break;
                         }
-                        null == i || i(Math.max(t, n - o));
+                        null == i || i(Math.max(t, n - a));
                         break;
                     case "Escape":
                         this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault();

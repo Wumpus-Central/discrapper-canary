@@ -1,6 +1,6 @@
 n.d(t, {
     Ku: () => i,
-    ZP: () => o,
+    ZP: () => a,
 });
 let r = (0, n(818083).B)({
     kind: "user",
@@ -19,4 +19,4 @@ function i(e, t) {
     let { showGameIcon: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return n;
 }
-let o = r;
+let a = r;

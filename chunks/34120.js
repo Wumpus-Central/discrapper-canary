@@ -1,8 +1,8 @@
 n.d(t, { d: () => y });
 var r = n(717029),
     i = n(25487),
-    o = n(846042),
-    a = n(794914),
+    a = n(846042),
+    o = n(794914),
     s = n(780603);
 function l(e) {
     return (l =
@@ -99,7 +99,7 @@ var y = (function (e) {
     function n() {
         var e;
         c(this, n);
-        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return (
             b(m((e = t.call.apply(t, [this].concat(i)))), "priority", 100),
             b(m(e), "incompatibleTokens", ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"]),
@@ -113,11 +113,11 @@ var y = (function (e) {
                 value: function (e, t, n) {
                     switch (t) {
                         case "w":
-                            return (0, o.ie)(i.z.week, e);
+                            return (0, a.ie)(i.z.week, e);
                         case "wo":
                             return n.ordinalNumber(e, { unit: "week" });
                         default:
-                            return (0, o.ZL)(t.length, e);
+                            return (0, a.ZL)(t.length, e);
                     }
                 },
             },
@@ -130,7 +130,7 @@ var y = (function (e) {
             {
                 key: "set",
                 value: function (e, t, n, r) {
-                    return (0, s.Z)((0, a.Z)(e, n, r), r);
+                    return (0, s.Z)((0, o.Z)(e, n, r), r);
                 },
             },
         ]),

@@ -1,11 +1,11 @@
-var r = n(172367),
-    i = n(169774);
-e.exports = function (e, t) {
-    var n = e._latestEditorState,
-        o = n.getSelection();
+var n = r(172367),
+    i = r(169774);
+t.exports = function (t, e) {
+    var r = t._latestEditorState,
+        o = r.getSelection();
     if (!o.getHasFocus()) {
         var a = o.set("hasFocus", !0);
-        e.props.onFocus && e.props.onFocus(t),
-            i.isBrowser("Chrome < 60.0.3081.0") ? e.update(r.forceSelection(n, a)) : e.update(r.acceptSelection(n, a));
+        t.props.onFocus && t.props.onFocus(e),
+            i.isBrowser("Chrome < 60.0.3081.0") ? t.update(n.forceSelection(r, a)) : t.update(n.acceptSelection(r, a));
     }
 };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(881052),
+    a = n(481060),
+    o = n(881052),
     s = n(128069),
     l = n(63063),
     c = n(563132),
@@ -24,7 +24,7 @@ function _(e) {
         O = null != b ? b.message : "";
     if (
         null != b &&
-        b instanceof a.HF &&
+        b instanceof o.HF &&
         (b.code === s.SM.CARD_DECLINED && y && (O += " ".concat(f.intl.string(f.t.iWvwQU))),
         b.code === s.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (O = f.intl.string(f.t.ypuSd3)),
         b.code === d.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (O = f.intl.string(f.t.mXMmWF)),
@@ -45,7 +45,7 @@ function _(e) {
         ? null
         : (0, r.jsx)("div", {
               className: _,
-              children: (0, r.jsx)(o.kzN, {
+              children: (0, r.jsx)(a.kzN, {
                   ref: n,
                   children: O,
               }),

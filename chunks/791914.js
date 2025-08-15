@@ -15,12 +15,12 @@ var i = n(399606),
     g = n(818186),
     m = n(999671),
     b = n(946443),
-    O = n(264233),
-    _ = n(388032),
+    _ = n(264233),
+    O = n(388032),
     y = n(407067);
 function v(e) {
     let { tab: t, setTab: n, badgeState: h, closePopout: m } = e,
-        { enabled: b, inInbox: O } = d.Z.useExperiment({ location: "RecentsPopout" }),
+        { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),
         v = (0, f.Us)({ location: "RecentsHeader" }),
         { enabled: C } = u.Z.useExperiment({ location: "RecentsHeader" }),
         E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
@@ -40,13 +40,13 @@ function v(e) {
                         className: y.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-active",
-                        children: _.intl.string(_.t.GSmTKC),
+                        children: O.intl.string(O.t.GSmTKC),
                     }),
                     (0, r.jsxs)(o.kL8, {
                         className: y.controls,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
-                        "aria-label": _.intl.string(_.t["8k+6QU"]),
+                        "aria-label": O.intl.string(O.t["8k+6QU"]),
                         children: [(0, r.jsx)(j, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
                     }),
                 ],
@@ -62,10 +62,10 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(o.njP.Item, {
                             id: l.X.FOR_YOU,
-                            "aria-label": _.intl.string(_.t["En+D+v"]),
+                            "aria-label": O.intl.string(O.t["En+D+v"]),
                             className: y.tab,
                             children: [
-                                _.intl.string(_.t["En+D+v"]),
+                                O.intl.string(O.t["En+D+v"]),
                                 (null == h ? void 0 : h.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
                                           color: s.Z.STATUS_DANGER,
@@ -77,13 +77,13 @@ function v(e) {
                         (0, r.jsx)(o.njP.Item, {
                             id: l.X.UNREADS,
                             className: y.tab,
-                            children: _.intl.string(_.t.sRUdBw),
+                            children: O.intl.string(O.t.sRUdBw),
                         }),
                         (0, r.jsx)(o.njP.Item, {
-                            "aria-label": _.intl.string(_.t["GRZF9/"]),
+                            "aria-label": O.intl.string(O.t["GRZF9/"]),
                             id: l.X.MENTIONS,
                             className: y.tab,
-                            children: _.intl.string(_.t["GRZF9/"]),
+                            children: O.intl.string(O.t["GRZF9/"]),
                         }),
                         C
                             ? (0, r.jsxs)(o.njP.Item, {
@@ -91,7 +91,7 @@ function v(e) {
                                   id: l.X.GAME_INVITES,
                                   className: y.tab,
                                   children: [
-                                      _.intl.string(_.t.apq3cX),
+                                      O.intl.string(O.t.apq3cX),
                                       E > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: s.Z.STATUS_DANGER,
@@ -101,15 +101,15 @@ function v(e) {
                                   ],
                               })
                             : null,
-                        b && O
+                        b && _
                             ? (0, r.jsx)(o.njP.Item, {
-                                  "aria-label": _.intl.string(_.t["2pAkDA"]),
+                                  "aria-label": O.intl.string(O.t["2pAkDA"]),
                                   id: l.X.BOOKMARKS,
                                   className: y.tab,
                                   children:
                                       0 === x
-                                          ? _.intl.string(_.t["2pAkDA"])
-                                          : _.intl.formatToPlainString(_.t.I4fryM, { count: x }),
+                                          ? O.intl.string(O.t["2pAkDA"])
+                                          : O.intl.formatToPlainString(O.t.I4fryM, { count: x }),
                               })
                             : null,
                         v
@@ -117,7 +117,7 @@ function v(e) {
                                   "aria-label": "scheduled",
                                   id: l.X.SCHEDULED,
                                   className: y.tab,
-                                  children: _.intl.string(_.t.Fn6Odn),
+                                  children: O.intl.string(O.t.Fn6Odn),
                               })
                             : null,
                     ],
@@ -135,6 +135,6 @@ function j(e) {
           : t === l.X.MENTIONS
             ? (0, r.jsx)(m.Z, {})
             : t === l.X.GAME_INVITES
-              ? (0, r.jsx)(O.S, {})
+              ? (0, r.jsx)(_.S, {})
               : null;
 }

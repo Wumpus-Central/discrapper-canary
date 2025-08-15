@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(680018),
+    a = n(442837),
+    o = n(680018),
     s = n(100527),
     l = n(906732),
     c = n(556019),
@@ -17,7 +17,7 @@ function g(e) {
     let { channel: t } = e,
         n = (0, l.ZP)(s.Z.EMOJI_PICKER),
         [g, E] = i.useState(!1),
-        b = (0, o.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        b = (0, a.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)),
         y = (0, c.qt)({
             autoTrackExposure: !1,
             location: s.Z.EMOJI_PICKER,
@@ -46,7 +46,7 @@ function g(e) {
                     E(!1);
             }
         }, [t, n, y, I]);
-    return (0, r.jsx)(a.z, {
+    return (0, r.jsx)(o.z, {
         variant: "secondary",
         size: "md",
         onClick: T,

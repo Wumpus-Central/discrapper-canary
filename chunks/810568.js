@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r = n(772848),
     i = n(146282),
-    o = n(626135),
-    a = n(981631),
+    a = n(626135),
+    o = n(981631),
     s = n(206583),
     l = (function (e) {
         return (
@@ -52,7 +52,7 @@ let u = () => (0, r.Z)(),
     d = (e) => {
         let { viewId: t, source: n, gameName: r, applicationId: l, authorId: c } = e;
         return (
-            o.default.track(a.rMx.GAME_PROFILE_OPEN, {
+            a.default.track(o.rMx.GAME_PROFILE_OPEN, {
                 view_id: t,
                 source: n,
                 game_name: r,
@@ -73,7 +73,7 @@ let u = () => (0, r.Z)(),
             similarGames: u,
             officialGuildId: d,
         } = e;
-        o.default.track(a.rMx.GAME_PROFILE_CLOSE, {
+        a.default.track(o.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
             application_id: r,
@@ -94,7 +94,7 @@ let u = () => (0, r.Z)(),
             viewId: l,
             officialGuildId: c,
         } = e;
-        o.default.track(a.rMx.GAME_PROFILE_ACTION, {
+        a.default.track(o.rMx.GAME_PROFILE_ACTION, {
             game_name: t,
             application_id: n,
             action: r,
@@ -113,7 +113,7 @@ let u = () => (0, r.Z)(),
             feedback: s,
             submitted: l,
         } = e;
-        return o.default.track(a.rMx.GAME_PROFILE_FEEDBACK, {
+        return a.default.track(o.rMx.GAME_PROFILE_FEEDBACK, {
             view_id: t,
             application_id: n,
             suggested_game_name: r,

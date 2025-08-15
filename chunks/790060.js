@@ -1,5 +1,5 @@
 n.d(t, {
-    L: () => o,
+    L: () => a,
     R: () => i,
 });
 var r = n(427164),
@@ -12,7 +12,7 @@ var r = n(427164),
             e
         );
     })({});
-let o = (0, r.le)({
+let a = (0, r.le)({
     name: "2025-07-trial-redemption-cta-copy",
     kind: "user",
     defaultConfig: {

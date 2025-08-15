@@ -1,6 +1,6 @@
 n.d(t, {
-    ED: () => o,
-    Jo: () => a,
+    ED: () => a,
+    Jo: () => o,
     g9: () => i,
     jE: () => s,
 }),
@@ -19,7 +19,7 @@ function i(e) {
         t
     );
 }
-function o(e) {
+function a(e) {
     let t = {};
     if (
         (void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName),
@@ -39,7 +39,7 @@ function o(e) {
         t
     );
 }
-function a(e) {
+function o(e) {
     let t = {};
     if (void 0 !== e.pendingAvatar) {
         let { pendingAvatar: n } = e;

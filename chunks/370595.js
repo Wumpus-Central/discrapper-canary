@@ -1,35 +1,35 @@
-n.d(t, { Z: () => u });
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    i = n(50493),
-    s = n(388032),
-    a = n(220512),
-    o = n(87819);
-function u(e) {
-    let { onNavigate: t, backPanel: n = i.k.INFO } = e;
-    return (0, r.jsxs)("div", {
-        className: o.header,
+t.d(e, { Z: () => o });
+var n = t(255367);
+t(73800);
+var r = t(481060),
+    l = t(50493),
+    i = t(388032),
+    a = t(220512),
+    s = t(87819);
+function o(A) {
+    let { onNavigate: e, backPanel: t = l.k.INFO } = A;
+    return (0, n.jsxs)("div", {
+        className: s.header,
         children: [
-            (0, r.jsx)("div", {
-                className: o.headerTitle,
-                children: (0, r.jsxs)(l.P3F, {
+            (0, n.jsx)("div", {
+                className: s.headerTitle,
+                children: (0, n.jsxs)(r.P3F, {
                     className: a.backButton,
-                    onClick: () => (null == t ? void 0 : t(n)),
+                    onClick: () => (null == e ? void 0 : e(t)),
                     children: [
-                        (0, r.jsx)(l.whL, {
+                        (0, n.jsx)(r.whL, {
                             size: "custom",
                             width: 20,
                             height: 20,
                         }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, n.jsx)(r.X6q, {
                             variant: "heading-md/semibold",
-                            children: s.intl.string(s.t["13/7kZ"]),
+                            children: i.intl.string(i.t["13/7kZ"]),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsx)(l.M2$, {
+            (0, n.jsx)(r.M2$, {
                 shortcut: "esc",
                 keyClassName: a.keyComboInner,
                 className: a.keyComboContainer,

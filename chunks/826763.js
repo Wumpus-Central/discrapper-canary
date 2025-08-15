@@ -1,15 +1,15 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(434404),
     a = n(962086),
-    s = n(303737),
-    o = n(981631),
+    o = n(303737),
+    s = n(981631),
     c = n(388032),
     u = n(941057),
     d = n(497224);
-function h(e) {
+function p(e) {
     let { guildId: t } = e;
     return (0, r.jsx)("div", {
         className: u.upsellPage,
@@ -40,8 +40,8 @@ function h(e) {
                                 text: c.intl.string(c.t["I/XhUl"]),
                                 onClick: () => {
                                     (0, a.mL)(t),
-                                        l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS),
-                                        (0, s.GN)(t);
+                                        l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS),
+                                        (0, o.GN)(t);
                                 },
                             }),
                         }),

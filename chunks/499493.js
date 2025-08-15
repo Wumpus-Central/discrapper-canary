@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h });
+r.d(t, { Z: () => j });
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -6,30 +6,30 @@ var n = r(255367),
     o = r(442837),
     s = r(481060),
     c = r(592125),
-    d = r(944486),
-    u = r(594174),
+    u = r(944486),
+    d = r(594174),
     m = r(5192),
-    g = r(178762),
-    p = r(91140),
-    f = r(297781),
+    f = r(178762),
+    g = r(91140),
+    p = r(297781),
     x = r(388032),
-    j = r(192025),
-    v = r(226788);
-let h = (e) => {
+    v = r(192025),
+    h = r(226788);
+let j = (e) => {
     let {
             entry: t,
             onClose: r,
             onReaction: i,
-            onRequestOpen: h,
+            onRequestOpen: j,
             disableActivityProfileLinks: b,
             customCTA: O,
             popoutClassname: y,
             popoutPosition: _ = "right",
         } = e,
         I = a.useRef(null),
-        w = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
-        P = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
-        { nick: E, avatar: N } = a.useMemo(() => {
+        w = (0, o.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
+        P = (0, o.e7)([d.default], () => d.default.getUser(t.author_id)),
+        { nick: E, avatar: S } = a.useMemo(() => {
             let e = null == P ? void 0 : P.getAvatarURL(null == w ? void 0 : w.guild_id, 48, !1);
             return {
                 nick: m.ZP.getName(null == w ? void 0 : w.guild_id, null == w ? void 0 : w.id, P),
@@ -45,7 +45,7 @@ let h = (e) => {
                   let { closePopout: a, updatePosition: l } = e;
                   return (0, n.jsx)("div", {
                       className: y,
-                      children: (0, n.jsx)(g.J, {
+                      children: (0, n.jsx)(f.J, {
                           entry: t,
                           closePopout: a,
                           updatePopoutPosition: l,
@@ -60,7 +60,7 @@ let h = (e) => {
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == h || h();
+                  null == j || j();
               },
               children: (e) => {
                   var r, a;
@@ -93,7 +93,7 @@ let h = (e) => {
                       })({ innerRef: I }, e)),
                       (a = a =
                           {
-                              className: j.profileEntryCard,
+                              className: v.profileEntryCard,
                               children: (0, n.jsx)(s.tEY, {
                                   offset: {
                                       top: 4,
@@ -104,14 +104,14 @@ let h = (e) => {
                                   children: (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           (0, n.jsx)("img", {
-                                              className: j.avatar,
-                                              src: N,
+                                              className: v.avatar,
+                                              src: S,
                                               alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: E }),
                                           }),
                                           (0, n.jsx)("div", {
-                                              className: j.playerInfo,
+                                              className: v.playerInfo,
                                               children: (0, n.jsxs)("div", {
-                                                  className: l()(v.column, v.gapXs),
+                                                  className: l()(h.column, h.gapXs),
                                                   children: [
                                                       (0, n.jsx)(s.Text, {
                                                           variant: "text-md/medium",
@@ -119,9 +119,9 @@ let h = (e) => {
                                                           lineClamp: 1,
                                                           children: E,
                                                       }),
-                                                      (0, n.jsx)(f.Gk, {
-                                                          location: f.Gt.APP_LAUNCHER,
-                                                          children: p.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r)),
+                                                      (0, n.jsx)(p.Gk, {
+                                                          location: p.Gt.APP_LAUNCHER,
+                                                          children: g.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r)),
                                                       }),
                                                   ],
                                               }),
@@ -129,7 +129,7 @@ let h = (e) => {
                                           null != O
                                               ? O
                                               : (0, n.jsx)("div", {
-                                                    className: j.reactions,
+                                                    className: v.reactions,
                                                     children: (0, n.jsx)(s.n$P, { size: "sm" }),
                                                 }),
                                       ],

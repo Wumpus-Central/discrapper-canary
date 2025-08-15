@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(990547),
     i = n(544891),
-    o = n(570140),
-    a = n(275759),
+    a = n(570140),
+    o = n(275759),
     s = n(710845),
     l = n(553795),
     c = n(626135),
@@ -83,13 +83,13 @@ let E = {
             })
             .then(
                 (e) =>
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "USER_CONNECTIONS_UPDATE",
                         local: !0,
                         accounts: e.body,
                     }),
                 () =>
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "USER_CONNECTIONS_UPDATE",
                         local: !0,
                         accounts: [],
@@ -100,7 +100,7 @@ let E = {
         let {
             location: n,
             twoWayLinkType: r,
-            userCode: o,
+            userCode: a,
             twoWayLink: s,
             successRedirect: u,
             handle: f,
@@ -111,7 +111,7 @@ let E = {
         });
         let _ = d.ANM.CONNECTIONS_AUTHORIZE(e),
             p = new URLSearchParams();
-        null != o && p.append("two_way_user_code", o),
+        null != a && p.append("two_way_user_code", a),
             null != u && p.append("success_redirect", u),
             null != r
                 ? (p.append("two_way_link_type", r), p.append("two_way_link", "true"))
@@ -123,17 +123,17 @@ let E = {
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-            { state: m } = (0, a.xp)(null != (t = h.body.url) ? t : "");
+            { state: m } = (0, o.xp)(null != (t = h.body.url) ? t : "");
         return null != m && l.Z.addPendingAuthorizedState(m), h;
     },
     callback: g,
-    connect(e, t, n, i, o) {
-        var a;
+    connect(e, t, n, i, a) {
+        var o;
         return u.Z.put({
             url: d.ANM.CONNECTION(e, t),
             body: {
                 name: n,
-                friend_sync: null != (a = null == o ? void 0 : o.friend_sync) ? a : d.BFP.has(e),
+                friend_sync: null != (o = null == a ? void 0 : a.friend_sync) ? o : d.BFP.has(e),
             },
             context: { location: i },
             oldFormErrors: !0,
@@ -183,7 +183,7 @@ let E = {
             rejectWithError: !1,
         }),
     joinServer(e, t) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: "USER_CONNECTIONS_INTEGRATION_JOINING",
             integrationId: e,
             joining: !0,
@@ -195,13 +195,13 @@ let E = {
                     rejectWithError: !1,
                 },
                 (n) => {
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "USER_CONNECTIONS_INTEGRATION_JOINING",
                         integrationId: e,
                         joining: !1,
                     }),
                         n.ok ||
-                            (o.Z.dispatch({
+                            (a.Z.dispatch({
                                 type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR",
                                 integrationId: e,
                                 error: n.hasErr ? void 0 : n.body.message,
@@ -220,7 +220,7 @@ let E = {
                 rejectWithError: !1,
             });
             return (
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: "USER_CONNECTION_UPDATE",
                     platformType: e,
                     id: t,
@@ -231,7 +231,7 @@ let E = {
         } catch (n) {
             throw (
                 (n.body.code === d.evJ.CONNECTION_REVOKED &&
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "USER_CONNECTION_UPDATE",
                         platformType: e,
                         id: t,
@@ -250,7 +250,7 @@ let E = {
         }),
     async completeTwoWayLink(e, t, n, r, i) {
         if (null == t) return void m.error("Two-way link: missing authorize location");
-        let { code: o, error: s, errorDescription: l } = (0, a.xp)(t);
+        let { code: a, error: s, errorDescription: l } = (0, o.xp)(t);
         return null != s
             ? void m.error("Two-way link: missing authorize code", {
                   error: s,
@@ -259,18 +259,18 @@ let E = {
             : await g(e, {
                   code: n,
                   state: r,
-                  two_way_link_code: o,
+                  two_way_link_code: a,
                   token_redirect_uri: i,
               });
     },
-    sessionHandoff: function (e, t, n, r, o) {
+    sessionHandoff: function (e, t, n, r, a) {
         return i.tn.post({
             url: d.ANM.CONNECTIONS_SESSION_HANDOFF(e),
             body: {
                 state: t,
                 code: n,
                 openid_params: r,
-                iss: o,
+                iss: a,
             },
             oldFormErrors: !0,
             rejectWithError: !1,

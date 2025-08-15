@@ -1,8 +1,8 @@
 let r;
 n.d(t, { y: () => p }), n(358797), n(388685), n(539854);
 var i = n(512722),
-    o = n.n(i),
-    a = n(135273);
+    a = n.n(i),
+    o = n(135273);
 n(17089);
 var s = n(673011),
     l = n(153102);
@@ -65,7 +65,7 @@ class p {
             let e = Date.now();
             this.initialize(), (this._isInitialized = !0);
             let t = Date.now() - e;
-            t > 5 && a.Z.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t);
+            t > 5 && o.Z.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t);
         }
     }
     initialize() {}
@@ -87,12 +87,12 @@ class p {
     waitFor() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         let r = t.map((e, t) =>
-            (o()(
+            (a()(
                 null != e,
                 "Store.waitFor(...) called with null Store at index ".concat(t, " for store ").concat(this.getName()),
             ),
             null != e._dispatcher)
-                ? (o()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."),
+                ? (a()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."),
                   e.getDispatchToken())
                 : null,
         );

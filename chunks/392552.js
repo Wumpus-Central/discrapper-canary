@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => i,
-    Z: () => o,
+    Z: () => a,
 });
 var r = n(818083),
     i = (function (e) {
@@ -11,7 +11,7 @@ var r = n(818083),
             e
         );
     })({});
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2024-02_emoji_picker_upload_desktop",
     label: "Desktop: Consistently show the Emoji Picker Upload button at the start of emoji lists",

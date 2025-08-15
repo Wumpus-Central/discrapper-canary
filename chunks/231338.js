@@ -12,10 +12,10 @@ n.d(t, {
     EK: () => eE,
     ET: () => ey,
     Et: () => q,
-    GZ: () => j,
+    GZ: () => k,
     H0: () => A,
     He: () => I,
-    Il: () => a.I,
+    Il: () => o.I,
     Jj: () => M,
     MA: () => eO,
     NY: () => L,
@@ -26,7 +26,7 @@ n.d(t, {
     Q: () => eg,
     QL: () => T,
     RG: () => eb,
-    RK: () => eo,
+    RK: () => ea,
     S7: () => U,
     Sk: () => h,
     TC: () => H,
@@ -34,13 +34,13 @@ n.d(t, {
     U9: () => _,
     Uk: () => N,
     V6: () => W,
-    Vq: () => Z,
+    Vq: () => V,
     Vz: () => y,
     X5: () => m,
     X6: () => Y,
     X7: () => P,
     XM: () => et,
-    Zu: () => k,
+    Zu: () => j,
     aO: () => ev,
     aV: () => S,
     am: () => ec,
@@ -64,15 +64,15 @@ n.d(t, {
     xr: () => d,
     yA: () => er,
     yX: () => ei,
-    yY: () => V,
+    yY: () => Z,
     zM: () => X,
 }),
     n(388685);
 var r = n(290926),
     i = n(149765),
-    o = n(860911);
+    a = n(860911);
 n(674746);
-var a = n(691324),
+var o = n(691324),
     s = n(481677);
 n(722770);
 let l = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
@@ -240,10 +240,10 @@ Object.freeze({
 var M = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    j = (function (e) {
+    k = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let k = Object.freeze({
+let j = Object.freeze({
     0: "subscription",
     1: "sku",
 });
@@ -311,9 +311,9 @@ let G = Object.freeze({
     B = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    Z = () => null,
+    V = () => null,
     F = () => Promise.resolve(),
-    V = [
+    Z = [
         G.KICK_MEMBERS,
         G.BAN_MEMBERS,
         G.ADMINISTRATOR,
@@ -324,7 +324,7 @@ let G = Object.freeze({
         G.MANAGE_THREADS,
         G.MODERATE_MEMBERS,
     ],
-    H = i.$e(...V),
+    H = i.$e(...Z),
     Y = 1,
     W = 6463,
     K = 10,
@@ -550,13 +550,13 @@ let $ = 250,
         TWITTER_SUPPORT: "https://twitter.com/discord_support",
         QUESTS: "/quests",
     },
-    eo = Object.freeze({
+    ea = Object.freeze({
         TWITTER: Object.freeze({
             default: "https://twitter.com/discord",
             ja: "https://twitter.com/discord_jp",
         }),
     }),
-    ea = Object.freeze({
+    eo = Object.freeze({
         WELCOME: "".concat(l, "/welcome/"),
         ME: "".concat(l, "/channels/@me"),
         SETTINGS: (e, t) =>
@@ -675,8 +675,8 @@ var es = (function (e) {
         e
     );
 })(es || {});
-let el = (0, o.Ft)(ea),
-    ec = (0, o.Ft)(es),
+let el = (0, a.Ft)(eo),
+    ec = (0, a.Ft)(es),
     eu = Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",

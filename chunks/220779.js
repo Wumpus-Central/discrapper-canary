@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(410030),
     c = n(541716),
@@ -79,7 +79,7 @@ function T(e) {
     let {
             placeholder: t,
             onEnter: n,
-            setEditorRef: o,
+            setEditorRef: a,
             showEmojiButton: s = !1,
             renderAttachButton: l,
             autoFocus: f = !0,
@@ -104,7 +104,7 @@ function T(e) {
         ref: N,
         placeholder: t,
         editorClassName: m,
-        className: a()(E.replyInput, m),
+        className: o()(E.replyInput, m),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: h.z,
@@ -129,7 +129,7 @@ function T(e) {
                       shouldRefocus: !1,
                   }));
         },
-        setEditorRef: o,
+        setEditorRef: a,
         focused: f,
         onFocus: _,
         disableThemedBackground: !0,
@@ -161,8 +161,8 @@ let S = (e, t) => {
     },
     A = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            o = (0, l.ZP)(),
-            [a, c] = i.useState(!1),
+            a = (0, l.ZP)(),
+            [o, c] = i.useState(!1),
             u = i.useRef(null),
             d = i.useRef(null);
         return (
@@ -171,11 +171,11 @@ let S = (e, t) => {
                 targetElementRef: d,
                 align: "right",
                 position: "top",
-                shouldShow: a,
+                shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () =>
                     (0, r.jsx)(s.f6W, {
-                        theme: o,
+                        theme: a,
                         children: (e) =>
                             (0, r.jsx)("div", {
                                 className: e,

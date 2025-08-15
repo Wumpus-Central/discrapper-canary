@@ -1,27 +1,14 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(739566),
-    s = n(492593),
-    l = n(930282),
+    o = n(492593),
+    s = n(930282),
     c = n(464891),
     u = n(62440);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,107 +19,100 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = m(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function g(e) {
-    var {
-            message: t,
-            channel: n,
-            content: i,
-            className: d,
+function p(e) {
+    var t,
+        n,
+        {
+            message: i,
+            channel: p,
+            content: m,
+            className: f,
             compact: _,
-            popoutProps: m,
-            hideTimestamp: g = !1,
-            withFooter: E = !1,
+            popoutProps: g,
+            hideTimestamp: h = !1,
+            withFooter: b = !1,
         } = e,
-        b = h(e, [
-            "message",
-            "channel",
-            "content",
-            "className",
-            "compact",
-            "popoutProps",
-            "hideTimestamp",
-            "withFooter",
-        ]);
-    let y = (0, a.ZP)(t);
+        E = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ["message", "channel", "content", "className", "compact", "popoutProps", "hideTimestamp", "withFooter"]);
+    let C = (0, a.ZP)(i);
     return (0, r.jsx)("div", {
-        className: o()({ [u.withFooter]: E }, u.embedCard, { [u.compact]: _ }, d),
+        className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: _ }, f),
         children: (0, r.jsx)(
-            s.Z,
-            p(f({}, b), {
-                className: o()(u.messageContainer, { [u.compact]: _ }),
-                childrenMessageContent: (0, r.jsx)(l.ZP, {
-                    className: o()(u.__invalid_messageContent, { [u.compact]: _ }),
-                    message: t,
-                    content: i,
-                    compact: null != _ && _,
-                }),
-                childrenHeader: (0, r.jsx)(
-                    c.ZP,
-                    f(
-                        {
-                            message: t,
-                            channel: n,
-                            author: y,
-                            guildId: null == n ? void 0 : n.guild_id,
-                            compact: _,
-                            hideTimestamp: g,
-                            className: o()(u.header, { [u.compact]: _ }),
-                        },
-                        null != m ? m : {},
+            o.Z,
+            ((t = d({}, E)),
+            (n = n =
+                {
+                    className: l()(u.messageContainer, { [u.compact]: _ }),
+                    childrenMessageContent: (0, r.jsx)(s.ZP, {
+                        className: l()(u.__invalid_messageContent, { [u.compact]: _ }),
+                        message: i,
+                        content: m,
+                        compact: null != _ && _,
+                    }),
+                    childrenHeader: (0, r.jsx)(
+                        c.ZP,
+                        d(
+                            {
+                                message: i,
+                                channel: p,
+                                author: C,
+                                guildId: null == p ? void 0 : p.guild_id,
+                                compact: _,
+                                hideTimestamp: h,
+                                className: l()(u.header, { [u.compact]: _ }),
+                            },
+                            null != g ? g : {},
+                        ),
                     ),
-                ),
-                compact: _,
-                author: y,
-            }),
+                    compact: _,
+                    author: C,
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t),
         ),
     });
 }

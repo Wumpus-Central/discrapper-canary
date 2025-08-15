@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(442837),
     i = n(570140),
-    o = n(710845),
-    a = n(186102),
+    a = n(710845),
+    o = n(186102),
     s = n(873741),
     l = n(592125),
     c = n(650774),
@@ -61,7 +61,7 @@ function m(e, t) {
         e
     );
 }
-let g = new o.Z("MessageRoundtripTrackerStore");
+let g = new a.Z("MessageRoundtripTrackerStore");
 function E(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
@@ -78,7 +78,7 @@ function b(e) {
     d.default.track(
         f.rMx.SEND_MESSAGE_ROUNDTRIP,
         p(
-            m(p({}, (0, a.Z)()), {
+            m(p({}, (0, o.Z)()), {
                 api_latency_ms: n,
                 gateway_latency_ms: r,
                 channel_id: t.id,
@@ -99,11 +99,11 @@ function y(e) {
 }
 class O extends r.ZP.Store {
     recordMessageSendAttempt(e, t) {
-        var n, r, i, o;
-        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        var n, r, i, a;
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             s =
-                (null != (i = null == (n = a.attachments) ? void 0 : n.length) ? i : 0) +
-                (null != (o = null == (r = a.attachmentsToUpload) ? void 0 : r.length) ? o : 0),
+                (null != (i = null == (n = o.attachments) ? void 0 : n.length) ? i : 0) +
+                (null != (a = null == (r = o.attachmentsToUpload) ? void 0 : r.length) ? a : 0),
             l = {
                 initialSendTimestamp: Date.now(),
                 apiResponseTimestamp: null,

@@ -1,67 +1,65 @@
 n.d(t, { Z: () => g }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    o = n(442837),
-    a = n(570140),
-    s = n(607070),
-    l = n(222677),
+var i = n(255367),
+    r = n(73800),
+    l = n(442837),
+    o = n(570140),
+    a = n(607070),
+    s = n(222677),
     c = n(695346),
     u = n(960020),
     d = n(347904),
-    f = n(620652),
-    _ = n(815605),
-    p = n(537509),
-    h = n(491726);
-function m(e) {
-    let { channelId: t, messageId: n, emoji: m, useChatFontScaling: g, color: E, count: b, emojiSize: y } = e,
-        O = (0, o.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, m)),
-        v = g ? h : p,
-        I = i.useMemo(
+    h = n(620652),
+    p = n(815605),
+    m = n(537509),
+    f = n(491726);
+let g = r.memo(function (e) {
+    let { channelId: t, messageId: n, emoji: g, useChatFontScaling: b, color: j, count: O, emojiSize: y } = e,
+        v = (0, l.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, g)),
+        T = r.useMemo(
             () =>
-                (0, _.Zn)(m, E, t, {
-                    key: O,
+                (0, p.Zn)(g, j, t, {
+                    key: v,
                     messageId: n,
                 }),
-            [E, O, m, t, n],
+            [j, v, g, t, n],
         ),
-        [T, S] = i.useState(!1),
-        A = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        N = c.Yk.useSetting(),
-        C = i.useCallback(() => {
-            a.Z.dispatch({
+        [S, x] = r.useState(!1),
+        E = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        R = c.Yk.useSetting(),
+        I = r.useCallback(() => {
+            o.Z.dispatch({
                 type: "BURST_REACTION_EFFECT_CLEAR",
                 channelId: t,
                 messageId: n,
-                emoji: m,
+                emoji: g,
             });
-        }, [m, t, n]);
-    return (i.useEffect(() => {
+        }, [g, t, n]);
+    return (r.useEffect(() => {
         let e = () => {
-            if (T) return;
-            let e = (0, d.vJ)("".concat(Date.now()).concat(t).concat(n).concat(m.name)) % 10;
-            (e += b > 4 ? 4 : b - 1) > 7 &&
-                (S(!0),
-                (0, l.T6)({
+            if (S) return;
+            let e = (0, d.vJ)("".concat(Date.now()).concat(t).concat(n).concat(g.name)) % 10;
+            (e += O > 4 ? 4 : O - 1) > 7 &&
+                (x(!0),
+                (0, s.T6)({
                     channelId: t,
                     messageId: n,
-                    emoji: m,
+                    emoji: g,
                     key: u.I.RANDOM,
                 }));
         };
-        if (T || (A && !N) || !N) return;
+        if (S || (E && !R) || !R) return;
         e();
-        let r = setInterval(e, 5000);
+        let i = setInterval(e, 5000);
         return () => {
-            clearInterval(r);
+            clearInterval(i);
         };
-    }, [N, t, b, m, m.name, T, n, A]),
-    null == O)
+    }, [R, t, O, g, g.name, S, n, E]),
+    null == v)
         ? null
-        : (0, r.jsx)(f.Z, {
-              className: v.effect,
-              effect: I,
-              onComplete: C,
+        : (0, i.jsx)(h.Z, {
+              className: (b ? f : m).effect,
+              effect: T,
+              onComplete: I,
               emojiSize: y,
           });
-}
-let g = i.memo(m);
+});

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(100527),
@@ -17,7 +17,7 @@ function g(e) {
     let {
             guildId: t,
             channel: n,
-            containerWidth: o,
+            containerWidth: a,
             onClose: g,
             onSelect: E,
             analyticsSource: b,
@@ -40,7 +40,7 @@ function g(e) {
         (0, r.jsx)(u.Gt, {
             value: P,
             children: (0, r.jsx)(l.VqE, {
-                className: a()(m.picker, {
+                className: o()(m.picker, {
                     [m.fetching]: R,
                     [m.inExpressionPicker]: T,
                 }),
@@ -52,7 +52,7 @@ function g(e) {
                           onClose: g,
                           onSelect: E,
                           shouldValidateSelectedSound: O,
-                          containerWidth: o,
+                          containerWidth: a,
                           suppressPlaySound: y,
                           shouldShowUpsell: v,
                           gridNotice: I,

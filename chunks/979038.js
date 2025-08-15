@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(620662),
-    o = n(841784),
-    a = n(834353),
+    a = n(841784),
+    o = n(834353),
     s = n(802856),
     l = n(420660),
     c = n(206074),
@@ -43,7 +43,7 @@ function C(e) {
             icon: () => (0, r.jsx)(h.Z, {}),
             onAction: C,
         });
-    if ((0, a.Z)(n))
+    if ((0, o.Z)(n))
         return (0, r.jsx)(y.Z, {
             platformType: A.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(p.Z, {}),
@@ -54,7 +54,7 @@ function C(e) {
             activity: n,
             onAction: C,
         });
-    let x = (0, i.Z)(n, A.xjy.JOIN) || (0, o.Z)(n),
+    let x = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
         M = (null == n ? void 0 : n.application_id) != null;
     return !D && w && null != P
         ? (0, r.jsx)(S.Z, {

@@ -8,8 +8,8 @@ n.d(t, {
     n(467055);
 var r,
     i = n(315008),
-    o = n(347715),
-    a = n(442837),
+    a = n(347715),
+    o = n(442837),
     s = n(570140),
     l = n(579806),
     c = n(710845),
@@ -100,16 +100,16 @@ function v(e) {
             n = new Date(e.current_set_start),
             r = new Date(e.current_set_end),
             i = new Date(e.next_set_start),
-            o = new Date(e.next_set_end);
+            a = new Date(e.next_set_end);
         if (t >= n && t < r)
             return {
                 currentSet: e.current_set,
                 catalogUpdateTime: r,
             };
-        if (t >= i && t < o)
+        if (t >= i && t < a)
             return {
                 currentSet: e.next_set,
-                catalogUpdateTime: o,
+                catalogUpdateTime: a,
             };
     }
     return {
@@ -137,21 +137,21 @@ function S(e) {
         r = y();
     (E.catalogFetchFailed = !1), (E.models = t.models), (E.limitedTimeVoices = t.limited_time_voices);
     let i = {},
-        o = v(E.limitedTimeVoices);
-    if (((E.catalogUpdateTime = o.catalogUpdateTime), r))
+        a = v(E.limitedTimeVoices);
+    if (((E.catalogUpdateTime = a.catalogUpdateTime), r))
         for (let e of Object.keys(d.x))
             i[e] = h(_({}, d.x[e]), {
                 id: e,
                 modelIds: void 0,
                 available: !0,
             });
-    for (let { id: e, models: n, available: a } of t.voices)
+    for (let { id: e, models: n, available: o } of t.voices)
         Object.hasOwn(d.x, e) &&
             (i[e] = h(_({}, d.x[e]), {
                 id: e,
                 modelIds: n,
-                available: !!r || a,
-                temporarilyAvailable: o.currentSet.includes(e),
+                available: !!r || o,
+                temporarilyAvailable: a.currentSet.includes(e),
             }));
     (E.voiceFilters = i),
         (E.sortedVoiceFilters = T(E.voiceFilters)),
@@ -164,7 +164,7 @@ function S(e) {
 function A() {
     E.catalogFetchFailed = !0;
 }
-class N extends (r = a.ZP.Store) {
+class N extends (r = o.ZP.Store) {
     getVoiceFilterModels() {
         return E.models;
     }
@@ -267,7 +267,7 @@ function D(e) {
 }
 function L(e) {
     let { timeInSeconds: t } = e;
-    I((0, o.Z)(new Date(), t));
+    I((0, a.Z)(new Date(), t));
 }
 function x(e) {
     E.nativeVoiceFilterModuleState = e.state;
@@ -275,10 +275,10 @@ function x(e) {
 function M() {
     E.error = "ERROR_ACTIVATING_VOICE_FILTER";
 }
-function j() {
+function k() {
     E.error = null;
 }
-function k() {
+function j() {
     b = Date.now();
 }
 f(N, "displayName", "VoiceFilterStore");
@@ -293,6 +293,6 @@ let U = new N(s.Z, {
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: L,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: x,
     VOICE_FILTER_APPLY_FAILED: M,
-    VOICE_FILTER_REQUEST_SWITCH: j,
-    VOICE_FILTER_LAGGING: k,
+    VOICE_FILTER_REQUEST_SWITCH: k,
+    VOICE_FILTER_LAGGING: j,
 });

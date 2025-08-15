@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(245315),
     i = n(368859);
-function o(e) {
+function l(e) {
     var t;
     return (
         !((0, r.cp)(e) || ((0, i.Z)(e) && (null == (t = e.messageReference) ? void 0 : t.guild_id) != null)) &&

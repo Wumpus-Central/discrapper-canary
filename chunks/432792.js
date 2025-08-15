@@ -1,7 +1,7 @@
 n.d(t, {
     M: () => x,
-    M4: () => P,
-    WS: () => I,
+    M4: () => I,
+    WS: () => P,
     t4: () => C,
 }),
     n(388685),
@@ -21,8 +21,8 @@ var r = n(255367),
     g = n(930153),
     m = n(822857),
     b = n(622562),
-    O = n(937860),
-    _ = n(921944),
+    _ = n(937860),
+    O = n(921944),
     y = n(557766),
     v = n(447489),
     j = n(484885);
@@ -44,8 +44,8 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
                     c ||
                         (0, p.Q3)(E[t], {
                             forceTrack: !0,
-                            dismissAction: "CTA_CLICK" === e ? _.L.TAKE_ACTION : _.L.USER_DISMISS,
-                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING,
+                            dismissAction: "CTA_CLICK" === e ? O.L.TAKE_ACTION : O.L.USER_DISMISS,
+                            groupName: O.R.VIRTUAL_CURRENCY_ONBOARDING,
                         });
                 },
                 [c, t],
@@ -54,7 +54,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
         return (
             i.useEffect(() => {
                 u
-                    ? h || ((0, f.kk)(s, { groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), g(!0))
+                    ? h || ((0, f.kk)(s, { groupName: O.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), g(!0))
                     : h && g(!1);
             }, [u, r, h, s]),
             {
@@ -91,7 +91,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
                   ],
               });
     },
-    P = (e) => {
+    I = (e) => {
         let {
             titleText: t,
             descriptionText: n,
@@ -121,7 +121,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
             position: d,
             align: p,
             hideDismissButton: !0,
-            dismissIcon: (0, r.jsx)(O.s, {}),
+            dismissIcon: (0, r.jsx)(_.s, {}),
             onDismissIconClick: c,
             contentClassName: y.container,
             pointerClassName: y.coachmarkPointer,
@@ -129,7 +129,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
             art: (0, r.jsx)(S, { customIconSrcs: u }),
         });
     };
-function I(e) {
+function P(e) {
     let {
             calculateVisibility: t,
             children: n,
@@ -143,15 +143,15 @@ function I(e) {
             position: h = "right",
         } = e,
         [g, m] = i.useState("bottom" === u),
-        [O, _] = i.useState(!0),
+        [_, O] = i.useState(!0),
         [y, v] = i.useState(String(Date.now())),
         j = (0, c.Z)(),
         C = i.useCallback(
             (e) => {
                 let n = t(e);
-                n !== O && _(n);
+                n !== _ && O(n);
             },
-            [O, t],
+            [_, t],
         ),
         E = a.current,
         x = i.useCallback(() => {
@@ -191,16 +191,16 @@ function I(e) {
         shouldPollPositionOnMount: !0,
         targetElementRef: a,
     });
-    let P = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
-        I = O && !j,
-        N = i.Children.map(l, (e) => i.cloneElement(e, { align: P }));
+    let I = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
+        P = _ && !j,
+        N = i.Children.map(l, (e) => i.cloneElement(e, { align: I }));
     return (0, r.jsx)(s.yRy, {
         autoInvert: !1,
         renderPopout: () => N,
         position: h,
-        align: P,
+        align: I,
         nudgeAlignIntoViewport: !1,
-        shouldShow: I,
+        shouldShow: P,
         spacing: f,
         positionKey: y,
         animation: s.yRy.Animation.TRANSLATE,

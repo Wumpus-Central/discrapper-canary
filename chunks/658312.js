@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(73800),
     i = n(512722),
-    o = n.n(i),
-    a = n(493773);
+    a = n.n(i),
+    o = n(493773);
 let s = 1000 / 24,
     l = 3,
     c = 3000,
@@ -38,7 +38,7 @@ let s = 1000 / 24,
                         (E.current = setTimeout(b, d)),
                         null != i &&
                             g.current > i &&
-                            (o()(
+                            (a()(
                                 null != u,
                                 "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit",
                             ),
@@ -56,7 +56,7 @@ let s = 1000 / 24,
             r.useEffect(() => {
                 f.current = t;
             }, [t]),
-            (0, a.ZP)(() => ((_.current = requestAnimationFrame(O)), () => y())),
+            (0, o.ZP)(() => ((_.current = requestAnimationFrame(O)), () => y())),
             {
                 stop: y,
                 reset: v,

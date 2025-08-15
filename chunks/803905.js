@@ -1,8 +1,8 @@
 n.d(t, {
     $0: () => R,
-    AN: () => j,
+    AN: () => k,
     Ct: () => A,
-    DU: () => Z,
+    DU: () => V,
     EQ: () => B,
     Ej: () => T,
     ME: () => m,
@@ -14,7 +14,7 @@ n.d(t, {
     _G: () => O,
     _O: () => S,
     _y: () => g,
-    do: () => k,
+    do: () => j,
     g7: () => P,
     g_: () => p,
     hs: () => b,
@@ -32,8 +32,8 @@ n.d(t, {
     n(49124);
 var r = n(848246),
     i = n(710845),
-    o = n(380684),
-    a = n(533293),
+    a = n(380684),
+    o = n(533293),
     s = n(526998),
     l = n(575691),
     c = n(474936);
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return !1;
 }
-class _ extends a.Z {
+class _ extends o.Z {
     constructor(e, t) {
         super(e, (e) => f(this, e), t);
     }
@@ -95,15 +95,15 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     L = new _("fancyVoiceChannelReactions"),
     x = new _("installPremiumApplications"),
     M = new _("redeemPremiumPerks"),
-    j = new _(r.q.VIDEO_FILTER_ASSETS);
-new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
-let k = new _(r.q.INCREASED_GUILD_LIMIT),
+    k = new _(r.q.VIDEO_FILTER_ASSETS);
+new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
+let j = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _("increasedVideoUploadQuality"),
     B = new _("uploadLargeFiles"),
-    Z = new _(r.q.CHAT_WALLPAPERS),
+    V = new _(r.q.CHAT_WALLPAPERS),
     F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, G, B, A]),
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
             p,
@@ -124,8 +124,8 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
             L,
             x,
             M,
-            j,
             k,
+            j,
             U,
             G,
             B,
@@ -133,10 +133,10 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
             S,
             D,
             b,
-            Z,
+            V,
         ]),
     }),
-    V = [C, R];
+    Z = [C, R];
 function H(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
 }

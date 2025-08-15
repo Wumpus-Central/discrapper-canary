@@ -2,32 +2,32 @@ n.d(t, { Z: () => c }), n(997841);
 var r = n(255367);
 n(73800);
 var i = n(630388),
-    o = n(901461),
+    l = n(901461),
     a = n(773176),
-    s = n(981631),
-    l = n(360514);
+    o = n(981631),
+    s = n(360514);
 function c(e) {
     let {
             setPopout: t,
             messagePopouts: { emojiPicker: n, emojiBurstPicker: c, moreUtilities: u },
             isFocused: d,
-            buttonProps: { message: f, channel: _, groupId: p, compact: h = !1 },
-            messageWindow: m,
+            buttonProps: { message: p, channel: h, groupId: f, compact: m = !1 },
+            messageWindow: g,
         } = e,
-        g = f.state === s.yb.SENDING,
-        E = f.id === p,
-        b = (0, i.yE)(f.flags, s.iLy.EPHEMERAL),
-        y = f.state === s.yb.SEND_FAILED;
-    return g || (b && !y)
+        b = p.state === o.yb.SENDING,
+        y = p.id === f,
+        _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        C = p.state === o.yb.SEND_FAILED;
+    return b || (_ && !C)
         ? null
         : (0, r.jsx)(a.Z, {
-              className: l.buttons,
-              innerClassName: l.buttonsInner,
-              isHeader: !h && E && !(0, o.Z)(f),
-              isReply: !h && f.type === s.uaV.REPLY && null != f.messageReference,
-              channel: _,
-              message: f,
-              messageWindow: m,
+              className: s.buttons,
+              innerClassName: s.buttonsInner,
+              isHeader: !m && y && !(0, l.Z)(p),
+              isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
+              channel: h,
+              message: p,
+              messageWindow: g,
               setPopout: t,
               showEmojiPicker: n,
               showEmojiBurstPicker: c,

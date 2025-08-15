@@ -1,7 +1,7 @@
 n.d(t, { C: () => c });
 var r = n(688619),
     i = n.n(r);
-let o = [
+let a = [
         "#94E0CF",
         "#9AF0B1",
         "#9A90FF",
@@ -17,7 +17,7 @@ let o = [
         "#F0AE29",
         "#DF4232",
     ],
-    a = [0, 45, 90, 135, 180, 225, 270, 315],
+    o = [0, 45, 90, 135, 180, 225, 270, 315],
     s = [20, 40, 60, 80],
     l = ["analogous", "complementary", "split-complementary", "triadic"];
 function c() {
@@ -25,24 +25,24 @@ function c() {
     if (!(0.8 > Math.random()))
         return {
             type: "solid",
-            colors: [o[Math.floor(Math.random() * o.length)]],
+            colors: [a[Math.floor(Math.random() * a.length)]],
             intensity: e,
         };
-    let t = a[Math.floor(Math.random() * a.length)];
+    let t = o[Math.floor(Math.random() * o.length)];
     if ("path1" == (0.2 > Math.random() ? "path1" : "path2")) {
-        let n = Math.floor(Math.random() * o.length),
-            r = Math.floor(Math.random() * o.length);
-        for (; r === n; ) r = Math.floor(Math.random() * o.length);
+        let n = Math.floor(Math.random() * a.length),
+            r = Math.floor(Math.random() * a.length);
+        for (; r === n; ) r = Math.floor(Math.random() * a.length);
         return {
             type: "gradient",
-            colors: [o[n], o[r]],
+            colors: [a[n], a[r]],
             angle: t,
             intensity: e,
             gradientType: "two-color",
         };
     }
     {
-        let n = o[Math.floor(Math.random() * o.length)],
+        let n = a[Math.floor(Math.random() * a.length)],
             r = l[Math.floor(Math.random() * l.length)];
         return {
             type: "gradient",
@@ -65,35 +65,35 @@ function u(e, t, n, r) {
     ];
 }
 function d(e, t, n, r) {
-    let o = (r + 180) % 360,
-        a = i().hsl(o, t, n).hex();
-    return [e, i().mix(e, a, 0.5).hex(), a];
+    let a = (r + 180) % 360,
+        o = i().hsl(a, t, n).hex();
+    return [e, i().mix(e, o, 0.5).hex(), o];
 }
 function f(e, t, n, r) {
-    let o = (r + 150) % 360,
-        a = (r + 210) % 360;
-    return [e, i().hsl(o, t, n).hex(), i().hsl(a, t, n).hex()];
+    let a = (r + 150) % 360,
+        o = (r + 210) % 360;
+    return [e, i().hsl(a, t, n).hex(), i().hsl(o, t, n).hex()];
 }
 function _(e, t, n, r) {
-    let o = (r + 120) % 360,
-        a = (r + 240) % 360;
-    return [e, i().hsl(o, t, n).hex(), i().hsl(a, t, n).hex()];
+    let a = (r + 120) % 360,
+        o = (r + 240) % 360;
+    return [e, i().hsl(a, t, n).hex(), i().hsl(o, t, n).hex()];
 }
 function p(e, t) {
     try {
         let n = i()(e),
             r = n.get("hsl.h"),
-            o = n.get("hsl.s"),
-            a = n.get("hsl.l");
+            a = n.get("hsl.s"),
+            o = n.get("hsl.l");
         switch (t) {
             case "analogous":
-                return u(e, o, a, r);
+                return u(e, a, o, r);
             case "complementary":
-                return d(e, o, a, r);
+                return d(e, a, o, r);
             case "split-complementary":
-                return f(e, o, a, r);
+                return f(e, a, o, r);
             case "triadic":
-                return _(e, o, a, r);
+                return _(e, a, o, r);
             default:
                 return [e];
         }

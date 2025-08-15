@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(239091),
@@ -69,10 +69,10 @@ function I(e, t) {
     );
 }
 let T = function (e) {
-    let { gameId: t, channelId: o } = e,
+    let { gameId: t, channelId: a } = e,
         y = i.useRef(null),
         v = (0, s.e7)([p.Z], () => p.Z.getDetectableGame(t)),
-        T = (0, s.e7)([_.Z], () => _.Z.getChannel(o)),
+        T = (0, s.e7)([_.Z], () => _.Z.getChannel(a)),
         S = null != T ? T.getGuildId() : null,
         A =
             null != v
@@ -94,7 +94,7 @@ let T = function (e) {
             null != v
                 ? (0, r.jsx)("img", {
                       alt: "",
-                      className: a()(b.icon, b.imageIcon),
+                      className: o()(b.icon, b.imageIcon),
                       src: h.ZP.getApplicationIconURL({
                           id: v.id,
                           icon: v.icon,

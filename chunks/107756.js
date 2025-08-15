@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(427164),
     i = n(987170),
-    o = n(987338);
-let a = (0, r.le)({
+    a = n(987338);
+let o = (0, r.le)({
         name: "2025-08-halloween-gifting-2025",
         kind: "user",
         defaultConfig: {
@@ -33,7 +33,7 @@ let a = (0, r.le)({
         label: "Seasonal Gifting Reminder 2024",
         kind: "user",
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -43,7 +43,7 @@ let a = (0, r.le)({
         ],
     });
 function l() {
-    let { animated: e } = a.useConfig({ location: "useIsGiftingPromotionAnimated" });
+    let { animated: e } = o.useConfig({ location: "useIsGiftingPromotionAnimated" });
     return e;
 }
-let c = a;
+let c = o;

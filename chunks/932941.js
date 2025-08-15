@@ -1,6 +1,6 @@
 n.d(t, {
     $u: () => i,
-    Bk: () => a,
+    Bk: () => c,
     pF: () => r,
     wq: () => o,
 });
@@ -902,4 +902,4 @@ let r = [
         "wigger",
         "zipperhead",
     ],
-    a = ["hunter2", "frik"];
+    c = ["hunter2", "frik"];

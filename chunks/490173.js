@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(990547),
-    a = n(442837),
+    a = n(990547),
+    o = n(442837),
     s = n(481060),
     l = n(239091),
     c = n(40851),
@@ -71,7 +71,7 @@ let O = (e) => {
     let {
             children: t,
             close: n,
-            onUnmount: a,
+            onUnmount: o,
             target: l,
             rect: f,
             position: _,
@@ -106,9 +106,9 @@ let O = (e) => {
                 }
             );
         }, []);
-    let I = i.useRef(a);
+    let I = i.useRef(o);
     i.useEffect(() => {
-        I.current = a;
+        I.current = o;
     }),
         i.useEffect(
             () => () => {
@@ -122,7 +122,7 @@ let O = (e) => {
             null == (e = b.current) || e.updatePosition();
         }),
         (0, u.Z)({
-            type: o.ImpressionTypes.MENU,
+            type: a.ImpressionTypes.MENU,
             name: m,
             properties: g,
         });
@@ -177,9 +177,9 @@ class v extends i.PureComponent {
     }
     render() {
         var e, t;
-        let { appContext: n, target: i, isOpen: o, theme: a, config: s, rect: l } = this.props,
+        let { appContext: n, target: i, isOpen: a, theme: o, config: s, rect: l } = this.props,
             c = null != (e = this.state.render) ? e : this.props.render;
-        return o && null != l && null != s && null != i && null != c && s.context === n
+        return a && null != l && null != s && null != i && null != c && s.context === n
             ? (0, r.jsx)(O, {
                   target: i,
                   rect: l,
@@ -194,7 +194,7 @@ class v extends i.PureComponent {
                       let { position: r } = e;
                       return c({
                           position: r,
-                          theme: a,
+                          theme: o,
                           onHeightUpdate: t,
                           config: s,
                           target: i,
@@ -222,12 +222,12 @@ function I() {
             contextMenu: e,
             version: t,
             isOpen: n,
-        } = (0, a.cj)([_.Z], () => ({
+        } = (0, o.cj)([_.Z], () => ({
             contextMenu: _.Z.getContextMenu(),
             version: _.Z.version,
             isOpen: _.Z.isOpen(),
         })),
-        o = (0, a.e7)([f.Z], () => f.Z.theme),
+        a = (0, o.e7)([f.Z], () => f.Z.theme),
         { appContext: s, renderWindow: u } = i.useContext(c.ZP);
     return (0, r.jsx)(
         v,
@@ -241,7 +241,7 @@ function I() {
             ),
             {
                 isOpen: n,
-                theme: o,
+                theme: a,
                 closeContextMenu: l.Zy,
             },
         ),

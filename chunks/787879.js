@@ -1,8 +1,8 @@
 n.d(t, { Z: () => eE }), n(361932), n(187205), n(539854), n(388685), n(642613), n(387201);
 var r,
     i = n(512722),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(786761),
     c = n(455199),
@@ -44,14 +44,14 @@ let P = {},
     L = new S.Z(),
     x = !1,
     M = !1,
-    j = !1,
     k = !1,
+    j = !1,
     U = v.default.fromTimestamp(Date.now()),
     G = !0,
     B = null,
-    Z = null,
+    V = null,
     F = !0;
-function V() {
+function Z() {
     let e = b.ZP.getFlattenedGuildIds().flatMap((e) => m.ZP.getSelectableChannelIds(e)),
         t = u.Z.getAllActiveJoinedThreads(),
         n = (e) =>
@@ -64,8 +64,8 @@ function V() {
     }
     for (let e in t)
         for (let i in t[e])
-            for (let o in t[e][i]) {
-                let e = h.Z.getBasicChannel(o);
+            for (let a in t[e][i]) {
+                let e = h.Z.getBasicChannel(a);
                 null != e && n(e) && r.push(e);
             }
     return r
@@ -121,8 +121,8 @@ function Y() {
     U = "0";
 }
 function W() {
-    let { notifyingChannelIds: e, staleChannelIds: t } = V();
-    (w = e), (D = t), o()(null != w, "notifyingChannelIds should not be null");
+    let { notifyingChannelIds: e, staleChannelIds: t } = Z();
+    (w = e), (D = t), a()(null != w, "notifyingChannelIds should not be null");
     let n = w.filter((e) => null == P[e]),
         r = Object.keys(P).filter((e) => !(null == w ? void 0 : w.includes(e)));
     if (0 !== w.length && 0 === n.length && 0 === r.length) return !1;
@@ -137,10 +137,10 @@ function W() {
         ) {
             let t = H(e);
             if (null != t) {
-                var i, a;
+                var i, o;
                 (P[e].loadState = A.a7.LOADED),
                     (P[e].mostRecentMessageId =
-                        null != (a = null == (i = t.last()) ? void 0 : i.id) ? a : P[e].mostRecentMessageId);
+                        null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : P[e].mostRecentMessageId);
             }
         }
     L.updateChannelIds(w), Y();
@@ -152,11 +152,11 @@ function K() {
         (L = new S.Z()),
         (x = !1),
         (M = !1),
-        (j = !1),
+        (k = !1),
         (U = v.default.fromTimestamp(Date.now())),
         (G = !0),
-        (k = !1),
-        (Z = null),
+        (j = !1),
+        (V = null),
         (B = null);
 }
 function z() {
@@ -195,24 +195,24 @@ function Q(e) {
 }
 function J(e) {
     var t, n, r;
-    let { channelId: i, message: o } = e;
+    let { channelId: i, message: a } = e;
     if (
         null == w ||
-        (null == (t = o.author) ? void 0 : t.id) === (null == (n = O.default.getCurrentUser()) ? void 0 : n.id)
+        (null == (t = a.author) ? void 0 : t.id) === (null == (n = O.default.getCurrentUser()) ? void 0 : n.id)
     )
         return !1;
-    let a = w.includes(i),
-        s = Q(o),
+    let o = w.includes(i),
+        s = Q(a),
         l = s.mentioned;
-    if (!a && !l) {
+    if (!o && !l) {
         if (!D.includes(i)) return !1;
         W();
     }
-    if (!a && l && !(0, c.ln)(s)) return !1;
+    if (!o && l && !(0, c.ln)(s)) return !1;
     L.addMessage({
-        id: o.id,
-        channelId: o.channel_id,
-        guildId: null == (r = h.Z.getBasicChannel(o.channel_id)) ? void 0 : r.guild_id,
+        id: a.id,
+        channelId: a.channel_id,
+        guildId: null == (r = h.Z.getBasicChannel(a.channel_id)) ? void 0 : r.guild_id,
         kind: l ? A.fL.MENTION : A.fL.ALL_MESSAGES_CHANNEL,
         message: s,
     });
@@ -256,9 +256,9 @@ function er() {
 }
 function ei(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (x = !1), t ? (k = !0) : (null != n && (G = n), (j = !0)), (Z = null != r ? r : null);
+    (x = !1), t ? (j = !0) : (null != n && (G = n), (k = !0)), (V = null != r ? r : null);
 }
-function eo(e) {
+function ea(e) {
     var t;
     let { preload: n } = e;
     return (
@@ -273,12 +273,12 @@ function eo(e) {
         null != w &&
         !x &&
         !M &&
-        (!n || !k) &&
+        (!n || !j) &&
         G
     );
 }
-function ea() {
-    (x = !1), (Z = null), (M = !0);
+function eo() {
+    (x = !1), (V = null), (M = !0);
 }
 function es(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
@@ -321,13 +321,13 @@ function ef(e) {
 function e_(e) {
     var t;
     let { id: n, addedMembers: r, removedMemberIds: i } = e,
-        o = null == (t = O.default.getCurrentUser()) ? void 0 : t.id;
-    if (null == o) return !1;
-    if (null == r ? void 0 : r.some((e) => e.userId === o)) {
+        a = null == (t = O.default.getCurrentUser()) ? void 0 : t.id;
+    if (null == a) return !1;
+    if (null == r ? void 0 : r.some((e) => e.userId === a)) {
         let e = h.Z.getBasicChannel(n);
         return !(null == e || d.Z.isMuted(n)) && (0, f.J)(e) !== C.iN.NO_MESSAGES && void q();
     }
-    return null != i && !!i.includes(o) && void q();
+    return null != i && !!i.includes(a) && void q();
 }
 function ep(e) {
     let { channel: t } = e;
@@ -343,13 +343,13 @@ function em(e) {
     let { navOnClick: t } = e;
     F = null == t || t;
 }
-class eg extends (r = a.ZP.Store) {
+class eg extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(b.ZP, m.ZP, h.Z, E.ZP, u.Z, d.Z, y.ZP, g.Z, c.ZP);
     }
     canLoadMore(e) {
         let { preload: t } = e;
-        return eo({ preload: t });
+        return ea({ preload: t });
     }
     getInboxMessages() {
         return L.getMessages();
@@ -370,10 +370,10 @@ class eg extends (r = a.ZP.Store) {
         return x;
     }
     get hasLoadedEver() {
-        return j;
+        return k;
     }
     get hasPreloaded() {
-        return k;
+        return j;
     }
     get isLoadingComplete() {
         return !x && !G;
@@ -382,7 +382,7 @@ class eg extends (r = a.ZP.Store) {
         return B;
     }
     get currentRequestAnalyticsPayload() {
-        return Z;
+        return V;
     }
     getDevOverrides() {
         return { navOnClick: F };
@@ -412,7 +412,7 @@ let eE = new eg(s.Z, {
     NOTIFICATIONS_INBOX_OPEN: ec,
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START: er,
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: ei,
-    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: ea,
+    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: eo,
     NOTIFICATIONS_INBOX_ITEM_CLICK: es,
     NOTIFICATIONS_INBOX_ITEM_ACK: el,
     NOTIFICATIONS_INBOX_CLOSE: eu,

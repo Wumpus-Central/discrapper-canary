@@ -1,8 +1,8 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,80 +26,72 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = {
+let c = {
         speechRate: 1,
         currentMessage: null,
     },
-    d = u;
-function f(e) {
-    let { messageId: t, channelId: n } = e;
-    d = c(s({}, d), {
-        currentMessage: {
-            messageId: t,
-            channelId: n,
-        },
-    });
-}
-function _() {
-    d = c(s({}, d), { currentMessage: null });
-}
-function p(e) {
-    d = c(s({}, d), { speechRate: e.speechRate });
-}
-class h extends (r = i.ZP.DeviceSettingsStore) {
+    u = c;
+class d extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = s({}, u, null != e ? e : null);
+        u = a({}, c, null != e ? e : null);
     }
     isSpeakingMessage(e, t) {
-        let { currentMessage: n } = d;
+        let { currentMessage: n } = u;
         return null !== n && n.channelId === e && n.messageId === t;
     }
     get currentMessage() {
-        return d.currentMessage;
+        return u.currentMessage;
     }
     get speechRate() {
-        return d.speechRate;
+        return u.speechRate;
     }
     getUserAgnosticState() {
-        return d;
+        return u;
     }
 }
-a(h, "displayName", "TTSStore"), a(h, "persistKey", "TTSStore"), a(h, "migrations", []);
-let m = new h(
-    o.Z,
+o(d, "displayName", "TTSStore"), o(d, "persistKey", "TTSStore"), o(d, "migrations", []);
+let p = new d(
+    l.Z,
     __OVERLAY__
         ? {}
         : {
-              SPEAKING_MESSAGE: f,
-              STOP_SPEAKING: _,
-              SET_TTS_SPEECH_RATE: p,
+              SPEAKING_MESSAGE: function (e) {
+                  let { messageId: t, channelId: n } = e;
+                  u = s(a({}, u), {
+                      currentMessage: {
+                          messageId: t,
+                          channelId: n,
+                      },
+                  });
+              },
+              STOP_SPEAKING: function () {
+                  u = s(a({}, u), { currentMessage: null });
+              },
+              SET_TTS_SPEECH_RATE: function (e) {
+                  u = s(a({}, u), { speechRate: e.speechRate });
+              },
           },
 );

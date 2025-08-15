@@ -1,26 +1,26 @@
-r.d(t, { Z: () => f });
+r.d(t, { Z: () => g });
 var n = r(255367);
 r(73800);
 var i = r(442837),
     a = r(481060),
-    o = r(565138),
-    s = r(430824),
+    s = r(565138),
+    o = r(430824),
     l = r(63063),
-    d = r(981631),
-    c = r(388032),
+    c = r(981631),
+    d = r(388032),
     u = r(319766),
-    g = r(767688);
-function f(e) {
-    let { guildId: t, title: r, transitionState: f, children: x, buttons: h, onClose: m } = e,
-        b = (0, i.e7)([s.Z], () => s.Z.getGuild(t));
-    if (null == b) return null;
+    f = r(767688);
+function g(e) {
+    let { guildId: t, title: r, transitionState: g, children: h, buttons: b, onClose: m } = e,
+        x = (0, i.e7)([o.Z], () => o.Z.getGuild(t));
+    if (null == x) return null;
     let p = (0, n.jsx)(a.zxk, {
         variant: "primary",
-        text: c.intl.string(c.t.i4jeWV),
+        text: d.intl.string(d.t.i4jeWV),
         onClick: m,
     });
     return (0, n.jsxs)(a.Y0X, {
-        transitionState: f,
+        transitionState: g,
         size: a.CgR.SMALL,
         className: u.container,
         parentComponent: "LeaderboardSettingsBaseModal",
@@ -32,7 +32,7 @@ function f(e) {
                     (0, n.jsx)("div", { className: u.gradientSplash }),
                     (0, n.jsx)("img", {
                         alt: "",
-                        src: g,
+                        src: f,
                         className: u.heroImage,
                     }),
                     (0, n.jsx)(a.LZC, { size: 16 }),
@@ -46,15 +46,15 @@ function f(e) {
                     (0, n.jsxs)("div", {
                         className: u.guildContainer,
                         children: [
-                            (0, n.jsx)(o.Z, {
-                                size: o.Z.Sizes.SMOL,
-                                guild: b,
+                            (0, n.jsx)(s.Z, {
+                                size: s.Z.Sizes.SMOL,
+                                guild: x,
                                 className: u.guildIcon,
                             }),
                             (0, n.jsx)(a.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-secondary",
-                                children: b.name,
+                                children: x.name,
                             }),
                         ],
                     }),
@@ -65,18 +65,18 @@ function f(e) {
                     }),
                 ],
             }),
-            x,
+            h,
             (0, n.jsxs)(a.mzw, {
                 className: u.footer,
                 children: [
                     (0, n.jsx)("div", {
                         className: u.footerButtons,
-                        children: null != h ? h : p,
+                        children: null != b ? b : p,
                     }),
                     (0, n.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-secondary",
-                        children: c.intl.format(c.t.zbMH0d, { link: l.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) }),
+                        children: d.intl.format(d.t.zbMH0d, { link: l.Z.getArticleURL(c.BhN.GUILD_LEADERBOARD) }),
                     }),
                 ],
             }),

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(570140),
@@ -26,7 +26,7 @@ var r = n(255367),
 let I = 1000,
     T = (e) => {
         let { children: t, isConfirmationStep: n } = e,
-            o = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+            a = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
             [I, T] = (0, i.useState)("entry"),
             S = (0, i.useRef)(null),
             A = (0, i.useRef)(null),
@@ -49,11 +49,11 @@ let I = 1000,
             D === g.A.PURCHASING && x(!0);
         }, [D]);
         let M = (0, f.P)(R, !!P, w),
-            { mediaUrls: j, isSuccess: k } = (0, E.Z)(!o && M && L),
+            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!a && M && L),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
-            [Z, F] = (0, i.useState)(!1),
-            [V, H] = (0, i.useState)("none"),
+            [V, F] = (0, i.useState)(!1),
+            [Z, H] = (0, i.useState)("none"),
             [Y, W] = (0, i.useState)(!1);
         if (
             ((0, i.useEffect)(() => {
@@ -61,10 +61,10 @@ let I = 1000,
                 M &&
                     n &&
                     !Y &&
-                    "none" === V &&
-                    (o || !k
+                    "none" === Z &&
+                    (a || !j
                         ? (H("static"),
-                          o ||
+                          a ||
                               (W(!0),
                               _.default.track(
                                   b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION,
@@ -79,7 +79,7 @@ let I = 1000,
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [o, M, n, k, Y, V]),
+            }, [a, M, n, j, Y, Z]),
             (0, i.useEffect)(() => {
                 function e() {
                     B(!0), C();
@@ -101,7 +101,7 @@ let I = 1000,
                 },
                 [],
             ),
-            "animated" === V)
+            "animated" === Z)
         )
             return (0, r.jsxs)("div", {
                 children: [
@@ -115,8 +115,8 @@ let I = 1000,
                                     muted: !0,
                                     autoPlay: !0,
                                     onEnded: N,
-                                    className: a()(y.video, "entry" === I ? y.visible : y.hidden),
-                                    children: (0, r.jsx)("source", { src: j.modalGlowEntry }),
+                                    className: o()(y.video, "entry" === I ? y.visible : y.hidden),
+                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
                                 }),
                             }),
                             (0, r.jsx)(d.Z, {
@@ -124,15 +124,15 @@ let I = 1000,
                                 playsInline: !0,
                                 muted: !0,
                                 loop: !0,
-                                className: a()(y.video, "idle" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: j.modalGlowIdle }),
+                                className: o()(y.video, "idle" === I ? y.visible : y.hidden),
+                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: A,
                                 playsInline: !0,
                                 muted: !0,
-                                className: a()(y.video, "exit" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: j.modalGlowExit }),
+                                className: o()(y.video, "exit" === I ? y.visible : y.hidden),
+                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
                             }),
                         ],
                     }),
@@ -143,7 +143,7 @@ let I = 1000,
                             ref: U,
                             dataBinding: {
                                 ExitTrigger: G,
-                                EntryTrigger: Z,
+                                EntryTrigger: V,
                             },
                         }),
                     }),
@@ -154,7 +154,7 @@ let I = 1000,
                 ],
             });
         let K = !G;
-        return "static" === V
+        return "static" === Z
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       K &&

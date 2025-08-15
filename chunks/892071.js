@@ -5,8 +5,8 @@ n.d(t, {
     n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
     l = n(481060),
     c = n(597952),
@@ -26,7 +26,7 @@ function p(e) {
     let {
             rootClassName: t,
             lang: n,
-            theme: o,
+            theme: a,
             density: _,
             focused: p,
             fontScale: h,
@@ -49,9 +49,9 @@ function p(e) {
         w = (0, d.Z)("highlight_mana_components"),
         D = (0, d.Z)("highlight_void_toggleables"),
         L = (0, d.Z)("highlight_void_buttons"),
-        x = a()(
+        x = o()(
             (0, c.Z)(),
-            (0, l.QeD)(o),
+            (0, l.QeD)(a),
             "density-".concat(_),
             m,
             {

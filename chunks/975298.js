@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(642613), n(583741), n(388685), n(415506);
 var r = n(73800),
     i = n(512722),
-    o = n.n(i),
-    a = n(392711),
+    a = n.n(i),
+    o = n(392711),
     s = n(913527),
     l = n.n(s),
     c = n(442837),
@@ -73,7 +73,7 @@ let I = (e) => {
             isFetching: n = !1,
             entitlements: r,
             unactivatedFractionalPremiumUnits: i,
-            currentUser: a,
+            currentUser: o,
             premiumSubscription: s,
             fetchedAllEntitlements: c,
             excludeReverseTrialFromCountdown: u,
@@ -88,11 +88,11 @@ let I = (e) => {
             fetched: c,
         };
     if (n) return v(y({}, d), { fetched: !1 });
-    if (null == a || (0 === r.length && 0 === i.length)) return d;
+    if (null == o || (0 === r.length && 0 === i.length)) return d;
     let f = r
         .filter((e) => null != e.endsAt && null != e.startsAt)
         .sort((e, t) =>
-            (o()(null != e.endsAt && null != t.endsAt, "endsAt should not be null"), e.endsAt < t.endsAt)
+            (a()(null != e.endsAt && null != t.endsAt, "endsAt should not be null"), e.endsAt < t.endsAt)
                 ? -1
                 : +(e.endsAt > t.endsAt),
         );
@@ -131,14 +131,14 @@ function S() {
                   excludeReverseTrialFromCountdown: !1,
               },
         i = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        o = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
+        a = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
         s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
         l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
         h = (0, c.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         [m, E] = r.useState(
             I({
                 isFetching: T(e, i) || p.Z.fetchingAllEntitlements,
-                entitlements: o,
+                entitlements: a,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
                 premiumSubscription: h,
@@ -152,15 +152,15 @@ function S() {
         }),
         r.useEffect(() => {
             let e = I({
-                entitlements: o,
+                entitlements: a,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
                 premiumSubscription: h,
                 fetchedAllEntitlements: s,
                 excludeReverseTrialFromCountdown: n,
             });
-            E((t) => ((0, a.isEqual)(t, e) ? t : e));
-        }, [i, o, h, l, s, n]),
+            E((t) => ((0, o.isEqual)(t, e) ? t : e));
+        }, [i, a, h, l, s, n]),
         m
     );
 }

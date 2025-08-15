@@ -1,27 +1,14 @@
 n.d(t, {
-    Np: () => _,
-    l8: () => d,
-    mc: () => f,
-    so: () => u,
+    Np: () => d,
+    l8: () => c,
+    mc: () => u,
+    so: () => s,
 });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(822869);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
+    l = n(822869);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,69 +19,75 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = "forward-modal";
-function d(e) {
-    let { message: t, source: a, initialSelectedDestinations: l = [], forwardOptions: d, onRequestSent: f } = e;
-    (0, o.Lb)(t.channel_id, t.id, a),
+let s = "forward-modal";
+function c(e) {
+    let { message: t, source: c, initialSelectedDestinations: u = [], forwardOptions: d, onRequestSent: f } = e;
+    (0, l.Lb)(t.channel_id, t.id, c),
         (0, i.ZDy)(
             async () => {
-                let { ForwardModal: e } = await n.e("33648").then(n.bind(n, 930864));
+                let { ForwardModal: e } = await Promise.all([n.e("25292"), n.e("6380"), n.e("19157")]).then(
+                    n.bind(n, 930864),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        c(s({}, n), {
+                        o(a({}, n), {
                             message: t,
-                            initialSelectedDestinations: l,
+                            initialSelectedDestinations: u,
                             forwardOptions: d,
                             onRequestSent: f,
                         }),
                     );
             },
-            { modalKey: u },
+            { modalKey: s },
         );
 }
-function f() {
-    (0, i.Mr3)(u);
+function u() {
+    (0, i.Mr3)(s);
 }
-function _(e) {
-    let { message: t, failedDestinations: o, forwardOptions: a } = e;
+function d(e) {
+    let { message: t, failedDestinations: l, forwardOptions: s } = e;
     (0, i.ZDy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("86590").then(n.bind(n, 384331));
         return (n) =>
             (0, r.jsx)(
                 e,
-                c(s({}, n), {
+                o(a({}, n), {
                     message: t,
-                    failedDestinations: o,
-                    forwardOptions: a,
+                    failedDestinations: l,
+                    forwardOptions: s,
                 }),
             );
     });

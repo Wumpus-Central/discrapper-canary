@@ -1,8 +1,8 @@
 n.d(t, { default: () => w }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(755721),
     l = n(481060),
     c = n(166459),
@@ -73,7 +73,7 @@ function S(e, t) {
 let A = 104,
     N = 16;
 function C(e) {
-    var t, n, o;
+    var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
         [d, f] = i.useState(!1),
@@ -116,12 +116,12 @@ function C(e) {
     return (0, r.jsx)("img", {
         ref: h,
         src: l,
-        className: a()(y.icon, { [y.image]: !d }),
+        className: o()(y.icon, { [y.image]: !d }),
         "aria-hidden": !0,
         alt: "",
         style: {
             width: null != (n = _.width) ? n : "initial",
-            height: null != (o = _.height) ? o : A,
+            height: null != (a = _.height) ? a : A,
             marginLeft: g,
             marginRight: g,
             marginTop: null != _.height ? A - _.height - 33 : -33,
@@ -136,7 +136,7 @@ class R extends i.Component {
             : this.props.upload.isImage
               ? (0, r.jsx)(C, { file: this.props.upload.item.file })
               : (0, r.jsx)("div", {
-                    className: a()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
+                    className: o()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
                 });
     }
 }
@@ -160,7 +160,7 @@ class P extends i.Component {
             this.setState({ filename: null != (i = null == (r = this.props.upload) ? void 0 : r.filename) ? i : "" });
     }
     render() {
-        let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: o } = this.props,
+        let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: a } = this.props,
             { hasSpoiler: c } = this.state;
         return (0, r.jsxs)(l.Y0X, {
             "aria-label": b.intl.string(b.t["3AS4UF"]),
@@ -173,7 +173,7 @@ class P extends i.Component {
                     className: y.inner,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: a()(y.file, { [y.expandable]: e.isImage }),
+                            className: o()(y.file, { [y.expandable]: e.isImage }),
                             children: [
                                 (0, r.jsx)(R, { upload: e }),
                                 (0, r.jsxs)("div", {
@@ -203,7 +203,7 @@ class P extends i.Component {
                                     children: (0, r.jsx)("span", { children: b.intl.string(b.t.ILJuBg) }),
                                 }),
                                 (0, r.jsx)(s.Is, {
-                                    className: a()(y.channelTextAreaUpload, O.marginTop8),
+                                    className: o()(y.channelTextAreaUpload, O.marginTop8),
                                     value: this.state.filename,
                                     onChange: (e) => this.setState({ filename: e }),
                                     onKeyDown: (e) => {
@@ -218,7 +218,7 @@ class P extends i.Component {
                                                   children: (0, r.jsx)("span", { children: b.intl.string(b.t.eOB2eX) }),
                                               }),
                                               (0, r.jsx)(s.Is, {
-                                                  className: a()(y.channelTextAreaUpload, O.marginTop8),
+                                                  className: o()(y.channelTextAreaUpload, O.marginTop8),
                                                   placeholder: b.intl.string(b.t.RNH1jo),
                                                   value: this.state.description,
                                                   onChange: (e) => this.setState({ description: e }),
@@ -229,7 +229,7 @@ class P extends i.Component {
                                           ],
                                       })
                                     : null,
-                                !0 !== o &&
+                                !0 !== a &&
                                     (0, r.jsx)(l.XZJ, {
                                         className: O.marginBottom20,
                                         value: c,
@@ -246,7 +246,7 @@ class P extends i.Component {
                 (0, r.jsx)("div", {
                     className: y.footer,
                     children: (0, r.jsxs)("div", {
-                        className: a()(y.hasSpoilers, y.footerRightAlign),
+                        className: o()(y.hasSpoilers, y.footerRightAlign),
                         children: [
                             (0, r.jsx)(s.zx, {
                                 type: "button",
@@ -267,7 +267,7 @@ class P extends i.Component {
         });
     }
     constructor(e) {
-        var t, n, r, i, o, a;
+        var t, n, r, i, a, o;
         super(e),
             v(this, "cancelAll", () => {
                 c.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
@@ -283,12 +283,12 @@ class P extends i.Component {
             }),
             v(this, "handleSubmit", () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
-                    { filename: r, description: i, hasSpoiler: o } = this.state;
+                    { filename: r, description: i, hasSpoiler: a } = this.state;
                 n({
                     upload: e,
                     name: r,
                     description: i,
-                    spoiler: o,
+                    spoiler: a,
                 }),
                     t();
             });
@@ -296,9 +296,9 @@ class P extends i.Component {
         this.state = S(I({}, (0, f.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
-            filename: null != (o = null == (n = e.upload) ? void 0 : n.filename) ? o : "",
+            filename: null != (a = null == (n = e.upload) ? void 0 : n.filename) ? a : "",
             contentWarningProps: null,
-            description: null != (a = null == (r = e.upload) ? void 0 : r.description) ? a : "",
+            description: null != (o = null == (r = e.upload) ? void 0 : r.description) ? o : "",
         });
     }
 }

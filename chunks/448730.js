@@ -1,5 +1,5 @@
-var r = u(801282);
-e.exports = function (e, t, u) {
-    var n = e.length;
-    return (u = void 0 === u ? n : u), !t && u >= n ? e : r(e, t, u);
+var u = e(801282);
+t.exports = function (t, r, e) {
+    var n = t.length;
+    return (e = void 0 === e ? n : e), !r && e >= n ? t : u(t, r, e);
 };

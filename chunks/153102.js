@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(358797), n(388685), n(415506), n(17089);
 var r = n(579092),
     i = n(625306);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-let a = new r.Yd("Flux"),
+let o = new r.Yd("Flux"),
     s = 100,
     l = (e) => e();
 class c {
@@ -59,13 +59,13 @@ class c {
                         n = new Set();
                     for (; this.changedStores.size > 0; ) {
                         if (++e > 100)
-                            throw (a.error("LastFewActions", i.qC()), Error("change emit loop detected, aborting"));
+                            throw (o.error("LastFewActions", i.qC()), Error("change emit loop detected, aborting"));
                         this.emitNonReactOnce(t, n);
                     }
                     for (; this.reactChangedStores.size > 0; ) {
                         if (++e > 100)
                             throw (
-                                (a.error("LastFewActions", i.qC()), Error("react change emit loop detected, aborting"))
+                                (o.error("LastFewActions", i.qC()), Error("react change emit loop detected, aborting"))
                             );
                         this.emitReactOnce();
                     }
@@ -98,8 +98,8 @@ class c {
                     !e.has(r) && (e.add(r), !1 === r() || t.has(i) || (t.add(i), this.markChanged(i)));
                 });
             });
-        let o = Date.now();
-        o - n > s && a.verbose("Slow batch emitChanges took ".concat(o - n, "ms recentActions:"), i.qC());
+        let a = Date.now();
+        a - n > s && o.verbose("Slow batch emitChanges took ".concat(a - n, "ms recentActions:"), i.qC());
     }
     emitReactOnce() {
         let e = Date.now(),
@@ -109,16 +109,16 @@ class c {
                 e._reactChangeCallbacks.invokeAll(), this.reactChangedStores.delete(e);
             });
         let n = Date.now();
-        n - e > s && a.verbose("Slow batch emitReactChanges took ".concat(n - e, "ms recentActions:"), i.qC());
+        n - e > s && o.verbose("Slow batch emitReactChanges took ".concat(n - e, "ms recentActions:"), i.qC());
     }
     constructor() {
-        o(this, "changedStores", new Set()),
-            o(this, "reactChangedStores", new Set()),
-            o(this, "changeSentinel", 0),
-            o(this, "isBatchEmitting", !1),
-            o(this, "isDispatching", !1),
-            o(this, "isPaused", !1),
-            o(this, "pauseTimer", null);
+        a(this, "changedStores", new Set()),
+            a(this, "reactChangedStores", new Set()),
+            a(this, "changeSentinel", 0),
+            a(this, "isBatchEmitting", !1),
+            a(this, "isDispatching", !1),
+            a(this, "isPaused", !1),
+            a(this, "pauseTimer", null);
     }
 }
 let u = new c();

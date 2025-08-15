@@ -4,13 +4,13 @@ n.d(t, {
 });
 var r = n(481060),
     i = n(570140),
-    o = n(40851),
-    a = n(434404),
+    a = n(40851),
+    o = n(434404),
     s = n(981631);
 function l(e) {
     let { guildId: t, autoOpenFileInput: n, analyticsLocation: i } = e;
-    c({ autoOpen: n }), a.Z.open(t, s.pNK.EMOJI, i);
-    let l = (0, o.Su)();
+    c({ autoOpen: n }), o.Z.open(t, s.pNK.EMOJI, i);
+    let l = (0, a.Su)();
     null != l && l.windowDispatch.dispatch(s.CkL.POPOUT_CLOSE), (0, r.pTH)();
 }
 function c(e) {

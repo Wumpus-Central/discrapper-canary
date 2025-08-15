@@ -64,7 +64,7 @@ let b = () => {
                 let e = new Date();
                 return e.setMonth(e.getMonth() + 1), e;
             }),
-            [I, N] = r.useState(null),
+            [N, I] = r.useState(null),
             [y, A] = r.useState(!1),
             [P, R] = r.useState(!1),
             [D, Z] = r.useState(!1);
@@ -131,8 +131,8 @@ let b = () => {
             (0, r.useEffect)(() => {
                 [l.R.CONFIRM_DISCOUNT, l.R.DISCOUNT_APPLIED].includes(n) && null === _ && j(x()),
                     n === l.R.PREVIEW &&
-                        null === I &&
-                        N(
+                        null === N &&
+                        I(
                             new o.Z({
                                 id: "",
                                 invoiceItems: [
@@ -162,8 +162,8 @@ let b = () => {
                                 status: u.hUK.PAID,
                             }),
                         ),
-                    n !== l.R.PREVIEW && null !== I && N(null);
-            }, [n, _, S, E, I]);
+                    n !== l.R.PREVIEW && null !== N && I(null);
+            }, [n, _, S, E, N]);
         let w = r.useCallback(async () => {
             Z(!0),
                 await (0, s.ZDy)(
@@ -177,7 +177,7 @@ let b = () => {
                                 premiumType: e,
                                 churnDiscount: _,
                                 planId: E,
-                                renewalInvoice: I,
+                                renewalInvoice: N,
                                 renewalInvoiceDetails: {
                                     intervalType: p.rV.MONTH,
                                     intervalCount: 1,
@@ -213,7 +213,7 @@ let b = () => {
                             }),
                         ),
                 );
-        }, [e, _, E, I, y, P, n, S]);
+        }, [e, _, E, N, y, P, n, S]);
         return (
             (0, r.useEffect)(() => {
                 D && w();

@@ -1,29 +1,32 @@
-n.d(t, { Z: () => p });
-var r = n(255367),
-    i = n(73800),
-    o = n(481060),
-    a = n(471445),
-    s = n(592125),
-    l = n(430824),
-    c = n(970184),
-    u = n(811654),
-    d = n(344991),
-    f = n(981631),
-    _ = n(111566);
-function p(e) {
+r.d(t, { Z: () => b });
+var n = r(255367),
+    l = r(73800),
+    i = r(481060),
+    o = r(471445),
+    a = r(592125),
+    c = r(430824),
+    s = r(970184),
+    u = r(811654),
+    d = r(344991),
+    p = r(981631),
+    f = r(111566);
+function b(e) {
     var t;
-    let { channelTypes: n } = e,
-        p = (0, c.CJ)(),
-        h = null == p || null == (t = p.message) ? void 0 : t.getChannelId(),
-        m = s.Z.getChannel(h),
-        g = l.Z.getGuild(null == m ? void 0 : m.getGuildId()),
-        E = (e) => (0, u.af)(e, h, n),
-        b = (e, t) => {
-            let n = s.Z.getChannel(null == e ? void 0 : e.value);
-            if (null == n) return null;
-            let i = n.type === f.d4z.GUILD_CATEGORY ? o.ROc : (0, a.KS)(n);
-            return null != i
-                ? (0, r.jsx)(i, {
+    let { channelTypes: r } = e,
+        b = (0, s.CJ)(),
+        m = null == b || null == (t = b.message) ? void 0 : t.getChannelId(),
+        O = a.Z.getChannel(m),
+        y = c.Z.getGuild(null == O ? void 0 : O.getGuildId()),
+        j = l.useMemo(() => (0, u.tx)(e.defaultValues, null == y ? void 0 : y.id, r), [e.defaultValues, y, r]);
+    return (0, n.jsx)(d.ZP, {
+        selectActionComponent: e,
+        queryOptions: (e) => (0, u.af)(e, m, r),
+        renderIcon: (e, t) => {
+            let r = a.Z.getChannel(null == e ? void 0 : e.value);
+            if (null == r) return null;
+            let l = r.type === p.d4z.GUILD_CATEGORY ? i.ROc : (0, o.KS)(r);
+            return null != l
+                ? (0, n.jsx)(l, {
                       size: "custom",
                       color: "currentColor",
                       width: t,
@@ -31,17 +34,11 @@ function p(e) {
                   })
                 : null;
         },
-        y = (e) =>
-            (0, r.jsx)("span", {
-                className: _.label,
+        renderOptionLabel: (e) =>
+            (0, n.jsx)("span", {
+                className: f.label,
                 children: e.label,
             }),
-        O = i.useMemo(() => (0, u.tx)(e.defaultValues, null == g ? void 0 : g.id, n), [e.defaultValues, g, n]);
-    return (0, r.jsx)(d.ZP, {
-        selectActionComponent: e,
-        queryOptions: E,
-        renderIcon: b,
-        renderOptionLabel: y,
-        defaultValues: O,
+        defaultValues: j,
     });
 }

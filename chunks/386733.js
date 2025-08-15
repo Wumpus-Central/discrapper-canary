@@ -64,7 +64,7 @@ function T(e, t) {
         e
     );
 }
-let I = (e) => {
+let N = (e) => {
         let { userRecord: t, placement: n } = e,
             { avatarSrc: r, eventHandlers: s } = (0, m.Z)({
                 userId: null == t ? void 0 : t.id,
@@ -96,7 +96,7 @@ let I = (e) => {
             children: (e) => (0, i.jsx)("div", T(S({ className: O.userAvatarProgressBarUnit }, e), { children: l })),
         });
     },
-    N = (e) => {
+    I = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, i.jsxs)("div", {
             className: O.avatarProgressBarUnitConnectorContainer,
@@ -120,23 +120,23 @@ let I = (e) => {
         return (0, i.jsxs)("div", {
             className: O.userAvatarProgressBarContainer,
             children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: r,
                     placement: 1,
                 }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(I, {
                     numSentReferrals: n,
                     placement: 1,
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: s,
                     placement: 2,
                 }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(I, {
                     numSentReferrals: n,
                     placement: 2,
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: a,
                     placement: 3,
                 }),
@@ -147,20 +147,20 @@ let I = (e) => {
         let { isInSettings: t = !1 } = e,
             s = (0, l.e7)([b.Z], () => b.Z.getRecipientStatus()),
             { referralSentUsers: m } = (0, x.G)(),
-            I = r.useMemo(() => m.map((e) => new p.Z(e)), [m]),
-            N = {
+            N = r.useMemo(() => m.map((e) => new p.Z(e)), [m]),
+            I = {
                 redeemed: 0,
                 converted: 0,
                 sent: s.size,
             };
         s.forEach((e) => {
-            e === f.Fe.REDEEMED && N.redeemed++, e === f.Fe.CONVERTED && (N.redeemed++, N.converted++);
+            e === f.Fe.REDEEMED && I.redeemed++, e === f.Fe.CONVERTED && (I.redeemed++, I.converted++);
         });
-        let A = N.sent === x.Q,
+        let A = I.sent === x.Q,
             P = h.Z.getArticleURL(E.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: R } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             D = r.useRef(null),
-            Z = (N.sent / x.Q) * 100,
+            Z = (I.sent / x.Q) * 100,
             w = (0, i.jsxs)("div", {
                 className: O.referralInfoContent,
                 children: [
@@ -180,12 +180,12 @@ let I = (e) => {
                                 className: O.expandedProgressBarHeader,
                                 children: (0, j.$s)({ hasSentAll: A }),
                             }),
-                            (0, i.jsx)(y, { userRecords: I }),
+                            (0, i.jsx)(y, { userRecords: N }),
                             (0, i.jsx)(c.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, j.Hg)({
                                     helpdeskArticle: P,
-                                    referralsStatuses: N,
+                                    referralsStatuses: I,
                                 }),
                             }),
                             (0, i.jsx)("div", {
@@ -205,7 +205,7 @@ let I = (e) => {
                                                 (0, c.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("83667"),
-                                                        n.e("28253"),
+                                                        n.e("81369"),
                                                     ]).then(n.bind(n, 204387));
                                                     return (n) =>
                                                         (0, i.jsx)(e, T(S({}, n), { sourceAnalyticsLocations: t }));
@@ -229,7 +229,7 @@ let I = (e) => {
                     }),
                 ],
             }),
-            k = N.redeemed === x.Q;
+            k = I.redeemed === x.Q;
         return (0, i.jsx)(u.Gt, {
             value: R,
             children: (0, i.jsx)("div", {

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(410030),
-    o = n(359135),
-    a = n(4242),
+    a = n(359135),
+    o = n(4242),
     s = n(231338);
 let l = "14",
     c = "1A",
@@ -16,11 +16,11 @@ let l = "14",
     _ = "80";
 function p(e) {
     let t = (0, i.ZP)(),
-        [n, o] = (0, r.useState)({});
+        [n, a] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
             null != e &&
-                o({
+                a({
                     "--custom-nameplate": (t === s.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + u,
                     "--custom-nameplate-neutral":
                         t !== s.BR.LIGHT ? "rgba(0, 0, 0, 0.22)" : "rgba(255, 255, 255  , 0.22)",
@@ -31,7 +31,7 @@ function p(e) {
         n
     );
 }
-function h(e, t, n, a, s) {
+function h(e, t, n, o, s) {
     let l = (0, i.ZP)(),
         c = (0, r.useMemo)(
             () =>
@@ -41,13 +41,13 @@ function h(e, t, n, a, s) {
                           palette: t.palette,
                           theme: l,
                           hover: n,
-                          selected: a,
+                          selected: o,
                           placement: s,
                       }),
-            [t, n, a, l, s],
+            [t, n, o, l, s],
         ),
         [u, d] = (0, r.useState)(null != c ? { background: c } : {}),
-        f = s === o.i.MEMBER_LIST;
+        f = s === a.i.MEMBER_LIST;
     return (
         (0, r.useEffect)(() => {
             if (null == c) return;
@@ -70,11 +70,11 @@ function h(e, t, n, a, s) {
 }
 function m(e) {
     let { palette: t, theme: n, hover: r, selected: i, placement: p } = e;
-    if (!(0, a.ic)(t)) return;
+    if (!(0, o.ic)(t)) return;
     let h = n === s.BR.LIGHT,
         m = h ? t.lightBackground : t.darkBackground;
-    if (p === o.i.MEMBER_LIST || p === o.i.CHANNEL) {
-        let e = "".concat(i ? _ : r && p === o.i.MEMBER_LIST ? d : u);
+    if (p === a.i.MEMBER_LIST || p === a.i.CHANNEL) {
+        let e = "".concat(i ? _ : r && p === a.i.MEMBER_LIST ? d : u);
         return "linear-gradient(90deg, transparent 0%, "
             .concat(m)
             .concat(l, " 20%, ")
@@ -83,7 +83,7 @@ function m(e) {
             .concat(m)
             .concat(e, " 100%)");
     }
-    let g = p === o.i.MINI_PREVIEW ? u : c,
+    let g = p === a.i.MINI_PREVIEW ? u : c,
         E = h ? d : f;
     return "linear-gradient(90deg, ".concat(m).concat(g, " 0%, ").concat(m).concat(E, " 100%)");
 }

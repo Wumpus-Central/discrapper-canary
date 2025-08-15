@@ -1,10 +1,10 @@
 n.d(t, {
     $: () => l,
-    N: () => o,
+    N: () => a,
 });
 var r = n(818083),
     i = n(154579),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e.NONE = "NONE"),
             (e.ALL_GUILDS = "ALL_GUILDS"),
@@ -13,7 +13,7 @@ var r = n(818083),
             e
         );
     })({});
-let a = {
+let o = {
         enabled: !1,
         type: "NONE",
     },
@@ -21,7 +21,7 @@ let a = {
         kind: "user",
         id: "2025-08_search_quick_switcher_guild_members",
         label: "Search Quick Switcher Guild Members Experiment",
-        defaultConfig: a,
+        defaultConfig: o,
         treatments: [
             {
                 id: 1,
@@ -55,7 +55,7 @@ function l(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: o, type: a } = s.getCurrentConfig(
+        { enabled: a, type: o } = s.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -63,7 +63,7 @@ function l(e) {
             },
         );
     return {
-        enabled: o,
-        type: a,
+        enabled: a,
+        type: o,
     };
 }

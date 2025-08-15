@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(388032),
     c = n(274424);
@@ -10,32 +10,32 @@ let u = i.forwardRef(function (e, t) {
     let {
         className: n,
         src: i,
-        unicodeEmoji: o,
+        unicodeEmoji: a,
         name: u,
         size: d = 20,
         enableTooltip: f = !0,
         enableHeight: _ = !0,
         onClick: p,
     } = e;
-    if (null == i && null == o) return null;
+    if (null == i && null == a) return null;
     let h = () => {
         let e = (0, r.jsx)("img", {
             ref: t,
             alt: "",
             "aria-label": l.intl.formatToPlainString(l.t["9+YWrK"], { name: u }),
-            className: a()(c.roleIcon, n, { [c.clickable]: null != p }),
+            className: o()(c.roleIcon, n, { [c.clickable]: null != p }),
             height: _ ? d : void 0,
             src: i,
             width: d,
         });
-        return (null != o &&
+        return (null != a &&
             (e = (0, r.jsx)("img", {
                 ref: t,
                 alt: "",
-                "aria-label": o.allNamesString,
-                className: a()(c.roleIcon, n, { [c.clickable]: null != p }),
+                "aria-label": a.allNamesString,
+                className: o()(c.roleIcon, n, { [c.clickable]: null != p }),
                 height: _ ? d : void 0,
-                src: o.url,
+                src: a.url,
                 width: d,
             })),
         null == p)

@@ -11,9 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => a }), n(539854);
+n.d(t, { Z: () => o }), n(539854);
 let i = 5;
-class o {
+class a {
     recordStartHeadlessTask(e) {
         this.headlessTasks.length >= i && this.headlessTasks.shift(),
             this.headlessTasks.push(e),
@@ -32,4 +32,4 @@ class o {
         r(this, "headlessTasks", []), r(this, "latestHeadlessTaskRunOn", null);
     }
 }
-let a = new o();
+let o = new a();

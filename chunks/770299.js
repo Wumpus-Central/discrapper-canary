@@ -11,12 +11,12 @@ function i(e) {
     let t = e[e.length - 1];
     return "object" == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
 }
-function o(...e) {
+function a(...e) {
     return "(" + (i(e).capture ? "" : "?:") + e.map((e) => t(e)).join("|") + ")";
 }
-let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
-    s = ["Protocol", "Type"].map(a),
-    l = ["init", "self"].map(a),
+let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
+    s = ["Protocol", "Type"].map(o),
+    l = ["init", "self"].map(o),
     c = ["Any", "Self"],
     u = [
         "actor",
@@ -173,7 +173,7 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         "withoutActuallyEscaping",
         "zip",
     ],
-    h = o(
+    h = a(
         /[/=\-+!*%<>&|^~?]/,
         /[\u00A1-\u00A7]/,
         /[\u00A9\u00AB]/,
@@ -193,9 +193,9 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         /[\u3008-\u3020]/,
         /[\u3030]/,
     ),
-    m = o(h, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
+    m = a(h, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
     g = r(h, m, "*"),
-    E = o(
+    E = a(
         /[a-zA-Z_]/,
         /[\u00A8\u00AA\u00AD\u00AF\u00B2-\u00B5\u00B7-\u00BA]/,
         /[\u00BC-\u00BE\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]/,
@@ -208,13 +208,13 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         /[\uF900-\uFD3D\uFD40-\uFDCF\uFDF0-\uFE1F\uFE30-\uFE44]/,
         /[\uFE47-\uFEFE\uFF00-\uFFFD]/,
     ),
-    b = o(E, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
+    b = a(E, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
     y = r(E, b, "*"),
     O = r(/[A-Z]/, b, "*"),
     v = [
         "attached",
         "autoclosure",
-        r(/convention\(/, o("swift", "block", "c"), /\)/),
+        r(/convention\(/, a("swift", "block", "c"), /\)/),
         "discardableResult",
         "dynamicCallable",
         "dynamicMemberLookup",
@@ -268,11 +268,11 @@ e.exports = function (e) {
         i = e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
         h = [e.C_LINE_COMMENT_MODE, i],
         E = {
-            match: [/\./, o(...s, ...l)],
+            match: [/\./, a(...s, ...l)],
             className: { 2: "keyword" },
         },
         T = {
-            match: r(/\./, o(...u)),
+            match: r(/\./, a(...u)),
             relevance: 0,
         },
         S = u.filter((e) => "string" == typeof e).concat(["_|0"]),
@@ -280,30 +280,30 @@ e.exports = function (e) {
             variants: [
                 {
                     className: "keyword",
-                    match: o(
+                    match: a(
                         ...u
                             .filter((e) => "string" != typeof e)
                             .concat(c)
-                            .map(a),
+                            .map(o),
                         ...l,
                     ),
                 },
             ],
         },
         N = {
-            $pattern: o(/\b\w+/, /#\w+/),
+            $pattern: a(/\b\w+/, /#\w+/),
             keyword: S.concat(_),
             literal: d,
         },
         C = [E, T, A],
         R = [
             {
-                match: r(/\./, o(...p)),
+                match: r(/\./, a(...p)),
                 relevance: 0,
             },
             {
                 className: "built_in",
-                match: r(/\b/, o(...p), /(?=\()/),
+                match: r(/\b/, a(...p), /(?=\()/),
             },
         ],
         P = {
@@ -334,11 +334,11 @@ e.exports = function (e) {
             className: "subst",
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
         }),
-        j = (e = "") => ({
+        k = (e = "") => ({
             className: "subst",
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/),
         }),
-        k = (e = "") => ({
+        j = (e = "") => ({
             className: "subst",
             label: "interpol",
             begin: r(/\\/, e, /\(/),
@@ -347,18 +347,18 @@ e.exports = function (e) {
         U = (e = "") => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), j(e), k(e)],
+            contains: [M(e), k(e), j(e)],
         }),
         G = (e = "") => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), k(e)],
+            contains: [M(e), j(e)],
         }),
         B = {
             className: "string",
             variants: [U(), U("#"), U("##"), U("###"), G(), G("#"), G("##"), G("###")],
         },
-        Z = [
+        V = [
             e.BACKSLASH_ESCAPE,
             {
                 begin: /\[/,
@@ -370,16 +370,16 @@ e.exports = function (e) {
         F = {
             begin: /\/[^\s](?=[^/\n]*\/)/,
             end: /\//,
-            contains: Z,
+            contains: V,
         },
-        V = (e) => {
+        Z = (e) => {
             let t = r(e, /\//),
                 n = r(/\//, e);
             return {
                 begin: t,
                 end: n,
                 contains: [
-                    ...Z,
+                    ...V,
                     {
                         scope: "comment",
                         begin: `#(?!.*${n})`,
@@ -390,7 +390,7 @@ e.exports = function (e) {
         },
         H = {
             scope: "regexp",
-            variants: [V("###"), V("##"), V("#"), F],
+            variants: [Z("###"), Z("##"), Z("#"), F],
         },
         Y = { match: r(/`/, y, /`/) },
         W = [
@@ -421,7 +421,7 @@ e.exports = function (e) {
             },
             {
                 scope: "keyword",
-                match: r(/@/, o(...v), n(o(/\(/, /\s+/))),
+                match: r(/@/, a(...v), n(a(/\(/, /\s+/))),
             },
             {
                 scope: "meta",
@@ -498,7 +498,7 @@ e.exports = function (e) {
             keywords: N,
             contains: [
                 {
-                    begin: o(n(r(y, /\s*:/)), n(r(y, /\s+/, y, /\s*:/))),
+                    begin: a(n(r(y, /\s*:/)), n(r(y, /\s+/, y, /\s*:/))),
                     end: /:/,
                     relevance: 0,
                     contains: [
@@ -525,7 +525,7 @@ e.exports = function (e) {
             illegal: /["']/,
         },
         $ = {
-            match: [/(func|macro)/, /\s+/, o(Y.match, y, g)],
+            match: [/(func|macro)/, /\s+/, a(Y.match, y, g)],
             className: {
                 1: "keyword",
                 3: "title.function",
@@ -571,7 +571,7 @@ e.exports = function (e) {
                 3: "keyword",
             },
         },
-        eo = {
+        ea = {
             begin: [/(struct|protocol|class|extension|enum|actor)/, /\s+/, y, /\s*/],
             beginScope: {
                 1: "keyword",
@@ -618,7 +618,7 @@ e.exports = function (e) {
             ee,
             er,
             ei,
-            eo,
+            ea,
             et,
             en,
             {

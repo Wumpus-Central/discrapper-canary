@@ -2,8 +2,8 @@ n.d(t, { P: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    o = n(780605),
-    a = n(388032);
+    a = n(780605),
+    o = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -62,9 +62,9 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,17 +73,17 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
     var { colorMix: t = !1, "aria-label": n } = e,
         s = d(e, ["colorMix", "aria-label"]);
     return (0, r.jsx)(
-        o.Y,
+        a.Y,
         u(l({}, s), {
-            "aria-label": null != n ? n : a.intl.string(a.t.cpT0Cg),
+            "aria-label": null != n ? n : o.intl.string(o.t.cpT0Cg),
             icon: i.Uz9,
             variant: t ? "color-mix" : "icon-only",
             text: void 0,

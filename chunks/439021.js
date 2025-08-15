@@ -1,8 +1,8 @@
 n.d(t, { t: () => u });
 var r = n(255367),
     i = n(481060),
-    o = n(502109),
-    a = n(388032),
+    a = n(502109),
+    o = n(388032),
     s = n(527094);
 function l(e, t, n) {
     return (
@@ -44,7 +44,7 @@ function u(e) {
             paymentRequestWallet: _,
         } = e,
         p = {
-            paymentLabel: a.intl.string(a.t.ZURqX1),
+            paymentLabel: o.intl.string(o.t.ZURqX1),
             paymentRequestRef: f,
             renderConnectorView: !0,
             onStripePaymentMethodReceived: l,
@@ -57,11 +57,11 @@ function u(e) {
             }),
         };
     return (
-        (t = "applePay" === _ ? (0, r.jsx)(o.Ch, c({}, p)) : (0, r.jsx)(o.Tr, c({}, p))),
+        (t = "applePay" === _ ? (0, r.jsx)(a.Ch, c({}, p)) : (0, r.jsx)(a.Tr, c({}, p))),
         (0, r.jsx)("div", {
             className: s.body,
             children: (0, r.jsx)(i.hjN, {
-                title: a.intl.string(a.t.eQ2bLi),
+                title: o.intl.string(o.t.eQ2bLi),
                 children: t,
             }),
         })

@@ -1,8 +1,8 @@
 n.d(t, { f: () => A });
 var r = n(475179),
     i = n(904245),
-    o = n(45114),
-    a = n(40851),
+    a = n(45114),
+    o = n(40851),
     s = n(358221),
     l = n(623292),
     c = n(807092),
@@ -30,7 +30,7 @@ let A = {
         if (T.S.hasSubscribers(S.CkL.CALL_DECLINE)) return T.S.dispatch(S.CkL.CALL_DECLINE), !1;
         if (v.Z.close()) return !1;
         if (T.S.hasSubscribers(S.CkL.MEDIA_MODAL_CLOSE)) return T.S.dispatch(S.CkL.MEDIA_MODAL_CLOSE), !1;
-        let t = (0, a.AN)(e);
+        let t = (0, o.AN)(e);
         if (null == t ? void 0 : t.hasSubscribers(S.CkL.POPOUT_CLOSE)) return t.dispatch(S.CkL.POPOUT_CLOSE), !1;
         if (T.S.hasSubscribers(S.CkL.CLOSE_GIF_PICKER)) return T.S.dispatch(S.CkL.CLOSE_GIF_PICKER), !1;
         if (T.S.hasSubscribers(S.CkL.MODAL_CLOSE)) return T.S.dispatch(S.CkL.MODAL_CLOSE), !1;
@@ -39,9 +39,9 @@ let A = {
             return t.dispatch(S.CkL.POPOUT_CLOSE_AFTER_MODALS), !1;
         let n = O.Z.getGuildId(),
             i = y.Z.getChannelId(n),
-            o = h.Z.getChannel(i),
+            a = h.Z.getChannel(i),
             l =
-                p.ZP.getSection(i, null == o ? void 0 : o.isDM()) === S.ULH.SIDEBAR_CHAT
+                p.ZP.getSection(i, null == a ? void 0 : a.isDM()) === S.ULH.SIDEBAR_CHAT
                     ? p.ZP.getSidebarState(i)
                     : null,
             c =
@@ -76,12 +76,12 @@ function C(e) {
     return (
         E.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, S.AQB), (t = !0)),
         b.ZP.hasUnread(e) &&
-            ((0, o.In)(e, {
+            ((0, a.In)(e, {
                 object: S.qAy.MARK_CHANNEL_AS_READ_KEYBIND,
                 objectType: S.Qqv.ACK_MANUAL,
             }),
             (t = !0)),
-        (0, o.iV)(e),
+        (0, a.iV)(e),
         t
     );
 }

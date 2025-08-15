@@ -18,7 +18,7 @@ e.exports = function (e) {
             className: "symbol",
             variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }],
         },
-        o = {
+        a = {
             className: "comment",
             variants: [
                 {
@@ -33,12 +33,12 @@ e.exports = function (e) {
             illegal: "\\n",
             contains: [e.BACKSLASH_ESCAPE],
         },
-        a = {
+        o = {
             begin: "/",
             end: "/",
             keywords: n,
             contains: [
-                o,
+                a,
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 e.QUOTE_STRING_MODE,
@@ -53,8 +53,8 @@ e.exports = function (e) {
             end: "$",
             endsWithParent: !0,
             contains: [
-                o,
                 a,
+                o,
                 {
                     className: "comment",
                     begin: t.concat(s, t.anyNumberOfTimes(t.concat(/[ ]+/, s))),
@@ -95,7 +95,7 @@ e.exports = function (e) {
                     e.C_BLOCK_COMMENT_MODE,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    a,
+                    o,
                     l,
                 ],
             },

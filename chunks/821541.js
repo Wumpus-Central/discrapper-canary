@@ -1,8 +1,8 @@
 n.d(t, { K: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(530892),
     l = n.n(s),
     c = n(235033);
@@ -64,9 +64,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,15 +75,15 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = i.forwardRef(function (e, t) {
         var {
                 as: n = "div",
                 gap: i = 8,
-                direction: o = "vertical",
+                direction: a = "vertical",
                 align: s = "stretch",
                 justify: l = "start",
                 wrap: u = !1,
@@ -112,9 +112,9 @@ let m = i.forwardRef(function (e, t) {
                         ref: t,
                         "data-align": s,
                         "data-justify": l,
-                        "data-direction": o,
+                        "data-direction": a,
                         "data-wrap": u,
-                        className: a()(c.stack, m),
+                        className: o()(c.stack, m),
                         style: d(_(d({}, h), { gap: g(i) }), E(f)),
                     },
                     y,

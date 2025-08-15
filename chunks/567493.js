@@ -9,8 +9,8 @@ n.d(t, {
     n(539854);
 var r = n(73800),
     i = n(661869),
-    o = n(876215),
-    a = n(884439),
+    a = n(876215),
+    o = n(884439),
     s = n(442837),
     l = n(271383),
     c = n(158776),
@@ -24,11 +24,11 @@ let _ = (e, t) => {
     let i = new Set(
             n.map((e) => "".concat(e.userId, "-").concat(e.activity.session_id, "-").concat(e.activity.application_id)),
         ),
-        o = new Set(
+        a = new Set(
             r.map((e) => "".concat(e.userId, "-").concat(e.activity.session_id, "-").concat(e.activity.application_id)),
         );
-    if (i.size !== o.size) return !1;
-    for (let e of i) if (!o.has(e)) return !1;
+    if (i.size !== a.size) return !1;
+    for (let e of i) if (!a.has(e)) return !1;
     return !0;
 };
 function p(e) {
@@ -61,16 +61,16 @@ function h(e, t) {
                     id: u.default.fromTimestamp(f),
                     author_id: d,
                     author_type: i.i.USER,
-                    content_type: o.s.PLAYED_GAME,
+                    content_type: a.s.PLAYED_GAME,
                     participants: [d],
                     expires_at: new Date(Date.now() + 300000).toISOString(),
                     traits: [
                         {
-                            type: a.N.IS_LIVE,
+                            type: o.N.IS_LIVE,
                             is_live: !0,
                         },
                         {
-                            type: a.N.DURATION_SECONDS,
+                            type: o.N.DURATION_SECONDS,
                             duration_seconds: Math.floor((Date.now() - f) / 1000),
                         },
                     ],

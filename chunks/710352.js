@@ -2,14 +2,14 @@ n.d(t, {
     Cn: () => i,
     R6: () => l,
     V8: () => s,
-    Vb: () => o,
-    ZI: () => a,
+    Vb: () => a,
+    ZI: () => o,
     pC: () => r,
 });
 let r = 20,
     i = 5,
-    o = 256;
-var a = (function (e) {
+    a = 256;
+var o = (function (e) {
     return (
         (e.PERMISSIONS = "Permissions"),
         (e.GUIDELINES = "Guidelines"),

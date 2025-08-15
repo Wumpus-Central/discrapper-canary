@@ -19,7 +19,7 @@ let i = [
         r.z.ACTIVITIES_VOICE_LAUNCHER_BADGE,
         r.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
     ],
-    o = [
+    a = [
         r.z.GIFTING_INTENT_FRIENDS_TAB_BADGE,
         r.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL,
         r.z.GUILD_TAG_AVAILABLE_COACHMARK,
@@ -31,17 +31,17 @@ let i = [
         r.z.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET,
         r.z.NAGBAR_NOTICE_OFFER_EXPIRING,
     ],
-    a = [r.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, r.z.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET],
+    o = [r.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, r.z.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET],
     s = [r.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, r.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION],
     l = [];
 function c(e) {
-    return o.includes(e);
+    return a.includes(e);
 }
 function u(e) {
     return i.includes(e);
 }
 function d(e) {
-    return a.includes(e);
+    return o.includes(e);
 }
 function f(e) {
     return c(e) || u(e) || d(e);

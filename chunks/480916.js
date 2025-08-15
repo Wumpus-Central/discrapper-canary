@@ -1,8 +1,8 @@
 n.d(t, {
     YT: () => p,
     Z7: () => _,
-    cU: () => o,
-    d_: () => a,
+    cU: () => a,
+    d_: () => o,
     iP: () => u,
     io: () => l,
     it: () => c,
@@ -15,7 +15,7 @@ n.d(t, {
 });
 var r = n(626135),
     i = n(981631),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e.GET_STARTED_MODAL = "get_started_modal"),
             (e.NSFW_GUILD = "nsfw_guild"),
@@ -34,7 +34,7 @@ var r = n(626135),
             e
         );
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.PRIMARY = 1)] = "PRIMARY"), (e[(e.RETRY = 2)] = "RETRY"), e;
     })({}),
     s = (function (e) {
@@ -93,12 +93,12 @@ function p(e, t, n) {
         modal_type: e,
     });
 }
-function h(e, t, n, o) {
+function h(e, t, n, a) {
     r.default.track(i.rMx.NSFW_SPACE_WARNING_MODAL_CLICKED, {
         cta: e,
         modal_type: t,
         channel_id: n,
-        guild_id: o,
+        guild_id: a,
     });
 }
 var m = (function (e) {

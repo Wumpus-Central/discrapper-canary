@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(361932), n(187205);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(304789),
+    a = n.n(i),
+    o = n(304789),
     s = n(481060),
     l = n(410030),
     c = n(563132),
@@ -23,7 +23,7 @@ var i = n(120356),
     I = n(997892),
     T = n(234286);
 function S(e) {
-    let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: o } = e;
+    let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: a } = e;
     if (t)
         return (0, r.jsx)("div", {
             className: E.oneStepCheckoutTextWrapper,
@@ -32,7 +32,7 @@ function S(e) {
                 children: n,
             }),
         });
-    let a = o.length > 1;
+    let o = a.length > 1;
     return (0, r.jsxs)("div", {
         className: E.headerTextWrapper,
         children: [
@@ -40,10 +40,10 @@ function S(e) {
                 variant: "text-lg/semibold",
                 children: n,
             }),
-            a &&
+            o &&
                 (0, r.jsx)(f.Z, {
                     activeId: i,
-                    breadcrumbs: o,
+                    breadcrumbs: a,
                 }),
         ],
     });
@@ -91,13 +91,13 @@ let N = function (e) {
         x = P ? T : I,
         M = P ? p.Z : _.Z,
         {
-            step: j,
-            breadcrumbs: k,
+            step: k,
+            breadcrumbs: j,
             startedPaymentFlowWithPaymentSourcesRef: U,
             isDisplayingWowMomentConfirmation: G,
         } = (0, c.JL)();
-    if (null == k || 0 === k.length) return null;
-    let B = k.flatMap((e) => {
+    if (null == j || 0 === j.length) return null;
+    let B = j.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
             n = e.sectionHeaderText;
         return null != t
@@ -109,24 +109,24 @@ let N = function (e) {
             : [];
     });
     if (0 === B.length) return null;
-    let Z = (B = B.filter((e) => {
+    let V = (B = B.filter((e) => {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
-        })).find((e) => e.id === j),
+        })).find((e) => e.id === k),
         F =
-            null != (i = null == Z || null == (n = Z.sectionHeaderText) ? void 0 : n.call(Z))
+            null != (i = null == V || null == (n = V.sectionHeaderText) ? void 0 : n.call(V))
                 ? i
-                : null == Z
+                : null == V
                   ? void 0
-                  : Z.label,
-        V = null != F && null != j,
-        H = w && V && j === u.h8.REVIEW,
+                  : V.label,
+        Z = null != F && null != k,
+        H = w && Z && k === u.h8.REVIEW,
         Y = P ? "nitro-pink" : "nitro-green";
     return G
         ? (0, r.jsx)("div", {
               className: E.container,
-              children: (0, r.jsx)(a.$, {
+              children: (0, r.jsx)(o.$, {
                   color: Y,
                   className: E.headerContainer,
               }),
@@ -134,9 +134,9 @@ let N = function (e) {
         : (0, r.jsxs)("div", {
               className: E.container,
               children: [
-                  (0, r.jsxs)(a.$, {
+                  (0, r.jsxs)(o.$, {
                       color: Y,
-                      className: o()(E.headerContainer, { [E.containerBottomPadding]: !V }),
+                      className: a()(E.headerContainer, { [E.containerBottomPadding]: !Z }),
                       children: [
                           (0, r.jsx)(A, { isTier2: P }),
                           !f &&
@@ -161,11 +161,11 @@ let N = function (e) {
                       ],
                   }),
                   (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
-                  V &&
+                  Z &&
                       (0, r.jsx)(S, {
                           isOneStepCheckout: w,
                           headerText: F,
-                          step: j,
+                          step: k,
                           filteredBreadcrumbs: B,
                       }),
                   H &&

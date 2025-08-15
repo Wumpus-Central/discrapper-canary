@@ -1,8 +1,8 @@
 n.d(t, { r: () => u }), n(539854), n(388685), n(415506);
 var r = n(579092),
     i = n(198584),
-    o = n(444675);
-function a(e, t, n) {
+    a = n(444675);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function a(e, t, n) {
     );
 }
 let s = 1000000,
-    l = "1" === o.env.KV_STORAGE_LOGGING,
+    l = "1" === a.env.KV_STORAGE_LOGGING,
     c = new r.Yd("Runtime");
 class u {
     static nextId() {
@@ -111,8 +111,8 @@ class u {
             (this.initialized = !0));
     }
 }
-a(u, "counter", 0),
-    a(u, "pending", new Map()),
-    a(u, "initialized", !1),
-    a(u, "dbStateCallbacks", []),
-    a(u, "completionCallbacks", []);
+o(u, "counter", 0),
+    o(u, "pending", new Map()),
+    o(u, "initialized", !1),
+    o(u, "dbStateCallbacks", []),
+    o(u, "completionCallbacks", []);

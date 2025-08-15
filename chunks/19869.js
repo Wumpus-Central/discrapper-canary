@@ -24,7 +24,7 @@ var i = n(255367),
 function S() {
     let { enabled: e } = (0, g.WX)({ location: "revenue_storybook" });
     return (0, i.jsxs)("div", {
-        children: [e && (0, i.jsx)(I, {}), (0, i.jsx)(T, {}), (0, i.jsx)(N, {})],
+        children: [e && (0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(I, {})],
     });
 }
 function T() {
@@ -33,7 +33,7 @@ function T() {
         [p, g] = r.useState(150),
         [_, j] = r.useState(500),
         [S, T] = r.useState(h.b.DEFAULT),
-        I = () => {
+        N = () => {
             switch (S) {
                 case h.b.DEFAULT:
                     T(h.b.HIGHLIGHTED);
@@ -45,7 +45,7 @@ function T() {
                     T(h.b.DEFAULT);
             }
         },
-        { analyticsLocations: N } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: I } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, i.jsxs)(E.$0, {
         children: [
             (0, i.jsx)(a.X6q, {
@@ -87,7 +87,7 @@ function T() {
                                 (0, u.s1)().location.pathname.includes(C.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: N,
+                                        analyticsLocations: I,
                                         analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE,
                                     }),
                                 e({
@@ -148,7 +148,7 @@ function T() {
                         children: (0, i.jsx)(x.A4, {
                             balance: p,
                             balanceWidgetMode: S,
-                            onClick: () => I(),
+                            onClick: () => N(),
                         }),
                     }),
                     (0, i.jsx)(a.Text, {
@@ -176,7 +176,7 @@ function T() {
                         children: (0, i.jsx)(x.A4, {
                             balance: p,
                             balanceWidgetMode: S,
-                            onClick: () => I(),
+                            onClick: () => N(),
                         }),
                     }),
                 ],
@@ -192,7 +192,7 @@ function T() {
         ],
     });
 }
-function I() {
+function N() {
     let [e, t] = r.useState("1144308439720394944");
     return (0, i.jsxs)(E.$0, {
         children: [
@@ -242,7 +242,7 @@ function I() {
         ],
     });
 }
-function N() {
+function I() {
     let { resetOnboardingAnnouncementModal: e } = (0, p.Z)();
     return (0, i.jsxs)(E.$0, {
         children: [

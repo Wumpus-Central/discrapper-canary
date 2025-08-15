@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(420660),
@@ -77,7 +77,7 @@ function R(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: o,
+            guildId: a,
             channelId: h,
             themeType: T,
             animateOnHover: A,
@@ -89,23 +89,23 @@ function R(e) {
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
         M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        j = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: k } = (0, g.Z)(t.id),
-        [U] = k,
+        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: j } = (0, g.Z)(t.id),
+        [U] = j,
         { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
             status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id),
         })),
-        Z = void 0 !== w ? w : G,
+        V = void 0 !== w ? w : G,
         F = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        V = a()(I.avatar, P),
+        Z = o()(I.avatar, P),
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
             eventHandlers: W,
         } = (0, E.Z)({
             userId: t.id,
-            guildId: null != n ? n.guildId : o,
+            guildId: null != n ? n.guildId : a,
             size: F,
             animateOnHover: A,
         }),
@@ -115,8 +115,8 @@ function R(e) {
             size: F,
             "aria-label": t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: j ? O.Skl.UNKNOWN : Z,
-            statusBackdropColor: M && !j ? (0, l.QFD)(D) : void 0,
+            status: k ? O.Skl.UNKNOWN : V,
+            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,
@@ -125,14 +125,14 @@ function R(e) {
         ? (0, r.jsx)(
               "div",
               N(S({}, W), {
-                  className: V,
+                  className: Z,
                   children: K,
               }),
           )
         : (0, r.jsx)(
               l.P3F,
               N(S({}, W), {
-                  className: a()(V, I.clickable),
+                  className: o()(Z, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       x({

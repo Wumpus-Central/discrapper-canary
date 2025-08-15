@@ -1,12 +1,12 @@
 function r(e, t) {
     if (e.score === t.score) {
-        var n, r, i, o, a, s;
+        var n, r, i, a, o, s;
         let l =
-                null != (o = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase())
-                    ? o
+                null != (a = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase())
+                    ? a
                     : "",
             c =
-                null != (s = null != (a = e.sortable) ? a : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase())
+                null != (s = null != (o = e.sortable) ? o : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase())
                     ? s
                     : "";
         if (l < c) return -1;

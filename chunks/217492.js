@@ -1,7 +1,7 @@
-e.exports = function (e) {
+t.exports = function (t) {
     return (
-        !!e &&
-        !!e.ownerDocument &&
-        (e.ownerDocument.defaultView ? e instanceof e.ownerDocument.defaultView.HTMLElement : e instanceof HTMLElement)
+        !!t &&
+        !!t.ownerDocument &&
+        (t.ownerDocument.defaultView ? t instanceof t.ownerDocument.defaultView.HTMLElement : t instanceof HTMLElement)
     );
 };

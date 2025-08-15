@@ -22,7 +22,7 @@ function f(e) {
         j = (0, c.Z)(t.applicationId),
         y = j.length > 0,
         O = i.default.getCurrentUser(),
-        x = (null == O ? void 0 : O.id) === n;
+        h = (null == O ? void 0 : O.id) === n;
     return g
         ? (0, r.jsx)("div", { className: d.loadingCover })
         : (0, r.jsxs)("div", {
@@ -37,7 +37,7 @@ function f(e) {
                       className: y ? u.socialProofBackdrop : void 0,
                   }),
                   !b &&
-                      x &&
+                      h &&
                       (0, r.jsx)(a.Z, {
                           game: t,
                           widgetType: f,

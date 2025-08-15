@@ -1,35 +1,35 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367),
     i = n(73800),
-    o = n(901461),
+    l = n(901461),
     a = n(464891);
-let s = i.memo(a.ZP);
-function l(e) {
+let o = i.memo(a.ZP);
+function s(e) {
     let {
         message: t,
         channel: n,
         author: i,
         compact: a,
-        animateAvatar: l,
+        animateAvatar: s,
         guildId: c,
         isGroupStart: u = !0,
         roleIcon: d,
-        hideTimestamp: f,
-        hideGuildTag: _,
-        preview: p,
+        hideTimestamp: p,
+        hideGuildTag: m,
+        preview: f,
     } = e;
-    return !(0, o.Z)(t) && (u || a)
-        ? (0, r.jsx)(s, {
+    return !(0, l.Z)(t) && (u || a)
+        ? (0, r.jsx)(o, {
               message: t,
               channel: n,
               author: i,
               guildId: c,
               compact: a,
-              animate: l,
+              animate: s,
               roleIcon: d,
-              hideTimestamp: f,
-              hideGuildTag: _,
-              preview: p,
+              hideTimestamp: p,
+              hideGuildTag: m,
+              preview: f,
           })
         : void 0;
 }

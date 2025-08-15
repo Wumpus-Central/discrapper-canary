@@ -2,8 +2,8 @@ n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(946281);
 function l(e) {
     var t;
@@ -15,15 +15,15 @@ function l(e) {
         : (null == l || null == (t = l.lastValidationResult) ? void 0 : t.success) === !1
           ? (f = s.error)
           : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
-    let _ = (0, r.jsx)(a.Text, {
+    let _ = (0, r.jsx)(o.Text, {
         variant: c ? "text-md/normal" : "text-sm/normal",
         color: "text-primary",
-        className: o()(s.option, { [s.inline]: c }, f, i),
+        className: a()(s.option, { [s.inline]: c }, f, i),
         children: d,
     });
     return null == u
         ? _
-        : (0, r.jsx)(a.P3F, {
+        : (0, r.jsx)(o.P3F, {
               className: s.clickable,
               onClick: () => u(n),
               children: _,

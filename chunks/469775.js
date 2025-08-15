@@ -7,10 +7,10 @@ n.d(t, {
     n(388685);
 var r = n(63063),
     i = n(168107),
-    o = n(480916),
-    a = n(981631),
+    a = n(480916),
+    o = n(981631),
     s = n(388032);
-let l = new Set([o.cU.NSFW_GUILD]),
+let l = new Set([a.cU.NSFW_GUILD]),
     c = (e) => [
         {
             title: s.intl.string(s.t.HphYKi),
@@ -24,8 +24,8 @@ let l = new Set([o.cU.NSFW_GUILD]),
             title: s.intl.string(s.t.aVwLfn),
             description: s.intl.format(s.t.n5vd1N, {
                 handleOnHelpUrlHook: () => {
-                    i.Z.openUrl(r.Z.getArticleURL(a.BhN.TIGGER_PAWTECT_SYSTEM_DMS)),
-                        (0, o.x3)(e, o.d_.PRIMARY, o.sU.SYSTEM_DMS_LEARN_MORE);
+                    i.Z.openUrl(r.Z.getArticleURL(o.BhN.TIGGER_PAWTECT_SYSTEM_DMS)),
+                        (0, a.x3)(e, a.d_.PRIMARY, a.sU.SYSTEM_DMS_LEARN_MORE);
                 },
             }),
         },

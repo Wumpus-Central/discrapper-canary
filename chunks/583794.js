@@ -27,7 +27,7 @@ function i(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -39,12 +39,12 @@ function o(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
+            : a(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -74,7 +74,7 @@ class s {
                 (r.soundshare_last_session = e));
     }
     getStats() {
-        return a(i({}, this._report), { soundshare_unique_pids: this._pids.size });
+        return o(i({}, this._report), { soundshare_unique_pids: this._pids.size });
     }
     constructor() {
         r(this, "_report", void 0),

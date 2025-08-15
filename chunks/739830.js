@@ -1,15 +1,15 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
     a = n(665149),
-    s = n(585483),
-    o = n(723170),
+    o = n(585483),
+    s = n(723170),
     c = n(64247),
     u = n(124368),
     d = n(981631),
-    h = n(388032);
-function p(e) {
+    p = n(388032);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,45 +52,45 @@ function f(e, t) {
         e
     );
 }
-function g(e) {
+function m(e) {
     let { channel: t } = e,
-        n = (0, o.B)(t),
-        [g, m] = i.useState(!1),
+        n = (0, s.B)(t),
+        [m, g] = i.useState(!1),
         b = i.useRef(null);
     i.useEffect(() => {
-        let e = () => m(!0);
+        let e = () => g(!0);
         return (
-            s.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            o.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                s.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                o.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
-    let y = h.intl.string(h.t.h850Sk);
+    let y = p.intl.string(p.t.h850Sk);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: b,
-        shouldShow: g,
+        shouldShow: m,
         animation: l.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => m(!1),
+        onRequestClose: () => g(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 c.Z,
-                f(p({}, e), {
+                f(h({}, e), {
                     channel: t,
                     navId: "thread-context",
-                    label: h.intl.string(h.t["1NBjqa"]),
+                    label: p.intl.string(p.t["1NBjqa"]),
                 }),
             ),
         children: (e, t) => {
             let { isShown: i } = t;
             return (0, r.jsx)(
                 a.ZP.Icon,
-                f(p({}, e), {
+                f(h({}, e), {
                     ref: b,
-                    onClick: () => m((e) => !e),
+                    onClick: () => g((e) => !e),
                     tooltip: i ? null : y,
                     icon: n === u.iN.NO_MESSAGES ? l.owu : l.Dkj,
                     "aria-label": y,

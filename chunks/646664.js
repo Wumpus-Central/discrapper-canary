@@ -1,5 +1,5 @@
-let { MAX_SAFE_COMPONENT_LENGTH: r, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = n(942177),
-    a = n(13556),
+let { MAX_SAFE_COMPONENT_LENGTH: r, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: a } = n(942177),
+    o = n(13556),
     s = ((t = e.exports = {}).re = []),
     l = (t.safeRe = []),
     c = (t.src = []),
@@ -8,7 +8,7 @@ let { MAX_SAFE_COMPONENT_LENGTH: r, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     f = "[a-zA-Z0-9-]",
     _ = [
         ["\\s", 1],
-        ["\\d", o],
+        ["\\d", a],
         [f, i],
     ],
     p = (e) => {
@@ -18,7 +18,7 @@ let { MAX_SAFE_COMPONENT_LENGTH: r, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     h = (e, t, n) => {
         let r = p(t),
             i = d++;
-        a(e, i, t),
+        o(e, i, t),
             (u[e] = i),
             (c[i] = t),
             (s[i] = new RegExp(t, n ? "g" : void 0)),

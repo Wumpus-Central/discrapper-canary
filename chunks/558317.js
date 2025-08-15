@@ -1,69 +1,42 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => i });
 var r = n(255367);
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 n(73800);
-let l = (e) =>
-    (0, r.jsxs)(
+let i = (e) => {
+    var t, n;
+    return (0, r.jsxs)(
         "svg",
-        s(
-            o(
-                {
-                    viewBox: "0 0 500 350",
-                    xmlns: "http://www.w3.org/2000/svg",
-                },
-                e,
-            ),
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                viewBox: "0 0 500 350",
+                xmlns: "http://www.w3.org/2000/svg",
+            },
+            e,
+        )),
+        (n = n =
             {
                 children: [
                     (0, r.jsxs)("defs", {
@@ -436,6 +409,19 @@ let l = (e) =>
                         d: "m281.46 220.54-56.2 28.63a12.69 12.69 0 0 0-5.55 17.06L298.15 226a12.41 12.41 0 0 0-16.69-5.46ZM242.5 229.16a5.34 5.34 0 0 0-10 3.54l-4.21 2.09a5.36 5.36 0 1 0 1.1 2.24l4.22-2.09a5.27 5.27 0 0 0 2.38 1.65 5.25 5.25 0 0 0 4.08-.27 5.35 5.35 0 0 0 2.42-7.16Zm-17 11.59a2.84 2.84 0 1 1-2.53-5.09 2.81 2.81 0 0 1 1.26-.3 2.91 2.91 0 0 1 .92.15 2.78 2.78 0 0 1 1.63 1.43 2.84 2.84 0 0 1-1.31 3.81Zm13.5-6.67a2.78 2.78 0 0 1-2.17.14 2.84 2.84 0 1 1 2.17-.14Z",
                     }),
                 ],
-            },
-        ),
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
+};

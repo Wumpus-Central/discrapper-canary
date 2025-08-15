@@ -1,7 +1,7 @@
 n.d(t, { K: () => b });
 var r = n(522942),
     i = n(131016);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -62,13 +62,13 @@ let c = "--custom-display-name-styles-gradient-start-color",
     h = "--custom-display-name-styles-dark-2-color",
     m = "--custom-display-name-styles-wrap";
 function g(e) {
-    let { main: t, light1: n, light2: r, dark1: o, dark2: a } = (0, i.hX)(e);
+    let { main: t, light1: n, light2: r, dark1: a, dark2: o } = (0, i.hX)(e);
     return {
         [d]: t,
         [f]: n,
         [_]: r,
-        [p]: o,
-        [h]: a,
+        [p]: a,
+        [h]: o,
     };
 }
 function E(e) {
@@ -95,5 +95,5 @@ function b(e, t) {
         default:
             i = g(t[0]);
     }
-    return l(a({}, i), { [m]: n ? "wrap" : "nowrap" });
+    return l(o({}, i), { [m]: n ? "wrap" : "nowrap" });
 }

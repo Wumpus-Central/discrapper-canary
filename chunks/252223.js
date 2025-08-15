@@ -1,8 +1,8 @@
-n.d(t, { Z: () => Z }), n(539854), n(781311);
+n.d(t, { Z: () => V }), n(539854), n(781311);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n(793030),
     c = n(442837),
@@ -80,11 +80,11 @@ function M(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != t ? P.intl.formatToPlainString(P.t["0wJXSk"], { name: t }) : P.intl.string(P.t.eXan7O);
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? P.intl.string(P.t["9FaEzs"])
@@ -96,26 +96,26 @@ function k(e, t) {
 function U(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: o } = (0, O.f)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: a } = (0, m.Cq)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: a } = (0, O.f)({ location: "StackedActivityStatus" }),
+        { enableTopNavButton: o } = (0, m.Cq)({ location: "StackedActivityStatus" }),
         s = (0, _.ZP)(r),
-        l = o || a;
+        l = a || o;
     return (
-        null != t && i.push(j(t)),
+        null != t && i.push(k(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, v.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(k(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
 function G(e) {
-    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: o } = e,
-        s = o - 1;
+    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
+        s = a - 1;
     return (0, r.jsxs)(l.xv, {
         variant: t,
-        className: a()(n, w.activityCounter),
+        className: o()(n, w.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
@@ -124,15 +124,15 @@ function B(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xv, {
         variant: t,
-        className: a()(w.dot, n),
+        className: o()(w.dot, n),
         children: C.l,
     });
 }
-function Z(e) {
+function V(e) {
     let {
         user: t,
         activities: n,
-        applicationStream: o,
+        applicationStream: a,
         voiceChannel: l,
         textClassName: _,
         iconClassName: m,
@@ -143,9 +143,9 @@ function Z(e) {
         hideTooltip: x = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
-        k = (0, g.Cf)(j),
-        Z = i.useMemo(() => {
+    let k = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, g.Cf)(k),
+        V = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -159,7 +159,7 @@ function Z(e) {
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
         F = (0, c.e7)([b.default], () => b.default.getId() === (null == t ? void 0 : t.id)),
-        V = (0, c.e7)([E.Z], () =>
+        Z = (0, c.e7)([E.Z], () =>
             F ? E.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === R.IIU.HANG_STATUS) : null,
         ),
         H = i.useMemo(() => {
@@ -174,7 +174,7 @@ function Z(e) {
                                   return (
                                       t !== R.IIU.CUSTOM_STATUS &&
                                       t !== R.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -183,17 +183,17 @@ function Z(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        z = (0, p.Z)({ location: "ActivityStatus" }) && null != Z ? (0, h.Z)(Z) : null,
-        q = (null == Z ? void 0 : Z.state) != null || null != z,
-        X = null != j,
+        z = (0, p.Z)({ location: "ActivityStatus" }) && null != V ? (0, h.Z)(V) : null,
+        q = (null == V ? void 0 : V.state) != null || null != z,
+        X = null != k,
         Q = !X && null != l,
         J = H.length + (X || Q ? 1 : 0),
         $ = J > 1,
-        ee = (null == Z ? void 0 : Z.state) != null && "xs" === O,
+        ee = (null == V ? void 0 : V.state) != null && "xs" === O,
         et = U({
             streamActivity: Y,
             otherActivities: H,
@@ -203,9 +203,9 @@ function Z(e) {
     let en = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || x;
-            if (null != j)
+            if (null != k)
                 return (0, r.jsx)(T.Z, {
-                    stream: j,
+                    stream: k,
                     game: Y,
                     textVariant: "text-".concat(O, "/medium"),
                     textClassName: _,
@@ -246,14 +246,14 @@ function Z(e) {
                     canTruncate: !1,
                 };
             return (
-                null != j &&
+                null != k &&
                     e.push(
                         (0, r.jsx)(
                             T.Z,
                             M(
                                 L(
                                     {
-                                        stream: j,
+                                        stream: k,
                                         game: null == n ? void 0 : n.find(d.Z),
                                     },
                                     t,
@@ -277,53 +277,53 @@ function Z(e) {
                 hasCustomStatusText: q,
                 totalActivityCount: J,
             }),
-        eo = () =>
+        ea = () =>
             0 === J
                 ? null
                 : $ && !W
                   ? x
                       ? (0, r.jsxs)("div", {
-                            className: a()(w.activityContainer, ee && w.iconOnly),
+                            className: o()(w.activityContainer, ee && w.iconOnly),
                             children: [en(), ei()],
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: a()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
+                            tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
                             delay: C.X,
                             text: er(),
                             "aria-label": et,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    M(L({ className: a()(w.activityContainer, ee && w.iconOnly) }, e), {
+                                    M(L({ className: o()(w.activityContainer, ee && w.iconOnly) }, e), {
                                         children: [en(!0), ei()],
                                     }),
                                 ),
                         })
                   : en(),
-        ea = a()(w.container, {
+        eo = o()(w.container, {
             [w.textXs]: "xs" === O,
             [w.textSm]: "sm" === O,
         }),
         es = () =>
-            null == Z && null == V
+            null == V && null == Z
                 ? null
                 : (0, r.jsx)(S.Z, {
-                      customStatusActivity: Z,
+                      customStatusActivity: V,
                       textSize: O,
                       animateEmoji: v,
                       hideEmoji: D,
                       hideTooltip: x,
                       textClassName: _,
                       iconClassName: m,
-                      tooltipClassName: ea,
+                      tooltipClassName: eo,
                       voiceChannel: l,
-                      hangStatus: V,
+                      hangStatus: Z,
                   });
     return (0, r.jsxs)("div", {
-        className: ea,
+        className: eo,
         children: [
-            eo(),
-            null != Z &&
+            ea(),
+            null != V &&
                 J > 0 &&
                 (0, r.jsx)(B, {
                     textVariant: "text-".concat(O, "/normal"),

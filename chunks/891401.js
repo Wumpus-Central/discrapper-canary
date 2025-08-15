@@ -13,8 +13,8 @@ var n = a(255367),
     h = a(151480),
     p = a(461762),
     b = a(680783),
-    f = a(605236),
-    v = a(675478),
+    v = a(605236),
+    f = a(675478),
     j = a(944486),
     g = a(388032),
     _ = a(715639);
@@ -73,13 +73,13 @@ function O() {
         l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, p.Z)(s),
-        f = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { opacity: e });
             },
             [s],
         ),
-        v = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 E(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
@@ -98,15 +98,15 @@ function O() {
             [null == l ? void 0 : l.wallpaperId],
         ),
         T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        k = r.useCallback(
+        I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        R = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s],
         ),
-        R = r.useCallback(() => {
+        k = r.useCallback(() => {
             null != s && (0, h.i)(s, null);
         }, [s]),
         Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -160,7 +160,7 @@ function O() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: f,
+                                onValueChange: v,
                             },
                             "opacity-".concat(Z),
                         ),
@@ -189,7 +189,7 @@ function O() {
                                     {
                                         type: "color",
                                         value: d.primary_color,
-                                        onChange: v,
+                                        onChange: f,
                                     },
                                     "primaryColor-".concat(d.primary_color),
                                 ),
@@ -241,7 +241,7 @@ function O() {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: w,
+                                    onClick: I,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -271,7 +271,7 @@ function O() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: k,
+                                onValueChange: R,
                             },
                             "tokenMixAmount-".concat(A),
                         ),
@@ -311,14 +311,14 @@ function O() {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: _.removeButton,
                                 }),
                             ],
                         }),
                         (0, n.jsx)(u.zx, {
                             className: _.resetButton,
-                            onClick: R,
+                            onClick: k,
                             children: "Reset",
                         }),
                     ],
@@ -328,9 +328,9 @@ function O() {
 }
 function T() {
     let e = r.useCallback(() => {
-            (0, v.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
+            (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, f.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, v.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
         a = null != t ? new Date(t) : null;
     return (0, n.jsxs)(n.Fragment, {
         children: [

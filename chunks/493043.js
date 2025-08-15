@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(81570),
-    o = n(769140),
-    a = n(382425);
+    a = n(769140),
+    o = n(382425);
 function s(e, t, n) {
     return (
         t in e
@@ -39,9 +39,9 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -50,8 +50,8 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
@@ -60,7 +60,7 @@ function d(e) {
     let f = (0, i.T)({ location: t });
     return s.id !== u.id && f
         ? (0, r.jsx)(
-              a.Z,
+              o.Z,
               l(
                   {
                       currentUser: u,
@@ -71,7 +71,7 @@ function d(e) {
               ),
           )
         : (0, r.jsx)(
-              o.Z,
+              a.Z,
               l(
                   {
                       currentUser: u,

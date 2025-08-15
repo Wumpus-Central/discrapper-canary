@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => a,
+    $: () => o,
     Q: () => s,
 });
 var r = n(818083);
@@ -7,7 +7,7 @@ let i = {
         enabled: !1,
         inExperiment: !1,
     },
-    o = (0, r.B)({
+    a = (0, r.B)({
         kind: "user",
         id: "2025-08_desktop_top_level_search_v1",
         label: "Desktop Top Level Search v1",
@@ -31,13 +31,13 @@ let i = {
             },
         ],
     });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
+        { enabled: r } = a.useExperiment({ location: t }, { autoTrackExposure: n });
     return r;
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = o.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { enabled: r } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return r;
 }

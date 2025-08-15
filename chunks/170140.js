@@ -1,130 +1,119 @@
-n.d(t, { J: () => v });
+n.d(t, { J: () => b });
 var r = n(73800),
     i = n(399606),
-    o = n(430198),
+    l = n(430198),
     a = n(754688),
-    s = n(314897),
-    l = n(592125),
+    o = n(314897),
+    s = n(592125),
     c = n(271383),
     u = n(430824),
     d = n(914010),
-    f = n(594174),
-    _ = n(158222),
-    p = n(312146),
-    h = n(487554),
-    m = n(874748),
-    g = n(981631);
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function v(e, t) {
-    let n = (0, p.p$)(),
-        E = (0, m.LR)(e),
-        y = (0, i.e7)([c.ZP, s.default], () => {
-            let e = s.default.getId();
-            return c.ZP.isMember(null == E ? void 0 : E.guildId, e);
-        }, [E]),
-        v = (0, i.e7)(
-            [o.Z],
-            () => null != E && (null == E ? void 0 : E.channelId) != null && o.Z.isChannelGated(E.guildId, E.channelId),
-            [E],
+    p = n(594174),
+    m = n(158222),
+    f = n(312146),
+    _ = n(487554),
+    g = n(874748),
+    h = n(981631);
+function b(e, t) {
+    let n = (0, f.p$)(),
+        b = (0, g.LR)(e),
+        E = (0, i.e7)([c.ZP, o.default], () => {
+            let e = o.default.getId();
+            return c.ZP.isMember(null == b ? void 0 : b.guildId, e);
+        }, [b]),
+        C = (0, i.e7)(
+            [l.Z],
+            () => null != b && (null == b ? void 0 : b.channelId) != null && l.Z.isChannelGated(b.guildId, b.channelId),
+            [b],
         ),
-        I = t.hasFlag(g.iLy.IS_CROSSPOST),
+        v = t.hasFlag(h.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: T,
-            guild: S,
-            parentChannel: A,
-            user: N,
-            selectedGuildId: C,
-            canAccess: R,
-        } = (0, i.cj)([h.Z, u.Z, l.Z, f.default, d.Z], () => {
+            rawMediaPostEmbedData: O,
+            guild: y,
+            parentChannel: x,
+            user: j,
+            selectedGuildId: I,
+            canAccess: S,
+        } = (0, i.cj)([_.Z, u.Z, s.Z, p.default, d.Z], () => {
             var e;
-            let t = null == (e = h.Z.getMediaPostEmbed(null == E ? void 0 : E.threadId)) ? void 0 : e.media,
-                n = u.Z.getGuild(null == E ? void 0 : E.guildId),
-                r = l.Z.getChannel(null == E ? void 0 : E.channelId),
-                i = f.default.getUser(null == t ? void 0 : t.author_id),
-                o = d.Z.getGuildId(),
-                s = null != r && (0, a.YO)(r);
+            let t = null == (e = _.Z.getMediaPostEmbed(null == b ? void 0 : b.threadId)) ? void 0 : e.media,
+                n = u.Z.getGuild(null == b ? void 0 : b.guildId),
+                r = s.Z.getChannel(null == b ? void 0 : b.channelId),
+                i = p.default.getUser(null == t ? void 0 : t.author_id),
+                l = d.Z.getGuildId(),
+                o = null != r && (0, a.YO)(r);
             return {
                 rawMediaPostEmbedData: t,
                 guild: n,
                 parentChannel: r,
                 user: i,
-                selectedGuildId: o,
-                canAccess: s,
+                selectedGuildId: l,
+                canAccess: o,
             };
-        }, [E]),
-        P = r.useMemo(() => {
-            let e = (0, m.ku)({
-                mediaPostEmbedData: T,
-                guild: S,
-                parentChannel: A,
-                user: N,
-                selectedGuildId: C,
-                canAccess: R,
+        }, [b]),
+        T = r.useMemo(() => {
+            var e, t;
+            let n = (0, g.ku)({
+                mediaPostEmbedData: O,
+                guild: y,
+                parentChannel: x,
+                user: j,
+                selectedGuildId: I,
+                canAccess: S,
             });
-            return null == e ? null : O(b({}, e), { user: N });
-        }, [T, S, A, N, C, R]);
+            return null == n
+                ? null
+                : ((e = (function (e) {
+                      for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {},
+                              r = Object.keys(n);
+                          "function" == typeof Object.getOwnPropertySymbols &&
+                              (r = r.concat(
+                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                  }),
+                              )),
+                              r.forEach(function (t) {
+                                  var r;
+                                  (r = n[t]),
+                                      t in e
+                                          ? Object.defineProperty(e, t, {
+                                                value: r,
+                                                enumerable: !0,
+                                                configurable: !0,
+                                                writable: !0,
+                                            })
+                                          : (e[t] = r);
+                              });
+                      }
+                      return e;
+                  })({}, n)),
+                  (t = t = { user: j }),
+                  Object.getOwnPropertyDescriptors
+                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                      : (function (e, t) {
+                            var n = Object.keys(e);
+                            if (Object.getOwnPropertySymbols) {
+                                var r = Object.getOwnPropertySymbols(e);
+                                n.push.apply(n, r);
+                            }
+                            return n;
+                        })(Object(t)).forEach(function (n) {
+                            Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                        }),
+                  e);
+        }, [O, y, x, j, I, S]);
     return (
         r.useEffect(() => {
-            if ((null == E ? void 0 : E.threadId) != null) {
-                let e = h.Z.getEmbedFetchState(E.threadId);
+            if ((null == b ? void 0 : b.threadId) != null) {
+                let e = _.Z.getEmbedFetchState(b.threadId);
                 !0 !== n ||
-                    e !== h.M.NOT_FETCHED ||
-                    (y && !1 === v) ||
-                    (!y && I) ||
-                    (0, _.xP)(null == E ? void 0 : E.threadId);
+                    e !== _.M.NOT_FETCHED ||
+                    (E && !1 === C) ||
+                    (!E && v) ||
+                    (0, m.xP)(null == b ? void 0 : b.threadId);
             }
-        }, [E, n, y, v, I]),
-        P
+        }, [b, n, E, C, v]),
+        T
     );
 }

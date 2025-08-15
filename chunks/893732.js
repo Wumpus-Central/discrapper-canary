@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(388032),
+    l = n(388032),
     a = n(771371);
-function s(e) {
+function o(e) {
     let { onClose: t, guildName: n } = e;
     return (0, r.jsxs)("div", {
         className: a.container,
@@ -25,18 +25,18 @@ function s(e) {
                     (0, r.jsx)(i.X6q, {
                         variant: "heading-md/semibold",
                         className: a.headerText,
-                        children: o.intl.string(o.t.LIIyeH),
+                        children: l.intl.string(l.t.LIIyeH),
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/normal",
-                        children: o.intl.format(o.t["4/6vQk"], { guildName: n }),
+                        children: l.intl.format(l.t["4/6vQk"], { guildName: n }),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: a.button,
                         children: (0, r.jsx)(i.zxk, {
                             variant: "primary",
-                            text: o.intl.string(o.t.BddRzc),
+                            text: l.intl.string(l.t.BddRzc),
                             onClick: t,
                         }),
                     }),

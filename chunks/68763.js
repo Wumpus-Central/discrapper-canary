@@ -7,12 +7,12 @@ e.exports = function (e) {
             literal: "false true",
         },
         i = e.COMMENT("%", "$"),
-        o = {
+        a = {
             className: "number",
             begin: "\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)",
             relevance: 0,
         },
-        a = { begin: "fun\\s+" + t + "/\\d+" },
+        o = { begin: "fun\\s+" + t + "/\\d+" },
         s = {
             begin: n + "\\(",
             end: "\\)",
@@ -123,21 +123,21 @@ e.exports = function (e) {
         };
     h.contains = [
         i,
-        a,
+        o,
         e.inherit(e.APOS_STRING_MODE, { className: "" }),
         h,
         s,
         p,
         _,
         e.QUOTE_STRING_MODE,
-        o,
+        a,
         l,
         c,
         u,
         d,
         f,
     ];
-    let m = [i, a, h, s, p, _, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
+    let m = [i, o, h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
     (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
     let g = [
             "-module",
@@ -203,7 +203,7 @@ e.exports = function (e) {
                 },
                 contains: [E, p, _, e.QUOTE_STRING_MODE],
             },
-            o,
+            a,
             p,
             _,
             e.QUOTE_STRING_MODE,

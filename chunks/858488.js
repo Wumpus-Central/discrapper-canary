@@ -7,16 +7,16 @@ var r = n(442837),
     a = n(388032);
 function u(e) {
     let { user: t, onAction: u, appContext: c } = e,
-        s = t.id,
-        [d, f] = (0, r.Wu)([o.Z], () => {
+        d = t.id,
+        [s, f] = (0, r.Wu)([o.Z], () => {
             var e;
-            return [o.Z.isFriend(s), null != (e = o.Z.getNickname(s)) ? e : null];
-        }, [s]);
-    if (!d) return null;
-    let b = null == f ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t["8pOYUF"]);
+            return [o.Z.isFriend(d), null != (e = o.Z.getNickname(d)) ? e : null];
+        }, [d]);
+    if (!s) return null;
+    let g = null == f ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t["8pOYUF"]);
     return (0, l.jsx)(i.sNh, {
         id: null == f ? "add-friend-nickname" : "edit-friend-nickname",
-        label: b,
+        label: g,
         action: () => {
             null == u || u(),
                 (0, i.ZDy)(

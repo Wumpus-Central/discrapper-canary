@@ -1,5 +1,5 @@
 n.d(t, {
-    De: () => a,
+    De: () => o,
     Fv: () => f,
     Mg: () => r.M,
     TZ: () => d,
@@ -12,15 +12,15 @@ n.d(t, {
     n(704826);
 var r = n(513431);
 let i = /[\u0300-\u036f]/g,
-    o = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
-function a(e) {
+    a = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
+function o(e) {
     return null == e ? "" : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
 }
 let s = function (e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\u2026";
     if (null == e || null == t) return "";
     if (e.length > t) {
-        let r = o.test(e) ? [...e].slice(0, t - n.length).join("") : e.substring(0, t - n.length);
+        let r = a.test(e) ? [...e].slice(0, t - n.length).join("") : e.substring(0, t - n.length);
         return "".concat(r.replace(/[\s.]+$/, "")).concat(n);
     }
     return e;

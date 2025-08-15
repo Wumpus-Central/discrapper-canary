@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(927923),
     i = n(388032);
-function o(e) {
+function l(e) {
     switch (e) {
         case r.YE.XBOX:
             return i.intl.string(i.t.T0uYKy);

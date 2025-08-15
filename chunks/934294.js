@@ -287,11 +287,11 @@ e.exports = function (e) {
             "variables",
             "view",
         ],
-        o = {
+        a = {
             className: "symbol",
             begin: "\\$" + t.either(...i),
         },
-        a = {
+        o = {
             className: "number",
             variants: [{ begin: "\\b(0[bB][01]+)" }, { begin: "\\b(0[oO][0-7]+)" }, { begin: e.C_NUMBER_RE }],
             relevance: 0,
@@ -309,7 +309,7 @@ e.exports = function (e) {
             end: "`",
             contains: [e.BACKSLASH_ESCAPE, s],
         };
-    s.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, l, a, e.REGEXP_MODE];
+    s.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, l, o, e.REGEXP_MODE];
     let c = s.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
     return {
         name: "ArcGIS Arcade",
@@ -321,8 +321,8 @@ e.exports = function (e) {
             l,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            o,
             a,
+            o,
             {
                 begin: /[{,]\s*/,
                 relevance: 0,

@@ -1,18 +1,18 @@
-l.d(t, { Z: () => r }), l(388685);
-var e = l(73800),
-    i = l(442837),
-    o = l(528963),
-    s = l(606956);
-let a = +l(70956).Z.Millis.HOUR;
-function r(n) {
-    let [t, l] = e.useState(!1),
-        r = (0, i.e7)([s.Z], () => s.Z.getFollowerStatsForChannel(n), [n]);
+t.d(n, { Z: () => r }), t(388685);
+var s = t(73800),
+    l = t(442837),
+    o = t(528963),
+    i = t(606956);
+let a = +t(70956).Z.Millis.HOUR;
+function r(e) {
+    let [n, t] = s.useState(!1),
+        r = (0, l.e7)([i.Z], () => i.Z.getFollowerStatsForChannel(e), [e]);
     return (
-        e.useEffect(() => {
-            (null == r || Date.now() - r.lastFetched > a) && !t
-                ? (l(!0), o.Z.fetchChannelFollowerStats(n))
-                : null != r && t && l(!1);
-        }, [n, r, t]),
-        [r, t]
+        s.useEffect(() => {
+            (null == r || Date.now() - r.lastFetched > a) && !n
+                ? (t(!0), o.Z.fetchChannelFollowerStats(e))
+                : null != r && n && t(!1);
+        }, [e, r, n]),
+        [r, n]
     );
 }

@@ -1,8 +1,8 @@
 n.d(e, { q: () => s });
-var i = n(442837),
-    r = n(375954);
+var r = n(442837),
+    i = n(375954);
 let s = (t) =>
-    (0, i.e7)([r.Z], () => {
+    (0, r.e7)([i.Z], () => {
         var e;
-        return null != (e = r.Z.getLastNonCurrentUserMessage(t)) ? e : r.Z.getLastMessage(t);
+        return null != (e = i.Z.getLastNonCurrentUserMessage(t)) ? e : i.Z.getLastMessage(t);
     });

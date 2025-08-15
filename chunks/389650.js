@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(610394),
     S = n(131951),
     T = n(556296),
-    I = n(63063),
-    N = n(358085),
+    N = n(63063),
+    I = n(358085),
     y = n(13140),
     A = n(659947),
     P = n(981631),
@@ -105,7 +105,7 @@ class G extends r.PureComponent {
                     type: m.geA.DESCRIPTION,
                     style: { color: d.Z.unsafe_rawColors.RED_400.css },
                     children: D.intl.format(D.t.MOIaNT, {
-                        keyboardNavArticle: I.Z.getArticleURL(P.BhN.KEYBOARD_NAVIGATION),
+                        keyboardNavArticle: N.Z.getArticleURL(P.BhN.KEYBOARD_NAVIGATION),
                     }),
                 })
               : (0, i.jsx)(m.R94, {
@@ -270,12 +270,12 @@ class F extends r.PureComponent {
                     label: D.intl.string(D.t.hurHWl),
                 })),
             t &&
-                ((0, N.isWindows)() || S.Z.getUseSystemScreensharePicker()) &&
+                ((0, I.isWindows)() || S.Z.getUseSystemScreensharePicker()) &&
                 s.push({
                     value: P.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: D.intl.string(D.t.ybdjJC),
                 }),
-            (0, N.isDesktop)() &&
+            (0, I.isDesktop)() &&
                 (s.push(
                     {
                         value: P.kg4.NAVIGATE_BACK,
@@ -330,12 +330,12 @@ class F extends r.PureComponent {
                 (i[P.kg4.VAD_PRIORITY] = D.intl.string(D.t.rSe8IS)),
             (0, O.l)() && (i[P.kg4.TOGGLE_CAMERA] = D.intl.string(D.t.v1JBtL)),
             e && (i[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = D.intl.string(D.t.IoP5vb)),
-            t && (0, N.isWindows)() && (i[P.kg4.TOGGLE_GO_LIVE_STREAMING] = D.intl.string(D.t.s4C239)),
-            (0, N.isDesktop)() &&
+            t && (0, I.isWindows)() && (i[P.kg4.TOGGLE_GO_LIVE_STREAMING] = D.intl.string(D.t.s4C239)),
+            (0, I.isDesktop)() &&
                 ((i[P.kg4.NAVIGATE_BACK] = D.intl.string(D.t.nKDlEh)),
                 (i[P.kg4.NAVIGATE_FORWARD] = D.intl.string(D.t.DK0FFh)),
-                (i[P.kg4.SOUNDBOARD] = (0, N.isWindows)() ? D.intl.string(D.t["5wJefH"]) : D.intl.string(D.t.gzjsSE)),
-                (i[P.kg4.SOUNDBOARD_HOLD] = (0, N.isWindows)() ? D.intl.string(D.t.RRkZc3) : D.intl.string(D.t.laNlTk)),
+                (i[P.kg4.SOUNDBOARD] = (0, I.isWindows)() ? D.intl.string(D.t["5wJefH"]) : D.intl.string(D.t.gzjsSE)),
+                (i[P.kg4.SOUNDBOARD_HOLD] = (0, I.isWindows)() ? D.intl.string(D.t.RRkZc3) : D.intl.string(D.t.laNlTk)),
                 n && (i[P.kg4.SAVE_CLIP] = D.intl.string(D.t.z3Wbam))),
             i
         );
@@ -384,7 +384,7 @@ class F extends r.PureComponent {
                 (0, i.jsx)(m.hjN, {
                     tag: m.RB0.H1,
                     title: D.intl.string(D.t.T9DA2N),
-                    children: N.isPlatformEmbedded
+                    children: I.isPlatformEmbedded
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsxs)(j.Z, {
@@ -531,7 +531,7 @@ function H() {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,
-        allowSoundboard: (0, N.isWindows)(),
+        allowSoundboard: (0, I.isWindows)(),
         enableClips: r,
     });
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(648052),
-    a = n(530),
+    a = n(648052),
+    o = n(530),
     s = n(420654),
     l = n(116854),
     c = n(271383),
@@ -50,14 +50,14 @@ function p(e) {
         className: _.body,
         inert: !0,
         children: [
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(o.Z, {
                 user: n,
                 usernameIcon: D(),
                 nickname: w,
                 displayNameStyles: void 0 !== I ? I : n.displayNameStyles,
                 pronouns: P,
                 isTryItOut: T,
-                tags: (0, r.jsx)(o.Z, {
+                tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,
                     themeType: f.lY.POPOUT,
                     pendingLegacyUsernameDisabled: O,

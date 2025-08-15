@@ -1,302 +1,302 @@
-e.d(t, { v: () => m });
-var r = e(255367);
-e(73800);
-var g = e(397110),
-    v = e(79312),
-    n = e(25960),
-    f = e(706484),
-    B = e(819837),
-    h = e(165440),
-    l = e(21822),
-    i = e(285916),
-    o = e(168646),
-    C = e(470831),
-    a = e(96824),
-    w = e(187485),
-    s = e(713897),
-    Q = e(886512),
-    H = e(560701),
-    c = e(678563),
-    D = e(573508),
-    M = e(164175),
-    d = e(441787),
-    p = e(292184),
-    b = e(117243),
-    V = e(997109),
-    E = e(606650),
-    P = e(117257),
-    u = e(214067),
-    I = e(803193),
-    j = e(900689),
-    Z = e(498103),
-    O = e(586131),
-    y = e(931512),
-    x = e(350136),
-    L = e(131085);
-function X(A) {
-    for (var t = 1; t < arguments.length; t++) {
-        var e = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(e);
+t.d(e, { v: () => N });
+var n = t(255367);
+t(73800);
+var r = t(397110),
+    l = t(79312),
+    i = t(25960),
+    a = t(706484),
+    s = t(819837),
+    o = t(165440),
+    g = t(21822),
+    c = t(285916),
+    f = t(168646),
+    v = t(470831),
+    u = t(96824),
+    h = t(187485),
+    d = t(713897),
+    E = t(886512),
+    C = t(560701),
+    B = t(678563),
+    w = t(573508),
+    D = t(164175),
+    M = t(441787),
+    p = t(292184),
+    I = t(117243),
+    H = t(997109),
+    b = t(606650),
+    O = t(117257),
+    Q = t(214067),
+    P = t(803193),
+    j = t(900689),
+    V = t(498103),
+    m = t(586131),
+    T = t(931512),
+    y = t(350136),
+    L = t(131085);
+function x(A) {
+    for (var e = 1; e < arguments.length; e++) {
+        var t = null != arguments[e] ? arguments[e] : {},
+            n = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(e).filter(function (A) {
-                    return Object.getOwnPropertyDescriptor(e, A).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(t).filter(function (A) {
+                    return Object.getOwnPropertyDescriptor(t, A).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = e[t]),
-                    t in A
-                        ? Object.defineProperty(A, t, {
-                              value: r,
+            n.forEach(function (e) {
+                var n;
+                (n = t[e]),
+                    e in A
+                        ? Object.defineProperty(A, e, {
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (A[t] = r);
+                        : (A[e] = n);
             });
     }
     return A;
 }
-let m = (A) => {
-    var { badge: t, primaryTintColor: e, secondaryTintColor: m } = A,
-        G = (function (A, t) {
+let N = (A) => {
+    var { badge: e, primaryTintColor: t, secondaryTintColor: N } = A,
+        Z = (function (A, e) {
             if (null == A) return {};
-            var e,
-                r,
-                g = (function (A, t) {
+            var t,
+                n,
+                r = (function (A, e) {
                     if (null == A) return {};
-                    var e,
-                        r,
-                        g = {},
-                        v = Object.keys(A);
-                    for (r = 0; r < v.length; r++) (e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]);
-                    return g;
-                })(A, t);
+                    var t,
+                        n,
+                        r = {},
+                        l = Object.keys(A);
+                    for (n = 0; n < l.length; n++) (t = l[n]), e.indexOf(t) >= 0 || (r[t] = A[t]);
+                    return r;
+                })(A, e);
             if (Object.getOwnPropertySymbols) {
-                var v = Object.getOwnPropertySymbols(A);
-                for (r = 0; r < v.length; r++)
-                    (e = v[r]),
-                        !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(A, e) && (g[e] = A[e]);
+                var l = Object.getOwnPropertySymbols(A);
+                for (n = 0; n < l.length; n++)
+                    (t = l[n]),
+                        !(e.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(A, t) && (r[t] = A[t]);
             }
-            return g;
+            return r;
         })(A, ["badge", "primaryTintColor", "secondaryTintColor"]);
-    switch (t) {
+    switch (e) {
         case L.x_.SWORD:
-            return (0, r.jsx)(
+            return (0, n.jsx)(
                 j.V,
-                X(
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.WATER_DROP:
-            return (0, r.jsx)(y.q, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(T.q, x({ primaryTintColor: t }, Z));
         case L.x_.SKULL:
-            return (0, r.jsx)(V.D, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(H.D, x({ primaryTintColor: t }, Z));
         case L.x_.TOADSTOOL:
-            return (0, r.jsx)(
-                Z.T,
-                X(
+            return (0, n.jsx)(
+                V.T,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.MOON:
-            return (0, r.jsx)(p.$, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(p.$, x({ primaryTintColor: t }, Z));
         case L.x_.LIGHTNING:
-            return (0, r.jsx)(M.F, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(D.F, x({ primaryTintColor: t }, Z));
         case L.x_.LEAF:
-            return (0, r.jsx)(D.i, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(w.i, x({ primaryTintColor: t }, Z));
         case L.x_.HEART:
-            return (0, r.jsx)(H.h, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(C.h, x({ primaryTintColor: t }, Z));
         case L.x_.FIRE:
-            return (0, r.jsx)(o.G, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(f.G, x({ primaryTintColor: t }, Z));
         case L.x_.COMPASS:
-            return (0, r.jsx)(
-                n.Q,
-                X(
+            return (0, n.jsx)(
+                i.Q,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.CROSSHAIRS:
-            return (0, r.jsx)(
-                f.Q,
-                X(
+            return (0, n.jsx)(
+                a.Q,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.FLOWER:
-            return (0, r.jsx)(
-                C.N,
-                X(
+            return (0, n.jsx)(
+                v.N,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.FORCE:
-            return (0, r.jsx)(
-                a.S,
-                X(
+            return (0, n.jsx)(
+                u.S,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.GEM:
-            return (0, r.jsx)(
-                s.S,
-                X(
+            return (0, n.jsx)(
+                d.S,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.LAVA:
-            return (0, r.jsx)(
-                c.h,
-                X(
+            return (0, n.jsx)(
+                B.h,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.PSYCHIC:
-            return (0, r.jsx)(
-                b.L,
-                X(
+            return (0, n.jsx)(
+                I.L,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.SMOKE:
-            return (0, r.jsx)(
-                E.w,
-                X(
+            return (0, n.jsx)(
+                b.w,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.SNOW:
-            return (0, r.jsx)(
-                P.X,
-                X(
+            return (0, n.jsx)(
+                O.X,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.SOUND:
-            return (0, r.jsx)(
-                u.H,
-                X(
+            return (0, n.jsx)(
+                Q.H,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.SUN:
-            return (0, r.jsx)(
-                I.k,
-                X(
+            return (0, n.jsx)(
+                P.k,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.WIND:
-            return (0, r.jsx)(
-                x.A,
-                X(
+            return (0, n.jsx)(
+                y.A,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.BUNNY:
-            return (0, r.jsx)(g.K, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(r.K, x({ primaryTintColor: t }, Z));
         case L.x_.DOG:
-            return (0, r.jsx)(
-                l.h,
-                X(
+            return (0, n.jsx)(
+                g.h,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.FROG:
-            return (0, r.jsx)(
-                w.L,
-                X(
+            return (0, n.jsx)(
+                h.L,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.GOAT:
-            return (0, r.jsx)(Q.V, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(E.V, x({ primaryTintColor: t }, Z));
         case L.x_.CAT:
-            return (0, r.jsx)(v.W, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(l.W, x({ primaryTintColor: t }, Z));
         case L.x_.DIAMOND:
-            return (0, r.jsx)(h.T, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(o.T, x({ primaryTintColor: t }, Z));
         case L.x_.CROWN:
-            return (0, r.jsx)(
-                B.O,
-                X(
+            return (0, n.jsx)(
+                s.O,
+                x(
                     {
-                        primaryTintColor: e,
-                        secondaryTintColor: m,
+                        primaryTintColor: t,
+                        secondaryTintColor: N,
                     },
-                    G,
+                    Z,
                 ),
             );
         case L.x_.TROPHY:
-            return (0, r.jsx)(O.o, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(m.o, x({ primaryTintColor: t }, Z));
         case L.x_.MONEY_BAG:
-            return (0, r.jsx)(d.k, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(M.k, x({ primaryTintColor: t }, Z));
         case L.x_.DOLLAR_SIGN:
-            return (0, r.jsx)(i.W, X({ primaryTintColor: e }, G));
+            return (0, n.jsx)(c.W, x({ primaryTintColor: t }, Z));
     }
     return null;
 };

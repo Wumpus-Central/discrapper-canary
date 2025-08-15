@@ -1,27 +1,27 @@
-n.d(e, { Z: () => d }), n(388685);
+n.d(e, { Z: () => p }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    c = n(144144),
+    c = n(481060),
+    o = n(144144),
     a = n(592125),
     l = n(496675),
     u = n(944486),
     s = n(585483),
     f = n(981631),
-    b = n(388032);
-function d(t, e, n) {
-    let [d, p] = (0, i.Wu)([u.Z, a.Z, l.Z], () => {
+    d = n(388032);
+function p(t, e, n) {
+    let [p, b] = (0, i.Wu)([u.Z, a.Z, l.Z], () => {
             let t = u.Z.getChannelId(e),
                 n = a.Z.getChannel(t);
             return [t, null != n && (n.isPrivate() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
         }, [e]),
         v = n === f.IlC.POPOUT;
-    return !p || v
+    return !b || v
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(c.sNh, {
               id: "mention",
-              label: b.intl.string(b.t.P8tvKC),
+              label: d.intl.string(d.t.P8tvKC),
               action: function () {
                   let { id: e } = t,
                       n = "@".concat(t.name);
@@ -29,7 +29,7 @@ function d(t, e, n) {
                       plainText: n,
                       rawText: "<@$".concat(e, ">"),
                   }),
-                      null != d && c.Z.startTyping(d);
+                      null != p && o.Z.startTyping(p);
               },
           });
 }

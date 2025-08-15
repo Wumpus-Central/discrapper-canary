@@ -6,8 +6,8 @@ n.d(t, {
     n(539854);
 var r = n(73800),
     i = n(512722),
-    o = n.n(i),
-    a = n(683076),
+    a = n.n(i),
+    o = n(683076),
     s = n(442837),
     l = n(812206),
     c = n(835473),
@@ -32,7 +32,7 @@ let m = function (e, t) {
         return null == e || null == t
             ? ["no match"]
             : ((0, _.yE)(t.flags, h.udG.GAME_PROFILE_DISABLED) && n.push("profile disabled"),
-              e.themes.includes(a.i.EROTIC) && n.push("nsfw"),
+              e.themes.includes(o.i.EROTIC) && n.push("nsfw"),
               (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
               (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
               n);
@@ -44,7 +44,7 @@ let m = function (e, t) {
                 location: t,
                 applicationId: n = "",
                 autoTrackExposure: i = !0,
-                source: a,
+                source: o,
                 trackEntryPointImpression: l = !0,
             } = e,
             f = r.useRef(!1),
@@ -61,10 +61,10 @@ let m = function (e, t) {
                     !1 === u.Z.isFetching(n) &&
                     null != h &&
                     null != y &&
-                    (o()(null != a, "Cannot track a Game Profile Entry Point Impressions without a source."),
-                    m(y, n, g(h), a),
+                    (a()(null != o, "Cannot track a Game Profile Entry Point Impressions without a source."),
+                    m(y, n, g(h), o),
                     (f.current = !0));
-            }, [y, n, _, h, a, l]),
+            }, [y, n, _, h, o, l]),
             {
                 shouldOpenGameProfile: _ && !0 === y,
                 applicationId: n,

@@ -1,61 +1,56 @@
 n.d(t, {
     ND: () => p,
     P5: () => h,
-    g6: () => m,
+    g6: () => f,
 });
 var r = n(255367);
 n(73800);
 var i = n(347715),
-    o = n(481060),
+    l = n(481060),
     a = n(668781),
-    s = n(493683),
-    l = n(100527),
+    o = n(493683),
+    s = n(100527),
     c = n(346486),
     u = n(486324),
     d = n(388032);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
 let p = (e, t) =>
-        (0, o.ZDy)(async () => {
-            let { default: i } = await Promise.all([n.e("91689"), n.e("89289"), n.e("27709")]).then(n.bind(n, 28130));
+        (0, l.ZDy)(async () => {
+            let { default: i } = await Promise.all([n.e("91689"), n.e("89289"), n.e("89006")]).then(n.bind(n, 28130));
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    _(
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
                         {
                             maxFileSizeBytes: 8388608,
                             onComplete: e,
                             uploadType: u.pC.AVATAR,
                             showUpsellHeader: !1,
                             modalTitle: d.intl.string(d.t["6yrpFR"]),
-                            analyticsLocation: l.Z.GROUP_DM_ICON_EDITOR,
+                            analyticsLocation: s.Z.GROUP_DM_ICON_EDITOR,
                             analyticsLocations: t,
                             allowRecentAvatarsSelection: !1,
                         },
@@ -66,12 +61,12 @@ let p = (e, t) =>
     h = (e, t) => {
         p(
             (n) => {
-                s.Z.setIcon(e, n.imageUri, t).catch(m);
+                o.Z.setIcon(e, n.imageUri, t).catch(f);
             },
             [t],
         );
     },
-    m = (e) => {
+    f = (e) => {
         var t;
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
             let t = (0, i.Z)(new Date(), e.body.retry_after);

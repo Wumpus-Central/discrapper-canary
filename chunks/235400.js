@@ -1,8 +1,8 @@
 n.d(t, { default: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(335131),
@@ -28,7 +28,7 @@ function C(e) {
     let {
             user: t,
             categories: n,
-            purchases: o,
+            purchases: a,
             analyticsLocations: l,
             onClose: f,
             initialSelectedDecoration: E,
@@ -48,7 +48,7 @@ function C(e) {
         [D, L] = i.useState(() => {
             var e, t;
             if (null != E) return E;
-            let r = (0, u.iC)(o, n);
+            let r = (0, u.iC)(a, n);
             return null != b
                 ? null != (e = r.find((e) => e.id === b))
                     ? e
@@ -62,14 +62,14 @@ function C(e) {
                       : null;
         }),
         { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        j = y.ZP.canUseCollectibles(t),
-        k = i.useRef(null),
+        k = y.ZP.canUseCollectibles(t),
+        j = i.useRef(null),
         U = (0, _.Z)(l),
         G = (0, O.sr)(D, void 0 === R ? w : R),
         B = (e) => {
             L(e), null != e && U(e);
         },
-        Z = () => {
+        V = () => {
             P(D), f();
         },
         F = i.useCallback(
@@ -83,52 +83,52 @@ function C(e) {
             },
             [l, f],
         ),
-        V = (0, p.M)(),
-        H = V && (0, u.G1)(x),
+        Z = (0, p.M)(),
+        H = Z && (0, u.G1)(x),
         Y = () =>
-            (null != M && (!(0, u.qS)(M) || j)) || null === D
-                ? (0, r.jsx)(a.zxk, {
+            (null != M && (!(0, u.qS)(M) || k)) || null === D
+                ? (0, r.jsx)(o.zxk, {
                       variant: "primary",
                       text: A.intl.string(A.t.Jh8fJy),
-                      onClick: Z,
+                      onClick: V,
                       disabled: G,
                   })
-                : null == M && (j || !(0, u.G1)(x))
-                  ? (0, r.jsx)(a.zxk, {
+                : null == M && (k || !(0, u.G1)(x))
+                  ? (0, r.jsx)(o.zxk, {
                         variant: "primary",
                         onClick: () => F(null == x ? void 0 : x.skuId),
                         text: A.intl.string(A.t.fYfGgI),
                     })
                   : (0, r.jsx)(m.Z, {
                         subscriptionTier: S.Si.TIER_2,
-                        showGradient: V,
+                        showGradient: Z,
                         textOptions: {
                             textOverride: y.ZP.isPremium(t)
                                 ? A.intl.string(A.t.KXLX7u)
-                                : V
+                                : Z
                                   ? A.intl.string(A.t.pj0XBA)
                                   : A.intl.string(A.t.mr4K7O),
                         },
                     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(a.xBx, {
+            (0, r.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: N.modalHeader,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: "heading-lg/semibold",
                         children: A.intl.string(A.t.HykynZ),
                     }),
-                    (0, r.jsx)(a.olH, {
+                    (0, r.jsx)(o.olH, {
                         "data-migration-pending": !0,
                         className: N.modalCloseButton,
                         onClick: f,
                     }),
                 ],
             }),
-            (0, r.jsxs)(a.hzk, {
+            (0, r.jsxs)(o.hzk, {
                 "data-migration-pending": !0,
                 className: N.modalContent,
                 scrollbarType: "none",
@@ -137,7 +137,7 @@ function C(e) {
                         user: t,
                         guild: C,
                         pendingAvatarDecoration: D,
-                        selectedAvatarDecorationRef: k,
+                        selectedAvatarDecorationRef: j,
                         onSelect: B,
                         onOpenShop: F,
                     }),
@@ -149,7 +149,7 @@ function C(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(a.mzw, {
+            (0, r.jsxs)(o.mzw, {
                 "data-migration-pending": !0,
                 className: N.modalFooter,
                 children: [
@@ -159,7 +159,7 @@ function C(e) {
                               product: x,
                               onSecondaryClick: f,
                           })
-                        : (0, r.jsx)(a.zxk, {
+                        : (0, r.jsx)(o.zxk, {
                               variant: "secondary",
                               text: A.intl.string(A.t["ETE/oK"]),
                               onClick: f,
@@ -180,7 +180,7 @@ function R(e) {
             isTryItOutFlow: p,
             guild: h,
         } = e,
-        m = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+        m = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
         { categories: y, purchases: O, isFetchingCategories: v, isFetchingPurchases: I } = (0, f.ZP)(),
         S = v || (I && 0 === O.size),
@@ -198,16 +198,16 @@ function R(e) {
             ? null
             : (0, r.jsx)(l.Gt, {
                   value: g,
-                  children: (0, r.jsx)(a.Y0X, {
+                  children: (0, r.jsx)(o.Y0X, {
                       transitionState: t,
                       className: N.modal,
-                      size: S ? a.CgR.DYNAMIC : a.CgR.MEDIUM,
+                      size: S ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       "data-migration-pending": !0,
                       children: S
-                          ? (0, r.jsx)(a.$jN, {
+                          ? (0, r.jsx)(o.$jN, {
                                 className: N.spinner,
-                                type: a.$jN.Type.SPINNING_CIRCLE,
+                                type: o.$jN.Type.SPINNING_CIRCLE,
                             })
                           : (0, r.jsx)(C, {
                                 user: m,

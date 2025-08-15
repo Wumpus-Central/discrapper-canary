@@ -1,4 +1,4 @@
-r.d(t, { Z: () => p }), r(415506), r(642613);
+r.d(t, { Z: () => g }), r(415506), r(642613);
 var n = r(255367);
 r(73800);
 var a = r(120356),
@@ -7,33 +7,33 @@ var a = r(120356),
     o = r(481060),
     s = r(810568),
     c = r(388032),
-    d = r(226788),
-    u = r(803351);
+    u = r(226788),
+    d = r(803351);
 let m = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
-function g(e) {
+function f(e) {
     let { website: t, trackClick: r } = e,
         {
             action: a,
             icon: i,
-            title: d,
+            title: u,
         } = (function (e) {
             switch (e.category) {
                 case l.p.OFFICIAL:
                     return {
-                        icon: (0, n.jsx)(o.enf, { colorClass: u.linkIcon }),
+                        icon: (0, n.jsx)(o.enf, { colorClass: d.linkIcon }),
                         action: s.as.WebsiteLink,
                         title: c.intl.string(c.t.fOUKvr),
                     };
                 case l.p.TWITTER:
                     return {
-                        icon: (0, n.jsx)(o.TAi, { colorClass: u.linkIcon }),
+                        icon: (0, n.jsx)(o.TAi, { colorClass: d.linkIcon }),
                         action: s.as.XLink,
                         title: c.intl.string(c.t["INic4+"]),
                     };
                 case l.p.YOUTUBE:
                     return {
                         action: s.as.YouTubeLink,
-                        icon: (0, n.jsx)(o.$5w, { colorClass: u.linkIcon }),
+                        icon: (0, n.jsx)(o.$5w, { colorClass: d.linkIcon }),
                         title: c.intl.string(c.t.lNmxbG),
                     };
                 default:
@@ -42,8 +42,8 @@ function g(e) {
         })(t);
     return (0, n.jsx)(o.ua7, {
         text: t.url,
-        tooltipClassName: u.tooltip,
-        tooltipContentClassName: u.tooltipContent,
+        tooltipClassName: d.tooltip,
+        tooltipContentClassName: d.tooltipContent,
         children: (e) => {
             var l,
                 s,
@@ -100,8 +100,8 @@ function g(e) {
                 })({}, m)),
                 (s = s =
                     {
-                        className: u.linkAnchor,
-                        title: d,
+                        className: d.linkAnchor,
+                        title: u,
                         href: t.url,
                         onClick: () => {
                             r(a), null == c || c();
@@ -126,7 +126,7 @@ function g(e) {
         },
     });
 }
-let p = function (e) {
+let g = function (e) {
     let { detectedGame: t, trackClick: r } = e;
     if (null == t.websites) return null;
     let a = t.websites
@@ -140,16 +140,16 @@ let p = function (e) {
         : (0, n.jsxs)("div", {
               children: [
                   (0, n.jsx)(o.X6q, {
-                      className: d.sectionHeader,
+                      className: u.sectionHeader,
                       variant: "text-xs/semibold",
                       color: "header-secondary",
                       children: c.intl.string(c.t.Oj3o19),
                   }),
                   (0, n.jsx)("div", {
-                      className: i()(d.row, d.gapMd),
+                      className: i()(u.row, u.gapMd),
                       children: a.map((e) =>
                           (0, n.jsx)(
-                              g,
+                              f,
                               {
                                   website: e,
                                   trackClick: r,

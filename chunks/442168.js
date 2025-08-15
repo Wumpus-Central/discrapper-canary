@@ -1,30 +1,17 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => b });
 var r = n(255367),
-    i = n(73800),
-    o = n(717976),
+    l = n(73800),
+    i = n(717976),
     a = n(442837),
-    s = n(780384),
-    l = n(481060),
-    c = n(435064),
-    u = n(39604),
+    o = n(780384),
+    u = n(481060),
+    s = n(435064),
+    c = n(39604),
     d = n(175470),
     f = n(569545),
-    _ = n(314910),
-    p = n(565063);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function m(e) {
+    p = n(314910),
+    m = n(565063);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,151 +22,158 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-let g = 3000,
-    E = 0.1,
-    b = { visibility: "hidden" },
-    y = {
+let g = { visibility: "hidden" },
+    S = {
         precision: 0.0001,
         duration: 300,
     },
-    O = {
+    v = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
         bounce: 0,
     },
-    v = { duration: 1000 };
-function I(e) {
+    h = { duration: 1000 };
+function b(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: h } = i.useContext(s.Sf),
-        I = (0, i.useRef)(null),
-        T = d.n.getState().clipsButtonRef,
-        S = (0, f.V9)(t),
-        A = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        N = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(S)),
-        C = (0, i.useRef)(void 0);
-    i.useEffect(
+        { reducedMotion: b } = l.useContext(o.Sf),
+        O = (0, l.useRef)(null),
+        y = d.n.getState().clipsButtonRef,
+        _ = (0, f.V9)(t),
+        Z = (0, a.e7)([s.Z], () => s.Z.getActiveAnimation()),
+        j = (0, a.Wu)([s.Z], () => s.Z.getStreamClipAnimations(_)),
+        I = (0, l.useRef)(void 0);
+    l.useEffect(
         () => () => {
-            (0, u.Gh)(S);
+            (0, c.Gh)(_);
         },
-        [S],
+        [_],
     );
-    let R = () => {
-            var e;
-            let t = null == (e = I.current) ? void 0 : e.getBoundingClientRect();
-            return null == t || n
-                ? b
-                : {
-                      width: t.width,
-                      height: t.height,
-                      top: t.top,
-                      left: t.left,
-                  };
-        },
-        P = (e) => {
-            let t = null == T ? void 0 : T.getBoundingClientRect();
-            if (((C.current = t), e.timestamp !== A || null == t || n)) return b;
-            let { top: r, left: i } = t;
+    let w = (e) => {
+            let t = null == y ? void 0 : y.getBoundingClientRect();
+            if (((I.current = t), e.timestamp !== Z || null == t || n)) return g;
+            let { top: r, left: l } = t;
             return {
                 top: r + 36,
-                left: i - 216,
+                left: l - 216,
                 height: 151,
                 width: 268,
             };
         },
-        w = () => {
-            if (null != C.current)
-                return {
-                    top: C.current.top + 12,
-                    left: C.current.left + 12,
-                };
-        },
-        D = (0, i.useRef)(null),
-        L = (0, l.Yzy)(
-            N,
+        P = (0, l.useRef)(null),
+        A = (0, u.Yzy)(
+            j,
             {
                 keys: (e) => e.timestamp,
-                ref: D,
+                ref: P,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: y,
+                config: S,
             },
             "animate-always",
         ),
-        x = (0, i.useRef)(null),
-        M = (0, l.Yzy)(
-            N,
+        C = (0, l.useRef)(null),
+        x = (0, u.Yzy)(
+            j,
             {
-                ref: x,
+                ref: C,
                 keys: (e) => e.timestamp,
                 from: (e) =>
-                    m(
+                    E(
                         {
                             position: "fixed",
                             visibility: "hidden",
                             opacity: 1,
                         },
-                        h.enabled ? P(e) : R(),
+                        b.enabled
+                            ? w(e)
+                            : (() => {
+                                  var e;
+                                  let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
+                                  return null == t || n
+                                      ? g
+                                      : {
+                                            width: t.width,
+                                            height: t.height,
+                                            top: t.top,
+                                            left: t.left,
+                                        };
+                              })(),
                     ),
                 enter: (e) => [
-                    m(
+                    E(
                         {
                             opacity: 1,
                             visibility: "visible",
                         },
-                        P(e),
+                        w(e),
                     ),
                 ],
-                leave: m(
+                leave: E(
                     { opacity: 0 },
-                    !h.enabled &&
-                        m(
+                    !b.enabled &&
+                        E(
                             {
                                 height: 0,
                                 width: 0,
                             },
-                            w(),
+                            (() => {
+                                if (null != I.current)
+                                    return {
+                                        top: I.current.top + 12,
+                                        left: I.current.left + 12,
+                                    };
+                            })(),
                         ),
                 ),
-                config: h.enabled ? v : O,
+                config: b.enabled ? h : v,
                 onRest: (e, t) => {
                     null != t.item &&
-                        null != N.find((e) => e.timestamp === t.item.timestamp) &&
-                        (0, u.Gh)(S, t.item.timestamp);
+                        null != j.find((e) => e.timestamp === t.item.timestamp) &&
+                        (0, c.Gh)(_, t.item.timestamp);
                 },
             },
             "animate-always",
         );
     return (
-        (0, o.useChain)([D, x], [0, E], g),
+        (0, i.useChain)([P, C], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: p.hidden,
-                    ref: I,
+                    className: m.hidden,
+                    ref: O,
                 }),
-                L(
+                A(
                     (e, t) =>
                         null != t &&
-                        (0, r.jsx)(o.animated.div, {
-                            className: p.whiteFlash,
+                        (0, r.jsx)(i.animated.div, {
+                            className: m.whiteFlash,
                             style: e,
                         }),
                 ),
-                (0, r.jsx)(_.ZP, {
+                (0, r.jsx)(p.ZP, {
                     children: (0, r.jsx)("div", {
-                        className: p.hidden,
-                        children: M(
-                            (e, t, n, i) =>
+                        className: m.hidden,
+                        children: x(
+                            (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, r.jsx)(o.animated.img, {
+                                (0, r.jsx)(i.animated.img, {
                                     src: t.thumbnail,
-                                    className: p.movingImage,
+                                    className: m.movingImage,
                                     style: e,
                                 }),
                         ),

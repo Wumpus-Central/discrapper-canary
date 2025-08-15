@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(873546),
-    a = n(442837),
+    a = n(873546),
+    o = n(442837),
     s = n(911969),
     l = n(607070),
     c = n(998698),
@@ -38,21 +38,21 @@ function S(e) {
 function A(e) {
     var t, n, i, f, _, p, y;
     let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
-        L = (0, a.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         x = N(C.id, O, P),
-        { activeCommand: M, activeCommandOption: j } = (0, a.cj)([c.Z], () => ({
+        { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(C.id),
             activeCommandOption: c.Z.getActiveOption(C.id),
         })),
-        { paymentsBlocked: k } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: j } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         U = [],
         G = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
-        B = (0, a.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
-        Z = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
-    return (o.tq ||
+        B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
+        V = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
+    return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
             null == M &&
-            !k &&
+            !j &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
                 (0, r.jsx)(
@@ -77,7 +77,7 @@ function A(e) {
                     "gif",
                 ),
             ),
-        Z &&
+        V &&
             null == M &&
             U.push(
                 (0, r.jsx)(
@@ -89,7 +89,7 @@ function A(e) {
                     "confetti",
                 ),
             ),
-        !Z &&
+        !V &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
             null == M &&
             w &&
@@ -104,7 +104,7 @@ function A(e) {
                 ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
+        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,
@@ -136,7 +136,7 @@ function A(e) {
           });
 }
 function N(e, t, n) {
-    return (0, a.e7)([_.Z, p.Z], () => {
+    return (0, o.e7)([_.Z, p.Z], () => {
         let r = _.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === p.Z.getUploads(e, t.drafts.type).length && n && !i;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(35282);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(70956);
 function c(e, t, n) {
@@ -30,7 +30,7 @@ function _(e) {
         ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
         (d.lastTestTimestamp = Date.now());
 }
-class p extends (r = a.ZP.DeviceSettingsStore) {
+class p extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = null != e ? e : u;
     }
@@ -54,7 +54,7 @@ class p extends (r = a.ZP.DeviceSettingsStore) {
         var t, n;
         return (
             null === d.preferredRegions ||
-            !o().isEqual(e, null != (t = d.lastGeoRankedOrder) ? t : []) ||
+            !a().isEqual(e, null != (t = d.lastGeoRankedOrder) ? t : []) ||
             Date.now() - (null != (n = d.lastTestTimestamp) ? n : 0) >= f
         );
     }

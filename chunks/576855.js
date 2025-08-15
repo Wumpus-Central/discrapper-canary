@@ -1,45 +1,33 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => I });
 var r,
-    i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    l = n(481060),
-    c = n(388032),
-    u = n(574657);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = {
-    BLOCK: u.block,
-    INLINE: u.inline,
+    i,
+    l = n(255367),
+    a = n(73800),
+    o = n(120356),
+    c = n.n(o),
+    s = n(481060),
+    u = n(388032),
+    d = n(574657);
+let _ = {
+    BLOCK: d.block,
+    INLINE: d.inline,
 };
-class _ extends (r = o.PureComponent) {
+class E extends (i = a.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: o } = this.props;
-        return (0, i.jsxs)("div", {
-            className: s()(t, r),
-            style: o,
+        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
+        return (0, l.jsxs)("div", {
+            className: c()(t, r),
+            style: i,
             children: [
-                (0, i.jsxs)(l.Text, {
+                (0, l.jsxs)(s.Text, {
                     variant: "text-sm/bold",
                     tag: "div",
                     color: "text-feedback-positive",
-                    className: u.pro,
-                    children: [c.intl.string(c.t["8tvIiI"]), ":"],
+                    className: d.pro,
+                    children: [u.intl.string(u.t["8tvIiI"]), ":"],
                 }),
-                (0, i.jsx)(l.Text, {
-                    className: s()(u.tip, n),
+                (0, l.jsx)(s.Text, {
+                    className: c()(d.tip, n),
                     variant: "text-sm/normal",
                     children: e,
                 }),
@@ -47,5 +35,12 @@ class _ extends (r = o.PureComponent) {
         });
     }
 }
-d(_, "Types", f);
-let p = _;
+(r = "Types") in E
+    ? Object.defineProperty(E, r, {
+          value: _,
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (E[r] = _);
+let I = E;

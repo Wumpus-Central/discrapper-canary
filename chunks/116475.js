@@ -1,26 +1,26 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(717976),
-    a = n(393238),
+    a = n(717976),
+    o = n(393238),
     s = n(254109),
     l = n(212459);
 let c = 400;
 function u(e) {
     let { width: t, height: n, offset: r, delta: i } = e,
-        o = t > window.innerWidth,
-        a = n > window.innerHeight,
+        a = t > window.innerWidth,
+        o = n > window.innerHeight,
         s = (window.innerWidth - t) / 2 + r.x,
         l = (window.innerHeight - n) / 2 + r.y,
         c = (window.innerWidth + t) / 2 + r.x,
         u = (window.innerHeight + n) / 2 + r.y,
         { x: d, y: f } = r;
     return (
-        o &&
+        a &&
             ((d += i.x),
             s + i.x > 0 && (d = (t - window.innerWidth) / 2),
             c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
-        a &&
+        o &&
             ((f += i.y),
             l + i.y > 0 && (f = (n - window.innerHeight) / 2),
             u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
@@ -33,7 +33,7 @@ function u(e) {
 function d(e) {
     let { children: t } = e,
         { scale: n, x: d, y: f, setOffset: _, zoomed: p, setZoomed: h } = (0, l.Y)(),
-        { ref: m, width: g, height: E } = (0, a.ZP)(),
+        { ref: m, width: g, height: E } = (0, o.ZP)(),
         [b, y] = [null != g ? g : 0, null != E ? E : 0],
         O = i.useRef(!1),
         [v, I] = i.useState({
@@ -90,7 +90,7 @@ function d(e) {
             (e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < c && ((0, s.yg)(s.uG.ZOOM_OUT_IMAGE_PRESSED), h(!1)),
                 (O.current = !1);
         };
-    return (0, r.jsx)(o.animated.div, {
+    return (0, r.jsx)(a.animated.div, {
         ref: m,
         onMouseDown: S,
         onMouseUp: A,

@@ -1,16 +1,16 @@
-n.d(t, { A: () => s });
-var r = n(255367);
+n.d(t, { A: () => o });
+var l = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(176412),
+    r = n(176412),
     a = n(291190);
-function s(e) {
-    let { searchQuery: t, textContent: n, type: s } = e;
+function o(e) {
+    let { searchQuery: t, textContent: n, type: o } = e;
     return (
-        (0, o.Bm)(s, t),
-        (0, r.jsx)("div", {
+        (0, r.Bm)(o, t),
+        (0, l.jsx)("div", {
             className: a.emptyStateContainer,
-            children: (0, r.jsx)(i.Text, {
+            children: (0, l.jsx)(i.Text, {
                 variant: "text-md/medium",
                 color: "text-muted",
                 children: n,

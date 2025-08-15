@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(314897),
     i = n(565799),
     l = n(501655),
     a = n(88751),
-    s = n(427679);
-function o(e) {
-    if (!e.isGuildStageVoice() || !s.Z.isLive(e.id)) return !1;
+    o = n(427679);
+function s(e) {
+    if (!e.isGuildStageVoice() || !o.Z.isLive(e.id)) return !1;
     let t = r.default.getId();
     return (
         !!a.ZP.isModerator(t, e.id) &&

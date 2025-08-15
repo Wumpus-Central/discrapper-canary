@@ -55,10 +55,10 @@ function O() {
         T = r.useCallback((e) => {
             e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, C({}, e))) : l.mc();
         }, []),
-        I = r.useCallback((e) => {
+        N = r.useCallback((e) => {
             (0, c.BV)(e, o.Z.USER_SETTINGS);
         }, []),
-        N = r.useCallback((e) => {
+        I = r.useCallback((e) => {
             (0, a.h7j)((t) => {
                 var n, r;
                 let s = e ? j.intl.format(j.t.LYXRxM, {}) : j.intl.format(j.t.uDP3Ky, {});
@@ -126,7 +126,7 @@ function O() {
                 children: (0, i.jsx)(a.j7V, {
                     className: e ? "" : E.formSwitchExtension,
                     value: e,
-                    onChange: N,
+                    onChange: I,
                     note: j.intl.string(j.t.Afc7l5),
                     hideBorder: !e,
                     children: j.intl.string(j.t["eOC/Fx"]),
@@ -165,7 +165,7 @@ function O() {
                 children: (0, i.jsx)(a.j7V, {
                     value: v,
                     note: j.intl.string(j.t["B/qU4O"]),
-                    onChange: I,
+                    onChange: N,
                     children: j.intl.string(j.t.qDZryM),
                 }),
             }),

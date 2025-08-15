@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(827837),
+    a = n(570140),
+    o = n(827837),
     s = n(627050),
     l = n(981631);
 function c(e, t, n) {
@@ -23,7 +23,7 @@ let u = {},
     f = 86400000,
     _ = 3600000;
 function p() {
-    s.d.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, a.N)();
+    s.d.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, o.N)();
 }
 function h() {
     (u = {}), (d = null);
@@ -38,19 +38,19 @@ function m(e) {
 function g(e) {
     let { duration: t, applicationId: n, distributor: r } = e,
         i = u[n],
-        o = new Date().toISOString(),
-        a = 0,
+        a = new Date().toISOString(),
+        o = 0,
         s = 0;
     if (null != i) {
         var c;
-        (a = i.total_duration), (s = null != (c = i.total_discord_sku_duration) ? c : 0);
+        (o = i.total_duration), (s = null != (c = i.total_discord_sku_duration) ? c : 0);
     }
-    (a += t),
+    (o += t),
         r === l.GQo.DISCORD && (s += t),
         (u[n] = {
             application_id: n,
-            total_duration: a,
-            last_played_at: o,
+            total_duration: o,
+            last_played_at: a,
             total_discord_sku_duration: s,
         });
 }
@@ -104,7 +104,7 @@ class E extends (r = i.ZP.Store) {
     }
 }
 c(E, "displayName", "LibraryApplicationStatisticsStore");
-let b = new E(o.Z, {
+let b = new E(a.Z, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: m,
     ACTIVITY_UPDATE_START: g,
     LOGOUT: h,

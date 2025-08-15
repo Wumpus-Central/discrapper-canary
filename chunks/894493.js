@@ -12,11 +12,11 @@ e.exports = function (e) {
             end: "\\}",
             keywords: r,
         },
-        o = {
+        a = {
             begin: /->\{/,
             end: /\}/,
         },
-        a = {
+        o = {
             scope: "attr",
             match: /\s+:\s*\w+(\s*\(.*?\))?/,
         },
@@ -30,7 +30,7 @@ e.exports = function (e) {
                     relevance: 0,
                 },
             ],
-            contains: [a],
+            contains: [o],
         },
         l = {
             className: "number",
@@ -46,15 +46,15 @@ e.exports = function (e) {
         c = [e.BACKSLASH_ESCAPE, i, s],
         u = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
         d = (e, r, i = "\\1") => {
-            let o = "\\1" === i ? i : t.concat(i, r);
-            return t.concat(t.concat("(?:", e, ")"), r, /(?:\\.|[^\\\/])*?/, o, /(?:\\.|[^\\\/])*?/, i, n);
+            let a = "\\1" === i ? i : t.concat(i, r);
+            return t.concat(t.concat("(?:", e, ")"), r, /(?:\\.|[^\\\/])*?/, a, /(?:\\.|[^\\\/])*?/, i, n);
         },
         f = (e, r, i) => t.concat(t.concat("(?:", e, ")"), r, /(?:\\.|[^\\\/])*?/, i, n),
         _ = [
             s,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            o,
+            a,
             {
                 className: "string",
                 contains: c,
@@ -152,7 +152,7 @@ e.exports = function (e) {
                 end: "(\\s*\\(.*?\\))?[;{]",
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, a],
+                contains: [e.TITLE_MODE, o],
             },
             {
                 className: "class",
@@ -160,7 +160,7 @@ e.exports = function (e) {
                 end: "[;{]",
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, a, l],
+                contains: [e.TITLE_MODE, o, l],
             },
             {
                 begin: "-\\w\\b",
@@ -181,7 +181,7 @@ e.exports = function (e) {
         ];
     return (
         (i.contains = _),
-        (o.contains = _),
+        (a.contains = _),
         {
             name: "Perl",
             aliases: ["pl", "pm"],

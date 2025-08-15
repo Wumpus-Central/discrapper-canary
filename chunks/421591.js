@@ -1,245 +1,237 @@
-n.d(t, { Z: () => T }), n(388685), n(482853);
-var r = n(255367),
+n.d(t, { Z: () => b }), n(388685), n(482853);
+var l = n(255367),
     i = n(73800),
-    o = n(481060),
+    r = n(481060),
     a = n(100527),
-    s = n(367907),
-    l = n(906732),
+    o = n(367907),
+    s = n(906732),
     c = n(541099),
     u = n(695676),
     d = n(173790),
-    f = n(692656),
-    _ = n(684256),
-    p = n(314734),
+    p = n(692656),
+    m = n(684256),
+    f = n(314734),
     h = n(981631),
-    m = n(487303);
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let O = {
-        width: p.Gy,
-        height: p.lv,
+    v = n(487303);
+let y = {
+        width: f.Gy,
+        height: f.lv,
     },
-    v = { height: p.lv };
-function I(e, t) {
-    let { context: n, entrypoint: o, initHistory: u } = e,
-        { analyticsLocations: d } = (0, l.ZP)(a.Z.APP_LAUNCHER);
-    return (
-        i.useEffect(() => {
-            (0, s.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-                source: o,
-                location: "app_launcher",
-            });
-        }, [o]),
-        i.useEffect(() => {
-            let e = Date.now();
-            return () => {
-                (0, s.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
-                    reason: c.Z.closeReason(),
-                    time_spent: Date.now() - e,
-                    source: o,
-                });
-            };
-        }, [o]),
-        (0, r.jsx)("div", {
-            className: m.drawerSizingWrapper,
-            ref: t,
-            style: O,
-            children: (0, r.jsx)("div", {
-                className: m.contentWrapper,
-                children: (0, r.jsx)(l.Gt, {
-                    value: d,
-                    children: (0, r.jsx)(S, {
-                        initHistory: u,
-                        children: (0, r.jsx)(A, {
-                            context: n,
-                            entrypoint: o,
+    x = { height: f.lv },
+    b = i.memo(
+        i.forwardRef(function (e, t) {
+            let { context: n, entrypoint: r, initHistory: u } = e,
+                { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_LAUNCHER);
+            return (
+                i.useEffect(() => {
+                    (0, o.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+                        source: r,
+                        location: "app_launcher",
+                    });
+                }, [r]),
+                i.useEffect(() => {
+                    let e = Date.now();
+                    return () => {
+                        (0, o.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
+                            reason: c.Z.closeReason(),
+                            time_spent: Date.now() - e,
+                            source: r,
+                        });
+                    };
+                }, [r]),
+                (0, l.jsx)("div", {
+                    className: v.drawerSizingWrapper,
+                    ref: t,
+                    style: y,
+                    children: (0, l.jsx)("div", {
+                        className: v.contentWrapper,
+                        children: (0, l.jsx)(s.Gt, {
+                            value: d,
+                            children: (0, l.jsx)(g, {
+                                initHistory: u,
+                                children: (0, l.jsx)(j, {
+                                    context: n,
+                                    entrypoint: r,
+                                }),
+                            }),
                         }),
                     }),
-                }),
-            }),
-        })
+                })
+            );
+        }),
     );
-}
-let T = i.memo(i.forwardRef(I));
-function S(e) {
+function g(e) {
     let { initHistory: t, children: n } = e,
-        [o, a] = i.useState(null != t ? t : [{ type: u.gc.HOME }]),
-        [s, l] = i.useState({}),
-        c = o[o.length - 1],
-        [d, f] = i.useState(!1),
-        _ = i.useCallback((e) => {
+        [r, a] = i.useState(null != t ? t : [{ type: u.gc.HOME }]),
+        [o, s] = i.useState({}),
+        c = r[r.length - 1],
+        [d, p] = i.useState(!1),
+        m = i.useCallback((e) => {
             a((t) => [...t, e]);
         }, []),
-        p = i.useCallback(() => {
+        f = i.useCallback(() => {
             let e = null;
             a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                l((t) => (null == e ? t : y(E({}, t), { [e.type]: e })));
+                s((t) => {
+                    var n, l;
+                    return null == e
+                        ? t
+                        : ((n = (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      l = Object.keys(n);
+                                  "function" == typeof Object.getOwnPropertySymbols &&
+                                      (l = l.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          }),
+                                      )),
+                                      l.forEach(function (t) {
+                                          var l;
+                                          (l = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: l,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0,
+                                                    })
+                                                  : (e[t] = l);
+                                      });
+                              }
+                              return e;
+                          })({}, t)),
+                          (l = l = { [e.type]: e }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                              : (function (e, t) {
+                                    var n = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var l = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, l);
+                                    }
+                                    return n;
+                                })(Object(l)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                }),
+                          n);
+                });
         }, []),
         h = i.useCallback(
             (e) => {
                 var t;
-                return null != (t = o.findLast((t) => t.type === e)) ? t : s[e];
+                return null != (t = r.findLast((t) => t.type === e)) ? t : o[e];
             },
-            [o, s],
+            [r, o],
         );
-    return (0, r.jsx)(u.uX.Provider, {
+    return (0, l.jsx)(u.uX.Provider, {
         value: {
-            history: o,
-            discard: s,
+            history: r,
+            discard: o,
             currentView: c,
-            pushHistory: _,
-            goBack: p,
+            pushHistory: m,
+            goBack: f,
             getMostRecentHistoryItemByType: h,
             isSlideReady: d,
-            setSlideReady: f,
+            setSlideReady: p,
         },
         children: n,
     });
 }
-function A(e) {
+function j(e) {
     let { context: t, entrypoint: n } = e,
-        [a, s] = i.useState(""),
-        { setScroller: l, isCloseToBottom: c } = N(a),
-        { currentView: h, getMostRecentHistoryItemByType: g, setSlideReady: E } = (0, u.hH)();
+        [a, o] = i.useState(""),
+        { setScroller: s, isCloseToBottom: c } = (function (e) {
+            let [t, n] = i.useState(null),
+                [l, r] = i.useState(!1),
+                a = i.useRef(0);
+            return (
+                i.useEffect(() => {
+                    null == t || t.scrollTo(0, 0);
+                }, [t, e]),
+                i.useEffect(() => {
+                    if (null != t)
+                        return (
+                            t.scrollTo(0, a.current),
+                            t.addEventListener("scroll", e),
+                            () => {
+                                t.removeEventListener("scroll", e, !1);
+                            }
+                        );
+                    function e() {
+                        null != t &&
+                            ((a.current = t.scrollTop),
+                            r(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
+                    }
+                }, [t]),
+                {
+                    setScroller: n,
+                    isCloseToBottom: l,
+                }
+            );
+        })(a),
+        { currentView: h, getMostRecentHistoryItemByType: y, setSlideReady: b } = (0, u.hH)();
     i.useEffect(() => {
-        E(!1);
-    }, [null == h ? void 0 : h.type, E]);
-    let b = i.useCallback(() => {
-        E(!0);
-    }, [E]);
+        b(!1);
+    }, [null == h ? void 0 : h.type, b]);
+    let g = i.useCallback(() => {
+        b(!0);
+    }, [b]);
     if (null == h) return null;
-    let y = g(u.gc.LIST),
-        O = g(u.gc.APPLICATION);
-    return (0, r.jsxs)(o.MyZ, {
+    let j = y(u.gc.LIST),
+        N = y(u.gc.APPLICATION);
+    return (0, l.jsxs)(r.MyZ, {
         activeSlide: h.type,
-        width: p.Gy,
-        onSlideReady: b,
+        width: f.Gy,
+        onSlideReady: g,
         children: [
-            (0, r.jsx)(o.Mi4, {
+            (0, l.jsx)(r.Mi4, {
                 id: u.gc.HOME,
-                children: (0, r.jsx)("div", {
-                    className: m.slideContent,
-                    style: v,
-                    children: (0, r.jsx)(f.Z, {
+                children: (0, l.jsx)("div", {
+                    className: v.slideContent,
+                    style: x,
+                    children: (0, l.jsx)(p.Z, {
                         isScrollCloseToBottom: c,
-                        setScroller: l,
+                        setScroller: s,
                         context: t,
                         entrypoint: n,
                         searchQuery: a,
-                        setSearchQuery: s,
+                        setSearchQuery: o,
                     }),
                 }),
             }),
-            (0, r.jsx)(o.Mi4, {
+            (0, l.jsx)(r.Mi4, {
                 id: u.gc.LIST,
-                children: (0, r.jsx)("div", {
-                    className: m.slideContent,
-                    style: v,
+                children: (0, l.jsx)("div", {
+                    className: v.slideContent,
+                    style: x,
                     children:
-                        null != y &&
-                        (0, r.jsx)(_.Z, {
+                        null != j &&
+                        (0, l.jsx)(m.Z, {
                             context: t,
                             entrypoint: n,
-                            title: y.title,
-                            look: y.look,
-                            items: y.items,
-                            sectionName: y.sectionName,
-                            sectionOverallPosition: y.sectionOverallPosition,
+                            title: j.title,
+                            look: j.look,
+                            items: j.items,
+                            sectionName: j.sectionName,
+                            sectionOverallPosition: j.sectionOverallPosition,
                         }),
                 }),
             }),
-            (0, r.jsx)(o.Mi4, {
+            (0, l.jsx)(r.Mi4, {
                 id: u.gc.APPLICATION,
-                children: (0, r.jsx)("div", {
-                    className: m.slideContent,
-                    style: v,
+                children: (0, l.jsx)("div", {
+                    className: v.slideContent,
+                    style: x,
                     children:
-                        null != O &&
-                        (0, r.jsx)(d.Z, {
+                        null != N &&
+                        (0, l.jsx)(d.Z, {
                             context: t,
-                            application: O.application,
-                            sectionName: O.sectionName,
+                            application: N.application,
+                            sectionName: N.sectionName,
                         }),
                 }),
             }),
         ],
     });
-}
-function N(e) {
-    let [t, n] = i.useState(null),
-        [r, o] = i.useState(!1),
-        a = i.useRef(0);
-    return (
-        i.useEffect(() => {
-            null == t || t.scrollTo(0, 0);
-        }, [t, e]),
-        i.useEffect(() => {
-            if (null != t)
-                return (
-                    t.scrollTo(0, a.current),
-                    t.addEventListener("scroll", e),
-                    () => {
-                        t.removeEventListener("scroll", e, !1);
-                    }
-                );
-            function e() {
-                null != t &&
-                    ((a.current = t.scrollTop), o(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * p.K7));
-            }
-        }, [t]),
-        {
-            setScroller: n,
-            isCloseToBottom: r,
-        }
-    );
 }

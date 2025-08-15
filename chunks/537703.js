@@ -1,12 +1,12 @@
-t.d(r, { b: () => i });
-var e = t(573654),
-    o = t(73800);
-function i(n) {
-    var r = n.accept;
-    return (0, o.useMemo)(
+n.d(t, { b: () => o });
+var r = n(573654),
+    i = n(73800);
+function o(e) {
+    var t = e.accept;
+    return (0, i.useMemo)(
         function () {
-            return (0, e.k)(null != n.accept, "accept must be defined"), Array.isArray(r) ? r : [r];
+            return (0, r.k)(null != e.accept, "accept must be defined"), Array.isArray(t) ? t : [t];
         },
-        [r],
+        [t],
     );
 }

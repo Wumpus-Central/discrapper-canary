@@ -1,27 +1,27 @@
-n.d(t, { Z: () => m });
-var r = n(255367);
+n.d(t, { Z: () => p });
+var i = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(201895),
-    o = n(471445),
-    u = n(823379),
+var r = n(481060),
+    s = n(201895),
+    l = n(471445),
+    o = n(823379),
     a = n(303737),
-    s = n(293810),
+    u = n(293810),
     c = n(388032),
     d = n(24132);
-function f(e) {
+function h(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);
     if (null == n) return "[".concat(c.intl.string(c.t.bz1PZW), "]");
-    let u = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
-    return (0, r.jsxs)(r.Fragment, {
+    let o = n.isMediaChannel() ? r.XBm : (0, l.Th)(n.type);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(i.nn4, { children: (0, l.ZP)({ channel: n }) }),
-            (0, r.jsxs)("div", {
+            (0, i.jsx)(r.nn4, { children: (0, s.ZP)({ channel: n }) }),
+            (0, i.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [
-                    null != u &&
-                        (0, r.jsx)(u, {
+                    null != o &&
+                        (0, i.jsx)(o, {
                             className: d.icon,
                             "aria-hidden": !0,
                         }),
@@ -31,13 +31,13 @@ function f(e) {
         ],
     });
 }
-function m(e) {
+function p(e) {
     switch (e.ref_type) {
-        case s.Qs.CHANNEL:
-            return (0, r.jsx)(f, { channelId: e.ref_id });
-        case s.Qs.INTANGIBLE:
+        case u.Qs.CHANNEL:
+            return (0, i.jsx)(h, { channelId: e.ref_id });
+        case u.Qs.INTANGIBLE:
             return e.name;
         default:
-            (0, u.vE)(e);
+            (0, o.vE)(e);
     }
 }

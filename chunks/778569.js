@@ -1,13 +1,12 @@
 n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(81063);
-let o = ["embedded_cover", "embedded_background"];
+let l = ["embedded_cover", "embedded_background"];
 function a(e) {
-    let { applicationId: t, size: n, names: a = o } = e,
-        [s, l] = r.useState(null),
-        [c, u] = r.useState(!0),
-        d = (0, i.xF)(t, s, n),
-        f = c ? "loading" : null != d ? "fetched" : "not-found",
+    let { applicationId: t, size: n, names: a = l } = e,
+        [o, c] = r.useState(null),
+        [s, u] = r.useState(!0),
+        d = (0, i.xF)(t, o, n),
         _ = r.useRef(a);
     return (
         r.useEffect(() => {
@@ -18,12 +17,12 @@ function a(e) {
             null != t &&
                 (0, i.Vh)(t).then((t) => {
                     for (let [n, r] of (u(!1), Object.entries(t)))
-                        if (null != r && "" !== r.id && e.includes(r.name)) return void l(r.id);
+                        if (null != r && "" !== r.id && e.includes(r.name)) return void c(r.id);
                 });
         }, [t]),
         {
             url: d,
-            state: f,
+            state: s ? "loading" : null != d ? "fetched" : "not-found",
         }
     );
 }

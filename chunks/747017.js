@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(781311);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(833664),
@@ -22,7 +22,7 @@ function v(e) {
     let {
         user: t,
         activities: n,
-        applicationStream: o,
+        applicationStream: a,
         voiceChannel: v,
         textClassName: I,
         iconClassName: T,
@@ -33,7 +33,7 @@ function v(e) {
         hideTooltip: R = !1,
     } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let P = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
+    let P = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         w = (0, l.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
         D = (0, l.e7)([d.Z], () =>
             w ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null,
@@ -54,7 +54,7 @@ function v(e) {
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let x = (null == t ? void 0 : t.bot) === !0,
         M = (null == L ? void 0 : L.state) != null && "xs" === S,
-        j = () => {
+        k = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
                     stream: P,
@@ -94,7 +94,7 @@ function v(e) {
                     })
                   : null;
         },
-        k = a()(O.container, {
+        j = o()(O.container, {
             [O.textXs]: "xs" === S,
             [O.textSm]: "sm" === S,
         }),
@@ -109,17 +109,17 @@ function v(e) {
                       hideTooltip: R,
                       textClassName: I,
                       iconClassName: T,
-                      tooltipClassName: k,
+                      tooltipClassName: j,
                       voiceChannel: v,
                       hangStatus: D,
                   });
     return (0, r.jsxs)("div", {
-        className: k,
+        className: j,
         children: [
-            j(),
+            k(),
             (0, r.jsx)(s.xv, {
                 variant: "text-".concat(S, "/normal"),
-                className: a()(O.truncated, O.dot, I),
+                className: o()(O.truncated, O.dot, I),
                 children: b.l,
             }),
             U(),

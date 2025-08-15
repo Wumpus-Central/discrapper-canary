@@ -8,8 +8,8 @@ n.d(t, {
     n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(755721),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
     l = n(314897),
     c = n(594174),
@@ -81,7 +81,7 @@ function T(e) {
                         : null,
             [C, S],
         ),
-        P = (0, o.e7)([c.default], () => {
+        P = (0, a.e7)([c.default], () => {
             let e = c.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         });
@@ -93,15 +93,15 @@ function T(e) {
             null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
         M = (0, r.jsx)(I, { url: t }),
-        j = null;
+        k = null;
     return (1 === D && null != w
-        ? (j = (0, r.jsx)(s.Text, {
+        ? (k = (0, r.jsx)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: w.label,
           }))
         : null != C &&
-          (j = (0, r.jsxs)(s.Text, {
+          (k = (0, r.jsxs)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", R],
@@ -127,7 +127,7 @@ function T(e) {
                                               variant: "text-md/semibold",
                                               children: S.title,
                                           }),
-                                          j,
+                                          k,
                                       ],
                                   }),
                                   M,
@@ -147,10 +147,10 @@ function T(e) {
                                     align: "center",
                                     gap: 4,
                                     justify: "end",
-                                    children: (0, r.jsx)(a.zx, {
+                                    children: (0, r.jsx)(o.zx, {
                                         fullWidth: !0,
                                         onClick: x,
-                                        color: L ? a.zx.Colors.RED : a.zx.Colors.BRAND,
+                                        color: L ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                                         children: L
                                             ? "Clear Treatment ".concat(w.value)
                                             : "Apply Treatment ".concat(w.value),

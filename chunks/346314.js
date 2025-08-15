@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(756715),
@@ -73,9 +73,9 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,15 +84,15 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function O(e) {
     let {
             roleStyle: t,
             name: n,
-            colorString: o,
+            colorString: a,
             roleName: l,
             colorStrings: c,
             dotAlignment: d = "left",
@@ -125,19 +125,19 @@ function O(e) {
         }),
         L = (0, f.EJ)(n),
         x = {
-            className: a()(p.name, g, y, {
+            className: o()(p.name, g, y, {
                 [p.username]: A,
                 [w]: R,
             }),
             children: L,
         },
         M = {
-            className: a()(p.nameGlow, D, y),
+            className: o()(p.nameGlow, D, y),
             children: n,
         },
-        j = N
+        k = N
             ? (0, r.jsx)(_.F, {
-                  color: o,
+                  color: a,
                   colors: C ? c : null,
                   name: l,
                   className: "left" === d ? p.roleDotLeft : p.roleDotRight,
@@ -145,14 +145,14 @@ function O(e) {
               })
             : null;
     return (0, r.jsxs)("span", {
-        className: a()(h, p.container),
+        className: o()(h, p.container),
         onMouseEnter: T,
         onMouseLeave: S,
         children: [
-            "left" === d && j,
+            "left" === d && k,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
-                style: m({ color: A && !C && null != o ? o : void 0 }, R ? P : {}),
+                style: m({ color: A && !C && null != a ? a : void 0 }, R ? P : {}),
                 children: [
                     null != b
                         ? (0, r.jsx)(
@@ -184,7 +184,7 @@ function O(e) {
                             : (0, r.jsx)("span", m({ "aria-hidden": !0 }, M))),
                 ],
             }),
-            "right" === d && j,
+            "right" === d && k,
         ],
     });
 }
@@ -193,8 +193,8 @@ function v(e) {
             name: t,
             colorString: n,
             roleName: i,
-            dotAlignment: o,
-            className: a,
+            dotAlignment: a,
+            className: o,
             colorStrings: s,
             animateRoleGradient: u,
             ref: f,
@@ -216,8 +216,8 @@ function v(e) {
             name: t,
             colorString: n,
             roleName: i,
-            dotAlignment: o,
-            className: a,
+            dotAlignment: a,
+            className: o,
             colorStrings: s,
             animateRoleGradient: u,
         }),

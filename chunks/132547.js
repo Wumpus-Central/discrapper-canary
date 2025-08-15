@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(981631),
     S = n(388032),
     T = n(677599),
-    I = n(865215);
-let N = (e) => {
+    N = n(865215);
+let I = (e) => {
     let { userId: t } = e;
     r.useEffect(() => {
         d.Z.wait(async () => {
@@ -34,7 +34,7 @@ let N = (e) => {
         (0, g.z)(p.X);
     let n = r.useRef(null),
         s = r.useRef(null),
-        [N, y] = r.useState(!1),
+        [I, y] = r.useState(!1),
         { analyticsLocations: A } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [P, R] = r.useState(!1),
         D = (0, l.e7)([h.Z], () => (null != t ? h.Z.getUserProfile(t) : null)),
@@ -100,7 +100,7 @@ let N = (e) => {
                                       }),
                                   }),
                                   (0, i.jsx)("img", {
-                                      src: I,
+                                      src: N,
                                       className: T.bottomIllustration,
                                       width: 112,
                                       height: 85,
@@ -111,7 +111,7 @@ let N = (e) => {
                       }),
                   }),
                   (0, i.jsx)(C.Z, {
-                      isAllPerksVisible: N,
+                      isAllPerksVisible: I,
                       setIsAllPerksVisible: y,
                       previousComponent: E.MQ.HOME,
                   }),

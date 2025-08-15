@@ -1,21 +1,8 @@
-n.d(t, { D: () => c });
+n.d(t, { D: () => a });
 var r = n(255367);
 n(73800);
 var i = n(239091);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function a(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,49 +13,53 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function l(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function c(e, t, o, s, c) {
-    let u = o.getGuildId();
+function a(e, t, a, s, c) {
+    let u = a.getGuildId();
     return null != u
         ? (0, i.jW)(
               e,
               async () => {
-                  let { default: e } = await Promise.all([n.e("8982"), n.e("80125"), n.e("81141")]).then(
+                  let { default: e } = await Promise.all([n.e("70274"), n.e("8982"), n.e("80125"), n.e("47817")]).then(
                       n.bind(n, 357823),
                   );
                   return (n) =>
                       (0, r.jsx)(
                           e,
-                          l(a({}, n), {
+                          o(l({}, n), {
                               user: t,
-                              channel: o,
+                              channel: a,
                               guildId: u,
                               onInteraction: (e) => c("GuildVoiceUserContextMenu", e),
                           }),
@@ -83,9 +74,9 @@ function c(e, t, o, s, c) {
                   return (n) =>
                       (0, r.jsx)(
                           e,
-                          l(a({}, n), {
+                          o(l({}, n), {
                               user: t,
-                              channel: o,
+                              channel: a,
                               onInteraction: (e) => c("BaseVoiceUserContextMenu", e),
                           }),
                       );

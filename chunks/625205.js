@@ -26,8 +26,8 @@ function _() {
         C = (0, c.p6)(h.h7.AUDIO_OUTPUT),
         [O, v] = (0, c.Ls)(h.h7.AUDIO_INPUT, { location: "UserSettingsDevices" }),
         [S, T] = (0, c.Ls)(h.h7.AUDIO_OUTPUT, { location: "UserSettingsDevices" }),
-        I = O.concat(v),
-        N = S.concat(T),
+        N = O.concat(v),
+        I = S.concat(T),
         y = r.useMemo(() => {
             let e = x.some((e) => {
                     var t;
@@ -44,8 +44,8 @@ function _() {
                 E.containerId === (null == C ? void 0 : C.containerId)
             );
         }, [E, C]),
-        A = I[0],
-        P = N[0],
+        A = N[0],
+        P = I[0],
         R = null != (e = null == A ? void 0 : A.disabled) ? e : !_,
         D = null != (t = null == P ? void 0 : P.disabled) ? t : !j;
     function Z(e) {

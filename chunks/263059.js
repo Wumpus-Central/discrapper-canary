@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(35282);
+n.d(t, { Z: () => k }), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -59,14 +59,14 @@ function M(e) {
     }
     return e;
 }
-function j(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: o, activity: x, profileGuildId: j, className: k, onClose: U } = e,
+    let { user: n, currentUser: a, activity: x, profileGuildId: k, className: j, onClose: U } = e,
         G = (0, p.Dt)(),
         B = (0, p.Dt)(),
-        Z = i.useRef(null),
+        V = i.useRef(null),
         { themeType: F } = (0, I.z)(),
-        { interactionSource: V, interactionSourceId: H } = (0, y.Xo)(),
+        { interactionSource: Z, interactionSourceId: H } = (0, y.Xo)(),
         Y = (0, _.Z)({
             activity: x,
             user: n,
@@ -89,23 +89,23 @@ function j(e) {
     if (!(0, l.Z)(x)) return null;
     let J = () => {
             var e, t;
-            let o = null != (t = null == (e = x.state) ? void 0 : e.split(";")) ? t : [];
-            return 0 === o.length
+            let a = null != (t = null == (e = x.state) ? void 0 : e.split(";")) ? t : [];
+            return 0 === a.length
                 ? null
                 : null == x.sync_id
                   ? (0, r.jsx)(C.Z, {
                         variant: "text-xs/normal",
-                        text: o.join(", "),
+                        text: a.join(", "),
                     })
                   : (0, r.jsx)(C.Z, {
                         variant: "text-xs/normal",
-                        text: o.map((e, t) =>
+                        text: a.map((e, t) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: a()(L.clickableText, L.inline),
+                                            className: o()(L.clickableText, L.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
                                                     X({ action: "OPEN_SPOTIFY_ARTIST" }),
@@ -113,7 +113,7 @@ function j(e) {
                                             },
                                             children: e,
                                         }),
-                                        t < o.length - 1 ? ", " : "",
+                                        t < a.length - 1 ? ", " : "",
                                     ],
                                 },
                                 t,
@@ -133,7 +133,7 @@ function j(e) {
                   });
         },
         ee = () =>
-            n.id === o.id
+            n.id === a.id
                 ? null
                 : (0, r.jsx)("div", {
                       className: L.actions,
@@ -145,16 +145,16 @@ function j(e) {
                   });
     if (null === F) return null;
     let et = null != (t = x.application_id) ? t : x.name,
-        en = V === D.n_.ACTIVITY && H === et;
+        en = Z === D.n_.ACTIVITY && H === et;
     return (0, r.jsx)(u.Gt, {
         value: q,
         children: (0, r.jsx)(T.Z, {
-            targetElementRef: Z,
+            targetElementRef: V,
             sourceType: D.n_.ACTIVITY,
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                guildId: j,
+                guildId: k,
                 themeType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, b.Z)(x) : null,
@@ -163,7 +163,7 @@ function j(e) {
                 onAction: X,
                 children: () =>
                     (0, r.jsx)(v.Z, {
-                        ref: Z,
+                        ref: V,
                         user: n,
                         className: L.toolbarContainer,
                         sourceType: D.n_.ACTIVITY,
@@ -181,7 +181,7 @@ function j(e) {
                             }),
                         children: (0, r.jsxs)(A.Z, {
                             ref: Q,
-                            className: a()(k, { [L.hoisted]: en }),
+                            className: o()(j, { [L.hoisted]: en }),
                             onAction: X,
                             onClose: U,
                             "aria-labelledby": K ? "".concat(B, " ").concat(G) : G,

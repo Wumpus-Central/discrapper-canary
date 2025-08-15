@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => T });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(481060),
@@ -52,9 +52,9 @@ function y(e) {
 }
 function O(e) {
     var t;
-    let { application: n, detectedGame: o } = e,
-        a = i.useMemo(() => (null == o ? void 0 : o.genres.map(_.P3).join(", ")), [o]),
-        l = null != (t = o.name) ? t : null == n ? void 0 : n.name;
+    let { application: n, detectedGame: a } = e,
+        o = i.useMemo(() => (null == a ? void 0 : a.genres.map(_.P3).join(", ")), [a]),
+        l = null != (t = a.name) ? t : null == n ? void 0 : n.name;
     return (0, r.jsxs)("div", {
         className: E.headingContainer,
         children: [
@@ -66,7 +66,7 @@ function O(e) {
             (0, r.jsx)(s.xv, {
                 variant: "text-xs/medium",
                 color: "text-secondary",
-                children: a,
+                children: o,
             }),
         ],
     });
@@ -110,21 +110,21 @@ function v(e) {
 function I(e) {
     let { application: t } = e,
         n = i.useMemo(() => (0, p.fP)(), []),
-        o = (0, l.e7)([d.Z], () => d.Z.getMute(t.id)),
-        a = i.useMemo(() => (o ? g.intl.string(g.t.tpvw4e) : g.intl.string(g.t["6EwEws"])), [o]);
+        a = (0, l.e7)([d.Z], () => d.Z.getMute(t.id)),
+        o = i.useMemo(() => (a ? g.intl.string(g.t.tpvw4e) : g.intl.string(g.t["6EwEws"])), [a]);
     return (0, r.jsxs)("div", {
         className: E.actionButtonsContainer,
         children: [
             (0, r.jsx)(c.DY3, {
                 element: "span",
-                text: a,
-                "aria-label": a,
+                text: o,
+                "aria-label": o,
                 delay: 750,
                 children: (0, r.jsx)(c.P3F, {
                     className: E.actionButton,
-                    "aria-label": a,
-                    onClick: () => (0, u.X)(t.id, !o),
-                    children: o
+                    "aria-label": o,
+                    onClick: () => (0, u.X)(t.id, !a),
+                    children: a
                         ? (0, r.jsx)(c.owu, {
                               size: "xs",
                               color: c.TVs.colors.WHITE,
@@ -144,7 +144,7 @@ function I(e) {
     });
 }
 function T(e) {
-    let { application: t, detectedGame: n, className: o, onClose: s } = e,
+    let { application: t, detectedGame: n, className: a, onClose: s } = e,
         l = (0, h.Z)(
             {
                 location: "MiniGameProfile",
@@ -162,7 +162,7 @@ function T(e) {
             [s, l],
         );
     return (0, r.jsxs)("div", {
-        className: a()(E.container, o),
+        className: o()(E.container, a),
         children: [
             (0, r.jsx)(b, { detectedGame: n }),
             (0, r.jsx)(I, { application: t }),

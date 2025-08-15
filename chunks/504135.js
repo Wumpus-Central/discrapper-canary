@@ -1,8 +1,8 @@
 n.d(t, { s: () => b });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(1561),
     l = n(761224),
     c = n(670596),
@@ -67,7 +67,7 @@ function b(e) {
     let {
             color: t = "default",
             label: n,
-            icon: o,
+            icon: a,
             iconLeft: h,
             iconLeftSize: g = "md",
             hint: b,
@@ -88,18 +88,18 @@ function b(e) {
             iconProps: x,
             sparkle: M,
         } = e,
-        { onSelect: j, onInteraction: k } = i.useContext(c.p),
+        { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == k || k({ type: c.U.DEFAULT }), null == A)) return !1;
+                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
                 (e.shiftKey && D) || L || N(),
                     e.persist(),
-                    null == j || j(),
+                    null == k || k(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
             },
-            [A, N, j, D, L, k],
+            [A, N, k, D, L, j],
         );
     return (
         i.useEffect(() => {
@@ -111,7 +111,7 @@ function b(e) {
                 m(
                     {
                         innerRef: U,
-                        className: a()(p.item, p.labelContainer, _._[t], R, {
+                        className: o()(p.item, p.labelContainer, _._[t], R, {
                             [p.disabled]: I,
                             [p.focused]: T,
                             [null != P ? P : ""]: T,
@@ -126,11 +126,11 @@ function b(e) {
                     children: [
                         null != h &&
                             (0, r.jsx)("div", {
-                                className: a()(p.iconContainerLeft, { [p.iconContainerLarge]: "lg" === g }),
+                                className: o()(p.iconContainerLeft, { [p.iconContainerLarge]: "lg" === g }),
                                 children: (0, r.jsx)(
                                     h,
                                     E(m({ color: "currentColor" }, x), {
-                                        className: a()(p.icon, null == x ? void 0 : x.className),
+                                        className: o()(p.icon, null == x ? void 0 : x.className),
                                     }),
                                 ),
                             }),
@@ -141,7 +141,7 @@ function b(e) {
                                 null != y &&
                                     (0, r.jsx)(f.Text, {
                                         variant: "text-xs/normal",
-                                        className: a()(p.subtext, { [p.subtextLineClamp]: null != O }),
+                                        className: o()(p.subtext, { [p.subtextLineClamp]: null != O }),
                                         lineClamp: O,
                                         children: y,
                                     }),
@@ -152,15 +152,15 @@ function b(e) {
                                 className: p.hintContainer,
                                 children: (0, l.I)(b, e),
                             }),
-                        (0, d.Y)(o)
-                            ? o
-                            : null != o &&
+                        (0, d.Y)(a)
+                            ? a
+                            : null != a &&
                               (0, r.jsx)("div", {
                                   className: p.iconContainer,
                                   children: (0, r.jsx)(
-                                      o,
+                                      a,
                                       E(m({ color: "currentColor" }, x), {
-                                          className: a()(p.icon, null == x ? void 0 : x.className),
+                                          className: o()(p.icon, null == x ? void 0 : x.className),
                                       }),
                                   ),
                               }),
@@ -171,7 +171,7 @@ function b(e) {
                                     (0, r.jsx)(f.Fbu, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: a()(p.caret, w),
+                                        className: o()(p.caret, w),
                                     }),
                                     M && (0, r.jsx)(f.K1N, { className: p.sparkles }),
                                 ],

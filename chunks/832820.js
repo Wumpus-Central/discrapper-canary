@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(704826), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(793030),
-    a = n(481060),
+    a = n(793030),
+    o = n(481060),
     s = n(596454),
     l = n(962293),
     c = n(328908),
@@ -18,7 +18,7 @@ function E(e) {
     let { emojiConfetti: t } = e,
         n = i.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);
     return null == t
-        ? (0, r.jsx)(a.EO4, {
+        ? (0, r.jsx)(o.EO4, {
               size: "sm",
               color: "currentColor",
           })
@@ -89,7 +89,7 @@ let b = function (e) {
                 position: "top",
                 align: "left",
                 children: () =>
-                    (0, r.jsxs)(a.P3F, {
+                    (0, r.jsxs)(o.P3F, {
                         innerRef: w,
                         onClick: () => N(!A),
                         className: g.emojiSelectContainer,
@@ -98,7 +98,7 @@ let b = function (e) {
                                 className: g.emojiIconContainer,
                                 children: (0, r.jsx)(E, { emojiConfetti: null != n ? n : void 0 }),
                             }),
-                            (0, r.jsx)(o.xv, {
+                            (0, r.jsx)(a.xv, {
                                 variant: "text-sm/medium",
                                 children:
                                     null == n ? m.intl.string(m.t.mzfiGR) : m.intl.format(m.t.Hcd9OT, { emojiName: I }),
@@ -109,7 +109,7 @@ let b = function (e) {
             (0, r.jsxs)("div", {
                 className: g.end,
                 children: [
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(o.zxk, {
                         onClick: P,
                         text: S,
                         variant: "primary",

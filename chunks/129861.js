@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(385499),
     c = n(181430),
@@ -72,9 +72,9 @@ function O(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e) {
@@ -95,7 +95,7 @@ let T = (e) => {
                 primary: t,
                 secondary: n,
                 botType: i,
-                botVerified: a,
+                botVerified: o,
                 discriminatorClass: u,
                 className: f,
                 usernameClass: _,
@@ -106,7 +106,7 @@ let T = (e) => {
             } = e,
             v = (0, c.Y)({ location: "DiscordTag" });
         return (0, r.jsxs)("div", {
-            className: o()(m.info, { [m.withDisplayNameStyles]: v && null != b }, f),
+            className: a()(m.info, { [m.withDisplayNameStyles]: v && null != b }, f),
             children: [
                 (0, r.jsx)(s.ua7, {
                     text: h.intl.string(h.t.Br1ls7),
@@ -116,7 +116,7 @@ let T = (e) => {
                         (0, r.jsx)(
                             "span",
                             y(E({}, e), {
-                                className: o()(m.__invalid_username, _),
+                                className: a()(m.__invalid_username, _),
                                 children:
                                     null != b
                                         ? (0, r.jsx)(d.Z, {
@@ -130,15 +130,15 @@ let T = (e) => {
                 }),
                 null != n
                     ? (0, r.jsx)("span", {
-                          className: o()(m.infoSpacing, u),
+                          className: a()(m.infoSpacing, u),
                           children: n,
                       })
                     : void 0,
                 null != i &&
                     (0, r.jsx)(l.Z, {
                         type: i,
-                        className: o()(m.infoSpacing, p),
-                        verified: a,
+                        className: a()(m.infoSpacing, p),
+                        verified: o,
                     }),
             ],
         });
@@ -148,7 +148,7 @@ let T = (e) => {
                 user: t,
                 nick: n,
                 forceUsername: i,
-                showAccountIdentifier: o,
+                showAccountIdentifier: a,
                 overrideDiscriminator: s,
                 forcePomelo: l,
                 hideBotTag: c = !1,
@@ -166,7 +166,7 @@ let T = (e) => {
                 "hideDiscriminator",
                 "displayNameStylesType",
             ]);
-        let g = (0, a.e7)([_.Z], () => _.Z.hidePersonalInformation),
+        let g = (0, o.e7)([_.Z], () => _.Z.hidePersonalInformation),
             b = g || d || t.isNonUserBot(),
             y = t.toString(),
             v = c ? null : I(t),
@@ -176,7 +176,7 @@ let T = (e) => {
             C = t.hasUniqueUsername() || l;
         if (C || N !== y) {
             let e = N === y && C && i ? p.ZP.getUserTag(t, { forcePomelo: l }) : N,
-                n = o && e !== "@".concat(y) ? p.ZP.getUserTag(t) : void 0;
+                n = a && e !== "@".concat(y) ? p.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 T,
                 E(

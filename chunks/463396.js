@@ -1,7 +1,7 @@
-n.d(t, { f: () => o }), n(997841);
+n.d(t, { f: () => l }), n(997841);
 var r = n(630388),
     i = n(981631);
-let o = (e) =>
+let l = (e) =>
     null != e &&
     null != e.attachments &&
     !(e.attachments.length < 1) &&

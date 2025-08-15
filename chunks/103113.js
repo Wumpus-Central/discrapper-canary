@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(727637),
+    a = n(481060),
+    o = n(727637),
     s = n(100527),
     l = n(906732),
     c = n(580552),
@@ -64,11 +64,11 @@ function P(e) {
             setPopoutRef: L,
             closePopout: x,
             disableUserProfileLink: M = __OVERLAY__,
-            newAnalyticsLocations: j = [],
-            disableAutoFocus: k = !1,
+            newAnalyticsLocations: k = [],
+            disableAutoFocus: j = !1,
         } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...j, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -77,12 +77,12 @@ function P(e) {
             messageId: P,
             roleId: w,
         }),
-        Z = i.useRef(null),
-        F = (0, a.Z)(Z);
+        V = i.useRef(null),
+        F = (0, o.Z)(V);
     i.useEffect(() => {
-        null == L || L(null == Z ? void 0 : Z.current);
-    }, [Z, L]);
-    let V = () => {
+        null == L || L(null == V ? void 0 : V.current);
+    }, [V, L]);
+    let Z = () => {
             null == x || x(),
                 (0, m.openUserProfileModal)(
                     R(
@@ -97,11 +97,11 @@ function P(e) {
         H = !M && (0, c.Z)(t.id),
         Y = () =>
             H
-                ? (0, r.jsx)(o.sNh, {
+                ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
                       label: A.intl.string(A.t["+Xp3ho"]),
                       action: () => {
-                          V(),
+                          Z(),
                               (0, p.pQ)(
                                   R(
                                       {
@@ -114,7 +114,7 @@ function P(e) {
                       },
                   })
                 : null,
-        W = k ? "div" : o.VqE,
+        W = j ? "div" : a.VqE,
         K = (0, u.Dt)(),
         z = f.ZP.useName(n, C, t);
     return (0, r.jsx)(l.Gt, {
@@ -126,11 +126,11 @@ function P(e) {
             fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
             isLoaded: null == U ? void 0 : U.isLoaded,
             children: (0, r.jsxs)(W, {
-                ref: Z,
+                ref: V,
                 "aria-labelledby": K,
                 children: [
-                    (0, r.jsx)(o.nn4, {
-                        children: (0, r.jsx)(o.H, {
+                    (0, r.jsx)(a.nn4, {
+                        children: (0, r.jsx)(a.H, {
                             id: K,
                             children: A.intl.format(A.t.KRe1Fh, { name: z }),
                         }),
@@ -161,18 +161,18 @@ function P(e) {
                                         guildId: n,
                                         channelId: C,
                                         themeType: S.lY.POPOUT,
-                                        onOpenProfile: H ? V : void 0,
+                                        onOpenProfile: H ? Z : void 0,
                                     }),
                                 ],
                             }),
-                            (0, r.jsxs)(o.Ttm, {
+                            (0, r.jsxs)(a.Ttm, {
                                 fade: !0,
                                 className: N.body,
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: t,
                                         nickname: f.ZP.getName(n, C, t),
-                                        onOpenProfile: H ? V : void 0,
+                                        onOpenProfile: H ? Z : void 0,
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: U,
                                             themeType: S.lY.POPOUT,

@@ -28,14 +28,14 @@ let _ = () => {
             fullPrice: v,
         } = (0, m.a)(),
         [S, T] = (0, r.useState)(!1),
-        [I, N] = (0, r.useState)(!1),
+        [N, I] = (0, r.useState)(!1),
         y = async () => {
-            if (null === C) return void N(!0);
-            T(!0), N(!1);
+            if (null === C) return void I(!0);
+            T(!0), I(!1);
             try {
                 await E(), j(u.R.DISCOUNT_APPLIED);
             } catch (e) {
-                N(!0), T(!1);
+                I(!0), T(!1);
             }
         };
     if (null === C) return null;
@@ -100,7 +100,7 @@ let _ = () => {
                               }),
                 }),
             }),
-            I ? (0, i.jsx)(s.k, { children: h.intl.string(h.t["5mlOCQ"]) }) : null,
+            N ? (0, i.jsx)(s.k, { children: h.intl.string(h.t["5mlOCQ"]) }) : null,
         ],
     });
 };

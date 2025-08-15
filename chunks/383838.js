@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(49800),
+    a = n.n(i),
+    o = n(49800),
     s = n(600164),
     l = n(534542),
     c = n(512983),
@@ -47,9 +47,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,11 +58,11 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = a.Z.Types,
+let h = o.Z.Types,
     m = {
         LEFT: "left",
         RIGHT: "right",
@@ -71,7 +71,7 @@ function g(e) {
     let t,
         n,
         {
-            type: i = a.Z.Types.DANGER,
+            type: i = o.Z.Types.DANGER,
             imageData: d,
             button: p,
             className: h,
@@ -93,7 +93,7 @@ function g(e) {
                 f(
                     {
                         alt: "",
-                        className: o()(u.icon, g),
+                        className: a()(u.icon, g),
                     },
                     n,
                 ),
@@ -103,9 +103,9 @@ function g(e) {
     } else null != p && (n = p);
     let I = !0;
     return (
-        i === a.Z.Types.PRIMARY && (I = !1),
-        (0, r.jsx)(a.Z, {
-            className: o()(u.formNotice, h),
+        i === o.Z.Types.PRIMARY && (I = !1),
+        (0, r.jsx)(o.Z, {
+            className: a()(u.formNotice, h),
             type: i,
             style: y,
             children: (0, r.jsxs)(s.Z, {
@@ -118,13 +118,13 @@ function g(e) {
                             null != E && "" !== E
                                 ? (0, r.jsx)(c.v, {
                                       tag: c.R.H5,
-                                      className: o()(u.formNoticeTitle, { [u.whiteText]: I }),
+                                      className: a()(u.formNoticeTitle, { [u.whiteText]: I }),
                                       faded: !0,
                                       children: E,
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
-                                className: o()(u.formNoticeBody, { [u.whiteText]: I }),
+                                className: a()(u.formNoticeBody, { [u.whiteText]: I }),
                                 children: b,
                             }),
                             n,
@@ -135,4 +135,4 @@ function g(e) {
         })
     );
 }
-g.Types = a.Z.Types;
+g.Types = o.Z.Types;

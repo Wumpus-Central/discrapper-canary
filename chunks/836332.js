@@ -22,11 +22,11 @@ let j = r.forwardRef((e, t) => {
         v = (0, m.Nx)(),
         S = (0, u.rO)(),
         T = r.useRef(null),
-        [I, N] = r.useState(!1);
+        [N, I] = r.useState(!1);
     return (
         r.useEffect(() => {
-            !s || E || I || null == T.current || T.current.play();
-        }, [s, E, I]),
+            !s || E || N || null == T.current || T.current.play();
+        }, [s, E, N]),
         (0, i.jsx)(c.Gt, {
             value: O,
             children: (0, i.jsxs)("div", {
@@ -55,7 +55,7 @@ let j = r.forwardRef((e, t) => {
                             poster: x.Z,
                             className: f.footerArt,
                             onEnded: () => {
-                                N(!0);
+                                I(!0);
                             },
                             ref: T,
                             children: (0, i.jsx)("source", {

@@ -1,107 +1,106 @@
-n.d(t, {
-    HI: () => h,
+r.d(t, {
+    HI: () => b,
     _H: () => m,
-    af: () => g,
-    tx: () => E,
+    af: () => O,
+    tx: () => y,
 }),
-    n(388685);
-var r = n(524846),
-    i = n(911969),
-    o = n(592125),
-    a = n(271383),
-    s = n(485386),
-    l = n(430824),
-    c = n(594174),
-    u = n(483360),
-    d = n(823379),
-    f = n(5192),
-    _ = n(280501);
-n(892902);
-let p = 15,
-    h = 1000;
-function m(e, t, n) {
-    let r = o.Z.getChannel(n);
-    if (null == r) return [];
-    let a = e === i.re.USER_SELECT || e === i.re.MENTIONABLE_SELECT,
-        s = e === i.re.ROLE_SELECT || e === i.re.MENTIONABLE_SELECT,
-        { users: l, roles: c } = u.ZP.queryMentionResults({
+    r(388685);
+var n = r(524846),
+    l = r(911969),
+    i = r(592125),
+    o = r(271383),
+    a = r(485386),
+    c = r(430824),
+    s = r(594174),
+    u = r(483360),
+    d = r(823379),
+    p = r(5192),
+    f = r(280501);
+r(892902);
+let b = 1000;
+function m(e, t, r) {
+    let n = i.Z.getChannel(r);
+    if (null == n) return [];
+    let o = e === l.re.USER_SELECT || e === l.re.MENTIONABLE_SELECT,
+        a = e === l.re.ROLE_SELECT || e === l.re.MENTIONABLE_SELECT,
+        { users: c, roles: s } = u.ZP.queryMentionResults({
             query: t,
-            channel: r,
+            channel: n,
             canMentionEveryone: !1,
             canMentionHere: !1,
-            canMentionUsers: a,
-            canMentionRoles: s,
+            canMentionUsers: o,
+            canMentionRoles: a,
             includeAllGuildUsers: !0,
             includeNonMentionableRoles: !0,
             checkRecentlyTalkedOnEmptyQuery: !1,
-            limit: p,
+            limit: 15,
         });
     return [
-        ...l.map((e) => {
+        ...c.map((e) => {
             var t;
-            let i = f.ZP.getNickname(r.getGuildId(), n, e.user);
+            let l = p.ZP.getNickname(n.getGuildId(), r, e.user);
             return {
-                type: _.tM.USER,
+                type: f.tM.USER,
                 value: e.user.id,
-                label: null != (t = null != i ? i : e.user.globalName) ? t : e.user.username,
+                label: null != (t = null != l ? l : e.user.globalName) ? t : e.user.username,
             };
         }),
-        ...c.map((e) => ({
-            type: _.tM.ROLE,
+        ...s.map((e) => ({
+            type: f.tM.ROLE,
             value: e.id,
             label: e.name,
         })),
     ];
 }
-function g(e, t, n) {
-    let r = o.Z.getChannel(t);
-    return null == r
+function O(e, t, r) {
+    let n = i.Z.getChannel(t);
+    return null == n
         ? []
         : u.ZP.queryApplicationCommandChannelResults({
               query: e,
-              channel: r,
-              channelTypes: n,
-              limit: p,
+              channel: n,
+              channelTypes: r,
+              limit: 15,
           }).channels.map((e) => ({
-              type: _.tM.CHANNEL,
+              type: f.tM.CHANNEL,
               value: e.id,
               label: e.name,
           }));
 }
-function E(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+function y(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (null == e) return;
-    let i = l.Z.getGuild(t);
+    let l = c.Z.getGuild(t);
     return e
         .map((e) => {
             switch (e.type) {
-                case r.$.USER: {
+                case n.$.USER: {
                     var t;
-                    let n = c.default.getUser(e.id);
-                    if (null == n) return null;
-                    let r = null != i ? a.ZP.getNick(i.id, n.id) : void 0;
+                    let r = s.default.getUser(e.id);
+                    if (null == r) return null;
+                    let n = null != l ? o.ZP.getNick(l.id, r.id) : void 0;
                     return {
-                        type: _.tM.USER,
-                        value: n.id,
-                        label: null != (t = null != r ? r : n.globalName) ? t : n.username,
+                        type: f.tM.USER,
+                        value: r.id,
+                        label: null != (t = null != n ? n : r.globalName) ? t : r.username,
                     };
                 }
-                case r.$.ROLE: {
-                    if (null == i) return null;
-                    let t = s.Z.getRole(i.id, e.id);
+                case n.$.ROLE: {
+                    if (null == l) return null;
+                    let t = a.Z.getRole(l.id, e.id);
                     if (null == t) return null;
                     return {
-                        type: _.tM.ROLE,
+                        type: f.tM.ROLE,
                         value: t.id,
                         label: t.name,
                     };
                 }
-                case r.$.CHANNEL: {
-                    if (null == i) return null;
-                    let t = o.Z.getChannel(e.id);
-                    if (null == t || t.guild_id !== i.id || (n.length > 0 && !n.includes(t.type))) return null;
+                case n.$.CHANNEL: {
+                    if (null == l) return null;
+                    let t = i.Z.getChannel(e.id);
+                    if (null == t || t.guild_id !== l.id || (r.length > 0 && !r.includes(t.type))) return null;
                     return {
-                        type: _.tM.CHANNEL,
+                        type: f.tM.CHANNEL,
                         value: t.id,
                         label: t.name,
                     };

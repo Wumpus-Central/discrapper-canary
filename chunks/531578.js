@@ -28,7 +28,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function o(e) {
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,7 +61,7 @@ function s(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : o(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,7 +85,7 @@ let d = [
         r.LX.BLOCK_USER,
         r.LX.SEARCH_RESULTS,
         r.LX.AGE_VERIFICATION,
-    ].reduce((e, t, n) => s(o({}, e), { [t]: n }), {}),
+    ].reduce((e, t, n) => s(a({}, e), { [t]: n }), {}),
     f = ["bad", "neutral", "good"],
     _ = 8640000000000000;
 var p = (function (e) {

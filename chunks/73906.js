@@ -3,11 +3,11 @@ var r = n(255367);
 n(73800);
 var i = n(3570),
     l = n(685311),
-    o = n(186901);
+    a = n(186901);
 let s = function (e) {
     let { match: t, location: n } = e,
         s = async (e, t) => {
-            await (0, i.s)(o.jE.CHANNEL, {
+            await (0, i.s)(a.jE.CHANNEL, {
                 guildId: e.params.guildId,
                 channelId: e.params.channelId,
                 messageId: e.params.messageId,

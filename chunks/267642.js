@@ -6,7 +6,7 @@ n.d(t, {
     Jh: () => x,
     KK: () => K,
     Oe: () => I,
-    Qi: () => V,
+    Qi: () => Z,
     Ro: () => O,
     _k: () => B,
     _p: () => D,
@@ -14,7 +14,7 @@ n.d(t, {
     cP: () => R,
     e9: () => w,
     ee: () => q,
-    f2: () => j,
+    f2: () => k,
     gZ: () => F,
     ge: () => L,
     ig: () => A,
@@ -22,7 +22,7 @@ n.d(t, {
     nW: () => P,
     tb: () => M,
     tl: () => z,
-    vx: () => k,
+    vx: () => j,
     y4: () => W,
     yw: () => H,
 }),
@@ -33,8 +33,8 @@ n.d(t, {
 var r = n(392711),
     i = n.n(r);
 n(913527);
-var o = n(274136),
-    a = n(179360),
+var a = n(274136),
+    o = n(179360),
     s = n(317169),
     l = n(151494),
     c = n(430824),
@@ -80,10 +80,10 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
     I = v.slice().reverse(),
     T = (e) => {
         var t;
-        return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = Z.find((t) => t.tier === e)) ? void 0 : t.nextTier;
+        return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = V.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
     S = (e, t) =>
-        null != t && t.features.has(g.oNc.MORE_STICKERS) && e === g.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : b.$8[e],
+        null != t && t.features.has(g.oNc.MORE_STICKERS) && e === g.Eu4.TIER_3 ? a.D.MAX_STICKER_SLOTS : b.$8[e],
     A = (e) => b.pH[e],
     N = (e, t) => (null != t && t.features.has(g.oNc.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
     C = (e) => {
@@ -331,10 +331,10 @@ function x(e) {
 function M(e, t) {
     return null == t || (null != e && e >= t);
 }
-function j(e, t) {
+function k(e, t) {
     return M(e.premiumTier, t);
 }
-function k(e) {
+function j(e) {
     return i()
         .values(e)
         .filter((e) => e.isAvailable());
@@ -342,11 +342,11 @@ function k(e) {
 function U(e) {
     let { fractionalState: t } = e,
         n = d.Z.getPremiumTypeSubscription();
-    u.Z.hasFetched || u.Z.isFetching || (0, a.X8)();
-    let r = k(u.Z.boostSlots),
+    u.Z.hasFetched || u.Z.isFetching || (0, o.X8)();
+    let r = j(u.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
-        o = r.length > 0;
-    if (i && t === b.a$.NONE && !o) return y.intl.string(y.t.mOWsFx);
+        a = r.length > 0;
+    if (i && t === b.a$.NONE && !a) return y.intl.string(y.t.mOWsFx);
     let { numAvailableGuildBoostSlots: s, numCanceledGuildBoostSlots: l } = Object.values(u.Z.boostSlots).reduce(
         (e, t) => (z(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         {
@@ -370,10 +370,10 @@ function B(e, t) {
     if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
     let r = x(t),
         i = g.oCV[r],
-        o = e.filter((e) => null != e.endsAt);
-    return i - (e.length - o.length);
+        a = e.filter((e) => null != e.endsAt);
+    return i - (e.length - a.length);
 }
-let Z = [
+let V = [
     {
         tier: g.Eu4.TIER_3,
         amount: g.oCV[g.Eu4.TIER_3],
@@ -405,19 +405,19 @@ function F(e, t) {
                     endingSubscriptionLength: r.length,
                 },
             });
-        let o = r[Math.max(i, 0)];
-        return null == o ? void 0 : o.endsAt;
+        let a = r[Math.max(i, 0)];
+        return null == a ? void 0 : a.endsAt;
     }
     return null;
 }
-function V(e, t) {
+function Z(e, t) {
     let n = A(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
-        o = null != i ? S(i) : 0,
-        a = S(t);
-    return Math.max(0, n - e.slice(o, a).length);
+        a = null != i ? S(i) : 0,
+        o = S(t);
+    return Math.max(0, n - e.slice(a, o).length);
 }
 function H(e, t, n) {
     return -1 === v.indexOf(n) ? 0 : Math.max(0, Y(e) - t.length);
@@ -459,11 +459,11 @@ function J(e) {
         n = q(t),
         r = X(t),
         i = g.oCV[n],
-        o = (t - i) / (g.oCV[r] - i),
-        a = Q[n],
+        a = (t - i) / (g.oCV[r] - i),
+        o = Q[n],
         s = Q[r];
     return {
-        fillFactor: n === g.Eu4.TIER_3 ? 1 : o * (s - a) + a,
+        fillFactor: n === g.Eu4.TIER_3 ? 1 : a * (s - o) + o,
         totalAvailableBoostsCount: t,
     };
 }

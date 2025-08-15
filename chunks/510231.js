@@ -5,8 +5,8 @@ n.d(t, {
     n(583741);
 var r = n(73800),
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(189451),
     l = n(77498),
     c = n(570911);
@@ -18,10 +18,10 @@ function d(e) {
     return (null == e ? void 0 : e.themes) != null && e.themes.includes(s.u.EROTIC);
 }
 function f() {
-    let e = (0, a.e7)([l.Z], () => l.Z.games),
+    let e = (0, o.e7)([l.Z], () => l.Z.games),
         t = r.useMemo(
             () =>
-                o()(e)
+                a()(e)
                     .filter((e) => !d(e))
                     .map((e) => ({
                         value: e.id,

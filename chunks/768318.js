@@ -1,9 +1,9 @@
 n.d(t, { Z: () => l });
-var i = n(73800),
-    r = n(584825);
+var r = n(73800),
+    i = n(584825);
 function l(e, t) {
-    let n = (0, r.oC)(t);
-    return i.useMemo(() => {
+    let n = (0, i.oC)(t);
+    return r.useMemo(() => {
         var e;
         return (
             null != n &&

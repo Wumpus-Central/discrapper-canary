@@ -24,15 +24,15 @@ var r = n(512722),
     v = n(350327),
     S = n(621853),
     T = n(687158),
-    I = n(25990),
-    N = n(594174),
+    N = n(25990),
+    I = n(594174),
     y = n(74538),
     A = n(388032),
     P = n(436360);
 function R() {
     var e, t, n, r, R, D, Z, w;
-    let k = (0, a.e7)([N.default], () => {
-            let e = N.default.getCurrentUser();
+    let k = (0, a.e7)([I.default], () => {
+            let e = I.default.getCurrentUser();
             return s()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
         L = (0, a.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
@@ -47,10 +47,10 @@ function R() {
             pendingLegacyUsernameDisabled: z,
             pendingPrimaryGuildId: W,
             errors: Y,
-        } = (0, a.cj)([I.Z], () => {
+        } = (0, a.cj)([N.Z], () => {
             var e, t;
-            let n = I.Z.getAllPending(),
-                i = I.Z.getErrors();
+            let n = N.Z.getAllPending(),
+                i = N.Z.getErrors();
             return (
                 (e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {

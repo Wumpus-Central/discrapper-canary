@@ -29,8 +29,8 @@ var i = n(255367),
     v = n(570908),
     S = n(702321),
     T = n(201895),
-    I = n(43267),
-    N = n(933557),
+    N = n(43267),
+    I = n(933557),
     y = n(163889),
     A = n(111028),
     P = n(181430),
@@ -302,17 +302,17 @@ function ep(e) {
         ev = t.isSystemDM(),
         eS = (0, F.Q)(),
         eT = !eO && !ev && t.type === ee.d4z.DM,
-        eI = eT && (null == m ? void 0 : m.primaryGuild) != null,
-        eN = (0, g.e7)([X.ZP], () => X.ZP.isChannelMuted(t.getGuildId(), t.id)),
+        eN = eT && (null == m ? void 0 : m.primaryGuild) != null,
+        eI = (0, g.e7)([X.ZP], () => X.ZP.isChannelMuted(t.getGuildId(), t.id)),
         { ignored: ey, blocked: eA } = (0, g.cj)([K.Z], () => ({
             ignored: K.Z.isIgnored(t.getRecipientId()),
             blocked: K.Z.isBlocked(t.getRecipientId()),
         })),
         eP = eT && ey,
         eR = eT && eA,
-        eD = (eN || eP || eR) && !(l || $),
+        eD = (eI || eP || eR) && !(l || $),
         eZ = (0, g.e7)([Y.ZP], () => Y.ZP.getMentionCount(t.id) > 0),
-        ew = (0, N.ZP)(t),
+        ew = (0, I.ZP)(t),
         ek = (0, g.e7)([Z.Z], () => Z.Z.isFavorite(t.id)),
         { dotsInsteadOfCloseButton: eL, rearrangeContextMenu: eB } = k.Z.useExperiment(
             { location: "private_channel" },
@@ -359,6 +359,7 @@ function ep(e) {
                           async () => {
                               let { default: e } = await Promise.all([
                                   n.e("79695"),
+                                  n.e("90508"),
                                   n.e("70205"),
                                   n.e("57789"),
                                   n.e("30470"),
@@ -382,14 +383,16 @@ function ep(e) {
                           e,
                           async () => {
                               let { default: e } = s
-                                  ? await n.e("56167").then(n.bind(n, 416951))
+                                  ? await Promise.all([n.e("90508"), n.e("56167")]).then(n.bind(n, 416951))
                                   : await Promise.all([
                                         n.e("79695"),
+                                        n.e("90508"),
                                         n.e("70205"),
                                         n.e("98783"),
                                         n.e("57789"),
+                                        n.e("15114"),
                                         n.e("56826"),
-                                        n.e("46840"),
+                                        n.e("11926"),
                                     ]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, i.jsx)(
@@ -436,7 +439,7 @@ function ep(e) {
             effectDisplayType: $ || l || eh ? R.F.ANIMATED : R.F.PLAIN,
             loop: $,
         }),
-        eQ = eI
+        eQ = eN
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       eJ,
@@ -526,7 +529,7 @@ function ep(e) {
                                                         return (0, i.jsx)(
                                                             ea,
                                                             er(ei({}, eC), {
-                                                                src: (0, I.x)(t),
+                                                                src: (0, N.x)(t),
                                                                 "aria-hidden": !0,
                                                                 size: e,
                                                                 status: M ? ee.Skl.ONLINE : U,

@@ -1,8 +1,8 @@
 n.d(t, { I: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(708816),
     l = n(821541),
     c = n(780900);
@@ -64,9 +64,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,12 +75,12 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e, t, n) {
-    let o = (0, c.G6)(e);
+    let a = (0, c.G6)(e);
     return i.forwardRef(function (u, f) {
         var {
                 children: h,
@@ -126,7 +126,7 @@ function m(e, t, n) {
             dir: g,
             className: m,
             scrollerRef: A,
-            specs: o,
+            specs: a,
         });
         return T
             ? (0, r.jsx)(
@@ -136,7 +136,7 @@ function m(e, t, n) {
                           {
                               gap: I,
                               ref: A,
-                              className: a()(m, {
+                              className: o()(m, {
                                   [e]: !0,
                                   [t]: b,
                                   [n]: y,
@@ -160,7 +160,7 @@ function m(e, t, n) {
                       d(
                           {
                               ref: A,
-                              className: a()(m, {
+                              className: o()(m, {
                                   [e]: !0,
                                   [t]: b,
                                   [n]: y,

@@ -23,7 +23,7 @@ var i = n(255367),
     v = n(768236),
     S = n(314907),
     T = n(826701);
-function I(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -172,7 +172,7 @@ let y = () =>
                         (0, i.jsx)("td", {}),
                     ],
                 }),
-                n.map((e, t) => (0, i.jsx)(D, N(I({}, e), { withBottomMargin: t === n.length - 1 }), e.id)),
+                n.map((e, t) => (0, i.jsx)(D, I(N({}, e), { withBottomMargin: t === n.length - 1 }), e.id)),
             ],
         });
     },
@@ -298,7 +298,7 @@ let y = () =>
                                             shouldUseDiscountPrice: R,
                                             tier2DiscountedPriceString: w,
                                         }),
-                                        U.map((e) => (0, r.createElement)(Z, N(I({}, e), { key: e.id }))),
+                                        U.map((e) => (0, r.createElement)(Z, I(N({}, e), { key: e.id }))),
                                     ],
                                 }),
                             ],

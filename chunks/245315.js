@@ -1,53 +1,48 @@
 n.d(t, {
-    BF: () => _,
-    QA: () => f,
-    cp: () => d,
+    BF: () => d,
+    QA: () => u,
+    cp: () => c,
 });
 var r = n(367907),
     i = n(368859),
-    o = n(626135),
+    l = n(626135),
     a = n(135899),
     s = n(981631),
-    l = n(943702);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function d(e) {
+    o = n(943702);
+function c(e) {
     return ((0, i.Z)(e) && e.messageReference.guild_id === a.M_) || (null != e.author && e.author.id === a.c9);
 }
-function f() {
-    return l;
+function u() {
+    return o;
 }
-let _ = (e) => {
-    o.default.track(
+let d = (e) => {
+    l.default.track(
         s.rMx.USER_FLOW_TRANSITION,
-        u(
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
             {
                 flow_type: a.tA,
                 from_step: e.fromStep,

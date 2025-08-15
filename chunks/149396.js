@@ -5,7 +5,7 @@ n.d(t, {
     AN: () => r.AN,
     Av: () => r.Av,
     Dg: () => r.Dg,
-    GO: () => o,
+    GO: () => a,
     H0: () => i,
     H3: () => r.H3,
     Jk: () => r.Jk,
@@ -14,7 +14,7 @@ n.d(t, {
     Yh: () => r.Yh,
     Yn: () => r.Yn,
     ad: () => r.ad,
-    eR: () => a,
+    eR: () => o,
     ed: () => r.ed,
     h7: () => r.h7,
     iA: () => r.iA,
@@ -28,11 +28,11 @@ n.d(t, {
 });
 var r = n(65154);
 let i = 30000,
-    o = {
+    a = {
         [r.pM.VOICE_ACTIVITY]: 1,
         [r.pM.PUSH_TO_TALK]: 2,
     };
-var a = (function (e) {
+var o = (function (e) {
         return (
             (e.VOICE_SOUND_STOP_LOOP = "voice_sound_stop_loop"),
             (e.VOICE_RELATIVE_SOUNDS = "voice_relative_sounds"),

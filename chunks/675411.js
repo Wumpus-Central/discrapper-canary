@@ -1,10 +1,10 @@
-var r = n(222671);
-e.exports = function (e) {
-    var t = r(e);
+var n = r(222671);
+t.exports = function (t) {
+    var e = n(t);
     return {
-        x: t.left,
-        y: t.top,
-        width: t.right - t.left,
-        height: t.bottom - t.top,
+        x: e.left,
+        y: e.top,
+        width: e.right - e.left,
+        height: e.bottom - e.top,
     };
 };

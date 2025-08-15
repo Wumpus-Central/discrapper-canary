@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(755721),
-    a = n(359110),
+    a = n(755721),
+    o = n(359110),
     s = n(922482),
     l = n(146085),
     c = n(750154),
@@ -27,20 +27,20 @@ function g(e) {
         e.stopPropagation(),
             null == n || n({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
             s.AC(O, y),
-            (0, a.Kh)(y),
+            (0, o.Kh)(y),
             null == g || g();
     };
     return E === h.lY.MODAL_V2
         ? (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
-              size: o.Ph.TINY,
+              size: a.Ph.TINY,
               themeColor: "secondary",
               disabled: v,
               onClick: S,
           })
         : (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
-              size: o.Ph.SMALL,
+              size: a.Ph.SMALL,
               themeColor: "secondary",
               fullWidth: !0,
               disabled: v,

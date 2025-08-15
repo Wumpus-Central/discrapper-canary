@@ -1,8 +1,8 @@
 n.d(t, { M: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(780842),
-    a = n(70097),
+    a = n(780842),
+    o = n(70097),
     s = n(312097),
     l = n(920155),
     c = n(744399),
@@ -69,9 +69,9 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,8 +80,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function O(e) {
@@ -158,7 +158,7 @@ function v(e) {
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(a.Z, {
+                      (0, r.jsx)(o.Z, {
                           ref: R,
                           src: g,
                           width: 240,
@@ -173,7 +173,7 @@ function v(e) {
                       }),
                       (0, r.jsx)("div", {
                           className: p.playButton,
-                          children: (0, r.jsx)(o.J, {
+                          children: (0, r.jsx)(a.J, {
                               playing: !1,
                               size: "sm",
                               "aria-label": "Play video: ".concat(t),

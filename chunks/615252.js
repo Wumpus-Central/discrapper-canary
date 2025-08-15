@@ -1,8 +1,8 @@
 var r = n(444675);
 let i = n(620633),
-    o = n(517024),
-    a = o.isObject,
-    s = o.hasOwn;
+    a = n(517024),
+    o = a.isObject,
+    s = a.hasOwn;
 function l() {}
 (e.exports = l),
     (l.prototype.clearTimeout = function () {
@@ -136,7 +136,7 @@ let c = new Set([
     }),
     (l.prototype.getHeader = l.prototype.get),
     (l.prototype.set = function (e, t) {
-        if (a(e)) {
+        if (o(e)) {
             for (let t in e) s(e, t) && this.set(t, e[t]);
             return this;
         }
@@ -151,7 +151,7 @@ let c = new Set([
             throw Error(
                 ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()",
             );
-        if (a(e)) {
+        if (o(e)) {
             for (let t in e) s(e, t) && this.field(t, e[t]);
             return this;
         }
@@ -207,7 +207,7 @@ let c = new Set([
         };
     }),
     (l.prototype.send = function (e) {
-        let t = a(e),
+        let t = o(e),
             n = this._header["content-type"];
         if (this._formData)
             throw Error(
@@ -215,7 +215,7 @@ let c = new Set([
             );
         if (t && !this._data) Array.isArray(e) ? (this._data = []) : this._isHost(e) || (this._data = {});
         else if (e && this._data && this._isHost(this._data)) throw Error("Can't merge these send calls");
-        if (t && a(this._data))
+        if (t && o(this._data))
             for (let t in e) {
                 if ("bigint" == typeof e[t] && !e[t].toJSON) throw Error("Cannot serialize BigInt value to json");
                 s(e, t) && (this._data[t] = e[t]);

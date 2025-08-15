@@ -1,4 +1,4 @@
-e.exports = function (e, t, n, r, i, o, a, s) {
+e.exports = function (e, t, n, r, i, a, o, s) {
     if (!e) {
         var l;
         if (void 0 === t)
@@ -6,7 +6,7 @@ e.exports = function (e, t, n, r, i, o, a, s) {
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var c = [n, r, i, o, a, s],
+            var c = [n, r, i, a, o, s],
                 u = 0;
             (l = Error(
                 t.replace(/%s/g, function () {

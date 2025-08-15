@@ -141,7 +141,7 @@ e.exports = function (e) {
             "with",
         ];
     i = i.concat(i.map((e) => `end${e}`));
-    let o = {
+    let a = {
             scope: "string",
             variants: [
                 {
@@ -154,7 +154,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        a = {
+        o = {
             scope: "number",
             match: /\d+/,
         },
@@ -163,7 +163,7 @@ e.exports = function (e) {
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
-            contains: [o, a],
+            contains: [a, o],
         },
         l = {
             beginKeywords: n.join(" "),
@@ -192,7 +192,7 @@ e.exports = function (e) {
             begin: [/\{%/, /\s*/, t.either(...e)],
             end: /%\}/,
             keywords: "in",
-            contains: [c, l, o, a],
+            contains: [c, l, a, o],
         }),
         d = /[a-z_]+/,
         f = u(i, { relevance: 2 }),
@@ -210,7 +210,7 @@ e.exports = function (e) {
                 className: "template-variable",
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: ["self", c, l, o, a],
+                contains: ["self", c, l, a, o],
             },
         ],
     };

@@ -1,8 +1,8 @@
 n.d(t, { y: () => p }), n(539854), n(388685);
 var r = n(873546),
     i = n(379649),
-    o = n(710845),
-    a = n(147063),
+    a = n(710845),
+    o = n(147063),
     s = n(70956),
     l = n(981631);
 function c(e, t, n) {
@@ -52,7 +52,7 @@ class p {
                             ? (this.logger.info("".concat(e, ": detected poor network quality, turning off video")),
                               this.streamDisabledUsers.add(e),
                               (this.currentVideoAutoToggleState[e] = l.ZUi.DISABLED),
-                              (0, a.Z)(e, l.ZUi.DISABLED),
+                              (0, o.Z)(e, l.ZUi.DISABLED),
                               this.startReenableBackoffTimer(e))
                             : this.currentVideoAutoToggleState[e] === l.ZUi.AUTO_PROBING &&
                               ((this.currentVideoAutoToggleState[e] = l.ZUi.AUTO_ENABLED),
@@ -61,7 +61,7 @@ class p {
                                       e,
                                   ),
                               ),
-                              (0, a.Z)(e, l.ZUi.AUTO_ENABLED)),
+                              (0, o.Z)(e, l.ZUi.AUTO_ENABLED)),
                         this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue()));
         }
     }
@@ -94,7 +94,7 @@ class p {
             this.stateCleanupBeforeEnable(e),
             (this.currentVideoAutoToggleState[e] = l.ZUi.AUTO_PROBING),
             (this.probingUserId = e),
-            (0, a.Z)(e, l.ZUi.AUTO_PROBING),
+            (0, o.Z)(e, l.ZUi.AUTO_PROBING),
             !0)
         );
     }
@@ -136,7 +136,7 @@ class p {
         for (let e in ((this.disabled = !0), this.perUserFpsWindow)) this.deleteUser(e);
     }
     constructor(e, t, n, r) {
-        c(this, "logger", new o.Z("VideoHealthManager")),
+        c(this, "logger", new a.Z("VideoHealthManager")),
             c(this, "windowLength", void 0),
             c(this, "fpsThreshold", void 0),
             c(this, "fpsWindowBorderlineCount", void 0),

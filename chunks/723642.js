@@ -1,8 +1,8 @@
 n.d(t, {
     E2: () => l,
-    OA: () => a,
+    OA: () => o,
     SO: () => c,
-    ZW: () => o,
+    ZW: () => a,
     sR: () => u,
     yY: () => d,
     zn: () => s,
@@ -10,10 +10,10 @@ n.d(t, {
     n(388685);
 var r = n(85746),
     i = n(981631),
-    o = (function (e) {
+    a = (function (e) {
         return (e.KEY_PRESS = "key_press"), (e.CLICK = "click"), e;
     })({});
-let a = "SearchStore",
+let o = "SearchStore",
     s = "SearchHistoryStore_Web",
     l = {
         sort_by: "timestamp",

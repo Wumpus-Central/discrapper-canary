@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(906732),
     l = n(201895),
     c = n(933557),
@@ -55,7 +55,7 @@ function y(e) {
             hideTooltip: O = !1,
             canTruncate: v = !0,
         } = e,
-        I = (0, o.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
+        I = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         T = (0, c.ZP)(I),
         { analyticsLocations: S } = (0, s.ZP)(),
         A = i.useCallback(() => {
@@ -73,7 +73,7 @@ function y(e) {
         children: [
             !b &&
                 (0, r.jsx)(_.Z, {
-                    icon: a.ARS,
+                    icon: o.ARS,
                     tooltipText: R ? T : void 0,
                     tooltipAriaLabel: R ? (0, l.ZP)({ channel: I }) : void 0,
                     className: E,
@@ -103,7 +103,7 @@ function O(e) {
             canTruncate: m = !0,
             showChannelName: E = !1,
         } = e,
-        b = (0, o.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
+        b = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         y = (0, c.ZP)(b),
         O = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
         v = null != O ? g.intl.format(g.t["0wJXSk"], { name: O }) : g.intl.string(g.t.eXan7O),
@@ -120,7 +120,7 @@ function O(e) {
         icon: u
             ? void 0
             : (0, r.jsx)(_.Z, {
-                  icon: a.ARS,
+                  icon: o.ARS,
                   className: l,
               }),
         text: S,

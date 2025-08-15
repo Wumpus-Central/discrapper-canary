@@ -1,12 +1,12 @@
 var r = n(115861),
     i = "\u200B",
-    o = "\u180E";
+    a = "\u180E";
 e.exports = function () {
     return String.prototype.trim &&
         i.trim() === i &&
-        o.trim() === o &&
-        ("_" + o).trim() === "_" + o &&
-        (o + "_").trim() === o + "_"
+        a.trim() === a &&
+        ("_" + a).trim() === "_" + a &&
+        (a + "_").trim() === a + "_"
         ? String.prototype.trim
         : r;
 };

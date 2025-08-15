@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(304445),
     U = n(984802),
     G = n(155409),
-    V = n(10401),
-    B = n(970731),
+    B = n(10401),
+    V = n(970731),
     H = n(210887),
     F = n(592125),
     z = n(796974),
@@ -205,7 +205,7 @@ class ey extends i.PureComponent {
                         renderPopout: () =>
                             (0, r.jsx)("div", {
                                 onClick: (e) => e.stopPropagation(),
-                                children: (0, r.jsx)(B.ZP, {
+                                children: (0, r.jsx)(V.ZP, {
                                     header: ef.intl.string(ef.t["Q3qa4+"]),
                                     content: ef.intl.string(ef.t.UyHD4O),
                                     buttonCTA: ef.intl.string(ef.t.U9PrMz),
@@ -407,16 +407,17 @@ class ey extends i.PureComponent {
                         let { default: e } = await Promise.all([
                             n.e("1806"),
                             n.e("36599"),
-                            n.e("7654"),
+                            n.e("60962"),
                             n.e("58175"),
+                            n.e("7654"),
                             n.e("44156"),
-                            n.e("58511"),
+                            n.e("47463"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("54408"),
                             n.e("42926"),
                             n.e("20087"),
-                            n.e("40725"),
+                            n.e("6049"),
                             n.e("87154"),
                             n.e("33213"),
                             n.e("23744"),
@@ -555,13 +556,13 @@ function ev(e) {
         w = (0, U.Ll)(),
         M = (0, c.e7)([H.Z], () => (null != w ? w : H.Z.theme)),
         { enableStudyGroup: G } = (0, A.s)(o),
-        B = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [Y, er] = i.useState(!B),
+        V = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [Y, er] = i.useState(!V),
         ei = (0, b.Z)(n),
         { analyticsLocations: el } = (0, O.ZP)(_.Z.GUILD_HEADER);
     i.useEffect(() => {
-        n !== ei && er(!B);
-    }, [n, ei, B]);
+        n !== ei && er(!V);
+    }, [n, ei, V]);
     let [ea, eo] = (0, v.ZP)(
             (e) => [
                 eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
@@ -572,7 +573,7 @@ function ev(e) {
         es = (0, y.Z)(o),
         ep = (0, p.s9z)(p.JQI),
         ef = (0, c.e7)([X.Z], () => X.Z.hasLayers()),
-        eh = (0, c.e7)([V.Z], () => V.Z.shouldShow(eO)),
+        eh = (0, c.e7)([B.Z], () => B.Z.shouldShow(eO)),
         eg = g && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
         em = (0, c.e7)([K.Z], () => K.Z.getMemberCount(n)),
         eb =

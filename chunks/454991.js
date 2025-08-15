@@ -1,7 +1,7 @@
 n.d(t, { v: () => s }), n(388685);
 var r = n(433517),
     i = n(987650);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-var a = (function (e) {
+var o = (function (e) {
     return (
         (e.Version1 = "OverlayStore"),
         (e.Version2 = "overlayEnabled"),
@@ -33,7 +33,7 @@ class s {
         return s.load().oopEnabled;
     }
     static DEV_clearAllSavedSettings() {
-        for (let e of Object.values(a)) r.K.remove(e);
+        for (let e of Object.values(o)) r.K.remove(e);
         this._loaded = null;
     }
     static DEV_saveSettingsForVersion(e) {
@@ -68,7 +68,7 @@ class s {
         return t.save(), t;
     }
     static loadInternal() {
-        var e, t, n, o, a;
+        var e, t, n, a, o;
         let l = r.K.get("OverlayStore");
         if (null != l) {
             let e = new s("boolean" == typeof l.enabled ? l.enabled : i.iP, i.iP);
@@ -95,15 +95,15 @@ class s {
             return e.save(), r.K.remove("OverlayStore5"), e;
         }
         let _ = r.K.get("OverlayStore6");
-        if (null != _) return new s(null != (o = _.legacyEnabled) ? o : i.iP, null != (a = _.oopEnabled) ? a : i.iP);
+        if (null != _) return new s(null != (a = _.legacyEnabled) ? a : i.iP, null != (o = _.oopEnabled) ? o : i.iP);
         let p = new s(i.iP, i.iP);
         return p.save(), p;
     }
     constructor(e, t) {
-        o(this, "legacyEnabled", void 0),
-            o(this, "oopEnabled", void 0),
+        a(this, "legacyEnabled", void 0),
+            a(this, "oopEnabled", void 0),
             (this.legacyEnabled = e),
             (this.oopEnabled = t);
     }
 }
-o(s, "_loaded", null);
+a(s, "_loaded", null);

@@ -1,8 +1,8 @@
 n.d(t, { r: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(692547),
     c = n(186325),
@@ -73,24 +73,24 @@ let E = {
     I = "M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z",
     T = "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z";
 function S(e, t, n, i) {
-    let o = e.to({
+    let a = e.to({
             output: [t, n],
         }),
-        a = i ? [b, b, I, I] : [b, O, O, I],
+        o = i ? [b, b, I, I] : [b, O, O, I],
         l = i ? [y, y, T, T] : [y, v, v, T];
     return (0, r.jsxs)("svg", {
         viewBox: "0 0 20 20",
         fill: "none",
         children: [
             (0, r.jsx)(s.animated.path, {
-                fill: o,
+                fill: a,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
-                    output: a,
+                    output: o,
                 }),
             }),
             (0, r.jsx)(s.animated.path, {
-                fill: o,
+                fill: a,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
                     output: l,
@@ -100,7 +100,7 @@ function S(e, t, n, i) {
     });
 }
 let A = function (e) {
-    let { id: t, onChange: n, checked: o, disabled: p, className: m, focusProps: b, innerRef: y } = e,
+    let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: b, innerRef: y } = e,
         { reducedMotion: O } = i.useContext(c.S),
         v = i.useRef(null),
         [I, T] = i.useState(!1),
@@ -110,7 +110,7 @@ let A = function (e) {
             {
                 config: E,
                 opacity: p ? 0.5 : 1,
-                state: I ? (o ? 0.7 : 0.3) : +!!o,
+                state: I ? (a ? 0.7 : 0.3) : +!!a,
             },
             "animate-always",
         );
@@ -131,8 +131,8 @@ let A = function (e) {
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
                 "data-toggleable-component": "switch",
-                className: a()(_.container, m, {
-                    [_.checked]: o,
+                className: o()(_.container, m, {
+                    [_.checked]: a,
                     [_.disabled]: p,
                 }),
                 onMouseDown: () => !p && T(!0),
@@ -191,7 +191,7 @@ let A = function (e) {
                         onKeyDown: w,
                         onKeyUp: D,
                         onChange: P,
-                        checked: o,
+                        checked: a,
                         disabled: p,
                     }),
                 ],

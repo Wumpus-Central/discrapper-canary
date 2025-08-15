@@ -1,60 +1,51 @@
-function r(e, t) {
-    var n, r, l, c, u;
-    let d,
-        f = null != (n = t.limit) ? n : 1 / 0,
-        _ = i(e, null != (r = t.filterPredicates) ? r : []);
-    return s(
-        (d =
-            null != t.bucketPredicates && t.bucketPredicates.length > 0
-                ? f >= _.length
-                    ? a(_, null != (l = t.bucketPredicates) ? l : [])
-                    : o(_, null != (c = t.bucketPredicates) ? c : [], f)
-                : [_]),
-        null != (u = t.sortComparers) ? u : [],
-        f,
-    ).slice(0, f);
-}
-function i(e, t) {
-    return e.filter((e) => t.every((t) => t(e)));
-}
-function o(e, t, n) {
-    let r = [],
-        i = e;
-    for (let e of t) {
-        let t = [],
-            o = [];
-        for (let n of i) e(n) ? o.push(n) : t.push(n);
-        if ((r.push(o), (i = t), r.reduce((e, t) => t.length + e, 0) >= n)) break;
-    }
-    return r;
-}
-function a(e, t) {
-    let n = Array(t.length)
-        .fill(null)
-        .map(() => []);
-    for (let r of e)
-        for (let e = 0; e < t.length; e++)
-            if (t[e](r)) {
-                n[e].push(r);
-                break;
-            }
-    return n;
-}
-function s(e, t, n) {
-    let r = [];
-    for (let i of e) {
-        let e = l(i, t);
-        if ((r.push(...e), r.length >= n)) break;
-    }
-    return r;
-}
 function l(e, t) {
-    return e.sort((e, n) => {
-        for (let r of t) {
-            let t = r(e, n);
-            if (0 !== t) return t;
+    var n, l, i, r, a, o, s;
+    let c = null != (n = t.limit) ? n : 1 / 0,
+        u = ((o = e), (s = null != (l = t.filterPredicates) ? l : []), o.filter((e) => s.every((t) => t(e))));
+    return (function (e, t, n) {
+        let l = [];
+        for (let i of e) {
+            let e = (function (e, t) {
+                return e.sort((e, n) => {
+                    for (let l of t) {
+                        let t = l(e, n);
+                        if (0 !== t) return t;
+                    }
+                    return 0;
+                });
+            })(i, t);
+            if ((l.push(...e), l.length >= n)) break;
         }
-        return 0;
-    });
+        return l;
+    })(
+        null != t.bucketPredicates && t.bucketPredicates.length > 0
+            ? c >= u.length
+                ? (function (e, t) {
+                      let n = Array(t.length)
+                          .fill(null)
+                          .map(() => []);
+                      for (let l of e)
+                          for (let e = 0; e < t.length; e++)
+                              if (t[e](l)) {
+                                  n[e].push(l);
+                                  break;
+                              }
+                      return n;
+                  })(u, null != (i = t.bucketPredicates) ? i : [])
+                : (function (e, t, n) {
+                      let l = [],
+                          i = e;
+                      for (let e of t) {
+                          let t = [],
+                              r = [];
+                          for (let n of i) e(n) ? r.push(n) : t.push(n);
+                          if ((l.push(r), (i = t), l.reduce((e, t) => t.length + e, 0) >= n)) break;
+                      }
+                      return l;
+                  })(u, null != (r = t.bucketPredicates) ? r : [], c)
+            : [u],
+        null != (a = t.sortComparers) ? a : [],
+        c,
+    ).slice(0, c);
 }
-n.d(t, { N: () => r }), n(539854), n(388685), n(642613);
+n.d(t, { N: () => l }), n(539854), n(388685), n(642613);

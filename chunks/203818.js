@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => c });
 var i,
-    s = n(442837),
-    l = n(570140);
-function r(e, t, n) {
+    r = n(442837),
+    s = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,28 +15,28 @@ function r(e, t, n) {
         e
     );
 }
-let a = {};
-function d(e) {
+let o = {};
+function a(e) {
     let { guildId: t, expand: n } = e;
-    n ? (a[t] = !0) : delete a[t];
+    n ? (o[t] = !0) : delete o[t];
 }
-class o extends (i = s.ZP.PersistedStore) {
+class u extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        a = null != e ? e : {};
+        o = null != e ? e : {};
     }
     isVoiceCategoryExpanded(e) {
         var t;
-        return null != (t = null != e && a[e]) && t;
+        return null != (t = null != e && o[e]) && t;
     }
     isVoiceCategoryCollapsed(e) {
         return !this.isVoiceCategoryExpanded(e);
     }
     getState() {
-        return a;
+        return o;
     }
 }
-r(o, "displayName", "ChannelListVoiceCategoryStore"), r(o, "persistKey", "ChannelListVoiceCategoryStore");
-let h = new o(l.Z, {
-    VOICE_CATEGORY_COLLAPSE: d,
-    VOICE_CATEGORY_EXPAND: d,
+l(u, "displayName", "ChannelListVoiceCategoryStore"), l(u, "persistKey", "ChannelListVoiceCategoryStore");
+let c = new u(s.Z, {
+    VOICE_CATEGORY_COLLAPSE: a,
+    VOICE_CATEGORY_EXPAND: a,
 });

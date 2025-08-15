@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => O,
+    ZP: () => _,
     dt: () => m,
     eo: () => b,
 }),
@@ -57,7 +57,7 @@ function b(e, t, n) {
         .concat(r ? "-divider" : "")
         .concat(i ? "-voice-summary" : "");
 }
-let O = i.memo(function (e) {
+let _ = i.memo(function (e) {
     let {
             sectionIndex: t,
             guildChannels: n,
@@ -65,10 +65,10 @@ let O = i.memo(function (e) {
             voiceStates: f,
             guildId: m,
             selectedChannelId: b,
-            selectedVoiceChannelId: O,
-            optInEnabled: _,
+            selectedVoiceChannelId: _,
+            optInEnabled: O,
         } = e,
-        { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
+        { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, O, t), [n, O, t, p]),
         j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
         C = (0, a.DM)(m),
         E = (0, l.Wu)([s.ZP], () => {
@@ -87,10 +87,10 @@ let O = i.memo(function (e) {
                 (0, c.c4)({
                     channels: E,
                     selectedChannelId: b,
-                    selectedVoiceChannelId: O,
+                    selectedVoiceChannelId: _,
                     voiceStates: f,
                 }),
-            [E, b, O, f],
+            [E, b, _, f],
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {

@@ -1,17 +1,20 @@
-n.d(t, {
-    $: () => _,
-    Q: () => f,
-});
-var r = n(617735),
-    i = n(230826),
-    o = n(749210),
+if (
+    (n.d(t, {
+        $: () => h,
+        Q: () => p,
+    }),
+    12633 == n.j)
+)
+    var r = n(617735);
+var i = n(230826),
+    l = n(749210),
     a = n(430824),
-    s = n(496675),
-    l = n(979651),
+    o = n(496675),
+    s = n(979651),
     c = n(938475),
     u = n(981631);
 let d = "DRAGGABLE_USER";
-function f(e) {
+function p(e) {
     return (0, r.G)(
         d,
         {
@@ -19,16 +22,16 @@ function f(e) {
                 var t, n;
                 let { channel: r } = e,
                     i = r.getGuildId(),
-                    o = null != (n = null == (t = a.Z.getGuild(i)) ? void 0 : t.maxVideoChannelUsers) ? n : -1,
+                    l = null != (n = null == (t = a.Z.getGuild(i)) ? void 0 : t.maxVideoChannelUsers) ? n : -1,
                     d = c.ZP.countVoiceStatesForChannel(r.id),
-                    f = null != i && l.Z.hasVideo(r.id) && o > 0 && d >= o + 1;
-                return s.Z.can(u.Plq.MOVE_MEMBERS, r) && s.Z.can(u.Plq.CONNECT, r) && !f;
+                    p = null != i && s.Z.hasVideo(r.id) && l > 0 && d >= l + 1;
+                return o.Z.can(u.Plq.MOVE_MEMBERS, r) && o.Z.can(u.Plq.CONNECT, r) && !p;
             },
             drop(e, t) {
                 let { channel: n } = e,
-                    r = l.Z.getVoiceStateForUser(t.getItem().user.id);
+                    r = s.Z.getVoiceStateForUser(t.getItem().user.id);
                 (null == r ? void 0 : r.channelId) !== n.id &&
-                    o.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                    l.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             },
         },
         (e, t) => ({
@@ -37,7 +40,7 @@ function f(e) {
         }),
     )(e);
 }
-function _(e) {
+function h(e) {
     return (0, i.E)(
         d,
         {

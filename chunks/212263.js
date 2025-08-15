@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(355467),
+    a = n(442837),
+    o = n(355467),
     s = n(100527),
     l = n(906732),
     c = n(28546),
@@ -78,7 +78,7 @@ let T = (e) => {
             analyticsLocation: S,
             containerContext: A,
         } = e,
-        N = (0, o.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? "light" : "dark",
+        N = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? "light" : "dark",
         C = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(N, ".png"),
         R = (0, c.Iu)((e) => e.searchQuery),
         { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
@@ -96,10 +96,10 @@ let T = (e) => {
         D = null != w && w.animated,
         L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
         x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
-        M = (0, o.e7)([u.Z], () => u.Z.hasFetched);
+        M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
-            M || a.MH();
+            M || o.MH();
         }, [M]),
         (0, r.jsx)(d.Z, {
             containerContext: A,

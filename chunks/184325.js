@@ -2,8 +2,8 @@ n.d(t, { Z: () => U }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(315263),
     l = n(100527),
     c = n(906732),
@@ -71,7 +71,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function j(e, t) {
         e
     );
 }
-let k = (e) => {
+let j = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === m.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(g.Z, { showSubtext: !i && !t.isPreviewMode })
@@ -105,13 +105,13 @@ function U(e) {
             shouldGlowTenureBadge: U,
         } = e,
         { analyticsLocations: G } = (0, c.ZP)(l.Z.BADGE),
-        { context: B, trackUserProfileAction: Z } = (0, v.KZ)(),
+        { context: B, trackUserProfileAction: V } = (0, v.KZ)(),
         F = E.default.getCurrentUser(),
-        V = (0, y.yd)(null == F ? void 0 : F.premiumType, R.p9.TIER_2),
+        Z = (0, y.yd)(null == F ? void 0 : F.premiumType, R.p9.TIER_2),
         H = (0, S.Of)(null != (t = null == F ? void 0 : F.id) ? t : null),
         Y = (0, T.Z)(H).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
-        className: o()(D.container, i),
+        className: a()(D.container, i),
         "aria-label": w.intl.string(w.t.VWV0y8),
         role: "group",
         children: n.map((e, t) => {
@@ -121,7 +121,7 @@ function U(e) {
                 E = null != c || e.id === P.a,
                 y = (t) => {
                     if (
-                        (Z({ action: "PRESS_BADGE" }),
+                        (V({ action: "PRESS_BADGE" }),
                         (0, I.NE)(
                             x(
                                 {
@@ -144,10 +144,10 @@ function U(e) {
                             (t.preventDefault(),
                             b.default.track(N.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: V,
+                                premium_type: Z,
                                 viewed_user_id: null == g ? void 0 : g.userId,
                             }),
-                            V)
+                            Z)
                         ) {
                             (null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)
                                 ? (0, h.uL)(N.Z5c.NITRO_HOME)
@@ -178,9 +178,9 @@ function U(e) {
                     e.id === T.i &&
                         b.default.track(
                             N.rMx.QUEST_CONTENT_VIEWED,
-                            j(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            k(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
-                        Z({ action: "HOVER_BADGE" }),
+                        V({ action: "HOVER_BADGE" }),
                         (0, I.Qf)(
                             x(
                                 {
@@ -191,19 +191,19 @@ function U(e) {
                             ),
                         );
                 },
-                S = k({
+                S = j({
                     badge: e,
                     tieredTenureBadge: E && e.id !== P.a ? c : void 0,
                     currentUserOwnsOrbBadge: Y,
                 });
             return (0, r.jsx)(
-                a.DY3,
+                o.DY3,
                 {
                     text: S,
                     "aria-label": e.description,
                     forceOpen: null != M && M(e.id),
                     delay: A.vB,
-                    children: (0, r.jsx)(a.eee, {
+                    children: (0, r.jsx)(o.eee, {
                         onClick: y,
                         onMouseEnter: v,
                         href: e.link,
@@ -212,7 +212,7 @@ function U(e) {
                             alt: " ",
                             "aria-hidden": !0,
                             src: null != (n = e.iconSrc) ? n : (0, A.Ej)(e.icon),
-                            className: o()(D.badge, d),
+                            className: a()(D.badge, d),
                         }),
                     }),
                 },

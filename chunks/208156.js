@@ -1,8 +1,8 @@
 n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(308808),
     l = n(772848),
     c = n(631467),
@@ -70,8 +70,8 @@ function v(e) {
     let {
             url: t,
             className: n,
-            style: o,
-            onLoad: a,
+            style: a,
+            onLoad: o,
             shouldRefocus: g,
             queryParams: E,
             allowPopups: y = !1,
@@ -87,10 +87,10 @@ function v(e) {
         }),
         [C, R] = i.useState(!1),
         P = u.Z.theme,
-        w = b({}, o);
+        w = b({}, a);
     function D(e) {
         var n;
-        null == a || a(e.target),
+        null == o || o(e.target),
             (S.current = e.target),
             A(!0),
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : "");
@@ -134,19 +134,19 @@ function v(e) {
 }
 function I(e) {
     let { onLoad: t } = e,
-        [n, o] = i.useState(!1),
+        [n, a] = i.useState(!1),
         s = i.useCallback(
             (e) => {
-                o(!0), null == t || t(e);
+                a(!0), null == t || t(e);
             },
             [t],
         );
     return (0, r.jsxs)("div", {
         className: g.fillParent,
         children: [
-            !n && (0, r.jsx)("div", { className: a()(g.fillParent, g.iframePlaceholder) }),
+            !n && (0, r.jsx)("div", { className: o()(g.fillParent, g.iframePlaceholder) }),
             (0, r.jsx)("div", {
-                className: a()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
+                className: o()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
                 children: (0, r.jsx)(v, O(b({}, e), { onLoad: s })),
             }),
         ],

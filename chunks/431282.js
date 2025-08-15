@@ -86,14 +86,14 @@ function f(e) {
         { id: O } = (0, a.f$)(),
         v = r.useRef(null),
         [S, T] = r.useState(!1),
-        I = null != x;
+        N = null != x;
     r.useLayoutEffect(() => {
-        if (I)
+        if (N)
             return (0, s.N)(O, (e) => {
                 T(e === t);
             });
-    }, [t, O, I]);
-    let N = (e) =>
+    }, [t, O, N]);
+    let I = (e) =>
         (0, i.jsxs)(
             u.kF,
             g(p({}, e, C, _), {
@@ -126,7 +126,7 @@ function f(e) {
                             b,
                         ],
                     }),
-                    I &&
+                    N &&
                         (0, i.jsx)(l.Fbu, {
                             size: "xs",
                             color: "currentColor",
@@ -134,16 +134,16 @@ function f(e) {
                 ],
             }),
         );
-    return I
+    return N
         ? (0, i.jsx)(c.yRy, {
               targetElementRef: v,
               spacing: 0,
               renderPopout: x,
               shouldShow: S,
               onRequestClose: () => T(!0),
-              children: N,
+              children: I,
           })
-        : N();
+        : I();
 }
 function b(e) {
     let { id: t, children: n } = e,

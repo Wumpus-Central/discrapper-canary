@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -53,5 +53,5 @@ class u extends (r = i.ZP.PersistedStore) {
         return { universeIdToSupplementalData: l };
     }
 }
-a(u, "displayName", "RobloxSupplementalDataStore"), a(u, "persistKey", "robloxSupplementalData");
-let d = new u(o.Z, { ROBLOX_SUBGAME_SUPPLEMENTAL_DATA_FETCH_SUCCESS: c });
+o(u, "displayName", "RobloxSupplementalDataStore"), o(u, "persistKey", "robloxSupplementalData");
+let d = new u(a.Z, { ROBLOX_SUBGAME_SUPPLEMENTAL_DATA_FETCH_SUCCESS: c });

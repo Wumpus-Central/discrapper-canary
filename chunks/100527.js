@@ -460,7 +460,6 @@ var r = (function (e) {
         (e.IGNORED_PROFILE_PANEL = "blocked profile panel"),
         (e.CUSTOM_STATUS_MODAL = "custom status modal"),
         (e.CUSTOM_STATUS_TAGS_COACHMARK = "custom status tags coachmark"),
-        (e.CLICKER_GAME = "clicker game"),
         (e.ACTIVITY_PIP = "activity PIP"),
         (e.FRAME_PIP = "frame PIP"),
         (e.VIDEO_PIP = "video PIP"),

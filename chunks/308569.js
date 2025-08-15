@@ -2,9 +2,9 @@ n.d(t, {
     CV: () => l,
     F0: () => u,
     HR: () => d,
-    Mr: () => o,
+    Mr: () => a,
     f1: () => c,
-    j1: () => a,
+    j1: () => o,
     mF: () => s,
     pw: () => r,
     zf: () => i,
@@ -20,8 +20,8 @@ var r = (function (e) {
     );
 })({});
 let i = [0, 1, 2, 3],
-    o = new Set([0, 1]),
-    a = "https://discord.com/safety/understanding-and-avoiding-common-scams",
+    a = new Set([0, 1]),
+    o = "https://discord.com/safety/understanding-and-avoiding-common-scams",
     s = 1024,
     l = "verification",
     c = "AGREEMENTS_MODAL_KEY",

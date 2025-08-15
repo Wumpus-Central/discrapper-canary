@@ -12,24 +12,24 @@ function i(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = o(e, t);
+        i = a(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function o(e, t) {
+function a(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let a = new (n(710845).Z)("AVError");
+let o = new (n(710845).Z)("AVError");
 var s = (function (e) {
     return (
         (e.STREAM_FAILED_TO_START = "stream-failed-to-start"),
@@ -215,14 +215,14 @@ var c = (function (e) {
 function u(e) {
     let { type: t } = e,
         n = i(e, ["type"]);
-    a.error("AV error reported: ".concat(t, " ").concat(JSON.stringify(n)));
-    let o = l[t];
+    o.error("AV error reported: ".concat(t, " ").concat(JSON.stringify(n)));
+    let a = l[t];
     r.Z.dispatch({
         type: "REPORT_AV_ERROR",
         error: t,
-        errorCode: o.errorCode,
-        severity: o.severity,
-        category: o.category,
+        errorCode: a.errorCode,
+        severity: a.severity,
+        category: a.category,
         context: e,
     });
 }

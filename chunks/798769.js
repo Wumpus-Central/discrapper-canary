@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(607070),
+    a = n(481060),
+    o = n(607070),
     s = n(409813),
     l = n(669079),
     c = n(709093),
@@ -28,7 +28,7 @@ function h(e) {
             enablePremiumBrandRefresh: T,
             isDisplayingWowMomentConfirmation: S,
         } = e,
-        A = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         N = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
@@ -42,16 +42,16 @@ function h(e) {
             }
         };
     return O && (0, l.pO)(v) && t !== s.h8.CONFIRM
-        ? (0, r.jsxs)(o.xBx, {
+        ? (0, r.jsxs)(a.xBx, {
               className: p.modalHeaderCustomGift,
               separator: !1,
               "data-migration-pending": !0,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(a.X6q, {
                       variant: "heading-lg/semibold",
                       children: N(),
                   }),
-                  (0, r.jsx)(o.olH, {
+                  (0, r.jsx)(a.olH, {
                       onClick: g,
                       className: p.closeButton,
                       innerClassName: p.closeButtonInner,

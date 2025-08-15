@@ -1,47 +1,47 @@
-t.d(n, { Z: () => a }), t(539854);
-var l = t(255367),
-    i = t(73800),
+t.d(n, { Z: () => s }), t(539854);
+var i = t(255367),
+    l = t(73800),
     r = t(481060),
-    o = t(765305),
-    c = t(388032),
-    s = t(500537);
-function a(e) {
-    let { selectedTab: n, onTabSelected: t, userCount: a, isHub: u = !1 } = e,
-        d = i.useRef(null);
-    i.useEffect(() => {
+    d = t(765305),
+    a = t(388032),
+    o = t(500537);
+function s(e) {
+    let { selectedTab: n, onTabSelected: t, userCount: s, isHub: c = !1 } = e,
+        u = l.useRef(null);
+    l.useEffect(() => {
         var e, n, t;
-        return null == (t = d.current) || null == (n = t.ref) || null == (e = n.blur) ? void 0 : e.call(n);
+        return null == (t = u.current) || null == (n = t.ref) || null == (e = n.blur) ? void 0 : e.call(n);
     }, []);
-    let f = c.intl.formatToPlainString(c.t["ZrTT/P"], { userCount: a }),
+    let _ = a.intl.formatToPlainString(a.t["ZrTT/P"], { userCount: s }),
         g = [
-            (0, l.jsx)(
+            (0, i.jsx)(
                 r.njP.Item,
                 {
-                    className: s.tabBarItem,
-                    id: o.fL.EVENT_INFO,
-                    children: c.intl.string(c.t.iW6Xur),
+                    className: o.tabBarItem,
+                    id: d.fL.EVENT_INFO,
+                    children: a.intl.string(a.t.iW6Xur),
                 },
                 "event-details",
             ),
         ];
     return (
-        u ||
+        c ||
             g.push(
-                (0, l.jsx)(
+                (0, i.jsx)(
                     r.njP.Item,
                     {
-                        className: s.tabBarItem,
-                        id: o.fL.RSVP_LIST,
-                        children: f,
+                        className: o.tabBarItem,
+                        id: d.fL.RSVP_LIST,
+                        children: _,
                     },
                     "is-hub",
                 ),
             ),
-        (0, l.jsx)("div", {
-            className: s.container,
-            children: (0, l.jsx)(r.njP, {
-                className: s.tabBar,
-                "aria-label": c.intl.string(c.t["+1H47u"]),
+        (0, i.jsx)("div", {
+            className: o.container,
+            children: (0, i.jsx)(r.njP, {
+                className: o.tabBar,
+                "aria-label": a.intl.string(a.t["+1H47u"]),
                 selectedItem: n,
                 type: "top",
                 onItemSelect: t,

@@ -1,33 +1,33 @@
 n.d(t, { Z: () => d });
 var r = n(73800),
     i = n(46973),
-    o = n(846519),
-    a = n(763520),
-    s = n(798681),
-    l = n(70956),
+    l = n(846519),
+    o = n(763520),
+    a = n(798681),
+    s = n(70956),
     c = n(878001);
-let u = 20 * l.Z.Millis.SECOND;
+let u = 20 * s.Z.Millis.SECOND;
 function d(e) {
-    let { streamId: t, userId: n, videoSpinnerContext: l, streamKey: d, loading: f, paused: _ = !1 } = e,
-        p = r.useRef(new o.V7()),
-        h = l === a.m.SELF_STREAM || l === a.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
+    let { streamId: t, userId: n, videoSpinnerContext: s, streamKey: d, loading: p, paused: f = !1 } = e,
+        h = r.useRef(new l.V7()),
+        g = s === o.m.SELF_STREAM || s === o.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
     return (
         r.useEffect(() => {
-            if (!f || _ || !s.w.isIncomingVideoEnabled()) return;
-            let e = p.current;
+            if (!p || f || !a.w.isIncomingVideoEnabled()) return;
+            let e = h.current;
             return (
                 e.start(u, () => {
-                    (0, c.K)(t, n, h, d);
+                    (0, c.K)(t, n, g, d);
                 }),
                 () => {
                     e.stop();
                 }
             );
-        }, [_, t, f, h, d, n]),
+        }, [f, t, p, g, d, n]),
         {
             onReady: r.useCallback(() => {
-                p.current.stop(), (0, c.w)(h, n);
-            }, [n, h]),
+                h.current.stop(), (0, c.w)(g, n);
+            }, [n, g]),
         }
     );
 }

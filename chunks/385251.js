@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => I });
 var i = n(255367);
 n(73800);
 var r = n(304789),
@@ -104,7 +104,7 @@ function T(e) {
         ],
     });
 }
-function I(e) {
+function N(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
         r = (0, g._)(n, x.Xh.PREMIUM_MONTH_TIER_2, t);
     return (0, i.jsxs)(i.Fragment, {
@@ -126,20 +126,20 @@ function I(e) {
         ],
     });
 }
-let N = function (e) {
+let I = function (e) {
     let {
             subscription: t,
             currentInvoicePreview: d,
             renewalInvoicePreview: p,
             isLoading: g,
             analyticsLocation: x,
-            discountInfo: N,
+            discountInfo: I,
             renewalChurnDiscountInfo: y,
             discountOffer: A,
         } = e,
         { analyticsLocations: P } = (0, l.ZP)(a.Z.CHURN_DISCOUNT_SUBSCRIPTION_HEADER),
         R = null;
-    R = null != N ? d : p;
+    R = null != I ? d : p;
     let D = () => {
             t.status !== _.O0b.CANCELED && Z();
         },
@@ -200,13 +200,13 @@ let N = function (e) {
                                       className: E.churnDiscountBannerDetails,
                                       children: [
                                           null != A
-                                              ? (0, i.jsx)(I, {
+                                              ? (0, i.jsx)(N, {
                                                     discountOffer: A,
                                                     premiumSubscription: t,
                                                 })
                                               : (0, i.jsx)(T, {
                                                     premiumSubscription: t,
-                                                    discountInfo: null != N ? N : y,
+                                                    discountInfo: null != I ? I : y,
                                                     invoicePreview: R,
                                                 }),
                                           (0, i.jsx)("div", {

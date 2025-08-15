@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(539854), n(388685);
 var r = n(392711),
     i = n(570140),
-    o = n(235820),
-    a = n(904245),
+    a = n(235820),
+    o = n(904245),
     s = n(45114),
     l = n(455199),
     c = n(703656),
@@ -47,9 +47,9 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,14 +58,14 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = 5,
     O = 1500;
 function v(e) {
-    return o.Z.fetchRecentMentions({
+    return a.Z.fetchRecentMentions({
         before: e,
         limit: h.DJj,
         roles: l.ZP.roleFilter,
@@ -81,9 +81,9 @@ function T(e) {
         var r;
         if ((null == (r = t[i]) ? void 0 : r.loadState) === p.a7.LOADED) continue;
         let e = u.ZP.lastMessageId(i),
-            o = null != e && d.default.age(e) > p.ib;
-        if (n.length >= y || o) break;
-        let s = a.Z.fetchMessages({
+            a = null != e && d.default.age(e) > p.ib;
+        if (n.length >= y || a) break;
+        let s = o.Z.fetchMessages({
             channelId: i,
             limit: p.AQ,
             feature: p.Lr,
@@ -96,10 +96,10 @@ async function S(e) {
     var t,
         { preload: n = !1 } = e,
         r = E(e, ["preload"]);
-    let o = Date.now(),
-        a = _.Z.getNotifyingChannelIds();
-    if (null == a) return;
-    let s = n ? [] : T(a),
+    let a = Date.now(),
+        o = _.Z.getNotifyingChannelIds();
+    if (null == o) return;
+    let s = n ? [] : T(o),
         c = l.ZP.getMentions(),
         u = null != c && c.length > 0 ? c[c.length - 1].id : null,
         d = !1;
@@ -112,7 +112,7 @@ async function S(e) {
     try {
         await Promise.all(s);
         let e = {
-            timeToLoad: Date.now() - o,
+            timeToLoad: Date.now() - a,
             loadingTrigger: null != (t = r.loadingTrigger) ? t : p.X.UNKNOWN,
             viewId: r.viewId,
             channelsFetched: s.length - !!d,
@@ -142,7 +142,7 @@ let A = {
             I(g({ preload: t }, n));
     },
     inboxItemClick: function (e) {
-        let { message: t, channel: n, isUnread: r, isSidebar: o, viewId: l, track: u = !0 } = e;
+        let { message: t, channel: n, isUnread: r, isSidebar: a, viewId: l, track: u = !0 } = e;
         i.Z.dispatch({
             type: "NOTIFICATIONS_INBOX_ITEM_CLICK",
             messageId: t.id,
@@ -167,8 +167,8 @@ let A = {
                     void 0,
                     t.id,
                 ),
-            a.Z.trackJump(n.id, t.id, p.JP);
-        let d = o ? h.STv : n.guild_id;
+            o.Z.trackJump(n.id, t.id, p.JP);
+        let d = a ? h.STv : n.guild_id;
         (0, c.uL)(h.Z5c.CHANNEL(d, n.id, t.id));
     },
 };

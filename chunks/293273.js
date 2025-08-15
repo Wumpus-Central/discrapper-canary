@@ -1,9 +1,9 @@
-n.d(t, { Z: () => Z }), n(539854), n(388685), n(997841);
+n.d(t, { Z: () => V }), n(539854), n(388685), n(997841);
 var r,
     i = n(348327),
-    o = n.n(i),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
     c = n(570140),
     u = n(317381),
@@ -92,23 +92,23 @@ function L() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let a = p.ZP.getVisibleGame(),
-        l = null != a && null != a.name && (i.has(a.name) || (0, g.G)(a, [...e, ...S.Z.getRemoteActivities()])),
-        c = null != a && a.isLauncher,
+    let o = p.ZP.getVisibleGame(),
+        l = null != o && null != o.name && (i.has(o.name) || (0, g.G)(o, [...e, ...S.Z.getRemoteActivities()])),
+        c = null != o && o.isLauncher,
         u = null != v.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
-    if (null != a && null != a.name && !d) {
+    if (null != o && null != o.name && !d) {
         var f, O, N;
         e.push(
             C(
                 {
                     type: A.IIU.PLAYING,
-                    name: a.name,
-                    application_id: null != (O = a.id) ? O : null == (f = T.Z.getGameByName(a.name)) ? void 0 : f.id,
-                    metadata: { distributor: null != (N = a.distributor) ? N : void 0 },
-                    timestamps: { start: a.start },
+                    name: o.name,
+                    application_id: null != (O = o.id) ? O : null == (f = T.Z.getGameByName(o.name)) ? void 0 : f.id,
+                    metadata: { distributor: null != (N = o.distributor) ? N : void 0 },
+                    timestamps: { start: o.start },
                 },
-                (0, E.LK)(a),
+                (0, E.LK)(o),
             ),
         );
     }
@@ -125,32 +125,32 @@ function L() {
             emoji: null == t ? void 0 : t.emoji,
         });
     }
-    o()(w, e) || (w = e);
+    a()(w, e) || (w = e);
 }
 function x() {
     (D = {}), L();
 }
 function M(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (o()(D[t], [n, r])) return !1;
+    if (a()(D[t], [n, r])) return !1;
     null != r ? (D[t] = [n, r]) : delete D[t], L();
 }
-function j(e) {
+function k(e) {
     let { socketId: t } = e;
     delete D[t], L();
 }
-function k(e) {
+function j(e) {
     let { localActivities: t } = e;
     (D = C({}, t)), L();
 }
 function U() {
     let e = {},
         t = !1;
-    for (let [r, [i, o]] of Object.entries(D)) {
+    for (let [r, [i, a]] of Object.entries(D)) {
         var n;
-        let a = null != (n = o.flags) ? n : 0,
-            s = (0, d.Ix)(a);
-        s !== a ? ((e[r] = [i, P(C({}, o), { flags: s })]), (t = !0)) : (e[r] = [i, o]);
+        let o = null != (n = a.flags) ? n : 0,
+            s = (0, d.Ix)(o);
+        s !== o ? ((e[r] = [i, P(C({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
     }
     return t ? ((D = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
@@ -185,13 +185,13 @@ class B extends (r = l.ZP.Store) {
     }
 }
 N(B, "displayName", "LocalActivityStore");
-let Z = new B(c.Z, {
+let V = new B(c.Z, {
     ROBLOX_SUBGAME_UPDATE: L,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: L,
-    OVERLAY_INITIALIZE: k,
+    OVERLAY_INITIALIZE: j,
     START_SESSION: x,
     LOCAL_ACTIVITY_UPDATE: M,
-    RPC_APP_DISCONNECTED: j,
+    RPC_APP_DISCONNECTED: k,
     RUNNING_GAMES_CHANGE: L,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     SPOTIFY_PLAYER_STATE: L,

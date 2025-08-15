@@ -22,11 +22,11 @@ e.exports = function (e) {
             end: /\)/,
             contains: [e.BACKSLASH_ESCAPE],
         },
-        o = e.inherit(e.COMMENT(), {
+        a = e.inherit(e.COMMENT(), {
             match: [/(^|\s)/, /#.*$/],
             scope: { 2: "comment" },
         }),
-        a = {
+        o = {
             begin: /<<-?\s*(?=\w+)/,
             starts: {
                 contains: [
@@ -316,6 +316,6 @@ e.exports = function (e) {
                 "yes",
             ],
         },
-        contains: [_, e.SHEBANG(), p, d, o, a, h, s, l, c, u, n],
+        contains: [_, e.SHEBANG(), p, d, a, o, h, s, l, c, u, n],
     };
 };

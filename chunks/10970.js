@@ -30,8 +30,8 @@ function x(e) {
         v = (0, m.KK)(E.flags),
         S = v ? s.QTo : s.tBG,
         T = v ? f.intl.string(f.t["46YF2N"]) : f.intl.string(f.t.fFyGiI),
-        I = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
-        N = (0, r.e7)([d.Z], () => (v && null != I ? d.Z.getGuild(I) : void 0), [I, v]),
+        N = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
+        I = (0, r.e7)([d.Z], () => (v && null != N ? d.Z.getGuild(N) : void 0), [N, v]),
         y = (0, r.e7)([u.Z], () => {
             if (null != C) return u.Z.get(C);
         }, [C]),
@@ -69,7 +69,7 @@ function x(e) {
                                             T,
                                         ],
                                     }),
-                                    null != N &&
+                                    null != I &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(s.Text, {
@@ -80,14 +80,14 @@ function x(e) {
                                                     className: b.guildSubscription,
                                                     children: [
                                                         (0, i.jsx)(c.Z, {
-                                                            guild: N,
+                                                            guild: I,
                                                             size: c.Z.Sizes.SMOL,
                                                         }),
                                                         (0, i.jsx)(s.X6q, {
                                                             variant: "heading-md/semibold",
                                                             color: "text-muted",
                                                             children: f.intl.format(f.t["7ZD8p6"], {
-                                                                guildName: N.name,
+                                                                guildName: I.name,
                                                             }),
                                                         }),
                                                     ],
@@ -169,7 +169,7 @@ function x(e) {
                                   _,
                                   {
                                       storeListing: e,
-                                      guildId: I,
+                                      guildId: N,
                                       navigateToHome: j,
                                   },
                                   e.id,

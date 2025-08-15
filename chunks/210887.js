@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M });
 var r,
     i = n(442837),
-    o = n(780384),
-    a = n(570140),
+    a = n(780384),
+    o = n(570140),
     s = n(607070),
     l = n(541049),
     c = n(765287),
@@ -83,7 +83,7 @@ class N extends (r = i.ZP.PersistedStore) {
             (I = e.theme),
             (0, u.Z)(I),
             null != e.preferences && (O = e.preferences),
-            (0, o.wj)(I) && (O[p.zd.DARK] = I)),
+            (0, a.wj)(I) && (O[p.zd.DARK] = I)),
             this.waitFor(f.ZP, d.Z, _.Z, s.Z);
     }
     getState() {
@@ -107,7 +107,7 @@ function C() {
     return 0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A();
 }
 function R() {
-    return (0, o.ap)(S());
+    return (0, a.ap)(S());
 }
 function P(e) {
     return (T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A());
@@ -134,7 +134,7 @@ m(N, "displayName", "ThemeStore"),
         },
         (e) => e,
     ]);
-let M = new N(a.Z, {
+let M = new N(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: C,
     LOGOUT: P,

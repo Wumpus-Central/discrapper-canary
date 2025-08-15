@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(704215),
     c = n(755721),
@@ -40,7 +40,7 @@ function R(e) {
 }
 function P(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
-        { analyticsLocations: o, newestAnalyticsLocation: a } = (0, d.ZP)(),
+        { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
     return (0, r.jsxs)("div", {
         className: C.upsellButtons,
@@ -85,9 +85,9 @@ function P(e) {
                     variant: "secondary",
                     onClick: () => {
                         (0, f.mK)({
-                            analyticsLocations: o,
+                            analyticsLocations: a,
                             openInLayer: !1,
-                            analyticsSource: a,
+                            analyticsSource: o,
                         }),
                             null == i || i();
                     },
@@ -97,7 +97,7 @@ function P(e) {
     });
 }
 function w(e) {
-    let { isPremiumUser: t, onInteraction: n, className: o } = e,
+    let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, _.Dt)(),
         { themeType: d } = (0, O.z)(),
         f = d === I.lY.MODAL,
@@ -137,10 +137,10 @@ function w(e) {
         });
     return f
         ? (0, r.jsx)("aside", {
-              className: a()(C.upsellContainer, o),
+              className: o()(C.upsellContainer, a),
               "aria-labelledby": c,
               children: (0, r.jsxs)("div", {
-                  className: a()(C.upsellContent, C.upsellRowContent),
+                  className: o()(C.upsellContent, C.upsellRowContent),
                   children: [
                       y,
                       (0, r.jsxs)("div", {
@@ -151,10 +151,10 @@ function w(e) {
               }),
           })
         : (0, r.jsx)("aside", {
-              className: a()(C.upsellContainer, o),
+              className: o()(C.upsellContainer, a),
               "aria-labelledby": c,
               children: (0, r.jsxs)("div", {
-                  className: a()(C.upsellContent, C.upsellDefaultContent),
+                  className: o()(C.upsellContent, C.upsellDefaultContent),
                   children: [
                       (0, r.jsxs)("div", {
                           className: C.upsellHeader,

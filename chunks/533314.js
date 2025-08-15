@@ -67,7 +67,7 @@ e.exports = function (e) {
             ],
         };
     n.contains = [r, i];
-    let o = [
+    let a = [
             "Comparable",
             "DateTime",
             "Duration",
@@ -95,7 +95,7 @@ e.exports = function (e) {
             "Element",
             "ElementList",
         ],
-        a = o.map((e) => `${e}?`);
+        o = a.map((e) => `${e}?`);
     return {
         name: "Dart",
         keywords: {
@@ -167,8 +167,8 @@ e.exports = function (e) {
                 "with",
                 "yield",
             ],
-            built_in: o
-                .concat(a)
+            built_in: a
+                .concat(o)
                 .concat([
                     "Never",
                     "Null",

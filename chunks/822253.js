@@ -1,7 +1,7 @@
-n.d(t, { E: () => a });
+n.d(t, { E: () => o });
 var r = n(818083),
     i = n(751823);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-06_async_audio_device",
     label: "Desktop Asynchronous Audio Device Manager Controls",
@@ -14,10 +14,10 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.L.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: r,

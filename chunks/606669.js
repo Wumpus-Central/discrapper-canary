@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(290780);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(857595),
+    a = n(481060),
+    o = n(857595),
     s = n(607070),
     l = n(299363),
     c = n(626135),
@@ -91,34 +91,34 @@ function g() {
             },
         ];
     function b() {
-        c.default.track(u.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !h }), (0, a.X2)(!h);
+        c.default.track(u.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !h }), (0, o.X2)(!h);
     }
     let y = [
         (0, r.jsx)(
-            o.kSQ,
+            a.kSQ,
             {
-                children: (0, r.jsx)(o.S89, {
+                children: (0, r.jsx)(a.S89, {
                     id: "reduced-motion",
                     label: d.intl.string(d.t.b3XBzs),
                     checked: t,
-                    action: () => (0, a.Zt)(t ? "no-preference" : "reduce"),
+                    action: () => (0, o.Zt)(t ? "no-preference" : "reduce"),
                 }),
             },
             "reduced-motion",
         ),
         (0, r.jsx)(
-            o.kSQ,
+            a.kSQ,
             {
-                children: (0, r.jsx)(o.II_, {
+                children: (0, r.jsx)(a.II_, {
                     id: "input",
                     label: d.intl.string(d.t["5PWWCQ"]),
                     control: (t, n) =>
                         (0, r.jsx)(
-                            o._wy,
+                            a._wy,
                             m(p({}, t), {
                                 ref: n,
                                 value: 100 * e,
-                                onChange: (e) => (0, a.o2)(e / 100),
+                                onChange: (e) => (0, o.o2)(e / 100),
                                 "aria-label": d.intl.string(d.t["5PWWCQ"]),
                             }),
                         ),
@@ -127,21 +127,21 @@ function g() {
             "input",
         ),
         (0, r.jsx)(
-            o.kSQ,
+            a.kSQ,
             {
-                children: (0, r.jsx)(o.sNh, {
+                children: (0, r.jsx)(a.sNh, {
                     id: "role-colors",
                     label: d.intl.string(d.t.uSOPWl),
                     children: E.map((e) => {
                         let { name: t, value: i } = e;
                         return (0, r.jsx)(
-                            o.k5B,
+                            a.k5B,
                             {
                                 id: i,
                                 group: "role-colors",
                                 checked: i === n,
                                 label: t,
-                                action: () => (0, a.u1)(i),
+                                action: () => (0, o.u1)(i),
                             },
                             i,
                         );
@@ -151,9 +151,9 @@ function g() {
             "role-colors",
         ),
         (0, r.jsx)(
-            o.kSQ,
+            a.kSQ,
             {
-                children: (0, r.jsx)(o.S89, {
+                children: (0, r.jsx)(a.S89, {
                     id: "display-name-styles",
                     label: d.intl.string(f.default["2gFUEx"]),
                     checked: h,
@@ -167,13 +167,13 @@ function g() {
         g &&
             y.unshift(
                 (0, r.jsx)(
-                    o.kSQ,
+                    a.kSQ,
                     {
-                        children: (0, r.jsx)(o.S89, {
+                        children: (0, r.jsx)(a.S89, {
                             id: "high-contrast",
                             label: "Enable High Contrast Mode",
                             checked: _,
-                            action: () => (0, a.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
+                            action: () => (0, o.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
                         }),
                     },
                     "high-contrast",

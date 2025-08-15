@@ -1,8 +1,8 @@
 n.d(t, { z: () => h }), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(708816),
     l = n(780900);
 function c(e, t, n) {
@@ -63,9 +63,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,13 +74,13 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e, t) {
     let n = (0, l.G6)(e);
-    return i.forwardRef(function (o, c) {
+    return i.forwardRef(function (a, c) {
         var {
                 children: d,
                 className: p,
@@ -90,8 +90,8 @@ function h(e, t) {
                 fade: E = !1,
                 onScroll: b,
                 style: y,
-            } = o,
-            O = _(o, ["children", "className", "dir", "orientation", "paddingFix", "fade", "onScroll", "style"]);
+            } = a,
+            O = _(a, ["children", "className", "dir", "orientation", "paddingFix", "fade", "onScroll", "style"]);
         let v = i.useRef(null),
             I = (0, l.tT)({
                 paddingFix: g,
@@ -109,7 +109,7 @@ function h(e, t) {
                         ref: (e) => {
                             "function" == typeof c ? c(e) : null != c && (c.current = e), (v.current = e);
                         },
-                        className: a()(p, {
+                        className: o()(p, {
                             [e]: !0,
                             [t]: E,
                         }),

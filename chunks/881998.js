@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(592125),
+    a = n(570140),
+    o = n(592125),
     s = n(757266),
     l = n(375954);
 function c(e, t, n) {
@@ -52,12 +52,12 @@ function g(e) {
             let { application: t } = e;
             return t.id !== i.application.id;
         })));
-    let o = {
+    let a = {
         id: t,
         application: n,
         scopes: r,
     };
-    d.set(o.application.id, o), (f = [...f, o]), null == o.application.parent_id && (_ = [..._, o]);
+    d.set(a.application.id, a), (f = [...f, a]), null == a.application.parent_id && (_ = [..._, a]);
 }
 function E(e) {
     let { id: t, applicationId: n } = e,
@@ -75,7 +75,7 @@ function E(e) {
 }
 class b extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z, s.Z, l.Z);
+        this.waitFor(o.Z, s.Z, l.Z);
     }
     getNewestTokenForApplication(e) {
         var t;
@@ -92,7 +92,7 @@ class b extends (r = i.ZP.Store) {
     }
 }
 c(b, "displayName", "AuthorizedAppsStore");
-let y = new b(o.Z, {
+let y = new b(a.Z, {
     USER_AUTHORIZED_APPS_REQUEST: h,
     USER_AUTHORIZED_APPS_UPDATE: m,
     OAUTH2_TOKEN_CREATE: g,

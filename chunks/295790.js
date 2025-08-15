@@ -2,15 +2,15 @@ n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(901461),
-    o = n(815387);
+    l = n(815387);
 function a(e) {
-    let { message: t, channel: n, compact: a, disableInteraction: s } = e;
+    let { message: t, channel: n, compact: a, disableInteraction: o } = e;
     return (0, i.Z)(t)
-        ? (0, r.jsx)(o.Z, {
+        ? (0, r.jsx)(l.Z, {
               message: t,
               channel: n,
               compact: a,
-              disableInteraction: s,
+              disableInteraction: o,
           })
         : null;
 }

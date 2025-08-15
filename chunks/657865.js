@@ -5,20 +5,20 @@ function r(e, t) {
         var r,
             i,
             l,
-            o,
+            a,
             s = [],
-            a = !0,
+            o = !0,
             c = !1;
         try {
             if (((l = (n = n.call(e)).next), 0 === t)) {
                 if (Object(n) !== n) return;
-                a = !1;
-            } else for (; !(a = (r = l.call(n)).done) && (s.push(r.value), s.length !== t); a = !0);
+                o = !1;
+            } else for (; !(o = (r = l.call(n)).done) && (s.push(r.value), s.length !== t); o = !0);
         } catch (e) {
             (c = !0), (i = e);
         } finally {
             try {
-                if (!a && null != n.return && ((o = n.return()), Object(o) !== o)) return;
+                if (!o && null != n.return && ((a = n.return()), Object(a) !== a)) return;
             } finally {
                 if (c) throw i;
             }

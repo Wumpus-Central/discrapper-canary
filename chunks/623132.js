@@ -58,7 +58,7 @@ function O(e, t) {
         e
     );
 }
-function x(e) {
+function h(e) {
     var { applicationId: t, userId: n, gameName: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
@@ -101,7 +101,7 @@ function x(e) {
               }),
           );
 }
-function h(e) {
+function x(e) {
     let { text: t, user: n, guildId: l, channelId: o } = e;
     return (0, r.jsxs)("div", {
         children: [
@@ -140,7 +140,7 @@ function _(e) {
             color: "text-default",
         },
         N = a.default.getCurrentUser(),
-        S = (null == N ? void 0 : N.id) === t.id;
+        w = (null == N ? void 0 : N.id) === t.id;
     return s
         ? (0, r.jsxs)("div", {
               className: j.card,
@@ -175,7 +175,7 @@ function _(e) {
                           p
                               ? (0, r.jsx)(i.X6q, O(y({}, Z), { children: _ }))
                               : (0, r.jsx)(
-                                    x,
+                                    h,
                                     y(
                                         {
                                             applicationId: P,
@@ -186,7 +186,7 @@ function _(e) {
                                     ),
                                 ),
                           null != E &&
-                              (0, r.jsx)(h, {
+                              (0, r.jsx)(x, {
                                   text: E,
                                   user: t,
                                   guildId: n,
@@ -194,7 +194,7 @@ function _(e) {
                               }),
                           (0, r.jsx)(u.Z, {
                               tags: T,
-                              isCurrentUser: S,
+                              isCurrentUser: w,
                               widgetType: c,
                               applicationId: P,
                           }),
@@ -208,7 +208,7 @@ function _(e) {
                       ],
                   }),
                   !p &&
-                      S &&
+                      w &&
                       (0, r.jsx)(f.Z, {
                           game: o,
                           widgetType: c,

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(597688),
+    a = n(442837),
+    o = n(597688),
     s = n(479446),
     l = n(347896),
     c = n(717401),
@@ -33,13 +33,13 @@ function O(e) {
     let [w, D] = i.useState(P),
         L = (0, c.iE)(),
         [x, M] = i.useState(),
-        [j, k] = i.useState(
+        [k, j] = i.useState(
             t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u,
         ),
         [U, G] = i.useState(void 0),
-        [B, Z] = i.useState(void 0),
+        [B, V] = i.useState(void 0),
         F = (0, d.E5)(O, t),
-        [V, H] = i.useState(!1),
+        [Z, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(),
         q = i.useCallback(
@@ -58,7 +58,7 @@ function O(e) {
             },
             [v, F, W, H, z],
         ),
-        X = (0, o.Wu)([a.Z], () => a.Z.recommendedGiftSkuIds);
+        X = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(E.Provider, {
         value: {
             isGift: t,
@@ -73,13 +73,13 @@ function O(e) {
             soundEffect: U,
             setSoundEffect: G,
             emojiConfetti: B,
-            setEmojiConfetti: Z,
-            customGiftMessage: j,
-            setCustomGiftMessage: k,
+            setEmojiConfetti: V,
+            customGiftMessage: k,
+            setCustomGiftMessage: j,
             selectedGiftStyle: w,
             setSelectedGiftStyle: D,
             sendGiftMessage: q,
-            hasSentMessage: V,
+            hasSentMessage: Z,
             isSendingMessage: Y,
             giftMessageError: K,
             recommendedGiftSkuIds: X,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(570140),
     i = n(232567),
-    o = n(220082),
-    a = n(275759),
+    a = n(220082),
+    o = n(275759),
     s = n(365943),
     l = n(592125),
     c = n(271383),
@@ -40,10 +40,10 @@ function _(e, t) {
         L = null == w && E,
         x = (null == R && g) || D || L,
         M = null == v ? null == A : null == C,
-        j = !M && (N || x);
-    if (!M && !j) return Promise.resolve();
-    (0, s.t)(), null != t && (0, o.vM)(t);
-    let k = {
+        k = !M && (N || x);
+    if (!M && !k) return Promise.resolve();
+    (0, s.t)(), null != t && (0, a.vM)(t);
+    let j = {
         type: m,
         withMutualGuilds: g,
         withMutualFriends: b,
@@ -54,14 +54,14 @@ function _(e, t) {
         connectionsRoleId:
             null == v ||
             null ==
-                (p = (0, a.Ur)({
+                (p = (0, o.Ur)({
                     guildMember: c.ZP.getMember(v, e),
                     channel: l.Z.getChannel(I),
                 }))
                 ? void 0
                 : p.id,
     };
-    if (y) return r.Z.wait(() => (0, i.In)(e, k, d.Z)), Promise.resolve();
-    let U = (0, i.In)(e, k, d.Z);
-    return j && !O ? Promise.resolve() : U;
+    if (y) return r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve();
+    let U = (0, i.In)(e, j, d.Z);
+    return k && !O ? Promise.resolve() : U;
 }

@@ -1,4 +1,4 @@
-A.exports = {
+e.exports = {
     premiumTrialBadge: "premiumTrialBadge__4c1e4",
     premiumOfferUnackedBadge: "premiumOfferUnackedBadge__4c1e4",
     premiumTrialAcknowledgedBadge: "premiumTrialAcknowledgedBadge__4c1e4",

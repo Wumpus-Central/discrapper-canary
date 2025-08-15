@@ -1,7 +1,7 @@
-n.d(t, { _: () => a });
+n.d(t, { _: () => o });
 var r = n(818083),
     i = n(984134);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-06_device_affinity",
     label: "Device affinity experiment",
@@ -14,10 +14,10 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
-    return o.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             disable: r,

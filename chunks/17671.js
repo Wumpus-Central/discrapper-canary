@@ -109,6 +109,7 @@ function T(e) {
                                             (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     t.e("36599"),
+                                                    t.e("60962"),
                                                     t.e("49049"),
                                                     t.e("82758"),
                                                     t.e("61"),

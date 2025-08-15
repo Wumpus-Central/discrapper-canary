@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => ei }), n(35282), n(388685), n(539854), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
-    o = n(159635),
-    a = n.n(o),
+    a = n(159635),
+    o = n.n(a),
     s = n(933557),
     l = n(339085),
     c = n(633302),
@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function j(e, t) {
         e
     );
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -107,7 +107,7 @@ function k(e, t, n) {
 function U(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
-    if ('"' !== t[1]) return k(e, t, n, r);
+    if ('"' !== t[1]) return j(e, t, n, r);
     let i = 2;
     for (; i < t.length; i++) {
         if ("\\" === t[i]) {
@@ -116,8 +116,8 @@ function U(e, t, n) {
         }
         if ('"' === t[i]) break;
     }
-    let o = t.substring(0, i + 1),
-        a = (0, s.mA)(t.substring(2, i));
+    let a = t.substring(0, i + 1),
+        o = (0, s.mA)(t.substring(2, i));
     return n
         .sortBy((e) => {
             let { text: t } = e;
@@ -125,11 +125,11 @@ function U(e, t, n) {
         })
         .filter((e) => {
             let { text: t } = e;
-            return a === t;
+            return o === t;
         })
         .map((e) => {
             let { id: t } = e;
-            return [o, t, r];
+            return [a, t, r];
         })
         .first();
 }
@@ -145,28 +145,28 @@ function G(e) {
 }
 function B(e) {
     return {
-        match: a().anyScopeRegex(e),
+        match: o().anyScopeRegex(e),
         parse: (e) => ({
             type: "text",
             content: e[0],
         }),
     };
 }
-let Z = d.Z.RULES,
+let V = d.Z.RULES,
     F = f.ZP,
-    V = /^<@!?(\d+)>/,
+    Z = /^<@!?(\d+)>/,
     H = /^<@&(\d+)>/,
     Y = /^<@\$(\d+)>/,
     W = /^<#(\d+)>/,
     K = /^<a?:(\w+):(\d+)>/,
     z = /(@everyone|@here|@Clyde)\b/,
     q = {
-        link: G(a().defaultRules.link),
-        autolink: G(a().defaultRules.autolink),
-        url: G(a().defaultRules.url),
-        inlineCode: G(Z.inlineCode),
-        codeBlock: G(Z.codeBlock),
-        rawUserMention: B(V),
+        link: G(o().defaultRules.link),
+        autolink: G(o().defaultRules.autolink),
+        url: G(o().defaultRules.url),
+        inlineCode: G(V.inlineCode),
+        codeBlock: G(V.codeBlock),
+        rawUserMention: B(Z),
         rawRoleMention: B(H),
         rawChannelMention: B(W),
         rawEmoji: B(K),
@@ -174,19 +174,19 @@ let Z = d.Z.RULES,
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = k("@", e, t.users, "mention");
-                if (i || (i = k("@", e, t.mentionableRoles, "roleMention"))) return i;
+                let i = j("@", e, t.users, "mention");
+                if (i || (i = j("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
-                    !(i = k(
+                    !(i = j(
                         "@",
                         e,
-                        t.users.map((e) => j(x({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) => k(x({}, e), { text: e.text.split("#")[0] })),
                         "mention",
                     ))
                 )
                     return null;
-                let o = z.exec(e);
-                if (null != o && i[0].length <= o[0].length) return null;
+                let a = z.exec(e);
+                if (null != a && i[0].length <= a[0].length) return null;
                 if ("" === n) {
                     let t = p.v.exec(e);
                     if (null != t && i[0].length <= t[0].length) return null;
@@ -227,21 +227,21 @@ let Z = d.Z.RULES,
             }),
         },
         emoji: {
-            order: Z.emoji.order,
+            order: V.emoji.order,
             match: (e) => c.ZP.EMOJI_NAME_RE.exec(e),
             parse(e, t, n) {
                 let [r, i] = e,
-                    { customEmoji: o } = n,
-                    a = Object.prototype.hasOwnProperty.call(o, i) ? o[i] : null;
-                if (null != a) {
+                    { customEmoji: a } = n,
+                    o = Object.prototype.hasOwnProperty.call(a, i) ? a[i] : null;
+                if (null != o) {
                     var s;
                     return {
                         type: "customEmoticon",
                         content: "<"
-                            .concat(!0 === a.animated ? "a" : "", ":")
-                            .concat(null != (s = a.originalName) ? s : a.name, ":")
-                            .concat(a.id, ">"),
-                        emoji: a,
+                            .concat(!0 === o.animated ? "a" : "", ":")
+                            .concat(null != (s = o.originalName) ? s : o.name, ":")
+                            .concat(o.id, ">"),
+                        emoji: o,
                     };
                 }
                 return {
@@ -257,16 +257,16 @@ let Z = d.Z.RULES,
             },
             parse(e, t, n) {
                 let [r, i] = e,
-                    { emojiContext: o } = n,
-                    a = o.getEmoticonByName(i);
-                return null != a
+                    { emojiContext: a } = n,
+                    o = a.getEmoticonByName(i);
+                return null != o
                     ? {
                           type: "customEmoticon",
                           content: "<"
-                              .concat(!0 === a.animated ? "a" : "", ":")
-                              .concat(a.name, ":")
-                              .concat(a.id, ">"),
-                          emoji: a,
+                              .concat(!0 === o.animated ? "a" : "", ":")
+                              .concat(o.name, ":")
+                              .concat(o.id, ">"),
+                          emoji: o,
                       }
                     : {
                           type: "text",
@@ -274,7 +274,7 @@ let Z = d.Z.RULES,
                       };
             },
         },
-        text: j(x({}, F), {
+        text: k(x({}, F), {
             match: (e, t) =>
                 "string" == typeof t.textExclusions && "" !== t.textExclusions
                     ? (0, f.T9)(t.textExclusions).exec(e)
@@ -284,26 +284,26 @@ let Z = d.Z.RULES,
         }),
     },
     X = {
-        inlineCode: G(Z.inlineCode),
-        codeBlock: G(Z.codeBlock),
+        inlineCode: G(V.inlineCode),
+        codeBlock: G(V.codeBlock),
         mention: {
-            match: a().anyScopeRegex(V),
+            match: o().anyScopeRegex(Z),
             parse(e, t, n) {
-                let { isNotification: r, guild: o } = n,
-                    a = A.default.getUser(e[1]);
-                if (null == a) return { content: e[0] };
-                let s = R.ZP.getUserTag(a, { identifiable: r && S.Z.enabled ? "never" : "always" });
+                let { isNotification: r, guild: a } = n,
+                    o = A.default.getUser(e[1]);
+                if (null == o) return { content: e[0] };
+                let s = R.ZP.getUserTag(o, { identifiable: r && S.Z.enabled ? "never" : "always" });
                 if (r) {
-                    let e = R.ZP.getGlobalName(a);
+                    let e = R.ZP.getGlobalName(o);
                     return { content: null != e ? "@".concat(e) : "@".concat(s) };
                 }
                 {
-                    if (a.bot) return { content: "@".concat(s) };
+                    if (o.bot) return { content: "@".concat(s) };
                     let e = "";
-                    if ((null == o ? void 0 : o.id) != null) {
+                    if ((null == a ? void 0 : a.id) != null) {
                         let t = s.toLowerCase();
-                        e = i().some(O.Z.getUnsafeMutableRoles(o.id), (e) => t.startsWith(e.name.toLowerCase()))
-                            ? "#".concat("".concat(a.discriminator).padStart(4, "0"))
+                        e = i().some(O.Z.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase()))
+                            ? "#".concat("".concat(o.discriminator).padStart(4, "0"))
                             : "";
                     }
                     return { content: "@".concat(s).concat(e) };
@@ -311,7 +311,7 @@ let Z = d.Z.RULES,
             },
         },
         roleMention: {
-            match: a().anyScopeRegex(H),
+            match: o().anyScopeRegex(H),
             parse(e, t, n) {
                 let { guild: r } = n;
                 if (null != r) {
@@ -322,7 +322,7 @@ let Z = d.Z.RULES,
             },
         },
         gameMention: {
-            match: a().anyScopeRegex(Y),
+            match: o().anyScopeRegex(Y),
             parse(e, t, n) {
                 let { guild: r } = n;
                 if (
@@ -344,41 +344,41 @@ let Z = d.Z.RULES,
             },
         },
         channel: {
-            match: a().anyScopeRegex(W),
+            match: o().anyScopeRegex(W),
             parse(e) {
                 let t = g.Z.getChannel(e[1]);
                 return { content: null == t ? e[0] : (0, s.F6)(t, A.default, T.Z, !0, !0) };
             },
         },
         emoji: {
-            match: a().anyScopeRegex(K),
+            match: o().anyScopeRegex(K),
             parse(e, t, n) {
-                let [r, i, o] = e,
-                    { guild: a } = n,
-                    s = l.ZP.getDisambiguatedEmojiContext(a ? a.id : null).getById(o),
+                let [r, i, a] = e,
+                    { guild: o } = n,
+                    s = l.ZP.getDisambiguatedEmojiContext(o ? o.id : null).getById(a),
                     c = null != s ? s.name : i;
                 return { content: ":".concat(c, ":") };
             },
         },
         soundboard: {
-            match: a().anyScopeRegex(_.hf),
+            match: o().anyScopeRegex(_.hf),
             parse(e) {
                 let [t, n, r] = e;
                 return { content: "<sound:".concat(n, ":").concat(r, ">") };
             },
         },
         spoiler: {
-            match: a().anyScopeRegex(P.$92),
+            match: o().anyScopeRegex(P.$92),
             parse: () => ({ content: "<".concat(D.intl.string(D.t["F+x38P"]).toLowerCase(), ">") }),
         },
         staticRouteLink: {
-            match: a().anyScopeRegex(P.PEY),
+            match: o().anyScopeRegex(P.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
-        timestamp: j(x({}, Z.timestamp), {
+        timestamp: k(x({}, V.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                let r = Z.timestamp.parse(...t);
+                let r = V.timestamp.parse(...t);
                 return "text" === r.type ? { content: r.content } : { content: r.formatted };
             },
         }),
@@ -389,7 +389,7 @@ let Z = d.Z.RULES,
         e[t].order = n;
     });
 });
-let Q = a().parserFor(q),
+let Q = o().parserFor(q),
     J = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 function $(e, t, n) {
     if (null != n && ("customEmoticon" === t.type && n(t.emoji, !1), "emoticon" === t.type || "text" === t.type)) {
@@ -436,7 +436,7 @@ function en(e) {
     let t,
         n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? v.Z.getGuild(n) : null,
-        o = I.Z.can(P.Plq.MENTION_EVERYONE, e);
+        a = I.Z.can(P.Plq.MENTION_EVERYONE, e);
     t = (null == e ? void 0 : e.isPrivate())
         ? e.recipients.map((e) => ({
               userId: e,
@@ -451,7 +451,7 @@ function en(e) {
                 };
             })
           : [];
-    let a = i()(
+    let o = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
                     r = A.default.getUser(n);
@@ -468,7 +468,7 @@ function en(e) {
         s = i()(null != r ? O.Z.getSortedRoles(r.id) : [])
             .filter((e) => {
                 let { mentionable: t } = e;
-                return o || t;
+                return a || t;
             })
             .map((e) => {
                 let { id: t, name: n } = e;
@@ -508,7 +508,7 @@ function en(e) {
         inline: !0,
         mentionableRoles: s,
         guild: r,
-        users: a,
+        users: o,
         channels: c.concat(u).concat(d),
         emojiContext: f,
         customEmoticonsRegex: m,
@@ -546,11 +546,11 @@ let ei = {
     parsePreprocessor: (e, t) => Q(t, en(e)),
     unparse(e, t, n) {
         let r = g.Z.getChannel(t),
-            o = null != r ? r.getGuildId() : null,
-            s = null != o ? v.Z.getGuild(o) : null,
+            a = null != r ? r.getGuildId() : null,
+            s = null != a ? v.Z.getGuild(a) : null,
             l = n ? X : i().omit(X, ["spoiler", "timestamp"]),
             u = n ? er : c.ZP.translateSurrogatesToInlineEmoji,
-            d = a().parserFor(l),
+            d = o().parserFor(l),
             f = {
                 inline: !0,
                 guild: s,

@@ -1,3 +1,3 @@
-e.exports = function (e) {
-    return "handled" === e || !0 === e;
+t.exports = function (t) {
+    return "handled" === t || !0 === t;
 };

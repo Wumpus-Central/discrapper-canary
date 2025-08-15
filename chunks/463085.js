@@ -1,12 +1,12 @@
-n.d(t, { z: () => a }), n(997841), n(415506);
+n.d(t, { z: () => o }), n(997841), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(710260);
-function a(e) {
+    a = n(710260);
+function o(e) {
     let {
             children: t,
             theme: n,
-            primaryColor: a,
+            primaryColor: o,
             secondaryColor: s,
             gradient: l,
             flags: c,
@@ -16,13 +16,13 @@ function a(e) {
             disableAdaptiveTheme: _,
             reduceAdaptiveTheme: p,
         } = e,
-        h = i.useContext(o.Ni);
-    o.qF;
+        h = i.useContext(a.Ni);
+    a.qF;
     let m = i.useMemo(
         () =>
-            (0, o.TT)({
+            (0, a.TT)({
                 theme: null != n ? n : h.theme,
-                primaryColor: null != a ? a : h.primaryColor,
+                primaryColor: null != o ? o : h.primaryColor,
                 secondaryColor: null != s ? s : h.secondaryColor,
                 gradient: null != l ? l : h.gradient,
                 flags: null != c ? c : h.flags,
@@ -44,7 +44,7 @@ function a(e) {
             h.density,
             h.disableAdaptiveTheme,
             h.reduceAdaptiveTheme,
-            a,
+            o,
             s,
             l,
             c,
@@ -55,7 +55,7 @@ function a(e) {
             p,
         ],
     );
-    return (0, r.jsx)(o.Ni.Provider, {
+    return (0, r.jsx)(a.Ni.Provider, {
         value: m,
         children: t,
     });

@@ -1,16 +1,16 @@
 n.d(t, {
     Z: () => c,
-    v: () => l,
+    v: () => s,
 });
 var r = n(399606),
     i = n(375954),
-    o = n(991621),
+    l = n(991621),
     a = n(629710),
-    s = n(262777);
-let l = (e, t, n) => {
-        var l, c;
+    o = n(262777);
+let s = (e, t, n) => {
+        var s, c;
         let u = (0, r.e7)([i.Z], () => i.Z.getMessage(e, t)),
-            d = (0, s.v)(u);
+            d = (0, o.v)(u);
         if (null == u) return [];
         let f =
             void 0 !== n
@@ -18,17 +18,17 @@ let l = (e, t, n) => {
                 : (e) =>
                       (0, a.g4)(
                           {
-                              type: o.l.Attachment,
+                              type: l.l.Attachment,
                               media: e,
                           },
                           d,
                       );
-        return null != (c = null == u || null == (l = u.attachments) ? void 0 : l.filter(f)) ? c : [];
+        return null != (c = null == u || null == (s = u.attachments) ? void 0 : s.filter(f)) ? c : [];
     },
     c = (e, t, n) => {
-        var l, c;
+        var s, c;
         let u = (0, r.e7)([i.Z], () => i.Z.getMessage(e, t)),
-            d = (0, s.v)(u);
+            d = (0, o.v)(u);
         if (null == u) return [];
         let f =
             void 0 !== n
@@ -36,10 +36,10 @@ let l = (e, t, n) => {
                 : (e) =>
                       (0, a.g4)(
                           {
-                              type: o.l.Embed,
+                              type: l.l.Embed,
                               media: e,
                           },
                           d,
                       );
-        return null != (c = null == u || null == (l = u.embeds) ? void 0 : l.filter(f)) ? c : [];
+        return null != (c = null == u || null == (s = u.embeds) ? void 0 : s.filter(f)) ? c : [];
     };

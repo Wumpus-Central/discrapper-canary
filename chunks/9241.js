@@ -3,7 +3,7 @@ e.exports = function (e) {
         n = "([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)",
         r = t.either(/\b([A-Z]+[a-z0-9]+)+/, /\b([A-Z]+[a-z0-9]+)+[A-Z]+/),
         i = t.concat(r, /(::\w+)*/),
-        o = {
+        a = {
             "variable.constant": ["__FILE__", "__LINE__", "__ENCODING__"],
             "variable.language": ["self", "super"],
             keyword: [
@@ -61,7 +61,7 @@ e.exports = function (e) {
             ],
             literal: ["true", "false", "nil"],
         },
-        a = {
+        o = {
             className: "doctag",
             begin: "@[A-Za-z]+",
         },
@@ -70,9 +70,9 @@ e.exports = function (e) {
             end: ">",
         },
         l = [
-            e.COMMENT("#", "$", { contains: [a] }),
+            e.COMMENT("#", "$", { contains: [o] }),
             e.COMMENT("^=begin", "^=end", {
-                contains: [a],
+                contains: [o],
                 relevance: 10,
             }),
             e.COMMENT("^__END__", e.MATCH_NOTHING_RE),
@@ -81,7 +81,7 @@ e.exports = function (e) {
             className: "subst",
             begin: /#\{/,
             end: /\}/,
-            keywords: o,
+            keywords: a,
         },
         u = {
             className: "string",
@@ -172,14 +172,14 @@ e.exports = function (e) {
                     end: /(?=\))/,
                     excludeBegin: !0,
                     endsParent: !0,
-                    keywords: o,
+                    keywords: a,
                 },
             ],
         },
         h = {
             match: [/(include|extend)\s+/, i],
             scope: { 2: "title.class" },
-            keywords: o,
+            keywords: a,
         },
         m = [
             u,
@@ -196,7 +196,7 @@ e.exports = function (e) {
                     2: "title.class",
                     4: "title.class.inherited",
                 },
-                keywords: o,
+                keywords: a,
             },
             h,
             {
@@ -246,7 +246,7 @@ e.exports = function (e) {
                 excludeBegin: !0,
                 excludeEnd: !0,
                 relevance: 0,
-                keywords: o,
+                keywords: a,
             },
             {
                 begin: "(" + e.RE_STARTERS_RE + "|unless)\\s*",
@@ -297,7 +297,7 @@ e.exports = function (e) {
             begin: "^([>?]>|[\\w#]+\\(\\w+\\):\\d+:\\d+[>*]|(\\w+-)?\\d+\\.\\d+\\.\\d+(p\\d+)?[^\\d][^>]+>)(?=[ ])",
             starts: {
                 end: "$",
-                keywords: o,
+                keywords: a,
                 contains: m,
             },
         },
@@ -307,7 +307,7 @@ e.exports = function (e) {
         {
             name: "Ruby",
             aliases: ["rb", "gemspec", "podspec", "thor", "irb"],
-            keywords: o,
+            keywords: a,
             illegal: /\/\*/,
             contains: [e.SHEBANG({ binary: "ruby" })].concat(g).concat(l).concat(m),
         }

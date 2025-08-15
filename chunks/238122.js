@@ -1,22 +1,22 @@
 n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
 var r = n(255367),
-    i = n(73800),
-    l = n(481060),
-    a = n(454585),
-    s = n(273744),
-    o = n(388032),
+    a = n(73800),
+    i = n(481060),
+    l = n(454585),
+    o = n(273744),
+    s = n(388032),
     c = n(124252),
     d = n(197571);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: _, pattern: b },
+                data: { title: u, subtitle: m, placeholder: p, rows: _, character_limit: g, pattern: b },
                 onChange: h,
                 initialText: x,
                 isRequired: f,
             } = e,
-            v = i.useRef(
-                a.Z.reactParserFor(
+            v = a.useRef(
+                l.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -41,8 +41,8 @@ let u = (e) => {
                                 });
                         }
                         return e;
-                    })({}, a.Z.defaultRules)),
-                    (n = n = { link: s.s }),
+                    })({}, l.Z.defaultRules)),
+                    (n = n = { link: o.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -58,24 +58,24 @@ let u = (e) => {
                     t),
                 ),
             ),
-            [j, y] = i.useState(""),
-            [O, Z] = i.useState(null);
-        i.useEffect(() => {
+            [j, y] = a.useState(""),
+            [C, O] = a.useState(null);
+        a.useEffect(() => {
             var e;
             y(null != (e = null == x ? void 0 : x.value) ? e : "");
         }, [x]);
-        let I = i.useCallback(
+        let I = a.useCallback(
             (e) => {
                 let t = null != b ? new RegExp(b) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (Z(null),
+                      (O(null),
                       y(e),
                       h({
                           value: e,
                           isValid: !0,
                       }))
-                    : (Z(o.intl.string(o.t["24xrGR"])),
+                    : (O(s.intl.string(s.t["24xrGR"])),
                       h({
                           value: e,
                           isValid: !1,
@@ -89,7 +89,7 @@ let u = (e) => {
                 null != u &&
                     (0, r.jsx)("div", {
                         className: d.marginBottom8,
-                        children: (0, r.jsxs)(l.Text, {
+                        children: (0, r.jsxs)(i.Text, {
                             variant: "text-sm/bold",
                             children: [
                                 u,
@@ -101,18 +101,18 @@ let u = (e) => {
                             ],
                         }),
                     }),
-                (0, r.jsx)(l.Kx8, {
-                    maxLength: _,
+                (0, r.jsx)(i.Kx8, {
+                    maxLength: g,
                     onChange: I,
                     value: j,
-                    error: O,
-                    rows: g,
+                    error: C,
+                    rows: _,
                     placeholder: p,
                     autoFocus: !0,
                 }),
                 null != m &&
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(l.Text, {
+                        children: (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             children: v.current(m),
                         }),
@@ -121,20 +121,20 @@ let u = (e) => {
         });
     },
     m = (e) => {
-        let { elements: t, onChange: n, state: i } = e,
-            l = t.map((e) => {
+        let { elements: t, onChange: n, state: a } = e,
+            i = t.map((e) => {
                 var t;
-                let l = e.name;
+                let i = e.name;
                 return (0, r.jsx)(
                     u,
                     {
                         data: e.data,
-                        onChange: (e) => n(l, e.value, e.isValid),
-                        initialText: null != (t = null == i ? void 0 : i[l]) ? t : void 0,
+                        onChange: (e) => n(i, e.value, e.isValid),
+                        initialText: null != (t = null == a ? void 0 : a[i]) ? t : void 0,
                         isRequired: e.should_submit_data,
                     },
-                    l,
+                    i,
                 );
             });
-        return (0, r.jsx)("div", { children: l });
+        return (0, r.jsx)("div", { children: i });
     };

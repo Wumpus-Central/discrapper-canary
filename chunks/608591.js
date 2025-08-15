@@ -30,7 +30,7 @@ function i(e) {
         transcript: e.transcript,
     };
 }
-function o(e) {
+function a(e) {
     let t = { video: i(e.video) };
     return (
         null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)),
@@ -38,7 +38,7 @@ function o(e) {
         t
     );
 }
-function a(e) {
+function o(e) {
     return {
         videoTitle: e.video_title,
         videoEndCtaTitle: e.video_end_cta_title,
@@ -64,8 +64,8 @@ function l(e) {
 }
 n.d(t, {
     FG: () => r,
-    I9: () => a,
-    _c: () => o,
+    I9: () => o,
+    _c: () => a,
     c1: () => s,
     jZ: () => l,
 });

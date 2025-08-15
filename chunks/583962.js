@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(243778),
     m = n(538445),
     b = n(151494),
-    O = n(496675),
-    _ = n(259580),
+    _ = n(496675),
+    O = n(259580),
     y = n(267642),
     v = n(624138),
     j = n(667815),
@@ -28,8 +28,8 @@ var r = n(255367),
     E = n(18857),
     x = n(981631),
     S = n(921944),
-    P = n(388032),
-    I = n(989308),
+    I = n(388032),
+    P = n(989308),
     N = n(210418);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -92,7 +92,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 var e;
                 return null != (e = C.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([O.Z], () => O.Z.can(x.Plq.MANAGE_GUILD, t));
+            k = (0, c.e7)([_.Z], () => _.Z.can(x.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
             M !== T && (0, j.v)(t.id, T);
         }, [t.id, M, T]);
@@ -108,13 +108,13 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 [M, T, G, U],
             ),
             V = t.premiumTier < L && M >= x.oCV[L],
-            F = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, x.jXE.PREMIUM_GUILD_PROGRESS_BAR),
-            H = P.intl.formatToPlainString(P.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
-            z = P.intl.format(P.t.dhKnYm, {
+            H = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, x.jXE.PREMIUM_GUILD_PROGRESS_BAR),
+            F = I.intl.formatToPlainString(I.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
+            z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: T,
                 numTotal: x.oCV[L],
             });
-        R && ((H = (0, y.e9)(L)), (z = P.intl.format(P.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase());
+        R && ((F = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (F = F.toLocaleLowerCase());
         let W = (0, s.JA)("boosts-".concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
@@ -141,7 +141,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             var t, n;
                             null == e || null == (t = e.onClick) || t.call(e),
                                 null == i || null == (n = i.onClick) || n.call(i),
-                                F();
+                                H();
                         },
                         className: o()(N.container, { [N.containerWithMargin]: d }),
                         onContextMenu: (e) => {
@@ -163,7 +163,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                             color: "none",
                                             variant: "text-sm/medium",
                                             lineClamp: 1,
-                                            children: H,
+                                            children: F,
                                         }),
                                     }),
                                     (0, r.jsxs)("div", {
@@ -176,11 +176,11 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 lineClamp: 1,
                                                 children: z,
                                             }),
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 className: N.count,
                                                 height: 16,
                                                 width: 16,
-                                                direction: _.Z.Directions.RIGHT,
+                                                direction: O.Z.Directions.RIGHT,
                                             }),
                                         ],
                                     }),
@@ -195,7 +195,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     }),
                                     R
                                         ? (0, r.jsx)("span", {
-                                              "aria-label": P.intl.string(P.t["7iL1q6"]),
+                                              "aria-label": I.intl.string(I.t["7iL1q6"]),
                                               role: "img",
                                               className: N.tadaIcon,
                                               children: "\uD83C\uDF89",
@@ -209,10 +209,10 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         return (0, r.jsx)("li", {
             children: (0, r.jsx)(p.ua7, {
                 text: V
-                    ? P.intl.formatToPlainString(I.default["9CtPjo"], { perk: (0, y.nW)(L) })
+                    ? I.intl.formatToPlainString(P.default["9CtPjo"], { perk: (0, y.nW)(L) })
                     : R
-                      ? P.intl.string(P.t["Y+V9go"])
-                      : P.intl.formatToPlainString(P.t.UyDKl5, { levelName: (0, y.nW)(L) }),
+                      ? I.intl.string(I.t["Y+V9go"])
+                      : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, y.nW)(L) }),
                 position: "top",
                 delay: 200,
                 hideOnClick: !0,

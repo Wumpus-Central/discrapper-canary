@@ -1,8 +1,8 @@
 n.d(t, { m: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(442837),
     c = n(930295),
@@ -71,7 +71,7 @@ function I(e) {
     var t;
     let {
             children: n,
-            targetElementRef: o,
+            targetElementRef: a,
             shouldShow: p = !0,
             onRequestClose: m,
             position: E = "top",
@@ -86,10 +86,10 @@ function I(e) {
         w = i.useMemo(() => {
             var e;
             return (
-                null == o.current ||
-                (null == (e = o.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === P
+                null == a.current ||
+                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === P
             );
-        }, [o, P]);
+        }, [a, P]);
     i.useEffect(() => {
         C(w && p);
     }, [w, p]);
@@ -121,10 +121,10 @@ function I(e) {
                     u.V,
                     b(g({}, e), {
                         modal: !1,
-                        className: a()(null != S ? h.popoverContentWithGradient : h.popover, {
+                        className: o()(null != S ? h.popoverContentWithGradient : h.popover, {
                             [h["popover--video"]]: T,
                         }),
-                        returnRef: o,
+                        returnRef: a,
                         children: n,
                     }),
                 );
@@ -142,7 +142,7 @@ function I(e) {
                 });
             });
     return (0, r.jsx)(c.H, {
-        targetElementRef: o,
+        targetElementRef: a,
         shouldShow: N,
         onRequestClose: m,
         position: E,

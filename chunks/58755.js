@@ -54,11 +54,11 @@ function b(e, t) {
         e
     );
 }
-let f = Object.keys(x.jQ).map((e) => ({
+let v = Object.keys(x.jQ).map((e) => ({
         value: e,
         label: e,
     })),
-    v = Array.from(
+    f = Array.from(
         Array.from(
             Object.keys(c.b).reduce((e, t) => {
                 let [a] = t.split(".");
@@ -77,7 +77,7 @@ function j(e) {
             className: h.section,
             children: [
                 (0, n.jsx)(d.VcW, {
-                    options: v,
+                    options: f,
                     placeholder: "Select a scale to edit...",
                     value: void 0,
                     onChange: (e) => {
@@ -126,7 +126,7 @@ function j(e) {
             ],
         }),
         u = l.find((e) => e.name === i),
-        f =
+        v =
             null != u
                 ? (0, n.jsx)(g, {
                       onClose: () => s(null),
@@ -134,7 +134,7 @@ function j(e) {
                       setState: a,
                   })
                 : o;
-    return (0, n.jsx)("div", { children: f });
+    return (0, n.jsx)("div", { children: v });
 }
 function g(e) {
     let { scale: t, setState: a, onClose: r } = e,
@@ -142,7 +142,7 @@ function g(e) {
             name: c,
             base: p,
             darkness: b,
-            lightness: v,
+            lightness: f,
             showColumnarPalettePreview: j,
             colorSpace: g,
             easingStrength: _ = 1,
@@ -214,7 +214,7 @@ function g(e) {
                             "The color space used to generate the palette. Different color spaces will produce different results.",
                     }),
                     (0, n.jsx)(d.q4e, {
-                        options: f,
+                        options: v,
                         value: g,
                         onChange: (e) => (0, x.t4)(c, e, a),
                         popoutLayerContext: m.O$,
@@ -226,7 +226,7 @@ function g(e) {
                 children: [
                     (0, n.jsx)(d.xJW, {}),
                     (0, n.jsxs)(d.xJW, {
-                        title: "Lighten (".concat((100 * v).toFixed(), "%)"),
+                        title: "Lighten (".concat((100 * f).toFixed(), "%)"),
                         children: [
                             (0, n.jsx)(d.R94, {
                                 type: d.geA.DESCRIPTION,
@@ -235,7 +235,7 @@ function g(e) {
                             }),
                             (0, n.jsx)(d.iRW, {
                                 onValueRender: () => null,
-                                initialValue: v,
+                                initialValue: f,
                                 stickToMarkers: !0,
                                 markers: Array.from({ length: 21 }, (e, t) => t / 10),
                                 minValue: 0,

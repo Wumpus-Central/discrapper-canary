@@ -31,8 +31,8 @@ let h = [
 function p() {
     let [e, t] = r.useState(null),
         [a, p] = r.useState(0),
-        [b, f] = r.useState(1000),
-        [v, j] = r.useState(0),
+        [b, v] = r.useState(1000),
+        [f, j] = r.useState(0),
         g = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(m.nw[e])) ? t : o.R[m.nw[e]];
@@ -45,7 +45,7 @@ function p() {
                 value: t,
             };
         }),
-        C = r.useMemo(() => null != e && v >= 0 && v <= 100 && a >= 0, [e, v, a]);
+        C = r.useMemo(() => null != e && f >= 0 && f <= 100 && a >= 0, [e, f, a]);
     return (0, n.jsxs)("div", {
         className: x.container,
         children: [
@@ -117,7 +117,7 @@ function p() {
                                 options: h,
                                 value: b,
                                 onChange: (e) => {
-                                    f(e);
+                                    v(e);
                                 },
                                 popoutLayerContext: u.O$,
                             }),
@@ -159,7 +159,7 @@ function p() {
                             (0, n.jsx)(i.oil, {
                                 min: 0,
                                 max: 100,
-                                value: v.toString(),
+                                value: f.toString(),
                                 type: "number",
                                 onChange: (e) => j(parseFloat(e)),
                             }),
@@ -184,7 +184,7 @@ function p() {
                                     type: "FEEDBACK_OVERRIDE_SET",
                                     feedbackType: g.feedbackType,
                                     cooldown: a * b,
-                                    chance: v / 100,
+                                    chance: f / 100,
                                 })
                             ),
                         disabled: !C,
@@ -216,7 +216,7 @@ function p() {
                     color: "text-danger",
                     children: "Error: cooldown needs to be a number greater than 0",
                 }),
-            !(v >= 0 && v <= 100) &&
+            !(f >= 0 && f <= 100) &&
                 (0, n.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-danger",

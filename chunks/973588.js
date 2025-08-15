@@ -1,72 +1,70 @@
-var r = n(621796),
-    i = n(172367),
-    o = n(169774),
-    a = n(596464),
-    s = n(352582),
-    l = n(358076),
-    c = n(467159),
-    u = n(843260),
-    d = "'",
-    f = "/",
-    _ = o.isBrowser("Firefox");
-function p(e) {
-    return _ && (e == d || e == f);
+var n = r(621796),
+    i = r(172367),
+    o = r(169774),
+    a = r(596464),
+    u = r(352582),
+    s = r(358076),
+    c = r(467159),
+    l = r(843260),
+    f = o.isBrowser("Firefox");
+function p(t, e, r, o, a) {
+    var u = n.replaceText(t.getCurrentContent(), t.getSelection(), e, r, o);
+    return i.push(t, u, "insert-characters", a);
 }
-function h(e, t, n, o, a) {
-    var s = r.replaceText(e.getCurrentContent(), e.getSelection(), t, n, o);
-    return i.push(e, s, "insert-characters", a);
-}
-e.exports = function (e, t) {
-    void 0 !== e._pendingStateFromBeforeInput &&
-        (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));
-    var n = e._latestEditorState,
-        r = t.data;
-    if (r) {
-        if (e.props.handleBeforeInput && s(e.props.handleBeforeInput(r, n, t.timeStamp)))
-            return void t.preventDefault();
-        var o = n.getSelection(),
-            d = o.getStartOffset(),
-            f = o.getAnchorKey();
+t.exports = function (t, e) {
+    void 0 !== t._pendingStateFromBeforeInput &&
+        (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
+    var r = t._latestEditorState,
+        n = e.data;
+    if (n) {
+        if (t.props.handleBeforeInput && u(t.props.handleBeforeInput(n, r, e.timeStamp)))
+            return void e.preventDefault();
+        var o = r.getSelection(),
+            h = o.getStartOffset(),
+            d = o.getAnchorKey();
         if (!o.isCollapsed()) {
-            t.preventDefault(),
-                e.update(h(n, r, n.getCurrentInlineStyle(), a(n.getCurrentContent(), n.getSelection()), !0));
+            e.preventDefault(),
+                t.update(p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !0));
             return;
         }
-        var _ = h(n, r, n.getCurrentInlineStyle(), a(n.getCurrentContent(), n.getSelection()), !1),
-            m = !1;
-        if ((m || (m = l(e._latestCommittedEditorState)), !m)) {
-            var g = n.getBlockTree(f),
-                E = _.getBlockTree(f);
-            m =
-                g.size !== E.size ||
-                g.zip(E).some(function (e) {
-                    var t = e[0],
-                        n = e[1],
-                        i = t.get("start"),
-                        o = i + (i >= d ? r.length : 0),
-                        a = t.get("end"),
-                        s = a + (a >= d ? r.length : 0),
-                        l = n.get("start"),
-                        c = n.get("end"),
-                        u = n.get("decoratorKey");
+        var g = p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !1),
+            y = !1;
+        if (!(y = s(t._latestCommittedEditorState))) {
+            var v = r.getBlockTree(d),
+                m = g.getBlockTree(d);
+            y =
+                v.size !== m.size ||
+                v.zip(m).some(function (t) {
+                    var e = t[0],
+                        r = t[1],
+                        i = e.get("start"),
+                        o = i + (i >= h ? n.length : 0),
+                        a = e.get("end"),
+                        u = a + (a >= h ? n.length : 0),
+                        s = r.get("start"),
+                        c = r.get("end"),
+                        l = r.get("decoratorKey");
                     return (
-                        t.get("decoratorKey") !== u ||
-                        t.get("leaves").size !== n.get("leaves").size ||
-                        o !== l ||
-                        s !== c ||
-                        (null != u && c - l != a - i)
+                        e.get("decoratorKey") !== l ||
+                        e.get("leaves").size !== r.get("leaves").size ||
+                        o !== s ||
+                        u !== c ||
+                        (null != l && c - s != a - i)
                     );
                 });
         }
-        if ((m || (m = p(r)), m || (m = c(_.getDirectionMap()).get(f) !== c(n.getDirectionMap()).get(f)), m)) {
-            t.preventDefault(), (_ = i.set(_, { forceSelection: !0 })), e.update(_);
+        if (
+            (y || (y = f && ("'" == n || "/" == n)),
+            y || (y = c(g.getDirectionMap()).get(d) !== c(r.getDirectionMap()).get(d)),
+            y)
+        ) {
+            e.preventDefault(), (g = i.set(g, { forceSelection: !0 })), t.update(g);
             return;
         }
-        (_ = i.set(_, { nativelyRenderedContent: _.getCurrentContent() })),
-            (e._pendingStateFromBeforeInput = _),
-            u(function () {
-                void 0 !== e._pendingStateFromBeforeInput &&
-                    (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));
+        (t._pendingStateFromBeforeInput = g = i.set(g, { nativelyRenderedContent: g.getCurrentContent() })),
+            l(function () {
+                void 0 !== t._pendingStateFromBeforeInput &&
+                    (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
             });
     }
 };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(622535),
-    a = n(481060),
+    a = n(622535),
+    o = n(481060),
     s = n(425493),
     l = n(211266),
     c = n(906732),
@@ -96,7 +96,7 @@ let T = function (e) {
                             variant: s.Z.Variants.BOLD,
                         }),
                     }),
-                (0, r.jsxs)(a.yWw, {
+                (0, r.jsxs)(o.yWw, {
                     ref: w,
                     className: I.scroller,
                     children: [
@@ -111,7 +111,7 @@ let T = function (e) {
                                             themeResponsive: !1,
                                             onButtonClick: L,
                                         }),
-                                        (0, r.jsx)(a.X6q, {
+                                        (0, r.jsx)(o.X6q, {
                                             className: I.heading,
                                             color: "always-white",
                                             variant: "display-lg",
@@ -155,7 +155,7 @@ let T = function (e) {
                                 (0, r.jsx)("div", { className: I.lowerBodyBackgroundImage }),
                             ],
                         }),
-                        (0, r.jsx)(o.$, {
+                        (0, r.jsx)(a.$, {
                             innerRef: P,
                             onChange: M,
                             children: (0, r.jsx)("div", {

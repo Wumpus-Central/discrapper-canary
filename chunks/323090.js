@@ -17,7 +17,7 @@ var i = n(442837),
     j = n(388032),
     y = n(54966);
 function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, guildId: x, subsection: h, onClose: v } = e,
+    let { user: t, currentUser: n, displayProfile: O, guildId: h, subsection: x, onClose: v } = e,
         { trackUserProfileAction: _ } = (0, s.KZ)(),
         I = (0, i.e7)([d.Z], () => {
             var e;
@@ -40,7 +40,7 @@ function O(e) {
                     applicationId: I.id,
                     commandIds: I.popularApplicationCommandIds,
                     channel: P,
-                    guildId: x,
+                    guildId: h,
                     onClick: v,
                 }),
             (null == O ? void 0 : O.guildId) != null &&
@@ -48,23 +48,23 @@ function O(e) {
                     user: t,
                     currentUser: n,
                     guildId: O.guildId,
-                    scrollIntoView: h === b.Tb.ROLES,
+                    scrollIntoView: x === b.Tb.ROLES,
                 }),
             (0, r.jsx)(m.Z, {
                 heading: j.intl.string(j.t["A//N4u"]),
                 children: (0, r.jsx)(p.Z, {
                     userId: t.id,
-                    guildId: x,
+                    guildId: h,
                     tooltipDelay: b.vB,
                 }),
             }),
             (0, r.jsx)(m.Z, {
                 heading: j.intl.string(j.t["mQKv+v"]),
-                scrollIntoView: h === b.Tb.NOTE,
+                scrollIntoView: x === b.Tb.NOTE,
                 children: (0, r.jsx)(o.Z, {
                     userId: t.id,
                     className: y.note,
-                    autoFocus: h === b.Tb.NOTE,
+                    autoFocus: x === b.Tb.NOTE,
                     onUpdate: () => _({ action: "SET_NOTE" }),
                 }),
             }),

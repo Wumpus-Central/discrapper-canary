@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var i = (function (e) {
     return (
         (e[(e.UNKNOWN = 1)] = "UNKNOWN"),
@@ -43,9 +43,9 @@ var i = (function (e) {
         e
     );
 })(i || {});
-class o {
+class a {
     constructor(e) {
         r(this, "reason", void 0), (this.reason = e);
     }
 }
-r(o, "ReasonCodes", i);
+r(a, "ReasonCodes", i);

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     logBlockedSelectionEvent: function () {
         return null;
     },

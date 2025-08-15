@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(63063),
     S = n(74538),
     T = n(18438),
-    I = n(778825),
-    N = n(856607),
+    N = n(778825),
+    I = n(856607),
     y = n(594496),
     A = n(856768),
     P = n(981631),
@@ -88,7 +88,7 @@ function k(e) {
         }),
         L = (0, l.e7)([j.Z], () => !j.Z.isFetchingProfile(k.id, null == n ? void 0 : n.id)),
         B = (0, l.e7)([C.Z], () => C.Z.hidePersonalInformation),
-        M = (0, l.cj)([I.Z], () => Z(D({}, I.Z.getAllPending()), { source: I.Z.getSource() })),
+        M = (0, l.cj)([N.Z], () => Z(D({}, N.Z.getAllPending()), { source: N.Z.getSource() })),
         { source: U, pendingAvatar: V, pendingNameplate: G } = M,
         F = (function (e, t) {
             if (null == e) return {};
@@ -181,7 +181,7 @@ function k(e) {
                                   }),
                               ],
                           })
-                        : (0, i.jsx)(N.Z, {}),
+                        : (0, i.jsx)(I.Z, {}),
                 ],
             })
           : (0, i.jsx)(o.$jN, {});

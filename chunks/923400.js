@@ -1,7 +1,7 @@
-A.d(t, { M: () => l });
+A.d(t, { M: () => a });
 var n = A(83439),
     r = A(100781);
-let l = [
+let a = [
     {
         name: "cool-frog",
         alt: "A cool frog",

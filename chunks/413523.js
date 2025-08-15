@@ -9,8 +9,8 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n(759174),
-    o = n(586902),
-    a = n(317381),
+    a = n(586902),
+    o = n(317381),
     s = n(541638),
     l = n(569545),
     c = n(199902),
@@ -180,7 +180,7 @@ class w {
                         ? void 0
                         : t.reduce((t, n) => {
                               if (n.type === y.fO.USER) {
-                                  let t = (0, o.O)({
+                                  let t = (0, a.O)({
                                       userId: e,
                                       checkIsMuted: !0,
                                   });
@@ -228,8 +228,8 @@ class w {
         t ? this.guildRingingUsers.add(e) : this.guildRingingUsers.delete(e);
     }
     _getEmbeddedActivities() {
-        let e = a.ZP.getEmbeddedActivitiesForChannel(this.channelId),
-            t = a.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
+        let e = o.ZP.getEmbeddedActivitiesForChannel(this.channelId),
+            t = o.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
         return null == t ? e : (0, r.uniqBy)([...e, t], (e) => e.compositeInstanceId);
     }
     _getParticipantsForEmbeddedActivities() {
@@ -252,7 +252,7 @@ class w {
         });
     }
     _getParticipantsForUser(e) {
-        var t, n, r, i, a, d;
+        var t, n, r, i, o, d;
         let b,
             O,
             I = [],
@@ -273,7 +273,7 @@ class w {
                 id: S.id,
                 voiceState: N,
                 voicePlatform: C,
-                speaking: (0, o.O)({
+                speaking: (0, a.O)({
                     userId: e,
                     checkIsMuted: !0,
                 }),
@@ -285,7 +285,7 @@ class w {
                 localVideoDisabled: _.Z.isLocalVideoDisabled(S.id),
             })),
             I.push(b));
-        let D = null != (a = c.Z.getStreamForUser(e, P)) ? a : c.Z.getActiveStreamForUser(e, P);
+        let D = null != (o = c.Z.getStreamForUser(e, P)) ? o : c.Z.getActiveStreamForUser(e, P);
         if (null != D && D.channelId === this.channelId) {
             let t = (0, l.V9)(D),
                 n = this.getParticipant(t),

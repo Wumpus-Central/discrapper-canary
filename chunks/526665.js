@@ -1,5 +1,5 @@
 n.d(t, {
-    wy: () => o,
+    wy: () => a,
     yP: () => i,
 });
 let r = (0, n(818083).B)({
@@ -16,4 +16,4 @@ let r = (0, n(818083).B)({
         ],
     }),
     i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
-    o = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+    a = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;

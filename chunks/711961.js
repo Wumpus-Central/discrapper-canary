@@ -135,11 +135,11 @@ e.exports = function (e) {
             "verbose",
             "warning",
         ],
-        o = {
+        a = {
             className: "variable.constant",
             begin: t.concat(/\$/, t.either(...n)),
         },
-        a = {
+        o = {
             className: "variable",
             begin: /\$+\{[\!\w.:-]+\}/,
         },
@@ -186,8 +186,8 @@ e.exports = function (e) {
                     className: "char.escape",
                     begin: /\$(\\[nrt]|\$)/,
                 },
-                o,
                 a,
+                o,
                 s,
                 l,
             ],
@@ -492,7 +492,7 @@ e.exports = function (e) {
             { beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd" },
             f,
             u,
-            a,
+            o,
             s,
             l,
             c,

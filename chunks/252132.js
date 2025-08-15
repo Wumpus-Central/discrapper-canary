@@ -1,31 +1,31 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(27457),
     l = n(131951),
     a = n(441997);
-function s(e) {
+function o(e) {
     var {
             aspectRatio: t,
             blocked: n,
-            ignored: s,
-            channel: o,
+            ignored: o,
+            channel: s,
             className: c,
             focused: u,
             children: d,
-            inCall: h,
-            inPopout: p,
+            inCall: p,
+            inPopout: h,
             noBorder: f,
-            onClick: g,
-            onContextMenu: m,
+            onClick: m,
+            onContextMenu: g,
             onDoubleClick: b,
             onVideoResize: y,
-            paused: x,
-            pulseSpeakingIndicator: j,
-            participant: _,
-            width: O,
+            paused: _,
+            pulseSpeakingIndicator: C,
+            participant: x,
+            width: v,
         } = e,
-        v = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -65,9 +65,9 @@ function s(e) {
             "participant",
             "width",
         ]);
-    let C = l.Z.getVideoComponent();
+    let O = l.Z.getVideoComponent();
     return (0, r.jsx)("div", {
-        style: { width: O },
+        style: { width: v },
         className: a.spaceBetweenTiles,
         children: (0, r.jsxs)("div", {
             className: a.tileSizer,
@@ -102,24 +102,24 @@ function s(e) {
                     })(
                         {
                             blocked: n,
-                            ignored: s,
-                            channel: o,
+                            ignored: o,
+                            channel: s,
                             className: c,
                             focused: u,
-                            inCall: h,
-                            inPopout: p,
+                            inCall: p,
+                            inPopout: h,
                             noBorder: f,
-                            onClick: g,
-                            onContextMenu: m,
+                            onClick: m,
+                            onContextMenu: g,
                             onDoubleClick: b,
                             onVideoResize: y,
-                            participant: _,
-                            paused: x,
-                            pulseSpeakingIndicator: j,
-                            videoComponent: C,
-                            width: O,
+                            participant: x,
+                            paused: _,
+                            pulseSpeakingIndicator: C,
+                            videoComponent: O,
+                            width: v,
                         },
-                        v,
+                        j,
                     ),
                 ),
                 d,

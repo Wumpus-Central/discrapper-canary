@@ -26,10 +26,10 @@ function S(e) {
         n = (0, s.e7)([h.Z], () => h.Z.boostSlots),
         S = r.useMemo(() => Object.values(n), [n]),
         T = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        I = f.ZP.isPremium(T, O.p9.TIER_2),
-        N = (0, s.e7)([m.Z], () => m.Z.affinities),
+        N = f.ZP.isPremium(T, O.p9.TIER_2),
+        I = (0, s.e7)([m.Z], () => m.Z.affinities),
         y = (0, s.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
-        A = N.length > 0 || y.length > 0,
+        A = I.length > 0 || y.length > 0,
         P = S.length > 0,
         R = r.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
         D = R.length > 0,
@@ -38,7 +38,7 @@ function S(e) {
         { fractionalState: k } = (0, a.Z)({ forceFetch: !0 }),
         L = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === O.a$.NONE,
         B = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === O.a$.NONE,
-        M = I && k === O.a$.FP_SUB_PAUSED;
+        M = N && k === O.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(l.oQ, { className: v.blockedPaymentsWarning }),

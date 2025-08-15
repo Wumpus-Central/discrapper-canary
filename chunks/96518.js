@@ -62,7 +62,7 @@ e.exports = function (e) {
             "while",
             "with",
         ],
-        o = [
+        a = [
             "blufor",
             "civilian",
             "configNull",
@@ -93,7 +93,7 @@ e.exports = function (e) {
             "true",
             "west",
         ],
-        a = [
+        o = [
             "abs",
             "accTime",
             "acos",
@@ -2577,8 +2577,8 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: {
             keyword: i,
-            built_in: a,
-            literal: o,
+            built_in: o,
+            literal: a,
         },
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, r, s],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/],

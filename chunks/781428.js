@@ -6,31 +6,31 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    o = n(120356),
-    s = n.n(o),
-    a = n(593473),
+    a = n(120356),
+    s = n.n(a),
+    o = n(593473),
     c = n(873546),
     u = n(442837),
     d = n(481060),
     h = n(570140),
     p = n(893776),
-    f = n(899742),
-    m = n(743142),
-    g = n(254942),
+    m = n(899742),
+    g = n(743142),
+    f = n(254942),
     _ = n(388905),
     x = n(379760),
     b = n(600164),
-    E = n(100159),
-    v = n(473855),
+    v = n(100159),
+    E = n(473855),
     j = n(124860),
     I = n(86779),
-    O = n(726745),
-    S = n(913583),
+    y = n(726745),
+    O = n(913583),
     N = n(144114),
-    y = n(541692),
+    S = n(541692),
     C = n(952802),
-    A = n(703656),
-    T = n(108427),
+    T = n(703656),
+    A = n(108427),
     Z = n(901375),
     P = n(314897),
     R = n(117240),
@@ -38,8 +38,8 @@ var r,
     L = n(626135),
     D = n(585483),
     k = n(358085),
-    B = n(481153),
-    M = n(588705),
+    M = n(481153),
+    B = n(588705),
     U = n(494526),
     F = n(163671),
     G = n(981631),
@@ -104,7 +104,7 @@ class X extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { handoffAvailable: e, authenticated: t, giftCodeSKU: n, invite: r, location: i } = this.props;
-        e && !t ? (0, f.is)() : t && this.loginOrSSO(t, i, !0),
+        e && !t ? (0, m.is)() : t && this.loginOrSSO(t, i, !0),
             L.default.track(
                 G.rMx.LOGIN_VIEWED,
                 Y(
@@ -114,9 +114,9 @@ class X extends (r = l.PureComponent) {
                             login_source: this.loginSource,
                             authenticated: t,
                         },
-                        null != n ? (0, E.Z)(n, !1, !1) : {},
+                        null != n ? (0, v.Z)(n, !1, !1) : {},
                     ),
-                    { source: (0, A.At)() },
+                    { source: (0, T.At)() },
                 ),
                 { flush: !0 },
             ),
@@ -127,23 +127,23 @@ class X extends (r = l.PureComponent) {
                     giftCodeSKUId: this.giftCodeSKUId,
                 }),
             p.Z.getLocationMetadata(),
-            (0, T.e)("login");
+            (0, A.e)("login");
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, location: r, handoffAvailable: i } = this.props,
-            { checkingHandoff: l, redirecting: o } = this.state;
+            { checkingHandoff: l, redirecting: a } = this.state;
         if (
             (!n ||
                 e.authenticated ||
-                (l && (i || o)) ||
+                (l && (i || a)) ||
                 (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(n, r)),
             t.errors !== this.state.errors)
         ) {
-            var s, a, c;
+            var s, o, c;
             this.hasError("password")
                 ? null == (s = this.passwordRef) || s.focus()
                 : this.hasError("email") || this.hasError("login")
-                  ? null == (a = this.loginRef) || a.focus()
+                  ? null == (o = this.loginRef) || o.focus()
                   : this.hasError("code") && (null == (c = this.codeRef) || c.focus());
         }
     }
@@ -157,7 +157,7 @@ class X extends (r = l.PureComponent) {
             else if (null != n.channel) return "dm_invite";
             else if (null != n.inviter) return "friend_invite";
         }
-        return null != i ? (0, m.L)(i) : null;
+        return null != i ? (0, g.L)(i) : null;
     }
     get giftCodeSKUId() {
         let { giftCode: e } = this.props;
@@ -175,13 +175,13 @@ class X extends (r = l.PureComponent) {
     }
     transitionSSO(e) {
         let { transitionTo: t, redirectTo: n, replaceWith: r } = this.props,
-            i = null != e ? (0, a.parse)(e.search) : {};
+            i = null != e ? (0, o.parse)(e.search) : {};
         if ((delete i.redirect_to, null != n)) null != r ? r(n) : t(n);
         else if (null == i.service) t(G.Z5c.APP);
         else {
             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + G.ANM.SSO,
                 t = Y(q({}, i), { token: P.default.getToken() });
-            window.location = "".concat(e, "?").concat((0, a.stringify)(t));
+            window.location = "".concat(e, "?").concat((0, o.stringify)(t));
         }
     }
     hasError(e) {
@@ -280,7 +280,7 @@ class X extends (r = l.PureComponent) {
         return (0, i.jsxs)(_.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(M.R, {}),
+                (0, i.jsx)(B.R, {}),
                 (0, i.jsxs)(_.gO, {
                     className: K.marginTop20,
                     children: [
@@ -344,8 +344,8 @@ class X extends (r = l.PureComponent) {
             {
                 invite: r,
                 giftCode: l,
-                loginStatus: o,
-                country: a,
+                loginStatus: a,
+                country: o,
                 showMobileWebHandoff: c,
                 disableAutofocusOnDefaultForm: u,
             } = this.props,
@@ -355,7 +355,7 @@ class X extends (r = l.PureComponent) {
             (n =
                 null == r || p
                     ? null != l
-                        ? (0, i.jsx)(B.Z, { giftCode: l })
+                        ? (0, i.jsx)(M.Z, { giftCode: l })
                         : (0, i.jsxs)("div", {
                               className: H.header,
                               children: [
@@ -372,7 +372,7 @@ class X extends (r = l.PureComponent) {
                                       : null,
                               ],
                           })
-                    : (0, i.jsx)(M.Z, { invite: r })),
+                    : (0, i.jsx)(B.Z, { invite: r })),
             (0, i.jsxs)(
                 b.Z,
                 {
@@ -412,8 +412,8 @@ class X extends (r = l.PureComponent) {
                                         className: K.marginTop20,
                                         children: [
                                             (0, i.jsx)(C.Z, {
-                                                alpha2: a.alpha2,
-                                                countryCode: a.code.split(" ")[0],
+                                                alpha2: o.alpha2,
+                                                countryCode: o.code.split(" ")[0],
                                                 className: K.marginBottom20,
                                                 label: V.intl.string(V.t.tUjnxs),
                                                 error:
@@ -456,7 +456,7 @@ class X extends (r = l.PureComponent) {
                                             }),
                                             (0, i.jsx)(_.zx, {
                                                 type: "submit",
-                                                submitting: o === G.u34.LOGGING_IN,
+                                                submitting: a === G.u34.LOGGING_IN,
                                                 color: p ? _.zx.Colors.GREEN : _.zx.Colors.BRAND,
                                                 className: K.marginBottom8,
                                                 children: p ? V.intl.string(V.t.wvVThI) : V.intl.string(V.t.dKhVQE),
@@ -518,7 +518,7 @@ class X extends (r = l.PureComponent) {
             onSubmit: this.handleLogin,
             tag: "form",
             className: s()(this.props.authBoxClassName, H.horizontalAuthBox),
-            children: () => [(0, i.jsx)(v.Z, { guildTemplate: e }, "template"), this.renderDefaultForm(!1)],
+            children: () => [(0, i.jsx)(E.Z, { guildTemplate: e }, "template"), this.renderDefaultForm(!1)],
         });
     }
     renderMFA() {
@@ -572,14 +572,14 @@ class X extends (r = l.PureComponent) {
         let e = () => {
             this.setState((e) => Y(q({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(S.Z, { onDismiss: e });
+        return (0, i.jsx)(O.Z, { onDismiss: e });
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
-            { checkingHandoff: o, redirecting: s } = this.state;
-        if (s || o) return (0, i.jsx)(J, {});
+            { checkingHandoff: a, redirecting: s } = this.state;
+        if (s || a) return (0, i.jsx)(J, {});
         if (l) return this.renderHandOffAvailable();
-        if (e && o) return this.renderHandOffContinue();
+        if (e && a) return this.renderHandOffContinue();
         switch (r) {
             case G.u34.LOGGING_IN_MFA_SMS:
             case G.u34.MFA_SMS_STEP:
@@ -658,7 +658,7 @@ class X extends (r = l.PureComponent) {
                         invite: this.props.invite,
                     });
                 } catch (t) {
-                    let e = (0, g.p)(t);
+                    let e = (0, f.p)(t);
                     this.setState({ errors: e });
                 }
             }),
@@ -678,7 +678,7 @@ class X extends (r = l.PureComponent) {
                 try {
                     let { token: n } = await N.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(G.Z5c.RESET, {
-                        search: (0, a.stringify)({
+                        search: (0, o.stringify)({
                             token: n,
                             from_login: "true",
                         }),
@@ -729,7 +729,7 @@ class X extends (r = l.PureComponent) {
                         ),
                     );
                 } catch (t) {
-                    let e = (0, g.p)(t);
+                    let e = (0, f.p)(t);
                     this.setState({ errors: e });
                 }
             }),
@@ -762,10 +762,10 @@ class X extends (r = l.PureComponent) {
                         giftCode: r,
                         guildTemplate: i,
                         location: l,
-                        transitionTo: o,
+                        transitionTo: a,
                         redirectTo: s,
                     } = this.props,
-                    c = null != l ? (0, a.parse)(l.search) : {};
+                    c = null != l ? (0, o.parse)(l.search) : {};
                 "" !== t && (c.email = t),
                     null != n
                         ? ((c.mode = "register"), (e = G.Z5c.INVITE(n.code)))
@@ -777,10 +777,10 @@ class X extends (r = l.PureComponent) {
                               ? ((e = G.Z5c.REGISTER), (c.redirect_to = s))
                               : (e = G.Z5c.REGISTER),
                     this.loginReset(),
-                    o(e, { search: (0, a.stringify)(c) }),
+                    a(e, { search: (0, o.stringify)(c) }),
                     D.S.dispatch(G.CkL.WAVE_EMPHASIZE);
             });
-        let r = null != e.location ? (0, a.parse)(e.location.search) : {};
+        let r = null != e.location ? (0, o.parse)(e.location.search) : {};
         this.state = {
             redirecting: e.authenticated,
             checkingHandoff: e.handoffAvailable,
@@ -799,7 +799,7 @@ class X extends (r = l.PureComponent) {
 }
 W(X, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let Q = function (e) {
-    let t = (0, u.cj)([R.Z, w.Z, P.default, O.Z, y.Z], () => ({
+    let t = (0, u.cj)([R.Z, w.Z, P.default, y.Z, S.Z], () => ({
         authenticated: P.default.isAuthenticated(),
         handoffAvailable: R.Z.isHandoffAvailable(),
         user: R.Z.user,
@@ -807,8 +807,8 @@ let Q = function (e) {
         mfaTicket: P.default.getMFATicket(),
         mfaMethods: P.default.getMFAMethods(),
         defaultRoute: w.Z.defaultRoute,
-        country: y.Z.getCountryCode(),
-        hasLoggedInAccounts: O.Z.getHasLoggedInAccounts(),
+        country: S.Z.getCountryCode(),
+        hasLoggedInAccounts: y.Z.getHasLoggedInAccounts(),
     }));
     return (0, i.jsx)(X, q({}, e, t));
 };

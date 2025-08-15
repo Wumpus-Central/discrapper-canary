@@ -6,16 +6,16 @@ var n = r(255367),
     o = r(392711),
     s = r.n(o),
     c = r(442837),
-    d = r(481060),
-    u = r(224706),
+    u = r(481060),
+    d = r(224706),
     m = r(812206),
-    g = r(669764),
-    p = r(810568),
-    f = r(839392),
+    f = r(669764),
+    g = r(810568),
+    p = r(839392),
     x = r(774073),
-    j = r(426482),
-    v = r(644941),
-    h = r(388032),
+    v = r(426482),
+    h = r(644941),
+    j = r(388032),
     b = r(226788),
     O = r(414642);
 function y(e) {
@@ -46,26 +46,26 @@ function y(e) {
 let _ = (e) => {
     let { game: t, onClose: r, trackClick: a } = e,
         i = (0, c.e7)([m.Z], () => m.Z.getApplication(t.applicationId));
-    return (0, n.jsx)(d.ua7, {
+    return (0, n.jsx)(u.ua7, {
         text: t.name,
         children: (e) => {
             var l, o;
             return (0, n.jsx)(
-                d.P3F,
+                u.P3F,
                 ((l = y({}, e)),
                 (o = o =
                     {
                         className: O.similarGameImageClickable,
                         onClick: async () => {
-                            a(p.as.ClickSimilarGame, t.applicationId),
-                                (0, d.ZDy)(() =>
+                            a(g.as.ClickSimilarGame, t.applicationId),
+                                (0, u.ZDy)(() =>
                                     Promise.resolve((e) =>
                                         (0, n.jsx)(
-                                            v.default,
+                                            h.default,
                                             y(
                                                 {
                                                     applicationId: t.applicationId,
-                                                    source: p.m1.SimilarGames,
+                                                    source: g.m1.SimilarGames,
                                                 },
                                                 e,
                                             ),
@@ -75,11 +75,11 @@ let _ = (e) => {
                                 await new Promise((e) => setTimeout(e, 10)),
                                 r();
                         },
-                        children: (0, n.jsx)(j.C, {
+                        children: (0, n.jsx)(v.C, {
                             game: t,
                             application: i,
                             className: O.similarGameImage,
-                            size: j.Z.SMALL,
+                            size: v.Z.SMALL,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -101,22 +101,22 @@ let _ = (e) => {
 };
 function I(e) {
     let { applicationId: t, onClose: r, trackAction: i, similarGames: o, similarGamesError: m } = e,
-        p = (0, c.e7)([f.Z, g.Z], () => {
-            let e = void 0 === f.Z.getSimilarGames(t) && null == f.Z.getSimilarGamesError(t),
-                r = o.some((e) => g.Z.isFetching(e));
+        g = (0, c.e7)([p.Z, f.Z], () => {
+            let e = void 0 === p.Z.getSimilarGames(t) && null == p.Z.getSimilarGamesError(t),
+                r = o.some((e) => f.Z.isFetching(e));
             return e || r;
         }),
-        j = (0, c.Wu)([g.Z], () =>
+        v = (0, c.Wu)([f.Z], () =>
             o
-                .map((e) => g.Z.getGame(e))
+                .map((e) => f.Z.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, x.z6)(e.applicationId))
                 .slice(0, 5),
         );
     return (a.useEffect(() => {
-        o.length > 0 && u.Z.getDetectableGamesSupplemental([t, ...o]);
+        o.length > 0 && d.Z.getDetectableGamesSupplemental([t, ...o]);
     }, [t, o]),
-    p && null == m)
+    g && null == m)
         ? (0, n.jsxs)("div", {
               children: [
                   (0, n.jsx)("div", { className: l()(O.loadingHeading, b.sectionHeader) }),
@@ -128,19 +128,19 @@ function I(e) {
                   }),
               ],
           })
-        : (p || 0 !== j.length) && null == m
+        : (g || 0 !== v.length) && null == m
           ? (0, n.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(d.X6q, {
+                    (0, n.jsx)(u.X6q, {
                         className: b.sectionHeader,
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: h.intl.string(h.t["6rLyQE"]),
+                        children: j.intl.string(j.t["6rLyQE"]),
                     }),
                     (0, n.jsx)("div", {
                         className: O.similarGames,
                         style: {},
-                        children: j.map((e) =>
+                        children: v.map((e) =>
                             (0, n.jsx)(
                                 _,
                                 {

@@ -25,8 +25,8 @@ function S(e) {
     let { ingress: t, guildId: n } = e,
         S = (0, h.c_)(),
         T = (0, p.q)(),
-        I = g.h2.useSetting().includes(n),
-        N = g.mX.useSetting(),
+        N = g.h2.useSetting().includes(n),
+        I = g.mX.useSetting(),
         y = g.zA.useSetting().includes(n),
         A = r.useCallback(
             (e) => {
@@ -74,7 +74,7 @@ function S(e) {
             n === C.T
                 ? (0, i.jsx)(b.Z, {
                       title: v.intl.string(v.t["3o2ojo"]),
-                      value: !T && !N,
+                      value: !T && !I,
                       onChange: (e) => R(e, !1),
                       disabled: T,
                       note: v.intl.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) }),
@@ -83,7 +83,7 @@ function S(e) {
                       title: v.intl.string(v.t["3o2ojo"]),
                       value: !y,
                       onChange: (e) => R(e, !0),
-                      disabled: I,
+                      disabled: N,
                       note: S
                           ? v.intl.format(v.t.WpnWLS, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) })
                           : v.intl.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) }),

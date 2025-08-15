@@ -2,20 +2,20 @@ n.d(t, {
     $d: () => D,
     BQ: () => w,
     Cb: () => F,
-    Hu: () => V,
+    Hu: () => Z,
     L1: () => z,
     Ow: () => K,
     PZ: () => q,
-    WA: () => k,
+    WA: () => j,
     Wx: () => P,
     XZ: () => Y,
     Y$: () => B,
     Yn: () => H,
     dF: () => U,
     jD: () => L,
-    lf: () => j,
+    lf: () => k,
     pF: () => W,
-    sl: () => Z,
+    sl: () => V,
     vJ: () => M,
     yJ: () => G,
     ye: () => x,
@@ -29,8 +29,8 @@ n.d(t, {
     n(388685);
 var r = n(912370),
     i = n(668781),
-    o = n(904245),
-    a = n(911969),
+    a = n(904245),
+    o = n(911969),
     s = n(761122),
     l = n(213459),
     c = n(895924),
@@ -106,9 +106,9 @@ function C(e, t) {
         r,
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -117,8 +117,8 @@ function R(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = { id: O.bi.BUILT_IN };
@@ -139,11 +139,11 @@ function M(e) {
     var t;
     return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
-function j(e) {
+function k(e) {
     var t;
     return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
-function k(e) {
+function j(e) {
     let t = G(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())],
         r = Date.now();
@@ -154,15 +154,15 @@ function k(e) {
         r > Date.parse(n.label_from)
     ) {
         var i;
-        return null != (i = null == n ? void 0 : n.label_type) ? i : a.ww.NONE;
+        return null != (i = null == n ? void 0 : n.label_type) ? i : o.ww.NONE;
     }
-    return a.ww.NONE;
+    return o.ww.NONE;
 }
 function U(e) {
-    switch (k(e)) {
-        case a.ww.NEW:
+    switch (j(e)) {
+        case o.ww.NEW:
             return "New";
-        case a.ww.UPDATED:
+        case o.ww.UPDATED:
             return "Updated";
         default:
             return "";
@@ -176,7 +176,7 @@ function B(e) {
             command: t,
             optionValues: n,
             context: r,
-            commandTargetId: a,
+            commandTargetId: o,
             maxSizeCallback: s,
             sectionName: l,
             commandOrigin: u = c.bB.APPLICATION_LAUNCHER,
@@ -188,7 +188,7 @@ function B(e) {
                     command: t,
                     optionValues: n,
                     context: r,
-                    commandTargetId: a,
+                    commandTargetId: o,
                     maxSizeCallback: s,
                     commandOrigin: u,
                     sectionName: l,
@@ -198,7 +198,7 @@ function B(e) {
                     var e;
                     let t = _.ZP.parse(f, i.content);
                     (t.tts = null != (e = i.tts) && e),
-                        o.Z.sendMessage(r.channel.id, t, !0, { location: v.dy.APP_COMMAND });
+                        a.Z.sendMessage(r.channel.id, t, !0, { location: v.dy.APP_COMMAND });
                 }
             } catch (e) {
                 throw (
@@ -214,7 +214,7 @@ function B(e) {
         };
     return p();
 }
-function Z(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
         r = C(t, ["fakeAppIconURL"]);
@@ -238,7 +238,7 @@ function Z(e) {
 function F(e) {
     return !!w(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
 }
-function V(e) {
+function Z(e) {
     let t = G(e);
     return null != t && t.displays_advertisements;
 }

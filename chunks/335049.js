@@ -87,7 +87,7 @@ function w(e) {
     );
     switch (a) {
         case p.Kw.CHANNEL:
-            return (0, i.jsx)(I, {
+            return (0, i.jsx)(T, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -95,7 +95,7 @@ function w(e) {
                 openEntryContextMenu: m,
             });
         case p.Kw.ROLE:
-            return (0, i.jsx)(P, {
+            return (0, i.jsx)(I, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -103,7 +103,7 @@ function w(e) {
                 openEntryContextMenu: m,
             });
         case p.Kw.USER:
-            return (0, i.jsx)(T, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -112,7 +112,7 @@ function w(e) {
             });
     }
 }
-function I(e) {
+function T(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         u = (0, m.bD)(t.id),
         {
@@ -169,7 +169,7 @@ function I(e) {
               ],
           });
 }
-function P(e) {
+function I(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: p } = e,
         m = (0, c.e7)([j.Z], () => j.Z.getRole(l.id, o)),
@@ -221,7 +221,7 @@ function P(e) {
               ],
           });
 }
-function T(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
         o = (0, c.e7)([y.default], () => y.default.getUser(n)),
         s = (0, c.e7)([x.ZP], () => {

@@ -1,6 +1,6 @@
 n.d(t, {
-    To: () => o,
-    ag: () => a,
+    To: () => a,
+    ag: () => o,
     kd: () => i,
 });
 var r = n(388032);
@@ -14,7 +14,7 @@ let i = (e) => {
               })
             : e.name;
     },
-    o = (e) =>
+    a = (e) =>
         null == e
             ? ""
             : "baseVariantName" in e && null != e.baseVariantName
@@ -22,7 +22,7 @@ let i = (e) => {
               : null != e.variants && e.variants.length > 0
                 ? e.variants[0].baseVariantName
                 : e.name,
-    a = (e) => {
+    o = (e) => {
         if (null == e) return "";
         let t = r.intl.string(r.t.z7y5vL);
         return null != e.baseVariantName && e.variantLabel !== t

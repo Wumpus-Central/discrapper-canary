@@ -1,7 +1,7 @@
 n.d(t, {
-    BM: () => o,
+    BM: () => a,
     b: () => r,
-    i5: () => a,
+    i5: () => o,
     xw: () => i,
     zR: () => s,
 });
@@ -23,10 +23,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e.MESSAGE = "report_to_mod_message"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.MESSAGE = "message_urf"), (e.USER = "user_urf"), (e.GUILD = "guild_urf"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e.SUB_SPAM = "sub_spam"),
             (e.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),

@@ -1,75 +1,73 @@
 n.d(t, {
-    X: () => g,
-    o: () => E,
+    X: () => C,
+    o: () => f,
 });
-var r = n(255367);
+var r,
+    s = n(255367);
 n(73800);
-var i = n(120356),
-    o = n.n(i),
+var o = n(120356),
+    i = n.n(o),
     a = n(755721),
-    s = n(481060),
-    l = n(617136),
-    c = n(497505),
-    u = n(110560),
-    d = n(266843),
-    f = n(46140),
-    _ = n(388032),
-    p = n(107508),
-    h = n(87181);
-function m() {
-    let e = () => {
-        (0, u.navigateToQuestHome)({ fromContent: c.jn.QUESTS_EMBED });
-    };
-    return (0, r.jsx)("div", {
-        className: p.buttonContainer,
-        children: (0, r.jsx)(a.zx, {
-            className: p.button,
+    l = n(481060),
+    c = n(617136),
+    u = n(497505),
+    d = n(110560),
+    m = n(266843),
+    p = n(46140),
+    g = n(388032),
+    h = n(107508),
+    x = n(87181);
+function j() {
+    return (0, s.jsx)("div", {
+        className: h.buttonContainer,
+        children: (0, s.jsx)(a.zx, {
+            className: h.button,
             color: a.Tt.BRAND,
-            onClick: e,
-            children: _.intl.string(_.t.GURBQk),
+            onClick: () => {
+                (0, d.navigateToQuestHome)({ fromContent: u.jn.QUESTS_EMBED });
+            },
+            children: g.intl.string(g.t.GURBQk),
         }),
     });
 }
-var g = (function (e) {
-    return (e.NOT_FOUND = "not_found"), (e.MOBILE_ONLY = "mobile_only"), e;
-})({});
-function E(e) {
+var C = (((r = {}).NOT_FOUND = "not_found"), (r.MOBILE_ONLY = "mobile_only"), r);
+function f(e) {
     let { questId: t, reason: n = "not_found" } = e,
-        { containerRef: i, size: a } = (0, d.h)();
+        { containerRef: r, size: o } = (0, m.h)();
     return (
-        (0, l.Zk)(f.V_.UNKNOWN_QUEST, t),
-        (0, r.jsxs)("div", {
+        (0, c.Zk)(p.V_.UNKNOWN_QUEST, t),
+        (0, s.jsxs)("div", {
             ref: (e) => {
-                i.current = e;
+                r.current = e;
             },
-            className: o()(p.container, {
-                [p.wide]: "lg" === a,
-                [p.tall]: "lg" !== a,
+            className: i()(h.container, {
+                [h.wide]: "lg" === o,
+                [h.tall]: "lg" !== o,
             }),
             children: [
-                (0, r.jsxs)("div", {
-                    className: p.contentContainer,
+                (0, s.jsxs)("div", {
+                    className: h.contentContainer,
                     children: [
-                        (0, r.jsx)(s.X6q, {
-                            variant: "lg" === a ? "heading-xl/bold" : "heading-lg/bold",
+                        (0, s.jsx)(l.X6q, {
+                            variant: "lg" === o ? "heading-xl/bold" : "heading-lg/bold",
                             color: "header-primary",
-                            children: _.intl.string(_.t.vnP31d),
+                            children: g.intl.string(g.t.vnP31d),
                         }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "lg" === a ? "text-sm/medium" : "text-xs/medium",
+                        (0, s.jsx)(l.Text, {
+                            variant: "lg" === o ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: p.__invalid_mobileWebCopy,
-                            children: _.intl.string("mobile_only" === n ? _.t.Pag1gY : _.t.CTn0yc),
+                            className: h.__invalid_mobileWebCopy,
+                            children: g.intl.string("mobile_only" === n ? g.t.Pag1gY : g.t.CTn0yc),
                         }),
-                        (0, r.jsx)(m, {}),
+                        (0, s.jsx)(j, {}),
                     ],
                 }),
-                (0, r.jsx)("div", {
-                    className: p.imgContainer,
-                    children: (0, r.jsx)("img", {
-                        src: h,
+                (0, s.jsx)("div", {
+                    className: h.imgContainer,
+                    children: (0, s.jsx)("img", {
+                        src: x,
                         alt: "",
-                        className: p.missingQuestImage,
+                        className: h.missingQuestImage,
                     }),
                 }),
             ],

@@ -17,15 +17,15 @@ var r = n(255367),
     b = n(447003),
     j = n(621516),
     v = n(982168),
-    C = n(386923),
-    _ = n(474366),
+    _ = n(386923),
+    C = n(474366),
     y = n(345162),
-    O = n(485386),
-    w = n(430824),
-    P = n(186523),
+    w = n(485386),
+    T = n(430824),
+    O = n(186523),
     S = n(585483),
-    T = n(70956),
-    N = n(709054),
+    N = n(70956),
+    P = n(709054),
     I = n(961675),
     E = n(883429),
     R = n(993259),
@@ -178,7 +178,7 @@ let J = (e) => {
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: ee } = (0, M.H)(x.id),
-            et = (0, h.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
+            et = (0, h.e7)([T.Z], () => T.Z.getGuild(x.getGuildId())),
             en = (0, Z.r_)(x),
             { transitions: er, setVisible: ei } = (() => {
                 let [e, t] = i.useState(!0);
@@ -217,7 +217,7 @@ let J = (e) => {
                     x = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
                     p = (function (e, t, a, l) {
                         let s = null == e ? void 0 : e.id,
-                            o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
+                            o = (0, h.e7)([w.Z], () => (null != s ? w.Z.getSortedRoles(s) : void 0));
                         return i.useMemo(() => {
                             let i,
                                 s = new K(),
@@ -375,19 +375,19 @@ let J = (e) => {
                         u ||
                         x ||
                         !((e) => {
-                            let t = N.default.extractTimestamp(e);
+                            let t = P.default.extractTimestamp(e);
                             return o()().isBefore(o()(t).add(o().duration(15, "days")));
                         })(a.id),
-                    C = i.useRef(0);
+                    _ = i.useRef(0);
                 return (
                     i.useEffect(
                         () => (
                             c || !j || v
-                                ? clearTimeout(C.current)
-                                : (C.current = setTimeout(() => {
+                                ? clearTimeout(_.current)
+                                : (_.current = setTimeout(() => {
                                       s();
-                                  }, 60 * T.Z.Millis.SECOND)),
-                            () => clearTimeout(C.current)
+                                  }, 60 * N.Z.Millis.SECOND)),
+                            () => clearTimeout(_.current)
                         ),
                         [j, v, s, c],
                     ),
@@ -413,7 +413,7 @@ let J = (e) => {
         }),
         ((e) => {
             let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-                s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
+                s = (0, h.e7)([w.Z], () => (null != a ? w.Z.partitionVersion(a) : void 0)),
                 o = i.useCallback(() => {
                     S.S.dispatch(z.CkL.REMEASURE_TARGET);
                 }, []);
@@ -439,9 +439,9 @@ let J = (e) => {
               ? s || 0 !== ee.size
                   ? ee.size > 0
                       ? null
-                      : (0, r.jsx)(C.Z, { guild: et })
+                      : (0, r.jsx)(_.Z, { guild: et })
                   : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(C.Z, { guild: et }), (0, r.jsx)(_.q, {})],
+                        children: [(0, r.jsx)(_.Z, { guild: et }), (0, r.jsx)(C.q, {})],
                     })
               : em && en
                 ? eg
@@ -529,7 +529,7 @@ let J = (e) => {
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
-                                                                                              icon: (0, g.GSL)(P.Z),
+                                                                                              icon: (0, g.GSL)(O.Z),
                                                                                               style: q,
                                                                                               className: l()(
                                                                                                   B.stepStatus,

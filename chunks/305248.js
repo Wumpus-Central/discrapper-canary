@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(823379),
     m = n(709054),
     b = n(981631),
-    O = n(124368),
-    _ = n(479014);
+    _ = n(124368),
+    O = n(479014);
 function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         y = (0, a.Wu)(
@@ -37,7 +37,7 @@ function y(e) {
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         v = i.useCallback((e, t) => {
-            (0, f.ok)(e, t, O.on.INBOX);
+            (0, f.ok)(e, t, _.on.INBOX);
         }, []);
     return (
         i.useEffect(() => {
@@ -60,14 +60,14 @@ function y(e) {
                 });
         }),
         (0, r.jsx)("div", {
-            className: _.container,
+            className: O.container,
             children: y.map((e) =>
                 (0, r.jsx)(
                     d.oL,
                     {
                         channel: n,
                         children: (0, r.jsx)(u.ZP, {
-                            className: _.forumPost,
+                            className: O.forumPost,
                             threadId: e.id,
                             goToThread: v,
                         }),

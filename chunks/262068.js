@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(961742),
     i = n(295415),
-    o = n(27273);
-let a = /url\((['"]?)([^'"]+?)\1\)/g,
+    a = n(27273);
+let o = /url\((['"]?)([^'"]+?)\1\)/g,
     s = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
     l = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
 function c(e) {
@@ -14,17 +14,17 @@ function c(e) {
 }
 function u(e) {
     let t = [];
-    return e.replace(a, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, o.pZ)(e));
+    return e.replace(o, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, a.pZ)(e));
 }
-async function d(e, t, n, a, s) {
+async function d(e, t, n, o, s) {
     try {
         let l,
             u = n ? (0, r.Kk)(t, n) : t,
             d = (0, i.b)(t);
         if (s) {
             let e = await s(u);
-            l = (0, o.DT)(e, d);
-        } else l = await (0, o.sx)(u, d, a);
+            l = (0, a.DT)(e, d);
+        } else l = await (0, a.sx)(u, d, o);
         return e.replace(c(t), `$1${l}$3`);
     } catch (e) {}
     return e;
@@ -41,7 +41,7 @@ function f(e, { preferredFontFormat: t }) {
         : e;
 }
 function _(e) {
-    return -1 !== e.search(a);
+    return -1 !== e.search(o);
 }
 async function p(e, t, n) {
     if (!_(e)) return e;

@@ -1,40 +1,40 @@
-n.d(t, { Z: () => m });
-var r,
-    i,
-    l = n(255367),
-    o = n(73800),
-    a = n(120356),
-    c = n.n(a),
-    s = n(481060),
-    d = n(192754);
-let u = {
+r.d(t, { Z: () => y });
+var n,
+    a,
+    l = r(255367),
+    i = r(73800),
+    o = r(120356),
+    s = r.n(o),
+    c = r(481060),
+    u = r(192754);
+let d = {
         UP: "up",
         RIGHT: "right",
         DOWN: "down",
         LEFT: "left",
     },
-    f = {
-        [u.UP]: "",
-        [u.RIGHT]: d.right,
-        [u.DOWN]: d.down,
-        [u.LEFT]: d.left,
+    p = {
+        [d.UP]: "",
+        [d.RIGHT]: u.right,
+        [d.DOWN]: u.down,
+        [d.LEFT]: u.left,
     };
-class p extends (i = o.PureComponent) {
+class f extends (a = i.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
-        return (0, l.jsx)(s.wj7, {
+        return (0, l.jsx)(c.wj7, {
             size: "md",
             color: "currentColor",
-            className: c()(t, { [f[e]]: !0 }),
+            className: s()(t, { [p[e]]: !0 }),
         });
     }
 }
-(r = "Directions") in p
-    ? Object.defineProperty(p, r, {
-          value: u,
+(n = "Directions") in f
+    ? Object.defineProperty(f, n, {
+          value: d,
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (p[r] = u);
-let m = p;
+    : (f[n] = d);
+let y = f;

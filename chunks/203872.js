@@ -1,8 +1,8 @@
 n.d(t, { R: () => d });
 var r = n(73800),
     i = n(522942),
-    o = n(342905),
-    a = n(242824),
+    a = n(342905),
+    o = n(242824),
     s = n(693450),
     l = n(388032);
 let c = {
@@ -22,14 +22,14 @@ let c = {
         [i.m.POP]: 3,
     };
 function d(e) {
-    let t = (0, a.P)(e);
+    let t = (0, o.P)(e);
     return r.useMemo(() => {
         var n, r;
         return {
             name: l.intl.string(null != (n = c[e]) ? n : s.default.OpWJ3d),
             defaultColors: t,
             previewStyles: {
-                fontId: o.C.DEFAULT,
+                fontId: a.C.DEFAULT,
                 effectId: e,
                 colors: t,
             },

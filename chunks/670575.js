@@ -1,11 +1,11 @@
 var r = n(195653)(),
     i = n(166691)("Object.prototype.toString"),
-    o = function (e) {
+    a = function (e) {
         return (!r || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === i(e);
     },
-    a = function (e) {
+    o = function (e) {
         return (
-            !!o(e) ||
+            !!a(e) ||
             (null !== e &&
                 "object" == typeof e &&
                 "length" in e &&
@@ -17,6 +17,6 @@ var r = n(195653)(),
         );
     },
     s = (function () {
-        return o(arguments);
+        return a(arguments);
     })();
-(o.isLegacyArguments = a), (e.exports = s ? o : a);
+(a.isLegacyArguments = o), (e.exports = s ? a : o);

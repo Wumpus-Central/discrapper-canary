@@ -1,8 +1,8 @@
 n.d(t, { e: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(680018),
-    a = n(481060),
+    a = n(680018),
+    o = n(481060),
     s = n(920155),
     l = n(454028),
     c = n(966902),
@@ -68,9 +68,9 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,8 +79,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
@@ -165,7 +165,7 @@ function y(e) {
                         children: (0, r.jsxs)("div", {
                             className: _.multistepActionLayout,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-xs/normal",
                                     className: _.multistepIndicator,
                                     children: f.intl.formatToPlainString(f.t.rO31eX, {
@@ -173,7 +173,7 @@ function y(e) {
                                         totalSteps: b.length,
                                     }),
                                 }),
-                                (0, r.jsx)(o.z, h({ size: "sm" }, x)),
+                                (0, r.jsx)(a.z, h({ size: "sm" }, x)),
                             ],
                         }),
                     }),

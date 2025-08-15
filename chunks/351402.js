@@ -1,4 +1,4 @@
-let r, i, o, a, s;
+let r, i, a, o, s;
 n.d(t, { Z: () => K });
 var l,
     c = n(442837),
@@ -27,7 +27,7 @@ let _ = !1,
     y = !1,
     O = !1;
 function v() {
-    (r = void 0), (o = void 0), (i = void 0), (y = !1), (a = void 0), (O = !1), (s = void 0), (b = null), (E = null);
+    (r = void 0), (a = void 0), (i = void 0), (y = !1), (o = void 0), (O = !1), (s = void 0), (b = null), (E = null);
 }
 function I() {
     _ = !0;
@@ -71,10 +71,10 @@ function x() {
 function M() {
     m = !0;
 }
-function j() {
+function k() {
     m = !1;
 }
-function k() {
+function j() {
     g = !0;
 }
 function U() {
@@ -82,25 +82,25 @@ function U() {
 }
 function G(e) {
     let { request: t } = e;
-    o = t;
+    a = t;
 }
 function B(e) {
     let { countryCode: t } = e;
     i = t;
 }
-function Z() {
+function V() {
     (i = null), (y = !0);
 }
 function F(e) {
     let { request: t } = e;
     s = t;
 }
-function V(e) {
+function Z(e) {
     let { location: t } = e;
-    a = t;
+    o = t;
 }
 function H() {
-    (a = null), (O = !0);
+    (o = null), (O = !0);
 }
 let Y = (e) => {
     let { countryCode: t } = e;
@@ -138,13 +138,13 @@ class W extends (l = c.ZP.Store) {
         return i;
     }
     get ipCountryCodeRequest() {
-        return o;
+        return a;
     }
     get ipLocationLoaded() {
-        return void 0 !== a;
+        return void 0 !== o;
     }
     get ipLocation() {
-        return a;
+        return o;
     }
     get ipLocationRequest() {
         return s;
@@ -180,19 +180,19 @@ let K = new W(u.Z, {
     BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: x,
     BILLING_PAYMENT_SOURCES_FETCH_FAIL: x,
     BILLING_SUBSCRIPTION_FETCH_START: M,
-    BILLING_SUBSCRIPTION_FETCH_SUCCESS: j,
-    BILLING_SUBSCRIPTION_FETCH_FAIL: j,
-    BILLING_SUBSCRIPTION_UPDATE_START: k,
-    BILLING_SUBSCRIPTION_CANCEL_START: k,
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: k,
+    BILLING_SUBSCRIPTION_FETCH_FAIL: k,
+    BILLING_SUBSCRIPTION_UPDATE_START: j,
+    BILLING_SUBSCRIPTION_CANCEL_START: j,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: U,
     BILLING_SUBSCRIPTION_UPDATE_FAIL: U,
     BILLING_SUBSCRIPTION_CANCEL_FAIL: U,
     BILLING_SUBSCRIPTION_CANCEL_SUCCESS: U,
     BILLING_IP_COUNTRY_CODE_FETCH_START: G,
     BILLING_SET_IP_COUNTRY_CODE: B,
-    BILLING_IP_COUNTRY_CODE_FAILURE: Z,
+    BILLING_IP_COUNTRY_CODE_FAILURE: V,
     BILLING_IP_LOCATION_FETCH_START: F,
-    BILLING_SET_IP_LOCATION: V,
+    BILLING_SET_IP_LOCATION: Z,
     BILLING_IP_LOCATION_FAILURE: H,
     LOGOUT: v,
     CONNECTION_OPEN: Y,

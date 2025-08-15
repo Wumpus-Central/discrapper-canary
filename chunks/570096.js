@@ -1,21 +1,21 @@
-n.d(t, { N: () => j }), n(388685);
+n.d(t, { N: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(704215),
-    s = n(755721),
-    o = n(481060),
+    o = n(755721),
+    s = n(481060),
     c = n(782568),
     u = n(243778),
     d = n(970731),
-    h = n(594174),
-    p = n(63063),
+    p = n(594174),
+    h = n(63063),
     f = n(69589),
-    g = n(981631),
-    m = n(921944),
+    m = n(981631),
+    g = n(921944),
     b = n(388032),
     y = n(942889);
-let x = (e) => {
+let _ = (e) => {
     let { user: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {
         className: y.assetContainer,
@@ -23,14 +23,14 @@ let x = (e) => {
             (0, r.jsx)(f.Z, {
                 user: t,
                 rank: 1,
-                avatarSize: o.EFr.SIZE_56,
+                avatarSize: s.EFr.SIZE_56,
             }),
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(s.P3F, {
                 className: y.closeIcon,
                 onClick: () => {
-                    n(m.L.USER_DISMISS);
+                    n(g.L.USER_DISMISS);
                 },
-                children: (0, r.jsx)(o.Dio, {
+                children: (0, r.jsx)(s.Dio, {
                     color: "currentColor",
                     size: "sm",
                 }),
@@ -38,21 +38,21 @@ let x = (e) => {
         ],
     });
 };
-function j(e) {
+function C(e) {
     let { children: t } = e,
         n = [a.z.LEADERBOARD_NUX_COACHMARK],
         [f, y] = (0, u.US)(n, void 0),
-        j = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        _ = i.useRef(null);
-    return f !== a.z.LEADERBOARD_NUX_COACHMARK || null == j
+        C = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        x = i.useRef(null);
+    return f !== a.z.LEADERBOARD_NUX_COACHMARK || null == C
         ? t
-        : (0, r.jsx)(o.yRy, {
-              targetElementRef: _,
+        : (0, r.jsx)(s.yRy, {
+              targetElementRef: x,
               renderPopout: () =>
                   ((e) => {
                       let { user: t, markAsDismissed: n } = e;
                       return (0, r.jsx)(d.ZP, {
-                          asset: (0, r.jsx)(x, {
+                          asset: (0, r.jsx)(_, {
                               user: t,
                               markAsDismissed: n,
                           }),
@@ -60,26 +60,26 @@ function j(e) {
                           content: b.intl.string(b.t.qIZICA),
                           buttonCTA: b.intl.string(b.t.hvVgAQ),
                           onClick: () => {
-                              (0, c.Z)(p.Z.getArticleURL(g.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS);
+                              (0, c.Z)(h.Z.getArticleURL(m.BhN.GUILD_LEADERBOARD)), n(g.L.USER_DISMISS);
                           },
                           markAsDismissed: n,
                           caretPosition: d.DF.RIGHT_TOP,
                           buttonProps: {
-                              color: s.zx.Colors.WHITE,
-                              look: s.zx.Looks.LINK,
-                              size: s.zx.Sizes.MIN,
+                              color: o.zx.Colors.WHITE,
+                              look: o.zx.Looks.LINK,
+                              size: o.zx.Sizes.MIN,
                           },
                       });
                   })({
-                      user: j,
+                      user: C,
                       markAsDismissed: y,
                   }),
               position: "left",
-              animation: o.yRy.Animation.TRANSLATE,
+              animation: s.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () =>
                   (0, r.jsx)("div", {
-                      ref: _,
+                      ref: x,
                       children: t,
                   }),
           });

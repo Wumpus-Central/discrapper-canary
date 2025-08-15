@@ -66,12 +66,12 @@ function v(e) {
         b = (0, d.Dt)(),
         [C, O] = r.useState(""),
         [v, S] = r.useState(!0),
-        [T, I] = r.useState(x.x.INIT),
-        [N, y] = r.useState(""),
+        [T, N] = r.useState(x.x.INIT),
+        [I, y] = r.useState(""),
         [A, P] = r.useState(null),
         R = async () => {
             let e;
-            I(x.x.REGISTER);
+            N(x.x.REGISTER);
             let t =
                 p.isPlatformEmbedded && h.ZP.supportsFeature(_.eRX.WEBAUTHN)
                     ? h.ZP.webAuthnRegister(m)
@@ -79,10 +79,10 @@ function v(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), I(x.x.INIT);
+                g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), N(x.x.INIT);
                 return;
             }
-            y(e), I(x.x.NAME);
+            y(e), N(x.x.NAME);
         };
     return (0, i.jsxs)(o.Y0X, {
         transitionState: t,
@@ -186,13 +186,13 @@ function v(e) {
                         children: (0, i.jsxs)("form", {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, f.Sr)(C, c, N)
+                                    (0, f.Sr)(C, c, I)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            P(j.intl.string(j.t.fEptJC)), I(x.x.INIT);
+                                            P(j.intl.string(j.t.fEptJC)), N(x.x.INIT);
                                         });
                             },
                             children: [
@@ -240,7 +240,7 @@ function v(e) {
                                                 variant: "secondary",
                                                 text: j.intl.string(j.t["13/7kZ"]),
                                                 onClick: () => {
-                                                    I(x.x.INIT);
+                                                    N(x.x.INIT);
                                                 },
                                             }),
                                         ],

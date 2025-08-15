@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function O(e) {
-    let { guild: t, selected: O } = e,
-        { hasUnread: _, mentionCount: y } = (0, i.cj)(
+function _(e) {
+    let { guild: t, selected: _ } = e,
+        { hasUnread: O, mentionCount: y } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
@@ -85,7 +85,7 @@ function O(e) {
                 className: e,
             }),
         text: E,
-        selected: O,
+        selected: _,
         onClick: j,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
@@ -93,7 +93,7 @@ function O(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: _ && !v,
+        showUnread: O && !v,
         trailing:
             !v && y > 0
                 ? (0, r.jsx)(o.mAB, {

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -103,23 +103,23 @@ let M = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
-function j(e) {
-    let { user: t, currentUser: n, displayProfile: o, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
+function k(e) {
+    let { user: t, currentUser: n, displayProfile: a, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
         w = (0, _.Dt)(),
-        { analyticsLocations: j } = (0, f.ZP)(),
-        { trackUserProfileAction: k } = (0, g.KZ)(),
+        { analyticsLocations: k } = (0, f.ZP)(),
+        { trackUserProfileAction: j } = (0, g.KZ)(),
         { live: U, stream: G } = (0, E.Z)(t.id),
-        { voiceChannel: B, voiceActivity: Z } = (0, b.Z)({
+        { voiceChannel: B, voiceActivity: V } = (0, b.Z)({
             userId: t.id,
             guildId: m,
         }),
         F = t.id === n.id,
-        V = (0, s.e7)([h.Z, p.Z], () => {
+        Z = (0, s.e7)([h.Z, p.Z], () => {
             let e = F ? h.Z.getStatus() : p.Z.getStatus(t.id, m);
             return e === S.Sk.OFFLINE || e === S.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: H } = (0, d.U)({ location: "UserProfileStackedActivity" }),
-        Y = H && null == G && null == Z && null != B,
+        Y = H && null == G && null == V && null != B,
         W = (0, y.yi)(),
         K = (null == W ? void 0 : W.interactionSource) === T.n_.ACTIVITY,
         z = i.useRef(null),
@@ -131,7 +131,7 @@ function j(e) {
         en = "awaitingInput" !== et,
         er = "animating" === et || "done" === et,
         ei = [],
-        eo = {
+        ea = {
             user: t,
             currentUser: n,
             className: N.card,
@@ -145,9 +145,9 @@ function j(e) {
                     {
                         location: "UserProfileStackedActivity",
                         stream: G,
-                        profileGuildId: null == o ? void 0 : o.guildId,
+                        profileGuildId: null == a ? void 0 : a.guildId,
                     },
-                    eo,
+                    ea,
                 ),
                 "stream",
             ),
@@ -159,16 +159,16 @@ function j(e) {
                     R(
                         {
                             activity: e,
-                            profileGuildId: null == o ? void 0 : o.guildId,
+                            profileGuildId: null == a ? void 0 : a.guildId,
                         },
-                        eo,
+                        ea,
                     ),
                     "live-".concat(t),
                 ),
             );
         }),
-        Y && ei.push((0, r.jsx)(I.Z, R({ voiceChannel: B }, eo), "voice"));
-    let [ea, ...es] = ei,
+        Y && ei.push((0, r.jsx)(I.Z, R({ voiceChannel: B }, ea), "voice"));
+    let [eo, ...es] = ei,
         el = es.length > 0,
         ec =
             null != C && el
@@ -176,11 +176,11 @@ function j(e) {
                       look: l.zx.Looks.BLANK,
                       size: l.zx.Sizes.NONE,
                       color: l.zx.Colors.TRANSPARENT,
-                      className: a()(N.viewAllButton, er && N.isShown),
+                      className: o()(N.viewAllButton, er && N.isShown),
                       onClick: () => {
-                          k({
+                          j({
                               action: "PRESS_VIEW_PROFILE",
-                              analyticsLocations: j,
+                              analyticsLocations: k,
                           }),
                               C({ section: T.oh.ACTIVITY });
                       },
@@ -193,9 +193,9 @@ function j(e) {
                 : null,
         eu = i.useCallback(() => {
             if (null == z.current || null == X.current) return;
-            k({
+            j({
                 action: "PRESS_SHOW_MORE_ACTIVITY",
-                analyticsLocations: j,
+                analyticsLocations: k,
             });
             let e = z.current.getBoundingClientRect().height,
                 t = X.current.getBoundingClientRect().height;
@@ -217,11 +217,11 @@ function j(e) {
                                 null == (e = q.current) || e.focus();
                         }, D));
                 });
-        }, [j, k]);
+        }, [k, j]);
     return ((0, u.zq)(() => {
         null != Q.current && window.clearTimeout(Q.current);
     }),
-    V || 0 === ei.length)
+    Z || 0 === ei.length)
         ? null
         : (0, r.jsxs)("section", {
               "aria-labelledby": w,
@@ -244,13 +244,13 @@ function j(e) {
                               tabIndex: -1,
                               children: [
                                   (0, r.jsxs)("li", {
-                                      className: a()(
+                                      className: o()(
                                           N.firstCardContainer,
                                           !er && es.length > 0 && N.hasShowMoreButton,
                                           K && N.isInteracting,
                                       ),
                                       children: [
-                                          ea,
+                                          eo,
                                           el &&
                                               "done" !== et &&
                                               (0, r.jsx)("div", {
@@ -259,7 +259,7 @@ function j(e) {
                                                       look: l.zx.Looks.BLANK,
                                                       size: l.zx.Sizes.NONE,
                                                       color: l.zx.Colors.TRANSPARENT,
-                                                      className: a()(N.showMoreButton, er && N.isHidden),
+                                                      className: o()(N.showMoreButton, er && N.isHidden),
                                                       onClick: eu,
                                                       children: (0, r.jsx)(c.Text, {
                                                           variant: "text-xs/medium",
@@ -278,7 +278,7 @@ function j(e) {
                                           (0, r.jsx)(
                                               "li",
                                               {
-                                                  className: a()(N.remainingCardContainer, er && N.isShown),
+                                                  className: o()(N.remainingCardContainer, er && N.isShown),
                                                   children: e,
                                               },
                                               "activity-".concat(t),
@@ -292,7 +292,7 @@ function j(e) {
                   el &&
                       (0, r.jsxs)("div", {
                           ref: X,
-                          className: a()(N.cardsList, N.remainingCardsCopyToMeasure),
+                          className: o()(N.cardsList, N.remainingCardsCopyToMeasure),
                           children: [es, ec],
                       }),
               ],

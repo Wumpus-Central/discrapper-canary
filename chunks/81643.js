@@ -16,8 +16,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(442837),
-    o = n(570140),
-    a = n(911969),
+    a = n(570140),
+    o = n(911969),
     s = n(110924),
     l = n(681678),
     c = n(420846),
@@ -31,19 +31,19 @@ var r = n(73800),
     g = n(484710);
 function E() {
     let e = f.default.getCurrentUser();
-    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.VERIFIED_ADULT;
+    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
 }
 function b() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.VERIFIED_ADULT;
+    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
 }
 function y() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) === a.F$.VERIFIED_TEEN;
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
 }
 function O() {
     let e = f.default.getCurrentUser();
-    return (null == e ? void 0 : e.ageVerificationStatus) === a.F$.VERIFIED_ADULT;
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
 var v = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
@@ -67,25 +67,25 @@ function T(e, t) {
 function S() {
     let e = f.default.getCurrentUser();
     return (
-        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED &&
-        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING
+        (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
+        (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
 function A() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
     return (
-        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED &&
-        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING
+        (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
+        (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        [a, s] = r.useState(!1),
+        [o, s] = r.useState(!1),
         u = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         { current: d } = r.useRef(null == u ? void 0 : u.ageVerificationStatus),
         h = r.useCallback(() => {
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "CLOSE_AGE_VERIFICATION_MODAL",
                 status: d,
             }),
@@ -96,12 +96,12 @@ function N(e) {
                     });
         }, [d, t, n]);
     return {
-        loading: a,
+        loading: o,
         initiateAgeVerification: r.useCallback(
             async (t) => {
                 s(!0);
                 try {
-                    o.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
+                    a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let n = await (0, p.K)();
                     _.Z.showAgeVerification({
                         webviewUrl: n.verification_webview_url,
@@ -126,10 +126,10 @@ function C(e) {
             return null == (e = f.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;
         }),
         n = (0, s.Z)(t),
-        o = (0, i.e7)([u.default], () => null != u.default.getSuspendedUserToken()),
-        a = (0, i.e7)([u.default], () => u.default.isAuthenticated()),
+        a = (0, i.e7)([u.default], () => null != u.default.getSuspendedUserToken()),
+        o = (0, i.e7)([u.default], () => u.default.isAuthenticated()),
         l = null != n && null != t && n !== t,
-        c = !o && !a;
+        c = !a && !o;
     r.useEffect(() => {
         (l || c) && e();
     }, [e, l, c]);

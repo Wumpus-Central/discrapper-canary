@@ -4,8 +4,8 @@ n.d(t, {
     q: () => m,
 }),
     n(539854);
-var o,
-    a = n(213919),
+var a,
+    o = n(213919),
     s = n(442837),
     l = n(570140),
     c = n(990492),
@@ -109,7 +109,7 @@ function O(e) {
         let { id: n } = t;
         return n !== e;
     })),
-        a.removeToken(e);
+        o.removeToken(e);
 }
 function v(e) {
     let { user: t } = e,
@@ -146,7 +146,7 @@ function N(e) {
         null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(_({}, e), { pushSyncToken: null }) : e,
     );
 }
-class C extends (o = s.ZP.PersistedStore) {
+class C extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;

@@ -15,7 +15,7 @@ var n = a(255367),
 function b(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function f(e) {
+function v(e) {
     let { store: t, dataGetter: a } = e,
         [l, i] = r.useState(a(t));
     return (
@@ -35,7 +35,7 @@ function f(e) {
         })
     );
 }
-let v = [
+let f = [
         {
             key: "name",
             cellClassName: p.__invalid_eventColumn,
@@ -61,7 +61,7 @@ let v = [
                               " method.",
                           ],
                       })
-                    : (0, n.jsx)(f, {
+                    : (0, n.jsx)(v, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,7 +73,7 @@ let v = [
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, n.jsx)(f, {
+                return (0, n.jsx)(v, {
                     store: t,
                     dataGetter: (e) => e,
                 });
@@ -143,7 +143,7 @@ function _() {
                 }),
             }),
             (0, n.jsx)(m.Z, {
-                columns: v,
+                columns: f,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key),

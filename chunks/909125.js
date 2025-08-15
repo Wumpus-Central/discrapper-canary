@@ -3,8 +3,8 @@ var r = n(73800),
     i = n(619864),
     l = n(672041),
     a = n(981631);
-let s = i.vU + a.vpv,
-    o = i.vU / a.vpv;
+let o = i.vU + a.vpv,
+    s = i.vU / a.vpv;
 function c(e) {
     let { totalResults: t, isSearching: n } = e,
         [c, u] = r.useState(t);
@@ -12,10 +12,10 @@ function c(e) {
         n || u(t);
     }, [t, n]);
     let d = c > i.vU + a.vpv,
-        h = (0, l.t)({ location: "useSearchResultsPagination" });
+        p = (0, l.t)({ location: "useSearchResultsPagination" });
     return {
-        isPaginationTotalCountLimited: d && h,
-        paginationTotalCount: Math.min(c, s),
-        paginationMaxIndex: o,
+        isPaginationTotalCountLimited: d && p,
+        paginationTotalCount: Math.min(c, o),
+        paginationMaxIndex: s,
     };
 }

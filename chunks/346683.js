@@ -1,7 +1,7 @@
-n.d(t, { Q: () => o }), n(388685);
+n.d(t, { Q: () => l }), n(388685);
 var r = n(73800),
     i = n(542094);
-function o(e) {
+function l(e) {
     let [t, n] = r.useState(e);
     return (
         r.useLayoutEffect(() => {

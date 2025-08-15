@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(594174),
     m = n(74538),
     b = n(507808),
-    O = n(326272),
-    _ = n(804705),
+    _ = n(326272),
+    O = n(804705),
     y = n(822857),
     v = n(518121),
     j = n(931928),
@@ -23,8 +23,8 @@ var r = n(255367),
     E = n(921944),
     x = n(49898),
     S = n(46140),
-    P = n(388032);
-let I = "orbs_discovery_reheat_coachmark",
+    I = n(388032);
+let P = "orbs_discovery_reheat_coachmark",
     N = (e) => {
         let {
                 targetElementRef: t,
@@ -40,9 +40,9 @@ let I = "orbs_discovery_reheat_coachmark",
                 () => ({
                     onClose: s,
                     onCtaClick: c,
-                    titleText: P.intl.string(P.t.RAMiYW),
-                    descriptionText: P.intl.format(P.t.xk12LC, { quantity: 200 }),
-                    ctaText: P.intl.string(P.t["cA+7mp"]),
+                    titleText: I.intl.string(I.t.RAMiYW),
+                    descriptionText: I.intl.format(I.t.xk12LC, { quantity: 200 }),
+                    ctaText: I.intl.string(I.t["cA+7mp"]),
                 }),
                 [c, s],
             );
@@ -58,11 +58,11 @@ let I = "orbs_discovery_reheat_coachmark",
         });
     },
     w = (e) => {
-        let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: P, isGuildBarScrolling: w } = e,
+        let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: I, isGuildBarScrolling: w } = e,
             { enabled: Z } = (0, y.WX)({ location: "orbs_discovery_reheat_coachmark" }),
             T = ((e) => {
                 let { onShowCoachmarkHandler: t, isVirtualCurrencyEnabled: n } = e,
-                    r = (0, _.F)({ location: I }),
+                    r = (0, O.F)({ location: P }),
                     [y, v] = i.useState(!1),
                     j = ((e) => {
                         let { isIntroQuestUnclaimed: t } = (0, o.cj)([p.Z], () => {
@@ -74,12 +74,12 @@ let I = "orbs_discovery_reheat_coachmark",
                                 };
                             }),
                             { user: n } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
-                            r = O.Z.useExperiment(e);
+                            r = _.Z.useExperiment(e);
                         return null != n && r.enabled && !(0, m.EO)(n) && t;
-                    })({ location: I }),
-                    P = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
+                    })({ location: P }),
+                    I = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
                     N = (0, s.s9z)(s.JQI),
-                    w = n && j && !r && !(N || P),
+                    w = n && j && !r && !(N || I),
                     [Z, T] = (0, c.US)(w ? [a.z.VIRTUAL_CURRENCY_DISCOVERY_REHEAT_COACHMARK] : []),
                     A = Z === a.z.VIRTUAL_CURRENCY_DISCOVERY_REHEAT_COACHMARK,
                     R = i.useCallback(() => {
@@ -174,7 +174,7 @@ let I = "orbs_discovery_reheat_coachmark",
                   })(
                       {
                           targetElementRef: t,
-                          renderDiscoveryButton: P,
+                          renderDiscoveryButton: I,
                           isGuildBarScrolling: w,
                           shouldShow: A,
                       },
@@ -184,7 +184,7 @@ let I = "orbs_discovery_reheat_coachmark",
             : (0, r.jsx)(j.u, {
                   targetElementRef: t,
                   scrollToBottom: n,
-                  renderDiscoveryButton: P,
+                  renderDiscoveryButton: I,
                   isGuildBarScrolling: w,
               });
     };

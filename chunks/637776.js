@@ -1,101 +1,101 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(231239),
+    a = n(231239),
     s = n(129293),
-    a = n(388905),
+    o = n(388905),
     c = n(703656),
     u = n(108427),
     d = n(844800),
     h = n(580497),
     p = n(981631),
-    f = n(388032),
-    m = n(894892);
-function g(e) {
+    m = n(388032),
+    g = n(894892);
+function f(e) {
     let { location: t } = e,
-        [g, _] = i.useState(!1),
-        { verifySuccess: x, verifyErrors: b, redirectGuildId: E } = (0, l.e7)([d.Z], () => d.Z.getState());
+        [f, _] = i.useState(!1),
+        { verifySuccess: x, verifyErrors: b, redirectGuildId: v } = (0, l.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
         let e = (0, s.Z)(t);
-        o.Z.verify(e), (0, u.e)("verify_hub_email");
+        a.Z.verify(e), (0, u.e)("verify_hub_email");
     }, [t]);
-    let v = () => {
-        (0, h.Z)(E), _(!0);
+    let E = () => {
+        (0, h.Z)(v), _(!0);
     };
-    return g
-        ? (0, r.jsxs)(a.ZP, {
+    return f
+        ? (0, r.jsxs)(o.ZP, {
               children: [
-                  (0, r.jsx)(a.Dx, {
-                      className: m.title,
-                      children: f.intl.string(f.t.csrAMD),
+                  (0, r.jsx)(o.Dx, {
+                      className: g.title,
+                      children: m.intl.string(m.t.csrAMD),
                   }),
-                  (0, r.jsx)(a.DK, {
-                      className: m.subtitle,
-                      children: f.intl.string(f.t["m1+IBg"]),
+                  (0, r.jsx)(o.DK, {
+                      className: g.subtitle,
+                      children: m.intl.string(m.t["m1+IBg"]),
                   }),
-                  (0, r.jsx)(a.zx, {
-                      className: m.spacedButton,
-                      onClick: () => (0, c.uL)(p.Z5c.CHANNEL(E)),
-                      children: f.intl.string(f.t.fIv16O),
+                  (0, r.jsx)(o.zx, {
+                      className: g.spacedButton,
+                      onClick: () => (0, c.uL)(p.Z5c.CHANNEL(v)),
+                      children: m.intl.string(m.t.fIv16O),
                   }),
               ],
           })
         : x
-          ? (0, r.jsxs)(a.ZP, {
+          ? (0, r.jsxs)(o.ZP, {
                 children: [
-                    (0, r.jsx)(a.Ee, {
-                        className: m.image,
+                    (0, r.jsx)(o.Ee, {
+                        className: g.image,
                         src: n(73962),
                     }),
-                    (0, r.jsx)(a.Dx, {
-                        className: m.title,
-                        children: f.intl.string(f.t.dAfGb2),
+                    (0, r.jsx)(o.Dx, {
+                        className: g.title,
+                        children: m.intl.string(m.t.dAfGb2),
                     }),
-                    (0, r.jsx)(a.zx, {
-                        onClick: v,
-                        children: f.intl.string(f.t.uJWIj4),
+                    (0, r.jsx)(o.zx, {
+                        onClick: E,
+                        children: m.intl.string(m.t.uJWIj4),
                     }),
                 ],
             })
           : null != b
-            ? (0, r.jsxs)(a.ZP, {
+            ? (0, r.jsxs)(o.ZP, {
                   children: [
-                      (0, r.jsx)(a.Ee, {
-                          className: m.image,
+                      (0, r.jsx)(o.Ee, {
+                          className: g.image,
                           src: n(375673),
                       }),
-                      (0, r.jsx)(a.Dx, {
-                          className: m.title,
-                          children: f.intl.string(f.t.PCgG39),
+                      (0, r.jsx)(o.Dx, {
+                          className: g.title,
+                          children: m.intl.string(m.t.PCgG39),
                       }),
-                      (0, r.jsx)(a.DK, {
-                          className: m.subtitle,
-                          children: f.intl.string(f.t.tQpeAw),
+                      (0, r.jsx)(o.DK, {
+                          className: g.subtitle,
+                          children: m.intl.string(m.t.tQpeAw),
                       }),
-                      (0, r.jsx)(a.zx, {
-                          onClick: v,
-                          children: f.intl.string(f.t.uJWIj4),
+                      (0, r.jsx)(o.zx, {
+                          onClick: E,
+                          children: m.intl.string(m.t.uJWIj4),
                       }),
                   ],
               })
-            : (0, r.jsxs)(a.ZP, {
+            : (0, r.jsxs)(o.ZP, {
                   children: [
-                      (0, r.jsx)(a.Ee, {
-                          className: m.image,
+                      (0, r.jsx)(o.Ee, {
+                          className: g.image,
                           src: n(892235),
                       }),
-                      (0, r.jsx)(a.Dx, {
-                          className: m.title,
-                          children: f.intl.string(f.t["0c8+5u"]),
+                      (0, r.jsx)(o.Dx, {
+                          className: g.title,
+                          children: m.intl.string(m.t["0c8+5u"]),
                       }),
-                      (0, r.jsx)(a.DK, {
-                          className: m.subtitle,
-                          children: f.intl.string(f.t.ULTCBA),
+                      (0, r.jsx)(o.DK, {
+                          className: g.subtitle,
+                          children: m.intl.string(m.t.ULTCBA),
                       }),
-                      (0, r.jsx)(a.zx, {
+                      (0, r.jsx)(o.zx, {
                           submitting: !0,
-                          color: a.zx.Colors.PRIMARY,
+                          color: o.zx.Colors.PRIMARY,
                       }),
                   ],
               });

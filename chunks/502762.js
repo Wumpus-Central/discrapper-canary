@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(576635),
     c = n(213053),
@@ -13,7 +13,7 @@ let f = Object.assign(
         let {
                 user: n,
                 displayProfile: i,
-                themeType: o,
+                themeType: a,
                 className: f,
                 pendingThemeColors: _,
                 themeOverride: p,
@@ -34,13 +34,13 @@ let f = Object.assign(
             }),
             { profileThemeStyle: O, profileThemeClassName: v } = (0, c.Z)({
                 theme: null != p ? p : E,
-                themeType: o,
+                themeType: a,
                 primaryColor: b,
                 secondaryColor: y,
                 forceUserTheme: g,
             });
         return (0, r.jsx)("div", {
-            className: a()(d.outer, v, f),
+            className: o()(d.outer, v, f),
             style: O,
             ref: t,
             children: (0, r.jsx)("div", {
@@ -48,7 +48,7 @@ let f = Object.assign(
                 children: (0, r.jsx)(s.ze6, {
                     theme: null != p ? p : E,
                     children: (0, r.jsx)(u.X, {
-                        themeType: o,
+                        themeType: a,
                         theme: null != p ? p : E,
                         primaryColor: b,
                         secondaryColor: y,
@@ -63,7 +63,7 @@ let f = Object.assign(
             let { children: n, className: i } = e;
             return (0, r.jsx)("div", {
                 ref: t,
-                className: a()(d.overlay, i),
+                className: o()(d.overlay, i),
                 children: n,
             });
         }),

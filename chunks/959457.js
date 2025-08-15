@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => ee }), n(388685);
 var i,
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -45,7 +45,7 @@ let N = {},
     x = {};
 function M(e, t, n, i) {
     return (
-        a()(null != r, "Creating RTCConnection without session."),
+        o()(null != r, "Creating RTCConnection without session."),
         new h.Z({
             sessionId: r,
             streamKey: e,
@@ -58,16 +58,16 @@ function M(e, t, n, i) {
         })
     );
 }
-function j() {
+function k() {
     l().forEach(x, (e, t) => {
         e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete x[t], delete D[t];
     });
 }
-function k(e) {
-    (r = e.sessionId), j();
+function j(e) {
+    (r = e.sessionId), k();
 }
 function U() {
-    (r = null), j();
+    (r = null), k();
 }
 function G(e) {
     let {
@@ -75,8 +75,8 @@ function G(e) {
             guildId: n,
             channelId: r,
             appContext: i,
-            pid: o,
-            sourceId: a,
+            pid: a,
+            sourceId: o,
             nativePickerStyleUsed: s,
             goLiveModalDurationMs: c,
             analyticsLocations: u,
@@ -96,11 +96,11 @@ function G(e) {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
         }),
-        (P[d] = a),
-        (R[d] = o),
-        null != o)
+        (P[d] = o),
+        (R[d] = a),
+        null != a)
     ) {
-        let e = _.ZP.getGameForPID(o);
+        let e = _.ZP.getGameForPID(a);
         null != e &&
             (C[d] = {
                 name: e.name,
@@ -127,12 +127,12 @@ function B(e) {
         (R[n] = null),
         delete w[n];
 }
-function Z(e) {
+function V(e) {
     var t, n, r;
-    let { streamKey: i, rtcServerId: o, rtcChannelId: a, region: s, viewerIds: l } = e,
+    let { streamKey: i, rtcServerId: a, rtcChannelId: o, region: s, viewerIds: l } = e,
         c = x[i],
         u = (0, m.my)(i);
-    if (null == c && null != o) {
+    if (null == c && null != a) {
         null == R[i] && (C[i] = null), null == C[i] && null == P[i] && (C[i] = (0, g.L2)(u, v.Z));
         let e = new h.A({
             streamRegion: s,
@@ -143,7 +143,7 @@ function Z(e) {
             goLiveModalDurationMs: w[i],
             analyticsLocations: null == (n = N[i]) ? void 0 : n.analyticsLocations,
         });
-        (c = M(i, o, a, e)), (x[i] = c);
+        (c = M(i, a, o, e)), (x[i] = c);
     }
     delete D[i],
         d.Z.dispatch({
@@ -162,7 +162,7 @@ function F(e) {
     if (null == t) return !1;
     t.connect(e.endpoint, e.token);
 }
-function V(e) {
+function Z(e) {
     let { connectionStats: t } = e;
     l().forEach(x, (e, n) => {
         e.updateStats(t);
@@ -193,23 +193,23 @@ function K() {
     return !0;
 }
 function z(e) {
-    let { context: t, wants: n, userId: r, guildId: i, channelId: o } = e,
-        a = (0, m.V9)({
+    let { context: t, wants: n, userId: r, guildId: i, channelId: a } = e,
+        o = (0, m.V9)({
             streamType: null == i ? S.lo.CALL : S.lo.GUILD,
             guildId: i,
-            channelId: o,
+            channelId: a,
             ownerId: r,
         });
     if (
         t !== u.Yn.STREAM ||
-        null == x[a] ||
+        null == x[o] ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
             return "any" !== t && 0 !== n;
         })
     )
         return !1;
-    D[a] = performance.now();
+    D[o] = performance.now();
 }
 function q(e) {
     return l().some(x, (t) => t === e.connection);
@@ -313,7 +313,7 @@ let ee = new $(
     !O.Z.isSupported() || __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: k,
+              CONNECTION_OPEN: j,
               CONNECTION_CLOSED: U,
               RTC_CONNECTION_STATE: K,
               RTC_CONNECTION_PING: K,
@@ -323,11 +323,11 @@ let ee = new $(
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: z,
               STREAM_START: G,
               STREAM_STOP: B,
-              STREAM_CREATE: Z,
+              STREAM_CREATE: V,
               STREAM_SERVER_UPDATE: F,
               STREAM_UPDATE: H,
               STREAM_DELETE: Y,
-              MEDIA_ENGINE_CONNECTION_STATS: V,
+              MEDIA_ENGINE_CONNECTION_STATS: Z,
               STREAM_LAYOUT_UPDATE: W,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: X,
               VIDEO_SIZE_UPDATE: Q,

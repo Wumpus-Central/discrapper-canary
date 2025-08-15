@@ -1,24 +1,24 @@
 n.d(t, {
     Dv: () => c,
-    Gq: () => s,
-    Gx: () => _,
-    XX: () => l,
+    Gq: () => a,
+    Gx: () => m,
+    XX: () => s,
     bX: () => d,
     bY: () => u,
-    iG: () => f,
-    ut: () => a,
+    iG: () => p,
+    ut: () => i,
 }),
     n(781311);
 var r = n(446108),
-    i = n(901461),
+    l = n(901461),
     o = n(981631);
-function a(e) {
+function i(e) {
     return "message-content-".concat(e.id);
 }
-function s(e) {
+function a(e) {
     return "message-reply-context-".concat(e.id);
 }
-function l(e, t) {
+function s(e, t) {
     let n = null != t ? t : e.id;
     return "message-username-".concat(n);
 }
@@ -31,39 +31,37 @@ function u(e) {
 function d(e) {
     return "message-accessories-".concat(e.id);
 }
-function f(e, t, n) {
+function p(e, t, n) {
     let u = e.type === o.uaV.REPLY && null != e.messageReference,
-        f = e.embeds.length > 0,
-        _ = e.attachments.length > 0,
-        p = e.stickerItems.length > 0,
-        h = e.codedLinks.length > 0,
-        m = e.components.length > 0,
-        g = e.hasFlag(o.iLy.HAS_THREAD),
-        E = f || _ || p || h || g || m || e.type === o.uaV.THREAD_CREATED,
-        b = f && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
-        y = e.type !== o.uaV.DEFAULT || (!b && "" !== e.content),
-        O = (0, i.Z)(e),
-        v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        I = !O,
-        T = l(e, t),
-        S = s(e),
-        A = u ? S : T,
-        N = I ? "".concat(A, " ").concat(r.Z0) : "";
-    if (y) {
-        let t = a(e);
-        N += " ".concat(t);
-    }
-    if (E) {
-        let t = d(e);
-        N += " ".concat(t);
-    }
+        p = e.embeds.length > 0,
+        m = e.attachments.length > 0,
+        g = e.stickerItems.length > 0,
+        f = e.codedLinks.length > 0,
+        b = e.components.length > 0,
+        h = e.hasFlag(o.iLy.HAS_THREAD),
+        y = p || m || g || f || h || b || e.type === o.uaV.THREAD_CREATED,
+        O = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
+        v = e.type !== o.uaV.DEFAULT || (!O && "" !== e.content),
+        j = (0, l.Z)(e),
+        P = !j && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        x = s(e, t),
+        w = a(e),
+        C = j ? "" : "".concat(u ? w : x, " ").concat(r.Z0);
     if (v) {
-        let t = c(e);
-        N += " ".concat(r.fy, " ").concat(t);
+        let t = i(e);
+        C += " ".concat(t);
     }
-    return N.trim();
+    if (y) {
+        let t = d(e);
+        C += " ".concat(t);
+    }
+    if (P) {
+        let t = c(e);
+        C += " ".concat(r.fy, " ").concat(t);
+    }
+    return C.trim();
 }
-function _(e) {
+function m(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);
     return "".concat(r.Mb, " ").concat(t);

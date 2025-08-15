@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(544891),
     i = n(433517),
-    o = n(570140),
-    a = n(147913),
+    a = n(570140),
+    o = n(147913),
     s = n(865427),
     l = n(710845),
     c = n(70956),
@@ -28,7 +28,7 @@ let h = +c.Z.Millis.HOUR,
     g = +c.Z.Millis.DAY,
     E = i.K.get("lastNonRequiredUpdateShown", Date.now()),
     b = new l.Z("AutoUpdateManager");
-class y extends a.Z {
+class y extends o.Z {
     _initialize() {
         u.isPlatformEmbedded &&
             (f.ZP.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates),
@@ -116,7 +116,7 @@ class y extends a.Z {
                 );
             }),
             p(this, "_handleCheckingForUpdates", () => {
-                o.Z.dispatch({ type: "CHECKING_FOR_UPDATES" });
+                a.Z.dispatch({ type: "CHECKING_FOR_UPDATES" });
             }),
             p(this, "_handleNativeUpdateNotAvailable", () => {
                 this._handleCheckingForUpdates(),
@@ -133,7 +133,7 @@ class y extends a.Z {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || "4f7b05140f133c6f4c55e4860e7ce02577321acf" === e.body.hash)
+                                if (null == e.body || "266f26142a156b6d479434ede53eee47640e94d6" === e.body.hash)
                                     return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, s.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : g;
@@ -147,21 +147,21 @@ class y extends a.Z {
                         );
             }),
             p(this, "_handleUpdateNotAvailable", () => {
-                o.Z.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
+                a.Z.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
             }),
             p(this, "_handleUpdateAvailable", (e) => {
                 (this.updateAvailable = !0),
                     (this.nativeUpdateAvailable = e),
-                    o.Z.dispatch({ type: "UPDATE_AVAILABLE" });
+                    a.Z.dispatch({ type: "UPDATE_AVAILABLE" });
             }),
             p(this, "_handleUpdateManually", () => {
                 (this.updateAvailable = !0),
                     (this.nativeUpdateAvailable = !0),
-                    o.Z.dispatch({ type: "UPDATE_MANUALLY" });
+                    a.Z.dispatch({ type: "UPDATE_MANUALLY" });
             }),
             p(this, "_handleUpdateError", (e) => {
                 (this.updateAvailable = !1),
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "UPDATE_ERROR",
                         message: e,
                     });
@@ -169,7 +169,7 @@ class y extends a.Z {
             p(this, "_handleUpdateDownloaded", (e, t, n, r, i) => {
                 e && (this.nativeUpdatesDownloaded += 1),
                     this._handleUpdateAvailable(e),
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: "UPDATE_DOWNLOADED",
                         releaseNotes: t,
                         releaseName: n,

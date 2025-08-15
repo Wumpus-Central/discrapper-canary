@@ -1,8 +1,8 @@
 n.d(t, { u: () => f }), n(539854), n(35282);
 var r = n(853856),
     i = n(706590),
-    o = n(703656),
-    a = n(769654),
+    a = n(703656),
+    o = n(769654),
     s = n(592125),
     l = n(496675),
     c = n(914010),
@@ -31,6 +31,6 @@ let f = {
                               : u.ZP.getFlattenedGuildIds()[f - 3]
                           : u.ZP.getFlattenedGuildIds()[f - 2])
         )
-            return n === d.ME && null == c.Z.getGuildId() ? (0, o.uL)(d.Z5c.CHANNEL(n)) : (0, a.X)(n), !1;
+            return n === d.ME && null == c.Z.getGuildId() ? (0, a.uL)(d.Z5c.CHANNEL(n)) : (0, o.X)(n), !1;
     },
 };

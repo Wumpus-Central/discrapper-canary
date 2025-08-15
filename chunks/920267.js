@@ -1,14 +1,14 @@
-var r = n(172367);
-e.exports = function (e, t, n) {
-    var i = r.undo(t);
-    if ("spellcheck-change" === t.getLastChangeType()) {
+var n = r(172367);
+t.exports = function (t, e, r) {
+    var i = n.undo(e);
+    if ("spellcheck-change" === e.getLastChangeType()) {
         var o = i.getCurrentContent();
-        n(r.set(i, { nativelyRenderedContent: o }));
+        r(n.set(i, { nativelyRenderedContent: o }));
         return;
     }
-    if ((e.preventDefault(), !t.getNativelyRenderedContent())) return void n(i);
-    n(r.set(t, { nativelyRenderedContent: null })),
+    if ((t.preventDefault(), !e.getNativelyRenderedContent())) return void r(i);
+    r(n.set(e, { nativelyRenderedContent: null })),
         setTimeout(function () {
-            n(i);
+            r(i);
         }, 0);
 };

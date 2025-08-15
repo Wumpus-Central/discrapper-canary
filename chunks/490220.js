@@ -54,7 +54,7 @@ function m(e) {
             userId: m.id,
             image: null != C ? C : f,
         }),
-        I = (0, l.Z)(v, !1);
+        N = (0, l.Z)(v, !1);
     return (0, i.jsx)(d.Z, {
         containerClassName: g,
         user: m,
@@ -63,7 +63,7 @@ function m(e) {
         pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
         pendingAvatar: T,
         pendingThemeColors: null != E ? E : x,
-        pendingAvatarDecoration: I,
+        pendingAvatarDecoration: N,
         pendingProfileEffectId: S,
         avatarClassName: null != C || null != f || h.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,

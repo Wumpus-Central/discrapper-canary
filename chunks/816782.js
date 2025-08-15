@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
-var i = n(570140);
-let r = {
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
     toggleMembersSection() {
-        i.Z.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+        r.Z.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
     },
     toggleUserProfileSidebarSection() {
-        i.Z.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
+        r.Z.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
     },
     toggleSummariesSection() {
-        i.Z.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+        r.Z.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
     },
 };

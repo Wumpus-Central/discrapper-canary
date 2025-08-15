@@ -1,8 +1,8 @@
 n.d(t, { Z: () => J }), n(388685), n(704826), n(35282), n(781311);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(704215),
     c = n(680018),
@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(263198),
     S = n(866419),
     A = n(803038),
-    N = n(771934),
+    N = n(507962),
     C = n(857658),
     R = n(714097),
     P = n(981631),
@@ -32,7 +32,7 @@ var r = n(255367),
     L = n(119475),
     x = n(388032),
     M = n(882741);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -85,17 +85,17 @@ function G(e, t) {
     );
 }
 let B = 0;
-function Z(e) {
+function V(e) {
     let [t, n] = i.useState(0),
-        [r, o] = i.useState(!1),
-        a = i.useRef(e);
+        [r, a] = i.useState(!1),
+        o = i.useRef(e);
     return (
         i.useEffect(() => {
-            e === a.current || r || n((e) => e + 1), (a.current = e), o(!1);
+            e === o.current || r || n((e) => e + 1), (o.current = e), a(!1);
         }, [e, r]),
         {
             key: t,
-            handleInternalChange: i.useCallback((e) => (o(!0), e), []),
+            handleInternalChange: i.useCallback((e) => (a(!0), e), []),
         }
     );
 }
@@ -111,7 +111,7 @@ function F(e) {
         }),
     });
 }
-function V() {
+function Z() {
     return (0, r.jsxs)("div", {
         className: M.headerContainer,
         children: [
@@ -124,7 +124,7 @@ function V() {
                 children: (e) =>
                     (0, r.jsx)(
                         d.SrA,
-                        k(
+                        j(
                             {
                                 size: "custom",
                                 height: 20,
@@ -144,7 +144,7 @@ function H(e) {
     return (0, E.Nj)(l.z.CUSTOM_THEME_COACHMARK)
         ? n
             ? (0, r.jsx)(Y, { markAsDismissed: t })
-            : (0, r.jsx)(V, {})
+            : (0, r.jsx)(Z, {})
         : (0, r.jsx)(Y, { markAsDismissed: () => (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
 }
 function Y(e) {
@@ -180,7 +180,7 @@ function Y(e) {
 }
 function W(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: o, handleInternalChange: s } = Z(t),
+        { key: a, handleInternalChange: s } = V(t),
         [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
     i.useEffect(() => {
         c("".concat(Math.round(t), "\xB0"));
@@ -194,7 +194,7 @@ function W(e) {
         c("".concat(i, "\xB0")), (0, N.fR)(), n(i);
     };
     return (0, r.jsxs)("div", {
-        className: a()(M.sliderContainer, M.gradientDirectionSliderContainer),
+        className: o()(M.sliderContainer, M.gradientDirectionSliderContainer),
         children: [
             (0, r.jsxs)("div", {
                 className: M.controlLabelContainer,
@@ -225,14 +225,14 @@ function W(e) {
                     onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                o,
+                a,
             ),
         ],
     });
 }
 function K(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: o, handleInternalChange: a } = Z(t),
+        { key: a, handleInternalChange: o } = V(t),
         [s, l] = i.useState("".concat(Math.round(t), "%"));
     i.useEffect(() => {
         l("".concat(Math.round(t), "%"));
@@ -272,12 +272,12 @@ function K(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, N.z3)(), a(e), n(e);
+                        (0, N.z3)(), o(e), n(e);
                     },
                     onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                o,
+                a,
             ),
         ],
     });
@@ -313,7 +313,7 @@ function q(e) {
         children: (e) =>
             (0, r.jsx)(
                 c.z,
-                G(k({}, e), {
+                G(j({}, e), {
                     variant: "primary",
                     onClick: t,
                     disabled: n,
@@ -350,8 +350,8 @@ function X(e) {
 }
 function Q(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        o = (0, y.m)(D.p9.TIER_2);
-    (0, N.hf)(o, h.Z.CUSTOM_THEMES_EDITOR);
+        a = (0, y.m)(D.p9.TIER_2);
+    (0, N.hf)(a, h.Z.CUSTOM_THEMES_EDITOR);
     let s = () => {
             (0, N.Vb)(),
                 (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
@@ -361,10 +361,10 @@ function Q(e) {
                       ? (0, g.XO)(g.wh.CLIENT_THEMES)
                       : (0, g.Ll)();
         },
-        u = a()(M.footerContainer, { [M.footerContainerNonPremium]: !o });
+        u = o()(M.footerContainer, { [M.footerContainerNonPremium]: !a });
     return (0, r.jsx)("div", {
         className: u,
-        children: o
+        children: a
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(c.z, {
@@ -401,7 +401,7 @@ function Q(e) {
 }
 function J(e) {
     var t;
-    let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
+    let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
         u = A.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
         _ = (0, S.jJ)(),
         b = (0, S.SK)(),
@@ -410,18 +410,18 @@ function J(e) {
             colors: T,
             chassisMixAmount: P,
             gradientAngle: D,
-            setColors: j,
-            setChassisMixAmount: k,
+            setColors: k,
+            setChassisMixAmount: j,
             setGradientAngle: U,
         } = (0, I.Ig)(),
         [G, B] = i.useState(null != (t = T[0]) ? t : I.Dp),
-        Z = (0, s.e7)([v.Z], () => v.Z.theme),
+        V = (0, s.e7)([v.Z], () => v.Z.theme),
         F = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: V } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
+        { analyticsLocations: Z } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
         Y = async () => {
             (y.current = !0),
                 await (0, f.ZI)({
-                    theme: Z,
+                    theme: V,
                     customUserThemeSettings: {
                         colors: T,
                         gradientColorStops: [],
@@ -429,8 +429,8 @@ function J(e) {
                         baseMix: P,
                     },
                 }),
-                (0, N.u7)(T, P, D, Z, V),
-                null == o || o(w.L.TAKE_ACTION),
+                (0, N.u7)(T, P, D, V, Z),
+                null == a || a(w.L.TAKE_ACTION),
                 F || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
@@ -446,7 +446,7 @@ function J(e) {
         [_],
     ),
     (0, p.ZP)(() => {
-        a || (0, S.lT)(T, G, j);
+        o || (0, S.lT)(T, G, k);
     }),
     u)
         ? (0, r.jsxs)("div", {
@@ -458,8 +458,8 @@ function J(e) {
                           className: M.editorBody,
                           children: [
                               (0, r.jsx)(H, {
-                                  markAsDismissed: o,
-                                  isCoachmark: a,
+                                  markAsDismissed: a,
+                                  isCoachmark: o,
                               }),
                               (0, r.jsxs)("div", {
                                   className: M.section,
@@ -482,11 +482,11 @@ function J(e) {
                                       }),
                                       (0, r.jsx)(C.U, {
                                           onChange: (e) => {
-                                              B(e), 0 === T.length && (0, S.lT)(T, e, j);
+                                              B(e), 0 === T.length && (0, S.lT)(T, e, k);
                                           },
                                           value: G,
                                           colors: T,
-                                          setColors: j,
+                                          setColors: k,
                                       }),
                                   ],
                               }),
@@ -506,7 +506,7 @@ function J(e) {
                                       (0, r.jsx)(K, {
                                           chassisMixAmount: P,
                                           setChassisMixAmount: (e) => {
-                                              k(e), 0 === T.length && (0, S.lT)(T, G, j);
+                                              j(e), 0 === T.length && (0, S.lT)(T, G, k);
                                           },
                                       }),
                                   ],
@@ -527,7 +527,7 @@ function J(e) {
                           ],
                       }),
                   }),
-                  a
+                  o
                       ? (0, r.jsx)(X, {
                             onSaveTheme: Y,
                             canApply: J,

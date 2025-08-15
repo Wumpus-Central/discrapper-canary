@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s }), n(997841), n(953529);
 var r = n(81825),
     i = n(218946),
-    o = n(598077);
-function a(e, t, n) {
+    a = n(598077);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ class s extends r.Z {
                 null != t
                     ? {
                           content: t.content,
-                          user: null != t.user ? new o.Z(t.user) : null,
+                          user: null != t.user ? new a.Z(t.user) : null,
                       }
                     : null,
             guild:
@@ -71,33 +71,33 @@ class s extends r.Z {
         return null == this.description;
     }
     constructor(e) {
-        var t, n, r, i, o, s, l, c, u, d, f, _, p;
+        var t, n, r, i, a, s, l, c, u, d, f, _, p;
         super(),
-            a(this, "id", void 0),
-            a(this, "applicationId", void 0),
-            a(this, "skuId", void 0),
-            a(this, "skuFlags", void 0),
-            a(this, "summary", void 0),
-            a(this, "tagline", void 0),
-            a(this, "flavorText", void 0),
-            a(this, "description", void 0),
-            a(this, "carouselItems", void 0),
-            a(this, "childSkuIds", void 0),
-            a(this, "alternativeSkuIds", void 0),
-            a(this, "assets", void 0),
-            a(this, "staffNotes", void 0),
-            a(this, "guild", void 0),
-            a(this, "thumbnail", void 0),
-            a(this, "boxArt", void 0),
-            a(this, "previewVideo", void 0),
-            a(this, "headerBackground", void 0),
-            a(this, "headerLogoDarkTheme", void 0),
-            a(this, "headerLogoLightTheme", void 0),
-            a(this, "heroBackground", void 0),
-            a(this, "heroVideo", void 0),
-            a(this, "entitlementBranchId", void 0),
-            a(this, "benefits", void 0),
-            a(this, "published", void 0),
+            o(this, "id", void 0),
+            o(this, "applicationId", void 0),
+            o(this, "skuId", void 0),
+            o(this, "skuFlags", void 0),
+            o(this, "summary", void 0),
+            o(this, "tagline", void 0),
+            o(this, "flavorText", void 0),
+            o(this, "description", void 0),
+            o(this, "carouselItems", void 0),
+            o(this, "childSkuIds", void 0),
+            o(this, "alternativeSkuIds", void 0),
+            o(this, "assets", void 0),
+            o(this, "staffNotes", void 0),
+            o(this, "guild", void 0),
+            o(this, "thumbnail", void 0),
+            o(this, "boxArt", void 0),
+            o(this, "previewVideo", void 0),
+            o(this, "headerBackground", void 0),
+            o(this, "headerLogoDarkTheme", void 0),
+            o(this, "headerLogoLightTheme", void 0),
+            o(this, "heroBackground", void 0),
+            o(this, "heroVideo", void 0),
+            o(this, "entitlementBranchId", void 0),
+            o(this, "benefits", void 0),
+            o(this, "published", void 0),
             (this.id = e.id),
             (this.applicationId = e.applicationId),
             (this.skuId = e.skuId),
@@ -112,7 +112,7 @@ class s extends r.Z {
             (this.assets = null != (i = e.assets) ? i : []),
             (this.staffNotes = e.staffNotes),
             (this.guild = e.guild),
-            (this.thumbnail = null != (o = e.thumbnail) ? o : null),
+            (this.thumbnail = null != (a = e.thumbnail) ? a : null),
             (this.boxArt = null != (s = e.boxArt) ? s : null),
             (this.previewVideo = null != (l = e.previewVideo) ? l : null),
             (this.headerBackground = null != (c = e.headerBackground) ? c : null),

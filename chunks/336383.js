@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(785717),
@@ -70,9 +70,9 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,15 +81,15 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = i.forwardRef(function (e, t) {
     var {
             children: n,
             className: i,
-            subsection: o,
+            subsection: a,
             onAction: m,
             onClose: E,
             "aria-label": O,
@@ -109,7 +109,7 @@ let v = i.forwardRef(function (e, t) {
                       g(
                           {
                               ref: t,
-                              className: a()(h.card, i),
+                              className: o()(h.card, i),
                           },
                           I,
                       ),
@@ -130,7 +130,7 @@ let v = i.forwardRef(function (e, t) {
                                   {
                                       section: _.oh.ACTIVITY,
                                       sourceAnalyticsLocations: S,
-                                      subsection: o,
+                                      subsection: a,
                                   },
                                   A,
                               ),
@@ -143,7 +143,7 @@ let v = i.forwardRef(function (e, t) {
                           g(
                               {
                                   ref: t,
-                                  className: a()(h.card, i),
+                                  className: o()(h.card, i),
                               },
                               I,
                           ),

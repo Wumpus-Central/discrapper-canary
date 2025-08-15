@@ -3,12 +3,12 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     a = n(239091),
-    s = n(299206),
-    o = n(726521),
+    o = n(299206),
+    s = n(726521),
     c = n(99325),
     u = n(683818),
     d = n(388032);
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function h(e) {
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,44 +52,44 @@ function p(e, t) {
     );
 }
 function f(e) {
-    let { entry: t, onSelect: f, closePopout: g, hideEditButton: m = !1 } = e,
-        { isEntryAdmin: b, canEdit: y, canRemove: x } = (0, u.Z)(t),
-        j = (0, s.Z)({
+    let { entry: t, onSelect: f, closePopout: m, hideEditButton: g = !1 } = e,
+        { isEntryAdmin: b, canEdit: y, canRemove: _ } = (0, u.Z)(t),
+        C = (0, o.Z)({
             id: t.guildId,
             label: d.intl.string(d.t["94lLDw"]),
-            onSuccess: g,
+            onSuccess: m,
         });
     i.useEffect(() => {
-        y || x || null != j || (0, a.Zy)();
+        y || _ || null != C || (0, a.Zy)();
     });
-    let _ = () => {
+    let x = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function O() {
-        (0, a.Zy)(), null == g || g();
+    function v() {
+        (0, a.Zy)(), null == m || m();
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "guild-entry-context",
-        onClose: O,
+        onClose: v,
         "aria-label": d.intl.string(d.t.HpQykZ),
         onSelect: f,
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    y && !m
+                    y && !g
                         ? (0, r.jsx)(l.sNh, {
                               id: "update-entry",
                               label: d.intl.string(d.t.XnuOvL),
                               action: function () {
                                   (0, l.ZDy)(async () => {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                      return (n) => (0, r.jsx)(e, p(h({}, n), { entry: t }));
+                                      return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
-                                      O();
+                                      v();
                               },
                           })
                         : null,
-                    x
+                    _
                         ? (0, r.jsx)(l.sNh, {
                               id: "remove-from-hub",
                               label: d.intl.string(d.t.KUxYWF),
@@ -97,13 +97,13 @@ function f(e) {
                                   (0, l.h7j)((e) =>
                                       (0, r.jsx)(
                                           l.ConfirmModal,
-                                          p(
-                                              h(
+                                          h(
+                                              p(
                                                   {
                                                       header: d.intl.string(d.t.KUxYWF),
                                                       confirmText: d.intl.string(d.t.N86XcH),
                                                       cancelText: d.intl.string(d.t["ETE/oK"]),
-                                                      onConfirm: _,
+                                                      onConfirm: x,
                                                   },
                                                   e,
                                               ),
@@ -116,7 +116,7 @@ function f(e) {
                                           ),
                                       ),
                                   ),
-                                      O();
+                                      v();
                               },
                               color: "danger",
                           })
@@ -127,14 +127,14 @@ function f(e) {
                               id: "report-server-listing",
                               label: d.intl.string(d.t.Aen9en),
                               action: function () {
-                                  null != t && ((0, o.sq)(t), O());
+                                  null != t && ((0, s.sq)(t), v());
                               },
                               icon: l.U65,
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(l.kSQ, { children: j }),
+            (0, r.jsx)(l.kSQ, { children: C }),
         ],
     });
 }

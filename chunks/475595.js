@@ -21,8 +21,8 @@ n.d(t, {
     n(388685);
 var r = n(887003),
     i = n(591759),
-    o = n(921948),
-    a = n(509212),
+    a = n(921948),
+    o = n(509212),
     s = n(46140),
     l = n(981631),
     c = n(380299),
@@ -47,18 +47,18 @@ var p = (function (e) {
 function h(e, t, n) {
     let r = b(e, t, n),
         i = y(t),
-        o = null != i && _.includes(i);
+        a = null != i && _.includes(i);
     return {
         url: r,
         mimetype: i,
-        isAnimated: o,
+        isAnimated: a,
     };
 }
 function m(e, t) {
     return null != e ? e : t;
 }
 function g(e, t, n, i) {
-    var o, l;
+    var a, l;
     let d;
     switch (t) {
         case "hero":
@@ -71,9 +71,9 @@ function g(e, t, n, i) {
             let t = e.config.assets.heroVideo,
                 n =
                     "videoMetadata" in e.config
-                        ? null == (o = e.config.videoMetadata)
+                        ? null == (a = e.config.videoMetadata)
                             ? void 0
-                            : o.assets.questHomeVideo
+                            : a.assets.questHomeVideo
                         : null,
                 r = null != t ? t : n;
             if (null == r) return null;
@@ -97,7 +97,7 @@ function g(e, t, n, i) {
             break;
         }
         case "reward": {
-            let t = (0, a.hF)(e);
+            let t = (0, o.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY)
                 return i
                     ? {
@@ -114,7 +114,7 @@ function g(e, t, n, i) {
             break;
         }
         case "reward_image": {
-            let t = (0, a.hF)(e);
+            let t = (0, o.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY) return null;
             d = t.asset;
             break;
@@ -182,7 +182,7 @@ function O(e) {
     return Math.min(Math.ceil(e), l.hiG);
 }
 function v(e, t) {
-    let n = (0, o.Z)();
+    let n = (0, a.Z)();
     return n < d
         ? {
               width: e,

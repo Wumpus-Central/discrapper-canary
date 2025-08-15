@@ -1,52 +1,52 @@
-n.d(t, { T: () => m }), n(388685);
+n.d(t, { T: () => g }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(346486),
-    s = n(545594),
-    l = n(314897),
+    o = n(545594),
+    s = n(314897),
     c = n(271383),
     u = n(322937),
     d = n(134049),
-    f = n(893732),
-    _ = n(590433),
-    p = n(388032),
-    h = n(105095);
-function m(e) {
+    p = n(893732),
+    h = n(590433),
+    f = n(388032),
+    m = n(105095);
+function g(e) {
     let { guild: t, disabledUntil: n } = e,
-        [m, g] = (0, d.i)(t.id),
-        E = (0, i.e7)([c.ZP, l.default], () => c.ZP.getMember(t.id, l.default.getId()), [t.id]);
-    (0, u.$)(E);
-    let b = () =>
-        m
-            ? (0, r.jsx)(f.Z, {
-                  onClose: () => g(t.id),
-                  guildName: t.name,
-              })
-            : null;
-    return (0, r.jsxs)("div", {
-        children: [
-            b(),
-            (0, r.jsx)(s.i, {
-                bannerIcon: (0, r.jsx)(o.YlB, {
-                    size: "md",
-                    color: "currentColor",
-                    className: h.bannerIcon,
-                }),
-                bannerHeader: p.intl.string(p.t["9UoK6e"]),
-                bannerSubtext: p.intl.format(p.t["4ZwD5O"], { link: _.cu }),
-                textStyles: h.bannerContainer,
-                headerStyles: h.bannerHeader,
-                children: (0, r.jsx)(o.Text, {
-                    variant: "text-sm/semibold",
-                    children: (0, r.jsx)(a.Z, {
-                        deadline: new Date(n),
-                        showUnits: !0,
-                        stopAtOneSec: !0,
+        [g, b] = (0, d.i)(t.id),
+        y = (0, i.e7)([c.ZP, s.default], () => c.ZP.getMember(t.id, s.default.getId()), [t.id]);
+    return (
+        (0, u.$)(y),
+        (0, r.jsxs)("div", {
+            children: [
+                g
+                    ? (0, r.jsx)(p.Z, {
+                          onClose: () => b(t.id),
+                          guildName: t.name,
+                      })
+                    : null,
+                (0, r.jsx)(o.i, {
+                    bannerIcon: (0, r.jsx)(l.YlB, {
+                        size: "md",
+                        color: "currentColor",
+                        className: m.bannerIcon,
+                    }),
+                    bannerHeader: f.intl.string(f.t["9UoK6e"]),
+                    bannerSubtext: f.intl.format(f.t["4ZwD5O"], { link: h.cu }),
+                    textStyles: m.bannerContainer,
+                    headerStyles: m.bannerHeader,
+                    children: (0, r.jsx)(l.Text, {
+                        variant: "text-sm/semibold",
+                        children: (0, r.jsx)(a.Z, {
+                            deadline: new Date(n),
+                            showUnits: !0,
+                            stopAtOneSec: !0,
+                        }),
                     }),
                 }),
-            }),
-        ],
-    });
+            ],
+        })
+    );
 }

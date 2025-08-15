@@ -1,6 +1,6 @@
 n.d(t, {
     Iu: () => G,
-    Jw: () => k,
+    Jw: () => j,
     _r: () => B,
     cX: () => F,
     lv: () => U,
@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(392711),
     i = n.n(r),
-    o = n(490757),
-    a = n(429827),
+    a = n(490757),
+    o = n(429827),
     s = n(353928),
     l = n(336892),
     c = n(624833),
@@ -41,11 +41,11 @@ let x = {
         start: 10,
         end: 15,
     },
-    M = [o],
-    j = [a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
-    k = {
+    M = [a],
+    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    j = {
         [D.q.BASIC]: M,
-        [D.q.PREMIUM]: j,
+        [D.q.PREMIUM]: k,
     },
     U = i().memoize(
         (e) =>
@@ -68,7 +68,7 @@ let x = {
             }),
     ),
     G = (e, t) => {
-        let n = k[e];
+        let n = j[e];
         if (null != t && e === D.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
@@ -89,7 +89,7 @@ function B(e) {
         i = N.ZP.getByName(r);
     return null != i ? w.ZP.getURL(i.surrogates) : "";
 }
-function Z(e, t) {
+function V(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -100,10 +100,10 @@ function Z(e, t) {
         .value();
 }
 function F(e) {
-    var t, n, r, i, o, a;
+    var t, n, r, i, a, o;
     if (e.length < 1) return "";
-    let s = Z(e, "userId"),
-        l = Z(e, "emojiName"),
+    let s = V(e, "userId"),
+        l = V(e, "emojiName"),
         c = l.length < 2 ? (null != (t = null == l ? void 0 : l[0]) ? t : "") : l.join(", ");
     return s.length < 1
         ? ""
@@ -119,8 +119,8 @@ function F(e) {
                   emojiNames: c,
               })
             : L.intl.formatToPlainString(L.t["/okjv7"], {
-                  firstUsername: null == (o = R.default.getUser(s[0])) ? void 0 : o.username,
-                  secondUsername: null == (a = R.default.getUser(s[1])) ? void 0 : a.username,
+                  firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
+                  secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,
                   emojiNames: c,
               });

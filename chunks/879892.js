@@ -2,8 +2,8 @@ n.d(t, { u: () => v }), n(539854), n(993155), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(355467),
-    a = n(179360),
+    a = n(355467),
+    o = n(179360),
     s = n(821849),
     l = n(594174),
     c = n(314884),
@@ -70,9 +70,9 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,8 +81,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let O = "apply-guild-boost-modal";
@@ -120,11 +120,11 @@ async function v(e) {
         );
     let x = [];
     u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()),
-        c.Z.hasFetched || (x.push(o.jg()), x.push((0, a.X8)())),
+        c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())),
         x.length > 0 && (await Promise.allSettled(x));
     let M = (0, f.vx)(c.Z.boostSlots),
-        j = M.length,
-        k = (e) => {
+        k = M.length,
+        j = (e) => {
             null == v || v(), null == N || N(e);
         },
         U = () => {
@@ -135,9 +135,9 @@ async function v(e) {
                     location_section: h.section,
                 });
         };
-    if (j > 0 && (null == y || j >= y)) {
+    if (k > 0 && (null == y || k >= y)) {
         let e;
-        1 === j ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
+        1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -148,12 +148,12 @@ async function v(e) {
                     ]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
-                            o = b(n, ["onClose"]);
+                            a = b(n, ["onClose"]);
                         return (0, r.jsx)(
                             t,
-                            E(m({}, o), {
+                            E(m({}, a), {
                                 onClose: (e) => {
-                                    i(), k(e);
+                                    i(), j(e);
                                 },
                                 selectedGuild: A,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -165,7 +165,7 @@ async function v(e) {
                 {
                     modalKey: O,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(O), k(!1);
+                        (0, i.Mr3)(O), j(!1);
                     },
                     contextKey: D,
                 },
@@ -178,7 +178,7 @@ async function v(e) {
             guildId: A.id,
             closeLayer: U,
             totalNumberOfSlotsToAssign: null != y ? y : 1,
-            onCloseModal: k,
+            onCloseModal: j,
             disablePremiumUpsell: C,
             onSubscriptionConfirmation: T,
             onSubscribeComplete: S,

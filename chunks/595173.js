@@ -18,7 +18,7 @@ var r = {
     "./stickers-launch/2020_PMM_STICKERS_Mrkt_Mobile_FooterCTA_343x78.png": "199612",
     "./store.jpg": "926213",
 };
-function i(e) {
+function l(e) {
     return n(o(e));
 }
 function o(e) {
@@ -28,9 +28,9 @@ function o(e) {
     }
     return r[e];
 }
-(i.keys = function () {
+(l.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = o),
-    (e.exports = i),
-    (i.id = 595173);
+    (l.resolve = o),
+    (e.exports = l),
+    (l.id = 595173);

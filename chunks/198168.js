@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,7 +28,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -47,9 +47,9 @@ let l = {
 function u(e) {
     let { data: t } = e,
         n = c[t.component],
-        o = t.props;
+        a = t.props;
     return (0, r.jsx)(i.Suspense, {
         fallback: null,
-        children: (0, r.jsx)(n, a({}, o)),
+        children: (0, r.jsx)(n, o({}, a)),
     });
 }

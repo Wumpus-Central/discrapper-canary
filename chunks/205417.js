@@ -8,10 +8,10 @@ e.exports = function (e) {
             contains: ["self", e.C_NUMBER_MODE, n],
         },
         i = e.COMMENT(/--/, /$/),
-        o = e.COMMENT(/\(\*/, /\*\)/, {
+        a = e.COMMENT(/\(\*/, /\*\)/, {
             contains: ["self", i],
         }),
-        a = [i, o, e.HASH_COMMENT_MODE],
+        o = [i, a, e.HASH_COMMENT_MODE],
         s = [
             /apart from/,
             /aside from/,
@@ -86,7 +86,7 @@ e.exports = function (e) {
                 illegal: /[${=;\n]/,
                 contains: [e.UNDERSCORE_TITLE_MODE, r],
             },
-            ...a,
+            ...o,
         ],
         illegal: /\/\/|->|=>|\[\[/,
     };

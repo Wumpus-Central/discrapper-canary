@@ -1,19 +1,19 @@
 n.d(t, {
-    P0: () => o,
+    P0: () => a,
     nb: () => s,
     pz: () => i,
     wx: () => r,
 });
 var r,
     i,
-    o,
-    a = n(119585);
+    a,
+    o = n(119585);
 function s(e) {
     var t, n, r, i;
     return (
-        (e.localName = null != (t = e.localName) ? t : (0, a.c)(e.name)),
-        (e.jsonName = null != (n = e.jsonName) ? n : (0, a.c)(e.name)),
-        (e.repeat = null != (r = e.repeat) ? r : o.NO),
+        (e.localName = null != (t = e.localName) ? t : (0, o.c)(e.name)),
+        (e.jsonName = null != (n = e.jsonName) ? n : (0, o.c)(e.name)),
+        (e.repeat = null != (r = e.repeat) ? r : a.NO),
         (e.opt = null != (i = e.opt) ? i : !e.repeat && !e.oneof && "message" == e.kind),
         e
     );
@@ -40,4 +40,4 @@ function s(e) {
     })(i || (i = {})),
     (function (e) {
         (e[(e.NO = 0)] = "NO"), (e[(e.PACKED = 1)] = "PACKED"), (e[(e.UNPACKED = 2)] = "UNPACKED");
-    })(o || (o = {}));
+    })(a || (a = {}));

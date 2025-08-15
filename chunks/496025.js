@@ -13,8 +13,8 @@ var n = a(255367),
     h = a(592125),
     p = a(699516),
     b = a(594174),
-    f = a(55589),
-    v = a(630388),
+    v = a(55589),
+    f = a(630388),
     j = a(98357),
     g = a(432877),
     _ = a(246992),
@@ -23,7 +23,7 @@ var n = a(255367),
     N = a(451429);
 function O() {
     var e;
-    let t = (0, o.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
+    let t = (0, o.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
         [a, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
         { selectedChannel: i, options: d } = (0, o.cj)([h.Z, b.default, p.Z], () => ({
             selectedChannel: h.Z.getChannel(a),
@@ -38,13 +38,13 @@ function O() {
         j = r.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
-            let t = (0, v.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            let t = (0, f.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             x.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
         g =
             null != i &&
             !!i.isPrivate() &&
-            (0, v.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            (0, f.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(c.Text, {

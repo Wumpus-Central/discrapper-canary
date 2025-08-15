@@ -1,114 +1,108 @@
-n.d(t, { W: () => v });
+n.d(t, { W: () => C });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(772848),
-    s = n(755721),
-    l = n(481060),
+    o = n(755721),
+    s = n(481060),
     c = n(626135),
     u = n(617136),
     d = n(497505),
-    f = n(110560),
-    _ = n(266843),
-    p = n(46140),
-    h = n(981631),
-    m = n(388032),
-    g = n(815648),
-    E = n(87181);
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function O(e) {
-    let { questId: t } = e,
-        n = () => {
-            (0, f.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
-                c.default.track(
-                    h.rMx.QUEST_CONTENT_CLICKED,
-                    y(
-                        {
-                            quest_id: t,
-                            click_id: (0, a.Z)(),
-                            cta_name: u.jZ.VIEW_QUESTS,
-                            is_targeted: !1,
-                        },
-                        (0, u.mH)(d.jn.EXCLUDED_QUEST_EMBED),
-                    ),
-                );
-        };
+    p = n(110560),
+    m = n(266843),
+    f = n(46140),
+    _ = n(981631),
+    g = n(388032),
+    h = n(815648),
+    b = n(87181);
+function E(e) {
+    let { questId: t } = e;
     return (0, r.jsx)("div", {
-        className: g.buttonContainer,
-        children: (0, r.jsx)(s.zx, {
-            className: g.button,
-            color: s.Tt.BRAND,
-            onClick: n,
-            children: m.intl.string(m.t.GURBQk),
+        className: h.buttonContainer,
+        children: (0, r.jsx)(o.zx, {
+            className: h.button,
+            color: o.Tt.BRAND,
+            onClick: () => {
+                (0, p.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
+                    c.default.track(
+                        _.rMx.QUEST_CONTENT_CLICKED,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                quest_id: t,
+                                click_id: (0, a.Z)(),
+                                cta_name: u.jZ.VIEW_QUESTS,
+                                is_targeted: !1,
+                            },
+                            (0, u.mH)(d.jn.EXCLUDED_QUEST_EMBED),
+                        ),
+                    );
+            },
+            children: g.intl.string(g.t.GURBQk),
         }),
     });
 }
-function v(e) {
+function C(e) {
     let { questId: t } = e,
-        { containerRef: n, size: i } = (0, _.h)();
+        { containerRef: n, size: i } = (0, m.h)();
     return (
-        (0, u.Zk)(p.V_.EXCLUDED_QUEST, t),
+        (0, u.Zk)(f.V_.EXCLUDED_QUEST, t),
         (0, r.jsxs)("div", {
             ref: (e) => {
                 n.current = e;
             },
-            className: o()(g.container, {
-                [g.wide]: "lg" === i,
-                [g.tall]: "lg" !== i,
+            className: l()(h.container, {
+                [h.wide]: "lg" === i,
+                [h.tall]: "lg" !== i,
             }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: g.contentContainer,
+                    className: h.contentContainer,
                     children: [
-                        (0, r.jsx)(l.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "lg" === i ? "heading-xl/bold" : "heading-lg/bold",
                             color: "header-primary",
-                            children: m.intl.string(m.t.vnP31d),
+                            children: g.intl.string(g.t.vnP31d),
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "lg" === i ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: g.__invalid_mobileWebCopy,
-                            children: m.intl.string(m.t.nuWSYW),
+                            className: h.__invalid_mobileWebCopy,
+                            children: g.intl.string(g.t.nuWSYW),
                         }),
-                        (0, r.jsx)(O, { questId: t }),
+                        (0, r.jsx)(E, { questId: t }),
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: g.imgContainer,
+                    className: h.imgContainer,
                     children: (0, r.jsx)("img", {
-                        src: E,
+                        src: b,
                         alt: "",
-                        className: g.missingQuestImage,
+                        className: h.missingQuestImage,
                     }),
                 }),
             ],

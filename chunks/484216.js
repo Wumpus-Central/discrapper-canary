@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     initODS: function () {},
     handleExtensionCausedError: function () {},
 };

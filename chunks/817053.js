@@ -86,14 +86,14 @@ function g(e) {
         }),
         y = null != n ? n : d.intl.string(d.t.GIWFlJ),
         O = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: y }),
-        x = (e) =>
+        h = (e) =>
             b
                 ? e()
                 : (0, r.jsx)(a.ua7, {
                       text: y,
                       children: (t) => e(t),
                   });
-    return x(
+    return h(
         null == j
             ? (e) =>
                   (0, r.jsx)(

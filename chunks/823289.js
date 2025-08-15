@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(286379),
     i = n(15624),
-    o = n(797614),
-    a = n(626135),
+    a = n(797614),
+    o = n(626135),
     s = n(446276),
     l = n(46140),
     c = n(981631);
@@ -30,14 +30,14 @@ class _ {
     }
     sendMetric(e, t, n) {
         Math.random() > f ||
-            (o.Z.distribution(
+            (a.Z.distribution(
                 {
                     name: r.V.QUEST_BAR_RENDER_DELAY,
                     tags: ["quest_id:".concat(e), "timeout:".concat(t)],
                 },
                 n,
             ),
-            a.default.track(c.rMx.QUEST_BAR_RENDER_DELAY, {
+            o.default.track(c.rMx.QUEST_BAR_RENDER_DELAY, {
                 quest_id: e,
                 timeout: t,
                 duration: n,

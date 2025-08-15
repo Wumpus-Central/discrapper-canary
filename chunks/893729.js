@@ -1,48 +1,48 @@
-n.d(t, { Z: () => E });
-var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    o = n.n(l),
-    u = n(442837),
+n.d(t, { Z: () => C });
+var i = n(255367),
+    r = n(73800),
+    s = n(120356),
+    l = n.n(s),
+    o = n(442837),
     a = n(481060),
-    s = n(518738),
+    u = n(518738),
     c = n(786761),
     d = n(3148),
-    f = n(753206),
-    m = n(594174),
-    p = n(5192),
-    v = n(981631),
-    g = n(388032),
-    b = n(914933);
-function E(e) {
-    let { guildId: t, role: n, theme: l, content: E = g.intl.string(g.t["6OSasb"]), className: O } = e,
-        y = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
-        S = p.ZP.useName(t, null, y),
-        j = (0, s.Kz)(n),
-        _ = i.useMemo(() => {
+    h = n(753206),
+    p = n(594174),
+    g = n(5192),
+    f = n(981631),
+    v = n(388032),
+    m = n(914933);
+function C(e) {
+    let { guildId: t, role: n, theme: s, content: C = v.intl.string(v.t["6OSasb"]), className: b } = e,
+        y = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        O = g.ZP.useName(t, null, y),
+        S = (0, u.Kz)(n),
+        E = r.useMemo(() => {
             var e, t;
             return (0, c.e5)(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
@@ -50,7 +50,7 @@ function E(e) {
                     {},
                     (0, d.ZP)({
                         channelId: "0",
-                        content: E,
+                        content: C,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
@@ -60,7 +60,7 @@ function E(e) {
                 )),
                 (t = t =
                     {
-                        state: v.yb.SENT,
+                        state: f.yb.SENT,
                         id: "0",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -68,8 +68,8 @@ function E(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(t)).forEach(function (n) {
@@ -77,22 +77,22 @@ function E(e) {
                       }),
                 e),
             );
-        }, [y, E]),
-        h = {
-            nick: S,
+        }, [y, C]),
+        _ = {
+            nick: O,
             colorString: n.colorString,
             colorStrings: n.colorStrings,
         };
-    return (0, r.jsx)(a.f6W, {
-        theme: l,
+    return (0, i.jsx)(a.f6W, {
+        theme: s,
         children: (e) =>
-            (0, r.jsx)("div", {
-                className: o()(e, b.container, O),
-                children: (0, r.jsx)(f.Z, {
+            (0, i.jsx)("div", {
+                className: l()(e, m.container, b),
+                children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
-                    author: h,
-                    roleIcon: j,
-                    message: _,
+                    author: _,
+                    roleIcon: S,
+                    message: E,
                     isGroupStart: !0,
                     disableInteraction: !0,
                 }),

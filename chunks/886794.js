@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -16,8 +16,8 @@ var r = n(255367),
     j = n(280885),
     y = n(900927),
     O = n(678738),
-    x = n(502762),
-    h = n(530),
+    h = n(502762),
+    x = n(530),
     v = n(679332),
     _ = n(544989),
     I = n(228168),
@@ -26,12 +26,12 @@ var r = n(255367),
     T = n(673517),
     Z = n(54966),
     N = n(602727);
-function S(e) {
+function w(e) {
     let {
             user: t,
             guildId: n,
-            channelId: S,
-            messageId: w,
+            channelId: w,
+            messageId: S,
             roleId: A,
             sessionId: C,
             transitionState: D,
@@ -41,7 +41,7 @@ function S(e) {
         } = e,
         k = n === P.ME ? void 0 : n,
         B = (0, p.ZP)(t.id, k),
-        M = u.ZP.getName(k, S, t),
+        M = u.ZP.getName(k, w, t),
         U = (0, s.Dt)(),
         { analyticsLocations: F } = (0, c.ZP)([...G, a.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
@@ -49,8 +49,8 @@ function S(e) {
             userId: t.id,
             sourceSessionId: C,
             guildId: k,
-            channelId: S,
-            messageId: w,
+            channelId: w,
+            messageId: S,
             roleId: A,
         }),
         Y = i.useRef(null),
@@ -78,7 +78,7 @@ function S(e) {
                                 children: E.intl.format(E.t.KRe1Fh, { name: M }),
                             }),
                         }),
-                        children: (0, r.jsxs)(x.Z, {
+                        children: (0, r.jsxs)(h.Z, {
                             user: t,
                             displayProfile: B,
                             themeType: I.lY.MODAL,
@@ -98,7 +98,7 @@ function S(e) {
                                                 user: t,
                                                 displayProfile: B,
                                                 guildId: k,
-                                                channelId: S,
+                                                channelId: w,
                                                 themeType: I.lY.MODAL,
                                             }),
                                         }),
@@ -107,7 +107,7 @@ function S(e) {
                                 (0, r.jsxs)("div", {
                                     className: T.body,
                                     children: [
-                                        (0, r.jsx)(h.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             className: T.username,
                                             user: t,
                                             nickname: M,

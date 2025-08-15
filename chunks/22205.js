@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(717976),
     l = n(818405),
     c = n(587158),
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-let D = a().throttle(
+let D = o().throttle(
         () => {
             m.Z.increment(
                 {
@@ -56,7 +56,7 @@ let D = a().throttle(
     L = 10 * y.Z.Millis.SECOND;
 function x(e) {
     var t, n;
-    let { error: o, onLock: a, onReload: l, onDisable: c, onCrashDisabled: u } = e,
+    let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         _ = i.useMemo(() => new s.SpringValue(1), []),
         m = i.useRef(null),
         [g, y] = i.useState(!1),
@@ -75,14 +75,14 @@ function x(e) {
             _.set(0),
                 null != m.current && clearTimeout(m.current),
                 (m.current = null),
-                null == a || a(),
+                null == o || o(),
                 null == u || u();
-        }, [_, a, u]),
+        }, [_, o, u]),
         w = i.useCallback(
             (e) => {
                 O ||
                     (v(!0),
-                    null == a || a(),
+                    null == o || o(),
                     p.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
                         {
@@ -94,7 +94,7 @@ function x(e) {
                     e.stopPropagation(),
                     setTimeout(() => (null == l ? void 0 : l()), 200));
             },
-            [a, l, O],
+            [o, l, O],
         ),
         D = i.useCallback(
             (e) => {
@@ -104,12 +104,12 @@ function x(e) {
         ),
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == a || a(), null == c || c();
+                e.stopPropagation(), null == o || o(), null == c || c();
             },
-            [c, a],
+            [c, o],
         ),
         M = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
-        j = g
+        k = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -123,14 +123,14 @@ function x(e) {
                               (0, r.jsx)(f.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-secondary",
-                                  children: o.message,
+                                  children: a.message,
                               }),
                               (0, r.jsx)(f.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-secondary",
                                   children: (0, r.jsx)("code", {
                                       className: P.code,
-                                      children: (0, r.jsx)("pre", { children: o.stack }),
+                                      children: (0, r.jsx)("pre", { children: a.stack }),
                                   }),
                               }),
                           ],
@@ -138,14 +138,14 @@ function x(e) {
                   ],
               })
             : null,
-        k = g ? null : R.intl.string(R.t.oEJEFh),
+        j = g ? null : R.intl.string(R.t.oEJEFh),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(A.Y, {
         title: R.intl.string(R.t.U38qZm),
-        body: j,
-        hint: U ? k : void 0,
+        body: k,
+        hint: U ? j : void 0,
         confirmText: R.intl.string(R.t.a3HlgI),
         cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
         icon: (0, r.jsx)(b.Z, {
@@ -156,7 +156,7 @@ function x(e) {
         onNotificationClick: D,
         onConfirmClick: w,
         onCancelClick: null != M ? x : void 0,
-        onDismissClick: a,
+        onDismissClick: o,
         expand: !0,
         locked: !0,
         notificationId: "overlay-crashed",
@@ -239,4 +239,4 @@ class M extends i.PureComponent {
             w(this, "pid", null);
     }
 }
-let j = M;
+let k = M;

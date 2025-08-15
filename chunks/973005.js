@@ -1,6 +1,6 @@
 n.d(t, {
-    O7: () => a,
-    TI: () => o,
+    O7: () => o,
+    TI: () => a,
     fQ: () => i,
 }),
     n(388685);
@@ -13,7 +13,7 @@ var r = n(524437),
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.DISABLED = 0)] = "DISABLED"),
             (e[(e.NON_FRIENDS = 1)] = "NON_FRIENDS"),
@@ -21,7 +21,7 @@ var r = n(524437),
             e
         );
     })({});
-let a = new Map([
+let o = new Map([
     [0, r.Xr.DISABLED],
     [1, r.Xr.NON_FRIENDS],
     [2, r.Xr.FRIENDS_AND_NON_FRIENDS],

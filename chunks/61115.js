@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(481060),
     c = n(493773),
@@ -74,7 +74,7 @@ function v(e, t) {
 let I = 2500,
     T = 467;
 function S(e) {
-    let { questId: t, survey: n, transitionState: o, onClose: a, onSubmit: f } = e,
+    let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, O] = i.useState(0),
         [S, N] = (0, l.q_F)(() => ({
@@ -94,15 +94,15 @@ function S(e) {
                     );
         },
         P = async (e) => {
-            1 === e && (await N({ width: "100%" }), a());
+            1 === e && (await N({ width: "100%" }), o());
         };
     return (
         (0, c.ZP)(() => {
             null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, C(p, n));
         }),
-        null == p && a(),
+        null == p && o(),
         (0, r.jsx)(l.Y0X, {
-            transitionState: o,
+            transitionState: a,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
             parentComponent: "QuestSurveyModal",
@@ -121,7 +121,7 @@ function S(e) {
                                 children: [
                                     (0, r.jsx)(l.olH, {
                                         className: g.closeBtn,
-                                        onClick: a,
+                                        onClick: o,
                                     }),
                                     (0, r.jsx)("img", {
                                         src: E,
@@ -183,7 +183,7 @@ function S(e) {
                                         (0, r.jsx)(l.zxk, {
                                             variant: "primary",
                                             text: m.intl.string(m.t.cpT0Cg),
-                                            onClick: a,
+                                            onClick: o,
                                         }),
                                         (0, r.jsx)(s.animated.div, {
                                             className: g.progressOverlay,
@@ -202,7 +202,7 @@ function S(e) {
 function A(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.P3F, {
-        className: a()(g.choiceContainer, t),
+        className: o()(g.choiceContainer, t),
         onClick: () => i(n),
         children: [
             (0, r.jsx)(l.Text, {

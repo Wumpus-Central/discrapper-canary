@@ -2,27 +2,27 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(835473),
+    l = n(835473),
     a = n(739566),
-    s = n(942951),
-    l = n(834129),
+    o = n(942951),
+    s = n(834129),
     c = n(388032),
     u = n(427070);
 function d(e) {
     let { message: t, channel: n, compact: d } = e,
-        f = (0, a.ZP)(t),
-        _ = (0, s.l)({
+        p = (0, a.ZP)(t),
+        m = (0, o.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id,
-        })(f),
-        p = (0, o.q)(t.applicationId);
-    if (null == p) return null;
-    let h = c.intl.format(c.t.mAtJTE, {
+        })(p),
+        f = (0, l.q)(t.applicationId);
+    if (null == f) return null;
+    let _ = c.intl.format(c.t.mAtJTE, {
         username: t.author.username,
-        usernameHook: _,
-        applicationName: p.name,
+        usernameHook: m,
+        applicationName: f.name,
         applicationNameHook: () =>
             (0, r.jsx)(
                 i.Text,
@@ -30,13 +30,13 @@ function d(e) {
                     className: u.applicationName,
                     variant: "text-md/semibold",
                     color: "header-primary",
-                    children: p.name,
+                    children: f.name,
                 },
-                p.name,
+                f.name,
             ),
         helpdeskArticle: "#",
     });
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         iconNode: (0, r.jsx)(i.DuK, {
             size: "sm",
             color: i.TVs.colors.STATUS_POSITIVE,
@@ -44,6 +44,6 @@ function d(e) {
         timestamp: t.timestamp,
         compact: d,
         contentClassName: u.systemMessage,
-        children: h,
+        children: _,
     });
 }

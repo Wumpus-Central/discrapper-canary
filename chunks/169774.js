@@ -1,34 +1,34 @@
-var r = n(947268),
-    i = n(881886);
-function o(e, t, n, r) {
-    if (e === n) return !0;
-    if (!n.startsWith(e)) return !1;
-    var o = n.slice(e.length);
-    return !!t && ((o = r ? r(o) : o), i.contains(o, t));
+var n = r(947268),
+    i = r(881886);
+function o(t, e, r, n) {
+    if (t === r) return !0;
+    if (!r.startsWith(t)) return !1;
+    var o = r.slice(t.length);
+    return !!e && ((o = n ? n(o) : o), i.contains(o, e));
 }
-function a(e) {
-    return "Windows" === r.platformName ? e.replace(/^\s*NT/, "") : e;
+function a(t) {
+    return "Windows" === n.platformName ? t.replace(/^\s*NT/, "") : t;
 }
-e.exports = n(267100)(
+t.exports = r(267100)(
     {
-        isBrowser: function (e) {
-            return o(r.browserName, r.browserFullVersion, e);
+        isBrowser: function (t) {
+            return o(n.browserName, n.browserFullVersion, t);
         },
-        isBrowserArchitecture: function (e) {
-            return o(r.browserArchitecture, null, e);
+        isBrowserArchitecture: function (t) {
+            return o(n.browserArchitecture, null, t);
         },
-        isDevice: function (e) {
-            return o(r.deviceName, null, e);
+        isDevice: function (t) {
+            return o(n.deviceName, null, t);
         },
-        isEngine: function (e) {
-            return o(r.engineName, r.engineVersion, e);
+        isEngine: function (t) {
+            return o(n.engineName, n.engineVersion, t);
         },
-        isPlatform: function (e) {
-            return o(r.platformName, r.platformFullVersion, e, a);
+        isPlatform: function (t) {
+            return o(n.platformName, n.platformFullVersion, t, a);
         },
-        isPlatformArchitecture: function (e) {
-            return o(r.platformArchitecture, null, e);
+        isPlatformArchitecture: function (t) {
+            return o(n.platformArchitecture, null, t);
         },
     },
-    n(746154),
+    r(746154),
 );

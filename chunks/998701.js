@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => s,
-    c: () => o,
+    c: () => a,
 });
 var r = n(388032);
 function i(e, t, n) {
@@ -16,7 +16,7 @@ function i(e, t, n) {
         e
     );
 }
-var o = (function (e) {
+var a = (function (e) {
     return (
         (e[(e.GENERAL = 0)] = "GENERAL"),
         (e[(e.NO_FILE = 1)] = "NO_FILE"),
@@ -26,7 +26,7 @@ var o = (function (e) {
         e
     );
 })({});
-class a {
+class o {
     get displayMessage() {
         switch (this.code) {
             case 1:
@@ -45,4 +45,4 @@ class a {
         i(this, "code", void 0), (this.code = e);
     }
 }
-let s = a;
+let s = o;

@@ -13,8 +13,8 @@ n.d(t, {
 });
 var r = n(81643),
     i = n(974814),
-    o = n(500496),
-    a = n(601964),
+    a = n(500496),
+    o = n(601964),
     s = n(592125),
     l = n(430824),
     c = n(594174),
@@ -67,8 +67,8 @@ let I = () => {
         let t = l.Z.getGuild(e);
         return (
             null != t &&
-            (0, a.Y2)(t) &&
-            (0, o.Tz)({
+            (0, o.Y2)(t) &&
+            (0, a.Tz)({
                 guildId: e,
                 location: "age-gate-utils",
             })
@@ -89,7 +89,7 @@ function R(e) {
     if (null == e) return !1;
     let t = e.guild_id,
         n = l.Z.getGuild(t);
-    return e.isNSFW() || (null != n && (0, a.Y2)(n));
+    return e.isNSFW() || (null != n && (0, o.Y2)(n));
 }
 function P(e) {
     return null != e && e.isNSFW();

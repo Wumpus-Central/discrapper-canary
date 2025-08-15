@@ -1,8 +1,8 @@
 n.d(t, { s: () => s }), n(781311);
 var r = n(685816),
     i = n(194165),
-    o = n(889577);
-function a(e, t, n) {
+    a = n(889577);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,19 +20,19 @@ class s {
         return new s(e);
     }
     constructor(e) {
-        a(this, "categorySkuId", void 0),
-            a(this, "name", void 0),
-            a(this, "summary", void 0),
-            a(this, "categoryStoreListingId", void 0),
-            a(this, "fallbackBannerUrl", void 0),
-            a(this, "bannerAsset", void 0),
-            a(this, "logoUrl", void 0),
-            a(this, "title", void 0),
-            a(this, "rankedSkuIds", void 0),
-            a(this, "unpublishedAt", void 0),
-            a(this, "bannerTextColor", void 0),
-            a(this, "bannerConfig", void 0),
-            a(this, "logoConfig", void 0),
+        o(this, "categorySkuId", void 0),
+            o(this, "name", void 0),
+            o(this, "summary", void 0),
+            o(this, "categoryStoreListingId", void 0),
+            o(this, "fallbackBannerUrl", void 0),
+            o(this, "bannerAsset", void 0),
+            o(this, "logoUrl", void 0),
+            o(this, "title", void 0),
+            o(this, "rankedSkuIds", void 0),
+            o(this, "unpublishedAt", void 0),
+            o(this, "bannerTextColor", void 0),
+            o(this, "bannerConfig", void 0),
+            o(this, "logoConfig", void 0),
             (this.type = r.z.HERO),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
@@ -46,6 +46,6 @@ class s {
             (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null),
             (this.bannerTextColor = e.banner_text_color),
             (this.bannerConfig = null != e.config ? i.Z.fromServer(e.config) : void 0),
-            (this.logoConfig = null != e.logo_display_config ? o.X.fromServer(e.logo_display_config) : void 0);
+            (this.logoConfig = null != e.logo_display_config ? a.X.fromServer(e.logo_display_config) : void 0);
     }
 }

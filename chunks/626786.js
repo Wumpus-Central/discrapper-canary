@@ -1,26 +1,26 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(134433),
-    s = n(923573);
-function l(e) {
+    o = n(923573);
+function s(e) {
     let t,
-        { className: n, children: i, verified: l, roleColor: c, roleName: u } = e;
+        { className: n, children: i, verified: s, roleColor: c, roleName: u } = e;
     return (
-        (t = l
+        (t = s
             ? (0, r.jsx)(a.Z, {
                   size: 12,
                   color: c,
-                  className: s.linkedRoleColor,
+                  className: o.linkedRoleColor,
               })
             : (0, r.jsx)("div", {
-                  className: s.roleColor,
+                  className: o.roleColor,
                   style: { backgroundColor: c },
               })),
         (0, r.jsxs)("div", {
-            className: o()(n, s.role),
+            className: l()(n, o.role),
             style: { "--custom-role-label-color": c },
             children: [t, u, i],
         })

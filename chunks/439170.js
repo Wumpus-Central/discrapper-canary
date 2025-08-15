@@ -9,9 +9,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(108131),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(108131),
+    s = n.n(o),
     l = n(149765),
     c = n(442837),
     u = n(570140),
@@ -118,12 +118,12 @@ function D(e, t, n, r) {
             };
         default:
             let i = b.Z.getGuild(e),
-                o = null != i ? E.Z.getRole(i.id, t) : null;
+                a = null != i ? E.Z.getRole(i.id, t) : null;
             return {
                 type: "GROUP",
                 key: t,
                 id: t,
-                title: null != o ? o.name : "",
+                title: null != a ? a.name : "",
                 count: n,
                 index: r,
             };
@@ -132,16 +132,16 @@ function D(e, t, n, r) {
 function L(e, t, n) {
     let r = n === p.default.getId(),
         i = y.Z.isMobileOnline(n),
-        o = r ? O.Z.getStatus() : y.Z.getStatus(n, e),
-        a = r ? O.Z.getActivities() : y.Z.getActivities(n, e),
+        a = r ? O.Z.getStatus() : y.Z.getStatus(n, e),
+        o = r ? O.Z.getActivities() : y.Z.getActivities(n, e),
         s = _.Z.getStreamForUser(n, e),
         l = v.default.getUser(n);
     return null == l
         ? null
         : C(A({ type: "MEMBER" }, g.ZP.getMember(e, n)), {
               user: l,
-              status: o,
-              activities: a,
+              status: a,
+              activities: o,
               applicationStream: s,
               isOwner: t === n,
               isMobileOnline: i,
@@ -156,7 +156,7 @@ function M(e) {
         ? R
         : s()
               .v3(
-                  o()(e.permissionOverwrites)
+                  a()(e.permissionOverwrites)
                       .reduce((e, t) => {
                           let { id: n, allow: r, deny: i } = t;
                           return (
@@ -171,7 +171,7 @@ function M(e) {
               )
               .toString();
 }
-class j {
+class k {
     updateOwnerId() {
         let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
@@ -251,14 +251,14 @@ class j {
             this.updateOwnerId();
     }
 }
-class k {
+class j {
     get(e, t) {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let r = n[t];
         return (
             null == r &&
-                ((r = new j(e, t)).setGroups([
+                ((r = new k(e, t)).setGroups([
                     {
                         id: I.Skl.UNKNOWN,
                         count: 0,
@@ -270,12 +270,12 @@ class k {
     }
     forEach(e, t) {
         if (null == e)
-            o().forEach(this._guildLists, (e) => {
-                o().forEach(e, t);
+            a().forEach(this._guildLists, (e) => {
+                a().forEach(e, t);
             });
         else {
             let n = this._guildLists[e];
-            null != n && o().forEach(n, t);
+            null != n && a().forEach(n, t);
         }
     }
     delete(e) {
@@ -288,7 +288,7 @@ class k {
         S(this, "_guildLists", {});
     }
 }
-let U = new k();
+let U = new j();
 function G(e) {
     let t = U.get(e.guildId, e.id);
     e.ops.forEach((e) => {
@@ -314,7 +314,7 @@ function G(e) {
 function B() {
     U.reset();
 }
-function Z(e) {
+function V(e) {
     let { guild: t } = e;
     U.forEach(t.id, (e) => {
         e.updateOwnerId() && e.rebuildMembers();
@@ -324,7 +324,7 @@ function F(e) {
     let { guild: t } = e;
     U.delete(t.id);
 }
-function V(e) {
+function Z(e) {
     let { guildId: t } = e;
     U.forEach(t, (e) => e.rebuildMembers());
 }
@@ -372,9 +372,9 @@ let X = new q(u.Z, {
     CONNECTION_OPEN: B,
     OVERLAY_INITIALIZE: B,
     GUILD_MEMBER_LIST_UPDATE: G,
-    GUILD_UPDATE: Z,
+    GUILD_UPDATE: V,
     GUILD_DELETE: F,
-    GUILD_ROLE_UPDATE: V,
+    GUILD_ROLE_UPDATE: Z,
     GUILD_MEMBER_UPDATE: H,
     CHANNEL_UPDATES: z,
 });

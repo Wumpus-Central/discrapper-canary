@@ -52,7 +52,7 @@ let h = [
         label: "[preview all]",
         value: null,
     },
-    f = () => {
+    v = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
@@ -66,7 +66,7 @@ let h = [
                   },
               );
     },
-    v = () => {
+    f = () => {
         (0, l.nfh)(s.c)
             ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
@@ -107,7 +107,7 @@ let h = [
                         (0, n.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: v,
+                            onClick: f,
                             icon: l.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
@@ -424,7 +424,7 @@ let h = [
                         (0, n.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: f,
+                            onClick: v,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),

@@ -1,4 +1,4 @@
-n.d(t, { f: () => F }), n(388685), n(997841);
+n.d(t, { f: () => B }), n(388685), n(997841);
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -8,19 +8,19 @@ var l = n(255367),
     u = n(533800),
     d = n(442837),
     c = n(692547),
-    g = n(755721),
-    h = n(481060),
+    h = n(755721),
+    g = n(481060),
     m = n(239091),
     p = n(657305),
     v = n(835473),
-    x = n(471445),
-    I = n(313201),
+    I = n(471445),
+    x = n(313201),
     f = n(925329),
-    j = n(65361),
-    N = n(305347),
+    N = n(65361),
+    j = n(305347),
     _ = n(246946),
-    S = n(626135),
-    E = n(934415),
+    E = n(626135),
+    S = n(934415),
     b = n(572004),
     T = n(971130),
     O = n(366980),
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let M = (e) => {
+let R = (e) => {
         let { inviteIcon: t, channelIcon: n, heading: i, subheading: r } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
@@ -88,7 +88,7 @@ let M = (e) => {
                             className: Z.inviteTargetHeading,
                             children: [
                                 null == n ? null : n,
-                                (0, l.jsx)(h.X6q, {
+                                (0, l.jsx)(g.X6q, {
                                     variant: "heading-md/semibold",
                                     color: "header-secondary",
                                     lineClamp: 1,
@@ -102,23 +102,23 @@ let M = (e) => {
             ],
         });
     },
-    R = (e) => {
+    M = (e) => {
         let { guild: t, channel: n } = e,
-            i = (0, E.a5)({ type: n.type }),
-            r = (0, l.jsx)(h.Text, {
+            i = (0, S.a5)({ type: n.type }),
+            r = (0, l.jsx)(g.Text, {
                 variant: "text-xs/medium",
                 color: "header-muted",
                 lineClamp: 1,
                 children: [i, t.name].join("\xA0\xA0\u2022\xA0\xA0"),
             }),
-            s = (0, x.KS)(n, t),
-            a = (0, l.jsx)(N.Ft, {
+            s = (0, I.KS)(n, t),
+            a = (0, l.jsx)(j.Ft, {
                 guildId: t.id,
                 guildName: t.name,
                 guildIcon: t.icon,
                 iconSize: 40,
             });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(R, {
             inviteIcon: a,
             channelIcon:
                 null == s
@@ -131,10 +131,10 @@ let M = (e) => {
             subheading: r,
         });
     },
-    k = (e) => {
+    D = (e) => {
         let t,
             { guild: n } = e,
-            { guildProfile: r, fetchGuildProfile: s } = (0, j.u)(n.id);
+            { guildProfile: r, fetchGuildProfile: s } = (0, N.u)(n.id);
         i.useEffect(() => {
             s();
         }, [s]),
@@ -148,7 +148,7 @@ let M = (e) => {
                                   className: Z.onlineCount,
                                   children: [
                                       (0, l.jsx)("div", { className: Z.dot }),
-                                      (0, l.jsx)(h.Text, {
+                                      (0, l.jsx)(g.Text, {
                                           variant: "text-xs/medium",
                                           color: "header-muted",
                                           children: P.intl.format(P.t["LC+S+v"], { membersOnline: r.onlineCount }),
@@ -159,7 +159,7 @@ let M = (e) => {
                                   className: Z.memberCount,
                                   children: [
                                       (0, l.jsx)("div", { className: Z.dot }),
-                                      (0, l.jsx)(h.Text, {
+                                      (0, l.jsx)(g.Text, {
                                           variant: "text-xs/medium",
                                           color: "header-muted",
                                           children: P.intl.format(P.t.zRl6XV, { count: r.memberCount }),
@@ -168,24 +168,24 @@ let M = (e) => {
                               }),
                           ],
                       }));
-        let a = (0, l.jsx)(N.Ft, {
+        let a = (0, l.jsx)(j.Ft, {
             guildId: n.id,
             guildName: n.name,
             guildIcon: n.icon,
             iconSize: 40,
         });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(R, {
             inviteIcon: a,
             heading: n.name,
             subheading: t,
         });
     },
-    D = (e) => {
+    k = (e) => {
         let { applicationId: t } = e,
             [n] = (0, v.Z)([t]);
         if (null == n) return null;
         let i = (0, p.Z)(n.name),
-            r = (0, l.jsx)(h.Text, {
+            r = (0, l.jsx)(g.Text, {
                 variant: "text-xs/medium",
                 color: "header-muted",
                 lineClamp: 1,
@@ -196,7 +196,7 @@ let M = (e) => {
                 size: f.Z.Sizes.MEDIUM,
                 className: Z.inviteIcon,
             });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(R, {
             inviteIcon: s,
             heading: i,
             subheading: r,
@@ -205,22 +205,22 @@ let M = (e) => {
 function L(e) {
     let { guild: t, channel: n, applicationId: i } = e;
     return null != i
-        ? (0, l.jsx)(D, { applicationId: i })
+        ? (0, l.jsx)(k, { applicationId: i })
         : null != n
-          ? (0, l.jsx)(R, {
+          ? (0, l.jsx)(M, {
                 guild: t,
                 channel: n,
             })
-          : (0, l.jsx)(k, { guild: t });
+          : (0, l.jsx)(D, { guild: t });
 }
-function V(e) {
+function U(e) {
     let { className: t, children: n } = e;
     return (0, l.jsx)("div", {
         className: s()(t, Z.advancedOptions),
         children: n,
     });
 }
-function U(e) {
+function V(e) {
     let t,
         n,
         { className: i, children: r, htmlFor: a, onClick: o } = e;
@@ -228,7 +228,7 @@ function U(e) {
         null != a
             ? ((t = "label"), (n = { htmlFor: a }))
             : null != o
-              ? ((t = h.P3F), (n = { onClick: o }))
+              ? ((t = g.P3F), (n = { onClick: o }))
               : ((t = "div"), (n = {})),
         (0, l.jsx)(
             t,
@@ -241,36 +241,36 @@ function U(e) {
         )
     );
 }
-function F(e) {
+function B(e) {
     let {
             className: t,
             guild: r,
             channel: a,
             applicationId: p,
             getInviteKey: v,
-            sendInvite: x,
+            sendInvite: I,
             canUseVanityURL: f,
-            disabled: j,
-            hasSelection: N,
-            options: E,
-            setOptions: M,
-            isApplicationBypassAllowed: R,
-            isGuestInviteAllowed: k,
-            isTemporaryInviteAllowed: D,
-            setError: F,
-            analyticsLocation: B,
+            disabled: N,
+            hasSelection: j,
+            options: S,
+            setOptions: R,
+            isApplicationBypassAllowed: M,
+            isGuestInviteAllowed: D,
+            isTemporaryInviteAllowed: k,
+            setError: B,
+            analyticsLocation: F,
         } = e,
-        [z, G] = i.useState(!1),
+        [G, z] = i.useState(!1),
         [H, q] = i.useState(!1),
         W = i.useRef(null),
         [Y] = (0, d.Wu)([_.Z], () => [_.Z.hideInstantInvites]),
-        K = (0, I.Dt)(),
-        X = (0, I.Dt)(),
-        J = (0, I.Dt)(),
+        X = (0, x.Dt)(),
+        K = (0, x.Dt)(),
+        J = (0, x.Dt)(),
         Q = i.useMemo(() => (f && null != r.vanityURLCode ? (0, O.Z)(r.vanityURLCode, !1) : null), [r, f]),
         $ = i.useCallback(async () => {
             var e, t;
-            if (j) return;
+            if (N) return;
             null !== W.current && clearTimeout(W.current);
             let n = await v();
             o()(null != n, "Invite key could not be determined.");
@@ -279,20 +279,20 @@ function F(e) {
                 (0, b.JG)(
                     l,
                     () => {
-                        G(!0),
+                        z(!0),
                             (W.current = setTimeout(() => {
-                                G(!1), (W.current = null);
+                                z(!1), (W.current = null);
                             }, 1000));
                     },
                     (e) => {
-                        F(e);
+                        B(e);
                     },
                 ),
-                S.default.track(C.rMx.COPY_INSTANT_INVITE, {
+                E.default.track(C.rMx.COPY_INSTANT_INVITE, {
                     server: r.id,
                     channel: null != (e = null == a ? void 0 : a.id) ? e : null,
                     channel_type: null != (t = null == a ? void 0 : a.type) ? t : null,
-                    location: B,
+                    location: F,
                     code: n,
                     application_id: p,
                 }),
@@ -300,30 +300,30 @@ function F(e) {
                     null !== W.current && clearTimeout(W.current);
                 }
             );
-        }, [j, v, r, a, B, p, F]),
+        }, [N, v, r, a, F, p, B]),
         ee = i.useCallback(
             (e) => {
-                M({ max_age: e });
+                R({ max_age: e });
             },
-            [M],
+            [R],
         ),
         et = i.useCallback(
             (e) => {
-                M({ max_uses: e });
+                R({ max_uses: e });
             },
-            [M],
+            [R],
         ),
         en = i.useCallback(
             (e) => {
-                E.flags === e ? M({ flags: void 0 }) : M({ flags: e });
+                S.flags === e ? R({ flags: void 0 }) : R({ flags: e });
             },
-            [E, M],
+            [S, R],
         ),
         el = i.useCallback(
             (e) => {
-                M({ temporary: e });
+                R({ temporary: e });
             },
-            [M],
+            [R],
         ),
         ei = i.useCallback(
             (e) => {
@@ -337,14 +337,14 @@ function F(e) {
                             (0, l.jsx)(
                                 e,
                                 A(w({}, t), {
-                                    initialOptions: E,
+                                    initialOptions: S,
                                     onChangeMaxAge: ee,
                                     onChangeMaxUses: et,
                                 }),
                             );
                     });
             },
-            [E, ee, et],
+            [S, ee, et],
         ),
         er = (function (e) {
             let t = y.H.find((t) => {
@@ -369,7 +369,7 @@ function F(e) {
                       : n.value !== T.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value === T.ZP.INVITE_OPTIONS_FOREVER.value
                         ? n.label
                         : null;
-        })(E);
+        })(S);
     return (0, l.jsxs)("div", {
         className: s()(t, Z.footer),
         children: [
@@ -381,18 +381,18 @@ function F(e) {
                         channel: a,
                         applicationId: p,
                     }),
-                    (0, l.jsx)(h.ua7, {
+                    (0, l.jsx)(g.ua7, {
                         position: "top",
                         text: P.intl.string(P.t["4QuV7O"]),
                         children: (e) =>
                             (0, l.jsx)(
-                                h.P3F,
+                                g.P3F,
                                 A(w({ className: s()(Z.settingsButton, { [Z.settingsOpen]: H }) }, e), {
                                     onClick: () => {
                                         var t;
                                         null == e || null == (t = e.onClick) || t.call(e), q((e) => !e);
                                     },
-                                    children: (0, l.jsx)(h.ewm, {
+                                    children: (0, l.jsx)(g.ewm, {
                                         size: "refresh_sm",
                                         color: c.Z.colors.ICON_PRIMARY,
                                     }),
@@ -402,24 +402,24 @@ function F(e) {
                 ],
             }),
             H &&
-                (0, l.jsxs)(V, {
+                (0, l.jsxs)(U, {
                     children: [
-                        (0, l.jsxs)(U, {
+                        (0, l.jsxs)(V, {
                             onClick: ei,
                             children: [
                                 (0, l.jsxs)("div", {
                                     className: Z.advancedOptionContent,
                                     children: [
-                                        (0, l.jsx)(h.X6q, {
+                                        (0, l.jsx)(g.X6q, {
                                             variant: "heading-md/medium",
                                             children: P.intl.string(P.t.YlT5MT),
                                         }),
-                                        (0, l.jsx)(h.ua7, {
+                                        (0, l.jsx)(g.ua7, {
                                             position: "top",
                                             text: P.intl.string(P.t.efLzgY),
                                             children: (e) =>
                                                 (0, l.jsx)(
-                                                    h.idN,
+                                                    g.idN,
                                                     A(w({}, e), {
                                                         size: "xs",
                                                         color: c.Z.colors.INTERACTIVE_NORMAL,
@@ -432,12 +432,12 @@ function F(e) {
                                     className: Z.advancedOptionContent,
                                     children: [
                                         null != er &&
-                                            (0, l.jsx)(h.Text, {
+                                            (0, l.jsx)(g.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "header-muted",
                                                 children: er,
                                             }),
-                                        (0, l.jsx)(h.Fbu, {
+                                        (0, l.jsx)(g.Fbu, {
                                             size: "xs",
                                             color: c.Z.colors.INTERACTIVE_NORMAL,
                                         }),
@@ -445,55 +445,23 @@ function F(e) {
                                 }),
                             ],
                         }),
-                        R &&
-                            (0, l.jsxs)(U, {
-                                htmlFor: K,
-                                children: [
-                                    (0, l.jsxs)("div", {
-                                        className: Z.advancedOptionContent,
-                                        children: [
-                                            (0, l.jsx)(h.X6q, {
-                                                variant: "heading-md/medium",
-                                                children: P.intl.string(P.t.EPIOl5),
-                                            }),
-                                            (0, l.jsx)(h.ua7, {
-                                                position: "top",
-                                                text: P.intl.string(P.t["jvd/LC"]),
-                                                children: (e) =>
-                                                    (0, l.jsx)(
-                                                        h.idN,
-                                                        A(w({}, e), {
-                                                            size: "xs",
-                                                            color: c.Z.colors.INTERACTIVE_NORMAL,
-                                                        }),
-                                                    ),
-                                            }),
-                                        ],
-                                    }),
-                                    (0, l.jsx)(h.rsf, {
-                                        id: K,
-                                        checked: E.flags === u.$.IS_APPLICATION_BYPASS,
-                                        onChange: () => en(u.$.IS_APPLICATION_BYPASS),
-                                    }),
-                                ],
-                            }),
-                        k &&
-                            (0, l.jsxs)(U, {
+                        M &&
+                            (0, l.jsxs)(V, {
                                 htmlFor: X,
                                 children: [
                                     (0, l.jsxs)("div", {
                                         className: Z.advancedOptionContent,
                                         children: [
-                                            (0, l.jsx)(h.X6q, {
+                                            (0, l.jsx)(g.X6q, {
                                                 variant: "heading-md/medium",
-                                                children: P.intl.string(P.t.NKqlpq),
+                                                children: P.intl.string(P.t.EPIOl5),
                                             }),
-                                            (0, l.jsx)(h.ua7, {
+                                            (0, l.jsx)(g.ua7, {
                                                 position: "top",
-                                                text: P.intl.string(P.t.pBOevb),
+                                                text: P.intl.string(P.t["jvd/LC"]),
                                                 children: (e) =>
                                                     (0, l.jsx)(
-                                                        h.idN,
+                                                        g.idN,
                                                         A(w({}, e), {
                                                             size: "xs",
                                                             color: c.Z.colors.INTERACTIVE_NORMAL,
@@ -502,30 +470,62 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(h.rsf, {
+                                    (0, l.jsx)(g.rsf, {
                                         id: X,
-                                        checked: E.flags === u.$.IS_GUEST_INVITE,
-                                        onChange: () => en(u.$.IS_GUEST_INVITE),
+                                        checked: S.flags === u.$.IS_APPLICATION_BYPASS,
+                                        onChange: () => en(u.$.IS_APPLICATION_BYPASS),
                                     }),
                                 ],
                             }),
                         D &&
-                            (0, l.jsxs)(U, {
+                            (0, l.jsxs)(V, {
+                                htmlFor: K,
+                                children: [
+                                    (0, l.jsxs)("div", {
+                                        className: Z.advancedOptionContent,
+                                        children: [
+                                            (0, l.jsx)(g.X6q, {
+                                                variant: "heading-md/medium",
+                                                children: P.intl.string(P.t.NKqlpq),
+                                            }),
+                                            (0, l.jsx)(g.ua7, {
+                                                position: "top",
+                                                text: P.intl.string(P.t.pBOevb),
+                                                children: (e) =>
+                                                    (0, l.jsx)(
+                                                        g.idN,
+                                                        A(w({}, e), {
+                                                            size: "xs",
+                                                            color: c.Z.colors.INTERACTIVE_NORMAL,
+                                                        }),
+                                                    ),
+                                            }),
+                                        ],
+                                    }),
+                                    (0, l.jsx)(g.rsf, {
+                                        id: K,
+                                        checked: S.flags === u.$.IS_GUEST_INVITE,
+                                        onChange: () => en(u.$.IS_GUEST_INVITE),
+                                    }),
+                                ],
+                            }),
+                        k &&
+                            (0, l.jsxs)(V, {
                                 htmlFor: J,
                                 children: [
                                     (0, l.jsxs)("div", {
                                         className: Z.advancedOptionContent,
                                         children: [
-                                            (0, l.jsx)(h.X6q, {
+                                            (0, l.jsx)(g.X6q, {
                                                 variant: "heading-md/medium",
                                                 children: P.intl.string(P.t.UL177u),
                                             }),
-                                            (0, l.jsx)(h.ua7, {
+                                            (0, l.jsx)(g.ua7, {
                                                 position: "top",
                                                 text: P.intl.string(P.t.cl1HNT),
                                                 children: (e) =>
                                                     (0, l.jsx)(
-                                                        h.idN,
+                                                        g.idN,
                                                         A(w({}, e), {
                                                             size: "xs",
                                                             color: c.Z.colors.INTERACTIVE_NORMAL,
@@ -534,9 +534,9 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(h.rsf, {
+                                    (0, l.jsx)(g.rsf, {
                                         id: J,
-                                        checked: !!E.temporary,
+                                        checked: !!S.temporary,
                                         onChange: (e) => el(e),
                                     }),
                                 ],
@@ -546,19 +546,19 @@ function F(e) {
             (0, l.jsxs)("div", {
                 className: Z.buttonRow,
                 children: [
-                    (0, l.jsx)(h.ua7, {
+                    (0, l.jsx)(g.ua7, {
                         position: "top",
                         text: Q,
                         shouldShow: null !== Q && !Y,
                         children: (e) =>
                             (0, l.jsx)(
-                                g.zx,
+                                h.zx,
                                 A(
                                     w(
                                         {
                                             className: Z.button,
                                             innerClassName: Z.buttonInner,
-                                            color: g.zx.Colors.PRIMARY,
+                                            color: h.zx.Colors.PRIMARY,
                                         },
                                         e,
                                     ),
@@ -567,11 +567,11 @@ function F(e) {
                                             var t;
                                             null == e || null == (t = e.onClick) || t.call(e), $();
                                         },
-                                        disabled: j,
-                                        children: z
+                                        disabled: N,
+                                        children: G
                                             ? (0, l.jsxs)(l.Fragment, {
                                                   children: [
-                                                      (0, l.jsx)(h.dz2, {
+                                                      (0, l.jsx)(g.dz2, {
                                                           size: "xs",
                                                           color: "currentColor",
                                                       }),
@@ -580,7 +580,7 @@ function F(e) {
                                               })
                                             : (0, l.jsxs)(l.Fragment, {
                                                   children: [
-                                                      (0, l.jsx)(h.xPt, {
+                                                      (0, l.jsx)(g.xPt, {
                                                           size: "xs",
                                                           color: "currentColor",
                                                       }),
@@ -591,14 +591,14 @@ function F(e) {
                                 ),
                             ),
                     }),
-                    (0, l.jsxs)(g.zx, {
+                    (0, l.jsxs)(h.zx, {
                         className: Z.button,
                         innerClassName: Z.buttonInner,
-                        onClick: () => x(),
-                        disabled: !N || j,
+                        onClick: () => I(),
+                        disabled: !j || N,
                         children: [
                             (0, l.jsx)("span", { children: P.intl.string(P.t.BcAABg) }),
-                            (0, l.jsx)(h.Uuj, {
+                            (0, l.jsx)(g.Uuj, {
                                 size: "xs",
                                 color: "currentColor",
                             }),

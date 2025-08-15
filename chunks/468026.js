@@ -1,8 +1,8 @@
 n.d(t, { default: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(693789),
     l = n(512983),
     c = n(466377),
@@ -14,7 +14,7 @@ var r = n(255367),
 let h = (e) => {
     let t,
         n,
-        o,
+        a,
         {
             body: h,
             cancelText: m,
@@ -67,7 +67,7 @@ let h = (e) => {
             })),
         null != y &&
             "" !== y &&
-            (o = (0, r.jsx)(d.XZJ, {
+            (a = (0, r.jsx)(d.XZJ, {
                 value: R,
                 onChange: (e, t) => P(t),
                 type: d.XZJ.Types.DEFAULT,
@@ -80,7 +80,7 @@ let h = (e) => {
         (0, r.jsx)(c.Y0, {
             transitionState: A,
             size: c.Cg.DYNAMIC,
-            className: a()(g, p.container),
+            className: o()(g, p.container),
             "aria-label": S,
             parentComponent: "Alert",
             children: (0, r.jsxs)("form", {
@@ -92,12 +92,12 @@ let h = (e) => {
                             null != S
                                 ? (0, r.jsx)(d.X6q, {
                                       variant: "heading-lg/semibold",
-                                      className: a()(p.title, N),
+                                      className: o()(p.title, N),
                                       children: S,
                                   })
                                 : (0, r.jsx)(l.v, {
                                       tag: "h2",
-                                      className: a()(p.title, N),
+                                      className: o()(p.title, N),
                                       children: S,
                                   }),
                     }),
@@ -121,7 +121,7 @@ let h = (e) => {
                         justify: void 0,
                         wrap: f.Z.Wrap.WRAP,
                         className: p.modalFooter,
-                        children: [n, t, o],
+                        children: [n, t, a],
                     }),
                 ],
             }),

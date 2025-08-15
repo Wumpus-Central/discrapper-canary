@@ -1,17 +1,17 @@
 n.d(t, {
-    ZP: () => o,
+    ZP: () => a,
     n9: () => s,
 });
 var r = n(695103),
     i = n(115130);
-function o(e) {
+function a(e) {
     return s()
         ? i.Z.getState().activityUrlOverride
         : r.Z.inTestModeForEmbeddedApplication(e)
           ? r.Z.testModeOriginURL
-          : a(e);
+          : o(e);
 }
-function a(e) {
+function o(e) {
     let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
     return null == t ? null : "https://".concat(e, ".").concat(t);
 }

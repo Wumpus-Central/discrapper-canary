@@ -6,8 +6,8 @@ var n = r(255367),
     o = r(758713),
     s = r(657707),
     c = r(481060),
-    d = r(388032),
-    u = r(226788);
+    u = r(388032),
+    d = r(226788);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -33,8 +33,8 @@ function m(e) {
     }
     return e;
 }
-let g = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
-function p(e) {
+let f = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
+function g(e) {
     var { platform: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
@@ -70,10 +70,10 @@ function p(e) {
             return null;
     }
 }
-function f(e) {
+function p(e) {
     let { platforms: t } = e;
     return (0, n.jsx)("div", {
-        className: l()(u.row, u.gapSm),
+        className: l()(d.row, d.gapSm),
         style: { alignItems: "center" },
         children: t.map((e) =>
             (0, n.jsx)(
@@ -82,13 +82,13 @@ function f(e) {
                     text: (function (e) {
                         switch (e) {
                             case o.z.DESKTOP:
-                                return d.intl.string(d.t.KT6uCA);
+                                return u.intl.string(u.t.KT6uCA);
                             case o.z.XBOX:
-                                return d.intl.string(d.t.DDWUJi);
+                                return u.intl.string(u.t.DDWUJi);
                             case o.z.PLAYSTATION:
-                                return d.intl.string(d.t.fzMz2t);
+                                return u.intl.string(u.t.fzMz2t);
                             case o.z.NINTENDO:
-                                return d.intl.string(d.t.AMW8jY);
+                                return u.intl.string(u.t.AMW8jY);
                             default:
                                 return null;
                         }
@@ -96,7 +96,7 @@ function f(e) {
                     children: (t) => {
                         var r, a;
                         return (0, n.jsx)(
-                            p,
+                            g,
                             ((r = m({}, t)),
                             (a = a = { platform: e }),
                             Object.getOwnPropertyDescriptors
@@ -127,13 +127,13 @@ function x(e) {
                 r = [...e];
             return (
                 !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && r.push(o.z.DESKTOP),
-                r.filter((e) => g.includes(e))
+                r.filter((e) => f.includes(e))
             );
         }, [t.platforms]);
     return 0 === i.length
         ? null
         : (0, n.jsx)("div", {
-              className: l()(u.column, u.gapLg, r),
-              children: i.length > 0 && (0, n.jsx)(f, { platforms: i }),
+              className: l()(d.column, d.gapLg, r),
+              children: i.length > 0 && (0, n.jsx)(p, { platforms: i }),
           });
 }

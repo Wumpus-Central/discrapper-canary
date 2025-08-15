@@ -1,11 +1,11 @@
 n.d(t, { h: () => u });
 var r = n(358085),
     i = n(150248),
-    o = n(691731),
+    l = n(691731),
     a = n(984211);
 n(620662);
-var s = n(120021),
-    l = n(994339),
+var o = n(120021),
+    s = n(994339),
     c = n(233487);
 function u(e) {
     let {
@@ -13,16 +13,16 @@ function u(e) {
         currentUserPresenceActivity: n,
         currentUserId: u,
         message: d,
-        application: f,
-        isEmbeddedApplication: _,
-        isFrameApplication: p,
-        isGameLaunchable: h,
+        application: p,
+        isEmbeddedApplication: m,
+        isFrameApplication: f,
+        isGameLaunchable: _,
     } = e;
-    if (d.author.id === u || !(0, l.Z)(t, d, f.id)) return !1;
-    let m = (0, a._)(t);
+    if (d.author.id === u || !(0, s.Z)(t, d, p.id)) return !1;
+    let g = (0, a._)(t);
     return (
-        !(!(0, s.n)(m) || (0, c.y)(m) || (0, o.g)(n, t) || (0, i.H)(d)) &&
-        ((!!_ && !!p) || (!!r.isPlatformEmbedded && !!h))
+        !(!(0, o.n)(g) || (0, c.y)(g) || (0, l.g)(n, t) || (0, i.H)(d)) &&
+        ((!!m && !!f) || (!!r.isPlatformEmbedded && !!_))
     );
 }
 n(981631);

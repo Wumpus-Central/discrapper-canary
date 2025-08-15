@@ -1,105 +1,104 @@
 n.d(t, {
-    G: () => y,
-    z: () => O,
+    G: () => C,
+    z: () => v,
 });
 var r = n(73800),
     i = n(442837),
-    o = n(783097),
+    l = n(783097),
     a = n(176412),
-    s = n(749681),
-    l = n(258971),
+    o = n(749681),
+    s = n(258971),
     c = n(592125),
     u = n(496675),
     d = n(944486),
-    f = n(914010),
-    _ = n(135431),
-    p = n(433534),
-    h = n(914498),
-    m = n(981631),
-    g = n(49898),
-    E = n(388032);
-function b(e) {
+    p = n(914010),
+    m = n(135431),
+    f = n(433534),
+    _ = n(914498),
+    g = n(981631),
+    h = n(49898),
+    b = n(388032);
+function E(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
-        s = (0, p.Eb)({
+        o = (0, f.Eb)({
             customInstallUrl: n,
             installParams: r,
             integrationTypesConfig: a,
         }),
-        l = (0, i.e7)([f.Z], () => {
+        s = (0, i.e7)([p.Z], () => {
             var e;
-            return null != (e = f.Z.getGuildId()) ? e : void 0;
+            return null != (e = p.Z.getGuildId()) ? e : void 0;
         }),
-        _ = (0, i.e7)([c.Z, u.Z, d.Z], () => {
+        m = (0, i.e7)([c.Z, u.Z, d.Z], () => {
             let e = c.Z.getChannel(d.Z.getChannelId());
-            return null != e && (e.isPrivate() || u.Z.can(m.Plq.SEND_MESSAGES, e));
+            return null != e && (e.isPrivate() || u.Z.can(g.Plq.SEND_MESSAGES, e));
         }, []),
-        h = (0, o.PZ)(e, l) && _,
-        g = t || h;
+        _ = (0, l.PZ)(e, s) && m;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
         integrationTypesConfig: a,
-        canViewApp: g,
-        canOpenAppLauncher: h,
-        isInstallable: s,
-        selectedGuildId: l,
+        canViewApp: t || _,
+        canOpenAppLauncher: _,
+        isInstallable: o,
+        selectedGuildId: s,
     };
 }
-function y(e, t) {
+function C(e, t) {
     let {
         canViewApp: n,
         canOpenAppLauncher: i,
-        isInstallable: o,
+        isInstallable: l,
         customInstallUrl: c,
         installParams: u,
         integrationTypesConfig: d,
-        selectedGuildId: f,
-    } = b(e);
+        selectedGuildId: p,
+    } = E(e);
     return r.useMemo(
         () =>
             n
                 ? () => {
                       if ((null == t || t(), i)) return void (0, a.X)(e.id);
-                      (0, s.transitionToGlobalDiscovery)({
-                          tab: g.GlobalDiscoveryTab.APPS,
+                      (0, o.transitionToGlobalDiscovery)({
+                          tab: h.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
-                          newSessionState: { entrypoint: { name: l.xF.APPLICATION_MESSAGE_EMBED } },
+                          newSessionState: { entrypoint: { name: s.xF.APPLICATION_MESSAGE_EMBED } },
                       });
                   }
-                : o
+                : l
                   ? () => {
                         null == t || t(),
-                            (0, _.L)({
+                            (0, m.L)({
                                 applicationId: e.id,
                                 customInstallUrl: c,
                                 installParams: u,
                                 integrationTypesConfig: d,
-                                guildId: f,
+                                guildId: p,
                                 source: "app_message_embed",
                             });
                     }
                   : void 0,
-        [e.id, i, n, c, u, d, o, t, f],
+        [e.id, i, n, c, u, d, l, t, p],
     );
 }
-function O(e) {
-    let { canViewApp: t, isInstallable: n } = b(e),
-        i = y(e);
+function v(e) {
+    let { canViewApp: t, isInstallable: n } = E(e),
+        i = C(e);
     return r.useMemo(
         () =>
             t && null != i
                 ? {
-                      label: E.intl.string(E.t.hvVgAQ),
-                      trackingArea: h.j_.VIEW,
+                      label: b.intl.string(b.t.hvVgAQ),
+                      trackingArea: _.j_.VIEW,
                       onClick() {
                           i();
                       },
                   }
                 : n && null != i
                   ? {
-                        label: E.intl.string(E.t.NgXl3N),
-                        trackingArea: h.j_.ADD_APP,
+                        label: b.intl.string(b.t.NgXl3N),
+                        trackingArea: _.j_.ADD_APP,
                         onClick() {
                             i();
                         },

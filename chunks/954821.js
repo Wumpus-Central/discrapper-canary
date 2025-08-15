@@ -26,8 +26,8 @@ let _ = (e) => {
                     : void 0,
             { analyticsLocations: T } = (0, u.ZP)(d.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             {
-                cancelSubscription: I,
-                error: N,
+                cancelSubscription: N,
+                error: I,
                 submitting: y,
             } = ((e) => {
                 let [t, n] = r.useState(!1),
@@ -47,7 +47,7 @@ let _ = (e) => {
                 };
             })(T),
             A = async () => {
-                (await I(E.id)) && C();
+                (await N(E.id)) && C();
             },
             P = j.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.CHANNEL),
             R = j.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.INTANGIBLE),
@@ -77,7 +77,7 @@ let _ = (e) => {
                         }),
                     ],
                 }),
-                null != N ? (0, i.jsx)(o.kzN, { children: N.message }) : null,
+                null != I ? (0, i.jsx)(o.kzN, { children: I.message }) : null,
                 (0, i.jsxs)(o.hzk, {
                     className: x.content,
                     children: [

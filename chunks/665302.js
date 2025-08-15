@@ -1,24 +1,24 @@
-n.d(t, { h: () => c });
+n.d(t, { h: () => s });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    o = n(481060),
+    l = n(481060),
     a = n(671533),
-    s = n(981631),
-    l = n(496526);
-function c(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: c, showCloseButton: u } = e;
-    return (0, r.jsxs)(o.qXd, {
-        className: l.backNotice,
+    o = n(981631),
+    c = n(496526);
+function s(e) {
+    let { buttonText: t, onGoBack: n, onDismiss: s, showCloseButton: u } = e;
+    return (0, r.jsxs)(l.qXd, {
+        className: c.backNotice,
         children: [
             u &&
-                (0, r.jsx)(o.RyX, {
-                    onClick: c,
-                    noticeType: s.kVF.BACK_TO_PREVIOUS_SCREEN,
+                (0, r.jsx)(l.RyX, {
+                    onClick: s,
+                    noticeType: o.kVF.BACK_TO_PREVIOUS_SCREEN,
                 }),
             (0, r.jsxs)(i.zx, {
-                className: l.backButton,
-                innerClassName: l.backButtonInner,
+                className: c.backButton,
+                innerClassName: c.backButtonInner,
                 look: i.zx.Looks.OUTLINED,
                 color: i.zx.Colors.WHITE,
                 size: i.zx.Sizes.NONE,
@@ -28,7 +28,7 @@ function c(e) {
                         width: 16,
                         height: 16,
                         direction: a.Z.Directions.LEFT,
-                        className: l.__invalid_backArrow,
+                        className: c.__invalid_backArrow,
                     }),
                     t,
                 ],

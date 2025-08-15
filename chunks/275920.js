@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(626135),
     i = n(981631);
-function o(e) {
+function a(e) {
     let {
         type: t,
         source: n,
-        userId: o,
-        guildId: a,
+        userId: a,
+        guildId: o,
         channelId: s,
         channelType: l,
         applicationId: c,
@@ -20,12 +20,12 @@ function o(e) {
     r.default.track(i.rMx.APPLICATION_OPENED, {
         type: t,
         source: n,
-        guild_id: a,
+        guild_id: o,
         channel_id: s,
         channel_type: l,
         application_id: c,
         party_id: null != u ? u : void 0,
-        other_user_id: o,
+        other_user_id: a,
         message_id: d,
         location: f,
         location_stack: _,

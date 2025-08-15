@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    o = n(481060),
-    a = n(63063),
+    a = n(481060),
+    o = n(63063),
     s = n(981631),
     l = n(388032),
     c = n(764295);
@@ -64,13 +64,13 @@ function _(e, t) {
 }
 function p(e) {
     let { kind: t } = e;
-    (0, o.ZDy)(async () => {
+    (0, a.ZDy)(async () => {
         let { default: e } = await n.e("7285").then(n.bind(n, 951269));
         return (n) => (0, r.jsx)(e, _(d({}, n), { kind: t }));
     });
 }
 function h() {
-    (0, o.ZDy)(async () => {
+    (0, a.ZDy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
         return (t) =>
             (0, r.jsx)(
@@ -79,10 +79,10 @@ function h() {
                     header: l.intl.string(c.default.odgSTk),
                     confirmText: l.intl.string(l.t.BddRzc),
                     confirmButtonColor: i.zx.Colors.BRAND,
-                    children: (0, r.jsx)(o.Text, {
+                    children: (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         children: l.intl.format(c.default.EZfHRk, {
-                            helpURL: a.Z.getArticleURL(s.BhN.NSFW_AGE_GATING),
+                            helpURL: o.Z.getArticleURL(s.BhN.NSFW_AGE_GATING),
                         }),
                     }),
                 }),

@@ -1,13 +1,13 @@
 n.d(t, {
-    U5: () => o,
-    qR: () => i,
+    U5: () => i,
+    qR: () => l,
 });
 var r = n(273504);
-function i(e) {
-    let t = o();
+function l(e) {
+    let t = i();
     return Array.from(e.defaultActionTypes).map((e) => t[e]);
 }
-function o() {
+function i() {
     return {
         [r.jj.BLOCK_MESSAGE]: {
             type: r.jj.BLOCK_MESSAGE,

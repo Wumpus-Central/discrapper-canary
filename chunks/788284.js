@@ -37,8 +37,8 @@ function h(e) {
     let { animationClassName: n, className: o, quest: i, useReducedMotion: l } = e,
         f = (0, c.e7)([d.Z], () => d.Z.isFocused()),
         h = s.useRef(null),
-        [j, b] = s.useState(!1),
-        _ = s.useMemo(() => {
+        [b, _] = s.useState(!1),
+        j = s.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
                 t = {
@@ -58,9 +58,9 @@ function h(e) {
             : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
     }, [C, f]);
     let y = s.useCallback(() => {
-        b(!0);
+        _(!0);
     }, []);
-    return null == _ || v
+    return null == j || v
         ? (0, r.jsx)("div", {
               className: m.backgroundFallback,
               style: {
@@ -76,8 +76,8 @@ function h(e) {
                   {
                       ref: h,
                       onComplete: y,
-                      importData: () => _,
-                      shouldAnimate: !j && C,
+                      importData: () => j,
+                      shouldAnimate: !b && C,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: "none" },

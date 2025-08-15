@@ -1,43 +1,41 @@
-n.d(t, { W: () => h }), n(388685);
+n.d(t, { W: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(704215),
+    l = n(704215),
     a = n(535278),
-    s = n(246965),
-    l = n(431),
-    c = n(74538),
+    o = n(246965),
+    c = n(431),
+    s = n(74538),
     u = n(706140),
     d = n(921944),
-    f = n(981631),
-    _ = n(474936);
-let p = (e) =>
-        i.useMemo(() => {
-            switch (e) {
-                case f.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
-                    let t = l.Z.getAlmostExpiringTrialOffers([_.Si.TIER_2]);
-                    return { cooldownDurationMs: (0, c.yg)(t[0]) };
-                case f.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING:
-                    let n = l.Z.getAlmostExpiringDiscountOffers([_.Si.TIER_2]);
-                    return { cooldownDurationMs: (0, c.yg)(n[0]) };
+    _ = n(981631),
+    E = n(474936);
+let I = (e) => {
+    let { dismissibleContent: t, noticeType: n } = e,
+        I = i.useMemo(() => {
+            switch (n) {
+                case _.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
+                    let e = c.Z.getAlmostExpiringTrialOffers([E.Si.TIER_2]);
+                    return { cooldownDurationMs: (0, s.yg)(e[0]) };
+                case _.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING:
+                    let t = c.Z.getAlmostExpiringDiscountOffers([E.Si.TIER_2]);
+                    return { cooldownDurationMs: (0, s.yg)(t[0]) };
                 default:
                     return { cooldownDurationMs: 1 / 0 };
             }
-        }, [e]),
-    h = (e) => {
-        let { dismissibleContent: t, noticeType: n } = e,
-            i = p(n),
-            [l, c] = (0, u.Tt)(t, i, d.R.NOTICE_BAR);
-        if (null == l) return null;
-        if (l === o.z.NAGBAR_NOTICE_OFFER_EXPIRING) {
-            if (n === f.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
-                return (0, r.jsx)(s.Z, {
-                    dismissCurrentNotice: () => c(d.L.USER_DISMISS),
-                    subscriptionTier: _.Si.TIER_2,
-                });
-            if (n === f.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, r.jsx)(a.Z, {
-                    dismissCurrentNotice: () => c(d.L.USER_DISMISS),
-                    subscriptionTier: _.Si.TIER_2,
-                });
-        }
-    };
+        }, [n]),
+        [T, O] = (0, u.Tt)(t, I, d.R.NOTICE_BAR);
+    if (null == T) return null;
+    if (T === l.z.NAGBAR_NOTICE_OFFER_EXPIRING) {
+        if (n === _.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
+            return (0, r.jsx)(o.Z, {
+                dismissCurrentNotice: () => O(d.L.USER_DISMISS),
+                subscriptionTier: E.Si.TIER_2,
+            });
+        if (n === _.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING)
+            return (0, r.jsx)(a.Z, {
+                dismissCurrentNotice: () => O(d.L.USER_DISMISS),
+                subscriptionTier: E.Si.TIER_2,
+            });
+    }
+};

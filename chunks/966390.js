@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var r = n(570140),
     i = n(703558),
-    o = n(62817);
+    l = n(62817);
 let a = {
     cancel(e, t) {
         r.Z.dispatch({
@@ -9,7 +9,7 @@ let a = {
             channelId: e,
             file: t,
         });
-        let n = o.Z.getMessageForFile(t.id);
+        let n = l.Z.getMessageForFile(t.id);
         null != n &&
             "" === i.Z.getDraft(n.channel_id, i.d.ChannelMessage) &&
             r.Z.dispatch({

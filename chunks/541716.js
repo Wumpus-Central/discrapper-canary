@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(873546),
     i = n(703558);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -245,7 +245,7 @@ let d = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 },
     },
-    E = l(a({}, d), {
+    E = l(o({}, d), {
         analyticsName: "create_announcement_post",
         stickers: { allowSending: !1 },
         gifts: {},

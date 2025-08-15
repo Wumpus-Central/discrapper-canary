@@ -1,131 +1,131 @@
 n.d(t, {
-    E: () => S,
-    Y: () => x,
-    default: () => D,
+    E: () => E,
+    Y: () => S,
+    default: () => P,
 });
-var i = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(239091),
-    o = n(883385),
+var i = n(481060),
+    o = n(239091),
+    l = n(883385),
     c = n(108843),
-    s = n(100527),
-    a = n(167675),
-    u = n(737013),
+    a = n(100527),
+    u = n(167675),
+    s = n(737013),
     d = n(607783),
-    b = n(589049),
-    f = n(299206),
+    f = n(589049),
+    b = n(299206),
     g = n(314897),
-    j = n(389052),
-    m = n(158508),
-    p = n(88966),
-    v = n(991307),
-    O = n(37258),
-    Z = n(700994),
-    y = n(981631),
+    O = n(389052),
+    p = n(158508),
+    j = n(88966),
+    y = n(991307),
+    v = n(37258),
+    m = n(700994),
+    Z = n(981631),
     h = n(388032);
-function x(e) {
-    let { isOwnSettings: t, userId: n, channelId: l, guildId: o, context: c } = e,
-        s = (0, O.Z)({
+function S(e) {
+    let { isOwnSettings: t, userId: n, channelId: o, guildId: l, context: c } = e,
+        a = (0, v.Z)({
             userId: n,
-            guildId: o,
-            channelId: l,
+            guildId: l,
+            channelId: o,
             showGuildProfile: !0,
-            icon: (0, i.jsx)(r.tBG, { size: "sm" }),
+            icon: (0, r.jsx)(i.tBG, { size: "sm" }),
             label: h.intl.string(h.t.iXAna2),
         }),
-        d = (0, p.Z)(n, c, r.kBi),
-        f = (0, Z.Z)(n),
-        g = (0, v.Z)(n),
-        j = (0, a.Z)(n),
-        m = (0, u.Z)(n),
-        y = (0, b.Z)();
+        d = (0, j.Z)(n, c, i.kBi),
+        b = (0, m.Z)(n),
+        g = (0, y.Z)(n),
+        O = (0, u.Z)(n),
+        p = (0, s.Z)(n),
+        Z = (0, f.Z)();
     return [
-        (0, i.jsxs)(r.kSQ, {
-            children: [s, d],
+        (0, r.jsxs)(i.kSQ, {
+            children: [a, d],
         }),
-        (0, i.jsxs)(r.kSQ, {
-            children: [f, g, j, m, t && y],
+        (0, r.jsxs)(i.kSQ, {
+            children: [b, g, O, p, t && Z],
         }),
     ];
 }
-function S(e, t, n) {
-    let l = (0, d.B)({
+function E(e, t, n) {
+    let o = (0, d.B)({
             userId: e.id,
             channelId: t,
             guildId: n,
             minimal: !0,
         }),
-        o = (0, f.Z)({
+        l = (0, b.Z)({
             id: e.id,
             label: h.intl.string(h.t["/AXYnJ"]),
         }),
-        c = (0, m.Z)({
+        c = (0, p.Z)({
             user: e,
             guildId: n,
             channelId: t,
             location: "GuildVoiceUserContextMenu",
         }),
-        s = (0, j.Z)({
+        a = (0, O.Z)({
             user: e,
             guildId: n,
             channelId: t,
             location: "GuildVoiceUserContextMenu",
         }),
-        a = (0, i.jsxs)(r.kSQ, {
-            children: [l, o],
+        u = (0, r.jsxs)(i.kSQ, {
+            children: [o, l],
         });
     return [
-        (0, i.jsxs)(r.kSQ, {
-            children: [c, s],
+        (0, r.jsxs)(i.kSQ, {
+            children: [c, a],
         }),
-        a,
+        u,
     ];
 }
-let D = (0, c.Z)(
-    (0, o.Z)(
+let P = (0, c.Z)(
+    (0, l.Z)(
         function (e) {
-            let { user: t, channel: n, onSelect: o, onInteraction: c, context: s } = e,
-                a = n.id,
-                u = t.isNonUserBot(),
+            let { user: t, channel: n, onSelect: l, onInteraction: c, context: a } = e,
+                u = n.id,
+                s = t.isNonUserBot(),
                 d = t.id === g.default.getId(),
-                b = x({
+                f = S({
                     isOwnSettings: d,
                     userId: t.id,
-                    channelId: a,
-                    context: s,
+                    channelId: u,
+                    context: a,
                 }),
-                j = S(t, a),
-                m = (0, f.Z)({
+                O = E(t, u),
+                p = (0, b.Z)({
                     id: t.id,
                     label: h.intl.string(h.t["/AXYnJ"]),
                 });
-            return (0, i.jsx)(r.v2r, {
+            return (0, r.jsx)(i.v2r, {
                 navId: "user-context",
-                onClose: l.Zy,
+                onClose: o.Zy,
                 "aria-label": h.intl.string(h.t.liqwPD),
-                onSelect: o,
+                onSelect: l,
                 onInteraction: c,
                 variant: "fixed",
                 children:
-                    !u &&
-                    (0, i.jsxs)(i.Fragment, {
+                    !s &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            b,
+                            f,
                             !d &&
-                                (0, i.jsx)(r.kSQ, {
-                                    children: (0, i.jsx)(r.sNh, {
+                                (0, r.jsx)(i.kSQ, {
+                                    children: (0, r.jsx)(i.sNh, {
                                         id: "more-options",
                                         label: h.intl.string(h.t.PdRCRk),
-                                        children: j,
+                                        children: O,
                                     }),
                                 }),
-                            d && (0, i.jsx)(r.kSQ, { children: m }),
+                            d && (0, r.jsx)(i.kSQ, { children: p }),
                         ],
                     }),
             });
         },
-        { object: y.qAy.CONTEXT_MENU },
+        { object: Z.qAy.CONTEXT_MENU },
     ),
-    [s.Z.VOICE_USER],
+    [a.Z.VOICE_USER],
 );

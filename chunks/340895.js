@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i,
-    o = n(442837),
-    a = n(433517),
+    a = n(442837),
+    o = n(433517),
     s = n(570140),
     l = n(358221),
     c = n(695346),
@@ -98,7 +98,7 @@ function D(e) {
             x: t,
             y: n,
         }),
-        a.K.set(E, r),
+        o.K.set(E, r),
         !1
     );
 }
@@ -117,7 +117,7 @@ function M() {
         null != (null == (n = _.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || C(r));
     });
 }
-class j extends (i = o.ZP.Store) {
+class k extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, p.Z), this.syncWith([p.Z], x), this.syncWith([u.Z], x), this.syncWith([l.Z], M);
     }
@@ -134,8 +134,8 @@ class j extends (i = o.ZP.Store) {
         return !A && S.size > 0;
     }
 }
-g(j, "displayName", "IncomingCallStore");
-let k = new j(s.Z, {
+g(k, "displayName", "IncomingCallStore");
+let j = new k(s.Z, {
     CALL_CREATE: R,
     CALL_UPDATE: R,
     CALL_DELETE: P,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function o(e) {
     }
     return e;
 }
-class a extends r.Z {
+class o extends r.Z {
     constructor(e) {
         var t, n;
         super(),
@@ -48,7 +48,7 @@ class a extends r.Z {
             (this.type = e.type);
         let {
             top: r,
-            left: a,
+            left: o,
             bottom: s,
             right: l,
         } = null != (t = e.anchor)
@@ -58,21 +58,21 @@ class a extends r.Z {
                   left: 0,
               };
         "number" == typeof s ? (r = void 0) : (s = void 0),
-            "number" == typeof l ? (a = void 0) : (l = void 0),
+            "number" == typeof l ? (o = void 0) : (l = void 0),
             (this.anchor = {
                 top: r,
-                left: a,
+                left: o,
                 bottom: s,
                 right: l,
             }),
-            (this.size = o(
+            (this.size = a(
                 {
                     width: 0,
                     height: 0,
                 },
                 e.size,
             )),
-            (this.minSize = o(
+            (this.minSize = a(
                 {
                     width: void 0,
                     height: void 0,
@@ -82,6 +82,6 @@ class a extends r.Z {
             (this.pinned = !!e.pinned),
             (this.zIndex = e.zIndex || 0),
             (this.opacity = null != (n = e.opacity) ? n : 1),
-            (this.meta = o({}, e.meta));
+            (this.meta = a({}, e.meta));
     }
 }

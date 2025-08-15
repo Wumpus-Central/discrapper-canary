@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(287880),
     S = n(714565),
     T = n(202858),
-    I = n(726985),
-    N = n(981631),
+    N = n(726985),
+    I = n(981631),
     y = n(815660),
     A = n(388032),
     P = n(343396),
@@ -123,7 +123,7 @@ class L extends r.PureComponent {
             { revealed: n } = this.state,
             { currentUser: r, togglingSMS: s, hasTOTPEnabled: a } = this.props,
             l = null != r.phone,
-            o = r.hasFlag(N.xW$.MFA_SMS);
+            o = r.hasFlag(I.xW$.MFA_SMS);
         if (a) {
             if (l || o) {
                 let e = n ? r.phone : this.maskPhoneNumber(r.phone);
@@ -177,7 +177,7 @@ class L extends r.PureComponent {
                 });
             }
             return (0, i.jsx)(b.F, {
-                setting: I.s6.ACCOUNT_SMS_BACKUP,
+                setting: N.s6.ACCOUNT_SMS_BACKUP,
                 children: (0, i.jsxs)(c.hjN, {
                     className: R.marginTop40,
                     title: A.intl.string(A.t.uHAJ5u),
@@ -197,7 +197,7 @@ class L extends r.PureComponent {
         let e,
             { backupCodes: t } = this.props,
             n = (0, i.jsx)(b.F, {
-                setting: I.s6.ACCOUNT_VIEW_BACKUP_CODES,
+                setting: N.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, i.jsx)(c.zxk, {
                     variant: "primary",
                     size: "sm",
@@ -267,7 +267,7 @@ class L extends r.PureComponent {
                     children: [
                         n,
                         (0, i.jsx)(b.F, {
-                            setting: I.s6.ACCOUNT_REMOVE_2FA,
+                            setting: N.s6.ACCOUNT_REMOVE_2FA,
                             children: (0, i.jsx)(c.zxk, {
                                 variant: "critical-secondary",
                                 size: "sm",
@@ -276,7 +276,7 @@ class L extends r.PureComponent {
                             }),
                         }),
                         (0, i.jsx)(b.F, {
-                            setting: I.s6.ACCOUNT_ENABLE_2FA,
+                            setting: N.s6.ACCOUNT_ENABLE_2FA,
                             children: (0, i.jsx)(c.zxk, {
                                 variant: "primary",
                                 size: "sm",
@@ -289,7 +289,7 @@ class L extends r.PureComponent {
                 e,
                 this.renderMFASMS(),
                 (0, i.jsx)(b.F, {
-                    setting: I.s6.ACCOUNT_SECURITY_KEYS,
+                    setting: N.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, i.jsx)(_.Z, {}),
                 }),
             ],

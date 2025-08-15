@@ -82,8 +82,8 @@ let O = {
             { upsertConfig: n } = (0, h.n6)(),
             s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, T] = r.useState(!0),
-            I = r.useRef(null),
-            [N, y] = r.useState(!1),
+            N = r.useRef(null),
+            [I, y] = r.useState(!1),
             [A, P] = r.useState(!1),
             [R, D] = r.useState([]),
             [Z, w] = r.useState(O),
@@ -179,7 +179,7 @@ let O = {
                               className: a()(x.col, x.preview),
                               children: [
                                   (0, i.jsx)("img", {
-                                      src: N ? _ : j,
+                                      src: I ? _ : j,
                                       alt: "",
                                       width: 450,
                                   }),
@@ -218,10 +218,10 @@ let O = {
                                                   }),
                                                   (0, i.jsx)("input", {
                                                       type: "checkbox",
-                                                      checked: N,
+                                                      checked: I,
                                                       className: x.checkBox,
                                                       onChange: () => {
-                                                          y(!N);
+                                                          y(!I);
                                                       },
                                                   }),
                                               ],
@@ -253,7 +253,7 @@ let O = {
                                               children: [
                                                   "Upload Animated Layer",
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: I,
+                                                      ref: N,
                                                       onChange: (e) => {
                                                           let t = V(e);
                                                           null != t &&
@@ -280,7 +280,7 @@ let O = {
                                               children: [
                                                   "Upload thumbnail.png",
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: I,
+                                                      ref: N,
                                                       onChange: (e) => G(f.cq.THUMBNAIL, e),
                                                       multiple: !1,
                                                   }),
@@ -291,7 +291,7 @@ let O = {
                                               children: [
                                                   "Upload static.png",
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: I,
+                                                      ref: N,
                                                       onChange: (e) => G(f.cq.STATIC, e),
                                                       multiple: !1,
                                                   }),
@@ -302,7 +302,7 @@ let O = {
                                               children: [
                                                   "Upload reduced_motion.png",
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: I,
+                                                      ref: N,
                                                       onChange: (e) => G(f.cq.REDUCED_MOTION, e),
                                                       multiple: !1,
                                                   }),
@@ -662,7 +662,7 @@ let O = {
                                                                       children: "Add Alternative",
                                                                   }),
                                                                   (0, i.jsx)(m.Z, {
-                                                                      ref: I,
+                                                                      ref: N,
                                                                       onChange: (e) =>
                                                                           ((e, t) => {
                                                                               let n = V(e);

@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     searchResultGroup: "searchResultGroup_c68065",
     channelNameContainer: "channelNameContainer_c68065",
     channelNameText: "channelNameText_c68065",

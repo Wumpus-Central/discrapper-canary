@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(442837),
     i = n(570140),
-    o = n(569545),
-    a = n(19780),
+    a = n(569545),
+    o = n(19780),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -73,27 +73,27 @@ function g(e) {
 }
 function E(e) {
     var t, n;
-    let { channelId: r, sendMessageOptions: i, message: o, optimistic: l } = e;
-    if (r !== a.Z.getChannelId()) return !1;
+    let { channelId: r, sendMessageOptions: i, message: a, optimistic: l } = e;
+    if (r !== o.Z.getChannelId()) return !1;
     if (l) {
         let e = null == i || null == (n = i.activityAction) ? void 0 : n.targetUserId;
-        return null != e && ((f[o.id] = e), !1);
+        return null != e && ((f[a.id] = e), !1);
     }
-    if (null == o.nonce || (null == (t = o.activity) ? void 0 : t.type) !== s.mFx.STREAM_REQUEST) return !1;
-    let u = f[o.nonce];
+    if (null == a.nonce || (null == (t = a.activity) ? void 0 : t.type) !== s.mFx.STREAM_REQUEST) return !1;
+    let u = f[a.nonce];
     if (null == u) return !1;
-    delete f[o.nonce], (_ = d(c({}, _), { [u]: o.id }));
+    delete f[a.nonce], (_ = d(c({}, _), { [u]: a.id }));
 }
 function b(e) {
     let { streamKey: t } = e,
-        { ownerId: n } = o.my(t);
+        { ownerId: n } = a.my(t);
     if (null == _[n]) return !1;
     delete _[n];
 }
 function y() {
-    if (a.Z.getWasMoved()) {
-        if (a.Z.getChannelId() === p) return !1;
-        (p = a.Z.getChannelId()), h();
+    if (o.Z.getWasMoved()) {
+        if (o.Z.getChannelId() === p) return !1;
+        (p = o.Z.getChannelId()), h();
     } else {
         if (null == p) return !1;
         p = null;
@@ -101,7 +101,7 @@ function y() {
 }
 class O extends r.ZP.Store {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(o.Z);
     }
     getPendingRequestForUser(e) {
         return _[e];

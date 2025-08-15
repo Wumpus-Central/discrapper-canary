@@ -1,7 +1,7 @@
-n.d(t, { S: () => o });
+n.d(t, { S: () => l });
 var r = n(442837),
     i = n(359119);
-function o(e, t) {
+function l(e, t) {
     return (0, r.e7)([i.ZP], () => i.ZP.getChannelSafetyWarnings(e), [e])
         .filter((e) => e.type === t)
         .find(

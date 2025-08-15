@@ -1,62 +1,60 @@
 n.d(t, {
-    M: () => h,
-    Z: () => g,
+    M: () => g,
+    Z: () => j,
 });
-var r = n(255367),
-    i = n(73800),
+var i,
+    r = n(255367),
+    l = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(500923),
-    l = n.n(s),
-    c = n(570140),
-    u = n(960020),
-    d = n(831244),
-    f = n(815605),
-    _ = n(981631),
-    p = n(994428),
-    h = (function (e) {
-        return (e[(e.NORMAL = 20)] = "NORMAL"), (e[(e.LARGE = 32)] = "LARGE"), e;
-    })({});
-let m = async (e) => {
+    c = n.n(s),
+    u = n(570140),
+    d = n(960020),
+    h = n(831244),
+    p = n(815605),
+    m = n(981631),
+    f = n(994428),
+    g = (((i = {})[(i.NORMAL = 20)] = "NORMAL"), (i[(i.LARGE = 32)] = "LARGE"), i);
+let b = async (e) => {
     var t;
     let { effect: n } = e,
-        r = await (0, d.T)(n.channelId, null != (t = n.messageId) ? t : _.lds, n.emoji.name),
-        i = await (0, f.aB)(
+        i = await (0, h.T)(n.channelId, null != (t = n.messageId) ? t : m.lds, n.emoji.name),
+        r = await (0, p.aB)(
             "".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name),
             n.url,
-            r,
+            i,
             n.color,
         );
-    return (i.assets[0].p = n.url), i;
+    return (r.assets[0].p = n.url), r;
 };
-function g(e) {
-    let { className: t, effect: n, onComplete: o, emojiSize: s = 20 } = e,
-        d = i.useRef(null),
-        _ = s * f.Vz,
-        h = (_ + s) / 2,
-        g = "translateY(".concat(h, "px)");
+function j(e) {
+    let { className: t, effect: n, onComplete: i, emojiSize: o = 20 } = e,
+        s = l.useRef(null),
+        h = o * p.Vz,
+        m = (h + o) / 2;
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != d.current) {
-                            let t = await m({ effect: n });
-                            (e = l().loadAnimation({
-                                container: d.current,
+                        if (null != s.current) {
+                            let t = await b({ effect: n });
+                            (e = c().loadAnimation({
+                                container: s.current,
                                 renderer: "svg",
                                 loop: !1,
                                 autoplay: !0,
                                 animationData: t,
                             })).addEventListener("complete", () => {
-                                null == o || o(), e.destroy();
+                                null == i || i(), e.destroy();
                             }),
                                 null != n.channelId &&
                                     null != n.messageId &&
                                     null != n.emoji &&
-                                    n.key === u.I.HOVER &&
-                                    c.Z.dispatch({
+                                    n.key === d.I.HOVER &&
+                                    u.Z.dispatch({
                                         type: "BURST_REACTION_ANIMATION_ADD",
                                         channelId: n.channelId,
                                         messageId: n.messageId,
@@ -69,17 +67,17 @@ function g(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [o, n, s]),
+        }, [i, n, o]),
         (0, r.jsx)("div", {
-            className: p.effectsWrapper,
+            className: f.effectsWrapper,
             children: (0, r.jsx)("div", {
-                className: a()(p.effect, t),
+                className: a()(f.effect, t),
                 style: {
-                    transform: g,
-                    height: _,
-                    width: _,
+                    transform: "translateY(".concat(m, "px)"),
+                    height: h,
+                    width: h,
                 },
-                ref: d,
+                ref: s,
             }),
         })
     );

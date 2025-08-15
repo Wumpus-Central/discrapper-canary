@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(237997),
+    a = n(570140),
+    o = n(237997),
     s = n(823379),
     l = n(486016),
     c = n(981631);
@@ -92,7 +92,7 @@ class y extends (r = i.ZP.PersistedStore) {
                 null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings,
             ),
         })),
-            this.waitFor(a.default);
+            this.waitFor(o.default);
     }
     getState() {
         return m;
@@ -113,8 +113,8 @@ u(y, "displayName", "OverlaySettingsStore"),
     u(y, "migrations", [
         (e) => {
             var t;
-            let n = a.default.getTextChatNotificationMode() === c.Ypu.DISABLED,
-                r = !1 === a.default.showInviteNotification;
+            let n = o.default.getTextChatNotificationMode() === c.Ypu.DISABLED,
+                r = !1 === o.default.showInviteNotification;
             return _(d({}, e), {
                 notificationSettings: new Set(
                     [
@@ -126,7 +126,7 @@ u(y, "displayName", "OverlaySettingsStore"),
             });
         },
     ]);
-let O = new y(o.Z, {
+let O = new y(a.Z, {
     LOGOUT: p,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: E,
     OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: b,

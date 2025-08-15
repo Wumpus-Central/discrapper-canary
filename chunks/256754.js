@@ -1,8 +1,8 @@
 n.d(t, { i: () => f });
 var r = n(255367),
     i = n(481060),
-    o = n(626135),
-    a = n(598117),
+    a = n(626135),
+    o = n(598117),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -62,13 +62,15 @@ let f = async function () {
         guildId: t = null,
         analyticsLocation: l = null,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    o.default.track(s.rMx.OPEN_MODAL, {
+    a.default.track(s.rMx.OPEN_MODAL, {
         type: "Emoji Studio",
         source: l,
     }),
         await (0, i.ZDy)(
             async () => {
-                let { EmojiStudioModal: i } = await Promise.all([n.e("20087"), n.e("65819")]).then(n.bind(n, 546200));
+                let { EmojiStudioModal: i } = await Promise.all([n.e("63575"), n.e("20087"), n.e("67079")]).then(
+                    n.bind(n, 546200),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         i,
@@ -78,6 +80,6 @@ let f = async function () {
                         }),
                     );
             },
-            { modalKey: a.Hj },
+            { modalKey: o.Hj },
         );
 };

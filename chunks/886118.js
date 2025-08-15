@@ -3,6 +3,6 @@ n.d(t, {
     S: () => o,
 });
 var r,
-    a,
+    i,
     o = (((r = {}).FUZZY = "fuzzy"), (r.EXACT = "exact"), (r.REGEX = "regex"), (r.JARO_WINKLER = "jaro_winkler"), r),
-    l = (((a = {}).NONE = "none"), (a.JARO_WINKLER = "jaro_winkler"), a);
+    l = (((i = {}).NONE = "none"), (i.JARO_WINKLER = "jaro_winkler"), i);

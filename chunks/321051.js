@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
     l = n(481060),
     c = n(47280),
@@ -13,10 +13,10 @@ var r = n(255367),
 let p = [54, 8, 8, 8];
 function h(e) {
     let { onSelect: t, sound: n } = e,
-        [o, h] = i.useState(!1),
+        [a, h] = i.useState(!1),
         m = i.useRef(null),
         g = (0, c.ZP)({ location: "GiftSoundboard" }),
-        E = a()(_.text, g && _.refresh);
+        E = o()(_.text, g && _.refresh);
     function b(e) {
         h(!1), null == t || t(e);
     }
@@ -45,7 +45,7 @@ function h(e) {
         });
     return (0, r.jsx)(l.yRy, {
         targetElementRef: m,
-        shouldShow: o,
+        shouldShow: a,
         position: "bottom",
         align: "left",
         onRequestClose: () => h(!1),
@@ -69,7 +69,7 @@ function h(e) {
         },
         children: () =>
             (0, r.jsx)(l.P3F, {
-                className: a()(_.container, g && _.refresh),
+                className: o()(_.container, g && _.refresh),
                 onClick: () => h(!0),
                 innerRef: m,
                 children:

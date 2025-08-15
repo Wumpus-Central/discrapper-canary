@@ -1,19 +1,19 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
-var i = n(399606),
-    o = n(481060),
+var l = n(399606),
+    i = n(481060),
     a = n(351780),
-    s = n(170248);
-function l(e) {
-    let { isShaking: t, shakeLocation: n, children: l, className: c } = e,
-        u = (0, s.Z)(n);
-    return (0, i.e7)([a.Z], () => a.Z.isEnabled({ shakeLocation: n }))
-        ? (0, r.jsx)(o.UkV, {
+    o = n(170248);
+function u(e) {
+    let { isShaking: t, shakeLocation: n, children: u, className: s } = e,
+        c = (0, o.Z)(n);
+    return (0, l.e7)([a.Z], () => a.Z.isEnabled({ shakeLocation: n }))
+        ? (0, r.jsx)(i.UkV, {
               isShaking: t,
-              intensity: u,
-              className: c,
-              children: l,
+              intensity: c,
+              className: s,
+              children: u,
           })
-        : l;
+        : u;
 }

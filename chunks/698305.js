@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(415506);
 var r = n(493683),
     i = n(904245),
-    o = n(541716),
-    a = n(656709),
+    a = n(541716),
+    o = n(656709),
     s = n(957730),
     l = n(592125),
     c = n(838440),
@@ -10,7 +10,7 @@ var r = n(493683),
 let d = async (e) => {
     let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: _ = !1, entry: p } = e,
         { valid: h, failureReason: m } = await (0, c.v)({
-            type: o.Ie.NORMAL,
+            type: a.Ie.NORMAL,
             content: n,
             channel: null,
         });
@@ -24,7 +24,7 @@ let d = async (e) => {
         E = l.Z.getChannel(g);
     if (null == E) throw Error("Failed to open private channel");
     if (null != p)
-        (0, a.p)({
+        (0, o.p)({
             channel: E,
             content: n,
             entry: p,

@@ -1,73 +1,39 @@
 n.d(t, {
-    M9: () => O,
-    Pb: () => y,
-    XX: () => E,
-    ZP: () => v,
-    ZT: () => h,
-    iv: () => b,
-    pk: () => g,
+    M9: () => f,
+    Pb: () => g,
+    XX: () => _,
+    ZP: () => y,
+    ZT: () => p,
+    iv: () => h,
+    pk: () => b,
 });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    o = n.n(i),
-    a = n(392711),
-    s = n.n(a),
+var o = n(120356),
+    a = n.n(o),
+    i = n(392711),
+    s = n.n(i),
     l = n(481060),
     c = n(674944);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function f(e) {
     return "".concat(e / 16, "rem");
 }
-function _() {
-    return Array(s().random(3, 8))
-        .fill(null)
-        .map(() => s().random(30, 80));
-}
-function p() {
+function u() {
     return (0, r.jsx)("div", {
         className: c.avatar,
         style: { opacity: 0.08 },
     });
 }
-function h(e) {
-    let { width: t, height: n, opacity: i, className: a } = e,
+function p(e) {
+    let { width: t, height: n, opacity: o, className: i } = e,
         l = {
-            width: f(t),
-            opacity: null != i ? i : s().random(0.02, 0.08),
+            width: d(t),
+            opacity: null != o ? o : s().random(0.02, 0.08),
         };
     return (
-        null != n && (l.height = f(n)),
+        null != n && (l.height = d(n)),
         (0, r.jsx)("div", {
-            className: o()(a, { [c.blob]: !0 }),
+            className: a()(i, { [c.blob]: !0 }),
             style: l,
         })
     );
@@ -76,57 +42,57 @@ function m(e) {
     let t,
         {
             groupStart: n = !1,
-            compact: i = !1,
-            attachmentSpecs: a,
-            usernameWidth: u,
-            usernameOpacity: f,
-            className: m,
-            style: g,
+            compact: o = !1,
+            attachmentSpecs: i,
+            usernameWidth: d,
+            usernameOpacity: m,
+            className: b,
+            style: _,
         } = e,
-        E = i ? 50 : s().random(40, 50);
+        h = o ? 50 : s().random(40, 50);
     return (
-        !i && n
+        !o && n
             ? (t = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(p, {}),
+                      (0, r.jsx)(u, {}),
                       (0, r.jsx)(l.H, {
                           className: c.header,
-                          children: (0, r.jsx)(h, {
-                              width: u,
-                              opacity: f,
+                          children: (0, r.jsx)(p, {
+                              width: d,
+                              opacity: m,
                               className: c.__invalid_username,
                           }),
                       }),
                   ],
               }))
-            : i &&
+            : o &&
               (t = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      i &&
-                          (0, r.jsx)(h, {
-                              width: E,
-                              className: o()({
+                      o &&
+                          (0, r.jsx)(p, {
+                              width: h,
+                              className: a()({
                                   [c.compactTimestamp]: !0,
                                   [c.hidden]: !n,
                               }),
                           }),
                       (0, r.jsx)(l.H, {
                           className: c.header,
-                          children: (0, r.jsx)(h, {
-                              width: u,
-                              opacity: f,
+                          children: (0, r.jsx)(p, {
+                              width: d,
+                              opacity: m,
                           }),
                       }),
                   ],
               })),
         (0, r.jsxs)("div", {
             "aria-hidden": !0,
-            className: o()(m, {
+            className: a()(b, {
                 [c.wrapper]: !0,
-                [c.compact]: i,
-                [c.cozy]: !i,
+                [c.compact]: o,
+                [c.cozy]: !o,
             }),
-            style: g,
+            style: _,
             children: [
                 (0, r.jsxs)("div", {
                     className: c.contents,
@@ -134,39 +100,66 @@ function m(e) {
                         t,
                         (0, r.jsx)("div", {
                             className: c.content,
-                            children: _().map((e, t) =>
-                                (0, r.jsx)(
-                                    h,
-                                    {
-                                        width: e,
-                                        opacity: 0.06,
-                                    },
-                                    t,
+                            children: Array(s().random(3, 8))
+                                .fill(null)
+                                .map(() => s().random(30, 80))
+                                .map((e, t) =>
+                                    (0, r.jsx)(
+                                        p,
+                                        {
+                                            width: e,
+                                            opacity: 0.06,
+                                        },
+                                        t,
+                                    ),
                                 ),
-                            ),
                         }),
                     ],
                 }),
-                null != a &&
+                null != i &&
                     (0, r.jsx)("div", {
                         className: c.attachmentContainer,
                         children: (0, r.jsx)("div", {
                             className: c.attachment,
-                            style: d({ opacity: 0.03 }, a),
+                            style: (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({ opacity: 0.03 }, i),
                         }),
                     }),
             ],
         })
     );
 }
-let g = 44,
-    E = 22,
-    b = 26,
-    y = 26,
-    O = 6;
-function v(e) {
-    let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: o, className: a } = e,
-        l = null != o ? (o.last ? t - 1 : s().random(0, t - 1)) : -1,
+let b = 44,
+    _ = 22,
+    h = 26,
+    g = 26,
+    f = 6;
+function y(e) {
+    let { messages: t, groupSpacing: n = 0, compact: o = !1, attachmentSpecs: a, className: i } = e,
+        l = null != a ? (a.last ? t - 1 : s().random(0, t - 1)) : -1,
         c = s().random(80, 120),
         u = s().random(0.1, 0.2);
     return (0, r.jsx)(r.Fragment, {
@@ -176,13 +169,13 @@ function v(e) {
                 (0, r.jsx)(
                     m,
                     {
-                        compact: i,
-                        className: a,
+                        compact: o,
+                        className: i,
                         usernameWidth: c,
                         usernameOpacity: u,
                         groupStart: 0 === t,
-                        attachmentSpecs: t === l ? o : void 0,
-                        style: 0 === t ? { marginTop: f(n) } : void 0,
+                        attachmentSpecs: t === l ? a : void 0,
+                        style: 0 === t ? { marginTop: d(n) } : void 0,
                     },
                     t,
                 ),

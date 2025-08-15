@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(990169),
     c = n(249458),
@@ -73,9 +73,9 @@ function I(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,8 +84,8 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 n(54453);
@@ -94,7 +94,7 @@ function A(e) {
     var t,
         n,
         {
-            src: o,
+            src: a,
             alt: s,
             className: c,
             emojiId: f,
@@ -133,28 +133,28 @@ function A(e) {
             "registerAnimatedElementRef",
             "surrogate",
         ]);
-    let [j, k] = i.useState(!1),
+    let [k, j] = i.useState(!1),
         [U, G] = i.useState(void 0),
         B = i.useRef(void 0),
-        { triggerAnimation: Z, untriggerAnimation: F } = i.useContext(u.Rm),
-        V = _.Yk.useSetting(),
+        { triggerAnimation: V, untriggerAnimation: F } = i.useContext(u.Rm),
+        Z = _.Yk.useSetting(),
         H = S(),
-        Y = null == w ? V : w,
+        Y = null == w ? Z : w,
         W = E.kV[T],
         K = i.useRef(null),
         z = i.useMemo(() => {
-            if (null != o) return o;
+            if (null != a) return a;
             if (null != f) {
                 let e = !0 === N && Y;
                 return h.ZP.getEmojiURL({
                     id: f,
-                    animated: H && !0 === O && (e || j || !0 === A),
+                    animated: H && !0 === O && (e || k || !0 === A),
                     size: W,
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, p, W, H, j, A, N, o]),
+        }, [O, Y, f, p, W, H, k, A, N, a]),
         q = i.useCallback(() => {
             null != z &&
                 (B.current = (0, d.po)(z, (e) => {
@@ -163,13 +163,13 @@ function A(e) {
         }, [z]),
         X = i.useCallback(
             (e) => {
-                O && k(!0), null == f && Z(p), null == C || C(e);
+                O && j(!0), null == f && V(p), null == C || C(e);
             },
-            [O, p, C, Z, f],
+            [O, p, C, V, f],
         ),
         Q = i.useCallback(
             (e) => {
-                O && k(!1), null == f && F(p), null == R || R(e);
+                O && j(!1), null == f && F(p), null == R || R(e);
             },
             [O, f, p, R, F],
         ),
@@ -177,7 +177,7 @@ function A(e) {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": p };
             return y(
                 v(y({}, M), {
-                    className: a()("emoji", c, { jumboable: "jumbo" === T }),
+                    className: o()("emoji", c, { jumboable: "jumbo" === T }),
                     onError: q,
                     onMouseEnter: X,
                     onMouseLeave: Q,
@@ -205,7 +205,7 @@ function A(e) {
               "span",
               v(y({}, J), {
                   ref: $,
-                  className: a()("emoji", "emoji-text"),
+                  className: o()("emoji", "emoji-text"),
                   children: null != x ? x : p,
               }),
           )
@@ -215,7 +215,7 @@ function A(e) {
                       channelId: g,
                       messageId: b,
                       emojiName: p,
-                      disable: !1 === Y || !1 === V,
+                      disable: !1 === Y || !1 === Z,
                       emojiRef: ee,
                   }),
                   P
@@ -249,13 +249,13 @@ function A(e) {
 }
 function N(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
-        { animate: n, registerRef: o } = t(),
-        { disableAnimations: a } = i.useContext(c.G);
+        { animate: n, registerRef: a } = t(),
+        { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(
         A,
         v(y({}, e), {
-            registerAnimatedElementRef: o,
-            shouldAnimate: n && !a,
+            registerAnimatedElementRef: a,
+            shouldAnimate: n && !o,
         }),
     );
 }

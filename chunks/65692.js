@@ -1,4 +1,4 @@
-r.d(t, { q: () => b }),
+r.d(t, { q: () => y }),
     r(388685),
     r(410992),
     r(227481),
@@ -14,54 +14,54 @@ r.d(t, { q: () => b }),
     r(146733);
 var n = r(73800),
     l = r(250683),
-    o = r(512722),
-    c = r.n(o),
-    i = r(442837),
+    i = r(512722),
+    u = r.n(i),
+    a = r(442837),
     s = r(974167),
-    a = r(314897),
-    u = r(131951),
+    o = r(314897),
+    c = r(131951),
     d = r(19780),
     f = r(760373),
-    p = r(65154);
-function b(e) {
+    E = r(65154);
+function y(e) {
     let { userId: t } = e,
-        r = (0, i.e7)([a.default], () => a.default.getId());
-    c()(r !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
-    let [o, b] = n.useState(null),
-        [m, y] = n.useState(!1),
-        h = (0, i.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
-        j = (0, i.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(r)),
-        g = n.useCallback((e) => {
-            b(l.fromByteArray(e)), y(!1);
+        r = (0, a.e7)([o.default], () => o.default.getId());
+    u()(r !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
+    let [i, y] = n.useState(null),
+        [g, p] = n.useState(!1),
+        m = (0, a.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
+        b = (0, a.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(r)),
+        S = n.useCallback((e) => {
+            y(l.fromByteArray(e)), p(!1);
         }, []),
-        O = n.useCallback(
+        _ = n.useCallback(
             async (e, t, r, n) => {
-                if (u.Z.supports(p.AN.MLS_PAIRWISE_FINGERPRINTS)) {
+                if (c.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
                     var l;
                     null == (l = d.Z.getRTCConnection()) ||
                         l.getMLSPairwiseFingerprint(f.Xj, r, (e) => {
-                            g(new Uint8Array(e));
+                            S(new Uint8Array(e));
                         });
-                } else g(await (0, s.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(n), r));
+                } else S(await (0, s.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(n), r));
             },
-            [g],
+            [S],
         ),
-        x = n.useRef(null);
+        h = n.useRef(null);
     return (
         n.useEffect(() => {
-            null != h && null != j && null == x.current && (y(!0), (x.current = setTimeout(() => O(r, j, t, h), 0)));
-            let e = x.current;
+            null != m && null != b && null == h.current && (p(!0), (h.current = setTimeout(() => _(r, b, t, m), 0)));
+            let e = h.current;
             return () => {
                 null != e && clearTimeout(e);
             };
-        }, [r, j, O, t, h]),
+        }, [r, b, _, t, m]),
         n.useMemo(
             () => ({
-                fingerprint: o,
-                userKey: h,
-                loading: m,
+                fingerprint: i,
+                userKey: m,
+                loading: g,
             }),
-            [o, m, h],
+            [i, g, m],
         )
     );
 }

@@ -1,3 +1,4 @@
+n.d(t, { Z: () => r });
 function r(e) {
     if (null != e.title && null != e.filename) {
         let t = e.filename.lastIndexOf("."),
@@ -6,4 +7,3 @@ function r(e) {
     }
     return e.filename;
 }
-n.d(t, { Z: () => r });

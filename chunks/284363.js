@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => i,
-    i: () => o,
+    i: () => a,
 });
 var r = n(854218),
     i = (function (e) {
@@ -15,7 +15,7 @@ var r = n(854218),
             e
         );
     })({});
-function o(e) {
+function a(e) {
     return e.staff
         ? 5
         : e.verified && e.partnered

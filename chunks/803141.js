@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g }), n(388685), n(539854);
+n.d(t, { Z: () => b }), n(388685), n(539854);
 var r = n(750041),
     i = n(594174),
     o = n(131681),
-    a = n(932941),
-    s = n(363072),
-    l = n(526761);
-function c(e, t, n) {
+    c = n(932941),
+    a = n(363072),
+    s = n(526761);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,58 +18,57 @@ function c(e, t, n) {
         e
     );
 }
-let u = null;
-function d() {
-    let e = (0, o.U)() ? [...a.pF, ...a.wq, ...a.$u] : [],
+let l = null;
+function g() {
+    let e = (0, o.U)() ? [...c.pF, ...c.wq, ...c.$u] : [],
         t = i.default.getCurrentUser();
     if (null == t ? void 0 : t.isStaff()) {
         let t = n(932941).Bk;
         e.push(...t);
     }
-    (u = new s.B()).addWords(e);
+    (l = new a.B()).addWords(e);
 }
-function f() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    null == u && (u = new s.B()), u.addWords(e);
+function k() {
+    g();
 }
-function _() {
-    d();
+function d() {
+    g();
 }
-function p() {
-    d();
-}
-function h(e) {
+function f(e) {
     let { local: t, settings: n } = e;
-    if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
-    null != u && u.clear(), d();
+    if (!t || n.type !== s.yP.PRELOADED_USER_SETTINGS) return !1;
+    null != l && l.clear(), g();
 }
-class m extends r.Z {
+class h extends r.Z {
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
-        null != e && (u = null != e.keywordTrie ? s.B.fromSnapshot(e.keywordTrie) : null);
+        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
+        null != e && (l = null != e.keywordTrie ? a.B.fromSnapshot(e.keywordTrie) : null);
     }
     takeSnapshot() {
         return {
-            version: m.LATEST_SNAPSHOT_VERSION,
-            data: { keywordTrie: u },
+            version: h.LATEST_SNAPSHOT_VERSION,
+            data: { keywordTrie: l },
         };
     }
     getKeywordTrie() {
-        return u;
+        return l;
     }
     initializeForKeywordTests() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        f(e);
+        !(function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+            null == l && (l = new a.B()), l.addWords(e);
+        })(e);
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: k,
+            CONNECTION_OPEN_SUPPLEMENTAL: k,
             CACHE_LOADED: () => this.loadCache(),
-            OVERLAY_INITIALIZE: p,
-            USER_SETTINGS_PROTO_UPDATE: h,
+            OVERLAY_INITIALIZE: d,
+            USER_SETTINGS_PROTO_UPDATE: f,
         });
     }
 }
-c(m, "displayName", "KeywordFilterStore"), c(m, "LATEST_SNAPSHOT_VERSION", 2);
-let g = new m();
+u(h, "displayName", "KeywordFilterStore"), u(h, "LATEST_SNAPSHOT_VERSION", 2);
+let b = new h();

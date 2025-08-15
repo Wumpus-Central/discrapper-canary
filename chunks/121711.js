@@ -13,7 +13,7 @@ var r = n(255367),
     h = n(335131),
     g = n(252618),
     m = n(70097),
-    b = n(114851),
+    b = n(979233),
     _ = n(17845),
     O = n(374939),
     E = n(233374),
@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(251360),
     U = n(466962),
     G = n(452081),
-    V = n(46140),
-    B = n(981631),
+    B = n(46140),
+    V = n(981631),
     H = n(215023),
     F = n(388032),
     z = n(728963),
@@ -47,7 +47,7 @@ var r = n(255367),
     K = n(164792);
 function q(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, N.WX)({ location: V.dr.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, N.WX)({ location: B.dr.QUEST_HOME_DESKTOP }),
         l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         o = (0, s.e7)([P.Z], () => P.Z.isFocused()),
         { ref: c, inViewport: u } = (0, L.a)(),
@@ -90,7 +90,7 @@ let X = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
-        m = (0, Z._)({ location: V.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
+        m = (0, Z._)({ location: B.dr.QUEST_HOME_DESKTOP }) ? D.Z : D.j,
         P = (0, k.z)((e) => e.registerAssetLoad),
         j = i.useRef(d);
     i.useEffect(() => {
@@ -110,11 +110,11 @@ let X = function () {
                 },
             });
         }, [e]);
-    let { enabled: L } = (0, N.WX)({ location: V.dr.QUEST_HOME_DESKTOP }),
-        { showBetaTag: W } = S.Z.useExperiment({ location: V.dr.QUEST_HOME_DESKTOP }),
+    let { enabled: L } = (0, N.WX)({ location: B.dr.QUEST_HOME_DESKTOP }),
+        { showBetaTag: W } = S.Z.useExperiment({ location: B.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
-            if (L) return void window.open(B.EYA.PAID_TERMS_ORBS);
-            window.open(x.Z.getArticleURL(B.BhN.QUESTS_LEARN_MORE));
+            if (L) return void window.open(V.EYA.PAID_TERMS_ORBS);
+            window.open(x.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
@@ -122,9 +122,9 @@ let X = function () {
         Q = i.useRef(null),
         J = i.useCallback(() => {
             (0, C.Y)({
-                pageType: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: B.jXE.ORBS_BALANCE_MENU,
-                ctaObject: B.qAy.CTA_TO_ORBS_SHOP,
+                pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: V.jXE.ORBS_BALANCE_MENU,
+                ctaObject: V.qAy.CTA_TO_ORBS_SHOP,
             }),
                 (0, h.mK)({
                     openInLayer: !1,
@@ -150,7 +150,7 @@ let X = function () {
                                   tabs: n,
                                   icon: u.qDn,
                                   children: (0, r.jsx)(T.V9, {
-                                      analyticsPage: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                      analyticsPage: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: T.ek.END,
                                       ctaText: F.intl.string(F.t["J+vlIS"]),
                                       ctaOnClick: J,

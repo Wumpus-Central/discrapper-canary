@@ -1,11 +1,11 @@
 n.d(t, {
-    S: () => a,
+    S: () => o,
     f: () => s,
 });
 var r = n(73800),
     i = n(818083),
-    o = n(46140);
-let a = (0, i.B)({
+    a = n(46140);
+let o = (0, i.B)({
     id: "2025-08_mobile_video_quests_on_desktop",
     kind: "user",
     label: "Mobile Video Quests on Desktop",
@@ -34,6 +34,6 @@ let a = (0, i.B)({
 });
 function s(e) {
     let { location: t, questFeatures: n } = e,
-        i = r.useMemo(() => n.includes(o.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE), [n]);
-    return a.useExperiment({ location: t }, { autoTrackExposure: i }).enabled && i;
+        i = r.useMemo(() => n.includes(a.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE), [n]);
+    return o.useExperiment({ location: t }, { autoTrackExposure: i }).enabled && i;
 }

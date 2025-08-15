@@ -7,8 +7,8 @@ n.d(t, {
     n(73800);
 var r = n(215023),
     i = n(497414),
-    o = n(252802),
-    a = n(452823),
+    a = n(252802),
+    o = n(452823),
     s = n(744709),
     l = n(39934);
 function c(e, t, n) {
@@ -52,7 +52,7 @@ class d {
 }
 let f = {
         ROBERT: new d({
-            src: a.Z,
+            src: o.Z,
             style: {
                 position: "absolute",
                 width: "400px",
@@ -81,7 +81,7 @@ let f = {
         ORB_PURCHASE: new d({
             src: {
                 dark: i.Z,
-                light: o.Z,
+                light: a.Z,
             },
             animated: !0,
             style: {

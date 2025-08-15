@@ -1,68 +1,68 @@
 n.d(t, { E: () => d });
 var r = n(73800),
-    l = n(399606),
-    o = n(661111),
-    a = n(706454),
-    i = n(802098),
-    s = n(596401);
+    o = n(399606),
+    a = n(661111),
+    i = n(706454),
+    s = n(802098),
+    l = n(596401);
 function c(e, t) {
     let {
         changelog: n,
-        loadState: a,
+        loadState: i,
         defaultChangelog: c,
         defaultLoadState: d,
-    } = (0, l.cj)([i.Z], () => {
-        let n = null != e ? i.Z.getChangelog(e, t) : null,
-            r = null != e ? i.Z.getChangelog(e, "en-US") : null,
-            l = null != e && i.Z.getChangelogLoadStatus(e, "en-US");
+    } = (0, o.cj)([s.Z], () => {
+        let n = null != e ? s.Z.getChangelog(e, t) : null,
+            r = null != e ? s.Z.getChangelog(e, "en-US") : null,
+            o = null != e && s.Z.getChangelogLoadStatus(e, "en-US");
         return {
             changelog: n,
-            loadState: null != e && i.Z.getChangelogLoadStatus(e, t),
+            loadState: null != e && s.Z.getChangelogLoadStatus(e, t),
             defaultChangelog: r,
-            defaultLoadState: l,
+            defaultLoadState: o,
         };
     }, [e, t]);
     return (r.useEffect(() => {
-        null != e && null == n && a === s.LU.NOT_LOADED && o.Z.fetchChangelog(e, t);
-    }, [e, n, a, t]),
+        null != e && null == n && i === l.LU.NOT_LOADED && a.Z.fetchChangelog(e, t);
+    }, [e, n, i, t]),
     null == e)
         ? {
               id: e,
               changelog: null,
               loaded: !1,
           }
-        : null == n && a === s.LU.LOADED_FAILURE
+        : null == n && i === l.LU.LOADED_FAILURE
           ? {
                 id: e,
                 changelog: c,
-                loaded: d !== s.LU.NOT_LOADED,
+                loaded: d !== l.LU.NOT_LOADED,
             }
           : {
                 id: e,
                 changelog: n,
-                loaded: a !== s.LU.NOT_LOADED,
+                loaded: i !== l.LU.NOT_LOADED,
             };
 }
 function d() {
-    let e = (0, l.e7)([a.default], () => a.default.locale),
-        t = (0, l.e7)([i.Z], () => i.Z.latestChangelogId()),
-        n = (0, l.e7)([i.Z], () => i.Z.getConfig()),
+    let e = (0, o.e7)([i.default], () => i.default.locale),
+        t = (0, o.e7)([s.Z], () => s.Z.latestChangelogId()),
+        n = (0, o.e7)([s.Z], () => s.Z.getConfig()),
         r = null != n && 0 === Object.keys(n).length,
-        o = null != n && Object.keys(n).length > 0 && null == t,
-        s = (0, l.e7)([i.Z], () => i.Z.overrideId()),
-        { changelog: d, loaded: h } = c(t, e),
-        { changelog: u, loaded: g } = c(s, e);
-    return null == s || (null == u && g)
+        a = null != n && Object.keys(n).length > 0 && null == t,
+        l = (0, o.e7)([s.Z], () => s.Z.overrideId()),
+        { changelog: d, loaded: u } = c(t, e),
+        { changelog: p, loaded: m } = c(l, e);
+    return null == l || (null == p && m)
         ? {
               id: t,
               changelog: d,
-              loaded: !!r || h,
-              clientTooOld: o,
+              loaded: !!r || u,
+              clientTooOld: a,
           }
         : {
-              id: s,
-              changelog: u,
-              loaded: g,
+              id: l,
+              changelog: p,
+              loaded: m,
               clientTooOld: !1,
           };
 }

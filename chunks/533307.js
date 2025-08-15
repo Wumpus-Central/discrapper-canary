@@ -1,28 +1,16 @@
 let r;
 n.d(t, { Z: () => m });
 var i = n(544891),
-    o = n(570140),
+    l = n(570140),
     a = n(728345),
-    s = n(812206),
-    l = n(625128),
+    o = n(812206),
+    s = n(625128),
     c = n(335131),
     u = n(669079),
     d = n(981631),
-    f = n(474936);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
+    p = n(474936);
+r = n(775644).Z;
+let m = (function (e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,53 +21,59 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
-}
-async function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    o.Z.dispatch({
-        type: "GIFT_CODE_RESOLVE",
-        code: e,
-    });
-    try {
-        let r = await (0, u.bT)(e, t, n);
-        if (null != r.application_id && r.application_id !== f.CL) {
-            let e = s.Z.getApplication(r.application_id);
-            if (null == e)
-                try {
-                    await a.ZP.fetchApplication(r.application_id);
-                } catch (e) {}
-        }
-        return (
-            r.application_id === d.XAJ && (await (0, c.jr)(r.sku_id)),
-            o.Z.dispatch({
-                type: "GIFT_CODE_RESOLVE_SUCCESS",
-                giftCode: r,
-            }),
-            { giftCode: r }
-        );
-    } catch (t) {
-        throw (
-            (o.Z.dispatch({
-                type: "GIFT_CODE_RESOLVE_FAILURE",
-                code: e,
-                error: t,
-            }),
-            t)
-        );
-    }
-}
-r = n(775644).Z;
-let m = p(
+})(
     {
-        resolveGiftCode: h,
+        resolveGiftCode: async function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            l.Z.dispatch({
+                type: "GIFT_CODE_RESOLVE",
+                code: e,
+            });
+            try {
+                let r = await (0, u.bT)(e, t, n);
+                if (null != r.application_id && r.application_id !== p.CL) {
+                    let e = o.Z.getApplication(r.application_id);
+                    if (null == e)
+                        try {
+                            await a.ZP.fetchApplication(r.application_id);
+                        } catch (e) {}
+                }
+                return (
+                    r.application_id === d.XAJ && (await (0, c.jr)(r.sku_id)),
+                    l.Z.dispatch({
+                        type: "GIFT_CODE_RESOLVE_SUCCESS",
+                        giftCode: r,
+                    }),
+                    { giftCode: r }
+                );
+            } catch (t) {
+                throw (
+                    (l.Z.dispatch({
+                        type: "GIFT_CODE_RESOLVE_FAILURE",
+                        code: e,
+                        error: t,
+                    }),
+                    t)
+                );
+            }
+        },
         async fetchUserGiftCodesForSKU(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            o.Z.dispatch({
+            l.Z.dispatch({
                 type: "GIFT_CODES_FETCH",
                 skuId: e,
                 subscriptionPlanId: t,
@@ -94,14 +88,14 @@ let m = p(
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 });
-                o.Z.dispatch({
+                l.Z.dispatch({
                     type: "GIFT_CODES_FETCH_SUCCESS",
                     giftCodes: n.body,
                     skuId: e,
                     subscriptionPlanId: t,
                 });
             } catch (n) {
-                o.Z.dispatch({
+                l.Z.dispatch({
                     type: "GIFT_CODES_FETCH_FAILURE",
                     skuId: e,
                     subscriptionPlanId: t,
@@ -111,7 +105,7 @@ let m = p(
         async createGiftCode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-            o.Z.dispatch({
+            l.Z.dispatch({
                 type: "GIFT_CODE_CREATE_START",
                 skuId: e,
                 subscriptionPlanId: t,
@@ -128,14 +122,14 @@ let m = p(
                     rejectWithError: !0,
                 });
                 return (
-                    o.Z.dispatch({
+                    l.Z.dispatch({
                         type: "GIFT_CODE_CREATE_SUCCESS",
                         giftCode: r.body,
                     }),
                     r.body
                 );
             } catch (n) {
-                o.Z.dispatch({
+                l.Z.dispatch({
                     type: "GIFT_CODE_CREATE_FAILURE",
                     skuId: e,
                     subscriptionPlanId: t,
@@ -143,7 +137,7 @@ let m = p(
             }
         },
         async revokeGiftCode(e) {
-            o.Z.dispatch({
+            l.Z.dispatch({
                 type: "GIFT_CODE_REVOKE",
                 code: e,
             });
@@ -153,19 +147,19 @@ let m = p(
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }),
-                    o.Z.dispatch({
+                    l.Z.dispatch({
                         type: "GIFT_CODE_REVOKE_SUCCESS",
                         code: e,
                     });
             } catch (t) {
-                o.Z.dispatch({
+                l.Z.dispatch({
                     type: "GIFT_CODE_REVOKE_FAILURE",
                     code: e,
                 });
             }
         },
         openNativeGiftCodeModal(e) {
-            l.Z.openNativeAppModal(e, d.Etm.GIFT_CODE_BROWSER);
+            s.Z.openNativeAppModal(e, d.Etm.GIFT_CODE_BROWSER);
         },
     },
     r,

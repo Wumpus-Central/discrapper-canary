@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(179360),
     i = n(147913),
-    o = n(430824),
-    a = n(496675),
+    a = n(430824),
+    o = n(496675),
     s = n(914010),
     l = n(713081),
     c = n(905128),
@@ -28,7 +28,7 @@ class m extends i.Z {
     handleSelectedGuildChange() {
         let e = s.Z.getGuildId();
         if (null == e || e === p._ || e === _.I_8) return;
-        let t = o.Z.getGuild(e);
+        let t = a.Z.getGuild(e);
         null != t &&
             (d.sT.trackExposure({
                 guildId: t.id,
@@ -38,7 +38,7 @@ class m extends i.Z {
                 guildId: t.id,
                 location: "GuildPowerupsManager",
             }),
-            (0, f.D)(a.Z, t) &&
+            (0, f.D)(o.Z, t) &&
                 (c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e),
                 c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e)));
     }
@@ -51,7 +51,7 @@ class m extends i.Z {
         this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        !0 === (0, f.D)(a.Z, o.Z.getGuild(e)) && ((0, l.Fm)(e), (0, r.C0)(e));
+        !0 === (0, f.D)(o.Z, a.Z.getGuild(e)) && ((0, l.Fm)(e), (0, r.C0)(e));
     }
     constructor(...e) {
         super(...e),

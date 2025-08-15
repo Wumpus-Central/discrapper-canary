@@ -1,5 +1,5 @@
-e.exports = {
-    notEmptyKey: function (e) {
-        return null != e && "" != e;
+t.exports = {
+    notEmptyKey: function (t) {
+        return null != t && "" != t;
     },
 };

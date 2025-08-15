@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function o(e) {
     }
     return e;
 }
-function a(e, t, n) {
+function o(e, t, n) {
     t.forEach((e) => {
         e.trackExposure(n);
     });
@@ -41,7 +41,7 @@ class s {
     }
     trigger() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        a(this.triggerPoint, this.experiments, o({}, this.params, e)),
+        o(this.triggerPoint, this.experiments, a({}, this.params, e)),
             r.Z.trackCommonTriggerPointExposures(this.params.location);
     }
     getExperiments() {

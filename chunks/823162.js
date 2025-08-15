@@ -1,17 +1,17 @@
 n.d(t, {
-    Xy: () => u,
-    e4: () => l,
-    gN: () => d,
-    hi: () => _,
+    Xy: () => d,
+    e4: () => o,
+    gN: () => u,
+    hi: () => p,
     qR: () => c,
-    r_: () => f,
+    r_: () => m,
 });
 var r = n(544891),
     i = n(570140),
-    o = n(893776),
+    l = n(893776),
     a = n(290323),
     s = n(981631);
-async function l(e) {
+async function o(e) {
     await r.tn.put({
         url: s.ANM.CHANNEL_RECIPIENT_ME(e),
         body: { consent_status: a.h.ACCEPTED },
@@ -29,26 +29,26 @@ function c(e) {
         rejectWithError: !1,
     });
 }
-function u(e) {
+function d(e) {
     return r.tn.put({
         url: s.ANM.CHANNEL_RECIPIENT_ME(e),
         body: { consent_status: a.h.PENDING },
         rejectWithError: !1,
     });
 }
-function d(e) {
+function u(e) {
     return r.tn.del({
         url: s.ANM.CHANNEL_RECIPIENT_ME(e),
         rejectWithError: !1,
     });
 }
-function f(e) {
+function m(e) {
     return r.tn.put({
         url: s.ANM.CHANNEL_RECIPIENT_REJECT_BATCH(),
         body: { channel_ids: e },
         rejectWithError: !1,
     });
 }
-function _() {
-    o.Z.getLocationMetadata();
+function p() {
+    l.Z.getLocationMetadata();
 }

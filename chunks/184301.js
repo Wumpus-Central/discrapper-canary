@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s }), n(415506);
 var r = n(598077),
     i = n(484459);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,14 +25,14 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
 function s() {
     let e, t, n;
-    for (var o = arguments.length, s = Array(o), l = 0; l < o; l++) s[l] = arguments[l];
+    for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
     let c = s[0],
         u = s[1];
     if ("string" == typeof c && ("string" == typeof u || null == u)) (e = c), (t = u), (n = s[2]);
@@ -44,7 +44,7 @@ function s() {
         : (0, i.Z)(
               e,
               t,
-              a(
+              o(
                   {
                       withMutualFriends: !0,
                       withMutualGuilds: !0,

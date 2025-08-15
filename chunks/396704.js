@@ -9,8 +9,8 @@ n.d(t, {
     n(415506);
 var r = n(73800),
     i = n(308521),
-    o = n(97519),
-    a = n(570833);
+    a = n(97519),
+    o = n(570833);
 function s(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function u(e, t) {
 var d = (function (e) {
     return (e.Loading = "loading"), (e.Loaded = "loaded"), e;
 })({});
-let f = (0, o.U)(() => ({
+let f = (0, a.U)(() => ({
     riveAssetCache: new Map(),
     riveOverrideCache: {},
 }));
@@ -89,7 +89,7 @@ function _(e) {
                         console.error("Rive file load error", e, t);
                     });
             };
-        (0, a.f)(r);
+        (0, o.f)(r);
     }, [e, t]),
     null != t)
         ? {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(505266),
     l = n(442837),
     c = n(570140),
@@ -83,19 +83,19 @@ function M(e) {
     var t;
     let {
             onClose: n,
-            onComplete: o,
+            onComplete: a,
             onStepChange: w,
             transitionState: L,
             loadId: M,
-            skuId: j,
-            isGift: k = !1,
+            skuId: k,
+            isGift: j = !1,
             giftRecipient: U,
             giftMessage: G,
             giftingOrigin: B,
-            analyticsLocations: Z,
+            analyticsLocations: V,
             returnRef: F,
         } = e,
-        { analyticsLocations: V } = (0, d.ZP)([...Z, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        { analyticsLocations: Z } = (0, d.ZP)([...V, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
         [K, z] = i.useState(!1),
@@ -103,17 +103,17 @@ function M(e) {
             () =>
                 (0, N.UY)({
                     purchaseType: C.o8.FIAT,
-                    skuId: j,
+                    skuId: k,
                 }),
-            [j],
+            [k],
         ),
         X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        Q = null != j ? [j] : X,
+        Q = null != k ? [k] : X,
         J = null != (t = Q[0]) ? t : null,
-        $ = null != j && p.Rm.has(j),
+        $ = null != k && p.Rm.has(k),
         ee = i.useCallback(() => {
-            z(!0), null == o || o();
-        }, [o]),
+            z(!0), null == a || a();
+        }, [a]),
         et = i.useCallback(
             (e) => {
                 z(!1),
@@ -126,7 +126,7 @@ function M(e) {
             [n],
         ),
         en = (e, t, n) =>
-            k
+            j
                 ? (0, r.jsx)(O.Z, {
                       step: n,
                       onClose: () => t(!1),
@@ -139,7 +139,7 @@ function M(e) {
         er = i.useMemo(
             () => [
                 y.WA,
-                ...(k ? [T.Dd] : []),
+                ...(j ? [T.Dd] : []),
                 v.n,
                 ...y.yp,
                 y.wo,
@@ -150,7 +150,7 @@ function M(e) {
                             I.x,
                             x(D({}, e), {
                                 confettiCanvas: Y,
-                                analyticsLocations: V,
+                                analyticsLocations: Z,
                                 hideConfetti: null != q,
                             }),
                         ),
@@ -160,10 +160,10 @@ function M(e) {
                     },
                 },
             ],
-            [V, Y, q, k],
+            [Z, Y, q, j],
         );
     return (0, r.jsxs)(d.Gt, {
-        value: V,
+        value: Z,
         children: [
             (0, r.jsx)(s.O_, {
                 ref: W,
@@ -172,20 +172,20 @@ function M(e) {
             }),
             (0, r.jsx)(_.i, {
                 options: q,
-                className: a()(P.customConfetti, { [P.hidden]: !K }),
+                className: o()(P.customConfetti, { [P.hidden]: !K }),
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
                 loadId: M,
                 stepConfigs: er,
                 applicationId: A.XAJ,
                 skuIDs: Q,
-                isGift: k,
+                isGift: j,
                 activeSubscription: null,
                 purchaseType: R.GZ.ONE_TIME,
                 excludeSubscriptionPlansBySKU: !0,
                 children: (0, r.jsx)(E.c1, {
                     children: (0, r.jsx)(h.KB, {
-                        isGift: k,
+                        isGift: j,
                         giftRecipient: U,
                         giftMessage: G,
                         giftingOrigin: B,
@@ -195,7 +195,7 @@ function M(e) {
                             applicationId: A.XAJ,
                             skuId: J,
                             initialPlanId: null,
-                            analyticsLocations: V,
+                            analyticsLocations: Z,
                             transitionState: L,
                             renderHeader: en,
                             returnRef: F,

@@ -1,27 +1,14 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(755721),
+    l = n(755721),
     a = n(283595),
-    s = n(55563),
-    l = n(780570),
+    o = n(55563),
+    s = n(780570),
     c = n(701560),
     u = n(785547);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,78 +19,82 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
 }
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     let {
             application: t,
             fullWidth: n = !1,
-            size: d = o.zx.Sizes.LARGE,
-            color: _,
-            customDisabledColor: h,
-            hideNotLaunchable: m,
-            tooltipPosition: g,
-            onClick: E,
-            className: b,
-            source: y,
-            hover: O,
-            innerClassName: v,
+            size: m = l.zx.Sizes.LARGE,
+            color: f,
+            customDisabledColor: _,
+            hideNotLaunchable: g,
+            tooltipPosition: h,
+            onClick: b,
+            className: E,
+            source: C,
+            hover: v,
+            innerClassName: O,
         } = e,
-        I = {
+        y = {
             fullWidth: n,
-            size: d,
-            color: _,
-            customDisabledColor: h,
-            tooltipPosition: g,
-            onClick: E,
-            className: b,
-            hover: O,
-            innerClassName: v,
+            size: m,
+            color: f,
+            customDisabledColor: _,
+            tooltipPosition: h,
+            onClick: b,
+            className: E,
+            hover: v,
+            innerClassName: O,
         },
-        T = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
-        S = null != T ? T.sku.id : null,
-        A = null != S ? S : t.primarySkuId,
-        N = (0, i.e7)([s.Z], () => null != A && !s.Z.didFetchingSkuFail(A));
-    return null != T && (0, l.Je)(T)
+        x = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
+        j = null != x ? x.sku.id : null,
+        I = null != j ? j : t.primarySkuId,
+        S = (0, i.e7)([o.Z], () => null != I && !o.Z.didFetchingSkuFail(I));
+    return null != x && (0, s.Je)(x)
         ? (0, r.jsx)(
               u.Z,
-              p(f({}, I), {
-                  libraryApplication: T,
-                  source: y,
+              p(d({}, y), {
+                  libraryApplication: x,
+                  source: C,
               }),
           )
-        : N
+        : S
           ? (0, r.jsx)("div", { children: "deprecated!" })
           : (0, r.jsx)(
                 c.Z,
-                p(f({}, I), {
-                    hideNotLaunchable: m,
+                p(d({}, y), {
+                    hideNotLaunchable: g,
                     applicationId: t.id,
                 }),
             );

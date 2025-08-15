@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(296810),
     S = n(678135),
     T = n(610794),
-    I = n(935147),
-    N = n(643879),
+    N = n(935147),
+    I = n(643879),
     y = n(373230),
     A = n(246946),
     P = n(25990),
@@ -111,7 +111,7 @@ function z() {
             }
             return r;
         })(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
-        K = (0, N.SD)({
+        K = (0, I.SD)({
             userId: e.id,
             image: z,
         }),
@@ -189,7 +189,7 @@ function z() {
                       active: em,
                       children: (0, i.jsx)("div", {
                           ref: ep,
-                          children: (0, i.jsx)(I.Z, {
+                          children: (0, i.jsx)(N.Z, {
                               user: e,
                               shouldShow: em,
                               isVisible: ec,

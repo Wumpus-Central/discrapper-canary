@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(594174),
     m = n(40153),
     b = n(603592),
-    O = n(981631),
-    _ = n(675999),
+    _ = n(981631),
+    O = n(675999),
     y = n(388032),
     v = n(816827);
 let j = {
@@ -69,20 +69,20 @@ function E(e) {
         a = (0, l.Wu)([h.Z], () => h.Z.getGuildsArray()),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         x = i.useMemo(() => a.some((e) => (0, f.eM)(e, E)), [a, E]),
-        S = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
-        { analyticsLocations: P } = (0, s.ZP)(),
-        I = (0, r.jsx)(b.Z, {
+        S = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
+        { analyticsLocations: I } = (0, s.ZP)(),
+        P = (0, r.jsx)(b.Z, {
             showPill: !1,
             id: "create-join-button",
             onClick: () => {
                 (0, u.yU)()
                     ? (0, d.Z)({
-                          analyticsSource: { page: O.Sbl.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: _.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: O.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: O.jXE.GUILD_CAP_UPSELL_MODAL,
+                              page: _.Sbl.CREATE_JOIN_GUILD_MODAL,
+                              section: _.jXE.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: P,
+                          analyticsLocations: I,
                       })
                     : c.Z.openCreateGuildModal({ location: "Guild List" });
             },
@@ -92,7 +92,7 @@ function E(e) {
             icon: o.oFk,
         });
     return t
-        ? I
+        ? P
         : (0, r.jsx)("div", {
               className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
@@ -100,7 +100,7 @@ function E(e) {
                   inlineSpecs: j,
                   position: "right",
                   children: [
-                      I,
+                      P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
                               name: y.intl.string(y.t["45xjMz"]),

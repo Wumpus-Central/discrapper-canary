@@ -1,38 +1,38 @@
 n.d(t, { Z: () => d });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
-    o = n(704215),
-    s = n(481060),
-    c = n(266454),
-    a = n(388032),
-    u = n(400963);
+var r = n(120356),
+    s = n.n(r),
+    l = n(704215),
+    o = n(481060),
+    a = n(266454),
+    u = n(388032),
+    c = n(400963);
 function d() {
-    return (0, c.zu)(o.z.BOGO_2025_NITRO_TAB_BADGE)
-        ? (0, r.jsxs)("div", {
-              className: l()(u.premiumTrialBadge, u.premiumTrialAcknowledgedBadge, {}),
+    return (0, a.zu)(l.z.BOGO_2025_NITRO_TAB_BADGE)
+        ? (0, i.jsxs)("div", {
+              className: s()(c.premiumTrialBadge, c.premiumTrialAcknowledgedBadge, {}),
               children: [
-                  (0, r.jsx)(s.T39, {
+                  (0, i.jsx)(o.T39, {
                       size: "custom",
                       width: 14,
                       height: 14,
                       color: "currentColor",
-                      className: u.BogoBadgeClockIcon,
+                      className: c.BogoBadgeClockIcon,
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, i.jsx)(o.Text, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: a.intl.string(a.t.OS9KPj),
+                      children: u.intl.string(u.t.OS9KPj),
                   }),
               ],
           })
-        : (0, r.jsx)("div", {
-              className: l()(u.premiumTrialBadge, u.backgroundGradient),
-              children: (0, r.jsx)(s.Text, {
+        : (0, i.jsx)("div", {
+              className: s()(c.premiumTrialBadge, c.backgroundGradient),
+              children: (0, i.jsx)(o.Text, {
                   variant: "eyebrow",
                   color: "always-white",
-                  children: a.intl.string(a.t.OS9KPj),
+                  children: u.intl.string(u.t.OS9KPj),
               }),
           });
 }

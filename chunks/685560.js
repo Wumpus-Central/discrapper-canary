@@ -26,8 +26,8 @@ var n = a(255367),
     h = a(713081),
     p = a(675478),
     b = a(581883),
-    f = a(899667),
-    v = a(430824),
+    v = a(899667),
+    f = a(430824),
     j = a(914010),
     g = a(981631),
     _ = a(617659);
@@ -89,9 +89,9 @@ async function S(e) {
 function P() {
     var e;
     let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
-        a = (0, i.e7)([v.Z], () => {
+        a = (0, i.e7)([f.Z], () => {
             var e;
-            return null == (e = v.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
         r = (0, i.Wu)([b.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
         l =
@@ -102,9 +102,9 @@ function P() {
             }))
                 ? e
                 : new Uint8Array(),
-        s = (0, i.Wu)([f.Z], () => {
+        s = (0, i.Wu)([v.Z], () => {
             var e;
-            return null != t && null != (e = f.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
+            return null != t && null != (e = v.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
         });
     if (null != t)
         return (0, n.jsxs)(c.zJl, {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(911969),
     l = n(367907),
     c = n(998698),
@@ -32,18 +32,18 @@ var r = n(255367),
 let L = i.forwardRef(function (e, t) {
     let {
             value: n,
-            type: o,
+            type: a,
             channel: L,
             className: x,
             id: M,
-            disabled: j,
-            submitting: k,
+            disabled: k,
+            submitting: j,
             placeholder: U,
             required: G,
             textAreaPaddingClassName: B,
-            onChange: Z,
+            onChange: V,
             onPaste: F,
-            onResize: V,
+            onResize: Z,
             onFocus: H,
             onBlur: Y,
             onKeyDown: W,
@@ -59,8 +59,8 @@ let L = i.forwardRef(function (e, t) {
             canOnlyUseTextCommands: en,
             disableAutoFocus: er,
             disableEnterToSubmit: ei,
-            allowNewLines: eo,
-            "aria-owns": ea,
+            allowNewLines: ea,
+            "aria-owns": eo,
             "aria-expanded": es,
             "aria-haspopup": el,
             "aria-activedescendant": ec,
@@ -74,37 +74,37 @@ let L = i.forwardRef(function (e, t) {
         em = i.useRef(null),
         eg = i.useRef(!0),
         eE = i.useRef(!0),
-        eb = j || k,
+        eb = k || j,
         ey = i.useCallback(
             (e, t, n) => {
                 var r;
-                let { value: i, selection: o } = n,
-                    a = b.bN.richValue(e),
+                let { value: i, selection: a } = n,
+                    o = b.bN.richValue(e),
                     s = e.selection,
                     l = !1;
-                if (void 0 !== i && i !== a) {
+                if (void 0 !== i && i !== o) {
                     if (((e.children = i), "parent" === t && !e.previewMarkdown && e.chatInputType === _.Ie.EDIT)) {
                         try {
                             (e.previewMarkdown = !0), (0, N.KH)(e, L.guild_id, L.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, N.KH)(e, L.guild_id, L.id), (o = void 0);
+                        (0, N.KH)(e, L.guild_id, L.id), (a = void 0);
                     }
-                    "undo" !== t && void 0 !== i && i !== a && h.T.insertEntry(e, "other", !1, a, s), (l = !0);
+                    "undo" !== t && void 0 !== i && i !== o && h.T.insertEntry(e, "other", !1, o, s), (l = !0);
                 }
-                if ((null == o || b.Ew.isValid(e, o) || (o = void 0), (l || !b.Ew.isValid(e, s)) && void 0 === o)) {
+                if ((null == a || b.Ew.isValid(e, a) || (a = void 0), (l || !b.Ew.isValid(e, s)) && void 0 === a)) {
                     let t = b.bN.end(e, []);
-                    o = {
+                    a = {
                         anchor: t,
                         focus: t,
                     };
                 }
-                let u = null != o && !b.Ew.equals(o, s);
-                if ((l && !er && b.bN.focus(e), null != o && u)) {
-                    e.selection = o;
+                let u = null != a && !b.Ew.equals(a, s);
+                if ((l && !er && b.bN.focus(e), null != a && u)) {
+                    e.selection = a;
                     let t = h.T.currentEntry(e);
-                    null != t && (t.selection = o), (l = !0);
+                    null != t && (t.selection = a), (l = !0);
                 }
                 let d = p.cr(e);
                 if (
@@ -133,7 +133,7 @@ let L = i.forwardRef(function (e, t) {
         }, []),
         eI = (0, O.Z)({
             channel: L,
-            chatInputType: o,
+            chatInputType: a,
             canUseCommands: et,
             canOnlyUseTextCommands: en,
             onChangeStart: eO,
@@ -157,7 +157,7 @@ let L = i.forwardRef(function (e, t) {
             if (null != t && null != t.options) {
                 let i = eT(t, !1);
                 e = i.values;
-                let o = p
+                let a = p
                     .cu(eI)
                     .filter((e) => !i.results[e].success)
                     .map((e) => {
@@ -165,10 +165,10 @@ let L = i.forwardRef(function (e, t) {
                         return (null != (n = t.options) ? n : []).find((t) => t.name === e);
                     });
                 for (let e of t.options)
-                    !e.required || e.name in i.values || (E.Q.insertCommandOption(eI, e), o.push(e));
-                if (o.length > 0) {
+                    !e.required || e.name in i.values || (E.Q.insertCommandOption(eI, e), a.push(e));
+                if (a.length > 0) {
                     var n, r;
-                    let e = o[0];
+                    let e = a[0];
                     E.Q.selectCommandOption(eI, e.name),
                         f.S.dispatch(w.CkL.SHAKE_APP, {
                             duration: 200,
@@ -193,7 +193,7 @@ let L = i.forwardRef(function (e, t) {
                     e,
                 );
         }, [L.id, eI, X, eT, et]);
-    (0, v.Z)(t, eI, L, eS), (0, S.Z)(eI, eh, V);
+    (0, v.Z)(t, eI, L, eS), (0, S.Z)(eI, eh, Z);
     let { handleKeyDown: eA, handleKeyUp: eN } = (0, I.Z)({
             editor: eI,
             channel: L,
@@ -202,7 +202,7 @@ let L = i.forwardRef(function (e, t) {
             onKeyUp: K,
             onTab: z,
             onEnter: q,
-            allowNewLines: eo,
+            allowNewLines: ea,
             submit: eS,
             hideAutocomplete: J,
             moveSelection: $,
@@ -217,10 +217,10 @@ let L = i.forwardRef(function (e, t) {
         ew = i.useCallback(
             (e) => {
                 e !== em.current
-                    ? eE.current && (null == Z || Z(null, (0, g.sk)(e, { mode: "raw" }), e))
+                    ? eE.current && (null == V || V(null, (0, g.sk)(e, { mode: "raw" }), e))
                     : eE.current && Q();
             },
-            [Q, Z],
+            [Q, V],
         );
     i.useLayoutEffect(() => {
         eg.current && ((em.current = n), ey(eI, "parent", { value: n }));
@@ -250,18 +250,18 @@ let L = i.forwardRef(function (e, t) {
             }),
             (0, r.jsx)("div", {
                 ref: eh,
-                className: a()(x, D.slateContainer),
+                className: o()(x, D.slateContainer),
                 children: (0, r.jsx)(m.Z, {
                     id: M,
                     editor: eI,
                     channelId: L.id,
                     guildId: L.guild_id,
-                    className: a()(D.slateTextArea, B),
+                    className: o()(D.slateTextArea, B),
                     placeholder: U,
                     readOnly: eb,
                     spellCheck: ee,
                     autoFocus: !er,
-                    canFocus: !j,
+                    canFocus: !k,
                     onChange: ew,
                     onFocus: H,
                     onBlur: Y,
@@ -272,7 +272,7 @@ let L = i.forwardRef(function (e, t) {
                     decorateExtra: eD,
                     renderExtraElement: eL,
                     renderExtraLeaf: ex,
-                    "aria-owns": ea,
+                    "aria-owns": eo,
                     "aria-haspopup": el,
                     "aria-expanded": es,
                     "aria-activedescendant": ec,

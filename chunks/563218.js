@@ -1,72 +1,72 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => S });
 var r = n(255367),
-    i = n(73800),
-    o = n(442837),
+    l = n(73800),
+    i = n(442837),
     a = n(570140),
-    s = n(519938),
-    l = n(928518),
-    c = n(585483),
-    u = n(317381),
+    o = n(519938),
+    u = n(928518),
+    s = n(585483),
+    c = n(317381),
     d = n(16609),
     f = n(917107),
-    _ = n(716600),
-    p = n(918559),
-    h = n(981631);
-let m = (e, t) => {
+    p = n(716600),
+    m = n(918559),
+    E = n(981631);
+let g = (e, t) => {
     a.Z.wait(() => {
-        (0, s.Cz)(e, t);
+        (0, o.Cz)(e, t);
     });
 };
-function g(e) {
+function S(e) {
     let t,
-        { embedId: n, className: a, style: s } = e,
-        g = (0, o.e7)([l.Z], () => l.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
-        E = (0, _.Z)(),
-        b = (0, o.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null == E || (0, f.Z)((0, d.p)(E.location)) || b !== p.Ez.PANEL) {
-        var y;
-        t = null != (y = null == g ? void 0 : g.window) ? y : window;
+        { embedId: n, className: a, style: o } = e,
+        S = (0, i.e7)([u.Z], () => u.Z.getWindow(E.KJ3.CHANNEL_CALL_POPOUT)),
+        v = (0, p.Z)(),
+        h = (0, i.e7)([c.ZP], () => c.ZP.getActivityPanelMode());
+    if (null == v || (0, f.Z)((0, d.p)(v.location)) || h !== m.Ez.PANEL) {
+        var b;
+        t = null != (b = null == S ? void 0 : S.window) ? b : window;
     } else t = window;
-    let O = i.useRef(null),
-        v = i.useMemo(() => {
+    let O = l.useRef(null),
+        y = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
                         var t, r;
-                        m(n, null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null),
+                        g(n, null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null),
                             (e = null);
                     }));
             };
         }, [n, t]);
     return (
-        i.useEffect(
+        l.useEffect(
             () => (
-                t.addEventListener("resize", v),
-                c.S.subscribe(h.CkL.REMEASURE_TARGET, v),
+                t.addEventListener("resize", y),
+                s.S.subscribe(E.CkL.REMEASURE_TARGET, y),
                 () => {
-                    t.removeEventListener("resize", v), c.S.unsubscribe(h.CkL.REMEASURE_TARGET, v);
+                    t.removeEventListener("resize", y), s.S.unsubscribe(E.CkL.REMEASURE_TARGET, y);
                 }
             ),
-            [v, t],
+            [y, t],
         ),
-        i.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             let e = O.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            v();
-            let r = new t.ResizeObserver(v);
+            y();
+            let r = new t.ResizeObserver(y);
             return (
                 r.observe(e),
                 () => {
-                    r.disconnect(), m(n, null);
+                    r.disconnect(), g(n, null);
                 }
             );
-        }, [n, v]),
+        }, [n, y]),
         (0, r.jsx)("div", {
             ref: O,
-            style: s,
+            style: o,
             className: a,
         })
     );

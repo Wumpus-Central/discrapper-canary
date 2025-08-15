@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => o,
+    T: () => a,
     x: () => i,
 });
 var r = n(379405);
@@ -9,7 +9,7 @@ let i = [
         "Can't stop playing this",
         "Really long text to test the overflow logic lets make this a little bit longer of a comment to see if it works",
     ],
-    o = [
+    a = [
         r._.LFG,
         r._.NOOB,
         r._.LEARNING_THE_ROPES,

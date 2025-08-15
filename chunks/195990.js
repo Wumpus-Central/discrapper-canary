@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(755721),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
     l = n(994667),
     c = n(594174),
@@ -16,7 +16,7 @@ function h(e) {
     let { user: n, application: h, onAction: m, onClose: g } = e,
         { themeType: E } = (0, u.z)(),
         [b, y] = i.useState(!1),
-        O = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        O = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         v = null == (t = h.thirdPartySkus.find((e) => e.distributor === _.GQo.ROBLOX)) ? void 0 : t.id,
         I = (0, l.dW)(v);
     return null == O || n.id === O.id || null == v
@@ -24,7 +24,7 @@ function h(e) {
         : (0, r.jsx)(d.tG, {
               text: p.intl.string(p.t.RscU7O),
               submitting: b,
-              size: E === f.lY.MODAL_V2 ? a.Ph.TINY : a.Ph.SMALL,
+              size: E === f.lY.MODAL_V2 ? o.Ph.TINY : o.Ph.SMALL,
               fullWidth: E !== f.lY.MODAL_V2,
               themeColor: "secondary",
               onClick: async (e) => {

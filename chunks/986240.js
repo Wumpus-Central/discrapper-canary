@@ -1,46 +1,46 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
+    l = n(481060),
     a = n(980463),
-    s = n(328908),
-    l = n(992970),
+    o = n(328908),
+    s = n(992970),
     c = n(135793),
     u = n(576645),
     d = n(84040),
     f = n(626135),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t) {
+    g = n(981631),
+    b = n(388032);
+function p(e, t) {
     let n = (0, d.Z)(t),
-        h = e.hasPotions(),
-        m = (0, u.Nt)(),
-        g = i.useCallback(
+        p = e.hasPotions(),
+        O = (0, u.Nt)(),
+        y = i.useCallback(
             (n) => {
                 try {
                     (0, a.qc)(t.id, e.id, n);
                 } catch (e) {
-                    (0, o.showToast)((0, o.createToast)(p.intl.string(p.t.xsfC2d), o.ToastType.FAILURE));
+                    (0, l.showToast)((0, l.createToast)(b.intl.string(b.t.xsfC2d), l.ToastType.FAILURE));
                 }
             },
             [t.id, e.id],
         ),
-        E = i.useCallback(() => {
-            f.default.track(_.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: l.MG.MessageContextMenu }),
+        m = i.useCallback(() => {
+            f.default.track(g.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: s.MG.MessageContextMenu }),
                 (0, c.s)({
                     channelId: t.id,
                     message: e,
-                    onRedeem: g,
-                    onClose: s.Qy,
-                    source: l.YD.MessageContextMenu,
+                    onRedeem: y,
+                    onClose: o.Qy,
+                    source: s.YD.MessageContextMenu,
                 });
-        }, [t.id, e, g]);
-    return n && !h && m
-        ? (0, r.jsx)(o.sNh, {
+        }, [t.id, e, y]);
+    return n && !p && O
+        ? (0, r.jsx)(l.sNh, {
               id: "add-confetti-potion",
-              label: p.intl.string(p.t.icaJW1),
-              icon: o.l22,
-              action: E,
+              label: b.intl.string(b.t.icaJW1),
+              icon: l.l22,
+              action: m,
           })
         : null;
 }

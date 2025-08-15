@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(981631),
     S = n(474936),
     T = n(388032),
-    I = n(387473);
-function N(e) {
+    N = n(387473);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -84,13 +84,13 @@ function A(e) {
     return (0, i.jsxs)(
         "li",
         {
-            className: I.unappliedGuildBoostSlot,
+            className: N.unappliedGuildBoostSlot,
             children: [
                 (0, i.jsxs)("div", {
-                    className: I.unappliedGuildBoostSlotContentPrimary,
+                    className: N.unappliedGuildBoostSlotContentPrimary,
                     children: [
                         (0, i.jsx)(O.Z, {
-                            className: I.unappliedGuildBoostSlotIcon,
+                            className: N.unappliedGuildBoostSlotIcon,
                             hasCooldown: t.isOnCooldown(),
                             isCanceled: g,
                             useReducedMotion: d,
@@ -104,7 +104,7 @@ function A(e) {
                             : t.isOnCooldown() && null != p
                               ? (0, i.jsx)(C.Z, { cooldown: p.getTime() })
                               : (0, i.jsx)(c.Text, {
-                                    className: I.__invalid_unappliedGuildBoostSlotDescription,
+                                    className: N.__invalid_unappliedGuildBoostSlotDescription,
                                     color: "text-muted",
                                     variant: "text-sm/medium",
                                     children: T.intl.string(T.t["2mcaf3"]),
@@ -112,7 +112,7 @@ function A(e) {
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: I.unappliedGuildBoostSlotContentSecondary,
+                    className: N.unappliedGuildBoostSlotContentSecondary,
                     children: [
                         n &&
                             !g &&
@@ -123,8 +123,8 @@ function A(e) {
                                 children: (e) =>
                                     (0, i.jsx)(
                                         o.zx,
-                                        y(N({}, e), {
-                                            className: I.unappliedGuildBoostSlotCta,
+                                        y(I({}, e), {
+                                            className: N.unappliedGuildBoostSlotCta,
                                             color: o.zx.Colors.PRIMARY,
                                             look: o.zx.Looks.LINK,
                                             onClick: () => s(t),
@@ -142,8 +142,8 @@ function A(e) {
                                 children: (e) =>
                                     (0, i.jsx)(
                                         o.zx,
-                                        y(N({}, e), {
-                                            className: I.unappliedGuildBoostSlotCta,
+                                        y(I({}, e), {
+                                            className: N.unappliedGuildBoostSlotCta,
                                             color: o.zx.Colors.PRIMARY,
                                             look: o.zx.Looks.LINK,
                                             onClick: () => a(t),
@@ -161,10 +161,10 @@ function A(e) {
     );
 }
 function P(e) {
-    (0, c.ZDy)(async () => (t) => (0, i.jsx)(g.default, y(N({}, t), { guildBoostSlot: e })));
+    (0, c.ZDy)(async () => (t) => (0, i.jsx)(g.default, y(I({}, t), { guildBoostSlot: e })));
 }
 function R(e) {
-    (0, c.ZDy)(async () => (t) => (0, i.jsx)(h.default, y(N({}, t), { guildBoostSlotId: e.id })));
+    (0, c.ZDy)(async () => (t) => (0, i.jsx)(h.default, y(I({}, t), { guildBoostSlotId: e.id })));
 }
 let D = function (e) {
     let t,
@@ -217,7 +217,7 @@ let D = function (e) {
                     (0, i.jsx)(
                         E.Z,
                         {
-                            className: I.headerBoostGem,
+                            className: N.headerBoostGem,
                             useReducedMotion: O,
                         },
                         t,
@@ -238,7 +238,7 @@ let D = function (e) {
             (0, i.jsx)(
                 c.P3F,
                 {
-                    className: I.headerLearnMoreLink,
+                    className: N.headerLearnMoreLink,
                     tag: "span",
                     onClick: () => {
                         (0, f.z)();
@@ -260,30 +260,30 @@ let D = function (e) {
     return (
         (s = h && C === S.a$.NONE ? T.intl.string(T.t.mOWsFx) : T.intl.string(T.t.xr4m5O)),
         (0, i.jsx)("div", {
-            className: I.wrapper,
+            className: N.wrapper,
             children: (0, i.jsxs)("div", {
-                className: a()(I.content, [I.headerWithoutSpecialHeader]),
+                className: a()(N.content, [N.headerWithoutSpecialHeader]),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: I.header,
+                        className: N.header,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: I.headerContentPrimary,
+                                className: N.headerContentPrimary,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: I.headerBoostGems,
+                                        className: N.headerBoostGems,
                                         children: W,
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: I.__invalid_headerCopy,
+                                        className: N.__invalid_headerCopy,
                                         children: [
                                             (0, i.jsx)(c.X6q, {
-                                                className: I.headerHeading,
+                                                className: N.headerHeading,
                                                 variant: "heading-lg/bold",
                                                 children: t,
                                             }),
                                             (0, i.jsx)(c.Text, {
-                                                className: I.__invalid_headerSubheading,
+                                                className: N.__invalid_headerSubheading,
                                                 color: "text-primary",
                                                 variant: "text-sm/normal",
                                                 children: n,
@@ -293,7 +293,7 @@ let D = function (e) {
                                 ],
                             }),
                             (0, i.jsx)("div", {
-                                className: I.headerContentSecondary,
+                                className: N.headerContentSecondary,
                                 children: (0, i.jsx)(m.Z, {
                                     shouldShow: null == Y || w,
                                     text: s,
@@ -302,7 +302,7 @@ let D = function (e) {
                                         (0, i.jsx)(
                                             c.zxk,
                                             y(
-                                                N(
+                                                I(
                                                     {
                                                         variant: "primary",
                                                         text: T.intl.string(T.t.BMx1i4),
@@ -318,7 +318,7 @@ let D = function (e) {
                                                                       async () => (e) =>
                                                                           (0, i.jsx)(
                                                                               p.default,
-                                                                              y(N({}, e), {
+                                                                              y(I({}, e), {
                                                                                   guildBoostSlots: [Y],
                                                                                   locationSection:
                                                                                       v.jXE.SETTINGS_PREMIUM,
@@ -336,7 +336,7 @@ let D = function (e) {
                     }),
                     (!H || M) &&
                         (0, i.jsx)("ul", {
-                            className: I.unappliedBoostSlots,
+                            className: N.unappliedBoostSlots,
                             children: L.map((e) =>
                                 (0, i.jsx)(
                                     A,

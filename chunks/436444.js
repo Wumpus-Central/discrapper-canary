@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(717976),
+    a = n.n(i),
+    o = n(717976),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -109,8 +109,8 @@ let T = {
             L = A <= N || b,
             x = L && A <= i.premiumTier,
             M = L && A < i.premiumTier,
-            j = L && A === i.premiumTier,
-            k = i.premiumTier < A && C >= w,
+            k = L && A === i.premiumTier,
+            j = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: N >= A || (b && N + 1 === A) || (b && -1 === N && A === p.Eu4.NONE) ? 1 : 0 },
@@ -121,14 +121,14 @@ let T = {
             }),
             G = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.animated.div, {
+                    (0, r.jsx)(o.animated.div, {
                         className: E.progressBarMarkerIndicator,
                         style: { transform: U.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
                     A !== p.Eu4.NONE
-                        ? k
+                        ? j
                             ? (0, r.jsx)(s.mTd, {
-                                  className: o()(E.boostedTierIcon, E.disabledIndicator),
+                                  className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: "xxs",
                                   color: "currentColor",
                               })
@@ -142,7 +142,7 @@ let T = {
             });
         function B() {
             L &&
-                (k ||
+                (j ||
                     (0, f.u)({
                         analyticsLocations: R,
                         analyticsLocation: {
@@ -155,14 +155,14 @@ let T = {
                         guild: i,
                     }));
         }
-        let Z = !x && P.fractionalState === h.a$.NONE,
-            F = Z ? s.P3F : "div",
-            V = Z ? { onClick: B } : {};
+        let V = !x && P.fractionalState === h.a$.NONE,
+            F = V ? s.P3F : "div",
+            Z = V ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {
             tooltipClassName: E.tooltip,
             text: x
                 ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
-                : k
+                : j
                   ? m.intl.formatToPlainString(g.default["9CtPjo"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6e, {
                         numBoostsRequired: D,
@@ -175,16 +175,16 @@ let T = {
                     v(
                         y(
                             {
-                                className: o()(E.progressBarMarker, {
+                                className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
-                                    [E.progressBarMarkerLocked]: Z,
+                                    [E.progressBarMarkerLocked]: V,
                                     [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: j,
+                                    [E.progressBarMarkerCurrent]: k,
                                 }),
                                 style: { left: "".concat(100 * T[A], "%") },
                             },
                             e,
-                            V,
+                            Z,
                         ),
                         {
                             children: [

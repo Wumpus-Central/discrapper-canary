@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(481060),
-    o = n(923726),
+    o = n(481060),
+    s = n(923726),
     c = n(388032),
     u = n(642175);
 function d(e) {
@@ -14,7 +14,7 @@ function d(e) {
         children: [
             (0, r.jsx)("div", {
                 className: u.notice,
-                children: (0, r.jsx)(s.Text, {
+                children: (0, r.jsx)(o.Text, {
                     className: u.__invalid_label,
                     variant: "text-md/medium",
                     color: "header-primary",
@@ -25,12 +25,12 @@ function d(e) {
         ],
     });
 }
-function h(e) {
+function p(e) {
     let [t, n] = i.useState(),
         [l, a] = i.useState(),
-        [s, u] = i.useState(!1),
-        [h, p] = i.useState(!1),
-        { enabled: f } = (0, o.s1)(e);
+        [o, u] = i.useState(!1),
+        [p, h] = i.useState(!1),
+        { enabled: f } = (0, s.s1)(e);
     return (
         i.useEffect(() => {
             f && null != t && null != l ? u(t < l) : u(!1);
@@ -38,15 +38,15 @@ function h(e) {
         {
             horizontalScrollNotice: i.useMemo(
                 () =>
-                    s
+                    o
                         ? (0, r.jsx)(d, {
                               text: c.intl.string(c.t.RfAAHx),
-                              hasScrolled: h,
+                              hasScrolled: p,
                           })
                         : null,
-                [s, h],
+                [o, p],
             ),
-            handleScroll: () => p(!0),
+            handleScroll: () => h(!0),
             handleSetScrollerRef: (e) => {
                 var t;
                 return a(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);

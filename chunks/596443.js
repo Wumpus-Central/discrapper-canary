@@ -1,175 +1,175 @@
-n.d(t, { Z: () => M }), n(953529), n(388685), n(539854);
-var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
-    a = n(954955),
-    o = n.n(a),
-    u = n(399606),
-    c = n(481060),
-    E = n(79712),
-    d = n(285173),
-    _ = n(434404),
-    A = n(422559),
-    T = n(345162),
-    m = n(271383),
-    I = n(485386),
-    g = n(430824),
-    N = n(496675),
-    h = n(594174),
-    f = n(233608),
-    O = n(370595),
-    p = n(351127),
-    R = n(981631),
-    S = n(388032),
-    C = n(87819),
-    D = n(625109);
-function L(e) {
-    var t, n, i, a;
-    let { permission: o, roleIds: m, guild: g, specMap: h, categoryTitle: f, userId: O } = e,
-        C = (0, u.Wu)([I.Z], () => I.Z.getManyRoles(g.id, m)),
-        L = R.Plq[o],
-        U = null != (i = null == (t = h[L.toString()]) ? void 0 : t.title) ? i : (0, A.wt)(L),
-        M = null != (a = null == (n = h[L.toString()]) ? void 0 : n.description) ? a : "",
-        v = p._o.has(L),
-        b = p.Qn.includes(o),
-        x = m.length,
-        P = (0, u.e7)([N.Z], () => N.Z.can(R.Plq.MANAGE_ROLES, g), [g]),
-        j = l.useCallback(
-            async (e) => {
-                P && (await _.Z.open(g.id, R.pNK.ROLES), await _.Z.selectRole(e));
+t.d(e, { Z: () => j }), t(953529), t(388685), t(539854);
+var n = t(255367),
+    r = t(73800),
+    l = t(120356),
+    i = t.n(l),
+    a = t(954955),
+    s = t.n(a),
+    o = t(399606),
+    g = t(481060),
+    c = t(79712),
+    f = t(285173),
+    v = t(434404),
+    u = t(422559),
+    h = t(345162),
+    d = t(271383),
+    E = t(485386),
+    C = t(430824),
+    B = t(496675),
+    w = t(594174),
+    D = t(233608),
+    M = t(370595),
+    p = t(351127),
+    I = t(981631),
+    H = t(388032),
+    b = t(87819),
+    O = t(625109);
+function Q(A) {
+    var e, t, l, a;
+    let { permission: s, roleIds: d, guild: C, specMap: w, categoryTitle: D, userId: M } = A,
+        b = (0, o.Wu)([E.Z], () => E.Z.getManyRoles(C.id, d)),
+        Q = I.Plq[s],
+        P = null != (l = null == (e = w[Q.toString()]) ? void 0 : e.title) ? l : (0, u.wt)(Q),
+        j = null != (a = null == (t = w[Q.toString()]) ? void 0 : t.description) ? a : "",
+        V = p._o.has(Q),
+        m = p.Qn.includes(s),
+        T = d.length,
+        y = (0, o.e7)([B.Z], () => B.Z.can(I.Plq.MANAGE_ROLES, C), [C]),
+        L = r.useCallback(
+            async (A) => {
+                y && (await v.Z.open(C.id, I.pNK.ROLES), await v.Z.selectRole(A));
             },
-            [P, g.id],
+            [y, C.id],
         );
-    return (0, r.jsxs)("div", {
-        className: s()(D.permissionItemContainer, { [D.elevatedPermission]: v }),
+    return (0, n.jsxs)("div", {
+        className: i()(O.permissionItemContainer, { [O.elevatedPermission]: V }),
         children: [
-            (0, r.jsxs)("div", {
-                className: D.permissionItemHeader,
+            (0, n.jsxs)("div", {
+                className: O.permissionItemHeader,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: D.permissionTitle,
+                    (0, n.jsxs)("div", {
+                        className: O.permissionTitle,
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, n.jsx)(g.Text, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: U,
+                                children: P,
                             }),
-                            null != f &&
-                                (0, r.jsxs)("div", {
-                                    className: D.permissionItemSubheader,
+                            null != D &&
+                                (0, n.jsxs)("div", {
+                                    className: O.permissionItemSubheader,
                                     children: [
-                                        (0, r.jsx)(c.Text, {
+                                        (0, n.jsx)(g.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-muted",
-                                            children: f,
+                                            children: D,
                                         }),
-                                        v &&
-                                            (0, r.jsxs)(r.Fragment, {
+                                        V &&
+                                            (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(E.Z, {
+                                                    (0, n.jsx)(c.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: c.TVs.colors.INTERACTIVE_MUTED.css,
+                                                        color: g.TVs.colors.INTERACTIVE_MUTED.css,
                                                     }),
-                                                    (0, r.jsx)(c.ua7, {
-                                                        text: S.intl.string(S.t.GZvXuL),
-                                                        children: (e) => {
-                                                            var t, n;
-                                                            return (0, r.jsxs)(
-                                                                c.P3F,
-                                                                ((t = (function (e) {
-                                                                    for (var t = 1; t < arguments.length; t++) {
-                                                                        var n =
-                                                                                null != arguments[t]
-                                                                                    ? arguments[t]
+                                                    (0, n.jsx)(g.ua7, {
+                                                        text: H.intl.string(H.t.GZvXuL),
+                                                        children: (A) => {
+                                                            var e, t;
+                                                            return (0, n.jsxs)(
+                                                                g.P3F,
+                                                                ((e = (function (A) {
+                                                                    for (var e = 1; e < arguments.length; e++) {
+                                                                        var t =
+                                                                                null != arguments[e]
+                                                                                    ? arguments[e]
                                                                                     : {},
-                                                                            r = Object.keys(n);
+                                                                            n = Object.keys(t);
                                                                         "function" ==
                                                                             typeof Object.getOwnPropertySymbols &&
-                                                                            (r = r.concat(
-                                                                                Object.getOwnPropertySymbols(n).filter(
-                                                                                    function (e) {
+                                                                            (n = n.concat(
+                                                                                Object.getOwnPropertySymbols(t).filter(
+                                                                                    function (A) {
                                                                                         return Object.getOwnPropertyDescriptor(
-                                                                                            n,
-                                                                                            e,
+                                                                                            t,
+                                                                                            A,
                                                                                         ).enumerable;
                                                                                     },
                                                                                 ),
                                                                             )),
-                                                                            r.forEach(function (t) {
-                                                                                var r;
-                                                                                (r = n[t]),
-                                                                                    t in e
-                                                                                        ? Object.defineProperty(e, t, {
-                                                                                              value: r,
+                                                                            n.forEach(function (e) {
+                                                                                var n;
+                                                                                (n = t[e]),
+                                                                                    e in A
+                                                                                        ? Object.defineProperty(A, e, {
+                                                                                              value: n,
                                                                                               enumerable: !0,
                                                                                               configurable: !0,
                                                                                               writable: !0,
                                                                                           })
-                                                                                        : (e[t] = r);
+                                                                                        : (A[e] = n);
                                                                             });
                                                                     }
-                                                                    return e;
-                                                                })({ className: D.elevatedPermissionContainer }, e)),
-                                                                (n = n =
+                                                                    return A;
+                                                                })({ className: O.elevatedPermissionContainer }, A)),
+                                                                (t = t =
                                                                     {
                                                                         children: [
-                                                                            (0, r.jsx)(c.tQf, {
+                                                                            (0, n.jsx)(g.tQf, {
                                                                                 size: "custom",
                                                                                 width: 12,
                                                                                 height: 12,
-                                                                                color: c.TVs.colors.TEXT_BRAND,
+                                                                                color: g.TVs.colors.TEXT_BRAND,
                                                                             }),
-                                                                            (0, r.jsx)(c.Text, {
+                                                                            (0, n.jsx)(g.Text, {
                                                                                 variant: "text-xs/normal",
                                                                                 color: "text-brand",
-                                                                                children: S.intl.string(S.t.k7Kqj4),
+                                                                                children: H.intl.string(H.t.k7Kqj4),
                                                                             }),
                                                                         ],
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(
-                                                                          t,
-                                                                          Object.getOwnPropertyDescriptors(n),
+                                                                          e,
+                                                                          Object.getOwnPropertyDescriptors(t),
                                                                       )
-                                                                    : (function (e, t) {
-                                                                          var n = Object.keys(e);
+                                                                    : (function (A, e) {
+                                                                          var t = Object.keys(A);
                                                                           if (Object.getOwnPropertySymbols) {
-                                                                              var r = Object.getOwnPropertySymbols(e);
-                                                                              n.push.apply(n, r);
+                                                                              var n = Object.getOwnPropertySymbols(A);
+                                                                              t.push.apply(t, n);
                                                                           }
-                                                                          return n;
-                                                                      })(Object(n)).forEach(function (e) {
+                                                                          return t;
+                                                                      })(Object(t)).forEach(function (A) {
                                                                           Object.defineProperty(
-                                                                              t,
                                                                               e,
-                                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                                              A,
+                                                                              Object.getOwnPropertyDescriptor(t, A),
                                                                           );
                                                                       }),
-                                                                t),
+                                                                e),
                                                             );
                                                         },
                                                     }),
                                                 ],
                                             }),
-                                        !v &&
-                                            b &&
-                                            (0, r.jsxs)(r.Fragment, {
+                                        !V &&
+                                            m &&
+                                            (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(E.Z, {
+                                                    (0, n.jsx)(c.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: c.TVs.colors.INTERACTIVE_MUTED.css,
+                                                        color: g.TVs.colors.INTERACTIVE_MUTED.css,
                                                     }),
-                                                    (0, r.jsx)("div", {
-                                                        className: D.elevatedPermissionContainer,
-                                                        children: (0, r.jsx)(c.Text, {
+                                                    (0, n.jsx)("div", {
+                                                        className: O.elevatedPermissionContainer,
+                                                        children: (0, n.jsx)(g.Text, {
                                                             variant: "text-xs/normal",
                                                             color: "header-muted",
-                                                            children: S.intl.string(S.t.IfqUEB),
+                                                            children: H.intl.string(H.t.IfqUEB),
                                                         }),
                                                     }),
                                                 ],
@@ -178,168 +178,168 @@ function L(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, n.jsx)(g.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: S.intl.format(S.t.KmJI4O, { roleCount: x }),
+                        children: H.intl.format(H.t.KmJI4O, { roleCount: T }),
                     }),
                 ],
             }),
-            null != M &&
-                (0, r.jsx)("div", {
-                    className: D.permissionItemDescription,
-                    children: (0, r.jsx)(c.Text, {
+            null != j &&
+                (0, n.jsx)("div", {
+                    className: O.permissionItemDescription,
+                    children: (0, n.jsx)(g.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: M,
+                        children: j,
                     }),
                 }),
-            (0, r.jsx)("div", {
-                className: D.permissionItemRoleContainer,
-                children: C.map((e) =>
-                    (0, p.Ov)(e.id, O)
-                        ? (0, r.jsx)(
+            (0, n.jsx)("div", {
+                className: O.permissionItemRoleContainer,
+                children: b.map((A) =>
+                    (0, p.Ov)(A.id, M)
+                        ? (0, n.jsx)(
                               "div",
                               {
-                                  className: D.roleTooltipItem,
-                                  children: (0, r.jsx)("div", {
-                                      className: D.roleChiplet,
-                                      children: (0, r.jsx)(c.Text, {
+                                  className: O.roleTooltipItem,
+                                  children: (0, n.jsx)("div", {
+                                      className: O.roleChiplet,
+                                      children: (0, n.jsx)(g.Text, {
                                           variant: "text-xs/medium",
                                           color: "text-default",
-                                          children: S.intl.string(S.t.pclUFB),
+                                          children: H.intl.string(H.t.pclUFB),
                                       }),
                                   }),
                               },
-                              e.id,
+                              A.id,
                           )
-                        : (0, r.jsx)(
-                              c.P3F,
+                        : (0, n.jsx)(
+                              g.P3F,
                               {
-                                  className: s()(D.roleTooltipItem, { [D.editable]: P && !(0, T.fI)(e) }),
-                                  onClick: () => j(e.id),
-                                  children: (0, r.jsx)(d.Z, {
-                                      role: e,
-                                      guildId: g.id,
-                                      className: D.roleChiplet,
+                                  className: i()(O.roleTooltipItem, { [O.editable]: y && !(0, h.fI)(A) }),
+                                  onClick: () => L(A.id),
+                                  children: (0, n.jsx)(f.Z, {
+                                      role: A,
+                                      guildId: C.id,
+                                      className: O.roleChiplet,
                                   }),
                               },
-                              e.id,
+                              A.id,
                           ),
                 ),
             }),
         ],
     });
 }
-function U(e, t) {
-    return t.toLowerCase().includes(e.toLowerCase());
+function P(A, e) {
+    return e.toLowerCase().includes(A.toLowerCase());
 }
-function M(e) {
-    let { userId: t, guildId: n, location: i, className: a, onNavigate: E } = e,
-        d = (0, u.e7)([h.default], () => h.default.getUser(t), [t]),
-        _ = (0, u.e7)([g.Z], () => g.Z.getGuild(n), [n]),
-        T = (0, u.e7)([m.ZP], () => m.ZP.getMember(n, t), [n, t]),
-        I = (0, p.B2)(t, n, p.pd),
-        N = Object.keys(I).length,
-        M = l.useMemo(() => (null != _ ? f.Z.getGuildPermissionSpecMap(_) : null), [_]),
-        v = l.useMemo(() => (null != _ ? f.Z.generateGuildPermissionSpec(_) : null), [_]),
-        [b, x] = l.useState(""),
-        [P, j] = l.useState(""),
-        y = l.useMemo(() => o()(j, 300), []),
-        w = l.useCallback(
-            (e) => {
-                x(e), y(e);
+function j(A) {
+    let { userId: e, guildId: t, location: l, className: a, onNavigate: c } = A,
+        f = (0, o.e7)([w.default], () => w.default.getUser(e), [e]),
+        v = (0, o.e7)([C.Z], () => C.Z.getGuild(t), [t]),
+        h = (0, o.e7)([d.ZP], () => d.ZP.getMember(t, e), [t, e]),
+        E = (0, p.B2)(e, t, p.pd),
+        B = Object.keys(E).length,
+        j = r.useMemo(() => (null != v ? D.Z.getGuildPermissionSpecMap(v) : null), [v]),
+        V = r.useMemo(() => (null != v ? D.Z.generateGuildPermissionSpec(v) : null), [v]),
+        [m, T] = r.useState(""),
+        [y, L] = r.useState(""),
+        x = r.useMemo(() => s()(L, 300), []),
+        N = r.useCallback(
+            (A) => {
+                T(A), x(A);
             },
-            [y],
+            [x],
         ),
-        G = l.useCallback(() => {
-            x(""), j("");
+        Z = r.useCallback(() => {
+            T(""), L("");
         }, []),
-        k = l.useMemo(() => {
-            if (null == _ || null == M || null == T) return null;
-            if (0 === N)
-                return (0, r.jsx)(c.Text, {
+        S = r.useMemo(() => {
+            if (null == v || null == j || null == h) return null;
+            if (0 === B)
+                return (0, n.jsx)(g.Text, {
                     variant: "text-sm/normal",
-                    children: S.intl.string(S.t.DEBGqK),
+                    children: H.intl.string(H.t.DEBGqK),
                 });
-            let e = [];
+            let A = [];
             return (
-                null == v ||
-                    v.forEach((n) => {
-                        n.permissions.forEach((l) => {
-                            let i = l.flag,
-                                s = p.pd.find((e) => R.Plq[e] === i);
-                            if (null == s) return;
-                            let a = I[s];
+                null == V ||
+                    V.forEach((t) => {
+                        t.permissions.forEach((r) => {
+                            let l = r.flag,
+                                i = p.pd.find((A) => I.Plq[A] === l);
+                            if (null == i) return;
+                            let a = E[i];
                             if (null != a) {
-                                if (P.length > 0) {
-                                    var o, u, c, E, d;
-                                    let e =
-                                            null != (E = null == (o = M[i.toString()]) ? void 0 : o.title)
-                                                ? E
-                                                : (0, A.wt)(i),
-                                        t =
+                                if (y.length > 0) {
+                                    var s, o, g, c, f;
+                                    let A =
+                                            null != (c = null == (s = j[l.toString()]) ? void 0 : s.title)
+                                                ? c
+                                                : (0, u.wt)(l),
+                                        e =
                                             null !=
-                                            (d =
-                                                null == (c = M[i.toString()]) || null == (u = c.description)
+                                            (f =
+                                                null == (g = j[l.toString()]) || null == (o = g.description)
                                                     ? void 0
-                                                    : u.toString())
-                                                ? d
+                                                    : o.toString())
+                                                ? f
                                                 : "",
-                                        r = n.title,
-                                        l = p._o.has(i),
-                                        a = p.Qn.includes(s),
-                                        _ = l ? S.intl.string(S.t.k7Kqj4) : a ? S.intl.string(S.t.IfqUEB) : null,
-                                        T = U(P, e),
-                                        m = U(P, t),
-                                        I = U(P, r),
-                                        g = null != _ && U(P, _);
-                                    if (!T && !m && !I && !g) return;
+                                        n = t.title,
+                                        r = p._o.has(l),
+                                        a = p.Qn.includes(i),
+                                        v = r ? H.intl.string(H.t.k7Kqj4) : a ? H.intl.string(H.t.IfqUEB) : null,
+                                        h = P(y, A),
+                                        d = P(y, e),
+                                        E = P(y, n),
+                                        C = null != v && P(y, v);
+                                    if (!h && !d && !E && !C) return;
                                 }
-                                e.push(
-                                    (0, r.jsx)(
-                                        L,
+                                A.push(
+                                    (0, n.jsx)(
+                                        Q,
                                         {
-                                            permission: s,
+                                            permission: i,
                                             roleIds: a,
-                                            guild: _,
-                                            specMap: M,
-                                            categoryTitle: n.title,
-                                            userId: t,
+                                            guild: v,
+                                            specMap: j,
+                                            categoryTitle: t.title,
+                                            userId: e,
                                         },
-                                        s,
+                                        i,
                                     ),
                                 );
                             }
                         });
                     }),
-                e
+                A
             );
-        }, [_, M, T, N, v, I, P, t]);
-    return null == d || null == T
+        }, [v, j, h, B, V, E, y, e]);
+    return null == f || null == h
         ? null
-        : (0, r.jsxs)("div", {
-              className: s()(C.container, a),
+        : (0, n.jsxs)("div", {
+              className: i()(b.container, a),
               children: [
-                  (0, r.jsx)(O.Z, {
-                      guildId: n,
-                      userId: t,
-                      onNavigate: E,
+                  (0, n.jsx)(M.Z, {
+                      guildId: t,
+                      userId: e,
+                      onNavigate: c,
                   }),
-                  (0, r.jsx)(c.Ttm, {
-                      className: D.permissionsGroupContainer,
-                      children: (0, r.jsx)(c.xJW, {
-                          title: S.intl.string(S.t.BBWnpq),
-                          children: (0, r.jsxs)("div", {
-                              className: D.permissionsItemContainer,
+                  (0, n.jsx)(g.Ttm, {
+                      className: O.permissionsGroupContainer,
+                      children: (0, n.jsx)(g.xJW, {
+                          title: H.intl.string(H.t.BBWnpq),
+                          children: (0, n.jsxs)("div", {
+                              className: O.permissionsItemContainer,
                               children: [
-                                  (0, r.jsx)(c.E1j, {
+                                  (0, n.jsx)(g.E1j, {
                                       size: "sm",
-                                      className: D.searchBar,
-                                      query: b,
-                                      placeholder: S.intl.string(S.t["yD9+dH"]),
-                                      onChange: w,
-                                      onClear: G,
+                                      className: O.searchBar,
+                                      query: m,
+                                      placeholder: H.intl.string(H.t["yD9+dH"]),
+                                      onChange: N,
+                                      onClear: Z,
                                       autoComplete: "off",
                                       inputProps: {
                                           autoCapitalize: "none",
@@ -347,7 +347,7 @@ function M(e) {
                                           spellCheck: "false",
                                       },
                                   }),
-                                  k,
+                                  S,
                               ],
                           }),
                       }),

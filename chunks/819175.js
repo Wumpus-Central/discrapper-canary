@@ -251,7 +251,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    o = [
+    a = [
         "after",
         "backdrop",
         "before",
@@ -269,7 +269,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    a = [
+    o = [
         "accent-color",
         "align-content",
         "align-items",
@@ -841,7 +841,7 @@ e.exports = function (e) {
             },
             {
                 className: "selector-pseudo",
-                begin: "&?:(:)?(" + o.join("|") + ")" + d,
+                begin: "&?:(:)?(" + a.join("|") + ")" + d,
             },
             s.ATTRIBUTE_SELECTOR_MODE,
             {
@@ -884,7 +884,7 @@ e.exports = function (e) {
             s.CSS_VARIABLE,
             {
                 className: "attribute",
-                begin: "\\b(" + a.join("|") + ")\\b",
+                begin: "\\b(" + o.join("|") + ")\\b",
                 starts: {
                     end: /;|$/,
                     contains: [

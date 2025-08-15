@@ -26,8 +26,8 @@ var i = n(255367),
     v = n(165583),
     S = n(504983),
     T = n(984802),
-    I = n(626135),
-    N = n(210887),
+    N = n(626135),
+    I = n(210887),
     y = n(981631),
     A = n(921944),
     P = n(474936),
@@ -52,7 +52,7 @@ let Z = () => {
         return (
             r.useEffect(() => {
                 a &&
-                    I.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                    N.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n,
                     });
@@ -139,8 +139,8 @@ function k() {
             theme: t,
             useForcedColors: n,
             gradientPreset: r,
-        } = (0, s.cj)([N.Z, m.Z, h.Z], () => ({
-            theme: N.Z.theme,
+        } = (0, s.cj)([I.Z, m.Z, h.Z], () => ({
+            theme: I.Z.theme,
             useForcedColors: m.Z.useForcedColors,
             gradientPreset: h.Z.gradientPreset,
         }));

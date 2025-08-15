@@ -17,15 +17,15 @@ var i = n(442837),
     j = n(493043),
     y = n(864141),
     O = n(264481),
-    x = n(693408),
-    h = n(228168),
+    h = n(693408),
+    x = n(228168),
     v = n(981631),
     _ = n(388032),
     I = n(158069);
 function P(e) {
     let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: T, subsection: Z, onClose: N } = e,
-        { voiceActivityStatusEnabled: S } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
-        w = (0, f.b)({ location: "UserProfileModalV2Activity" }),
+        { voiceActivityStatusEnabled: w } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
+        S = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: A, recent: C, stream: D } = (0, p.Z)(t.id),
         { voiceChannel: L, voiceActivity: R } = (0, m.Z)({
             userId: t.id,
@@ -38,7 +38,7 @@ function P(e) {
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         M = A.length > 0 || null != D,
-        U = S && null == D && null == R && null != L,
+        U = w && null == D && null == R && null != L,
         F = !B && (M || U),
         V = C.length > 0;
     if (!F && !V && G)
@@ -80,12 +80,12 @@ function P(e) {
         fade: !0,
         children: [
             F
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(h.Z, {
                       heading: _.intl.string(_.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
                           children: [
-                              !w &&
+                              !S &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
@@ -121,7 +121,7 @@ function P(e) {
                                       "live-".concat(i),
                                   ),
                               ),
-                              w &&
+                              S &&
                                   U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
@@ -136,7 +136,7 @@ function P(e) {
                   })
                 : null,
             V
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(h.Z, {
                       heading: _.intl.string(_.t.jzgEoK),
                       introText: k
                           ? _.intl.format(_.t["4bk9Ag"], {
@@ -151,7 +151,7 @@ function P(e) {
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: Z === h.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: Z === x.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: I.cards,
                           children: C.map((e) =>

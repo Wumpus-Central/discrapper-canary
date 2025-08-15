@@ -1,24 +1,23 @@
-n.d(t, {
-    L: () => a,
+t.d(l, {
+    L: () => i,
     Z: () => s,
 });
-var r = n(729594),
-    i = n(981631);
-let o = "music.apple.com";
-function a(e) {
-    return e === o;
+var r = t(729594),
+    n = t(981631);
+function i(e) {
+    return "music.apple.com" === e;
 }
 function s(e) {
-    var t;
+    var l;
     if (
         null == e.url ||
-        (null == (t = e.provider) ? void 0 : t.name) !== "Apple Music" ||
-        (e.type !== i.hBH.ARTICLE && e.type !== i.hBH.LINK)
+        (null == (l = e.provider) ? void 0 : l.name) !== "Apple Music" ||
+        (e.type !== n.hBH.ARTICLE && e.type !== n.hBH.LINK)
     )
         return !1;
     try {
-        let t = r.parse(e.url, !0).host;
-        return a(t);
+        let l = r.parse(e.url, !0).host;
+        return i(l);
     } catch (e) {
         return !1;
     }

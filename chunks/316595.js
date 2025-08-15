@@ -1,33 +1,33 @@
-n.d(t, { Z: () => f }), n(539854);
+n.d(t, { Z: () => p }), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
+    l = n(442837),
     a = n(704215),
-    s = n(890977),
-    l = n(266454),
+    o = n(890977),
+    s = n(266454),
     c = n(243778),
     u = n(375954),
     d = n(921944);
-function f(e) {
-    let { children: t, enabled: n, animationContainerClassName: f, glowClassName: _, trinketsClassName: p } = e,
-        h = (0, o.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
-        m = i.useMemo(() => {
+function p(e) {
+    let { children: t, enabled: n, animationContainerClassName: p, glowClassName: h, trinketsClassName: f } = e,
+        m = (0, l.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
+        g = i.useMemo(() => {
             let e = [];
-            return h && n && e.push(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
-        }, [h, n]),
-        g = () => {
-            setTimeout(() => (0, l.Q3)(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
+            return m && n && e.push(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
+        }, [m, n]),
+        b = () => {
+            setTimeout(() => (0, s.Q3)(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
         };
     return (0, r.jsx)(c.ZP, {
-        contentTypes: m,
+        contentTypes: g,
         children: (e) => {
             let { visibleContent: n } = e;
             return n === a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2
-                ? (0, r.jsx)(s.b, {
-                      animationContainerClassName: f,
-                      glowClassName: _,
-                      trinketsClassName: p,
-                      onMount: g,
+                ? (0, r.jsx)(o.b, {
+                      animationContainerClassName: p,
+                      glowClassName: h,
+                      trinketsClassName: f,
+                      onMount: b,
                       children: t,
                   })
                 : t;

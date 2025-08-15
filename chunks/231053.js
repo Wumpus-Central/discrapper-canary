@@ -6,8 +6,8 @@ n.d(t, {
     n(953529);
 var r = n(843991),
     i = n(544891),
-    o = n(81825),
-    a = n(768581),
+    a = n(81825),
+    o = n(768581),
     s = n(411198),
     l = n(981631);
 function c(e, t, n) {
@@ -89,10 +89,10 @@ let p = async (e) => {
     } catch (e) {}
     return t;
 };
-class h extends o.Z {
+class h extends a.Z {
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return a.ZP.getGuildIconURL({
+        return o.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
@@ -101,8 +101,8 @@ class h extends o.Z {
     }
     getIconSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return a.ZP.getAnimatableSourceWithFallback(t, (t) =>
-            a.ZP.getGuildIconSource({
+        return o.ZP.getAnimatableSourceWithFallback(t, (t) =>
+            o.ZP.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -189,7 +189,7 @@ class h extends o.Z {
             (this.emojis = e.emojis);
     }
 }
-class m extends o.Z {
+class m extends a.Z {
     static createFromServer(e) {
         return new m({
             id: e.id,

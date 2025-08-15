@@ -1,12 +1,12 @@
 n.d(t, {
     a: () => i,
-    g: () => o,
+    g: () => l,
 });
 var r = n(911969);
 function i(e) {
     return null != e.interactionMetadata;
 }
-function o(e) {
+function l(e) {
     var t, n;
     return (
         (null == (t = e.interactionMetadata) ? void 0 : t.type) === r.B8.APPLICATION_COMMAND &&

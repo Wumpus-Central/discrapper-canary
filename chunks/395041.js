@@ -4,11 +4,11 @@ n.d(t, {
 });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    o = n.n(i),
+var s = n(120356),
+    l = n.n(s),
     a = n(481060),
-    s = n(819439),
-    l = n(624595);
+    i = n(819439),
+    o = n(624595);
 function c(e, t) {
     let { children: n } = e;
     return (0, r.jsx)(a.Text, {
@@ -18,10 +18,10 @@ function c(e, t) {
     });
 }
 let u = (e) => {
-        let t = (0, s.$)({ location: "SearchTokens" });
-        return c(e, o()(l.searchFilter, { [l.searchTokenTopLevel]: t }));
+        let t = (0, i.$)({ location: "SearchTokens" });
+        return c(e, l()(o.searchFilter, { [o.searchTokenTopLevel]: t }));
     },
     d = (e) => {
-        let t = (0, s.$)({ location: "SearchTokens" });
-        return c(e, o()(l.searchAnswer, { [l.searchTokenTopLevel]: t }));
+        let t = (0, i.$)({ location: "SearchTokens" });
+        return c(e, l()(o.searchAnswer, { [o.searchTokenTopLevel]: t }));
     };

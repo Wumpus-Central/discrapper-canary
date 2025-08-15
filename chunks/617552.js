@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(82659),
-    a = n(481060),
+    a = n(82659),
+    o = n(481060),
     s = n(153867),
     l = n(740492),
     c = n(388032);
@@ -64,9 +64,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
@@ -96,7 +96,7 @@ function m(e) {
             t(), l.onClose();
         };
     return (0, r.jsx)(
-        o.Modal,
+        a.Modal,
         _(d({}, l), {
             size: "md",
             title: c.intl.string(c.t.ye21jI),
@@ -113,11 +113,11 @@ function m(e) {
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, r.jsx)(a.XZJ, {
+            actionBarInput: (0, r.jsx)(o.XZJ, {
                 value: u,
                 onChange: (e, t) => f(t),
-                type: a.XZJ.Types.DEFAULT,
-                children: (0, r.jsx)(a.Text, {
+                type: o.XZJ.Types.DEFAULT,
+                children: (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: c.intl.string(c.t.wGAwOT),
@@ -130,7 +130,7 @@ function g(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: i = !1 } = e;
     l.ZP.disableEmbeddedActivityPopOutAlert
         ? t()
-        : (0, a.h7j)(
+        : (0, o.h7j)(
               (e) =>
                   (0, r.jsx)(
                       m,
@@ -140,6 +140,6 @@ function g(e) {
                       }),
                   ),
               {},
-              i ? a.u1M : void 0,
+              i ? o.u1M : void 0,
           );
 }

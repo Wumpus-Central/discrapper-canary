@@ -1,12 +1,11 @@
 n.d(t, {
-    FZ: () => i,
-    ZP: () => o,
+    FZ: () => l,
+    ZP: () => a,
 });
-var r = n(818083),
-    i = (function (e) {
-        return (e.Control = "CONTROL"), (e.Social = "SOCIAL"), (e.Perks = "PERKS"), e;
-    })({});
-let o = (0, r.B)({
+var r,
+    i = n(818083),
+    l = (((r = {}).Control = "CONTROL"), (r.Social = "SOCIAL"), (r.Perks = "PERKS"), r);
+let a = (0, i.B)({
     kind: "user",
     id: "2025-06_referral_program_dm_embed_refresh_experiment",
     label: "Referral Program DM Embed Refresh Experiment",

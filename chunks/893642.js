@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(627050),
+    a = n(570140),
+    o = n(627050),
     s = n(406763);
 function l(e, t, n) {
     return (
@@ -23,7 +23,7 @@ function u(e) {
     c = t;
 }
 function d() {
-    a.d.getCurrentConfig({ location: "GameMentionSettingsStore" }).enabled && (0, s.Q)();
+    o.d.getCurrentConfig({ location: "GameMentionSettingsStore" }).enabled && (0, s.Q)();
 }
 function f() {
     c = {};
@@ -34,7 +34,7 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 l(_, "displayName", "GameMentionSettingsStore");
-let p = new _(o.Z, {
+let p = new _(a.Z, {
     REPLACE_GAME_MENTION_SETTINGS: u,
     CONNECTION_OPEN: d,
     LOGOUT: f,

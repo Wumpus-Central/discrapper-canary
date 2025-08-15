@@ -1,28 +1,25 @@
 n.d(t, {
     a3: () => o,
-    eJ: () => a,
+    eJ: () => c,
     kL: () => s,
-    zJ: () => i,
+    zJ: () => a,
 });
-var r = n(388032),
-    i = (function (e) {
-        return (
-            (e[(e.NAME = 1)] = "NAME"),
-            (e[(e.PRICE_ASC = 2)] = "PRICE_ASC"),
-            (e[(e.PRICE_DESC = 3)] = "PRICE_DESC"),
-            (e[(e.NEWEST_ARRIVALS = 4)] = "NEWEST_ARRIVALS"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (e[(e.SUBS_FIRST = 1)] = "SUBS_FIRST"), (e[(e.PRODUCTS_FIRST = 2)] = "PRODUCTS_FIRST"), e;
-    })({});
-function a(e) {
+var r,
+    i,
+    l = n(388032),
+    a =
+        (((r = {})[(r.NAME = 1)] = "NAME"),
+        (r[(r.PRICE_ASC = 2)] = "PRICE_ASC"),
+        (r[(r.PRICE_DESC = 3)] = "PRICE_DESC"),
+        (r[(r.NEWEST_ARRIVALS = 4)] = "NEWEST_ARRIVALS"),
+        r),
+    o = (((i = {})[(i.SUBS_FIRST = 1)] = "SUBS_FIRST"), (i[(i.PRODUCTS_FIRST = 2)] = "PRODUCTS_FIRST"), i);
+function c(e) {
     return {
-        4: r.intl.string(r.t["5tzSRE"]),
-        2: r.intl.string(r.t["WWIr5+"]),
-        3: r.intl.string(r.t.WlSInZ),
-        1: r.intl.string(r.t.uOU7Pz),
+        4: l.intl.string(l.t["5tzSRE"]),
+        2: l.intl.string(l.t["WWIr5+"]),
+        3: l.intl.string(l.t.WlSInZ),
+        1: l.intl.string(l.t.uOU7Pz),
     }[e];
 }
 let s = [4, 2, 3, 1];

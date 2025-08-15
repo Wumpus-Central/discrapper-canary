@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r,
     i,
-    o,
     a,
+    o,
     s = n(255367),
     l = n(73800),
     c = n(120356),
@@ -90,7 +90,7 @@ class E extends (r = l.PureComponent) {
             onScenePlay: n,
             onSceneComplete: r,
             pause: i,
-            pauseWhileUnfocused: o,
+            pauseWhileUnfocused: a,
         } = this.props;
         return (0, s.jsx)(_.kci, {
             className: u()(p.sequencedAnimation, e),
@@ -99,7 +99,7 @@ class E extends (r = l.PureComponent) {
             sceneSegments: g,
             onScenePlay: n,
             onSceneComplete: r,
-            pauseWhileUnfocused: o,
+            pauseWhileUnfocused: a,
             pause: i,
         });
     }
@@ -165,7 +165,7 @@ class O extends (i = l.PureComponent) {
             onScenePlay: n,
             onSceneComplete: r,
             pause: i,
-            pauseWhileUnfocused: o,
+            pauseWhileUnfocused: a,
         } = this.props;
         return (0, s.jsx)(_.kci, {
             className: u()(p.sequencedAnimation, e),
@@ -174,7 +174,7 @@ class O extends (i = l.PureComponent) {
             sceneSegments: y,
             onScenePlay: n,
             onSceneComplete: r,
-            pauseWhileUnfocused: o,
+            pauseWhileUnfocused: a,
             pause: i,
         });
     }
@@ -282,7 +282,7 @@ let S = Object.freeze({
         },
     }),
     A = 1.2;
-class N extends (o = l.PureComponent) {
+class N extends (a = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case N.Scenes.IDLE_ENTRY:
@@ -526,23 +526,23 @@ function L(e) {
         i = (0, _.bYB)(
             w.length,
             w.map((e, i) => {
-                let o = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
-                    a = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
+                let a = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
+                    o = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
                 return {
                     from: {
                         scale: D.SCALE_INITIAL,
                         rotate: D.ROTATE_INITIAL,
                         top: e.top,
                         left: e.left,
-                        width: a,
-                        height: a,
+                        width: o,
+                        height: o,
                     },
                     to: async (e) => {
                         t
                             ? (await e({
                                   scale: D.SCALE_MIDDLE,
                                   rotate: D.ROTATE_MIDDLE,
-                                  delay: o,
+                                  delay: a,
                                   config: {
                                       duration: D.DURATION_MIDDLE,
                                       easing: D.EASING_MIDDLE,
@@ -590,7 +590,7 @@ function L(e) {
         }),
     });
 }
-class x extends (a = l.PureComponent) {
+class x extends (o = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case "entry":
@@ -617,7 +617,7 @@ class x extends (a = l.PureComponent) {
             pause: n,
             onScenePlay: r,
             onSceneComplete: i,
-            pauseWhileUnfocused: o,
+            pauseWhileUnfocused: a,
         } = this.props;
         return (0, s.jsxs)("div", {
             className: u()(p.guildWrapper, e),
@@ -629,7 +629,7 @@ class x extends (a = l.PureComponent) {
                     sceneSegments: R,
                     onScenePlay: r,
                     onSceneComplete: i,
-                    pauseWhileUnfocused: o,
+                    pauseWhileUnfocused: a,
                     pause: n,
                 }),
                 (0, s.jsx)(L, { animate: !n && "stars" === t }),

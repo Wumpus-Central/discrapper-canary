@@ -4,7 +4,7 @@ class i {
         return r;
     }
     constructor(e, t) {
-        if (((t = o(t)), e instanceof i))
+        if (((t = a(t)), e instanceof i))
             if (!!t.loose === e.loose) return e;
             else e = e.value;
         c("comparator", (e = e.trim().split(/\s+/).join(" ")), t),
@@ -15,7 +15,7 @@ class i {
             c("comp", this);
     }
     parse(e) {
-        let t = this.options.loose ? a[s.COMPARATORLOOSE] : a[s.COMPARATOR],
+        let t = this.options.loose ? o[s.COMPARATORLOOSE] : o[s.COMPARATOR],
             n = e.match(t);
         if (!n) throw TypeError(`Invalid comparator: ${e}`);
         (this.operator = void 0 !== n[1] ? n[1] : ""),
@@ -42,7 +42,7 @@ class i {
             : "" === e.operator
               ? "" === e.value || new d(this.value, t).test(e.semver)
               : !(
-                    ((t = o(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
+                    ((t = a(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
                     (!t.includePrerelease && (this.value.startsWith("<0.0.0") || e.value.startsWith("<0.0.0")))
                 ) &&
                 !!(
@@ -57,8 +57,8 @@ class i {
     }
 }
 e.exports = i;
-let o = n(498994),
-    { safeRe: a, t: s } = n(646664),
+let a = n(498994),
+    { safeRe: o, t: s } = n(646664),
     l = n(293745),
     c = n(13556),
     u = n(40231),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685), n(415506);
 var r = n(772848),
     i = n(570140),
-    o = n(318885),
-    a = n(710845),
+    a = n(318885),
+    o = n(710845),
     s = n(444295),
     l = n(486016),
     c = n(837268),
@@ -65,12 +65,12 @@ function y(e, t) {
         e
     );
 }
-let O = new a.Z("OverlayActionCreators"),
+let O = new o.Z("OverlayActionCreators"),
     v = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            (0, o.Q)(e, t, n);
+            (0, a.Q)(e, t, n);
         },
         overlayReady(e) {
             i.Z.dispatch({
@@ -245,27 +245,27 @@ let O = new a.Z("OverlayActionCreators"),
         },
         notificationEvent(e, t) {
             var n, r;
-            let o = d.Z.getGame();
+            let a = d.Z.getGame();
             i.Z.dispatch({
                 type: "OVERLAY_NOTIFICATION_EVENT",
                 notificationType: e,
                 action: t,
-                gameName: null != (n = null == o ? void 0 : o.name) ? n : null,
-                gameId: null != (r = null == o ? void 0 : o.id) ? r : null,
+                gameName: null != (n = null == a ? void 0 : a.name) ? n : null,
+                gameId: null != (r = null == a ? void 0 : a.id) ? r : null,
             });
         },
         setPinChat(e) {
             let t = p.OVERLAY_LAYOUT_ID,
                 n = u.Z.getWidgetsForLayout(t),
                 i = u.Z.getWidgetConfig(m.Odu.GUILDS),
-                o = u.Z.getWidgetConfig(m.Odu.TEXT),
-                a = u.Z.getWidgetConfig(m.Odu.GUILDS_TEXT),
+                a = u.Z.getWidgetConfig(m.Odu.TEXT),
+                o = u.Z.getWidgetConfig(m.Odu.GUILDS_TEXT),
                 l = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS_TEXT),
                 c = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS),
                 d = u.Z.getWidgetDefaultSettings(m.Odu.TEXT);
             if (
                 ((0, s.JS)(m.Odu.TEXT, { pinned: e }),
-                0 === n.length || null == i || null == o || null == a || null == l || null == c || null == d)
+                0 === n.length || null == i || null == a || null == o || null == l || null == c || null == d)
             )
                 return;
             let g = f.Z.windowSize(),
@@ -312,7 +312,7 @@ let O = new a.Z("OverlayActionCreators"),
                 let e = "auto" === T.width ? l.minSize.width : T.width;
                 e -= c.minSize.width;
                 let [n, i] = (0, _.o4)(I, y(E({}, T), { width: c.minSize.width }), g),
-                    [o, a] = (0, _.uq)(I, y(E({}, T), { width: e }), g, {
+                    [a, o] = (0, _.uq)(I, y(E({}, T), { width: e }), g, {
                         x: 10,
                         y: 10,
                     }),
@@ -322,8 +322,8 @@ let O = new a.Z("OverlayActionCreators"),
                     y(E({}, s), {
                         type: m.Odu.TEXT,
                         id: (0, r.Z)(),
-                        size: a,
-                        anchor: o,
+                        size: o,
+                        anchor: a,
                         layoutId: t,
                     }),
                 );
@@ -349,10 +349,10 @@ let O = new a.Z("OverlayActionCreators"),
                         },
                         g,
                     ),
-                    o = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS_TEXT);
-                if (null == o) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
+                    a = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS_TEXT);
+                if (null == a) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
                 (0, h.A4)(
-                    y(E({}, o), {
+                    y(E({}, a), {
                         type: m.Odu.GUILDS_TEXT,
                         id: (0, r.Z)(),
                         layoutId: t,

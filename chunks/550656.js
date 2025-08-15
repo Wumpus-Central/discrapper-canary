@@ -1,8 +1,8 @@
 n.d(t, { N: () => E });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(302901),
     c = n(539907),
@@ -18,7 +18,7 @@ function E(e) {
     let {
             isVisible: t,
             isRendered: n = t,
-            targetElementRef: o,
+            targetElementRef: a,
             id: E,
             content: b,
             position: y = "top",
@@ -33,27 +33,27 @@ function E(e) {
         C = i.useMemo(() => (("left" === y || "right" === y ? g : m).includes(O) ? O : "center"), [y, O]);
     if (!n) return null;
     let R = (0, r.jsx)(c.j, {
-        targetRef: o,
+        targetRef: a,
         position: y,
         align: C,
         spacing: v,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         children: (e) => {
-            var t, n, i, o;
+            var t, n, i, a;
             let { position: l, nudge: c } = e,
                 f = null != l ? l : y,
                 h = null != (t = null == I ? void 0 : I.align) ? t : null != c && 0 !== c ? "custom" : "center",
                 m = null != (i = null != (n = null == I ? void 0 : I.customOffset) ? n : c) ? i : 0,
                 g = {
-                    position: null != (o = null == I ? void 0 : I.position) ? o : (0, _.Av)(f),
+                    position: null != (a = null == I ? void 0 : I.position) ? a : (0, _.Av)(f),
                     align: h,
                     customOffset: "custom" === h ? m : void 0,
                 },
                 O = (0, r.jsxs)("div", {
                     ref: A,
                     id: E,
-                    className: a()(p.tooltip, { [p.richTooltip]: N }),
+                    className: o()(p.tooltip, { [p.richTooltip]: N }),
                     role: "tooltip",
                     "data-position": f,
                     children: [

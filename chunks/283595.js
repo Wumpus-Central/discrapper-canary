@@ -1,8 +1,8 @@
-n.d(t, { Z: () => V }), n(388685), n(997841), n(358797);
+n.d(t, { Z: () => Z }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(85521),
@@ -100,8 +100,8 @@ function D(e) {
 function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
-        o = B(t, n);
-    null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
+        a = B(t, n);
+    null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
 }
 function x(e) {
     let { libraryApplication: t } = e,
@@ -113,12 +113,12 @@ function M(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
     (S[(0, d.Tu)(t, n)] = r), N();
 }
-function j(e) {
+function k(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
     (T[t] = n), C();
 }
-function k(e) {
+function j(e) {
     let { libraryApplications: t } = e;
     for (let e of t) v[(0, d.Tu)(e.id, e.branchId)] = e;
 }
@@ -126,7 +126,7 @@ function U() {
     v = {};
 }
 function G(e) {
-    let t = Z();
+    let t = V();
     return (
         Object.keys(t).forEach((n) => {
             e(t[n]) || delete t[n];
@@ -139,10 +139,10 @@ function B(e, t) {
     let r = (0, d.Tu)(e, t);
     return null != (n = O[r]) ? n : v[r];
 }
-function Z() {
+function V() {
     return h({}, v, O);
 }
-class F extends (r = a.ZP.Store) {
+class F extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
@@ -154,10 +154,10 @@ class F extends (r = a.ZP.Store) {
         return G((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return Z();
+        return V();
     }
     hasLibraryApplication() {
-        return Object.keys(Z()).length > 0;
+        return Object.keys(V()).length > 0;
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -175,10 +175,10 @@ class F extends (r = a.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, d.Tu)(e, n),
-                o = null != (r = O[i]) ? r : v[i];
-            if (null != o && (0, d.Je)(o) && (t || !o.isHidden())) return o;
+                a = null != (r = O[i]) ? r : v[i];
+            if (null != a && (0, d.Je)(a) && (t || !a.isHidden())) return a;
         }
-        let i = Z();
+        let i = V();
         for (let n in i)
             if (i[n].id === e) {
                 let e = i[n];
@@ -195,7 +195,7 @@ class F extends (r = a.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return o()(Z())
+        return a()(V())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -211,7 +211,7 @@ class F extends (r = a.ZP.Store) {
     }
 }
 p(F, "displayName", "LibraryApplicationStore");
-let V = new F(l.Z, {
+let Z = new F(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
@@ -219,7 +219,7 @@ let V = new F(l.Z, {
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
     LIBRARY_APPLICATION_UPDATE: x,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: j,
-    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: k,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
+    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,
     DEVELOPER_TEST_MODE_RESET: U,
 });

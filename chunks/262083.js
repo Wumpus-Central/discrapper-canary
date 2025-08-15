@@ -1,7 +1,7 @@
 n.d(t, {
-    NI: () => s,
+    NI: () => a,
     bE: () => o,
-    vY: () => a,
+    vY: () => u,
 });
 var r = n(893346),
     i = n(109683);
@@ -15,7 +15,7 @@ function o(e, t) {
     }
     return !1;
 }
-let a = (e = document) => {
+let u = (e = document) => {
     var t;
     if (!(0, i.Wr)()) return e.activeElement;
     let n = e.activeElement;
@@ -23,6 +23,6 @@ let a = (e = document) => {
         n = n.shadowRoot.activeElement;
     return n;
 };
-function s(e) {
+function a(e) {
     return (0, i.Wr)() && e.target.shadowRoot && e.composedPath ? e.composedPath()[0] : e.target;
 }

@@ -1,28 +1,28 @@
 n.d(t, {
     J: () => d,
-    Z: () => f,
+    Z: () => p,
 });
 var r = n(111810),
     i = n(55935),
-    o = n(70956),
+    l = n(70956),
     a = n(709054),
-    s = n(463396),
-    l = n(901461),
+    o = n(463396),
+    s = n(901461),
     c = n(981631);
-let u = 7 * o.Z.Millis.MINUTE;
+let u = 7 * l.Z.Millis.MINUTE;
 function d(e, t, n) {
     return (
         null == t ||
         (t.type === c.ys_.MESSAGE && t.content.id === t.content.channel_id) ||
         (t.type !== c.ys_.MESSAGE && t.type !== c.ys_.THREAD_STARTER_MESSAGE) ||
-        f(e, t.content, n)
+        p(e, t.content, n)
     );
 }
-function f(e, t, n) {
+function p(e, t, n) {
     if (n.hasFlag(c.iLy.HAS_THREAD) || n.isCommandType()) return !0;
-    if (n.type > c.uaV.DEFAULT) return !(0, l.Z)(t) || n.type === c.uaV.REPLY;
+    if (n.type > c.uaV.DEFAULT) return !(0, s.Z)(t) || n.type === c.uaV.REPLY;
     if (
-        (0, l.Z)(t) ||
+        (0, s.Z)(t) ||
         t.author.id !== n.author.id ||
         t.hasFlag(c.iLy.EPHEMERAL) !== n.hasFlag(c.iLy.EPHEMERAL) ||
         (null != n.webhookId && t.author.username !== n.author.username) ||
@@ -32,9 +32,9 @@ function f(e, t, n) {
         (t.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) &&
             !n.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) &&
             (n.mentions.length > 0 || n.mentionRoles.length > 0 || n.mentionEveryone)) ||
-        (0, s.f)(n)
+        (0, o.f)(n)
     )
         return !0;
-    let o = r.HZ.getCurrentConfig({ location: "isNewMessageGroup" }, { autoTrackExposure: !1 }).canSeeConfetti;
-    return (!!n.hasPotions() && !!o) || n.applicationId !== t.applicationId;
+    let l = r.HZ.getCurrentConfig({ location: "isNewMessageGroup" }, { autoTrackExposure: !1 }).canSeeConfetti;
+    return (!!n.hasPotions() && !!l) || n.applicationId !== t.applicationId;
 }

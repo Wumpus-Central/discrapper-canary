@@ -3,14 +3,14 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     a = n(128557),
-    s = n(981631),
-    o = n(388032),
+    o = n(981631),
+    s = n(388032),
     c = n(957717);
 let u = (e) => {
     let { guild: t, onAddGuild: u } = e,
         d = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("52541")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -43,8 +43,8 @@ let u = (e) => {
                         (l = l =
                             {
                                 guild: t,
-                                source: s.t4x.HUB_DIRECTORY,
-                                analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA },
+                                source: o.t4x.HUB_DIRECTORY,
+                                analyticsLocation: { section: o.jXE.HUB_WELCOME_CTA },
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -74,18 +74,18 @@ let u = (e) => {
             (0, r.jsx)(l.X6q, {
                 className: c.emptyTitle,
                 variant: "heading-xl/semibold",
-                children: o.intl.format(o.t.vyvrpK, { guildName: t.name }),
+                children: s.intl.format(s.t.vyvrpK, { guildName: t.name }),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 className: c.emptySubtitle,
-                children: o.intl.string(o.t.WypE0t),
+                children: s.intl.string(s.t.WypE0t),
             }),
             null != u
                 ? (0, r.jsx)(a.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
-                      header: o.intl.string(o.t.hyK15u),
+                      header: s.intl.string(s.t.hyK15u),
                       completed: !1,
                       onClick: u,
                   })
@@ -93,7 +93,7 @@ let u = (e) => {
             (0, r.jsx)(a.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
-                header: o.intl.string(o.t.L4bwJy),
+                header: s.intl.string(s.t.L4bwJy),
                 completed: !1,
                 onClick: d,
             }),

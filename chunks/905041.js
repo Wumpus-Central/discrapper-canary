@@ -1,127 +1,121 @@
-n.d(t, { Z: () => E }), n(704826), n(35282), n(539854), n(388685);
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    o = n(296182),
-    a = n(976853),
-    s = n(902676),
-    l = n(626135),
-    c = n(49012),
-    u = n(358085),
-    d = n(998502),
-    f = n(36998),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+e.d(n, { Z: () => m }), e(704826), e(35282), e(539854), e(388685);
+var l = e(255367);
+e(73800);
+var i = e(481060),
+    r = e(296182),
+    a = e(976853),
+    o = e(902676),
+    s = e(626135),
+    u = e(49012),
+    c = e(358085),
+    d = e(998502),
+    v = e(36998),
+    h = e(981631),
+    f = e(388032);
+function p(t) {
+    for (var n = 1; n < arguments.length; n++) {
+        var e = null != arguments[n] ? arguments[n] : {},
+            l = Object.keys(e);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (l = l.concat(
+                Object.getOwnPropertySymbols(e).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
+            l.forEach(function (n) {
+                var l;
+                (l = e[n]),
+                    n in t
+                        ? Object.defineProperty(t, n, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (t[n] = l);
             });
     }
-    return e;
+    return t;
 }
-let g = /^(tel|sms|mailto):([^?;]+)/;
-function E(e, t, n, h) {
-    let E = (0, a.Z)(null == n ? void 0 : n.getChannelId());
+let b = /^(tel|sms|mailto):([^?;]+)/;
+function m(t, n, e, m) {
+    let g = (0, a.Z)(null == e ? void 0 : e.getChannelId());
     if (
-        !u.isPlatformEmbedded ||
-        null == e ||
-        "" === e ||
-        E ||
-        (null == h ? void 0 : h.shouldHideMediaOptions) === !0 ||
-        !(0, o.Jj)(e)
+        !c.isPlatformEmbedded ||
+        null == t ||
+        "" === t ||
+        g ||
+        (null == m ? void 0 : m.shouldHideMediaOptions) === !0 ||
+        !(0, r.Jj)(t)
     )
         return null;
-    let b = (0, s.F)(e),
-        y = (e) => {
-            l.default.track(_.rMx.CONTEXT_MENU_LINK_COPIED, m({ hostname: b }, (0, f.v)())),
-                d.ZP.copy(e),
-                (0, i.showToast)((0, i.createToast)(p.intl.string(p.t["L/PwZW"]), i.ToastType.SUCCESS));
+    let O = (0, o.F)(t),
+        y = (t) => {
+            s.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: O }, (0, v.v)())),
+                d.ZP.copy(t),
+                (0, i.showToast)((0, i.createToast)(f.intl.string(f.t["L/PwZW"]), i.ToastType.SUCCESS));
         },
-        O = () => {
-            y(e);
-        },
-        v = (n, r) => {
-            let i = !0 === r ? e.replace("tel:", "sms:") : e;
-            l.default.track(_.rMx.CONTEXT_MENU_LINK_OPENED, m({ hostname: b }, (0, f.v)())),
-                (0, c.q)(
+        _ = (e, l) => {
+            let i = !0 === l ? t.replace("tel:", "sms:") : t;
+            s.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: O }, (0, v.v)())),
+                (0, u.q)(
                     {
                         href: i,
-                        trusted: (0, c.r)(e, t),
+                        trusted: (0, u.r)(t, n),
                         shouldConfirm: !0,
                     },
-                    n,
+                    e,
                 );
         },
-        I = [],
-        T = e.match(g);
-    if (null != T) {
-        let e = () => {
-                y(T[2]);
-            },
-            t = p.intl.string("mailto" === T[1] ? p.t.ZYLVKi : p.t["3zozoa"]);
-        I.push(
-            (0, r.jsx)(
+        Z = [],
+        C = t.match(b);
+    if (null != C) {
+        let t = f.intl.string("mailto" === C[1] ? f.t.ZYLVKi : f.t["3zozoa"]);
+        Z.push(
+            (0, l.jsx)(
                 i.sNh,
                 {
                     id: "copy-native-contact",
                     label: t,
-                    action: e,
+                    action: () => {
+                        y(C[2]);
+                    },
                 },
                 "copy-native-contact",
             ),
         ),
-            "tel" === T[1] &&
-                I.push(
-                    (0, r.jsx)(
+            "tel" === C[1] &&
+                Z.push(
+                    (0, l.jsx)(
                         i.sNh,
                         {
                             id: "native-send-sms",
-                            label: p.intl.string(p.t["+wbjMT"]),
-                            action: (e) => v(e, !0),
+                            label: f.intl.string(f.t["+wbjMT"]),
+                            action: (t) => _(t, !0),
                         },
                         "native-send-sms",
                     ),
                 );
     }
     return [
-        (0, r.jsx)(
+        (0, l.jsx)(
             i.sNh,
             {
                 id: "copy-native-link",
-                label: p.intl.string(p.t.WqhZsr),
-                action: O,
+                label: f.intl.string(f.t.WqhZsr),
+                action: () => {
+                    y(t);
+                },
             },
             "copy-native-link",
         ),
-        ...I,
-        (0, r.jsx)(
+        ...Z,
+        (0, l.jsx)(
             i.sNh,
             {
                 id: "open-native-link",
-                label: p.intl.string(p.t.wuRE8P),
-                action: (e) => v(e),
+                label: f.intl.string(f.t.wuRE8P),
+                action: (t) => _(t),
             },
             "open-native-link",
         ),

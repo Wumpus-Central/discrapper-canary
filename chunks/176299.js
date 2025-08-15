@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    V = n(242601),
-    B = n(416568),
+    B = n(242601),
+    V = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -238,7 +238,7 @@ let eZ = (0, u.Un)({
         }
         return (0, r.jsx)(S.Z, {});
     },
-    eV = i.memo(function () {
+    eB = i.memo(function () {
         let { guildId: e, channelId: t } = (0, ei.Z)(),
             { notificationCenterVariant: n } = (0, X.pN)({ location: "Sidebar" }),
             i = (0, p.e7)([ef.Z], () => (null != t ? t : ef.Z.getChannelId(e)));
@@ -250,7 +250,7 @@ let eZ = (0, u.Un)({
               ? (0, r.jsx)(R.Z, {})
               : null != e
                 ? (0, r.jsx)(
-                      V.Z,
+                      B.Z,
                       {
                           selectedChannelId: i,
                           guildId: e,
@@ -259,7 +259,7 @@ let eZ = (0, u.Un)({
                   )
                 : (0, r.jsx)(ey.Z, {});
     }),
-    eB = (e) => (0, r.jsx)(eG, eA({}, e)),
+    eV = (e) => (0, r.jsx)(eG, eA({}, e)),
     eH = () => (0, r.jsx)(L.Z, {}),
     eF = (e) => (0, r.jsx)(ez, eA({}, e)),
     ez = (e) => {
@@ -276,7 +276,7 @@ let eZ = (0, u.Un)({
         }, [t, n]),
         null == t)
             ? (0, r.jsx)(Q.Z, {})
-            : eB(e);
+            : eV(e);
     },
     eW = (e) => {
         let { match: t } = e;
@@ -477,7 +477,7 @@ function e8(e) {
                 children: [
                     s &&
                         !c &&
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(V.Z, {
                             className: ex.guilds,
                             themeOverride: n,
                         }),
@@ -487,7 +487,7 @@ function e8(e) {
                                 (0, r.jsx)(
                                     "div",
                                     ((t = eA({}, j)),
-                                    (i = i = { children: (0, r.jsx)(eV, {}) }),
+                                    (i = i = { children: (0, r.jsx)(eB, {}) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
@@ -695,7 +695,7 @@ function e5() {
                                                             ":messageId?",
                                                         ),
                                                     ],
-                                                    render: eB,
+                                                    render: eV,
                                                     impressionName: c.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0,
                                                 }),

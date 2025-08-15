@@ -1,7 +1,7 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(818083),
     i = n(480218);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_image_attachment_mezzanine",
     label: "Convert attachment images to WebP format for size optimization",
@@ -19,10 +19,10 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t } = e,
         { isInHoldout: n } = i._.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: n,

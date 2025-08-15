@@ -14,8 +14,8 @@ var r,
     g = n(266076),
     m = n(199902),
     b = n(19780),
-    O = n(306680),
-    _ = n(944486),
+    _ = n(306680),
+    O = n(944486),
     y = n(594174),
     v = n(451478),
     j = n(276952),
@@ -23,8 +23,8 @@ var r,
     E = n(662146),
     x = n(674552),
     S = n(981631),
-    P = n(388032),
-    I = n(514483);
+    I = n(388032),
+    P = n(514483);
 function N(e, t, n) {
     return (
         t in e
@@ -163,7 +163,7 @@ class R extends (r = l.PureComponent) {
             } = this.props,
             { hovered: h, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && p,
-            O = () =>
+            _ = () =>
                 (0, i.jsx)(
                     c.LYs,
                     w(
@@ -174,7 +174,7 @@ class R extends (r = l.PureComponent) {
                             selected: n || h,
                             ariaLabel:
                                 null != t
-                                    ? P.intl.formatToPlainString(P.t.hKarnZ, {
+                                    ? I.intl.formatToPlainString(I.t.hKarnZ, {
                                           mentions: r,
                                           name: t,
                                       })
@@ -203,7 +203,7 @@ class R extends (r = l.PureComponent) {
                         hovered: !m && h,
                         selected: !m && n,
                         unread: !m && d,
-                        className: I.pill,
+                        className: P.pill,
                     }),
                     (0, i.jsx)(E.Z, {
                         text: null != t ? t : "",
@@ -219,7 +219,7 @@ class R extends (r = l.PureComponent) {
                                 isCurrentUserConnected: u,
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(r) },
-                            children: O(),
+                            children: _(),
                         }),
                     }),
                 ],
@@ -288,8 +288,8 @@ let D = l.forwardRef(function (e, t) {
         o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : S.WtW.VOICE), [o]),
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        g = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
-        y = (0, s.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
+        g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
+        y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: v } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
         j = o === n,
         C = !1,

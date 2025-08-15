@@ -1,16 +1,16 @@
 n.d(t, {
-    L: () => o,
-    Q: () => a,
+    L: () => a,
+    Q: () => o,
 });
 var r = n(626135),
     i = n(981631);
-function o(e, t) {
+function a(e, t) {
     r.default.track(i.rMx.DM_SETTINGS_UPSELL_ACTION, {
         action: e,
         guild_id: t,
     });
 }
-var a = (function (e) {
+var o = (function (e) {
     return (
         (e.MODAL_VIEWED = "modal_viewed"),
         (e.MODAL_DISMISSED = "modal_dismissed"),

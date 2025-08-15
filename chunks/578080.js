@@ -14,9 +14,9 @@ var r = n(255367),
     f = n(358085),
     x = n(617136),
     h = n(915750),
-    j = n(509212),
-    b = n(272008),
-    _ = n(113434),
+    b = n(509212),
+    _ = n(272008),
+    j = n(113434),
     v = n(569984),
     C = n(497505),
     y = n(865364),
@@ -99,8 +99,8 @@ let L = s.forwardRef(function (e, t) {
     let {
             children: y,
             className: L,
-            collapsedHeight: Z,
-            expansionSpring: W,
+            collapsedHeight: W,
+            expansionSpring: Z,
             isExpanded: U,
             isExpansionAnimationComplete: H,
             onCtxMenuOpen: F,
@@ -111,15 +111,15 @@ let L = s.forwardRef(function (e, t) {
         } = e,
         G = (0, l.e7)([v.Z], () => v.Z.isEnrolling(K.id), [K]),
         J = (0, h.aM)(),
-        $ = (0, _.B6)(K.config.expiresAt),
+        $ = (0, j.B6)(K.config.expiresAt),
         ee = S.r.build(K.config),
-        et = (0, _.B6)(ee.rewardsExpireAt),
+        et = (0, j.B6)(ee.rewardsExpireAt),
         en = s.useMemo(() => (0, O.fh)(K, O.eC.HERO), [K]),
         er = (0, R.tP)(ee.application.id),
         es = ee.features.has(B.S7.START_QUEST_CTA) ? x.jZ.START_QUEST : x.jZ.ACCEPT_QUEST,
         eo = ee.features.has(B.S7.START_QUEST_CTA) ? I.intl.string(I.t.E80Bdn) : I.intl.string(I.t.l7E81t),
         ea = s.useCallback(() => {
-            (0, b.AH)(K.id, {
+            (0, _.AH)(K.id, {
                 questContent: C.jn.QUEST_BAR,
                 questContentCTA: es,
                 sourceQuestContent: C.jn.QUEST_BAR,
@@ -132,7 +132,7 @@ let L = s.forwardRef(function (e, t) {
             sourceQuestContent: C.jn.QUEST_BAR,
         }),
         el = s.useCallback(() => {
-            (0, j.nc)(K, {
+            (0, b.nc)(K, {
                 content: C.jn.QUEST_BAR,
                 ctaContent: x.jZ.OPEN_GAME_LINK,
                 impressionId: J,
@@ -140,12 +140,12 @@ let L = s.forwardRef(function (e, t) {
             });
         }, [J, K]),
         ec = ee.features.has(B.S7.POST_ENROLLMENT_CTA),
-        eu = (0, _.Rf)(K),
-        ed = (0, _.Jf)(K),
+        eu = (0, j.Rf)(K),
+        ed = (0, j.Jf)(K),
         ep = null != ed ? ed.progress > 0 : eu.progressSeconds > 0,
         em = (null == (n = K.userStatus) ? void 0 : n.enrolledAt) != null,
         eg = (null == (o = K.userStatus) ? void 0 : o.completedAt) != null,
-        ef = s.useMemo(() => (0, j.Xv)(K.config), [K.config]),
+        ef = s.useMemo(() => (0, b.Xv)(K.config), [K.config]),
         ex = U && H,
         eh = (0, E.DD)({
             quest: K,
@@ -155,8 +155,8 @@ let L = s.forwardRef(function (e, t) {
             thirdPartyTaskDetails: null != ed ? ed : void 0,
             sourceQuestContent: C.jn.QUEST_BAR,
         }),
-        ej = (0, f.isWeb)(),
-        eb = s.useMemo(() => {
+        eb = (0, f.isWeb)(),
+        e_ = s.useMemo(() => {
             let e = (0, u.Qg)(K.config.colors.primary, {
                 base: "#ffffff",
                 contrastRatio: u.S3.Text,
@@ -175,13 +175,13 @@ let L = s.forwardRef(function (e, t) {
                 ? void 0
                 : (0, i.to)(
                       [
-                          W.to({
+                          Z.to({
                               range: [0, 1],
                               output: [0, -100],
                           }),
-                          W.to({
+                          Z.to({
                               range: [0, 1],
-                              output: [0, Z],
+                              output: [0, W],
                           }),
                       ],
                       (e, t) => "translateY(calc(".concat(e, "% + ").concat(t, "px))"),
@@ -215,7 +215,7 @@ let L = s.forwardRef(function (e, t) {
                                                       (0, r.jsx)(p.X6q, {
                                                           color: "always-white",
                                                           variant: "heading-sm/semibold",
-                                                          children: (0, j.AV)({
+                                                          children: (0, b.AV)({
                                                               quest: K,
                                                               taskDetails: eu,
                                                               thirdPartyTaskDetails: null != ed ? ed : void 0,
@@ -265,7 +265,7 @@ let L = s.forwardRef(function (e, t) {
                               eg
                                   ? (0, r.jsx)(d.zx, {
                                         className: a()(Q.cta, Q.ctaClaimReward),
-                                        style: ef ? eb : void 0,
+                                        style: ef ? e_ : void 0,
                                         color: d.zx.Colors.CUSTOM,
                                         fullWidth: !0,
                                         onClick: ei,
@@ -279,7 +279,7 @@ let L = s.forwardRef(function (e, t) {
                                         children: eh,
                                     }),
                               (0, r.jsx)(T.Z, { quest: K }),
-                              !ej && !ep && !er && ec && (0, r.jsx)(M, { onClick: ex ? el : void 0 }),
+                              !eb && !ep && !er && ec && (0, r.jsx)(M, { onClick: ex ? el : void 0 }),
                           ],
                       })
                     : (0, r.jsxs)("div", {
@@ -346,7 +346,7 @@ let L = s.forwardRef(function (e, t) {
                                       }),
                                       (0, r.jsx)(d.zx, {
                                           className: Q.cta,
-                                          style: "1232852290197655573" !== K.id ? eb : void 0,
+                                          style: "1232852290197655573" !== K.id ? e_ : void 0,
                                           color: d.zx.Colors.CUSTOM,
                                           fullWidth: !0,
                                           onClick: ex ? ea : void 0,

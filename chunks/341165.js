@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => j });
 var i,
-    o = n(569048),
-    a = n.n(o),
+    a = n(569048),
+    o = n.n(a),
     s = n(167006),
     l = n.n(s),
     c = n(989872),
@@ -58,7 +58,7 @@ function N(e) {
 function C(e) {
     var t;
     (b[e.invite.code] = _.Z.createFromServer(e.invite)),
-        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (r = null != (t = o()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (v = !1);
 }
 function R() {
@@ -70,7 +70,7 @@ function P(e) {
         e.invites.forEach((e) => {
             null != b[e.code] && delete b[e.code];
         }),
-        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (r = null != (t = o()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (O = !1);
 }
 function w() {
@@ -88,28 +88,28 @@ function x(e) {
         e.invites.forEach((e) => {
             b[e.code] = _.Z.createFromServer(e);
         }),
-        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (r = null != (t = o()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (y = !1);
 }
 function M(e) {
     delete m[e.channelId];
 }
-class j extends (i = d.ZP.Store) {
+class k extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let {
             targetType: r,
             targetUserId: i,
-            targetApplicationId: o,
+            targetApplicationId: a,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return r === p.Iq.STREAM && null != i
             ? null == (t = g[e])
                 ? void 0
                 : t[i]
-            : r === p.Iq.EMBEDDED_APPLICATION && null != o
+            : r === p.Iq.EMBEDDED_APPLICATION && null != a
               ? null == (n = E[e])
                   ? void 0
-                  : n[o]
+                  : n[a]
               : m[e];
     }
     getFriendInvite() {
@@ -122,8 +122,8 @@ class j extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(j, "displayName", "InstantInviteStore");
-let k = new j(f.Z, {
+h(k, "displayName", "InstantInviteStore");
+let j = new k(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: C,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(906732),
@@ -70,7 +70,7 @@ function v(e) {
     let {
             user: t,
             guild: n,
-            displayProfile: o,
+            displayProfile: a,
             canUsePremiumCustomization: f,
             previewAvatar: g,
             previewAvatarDecoration: b,
@@ -84,11 +84,11 @@ function v(e) {
         C = i.useRef(null),
         { analyticsLocations: R, newestAnalyticsLocation: P } = (0, c.ZP)(),
         w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        D = null == n || (null == o ? void 0 : o.canUsePremiumProfileCustomization) || f,
+        D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
         L = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: a()(T, { [m.overlay]: !S }),
+            imageClassName: o()(T, { [m.overlay]: !S }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
             status: w,
@@ -129,7 +129,7 @@ function v(e) {
                         l.P3F,
                         y(E({}, e), {
                             innerRef: C,
-                            className: a()(m.avatar, m.clickable),
+                            className: o()(m.avatar, m.clickable),
                             children: [
                                 L,
                                 (0, r.jsx)(l.vdY, {
@@ -145,7 +145,7 @@ function v(e) {
             })
           : (0, r.jsxs)(l.P3F, {
                 onClick: N,
-                className: a()(m.avatar, m.clickable),
+                className: o()(m.avatar, m.clickable),
                 children: [
                     L,
                     (0, r.jsx)(l.SrA, {

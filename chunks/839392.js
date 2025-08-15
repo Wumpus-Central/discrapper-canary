@@ -1,4 +1,4 @@
-r.d(t, { Z: () => d });
+r.d(t, { Z: () => u });
 var n,
     a,
     i = r(442837),
@@ -21,7 +21,7 @@ class c extends (a = i.ZP.Store) {
           writable: !0,
       })
     : (c[n] = "GameProfileStore");
-let d = new c(l.Z, {
+let u = new c(l.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
         let { applicationId: t, games: r } = e;
         o[t] = r;

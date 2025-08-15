@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(585483),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(461671);
 function g() {
     let [e, t] = i.useState(!1),
-        { hasPendingChanges: n, pendingWidgets: o } = (0, s.cj)([d.Z], () => ({
+        { hasPendingChanges: n, pendingWidgets: a } = (0, s.cj)([d.Z], () => ({
             hasPendingChanges: d.Z.hasPendingChanges(),
             pendingWidgets: d.Z.getPendingWidgets(),
         }));
@@ -32,22 +32,22 @@ function g() {
         );
     }, []);
     let g = i.useCallback(async () => {
-            if (null !== o)
+            if (null !== a)
                 try {
-                    await u.Z.savePendingWidgets(o);
+                    await u.Z.savePendingWidgets(a);
                 } catch (e) {
                     (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
                 }
-        }, [o]),
+        }, [a]),
         E = i.useCallback(() => {
             u.Z.clearPendingWidgets();
         }, []);
     return n
         ? (0, r.jsx)("div", {
-              className: a()(m.container, { [m.visible]: n }),
+              className: o()(m.container, { [m.visible]: n }),
               role: "status",
               children: (0, r.jsxs)("div", {
-                  className: a()(m.content, { [m.emphasized]: e }),
+                  className: o()(m.content, { [m.emphasized]: e }),
                   children: [
                       (0, r.jsx)("div", {
                           className: m.message,

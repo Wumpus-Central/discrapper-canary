@@ -1,11 +1,11 @@
 n.d(t, {
     YI: () => s,
-    ZP: () => a,
-    jk: () => o,
+    ZP: () => o,
+    jk: () => a,
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-09_premium_brand_refresh_ga",
     label: "Premium Brand Refresh GA",
@@ -24,11 +24,11 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t } = e;
-    return o.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
 function s(e) {
     let { location: t } = e;
-    return o.getCurrentConfig({ location: t }).enabled;
+    return a.getCurrentConfig({ location: t }).enabled;
 }

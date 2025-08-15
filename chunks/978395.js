@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(442837),
-    o = n(481060),
-    a = n(320582),
+    a = n(481060),
+    o = n(320582),
     s = n(189156),
     l = n(699516),
     c = n(246946),
@@ -36,27 +36,27 @@ function D(e) {
             guild: L,
             isHovering: x,
             onOpenProfile: M,
-            channelId: j,
-            onClose: k,
+            channelId: k,
+            onClose: j,
         } = e,
-        U = u.ZP.useName(null == L ? void 0 : L.id, j, t),
+        U = u.ZP.useName(null == L ? void 0 : L.id, k, t),
         { relationshipType: G, originApplicationId: B } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
         })),
-        Z = (0, a.vh)(t.id),
+        V = (0, o.vh)(t.id),
         F = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        V = (0, f.b)({ location: "UserProfilePopoutBody" }),
+        Z = (0, f.b)({ location: "UserProfilePopoutBody" }),
         H = t.id === n.id,
         Y = (0, d.I5)(n);
-    return (0, r.jsxs)(o.Ttm, {
+    return (0, r.jsxs)(a.Ttm, {
         fade: !0,
         className: w.body,
         children: [
             (0, r.jsx)(v.Z, {
                 user: t,
                 onOpenProfile: M,
-                onClose: k,
+                onClose: j,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
                     (0, r.jsx)(S.Z, {
@@ -68,7 +68,7 @@ function D(e) {
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: D,
                     themeType: C.lY.POPOUT,
-                    onClose: k,
+                    onClose: j,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -87,11 +87,11 @@ function D(e) {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        channelId: j,
+                        channelId: k,
                         applicationId: B,
                     }),
                 }),
-            Z.map((e) =>
+            V.map((e) =>
                 (0, r.jsx)(
                     O.Z.Overlay,
                     {
@@ -99,7 +99,7 @@ function D(e) {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: j,
+                            channelId: k,
                         }),
                     },
                     e.applicationId,
@@ -116,9 +116,9 @@ function D(e) {
                       className: w.card,
                       children: (0, r.jsx)(b.Z, {
                           heading: P.intl.string(P.t.Iyka0d),
-                          headingIcon: (0, r.jsx)(o.Mgn, {
+                          headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
-                              color: o.TVs.colors.HEADER_PRIMARY,
+                              color: a.TVs.colors.HEADER_PRIMARY,
                           }),
                           headingColor: "header-primary",
                           children: (0, r.jsx)(s.n, { userId: t.id }),
@@ -128,28 +128,28 @@ function D(e) {
                       user: t,
                       bio: null == D ? void 0 : D.bio,
                       hidePersonalInformation: F,
-                      onClose: k,
+                      onClose: j,
                   }),
             H &&
                 (0, r.jsx)(p.Z, {
                     isPremiumUser: Y,
-                    onInteraction: k,
+                    onInteraction: j,
                 }),
-            V
+            Z
                 ? (0, r.jsx)(y.Z, {
                       user: t,
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
                       onOpenUserProfileModal: M,
-                      onClose: k,
+                      onClose: j,
                   })
                 : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onClose: k,
+                      onClose: j,
                   }),
             null != L &&
                 (0, r.jsx)(A.Z, {

@@ -1,77 +1,77 @@
-n.d(r, { Z: () => x });
-var t = n(255367);
-n(73800);
-var i = n(780384),
-    o = n(481060),
-    a = n(410030),
-    l = n(518950),
-    s = n(51144),
-    C = n(105759),
-    d = n(898969),
-    c = n(703614),
-    p = n(182294),
-    u = n(388032),
-    _ = n(908780);
-let x = () => {
+t.d(n, { Z: () => h });
+var i = t(255367);
+t(73800);
+var r = t(780384),
+    l = t(481060),
+    s = t(410030),
+    a = t(518950),
+    o = t(51144),
+    C = t(105759),
+    d = t(898969),
+    c = t(703614),
+    u = t(182294),
+    p = t(388032),
+    x = t(908780);
+let h = () => {
     let e = (0, C.Z)(),
-        { avatarSrc: r, eventHandlers: n } = (0, l.Z)({
+        { avatarSrc: n, eventHandlers: t } = (0, a.Z)({
             userId: null == e ? void 0 : e.id,
-            size: p.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        x = (0, a.Fg)(),
-        f = (0, i.ap)(x),
-        m = s.ZP.getName(e),
-        h = f ? d.Z : c.Z;
+        h = (0, s.Fg)(),
+        j = (0, r.ap)(h),
+        f = o.ZP.getName(e),
+        m = j ? d.Z : c.Z;
     return null == e
         ? null
-        : (0, t.jsxs)("div", {
-              className: _.attributionBannerContainer,
+        : (0, i.jsxs)("div", {
+              className: x.attributionBannerContainer,
               children: [
-                  (0, t.jsx)("div", {
-                      className: _.avatarContainer,
-                      children: (0, t.jsx)(
-                          o.qEK,
+                  (0, i.jsx)("div", {
+                      className: x.avatarContainer,
+                      children: (0, i.jsx)(
+                          l.qEK,
                           (function (e) {
-                              for (var r = 1; r < arguments.length; r++) {
-                                  var n = null != arguments[r] ? arguments[r] : {},
-                                      t = Object.keys(n);
+                              for (var n = 1; n < arguments.length; n++) {
+                                  var t = null != arguments[n] ? arguments[n] : {},
+                                      i = Object.keys(t);
                                   "function" == typeof Object.getOwnPropertySymbols &&
-                                      (t = t.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      (i = i.concat(
+                                          Object.getOwnPropertySymbols(t).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           }),
                                       )),
-                                      t.forEach(function (r) {
-                                          var t;
-                                          (t = n[r]),
-                                              r in e
-                                                  ? Object.defineProperty(e, r, {
-                                                        value: t,
+                                      i.forEach(function (n) {
+                                          var i;
+                                          (i = t[n]),
+                                              n in e
+                                                  ? Object.defineProperty(e, n, {
+                                                        value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (e[r] = t);
+                                                  : (e[n] = i);
                                       });
                               }
                               return e;
                           })(
                               {
-                                  src: r,
+                                  src: n,
                                   "aria-label": e.username,
-                                  size: p.EF.SIZE_32,
+                                  size: u.EF.SIZE_32,
                               },
-                              n,
+                              t,
                           ),
                       ),
                   }),
-                  (0, t.jsx)(o.Text, {
+                  (0, i.jsx)(l.Text, {
                       variant: "text-xs/bold",
-                      className: _.bannerHeader,
-                      children: u.intl.format(u.t.oxhCOj, { userName: m }),
+                      className: x.bannerHeader,
+                      children: p.intl.format(p.t.oxhCOj, { userName: f }),
                   }),
-                  (0, t.jsx)(h, { className: _.bannerIcon }),
+                  (0, i.jsx)(m, { className: x.bannerIcon }),
               ],
           });
 };

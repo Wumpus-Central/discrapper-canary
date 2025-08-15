@@ -6,4 +6,5 @@ e.exports = {
     number: "number_f70307",
     cellGroup: "cellGroup_f70307",
     content: "content_f70307",
+    completedText: "completedText_f70307",
 };

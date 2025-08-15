@@ -1,34 +1,71 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(481060),
     l = n(624138),
     c = n(845077),
-    o = n(118589),
-    s = n(603700),
-    u = n(241945),
-    d = n(388032),
-    f = n(104940);
-let p = () => {
+    o = n(132392),
+    s = n(118589),
+    u = n(535188),
+    d = n(856597),
+    f = n(241945),
+    p = n(388032),
+    y = n(104940);
+let m = n(575703);
+function h(e) {
+    let { task: t, handleSubmit: n, disabled: l } = e,
+        [c, s] = i.useState(t),
+        f = i.useMemo(
+            () => ({
+                task: c,
+                setTask: s,
+            }),
+            [c, s],
+        );
+    return (
+        i.useEffect(() => {
+            s(t);
+        }, [t]),
+        (0, r.jsx)(o.y.Provider, {
+            value: f,
+            children: (0, r.jsxs)(a.Kqy, {
+                direction: "horizontal",
+                justify: "start",
+                className: y.body,
+                children: [
+                    (0, r.jsx)(d.Z, {}),
+                    (0, r.jsx)(u.Z, {
+                        onSubmit: n,
+                        disabled: l,
+                    }),
+                ],
+            }),
+        })
+    );
+}
+let g = function () {
     let [e, t] = i.useState(null),
-        [n, p] = i.useState(!0),
-        [y, m] = i.useState(null),
-        [h, g] = i.useState(!1),
-        b = i.useCallback(async () => {
-            p(!0), m(null);
+        [n, o] = i.useState(!0),
+        [u, d] = i.useState(null),
+        [g, b] = i.useState(!1),
+        j = i.useCallback(async () => {
+            o(!0), d(null);
             try {
                 var e;
                 let n = await (0, c.PA)();
                 if (null == n) return;
-                !(0, l.Ew)(null == (e = n.ui_component) ? void 0 : e.type) && o.VZ.has(n.ui_component.type)
+                !(0, l.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
+                s.VZ.has(n.ui_component.component.type)
                     ? t(n)
                     : t({
                           task_id: n.task_id,
-                          task_type: o.UA.REFRESH_APP,
+                          task_type: s.UA.REFRESH_APP,
                           assignment_id: n.assignment_id,
                           ui_component: {
-                              type: o.NS.REFRESH_APP,
-                              data: {},
+                              component: {
+                                  type: s.NS.REFRESH_APP,
+                                  data: {},
+                              },
                           },
                           flow_context: {
                               tasks: [],
@@ -36,79 +73,76 @@ let p = () => {
                           },
                       });
             } catch (e) {
-                m(d.intl.string(u.default["/f++3t"]));
+                d(p.intl.string(f.default["/f++3t"]));
             } finally {
-                p(!1);
+                o(!1);
             }
         }, []),
-        j = i.useCallback(
+        v = i.useCallback(
             async (t) => {
                 if (null !== e) {
-                    g(!0);
+                    b(!0);
                     try {
-                        var n;
-                        let r = {
+                        let n = {
                             task_id: e.task_id,
-                            flow_id: null == (n = e.flow_context) ? void 0 : n.flow_id,
+                            flow_id: e.flow_context.flow_id,
                             data: t,
                         };
-                        await (0, c.Wl)(r), b();
+                        await (0, c.Wl)(n), j();
                     } catch (e) {
-                        m(d.intl.string(u.default["+QRSxc"]));
+                        d(p.intl.string(f.default["+QRSxc"]));
                     } finally {
-                        g(!1);
+                        b(!1);
                     }
                 }
             },
-            [e, b],
+            [e, j],
         );
     return (
         i.useEffect(() => {
-            b();
-        }, [b]),
-        (0, r.jsx)("div", {
-            className: f.safetyFlow,
-            children: (0, r.jsxs)("div", {
-                className: f.container,
-                children: [
-                    (0, r.jsx)(a.xBx, {
-                        "data-migration-pending": !0,
-                        separator: !1,
-                        className: f.header,
-                        children: (0, r.jsx)(a.X6q, {
-                            variant: "heading-xl/bold",
-                            children: d.intl.string(u.default.gqwhj4),
-                        }),
+            j();
+        }, [j]),
+        (0, r.jsxs)("div", {
+            className: y.background,
+            children: [
+                (0, r.jsx)(a.y5t, {
+                    forceLevel: 6,
+                    children: (0, r.jsx)("img", {
+                        className: y.artwork,
+                        src: m,
+                        alt: "",
                     }),
-                    (0, r.jsxs)(a.hzk, {
-                        "data-migration-pending": !0,
-                        className: f.body,
+                }),
+                (0, r.jsx)("div", {
+                    className: y.safetyFlow,
+                    children: (0, r.jsxs)("div", {
+                        className: y.container,
                         children: [
                             n &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: d.intl.string(u.default.v0H5Tk),
+                                    children: p.intl.string(f.default.v0H5Tk),
                                 }),
-                            null !== y &&
+                            null !== u &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-danger",
-                                    className: f.error,
-                                    children: y,
+                                    className: y.error,
+                                    children: u,
                                 }),
                             !n &&
-                                null === y &&
-                                null !== e &&
-                                (0, r.jsx)(s.Z, {
+                                null === u &&
+                                null != e &&
+                                (0, r.jsx)(h, {
                                     task: e,
-                                    onSubmit: j,
-                                    disabled: h,
+                                    handleSubmit: v,
+                                    disabled: g,
                                 }),
                         ],
                     }),
-                ],
-            }),
+                }),
+            ],
         })
     );
 };

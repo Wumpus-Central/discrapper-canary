@@ -7,7 +7,7 @@ n.d(t, {
 var r = n(97519),
     i = n(286379),
     l = n(731965),
-    o = n(797614);
+    a = n(797614);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,7 +33,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,14 +61,14 @@ function d(e) {
             null == e
                 ? t
                 : e in t.captchaServeVolume
-                  ? { captchaServeVolume: a(s({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) }
-                  : { captchaServeVolume: a(s({}, t.captchaServeVolume), { [e]: 1 }) },
+                  ? { captchaServeVolume: o(s({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) }
+                  : { captchaServeVolume: o(s({}, t.captchaServeVolume), { [e]: 1 }) },
         );
     });
 }
 function h() {
     for (let [e, t] of Object.entries(c.getState().captchaServeVolume))
-        o.Z.distribution(
+        a.Z.distribution(
             {
                 name: i.V.CAPTCHA_SERVE_VOLUME_DISTRIBUTION,
                 tags: ["user_flow:".concat(e)],

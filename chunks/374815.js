@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: "container__02a39",
     searchResult: "searchResult__02a39",
     message: "message__02a39",

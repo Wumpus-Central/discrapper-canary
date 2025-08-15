@@ -1,11 +1,11 @@
 n.d(t, {
-    Z: () => Z,
+    Z: () => V,
     v: () => B,
 });
 var r = n(255367),
     i = n(73800),
-    o = n(758713),
-    a = n(442837),
+    a = n(758713),
+    o = n(442837),
     s = n(481060),
     l = n(620662),
     c = n(841784),
@@ -35,7 +35,7 @@ var r = n(255367),
     L = n(797342),
     x = n(981631),
     M = n(388032);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -70,9 +70,9 @@ function U(e, t) {
         r,
         i = G(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,46 +81,46 @@ function G(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let B = {
-        [o.z.DESKTOP]: null,
-        [o.z.LINUX]: null,
-        [o.z.MACOS]: null,
-        [o.z.NINTENDO]: null,
-        [o.z.IOS]: null,
-        [o.z.ANDROID]: null,
-        [o.z.XBOX]: b.Z,
-        [o.z.PLAYSTATION]: E.Z,
+        [a.z.DESKTOP]: null,
+        [a.z.LINUX]: null,
+        [a.z.MACOS]: null,
+        [a.z.NINTENDO]: null,
+        [a.z.IOS]: null,
+        [a.z.ANDROID]: null,
+        [a.z.XBOX]: b.Z,
+        [a.z.PLAYSTATION]: E.Z,
     },
-    Z = (e) => {
+    V = (e) => {
         let {
                 channel: t,
                 entry: n,
                 disableGameProfileLinks: E,
                 onReaction: b,
-                onVoiceChannelPreview: j,
+                onVoiceChannelPreview: k,
                 onUserPopoutClosed: G,
-                trackRankingItemInteraction: Z,
+                trackRankingItemInteraction: V,
             } = e,
             { largeImage: F } = (0, O.rv)({ entry: n }),
-            { user: V, details: H, appName: Y, activity: W, embeddedActivity: K } = (0, L.n)(n),
+            { user: Z, details: H, appName: Y, activity: W, embeddedActivity: K } = (0, L.n)(n),
             { primaryColor: z, secondaryColor: q } = (0, C.Z)(null == F ? void 0 : F.src),
-            X = (0, a.e7)([g.default], () => g.default.locale),
+            X = (0, o.e7)([g.default], () => g.default.locale),
             { streamPreviewUrl: Q, stream: J } = (0, I.Z)(n),
             { displayParticipants: $, participant1: ee, participant2: et, numOtherParticipants: en } = (0, v.Z)(n, 3),
             er = n.extra.platform,
             ei = null != er ? B[er] : null,
-            eo = er === o.z.XBOX ? x.ABu.XBOX : er === o.z.PLAYSTATION ? x.ABu.PLAYSTATION : void 0,
-            ea = (0, N.Z)(eo),
+            ea = er === a.z.XBOX ? x.ABu.XBOX : er === a.z.PLAYSTATION ? x.ABu.PLAYSTATION : void 0,
+            eo = (0, N.Z)(ea),
             { data: es } = (0, h.IX)(n.extra.application_id),
             el = (0, d.q)(es, "MemberListGamingContentPopout"),
             ec = (0, m.L)(W, K),
             eu = i.useCallback(
                 (e) => {
-                    if ((null == F ? void 0 : F.src) == null || null == t || null == V) return;
+                    if ((null == F ? void 0 : F.src) == null || null == t || null == Z) return;
                     let r =
                         en > 0
                             ? (0, A.VY)({
@@ -129,7 +129,7 @@ let B = {
                                   users: [ee, et],
                                   countOthers: en,
                               })
-                            : (0, A.HV)(n, t, V);
+                            : (0, A.HV)(n, t, Z);
                     return (0, S.SO)({
                         entry: n,
                         applicationImageSrc: null == F ? void 0 : F.src,
@@ -140,9 +140,9 @@ let B = {
                         channelId: e,
                     });
                 },
-                [null == F ? void 0 : F.src, t, $, n, X, en, ee, et, z, q, V],
+                [null == F ? void 0 : F.src, t, $, n, X, en, ee, et, z, q, Z],
             );
-        if (null == V) return null;
+        if (null == Z) return null;
         let ed = (0, r.jsx)(P.Gk, {
                 location: null == Q ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
                 children: R.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
@@ -155,7 +155,7 @@ let B = {
                               null == ei
                                   ? null
                                   : (0, r.jsx)(D.Z, {
-                                        onClick: ea,
+                                        onClick: eo,
                                         Icon: ei,
                                         "aria-label": M.intl.string(M.t.YR4cHB),
                                     }),
@@ -166,7 +166,7 @@ let B = {
                           entry: n,
                           disableGameProfileLinks: E,
                           onUserPopoutClosed: G,
-                          trackRankingItemInteraction: Z,
+                          trackRankingItemInteraction: V,
                       })
                     : (0, r.jsx)(w.jL, {
                           channel: t,
@@ -177,7 +177,7 @@ let B = {
                           entry: n,
                           stream: J,
                           onUserPopoutClosed: G,
-                          trackRankingItemInteraction: Z,
+                          trackRankingItemInteraction: V,
                       }),
             e_ =
                 !ec && el
@@ -188,7 +188,7 @@ let B = {
                                   i = U(e, ["children", "size"]);
                               return (0, r.jsx)(
                                   w.Ll,
-                                  k(
+                                  j(
                                       {
                                           icon: s.v3n,
                                           text: t,
@@ -204,13 +204,13 @@ let B = {
                 null == e_ && ((0, l.Z)(W, x.xjy.JOIN) || (0, c.Z)(W))
                     ? (0, r.jsx)(_.Z, {
                           activity: W,
-                          user: V,
+                          user: Z,
                           ButtonComponent: (e) => {
                               let { children: t, size: n } = e,
                                   i = U(e, ["children", "size"]);
                               return (0, r.jsx)(
                                   w.Ll,
-                                  k(
+                                  j(
                                       {
                                           icon: s.iWm,
                                           text: t,
@@ -229,7 +229,7 @@ let B = {
                                   i = U(e, ["children", "size"]);
                               return (0, r.jsx)(
                                   w.Ll,
-                                  k(
+                                  j(
                                       {
                                           icon: s.tEF,
                                           text: t,
@@ -248,11 +248,11 @@ let B = {
                 (0, r.jsx)(w.St, {
                     children: (0, r.jsx)(w.WT, {
                         onReaction: b,
-                        onVoiceChannelPreview: j,
-                        user: V,
+                        onVoiceChannelPreview: k,
+                        user: Z,
                         channel: t,
                         generateReactionImage: eu,
-                        reactionImageAltText: (0, A.IS)(n, V),
+                        reactionImageAltText: (0, A.IS)(n, Z),
                         entry: n,
                         buttons: ep,
                     }),

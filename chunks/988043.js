@@ -43,13 +43,13 @@ function C(e) {
             applied_to_existing_guilds: t,
         });
     }
-    let I = v ? E.intl.string(E.t.PMsfcH) : E.intl.string(E.t.RAQUSE);
+    let N = v ? E.intl.string(E.t.PMsfcH) : E.intl.string(E.t.RAQUSE);
     return (0, i.jsx)(p.U, {
         setting: x.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === _.T
                 ? (0, i.jsx)(g.Z, {
-                      title: I,
+                      title: N,
                       note: v ? E.intl.string(E.t.XXGmuL) : E.intl.string(E.t.wbYDfX),
                       value: !O,
                       onChange: (e) => {
@@ -71,7 +71,7 @@ function C(e) {
                       },
                   })
                 : (0, i.jsx)(g.Z, {
-                      title: I,
+                      title: N,
                       note: b ? E.intl.string(E.t.V0ka0d) : v ? E.intl.string(E.t.F9WY3d) : E.intl.string(E.t.G7c3Xl),
                       value: !C,
                       onChange: S,

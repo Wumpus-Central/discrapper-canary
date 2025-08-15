@@ -1,65 +1,35 @@
-var r = n(621796),
-    i = n(172367),
-    o = n(147521),
-    a = n(574369),
-    s = n(805797),
-    l = n(169774),
-    c = n(352582),
-    u = n(476363),
-    d = n(963782),
-    f = n(904112),
-    _ = n(727813),
-    p = n(599552),
-    h = n(544611),
-    m = n(803068),
-    g = n(561099),
-    E = n(655000),
-    b = n(920267),
-    y = o.isOptionKeyCommand,
-    O = l.isBrowser("Chrome");
-function v(e, t, n) {
-    switch (e) {
-        case "redo":
-            return i.redo(t);
-        case "delete":
-            return g(t);
-        case "delete-word":
-            return f(t);
-        case "backspace":
-            return m(t);
-        case "backspace-word":
-            return d(t);
-        case "backspace-to-start-of-line":
-            return u(t, n);
-        case "split-block":
-            return _(t);
-        case "transpose-characters":
-            return E(t);
-        case "move-selection-to-start-of-block":
-            return h(t);
-        case "move-selection-to-end-of-block":
-            return p(t);
-        case "secondary-cut":
-            return s.cut(t);
-        case "secondary-paste":
-            return s.paste(t);
-        default:
-            return t;
+var n = r(621796),
+    i = r(172367),
+    o = r(147521),
+    a = r(574369),
+    u = r(805797),
+    s = r(169774),
+    c = r(352582),
+    l = r(476363),
+    f = r(963782),
+    p = r(904112),
+    h = r(727813),
+    d = r(599552),
+    g = r(544611),
+    y = r(803068),
+    v = r(561099),
+    m = r(655000),
+    _ = r(920267),
+    b = o.isOptionKeyCommand,
+    S = s.isBrowser("Chrome");
+t.exports = function (t, e) {
+    var r = e.which,
+        o = t._latestEditorState;
+    function s(r) {
+        var n = t.props[r];
+        return !!n && (n(e), !0);
     }
-}
-e.exports = function (e, t) {
-    var n = t.which,
-        o = e._latestEditorState;
-    function s(n) {
-        var r = e.props[n];
-        return !!r && (r(t), !0);
-    }
-    switch (n) {
+    switch (r) {
         case a.RETURN:
-            if ((t.preventDefault(), e.props.handleReturn && c(e.props.handleReturn(t, o)))) return;
+            if ((e.preventDefault(), t.props.handleReturn && c(t.props.handleReturn(e, o)))) return;
             break;
         case a.ESC:
-            if ((t.preventDefault(), s("onEscape"))) return;
+            if ((e.preventDefault(), s("onEscape"))) return;
             break;
         case a.TAB:
             if (s("onTab")) return;
@@ -77,19 +47,48 @@ e.exports = function (e, t) {
             if (s("onLeftArrow")) return;
             break;
         case a.SPACE:
-            O && y(t) && t.preventDefault();
+            S && b(e) && e.preventDefault();
     }
-    var l = e.props.keyBindingFn(t);
-    if (null == l || "" === l) {
-        if (n === a.SPACE && O && y(t)) {
-            var u = r.replaceText(o.getCurrentContent(), o.getSelection(), "\xA0");
-            e.update(i.push(o, u, "insert-characters"));
+    var w = t.props.keyBindingFn(e);
+    if (null == w || "" === w) {
+        if (r === a.SPACE && S && b(e)) {
+            var x = n.replaceText(o.getCurrentContent(), o.getSelection(), "\xA0");
+            t.update(i.push(o, x, "insert-characters"));
         }
         return;
     }
-    if ("undo" === l) return void b(t, o, e.update);
-    if ((t.preventDefault(), !(e.props.handleKeyCommand && c(e.props.handleKeyCommand(l, o, t.timeStamp))))) {
-        var d = v(l, o, t);
-        d !== o && e.update(d);
+    if ("undo" === w) return void _(e, o, t.update);
+    if ((e.preventDefault(), !(t.props.handleKeyCommand && c(t.props.handleKeyCommand(w, o, e.timeStamp))))) {
+        var k = (function (t, e, r) {
+            switch (t) {
+                case "redo":
+                    return i.redo(e);
+                case "delete":
+                    return v(e);
+                case "delete-word":
+                    return p(e);
+                case "backspace":
+                    return y(e);
+                case "backspace-word":
+                    return f(e);
+                case "backspace-to-start-of-line":
+                    return l(e, r);
+                case "split-block":
+                    return h(e);
+                case "transpose-characters":
+                    return m(e);
+                case "move-selection-to-start-of-block":
+                    return g(e);
+                case "move-selection-to-end-of-block":
+                    return d(e);
+                case "secondary-cut":
+                    return u.cut(e);
+                case "secondary-paste":
+                    return u.paste(e);
+                default:
+                    return e;
+            }
+        })(w, o, e);
+        k !== o && t.update(k);
     }
 };

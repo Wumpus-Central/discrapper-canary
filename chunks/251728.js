@@ -1,8 +1,8 @@
 n.d(t, { Y: () => p });
 var r = n(685816),
     i = n(549616),
-    o = n(863611),
-    a = n(472756),
+    a = n(863611),
+    o = n(472756),
     s = n(794934),
     l = n(885577),
     c = n(198647),
@@ -45,7 +45,7 @@ class p {
                         case r.z.SHELF:
                             return d.O.fromServer(e);
                         case r.z.COUNTDOWN_TIMER:
-                            return a.G.fromServer(e);
+                            return o.G.fromServer(e);
                         case r.z.IMMERSIVE_BANNER:
                             return u.k.fromServer(e);
                         default:
@@ -54,6 +54,6 @@ class p {
                 })
                 .filter((e) => void 0 !== e)),
             (this.categories = e.categories.map((e) => i.Z.fromServer(e))),
-            (this.userDiscounts = null == (t = e.user_discounts) ? void 0 : t.map((e) => o.h.fromServer(e)));
+            (this.userDiscounts = null == (t = e.user_discounts) ? void 0 : t.map((e) => a.h.fromServer(e)));
     }
 }

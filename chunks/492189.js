@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(127849),
-    o = n(580983),
-    a = n(507604),
+    a = n(580983),
+    o = n(507604),
     s = n(569743),
     l = n(840475),
     c = n(391246),
@@ -31,14 +31,14 @@ var r = n(98405),
     L = n(335024),
     x = n(199838),
     M = n(176682),
-    j = x.get,
-    k = x.set,
+    k = x.get,
+    j = x.set,
     U = x.enforce,
     G = w.f,
     B = D.f,
-    Z = i.RangeError,
+    V = i.RangeError,
     F = c.ArrayBuffer,
-    V = F.prototype,
+    Z = F.prototype,
     H = c.DataView,
     Y = l.NATIVE_ARRAY_BUFFER_VIEWS,
     W = l.TYPED_ARRAY_TAG,
@@ -51,13 +51,13 @@ var r = n(98405),
         P(e, t, {
             configurable: !0,
             get: function () {
-                return j(this)[t];
+                return k(this)[t];
             },
         });
     },
     $ = function (e) {
         var t;
-        return T(V, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
+        return T(Z, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
     },
     ee = function (e, t) {
         return q(e) && !v(t) && t in e && _(+t) && t >= 0;
@@ -77,7 +77,7 @@ var r = n(98405),
             ? ((e[t] = n.value), e)
             : G(e, t, n);
     };
-a
+o
     ? (Y || ((D.f = et), (w.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
       r(
           {
@@ -91,7 +91,7 @@ a
           },
       ),
       (e.exports = function (e, t, n) {
-          var a = e.match(/\d+/)[0] / 8,
+          var o = e.match(/\d+/)[0] / 8,
               l = e + (n ? "Clamped" : "") + "Array",
               c = "get" + e,
               d = "set" + e,
@@ -100,12 +100,12 @@ a
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = j(e);
-                  return n.view[c](t * a + n.byteOffset, !0);
+                  var n = k(e);
+                  return n.view[c](t * o + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = j(e);
-                  i.view[d](t * a + i.byteOffset, n ? g(r) : r, !0);
+                  var i = k(e);
+                  i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
                   G(e, t, {
@@ -128,13 +128,13 @@ a
                                 return O(t)
                                     ? $(t)
                                         ? void 0 !== r
-                                            ? new _(t, m(n, a), r)
+                                            ? new _(t, m(n, o), r)
                                             : void 0 !== n
-                                              ? new _(t, m(n, a))
+                                              ? new _(t, m(n, o))
                                               : new _(t)
                                         : q(t)
                                           ? L(E, t)
-                                          : o(N, E, t)
+                                          : a(N, E, t)
                                     : new _(h(t));
                             })(),
                             e,
@@ -156,17 +156,17 @@ a
                         d = 0;
                     if (O(t))
                         if ($(t)) {
-                            (i = t), (d = m(n, a));
+                            (i = t), (d = m(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % a || (s = f - d) < 0) throw new Z(Q);
-                            } else if ((s = p(r) * a) + d > f) throw new Z(Q);
-                            l = s / a;
+                                if (f % o || (s = f - d) < 0) throw new V(Q);
+                            } else if ((s = p(r) * o) + d > f) throw new V(Q);
+                            l = s / o;
                         } else if (q(t)) return L(E, t);
-                        else return o(N, E, t);
-                    else i = new F((s = (l = h(t)) * a));
+                        else return a(N, E, t);
+                    else i = new F((s = (l = h(t)) * o));
                     for (
-                        k(e, {
+                        j(e, {
                             buffer: i,
                             byteOffset: d,
                             byteLength: s,
@@ -193,8 +193,8 @@ a
                   },
                   y,
               ),
-              X in E || f(E, X, a),
-              X in b || f(b, X, a),
+              X in E || f(E, X, o),
+              X in b || f(b, X, o),
               R(l);
       }))
     : (e.exports = function () {});

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(788911),
@@ -32,18 +32,18 @@ let D = 512,
     L = 7,
     x = 56,
     M = 16,
-    j = 32,
-    k = 20,
+    k = 32,
+    j = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
         (0, d.yw)(C.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
-    Z = i.forwardRef(function (e, t) {
-        let { channel: n, canOnlyUseTextCommands: o } = e,
+    V = i.forwardRef(function (e, t) {
+        let { channel: n, canOnlyUseTextCommands: a } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
-            [Z, V] = i.useState(0),
+            [V, Z] = i.useState(0),
             H = i.useRef(null),
             [Y, W] = i.useState(!1),
             K = m.Xn.useStore((e) => e.activeCategoryIndex);
@@ -66,8 +66,8 @@ let D = 512,
                 },
                 filters: {
                     commandTypes: [u.yU.CHAT],
-                    builtIns: o ? O.D.ONLY_TEXT : O.D.ALLOW,
-                    applicationCommands: !o,
+                    builtIns: a ? O.D.ONLY_TEXT : O.D.ALLOW,
+                    applicationCommands: !a,
                 },
                 options: {
                     placeholderCount: L,
@@ -87,11 +87,11 @@ let D = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: k,
+                scrollOffset: j,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -101,11 +101,11 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let eo = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
-            ea = X.map((e) => e.data.length);
+        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
+            eo = X.map((e) => e.data.length);
         i.useEffect(() => {
-            null != H.current && Y && null != Z && H.current.scrollRowIntoView(Z);
-        }, [Y, Z]),
+            null != H.current && Y && null != V && H.current.scrollRowIntoView(V);
+        }, [Y, V]),
             i.useLayoutEffect(() => {
                 if (null != $) {
                     var e;
@@ -137,13 +137,13 @@ let D = 512,
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == Z) return !e && (V(0), !0);
-                    if (null == Z) return !1;
+                    if (null == V) return !e && (Z(0), !0);
+                    if (null == V) return !1;
                     let t = 0,
                         n = 0;
                     for (let e of X)
-                        if (((t = n), Z < (n += e.data.length))) {
-                            let n = e.data[Z - t],
+                        if (((t = n), V < (n += e.data.length))) {
+                            let n = e.data[V - t],
                                 r = z.find((e) => e.id === n.applicationId);
                             el(n, r, (0, I.tI)(e.section));
                             break;
@@ -154,18 +154,18 @@ let D = 512,
                     if (0 === J.length) return !0;
                     let t = Q ? L : 0,
                         n = J.length + t,
-                        r = null == Z ? 0 : Z + e;
-                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0;
+                        r = null == V ? 0 : V + e;
+                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), W(!0), !0;
                 },
             }),
-            [J.length, X, Q, z, el, Z],
+            [J.length, X, Q, z, el, V],
         );
         let ec = i.useCallback(
                 (e) => {
                     let t = q[e];
                     if (null == t) return null;
                     let i = (0, A.ky)(t),
-                        o = (0, r.jsx)(i, {
+                        a = (0, r.jsx)(i, {
                             channel: n,
                             section: t,
                             width: 16,
@@ -176,7 +176,7 @@ let D = 512,
                         E.Z,
                         {
                             className: P.categoryHeader,
-                            icon: o,
+                            icon: a,
                             children: t.name,
                         },
                         e,
@@ -188,16 +188,16 @@ let D = 512,
                 (e, t) => {
                     let n = e === q.length - 1,
                         i = q[e],
-                        { data: o } = X[e];
+                        { data: a } = X[e];
                     return (0, r.jsxs)(
                         "ul",
                         {
                             role: "group",
                             "aria-label": i.name,
-                            className: a()(P.categorySection, { [P.categorySectionLast]: n }),
+                            className: o()(P.categorySection, { [P.categorySectionLast]: n }),
                             children: [
                                 t,
-                                0 === o.length &&
+                                0 === a.length &&
                                     (0, r.jsx)(c.Z, {
                                         message: R.intl.format(R.t.WoQXT0, { applicationName: i.name }),
                                         noResultsImageURL: w,
@@ -213,39 +213,39 @@ let D = 512,
             ed = i.useCallback(
                 (e, t) => {
                     var i;
-                    let o = X[t.sectionIndex],
-                        a = o.data[t.sectionRowIndex],
-                        s = "".concat(o.section.id, ":").concat(null != (i = null == a ? void 0 : a.id) ? i : e);
+                    let a = X[t.sectionIndex],
+                        o = a.data[t.sectionRowIndex],
+                        s = "".concat(a.section.id, ":").concat(null != (i = null == o ? void 0 : o.id) ? i : e);
                     if (
-                        null == a ||
-                        (o.section.id !== a.applicationId && o.section.id !== N.bi.FRECENCY) ||
-                        a.inputType === v.iw.PLACEHOLDER
+                        null == o ||
+                        (a.section.id !== o.applicationId && a.section.id !== N.bi.FRECENCY) ||
+                        o.inputType === v.iw.PLACEHOLDER
                     )
                         return (0, r.jsx)(S.Z, {}, s);
-                    let l = z.find((e) => e.id === a.applicationId);
+                    let l = z.find((e) => e.id === o.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
                         {
                             index: e,
-                            command: a,
+                            command: o,
                             channel: n,
                             className: P.itemWrapper,
-                            selected: Z === e,
-                            showImage: o.section.id !== a.applicationId,
+                            selected: V === e,
+                            showImage: a.section.id !== o.applicationId,
                             section: l,
-                            onClick: () => el(a, l, (0, I.tI)(o.section)),
+                            onClick: () => el(o, l, (0, I.tI)(a.section)),
                             onHover: () => {
-                                V(null), W(!1);
+                                Z(null), W(!1);
                             },
                         },
                         s,
                     );
                 },
-                [n, X, el, z, Z],
+                [n, X, el, z, V],
             ),
             ef = (0, h.Dt)();
         return (
-            (0, _.KR)(ef, !0, (0, f.DJ)(Z)),
+            (0, _.KR)(ef, !0, (0, f.DJ)(V)),
             i.useEffect(
                 () => () => {
                     (0, _.sJ)();
@@ -276,10 +276,10 @@ let D = 512,
                         renderSection: eu,
                         renderSectionHeader: ec,
                         rowCount: q.length,
-                        rowCountBySection: ea,
+                        rowCountBySection: eo,
                         rowHeight: x,
-                        sectionHeaderHeight: j,
-                        sectionMarginBottom: eo,
+                        sectionHeaderHeight: k,
+                        sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,
                     }),

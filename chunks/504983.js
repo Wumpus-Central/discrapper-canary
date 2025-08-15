@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(665100),
     l = (function (e) {
         return (e.PREMIUM = "premium"), (e.LIMITED = "limited"), e;
@@ -24,18 +24,18 @@ let c = {
         let {
             children: n,
             type: i = "premium",
-            isShown: o,
+            isShown: a,
             hasBackground: l = !1,
             className: u,
             backgroundClassName: d,
         } = e;
-        if (!o) return n;
+        if (!a) return n;
         let { border: f, background: _ } = c[i];
         return (0, r.jsx)("div", {
             ref: t,
-            className: a()(f, u),
+            className: o()(f, u),
             children: (0, r.jsx)("div", {
-                className: a()(l ? _ : s.background, d),
+                className: o()(l ? _ : s.background, d),
                 children: n,
             }),
         });

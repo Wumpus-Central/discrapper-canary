@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -90,7 +90,7 @@ function O() {
 function v(e) {
     let {
             users: t,
-            maxUsers: o,
+            maxUsers: a,
             guildId: s,
             channelId: m,
             className: E,
@@ -109,13 +109,13 @@ function v(e) {
             "aria-labelledby": x,
             "aria-hidden": M,
         } = e,
-        [j, k] = i.useState(!1),
+        [k, j] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
-        B = t.length - o,
-        Z = B + 1,
+        B = t.length - a,
+        V = B + 1,
         F = B > 0 && !A && !M,
-        V = () =>
+        Z = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
                 "aria-label": L,
@@ -133,15 +133,18 @@ function v(e) {
                                 disablePopout: "function" == typeof C ? C(e.id) : C,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
-                                    k(!1), null == D || D();
+                                    j(!1), null == D || D();
                                 },
                                 onContextMenu: (t) =>
                                     (0, u.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
-                                                n.bind(n, 881351),
-                                            );
+                                            let { default: t } = await Promise.all([
+                                                n.e("70274"),
+                                                n.e("79695"),
+                                                n.e("69220"),
+                                                n.e("92522"),
+                                            ]).then(n.bind(n, 881351));
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
@@ -152,7 +155,7 @@ function v(e) {
                                                     }),
                                                 );
                                         },
-                                        { onClose: () => k(!1) },
+                                        { onClose: () => j(!1) },
                                     ),
                             },
                             e.id,
@@ -161,15 +164,15 @@ function v(e) {
                 }),
             }),
         H = () => {
-            let e = F ? o - 1 : Math.min(t.length, o),
+            let e = F ? a - 1 : Math.min(t.length, a),
                 n = e - 1,
                 i = l()(t)
                     .take(e)
                     .map((e, t) => {
                         let i = f.ZP.getNickname(s, m, e),
-                            o = null != i ? i : _.ZP.getName(e),
+                            a = null != i ? i : _.ZP.getName(e),
                             l = t === n && !F,
-                            u = a()(h.avatar, U, l && h.isLast),
+                            u = o()(h.avatar, U, l && h.isLast),
                             d = (0, r.jsx)(c.qEK, {
                                 src: e.getAvatarURL(s, 24),
                                 size: v,
@@ -182,18 +185,18 @@ function v(e) {
                                 children: N
                                     ? (0, r.jsx)("span", {
                                           role: "img",
-                                          "aria-label": o,
+                                          "aria-label": a,
                                           children: d,
                                       })
                                     : (0, r.jsx)(c.ua7, {
-                                          text: o,
+                                          text: a,
                                           "aria-label": !1,
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   "span",
                                                   b(g({}, e), {
                                                       role: "img",
-                                                      "aria-label": o,
+                                                      "aria-label": a,
                                                       children: d,
                                                   }),
                                               ),
@@ -215,25 +218,25 @@ function v(e) {
                 c.yRy,
                 {
                     targetElementRef: G,
-                    renderPopout: V,
-                    shouldShow: j,
+                    renderPopout: Z,
+                    shouldShow: k,
                     position: "bottom",
-                    onRequestClose: () => k(!1),
+                    onRequestClose: () => j(!1),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
                             b(g({}, t), {
                                 innerRef: G,
-                                className: a()(h.overflow, U, S),
+                                className: o()(h.overflow, U, S),
                                 onFocus: P,
                                 onClick: (e) => {
-                                    null == R || R(e), k(!0);
+                                    null == R || R(e), j(!0);
                                 },
-                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
+                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: V }),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: e,
                                     color: T,
-                                    children: Z > 99 ? ">99" : "+".concat(Z),
+                                    children: V > 99 ? ">99" : "+".concat(V),
                                 }),
                             }),
                         ),
@@ -247,7 +250,7 @@ function v(e) {
               role: "group",
               "aria-label": L,
               "aria-labelledby": x,
-              className: a()(E, h.avatars),
+              className: o()(E, h.avatars),
               "aria-hidden": M,
               children: [H(), Y()],
           });

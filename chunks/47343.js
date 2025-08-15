@@ -2,17 +2,17 @@ n.d(t, { R: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
+    a = n.n(l),
     s = n(481060),
-    a = n(590965),
+    o = n(590965),
     c = n(695346),
     u = n(51331),
     d = n(259580),
     h = n(626135),
     p = n(44609),
-    f = n(731971),
-    m = n(981631),
-    g = n(388032),
+    m = n(731971),
+    g = n(981631),
+    f = n(388032),
     _ = n(152143);
 let x = () => {
     var e;
@@ -21,27 +21,27 @@ let x = () => {
         {
             nickname: x,
             dmsAllowed: b,
-            showActivity: E,
-            mutedServer: v,
+            showActivity: v,
+            mutedServer: E,
             setNickname: j,
             setDmsAllowed: I,
-            setShowActivity: O,
-            setMutedServer: S,
+            setShowActivity: y,
+            setMutedServer: O,
             guildId: N,
-            inviteCode: y,
-        } = (0, f.XW)(),
-        C = null == (e = a.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        A = (0, p.m4)({ location: "InviteSettingsControls" });
+            inviteCode: S,
+        } = (0, m.XW)(),
+        C = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        T = (0, p.m4)({ location: "InviteSettingsControls" });
     return (0, r.jsxs)("div", {
-        className: o()(_.editProfileContainer, { [_.opened]: t }),
+        className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
             (0, r.jsxs)(s.P3F, {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                        h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                             guild_id: N,
-                            invite_code: y,
+                            invite_code: S,
                         }),
                         n(!t);
                 },
@@ -56,17 +56,17 @@ let x = () => {
                             (0, r.jsx)(s.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: g.intl.string(g.t.A5wHQ0),
+                                children: f.intl.string(f.t.A5wHQ0),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: g.intl.string(g.t.UKCSER),
+                                children: f.intl.string(f.t.UKCSER),
                             }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: o()(_.caret, { [_.opened]: t }),
+                        className: a()(_.caret, { [_.opened]: t }),
                         children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -76,7 +76,7 @@ let x = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: o()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
+                className: a()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
                 children: [
                     C &&
                         (0, r.jsxs)("div", {
@@ -85,32 +85,32 @@ let x = () => {
                                 (0, r.jsx)(s.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
-                                    children: g.intl.string(g.t.me1lRk),
+                                    children: f.intl.string(f.t.me1lRk),
                                 }),
                                 (0, r.jsx)(s.oil, {
-                                    placeholder: g.intl.string(g.t["09Q8ys"]),
-                                    maxLength: m.l$U,
+                                    placeholder: f.intl.string(f.t["09Q8ys"]),
+                                    maxLength: g.l$U,
                                     value: x,
                                     onChange: j,
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.Z, {
-                        title: g.intl.string(g.t["/2ed39"]),
+                        title: f.intl.string(f.t["/2ed39"]),
                         value: b,
                         onChange: I,
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
-                            title: g.intl.string(g.t.bN4m1N),
+                            title: f.intl.string(f.t.bN4m1N),
+                            value: v,
+                            onChange: y,
+                        }),
+                    T &&
+                        (0, r.jsx)(u.Z, {
+                            title: f.intl.string(f.t["0nZCqK"]),
                             value: E,
                             onChange: O,
-                        }),
-                    A &&
-                        (0, r.jsx)(u.Z, {
-                            title: g.intl.string(g.t["0nZCqK"]),
-                            value: v,
-                            onChange: S,
                         }),
                 ],
             }),

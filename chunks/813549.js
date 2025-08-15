@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(385499),
+    a = n.n(i),
+    o = n(385499),
     s = n(674563),
     l = n(685679);
 let c = (e) => {
@@ -26,11 +26,11 @@ let c = (e) => {
         usernameIcon: g,
     } = e;
     return (0, r.jsxs)("div", {
-        className: o()(c, l.nameTag),
+        className: a()(c, l.nameTag),
         style: h,
         children: [
             (0, r.jsxs)("span", {
-                className: o()(l.username, d),
+                className: a()(l.username, d),
                 style: null != s ? { color: s } : void 0,
                 children: [g, t],
             }),
@@ -41,10 +41,10 @@ let c = (e) => {
                   })
                 : null,
             null != u
-                ? (0, r.jsx)(a.Z, {
+                ? (0, r.jsx)(o.Z, {
                       type: u,
                       invertColor: i,
-                      className: o()(_, l.bot),
+                      className: a()(_, l.bot),
                       verified: p,
                       useRemSizes: m,
                   })

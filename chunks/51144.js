@@ -12,8 +12,8 @@ n.d(t, {
     n(415506);
 var r = n(442837),
     i = n(246946),
-    o = n(594174),
-    a = n(981631),
+    a = n(594174),
+    o = n(981631),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -77,13 +77,13 @@ function E(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
     if (null == e) return;
-    let o = m(e);
+    let a = m(e);
     return (
         n &&
-            o.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) &&
+            a.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) &&
             "0" === e.discriminator &&
-            (o = f(o)),
-        o
+            (a = f(a)),
+        a
     );
 }
 function b(e) {
@@ -103,19 +103,19 @@ function y(e) {
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
-        case a.Skl.ONLINE:
+        case o.Skl.ONLINE:
             return t ? s.intl.string(s.t["9hghLC"]) : s.intl.string(s.t.WbGtnJ);
-        case a.Skl.OFFLINE:
+        case o.Skl.OFFLINE:
             return s.intl.string(s.t.Vv0abG);
-        case a.Skl.IDLE:
+        case o.Skl.IDLE:
             return s.intl.string(s.t.qWbtVV);
-        case a.Skl.DND:
+        case o.Skl.DND:
             return s.intl.string(s.t.jaNpQE);
-        case a.Skl.INVISIBLE:
+        case o.Skl.INVISIBLE:
             return s.intl.string(s.t.bg24HB);
-        case a.Skl.STREAMING:
+        case o.Skl.STREAMING:
             return s.intl.string(s.t.XKYej4);
-        case a.Skl.UNKNOWN:
+        case o.Skl.UNKNOWN:
         default:
             return null;
     }
@@ -124,9 +124,9 @@ function v(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
     let i = Date.now() - e.createdAt.getTime(),
-        o = null == n || i <= u * n,
-        a = i >= u * r;
-    return !!o && !!a;
+        a = null == n || i <= u * n,
+        o = i >= u * r;
+    return !!a && !!o;
 }
 function I(e) {
     return !v(e, {
@@ -146,7 +146,7 @@ function S(e, t, n) {
     let r = n;
     if (
         ("always" === t.identifiable ? (r = !1) : "never" === t.identifiable && (r = !0),
-        "0" !== e.discriminator && e.discriminator !== a.fo$ && !t.forcePomelo)
+        "0" !== e.discriminator && e.discriminator !== o.fo$ && !t.forcePomelo)
     )
         return "username" === t.mode || r ? e.username : "".concat(e.username, "#").concat(e.discriminator);
     let i = r ? f(e.username) : e.username;
@@ -158,12 +158,12 @@ function A(e, t) {
     return S(e, n, r);
 }
 function N(e) {
-    return (0, r.e7)([o.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? o.default.getUser(e.getRecipientId()) : null;
+    return (0, r.e7)([a.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
 function C() {
-    let e = o.default.getCurrentUser();
+    let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
 let R = {

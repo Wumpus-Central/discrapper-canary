@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(331065),
+    a = n(570140),
+    o = n(331065),
     s = n(55563),
     l = n(551428);
 function c(e, t, n) {
@@ -33,13 +33,13 @@ var f = (function (e) {
         e
     );
 })({});
-let _ = new a.Z({
+let _ = new o.Z({
     subscriptions: [],
     otps: [],
 });
 function p(e) {
     let { applicationId: t, layout: n } = e;
-    u.set(t, a.Z.createFromServer(n)), d.delete(t);
+    u.set(t, o.Z.createFromServer(n)), d.delete(t);
 }
 function h(e) {
     let { applicationId: t } = e;
@@ -66,7 +66,7 @@ class g extends (r = i.ZP.Store) {
     }
 }
 c(g, "displayName", "ApplicationStoreDirectoryStore");
-let E = new g(o.Z, {
+let E = new g(a.Z, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: p,
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m,

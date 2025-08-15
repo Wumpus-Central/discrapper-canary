@@ -1,8 +1,8 @@
 n.d(t, { b: () => D }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(674466),
-    a = n(798681),
+    a = n(674466),
+    o = n(798681),
     s = n(581567),
     l = n(569545),
     c = n(450109),
@@ -64,9 +64,9 @@ function R(e) {
         "quartzFrames",
         "screenCaptureKitFrames",
     ]) {
-        var i, o, a, s;
-        let l = null != (a = null == (i = n.stats.screenshare) ? void 0 : i[e]) ? a : 0,
-            c = null != (s = null == (o = t.stats.screenshare) ? void 0 : o[e]) ? s : 0;
+        var i, a, o, s;
+        let l = null != (o = null == (i = n.stats.screenshare) ? void 0 : i[e]) ? o : 0,
+            c = null != (s = null == (a = t.stats.screenshare) ? void 0 : a[e]) ? s : 0;
         r[e] = c - l;
     }
     let l = -1,
@@ -80,13 +80,13 @@ function P(e) {
     return null != (n = null != (t = "channelId" in e ? e.channelId : void 0) ? t : r) ? n : null;
 }
 function w(e, t, n) {
-    var r, i, o, a;
+    var r, i, a, o;
     return e
         ? null != (i = null == (r = T(t)) ? void 0 : r.frameRateEncode)
             ? i
             : null
-        : null != (a = null == (o = S(t, n)) ? void 0 : o.frameRateDecode)
-          ? a
+        : null != (o = null == (a = S(t, n)) ? void 0 : a.frameRateDecode)
+          ? o
           : null;
 }
 function D(e, t) {
@@ -94,14 +94,14 @@ function D(e, t) {
     let L,
         x = (0, O.hp)(e),
         M = P(t),
-        j = d.Z.getChannel(M),
-        k = "streamKey" in t ? t.streamKey : void 0,
+        k = d.Z.getChannel(M),
+        j = "streamKey" in t ? t.streamKey : void 0,
         U = "mediaContext" in t ? t.mediaContext : void 0,
         G = "underlyingError" in t ? t.underlyingError : void 0,
         B = "errorMessage" in t ? t.errorMessage : void 0,
-        Z = "mediaSessionId" in t ? t.mediaSessionId : void 0,
+        V = "mediaSessionId" in t ? t.mediaSessionId : void 0,
         F = "rtcConnectionId" in t ? t.rtcConnectionId : void 0,
-        V = "videoCodec" in t ? t.videoCodec : void 0,
+        Z = "videoCodec" in t ? t.videoCodec : void 0,
         H = "videoEncoder" in t ? t.videoEncoder : void 0,
         Y = "videoDecoder" in t ? t.videoDecoder : void 0,
         W = "audioCaptureSampleRateMismatchPercent" in t ? t.audioCaptureSampleRateMismatchPercent : void 0,
@@ -109,19 +109,19 @@ function D(e, t) {
         z = "audioOutputDeviceName" in t ? t.audioOutputDeviceName : void 0,
         q = "videoDeviceName" in t ? t.videoDeviceName : void 0,
         X = "userId" in t ? t.userId : void 0,
-        Q = null != k ? (0, l.my)(k) : null,
-        J = null != k ? m.Z.getRTCConnection(k) : null,
-        $ = null != k ? J : _.Z.getRTCConnection(),
-        ee = null != k ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
+        Q = null != j ? (0, l.my)(j) : null,
+        J = null != j ? m.Z.getRTCConnection(j) : null,
+        $ = null != j ? J : _.Z.getRTCConnection(),
+        ee = null != j ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
         { resolution: et, fps: en } = u.Z.getState(),
-        { gameName: er, gameId: ei, exe: eo, distributor: ea } = (0, s.G8)(ee),
+        { gameName: er, gameId: ei, exe: ea, distributor: eo } = (0, s.G8)(ee),
         es = x.isErrorOutbound,
         el = null != U ? U : I.Yn.DEFAULT,
         ec = null != Q ? Q.ownerId : X,
         eu = null != J ? (null == J ? void 0 : J.getVoiceParticipantType()) : es ? "sender" : "receiver",
         ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
     (L =
-        null != k && null != Q
+        null != j && null != Q
             ? es
                 ? null == $ || null == (c = $.getOutboundStats())
                     ? void 0
@@ -154,7 +154,7 @@ function D(e, t) {
                 O,
                 P,
                 D,
-                k,
+                j,
                 X,
                 ee,
                 ef,
@@ -181,14 +181,14 @@ function D(e, t) {
                 eL,
                 ex,
                 eM,
-                ej,
                 ek,
+                ej,
                 eU,
                 eG,
                 eB,
-                eZ,
+                eV,
                 eF,
-                eV;
+                eZ;
             let eH = {
                 error_name: e.valueOf(),
                 error_code: x.errorCode,
@@ -196,11 +196,11 @@ function D(e, t) {
                 error_category: x.category,
                 underlying_error: null != G ? G : null,
                 error_message: null != B ? B : null,
-                guild_id: null != (D = null == j ? void 0 : j.guild_id) ? D : null,
+                guild_id: null != (D = null == k ? void 0 : k.guild_id) ? D : null,
                 channel_id: null != M ? M : null,
-                channel_type: null != (k = null == j ? void 0 : j.type) ? k : null,
+                channel_type: null != (j = null == k ? void 0 : k.type) ? j : null,
                 rtc_connection_id: null != F ? F : null,
-                media_session_id: null != (X = null != Z ? Z : _.Z.getMediaSessionId()) ? X : null,
+                media_session_id: null != (X = null != V ? V : _.Z.getMediaSessionId()) ? X : null,
                 parent_media_session_id: null != (ee = null == J ? void 0 : J.parentMediaSessionId) ? ee : null,
                 context: null != U ? U : null,
                 voice_backend_version:
@@ -216,20 +216,20 @@ function D(e, t) {
                 num_bytes: null != (eb = null == L ? void 0 : L.num_bytes) ? eb : 0,
                 num_packets_lost: null != (ey = null == (i = A(es, ed, ec)) ? void 0 : i.packetsLost) ? ey : 0,
                 video_codec:
-                    null != (eO = null != V ? V : (0, o.bU)(null == (s = A(es, ed, ec)) ? void 0 : s.codec.name))
+                    null != (eO = null != Z ? Z : (0, a.bU)(null == (s = A(es, ed, ec)) ? void 0 : s.codec.name))
                         ? eO
                         : null,
                 video_encoder:
-                    null != (ev = null != H ? H : (0, o.lG)(null == (l = T(ed)) ? void 0 : l.encoderImplementationName))
+                    null != (ev = null != H ? H : (0, a.lG)(null == (l = T(ed)) ? void 0 : l.encoderImplementationName))
                         ? ev
                         : null,
                 video_decoder:
                     null !=
-                    (eI = null != Y ? Y : (0, o.z_)(null == (c = S(ed, ec)) ? void 0 : c.decoderImplementationName))
+                    (eI = null != Y ? Y : (0, a.z_)(null == (c = S(ed, ec)) ? void 0 : c.decoderImplementationName))
                         ? eI
                         : null,
                 audio_capture_sample_rate_mismatch_percent: null != W ? W : null,
-                incoming_video_stopped_for_occlusion: !a.w.isIncomingVideoEnabled(),
+                incoming_video_stopped_for_occlusion: !o.w.isIncomingVideoEnabled(),
                 bitrate: null != (eT = null == (u = A(es, ed, ec)) ? void 0 : u.bitrate) ? eT : null,
                 target_bitrate: es && null != (eS = null == (d = T(ed)) ? void 0 : d.bitrateTarget) ? eS : null,
                 fps: null != (eA = w(es, el, ec)) ? eA : null,
@@ -247,21 +247,21 @@ function D(e, t) {
                 screenshare_capture_method: R(ed),
                 share_application_name: null != er ? er : null,
                 share_application_id: null != ei ? ei : null,
-                share_application_executable: null != eo ? eo : null,
-                share_application_distributor: null != ea ? ea : null,
+                share_application_executable: null != ea ? ea : null,
+                share_application_distributor: null != eo ? eo : null,
                 cpu_brand: null != (ew = null == t ? void 0 : t.cpu_brand) ? ew : null,
                 cpu_vendor: null != (eD = null == t ? void 0 : t.cpu_vendor) ? eD : null,
                 cpu_memory: null != (eL = null == t ? void 0 : t.cpu_memory) ? eL : null,
                 gpu_brand: null != (ex = null == t ? void 0 : t.gpu_brand) ? ex : null,
                 gpu_count: null != (eM = null == t ? void 0 : t.gpu_count) ? eM : null,
-                gpu_memory: null != (ej = null == t ? void 0 : t.gpu_memory) ? ej : null,
-                gpu_device_vendor_id: null != (ek = null == t ? void 0 : t.gpu_device_vendor_id) ? ek : null,
+                gpu_memory: null != (ek = null == t ? void 0 : t.gpu_memory) ? ek : null,
+                gpu_device_vendor_id: null != (ej = null == t ? void 0 : t.gpu_device_vendor_id) ? ej : null,
                 gpu_device_device_id: null != (eU = null == t ? void 0 : t.gpu_device_device_id) ? eU : null,
                 gpu_device_sub_sys_id: null != (eG = null == t ? void 0 : t.gpu_device_sub_sys_id) ? eG : null,
                 gpu_device_revision: null != (eB = null == t ? void 0 : t.gpu_device_revision) ? eB : null,
-                gpu_driver_version: null != (eZ = null == t ? void 0 : t.gpu_driver_version) ? eZ : null,
+                gpu_driver_version: null != (eV = null == t ? void 0 : t.gpu_driver_version) ? eV : null,
                 cpu_usage: null != (eF = y.Z.getCurrentCPUUsagePercent()) ? eF : null,
-                memory_usage: null != (eV = y.Z.getCurrentMemoryUsageKB()) ? eV : null,
+                memory_usage: null != (eZ = y.Z.getCurrentMemoryUsageKB()) ? eZ : null,
                 outbound_bitrate_estimate: N(ed),
                 inbound_bitrate_estimate: C(ed),
                 hardware_enabled: f.Z.getHardwareEncoding(),

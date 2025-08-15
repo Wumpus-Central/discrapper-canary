@@ -13,8 +13,8 @@ var n = a(255367),
     h = a(611565),
     p = a(238246),
     b = a(788983),
-    f = a(906467),
-    v = a(259580),
+    v = a(906467),
+    f = a(259580),
     j = a(31336),
     g = a(19759),
     _ = a(432877),
@@ -27,18 +27,18 @@ var C = a(392750),
     E = a(691867),
     S = a(916790),
     P = a(645973),
-    w = a(903502),
-    I = a(604776),
-    k = a(912072),
-    R = a(272193),
+    I = a(903502),
+    w = a(604776),
+    R = a(912072),
+    k = a(272193),
     Z = a(685560),
     A = a(735959),
     D = a(572444),
     L = a(636500),
-    B = a(246992),
-    M = a(484662),
+    M = a(246992),
+    U = a(484662),
     F = a(496025),
-    U = a(442954),
+    B = a(442954),
     z = a(925124),
     G = a(633001),
     V = a(702904),
@@ -109,7 +109,7 @@ function em(e) {
                 },
             ];
             return (
-                f.Z.isDeveloper &&
+                v.Z.isDeveloper &&
                     (e.push({
                         id: "shop",
                         name: "Shop",
@@ -138,7 +138,7 @@ function em(e) {
                         id: "feedback",
                         name: "Feedback",
                         group: el.v0.USERS,
-                        render: () => (0, n.jsx)(w.Z, {}),
+                        render: () => (0, n.jsx)(I.Z, {}),
                     }),
                     e.push({
                         id: "overlay",
@@ -186,7 +186,7 @@ function em(e) {
                     id: "overlays",
                     name: "Dev Overlays",
                     group: el.v0.DEVELOPMENT,
-                    render: () => (0, n.jsx)(k.Z, { devSettingsCategory: _.zU.OVERLAYS }),
+                    render: () => (0, n.jsx)(R.Z, { devSettingsCategory: _.zU.OVERLAYS }),
                 }),
                 e.push({
                     id: "messaging",
@@ -198,7 +198,7 @@ function em(e) {
                     id: "reporting",
                     name: "Reporting",
                     group: el.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(k.Z, { devSettingsCategory: _.zU.REPORTING }),
+                    render: () => (0, n.jsx)(R.Z, { devSettingsCategory: _.zU.REPORTING }),
                 }),
                 e.push({
                     id: "permissions",
@@ -210,13 +210,13 @@ function em(e) {
                     id: "modals",
                     name: "Modals",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(U.Z, {}),
+                    render: () => (0, n.jsx)(B.Z, {}),
                 }),
                 e.push({
                     id: "layers",
                     name: "Layers",
                     group: el.v0.UI,
-                    render: () => (0, n.jsx)(M.Z, {}),
+                    render: () => (0, n.jsx)(U.Z, {}),
                 }),
                 e.push({
                     id: "affinity",
@@ -230,7 +230,7 @@ function em(e) {
                     group: el.v0.USERS,
                     render: () => (0, n.jsx)(en.Z, {}),
                 }),
-                f.Z.isDeveloper &&
+                v.Z.isDeveloper &&
                     (e.push({
                         id: "content_inventory",
                         name: "Content Inventory",
@@ -284,13 +284,13 @@ function em(e) {
                         id: "fractional_nitro",
                         name: "Fractional Nitro",
                         group: el.v0.PREMIUM,
-                        render: () => (0, n.jsx)(I.Z, {}),
+                        render: () => (0, n.jsx)(w.Z, {}),
                     })),
                 e.push({
                     id: "gifting_intent",
                     name: "Gifting Intent",
                     group: el.v0.PREMIUM,
-                    render: () => (0, n.jsx)(R.Z, {}),
+                    render: () => (0, n.jsx)(k.Z, {}),
                 }),
                 e.push({
                     id: "voice_filters",
@@ -322,7 +322,7 @@ function em(e) {
         {
             TabBar: i,
             renderSelectedTab: d,
-            selectedTabId: v,
+            selectedTabId: f,
         } = (0, el.ZP)(
             {
                 tabs: l,
@@ -338,9 +338,9 @@ function em(e) {
         (0, u.Z)({
             type: s.ImpressionTypes.PANE,
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
-            properties: { panel: v },
+            properties: { panel: f },
         }),
-        (0, n.jsxs)(B.Gk, {
+        (0, n.jsxs)(M.Gk, {
             children: [
                 (0, n.jsxs)(x.ZP, {
                     className: ec.headerBar,
@@ -388,7 +388,7 @@ function em(e) {
                 }),
                 (0, n.jsx)(i, {}),
                 d(),
-                (0, n.jsx)(B.Br, { className: eo.layerContainer }),
+                (0, n.jsx)(M.Br, { className: eo.layerContainer }),
                 y ? (0, n.jsx)(eu, {}) : null,
             ],
         })
@@ -440,7 +440,7 @@ function eh() {
                   onClick: j.SO,
                   children: (0, n.jsxs)(x.ZP, {
                       className: i()(ec.headerBar, eo.mobileHeaderCollapsed),
-                      toolbar: (0, n.jsx)(v.Z, { direction: v.Z.Directions.UP }),
+                      toolbar: (0, n.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, n.jsx)(x.ZP.Icon, {
                               icon: c.Ymb,

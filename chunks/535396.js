@@ -21,8 +21,8 @@ n.d(t, {
     n(388685);
 var r = n(494497),
     i = n(704215),
-    o = n(267642),
-    a = n(474936),
+    a = n(267642),
+    o = n(474936),
     s = n(981631),
     l = n(388032),
     c = (function (e) {
@@ -53,51 +53,51 @@ let u = "1340102344645283891",
     E = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
     b = () => ({
         [s.oNc.VIDEO_BITRATE_ENHANCED]: {
-            perkIcon: o.Ro.STREAM,
+            perkIcon: a.Ro.STREAM,
             description: l.intl.string(l.t.y4ft4O),
         },
         [s.oNc.AUDIO_BITRATE_128_KBPS]: {
-            perkIcon: o.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_1].limits.bitrate / 1000 }),
+            perkIcon: a.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_1].limits.bitrate / 1000 }),
         },
         [s.oNc.INVITE_SPLASH]: {
-            perkIcon: o.Ro.CUSTOMIZATION,
+            perkIcon: a.Ro.CUSTOMIZATION,
             description: l.intl.string(l.t.Qwlpoq),
         },
         [s.oNc.ANIMATED_ICON]: {
-            perkIcon: o.Ro.ANIMATED,
+            perkIcon: a.Ro.ANIMATED,
             description: l.intl.string(l.t.PbAyub),
         },
         [s.oNc.AUDIO_BITRATE_256_KBPS]: {
-            perkIcon: o.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_2].limits.bitrate / 1000 }),
+            perkIcon: a.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_2].limits.bitrate / 1000 }),
         },
         [s.oNc.ROLE_ICONS]: {
-            perkIcon: o.Ro.CUSTOM_ROLE_ICON,
+            perkIcon: a.Ro.CUSTOM_ROLE_ICON,
             description: l.intl.string(l.t["6PV6QU"]),
         },
         [s.oNc.MAX_FILE_SIZE_50_MB]: {
-            perkIcon: o.Ro.UPLOAD,
+            perkIcon: a.Ro.UPLOAD,
             description: l.intl.formatToPlainString(l.t["aFRl5+"], { uploadSizeLimit: l.intl.string(l.t.M6qV8v) }),
         },
         [s.oNc.BANNER]: {
-            perkIcon: o.Ro.CUSTOMIZATION,
+            perkIcon: a.Ro.CUSTOMIZATION,
             description: l.intl.string(l.t["1a5rjo"]),
         },
         [s.oNc.ANIMATED_BANNER]: {
-            perkIcon: o.Ro.ANIMATED,
+            perkIcon: a.Ro.ANIMATED,
             description: l.intl.string(l.t["1+Vmh4"]),
         },
         [s.oNc.AUDIO_BITRATE_384_KBPS]: {
-            perkIcon: o.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: a.HO[s.Eu4.TIER_3].limits.bitrate / 1000 }),
+            perkIcon: a.Ro.AUDIO,
+            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_3].limits.bitrate / 1000 }),
         },
         [s.oNc.VANITY_URL]: {
-            perkIcon: o.Ro.VANITY,
+            perkIcon: a.Ro.VANITY,
             description: l.intl.string(l.t["5XZKy8"]),
         },
         [s.oNc.MAX_FILE_SIZE_100_MB]: {
-            perkIcon: o.Ro.UPLOAD,
+            perkIcon: a.Ro.UPLOAD,
             description: l.intl.formatToPlainString(l.t["aFRl5+"], { uploadSizeLimit: l.intl.string(l.t.yMOW8P) }),
         },
     }),

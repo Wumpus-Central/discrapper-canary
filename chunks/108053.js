@@ -29,13 +29,13 @@ function j(e) {
         } = e,
         Z = (0, d.ZP)(),
         [S, w] = r.useState(null),
-        [I, P] = r.useState(null);
+        [T, I] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(O);
         t = e.length > 0 ? e[0] : null;
     }
-    let T = r.useCallback(async () => {
+    let P = r.useCallback(async () => {
         if (N() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
@@ -57,11 +57,11 @@ function j(e) {
                     null
                 );
             });
-            null != e && (P(e.id), w(e));
+            null != e && (I(e.id), w(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {
-        0 === v.length && T();
+        0 === v.length && P();
     });
     let E = null !== t;
     return (0, i.jsxs)(a.hjN, {
@@ -85,7 +85,7 @@ function j(e) {
                                   size: "sm",
                                   text: g.intl.string(g.t["nrO/HB"]),
                                   disabled: !E,
-                                  onClick: T,
+                                  onClick: P,
                               }),
                           }),
                           (0, i.jsx)(m.Z, {
@@ -125,7 +125,7 @@ function j(e) {
                               }),
                           ],
                       });
-                  })(Z, E, T),
+                  })(Z, E, P),
         ],
     });
 }

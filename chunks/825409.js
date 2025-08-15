@@ -8,8 +8,8 @@ n.d(t, {
     n(415506);
 var r = n(836560),
     i = n(400053),
-    o = n.n(i),
-    a = n(142494);
+    a = n.n(i),
+    o = n(142494);
 function s(e, t, n) {
     return (
         t in e
@@ -23,7 +23,7 @@ function s(e, t, n) {
         e
     );
 }
-(n.g.IntlMessageFormat = o()),
+(n.g.IntlMessageFormat = a()),
     n(770801),
     n(177486),
     n(144062),
@@ -139,7 +139,7 @@ class _ extends r.EventEmitter {
             this.emit("locale", this._chosenLocale, t);
     }
     setUpdateRules(e) {
-        (0, a.yR)(e);
+        (0, o.yR)(e);
     }
     getLanguages() {
         return this._languages;
@@ -184,14 +184,14 @@ class _ extends r.EventEmitter {
                     return t;
                 });
         if (i.includes(r)) return r;
-        let o = r.split("-");
-        return i.includes(o[0])
-            ? o[0]
-            : "zh" === o[0] && o.length > 1 && "Hant" === o[1]
+        let a = r.split("-");
+        return i.includes(a[0])
+            ? a[0]
+            : "zh" === a[0] && a.length > 1 && "Hant" === a[1]
               ? null != (t = i.find((e) => "zh-TW" === e))
                   ? t
                   : l
-              : null != (n = i.find((e) => e.split("-")[0] === o[0]))
+              : null != (n = i.find((e) => e.split("-")[0] === a[0]))
                 ? n
                 : l;
     }
@@ -245,27 +245,27 @@ class _ extends r.EventEmitter {
             s(this, "_requestedLocale", void 0),
             s(this, "_getMessages", void 0),
             s(this, "_getParsedMessages", (e, t, n) => {
-                let { messages: r, defaultMessages: i, locale: o } = e,
+                let { messages: r, defaultMessages: i, locale: a } = e,
                     s = r[t] || i[t];
                 if ("object" == typeof s)
                     return n({
                         messages: s,
                         defaultMessages: i[t],
-                        locale: o,
+                        locale: a,
                     });
                 try {
-                    return (0, a.FC)(s, o);
+                    return (0, o.FC)(s, a);
                 } catch (e) {
                     if (
                         (console.warn(
                             "Failed parsing intl key '"
                                 .concat(String(t), "' in locale '")
-                                .concat(o, "' defaulting to English"),
+                                .concat(a, "' defaulting to English"),
                             e,
                         ),
                         "string" == typeof (s = i[t]))
                     )
-                        return (0, a.FC)(s, o);
+                        return (0, o.FC)(s, a);
                 }
                 return "";
             }),

@@ -1,55 +1,54 @@
-n.d(t, {
-    Gt: () => h,
+r.d(t, {
+    Gt: () => b,
     ZP: () => m,
 }),
-    n(388685);
-var r = n(255367),
-    i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(95398),
-    l = n(936141),
-    c = n(197653),
-    u = n(821618);
+    r(388685);
+var n = r(255367),
+    l = r(73800),
+    i = r(120356),
+    o = r.n(i),
+    a = r(95398),
+    c = r(936141),
+    s = r(197653),
+    u = r(821618);
 let d = { isInContainer: !0 },
-    f = { isInContainer: !1 },
-    _ = i.createContext(f);
-function p(e) {
+    p = l.createContext({ isInContainer: !1 });
+function f(e) {
     let { children: t } = e;
-    return (0, r.jsx)(_.Provider, {
+    return (0, n.jsx)(p.Provider, {
         value: d,
         children: t,
     });
 }
-function h() {
-    let { isInContainer: e } = i.useContext(_);
+function b() {
+    let { isInContainer: e } = l.useContext(p);
     return e;
 }
 function m(e) {
-    let { components: t, accentColor: n, spoiler: o, renderComponents: d } = e,
-        [f, _] = i.useState(o),
-        h = (e) =>
-            (0, r.jsx)(c.am.AutoMeasuredNestedContainer, {
-                children: (i) =>
-                    (0, r.jsx)("div", {
-                        ref: i,
-                        className: a()(u.container, {
+    let { components: t, accentColor: r, spoiler: i, renderComponents: d } = e,
+        [p, b] = l.useState(i),
+        m = (e) =>
+            (0, n.jsx)(s.am.AutoMeasuredNestedContainer, {
+                children: (l) =>
+                    (0, n.jsx)("div", {
+                        ref: l,
+                        className: o()(u.container, {
                             [u.isHidden]: e,
-                            [u.withAccentColor]: null != n,
+                            [u.withAccentColor]: null != r,
                         }),
-                        style: { "--__accent-color": n },
-                        children: (0, r.jsx)(p, { children: d(t) }),
+                        style: { "--__accent-color": r },
+                        children: (0, n.jsx)(f, { children: d(t) }),
                     }),
             });
     return null == t || 0 === t.length
         ? null
-        : o
-          ? (0, r.jsx)(s.ZP, {
-                type: s.ZP.Types.ATTACHMENT,
-                reason: l.wk.SPOILER,
-                obscured: f,
-                onToggleObscurity: () => _((e) => !e),
-                children: (e) => h(e),
+        : i
+          ? (0, n.jsx)(a.ZP, {
+                type: a.ZP.Types.ATTACHMENT,
+                reason: c.wk.SPOILER,
+                obscured: p,
+                onToggleObscurity: () => b((e) => !e),
+                children: (e) => m(e),
             })
-          : h(!1);
+          : m(!1);
 }

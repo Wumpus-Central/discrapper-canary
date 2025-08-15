@@ -1,15 +1,15 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(665906),
+    l = n(665906),
     a = n(996861),
-    s = n(388032);
-function l(e, t) {
-    return (0, o.NE)(t, e)
+    o = n(388032);
+function s(e, t) {
+    return (0, l.NE)(t, e)
         ? (0, r.jsx)(i.sNh, {
               id: "thread",
-              label: s.intl.string(s.t.rBIGBA),
+              label: o.intl.string(o.t.rBIGBA),
               icon: i.or_,
               action: () => {
                   (0, a.gK)(t, e);

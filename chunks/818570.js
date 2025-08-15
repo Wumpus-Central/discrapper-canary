@@ -1,38 +1,38 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    o = n(481060),
+    l = n(481060),
     a = n(767714),
-    s = n(834129),
-    l = n(981631),
+    o = n(834129),
+    s = n(981631),
     c = n(474936),
     u = n(388032),
     d = n(699454);
-function f(e) {
+function p(e) {
     let { message: t, channel: n } = e,
-        f = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
-    return (0, r.jsx)(s.Z, {
+        p = null != n.guild_id ? s.jXE.TEXT_IN_VOICE : s.jXE.CHANNEL_TEXT_AREA;
+    return (0, r.jsx)(o.Z, {
         contentClassName: d.messageContentContainer,
         iconContainerClassName: d.iconContainer,
-        iconNode: (0, r.jsx)(o.Dkj, { colorClass: d.icon }),
+        iconNode: (0, r.jsx)(l.Dkj, { colorClass: d.icon }),
         children: (0, r.jsxs)("div", {
             className: d.container,
             children: [
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             children: t.content,
                         }),
                         (0, r.jsxs)("div", {
                             className: d.nitroBadge,
                             children: [
-                                (0, r.jsx)(o.SrA, {
+                                (0, r.jsx)(l.SrA, {
                                     size: "xs",
                                     colorClass: d.nitroBadgeIcon,
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: "text-xs/medium",
                                     className: d.nitroBadgeText,
                                     children: u.intl.string(u.t["BMw+7O"]),
@@ -50,8 +50,8 @@ function f(e) {
                         textOptions: { textOverride: u.intl.string(u.t.Y2WKTk) },
                         size: i.zx.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
-                            section: f,
-                            object: l.qAy.MESSAGE,
+                            section: p,
+                            object: s.qAy.MESSAGE,
                         },
                     }),
                 }),

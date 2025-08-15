@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(388032),
     S = n(519279),
     T = n(790680),
-    I = n(197571),
-    N = n(926895);
+    N = n(197571),
+    I = n(926895);
 function y(e) {
     let { header: t, description: n, stepNumber: r } = e;
     return (0, i.jsxs)("div", {
@@ -64,21 +64,21 @@ function A() {
                     (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsx)(c.X6q, {
-                                className: I.marginBottom8,
+                                className: N.marginBottom8,
                                 variant: "heading-xl/medium",
                                 children: (0, i.jsx)(c.y5t, { children: v.intl.string(O.default.pHEnV1) }),
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: I.marginBottom20,
+                                className: N.marginBottom20,
                                 children: v.intl.string(O.default["1J/gZ2"]),
                             }),
                         ],
                     }),
                     (0, i.jsx)("img", {
                         className: T.bannerArt,
-                        src: N,
+                        src: I,
                         alt: v.intl.string(O.default["r+PDmp"]),
                     }),
                 ],
@@ -114,14 +114,14 @@ function P() {
             (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)(c.X6q, {
-                        className: I.marginBottom8,
+                        className: N.marginBottom8,
                         variant: "heading-xl/medium",
                         children: (0, i.jsx)(c.y5t, { children: v.intl.string(O.default.zUCWEB) }),
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        className: I.marginBottom20,
+                        className: N.marginBottom20,
                         children: v.intl.format(O.default.yMnoDg, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
@@ -131,7 +131,7 @@ function P() {
             }),
             (0, i.jsx)("img", {
                 className: T.bannerArt,
-                src: N,
+                src: I,
                 alt: v.intl.string(O.default["r+PDmp"]),
             }),
         ],
@@ -168,7 +168,7 @@ function R(e) {
                     u.Z,
                     {
                         children: (0, i.jsx)(c.Text, {
-                            className: I.marginBottom8,
+                            className: N.marginBottom8,
                             variant: "eyebrow",
                             color: "header-secondary",
                             children: n,
@@ -282,7 +282,7 @@ let D = () => {
                   className: T.section,
                   children: [
                       (0, i.jsx)(c.Text, {
-                          className: I.marginBottom8,
+                          className: N.marginBottom8,
                           variant: "eyebrow",
                           color: "header-secondary",
                           children: s,
@@ -329,7 +329,7 @@ let D = () => {
         return null == n
             ? null
             : (0, i.jsxs)("div", {
-                  className: a()(T.__invalid_helpLineInfo, I.marginTop20),
+                  className: a()(T.__invalid_helpLineInfo, N.marginTop20),
                   children: [
                       (0, i.jsx)(c.X6q, {
                           className: T.supportHeader,

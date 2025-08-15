@@ -20,8 +20,8 @@ var r = n(255367),
     g = n(111028),
     m = n(680089),
     b = n(430824),
-    O = n(496675),
-    _ = n(9156),
+    _ = n(496675),
+    O = n(9156),
     y = n(203818),
     v = n(438144),
     j = n(981631),
@@ -70,25 +70,25 @@ function S(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     e.stopPropagation();
 }
-let I = i.memo(function (e) {
+let P = i.memo(function (e) {
         let t,
             {
                 channel: l,
                 connectChannelDragSource: f,
                 connectChannelDropTarget: y,
                 disableManageChannels: v,
-                position: I,
+                position: P,
                 sortingPosition: N,
                 hideIcon: w,
                 children: Z,
             } = e,
-            T = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            T = (0, s.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
             A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
-            R = (0, s.e7)([O.Z], () => O.Z.can(j.Plq.MANAGE_CHANNELS, l));
-        t = null != N ? (I > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
+            R = (0, s.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_CHANNELS, l));
+        t = null != N ? (P > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
         let D = i.useCallback(() => {
                 A ? (0, d.mJ)(l.id) : (0, d.c4)(l.id);
             }, [l.id, A]),
@@ -155,20 +155,20 @@ let I = i.memo(function (e) {
                 return i;
             })(k, ["role", "tabIndex"]),
             V = i.useRef(null),
-            F = i.useRef(null),
-            H = (0, r.jsxs)("li", {
+            H = i.useRef(null),
+            F = (0, r.jsxs)("li", {
                 className: t,
                 "data-dnd-name": l.name,
                 children: [
                     (0, r.jsx)(u.tEY, {
                         focusTarget: V,
-                        ringTarget: F,
+                        ringTarget: H,
                         offset: {
                             left: 4,
                             right: 4,
                         },
                         children: (0, r.jsxs)("div", {
-                            ref: F,
+                            ref: H,
                             className: o()(E.iconVisibility, E.wrapper, {
                                 [E.collapsed]: A,
                                 [E.muted]: T,
@@ -211,7 +211,7 @@ let I = i.memo(function (e) {
                                     ),
                                 ),
                                 (0, r.jsx)("div", {
-                                    onClick: P,
+                                    onClick: I,
                                     className: E.children,
                                     children:
                                         R && !v
@@ -252,9 +252,9 @@ let I = i.memo(function (e) {
                     Z,
                 ],
             });
-        return null != y && null != f ? y(f(H)) : H;
+        return null != y && null != f ? y(f(F)) : F;
     }),
-    N = (0, f.B)(I),
+    N = (0, f.B)(P),
     w = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)("li", {

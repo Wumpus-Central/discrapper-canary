@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(990547),
     i = n(213609);
-function o(e) {
+function l(e) {
     return (
         (0, i.Z)(
             {

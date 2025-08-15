@@ -1,89 +1,38 @@
 let r;
 n.d(t, {
-    H: () => m,
-    Z: () => N,
+    H: () => g,
+    Z: () => O,
 }),
     n(388685),
     n(290780);
-var i,
-    o = n(392711),
-    a = n(442837),
-    s = n(780384),
-    l = n(570140),
+var l,
+    i,
+    a = n(392711),
+    o = n(442837),
+    u = n(780384),
+    s = n(570140),
     c = n(70956),
-    u = n(963838),
-    d = n(354459);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let _ = [],
-    p = {},
-    h = [],
-    m = (e) => {
+    d = n(963838),
+    f = n(354459);
+let p = [],
+    m = {},
+    E = [],
+    g = (e) => {
         null != e &&
-            l.Z.dispatch({
+            s.Z.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_CLEAR",
                 userId: e,
             });
     },
-    g = [],
-    E = 20,
-    b = 10 * c.Z.Millis.SECOND,
-    y = () => {
-        let e = new Date();
-        if ((g = [e, ...g].slice(0, E)).length >= E) {
-            let t = g[g.length - 1],
-                n = e.getTime() - t.getTime();
-            n < b && (r = new Date(e.getTime() + b - n));
-        }
-    },
-    O = (e) => {
-        let { cooldownEndsAtMs: t } = e;
-        r = new Date(Date.now() + t);
-    },
-    v = (0, o.debounce)(() => {
-        let e = (0, u.cX)(h);
-        s.uv.announce(e, "polite"), (h = []);
-    }, 500),
-    I = (e) => {
-        let { emoji: t, userId: n, animationType: r } = e;
-        null != t &&
-            null != r &&
-            ((p[n] = {
-                emoji: t,
-                sentAt: Date.now(),
-                animationType: r,
-            }),
-            (h = [
-                ...h,
-                {
-                    emojiName: t.name,
-                    userId: n,
-                },
-            ]),
-            v());
-    },
-    T = (e) => {
-        let { emoji: t } = e;
-        null != t && (_.unshift(t), (_ = (0, o.uniqBy)(_, "name")).length > d.e5 + 1 && _.pop());
-    },
-    S = (e) => {
-        let { userId: t } = e;
-        null != p[t] && delete p[t];
-    };
-class A extends (i = a.ZP.Store) {
+    S = [],
+    v = 10 * c.Z.Millis.SECOND,
+    h = (0, a.debounce)(() => {
+        let e = (0, d.cX)(E);
+        u.uv.announce(e, "polite"), (E = []);
+    }, 500);
+class b extends (l = o.ZP.Store) {
     get recentlyUsedEmojis() {
-        return _;
+        return p;
     }
     get isOnCooldown() {
         return null != r && new Date() < r;
@@ -92,14 +41,54 @@ class A extends (i = a.ZP.Store) {
         return r;
     }
     getEffectForUserId(e) {
-        return p[e];
+        return m[e];
     }
 }
-f(A, "displayName", "VoiceChannelEffectsStore");
-let N = new A(l.Z, {
-    VOICE_CHANNEL_EFFECT_CLEAR: S,
-    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: T,
-    VOICE_CHANNEL_EFFECT_SEND: I,
-    VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
-    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: O,
+(i = "displayName") in b
+    ? Object.defineProperty(b, i, {
+          value: "VoiceChannelEffectsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (b[i] = "VoiceChannelEffectsStore");
+let O = new b(s.Z, {
+    VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
+        let { userId: t } = e;
+        null != m[t] && delete m[t];
+    },
+    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
+        let { emoji: t } = e;
+        null != t && (p.unshift(t), (p = (0, a.uniqBy)(p, "name")).length > f.e5 + 1 && p.pop());
+    },
+    VOICE_CHANNEL_EFFECT_SEND: (e) => {
+        let { emoji: t, userId: n, animationType: r } = e;
+        null != t &&
+            null != r &&
+            ((m[n] = {
+                emoji: t,
+                sentAt: Date.now(),
+                animationType: r,
+            }),
+            (E = [
+                ...E,
+                {
+                    emojiName: t.name,
+                    userId: n,
+                },
+            ]),
+            h());
+    },
+    VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
+        let e = new Date();
+        if ((S = [e, ...S].slice(0, 20)).length >= 20) {
+            let t = S[S.length - 1],
+                n = e.getTime() - t.getTime();
+            n < v && (r = new Date(e.getTime() + v - n));
+        }
+    },
+    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {
+        let { cooldownEndsAtMs: t } = e;
+        r = new Date(Date.now() + t);
+    },
 });

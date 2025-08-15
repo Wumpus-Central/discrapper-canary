@@ -98,7 +98,7 @@ function x(e) {
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
         [U, G] = (0, b.cv)(M),
-        { analyticsLocations: V, parentAnalyticsLocation: B } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
+        { analyticsLocations: B, parentAnalyticsLocation: V } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
     function H(e) {
         null != k &&
             (0, p.jW)(e, async () => {
@@ -110,7 +110,7 @@ function x(e) {
                             P(
                                 {
                                     guildId: k,
-                                    sourceAnalyticsLocations: V,
+                                    sourceAnalyticsLocations: B,
                                 },
                                 t,
                             ),
@@ -133,7 +133,7 @@ function x(e) {
             handler: K,
         }),
         (0, r.jsx)(h.Gt, {
-            value: V,
+            value: B,
             children: (0, r.jsx)(d.ua7, {
                 targetElementRef: x,
                 text: A
@@ -188,7 +188,7 @@ function x(e) {
                                                         null == e || null == (t = e.onClick) || t.call(e),
                                                         D(!R),
                                                         z(),
-                                                        (0, g.v)(B, g.d.SOUNDBOARD);
+                                                        (0, g.v)(V, g.d.SOUNDBOARD);
                                                 },
                                                 onMouseEnter: (t) => {
                                                     var n, r;

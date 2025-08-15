@@ -3,8 +3,8 @@ function t(e) {
         n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
         r = "decltype\\(auto\\)",
         i = "[a-zA-Z_]\\w*::",
-        o = "<[^<>]+>",
-        a = "(?!struct)(" + r + "|" + t.optional(i) + "[a-zA-Z_]\\w*" + t.optional(o) + ")",
+        a = "<[^<>]+>",
+        o = "(?!struct)(" + r + "|" + t.optional(i) + "[a-zA-Z_]\\w*" + t.optional(a) + ")",
         s = {
             className: "type",
             begin: "\\b[a-z\\d_]*_t\\b",
@@ -387,7 +387,7 @@ function t(e) {
         },
         E = {
             className: "function",
-            begin: "(" + a + "[\\*&\\s]+)+" + _,
+            begin: "(" + o + "[\\*&\\s]+)+" + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
@@ -812,7 +812,7 @@ e.exports = function (e) {
             "run",
             "put",
         ],
-        o = [
+        a = [
             "DIGITAL_MESSAGE",
             "FIRMATA_STRING",
             "ANALOG_MESSAGE",
@@ -833,16 +833,16 @@ e.exports = function (e) {
             "HIGH",
             "LOW",
         ],
-        a = t(e),
-        s = a.keywords;
+        o = t(e),
+        s = o.keywords;
     return (
         (s.type = [...s.type, ...n]),
-        (s.literal = [...s.literal, ...o]),
+        (s.literal = [...s.literal, ...a]),
         (s.built_in = [...s.built_in, ...r]),
         (s._hints = i),
-        (a.name = "Arduino"),
-        (a.aliases = ["ino"]),
-        (a.supersetOf = "cpp"),
-        a
+        (o.name = "Arduino"),
+        (o.aliases = ["ino"]),
+        (o.supersetOf = "cpp"),
+        o
     );
 };

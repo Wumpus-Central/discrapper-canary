@@ -1,5 +1,5 @@
 n.d(t, { s: () => i });
-var r = n(695346);
+var l = n(695346);
 function i() {
-    return r.Sb.useSetting();
+    return l.Sb.useSetting();
 }

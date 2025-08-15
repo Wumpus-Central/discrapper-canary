@@ -1,8 +1,8 @@
 n.d(t, { i: () => h });
 var r = n(73800),
     i = n(186325),
-    o = n(481060),
-    a = n(588927);
+    a = n(481060),
+    o = n(588927);
 function s(e, t, n) {
     return (
         t in e
@@ -61,9 +61,9 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,8 +72,8 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = 10,
@@ -127,10 +127,10 @@ function h(e) {
         f = p(n, c.enabled),
         { config: _ } = f,
         h = d(f, ["config"]);
-    return (0, o.Yzy)(
+    return (0, a.Yzy)(
         t,
         u(l({}, h), {
-            config: null != _ ? _ : (e, n) => (t ? a.Z : a.R),
+            config: null != _ ? _ : (e, n) => (t ? o.Z : o.R),
             onRest: () => {
                 t || null == s || s();
             },

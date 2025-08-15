@@ -1,34 +1,34 @@
-n.d(t, { Z: () => f }), n(388685), n(35282);
+n.d(t, { Z: () => p }), n(388685), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(990547),
-    o = n(399606),
+    l = n(399606),
     a = n(100527),
-    s = n(213609),
-    l = n(914010),
+    o = n(213609),
+    s = n(914010),
     c = n(267101),
     u = n(675297),
     d = n(20281);
-function f(e) {
+function p(e) {
     let { code: t } = e,
-        [n, f] = t.split("-"),
-        _ = (0, c.hO)(n, f),
-        p = (0, o.e7)([l.Z], () => l.Z.getGuildId());
-    return ((0, s.Z)(
+        [n, p] = t.split("-"),
+        m = (0, c.hO)(n, p),
+        f = (0, l.e7)([s.Z], () => s.Z.getGuildId());
+    return ((0, o.Z)(
         {
             type: d.n.VIEW,
             name: i.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
             properties: {
-                guild_product_listing_id: f,
-                has_entitlement: (null == _ ? void 0 : _.has_entitlement) === !0,
+                guild_product_listing_id: p,
+                has_entitlement: (null == m ? void 0 : m.has_entitlement) === !0,
             },
         },
-        { disableTrack: null == _ },
+        { disableTrack: null == m },
     ),
-    null == _ || p !== n)
+    null == m || f !== n)
         ? null
         : (0, r.jsx)(u.H, {
-              guildProductListing: _,
+              guildProductListing: m,
               guildId: n,
               location: a.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,8 +39,8 @@ function _(e) {
                 application_id: t,
                 name: n,
                 summary: i,
-                websites: o,
-                themes: a,
+                websites: a,
+                themes: o,
                 genres: l,
                 platforms: c,
                 artwork_urls: u,
@@ -57,8 +57,8 @@ function _(e) {
                     name: n,
                     summary: i,
                     summaryLocalized: p,
-                    websites: o,
-                    themes: a,
+                    websites: a,
+                    themes: o,
                     genres: l,
                     platforms: c,
                     artwork: u,
@@ -109,8 +109,8 @@ class h extends (r = i.ZP.Store) {
         return null == r ? null : null == t ? r : "".concat(r, "?width=").concat(t.width, "&height=").concat(t.height);
     }
 }
-a(h, "displayName", "DetectableGameSupplementalStore");
-let m = new h(o.Z, {
+o(h, "displayName", "DetectableGameSupplementalStore");
+let m = new h(a.Z, {
     LOGOUT: d,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH: f,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: _,

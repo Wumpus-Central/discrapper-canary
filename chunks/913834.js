@@ -1,64 +1,63 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
-    i = n(73800),
+    l = n(73800),
     o = n(481060),
-    a = n(100527),
-    s = n(873128),
-    l = n(704041),
+    i = n(100527),
+    a = n(873128),
+    s = n(704041),
     c = n(986398),
     u = n(463031),
     d = n(607439);
-function f(e) {
+function p(e) {
     let { guild: t, message: n } = e,
-        f = i.useRef(null),
-        [_, p] = i.useState(!1),
-        h = i.useRef(!1),
-        m = (0, s.Z)({
+        p = l.useRef(null),
+        [m, g] = l.useState(!1),
+        f = l.useRef(!1),
+        b = (0, a.Z)({
             guildId: t.id,
             leaderboardId: u.z,
             intervalOffset: 0,
         }),
-        g = i.useMemo(() => {
+        h = l.useMemo(() => {
             var e;
-            if ((null == m || null == (e = m.guild_settings) ? void 0 : e.show_winner_crown) !== !0) return !1;
-            let t = m.users[0];
+            if ((null == b || null == (e = b.guild_settings) ? void 0 : e.show_winner_crown) !== !0) return !1;
+            let t = b.users[0];
             return n.author.id === (null == t ? void 0 : t.user_id);
-        }, [m, n]);
-    if (null == m || !g) return null;
-    let E = () => {
-            (h.current = !0), p(!0);
-        },
-        b = () => {
-            (h.current = !1),
-                setTimeout(() => {
-                    h.current || p(!1);
-                }, 100);
-        };
-    return (0, r.jsx)("div", {
-        className: d.badge,
-        onMouseEnter: E,
-        onMouseLeave: b,
-        children: (0, r.jsx)(o.yRy, {
-            targetElementRef: f,
-            animation: o.yRy.Animation.TRANSLATE,
-            align: "center",
-            autoInvert: !0,
-            nudgeAlignIntoViewport: !0,
-            position: "top",
-            shouldShow: _,
-            renderPopout: () =>
-                (0, r.jsx)(l.Z, {
-                    guildId: t.id,
-                    previewMode: !0,
-                    source: a.Z.MEMBER_LIST,
-                    leaderboardId: m.leaderboard_id,
-                }),
-            children: () =>
-                (0, r.jsx)(c.Z, {
-                    leaderboard: m,
-                    className: d.image,
-                    ref: f,
-                }),
-        }),
-    });
+        }, [b, n]);
+    return null != b && h
+        ? (0, r.jsx)("div", {
+              className: d.badge,
+              onMouseEnter: () => {
+                  (f.current = !0), g(!0);
+              },
+              onMouseLeave: () => {
+                  (f.current = !1),
+                      setTimeout(() => {
+                          f.current || g(!1);
+                      }, 100);
+              },
+              children: (0, r.jsx)(o.yRy, {
+                  targetElementRef: p,
+                  animation: o.yRy.Animation.TRANSLATE,
+                  align: "center",
+                  autoInvert: !0,
+                  nudgeAlignIntoViewport: !0,
+                  position: "top",
+                  shouldShow: m,
+                  renderPopout: () =>
+                      (0, r.jsx)(s.Z, {
+                          guildId: t.id,
+                          previewMode: !0,
+                          source: i.Z.MEMBER_LIST,
+                          leaderboardId: b.leaderboard_id,
+                      }),
+                  children: () =>
+                      (0, r.jsx)(c.Z, {
+                          leaderboard: b,
+                          className: d.image,
+                          ref: p,
+                      }),
+              }),
+          })
+        : null;
 }

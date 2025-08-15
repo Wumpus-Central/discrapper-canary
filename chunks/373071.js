@@ -13,8 +13,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(73800),
-    o = n(94171),
-    a = n(362383),
+    a = n(94171),
+    o = n(362383),
     s = n(731965),
     l = n(433517),
     c = n(481060),
@@ -86,7 +86,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                 );
         }
     },
-    E = (0, a.F)((e) =>
+    E = (0, o.F)((e) =>
         p(f({}, m), {
             upsertConfig: (t) =>
                 (0, s.j)(() => {
@@ -108,7 +108,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
         E((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, o.X),
+        }, a.X),
     y = (e) => {
         let t = E((t) => (null != e ? t.profileEffects[e] : null)),
             n = i.useRef([]);
@@ -130,15 +130,15 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                     },
                     r = t.config.effects.map((t) => p(f({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,
-                    o = null != i ? f({}, i) : {};
-                for (let t in o) {
-                    let n = o[t];
-                    null != n && (o[t] = p(f({}, n), { src: e(n.base64) }));
+                    a = null != i ? f({}, i) : {};
+                for (let t in a) {
+                    let n = a[t];
+                    null != n && (a[t] = p(f({}, n), { src: e(n.base64) }));
                 }
                 return p(f({}, t), {
                     config: p(f({}, t.config), {
                         effects: r,
-                        stillFrames: o,
+                        stillFrames: a,
                     }),
                 });
             }, [t])

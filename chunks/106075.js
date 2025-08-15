@@ -2,7 +2,7 @@ n.d(t, { Z: () => C }), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    a = n(114851),
+    a = n(979233),
     o = n(88693),
     s = n(611928),
     c = (n(763433), n(922122)),
@@ -46,13 +46,13 @@ function C() {
             setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
-        V = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 T(e), L && Z();
             },
             [L, Z, T],
         ),
-        B = i.useMemo(
+        V = i.useMemo(
             () =>
                 L
                     ? S.filter((e) => {
@@ -93,9 +93,9 @@ function C() {
                         !L &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: B,
+                                tabs: V,
                                 selectedTab: L ? null : N,
-                                onTabSelect: V,
+                                onTabSelect: B,
                                 onAvailableWidthChange: D,
                             }),
                         L &&

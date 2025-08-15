@@ -1,14 +1,14 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(381338),
     i = n(99815);
-let o = new Set([i.E.LOL_MOST_PLAYED_CHAMPION_ID]);
-function a(e) {
+let a = new Set([i.E.LOL_MOST_PLAYED_CHAMPION_ID]);
+function o(e) {
     return e.reduce(
         (e, t) => (
             (e[t] = {
                 id: t,
                 aggregation_type: 1,
-                selectable_for_competition: !o.has(t),
+                selectable_for_competition: !a.has(t),
             }),
             e
         ),
@@ -45,7 +45,7 @@ let l = Object.values(i.E),
             sort_by_statistic_id: i.E.LOL_TOTAL_KILLS,
             sort_desc: !0,
             interval_type: r.q.WEEKLY,
-            statistics: a(l),
+            statistics: o(l),
             application_id: "1402418696126992445",
         },
         users: [

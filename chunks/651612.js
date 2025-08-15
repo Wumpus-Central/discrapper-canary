@@ -1,23 +1,23 @@
-n.d(t, { Z: () => x }), n(539854);
+n.d(t, { Z: () => _ }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
     a = n(442837),
-    s = n(481060),
-    o = n(481051),
+    o = n(481060),
+    s = n(481051),
     c = n(871499),
     u = n(306680),
     d = n(111583),
-    h = n(459273),
-    p = n(566620),
+    p = n(459273),
+    h = n(566620),
     f = n(317381),
-    g = n(918559),
-    m = n(981631),
+    m = n(918559),
+    g = n(981631),
     b = n(388032),
     y = n(332139);
-function x(e) {
+function _(e) {
     var { channelId: t, className: n } = e,
-        x = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -38,13 +38,13 @@ function x(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let j = i.useRef(null),
-        _ = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
-        O = i.useCallback(() => {
-            let e = _ ? g.MI.NO_CHAT : g.MI.RESIZABLE;
-            (0, p.gC)(e);
-        }, [_]),
-        { unreadCount: v, mentionCount: C } = (function (e) {
+    let C = i.useRef(null),
+        x = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === m.MI.RESIZABLE),
+        v = i.useCallback(() => {
+            let e = x ? m.MI.NO_CHAT : m.MI.RESIZABLE;
+            (0, h.gC)(e);
+        }, [x]),
+        { unreadCount: j, mentionCount: O } = (function (e) {
             let t = (0, a.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
                     [u.ZP],
@@ -62,19 +62,19 @@ function x(e) {
         })(t),
         E = i.useCallback(() => {
             var e;
-            null == (e = j.current) || e.focus();
+            null == (e = C.current) || e.focus();
         }, []);
-    (0, h.yp)({
-        event: m.CkL.FOCUS_CHAT_BUTTON,
+    (0, p.yp)({
+        event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: E,
     });
-    let S = _ ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
-        I = [S];
-    C > 0 && I.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
-        v > 0 && I.push(b.intl.string(b.t.x5zAGR));
-    let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        P = C > 0 ? C : v,
-        T = P > 0;
+    let S = x ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
+        P = [S];
+    O > 0 && P.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: O })),
+        j > 0 && P.push(b.intl.string(b.t.x5zAGR));
+    let I = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+        Z = O > 0 ? O : j,
+        T = Z > 0;
     return (0, r.jsxs)("div", {
         className: y.wrapper,
         children: [
@@ -107,22 +107,22 @@ function x(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: j,
-                        onClick: O,
+                        buttonRef: C,
+                        onClick: v,
                         label: S,
-                        "aria-label": I.join(", "),
+                        "aria-label": P.join(", "),
                         tooltipPosition: "top",
-                        iconComponent: Z === g.MI.NO_CHAT ? s.sXD : s.hic,
+                        iconComponent: I === m.MI.NO_CHAT ? o.sXD : o.hic,
                         themeable: !0,
                         className: n,
                     },
-                    x,
+                    _,
                 ),
             ),
             T
-                ? (0, r.jsx)(o.Z, {
-                      hasMentions: C > 0,
-                      truncatedCount: P > 99 ? "99+" : P,
+                ? (0, r.jsx)(s.Z, {
+                      hasMentions: O > 0,
+                      truncatedCount: Z > 99 ? "99+" : Z,
                       className: y.badge,
                   })
                 : null,

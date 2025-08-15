@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(58406);
 class i extends r.g {
     requestPermissionCore(e, t) {
@@ -13,4 +13,4 @@ class i extends r.g {
     }
     openAlertModal(e) {}
 }
-let o = new i();
+let a = new i();

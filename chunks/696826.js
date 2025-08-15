@@ -13,8 +13,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(717976),
+    a = n.n(i),
+    o = n(717976),
     s = n(780384);
 n(481060);
 var l = n(44315),
@@ -114,9 +114,9 @@ function I(e, t, n) {
     return "".concat(0.5625 * e + n, "px ").concat(0.75 * e + t, "px");
 }
 function T(e) {
-    let { size: t, status: n, isMobile: r, isTyping: i, topOffset: o = 0, leftOffset: a = 0 } = e,
-        s = (o / g) * t,
-        l = (a / g) * t;
+    let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: o = 0 } = e,
+        s = (a / g) * t,
+        l = (o / g) * t;
     if (i)
         return {
             bgRadius: 0.5 * t,
@@ -260,7 +260,7 @@ function S(e) {
 function A(e, t, n) {
     let {
         bgRadius: i,
-        bgY: o,
+        bgY: a,
         bgX: s,
         bgHeight: l,
         bgWidth: c,
@@ -278,16 +278,16 @@ function A(e, t, n) {
     return (0, r.jsxs)("mask", {
         id: n,
         children: [
-            (0, r.jsx)(a.animated.rect, {
+            (0, r.jsx)(o.animated.rect, {
                 x: s,
-                y: o,
+                y: a,
                 width: c,
                 height: l,
                 rx: i,
                 ry: i,
                 fill: "white",
             }),
-            (0, r.jsx)(a.animated.rect, {
+            (0, r.jsx)(o.animated.rect, {
                 x: u,
                 y: d,
                 width: f,
@@ -296,13 +296,13 @@ function A(e, t, n) {
                 ry: p,
                 fill: "black",
             }),
-            (0, r.jsx)(a.animated.polygon, {
+            (0, r.jsx)(o.animated.polygon, {
                 points: S(t),
                 fill: "black",
                 transform: h,
                 style: { transformOrigin: m },
             }),
-            (0, r.jsx)(a.animated.circle, {
+            (0, r.jsx)(o.animated.circle, {
                 fill: "black",
                 cx: E,
                 cy: g,
@@ -344,7 +344,7 @@ function C(e, t, n) {
           };
 }
 function R(e) {
-    let { status: t, isMobile: n = !1, size: i = g, className: a, style: s, color: l } = e,
+    let { status: t, isMobile: n = !1, size: i = g, className: o, style: s, color: l } = e,
         d = t === u.Skl.ONLINE && n,
         _ = b(t, l);
     return (0, r.jsx)(
@@ -353,7 +353,7 @@ function R(e) {
             p(
                 {
                     mask: N(t, d),
-                    className: o()(f.mask, a),
+                    className: a()(f.mask, o),
                     style: s,
                 },
                 C(i, t, d),

@@ -1,30 +1,17 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
-    i = n(73800),
+    l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    s = n(442837),
-    l = n(573385),
+    i = n.n(o),
+    a = n(442837),
+    s = n(573385),
     c = n(481060),
     u = n(181430),
     d = n(606318),
-    f = n(402235),
-    _ = n(485386),
-    p = n(724913);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function m(e) {
+    p = n(402235),
+    m = n(485386),
+    g = n(724913);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,85 +22,88 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = y(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let O = function (e) {
+let h = function (e) {
     var {
             className: t,
             compact: n = !1,
             contentOnly: o = !1,
             zalgo: h = !0,
-            preview: g = !1,
-            disableInteraction: y = !1,
-            childrenRepliedMessage: O,
-            childrenExecutedCommand: v,
-            childrenHeader: I,
-            childrenSystemMessage: T,
-            childrenButtons: S,
-            childrenMessageContent: A,
-            childrenAccessories: N,
-            messageRef: C,
-            focusProps: R = {
+            preview: y = !1,
+            disableInteraction: O = !1,
+            childrenRepliedMessage: v,
+            childrenExecutedCommand: j,
+            childrenHeader: P,
+            childrenSystemMessage: x,
+            childrenButtons: w,
+            childrenMessageContent: C,
+            childrenAccessories: S,
+            messageRef: E,
+            focusProps: N = {
                 offset: {
                     left: 4,
                     right: 4,
                 },
             },
-            hasThread: P,
-            isSystemMessage: w,
-            hasReply: D,
-            author: L,
-            onMouseEnter: x,
-            onMouseLeave: M,
+            hasThread: R,
+            isSystemMessage: T,
+            hasReply: Z,
+            author: I,
+            onMouseEnter: _,
+            onMouseLeave: k,
         } = e,
-        j = b(e, [
+        M = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+            }
+            return l;
+        })(e, [
             "className",
             "compact",
             "contentOnly",
@@ -136,75 +126,75 @@ let O = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let k = (0, s.e7)([_.Z], () =>
-            (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
+    let D = (0, a.e7)([m.Z], () =>
+            (null == I ? void 0 : I.guildId) == null || (null == I ? void 0 : I.colorRoleId) == null
                 ? null
-                : _.Z.getRole(L.guildId, L.colorRoleId),
+                : m.Z.getRole(I.guildId, I.colorRoleId),
         ),
-        U = (0, f.yH)(null == L ? void 0 : L.guildId, k) && (0, d.S2)(L),
-        [G, B] = i.useState(!1),
-        Z = i.useCallback(
+        A = (0, p.yH)(null == I ? void 0 : I.guildId, D) && (0, d.S2)(I),
+        [L, G] = l.useState(!1),
+        U = l.useCallback(
             (e) => {
-                B(!0), null == x || x(e);
+                G(!0), null == _ || _(e);
             },
-            [x],
+            [_],
         ),
-        F = i.useCallback(
+        B = l.useCallback(
             (e) => {
-                B(!1), null == M || M(e);
+                G(!1), null == k || k(e);
             },
-            [M],
+            [k],
         ),
-        V = (0, u.Y)({ location: "BaseMessage" }),
-        H = (0, r.jsx)(l.d.Provider, {
+        F = (0, u.Y)({ location: "BaseMessage" }),
+        H = (0, r.jsx)(s.d.Provider, {
             value: {
-                animate: G,
-                setAnimate: B,
+                animate: L,
+                setAnimate: G,
             },
             children: (0, r.jsx)(
                 c.tEY,
-                E(m({}, R), {
+                b(f({}, N), {
                     children: (0, r.jsxs)(
                         "div",
-                        E(
-                            m(
+                        b(
+                            f(
                                 {
-                                    className: a()(t, {
-                                        [p.gradient]: U,
-                                        [p.withDisplayNameStyles]:
-                                            V &&
-                                            (null == L ? void 0 : L.displayNameStyles) != null &&
-                                            (null == L ? void 0 : L.guildId) == null,
-                                        [p.wrapper]: !0,
-                                        [p.contentOnly]: o,
-                                        [p.compact]: n,
-                                        [p.preview]: g,
-                                        [p.cozy]: !n,
-                                        [p.zalgo]: h,
-                                        [p.hasThread]: P,
-                                        [p.isSystemMessage]: w,
-                                        [p.hasReply]: D,
+                                    className: i()(t, {
+                                        [g.gradient]: A,
+                                        [g.withDisplayNameStyles]:
+                                            F &&
+                                            (null == I ? void 0 : I.displayNameStyles) != null &&
+                                            (null == I ? void 0 : I.guildId) == null,
+                                        [g.wrapper]: !0,
+                                        [g.contentOnly]: o,
+                                        [g.compact]: n,
+                                        [g.preview]: y,
+                                        [g.cozy]: !n,
+                                        [g.zalgo]: h,
+                                        [g.hasThread]: R,
+                                        [g.isSystemMessage]: T,
+                                        [g.hasReply]: Z,
                                     }),
-                                    ref: C,
+                                    ref: E,
                                 },
-                                j,
+                                M,
                             ),
                             {
                                 role: "article",
-                                onMouseEnter: Z,
-                                onMouseLeave: F,
+                                onMouseEnter: U,
+                                onMouseLeave: B,
                                 children: [
-                                    O,
                                     v,
+                                    j,
                                     (0, r.jsxs)("div", {
-                                        className: p.contents,
-                                        children: [T, I, null == T && A],
+                                        className: g.contents,
+                                        children: [x, P, null == x && C],
                                     }),
-                                    N,
-                                    null != S
+                                    S,
+                                    null != w
                                         ? (0, r.jsx)("div", {
-                                              className: p.buttonContainer,
-                                              children: S,
+                                              className: g.buttonContainer,
+                                              children: w,
                                           })
                                         : null,
                                 ],
@@ -214,5 +204,5 @@ let O = function (e) {
                 }),
             ),
         });
-    return y ? (0, r.jsx)(c.Rny, { children: H }) : H;
+    return O ? (0, r.jsx)(c.Rny, { children: H }) : H;
 };

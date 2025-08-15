@@ -23,7 +23,7 @@ function g(e) {
         j = (0, o.e7)([c.default], () => c.default.getId() === n),
         y = (0, s.kQ)(u),
         O = m[u.type](),
-        x =
+        h =
             j && u.games.length > 0
                 ? (t = u.type) === l.l.FAVORITE_GAMES
                     ? f.intl.string(f.t.wiXdER)
@@ -41,11 +41,11 @@ function g(e) {
                         id: d,
                         children: O,
                     }),
-                    null != x &&
+                    null != h &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: x,
+                            children: h,
                         }),
                 ],
             }),

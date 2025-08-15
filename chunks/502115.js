@@ -1,5 +1,5 @@
 n.d(t, {
-    FJ: () => l,
+    FJ: () => s,
     HL: () => u,
     Yc: () => d,
     xe: () => c,
@@ -7,58 +7,58 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(834129),
+    l = n(834129),
     a = n(388032),
-    s = n(304946);
-function l(e) {
-    let { message: t, compact: i, onClick: l } = e;
-    return (0, r.jsx)(o.Z, {
+    o = n(304946);
+function s(e) {
+    let { message: t, compact: i, onClick: s } = e;
+    return (0, r.jsx)(l.Z, {
         icon: n(508933),
         timestamp: t.timestamp,
         compact: i,
-        contentClassName: s.messageContent,
-        children: a.intl.format(a.t.bYdG3d, { onClick: l }),
+        contentClassName: o.messageContent,
+        children: a.intl.format(a.t.bYdG3d, { onClick: s }),
     });
 }
 function c(e) {
     let { message: t, compact: i } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(l.Z, {
         icon: n(324606),
         timestamp: t.timestamp,
         compact: i,
-        contentClassName: s.messageContent,
+        contentClassName: o.messageContent,
         children: a.intl.string(a.t.tu6tOT),
     });
 }
 function u(e) {
     let { message: t, compact: n } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(i.Mgn, {
             size: "custom",
             width: 20,
             height: 20,
             color: "currentColor",
-            className: s.alertIcon,
+            className: o.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: s.messageContent,
+        contentClassName: o.messageContent,
         children: a.intl.string(a.t.vzfXqq),
     });
 }
 function d(e) {
     let { message: t, compact: n } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(i.Mgn, {
             size: "custom",
             width: 20,
             height: 20,
             color: "currentColor",
-            className: s.alertIcon,
+            className: o.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: s.messageContent,
+        contentClassName: o.messageContent,
         children: a.intl.string(a.t["/Tfvyc"]),
     });
 }

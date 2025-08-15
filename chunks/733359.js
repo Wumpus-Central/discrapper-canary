@@ -1,58 +1,53 @@
-var r = n(581079),
-    i = 55296,
-    o = 56319,
-    a = 56320,
-    s = 57343,
-    l = /[\uD800-\uDFFF]/;
-function c(e) {
-    return i <= e && e <= s;
+var n = r(581079),
+    i = /[\uD800-\uDFFF]/;
+function o(t) {
+    return 55296 <= t && t <= 57343;
 }
-function u(e) {
-    return l.test(e);
+function a(t) {
+    return i.test(t);
 }
-function d(e, t) {
-    return 1 + c(e.charCodeAt(t));
+function u(t, e) {
+    return 1 + o(t.charCodeAt(e));
 }
-function f(e) {
-    if (!u(e)) return e.length;
-    for (var t = 0, n = 0; n < e.length; n += d(e, n)) t++;
-    return t;
-}
-function _(e, t, n) {
-    if (((t = t || 0), (n = void 0 === n ? 1 / 0 : n || 0), !u(e))) return e.substr(t, n);
-    var r = e.length;
-    if (r <= 0 || t > r || n <= 0) return "";
+function s(t, e, r) {
+    if (((e = e || 0), (r = void 0 === r ? 1 / 0 : r || 0), !a(t))) return t.substr(e, r);
+    var n = t.length;
+    if (n <= 0 || e > n || r <= 0) return "";
     var i = 0;
-    if (t > 0) {
-        for (; t > 0 && i < r; t--) i += d(e, i);
-        if (i >= r) return "";
-    } else if (t < 0) {
-        for (i = r; t < 0 && 0 < i; t++) i -= d(e, i - 1);
+    if (e > 0) {
+        for (; e > 0 && i < n; e--) i += u(t, i);
+        if (i >= n) return "";
+    } else if (e < 0) {
+        for (i = n; e < 0 && 0 < i; e++) i -= u(t, i - 1);
         i < 0 && (i = 0);
     }
-    var o = r;
-    if (n < r) for (o = i; n > 0 && o < r; n--) o += d(e, o);
-    return e.substring(i, o);
+    var o = n;
+    if (r < n) for (o = i; r > 0 && o < n; r--) o += u(t, o);
+    return t.substring(i, o);
 }
-e.exports = {
-    getCodePoints: function (e) {
-        for (var t = [], n = 0; n < e.length; n += d(e, n)) t.push(e.codePointAt(n));
-        return t;
+t.exports = {
+    getCodePoints: function (t) {
+        for (var e = [], r = 0; r < t.length; r += u(t, r)) e.push(t.codePointAt(r));
+        return e;
     },
-    getUTF16Length: d,
-    hasSurrogateUnit: u,
-    isCodeUnitInSurrogateRange: c,
-    isSurrogatePair: function (e, t) {
-        if (((0 <= t && t < e.length) || r(!1), t + 1 === e.length)) return !1;
-        var n = e.charCodeAt(t),
-            l = e.charCodeAt(t + 1);
-        return i <= n && n <= o && a <= l && l <= s;
+    getUTF16Length: u,
+    hasSurrogateUnit: a,
+    isCodeUnitInSurrogateRange: o,
+    isSurrogatePair: function (t, e) {
+        if (((0 <= e && e < t.length) || n(!1), e + 1 === t.length)) return !1;
+        var r = t.charCodeAt(e),
+            i = t.charCodeAt(e + 1);
+        return 55296 <= r && r <= 56319 && 56320 <= i && i <= 57343;
     },
-    strlen: f,
-    substring: function (e, t, n) {
-        (t = t || 0) < 0 && (t = 0), (n = void 0 === n ? 1 / 0 : n || 0) < 0 && (n = 0);
-        var r = Math.abs(n - t);
-        return _(e, (t = t < n ? t : n), r);
+    strlen: function (t) {
+        if (!a(t)) return t.length;
+        for (var e = 0, r = 0; r < t.length; r += u(t, r)) e++;
+        return e;
     },
-    substr: _,
+    substring: function (t, e, r) {
+        (e = e || 0) < 0 && (e = 0), (r = void 0 === r ? 1 / 0 : r || 0) < 0 && (r = 0);
+        var n = Math.abs(r - e);
+        return s(t, (e = e < r ? e : r), n);
+    },
+    substr: s,
 };

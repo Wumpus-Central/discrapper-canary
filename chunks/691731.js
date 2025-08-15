@@ -1,3 +1,4 @@
+n.d(t, { g: () => r });
 function r(e, t) {
     var n, r;
     return (
@@ -6,4 +7,3 @@ function r(e, t) {
         e.party.id === t.party.id
     );
 }
-n.d(t, { g: () => r });

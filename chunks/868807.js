@@ -1,75 +1,72 @@
-n.d(t, { a: () => h }), n(388685);
+n.d(t, { a: () => f }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(442837),
+    l = n(442837),
     a = n(544891),
-    s = n(570140),
-    l = n(375954),
+    o = n(570140),
+    s = n(375954),
     c = n(306680),
     u = n(748902),
     d = n(981631);
-let f = 25,
-    _ = new Set(),
-    p = null;
-function h(e) {
-    let { id: t } = e,
+let p = new Set(),
+    h = null;
+function f(e) {
+    var t;
+    let { id: n } = e,
         {
-            loaded: n,
-            message: r,
-            error: i,
-        } = (0, o.cj)([u.Z, l.Z, c.ZP], () => {
-            let e = c.ZP.lastMessageId(t),
-                n = u.Z.getMessageRequestPreview(t);
-            if (null == n.message && null != e) {
-                let n = l.Z.getMessage(t, e);
-                if (null != n)
+            loaded: r,
+            message: i,
+            error: a,
+        } = (0, l.cj)([u.Z, s.Z, c.ZP], () => {
+            let e = c.ZP.lastMessageId(n),
+                t = u.Z.getMessageRequestPreview(n);
+            if (null == t.message && null != e) {
+                let t = s.Z.getMessage(n, e);
+                if (null != t)
                     return {
                         loaded: !0,
                         error: !1,
-                        message: n,
+                        message: t,
                     };
             }
-            return n;
-        }, [t]),
-        a = (0, o.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
+            return t;
+        }, [n]),
+        o = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        !n && null == r && a && m(t),
+        !r && null == i && o && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
         {
-            loaded: n,
-            error: i,
-            message: r,
+            loaded: r,
+            error: a,
+            message: i,
         }
     );
 }
-function m(e) {
-    _.add(e), null == p && (p = setTimeout(g, 0));
-}
-async function g() {
+async function m() {
     try {
-        for (; !i().isEmpty(_); ) await E();
+        for (; !i().isEmpty(p); ) await g();
     } finally {
-        p = null;
+        h = null;
     }
 }
-async function E() {
-    let e = Array.from(_).slice(0, f);
+async function g() {
+    let e = Array.from(p).slice(0, 25);
     try {
         let t = await a.tn.get({
             url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e },
             rejectWithError: !0,
         });
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS",
             requestedChannelIds: e,
             supplementalData: t.body,
         });
     } catch (t) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR",
             requestedChannelIds: e,
         });
     } finally {
-        for (let t of e) _.delete(t);
+        for (let t of e) p.delete(t);
     }
 }

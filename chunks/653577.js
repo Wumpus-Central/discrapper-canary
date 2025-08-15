@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(388032),
     m = n(158871),
     b = n(430864);
-function O(e) {
+function _(e) {
     let {
             channel: t,
             connected: n,
             hovered: l,
-            subtitle: O,
-            onClick: _,
+            subtitle: _,
+            onClick: O,
             enableHangStatus: y,
             allowChannelTopic: v,
         } = e,
@@ -28,7 +28,7 @@ function O(e) {
         C = null != j && j.length > 0,
         E = (0, c.ZP)(t, !0),
         x = (!y || !!v) && E,
-        S = null != O && O.length > 0;
+        S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             C &&
@@ -40,11 +40,11 @@ function O(e) {
         null == t.guild_id)
     )
         return null;
-    let P = o()(m.statusDiv, n && x ? m.hoverable : null);
+    let I = o()(m.statusDiv, n && x ? m.hoverable : null);
     return C
         ? (0, r.jsx)(s.P3F, {
-              className: P,
-              onClick: x ? _ : void 0,
+              className: I,
+              onClick: x ? O : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
@@ -53,8 +53,8 @@ function O(e) {
           })
         : n && x && (!S || l)
           ? (0, r.jsxs)(s.P3F, {
-                className: P,
-                onClick: _,
+                className: I,
+                onClick: O,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
@@ -69,6 +69,6 @@ function O(e) {
                 ],
             })
           : S
-            ? (0, r.jsx)(d.Z, { children: O })
+            ? (0, r.jsx)(d.Z, { children: _ })
             : null;
 }

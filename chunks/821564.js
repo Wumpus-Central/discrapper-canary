@@ -2,18 +2,18 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(846027),
-    s = n(131951),
-    l = n(358085),
+    o = n(131951),
+    s = n(358085),
     c = n(981631),
     u = n(388032);
 function d(e) {
-    let t = !l.isPlatformEmbedded,
-        n = (0, i.e7)([s.Z], () => s.Z.getMode()),
+    let t = !s.isPlatformEmbedded,
+        n = (0, i.e7)([o.Z], () => o.Z.getMode()),
         d = (t, i) =>
             (0, r.jsx)(
-                o.k5B,
+                l.k5B,
                 {
                     id: t,
                     group: "input-modes",

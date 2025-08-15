@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    o = n.n(i),
-    a = n(911969),
-    s = n(937053);
-function l(e) {
-    let { divider: t, spacing: n } = e;
-    return (0, r.jsx)("div", {
-        className: o()({
-            [s.spacingLarge]: n === a.US.LARGE,
-            [s.divider]: t,
+r.d(t, { Z: () => c });
+var n = r(255367);
+r(73800);
+var l = r(120356),
+    i = r.n(l),
+    o = r(911969),
+    a = r(937053);
+function c(e) {
+    let { divider: t, spacing: r } = e;
+    return (0, n.jsx)("div", {
+        className: i()({
+            [a.spacingLarge]: r === o.US.LARGE,
+            [a.divider]: t,
         }),
     });
 }

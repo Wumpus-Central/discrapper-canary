@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,8 +43,8 @@ class d extends (r = i.ZP.Store) {
         return s.isAnimated;
     }
 }
-a(d, "displayName", "WowMomentConfirmationStore");
-let f = new d(o.Z, {
+o(d, "displayName", "WowMomentConfirmationStore");
+let f = new d(a.Z, {
     LOGOUT: c,
     WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION: u,
 });

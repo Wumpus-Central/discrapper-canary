@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(399606),
     l = n(343817),
     c = n(667202),
@@ -33,40 +33,40 @@ var r = n(255367),
 let C = "VoiceChannelStatusModal",
     R = 500;
 function P(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: P } = e,
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: P } = e,
         w = b.Z.getCurrentConfig({ location: "VoiceChannelStatusModal" }, { autoTrackExposure: !0 }).enabled,
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
         [x, M] = i.useState(null != D ? D : ""),
-        [j, k] = i.useState(!1),
+        [k, j] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        Z = x.length > R;
+        V = x.length > R;
     i.useEffect(() => {
         I.default.track(T.rMx.OPEN_MODAL, {
             type: "Voice Channel Topic Modal",
             guild_id: t.guild_id,
-            location_stack: o,
+            location_stack: a,
         });
-    }, [t.guild_id, o]);
+    }, [t.guild_id, a]);
     let F = (e) => {
             G(new l.Hx(e, e.status).getAnyErrorMessage());
         },
-        V = (e) => {
+        Z = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = _.Z.validateMessage(n, B, t.id);
-                return G(e), k(!1), { hasErrors: !0 };
+                return G(e), j(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         H = async (e) => {
-            x === D && P(), null == e || e.preventDefault(), G(null), k(!0);
+            x === D && P(), null == e || e.preventDefault(), G(null), j(!0);
             let n = x.length,
                 r = x.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = y.ZP.parse(t, x),
-                { hasErrors: a } = V(i);
-            if (!a) {
+                { hasErrors: o } = Z(i);
+            if (!o) {
                 try {
                     let e = await f.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
@@ -76,14 +76,14 @@ function P(e) {
                               media_session_id: L,
                               raw_length: n,
                               text_length: r,
-                              location_stack: o,
+                              location_stack: a,
                           }),
                           P())
                         : F(e);
                 } catch (e) {
                     F(e);
                 }
-                k(!1);
+                j(!1);
             }
         },
         [Y, W] = i.useState((0, m.JM)(x)),
@@ -91,7 +91,7 @@ function P(e) {
             M(t), W(n);
         },
         z = async () => (
-            Z || j || (await H()),
+            V || k || (await H()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0,
@@ -145,8 +145,8 @@ function P(e) {
                   },
                   {
                       variant: "primary",
-                      loading: j,
-                      disabled: Z,
+                      loading: k,
+                      disabled: V,
                       text: S.intl.string(S.t.XqK2Iy),
                       onClick: H,
                   },
@@ -159,7 +159,7 @@ function P(e) {
               children: (0, r.jsxs)(d.Y0X, {
                   transitionState: n,
                   size: d.CgR.SMALL,
-                  className: a()(A.modal, A.gradientBorder),
+                  className: o()(A.modal, A.gradientBorder),
                   parentComponent: "VoiceChannelStatusModal",
                   children: [
                       (0, r.jsxs)(d.hzk, {
@@ -206,9 +206,9 @@ function P(e) {
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
-                                  submitting: j,
+                                  submitting: k,
                                   className: A.button,
-                                  disabled: Z,
+                                  disabled: V,
                                   children: S.intl.string(S.t.XqK2Iy),
                               }),
                           ],

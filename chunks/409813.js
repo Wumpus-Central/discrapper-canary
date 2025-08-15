@@ -10,11 +10,11 @@ n.d(t, {
     n(415506);
 var r = n(73800),
     i = n(881052),
-    o = n(710845),
-    a = n(122289),
+    a = n(710845),
+    o = n(122289),
     s = n(45572),
     l = n(388032);
-let c = new o.Z("PaymentSteps");
+let c = new a.Z("PaymentSteps");
 var u = (function (e) {
     return (
         (e.PAYMENT_TYPE = "payment_type"),
@@ -104,7 +104,7 @@ function _(e) {
 }
 function p(e) {
     if (null != e) {
-        if (!(e instanceof i.HF)) throw (c.error(e), (0, a.q2)(e), Error("Unexpected error type"));
+        if (!(e instanceof i.HF)) throw (c.error(e), (0, o.q2)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }

@@ -1,24 +1,24 @@
 n.d(t, {
     GG: () => a,
-    R2: () => s,
-    h7: () => i,
-    rh: () => o,
+    R2: () => o,
+    h7: () => l,
+    rh: () => i,
 });
 var r = n(570140);
-function i(e, t, n) {
-    return new Promise((i) => {
+function l(e, t, n) {
+    return new Promise((l) => {
         setTimeout(() => {
             r.Z.dispatch({
                 type: "ACTIVITY_INVITE_MODAL_OPEN",
                 activity: e,
                 isPrivate: t,
                 context: n,
-                resolve: i,
+                resolve: l,
             });
         }, 0);
     });
 }
-function o(e) {
+function i(e) {
     r.Z.dispatch({
         type: "ACTIVITY_INVITE_MODAL_QUERY",
         query: e,
@@ -30,7 +30,7 @@ function a(e) {
         channelId: e,
     });
 }
-function s(e) {
+function o(e) {
     r.Z.dispatch({
         type: "ACTIVITY_INVITE_MODAL_SEND",
         userId: e,

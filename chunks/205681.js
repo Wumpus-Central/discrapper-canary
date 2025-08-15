@@ -1,15 +1,15 @@
-var r = n(733359),
-    i = n(65183).OrderedSet,
-    o = r.substr,
+var n = r(733359),
+    i = r(65183).OrderedSet,
+    o = n.substr,
     a = i();
-e.exports = function (e, t) {
-    var n = Array(e.length).fill(a);
+t.exports = function (t, e) {
+    var r = Array(t.length).fill(a);
     return (
-        t &&
-            t.forEach(function (t) {
-                for (var r = o(e, 0, t.offset).length, i = r + o(e, t.offset, t.length).length; r < i; )
-                    (n[r] = n[r].add(t.style)), r++;
+        e &&
+            e.forEach(function (e) {
+                for (var n = o(t, 0, e.offset).length, i = n + o(t, e.offset, e.length).length; n < i; )
+                    (r[n] = r[n].add(e.style)), n++;
             }),
-        n
+        r
     );
 };

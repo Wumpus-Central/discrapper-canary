@@ -2,8 +2,8 @@ n.d(t, { Z: () => w });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -91,9 +91,9 @@ function w(e) {
             userId: t.id,
             onAction: L,
         }),
-        M = (0, a.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        j = (0, _.Z)(i),
-        k = (0, u.ZP)(i),
+        M = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
+        k = (0, _.Z)(i),
+        j = (0, u.ZP)(i),
         { channelStatusEnabled: U } = (0, f.D)({ location: "UserProfileVoiceActivityCard" }),
         G = () => {
             if (t.id !== n.id) return null;
@@ -112,7 +112,7 @@ function w(e) {
                     onClose: R,
                 }),
             }),
-        Z =
+        V =
             i.isDM() || i.isGroupDM()
                 ? S.intl.string(S.t["9FaEzs"])
                 : i.isGuildStageVoice()
@@ -122,13 +122,13 @@ function w(e) {
         value: D,
         children: (0, r.jsxs)(g.Z, {
             ref: x,
-            className: o()(A.card, N),
+            className: a()(A.card, N),
             onAction: L,
             onClose: R,
-            "aria-label": "".concat(Z, ", ").concat(k),
+            "aria-label": "".concat(V, ", ").concat(j),
             children: [
                 (0, r.jsx)(E.Z, {
-                    text: Z,
+                    text: V,
                     tags: G(),
                     contextMenu: (0, r.jsx)(I.Z, {
                         display: "voice",
@@ -142,7 +142,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: j,
+                                users: k,
                                 channel: i,
                             }),
                             (0, r.jsxs)("div", {

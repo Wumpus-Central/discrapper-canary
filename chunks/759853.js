@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,20 +14,20 @@ var r = n(255367),
     f = n(675654),
     x = n(674386),
     h = n(197857);
-let j = ["#51BC9D"],
-    b = (e) => {
+let b = ["#51BC9D"],
+    _ = (e) => {
         var t;
         let {
                 expansionSpring: n,
                 overlayRef: o,
-                quest: b,
-                progressBarRef: _,
+                quest: _,
+                progressBarRef: j,
                 isExpanded: v,
                 isHovered: C,
                 shouldShowRewardsCTAWhenCollapsed: y,
             } = e,
             { completionSpring: E, startCompletionAnimation: O } = (0, g.G)(),
-            S = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
+            S = (null == (t = _.userStatus) ? void 0 : t.completedAt) != null,
             T = s.useRef(!1),
             w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
             P = s.useRef(null),
@@ -44,7 +44,7 @@ let j = ["#51BC9D"],
             Q = (0, i.uR)(R, k),
             D = s.useCallback(() => {
                 if (w) return;
-                let e = _.current,
+                let e = j.current,
                     t = P.current;
                 if (null != t && null != e && Q.isReady) {
                     var n, r, s, o, a, i;
@@ -135,7 +135,7 @@ let j = ["#51BC9D"],
                         100,
                     );
                 }
-            }, [_, P, Q, w]),
+            }, [j, P, Q, w]),
             V = (0, d.Z)(v);
         return (s.useEffect(() => {
             S && v && !V && (O(), D());
@@ -188,7 +188,7 @@ let j = ["#51BC9D"],
                               (0, r.jsx)(i.Ji, {
                                   ref: q,
                                   sprites: [h],
-                                  colors: j,
+                                  colors: b,
                                   spriteWidth: f.Ko,
                                   spriteHeight: f.Ko,
                               }),

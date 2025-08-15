@@ -105,8 +105,8 @@ let t = [
     );
 e.exports = function (e) {
     let i = ["npm", "print"],
-        o = ["yes", "no", "on", "off", "it", "that", "void"],
-        a = [
+        a = ["yes", "no", "on", "off", "it", "that", "void"],
+        o = [
             "then",
             "unless",
             "until",
@@ -138,8 +138,8 @@ e.exports = function (e) {
             "__indexOf",
         ],
         s = {
-            keyword: t.concat(a),
-            literal: n.concat(o),
+            keyword: t.concat(o),
+            literal: n.concat(a),
             built_in: r.concat(i),
         },
         l = "[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*",

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(224706),
@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(307741),
     m = n(726332);
 function g(e) {
-    let { applicationId: t, name: n, setPopoutRef: o, onClose: g } = e,
+    let { applicationId: t, name: n, setPopoutRef: a, onClose: g } = e,
         E = (0, f.q)(t),
         b = (0, s.e7)([_.Z], () => _.Z.getGame(t)),
         {
@@ -36,13 +36,13 @@ function g(e) {
         u.ZP.fetchApplication(t), c.Z.getDetectableGamesSupplemental([t]);
     }, [t]);
     i.useEffect(() => {
-        null == o || o(null == T ? void 0 : T.current);
-    }, [T, o]);
+        null == a || a(null == T ? void 0 : T.current);
+    }, [T, a]);
     let A = i.useMemo(
         () =>
             y || v
                 ? (0, r.jsx)("div", {
-                      className: a()(m.container, m.spinnerContainer),
+                      className: o()(m.container, m.spinnerContainer),
                       children: (0, r.jsx)(l.$jN, {}),
                   })
                 : O || I || null == E || null == b

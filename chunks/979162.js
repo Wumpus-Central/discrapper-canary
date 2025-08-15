@@ -1,85 +1,93 @@
-var r = n(630685),
-    i = n(295864),
-    o = n(534978),
-    a = n(581079),
-    s = n(613078),
-    l = n(467159);
-function c(e) {
-    for (
-        ;
-        e.firstChild && ((s(e.firstChild) && "true" === e.firstChild.getAttribute("data-blocks")) || i(e.firstChild));
-    )
-        e = e.firstChild;
-    return e;
-}
-function u(e) {
-    for (; e.lastChild && ((s(e.lastChild) && "true" === e.lastChild.getAttribute("data-blocks")) || i(e.lastChild)); )
-        e = e.lastChild;
-    return e;
-}
-function d(e, t, n) {
-    var o = t,
-        d = r(o);
+var n = r(630685),
+    i = r(295864),
+    o = r(534978),
+    a = r(581079),
+    u = r(613078),
+    s = r(467159);
+function c(t, e, r) {
+    var o = e,
+        c = n(o);
     if (
-        (null != d || (e && (e === o || e.firstChild === o)) || a(!1),
-        e === o &&
-            (s((o = o.firstChild)) || a(!1),
+        (null != c || (t && (t === o || t.firstChild === o)) || a(!1),
+        t === o &&
+            (u((o = o.firstChild)) || a(!1),
             "true" !== o.getAttribute("data-contents") && a(!1),
-            n > 0 && (n = o.childNodes.length)),
-        0 === n)
+            r > 0 && (r = o.childNodes.length)),
+        0 === r)
     ) {
-        var _ = null;
+        var f = null;
+        if (null != c) f = c;
+        else {
+            var p = (function (t) {
+                for (
+                    ;
+                    t.firstChild &&
+                    ((u(t.firstChild) && "true" === t.firstChild.getAttribute("data-blocks")) || i(t.firstChild));
+                )
+                    t = t.firstChild;
+                return t;
+            })(o);
+            f = s(i(p));
+        }
         return {
-            key: (_ = null != d ? d : l(i(c(o)))),
+            key: f,
             offset: 0,
         };
     }
-    var p = o.childNodes[n - 1],
-        h = null,
-        m = null;
-    if (i(p)) {
-        var g = u(p);
-        (h = l(i(g))), (m = f(g));
-    } else (h = l(d)), (m = f(p));
+    var h = o.childNodes[r - 1],
+        d = null,
+        g = null;
+    if (i(h)) {
+        var y = (function (t) {
+            for (
+                ;
+                t.lastChild &&
+                ((u(t.lastChild) && "true" === t.lastChild.getAttribute("data-blocks")) || i(t.lastChild));
+            )
+                t = t.lastChild;
+            return t;
+        })(h);
+        (d = s(i(y))), (g = l(y));
+    } else (d = s(c)), (g = l(h));
     return {
-        key: h,
-        offset: m,
+        key: d,
+        offset: g,
     };
 }
-function f(e) {
-    var t = e.textContent;
-    return "\n" === t ? 0 : t.length;
+function l(t) {
+    var e = t.textContent;
+    return "\n" === e ? 0 : e.length;
 }
-e.exports = function (e, t, n, i, a, s) {
-    var c = n.nodeType === Node.TEXT_NODE,
-        u = a.nodeType === Node.TEXT_NODE;
-    if (c && u)
+t.exports = function (t, e, r, i, a, u) {
+    var l = r.nodeType === Node.TEXT_NODE,
+        f = a.nodeType === Node.TEXT_NODE;
+    if (l && f)
         return {
-            selectionState: o(e, l(r(n)), i, l(r(a)), s),
+            selectionState: o(t, s(n(r)), i, s(n(a)), u),
             needsRecovery: !1,
         };
-    var f = null,
-        _ = null,
-        p = !0;
+    var p = null,
+        h = null,
+        d = !0;
     return (
-        c
-            ? ((f = {
-                  key: l(r(n)),
+        l
+            ? ((p = {
+                  key: s(n(r)),
                   offset: i,
               }),
-              (_ = d(t, a, s)))
-            : u
-              ? ((_ = {
-                    key: l(r(a)),
-                    offset: s,
+              (h = c(e, a, u)))
+            : f
+              ? ((h = {
+                    key: s(n(a)),
+                    offset: u,
                 }),
-                (f = d(t, n, i)))
-              : ((f = d(t, n, i)),
-                (_ = d(t, a, s)),
-                n === a && i === s && (p = !!n.firstChild && "BR" !== n.firstChild.nodeName)),
+                (p = c(e, r, i)))
+              : ((p = c(e, r, i)),
+                (h = c(e, a, u)),
+                r === a && i === u && (d = !!r.firstChild && "BR" !== r.firstChild.nodeName)),
         {
-            selectionState: o(e, f.key, f.offset, _.key, _.offset),
-            needsRecovery: p,
+            selectionState: o(t, p.key, p.offset, h.key, h.offset),
+            needsRecovery: d,
         }
     );
 };

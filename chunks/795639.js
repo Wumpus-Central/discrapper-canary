@@ -17,22 +17,22 @@ var r = n(255367),
     b = n(313201),
     j = n(70097),
     v = n(374794),
-    C = n(470623),
-    _ = n(983200),
+    _ = n(470623),
+    C = n(983200),
     y = n(127654),
-    O = n(809639),
-    w = n(388032),
-    P = n(272210);
+    w = n(809639),
+    T = n(388032),
+    O = n(272210);
 let S = [
         {
             name: "Media Post Thumbnail",
             extensions: ["jpg", "jpeg", "png", "gif", "webp"],
         },
     ],
-    T = (0, b.hQ)();
-function N(e) {
+    N = (0, b.hQ)();
+function P(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        a = (0, _.tu)({
+        a = (0, C.tu)({
             numAttachments: t.length,
             containerWidth: n,
             containerHeight: i,
@@ -48,12 +48,12 @@ function N(e) {
                         !0 === e.isVideo
                             ? (0, r.jsx)(j.Z, {
                                   src: e.src,
-                                  className: P.thumbnail,
+                                  className: O.thumbnail,
                                   "aria-hidden": !0,
                               })
                             : (0, r.jsx)("img", {
                                   src: e.src,
-                                  className: P.thumbnail,
+                                  className: O.thumbnail,
                                   "aria-hidden": !0,
                                   alt: null != (n = null == e ? void 0 : e.alt) ? n : "",
                               }),
@@ -66,13 +66,13 @@ function N(e) {
 let I = (e) => {
     var t;
     let { parentChannel: a } = e,
-        { textAreaState: s } = (0, C.xH)((e) => {
+        { textAreaState: s } = (0, _.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
         b = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        j = (0, O.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
-        _ = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
+        j = (0, w.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
+        C = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
         I = null != j && j.length > 0,
         E = i.useMemo(() => {
             let e = (null == j ? void 0 : j.length) > 1 ? 1.15 : 1;
@@ -83,7 +83,7 @@ let I = (e) => {
         }, [j]),
         R = i.useCallback(
             (e) => {
-                null != _ && h.Z.remove(a.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                null != C && h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                     (0, y.d)(e.currentTarget.files, a, f.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
@@ -91,13 +91,13 @@ let I = (e) => {
                     }),
                     (e.currentTarget.value = null);
             },
-            [a, _],
+            [a, C],
         ),
         M = (e) => {
             e.stopPropagation(),
-                (null == _ ? void 0 : _.upload) != null &&
+                (null == C ? void 0 : C.upload) != null &&
                     (0, m.ZDy)(async () => {
-                        let e = _.upload;
+                        let e = C.upload;
                         o()(null != e, "upload should not be null");
                         let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                         return (n) => {
@@ -163,37 +163,37 @@ let I = (e) => {
         },
         Z = (0, r.jsx)(v.Z, {
             color: u.Tt.CUSTOM,
-            className: P.uploadFileInputContainer,
-            innerClassName: P.uploadThumbnailContainer,
+            className: O.uploadFileInputContainer,
+            innerClassName: O.uploadThumbnailContainer,
             onChange: R,
             multiple: !1,
             "aria-hidden": !0,
             filters: S,
-            "aria-describedby": T,
-            "aria-label": I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
+            "aria-describedby": N,
+            "aria-label": I ? T.intl.string(T.t.MxJI3d) : T.intl.string(T.t.CbiofX),
             children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(N, {
+                          (0, r.jsx)(P, {
                               mediaAttachments: j,
                               containerWidth: E.width,
                               containerHeight: E.height,
                           }),
                           (0, r.jsxs)("div", {
-                              className: l()(P.changeThumbnailLabelContainer, {
-                                  [P.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
+                              className: l()(O.changeThumbnailLabelContainer, {
+                                  [O.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
                               }),
                               children: [
                                   (0, r.jsx)(m.Text, {
                                       variant: "text-xs/medium",
                                       color: "header-secondary",
-                                      children: w.intl.string(w.t.MxJI3d),
+                                      children: T.intl.string(T.t.MxJI3d),
                                   }),
-                                  null == _ &&
+                                  null == C &&
                                       (0, r.jsx)(m.vdY, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: P.editIcon,
+                                          className: O.editIcon,
                                       }),
                               ],
                           }),
@@ -206,27 +206,27 @@ let I = (e) => {
                               width: 39,
                               height: 39,
                               color: "currentColor",
-                              className: P.uploadIcon,
+                              className: O.uploadIcon,
                           }),
                           (0, r.jsx)(m.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: w.intl.string(w.t.CbiofX),
+                              children: T.intl.string(T.t.CbiofX),
                           }),
                       ],
                   }),
         });
     return (0, r.jsx)("div", {
-        className: P.thumbnailContainer,
+        className: O.thumbnailContainer,
         style: E,
         children:
-            null != _
+            null != C
                 ? (0, r.jsx)(p.Z, {
                       actions: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(x.Z, {
-                                  className: P.action,
-                                  tooltip: w.intl.string(w.t.Y8ujqq),
+                                  className: O.action,
+                                  tooltip: T.intl.string(T.t.Y8ujqq),
                                   onClick: M,
                                   children: (0, r.jsx)(m.vdY, {
                                       size: "xs",
@@ -234,9 +234,9 @@ let I = (e) => {
                                   }),
                               }),
                               (0, r.jsx)(x.Z, {
-                                  className: P.action,
-                                  tooltip: w.intl.string(w.t.vN7REx),
-                                  onClick: () => h.Z.remove(a.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                                  className: O.action,
+                                  tooltip: T.intl.string(T.t.vN7REx),
+                                  onClick: () => h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {
                                       size: "md",
@@ -246,12 +246,12 @@ let I = (e) => {
                           ],
                       }),
                       draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
-                      id: _.id,
+                      id: C.id,
                       channelId: a.id,
                       handleEditModal: M,
                       keyboardModeEnabled: b,
                       size: p.q.SMALL,
-                      className: P.attachmentListItem,
+                      className: O.attachmentListItem,
                       children: Z,
                   })
                 : Z,

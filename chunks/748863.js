@@ -143,8 +143,8 @@ e.exports = function (e) {
             built_in: t,
             literal: r,
         },
-        o = e.inherit(e.TITLE_MODE, { begin: "[a-zA-Z](\\.?\\w)*" }),
-        a = {
+        a = e.inherit(e.TITLE_MODE, { begin: "[a-zA-Z](\\.?\\w)*" }),
+        o = {
             className: "number",
             variants: [
                 { begin: "\\b(0b[01']+)" },
@@ -189,14 +189,14 @@ e.exports = function (e) {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d],
         });
-    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]),
+    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]),
         (d.contains = [
             p,
             f,
             c,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            a,
+            o,
             e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ }),
         ]);
     let h = {
@@ -205,7 +205,7 @@ e.exports = function (e) {
         m = {
             begin: "<",
             end: ">",
-            contains: [{ beginKeywords: "in out" }, o],
+            contains: [{ beginKeywords: "in out" }, a],
         },
         g = e.IDENT_RE + "(<" + e.IDENT_RE + "(\\s*,\\s*" + e.IDENT_RE + ")*>)?(\\[\\])?",
         E = {
@@ -248,27 +248,27 @@ e.exports = function (e) {
                 },
             },
             h,
-            a,
+            o,
             {
                 beginKeywords: "class interface",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: "where class" }, o, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [{ beginKeywords: "where class" }, a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 beginKeywords: "namespace",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 beginKeywords: "record",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [o, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 className: "meta",
@@ -315,7 +315,7 @@ e.exports = function (e) {
                         excludeEnd: !0,
                         keywords: i,
                         relevance: 0,
-                        contains: [h, a, e.C_BLOCK_COMMENT_MODE],
+                        contains: [h, o, e.C_BLOCK_COMMENT_MODE],
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,

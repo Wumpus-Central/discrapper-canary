@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(415506), n(388685);
 var r = n(836560),
     i = n(740197),
-    o = n(106617),
-    a = n(376398),
+    a = n(106617),
+    o = n(376398),
     s = n(65154),
     l = n(231338);
 function c(e, t, n) {
@@ -18,11 +18,11 @@ function c(e, t, n) {
         e
     );
 }
-let u = new o.Z();
+let u = new a.Z();
 class d extends r.EventEmitter {
     destroy() {
         null != this.stream && (u.release(this.stream), (this.stream = null)),
-            null != this.streamId && (0, a.jC)(this.streamId),
+            null != this.streamId && (0, o.jC)(this.streamId),
             (this.destroyed = !0);
     }
     getStreamId() {
@@ -61,10 +61,10 @@ class d extends r.EventEmitter {
     }
     setStream(e) {
         return (
-            null != this.streamId && ((0, a.jC)(this.streamId), (this.streamId = null)),
+            null != this.streamId && ((0, o.jC)(this.streamId), (this.streamId = null)),
             (this.stream = e),
             (e.onaddtrack = (e) => this.emit("add-video-track", e)),
-            e.getVideoTracks().length > 0 && (this.streamId = (0, a.N7)(e)),
+            e.getVideoTracks().length > 0 && (this.streamId = (0, o.N7)(e)),
             this.emit("stream", e),
             this.emit("video", this.getStreamId()),
             e

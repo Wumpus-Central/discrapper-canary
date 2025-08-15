@@ -1,43 +1,43 @@
-n.d(t, { Z: () => p }), n(642613), n(583741);
+n.d(t, { Z: () => I }), n(642613), n(583741);
 var r = n(544891),
     i = n(710845),
-    o = n(569471),
+    l = n(569471),
     a = n(346479),
-    s = n(592125),
-    l = n(375954),
-    c = n(306680),
+    o = n(592125),
+    c = n(375954),
+    s = n(306680),
     u = n(594174),
     d = n(709054),
-    f = n(981631);
-let _ = new i.Z("markUnread");
-async function p(e, t) {
+    _ = n(981631);
+let E = new i.Z("markUnread");
+async function I(e, t) {
     let n = u.default.getCurrentUser();
     if (null == n) return;
-    let i = l.Z.getMessages(e),
-        p = i
+    let i = c.Z.getMessages(e),
+        I = i
             .toArray()
             .filter((e) => 0 > d.default.compare(e.id, t))
             .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
-        h = null == p ? d.default.atPreviousMillisecond(t) : p.id,
-        m = 0;
+        T = null == I ? d.default.atPreviousMillisecond(t) : I.id,
+        O = 0;
     i.forAll((e) => {
-        d.default.compare(e.id, h) > 0 && (0, c.Ex)(e, n) && m++;
+        d.default.compare(e.id, T) > 0 && (0, s.Ex)(e, n) && O++;
     });
-    let g = s.Z.getChannel(e);
-    null != g &&
-        g.isThread() &&
-        (g.isArchivedThread() && (await a.Z.unarchiveThread(g, !1)),
-        o.Z.hasJoined(e) || (await a.Z.joinThread(g, "Mark Unread"))),
-        _.log("Marking unread", {
+    let p = o.Z.getChannel(e);
+    null != p &&
+        p.isThread() &&
+        (p.isArchivedThread() && (await a.Z.unarchiveThread(p, !1)),
+        l.Z.hasJoined(e) || (await a.Z.joinThread(p, "Mark Unread"))),
+        E.log("Marking unread", {
             channelId: e,
             messageId: t,
         }),
         r.tn.post({
-            url: f.ANM.MESSAGE_ACK(e, h),
+            url: _.ANM.MESSAGE_ACK(e, T),
             body: {
                 manual: !0,
-                mention_count: m,
+                mention_count: O,
             },
             oldFormErrors: !0,
             rejectWithError: !0,

@@ -1,4 +1,4 @@
-var r = n(998218);
-e.exports = function (e) {
-    return r(e) && 3 == e.nodeType;
+var n = r(998218);
+t.exports = function (t) {
+    return n(t) && 3 == t.nodeType;
 };

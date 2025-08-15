@@ -17,8 +17,8 @@ n.d(t, {
     n(415506);
 var r = n(392711),
     i = n.n(r),
-    o = n(782568),
-    a = n(594190),
+    a = n(782568),
+    o = n(594190),
     s = n(104755),
     l = n(355281),
     c = n(210817),
@@ -92,45 +92,45 @@ function b(e, t) {
 }
 function y(e, t) {
     var n, r, i;
-    let o = h({}, e),
+    let a = h({}, e),
         s = t.subgameInfo,
         l = t.application,
         c = Number(null == (n = e.gameMetadata) ? void 0 : n[u.wF.ROBLOX_TIME_STARTED]);
     if (((isNaN(c) || 0 === c) && (c = null != (r = e.start) ? r : Date.now()), null == s))
-        N(e) && ((o.id = u.eB), (o.name = f.EOG[f.GQo.ROBLOX])),
-            (o.gameMetadata = void 0),
-            (o.sku = void 0),
-            (o.start = c),
-            (o.lastFocused = Math.floor(c / 1000));
+        N(e) && ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX])),
+            (a.gameMetadata = void 0),
+            (a.sku = void 0),
+            (a.start = c),
+            (a.lastFocused = Math.floor(c / 1000));
     else {
         let t = {};
         null != l &&
-        (0, a.ik)({
+        (0, o.ik)({
             exePath: e.exePath,
             name: l.name,
             id: l.id,
             distributor: f.GQo.ROBLOX,
         }) &&
-        (0, a.ik)({
+        (0, o.ik)({
             exePath: e.exePath,
             name: f.EOG[f.GQo.ROBLOX],
             id: u.eB,
             distributor: f.GQo.ROBLOX,
         })
-            ? ((o.id = l.id),
-              (o.name = l.name),
-              (o.gameName = l.name),
-              (o.start = Date.now()),
-              (o.lastFocused = Math.floor(Date.now() / 1000)))
-            : ((o.id = u.eB), (o.name = f.EOG[f.GQo.ROBLOX]), (o.start = c)),
+            ? ((a.id = l.id),
+              (a.name = l.name),
+              (a.gameName = l.name),
+              (a.start = Date.now()),
+              (a.lastFocused = Math.floor(Date.now() / 1000)))
+            : ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX]), (a.start = c)),
             (t[u.wF.ROBLOX_TIME_STARTED] = c.toString()),
-            (o.sku = null != (i = s.universeId) ? i : void 0),
+            (a.sku = null != (i = s.universeId) ? i : void 0),
             null != s.placeId && (t[u.wF.PLACE_ID] = s.placeId),
             null != s.jobId && (t[u.wF.JOB_ID] = s.jobId),
             null != s.robloxUserId && (t[u.wF.ROBLOX_USER_ID] = s.robloxUserId),
-            (o.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
+            (a.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
     }
-    return o;
+    return a;
 }
 function O(e) {
     return null == e[u.SQ.UNIVERSE_ID] || null == e[u.SQ.PLACE_ID] || null == e[u.SQ.JOB_ID] || null == e[u.SQ.USER_ID]
@@ -194,7 +194,7 @@ async function R(e) {
 }
 async function P(e) {
     let t = await c.Z.getRobloxSubgameURL(e);
-    return await (0, o.Z)(t);
+    return await (0, a.Z)(t);
 }
 function w(e) {
     return e.distributor !== f.GQo.ROBLOX || e.id === u.eB

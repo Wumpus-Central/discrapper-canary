@@ -1,7 +1,7 @@
 n.d(e, { Z: () => d });
-var i = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(353672),
+var i = n(353672),
     s = n(850165),
     a = n(134612),
     o = n(388032),
@@ -10,13 +10,13 @@ var r = n(353672),
 function d(t) {
     let {} = t,
         e = (0, a.Nn)();
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(s.Z, {
         heroImageSrc: l,
         heroImageAlt: o.intl.string(o.t["2mJo29"]),
         header: o.intl.string(o.t.eAbVfX),
-        children: (0, i.jsx)("div", {
+        children: (0, r.jsx)("div", {
             className: c.safetyTips,
-            children: (0, i.jsx)(r.Z, {
+            children: (0, r.jsx)(i.Z, {
                 tips: e,
                 headerText: o.intl.string(o.t["0QSL1N"]),
             }),

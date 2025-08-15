@@ -1,8 +1,8 @@
 let r;
 n.r(t), n.d(t, { default: () => eD }), n(539854), n(358797), n(415506);
 var i,
-    o = n(213919),
-    a = n(756647),
+    a = n(213919),
+    o = n(756647),
     s = n(442837),
     l = n(544891),
     c = n(433517),
@@ -44,14 +44,14 @@ let N = new m.Z("AuthenticationStore"),
     L = null,
     x = null,
     M = null,
-    j = null,
-    k = T.u34.NONE,
+    k = null,
+    j = T.u34.NONE,
     U = !1,
     G = [],
     B = "",
-    Z = !1,
-    F = null,
     V = !1,
+    F = null,
+    Z = !1,
     H = !1,
     Y = null,
     W = null,
@@ -59,7 +59,7 @@ let N = new m.Z("AuthenticationStore"),
     z = !1,
     q = [];
 function X(e) {
-    let t = null != o.getToken(),
+    let t = null != a.getToken(),
         n = null != c.K.get(T.B1h);
     N.verbose(e, {
         tokenManagerHasToken: t,
@@ -69,7 +69,7 @@ function X(e) {
 function Q() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (((x = c.K.get(C)), null != Y)) return Y;
-    let t = null != x ? x : o.getToken();
+    let t = null != x ? x : a.getToken();
     !(0, g.m1)() || (!e && null != t) || v.Z.isHandoffAvailable() || J({ withGuildExperiments: !0 });
 }
 function J(e) {
@@ -114,32 +114,32 @@ function $() {
     (M = x), (x = null), c.K.remove(C);
 }
 function ee(e, t) {
-    X("setAuthToken called."), (null == t || t !== P) && o.removeAnalyticsToken(), o.setToken(e, t);
+    X("setAuthToken called."), (null == t || t !== P) && a.removeAnalyticsToken(), a.setToken(e, t);
 }
 function et(e) {
-    (j = e), o.setAnalyticsToken(e);
+    (k = e), a.setAnalyticsToken(e);
 }
 function en() {
-    return X("removeAuthToken called."), o.removeAnalyticsToken(), o.removeToken();
+    return X("removeAuthToken called."), a.removeAnalyticsToken(), a.removeToken();
 }
 function er(e) {
     let { isPasswordAttempt: t } = e;
-    (k = T.u34.LOGGING_IN), (z = z || !0 === t);
+    (j = T.u34.LOGGING_IN), (z = z || !0 === t);
 }
 function ei(e) {
     let { isMultiAccount: t } = e;
-    (k = T.u34.NONE), (B = ""), (Z = !1), (F = null), (r = null), t || (eu(), en(), Q(!1));
+    (j = T.u34.NONE), (B = ""), (V = !1), (F = null), (r = null), t || (eu(), en(), Q(!1));
 }
-function eo() {
-    k = T.u34.NONE;
+function ea() {
+    j = T.u34.NONE;
 }
-function ea(e) {
+function eo(e) {
     let { token: t } = e;
-    (k = T.u34.NONE), ee(t), $(), (B = ""), (Z = !1), (F = null), eu(), (K = !1);
+    (j = T.u34.NONE), ee(t), $(), (B = ""), (V = !1), (F = null), eu(), (K = !1);
 }
 function es(e) {
     let { error: t } = e;
-    (B = ""), (Z = !1), (F = null), eu(), (k = null != (0, _.p)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
+    (B = ""), (V = !1), (F = null), eu(), (j = null != (0, _.p)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
 }
 function el() {
     K = !0;
@@ -147,10 +147,10 @@ function el() {
 function ec(e) {
     let { error: t } = e;
     (B = ""),
-        (Z = !1),
+        (V = !1),
         (F = null),
         (K = !1),
-        (k = null != (0, _.F)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
+        (j = null != (0, _.F)(t).date_of_birth ? T.u34.LOGIN_AGE_GATE : T.u34.NONE);
 }
 function eu() {
     let e = [];
@@ -159,41 +159,41 @@ function eu() {
             type: "webauthn",
             challenge: F,
         }),
-        V &&
+        Z &&
             e.push({
                 type: "totp",
                 backup_codes_allowed: H,
             }),
         H && e.push({ type: "backup" }),
-        Z && e.push({ type: "sms" }),
+        V && e.push({ type: "sms" }),
         (q = e);
 }
 function ed(e) {
-    let { ticket: t, sms: n, webauthn: r, backup: i, totp: o } = e;
-    null != t && ((B = t), (Z = n), (F = null != r ? r : null), (H = i), (V = o), eu()), (k = T.u34.MFA_STEP);
+    let { ticket: t, sms: n, webauthn: r, backup: i, totp: a } = e;
+    null != t && ((B = t), (V = n), (F = null != r ? r : null), (H = i), (Z = a), eu()), (j = T.u34.MFA_STEP);
 }
 function ef() {
-    k = T.u34.LOGGING_IN_MFA;
+    j = T.u34.LOGGING_IN_MFA;
 }
 function e_(e) {
-    (k = T.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
+    (j = T.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
 }
 function ep(e) {
-    (k = T.u34.ACCOUNT_DISABLED), (r = e.credentials);
+    (j = T.u34.ACCOUNT_DISABLED), (r = e.credentials);
 }
 function eh(e) {
-    (k = T.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION), (r = e.credentials);
+    (j = T.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION), (r = e.credentials);
 }
 function em(e) {
-    (k = T.u34.PHONE_IP_AUTHORIZATION), (r = e.credentials);
+    (j = T.u34.PHONE_IP_AUTHORIZATION), (r = e.credentials);
 }
 function eg(e) {
     let t = e.fingerprint;
     null == x
         ? null != t
             ? (b.default.track(T.rMx.USER_FINGERPRINT_CHANGED, {
-                  old_fingerprint: null != M ? (0, a.s)(M) : null,
-                  new_fingerprint: (0, a.s)(t),
+                  old_fingerprint: null != M ? (0, o.s)(M) : null,
+                  new_fingerprint: (0, o.s)(t),
               }),
               (x = t),
               (M = t),
@@ -202,8 +202,8 @@ function eg(e) {
         : null != t &&
           x !== t &&
           b.default.track(T.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
-              fingerprint: (0, a.s)(x),
-              dropped_fingerprint: (0, a.s)(t),
+              fingerprint: (0, o.s)(x),
+              dropped_fingerprint: (0, o.s)(t),
           });
 }
 function eE(e) {
@@ -212,24 +212,24 @@ function eE(e) {
 }
 function eb(e) {
     var t;
-    let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: o, auth: a, staticAuthSessionId: s } = e;
+    let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: a, auth: o, staticAuthSessionId: s } = e;
     X("handleConnectionOpen called"),
         O.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)),
         (w = r),
         (D = i),
         (L = s),
-        et(o),
+        et(a),
         (P = n.id),
-        void 0 !== a && (G = a.authenticator_types),
+        void 0 !== o && (G = o.authenticator_types),
         c.K.set(R, n.id);
 }
 function ey(e) {
     var t;
-    let { user: n, sessionId: r, analyticsToken: i, token: o } = e;
+    let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
     O.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)),
         (w = r),
-        (j = i),
-        ee(o, n.id),
+        (k = i),
+        ee(a, n.id),
         null != i && et(i),
         $(),
         (P = n.id),
@@ -288,19 +288,19 @@ function eS(e) {
         c.K.remove(R),
         (P = null),
         (w = null),
-        (k = (null == e ? void 0 : e.isSwitchingAccount) ? T.u34.LOGGING_IN : T.u34.NONE),
+        (j = (null == e ? void 0 : e.isSwitchingAccount) ? T.u34.LOGGING_IN : T.u34.NONE),
         (B = ""),
         (F = null),
-        (Z = !1),
+        (V = !1),
         (K = !1),
         (z = !1),
         eu();
 }
 function eA() {
-    k = T.u34.FORGOT_PASSWORD;
+    j = T.u34.FORGOT_PASSWORD;
 }
 function eN() {
-    k = T.u34.NONE;
+    j = T.u34.NONE;
 }
 function eC(e) {
     let { user: t } = e;
@@ -311,14 +311,14 @@ function eR(e) {
     (K = !1), (W = t), setImmediate(() => (0, g.uL)(T.Z5c.ACCOUNT_STANDING));
 }
 function eP() {
-    (W = null), (k = T.u34.NONE), eS(), setImmediate(() => (0, g.uL)(T.Z5c.DEFAULT_LOGGED_OUT));
+    (W = null), (j = T.u34.NONE), eS(), setImmediate(() => (0, g.uL)(T.Z5c.DEFAULT_LOGGED_OUT));
 }
 class ew extends (i = s.ZP.Store) {
     initialize() {
-        (P = c.K.get(R)), null == o.getToken() && Q(), this.addChangeListener(() => (0, p.u)(P));
+        (P = c.K.get(R)), null == a.getToken() && Q(), this.addChangeListener(() => (0, p.u)(P));
     }
     getLoginStatus() {
-        return k;
+        return j;
     }
     getId() {
         return P;
@@ -342,7 +342,7 @@ class ew extends (i = s.ZP.Store) {
         return x;
     }
     getAnalyticsToken() {
-        return null != j ? j : o.getAnalyticsToken();
+        return null != k ? k : a.getAnalyticsToken();
     }
     getMFATicket() {
         return B;
@@ -379,7 +379,7 @@ let eD = new ew(
         CONNECTION_CLOSED: eO,
         AUTH_SESSION_CHANGE: eI,
         LOGIN: er,
-        LOGIN_SUCCESS: ea,
+        LOGIN_SUCCESS: eo,
         LOGIN_FAILURE: es,
         LOGIN_MFA_STEP: ed,
         LOGIN_MFA: ef,
@@ -388,7 +388,7 @@ let eD = new ew(
         LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: eh,
         LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: em,
         LOGIN_RESET: ei,
-        LOGIN_STATUS_RESET: eo,
+        LOGIN_STATUS_RESET: ea,
         LOGIN_SUSPENDED_USER: eR,
         LOGOUT: eS,
         FINGERPRINT: eg,

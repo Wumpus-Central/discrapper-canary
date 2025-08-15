@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => l,
     r: () => c,
 });
-var o = n(824096),
-    a = n(626135),
+var a = n(824096),
+    o = n(626135),
     s = n(981631);
 function l(e, t, n) {
     let {
@@ -13,8 +13,8 @@ function l(e, t, n) {
         allowedPoorFpsRatio: u,
         fpsThreshold: d,
         backoffTimeSec: f,
-    } = o.y.defaultConfig;
-    a.default.track(s.rMx.VIDEO_TOGGLED, {
+    } = a.y.defaultConfig;
+    o.default.track(s.rMx.VIDEO_TOGGLED, {
         video_toggle_reason: t,
         toggled_user_id: e,
         rtc_connection_id: null == r ? void 0 : r(),

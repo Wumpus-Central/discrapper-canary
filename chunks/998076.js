@@ -1,10 +1,10 @@
 n.d(t, {
-    Z: () => a,
-    f: () => o,
+    Z: () => o,
+    f: () => a,
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-08_premium_brand_refresh_upsell_roadblocks_experiment",
     label: "Premium Brand Refresh Upsell Roadblocks Experiment",
@@ -23,7 +23,7 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t } = e;
-    return o.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

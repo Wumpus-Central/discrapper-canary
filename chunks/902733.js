@@ -1,34 +1,34 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(657707),
     a = n(481060),
-    s = n(315322),
-    o = n(531578),
+    o = n(315322),
+    s = n(531578),
     c = n(388032),
     u = n(62511);
 function d(e) {
     let { rating: t, onClick: n } = e,
-        s = t === o.aZ.BAD ? l.kZ9 : l.lbB,
+        o = t === s.aZ.BAD ? l.kZ9 : l.lbB,
         c = i.useCallback(() => {
             n(t);
         }, [n, t]);
     return (0, r.jsx)(a.P3F, {
         onClick: c,
         className: u.iconContainer,
-        children: (0, r.jsx)(s, {
+        children: (0, r.jsx)(o, {
             size: "md",
             color: "currentColor",
             className: u.icon,
         }),
     });
 }
-let h = function (e) {
+let p = function (e) {
     let { searchContext: t, dismissFeedbackEntrypoint: l } = e;
     i.useEffect(() => {
-        (0, s.bo)({ searchContext: t });
+        (0, o.bo)({ searchContext: t });
     }, [t]);
-    let h = i.useCallback(
+    let p = i.useCallback(
         (e) => {
             l(),
                 (0, a.ZDy)(async () => {
@@ -98,12 +98,12 @@ let h = function (e) {
                 className: u.icons,
                 children: [
                     (0, r.jsx)(d, {
-                        rating: o.aZ.GOOD,
-                        onClick: h,
+                        rating: s.aZ.GOOD,
+                        onClick: p,
                     }),
                     (0, r.jsx)(d, {
-                        rating: o.aZ.BAD,
-                        onClick: h,
+                        rating: s.aZ.BAD,
+                        onClick: p,
                     }),
                 ],
             }),

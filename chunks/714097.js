@@ -2,19 +2,19 @@ n.d(t, { o: () => h });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(210887),
     l = n(866419),
-    c = n(771934),
+    c = n(507962),
     u = n(231338),
     d = n(119475),
     f = n(388032),
     _ = n(884984);
 let p = (e, t) => (e === t ? _.themePillItemSelected : void 0);
 function h() {
-    let e = (0, o.e7)([s.Z], () => s.Z.theme),
-        t = (0, a.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
+    let e = (0, a.e7)([s.Z], () => s.Z.theme),
+        t = (0, o.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
         n = [
             {
                 name: "",
@@ -33,7 +33,7 @@ function h() {
                 tooltipAriaLabel: f.intl.string(d.default["5vlJkZ"]),
             },
         ];
-    return (0, r.jsx)(a.sY7, {
+    return (0, r.jsx)(o.sY7, {
         className: _.themeSelector,
         options: n,
         value: t,

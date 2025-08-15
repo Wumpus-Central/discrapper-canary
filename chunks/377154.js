@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(953529);
 var r = n(474936),
     i = n(535396),
-    o = n(185923);
-function a(e, t, n) {
+    a = n(185923);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -55,10 +55,10 @@ function c(e, t) {
     );
 }
 function u(e, t) {
-    var n, a, l, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+    var n, o, l, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
     let A = null == (n = t.powerup_metadata) ? void 0 : n.category_type;
     if (null == A) return;
-    let N = null == (a = t.sku) ? void 0 : a.powerup_metadata;
+    let N = null == (o = t.sku) ? void 0 : o.powerup_metadata;
     if (null == N) return;
     let C = {
         title: t.summary,
@@ -73,13 +73,13 @@ function u(e, t) {
         case i.Us.LEVEL: {
             let n = null == (f = t.sku.powerup_metadata) ? void 0 : f.guild_features;
             if (null == n) return;
-            let a = o.xD + n.additional_emoji_slots,
+            let o = a.xD + n.additional_emoji_slots,
                 l = r.XB + n.additional_sound_slots,
                 u = r.QF + n.additional_sticker_slots,
                 d = t.sku.dependent_sku_id;
             for (; null != d; ) {
                 let t = e.find((e) => d === e.sku.id);
-                (a +=
+                (o +=
                     null !=
                     (v =
                         null == t ||
@@ -118,7 +118,7 @@ function u(e, t) {
                 {
                     type: i.Us.LEVEL,
                     features: c(s({}, n), {
-                        total_emoji_slots: a,
+                        total_emoji_slots: o,
                         total_sound_slots: l,
                         total_sticker_slots: u,
                     }),

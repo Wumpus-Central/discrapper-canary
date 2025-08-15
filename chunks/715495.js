@@ -64,7 +64,7 @@ function E() {
         [s, l] = (0, r.useState)(!1),
         [d, g] = (0, r.useState)(null),
         [f, E] = (0, r.useState)(320),
-        N = (0, r.useRef)(null),
+        I = (0, r.useRef)(null),
         y = (0, r.useRef)(null),
         A = (0, r.useRef)(null),
         P = (0, u.ZP)((e) => e.toolsCache),
@@ -111,8 +111,8 @@ function E() {
             [D],
         ),
         B = (0, r.useCallback)((e) => {
-            if (null != N.current) {
-                let t = N.current.getBoundingClientRect();
+            if (null != I.current) {
+                let t = I.current.getBoundingClientRect();
                 E(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
@@ -187,7 +187,7 @@ function E() {
                     className: x.main,
                     children: [
                         (0, i.jsxs)("div", {
-                            ref: N,
+                            ref: I,
                             className: x.previews,
                             style: { width: "".concat(f, "px") },
                             children: [
@@ -205,7 +205,7 @@ function E() {
                                     variant: "text-sm/semibold",
                                     children: "RTC",
                                 }),
-                                (0, i.jsx)(I, { nameplate: d }),
+                                (0, i.jsx)(N, { nameplate: d }),
                                 (0, i.jsx)("div", {
                                     className: x.resizeHandle,
                                     onMouseDown: M,
@@ -409,7 +409,7 @@ function T(e) {
         }),
     });
 }
-function I(e) {
+function N(e) {
     let { nameplate: t } = e;
     return (0, i.jsx)("div", {
         className: x.preview,

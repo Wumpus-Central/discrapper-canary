@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(960048);
 let i = 5 / 11,
-    o = 1 + 1 / 11,
-    a = 1 / 11;
+    a = 1 + 1 / 11,
+    o = 1 / 11;
 function s(e, t, n) {
     return (
         t.beginPath(),
@@ -28,7 +28,7 @@ function c(e, t) {
     let n = document.createElement("canvas"),
         r = n.getContext("2d"),
         l = Math.min(e.width, e.height);
-    (n.width = l * o), (n.height = l * o);
+    (n.width = l * a), (n.height = l * a);
     let c = l * i,
         u = n.width - c;
     null != r &&
@@ -36,7 +36,7 @@ function c(e, t) {
         (r = s(e, r, l)).restore(),
         r.beginPath(),
         r.moveTo(u, u),
-        r.roundRect(u, u, c, c, a * l),
+        r.roundRect(u, u, c, c, o * l),
         r.closePath(),
         r.clip(),
         r.drawImage(t, 0, 0, t.width, t.height, u, u, c, c));

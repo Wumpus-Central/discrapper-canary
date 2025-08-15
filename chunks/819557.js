@@ -1,56 +1,78 @@
 n.d(t, {
     q: () => c,
-    z: () => l,
+    z: () => s,
 }),
     n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(481060),
-    s = n(262441);
-function l(e) {
+    o = n(262441);
+function s(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
-        className: s.cellGroup,
+        className: o.cellGroup,
         children: (0, r.jsx)("div", {
-            className: s.content,
+            className: o.content,
             children: t,
         }),
     });
 }
 function c(e) {
-    let { icon: t, title: n, description: i, iconClassName: l, color: c, listType: u = "icon", index: d } = e;
+    let {
+        icon: t,
+        title: n,
+        description: i,
+        iconClassName: s,
+        color: c,
+        listType: u = "icon",
+        completed: d = !1,
+        index: p,
+    } = e;
     return (0, r.jsxs)("div", {
-        className: s.cell,
+        className: o.cell,
         children: [
-            "numbered" === u && null != d
-                ? (0, r.jsx)(a.X6q, {
-                      variant: "heading-md/semibold",
-                      color: "text-brand",
-                      className: s.number,
-                      children: d + 1,
-                  })
-                : null != t &&
-                  (0, r.jsx)("div", {
-                      className: s.iconContainer,
-                      children: (0, r.jsx)(t, {
-                          color: null != c ? c : "currentColor",
-                          className: o()(s.icon, l),
-                      }),
-                  }),
+            (() => {
+                if ("numbered" === u && null != p)
+                    if (d)
+                        return (0, r.jsx)("div", {
+                            className: o.number,
+                            children: (0, r.jsx)(a.sV5, {
+                                color: "green",
+                                className: l()(o.icon, s),
+                            }),
+                        });
+                    else
+                        return (0, r.jsx)(a.X6q, {
+                            variant: "heading-md/semibold",
+                            color: "text-brand",
+                            className: o.number,
+                            children: p + 1,
+                        });
+                if (null != t)
+                    return (0, r.jsx)("div", {
+                        className: o.iconContainer,
+                        children: (0, r.jsx)(t, {
+                            color: null != c ? c : "currentColor",
+                            className: l()(o.icon, s),
+                        }),
+                    });
+            })(),
             (0, r.jsxs)("div", {
-                className: s.textContainer,
+                className: o.textContainer,
                 children: [
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
+                        className: l()({ [o.completedText]: d }),
                         children: n,
                     }),
                     null != i &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/medium",
                             color: "text-secondary",
+                            className: l()({ [o.completedText]: d }),
                             children: i,
                         }),
                 ],

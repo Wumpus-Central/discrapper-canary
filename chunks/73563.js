@@ -1,29 +1,17 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => m,
     e: () => h,
 });
-var r = n(255367),
-    i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+var r,
+    i = n(255367),
+    l = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
-    l = n(600164),
-    c = n(507675),
-    u = n(349364);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
+    c = n(600164),
+    u = n(507675),
+    d = n(349364);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,82 +22,66 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = p(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-var h = (function (e) {
-    return (e[(e.TOP = 0)] = "TOP"), (e[(e.BOTTOM = 1)] = "BOTTOM"), e;
-})({});
-function m(e) {
+var h = (((r = {})[(r.TOP = 0)] = "TOP"), (r[(r.BOTTOM = 1)] = "BOTTOM"), r);
+function f(e) {
     let {
             disableGradients: t = !1,
             renderHeader: n,
-            renderBottomLeft: o,
+            renderBottomLeft: r,
             renderBottomCenter: a,
-            renderBottomRight: c,
-            renderCenter: d,
+            renderBottomRight: o,
+            renderCenter: u,
         } = e,
-        f = 0 === t || !0 === t,
-        _ = 1 === t || !0 === t,
-        p = i.useRef(null);
-    return (0, r.jsx)(s.JcV, {
+        p = l.useRef(null);
+    return (0, i.jsx)(s.JcV, {
         containerRef: p,
-        children: (0, r.jsxs)("div", {
-            className: u.videoControls,
+        children: (0, i.jsxs)("div", {
+            className: d.videoControls,
             ref: p,
             children: [
-                !f && (0, r.jsx)("div", { className: u.gradientTop }),
-                !_ && (0, r.jsx)("div", { className: u.gradientBottom }),
-                (0, r.jsx)("div", {
-                    className: u.topControls,
+                0 !== t && !0 !== t && (0, i.jsx)("div", { className: d.gradientTop }),
+                1 !== t && !0 !== t && (0, i.jsx)("div", { className: d.gradientBottom }),
+                (0, i.jsx)("div", {
+                    className: d.topControls,
                     children: null == n ? void 0 : n(),
                 }),
-                null == d ? void 0 : d(),
-                (0, r.jsxs)("div", {
-                    className: u.bottomControls,
+                null == u ? void 0 : u(),
+                (0, i.jsxs)("div", {
+                    className: d.bottomControls,
                     children: [
-                        (0, r.jsx)(l.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
-                            align: l.Z.Align.CENTER,
-                            className: u.edgeControls,
-                            children: null == o ? void 0 : o(),
+                            align: c.Z.Align.CENTER,
+                            className: d.edgeControls,
+                            children: null == r ? void 0 : r(),
                         }),
-                        (0, r.jsx)(l.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
-                            justify: l.Z.Justify.CENTER,
-                            align: l.Z.Align.CENTER,
+                            justify: c.Z.Justify.CENTER,
+                            align: c.Z.Align.CENTER,
                             children: null == a ? void 0 : a(),
                         }),
                         " ",
-                        (0, r.jsx)(l.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
-                            justify: l.Z.Justify.END,
-                            align: l.Z.Align.CENTER,
-                            className: u.edgeControls,
-                            children: null == c ? void 0 : c(),
+                            justify: c.Z.Justify.END,
+                            align: c.Z.Align.CENTER,
+                            className: d.edgeControls,
+                            children: null == o ? void 0 : o(),
                         }),
                     ],
                 }),
@@ -117,19 +89,39 @@ function m(e) {
         }),
     });
 }
-function g(e) {
+function m(e) {
     var {
             screenMessage: t,
             onDoubleClick: n,
-            onActive: i,
-            onForceIdle: o,
-            idle: s,
-            children: l,
-            renderChatToasts: d,
-            renderVoiceChannelEffects: p,
-            style: h,
+            onActive: r,
+            onForceIdle: l,
+            idle: a,
+            children: s,
+            renderChatToasts: c,
+            renderVoiceChannelEffects: h,
+            style: m,
         } = e,
-        g = _(e, [
+        g = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, [
             "screenMessage",
             "onDoubleClick",
             "onActive",
@@ -140,19 +132,19 @@ function g(e) {
             "renderVoiceChannelEffects",
             "style",
         ]);
-    return (0, r.jsxs)("div", {
-        className: a()(u.root, { [u.idle]: s }),
-        style: h,
-        onMouseMove: i,
-        onMouseDown: i,
-        onMouseLeave: o,
+    return (0, i.jsxs)("div", {
+        className: o()(d.root, { [d.idle]: a }),
+        style: m,
+        onMouseMove: r,
+        onMouseDown: r,
+        onMouseLeave: l,
         onDoubleClick: n,
         children: [
-            l,
-            null != t ? (0, r.jsx)(c.Z, f({ size: "large" }, t)) : null,
-            (0, r.jsx)(m, f({}, g)),
-            null == d ? void 0 : d(),
-            null == p ? void 0 : p(),
+            s,
+            null != t ? (0, i.jsx)(u.Z, p({ size: "large" }, t)) : null,
+            (0, i.jsx)(f, p({}, g)),
+            null == c ? void 0 : c(),
+            null == h ? void 0 : h(),
         ],
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     _j: () => i,
-    jG: () => a,
-    v6: () => o,
+    jG: () => o,
+    v6: () => a,
 });
 var r = n(570140);
 function i(e) {
@@ -10,7 +10,7 @@ function i(e) {
         enabled: e,
     });
 }
-function o(e) {
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     return r.Z.dispatch({
         type: "VOICE_FILTER_REQUEST_SWITCH",
@@ -18,6 +18,6 @@ function o(e) {
         analyticsContext: t,
     });
 }
-function a() {
+function o() {
     r.Z.dispatch({ type: "VOICE_FILTER_PREFETCH" });
 }

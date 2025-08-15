@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => X }), n(415506), n(388685);
-var o,
-    a = n(442837),
+var a,
+    o = n(442837),
     s = n(570140),
     l = n(437263),
     c = n(764976),
@@ -53,7 +53,7 @@ let E = [],
 function C(e, t) {
     if (null == i) throw Error("Creating RTCConnection without session.");
     let r = f.default.getId(),
-        o = new (n(861687).Z)({
+        a = new (n(861687).Z)({
             userId: r,
             sessionId: i,
             guildId: e,
@@ -61,7 +61,7 @@ function C(e, t) {
             joinVoiceId: N,
         });
     return (
-        o.on(l.z.State, (e, t, n) => {
+        a.on(l.z.State, (e, t, n) => {
             s.Z.wait(() =>
                 s.Z.dispatch(
                     g(
@@ -75,7 +75,7 @@ function C(e, t) {
                 ),
             );
         }),
-        o.on(l.z.Video, (e, t, n, r, i) => {
+        a.on(l.z.Video, (e, t, n, r, i) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_VIDEO",
@@ -85,11 +85,11 @@ function C(e, t) {
                     streamId: r,
                     rtcServerId: i,
                     context: h.Yn.DEFAULT,
-                    mediaEngineConnectionId: o.getMediaEngineConnectionId(),
+                    mediaEngineConnectionId: a.getMediaEngineConnectionId(),
                 }),
             );
         }),
-        o.on(l.z.Ping, (e, t) => {
+        a.on(l.z.Ping, (e, t) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_PING",
@@ -98,7 +98,7 @@ function C(e, t) {
                 }),
             );
         }),
-        o.on(l.z.OutboundLossRate, (e) => {
+        a.on(l.z.OutboundLossRate, (e) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_LOSS_RATE",
@@ -106,51 +106,51 @@ function C(e, t) {
                 }),
             );
         }),
-        o.on(l.z.Speaking, (e, t) => {
+        a.on(l.z.Speaking, (e, t) => {
             null == O || O.setSpeaking(e, t);
         }),
-        o.on(l.z.Flags, (e, t) => {
+        a.on(l.z.Flags, (e, t) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_FLAGS",
                     flags: t,
                     userId: e,
-                    guildId: o.guildId,
-                    channelId: o.channelId,
-                    context: o.context,
+                    guildId: a.guildId,
+                    channelId: a.channelId,
+                    context: a.context,
                 });
             });
         }),
-        o.on(l.z.UsersMerged, (e, t) => {
+        a.on(l.z.UsersMerged, (e, t) => {
             s.Z.dispatch({
                 type: "RTC_CONNECTION_USERS_MERGED",
                 userIds: e,
                 context: t,
             });
         }),
-        o.on(l.z.ClientConnect, (e) => {
+        a.on(l.z.ClientConnect, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_CLIENT_CONNECT",
                     userIds: e,
-                    guildId: o.guildId,
-                    channelId: o.channelId,
-                    context: o.context,
+                    guildId: a.guildId,
+                    channelId: a.channelId,
+                    context: a.context,
                 });
             });
         }),
-        o.on(l.z.ClientDisconnect, (e) => {
+        a.on(l.z.ClientDisconnect, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_CLIENT_DISCONNECT",
                     userId: e,
-                    guildId: o.guildId,
-                    channelId: o.channelId,
-                    context: o.context,
+                    guildId: a.guildId,
+                    channelId: a.channelId,
+                    context: a.context,
                 });
             });
         }),
-        o.on(l.z.Platform, (e, t, n) => {
+        a.on(l.z.Platform, (e, t, n) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_PLATFORM",
@@ -160,12 +160,12 @@ function C(e, t) {
                 });
             });
         }),
-        o.on(l.z.SecureFramesUpdate, () => {
+        a.on(l.z.SecureFramesUpdate, () => {
             s.Z.wait(() => {
                 s.Z.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
             });
         }),
-        o.on(l.z.RosterMapUpdate, (e) => {
+        a.on(l.z.RosterMapUpdate, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
                     type: "RTC_CONNECTION_ROSTER_MAP_UPDATE",
@@ -177,7 +177,7 @@ function C(e, t) {
         (v = null),
         (I = !1),
         (T = !1),
-        o
+        a
     );
 }
 function R() {
@@ -201,7 +201,7 @@ function w() {
 function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        var n, o, a;
+        var n, a, o;
         if (
             (null == O || O.updateVoiceStates(t.userId, t.channelId),
             (I = I || (null != (n = null == O ? void 0 : O.getStats().max_voice_state_count) ? n : 0) > 1),
@@ -219,7 +219,7 @@ function D(e) {
                           ((b = null),
                           (y = null),
                           (r = C(t.guildId, t.channelId)),
-                          (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1)))
+                          (I = (null != (a = null == O ? void 0 : O.getStats().max_voice_state_count) ? a : 0) > 1)))
                 : t.guildId === r.guildId &&
                   ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) &&
                       (b = r.channelId),
@@ -229,7 +229,7 @@ function D(e) {
             (b = null),
                 (y = null),
                 (r = C(t.guildId, t.channelId)),
-                (I = (null != (a = null == O ? void 0 : O.getStats().max_voice_state_count) ? a : 0) > 1);
+                (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1);
         }
         return !0;
     }, !1);
@@ -249,12 +249,12 @@ function x() {
 function M() {
     y = null;
 }
-function j(e) {
+function k(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     R();
 }
-function k(e) {
+function j(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     R();
@@ -271,13 +271,13 @@ function G(e) {
 function B(e) {
     return e.state === p.$7l.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
 }
-function Z(e) {
+function V(e) {
     return e.state === p.hes.RTC_CONNECTED && (T = !0), !0;
 }
 function F(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
 }
-function V() {
+function Z() {
     return !0;
 }
 function H(e) {
@@ -303,7 +303,7 @@ function K(e) {
     let { streamId: t, width: n, height: i } = e;
     null == r || r.setVideoSize(t, n, i);
 }
-class z extends (o = a.ZP.Store) {
+class z extends (a = o.ZP.Store) {
     initialize() {
         this.waitFor(_.ZP), (0, d.r)(this.getRTCConnectionId, this.getMediaSessionId);
     }
@@ -408,13 +408,13 @@ let q = new z(
         : {
               CONNECTION_OPEN: P,
               CONNECTION_CLOSED: w,
-              RTC_CONNECTION_STATE: Z,
-              RTC_CONNECTION_PING: V,
-              RTC_CONNECTION_LOSS_RATE: V,
+              RTC_CONNECTION_STATE: V,
+              RTC_CONNECTION_PING: Z,
+              RTC_CONNECTION_LOSS_RATE: Z,
               RTC_CONNECTION_UPDATE_ID: Y,
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: V,
-              RTC_CONNECTION_CLIENT_CONNECT: V,
-              RTC_CONNECTION_CLIENT_DISCONNECT: V,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: Z,
+              RTC_CONNECTION_CLIENT_CONNECT: Z,
+              RTC_CONNECTION_CLIENT_DISCONNECT: Z,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: H,
               VIDEO_SIZE_UPDATE: K,
               VOICE_STATE_UPDATES: D,
@@ -424,10 +424,10 @@ let q = new z(
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: x,
               REMOTE_SESSION_CONNECT: x,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: M,
-              GUILD_DELETE: j,
+              GUILD_DELETE: k,
               CHANNEL_DELETE: U,
               THREAD_DELETE: U,
-              CALL_DELETE: k,
+              CALL_DELETE: j,
               APP_STATE_UPDATE: B,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: W,
           },

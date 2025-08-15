@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r,
     i,
-    o,
-    a = n(544891),
+    a,
+    o = n(544891),
     s = n(70956),
     l = n(591759),
     c = n(981631);
@@ -27,7 +27,7 @@ let f = new Set(["/attachments/", "/ephemeral-attachments/"]),
             .filter(Boolean),
     ),
     m = new Set(
-        (null != (o = null == (i = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS) ? void 0 : i.split(",")) ? o : [])
+        (null != (a = null == (i = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS) ? void 0 : i.split(",")) ? a : [])
             .map((e) => e.substring(2))
             .map(u)
             .filter(Boolean),
@@ -79,7 +79,7 @@ function N(e) {
     return e.attachments.some(T) || e.embeds.some(A);
 }
 async function C(e) {
-    let t = await a.tn.post({
+    let t = await o.tn.post({
         url: c.ANM.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] },
         rejectWithError: !1,

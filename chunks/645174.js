@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(650557),
     l = n(887490),
     c = n(953782);
@@ -59,27 +59,27 @@ function _(e, t) {
     );
 }
 function p(e, t) {
-    let { attributes: n, children: i, element: o } = t;
-    return "gameMentionInput" === o.type
+    let { attributes: n, children: i, element: a } = t;
+    return "gameMentionInput" === a.type
         ? (0, r.jsx)(h, {
               attributes: n,
-              element: o,
+              element: a,
               children: i,
           })
         : null;
 }
 let h = (e) => {
-    let { element: t, attributes: n, children: o } = e,
+    let { element: t, attributes: n, children: a } = e,
         u = (0, s.vt)(),
         f = (0, s.UE)(),
         p = (0, s._7)(),
-        h = a()(c.inlineElement, c.optionPill, c.inlineFlex, { [c.selectedPill]: f && u }),
+        h = o()(c.inlineElement, c.optionPill, c.inlineFlex, { [c.selectedPill]: f && u }),
         m = i.useCallback(() => {
             l.bN.isVoid(p, t);
         }, [p, t]),
         g = (0, r.jsx)("span", {
             className: c.optionPillValue,
-            children: o,
+            children: a,
         });
     return (0, r.jsxs)(
         "span",

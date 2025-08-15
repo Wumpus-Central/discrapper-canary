@@ -13,8 +13,8 @@ var n = a(73800),
     h = a(74538),
     p = a(981631),
     b = a(469115);
-let f = [p.BRd.DARK, p.BRd.LIGHT, p.BRd.DARKER, p.BRd.MIDNIGHT];
-function v(e) {
+let v = [p.BRd.DARK, p.BRd.LIGHT, p.BRd.DARKER, p.BRd.MIDNIGHT];
+function f(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
 async function j() {
@@ -27,12 +27,12 @@ async function j() {
         if (t) {
             let t,
                 n = [...e, null],
-                r = v(n);
+                r = f(n);
             if (null != r) {
                 var a;
                 let e = b.qt[r];
                 t = null != (a = null == e ? void 0 : e.theme) ? a : p.BRd.DARK;
-            } else t = v([p.BRd.DARK, p.BRd.DARKER, p.BRd.MIDNIGHT]);
+            } else t = f([p.BRd.DARK, p.BRd.DARKER, p.BRd.MIDNIGHT]);
             await i.ZI(
                 {
                     theme: t,
@@ -42,7 +42,7 @@ async function j() {
                 u.fy.INFREQUENT_USER_ACTION,
             );
         } else {
-            let e = v(f);
+            let e = f(v);
             await i.ZI(
                 {
                     theme: e,
@@ -60,11 +60,11 @@ async function g(e, t) {
     if (a || n)
         try {
             if (a) {
-                let t = v([...e, null]);
+                let t = f([...e, null]);
                 (0, l.cV)(t);
             }
             if (n) {
-                let e = v([...t, null]);
+                let e = f([...t, null]);
                 (0, l.Rx)(e);
             }
             let r = m.Z.getAllPending(),

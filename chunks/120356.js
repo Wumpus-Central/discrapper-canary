@@ -14,7 +14,7 @@
         if (e.toString !== Object.prototype.toString && !e.toString.toString().includes("[native code]"))
             return e.toString();
         var r = "";
-        for (var o in e) t.call(e, o) && e[o] && (r = i(r, o));
+        for (var a in e) t.call(e, a) && e[a] && (r = i(r, a));
         return r;
     }
     function i(e, t) {

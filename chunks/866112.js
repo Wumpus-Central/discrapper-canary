@@ -3,7 +3,7 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(975984);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,7 +27,7 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -52,8 +52,8 @@ function c(e, t) {
 }
 let u = [],
     d = {},
-    h = {};
-class p extends (r = i.ZP.Store) {
+    p = {};
+class h extends (r = i.ZP.Store) {
     getSearchState(e) {
         var t;
         return null != (t = d[e])
@@ -65,16 +65,16 @@ class p extends (r = i.ZP.Store) {
     }
     getSearchResults(e, t) {
         var n, r, i;
-        return null != (i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : u;
+        return null != (i = null == (r = p[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : u;
     }
     shouldFetch(e, t) {
         var n, r;
-        let i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.lastSearchedAt;
+        let i = null == (r = p[e]) || null == (n = r[t]) ? void 0 : n.lastSearchedAt;
         return null == i || Date.now() - i > 120000;
     }
 }
-s(p, "displayName", "GuildDirectorySearchStore");
-let f = new p(l.Z, {
+o(h, "displayName", "GuildDirectorySearchStore");
+let f = new h(l.Z, {
     GUILD_DIRECTORY_SEARCH_START: function (e) {
         let { channelId: t, query: n } = e;
         d[t] = {
@@ -84,13 +84,13 @@ let f = new p(l.Z, {
     },
     GUILD_DIRECTORY_SEARCH_SUCCESS: function (e) {
         let { channelId: t, query: n, results: r } = e;
-        d[t] = c(o({}, d[t]), { fetching: !1 });
+        d[t] = c(s({}, d[t]), { fetching: !1 });
         let i = [];
         r.forEach((e) => {
             let t = (0, a.MQ)(e);
             i.push(t);
         }),
-            (h[t] = c(o({}, h[t]), {
+            (p[t] = c(s({}, p[t]), {
                 [n]: {
                     results: (0, a.Th)(i),
                     lastSearchedAt: Date.now(),
@@ -99,7 +99,7 @@ let f = new p(l.Z, {
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        d[t] = c(o({}, d[t]), { fetching: !1 });
+        d[t] = c(s({}, d[t]), { fetching: !1 });
     },
     GUILD_DIRECTORY_SEARCH_CLEAR: function (e) {
         let { channelId: t } = e;
@@ -120,9 +120,9 @@ let f = new p(l.Z, {
         let { channelId: n, guildId: r } = e,
             i = null == (t = d[n]) ? void 0 : t.mostRecentQuery;
         if (null == i) return;
-        let l = h[n][i];
+        let l = p[n][i];
         if (null == l) return;
         let a = l.results.filter((e) => e.guildId !== r);
-        h[n] = c(o({}, h[n]), { [d[n].mostRecentQuery]: c(o({}, l), { results: a }) });
+        p[n] = c(s({}, p[n]), { [d[n].mostRecentQuery]: c(s({}, l), { results: a }) });
     },
 });

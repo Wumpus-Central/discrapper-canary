@@ -1,17 +1,17 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(834129),
+    l = n(834129),
     a = n(388032),
-    s = n(786167);
-function l(e) {
+    o = n(786167);
+function s(e) {
     let { message: t, compact: n } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(i.or_, {
             size: "md",
             color: "currentColor",
-            className: s.icon,
+            className: o.icon,
         }),
         timestamp: t.timestamp,
         compact: n,

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(1561),
     l = n(481060),
     c = n(198551);
@@ -18,18 +18,18 @@ let u = {
         let {
             role: n,
             children: i,
-            className: o,
+            className: a,
             onDismiss: d,
             backgroundColor: f = u.RED,
             icon: _ = l.Mgn,
             iconClassName: p,
         } = e;
         return (0, r.jsxs)("div", {
-            className: a()(c.error, o, f),
+            className: o()(c.error, a, f),
             ref: t,
             children: [
                 (0, r.jsx)(_, {
-                    className: a()(c.icon, p),
+                    className: o()(c.icon, p),
                     color: "currentColor",
                 }),
                 (0, r.jsx)("div", {

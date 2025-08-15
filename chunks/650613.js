@@ -1,4 +1,4 @@
-a.d(t, { Z: () => f }), a(388685), a(361932), a(187205);
+a.d(t, { Z: () => v }), a(388685), a(361932), a(187205);
 var n = a(255367),
     r = a(442837),
     l = a(481060),
@@ -31,7 +31,7 @@ function b(e) {
               }),
           });
 }
-function f() {
+function v() {
     var e;
     let t = (0, r.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
         a = (0, r.e7)([u.Z], () => u.Z.getFilters()),

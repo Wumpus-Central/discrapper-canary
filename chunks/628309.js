@@ -1,9 +1,9 @@
-n.d(t, { u: () => a }), n(539854);
+n.d(t, { u: () => o }), n(539854);
 var r = n(73800),
     i = n(442837),
-    o = n(411149);
-function a() {
-    let e = (0, i.Wu)([o.Z], () => o.Z.wallpapers);
+    a = n(411149);
+function o() {
+    let e = (0, i.Wu)([a.Z], () => a.Z.wallpapers);
     return r.useMemo(
         () =>
             e.reduce((e, t) => {

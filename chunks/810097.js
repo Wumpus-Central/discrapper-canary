@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(704215),
     c = n(481060),
@@ -87,7 +87,7 @@ function N(e) {
     let {
             user: t,
             sourceType: n,
-            isVisible: o,
+            isVisible: a,
             isExpandable: b,
             interactionSourceId: O,
             targetRef: I,
@@ -131,8 +131,8 @@ function N(e) {
                 w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         };
     return (0, r.jsxs)(u.ZP, {
-        className: a()(E.popover, {
-            [E.visible]: o,
+        className: o()(E.popover, {
+            [E.visible]: a,
             [E.expandable]: b,
             [E.statusPopover]: n === m.n_.STATUS,
             [E.avatarPopover]: n === m.n_.AVATAR,
@@ -141,7 +141,7 @@ function N(e) {
         children: [
             (0, r.jsx)(c.DY3, {
                 text: g.intl.string(g.t.nhaI4e),
-                shouldShow: o,
+                shouldShow: a,
                 className: E.tooltipContainer,
                 delay: 0,
                 "aria-label": !1,
@@ -158,7 +158,7 @@ function N(e) {
             }),
             (0, r.jsx)(c.DY3, {
                 text: g.intl.string(g.t.RmDYKC),
-                shouldShow: o,
+                shouldShow: a,
                 className: E.tooltipContainer,
                 delay: 0,
                 "aria-label": !1,
@@ -182,7 +182,7 @@ function N(e) {
                       };
                       return (0, r.jsx)(c.DY3, {
                           text: g.intl.string(g.t.UKOtz8),
-                          shouldShow: o,
+                          shouldShow: a,
                           className: E.tooltipContainer,
                           delay: 0,
                           "aria-label": !1,

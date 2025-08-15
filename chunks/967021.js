@@ -1,6 +1,6 @@
 n.d(t, {
     HM: () => i,
-    J_: () => o,
+    J_: () => l,
 });
 let r = (0, n(818083).B)({
     kind: "user",
@@ -40,14 +40,14 @@ function i(e) {
         );
     return i;
 }
-function o(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n, disable: i } = e,
-        { isDownloadIconEnabled: o } = r.useExperiment(
+        { isDownloadIconEnabled: l } = r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: __OVERLAY__ || i,
             },
         );
-    return o;
+    return l;
 }

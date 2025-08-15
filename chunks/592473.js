@@ -3,14 +3,14 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(772848),
-    o = n(481060),
+    o = n(772848),
+    s = n(481060),
     c = n(871499),
     u = n(388032),
     d = n(6762);
-function h(e) {
+function p(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1 } = e,
-        [a] = i.useState(() => (0, s.Z)());
+        [a] = i.useState(() => (0, o.Z)());
     return (0, r.jsxs)("svg", {
         width: t,
         height: n,
@@ -37,20 +37,20 @@ function h(e) {
             }),
             (0, r.jsx)("g", {
                 mask: "url(#".concat(a, ")"),
-                children: (0, r.jsx)(o.E0I, {}),
+                children: (0, r.jsx)(s.E0I, {}),
             }),
         ],
     });
 }
-function p(e) {
+function h(e) {
     let { className: t, numRequestToSpeak: n } = e,
         i = n > 0;
     return (0, r.jsxs)("div", {
         className: a()(d.raisedHandIcon, t),
         children: [
-            (0, r.jsx)(h, { isBadged: i }),
+            (0, r.jsx)(p, { isBadged: i }),
             i
-                ? (0, r.jsx)(o.Text, {
+                ? (0, r.jsx)(s.Text, {
                       className: d.raisedHandCount,
                       variant: "text-xs/semibold",
                       children: n > 99 ? "99+" : n,
@@ -65,9 +65,9 @@ function f(e) {
             showRequestToSpeakSidebar: n,
             className: l,
             numRequestToSpeak: a,
-            onClick: s,
+            onClick: o,
         } = e,
-        o = (function (e, t) {
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -95,8 +95,8 @@ function f(e) {
             "onClick",
         ]);
     let d = i.useCallback(() => {
-        null == s || s(), t();
-    }, [s, t]);
+        null == o || o(), t();
+    }, [o, t]);
     return (0, r.jsx)(
         c.Z,
         (function (e) {
@@ -129,12 +129,12 @@ function f(e) {
                 label: n ? u.intl.string(u.t.gKGz7O) : u.intl.string(u.t.ImQ4dX),
                 className: l,
                 iconComponent: () =>
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(h, {
                         numRequestToSpeak: a,
                         className: l,
                     }),
             },
-            o,
+            s,
         ),
     );
 }

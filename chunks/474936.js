@@ -1,5 +1,5 @@
 n.d(t, {
-    $7: () => j,
+    $7: () => k,
     $8: () => eD,
     $X: () => eg,
     $e: () => f,
@@ -10,13 +10,13 @@ n.d(t, {
     C: () => s,
     C2: () => Q,
     CL: () => _,
-    CR: () => eo,
+    CR: () => ea,
     Cj: () => eF,
     Cn: () => K,
     Cx: () => e8,
     EA: () => N,
     ET: () => $,
-    EZ: () => eZ,
+    EZ: () => eV,
     F$: () => I,
     F_: () => c,
     GP: () => C,
@@ -29,7 +29,7 @@ n.d(t, {
     OT: () => es,
     QF: () => eP,
     QI: () => ez,
-    QP: () => ej,
+    QP: () => ek,
     Qh: () => e3,
     RU: () => ec,
     Rg: () => Y,
@@ -38,12 +38,12 @@ n.d(t, {
     Se: () => e6,
     Si: () => p,
     T7: () => eY,
-    TD: () => eV,
+    TD: () => eZ,
     TL: () => X,
     Tp: () => eW,
     UA: () => M,
     UD: () => y,
-    Ue: () => k,
+    Ue: () => j,
     Uq: () => eN,
     VU: () => e2,
     Wt: () => eJ,
@@ -55,7 +55,7 @@ n.d(t, {
     Z1: () => O,
     Zh: () => u,
     _k: () => eL,
-    a$: () => e4,
+    a$: () => e5,
     a1: () => eH,
     a7: () => J,
     b6: () => d,
@@ -69,8 +69,8 @@ n.d(t, {
     ee: () => em,
     gW: () => eh,
     gh: () => B,
-    h1: () => ek,
-    h8: () => ea,
+    h1: () => ej,
+    h8: () => eo,
     hX: () => eX,
     hs: () => el,
     i_: () => W,
@@ -78,7 +78,7 @@ n.d(t, {
     in: () => eI,
     jy: () => eK,
     jz: () => ei,
-    m8: () => Z,
+    m8: () => V,
     mn: () => S,
     nC: () => eE,
     nG: () => eO,
@@ -92,8 +92,8 @@ n.d(t, {
     rV: () => A,
     rX: () => F,
     rt: () => e$,
-    tL: () => V,
-    vK: () => e5,
+    tL: () => Z,
+    vK: () => e4,
     vL: () => eT,
     w1: () => ey,
     wh: () => z,
@@ -105,8 +105,8 @@ n.d(t, {
     n(388685);
 var r = n(314794),
     i = n(981631),
-    o = n(185923),
-    a = n(388032),
+    a = n(185923),
+    o = n(388032),
     s = (function (e) {
         return (e[(e.PREMIUM_TRIAL = 0)] = "PREMIUM_TRIAL"), (e[(e.PREMIUM_DISCOUNT = 1)] = "PREMIUM_DISCOUNT"), e;
     })({}),
@@ -376,14 +376,14 @@ let C = Object.freeze({
     L = 30,
     x = 2,
     M = 3,
-    j = 28,
-    k = 30,
+    k = 28,
+    j = 30,
     U = 30,
     G = 7,
     B = 30,
-    Z = "775514091874680832",
+    V = "775514091874680832",
     F = "845031178288889946",
-    V = 432000000,
+    Z = 432000000,
     H = 345600000,
     Y = 14,
     W = "520373071933079552",
@@ -399,8 +399,8 @@ let C = Object.freeze({
     en = "1268347360493174784",
     er = "1271484512081285191",
     ei = "1161363847311785984",
-    eo = [W, K, z, q, X, Q, J, $, ee, et, en, er, ei],
-    ea = [ee, et, er],
+    ea = [W, K, z, q, X, Q, J, $, ee, et, en, er, ei],
+    eo = [ee, et, er],
     es = [ee, er],
     el = "1150904354090532864",
     ec = "1199128659810582528",
@@ -604,7 +604,7 @@ let eT = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: o.xD,
+                emoji: a.xD,
                 bitrate: i.eWB,
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
@@ -671,7 +671,7 @@ let eT = Object.freeze({
         "944037208325619722",
         "511651885459963904",
     ];
-var ej = (function (e) {
+var ek = (function (e) {
         return (
             (e.SOUNDBOARD_PLAY = "soundboard play"),
             (e.PROFILE_THEME_COLOR = "profile_theme_color"),
@@ -685,7 +685,7 @@ var ej = (function (e) {
             e
         );
     })({}),
-    ek = (function (e) {
+    ej = (function (e) {
         return (e.FREE = "free"), (e.PREMIUM_STANDARD = "premium-standard"), e;
     })({});
 let eU = {
@@ -704,7 +704,7 @@ let eB = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1,
 });
-var eZ = (function (e) {
+var eV = (function (e) {
         return (
             (e[(e.UserSettings = 0)] = "UserSettings"), (e[(e.ApplicationStoreHome = 1)] = "ApplicationStoreHome"), e
         );
@@ -726,7 +726,7 @@ var eZ = (function (e) {
             e
         );
     })({});
-let eV = Object.freeze({
+let eZ = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128,
@@ -779,65 +779,65 @@ let e3 = [
         "premium_tenure_60_month_v2",
         "premium_tenure_72_month_v2",
     ],
-    e5 = {
+    e4 = {
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
-            nameUnformatted: a.t.LR1C0d,
+            nameUnformatted: o.t.LR1C0d,
             tenureReqNumMonths: 1,
             hasWideArt: !1,
             glowColor: "#b54913",
         },
         premium_tenure_3_month_v2: {
             id: "premium_tenure_3_month_v2",
-            nameUnformatted: a.t["rI1/3N"],
+            nameUnformatted: o.t["rI1/3N"],
             tenureReqNumMonths: 3,
             hasWideArt: !1,
             glowColor: "#9e9e9e",
         },
         premium_tenure_6_month_v2: {
             id: "premium_tenure_6_month_v2",
-            nameUnformatted: a.t.VkhVKS,
+            nameUnformatted: o.t.VkhVKS,
             tenureReqNumMonths: 6,
             hasWideArt: !1,
             glowColor: "#ffa813",
         },
         premium_tenure_12_month_v2: {
             id: "premium_tenure_12_month_v2",
-            nameUnformatted: a.t.gzUfNT,
+            nameUnformatted: o.t.gzUfNT,
             tenureReqNumMonths: 12,
             hasWideArt: !1,
             glowColor: "#5eacc2",
         },
         premium_tenure_24_month_v2: {
             id: "premium_tenure_24_month_v2",
-            nameUnformatted: a.t.fuwTPj,
+            nameUnformatted: o.t.fuwTPj,
             tenureReqNumMonths: 24,
             hasWideArt: !1,
             glowColor: "#6d5cf2",
         },
         premium_tenure_36_month_v2: {
             id: "premium_tenure_36_month_v2",
-            nameUnformatted: a.t.qNhNk5,
+            nameUnformatted: o.t.qNhNk5,
             tenureReqNumMonths: 36,
             hasWideArt: !1,
             glowColor: "#32c102",
         },
         premium_tenure_60_month_v2: {
             id: "premium_tenure_60_month_v2",
-            nameUnformatted: a.t["wvX+eH"],
+            nameUnformatted: o.t["wvX+eH"],
             tenureReqNumMonths: 60,
             hasWideArt: !0,
             glowColor: "#f29cc3",
         },
         premium_tenure_72_month_v2: {
             id: "premium_tenure_72_month_v2",
-            nameUnformatted: a.t["/menIy"],
+            nameUnformatted: o.t["/menIy"],
             tenureReqNumMonths: 72,
             hasWideArt: !0,
             glowColor: "#078292",
         },
     };
-var e4 = (function (e) {
+var e5 = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.FP_ONLY = 1)] = "FP_ONLY"),

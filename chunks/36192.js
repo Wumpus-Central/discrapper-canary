@@ -91,7 +91,7 @@ function S() {
                                                           e.id_hash,
                                                       ),
                                                   ),
-                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(I, {}),
+                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(N, {}),
                                               ],
                                           }),
                                 ],
@@ -280,7 +280,7 @@ function T(e) {
         o.id_hash,
     );
 }
-function I() {
+function N() {
     return (0, i.jsxs)("div", {
         className: a()(v.session, v.legacySession),
         children: [

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(442837),
     i = n(592125),
-    o = n(496675),
+    l = n(496675),
     a = n(981631);
-function s(e) {
-    return (0, r.e7)([o.Z, i.Z], () => {
+function o(e) {
+    return (0, r.e7)([l.Z, i.Z], () => {
         let t = i.Z.getChannel(e);
-        return null != t && o.Z.can(a.Plq.SEND_MESSAGES, t);
+        return null != t && l.Z.can(a.Plq.SEND_MESSAGES, t);
     });
 }

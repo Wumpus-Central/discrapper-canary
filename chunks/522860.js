@@ -1,45 +1,44 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(194082),
+    l = n(194082),
     a = n(739566),
-    s = n(834129),
-    l = n(388032);
-let c = 20;
-function u(e) {
+    o = n(834129),
+    s = n(388032);
+function c(e) {
     var t;
-    let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: _, compact: p } = e,
-        h = (0, a.ZP)(n),
-        m = null == (t = n.call) ? void 0 : t.duration,
-        g = _(h),
-        E = l.intl.format(l.t.FKXvaG, {
-            username: h.nick,
-            activityName: null != d ? d.name : "unknown",
-            onJoinStream: f,
+    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
+        f = (0, a.ZP)(n),
+        _ = null == (t = n.call) ? void 0 : t.duration,
+        g = p(f),
+        h = s.intl.format(s.t.FKXvaG, {
+            username: f.nick,
+            activityName: null != u ? u.name : "unknown",
+            onJoinStream: d,
             usernameHook: g,
         });
     return (
-        null != m &&
-            (E = l.intl.format(l.t.NEFxtb, {
-                username: h.nick,
-                duration: m.humanize(),
-                channelName: u.name,
+        null != _ &&
+            (h = s.intl.format(s.t.NEFxtb, {
+                username: f.nick,
+                duration: _.humanize(),
+                channelName: c.name,
                 usernameHook: g,
             })),
-        (0, r.jsx)(s.Z, {
+        (0, r.jsx)(o.Z, {
             iconNode:
-                null != m
+                null != _
                     ? (0, r.jsx)(i.g5r, {
                           size: "custom",
                           color: "currentColor",
-                          width: c,
-                          height: c,
+                          width: 20,
+                          height: 20,
                       })
-                    : (0, r.jsx)(o.ZP, { size: o.ZP.Sizes.SMALL }),
+                    : (0, r.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: p,
-            children: E,
+            compact: m,
+            children: h,
         })
     );
 }

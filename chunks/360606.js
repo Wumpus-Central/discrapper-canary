@@ -1,8 +1,8 @@
 let r, i;
 n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685);
-var o,
-    a = n(392711),
-    s = n.n(a),
+var a,
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
     c = n(570140),
     u = n(308063),
@@ -112,12 +112,12 @@ function x(e) {
 function M() {
     (T = p.QZA.SUBMITTING), (S = {});
 }
-function j(e) {
+function k(e) {
     var t;
     if (T !== p.QZA.SUBMITTING) return !1;
     (T = p.QZA.OPEN), (S = null != (t = e.errors) ? t : {});
 }
-function k(e) {
+function j(e) {
     let { guildId: t, integrations: n } = e;
     if (null == r || t !== r.id || T === p.QZA.SUBMITTING) return !1;
     for (let e of ((I = !1), n))
@@ -128,10 +128,10 @@ function k(e) {
                 if (n === e.id) return !0;
             })
         ) {
-            var i, o;
+            var i, a;
             g.push(e),
                 e.type === (null == y ? void 0 : y.type) &&
-                    (null == (i = e.account) ? void 0 : i.id) === (null == (o = y.account) ? void 0 : o.id) &&
+                    (null == (i = e.account) ? void 0 : i.id) === (null == (a = y.account) ? void 0 : a.id) &&
                     (y = e);
         }
     for (let e = g.length - 1; e >= 0; e--) {
@@ -180,7 +180,7 @@ function B(e) {
     if (null == b || b !== t) return !1;
     (b = null), (S = {}), (A = !1);
 }
-function Z(e) {
+function V(e) {
     let { integrationId: t } = e,
         n = K(t);
     if (null == n) return !1;
@@ -189,7 +189,7 @@ function Z(e) {
 function F() {
     (y = null), (S = {}), (A = !1);
 }
-function V(e) {
+function Z(e) {
     let { webhookId: t } = e,
         n = z(t);
     if (null == n) return !1;
@@ -216,7 +216,7 @@ function z(e) {
         return n === e;
     });
 }
-class q extends (o = l.ZP.Store) {
+class q extends (a = l.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, f.Z, d.Z);
     }
@@ -289,17 +289,17 @@ let X = new q(
                   INTEGRATION_SETTINGS_SET_SECTION: R,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
-                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: Z,
+                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: V,
                   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: F,
                   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: L,
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: x,
-                  INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: V,
+                  INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: Z,
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: H,
                   GUILD_SETTINGS_CLOSE: w,
-                  GUILD_SETTINGS_LOADED_INTEGRATIONS: k,
+                  GUILD_SETTINGS_LOADED_INTEGRATIONS: j,
                   WEBHOOKS_UPDATE: U,
                   INTEGRATION_SETTINGS_SUBMITTING: M,
-                  INTEGRATION_SETTINGS_SAVE_FAILURE: j,
+                  INTEGRATION_SETTINGS_SAVE_FAILURE: k,
               },
     ),
     Q = X;

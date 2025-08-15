@@ -2,13 +2,13 @@ n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(704215),
-    a = n(907459),
+    a = n(704215),
+    o = n(907459),
     s = n(514361),
     l = n(803038),
     c = n(662975),
     u = n(724145),
-    d = n(771934),
+    d = n(507962),
     f = n(726034),
     _ = n(884134),
     p = n(266454),
@@ -27,10 +27,10 @@ let v = function () {
         { v2EditorEnabled: I } = l.Mc.useExperiment({ location: "AppRightSidePanel" }),
         { activePanel: T, metadata: S } = (0, b.oq)(),
         A = [];
-    !e && null == T && (n && !t && A.push(o.z.CLIENT_THEMES_COACHMARK), v && A.push(o.z.CUSTOM_THEME_COACHMARK));
+    !e && null == T && (n && !t && A.push(a.z.CLIENT_THEMES_COACHMARK), v && A.push(a.z.CUSTOM_THEME_COACHMARK));
     let [N, C] = (0, h.US)(A, O.R.SIDEBAR, !0),
-        R = N === o.z.CLIENT_THEMES_COACHMARK,
-        P = N === o.z.CUSTOM_THEME_COACHMARK;
+        R = N === a.z.CLIENT_THEMES_COACHMARK,
+        P = N === a.z.CUSTOM_THEME_COACHMARK;
     if (((0, d.HA)(v, N), e)) return null;
     let w = I ? _.Z : f.Z;
     return (0, r.jsxs)(r.Fragment, {
@@ -40,7 +40,7 @@ let v = function () {
                     markAsDismissed: R
                         ? C
                         : () => {
-                              (0, p.Q3)(o.z.CLIENT_THEMES_COACHMARK, {
+                              (0, p.Q3)(a.z.CLIENT_THEMES_COACHMARK, {
                                   dismissAction: O.L.INDIRECT_ACTION,
                                   forceTrack: !0,
                               });
@@ -48,7 +48,7 @@ let v = function () {
                     showClientThemesCoachmark: R,
                 }),
             T === b.wh.APP_ICON &&
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(o.Z, {
                     isCoachmark: !1,
                     markAsDismissed: C,
                 }),

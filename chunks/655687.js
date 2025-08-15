@@ -1,43 +1,43 @@
 n.d(t, { Z: () => a });
 var r = n(933557),
-    i = n(981631),
-    o = n(388032);
+    l = n(981631),
+    i = n(388032);
 function a(e) {
     let { channel: t, isReadonly: n = !1, isCreatingThread: a = !1 } = e,
-        s = (0, r.ZP)(t, !0),
-        l = (0, r.ZP)(t, !1);
-    return null == t || null == s
+        o = (0, r.ZP)(t, !0),
+        u = (0, r.ZP)(t, !1);
+    return null == t || null == o
         ? {
-              placeholder: o.intl.string(o.t.MKDeyM),
-              accessibilityLabel: o.intl.string(o.t.MKDeyM),
+              placeholder: i.intl.string(i.t.MKDeyM),
+              accessibilityLabel: i.intl.string(i.t.MKDeyM),
           }
         : a
           ? {
-                placeholder: o.intl.string(o.t.YzpScX),
-                accessibilityLabel: o.intl.string(o.t.YzpScX),
+                placeholder: i.intl.string(i.t.YzpScX),
+                accessibilityLabel: i.intl.string(i.t.YzpScX),
             }
           : n
             ? {
-                  placeholder: o.intl.string(o.t.RRvRp6),
-                  accessibilityLabel: o.intl.string(o.t.RRvRp6),
+                  placeholder: i.intl.string(i.t.RRvRp6),
+                  accessibilityLabel: i.intl.string(i.t.RRvRp6),
               }
             : t.isForumPost()
               ? {
-                    placeholder: o.intl.formatToPlainString(o.t.Y6qWLS, { channel: s }),
-                    accessibilityLabel: o.intl.formatToPlainString(o.t.KffKoa, { channel: l }),
+                    placeholder: i.intl.formatToPlainString(i.t.Y6qWLS, { channel: o }),
+                    accessibilityLabel: i.intl.formatToPlainString(i.t.KffKoa, { channel: u }),
                 }
-              : i.TPd.THREADS.has(t.type)
+              : l.TPd.THREADS.has(t.type)
                 ? {
-                      placeholder: o.intl.formatToPlainString(o.t["8lzR/f"], { channel: s }),
-                      accessibilityLabel: o.intl.formatToPlainString(o.t.UZIMWV, { channel: l }),
+                      placeholder: i.intl.formatToPlainString(i.t["8lzR/f"], { channel: o }),
+                      accessibilityLabel: i.intl.formatToPlainString(i.t.UZIMWV, { channel: u }),
                   }
-                : t.type === i.d4z.DM
+                : t.type === l.d4z.DM
                   ? {
-                        placeholder: o.intl.formatToPlainString(o.t["4c+CAw"], { channel: s }),
-                        accessibilityLabel: o.intl.formatToPlainString(o.t.fqOxbW, { channel: l }),
+                        placeholder: i.intl.formatToPlainString(i.t["4c+CAw"], { channel: o }),
+                        accessibilityLabel: i.intl.formatToPlainString(i.t.fqOxbW, { channel: u }),
                     }
                   : {
-                        placeholder: o.intl.formatToPlainString(o.t["8lzR/f"], { channel: s }),
-                        accessibilityLabel: o.intl.formatToPlainString(o.t.ih7ZSE, { channel: l }),
+                        placeholder: i.intl.formatToPlainString(i.t["8lzR/f"], { channel: o }),
+                        accessibilityLabel: i.intl.formatToPlainString(i.t.ih7ZSE, { channel: u }),
                     };
 }

@@ -1,8 +1,8 @@
 n.d(t, {
     N3: () => i,
-    _j: () => a,
+    _j: () => o,
     jD: () => s,
-    uj: () => o,
+    uj: () => a,
     vs: () => l,
 });
 var r = n(359135);
@@ -63,10 +63,10 @@ let i = {
             name: r.P.White,
         },
     },
-    o = "invalid_palette",
-    a = "custom_palette",
+    a = "invalid_palette",
+    o = "custom_palette",
     s = {
-        name: o,
+        name: a,
         darkBackground: "",
         lightBackground: "",
     },

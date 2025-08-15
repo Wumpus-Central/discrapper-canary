@@ -1,95 +1,92 @@
-n.d(t, { S: () => d });
-var r = n(573654),
-    i = n(528302);
-function o(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function a(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function s(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
-}
-function l(e, t, n) {
+r.d(t, { S: () => c });
+var n = r(573654);
+if (12633 == r.j) var o = r(528302);
+function i(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-var c = ["canDrop", "hover", "drop"],
-    u = (function () {
-        function e(t, n, r) {
-            o(this, e),
-                l(this, "props", null),
-                l(this, "spec", void 0),
-                l(this, "monitor", void 0),
-                l(this, "ref", void 0),
-                (this.spec = t),
-                (this.monitor = n),
-                (this.ref = r);
-        }
-        return (
-            s(e, [
-                {
-                    key: "receiveProps",
-                    value: function (e) {
-                        this.props = e;
-                    },
-                },
-                {
-                    key: "receiveMonitor",
-                    value: function (e) {
-                        this.monitor = e;
-                    },
-                },
-                {
-                    key: "canDrop",
-                    value: function () {
-                        return !this.spec.canDrop || this.spec.canDrop(this.props, this.monitor);
-                    },
-                },
-                {
-                    key: "hover",
-                    value: function () {
-                        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, i.Al)(this.ref));
-                    },
-                },
-                {
-                    key: "drop",
-                    value: function () {
-                        if (this.spec.drop) {
-                            var e = this.spec.drop(this.props, this.monitor, this.ref.current);
-                            return e;
-                        }
-                    },
-                },
-            ]),
-            e
-        );
-    })();
-function d(e) {
+var a = 12633 == r.j ? ["canDrop", "hover", "drop"] : null,
+    s =
+        12633 == r.j
+            ? (function () {
+                  var e;
+                  function t(e, r, n) {
+                      if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+                      i(this, "props", null),
+                          i(this, "spec", void 0),
+                          i(this, "monitor", void 0),
+                          i(this, "ref", void 0),
+                          (this.spec = e),
+                          (this.monitor = r),
+                          (this.ref = n);
+                  }
+                  return (
+                      (e = [
+                          {
+                              key: "receiveProps",
+                              value: function (e) {
+                                  this.props = e;
+                              },
+                          },
+                          {
+                              key: "receiveMonitor",
+                              value: function (e) {
+                                  this.monitor = e;
+                              },
+                          },
+                          {
+                              key: "canDrop",
+                              value: function () {
+                                  return !this.spec.canDrop || this.spec.canDrop(this.props, this.monitor);
+                              },
+                          },
+                          {
+                              key: "hover",
+                              value: function () {
+                                  this.spec.hover &&
+                                      this.props &&
+                                      this.spec.hover(this.props, this.monitor, (0, o.Al)(this.ref));
+                              },
+                          },
+                          {
+                              key: "drop",
+                              value: function () {
+                                  if (this.spec.drop) return this.spec.drop(this.props, this.monitor, this.ref.current);
+                              },
+                          },
+                      ]),
+                      (function (e, t) {
+                          for (var r = 0; r < t.length; r++) {
+                              var n = t[r];
+                              (n.enumerable = n.enumerable || !1),
+                                  (n.configurable = !0),
+                                  "value" in n && (n.writable = !0),
+                                  Object.defineProperty(e, n.key, n);
+                          }
+                      })(t.prototype, e),
+                      t
+                  );
+              })()
+            : null;
+function c(e) {
     return (
         Object.keys(e).forEach(function (t) {
-            (0, r.k)(
-                c.indexOf(t) > -1,
+            (0, n.k)(
+                a.indexOf(t) > -1,
                 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
-                c.join(", "),
+                a.join(", "),
                 t,
             ),
-                (0, r.k)(
+                (0, n.k)(
                     "function" == typeof e[t],
                     "Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target",
                     t,
@@ -97,8 +94,8 @@ function d(e) {
                     e[t],
                 );
         }),
-        function (t, n) {
-            return new u(e, t, n);
+        function (t, r) {
+            return new s(e, t, r);
         }
     );
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => I });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -71,7 +71,7 @@ function v(e, t) {
 function I(e) {
     var t, n, i, b;
     let { type: O, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: A } = e,
-        N = (0, a.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
+        N = (0, o.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         C = (0, u.Z)(),
         R = null != T ? T : C,
         P = null != (b = null != S ? S : T) ? b : C / 10,
@@ -80,8 +80,8 @@ function I(e) {
         L = null != O.upsellLongMessages && !N,
         x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
         M = R - w,
-        j = M > P,
-        k = M < 0 && x,
+        k = M > P,
+        j = M < 0 && x,
         U =
             0 === M
                 ? g.intl.string(g.t.tU6YQ0)
@@ -89,12 +89,12 @@ function I(e) {
                   ? g.intl.formatToPlainString(g.t.qH8uFR, { count: M })
                   : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && M >= 0) || !j || (L && !j))) return null;
+    if (!((D && M >= 0) || !k || (L && !k))) return null;
     let B = M >= 0;
     return (0, r.jsx)(c.Gt, {
         value: G,
         children: (0, r.jsxs)("div", {
-            className: o()(A, E.characterCount),
+            className: a()(A, E.characterCount),
             children: [
                 (0, r.jsxs)("div", {
                     className: E.flairContainer,
@@ -117,7 +117,7 @@ function I(e) {
                                       ),
                               })
                             : null,
-                        j || k
+                        k || j
                             ? null
                             : (0, r.jsx)(s.ua7, {
                                   text: U,
@@ -144,7 +144,7 @@ function I(e) {
                     ],
                 }),
                 (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: M }) }),
-                L && !j
+                L && !k
                     ? (0, r.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,

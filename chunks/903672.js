@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(198620),
     m = n(294218),
     b = n(216789),
-    O = n(695346),
-    _ = n(592125),
+    _ = n(695346),
+    O = n(592125),
     y = n(731290),
     v = n(944486),
     j = n(455199),
@@ -23,8 +23,8 @@ var r = n(255367),
     E = n(324081),
     x = n(240126),
     S = n(981631),
-    P = n(388032),
-    I = n(889833);
+    I = n(388032),
+    P = n(889833);
 let N = {
     offset: {
         left: 4,
@@ -47,14 +47,14 @@ function w(e, t, n) {
 }
 function Z(e) {
     let { onJump: t } = e,
-        n = (0, a.e7)([_.Z, v.Z], () => _.Z.getChannel(v.Z.getChannelId())),
+        n = (0, a.e7)([O.Z, v.Z], () => O.Z.getChannel(v.Z.getChannelId())),
         {
             messages: l,
             hasMore: s,
             loading: f,
             guildFilter: h,
             roleFilter: m,
-            everyoneFilter: O,
+            everyoneFilter: _,
         } = (0, a.cj)([j.ZP], () => ({
             messages: j.ZP.getMentions(),
             hasMore: j.ZP.hasMore,
@@ -66,11 +66,11 @@ function Z(e) {
         y = (0, b.Us)({ location: "RecentMentions" }),
         C = (0, p.Z)(h),
         E = (0, p.Z)(m),
-        x = (0, p.Z)(O);
+        x = (0, p.Z)(_);
     i.useEffect(() => {
         if (!j.ZP.hasLoadedEver) return void w(n, !0);
-        ((null != C && h !== C) || (null != E && m !== E) || (null != x && O !== x)) && w(n, !0);
-    }, [C, h, E, m, x, O, n, !0]),
+        ((null != C && h !== C) || (null != E && m !== E) || (null != x && _ !== x)) && w(n, !0);
+    }, [C, h, E, m, x, _, n, !0]),
         (0, d.ZP)(() => {
             (null == l ? void 0 : l.some(g.k5)) && (c.Z.clearMentions(), w(n, !0));
         }),
@@ -82,8 +82,8 @@ function Z(e) {
         );
     let N = i.useCallback(() => null, []);
     return (0, r.jsx)(u.ZP, {
-        className: o()(I.recentMentionsPopout, { [I.widerInbox]: y }),
-        scrollerClassName: I.scroller,
+        className: o()(P.recentMentionsPopout, { [P.widerInbox]: y }),
+        scrollerClassName: P.scroller,
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
@@ -101,7 +101,7 @@ function Z(e) {
         renderHeader: N,
         renderEmptyState: R,
         renderMessage: T,
-        "aria-label": P.intl.string(P.t.jbV6MD),
+        "aria-label": I.intl.string(I.t.jbV6MD),
         listName: "recents",
     });
 }
@@ -121,12 +121,12 @@ function T(e, t) {
 function A(e) {
     let { message: t, gotoMessage: n, dismissible: i } = e;
     if (null == t) return null;
-    let l = _.Z.getChannel(t.channel_id);
+    let l = O.Z.getChannel(t.channel_id);
     if (null == l || ((0, h.aC)(l) && (0, f.sf)())) return null;
     let o = y.Z.didAgree(l.getGuildId()),
         a = !!(0, h.aC)(l) && !o;
     return (0, r.jsxs)("div", {
-        className: I.container,
+        className: P.container,
         children: [
             (0, r.jsx)(E.Z, {
                 channel: l,
@@ -134,8 +134,8 @@ function A(e) {
                 children:
                     null != i
                         ? (0, r.jsx)(s.M0o, {
-                              className: I.closeButton,
-                              tooltip: P.intl.string(P.t.cpT0Cg),
+                              className: P.closeButton,
+                              tooltip: I.intl.string(I.t.cpT0Cg),
                               color: s.YX$.TERTIARY,
                               icon: (0, r.jsx)(s.Dio, {
                                   size: "xs",
@@ -146,10 +146,10 @@ function A(e) {
                         : null,
             }),
             (0, r.jsxs)("div", {
-                className: I.messageContainer,
+                className: P.messageContainer,
                 children: [
                     (0, r.jsx)(C.Z, {
-                        className: I.jumpMessageButton,
+                        className: P.jumpMessageButton,
                         onJump: n,
                     }),
                     (0, r.jsx)(
@@ -157,9 +157,9 @@ function A(e) {
                         {
                             message: t,
                             channel: l,
-                            className: I.message,
+                            className: P.message,
                             hideAccessories: a,
-                            compact: O.jU.getSetting(),
+                            compact: _.jU.getSetting(),
                             animateAvatar: !1,
                             focusProps: N,
                             trackAnnouncementViews: !0,
@@ -174,7 +174,7 @@ function A(e) {
 function R() {
     return (0, r.jsx)(x.Z, {
         Icon: s.lOy,
-        header: P.intl.string(P.t["bgDz7+"]),
-        tip: P.intl.string(P.t.NS15vr),
+        header: I.intl.string(I.t["bgDz7+"]),
+        tip: I.intl.string(I.t.NS15vr),
     });
 }

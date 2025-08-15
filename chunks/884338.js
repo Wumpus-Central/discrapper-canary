@@ -7,9 +7,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(481060),
     c = n(686546),
     u = n(670188),
@@ -127,18 +127,18 @@ function R() {
             return y;
     }
 }
-class P extends (r = o.PureComponent) {
+class P extends (r = a.PureComponent) {
     renderUsers() {
-        let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: o } = this.props,
-            a = [],
+        let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: a } = this.props,
+            o = [],
             s = e.length === t ? e.length : t - 1,
             l = this.renderMoreUsers(s),
             u = 0;
         for (; u < s && u < e.length; ) {
             var d;
-            let t = null == l && null == o && u === e.length - 1,
+            let t = null == l && null == a && u === e.length - 1,
                 s = n(e[u], t, u);
-            a.push(
+            o.push(
                 t
                     ? (0, i.jsx)(
                           "div",
@@ -162,22 +162,22 @@ class P extends (r = o.PureComponent) {
             ),
                 u++;
         }
-        return null != o ? a.push(o) : null != l && a.push(l), a;
+        return null != a ? o.push(a) : null != l && o.push(l), o;
     }
     renderMoreUsers(e) {
-        let { max: t, count: n, hideMoreUsers: r, renderMoreUsers: a, users: s, dimEmptyUsers: l } = this.props,
+        let { max: t, count: n, hideMoreUsers: r, renderMoreUsers: o, users: s, dimEmptyUsers: l } = this.props,
             c = Math.min(e, s.length),
-            u = l ? N : a;
+            u = l ? N : o;
         if (!r) {
             if (null != n) {
-                if (n >= t) return (0, i.jsx)(o.Fragment, { children: u("".concat(t, "+"), t) }, "more-users");
+                if (n >= t) return (0, i.jsx)(a.Fragment, { children: u("".concat(t, "+"), t) }, "more-users");
                 else if (n > s.length) {
                     let e = n - s.length;
-                    return (0, i.jsx)(o.Fragment, { children: u("+".concat(e), e) }, "more-users");
+                    return (0, i.jsx)(a.Fragment, { children: u("+".concat(e), e) }, "more-users");
                 }
             } else if (c < s.length) {
                 let e = Math.min(s.length - c, 99);
-                return (0, i.jsx)(o.Fragment, { children: u("+".concat(e), e) }, "more-users");
+                return (0, i.jsx)(a.Fragment, { children: u("+".concat(e), e) }, "more-users");
             }
         }
     }
@@ -197,8 +197,8 @@ class P extends (r = o.PureComponent) {
                 size: t,
                 users: n,
                 guildId: r,
-                showUserPopout: o,
-                useFallbackUserForPopout: a,
+                showUserPopout: a,
+                useFallbackUserForPopout: o,
             } = this.props,
             { popoutUserId: l } = this.state;
         if (null == l)
@@ -207,14 +207,14 @@ class P extends (r = o.PureComponent) {
                 children: [this.renderIcon(), this.renderUsers()],
             });
         let c = n.find((e) => e instanceof d.Z && e.id === l),
-            _ = a && null == f.default.getUser(l);
+            _ = o && null == f.default.getUser(l);
         return (0, i.jsx)(u.Z, {
             targetElementRef: this._ref,
             userId: l,
             user: _ && null != c ? c : void 0,
             guildId: r,
             fixed: !0,
-            shouldShow: !0 === o && null != l,
+            shouldShow: !0 === a && null != l,
             onRequestClose: () => this.setState({ popoutUserId: null }),
             clickTrap: !0,
             children: (n) =>
@@ -238,10 +238,10 @@ class P extends (r = o.PureComponent) {
     constructor(...e) {
         super(...e),
             h(this, "state", { popoutUserId: null }),
-            h(this, "_ref", o.createRef()),
+            h(this, "_ref", a.createRef()),
             h(this, "defaultRenderUser", (e, t, n) => {
                 let r,
-                    { showUserPopout: o, guildId: a, size: c, dimEmptyUsers: u } = this.props;
+                    { showUserPopout: a, guildId: o, size: c, dimEmptyUsers: u } = this.props;
                 if (null == e)
                     if (!this.props.showDefaultAvatarsForNullUsers)
                         return (0, i.jsx)("div", { className: s()(p.emptyUser, { [p.emptyUserDimmed]: u }) });
@@ -264,7 +264,7 @@ class P extends (r = o.PureComponent) {
                     });
                 } else
                     r = (0, i.jsx)("img", {
-                        src: e.getAvatarURL(a, c),
+                        src: e.getAvatarURL(o, c),
                         alt: e.username,
                         className: p.avatar,
                     });
@@ -276,7 +276,7 @@ class P extends (r = o.PureComponent) {
                     },
                     S(e, n),
                 );
-                return o && e !== T
+                return a && e !== T
                     ? (0, i.jsx)(
                           l.P3F,
                           {

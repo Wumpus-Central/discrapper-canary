@@ -1,41 +1,41 @@
-n.d(t, {
-    V: () => d,
-    Z: () => u,
+l.d(n, {
+    V: () => u,
+    Z: () => d,
 });
-var r = n(255367);
-n(73800);
-var i = n(628028),
-    o = n(220427),
-    a = n(777207),
-    s = n(692547),
-    l = n(330711),
-    c = n(922762);
-function u(e) {
-    let { type: t } = e;
-    return (0, r.jsx)(d, {
+var t = l(255367);
+l(73800);
+var r = l(628028),
+    i = l(220427),
+    s = l(777207),
+    a = l(692547),
+    o = l(330711),
+    c = l(922762);
+function d(e) {
+    let { type: n } = e;
+    return (0, t.jsx)(u, {
         icon:
-            "user" === t
-                ? (0, r.jsx)(o.t, {
+            "user" === n
+                ? (0, t.jsx)(i.t, {
                       size: "xxs",
-                      color: s.Z.colors.INTERACTIVE_NORMAL,
+                      color: a.Z.colors.INTERACTIVE_NORMAL,
                   })
-                : (0, r.jsx)(i.Q, {
+                : (0, t.jsx)(r.Q, {
                       size: "xxs",
-                      color: s.Z.colors.INTERACTIVE_NORMAL,
+                      color: a.Z.colors.INTERACTIVE_NORMAL,
                   }),
-        text: "user" === t ? l.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : l.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
+        text: "user" === n ? o.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : o.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
     });
 }
-function d(e) {
-    let { icon: t, text: n } = e;
-    return (0, r.jsxs)("div", {
+function u(e) {
+    let { icon: n, text: l } = e;
+    return (0, t.jsxs)("div", {
         className: c.container,
         children: [
-            t,
-            (0, r.jsx)(a.x, {
+            n,
+            (0, t.jsx)(s.x, {
                 color: "header-primary",
                 variant: "text-sm/medium",
-                children: n,
+                children: l,
             }),
         ],
     });

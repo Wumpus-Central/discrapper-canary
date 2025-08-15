@@ -1,4 +1,4 @@
-e.d(n, { default: () => y });
+e.d(n, { default: () => E });
 var l = e(255367);
 e(73800);
 var i = e(481060),
@@ -6,78 +6,78 @@ var i = e(481060),
     o = e(410575),
     a = e(299206),
     c = e(70877),
-    s = e(572427),
-    u = e(231259),
+    u = e(572427),
+    s = e(231259),
     d = e(159233),
     g = e(924952),
-    v = e(99528),
+    f = e(99528),
     b = e(830394),
-    f = e(473545),
-    p = e(124422),
-    j = e(981631),
-    h = e(388032);
-function y(t) {
+    p = e(473545),
+    v = e(124422),
+    h = e(981631),
+    y = e(388032);
+function E(t) {
     let {
             guildEventId: n,
             recurrenceId: e,
-            channel: y,
-            guild: Z,
-            analyticsContext: m,
-            isRecurrenceItem: O = !1,
-            onSelect: P,
+            channel: E,
+            guild: O,
+            analyticsContext: j,
+            isRecurrenceItem: m = !1,
+            onSelect: _,
         } = t,
-        w = (0, b.Z)({
+        P = (0, b.Z)({
             guildEventId: n,
             recurrenceId: e,
-            guild: Z,
-            channel: y,
+            guild: O,
+            channel: E,
         }),
-        x = (0, u.Z)({
+        Z = (0, s.Z)({
             guildEventId: n,
             recurrenceId: e,
-            guild: Z,
-            channel: y,
+            guild: O,
+            channel: E,
         }),
-        E = (0, d.Z)({
+        T = (0, d.Z)({
             guildEventId: n,
-            guild: Z,
-            channel: y,
+            guild: O,
+            channel: E,
             recurrenceId: e,
-            isRecurrenceItem: O,
+            isRecurrenceItem: m,
         }),
-        S = (0, g.Z)(n, Z, y),
-        D = (0, p.Z)(n, Z, y),
-        N = (0, s.Z)(n, Z.id, e),
-        T = (0, v.Z)(n),
-        _ = (0, a.Z)({
+        w = (0, g.Z)(n, O, E),
+        S = (0, v.Z)(n, O, E),
+        N = (0, u.Z)(n, O.id, e),
+        x = (0, f.Z)(n),
+        D = (0, a.Z)({
             id: n,
-            label: h.intl.string(h.t.WZwPOz),
+            label: y.intl.string(y.t.WZwPOz),
         }),
-        R = (0, a.Z)({
+        A = (0, a.Z)({
             id: e,
-            label: h.intl.string(h.t.NZRGQk),
+            label: y.intl.string(y.t.NZRGQk),
         }),
-        k = (0, c.Z)(n, Z.id, y, e),
-        C = (0, f.Z)({
+        I = (0, c.Z)(n, O.id, E, e),
+        C = (0, p.Z)({
             guildEventId: n,
-            guildId: Z.id,
+            guildId: O.id,
             recurrenceId: e,
         });
     return (0, l.jsx)(o.Z, {
-        context: m,
-        object: j.qAy.CONTEXT_MENU,
+        context: j,
+        object: h.qAy.CONTEXT_MENU,
         children: (0, l.jsxs)(i.v2r, {
             navId: "user-context",
             onClose: r.Zy,
-            "aria-label": h.intl.string(h.t.liqwPD),
-            onSelect: P,
+            "aria-label": y.intl.string(y.t.liqwPD),
+            onSelect: _,
             children: [
                 (0, l.jsxs)(i.kSQ, {
-                    children: [k, !O && D, E, !O && S, x, w, N, O && C],
+                    children: [I, !m && S, T, !m && w, Z, P, N, m && C],
                 }),
-                !O && (0, l.jsx)(i.kSQ, { children: T }),
+                !m && (0, l.jsx)(i.kSQ, { children: x }),
                 (0, l.jsxs)(i.kSQ, {
-                    children: [_, R],
+                    children: [D, A],
                 }),
             ],
         }),

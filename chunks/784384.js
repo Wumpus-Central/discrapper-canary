@@ -1,32 +1,32 @@
 n.d(t, {
-    HY: () => x,
-    nm: () => v,
-    pU: () => E,
-    y: () => C,
+    HY: () => I,
+    nm: () => y,
+    pU: () => S,
+    y: () => A,
 }),
     n(388685),
     n(361932),
     n(187205);
 var l = n(73800),
     r = n(106351),
-    a = n(442837),
-    i = n(622822),
+    i = n(442837),
+    a = n(622822),
     s = n(933557),
     o = n(987509),
     c = n(926491),
     u = n(378233),
     d = n(131704),
-    h = n(592125),
-    f = n(496675),
-    m = n(699516),
+    f = n(592125),
+    h = n(496675),
+    _ = n(699516),
     g = n(594174),
-    _ = n(408433),
+    m = n(408433),
     p = n(823379),
-    b = n(981631),
-    y = n(388032);
-function v(e) {
+    E = n(981631),
+    b = n(388032);
+function y(e) {
     let t = e.map(o.hl).find(p.lm),
-        n = (0, a.e7)([h.Z], () => h.Z.getChannel(t), [t]);
+        n = (0, i.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return l.useMemo(
         () =>
             null != n
@@ -38,21 +38,21 @@ function v(e) {
         [n],
     );
 }
-function x(e, t, n) {
+function I(e, t, n) {
     let l = n instanceof d.Sf;
-    if ((0, i.aC)(t) && !(l && (0, i.aC)(n))) return { label: y.intl.string(y.t.KgPx1N) };
+    if ((0, a.aC)(t) && !(l && (0, a.aC)(n))) return { label: b.intl.string(b.t.KgPx1N) };
     if (l && (0, d.Km)(n.type)) {
         if (
             (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
-            !f.Z.can(b.Plq.ATTACH_FILES, n)
+            !h.Z.can(E.Plq.ATTACH_FILES, n)
         )
-            return { label: y.intl.string(y.t.P7yvbm) };
+            return { label: b.intl.string(b.t.P7yvbm) };
         if (
             (e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-            !(0, _.eC)(n, f.Z) &&
-            !(0, _.En)(e)
+            !(0, m.eC)(n, h.Z) &&
+            !(0, m.En)(e)
         )
-            return { label: y.intl.string(y.t.Wr4RIS) };
+            return { label: b.intl.string(b.t.Wr4RIS) };
         let t = [
             ...(0, u.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -62,7 +62,7 @@ function x(e, t, n) {
         ];
         if (
             t.length > 0 &&
-            !f.Z.can(b.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !h.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
                     let n = c.Z.getStickerById(e.id);
@@ -70,33 +70,33 @@ function x(e, t, n) {
                 })(e, n),
             )
         )
-            return { label: y.intl.string(y.t["0Yyrub"]) };
+            return { label: b.intl.string(b.t["0Yyrub"]) };
         if (
-            (e.hasFlag(b.iLy.IS_VOICE_MESSAGE) ||
-                e.messageSnapshots.some((e) => e.message.hasFlag(b.iLy.IS_VOICE_MESSAGE))) &&
-            !f.Z.can(b.Plq.SEND_VOICE_MESSAGES, n)
+            (e.hasFlag(E.iLy.IS_VOICE_MESSAGE) ||
+                e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) &&
+            !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)
         )
-            return { label: y.intl.string(y.t.quj4DQ) };
+            return { label: b.intl.string(b.t.quj4DQ) };
     }
 }
-function E(e, t) {
+function S(e, t) {
     return (
         !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) &&
-        !(t.can(b.Plq.MANAGE_CHANNELS, e) || t.can(b.Plq.MANAGE_MESSAGES, e))
+        !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e))
     );
 }
-function C(e) {
-    let t = (0, a.Wu)(
-        [h.Z, f.Z],
+function A(e) {
+    let t = (0, i.Wu)(
+        [f.Z, h.Z],
         () =>
             e
                 .map((e) => {
                     let { type: t, id: n } = e;
-                    return "channel" === t ? h.Z.getChannel(n) : null;
+                    return "channel" === t ? f.Z.getChannel(n) : null;
                 })
                 .filter(p.lm)
-                .filter((e) => E(e, f.Z)),
+                .filter((e) => S(e, h.Z)),
         [e],
     );
-    return (0, a.Wu)([g.default, m.Z], () => t.map((e) => (0, s.F6)(e, g.default, m.Z, !0)), [t]);
+    return (0, i.Wu)([g.default, _.Z], () => t.map((e) => (0, s.F6)(e, g.default, _.Z, !0)), [t]);
 }

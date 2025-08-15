@@ -93,8 +93,8 @@ function S(e) {
         }, []),
         S = (0, l.e7)([b.default], () => b.default.getId()),
         T = (0, h.q)(t, S),
-        I = (0, h.a)(t, S),
-        N = (0, l.Wu)([p.Z], () =>
+        N = (0, h.a)(t, S),
+        I = (0, l.Wu)([p.Z], () =>
             a()
                 .sortBy(p.Z.getRecentExposures(E.xY.USER, n), (e) => {
                     let [t, n] = e;
@@ -192,7 +192,7 @@ function S(e) {
                                     type: c.geA.DESCRIPTION,
                                     children: P,
                                 }),
-                                null == I
+                                null == N
                                     ? (0, i.jsx)(c.R94, {
                                           type: c.geA.DESCRIPTION,
                                           children:
@@ -212,7 +212,7 @@ function S(e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: "code",
                                           className: C.pre,
-                                          children: null == I ? "None" : JSON.stringify(I, void 0, 2),
+                                          children: null == N ? "None" : JSON.stringify(N, void 0, 2),
                                       }),
                                       (0, i.jsx)(c.vwX, {
                                           tag: "h5",
@@ -235,7 +235,7 @@ function S(e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: "code",
                                           className: C.pre,
-                                          children: 0 === N.length ? "None" : N.join("\n"),
+                                          children: 0 === I.length ? "None" : I.join("\n"),
                                       }),
                                   ],
                               })

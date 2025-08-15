@@ -1,60 +1,60 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(788900),
+    l = n(788900),
     a = n(357352),
-    s = n(565942),
-    l = n(626135),
+    o = n(565942),
+    s = n(626135),
     c = n(436952),
     u = n(411149),
     d = n(115215),
-    f = n(151480),
-    _ = n(461762),
-    p = n(680783),
-    h = n(981631),
-    m = n(173893),
-    g = n(413135).Buffer;
-function E(e) {
+    p = n(151480),
+    h = n(461762),
+    f = n(680783),
+    m = n(981631),
+    g = n(173893),
+    b = n(413135).Buffer;
+function y(e) {
     let { chatWallpaperState: t } = e,
         n = c.qM.useExperiment({ location: "channel_chat_wallpaper" }).enabled,
-        d = (0, _.Z)(t.wallpaperId),
-        p = null != d ? (0, a.I)(d.asset) : null,
-        E = (null == d ? void 0 : d.thumbhash) != null ? (0, o.xS)(g.from(d.thumbhash, "base64")) : void 0,
-        [b, y] = i.useState(E);
+        d = (0, h.Z)(t.wallpaperId),
+        f = null != d ? (0, a.I)(d.asset) : null,
+        y = (null == d ? void 0 : d.thumbhash) != null ? (0, l.xS)(b.from(d.thumbhash, "base64")) : void 0,
+        [_, C] = i.useState(y);
     return (i.useEffect(() => {
-        null == p && t.isViewable && u.Z.shouldFetchWallpapers && (0, f.k9)();
-    }, [p, t.isViewable]),
+        null == f && t.isViewable && u.Z.shouldFetchWallpapers && (0, p.k9)();
+    }, [f, t.isViewable]),
     i.useEffect(() => {
-        if (null == p) return void y(void 0);
+        if (null == f) return void C(void 0);
         let e = performance.now();
-        y(E),
-            (0, s.p)(p, (t) => {
-                if (t === p) {
-                    y(void 0);
-                    let n = performance.now() - e;
-                    l.default.track(h.rMx.CHAT_WALLPAPER_DOWNLOADED, {
-                        time_used_in_ms: n,
+        C(y),
+            (0, o.p)(f, (t) => {
+                if (t === f) {
+                    C(void 0);
+                    let n = performance.now();
+                    s.default.track(m.rMx.CHAT_WALLPAPER_DOWNLOADED, {
+                        time_used_in_ms: n - e,
                         asset_url: t,
                     });
                 }
             });
-    }, [p, E]),
+    }, [f, y]),
     t.isViewable && null != d)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != b &&
+                  null != _ &&
                       (0, r.jsx)("div", {
-                          className: m.thumbhashContainer,
+                          className: g.thumbhashContainer,
                           children: (0, r.jsx)("img", {
-                              src: b,
+                              src: _,
                               alt: "",
                               "aria-hidden": !0,
                           }),
                       }),
                   (0, r.jsx)("div", {
-                      className: m.wallpaperContainer,
+                      className: g.wallpaperContainer,
                       style: {
-                          backgroundImage: null != p ? "url(".concat(p, ")") : void 0,
+                          backgroundImage: null != f ? "url(".concat(f, ")") : void 0,
                           opacity: n ? d.opacity : void 0,
                       },
                   }),
@@ -62,10 +62,10 @@ function E(e) {
           })
         : null;
 }
-function b(e) {
+function _(e) {
     let { channel: t } = e,
-        n = (0, p.Z)(t.id);
+        n = (0, f.Z)(t.id);
     return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (d.t(t) && !n.isPreview)
         ? null
-        : (0, r.jsx)(E, { chatWallpaperState: n });
+        : (0, r.jsx)(y, { chatWallpaperState: n });
 }

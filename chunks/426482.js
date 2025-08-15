@@ -1,6 +1,6 @@
 r.d(t, {
     C: () => m,
-    Z: () => u,
+    Z: () => d,
 }),
     r(388685);
 var n,
@@ -10,42 +10,42 @@ var n,
     o = r.n(l),
     s = r(793030),
     c = r(388032),
-    d = r(451697),
-    u = (((n = {})[(n.SMALL = 0)] = "SMALL"), (n[(n.LARGE = 1)] = "LARGE"), n);
+    u = r(451697),
+    d = (((n = {})[(n.SMALL = 0)] = "SMALL"), (n[(n.LARGE = 1)] = "LARGE"), n);
 function m(e) {
     var t;
-    let { game: r, application: n, size: l, className: u } = e,
-        [m, g] = i.useState(!1),
-        p = null != (t = null == n ? void 0 : n.name) ? t : r.name,
-        f = null != r.firstReleaseDate ? new Date(r.firstReleaseDate) : null;
+    let { game: r, application: n, size: l, className: d } = e,
+        [m, f] = i.useState(!1),
+        g = null != (t = null == n ? void 0 : n.name) ? t : r.name,
+        p = null != r.firstReleaseDate ? new Date(r.firstReleaseDate) : null;
     return null == r.coverImageUrl || m
         ? (0, a.jsxs)("div", {
-              className: o()(d.fallback, u),
+              className: o()(u.fallback, d),
               children: [
-                  (0, a.jsx)("div", { className: d.spacer }),
+                  (0, a.jsx)("div", { className: u.spacer }),
                   (0, a.jsx)(s.xv, {
                       variant: 1 === l ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === l ? 4 : 3,
-                      children: p,
+                      children: g,
                   }),
-                  (0, a.jsx)("div", { className: d.spacer }),
+                  (0, a.jsx)("div", { className: u.spacer }),
                   (0, a.jsx)(s.xv, {
                       variant: 1 === l ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != f ? "(".concat(null == f ? void 0 : f.getFullYear(), ")") : null,
+                      children: null != p ? "(".concat(null == p ? void 0 : p.getFullYear(), ")") : null,
                   }),
               ],
           })
         : (0, a.jsx)("img", {
-              className: u,
+              className: d,
               src: r.coverImageUrl,
-              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: p }),
+              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: g }),
               onError: () => {
-                  g(!0);
+                  f(!0);
               },
               onLoad: () => {
-                  g(!1);
+                  f(!1);
               },
           });
 }

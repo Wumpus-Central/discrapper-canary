@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(73800),
     i = n(813841);
-let o = [];
-function a(e, t) {
+let a = [];
+function o(e, t) {
     let n = (0, r.useRef)(),
-        a = (0, r.useRef)(o);
+        o = (0, r.useRef)(a);
     return (
-        a.current === o
-            ? ((n.current = e()), (a.current = t))
-            : (0, i.Z)(t, a.current) || ((n.current = e()), (a.current = t)),
+        o.current === a
+            ? ((n.current = e()), (o.current = t))
+            : (0, i.Z)(t, o.current) || ((n.current = e()), (o.current = t)),
         n.current
     );
 }

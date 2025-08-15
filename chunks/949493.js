@@ -24,8 +24,8 @@ var r = n(442837),
     v = n(988043),
     S = n(919539),
     T = n(726985),
-    I = n(583139),
-    N = n(981631),
+    N = n(583139),
+    I = n(981631),
     y = n(388032);
 let A = () =>
         (0, i.jsx)(x.Z, {
@@ -86,9 +86,9 @@ function Z() {
         notice: (0, i.jsx)(u.I, {}),
         children: (0, i.jsx)(o.Z, {
             parentSetting: T.s6.CONTENT_SOCIAL,
-            settingsSection: N.oAB.CONTENT_AND_SOCIAL,
+            settingsSection: I.oAB.CONTENT_AND_SOCIAL,
             tabs: t,
-            defaultTabIndex: e === I.C ? 1 : void 0,
+            defaultTabIndex: e === N.C ? 1 : void 0,
         }),
     });
 }

@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(111028),
-    a = n(652853),
+    a = n(111028),
+    o = n(652853),
     s = n(228168),
     l = n(704543);
 function c(e, t, n) {
@@ -68,9 +68,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,20 +79,20 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
     var { text: t, onClick: n, component: c } = e,
         d = _(e, ["text", "onClick", "component"]);
-    let { themeType: p } = (0, a.z)(),
+    let { themeType: p } = (0, o.z)(),
         h = "string" == typeof t ? t.trim() : t;
     if (null == h || "" === h) return null;
     let m = () =>
         p === s.lY.MODAL || p === s.lY.MODAL_V2
             ? (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: h }))
-            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(o.Z, { children: h }) }));
+            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(a.Z, { children: h }) }));
     return null != n
         ? (0, r.jsx)(i.P3F, {
               onClick: (e) => {

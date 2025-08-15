@@ -1,8 +1,8 @@
 n.d(t, { b: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(255432),
-    a = n(624315);
+    a = n(255432),
+    o = n(624315);
 function s(e, t, n) {
     return (
         t in e
@@ -56,19 +56,19 @@ function u(e) {
         return (0, r.jsx)(e, l({}, s));
     };
     return (0, r.jsxs)("div", {
-        className: a.main,
+        className: o.main,
         children: [
             (0, r.jsx)("div", {
-                className: a.canvas,
+                className: o.canvas,
                 children: (0, r.jsx)("div", {
-                    className: a.storyContent,
+                    className: o.storyContent,
                     children: d(),
                 }),
             }),
             null != t.controls &&
                 (0, r.jsx)("div", {
-                    className: a.controls,
-                    children: (0, r.jsx)(o.a, {
+                    className: o.controls,
+                    children: (0, r.jsx)(a.a, {
                         controls: t.controls,
                         props: s,
                         onPropsChange: u,

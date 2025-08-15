@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(953529);
 var r = n(666572),
     i = n(81063),
-    o = n(649256);
-function a(e, t, n) {
+    a = n(649256);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,19 +21,19 @@ class l {
         return this.type === r.e.MANAGED
             ? (0, i.xF)(this.applicationId, this.assetId, s)
             : this.type === r.e.QUICK
-              ? (0, o.xB)(this.assetPath)
+              ? (0, a.xB)(this.assetPath)
               : void 0;
     }
     constructor(e) {
         var t;
-        a(this, "type", void 0),
-            a(this, "applicationId", void 0),
-            a(this, "linkId", void 0),
-            a(this, "assetId", void 0),
-            a(this, "assetPath", void 0),
-            a(this, "title", void 0),
-            a(this, "description", void 0),
-            a(this, "customId", void 0);
+        o(this, "type", void 0),
+            o(this, "applicationId", void 0),
+            o(this, "linkId", void 0),
+            o(this, "assetId", void 0),
+            o(this, "assetPath", void 0),
+            o(this, "title", void 0),
+            o(this, "description", void 0),
+            o(this, "customId", void 0);
         let n = (0, r._)(e.link_id);
         (this.type = null != (t = null == n ? void 0 : n.type) ? t : null),
             (this.applicationId = e.application_id),

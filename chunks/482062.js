@@ -54,10 +54,10 @@ function h(e) {
             },
             [t, p],
         ),
-        [v, C] = i.useState(!1),
-        _ = i.useRef(v);
+        [v, _] = i.useState(!1),
+        C = i.useRef(v);
     i.useLayoutEffect(() => {
-        _.current = v;
+        C.current = v;
     }, [v]),
         i.useLayoutEffect(() => {
             let e = g.current;
@@ -75,11 +75,11 @@ function h(e) {
                     }
                 );
             function n() {
-                C(!0);
+                _(!0);
             }
             function r(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
-                    (C(!1),
+                    (_(!1),
                     requestAnimationFrame(() => {
                         let e = c.current;
                         null !== e && null == x((0, s.P1)(e, o)) && b((0, s.P1)(t, "data-grid-id"));
@@ -87,7 +87,7 @@ function h(e) {
             }
             function i() {
                 let e = g.current;
-                if (_.current || null == e) return;
+                if (C.current || null == e) return;
             }
             function a() {
                 h.current = !0;
@@ -207,7 +207,7 @@ function h(e) {
             },
             [x, j],
         ),
-        O = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 c.current = null != e ? (0, s.jb)(t, e) : null;
             },
@@ -220,9 +220,9 @@ function h(e) {
                 onKeyDown: y,
                 ref: g,
             },
-            setFocus: O,
+            setFocus: w,
         }),
-        [t, y, O],
+        [t, y, w],
     );
 }
 let g = {

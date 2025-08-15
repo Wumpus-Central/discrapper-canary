@@ -16,8 +16,8 @@ e.exports = function (e) {
             end: /"/,
             contains: [{ match: /""/ }],
         },
-        o = ["true", "false", "unknown"],
-        a = ["double precision", "large object", "with timezone", "without timezone"],
+        a = ["true", "false", "unknown"],
+        o = ["double precision", "large object", "with timezone", "without timezone"],
         s = [
             "bigint",
             "binary",
@@ -578,14 +578,14 @@ e.exports = function (e) {
                 let r = n;
                 return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e));
             })(f, { when: (e) => e.length < 3 }),
-            literal: o,
+            literal: a,
             type: s,
             built_in: c,
         },
         contains: [
             {
                 scope: "type",
-                match: m(a),
+                match: m(o),
             },
             g,
             h,

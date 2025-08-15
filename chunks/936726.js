@@ -80,9 +80,9 @@ function w(e) {
             editedWebhook: l,
             channelOptions: h,
             isExpanded: w,
-            isNew: I,
-            errors: P,
-            onToggleExpand: T,
+            isNew: T,
+            errors: I,
+            onToggleExpand: P,
         } = e,
         [E, k] = r.useState(!1),
         [A] = r.useState(new s.V7());
@@ -165,11 +165,11 @@ function w(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != P.avatar && "" !== P.avatar
+                                        null != I.avatar && "" !== I.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: P.avatar,
+                                                  children: I.avatar,
                                               })
                                             : null,
                                     ],
@@ -190,7 +190,7 @@ function w(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: P.name,
+                                                        error: I.name,
                                                     }),
                                                 }),
                                             }),
@@ -306,14 +306,14 @@ function w(e) {
         (0, i.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, I ? C.pulse : null),
+            className: a()(C.card, T ? C.pulse : null),
             children: (0, i.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
                         "aria-expanded": w,
-                        onClick: T,
+                        onClick: P,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [

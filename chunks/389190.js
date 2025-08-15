@@ -15,12 +15,12 @@ function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: b } = e,
         { mutualFriends: j } = (0, s.Z)(t),
         { analyticsLocations: y } = (0, a.ZP)(),
-        { context: O, trackUserProfileAction: x } = (0, c.KZ)(),
-        h = (0, o.Z)();
+        { context: O, trackUserProfileAction: h } = (0, c.KZ)(),
+        x = (0, o.Z)();
     return (
         i.useEffect(() => {
-            (0, d.Z)(t.id, h);
-        }, [t.id, h]),
+            (0, d.Z)(t.id, x);
+        }, [t.id, x]),
         (0, r.jsx)(l.zJl, {
             className: m.listScroller,
             fade: !0,
@@ -53,7 +53,7 @@ function g(e) {
                                     onSelect: () => {
                                         var e, t, n;
                                         null == b || b(),
-                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            h({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = i.id),
                                             (0, u.openUserProfileModal)(
                                                 ((t = (function (e) {

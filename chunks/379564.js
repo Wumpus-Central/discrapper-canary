@@ -105,13 +105,13 @@ let t = [
     );
 e.exports = function (e) {
     let i = ["npm", "print"],
-        o = ["yes", "no", "on", "off"],
-        a = ["then", "unless", "until", "loop", "by", "when", "and", "or", "is", "isnt", "not"],
+        a = ["yes", "no", "on", "off"],
+        o = ["then", "unless", "until", "loop", "by", "when", "and", "or", "is", "isnt", "not"],
         s = ["var", "const", "let", "function", "static"],
         l = (e) => (t) => !e.includes(t),
         c = {
-            keyword: t.concat(a).filter(l(s)),
-            literal: n.concat(o),
+            keyword: t.concat(o).filter(l(s)),
+            literal: n.concat(a),
             built_in: r.concat(i),
         },
         u = "[A-Za-z$_][0-9A-Za-z$_]*",

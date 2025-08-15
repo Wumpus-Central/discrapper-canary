@@ -1,8 +1,8 @@
 n.d(t, { Q: () => c }), n(388685), n(539854);
 var r = n(987032),
     i = n(981631);
-let o = [i.HeQ.CARD, i.HeQ.PAYPAL],
-    a = new Set([
+let a = [i.HeQ.CARD, i.HeQ.PAYPAL],
+    o = new Set([
         "DE",
         "BG",
         "CZ",
@@ -34,7 +34,7 @@ let o = [i.HeQ.CARD, i.HeQ.PAYPAL],
         [i.HeQ.SOFORT, new Set([])],
         [i.HeQ.PRZELEWY24, new Set(["ALL", "PL"])],
         [i.HeQ.GIROPAY, new Set(["ALL", "DE"])],
-        [i.HeQ.PAYSAFE_CARD, new Set(["ALL", ...a])],
+        [i.HeQ.PAYSAFE_CARD, new Set(["ALL", ...o])],
         [i.HeQ.GCASH, new Set(["ALL", "PH"])],
         [i.HeQ.GRABPAY_MY, new Set(["ALL", "MY"])],
         [i.HeQ.MOMO_WALLET, new Set(["ALL", "VN"])],
@@ -51,11 +51,11 @@ function c(e) {
     let { ipCountryCode: t, location: n } = e,
         {
             enabledPaymentTypes: i,
-            forceCountryCode: a,
+            forceCountryCode: o,
             validCountryCodes: c,
         } = r.ZP.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }),
         u = null != t ? t : "ALL";
-    c.length > 0 && null != a && null != t && (u = c.includes(t) ? t : a);
+    c.length > 0 && null != o && null != t && (u = c.includes(t) ? t : o);
     let d = new Set(),
         f = [];
     return (
@@ -66,7 +66,7 @@ function c(e) {
             e.has(u) && d.add(t);
         }),
         {
-            countryPaymentMethods: [...o, ...Array.from(d)],
+            countryPaymentMethods: [...a, ...Array.from(d)],
             remainingPaymentMethods: f,
         }
     );

@@ -1,38 +1,38 @@
-n.d(t, { E: () => f }), n(388685);
-var r = n(73800),
+n.d(t, { E: () => p }), n(388685);
+var l = n(73800),
     i = n(442837),
-    o = n(835473),
+    r = n(835473),
     a = n(594174),
-    s = n(695103),
-    l = n(823379),
+    o = n(695103),
+    s = n(823379),
     c = n(358085),
     u = n(317381),
     d = n(761122);
-function f(e) {
+function p(e) {
     let t = (0, i.e7)([a.default], a.default.getCurrentUser),
         n = (0, i.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
-        f = (0, i.e7)([s.Z], () => s.Z.testModeEmbeddedApplicationId),
-        _ = n.map((e) => e.application_id),
-        p = null != f ? [f, ..._] : _,
-        h = (0, o.Z)(p),
-        m = r.useMemo(() => h.filter(l.lm), [h]),
-        g = r.useMemo(
+        p = (0, i.e7)([o.Z], () => o.Z.testModeEmbeddedApplicationId),
+        m = n.map((e) => e.application_id),
+        f = null != p ? [p, ...m] : m,
+        h = (0, r.Z)(f),
+        v = l.useMemo(() => h.filter(s.lm), [h]),
+        y = l.useMemo(
             () =>
-                null != f && m.length > 0 && m[0].id === f && null != m[0].embeddedActivityConfig
+                null != p && v.length > 0 && v[0].id === p && null != v[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: m[0].embeddedActivityConfig,
-                              application: m[0],
+                              activity: v[0].embeddedActivityConfig,
+                              application: v[0],
                           },
                       ]
                     : [],
-            [m, f],
+            [v, p],
         ),
-        E = r.useMemo(
+        x = l.useMemo(
             () =>
                 n
                     .map((e) => {
-                        let t = m.find((t) => t.id === e.application_id);
+                        let t = v.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -40,12 +40,12 @@ function f(e) {
                                   application: t,
                               };
                     })
-                    .filter(l.lm),
-            [n, m],
+                    .filter(s.lm),
+            [n, v],
         );
-    return r.useMemo(
+    return l.useMemo(
         () =>
-            [...g, ...E]
+            [...y, ...x]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -59,6 +59,6 @@ function f(e) {
                         (null == t ? void 0 : t.nsfwAllowed) == null
                     );
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, E, g],
+        [null == t ? void 0 : t.nsfwAllowed, x, y],
     );
 }

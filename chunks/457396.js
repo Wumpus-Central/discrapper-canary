@@ -1,6 +1,6 @@
 n.d(t, {
-    g: () => B,
-    i: () => V,
+    g: () => V,
+    i: () => B,
 }),
     n(388685),
     n(539854);
@@ -42,7 +42,7 @@ var r = n(255367),
     M = n(981631),
     U = n(921944),
     G = n(388032);
-let V = (e) => {
+let B = (e) => {
         let { selected: t } = e,
             n = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
             r = (0, a.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
@@ -56,9 +56,9 @@ let V = (e) => {
             p = null != u ? u : null == n ? void 0 : n.createdAt;
         return d || (null != n && null != p && Date.now() - p.getTime() > 1209600000);
     },
-    B = (e) => {
+    V = (e) => {
         let t, n, O;
-        var B,
+        var V,
             H,
             { selected: F, nitroTabButtonRef: z, route: W, locationState: Y } = e,
             K = (function (e, t) {
@@ -115,7 +115,7 @@ let V = (e) => {
             (i.useEffect(() => {
                 !0 === F && null != eO && eE(U.L.AUTO_DISMISS);
             }, [eE, F, eO]),
-            !V({ selected: F }))
+            !B({ selected: F }))
         )
             return null;
         let ey = () => {
@@ -210,7 +210,7 @@ let V = (e) => {
                 }));
         let eI = (0, r.jsx)(
             c.Qj,
-            ((B = (function (e) {
+            ((V = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -253,7 +253,7 @@ let V = (e) => {
                     children: n,
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(B, Object.getOwnPropertyDescriptors(H))
+                ? Object.defineProperties(V, Object.getOwnPropertyDescriptors(H))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -262,9 +262,9 @@ let V = (e) => {
                       }
                       return n;
                   })(Object(H)).forEach(function (e) {
-                      Object.defineProperty(B, e, Object.getOwnPropertyDescriptor(H, e));
+                      Object.defineProperty(V, e, Object.getOwnPropertyDescriptor(H, e));
                   }),
-            B),
+            V),
         );
         return es && ec.cohort === I.xI.Static
             ? (0, r.jsx)(x.X, { children: eI })

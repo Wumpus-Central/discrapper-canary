@@ -47,7 +47,7 @@ function T(e) {
     }
     return e;
 }
-function I(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function I(e, t) {
         e
     );
 }
-async function N() {
+async function I() {
     let e = await u.Z.fileManager.getLogPath();
     u.Z.fileManager.showItemInFolder(e);
 }
@@ -73,7 +73,7 @@ function y(e) {
     (0, l.h7j)((t) =>
         (0, i.jsx)(
             l.ConfirmModal,
-            I(
+            N(
                 T(
                     {
                         header: v.intl.string(v.t["7UXEFx"]),
@@ -116,7 +116,7 @@ function A(e) {
             (0, l.h7j)((n) =>
                 (0, i.jsx)(
                     l.ConfirmModal,
-                    I(
+                    N(
                         T(
                             {
                                 header: e,
@@ -144,7 +144,7 @@ function A(e) {
                 (0, l.h7j)((e) =>
                     (0, i.jsx)(
                         l.ConfirmModal,
-                        I(
+                        N(
                             T(
                                 {
                                     header: n,
@@ -256,7 +256,7 @@ function A(e) {
                                     (0, i.jsx)(l.zxk, {
                                         variant: "primary",
                                         text: v.intl.string(v.t.nuPtYm),
-                                        onClick: N,
+                                        onClick: I,
                                     }),
                                 ],
                             }),

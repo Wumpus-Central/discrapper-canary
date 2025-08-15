@@ -1,4 +1,4 @@
-a.d(t, { Z: () => f }), a(388685);
+a.d(t, { Z: () => v }), a(388685);
 var n = a(255367),
     r = a(120356),
     l = a.n(r),
@@ -70,14 +70,14 @@ let p = [
             },
         },
     ];
-function f() {
+function v() {
     let { unreadRecentMentionsCount: e, unreadChannelIds: t } = (0, m.O4)(),
         {
             isLoading: a,
             hasLoadedEver: r,
             hasPreloaded: l,
-            hasMoreToLoad: f,
-            isLoadingComplete: v,
+            hasMoreToLoad: v,
+            isLoadingComplete: f,
         } = (0, i.cj)([u.Z], () => ({
             isLoading: u.Z.isLoading,
             hasLoadedEver: u.Z.hasLoadedEver,
@@ -193,10 +193,10 @@ function f() {
                             children: ["Has Loaded Ever: ", r ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Has More To Load: ", f ? "\u2705" : "\u274C"],
+                            children: ["Has More To Load: ", v ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Is Loading Complete: ", v ? "\u2705" : "\u274C"],
+                            children: ["Is Loading Complete: ", f ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
                             children: ["Last Loading Trigger: ", null == j ? void 0 : j.loadingTrigger],

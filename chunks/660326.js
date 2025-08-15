@@ -1,7 +1,7 @@
 var r = n(521092),
     i = n(824362),
-    o = n(672744),
-    a = n(170630),
+    a = n(672744),
+    o = n(170630),
     s = n(306216);
 function l(e) {
     var t = -1,
@@ -13,7 +13,7 @@ function l(e) {
 }
 (l.prototype.clear = r),
     (l.prototype.delete = i),
-    (l.prototype.get = o),
-    (l.prototype.has = a),
+    (l.prototype.get = a),
+    (l.prototype.has = o),
     (l.prototype.set = s),
     (e.exports = l);

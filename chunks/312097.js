@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(481060),
-    o = n(592125),
-    a = n(626135),
+    a = n(592125),
+    o = n(626135),
     s = n(254109),
     l = n(981631);
 function c(e, t, n) {
@@ -43,9 +43,9 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -54,8 +54,8 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = "Media Viewer Modal";
@@ -69,7 +69,7 @@ function p(e) {
             null == (c = m.items[null != (f = m.startingIndex) ? f : 0]) || null == (t = c.sourceMetadata)
                 ? void 0
                 : t.message,
-        E = o.Z.getChannel(null == g ? void 0 : g.channel_id);
+        E = a.Z.getChannel(null == g ? void 0 : g.channel_id);
     (0, s.fS)({
         guildId: null == E ? void 0 : E.guild_id,
         channelId: null == E ? void 0 : E.id,
@@ -78,7 +78,7 @@ function p(e) {
         source: p,
         hasMediaOptions: !m.shouldHideMediaOptions,
     }),
-        a.default.track(l.rMx.OPEN_MODAL, {
+        o.default.track(l.rMx.OPEN_MODAL, {
             type: l.jXE.MEDIA_VIEWER,
             source: p,
             guild_id: null == E ? void 0 : E.guild_id,
@@ -87,7 +87,7 @@ function p(e) {
         }),
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e("39476").then(n.bind(n, 97594));
+                let { default: e } = await Promise.all([n.e("40694"), n.e("19370")]).then(n.bind(n, 97594));
                 return (t) => (0, r.jsx)(e, u({}, t, m));
             },
             {

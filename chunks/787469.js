@@ -1,88 +1,88 @@
-n.d(t, { Z: () => N });
-var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
-    a = n(399606),
-    o = n(481060),
-    u = n(893966),
-    c = n(472596),
-    E = n(285173),
-    d = n(485386),
-    _ = n(430824),
-    A = n(496675),
-    T = n(776767),
-    m = n(981631),
-    I = n(388032),
-    g = n(87819);
-function N(e) {
-    let { member: t } = e,
-        n = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guildId)),
-        i = (0, a.e7)([d.Z], () => d.Z.getSortedRoles(t.guildId)),
-        N = l.useMemo(
-            () => i.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id)),
-            [t.roles, t.highestRoleId, i],
+t.d(e, { Z: () => B });
+var n = t(255367),
+    r = t(73800),
+    l = t(120356),
+    i = t.n(l),
+    a = t(399606),
+    s = t(481060),
+    o = t(893966),
+    g = t(472596),
+    c = t(285173),
+    f = t(485386),
+    v = t(430824),
+    u = t(496675),
+    h = t(776767),
+    d = t(981631),
+    E = t(388032),
+    C = t(87819);
+function B(A) {
+    let { member: e } = A,
+        t = (0, a.e7)([v.Z], () => v.Z.getGuild(e.guildId)),
+        l = (0, a.e7)([f.Z], () => f.Z.getSortedRoles(e.guildId)),
+        B = r.useMemo(
+            () => l.filter((A) => A.id !== e.highestRoleId && e.roles.includes(A.id)),
+            [e.roles, e.highestRoleId, l],
         ),
-        h = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        f = (0, c.zq)(h),
-        O = (0, c.vN)(t),
-        p = (0, a.e7)([A.Z], () => A.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
-    return null == n
+        w = (0, a.e7)([o.Z], () => o.Z.getEnhancedMember(e.guildId, e.userId), [e.guildId, e.userId]),
+        D = (0, g.zq)(w),
+        M = (0, g.vN)(e),
+        p = (0, a.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_ROLES, t), [t]);
+    return null == t
         ? null
-        : (0, r.jsx)(o.xJW, {
-              title: I.intl.string(I.t.LPJmLy),
-              titleClassName: g.infoTitle,
-              children: (0, r.jsx)(T.WM, {
-                  children: (0, r.jsx)(T._2, {
+        : (0, n.jsx)(s.xJW, {
+              title: E.intl.string(E.t.LPJmLy),
+              titleClassName: C.infoTitle,
+              children: (0, n.jsx)(h.WM, {
+                  children: (0, n.jsx)(h._2, {
                       description:
-                          t.roles.length > 0 || p
-                              ? (0, r.jsxs)("div", {
-                                    className: g.roleContainer,
+                          e.roles.length > 0 || p
+                              ? (0, n.jsxs)("div", {
+                                    className: C.roleContainer,
                                     children: [
-                                        (0, r.jsx)(o.ua7, {
-                                            "aria-label": I.intl.string(I.t["0g8Xd3"]),
+                                        (0, n.jsx)(s.ua7, {
+                                            "aria-label": E.intl.string(E.t["0g8Xd3"]),
                                             allowOverflow: !0,
-                                            text: I.intl.string(I.t["93S+lJ"]),
-                                            children: (e) => {
-                                                let { onMouseEnter: n, onMouseLeave: l } = e;
-                                                return (0, r.jsx)(o.P3F, {
-                                                    onMouseEnter: n,
-                                                    onMouseLeave: l,
-                                                    children: (0, r.jsx)(E.Z, {
-                                                        className: s()(g.roleTooltipItem, g.highestRole),
-                                                        role: f,
-                                                        guildId: t.guildId,
+                                            text: E.intl.string(E.t["93S+lJ"]),
+                                            children: (A) => {
+                                                let { onMouseEnter: t, onMouseLeave: r } = A;
+                                                return (0, n.jsx)(s.P3F, {
+                                                    onMouseEnter: t,
+                                                    onMouseLeave: r,
+                                                    children: (0, n.jsx)(c.Z, {
+                                                        className: i()(C.roleTooltipItem, C.highestRole),
+                                                        role: D,
+                                                        guildId: e.guildId,
                                                     }),
                                                 });
                                             },
                                         }),
-                                        N.map((e) =>
-                                            (0, r.jsx)(
-                                                E.Z,
+                                        B.map((A) =>
+                                            (0, n.jsx)(
+                                                c.Z,
                                                 {
-                                                    className: g.roleTooltipItem,
-                                                    role: e,
-                                                    guildId: t.guildId,
+                                                    className: C.roleTooltipItem,
+                                                    role: A,
+                                                    guildId: e.guildId,
                                                 },
-                                                e.id,
+                                                A.id,
                                             ),
                                         ),
                                         p &&
-                                            (0, r.jsx)(o.ua7, {
-                                                "aria-label": I.intl.string(I.t.ljnBlp),
+                                            (0, n.jsx)(s.ua7, {
+                                                "aria-label": E.intl.string(E.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: I.intl.string(I.t.ljnBlp),
-                                                children: (e) => {
-                                                    let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                    return (0, r.jsx)(o.P3F, {
-                                                        className: g.addRoleContainer,
-                                                        onClick: O,
-                                                        onMouseEnter: t,
-                                                        onMouseLeave: n,
-                                                        children: (0, r.jsx)(o.oFk, {
+                                                text: E.intl.string(E.t.ljnBlp),
+                                                children: (A) => {
+                                                    let { onMouseEnter: e, onMouseLeave: t } = A;
+                                                    return (0, n.jsx)(s.P3F, {
+                                                        className: C.addRoleContainer,
+                                                        onClick: M,
+                                                        onMouseEnter: e,
+                                                        onMouseLeave: t,
+                                                        children: (0, n.jsx)(s.oFk, {
                                                             size: "custom",
                                                             color: "currentColor",
-                                                            className: g.addRoleIcon,
+                                                            className: C.addRoleIcon,
                                                             width: 20,
                                                             height: 20,
                                                         }),
@@ -91,11 +91,11 @@ function N(e) {
                                             }),
                                     ],
                                 })
-                              : (0, r.jsx)("div", {
-                                    className: g.noRoles,
-                                    children: (0, r.jsx)(o.Text, {
+                              : (0, n.jsx)("div", {
+                                    className: C.noRoles,
+                                    children: (0, n.jsx)(s.Text, {
                                         variant: "text-sm/normal",
-                                        children: I.intl.string(I.t.nZfHsb),
+                                        children: E.intl.string(E.t.nZfHsb),
                                     }),
                                 }),
                   }),

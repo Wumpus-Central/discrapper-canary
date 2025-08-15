@@ -1,36 +1,36 @@
-var r = n(359282),
-    i = n(65183).Map;
-function o(e, t, n, o) {
-    var a = e.getBlockMap(),
-        s = t.getStartKey(),
-        l = t.getStartOffset(),
-        c = t.getEndKey(),
-        u = t.getEndOffset(),
-        d = a
-            .skipUntil(function (e, t) {
-                return t === s;
+var n = r(359282),
+    i = r(65183).Map;
+function o(t, e, r, o) {
+    var a = t.getBlockMap(),
+        u = e.getStartKey(),
+        s = e.getStartOffset(),
+        c = e.getEndKey(),
+        l = e.getEndOffset(),
+        f = a
+            .skipUntil(function (t, e) {
+                return e === u;
             })
-            .takeUntil(function (e, t) {
-                return t === c;
+            .takeUntil(function (t, e) {
+                return e === c;
             })
             .concat(i([[c, a.get(c)]]))
-            .map(function (e, t) {
-                s === c ? ((i = l), (a = u)) : ((i = t === s ? l : 0), (a = t === c ? u : e.getLength()));
-                for (var i, a, d, f = e.getCharacterList(); i < a; )
-                    (d = f.get(i)), (f = f.set(i, o ? r.applyStyle(d, n) : r.removeStyle(d, n))), i++;
-                return e.set("characterList", f);
+            .map(function (t, e) {
+                u === c ? ((i = s), (a = l)) : ((i = e === u ? s : 0), (a = e === c ? l : t.getLength()));
+                for (var i, a, f, p = t.getCharacterList(); i < a; )
+                    (f = p.get(i)), (p = p.set(i, o ? n.applyStyle(f, r) : n.removeStyle(f, r))), i++;
+                return t.set("characterList", p);
             });
-    return e.merge({
-        blockMap: a.merge(d),
-        selectionBefore: t,
-        selectionAfter: t,
+    return t.merge({
+        blockMap: a.merge(f),
+        selectionBefore: e,
+        selectionAfter: e,
     });
 }
-e.exports = {
-    add: function (e, t, n) {
-        return o(e, t, n, !0);
+t.exports = {
+    add: function (t, e, r) {
+        return o(t, e, r, !0);
     },
-    remove: function (e, t, n) {
-        return o(e, t, n, !1);
+    remove: function (t, e, r) {
+        return o(t, e, r, !1);
     },
 };

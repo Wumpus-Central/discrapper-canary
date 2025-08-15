@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(580983),
-    o = n(511696),
-    a = n(938373),
+    a = n(511696),
+    o = n(938373),
     s = n(880181),
     l = n(280481),
     c = n(961050),
@@ -12,8 +12,8 @@ var r = n(98405),
     p = n(751736),
     h = n(933121),
     m = n(112493),
-    g = a.PROPER,
-    E = a.CONFIGURABLE,
+    g = o.PROPER,
+    E = o.CONFIGURABLE,
     b = m.IteratorPrototype,
     y = m.BUGGY_SAFARI_ITERATORS,
     O = p("iterator"),
@@ -23,8 +23,8 @@ var r = n(98405),
     S = function () {
         return this;
     };
-e.exports = function (e, t, n, a, p, m, A) {
-    l(n, t, a);
+e.exports = function (e, t, n, o, p, m, A) {
+    l(n, t, o);
     var N,
         C,
         R,
@@ -48,17 +48,17 @@ e.exports = function (e, t, n, a, p, m, A) {
         L = e.prototype,
         x = L[O] || L["@@iterator"] || (p && L[p]),
         M = (!y && x) || P(p),
-        j = ("Array" === t && L.entries) || x;
+        k = ("Array" === t && L.entries) || x;
     if (
-        (j &&
-            (N = c(j.call(new e()))) !== Object.prototype &&
+        (k &&
+            (N = c(k.call(new e()))) !== Object.prototype &&
             N.next &&
-            (!o && c(N) !== b && (u ? u(N, b) : s(N[O]) || _(N, O, S)), d(N, w, !0, !0), o && (h[w] = S)),
+            (!a && c(N) !== b && (u ? u(N, b) : s(N[O]) || _(N, O, S)), d(N, w, !0, !0), a && (h[w] = S)),
         g &&
             p === I &&
             x &&
             x.name !== I &&
-            (!o && E
+            (!a && E
                 ? f(L, "name", I)
                 : ((D = !0),
                   (M = function () {
@@ -84,5 +84,5 @@ e.exports = function (e, t, n, a, p, m, A) {
                 },
                 C,
             );
-    return (!o || A) && L[O] !== M && _(L, O, M, { name: p }), (h[t] = M), C;
+    return (!a || A) && L[O] !== M && _(L, O, M, { name: p }), (h[t] = M), C;
 };

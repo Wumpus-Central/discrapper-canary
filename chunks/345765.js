@@ -1,8 +1,8 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(392711),
     i = n(126313),
-    o = n(570140),
-    a = n(147913),
+    a = n(570140),
+    o = n(147913),
     s = n(539746),
     l = n(38618),
     c = n(553795),
@@ -42,7 +42,7 @@ function R() {
     return Math.random() * (e + 1) * O;
 }
 function P(e, t) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: "CONTENT_INVENTORY_SET_FEED_STATE",
         feedId: e,
         state: t,
@@ -79,10 +79,10 @@ function L() {
     let n = m.Z.getFeed(v);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == N) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
-        o = Math.max(0, null == N ? 0 : new Date(N).getTime() - Date.now(), r) + (t > 0 ? R() : 0);
+        a = Math.max(0, null == N ? 0 : new Date(N).getTime() - Date.now(), r) + (t > 0 ? R() : 0);
     P(v, {
         loading: !1,
-        nextFetchDate: new Date(Date.now() + o),
+        nextFetchDate: new Date(Date.now() + a),
     }),
         T.set(
             v,
@@ -92,7 +92,7 @@ function L() {
                         feedId: v,
                         feature: i.L.INBOX,
                     }),
-                o,
+                a,
             ),
         );
 }
@@ -107,7 +107,7 @@ async function x(e) {
                 feedId: t,
                 feature: n,
             });
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "CONTENT_INVENTORY_SET_FEED",
                 feedId: t,
                 feed: r,
@@ -116,7 +116,7 @@ async function x(e) {
                 S.delete(t),
                 P(t, { loading: !1 }),
                 t === v && ((N = null), L());
-        } catch (a) {
+        } catch (o) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
             if (e < y) {
@@ -135,7 +135,7 @@ async function x(e) {
                 ),
                     A.set(t, e + 1);
             } else
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: "CONTENT_INVENTORY_CLEAR_FEED",
                     feedId: t,
                 });
@@ -145,10 +145,10 @@ async function x(e) {
 function M() {
     L();
 }
-function j() {
+function k() {
     M();
 }
-function k() {
+function j() {
     D(v);
 }
 function U(e) {
@@ -171,26 +171,26 @@ function B(e) {
     let { connectionId: n, track: r } = e;
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && C(n, r);
 }
-function Z() {
+function V() {
     x({
         feedId: g.YN.GLOBAL_FEED,
         feature: i.L.GAME_PROFILE,
     });
 }
-class F extends a.Z {
+class F extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: j,
-                CONNECTION_CLOSED: k,
+                POST_CONNECTION_OPEN: k,
+                CONNECTION_CLOSED: j,
                 WINDOW_FOCUS: M,
                 IDLE: M,
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
                 CONTENT_INVENTORY_MANUAL_REFRESH: U,
                 CONTENT_INVENTORY_INBOX_STALE: G,
                 SPOTIFY_NEW_TRACK: B,
-                GAME_PROFILE_OPEN: Z,
+                GAME_PROFILE_OPEN: V,
             });
     }
 }
-let V = new F();
+let Z = new F();

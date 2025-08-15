@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(610697),
     U = n(26373),
     G = n(486622),
-    V = n(488634),
-    B = n(899740),
+    B = n(488634),
+    V = n(899740),
     H = n(177033),
     F = n(355350),
     z = n(307947),
@@ -96,7 +96,7 @@ function en(e, t) {
 }
 function er() {
     let e = i.useRef(null),
-        t = (0, B.q)(),
+        t = (0, V.q)(),
         n = (0, H.Z)(),
         l = (0, U.K)(),
         c = (0, m.N)(),
@@ -105,7 +105,7 @@ function er() {
         }, []),
         { rejectAll: d } = (0, G.m)({ onError: u }),
         f = (0, _.Z)("message-requests-list"),
-        { channelId: h } = (0, V._)(),
+        { channelId: h } = (0, B._)(),
         g = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
@@ -318,7 +318,7 @@ function ea(e) {
 }
 let eo = (0, g.Z)(function (e) {
     let { width: t } = e,
-        n = (0, B.q)();
+        n = (0, V.q)();
     (0, b.ZP)(() => {
         f.Y(q.Z5c.MESSAGE_REQUESTS),
             (0, x.e)("message-requests"),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var l = n(255367);
 n(73800);
 var r = n(442837),
@@ -7,16 +7,16 @@ var r = n(442837),
     a = n(131951),
     u = n(594174),
     c = n(36703),
-    s = n(358085),
-    d = n(65154),
+    d = n(358085),
+    s = n(65154),
     f = n(388032);
-function b(e) {
+function g(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        b = (0, r.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
-        g = e === (null == (t = u.default.getCurrentUser()) ? void 0 : t.id),
-        O = n === d.Yn.STREAM;
-    return g
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT,
+        g = (0, r.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
+        b = e === (null == (t = u.default.getCurrentUser()) ? void 0 : t.id),
+        O = n === s.Yn.STREAM;
+    return b
         ? null
         : (0, l.jsx)(i.II_, {
               id: "user-volume",
@@ -53,8 +53,8 @@ function b(e) {
                       (u = u =
                           {
                               ref: r,
-                              value: (0, c.P)(b),
-                              maxValue: s.isPlatformEmbedded ? 200 : 100,
+                              value: (0, c.P)(g),
+                              maxValue: d.isPlatformEmbedded ? 200 : 100,
                               onChange: (t) => o.Z.setLocalVolume(e, (0, c.A)(t), n),
                               "aria-label": O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
                           }),

@@ -12,8 +12,8 @@ n.d(t, {
     n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(772848),
-    a = n(286379),
+    a = n(772848),
+    o = n(286379),
     s = n(442837),
     l = n(493773),
     c = n(110924),
@@ -83,9 +83,9 @@ class x {
             n = (0, y.VB)(this.questContent),
             r = (0, y.uN)(this.questContent),
             i = (0, f.z5)(),
-            o = (0, f.QW)();
-        if (!t || !(null == r ? void 0 : r.is_campaign_ias_enabled) || !n || void 0 === i || void 0 === o) return null;
-        let a = () => {
+            a = (0, f.QW)();
+        if (!t || !(null == r ? void 0 : r.is_campaign_ias_enabled) || !n || void 0 === i || void 0 === a) return null;
+        let o = () => {
                 let e = i(),
                     t = h.Z.getGuilds();
                 return e
@@ -98,7 +98,7 @@ class x {
                             name: r.name,
                         };
                         null !== r.description && (i.description = r.description);
-                        let o =
+                        let a =
                             null !== r.icon &&
                             null !=
                                 (n = g.ZP.getGuildIconURL({
@@ -109,7 +109,7 @@ class x {
                                 }))
                                 ? n
                                 : null;
-                        return null !== o && (i.icon_url = o), i;
+                        return null !== a && (i.icon_url = a), i;
                     })
                     .filter((e) => null !== e);
             },
@@ -118,7 +118,7 @@ class x {
             c = () =>
                 null == l
                     ? []
-                    : o()
+                    : a()
                           .map((e) => {
                               let t = p.Z.getChannel(e);
                               if (void 0 === t) return null;
@@ -130,7 +130,7 @@ class x {
                           })
                           .filter((e) => null !== e),
             u = {
-                guilds: a(),
+                guilds: o(),
                 channels: c(),
             };
         null != s && (u.selected_guild_id = s);
@@ -305,7 +305,7 @@ class x {
                     }),
                     (0, I.a)("QuestImpressionTracker") &&
                         _.Z.increment({
-                            name: a.V.QUEST_CONTENT_IMPRESSION,
+                            name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ["quest_content:".concat((0, b._b)(this.questContent))],
                         }),
                     (this.isRunning = !0);
@@ -318,7 +318,7 @@ class x {
                     clearTimeout(p.minViewTimeReachedTimeoutId),
                     (p.isRunning = !1);
             }),
-            (this.id = (0, o.Z)()),
+            (this.id = (0, a.Z)()),
             (this.questContent = t),
             (this.questContentPosition = i),
             (this.minViewTimeSeconds = l),
@@ -340,14 +340,14 @@ let M = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    j = (e) => {
+    k = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    k = i.createContext(void 0);
+    j = i.createContext(void 0);
 function U() {
-    let e = i.useContext(k);
+    let e = i.useContext(j);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -355,8 +355,8 @@ function G() {
     return null == (e = U()) ? void 0 : e.getId();
 }
 function B(e) {
-    let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: c, sourceQuestContent: u } = e,
-        d = j(e.questOrQuests),
+    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
+        d = k(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -364,10 +364,10 @@ function B(e) {
             null != f.current && f.current.stop();
         }),
         i.useEffect(() => {
-            let r = o && t,
+            let r = a && t,
                 i = (n || c || d) && r,
-                a = ((n || c) && !r) || d;
-            (i || a) && null != f.current && f.current.stop(),
+                o = ((n || c) && !r) || d;
+            (i || o) && null != f.current && f.current.stop(),
                 i &&
                     ((f.current = new x({
                         questOrQuests: e.questOrQuests,
@@ -382,7 +382,7 @@ function B(e) {
                     })),
                     f.current.start());
         }, [
-            o,
+            a,
             t,
             c,
             n,
@@ -396,9 +396,9 @@ function B(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(k.Provider, {
+        (0, r.jsx)(j.Provider, {
             value: f,
-            children: e.children(a, f),
+            children: e.children(o, f),
         })
     );
 }

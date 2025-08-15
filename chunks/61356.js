@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(399606),
     i = n(541099);
-function o(e) {
+function l(e) {
     let { type: t } = e;
     return (0, r.e7)([i.Z], () => {
         let e = i.Z.activeViewType();

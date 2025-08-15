@@ -152,14 +152,14 @@ e.exports = function (e) {
             relevance: 10,
         },
         i = "[A-Za-z_][A-Za-z0-9_'-]*",
-        o = {
+        a = {
             scope: "symbol",
             match: RegExp(`<${i}(/${i})*>`),
         },
-        a = "[A-Za-z0-9_\\+\\.-]+",
+        o = "[A-Za-z0-9_\\+\\.-]+",
         s = {
             scope: "symbol",
-            match: RegExp(`(\\.\\.|\\.|~)?/(${a})?(/${a})*(?=[\\s;])`),
+            match: RegExp(`(\\.\\.|\\.|~)?/(${o})?(/${o})*(?=[\\s;])`),
         },
         l = t.either(
             "==",
@@ -286,7 +286,7 @@ e.exports = function (e) {
             }),
             r,
             h,
-            o,
+            a,
             s,
             m,
             f,

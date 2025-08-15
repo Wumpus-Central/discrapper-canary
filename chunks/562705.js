@@ -36,7 +36,7 @@ function T(e) {
               groupName: t,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: s } = e;
-                  return (0, i.jsx)(I, {
+                  return (0, i.jsx)(N, {
                       recentlyLeveledTenureBadge: r,
                       markAsDismissed: s,
                       targetElementRef: n,
@@ -45,7 +45,7 @@ function T(e) {
               },
           });
 }
-function I(e) {
+function N(e) {
     var t;
     let { recentlyLeveledTenureBadge: n, markAsDismissed: s, targetElementRef: a, shouldShow: p } = e,
         h = E.Qh.indexOf(n),
@@ -58,9 +58,9 @@ function I(e) {
         T = (0, r.useCallback)(() => {
             s(O.L.USER_DISMISS);
         }, [s]),
-        I = E.vK[n],
-        N = v.intl.formatToPlainString(v.t.ewkaVV, {
-            timeMilestone: null == (t = (0, b.q)(I.id, I.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
+        N = E.vK[n],
+        I = v.intl.formatToPlainString(v.t.ewkaVV, {
+            timeMilestone: null == (t = (0, b.q)(N.id, N.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),
         y = {
             position: "bottom",
@@ -87,7 +87,7 @@ function I(e) {
                     ? (0, i.jsx)(c.V, {
                           asset: (0, i.jsx)("img", {
                               src: x,
-                              alt: v.intl.string(I.nameUnformatted),
+                              alt: v.intl.string(N.nameUnformatted),
                               className: S.badgeImage,
                           }),
                           size: "md",
@@ -95,7 +95,7 @@ function I(e) {
                     : null,
                 (0, i.jsx)(m.Y, {
                     title: v.intl.string(v.t.VoDxsb),
-                    body: N,
+                    body: I,
                     hasBottomMargin: !0,
                 }),
                 (0, i.jsx)(o.k, { actions: A }),

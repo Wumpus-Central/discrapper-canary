@@ -1,17 +1,17 @@
 n.d(t, { Z: () => c });
 var r = n(255367),
-    i = n(73800),
-    l = n(481060),
-    a = n(454585),
-    s = n(273744),
-    o = n(5323);
+    a = n(73800),
+    i = n(481060),
+    l = n(454585),
+    o = n(273744),
+    s = n(5323);
 let c = (e) => {
     var t, n;
     let {
             node: { info: c },
         } = e,
-        d = i.useRef(
-            a.Z.reactParserFor(
+        d = a.useRef(
+            l.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,8 +36,8 @@ let c = (e) => {
                             });
                     }
                     return e;
-                })({}, a.Z.defaultRules)),
-                (n = n = { link: s.s }),
+                })({}, l.Z.defaultRules)),
+                (n = n = { link: o.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -55,9 +55,9 @@ let c = (e) => {
         );
     return null == c
         ? null
-        : (0, r.jsx)(l.Wn, {
-              className: o.infoBox,
-              messageType: l.QYI.INFO,
+        : (0, r.jsx)(i.Wn, {
+              className: s.infoBox,
+              messageType: i.QYI.INFO,
               children: d.current(c),
           });
 };

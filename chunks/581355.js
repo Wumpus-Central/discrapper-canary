@@ -1,4 +1,4 @@
-n.d(t, { default: () => v });
+n.d(t, { default: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -8,13 +8,13 @@ var r = n(255367),
     c = n(427679),
     d = n(939863),
     u = n(540186),
-    x = n(609776),
-    m = n(289584),
-    h = n(180899),
-    g = n(157925),
+    h = n(609776),
+    g = n(289584),
+    _ = n(180899),
+    m = n(157925),
     b = n(388032),
-    p = n(785550);
-function f(e) {
+    f = n(785550);
+function p(e) {
     let {
         guild: t,
         channel: n,
@@ -24,23 +24,23 @@ function f(e) {
         loading: s,
         error: c,
         onSave: u,
-        defaultOptions: m,
-        isSlideReady: h,
+        defaultOptions: g,
+        isSlideReady: _,
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: p.content,
+                className: f.content,
                 children: [
                     (0, r.jsx)(d.Z, {
                         children: (0, r.jsx)("div", {
-                            className: p.stageIconBackground,
+                            className: f.stageIconBackground,
                             children: (0, r.jsx)(a.ewx, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 32,
                                 height: 32,
-                                className: p.stageIcon,
+                                className: f.stageIcon,
                             }),
                         }),
                     }),
@@ -48,35 +48,35 @@ function f(e) {
                         id: l,
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: p.headerTitle,
+                        className: f.headerTitle,
                         children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        className: p.headerSubtitle,
+                        className: f.headerSubtitle,
                         children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t["I+9bLy"]),
                     }),
                 ],
             }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(h.Z, {
                 guild: t,
                 channel: n,
                 onSave: u,
                 error: c,
                 loading: s,
                 onClose: o,
-                defaultOptions: m,
-                isSlideReady: h,
+                defaultOptions: g,
+                isSlideReady: _,
             }),
         ],
     });
 }
-function v(e) {
+function x(e) {
     var t,
         n,
-        { channel: d, onClose: x, transitionState: b } = e,
-        v = (function (e, t) {
+        { channel: d, onClose: h, transitionState: b } = e,
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -97,27 +97,27 @@ function v(e) {
             }
             return i;
         })(e, ["channel", "onClose", "transitionState"]);
-    let _ = (0, o.Dt)(),
+    let v = (0, o.Dt)(),
         j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
         N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: C, error: I, onSave: y } = (0, m.Z)(d, x),
+        { loading: y, error: I, onSave: O } = (0, g.Z)(d, h),
         {
-            modalStep: O,
-            setModalStep: S,
-            readySlide: E,
-            handleSlideReady: w,
-            savedOptions: T,
-            handleSettingsSave: k,
-            handleDelayedSave: P,
-        } = (0, h.Z)({
+            modalStep: C,
+            setModalStep: E,
+            readySlide: S,
+            handleSlideReady: T,
+            savedOptions: w,
+            handleSettingsSave: P,
+            handleDelayedSave: k,
+        } = (0, _.Z)({
             stageInstance: N,
-            defaultStep: g.lv.STAGE_CHANNEL_SETTINGS,
+            defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
             error: I,
-            onSave: y,
+            onSave: O,
         });
     return (i.useEffect(() => {
-        null == j && x();
-    }, [j, x]),
+        null == j && h();
+    }, [j, h]),
     null == j)
         ? null
         : (0, r.jsx)(
@@ -149,50 +149,50 @@ function v(e) {
               })(
                   {
                       transitionState: b,
-                      "aria-labelledby": _,
+                      "aria-labelledby": v,
                   },
-                  v,
+                  x,
               )),
               (n = n =
                   {
                       size: a.CgR.SMALL,
                       parentComponent: "StageChannelSettingsModal",
                       children: (0, r.jsxs)(a.MyZ, {
-                          activeSlide: O,
+                          activeSlide: C,
                           width: 440,
-                          onSlideReady: w,
+                          onSlideReady: T,
                           children: [
                               (0, r.jsx)(a.Mi4, {
-                                  id: g.lv.STAGE_CHANNEL_SETTINGS,
+                                  id: m.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)("div", {
-                                      className: p.slideContainer,
-                                      children: (0, r.jsx)(f, {
+                                      className: f.slideContainer,
+                                      children: (0, r.jsx)(p, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
-                                          headerId: _,
-                                          onClose: x,
-                                          loading: C,
+                                          headerId: v,
+                                          onClose: h,
+                                          loading: y,
                                           error: I,
-                                          onSave: k,
-                                          defaultOptions: T,
-                                          isSlideReady: E === g.lv.STAGE_CHANNEL_SETTINGS,
+                                          onSave: P,
+                                          defaultOptions: w,
+                                          isSlideReady: S === m.lv.STAGE_CHANNEL_SETTINGS,
                                       }),
                                   }),
                               }),
                               (0, r.jsx)(a.Mi4, {
-                                  id: g.lv.PUBLIC_STAGE_PREVIEW,
+                                  id: m.lv.PUBLIC_STAGE_PREVIEW,
                                   children: (0, r.jsx)("div", {
-                                      className: p.slideContainer,
+                                      className: f.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
-                                          headerId: _,
+                                          headerId: v,
                                           guild: j,
                                           channel: d,
-                                          stageData: T,
-                                          loading: C,
-                                          onNext: P,
-                                          onCancel: x,
-                                          onBack: () => S(g.lv.STAGE_CHANNEL_SETTINGS),
+                                          stageData: w,
+                                          loading: y,
+                                          onNext: k,
+                                          onCancel: h,
+                                          onBack: () => E(m.lv.STAGE_CHANNEL_SETTINGS),
                                       }),
                                   }),
                               }),

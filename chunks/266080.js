@@ -1,42 +1,42 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
-    i = n(73800),
-    l = n(481060),
-    a = n(367907),
-    s = n(434404),
-    o = n(138201),
+    a = n(73800),
+    i = n(481060),
+    l = n(367907),
+    o = n(434404),
+    s = n(138201),
     c = n(430824),
     d = n(981631),
     u = n(388032);
 let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [m, p] = i.useState(!1),
-        g = c.Z.getGuild(t),
-        _ = null != g;
-    i.useEffect(() => {
-        p(!_);
-    }, [_]);
-    let b = i.useCallback(() => {
+        [m, p] = a.useState(!1),
+        _ = c.Z.getGuild(t),
+        g = null != _;
+    a.useEffect(() => {
+        p(!g);
+    }, [g]);
+    let b = a.useCallback(() => {
         p(!0),
-            a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+            l.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n,
             }),
-            s.Z.leaveGuild(t);
+            o.Z.leaveGuild(t);
     }, [t, n]);
-    return null == g
+    return null == _
         ? null
-        : (0, r.jsx)(o.JZ, {
+        : (0, r.jsx)(s.JZ, {
               title: u.intl.string(u.t.cU96io),
-              description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == g ? void 0 : g.name }),
+              description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == _ ? void 0 : _.name }),
               buttonText: m ? u.intl.string(u.t["9Ak99v"]) : u.intl.string(u.t.F3qExs),
               buttonDisabled: m,
               buttonVariant: "critical-primary",
               onButtonPress: () => {
-                  (0, l.h7j)((e) => {
+                  (0, i.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          l.ConfirmModal,
+                          i.ConfirmModal,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ let m = (e) => {
                               return e;
                           })(
                               {
-                                  header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: g.name }),
+                                  header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: _.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t["ETE/oK"]),
                                   onConfirm: b,
@@ -72,9 +72,9 @@ let m = (e) => {
                           )),
                           (n = n =
                               {
-                                  children: (0, r.jsx)(l.Text, {
+                                  children: (0, r.jsx)(i.Text, {
                                       variant: "text-md/normal",
-                                      children: u.intl.format(u.t.ZEXC0t, { name: g.name }),
+                                      children: u.intl.format(u.t.ZEXC0t, { name: _.name }),
                                   }),
                               }),
                           Object.getOwnPropertyDescriptors

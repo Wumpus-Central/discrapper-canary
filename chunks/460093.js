@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(481060),
     i = n(147913),
-    o = n(626135),
-    a = n(510839),
+    a = n(626135),
+    o = n(510839),
     s = n(591472),
     l = n(981631),
     c = n(388032);
@@ -25,9 +25,9 @@ function d(e) {
     if (null == r || null == t) return;
     let i = s.Z.getConnectedFrame();
     (null == i ? void 0 : i.applicationId) === r &&
-        ((0, a.xT)({ applicationId: r }),
+        ((0, o.xT)({ applicationId: r }),
         t.code !== l.$VG.CLOSE_NORMAL &&
-            (o.default.track(l.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
+            (a.default.track(l.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
                 rpc_close_code: t.code,
                 rpc_message: t.message,
                 application_id: r,

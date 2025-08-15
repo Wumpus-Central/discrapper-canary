@@ -11,8 +11,8 @@ n.d(t, {
     n(415506);
 var r = n(512722),
     i = n.n(r),
-    o = n(843991),
-    a = n(732870),
+    a = n(843991),
+    o = n(732870),
     s = n(902704);
 function l(e, t, n) {
     return (
@@ -73,22 +73,22 @@ function _(e, t) {
     let n = null;
     for (let r in t) {
         let i = e[r],
-            o = t[r];
-        void 0 === o || g(i, o) || (null == n ? (n = d(c({}, e), { [r]: o })) : (n[r] = o));
+            a = t[r];
+        void 0 === a || g(i, a) || (null == n ? (n = d(c({}, e), { [r]: a })) : (n[r] = a));
     }
     return null != n ? n : e;
 }
 function p(e, t, n) {
-    return (i()(null == t || t[a.O] === e, "Existing record type does not match the expected type"),
+    return (i()(null == t || t[o.O] === e, "Existing record type does not match the expected type"),
     null != t && E(t, n))
         ? t
         : m(e, n);
 }
 function h(e, t) {
-    return "object" == typeof t && null != t && (a.O in t && t[a.O]) === e;
+    return "object" == typeof t && null != t && (o.O in t && t[o.O]) === e;
 }
 function m(e, t) {
-    return (t[a.O] = e), t;
+    return (t[o.O] = e), t;
 }
 function g(e, t) {
     return null == e || null == t
@@ -97,7 +97,7 @@ function g(e, t) {
               (e instanceof Date && t instanceof Date
                   ? e.getTime() === t.getTime()
                   : e instanceof Set && t instanceof Set
-                    ? (0, o.O)(e, t)
+                    ? (0, a.O)(e, t)
                     : Array.isArray(e) && Array.isArray(t)
                       ? (0, s.E)(e, t)
                       : "object" == typeof e && "object" == typeof t && (0, s.Z)(e, t));

@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(944486),
     U = n(914010),
     G = n(885110),
-    V = n(9156),
-    B = n(594174),
+    B = n(9156),
+    V = n(594174),
     H = n(774343),
     F = n(974042),
     z = n(237997),
@@ -89,7 +89,7 @@ class J extends i.PureComponent {
             runningGamePid: R,
             selectedChannelId: M,
             selectedGuildId: U,
-            connected: V,
+            connected: B,
         } = this.props;
         if (e.voiceChannelId !== u && null != e.voiceChannelId) {
             let t = b.ZP.getCurrentGameForAnalytics(),
@@ -156,7 +156,7 @@ class J extends i.PureComponent {
                     ),
                 );
         }
-        let B =
+        let V =
                 null != w &&
                 null != w.distributor &&
                 null != w.sku &&
@@ -164,7 +164,7 @@ class J extends i.PureComponent {
                 e.runningGame.distributor === w.distributor &&
                 w.sku === e.runningGame.sku,
             H = null != e.runningGame && null != w && e.runningGame.isLauncher !== w.isLauncher;
-        if (e.runningGame !== w && null != w && !w.isLauncher && (!B || H)) {
+        if (e.runningGame !== w && null != w && !w.isLauncher && (!V || H)) {
             let e = Z.Z.getGameByName(w.name),
                 s = b.ZP.getOverrideForGame(w),
                 c = L.Z.getGuildIds(),
@@ -247,7 +247,7 @@ class J extends i.PureComponent {
                     ),
                 );
         }
-        if (V && null != M && (!e.connected || M !== e.selectedChannelId || U !== e.selectedGuildId)) {
+        if (B && null != M && (!e.connected || M !== e.selectedChannelId || U !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = A.Z.getChannel(t),
                 r = L.Z.getGuild(null == n ? void 0 : n.getGuildId());
@@ -302,7 +302,7 @@ function $() {
         f = (0, l.e7)([A.Z], () => A.Z.getChannel(e), [e]),
         g = (0, l.e7)([U.Z], () => U.Z.getGuildId(), []),
         m = (0, l.e7)([L.Z], () => L.Z.getGuild(g), [g]),
-        E = (0, l.e7)([B.default], () => B.default.getCurrentUser(), []),
+        E = (0, l.e7)([V.default], () => V.default.getCurrentUser(), []),
         I = (0, l.e7)([w.ZP], () => {
             var e, t;
             return (
@@ -391,7 +391,7 @@ function $() {
                                         null == (e = L.Z.getGuild(U.Z.getGuildId()))
                                             ? void 0
                                             : e.premiumProgressBarEnabled) && t,
-                            viewing_all_channels: !V.ZP.isOptInEnabled(et),
+                            viewing_all_channels: !B.ZP.isOptInEnabled(et),
                             num_recent_channels: y.Z.recentsChannelCount(et),
                         }),
                     Object.getOwnPropertyDescriptors

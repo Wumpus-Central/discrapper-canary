@@ -1,4 +1,4 @@
-n.d(t, { D: () => h }), n(997841);
+n.d(t, { D: () => g }), n(997841);
 var l = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,22 +9,22 @@ var i = n(120356),
     u = n(868728),
     d = n(388032),
     c = n(451964),
-    g = n(197571);
-let h = (e) => {
+    h = n(197571);
+let g = (e) => {
     let {
             handleDone: t,
             headerId: n,
             modalState: i,
-            shouldHideTemporaryInviteToggle: h,
+            shouldHideTemporaryInviteToggle: g,
             onGenerateNewLink: m,
             onToggleTemporary: p,
             onSelectMaxAge: v,
-            onSelectMaxUses: x,
-            isGuestInviteCreationToggleEnabled: I,
+            onSelectMaxUses: I,
+            isGuestInviteCreationToggleEnabled: x,
             onSetInviteFlags: f,
         } = e,
-        j = (0, a.ZP)(),
-        { maxAge: N, maxUses: _, temporary: S, flags: E } = i;
+        N = (0, a.ZP)(),
+        { maxAge: j, maxUses: _, temporary: E, flags: S } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.xBx, {
@@ -38,29 +38,29 @@ let h = (e) => {
                         children: (0, l.jsx)(s.vwX, {
                             id: n,
                             tag: "h2",
-                            className: r()(g.marginReset, c.headerCloseButtonSpacing, c.headerText),
+                            className: r()(h.marginReset, c.headerCloseButtonSpacing, c.headerText),
                             children: d.intl.string(d.t.Atdlys),
                         }),
                     }),
                 ],
             }),
             (0, l.jsx)(o.Z, {
-                shouldHideTemporaryInviteToggle: h,
-                maxAge: N,
+                shouldHideTemporaryInviteToggle: g,
+                maxAge: j,
                 maxUses: _,
-                temporary: S,
+                temporary: E,
                 onToggleTemporary: p,
                 onSelectMaxAge: v,
-                onSelectMaxUses: x,
+                onSelectMaxUses: I,
                 onGenerateNewLink: m,
-                isGuestInviteCreationToggleEnabled: I,
+                isGuestInviteCreationToggleEnabled: x,
                 onSetInviteFlags: f,
-                inviteFlags: E,
+                inviteFlags: S,
             }),
             (0, l.jsx)(s.mzw, {
                 className: c.settingsFooter,
                 children: (0, l.jsx)(u.Z, {
-                    theme: j,
+                    theme: N,
                     onConfirm: () => {
                         m(), t();
                     },

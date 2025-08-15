@@ -1,69 +1,74 @@
-var r = n(198392),
-    i = n(621796),
-    o = n(172367),
-    a = n(630685),
-    s = n(961271),
-    l = n(992456),
-    c = n(534978),
-    u = n(319630),
-    d = n(352582),
-    f = n(467159);
-function _(e, t) {
-    var n = null,
-        r = null,
-        i = s(e.currentTarget);
-    if ("function" == typeof i.caretRangeFromPoint) {
-        var o = i.caretRangeFromPoint(e.x, e.y);
-        (n = o.startContainer), (r = o.startOffset);
-    } else {
-        if (!e.rangeParent) return null;
-        (n = e.rangeParent), (r = e.rangeOffset);
-    }
-    (n = f(n)), (r = f(r));
-    var l = f(a(n));
-    return c(t, l, r, l, r);
-}
-function p(e) {
-    e._internalDrag = !1;
-    var t = e.editorContainer;
-    if (t) {
-        var n = new MouseEvent("mouseup", {
-            view: u(t),
+var n = r(198392),
+    i = r(621796),
+    o = r(172367),
+    a = r(630685),
+    u = r(961271),
+    s = r(992456),
+    c = r(534978),
+    l = r(319630),
+    f = r(352582),
+    p = r(467159);
+function h(t) {
+    t._internalDrag = !1;
+    var e = t.editorContainer;
+    if (e) {
+        var r = new MouseEvent("mouseup", {
+            view: l(e),
             bubbles: !0,
             cancelable: !0,
         });
-        t.dispatchEvent(n);
+        e.dispatchEvent(r);
     }
 }
-function h(e, t) {
-    var n = i.moveText(e.getCurrentContent(), e.getSelection(), t);
-    return o.push(e, n, "insert-fragment");
+function d(t, e, r) {
+    var n = i.insertText(t.getCurrentContent(), e, r, t.getCurrentInlineStyle());
+    return o.push(t, n, "insert-fragment");
 }
-function m(e, t, n) {
-    var r = i.insertText(e.getCurrentContent(), t, n, e.getCurrentInlineStyle());
-    return o.push(e, r, "insert-fragment");
-}
-e.exports = {
-    onDragEnd: function (e) {
-        e.exitCurrentMode(), p(e);
+t.exports = {
+    onDragEnd: function (t) {
+        t.exitCurrentMode(), h(t);
     },
-    onDrop: function (e, t) {
-        var n = new r(t.nativeEvent.dataTransfer),
-            i = e._latestEditorState,
-            o = _(t.nativeEvent, i);
-        if ((t.preventDefault(), (e._dragCount = 0), e.exitCurrentMode(), null != o)) {
-            var a = n.getFiles();
-            if (a.length > 0) {
-                if (e.props.handleDroppedFiles && d(e.props.handleDroppedFiles(o, a))) return;
-                l(a, function (t) {
-                    t && e.update(m(i, o, t));
+    onDrop: function (t, e) {
+        var r = new n(e.nativeEvent.dataTransfer),
+            l = t._latestEditorState,
+            g = (function (t, e) {
+                var r = null,
+                    n = null,
+                    i = u(t.currentTarget);
+                if ("function" == typeof i.caretRangeFromPoint) {
+                    var o = i.caretRangeFromPoint(t.x, t.y);
+                    (r = o.startContainer), (n = o.startOffset);
+                } else {
+                    if (!t.rangeParent) return null;
+                    (r = t.rangeParent), (n = t.rangeOffset);
+                }
+                (r = p(r)), (n = p(n));
+                var s = p(a(r));
+                return c(e, s, n, s, n);
+            })(e.nativeEvent, l);
+        if ((e.preventDefault(), (t._dragCount = 0), t.exitCurrentMode(), null != g)) {
+            var y,
+                v,
+                m,
+                _ = r.getFiles();
+            if (_.length > 0) {
+                if (t.props.handleDroppedFiles && f(t.props.handleDroppedFiles(g, _))) return;
+                s(_, function (e) {
+                    e && t.update(d(l, g, e));
                 });
                 return;
             }
-            var s = e._internalDrag ? "internal" : "external";
-            (e.props.handleDrop && d(e.props.handleDrop(o, n, s))) ||
-                (e._internalDrag ? e.update(h(i, o)) : e.update(m(i, o, n.getText()))),
-                p(e);
+            var b = t._internalDrag ? "internal" : "external";
+            (t.props.handleDrop && f(t.props.handleDrop(g, r, b))) ||
+                (t._internalDrag
+                    ? t.update(
+                          ((y = l),
+                          (v = g),
+                          (m = i.moveText(y.getCurrentContent(), y.getSelection(), v)),
+                          o.push(y, m, "insert-fragment")),
+                      )
+                    : t.update(d(l, g, r.getText()))),
+                h(t);
         }
     },
 };

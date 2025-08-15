@@ -1,8 +1,8 @@
 n.d(t, { Z: () => J }), n(388685), n(415506), n(539854), n(290780);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(51025),
@@ -72,30 +72,30 @@ function x(e, t) {
 }
 function M(e, t, n, r) {
     let i = (0, _.Tu)(e, t),
-        o = {
+        a = {
             comboId: i,
             action: r,
         },
-        a = I.indexOf(i);
-    -1 !== a && I.splice(a, 1);
+        o = I.indexOf(i);
+    -1 !== o && I.splice(o, 1);
     let s = x(e, t);
-    0 !== s && (n ? -1 === s && (v.push(o), L()) : (s > 0 && v.splice(s, 1), v.unshift(o), L())),
+    0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())),
         !n && T && p.Z.resume(),
         w();
 }
-function j(e, t) {
+function k(e, t) {
     let n = (0, _.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
     let i = x(e, t);
     -1 !== i && (v.splice(i, 1), w()), L();
 }
-function k(e) {
+function j(e) {
     let { applicationId: t, branchId: n } = e;
     C.set((0, _.Tu)(t, n), "Install"), M(t, n, !1, "Patch");
 }
 function U(e) {
-    Z(e), V(e);
+    V(e), Z(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
@@ -105,9 +105,9 @@ function B(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
     M(t, n, r, "Patch");
 }
-function Z(e) {
+function V(e) {
     let { applicationId: t, branchId: n } = e;
-    j(t, n);
+    k(t, n);
 }
 function F(e) {
     let { applicationId: t, branchId: n } = e,
@@ -115,7 +115,7 @@ function F(e) {
     if (r < 1) return !1;
     v.splice(0, 0, v.splice(r, 1)[0]), L(), T && p.Z.resume(), w();
 }
-function V(e) {
+function Z(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, _.Tu)(t, n),
         i = I.indexOf(r);
@@ -130,24 +130,24 @@ function H(e) {
     (v = v.filter((e) => {
         let { comboId: t } = e,
             { applicationId: n, branchId: i } = (0, _.CP)(t),
-            a = m.Z.getState(n, i),
+            o = m.Z.getState(n, i),
             s = f.Z.getTargetBuildId(n, i),
             l = f.Z.getTargetManifests(n, i);
         if (
-            null != a &&
-            a.type === g.vxO.UP_TO_DATE &&
-            a.buildId === a.targetBuildId &&
-            a.buildId === s &&
-            o().isEqual(a.manifestIds, a.targetManifestIds) &&
-            o().isEqual(a.manifestIds, l)
+            null != o &&
+            o.type === g.vxO.UP_TO_DATE &&
+            o.buildId === o.targetBuildId &&
+            o.buildId === s &&
+            a().isEqual(o.manifestIds, o.targetManifestIds) &&
+            a().isEqual(o.manifestIds, l)
         ) {
             if ((I.push(t), C.has(t))) {
                 switch (C.get(t)) {
                     case "Install":
-                        c.XT(n, a);
+                        c.XT(n, o);
                         break;
                     case "Repair":
-                        c.Wx(n, a);
+                        c.Wx(n, o);
                 }
                 C.delete(t);
             }
@@ -172,7 +172,7 @@ function W(e) {
             let { context: e } = t;
             if (null != e) {
                 let { application_id: t, branch_id: n } = e;
-                j(t, n);
+                k(t, n);
             }
         }
     }
@@ -198,7 +198,7 @@ function X(e) {
             : e,
     );
 }
-class Q extends (r = a.ZP.Store) {
+class Q extends (r = o.ZP.Store) {
     initialize() {
         var e;
         let t =
@@ -237,13 +237,13 @@ class Q extends (r = a.ZP.Store) {
 }
 b(Q, "displayName", "DispatchManagerStore");
 let J = new Q(l.Z, {
-    DISPATCH_APPLICATION_INSTALL: k,
+    DISPATCH_APPLICATION_INSTALL: j,
     DISPATCH_APPLICATION_UPDATE: B,
     DISPATCH_APPLICATION_UNINSTALL: U,
-    DISPATCH_APPLICATION_CANCEL: Z,
+    DISPATCH_APPLICATION_CANCEL: V,
     DISPATCH_APPLICATION_REPAIR: G,
     DISPATCH_APPLICATION_MOVE_UP: F,
-    DISPATCH_APPLICATION_REMOVE_FINISHED: V,
+    DISPATCH_APPLICATION_REMOVE_FINISHED: Z,
     DISPATCH_APPLICATION_STATE_UPDATE: H,
     DISPATCH_APPLICATION_ERROR: W,
     CONNECTION_OPEN: z,

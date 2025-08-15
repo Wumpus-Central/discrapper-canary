@@ -1,10 +1,10 @@
-var r = n(979162);
-e.exports = function (e, t) {
-    var n = t.ownerDocument.defaultView.getSelection();
-    return 0 === n.rangeCount
+var n = r(979162);
+t.exports = function (t, e) {
+    var r = e.ownerDocument.defaultView.getSelection();
+    return 0 === r.rangeCount
         ? {
-              selectionState: e.getSelection().set("hasFocus", !1),
+              selectionState: t.getSelection().set("hasFocus", !1),
               needsRecovery: !1,
           }
-        : r(e, t, n.anchorNode, n.anchorOffset, n.focusNode, n.focusOffset);
+        : n(t, e, r.anchorNode, r.anchorOffset, r.focusNode, r.focusOffset);
 };

@@ -1,13 +1,13 @@
-n.d(t, { H: () => f });
+n.d(t, { H: () => d });
 var r = n(442837),
-    i = n(592125),
-    o = n(430824),
+    s = n(592125),
+    l = n(430824),
     a = n(914010),
-    s = n(251625),
-    l = n(945577),
+    i = n(251625),
+    o = n(945577),
     c = n(981631);
-function u(e, t, n, r, i, o) {
-    return i
+let u = (0, i.oH)(function (e, t, n, r, s, l) {
+    return s
         ? { type: c.aib.FAVORITES }
         : null != e && null != n
           ? {
@@ -16,20 +16,19 @@ function u(e, t, n, r, i, o) {
             }
           : null == t || null == r
             ? null
-            : r.isPrivate() && o
+            : r.isPrivate() && l
               ? { type: c.aib.DMS }
               : {
                     type: c.aib.CHANNEL,
                     channelId: t,
                 };
-}
-let d = (0, s.oH)(u);
-function f(e) {
+});
+function d(e) {
     let { guildId: t, channelId: n } = e,
-        s = (0, l.UX)({ location: "useDesktopSearchContext" });
-    return (0, r.e7)([o.Z, i.Z, a.Z], () => {
-        let e = o.Z.getGuild(t),
-            r = i.Z.getChannel(n);
-        return d(t, n, e, r, a.Z.getGuildId() === c.I_8, s);
+        i = (0, o.UX)({ location: "useDesktopSearchContext" });
+    return (0, r.e7)([l.Z, s.Z, a.Z], () => {
+        let e = l.Z.getGuild(t),
+            r = s.Z.getChannel(n);
+        return u(t, n, e, r, a.Z.getGuildId() === c.I_8, i);
     });
 }

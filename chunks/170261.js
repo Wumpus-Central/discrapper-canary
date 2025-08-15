@@ -1,21 +1,21 @@
-var r = n(65183).Map;
-e.exports = function (e, t, n) {
-    var i = t.getStartKey(),
-        o = t.getEndKey(),
-        a = e.getBlockMap(),
-        s = a
+var n = r(65183).Map;
+t.exports = function (t, e, r) {
+    var i = e.getStartKey(),
+        o = e.getEndKey(),
+        a = t.getBlockMap(),
+        u = a
             .toSeq()
-            .skipUntil(function (e, t) {
-                return t === i;
+            .skipUntil(function (t, e) {
+                return e === i;
             })
-            .takeUntil(function (e, t) {
-                return t === o;
+            .takeUntil(function (t, e) {
+                return e === o;
             })
-            .concat(r([[o, a.get(o)]]))
-            .map(n);
-    return e.merge({
-        blockMap: a.merge(s),
-        selectionBefore: t,
-        selectionAfter: t,
+            .concat(n([[o, a.get(o)]]))
+            .map(r);
+    return t.merge({
+        blockMap: a.merge(u),
+        selectionBefore: e,
+        selectionAfter: e,
     });
 };

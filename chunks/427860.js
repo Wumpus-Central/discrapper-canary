@@ -1,5 +1,5 @@
 n.d(t, {
-    C7: () => a,
+    C7: () => o,
     JC: () => g,
     l6: () => s,
 }),
@@ -8,7 +8,7 @@ n.d(t, {
     n(388685);
 var r = n(759174),
     i = n(709054);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function o(e, t, n) {
         e
     );
 }
-var a = (function (e) {
+var o = (function (e) {
         return (
             (e.NativeOOP = "native_oop"),
             (e.NativeLegacy = "native_legacy"),
@@ -96,19 +96,19 @@ class m {
     }
     addModuleBreadcrumb(e, t, n, r) {
         var i;
-        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
-            a = h(),
-            s = _(a),
+        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
+            o = h(),
+            s = _(o),
             l = {
                 id: s,
                 key: s,
                 nativeId: null,
-                timestamp: a,
+                timestamp: o,
                 name: e,
                 data: t,
                 type: n,
                 pid: r,
-                logType: o,
+                logType: a,
                 stack: null != (i = Error().stack) ? i : "",
             };
         return this.addBreadcrumb(l);
@@ -117,7 +117,7 @@ class m {
         return [this.breadcrumbs.values(e, !0), this.breadcrumbs.version];
     }
     constructor() {
-        o(this, "breadcrumbs", new r.h(u, d)), o(this, "maxNativeBreadcrumbId", 0);
+        a(this, "breadcrumbs", new r.h(u, d)), a(this, "maxNativeBreadcrumbId", 0);
     }
 }
 let g = new m();

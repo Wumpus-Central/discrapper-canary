@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(480189),
     i = n(81825),
-    o = n(768581),
-    a = n(584597),
+    a = n(768581),
+    o = n(584597),
     s = n(598077),
     l = n(701488);
 function c(e, t, n) {
@@ -94,7 +94,7 @@ class h extends i.Z {
     }
     getIconURL(e, t) {
         return null != this.icon
-            ? o.ZP.getGameAssetURL({
+            ? a.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -104,7 +104,7 @@ class h extends i.Z {
     }
     getIconSource(e, t) {
         return null != this.icon
-            ? o.ZP.getGameAssetSource({
+            ? a.ZP.getGameAssetSource({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -114,7 +114,7 @@ class h extends i.Z {
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? o.ZP.getGameAssetURL({
+            ? a.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.splash,
                   size: e,
@@ -125,7 +125,7 @@ class h extends i.Z {
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? o.ZP.getApplicationIconURL({
+            ? a.ZP.getApplicationIconURL({
                   id: this.id,
                   icon: this.coverImage,
                   size: e,
@@ -133,7 +133,7 @@ class h extends i.Z {
             : null;
     }
     constructor(e) {
-        var t, n, r, i, o, a;
+        var t, n, r, i, a, o;
         super(),
             c(this, "id", void 0),
             c(this, "name", void 0),
@@ -164,8 +164,8 @@ class h extends i.Z {
             (this.isVerified = null != (r = e.is_verified) ? r : e.isVerified),
             (this.roleConnectionsVerificationUrl =
                 null != (i = e.role_connections_verification_url) ? i : e.roleConnectionsVerificationUrl),
-            (this.parentId = null != (o = e.parent_id) ? o : e.parentId),
-            (this.connectionEntrypointUrl = null != (a = e.connection_entrypoint_url) ? a : e.connectionEntrypointUrl);
+            (this.parentId = null != (a = e.parent_id) ? a : e.parentId),
+            (this.connectionEntrypointUrl = null != (o = e.connection_entrypoint_url) ? o : e.connectionEntrypointUrl);
     }
 }
 class m extends h {
@@ -185,8 +185,8 @@ class m extends h {
                 storeListingSkuId: e.store_listing_sku_id,
                 guildId: e.guild_id,
                 guild: e.guild,
-                publishers: null != e.publishers ? e.publishers.map(a.Z.createFromServer) : [],
-                developers: null != e.developers ? e.developers.map(a.Z.createFromServer) : [],
+                publishers: null != e.publishers ? e.publishers.map(o.Z.createFromServer) : [],
+                developers: null != e.developers ? e.developers.map(o.Z.createFromServer) : [],
                 eulaId: e.eula_id,
                 slug: e.slug,
                 flags: null != (n = e.flags) ? n : 0,
@@ -216,8 +216,8 @@ class m extends h {
             n,
             r,
             i,
-            o,
             a,
+            o,
             s,
             l,
             c,
@@ -245,14 +245,14 @@ class m extends h {
             L,
             x,
             M,
-            j,
             k,
+            j,
             U,
             G,
             B,
-            Z,
-            F,
             V,
+            F,
+            Z,
             H,
             Y;
         return new m({
@@ -260,8 +260,8 @@ class m extends h {
             name: null != (n = e.name) ? n : this.name,
             icon: null != (r = e.icon) ? r : this.icon,
             splash: null != (i = e.splash) ? i : this.splash,
-            overlay: null != (o = e.overlay) ? o : this.overlay,
-            overlayWarn: null != (a = e.overlayWarn) ? a : this.overlayWarn,
+            overlay: null != (a = e.overlay) ? a : this.overlay,
+            overlayWarn: null != (o = e.overlayWarn) ? o : this.overlayWarn,
             overlayCompatibilityHook: null != (s = e.overlayCompatibilityHook) ? s : this.overlayCompatibilityHook,
             overlayMethods: null != (l = e.overlayMethods) ? l : this.overlayMethods,
             hook: null != (c = e.hook) ? c : this.hook,
@@ -295,14 +295,14 @@ class m extends h {
                 null != (L = e.roleConnectionsVerificationUrl) ? L : this.roleConnectionsVerificationUrl,
             integrationTypesConfig: null != (x = e.integrationTypesConfig) ? x : this.integrationTypesConfig,
             isMonetized: null != (M = e.isMonetized) ? M : this.isMonetized,
-            storefront_available: null != (j = e.storefront_available) ? j : this.storefront_available,
-            termsOfServiceUrl: null != (k = e.termsOfServiceUrl) ? k : this.termsOfServiceUrl,
+            storefront_available: null != (k = e.storefront_available) ? k : this.storefront_available,
+            termsOfServiceUrl: null != (j = e.termsOfServiceUrl) ? j : this.termsOfServiceUrl,
             privacyPolicyUrl: null != (U = e.privacyPolicyUrl) ? U : this.privacyPolicyUrl,
             isVerified: null != (G = e.isVerified) ? G : this.isVerified,
             customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
-            installParams: null != (Z = e.installParams) ? Z : this.installParams,
+            installParams: null != (V = e.installParams) ? V : this.installParams,
             isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
-            directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
+            directoryEntry: null != (Z = e.directoryEntry) ? Z : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories,
             linkedGames: null != (Y = e.linkedGames) ? Y : this.linkedGames,
         });
@@ -327,7 +327,7 @@ class m extends h {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, u, d, f, _, h, m, g, E, b, y, O;
+        var t, n, i, a, o, s, l, u, d, f, _, h, m, g, E, b, y, O;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -362,8 +362,8 @@ class m extends h {
             (this.overlay = null != (t = e.overlay) && t),
             (this.overlayWarn = null != (n = e.overlayWarn) && n),
             (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i),
-            (this.overlayMethods = null != (o = e.overlayMethods) ? o : r.e.DEFAULT),
-            (this.hook = null == (a = e.hook) || a),
+            (this.overlayMethods = null != (a = e.overlayMethods) ? a : r.e.DEFAULT),
+            (this.hook = null == (o = e.hook) || o),
             (this.aliases = null != (s = e.aliases) ? s : []),
             (this.publishers = null != (l = e.publishers) ? l : []),
             (this.developers = null != (u = e.developers) ? u : []),

@@ -1,18 +1,18 @@
 n.d(t, {
-    DX: () => o,
+    DX: () => a,
     Gr: () => s,
-    S2: () => a,
+    S2: () => o,
 });
 var r = n(866442),
     i = n(981631);
-function o(e) {
+function a(e) {
     return {
         primaryColor: 0 === e.primary_color ? i.Pbq : (0, r.Rf)(e.primary_color),
         secondaryColor: null == e.secondary_color ? null : (0, r.Rf)(e.secondary_color),
         tertiaryColor: null == e.tertiary_color ? null : (0, r.Rf)(e.tertiary_color),
     };
 }
-function a(e) {
+function o(e) {
     return (
         null != e &&
         null != e.colorStrings &&

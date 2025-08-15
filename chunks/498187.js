@@ -1,100 +1,90 @@
-n.d(t, { Z: () => b });
-var r = n(876215),
-    i = n(758713),
-    o = n(835473),
-    a = n(810568),
-    s = n(168524),
-    l = n(561308),
-    c = n(206583),
-    u = n(96513),
-    d = n(701488),
-    f = n(388032);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = {
-        [i.z.XBOX]: c.kG.XBOX,
-        [i.z.PLAYSTATION]: c.kG.PLAYSTATION,
+r.d(t, { Z: () => m });
+var n = r(876215),
+    l = r(758713),
+    i = r(835473),
+    o = r(810568),
+    a = r(168524),
+    c = r(561308),
+    s = r(206583),
+    u = r(96513),
+    d = r(701488),
+    p = r(388032);
+let f = {
+        [l.z.XBOX]: s.kG.XBOX,
+        [l.z.PLAYSTATION]: s.kG.PLAYSTATION,
     },
-    E = { [u._.EMBED]: a.m1.Embed };
-function b(e) {
-    let t,
-        n,
-        { entry: i, location: a, baseEntryData: c } = e,
-        u = (0, o.q)(i.extra.application_id),
-        _ = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-        h = i.extra.game_name;
-    if (null != i.extra.platform) {
-        let e = g[i.extra.platform];
-        null != e && (t = { type: e });
+    b = { [u._.EMBED]: o.m1.Embed };
+function m(e) {
+    var t, r;
+    let l,
+        o,
+        { entry: s, location: u, baseEntryData: m } = e,
+        O = (0, i.q)(s.extra.application_id),
+        y = null == O ? void 0 : O.getIconURL(d.Si.LARGE),
+        j = s.extra.game_name;
+    if (null != s.extra.platform) {
+        let e = f[s.extra.platform];
+        null != e && (l = { type: e });
     }
-    n = i.content_type === r.s.PLAYED_GAME && (0, l.kr)(i) && !(0, l.n2)(i) ? f.t.vPg1JS : f.t.rPqqtr;
-    let b = E[a],
-        y = {
-            onClick: (0, s.Z)({
-                location: b,
-                applicationId: i.extra.application_id,
-                source: b,
+    o = s.content_type === n.s.PLAYED_GAME && (0, c.kr)(s) && !(0, c.n2)(s) ? p.t.vPg1JS : p.t.rPqqtr;
+    let g = b[u],
+        h = {
+            onClick: (0, a.Z)({
+                location: g,
+                applicationId: s.extra.application_id,
+                source: g,
                 trackEntryPointImpression: !0,
-                sourceUserId: i.author_id,
+                sourceUserId: s.author_id,
             }),
-            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVl"], { gameName: h }),
+            ariaDescription: p.intl.formatToPlainString(p.t["9sZWVl"], { gameName: j }),
         };
-    return m(p({}, c), {
-        thumbnailUrl: _,
-        title: h,
-        titleClickable: y,
-        thumbnailClickable: y,
-        userDescription: n,
-        providerIconProps: t,
-    });
+    return (
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        }),
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, m)),
+        (r = r =
+            {
+                thumbnailUrl: y,
+                title: j,
+                titleClickable: h,
+                thumbnailClickable: h,
+                userDescription: o,
+                providerIconProps: l,
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
+    );
 }

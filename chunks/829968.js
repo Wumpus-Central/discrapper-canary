@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(439849);
-function o(e, t) {
-    let [n, o] = r.useState();
+function a(e, t) {
+    let [n, a] = r.useState();
     return (
         r.useEffect(() => {
-            if (null == e || null != t) return void o(void 0);
+            if (null == e || null != t) return void a(void 0);
             let n = !1;
             return (
                 (0, i.Z)()
@@ -15,13 +15,13 @@ function o(e, t) {
                             t.identifyGame(e, (e, t) => {
                                 if (!n) {
                                     if (0 !== e || null == t.icon || "" === t.icon || null == t.name || "" === t.name)
-                                        return void o(void 0);
-                                    o("data:image/png;base64,".concat(t.icon));
+                                        return void a(void 0);
+                                    a("data:image/png;base64,".concat(t.icon));
                                 }
                             });
                     })
                     .catch(() => {
-                        n || o(void 0);
+                        n || a(void 0);
                     }),
                 () => {
                     n = !0;

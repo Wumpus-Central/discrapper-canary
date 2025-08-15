@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685), n(539854);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(314794),
+    a = n.n(i),
+    o = n(314794),
     s = n(442837),
     l = n(570140),
     c = n(959546),
@@ -79,10 +79,10 @@ function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
-function j() {
+function k() {
     (O = !1), (y = !1), (v = !1);
 }
-function k(e) {
+function j(e) {
     let { entitlements: t } = e;
     for (let e of t) N(e);
 }
@@ -96,7 +96,7 @@ function G(e) {
 function B(e) {
     return R(e.entitlement);
 }
-class Z extends (r = s.yh) {
+class V extends (r = s.yh) {
     initialize() {
         this.syncWith([u.Z], () => !0);
     }
@@ -104,7 +104,7 @@ class Z extends (r = s.yh) {
         return m[e];
     }
     getGiftable() {
-        return o().values(g);
+        return a().values(g);
     }
     getForApplication(e) {
         let t = b[e];
@@ -157,8 +157,8 @@ class Z extends (r = s.yh) {
                 if (null != n && n.isValid(e, f.Z, r)) return !0;
             }
         if (T.has(n)) return !1;
-        let o = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
-        return !!(null != o && o.sku.id === t && (0, d.Je)(o)) || null;
+        let a = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
+        return !!(null != a && a.sku.id === t && (0, d.Je)(a)) || null;
     }
     hasFetchedForApplicationIds(e) {
         return e.every((e) => T.has(e));
@@ -184,9 +184,9 @@ class Z extends (r = s.yh) {
         return (
             null == (e = this.getForApplication(p.CL)) ||
                 e.forEach((e) => {
-                    let o = null != e.endsAt && e.endsAt < i,
-                        a = e.sourceType === _.kNB.REVERSE_TRIAL && n;
-                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (o && !t) || a || r.push(e);
+                    let a = null != e.endsAt && e.endsAt < i,
+                        o = e.sourceType === _.kNB.REVERSE_TRIAL && n;
+                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (a && !t) || o || r.push(e);
                 }),
             r
         );
@@ -206,20 +206,20 @@ class Z extends (r = s.yh) {
         return (
             null == (e = this.getForApplication(p.CL)) ||
                 e.forEach((e) => {
-                    a.k.ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(e.skuId) && !e.consumed && t.push(e);
+                    o.k.ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(e.skuId) && !e.consumed && t.push(e);
                 }),
             t
         );
     }
 }
-h(Z, "displayName", "EntitlementStore");
-let F = new Z(l.Z, {
+h(V, "displayName", "EntitlementStore");
+let F = new V(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: P,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: D,
-    SKU_PURCHASE_SUCCESS: k,
-    VIRTUAL_CURRENCY_REDEEM_SUCCESS: k,
+    SKU_PURCHASE_SUCCESS: j,
+    VIRTUAL_CURRENCY_REDEEM_SUCCESS: j,
     LIBRARY_FETCH_SUCCESS: U,
     ENTITLEMENT_CREATE: G,
     ENTITLEMENT_UPDATE: G,
@@ -227,5 +227,5 @@ let F = new Z(l.Z, {
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: j,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k,
 });

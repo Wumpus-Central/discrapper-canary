@@ -1,10 +1,10 @@
 n.d(t, {
-    H1: () => a,
+    H1: () => o,
     s8: () => s,
 });
 var r = n(818083),
     i = n(128064);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-02_tigger_pawtect",
     label: "Tigger pawtect",
@@ -17,13 +17,13 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t } = e;
-    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled || (0, i.c_)(t);
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled || (0, i.c_)(t);
 }
 function s(e) {
     let { location: t } = e,
-        n = o.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }),
+        n = a.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }),
         r = (0, i.pY)(t);
     return n.enabled || r;
 }

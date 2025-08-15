@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(154028),
-    o = n(10693),
-    a = n(621523),
+    a = n(10693),
+    o = n(621523),
     s = n(713411),
     l = n(530575),
     c = n(117895).f,
@@ -24,7 +24,7 @@ var r = n(98405),
         i(v) ||
         (function () {
             try {
-                new (i("MessageChannel") || o("worker_threads").MessageChannel)().port1.postMessage(new WeakMap());
+                new (i("MessageChannel") || a("worker_threads").MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
                 if (e.name === I && 25 === e.code) return e.constructor;
             }
@@ -71,21 +71,21 @@ var r = n(98405),
         });
     };
 y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, D));
-var j = a(function () {
+var k = o(function () {
         return !(new S() instanceof T);
     }),
-    k =
-        j ||
-        a(function () {
+    j =
+        k ||
+        o(function () {
             return N.toString !== h || "2: 1" !== String(new S(1, 2));
         }),
     U =
-        j ||
-        a(function () {
+        k ||
+        o(function () {
             return 25 !== new S(1, "DataCloneError").code;
         }),
-    G = j || 25 !== S[I] || 25 !== A[I],
-    B = O ? k || U || G : j;
+    G = k || 25 !== S[I] || 25 !== A[I],
+    B = O ? j || U || G : k;
 r(
     {
         global: !0,
@@ -94,12 +94,12 @@ r(
     },
     { DOMException: B ? D : S },
 );
-var Z = i(v),
-    F = Z.prototype;
-for (var V in (k && (O || S === Z) && u(F, "toString", h),
+var V = i(v),
+    F = V.prototype;
+for (var Z in (j && (O || S === V) && u(F, "toString", h),
 U &&
     y &&
-    S === Z &&
+    S === V &&
     d(
         F,
         "code",
@@ -108,9 +108,9 @@ U &&
         }),
     ),
 g))
-    if (f(g, V)) {
-        var H = g[V],
+    if (f(g, Z)) {
+        var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        f(Z, Y) || c(Z, Y, W), f(F, Y) || c(F, Y, W);
+        f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W);
     }

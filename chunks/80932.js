@@ -11,8 +11,8 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n.n(r),
-    o = n(544891),
-    a = n(381499),
+    a = n(544891),
+    o = n(381499),
     s = n(570140),
     l = n(479531),
     c = n(339085),
@@ -30,7 +30,7 @@ function y(e) {
     _.hW.updateAsync(
         "textAndImages",
         (t) => {
-            (t.diversitySurrogate = a.Gm.create()), (t.diversitySurrogate.value = e);
+            (t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e);
         },
         E.fy.FREQUENT_USER_ACTION,
     );
@@ -40,7 +40,7 @@ function O(e) {
         type: "EMOJI_FETCH",
         guildId: e,
     }),
-        o.tn
+        a.tn
             .get({
                 url: g.ANM.GUILD_EMOJIS(e),
                 oldFormErrors: !0,
@@ -61,13 +61,13 @@ function O(e) {
             );
 }
 function v(e) {
-    let { guildId: t, image: n, name: r, roles: i, analyticsLocation: a } = e;
+    let { guildId: t, image: n, name: r, roles: i, analyticsLocation: o } = e;
     return (
         s.Z.dispatch({
             type: "EMOJI_UPLOAD_START",
             guildId: t,
         }),
-        o.tn
+        a.tn
             .post({
                 url: g.ANM.GUILD_EMOJIS(t),
                 body: {
@@ -75,7 +75,7 @@ function v(e) {
                     name: r,
                     roles: i,
                 },
-                context: { client_event_source: null == a ? void 0 : a.page },
+                context: { client_event_source: null == o ? void 0 : o.page },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -104,7 +104,7 @@ function I(e, t) {
             guildId: e,
             emojiId: t,
         }),
-        o.tn.del({
+        a.tn.del({
             url: g.ANM.GUILD_EMOJI(e, t),
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -114,7 +114,7 @@ function I(e, t) {
 async function T(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
-        return await o.tn.patch({
+        return await a.tn.patch({
             url: g.ANM.GUILD_EMOJI(t, n),
             body: {
                 name: r,

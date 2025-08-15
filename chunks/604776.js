@@ -17,8 +17,8 @@ var n = a(255367),
     h = a(981631),
     p = a(696450),
     b = a(711322),
-    f = a(451429);
-let v = {
+    v = a(451429);
+let f = {
         [h.kNB.QUEST_REWARD]: "Quest Reward",
         [h.kNB.DEVELOPER_GIFT]: "Developer Gift",
         [h.kNB.INVOICE]: "Invoice",
@@ -61,7 +61,7 @@ let v = {
                         "Entitlement source type: ",
                         (() => {
                             let e = a.sourceType;
-                            return null != e && e in v ? v[e] : "Unknown source type ".concat(e);
+                            return null != e && e in f ? f[e] : "Unknown source type ".concat(e);
                         })(),
                     ],
                 }),
@@ -95,7 +95,7 @@ let v = {
 function _() {
     let [e, t] = r.useState(!1),
         [a, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
-        [u, v] = r.useState([]),
+        [u, f] = r.useState([]),
         [_, y] = r.useState([]),
         {
             refreshEntitlementList: C,
@@ -110,11 +110,11 @@ function _() {
             C();
         }, [C]),
         r.useEffect(() => {
-            v(E.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION)),
+            f(E.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION)),
                 y(E.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt));
         }, [E]),
         (0, n.jsx)(c.zJl, {
-            className: f.panel,
+            className: v.panel,
             children: (0, n.jsxs)("div", {
                 className: b.panelInner,
                 children: [

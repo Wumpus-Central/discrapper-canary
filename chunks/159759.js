@@ -1,18 +1,18 @@
-n(42547),
-    (e.exports = function (e, t) {
-        var n = e.getSelection(),
-            r = e.getCurrentContent(),
-            i = n.getStartKey(),
-            o = n.getStartOffset(),
+r(42547),
+    (t.exports = function (t, e) {
+        var r = t.getSelection(),
+            n = t.getCurrentContent(),
+            i = r.getStartKey(),
+            o = r.getStartOffset(),
             a = i,
-            s = 0;
-        if (t > o) {
-            var l = r.getKeyBefore(i);
-            null == l ? (a = i) : ((a = l), (s = r.getBlockForKey(l).getText().length));
-        } else s = o - t;
-        return n.merge({
+            u = 0;
+        if (e > o) {
+            var s = n.getKeyBefore(i);
+            null == s ? (a = i) : ((a = s), (u = n.getBlockForKey(s).getText().length));
+        } else u = o - e;
+        return r.merge({
             focusKey: a,
-            focusOffset: s,
+            focusOffset: u,
             isBackward: !0,
         });
     });

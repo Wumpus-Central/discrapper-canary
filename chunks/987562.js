@@ -14,8 +14,8 @@ n.d(t, {
     n(388685);
 var r = n(704215),
     i = n(70956),
-    o = n(565287),
-    a = n(388032);
+    a = n(565287),
+    o = n(388032);
 let s = 6 * i.Z.Millis.DAYS_30;
 var l = (function (e) {
     return (
@@ -32,27 +32,27 @@ function c() {
     return [
         {
             value: "too_many_notifications",
-            label: a.intl.string(a.t.bQHhT0),
+            label: o.intl.string(o.t.bQHhT0),
         },
         {
             value: "temporary_break",
-            label: a.intl.string(a.t.OuPkvL),
+            label: o.intl.string(o.t.OuPkvL),
         },
         {
             value: "annoying",
-            label: a.intl.string(a.t["3kmAMD"]),
+            label: o.intl.string(o.t["3kmAMD"]),
         },
         {
             value: "unsafe",
-            label: a.intl.string(a.t.nmW7jI),
+            label: o.intl.string(o.t.nmW7jI),
         },
         {
             value: "spam",
-            label: a.intl.string(a.t.cCPYjo),
+            label: o.intl.string(o.t.cCPYjo),
         },
         {
             value: "other",
-            label: a.intl.string(a.t["7ZIIJy"]),
+            label: o.intl.string(o.t["7ZIIJy"]),
         },
     ];
 }
@@ -69,19 +69,19 @@ function d() {
     return [
         {
             value: "confusion",
-            label: a.intl.string(a.t["64Oph4"]),
+            label: o.intl.string(o.t["64Oph4"]),
         },
         {
             value: "does_not_achieve_wants",
-            label: a.intl.string(a.t["wH5R/v"]),
+            label: o.intl.string(o.t["wH5R/v"]),
         },
         {
             value: "hard_to_access",
-            label: a.intl.string(a.t["4uZBRk"]),
+            label: o.intl.string(o.t["4uZBRk"]),
         },
         {
             value: "something_else",
-            label: a.intl.string(a.t.YicFbG),
+            label: o.intl.string(o.t.YicFbG),
         },
     ];
 }
@@ -98,19 +98,19 @@ function _() {
     return [
         {
             value: "confusion",
-            label: a.intl.string(a.t.IumZmp),
+            label: o.intl.string(o.t.IumZmp),
         },
         {
             value: "does_not_achieve_wants",
-            label: a.intl.string(a.t.mXkYyc),
+            label: o.intl.string(o.t.mXkYyc),
         },
         {
             value: "hard_to_access",
-            label: a.intl.string(a.t.eg1hVF),
+            label: o.intl.string(o.t.eg1hVF),
         },
         {
             value: "something_else",
-            label: a.intl.string(a.t.WAYoT0),
+            label: o.intl.string(o.t.WAYoT0),
         },
     ];
 }
@@ -131,19 +131,19 @@ function h(e) {
     let t = [
         {
             value: "pid_concern",
-            label: a.intl.string(o.default.ZsnNg4),
+            label: o.intl.string(a.default.ZsnNg4),
         },
         {
             value: "too_much_time",
-            label: a.intl.string(o.default.kkKhVF),
+            label: o.intl.string(a.default.kkKhVF),
         },
         {
             value: "confusion",
-            label: a.intl.string(o.default.bC0QVV),
+            label: o.intl.string(a.default.bC0QVV),
         },
         {
             value: "something_else",
-            label: a.intl.string(a.t.WAYoT0),
+            label: o.intl.string(o.t.WAYoT0),
         },
     ];
     return e === r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE
@@ -151,22 +151,22 @@ function h(e) {
               ...t,
               {
                   value: "need_documents",
-                  label: a.intl.string(o.default["Dl4A+f"]),
+                  label: o.intl.string(a.default["Dl4A+f"]),
               },
               {
                   value: "didnt_work",
-                  label: a.intl.string(o.default["8JFGXV"]),
+                  label: o.intl.string(a.default["8JFGXV"]),
               },
           ]
         : [
               ...t,
               {
                   value: "changed_mind",
-                  label: a.intl.string(o.default.eSP1Fx),
+                  label: o.intl.string(a.default.eSP1Fx),
               },
               {
                   value: "unnecessary",
-                  label: a.intl.string(o.default.maxf2d),
+                  label: o.intl.string(a.default.maxf2d),
               },
           ];
 }

@@ -1,35 +1,35 @@
-function r(e, t, n) {
+function n(t, e, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
-        e
+            : (t[e] = r),
+        t
     );
 }
-var i = n(746117),
-    o = n(856084),
-    a = n(581079);
-e.exports = (function () {
-    function e(e) {
-        r(this, "_defaultDir", void 0),
-            r(this, "_lastDir", void 0),
-            e ? o.isStrong(e) || a(!1) : (e = o.getGlobalDir()),
-            (this._defaultDir = e),
+var i = r(746117),
+    o = r(856084),
+    a = r(581079);
+t.exports = (function () {
+    function t(t) {
+        n(this, "_defaultDir", void 0),
+            n(this, "_lastDir", void 0),
+            t ? o.isStrong(t) || a(!1) : (t = o.getGlobalDir()),
+            (this._defaultDir = t),
             this.reset();
     }
-    var t = e.prototype;
+    var e = t.prototype;
     return (
-        (t.reset = function () {
+        (e.reset = function () {
             this._lastDir = this._defaultDir;
         }),
-        (t.getDirection = function (e) {
-            return (this._lastDir = i.getDirection(e, this._lastDir)), this._lastDir;
+        (e.getDirection = function (t) {
+            return (this._lastDir = i.getDirection(t, this._lastDir)), this._lastDir;
         }),
-        e
+        t
     );
 })();

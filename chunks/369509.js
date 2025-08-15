@@ -1,26 +1,26 @@
-e.d(t, { S: () => B });
-var r = e(255367);
-e(73800);
-var g = e(172751),
-    v = e(510918),
-    n = e(131085),
-    f = e(215486);
-function B(A) {
-    let t = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
-    return (0, r.jsx)("div", {
-        className: f.badgeContainer,
-        children: (0, r.jsx)(g.m0, {
+t.d(e, { S: () => s });
+var n = t(255367);
+t(73800);
+var r = t(172751),
+    l = t(510918),
+    i = t(131085),
+    a = t(215486);
+function s(A) {
+    let e = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
+    return (0, n.jsx)("div", {
+        className: a.badgeContainer,
+        children: (0, n.jsx)(r.m0, {
             guildId: A.guildId,
-            textClassName: f.tagText,
-            guildTag: t,
+            textClassName: a.tagText,
+            guildTag: e,
             guildBadge:
                 "string" == typeof A.badge
                     ? A.badge
-                    : (0, r.jsx)(v.v, {
-                          className: f.badgePreview,
+                    : (0, n.jsx)(l.v, {
+                          className: a.badgePreview,
                           badge: A.badge,
-                          width: n.Gg.SIZE_12,
-                          height: n.Gg.SIZE_12,
+                          width: i.Gg.SIZE_12,
+                          height: i.Gg.SIZE_12,
                           primaryTintColor: A.primaryColor,
                           secondaryTintColor: A.secondaryColor,
                       }),

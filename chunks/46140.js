@@ -22,8 +22,8 @@ n.d(t, {
     n(388685);
 var r = n(754700),
     i = n(758846),
-    o = n(70956),
-    a = n(497505),
+    a = n(70956),
+    o = n(497505),
     s = n(438954),
     l = n(670081),
     c = (function (e) {
@@ -66,7 +66,7 @@ var r = n(754700),
             e
         );
     })({});
-let u = o.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
+let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
     d = {
         tension: 900,
         friction: 45,
@@ -98,7 +98,7 @@ var b = (function (e) {
     return (e.EXCLUDED_QUEST = "excluded_quest"), (e.UNKNOWN_QUEST = "unknown_quest"), e;
 })({});
 let y = "1333839522189938740",
-    O = new Set([a.Ok.DESKTOP_ACCOUNT_PANEL_AREA, a.Ok.MOBILE_HOME_DOCK_AREA]),
+    O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
     v = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,

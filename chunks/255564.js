@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(150039),
     i = n(768581),
-    o = n(74538),
-    a = n(474936);
+    a = n(74538),
+    o = n(474936);
 function s(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ class c {
         return null != (t = null == (e = this.themeColors) ? void 0 : e[0]) ? t : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return o.ZP.isPremiumAtLeast(this.premiumType, a.p9.TIER_2);
+        return a.ZP.isPremiumAtLeast(this.premiumType, o.p9.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;

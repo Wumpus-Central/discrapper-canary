@@ -1,16 +1,16 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    a = n.n(l),
-    i = n(481060),
-    o = n(422559),
+var o = n(120356),
+    a = n.n(o),
+    l = n(481060),
+    i = n(422559),
     s = n(347044);
 function c(e) {
     let {
         grantedPermissions: t,
         disabledPermissions: n,
-        grantedPermissionsHeader: l,
+        grantedPermissionsHeader: o,
         disabledPermissionsHeader: c,
         className: u,
     } = e;
@@ -20,12 +20,12 @@ function c(e) {
             null != t && t.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          null != l
-                              ? (0, r.jsx)(i.X6q, {
+                          null != o
+                              ? (0, r.jsx)(l.X6q, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
                                     className: s.header,
-                                    children: l,
+                                    children: o,
                                 })
                               : null,
                           (0, r.jsx)("div", {
@@ -36,14 +36,14 @@ function c(e) {
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, r.jsx)(i.dz2, {
+                                              (0, r.jsx)(l.dz2, {
                                                   size: "xs",
                                                   color: "currentColor",
                                                   className: s.check,
                                               }),
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(l.Text, {
                                                   variant: "text-sm/normal",
-                                                  children: (0, o.wt)(e),
+                                                  children: (0, i.wt)(e),
                                               }),
                                           ],
                                       },
@@ -58,7 +58,7 @@ function c(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           null != c
-                              ? (0, r.jsx)(i.X6q, {
+                              ? (0, r.jsx)(l.X6q, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
                                     className: s.header,
@@ -73,14 +73,14 @@ function c(e) {
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, r.jsx)(i.Dio, {
+                                              (0, r.jsx)(l.Dio, {
                                                   size: "xs",
                                                   color: "currentColor",
                                                   className: s.cross,
                                               }),
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(l.Text, {
                                                   variant: "text-sm/normal",
-                                                  children: (0, o.wt)(e),
+                                                  children: (0, i.wt)(e),
                                               }),
                                           ],
                                       },

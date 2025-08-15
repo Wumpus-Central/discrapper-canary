@@ -109,7 +109,7 @@ let k = function (e) {
             for (let t of Object.values(P.pJs)) e[t] = "";
             return e;
         }),
-        V = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 let { key: t } = e,
                     n = (function (e, t) {
@@ -148,7 +148,7 @@ let k = function (e) {
             },
             [L, u],
         ),
-        B = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 G(Z(A({}, U), { [u]: e }));
             },
@@ -272,12 +272,12 @@ let k = function (e) {
                 (0, r.jsx)(c.E1j, {
                     className: a()(x.searchBar, ee ? x.searchEmptyState : null),
                     query: U[u],
-                    onChange: B,
+                    onChange: V,
                     onClear: H,
                 }),
                 (0, r.jsx)(I.Z, {
                     rows: K,
-                    renderRow: V,
+                    renderRow: B,
                     renderSection: J,
                     sectionFilter: u,
                     isVirtualizedList: k >= T.nG,

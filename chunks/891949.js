@@ -1,4 +1,4 @@
-r.d(t, { Z: () => u }), r(388685);
+r.d(t, { Z: () => d }), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(481060),
@@ -6,10 +6,10 @@ var n = r(255367),
     o = r(810568),
     s = r(388032),
     c = r(226788),
-    d = r(275914);
-function u(e) {
+    u = r(275914);
+function d(e) {
     let { detectedGame: t, trackAction: r } = e,
-        u = a.useRef(null),
+        d = a.useRef(null),
         m = a.useMemo(() => {
             let e = t.artwork.map((e) => ({
                 url: e,
@@ -23,11 +23,11 @@ function u(e) {
                 ...e,
             ];
         }, [t.artwork, t.screenshots]),
-        g = m.length > 2;
-    function p(e) {
-        if (null == u.current) return;
-        let t = u.current.getScrollerState().scrollLeft;
-        u.current.scrollTo({
+        f = m.length > 2;
+    function g(e) {
+        if (null == d.current) return;
+        let t = d.current.getScrollerState().scrollLeft;
+        d.current.scrollTo({
             to: t + 280 * e,
             animate: !0,
         });
@@ -43,20 +43,20 @@ function u(e) {
                       children: s.intl.string(s.t["bNdK5+"]),
                   }),
                   (0, n.jsxs)("div", {
-                      className: g ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
+                      className: f ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
                       children: [
                           (0, n.jsx)(i.xVE, {
-                              ref: u,
-                              className: d.imageScroller,
+                              ref: d,
+                              className: u.imageScroller,
                               orientation: "horizontal",
                               children: m.map((e, t) =>
                                   (0, n.jsx)(
                                       i.P3F,
                                       {
-                                          className: d.imageClickable,
+                                          className: u.imageClickable,
                                           focusProps: {
                                               offset: 4,
-                                              ringClassName: d.gameArtworkFocusRing,
+                                              ringClassName: u.gameArtworkFocusRing,
                                           },
                                           onClick: () => {
                                               r(o.as.ClickImage),
@@ -69,7 +69,7 @@ function u(e) {
                                           },
                                           children: (0, n.jsx)("img", {
                                               src: e.url,
-                                              className: d.gameArtwork,
+                                              className: u.gameArtwork,
                                               alt: s.intl.formatToPlainString(s.t.COYYrq, { game: name }),
                                           }),
                                       },
@@ -77,25 +77,25 @@ function u(e) {
                                   ),
                               ),
                           }),
-                          g &&
+                          f &&
                               (0, n.jsxs)("div", {
-                                  className: d.mediaOverlay,
+                                  className: u.mediaOverlay,
                                   children: [
-                                      (0, n.jsx)("div", { className: d.gradientLeft }),
+                                      (0, n.jsx)("div", { className: u.gradientLeft }),
                                       (0, n.jsx)(i.P3F, {
-                                          className: d.arrowClickable,
-                                          onClick: () => p(-1),
+                                          className: u.arrowClickable,
+                                          onClick: () => g(-1),
                                           children: (0, n.jsx)(i.whL, {
-                                              className: d.arrow,
+                                              className: u.arrow,
                                               color: "currentColor",
                                           }),
                                       }),
-                                      (0, n.jsx)("div", { className: d.gradientRight }),
+                                      (0, n.jsx)("div", { className: u.gradientRight }),
                                       (0, n.jsx)(i.P3F, {
-                                          className: d.arrowClickable,
-                                          onClick: () => p(1),
+                                          className: u.arrowClickable,
+                                          onClick: () => g(1),
                                           children: (0, n.jsx)(i.ZSh, {
-                                              className: d.arrow,
+                                              className: u.arrow,
                                               color: "currentColor",
                                           }),
                                       }),

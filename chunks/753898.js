@@ -1,136 +1,122 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(680018),
+    l = n(680018),
     a = n(374415),
-    s = n(481060),
-    l = n(607070),
+    o = n(481060),
+    s = n(607070),
     c = n(100527),
     u = n(43267),
     d = n(933557),
-    f = n(266076),
-    _ = n(187237),
-    p = n(769409),
-    h = n(518311),
-    m = n(518950),
-    g = n(967128),
-    E = n(388032),
-    b = n(963392);
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function T(e) {
-    var t;
-    let { channel: n, children: y, user: v } = e,
-        T = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        S = null != (t = (0, d.ZP)(n)) ? t : "",
+    p = n(266076),
+    h = n(187237),
+    f = n(769409),
+    m = n(518311),
+    g = n(518950),
+    b = n(967128),
+    y = n(388032),
+    _ = n(963392);
+function C(e) {
+    var t, n, C;
+    let { channel: x, children: v, user: j } = e,
+        O = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        E = null != (t = (0, d.ZP)(x)) ? t : "",
         {
-            avatarDecorationSrc: A,
-            eventHandlers: N,
-            isAnimating: C,
-        } = (0, m.Z)({
-            userId: null == v ? void 0 : v.id,
-            size: s.EFr.SIZE_80,
+            avatarDecorationSrc: S,
+            eventHandlers: P,
+            isAnimating: I,
+        } = (0, g.Z)({
+            userId: null == j ? void 0 : j.id,
+            size: o.EFr.SIZE_80,
             animateOnHover: !0,
-        }),
-        R = () => {
-            let e = !T && C;
-            return n.isMultiUserDM()
-                ? (0, r.jsx)(_.v, {
-                      channel: n,
-                      editable: !0,
-                      location: c.Z.EMPTY_GROUP_DM,
-                      children: (0, r.jsx)(f.Z, {
-                          channel: n,
-                          size: s.EFr.SIZE_80,
-                          experimentLocation: "empty_messages",
-                          animated: e,
-                          "aria-label": S,
-                      }),
-                  })
-                : (0, r.jsx)(s.qEK, {
-                      "aria-label": S,
-                      size: s.EFr.SIZE_80,
-                      src: (0, u.x)(n, 80, e),
-                      avatarDecoration: A,
-                  });
-        };
+        });
     return (0, r.jsxs)(
-        g.ZP,
-        I(O({ channelId: n.id }, N), {
-            children: [
-                R(),
-                (0, r.jsx)(g.Ot, { children: S }),
-                (0, r.jsx)(g.jz, { children: y }),
-                n.isMultiUserDM() &&
-                    (0, r.jsxs)(a.h, {
-                        className: b.buttonContainer,
-                        children: [
-                            (0, r.jsx)(h.l, {
-                                channel: n,
-                                text: E.intl.string(E.t["6Qgren"]),
-                                icon: s.ejJ,
-                            }),
-                            (0, r.jsx)(o.z, {
-                                icon: s.vdY,
-                                variant: "secondary",
-                                text: E.intl.string(E.t["5Q9+/P"]),
-                                "aria-label": E.intl.string(E.t["5Q9+/P"]),
-                                onClick: () => (0, p.B)(n.id, c.Z.EMPTY_GROUP_DM),
-                            }),
-                        ],
-                    }),
-            ],
-        }),
+        b.ZP,
+        ((n = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({ channelId: x.id }, P)),
+        (C = C =
+            {
+                children: [
+                    (() => {
+                        let e = !O && I;
+                        return x.isMultiUserDM()
+                            ? (0, r.jsx)(h.v, {
+                                  channel: x,
+                                  editable: !0,
+                                  location: c.Z.EMPTY_GROUP_DM,
+                                  children: (0, r.jsx)(p.Z, {
+                                      channel: x,
+                                      size: o.EFr.SIZE_80,
+                                      experimentLocation: "empty_messages",
+                                      animated: e,
+                                      "aria-label": E,
+                                  }),
+                              })
+                            : (0, r.jsx)(o.qEK, {
+                                  "aria-label": E,
+                                  size: o.EFr.SIZE_80,
+                                  src: (0, u.x)(x, 80, e),
+                                  avatarDecoration: S,
+                              });
+                    })(),
+                    (0, r.jsx)(b.Ot, { children: E }),
+                    (0, r.jsx)(b.jz, { children: v }),
+                    x.isMultiUserDM() &&
+                        (0, r.jsxs)(a.h, {
+                            className: _.buttonContainer,
+                            children: [
+                                (0, r.jsx)(m.l, {
+                                    channel: x,
+                                    text: y.intl.string(y.t["6Qgren"]),
+                                    icon: o.ejJ,
+                                }),
+                                (0, r.jsx)(l.z, {
+                                    icon: o.vdY,
+                                    variant: "secondary",
+                                    text: y.intl.string(y.t["5Q9+/P"]),
+                                    "aria-label": y.intl.string(y.t["5Q9+/P"]),
+                                    onClick: () => (0, f.B)(x.id, c.Z.EMPTY_GROUP_DM),
+                                }),
+                            ],
+                        }),
+                ],
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(C))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(C)).forEach(function (e) {
+                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(C, e));
+              }),
+        n),
     );
 }

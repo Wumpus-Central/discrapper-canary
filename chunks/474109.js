@@ -14,10 +14,10 @@ var r = n(255367),
     g = n(388032);
 let m = "app-download-item",
     b = "add-server-item";
-function O() {
+function _() {
     return !1;
 }
-function _(e) {
+function O(e) {
     var t;
     let n = s.default.getMutableGuildStates();
     return (
@@ -64,10 +64,10 @@ let y = (0, f.oH)((e, t, n) => ["null", ...t, ...e, b, h.x8Z.E3_SERVER_DISCOVERY
                 {
                     ref: t,
                     items: d,
-                    isUnread: O,
+                    isUnread: _,
                     textUnread: g.intl.string(g.t.y2b7CA),
                     textMention: g.intl.string(g.t.y2b7CA),
-                    isMentioned: _,
+                    isMentioned: O,
                     animate: f,
                     expandedFolders: h,
                 }),

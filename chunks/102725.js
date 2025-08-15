@@ -1,8 +1,8 @@
 n.d(t, { l: () => l }), n(388685);
 var r = n(73800),
     i = n(374470),
-    o = n(846519),
-    a = n(607070);
+    a = n(846519),
+    o = n(607070);
 let s = 0;
 function l(e) {
     let {
@@ -21,7 +21,7 @@ function l(e) {
         b = r.useRef(null);
     r.useEffect(
         () => (
-            (b.current = new o.V7()),
+            (b.current = new a.V7()),
             () => {
                 var e;
                 null == (e = b.current) || e.stop();
@@ -65,7 +65,7 @@ function l(e) {
         ),
         A = r.useCallback(
             (e) => {
-                null == p.current && (p.current = e.currentTarget), a.Z.keyboardModeEnabled && I();
+                null == p.current && (p.current = e.currentTarget), o.Z.keyboardModeEnabled && I();
             },
             [I, p],
         );

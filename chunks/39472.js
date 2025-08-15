@@ -1,25 +1,25 @@
-e.exports = {
-    getRemovalRange: function (e, t, n, r, i) {
+t.exports = {
+    getRemovalRange: function (t, e, r, n, i) {
         var o,
-            a = n.split(" ");
-        a = a.map(function (e, t) {
+            a = r.split(" ");
+        a = a.map(function (t, e) {
             if ("forward" === i) {
-                if (t > 0) return " " + e;
-            } else if (t < a.length - 1) return e + " ";
-            return e;
+                if (e > 0) return " " + t;
+            } else if (e < a.length - 1) return t + " ";
+            return t;
         });
-        for (var s = r, l = null, c = null, u = 0; u < a.length; u++) {
-            if (e < (o = s + a[u].length) && s < t) null !== l || (l = s), (c = o);
-            else if (null !== l) break;
-            s = o;
+        for (var u = n, s = null, c = null, l = 0; l < a.length; l++) {
+            if (t < (o = u + a[l].length) && u < e) null !== s || (s = u), (c = o);
+            else if (null !== s) break;
+            u = o;
         }
-        var d = r + n.length,
-            f = l === r,
-            _ = c === d;
+        var f = n + r.length,
+            p = s === n,
+            h = c === f;
         return (
-            ((!f && _) || (f && !_)) && ("forward" === i ? c !== d && c++ : l !== r && l--),
+            ((!p && h) || (p && !h)) && ("forward" === i ? c !== f && c++ : s !== n && s--),
             {
-                start: l,
+                start: s,
                 end: c,
             }
         );

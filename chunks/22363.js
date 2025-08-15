@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(646574),
+    a = n.n(i),
+    o = n(646574),
     s = n(543241),
     l = n(912648),
     c = n(747613),
@@ -43,7 +43,7 @@ let p = (e) => {
                 }),
                 T && (0, r.jsx)(l.Z, { channel: t }),
                 i === f.Hz.REACTION
-                    ? (0, r.jsx)(a.Z, {
+                    ? (0, r.jsx)(o.Z, {
                           checked: O,
                           onClick: v,
                       })
@@ -58,7 +58,7 @@ let p = (e) => {
             ],
         });
     return (0, r.jsx)("div", {
-        className: o()(_.header, p),
+        className: a()(_.header, p),
         children: null != I ? I(S) : S,
     });
 };

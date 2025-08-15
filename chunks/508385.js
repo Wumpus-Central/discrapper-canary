@@ -4,14 +4,14 @@ function i(e, t, n) {
         (this.delta = e || 0.01),
         (this.K = void 0 === t ? 25 : t),
         (this.CX = void 0 === n ? 1.1 : n),
-        (this.centroids = new r(o)),
+        (this.centroids = new r(a)),
         (this.nreset = 0),
         this.reset();
 }
-function o(e, t) {
+function a(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
-function a(e, t) {
+function o(e, t) {
     return e.mean_cumn - t.mean_cumn;
 }
 function s(e) {
@@ -109,8 +109,8 @@ function l(e) {
         else if (i === r) this._new_centroid(e, t, this.n);
         else if (this.discrete) this._new_centroid(e, t, i.cumn);
         else {
-            var o = i.mean_cumn / this.n;
-            Math.floor(4 * this.n * this.delta * o * (1 - o)) - i.n >= t
+            var a = i.mean_cumn / this.n;
+            Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t
                 ? this._addweight(i, e, t)
                 : this._new_centroid(e, t, i.cumn);
         }
@@ -140,9 +140,9 @@ function l(e) {
         }
     }),
     (i.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = a;
-        var t = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = o;
+        var t = this.centroids.upperBound({ mean_cumn: e });
+        this.centroids._comparator = a;
         var n = t.prev(),
             r = n && n.mean_cumn === e ? n : t.next();
         return [n, r];
@@ -158,15 +158,15 @@ function l(e) {
                 n = this.centroids.max(),
                 r = this.n * e,
                 i = this.bound_mean_cumn(r),
-                o = i[0],
-                a = i[1];
-            return a === o || null === o || null === a
-                ? (o || a).mean
+                a = i[0],
+                o = i[1];
+            return o === a || null === a || null === o
+                ? (a || o).mean
                 : this.discrete
-                  ? r <= o.cumn
-                      ? o.mean
-                      : a.mean
-                  : o.mean + ((r - o.mean_cumn) * (a.mean - o.mean)) / (a.mean_cumn - o.mean_cumn);
+                  ? r <= a.cumn
+                      ? a.mean
+                      : o.mean
+                  : a.mean + ((r - a.mean_cumn) * (o.mean - a.mean)) / (o.mean_cumn - a.mean_cumn);
         }
     }),
     (i.prototype.compress = function () {

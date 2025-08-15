@@ -1,58 +1,60 @@
-n.d(t, { Z: () => l }), n(388685), n(35282), n(784620), n(973216);
+n.d(t, { Z: () => u }), n(388685), n(35282), n(784620), n(973216);
 var r = n(255367),
-    i = n(73800),
-    o = n(414910),
+    l = n(73800),
+    i = n(414910),
     a = n(226961),
-    s = n(447661);
-function l(e) {
+    o = n(447661);
+function u(e) {
     let { currentUserId: t, participant: n } = e,
-        l = (0, o.Z)(n.type),
-        [c, u] = i.useState(),
-        [d, f] = i.useState(),
-        [_, p] = i.useState(),
-        h = n.id.split(":").at(-1),
-        m = t === h;
-    function g(e) {
-        return "".concat((e / 1000).toFixed(2), " Kbps");
-    }
-    function E(e) {
-        return void 0 === e || (0 === e.width && 0 === e.height) ? "unknown" : e.width + " x " + e.height;
-    }
-    let b = i.useCallback((e, t, n) => {
-        var r;
-        let i = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
-        u(null != (r = null == i ? void 0 : i.codec) ? r : "unknown"),
-            f(E(null == i ? void 0 : i.resolution)),
-            p((null == i ? void 0 : i.bitrateEstimate) !== void 0 ? g(i.bitrateEstimate) : "unknown");
-    }, []);
+        u = (0, i.Z)(n.type),
+        [s, c] = l.useState(),
+        [d, f] = l.useState(),
+        [p, m] = l.useState(),
+        E = n.id.split(":").at(-1),
+        g = t === E,
+        S = l.useCallback((e, t, n) => {
+            var r, l, i;
+            let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
+            c(null != (r = null == o ? void 0 : o.codec) ? r : "unknown"),
+                f(
+                    void 0 === (l = null == o ? void 0 : o.resolution) || (0 === l.width && 0 === l.height)
+                        ? "unknown"
+                        : l.width + " x " + l.height,
+                ),
+                m(
+                    (null == o ? void 0 : o.bitrateEstimate) !== void 0
+                        ? ((i = o.bitrateEstimate), "".concat((i / 1000).toFixed(2), " Kbps"))
+                        : "unknown",
+                );
+        }, []);
     return (
-        i.useEffect(() => {
-            let e = () => b(h, l, m);
+        l.useEffect(() => {
+            let e = () => S(E, u, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [m, h, l, b]),
+        }, [g, E, u, S]),
         (0, r.jsxs)("div", {
-            className: s.streamInfoContainer,
+            className: o.streamInfoContainer,
             children: [
                 (0, r.jsx)("div", { children: (0, r.jsx)("strong", { children: "Stream Info" }) }),
                 (0, r.jsxs)("div", {
-                    className: s.infoRow,
+                    className: o.infoRow,
                     children: [
                         (0, r.jsx)("span", { children: "Video Codec: " }),
-                        (0, r.jsx)("strong", { children: c }),
+                        (0, r.jsx)("strong", { children: s }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: s.infoRow,
+                    className: o.infoRow,
                     children: [(0, r.jsx)("span", { children: "Resolution: " }), (0, r.jsx)("strong", { children: d })],
                 }),
-                m &&
+                g &&
                     (0, r.jsxs)("div", {
-                        className: s.infoRow,
+                        className: o.infoRow,
                         children: [
                             (0, r.jsx)("span", { children: "Bitrate Estimate: " }),
-                            (0, r.jsx)("strong", { children: _ }),
+                            (0, r.jsx)("strong", { children: p }),
                         ],
                     }),
             ],

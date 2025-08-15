@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(536895),
     c = n(442837),
@@ -78,9 +78,9 @@ function C(e, t) {
         r,
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,13 +89,13 @@ function R(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = [];
 function w(e) {
-    let { channelId: t, type: n, ignoreFile: o, smallAttachments: T = !1 } = e,
+    let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
         w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
@@ -134,7 +134,7 @@ function w(e) {
                 ? e
                 : [];
         }, [L, x]),
-        [j, k] = i.useState([]);
+        [k, j] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -153,7 +153,7 @@ function w(e) {
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: j,
+            previousUploadOptions: k,
             uploadOptions: M,
         },
         B = i.useRef(G);
@@ -170,22 +170,22 @@ function w(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    k(i);
+                    j(i);
             }
         }, [t, M.length, n]);
-    let Z = w.filter((e) => e.filename !== o);
-    return (!D && 0 === Z.length) || (D && 0 === M.length)
+    let V = w.filter((e) => e.filename !== a);
+    return (!D && 0 === V.length) || (D && 0 === M.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
-                          o = C(e, ["ref"]);
+                          a = C(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          N(S({ ref: i }, o), {
-                              className: a()(v.channelAttachmentArea, I.scrollbarGhost),
+                          N(S({ ref: i }, a), {
+                              className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
                                   ? M.map((e) =>
                                         (0, r.jsx)(
@@ -198,7 +198,7 @@ function w(e) {
                                             e.name,
                                         ),
                                     )
-                                  : Z.map((e) =>
+                                  : V.map((e) =>
                                         (0, r.jsx)(
                                             y.Z,
                                             {
@@ -219,13 +219,13 @@ function w(e) {
           });
 }
 function D(e) {
-    let { channelId: t, type: n, canAttachFiles: i, ignoreFile: o, smallAttachments: a = !1 } = e;
+    let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
         ? (0, r.jsx)(w, {
               channelId: t,
               type: n,
-              ignoreFile: o,
-              smallAttachments: a,
+              ignoreFile: a,
+              smallAttachments: o,
           })
         : null;
 }

@@ -1,42 +1,29 @@
-n.d(t, { v: () => D }), n(388685), n(539854);
+n.d(t, { v: () => Z }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(392711),
-    l = n.n(s),
+    l = n(120356),
+    a = n.n(l),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     u = n(704215),
     d = n(481060),
-    f = n(584973),
-    _ = n(377171),
-    p = n(243778),
-    h = n(594174),
-    m = n(768581),
-    g = n(906605),
-    E = n(106301),
-    b = n(833858),
-    y = n(866071),
-    O = n(223135),
+    p = n(584973),
+    h = n(377171),
+    f = n(243778),
+    m = n(594174),
+    g = n(768581),
+    b = n(906605),
+    y = n(106301),
+    _ = n(833858),
+    C = n(866071),
+    x = n(223135),
     v = n(981631),
-    I = n(921944),
-    T = n(231338),
-    S = n(388032),
-    A = n(805787);
-function N(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function C(e) {
+    j = n(921944),
+    O = n(231338),
+    E = n(388032),
+    S = n(805787);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,186 +34,181 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function R(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function P(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let w = (e) => {
-        let { style: t, className: n, name: i, icon: o } = e;
+let I = (e) => {
+        let { style: t, className: n, name: i, icon: l } = e;
         return (0, r.jsx)(d.ua7, {
             text: i,
-            children: (e) =>
-                (0, r.jsx)(
+            children: (e) => {
+                var i, o;
+                return (0, r.jsx)(
                     "div",
-                    P(
-                        C(
-                            {
-                                className: a()(n, A.iconWidget),
-                                style: t,
-                            },
-                            e,
-                        ),
-                        { children: null != o && o },
-                    ),
-                ),
+                    ((i = P(
+                        {
+                            className: a()(n, S.iconWidget),
+                            style: t,
+                        },
+                        e,
+                    )),
+                    (o = o = { children: null != l && l }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                          }),
+                    i),
+                );
+            },
         });
     },
-    D = (e) => {
-        let { currentStatus: t, channel: o } = e,
-            s = i.useRef(E.Z.getRecentCustomStatuses()),
-            [N, R] = i.useState(!1),
-            P = (0, b.V)(),
-            [D, L] = i.useState(null != t ? t : null),
-            x = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+    Z = (e) => {
+        let { currentStatus: t, channel: l } = e,
+            o = i.useRef(y.Z.getRecentCustomStatuses()),
+            [Z, T] = i.useState(!1),
+            N = (0, _.V)(),
+            [A, w] = i.useState(null != t ? t : null),
+            R = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             M = i.useMemo(() => [], []),
-            j = i.useRef(null).current;
+            k = i.useRef(null).current;
         i.useEffect(
             () => (
-                N || M.push(u.z.HANG_STATUS_NEW_BADGE),
+                Z || M.push(u.z.HANG_STATUS_NEW_BADGE),
                 () => {
-                    N && (null == j || j(I.L.PRIMARY));
+                    Z && (null == k || k(j.L.PRIMARY));
                 }
             ),
-            [N, M, j],
+            [Z, M, k],
         );
-        let k = (e, t) => {
-                e.stopPropagation(), (0, g.Zx)(t, !0), R(!0);
-            },
-            U = (e, t) => {
-                e.stopPropagation(), (0, g._s)(t.status, t.emoji, !0), R(!0);
-            },
-            G = i.useCallback((e) => {
-                e.stopPropagation(), (0, g.Sc)(!0);
+        let D = i.useCallback((e) => {
+                e.stopPropagation(), (0, b.Sc)(!0);
             }, []),
-            B = (e) => {
+            L = (e) => {
                 e.stopPropagation(),
                     (0, d.ZDy)(async () => {
                         let { default: e } = await n.e("1631").then(n.bind(n, 333541));
-                        return (t) => (0, r.jsx)(e, C({}, t));
+                        return (t) => (0, r.jsx)(e, P({}, t));
                     }),
-                    R(!0);
+                    T(!0);
             },
-            Z = i.useCallback((e) => {
-                L({
+            U = i.useCallback((e) => {
+                w({
                     type: v.IIU.HANG_STATUS,
                     name: "Hang Status",
                     state: e,
                 });
             }, []),
-            F = i.useCallback((e) => {
-                L({
+            B = i.useCallback((e) => {
+                w({
                     type: v.IIU.HANG_STATUS,
                     name: "Hang Status",
-                    state: T.tN.CUSTOM,
+                    state: O.tN.CUSTOM,
                     details: e.status,
                     emoji: e.emoji,
                 });
             }, []);
-        return (0, r.jsx)(p.ZP, {
+        return (0, r.jsx)(f.ZP, {
             contentTypes: M,
             children: (e) => {
                 let { visibleContent: n, markAsDismissed: i } = e;
                 return (
-                    (j = i),
+                    (k = i),
                     (0, r.jsxs)("div", {
-                        className: A.container,
+                        className: S.container,
                         children: [
                             n === u.z.HANG_STATUS_NEW_BADGE &&
                                 (0, r.jsxs)("div", {
-                                    className: A.onboarding,
+                                    className: S.onboarding,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: A.title,
+                                            className: S.title,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-md/semibold",
                                                     color: "header-primary",
-                                                    children: S.intl.string(S.t["8ka8lp"]),
+                                                    children: E.intl.string(E.t["8ka8lp"]),
                                                 }),
                                                 (0, r.jsx)(d.IGR, {
-                                                    text: S.intl.string(S.t.oW0eUV),
-                                                    color: _.Z.BG_BRAND,
+                                                    text: E.intl.string(E.t.oW0eUV),
+                                                    color: h.Z.BG_BRAND,
                                                 }),
                                             ],
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
-                                            className: A.helpText,
-                                            children: S.intl.string(S.t.GFo2Gh),
+                                            className: S.helpText,
+                                            children: E.intl.string(E.t.GFo2Gh),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: A.iconGroup,
+                                            className: S.iconGroup,
                                             children: [
-                                                null != x &&
+                                                null != R &&
                                                     (0, r.jsxs)("div", {
-                                                        className: A.avatarWrapper,
+                                                        className: S.avatarWrapper,
                                                         children: [
                                                             (0, r.jsx)(d.qEK, {
-                                                                className: A.avatar,
+                                                                className: S.avatar,
                                                                 size: d.EFr.SIZE_40,
-                                                                src: (0, m.ov)(x),
+                                                                src: (0, g.ov)(R),
                                                                 "aria-hidden": !0,
                                                             }),
-                                                            (0, r.jsx)("div", { className: A.outline }),
+                                                            (0, r.jsx)("div", { className: S.outline }),
                                                         ],
                                                     }),
-                                                (0, r.jsx)(O.Z, {
-                                                    className: A.statusIcon,
-                                                    hangStatusActivity: D,
+                                                (0, r.jsx)(x.Z, {
+                                                    className: S.statusIcon,
+                                                    hangStatusActivity: A,
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
                             (0, r.jsxs)("div", {
-                                className: A.options,
+                                className: S.options,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: A.iconsContainer,
+                                        className: S.iconsContainer,
                                         children: [
-                                            Object.entries(P).map((e) => {
+                                            Object.entries(N).map((e) => {
                                                 let [n, i] = e;
                                                 return (0, r.jsx)(
                                                     d.P3F,
                                                     {
                                                         "aria-label": i.title,
-                                                        onMouseEnter: () => Z(n),
-                                                        onClick: (e) => k(e, n),
-                                                        children: (0, r.jsx)(w, {
-                                                            className: a()(A.iconWidget, {
-                                                                [A.selectedWidget]:
+                                                        onMouseEnter: () => U(n),
+                                                        onClick: (e) => {
+                                                            e.stopPropagation(), (0, b.Zx)(n, !0), T(!0);
+                                                        },
+                                                        children: (0, r.jsx)(I, {
+                                                            className: a()(S.iconWidget, {
+                                                                [S.selectedWidget]:
                                                                     n === (null == t ? void 0 : t.state),
                                                             }),
                                                             name: i.title,
                                                             icon: (0, r.jsx)("img", {
                                                                 src: i.icon,
                                                                 alt: "",
-                                                                className: A.icon,
+                                                                className: S.icon,
                                                             }),
                                                             style:
                                                                 n === (null == t ? void 0 : t.state)
@@ -241,46 +223,52 @@ let w = (e) => {
                                                 );
                                             }),
                                             (0, r.jsx)(d.P3F, {
-                                                "aria-label": S.intl.string(S.t.S90Fub),
-                                                onClick: G,
-                                                onMouseEnter: () => L(null),
-                                                children: (0, r.jsx)(w, {
-                                                    className: A.optionButton,
-                                                    name: S.intl.string(S.t.S90Fub),
+                                                "aria-label": E.intl.string(E.t.S90Fub),
+                                                onClick: D,
+                                                onMouseEnter: () => w(null),
+                                                children: (0, r.jsx)(I, {
+                                                    className: S.optionButton,
+                                                    name: E.intl.string(E.t.S90Fub),
                                                     icon: (0, r.jsx)(d.t6m, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: A.editIcon,
-                                                        colorClass: A.editIconColor,
+                                                        className: S.editIcon,
+                                                        colorClass: S.editIconColor,
                                                     }),
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsx)("div", { className: A.divider }),
+                                    (0, r.jsx)("div", { className: S.divider }),
                                     (0, r.jsxs)("div", {
-                                        className: A.iconsContainer,
+                                        className: S.iconsContainer,
                                         children: [
-                                            s.current.map((e, n) => {
+                                            o.current.map((e, n) => {
                                                 let i =
                                                         e.status === (null == t ? void 0 : t.details) &&
-                                                        l().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                                    s = null != e.emoji && !(0, y.K)(e.emoji, o);
+                                                        s().isEqual(e.emoji, null == t ? void 0 : t.emoji),
+                                                    o = null != e.emoji && !(0, C.K)(e.emoji, l);
                                                 return (0, r.jsxs)(
                                                     d.P3F,
                                                     {
                                                         "aria-label": e.status,
-                                                        onMouseEnter: () => F(e),
-                                                        onClick: s ? void 0 : (t) => U(t, e),
-                                                        className: A.statusOptionContainer,
+                                                        onMouseEnter: () => B(e),
+                                                        onClick: o
+                                                            ? void 0
+                                                            : (t) => {
+                                                                  t.stopPropagation(),
+                                                                      (0, b._s)(e.status, e.emoji, !0),
+                                                                      T(!0);
+                                                              },
+                                                        className: S.statusOptionContainer,
                                                         children: [
-                                                            (0, r.jsx)(w, {
-                                                                className: a()(A.iconWidget, { [A.selectedWidget]: i }),
+                                                            (0, r.jsx)(I, {
+                                                                className: a()(S.iconWidget, { [S.selectedWidget]: i }),
                                                                 name: e.status,
                                                                 icon:
                                                                     null != e.emoji
-                                                                        ? (0, r.jsx)(f.Z, {
-                                                                              className: A.customIcon,
+                                                                        ? (0, r.jsx)(p.Z, {
+                                                                              className: S.customIcon,
                                                                               emoji: e.emoji,
                                                                               hideTooltip: !0,
                                                                           })
@@ -289,13 +277,13 @@ let w = (e) => {
                                                                     ? { backgroundColor: "#7174B7B3" }
                                                                     : { backgroundColor: "#6466914D" },
                                                             }),
-                                                            s
+                                                            o
                                                                 ? (0, r.jsx)("div", {
-                                                                      className: A.emojiLockIconContainer,
+                                                                      className: S.emojiLockIconContainer,
                                                                       children: (0, r.jsx)(d.mBM, {
                                                                           size: "xs",
                                                                           color: "currentColor",
-                                                                          className: A.emojiLockIcon,
+                                                                          className: S.emojiLockIcon,
                                                                       }),
                                                                   })
                                                                 : null,
@@ -304,27 +292,27 @@ let w = (e) => {
                                                     "custom-status-".concat(n),
                                                 );
                                             }),
-                                            s.current.length > 0
+                                            o.current.length > 0
                                                 ? (0, r.jsx)(
                                                       d.P3F,
                                                       {
                                                           "aria-label":
                                                               null != t
-                                                                  ? S.intl.string(S.t.IN2LTk)
-                                                                  : S.intl.string(S.t.UDg0qK),
-                                                          onClick: B,
-                                                          children: (0, r.jsx)(w, {
-                                                              className: A.optionButton,
+                                                                  ? E.intl.string(E.t.IN2LTk)
+                                                                  : E.intl.string(E.t.UDg0qK),
+                                                          onClick: L,
+                                                          children: (0, r.jsx)(I, {
+                                                              className: S.optionButton,
                                                               name:
                                                                   null != t
-                                                                      ? S.intl.string(S.t.IN2LTk)
-                                                                      : S.intl.string(S.t.UDg0qK),
+                                                                      ? E.intl.string(E.t.IN2LTk)
+                                                                      : E.intl.string(E.t.UDg0qK),
                                                               icon: (0, r.jsx)(d.vdY, {
                                                                   size: "custom",
                                                                   color: "currentColor",
                                                                   width: 20,
                                                                   height: 20,
-                                                                  colorClass: A.editIconColor,
+                                                                  colorClass: S.editIconColor,
                                                               }),
                                                           }),
                                                       },
@@ -333,20 +321,20 @@ let w = (e) => {
                                                 : (0, r.jsxs)(
                                                       d.P3F,
                                                       {
-                                                          "aria-label": S.intl.string(S.t.UDg0qK),
-                                                          onClick: B,
-                                                          className: A.setCustomButton,
+                                                          "aria-label": E.intl.string(E.t.UDg0qK),
+                                                          onClick: L,
+                                                          className: S.setCustomButton,
                                                           children: [
                                                               (0, r.jsx)(d.vdY, {
                                                                   size: "xs",
                                                                   color: "currentColor",
-                                                                  className: A.editIcon,
-                                                                  colorClass: A.editIconColor,
+                                                                  className: S.editIcon,
+                                                                  colorClass: S.editIconColor,
                                                               }),
                                                               (0, r.jsx)(d.Text, {
                                                                   variant: "text-xs/medium",
                                                                   color: "interactive-active",
-                                                                  children: S.intl.string(S.t.UDg0qK),
+                                                                  children: E.intl.string(E.t.UDg0qK),
                                                               }),
                                                           ],
                                                       },

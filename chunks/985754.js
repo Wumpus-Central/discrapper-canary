@@ -1,7 +1,7 @@
-n.d(t, { W: () => o });
+n.d(t, { W: () => a });
 var r = n(981631),
     i = n(388032);
-let o = {
+let a = {
     [r.HeQ.CARD]: () => i.intl.string(i.t["ei5/p6"]),
     [r.HeQ.PAYPAL]: () => i.intl.string(i.t["2dgEq6"]),
     [r.HeQ.SOFORT]: () => i.intl.string(i.t["edKX//"]),

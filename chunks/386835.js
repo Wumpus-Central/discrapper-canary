@@ -20,8 +20,8 @@ e.exports = function (e) {
             "while",
         ],
         i = ["true", "false", "null"],
-        o = ["this", "super"],
-        a = [
+        a = ["this", "super"],
+        o = [
             "Bool",
             "Class",
             "Fiber",
@@ -130,7 +130,7 @@ e.exports = function (e) {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: "title.class",
-            keywords: { _: a },
+            keywords: { _: o },
         },
         m = e.C_NUMBER_MODE,
         g = {
@@ -174,7 +174,7 @@ e.exports = function (e) {
             ],
         };
     b.contains.push(y);
-    let O = [...r, ...o, ...i],
+    let O = [...r, ...a, ...i],
         v = {
             relevance: 0,
             match: t.concat("\\b(?!", O.join("|"), "\\b)", /[a-zA-Z_]\w*(?:[?!]|\b)/),
@@ -201,7 +201,7 @@ e.exports = function (e) {
         name: "Wren",
         keywords: {
             keyword: r,
-            "variable.language": o,
+            "variable.language": a,
             literal: i,
         },
         contains: [I, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, p, _, v],

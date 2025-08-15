@@ -10,10 +10,10 @@ function i(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-function o(e, t, n) {
+function a(e, t, n) {
     return t && i(e.prototype, t), n && i(e, n), e;
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,14 +30,14 @@ n.d(t, { p: () => s });
 var s = (function () {
     function e(t) {
         r(this, e),
-            a(this, "item", void 0),
-            a(this, "config", void 0),
+            o(this, "item", void 0),
+            o(this, "config", void 0),
             (this.config = t),
             (this.item = {}),
             this.initializeExposedProperties();
     }
     return (
-        o(e, [
+        a(e, [
             {
                 key: "initializeExposedProperties",
                 value: function () {

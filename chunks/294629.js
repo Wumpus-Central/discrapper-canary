@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(160404),
-    o = n(314897),
-    a = n(131951),
+    a = n(314897),
+    o = n(131951),
     s = n(496675),
     l = n(979651),
     c = n(981631);
@@ -13,9 +13,9 @@ function u(e) {
     var t;
     let {
             channel: n,
-            authenticationStore: r = o.default,
+            authenticationStore: r = a.default,
             voiceStateStore: u = l.Z,
-            mediaEngineStore: d = a.Z,
+            mediaEngineStore: d = o.Z,
             permissionStore: f = s.Z,
             impersonateStore: _ = i.Z,
         } = e,
@@ -30,12 +30,12 @@ function u(e) {
     };
 }
 function d(e) {
-    return (0, r.cj)([o.default, l.Z, a.Z, s.Z, i.Z], () =>
+    return (0, r.cj)([a.default, l.Z, o.Z, s.Z, i.Z], () =>
         u({
             channel: e,
-            authenticationStore: o.default,
+            authenticationStore: a.default,
             voiceStateStore: l.Z,
-            mediaEngineStore: a.Z,
+            mediaEngineStore: o.Z,
             permissionStore: s.Z,
             impersonateStore: i.Z,
         }),

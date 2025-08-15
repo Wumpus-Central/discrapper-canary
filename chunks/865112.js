@@ -1,9 +1,9 @@
 n.d(t, {
     RB: () => y,
-    VH: () => O,
+    VH: () => _,
     Vi: () => v,
     Vu: () => j,
-    q7: () => _,
+    q7: () => O,
 });
 var r = n(692547),
     i = n(497089),
@@ -20,7 +20,7 @@ var r = n(692547),
     g = n(549931),
     m = n(178561),
     b = n(39863);
-let O = {
+let _ = {
         MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
@@ -31,7 +31,7 @@ let O = {
         ADD_FRIEND: o,
         FIRST_MESSAGE: m,
     },
-    _ = (e) => {
+    O = (e) => {
         switch (e.type) {
             case "lifecycle_item":
                 switch (e.item_enum) {

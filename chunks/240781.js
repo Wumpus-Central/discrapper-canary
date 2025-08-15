@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(314940);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(278074),
     l = n(442837),
     c = n(481060),
@@ -39,8 +39,8 @@ let O = [
         let { purchase: t } = e,
             n = (0, l.e7)([p.default], () => p.default.locale),
             i = (0, u.qS)(t),
-            o = null != t.expiresAt ? (0, m.TD)(Date.now(), t.expiresAt) : null,
-            a = (0, f.ag)(t),
+            a = null != t.expiresAt ? (0, m.TD)(Date.now(), t.expiresAt) : null,
+            o = (0, f.ag)(t),
             s = t.purchasedAt.toLocaleDateString(n, {
                 month: "long",
                 year: "numeric",
@@ -51,13 +51,13 @@ let O = [
                 (0, r.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "header-primary",
-                    children: a,
+                    children: o,
                 }),
-                null != o &&
+                null != a &&
                     (0, r.jsx)(c.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: b.intl.format(b.t.Io7ozs, { days: o.days.toString() }),
+                        children: b.intl.format(b.t.Io7ozs, { days: a.days.toString() }),
                     }),
                 (0, r.jsxs)(c.Text, {
                     variant: "text-xxs/normal",
@@ -91,9 +91,9 @@ let O = [
         });
     },
     I = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: o, className: p } = e,
+        let { user: t, guildId: n, avatarDecorationOverride: a, className: p } = e,
             m = (0, l.e7)([h.Z], () => h.Z.getStatus(t.id)),
-            { product: I, purchase: T } = (0, d.Z)(null == o ? void 0 : o.skuId),
+            { product: I, purchase: T } = (0, d.Z)(null == a ? void 0 : a.skuId),
             S = g.ZP.canUseCollectibles(t),
             A = (0, u.qS)(T),
             N = (0, u.G1)(I),
@@ -113,14 +113,14 @@ let O = [
             );
         return null != I && (null == T || C)
             ? (0, r.jsxs)("div", {
-                  className: a()(y.modalPreview, y.shopPreviewContainer, p),
+                  className: o()(y.modalPreview, y.shopPreviewContainer, p),
                   children: [
                       (0, r.jsx)("div", {
                           className: y.shopPreviewBanner,
                           children: (0, r.jsx)(E.Z, {
                               user: t,
                               guildId: n,
-                              avatarDecorationOverride: o,
+                              avatarDecorationOverride: a,
                           }),
                       }),
                       (0, r.jsxs)("div", {
@@ -139,7 +139,7 @@ let O = [
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: a()(y.modalPreview, p),
+                  className: o()(y.modalPreview, p),
                   children: [
                       (0, r.jsxs)("div", {
                           className: y.previewSections,
@@ -149,13 +149,13 @@ let O = [
                                   children: (0, r.jsx)(E.Z, {
                                       user: t,
                                       guildId: n,
-                                      avatarDecorationOverride: o,
+                                      avatarDecorationOverride: a,
                                   }),
                               }),
                               (0, r.jsx)("div", {
                                   className: y.smallDecorationPreviewsContainer,
                                   children: O.map((e) => {
-                                      let { avatarSize: i, showStatus: a } = e;
+                                      let { avatarSize: i, showStatus: o } = e;
                                       return (0, r.jsx)(
                                           "div",
                                           {
@@ -164,12 +164,12 @@ let O = [
                                                   user: t,
                                                   guildId: n,
                                                   avatarSize: i,
-                                                  avatarDecorationOverride: o,
-                                                  status: a ? m : void 0,
+                                                  avatarDecorationOverride: a,
+                                                  status: o ? m : void 0,
                                                   "aria-hidden": !0,
                                               }),
                                           },
-                                          "".concat(i).concat(a),
+                                          "".concat(i).concat(o),
                                       );
                                   }),
                               }),

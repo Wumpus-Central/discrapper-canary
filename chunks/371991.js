@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(846519),
     c = n(481060),
@@ -21,21 +21,21 @@ var r = n(255367),
 function g(e) {
     let [t, n] = i.useState(Date.now()),
         r = (0, _.n)(),
-        o = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        a = !r || (o && !e);
+        a = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        o = !r || (a && !e);
     return (
         i.useEffect(() => {
             let e = new l.Xp();
             return (
-                e.start(a ? 15 * f.Z.Millis.SECOND : f.Z.Millis.SECOND, () => {
+                e.start(o ? 15 * f.Z.Millis.SECOND : f.Z.Millis.SECOND, () => {
                     n(Date.now());
                 }),
                 () => e.stop()
             );
-        }, [a]),
+        }, [o]),
         {
             now: t,
-            slowTickMode: a,
+            slowTickMode: o,
         }
     );
 }
@@ -43,7 +43,7 @@ let E = (e) => {
         let {
                 entry: t,
                 inline: n = !1,
-                textColor: o,
+                textColor: a,
                 textTabularNumbers: s = !0,
                 textFontCode: l = !0,
                 hovered: u = !1,
@@ -62,14 +62,14 @@ let E = (e) => {
                 E.current = b.current;
             }, [t]),
             (0, r.jsx)(c.Text, {
-                className: a()({
+                className: o()({
                     [m.fontCode]: l,
                     [m.bold]: d,
                     [m.inlineTimestamp]: n,
                 }),
                 variant: "text-xs/medium",
                 tabularNumbers: s,
-                color: o,
+                color: a,
                 scaleFontToUserSetting: f,
                 "aria-label": E.current,
                 children: p,
@@ -78,7 +78,7 @@ let E = (e) => {
     },
     b = (e) => {
         var t, n;
-        let { entry: i, textColor: o, hovered: a = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
+        let { entry: i, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
             f = (0, h.Jg)(i),
             _ = (0, s.e7)([d.default], () => d.default.locale),
             m = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
@@ -91,22 +91,22 @@ let E = (e) => {
         return null != g
             ? (0, r.jsx)(E, {
                   entry: { start: g },
-                  textColor: o,
-                  hovered: a,
+                  textColor: a,
+                  hovered: o,
                   bold: l,
                   scaleFontToUserSetting: u,
               })
             : f
               ? (0, r.jsx)(E, {
                     entry: i,
-                    textColor: o,
-                    hovered: a,
+                    textColor: a,
+                    hovered: o,
                     bold: l,
                     scaleFontToUserSetting: u,
                 })
               : (0, r.jsx)(c.Text, {
                     variant: "text-xs/normal",
-                    color: o,
+                    color: a,
                     lineClamp: 1,
                     scaleFontToUserSetting: u,
                     children: (0, h.GL)(i, _),

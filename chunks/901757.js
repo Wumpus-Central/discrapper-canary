@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(388032);
-class o extends r.sX {
+class a extends r.sX {
     constructor(e, t) {
         var n;
         super(e, t, i.intl.string(i.t.Mt8yDA));
@@ -11,4 +11,4 @@ class o extends r.sX {
             (this.message = i.intl.string(i.t.mrlScX));
     }
 }
-let a = o;
+let o = a;

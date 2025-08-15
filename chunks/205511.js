@@ -14,9 +14,9 @@ var r = n(255367),
     f = n(509212),
     x = n(113434),
     h = n(497505),
-    j = n(667105),
-    b = n(585857),
-    _ = n(795057),
+    b = n(667105),
+    _ = n(585857),
+    j = n(795057),
     v = n(388032),
     C = n(19672);
 function y(e) {
@@ -30,10 +30,10 @@ function y(e) {
 function E(e) {
     let { quest: t, useReducedMotion: n } = e,
         o = (0, g.n)(),
-        l = (0, j.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
-        u = (0, j.g2)({ useReducedMotion: n }),
-        b = (0, p.O5)(),
-        _ = (0, m.aM)(),
+        l = (0, b.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
+        u = (0, b.g2)({ useReducedMotion: n }),
+        _ = (0, p.O5)(),
+        j = (0, m.aM)(),
         {
             errorHints: E,
             startingConsoleQuest: O,
@@ -41,7 +41,7 @@ function E(e) {
         } = (0, x.GI)({
             questId: t.id,
             beforeRequest: () => {
-                b({
+                _({
                     questId: t.id,
                     questContent: h.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR,
@@ -80,7 +80,7 @@ function E(e) {
                                                           {
                                                               content: h.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
-                                                              impressionId: _,
+                                                              impressionId: j,
                                                               sourceQuestContent: h.jn.QUEST_BAR_V2,
                                                           },
                                                       );
@@ -101,7 +101,7 @@ function E(e) {
                               children: v.intl.format(v.t.GXqvCw, { gameTitle: n }),
                           }),
             };
-        }, [E, t, o, _]);
+        }, [E, t, o, j]);
     return (0, r.jsxs)("div", {
         className: C.microphoneUnit,
         children: [
@@ -158,7 +158,7 @@ let O = function (e) {
                         renderContent: () => {
                             var e, n;
                             return (0, r.jsx)(
-                                b.Q,
+                                _.Q,
                                 ((e = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -208,12 +208,12 @@ let O = function (e) {
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(_.y3, { children: v.intl.formatToPlainString(v.t["+8JB6e"], { gameTitle: l }) }),
+                            (0, r.jsx)(j.y3, { children: v.intl.formatToPlainString(v.t["+8JB6e"], { gameTitle: l }) }),
                         isComplete: o || c,
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(_.y3, {
+                            (0, r.jsx)(j.y3, {
                                 children: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }),
                             }),
                         isComplete: c,
@@ -224,7 +224,7 @@ let O = function (e) {
                 isQuestComplete: c,
             };
         }, [a, i.length, t, n.targetMinutes]);
-    return (0, r.jsx)(_.ZP, {
+    return (0, r.jsx)(j.ZP, {
         heading: v.intl.string(v.t.UPWlJi),
         steps: c,
         children:

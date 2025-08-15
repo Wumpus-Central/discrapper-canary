@@ -1,14 +1,14 @@
 n.d(t, {
-    a: () => _,
+    a: () => g,
     h: () => f,
 }),
     n(997841);
 var r = n(73800),
     i = n(442837),
-    o = n(430198),
+    l = n(430198),
     a = n(592125),
-    s = n(430824),
-    l = n(630388),
+    o = n(430824),
+    s = n(630388),
     c = n(981631);
 let u =
     c.iLy.CROSSPOSTED |
@@ -31,7 +31,7 @@ function d(e) {
         null == e.activity &&
         null == e.call &&
         null == e.activityInstance &&
-        0 === (0, l.Ge)(e.flags, u) &&
+        0 === (0, s.Ge)(e.flags, u) &&
         !0
     );
 }
@@ -39,18 +39,18 @@ function f(e) {
     var t;
     if (!d(e)) return !1;
     let n = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-    return !(null != n && o.Z.isChannelOrThreadParentGated(n, e.channel_id));
+    return !(null != n && l.Z.isChannelOrThreadParentGated(n, e.channel_id));
 }
-function _(e) {
-    let t = (0, i.e7)([s.Z, o.Z, a.Z], () => {
+function g(e) {
+    let t = (0, i.e7)([o.Z, l.Z, a.Z], () => {
         var t, n, r;
         if (null == e) return !0;
         let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-        if (null != i && (null == (n = s.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED)))
+        if (null != i && (null == (n = o.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED)))
             return !0;
-        let l = null != i && o.Z.isChannelOrThreadParentGated(i, e.channel_id),
+        let s = null != i && l.Z.isChannelOrThreadParentGated(i, e.channel_id),
             u = null != e && (null == (r = a.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());
-        return l || u;
+        return s || u;
     });
     return r.useMemo(() => !t && null != e && d(e), [t, e]);
 }

@@ -1,8 +1,8 @@
 n.r(t), n(65234), n(111804), n(490233), n(97749), n(388685), n(358797);
 var r,
     i,
-    o,
     a,
+    o,
     s,
     l,
     c,
@@ -34,17 +34,17 @@ var d = n(155458),
     x = n(746106),
     M = n(177692);
 n(986484);
-var j = n(857192),
-    k = n(113752),
+var k = n(857192),
+    j = n(113752),
     U = n(44163),
     G = n(710845),
     B = n(70956),
-    Z = n(378799);
-j.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, Z.s5)();
+    V = n(378799);
+k.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, V.s5)();
 let F = 5 * B.Z.Millis.MINUTE,
-    V = document.getElementById("app-mount");
-_()(null != V, "Could not find app-mount"), (V.className = __OVERLAY__ ? "" : k.appMount);
-let H = (0, d.createRoot)(V),
+    Z = document.getElementById("app-mount");
+_()(null != Z, "Could not find app-mount"), (Z.className = __OVERLAY__ ? "" : j.appMount);
+let H = (0, d.createRoot)(Z),
     Y = { "/oauth2/authorize": A.Z };
 function W(e, t, n) {
     var r;
@@ -60,8 +60,8 @@ if (null != D.Z) {
             });
         }),
         T.ZP.appLoaded();
-    let e = null == (i = (o = D.Z.remoteApp).getVersion) ? void 0 : i.call(o),
-        t = null == (a = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : a.call(s),
+    let e = null == (i = (a = D.Z.remoteApp).getVersion) ? void 0 : i.call(a),
+        t = null == (o = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : o.call(s),
         n = {};
     null != D.Z.remoteApp.getModuleVersions && (n = D.Z.remoteApp.getModuleVersions()),
         O.Z.setExtra({

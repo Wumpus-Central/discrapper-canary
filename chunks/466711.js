@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(704215),
+    a = n(442837),
+    o = n(704215),
     s = n(996146),
     l = n(481060),
     c = n(100527),
@@ -96,7 +96,7 @@ function D(e) {
 }
 function L(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
-        o = () => {
+        a = () => {
             var t;
             i(), null == (t = e.onClick) || t.call(e);
         };
@@ -109,7 +109,7 @@ function L(e) {
                     "aria-label": S.intl.string(S.t.Z1RnTk),
                     isActive: !1,
                     noHover: !0,
-                    onClick: o,
+                    onClick: a,
                 },
                 n,
             ),
@@ -146,19 +146,19 @@ function M(e) {
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
         { analyticsLocations: E } = (0, u.ZP)(c.Z.GIFT_BUTTON),
         [v, S] = i.useState(!1),
-        N = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        N = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        C = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != C ? b.default.age(C.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = null != n.firstTimeNotice && !s && N && R >= x,
-        [j, k] = (0, f.XR)(
-            M ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
-            (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
+        [k, j] = (0, f.XR)(
+            M ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
+            (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != j,
+        U = null != k,
         G = v || U,
         B = (0, y.Ft)(l),
-        Z = (0, p.IH)();
+        V = (0, p.IH)();
     if (s) return null;
     let F = () => {
             (0, _.Z)({
@@ -174,21 +174,21 @@ function M(e) {
                 },
             });
         },
-        V = () => {
-            S(!1), k(T.L.TAKE_ACTION), F();
+        Z = () => {
+            S(!1), j(T.L.TAKE_ACTION), F();
         },
         H =
             void 0 !== P
                 ? (0, r.jsx)(D, {
                       config: P,
                       hovered: G,
-                      onClick: V,
+                      onClick: Z,
                   })
-                : void 0 !== w && Z
+                : void 0 !== w && V
                   ? (0, r.jsx)(L, {
                         config: w,
                         hovered: G,
-                        onClick: V,
+                        onClick: Z,
                     })
                   : (0, r.jsx)(O.Z, {
                         disabled: s,
@@ -207,11 +207,11 @@ function M(e) {
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => S(!1),
                       onCheckItOutClick: F,
-                      markAsDismissed: k,
+                      markAsDismissed: j,
                       config: n.firstTimeNotice,
                       children: H,
                   })
                 : H,
     });
 }
-let j = i.memo(M);
+let k = i.memo(M);

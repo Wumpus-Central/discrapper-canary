@@ -16,20 +16,20 @@ n.d(t, { I: () => l }),
     n(642613);
 var r = n(214908),
     i = n(972164);
-let o = Uint8Array.of(36, 202, 177, 122, 122, 248, 236, 43, 130, 180, 18, 185, 45, 171, 25, 46),
-    a = {
+let a = Uint8Array.of(36, 202, 177, 122, 122, 248, 236, 43, 130, 180, 18, 185, 45, 171, 25, 46),
+    o = {
         N: 16384,
         r: 8,
         p: 2,
         dkLen: 64,
     };
-function s(e, t) {
+function c(e, t) {
     for (let n = 0; n < e.length && n < t.length; n++) if (e[n] != t[n]) return e[n] - t[n];
     return e.length - t.length;
 }
-async function l(e, t, n, l, c) {
-    let u = await Promise.all([(0, r.x)(e, t, n), (0, r.x)(e, l, c)]);
-    u.sort(s);
-    let d = new Uint8Array(u[0].byteLength + u[1].byteLength);
-    return d.set(u[0], 0), d.set(u[1], u[0].byteLength), new Uint8Array(await (0, i.E)(d, o, a));
+async function l(e, t, n, l, u) {
+    let s = await Promise.all([(0, r.x)(e, t, n), (0, r.x)(e, l, u)]);
+    s.sort(c);
+    let E = new Uint8Array(s[0].byteLength + s[1].byteLength);
+    return E.set(s[0], 0), E.set(s[1], s[0].byteLength), new Uint8Array(await (0, i.E)(E, a, o));
 }

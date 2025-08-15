@@ -1,51 +1,51 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(239091),
-    s = n(561472),
-    o = n(933557),
+    o = n(561472),
+    s = n(933557),
     c = n(287746),
     u = n(541716),
     d = n(665149),
-    h = n(910611),
-    p = n(703656),
+    p = n(910611),
+    h = n(703656),
     f = n(664342),
-    g = n(592125),
-    m = n(703558),
+    m = n(592125),
+    g = n(703558),
     b = n(430824),
     y = n(228392),
-    x = n(388032),
-    j = n(304247);
-function _(e) {
+    _ = n(388032),
+    C = n(304247);
+function x(e) {
     let { channelId: t } = e,
-        _ = (0, l.e7)([g.Z], () => g.Z.getChannel(t)),
-        O = (0, l.e7)([g.Z], () => g.Z.getChannel(null == _ ? void 0 : _.parent_id)),
-        v = (0, l.e7)([b.Z], () => b.Z.getGuild(null == _ ? void 0 : _.getGuildId())),
-        C = (0, o.ZP)(_),
+        x = (0, l.e7)([m.Z], () => m.Z.getChannel(t)),
+        v = (0, l.e7)([m.Z], () => m.Z.getChannel(null == x ? void 0 : x.parent_id)),
+        j = (0, l.e7)([b.Z], () => b.Z.getGuild(null == x ? void 0 : x.getGuildId())),
+        O = (0, s.ZP)(x),
         E = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            null == _ || E.current || ((E.current = !0), (0, y.lN)(_));
-        }, [_]),
-        null == _ || null == v)
+            null == x || E.current || ((E.current = !0), (0, y.lN)(x));
+        }, [x]),
+        null == x || null == j)
     )
         return null;
-    let S = (0, r.jsx)(f.Z, { channel: _ });
+    let S = (0, r.jsx)(f.Z, { channel: x });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.Z, {
-                channel: _,
-                draftType: m.d.ChannelMessage,
+            (0, r.jsx)(o.Z, {
+                channel: x,
+                draftType: g.d.ChannelMessage,
             }),
             (0, r.jsx)(d.ZP, {
                 toolbar: S,
-                "aria-label": x.intl.string(x.t.Pwe8tL),
-                children: (0, h.ud)({
-                    channel: _,
-                    parentChannel: O,
-                    channelName: C,
-                    guild: v,
+                "aria-label": _.intl.string(_.t.Pwe8tL),
+                children: (0, p.ud)({
+                    channel: x,
+                    parentChannel: v,
+                    channelName: O,
+                    guild: j,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, a.jW)(e, async () => {
@@ -79,7 +79,7 @@ function _(e) {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i = { channel: _ }),
+                                    (i = i = { channel: x }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
@@ -98,17 +98,17 @@ function _(e) {
                         });
                     },
                     handleClick: function () {
-                        null != _ && (0, p.XU)(_.guild_id, _.id);
+                        null != x && (0, h.XU)(x.guild_id, x.id);
                     },
                 }),
             }),
             (0, r.jsx)("div", {
-                className: j.chat,
+                className: C.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {
-                        channel: _,
-                        guild: v,
+                        channel: x,
+                        guild: j,
                         chatInputType: u.Ie.SIDEBAR,
                     },
                     t,

@@ -10,8 +10,8 @@ n.d(t, {
     n(997841);
 var r = n(512722),
     i = n.n(r),
-    o = n(525769),
-    a = n(544891),
+    a = n(525769),
+    o = n(544891),
     s = n(570140),
     l = n(881052),
     c = n(710845),
@@ -23,7 +23,7 @@ let p = new c.Z("UserProfileModalActionCreators");
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
-    return a.tn
+    return o.tn
         .get({
             url: _.ANM.ME,
             query: { with_analytics_token: t },
@@ -46,7 +46,7 @@ function m() {
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.Z.patch({
         url: _.ANM.USER_AGREEMENTS,
-        trackedActionData: { event: o.a.USER_ACCEPT_AGREEMENTS },
+        trackedActionData: { event: a.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
             privacy: t,
@@ -62,7 +62,7 @@ function g(e, t) {
     let n = d.default.getCurrentUser();
     i()(null != n, "setFlag: user cannot be undefined");
     let r = t ? n.flags | e : n.flags & ~e;
-    return a.tn.patch({
+    return o.tn.patch({
         url: _.ANM.ME,
         oldFormErrors: !0,
         body: { flags: r },
@@ -73,7 +73,7 @@ function E(e) {
     let t = d.default.getUser(e);
     return null != t
         ? Promise.resolve(t)
-        : a.tn
+        : o.tn
               .get({
                   url: _.ANM.USER(e),
                   oldFormErrors: !0,
@@ -104,7 +104,7 @@ async function y(e) {
             withMutualGuilds: n,
             withMutualFriendsCount: r,
             withMutualFriends: i,
-            guildId: o,
+            guildId: a,
             connectionsRoleId: c,
             joinRequestId: u,
             abortSignal: d,
@@ -114,25 +114,25 @@ async function y(e) {
     s.Z.dispatch({
         type: "USER_PROFILE_FETCH_START",
         userId: e,
-        guildId: o,
+        guildId: a,
         withMutualFriends: i,
     });
     try {
-        let l = await a.tn.get({
+        let l = await o.tn.get({
             url: _.ANM.USER_PROFILE(e),
             query: {
                 type: t,
                 with_mutual_guilds: n,
                 with_mutual_friends: i,
                 with_mutual_friends_count: r && (null == i || !i),
-                guild_id: o,
+                guild_id: a,
                 connections_role_id: c,
                 join_request_id: u,
             },
             signal: d,
             rejectWithError: !0,
         });
-        null == f || f(l.body, o),
+        null == f || f(l.body, a),
             s.Z.dispatch({
                 type: "USER_UPDATE",
                 user: l.body.user,
@@ -142,11 +142,11 @@ async function y(e) {
                 userProfile: l.body,
                 fetchStartedAt: h,
             }),
-            null != o &&
+            null != a &&
                 null != l.body.guild_member &&
                 s.Z.dispatch({
                     type: "GUILD_MEMBER_PROFILE_UPDATE",
-                    guildId: o,
+                    guildId: a,
                     guildMember: l.body.guild_member,
                 });
     } catch (t) {
@@ -159,7 +159,7 @@ async function y(e) {
                 apiError: new l.Hx(t),
                 fetchStartedAt: h,
                 userId: e,
-                guildId: o,
+                guildId: a,
             }),
             t)
         );
@@ -171,7 +171,7 @@ async function O(e, t) {
         userId: e,
     });
     try {
-        let n = await a.tn.get({
+        let n = await o.tn.get({
             url: _.ANM.USER_RELATIONSHIPS(e),
             oldFormErrors: !0,
             signal: t,

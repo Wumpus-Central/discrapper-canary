@@ -27,7 +27,7 @@ function i(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -39,12 +39,12 @@ function o(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
+            : a(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -76,7 +76,7 @@ var s = (function (e) {
         );
     })({});
 let c = [7, 8, 9, 10],
-    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => a(i({}, e), { [t]: n }), {}),
+    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => o(i({}, e), { [t]: n }), {}),
     d = "blur",
     f = {
         width: 1280,

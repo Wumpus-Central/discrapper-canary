@@ -1,27 +1,14 @@
 n.d(t, {
-    H: () => u,
-    V: () => d,
+    H: () => c,
+    V: () => u,
 });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(626135),
+    l = n(626135),
     a = n(687683),
-    s = n(981631);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function c(e) {
+    o = n(981631);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,14 +19,23 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function u(e) {
-    let { channelId: t, onConfirm: l, onCancel: u } = e;
-    o.default.track(s.rMx.OPEN_MODAL, {
+function c(e) {
+    let { channelId: t, onConfirm: c, onCancel: u } = e;
+    l.default.track(o.rMx.OPEN_MODAL, {
         type: a.t9,
         channel_id: t,
     }),
@@ -48,9 +44,9 @@ function u(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    c(
+                    s(
                         {
-                            onConfirm: l,
+                            onConfirm: c,
                             onDismiss: u,
                         },
                         t,
@@ -58,17 +54,17 @@ function u(e) {
                 );
         });
 }
-function d(e) {
-    let { onConfirm: t, onCancel: o } = e;
+function u(e) {
+    let { onConfirm: t, onCancel: l } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e("7649").then(n.bind(n, 797464));
         return (n) =>
             (0, r.jsx)(
                 e,
-                c(
+                s(
                     {
                         onConfirm: t,
-                        onDismiss: o,
+                        onDismiss: l,
                     },
                     n,
                 ),

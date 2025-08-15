@@ -1,15 +1,15 @@
 n.d(t, {
     CI: () => c,
-    Qe: () => a,
+    Qe: () => o,
     W3: () => d,
-    ZW: () => o,
+    ZW: () => a,
     ak: () => s,
     sg: () => u,
     up: () => l,
 });
 var r = n(243814),
     i = n(388032);
-let o = [
+let a = [
         () => i.intl.string(i.t["6xfSCg"]),
         () => i.intl.string(i.t.ymSk0t),
         () => i.intl.string(i.t.EnN7c3),
@@ -19,7 +19,7 @@ let o = [
         () => i.intl.string(i.t.sGOSGx),
         () => i.intl.string(i.t.JfibUl),
     ],
-    a = [
+    o = [
         r.x.BOT,
         r.x.OPENID,
         r.x.IDENTIFY,
@@ -65,7 +65,7 @@ let o = [
         r.x.SDK_SOCIAL_LAYER_PRESENCE,
         r.x.SDK_SOCIAL_LAYER,
     ],
-    s = a.concat([r.x.WEBHOOK_INCOMING, r.x.BOT]),
+    s = o.concat([r.x.WEBHOOK_INCOMING, r.x.BOT]),
     l = ["rpc.api"];
 function c(e, t) {
     switch (e) {

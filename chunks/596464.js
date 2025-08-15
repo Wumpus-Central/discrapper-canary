@@ -1,20 +1,20 @@
-var r = n(94553).notEmptyKey;
-function i(e, t) {
-    return r(t) && "MUTABLE" === e.__get(t).getMutability() ? t : null;
+var n = r(94553).notEmptyKey;
+function i(t, e) {
+    return n(e) && "MUTABLE" === t.__get(e).getMutability() ? e : null;
 }
-e.exports = function (e, t) {
-    if (t.isCollapsed()) {
-        var n,
-            r = t.getAnchorKey(),
-            o = t.getAnchorOffset();
+t.exports = function (t, e) {
+    if (e.isCollapsed()) {
+        var r,
+            n = e.getAnchorKey(),
+            o = e.getAnchorOffset();
         return o > 0
-            ? (n = e.getBlockForKey(r).getEntityAt(o - 1)) !== e.getBlockForKey(r).getEntityAt(o)
+            ? (r = t.getBlockForKey(n).getEntityAt(o - 1)) !== t.getBlockForKey(n).getEntityAt(o)
                 ? null
-                : i(e.getEntityMap(), n)
+                : i(t.getEntityMap(), r)
             : null;
     }
-    var a = t.getStartKey(),
-        s = t.getStartOffset(),
-        l = e.getBlockForKey(a);
-    return (n = s === l.getLength() ? null : l.getEntityAt(s)), i(e.getEntityMap(), n);
+    var a = e.getStartKey(),
+        u = e.getStartOffset(),
+        s = t.getBlockForKey(a);
+    return (r = u === s.getLength() ? null : s.getEntityAt(u)), i(t.getEntityMap(), r);
 };

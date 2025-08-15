@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(415506), n(997841);
 var r = n(149765),
     i = n(81825),
-    o = n(864106),
-    a = n(131016),
+    a = n(864106),
+    o = n(131016),
     s = n(602210),
     l = n(4242),
     c = n(768581),
@@ -187,14 +187,14 @@ class b extends i.Z {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, o.FG)(e);
+        this.avatarDecorationData = (0, a.FG)(e);
     }
     get nameplate() {
         var e;
         return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
-        var t, n, i, o, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, j, k, U;
+        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
         super(),
             h(this, "id", void 0),
             h(this, "username", void 0),
@@ -231,7 +231,7 @@ class b extends i.Z {
         let G = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null != (i = e.username) ? i : ""),
-            (this.discriminator = null != (o = e.discriminator) ? o : _.fo$),
+            (this.discriminator = null != (a = e.discriminator) ? a : _.fo$),
             (this.avatar = null != (l = e.avatar) ? l : null),
             (this.avatarDecoration = null != (c = e.avatar_decoration_data) ? c : e.avatarDecorationData),
             (this.email = null != (u = e.email) ? u : null),
@@ -256,9 +256,9 @@ class b extends i.Z {
                 null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
             (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, s.l)(null != (k = null != (j = e.primary_guild) ? j : e.primaryGuild) ? k : null)),
+            (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, a.bN)(e.display_name_styles)),
+            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.bN)(e.display_name_styles)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,

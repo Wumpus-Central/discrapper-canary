@@ -8,7 +8,7 @@ var l = n(73800),
     u = n(981631);
 function d(e) {
     let { guild: t, inviteChannel: n, inviteTargetType: d, applicationId: c } = e,
-        [g, h, m, p] = (0, i.Wu)(
+        [h, g, m, p] = (0, i.Wu)(
             [s.Z, a.ZP],
             () => [
                 s.Z.getInviteSuggestionRows(),
@@ -41,8 +41,8 @@ function d(e) {
             }).catch(u.VqG);
         }, [v, t, n, c, d]),
         {
-            rows: g,
-            showFriends: h,
+            rows: h,
+            showFriends: g,
             initialCounts: m,
         }
     );

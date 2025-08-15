@@ -25,13 +25,13 @@
             y: ["أقل من عام", "عام واحد", ["عامان", "عامين"], "%d أعوام", "%d عامًا", "%d عام"],
         },
         i = function (e) {
-            return function (t, i, o, a) {
+            return function (t, i, a, o) {
                 var s = n(t),
                     l = r[e][n(t)];
                 return 2 === s && (l = l[+!i]), l.replace(/%d/i, t);
             };
         },
-        o = [
+        a = [
             "يناير",
             "فبراير",
             "مارس",
@@ -46,8 +46,8 @@
             "ديسمبر",
         ];
     return e.defineLocale("ar-ly", {
-        months: o,
-        monthsShort: o,
+        months: a,
+        monthsShort: a,
         weekdays: "الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت".split("_"),
         weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
         weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),

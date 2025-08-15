@@ -1,8 +1,8 @@
 n.d(t, {
     LL: () => r,
-    MG: () => o,
+    MG: () => a,
     U0: () => i,
-    YD: () => a,
+    YD: () => o,
     aK: () => s,
 });
 var r = (function (e) {
@@ -23,7 +23,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e.ConfettiUpsell = "confetti_upsell"),
             (e.MessageComposerButtons = "message_composer_buttons"),
@@ -32,7 +32,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e.MessageConfettiBar = "message_confetti_bar"),
             (e.MessageSubmit = "message_submit"),

@@ -17,8 +17,8 @@ let f = i.forwardRef(function (e, t) {
             onContextMenu: g,
             icon: m,
             selected: b,
-            tooltip: O,
-            upperBadge: _,
+            tooltip: _,
+            upperBadge: O,
             lowerBadge: y,
             lowerBadgeSize: v,
             showPill: j = !0,
@@ -26,8 +26,8 @@ let f = i.forwardRef(function (e, t) {
             "aria-label": E,
             children: x,
             onMouseEnter: S,
-            onMouseLeave: P,
-            onMouseDown: I,
+            onMouseLeave: I,
+            onMouseDown: P,
         } = e,
         N = (0, a.Ie)(f),
         [w, Z] = i.useState(!1);
@@ -43,11 +43,11 @@ let f = i.forwardRef(function (e, t) {
                   })
                 : null,
             (0, r.jsx)(d.Z, {
-                text: O,
+                text: _,
                 selected: b,
                 children: (0, r.jsx)(s.aRk, {
                     selected: !0,
-                    upperBadge: _,
+                    upperBadge: O,
                     lowerBadge: y,
                     lowerBadgeSize: v,
                     children: (0, r.jsx)(
@@ -83,12 +83,12 @@ let f = i.forwardRef(function (e, t) {
                                     null == S || S(), Z(!0);
                                 },
                                 onMouseLeave: () => {
-                                    null == P || P(), Z(!1);
+                                    null == I || I(), Z(!1);
                                 },
-                                onMouseDown: I,
+                                onMouseDown: P,
                                 className: o()(p.circleIconButton, C, { [p.selected]: b || w }),
                                 onClick: h,
-                                "aria-label": "string" == typeof O && null == E ? O : E,
+                                "aria-label": "string" == typeof _ && null == E ? _ : E,
                                 "aria-selected": b,
                                 onContextMenu: g,
                                 focusProps: { enabled: !1 },

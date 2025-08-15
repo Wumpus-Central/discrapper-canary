@@ -9,7 +9,7 @@ n.d(t, {
     n(512722);
 var r = n(539600),
     i = n(709054);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
     if (i.length + n.length === 0) return t;
-    let o = a({}, t);
-    if (null != i) for (let e of i) delete o[e];
-    for (let t of n) o[t.id] = r.wD(e, t);
-    return o;
+    let a = o({}, t);
+    if (null != i) for (let e of i) delete a[e];
+    for (let t of n) a[t.id] = r.wD(e, t);
+    return a;
 }

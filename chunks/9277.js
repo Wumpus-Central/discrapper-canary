@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(94171),
     l = n(442837),
     c = n(114101),
@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 function I(e, t) {
-    let { disabled: n, type: o } = e,
+    let { disabled: n, type: a } = e,
         [b, O] = i.useState(!1),
         I = (0, l.e7)([f.Z], () => {
             var e, t;
@@ -95,11 +95,11 @@ function I(e, t) {
         handler: C,
     });
     let R = i.useCallback(() => {
-            (0, d.RO)(m.X1.GIF, o);
-        }, [o]),
+            (0, d.RO)(m.X1.GIF, a);
+        }, [a]),
         { Component: P, events: w, play: D } = (0, c.V)();
     if (n) return null;
-    let L = T === m.X1.GIF && S === o;
+    let L = T === m.X1.GIF && S === a;
     return (0, r.jsx)(u.ua7, {
         text: I ? g.intl.string(g.t.mE2e8P) : null,
         forceOpen: !0,
@@ -110,7 +110,7 @@ function I(e, t) {
                     y(
                         {
                             ref: t,
-                            className: a()(m.CT, E.buttonContainer),
+                            className: o()(m.CT, E.buttonContainer),
                         },
                         e,
                     ),

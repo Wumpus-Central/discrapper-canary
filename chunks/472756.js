@@ -1,4 +1,4 @@
-n.d(t, { G: () => o });
+n.d(t, { G: () => a });
 var r = n(685816);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        return new o(e);
+        return new a(e);
     }
     constructor(e) {
         i(this, "title", void 0),

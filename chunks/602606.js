@@ -1,27 +1,27 @@
-n.d(t, { Z: () => f }), n(388685), n(457542);
+n.d(t, { Z: () => p }), n(388685), n(457542);
 var r = n(73800),
     i = n(442837),
-    o = n(430824),
+    l = n(430824),
     a = n(496675),
-    s = n(709054),
-    l = n(693546),
+    o = n(709054),
+    s = n(693546),
     c = n(826581),
     u = n(937111),
     d = n(981631);
-function f(e) {
+function p(e) {
     let [t, n] = r.useState(!1),
-        [f, _] = r.useState(!1),
-        p = s.default.cast(e),
-        { joinRequest: h, guild: m } = (0, i.cj)([c.Z, u.Z, o.Z, a.Z], () => {
+        [p, m] = r.useState(!1),
+        f = o.default.cast(e),
+        { joinRequest: _, guild: g } = (0, i.cj)([c.Z, u.Z, l.Z, a.Z], () => {
             var e;
-            let t = c.Z.getRequest(p);
+            let t = c.Z.getRequest(f);
             if (null == t)
                 return {
                     joinRequest: null,
                     isModmin: !1,
                     guild: null,
                 };
-            let n = null != (e = o.Z.getGuild(t.guildId)) ? e : u.Z.getJoinRequestGuild(t.guildId);
+            let n = null != (e = l.Z.getGuild(t.guildId)) ? e : u.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
                 isModmin: null != n && a.Z.can(d.Plq.KICK_MEMBERS, n),
@@ -30,19 +30,19 @@ function f(e) {
         });
     return (
         r.useEffect(() => {
-            null != m || f || (_(!0), l.Z.fetchRequestToJoinGuilds());
-        }, [m, f]),
+            null != g || p || (m(!0), s.Z.fetchRequestToJoinGuilds());
+        }, [g, p]),
         r.useEffect(() => {
-            null == h &&
+            null == _ &&
                 (n(!0),
-                l.Z.fetchGuildJoinRequest(p).finally(() => {
+                s.Z.fetchGuildJoinRequest(f).finally(() => {
                     n(!1);
                 }));
-        }, [h, p]),
+        }, [_, f]),
         {
             loading: t,
-            joinRequest: h,
-            joinRequestGuild: m,
+            joinRequest: _,
+            joinRequestGuild: g,
         }
     );
 }

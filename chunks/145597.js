@@ -24,8 +24,8 @@ n.r(t),
     n(388685),
     n(35282);
 var i = n(887278),
-    o = n(490029),
-    a = n(358085),
+    a = n(490029),
+    o = n(358085),
     s = n(998502),
     l = n(981631),
     c = n(987650);
@@ -58,7 +58,7 @@ function y() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
 function O(e) {
-    (0, o.lW)({
+    (0, a.lW)({
         type: l.BmY.LOG_MESSAGES,
         pid: g(),
         token: y(),
@@ -66,7 +66,7 @@ function O(e) {
     });
 }
 function v(e) {
-    return !a.isPlatformEmbedded || (e.width >= f.width && e.height >= f.height);
+    return !o.isPlatformEmbedded || (e.width >= f.width && e.height >= f.height);
 }
 function I(e) {
     m = e;
@@ -75,6 +75,6 @@ function T() {
     return m;
 }
 function S() {
-    let e = (0, a.isWindows)() && "arm64" === s.ZP.architecture;
+    let e = (0, o.isWindows)() && "arm64" === s.ZP.architecture;
     return c.iP && !e && !(0, i.$1)();
 }

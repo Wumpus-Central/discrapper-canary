@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(91192),
@@ -80,22 +80,22 @@ function L(e, t) {
 }
 let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    Z = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = j + M + 2 * U,
-    V = x + M,
-    H = V + (B + 2 * Z),
-    Y = j + k + 2 * U,
+    V = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    F = k + M + 2 * U,
+    Z = x + M,
+    H = Z + (B + 2 * V),
+    Y = k + j + 2 * U,
     W = 7;
 function K(e) {
     let {
             activeIndex: t,
             categoryIndex: n,
-            analyticsContext: o,
+            analyticsContext: a,
             categories: s,
             category: l,
             handleCategorySelect: u,
@@ -110,7 +110,7 @@ function K(e) {
             f.P3F,
             L(w({}, p), {
                 "aria-label": (0, O.Nf)(l, E),
-                className: a()({
+                className: o()({
                     [R.categoryItemGuildCategory]: null != E,
                     [R.categoryItemDefaultCategory]: null == E,
                     [R.categoryItemDefaultCategorySelected]: null == E && m,
@@ -119,7 +119,7 @@ function K(e) {
                 onClick: () => {
                     null != E &&
                         b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: null == o ? void 0 : o.location,
+                            location: null == a ? void 0 : a.location,
                             tab: N.X1.EMOJI,
                             guild_id: E.id,
                         }),
@@ -138,8 +138,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: j,
-                              width: j,
+                              height: k,
+                              width: k,
                               size: "custom",
                           })
                         : null,
@@ -165,7 +165,7 @@ let z = (e) => {
     let {
             className: t,
             emojiListRef: n,
-            sectionDescriptors: o,
+            sectionDescriptors: a,
             intention: s,
             channel: c,
             shouldShowSoundmojiInEmojiPicker: d = !1,
@@ -173,7 +173,7 @@ let z = (e) => {
         } = e,
         b = h.kJ.useStore((e) => e.activeCategoryIndex),
         y = (0, T.Ni)({
-            sectionDescriptors: o,
+            sectionDescriptors: a,
             emojiListRef: n,
         }),
         v = (0, _.O)(),
@@ -211,7 +211,7 @@ let z = (e) => {
                 if (n.type === S.En.RECENT) return F;
                 if (n.type === S.En.GUILD) {
                     let e = A[t + 1];
-                    return null != e && e.type !== S.En.GUILD ? H : V;
+                    return null != e && e.type !== S.En.GUILD ? H : Z;
                 }
                 return Y;
             },
@@ -234,7 +234,7 @@ let z = (e) => {
                       ? (r += 1)
                       : ((e += 1), (t += 1));
             });
-            let i = F + t * V + H;
+            let i = F + t * Z + H;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
@@ -266,10 +266,10 @@ let z = (e) => {
                 let n = A[e];
                 if (null == n) return 0;
                 let r = Q ? G : 0;
-                if (n.type === S.En.RECENT) return t ? 0 : k;
+                if (n.type === S.En.RECENT) return t ? 0 : j;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
-                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * Z + M + r : M) : t ? r : M;
+                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * V + M + r : M) : t ? r : M;
                 }
                 return t ? M + r : 2 * M;
             },
@@ -304,14 +304,14 @@ let z = (e) => {
                 {
                     "aria-hidden": !Q,
                     "aria-label": C.intl.string(C.t.dT0ct7),
-                    className: a()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !Q }),
+                    className: o()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !Q }),
                     tabIndex: Q ? 0 : -1,
                     onClick: () => ee(e),
                     children: (0, r.jsx)(f.EO4, {
                         size: "custom",
                         color: "currentColor",
-                        height: j,
-                        width: j,
+                        height: k,
+                        width: k,
                     }),
                 },
                 er,

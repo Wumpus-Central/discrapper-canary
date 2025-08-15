@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(147913),
     i = n(15624),
-    o = n(70956),
-    a = n(272008),
+    a = n(70956),
+    o = n(272008),
     s = n(569984),
     l = n(497505),
     c = n(937797),
@@ -22,17 +22,17 @@ function _(e, t, n) {
         e
     );
 }
-let p = o.Z.Millis.DAY,
-    h = 30 * o.Z.Millis.MINUTE,
-    m = 5 * o.Z.Millis.SECOND,
-    g = 5 * o.Z.Millis.MINUTE,
-    E = 12 * o.Z.Millis.HOUR;
+let p = a.Z.Millis.DAY,
+    h = 30 * a.Z.Millis.MINUTE,
+    m = 5 * a.Z.Millis.SECOND,
+    g = 5 * a.Z.Millis.MINUTE,
+    E = 12 * a.Z.Millis.HOUR;
 class b extends r.Z {
     _fetch(e) {
         if ((0, d.cB)({ location: f.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests)
-            (0, a.xw)(),
+            (0, o.xw)(),
                 (c.D.getConfig({ location: f.dr.QUESTS_MANAGER }).enabled && "focused" !== i.Z.getState()) ||
-                    (0, a.w)(l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e);
+                    (0, o.w)(l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     constructor(...e) {
         super(...e),

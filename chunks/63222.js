@@ -2,22 +2,7 @@ n.d(t, { x: () => u });
 var r = n(793981),
     i = n(413815),
     o = n(521548);
-function a(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function s(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function l(e, t, n) {
-    return t && s(e.prototype, t), n && s(e, n), e;
-}
-function c(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,46 +16,47 @@ function c(e, t, n) {
     );
 }
 var u = (function () {
-    function e(t) {
+    var e;
+    function t(e) {
         var n = this;
-        a(this, e),
-            c(
-                this,
-                "hooks",
-                (0, r.p)({
-                    dragSource: function (e, t) {
-                        n.clearDragSource(),
-                            (n.dragSourceOptions = t || null),
-                            (0, i.d)(e) ? (n.dragSourceRef = e) : (n.dragSourceNode = e),
-                            n.reconnectDragSource();
-                    },
-                    dragPreview: function (e, t) {
-                        n.clearDragPreview(),
-                            (n.dragPreviewOptions = t || null),
-                            (0, i.d)(e) ? (n.dragPreviewRef = e) : (n.dragPreviewNode = e),
-                            n.reconnectDragPreview();
-                    },
-                }),
-            ),
-            c(this, "handlerId", null),
-            c(this, "dragSourceRef", null),
-            c(this, "dragSourceNode", void 0),
-            c(this, "dragSourceOptionsInternal", null),
-            c(this, "dragSourceUnsubscribe", void 0),
-            c(this, "dragPreviewRef", null),
-            c(this, "dragPreviewNode", void 0),
-            c(this, "dragPreviewOptionsInternal", null),
-            c(this, "dragPreviewUnsubscribe", void 0),
-            c(this, "lastConnectedHandlerId", null),
-            c(this, "lastConnectedDragSource", null),
-            c(this, "lastConnectedDragSourceOptions", null),
-            c(this, "lastConnectedDragPreview", null),
-            c(this, "lastConnectedDragPreviewOptions", null),
-            c(this, "backend", void 0),
-            (this.backend = t);
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        a(
+            this,
+            "hooks",
+            (0, r.p)({
+                dragSource: function (e, t) {
+                    n.clearDragSource(),
+                        (n.dragSourceOptions = t || null),
+                        (0, i.d)(e) ? (n.dragSourceRef = e) : (n.dragSourceNode = e),
+                        n.reconnectDragSource();
+                },
+                dragPreview: function (e, t) {
+                    n.clearDragPreview(),
+                        (n.dragPreviewOptions = t || null),
+                        (0, i.d)(e) ? (n.dragPreviewRef = e) : (n.dragPreviewNode = e),
+                        n.reconnectDragPreview();
+                },
+            }),
+        ),
+            a(this, "handlerId", null),
+            a(this, "dragSourceRef", null),
+            a(this, "dragSourceNode", void 0),
+            a(this, "dragSourceOptionsInternal", null),
+            a(this, "dragSourceUnsubscribe", void 0),
+            a(this, "dragPreviewRef", null),
+            a(this, "dragPreviewNode", void 0),
+            a(this, "dragPreviewOptionsInternal", null),
+            a(this, "dragPreviewUnsubscribe", void 0),
+            a(this, "lastConnectedHandlerId", null),
+            a(this, "lastConnectedDragSource", null),
+            a(this, "lastConnectedDragSourceOptions", null),
+            a(this, "lastConnectedDragPreview", null),
+            a(this, "lastConnectedDragPreviewOptions", null),
+            a(this, "backend", void 0),
+            (this.backend = e);
     }
     return (
-        l(e, [
+        (e = [
             {
                 key: "receiveHandlerId",
                 value: function (e) {
@@ -228,6 +214,15 @@ var u = (function () {
                 },
             },
         ]),
-        e
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

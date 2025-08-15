@@ -1,8 +1,8 @@
 n.d(t, {
     $R: () => u,
     AG: () => l,
-    Md: () => o,
-    PJ: () => a,
+    Md: () => a,
+    PJ: () => o,
     Sz: () => f,
     Ub: () => d,
     X6: () => i.X,
@@ -12,10 +12,10 @@ n.d(t, {
 });
 var r = n(128813),
     i = n(511495);
-function o() {
+function a() {
     return (0, r.ZP)().ExperimentCacher;
 }
-function a(e) {
+function o(e) {
     var t;
     return null != (t = (0, r.ZP)().BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(812206),
     i = n(592125),
-    o = n(944486),
-    a = n(594174),
+    a = n(944486),
+    o = n(594174),
     s = n(595519),
     l = n(636449),
     c = n(566620),
@@ -37,17 +37,17 @@ async function O(e) {
         R = i.Z.getChannel(l),
         P = null == R ? void 0 : R.getGuildId(),
         w = null == P || "" === P,
-        D = a.default.getCurrentUser();
+        D = o.default.getCurrentUser();
     if (null == D) return !1;
     if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == L ? void 0 : L.applicationId) != null &&
             (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)),
-        o.Z.getVoiceChannelId() === l &&
+        a.Z.getVoiceChannelId() === l &&
             null != L &&
             L.applicationId === n &&
-            (0, _.p)(L.location) === o.Z.getVoiceChannelId())
+            (0, _.p)(L.location) === a.Z.getVoiceChannelId())
     )
         return (0, E.Z)(P, L.location), Promise.resolve(!0);
     let x = await (0, p.Z)(n, l);

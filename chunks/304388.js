@@ -1,25 +1,12 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(930295),
+    l = n(930295),
     a = n(481060),
-    s = n(579185),
-    l = n(420212),
+    o = n(579185),
+    s = n(420212),
     c = n(689598);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,105 +17,107 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = _(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let p = 300,
-    h = 200;
-function m(e) {
-    var { renderPopout: t, onMouseEnter: n, onMouseLeave: o, closePopout: a, isHovered: s } = e,
-        l = f(e, ["renderPopout", "onMouseEnter", "onMouseLeave", "closePopout", "isHovered"]);
+function d(e) {
+    var { renderPopout: t, onMouseEnter: n, onMouseLeave: l, closePopout: a, isHovered: o } = e,
+        s = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ["renderPopout", "onMouseEnter", "onMouseLeave", "closePopout", "isHovered"]);
     return (
         i.useEffect(() => {
-            s || a();
-        }, [a, s]),
+            o || a();
+        }, [a, o]),
         (0, r.jsx)("div", {
             onMouseEnter: n,
-            onMouseLeave: o,
-            children: t(d({ closePopout: a }, l)),
+            onMouseLeave: l,
+            children: t(u({ closePopout: a }, s)),
         })
     );
 }
-let g = i.forwardRef(function (e, t) {
+let p = i.forwardRef(function (e, t) {
     let {
             renderPopout: n,
-            popoutTargetRef: u,
-            children: f,
-            align: _ = "left",
-            isPopoutBlocked: g,
-            onPopoutOpen: E,
+            popoutTargetRef: p,
+            children: h,
+            align: f = "left",
+            isPopoutBlocked: m,
+            onPopoutOpen: g,
             onPopoutClose: b,
             onRequestClose: y,
         } = e,
-        [O, v] = i.useState(!1),
-        { isHovered: I, setIsHovered: T, onMouseEnter: S, onMouseLeave: A, cancelTimers: N } = (0, s.Z)(h, p);
-    function C(e) {
-        "focus" === e.type || O || S();
+        [_, C] = i.useState(!1),
+        { isHovered: x, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
+    function S(e) {
+        "focus" === e.type || _ || j();
     }
-    function R() {
-        O || A();
+    function P() {
+        _ || O();
     }
-    function P(e) {
-        N(), v(!O), O ? null == b || b() : null == E || E(), (!I || O) && e();
-    }
-    function w(e, t) {
-        (e.key === l.vn.ENTER || e.key === l.vn.SPACE) && P(() => t(e));
+    function I(e) {
+        E(), C(!_), _ ? null == b || b() : null == g || g(), (!x || _) && e();
     }
     i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                T(!1), v(!1);
+                v(!1), C(!1);
             },
         }),
-        [T, v],
+        [v, C],
     );
-    let D = (I && !g) || O,
-        L = O;
+    let Z = (x && !m) || _;
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: u,
+        targetElementRef: p,
         animation: a.yRy.Animation.FADE,
-        shouldShow: D,
+        shouldShow: Z,
         animationPosition: "top",
         position: "top",
-        align: _,
+        align: f,
         spacing: 16,
         onRequestClose: () => {
-            if ((null == y ? void 0 : y()) === o.F) return o.F;
-            T(!1), v(!1), null == b || b();
+            if ((null == y ? void 0 : y()) === l.F) return l.F;
+            v(!1), C(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
-                m,
-                d(
+                d,
+                u(
                     {
-                        isHovered: D,
-                        onFocus: () => v(!0),
-                        onMouseEnter: S,
-                        onMouseLeave: R,
+                        isHovered: Z,
+                        onFocus: () => C(!0),
+                        onMouseEnter: j,
+                        onMouseLeave: P,
                         renderPopout: n,
                     },
                     e,
@@ -137,13 +126,15 @@ let g = i.forwardRef(function (e, t) {
         children: (e) => {
             let { onClick: t, onKeyDown: n } = e;
             return (0, r.jsx)(r.Fragment, {
-                children: f({
-                    onClick: (e) => P(() => t(e)),
-                    onKeyDown: (e) => w(e, n),
+                children: h({
+                    onClick: (e) => I(() => t(e)),
+                    onKeyDown: (e) => {
+                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && I(() => n(e));
+                    },
                     className: c.actionBarButton,
-                    onMouseEnter: C,
-                    onMouseLeave: R,
-                    isActive: L,
+                    onMouseEnter: S,
+                    onMouseLeave: P,
+                    isActive: _,
                 }),
             });
         },

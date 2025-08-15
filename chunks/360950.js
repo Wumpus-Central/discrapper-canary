@@ -39,13 +39,13 @@ e.exports = function (e) {
             ],
             literal: ["false", "nil", "true"],
         },
-        o = {
+        a = {
             className: "subst",
             begin: /#\{/,
             end: /\}/,
             keywords: i,
         },
-        a = {
+        o = {
             className: "number",
             begin: "(\\b0o[0-7_]+)|(\\b0b[01_]+)|(\\b0x[0-9a-fA-F_]+)|(-?\\b[0-9][0-9_]*(\\.[0-9_]+([eE][-+]?[0-9]+)?)?)",
             relevance: 0,
@@ -100,7 +100,7 @@ e.exports = function (e) {
             begin: "~[a-z](?=" + l + ")",
             contains: c.map((t) =>
                 e.inherit(t, {
-                    contains: [u(t.end), s, o],
+                    contains: [u(t.end), s, a],
                 }),
             ),
         },
@@ -117,7 +117,7 @@ e.exports = function (e) {
                     contains: c.map((n) =>
                         e.inherit(n, {
                             end: t.concat(n.end, /[uismxfU]{0,7}/),
-                            contains: [u(n.end), s, o],
+                            contains: [u(n.end), s, a],
                         }),
                     ),
                 },
@@ -134,7 +134,7 @@ e.exports = function (e) {
         },
         p = {
             className: "string",
-            contains: [e.BACKSLASH_ESCAPE, o],
+            contains: [e.BACKSLASH_ESCAPE, a],
             variants: [
                 {
                     begin: /"""/,
@@ -215,14 +215,14 @@ e.exports = function (e) {
                 begin: /(\b[A-Z][a-zA-Z0-9_]+)/,
                 relevance: 0,
             },
-            a,
+            o,
             {
                 className: "variable",
                 begin: "(\\$\\W)|((\\$|@@?)(\\w+))",
             },
         ];
     return (
-        (o.contains = g),
+        (a.contains = g),
         {
             name: "Elixir",
             aliases: ["ex", "exs"],

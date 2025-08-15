@@ -1,190 +1,176 @@
 n.d(t, {
-    G: () => N,
-    Z: () => P,
+    G: () => v,
+    Z: () => T,
 }),
     n(388685),
     n(781311);
 var r = n(255367),
-    i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(91192),
-    l = n(481060),
+    o = n(481060),
     c = n(385499),
-    u = n(600164),
-    d = n(313201),
-    f = n(565138),
-    _ = n(631969),
-    p = n(605436),
-    h = n(537383),
-    m = n(71080),
-    g = n(388032),
-    E = n(257803);
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function O(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function v(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let I = 40,
-    T = 32,
-    S = (0, d.hQ)(),
-    A = (0, d.hQ)();
-function N(e) {
+    d = n(600164),
+    u = n(313201),
+    m = n(565138),
+    x = n(631969),
+    h = n(605436),
+    b = n(537383),
+    y = n(71080),
+    f = n(388032),
+    p = n(257803);
+let g = (0, u.hQ)(),
+    j = (0, u.hQ)();
+function v(e) {
     return "".concat(e.rowType, ":").concat(e.id);
 }
-function C(e) {
+function E(e) {
     return (0, r.jsx)(
-        l.vwX,
+        o.vwX,
         {
             tag: "h5",
-            className: a()(E.sectionTitle, E.rowHeight),
+            className: a()(p.sectionTitle, p.rowHeight),
             children: e,
         },
         e,
     );
 }
-function R(e) {
+function S(e) {
+    var t, n;
     let {
-            id: t,
-            children: n,
-            rowLabel: i,
-            checked: o,
-            onSelect: c,
-            disabled: d,
-            showCheckbox: f,
-            selected: _,
-            onMouseEnter: p,
-            "aria-posinset": h,
-            "aria-setsize": m,
+            id: l,
+            children: i,
+            rowLabel: c,
+            checked: u,
+            onSelect: m,
+            disabled: x,
+            showCheckbox: h,
+            selected: b,
+            onMouseEnter: y,
+            "aria-posinset": f,
+            "aria-setsize": g,
         } = e,
-        g = (0, s.JA)(t);
+        j = (0, s.JA)(l);
     return (0, r.jsx)(
-        l.P3F,
-        v(y({}, g), {
-            id: t,
-            className: a()(E.addMemberRow, { [E.selectedRow]: _ }),
-            onClick: (e) => {
-                d || (e.preventDefault(), c());
-            },
-            onMouseEnter: p,
-            role: "option",
-            "aria-disabled": d,
-            "aria-selected": o,
-            "aria-setsize": m,
-            "aria-posinset": h,
-            children: (0, r.jsxs)(u.Z, {
-                justify: u.Z.Justify.BETWEEN,
-                align: u.Z.Align.CENTER,
-                children: [
-                    f
-                        ? (0, r.jsx)(l.XZJ, {
-                              displayOnly: !0,
-                              size: 18,
-                              value: o,
-                              type: l.XZJ.Types.INVERTED,
-                              disabled: d,
-                              children: (0, r.jsx)("div", {
-                                  className: E.checkboxLabel,
-                                  children: n,
-                              }),
-                          })
-                        : n,
-                    null != i
-                        ? (0, r.jsx)(l.Text, {
-                              color: "text-muted",
-                              variant: "text-xs/normal",
-                              children: i,
-                          })
-                        : null,
-                ],
+        o.P3F,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, j)),
+        (n = n =
+            {
+                id: l,
+                className: a()(p.addMemberRow, { [p.selectedRow]: b }),
+                onClick: (e) => {
+                    x || (e.preventDefault(), m());
+                },
+                onMouseEnter: y,
+                role: "option",
+                "aria-disabled": x,
+                "aria-selected": u,
+                "aria-setsize": g,
+                "aria-posinset": f,
+                children: (0, r.jsxs)(d.Z, {
+                    justify: d.Z.Justify.BETWEEN,
+                    align: d.Z.Align.CENTER,
+                    children: [
+                        h
+                            ? (0, r.jsx)(o.XZJ, {
+                                  displayOnly: !0,
+                                  size: 18,
+                                  value: u,
+                                  type: o.XZJ.Types.INVERTED,
+                                  disabled: x,
+                                  children: (0, r.jsx)("div", {
+                                      className: p.checkboxLabel,
+                                      children: i,
+                                  }),
+                              })
+                            : i,
+                        null != c
+                            ? (0, r.jsx)(o.Text, {
+                                  color: "text-muted",
+                                  variant: "text-xs/normal",
+                                  children: c,
+                              })
+                            : null,
+                    ],
+                }),
             }),
-        }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
 }
-function P(e) {
+function T(e) {
     let {
             listClassName: t,
             pendingAdditions: n,
-            query: o,
+            query: i,
             onQueryChange: s,
-            onClickRow: d,
-            onRemovePendingAddition: b,
-            roles: y = [],
-            members: O = [],
-            users: v = [],
-            guilds: P = [],
-            placeholderText: w,
-            disabledText: D,
+            onClickRow: u,
+            onRemovePendingAddition: T,
+            roles: w = [],
+            members: R = [],
+            users: O = [],
+            guilds: C = [],
+            placeholderText: N,
+            disabledText: M,
             hintText: L,
-            searchTitleText: x,
-            renderEmptyText: M,
-            focusSearchAfterReady: j,
-            isReady: k,
-            maxCount: U,
-            hideRowLabel: G = !1,
+            searchTitleText: k,
+            renderEmptyText: Z,
+            focusSearchAfterReady: P,
+            isReady: A,
+            maxCount: z,
+            hideRowLabel: I = !1,
         } = e,
-        B = i.useRef(null),
-        Z = i.useRef(null),
-        F = [y.length, O.length, v.length, P.length],
-        [V, H] = i.useState(!1),
-        [Y, W] = i.useState(0),
-        [K, z] = i.useState(-1);
-    i.useEffect(() => {
+        B = l.useRef(null),
+        D = l.useRef(null),
+        $ = [w.length, R.length, O.length, C.length],
+        [U, _] = l.useState(!1),
+        [q, G] = l.useState(0),
+        [F, Q] = l.useState(-1);
+    l.useEffect(() => {
         var e;
         null == (e = B.current) || e.focus();
     }, []);
-    let q = i.useCallback(function (e, t) {
+    let V = l.useCallback(function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            if ((W(e), z(t), n)) {
+            if ((G(e), Q(t), n)) {
                 var r;
-                null == (r = Z.current) ||
+                null == (r = D.current) ||
                     r.scrollToIndex({
                         section: null != e ? e : 0,
                         row: null != t ? t : 0,
@@ -192,269 +178,271 @@ function P(e) {
                     });
             }
         }, []),
-        X = i.useCallback(
+        J = l.useCallback(
             (e, t) => {
                 if (null == t) return;
                 s("");
-                let n = (e === m.m$.ROLES ? y : [])[t];
-                n.rowType !== m.aC.EMPTY_STATE && d(n);
+                let n = (e === y.m$.ROLES ? w : [])[t];
+                n.rowType !== y.aC.EMPTY_STATE && u(n);
             },
-            [y, d, s],
+            [w, u, s],
         ),
-        Q = i.useCallback(
+        X = l.useCallback(
             (e) => {
                 var t;
-                null != e && e.rowType !== m.aC.EMPTY_STATE && (d(e), s(""), null == (t = B.current) || t.focus());
+                null != e && e.rowType !== y.aC.EMPTY_STATE && (u(e), s(""), null == (t = B.current) || t.focus());
             },
-            [d, s],
+            [u, s],
         ),
-        J = i.useMemo(() => Object.keys(n), [n]);
-    function $(e) {
-        b(J[e]);
-    }
-    let ee =
-        i.useMemo(
-            () =>
-                O.some((e) => !e.disabled) ||
-                y.some((e) => !e.disabled) ||
-                v.some((e) => !e.disabled) ||
-                P.some((e) => !e.disabled),
-            [O, y, v, P],
-        ) || "" === o.trim();
-    function et() {
+        Y = l.useMemo(() => Object.keys(n), [n]),
+        H =
+            l.useMemo(
+                () =>
+                    R.some((e) => !e.disabled) ||
+                    w.some((e) => !e.disabled) ||
+                    O.some((e) => !e.disabled) ||
+                    C.some((e) => !e.disabled),
+                [R, w, O, C],
+            ) || "" === i.trim();
+    function W() {
         var e;
-        H(!(null == (e = Z.current) ? void 0 : e.isScrolledToTop()) && ee);
+        _(!(null == (e = D.current) ? void 0 : e.isScrolledToTop()) && H);
     }
-    i.useEffect(() => {
-        et();
-    });
-    let en = (e) => {
-            let t,
-                i,
-                { section: o, row: s } = e,
-                u = null,
-                d = !1,
-                _ = !1,
-                h = !1,
-                g = null != U && Object.keys(n).length >= U;
-            switch (o) {
-                case m.m$.ROLES:
-                    (d = (i = N((u = y[s]))) in n || u.disabled),
-                        (_ = u.disabled || (!d && g)),
-                        (h = Y === m.m$.ROLES && K === s),
-                        (t = (0, r.jsxs)("div", {
-                            className: E.rowBody,
-                            children: [
-                                (0, r.jsx)("div", {
-                                    className: a()(E.rowHeight, E.alignCenter),
-                                    children: (0, r.jsx)(l.lZ8, {
-                                        size: "custom",
-                                        color: u.colorString,
-                                        height: 20,
-                                    }),
-                                }),
-                                (0, r.jsxs)("div", {
-                                    className: E.rowLabel,
-                                    children: [
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "text-sm/medium",
-                                            className: E.__invalid_rowTitle,
-                                            color: u.rowType === m.aC.EMPTY_STATE ? "text-muted" : "text-default",
-                                            children: u.name,
-                                        }),
-                                        u.disabled && null != D
-                                            ? (0, r.jsx)(l.Text, {
-                                                  color: "header-secondary",
-                                                  variant: "text-xs/normal",
-                                                  children: D,
-                                              })
-                                            : null,
-                                    ],
-                                }),
-                            ],
-                        }));
-                    break;
-                case m.m$.MEMBERS:
-                    (d = (i = N((u = O[s]))) in n || u.disabled),
-                        (_ = u.disabled || (!d && g)),
-                        (h = Y === m.m$.MEMBERS && K === s),
-                        (t = (0, r.jsxs)("div", {
-                            className: E.rowBody,
-                            children: [
-                                (0, r.jsx)(l.qEK, {
-                                    src: u.avatarURL,
-                                    size: l.EFr.SIZE_24,
-                                    "aria-label": "",
-                                }),
-                                (0, r.jsx)(l.Text, {
-                                    className: E.rowLabel,
-                                    variant: "text-sm/normal",
-                                    children: u.name,
-                                }),
-                                null != u.nickname
-                                    ? (0, r.jsx)(l.Text, {
-                                          color: "text-muted",
-                                          className: E.rowLabelSubText,
-                                          variant: "text-sm/normal",
-                                          "aria-hidden": !0,
-                                          children: u.username,
-                                      })
-                                    : null,
-                                u.bot && (0, r.jsx)(c.Z, { verified: u.verifiedBot }),
-                            ],
-                        }));
-                    break;
-                case m.m$.USERS:
-                    (d = (i = N((u = v[s]))) in n || u.disabled),
-                        (_ = u.disabled || (!d && g)),
-                        (h = Y === m.m$.USERS && K === s),
-                        (t = (0, r.jsxs)("div", {
-                            className: E.rowBody,
-                            children: [
-                                (0, r.jsx)(l.qEK, {
-                                    src: u.avatarURL,
-                                    size: l.EFr.SIZE_24,
-                                    "aria-label": "",
-                                }),
-                                (0, r.jsxs)("div", {
-                                    className: E.rowLabel,
-                                    children: [
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "text-sm/normal",
-                                            children: u.name,
-                                        }),
-                                        u.disabled && null != D
-                                            ? (0, r.jsx)(l.Text, {
-                                                  color: "header-secondary",
-                                                  variant: "text-xs/normal",
-                                                  children: D,
-                                              })
-                                            : null,
-                                    ],
-                                }),
-                            ],
-                        }));
-                    break;
-                case m.m$.GUILDS:
-                    (d = (i = N((u = P[s]))) in n || u.disabled),
-                        (_ = u.disabled || (!d && g)),
-                        (h = Y === m.m$.GUILDS && K === s),
-                        (t = (0, r.jsxs)("div", {
-                            className: E.rowBody,
-                            children: [
-                                (0, r.jsx)(f.Z, {
-                                    guild: u.guild,
-                                    active: !0,
-                                    size: f.Z.Sizes.SMALLER,
-                                }),
-                                (0, r.jsx)("div", {
-                                    className: E.rowLabel,
-                                    children: (0, r.jsx)(l.Text, {
-                                        variant: "text-sm/medium",
-                                        color: "text-default",
-                                        children: u.name,
-                                    }),
-                                }),
-                            ],
-                        }));
-            }
-            return null == u
-                ? null
-                : (0, r.jsx)(
-                      R,
-                      {
-                          id: "user-row-".concat(s),
-                          rowLabel: G ? null : p.zB(u.rowType),
-                          checked: d,
-                          disabled: _,
-                          onSelect: () => Q(u),
-                          showCheckbox: u.rowType !== m.aC.EMPTY_STATE,
-                          onMouseEnter: () => q(o, s, !1),
-                          selected: h,
-                          "aria-posinset": s + 1,
-                          "aria-setsize": F.reduce((e, t) => e + t, 0),
-                          children: t,
-                      },
-                      i,
-                  );
-        },
-        er = (e) => {
-            let { section: t } = e;
-            switch (t) {
-                case m.m$.ROLES:
-                    return C(g.intl.string(g.t.LPJmLy));
-                case m.m$.MEMBERS:
-                    return C(g.intl.string(g.t["9Oq93t"]));
-                case m.m$.USERS:
-                    return C(g.intl.string(g.t.nqDUBQ));
-                case m.m$.GUILDS:
-                    return C(g.intl.string(g.t["7hB4kp"]));
-            }
-        };
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)("div", {
-                className: a()(E.searchBox, { [E.scrollSeparator]: V }),
-                children: [
-                    null != x &&
-                        (0, r.jsx)(l.vwX, {
-                            tag: l.RB0.H5,
-                            children: x,
+    return (
+        l.useEffect(() => {
+            W();
+        }),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsxs)("div", {
+                    className: a()(p.searchBox, { [p.scrollSeparator]: U }),
+                    children: [
+                        null != k &&
+                            (0, r.jsx)(o.vwX, {
+                                tag: o.RB0.H5,
+                                children: k,
+                            }),
+                        (0, r.jsx)(b.Z, {
+                            ref: B,
+                            query: i,
+                            onQueryChange: s,
+                            selectedSection: q,
+                            selectedRow: F,
+                            onSelectionChange: V,
+                            onSelect: J,
+                            tags: Y.map((e) => n[e].display),
+                            sections: $,
+                            onRemoveTag: function (e) {
+                                T(Y[e]);
+                            },
+                            placeholder: N,
+                            focusAfterReady: P,
+                            isReady: A,
+                            "aria-labelledby": g,
+                            "aria-controls": j,
                         }),
-                    (0, r.jsx)(h.Z, {
-                        ref: B,
-                        query: o,
-                        onQueryChange: s,
-                        selectedSection: Y,
-                        selectedRow: K,
-                        onSelectionChange: q,
-                        onSelect: X,
-                        tags: J.map((e) => n[e].display),
-                        sections: F,
-                        onRemoveTag: $,
-                        placeholder: w,
-                        focusAfterReady: j,
-                        isReady: k,
-                        "aria-labelledby": S,
-                        "aria-controls": A,
-                    }),
-                    null != L
-                        ? (0, r.jsx)(l.Text, {
-                              variant: "text-xs/normal",
-                              children: L,
-                          })
-                        : null,
-                ],
-            }),
-            ee
-                ? (0, r.jsx)(l.aVo, {
-                      ref: Z,
-                      className: a()(E.roleMemberList, t),
-                      sections: F,
-                      renderRow: en,
-                      rowHeight: I,
-                      renderSection: er,
-                      sectionHeight: T,
-                      onScroll: et,
-                      role: void 0,
-                      innerRole: "listbox",
-                      innerId: A,
-                      innerAriaMultiselectable: !0,
-                      innerAriaOrientation: "vertical",
-                  })
-                : (0, r.jsxs)(u.Z, {
-                      className: t,
-                      align: u.Z.Align.CENTER,
-                      justify: u.Z.Justify.CENTER,
-                      direction: u.Z.Direction.VERTICAL,
-                      children: [
-                          (0, r.jsx)(_.Z, { className: E.noResultIcon }),
-                          (0, r.jsx)(l.Text, {
-                              variant: "text-sm/normal",
-                              children: M(o),
-                          }),
-                      ],
-                  }),
-        ],
-    });
+                        null != L
+                            ? (0, r.jsx)(o.Text, {
+                                  variant: "text-xs/normal",
+                                  children: L,
+                              })
+                            : null,
+                    ],
+                }),
+                H
+                    ? (0, r.jsx)(o.aVo, {
+                          ref: D,
+                          className: a()(p.roleMemberList, t),
+                          sections: $,
+                          renderRow: (e) => {
+                              let t,
+                                  l,
+                                  { section: i, row: s } = e,
+                                  d = null,
+                                  u = !1,
+                                  x = !1,
+                                  b = !1,
+                                  f = null != z && Object.keys(n).length >= z;
+                              switch (i) {
+                                  case y.m$.ROLES:
+                                      (u = (l = v((d = w[s]))) in n || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = q === y.m$.ROLES && F === s),
+                                          (t = (0, r.jsxs)("div", {
+                                              className: p.rowBody,
+                                              children: [
+                                                  (0, r.jsx)("div", {
+                                                      className: a()(p.rowHeight, p.alignCenter),
+                                                      children: (0, r.jsx)(o.lZ8, {
+                                                          size: "custom",
+                                                          color: d.colorString,
+                                                          height: 20,
+                                                      }),
+                                                  }),
+                                                  (0, r.jsxs)("div", {
+                                                      className: p.rowLabel,
+                                                      children: [
+                                                          (0, r.jsx)(o.Text, {
+                                                              variant: "text-sm/medium",
+                                                              className: p.__invalid_rowTitle,
+                                                              color:
+                                                                  d.rowType === y.aC.EMPTY_STATE
+                                                                      ? "text-muted"
+                                                                      : "text-default",
+                                                              children: d.name,
+                                                          }),
+                                                          d.disabled && null != M
+                                                              ? (0, r.jsx)(o.Text, {
+                                                                    color: "header-secondary",
+                                                                    variant: "text-xs/normal",
+                                                                    children: M,
+                                                                })
+                                                              : null,
+                                                      ],
+                                                  }),
+                                              ],
+                                          }));
+                                      break;
+                                  case y.m$.MEMBERS:
+                                      (u = (l = v((d = R[s]))) in n || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = q === y.m$.MEMBERS && F === s),
+                                          (t = (0, r.jsxs)("div", {
+                                              className: p.rowBody,
+                                              children: [
+                                                  (0, r.jsx)(o.qEK, {
+                                                      src: d.avatarURL,
+                                                      size: o.EFr.SIZE_24,
+                                                      "aria-label": "",
+                                                  }),
+                                                  (0, r.jsx)(o.Text, {
+                                                      className: p.rowLabel,
+                                                      variant: "text-sm/normal",
+                                                      children: d.name,
+                                                  }),
+                                                  null != d.nickname
+                                                      ? (0, r.jsx)(o.Text, {
+                                                            color: "text-muted",
+                                                            className: p.rowLabelSubText,
+                                                            variant: "text-sm/normal",
+                                                            "aria-hidden": !0,
+                                                            children: d.username,
+                                                        })
+                                                      : null,
+                                                  d.bot && (0, r.jsx)(c.Z, { verified: d.verifiedBot }),
+                                              ],
+                                          }));
+                                      break;
+                                  case y.m$.USERS:
+                                      (u = (l = v((d = O[s]))) in n || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = q === y.m$.USERS && F === s),
+                                          (t = (0, r.jsxs)("div", {
+                                              className: p.rowBody,
+                                              children: [
+                                                  (0, r.jsx)(o.qEK, {
+                                                      src: d.avatarURL,
+                                                      size: o.EFr.SIZE_24,
+                                                      "aria-label": "",
+                                                  }),
+                                                  (0, r.jsxs)("div", {
+                                                      className: p.rowLabel,
+                                                      children: [
+                                                          (0, r.jsx)(o.Text, {
+                                                              variant: "text-sm/normal",
+                                                              children: d.name,
+                                                          }),
+                                                          d.disabled && null != M
+                                                              ? (0, r.jsx)(o.Text, {
+                                                                    color: "header-secondary",
+                                                                    variant: "text-xs/normal",
+                                                                    children: M,
+                                                                })
+                                                              : null,
+                                                      ],
+                                                  }),
+                                              ],
+                                          }));
+                                      break;
+                                  case y.m$.GUILDS:
+                                      (u = (l = v((d = C[s]))) in n || d.disabled),
+                                          (x = d.disabled || (!u && f)),
+                                          (b = q === y.m$.GUILDS && F === s),
+                                          (t = (0, r.jsxs)("div", {
+                                              className: p.rowBody,
+                                              children: [
+                                                  (0, r.jsx)(m.Z, {
+                                                      guild: d.guild,
+                                                      active: !0,
+                                                      size: m.Z.Sizes.SMALLER,
+                                                  }),
+                                                  (0, r.jsx)("div", {
+                                                      className: p.rowLabel,
+                                                      children: (0, r.jsx)(o.Text, {
+                                                          variant: "text-sm/medium",
+                                                          color: "text-default",
+                                                          children: d.name,
+                                                      }),
+                                                  }),
+                                              ],
+                                          }));
+                              }
+                              return null == d
+                                  ? null
+                                  : (0, r.jsx)(
+                                        S,
+                                        {
+                                            id: "user-row-".concat(s),
+                                            rowLabel: I ? null : h.zB(d.rowType),
+                                            checked: u,
+                                            disabled: x,
+                                            onSelect: () => X(d),
+                                            showCheckbox: d.rowType !== y.aC.EMPTY_STATE,
+                                            onMouseEnter: () => V(i, s, !1),
+                                            selected: b,
+                                            "aria-posinset": s + 1,
+                                            "aria-setsize": $.reduce((e, t) => e + t, 0),
+                                            children: t,
+                                        },
+                                        l,
+                                    );
+                          },
+                          rowHeight: 40,
+                          renderSection: (e) => {
+                              let { section: t } = e;
+                              switch (t) {
+                                  case y.m$.ROLES:
+                                      return E(f.intl.string(f.t.LPJmLy));
+                                  case y.m$.MEMBERS:
+                                      return E(f.intl.string(f.t["9Oq93t"]));
+                                  case y.m$.USERS:
+                                      return E(f.intl.string(f.t.nqDUBQ));
+                                  case y.m$.GUILDS:
+                                      return E(f.intl.string(f.t["7hB4kp"]));
+                              }
+                          },
+                          sectionHeight: 32,
+                          onScroll: W,
+                          role: void 0,
+                          innerRole: "listbox",
+                          innerId: j,
+                          innerAriaMultiselectable: !0,
+                          innerAriaOrientation: "vertical",
+                      })
+                    : (0, r.jsxs)(d.Z, {
+                          className: t,
+                          align: d.Z.Align.CENTER,
+                          justify: d.Z.Justify.CENTER,
+                          direction: d.Z.Direction.VERTICAL,
+                          children: [
+                              (0, r.jsx)(x.Z, { className: p.noResultIcon }),
+                              (0, r.jsx)(o.Text, {
+                                  variant: "text-sm/normal",
+                                  children: Z(i),
+                              }),
+                          ],
+                      }),
+            ],
+        })
+    );
 }

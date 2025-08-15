@@ -36,18 +36,18 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.dataFormatterCache =
         t.makeDataFormatters =
             void 0);
-var o = n(286110);
+var a = n(286110);
 Object.defineProperty(t, "makeDataFormatters", {
     enumerable: !0,
     get: function () {
-        return o.makeDataFormatters;
+        return a.makeDataFormatters;
     },
 });
-var a = n(159979);
+var o = n(159979);
 Object.defineProperty(t, "dataFormatterCache", {
     enumerable: !0,
     get: function () {
-        return a.dataFormatterCache;
+        return o.dataFormatterCache;
     },
 });
 var s = n(43767);

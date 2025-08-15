@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(457396),
     U = n(108989),
     G = n(51596),
-    V = n(905423),
-    B = n(155409),
+    B = n(905423),
+    V = n(155409),
     H = n(210887),
     F = n(695346),
     z = n(283595),
@@ -371,7 +371,7 @@ let eO = i.memo(function (e) {
         className: ea.privateChannels,
         "aria-label": ei.intl.string(ei.t.ZH9aPz),
         children: [
-            (0, r.jsx)(B.Z, {
+            (0, r.jsx)(V.Z, {
                 childRef: b,
                 tutorialId: "direct-messages",
                 position: "right",
@@ -506,7 +506,7 @@ function ey() {
         { theme: i } = (0, d.cj)([H.Z], () => ({ theme: H.Z.theme })),
         l = (0, d.e7)([z.Z], () => z.Z.hasLibraryApplication()),
         a = (0, d.e7)([W.Z], () => W.Z.getCurrentPath()),
-        [s, c] = (0, V.Z)((e) => {
+        [s, c] = (0, B.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),

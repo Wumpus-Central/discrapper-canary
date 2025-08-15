@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    o = n(692547),
     s = n(481060),
     l = n(535322),
     c = n(31698),
@@ -106,19 +106,19 @@ let m = [
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: o()(
+                                            className: a()(
                                                 h.tierCardBorderHighlight,
                                                 h.tierCardBorderHighlightTopRight,
                                             ),
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: o()(
+                                            className: a()(
                                                 h.tierCardBorderHighlight,
                                                 h.tierCardBorderHighlightBottomLeft,
                                             ),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: o()(
+                                            className: a()(
                                                 h.tierCardSparkleHighlight,
                                                 h.tierCardSparkleHighlightTopRight,
                                             ),
@@ -129,7 +129,7 @@ let m = [
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: o()(
+                                            className: a()(
                                                 h.tierCardSparkleHighlight,
                                                 h.tierCardSparkleHighlightBottomLeft,
                                             ),
@@ -178,7 +178,7 @@ let m = [
                                                           children: [
                                                               (0, r.jsx)(e.icon, {
                                                                   className: h.tierCardListIcon,
-                                                                  color: a.Z.colors.WHITE,
+                                                                  color: o.Z.colors.WHITE,
                                                               }),
                                                               e.getCopy(),
                                                           ],

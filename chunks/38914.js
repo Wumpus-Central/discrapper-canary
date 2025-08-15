@@ -1,35 +1,35 @@
-n.d(t, { q: () => c });
+n.d(t, { q: () => l });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    a = n(483444),
-    l = n(388032),
-    o = n(156716),
+var a = n(481060),
+    i = n(483444),
+    o = n(388032),
+    c = n(156716),
     s = n(302681);
-let c = () => {
-    let e = [l.t.E1NP29, l.t.kpMomJ, l.t.xT1Vfn, l.t.myyAEh, l.t.zTk8Ul];
+let l = () => {
+    let e = [o.t.E1NP29, o.t.kpMomJ, o.t.xT1Vfn, o.t.myyAEh, o.t.zTk8Ul];
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: c.container,
         children: [
             (0, r.jsx)("img", {
                 src: s.Z,
                 alt: "",
-                className: o.headerAsset,
+                className: c.headerAsset,
             }),
-            (0, r.jsx)(a.Z, { color: "white" }),
+            (0, r.jsx)(i.Z, { color: "white" }),
             (0, r.jsx)("div", {
-                className: o.benefits,
+                className: c.benefits,
                 children: e.map((e, t) =>
                     (0, r.jsxs)(
                         "div",
                         {
-                            className: o.benefitRow,
+                            className: c.benefitRow,
                             children: [
-                                (0, r.jsx)(i.kmB, { color: i.TVs.colors.WHITE }),
-                                (0, r.jsx)(i.Text, {
+                                (0, r.jsx)(a.kmB, { color: a.TVs.colors.WHITE }),
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-sm/medium",
                                     color: "always-white",
-                                    children: l.intl.string(e),
+                                    children: o.intl.string(e),
                                 }),
                             ],
                         },

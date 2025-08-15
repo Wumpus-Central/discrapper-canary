@@ -3,7 +3,7 @@ e.exports = function (e) {
         n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
         r = t.concat(n, t.concat("(\\.", n, ")*")),
         i = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        o = {
+        a = {
             className: "rest_arg",
             begin: /[.]{3}/,
             end: n,
@@ -109,7 +109,7 @@ e.exports = function (e) {
                             e.QUOTE_STRING_MODE,
                             e.C_LINE_COMMENT_MODE,
                             e.C_BLOCK_COMMENT_MODE,
-                            o,
+                            a,
                         ],
                     },
                     { begin: t.concat(/:\s*/, i) },

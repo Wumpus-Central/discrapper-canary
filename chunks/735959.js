@@ -1,4 +1,4 @@
-a.d(t, { Z: () => f }), a(388685);
+a.d(t, { Z: () => v }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(125697),
@@ -13,11 +13,11 @@ var n = a(255367),
     h = a(428530),
     p = a(257785),
     b = a(388032);
-function f() {
+function v() {
     let e = (0, c.e7)([x.default], () => x.default.locale),
         [t, a] = r.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
-        f = r.useMemo(() => b.t[i], [i]);
+        v = r.useMemo(() => b.t[i], [i]);
     return (0, n.jsxs)("div", {
         children: [
             (0, n.jsxs)(m.ZP, {
@@ -88,11 +88,11 @@ function f() {
                     }),
                     (0, n.jsx)(p.Z9, {
                         name: "Exists?",
-                        children: null != f ? "yes" : "no",
+                        children: null != v ? "yes" : "no",
                     }),
                 ],
             }),
-            (0, n.jsx)(h.Z, { data: null == f ? void 0 : f(e) }),
+            (0, n.jsx)(h.Z, { data: null == v ? void 0 : v(e) }),
         ],
     });
 }

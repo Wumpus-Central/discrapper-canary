@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(512722),
     i = n.n(r),
-    o = n(668757),
-    a = n(750179);
+    a = n(668757),
+    o = n(750179);
 function s(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ class u {
     getCachedConfig() {
         return (
             this.cachedConfig === c &&
-                ((0, o.X6)() ? (this.cachedConfig = (0, o.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)),
+                ((0, a.X6)() ? (this.cachedConfig = (0, a.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
     }
@@ -71,7 +71,7 @@ class d extends u {
                         return "typescript";
                 }
             })();
-        return (0, a.k)(t);
+        return (0, o.k)(t);
     }
     getEnabledFeatureName() {
         let e = this.getCachedBridgedStoreMode();

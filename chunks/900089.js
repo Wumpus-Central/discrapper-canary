@@ -1,15 +1,15 @@
 n.d(t, {
     Fw: () => i,
-    RC: () => o,
-    gs: () => a,
+    RC: () => a,
+    gs: () => o,
 });
 var r = n(692547);
 function i(e) {
     return r.Z.unsafe_rawColors[e].css;
 }
-function o() {
+function a() {
     return r.Z.themes;
 }
-function a() {
+function o() {
     return r.Z.radii;
 }

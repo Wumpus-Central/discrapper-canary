@@ -1,11 +1,11 @@
 n.d(t, {
-    Tz: () => a,
-    cE: () => o,
+    Tz: () => o,
+    cE: () => a,
     j0: () => s,
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "guild",
     id: "2025-06_server_content_level_setting",
     label: "Guild content level setting",
@@ -19,9 +19,9 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { guildId: t, location: n } = e,
-        r = o.getCurrentConfig(
+        r = a.getCurrentConfig(
             {
                 guildId: t,
                 location: n,
@@ -32,7 +32,7 @@ function a(e) {
 }
 function s(e) {
     let { guildId: t, location: n } = e,
-        r = o.getCurrentConfig(
+        r = a.getCurrentConfig(
             {
                 guildId: t,
                 location: n,

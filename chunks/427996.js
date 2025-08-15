@@ -1,20 +1,20 @@
-n.d(t, { W: () => f });
-var r = n(255367);
+n.d(t, { W: () => p });
+var l = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    r = n.n(i),
     a = n(399606),
-    s = n(481060),
-    l = n(337682),
+    o = n(481060),
+    s = n(337682),
     c = n(115130),
     u = n(388032),
     d = n(625234);
-function f(e) {
+function p(e) {
     let { hideSearch: t, className: n } = e,
         {
             activityUrlOverride: i,
-            useActivityUrlOverride: f,
-            filter: _,
+            useActivityUrlOverride: p,
+            filter: m,
         } = (0, a.cj)(
             [c.Z],
             () => ({
@@ -24,41 +24,40 @@ function f(e) {
             }),
             [],
         );
-    function p() {
-        l.a8("");
-    }
-    return (0, r.jsxs)("div", {
-        className: o()(d.container, n),
+    return (0, l.jsxs)("div", {
+        className: r()(d.container, n),
         children: [
-            (0, r.jsx)(s.XZJ, {
-                type: s.XZJ.Types.INVERTED,
-                value: f,
-                onClick: l.Y$,
-                children: (0, r.jsx)(s.Text, {
+            (0, l.jsx)(o.XZJ, {
+                type: o.XZJ.Types.INVERTED,
+                value: p,
+                onClick: s.Y$,
+                children: (0, l.jsx)(o.Text, {
                     variant: "text-md/semibold",
                     children: u.intl.string(u.t["3TSGuL"]),
                 }),
             }),
-            f
-                ? (0, r.jsx)(s.xJW, {
+            p
+                ? (0, l.jsx)(o.xJW, {
                       title: u.intl.string(u.t["9rnmen"]),
-                      children: (0, r.jsx)(s.oil, {
-                          disabled: !f,
+                      children: (0, l.jsx)(o.oil, {
+                          disabled: !p,
                           value: null != i ? i : void 0,
-                          onChange: l.jS,
+                          onChange: s.jS,
                           placeholder: "https://localhost:3000",
                       }),
                   })
                 : null,
             !0 === t
                 ? null
-                : (0, r.jsx)("div", {
-                      children: (0, r.jsx)(s.E1j, {
+                : (0, l.jsx)("div", {
+                      children: (0, l.jsx)(o.E1j, {
                           size: "sm",
                           className: d.searchBar,
-                          query: _,
-                          onChange: l.a8,
-                          onClear: p,
+                          query: m,
+                          onChange: s.a8,
+                          onClear: function () {
+                              s.a8("");
+                          },
                       }),
                   }),
         ],

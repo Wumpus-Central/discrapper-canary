@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(40572),
+    a = n(570140),
+    o = n(40572),
     s = n(914010);
 function l(e, t, n) {
     return (
@@ -23,7 +23,7 @@ let c = {},
     f = !1;
 function _(e) {
     let { guildId: t, emojis: n } = e;
-    u[t] = n.map((e) => new a.Z(e));
+    u[t] = n.map((e) => new o.Z(e));
 }
 function p(e) {
     let { guildId: t } = e;
@@ -67,7 +67,7 @@ class y extends (r = i.ZP.Store) {
     }
 }
 l(y, "displayName", "GuildSettingsEmojiStore");
-let O = new y(o.Z, {
+let O = new y(a.Z, {
     EMOJI_DELETE: b,
     EMOJI_FETCH_SUCCESS: _,
     EMOJI_FETCH_FAILURE: p,

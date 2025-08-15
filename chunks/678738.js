@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -12,7 +12,7 @@ function f(e) {
     let {
             children: t,
             heading: n,
-            headingIcon: o,
+            headingIcon: a,
             introText: f,
             className: _,
             scrollIntoView: p = !1,
@@ -34,7 +34,7 @@ function f(e) {
         }, [b]),
         (0, r.jsxs)("section", {
             ref: p ? y : void 0,
-            className: a()(d.section, _),
+            className: o()(d.section, _),
             "aria-labelledby": null != n ? E : void 0,
             children: [
                 null != n &&
@@ -51,7 +51,7 @@ function f(e) {
                                         id: E,
                                         children: n,
                                     }),
-                                    o,
+                                    a,
                                 ],
                             }),
                             null != f &&

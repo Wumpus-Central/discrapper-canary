@@ -1,8 +1,8 @@
-n.d(t, { Z: () => eo }), n(388685), n(997841);
+n.d(t, { Z: () => ea }), n(388685), n(997841);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(579806),
+    a = n(570140),
+    o = n(579806),
     s = n(594190),
     l = n(569545),
     c = n(314897),
@@ -104,8 +104,8 @@ let O = "default",
         },
     };
 async function x() {
-    if (L.clipsSettings.storageLocation !== O || null == a.Z || null == a.Z.remoteApp) return;
-    let e = await a.Z.remoteApp.getPath("documents");
+    if (L.clipsSettings.storageLocation !== O || null == o.Z || null == o.Z.remoteApp) return;
+    let e = await o.Z.remoteApp.getPath("documents");
     (L.clipsSettings.storageLocation = e), ei.emitChange();
 }
 function M(e) {
@@ -123,7 +123,7 @@ function M(e) {
             L.clipsSettings.clipsEnabled &&
             (L.clipsSettings.decoupledClipsEnabled = !0);
 }
-function j(e) {
+function k(e) {
     let { clip: t } = e;
     for (let [e, n] of I.entries())
         if (n.id === t.id) {
@@ -131,7 +131,7 @@ function j(e) {
             return;
         }
 }
-function k(e) {
+function j(e) {
     let { settings: t } = e;
     L = y(E({}, L), { clipsSettings: E({}, L.clipsSettings, t) });
 }
@@ -159,7 +159,7 @@ function G(e) {
 function B() {
     S = Math.max(S - 1, 0);
 }
-function Z(e) {
+function V(e) {
     var t, n;
     let { clip: r } = e;
     (S = Math.max(S - 1, 0)),
@@ -189,7 +189,7 @@ function F(e) {
     let { clip: t } = e;
     T = [t, ...T];
 }
-function V(e) {
+function Z(e) {
     let { clipId: t } = e;
     T = T.filter((e) => {
         let { id: n } = e;
@@ -432,11 +432,11 @@ g(er, "displayName", "ClipsStore"),
                 },
             }),
     ]);
-let ei = new er(o.Z, {
-        CLIPS_SETTINGS_UPDATE: k,
-        CLIPS_SAVE_CLIP: Z,
+let ei = new er(a.Z, {
+        CLIPS_SETTINGS_UPDATE: j,
+        CLIPS_SAVE_CLIP: V,
         CLIPS_SAVE_CLIP_PLACEHOLDER: F,
-        CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: V,
+        CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: Z,
         CLIPS_SAVE_CLIP_START: U,
         CLIPS_SAVE_CLIP_ERROR: B,
         CLIPS_SAVE_ANIMATION_END: G,
@@ -446,7 +446,7 @@ let ei = new er(o.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: $,
         CLIPS_LOAD_DIRECTORY_SUCCESS: X,
         CLIPS_DELETE_CLIP: Q,
-        CLIPS_UPDATE_METADATA: j,
+        CLIPS_UPDATE_METADATA: k,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
         VOICE_CHANNEL_SELECT: Y,
@@ -456,4 +456,4 @@ let ei = new er(o.Z, {
         CLIPS_DISMISS_EDUCATION: en,
         RUNNING_GAMES_CHANGE: et,
     }),
-    eo = ei;
+    ea = ei;

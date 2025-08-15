@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(129861),
     c = n(670188),
@@ -65,9 +65,9 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,15 +76,15 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
     let {
             user: t,
             guildId: n,
-            channelId: o,
+            channelId: a,
             nick: d,
             className: _,
             textClassName: m,
@@ -100,7 +100,7 @@ function g(e) {
         targetElementRef: I,
         user: t,
         guildId: n,
-        channelId: o,
+        channelId: a,
         position: "left",
         shouldShow: !g && void 0,
         onRequestOpen: O,
@@ -108,12 +108,12 @@ function g(e) {
         ignoreModalClicks: E,
         children: (e) => {
             var { onClick: i } = e,
-                o = h(e, ["onClick"]);
+                a = h(e, ["onClick"]);
             return (0, r.jsxs)(
                 s.P3F,
-                p(f({}, o), {
+                p(f({}, a), {
                     innerRef: I,
-                    className: a()(u.userListItem, _, { [u.popoutDisabled]: g }),
+                    className: o()(u.userListItem, _, { [u.popoutDisabled]: g }),
                     onContextMenu: y,
                     onClick: (e) => {
                         i(e), null == b || b(e);
@@ -126,7 +126,7 @@ function g(e) {
                             size: s.EFr.SIZE_24,
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: a()(u.userListItemTag, m),
+                            className: o()(u.userListItemTag, m),
                             variant: "text-sm/normal",
                             children: (0, r.jsx)(l.Z, {
                                 user: t,

@@ -1,26 +1,26 @@
 n.d(t, { B: () => a });
 var r = n(913527),
     i = n.n(r),
-    o = n(388032);
+    l = n(388032);
 let a = [
     {
         getDueAt: () => i()().add(30, "minutes").toDate(),
-        getLabel: () => o.intl.string(o.t["OV8l/P"]),
+        getLabel: () => l.intl.string(l.t["OV8l/P"]),
     },
     {
         getDueAt: () => i()().add(1, "hour").toDate(),
-        getLabel: () => o.intl.string(o.t["zf0R+/"]),
+        getLabel: () => l.intl.string(l.t["zf0R+/"]),
     },
     {
         getDueAt: () => i()().add(4, "hour").toDate(),
-        getLabel: () => o.intl.string(o.t["5gztZG"]),
+        getLabel: () => l.intl.string(l.t["5gztZG"]),
     },
     {
         getDueAt: () => {
             let e = i()().startOf("day").add(9, "hours");
             return i()().hour() >= 9 ? e.add(1, "day").toDate() : e.toDate();
         },
-        getLabel: () => (i()().hour() >= 9 ? o.intl.string(o.t["7MKr2N"]) : o.intl.string(o.t.FnFI3t)),
+        getLabel: () => (i()().hour() >= 9 ? l.intl.string(l.t["7MKr2N"]) : l.intl.string(l.t.FnFI3t)),
     },
     {
         getDueAt: () => {
@@ -31,6 +31,6 @@ let a = [
                 i()().day(e).startOf("day").add(9, "hours").toDate()
             );
         },
-        getLabel: () => o.intl.string(o.t["q+Ls09"]),
+        getLabel: () => l.intl.string(l.t["q+Ls09"]),
     },
 ];

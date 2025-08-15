@@ -21,14 +21,14 @@ var i = n(255367),
     C = n(277053),
     N = n(388610),
     S = n(592125),
-    E = n(496675),
-    O = n(699516),
-    Z = n(594174),
-    w = n(585483),
-    T = n(787263),
+    O = n(496675),
+    E = n(699516),
+    w = n(594174),
+    T = n(585483),
+    Z = n(787263),
     R = n(975316),
-    _ = n(428813),
-    I = n(2147),
+    I = n(428813),
+    _ = n(2147),
     P = n(856606),
     A = n(981631),
     L = n(388032),
@@ -123,7 +123,7 @@ class k extends l.PureComponent {
                                                           className: D.channelIcon,
                                                       })
                                                     : null,
-                                                (0, g.F6)(t, Z.default, O.Z),
+                                                (0, g.F6)(t, w.default, E.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: "span",
@@ -131,7 +131,7 @@ class k extends l.PureComponent {
                                                           color: "header-secondary",
                                                           lineClamp: 1,
                                                           className: D.category,
-                                                          children: (0, g.F6)(n, Z.default, O.Z),
+                                                          children: (0, g.F6)(n, w.default, E.Z),
                                                       })
                                                     : null,
                                             ],
@@ -142,9 +142,9 @@ class k extends l.PureComponent {
                               section: A.CoT.OVERVIEW,
                               label: L.intl.string(L.t["/dp6yc"]),
                               ariaLabel: L.intl.string(L.t["/dp6yc"]),
-                              element: I.Z,
+                              element: _.Z,
                               notice: {
-                                  element: I.G,
+                                  element: _.G,
                                   stores: [N.Z],
                               },
                               predicate: () => !t.isModeratorReportChannel(),
@@ -162,7 +162,7 @@ class k extends l.PureComponent {
                           {
                               section: A.CoT.INSTANT_INVITES,
                               label: L.intl.string(L.t["9F90iY"]),
-                              element: _.Z,
+                              element: I.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => t.type !== x && r && !j && !t.isModeratorReportChannel(),
                           },
@@ -181,8 +181,8 @@ class k extends l.PureComponent {
                           {
                               section: A.CoT.DELETE,
                               onClick() {
-                                  (0, T.w)(t, function () {
-                                      w.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, Z.w)(t, function () {
+                                      T.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();
@@ -223,11 +223,11 @@ function B() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g,
-        } = (0, r.cj)([E.Z], () => ({
-            canManageChannels: E.Z.can(A.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && E.Z.can(A.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && E.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, E.Z),
+        } = (0, r.cj)([O.Z], () => ({
+            canManageChannels: O.Z.can(A.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && O.Z.can(A.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && O.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, O.Z),
         })),
         m = (0, r.e7)([S.Z], () => S.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {

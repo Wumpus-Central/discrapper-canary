@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -32,8 +32,8 @@ function T(e) {
             paymentSourceId: t.paymentSourceId,
             currency: t.currency,
         }),
-        I = (0, C.og)((0, C.T4)(T.amount, T.currency), O.interval, O.intervalCount);
-    async function N() {
+        N = (0, C.og)((0, C.T4)(T.amount, T.currency), O.interval, O.intervalCount);
+    async function I() {
         await (0, p.dP)(
             t,
             t.planId,
@@ -68,12 +68,12 @@ function T(e) {
                 children: (0, _.Q0)(t.planId)
                     ? v.intl.format(v.t.GMp54O, {
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: I,
+                          existingRate: N,
                       })
                     : v.intl.format(v.t["vx/NZ2"], {
                           existingPlan: E.ZP.getDisplayName(t.planId),
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: I,
+                          existingRate: N,
                       }),
             }),
             (0, i.jsxs)(m.mzw, {
@@ -81,7 +81,7 @@ function T(e) {
                     (0, i.jsx)(m.zxk, {
                         variant: "primary",
                         text: v.intl.string(v.t.frE8KC),
-                        onClick: N,
+                        onClick: I,
                     }),
                     (0, i.jsx)(u.zx, {
                         look: u.zx.Looks.LINK,
@@ -94,7 +94,7 @@ function T(e) {
         ],
     });
 }
-function I(e) {
+function N(e) {
     let { subscription: t, renewalMutations: n, className: s, analyticsLocation: l } = e,
         [o, c] = r.useState(!1),
         d = (0, f.Z)(),

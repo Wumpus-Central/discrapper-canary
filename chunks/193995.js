@@ -1,5 +1,5 @@
-n.d(t, { a: () => l });
-let r = n(724163).newStemmer("english");
-function l(e) {
-    return r.stem(e);
+t.d(e, { a: () => r });
+let n = t(724163).newStemmer("english");
+function r(A) {
+    return n.stem(A);
 }

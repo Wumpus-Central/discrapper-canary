@@ -1,8 +1,8 @@
 n.d(t, { M: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(846027),
+    a = n(481060),
+    o = n(846027),
     s = n(626135),
     l = n(72897),
     c = n(981631),
@@ -63,17 +63,17 @@ function h(e, t) {
 function m(e) {
     return {
         [u.h7.AUDIO_INPUT]: {
-            setDevice: a.Z.setInputDevice,
+            setDevice: o.Z.setInputDevice,
             getLabel: () => d.intl.string(d.t.ElbIXF),
             getLocation: (e) => "".concat(e, ".useInputDeviceMenuItems"),
         },
         [u.h7.AUDIO_OUTPUT]: {
-            setDevice: a.Z.setOutputDevice,
+            setDevice: o.Z.setOutputDevice,
             getLabel: () => d.intl.string(d.t["6Ww0iI"]),
             getLocation: (e) => "".concat(e, ".useOutputDeviceMenuItems"),
         },
         [u.h7.VIDEO_INPUT]: {
-            setDevice: a.Z.setVideoDevice,
+            setDevice: o.Z.setVideoDevice,
             getLabel: () => d.intl.string(d.t.F122Gx),
             getLocation: (e) => "".concat(e, ".useVideoDeviceMenuItems"),
         },
@@ -83,7 +83,7 @@ function g(e) {
     let {
             deviceType: t,
             analyticsLocations: n,
-            asSubmenu: a = !1,
+            asSubmenu: o = !1,
             onDeviceSelect: u,
             showAllDevices: f = !1,
             selectedDeviceId: p,
@@ -99,14 +99,14 @@ function g(e) {
         { id: R, name: P } = (0, l.p6)(t),
         w = null != p ? p : R,
         D = C.map((e) => {
-            let { id: i, disabled: a, name: s } = e;
+            let { id: i, disabled: o, name: s } = e;
             return (0, r.jsx)(
-                o.k5B,
+                a.k5B,
                 _(
                     {
                         id: "".concat(t, "-").concat(i),
                         group: "".concat(t, "-devices"),
-                        disabled: a,
+                        disabled: o,
                         label: s,
                         checked: i === w,
                         action: () => {
@@ -119,7 +119,7 @@ function g(e) {
                 "".concat(t, "-").concat(i),
             );
         }),
-        L = (0, r.jsx)(o.sNh, {
+        L = (0, r.jsx)(a.sNh, {
             id: "SHOW_MORE",
             label: d.intl.string(d.t.E99UMj),
             dontCloseOnAction: !0,
@@ -135,9 +135,9 @@ function g(e) {
             },
         }),
         x = !I && (null == N ? void 0 : N.length) > 0;
-    return a
+    return o
         ? (0, r.jsxs)(
-              o.sNh,
+              a.sNh,
               h(
                   _(
                       {
@@ -153,7 +153,7 @@ function g(e) {
               ),
           )
         : (0, r.jsxs)(
-              o.kSQ,
+              a.kSQ,
               h(_({ label: O() }, g), {
                   children: [D, x && L],
               }),

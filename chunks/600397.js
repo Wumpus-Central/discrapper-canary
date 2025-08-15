@@ -1,50 +1,50 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    o = n(835473),
+    l = n(835473),
     a = n(925329),
-    s = n(63063),
-    l = n(739566),
+    o = n(63063),
+    s = n(739566),
     c = n(942951),
     u = n(834129),
     d = n(981631),
-    f = n(388032),
-    _ = n(372563);
-function p(e) {
-    let { message: t, channel: n, author: p, compact: h } = e,
-        { nick: m } = (0, l.Sw)(p, n),
-        g = (0, c.l)({
-            user: p,
+    p = n(388032),
+    m = n(372563);
+function f(e) {
+    let { message: t, channel: n, author: f, compact: _ } = e,
+        { nick: g } = (0, s.Sw)(f, n),
+        h = (0, c.l)({
+            user: f,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0,
         })(),
-        E = (0, o.q)(t.applicationId);
-    if (null == E) return null;
-    let b = f.intl.format(f.t.m7Lwam, {
-        username: m,
-        usernameHook: g,
-        gameName: E.name,
+        b = (0, l.q)(t.applicationId);
+    if (null == b) return null;
+    let E = p.intl.format(p.t.m7Lwam, {
+        username: g,
+        usernameHook: h,
+        gameName: b.name,
         gameIconHook: (e) =>
             (0, r.jsxs)("span", {
-                className: _.gameContainer,
+                className: m.gameContainer,
                 children: [
                     (0, r.jsx)(a.Z, {
-                        game: E,
+                        game: b,
                         size: a.Z.Sizes.XXSMALL,
-                        className: _.inlineIcon,
+                        className: m.inlineIcon,
                     }),
                     " ",
                     e,
                 ],
             }),
-        helpdeskArticle: s.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
+        helpdeskArticle: o.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, r.jsx)(u.Z, {
         iconNode: (0, r.jsx)(i.iWm, { size: "sm" }),
-        compact: h,
-        contentClassName: _.content,
-        children: (0, r.jsx)("div", { children: b }),
+        compact: _,
+        contentClassName: m.content,
+        children: (0, r.jsx)("div", { children: E }),
     });
 }

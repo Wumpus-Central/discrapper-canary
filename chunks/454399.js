@@ -1,8 +1,8 @@
 n.d(t, { i_: () => I }), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(314910),
+    a = n(481060),
+    o = n(314910),
     s = n(550656),
     l = n(725027),
     c = n(464281),
@@ -68,9 +68,9 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,8 +79,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = i.createContext(null);
@@ -88,7 +88,7 @@ function O(e) {
     var {
             children: t,
             title: n,
-            body: a,
+            body: o,
             asset: s,
             targetElementRef: l,
             onAnimationRest: c,
@@ -126,19 +126,19 @@ function O(e) {
                         (0, r.jsxs)("div", {
                             className: _.textContent,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-sm/bold",
                                     children: n,
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-sm/medium",
-                                    children: a,
+                                    children: o,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [s, n, a],
+            [s, n, o],
         ),
         {
             isVisible: N,
@@ -182,7 +182,7 @@ function v(e) {
         let e = n;
         return (0, c.C9)(e, r.triggerProps, r.tooltipId, r.triggerRef);
     }
-    let o = g(h({}, r.triggerProps), {
+    let a = g(h({}, r.triggerProps), {
         onFocus: (0, c.tS)(r.triggerProps.onFocus, (e) => {
             let t = e.target;
             if (null != t) {
@@ -195,17 +195,17 @@ function v(e) {
     return (0, c.FX)({
         element: "div",
         children: n,
-        triggerHandlers: o,
+        triggerHandlers: a,
         triggerRef: r.triggerRef,
     });
 }
 function I(e) {
     var { children: t, asContainer: n = !1 } = e,
-        o = E(e, ["children", "asContainer"]);
+        a = E(e, ["children", "asContainer"]);
     return n
         ? (0, r.jsx)(
               O,
-              g(h({}, o), {
+              g(h({}, a), {
                   children: (0, r.jsx)(v, {
                       strategy: "wrap",
                       children: t,
@@ -215,7 +215,7 @@ function I(e) {
         : i.isValidElement(t)
           ? (0, r.jsx)(
                 O,
-                g(h({}, o), {
+                g(h({}, a), {
                     children: (0, r.jsx)(v, {
                         strategy: "clone",
                         children: t,
@@ -230,7 +230,7 @@ function T() {
     if (null == t) throw Error("RichTooltipContent must be used within RichTooltipRoot");
     let {
         isVisible: n,
-        isRendered: o,
+        isRendered: a,
         handleExitComplete: u,
         onAnimationRest: f,
         tooltipId: _,
@@ -253,7 +253,7 @@ function T() {
                   isRichTooltip: !0,
                   children: (0, r.jsx)(s.N, {
                       isVisible: n,
-                      isRendered: o,
+                      isRendered: a,
                       targetElementRef: p,
                       id: _,
                       content: h,
@@ -261,7 +261,7 @@ function T() {
                       align: g,
                       spacing: E,
                       caretConfig: b,
-                      layerContext: null != O ? O : a.nz,
+                      layerContext: null != O ? O : o.nz,
                       animationStyle: e,
                       "data-mana-component": "rich-tooltip",
                   }),

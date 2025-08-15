@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140);
 function l(e, t, n) {
     return (
@@ -61,12 +61,12 @@ function p(e) {
     let { connectedApps: t } = e;
     u = c({}, t);
 }
-class h extends (r = a.ZP.Store) {
+class h extends (r = o.ZP.Store) {
     isConnected(e) {
         return null != u[e];
     }
     get connections() {
-        return o().values(u);
+        return a().values(u);
     }
     getApplication(e) {
         return u[e];

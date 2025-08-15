@@ -15,17 +15,17 @@ n.d(t, {
     n(388685);
 var r = n(264344),
     i = n.n(r),
-    o = n(772848),
-    a = n(511266);
+    a = n(772848),
+    o = n(511266);
 function s(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -34,8 +34,8 @@ function l(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let c = "com.discord",
@@ -48,12 +48,12 @@ function h() {
     var e, t;
     let n = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"],
         r = RegExp("(".concat(n.join("|"), ")"), "ig"),
-        o = (null === i() || void 0 === i() || null == (e = i().ua) ? void 0 : e.match(r)) != null,
-        a = (null === i() || void 0 === i() ? void 0 : i().name) === "Safari" && !o;
-    return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== "iOS" || a;
+        a = (null === i() || void 0 === i() || null == (e = i().ua) ? void 0 : e.match(r)) != null,
+        o = (null === i() || void 0 === i() ? void 0 : i().name) === "Safari" && !a;
+    return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== "iOS" || o;
 }
 function m() {
-    return (0, o.Z)();
+    return (0, a.Z)();
 }
 function g(e) {
     let t = e.startsWith(_),
@@ -64,10 +64,10 @@ function g(e) {
             r = n ? t.get("link") : t.get("deep_link_value");
         if (null == r) return null;
         let i = decodeURIComponent(r),
-            o = new URL(i).searchParams,
-            a = n ? t.get("utm_source") : t.get("pid"),
-            s = { utmSource: null != a ? a : void 0 };
-        for (let [e, t] of o.entries()) s[e] = t;
+            a = new URL(i).searchParams,
+            o = n ? t.get("utm_source") : t.get("pid"),
+            s = { utmSource: null != o ? o : void 0 };
+        for (let [e, t] of a.entries()) s[e] = t;
         return s;
     } catch (e) {
         return null;
@@ -75,7 +75,7 @@ function g(e) {
 }
 function E(e, t) {
     var n, r;
-    let { utmSource: i, androidFallbackLink: o, iosFallbackLink: l } = t,
+    let { utmSource: i, androidFallbackLink: a, iosFallbackLink: l } = t,
         m = s(t, ["utmSource", "androidFallbackLink", "iosFallbackLink"]),
         g = new URL(e);
     for (let e in m) {
@@ -83,9 +83,9 @@ function E(e, t) {
         null != t && g.searchParams.set(e, t);
     }
     let E = encodeURIComponent(g.toString()),
-        b = encodeURIComponent((0, a.Z)()),
+        b = encodeURIComponent((0, o.Z)()),
         y = +!!h(),
-        O = null != o ? encodeURIComponent(o) : null,
+        O = null != a ? encodeURIComponent(a) : null,
         v = null != l ? encodeURIComponent(l) : null;
     if ((null == (r = window) || null == (n = r.location) ? void 0 : n.hash) === "#test") {
         let e = ""

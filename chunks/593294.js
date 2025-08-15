@@ -1,13 +1,13 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(442837),
     i = n(317381),
-    o = n(835473),
-    a = n(158776),
+    a = n(835473),
+    o = n(158776),
     s = n(719247),
     l = n(567493);
 function c(e) {
-    let t = (0, r.e7)([s.Z, a.Z], () => ((0, l.KF)(e) ? (0, l.hQ)(e, a.Z) : s.Z.getMatchingActivity(e))),
-        [n, c] = (0, o.Z)([
+    let t = (0, r.e7)([s.Z, o.Z], () => ((0, l.KF)(e) ? (0, l.hQ)(e, o.Z) : s.Z.getMatchingActivity(e))),
+        [n, c] = (0, a.Z)([
             null == t ? void 0 : t.application_id,
             "application_id" in e.extra ? e.extra.application_id : void 0,
         ]);

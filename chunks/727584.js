@@ -1,7 +1,7 @@
-var r = n(574369);
-e.exports = function (e) {
+var n = r(574369);
+t.exports = function (t) {
     return (
-        e.which === r.RETURN &&
-        (e.getModifierState("Shift") || e.getModifierState("Alt") || e.getModifierState("Control"))
+        t.which === n.RETURN &&
+        (t.getModifierState("Shift") || t.getModifierState("Alt") || t.getModifierState("Control"))
     );
 };

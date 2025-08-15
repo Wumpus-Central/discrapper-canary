@@ -1,23 +1,23 @@
-n.d(t, { F: () => u });
+n.d(t, { F: () => d });
 var r = n(255367),
-    i = n(73800),
-    a = n(481060),
-    l = n(906732),
-    o = n(963249),
+    a = n(73800),
+    i = n(481060),
+    o = n(906732),
+    c = n(963249),
     s = n(474936),
-    c = n(638502);
-let u = (e) => {
+    l = n(638502);
+let d = (e) => {
     let { text: t } = e,
-        { analyticsLocations: n } = (0, l.ZP)(),
-        u = i.useRef(null);
-    return (0, r.jsx)(a.P3F, {
-        className: c.subscribeNow,
-        innerRef: u,
+        { analyticsLocations: n } = (0, o.ZP)(),
+        d = a.useRef(null);
+    return (0, r.jsx)(i.P3F, {
+        className: l.subscribeNow,
+        innerRef: d,
         onClick: () => {
-            (0, o.Z)({
+            (0, c.Z)({
                 subscriptionTier: s.Si.TIER_2,
                 analyticsLocations: n,
-                returnRef: u,
+                returnRef: d,
             });
         },
         children: t,

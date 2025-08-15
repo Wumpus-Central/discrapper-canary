@@ -1,57 +1,54 @@
-function r(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-var i = n(65183),
-    o = i.Map,
-    a = i.OrderedSet,
-    s = i.Record,
-    l = a(),
-    c = {
-        style: l,
+var n = r(65183),
+    i = n.Map,
+    o = n.OrderedSet,
+    a = n.Record,
+    u = o(),
+    s = {
+        style: u,
         entity: null,
     },
-    u = (function (e) {
-        function t() {
-            return e.apply(this, arguments) || this;
+    c = (function (t) {
+        function e() {
+            return t.apply(this, arguments) || this;
         }
-        r(t, e);
-        var n = t.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (n.getStyle = function () {
+            (r.getStyle = function () {
                 return this.get("style");
             }),
-            (n.getEntity = function () {
+            (r.getEntity = function () {
                 return this.get("entity");
             }),
-            (n.hasStyle = function (e) {
-                return this.getStyle().includes(e);
+            (r.hasStyle = function (t) {
+                return this.getStyle().includes(t);
             }),
-            (t.applyStyle = function (e, n) {
-                var r = e.set("style", e.getStyle().add(n));
-                return t.create(r);
+            (e.applyStyle = function (t, r) {
+                var n = t.set("style", t.getStyle().add(r));
+                return e.create(n);
             }),
-            (t.removeStyle = function (e, n) {
-                var r = e.set("style", e.getStyle().remove(n));
-                return t.create(r);
+            (e.removeStyle = function (t, r) {
+                var n = t.set("style", t.getStyle().remove(r));
+                return e.create(n);
             }),
-            (t.applyEntity = function (e, n) {
-                var r = e.getEntity() === n ? e : e.set("entity", n);
-                return t.create(r);
+            (e.applyEntity = function (t, r) {
+                var n = t.getEntity() === r ? t : t.set("entity", r);
+                return e.create(n);
             }),
-            (t.create = function (e) {
-                if (!e) return d;
-                var n = o({
-                        style: l,
+            (e.create = function (t) {
+                if (!t) return l;
+                var r = i({
+                        style: u,
                         entity: null,
-                    }).merge(e),
-                    r = f.get(n);
-                if (r) return r;
-                var i = new t(n);
-                return (f = f.set(n, i)), i;
+                    }).merge(t),
+                    n = f.get(r);
+                if (n) return n;
+                var o = new e(r);
+                return (f = f.set(r, o)), o;
             }),
-            t
+            e
         );
-    })(s(c)),
-    d = new u(),
-    f = o([[o(c), d]]);
-(u.EMPTY = d), (e.exports = u);
+    })(a(s)),
+    l = new c(),
+    f = i([[i(s), l]]);
+(c.EMPTY = l), (t.exports = c);

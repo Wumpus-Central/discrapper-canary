@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,15 +14,15 @@ var r = n(255367),
     f = n(439826),
     x = n(43779),
     h = n(981631),
-    j = n(88036);
-function b(e) {
+    b = n(88036);
+function _(e) {
     var t, n;
     let {
             quest: o,
             className: u,
             questContent: d,
-            contentPosition: b,
-            rowIndex: _,
+            contentPosition: _,
+            rowIndex: j,
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
@@ -80,7 +80,7 @@ function b(e) {
         ref: (e) => {
             (v.current = e), (B.current = e);
         },
-        className: a()(j.container, u),
+        className: a()(b.container, u),
         onMouseEnter: A,
         onMouseLeave: N,
         onFocus: A,
@@ -98,8 +98,8 @@ function b(e) {
                 quest: o,
                 questContent: d,
                 isHovering: y,
-                contentPosition: b,
-                rowIndex: _,
+                contentPosition: _,
+                rowIndex: j,
                 onReceiveErrorHints: S,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,
@@ -107,7 +107,7 @@ function b(e) {
         ],
     });
 }
-function _(e) {
+function j(e) {
     return (0, r.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -118,7 +118,7 @@ function _(e) {
         children: (t) => {
             var n, s;
             return (0, r.jsx)(
-                b,
+                _,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

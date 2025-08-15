@@ -1,4 +1,3 @@
-n.d(t, { $: () => r });
-var r = (function (e) {
-    return (e.USER = "user"), (e.ROLE = "role"), (e.CHANNEL = "channel"), e;
-})({});
+r.d(t, { $: () => l });
+var n,
+    l = (((n = {}).USER = "user"), (n.ROLE = "role"), (n.CHANNEL = "channel"), n);

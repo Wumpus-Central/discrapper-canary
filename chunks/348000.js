@@ -1,8 +1,8 @@
 n.d(t, { D: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(454399),
+    a = n(481060),
+    o = n(454399),
     s = n(28664),
     l = n(518797);
 function c(e, t, n) {
@@ -63,9 +63,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,8 +74,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = {
@@ -86,7 +86,7 @@ let h = {
             id: "tooltip",
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
-                var { text: t, position: n, align: a, caretAlign: l, customOffset: c, delay: d, spacing: p } = e,
+                var { text: t, position: n, align: o, caretAlign: l, customOffset: c, delay: d, spacing: p } = e,
                     h = _(e, ["text", "position", "align", "caretAlign", "customOffset", "delay", "spacing"]);
                 let m = i.useMemo(() => {
                     if ("center" !== l && null != l)
@@ -104,7 +104,7 @@ let h = {
                             {
                                 text: t,
                                 position: n,
-                                align: a,
+                                align: o,
                                 delay: d,
                                 spacing: p,
                                 caretConfig: m,
@@ -112,7 +112,7 @@ let h = {
                             h,
                         ),
                         {
-                            children: (0, r.jsx)(o.zxk, {
+                            children: (0, r.jsx)(a.zxk, {
                                 variant: "primary",
                                 text: "Hover me",
                             }),
@@ -263,7 +263,7 @@ let h = {
                         [s],
                     );
                 return (0, r.jsx)(
-                    a.i_,
+                    o.i_,
                     f(
                         u(
                             {
@@ -279,7 +279,7 @@ let h = {
                             E,
                         ),
                         {
-                            children: (0, r.jsx)(o.zxk, {
+                            children: (0, r.jsx)(a.zxk, {
                                 variant: "primary",
                                 text: "Hover me (rich)",
                             }),

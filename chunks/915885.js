@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(527379),
     m = n(981631),
     b = n(388032);
-function O(e) {
+function _(e) {
     let { guild: t, selected: n } = e,
-        O = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
-        _ = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        y = O && null != _ ? _ : 0;
+        _ = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
+        O = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        y = _ && null != O ? O : 0;
     i.useEffect(() => {
-        O &&
+        _ &&
             t.features.has(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
             t.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.Z.fetchGuildJoinRequests({
@@ -28,7 +28,7 @@ function O(e) {
                 status: d.wB.SUBMITTED,
                 limit: p.p,
             });
-    }, [O, t]);
+    }, [_, t]);
     let v = i.useCallback(() => {
             (0, g._X)(t.id);
         }, [t.id]),

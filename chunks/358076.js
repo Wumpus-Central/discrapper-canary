@@ -1,16 +1,16 @@
-e.exports = function (e) {
-    var t = e.getSelection(),
-        n = t.getAnchorKey(),
-        r = e.getBlockTree(n),
-        i = t.getStartOffset(),
+t.exports = function (t) {
+    var e = t.getSelection(),
+        r = e.getAnchorKey(),
+        n = t.getBlockTree(r),
+        i = e.getStartOffset(),
         o = !1;
     return (
-        r.some(function (e) {
-            return i === e.get("start")
+        n.some(function (t) {
+            return i === t.get("start")
                 ? ((o = !0), !0)
-                : i < e.get("end") &&
-                      e.get("leaves").some(function (e) {
-                          return i === e.get("start") && ((o = !0), !0);
+                : i < t.get("end") &&
+                      t.get("leaves").some(function (t) {
+                          return i === t.get("start") && ((o = !0), !0);
                       });
         }),
         o

@@ -1,24 +1,24 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var i = n(442837),
-    l = n(481060),
-    a = n(565138),
-    s = n(430824),
-    o = n(388032),
+var a = n(442837),
+    i = n(481060),
+    l = n(565138),
+    o = n(430824),
+    s = n(388032),
     c = n(573265);
 let d = (e) => {
     let { event: t } = e,
-        n = (0, i.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
+        n = (0, a.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
     return null == n
         ? null
         : (0, r.jsxs)("div", {
               className: c.container,
               children: [
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(i.X6q, {
                       className: c.header,
                       variant: "heading-sm/semibold",
-                      children: o.intl.string(o.t.SDTOLy),
+                      children: s.intl.string(s.t.SDTOLy),
                   }),
                   (0, r.jsxs)("div", {
                       className: c.guildContainer,
@@ -26,19 +26,19 @@ let d = (e) => {
                           (0, r.jsxs)("div", {
                               className: c.guildInfo,
                               children: [
-                                  (0, r.jsx)(a.Z, {
+                                  (0, r.jsx)(l.Z, {
                                       guild: n,
-                                      size: a.Z.Sizes.MINI,
+                                      size: l.Z.Sizes.MINI,
                                       className: c.guildIcon,
                                   }),
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       color: "header-secondary",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(l.Text, {
+                          (0, r.jsx)(i.Text, {
                               variant: "text-md/semibold",
                               color: "header-primary",
                               children: t.name,

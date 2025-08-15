@@ -6,8 +6,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(31775),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(247206),
     c = n(786761),
@@ -55,7 +55,7 @@ class g {
         _(
             this,
             "_cachedMessages",
-            new (o())({
+            new (a())({
                 max: 100,
                 dispose: (e, t) => this.handleCacheDisposed(e, t),
             }),
@@ -216,14 +216,14 @@ function M(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
-function j(e) {
+function k(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {
         let { first_message: t } = e;
         return null != t && y(t);
     });
 }
-class k extends (r = a.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, u.Z);
     }
@@ -240,8 +240,8 @@ class k extends (r = a.ZP.Store) {
         return null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m;
     }
 }
-_(k, "displayName", "ReferencedMessageStore");
-let U = new k(s.Z, {
+_(j, "displayName", "ReferencedMessageStore");
+let U = new j(s.Z, {
     CACHE_LOADED: I,
     LOCAL_MESSAGES_LOADED: v,
     LOAD_MESSAGES_SUCCESS: v,
@@ -251,7 +251,7 @@ let U = new k(s.Z, {
     LOAD_THREADS_SUCCESS: M,
     LOAD_ARCHIVED_THREADS_SUCCESS: M,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
-    LOAD_FORUM_POSTS: j,
+    LOAD_FORUM_POSTS: k,
     MESSAGE_CREATE: S,
     MESSAGE_UPDATE: N,
     MESSAGE_DELETE: w,

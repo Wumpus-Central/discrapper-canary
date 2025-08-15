@@ -1,4 +1,4 @@
-A.exports = {
+e.exports = {
     container: "container_e2461d",
     innerContainer: "innerContainer_e2461d",
     iconWrapper: "iconWrapper_e2461d",

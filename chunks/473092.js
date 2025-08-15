@@ -1,21 +1,21 @@
 n.d(t, {
     KQ: () => l,
     Lm: () => d,
-    MC: () => a,
+    MC: () => o,
     NM: () => c,
     pb: () => s,
     qc: () => u,
 });
 var r = n(594174),
     i = n(626135),
-    o = n(981631);
-function a(e, t) {
-    let { channelId: n, warningId: r, senderId: o, warningType: a } = t;
+    a = n(981631);
+function o(e, t) {
+    let { channelId: n, warningId: r, senderId: a, warningType: o } = t;
     i.default.track(e, {
         channel_id: n,
         warning_id: null != r ? parseInt(r) : void 0,
-        warning_type: a,
-        other_user_id: o,
+        warning_type: o,
+        other_user_id: a,
     });
 }
 var s = (function (e) {
@@ -28,11 +28,11 @@ var s = (function (e) {
     );
 })({});
 function l(e) {
-    let { channelId: t, warningId: n, senderId: r, warningType: a, viewName: s, isNudgeWarning: l } = e;
-    i.default.track(o.rMx.SAFETY_WARNING_VIEWED, {
+    let { channelId: t, warningId: n, senderId: r, warningType: o, viewName: s, isNudgeWarning: l } = e;
+    i.default.track(a.rMx.SAFETY_WARNING_VIEWED, {
         channel_id: t,
         warning_id: null != n ? parseInt(n) : void 0,
-        warning_type: a,
+        warning_type: o,
         other_user_id: r,
         view_name: s,
         is_nudge_warning: l,
@@ -90,11 +90,11 @@ var c = (function (e) {
     );
 })({});
 function u(e) {
-    let { channelId: t, warningId: n, senderId: r, warningType: a, cta: s, isNudgeWarning: l } = e;
-    i.default.track(o.rMx.SAFETY_WARNING_CTA_CLICKED, {
+    let { channelId: t, warningId: n, senderId: r, warningType: o, cta: s, isNudgeWarning: l } = e;
+    i.default.track(a.rMx.SAFETY_WARNING_CTA_CLICKED, {
         channel_id: t,
         warning_id: null != n ? parseInt(n) : void 0,
-        warning_type: a,
+        warning_type: o,
         other_user_id: r,
         cta: s,
         is_nudge_warning: l,

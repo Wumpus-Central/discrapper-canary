@@ -5,7 +5,7 @@ n.d(t, {
     P4: () => d,
     Tk: () => g,
     cO: () => f,
-    cj: () => a,
+    cj: () => o,
     qi: () => m,
     qu: () => h,
     sd: () => _,
@@ -14,7 +14,7 @@ n.d(t, {
     n(415506);
 var r = n(654861),
     i = n.n(r);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,18 +27,18 @@ function o(e, t, n) {
         e
     );
 }
-let a = 1420070400000,
+let o = 1420070400000,
     s = 4095,
     l = 22;
 function c(e) {
-    return Math.floor(Number(e) / 2 ** l) + a;
+    return Math.floor(Number(e) / 2 ** l) + o;
 }
 function u(e) {
-    let t = e - a;
+    let t = e - o;
     return t <= 0 ? "0" : i()(t).shiftLeft(l).toString();
 }
 function d(e, t) {
-    let n = e - a;
+    let n = e - o;
     return i()(n <= 0 ? 0 : n)
         .shiftLeft(l)
         .add(t.next())
@@ -71,7 +71,7 @@ function h(e, t) {
 function m(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
     try {
-        return c(e) >= a;
+        return c(e) >= o;
     } catch (e) {
         return !1;
     }
@@ -88,6 +88,6 @@ class g {
         this.seq = 0;
     }
     constructor() {
-        o(this, "seq", void 0), (this.seq = 0);
+        a(this, "seq", void 0), (this.seq = 0);
     }
 }

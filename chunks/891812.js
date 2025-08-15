@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => _ }), n(388685);
 var i = n(46973),
-    o = n(846027),
-    a = n(147913),
+    a = n(846027),
+    o = n(147913),
     s = n(131951),
     l = n(358085),
     c = n(375538),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends a.Z {
+class f extends o.Z {
     constructor(...e) {
         super(...e),
             d(this, "handlePostConnectionOpen", () => {
@@ -29,7 +29,7 @@ class f extends a.Z {
                         (r = c.g.subscribe({ location: "KrispExperimentManager handlePostConnectionOpen" }, (e) => {
                             var t;
                             let { enableStats: n } = e;
-                            null == (t = o.Z.setNoiseCancellationEnableStats) || t.call(o.Z, n);
+                            null == (t = a.Z.setNoiseCancellationEnableStats) || t.call(a.Z, n);
                         }));
             }),
             d(this, "handleRtcConnectionState", (e) => {
@@ -40,7 +40,7 @@ class f extends a.Z {
                     t === u.hes.RTC_CONNECTED &&
                     s.Z.getKrispEnableStats() &&
                     s.Z.getNoiseCancellation() &&
-                    (o.Z.setNoiseCancellation(!1), o.Z.setNoiseCancellation(!0));
+                    (a.Z.setNoiseCancellation(!1), a.Z.setNoiseCancellation(!0));
             }),
             d(this, "actions", {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,

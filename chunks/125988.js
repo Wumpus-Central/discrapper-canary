@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(73800),
     i = n(442837),
-    o = n(812457),
-    a = n(369111),
+    a = n(812457),
+    o = n(369111),
     s = n(271383),
     l = n(594174),
     c = n(768581),
@@ -20,7 +20,7 @@ let f = (e) => {
             avatarDecorationOverride: g,
         } = e,
         [E, b] = r.useState(!1),
-        { canAnimate: y } = (0, o.j)(E, p),
+        { canAnimate: y } = (0, a.j)(E, p),
         O = (0, i.e7)([s.ZP], () => (null != f && null != n ? s.ZP.getMember(f, n.id) : null)),
         v = (0, i.e7)([l.default], () => {
             var e;
@@ -38,7 +38,7 @@ let f = (e) => {
                     : null == n
                       ? void 0
                       : n.avatarDecoration,
-        { pendingAvatarDecoration: T } = (0, a.Z)({
+        { pendingAvatarDecoration: T } = (0, o.Z)({
             isTryItOut: m,
             guildId: f,
         }),

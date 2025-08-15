@@ -1,25 +1,25 @@
-n.d(t, { Z: () => s }), n(953529);
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    o = n(970184),
-    a = n(836636);
-function s(e) {
-    let { label: t, description: n, component: s, renderComponent: l } = e,
-        c = (0, o.h4)(s);
-    return (0, r.jsxs)(i.xJW, {
+r.d(t, { Z: () => a }), r(953529);
+var n = r(255367);
+r(73800);
+var l = r(481060),
+    i = r(970184),
+    o = r(836636);
+function a(e) {
+    let { label: t, description: r, component: a, renderComponent: c } = e,
+        s = (0, i.h4)(a);
+    return (0, n.jsxs)(l.xJW, {
         title: t,
-        required: s.required,
-        error: c,
-        titleClassName: a.title,
+        required: a.required,
+        error: s,
+        titleClassName: o.title,
         children: [
-            null != n &&
-                (0, r.jsx)(i.R94, {
-                    type: i.geA.DESCRIPTION,
-                    className: a.description,
-                    children: n,
+            null != r &&
+                (0, n.jsx)(l.R94, {
+                    type: l.geA.DESCRIPTION,
+                    className: o.description,
+                    children: r,
                 }),
-            l(s, "label-child"),
+            c(a, "label-child"),
         ],
     });
 }

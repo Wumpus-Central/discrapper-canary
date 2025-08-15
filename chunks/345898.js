@@ -1,32 +1,32 @@
-n.d(t, { Z: () => l }), n(953529);
+n.d(t, { Z: () => s }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(481060),
-    s = n(569943);
-let l = (e) => {
-    let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: c, isHorizontal: u = !1 } = e;
+    o = n(569943);
+let s = (e) => {
+    let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: s, className: c, isHorizontal: u = !1 } = e;
     return (0, r.jsxs)("div", {
-        className: o()(s.tile, { [s.tileHorizontal]: u }, c),
+        className: l()(o.tile, { [o.tileHorizontal]: u }, c),
         children: [
             (0, r.jsx)("div", {
-                className: o()(s.media, { [s.mediaHorizontal]: u }),
-                children: null == l ? void 0 : l(),
+                className: l()(o.media, { [o.mediaHorizontal]: u }),
+                children: null == s ? void 0 : s(),
             }),
             (0, r.jsxs)("div", {
-                className: s.description,
+                className: o.description,
                 children: [
                     (0, r.jsx)(a.H, {
-                        className: s.title,
+                        className: o.title,
                         children: null == t ? void 0 : t(),
                     }),
                     (0, r.jsx)("div", {
-                        className: s.tagline,
+                        className: o.tagline,
                         children: null == n ? void 0 : n(),
                     }),
                     (0, r.jsx)("div", {
-                        className: s.actions,
+                        className: o.actions,
                         children: null == i ? void 0 : i(),
                     }),
                 ],

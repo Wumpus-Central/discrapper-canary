@@ -1,15 +1,15 @@
 n.d(t, { dW: () => d });
 var r = n(73800),
     i = n(442837),
-    o = n(902704),
-    a = n(104755),
+    a = n(902704),
+    o = n(104755),
     s = n(509003),
     l = n(543696);
 function c(e) {
     let t = r.useRef([]);
     return (
         r.useEffect(() => {
-            (0, o.E)(t.current, e) || ((0, a.v)(e), (t.current = e));
+            (0, a.E)(t.current, e) || ((0, o.v)(e), (t.current = e));
         }, [e]),
         (0, i.Wu)([l.Z], () => e.map((e) => (null != e ? l.Z.getSupplementalData(e) : void 0)))
     );

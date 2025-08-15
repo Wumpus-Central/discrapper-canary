@@ -31,7 +31,7 @@ var n,
         (n.AUDIO_VIDEO = "Audio / Video"),
         (n.DEVELOPMENT = "Development"),
         n);
-let f = [
+let v = [
         "Experiments",
         "Events",
         "Premium",
@@ -43,7 +43,7 @@ let f = [
         "Audio / Video",
         "Development",
     ],
-    v = l.forwardRef(function (e, t) {
+    f = l.forwardRef(function (e, t) {
         let { id: a, selected: n, onClick: l, children: i } = e;
         return (0, r.jsx)(d.P3F, {
             className: s()(p.tabItem, { [p.selected]: n }),
@@ -82,7 +82,7 @@ function j(e) {
                 s = t.filter((e) => null == e.group),
                 c = {};
             for (let e of t) null != e.group && (null != c[(a = e.group)] || (c[a] = []), c[e.group].push(e));
-            for (let e of f)
+            for (let e of v)
                 null == (l = c[e]) ||
                     l.sort((e, t) => {
                         var a, n;
@@ -109,7 +109,7 @@ function j(e) {
                             t,
                         );
                     }),
-                    f.map((e) =>
+                    v.map((e) =>
                         (0, r.jsx)(
                             d.kSQ,
                             {
@@ -147,7 +147,7 @@ function j(e) {
                             let { id: t, name: l } = e;
                             if (!s.has(t))
                                 return (0, r.jsx)(
-                                    v,
+                                    f,
                                     {
                                         id: t,
                                         selected: a === t,
@@ -163,7 +163,7 @@ function j(e) {
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, r.jsx)(
-                                v,
+                                f,
                                 {
                                     id: t,
                                     selected: a === t,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(680018),
-    o = n(648613),
-    a = n(864218);
+    a = n(648613),
+    o = n(864218);
 function s(e, t, n) {
     return (
         t in e
@@ -61,9 +61,9 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,8 +72,8 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = function (e) {
@@ -115,7 +115,7 @@ let _ = function (e) {
             confirmationFooter: p,
             paymentModalBanner: h,
         },
-        { subscribeButtonProps: v } = (0, a.F)({
+        { subscribeButtonProps: v } = (0, o.F)({
             subscriptionTier: t,
             buttonTextOverride: m,
             defaultTextOverride: g,
@@ -123,7 +123,7 @@ let _ = function (e) {
             variantOverride: b,
         });
     return (0, r.jsx)(
-        o.Z,
+        a.Z,
         u(l({}, O), {
             children: (e) => {
                 let { onClick: t } = e;

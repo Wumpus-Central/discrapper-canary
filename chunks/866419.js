@@ -10,8 +10,8 @@ n.d(t, {
     n(49124);
 var r = n(73800),
     i = n(780384),
-    o = n(781391),
-    a = n(210887),
+    a = n(781391),
+    o = n(210887),
     s = n(695346);
 n(581883);
 var l = n(233398),
@@ -34,13 +34,13 @@ function h(e) {
             null != t.backgroundGradientPresetId &&
             t.backgroundGradientPresetId in u.qt &&
             u.qt[t.backgroundGradientPresetId].theme !== e;
-    (0, o.y)(e), n && (0, c.kj)();
+    (0, a.y)(e), n && (0, c.kj)();
 }
 function m() {
     let e = r.useRef(null);
     return (
         r.useEffect(() => {
-            e.current = a.Z.theme;
+            e.current = o.Z.theme;
         }, []),
         r.useCallback((t) => {
             var n, r, i, u;
@@ -50,25 +50,25 @@ function m() {
                 gradientAngle: null != (r = null == d ? void 0 : d.gradientAngle) ? r : 0,
                 chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH,
             }),
-                "reset_button" === t ? h(p(null != (u = e.current) ? u : a.Z.theme)) : (0, o.UD)();
+                "reset_button" === t ? h(p(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
             let f = s.L1.getSetting().backgroundGradientPresetId;
             null != f && (0, c.zO)(f);
         }, [])
     );
 }
 function g() {
-    let e = p(a.Z.theme);
-    e !== a.Z.theme && h(e);
+    let e = p(o.Z.theme);
+    e !== o.Z.theme && h(e);
 }
 function E(e, t, n) {
     0 === e.length && n([t]), g();
 }
 function b() {
     var e, t, n;
-    let { colors: r, chassisMixAmount: i, gradientAngle: o } = (0, l.Ig)(),
-        a = s.L1.getSetting().customUserThemeSettings,
-        c = null != (e = null == a ? void 0 : a.colors) ? e : [l.Dp],
-        u = null != (t = null == a ? void 0 : a.gradientAngle) ? t : 0,
-        d = null != (n = null == a ? void 0 : a.baseMix) ? n : l.BH;
-    return JSON.stringify(r) === JSON.stringify(c) && i === d && o === u;
+    let { colors: r, chassisMixAmount: i, gradientAngle: a } = (0, l.Ig)(),
+        o = s.L1.getSetting().customUserThemeSettings,
+        c = null != (e = null == o ? void 0 : o.colors) ? e : [l.Dp],
+        u = null != (t = null == o ? void 0 : o.gradientAngle) ? t : 0,
+        d = null != (n = null == o ? void 0 : o.baseMix) ? n : l.BH;
+    return JSON.stringify(r) === JSON.stringify(c) && i === d && a === u;
 }

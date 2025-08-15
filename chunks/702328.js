@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(823188),
     S = n(611116),
     T = n(306066),
-    I = n(349803),
-    N = n(8231),
+    N = n(349803),
+    I = n(8231),
     y = n(864879),
     A = n(238649),
     P = n(47840),
@@ -168,12 +168,12 @@ let H = () => {
                         (0, i.jsx)("div", {
                             className: eC.planComparisonTableContainer,
                             ref: eE.ref,
-                            children: em ? (0, i.jsx)(R.Z, {}) : (0, i.jsx)(N.Z, {}),
+                            children: em ? (0, i.jsx)(R.Z, {}) : (0, i.jsx)(I.Z, {}),
                         }),
                     ],
                 }),
                 !em &&
-                    (0, i.jsx)(I.Z, {
+                    (0, i.jsx)(N.Z, {
                         isVisible: ep && ei,
                         subscriptionTier: eo,
                         isApplicationHome: !0,

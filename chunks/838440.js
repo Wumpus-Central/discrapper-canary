@@ -1,8 +1,8 @@
 n.d(t, { v: () => h }), n(388685), n(73800);
 var r = n(570140),
     i = n(668781),
-    o = n(673750),
-    a = n(300429),
+    a = n(673750),
+    o = n(300429),
     s = n(594174),
     l = n(626135),
     c = n(760729),
@@ -64,7 +64,7 @@ function p(e) {
         return;
     }
     if (null != h) {
-        if (null != h.getGuildId() && g && a.Z.getSlowmodeCooldownGuess(h.id) > 0)
+        if (null != h.getGuildId() && g && o.Z.getSlowmodeCooldownGuess(h.id) > 0)
             return void b({
                 valid: !1,
                 failureReason: d.zYc.SLOWMODE_COOLDOWN,
@@ -87,7 +87,7 @@ function p(e) {
                     });
             }
     }
-    if (o.ZP.isFull()) {
+    if (a.ZP.isFull()) {
         i.Z.show({
             title: f.intl.string(f.t["7Q4eo6"]),
             body: f.intl.string(f.t.gi6XHh),
@@ -107,8 +107,8 @@ function h(e) {
             type: n,
             content: r,
             stickers: i,
-            uploads: o,
-            channel: a,
+            uploads: a,
+            channel: o,
             restrictMentions: l = !0,
             respectCooldown: c = !0,
         } = e,
@@ -119,8 +119,8 @@ function h(e) {
             type: n,
             content: r,
             stickers: i,
-            uploads: o,
-            channel: a,
+            uploads: a,
+            channel: o,
             restrictMentions: l,
             respectCooldown: c,
             userCanUsePremiumMessageLength: d,

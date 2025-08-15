@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(835473),
     S = n(243778),
     T = n(594190),
-    I = n(320724),
-    N = n(925329),
+    N = n(320724),
+    I = n(925329),
     y = n(297700),
     A = n(444295),
     P = n(486016),
@@ -315,7 +315,7 @@ function eS(e) {
     r.useEffect(() => {
         x(m), O(u);
     }, [m, u]);
-    let I = !(0, es.supportsLegacy)(),
+    let N = !(0, es.supportsLegacy)(),
         P = !(0, es.supportsOutOfProcess)(),
         { legacyEnabled: D, oopEnabled: Z } = (0, p.cj)([w.default], () => w.default.getGlobalEnabledStatus()),
         k = (e, t, n) => {
@@ -338,9 +338,9 @@ function eS(e) {
             }
             (l || o) && (0, M.l)(l ? A.AE.LEGACY_GAME : A.AE.OOP_GAME, null != (s = a.id) ? s : null);
         },
-        L = I && P,
+        L = N && P,
         B = !D && !Z,
-        U = !b && !D && j && !I,
+        U = !b && !D && j && !N,
         V = !j && !Z && b && !P,
         G = (null == d ? void 0 : d.overlayMethod) === R.gl.Disabled,
         F = (null == d ? void 0 : d.state) === R.mM.OVERLAY_RENDERING && !G,
@@ -526,10 +526,10 @@ function eS(e) {
                       }),
                   ],
               }),
-              icon: (0, i.jsx)(N.Z, {
+              icon: (0, i.jsx)(I.Z, {
                   game: l,
                   pid: null == a ? void 0 : a.pid,
-                  size: N.Z.Sizes.MEDIUM,
+                  size: I.Z.Sizes.MEDIUM,
               }),
               "aria-label": ed.intl.string(ed.t["87O5GB"]),
               action: (0, i.jsx)(h.P3F, {
@@ -617,7 +617,7 @@ function eS(e) {
                           children: [
                               (0, i.jsx)(h.rsf, {
                                   checked: j && D,
-                                  disabled: I,
+                                  disabled: N,
                                   onChange: (e, t) => {
                                       e && !D ? k(e, A.AE.LEGACY, t) : k(e, A.AE.LEGACY_GAME, t);
                                   },
@@ -633,13 +633,13 @@ function eT(e) {
     let { game: t, gameApplication: n } = e,
         s = r.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         a = (0, p.e7)([O.Z], () => (null != n ? n : O.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
-    return (0, i.jsx)(N.Z, {
+    return (0, i.jsx)(I.Z, {
         game: a,
         pid: s,
-        size: N.Z.Sizes.SMALL,
+        size: I.Z.Sizes.SMALL,
     });
 }
-function eI(e) {
+function eN(e) {
     let {
             rawGame: t,
             gameApplication: n,
@@ -687,7 +687,7 @@ function eI(e) {
         })
     );
 }
-function eN() {
+function eI() {
     let [e, t] = r.useState(!1),
         { legacyEnabled: n, oopEnabled: s } = (0, p.cj)([w.default], () => w.default.getGlobalEnabledStatus()),
         a = (0, p.Wu)([T.ZP], () => T.ZP.getGamesSeen(!0)).filter((e) => !(0, F.le)(e)),
@@ -756,7 +756,7 @@ function eN() {
                       className: eu.scroller,
                       children: a.map((e, t) =>
                           (0, i.jsx)(
-                              eI,
+                              eN,
                               {
                                   rawGame: e,
                                   clientSettingType: A.AE.LEGACY_GAME,
@@ -843,7 +843,7 @@ function ey() {
                       className: eu.scroller,
                       children: l.map((e, t) =>
                           (0, i.jsx)(
-                              eI,
+                              eN,
                               {
                                   rawGame: e,
                                   clientSettingType: A.AE.OOP_GAME,
@@ -1362,7 +1362,7 @@ function ek(e) {
         a = (0, D.o4)("user_settings").overlayV3UI,
         l = (0, p.e7)([J.default], () => J.default.getCurrentUser());
     (0, C.ZP)(() => {
-        if (ei.isPlatformEmbedded) return (0, I.Ky)(), I.P7;
+        if (ei.isPlatformEmbedded) return (0, N.Ky)(), N.P7;
     });
     let c = e_(ef);
     return (m().isEqual(c, ef) || (et.default.track(ea.rMx.OVERLAY_SETTINGS_UPDATED, c), (ef = c)), null == l)
@@ -1382,7 +1382,7 @@ function ek(e) {
                                       runningGameApplication: s,
                                   }),
                                   (0, i.jsx)(ey, {}),
-                                  (0, i.jsx)(eN, {}),
+                                  (0, i.jsx)(eI, {}),
                               ],
                           }),
                           (0, i.jsx)("div", { className: eu.settingsDivider }),

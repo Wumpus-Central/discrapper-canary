@@ -1,149 +1,147 @@
-var r = n(512972),
-    i = n(214788),
-    o = n(65183),
-    a = n(475854),
-    s = n(581079),
-    l = n(250010),
+var n = r(512972),
+    i = r(214788),
+    o = r(65183),
+    a = r(475854),
+    u = r(581079),
+    s = r(250010),
     c = o.List,
-    u = function (e, t, n, r, i, o) {
-        var s = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "REPLACE_WITH_NEW_DATA",
-            l = n.get(i),
-            c = l.getText(),
-            u = l.getCharacterList(),
-            d = i,
-            f = o + r.getText().length,
-            _ = null;
-        switch (s) {
+    l = function (t, e, r, n, i, o) {
+        var u = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "REPLACE_WITH_NEW_DATA",
+            s = r.get(i),
+            c = s.getText(),
+            l = s.getCharacterList(),
+            f = o + n.getText().length,
+            p = null;
+        switch (u) {
             case "MERGE_OLD_DATA_TO_NEW_DATA":
-                _ = r.getData().merge(l.getData());
+                p = n.getData().merge(s.getData());
                 break;
             case "REPLACE_WITH_NEW_DATA":
-                _ = r.getData();
+                p = n.getData();
         }
-        var p = l.merge({
-            text: c.slice(0, o) + r.getText() + c.slice(o),
-            characterList: a(u, r.getCharacterList(), o),
-            data: _,
+        var h = s.merge({
+            text: c.slice(0, o) + n.getText() + c.slice(o),
+            characterList: a(l, n.getCharacterList(), o),
+            data: p,
         });
-        return e.merge({
-            blockMap: n.set(i, p),
-            selectionBefore: t,
-            selectionAfter: t.merge({
-                anchorKey: d,
+        return t.merge({
+            blockMap: r.set(i, h),
+            selectionBefore: e,
+            selectionAfter: e.merge({
+                anchorKey: i,
                 anchorOffset: f,
-                focusKey: d,
+                focusKey: i,
                 focusOffset: f,
                 isBackward: !1,
             }),
         });
     },
-    d = function (e, t, n) {
-        var r = e.getText(),
-            i = e.getCharacterList(),
-            o = r.slice(0, t),
-            a = i.slice(0, t),
-            s = n.first();
-        return e.merge({
-            text: o + s.getText(),
-            characterList: a.concat(s.getCharacterList()),
-            type: o ? e.getType() : s.getType(),
+    f = function (t, e, r) {
+        var n = t.getText(),
+            i = t.getCharacterList(),
+            o = n.slice(0, e),
+            a = i.slice(0, e),
+            u = r.first();
+        return t.merge({
+            text: o + u.getText(),
+            characterList: a.concat(u.getCharacterList()),
+            type: o ? t.getType() : u.getType(),
+            data: u.getData(),
+        });
+    },
+    p = function (t, e, r) {
+        var n = t.getText(),
+            i = t.getCharacterList(),
+            o = n.length,
+            a = n.slice(e, o),
+            u = i.slice(e, o),
+            s = r.last();
+        return s.merge({
+            text: s.getText() + a,
+            characterList: s.getCharacterList().concat(u),
             data: s.getData(),
         });
     },
-    f = function (e, t, n) {
-        var r = e.getText(),
-            i = e.getCharacterList(),
-            o = r.length,
-            a = r.slice(t, o),
-            s = i.slice(t, o),
-            l = n.last();
-        return l.merge({
-            text: l.getText() + a,
-            characterList: l.getCharacterList().concat(s),
-            data: l.getData(),
-        });
-    },
-    _ = function (e, t) {
-        var n = e.getKey(),
-            r = e,
+    h = function (t, e) {
+        var r = t.getKey(),
+            n = t,
             i = [];
-        for (t.get(n) && i.push(n); r && r.getNextSiblingKey(); ) {
-            var o = r.getNextSiblingKey();
+        for (e.get(r) && i.push(r); n && n.getNextSiblingKey(); ) {
+            var o = n.getNextSiblingKey();
             if (!o) break;
-            i.push(o), (r = t.get(o));
+            i.push(o), (n = e.get(o));
         }
         return i;
     },
-    p = function (e, t, n, r) {
-        return e.withMutations(function (t) {
-            var i = n.getKey(),
-                o = r.getKey(),
-                a = n.getNextSiblingKey(),
-                s = n.getParentKey(),
-                l = _(r, e),
-                u = l[l.length - 1];
-            if (
-                (t.get(o)
-                    ? (t.setIn([i, "nextSibling"], o), t.setIn([o, "prevSibling"], i))
-                    : (t.setIn([i, "nextSibling"], r.getNextSiblingKey()),
-                      t.setIn([r.getNextSiblingKey(), "prevSibling"], i)),
-                t.setIn([u, "nextSibling"], a),
-                a && t.setIn([a, "prevSibling"], u),
-                l.forEach(function (e) {
-                    return t.setIn([e, "parent"], s);
-                }),
-                s)
-            ) {
-                var d = e.get(s).getChildKeys(),
-                    f = d.indexOf(i) + 1,
-                    p = d.toArray();
-                p.splice.apply(p, [f, 0].concat(l)), t.setIn([s, "children"], c(p));
-            }
-        });
-    },
-    h = function (e, t, n, o, a, s) {
-        var l = n.first() instanceof i,
-            c = [],
-            u = o.size,
-            _ = n.get(a),
-            h = o.first(),
+    d = function (t, e, r, o, a, u) {
+        var s,
+            l = r.first() instanceof i,
+            d = [],
+            g = o.size,
+            y = r.get(a),
+            v = o.first(),
             m = o.last(),
-            g = m.getLength(),
-            E = m.getKey(),
-            b = l && (!_.getChildKeys().isEmpty() || !h.getChildKeys().isEmpty());
-        n.forEach(function (e, t) {
-            if (t !== a) return void c.push(e);
-            b ? c.push(e) : c.push(d(e, s, o)),
-                o.slice(+!b, u - 1).forEach(function (e) {
-                    return c.push(e);
+            _ = m.getLength(),
+            b = m.getKey(),
+            S = l && (!y.getChildKeys().isEmpty() || !v.getChildKeys().isEmpty());
+        r.forEach(function (t, e) {
+            if (e !== a) return void d.push(t);
+            S ? d.push(t) : d.push(f(t, u, o)),
+                o.slice(+!S, g - 1).forEach(function (t) {
+                    return d.push(t);
                 }),
-                c.push(f(e, s, o));
+                d.push(p(t, u, o));
         });
-        var y = r.createFromArray(c);
+        var w = n.createFromArray(d);
         return (
-            l && (y = p(y, n, _, h)),
-            e.merge({
-                blockMap: y,
-                selectionBefore: t,
-                selectionAfter: t.merge({
-                    anchorKey: E,
-                    anchorOffset: g,
-                    focusKey: E,
-                    focusOffset: g,
+            l &&
+                (w = (s = w).withMutations(function (t) {
+                    var e = y.getKey(),
+                        r = v.getKey(),
+                        n = y.getNextSiblingKey(),
+                        i = y.getParentKey(),
+                        o = h(v, s),
+                        a = o[o.length - 1];
+                    if (
+                        (t.get(r)
+                            ? (t.setIn([e, "nextSibling"], r), t.setIn([r, "prevSibling"], e))
+                            : (t.setIn([e, "nextSibling"], v.getNextSiblingKey()),
+                              t.setIn([v.getNextSiblingKey(), "prevSibling"], e)),
+                        t.setIn([a, "nextSibling"], n),
+                        n && t.setIn([n, "prevSibling"], a),
+                        o.forEach(function (e) {
+                            return t.setIn([e, "parent"], i);
+                        }),
+                        i)
+                    ) {
+                        var u = s.get(i).getChildKeys(),
+                            l = u.indexOf(e),
+                            f = u.toArray();
+                        f.splice.apply(f, [l + 1, 0].concat(o)), t.setIn([i, "children"], c(f));
+                    }
+                })),
+            t.merge({
+                blockMap: w,
+                selectionBefore: e,
+                selectionAfter: e.merge({
+                    anchorKey: b,
+                    anchorOffset: _,
+                    focusKey: b,
+                    focusOffset: _,
                     isBackward: !1,
                 }),
             })
         );
     };
-e.exports = function (e, t, n) {
-    var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA";
-    t.isCollapsed() || s(!1);
-    var o = e.getBlockMap(),
-        a = l(n),
-        c = t.getStartKey(),
-        d = t.getStartOffset(),
-        f = o.get(c);
-    return (f instanceof i && (f.getChildKeys().isEmpty() || s(!1)), 1 === a.size)
-        ? u(e, t, o, a.first(), c, d, r)
-        : h(e, t, o, a, c, d);
+t.exports = function (t, e, r) {
+    var n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA";
+    e.isCollapsed() || u(!1);
+    var o = t.getBlockMap(),
+        a = s(r),
+        c = e.getStartKey(),
+        f = e.getStartOffset(),
+        p = o.get(c);
+    return (p instanceof i && (p.getChildKeys().isEmpty() || u(!1)), 1 === a.size)
+        ? l(t, e, o, a.first(), c, f, n)
+        : d(t, e, o, a, c, f);
 };

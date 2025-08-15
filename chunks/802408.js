@@ -1,15 +1,15 @@
 n.d(t, { Z: () => d }), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(907862),
+    a = n(442837),
+    o = n(907862),
     s = n(780384),
     l = n(410030),
     c = n(607070),
     u = n(921944);
 function d(e) {
     let { onComplete: t, onCheckItOutClick: n, markAsDismissed: d, config: f, children: _ } = e,
-        p = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        p = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         h = (0, l.ZP)(),
         m = i.useRef(null),
         g = {
@@ -27,7 +27,7 @@ function d(e) {
                 ref: m,
                 children: _,
             }),
-            (0, r.jsx)(a.Mb, {
+            (0, r.jsx)(o.Mb, {
                 targetElementRef: m,
                 shouldShow: !0,
                 position: "top",

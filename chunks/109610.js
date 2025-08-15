@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(997841), n(388685);
 var r = n(87051),
     i = n(147913),
-    o = n(592125),
-    a = n(430824),
+    a = n(592125),
+    o = n(430824),
     s = n(9156),
     l = n(70956),
     c = n(630388),
@@ -27,7 +27,7 @@ let h = +l.Z.Millis.DAY;
 class m extends i.Z {
     checkGuilds() {
         s.ZP.useNewNotifications &&
-            a.Z.getGuildsArray().forEach((e) => {
+            o.Z.getGuildsArray().forEach((e) => {
                 if (
                     null == e.joinedAt ||
                     Date.now() - e.joinedAt.getTime() > h ||
@@ -40,7 +40,7 @@ class m extends i.Z {
                         (null != t.flags && (0, c.EB)(t.flags, _.ic.UNREADS_ALL_MESSAGES | _.ic.UNREADS_ONLY_MENTIONS))
                     )
                         return;
-                let t = Object.values(o.Z.getMutableBasicGuildChannelsForGuild(e.id)).filter(
+                let t = Object.values(a.Z.getMutableBasicGuildChannelsForGuild(e.id)).filter(
                     (e) => e.type === f.d4z.GUILD_ANNOUNCEMENT,
                 );
                 if (0 === t.length) return;

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(592125),
-    o = n(944486),
-    a = n(594174);
+    a = n(944486),
+    o = n(594174);
 let s = (0, r.B)({
     kind: "guild",
     id: "2025-08_go_live_guild_notification",
@@ -37,8 +37,8 @@ function l(e) {
 function c(e, t) {
     let n = e;
     if (null == n) {
-        if (null == a.default.getCurrentUser()) return !1;
-        n = o.Z.getVoiceChannelId();
+        if (null == o.default.getCurrentUser()) return !1;
+        n = a.Z.getVoiceChannelId();
     }
     if (null == n) return !1;
     let r = i.Z.getChannel(n);

@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(504983),
     S = n(703656),
     T = n(594174),
-    I = n(580130),
-    N = n(669079),
+    N = n(580130),
+    I = n(669079),
     y = n(74538),
     A = n(317941),
     P = n(981631),
@@ -64,7 +64,7 @@ function w(e) {
               }));
     let S = O ? D.intl.string(D.t["2cHUtr"]) : D.intl.string(D.t.O13yh4),
         T = r.useCallback(() => g(!1), []),
-        { outboundTitle: I, outboundTermsAndConditions: N } = n;
+        { outboundTitle: N, outboundTermsAndConditions: I } = n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
@@ -88,7 +88,7 @@ function w(e) {
                                         children: [
                                             (0, i.jsx)(u.X6q, {
                                                 variant: "heading-md/semibold",
-                                                children: I,
+                                                children: N,
                                             }),
                                             (0, i.jsx)(u.Text, {
                                                 variant: "text-sm/normal",
@@ -116,7 +116,7 @@ function w(e) {
                             className: Z.promotionLegalese,
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            children: b.Z.parse(N, !1, { allowLinks: !0 }),
+                            children: b.Z.parse(I, !1, { allowLinks: !0 }),
                         }),
                 ],
             }),
@@ -179,13 +179,13 @@ function w(e) {
     });
 }
 let k = function () {
-    let e = (0, c.Wu)([I.Z], () => I.Z.getGiftable()),
+    let e = (0, c.Wu)([N.Z], () => N.Z.getGiftable()),
         [t, n] = o().partition(e, (e) => {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
         s = (0, c.e7)([T.default], () => y.ZP.isPremiumExactly(T.default.getCurrentUser(), R.p9.TIER_2)),
-        l = o().groupBy(t, (e) => (0, N.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        l = o().groupBy(t, (e) => (0, I.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [d, f] = r.useState(!1);
     r.useEffect(() => {
         m.Z.wait(() => {
@@ -299,7 +299,7 @@ let k = function () {
                                                         entitlements: [t],
                                                         giftCodeBatchId: R.m8,
                                                     },
-                                                    (0, N.Bg)(t.skuId, t.subscriptionPlanId),
+                                                    (0, I.Bg)(t.skuId, t.subscriptionPlanId),
                                                 )
                                               : null,
                                           l.length > 0
@@ -312,7 +312,7 @@ let k = function () {
                                                         entitlements: l,
                                                         giftCodeBatchId: R.rX,
                                                     },
-                                                    (0, N.Bg)(l[0].skuId, l[0].subscriptionPlanId),
+                                                    (0, I.Bg)(l[0].skuId, l[0].subscriptionPlanId),
                                                 )
                                               : null,
                                           c.length > 0
@@ -325,7 +325,7 @@ let k = function () {
                                                         entitlements: c,
                                                         giftCodeBatchId: R.rX,
                                                     },
-                                                    (0, N.Bg)(c[0].skuId, c[0].subscriptionPlanId),
+                                                    (0, I.Bg)(c[0].skuId, c[0].subscriptionPlanId),
                                                 )
                                               : null,
                                       ],
@@ -365,7 +365,7 @@ let k = function () {
                                   : o()
                                         .keys(l)
                                         .map((e) => {
-                                            let { skuId: t, subscriptionPlanId: n, giftStyle: r } = (0, N.Z0)(e);
+                                            let { skuId: t, subscriptionPlanId: n, giftStyle: r } = (0, I.Z0)(e);
                                             return (0, i.jsx)(
                                                 A.Z,
                                                 {

@@ -1,39 +1,39 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(99690),
-    a = n(388032),
-    s = n(430147);
-let o = (e) => {
+var a = n(481060),
+    i = n(99690),
+    l = n(388032),
+    o = n(430147);
+let s = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: o.container,
         children: [
-            (0, r.jsx)(i.X6q, {
-                className: s.header,
+            (0, r.jsx)(a.X6q, {
+                className: o.header,
                 variant: "heading-sm/semibold",
-                children: a.intl.string(a.t["Rsth7+"]),
+                children: l.intl.string(l.t["Rsth7+"]),
             }),
             (0, r.jsx)("div", {
-                className: s.userContainer,
+                className: o.userContainer,
                 children: (0, r.jsxs)("div", {
-                    className: s.userInfo,
+                    className: o.userInfo,
                     children: [
-                        (0, r.jsx)(l.Z, {
-                            className: s.userIcon,
+                        (0, r.jsx)(i.Z, {
+                            className: o.userIcon,
                             user: t,
-                            size: i.EFr.SIZE_40,
+                            size: a.EFr.SIZE_40,
                         }),
                         (0, r.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
-                                    (0, r.jsx)(i.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         children: t.globalName,
                                     }),
-                                (0, r.jsx)(i.Text, {
+                                (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
                                     children: t.username,

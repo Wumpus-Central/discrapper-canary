@@ -15,8 +15,8 @@ function g(e) {
     let { userId: t, widget: n, children: l, disableInteraction: g, className: b } = e,
         [j, y] = i.useState(!1),
         O = (0, s.Dt)(),
-        x = (0, c.e7)([d.default], () => d.default.getId() === t),
-        h = (0, u.kQ)(n);
+        h = (0, c.e7)([d.default], () => d.default.getId() === t),
+        x = (0, u.kQ)(n);
     return (0, r.jsxs)("section", {
         className: o()(m.container, b),
         "aria-labelledby": O,
@@ -30,8 +30,8 @@ function g(e) {
             (0, r.jsxs)(a.y5, {
                 children: [
                     l,
-                    x &&
-                        !h &&
+                    h &&
+                        !x &&
                         !g &&
                         !j &&
                         (0, r.jsx)(p.Z, {

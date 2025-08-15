@@ -1,11 +1,11 @@
 n.d(t, {
-    Yf: () => a,
-    d0: () => s,
+    Yf: () => u,
+    d0: () => a,
 });
 var r = n(365449),
     i = n(138224),
     o = n(73800);
-class a {
+class u {
     isDefaultPrevented() {
         return this.nativeEvent.defaultPrevented;
     }
@@ -33,7 +33,7 @@ class a {
             (this.type = e);
     }
 }
-function s(e) {
+function a(e) {
     let t = (0, o.useRef)({
         isFocused: !1,
         observer: null,
@@ -56,13 +56,16 @@ function s(e) {
                 e.target instanceof HTMLSelectElement
             ) {
                 t.current.isFocused = !0;
-                let r = e.target,
-                    i = (e) => {
+                let r = e.target;
+                r.addEventListener(
+                    "focusout",
+                    (e) => {
                         (t.current.isFocused = !1),
-                            r.disabled && n(new a("blur", e)),
+                            r.disabled && n(new u("blur", e)),
                             t.current.observer && (t.current.observer.disconnect(), (t.current.observer = null));
-                    };
-                r.addEventListener("focusout", i, { once: !0 }),
+                    },
+                    { once: !0 },
+                ),
                     (t.current.observer = new MutationObserver(() => {
                         if (t.current.isFocused && r.disabled) {
                             var e;

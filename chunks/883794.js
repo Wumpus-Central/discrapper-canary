@@ -1,7 +1,7 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(818083),
     i = n(751823);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_agc2",
     label: "WebRTC AGC2",
@@ -24,19 +24,19 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0, disable: r = !1 } = e,
-        { isInHoldout: a } = i.L.getCurrentConfig(
+        { isInHoldout: o } = i.L.getCurrentConfig(
             { location: t },
             {
                 disable: r,
                 autoTrackExposure: n,
             },
         );
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
-            disable: r || a,
+            disable: r || o,
             autoTrackExposure: n,
         },
     );

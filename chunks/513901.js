@@ -29,25 +29,25 @@ function j(e) {
             initialSelectedEffectId: S,
         } = e,
         T = (0, p.Kg)(t, n),
-        I = m.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: N } = (0, c.ZP)(),
+        N = m.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: I } = (0, c.ZP)(),
         { pendingProfileEffectId: y, errors: A } = (0, p.bd)(n),
         P = r.useCallback(
             () =>
                 (0, d.H)({
-                    analyticsLocations: N,
+                    analyticsLocations: I,
                     initialSelectedEffectId: S,
                     guild: n,
                 }),
-            [N, S, n],
+            [I, S, n],
         );
     r.useEffect(() => {
-        I &&
+        N &&
             u.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: b.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: N,
+                location_stack: I,
             });
-    }, [I, N]);
+    }, [N, I]);
     let R = null != n,
         D = C ? o.gtL : l.zx;
     return (0, i.jsx)(g.Z, {

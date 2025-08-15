@@ -1,5 +1,5 @@
 n.d(t, {
-    QK: () => o,
+    QK: () => a,
     u$: () => i,
 });
 let r = (0, n(818083).B)({
@@ -19,7 +19,7 @@ let r = (0, n(818083).B)({
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return r.useExperiment({ location: e }, { autoTrackExposure: t });
     },
-    o = function (e) {
+    a = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     };

@@ -17,8 +17,8 @@ var i = n(442837),
     j = n(78806),
     y = n(900927),
     O = n(678738),
-    x = n(179828),
-    h = n(228168),
+    h = n(179828),
+    x = n(228168),
     v = n(388032),
     _ = n(54966);
 function I(e) {
@@ -26,8 +26,8 @@ function I(e) {
         { trackUserProfileAction: T } = (0, f.KZ)(),
         Z = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
         N = (0, a.Y)({ userId: t.id }),
-        S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        w = (0, i.e7)([s.default], () => s.default.locale),
+        w = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        S = (0, i.e7)([s.default], () => s.default.locale),
         A = (0, m.Z)(t.id),
         C = (0, p.Z)(t.id);
     return (0, r.jsxs)(l.zJl, {
@@ -36,17 +36,17 @@ function I(e) {
         children: [
             (null == I ? void 0 : I.bio) != null &&
                 (null == I ? void 0 : I.bio) !== "" &&
-                !S &&
+                !w &&
                 (0, r.jsx)(g.Z, {
                     userBio: I.bio,
                     setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.guildId) != null &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(h.Z, {
                     user: t,
                     currentUser: n,
                     guildId: I.guildId,
-                    scrollIntoView: P === h.Tb.ROLES,
+                    scrollIntoView: P === x.Tb.ROLES,
                 }),
             t.isProvisional &&
                 (0, r.jsx)(O.Z, {
@@ -68,18 +68,18 @@ function I(e) {
                 children: (0, r.jsx)(y.Z, {
                     userId: t.id,
                     guildId: null == I ? void 0 : I.guildId,
-                    tooltipDelay: h.vB,
+                    tooltipDelay: x.vB,
                 }),
             }),
             A.length > 0 &&
                 (0, r.jsx)(O.Z, {
                     heading: v.intl.string(v.t["3fe7U1"]),
-                    scrollIntoView: P === h.Tb.CONNECTIONS,
+                    scrollIntoView: P === x.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
                         connectedAccounts: A,
                         className: _.connections,
                         userId: t.id,
-                        locale: w,
+                        locale: S,
                     }),
                 }),
             C.length > 0 &&
@@ -91,7 +91,7 @@ function I(e) {
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: w,
+                                locale: S,
                                 onApplicationClicked: () => {
                                     T({ action: "PRESS_APP_CONNECTION" }), E();
                                 },
@@ -103,11 +103,11 @@ function I(e) {
                 }),
             (0, r.jsx)(O.Z, {
                 heading: v.intl.string(v.t["mQKv+v"]),
-                scrollIntoView: P === h.Tb.NOTE,
+                scrollIntoView: P === x.Tb.NOTE,
                 children: (0, r.jsx)(o.Z, {
                     userId: t.id,
                     className: _.note,
-                    autoFocus: P === h.Tb.NOTE,
+                    autoFocus: P === x.Tb.NOTE,
                     onUpdate: () => T({ action: "SET_NOTE" }),
                 }),
             }),

@@ -1,131 +1,127 @@
 n.d(t, {
-    Ar: () => T,
+    Ar: () => N,
     DO: () => f,
-    Fn: () => p,
-    Jq: () => m,
-    QO: () => y,
-    Vb: () => O,
-    YN: () => v,
-    ZF: () => I,
-    ep: () => g,
-    km: () => E,
-    nC: () => h,
-    vo: () => _,
+    Fn: () => g,
+    Jq: () => O,
+    QO: () => A,
+    Vb: () => p,
+    YN: () => _,
+    ZF: () => R,
+    ep: () => S,
+    km: () => j,
+    nC: () => d,
+    vo: () => E,
 }),
     n(388685),
     n(415506);
 var r = n(581364),
-    i = n(314897),
-    o = n(866830),
+    l = n(314897),
+    i = n(866830),
     a = n(539573),
-    s = n(727072),
-    l = n(85960),
-    c = n(273504),
-    u = n(388032);
-let d = (e, t) => "".concat(e, "-").concat(t, "-new-rule"),
-    f = (e) => (null == e ? void 0 : e.triggerType) === c.fX.KEYWORD,
-    _ = (e) => (null == e ? void 0 : e.triggerType) === c.fX.ML_SPAM,
-    p = (e) => (null == e ? void 0 : e.triggerType) === c.fX.DEFAULT_KEYWORD_LIST,
-    h = (e) => (null == e ? void 0 : e.triggerType) === c.fX.MENTION_SPAM,
-    m = (e) => (null == e ? void 0 : e.triggerType) === c.fX.USER_PROFILE;
-function g(e, t) {
-    let n = l.I6[t],
-        r = (0, l.jp)(t, e),
+    u = n(727072),
+    o = n(85960),
+    s = n(273504),
+    c = n(388032);
+let f = (e) => (null == e ? void 0 : e.triggerType) === s.fX.KEYWORD,
+    E = (e) => (null == e ? void 0 : e.triggerType) === s.fX.ML_SPAM,
+    g = (e) => (null == e ? void 0 : e.triggerType) === s.fX.DEFAULT_KEYWORD_LIST,
+    d = (e) => (null == e ? void 0 : e.triggerType) === s.fX.MENTION_SPAM,
+    O = (e) => (null == e ? void 0 : e.triggerType) === s.fX.USER_PROFILE;
+function S(e, t) {
+    let n = o.I6[t],
+        r = (0, o.jp)(t, e),
         a = {
-            id: d(e, t),
+            id: "".concat(e, "-").concat(t, "-new-rule"),
             name: n.getDefaultRuleName(),
             guildId: e,
             eventType: n.eventType,
             triggerType: t,
             triggerMetadata: r,
             enabled: !0,
-            creatorId: i.default.getId(),
-            actions: (0, o.qR)(n),
+            creatorId: l.default.getId(),
+            actions: (0, i.qR)(n),
             position: 0,
             exemptChannels: new Set(),
             exemptRoles: new Set(),
         };
-    if (O(a)) throw Error(u.intl.string(u.t["A/nX8P"]));
-    let c = (0, s.mY)(e, t);
-    return c > 0 && (a.name += " ".concat(c + 1)), a;
+    if (p(a)) throw Error(c.intl.string(c.t["A/nX8P"]));
+    let s = (0, u.mY)(e, t);
+    return s > 0 && (a.name += " ".concat(s + 1)), a;
 }
-function E(e, t) {
-    if (e.length > t) throw Error(u.intl.formatToPlainString(u.t.mee4qa, { limit: t }));
+function j(e, t) {
+    if (e.length > t) throw Error(c.intl.formatToPlainString(c.t.mee4qa, { limit: t }));
     e.forEach((e) => {
-        if (e.length > c.hu || e.length < c.Vk)
+        if (e.length > s.hu || e.length < s.Vk)
             throw new a.V6(
-                u.intl.formatToPlainString(u.t.rbRvGR, {
+                c.intl.formatToPlainString(c.t.rbRvGR, {
                     keyword: e,
-                    max: c.hu,
-                    min: c.Vk,
+                    max: s.hu,
+                    min: s.Vk,
                 }),
             );
     });
 }
-function b(e) {
-    if (e.length > c.VW) throw Error(u.intl.formatToPlainString(u.t.tDjhFx, { limit: c.VW }));
-    e.forEach((e) => {
-        if (e.length > c.aj || e.length < c.uE)
-            throw new a.uS(
-                u.intl.formatToPlainString(u.t["WR0m9/"], {
-                    regex: e,
-                    max: c.aj,
-                    min: c.uE,
-                }),
-            );
-    });
-}
-function y(e) {
+function A(e) {
     if (f(e)) {
         var t, n;
         let r = null != (t = e.triggerMetadata.keywordFilter) ? t : [],
-            i = null != (n = e.triggerMetadata.regexPatterns) ? n : [];
-        if (0 === r.length && 0 === i.length) throw Error(u.intl.string(u.t.kz2Av7));
-        E(r, c.RH), b(i);
+            l = null != (n = e.triggerMetadata.regexPatterns) ? n : [];
+        if (0 === r.length && 0 === l.length) throw Error(c.intl.string(c.t.kz2Av7));
+        if ((j(r, s.RH), l.length > s.VW)) throw Error(c.intl.formatToPlainString(c.t.tDjhFx, { limit: s.VW }));
+        l.forEach((e) => {
+            if (e.length > s.aj || e.length < s.uE)
+                throw new a.uS(
+                    c.intl.formatToPlainString(c.t["WR0m9/"], {
+                        regex: e,
+                        max: s.aj,
+                        min: s.uE,
+                    }),
+                );
+        });
     }
-    if (0 === e.actions.length) throw Error(u.intl.string(u.t["t+gj5e"]));
+    if (0 === e.actions.length) throw Error(c.intl.string(c.t["t+gj5e"]));
 }
-function O(e) {
+function p(e) {
     var t;
     return (0, r.BH)(null != (t = null == e ? void 0 : e.id) ? t : "INVALID_SNOWFLAKE");
 }
-function v(e) {
+function _(e) {
     switch (e) {
-        case c.q4.MESSAGE_SEND:
-            return u.intl.string(u.t.NlQW4O);
-        case c.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
-            return u.intl.string(u.t["Q+68IS"]);
+        case s.q4.MESSAGE_SEND:
+            return c.intl.string(c.t.NlQW4O);
+        case s.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
+            return c.intl.string(c.t["Q+68IS"]);
         default:
-            return u.intl.string(u.t.SP9BBw);
+            return c.intl.string(c.t.SP9BBw);
     }
 }
-function I(e) {
+function R(e) {
     switch (e) {
-        case c.jj.BLOCK_MESSAGE:
-            return u.intl.string(u.t.d1ab8v);
-        case c.jj.FLAG_TO_CHANNEL:
-            return u.intl.string(u.t["Y+Vmvb"]);
-        case c.jj.USER_COMMUNICATION_DISABLED:
-            return u.intl.string(u.t["6WPxY2"]);
-        case c.jj.QUARANTINE_USER:
-            return u.intl.string(u.t.NPO8eX);
+        case s.jj.BLOCK_MESSAGE:
+            return c.intl.string(c.t.d1ab8v);
+        case s.jj.FLAG_TO_CHANNEL:
+            return c.intl.string(c.t["Y+Vmvb"]);
+        case s.jj.USER_COMMUNICATION_DISABLED:
+            return c.intl.string(c.t["6WPxY2"]);
+        case s.jj.QUARANTINE_USER:
+            return c.intl.string(c.t.NPO8eX);
         default:
-            return u.intl.string(u.t.SP9BBw);
+            return c.intl.string(c.t.SP9BBw);
     }
 }
-function T(e) {
+function N(e) {
     switch (e) {
-        case c.fX.KEYWORD:
-            return u.intl.string(u.t.ffR2cH);
-        case c.fX.ML_SPAM:
-            return u.intl.string(u.t["puF/Oj"]);
-        case c.fX.DEFAULT_KEYWORD_LIST:
-            return u.intl.string(u.t.LnGhZm);
-        case c.fX.MENTION_SPAM:
-            return u.intl.string(u.t.pX7i6u);
-        case c.fX.USER_PROFILE:
-            return u.intl.string(u.t.q1L2v7);
+        case s.fX.KEYWORD:
+            return c.intl.string(c.t.ffR2cH);
+        case s.fX.ML_SPAM:
+            return c.intl.string(c.t["puF/Oj"]);
+        case s.fX.DEFAULT_KEYWORD_LIST:
+            return c.intl.string(c.t.LnGhZm);
+        case s.fX.MENTION_SPAM:
+            return c.intl.string(c.t.pX7i6u);
+        case s.fX.USER_PROFILE:
+            return c.intl.string(c.t.q1L2v7);
         default:
-            return u.intl.string(u.t.SP9BBw);
+            return c.intl.string(c.t.SP9BBw);
     }
 }

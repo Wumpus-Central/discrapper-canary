@@ -4,8 +4,8 @@ r(73800);
 var o = r(481060),
     a = r(429142),
     s = r(353250),
-    l = r(234888);
-function i(e) {
+    i = r(234888);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -33,59 +33,59 @@ function i(e) {
 let c = {
     showCaptcha: function (e, t) {
         let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: c, captchaService: u, options: d } = e;
+            { sitekey: c, captchaService: d, options: u } = e;
         (0, o.ZDy)(
             async () => {
                 let { default: e } = await r.e("12192").then(r.bind(r, 718742));
                 return (r) =>
                     (0, n.jsx)(
                         e,
-                        i(
+                        l(
                             {
                                 onCaptchaVerify: (e, r) =>
                                     t({
                                         captcha_key: e,
                                         captcha_rqtoken: r,
                                     }),
-                                captchaService: u,
+                                captchaService: d,
                                 sitekey: c,
                             },
                             s,
-                            d,
+                            u,
                             r,
                         ),
                     );
             },
             {
                 Layer: a.ZP,
-                modalKey: l.A,
+                modalKey: i.A,
             },
         );
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: c, captchaService: u, captchaSessionId: d, options: p } = e;
-        return new Promise((e, m) => {
+            { sitekey: c, captchaService: d, captchaSessionId: u, options: p } = e;
+        return new Promise((e, _) => {
             (0, o.ZDy)(
                 async () => {
                     let { default: o } = await r.e("12192").then(r.bind(r, 718742));
                     return (r) =>
                         (0, n.jsx)(
                             o,
-                            i(
+                            l(
                                 {
                                     onCaptchaVerify: (t, r) =>
                                         e({
                                             captcha_key: t,
                                             captcha_rqtoken: r,
-                                            captcha_session_id: d,
+                                            captcha_session_id: u,
                                         }),
-                                    captchaService: u,
+                                    captchaService: d,
                                     sitekey: c,
                                     onReject: (e) => {
                                         e === s.CaptchaError.CANCEL
-                                            ? m(new s.CaptchaCancelError())
-                                            : m(Error("cancel captcha"));
+                                            ? _(new s.CaptchaCancelError())
+                                            : _(Error("cancel captcha"));
                                     },
                                 },
                                 t,
@@ -96,12 +96,12 @@ let c = {
                 },
                 {
                     Layer: a.ZP,
-                    modalKey: l.A,
+                    modalKey: i.A,
                 },
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, o.s9z)((e) => (0, o.DEQ)(e, l.A));
+        return (0, o.s9z)((e) => (0, o.DEQ)(e, i.A));
     },
 };

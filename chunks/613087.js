@@ -75,14 +75,14 @@ let d = s.createContext({
                 expansionSpring: x,
                 mountPoints: h,
             } = s.useContext(d),
-            j = s.useRef(null),
             b = s.useRef(null),
-            _ = s.useRef(void 0);
+            _ = s.useRef(null),
+            j = s.useRef(void 0);
         s.useEffect(() => {
             m();
         }, [m]),
             s.useLayoutEffect(() => {
-                let e = j.current;
+                let e = b.current;
                 return (
                     null != e && g(e, c, u),
                     () => {
@@ -93,11 +93,11 @@ let d = s.createContext({
         let v = s.useCallback(
             (e) => {
                 let { height: t } = e;
-                _.current !== t && (m(), (_.current = t));
+                j.current !== t && (m(), (j.current = t));
             },
             [m],
         );
-        (0, i.PM)(j, v);
+        (0, i.PM)(b, v);
         let C = null == (n = h.get(c)) ? void 0 : n.current,
             y = null;
         return (
@@ -116,7 +116,7 @@ let d = s.createContext({
                                                 output: [1, 0],
                                             }),
                                         },
-                                        children: l(b),
+                                        children: l(_),
                                     }),
                                     C,
                                 ),
@@ -130,17 +130,17 @@ let d = s.createContext({
                                                 output: [0, 1],
                                             }),
                                         },
-                                        children: l(b),
+                                        children: l(_),
                                     }),
                                     C,
                                 ),
                         ],
                     }))
-                  : "collapsed" === u && (y = (0, o.createPortal)(l(b), C)),
+                  : "collapsed" === u && (y = (0, o.createPortal)(l(_), C)),
             (0, r.jsxs)("div", {
                 style: { opacity: +((null == y && "collapsed" === u) || null == C) },
                 ref: t,
-                children: [l(j), y],
+                children: [l(b), y],
             })
         );
     }),
@@ -166,7 +166,7 @@ let d = s.createContext({
                         return n.set(t, s.createRef()), n;
                     });
             }, []),
-            j = s.useCallback((e, t) => {
+            b = s.useCallback((e, t) => {
                 let n = !1;
                 p((r) => {
                     var s;
@@ -185,7 +185,7 @@ let d = s.createContext({
                             return n.delete(e), n;
                         });
             }, []),
-            b = s.useCallback(() => {
+            _ = s.useCallback(() => {
                 let e = [];
                 for (let t in i) {
                     if (null == i[t] || null == n.current || null == o.current) continue;
@@ -218,11 +218,11 @@ let d = s.createContext({
         return (0, r.jsx)(d.Provider, {
             value: {
                 registerComponent: h,
-                unregisterComponent: j,
+                unregisterComponent: b,
                 animatedComponents: i,
                 expandedContentRef: n,
                 collapsedContentRef: o,
-                recalculateAnimationPositions: b,
+                recalculateAnimationPositions: _,
                 animatedComponentProps: m,
                 expansionSpring: a,
                 mountPoints: f,

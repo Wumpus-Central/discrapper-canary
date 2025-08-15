@@ -1,5 +1,5 @@
 n.d(t, {
-    Eu: () => o,
+    Eu: () => a,
     NZ: () => r,
     PQ: () => i,
 });
@@ -24,7 +24,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e.AUDIO = "audio"),
             (e.CAMERA = "camera"),

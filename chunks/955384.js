@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(911969),
+    l = n(911969),
     a = n(925975),
-    s = n(957730),
-    l = n(981631),
+    o = n(957730),
+    s = n(981631),
     c = n(388032),
     u = n(26896);
 function d(e, t, n) {
@@ -20,35 +20,35 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     e.stopPropagation();
 }
-class _ extends i.PureComponent {
+class h extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: o, onCancel: a, children: s } = this.props,
-            l = (0, r.jsx)("div", {
+        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o } = this.props,
+            s = (0, r.jsx)("div", {
                 className: u.operations,
                 children: c.intl.format(c.t.wDsPXl, {
-                    onCancel: () => a(o.id),
+                    onCancel: () => a(l.id),
                     onSave: this.onClickSave,
                 }),
             });
         return (0, r.jsxs)("div", {
             className: e,
             ref: this.node,
-            onContextMenu: f,
+            onContextMenu: p,
             children: [
-                s({
+                o({
                     textValue: t,
                     richValue: n,
                     message: i,
-                    channel: o,
+                    channel: l,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,
-                    renderLeftAccessories: () => l,
+                    renderLeftAccessories: () => s,
                 }),
-                l,
+                s,
             ],
         });
     }
@@ -91,16 +91,16 @@ class _ extends i.PureComponent {
                           });
                           if (
                               ((null == d ? void 0 : d.content) != null && (e = d.content),
-                              t.hasFlag(l.iLy.IS_COMPONENTS_V2) && this.props.channel.type === l.d4z.GUILD_ANNOUNCEMENT)
+                              t.hasFlag(s.iLy.IS_COMPONENTS_V2) && this.props.channel.type === s.d4z.GUILD_ANNOUNCEMENT)
                           ) {
-                              let t = s.ZP.parse(this.props.channel, e),
-                                  n = this.props.message.components.filter((e) => e.type === o.re.TEXT_DISPLAY);
+                              let t = o.ZP.parse(this.props.channel, e),
+                                  n = this.props.message.components.filter((e) => e.type === l.re.TEXT_DISPLAY);
                               if (1 === n.length) {
                                   let r = n[0];
                                   e !== r.content && c(this.props.channel.id, this.props.message.id, t);
                               }
                           } else {
-                              let t = s.ZP.parse(this.props.channel, e);
+                              let t = o.ZP.parse(this.props.channel, e);
                               t.content !== this.props.message.content &&
                                   c(this.props.channel.id, this.props.message.id, t);
                           }
@@ -118,7 +118,7 @@ class _ extends i.PureComponent {
                 i(r.id, t, n);
             }),
             d(this, "onKeyDown", (e) => {
-                if (e.keyCode === l.yXg.ESCAPE && !e.shiftKey) {
+                if (e.keyCode === s.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }

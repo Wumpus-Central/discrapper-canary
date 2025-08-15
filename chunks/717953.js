@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(657707),
     l = n(442837),
     c = n(704215),
@@ -55,7 +55,7 @@ function O() {
 }
 function v(e) {
     var t, n;
-    let { isDisabled: o, onSelect: v } = e,
+    let { isDisabled: a, onSelect: v } = e,
         I = (0, l.e7)([p.Z], () => {
             var e, t;
             return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings)
@@ -87,11 +87,11 @@ function v(e) {
         className: y.badgeContainer,
         children: [
             (0, r.jsxs)(h.S4, {
-                onSelect: o ? void 0 : M,
+                onSelect: a ? void 0 : M,
                 isSelected: !1,
                 showSelectionCircle: C,
                 name: b.intl.string(E.default.KSBBpK),
-                className: a()(y.container, C && R, o && y.disabled),
+                className: o()(y.container, C && R, a && y.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
                 style: w,

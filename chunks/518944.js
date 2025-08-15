@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(353926),
+    a = n(570140),
+    o = n(353926),
     s = n(592125),
     l = n(430824),
     c = n(945577),
@@ -58,14 +58,14 @@ function E(e) {
 }
 class b extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, s.Z, a.Z);
+        this.waitFor(l.Z, s.Z, o.Z);
     }
     getSelectedSearchContextId() {
         return _;
     }
 }
 d(b, "displayName", "SearchStore");
-let y = new b(o.Z, {
+let y = new b(a.Z, {
     CONNECTION_OPEN: m,
     SEARCH_SCREEN_OPEN: E,
     CHANNEL_SELECT: g,

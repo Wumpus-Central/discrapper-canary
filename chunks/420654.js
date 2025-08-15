@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(785717),
@@ -64,7 +64,7 @@ function g(e, t) {
 }
 let E = 57.75,
     b = i.memo(function (e) {
-        let { user: t, onClose: n, bio: o, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
+        let { user: t, onClose: n, bio: a, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
             { context: b } = (0, c.KZ)(),
             { analyticsLocations: y } = (0, l.ZP)(),
             [O, v] = i.useState(!1),
@@ -87,16 +87,16 @@ let E = 57.75,
             C = (e) => {
                 null == S.current || S.current.contains(e.relatedTarget) || (S.current.scrollTop = 0);
             };
-        return p || null == o || "" === o
+        return p || null == a || "" === a
             ? null
             : (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)("div", {
                           ref: A,
-                          className: a()(_.descriptionClamp, I && _.maxBioHeight),
+                          className: o()(_.descriptionClamp, I && _.maxBioHeight),
                           onBlur: C,
                           children: (0, r.jsx)(d.Z, {
-                              userBio: o,
+                              userBio: a,
                               setLineClamp: !1,
                               textColor: "header-primary",
                           }),

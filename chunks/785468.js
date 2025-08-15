@@ -8,21 +8,21 @@ var r = n(255367),
     c = n(481060),
     u = n(933557),
     d = n(592125),
-    m = n(430824),
-    x = n(496675),
+    x = n(430824),
+    m = n(496675),
     g = n(699516),
-    h = n(594174),
-    v = n(924301),
-    p = n(518756),
-    f = n(545165),
+    v = n(594174),
+    h = n(924301),
+    f = n(518756),
+    p = n(545165),
     j = n(884746),
-    b = n(274311),
-    y = n(230900),
-    O = n(366815),
-    E = n(765305),
+    y = n(274311),
+    b = n(230900),
+    E = n(366815),
+    O = n(765305),
     N = n(981631),
     C = n(388032),
-    I = n(138324);
+    T = n(138324);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,25 +48,25 @@ function S(e) {
     }
     return e;
 }
-let T = (e) => {
+let I = (e) => {
     let { guildId: t, channelType: n, channel: l, onSelectChannel: i, disabled: a, entityType: s } = e,
         o = n === N.d4z.GUILD_STAGE_VOICE,
-        m = (0, b.Q)(l, s),
-        x = (0, f.sR)(t, n);
+        x = (0, y.Q)(l, s),
+        m = (0, p.sR)(t, n);
     return (0, r.jsxs)(c.xJW, {
         title: o ? C.intl.string(C.t.S7GjDw) : C.intl.string(C.t["7RYWCA"]),
-        className: I.options,
+        className: T.options,
         disabled: a,
         required: !0,
         children: [
             (0, r.jsx)(c.VcW, {
                 value: null == l ? void 0 : l.id,
-                options: x.map((e) => ({
+                options: m.map((e) => ({
                     value: e.id,
-                    label: (0, u.F6)(e, h.default, g.Z, !0),
+                    label: (0, u.F6)(e, v.default, g.Z, !0),
                 })),
                 onChange: (e) => {
-                    let t = x.find((t) => t.id === e);
+                    let t = m.find((t) => t.id === e);
                     i(null != t ? t : void 0);
                 },
                 renderOptionPrefix: (e) =>
@@ -74,35 +74,35 @@ let T = (e) => {
                         let n = d.Z.getChannel(e);
                         if (null == n) return null;
                         let l = n.type === N.d4z.GUILD_STAGE_VOICE,
-                            i = (0, b.Q)(n, t),
+                            i = (0, y.Q)(n, t),
                             a = i ? c.gj8 : c.gjC,
                             s = i ? c.ewx : c.pki;
                         return (0, r.jsx)(l ? s : a, {
                             color: "currentColor",
                             size: "md",
-                            className: I.channelOptionIcon,
+                            className: T.channelOptionIcon,
                         });
                     })(null == e ? void 0 : e.value, s),
                 isDisabled: a,
             }),
-            !m &&
+            !x &&
                 (0, r.jsx)(c.Text, {
                     color: "header-secondary",
-                    className: I.channelPrivate,
+                    className: T.channelPrivate,
                     variant: "text-sm/normal",
                     children: C.intl.string(C.t.F3bDaW),
                 }),
         ],
     });
 };
-function P(e, t, n, r) {
+function Z(e, t, n, r) {
     return t
         ? {
               disabled: !0,
               tooltipText: C.intl.string(C.t.yutP5e),
           }
         : n
-          ? 0 === r && e !== E.WX.EXTERNAL
+          ? 0 === r && e !== O.WX.EXTERNAL
               ? {
                     disabled: !0,
                     tooltipText: C.intl.string(C.t["DkY+cH"]),
@@ -116,139 +116,139 @@ function P(e, t, n, r) {
                 tooltipText: C.intl.string(C.t.HeF1kZ),
             };
 }
-let w = (e, t) => (n) => {
+let P = (e, t) => (n) => {
     let { value: r } = n,
         l = {
             entityType: r,
             scheduledEndTime: void 0,
         };
-    if (r === E.WX.EXTERNAL) {
+    if (r === O.WX.EXTERNAL) {
         var i;
         l.scheduledEndTime = (null != (i = a()(t.scheduledStartTime)) ? i : a()()).add(2, "hour").toISOString();
     }
     e(l);
 };
-function Z(e) {
+function w(e) {
     let { guildId: t, guildEvent: n, onChange: i, isFocusReady: a } = e,
-        { entityType: u, channelId: m } = n,
-        x = (0, s.e7)([d.Z], () => d.Z.getChannel(m), [m]),
+        { entityType: u, channelId: x } = n,
+        m = (0, s.e7)([d.Z], () => d.Z.getChannel(x), [x]),
         g = l.useRef(null);
     l.useEffect(() => {
-        if (a && u === E.WX.EXTERNAL) {
+        if (a && u === O.WX.EXTERNAL) {
             var e;
             null == (e = g.current) || e.focus();
         }
     }, [a, u]);
-    let h = (e) => {
+    let v = (e) => {
             var t;
             i({ channelId: null != (t = null == e ? void 0 : e.id) ? t : null });
         },
-        p = (0, y.xV)(n),
-        f = (0, y.xC)(u),
-        j = (0, v.xt)(n);
-    return null == u || u === E.WX.NONE
+        f = (0, b.xV)(n),
+        p = (0, b.xC)(u),
+        j = (0, h.xt)(n);
+    return null == u || u === O.WX.NONE
         ? null
-        : u === E.WX.EXTERNAL
+        : u === O.WX.EXTERNAL
           ? (0, r.jsx)(c.xJW, {
                 title: C.intl.string(C.t.yx785O),
-                className: I.options,
+                className: T.options,
                 required: !0,
                 children: (0, r.jsx)(o.Is, {
-                    className: I.__invalid_textInput,
+                    className: T.__invalid_textInput,
                     onChange: (e) => {
                         i({ entityMetadata: { location: e } });
                     },
                     placeholder: C.intl.string(C.t.mkCMiY),
-                    maxLength: E.gG,
-                    value: null != p ? p : "",
+                    maxLength: O.gG,
+                    value: null != f ? f : "",
                     inputRef: g,
                 }),
             })
-          : null == f
+          : null == p
             ? null
-            : (0, r.jsx)(T, {
+            : (0, r.jsx)(I, {
                   guildId: t,
-                  channelType: f,
-                  onSelectChannel: h,
-                  channel: x,
+                  channelType: p,
+                  onSelectChannel: v,
+                  channel: m,
                   entityType: u,
                   disabled: j,
               });
 }
 function D(e) {
     let { guildId: t, guildEvent: n, onChange: i } = e,
-        a = (0, s.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        o = (0, p.Z)(t, void 0),
-        u = (0, p.Z)(t, N.d4z.GUILD_VOICE),
-        d = (0, p.Z)(t, N.d4z.GUILD_STAGE_VOICE),
-        x = (0, f.sR)(t, N.d4z.GUILD_VOICE),
+        a = (0, s.e7)([x.Z], () => x.Z.getGuild(t), [t]),
+        o = (0, f.Z)(t, void 0),
+        u = (0, f.Z)(t, N.d4z.GUILD_VOICE),
+        d = (0, f.Z)(t, N.d4z.GUILD_STAGE_VOICE),
+        m = (0, p.sR)(t, N.d4z.GUILD_VOICE),
         g = (0, j.q)(a),
-        h = null == a ? void 0 : a.features.has(N.oNc.COMMUNITY),
-        b = (0, v.xt)(n),
-        y = w(i, n),
-        O = l.useMemo(() => {
+        v = null == a ? void 0 : a.features.has(N.oNc.COMMUNITY),
+        y = (0, h.xt)(n),
+        b = P(i, n),
+        E = l.useMemo(() => {
             let e = [
                 S(
                     {
                         name: C.intl.string(C.t.BVZqJi),
-                        value: E.WX.VOICE,
+                        value: O.WX.VOICE,
                         desc: C.intl.string(C.t["EV//4e"]),
                         icon: c.gj8,
                     },
-                    P(E.WX.VOICE, b, u, x.length),
+                    Z(O.WX.VOICE, y, u, m.length),
                 ),
                 S(
                     {
                         name: C.intl.string(C.t.w7ipb2),
-                        value: E.WX.EXTERNAL,
+                        value: O.WX.EXTERNAL,
                         desc: C.intl.string(C.t.DYxrHh),
                         icon: c._tJ,
                     },
-                    P(E.WX.EXTERNAL, b, o, 0),
+                    Z(O.WX.EXTERNAL, y, o, 0),
                 ),
             ];
-            return h
+            return v
                 ? [
                       S(
                           {
                               name: C.intl.string(C.t.EErMzM),
-                              value: E.WX.STAGE_INSTANCE,
+                              value: O.WX.STAGE_INSTANCE,
                               desc: C.intl.string(C.t.LgALpq),
                               icon: c.ewx,
                           },
-                          P(E.WX.STAGE_INSTANCE, b, d, g.length),
+                          Z(O.WX.STAGE_INSTANCE, y, d, g.length),
                       ),
                       ...e,
                   ]
                 : e;
-        }, [o, u, d, h, x.length, g.length, b]);
+        }, [o, u, d, v, m.length, g.length, y]);
     return (0, r.jsx)(c.FXm, {
         value: n.entityType,
-        options: O,
-        onChange: y,
-        className: I.options,
+        options: E,
+        onChange: b,
+        className: T.options,
     });
 }
 function _(e) {
     let { guildId: t, guildEvent: l, validationErrorMessage: i, onChange: a, isSlideReady: o = !1 } = e,
         { entityType: u } = l,
-        d = (0, s.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        d = (0, s.e7)([x.Z], () => x.Z.getGuild(t), [t]),
         g = (0, j.q)(d),
-        h = (0, s.e7)([x.Z], () => x.Z.can(N.Plq.MANAGE_CHANNELS, d)),
-        v = null == d ? void 0 : d.features.has(N.oNc.COMMUNITY),
-        p = w(a, l),
-        f = v && u !== E.WX.EXTERNAL && 0 === g.length && h && null != u;
+        v = (0, s.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, d)),
+        h = null == d ? void 0 : d.features.has(N.oNc.COMMUNITY),
+        f = P(a, l),
+        p = h && u !== O.WX.EXTERNAL && 0 === g.length && v && null != u;
     return (0, r.jsxs)("div", {
-        className: I.container,
+        className: T.container,
         children: [
             (0, r.jsx)(c.X6q, {
                 variant: "heading-xl/semibold",
-                className: I.header,
+                className: T.header,
                 children: C.intl.string(C.t["DC+Qm5"]),
             }),
             (0, r.jsx)(c.Text, {
                 color: "header-secondary",
-                className: I.text,
+                className: T.text,
                 variant: "text-sm/normal",
                 children: C.intl.string(C.t.IwmXLC),
             }),
@@ -257,23 +257,27 @@ function _(e) {
                 guildEvent: l,
                 onChange: a,
             }),
-            (0, r.jsx)(Z, {
+            (0, r.jsx)(w, {
                 guildId: t,
                 guildEvent: l,
                 isFocusReady: o,
                 onChange: a,
             }),
-            f
-                ? (0, r.jsx)(O.Z, {
+            p
+                ? (0, r.jsx)(E.Z, {
                       onClick: () => {
-                          p({
-                              value: E.WX.STAGE_INSTANCE,
+                          f({
+                              value: O.WX.STAGE_INSTANCE,
                               name: C.intl.string(C.t.EErMzM),
                           }),
                               (0, c.ZDy)(async () => {
-                                  let { default: e } = await Promise.all([n.e("45094"), n.e("10123")]).then(
-                                      n.bind(n, 218613),
-                                  );
+                                  let { default: e } = await Promise.all([
+                                      n.e("38697"),
+                                      n.e("7590"),
+                                      n.e("96812"),
+                                      n.e("45094"),
+                                      n.e("46014"),
+                                  ]).then(n.bind(n, 218613));
                                   return (n) => {
                                       var l, i;
                                       return (0, r.jsx)(

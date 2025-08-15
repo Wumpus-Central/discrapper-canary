@@ -1,73 +1,73 @@
 n.d(t, { Z: () => d });
 var r = n(73800),
-    i = n(399606),
-    o = n(673125),
+    l = n(399606),
+    i = n(673125),
     a = n(984063),
-    s = n(88315),
-    l = n(179295),
-    c = n(370663),
-    u = n(743597);
+    o = n(88315),
+    u = n(179295),
+    s = n(370663),
+    c = n(743597);
 function d(e) {
-    let { user: t, channelId: n, streamerId: d, stream: f, focused: _, canvas: p } = e,
-        h = r.useRef(!1),
-        m = (0, i.e7)([o.Z], () => o.Z.getDrawMode()),
-        g = (0, l.Z)((0, c.Z)(t.id, n, d), f),
-        E = (0, l.Z)((0, u.Z)(t.id, n, d), f),
-        b = r.useCallback(
+    let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: m } = e,
+        E = r.useRef(!1),
+        g = (0, l.e7)([i.Z], () => i.Z.getDrawMode()),
+        S = (0, u.Z)((0, s.Z)(t.id, n, d), f),
+        v = (0, u.Z)((0, c.Z)(t.id, n, d), f),
+        h = r.useCallback(
             (e, t, n) => {
-                if (null == p) return;
-                let { x: r, y: i } = (0, s.hn)(p, n);
+                if (null == m) return;
+                let { x: r, y: l } = (0, o.hn)(m, n);
                 switch (t.type) {
                     case a.W.LINE:
-                        return g[e](t, r, i);
+                        return S[e](t, r, l);
                     case a.W.EMOJI_HOSE:
-                        return E[e](t, r, i);
+                        return v[e](t, r, l);
                 }
             },
-            [p, g, E],
+            [m, S, v],
         ),
-        y = r.useCallback(
+        b = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), (h.current = !0), b("handleMouseDown", m, e));
+                p && null != g && (e.stopPropagation(), (E.current = !0), h("handleMouseDown", g, e));
             },
-            [b, m, _],
+            [h, g, p],
         ),
         O = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), h.current && b("handleMouseMove", m, e));
+                p && null != g && (e.stopPropagation(), E.current && h("handleMouseMove", g, e));
             },
-            [b, m, _],
+            [h, g, p],
         ),
-        v = r.useCallback(
+        y = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), (h.current = !1), b("handleMouseUp", m, e));
+                p && null != g && (e.stopPropagation(), (E.current = !1), h("handleMouseUp", g, e));
             },
-            [b, m, _],
+            [h, g, p],
         ),
-        I = r.useCallback(
+        _ = r.useCallback(
             (e) => {
-                h.current && null != m && b("handleMouseEnter", m, e);
+                E.current && null != g && h("handleMouseEnter", g, e);
             },
-            [b, m],
+            [h, g],
         );
     return (
         r.useEffect(() => {
             let e = (e) => {
-                null != m && ((h.current = !1), b("handleMouseUp", m, e));
+                null != g && ((E.current = !1), h("handleMouseUp", g, e));
             };
             return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e);
-        }, [b, m]),
+        }, [h, g]),
         {
             handleClick: r.useCallback(
                 (e) => {
-                    _ && null != m && e.stopPropagation();
+                    p && null != g && e.stopPropagation();
                 },
-                [m, _],
+                [g, p],
             ),
-            handleMouseDown: y,
-            handleMouseEnter: I,
+            handleMouseDown: b,
+            handleMouseEnter: _,
             handleMouseMove: O,
-            handleMouseUp: v,
+            handleMouseUp: y,
         }
     );
 }

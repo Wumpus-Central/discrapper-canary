@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(355467),
     i = n(496929),
-    o = n(147913),
-    a = n(594174),
+    a = n(147913),
+    o = n(594174),
     s = n(351402),
     l = n(78839),
     c = n(580130),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends o.Z {
+class _ extends a.Z {
     constructor(...e) {
         super(...e),
             f(this, "actions", {
@@ -32,7 +32,7 @@ class _ extends o.Z {
                 },
             }),
             f(this, "maybeFetchSubscriptions", async () => {
-                let e = a.default.getCurrentUser(),
+                let e = o.default.getCurrentUser(),
                     t = s.Z.isSubscriptionFetching;
                 if ((0, u.I5)(e)) {
                     l.Z.hasFetchedSubscriptions() || t || (await (0, r.jg)());
@@ -44,13 +44,13 @@ class _ extends o.Z {
             }),
             f(this, "maybeFetchMostRecentSubscription", () => {
                 var e;
-                let t = a.default.getCurrentUser(),
+                let t = o.default.getCurrentUser(),
                     n = (0, u.xI)(null != (e = null == t ? void 0 : t.premiumType) ? e : null, d.p9.TIER_1),
                     i = l.Z.getIsFetchingMostRecentSubscription();
                 null != t && n && t.hasHadPremium() && !i && (0, r.ou)();
             }),
             f(this, "maybeFetchCountryCode", async () => {
-                let e = a.default.getCurrentUser();
+                let e = o.default.getCurrentUser();
                 (0, u.I5)(e) && !s.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
             f(this, "fetchCountryCode", async () => {

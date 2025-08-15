@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(539854);
 var r = n(979554),
     i = n(778787),
-    o = n(803358),
-    a = n(194165),
+    a = n(803358),
+    o = n(194165),
     s = n(889577);
 function l(e, t, n) {
     return (
@@ -62,9 +62,9 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,18 +73,18 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class h extends o.Z {
+class h extends a.Z {
     static fromServer(e) {
         var {
                 products: t,
                 logo: n,
                 hero_ranking: r,
-                pdp_bg: o,
+                pdp_bg: a,
                 mobile_bg: l,
                 mobile_banner: u,
                 banner: _,
@@ -122,7 +122,7 @@ class h extends o.Z {
                 }, []),
                 logo: n,
                 heroRanking: r,
-                pdpBg: o,
+                pdpBg: a,
                 mobileBg: l,
                 mobileBanner: u,
                 banner: _,
@@ -132,7 +132,7 @@ class h extends o.Z {
                 featuredBlock: b,
                 heroLogo: y,
                 bannerTextColor: O,
-                heroBannerConfig: null != v ? a.Z.fromServer(v) : void 0,
+                heroBannerConfig: null != v ? o.Z.fromServer(v) : void 0,
                 heroLogoDisplayConfig: null != I ? s.X.fromServer(I) : void 0,
             }),
         );

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(871499),
+    a = n(481060),
+    o = n(871499),
     s = n(510839),
     l = n(388032);
 function c(e, t, n) {
@@ -63,9 +63,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,8 +74,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
@@ -84,13 +84,13 @@ function h(e) {
     let d = i.useCallback(() => {
             (0, s.xT)({ applicationId: t });
         }, [t]),
-        p = n ? a.d : a.Z;
+        p = n ? o.d : o.Z;
     return (0, r.jsx)(
         p,
         f(u({}, c), {
             isTrayButton: !1,
             onClick: d,
-            iconComponent: o.Dio,
+            iconComponent: a.Dio,
             label: l.intl.string(l.t.cpT0Cg),
         }),
     );

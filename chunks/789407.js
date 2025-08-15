@@ -1,20 +1,20 @@
 n.d(t, {
-    XB: () => o,
+    XB: () => a,
     r9: () => l,
 });
 var r = n(726542),
     i = n(973616);
-let o = "spotify",
-    a = r.Z.get(o);
+let a = "spotify",
+    o = r.Z.get(a);
 class s extends i.ZP {
     getIconURL(e) {
-        return a.icon.lightPNG;
+        return o.icon.lightPNG;
     }
     getWhiteIconURL() {
-        return a.icon.whitePNG;
+        return o.icon.whitePNG;
     }
     constructor() {
-        super({}), (this.id = o), (this.name = a.name);
+        super({}), (this.id = a), (this.name = o.name);
     }
 }
 let l = new s();

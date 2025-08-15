@@ -1,8 +1,8 @@
 n.d(t, { P: () => f }), n(997841);
 var r = n(592125),
     i = n(271383),
-    o = n(430824),
-    a = n(630388),
+    a = n(430824),
+    o = n(630388),
     s = n(563534),
     l = n(846121),
     c = n(199689),
@@ -10,14 +10,14 @@ var r = n(592125),
     d = n(372897);
 function f(e, t) {
     var n, f;
-    let _ = o.Z.getGuild(e),
+    let _ = a.Z.getGuild(e),
         p = r.Z.getChannel(t);
     return (
         null != _ &&
         null != p &&
         (0, c.Z)(_) &&
         _.features.has(u.oNc.GUILD_SERVER_GUIDE) &&
-        !a.yE(
+        !o.yE(
             null != (f = null == (n = i.ZP.getSelfMember(_.id)) ? void 0 : n.flags) ? f : 0,
             d.q.COMPLETED_HOME_ACTIONS,
         ) &&

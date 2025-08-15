@@ -1,9 +1,9 @@
 n.d(t, {
     YR: () => a,
-    ZP: () => l,
-    _A: () => s,
+    ZP: () => s,
+    _A: () => o,
 });
-let { Layer: r, LayerContainer: i, LayerProvider: o } = (0, n(481060).Xvx)("VoiceChannelEffectsCall"),
+let { Layer: r, LayerContainer: i, LayerProvider: l } = (0, n(481060).Xvx)("VoiceChannelEffectsCall"),
     a = i,
-    s = o,
-    l = r;
+    o = l,
+    s = r;

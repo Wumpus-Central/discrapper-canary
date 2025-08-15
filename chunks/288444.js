@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(846519),
     i = n(904245),
-    o = n(287734),
-    a = n(147913),
+    a = n(287734),
+    o = n(147913),
     s = n(317381),
     l = n(592125),
     c = n(979651),
@@ -37,9 +37,9 @@ function m() {
     let e = c.Z.getCurrentClientVoiceChannelId(null);
     null != e &&
         (i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: _ })),
-        o.default.selectVoiceChannel(null));
+        a.default.selectVoiceChannel(null));
 }
-class g extends a.Z {
+class g extends o.Z {
     constructor(...e) {
         super(...e),
             f(this, "idleTimeout", new r.V7()),

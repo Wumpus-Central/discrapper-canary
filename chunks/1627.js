@@ -1,11 +1,11 @@
 n.d(t, { Z: () => c });
 var r = n(481060),
     i = n(703656),
-    o = n(302155),
-    a = n(71509),
+    a = n(302155),
+    o = n(71509),
     s = n(981631),
     l = n(388032);
-let c = new o.Z({
+let c = new a.Z({
     onSwitchSuccess(e, t) {
         setTimeout(() => {
             t && (0, i.uL)(s.Z5c.ME),
@@ -21,6 +21,6 @@ let c = new o.Z({
         (0, r.showToast)((0, r.createToast)(l.intl.string(l.t.pqvKWF), r.ToastType.FAILURE));
     },
     onTokenSet() {
-        (0, r.Mr3)(a.Ui), (0, r.Mr3)(a._5);
+        (0, r.Mr3)(o.Ui), (0, r.Mr3)(o._5);
     },
 });

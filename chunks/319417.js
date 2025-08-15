@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(443603),
     c = n(388032),
@@ -18,7 +18,7 @@ function d(e) {
                     className: u.buttonContainer,
                     children: (0, r.jsx)(l.Z, {
                         className: u.button,
-                        childClassName: a()(u.buttonChild, {
+                        childClassName: o()(u.buttonChild, {
                             [u.disabled]: n,
                             [u.activeButtonChild]: !n,
                         }),

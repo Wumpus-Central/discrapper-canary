@@ -1,7 +1,7 @@
 var r = Array.prototype.slice,
     i = n(775569),
-    o = n(35262),
-    a = (e.exports = function (e, t, n) {
+    a = n(35262),
+    o = (e.exports = function (e, t, n) {
         return (
             n || (n = {}),
             e === t ||
@@ -30,7 +30,7 @@ function l(e) {
 function c(e, t, n) {
     var c, u;
     if (s(e) || s(t) || e.prototype !== t.prototype) return !1;
-    if (o(e)) return !!o(t) && a((e = r.call(e)), (t = r.call(t)), n);
+    if (a(e)) return !!a(t) && o((e = r.call(e)), (t = r.call(t)), n);
     if (l(e)) {
         if (!l(t) || e.length !== t.length) return !1;
         for (c = 0; c < e.length; c++) if (e[c] !== t[c]) return !1;
@@ -44,6 +44,6 @@ function c(e, t, n) {
     }
     if (d.length != f.length) return !1;
     for (d.sort(), f.sort(), c = d.length - 1; c >= 0; c--) if (d[c] != f[c]) return !1;
-    for (c = d.length - 1; c >= 0; c--) if (!a(e[(u = d[c])], t[u], n)) return !1;
+    for (c = d.length - 1; c >= 0; c--) if (!o(e[(u = d[c])], t[u], n)) return !1;
     return typeof e == typeof t;
 }

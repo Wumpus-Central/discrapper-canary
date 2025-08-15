@@ -1,7 +1,7 @@
 var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator,
     i = n(733),
-    o = n(320387),
-    a = n(387584),
+    a = n(320387),
+    o = n(387584),
     s = n(830690),
     l = function (e, t) {
         if (null == e) throw TypeError("Cannot call method on " + e);
@@ -9,15 +9,15 @@ var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator,
             throw TypeError('hint must be "string" or "number"');
         var n,
             r,
-            a,
+            o,
             s = "string" === t ? ["toString", "valueOf"] : ["valueOf", "toString"];
-        for (a = 0; a < s.length; ++a) if (o((n = e[s[a]])) && i((r = n.call(e)))) return r;
+        for (o = 0; o < s.length; ++o) if (a((n = e[s[o]])) && i((r = n.call(e)))) return r;
         throw TypeError("No default value");
     },
     c = function (e, t) {
         var n = e[t];
         if (null != n) {
-            if (!o(n))
+            if (!a(n))
                 throw TypeError(n + " returned for property " + String(t) + " of object " + e + " is not a function");
             return n;
         }
@@ -31,9 +31,9 @@ e.exports = function (e) {
         r && (Symbol.toPrimitive ? (t = c(e, Symbol.toPrimitive)) : s(e) && (t = Symbol.prototype.valueOf)),
         void 0 !== t)
     ) {
-        var o = t.call(e, n);
-        if (i(o)) return o;
+        var a = t.call(e, n);
+        if (i(a)) return a;
         throw TypeError("unable to convert exotic object to primitive");
     }
-    return "default" === n && (a(e) || s(e)) && (n = "string"), l(e, "default" === n ? "number" : n);
+    return "default" === n && (o(e) || s(e)) && (n = "string"), l(e, "default" === n ? "number" : n);
 };

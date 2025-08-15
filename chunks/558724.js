@@ -1,23 +1,24 @@
 n.d(t, {
-    J: () => C,
-    Z: () => q,
+    J: () => I,
+    Z: () => L,
 }),
     n(388685);
 var r,
-    i = n(913527),
-    o = n.n(i),
-    a = n(149765),
+    i,
+    l = n(913527),
+    a = n.n(l),
+    o = n(149765),
     s = n(442837),
-    l = n(433517),
-    c = n(570140),
-    u = n(491428),
-    d = n(650774),
-    f = n(430824),
-    _ = n(496675),
-    p = n(914010),
-    h = n(594174),
-    m = n(981631);
-function g(e, t, n) {
+    c = n(433517),
+    u = n(570140),
+    d = n(491428),
+    p = n(650774),
+    m = n(430824),
+    f = n(496675),
+    _ = n(914010),
+    g = n(594174),
+    h = n(981631);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,187 +42,141 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = {
+let v = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
         lastSeen: null,
     },
-    v = O,
-    I = !1,
-    T = !1,
-    S = {},
-    A = null,
-    N = !1,
-    C = 86400000,
-    R = 7;
-var P = (function (e) {
-    return (
-        (e.IS_OWNER = "is_owner"),
-        (e.IS_ADMIN = "is_admin"),
-        (e.IS_COMMUNITY = "is_community"),
-        (e.GUILD_SIZE = "guild_size"),
-        (e.IS_HUB = "is_hub"),
-        (e.IS_VIEWING = "is_viewing"),
-        (e.GUILD_PERMISSIONS = "guild_permissions"),
-        (e.GUILD_SIZE_ALL = "guild_size_all"),
-        e
-    );
-})(P || {});
-let w = new Set(Object.values(P));
-function D() {
-    return null == v.lastFetched || Date.now() - v.lastFetched >= C;
+    O = v,
+    y = {},
+    x = null,
+    j = !1,
+    I = 86400000;
+var S =
+    (((i = S || {}).IS_OWNER = "is_owner"),
+    (i.IS_ADMIN = "is_admin"),
+    (i.IS_COMMUNITY = "is_community"),
+    (i.GUILD_SIZE = "guild_size"),
+    (i.IS_HUB = "is_hub"),
+    (i.IS_VIEWING = "is_viewing"),
+    (i.GUILD_PERMISSIONS = "guild_permissions"),
+    (i.GUILD_SIZE_ALL = "guild_size_all"),
+    i);
+let T = new Set(Object.values(S));
+function P() {
+    return null == O.lastFetched || Date.now() - O.lastFetched >= I;
 }
-function L() {
-    !N && (D() || null != v.surveyOverride) && ((N = !0), (0, u.wk)(v.surveyOverride, !0));
+function N() {
+    !j && (P() || null != O.surveyOverride) && ((j = !0), (0, d.wk)(O.surveyOverride, !0));
 }
-function x(e) {
-    return j(e) && M(e);
-}
-function M(e) {
-    let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
-    if (0 === t.length) return !0;
-    for (let e of t) if (!w.has(e)) return !1;
-    let i = t.includes("guild_size_all"),
-        o = !0;
-    for (let s of f.Z.getGuildsArray()) {
-        if (i || t.includes("guild_size")) {
-            let e = d.Z.getMemberCount(s.id);
-            if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
-                o = !1;
-                continue;
+function A(e) {
+    return (function (e) {
+        let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
+        if (0 === t.length) return !0;
+        for (let e of t) if (!T.has(e)) return !1;
+        let i = t.includes("guild_size_all"),
+            l = !0;
+        for (let a of m.Z.getGuildsArray()) {
+            if (i || t.includes("guild_size")) {
+                let e = p.Z.getMemberCount(a.id);
+                if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
+                    l = !1;
+                    continue;
+                }
             }
+            if (
+                (t.includes("is_community") && !a.features.has(h.oNc.COMMUNITY)) ||
+                (t.includes("is_hub") && !a.features.has(h.oNc.HUB))
+            )
+                continue;
+            if (t.includes("guild_permissions")) {
+                if (0 === r.length) continue;
+                let e = !1;
+                for (let t of r)
+                    try {
+                        let n = o.vB(t);
+                        if (f.Z.can(n, a)) {
+                            e = !0;
+                            break;
+                        }
+                    } catch (e) {}
+                if (!e) continue;
+            }
+            let s = g.default.getCurrentUser(),
+                c = (null == s ? void 0 : s.id) === a.ownerId,
+                u = f.Z.can(h.Plq.ADMINISTRATOR, a);
+            if ((t.includes("is_owner") && !c) || (t.includes("is_admin") && !u)) continue;
+            null == (y = null != y ? y : {})[e.key] && (y[e.key] = e);
+            let d = _.Z.getGuildId(),
+                m = null != d && d === a.id;
+            if ((!t.includes("is_viewing") || m) && !i) return !0;
         }
-        if (
-            (t.includes("is_community") && !s.features.has(m.oNc.COMMUNITY)) ||
-            (t.includes("is_hub") && !s.features.has(m.oNc.HUB))
-        )
-            continue;
-        if (t.includes("guild_permissions")) {
-            if (0 === r.length) continue;
-            let e = !1;
-            for (let t of r)
-                try {
-                    let n = a.vB(t);
-                    if (_.Z.can(n, s)) {
-                        e = !0;
-                        break;
-                    }
-                } catch (e) {}
-            if (!e) continue;
-        }
-        let l = h.default.getCurrentUser(),
-            c = (null == l ? void 0 : l.id) === s.ownerId,
-            u = _.Z.can(m.Plq.ADMINISTRATOR, s);
-        if ((t.includes("is_owner") && !c) || (t.includes("is_admin") && !u)) continue;
-        null == (S = null != S ? S : {})[e.key] && (S[e.key] = e);
-        let f = p.Z.getGuildId(),
-            g = null != f && f === s.id;
-        if ((!t.includes("is_viewing") || g) && !i) return !0;
-    }
-    return !!i && !!o;
+        return !!i && !!l;
+    })(e);
 }
-function j(e) {
-    return !0;
-}
-function k(e) {
-    let t = l.K.get(m.z7k);
-    return null == t || o()().diff(t, "day") < e;
-}
-function U(e) {
+function w(e) {
     let { survey: t } = e;
-    (N = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {});
+    (j = !1), (O.lastFetched = Date.now()), null == O.hiddenSurveys && (O.hiddenSurveys = {});
     let n = null != t,
-        r = n && null == v.hiddenSurveys[t.key],
-        i = n && x(t);
-    k(R);
-    let o = !1;
-    A = r && i && !o ? t : null;
-}
-function G(e) {
-    let { id: t } = e;
-    (v.surveyOverride = t), null != t && delete v.hiddenSurveys[t], (0, u.wk)(v.surveyOverride, !0);
-}
-function B() {
-    I = !0;
+        r = n && null == O.hiddenSurveys[t.key],
+        i = n && A(t),
+        l = c.K.get(h.z7k);
+    null == l || a()().diff(l, "day"), (x = r && i && 1 ? t : null);
 }
 function Z() {
-    T = !0;
-}
-function F(e) {
-    let { key: t } = e;
-    (v.hiddenSurveys[t] = !0), (A = null), (S = null != S ? S : {}), delete S[t];
-}
-function V() {
-    v.hiddenSurveys = {};
-}
-function H(e) {
-    return !!x(e) || ((A = null), !1);
-}
-function Y() {
-    let e = Object.values((S = null != S ? S : {}))[0];
-    return null != e && x(e)
-        ? void U({
+    if (null != x && (A(x) || ((x = null), 0))) return !1;
+    let e = Object.values((y = null != y ? y : {}))[0];
+    null != e && A(e)
+        ? w({
               type: "SURVEY_FETCHED",
               survey: e,
           })
-        : null != A && void (A = null);
+        : null != x && (x = null);
 }
-function W() {
-    if (null != A && H(A)) return !1;
-    Y();
-}
-function K() {
-    v.lastSeen = Date.now();
-}
-class z extends (r = s.ZP.PersistedStore) {
+class R extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        (v = null != e ? e : O), this.syncWith([p.Z], W);
+        (O = null != e ? e : v), this.syncWith([_.Z], Z);
     }
     getState() {
-        return v;
+        return O;
     }
     getCurrentSurvey() {
-        return D() ? null : A;
+        return P() ? null : x;
     }
     getSurveyOverride() {
-        return v.surveyOverride;
+        return O.surveyOverride;
     }
     getLastSeenTimestamp() {
-        return v.lastSeen;
+        return O.lastSeen;
     }
 }
-g(z, "displayName", "SurveyStore"),
-    g(z, "persistKey", "SurveyStore"),
-    g(z, "migrations", [
+b(R, "displayName", "SurveyStore"),
+    b(R, "persistKey", "SurveyStore"),
+    b(R, "migrations", [
         (e) => {
             let t = E({}, e);
             return (
@@ -235,21 +190,31 @@ g(z, "displayName", "SurveyStore"),
         },
         (e) => {
             var t;
-            return y(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
+            return C(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
         },
         (e) => {
             var t;
-            return y(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
+            return C(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         },
     ]);
-let q = new z(c.Z, {
-    CONNECTION_OPEN: L,
-    CONNECTION_RESUMED: L,
-    SURVEY_FETCHED: U,
-    SURVEY_HIDE: F,
-    SURVEY_OVERRIDE: G,
-    PUSH_NOTIFICATION_CLICK: B,
-    DISPLAYED_INVITE_SHOW: Z,
-    LOGOUT: V,
-    SURVEY_SEEN: K,
+let L = new R(u.Z, {
+    CONNECTION_OPEN: N,
+    CONNECTION_RESUMED: N,
+    SURVEY_FETCHED: w,
+    SURVEY_HIDE: function (e) {
+        let { key: t } = e;
+        (O.hiddenSurveys[t] = !0), (x = null), (y = null != y ? y : {}), delete y[t];
+    },
+    SURVEY_OVERRIDE: function (e) {
+        let { id: t } = e;
+        (O.surveyOverride = t), null != t && delete O.hiddenSurveys[t], (0, d.wk)(O.surveyOverride, !0);
+    },
+    PUSH_NOTIFICATION_CLICK: function () {},
+    DISPLAYED_INVITE_SHOW: function () {},
+    LOGOUT: function () {
+        O.hiddenSurveys = {};
+    },
+    SURVEY_SEEN: function () {
+        O.lastSeen = Date.now();
+    },
 });

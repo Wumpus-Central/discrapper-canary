@@ -10,8 +10,8 @@ n.d(t, {
     n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(607070),
     c = n(981631),
@@ -19,7 +19,7 @@ var r = n(255367),
 let d = RegExp("\\p{Emoji_Presentation}", "gu");
 function f(e) {
     var t, n, r;
-    let { colorStrings: i, useReducedMotion: o, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
+    let { colorStrings: i, useReducedMotion: a, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
         f = "username" === s,
         _ = "dot" === s,
         p = f && l,
@@ -32,14 +32,14 @@ function f(e) {
         g = (null == i ? void 0 : i.tertiaryColor) != null ? u.threeColorGradient : u.twoColorGradient;
     return {
         gradientStyle: m,
-        gradientClassname: a()(g, {
+        gradientClassname: o()(g, {
             [u.usernameGradient]: f,
             [u.convenienceGlowGradient]: p,
             [u.convenienceGlowGradientActive]: p && d,
-            [u.gradientDotAnimation]: !o && _,
+            [u.gradientDotAnimation]: !a && _,
             [u.animateGradient]: d && f,
         }),
-        gradientGlowClassname: a()(g, u.usernameGlow, {
+        gradientGlowClassname: o()(g, u.usernameGlow, {
             [u.usernameGradient]: f,
             [u.animateGradient]: d && f,
             [u.usernameGlowActive]: f && d,
@@ -47,30 +47,30 @@ function f(e) {
     };
 }
 function _(e) {
-    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: o } = e,
-        a = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: a } = e,
+        o = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     return i.useMemo(
         () =>
             f({
                 colorStrings: t,
-                useReducedMotion: a,
+                useReducedMotion: o,
                 roleStyle: n,
                 includeConvenienceGlow: r,
-                animateGradient: o,
+                animateGradient: a,
             }),
-        [t, n, r, a, o],
+        [t, n, r, o, a],
     );
 }
 function p(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
-            o = i.length >= 2,
-            a = i.length > 1 ? 100 / (i.length - 1) : 0,
+            a = i.length >= 2,
+            o = i.length > 1 ? 100 / (i.length - 1) : 0,
             s = i.map((e, t) =>
                 (0, r.jsx)(
                     "stop",
                     {
-                        offset: "".concat(t * a, "%"),
+                        offset: "".concat(t * o, "%"),
                         style: { stopColor: e },
                     },
                     t,
@@ -78,7 +78,7 @@ function p(e, t, n) {
             ),
             l = i.join("");
         return {
-            hasGradient: o,
+            hasGradient: a,
             stops: s,
             gradientId: "dotGradient-".concat(l),
             animatedGradientId: "dotAnimatedGradient-".concat(l),
@@ -90,17 +90,17 @@ function h(e, t) {
         let n;
         if (null == e) return e;
         let i = new RegExp(d),
-            o = [],
+            a = [],
             s = 0;
         for (; null !== (n = i.exec(e)); )
-            n.index > s && o.push(e.slice(s, n.index)),
-                o.push(
+            n.index > s && a.push(e.slice(s, n.index)),
+                a.push(
                     (0, r.jsx)("span", {
-                        className: a()(u.emoji, t),
+                        className: o()(u.emoji, t),
                         children: n[0],
                     }),
                 ),
                 (s = i.lastIndex);
-        return s < e.length && o.push(e.slice(s)), o;
+        return s < e.length && a.push(e.slice(s)), a;
     }, [e, t]);
 }

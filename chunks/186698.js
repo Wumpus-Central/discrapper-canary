@@ -23,7 +23,7 @@
                 : t + " ret";
     }
     function i(e, t, n, r) {
-        var i = o(e);
+        var i = a(e);
         switch (n) {
             case "ss":
                 return i + " lup";
@@ -39,16 +39,16 @@
                 return i + " DIS";
         }
     }
-    function o(e) {
+    function a(e) {
         var n = Math.floor((e % 1000) / 100),
             r = Math.floor((e % 100) / 10),
             i = e % 10,
-            o = "";
+            a = "";
         return (
-            n > 0 && (o += t[n] + "vatlh"),
-            r > 0 && (o += ("" !== o ? " " : "") + t[r] + "maH"),
-            i > 0 && (o += ("" !== o ? " " : "") + t[i]),
-            "" === o ? "pagh" : o
+            n > 0 && (a += t[n] + "vatlh"),
+            r > 0 && (a += ("" !== a ? " " : "") + t[r] + "maH"),
+            i > 0 && (a += ("" !== a ? " " : "") + t[i]),
+            "" === a ? "pagh" : a
         );
     }
     return e.defineLocale("tlh", {

@@ -1,10 +1,10 @@
 n.d(t, {
     C: () => s,
-    Z: () => a,
+    Z: () => o,
 });
 var r = n(818083),
     i = n(154579);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_search_author_type_filter",
     label: "Search Author Type Filter",
@@ -17,20 +17,20 @@ let o = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.ro)({
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: a } = o.getCurrentConfig(
+        { enabled: o } = a.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return a;
+    return o;
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -38,12 +38,12 @@ function s(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: a } = o.useExperiment(
+        { enabled: o } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r,
             },
         );
-    return a;
+    return o;
 }

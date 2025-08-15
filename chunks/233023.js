@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(111028),
     l = n(359588),
     c = n(74340),
@@ -38,7 +38,7 @@ function m(e) {
         w = null;
     null != E && T
         ? (w = (0, r.jsx)(d.Z, {
-              className: o()(i, h.hangStatusIcon),
+              className: a()(i, h.hangStatusIcon),
               hangStatusActivity: E,
           }))
         : null == S ||
@@ -62,10 +62,10 @@ function m(e) {
                       children: [C, w, D],
                   });
         };
-    return (0, r.jsx)(a.Text, {
+    return (0, r.jsx)(o.Text, {
         variant: "text-".concat(b, "/medium"),
         color: "none",
-        className: o()(h.truncated, n),
+        className: a()(h.truncated, n),
         children: L(),
     });
 }

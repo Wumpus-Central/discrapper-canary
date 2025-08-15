@@ -1,9 +1,9 @@
 n.d(t, {
     d: () => o,
-    v: () => i,
+    v: () => l,
 });
 var r = n(73800);
-let i = r.createContext(null);
+let l = r.createContext(null);
 function o() {
-    return r.useContext(i);
+    return r.useContext(l);
 }

@@ -1,36 +1,36 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
+    l = n(481060),
     a = n(509212),
-    s = n(113434),
-    l = n(497505),
+    o = n(113434),
+    s = n(497505),
     c = n(37303),
     u = n(722334),
     d = n(683650),
-    f = n(506207);
-function _(e) {
+    p = n(506207);
+function m(e) {
     let { questId: t } = e,
         {
             quests: n,
-            excludedQuests: _,
-            isFetchingCurrentQuests: p,
-        } = (0, s.J2)({
+            excludedQuests: m,
+            isFetchingCurrentQuests: f,
+        } = (0, o.J2)({
             fetchPolicy: "cache-or-network",
             callerSource: "embed",
         }),
-        h = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
-        m = i.useMemo(() => _.find((e) => e.id === t), [t, _]);
-    return p
-        ? (0, r.jsx)(o.$jN, { className: f.spinner })
-        : null != m
+        _ = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
+        g = i.useMemo(() => m.find((e) => e.id === t), [t, m]);
+    return f
+        ? (0, r.jsx)(l.$jN, { className: p.spinner })
+        : null != g
           ? (0, r.jsx)(u.W, { questId: t })
-          : null == h
+          : null == _
             ? (0, r.jsx)(d.o, {
                   questId: t,
                   reason: d.X.NOT_FOUND,
               })
-            : (0, a.HJ)(h)
+            : (0, a.HJ)(_)
               ? (0, r.jsx)(d.o, {
                     questId: t,
                     reason: d.X.MOBILE_ONLY,
@@ -38,10 +38,10 @@ function _(e) {
               : (0, r.jsx)(
                     c.Z,
                     {
-                        quest: h,
-                        location: l.jn.QUESTS_EMBED,
-                        sourceQuestContent: l.jn.QUESTS_EMBED,
+                        quest: _,
+                        location: s.jn.QUESTS_EMBED,
+                        sourceQuestContent: s.jn.QUESTS_EMBED,
                     },
-                    h.id,
+                    _.id,
                 );
 }

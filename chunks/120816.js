@@ -1,4 +1,4 @@
-a.d(t, { Z: () => f }), a(539854), a(388685);
+a.d(t, { Z: () => v }), a(539854), a(388685);
 var n,
     r,
     l = a(772848),
@@ -37,7 +37,7 @@ class b extends (n = s.ZP.Store) {
           writable: !0,
       })
     : (b[r] = "AnalyticsLogStore");
-let f = new b(o.Z, {
+let v = new b(o.Z, {
     TRACK: function (e) {
         let { event: t, properties: a, fingerprint: n } = e;
         d.Z.isDeveloper &&

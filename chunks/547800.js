@@ -5,8 +5,8 @@ n.r(t),
     });
 var r = n(255367),
     i = n(73800),
-    o = n(913527),
-    a = n.n(o),
+    a = n(913527),
+    o = n.n(a),
     s = n(352374),
     l = n.n(s),
     c = n(442837),
@@ -15,9 +15,9 @@ n(10294);
 var d = n(122668);
 function f(e) {
     let {
-            value: t = a()().local(),
+            value: t = o()().local(),
             minDate: n,
-            maxDate: o,
+            maxDate: a,
             onSelect: s,
             calendarClassName: f,
             autoFocus: _,
@@ -25,12 +25,12 @@ function f(e) {
         } = e,
         h = i.useCallback(
             (e, t) => {
-                null == s || s(a()(e), t);
+                null == s || s(o()(e), t);
             },
             [s],
         ),
         m = i.useMemo(() => t.toDate(), [t]),
-        g = i.useMemo(() => (null == o ? void 0 : o.toDate()), [o]),
+        g = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
         E = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
         b = (0, c.e7)([u.default], () => u.default.locale),
         y = i.useRef(null),

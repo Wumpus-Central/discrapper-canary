@@ -1,15 +1,15 @@
 n.d(t, {
     ZP: () => b,
     c2: () => x,
-    cK: () => f,
+    cK: () => m,
 });
 var r,
     i,
     l,
-    o = n(255367),
+    a = n(255367),
     s = n(73800),
-    a = n(120356),
-    c = n.n(a),
+    o = n(120356),
+    c = n.n(o),
     u = n(569499),
     d = n(678249);
 function h(e, t, n) {
@@ -41,12 +41,12 @@ function p(e) {
     }
     return e;
 }
-var f = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let m = Object.freeze({
+var m = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
+let g = Object.freeze({
         SIZE_40: "size-40",
         SIZE_60: "size-60",
     }),
-    g = n(515695);
+    f = n(515695);
 class _ extends (i = s.PureComponent) {
     render() {
         let e = this.props,
@@ -72,14 +72,14 @@ class _ extends (i = s.PureComponent) {
                 }
                 return i;
             })(e, ["className", "text"]);
-        return (0, o.jsx)("div", {
+        return (0, a.jsx)("div", {
             style: {
                 width: r.size,
                 height: r.size,
                 backgroundColor: r.bgColor,
             },
             className: c()(d.qrCodeContainer, t),
-            children: (0, o.jsx)(
+            children: (0, a.jsx)(
                 u.default,
                 p(
                     {
@@ -100,16 +100,16 @@ h(_, "defaultProps", {
 class x extends (l = s.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = m[null != e ? e : "SIZE_40"];
-        return (0, o.jsxs)("div", {
+            t = g[null != e ? e : "SIZE_40"];
+        return (0, a.jsxs)("div", {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, o.jsx)(_, p({}, this.props)),
-                (0, o.jsx)("div", {
+                (0, a.jsx)(_, p({}, this.props)),
+                (0, a.jsx)("div", {
                     className: d.qrCodeOverlay,
-                    children: (0, o.jsx)("img", {
+                    children: (0, a.jsx)("img", {
                         className: d[t],
-                        src: g,
+                        src: f,
                         alt: "",
                     }),
                 }),

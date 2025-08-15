@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(524437),
-    a = n(481060),
+    a = n(524437),
+    o = n(481060),
     s = n(153867),
     l = n(857595),
     c = n(607070),
@@ -29,7 +29,7 @@ function E() {
         })),
         y = p.YC.useSetting(),
         O = (e, i) =>
-            (0, r.jsx)(a.k5B, {
+            (0, r.jsx)(o.k5B, {
                 id: e,
                 group: "input-modes",
                 label: i,
@@ -46,7 +46,7 @@ function E() {
             }),
         v = [
             (0, r.jsxs)(
-                a.kSQ,
+                o.kSQ,
                 {
                     children: [
                         O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfn)),
@@ -62,35 +62,35 @@ function E() {
     return (
         v.push(
             (0, r.jsxs)(
-                a.kSQ,
+                o.kSQ,
                 {
                     label: "UI Density",
                     children: [
-                        (0, r.jsx)(a.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "compact-ui",
                             group: "list-density",
                             label: g.intl.string(g.t["7iegX1"]),
-                            checked: y === o.Pi.COMPACT,
+                            checked: y === a.Pi.COMPACT,
                             action: () => {
-                                p.YC.updateSetting(o.Pi.COMPACT);
+                                p.YC.updateSetting(a.Pi.COMPACT);
                             },
                         }),
-                        (0, r.jsx)(a.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "default-ui",
                             group: "list-density",
                             label: g.intl.string(g.t.bBvAEB),
-                            checked: y === o.Pi.DEFAULT,
+                            checked: y === a.Pi.DEFAULT,
                             action: () => {
-                                p.YC.updateSetting(o.Pi.DEFAULT);
+                                p.YC.updateSetting(a.Pi.DEFAULT);
                             },
                         }),
-                        (0, r.jsx)(a.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "cozy-ui",
                             group: "list-density",
                             label: g.intl.string(g.t["4cuYHx"]),
-                            checked: y === o.Pi.COZY,
+                            checked: y === a.Pi.COZY,
                             action: () => {
-                                p.YC.updateSetting(o.Pi.COZY);
+                                p.YC.updateSetting(a.Pi.COZY);
                             },
                         }),
                     ],
@@ -100,11 +100,11 @@ function E() {
         ),
         v.push(
             (0, r.jsxs)(
-                a.kSQ,
+                o.kSQ,
                 {
                     label: "Message Display",
                     children: [
-                        (0, r.jsx)(a.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "cozy-chat",
                             group: "chat-density",
                             label: g.intl.string(g.t.Jqj4cX),
@@ -113,7 +113,7 @@ function E() {
                                 p.jU.updateSetting(!1), (0, l.ZZ)();
                             },
                         }),
-                        (0, r.jsx)(a.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "compact-chat",
                             group: "chat-density",
                             label: g.intl.string(g.t["1JNcPT"]),

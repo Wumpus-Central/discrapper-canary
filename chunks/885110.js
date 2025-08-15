@@ -1,9 +1,9 @@
 n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
 var r,
     i = n(348327),
-    o = n.n(i),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
     c = n(570140),
     u = n(503438),
@@ -49,7 +49,7 @@ function M(e) {
     let t = m.Z.getGameByName(e);
     return null != t ? x(t.id) : f.G6.getSetting();
 }
-function j(e) {
+function k(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -65,7 +65,7 @@ function j(e) {
             return null == e.application_id || x(e.application_id);
     }
 }
-function k() {
+function j() {
     (P = !0), (A = S), U();
 }
 function U() {
@@ -78,8 +78,8 @@ function U() {
     }
     S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(j);
-    o()(C, n) || ((C = n), (t = !0));
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
+    a()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
@@ -95,13 +95,13 @@ function G(e) {
 function B() {
     return (T = !1), U();
 }
-function Z() {
+function V() {
     (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, L);
 }
 function F() {
-    Z();
+    V();
 }
-class V extends (r = l.ZP.Store) {
+class Z extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
     }
@@ -136,12 +136,12 @@ class V extends (r = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-I(V, "displayName", "SelfPresenceStore");
-let H = new V(c.Z, {
+I(Z, "displayName", "SelfPresenceStore");
+let H = new Z(c.Z, {
     START_SESSION: U,
     CONNECTION_OPEN: F,
-    CONNECTION_OPEN_SUPPLEMENTAL: Z,
-    OVERLAY_INITIALIZE: Z,
+    CONNECTION_OPEN_SUPPLEMENTAL: V,
+    OVERLAY_INITIALIZE: V,
     CONNECTION_CLOSED: U,
     IDLE: U,
     AFK: U,
@@ -156,7 +156,7 @@ let H = new V(c.Z, {
     RPC_APP_DISCONNECTED: U,
     LIBRARY_FETCH_SUCCESS: U,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
-    LOGOUT: k,
+    LOGOUT: j,
     FORCE_INVISIBLE: G,
     WINDOW_FOCUS: B,
 });

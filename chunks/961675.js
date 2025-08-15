@@ -15,23 +15,23 @@ function a(e, t, n) {
         e
     );
 }
-let s = new Set();
-class o extends (r = i.ZP.PersistedStore) {
+let o = new Set();
+class s extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (s = new Set(e));
+        null != e && (o = new Set(e));
     }
     hasHidden(e) {
-        return s.has(e);
+        return o.has(e);
     }
     getState() {
-        return s;
+        return o;
     }
 }
-a(o, "displayName", "ForumChannelAdminOnboardingGuideStore"),
-    a(o, "persistKey", "ForumChannelAdminOnboardingGuideStore");
-let c = new o(l.Z, {
+a(s, "displayName", "ForumChannelAdminOnboardingGuideStore"),
+    a(s, "persistKey", "ForumChannelAdminOnboardingGuideStore");
+let c = new s(l.Z, {
     ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
         let { channelId: t, hide: n } = e;
-        n ? s.add(t) : s.delete(t);
+        n ? o.add(t) : o.delete(t);
     },
 });

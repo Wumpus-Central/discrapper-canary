@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(906732),
     m = n(306680),
     b = n(585483),
-    O = n(709054),
-    _ = n(821020),
+    _ = n(709054),
+    O = n(821020),
     y = n(804932),
     v = n(389160),
     j = n(787879),
@@ -23,8 +23,8 @@ var r = n(255367),
     E = n(334426),
     x = n(862149),
     S = n(982183),
-    P = n(981631),
-    I = n(677642),
+    I = n(981631),
+    P = n(677642),
     N = n(388032),
     w = n(809946);
 function Z(e) {
@@ -76,9 +76,9 @@ function R() {
                         }),
                         (0, r.jsx)(p.Text, {
                             variant: "text-sm/medium",
-                            color: P.tPk.TEXT_MUTED,
+                            color: I.tPk.TEXT_MUTED,
                             style: { textAlign: "center" },
-                            children: N.intl.string(I.default["O+racX"]),
+                            children: N.intl.string(P.default["O+racX"]),
                         }),
                     ],
                 }),
@@ -86,7 +86,7 @@ function R() {
                     onClick: () => (0, C.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: N.intl.string(I.default.klSpfn),
+                    children: N.intl.string(P.default.klSpfn),
                 }),
             ],
         }),
@@ -101,13 +101,13 @@ function D(e) {
             renderMessageGroup: d,
             scrollerClassName: h,
             className: g,
-            listName: I,
+            listName: P,
             ignoreGrouping: N = !1,
         } = e,
         D = (0, y.fJ)(),
         L = i.useRef(null),
-        M = (0, f.Z)(I, L),
-        { entrypoint: k, notificationCenterVariant: U } = (0, _.pN)({ location: "NotificationsInboxSidebarList" }),
+        M = (0, f.Z)(P, L),
+        { entrypoint: k, notificationCenterVariant: U } = (0, O.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: G,
             isLoadingComplete: B,
@@ -117,8 +117,8 @@ function D(e) {
             isLoadingComplete: j.Z.isLoadingComplete,
             hasLoadedEver: j.Z.hasLoadedEver,
         })),
-        F = !V && G,
-        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
+        H = !V && G,
+        { messageCategoryOpenStates: F, toggleOpenState: z } = (0, v.Z)(),
         W = (function () {
             let e = (0, u.Wu)([j.Z], () => {
                 var e;
@@ -144,10 +144,10 @@ function D(e) {
             null == (e = L.current) || e.scrollPageDown({ animate: !0 });
         }
         return (
-            b.S.subscribe(P.CkL.SCROLL_PAGE_DOWN, t),
-            b.S.subscribe(P.CkL.SCROLL_PAGE_UP, e),
+            b.S.subscribe(I.CkL.SCROLL_PAGE_DOWN, t),
+            b.S.subscribe(I.CkL.SCROLL_PAGE_UP, e),
             () => {
-                b.S.unsubscribe(P.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(P.CkL.SCROLL_PAGE_UP, e);
+                b.S.unsubscribe(I.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(I.CkL.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -196,7 +196,7 @@ function D(e) {
                     }),
                     s().each(A, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
-                            .sort((e, t) => O.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => _.default.compare(t[0].id, e[0].id))
                             .forEach((n) => {
                                 e[t].push(n);
                             });
@@ -222,9 +222,9 @@ function D(e) {
                                           T,
                                           {
                                               group: t,
-                                              isOpen: H[t],
+                                              isOpen: F[t],
                                               toggleOpenedState: () => {
-                                                  let e = H[t];
+                                                  let e = F[t];
                                                   z(t),
                                                       (0, y.RZ)({
                                                           section: t,
@@ -236,11 +236,11 @@ function D(e) {
                                           t,
                                       ),
                                   ),
-                                  H[t] && e.push(...Y[t].map((e) => d(e, t === S.KZ.UNREAD))));
+                                  F[t] && e.push(...Y[t].map((e) => d(e, t === S.KZ.UNREAD))));
                           }),
                 e
             );
-        }, [t, n, a, H, z, Y, N, d, q, X, D]),
+        }, [t, n, a, F, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
         $ = i.isValidElement(J) && J.type === T,
         ee = (0, E.d)((e) => e.setInboxReadState);
@@ -258,14 +258,14 @@ function D(e) {
         }, [o, l, t]);
     })({
         messagesByCategory: Y,
-        loadingInitial: F,
+        loadingInitial: H,
     });
     let en = i.useCallback(() => {
         var e;
-        let t = A.filter((e) => H[e]).reduce((e, t) => e + Y[t].length, 0),
+        let t = A.filter((e) => F[e]).reduce((e, t) => e + Y[t].length, 0),
             n = null == (e = L.current) ? void 0 : e.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
-    }, [H, Y]);
+    }, [F, Y]);
     i.useEffect(() => {
         X || G || 0 >= en() || ((!$ || W) && (null == l || l(S.X.FILL_SCROLLER)));
     }, [en, l, X, G, $, W]);

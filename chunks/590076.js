@@ -1,82 +1,82 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(255367),
-    i = n(73800),
-    o = n(512722),
-    a = n.n(o),
-    s = n(399606),
-    l = n(618158),
-    c = n(594174),
-    u = n(822183),
+    l = n(73800),
+    i = n(512722),
+    a = n.n(i),
+    o = n(399606),
+    u = n(618158),
+    s = n(594174),
+    c = n(822183),
     d = n(364125),
     f = n(90753),
-    _ = n(806777);
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
+    p = n(806777);
 function m(e) {
-    let { focused: t, channelId: n, streamerId: o, stream: u } = e,
-        p = i.useRef(null),
-        h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    a()(null != h, "user cannot be null"), (0, f.Z)(p, h, o, n);
+    let { focused: t, channelId: n, streamerId: i, stream: c } = e,
+        m = l.useRef(null),
+        E = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    a()(null != E, "user cannot be null"), (0, f.Z)(m, E, i, n);
     let {
-        handleClick: m,
-        handleMouseDown: g,
-        handleMouseEnter: E,
-        handleMouseMove: b,
-        handleMouseUp: y,
+        handleClick: g,
+        handleMouseDown: S,
+        handleMouseEnter: v,
+        handleMouseMove: h,
+        handleMouseUp: b,
     } = (0, d.Z)({
-        user: h,
+        user: E,
         channelId: n,
-        streamerId: o,
-        stream: u,
+        streamerId: i,
+        stream: c,
         focused: t,
-        canvas: p.current,
+        canvas: m.current,
     });
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(u.Z, {
         children: (0, r.jsx)("canvas", {
-            ref: p,
-            onClick: m,
-            onMouseDown: g,
-            onMouseEnter: E,
-            onMouseMove: b,
-            onMouseUp: y,
-            className: _.sharedCanvas,
+            ref: m,
+            onClick: g,
+            onMouseDown: S,
+            onMouseEnter: v,
+            onMouseMove: h,
+            onMouseUp: b,
+            className: p.sharedCanvas,
         }),
     });
 }
-function g(e) {
-    let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
+function E(e) {
+    let { isSharedCanvasEnabled: t } = c.Z.useExperiment(
         {
             guildId: e.guildId,
             location: "d0de1c_1",
         },
         { autoTrackExposure: !0 },
     );
-    return !t || e.hasScreenMessage ? null : (0, r.jsx)(m, h({}, e));
+    return !t || e.hasScreenMessage
+        ? null
+        : (0, r.jsx)(
+              m,
+              (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var n = null != arguments[t] ? arguments[t] : {},
+                          r = Object.keys(n);
+                      "function" == typeof Object.getOwnPropertySymbols &&
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                              }),
+                          )),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: r,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0,
+                                        })
+                                      : (e[t] = r);
+                          });
+                  }
+                  return e;
+              })({}, e),
+          );
 }

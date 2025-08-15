@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -14,8 +14,8 @@ var r,
     g = n(925549),
     m = n(607070),
     b = n(100527),
-    O = n(367907),
-    _ = n(906732),
+    _ = n(367907),
+    O = n(906732),
     y = n(453542),
     v = n(702321),
     j = n(46148),
@@ -23,8 +23,8 @@ var r,
     E = n(313201),
     x = n(860144),
     S = n(214852),
-    P = n(518311),
-    I = n(355298),
+    I = n(518311),
+    P = n(355298),
     N = n(869404),
     w = n(333984),
     Z = n(984802),
@@ -369,7 +369,7 @@ class V extends (r = l.Component) {
                             .length,
                     };
                 (this.hasReportedAnalytics = !0),
-                    O.ZP.trackWithMetadata(
+                    _.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
                         G(U({}, u, (0, y.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
@@ -442,7 +442,7 @@ class V extends (r = l.Component) {
                                       children: L.intl.string(L.t.YUU0RE),
                                   }),
                                   null == r &&
-                                      (0, i.jsx)(P.Z, {
+                                      (0, i.jsx)(I.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
                                           tooltip: L.intl.string(L.t["6Urw1t"]),
                                           tooltipPosition: "top",
@@ -453,7 +453,7 @@ class V extends (r = l.Component) {
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
-                                      (0, i.jsx)(P.l, {
+                                      (0, i.jsx)(I.l, {
                                           popoutAlign: "left",
                                           icon: h.kL_,
                                           text: L.intl.string(L.t["6Urw1t"]),
@@ -486,20 +486,20 @@ class V extends (r = l.Component) {
     }
 }
 k(V, "defaultProps", { padding: 8 });
-let F = (e) => {
+let H = (e) => {
     let { density: t } = (0, h.TCT)(),
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
         f = l.Children.count(o),
         g = T.Z.getMutablePrivateChannels(),
-        O = (0, N.k1)(g),
-        y = (0, p.Wu)([R.Z, I.Z, w.Z], () => {
+        _ = (0, N.k1)(g),
+        y = (0, p.Wu)([R.Z, P.Z, w.Z], () => {
             let e = R.Z.getPrivateChannelIds();
-            return (0, N.tU)(e, [I.Z, w.Z]);
+            return (0, N.tU)(e, [P.Z, w.Z]);
         }, []);
     (0, S.z)(x.R);
-    let { analyticsLocations: v } = (0, _.ZP)(b.Z.CONTACTS_LIST),
+    let { analyticsLocations: v } = (0, O.ZP)(b.Z.CONTACTS_LIST),
         j = (0, Z.Ll)(),
-        { keyboardModeEnabled: C, version: P } = (0, p.cj)([m.Z, T.Z], () => ({
+        { keyboardModeEnabled: C, version: I } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
@@ -549,7 +549,7 @@ let F = (e) => {
             [D],
         ),
         B = (0, E.Dt)(),
-        F = (0, d.ZP)({
+        H = (0, d.ZP)({
             id: "private-channels-".concat(B),
             isEnabled: C,
             scrollToStart: M,
@@ -557,19 +557,19 @@ let F = (e) => {
             defaultFocused: (f + +!!a).toString(),
             setFocus: L,
         });
-    return (0, i.jsx)(_.Gt, {
+    return (0, i.jsx)(O.Gt, {
         value: v,
         children: (0, i.jsx)(u.bG, {
-            navigator: F,
+            navigator: H,
             children: (0, i.jsx)(
                 V,
                 G(U({}, e), {
                     density: t,
-                    channels: O,
+                    channels: _,
                     privateChannelIds: y,
                     listRef: D,
                     theme: null != j ? j : r,
-                    version: P,
+                    version: I,
                     createDMCTAButtonVariant: c,
                 }),
             ),

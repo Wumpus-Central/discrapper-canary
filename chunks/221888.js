@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -84,8 +84,8 @@ function R(e, t) {
     }
 }
 function P(e) {
-    let { users: t, disableInteraction: n, guildId: i, participantType: o, channelId: s, handleUserContextMenu: l } = e,
-        c = R(o, t.length);
+    let { users: t, disableInteraction: n, guildId: i, participantType: a, channelId: s, handleUserContextMenu: l } = e,
+        c = R(a, t.length);
     return (0, r.jsx)(d.VqE, {
         "aria-label": c,
         className: I.popoutWrapper,
@@ -106,7 +106,7 @@ function P(e) {
                                 guildId: null != i ? i : void 0,
                                 channelId: s,
                                 nick: b.ZP.getNickname(i, s, e),
-                                className: a()(I.memberListItem, { [I.popoutDisabled]: n }),
+                                className: o()(I.memberListItem, { [I.popoutDisabled]: n }),
                                 textClassName: I.memberListItemText,
                                 disablePopout: n,
                                 onContextMenu: (t) => (n ? null : l(t, e)),
@@ -120,10 +120,10 @@ function P(e) {
     });
 }
 function w(e) {
-    let { users: t, guildId: n, channelId: i, maxVisibleUsers: o = 3, className: s, participantType: l } = e,
+    let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: s, participantType: l } = e,
         c = R(l, t.length),
         u =
-            t.length < o
+            t.length < a
                 ? t.map((e) =>
                       (0, r.jsx)(
                           "div",
@@ -139,7 +139,7 @@ function w(e) {
         text: u,
         "aria-label": c,
         children: (0, r.jsxs)("div", {
-            className: a()(I.viewers, s),
+            className: o()(I.viewers, s),
             children: [
                 (0, r.jsx)(d.tEF, {
                     size: "xs",
@@ -158,7 +158,7 @@ let D = [];
 function L(e) {
     let {
             channelId: t,
-            guildId: o,
+            guildId: a,
             participant: s,
             className: h,
             compact: b = !1,
@@ -169,7 +169,7 @@ function L(e) {
         R = (0, p.Z)(),
         [L, x] = i.useState(!1),
         M = i.useRef(new u.sW(C, () => x(!1))),
-        j = (0, c.Wu)([m.Z, g.default], () => {
+        k = (0, c.Wu)([m.Z, g.default], () => {
             if (s.type === y.fO.STREAM) {
                 let e = m.Z.getViewerIds(s.id);
                 return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
@@ -183,7 +183,7 @@ function L(e) {
     i.useEffect(() => {
         R && (M.current.cancel(), x(!1));
     }, [R]);
-    let k = i.useCallback(() => {
+    let j = i.useCallback(() => {
             M.current.cancel(), x(!0);
         }, []),
         U = i.useCallback(() => {
@@ -191,37 +191,40 @@ function L(e) {
         }, []),
         G = i.useCallback(
             (e, t) => {
-                k(),
+                j(),
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
-                                n.bind(n, 881351),
-                            );
+                            let { default: e } = await Promise.all([
+                                n.e("70274"),
+                                n.e("79695"),
+                                n.e("69220"),
+                                n.e("92522"),
+                            ]).then(n.bind(n, 881351));
                             return (n) => (0, r.jsx)(e, N(S({}, n), { user: t }));
                         },
                         { onClose: U },
                     );
             },
-            [U, k],
+            [U, j],
         );
-    if (0 === j.length) return null;
+    if (0 === k.length) return null;
     if (b)
         return (0, r.jsx)(w, {
             maxVisibleUsers: T,
-            users: j,
-            guildId: o,
+            users: k,
+            guildId: a,
             channelId: t,
             className: h,
             participantType: s.type,
         });
-    let B = l()(j)
+    let B = l()(k)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
                 d.qEK,
                 {
-                    src: e.getAvatarURL(o, 24),
+                    src: e.getAvatarURL(a, 24),
                     "aria-label": e.username,
                     size: d.EFr.SIZE_24,
                     className: I.viewer,
@@ -231,19 +234,19 @@ function L(e) {
         )
         .value();
     return (
-        j.length > T &&
+        k.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 "div",
                 {
                     className: I.overflow,
-                    children: ["+", j.length - T + 1],
+                    children: ["+", k.length - T + 1],
                 },
                 "overflow",
             )),
         (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)("div", {
-                onMouseEnter: k,
+                onMouseEnter: j,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
                     targetElementRef: A,
@@ -251,9 +254,9 @@ function L(e) {
                         (0, r.jsx)(P, {
                             participantType: s.type,
                             handleUserContextMenu: G,
-                            guildId: o,
+                            guildId: a,
                             channelId: t,
-                            users: j,
+                            users: k,
                             disableInteraction: v,
                         }),
                     shouldShow: L && !R,
@@ -261,7 +264,7 @@ function L(e) {
                     children: () =>
                         (0, r.jsx)("div", {
                             ref: A,
-                            className: a()(I.viewers, h),
+                            className: o()(I.viewers, h),
                             children: B,
                         }),
                 }),

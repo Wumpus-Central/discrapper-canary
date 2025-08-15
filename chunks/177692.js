@@ -1,11 +1,11 @@
 n.d(t, { Mn: () => d }), n(539854), n(415506);
 var r = n(668757),
     i = n(511495),
-    o = n(710845),
-    a = n(626135),
+    a = n(710845),
+    o = n(626135),
     s = n(894276),
     l = n(981631);
-let c = new o.Z("libdiscore"),
+let c = new a.Z("libdiscore"),
     u = !1;
 async function d() {
     if (!u) {
@@ -25,7 +25,7 @@ function f() {
         let n = t.getEnabledFeatureName();
         null != n && e.push(n);
     }),
-        a.default.track(l.rMx.LIBDISCORE_LOADED, {
+        o.default.track(l.rMx.LIBDISCORE_LOADED, {
             success: !0,
             experimental_features: e,
         });
@@ -42,7 +42,7 @@ function _(e) {
 function p(e) {
     c.error("Failed to execute smoke test:", e);
     let t = _(e);
-    a.default.track(l.rMx.LIBDISCORE_LOADED, {
+    o.default.track(l.rMx.LIBDISCORE_LOADED, {
         success: !1,
         error: t,
     });

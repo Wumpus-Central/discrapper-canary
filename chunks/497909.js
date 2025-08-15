@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685), n(49124);
 var r = n(668757),
     i = n(902704),
-    o = n(147913),
-    a = n(818083),
+    a = n(147913),
+    o = n(818083),
     s = n(353926),
     l = n(894276);
 function c(e, t, n) {
@@ -28,7 +28,7 @@ function d() {
 function f() {
     l.Re.forEach((e) =>
         e.setExperiment(
-            (0, a.B)({
+            (0, o.B)({
                 kind: "user",
                 id: e.id,
                 label: e.getLabel(),
@@ -45,7 +45,7 @@ function f() {
         ),
     );
 }
-class _ extends o.Z {
+class _ extends a.Z {
     _initialize() {
         f();
     }

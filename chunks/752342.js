@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -17,8 +17,8 @@ var i = n(481060),
     j = n(530),
     y = n(871604),
     O = n(952124),
-    x = n(53558),
-    h = n(544989),
+    h = n(53558),
+    x = n(544989),
     v = n(30556),
     _ = n(4517),
     I = n(740628),
@@ -27,12 +27,12 @@ var i = n(481060),
     T = n(981631),
     Z = n(388032),
     N = n(673517);
-function S(e) {
+function w(e) {
     let {
             user: t,
             currentUser: n,
-            guildId: S,
-            channelId: w,
+            guildId: w,
+            channelId: S,
             messageId: A,
             roleId: C,
             sessionId: D,
@@ -43,9 +43,9 @@ function S(e) {
             onClose: B,
             sourceAnalyticsLocations: M = [],
         } = e,
-        U = S === T.ME ? void 0 : S,
+        U = w === T.ME ? void 0 : w,
         F = (0, u.ZP)(t.id, U),
-        V = s.ZP.getName(U, w, t),
+        V = s.ZP.getName(U, S, t),
         Y = (0, c.Dt)(),
         { analyticsLocations: W } = (0, a.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
         z = (0, d.ZB)({
@@ -53,11 +53,11 @@ function S(e) {
             userId: t.id,
             sourceSessionId: D,
             guildId: U,
-            channelId: w,
+            channelId: S,
             messageId: A,
             roleId: C,
         }),
-        H = (0, P.Z)(t);
+        K = (0, P.Z)(t);
     return (0, r.jsx)(a.Gt, {
         value: W,
         children: (0, r.jsx)(d.Mt, {
@@ -85,7 +85,7 @@ function S(e) {
                         displayProfile: F,
                         themeType: E.lY.MODAL,
                         children: [
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(x.Z, {
                                 children: (0, r.jsx)(O.Z, {
                                     user: t,
                                     guildId: U,
@@ -106,7 +106,7 @@ function S(e) {
                                                 user: t,
                                                 displayProfile: F,
                                                 guildId: U,
-                                                channelId: w,
+                                                channelId: S,
                                                 themeType: E.lY.MODAL,
                                             }),
                                             (0, r.jsx)(_.Z, {
@@ -132,7 +132,7 @@ function S(e) {
                                                         onClose: l.Z.popAll,
                                                         tooltipContainerClassName: N.messageIconButton,
                                                     }),
-                                                    (0, r.jsx)(x.Z, {
+                                                    (0, r.jsx)(h.Z, {
                                                         user: t,
                                                         guildId: U,
                                                     }),
@@ -167,7 +167,7 @@ function S(e) {
                                         currentUser: n,
                                         displayProfile: F,
                                         guildId: U,
-                                        items: H,
+                                        items: K,
                                         initialSection: null != L ? L : E.oh.BOT_INFO,
                                         initialSubsection: R,
                                         onClose: B,

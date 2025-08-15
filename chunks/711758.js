@@ -1,7 +1,7 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    o = n(570140);
+    l = n(570140);
 function a(e, t, n) {
     return (
         t in e
@@ -15,65 +15,56 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let u = d();
-function d() {
+let o = s();
+function s() {
     return { ignoreTimestamps: {} };
 }
-function f(e) {
-    let { userId: t, timestamp: n } = e;
-    u.ignoreTimestamps[t] = n;
-}
-class _ extends (r = i.ZP.PersistedStore) {
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        var t;
-        let n = null != (t = null == e ? void 0 : e.ignoreTimestamps) ? t : {};
-        u = c(s({}, d()), { ignoreTimestamps: n });
+        var t, n, r;
+        let i = null != (t = null == e ? void 0 : e.ignoreTimestamps) ? t : {};
+        (n = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        a(e, t, n[t]);
+                    });
+            }
+            return e;
+        })({}, s())),
+            (r = r = { ignoreTimestamps: i }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            (o = n);
     }
     getState() {
-        return u;
+        return o;
     }
     getIgnoreTimestamps() {
-        return u.ignoreTimestamps;
+        return o.ignoreTimestamps;
     }
 }
-a(_, "displayName", "IgnoreNoticeStore"), a(_, "persistKey", "IgnoreNoticeStore");
-let p = new _(o.Z, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });
+a(c, "displayName", "IgnoreNoticeStore"), a(c, "persistKey", "IgnoreNoticeStore");
+let u = new c(l.Z, {
+    RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
+        let { userId: t, timestamp: n } = e;
+        o.ignoreTimestamps[t] = n;
+    },
+});

@@ -5,10 +5,10 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(902704),
-    o = n(158776),
-    a = n(981631);
+    a = n(158776),
+    o = n(981631);
 function s(e) {
-    return e.type === a.IIU.PLAYING;
+    return e.type === o.IIU.PLAYING;
 }
 function l(e, t) {
     return t.findActivity(e, s);
@@ -30,5 +30,5 @@ function d(e, t) {
     return e === t || (null != e && null != t && (0, i.Z)(e, t));
 }
 function f(e) {
-    return (0, r.e7)([o.Z], () => u(e, o.Z), [e], d);
+    return (0, r.e7)([a.Z], () => u(e, a.Z), [e], d);
 }

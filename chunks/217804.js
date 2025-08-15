@@ -1,18 +1,18 @@
-n.d(t, { u: () => a });
+n.d(t, { u: () => s });
 var r = n(481060),
-    i = n(471445),
-    o = n(230900);
-function a(e, t) {
-    let n, a;
+    l = n(471445),
+    i = n(230900);
+function s(e, t) {
+    let n, s;
     if (null == e) return null;
-    let s = (0, o.cS)(e);
-    if (null != s) (n = r._tJ), (a = s);
+    let a = (0, i.cS)(e);
+    if (null != a) (n = r._tJ), (s = a);
     else {
         if (null == t) return null;
-        (n = (0, i.Th)(t.type)), (a = t.name);
+        (n = (0, l.Th)(t.type)), (s = t.name);
     }
     return {
         IconComponent: n,
-        locationName: a,
+        locationName: s,
     };
 }

@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => I,
+    $h: () => P,
     cO: () => w,
-    jG: () => P,
+    jG: () => I,
     yI: () => N,
 });
 var r = n(255367);
@@ -20,8 +20,8 @@ var i = n(120356),
     g = n(441536),
     m = n(795338),
     b = n(279604),
-    O = n(535396),
-    _ = n(981631),
+    _ = n(535396),
+    O = n(981631),
     y = n(921944),
     v = n(989308),
     j = n(388032),
@@ -29,7 +29,7 @@ var i = n(120356),
     E = n(928381),
     x = n(283902),
     S = n(225375);
-function P(e) {
+function I(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(Z, {
         asset: (0, r.jsx)(m.g, { className: C.image }),
@@ -40,7 +40,7 @@ function P(e) {
         markAsDismissed: i,
     });
 }
-function I(e) {
+function P(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, h.Z)(t);
     return (0, r.jsx)(Z, {
@@ -57,7 +57,7 @@ function I(e) {
                 ? (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
                 : (0, d.f)({
                       guildId: t,
-                      location: { section: _.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
+                      location: { section: O.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
                   }),
         markAsDismissed: n,
         caretPosition: i ? p.DF.LEFT_TOP : p.DF.TOP_CENTER,
@@ -115,7 +115,7 @@ function w(e) {
             markAsDismissed: i,
             buttonCTA: j.intl.string(j.t.RzWDqa),
         });
-    let a = n.find((e) => O.NL.has(e.skuId));
+    let a = n.find((e) => _.NL.has(e.skuId));
     return null != a
         ? (0, r.jsx)(Z, {
               header: j.intl.string(v.default["kA2c+v"]),

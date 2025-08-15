@@ -1,12 +1,12 @@
-t.d(r, { E: () => i });
-var e = t(573654),
-    o = t(73800);
-function i(n) {
-    return (0, o.useMemo)(
+n.d(t, { E: () => o });
+var r = n(573654),
+    i = n(73800);
+function o(e) {
+    return (0, i.useMemo)(
         function () {
-            var r = n.type;
-            return (0, e.k)(null != r, "spec.type must be defined"), r;
+            var t = e.type;
+            return (0, r.k)(null != t, "spec.type must be defined"), t;
         },
-        [n],
+        [e],
     );
 }

@@ -1,9 +1,9 @@
 n.d(t, { L: () => T }), n(539854);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(772848),
     c = n(84735),
     u = n(15127),
@@ -32,7 +32,7 @@ let b = (0, l.Z)(),
     O = (0, l.Z)(),
     v = 10,
     I = 7.23;
-class T extends (r = o.Component) {
+class T extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return v;
@@ -112,8 +112,8 @@ class T extends (r = o.Component) {
         let {
                 disabled: n,
                 value: r,
-                placeholder: o,
-                autoFocus: a,
+                placeholder: a,
+                autoFocus: o,
                 minLength: l,
                 maxLength: u,
                 allowOverflow: f,
@@ -152,9 +152,9 @@ class T extends (r = o.Component) {
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: I,
                                 disabled: n,
-                                placeholder: o,
+                                placeholder: a,
                                 value: r,
-                                autoFocus: a,
+                                autoFocus: o,
                                 minLength: l,
                                 maxLength: f ? void 0 : u,
                                 spellCheck: E,
@@ -193,9 +193,9 @@ class T extends (r = o.Component) {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
-                    o = null == (e = this.context) ? void 0 : e.errorId;
+                    a = null == (e = this.context) ? void 0 : e.errorId;
                 return (
-                    null != o && i.push(o),
+                    null != a && i.push(a),
                     null != r ? i.push(b) : (null != t && i.push(O), null != n && i.push(y)),
                     i.length > 0 ? i.join(" ") : void 0
                 );

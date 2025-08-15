@@ -1,17 +1,16 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => o });
 var r = n(73800),
     i = n(566620),
-    o = n(790920),
+    l = n(790920),
     a = n(451576);
-let s = (e) => null != e && "" !== e;
-function l(e, t) {
-    let n = (0, o.z)(),
-        l = (0, a.Z)(t),
-        c = s(e) || l;
+function o(e, t) {
+    let n = (0, l.z)(),
+        o = (0, a.Z)(t),
+        s = (null != e && "" !== e) || o;
     return (
         r.useEffect(() => {
-            c && n && (0, i.w1)({ guildId: e });
-        }, [e, n, c]),
-        c && n
+            s && n && (0, i.w1)({ guildId: e });
+        }, [e, n, s]),
+        s && n
     );
 }

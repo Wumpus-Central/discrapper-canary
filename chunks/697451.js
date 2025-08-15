@@ -1,51 +1,38 @@
-n.d(t, { Z: () => q });
+n.d(t, { Z: () => H });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(512722),
-    l = n.n(s),
+    l = n(120356),
+    a = n.n(l),
+    o = n(512722),
+    s = n.n(o),
     c = n(913527),
     u = n.n(c),
     d = n(442837),
-    f = n(481060),
-    _ = n(911969),
-    p = n(456100),
-    h = n(595519),
-    m = n(566620),
-    g = n(100527),
-    E = n(906732),
-    b = n(783097),
-    y = n(397698),
-    O = n(581364),
-    v = n(592180),
-    I = n(726033),
-    T = n(598077),
-    S = n(594174),
-    A = n(768581),
-    N = n(585483),
-    C = n(55935),
-    R = n(739566),
-    P = n(421399),
-    w = n(310423),
-    D = n(223021),
-    L = n(981631),
-    x = n(388032),
-    M = n(724913);
-function j(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function k(e) {
+    p = n(481060),
+    m = n(911969),
+    f = n(456100),
+    _ = n(595519),
+    g = n(566620),
+    h = n(100527),
+    b = n(906732),
+    E = n(783097),
+    C = n(397698),
+    v = n(581364),
+    O = n(592180),
+    y = n(726033),
+    x = n(598077),
+    j = n(594174),
+    I = n(768581),
+    S = n(585483),
+    T = n(55935),
+    P = n(739566),
+    N = n(421399),
+    A = n(310423),
+    w = n(223021),
+    Z = n(981631),
+    R = n(388032),
+    L = n(724913);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,59 +43,42 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function U(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function G(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : U(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function B(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = Z(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function Z(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function F(e) {
-    let { width: t = 6, height: n = 10, color: i = "currentColor", className: o, foreground: a } = e;
+function k(e) {
+    let { width: t = 6, height: n = 10, color: i = "currentColor", className: l, foreground: a } = e;
     return (0, r.jsx)("svg", {
-        className: o,
+        className: l,
         width: t,
         height: n,
         viewBox: "0 0 6 10",
@@ -121,314 +91,337 @@ function F(e) {
         }),
     });
 }
-function V(e) {
-    let { user: t, guildId: n, guildAvatar: i, onClick: o, onContextMenu: s, onMouseDown: l, ref: c } = e;
-    return (0, r.jsx)("img", {
-        alt: "",
-        src: null != i ? i : t.getAvatarURL(n, 16),
-        onClick: o,
-        onContextMenu: s,
-        onMouseDown: l,
-        className: a()({
-            [M.executedCommandAvatar]: !0,
-            [M.clickable]: null != o,
-        }),
-        ref: c,
-    });
-}
-function H(e, t, n, i, o, a) {
-    var s, l, c;
+function U(e, t, n, i, l, o) {
+    var s, c, u;
     let {
-        message: u,
-        compact: d,
-        channel: _,
-        isInteractionUserBlocked: p,
-        isInteractionUserIgnored: h,
-        showAvatarPopout: m,
-        showTargetAvatarPopout: g,
+        message: d,
+        compact: m,
+        channel: f,
+        isInteractionUserBlocked: _,
+        isInteractionUserIgnored: g,
+        showAvatarPopout: h,
+        showTargetAvatarPopout: b,
         onClickAvatar: E,
-        onUserContextMenu: b,
-        onClickTargetAvatar: y,
+        onUserContextMenu: C,
+        onClickTargetAvatar: v,
         onTargetUserContextMenu: O,
-        onPopoutRequestClose: v,
+        onPopoutRequestClose: y,
     } = e;
-    if (d && 1 === n) return null;
-    if ((d && null == u.activityInstance) || p || h)
+    if (m && 1 === n) return null;
+    if ((m && null == d.activityInstance) || _ || g)
         return (0, r.jsx)("div", {
-            className: M.replyBadge,
-            children: (0, r.jsx)(F, { className: M.commandIcon }),
+            className: L.replyBadge,
+            children: (0, r.jsx)(k, { className: L.commandIcon }),
         });
-    let I =
+    let x =
             null !=
-            (c = A.ZP.getGuildMemberAvatarURL({
+            (u = I.ZP.getGuildMemberAvatarURL({
                 avatar: null != (s = i.guildMemberAvatar) ? s : void 0,
                 userId: t.id,
-                guildId: null != (l = null == _ ? void 0 : _.guild_id) ? l : "",
+                guildId: null != (c = null == f ? void 0 : f.guild_id) ? c : "",
             }))
-                ? c
+                ? u
                 : void 0,
-        T = () =>
-            V({
+        j = () =>
+            (function (e) {
+                let { user: t, guildId: n, guildAvatar: i, onClick: l, onContextMenu: o, onMouseDown: s, ref: c } = e;
+                return (0, r.jsx)("img", {
+                    alt: "",
+                    src: null != i ? i : t.getAvatarURL(n, 16),
+                    onClick: l,
+                    onContextMenu: o,
+                    onMouseDown: s,
+                    className: a()({
+                        [L.executedCommandAvatar]: !0,
+                        [L.clickable]: null != l,
+                    }),
+                    ref: c,
+                });
+            })({
                 user: t,
-                guildId: _.guild_id,
-                guildAvatar: I,
-                onClick: 1 === n ? y : E,
-                onContextMenu: 1 === n ? O : b,
-                ref: a,
+                guildId: f.guild_id,
+                guildAvatar: x,
+                onClick: 1 === n ? v : E,
+                onContextMenu: 1 === n ? O : C,
+                ref: o,
             }),
-        S = 1 === n ? g : m;
-    return null != o && null != S && null != a
-        ? (0, r.jsx)(f.yRy, {
-              targetElementRef: a,
-              renderPopout: o,
+        S = 1 === n ? b : h;
+    return null != l && null != S && null != o
+        ? (0, r.jsx)(p.yRy, {
+              targetElementRef: o,
+              renderPopout: l,
               shouldShow: S,
               position: "right",
-              onRequestClose: v,
-              children: T,
+              onRequestClose: y,
+              children: j,
           })
-        : T();
+        : j();
 }
-function Y(e, t, n, i, o) {
+function F(e, t, n, i, l) {
     let {
         message: a,
-        channel: s,
-        showUsernamePopout: l,
+        channel: o,
+        showUsernamePopout: s,
         showTargetUsernamePopout: c,
         onClickUsername: u,
         onUserContextMenu: d,
-        onClickTargetUsername: f,
-        onTargetUserContextMenu: _,
-        onPopoutRequestClose: p,
+        onClickTargetUsername: p,
+        onTargetUserContextMenu: m,
+        onPopoutRequestClose: f,
     } = e;
-    return (0, r.jsx)(P.Z, {
-        className: 1 === n ? M.targetUsername : "",
+    return (0, r.jsx)(N.Z, {
+        className: 1 === n ? L.targetUsername : "",
         compact: !0,
         author: i,
         message: a,
-        channel: s,
+        channel: o,
         userOverride: t,
-        showPopout: 1 === n ? c : l,
-        renderPopout: o,
-        onClick: 1 === n ? f : u,
-        onContextMenu: 1 === n ? _ : d,
-        onPopoutRequestClose: p,
+        showPopout: 1 === n ? c : s,
+        renderPopout: l,
+        onClick: 1 === n ? p : u,
+        onContextMenu: 1 === n ? m : d,
+        onPopoutRequestClose: f,
     });
 }
-function W(e, t, n) {
-    let { showDataPopout: i, message: o, onClickCommand: s, onPopoutRequestClose: l } = e,
-        c = o.interaction.displayName;
-    return (0, r.jsx)(f.yRy, {
-        targetElementRef: n,
-        renderPopout: t,
-        shouldShow: i,
-        position: "top",
-        align: "center",
-        onRequestClose: l,
-        animation: f.yRy.Animation.FADE,
-        positionKey: null != o.interactionData ? "ready" : "loading",
-        children: (e) => {
-            var { onClick: t } = e,
-                i = B(e, ["onClick"]);
-            if (o.type === L.uaV.CHAT_INPUT_COMMAND || o.type === L.uaV.INTERACTION_PREMIUM_UPSELL)
-                return (0, r.jsx)(
-                    f.P3F,
-                    G(k({}, i), {
-                        tag: "span",
-                        onClick: s,
-                        innerRef: n,
-                        children: (0, r.jsxs)("div", {
-                            className: a()(M.appLauncherOnboardingCommandName, M.clickable),
-                            children: [
-                                (0, r.jsx)(f.jje, {
-                                    size: "custom",
-                                    color: "currentColor",
-                                    height: 10,
-                                    width: 10,
-                                    className: M.appsIcon,
-                                }),
-                                c,
-                            ],
-                        }),
-                    }),
-                );
-            if (!(0, v.g)(o))
-                return (0, r.jsx)("div", {
-                    className: M.commandName,
-                    ref: n,
-                    children: c,
-                });
-            {
-                let e = () => {
-                        N.S.dispatchToLastSubscribed(L.CkL.OPEN_APP_LAUNCHER, { applicationId: o.applicationId });
-                    },
-                    t = (0, b.XZ)(c);
-                return (0, r.jsx)(
-                    f.P3F,
-                    G(k({}, i), {
-                        tag: "span",
-                        onClick: e,
-                        innerRef: n,
-                        children: (0, r.jsxs)("div", {
-                            className: a()(M.appLauncherOnboardingCommandName, M.clickable),
-                            children: [
-                                (0, r.jsx)(z, {
-                                    size: "custom",
-                                    color: "currentColor",
-                                    height: 10,
-                                    width: 10,
-                                    className: M.appsIcon,
-                                }),
-                                t,
-                            ],
-                        }),
-                    }),
-                );
-            }
-        },
-    });
-}
-let K = () =>
-    (0, r.jsx)(f.Fbu, {
+let B = () =>
+    (0, r.jsx)(p.Fbu, {
         size: "xxs",
         color: "currentColor",
-        className: M.executedCommandSeparator,
+        className: L.executedCommandSeparator,
     });
-function z(e) {
-    let { enabled: t } = p.c.useExperiment({ location: "ExecutedCommand" }, { autoTrackExposure: !0 }),
-        n = t ? f.iWm : f.jje;
-    return (0, r.jsx)(n, k({}, e));
+function G(e) {
+    let { enabled: t } = f.c.useExperiment({ location: "ExecutedCommand" }, { autoTrackExposure: !0 }),
+        n = t ? p.iWm : p.jje;
+    return (0, r.jsx)(n, D({}, e));
 }
-function q(e) {
+function H(e) {
     var t;
     let n,
-        { message: o, channel: s } = e,
-        { analyticsLocations: c, newestAnalyticsLocation: p } = (0, E.ZP)(g.Z.EXECUTED_COMMAND),
-        b = (0, d.e7)([S.default], () => S.default.getCurrentUser()),
-        A = i.useRef(null),
+        { message: l, channel: o } = e,
+        { analyticsLocations: c, newestAnalyticsLocation: f } = (0, b.ZP)(h.Z.EXECUTED_COMMAND),
+        I = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
         N = i.useRef(null),
-        P = i.useMemo(
+        k = i.useRef(null),
+        H = i.useMemo(
             () => (e, t, n) => (
-                l()(null != t, "ExecutedCommand: user cannot be undefined"),
-                l()(null != b, "ExecutedCommand: currentUser cannot be undefined"),
-                l()(null != s, "ExecutedCommand: channel cannot be undefined"),
+                s()(null != t, "ExecutedCommand: user cannot be undefined"),
+                s()(null != I, "ExecutedCommand: currentUser cannot be undefined"),
+                s()(null != o, "ExecutedCommand: channel cannot be undefined"),
                 (0, r.jsx)(
-                    I.Z,
-                    G(k({}, e), {
+                    y.Z,
+                    M(D({}, e), {
                         user: t,
-                        currentUser: b,
-                        guildId: s.guild_id,
-                        channelId: s.id,
-                        messageId: o.id,
+                        currentUser: I,
+                        guildId: o.guild_id,
+                        channelId: o.id,
+                        messageId: l.id,
                         newAnalyticsLocations: n,
                     }),
                 )
             ),
-            [b, s, o.id],
+            [I, o, l.id],
         ),
-        L = i.useMemo(
+        V = i.useMemo(
             () => (e) => (
-                l()(null != s, "ExecutedCommand: channel cannot be null"),
+                s()(null != o, "ExecutedCommand: channel cannot be null"),
                 (0, r.jsx)(
-                    w.Z,
-                    G(k({}, e), {
-                        channel: s,
-                        messageId: o.id,
-                        interactionData: o.interactionData,
+                    A.Z,
+                    M(D({}, e), {
+                        channel: o,
+                        messageId: l.id,
+                        interactionData: l.interactionData,
                     }),
                 )
             ),
-            [s, o.id, o.interactionData],
+            [o, l.id, l.interactionData],
         ),
-        j = (0, O.t0)(o),
-        U =
-            (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND && null != j.target_user
-                ? new T.Z(j.target_user)
+        z = (0, v.t0)(l),
+        W =
+            (null == z ? void 0 : z.type) === m.B8.APPLICATION_COMMAND && null != z.target_user
+                ? new x.Z(z.target_user)
                 : null,
-        B =
-            (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND &&
-            null != o.messageReference &&
+        Y =
+            (null == z ? void 0 : z.type) === m.B8.APPLICATION_COMMAND &&
+            null != l.messageReference &&
             null != e.renderTargetMessage,
-        Z = (0, R.Sw)(null == (t = o.interaction) ? void 0 : t.user, s),
-        F = (0, R.Sw)(U, s),
-        V = i.useMemo(() => (e.compact ? (0, D.Z)((0, C.vc)(u()(), "LT")) : null), [e.compact]),
-        z = (0, h.NX)(s.id),
-        q = o.interaction;
-    if (null == q || null == Z) return null;
-    let X = () => {
-            let t = H(e, q.user, 0, Z, (e) => P(e, q.user, [g.Z.AVATAR]), A),
-                n = Y(e, q.user, 0, Z, (e) => P(e, q.user));
-            return (0, r.jsxs)(
-                i.Fragment,
-                {
-                    children: [t, n],
-                },
-                "user",
-            );
-        },
-        Q = () => {
-            if (null == U) return null;
-            let t = H(e, U, 1, F, (e) => P(e, U, [g.Z.AVATAR]), A),
-                n = Y(e, U, 1, F, (e) => P(e, U));
-            return (0, r.jsxs)(
-                i.Fragment,
-                {
-                    children: [t, n],
-                },
-                "target",
-            );
-        };
-    if ((null == o ? void 0 : o.activityInstance) === null || (0, v.g)(o)) {
-        let t = () => {
-            let t = W(e, L, N);
-            return (0, r.jsx)(i.Fragment, { children: t }, "command");
-        };
-        (n = x.intl.format(x.t["rg7U+P"], {
-            userHook: X,
-            commandHook: t,
-        })),
-            B && null != e.renderTargetMessage
-                ? (n = (0, r.jsxs)(r.Fragment, {
-                      children: [n, (0, r.jsx)(K, {}), e.renderTargetMessage()],
-                  }))
-                : null != U &&
-                  (n = (0, r.jsxs)(r.Fragment, {
-                      children: [n, (0, r.jsx)(K, {}), (0, r.jsx)(Q, {})],
-                  }));
-    } else {
-        let e = () => {
-                (0, y.Z)({
-                    context:
-                        null != s
-                            ? {
-                                  type: "channel",
-                                  channel: s,
-                              }
-                            : { type: "contextless" },
-                    openInPopout: !1,
-                    analyticsLocation: p,
-                }),
-                    (0, m.w1)({ guildId: s.guild_id });
+        K = (0, P.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
+        X = (0, P.Sw)(W, o),
+        q = i.useMemo(() => (e.compact ? (0, w.Z)((0, T.vc)(u()(), "LT")) : null), [e.compact]),
+        Q = (0, _.NX)(o.id),
+        J = l.interaction;
+    if (null == J || null == K) return null;
+    let $ = () => {
+        let t = U(e, J.user, 0, K, (e) => H(e, J.user, [h.Z.AVATAR]), N),
+            n = F(e, J.user, 0, K, (e) => H(e, J.user));
+        return (0, r.jsxs)(
+            i.Fragment,
+            {
+                children: [t, n],
             },
-            t = () =>
-                (0, r.jsx)(f.P3F, {
-                    tag: "span",
-                    onClick: e,
-                    children: (0, r.jsx)("div", {
-                        className: a()(M.commandName, M.clickable),
-                        children: x.intl.string(x.t.YTgRvr),
-                    }),
-                });
-        n = z
-            ? x.intl.format(x.t.kfV8WF, {
-                  userHook: X,
-                  activityHook: t,
+            "user",
+        );
+    };
+    if ((null == l ? void 0 : l.activityInstance) === null || (0, O.g)(l))
+        (n = R.intl.format(R.t["rg7U+P"], {
+            userHook: $,
+            commandHook: () => {
+                let t = (function (e, t, n) {
+                    let { showDataPopout: i, message: l, onClickCommand: o, onPopoutRequestClose: s } = e,
+                        c = l.interaction.displayName;
+                    return (0, r.jsx)(p.yRy, {
+                        targetElementRef: n,
+                        renderPopout: t,
+                        shouldShow: i,
+                        position: "top",
+                        align: "center",
+                        onRequestClose: s,
+                        animation: p.yRy.Animation.FADE,
+                        positionKey: null != l.interactionData ? "ready" : "loading",
+                        children: (e) => {
+                            var { onClick: t } = e,
+                                i = (function (e, t) {
+                                    if (null == e) return {};
+                                    var n,
+                                        r,
+                                        i = (function (e, t) {
+                                            if (null == e) return {};
+                                            var n,
+                                                r,
+                                                i = {},
+                                                l = Object.keys(e);
+                                            for (r = 0; r < l.length; r++)
+                                                (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            return i;
+                                        })(e, t);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var l = Object.getOwnPropertySymbols(e);
+                                        for (r = 0; r < l.length; r++)
+                                            (n = l[r]),
+                                                !(t.indexOf(n) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                    (i[n] = e[n]);
+                                    }
+                                    return i;
+                                })(e, ["onClick"]);
+                            if (l.type === Z.uaV.CHAT_INPUT_COMMAND || l.type === Z.uaV.INTERACTION_PREMIUM_UPSELL)
+                                return (0, r.jsx)(
+                                    p.P3F,
+                                    M(D({}, i), {
+                                        tag: "span",
+                                        onClick: o,
+                                        innerRef: n,
+                                        children: (0, r.jsxs)("div", {
+                                            className: a()(L.appLauncherOnboardingCommandName, L.clickable),
+                                            children: [
+                                                (0, r.jsx)(p.jje, {
+                                                    size: "custom",
+                                                    color: "currentColor",
+                                                    height: 10,
+                                                    width: 10,
+                                                    className: L.appsIcon,
+                                                }),
+                                                c,
+                                            ],
+                                        }),
+                                    }),
+                                );
+                            if (!(0, O.g)(l))
+                                return (0, r.jsx)("div", {
+                                    className: L.commandName,
+                                    ref: n,
+                                    children: c,
+                                });
+                            {
+                                let e = (0, E.XZ)(c);
+                                return (0, r.jsx)(
+                                    p.P3F,
+                                    M(D({}, i), {
+                                        tag: "span",
+                                        onClick: () => {
+                                            S.S.dispatchToLastSubscribed(Z.CkL.OPEN_APP_LAUNCHER, {
+                                                applicationId: l.applicationId,
+                                            });
+                                        },
+                                        innerRef: n,
+                                        children: (0, r.jsxs)("div", {
+                                            className: a()(L.appLauncherOnboardingCommandName, L.clickable),
+                                            children: [
+                                                (0, r.jsx)(G, {
+                                                    size: "custom",
+                                                    color: "currentColor",
+                                                    height: 10,
+                                                    width: 10,
+                                                    className: L.appsIcon,
+                                                }),
+                                                e,
+                                            ],
+                                        }),
+                                    }),
+                                );
+                            }
+                        },
+                    });
+                })(e, V, k);
+                return (0, r.jsx)(i.Fragment, { children: t }, "command");
+            },
+        })),
+            Y && null != e.renderTargetMessage
+                ? (n = (0, r.jsxs)(r.Fragment, {
+                      children: [n, (0, r.jsx)(B, {}), e.renderTargetMessage()],
+                  }))
+                : null != W &&
+                  (n = (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          n,
+                          (0, r.jsx)(B, {}),
+                          (0, r.jsx)(() => {
+                              if (null == W) return null;
+                              let t = U(e, W, 1, X, (e) => H(e, W, [h.Z.AVATAR]), N),
+                                  n = F(e, W, 1, X, (e) => H(e, W));
+                              return (0, r.jsxs)(
+                                  i.Fragment,
+                                  {
+                                      children: [t, n],
+                                  },
+                                  "target",
+                              );
+                          }, {}),
+                      ],
+                  }));
+    else {
+        let e = () => {
+            (0, C.Z)({
+                context:
+                    null != o
+                        ? {
+                              type: "channel",
+                              channel: o,
+                          }
+                        : { type: "contextless" },
+                openInPopout: !1,
+                analyticsLocation: f,
+            }),
+                (0, g.w1)({ guildId: o.guild_id });
+        };
+        n = Q
+            ? R.intl.format(R.t.kfV8WF, {
+                  userHook: $,
+                  activityHook: () =>
+                      (0, r.jsx)(p.P3F, {
+                          tag: "span",
+                          onClick: e,
+                          children: (0, r.jsx)("div", {
+                              className: a()(L.commandName, L.clickable),
+                              children: R.intl.string(R.t.YTgRvr),
+                          }),
+                      }),
               })
-            : x.intl.format(x.t["6FeSyc"], { userHook: X });
+            : R.intl.format(R.t["6FeSyc"], { userHook: $ });
     }
-    return (0, r.jsx)(E.Gt, {
+    return (0, r.jsx)(b.Gt, {
         value: c,
         children: (0, r.jsx)("div", {
-            className: a()(M.repliedMessage, M.messageSpine, M.executedCommand, V),
+            className: a()(L.repliedMessage, L.messageSpine, L.executedCommand, q),
             "aria-hidden": !e.compact,
             children: n,
         }),

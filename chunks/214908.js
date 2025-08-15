@@ -1,4 +1,4 @@
-n.d(t, { x: () => o }),
+n.d(t, { x: () => r }),
     n(415506),
     n(410992),
     n(227481),
@@ -12,16 +12,14 @@ n.d(t, { x: () => o }),
     n(121784),
     n(644351),
     n(146733);
-let r = 2,
-    i = 8;
-async function o(e, t, n) {
+async function r(e, t, n) {
     if (0 !== e) throw Error("unsupported fingerprint format version");
     if (0 === t.byteLength) throw Error("zero-length key");
     if (0 === n.length) throw Error("zero-length user ID");
-    let o = BigInt(n);
-    if (o < 0n || o >= 2n ** 64n) throw Error("user ID out of range");
-    let a = new Uint8Array(r + t.byteLength + i);
-    a.set(t, r);
-    let s = new DataView(a.buffer);
-    return s.setUint16(0, e), s.setBigUint64(r + t.byteLength, o), a;
+    let r = BigInt(n);
+    if (r < 0n || r >= 2n ** 64n) throw Error("user ID out of range");
+    let i = new Uint8Array(2 + t.byteLength + 8);
+    i.set(t, 2);
+    let a = new DataView(i.buffer);
+    return a.setUint16(0, e), a.setBigUint64(2 + t.byteLength, r), i;
 }

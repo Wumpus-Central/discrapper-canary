@@ -18,8 +18,8 @@ function i() {
         }, []),
         n = (0, r.useCallback)((t, n, r, i) => {
             var o;
-            let a = (null == (o = e.current.get(r)) ? void 0 : o.fn) || r;
-            t.removeEventListener(n, a, i), e.current.delete(r);
+            let u = (null == (o = e.current.get(r)) ? void 0 : o.fn) || r;
+            t.removeEventListener(n, u, i), e.current.delete(r);
         }, []),
         i = (0, r.useCallback)(() => {
             e.current.forEach((e, t) => {

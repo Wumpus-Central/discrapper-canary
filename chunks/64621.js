@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(704215),
+    a = n(442837),
+    o = n(704215),
     s = n(755721),
     l = n(481060),
     c = n(980591),
@@ -26,11 +26,11 @@ function A(e) {
     let { sourceType: t, children: n, user: A, targetElementRef: N } = e,
         { themeType: C } = (0, m.z)(),
         R = (0, h.T)({ location: "UserProfilePopoutInteractionCoachmark" }),
-        P = (0, o.e7)([p.default], () => {
+        P = (0, a.e7)([p.default], () => {
             var e;
             return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === A.id;
         }),
-        w = (0, o.e7)([_.Z], () =>
+        w = (0, a.e7)([_.Z], () =>
             _.Z.findActivity(A.id, (e) => {
                 let { type: t } = e;
                 return t === E.IIU.CUSTOM_STATUS;
@@ -44,12 +44,12 @@ function A(e) {
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
             asset: M,
-            assetClassName: j,
-            className: k,
+            assetClassName: k,
+            className: j,
             content: U,
             header: G,
             spacing: B,
-            dismissibleContentType: Z,
+            dismissibleContentType: V,
         } = R
             ? {
                   asset: v,
@@ -58,7 +58,7 @@ function A(e) {
                   content: b.intl.string(b.t.HEGlIC),
                   header: b.intl.string(b.t["R/RaKy"]),
                   spacing: S,
-                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL,
+                  dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL,
               }
             : {
                   asset: O,
@@ -67,11 +67,11 @@ function A(e) {
                   content: b.intl.string(b.t.LQ32TU),
                   header: b.intl.string(b.t.XDBiPT),
                   spacing: T,
-                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY,
+                  dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY,
               },
-        F = (0, u.Nj)(a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        V = L && !F ? [Z] : [],
-        [H, Y] = (0, d.US)(V);
+        F = (0, u.Nj)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        Z = L && !F ? [V] : [],
+        [H, Y] = (0, d.US)(Z);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: N,
         align: "center",
@@ -85,11 +85,11 @@ function A(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(f.ZP, {
-                    className: k,
+                    className: j,
                     asset: (0, r.jsx)("img", {
                         alt: "",
                         src: M,
-                        className: j,
+                        className: k,
                     }),
                     buttonCTA: b.intl.string(b.t["+IrDzM"]),
                     buttonLayout: f._F.STACKED,

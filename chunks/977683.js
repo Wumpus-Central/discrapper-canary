@@ -1,26 +1,26 @@
 n.d(t, { Z: () => u });
 var r = n(73800),
     i = n(410030),
-    o = n(695346),
+    l = n(695346),
     a = n(798628),
-    s = n(275344),
-    l = n(918088),
+    o = n(275344),
+    s = n(918088),
     c = n(562293);
 function u(e, t) {
     var n;
-    let u = (0, s.v)(e),
+    let u = (0, o.v)(e),
         d = (0, a.cE)(u.getChannelId())[u.id],
-        f = (0, c.Z)(null == (n = u.poll) ? void 0 : n.expiry),
-        _ = o.Yk.useSetting(),
-        p = (0, i.ZP)(),
-        h = null != t ? t : p;
+        p = (0, c.Z)(null == (n = u.poll) ? void 0 : n.expiry),
+        m = l.Yk.useSetting(),
+        f = (0, i.ZP)(),
+        _ = null != t ? t : f;
     return r.useMemo(
         () =>
-            (0, l.ZP)(u, d, {
-                animateEmoji: _,
-                theme: h,
-                formattedExpirationLabel: f,
+            (0, s.ZP)(u, d, {
+                animateEmoji: m,
+                theme: _,
+                formattedExpirationLabel: p,
             }),
-        [_, u, d, f, h],
+        [m, u, d, p, _],
     );
 }

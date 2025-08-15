@@ -14,8 +14,8 @@ n.d(t, {
     n(388685);
 var r = n(112456),
     i = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(430824),
     l = n(594174),
     c = n(424218),
@@ -95,7 +95,7 @@ function b(e) {
 function y(e, t) {
     var n;
     e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : "";
-    let r = a().find(E, (n) =>
+    let r = o().find(E, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != r ? r.klass : "unknown";

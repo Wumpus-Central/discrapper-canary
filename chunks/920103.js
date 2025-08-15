@@ -11,9 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => o }), n(539854);
+n.d(t, { Z: () => a }), n(539854);
 let i = 1 / 240;
-class o {
+class a {
     to(e) {
         let { to: t, from: n, animate: r = !1, callback: i } = e;
         return ((this.target = t), null != i && this.callbacks.push(i), null != n && (this.from = n), r)
@@ -55,8 +55,8 @@ class o {
         callback: e,
         tension: t = 160,
         friction: n = 22,
-        mass: o = 1,
-        threshold: a = 0.001,
+        mass: a = 1,
+        threshold: o = 0.001,
         clamp: s = !1,
         maxVelocity: l = 1 / 0,
         getNodeWindow: c = () => window,
@@ -91,7 +91,7 @@ class o {
                 this.animating = !1;
             }),
             r(this, "update", (e) => {
-                var t, n, r, o;
+                var t, n, r, a;
                 if (null == this.last) {
                     (this.last = e),
                         (this.nextTick =
@@ -100,9 +100,9 @@ class o {
                                 : -1);
                     return;
                 }
-                let a = e;
+                let o = e;
                 for (
-                    this.accumulator = Math.min((a - this.last) / 1000 + this.accumulator, 2);
+                    this.accumulator = Math.min((o - this.last) / 1000 + this.accumulator, 2);
                     this.accumulator > i;
                 ) {
                     this.accumulator -= i;
@@ -126,19 +126,19 @@ class o {
                 }
                 this.callback(s, this.abort),
                     this.animating &&
-                        ((this.last = a),
+                        ((this.last = o),
                         (this.nextTick =
-                            null != (o = null == (r = this.nodeWindow) ? void 0 : r.requestAnimationFrame(this.update))
-                                ? o
+                            null != (a = null == (r = this.nodeWindow) ? void 0 : r.requestAnimationFrame(this.update))
+                                ? a
                                 : -1));
             }),
             (this.callback = e),
             (this.from = 0),
             (this.tension = t),
             (this.friction = n),
-            (this.mass = o),
+            (this.mass = a),
             (this.maxVelocity = l),
-            (this.threshold = a),
+            (this.threshold = o),
             (this.clamp = s),
             (this.getNodeWindow = c);
     }

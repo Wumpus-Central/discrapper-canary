@@ -23,11 +23,11 @@ var i,
     v = n(9156),
     S = n(823379),
     T = n(709054),
-    I = n(540126),
-    N = n(526761);
+    N = n(540126),
+    I = n(526761);
 let y = null,
     A = null,
-    P = new I.ZP();
+    P = new N.ZP();
 function R() {
     let e = O.Z.getChannelId(),
         t = O.Z.getVoiceChannelId();
@@ -286,7 +286,7 @@ let z = new H(o.Z, {
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         var t;
         let { settings: n } = e;
-        if (n.type !== N.yP.PRELOADED_USER_SETTINGS) return !1;
+        if (n.type !== I.yP.PRELOADED_USER_SETTINGS) return !1;
         let i = null == (t = n.proto.guilds) ? void 0 : t.guilds,
             r = !1;
         return (

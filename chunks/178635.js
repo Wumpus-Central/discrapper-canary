@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(392711),
     i = n(433517),
-    o = n(147913),
-    a = n(536442),
+    a = n(147913),
+    o = n(536442),
     s = n(810788),
     l = n(56522),
     c = n(759209),
@@ -78,20 +78,20 @@ let O = 200,
     I = {
         [m.nw.VOICE]: y(E({}, v), {
             group: m.FB.AV,
-            hotspot: a.v6.VOICE_CALL_FEEDBACK,
+            hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
             feedbackType: m.nw.VOICE,
             eligibilityChecks: [R],
         }),
         [m.nw.STREAM]: y(E({}, v), {
             group: m.FB.AV,
-            hotspot: a.v6.REPORT_PROBLEM_POST_STREAM,
+            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
             storageKey: "lastStreamFeedback",
             feedbackType: m.nw.STREAM,
         }),
         [m.nw.VIDEO_BACKGROUND]: y(E({}, v), {
             group: m.FB.AV,
-            hotspot: a.v6.VIDEO_BACKGROUND_FEEDBACK,
+            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: "lastVideoBackgroundFeedback",
             feedbackType: m.nw.VIDEO_BACKGROUND,
         }),
@@ -99,7 +99,7 @@ let O = 200,
             cooldown: 0,
             chance: 0.5,
             group: m.FB.AV,
-            hotspot: a.v6.POST_ACTIVITY_FEEDBACK,
+            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
             storageKey: "lastActivityFeedback",
             feedbackType: m.nw.ACTIVITY,
         },
@@ -107,7 +107,7 @@ let O = 200,
             cooldown: 172800000,
             chance: 0.5,
             group: m.FB.SAFETY,
-            hotspot: a.v6.IN_APP_REPORTS_FEEDBACK,
+            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: "inAppReportsFeedback",
             feedbackType: m.nw.IN_APP_REPORTS,
         },
@@ -115,7 +115,7 @@ let O = 200,
             cooldown: 604800000,
             chance: 1,
             group: m.FB.SAFETY,
-            hotspot: a.v6.USER_DM_MUTE_FEEDBACK,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: "userDmMute",
             feedbackType: m.nw.USER_DM_MUTE,
         },
@@ -123,20 +123,20 @@ let O = 200,
             cooldown: 0,
             chance: 1,
             group: m.FB.SAFETY,
-            hotspot: a.v6.BLOCK_USER_FEEDBACK,
+            hotspot: o.v6.BLOCK_USER_FEEDBACK,
             storageKey: "blockUser",
             feedbackType: m.nw.BLOCK_USER,
         },
         [m.nw.VOICE_FILTER]: y(E({}, v), {
             group: m.FB.AV,
-            hotspot: a.v6.VOICE_FILTER_FEEDBACK,
+            hotspot: o.v6.VOICE_FILTER_FEEDBACK,
             storageKey: "lastVoiceFilterFeedback",
             feedbackType: m.nw.VOICE_FILTER,
             eligibilityChecks: [R],
         }),
         [m.nw.SEARCH_RESULTS]: y(E({}, v), {
             group: m.FB.SEARCH,
-            hotspot: a.v6.SEARCH_RESULTS_FEEDBACK,
+            hotspot: o.v6.SEARCH_RESULTS_FEEDBACK,
             storageKey: "searchResultsFeedback",
             feedbackType: m.nw.SEARCH_RESULTS,
             eligibilityChecks: [P],
@@ -145,7 +145,7 @@ let O = 200,
             cooldown: 0,
             chance: 1,
             group: m.FB.SAFETY,
-            hotspot: a.v6.AGE_VERIFICATION_FEEDBACK,
+            hotspot: o.v6.AGE_VERIFICATION_FEEDBACK,
             storageKey: "ageVerificationFeedback",
             feedbackType: m.nw.AGE_VERIFICATION,
         },
@@ -156,11 +156,11 @@ function T(e) {
     let { overrideEligibility: r } = (0, p.j)({ location: "FeedbackManager" });
     if (r) return !0;
     let i = null != (t = f.Z.getFeedbackConfig(e)) ? t : I[e],
-        o = [A, S],
-        { doGroupEligibilityCheck: a } = (0, h.T)({ location: "FeedbackManager" });
-    a ? o.push(C) : o.push((e) => N(e, e));
+        a = [A, S],
+        { doGroupEligibilityCheck: o } = (0, h.T)({ location: "FeedbackManager" });
+    o ? a.push(C) : a.push((e) => N(e, e));
     let s = null != (n = i.eligibilityChecks) ? n : [];
-    return o.every((e) => e(i)) && s.every((e) => e(i));
+    return a.every((e) => e(i)) && s.every((e) => e(i));
 }
 function S(e) {
     let { persistToBackend: t } = (0, _.O)({ location: "FeedbackManager/".concat(e.feedbackType) });
@@ -186,13 +186,13 @@ function A(e) {
 function N(e, t) {
     let { persistToBackend: n } = (0, _.O)({ location: "FeedbackManager/".concat(e.feedbackType) });
     if (n) {
-        var o, a, s;
+        var a, o, s;
         let n,
-            l = null == (o = u.A2.getSetting()[t.feedbackType]) ? void 0 : o.lastImpressionTime;
+            l = null == (a = u.A2.getSetting()[t.feedbackType]) ? void 0 : a.lastImpressionTime;
         return (
             (null == l || Number.isNaN(l)) &&
                 null != t.storageKey &&
-                (null == (n = null != (a = i.K.get(t.storageKey)) ? a : void 0) ||
+                (null == (n = null != (o = i.K.get(t.storageKey)) ? o : void 0) ||
                     Number.isNaN(n) ||
                     u.A2.updateSetting((e) =>
                         y(E({}, e), { [t.feedbackType]: y(E({}, e[t.feedbackType]), { lastImpressionTime: n }) }),
@@ -230,7 +230,7 @@ function w(e) {
         null != t && i.K.set(t, Date.now());
     }
 }
-class D extends o.Z {
+class D extends a.Z {
     possiblyShowFeedbackModal(e, t, n) {
         if (!T(e) || (null != this.feedbackTypeToShow && m.b5[this.feedbackTypeToShow] < m.b5[e])) {
             null == n || n();

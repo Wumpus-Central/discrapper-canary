@@ -13,8 +13,8 @@ var n = a(255367),
     h = a(570140),
     p = a(665149),
     b = a(55935),
-    f = a(120816),
-    v = a(31336),
+    v = a(120816),
+    f = a(31336),
     j = a(257785),
     g = a(484036),
     _ = a(681619),
@@ -132,7 +132,7 @@ let T = [
 function S() {
     let [e, t] = r.useState(""),
         a = r.useRef(null),
-        l = (0, u.Wu)([f.Z], () => f.Z.loggedTriggers),
+        l = (0, u.Wu)([v.Z], () => v.Z.loggedTriggers),
         s = r.useMemo(
             () =>
                 l
@@ -143,7 +143,7 @@ function S() {
         [c, d] = r.useState(void 0),
         p = s.find((e) => e.key === c),
         { TabBar: b, renderSelectedTab: j } = (0, y.ZP)({ tabs: E }, []),
-        S = (0, u.e7)([f.Z], () => f.Z.trackTriggers),
+        S = (0, u.e7)([v.Z], () => v.Z.trackTriggers),
         P = r.useCallback((e) => {
             h.Z.dispatch({
                 type: "SET_TRACK_TRIGGERS",
@@ -170,7 +170,7 @@ function S() {
                         className: N.toolbarButton,
                         look: m.zx.Looks.BLANK,
                         size: m.zx.Sizes.ICON,
-                        onClick: v.Zw,
+                        onClick: f.Zw,
                         children: (0, n.jsx)("span", {
                             title: C.intl.string(C.t.VkKicX),
                             children: (0, n.jsx)(x.XHJ, {

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(81825),
     i = n(598077);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,17 +14,17 @@ function o(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class o extends r.Z {
     constructor(e) {
         super(),
-            o(this, "id", void 0),
-            o(this, "name", void 0),
-            o(this, "managed", void 0),
-            o(this, "roles", void 0),
-            o(this, "requiredColons", void 0),
-            o(this, "user", void 0),
-            o(this, "animated", void 0),
-            o(this, "available", void 0),
+            a(this, "id", void 0),
+            a(this, "name", void 0),
+            a(this, "managed", void 0),
+            a(this, "roles", void 0),
+            a(this, "requiredColons", void 0),
+            a(this, "user", void 0),
+            a(this, "animated", void 0),
+            a(this, "available", void 0),
             (this.id = e.id),
             (this.name = e.name),
             (this.managed = e.managed),

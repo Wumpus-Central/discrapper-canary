@@ -1,11 +1,11 @@
 n.d(t, { Z: () => a });
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
+    l = n(981631);
 let a = {
     createChannelFollower: (e, t) =>
         r.tn.post({
-            url: o.ANM.CHANNEL_FOLLOWERS(t),
+            url: l.ANM.CHANNEL_FOLLOWERS(t),
             body: { webhook_channel_id: e },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -14,7 +14,7 @@ let a = {
         i.Z.dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_START" });
         try {
             let t = await r.tn.get({
-                url: o.ANM.CHANNEL_FOLLOWER_STATS(e),
+                url: l.ANM.CHANNEL_FOLLOWER_STATS(e),
                 body: { channel_id: e },
                 oldFormErrors: !0,
                 rejectWithError: !0,

@@ -12,8 +12,8 @@ n.d(t, {
     n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(772848),
-    a = n(544891),
+    a = n(772848),
+    o = n(544891),
     s = n(481060),
     l = n(355467),
     c = n(821849),
@@ -32,11 +32,11 @@ let O = 1000;
 function v(e, t, n, r, i) {
     let s = g.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
         l = new URL(f.Z.makeUrl(g.Z5c.BILLING_LOGIN_HANDOFF)),
-        c = (0, o.Z)();
+        c = (0, a.Z)();
     return (
         l.searchParams.append("handoff_key", c),
         l.searchParams.append("redirect_to", s),
-        a.tn
+        o.tn
             .post({
                 url: g.ANM.HANDOFF,
                 body: { key: c },
@@ -55,7 +55,7 @@ function v(e, t, n, r, i) {
 }
 let I = (e) => {
         let t,
-            { step: n, onPurchaseComplete: o, onHandoffFailure: a } = e,
+            { step: n, onPurchaseComplete: a, onHandoffFailure: o } = e,
             {
                 selectedPlan: u,
                 setSelectedPlanId: d,
@@ -82,15 +82,15 @@ let I = (e) => {
                     R ||
                         (P(!0),
                         (0, l.r5)(N.loadId),
-                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, a, t));
+                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, o, t));
                 }, O);
                 return () => clearTimeout(e);
-            }, [u, C, N, a, P, R, t]),
+            }, [u, C, N, o, P, R, t]),
             i.useEffect(() => {
                 null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)),
                     null !== A && d(A),
-                    T === N.loadId && I === m.Y.DONE && o();
-            }, [f, d, I, T, S, A, N, o]),
+                    T === N.loadId && I === m.Y.DONE && a();
+            }, [f, d, I, T, S, A, N, a]),
             (0, r.jsxs)("div", {
                 className: y.body,
                 children: [

@@ -22,7 +22,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        o = {
+        a = {
             className: "string",
             relevance: 0,
             begin: /'/,
@@ -35,7 +35,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        a = {
+        o = {
             className: "string",
             relevance: 0,
             variants: [
@@ -47,7 +47,7 @@ e.exports = function (e) {
             ],
             contains: [e.BACKSLASH_ESCAPE, i],
         },
-        s = e.inherit(a, {
+        s = e.inherit(o, {
             variants: [
                 {
                     begin: /'/,
@@ -152,8 +152,8 @@ e.exports = function (e) {
             },
             u,
             d,
-            o,
             a,
+            o,
         ],
         _ = [...f];
     return (

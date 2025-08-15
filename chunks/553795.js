@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(457330),
+    a = n(570140),
+    o = n(457330),
     s = n(726542),
     l = n(368111),
     c = n(411198);
@@ -88,7 +88,7 @@ function T(e) {
                       ),
               ),
           )
-        : a.Z.fetch();
+        : o.Z.fetch();
 }
 function S(e) {
     E[e.integrationId] = e.joining;
@@ -98,13 +98,13 @@ function A(e) {
 }
 function N(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
-        o = m.find((e) => e.id === n && e.type === t);
-    if (null == o) return !1;
-    null != r && (o.revoked = r), null != i && (o.accessToken = i);
+        a = m.find((e) => e.id === n && e.type === t);
+    if (null == a) return !1;
+    null != r && (a.revoked = r), null != i && (a.accessToken = i);
 }
 function C(e) {
     let { code: t, state: n, openid_params: r, provider: i } = e;
-    a.Z.callback(i, {
+    o.Z.callback(i, {
         code: t,
         state: n,
         openid_params: r,
@@ -146,7 +146,7 @@ class R extends (r = i.ZP.Store) {
     }
 }
 u(R, "displayName", "ConnectedAccountsStore");
-let P = new R(o.Z, {
+let P = new R(a.Z, {
     CONNECTION_OPEN: I,
     USER_CONNECTIONS_UPDATE: T,
     USER_CONNECTIONS_INTEGRATION_JOINING: S,

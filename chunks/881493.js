@@ -51,8 +51,8 @@ let f = () => {
             },
         ];
     if (null == b) return null;
-    let { intervalType: T, intervalCount: I } = b,
-        N = (0, d.og)("".concat(x), T, I);
+    let { intervalType: T, intervalCount: N } = b,
+        I = (0, d.og)("".concat(x), T, N);
     return (0, i.jsxs)(o.Modal, {
         size: "md",
         transitionState: e,
@@ -61,7 +61,7 @@ let f = () => {
             0 !== n.total
                 ? g.intl.format(g.t.ycyeBw, {
                       renewalDate: n.subscriptionPeriodStart,
-                      rate: (0, d.og)((0, d.T4)(n.total, n.currency), T, I),
+                      rate: (0, d.og)((0, d.T4)(n.total, n.currency), T, N),
                   })
                 : g.intl.format(g.t["+y0Tj4"], { renewalDate: n.subscriptionPeriodStart }),
         actions: S,
@@ -74,7 +74,7 @@ let f = () => {
                     (0, i.jsx)(u.Z9, { children: g.intl.string(g.t.iqhIp6) }),
                     (0, i.jsx)(u.B1, {
                         label: g.intl.formatToPlainString(g.t.r3jVZm, { planName: c.ZP.getDisplayName("".concat(t)) }),
-                        value: "".concat(N),
+                        value: "".concat(I),
                         className: h.canceled,
                     }),
                     (0, i.jsx)(u.UN, {}),

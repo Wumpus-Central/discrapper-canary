@@ -1,46 +1,46 @@
-n.d(t, { Z: () => _ });
-var r = n(442837),
+n.d(t, { Z: () => m });
+var l = n(442837),
     i = n(595519),
-    o = n(374065),
+    r = n(374065),
     a = n(761122),
-    s = n(542094),
-    l = n(973616),
+    o = n(542094),
+    s = n(973616),
     c = n(496675),
     u = n(358085),
     d = n(231338),
-    f = n(388032);
-function _(e) {
+    p = n(388032);
+function m(e) {
     let t,
-        { context: n, application: _, activityAction: p } = e,
+        { context: n, application: m, activityAction: f } = e,
         h = "channel" === n.type ? n.channel : void 0,
-        m = (0, r.e7)([c.Z], () => c.Z.can(d.Pl.USE_EMBEDDED_ACTIVITIES, h)),
-        g = (0, o.KF)(null == h ? void 0 : h.id),
-        E = !1;
-    switch (p) {
-        case s.JS.LEAVE:
-            E = !1;
+        v = (0, l.e7)([c.Z], () => c.Z.can(d.Pl.USE_EMBEDDED_ACTIVITIES, h)),
+        y = (0, r.KF)(null == h ? void 0 : h.id),
+        x = !1;
+    switch (f) {
+        case o.JS.LEAVE:
+            x = !1;
             break;
-        case s.JS.START:
+        case o.JS.START:
             null == h
-                ? (E = !1)
+                ? (x = !1)
                 : (null == h ? void 0 : h.isGuildVoice())
-                  ? g !== o.jy.CAN_LAUNCH && (E = !0)
-                  : (0, i.WS)(h) || (E = !0);
+                  ? y !== r.jy.CAN_LAUNCH && (x = !0)
+                  : (0, i.WS)(h) || (x = !0);
             break;
-        case s.JS.JOIN:
-            (null == h ? void 0 : h.isGuildVoice()) ? (E = !m) : (0, i.WS)(h) || (E = !0);
+        case o.JS.JOIN:
+            (null == h ? void 0 : h.isGuildVoice()) ? (x = !v) : (0, i.WS)(h) || (x = !0);
     }
-    if (p !== s.JS.LEAVE) {
-        let e = _ instanceof l.ZP ? _.embeddedActivityConfig : _.embedded_activity_config,
+    if (f !== o.JS.LEAVE) {
+        let e = m instanceof s.ZP ? m.embeddedActivityConfig : m.embedded_activity_config,
             n = (0, a.Z)((0, u.getOS)());
         null == e || e.supported_platforms.includes(n)
-            ? (null == h ? void 0 : h.isThread()) && ((E = !0), (t = f.intl.string(f.t.ddSR3t)))
-            : ((E = !1), (t = f.intl.string(f.t.z2YTgI)));
+            ? (null == h ? void 0 : h.isThread()) && ((x = !0), (t = p.intl.string(p.t.ddSR3t)))
+            : ((x = !1), (t = p.intl.string(p.t.z2YTgI)));
     }
     return (
-        E && null == t && (t = f.intl.string(f.t.f41E1t)),
+        x && null == t && (t = p.intl.string(p.t.f41E1t)),
         {
-            disabled: E,
+            disabled: x,
             reason: t,
         }
     );

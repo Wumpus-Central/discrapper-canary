@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(996073),
     S = n(25990),
     T = n(626135),
-    I = n(74538),
-    N = n(296810),
+    N = n(74538),
+    I = n(296810),
     y = n(433411),
     A = n(532432),
     P = n(504983),
@@ -40,7 +40,7 @@ var i = n(255367),
 function V(e) {
     var t, n;
     let { user: V, isVisible: G, shouldShow: F } = e,
-        H = I.ZP.isPremium(V),
+        H = N.ZP.isPremium(V),
         {
             pendingAvatar: z,
             pendingThemeColors: W,
@@ -136,7 +136,7 @@ function V(e) {
                   isShown: !0,
                   hasBackground: !0,
                   children: [
-                      (0, i.jsx)(N.Z, {
+                      (0, i.jsx)(I.Z, {
                           layoutClassName: U.tryItOutLayout,
                           profilePreviewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [

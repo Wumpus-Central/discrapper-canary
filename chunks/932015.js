@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class a extends r.Z {
     static createFromServer(e) {
-        return new o({
+        return new a({
             id: e.id,
             guildId: e.guild_id,
             userId: null != e.user ? e.user.id : e.user_id,
@@ -40,4 +40,4 @@ class o extends r.Z {
             (this.endsAt = null != e.endsAt ? e.endsAt : null);
     }
 }
-let a = o;
+let o = a;

@@ -6,7 +6,7 @@ n.d(t, {
     J0: () => P,
     K8: () => L,
     RE: () => T,
-    Vt: () => j,
+    Vt: () => k,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
@@ -26,8 +26,8 @@ n.d(t, {
     n(73800);
 var r = n(463570),
     i = n.n(r),
-    o = n(961238),
-    a = n.n(o),
+    a = n(961238),
+    o = n.n(a),
     s = n(705108),
     l = n.n(s),
     c = n(335818),
@@ -174,8 +174,8 @@ let p = {
         "1212582452640350238",
         "1139323100568244355",
     ],
-    b = a()([...l()(g, i()(Array(g.length), new Date("2025-07-02").getTime()))]),
-    y = a()([...l()(E, i()(Array(E.length), new Date("2025-03-08").getTime()))]);
+    b = o()([...l()(g, i()(Array(g.length), new Date("2025-07-02").getTime()))]),
+    y = o()([...l()(E, i()(Array(E.length), new Date("2025-03-08").getTime()))]);
 var O = (function (e) {
         return (
             (e[(e.VISIBLE = 0)] = "VISIBLE"),
@@ -220,12 +220,12 @@ var M = (function (e) {
         e
     );
 })({});
-let j = {
+let k = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY,
     },
-    k = new Set(Object.values(j)),
-    U = (e) => k.has(e),
+    j = new Set(Object.values(k)),
+    U = (e) => j.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     B = [
         {

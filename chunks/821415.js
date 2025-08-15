@@ -1,83 +1,75 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(392711),
+    l = n(392711),
     a = n(990547),
-    s = n(399606),
-    l = n(481060),
+    o = n(399606),
+    s = n(481060),
     c = n(278323),
     u = n(99690),
     d = n(740265),
-    f = n(213609),
-    _ = n(728345),
-    p = n(372900),
-    h = n(809244),
-    m = n(158776),
-    g = n(19780),
-    E = n(594174),
-    b = n(877912),
-    y = n(762578),
-    O = n(981631),
+    p = n(213609),
+    h = n(728345),
+    f = n(372900),
+    m = n(809244),
+    g = n(158776),
+    b = n(19780),
+    y = n(594174),
+    _ = n(877912),
+    C = n(762578),
+    x = n(981631),
     v = n(658805),
-    I = n(388032),
-    T = n(405143);
-let S = 46;
-function A(e) {
-    let { activity: t, channel: n, userId: o } = e,
-        a = (0, _.IX)(t.application_id).data,
-        u = (0, b.Z)(o),
-        [f, p] = i.useState(!1),
-        [h, m] = i.useState(!1),
-        E = (0, s.e7)([g.Z], () => g.Z.getChannelId() !== n.id);
-    async function y() {
-        m(!0);
+    j = n(388032),
+    O = n(405143);
+function E(e) {
+    let { activity: t, channel: n, userId: l } = e,
+        a = (0, h.IX)(t.application_id).data,
+        u = (0, _.Z)(l),
+        [p, f] = i.useState(!1),
+        [m, g] = i.useState(!1),
+        y = (0, o.e7)([b.Z], () => b.Z.getChannelId() !== n.id);
+    async function C() {
+        g(!0);
         try {
             await c.Z.sendActivityInvite({
-                type: O.mFx.STREAM_REQUEST,
+                type: x.mFx.STREAM_REQUEST,
                 channelId: n.id,
                 activity: t,
-                content: "<@".concat(o, ">"),
+                content: "<@".concat(l, ">"),
                 location: "request to stream hover",
-                targetUserId: o,
+                targetUserId: l,
             });
         } finally {
-            m(!1);
+            g(!1);
         }
     }
-    function A() {
-        return u
-            ? I.intl.string(v.default["8HU1Mz"])
-            : E
-              ? I.intl.string(v.default.qRXatr)
-              : I.intl.string(v.default.DKHheX);
-    }
-    if (t.type === O.IIU.PLAYING) {
-        let e = null == a ? void 0 : a.getIconURL(S);
+    if (t.type === x.IIU.PLAYING) {
+        let e = null == a ? void 0 : a.getIconURL(46);
         return (0, r.jsxs)("div", {
-            className: T.activityRow,
+            className: O.activityRow,
             children: [
                 (0, r.jsxs)("div", {
-                    className: T.activityRowContent,
+                    className: O.activityRowContent,
                     children: [
-                        f || null == e
-                            ? (0, r.jsx)(l.IMN, {
+                        p || null == e
+                            ? (0, r.jsx)(s.IMN, {
                                   size: "custom",
-                                  width: S,
-                                  height: S,
+                                  width: 46,
+                                  height: 46,
                               })
                             : (0, r.jsx)("img", {
                                   src: e,
                                   alt: t.name,
-                                  onError: () => p(!0),
+                                  onError: () => f(!0),
                               }),
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-tertiary",
                                     children: (0, d.Z)(t),
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-md/medium",
                                     children: t.name,
                                 }),
@@ -85,35 +77,39 @@ function A(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(l.zxk, {
-                    loading: h,
-                    disabled: u || E,
+                (0, r.jsx)(s.zxk, {
+                    loading: m,
+                    disabled: u || y,
                     fullWidth: !0,
                     size: "sm",
-                    text: A(),
-                    onClick: y,
+                    text: u
+                        ? j.intl.string(v.default["8HU1Mz"])
+                        : y
+                          ? j.intl.string(v.default.qRXatr)
+                          : j.intl.string(v.default.DKHheX),
+                    onClick: C,
                 }),
             ],
         });
     }
 }
-function N(e) {
+function S(e) {
     let { userId: t, channel: n } = e,
-        c = (0, s.e7)([E.default], () => E.default.getUser(t)),
-        d = (0, s.e7)([m.Z], () => m.Z.getActivities(t, n.getGuildId())),
-        _ = (0, s.e7)([m.Z], () => m.Z.getStatus(t, n.getGuildId())),
-        g = (0, h.Z)(n, null != c ? c : null),
-        b = (0, y.Z)(n.id),
-        v = null == c || !b,
-        I = i.useMemo(
+        c = (0, o.e7)([y.default], () => y.default.getUser(t)),
+        d = (0, o.e7)([g.Z], () => g.Z.getActivities(t, n.getGuildId())),
+        h = (0, o.e7)([g.Z], () => g.Z.getStatus(t, n.getGuildId())),
+        b = (0, m.Z)(n, null != c ? c : null),
+        _ = (0, C.Z)(n.id),
+        v = null == c || !_,
+        j = i.useMemo(
             () =>
-                o.uniqBy(
-                    d.filter((e) => e.type === O.IIU.PLAYING),
+                l.uniqBy(
+                    d.filter((e) => e.type === x.IIU.PLAYING),
                     (e) => e.application_id,
                 ),
             [d],
         );
-    return ((0, f.Z)(
+    return ((0, p.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
@@ -123,30 +119,30 @@ function N(e) {
     ),
     v)
         ? null
-        : (0, r.jsx)(p.Z.Provider, {
+        : (0, r.jsx)(f.Z.Provider, {
               value: n.guild_id,
               children: (0, r.jsxs)("div", {
-                  className: T.root,
+                  className: O.root,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: T.userHeader,
+                          className: O.userHeader,
                           children: [
                               (0, r.jsx)(u.Z, {
                                   user: c,
-                                  status: _,
-                                  size: l.EFr.SIZE_24,
+                                  status: h,
+                                  size: s.EFr.SIZE_24,
                               }),
-                              (0, r.jsx)(l.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: "text-md/medium",
-                                  children: g,
+                                  children: b,
                               }),
                           ],
                       }),
                       (0, r.jsx)("div", {
-                          className: T.activityList,
-                          children: I.map((e) =>
+                          className: O.activityList,
+                          children: j.map((e) =>
                               (0, r.jsx)(
-                                  A,
+                                  E,
                                   {
                                       activity: e,
                                       channel: n,

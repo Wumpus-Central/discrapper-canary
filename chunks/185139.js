@@ -1,9 +1,9 @@
 n.d(t, { Z: () => O }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(245364),
-    a = n(120356),
-    s = n.n(a),
+    a = n(245364),
+    o = n(120356),
+    s = n.n(o),
     l = n(846519),
     c = n(481060),
     u = n(609194),
@@ -22,7 +22,7 @@ function O(e) {
     let {
             steps: t,
             currentStep: n,
-            body: a,
+            body: o,
             overrideKey: O,
             paymentError: v,
             header: I,
@@ -40,20 +40,20 @@ function O(e) {
         } = e,
         M = null;
     null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
-    let j = null != M ? M.message : "";
+    let k = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && x && (j += " ".concat(E.intl.string(E.t.iWvwQU))),
-        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd3)),
-        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWF)));
-    let { stripe: k } = (0, _.JL)();
-    C = C || null == k;
+        (M.code === f.SM.CARD_DECLINED && x && (k += " ".concat(E.intl.string(E.t.iWvwQU))),
+        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)),
+        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
+    let { stripe: j } = (0, _.JL)();
+    C = C || null == j;
     let U = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = U.current;
         return (
-            null != k || e.isStarted()
-                ? null != k && e.stop()
+            null != j || e.isStarted()
+                ? null != j && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
                       (0, h.q2)(e);
@@ -62,11 +62,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [k]);
+    }, [j]);
     let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
-    return (0, r.jsxs)(o.Elements, {
+    return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
-        stripe: k,
+        stripe: j,
         children: [
             I,
             (0, r.jsxs)("div", {
@@ -104,7 +104,7 @@ function O(e) {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: P,
-                                          children: j,
+                                          children: k,
                                       }),
                                   }),
                             C
@@ -121,7 +121,7 @@ function O(e) {
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: D,
                                           className: s()(b.scroller, L),
-                                          children: a,
+                                          children: o,
                                       }),
                                   }),
                         ],

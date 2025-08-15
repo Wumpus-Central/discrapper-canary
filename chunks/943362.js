@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(239091),
     l = n(782568),
     c = n(364640),
@@ -74,7 +74,7 @@ function y(e) {
                           let r = await (0, d.B_)(t.attachmentUrl);
                           e.shouldStopPropagation && (null == n || n.stopPropagation()),
                               c.Z.trackLinkClicked(r),
-                              e.shouldCloseDefaultModals && (0, a.pTH)(),
+                              e.shouldCloseDefaultModals && (0, o.pTH)(),
                               (0, l.Z)(r);
                       },
                 y = m.noStyleAndInteraction
@@ -101,9 +101,9 @@ function y(e) {
                     onContextMenu: y,
                     className: "attachmentLink",
                     children: [
-                        (0, r.jsx)(a.Ujz, {
+                        (0, r.jsx)(o.Ujz, {
                             size: "xs",
-                            className: o()(h.icon, p.icon),
+                            className: a()(h.icon, p.icon),
                             color: "currentColor",
                         }),
                         (0, f.S)(t, i, m),

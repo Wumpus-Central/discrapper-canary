@@ -1,16 +1,16 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(73800),
     i = n(442837),
     l = n(445384),
     a = n(420438),
-    s = n(271383),
-    o = n(430824),
+    o = n(271383),
+    s = n(430824),
     c = n(594174),
     u = n(981631),
     d = n(440493);
-function h(e) {
-    let t = (0, i.e7)([o.Z, a.Z, c.default, s.ZP], () => {
-        let t = o.Z.getGuild(e);
+function p(e) {
+    let t = (0, i.e7)([s.Z, a.Z, c.default, o.ZP], () => {
+        let t = s.Z.getGuild(e);
         if (
             (null == t ? void 0 : t.features.has(u.oNc.HUB)) !== !0 ||
             !0 === a.Z.hasViewedPrompt(d.r.REAL_NAME_PROMPT, t.id)
@@ -18,7 +18,7 @@ function h(e) {
             return null;
         let n = c.default.getCurrentUser();
         if (null == n) return null;
-        let r = s.ZP.getMember(t.id, null == n ? void 0 : n.id);
+        let r = o.ZP.getMember(t.id, null == n ? void 0 : n.id);
         return (null == r ? void 0 : r.nick) == null;
     });
     return (

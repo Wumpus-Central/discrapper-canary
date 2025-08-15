@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,7 +16,7 @@ var r = n(255367),
     j = n(388032),
     y = n(878449),
     O = n(602727);
-function x(e) {
+function h(e) {
     let {
         section: t,
         subsection: n,
@@ -66,7 +66,7 @@ function x(e) {
                       onClose: s,
                   });
 }
-function h(e) {
+function x(e) {
     var t, n, d;
     let {
             user: u,
@@ -74,7 +74,7 @@ function h(e) {
             displayProfile: p,
             guildId: m,
             items: g,
-            initialSection: h = b.oh.USER_INFO,
+            initialSection: x = b.oh.USER_INFO,
             initialSubsection: v,
             onClose: _,
         } = e,
@@ -87,7 +87,7 @@ function h(e) {
                     null ==
                     (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === h;
+                        return t === x;
                     }))
                         ? void 0
                         : t.section)
@@ -156,7 +156,7 @@ function h(e) {
                           );
                       }),
                   }),
-                  (0, r.jsx)(x, {
+                  (0, r.jsx)(h, {
                       items: g,
                       section: E,
                       subsection: T,

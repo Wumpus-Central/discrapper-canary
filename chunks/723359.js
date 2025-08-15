@@ -1,14 +1,14 @@
 n.d(t, {
     $$: () => i,
     Al: () => s,
-    L0: () => a,
-    dG: () => o,
+    L0: () => o,
+    dG: () => a,
     k0: () => r,
 });
 let r = 2 * n(70956).Z.Millis.HOUR,
     i = "new-user-age-gate-modal",
-    o = "existing-user-age-gate-modal";
-var a = (function (e) {
+    a = "existing-user-age-gate-modal";
+var o = (function (e) {
         return (
             (e.AUTH = "Register Age Gate"),
             (e.NEW_USER_FLOW = "NUF"),

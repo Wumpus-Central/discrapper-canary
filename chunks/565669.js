@@ -1,4 +1,4 @@
-n.d(t, { H: () => o });
+n.d(t, { H: () => a });
 var r = n(87290);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        return new o(e);
+        return new a(e);
     }
     constructor(e) {
         i(this, "categoryStoreListingId", void 0),

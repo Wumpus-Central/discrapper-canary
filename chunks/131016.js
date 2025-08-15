@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(688619),
     i = n.n(r),
-    o = n(522942),
-    a = n(660662);
+    a = n(522942),
+    o = n(660662);
 function s(e) {
     let t = i()(e),
         n = t.get("hsl.l");
@@ -29,12 +29,12 @@ function l(e) {
 }
 function c() {
     let e,
-        t = a.mH[Math.floor(Math.random() * a.mH.length)],
-        n = a.P$[Math.floor(Math.random() * a.P$.length)];
-    if (t === o.m.GRADIENT) {
-        let t = a.vK[Math.floor(Math.random() * a.vK.length)];
+        t = o.mH[Math.floor(Math.random() * o.mH.length)],
+        n = o.P$[Math.floor(Math.random() * o.P$.length)];
+    if (t === a.m.GRADIENT) {
+        let t = o.vK[Math.floor(Math.random() * o.vK.length)];
         e = [t.start, t.end];
-    } else e = [a.gD[Math.floor(Math.random() * a.gD.length)]];
+    } else e = [o.gD[Math.floor(Math.random() * o.gD.length)]];
     return {
         fontId: n,
         effectId: t,

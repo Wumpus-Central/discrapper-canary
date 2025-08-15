@@ -69,8 +69,8 @@ let T = {
         screenshakeEnabled: !1,
         confettiEnabled: !1,
     },
-    I = (0, s.range)(0, 11),
-    N = (0, s.range)(0, 2.25, 0.25),
+    N = (0, s.range)(0, 11),
+    I = (0, s.range)(0, 2.25, 0.25),
     y = (0, s.range)(1, 11),
     A = (0, s.range)(1, 26);
 function P(e) {
@@ -269,10 +269,10 @@ function w(e) {
                     (0, i.jsx)(R, { children: C.intl.string(C.t["/OOFpK"]) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: l,
-                        markers: I,
+                        markers: N,
                         stickToMarkers: !0,
-                        minValue: I[0],
-                        maxValue: I[I.length - 1],
+                        minValue: N[0],
+                        maxValue: N[N.length - 1],
                         initialValue: s,
                         onValueChange: (e) => a({ combosRequiredCount: e }),
                         onValueRender: (e) => "".concat(e),
@@ -310,11 +310,11 @@ function k(e) {
                     (0, i.jsx)(R, { children: C.intl.string(C.t.CEOEOT) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: u,
-                        markers: N,
+                        markers: I,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        minValue: N[0],
-                        maxValue: N[N.length - 1],
+                        minValue: I[0],
+                        maxValue: I[I.length - 1],
                         initialValue: r,
                         onValueChange: (e) => {
                             var t;
@@ -324,7 +324,7 @@ function k(e) {
                                 l(t, 1);
                         },
                         onMarkerRender: (e) =>
-                            e === N[N.length - 1] ? C.intl.string(C.t["4rbMWV"]) : "".concat(100 * e, "%"),
+                            e === I[I.length - 1] ? C.intl.string(C.t["4rbMWV"]) : "".concat(100 * e, "%"),
                     }),
                 ],
             }),

@@ -1,8 +1,8 @@
 n.d(t, { t: () => d });
 var r = n(115434),
     i = n(704215),
-    o = n(283693),
-    a = n(911969),
+    a = n(283693),
+    o = n(911969),
     s = n(317381),
     l = n(416587),
     c = n(874703),
@@ -22,11 +22,11 @@ function d(e) {
         case i.z.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, l.O)({
                 storeState: s.ZP.getState(),
-                surface: a.eR.VOICE_LAUNCHER,
+                surface: o.eR.VOICE_LAUNCHER,
             });
         case i.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
             return 0;
         default:
-            return (0, o.UT)(e, { andFail: !1 }), 0;
+            return (0, a.UT)(e, { andFail: !1 }), 0;
     }
 }

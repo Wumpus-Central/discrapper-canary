@@ -1,6 +1,6 @@
-var r = n(621796),
-    i = n(172367);
-e.exports = function (e) {
-    var t = r.splitBlock(e.getCurrentContent(), e.getSelection());
-    return i.push(e, t, "split-block");
+var n = r(621796),
+    i = r(172367);
+t.exports = function (t) {
+    var e = n.splitBlock(t.getCurrentContent(), t.getSelection());
+    return i.push(t, e, "split-block");
 };

@@ -1,14 +1,14 @@
 n.d(t, {
     Q: () => s,
-    X: () => a,
+    X: () => o,
 });
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
-function a(e, t) {
+    a = n(981631);
+function o(e, t) {
     r.tn
         .patch({
-            url: o.ANM.GAME_NOTIFICATION_SETTING_UPDATE(e),
+            url: a.ANM.GAME_NOTIFICATION_SETTING_UPDATE(e),
             body: { muted: t },
             rejectWithError: !0,
         })
@@ -23,7 +23,7 @@ function a(e, t) {
 async function s() {
     await r.tn
         .get({
-            url: o.ANM.GAME_NOTIFICATION_SETTINGS,
+            url: a.ANM.GAME_NOTIFICATION_SETTINGS,
             rejectWithError: !0,
         })
         .then((e) => {

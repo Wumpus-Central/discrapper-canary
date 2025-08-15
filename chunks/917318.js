@@ -1,25 +1,25 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(275726),
-    o = n(442837),
+    l = n(442837),
     a = n(481060),
-    s = n(739566),
-    l = n(942951),
+    o = n(739566),
+    s = n(942951),
     c = n(834129),
     u = n(594174),
     d = n(764295),
-    f = n(388032);
-let _ = {
+    p = n(388032);
+let m = {
         [i.u.REPORT_TO_MOD_BAN_USER]: () => d.default.komFTk,
         [i.u.REPORT_TO_MOD_KICK_USER]: () => d.default.FAJmJS,
         [i.u.REPORT_TO_MOD_TIMEOUT_USER]: () => d.default["90r/sb"],
     },
-    p = {
+    f = {
         [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default["4023i4"],
         [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zc,
     };
-function h(e) {
+function _(e) {
     let { type: t } = e,
         n = null;
     switch (t) {
@@ -45,80 +45,80 @@ function h(e) {
           })
         : null;
 }
-function m(e) {
-    var t;
-    let { message: n, channel: i, compact: a } = e,
-        { author: d, mentions: p, type: m } = n,
-        g = (0, s.ZP)(n),
-        E = n.getChannelId(),
-        b = (0, o.e7)([u.default], () => u.default.getUser(p[0]), [p]),
-        y = (0, s.JZ)(d, i),
-        O = (0, l.l)({
-            user: d,
-            channelId: E,
-            guildId: i.guild_id,
-            messageId: n.id,
-        })(y),
-        v = (0, s.Sw)(b, i),
-        I = (0, l.l)({
-            user: b,
-            channelId: E,
-            guildId: i.guild_id,
-            messageId: n.id,
-        })(v),
-        T = null != (t = _[m]) ? t : null;
-    if (null == T) return null;
-    let S = f.intl.format(T(), {
-        actorName: g.nick,
-        actorHook: O,
-        targetName: null == v ? void 0 : v.nick,
-        targetHook: I,
-    });
-    return (0, r.jsx)(c.Z, {
-        iconNode: (0, r.jsx)(h, { type: m }),
-        timestamp: n.timestamp,
-        compact: a,
-        children: S,
-    });
-}
 function g(e) {
     var t;
-    let { message: n, channel: i, compact: o } = e,
-        { author: a, type: u } = n,
-        d = (0, s.ZP)(n),
-        _ = n.getChannelId(),
-        m = (0, s.JZ)(a, i),
-        g = (0, l.l)({
-            user: a,
-            channelId: _,
+    let { message: n, channel: i, compact: a } = e,
+        { author: d, mentions: f, type: g } = n,
+        h = (0, o.ZP)(n),
+        b = n.getChannelId(),
+        E = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
+        C = (0, o.JZ)(d, i),
+        v = (0, s.l)({
+            user: d,
+            channelId: b,
             guildId: i.guild_id,
             messageId: n.id,
-        })(m),
-        E = null != (t = p[u]) ? t : null;
-    if (null == E) return null;
-    let b = f.intl.format(E(), {
-        actorName: d.nick,
-        actorHook: g,
+        })(C),
+        O = (0, o.Sw)(E, i),
+        y = (0, s.l)({
+            user: E,
+            channelId: b,
+            guildId: i.guild_id,
+            messageId: n.id,
+        })(O),
+        x = null != (t = m[g]) ? t : null;
+    if (null == x) return null;
+    let j = p.intl.format(x(), {
+        actorName: h.nick,
+        actorHook: v,
+        targetName: null == O ? void 0 : O.nick,
+        targetHook: y,
     });
     return (0, r.jsx)(c.Z, {
-        iconNode: (0, r.jsx)(h, { type: u }),
+        iconNode: (0, r.jsx)(_, { type: g }),
         timestamp: n.timestamp,
-        compact: o,
-        children: b,
+        compact: a,
+        children: j,
     });
 }
-function E(e) {
-    let { message: t, channel: n, compact: o } = e,
+function h(e) {
+    var t;
+    let { message: n, channel: i, compact: l } = e,
+        { author: a, type: u } = n,
+        d = (0, o.ZP)(n),
+        m = n.getChannelId(),
+        g = (0, o.JZ)(a, i),
+        h = (0, s.l)({
+            user: a,
+            channelId: m,
+            guildId: i.guild_id,
+            messageId: n.id,
+        })(g),
+        b = null != (t = f[u]) ? t : null;
+    if (null == b) return null;
+    let E = p.intl.format(b(), {
+        actorName: d.nick,
+        actorHook: h,
+    });
+    return (0, r.jsx)(c.Z, {
+        iconNode: (0, r.jsx)(_, { type: u }),
+        timestamp: n.timestamp,
+        compact: l,
+        children: E,
+    });
+}
+function b(e) {
+    let { message: t, channel: n, compact: l } = e,
         { type: a } = t;
     return a === i.u.REPORT_TO_MOD_BAN_USER || a === i.u.REPORT_TO_MOD_KICK_USER || a === i.u.REPORT_TO_MOD_TIMEOUT_USER
-        ? (0, r.jsx)(m, {
+        ? (0, r.jsx)(g, {
               message: t,
               channel: n,
-              compact: o,
+              compact: l,
           })
-        : (0, r.jsx)(g, {
+        : (0, r.jsx)(h, {
               message: t,
               channel: n,
-              compact: o,
+              compact: l,
           });
 }

@@ -1,7 +1,7 @@
 let r = n(889658),
     i = n(721919),
-    { ANY: o } = i,
-    a = n(839525),
+    { ANY: a } = i,
+    o = n(839525),
     s = n(15496),
     l = (e, t, n = {}) => {
         if (e === t) return !0;
@@ -21,10 +21,10 @@ let r = n(889658),
     d = (e, t, n) => {
         let r, i, l, d, p, h, m;
         if (e === t) return !0;
-        if (1 === e.length && e[0].semver === o)
-            if (1 === t.length && t[0].semver === o) return !0;
+        if (1 === e.length && e[0].semver === a)
+            if (1 === t.length && t[0].semver === a) return !0;
             else e = n.includePrerelease ? c : u;
-        if (1 === t.length && t[0].semver === o)
+        if (1 === t.length && t[0].semver === a)
             if (n.includePrerelease) return !0;
             else t = u;
         let g = new Set();
@@ -38,8 +38,8 @@ let r = n(889658),
         if (r && i && ((l = s(r.semver, i.semver, n)) > 0 || (0 === l && (">=" !== r.operator || "<=" !== i.operator))))
             return null;
         for (let e of g) {
-            if ((r && !a(e, String(r), n)) || (i && !a(e, String(i), n))) return null;
-            for (let r of t) if (!a(e, String(r), n)) return !1;
+            if ((r && !o(e, String(r), n)) || (i && !o(e, String(i), n))) return null;
+            for (let r of t) if (!o(e, String(r), n)) return !1;
             return !0;
         }
         let E = !!i && !n.includePrerelease && !!i.semver.prerelease.length && i.semver,
@@ -61,7 +61,7 @@ let r = n(889658),
                     ">" === e.operator || ">=" === e.operator)
                 ) {
                     if ((d = f(r, e, n)) === e && d !== r) return !1;
-                } else if (">=" === r.operator && !a(r.semver, String(e), n)) return !1;
+                } else if (">=" === r.operator && !o(r.semver, String(e), n)) return !1;
             }
             if (i) {
                 if (
@@ -75,7 +75,7 @@ let r = n(889658),
                     "<" === e.operator || "<=" === e.operator)
                 ) {
                     if ((p = _(i, e, n)) === e && p !== i) return !1;
-                } else if ("<=" === i.operator && !a(i.semver, String(e), n)) return !1;
+                } else if ("<=" === i.operator && !o(i.semver, String(e), n)) return !1;
             }
             if (!e.operator && (i || r) && 0 !== l) return !1;
         }

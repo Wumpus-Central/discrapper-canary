@@ -1,13 +1,13 @@
-n.d(t, { Z: () => l }), n(539854), n(388685), n(642613);
-var r = n(73800),
+n.d(t, { Z: () => s }), n(539854), n(388685), n(642613);
+var l = n(73800),
     i = n(911969),
-    o = n(675478),
+    r = n(675478),
     a = n(358085),
-    s = n(761122);
-function l(e) {
+    o = n(761122);
+function s(e) {
     return (
-        o.DZ.loadIfNecessary(),
-        r.useMemo(() => {
+        r.DZ.loadIfNecessary(),
+        l.useMemo(() => {
             let t = [];
             e.forEach((e) => t.push(e.application.id));
             let n = [...t];
@@ -17,37 +17,37 @@ function l(e) {
 }
 let c = (e, t) => {
     let n = [...e],
-        r = 0;
+        l = 0;
     return (
         t.forEach((e) => {
             let t = n.findIndex((t) => t.application.id === e);
             if (-1 !== t) {
                 let e = n[t];
-                n.splice(t, 1), (n = [...n.slice(0, r), e, ...n.slice(r)]), ++r;
+                n.splice(t, 1), (n = [...n.slice(0, l), e, ...n.slice(l)]), ++l;
             }
         }),
         n
             .map((e, t) => [e, t])
             .filter((e) => {
                 var t, n;
-                let [r] = e,
-                    o =
-                        null == (n = r.application.embeddedActivityConfig) ||
-                        null == (t = n.client_platform_config[(0, s.Z)((0, a.getOS)())])
+                let [l] = e,
+                    r =
+                        null == (n = l.application.embeddedActivityConfig) ||
+                        null == (t = n.client_platform_config[(0, o.Z)((0, a.getOS)())])
                             ? void 0
                             : t.label_type;
-                return !!o && (o === i.ww.NEW || o === i.ww.UPDATED);
+                return !!r && (r === i.ww.NEW || r === i.ww.UPDATED);
             })
             .forEach((e) => {
-                let [t, r] = e,
+                let [t, l] = e,
                     i =
                         null != t.application.embeddedActivityConfig &&
                         null != t.application.embeddedActivityConfig.shelf_rank
                             ? t.application.embeddedActivityConfig.shelf_rank - 1
-                            : r;
-                if (i < r) {
-                    let e = n[r];
-                    n.splice(r, 1), (n = [...n.slice(0, i), e, ...n.slice(i)]);
+                            : l;
+                if (i < l) {
+                    let e = n[l];
+                    n.splice(l, 1), (n = [...n.slice(0, i), e, ...n.slice(i)]);
                 }
             }),
         n

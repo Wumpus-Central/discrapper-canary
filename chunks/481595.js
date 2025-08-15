@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U }), n(997841);
 var r = n(255367),
     i = n(73800),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(742280),
     l = n(399606),
     c = n(481060),
@@ -32,32 +32,32 @@ var r = n(255367),
     L = n(982204),
     x = n(981631),
     M = n(388032),
-    j = n(416439);
-function k(e) {
+    k = n(416439);
+function j(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
         : (0, r.jsxs)("div", {
-              className: j.skuHeading,
+              className: k.skuHeading,
               children: [
                   (0, r.jsx)(m.Z, { game: t }),
                   (0, r.jsx)(c.X6q, {
                       variant: "heading-lg/bold",
-                      className: j.skuHeadingText,
+                      className: k.skuHeadingText,
                       children: n.name,
                   }),
               ],
           });
 }
 function U(e) {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: o, handlePaymentSourceAdd: m } = e,
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: m } = e,
         {
             application: U,
             purchaseState: G,
             paymentSources: B,
-            paymentSourceId: Z,
+            paymentSourceId: V,
             setHasAcceptedTerms: F,
-            skusById: V,
+            skusById: Z,
             skuPricePreviewsById: H,
             selectedSkuId: Y,
             isEmbeddedIAP: W,
@@ -73,24 +73,24 @@ function U(e) {
             defaultPaymentSourceId: v.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: v.Z.hasFetchedPaymentSources,
         }));
-    a()(null != Y, "Expected selectedSkuId");
-    let er = V[Y],
+    o()(null != Y, "Expected selectedSkuId");
+    let er = Z[Y],
         ei = null == er ? void 0 : er.eligiblePaymentGateways,
-        eo = H[Y],
-        ea = null != Z ? Z : I.c,
-        es = null != eo ? eo[ea] : null;
-    a()(null != er, "SKU must exist and be fetched."), a()(null != U, "Application must exist.");
+        ea = H[Y],
+        eo = null != V ? V : I.c,
+        es = null != ea ? ea[eo] : null;
+    o()(null != er, "SKU must exist and be fetched."), o()(null != U, "Application must exist.");
     let el = (0, l.e7)([h.Z, T.Z], () => T.Z.inTestModeForApplication(U.id) || h.Z.inDevModeForApplication(U.id), [
             U.id,
         ]),
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, w.m)(B, Z),
+        ef = (0, w.m)(B, V),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
-            Z === et &&
+            V === et &&
             et !== I.c &&
             null == es &&
             (0, u.x2)(er.applicationId, er.id, et, { isGift: J })
@@ -100,10 +100,10 @@ function U(e) {
                 .catch((e) => {
                     X(e);
                 });
-    }, [et, en, Z, er.applicationId, er.id, es, X, J]);
-    let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
+    }, [et, en, V, er.applicationId, er.id, es, X, J]);
+    let ep = null != ei && ei.length > 0 && (V === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
-        className: j.stepBody,
+        className: k.stepBody,
         children: [
             (0, r.jsx)(E.Y, { paymentRestrictionBannerType: ep }),
             el
@@ -113,7 +113,7 @@ function U(e) {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.WARNING,
-                          className: j.errorBlock,
+                          className: k.errorBlock,
                           children: M.intl.string(M.t.OvMyMT),
                       },
                       "TEST_MODE",
@@ -126,13 +126,13 @@ function U(e) {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.ERROR,
-                          className: j.errorBlock,
+                          className: k.errorBlock,
                           children: M.intl.string(M.t.tAmECg),
                       },
                       "DEV_SHELF_ERROR",
                   )
                 : null,
-            (0, r.jsx)(k, {
+            (0, r.jsx)(j, {
                 application: U,
                 sku: er,
                 isEmbeddedIAP: W,
@@ -151,14 +151,14 @@ function U(e) {
                 : null == z
                   ? (0, r.jsx)(c.$jN, {
                         type: c.$jN.Type.WANDERING_CUBES,
-                        className: j.invoiceSpinner,
+                        className: k.invoiceSpinner,
                     })
                   : (0, r.jsx)(L.E, {
                         sku: er,
                         value: "",
                     }),
             (0, r.jsxs)("div", {
-                className: j.paymentSourceWrapper,
+                className: k.paymentSourceWrapper,
                 children: [
                     (0, r.jsx)(c.vwX, {
                         tag: c.RB0.H5,
@@ -166,8 +166,8 @@ function U(e) {
                     }),
                     (0, r.jsx)(_.ZP, {
                         paymentSources: Object.values(B),
-                        selectedPaymentSourceId: Z,
-                        onChange: o,
+                        selectedPaymentSourceId: V,
+                        onChange: a,
                         onPaymentSourceAdd: m,
                         hidePersonalInformation: ec,
                         paymentGatewayRestrictions: ei,
@@ -183,7 +183,7 @@ function U(e) {
                     showWithdrawalWaiver: eu,
                     disabled: ed,
                     subscriptionPlan: null,
-                    finePrintClassname: j.fineprint,
+                    finePrintClassname: k.fineprint,
                     purchaseType: K,
                     isGift: J,
                     checkboxLabel:

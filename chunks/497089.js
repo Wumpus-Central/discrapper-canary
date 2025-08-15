@@ -1,8 +1,8 @@
 n.d(t, {
     AM: () => r,
-    DY: () => a,
+    DY: () => o,
     O7: () => s,
-    b1: () => o,
+    b1: () => a,
     ud: () => i,
 });
 var r = (function (e) {
@@ -23,10 +23,10 @@ var r = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.ForYou = "ForYou"), (e.Mentions = "Mentions"), (e.MessageReminders = "MessageReminders"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e.GO_LIVE_PUSH = "go_live_push"),
             (e.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),

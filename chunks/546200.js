@@ -1,23 +1,23 @@
-n.d(t, { EmojiStudioModal: () => o });
-var l = n(255367);
+n.d(t, { EmojiStudioModal: () => s });
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var l = n(481060),
     i = n(375727),
     a = n(867248);
-let o = (e) => {
-    let { transitionState: t, userImage: n, guildId: o } = e;
-    return (0, l.jsx)(r.Y0X, {
+let s = (e) => {
+    let { transitionState: t, userImage: n, guildId: s } = e;
+    return (0, r.jsx)(l.Y0X, {
         transitionState: t,
-        size: r.CgR.DYNAMIC,
+        size: l.CgR.DYNAMIC,
         fullscreenOnMobile: !1,
         className: a.modalRoot,
         parentComponent: "Modal",
-        children: (0, l.jsx)(r.hzk, {
+        children: (0, r.jsx)(l.hzk, {
             scrollbarType: "none",
             className: a.modalContent,
-            children: (0, l.jsx)(i.I, {
+            children: (0, r.jsx)(i.I, {
                 userImage: n,
-                guildId: o,
+                guildId: s,
             }),
         }),
     });

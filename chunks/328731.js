@@ -1,107 +1,98 @@
-n.d(t, { Z: () => y });
-var r = n(255367),
-    i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(481060),
-    l = n(318374),
-    c = n(5192),
-    u = n(192918),
-    d = n(256139),
-    f = n(91907),
-    _ = n(866040),
-    p = n(388032),
-    h = n(817120);
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function g(e) {
+r.d(t, { Z: () => j });
+var n = r(255367),
+    l = r(73800),
+    i = r(120356),
+    o = r.n(i),
+    a = r(481060),
+    c = r(318374),
+    s = r(5192),
+    u = r(192918),
+    d = r(256139),
+    p = r(91907),
+    f = r(866040),
+    b = r(388032),
+    m = r(817120);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
-function y(e) {
-    let { entry: t, channel: n, className: o } = e,
-        m = i.useRef(null),
-        E = i.useRef(null),
+function j(e) {
+    let { entry: t, channel: r, className: i } = e,
+        j = l.useRef(null),
+        g = l.useRef(null),
         {
-            displayParticipants: y,
-            participant1: O,
-            participant2: v,
-            numOtherParticipants: I,
-            orderedParticipants: T,
+            displayParticipants: h,
+            participant1: v,
+            participant2: P,
+            numOtherParticipants: x,
+            orderedParticipants: S,
         } = (0, u.Z)(t),
-        S = [O, v];
-    return (0, r.jsxs)("div", {
-        className: a()(h.container, o),
+        w = [v, P];
+    return (0, n.jsxs)("div", {
+        className: o()(m.container, i),
         children: [
-            y.length > 0
-                ? (0, r.jsxs)(r.Fragment, {
+            h.length > 0
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, r.jsx)(_.Z, {
-                              targetElementRef: m,
-                              participants: T,
-                              channel: n,
+                          (0, n.jsx)(f.Z, {
+                              targetElementRef: j,
+                              participants: S,
+                              channel: r,
                               children: (e) =>
-                                  (0, r.jsx)(
-                                      s.P3F,
-                                      b(
-                                          g(
+                                  (0, n.jsx)(
+                                      a.P3F,
+                                      y(
+                                          O(
                                               {
-                                                  innerRef: m,
-                                                  className: h.clickable,
+                                                  innerRef: j,
+                                                  className: m.clickable,
                                               },
                                               e,
                                           ),
                                           {
-                                              children: (0, r.jsx)(l.Z, {
+                                              children: (0, n.jsx)(c.Z, {
                                                   maxUsers: 3,
-                                                  users: y,
-                                                  size: s.EFr.SIZE_20,
+                                                  users: h,
+                                                  size: a.EFr.SIZE_20,
                                                   hideOverflowCount: !0,
                                                   disableUsernameTooltip: !0,
                                               }),
@@ -109,56 +100,56 @@ function y(e) {
                                       ),
                                   ),
                           }),
-                          (0, r.jsx)(s.LZC, {
+                          (0, n.jsx)(a.LZC, {
                               size: 6,
                               horizontal: !0,
                           }),
                       ],
                   })
                 : null,
-            (0, r.jsx)(s.X6q, {
+            (0, n.jsx)(a.X6q, {
                 variant: "text-sm/semibold",
                 color: "text-secondary",
-                className: a()(h.truncatedText, h.usersHeader),
+                className: o()(m.truncatedText, m.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: p.intl.format(p.t.rH95Gh, {
-                    user0: c.ZP.getName(n.guild_id, n.id, S[0]),
-                    user1: c.ZP.getName(n.guild_id, n.id, S[1]),
-                    countOthers: I,
+                children: b.intl.format(b.t.rH95Gh, {
+                    user0: s.ZP.getName(r.guild_id, r.id, w[0]),
+                    user1: s.ZP.getName(r.guild_id, r.id, w[1]),
+                    countOthers: x,
                     name0Hook: (e, t) =>
-                        (0, r.jsx)(
-                            f.Z,
+                        (0, n.jsx)(
+                            p.Z,
                             {
                                 text: e,
-                                user: S[0],
-                                channel: n,
+                                user: w[0],
+                                channel: r,
                             },
                             t,
                         ),
                     name1Hook: (e, t) =>
-                        (0, r.jsx)(
-                            f.Z,
+                        (0, n.jsx)(
+                            p.Z,
                             {
                                 text: e,
-                                user: S[1],
-                                channel: n,
+                                user: w[1],
+                                channel: r,
                             },
                             t,
                         ),
                     countOthersHook: (e, t) =>
-                        (0, r.jsx)(
-                            _.Z,
+                        (0, n.jsx)(
+                            f.Z,
                             {
-                                targetElementRef: E,
-                                participants: T,
-                                channel: n,
+                                targetElementRef: g,
+                                participants: S,
+                                channel: r,
                                 children: (t) =>
-                                    (0, r.jsx)(
+                                    (0, n.jsx)(
                                         d.Z,
-                                        b(g({}, t), {
+                                        y(O({}, t), {
                                             tag: "span",
-                                            children: (0, r.jsx)(s.Text, {
-                                                ref: E,
+                                            children: (0, n.jsx)(a.Text, {
+                                                ref: g,
                                                 variant: "text-sm/semibold",
                                                 color: "text-primary",
                                                 lineClamp: 1,

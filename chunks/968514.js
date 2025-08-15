@@ -1,53 +1,30 @@
-var r = n(720379),
-    i = n(65183),
+var n = r(720379),
+    i = r(65183),
     o = i.List,
     a = i.Repeat,
-    s = i.Record,
-    l = function () {
+    u = i.Record,
+    s = function () {
         return !0;
     },
-    c = s({
+    c = u({
         start: null,
         end: null,
     }),
-    u = s({
+    l = u({
         start: null,
         end: null,
         decoratorKey: null,
         leaves: null,
     });
-function d(e, t) {
-    var n = [];
-    return (
-        r(
-            e
-                .map(function (e) {
-                    return e.getStyle();
-                })
-                .toList(),
-            f,
-            l,
-            function (e, r) {
-                n.push(
-                    new c({
-                        start: e + t,
-                        end: r + t,
-                    }),
-                );
-            },
-        ),
-        o(n)
-    );
+function f(t, e) {
+    return t === e;
 }
-function f(e, t) {
-    return e === t;
-}
-e.exports = {
-    generate: function (e, t, n) {
-        var i = t.getLength();
+t.exports = {
+    generate: function (t, e, r) {
+        var i = e.getLength();
         if (!i)
             return o.of(
-                new u({
+                new l({
                     start: 0,
                     end: 0,
                     decoratorKey: null,
@@ -59,21 +36,43 @@ e.exports = {
                     ),
                 }),
             );
-        var s = [],
-            _ = n ? n.getDecorations(t, e) : o(a(null, i)),
-            p = t.getCharacterList();
+        var u = [],
+            p = r ? r.getDecorations(e, t) : o(a(null, i)),
+            h = e.getCharacterList();
         return (
-            r(_, f, l, function (e, t) {
-                s.push(
-                    new u({
-                        start: e,
-                        end: t,
-                        decoratorKey: _.get(e),
-                        leaves: d(p.slice(e, t).toList(), e),
+            n(p, f, s, function (t, e) {
+                var r, i, a;
+                u.push(
+                    new l({
+                        start: t,
+                        end: e,
+                        decoratorKey: p.get(t),
+                        leaves:
+                            ((r = h.slice(t, e).toList()),
+                            (i = t),
+                            (a = []),
+                            n(
+                                r
+                                    .map(function (t) {
+                                        return t.getStyle();
+                                    })
+                                    .toList(),
+                                f,
+                                s,
+                                function (t, e) {
+                                    a.push(
+                                        new c({
+                                            start: t + i,
+                                            end: e + i,
+                                        }),
+                                    );
+                                },
+                            ),
+                            o(a)),
                     }),
                 );
             }),
-            o(s)
+            o(u)
         );
     },
 };

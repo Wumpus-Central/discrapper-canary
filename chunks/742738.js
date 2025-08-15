@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r,
     i = n(348327),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(592125),
     c = n(430824),
@@ -31,7 +31,7 @@ function y(e, t, n) {
 }
 let O = null;
 function v() {
-    var e, t, n, r, i, o, a;
+    var e, t, n, r, i, a, o;
     let s = d.Z.getVoiceChannelId();
     if (null == s) return null;
     let u = m.Z.getStageInstanceByChannel(s);
@@ -52,10 +52,10 @@ function v() {
         name: null != (i = null != (r = u.topic) ? r : y.topic) ? i : y.name,
         type: (0, g.xJ)(y.id) ? b.IIU.WATCHING : b.IIU.LISTENING,
         timestamps: {
-            start: null != (o = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? o : new Date().getTime(),
+            start: null != (a = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? a : new Date().getTime(),
         },
         assets: {
-            small_image: null != (a = v.icon) ? a : void 0,
+            small_image: null != (o = v.icon) ? o : void 0,
             small_text: v.name,
         },
         party: {
@@ -66,7 +66,7 @@ function v() {
 }
 function I() {
     let e = v();
-    return !o()(e, O) && ((O = e), !0);
+    return !a()(e, O) && ((O = e), !0);
 }
 function T(e) {
     let { voiceStates: t } = e;
@@ -77,10 +77,10 @@ function T(e) {
 function S(e) {
     var t, n, r;
     let { state: i } = e,
-        o = null != (r = null == O || null == (n = O.party) || null == (t = n.size) ? void 0 : t[1]) ? r : 0;
-    return i === b.hes.RTC_CONNECTED && !(o > 0) && I();
+        a = null != (r = null == O || null == (n = O.party) || null == (t = n.size) ? void 0 : t[1]) ? r : 0;
+    return i === b.hes.RTC_CONNECTED && !(a > 0) && I();
 }
-class A extends (r = a.ZP.Store) {
+class A extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, d.Z, m.Z, u.Z);
     }

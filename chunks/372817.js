@@ -1,6 +1,6 @@
 function r(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: r, scrollToEnd: i } = e;
-    function o(e) {
+    function a(e) {
         var n;
         return null !=
             (n = t().find(
@@ -13,7 +13,7 @@ function r(e) {
             ? n
             : null;
     }
-    function a(e) {
+    function o(e) {
         let n = t();
         for (let t = n.length - 1; t >= 0; t--) {
             let r = n[t];
@@ -35,13 +35,13 @@ function r(e) {
         getNextFocusableElement: async function (e) {
             let t = (null == e ? void 0 : e.from) || n();
             if (null == t) return null;
-            let i = o(t);
+            let i = a(t);
             return null == i && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), s()) : i;
         },
         getPreviousFocusableElement: async function (e) {
             let t = (null == e ? void 0 : e.from) || n();
             if (null == t) return null;
-            let r = a(t);
+            let r = o(t);
             return null == r && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), l()) : r;
         },
         getFirstFocusableElement: s,

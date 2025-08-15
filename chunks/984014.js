@@ -1,17 +1,17 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(442837),
     i = n(872810),
-    o = n(199902),
+    l = n(199902),
     a = n(314897);
-function s(e, t) {
+function o(e, t) {
     let n = (0, r.e7)([a.default], () => a.default.getId()),
-        s = (0, r.e7)([o.Z], () => {
-            let t = o.Z.getCurrentUserActiveStream();
+        o = (0, r.e7)([l.Z], () => {
+            let t = l.Z.getCurrentUserActiveStream();
             return null != t && t.channelId === e;
         }, [e]);
     return [
-        (null == t || t === n) && s,
-        (0, r.e7)([o.Z], () => o.Z.isSelfStreamHidden(e), [e]),
+        (null == t || t === n) && o,
+        (0, r.e7)([l.Z], () => l.Z.isSelfStreamHidden(e), [e]),
         (t) => {
             (0, i.pR)(e, t);
         },

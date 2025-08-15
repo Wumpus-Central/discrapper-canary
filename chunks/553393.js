@@ -1,8 +1,8 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(717976),
-    a = n(91192),
+    a = n(717976),
+    o = n(91192),
     s = n(442837),
     l = n(780384),
     c = n(755721),
@@ -32,7 +32,7 @@ var r = n(255367),
     L = n(231338),
     x = n(388032),
     M = n(85468);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -64,7 +64,7 @@ function k(e) {
 let U = "8px",
     G = "11px",
     B = 222;
-function Z(e, t) {
+function V(e, t) {
     return null != e && null != t && (0, g.p9)(t, v.Z, y.Z, O.Z, m.Z)[0];
 }
 function F(e) {
@@ -72,16 +72,16 @@ function F(e) {
     let {
             quest: v,
             memberListItemRef: N,
-            applicationStream: j,
+            applicationStream: k,
             position: F,
-            closePopout: V,
+            closePopout: Z,
             updatePosition: H,
             impressionRef: Y,
             name: W,
         } = e,
         K = (0, s.e7)([b.Z], () => {
             var e;
-            return null != (e = b.Z.getChannel(null == j ? void 0 : j.channelId)) ? e : null;
+            return null != (e = b.Z.getChannel(null == k ? void 0 : k.channelId)) ? e : null;
         }),
         z = (0, P.hf)({
             quest: v,
@@ -96,18 +96,18 @@ function F(e) {
         ee = (0, l.wj)($) ? L.BR.DARK : L.BR.LIGHT,
         et = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
         { ref: en, height: er } = (0, _.ZP)(),
-        [ei, eo] = i.useState(et),
-        ea = (0, p.Aq)(),
-        es = (0, a.eg)();
+        [ei, ea] = i.useState(et),
+        eo = (0, p.Aq)(),
+        es = (0, o.eg)();
     i.useEffect(() => {
         let e = es.current;
         return (
-            null == e || e.addEventListener("scroll", V),
+            null == e || e.addEventListener("scroll", Z),
             () => {
-                null == e || e.removeEventListener("scroll", V);
+                null == e || e.removeEventListener("scroll", Z);
             }
         );
-    }, [V, es]),
+    }, [Z, es]),
         i.useEffect(() => {
             let e = es.current,
                 t = N.current;
@@ -130,7 +130,7 @@ function F(e) {
                 tension: 450,
                 friction: 45,
             },
-            onRest: () => eo(!0),
+            onRest: () => ea(!0),
         }),
         ec = (0, u.Yzy)(ei, {
             from: {
@@ -143,10 +143,10 @@ function F(e) {
             },
         }),
         eu = () => {
-            ea.dispatch(D.CkL.POPOUT_CLOSE);
+            eo.dispatch(D.CkL.POPOUT_CLOSE);
         },
         ed = "top" === F ? "".concat(U, " ").concat(U, " 0 0") : "0 0 ".concat(U, " ").concat(U);
-    if (null == v || q || (X && !Z(j, K))) return null;
+    if (null == v || q || (X && !V(k, K))) return null;
     let ef = () => {
             (0, I._3)({
                 questId: v.id,
@@ -178,7 +178,7 @@ function F(e) {
             e.stopPropagation(), ef();
         },
         eh = () => {
-            Z(j, K) && null != K
+            V(k, K) && null != K
                 ? ((0, I._3)({
                       questId: v.id,
                       questContent: S.jn.MEMBERS_LIST,
@@ -191,7 +191,7 @@ function F(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              k(
+                              j(
                                   {
                                       username: null != W ? W : "",
                                       onConfirm: () => (
@@ -203,7 +203,7 @@ function F(e) {
                                               sourceQuestContent: S.jn.MEMBERS_LIST,
                                           }),
                                           d.default.selectVoiceChannel(K.id),
-                                          (0, f.iV)(j)
+                                          (0, f.iV)(k)
                                       ),
                                   },
                                   t,
@@ -227,7 +227,7 @@ function F(e) {
                         handleClickCta: e_,
                         tileAssetType: "reward",
                     }
-                  : Z(j, K)
+                  : V(k, K)
                     ? {
                           headerText: x.intl.string(x.t.Bz6SkJ),
                           ctaText: x.intl.string(x.t.BXFP39),
@@ -240,7 +240,7 @@ function F(e) {
                           handleClickCta: e_,
                           tileAssetType: "game",
                       };
-    return (0, r.jsx)(o.animated.div, {
+    return (0, r.jsx)(a.animated.div, {
         ref: (e) => {
             Y.current = e;
         },
@@ -302,7 +302,7 @@ function F(e) {
                                     ec(
                                         (e, t) =>
                                             t &&
-                                            (0, r.jsx)(o.animated.div, {
+                                            (0, r.jsx)(a.animated.div, {
                                                 style: e,
                                                 className: M.imgUnderlay,
                                             }),
@@ -343,7 +343,7 @@ function F(e) {
         }),
     });
 }
-function V(e) {
+function Z(e) {
     return null == e.quest || e.isQuestEnrollmentBlocked
         ? null
         : (0, r.jsx)(N.A, {
@@ -351,6 +351,6 @@ function V(e) {
               questContent: S.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
               sourceQuestContent: S.jn.MEMBERS_LIST,
-              children: (t) => (0, r.jsx)(F, k({ impressionRef: t }, e)),
+              children: (t) => (0, r.jsx)(F, j({ impressionRef: t }, e)),
           });
 }

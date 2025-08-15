@@ -15,8 +15,8 @@ var i = n(120356),
     g = n(314897),
     m = n(594174),
     b = n(768581),
-    O = n(51144),
-    _ = n(754231),
+    _ = n(51144),
+    O = n(754231),
     y = n(342273);
 function v(e) {
     let { guildId: t, member: n, className: i } = e,
@@ -57,7 +57,7 @@ function v(e) {
                         src: null != o ? o : n.user.getAvatarURL(t, 16),
                         size: s.EFr.SIZE_16,
                         className: l()(i, y.partyAvatar),
-                        "aria-label": null != (a = n.nick) ? a : O.ZP.getName(n.user),
+                        "aria-label": null != (a = n.nick) ? a : _.ZP.getName(n.user),
                     },
                     e,
                 ),
@@ -97,7 +97,7 @@ let C = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: s } = e,
         f = null != l,
         b = f ? Array.from(l.embeddedActivity.userIds) : [],
-        O = (0, o.e7)([m.default, g.default], () => {
+        _ = (0, o.e7)([m.default, g.default], () => {
             if (f) return m.default.getUser(b[0]);
             if (null != i) {
                 var e, t;
@@ -108,7 +108,7 @@ let C = (e) => {
                       : i[0].user;
             }
         });
-    if (null == O) return null;
+    if (null == _) return null;
     let v = f || (0, u.Z)(n),
         C = (0, h.vd)(t.type);
     return (0, r.jsxs)("div", {
@@ -117,10 +117,10 @@ let C = (e) => {
             (0, r.jsx)("div", {
                 className: y.channelActivityContainer,
                 children: v
-                    ? (0, r.jsx)(_.Z, {
+                    ? (0, r.jsx)(O.Z, {
                           activity: n,
                           embeddedApp: l,
-                          user: O,
+                          user: _,
                           channel: t,
                           sortedVoiceStates: i,
                           onOpenSpotifyTrack: C ? p.aG : void 0,
@@ -130,7 +130,7 @@ let C = (e) => {
                     : (0, r.jsx)(c.Z, {
                           type: c.P.VOICE_CHANNEL,
                           activity: n,
-                          user: O,
+                          user: _,
                           guildId: t.getGuildId(),
                           channelId: t.id,
                           renderHeaderAccessory:
@@ -149,7 +149,7 @@ let C = (e) => {
                     type: c.P.VOICE_CHANNEL,
                     activity: n,
                     embeddedActivity: null == l ? void 0 : l.embeddedActivity,
-                    user: O,
+                    user: _,
                     guildId: t.getGuildId(),
                     channelId: t.id,
                     color: a.zx.Colors.PRIMARY,

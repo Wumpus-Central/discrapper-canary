@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(692547),
-    a = n(755721),
+    a = n(692547),
+    o = n(755721),
     s = n(481060),
     l = n(726542),
     c = n(231757),
@@ -108,7 +108,7 @@ let v = function (e) {
         let e = N
                 ? (0, r.jsx)(s.d3s, { className: g.infoMessageIcon })
                 : (0, r.jsx)(s.aNP, {
-                      color: o.Z.colors.STATUS_WARNING,
+                      color: a.Z.colors.STATUS_WARNING,
                       className: g.infoMessageIcon,
                   }),
             t = N ? m.intl.string(m.t["Ihg/Dg"]) : m.intl.string(m.t["J8U+Iy"]);
@@ -128,7 +128,7 @@ let v = function (e) {
         children: [
             (0, r.jsx)(u.Z, { className: g.divider }),
             x(),
-            (0, r.jsxs)(a.zx, {
+            (0, r.jsxs)(o.zx, {
                 className: g.joinLeaderboardButton,
                 innerClassName: g.joinLeaderboardButtonInner,
                 onClick: D,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(442837),
     c = n(481060),
@@ -78,9 +78,9 @@ function C(e, t) {
         r,
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,8 +89,8 @@ function R(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = 490,
@@ -99,28 +99,28 @@ let P = 490,
     L = 200,
     x = 120,
     M = i.forwardRef(function (e, t) {
-        var n, o, T, A, R, M, j;
-        let { channel: k, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
-            V = (0, h.Dt)(),
+        var n, a, T, A, R, M, k;
+        let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: V, barsHeight: F } = e,
+            Z = (0, h.Dt)(),
             H = (0, l.e7)([E.Z], () => {
                 var e;
-                return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
-            }, [k.guild_id]),
+                return null != (e = E.Z.getGuild(j.guild_id)) ? e : null;
+            }, [j.guild_id]),
             Y = i.useRef(null),
             [W, K, z] = (0, O.Z)(N(S({}, e), { guild: H }), t, Y),
             q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             X = (0, _.DJ)(W.selectedIndex);
-        (0, p.KR)(V, W.isVisible, X);
+        (0, p.KR)(Z, W.isVisible, X);
         let Q = (0, y.Z)({
                 editorHeight: G,
                 type: U,
                 state: W,
             }),
             J = (0, l.e7)([d.ZP], () => {
-                let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
+                let e = d.ZP.getSelfEmbeddedActivityForChannel(j.id),
                     t = d.ZP.getActivityPanelMode();
-                return (0, u.l5)(k) && null != e && (0, f.p)(e.location) === k.id && t === v.Ez.PANEL;
-            }, [k]),
+                return (0, u.l5)(j) && null != e && (0, f.p)(e.location) === j.id && t === v.Ez.PANEL;
+            }, [j]),
             $ = i.useMemo(
                 () =>
                     (null == Q ? void 0 : Q.top) == null &&
@@ -148,7 +148,7 @@ let P = 490,
             (T = W.query.typeInfo.renderResults({
                 results: W.query.results,
                 selectedIndex: W.selectedIndex,
-                channel: k,
+                channel: j,
                 guild: H,
                 query: W.query.queryText,
                 options: W.query.options,
@@ -171,12 +171,12 @@ let P = 490,
                 : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS
                   ? w
                   : D);
-        let er = Math.max(G, null != (M = null == Z || null == (o = Z.current) ? void 0 : o.clientHeight) ? M : 0),
+        let er = Math.max(G, null != (M = null == V || null == (a = V.current) ? void 0 : a.clientHeight) ? M : 0),
             ei = Math.min(0.5 * window.innerHeight, er);
         en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
-        let eo = (0, r.jsx)(_.ZP, {
-            id: V,
-            className: a()(I.autocomplete, et),
+        let ea = (0, r.jsx)(_.ZP, {
+            id: Z,
+            className: o()(I.autocomplete, et),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
@@ -190,7 +190,7 @@ let P = 490,
                             N(
                                 S(
                                     {
-                                        id: V,
+                                        id: Z,
                                         ref: (e) => {
                                             var n;
                                             (t.current =
@@ -204,7 +204,7 @@ let P = 490,
                                     className: I.scroller,
                                     style: { maxHeight: en },
                                     role: "listbox",
-                                    "aria-labelledby": (0, _.rp)(V),
+                                    "aria-labelledby": (0, _.rp)(Z),
                                     children: ee,
                                 },
                             ),
@@ -219,13 +219,13 @@ let P = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: Q,
                       positionKey: $,
-                      position: null != (j = e.position) ? j : "top",
+                      position: null != (k = e.position) ? k : "top",
                       align: "left",
                       spacing: 8,
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
-                      children: () => eo,
+                      children: () => ea,
                   }),
               })
-            : eo;
+            : ea;
     });

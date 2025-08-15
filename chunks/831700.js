@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(117358),
     m = n(201895),
     b = n(718589),
-    O = n(933557),
-    _ = n(557135),
+    _ = n(933557),
+    O = n(557135),
     y = n(873696),
     v = n(446226),
     j = n(305325),
@@ -23,8 +23,8 @@ var r = n(255367),
     E = n(66999),
     x = n(554747),
     S = n(378844),
-    P = n(574176),
-    I = n(340541),
+    I = n(574176),
+    P = n(340541),
     N = n(763624),
     w = n(359110),
     Z = n(155409),
@@ -39,8 +39,8 @@ var r = n(255367),
     G = n(934415),
     B = n(98597),
     V = n(648501),
-    F = n(473403),
-    H = n(830993),
+    H = n(473403),
+    F = n(830993),
     z = n(653577),
     W = n(207055),
     K = n(981631),
@@ -166,8 +166,8 @@ class ee extends B.ZP {
                 connectChannelDragSource: f,
                 connectUserDropTarget: h,
                 connectDragPreview: g,
-                canReorderChannel: O,
-                canMoveMembers: _,
+                canReorderChannel: _,
+                canMoveMembers: O,
                 showTutorial: y,
                 hasActiveEvent: v,
                 embeddedApps: j,
@@ -175,8 +175,8 @@ class ee extends B.ZP {
                 isFavoriteSuggestion: E,
                 withGuildIcon: x,
             } = this.props,
-            { shouldShowActivities: S, shouldShowGuildVerificationPopout: P } = this.state,
-            N = (0, I.jW)({ location: "voice_channel" }).entrypoints,
+            { shouldShowActivities: S, shouldShowGuildVerificationPopout: I } = this.state,
+            N = (0, P.jW)({ location: "voice_channel" }).entrypoints,
             w = this.getVoiceStatesCount(),
             T = (0, r.jsxs)("li", {
                 ref: this.ref,
@@ -192,7 +192,7 @@ class ee extends B.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (S && !u && !d && !P) || P,
+                            shouldShow: (S && !u && !d && !I) || I,
                             children: () =>
                                 (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
@@ -223,7 +223,7 @@ class ee extends B.ZP {
                                                 return i;
                                             })(c, ["onClick", "onContextMenu"]);
                                         return (0, r.jsxs)(
-                                            F.ZP,
+                                            H.ZP,
                                             $(
                                                 J(
                                                     {
@@ -297,8 +297,8 @@ class ee extends B.ZP {
                 ],
             });
         return (
-            _ && (T = h(T)),
-            O && (T = p(f(T))),
+            O && (T = h(T)),
+            _ && (T = p(f(T))),
             y &&
                 (T = (0, r.jsx)(Z.Z, {
                     childRef: this.ref,
@@ -336,7 +336,7 @@ class ee extends B.ZP {
                 r && this.setState({ shouldShowGuildVerificationPopout: !0 });
                 let a = l && o > 0;
                 a && u.Z.updateChatOpen(n.id, !0),
-                    _.Z.handleVoiceConnect({
+                    O.Z.handleVoiceConnect({
                         channel: n,
                         connected: t,
                         needSubscriptionToAccess: i,
@@ -397,7 +397,7 @@ class ee extends B.ZP {
                     { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
                 if (a && !n && !i && !s) {
                     let n = T.SE.getSetting().includes(o.id);
-                    return (0, r.jsx)(H.Z, {
+                    return (0, r.jsx)(F.Z, {
                         onAction: this.closePopout,
                         guild: o,
                         channel: e,
@@ -479,13 +479,13 @@ function en(e) {
         }),
         f = (0, a.e7)([U.Z], () => U.Z.hasVideo(n.id)),
         g = (0, h.ZP)(n),
-        m = (0, O.ZP)(n),
+        m = (0, _.ZP)(n),
         b = (0, x.qY)(n.id),
-        { isSubscriptionGated: _, needSubscriptionToAccess: y } = (0, E.Z)(n.id),
+        { isSubscriptionGated: O, needSubscriptionToAccess: y } = (0, E.Z)(n.id),
         j = (0, v.Z)(),
         C = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
         S = e.connected || (null == j ? void 0 : j.channelId) === n.id,
-        { enableHangStatus: I, allowChannelTopic: w } = P.n.useExperiment(
+        { enableHangStatus: P, allowChannelTopic: w } = I.n.useExperiment(
             {
                 guildId: n.guild_id,
                 location: "VoiceChannel",
@@ -501,7 +501,7 @@ function en(e) {
             isChannelSelected: o,
             isChannelCollapsed: s,
             voiceStates: c,
-            isSubscriptionGated: _,
+            isSubscriptionGated: O,
             needSubscriptionToAccess: y,
             enableConnectedUserLimit: !0,
             enableActivities: !0,
@@ -517,7 +517,7 @@ function en(e) {
                     embeddedActivityType: K.IIU.PLAYING,
                     video: f,
                     hasActiveEvent: null != b,
-                    isSubscriptionGated: _,
+                    isSubscriptionGated: O,
                     needSubscriptionToAccess: y,
                 },
                 u,
@@ -530,7 +530,7 @@ function en(e) {
                 forceShowButtons: R,
                 channelInfo: T,
                 resolvedUnreadSetting: d,
-                enableHangStatus: I,
+                enableHangStatus: P,
                 allowChannelTopic: w,
                 enableOpenTIVForPing: Z,
             },

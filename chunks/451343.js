@@ -84,9 +84,9 @@ var r = {
     "./winter_user_leave.mp3": "597453",
 };
 function i(e) {
-    return n(o(e));
+    return n(a(e));
 }
-function o(e) {
+function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -96,6 +96,6 @@ function o(e) {
 (i.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = o),
+    (i.resolve = a),
     (e.exports = i),
     (i.id = 451343);

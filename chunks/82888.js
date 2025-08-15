@@ -1,34 +1,34 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(399606),
     l = n(522474),
     a = n(595519),
-    s = n(317381),
-    o = n(16609),
+    o = n(317381),
+    s = n(16609),
     c = n(917107),
     u = n(9145),
     d = n(918559),
-    h = n(981631);
-function p(e) {
+    p = n(981631);
+function h(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {
-            connectedChannelId: p,
+            connectedChannelId: h,
             connectedActivity: f,
-            activityPanelMode: g,
-        } = (0, i.cj)([s.ZP], () => {
-            let e = s.ZP.getConnectedActivityLocation(),
-                t = s.ZP.getSelfEmbeddedActivityForLocation(e);
+            activityPanelMode: m,
+        } = (0, i.cj)([o.ZP], () => {
+            let e = o.ZP.getConnectedActivityLocation(),
+                t = o.ZP.getSelfEmbeddedActivityForLocation(e);
             return {
-                connectedChannelId: (0, o.p)(e),
+                connectedChannelId: (0, s.p)(e),
                 connectedActivity: t,
-                activityPanelMode: s.ZP.getActivityPanelMode(),
+                activityPanelMode: o.ZP.getActivityPanelMode(),
             };
         }),
-        m = (0, i.e7)([l.Z], () => l.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT));
-    if (!(0, a.NX)(p)) return null;
+        g = (0, i.e7)([l.Z], () => l.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT));
+    if (!(0, a.NX)(h)) return null;
     let b = null == f ? void 0 : f.applicationId;
-    return g !== d.Ez.PANEL || null == b || m || null == p || null == f || (0, c.Z)(p)
+    return m !== d.Ez.PANEL || null == b || g || null == h || null == f || (0, c.Z)(h)
         ? null
         : (0, r.jsx)(u.Z, {
               maxHeight: t,

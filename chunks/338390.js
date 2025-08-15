@@ -1,15 +1,15 @@
 n.d(t, {
     Z: () => s,
-    i: () => a,
+    i: () => o,
 });
 var r = n(818083),
     i = n(171393),
-    o = n(987338);
-let a = (0, r.B)({
+    a = n(987338);
+let o = (0, r.B)({
     kind: "user",
     id: "2025-05_align_chat_input",
     label: "bottom-aligned chat input",
-    commonTriggerPoint: o.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: { alignChatInput: !1 },
     treatments: [
         {
@@ -21,7 +21,7 @@ let a = (0, r.B)({
 });
 function s(e) {
     let t = (0, i.Z)("go_back_to_regular_input");
-    return a.useExperiment(
+    return o.useExperiment(
         { location: e },
         {
             disable: t,

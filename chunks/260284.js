@@ -1,13 +1,13 @@
-var r = n(214788);
-e.exports = function (e, t) {
-    if (!(e instanceof r)) return null;
-    var n = e.getNextSiblingKey();
-    if (n) return n;
-    var i = e.getParentKey();
+var n = r(214788);
+t.exports = function (t, e) {
+    if (!(t instanceof n)) return null;
+    var r = t.getNextSiblingKey();
+    if (r) return r;
+    var i = t.getParentKey();
     if (!i) return null;
-    for (var o = t.get(i); o && !o.getNextSiblingKey(); ) {
+    for (var o = e.get(i); o && !o.getNextSiblingKey(); ) {
         var a = o.getParentKey();
-        o = a ? t.get(a) : null;
+        o = a ? e.get(a) : null;
     }
     return o ? o.getNextSiblingKey() : null;
 };

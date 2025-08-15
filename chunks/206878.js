@@ -108,7 +108,7 @@ let s = new Set([
             r = t.filter((e) => !n.test(e));
         r.length > 0 && a("File names must be in lowercase snake case", r);
     },
-    f = (e, t, a, n) => {
+    v = (e, t, a, n) => {
         let r = t.size,
             l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
             i = "".concat(t.name, " - ").concat(l);
@@ -122,9 +122,9 @@ let s = new Set([
             ]);
         } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
-    v = (e, t, a, n) => {
+    f = (e, t, a, n) => {
         let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || f(r, e, a, n);
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
     },
     j = () => {
         let [e, t] = n.useState(!1),
@@ -173,7 +173,7 @@ let s = new Set([
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
                                         l = null != t ? h[t] : null;
-                                    null != l && f(l, e, a, n);
+                                    null != l && v(l, e, a, n);
                                 }
                                 b({
                                     names: t.collectionFiles.map((e) => e.name),
@@ -207,7 +207,7 @@ let s = new Set([
                                             }),
                                             addError: a,
                                         }),
-                                            v(r.aB.PROFILE_EFFECT, l, a, n);
+                                            f(r.aB.PROFILE_EFFECT, l, a, n);
                                         let s = o
                                             .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
@@ -233,7 +233,7 @@ let s = new Set([
                                     names: t.avatarDecorationFiles.map((e) => e.name),
                                     addError: a,
                                 }),
-                                    v(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
+                                    f(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
                             })({
                                 files: a,
                                 addError: m,

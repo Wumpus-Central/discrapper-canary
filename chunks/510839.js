@@ -1,14 +1,14 @@
 n.d(t, {
     eU: () => l,
-    s2: () => a,
+    s2: () => o,
     xT: () => s,
 });
 var r = n(570140),
     i = n(566620),
-    o = n(317381);
-function a(e) {
+    a = n(317381);
+function o(e) {
     let { applicationId: t } = e,
-        n = o.ZP.getCurrentEmbeddedActivity();
+        n = a.ZP.getCurrentEmbeddedActivity();
     null != n &&
         (0, i.mW)({
             location: n.location,

@@ -1,8 +1,8 @@
 n.d(t, { q: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(987209),
     c = n(321051),
@@ -73,9 +73,9 @@ function I(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,12 +84,12 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let S = (e) => {
-    let { isShopGift: t, className: n, optionsContainerClassName: o } = e,
+    let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
         {
             giftRecipient: b,
             selectedGiftStyle: O,
@@ -105,8 +105,8 @@ let S = (e) => {
         { ref: L } = D,
         x = I(D, ["ref"]),
         M = (0, u.MY)(b, t),
-        j = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        k = M !== u.xr.DEFAULT,
+        k = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        j = M !== u.xr.DEFAULT,
         U = (0, _.m)(),
         G = (0, f.ZP)({ location: "GiftAnimationOptions" }),
         B = (e) => {
@@ -114,9 +114,9 @@ let S = (e) => {
         };
     return (0, r.jsxs)("div", {
         children: [
-            k &&
+            j &&
                 (0, r.jsxs)("div", {
-                    className: a()(E.giftMainAnimation, n),
+                    className: o()(E.giftMainAnimation, n),
                     children: [
                         null != O
                             ? (0, r.jsx)(p.Z, {
@@ -127,9 +127,9 @@ let S = (e) => {
                                   className: E.animation,
                               })
                             : (0, r.jsx)(s.$jN, { className: E.spinner }),
-                        j &&
+                        k &&
                             (0, r.jsxs)("div", {
-                                className: a()(E.soundEmojiContainer, G && E.refresh),
+                                className: o()(E.soundEmojiContainer, G && E.refresh),
                                 children: [
                                     (0, r.jsx)(c.Z, {
                                         sound: A,
@@ -153,7 +153,7 @@ let S = (e) => {
                                 var t;
                                 e.target === e.currentTarget && (null == (t = w.current) || t.focus());
                             },
-                            className: a()(E.giftBoxOptionContainer, o),
+                            className: o()(E.giftBoxOptionContainer, a),
                             "aria-label": g.intl.string(g.t.v54NrK),
                             ref: L,
                         },

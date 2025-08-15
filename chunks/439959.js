@@ -8,8 +8,8 @@ n.d(t, {
     n(539854);
 var r = n(73800),
     i = n(399606),
-    o = n(597688),
-    a = n(1870),
+    a = n(597688),
+    o = n(1870),
     s = n(884697),
     l = n(388032),
     c = (function (e) {
@@ -18,8 +18,8 @@ var r = n(73800),
 let u = { id: "None" },
     d = { id: "Shop" },
     f = () => {
-        let e = (0, i.e7)([a.Z], () => a.Z.purchases),
-            [t, n] = (0, i.Wu)([o.Z], () => [o.Z.categories, o.Z.products]);
+        let e = (0, i.e7)([o.Z], () => o.Z.purchases),
+            [t, n] = (0, i.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
         return (0, r.useMemo)(() => {
             let r = (0, s.iC)(e, t).reduce(
                 (t, r) => {

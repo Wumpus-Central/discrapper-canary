@@ -1,25 +1,12 @@
 n.d(t, {
-    cE: () => f,
-    eu: () => _,
+    cE: () => u,
+    eu: () => d,
     fU: () => p,
 });
 var r = n(362383),
     i = n(731965),
-    o = n(902704);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
+    l = n(902704);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,60 +17,64 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = {},
-    d = (0, r.F)((e) => ({
+let s = {},
+    c = (0, r.F)((e) => ({
         polls: {},
         updatePollState(t, n, r) {
             (0, i.j)(() => {
                 e((e) => {
                     var i;
                     return {
-                        polls: c(s({}, e.polls), {
-                            [t]: c(s({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }),
+                        polls: o(a({}, e.polls), {
+                            [t]: o(a({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }),
                         }),
                     };
                 });
             });
         },
     }));
-function f(e) {
-    return d((t) => {
+function u(e) {
+    return c((t) => {
         var n;
-        return null != (n = t.polls[e]) ? n : u;
-    }, o.Z);
+        return null != (n = t.polls[e]) ? n : s;
+    }, l.Z);
 }
-function _(e, t, n) {
-    d.getState().updatePollState(e, t, n);
+function d(e, t, n) {
+    c.getState().updatePollState(e, t, n);
 }
 function p(e, t) {
     var n;
-    return null == (n = d.getState().polls[e]) ? void 0 : n[t];
+    return null == (n = c.getState().polls[e]) ? void 0 : n[t];
 }

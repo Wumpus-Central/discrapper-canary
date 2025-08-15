@@ -1,8 +1,8 @@
 n.d(t, {
     EK: () => G,
-    Io: () => j,
+    Io: () => k,
     N1: () => B,
-    NY: () => k,
+    NY: () => j,
     Ox: () => L,
     Vq: () => M,
     Wf: () => U,
@@ -13,8 +13,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(596454),
+    a = n(481060),
+    o = n(596454),
     s = n(99690),
     l = n(607070),
     c = n(754688),
@@ -90,13 +90,13 @@ function P(e, t) {
 }
 function w(e) {
     let { emoji: t } = e;
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(a.ua7, {
         text: t.name,
         delay: 750,
         position: "top",
         children: (e) =>
             (0, r.jsx)(
-                a.Z,
+                o.Z,
                 C(
                     {
                         src: t.src,
@@ -111,13 +111,13 @@ function w(e) {
 }
 function D(e) {
     let { emoji: t } = e;
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(a.ua7, {
         text: t.name,
         delay: 750,
         position: "top",
         children: (e) =>
             (0, r.jsx)(
-                a.Z,
+                o.Z,
                 C(
                     {
                         emojiId: t.emojiId,
@@ -134,21 +134,21 @@ function L(e) {
     return (0, r.jsx)(f.Z, { children: t });
 }
 function x(e) {
-    let { id: t, guildId: n, channelId: a } = e,
+    let { id: t, guildId: n, channelId: o } = e,
         l = (0, i.e7)([b.default], () => b.default.getUser(t)),
         c = (0, i.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        u = v.ZP.useName(n, a, l),
+        u = v.ZP.useName(n, o, l),
         d = (0, r.jsx)(f.Z, { children: null == u ? "<@".concat(t, ">") : "@".concat(u) });
     if (null != l) {
         let e = c || l.hasUniqueUsername() ? null : "#".concat(l.discriminator);
-        return (0, r.jsx)(o.ua7, {
+        return (0, r.jsx)(a.ua7, {
             text: (0, r.jsxs)("div", {
                 className: S.userTooltip,
                 children: [
                     (0, r.jsx)(s.Z, {
                         user: l,
                         animate: !0,
-                        size: o.EFr.SIZE_16,
+                        size: a.EFr.SIZE_16,
                         className: S.avatar,
                     }),
                     I.ZP.getUserTag(l, {
@@ -164,65 +164,65 @@ function x(e) {
             delay: 750,
             position: "top",
             "aria-label": I.ZP.getUserTag(l, { decoration: "never" }),
-            children: (e) => (0, r.jsx)(o.P3F, P(C({ tag: "span" }, e), { children: d })),
+            children: (e) => (0, r.jsx)(a.P3F, P(C({ tag: "span" }, e), { children: d })),
         });
     }
     return d;
 }
 function M(e) {
     let { id: t, guildId: n } = e,
-        a = (0, i.e7)([g.Z], () => (null != n ? g.Z.getRole(n, t) : void 0)),
+        o = (0, i.e7)([g.Z], () => (null != n ? g.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
-        c = (0, p._f)(n, a, null == a ? void 0 : a.colorStrings);
-    if (null == a)
+        c = (0, p._f)(n, o, null == o ? void 0 : o.colorStrings);
+    if (null == o)
         return (0, r.jsxs)("span", {
             children: ["@", T.intl.string(T.t["YV4F/v"])],
         });
-    let u = null != a.color && 0 !== a.color,
+    let u = null != o.color && 0 !== o.color,
         d = "dot" === s,
         _ = "username" === s && u;
     return (0, r.jsxs)(f.Z, {
-        color: _ ? a.color : null,
+        color: _ ? o.color : null,
         roleColors: _ ? c : null,
         children: [
             d &&
-                (0, r.jsx)(o.FhE, {
-                    color: a.colorString,
+                (0, r.jsx)(a.FhE, {
+                    color: o.colorString,
                     colors: c,
                     background: !1,
                     tooltip: !1,
                 }),
             "@",
-            a.name,
+            o.name,
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { id: t } = e,
         n = (0, i.e7)([h.Z], () => h.Z.getChannel(t)),
-        o = T.intl.string(T.t.zLZPmp).toLowerCase(),
-        a = "text",
+        a = T.intl.string(T.t.zLZPmp).toLowerCase(),
+        o = "text",
         s = !0;
     if (null != n) {
         var l;
-        (o = (0, c.YO)(n) ? n.name : T.intl.string(T.t["/YzI6+"])),
-            (a = (0, c.YO)(n) ? (null != (l = (0, O.wl)(n)) ? l : "text") : "locked"),
+        (a = (0, c.YO)(n) ? n.name : T.intl.string(T.t["/YzI6+"])),
+            (o = (0, c.YO)(n) ? (null != (l = (0, O.wl)(n)) ? l : "text") : "locked"),
             (s = (0, u.B)(n.type));
     }
     return s
         ? (0, r.jsx)(f.Z, {
-              iconType: a,
-              children: o,
+              iconType: o,
+              children: a,
           })
-        : (0, r.jsx)("span", { children: "#" + o });
+        : (0, r.jsx)("span", { children: "#" + a });
 }
-function k(e) {
+function j(e) {
     let { id: t, itemId: n, guildId: i } = e,
-        o = (0, d.l)(t),
-        a = (0, d.W)(t, n, i);
+        a = (0, d.l)(t),
+        o = (0, d.W)(t, n, i);
     return (0, r.jsxs)(f.Z, {
         iconType: t,
-        children: [o, null != a && (0, r.jsx)(_.Z, {}), a],
+        children: [a, null != o && (0, r.jsx)(_.Z, {}), o],
     });
 }
 function U(e) {
@@ -241,20 +241,20 @@ function G(e) {
 function B(e) {
     var t;
     let { id: n } = e,
-        o = (0, i.e7)([m.Z], () => m.Z.getDetectableGame(n)),
-        a =
-            null != o
+        a = (0, i.e7)([m.Z], () => m.Z.getDetectableGame(n)),
+        o =
+            null != a
                 ? (0, r.jsx)("img", {
                       alt: "",
                       className: S.icon,
                       src: y.ZP.getApplicationIconURL({
-                          id: o.id,
-                          icon: o.icon,
+                          id: a.id,
+                          icon: a.icon,
                           size: 32,
                       }),
                   })
                 : null;
     return (0, r.jsxs)(f.Z, {
-        children: [a, null != (t = null == o ? void 0 : o.name) ? t : T.intl.string(T.t["11pdXV"])],
+        children: [o, null != (t = null == a ? void 0 : a.name) ? t : T.intl.string(T.t["11pdXV"])],
     });
 }

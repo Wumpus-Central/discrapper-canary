@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(37113),
     S = n(526761),
     T = n(388032),
-    I = n(556865),
-    N = n(749799),
+    N = n(556865),
+    I = n(749799),
     y = n(197571);
 function A() {
     let e = (0, l.e7)([g.Z], () => g.Z.getHardwareEncoding()),
@@ -159,7 +159,7 @@ function A() {
                     !e &&
                         (0, i.jsx)(p.Z, {
                             look: p.z.WARNING,
-                            className: N.formItem,
+                            className: I.formItem,
                             children: T.intl.format(T.t.kiaF4e, {
                                 onClick: () =>
                                     d.Z.open(O.oAB.VOICE, S.gP, {
@@ -170,14 +170,14 @@ function A() {
                     R === x.x.BELOW_MINIMUM
                         ? (0, i.jsx)(p.Z, {
                               look: p.z.WARNING,
-                              className: N.formItem,
+                              className: I.formItem,
                               children: T.intl.string(T.t.SIxrIC),
                           })
                         : null,
                     (0, i.jsx)(o.j7V, {
                         hideBorder: !0,
                         disabled: !e,
-                        className: N.formItem,
+                        className: I.formItem,
                         value: t,
                         note: T.intl.string(T.t["4Qw3ND"]),
                         onChange: (e) =>
@@ -189,7 +189,7 @@ function A() {
                     }),
                     e &&
                         (0, i.jsx)(p.Z, {
-                            className: N.formItem,
+                            className: I.formItem,
                             children: T.intl.string(T.t["Z+Mfqa"]),
                         }),
                 ],
@@ -205,7 +205,7 @@ function A() {
                             children: (0, i.jsx)(o.j7V, {
                                 hideBorder: !0,
                                 disabled: !e,
-                                className: N.formItem,
+                                className: I.formItem,
                                 value: s,
                                 note: T.intl.string(T.t.YP3ujo),
                                 onChange: (e) =>
@@ -226,7 +226,7 @@ function A() {
                             className: y.marginTop20,
                             children: (0, i.jsx)(o.j7V, {
                                 hideBorder: !0,
-                                className: N.formItem,
+                                className: I.formItem,
                                 value: n,
                                 note: T.intl.string(T.t.m4Cjj4),
                                 onChange: (e) => j.N0(e),
@@ -240,7 +240,7 @@ function A() {
                 className: y.marginTop20,
                 children: [
                     (0, i.jsx)(E.Q, {
-                        className: N.formItem,
+                        className: I.formItem,
                         select: j.eU,
                         title: T.intl.string(T.t.OgfUio),
                         note: T.intl.string(T.t.H7j4tb),
@@ -248,7 +248,7 @@ function A() {
                         options: B,
                     }),
                     (0, i.jsx)(E.Q, {
-                        className: N.formItem,
+                        className: I.formItem,
                         select: (e) =>
                             j.yi({
                                 resolution: e,
@@ -260,7 +260,7 @@ function A() {
                         options: M,
                     }),
                     (0, i.jsx)(E.Q, {
-                        className: N.formItem,
+                        className: I.formItem,
                         select: (e) =>
                             j.yi({
                                 resolution: P.resolution,
@@ -272,11 +272,11 @@ function A() {
                         options: U,
                     }),
                     (0, i.jsx)(E.O, {
-                        className: N.formItem,
+                        className: I.formItem,
                         title: T.intl.string(T.t.pf54ER),
                         note: T.intl.string(T.t["QyB/jI"]),
                         children: (0, i.jsx)("div", {
-                            className: I.keyRecorder,
+                            className: N.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
                                 defaultValue: D.shortcut,
                                 onChange: V,

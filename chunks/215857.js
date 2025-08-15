@@ -10,10 +10,10 @@ function i(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-function o(e, t, n) {
+function a(e, t, n) {
     return t && i(e.prototype, t), n && i(e, n), e;
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,14 +30,14 @@ n.d(t, { r: () => s });
 var s = (function () {
     function e(t, n) {
         r(this, e),
-            a(this, "ownerDocument", null),
-            a(this, "globalContext", void 0),
-            a(this, "optionsArgs", void 0),
+            o(this, "ownerDocument", null),
+            o(this, "globalContext", void 0),
+            o(this, "optionsArgs", void 0),
             (this.globalContext = t),
             (this.optionsArgs = n);
     }
     return (
-        o(e, [
+        a(e, [
             {
                 key: "window",
                 get: function () {

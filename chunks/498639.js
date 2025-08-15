@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(736519),
     S = n(365943),
     T = n(43747),
-    I = n(970815),
-    N = n(430824),
+    N = n(970815),
+    I = n(430824),
     y = n(78839),
     A = n(981631),
     P = n(474936),
@@ -95,7 +95,7 @@ function w(e) {
 let k = function () {
     let [e, t] = r.useState(P.Si.TIER_2),
         [n, _] = r.useState(null),
-        j = (0, o.Wu)([N.Z], () => N.Z.getGuildsArray()),
+        j = (0, o.Wu)([I.Z], () => I.Z.getGuildsArray()),
         [k] = (0, o.Wu)([y.Z], () => [y.Z.getPremiumSubscription()]);
     r.useEffect(() => {
         (0, S.t)();
@@ -365,9 +365,9 @@ let k = function () {
                                                           ee.message,
                                                       ],
                                                   }),
-                                              (0, i.jsx)(I.A4, {
+                                              (0, i.jsx)(N.A4, {
                                                   balance: null != Q ? Q : 0,
-                                                  balanceWidgetMode: I.b6.SELECTED,
+                                                  balanceWidgetMode: N.b6.SELECTED,
                                               }),
                                           ],
                                       }),

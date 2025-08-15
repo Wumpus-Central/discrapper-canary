@@ -20,8 +20,8 @@ n.d(t, {
     n(781311);
 var r = n(134432),
     i = n(581883),
-    o = n(430824),
-    a = n(117530),
+    a = n(430824),
+    o = n(117530),
     s = n(768581),
     l = n(358085),
     c = n(913663),
@@ -79,22 +79,22 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         if (null == e.format_type) return null;
         let i = e.format_type;
         e.format_type === d.u3.GIF && t && (i = d.u3.PNG);
-        let o = T(i),
-            a = _.ANM.STICKER_ASSET(e.id, o),
-            s = o === d.og.WEBP ? "&quality=lossless" : "";
+        let a = T(i),
+            o = _.ANM.STICKER_ASSET(e.id, a),
+            s = a === d.og.WEBP ? "&quality=lossless" : "";
         if ("development" !== m) {
-            if (e.format_type === d.u3.LOTTIE) return "".concat(location.protocol).concat(g).concat(a);
+            if (e.format_type === d.u3.LOTTIE) return "".concat(location.protocol).concat(g).concat(o);
             let i = e.format_type === d.u3.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
-                o = Math.min(2, (0, r.x_)());
+                a = Math.min(2, (0, r.x_)());
             return ""
                 .concat(location.protocol)
                 .concat(h)
-                .concat(a, "?size=")
-                .concat((0, r.oO)(n * o))
+                .concat(o, "?size=")
+                .concat((0, r.oO)(n * a))
                 .concat(i)
                 .concat(s);
         }
-        return "".concat(location.protocol).concat(p).concat(a);
+        return "".concat(location.protocol).concat(p).concat(o);
     },
     C = (e) => null != e.match("development" !== m ? O : v),
     R = (e) => ({
@@ -106,7 +106,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     }),
     P = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     w = (e, t, n, r) => {
-        if (a.Z.getUploadCount(n, r) > 0) return !0;
+        if (o.Z.getUploadCount(n, r) > 0) return !0;
         let i = c.Z.getStickerPreview(n, r);
         if (null != i && i.length > 0) return !0;
         switch (e) {
@@ -125,15 +125,15 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     M = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
-        return void 0 !== o.Z.getGuild(t);
+        return void 0 !== a.Z.getGuild(t);
     },
-    j = [];
-function k() {
+    k = [];
+function j() {
     var e, t;
     return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
         ? t
-        : j;
+        : k;
 }
 function U(e) {
-    return k().includes(e);
+    return j().includes(e);
 }

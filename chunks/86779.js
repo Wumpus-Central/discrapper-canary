@@ -1,74 +1,74 @@
-n.d(t, { Z: () => y }), n(388685), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(457542);
+n.d(t, { Z: () => S }), n(388685), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(593473),
-    o = n(756647),
+    a = n(756647),
     s = n(442837),
-    a = n(544891),
+    o = n(544891),
     c = n(433517),
     u = n(755721),
     d = n(481060),
     h = n(570140),
     p = n(893776),
-    f = n(314897),
-    m = n(626135),
-    g = n(70956),
+    m = n(314897),
+    g = n(626135),
+    f = n(70956),
     _ = n(970648),
     x = n(981631),
     b = n(388032),
-    E = n(78224);
-let v = "mweb_handoff_nonce",
+    v = n(78224);
+let E = "mweb_handoff_nonce",
     j = "mweb_handoff_nonce_expiration",
-    I = +g.Z.Millis.MINUTE,
-    O = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-    S = new Set(["deep_link_failed"]),
+    I = +f.Z.Millis.MINUTE,
+    y = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
+    O = new Set(["deep_link_failed"]),
     N = () => {
-        c.K.remove(v), c.K.remove(j);
+        c.K.remove(E), c.K.remove(j);
     },
-    y = () => {
-        let e = (0, s.e7)([f.default], () => f.default.getFingerprint()),
+    S = () => {
+        let e = (0, s.e7)([m.default], () => m.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
-            g = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            y = null != g ? g : null !== e ? e : void 0;
+            f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            S = null != f ? f : null !== e ? e : void 0;
         i.useEffect(() => {
-            null !== g &&
-                e !== g &&
+            null !== f &&
+                e !== f &&
                 h.Z.dispatch({
                     type: "FINGERPRINT",
-                    fingerprint: g,
+                    fingerprint: f,
                 });
-        }, [g, e]);
-        let [C, A] = i.useState(null),
-            T = i.useCallback(
+        }, [f, e]);
+        let [C, T] = i.useState(null),
+            A = i.useCallback(
                 (e) => {
-                    A(e),
-                        m.default.track(
+                    T(e),
+                        g.default.track(
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
-                                fingerprint: (0, o.K)(y),
+                                fingerprint: (0, a.K)(S),
                             },
-                            { fingerprint: y },
+                            { fingerprint: S },
                         );
                 },
-                [A, y],
+                [T, S],
             ),
-            Z = c.K.get(v);
+            Z = c.K.get(E);
         if (
-            ("null" === n && null === C && T("deep_link_failed"),
-            null != n && "null" !== n && null == Z && null === C && T("nonce_missing"),
+            ("null" === n && null === C && A("deep_link_failed"),
+            null != n && "null" !== n && null == Z && null === C && A("nonce_missing"),
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(j);
-                    (null == e || Date.now() >= e) && (T("nonce_expired"), N());
+                    (null == e || Date.now() >= e) && (A("nonce_expired"), N());
                 }
-            }, [Z, T]),
+            }, [Z, A]),
             i.useEffect(() => {
                 null != n &&
                     "null" !== n &&
                     null != Z &&
                     null == C &&
-                    a.tn
+                    o.tn
                         .post({
                             url: x.ANM.HANDOFF_EXCHANGE,
                             body: {
@@ -79,10 +79,10 @@ let v = "mweb_handoff_nonce",
                         })
                         .then((e) => p.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            m.default.track(x.rMx.LOGIN_SUCCESSFUL, {
+                            g.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                                 source: x.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
-                                fingerprint: (0, o.K)(y),
+                                fingerprint: (0, a.K)(S),
                             });
                             let e = new URL(window.location.href),
                                 t = new URLSearchParams(e.search);
@@ -92,13 +92,13 @@ let v = "mweb_handoff_nonce",
                                 window.history.pushState(null, "", e);
                         })
                         .catch(() => {
-                            T("handoff_exchange");
+                            A("handoff_exchange");
                         })
                         .finally(() => {
                             N();
                         });
-            }, [n, Z, C, y, T]),
-            null == y)
+            }, [n, Z, C, S, A]),
+            null == S)
         )
             return null;
         let P =
@@ -106,14 +106,14 @@ let v = "mweb_handoff_nonce",
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [b.intl.string(b.t.uJ1Jsb), (0, r.jsx)("br", {}), b.intl.string(b.t.GHVWAg)],
                   })
-                : S.has(C)
+                : O.has(C)
                   ? b.intl.string(b.t.EPt55u)
-                  : O.has(C)
+                  : y.has(C)
                     ? b.intl.string(b.t.g87kTk)
                     : void 0;
-        return null != C && S.has(C)
+        return null != C && O.has(C)
             ? (0, r.jsx)("div", {
-                  className: E.errorContainer,
+                  className: v.errorContainer,
                   children: (0, r.jsx)(d.Text, {
                       color: "interactive-normal",
                       variant: "text-sm/semibold",
@@ -121,7 +121,7 @@ let v = "mweb_handoff_nonce",
                   }),
               })
             : (0, r.jsxs)("div", {
-                  className: E.container,
+                  className: v.container,
                   children: [
                       (0, r.jsx)(d.Text, {
                           variant: "text-sm/semibold",
@@ -131,31 +131,31 @@ let v = "mweb_handoff_nonce",
                           color: u.zx.Colors.BRAND_INVERTED,
                           onClick: () => {
                               let e = _.Z.generateNonce();
-                              c.K.set(v, e), c.K.set(j, Date.now() + I);
+                              c.K.set(E, e), c.K.set(j, Date.now() + I);
                               let t = new URL(x.x0X),
                                   n = new URLSearchParams(window.location.search);
                               n.delete("fingerprint"), n.delete("handoff_token");
                               let r = new URLSearchParams();
                               r.set("redirect", encodeURIComponent(window.location.pathname + n.toString())),
                                   r.set("key", e),
-                                  r.set("fingerprint", y),
+                                  r.set("fingerprint", S),
                                   (t.search = r.toString()),
-                                  m.default.track(
+                                  g.default.track(
                                       x.rMx.DEEP_LINK_CLICKED,
                                       {
-                                          fingerprint: (0, o.K)(y),
+                                          fingerprint: (0, a.K)(S),
                                           source: "mobile_web_handoff",
                                           destination: x.x0X,
                                       },
                                       {
-                                          fingerprint: y,
+                                          fingerprint: S,
                                           flush: !0,
                                       },
                                   ),
                                   (window.location.href = t.toString());
                           },
                           children: (0, r.jsx)(d.Text, {
-                              className: E.buttonText,
+                              className: v.buttonText,
                               variant: "text-sm/semibold",
                               children: b.intl.string(b.t["NcC75+"]),
                           }),

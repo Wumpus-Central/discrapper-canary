@@ -1,11 +1,11 @@
 n.d(t, { Z: () => s });
 var r = n(865275),
     i = n(237992),
-    o = n(959517),
-    a = n(388032);
+    a = n(959517),
+    o = n(388032);
 class s extends r.Z {
     async uploadFiles(e) {
-        super.upload(a.intl.string(a.t.jfKTen), e);
+        super.upload(o.intl.string(o.t.jfKTen), e);
         let t = new Promise((e, t) => {
                 this.once("error", (e, n, r, i) => {
                     t({
@@ -33,7 +33,7 @@ class s extends r.Z {
                 {
                     file: this._file,
                     reason: {
-                        type: o.xi.ERROR_SOURCE_UNKNOWN,
+                        type: a.xi.ERROR_SOURCE_UNKNOWN,
                         msg: e.toString(),
                     },
                 })

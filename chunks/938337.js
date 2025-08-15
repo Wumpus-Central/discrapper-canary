@@ -1,72 +1,69 @@
-n.d(t, { i: () => _ });
-var r = n(255367),
-    i = n(73800),
-    o = n(512100),
-    a = n(906732),
-    s = n(626135),
-    l = n(981631);
-function c(e, t, n) {
+l.d(n, { i: () => c });
+var t = l(255367),
+    r = l(73800),
+    i = l(512100),
+    s = l(906732),
+    a = l(626135),
+    o = l(981631);
+function c(e) {
+    var { appId: n, skuId: l } = e,
+        c = (function (e, n) {
+            if (null == e) return {};
+            var l,
+                t,
+                r = (function (e, n) {
+                    if (null == e) return {};
+                    var l,
+                        t,
+                        r = {},
+                        i = Object.keys(e);
+                    for (t = 0; t < i.length; t++) (l = i[t]), n.indexOf(l) >= 0 || (r[l] = e[l]);
+                    return r;
+                })(e, n);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (t = 0; t < i.length; t++)
+                    (l = i[t]),
+                        !(n.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
+            }
+            return r;
+        })(e, ["appId", "skuId"]);
+    let { analyticsLocations: d } = (0, s.ZP)();
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
+        r.useEffect(() => {
+            a.default.track(o.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+                application_id: n,
+                sku_id: l,
+                location_stack: d,
             });
-    }
-    return e;
-}
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = f(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function _(e) {
-    var { appId: t, skuId: n } = e,
-        c = d(e, ["appId", "skuId"]);
-    let { analyticsLocations: f } = (0, a.ZP)();
-    return (
-        i.useEffect(() => {
-            s.default.track(l.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-                application_id: t,
-                sku_id: n,
-                location_stack: f,
-            });
-        }, [f, t, n]),
-        (0, r.jsx)(o.u, u({}, c))
+        }, [d, n, l]),
+        (0, t.jsx)(
+            i.u,
+            (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var l = null != arguments[n] ? arguments[n] : {},
+                        t = Object.keys(l);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (t = t.concat(
+                            Object.getOwnPropertySymbols(l).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                            }),
+                        )),
+                        t.forEach(function (n) {
+                            var t;
+                            (t = l[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
+                                          value: t,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[n] = t);
+                        });
+                }
+                return e;
+            })({}, c),
+        )
     );
 }

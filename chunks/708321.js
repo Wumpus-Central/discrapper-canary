@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(447543),
+    a = n(481060),
+    o = n(447543),
     s = n(66511),
     l = n(300284),
     c = n(703656),
@@ -21,7 +21,7 @@ function g(e) {
     let {
             guildId: t,
             ctaType: n,
-            submitting: a,
+            submitting: o,
             onGoToGuild: s,
             onAcceptInvite: u,
             onStartApplication: f,
@@ -88,22 +88,22 @@ function g(e) {
         );
     return null == I
         ? null
-        : (0, r.jsx)(o.zxk, {
+        : (0, r.jsx)(a.zxk, {
               variant: "active",
               size: "sm",
               text: I,
               fullWidth: !0,
-              loading: E || a,
+              loading: E || o,
               onClick: S,
           });
 }
 function E(e) {
     let { profile: t, onComplete: n } = e,
-        { guildId: o, validInviteKey: l, ctaType: c } = (0, _.ZP)(t),
-        d = i.useCallback(() => (0, u.X)(o), [o]),
+        { guildId: a, validInviteKey: l, ctaType: c } = (0, _.ZP)(t),
+        d = i.useCallback(() => (0, u.X)(a), [a]),
         p = i.useCallback(() => {
             null != l &&
-                a.ZP.acceptInvite({
+                o.ZP.acceptInvite({
                     inviteKey: l,
                     context: { location: "guild_profile" },
                 });
@@ -111,12 +111,12 @@ function E(e) {
         h = i.useCallback(() => {
             t.visibility !== f.k.PUBLIC_WITH_RECRUITMENT && null != l
                 ? p()
-                : s.Z.openMemberVerificationModal(o, void 0, l);
-        }, [p, o, t.visibility, l]);
+                : s.Z.openMemberVerificationModal(a, void 0, l);
+        }, [p, a, t.visibility, l]);
     return null == c
         ? null
         : (0, r.jsx)(g, {
-              guildId: o,
+              guildId: a,
               ctaType: c,
               onGoToGuild: d,
               onAcceptInvite: p,

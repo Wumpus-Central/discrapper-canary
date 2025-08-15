@@ -67,12 +67,12 @@ function O(e) {
             onSelectBackgroundOption: v,
             currentDeviceId: S,
             smallerBackgroundOptions: T,
-            className: I,
+            className: N,
         } = e,
-        N = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+        I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, g.Z)(),
-        R = c.ZP.canUseCustomBackgrounds(N);
+        R = c.ZP.canUseCustomBackgrounds(I);
     r.useEffect(() => {
         (0, d.XV)();
     }, []);
@@ -103,7 +103,7 @@ function O(e) {
     return P
         ? (0, i.jsxs)(a.xJW, {
               title: _.intl.string(_.t.lZTUPj),
-              className: I,
+              className: N,
               children: [
                   null != y
                       ? (0, i.jsx)(a.kzN, {

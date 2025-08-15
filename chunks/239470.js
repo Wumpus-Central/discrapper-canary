@@ -1,14 +1,14 @@
 n.d(t, { Z: () => i });
 var r = n(647162);
 function i(e, t, n, i) {
-    var o, a, s;
+    var a, o, s;
     let l = e.hasConnectedAccount(),
         c = (0, r.PY)(e),
         u = e.getTrack(),
         d = e.getSyncingWith(),
         f = e.getActivity(),
         _ =
-            null != (s = null != (a = null == u ? void 0 : u.id) ? a : null == f ? void 0 : f.sync_id)
+            null != (s = null != (o = null == u ? void 0 : u.id) ? o : null == f ? void 0 : f.sync_id)
                 ? s
                 : e.getLastPlayedTrackId(),
         p = n.id === t.getId(),
@@ -16,7 +16,7 @@ function i(e, t, n, i) {
         m = null != _ && _ === (null == i ? void 0 : i.sync_id),
         g =
             (null == f ? void 0 : f.party) != null &&
-            (null == i || null == (o = i.party) ? void 0 : o.id) === f.party.id,
+            (null == i || null == (a = i.party) ? void 0 : a.id) === f.party.id,
         E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id,
         b = p || h || m,
         y = p || E || g;

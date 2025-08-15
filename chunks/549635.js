@@ -6,8 +6,8 @@ n.d(t, {
     n(997841);
 var r = n(255367),
     i = n(73800),
-    o = n(768494),
-    a = n(124347),
+    a = n(768494),
+    o = n(124347),
     s = n(80966),
     l = n(296182),
     c = n(524444),
@@ -76,9 +76,9 @@ function O(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -87,15 +87,15 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e, t) {
     return y(E({}, e), {
-        type: (0, o.hg)(e),
+        type: (0, a.hg)(e),
         original: e.url,
-        srcIsAnimated: (0, d.yE)(e.flags, o.hR.IS_ANIMATED),
+        srcIsAnimated: (0, d.yE)(e.flags, a.hR.IS_ANIMATED),
         sourceMetadata: { message: t },
     });
 }
@@ -105,7 +105,7 @@ function T(e) {
 }
 function S(e) {
     let t,
-        { media: n, obscured: i = !1, maxWidth: o, maxHeight: l, onContextMenu: u } = e,
+        { media: n, obscured: i = !1, maxWidth: a, maxHeight: l, onContextMenu: u } = e,
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
         C = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
@@ -122,7 +122,7 @@ function S(e) {
                 src: P,
                 width: d,
                 height: _,
-                maxWidth: o,
+                maxWidth: a,
                 maxHeight: l,
                 poster: e,
                 naturalWidth: d,
@@ -143,12 +143,12 @@ function S(e) {
         "IMAGE" === I &&
             (t = w
                 ? (0, r.jsx)(
-                      a.ZP,
+                      o.ZP,
                       y(E({}, C), {
                           src: P,
                           width: d,
                           height: _,
-                          maxWidth: o,
+                          maxWidth: a,
                           maxHeight: l,
                           useFullWidth: !0,
                           shouldLink: !1,
@@ -165,7 +165,7 @@ function S(e) {
                       onContextMenu: u,
                       className: m.dimensionlessImage,
                       style: {
-                          maxWidth: o,
+                          maxWidth: a,
                           maxHeight: l,
                       },
                   })),

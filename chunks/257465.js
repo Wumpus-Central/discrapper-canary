@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(717976),
     l = n(990547),
     c = n(793030),
@@ -81,7 +81,7 @@ function O(e) {
     var t;
     let {
             transitionState: n,
-            animationVariant: o = "default",
+            animationVariant: a = "default",
             size: m = "md",
             paddingSize: E = "sm",
             fullScreenOnMobile: y = !0,
@@ -104,7 +104,7 @@ function O(e) {
         ),
         P = 0 === n || 1 === n,
         { reducedMotion: w } = i.useContext(d.S),
-        D = P || w.enabled || "subtle" === o ? "scale(1)" : "scale(0.9)",
+        D = P || w.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
         L = (0, u.q)(
             {
                 opacity: +!!P,
@@ -134,12 +134,12 @@ function O(e) {
                     children: (0, r.jsx)(c.y5, {
                         forceLevel: 1,
                         children: (0, r.jsxs)("div", {
-                            className: a()(h.outerContainer, { [h.fullScreenOnMobile]: y }),
+                            className: o()(h.outerContainer, { [h.fullScreenOnMobile]: y }),
                             children: [
                                 S,
                                 (0, r.jsx)(s.animated.div, {
                                     "data-mana-component": "modal",
-                                    className: a()(h.container, h["size-".concat(m)], h["padding-size-".concat(E)]),
+                                    className: o()(h.container, h["size-".concat(m)], h["padding-size-".concat(E)]),
                                     style: L,
                                     children: N,
                                 }),

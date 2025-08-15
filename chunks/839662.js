@@ -1,30 +1,30 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(44136),
-    i = n(354459);
-function o(e, t) {
-    var n, o;
+    l = n(354459);
+function i(e, t) {
+    var n, i;
     let a = null,
-        s = null,
-        l = null,
-        c = !1,
-        u = !1;
+        o = null,
+        u = null,
+        s = !1,
+        c = !1;
     switch (e.type) {
-        case i.fO.ACTIVITY:
+        case l.fO.ACTIVITY:
             break;
-        case i.fO.USER:
-            (a = e.streamId), (l = e.voiceState), (c = e.speaking), (u = e.ringing);
+        case l.fO.USER:
+            (a = e.streamId), (u = e.voiceState), (s = e.speaking), (c = e.ringing);
             break;
-        case i.fO.STREAM:
-            (a = e.streamId), (s = e.stream);
+        case l.fO.STREAM:
+            (a = e.streamId), (o = e.stream);
     }
     return {
         streamId: a,
-        stream: s,
-        speaking: c,
-        ringing: u,
-        muted: null != (n = null == l ? void 0 : l.isVoiceMuted()) && n,
-        deafen: null != (o = null == l ? void 0 : l.isVoiceDeafened()) && o,
-        mirror: e.type === i.fO.USER && e.user.id === t,
+        stream: o,
+        speaking: s,
+        ringing: c,
+        muted: null != (n = null == u ? void 0 : u.isVoiceMuted()) && n,
+        deafen: null != (i = null == u ? void 0 : u.isVoiceDeafened()) && i,
+        mirror: e.type === l.fO.USER && e.user.id === t,
         hasVideo: (0, r.ZP)(e),
     };
 }

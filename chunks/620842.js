@@ -1,1 +1,1 @@
-A.exports = { card: "card_b846e5" };
+e.exports = { card: "card_b846e5" };

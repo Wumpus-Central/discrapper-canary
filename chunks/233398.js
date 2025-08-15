@@ -1,15 +1,15 @@
 n.d(t, {
-    BH: () => a,
-    Dp: () => o,
+    BH: () => o,
+    Dp: () => a,
     Ig: () => s,
 });
 var r = n(97519),
     i = n(731965);
-let o = "#5865F2",
-    a = 74,
+let a = "#5865F2",
+    o = 74,
     s = (0, r.U)((e) => ({
         colors: [],
-        chassisMixAmount: a,
+        chassisMixAmount: o,
         gradientAngle: 0,
         setColors: (t) => {
             (0, i.j)(() => {
@@ -27,12 +27,12 @@ let o = "#5865F2",
             });
         },
         setAll: (t) => {
-            let { colors: n, chassisMixAmount: r, gradientAngle: o } = t;
+            let { colors: n, chassisMixAmount: r, gradientAngle: a } = t;
             (0, i.j)(() => {
                 e({
                     colors: n,
                     chassisMixAmount: r,
-                    gradientAngle: o,
+                    gradientAngle: a,
                 });
             });
         },

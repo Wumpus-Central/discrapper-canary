@@ -1,9 +1,7 @@
-n.d(t, { Y7: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.LIST = 1)] = "LIST"),
-        (e[(e.CHECKBOXES = 2)] = "CHECKBOXES"),
-        (e[(e.RADIO_BUTTONS = 3)] = "RADIO_BUTTONS"),
-        e
-    );
-})({});
+n.d(t, { Y7: () => i });
+var r,
+    i =
+        (((r = {})[(r.LIST = 1)] = "LIST"),
+        (r[(r.CHECKBOXES = 2)] = "CHECKBOXES"),
+        (r[(r.RADIO_BUTTONS = 3)] = "RADIO_BUTTONS"),
+        r);

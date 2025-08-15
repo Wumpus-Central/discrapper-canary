@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(287734),
     c = n(933557),
@@ -18,7 +18,7 @@ var r = n(255367),
 function b(e) {
     let { channel: t, guild: n, onAction: i, onClose: b } = e,
         y = (0, c.ZP)(t),
-        O = (0, a.e7)([_.Z], () => t.isPrivate() || _.Z.can(m.Pl.CONNECT, t)),
+        O = (0, o.e7)([_.Z], () => t.isPrivate() || _.Z.can(m.Pl.CONNECT, t)),
         v = () => {
             if (!O) return y;
             let e = (e) => {
@@ -28,7 +28,7 @@ function b(e) {
                     null == b || b();
             };
             return (0, r.jsx)(s.P3F, {
-                className: o()(E.clickableText, E.inline),
+                className: a()(E.clickableText, E.inline),
                 onClick: e,
                 children: y,
             });

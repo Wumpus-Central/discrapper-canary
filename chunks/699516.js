@@ -1,8 +1,8 @@
 n.d(t, { Z: () => B }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(23750),
+    a = n(570140),
+    o = n(23750),
     s = n(594174),
     l = n(981631);
 function c(e, t, n) {
@@ -148,7 +148,7 @@ function x(e) {
         w(),
         e.relationship.type === l.OGo.FRIEND &&
             t === l.OGo.PENDING_OUTGOING &&
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "FRIEND_REQUEST_ACCEPTED",
                 user: e.relationship.user,
             });
@@ -163,7 +163,7 @@ function M(e) {
         g.delete(e.relationship.id),
         w();
 }
-function j(e) {
+function k(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
         null == t.since ? delete m[t.id] : (m[t.id] = t.since),
@@ -176,7 +176,7 @@ function j(e) {
             : (E.delete(t.id), b.delete(t.id)),
         w();
 }
-function k(e) {
+function j(e) {
     for (let e of p.keys()) p.get(e) === l.OGo.PENDING_INCOMING && (P(e), g.delete(e), b.delete(e), delete v[e]);
     w();
 }
@@ -205,7 +205,7 @@ class G extends (r = i.ZP.Store) {
     isBlockedForMessage(e) {
         var t, n, r, i;
         if (null != e.author && p.get(e.author.id) === l.OGo.BLOCKED) return !0;
-        if (e instanceof a.ZP) {
+        if (e instanceof o.ZP) {
             if (this.isBlocked(null == (i = e.interactionMetadata) || null == (r = i.user) ? void 0 : r.id)) return !0;
         } else if (this.isBlocked(null == (n = e.interaction_metadata) || null == (t = n.user) ? void 0 : t.id))
             return !0;
@@ -217,7 +217,7 @@ class G extends (r = i.ZP.Store) {
     isIgnoredForMessage(e) {
         var t, n, r, i;
         if (null != e.author && this.isIgnored(e.author.id)) return !0;
-        if (e instanceof a.ZP) {
+        if (e instanceof o.ZP) {
             if (this.isIgnored(null == (i = e.interactionMetadata) || null == (r = i.user) ? void 0 : r.id)) return !0;
         } else if (this.isIgnored(null == (n = e.interaction_metadata) || null == (t = n.user) ? void 0 : t.id))
             return !0;
@@ -302,12 +302,12 @@ class G extends (r = i.ZP.Store) {
     }
 }
 c(G, "displayName", "RelationshipStore");
-let B = new G(o.Z, {
+let B = new G(a.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
     RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: j,
-    RELATIONSHIP_PENDING_INCOMING_REMOVED: k,
+    RELATIONSHIP_UPDATE: k,
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
     UPDATE_STRANGER_STATUS: U,
 });

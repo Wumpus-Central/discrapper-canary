@@ -1,9 +1,9 @@
 n.d(t, {
-    B2: () => s,
+    B2: () => o,
     H_: () => a,
-    ZP: () => l,
+    ZP: () => s,
 });
-let { Layer: r, LayerContainer: i, LayerProvider: o } = (0, n(481060).Xvx)("ChannelCallChat"),
+let { Layer: r, LayerContainer: i, LayerProvider: l } = (0, n(481060).Xvx)("ChannelCallChat"),
     a = i,
-    s = o,
-    l = r;
+    o = l,
+    s = r;

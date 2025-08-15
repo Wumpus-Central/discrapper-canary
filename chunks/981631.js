@@ -1,6 +1,6 @@
 n.d(t, {
     $7l: () => b.$7,
-    $92: () => e5,
+    $92: () => e4,
     $Ab: () => M,
     $R1: () => E.$R,
     $VG: () => E.$V,
@@ -12,13 +12,13 @@ n.d(t, {
     AEg: () => nN,
     ANM: () => eR,
     AQB: () => eM,
-    AeJ: () => nZ,
+    AeJ: () => nV,
     Ai1: () => E.Ai,
     AlD: () => E.Al,
     AzA: () => rA,
     B1h: () => E.B1,
     B9o: () => tp,
-    BFP: () => t5,
+    BFP: () => t4,
     BRd: () => E.BR,
     BVn: () => r$,
     BZL: () => E.BZ,
@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => ek,
+    DJj: () => ej,
     DZw: () => eL,
     E07: () => tN,
     EKQ: () => E.EK,
@@ -43,8 +43,8 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rk,
-    Fc: () => to,
+    FQ1: () => rj,
+    Fc: () => ta,
     FoC: () => J,
     FsG: () => b.Fs,
     GI0: () => eJ,
@@ -68,13 +68,13 @@ n.d(t, {
     Ilk: () => E.Il,
     IyS: () => rG,
     J0y: () => Q,
-    J6R: () => eZ,
+    J6R: () => eV,
     JjL: () => E.Jj,
     JkL: () => tI,
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rj,
+    K3D: () => rk,
     KA4: () => tw,
     KFR: () => nx,
     KJ3: () => rD,
@@ -107,14 +107,14 @@ n.d(t, {
     OYC: () => et,
     OcF: () => tt,
     Odu: () => en,
-    PEY: () => e4,
+    PEY: () => e5,
     PNu: () => eU,
     POd: () => rp,
     PRK: () => e2,
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => j,
+    PrB: () => k,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -133,21 +133,21 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nj,
+    Rg9: () => nk,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
     SRg: () => nS,
     STv: () => ey,
-    SaU: () => tV,
-    Sap: () => no,
-    Sbl: () => tj,
+    SaU: () => tZ,
+    Sap: () => na,
+    Sbl: () => tk,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
     TC2: () => E.TC,
     TNx: () => tP,
-    TPd: () => a.T,
+    TPd: () => o.T,
     TU7: () => t_,
     TaA: () => rl,
     TzF: () => n$,
@@ -156,13 +156,13 @@ n.d(t, {
     ULH: () => D,
     Ucd: () => rz,
     Uk1: () => E.Uk,
-    UkZ: () => rZ,
+    UkZ: () => rV,
     Usc: () => K,
     Uvt: () => l.U,
     V$x: () => c.V,
     V6Z: () => E.V6,
     V7H: () => tl,
-    VD2: () => nV,
+    VD2: () => nZ,
     VKK: () => eW,
     V_K: () => tQ,
     VqG: () => E.Vq,
@@ -174,22 +174,22 @@ n.d(t, {
     X6Q: () => E.X6,
     X7u: () => E.X7,
     XAJ: () => eA,
-    XKF: () => n5,
+    XKF: () => n4,
     XmY: () => e3,
     Xyh: () => e6,
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => ej,
+    Z8P: () => ek,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
     ZfP: () => w,
     Zuq: () => E.Zu,
-    _1z: () => eo,
+    _1z: () => ea,
     _8R: () => rW,
     _s_: () => N,
-    _vf: () => ea,
+    _vf: () => eo,
     a5g: () => tX,
     aIL: () => eT,
     aIt: () => rd,
@@ -197,13 +197,13 @@ n.d(t, {
     aZC: () => t0,
     aib: () => tL,
     ane: () => nU,
-    apO: () => ro,
-    b2L: () => na,
-    b4C: () => rV,
+    apO: () => ra,
+    b2L: () => no,
+    b4C: () => rZ,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nk,
-    d4z: () => a.d,
+    c2C: () => nj,
+    d4z: () => o.d,
     dAT: () => tq,
     dCx: () => nr,
     dG4: () => E.dG,
@@ -220,7 +220,7 @@ n.d(t, {
     eez: () => th,
     en1: () => eF,
     epS: () => rf,
-    epw: () => ta,
+    epw: () => to,
     evJ: () => tM,
     f07: () => rr,
     fK7: () => E.fK,
@@ -235,11 +235,11 @@ n.d(t, {
     hCA: () => rK,
     hUK: () => nm,
     hVg: () => nC,
-    hes: () => V,
+    hes: () => Z,
     hiG: () => r2,
     i$l: () => E.i$,
     iC$: () => rv,
-    iEv: () => ra,
+    iEv: () => ro,
     iLy: () => X,
     ihW: () => b.ih,
     ipw: () => ei,
@@ -270,21 +270,21 @@ n.d(t, {
     o3l: () => nu,
     oAB: () => tH,
     oCV: () => nc,
-    oNc: () => Z,
+    oNc: () => V,
     o_z: () => eO,
     p3w: () => tE,
     p6O: () => t8,
     pAY: () => tg,
     pJs: () => L,
     pKx: () => E.pK,
-    pM4: () => k,
+    pM4: () => j,
     pNK: () => C,
     pTL: () => rq,
-    pjP: () => n4,
+    pjP: () => n5,
     pmI: () => t9,
-    q5t: () => tk,
+    q5t: () => tj,
     q9n: () => nY,
-    qAy: () => tZ,
+    qAy: () => tV,
     qWG: () => rH,
     qXD: () => rO,
     qc2: () => rc,
@@ -302,7 +302,7 @@ n.d(t, {
     scU: () => tT,
     si2: () => rM,
     t4x: () => tK,
-    tG9: () => eV,
+    tG9: () => eZ,
     tHP: () => ex,
     tNA: () => E.tN,
     tPV: () => eq,
@@ -316,7 +316,7 @@ n.d(t, {
     vB8: () => nw,
     vID: () => nT,
     vTt: () => ns,
-    vbS: () => t4,
+    vbS: () => t5,
     vpv: () => tR,
     vtS: () => tY,
     vuo: () => eK,
@@ -352,9 +352,9 @@ n.d(t, {
     n(743606);
 var r = n(512722),
     i = n.n(r),
-    o = n(674746);
+    a = n(674746);
 n(722770);
-var a = n(106351),
+var o = n(106351),
     s = n(470167),
     l = n(388123),
     c = n(275726),
@@ -668,10 +668,10 @@ var v = (function (e) {
     M = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    j = (function (e) {
+    k = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    k = (function (e) {
+    j = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -761,7 +761,7 @@ var v = (function (e) {
     B = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
-    Z = (function (e) {
+    V = (function (e) {
         return (
             (e.INVITE_SPLASH = "INVITE_SPLASH"),
             (e.VIP_REGIONS = "VIP_REGIONS"),
@@ -860,7 +860,7 @@ let F = Object.freeze({
     SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128,
     SUPPRESS_UGC_ADDED_NOTIFICATIONS: 256,
 });
-var V = (function (e) {
+var Z = (function (e) {
         return (
             (e.DISCONNECTED = "DISCONNECTED"),
             (e.AWAITING_ENDPOINT = "AWAITING_ENDPOINT"),
@@ -1000,7 +1000,7 @@ var X = (function (e) {
     ei = (function (e) {
         return (e.LARGE = "large"), (e.SMALL = "small"), e;
     })({}),
-    eo = (function (e) {
+    ea = (function (e) {
         return (
             (e[(e.ACTIVE = 0)] = "ACTIVE"),
             (e[(e.TIMED_OUT = 1)] = "TIMED_OUT"),
@@ -1009,7 +1009,7 @@ var X = (function (e) {
             e
         );
     })({}),
-    ea = (function (e) {
+    eo = (function (e) {
         return (
             (e.TOP_LEFT = "topLeft"),
             (e.TOP_RIGHT = "topRight"),
@@ -2075,7 +2075,6 @@ let eE = "@me",
             "/application-directory/".concat(e, "/").concat(m.c.STORE, "/").concat(t),
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
-        CLICKER_GAME: "/clicker",
         SERVER_SHOP: (e) => "/channels/".concat(e, "/shop"),
         GUILD_PRODUCT: (e, t) => "/channels/".concat(e, "/shop/").concat(t),
         REPORT: "/report",
@@ -2120,14 +2119,14 @@ var ew = (function (e) {
 let eL = 100,
     ex = 200,
     eM = 50,
-    ej = 50,
-    ek = 25,
+    ek = 50,
+    ej = 25,
     eU = 200,
     eG = 100,
     eB = 250,
-    eZ = 2000,
+    eV = 2000,
     eF = 4000,
-    eV = 250,
+    eZ = 250,
     eH = 100,
     eY = 1000,
     eW = 100,
@@ -2157,8 +2156,8 @@ let eL = 100,
     e1 = 10485760,
     e2 = 524288000,
     e3 = (e) => "||".concat(e, "||"),
-    e5 = /^\|\|([\s\S]+?)\|\|/,
-    e4 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e4 = /^\|\|([\s\S]+?)\|\|/,
+    e5 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e6 = /^\d{17,19}$/;
 var e8 = (function (e) {
         return (
@@ -2200,8 +2199,8 @@ var e8 = (function (e) {
 let tn = 128,
     tr = 1024,
     ti = 2000,
-    to = 8000,
-    ta = 64000,
+    ta = 8000,
+    to = 64000,
     ts = 96000,
     tl = 1000,
     tc = "0000",
@@ -2508,7 +2507,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tk = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2591,7 +2590,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tj = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -2673,7 +2672,6 @@ var tL = (function (e) {
             (e.NITRO_HOME = "Nitro Home"),
             (e.TIERED_TENURE_BADGES_MODAL = "Tiered Tenure Badges Modal"),
             (e.TIERED_TENURE_BADGES_ACTION_SHEET = "Tiered Tenure Badges Action Sheet"),
-            (e.SETTINGS_CLICKER_GAME = "Clicker Game Settings"),
             (e.SHOP_ORBS_TAB = "Shop Orbs Tab"),
             (e.ORBS_ANNOUNCEMENT_MODAL = "Orbs Announcement Modal"),
             (e.GLOBAL_DISCOVERY_QUESTS = "Global Discovery Quests"),
@@ -2902,7 +2900,6 @@ var tB = (function (e) {
             (e.DISPLAY_NAME_STYLES_MODAL_FOOTER = "Display Name Styles Modal Footer"),
             (e.SETTINGS_WEBAUTHN_VIEW = "View Security Keys"),
             (e.SETTINGS_PUBLIC_WELCOME = "Welcome Screen Settings"),
-            (e.SETTINGS_CLICKER_GAME = "Clicker Game Settings"),
             (e.SETTINGS_POGGERMODE = "Powermode Settings"),
             (e.GUILD_ROLE_CREATION_MODAL = "Guild Role Creation Modal"),
             (e.GUILD_ROLE_TEMPLATE_POPOUT = "Guild Role Template Popout"),
@@ -3078,7 +3075,7 @@ var tB = (function (e) {
             e
         );
     })({}),
-    tZ = (function (e) {
+    tV = (function (e) {
         return (
             (e.TOOLTIP = "Tooltip"),
             (e.CARD = "Card"),
@@ -3255,7 +3252,7 @@ var tB = (function (e) {
             e
         );
     })({});
-let tV = {
+let tZ = {
         page: "Direct",
         object: "Web URL",
     },
@@ -3361,7 +3358,6 @@ let tV = {
         PAYMENT_FLOW_MODAL_TEST_PAGE: "Payment Flow Modals",
         REVENUE_STORYBOOK_PAGE: "Revenue Storybook",
         VIRTUAL_CURRENCY_CONFIGURATION_PAGE: "Virtual Currency Configuration",
-        CLICKER_GAME: "Clicker Game Settings",
         POGGERMODE: "Powermode Settings",
         SESSIONS: "Sessions",
         FAMILY_CENTER: "Family Center",
@@ -3646,8 +3642,8 @@ Object.freeze({
     GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
     AUTHORIZATION_CANCEL_FRAGMENT: "/_discord/auth?cancel=true",
 });
-let t5 = new Set(["facebook", "contacts"]),
-    t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
+let t4 = new Set(["facebook", "contacts"]),
+    t5 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t6 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
@@ -3659,7 +3655,7 @@ let t5 = new Set(["facebook", "contacts"]),
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
     ],
-    ne = (0, d._i)(o.Z.BRAND_500);
+    ne = (0, d._i)(a.Z.BRAND_500);
 i()(null != ne, "Brand color could not be parsed");
 let nt = ne;
 var nn = (function (e) {
@@ -3704,10 +3700,10 @@ var nn = (function (e) {
     ni = (function (e) {
         return (e.HISTORY = "HISTORY"), (e.SEARCH_OPTIONS = "SEARCH_OPTIONS"), (e.DATES = "DATES"), e;
     })({}),
-    no = (function (e) {
+    na = (function (e) {
         return (e.EMPTY = "EMPTY"), (e.FILTER = "FILTER"), (e.FILTER_ALL = "FILTER_ALL"), e;
     })({});
-let na = "YYYY-MM-DD",
+let no = "YYYY-MM-DD",
     ns = "PrivateChannelRecipientsInvitePopout";
 var nl = (function (e) {
     return (
@@ -4502,8 +4498,6 @@ var nb = (function (e) {
             (e.APP_LAUNCHER_SEARCH_FOCUSED = "app_launcher_search_focused"),
             (e.APP_LAUNCHER_EXPANDED = "app_launcher_expanded"),
             (e.APP_LAUNCHER_APPLICATION_LINK_COPIED = "app_launcher_application_link_copied"),
-            (e.CLICKER_GAME_LAUNCHED = "clicker_game_launched"),
-            (e.CLICKER_GAME_COMPLETED = "clicker_game_completed"),
             (e.APP_OAUTH2_LINK_EMBED_URL_SENT = "app_oauth2_link_embed_url_sent"),
             (e.APP_OAUTH2_LINK_EMBED_CTA_CLICKED = "app_oauth2_link_embed_cta_clicked"),
             (e.APP_OAUTH2_LINK_EMBED_URL_CLICKED = "app_oauth2_link_embed_url_clicked"),
@@ -5571,8 +5565,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nj = 50;
-var nk = (function (e) {
+let nk = 50;
+var nj = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5603,7 +5597,7 @@ var nk = (function (e) {
         );
     })({});
 let nB = 512;
-var nZ = (function (e) {
+var nV = (function (e) {
         return (
             (e[(e.PRIMARY = 0)] = "PRIMARY"),
             (e[(e.SECONDARY = 2)] = "SECONDARY"),
@@ -5652,7 +5646,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    nV = (function (e) {
+    nZ = (function (e) {
         return (
             (e.TOP_LEFT = "top-left"),
             (e.TOP_RIGHT = "top-right"),
@@ -5929,8 +5923,8 @@ let n2 = Object.freeze({
         roblox: "Roblox",
     }),
     n3 = 6016,
-    n5 = 3384;
-var n4 = (function (e) {
+    n4 = 3384;
+var n5 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
     n6 = (function (e) {
@@ -5978,7 +5972,7 @@ var rn = (function (e) {
             e
         );
     })({}),
-    ro = (function (e) {
+    ra = (function (e) {
         return (
             (e.PLAY = "play"),
             (e.INSTALL = "install"),
@@ -5989,7 +5983,7 @@ var rn = (function (e) {
             e
         );
     })({}),
-    ra = (function (e) {
+    ro = (function (e) {
         return (
             (e.NAME = "name"), (e.PLATFORM = "platform"), (e.ACTIONS = "actions"), (e.LAST_PLAYED = "last_played"), e
         );
@@ -6521,7 +6515,6 @@ var rD = (function (e) {
             (e.CHANNEL_POPOUT = "DISCORD_CHANNEL_POPOUT"),
             (e.ACTIVITY_POPOUT = "DISCORD_ACTIVITY_POPOUT"),
             (e.OVERLAY_POPOUT = "DISCORD_OVERLAY_POPOUT"),
-            (e.CLICKER_GAME = "DISCORD_CLICKER_GAME"),
             (e.DEVTOOLS_POPOUT = "DISCORD_DEVTOOLS_POPOUT"),
             e
         );
@@ -6549,10 +6542,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rj = (function (e) {
+    rk = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rk = (function (e) {
+    rj = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {
@@ -6580,13 +6573,13 @@ var rD = (function (e) {
         );
     })({});
 let rB = "discodoEasterEgg";
-var rZ = (function (e) {
+var rV = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
     rF = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rV = (function (e) {
+    rZ = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),

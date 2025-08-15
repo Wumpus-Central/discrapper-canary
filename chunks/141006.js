@@ -1,5 +1,5 @@
-n.d(t, {
-    Eg: () => i,
+l.d(t, {
+    Eg: () => n,
     SK: () => r,
     tl: () => o,
 });
@@ -8,7 +8,7 @@ let r = {
         secondary_color: 16759788,
         tertiary_color: 16761760,
     },
-    i = {
+    n = {
         primary_color: 10382335,
         secondary_color: 10469887,
         tertiary_color: null,

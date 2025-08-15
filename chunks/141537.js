@@ -46,7 +46,7 @@ function i(e) {
         },
     };
 }
-let o = (0, r.B)({
+let a = (0, r.B)({
         kind: "user",
         id: "2025-07_growth_holdout_h2",
         label: "Growth Holdout H2",
@@ -64,8 +64,8 @@ let o = (0, r.B)({
             },
         ],
     }),
-    { useHoldoutExperiment: a, getHoldoutExperiment: s } = i([
-        o,
+    { useHoldoutExperiment: o, getHoldoutExperiment: s } = i([
+        a,
         (0, r.B)({
             kind: "user",
             id: "2025-07_access_holdout_h2",
@@ -86,7 +86,7 @@ let o = (0, r.B)({
         }),
     ]),
     { useHoldoutExperiment: l, getHoldoutExperiment: c } = i([
-        o,
+        a,
         (0, r.B)({
             kind: "user",
             id: "2025-07_experiences_holdout_h2",
@@ -107,7 +107,7 @@ let o = (0, r.B)({
         }),
     ]),
     { useHoldoutExperiment: u, getHoldoutExperiment: d } = i([
-        o,
+        a,
         (0, r.B)({
             kind: "user",
             id: "2025-07_notifications_platform_holdout_h2",

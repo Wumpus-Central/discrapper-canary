@@ -15,8 +15,8 @@ n.d(t, {
     n(642613);
 var r = n(624238),
     i = n(296009),
-    o = n(224706),
-    a = n(594174),
+    a = n(224706),
+    o = n(594174),
     s = n(621853),
     l = n(592183),
     c = n(224724),
@@ -95,7 +95,7 @@ function y() {
     var e, t;
     if (c.Z.hasPendingChanges()) return null != (e = c.Z.getPendingWidgets()) ? e : [];
     {
-        let e = a.default.getCurrentUser(),
+        let e = o.default.getCurrentUser(),
             n = null != e ? s.Z.getUserProfile(e.id) : null;
         return null != (t = null == n ? void 0 : n.widgets) ? t : [];
     }
@@ -128,10 +128,10 @@ function A(e, t, n) {
     let r = y(),
         i = r.find((t) => t.type === e);
     if (null == i) return;
-    let o = i.games.find((e) => e.applicationId === t);
-    if (null == o) return;
-    let a = m(p({}, o), { tags: n }),
-        s = i.games.map((e) => (e.applicationId === t ? a : e)),
+    let a = i.games.find((e) => e.applicationId === t);
+    if (null == a) return;
+    let o = m(p({}, a), { tags: n }),
+        s = i.games.map((e) => (e.applicationId === t ? o : e)),
         c = I(r, m(p({}, i), { games: s }));
     l.Z.setPendingWidgets(c);
 }
@@ -140,13 +140,13 @@ function N(e, t, n) {
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
-    let o = i.tags.filter((e) => e !== n);
-    A(e, t, o.length > 0 ? o : []);
+    let a = i.tags.filter((e) => e !== n);
+    A(e, t, a.length > 0 ? a : []);
 }
 function C(e, t) {
     let n,
-        a = y(),
-        s = a.find((t) => t.type === e),
+        o = y(),
+        s = o.find((t) => t.type === e),
         c = r.k[e];
     if (null != s) {
         var u, d;
@@ -158,8 +158,8 @@ function C(e, t) {
         tags: t.tags,
     };
     n = null != s ? (e === i.l.FAVORITE_GAMES ? [f] : [...(s.games || []), f]) : [f];
-    let _ = I(a, v(e, n));
-    l.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t.applicationId]);
+    let _ = I(o, v(e, n));
+    l.Z.setPendingWidgets(_), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
 function R(e, t) {
     let n = y(),

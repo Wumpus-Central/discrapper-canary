@@ -15,10 +15,10 @@ function m(e) {
         c = null == t ? void 0 : t.filter((e) => null != (0, u.zK)(e)),
         s = (0, i.useRef)(new Map()),
         m = (0, i.useRef)(null),
-        [O, x] = (0, i.useState)(0),
-        [h, v] = (0, i.useState)(!1),
+        [O, h] = (0, i.useState)(0),
+        [x, v] = (0, i.useState)(!1),
         { trackUserProfileAction: _ } = (0, a.KZ)(),
-        I = y(m, c, s, x);
+        I = y(m, c, s, h);
     if (
         ((0, i.useEffect)(
             () => (
@@ -33,7 +33,7 @@ function m(e) {
         null == c || 0 === c.length)
     )
         return null;
-    let P = h ? c : c.slice(0, c.length - O);
+    let P = x ? c : c.slice(0, c.length - O);
     return (0, r.jsxs)("div", {
         className: p.tagListContainer,
         children: [
@@ -57,7 +57,7 @@ function m(e) {
                 ),
             }),
             O > 0 &&
-                (h
+                (x
                     ? (0, r.jsx)(j, {
                           onClick: () => {
                               v(!1), _({ action: "COLLAPSE_GAME_TAGS" });

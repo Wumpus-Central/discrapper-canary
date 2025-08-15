@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(972959);
 let i = { selectedTab: n(49898).GlobalDiscoveryTab.SERVERS },
-    o = (0, r.H)(() => i);
+    a = (0, r.H)(() => i);

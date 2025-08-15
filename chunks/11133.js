@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(35282);
 var r = n(734959),
     i = n(657305),
-    o = n(394821),
-    a = n(841784),
+    a = n(394821),
+    o = n(841784),
     s = n(503438),
     l = n(750154),
     c = n(981631),
@@ -19,7 +19,7 @@ function d(e) {
             : (null == e ? void 0 : e.status_display_type) === r.D.STATE && null != f
               ? (_ = f)
               : (null == e ? void 0 : e.status_display_type) === r.D.DETAILS && null != d && (_ = d),
-        (0, a.Z)(e))
+        (0, o.Z)(e))
     ) {
         let e = (0, i.Z)(n);
         return {
@@ -50,7 +50,7 @@ function d(e) {
                 text: u.intl.format(u.t.Vnuxub, { name: _ }),
                 tooltip: u.intl.formatToPlainString(u.t.Vnuxub, { name: _ }),
             }
-          : (0, o.Z)(e) && t && null != d
+          : (0, a.Z)(e) && t && null != d
             ? {
                   text: u.intl.format(u.t.pW3Ip6, { name: d }),
                   tooltip: u.intl.formatToPlainString(u.t.pW3Ip6, { name: d }),

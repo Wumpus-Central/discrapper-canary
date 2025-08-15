@@ -23,8 +23,8 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n.n(r),
-    o = n(913527),
-    a = n.n(o),
+    a = n(913527),
+    o = n.n(a),
     s = n(866442),
     l = n(630388),
     c = n(709054),
@@ -52,8 +52,8 @@ function O(e) {
         proxy_url: n,
         width: r,
         height: i,
-        placeholder: o,
-        placeholder_version: a,
+        placeholder: a,
+        placeholder_version: o,
         description: s,
         flags: c,
         content_type: d,
@@ -63,8 +63,8 @@ function O(e) {
         proxyURL: n,
         width: r,
         height: i,
-        placeholder: o,
-        placeholderVersion: a,
+        placeholder: a,
+        placeholderVersion: o,
         description: s,
         srcIsAnimated: (0, l.yE)(null != c ? c : 0, u.FoC.IS_ANIMATED),
         flags: null != c ? c : 0,
@@ -103,7 +103,7 @@ function v(e, t, n) {
                 name: n.provider.name,
                 url: n.provider.url,
             }),
-        null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
+        null != n.timestamp && (r.timestamp = o()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, s.ho)(n.color, !0)),
         null != n.thumbnail && b(n.thumbnail))
     )
@@ -129,8 +129,8 @@ function v(e, t, n) {
             null != r.thumbnail && b(n.video) && y(t, n.provider, n.video) && (r.video = O(n.video))),
         d.k.has(r.type))
     ) {
-        var o;
-        r.fields = (null != (o = n.fields) ? o : []).map((e) => {
+        var a;
+        r.fields = (null != (a = n.fields) ? a : []).map((e) => {
             let { name: t, value: n, inline: r } = e;
             return {
                 rawName: t,
@@ -169,8 +169,8 @@ function T(e) {
     );
 }
 function S(e) {
-    let { image: t, video: n, type: r, author: i, rawTitle: o } = e;
-    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == o));
+    let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
+    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }
 function A(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));

@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(739566),
     S = n(753206),
     T = n(440849),
-    I = n(921801),
-    N = n(196051),
+    N = n(921801),
+    I = n(196051),
     y = n(441729),
     A = n(626135),
     P = n(63063),
@@ -91,7 +91,7 @@ let Y = (0, _.hQ)(),
         (0, p.o2)(e);
     }, 250),
     J = o().debounce((e) => {
-        (0, N.Ct)(e);
+        (0, I.Ct)(e);
     }, 250);
 function Q(e) {
     let t = h.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
@@ -106,58 +106,58 @@ function Q(e) {
                 children: (0, i.jsx)($, {}),
             }),
             t
-                ? (0, i.jsx)(I.F, {
+                ? (0, i.jsx)(N.F, {
                       setting: k.s6.ACCESSIBILITY_HIGH_CONTRAST,
                       children: (0, i.jsx)(ee, {}),
                   })
                 : null,
-            (0, i.jsxs)(I.F, {
+            (0, i.jsxs)(N.F, {
                 setting: k.s6.ACCESSIBILITY_SATURATION,
                 children: [(0, i.jsx)(et, {}), (0, i.jsx)(d.$i$, {})],
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_LINK_DECORATIONS,
                 children: (0, i.jsx)(en, {}),
             }),
             n
-                ? (0, i.jsx)(I.F, {
+                ? (0, i.jsx)(N.F, {
                       setting: k.s6.ACCESSIBILITY_CUSTOM_CURSOR,
                       children: (0, i.jsx)(ei, {}),
                   })
                 : null,
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_ROLE_STYLE,
                 children: (0, i.jsx)(er, {}),
             }),
             r &&
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.ACCESSIBILITY_DISPLAY_NAME_STYLES,
                     children: (0, i.jsx)(es, {}),
                 }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_PROFILE_COLORS,
                 children: (0, i.jsx)(ea, {}),
             }),
             (0, f.b)()
-                ? (0, i.jsxs)(I.F, {
+                ? (0, i.jsxs)(N.F, {
                       setting: k.s6.ACCESSIBILITY_CONTRAST,
                       children: [(0, i.jsx)(el, {}), " "],
                   })
                 : null,
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_REDUCED_MOTION,
                 children: (0, i.jsx)(eo, {}),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_STICKERS,
                 children: (0, i.jsx)(ec, {}),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_MESSAGES,
                 children: (0, i.jsx)(ed, {}),
             }),
             (0, i.jsx)(eu, {}),
-            (0, i.jsxs)(I.F, {
+            (0, i.jsxs)(N.F, {
                 setting: k.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
                     (0, i.jsx)(d.$i$, { className: F.marginTop20 }),
@@ -283,7 +283,7 @@ function et() {
                 onValueChange: X,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? "".concat(100 * e, "%") : void 0),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, i.jsx)(d.j7V, {
                     hideBorder: !0,
@@ -393,7 +393,7 @@ function ea() {
             ref: t,
             title: U.intl.string(U.t.BT8Bmp),
             className: a()(F.marginTop20, G.syncProfileThemeWithUserTheme),
-            children: (0, i.jsx)(I.F, {
+            children: (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.j7V, {
                     note: U.intl.format(U.t.u6UjrK, {
@@ -425,7 +425,7 @@ function el() {
     return (0, i.jsx)(d.xJW, {
         title: U.intl.string(U.t.TYyfOz),
         className: F.marginTop20,
-        children: (0, i.jsx)(I.F, {
+        children: (0, i.jsx)(N.F, {
             setting: k.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
             children: (0, i.jsx)(d.j7V, {
                 value: t,
@@ -484,7 +484,7 @@ function eo() {
                     children: U.intl.string(U.t["+Dx+HB"]),
                 }),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                 children: (0, i.jsx)(d.j7V, {
                     value: n,
@@ -492,7 +492,7 @@ function eo() {
                     children: U.intl.string(U.t.b3XBzs),
                 }),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                 children: (0, i.jsx)(d.j7V, {
                     className: F.marginBottom20,
@@ -502,7 +502,7 @@ function eo() {
                     children: U.intl.string(U.t.Iayoh4),
                 }),
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(N.F, {
                 setting: k.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                 children: (0, i.jsx)(d.j7V, {
                     className: F.marginBottom20,
@@ -566,7 +566,7 @@ function ed() {
                     className: F.marginBottom8,
                     children: U.intl.string(U.t.onqU6u),
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, i.jsx)(d.j7V, {
                         className: F.marginTop20,
@@ -575,7 +575,7 @@ function ed() {
                         children: U.intl.string(U.t["3Fztn5"]),
                     }),
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                     children: (0, i.jsx)(d.j7V, {
                         className: F.marginTop8,
@@ -602,7 +602,7 @@ function eu() {
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(I.F, {
+                  (0, i.jsx)(N.F, {
                       setting: k.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
                       children: (0, i.jsxs)(d.xJW, {
                           className: F.marginTop20,
@@ -611,7 +611,7 @@ function eu() {
                                   className: F.marginBottom8,
                                   children: U.intl.string(U.t.VpSKeH),
                               }),
-                              (0, i.jsx)(I.F, {
+                              (0, i.jsx)(N.F, {
                                   setting: k.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                                   children: (0, i.jsx)(d.j7V, {
                                       className: F.marginTop20,
@@ -623,7 +623,7 @@ function eu() {
                           ],
                       }),
                   }),
-                  (0, i.jsx)(I.F, {
+                  (0, i.jsx)(N.F, {
                       setting: k.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                       children: (0, i.jsxs)(d.xJW, {
                           className: F.marginTop20,
@@ -640,10 +640,10 @@ function eu() {
                                       text: U.intl.string(U.t.hymc8v),
                                       onClick: () => {
                                           if (n) {
-                                              (0, N.NB)(), s(!1);
+                                              (0, I.NB)(), s(!1);
                                               return;
                                           }
-                                          (0, N.cP)(
+                                          (0, I.cP)(
                                               U.intl.string(U.t.PKaNJC),
                                               !0,
                                               void 0,

@@ -17,7 +17,7 @@ function i(e, t) {
     for (let e = 4; e < t.length; e++) t[e] > n && t[e] < 0 && (n = t[e]);
     return n;
 }
-n.d(t, { Z: () => o }),
+n.d(t, { Z: () => a }),
     n(539854),
     n(17294),
     n(227481),
@@ -31,7 +31,7 @@ n.d(t, { Z: () => o }),
     n(121784),
     n(644351),
     n(146733);
-class o {
+class a {
     stop() {
         this.source.disconnect(), clearInterval(this.interval), (this.speakingCounter = 0);
     }
@@ -47,7 +47,7 @@ class o {
             ++this.speakingHistoryIndex === this.speakingHistory.length && (this.speakingHistoryIndex = 0),
             this.speakingCounter > 0 ? (this.silentFrames = 0) : this.silentFrames++;
     }
-    constructor(e, t, n, i = 0.1, o = 10) {
+    constructor(e, t, n, i = 0.1, a = 10) {
         r(this, "threshold", void 0),
             r(this, "currentVolume", 0),
             r(this, "analyser", void 0),
@@ -60,20 +60,20 @@ class o {
             r(this, "silenceThreshold", void 0),
             r(this, "silentFrames", void 0),
             r(this, "onProcess", null);
-        let a = e.createAnalyser();
-        (a.fftSize = 512), (a.smoothingTimeConstant = i);
+        let o = e.createAnalyser();
+        (o.fftSize = 512), (o.smoothingTimeConstant = i);
         let s = e.createMediaStreamSource(t);
-        s.connect(a);
+        s.connect(o);
         let l = [];
-        for (let e = 0; e < o; e++) l.push(!1);
+        for (let e = 0; e < a; e++) l.push(!1);
         let c = window.setInterval(() => {
             var e, t;
             this.update(), null == (e = (t = this).onProcess) || e.call(t, this.speaking, this.currentVolume);
         }, 20);
         (this.threshold = n),
-            (this.analyser = a),
+            (this.analyser = o),
             (this.interval = c),
-            (this.fftBins = new Float32Array(a.fftSize)),
+            (this.fftBins = new Float32Array(o.fftSize)),
             (this.source = s),
             (this.speakingHistory = l),
             (this.silenceThreshold = this.speakingHistory.length),

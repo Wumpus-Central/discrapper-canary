@@ -1,14 +1,14 @@
 n.d(t, {
-    P$: () => a,
+    P$: () => o,
     gD: () => s,
-    mH: () => o,
+    mH: () => a,
     vK: () => l,
 }),
     n(388685);
 var r = n(522942),
     i = n(342905);
-let o = [r.m.SOLID, r.m.GRADIENT, r.m.NEON, r.m.TOON, r.m.POP],
-    a = [
+let a = [r.m.SOLID, r.m.GRADIENT, r.m.NEON, r.m.TOON, r.m.POP],
+    o = [
         i.C.DEFAULT,
         i.C.ZILLA_SLAB,
         i.C.CHERRY_BOMB,

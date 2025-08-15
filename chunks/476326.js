@@ -7,8 +7,8 @@ n.d(t, {
     n(953529);
 var r = n(836560),
     i = n(392711),
-    o = n.n(i),
-    a = n(772848),
+    a = n.n(i),
+    o = n(772848),
     s = n(403182),
     l = n(861990);
 function c(e, t, n) {
@@ -78,7 +78,7 @@ class _ extends r.EventEmitter {
                 (this.waveform = e.waveform),
                 (this.isRemix = e.isRemix);
         } else
-            (this.id = null != (r = e.id) ? r : o().uniqueId("upload")),
+            (this.id = null != (r = e.id) ? r : a().uniqueId("upload")),
                 (this.classification = s.f3(e.file)),
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
@@ -87,7 +87,7 @@ class _ extends r.EventEmitter {
                 (this.origin = e.origin);
         (this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
-            (this.uniqueId = (0, a.Z)()),
+            (this.uniqueId = (0, o.Z)()),
             (this.showLargeMessageDialog = t),
             (this.spoiler = !1),
             (this.description = null);

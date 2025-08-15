@@ -1,23 +1,23 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
-    o = n(442837),
+    a = n(442837),
     s = n(481060),
-    a = n(893776),
+    o = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
     p = n(726521),
-    f = n(185625),
-    m = n(314897),
-    g = n(63063),
+    m = n(185625),
+    g = n(314897),
+    f = n(63063),
     _ = n(981631),
     x = n(388032),
     b = n(884110),
-    E = n(197571);
-function v(e) {
+    v = n(197571);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,20 +60,20 @@ function j(e, t) {
         e
     );
 }
-o.ZP.initialize();
+a.ZP.initialize();
 let I = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj,
     },
-    O = (e) => {
+    y = (e) => {
         let { title: t, menuType: i } = e,
-            o = (e) => {
+            a = (e) => {
                 let t = async () => {
-                        await (0, f.yL)(i, e);
+                        await (0, m.yL)(i, e);
                     },
-                    o = async (t) => await (0, f.RV)(i, e, t),
-                    a = (e) => {
+                    a = async (t) => await (0, m.RV)(i, e, t),
+                    o = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
                             ? (0, p.eE)(t)
@@ -87,10 +87,10 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                j(v({}, n), {
-                                    onFormSubmit: o,
+                                j(E({}, n), {
+                                    onFormSubmit: a,
                                     onResend: t,
-                                    onSuccess: a,
+                                    onSuccess: o,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
                                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -106,8 +106,8 @@ let I = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(v({}, t), {
-                                onSuccess: o,
+                            j(E({}, t), {
+                                onSuccess: a,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
                             }),
@@ -125,13 +125,13 @@ let I = {
             ],
         });
     },
-    S = () => {
+    O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
-            p = (0, o.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            v = () => {
-                (0, f.Jj)()
+            h = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+            p = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            E = () => {
+                (0, m.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
@@ -148,13 +148,13 @@ let I = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => v())
+                          .then(() => E())
                           .catch(() => t(!1)))
-                    : v();
+                    : E();
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                    p || (await o.Z.getLocationMetadata(), o.Z.getExperiments());
                 })();
             }, [p]),
             e || !p
@@ -164,13 +164,13 @@ let I = {
                   (0, r.jsxs)(u.ZP, {
                       children: [
                           (0, r.jsx)(u.Dx, {
-                              className: E.marginBottom8,
+                              className: v.marginBottom8,
                               children: x.intl.string(x.t.Z11w19),
                           }),
                           (0, r.jsx)(u.DK, {
-                              className: E.marginBottom8,
+                              className: v.marginBottom8,
                               children: x.intl.format(x.t["532l+v"], {
-                                  supportURL: g.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
+                                  supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),
                           (0, r.jsx)("div", {
@@ -179,7 +179,7 @@ let I = {
                                   null == I[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            O,
+                                            y,
                                             {
                                                 title: x.intl.string(I[e]),
                                                 menuType: e,

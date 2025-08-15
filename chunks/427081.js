@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(754700),
     i = n(147913),
-    o = n(317381),
-    a = n(594190),
+    a = n(317381),
+    o = n(594190),
     s = n(569545),
     l = n(817788),
     c = n(509003),
@@ -69,7 +69,7 @@ class N extends i.Z {
     }
     getActivelyProgressingPlayOnDesktopQuestIds() {
         let e = new Set(),
-            t = a.ZP.getRunningGames(),
+            t = o.ZP.getRunningGames(),
             n = g.Z.quests;
         T.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t);
         let r = {};
@@ -79,7 +79,7 @@ class N extends i.Z {
                 r[e.id] = e;
                 continue;
             }
-            let t = a.ZP.getOverrideForGame(e);
+            let t = o.ZP.getOverrideForGame(e);
             if (null == e.distributor && null != t) continue;
             let n = d.Z.getGameByName(e.name);
             if ((null == n ? void 0 : n.id) != null) {
@@ -109,7 +109,7 @@ class N extends i.Z {
     }
     getActivelyProgressingActivityQuestIds() {
         let e = new Set(),
-            t = o.ZP.getSelfEmbeddedActivities(),
+            t = a.ZP.getSelfEmbeddedActivities(),
             n = t.size > 0;
         if ((T.log("~ getActivelyProgressingActivityQuestIds -> Embedded activities: ", t), !n)) return e;
         let r = g.Z.quests;
@@ -129,8 +129,8 @@ class N extends i.Z {
                 let t = g.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return O;
                 let { progressSeconds: n, targetSeconds: i } = (0, h.il)(t, r.T.DESKTOP),
-                    o = Math.max(0, (i - n) * _.Z.Millis.SECOND);
-                return o <= O ? o + I : O;
+                    a = Math.max(0, (i - n) * _.Z.Millis.SECOND);
+                return a <= O ? a + I : O;
             }),
             y(this, "initiateHeartbeat", (e, t) => {
                 let n = this.heartbeats[t];
@@ -158,9 +158,9 @@ class N extends i.Z {
                         } else
                             T.log("~ initiateHeartbeat -> Sending heartbeat for questId: ".concat(e)),
                                 (0, m.m0)({ questId: e });
-                        let o = this.calculateHeartbeatDurationMs(e),
-                            a = window.setTimeout(i, o);
-                        n.set(e, a);
+                        let a = this.calculateHeartbeatDurationMs(e),
+                            o = window.setTimeout(i, a);
+                        n.set(e, o);
                     } else
                         T.log(
                             "~ initiateHeartbeat -> Quest ".concat(

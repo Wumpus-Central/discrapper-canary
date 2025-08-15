@@ -1,8 +1,8 @@
 n.d(t, { u: () => O }), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(314910),
-    a = n(747127),
+    a = n(314910),
+    o = n(747127),
     s = n(550656),
     l = n(464281),
     c = n(102725),
@@ -66,9 +66,9 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,8 +77,8 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = i.createContext(null);
@@ -86,8 +86,8 @@ function b(e) {
     var {
             children: t,
             text: n,
-            position: o = "top",
-            align: a = "center",
+            position: a = "top",
+            align: o = "center",
             spacing: s,
             layerContext: l,
             onAnimationRest: u,
@@ -142,15 +142,15 @@ function b(e) {
                 isVisible: w,
                 isRendered: D,
                 text: n,
-                position: o,
-                align: a,
+                position: a,
+                align: o,
                 spacing: s,
                 caretConfig: p,
                 layerContext: l,
                 onAnimationRest: u,
                 handleExitComplete: x,
             }),
-            [L, R.triggerRef, R.targetElementRef, P, w, D, n, o, a, s, p, l, u, x],
+            [L, R.triggerRef, R.targetElementRef, P, w, D, n, a, o, s, p, l, u, x],
         );
     return (0, r.jsxs)(E.Provider, {
         value: M,
@@ -159,12 +159,12 @@ function b(e) {
 }
 function y(e) {
     var t;
-    let { strategy: n = "clone", element: r = "div", children: o } = e,
+    let { strategy: n = "clone", element: r = "div", children: a } = e,
         s = i.useContext(E);
     if (null == s) throw Error("TooltipTrigger must be used within TooltipRoot");
     let { triggerHandlers: c, triggerRef: u, tooltipId: d } = s,
-        f = i.isValidElement(o) ? o : null,
-        p = (0, a.Z)(null == f || null == (t = f.props) ? void 0 : t.ref, u);
+        f = i.isValidElement(a) ? a : null,
+        p = (0, o.Z)(null == f || null == (t = f.props) ? void 0 : t.ref, u);
     if ("clone" === n) return null == f ? null : (0, l.C9)(f, c, d, p);
     let m = h(_({}, c), {
         onFocus: (0, l.tS)(c.onFocus, (e) => {
@@ -178,20 +178,20 @@ function y(e) {
     });
     return (0, l.FX)({
         element: r,
-        children: o,
+        children: a,
         triggerHandlers: m,
         triggerRef: u,
     });
 }
 function O(e) {
     var { children: t, asContainer: n = !1 } = e,
-        o = m(e, ["children", "asContainer"]);
-    return null == o.text || "" === o.text
+        a = m(e, ["children", "asContainer"]);
+    return null == a.text || "" === a.text
         ? t
         : n
           ? (0, r.jsx)(
                 b,
-                h(_({}, o), {
+                h(_({}, a), {
                     children: (0, r.jsx)(y, {
                         strategy: "wrap",
                         element: "div",
@@ -202,7 +202,7 @@ function O(e) {
           : i.isValidElement(t)
             ? (0, r.jsx)(
                   b,
-                  h(_({}, o), {
+                  h(_({}, a), {
                       children: (0, r.jsx)(y, {
                           strategy: "clone",
                           children: t,
@@ -217,7 +217,7 @@ function v() {
     if (null == t) throw Error("TooltipContent must be used within TooltipRoot");
     let {
         isVisible: n,
-        isRendered: a,
+        isRendered: o,
         handleExitComplete: c,
         onAnimationRest: d,
         tooltipId: f,
@@ -238,7 +238,7 @@ function v() {
         t
             ? (0, r.jsx)(s.N, {
                   isVisible: n,
-                  isRendered: a,
+                  isRendered: o,
                   targetElementRef: _,
                   id: f,
                   content: p,
@@ -246,7 +246,7 @@ function v() {
                   align: m,
                   spacing: g,
                   caretConfig: b,
-                  layerContext: null != y ? y : o.nz,
+                  layerContext: null != y ? y : a.nz,
                   animationStyle: e,
                   "data-mana-component": "tooltip",
               })

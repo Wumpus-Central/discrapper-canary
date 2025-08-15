@@ -1,18 +1,18 @@
-var r = n(172367),
-    i = n(788276),
-    o = n(979162),
-    a = n(159759),
-    s = n(473297);
-e.exports = function (e, t) {
-    var n = s(
-        e,
-        function (e) {
-            var n = e.getSelection();
-            if (n.isCollapsed() && 0 === n.getAnchorOffset()) return a(e, 1);
-            var r = t.currentTarget.ownerDocument.defaultView.getSelection().getRangeAt(0);
-            return o(e, null, (r = i(r)).endContainer, r.endOffset, r.startContainer, r.startOffset).selectionState;
+var n = r(172367),
+    i = r(788276),
+    o = r(979162),
+    a = r(159759),
+    u = r(473297);
+t.exports = function (t, e) {
+    var r = u(
+        t,
+        function (t) {
+            var r = t.getSelection();
+            if (r.isCollapsed() && 0 === r.getAnchorOffset()) return a(t, 1);
+            var n = e.currentTarget.ownerDocument.defaultView.getSelection().getRangeAt(0);
+            return o(t, null, (n = i(n)).endContainer, n.endOffset, n.startContainer, n.startOffset).selectionState;
         },
         "backward",
     );
-    return n === e.getCurrentContent() ? e : r.push(e, n, "remove-range");
+    return r === t.getCurrentContent() ? t : n.push(t, r, "remove-range");
 };

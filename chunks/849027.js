@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(430198),
     i = n(897345),
-    o = n(697379),
-    a = n(241559),
+    a = n(697379),
+    o = n(241559),
     s = n(819553),
     l = n(931261),
     c = n(994592),
@@ -28,7 +28,7 @@ async function b(e) {
             case E.oC.GUILD_SHOP:
                 return (0, i.r)(b, y);
             case E.oC.MEMBER_APPLICATIONS:
-                return (0, o.v)(t);
+                return (0, a.v)(t);
             case E.oC.GUILD_HOME:
                 return (0, l.s)(t);
             case E.oC.CHANNEL_BROWSER:
@@ -38,7 +38,7 @@ async function b(e) {
             case E.oC.CUSTOMIZE_COMMUNITY:
                 return null != b && b.features.has(g.oNc.COMMUNITY);
             case E.oC.MEMBER_SAFETY:
-                return (0, a.lv)(t);
+                return (0, o.lv)(t);
             case E.oC.GUILD_BOOSTS:
                 return !0;
             case E.oC.REPORT_TO_MOD:

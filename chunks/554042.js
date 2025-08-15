@@ -75,17 +75,17 @@ function j() {
                     : e.discord_web
                 : null;
         }),
-        [T, I] = (0, d.R)("playground-overrideText", null),
-        [N, y] = (0, d.R)("playground-defaultText", _[0].value),
+        [T, N] = (0, d.R)("playground-overrideText", null),
+        [I, y] = (0, d.R)("playground-defaultText", _[0].value),
         A = r.useCallback(
             (e) => {
                 let t = _.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                "" === e || null == e ? (y(_[0].value), I(null)) : null != t ? y(t.value) : (y("custom"), I(e));
+                "" === e || null == e ? (y(_[0].value), N(null)) : null != t ? y(t.value) : (y("custom"), N(e));
             },
-            [I, y],
+            [N, y],
         );
     return (0, i.jsx)("div", {
         style: {
@@ -125,7 +125,7 @@ function j() {
                                 className: x.select,
                                 options: _,
                                 onChange: (e) => A(e),
-                                value: N,
+                                value: I,
                             }),
                         }),
                         (0, i.jsx)(o.xJW, {
@@ -235,7 +235,7 @@ function j() {
                                         ),
                                         C.map((t) => {
                                             var n;
-                                            let r = null != (n = "custom" === N ? T : N) ? n : "";
+                                            let r = null != (n = "custom" === I ? T : I) ? n : "";
                                             return (0, i.jsx)(
                                                 "div",
                                                 {

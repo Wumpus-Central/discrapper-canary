@@ -7,8 +7,8 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(592125),
-    o = n(430824),
-    a = n(496675),
+    a = n(430824),
+    o = n(496675),
     s = n(979651),
     l = n(790920),
     c = n(701488),
@@ -28,20 +28,20 @@ var r = n(442837),
         );
     })({});
 function _(e) {
-    let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: o } = e,
-        a = n.getChannel(t);
-    if (null == a) return 3;
-    if (!c.Gu.includes(a.type)) return 7;
+    let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: a } = e,
+        o = n.getChannel(t);
+    if (null == o) return 3;
+    if (!c.Gu.includes(o.type)) return 7;
     if (!(0, l.a)()) return 6;
-    if (null != a && !a.isPrivate()) {
-        let e = a.getGuildId();
+    if (null != o && !o.isPrivate()) {
+        let e = o.getGuildId();
         if (null == e) return 4;
         let n = r.getGuild(e);
-        if ((null == n ? void 0 : n.afkChannelId) === a.id) return 5;
-        let s = i.can(u.Plq.CONNECT, a);
-        if (!i.can(u.Plq.USE_EMBEDDED_ACTIVITIES, a)) return 1;
-        let l = o.getCurrentClientVoiceChannelId(a.getGuildId()) === t;
-        if (a.isVocal() && !l && !s) return 2;
+        if ((null == n ? void 0 : n.afkChannelId) === o.id) return 5;
+        let s = i.can(u.Plq.CONNECT, o);
+        if (!i.can(u.Plq.USE_EMBEDDED_ACTIVITIES, o)) return 1;
+        let l = a.getCurrentClientVoiceChannelId(o.getGuildId()) === t;
+        if (o.isVocal() && !l && !s) return 2;
     }
     return 0;
 }
@@ -49,20 +49,20 @@ function p(e) {
     return _({
         channelId: e,
         ChannelStore: i.Z,
-        GuildStore: o.Z,
-        PermissionStore: a.Z,
+        GuildStore: a.Z,
+        PermissionStore: o.Z,
         VoiceStateStore: s.Z,
     });
 }
 function h(e) {
     return (0, r.e7)(
-        [i.Z, o.Z, a.Z, s.Z],
+        [i.Z, a.Z, o.Z, s.Z],
         () =>
             _({
                 channelId: e,
                 ChannelStore: i.Z,
-                GuildStore: o.Z,
-                PermissionStore: a.Z,
+                GuildStore: a.Z,
+                PermissionStore: o.Z,
                 VoiceStateStore: s.Z,
             }),
         [e],

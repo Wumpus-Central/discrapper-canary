@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(755721),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
     l = n(555573),
     c = n(10718),
@@ -76,20 +76,20 @@ function N(e, t) {
         e
     );
 }
-function C(e, t, n, i, o) {
+function C(e, t, n, i, a) {
     if (null == e) return;
     let d = () => {
         let r = p.Z.getChannel(e);
         if (null == r) return;
-        let { command: a, application: s } = c.Xq(
+        let { command: o, application: s } = c.Xq(
             {
                 channel: r,
                 type: "channel",
             },
             n,
-            o,
+            a,
         );
-        if (null != a && a.untranslatedName === t) {
+        if (null != o && o.untranslatedName === t) {
             var d, f;
             E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
@@ -109,7 +109,7 @@ function C(e, t, n, i, o) {
             }),
                 l.Po({
                     channelId: e,
-                    command: a,
+                    command: o,
                     section: t,
                     location: i,
                 });
@@ -126,7 +126,7 @@ function C(e, t, n, i, o) {
                               confirmText: v.intl.string(v.t.VkKicX),
                               cancelText: v.intl.string(v.t["ETE/oK"]),
                               onConfirm: () => d(),
-                              confirmButtonColor: a.zx.Colors.BRAND,
+                              confirmButtonColor: o.zx.Colors.BRAND,
                               onCloseCallback: () => {
                                   E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                               },
@@ -146,12 +146,12 @@ function C(e, t, n, i, o) {
 }
 function R(e) {
     var t;
-    let { node: n, stateKey: a, children: s } = e,
-        l = (0, o.e7)([p.Z, g.Z], () => {
+    let { node: n, stateKey: o, children: s } = e,
+        l = (0, a.e7)([p.Z, g.Z], () => {
             var e;
             return p.Z.getChannel(null != (e = n.channelId) ? e : g.Z.getChannelId());
         }, [n.channelId]),
-        { hasSendMessagePerm: h, hasUseAppCommandsPerm: E } = (0, o.cj)([m.Z], () => ({
+        { hasSendMessagePerm: h, hasUseAppCommandsPerm: E } = (0, a.cj)([m.Z], () => ({
             hasSendMessagePerm: m.Z.can(b.Plq.SEND_MESSAGES, l),
             hasUseAppCommandsPerm: m.Z.can(b.Plq.USE_APPLICATION_COMMANDS, l),
         })),
@@ -189,7 +189,7 @@ function R(e) {
                   onClick: A,
                   children: [O.GI, s],
               },
-              a,
+              o,
           )
         : (0, r.jsxs)("span", {
               children: [O.GI, s],
@@ -197,7 +197,7 @@ function R(e) {
 }
 function P(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
-        d = (0, o.e7)([g.Z], () => g.Z.getChannelId()),
+        d = (0, a.e7)([g.Z], () => g.Z.getChannelId()),
         f = (e) => {
             null == e || e.stopPropagation(), C(d, n, t, u.Vh.POPULAR_COMMANDS, l), null == c || c(t);
         };
@@ -207,9 +207,9 @@ function P(e) {
         tooltipContentClassName: I.tooltip,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: i } = e;
-            return (0, r.jsxs)(a.zx, {
-                color: a.Tt.PRIMARY,
-                size: a.Ph.ICON,
+            return (0, r.jsxs)(o.zx, {
+                color: o.Tt.PRIMARY,
+                size: o.Ph.ICON,
                 onClick: f,
                 onMouseEnter: t,
                 onMouseLeave: i,

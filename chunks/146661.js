@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(147913),
     i = n(430824),
-    o = n(70956),
-    a = n(553385),
+    a = n(70956),
+    o = n(553385),
     s = n(556178),
     l = n(890477);
 function c(e, t, n) {
@@ -30,7 +30,7 @@ class d extends r.Z {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
             c(this, "handleIdleChange", () => {
-                Date.now() - u > o.Z.Millis.HOUR && this._attemptDeadchatPrompt();
+                Date.now() - u > a.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
             c(this, "_attemptDeadchatPrompt", () => {
                 let e = i.Z.getGuildIds().filter(
@@ -40,7 +40,7 @@ class d extends r.Z {
                             location: "manager",
                         }).triggerDeadchat,
                 );
-                e.length > 0 && ((u = Date.now()), (0, a.N7)(e));
+                e.length > 0 && ((u = Date.now()), (0, o.N7)(e));
             }),
             c(this, "_triggerGamingStatsSetupExperiment", () => {
                 for (let e of i.Z.getGuildIds())

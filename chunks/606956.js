@@ -1,59 +1,51 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => c });
 var r,
-    i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = {};
-function l() {
-    s = {};
-}
-function c(e) {
-    let { channelId: t, stats: n } = e;
-    (n = null != n ? n : {}),
-        (s[t] = {
-            loadingStatus: "succeeded",
-            lastFetched: Date.now(),
-            channelsFollowing: n.channels_following,
-            guildMembers: n.guild_members,
-            guildsFollowing: n.guilds_following,
-            usersSeenEver: n.users_seen_ever,
-            subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
-            subscribersLostSinceLastPost: n.subscribers_lost_since_last_post,
-        });
-}
-function u(e) {
-    let { channelId: t } = e;
-    s[t] = {
-        loadingStatus: "failed",
-        lastFetched: Date.now(),
-        channelsFollowing: 0,
-        guildMembers: 0,
-        guildsFollowing: 0,
-        usersSeenEver: 0,
-        subscribersGainedSinceLastPost: 0,
-        subscribersLostSinceLastPost: 0,
-    };
-}
-class d extends (r = i.ZP.Store) {
+    i,
+    l = n(442837),
+    a = n(570140);
+let o = {};
+class s extends (i = l.ZP.Store) {
     getFollowerStatsForChannel(e) {
-        return s[e];
+        return o[e];
     }
 }
-a(d, "displayName", "ChannelFollowerStatsStore");
-let f = new d(o.Z, {
-    CONNECTION_OPEN: l,
-    CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: c,
-    CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: u,
+(r = "displayName") in s
+    ? Object.defineProperty(s, r, {
+          value: "ChannelFollowerStatsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (s[r] = "ChannelFollowerStatsStore");
+let c = new s(a.Z, {
+    CONNECTION_OPEN: function () {
+        o = {};
+    },
+    CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
+        let { channelId: t, stats: n } = e;
+        (n = null != n ? n : {}),
+            (o[t] = {
+                loadingStatus: "succeeded",
+                lastFetched: Date.now(),
+                channelsFollowing: n.channels_following,
+                guildMembers: n.guild_members,
+                guildsFollowing: n.guilds_following,
+                usersSeenEver: n.users_seen_ever,
+                subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
+                subscribersLostSinceLastPost: n.subscribers_lost_since_last_post,
+            });
+    },
+    CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
+        let { channelId: t } = e;
+        o[t] = {
+            loadingStatus: "failed",
+            lastFetched: Date.now(),
+            channelsFollowing: 0,
+            guildMembers: 0,
+            guildsFollowing: 0,
+            usersSeenEver: 0,
+            subscribersGainedSinceLastPost: 0,
+            subscribersLostSinceLastPost: 0,
+        };
+    },
 });

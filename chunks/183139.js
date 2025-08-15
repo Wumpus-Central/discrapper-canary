@@ -7,8 +7,8 @@ n.d(t, {
     n(49124);
 var r = n(836560),
     i = n(936349),
-    o = n(709054);
-let a = 15360;
+    a = n(709054);
+let o = 15360;
 var s = (function (e) {
     return (
         (e[(e.DISPATCH = 0)] = "DISPATCH"),
@@ -60,8 +60,8 @@ class l extends r.EventEmitter {
                 guildId: t = null,
                 channelId: n = null,
                 selfMute: r = !1,
-                selfDeaf: o = !1,
-                selfVideo: a = !1,
+                selfDeaf: a = !1,
+                selfVideo: o = !1,
                 preferredRegion: s = null,
                 preferredRegions: l = null,
                 videoStreamParameters: c = null,
@@ -71,8 +71,8 @@ class l extends r.EventEmitter {
                 guild_id: t,
                 channel_id: n,
                 self_mute: r,
-                self_deaf: o,
-                self_video: a,
+                self_deaf: a,
+                self_video: o,
                 flags: u,
             };
         null != n && i.Z.shouldIncludePreferredRegion() && ((d.preferred_region = s), (d.preferred_regions = l)),
@@ -91,13 +91,13 @@ class l extends r.EventEmitter {
         this.send(5, null);
     }
     requestGuildMembers(e, t) {
-        let { query: n, limit: r, userIds: i, presences: o } = t;
+        let { query: n, limit: r, userIds: i, presences: a } = t;
         this.send(8, {
             guild_id: e,
             query: n,
             limit: r,
             user_ids: i,
-            presences: o,
+            presences: a,
         });
     }
     searchRecentMembers(e, t) {
@@ -111,10 +111,10 @@ class l extends r.EventEmitter {
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        o.default.keys(e).forEach((r) => {
+        a.default.keys(e).forEach((r) => {
             let i = e[r],
-                o = JSON.stringify([r, i]).length;
-            n + o > a && (this.send(37, { subscriptions: t }), (t = {}), (n = 0)), (t[r] = i), (n += o);
+                a = JSON.stringify([r, i]).length;
+            n + a > o && (this.send(37, { subscriptions: t }), (t = {}), (n = 0)), (t[r] = i), (n += a);
         }),
             n > 0 && this.send(37, { subscriptions: t });
     }

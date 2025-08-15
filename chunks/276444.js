@@ -1,8 +1,8 @@
 n.d(t, { Z: () => H }), n(388685);
 var r,
     i = n(275726),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(594174),
     l = n(281494),
     c = n(981631);
@@ -56,8 +56,8 @@ function C(e) {
     (S = null), (h = !0);
 }
 function R(e) {
-    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: o } = e;
-    (T = null == r && o), (h = !1), (f = t), (_ = new Set(n)), (S = r), (p = i);
+    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
+    (T = null == r && a), (h = !1), (f = t), (_ = new Set(n)), (S = r), (p = i);
 }
 function P(e) {
     let {} = e;
@@ -82,34 +82,34 @@ function M(e) {
     let { userTrialOfferId: t } = e;
     m.delete(t), g.add(t);
 }
-function j(e) {
+function k(e) {
     let { message: t } = e;
     G(t);
 }
-function k(e) {
+function j(e) {
     let { messages: t } = e;
     t.forEach((e) => G(e));
 }
 function U(e) {
     let { userTrialOfferId: t } = e;
-    h || (0, l.C$)(), m.has(t) || (L(t), a.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
+    h || (0, l.C$)(), m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
 }
 function G(e) {
     let t = e.type === i.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    g.has(t) || m.has(t) || (L(t), a.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
+    g.has(t) || m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
 }
 function B() {
     v = !0;
 }
-function Z(e) {
+function V(e) {
     let { users: t, nextIndex: n } = e;
     (v = !1), (O = t), (I = n);
 }
 function F() {
     v = !1;
 }
-class V extends (r = o.ZP.Store) {
+class Z extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(s.default), this.syncWith([s.default], N);
     }
@@ -153,8 +153,8 @@ class V extends (r = o.ZP.Store) {
         return p;
     }
 }
-u(V, "displayName", "ReferralTrialStore");
-let H = new V(a.Z, {
+u(Z, "displayName", "ReferralTrialStore");
+let H = new Z(o.Z, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: U,
     BILLING_REFERRALS_REMAINING_FETCH_START: C,
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: R,
@@ -164,10 +164,10 @@ let H = new V(a.Z, {
     BILLING_REFERRAL_RESOLVE_SUCCESS: x,
     BILLING_REFERRAL_RESOLVE_FAIL: M,
     REFERRALS_FETCH_ELIGIBLE_USER_START: B,
-    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: Z,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: V,
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: F,
-    LOAD_MESSAGES_SUCCESS: k,
-    MESSAGE_CREATE: j,
-    LOAD_MESSAGES_AROUND_SUCCESS: k,
+    LOAD_MESSAGES_SUCCESS: j,
+    MESSAGE_CREATE: k,
+    LOAD_MESSAGES_AROUND_SUCCESS: j,
     LOGOUT: A,
 });

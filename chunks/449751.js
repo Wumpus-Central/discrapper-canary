@@ -1,25 +1,25 @@
-n.d(t, { Z: () => c });
-var r = n(255367);
+n.d(t, { Z: () => u });
+var i = n(255367);
 n(73800);
-var i = n(481060),
-    o = n(626135),
-    a = n(572004),
-    s = n(981631),
-    l = n(388032);
-function c(e, t) {
-    return a.wS
-        ? (0, r.jsx)(i.sNh, {
+var l = n(481060),
+    r = n(626135),
+    s = n(572004),
+    a = n(981631),
+    o = n(388032);
+function u(e, t) {
+    return s.wS
+        ? (0, i.jsx)(l.sNh, {
               id: "copy-link",
-              label: l.intl.string(l.t.Xrt5Pj),
-              icon: i.xPt,
+              label: o.intl.string(o.t.Xrt5Pj),
+              icon: l.xPt,
               action: () => {
-                  (0, a.JG)(
+                  (0, s.JG)(
                       ""
                           .concat(location.protocol, "//")
                           .concat(location.host)
-                          .concat(s.Z5c.CHANNEL(t.guild_id, t.id, e.id)),
+                          .concat(a.Z5c.CHANNEL(t.guild_id, t.id, e.id)),
                   ),
-                      o.default.track(s.rMx.MESSAGE_LINK_COPIED, {
+                      r.default.track(a.rMx.MESSAGE_LINK_COPIED, {
                           message_id: e.id,
                           channel: e.channel_id,
                       });

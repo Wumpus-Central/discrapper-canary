@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(302422),
-    o = n(192029),
+    l = n(192029),
     a = n(527119);
-function s() {
+function o() {
     return (0, r.jsx)("div", {
         className: i.container,
         children: (0, r.jsxs)("svg", {
@@ -142,7 +142,7 @@ function s() {
                                 y: "0",
                                 height: "44",
                                 width: "44",
-                                href: o,
+                                href: l,
                             }),
                         }),
                         (0, r.jsx)("pattern", {

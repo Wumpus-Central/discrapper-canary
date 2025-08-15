@@ -1,73 +1,22 @@
-n.d(t, { Z: () => P }), n(953529);
+n.d(t, { Z: () => x }), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(468194),
-    l = n(481060),
+    l = n(120356),
+    a = n.n(l),
+    o = n(468194),
+    s = n(481060),
     c = n(904245),
     u = n(596454),
     d = n(377171),
-    f = n(739566),
-    _ = n(942951),
-    p = n(834129),
-    h = n(809026),
-    m = n(139256),
-    g = n(489887),
-    E = n(388032),
-    b = n(18294);
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function v(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = I(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function I(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let T = 16;
-function S() {
+    p = n(739566),
+    m = n(942951),
+    f = n(834129),
+    _ = n(809026),
+    g = n(139256),
+    h = n(489887),
+    b = n(388032),
+    E = n(18294);
+function C() {
     return (0, r.jsx)("svg", {
         width: "24",
         height: "24",
@@ -82,10 +31,10 @@ function S() {
         }),
     });
 }
-function A(e) {
+function v(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(S, {});
+    if (n) t = (0, r.jsx)(C, {});
     else if (null != i) {
         let e = "" !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -96,67 +45,72 @@ function A(e) {
     }
     return null != t
         ? (0, r.jsx)("div", {
-              className: b.imageContainer,
+              className: E.imageContainer,
               children: t,
           })
         : null;
 }
-function N(e) {
-    if (0 === e.totalVotes) return { type: "NO_VOTES" };
-    let t = null != e.victorAnswerId,
-        n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
-    return t
-        ? {
-              type: "VICTOR",
-              victorAnswerText: e.victorAnswerText,
-              victorVotePercentage: n,
-          }
-        : {
-              type: "TIE",
-              tiedVotePercentage: n,
-          };
-}
-function C(e) {
+function O(e) {
     let t;
     var { type: n } = e,
-        i = v(e, ["type"]);
-    let o = "text-muted";
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ["type"]);
+    let l = "text-muted";
     switch (n) {
         case "NO_VOTES":
-            t = (0, r.jsx)(l.Text, {
+            t = (0, r.jsx)(s.Text, {
                 variant: "text-sm/semibold",
                 color: "text-default",
                 scaleFontToUserSetting: !0,
-                children: E.intl.string(E.t["a+lSZ2"]),
+                children: b.intl.string(b.t["a+lSZ2"]),
             });
             break;
         case "VICTOR":
-            let { victorAnswerText: a, victorVotePercentage: s } = i;
+            let { victorAnswerText: a, victorVotePercentage: o } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.victorAnswer,
+                        className: E.victorAnswer,
                         children: [
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
                                 color: "text-default",
-                                className: b.victorAnswerText,
+                                className: E.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a,
                             }),
-                            (0, r.jsx)(m.ZY, {
-                                size: T,
-                                className: b.victorIcon,
+                            (0, r.jsx)(g.ZY, {
+                                size: 16,
+                                className: E.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0,
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(l.Text, {
+                    (0, r.jsxs)(s.Text, {
                         variant: "text-xs/medium",
-                        color: o,
+                        color: l,
                         scaleFontToUserSetting: !0,
-                        children: [E.intl.string(E.t.ufIDIy), " \u2022 ", s, "%"],
+                        children: [b.intl.string(b.t.ufIDIy), " \u2022 ", o, "%"],
                     }),
                 ],
             });
@@ -165,15 +119,15 @@ function C(e) {
             let { tiedVotePercentage: c } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-sm/semibold",
                         color: "text-default",
                         scaleFontToUserSetting: !0,
-                        children: E.intl.string(E.t.kPN9sr),
+                        children: b.intl.string(b.t.kPN9sr),
                     }),
-                    (0, r.jsxs)(l.Text, {
+                    (0, r.jsxs)(s.Text, {
                         variant: "text-xs/medium",
-                        color: o,
+                        color: l,
                         scaleFontToUserSetting: !0,
                         children: [c, "%"],
                     }),
@@ -181,74 +135,119 @@ function C(e) {
             });
     }
     return (0, r.jsx)("div", {
-        className: b.description,
+        className: E.description,
         children: t,
     });
 }
-function R(e) {
-    let { className: t, data: n, onClickPollLink: o } = e,
-        s = i.useMemo(() => N(n), [n]),
-        c = null != n.victorEmoji || "NO_VOTES" === s.type;
+function y(e) {
+    let { className: t, data: n, onClickPollLink: l } = e,
+        o = i.useMemo(
+            () =>
+                (function (e) {
+                    if (0 === e.totalVotes) return { type: "NO_VOTES" };
+                    let t = null != e.victorAnswerId,
+                        n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
+                    return t
+                        ? {
+                              type: "VICTOR",
+                              victorAnswerText: e.victorAnswerText,
+                              victorVotePercentage: n,
+                          }
+                        : {
+                              type: "TIE",
+                              tiedVotePercentage: n,
+                          };
+                })(n),
+            [n],
+        ),
+        c = null != n.victorEmoji || "NO_VOTES" === o.type;
     return (0, r.jsxs)("div", {
-        className: a()(b.container, { [b.containerWithImage]: c }, t),
+        className: a()(E.container, { [E.containerWithImage]: c }, t),
         children: [
-            (0, r.jsx)(A, {
-                hasNoVotes: "NO_VOTES" === s.type,
+            (0, r.jsx)(v, {
+                hasNoVotes: "NO_VOTES" === o.type,
                 victorEmoji: n.victorEmoji,
             }),
-            (0, r.jsx)(C, O({}, s)),
-            null != o &&
-                (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(
+                O,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, o),
+            ),
+            null != l &&
+                (0, r.jsx)(s.zxk, {
                     size: "sm",
-                    onClick: o,
+                    onClick: l,
                     variant: "secondary",
-                    text: E.intl.string(E.t.Jw7VbW),
+                    text: b.intl.string(b.t.Jw7VbW),
                 }),
         ],
     });
 }
-function P(e) {
+function x(e) {
     var t;
-    let { message: n, channel: o, compact: a, disableInteraction: u = !1 } = e,
+    let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
-        m = i.useMemo(() => (0, h.Z)(d), [d]),
-        y = (0, s.aF)(null != (t = null == m ? void 0 : m.questionText) ? t : "", g.Dv),
-        O = (0, f.ZP)(n),
-        v = (0, _.l)({
+        g = i.useMemo(() => (0, _.Z)(d), [d]),
+        C = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : "", h.Dv),
+        v = (0, p.ZP)(n),
+        O = (0, m.l)({
             user: n.author,
-            channelId: o.id,
-            guildId: o.guild_id,
+            channelId: l.id,
+            guildId: l.guild_id,
             messageId: n.id,
         }),
-        I = n.messageReference,
-        T = i.useCallback(() => {
-            null != I &&
+        x = n.messageReference,
+        j = i.useCallback(() => {
+            null != x &&
                 c.Z.jumpToMessage({
-                    channelId: I.channel_id,
-                    messageId: I.message_id,
+                    channelId: x.channel_id,
+                    messageId: x.message_id,
                     flash: !0,
                     returnMessageId: n.id,
                 });
-        }, [n.id, I]);
-    return null == m
+        }, [n.id, x]);
+    return null == g
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(p.Z, {
-                      iconNode: (0, r.jsx)(l.QDj, { size: "xs" }),
+                  (0, r.jsx)(f.Z, {
+                      iconNode: (0, r.jsx)(s.QDj, { size: "xs" }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: E.intl.format(E.t["VJcK4+"], {
-                          username: O.nick,
-                          usernameHook: v(O),
-                          title: y,
-                          titleOnClick: T,
+                      children: b.intl.format(b.t["VJcK4+"], {
+                          username: v.nick,
+                          usernameHook: O(v),
+                          title: C,
+                          titleOnClick: j,
                       }),
                   }),
-                  (0, r.jsx)(R, {
-                      className: b.embed,
-                      data: m,
-                      onClickPollLink: u ? void 0 : T,
+                  (0, r.jsx)(y, {
+                      className: E.embed,
+                      data: g,
+                      onClickPollLink: u ? void 0 : j,
                   }),
               ],
           });

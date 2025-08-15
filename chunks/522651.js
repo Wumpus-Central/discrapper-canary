@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(592125),
     i = n(19780),
-    o = n(626135),
-    a = n(981631),
+    a = n(626135),
+    o = n(981631),
     s = (function (e) {
         return (
             (e.MIC = "Mic"),
@@ -50,7 +50,7 @@ function l(e, t, n) {
     let l = i.Z.getChannelId(),
         c = i.Z.getGuildId(),
         u = null == (s = r.Z.getChannel(l)) ? void 0 : s.type;
-    o.default.track(a.rMx.CALL_BUTTON_CLICKED, {
+    a.default.track(o.rMx.CALL_BUTTON_CLICKED, {
         location: e,
         button_name: t,
         toggled_active: n,

@@ -15,8 +15,8 @@ function p(e) {
         [j, E] = r.useState(""),
         [C, O] = r.useState(""),
         [v, S] = r.useState(""),
-        [T, I] = r.useState(null),
-        [N, y] = r.useState(null),
+        [T, N] = r.useState(null),
+        [I, y] = r.useState(null),
         A = (0, s.e7)([o.Z], () => o.Z.getErrors()),
         P = (0, s.e7)([o.Z], () => o.Z.getFormState()),
         R = r.useRef(null);
@@ -24,7 +24,7 @@ function p(e) {
         e.preventDefault(), (0, l.b9)();
         let t = !1;
         if (
-            ("" === C ? (I(u.intl.string(u.t["/7/oPT"])), (t = !0)) : I(null),
+            ("" === C ? (N(u.intl.string(u.t["/7/oPT"])), (t = !0)) : N(null),
             C !== v ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null),
             t)
         )
@@ -115,7 +115,7 @@ function p(e) {
                                 (0, i.jsx)(a.xJW, {
                                     className: m.newPassword,
                                     title: u.intl.string(u.t.iQG2KC),
-                                    error: null != N ? N : void 0,
+                                    error: null != I ? I : void 0,
                                     required: !0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: "password",

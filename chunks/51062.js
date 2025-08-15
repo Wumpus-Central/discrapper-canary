@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(73800),
     i = n(710251),
-    o = n(442837),
-    a = n(456007),
+    a = n(442837),
+    o = n(456007),
     s = n(998698),
     l = n(541716),
     c = n(887490),
@@ -71,7 +71,7 @@ function v(e, t, n) {
     let { channel: P, type: w } = e,
         [D, L] = r.useState(() => (0, p.PA)()),
         x = (0, i.Z)(),
-        M = (0, o.e7)([u.ZP, _.default], () => {
+        M = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return (
@@ -84,7 +84,7 @@ function v(e, t, n) {
                             : null) && t
             );
         }),
-        { canMentionEveryone: j, hidePersonalInformation: k } = (0, o.cj)(
+        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
                 canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
@@ -92,7 +92,7 @@ function v(e, t, n) {
             }),
             [P, w, M],
         ),
-        { activeCommand: U, activeCommandOption: G } = (0, o.cj)([s.Z], () => ({
+        { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(P.id),
             activeCommandOption: s.Z.getActiveOption(P.id),
         })),
@@ -102,25 +102,25 @@ function v(e, t, n) {
             state: D,
             onFocus: (e) => Y.setSelectedIndex(e),
         }),
-        Z = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
+        V = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
         F = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
-        V = null;
-    null != F && (V = null != (A = null == (S = c.bN.getSelectedParentOfType(F, p.un)) ? void 0 : S[0]) ? A : null);
+        Z = null;
+    null != F && (Z = null != (A = null == (S = c.bN.getSelectedParentOfType(F, p.un)) ? void 0 : S[0]) ? A : null);
     let H = O(b({}, e), {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
-            activeInlineAutocompleteInput: V,
+            activeInlineAutocompleteInput: Z,
             canMentionUsers: null != (N = null == (v = w.users) ? void 0 : v.allowMentioning) && N,
-            canMentionEveryone: j,
-            hidePersonalInformation: k,
+            canMentionEveryone: k,
+            hidePersonalInformation: j,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
-            currentWord: null != (C = null == Z ? void 0 : Z.word) ? C : "",
-            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
+            currentWord: null != (C = null == V ? void 0 : V.word) ? C : "",
+            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText:
                 null != G
-                    ? (0, a.KF)(
+                    ? (0, o.KF)(
                           {
                               [G.name]:
                                   null !=

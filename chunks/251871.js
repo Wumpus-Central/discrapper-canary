@@ -1,77 +1,77 @@
-e.d(n, { default: () => N }), e(388685);
+e.d(n, { default: () => E }), e(388685);
 var i = e(255367),
     r = e(73800),
-    s = e(399606),
+    l = e(399606),
     a = e(481060),
-    o = e(493773),
+    s = e(493773),
     d = e(100527),
-    l = e(906732),
-    c = e(565138),
-    u = e(314897),
-    h = e(271383),
-    x = e(430824),
-    _ = e(626135),
-    C = e(715903),
-    p = e(295474),
-    g = e(273504),
-    m = e(981631),
-    j = e(372897),
-    k = e(388032),
-    A = e(276575);
-function N(t) {
+    o = e(906732),
+    u = e(565138),
+    c = e(314897),
+    _ = e(271383),
+    h = e(430824),
+    g = e(626135),
+    f = e(715903),
+    N = e(295474),
+    I = e(273504),
+    x = e(981631),
+    A = e(372897),
+    C = e(388032),
+    Z = e(276575);
+function E(t) {
     var n;
-    let { onClose: e, transitionState: N, guildId: f } = t,
-        v = (0, s.e7)([u.default], () => u.default.getId()),
-        E = (0, s.e7)([h.ZP], () => h.ZP.getMember(f, v), [f, v]),
-        I = (0, s.e7)([x.Z], () => x.Z.getGuild(f), [f]),
-        R = null != (n = null == I ? void 0 : I.name) ? n : "",
-        Z = (0, C.no)(E),
-        { analyticsLocations: z } = (0, l.ZP)(d.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [M, O] = (0, p.ww)({
-            guildId: f,
-            analyticsLocations: z,
+    let { onClose: e, transitionState: E, guildId: m } = t,
+        k = (0, l.e7)([c.default], () => c.default.getId()),
+        p = (0, l.e7)([_.ZP], () => _.ZP.getMember(m, k), [m, k]),
+        v = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
+        O = null != (n = null == v ? void 0 : v.name) ? n : "",
+        U = (0, f.no)(p),
+        { analyticsLocations: j } = (0, o.ZP)(d.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [P, R] = (0, N.ww)({
+            guildId: m,
+            analyticsLocations: j,
             openWithoutBackstack: !0,
         }),
-        P = Z.has(j.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)
-            ? k.intl.string(k.t.SpDXIy)
-            : k.intl.string(k.t["QRN+Sk"]);
-    O || (P = k.intl.string(k.t.FFj5Dg));
-    let T = O ? k.intl.string(k.t["/PGQf3"]) : k.intl.string(k.t.WikgZ2);
-    return ((0, o.ZP)(() => {
-        _.default.track(m.rMx.OPEN_MODAL, {
-            type: g.dc,
-            guild_id: f,
-            other_user_id: v,
+        M = U.has(A.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)
+            ? C.intl.string(C.t.SpDXIy)
+            : C.intl.string(C.t["QRN+Sk"]);
+    R || (M = C.intl.string(C.t.FFj5Dg));
+    let T = R ? C.intl.string(C.t["/PGQf3"]) : C.intl.string(C.t.WikgZ2);
+    return ((0, s.ZP)(() => {
+        g.default.track(x.rMx.OPEN_MODAL, {
+            type: I.dc,
+            guild_id: m,
+            other_user_id: k,
         });
     }),
     r.useEffect(() => {
-        if (null == I) return void e();
-    }, [I, e]),
-    null == I)
+        if (null == v) return void e();
+    }, [v, e]),
+    null == v)
         ? null
         : (0, i.jsxs)(a.Y0X, {
-              transitionState: N,
+              transitionState: E,
               size: a.CgR.SMALL,
               parentComponent: "AutomodUserProfileQuarantineAlert",
               children: [
                   (0, i.jsx)(a.xBx, {
                       separator: !1,
                       children: (0, i.jsxs)("div", {
-                          className: A.headerContainer,
+                          className: Z.headerContainer,
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: A.guildIconContainer,
+                                  className: Z.guildIconContainer,
                                   children: [
-                                      (0, i.jsx)(c.Z, {
-                                          guild: I,
-                                          size: c.Z.Sizes.LARGER,
+                                      (0, i.jsx)(u.Z, {
+                                          guild: v,
+                                          size: u.Z.Sizes.LARGER,
                                       }),
                                       (0, i.jsx)("div", {
-                                          className: A.statusContainer,
+                                          className: Z.statusContainer,
                                           children: (0, i.jsx)(a.ics, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: A.statusIcon,
+                                              className: Z.statusIcon,
                                           }),
                                       }),
                                   ],
@@ -79,18 +79,18 @@ function N(t) {
                               (0, i.jsx)(a.X6q, {
                                   color: "header-primary",
                                   variant: "heading-md/semibold",
-                                  children: k.intl.format(k.t.kcYdTk, { guildName: R }),
+                                  children: C.intl.format(C.t.kcYdTk, { guildName: O }),
                               }),
                           ],
                       }),
                   }),
                   (0, i.jsx)(a.hzk, {
                       children: (0, i.jsx)("div", {
-                          className: A.descriptionContainer,
+                          className: Z.descriptionContainer,
                           children: (0, i.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               color: "header-secondary",
-                              children: P,
+                              children: M,
                           }),
                       }),
                   }),
@@ -102,12 +102,12 @@ function N(t) {
                                   variant: "primary",
                                   text: T,
                                   onClick: () => {
-                                      M(), e();
+                                      P(), e();
                                   },
                               }),
                               (0, i.jsx)(a.zxk, {
                                   variant: "secondary",
-                                  text: k.intl.string(k.t["ETE/oK"]),
+                                  text: C.intl.string(C.t["ETE/oK"]),
                                   onClick: e,
                               }),
                           ],

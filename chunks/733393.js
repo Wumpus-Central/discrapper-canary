@@ -1,4 +1,4 @@
-n.d(t, { V: () => a }),
+n.d(t, { V: () => o }),
     n(644351),
     n(146733),
     n(410992),
@@ -13,15 +13,15 @@ n.d(t, { V: () => a }),
     n(121784);
 var r = n(710845),
     i = n(358085),
-    o = n(998502);
-function a() {
+    a = n(998502);
+function o() {
     if (i.isPlatformEmbedded) {
         let e;
         try {
-            e = o.ZP.requireModule("discord_erlpack");
+            e = a.ZP.requireModule("discord_erlpack");
         } catch (t) {
             try {
-                e = o.ZP.requireModule("erlpack");
+                e = a.ZP.requireModule("erlpack");
             } catch (e) {}
         }
         if (null != e)

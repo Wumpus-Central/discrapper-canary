@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(680295),
     l = n(687158),
     c = n(576635),
@@ -38,14 +38,14 @@ function v(e) {
             pendingLegacyUsernameDisabled: L,
             pendingDisplayNameStyles: x,
             avatarClassName: M,
-            containerClassName: j,
-            isTryItOutFlow: k = !1,
+            containerClassName: k,
+            isTryItOutFlow: j = !1,
             disabledInputs: U = !1,
             hideCustomStatus: G = !1,
             hideBioSection: B = !1,
-            hideMessageInput: Z = !0,
+            hideMessageInput: V = !0,
             pendingBadges: F,
-            shouldOpenBadgeTooltip: V,
+            shouldOpenBadgeTooltip: Z,
             hideViewFullProfileButton: H = !1,
             interactive: Y = !0,
         } = e,
@@ -55,7 +55,7 @@ function v(e) {
             guildId: null == n ? void 0 : n.id,
             avatarDecorationOverride: C,
             avatarOverride: N,
-            size: a.EFr.SIZE_80,
+            size: o.EFr.SIZE_80,
             showPending: !0,
         }),
         q = (0, _.ZT)({
@@ -73,7 +73,7 @@ function v(e) {
             displayProfile: W,
             themeType: b.lY.POPOUT,
             pendingThemeColors: w,
-            className: o()(O.container, j),
+            className: a()(O.container, k),
             forceShowPremium: i,
             children: [
                 (0, r.jsxs)("div", {
@@ -86,7 +86,7 @@ function v(e) {
                             canUsePremiumCustomization: i,
                             pendingBanner: I,
                             pendingAccentColor: T,
-                            isTryItOutFlow: k,
+                            isTryItOutFlow: j,
                             disabledInputs: U,
                             onUpsellClick: () => (null == v ? void 0 : v({ object: E.qAy.EDIT_PROFILE_BANNER })),
                         }),
@@ -101,7 +101,7 @@ function v(e) {
                             previewPrimaryColor: Q,
                             className: M,
                             disabledInputs: U,
-                            isTryItOutFlow: k,
+                            isTryItOutFlow: j,
                             onUpsellClick: () => (null == v ? void 0 : v({ object: E.qAy.AVATAR })),
                         }),
                         !G &&
@@ -124,14 +124,14 @@ function v(e) {
                     pendingPronouns: A,
                     pendingLegacyUsernameDisabled: L,
                     pendingDisplayNameStyles: x,
-                    isTryItOutFlow: k,
+                    isTryItOutFlow: j,
                     hideBioSection: B,
                     pendingBadges: F,
-                    shouldOpenBadgeTooltip: V,
+                    shouldOpenBadgeTooltip: Z,
                 }),
                 (0, r.jsx)(g.Z, {
                     user: t,
-                    hideMessageInput: Z,
+                    hideMessageInput: V,
                     hideViewFullProfileButton: H,
                 }),
                 null != q && (0, r.jsx)(s.Z, { profileEffectId: q }),
@@ -142,6 +142,6 @@ function v(e) {
         : (0, r.jsx)("div", {
               role: "img",
               "aria-label": y.intl.string(y.t.ayozFh),
-              children: (0, r.jsx)(a.Rny, { children: J }),
+              children: (0, r.jsx)(o.Rny, { children: J }),
           });
 }

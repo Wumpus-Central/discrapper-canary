@@ -1,7 +1,7 @@
 var r = n(314545),
     i = n(757209),
-    o = n(373640),
-    a = parseFloat,
+    a = n(373640),
+    o = parseFloat,
     s = Math.min,
     l = Math.random;
 e.exports = function (e, t, n) {
@@ -11,7 +11,7 @@ e.exports = function (e, t, n) {
             ("boolean" == typeof t ? ((n = t), (t = void 0)) : "boolean" == typeof e && ((n = e), (e = void 0))),
         void 0 === e && void 0 === t
             ? ((e = 0), (t = 1))
-            : ((e = o(e)), void 0 === t ? ((t = e), (e = 0)) : (t = o(t))),
+            : ((e = a(e)), void 0 === t ? ((t = e), (e = 0)) : (t = a(t))),
         e > t)
     ) {
         var c = e;
@@ -19,7 +19,7 @@ e.exports = function (e, t, n) {
     }
     if (n || e % 1 || t % 1) {
         var u = l();
-        return s(e + u * (t - e + a("1e-" + ((u + "").length - 1))), t);
+        return s(e + u * (t - e + o("1e-" + ((u + "").length - 1))), t);
     }
     return r(e, t);
 };

@@ -1,4 +1,4 @@
-let r, i, o, a, s, l, c, u, d, f, _;
+let r, i, a, o, s, l, c, u, d, f, _;
 n.d(t, { Z: () => F });
 var p,
     h = n(442837),
@@ -49,7 +49,7 @@ function C(e) {
 }
 function R(e) {
     let { profileEffectId: t } = e;
-    a = t;
+    o = t;
 }
 function P(e) {
     let { banner: t } = e;
@@ -73,24 +73,24 @@ function x(e) {
 }
 function M(e) {
     let { nameplate: t } = e;
-    o = t;
-}
-function j() {
-    k(), U(), (y = {}), (b = g.QZA.OPEN);
+    a = t;
 }
 function k() {
-    (r = void 0), (u = void 0), (i = void 0), (o = void 0);
+    j(), U(), (y = {}), (b = g.QZA.OPEN);
+}
+function j() {
+    (r = void 0), (u = void 0), (i = void 0), (a = void 0);
 }
 function U() {
-    (s = void 0), (l = void 0), (c = void 0), (d = void 0), (a = void 0);
+    (s = void 0), (l = void 0), (c = void 0), (d = void 0), (o = void 0);
 }
 function G() {
     y = {};
 }
 function B() {
-    j(), v();
+    k(), v();
 }
-class Z extends (p = h.ZP.Store) {
+class V extends (p = h.ZP.Store) {
     getFormState() {
         return b;
     }
@@ -101,13 +101,13 @@ class Z extends (p = h.ZP.Store) {
         return (
             void 0 !== r ||
             void 0 !== i ||
-            void 0 !== a ||
+            void 0 !== o ||
             void 0 !== s ||
             void 0 !== l ||
             void 0 !== c ||
             void 0 !== u ||
             void 0 !== d ||
-            void 0 !== o
+            void 0 !== a
         );
     }
     getIsSubmitDisabled() {
@@ -120,7 +120,7 @@ class Z extends (p = h.ZP.Store) {
         return i;
     }
     getPendingProfileEffectId() {
-        return a;
+        return o;
     }
     getPendingBanner() {
         return s;
@@ -141,19 +141,19 @@ class Z extends (p = h.ZP.Store) {
         return d;
     }
     getPendingNameplate() {
-        return o;
+        return a;
     }
     getAllPending() {
         return {
             pendingAvatar: r,
             pendingAvatarDecoration: i,
-            pendingProfileEffectId: a,
+            pendingProfileEffectId: o,
             pendingBanner: s,
             pendingBio: l,
             pendingPronouns: c,
             pendingNickname: u,
             pendingThemeColors: d,
-            pendingNameplate: o,
+            pendingNameplate: a,
         };
     }
     getGuild() {
@@ -163,8 +163,8 @@ class Z extends (p = h.ZP.Store) {
         return _;
     }
 }
-E(Z, "displayName", "GuildIdentitySettingsStore");
-let F = new Z(m.Z, {
+E(V, "displayName", "GuildIdentitySettingsStore");
+let F = new V(m.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: O,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: T,
@@ -180,9 +180,9 @@ let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: D,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: k,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: j,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: j,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: j,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
     GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G,
 });

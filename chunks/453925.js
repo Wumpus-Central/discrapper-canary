@@ -1,78 +1,67 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(846027),
-    s = n(131951),
-    l = n(36703),
+    o = n(131951),
+    s = n(36703),
     c = n(388032);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function p(e) {
-    let t = (0, i.e7)([s.Z], () => (0, l.P)(s.Z.getInputVolume()));
-    return (0, r.jsx)(o.II_, {
+function u(e) {
+    let t = (0, i.e7)([o.Z], () => (0, s.P)(o.Z.getInputVolume()));
+    return (0, r.jsx)(l.II_, {
         id: "input",
         label: c.intl.string(c.t.OX2Bnp),
-        control: (n, i) =>
-            (0, r.jsx)(
-                o._wy,
-                _(d({}, n), {
-                    ref: i,
-                    value: t,
-                    onChange: (t) => a.Z.setInputVolume((0, l.A)(t), { analyticsLocations: e }),
-                    "aria-label": c.intl.string(c.t.OX2Bnp),
-                }),
-            ),
+        control: (n, i) => {
+            var o, u;
+            return (0, r.jsx)(
+                l._wy,
+                ((o = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, n)),
+                (u = u =
+                    {
+                        ref: i,
+                        value: t,
+                        onChange: (t) => a.Z.setInputVolume((0, s.A)(t), { analyticsLocations: e }),
+                        "aria-label": c.intl.string(c.t.OX2Bnp),
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(u)).forEach(function (e) {
+                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(u, e));
+                      }),
+                o),
+            );
+        },
     });
 }

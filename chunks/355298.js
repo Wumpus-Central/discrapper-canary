@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(133080),
     i = n(592125),
-    o = n(750041);
-function a(e, t, n) {
+    a = n(750041);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ function y(e) {
     let { countryCode: t } = e;
     _(t);
 }
-class O extends o.Z {
+class O extends a.Z {
     initialize() {
         this.waitFor(i.Z);
     }
@@ -114,5 +114,5 @@ class O extends o.Z {
         });
     }
 }
-a(O, "displayName", "MessageRequestStore"), a(O, "LATEST_SNAPSHOT_VERSION", 1);
+o(O, "displayName", "MessageRequestStore"), o(O, "LATEST_SNAPSHOT_VERSION", 1);
 let v = new O();

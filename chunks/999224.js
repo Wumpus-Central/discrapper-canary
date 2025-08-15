@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(771356),
     i = n(640490),
-    o = n(578895),
-    a = n(243125),
+    a = n(578895),
+    o = n(243125),
     s = n(89222),
     l = n(51016),
     c = n(629928),
@@ -35,12 +35,12 @@ var r = n(771356),
     L = n(58587),
     x = n(912609),
     M = n(565792),
-    j = n(583498),
-    k = n(442866),
+    k = n(583498),
+    j = n(442866),
     U = n(263984),
     G = n(591501),
     B = n(595867),
-    Z = n(345272);
+    V = n(345272);
 function F(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function F(e, t, n) {
         e
     );
 }
-function V(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -96,7 +96,7 @@ function Y(e, t) {
 let W = {
         skye: {
             name: A.default.tzvUKy,
-            iconURL: k.Z,
+            iconURL: j.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%)",
             baseColor: "#380527",
@@ -123,7 +123,7 @@ let W = {
         },
         sebastien: {
             name: A.default.NmbfHx,
-            iconURL: j.Z,
+            iconURL: k.Z,
             splashGradient:
                 "radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)",
             baseColor: "#25300D",
@@ -146,7 +146,7 @@ let W = {
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%)",
             baseColor: "#1B1F23",
             styleKey: "robot",
-            previewSoundURLs: [a.Z],
+            previewSoundURLs: [o.Z],
         },
         tunes: {
             name: A.default.sem63N,
@@ -195,7 +195,7 @@ let W = {
         },
         villain: {
             name: A.default.kHmvdn,
-            iconURL: Z.Z,
+            iconURL: V.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(219, 2, 34, 0.50) 0%, rgba(219, 2, 34, 0.00) 100%)",
             baseColor: "#3D0109",
@@ -218,7 +218,7 @@ let W = {
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(207, 122, 124, 0.50) 0%, rgba(207, 122, 124, 0.00) 100%)",
             baseColor: "#2D1011",
             styleKey: "cave",
-            previewSoundURLs: [i.Z, o.Z],
+            previewSoundURLs: [i.Z, a.Z],
         },
         deepfried: {
             name: A.default.qRFFLC,
@@ -232,8 +232,8 @@ let W = {
     },
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return V(
-            Y(V({}, e), {
+        return Z(
+            Y(Z({}, e), {
                 previewSoundURLs: [],
                 underDevelopment: !0,
             }),

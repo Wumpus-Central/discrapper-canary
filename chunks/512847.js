@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B });
+n.d(t, { Z: () => V });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -378,7 +378,7 @@ function G() {
         null
     );
 }
-function V() {
+function B() {
     return (
         j(
             [d.Z, I.Z],
@@ -404,7 +404,7 @@ function V() {
         null
     );
 }
-function B() {
+function V() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(x, {}),
@@ -418,7 +418,7 @@ function B() {
             (0, r.jsx)(G, {}),
             (0, r.jsx)(L, {}),
             (0, r.jsx)(D, {}),
-            (0, r.jsx)(V, {}),
+            (0, r.jsx)(B, {}),
         ],
     });
 }

@@ -1,21 +1,6 @@
 n.d(t, { p: () => u });
 var r = n(573654);
-function i(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function o(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function a(e, t, n) {
-    return t && o(e.prototype, t), n && o(e, n), e;
-}
-function s(e, t, n) {
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,17 +13,16 @@ function s(e, t, n) {
         e
     );
 }
-var l = !1,
-    c = !1,
+var o = !1,
+    a = !1,
     u = (function () {
-        function e(t) {
-            i(this, e),
-                s(this, "internalMonitor", void 0),
-                s(this, "sourceId", null),
-                (this.internalMonitor = t.getMonitor());
+        var e;
+        function t(e) {
+            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+            i(this, "internalMonitor", void 0), i(this, "sourceId", null), (this.internalMonitor = e.getMonitor());
         }
         return (
-            a(e, [
+            (e = [
                 {
                     key: "receiveHandlerId",
                     value: function (e) {
@@ -55,13 +39,13 @@ var l = !1,
                     key: "canDrag",
                     value: function () {
                         (0, r.k)(
-                            !l,
+                            !o,
                             "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (l = !0), this.internalMonitor.canDragSource(this.sourceId);
+                            return (o = !0), this.internalMonitor.canDragSource(this.sourceId);
                         } finally {
-                            l = !1;
+                            o = !1;
                         }
                     },
                 },
@@ -70,13 +54,13 @@ var l = !1,
                     value: function () {
                         if (!this.sourceId) return !1;
                         (0, r.k)(
-                            !c,
+                            !a,
                             "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (c = !0), this.internalMonitor.isDraggingSource(this.sourceId);
+                            return (a = !0), this.internalMonitor.isDraggingSource(this.sourceId);
                         } finally {
-                            c = !1;
+                            a = !1;
                         }
                     },
                 },
@@ -189,6 +173,15 @@ var l = !1,
                     },
                 },
             ]),
-            e
+            (function (e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = t[n];
+                    (r.enumerable = r.enumerable || !1),
+                        (r.configurable = !0),
+                        "value" in r && (r.writable = !0),
+                        Object.defineProperty(e, r.key, r);
+                }
+            })(t.prototype, e),
+            t
         );
     })();

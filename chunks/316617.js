@@ -1,28 +1,28 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
-    i = n(73800),
-    l = n(442837),
-    a = n(481060),
-    s = n(39154),
-    o = n(739566),
+    a = n(73800),
+    i = n(442837),
+    l = n(481060),
+    o = n(39154),
+    s = n(739566),
     c = n(492593),
     d = n(930282),
     u = n(464891),
     m = n(267128),
     p = n(25015),
-    g = n(695346),
-    _ = n(592125),
+    _ = n(695346),
+    g = n(592125),
     b = n(217702),
     h = n(388032),
     x = n(492402);
 let f = (e) => {
     let { message: t } = e,
-        n = (0, o.ZP)(t),
-        f = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channel_id)),
-        v = i.useMemo(() => (0, s.Z)(t), [t]),
+        n = (0, s.ZP)(t),
+        f = (0, i.e7)([g.Z], () => g.Z.getChannel(t.channel_id)),
+        v = a.useMemo(() => (0, o.Z)(t), [t]),
         { content: j } = (0, p.Z)(v, { hideSimpleEmbedContent: !1 }),
-        y = g.jU.useSetting(),
-        O = i.useCallback(() => {
+        y = _.jU.useSetting(),
+        C = a.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, m.f)(t, j, !1, !1, "", {
                 leadingIconClass: x.attachmentIcon,
                 trailingIconClass: x.attachmentIcon,
@@ -46,15 +46,15 @@ let f = (e) => {
         : (0, r.jsxs)("div", {
               className: x.container,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       className: x.header,
                       variant: "heading-sm/semibold",
                       children: h.intl.string(h.t.iouM3d),
                   }),
-                  (0, r.jsx)(a.Ttm, {
+                  (0, r.jsx)(l.Ttm, {
                       className: x.messagePreviewContainer,
                       children: (0, r.jsx)(c.Z, {
-                          childrenMessageContent: O(),
+                          childrenMessageContent: C(),
                           childrenHeader: (0, r.jsx)(u.ZP, {
                               message: t,
                               channel: f,

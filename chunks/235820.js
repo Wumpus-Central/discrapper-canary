@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
-let a = {
+    a = n(981631);
+let o = {
     setGuildFilter(e) {
         let { guildFilter: t, roleFilter: n, everyoneFilter: r } = e;
         i.Z.dispatch({
@@ -22,19 +22,19 @@ let a = {
         });
     },
     fetchRecentMentions(e) {
-        let { before: t, limit: n = o.DJj, guildId: a = null, roles: s = !0, everyone: l = !0, feature: c } = e;
+        let { before: t, limit: n = a.DJj, guildId: o = null, roles: s = !0, everyone: l = !0, feature: c } = e;
         return (
             i.Z.dispatch({
                 type: "LOAD_RECENT_MENTIONS",
-                guildId: a,
+                guildId: o,
             }),
             r.tn
                 .get({
-                    url: o.ANM.MENTIONS,
+                    url: a.ANM.MENTIONS,
                     query: {
                         before: t,
                         limit: n,
-                        guild_id: a,
+                        guild_id: o,
                         roles: s,
                         everyone: l,
                         feature: c,
@@ -50,7 +50,7 @@ let a = {
                             type: "LOAD_RECENT_MENTIONS_SUCCESS",
                             messages: n,
                             isAfter: null != t,
-                            hasMoreAfter: n.length >= o.DJj,
+                            hasMoreAfter: n.length >= a.DJj,
                         });
                     },
                     () => {
@@ -61,7 +61,7 @@ let a = {
     },
     deleteRecentMention(e) {
         r.tn.del({
-            url: o.ANM.MENTIONS_MESSAGE_ID(e),
+            url: a.ANM.MENTIONS_MESSAGE_ID(e),
             retries: 2,
             oldFormErrors: !0,
             rejectWithError: !0,

@@ -1,37 +1,36 @@
-n.d(t, { Z: () => h });
-var r = n(255367),
-    i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(454585),
-    l = n(937889),
-    c = n(970184),
-    u = n(985184),
-    d = n(870456),
-    f = n(709136),
-    _ = n(430864);
-function p(e) {
-    let t = (0, c.CJ)();
-    return (0, i.useMemo)(() => {
-        let n;
-        return null === t
-            ? null
-            : ((n =
-                  null != t.message
-                      ? (0, l.rs)(t.message, d.u)
-                      : (0, l.p6)({
-                            channelId: t.channelId,
-                            renderOptions: d.u,
-                        })),
-              s.Z.parse(e, !0, n));
-    }, [e, t]);
-}
-function h(e) {
-    let { content: t, className: n } = e,
-        i = p(t),
-        o = (0, u.Gt)();
-    return (0, r.jsx)("div", {
-        className: a()(n, _.markup, f.markdownContainer, { [f.containerSizedText]: o }),
+r.d(t, { Z: () => b });
+var n = r(255367),
+    l = r(73800),
+    i = r(120356),
+    o = r.n(i),
+    a = r(454585),
+    c = r(937889),
+    s = r(970184),
+    u = r(985184),
+    d = r(870456),
+    p = r(709136),
+    f = r(430864);
+function b(e) {
+    let { content: t, className: r } = e,
+        i = (function (e) {
+            let t = (0, s.CJ)();
+            return (0, l.useMemo)(() => {
+                let r;
+                return null === t
+                    ? null
+                    : ((r =
+                          null != t.message
+                              ? (0, c.rs)(t.message, d.u)
+                              : (0, c.p6)({
+                                    channelId: t.channelId,
+                                    renderOptions: d.u,
+                                })),
+                      a.Z.parse(e, !0, r));
+            }, [e, t]);
+        })(t),
+        b = (0, u.Gt)();
+    return (0, n.jsx)("div", {
+        className: o()(r, f.markup, p.markdownContainer, { [p.containerSizedText]: b }),
         children: i,
     });
 }

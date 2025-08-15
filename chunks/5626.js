@@ -1,11 +1,11 @@
-var r = n(359282),
-    i = n(65183).List;
-e.exports = function (e, t) {
+var n = r(359282),
+    i = r(65183).List;
+t.exports = function (t, e) {
     return i(
-        e.map(function (e, n) {
-            var i = t[n];
-            return r.create({
-                style: e,
+        t.map(function (t, r) {
+            var i = e[r];
+            return n.create({
+                style: t,
                 entity: i,
             });
         }),

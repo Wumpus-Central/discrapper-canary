@@ -2,14 +2,14 @@ n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(723484),
-    o = n(51499),
-    a = n(27034),
+    a = n(51499),
+    o = n(27034),
     s = n(879820);
 function l() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.Z, {}),
-            (0, r.jsx)(a.C3, { children: (0, r.jsx)(i.F, { className: s.awaitingAuthenticationStep }) }),
+            (0, r.jsx)(a.Z, {}),
+            (0, r.jsx)(o.C3, { children: (0, r.jsx)(i.F, { className: s.awaitingAuthenticationStep }) }),
         ],
     });
 }

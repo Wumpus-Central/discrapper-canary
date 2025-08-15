@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o }), n(49124), n(781311);
+n.d(t, { Z: () => l }), n(49124), n(781311);
 var r = n(73800),
     i = n(10718);
-function o(e, t) {
+function l(e, t) {
     let n = r.useRef(null),
-        o = r.useCallback((e, t) => {
-            var r, i, o;
+        l = r.useCallback((e, t) => {
+            var r, i, l;
             e.preventDefault(),
                 e.clipboardData.setData("application/x-discord-interaction-data", JSON.stringify(t)),
                 e.clipboardData.setData(
                     "text/plain",
-                    null != (o = null == (i = n.current) || null == (r = i.textContent) ? void 0 : r.trim()) ? o : "",
+                    null != (l = null == (i = n.current) || null == (r = i.textContent) ? void 0 : r.trim()) ? l : "",
                 );
         }, []);
     return (
@@ -21,7 +21,7 @@ function o(e, t) {
             t,
         ),
         {
-            onCopy: o,
+            onCopy: l,
             copyRef: n,
         }
     );

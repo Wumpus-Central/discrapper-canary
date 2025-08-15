@@ -1,27 +1,27 @@
-var r = n(621796),
-    i = n(172367),
-    o = n(292489),
-    a = n(458545),
-    s = n(685536),
-    l = n(302354);
-function c(e) {
-    var t = r.removeRange(e.getCurrentContent(), e.getSelection(), "forward");
-    return i.push(e, t, "remove-range");
-}
-e.exports = function (e, t) {
-    var n,
-        r = e._latestEditorState,
-        i = r.getSelection(),
-        u = t.target;
-    if (i.isCollapsed()) return void t.preventDefault();
-    if (l(u)) {
-        var d = u;
-        n = s(o.getScrollParent(d));
-    }
-    var f = a(r);
-    e.setClipboard(f),
-        e.setMode("cut"),
+var n = r(621796),
+    i = r(172367),
+    o = r(292489),
+    a = r(458545),
+    u = r(685536),
+    s = r(302354);
+t.exports = function (t, e) {
+    var r,
+        c = t._latestEditorState,
+        l = c.getSelection(),
+        f = e.target;
+    if (l.isCollapsed()) return void e.preventDefault();
+    s(f) && (r = u(o.getScrollParent(f)));
+    var p = a(c);
+    t.setClipboard(p),
+        t.setMode("cut"),
         setTimeout(function () {
-            e.restoreEditorDOM(n), e.exitCurrentMode(), e.update(c(r));
+            var e, o;
+            t.restoreEditorDOM(r),
+                t.exitCurrentMode(),
+                t.update(
+                    ((e = c),
+                    (o = n.removeRange(e.getCurrentContent(), e.getSelection(), "forward")),
+                    i.push(e, o, "remove-range")),
+                );
         }, 0);
 };

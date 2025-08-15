@@ -5,25 +5,25 @@ n.d(t, {
     n(388685);
 var r = n(392711),
     i = n(524437),
-    o = n(824988),
-    a = n(231338),
+    a = n(824988),
+    o = n(231338),
     s = n(388032);
 let l = [
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.MINT_APPLE,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_MINT_APPLE_1,
+                    token: o.Il.BG_GRADIENT_MINT_APPLE_1,
                     stop: 6.15,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_MINT_APPLE_2,
+                    token: o.Il.BG_GRADIENT_MINT_APPLE_2,
                     stop: 48.7,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_MINT_APPLE_3,
+                    token: o.Il.BG_GRADIENT_MINT_APPLE_3,
                     stop: 93.07,
                 },
             ],
@@ -32,16 +32,16 @@ let l = [
             midpointPercentage: 27,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.CITRUS_SHERBERT,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_CITRUS_SHERBERT_1,
+                    token: o.Il.BG_GRADIENT_CITRUS_SHERBERT_1,
                     stop: 31.1,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CITRUS_SHERBERT_2,
+                    token: o.Il.BG_GRADIENT_CITRUS_SHERBERT_2,
                     stop: 67.09,
                 },
             ],
@@ -50,24 +50,24 @@ let l = [
             midpointPercentage: 27,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.RETRO_RAINCLOUD,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_RAINCLOUD_1,
+                    token: o.Il.BG_GRADIENT_RETRO_RAINCLOUD_1,
                     stop: 5.64,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_RAINCLOUD_2,
+                    token: o.Il.BG_GRADIENT_RETRO_RAINCLOUD_2,
                     stop: 26.38,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_RAINCLOUD_2,
+                    token: o.Il.BG_GRADIENT_RETRO_RAINCLOUD_2,
                     stop: 49.92,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_RAINCLOUD_1,
+                    token: o.Il.BG_GRADIENT_RETRO_RAINCLOUD_1,
                     stop: 73.12,
                 },
             ],
@@ -76,20 +76,20 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.HANAMI,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_HANAMI_1,
+                    token: o.Il.BG_GRADIENT_HANAMI_1,
                     stop: 3.56,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_HANAMI_2,
+                    token: o.Il.BG_GRADIENT_HANAMI_2,
                     stop: 35.49,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_HANAMI_3,
+                    token: o.Il.BG_GRADIENT_HANAMI_3,
                     stop: 68.78,
                 },
             ],
@@ -98,20 +98,20 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.SUNRISE,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_SUNRISE_1,
+                    token: o.Il.BG_GRADIENT_SUNRISE_1,
                     stop: 8.62,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_SUNRISE_2,
+                    token: o.Il.BG_GRADIENT_SUNRISE_2,
                     stop: 48.07,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_SUNRISE_3,
+                    token: o.Il.BG_GRADIENT_SUNRISE_3,
                     stop: 76.04,
                 },
             ],
@@ -120,16 +120,16 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.COTTON_CANDY,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_COTTON_CANDY_1,
+                    token: o.Il.BG_GRADIENT_COTTON_CANDY_1,
                     stop: 8.5,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_COTTON_CANDY_2,
+                    token: o.Il.BG_GRADIENT_COTTON_CANDY_2,
                     stop: 94.28,
                 },
             ],
@@ -138,24 +138,24 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.LOFI_VIBES,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_LOFI_VIBES_1,
+                    token: o.Il.BG_GRADIENT_LOFI_VIBES_1,
                     stop: 7.08,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_LOFI_VIBES_2,
+                    token: o.Il.BG_GRADIENT_LOFI_VIBES_2,
                     stop: 34.94,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_LOFI_VIBES_3,
+                    token: o.Il.BG_GRADIENT_LOFI_VIBES_3,
                     stop: 65.12,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_LOFI_VIBES_4,
+                    token: o.Il.BG_GRADIENT_LOFI_VIBES_4,
                     stop: 96.23,
                 },
             ],
@@ -164,20 +164,20 @@ let l = [
             midpointPercentage: 27,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.DESERT_KHAKI,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_DESERT_KHAKI_1,
+                    token: o.Il.BG_GRADIENT_DESERT_KHAKI_1,
                     stop: 12.92,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_DESERT_KHAKI_2,
+                    token: o.Il.BG_GRADIENT_DESERT_KHAKI_2,
                     stop: 32.92,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_DESERT_KHAKI_3,
+                    token: o.Il.BG_GRADIENT_DESERT_KHAKI_3,
                     stop: 52.11,
                 },
             ],
@@ -186,19 +186,19 @@ let l = [
             midpointPercentage: 50,
         },
     ],
-    c = a.BR.DARK,
+    c = o.BR.DARK,
     u = [
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.SUNSET,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_SUNSET_1,
+                    token: o.Il.BG_GRADIENT_SUNSET_1,
                     stop: 27.57,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_SUNSET_2,
+                    token: o.Il.BG_GRADIENT_SUNSET_2,
                     stop: 71.25,
                 },
             ],
@@ -207,28 +207,28 @@ let l = [
             midpointPercentage: 35,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.CHROMA_GLOW,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_CHROMA_GLOW_1,
+                    token: o.Il.BG_GRADIENT_CHROMA_GLOW_1,
                     stop: 3.94,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CHROMA_GLOW_2,
+                    token: o.Il.BG_GRADIENT_CHROMA_GLOW_2,
                     stop: 26.1,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CHROMA_GLOW_3,
+                    token: o.Il.BG_GRADIENT_CHROMA_GLOW_3,
                     stop: 39.82,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CHROMA_GLOW_4,
+                    token: o.Il.BG_GRADIENT_CHROMA_GLOW_4,
                     stop: 56.89,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CHROMA_GLOW_5,
+                    token: o.Il.BG_GRADIENT_CHROMA_GLOW_5,
                     stop: 76.45,
                 },
             ],
@@ -237,28 +237,28 @@ let l = [
             midpointPercentage: 15,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.FOREST,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_FOREST_1,
+                    token: o.Il.BG_GRADIENT_FOREST_1,
                     stop: 11.2,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_FOREST_2,
+                    token: o.Il.BG_GRADIENT_FOREST_2,
                     stop: 29.93,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_FOREST_3,
+                    token: o.Il.BG_GRADIENT_FOREST_3,
                     stop: 48.64,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_FOREST_4,
+                    token: o.Il.BG_GRADIENT_FOREST_4,
                     stop: 67.85,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_FOREST_5,
+                    token: o.Il.BG_GRADIENT_FOREST_5,
                     stop: 83.54,
                 },
             ],
@@ -267,16 +267,16 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.CRIMSON_MOON,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_CRIMSON_MOON_1,
+                    token: o.Il.BG_GRADIENT_CRIMSON_MOON_1,
                     stop: 16.17,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_CRIMSON_MOON_2,
+                    token: o.Il.BG_GRADIENT_CRIMSON_MOON_2,
                     stop: 72,
                 },
             ],
@@ -285,16 +285,16 @@ let l = [
             midpointPercentage: 30,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.MIDNIGHT_BLURPLE,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_1,
+                    token: o.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_1,
                     stop: 11.21,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_2,
+                    token: o.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_2,
                     stop: 61.92,
                 },
             ],
@@ -303,16 +303,16 @@ let l = [
             midpointPercentage: 24,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.MARS,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_MARS_1,
+                    token: o.Il.BG_GRADIENT_MARS_1,
                     stop: 14.61,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_MARS_2,
+                    token: o.Il.BG_GRADIENT_MARS_2,
                     stop: 74.62,
                 },
             ],
@@ -321,16 +321,16 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.DUSK,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_DUSK_1,
+                    token: o.Il.BG_GRADIENT_DUSK_1,
                     stop: 12.84,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_DUSK_2,
+                    token: o.Il.BG_GRADIENT_DUSK_2,
                     stop: 85.99,
                 },
             ],
@@ -339,20 +339,20 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.UNDER_THE_SEA,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_UNDER_THE_SEA_1,
+                    token: o.Il.BG_GRADIENT_UNDER_THE_SEA_1,
                     stop: 1.91,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_UNDER_THE_SEA_2,
+                    token: o.Il.BG_GRADIENT_UNDER_THE_SEA_2,
                     stop: 48.99,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_UNDER_THE_SEA_3,
+                    token: o.Il.BG_GRADIENT_UNDER_THE_SEA_3,
                     stop: 96.35,
                 },
             ],
@@ -361,24 +361,24 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.RETRO_STORM,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_STORM_1,
+                    token: o.Il.BG_GRADIENT_RETRO_STORM_1,
                     stop: 5.64,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_STORM_2,
+                    token: o.Il.BG_GRADIENT_RETRO_STORM_2,
                     stop: 26.38,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_STORM_2,
+                    token: o.Il.BG_GRADIENT_RETRO_STORM_2,
                     stop: 49.92,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_RETRO_STORM_1,
+                    token: o.Il.BG_GRADIENT_RETRO_STORM_1,
                     stop: 73.12,
                 },
             ],
@@ -387,20 +387,20 @@ let l = [
             midpointPercentage: 61,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.NEON_NIGHTS,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_NEON_NIGHTS_1,
+                    token: o.Il.BG_GRADIENT_NEON_NIGHTS_1,
                     stop: 0,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_NEON_NIGHTS_2,
+                    token: o.Il.BG_GRADIENT_NEON_NIGHTS_2,
                     stop: 50,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_NEON_NIGHTS_3,
+                    token: o.Il.BG_GRADIENT_NEON_NIGHTS_3,
                     stop: 100,
                 },
             ],
@@ -409,20 +409,20 @@ let l = [
             midpointPercentage: 50,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.STRAWBERRY_LEMONADE,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_1,
+                    token: o.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_1,
                     stop: 18.79,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_2,
+                    token: o.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_2,
                     stop: 49.76,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_3,
+                    token: o.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_3,
                     stop: 80.72,
                 },
             ],
@@ -431,28 +431,28 @@ let l = [
             midpointPercentage: 32,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.AURORA,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_AURORA_1,
+                    token: o.Il.BG_GRADIENT_AURORA_1,
                     stop: 10.39,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_AURORA_2,
+                    token: o.Il.BG_GRADIENT_AURORA_2,
                     stop: 26.87,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_AURORA_3,
+                    token: o.Il.BG_GRADIENT_AURORA_3,
                     stop: 48.31,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_AURORA_4,
+                    token: o.Il.BG_GRADIENT_AURORA_4,
                     stop: 64.98,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_AURORA_5,
+                    token: o.Il.BG_GRADIENT_AURORA_5,
                     stop: 92.5,
                 },
             ],
@@ -461,16 +461,16 @@ let l = [
             midpointPercentage: 34,
         },
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.SEPIA,
             theme: c,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_SEPIA_1,
+                    token: o.Il.BG_GRADIENT_SEPIA_1,
                     stop: 14.14,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_SEPIA_2,
+                    token: o.Il.BG_GRADIENT_SEPIA_2,
                     stop: 60.35,
                 },
             ],
@@ -480,16 +480,16 @@ let l = [
         },
     ],
     d = {
-        type: o.r.BACKGROUND_GRADIENT_PRESET,
+        type: a.r.BACKGROUND_GRADIENT_PRESET,
         id: i.Us.BLURPLE_TWILIGHT,
         theme: c,
         colors: [
             {
-                token: a.Il.BG_GRADIENT_BLURPLE_TWILIGHT_1,
+                token: o.Il.BG_GRADIENT_BLURPLE_TWILIGHT_1,
                 stop: 11.18,
             },
             {
-                token: a.Il.BG_GRADIENT_BLURPLE_TWILIGHT_2,
+                token: o.Il.BG_GRADIENT_BLURPLE_TWILIGHT_2,
                 stop: 64.54,
             },
         ],
@@ -502,16 +502,16 @@ let l = [
         ...u,
         d,
         {
-            type: o.r.BACKGROUND_GRADIENT_PRESET,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
             id: i.Us.EASTER_EGG,
-            theme: a.BR.LIGHT,
+            theme: o.BR.LIGHT,
             colors: [
                 {
-                    token: a.Il.BG_GRADIENT_EASTER_EGG_1,
+                    token: o.Il.BG_GRADIENT_EASTER_EGG_1,
                     stop: 4,
                 },
                 {
-                    token: a.Il.BG_GRADIENT_EASTER_EGG_2,
+                    token: o.Il.BG_GRADIENT_EASTER_EGG_2,
                     stop: 96,
                 },
             ],
@@ -521,11 +521,11 @@ let l = [
         },
     ];
 [...u, ...l],
-    o.r.STANDARD_BACKGROUND_THEME,
-    o.r.STANDARD_BACKGROUND_THEME,
-    a.BR.LIGHT,
-    o.r.STANDARD_BACKGROUND_THEME,
-    a.BR.MIDNIGHT,
-    o.r.STANDARD_BACKGROUND_THEME,
+    a.r.STANDARD_BACKGROUND_THEME,
+    a.r.STANDARD_BACKGROUND_THEME,
+    o.BR.LIGHT,
+    a.r.STANDARD_BACKGROUND_THEME,
+    o.BR.MIDNIGHT,
+    a.r.STANDARD_BACKGROUND_THEME,
     () => s.intl.string(s.t.zlvNOj);
 let _ = (0, r.keyBy)(f, "id");

@@ -1,58 +1,57 @@
-var r = n(381538);
+var n = r(381538);
 function i() {
     return (i =
-        r ||
-        function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+        n ||
+        function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = arguments[e];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
             }
-            return e;
+            return t;
         }).apply(this, arguments);
 }
-function o(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-var a = n(152477),
-    s = n(73800),
-    l = n(746117),
-    c = n(856084);
-e.exports = (function (e) {
-    function t() {
-        return e.apply(this, arguments) || this;
+var o = r(152477),
+    a = r(73800),
+    u = r(746117),
+    s = r(856084);
+t.exports = (function (t) {
+    function e() {
+        return t.apply(this, arguments) || this;
     }
     return (
-        o(t, e),
-        (t.prototype.render = function () {
-            var e = this.props,
-                t = e.block,
-                n = e.children,
-                r = e.contentState,
-                o = e.decorator,
-                u = e.decoratorKey,
-                d = e.direction,
-                f = e.leafSet,
-                _ = e.text,
-                p = t.getKey(),
-                h = f.get("leaves"),
-                m = o.getComponentForKey(u),
-                g = o.getPropsForKey(u),
-                E = a.encode(p, parseInt(u, 10), 0),
-                b = _.slice(h.first().get("start"), h.last().get("end")),
-                y = c.getHTMLDirIfDifferent(l.getDirection(b), d);
-            return s.createElement(
-                m,
-                i({}, g, {
-                    contentState: r,
-                    decoratedText: b,
-                    dir: y,
-                    key: E,
-                    entityKey: t.getEntityAt(f.get("start")),
-                    offsetKey: E,
+        (e.prototype = Object.create(t.prototype)),
+        (e.prototype.constructor = e),
+        (e.__proto__ = t),
+        (e.prototype.render = function () {
+            var t = this.props,
+                e = t.block,
+                r = t.children,
+                n = t.contentState,
+                c = t.decorator,
+                l = t.decoratorKey,
+                f = t.direction,
+                p = t.leafSet,
+                h = t.text,
+                d = e.getKey(),
+                g = p.get("leaves"),
+                y = c.getComponentForKey(l),
+                v = c.getPropsForKey(l),
+                m = o.encode(d, parseInt(l, 10), 0),
+                _ = h.slice(g.first().get("start"), g.last().get("end")),
+                b = s.getHTMLDirIfDifferent(u.getDirection(_), f);
+            return a.createElement(
+                y,
+                i({}, v, {
+                    contentState: n,
+                    decoratedText: _,
+                    dir: b,
+                    key: m,
+                    entityKey: e.getEntityAt(p.get("start")),
+                    offsetKey: m,
                 }),
-                n,
+                r,
             );
         }),
-        t
+        e
     );
-})(s.Component);
+})(a.Component);

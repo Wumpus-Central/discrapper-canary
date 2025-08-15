@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(95398),
     c = n(991621),
@@ -29,27 +29,27 @@ var r = n(255367),
     S = n(388032),
     A = n(810348);
 function N(e) {
-    let { src: t, width: n, height: r, hasMultiple: i = !1, options: o } = e,
-        { width: a, height: s } = (0, b.p)(i, {
+    let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
+        { width: o, height: s } = (0, b.p)(i, {
             width: n,
             height: r,
         });
     _.ZP.preloadImage({
         src: t,
         dimensions: {
-            maxWidth: a,
+            maxWidth: o,
             maxHeight: s,
             imageWidth: n,
             imageHeight: r,
         },
-        options: o,
+        options: a,
     });
 }
 function C(e, t) {
     return ((e % t) + t) % t;
 }
 function R(e) {
-    let { children: t, isObscured: n, src: o } = e,
+    let { children: t, isObscured: n, src: a } = e,
         [s, c] = i.useState(!1),
         d = i.useCallback(() => {
             c((e) => !e);
@@ -67,11 +67,11 @@ function R(e) {
                       onToggleObscurity: d,
                       children: (e) =>
                           (0, r.jsx)("div", {
-                              className: a()(A.obscureWrapper, { [A.obscure]: e }),
+                              className: o()(A.obscureWrapper, { [A.obscure]: e }),
                               children: t(e),
                           }),
                   },
-                  o,
+                  a,
               ),
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
@@ -95,12 +95,12 @@ function w(e) {
     let {
             items: t,
             onIndexChange: n,
-            startIndex: o = 0,
+            startIndex: a = 0,
             enabledContentHarmTypeFlags: l = 0,
             shouldHideMediaOptions: u = !1,
         } = e,
-        [f, _] = i.useState(o),
-        p = i.useRef(o),
+        [f, _] = i.useState(a),
+        p = i.useRef(a),
         { zoomed: m, setZoomed: N } = (0, E.Y)(),
         P = i.useCallback(
             (e) => {
@@ -146,7 +146,7 @@ function w(e) {
                                       },
                                       icon: s.j9r,
                                       tooltip: S.intl.string(S.t.vgfxaG),
-                                      className: a()(A.navPrev, e),
+                                      className: o()(A.navPrev, e),
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
@@ -154,7 +154,7 @@ function w(e) {
                                       },
                                       icon: s.d4D,
                                       tooltip: S.intl.string(S.t.XiOHRU),
-                                      className: a()(A.navNext, e),
+                                      className: o()(A.navNext, e),
                                   }),
                               ],
                           })

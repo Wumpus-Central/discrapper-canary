@@ -1,13 +1,13 @@
 n.d(t, {
-    MemberListContentSettingsMenu: () => h,
-    Z: () => p,
+    MemberListContentSettingsMenu: () => p,
+    Z: () => h,
 });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
-    s = n(485267),
-    o = n(71585),
+    o = n(485267),
+    s = n(71585),
     c = n(981631),
     u = n(388032);
 function d(e) {
@@ -35,9 +35,9 @@ function d(e) {
     }
     return e;
 }
-let h = (e) => {
+let p = (e) => {
         let { closePopout: t } = e,
-            i = (0, l.e7)([o.Z], () => o.Z.hidden);
+            i = (0, l.e7)([s.Z], () => s.Z.hidden);
         return (0, r.jsx)(a.v2r, {
             onSelect: () => {},
             navId: "member-list-settings-menu",
@@ -62,14 +62,14 @@ let h = (e) => {
                         label: u.intl.string(u.t.AhNYub),
                         checked: i,
                         action: () => {
-                            (0, s.lY)(), null == t || t();
+                            (0, o.lY)(), null == t || t();
                         },
                     }),
                 ],
             }),
         });
     },
-    p = () => {
+    h = () => {
         let e = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
             targetElementRef: e,
@@ -78,7 +78,7 @@ let h = (e) => {
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(h, { closePopout: t });
+                return (0, r.jsx)(p, { closePopout: t });
             },
             children: (t) => {
                 var n, i;

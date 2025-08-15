@@ -1,16 +1,16 @@
 n.d(t, {
     Ag: () => u,
-    jP: () => o,
+    jP: () => a,
     pN: () => c,
-    u3: () => a,
+    u3: () => o,
     v8: () => s,
 });
 var r = n(818083),
     i = n(141537),
-    o = (function (e) {
+    a = (function (e) {
         return (e.POPOUT = "popout"), (e.SIDEBAR = "sidebar"), (e.LEGACY = "legacy"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e.SERVER_RAIL_TOP = "server-rail-top"),
             (e.SERVER_RAIL_BOTTOM = "server-rail-bottom"),

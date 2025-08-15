@@ -1,66 +1,66 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(913527),
-    l = n.n(s),
+    l = n(120356),
+    a = n.n(l),
+    o = n(913527),
+    s = n.n(o),
     c = n(481060),
     u = n(739566),
     d = n(318713),
-    f = n(223021),
-    _ = n(942951),
-    p = n(594174),
-    h = n(55935),
-    m = n(764295),
-    g = n(388032),
-    E = n(424271),
-    b = n(724913),
-    y = n(328756);
-let O = (e) => {
-    let { reportingUserId: t, guildId: n, compact: o, channel: s, messageId: O, reportedTimestamp: v } = e,
-        I = p.default.getUser(t),
-        T = i.useMemo(() => (o ? (0, f.Z)((0, h.vc)(l()(), "LT")) : null), [o]),
-        S = (0, _.l)({
-            user: I,
-            channelId: s.id,
+    p = n(223021),
+    m = n(942951),
+    f = n(594174),
+    _ = n(55935),
+    g = n(764295),
+    h = n(388032),
+    b = n(424271),
+    E = n(724913),
+    C = n(328756);
+let v = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: v, reportedTimestamp: O } = e,
+        y = f.default.getUser(t),
+        x = i.useMemo(() => (l ? (0, p.Z)((0, _.vc)(s()(), "LT")) : null), [l]),
+        j = (0, m.l)({
+            user: y,
+            channelId: o.id,
             guildId: n,
-            messageId: O,
-        })((0, u.JZ)(I, s)),
-        A = null != I ? I.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
-        N =
-            null != I
-                ? g.intl.format(m.default["+zqXZm"], {
-                      username: I.username,
-                      onUserClick: S,
+            messageId: v,
+        })((0, u.JZ)(y, o)),
+        I = null != y ? y.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : C,
+        S =
+            null != y
+                ? h.intl.format(g.default["+zqXZm"], {
+                      username: y.username,
+                      onUserClick: j,
                   })
-                : g.intl.string(m.default.xpRjfX);
+                : h.intl.string(g.default.xpRjfX);
     return (0, r.jsxs)("div", {
-        className: a()(b.messageSpine, b.repliedMessage, T),
+        className: a()(E.messageSpine, E.repliedMessage, x),
         children: [
             (0, r.jsx)(c.qEK, {
-                src: A,
+                src: I,
                 size: c.EFr.SIZE_16,
-                className: E.avatar,
+                className: b.avatar,
                 "aria-label": "",
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: E.username,
-                children: N,
+                className: b.username,
+                children: S,
             }),
             (0, r.jsxs)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 children: [
                     (0, r.jsx)("span", {
-                        className: E.timestampSeparator,
+                        className: b.timestampSeparator,
                         children: "\u2022",
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: v,
-                        className: E.timestamp,
+                        timestamp: O,
+                        className: b.timestamp,
                     }),
                 ],
             }),

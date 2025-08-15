@@ -3,13 +3,13 @@ n.d(t, {
     BH: () => A,
     Cs: () => R,
     G1: () => E,
-    IC: () => V,
+    IC: () => Z,
     OT: () => Y,
     Qf: () => en,
     Vw: () => y,
     WW: () => K,
     XM: () => O,
-    XS: () => k,
+    XS: () => j,
     Yq: () => W,
     bl: () => G,
     eu: () => q,
@@ -19,7 +19,7 @@ n.d(t, {
     iC: () => M,
     jT: () => B,
     jm: () => ee,
-    mO: () => Z,
+    mO: () => V,
     ne: () => $,
     qS: () => b,
     ql: () => T,
@@ -35,8 +35,8 @@ n.d(t, {
     n(642613);
 var r = n(392711),
     i = n(979554),
-    o = n(134432),
-    a = n(358085),
+    a = n(134432),
+    o = n(358085),
     s = n(937615),
     l = n(223143),
     c = n(922347),
@@ -110,7 +110,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         return null == r ? "" : (0, s.T4)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
     },
     v = (e) =>
-        (0, a.isAndroid)() || (0, a.isIOS)()
+        (0, o.isAndroid)() || (0, o.isIOS)()
             ? e
                 ? _.tuJ.MOBILE_PREMIUM_TIER_2
                 : _.tuJ.MOBILE
@@ -129,8 +129,8 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     T = (e, t) => {
         var n, r, i;
-        let o = null != (i = e.prices[t]) ? i : null;
-        return null != o ? (null == (r = o.countryPrices) || null == (n = r.prices) ? void 0 : n[0]) : null;
+        let a = null != (i = e.prices[t]) ? i : null;
+        return null != a ? (null == (r = a.countryPrices) || null == (n = r.prices) ? void 0 : n[0]) : null;
     },
     S = {
         original: -1,
@@ -205,22 +205,22 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     D = (e, t) => {
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
-            a = (0, o.oO)(t.size * (0, o.x_)()),
+            o = (0, a.oO)(t.size * (0, a.x_)()),
             s = null != (n = null == t ? void 0 : t.format) ? n : "png";
         if (null != r)
-            return "https://".concat(r, "/app-assets/").concat(_.XAJ, "/").concat(e, ".").concat(s, "?size=").concat(a);
+            return "https://".concat(r, "/app-assets/").concat(_.XAJ, "/").concat(e, ".").concat(s, "?size=").concat(o);
         let l = _.ANM.APPLICATION_ASSET(_.XAJ, e, s);
-        return "".concat(location.protocol).concat(i).concat(l, "?size=").concat(a);
+        return "".concat(location.protocol).concat(i).concat(l, "?size=").concat(o);
     },
     L = (e) => P(e, i.Z.AVATAR_DECORATION),
     x = (e) => w(e, i.Z.AVATAR_DECORATION),
     M = (e, t) => (0, r.uniqBy)([...L(e), ...x(t)], "id"),
-    j = (e) => P(e, i.Z.PROFILE_EFFECT),
-    k = (e) => w(e, i.Z.PROFILE_EFFECT),
-    U = (e, t) => (0, r.uniqBy)([...j(e), ...k(t)], "id"),
+    k = (e) => P(e, i.Z.PROFILE_EFFECT),
+    j = (e) => w(e, i.Z.PROFILE_EFFECT),
+    U = (e, t) => (0, r.uniqBy)([...k(e), ...j(t)], "id"),
     G = (e, t) => {
-        let n = j(t),
-            r = k(e).filter((e) => {
+        let n = k(t),
+            r = j(e).filter((e) => {
                 let { id: t } = e;
                 return !n.some((e) => e.id === t);
             });
@@ -230,9 +230,9 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         };
     },
     B = (e) => P(e, i.Z.NAMEPLATE),
-    Z = (e) => e.applicationId === _.XAJ,
+    V = (e) => e.applicationId === _.XAJ,
     F = 3.8,
-    V = (e) => F * e,
+    Z = (e) => F * e,
     H = 86400000,
     Y = (e) => {
         let t = new Date(),
@@ -274,12 +274,12 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     J = () => {
         let { categories: e, purchases: t, isFetchingCategories: n, isFetchingPurchases: r } = (0, l.ZP)(),
-            o = w(e, i.Z.NAMEPLATE),
-            a = P(t, i.Z.NAMEPLATE),
-            s = new Set(a.map((e) => e.id));
+            a = w(e, i.Z.NAMEPLATE),
+            o = P(t, i.Z.NAMEPLATE),
+            s = new Set(o.map((e) => e.id));
         return {
-            available: o.filter((e) => !s.has(e.id)),
-            purchased: a,
+            available: a.filter((e) => !s.has(e.id)),
+            purchased: o,
             isFetchingCategories: n,
             isFetchingPurchases: r,
         };
@@ -311,19 +311,19 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     et = (e, t) =>
         e.sort((e, n) => {
             var r, i;
-            let o = y(e, t, !1),
-                a = y(n, t, !1);
+            let a = y(e, t, !1),
+                o = y(n, t, !1);
             return (
-                (null != (r = null == o ? void 0 : o.amount) ? r : 0) -
-                (null != (i = null == a ? void 0 : a.amount) ? i : 0)
+                (null != (r = null == a ? void 0 : a.amount) ? r : 0) -
+                (null != (i = null == o ? void 0 : o.amount) ? i : 0)
             );
         }),
     en = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
-            var r, i, o, a;
-            let s = null != (o = null == (r = e.eligibleOffers) ? void 0 : r.some((e) => n.includes(e))) && o;
-            return (null != (a = null == (i = t.eligibleOffers) ? void 0 : i.some((e) => n.includes(e))) && a) - s;
+            var r, i, a, o;
+            let s = null != (a = null == (r = e.eligibleOffers) ? void 0 : r.some((e) => n.includes(e))) && a;
+            return (null != (o = null == (i = t.eligibleOffers) ? void 0 : i.some((e) => n.includes(e))) && o) - s;
         });
     };

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(311570),
-    o = n(399606),
-    a = n(335131),
+    a = n(399606),
+    o = n(335131),
     s = n(1870),
     l = n(267097);
 function c(e, t, n) {
@@ -65,7 +65,7 @@ function f(e, t) {
 let _ = i.v.VARIANTS_GROUP;
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        [t, n, i, l, c, u] = (0, o.Wu)([s.Z], () => [
+        [t, n, i, l, c, u] = (0, a.Wu)([s.Z], () => [
             s.Z.isFetching,
             s.Z.isClaiming,
             s.Z.fetchError,
@@ -83,7 +83,7 @@ function p() {
             f.current = i;
         }, [i]),
         (0, r.useEffect)(() => {
-            (!0 === e && d.current && null == f.current) || (0, a.qg)({ variantsReturnStyle: _ });
+            (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: _ });
         }, [e]),
         {
             isClaiming: n,
@@ -100,8 +100,8 @@ function h(e, t) {
         {
             isFetching: r,
             categories: i,
-            fetchCategoriesError: o,
-            refreshCategories: a,
+            fetchCategoriesError: a,
+            refreshCategories: o,
         } = (0, l.Z)(
             {
                 paymentGateway: n,
@@ -126,10 +126,10 @@ function h(e, t) {
         isClaiming: s,
         categories: i,
         purchases: f,
-        fetchCategoriesError: o,
+        fetchCategoriesError: a,
         fetchPurchasesError: c,
         claimError: u,
-        refreshCategories: a,
+        refreshCategories: o,
         hasPreviouslyFetched: _,
     };
 }

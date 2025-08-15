@@ -1,96 +1,95 @@
 n.d(t, {
     ZP: () => O,
-    c4: () => g,
-    st: () => b,
+    c4: () => h,
+    st: () => y,
 });
 var r = n(255367),
-    i = n(73800),
+    l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    s = n(710251),
-    l = n(442837),
+    i = n.n(o),
+    a = n(710251),
+    s = n(442837),
     c = n(481060),
     u = n(292419),
     d = n(282397),
-    f = n(188597),
-    _ = n(981631),
-    p = n(388032),
-    h = n(954800);
-function m(e) {
+    p = n(188597),
+    m = n(981631),
+    g = n(388032),
+    f = n(954800);
+function b(e) {
     return {
         text: e,
         icon: (0, r.jsx)(c.bbz, {
-            className: h.icon,
+            className: f.icon,
             dotRadius: 3.5,
             themed: !0,
         }),
     };
 }
-function g(e) {
+function h(e) {
     return {
-        text: null != e ? e : p.intl.string(p.t.VCsUJi),
+        text: null != e ? e : g.intl.string(g.t.VCsUJi),
         color: "text-danger",
         icon: (0, r.jsx)(c.Mgn, {
             size: "xs",
             color: "currentColor",
-            className: a()(h.icon, h.errorIcon),
+            className: i()(f.icon, f.errorIcon),
         }),
     };
 }
-function E(e, t) {
-    switch ((0, f.t$)(t, e)) {
-        case f.rQ.SENDING:
-            return m(p.intl.string(p.t.RiLfBQ));
-        case f.rQ.CREATED:
-            return m(p.intl.formatToPlainString(p.t["7ePV4u"], { applicationName: t.author.username }));
-        case f.rQ.TIMED_OUT:
-            return g(p.intl.string(p.t.h8hzPT));
-        case f.rQ.FAILED:
-            return g(t.interactionError);
-    }
-}
-function b(e) {
-    let { className: t, icon: n, text: i, color: o } = e;
+function y(e) {
+    let { className: t, icon: n, text: l, color: o } = e;
     return (0, r.jsxs)("div", {
-        className: a()(h.wrapper, t),
+        className: i()(f.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
                 color: o,
                 scaleFontToUserSetting: !0,
-                children: i,
+                children: l,
             }),
         ],
     });
 }
-function y(e) {
+let O = l.memo(function (e) {
     let { message: t, className: n, component: o } = e,
-        a = (0, s.Z)(),
-        c = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
-    i.useEffect(() => {
+        i = (0, a.Z)(),
+        c = (0, s.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+    l.useEffect(() => {
         let e = null;
-        if (t.hasFlag(_.iLy.LOADING) && null != c) {
-            let n = (0, f.ow)(t.id) - Date.now();
-            n > 0 && (e = setTimeout(() => a(), 1000 + n));
+        if (t.hasFlag(m.iLy.LOADING) && null != c) {
+            let n = (0, p.ow)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => i(), 1000 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [a, c, t]);
-    let p = null;
-    if (null == o) p = E(c, t);
+    }, [i, c, t]);
+    let f = null;
+    if (null == o)
+        f = (function (e, t) {
+            switch ((0, p.t$)(t, e)) {
+                case p.rQ.SENDING:
+                    return b(g.intl.string(g.t.RiLfBQ));
+                case p.rQ.CREATED:
+                    return b(g.intl.formatToPlainString(g.t["7ePV4u"], { applicationName: t.author.username }));
+                case p.rQ.TIMED_OUT:
+                    return h(g.intl.string(g.t.h8hzPT));
+                case p.rQ.FAILED:
+                    return h(t.interactionError);
+            }
+        })(c, t);
     else {
         let e = (0, u.SD)(c, t, o);
-        null != e && (p = g(e));
+        null != e && (f = h(e));
     }
-    if (null == p) return null;
-    let { text: h, icon: m, color: y } = p;
-    return (0, r.jsx)(b, {
-        icon: m,
-        text: h,
+    if (null == f) return null;
+    let { text: O, icon: v, color: j } = f;
+    return (0, r.jsx)(y, {
+        icon: v,
+        text: O,
         className: n,
-        color: y,
+        color: j,
     });
-}
-let O = i.memo(y);
+});

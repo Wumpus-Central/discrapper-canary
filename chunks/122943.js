@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(201895),
@@ -72,7 +72,7 @@ function T(e) {
     let {
             channel: t,
             textVariant: n,
-            textClassName: o,
+            textClassName: a,
             iconClassName: f,
             hideText: m = !1,
             hideTooltip: y = !1,
@@ -98,7 +98,7 @@ function T(e) {
                       size: "custom",
                       color: S,
                       channel: t,
-                      className: a()(b.icon, f),
+                      className: o()(b.icon, f),
                   })
                 : (0, r.jsx)(s.ua7, {
                       text: A,
@@ -112,7 +112,7 @@ function T(e) {
                                   size: "custom",
                                   color: S,
                                   channel: t,
-                                  className: a()(b.icon, f),
+                                  className: o()(b.icon, f),
                               }),
                           ),
                   }),
@@ -130,7 +130,7 @@ function T(e) {
             !m &&
                 (0, r.jsxs)(h.Z, {
                     variant: n,
-                    className: o,
+                    className: a,
                     canTruncate: v,
                     hideTooltip: y,
                     children: [L(), R && null != A && " (".concat(A, ")")],
@@ -143,7 +143,7 @@ function S(e) {
             channel: t,
             textVariant: n,
             textClassName: i,
-            iconClassName: o,
+            iconClassName: a,
             hideText: l = !1,
             hideTooltip: c = !1,
             canTruncate: f = !0,
@@ -168,7 +168,7 @@ function S(e) {
             size: "custom",
             color: h,
             channel: t,
-            className: a()(b.icon, o),
+            className: o()(b.icon, a),
         }),
         text: T,
         tooltipText: c ? void 0 : I,

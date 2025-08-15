@@ -6,8 +6,8 @@ n.d(t, {
     n(781311);
 var r = n(498607),
     i = n.n(r),
-    o = n(715903),
-    a = n(69882),
+    a = n(715903),
+    o = n(69882),
     s = n(709054),
     l = n(733026);
 function c(e, t, n) {
@@ -72,8 +72,8 @@ function p(e, t) {
     for (let t of r) if (e.userId === t) return !0;
     for (let t of n) if (_(e.nick, t)) return !0;
     if (null == e.user) return !1;
-    let { globalName: i, username: o } = e.user;
-    for (let e of n) if (_(o, e)) return !0;
+    let { globalName: i, username: a } = e.user;
+    for (let e of n) if (_(a, e)) return !0;
     for (let e of n) if (_(i, e)) return !0;
     return !1;
 }
@@ -125,9 +125,9 @@ class m {
             ((!n && !r && !i && !l) ||
                 !!(
                     (n && e.hasUnusualDmActivity) ||
-                    (r && (0, a.b)(e)) ||
+                    (r && (0, o.b)(e)) ||
                     (i && e.hasUnusualAccountActivity) ||
-                    (l && (0, o.EY)(e))
+                    (l && (0, a.EY)(e))
                 ))
         );
     }

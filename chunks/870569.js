@@ -28,8 +28,8 @@ let u = r.forwardRef(function (e, t) {
             role: v,
             tooltipColor: S,
             tooltipForceOpen: T,
-            tooltipContentClassName: I,
-            plated: N,
+            tooltipContentClassName: N,
+            plated: I,
         } = e,
         y =
             "function" == typeof p
@@ -46,7 +46,7 @@ let u = r.forwardRef(function (e, t) {
         text: n,
         "aria-label": C,
         color: S,
-        tooltipContentClassName: I,
+        tooltipContentClassName: N,
         forceOpen: T,
         children: (e) => {
             var n,
@@ -115,8 +115,8 @@ let u = r.forwardRef(function (e, t) {
                             [d.orangeGlow]: x,
                             [d.disabled]: m,
                             [d.enabled]: !m,
-                            [d.plated]: N,
-                            [d.plateMuted]: b && N,
+                            [d.plated]: I,
+                            [d.plateMuted]: b && I,
                         }),
                         onClick: (e) => {
                             null != p && p(), null != u && u(e);

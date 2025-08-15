@@ -1,41 +1,41 @@
-n.r(t), n.d(t, { default: () => _ });
+n.r(t), n.d(t, { default: () => m });
 var r = n(255367);
 n(73800);
 var i = n(399606),
-    o = n(481060),
+    l = n(481060),
     a = n(923500),
-    s = n(522664),
-    l = n(247206),
+    o = n(522664),
+    s = n(247206),
     c = n(774863),
     u = n(668058),
     d = n(160877),
-    f = n(388032);
-function _(e) {
-    let { channelId: t, messageId: n, transitionState: _, onClose: p } = e,
-        h = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
-        m = h.attachments.map((e) => e.id),
-        g = h.attachments.map((e) => e.filename),
-        { reportFalsePositive: E, isReportFalsePositiveLoading: b } = (0, u.$)({
+    p = n(388032);
+function m(e) {
+    let { channelId: t, messageId: n, transitionState: m, onClose: f } = e,
+        _ = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
+        g = _.attachments.map((e) => e.id),
+        h = _.attachments.map((e) => e.filename),
+        { reportFalsePositive: b, isReportFalsePositiveLoading: E } = (0, u.$)({
             onSuccess: () => {
-                (0, d.s)(p), a.Z.disableFalsePositiveButton(t, n);
+                (0, d.s)(f), a.Z.disableFalsePositiveButton(t, n);
             },
             onError: () => {
-                (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.R0RpRU), o.ToastType.FAILURE));
+                (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
             },
             report: () => {
-                (0, s.Eq)(t, n, m, g);
+                (0, o.Eq)(t, n, g, h);
             },
         });
     return (
-        h.attachments.length > 0 || p(),
+        _.attachments.length > 0 || f(),
         (0, r.jsx)(d.$, {
             messageId: n,
             channelId: t,
-            isReportFalsePositiveLoading: b,
-            analyticsContext: l.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-            onConfirmPress: E,
-            transitionState: _,
-            onClose: p,
+            isReportFalsePositiveLoading: E,
+            analyticsContext: s.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
+            onConfirmPress: b,
+            transitionState: m,
+            onClose: f,
         })
     );
 }

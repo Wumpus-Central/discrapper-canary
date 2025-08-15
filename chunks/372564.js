@@ -1,18 +1,18 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    s = n(374470),
-    l = n(481060),
+    l = n(120356),
+    a = n.n(l),
+    o = n(374470),
+    s = n(481060),
     c = n(239091),
     u = n(454585),
     d = n(984370),
-    f = n(981631),
-    _ = n(388032),
-    p = n(413140),
-    h = n(430864);
-function m(e, t, n) {
+    p = n(981631),
+    h = n(388032),
+    f = n(413140),
+    m = n(430864);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,38 +36,15 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 function y(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class O extends i.Component {
+class _ extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -77,21 +54,21 @@ class O extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)("div", {
-                          className: a()(p.topic, p.expandable, h.markup),
+                          className: a()(f.topic, f.expandable, m.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleClick,
                           children: [
-                              (0, r.jsx)(l.P3F, {
+                              (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  "aria-label": _.intl.string(_.t.mKwsSk),
-                                  className: p.topicClickTarget,
+                                  "aria-label": h.intl.string(h.t.mKwsSk),
+                                  className: f.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : _.intl.string(_.t.XJVlf3),
+                                  : h.intl.string(h.t.XJVlf3),
                           ],
                       }),
                   ],
@@ -100,52 +77,56 @@ class O extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            m(this, "_mouseDown", !1),
-            m(this, "_mouseUp", !1),
-            m(this, "handleOpenTopic", (e) => {
+            g(this, "_mouseDown", !1),
+            g(this, "_mouseUp", !1),
+            g(this, "handleOpenTopic", (e) => {
                 let t = e.target;
-                if ((0, s.k)(t)) {
+                if ((0, o.k)(t)) {
                     if (y(t)) return;
                     let e = t.parentNode;
-                    if ((0, s.k)(e) && y(e)) return;
+                    if ((0, o.k)(e) && y(e)) return;
                 }
-                (0, l.ZDy)(async () => {
+                (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("65631").then(n.bind(n, 10722));
-                    return (t) => (0, r.jsx)(e, g({}, t, this.props));
+                    return (t) => (0, r.jsx)(e, b({}, t, this.props));
                 });
             }),
-            m(this, "onMouseDown", () => {
+            g(this, "onMouseDown", () => {
                 this._mouseDown = !0;
             }),
-            m(this, "onMouseMove", () => {
+            g(this, "onMouseMove", () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            m(this, "onMouseUp", (e) => {
-                this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e),
+            g(this, "onMouseUp", (e) => {
+                this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e),
                     (this._mouseUp = !0),
                     (this._mouseDown = !1);
             }),
-            m(this, "handleContextMenu", (e) => {
+            g(this, "handleContextMenu", (e) => {
                 let { channel: t, guild: i } = this.props;
                 (0, c.jW)(e, async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("66549"),
-                        n.e("25548"),
-                        n.e("99956"),
-                        n.e("49049"),
-                        n.e("62856"),
-                        n.e("1355"),
-                        n.e("46154"),
-                        n.e("91315"),
-                        n.e("16459"),
-                        n.e("54273"),
-                        n.e("24783"),
-                        n.e("82358"),
-                    ]).then(n.bind(n, 439635));
+                    let { default: e } = await n.e("24783").then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            b(g({}, n), {
+                            (function (e, t) {
+                                return (
+                                    (t = null != t ? t : {}),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(t)).forEach(function (n) {
+                                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                          }),
+                                    e
+                                );
+                            })(b({}, n), {
                                 channel: t,
                                 guild: i,
                                 includeTopic: !0,
@@ -153,7 +134,7 @@ class O extends i.Component {
                         );
                 });
             }),
-            m(this, "handleClick", (e) => {
+            g(this, "handleClick", (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -162,4 +143,4 @@ class O extends i.Component {
             });
     }
 }
-let v = O;
+let C = _;

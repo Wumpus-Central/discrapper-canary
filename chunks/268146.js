@@ -1,7 +1,7 @@
 n.d(t, {
     X4: () => r,
     Xo: () => i,
-    vA: () => o,
+    vA: () => a,
 });
 var r = (function (e) {
         return (
@@ -23,6 +23,6 @@ var r = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.WINDOW = "window"), (e.SCREEN = "screen"), (e.CAMERA = "camera"), e;
     })({});

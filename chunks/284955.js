@@ -1,23 +1,23 @@
 var r = n(127849),
     i = n(476078),
-    o = n(796138),
-    a = function (e) {
+    a = n(796138),
+    o = function (e) {
         return i.slice(0, e.length) === e;
     };
 e.exports = (function () {
-    return a("Bun/")
+    return o("Bun/")
         ? "BUN"
-        : a("Cloudflare-Workers")
+        : o("Cloudflare-Workers")
           ? "CLOUDFLARE"
-          : a("Deno/")
+          : o("Deno/")
             ? "DENO"
-            : a("Node.js/")
+            : o("Node.js/")
               ? "NODE"
               : r.Bun && "string" == typeof Bun.version
                 ? "BUN"
                 : r.Deno && "object" == typeof Deno.version
                   ? "DENO"
-                  : "process" === o(r.process)
+                  : "process" === a(r.process)
                     ? "NODE"
                     : r.window && r.document
                       ? "BROWSER"

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => a });
+n.d(t, { ZP: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class a extends r.Z {
     static createFromServer(e) {
-        return new o({
+        return new a({
             userId: e.user_id,
             subscriptionId: e.subscription_id,
             oldCurrency: e.old_currency,
@@ -61,4 +61,4 @@ class o extends r.Z {
             (this.priceChangeId = e.priceChangeId);
     }
 }
-let a = o;
+let o = a;

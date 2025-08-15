@@ -1,48 +1,48 @@
-t.d(r, { default: () => x }), t(388685);
-var a = t(255367),
-    i = t(73800),
-    C = t(481060),
-    s = t(100527),
-    l = t(906732),
-    n = t(626135),
-    o = t(281494),
-    d = t(687555),
-    p = t(596583),
-    c = t(981631);
-let x = (e) => {
-    let r,
-        { transitionState: t, onClose: x, sourceAnalyticsLocations: f } = e,
-        [_, h] = i.useState(1),
-        [u, j] = i.useState(new Set()),
-        [L, m] = i.useState(new Map()),
-        { analyticsLocations: y } = (0, l.ZP)([...f, s.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    switch (_) {
+r.d(t, { default: () => h }), r(388685);
+var a = r(255367),
+    i = r(73800),
+    s = r(481060),
+    l = r(100527),
+    n = r(906732),
+    o = r(626135),
+    C = r(281494),
+    d = r(687555),
+    p = r(596583),
+    c = r(981631);
+let h = (e) => {
+    let t,
+        { transitionState: r, onClose: h, sourceAnalyticsLocations: u } = e,
+        [f, x] = i.useState(1),
+        [_, g] = i.useState(new Set()),
+        [j, L] = i.useState(new Map()),
+        { analyticsLocations: m } = (0, n.ZP)([...u, l.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    switch (f) {
         case 1:
-            r = (0, a.jsx)(d.ZP, {
+            t = (0, a.jsx)(d.ZP, {
                 onShare: async (e) => {
                     try {
-                        n.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: y });
-                        let r = await (0, o.jy)(e.map((e) => e.id));
-                        h(2), j(new Set(e)), m(r);
+                        o.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: m });
+                        let t = await (0, C.jy)(e.map((e) => e.id));
+                        x(2), g(new Set(e)), L(t);
                     } catch (e) {}
                 },
-                onClose: x,
+                onClose: h,
             });
             break;
         case 2:
-            r = (0, a.jsx)(p.Z, {
-                selectedUsers: u,
-                trialCreationResult: L,
-                onClose: x,
+            t = (0, a.jsx)(p.Z, {
+                selectedUsers: _,
+                trialCreationResult: j,
+                onClose: h,
             });
             break;
         default:
-            x();
+            h();
     }
-    return (0, a.jsx)(C.Y0X, {
+    return (0, a.jsx)(s.Y0X, {
         "data-migration-pending": !0,
-        transitionState: t,
+        transitionState: r,
         parentComponent: "ReferralProgramShareModal",
-        children: r,
+        children: t,
     });
 };

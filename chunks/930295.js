@@ -7,9 +7,9 @@ n.d(t, {
     n(415506);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(97613),
-    s = n.n(a),
+    a = n(73800),
+    o = n(97613),
+    s = n.n(o),
     l = n(867309),
     c = n(374470),
     u = n(846519),
@@ -77,7 +77,7 @@ function T(e, t) {
 }
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     A = new Set(["Spacebar", " ", "Enter"]);
-class N extends (r = o.Component) {
+class N extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -147,7 +147,7 @@ class N extends (r = o.Component) {
     render() {
         let { children: e, useMouseEnter: t } = this.props,
             n = this.shouldShowPopout(this.props, this.state);
-        return (0, i.jsxs)(o.Fragment, {
+        return (0, i.jsxs)(a.Fragment, {
             children: [
                 e(
                     T(v({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
@@ -175,8 +175,8 @@ class N extends (r = o.Component) {
                 align: t,
                 nudgeAlignIntoViewport: n,
                 useRawTargetDimensions: r,
-                spacing: o,
-                autoInvert: a,
+                spacing: a,
+                autoInvert: o,
                 fixed: s,
                 positionKey: l,
                 disablePointerEvents: c,
@@ -198,8 +198,8 @@ class N extends (r = o.Component) {
                       align: t,
                       nudgeAlignIntoViewport: n,
                       useRawTargetDimensions: r,
-                      spacing: o,
-                      autoInvert: a,
+                      spacing: a,
+                      autoInvert: o,
                       fixed: s,
                       positionKey: null != l ? l : String(p),
                       disablePointerEvents: c,
@@ -214,9 +214,9 @@ class N extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            O(this, "domElementRef", o.createRef()),
-            O(this, "layerRef", o.createRef()),
-            O(this, "popoutRef", o.createRef()),
+            O(this, "domElementRef", a.createRef()),
+            O(this, "layerRef", a.createRef()),
+            O(this, "popoutRef", a.createRef()),
             O(this, "resizeObserver", void 0),
             O(this, "popoutId", "popout_".concat(s()())),
             O(this, "loadingTimeout", new u.V7()),
@@ -268,9 +268,9 @@ class N extends (r = o.Component) {
             O(this, "handleClick", (e) => {
                 let { onShiftClick: t, shouldShow: n, onRequestOpen: r, onRequestClose: i } = this.props;
                 if ((null == e ? void 0 : e.shiftKey) && null != t) return void t(e);
-                let o = null != n;
-                (o ? n : this.state.shouldShowPopout) ? null == i || i() : null == r || r(),
-                    o ||
+                let a = null != n;
+                (a ? n : this.state.shouldShowPopout) ? null == i || i() : null == r || r(),
+                    a ||
                         this.setState((e) => {
                             let { shouldShowPopout: t } = e;
                             return { shouldShowPopout: !t };

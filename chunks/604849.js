@@ -1,11 +1,11 @@
-n.d(t, { c: () => l });
+n.d(t, { c: () => o });
 var r = n(442837),
     i = n(581883),
-    o = n(594174),
+    l = n(594174),
     a = n(981312),
     s = n(667172);
-let l = () => {
-    let e = o.default.getCurrentUser(),
+let o = () => {
+    let e = l.default.getCurrentUser(),
         t = (0, r.e7)([i.Z], () => {
             var e, t, n;
             return (
@@ -17,6 +17,6 @@ let l = () => {
             );
         }),
         n = (0, a.U)(),
-        l = (0, s.v4)({ location: "useSafetyAlertsSettingOrDefault" });
-    return (!!n && !!l) || ((n || (null == e ? void 0 : e.isStaff()) === !0) && t);
+        o = (0, s.v4)({ location: "useSafetyAlertsSettingOrDefault" });
+    return (!!n && !!o) || ((n || (null == e ? void 0 : e.isStaff()) === !0) && t);
 };

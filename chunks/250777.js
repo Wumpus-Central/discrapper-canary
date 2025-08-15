@@ -16,14 +16,14 @@ var t = "[0-9](_*[0-9])*",
         ],
         relevance: 0,
     };
-function o(e, t, n) {
-    return -1 === n ? "" : e.replace(t, (r) => o(e, t, n - 1));
+function a(e, t, n) {
+    return -1 === n ? "" : e.replace(t, (r) => a(e, t, n - 1));
 }
 e.exports = function (e) {
     let t = e.regex,
         n = "[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*",
-        r = n + o("(?:<" + n + "~~~(?:\\s*,\\s*" + n + "~~~)*>)?", /~~~/g, 2),
-        a = {
+        r = n + a("(?:<" + n + "~~~(?:\\s*,\\s*" + n + "~~~)*>)?", /~~~/g, 2),
+        o = {
             keyword: [
                 "synchronized",
                 "abstract",
@@ -89,7 +89,7 @@ e.exports = function (e) {
             className: "params",
             begin: /\(/,
             end: /\)/,
-            keywords: a,
+            keywords: o,
             relevance: 0,
             contains: [e.C_BLOCK_COMMENT_MODE],
             endsParent: !0,
@@ -97,7 +97,7 @@ e.exports = function (e) {
     return {
         name: "Java",
         aliases: ["jsp"],
-        keywords: a,
+        keywords: o,
         illegal: /<\/|#/,
         contains: [
             e.COMMENT("/\\*\\*", "\\*/", {
@@ -162,13 +162,13 @@ e.exports = function (e) {
             {
                 begin: ["(?:" + r + "\\s+)", e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
                 className: { 2: "title.function" },
-                keywords: a,
+                keywords: o,
                 contains: [
                     {
                         className: "params",
                         begin: /\(/,
                         end: /\)/,
-                        keywords: a,
+                        keywords: o,
                         relevance: 0,
                         contains: [s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, i, e.C_BLOCK_COMMENT_MODE],
                     },

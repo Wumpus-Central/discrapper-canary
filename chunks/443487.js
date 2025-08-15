@@ -10,8 +10,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(686546),
     c = n(884902),
@@ -29,14 +29,14 @@ function g() {
     });
 }
 function E(e) {
-    let { children: t, selected: n, className: i, usesCardRows: a = !1, isAutoHeight: s = !1 } = e;
+    let { children: t, selected: n, className: i, usesCardRows: o = !1, isAutoHeight: s = !1 } = e;
     return (0, r.jsx)("div", {
-        className: o()(
+        className: a()(
             m.container,
             m.openOnHover,
             {
                 [m.selected]: n,
-                [m.usesCardRows]: a,
+                [m.usesCardRows]: o,
                 [m.isAutoHeight]: s,
             },
             i,
@@ -55,19 +55,19 @@ function y(e) {
     let { users: t, guildId: n, "aria-hidden": i } = e;
     return (0, r.jsx)("div", {
         className: m.facePile,
-        children: t.map((e, o) => {
-            let a = (0, r.jsx)(s.qEK, {
+        children: t.map((e, a) => {
+            let o = (0, r.jsx)(s.qEK, {
                 src: e.getAvatarURL(n, 80),
                 size: s.EFr.SIZE_16,
                 "aria-label": i ? void 0 : e.username,
                 "aria-hidden": i,
             });
-            return o === t.length - 1
+            return a === t.length - 1
                 ? (0, r.jsx)(
                       "div",
                       {
                           className: m.facePileItem,
-                          children: a,
+                          children: o,
                       },
                       e.id,
                   )
@@ -78,7 +78,7 @@ function y(e) {
                           height: 16,
                           className: m.facePileItem,
                           mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
-                          children: a,
+                          children: o,
                       },
                       e.id,
                   );
@@ -87,12 +87,12 @@ function y(e) {
 }
 function O(e) {
     var t;
-    let { guildId: n, channelId: i, entry: o, maxAvatars: l = 3 } = e,
-        g = o.author_id,
-        E = (0, a.e7)([f.default], () => f.default.getUser(g)),
-        { displayParticipants: b, participant1: O, participant2: v, numOtherParticipants: I } = (0, p.Z)(o, l),
-        T = (0, a.e7)([u.ZP], () => u.ZP.getMember(n, g)),
-        S = (0, a.e7)([d.Z], () => {
+    let { guildId: n, channelId: i, entry: a, maxAvatars: l = 3 } = e,
+        g = a.author_id,
+        E = (0, o.e7)([f.default], () => f.default.getUser(g)),
+        { displayParticipants: b, participant1: O, participant2: v, numOtherParticipants: I } = (0, p.Z)(a, l),
+        T = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, g)),
+        S = (0, o.e7)([d.Z], () => {
             var e;
             return (null == T ? void 0 : T.colorRoleId) != null
                 ? null == (e = d.Z.getRole(n, T.colorRoleId))
@@ -158,7 +158,7 @@ function v(e) {
 function I(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
-        className: o()(m.cardRow, n),
+        className: a()(m.cardRow, n),
         children: t,
     });
 }

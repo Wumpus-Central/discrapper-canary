@@ -1,159 +1,146 @@
-n.d(t, { Z: () => b }), n(35282);
+n.d(t, { Z: () => m }), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(91192),
-    s = n(442837),
-    l = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(129861),
     u = n(700582),
     d = n(600164),
-    f = n(158776),
-    _ = n(51144),
-    p = n(469407);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    p = n(158776),
+    h = n(51144),
+    f = n(469407);
 function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function b(e) {
+    var t, n;
     let {
-            user: t,
-            row: n,
-            hideDiscriminator: i,
-            comparator: h,
-            selected: g,
-            checked: b,
-            disabled: y = !1,
-            inlineUsername: O = !0,
+            user: i,
+            row: m,
+            hideDiscriminator: g,
+            comparator: b,
+            selected: y,
+            checked: _,
+            disabled: C = !1,
+            inlineUsername: x = !0,
             onClick: v,
-            onMouseEnter: I,
-            "aria-setsize": T,
-            "aria-posinset": S,
+            onMouseEnter: j,
+            "aria-setsize": O,
+            "aria-posinset": E,
         } = e,
-        A = (0, s.e7)([f.Z], () => f.Z.getStatus(t.id)),
-        N = () => (null != h && h === t.tag ? _.ZP.getName(t) : null != h && "" !== h ? h : _.ZP.getName(t)),
-        C = () => {
-            null != I && I(n);
-        },
-        R = () => {
-            null != v && v(t.id);
-        },
-        P = (0, a.JA)(String(t.id));
+        S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
+        P = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
-        l.P3F,
-        E(
-            m(
-                {
-                    id: "user-row-".concat(n),
-                    className: o()(p.friendWrapper, { [p.disabled]: y }),
-                    onClick: R,
-                    onMouseEnter: C,
+        s.P3F,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                id: "user-row-".concat(m),
+                className: l()(f.friendWrapper, { [f.disabled]: C }),
+                onClick: () => {
+                    null != v && v(i.id);
                 },
-                P,
-            ),
+                onMouseEnter: () => {
+                    null != j && j(m);
+                },
+            },
+            P,
+        )),
+        (n = n =
             {
                 role: "option",
-                "aria-selected": b,
-                "aria-disabled": y,
-                "aria-setsize": T,
-                "aria-posinset": S,
+                "aria-selected": _,
+                "aria-disabled": C,
+                "aria-setsize": O,
+                "aria-posinset": E,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
-                    className: o()(p.friend, {
-                        [p.friendSelected]: g,
-                        [p.twoRows]: !O,
+                    className: l()(f.friend, {
+                        [f.friendSelected]: y,
+                        [f.twoRows]: !x,
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
-                            user: t,
-                            status: A,
-                            className: p.avatar,
+                            user: i,
+                            status: S,
+                            className: f.avatar,
                         }),
                         (0, r.jsxs)(d.Z, {
-                            className: p.match,
+                            className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: O ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     tag: "strong",
-                                    className: p.nickname,
+                                    className: f.nickname,
                                     "aria-hidden": !0,
                                     variant: "text-md/medium",
-                                    children: N(),
+                                    children:
+                                        null != b && b === i.tag
+                                            ? h.ZP.getName(i)
+                                            : null != b && "" !== b
+                                              ? b
+                                              : h.ZP.getName(i),
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: (0, r.jsx)(c.Z, {
-                                        user: t,
-                                        hideDiscriminator: i,
-                                        className: p.discordTag,
-                                        usernameClass: p.__invalid_weightMedium,
-                                        discriminatorClass: p.__invalid_weightMedium,
+                                        user: i,
+                                        hideDiscriminator: g,
+                                        className: f.discordTag,
+                                        usernameClass: f.__invalid_weightMedium,
+                                        discriminatorClass: f.__invalid_weightMedium,
                                         forceUsername: !0,
                                     }),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(l.XZJ, {
+                        (0, r.jsx)(s.XZJ, {
                             displayOnly: !0,
                             size: 22,
-                            value: b,
-                            disabled: y,
-                            className: p.checkbox,
+                            value: _,
+                            disabled: C,
+                            className: f.checkbox,
                         }),
                     ],
                 }),
-            },
-        ),
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
 }

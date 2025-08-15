@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(663993),
     S = n(600164),
     T = n(482215),
-    I = n(581612),
-    N = n(580747),
+    N = n(581612),
+    I = n(580747),
     y = n(38618),
     A = n(375657),
     P = n(171393),
@@ -857,7 +857,7 @@ function ed() {
             cssDebuggingEnabled: L.default.cssDebuggingEnabled,
             layoutDebuggingEnabled: L.default.layoutDebuggingEnabled,
         })),
-        u = (0, N.Z)("highlight_void_toggleables");
+        u = (0, I.Z)("highlight_void_toggleables");
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(k.F, {
@@ -936,7 +936,7 @@ function ed() {
                 children: (0, i.jsx)(g.j7V, {
                     value: u,
                     note: "Highlights toggleable components: Checkbox (green), RadioGroup (yellow), Switch (blue)",
-                    onChange: (e) => (0, I.Z)("highlight_void_toggleables", e),
+                    onChange: (e) => (0, N.Z)("highlight_void_toggleables", e),
                     children: "Highlight Toggleable Components",
                 }),
             }),

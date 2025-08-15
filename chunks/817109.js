@@ -40,8 +40,8 @@ function i(e, t) {
         }
     return { status: e.status };
 }
-n.d(t, { H: () => o }), n(415506);
-class o {
+n.d(t, { H: () => a }), n(415506);
+class a {
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;
     }
@@ -52,12 +52,12 @@ class o {
             r(this, "fields", void 0),
             r(this, "error", void 0),
             r(this, "status", void 0);
-        let { message: o, code: a, retryAfter: s, fields: l, status: c } = i(e, t);
-        (this.message = o || n),
+        let { message: a, code: o, retryAfter: s, fields: l, status: c } = i(e, t);
+        (this.message = a || n),
             (this.retryAfter = s),
-            (this.code = a || -1),
+            (this.code = o || -1),
             (this.fields = l || {}),
             (this.status = c),
-            (this.error = Error(o));
+            (this.error = Error(a));
     }
 }

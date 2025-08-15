@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => T,
-    WrappedBalanceWidgetEarnedOrbsCoachmarkModal: () => N,
+    WrappedBalanceWidgetEarnedOrbsCoachmarkModal: () => I,
 });
 var i = n(255367),
     r = n(73800),
@@ -87,7 +87,7 @@ let S = () => {
             ],
         });
     };
-function I(e) {
+function N(e) {
     var { backgroundElementRef: t, onClickPill: n, onClose: s, onCloseCallback: a } = e;
     !(function (e, t) {
         if (null != e) {
@@ -141,11 +141,11 @@ function I(e) {
         ],
     });
 }
-function N(e) {
+function I(e) {
     return (0, i.jsx)(h.x, {
         errorSource: "ORBS_EARNED_ORBS_COACHMARK_MODAL",
         children: (0, i.jsx)(
-            I,
+            N,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

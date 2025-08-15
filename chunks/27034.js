@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(512722),
     l = n.n(s),
     c = n(867309),
@@ -21,9 +21,9 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -32,8 +32,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
@@ -45,7 +45,7 @@ function g(e) {
     };
 }
 function E(e) {
-    var t, n, o, s, c, h;
+    var t, n, a, s, c, h;
     let m,
         { header: E, isLargeModal: b, stepProps: y } = g(e),
         {
@@ -68,7 +68,7 @@ function E(e) {
         l()(null != D, "Unknown step for current payment flow.");
     let L = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
         x = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
-        M = null == D || null == (o = D.options) ? void 0 : o.sliderBodyClassName;
+        M = null == D || null == (a = D.options) ? void 0 : a.sliderBodyClassName;
     switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
         case f.h8.ADD_PAYMENT_STEPS:
             m = 408;
@@ -89,7 +89,7 @@ function E(e) {
                       children: [
                           (0, r.jsx)(u.hzk, {
                               "data-migration-pending": !0,
-                              className: a()(x, p.body, N, {
+                              className: o()(x, p.body, N, {
                                   [p.reviewStep]: O === f.h8.REVIEW,
                                   [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && w,
                               }),
@@ -107,7 +107,7 @@ function E(e) {
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)("form", {
-                                                      className: a()(p.sliderBody, M),
+                                                      className: o()(p.sliderBody, M),
                                                       ref: (e) => {
                                                           I(e);
                                                       },

@@ -1,21 +1,21 @@
 n.d(t, {
-    $q: () => _,
-    F6: () => f,
-    HI: () => h,
-    ZL: () => m,
-    eW: () => E,
-    p9: () => p,
+    $q: () => m,
+    F6: () => p,
+    HI: () => _,
+    ZL: () => g,
+    eW: () => h,
+    p9: () => f,
 });
 var r = n(442837),
     i = n(704215),
-    o = n(266454),
+    l = n(266454),
     a = n(70956),
-    s = n(709054),
-    l = n(276444),
+    o = n(709054),
+    s = n(276444),
     c = n(870041),
     u = n(533525),
     d = n(388032);
-function f(e) {
+function p(e) {
     let t = (e - Date.now()) / a.Z.Millis.HOUR;
     return t > 24
         ? d.intl.formatToPlainString(d.t["g9s+dH"], { numDays: Math.floor(t / 24) })
@@ -23,27 +23,26 @@ function f(e) {
           ? d.intl.formatToPlainString(d.t.k9v339, { numHours: Math.floor(t) })
           : d.intl.formatToPlainString(d.t["/d0GmZ"], { numMinutes: Math.floor(60 * t) });
 }
-let _ = () => (0, o.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
-    p = () => {
-        (0, o.Q3)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+let m = () => (0, l.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
+    f = () => {
+        (0, l.Q3)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
     },
-    h = (e) => {
+    _ = (e) => {
         let { trialOffer: t } = e;
         if (null == t) return !1;
         let n = void 0 !== t.referrer_id,
             r = void 0 === t.redeemed_at,
-            i = new Date(s.default.extractTimestamp(t.id)),
-            o = new Date() >= i;
-        return n && r && o;
+            i = new Date(o.default.extractTimestamp(t.id)),
+            l = new Date();
+        return n && r && l >= i;
     },
-    m = () => {
-        (0, o.Q3)(i.z.REFERRAL_PROGRAM_POPOVER);
+    g = () => {
+        (0, l.Q3)(i.z.REFERRAL_PROGRAM_POPOVER);
     },
-    g = () => (0, o.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
-    E = () => {
+    h = () => {
         let e = c.ZP.useExperiment({ location: "useIsReferralProgramPopoverShowable" }),
             t = (0, u.b)("useIsReferralProgramPopoverShowable", e.cohort === c.xI.Control),
-            n = g(),
-            i = (0, r.e7)([l.Z], () => l.Z.getReferralsRemaining());
-        return t && !1 === n && null !== i && i > 0 && e.cohort !== c.xI.Control;
+            n = (0, l.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
+            a = (0, r.e7)([s.Z], () => s.Z.getReferralsRemaining());
+        return t && !1 === n && null !== a && a > 0 && e.cohort !== c.xI.Control;
     };

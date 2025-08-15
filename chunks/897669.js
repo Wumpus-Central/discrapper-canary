@@ -1,29 +1,29 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(665149),
+    l = n(665149),
     a = n(894017),
-    s = n(79874),
-    l = n(854698),
+    o = n(79874),
+    s = n(854698),
     c = n(390966),
     u = n(388032),
     d = n(719188);
-function f(e) {
+function p(e) {
     let { guildEvent: t, recurrenceId: n } = e,
-        f = (0, s.ZP)(t, n),
-        _ = (0, a.Z)(n, t.id);
+        p = (0, o.ZP)(t, n),
+        h = (0, a.Z)(n, t.id);
     if (null == t) return null;
-    let p =
+    let f =
         (null == t ? void 0 : t.scheduled_start_time) != null
-            ? (0, l.lh)(_, f.startTime, new Date(null == t ? void 0 : t.scheduled_start_time))
+            ? (0, s.lh)(h, p.startTime, new Date(null == t ? void 0 : t.scheduled_start_time))
             : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.ZP.Divider, { className: d.divider }),
+            (0, r.jsx)(l.ZP.Divider, { className: d.divider }),
             (0, r.jsx)(c.z, {
-                startTime: f.startTime.toISOString(),
-                status: null != p ? p : t.status,
+                startTime: p.startTime.toISOString(),
+                status: null != f ? f : t.status,
                 liveText: u.intl.string(u.t.kM6e4O),
                 className: d.eventSchedule,
                 textVariant: "text-lg/semibold",

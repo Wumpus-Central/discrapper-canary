@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(846519),
     l = n(224706),
     c = n(669764);
@@ -35,7 +35,7 @@ class f {
             this._fetched.add(t), e.push(t);
         }),
             this._pending.clear(),
-            o()
+            a()
                 .chunk(e, d)
                 .forEach((e) => {
                     l.Z.getDetectableGamesSupplemental(e);
@@ -65,7 +65,7 @@ function h(e, t) {
                 : void 0,
         [t],
     );
-    return (0, a.cj)([c.Z], () =>
+    return (0, o.cj)([c.Z], () =>
         null == e
             ? {
                   isFetching: !1,

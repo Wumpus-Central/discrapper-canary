@@ -1,8 +1,8 @@
 n.d(t, { H: () => s });
 var r = n(457330),
     i = n(358085),
-    o = n(856651),
-    a = n(981631);
+    a = n(856651),
+    o = n(981631);
 async function s(e) {
     let {
             location: t,
@@ -21,7 +21,7 @@ async function s(e) {
             ""
                 .concat(window.location.protocol, "//")
                 .concat(window.location.host)
-                .concat(a.Z5c.CONNECTIONS(e), "?loading=true"),
+                .concat(o.Z5c.CONNECTIONS(e), "?loading=true"),
             "authorize",
             "scrollbars=yes,resizable=yes,toolbar=no,location=yes,top="
                 .concat(_, ",left=")
@@ -30,7 +30,7 @@ async function s(e) {
                 .concat(d),
         ));
     let h = c;
-    if (null == h && e !== o.Kt)
+    if (null == h && e !== a.Kt)
         try {
             let { body: i } = await r.Z.authorize(e, {
                 location: t,

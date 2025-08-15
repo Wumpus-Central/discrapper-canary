@@ -28,13 +28,13 @@ function i(e) {
     return e;
 }
 n.d(t, {
-    Ru: () => a,
-    aH: () => o,
+    Ru: () => o,
+    aH: () => a,
 });
-var o = (function (e) {
+var a = (function (e) {
         return (e.DEFAULT = "AppIcon"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e.BRAND_DARK = "BrandDarkIcon"),
             (e.BRAND_INVERTED = "BrandInvertedIcon"),
@@ -65,8 +65,8 @@ var o = (function (e) {
     })({});
 i(
     {},
-    o,
     a,
+    o,
     (function (e) {
         return (
             (e.DRIP = "DripIcon"),

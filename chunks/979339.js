@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s }), n(388685), n(539854);
+n.d(t, { Z: () => o }), n(388685), n(539854);
 var r = n(442837),
     i = n(136015),
     l = n(565799),
     a = n(501655);
-function s(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         [n] = (0, r.e7)(
             [l.Z],

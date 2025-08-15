@@ -1,79 +1,27 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(955415),
-    s = n(846587),
-    l = n(409059),
+    o = n(846587),
+    s = n(409059),
     c = n(260539),
     u = n(388032),
     d = n(427600),
-    f = n(105341);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function g(e) {
+    p = n(105341);
+function m(e) {
     var t;
-    let { code: _ } = e,
-        h = (0, i.e7)([l.Z], () => l.Z.getGuildTemplate(_));
-    if (null == h || h.state === c.Rj.RESOLVING)
+    let { code: m } = e,
+        f = (0, i.e7)([s.Z], () => s.Z.getGuildTemplate(m));
+    if (null == f || f.state === c.Rj.RESOLVING)
         return (0, r.jsxs)(a.Z, {
             children: [
                 (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.Xj87YW) }),
                 (0, r.jsx)(a.Z.Body, { resolving: !0 }),
             ],
         });
-    if (h.state === c.Rj.EXPIRED)
+    if (f.state === c.Rj.EXPIRED)
         return (0, r.jsxs)(a.Z, {
             children: [
                 (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.C7ZRNz) }),
@@ -88,42 +36,85 @@ function g(e) {
                 }),
             ],
         });
-    let g = () => {
-            (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
-                return (t) => (0, r.jsx)(e, m(p({}, t), { guildTemplate: h }));
-            });
-        },
-        E = __OVERLAY__
-            ? (0, r.jsx)(a.Z.Button, {
-                  isDisabled: !0,
-                  color: a.Z.Button.Colors.PRIMARY,
-                  children: u.intl.string(u.t.W7NTWl),
-              })
-            : (0, r.jsx)(a.Z.Button, {
-                  onClick: g,
-                  submitting: h.state === c.Rj.ACCEPTING,
-                  color: a.Z.Button.Colors.GREEN,
-                  children: u.intl.string(u.t["a3Gl+f"]),
-              });
+    let _ = __OVERLAY__
+        ? (0, r.jsx)(a.Z.Button, {
+              isDisabled: !0,
+              color: a.Z.Button.Colors.PRIMARY,
+              children: u.intl.string(u.t.W7NTWl),
+          })
+        : (0, r.jsx)(a.Z.Button, {
+              onClick: () => {
+                  (0, l.ZDy)(async () => {
+                      let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
+                      return (t) => {
+                          var n, i;
+                          return (0, r.jsx)(
+                              e,
+                              ((n = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      "function" == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              }),
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0,
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, t)),
+                              (i = i = { guildTemplate: f }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                    }),
+                              n),
+                          );
+                      };
+                  });
+              },
+              submitting: f.state === c.Rj.ACCEPTING,
+              color: a.Z.Button.Colors.GREEN,
+              children: u.intl.string(u.t["a3Gl+f"]),
+          });
     return (0, r.jsxs)(a.Z, {
         children: [
             (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.kAvFkJ) }),
             (0, r.jsxs)(a.Z.Body, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: f.headerLine,
+                        className: p.headerLine,
                         children: [
-                            (0, r.jsx)(s.Z, { className: d.icon }),
+                            (0, r.jsx)(o.Z, { className: d.icon }),
                             (0, r.jsx)(a.Z.Info, {
-                                title: h.name,
+                                title: f.name,
                                 children: u.intl.format(u.t.cGXXHB, {
-                                    usageCount: String(null != (t = h.usageCount) ? t : 0),
+                                    usageCount: String(null != (t = f.usageCount) ? t : 0),
                                 }),
                             }),
                         ],
                     }),
-                    E,
+                    _,
                 ],
             }),
         ],

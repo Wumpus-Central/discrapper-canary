@@ -15,13 +15,13 @@ var r = n(255367),
     m = n(888831);
 function b(e) {
     let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: f, spacing: b = 0 } = e,
-        { isOpen: _, setIsOpen: y } = (0, p.Z)(),
+        { isOpen: O, setIsOpen: y } = (0, p.Z)(),
         v = i.useCallback(() => {
             y(!1);
         }, [y]),
         j = i.useCallback(() => {
-            y(!_);
-        }, [_, y]);
+            y(!O);
+        }, [O, y]);
     (0, c.ZP)(() => {
         let e = () => {
             y(!1);
@@ -35,7 +35,7 @@ function b(e) {
     let { entrypoint: C } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(a.yRy, {
         targetElementRef: f,
-        shouldShow: _,
+        shouldShow: O,
         align: l,
         animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
         animationPosition: C === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
@@ -49,7 +49,7 @@ function b(e) {
                     [m.repositionLayerTitlebarPopout]: C === d.u3.TITLE_BAR_LEFT,
                     [m.repositionLayerSidebarPopout]: C === d.u3.SERVER_RAIL_TOP,
                 }),
-                children: (0, r.jsx)(O, {}),
+                children: (0, r.jsx)(_, {}),
             }),
         children: (e, n) => {
             let { isShown: r } = n;
@@ -57,7 +57,7 @@ function b(e) {
         },
     });
 }
-function O() {
+function _() {
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [

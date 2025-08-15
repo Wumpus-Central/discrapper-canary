@@ -1,15 +1,15 @@
-n.d(t, { G: () => a });
+n.d(t, { G: () => o });
 var r = n(73800),
     i = n(15624),
-    o = n(866483);
-function a(e) {
+    a = n(866483);
+function o(e) {
     let t = i.Z.useCanUIRequestGatewaySocket();
     r.useEffect(() => {
         if (t)
             return (
-                o.m$(e),
+                a.m$(e),
                 () => {
-                    o.HY(e);
+                    a.HY(e);
                 }
             );
     }, [e, t]);

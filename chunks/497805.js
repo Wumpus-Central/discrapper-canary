@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(570140),
-    a = n(317770),
+    a = n(570140),
+    o = n(317770),
     s = n(40851),
     l = n(594174),
     c = n(585483),
@@ -47,9 +47,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,8 +58,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = null;
@@ -69,8 +69,8 @@ function g(e, t) {
 async function E(e) {
     var t,
         {
-            userId: o,
-            section: a,
+            userId: a,
+            section: o,
             subsection: f,
             guildId: h,
             channelId: E,
@@ -90,14 +90,16 @@ async function E(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]);
-    let S = l.default.getUser(o);
+    let S = l.default.getUser(a);
     if (null == S) return;
     let A = l.default.getCurrentUser();
     null != A &&
         (m = await (0, i.ZDy)(
             async () => {
                 let e = (
-                    await Promise.all([n.e("16459"), n.e("82412"), n.e("62880"), n.e("76708")]).then(n.bind(n, 866035))
+                    await Promise.all([n.e("79312"), n.e("1268"), n.e("82412"), n.e("62880"), n.e("12756")]).then(
+                        n.bind(n, 866035),
+                    )
                 ).default;
                 return (t) =>
                     (0, r.jsx)(
@@ -107,7 +109,7 @@ async function E(e) {
                                 user: S,
                                 currentUser: A,
                                 guildId: h,
-                                initialSection: a,
+                                initialSection: o,
                                 initialSubsection: f,
                                 channelId: E,
                                 showGuildProfile: y,
@@ -120,7 +122,7 @@ async function E(e) {
                     );
             },
             {
-                modalKey: g(o, y ? h : void 0),
+                modalKey: g(a, y ? h : void 0),
                 contextKey: (0, i.VnL)(null != (t = null != O ? O : (0, s.GB)()) ? t : d.IlC.APP),
                 onCloseRequest: () => {
                     if (u.Z.hasPendingChanges()) {
@@ -135,12 +137,12 @@ async function E(e) {
 function b() {
     null != m && (0, i.Mr3)(m), (m = null);
 }
-class y extends a.Z {
+class y extends o.Z {
     _initialize() {
-        o.Z.subscribe("USER_PROFILE_MODAL_OPEN", E), o.Z.subscribe("USER_PROFILE_MODAL_CLOSE", b);
+        a.Z.subscribe("USER_PROFILE_MODAL_OPEN", E), a.Z.subscribe("USER_PROFILE_MODAL_CLOSE", b);
     }
     _terminate() {
-        o.Z.unsubscribe("USER_PROFILE_MODAL_OPEN", E), o.Z.unsubscribe("USER_PROFILE_MODAL_CLOSE", b);
+        a.Z.unsubscribe("USER_PROFILE_MODAL_OPEN", E), a.Z.unsubscribe("USER_PROFILE_MODAL_CLOSE", b);
     }
 }
 let O = new y();

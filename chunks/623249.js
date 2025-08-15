@@ -18,9 +18,9 @@ var r = n(255367),
     f = n(915750),
     x = n(509212),
     h = n(113434),
-    j = n(497505),
-    b = n(475595),
-    _ = n(667105),
+    b = n(497505),
+    _ = n(475595),
+    j = n(667105),
     v = n(981631),
     C = n(388032),
     y = n(301889),
@@ -60,7 +60,7 @@ function S(e) {
         k = (0, g.O5)(),
         q = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         I = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
-        Q = (0, _.g2)({
+        Q = (0, j.g2)({
             useReducedMotion: I,
             className: y.colorTransition,
         }),
@@ -68,13 +68,13 @@ function S(e) {
         V = (0, x.Bz)(A),
         M = (0, i.e7)([m.Z], () => m.Z.getState().theme),
         L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: Z, startingConsoleQuest: W } = (0, h.GI)({
+        { startConsoleQuest: W, startingConsoleQuest: Z } = (0, h.GI)({
             questId: A.id,
             beforeRequest: () => {
                 Q.startAnimation(),
                     k({
                         questId: A.id,
-                        questContent: j.jn.CONNECTIONS_MODAL,
+                        questContent: b.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
                         sourceQuestContent: P,
                     });
@@ -135,8 +135,8 @@ function S(e) {
                                 children: C.intl.string(C.t["+/hZMz"]),
                             }),
                             (0, r.jsxs)(u.P3F, {
-                                className: a()(y.refreshWrapper, { [y.disabled]: W }),
-                                onClick: Z,
+                                className: a()(y.refreshWrapper, { [y.disabled]: Z }),
+                                onClick: W,
                                 children: [
                                     Q.render(),
                                     (0, r.jsx)(u.Text, {
@@ -187,7 +187,7 @@ function S(e) {
                                                       {
                                                           className: y.gameTile,
                                                           alt: A.config.messages.gameTitle,
-                                                          src: (0, b.fh)(A, b.eC.GAME_TILE, L).url,
+                                                          src: (0, _.fh)(A, _.eC.GAME_TILE, L).url,
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -232,7 +232,7 @@ function S(e) {
                                 (0, x.V$)(
                                     { quest: A },
                                     {
-                                        content: j.jn.CONNECTIONS_MODAL,
+                                        content: b.jn.CONNECTIONS_MODAL,
                                         ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                                         impressionId: q,
                                         sourceQuestContent: P,

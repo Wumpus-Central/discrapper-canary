@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    o = n.n(i),
-    a = n(773080);
-function s(e) {
+l.d(t, { Z: () => a });
+var r = l(255367);
+l(73800);
+var n = l(120356),
+    o = l.n(n),
+    i = l(773080);
+function a(e) {
     let { className: t } = e;
-    return (0, r.jsx)("div", { className: o()(a.image, t) });
+    return (0, r.jsx)("div", { className: o()(i.image, t) });
 }

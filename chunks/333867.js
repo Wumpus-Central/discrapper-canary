@@ -2,8 +2,8 @@ n.d(t, { Z: () => T }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(772848),
-    o = n(481060),
-    a = n(570140),
+    a = n(481060),
+    o = n(570140),
     s = n(159351),
     l = n(667),
     c = n(335131),
@@ -70,9 +70,9 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,8 +81,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let O = "payment-modal",
@@ -110,7 +110,7 @@ function T(e) {
         L = h ? v : O,
         x = u.default.getCurrentUser();
     if (!(null == x ? void 0 : x.verified))
-        return void (0, o.ZDy)(async () => {
+        return void (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
             return (t) => {
                 var { onClose: n } = t,
@@ -125,10 +125,10 @@ function T(e) {
                 );
             };
         });
-    a.Z.wait(() => {
-        a.Z.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+    o.Z.wait(() => {
+        o.Z.dispatch({ type: "PAYMENT_MODAL_OPEN" });
     }),
-        (0, o.ZDy)(
+        (0, a.ZDy)(
             async () => (e) => {
                 var { onClose: t, returnRef: n } = e,
                     i = b(e, ["onClose", "returnRef"]);
@@ -171,7 +171,7 @@ function T(e) {
                         P && (0, c.qg)({ variantsReturnStyle: R });
                 },
                 onCloseRequest: () => {
-                    null != t && I.has(t) && (0, o.Mr3)(L);
+                    null != t && I.has(t) && (0, a.Mr3)(L);
                 },
             },
         );

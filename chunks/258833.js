@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(147913),
     i = n(460181),
-    o = n(474873),
-    a = n(523746),
+    a = n(474873),
+    o = n(523746),
     s = n(592125),
     l = n(292959),
     c = n(944486),
@@ -51,17 +51,17 @@ function O(e, t, n) {
         e
     );
 }
-let v = (0, i.uk)("call_calling", o.Z.getSoundpack());
+let v = (0, i.uk)("call_calling", a.Z.getSoundpack());
 var I = new WeakMap();
 class T extends r.Z {
     _initialize() {
         this.stores = new Map()
-            .set(a.Z, this.handleRingUpdate)
+            .set(o.Z, this.handleRingUpdate)
             .set(l.Z, this.handleRingUpdate)
             .set(u.Z, this.handleRingUpdate)
             .set(d.Z, this.handleRingUpdate)
             .set(_.Z, this.handleChannelRTCStoreChange)
-            .set(o.Z, this.handleSoundpackUpdate);
+            .set(a.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
@@ -79,13 +79,13 @@ class T extends r.Z {
                 null == n || r || !e || l.Z.isSoundDisabled("call_calling") || u.Z.disableSounds ? v.stop() : v.loop();
             }),
             O(this, "handleSoundpackUpdate", () => {
-                v.stop(), (v = (0, i.uk)("call_calling", o.Z.getSoundpack()));
+                v.stop(), (v = (0, i.uk)("call_calling", a.Z.getSoundpack()));
             }),
             O(this, "handleRingUpdate", () => {
                 var e, t;
                 let n = c.Z.getVoiceChannelId(),
                     r = null != (t = null == (e = s.Z.getChannel(n)) ? void 0 : e.guild_id) ? t : null,
-                    i = a.Z.getCalls().some(
+                    i = o.Z.getCalls().some(
                         (e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId,
                     );
                 this._handleRing(i || E(this, I).size > 0, r);

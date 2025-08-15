@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(97613),
-    o = n.n(i),
-    a = n(772848),
+    a = n.n(i),
+    o = n(772848),
     s = n(481060),
     l = n(570140),
     c = n(159351),
@@ -77,9 +77,9 @@ function A(e, t) {
         r,
         i = N(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -88,8 +88,8 @@ function N(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function C(e) {
@@ -107,24 +107,24 @@ function C(e) {
             paymentModalBanner: L,
             isGift: x = !1,
             giftMessage: M,
-            giftStyle: j,
-            giftingOrigin: k,
+            giftStyle: k,
+            giftingOrigin: j,
             subscriptionTier: U,
             trialId: G,
             postSuccessGuild: B,
-            openInvoiceId: Z,
+            openInvoiceId: V,
             applicationId: F,
-            referralTrialOfferId: V,
+            referralTrialOfferId: Z,
             giftRecipient: H,
             returnRef: Y,
             subscription: W,
             skipConfirm: K,
         } = null != e ? e : {},
         z = !1,
-        q = (0, a.Z)(),
+        q = (0, o.Z)(),
         X = h.default.getCurrentUser(),
         Q = (0, E.M5)(X, O.p9.TIER_2),
-        J = o()("payment-modal"),
+        J = a()("payment-modal"),
         $ = (0, E.Wz)(U),
         ee = !1;
     return (0, s.ZDy)(
@@ -134,21 +134,22 @@ function C(e) {
                 n.e("17938"),
                 n.e("94136"),
                 n.e("84992"),
-                n.e("47238"),
+                n.e("54433"),
+                n.e("99315"),
             ]).then(n.bind(n, 7305));
             return (n) => {
-                var { onClose: o } = n,
-                    a = A(n, ["onClose"]);
+                var { onClose: a } = n,
+                    o = A(n, ["onClose"]);
                 return (0, r.jsx)(
                     e,
-                    S(I({}, a), {
+                    S(I({}, o), {
                         loadId: q,
                         subscriptionTier: U,
                         skuId: $,
                         isGift: x,
                         giftMessage: M,
-                        giftStyle: j,
-                        giftingOrigin: k,
+                        giftStyle: k,
+                        giftingOrigin: j,
                         giftRecipient: H,
                         initialPlanId: t,
                         followupSKUInfo: i,
@@ -156,7 +157,7 @@ function C(e) {
                             if (ee) return;
                             (ee = !0), g.S.dispatch(y.CkL.PREMIUM_PAYMENT_MODAL_CLOSED);
                             let n = () => {
-                                o(),
+                                a(),
                                     null == v || v(e),
                                     e &&
                                         (null == N || N(),
@@ -187,9 +188,9 @@ function C(e) {
                         trialId: G,
                         postSuccessGuild: B,
                         planGroup: O.Y1,
-                        openInvoiceId: Z,
+                        openInvoiceId: V,
                         applicationId: F,
-                        referralTrialOfferId: V,
+                        referralTrialOfferId: Z,
                         returnRef: Y,
                         subscription: W,
                         skipConfirm: !!K,

@@ -23,8 +23,8 @@ var i = n(255367),
     v = n(638631),
     S = n(869783),
     T = n(388032),
-    I = n(876544),
-    N = n(181960),
+    N = n(876544),
+    I = n(181960),
     y = n(313199),
     A = n(821969);
 let P = r.forwardRef((e, t) => {
@@ -50,18 +50,18 @@ let P = r.forwardRef((e, t) => {
     return (0, i.jsx)(m.Gt, {
         value: Z,
         children: (0, i.jsxs)("div", {
-            className: a()(I.container, I.heroHeadingContainer, n),
+            className: a()(N.container, N.heroHeadingContainer, n),
             ref: t,
             "data-testid": "marketing-page-hero-header",
             children: [
                 (0, i.jsx)("div", {
-                    className: I.container,
+                    className: N.container,
                     children: (0, i.jsxs)("div", {
-                        className: I.marketingPageTextContainer,
+                        className: N.marketingPageTextContainer,
                         children: [
                             k && (0, i.jsx)(v.Z, {}),
                             (0, i.jsx)(c.X6q, {
-                                className: I.marketingPageHeading,
+                                className: N.marketingPageHeading,
                                 variant: "display-sm",
                                 color: "header-primary",
                                 children: G,
@@ -70,7 +70,7 @@ let P = r.forwardRef((e, t) => {
                                 ? (0, i.jsx)(C.Z, { referrer: B })
                                 : V &&
                                   (0, i.jsx)("div", {
-                                      className: I.affinityDescriptionContainer,
+                                      className: N.affinityDescriptionContainer,
                                       children: (0, i.jsx)(E.Z, {
                                           textColor: "text-default",
                                           smallerText: !1,
@@ -79,19 +79,19 @@ let P = r.forwardRef((e, t) => {
                                   }),
                             w
                                 ? (0, i.jsx)("div", {
-                                      className: a()(I.buttonContainer, I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || M),
+                                      className: a()(N.buttonContainer, N.marketingPageCTAContainer, {
+                                          [N.marketingPageCTAMargin]: !(V || M),
                                       }),
                                       children: (0, i.jsx)(j.Z, {
-                                          className: a()(I.button, r),
+                                          className: a()(N.button, r),
                                           color: U,
                                       }),
                                   })
                                 : (0, i.jsx)(O.PK, {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
-                                      containerClassName: a()(I.marketingPageCTAContainer, {
-                                          [I.marketingPageCTAMargin]: !(V || M),
+                                      containerClassName: a()(N.marketingPageCTAContainer, {
+                                          [N.marketingPageCTAMargin]: !(V || M),
                                       }),
                                       buttonClassName: r,
                                       isApplicationHome: !0,
@@ -107,17 +107,17 @@ let P = r.forwardRef((e, t) => {
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: I.heroHeadingV2ArtContainer,
+                    className: N.heroHeadingV2ArtContainer,
                     children: (0, i.jsx)(p.Z, {
                         autoPlay: !H,
                         playsInline: !0,
                         preload: H ? "none" : "auto",
                         poster: y.Z,
                         loop: !0,
-                        className: I.heroHeadingV2Art,
+                        className: N.heroHeadingV2Art,
                         ref: D,
                         children: (0, i.jsx)("source", {
-                            src: F ? N.Z : A.Z,
+                            src: F ? I.Z : A.Z,
                             type: F ? S.m.MP4 : S.m.WEBM,
                         }),
                     }),

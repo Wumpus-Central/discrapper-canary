@@ -1,8 +1,8 @@
 n.d(t, {
     $P: () => c,
     NZ: () => r,
-    a0: () => o,
-    fL: () => a,
+    a0: () => a,
+    fL: () => o,
     nz: () => s,
     qO: () => l,
     xY: () => i,
@@ -42,12 +42,12 @@ var r = (function (e) {
     i = (function (e) {
         return (e.NONE_LEGACY = "none"), (e.GUILD = "guild"), (e.USER = "user"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.MANUAL = "manual"), (e.AUTO = "auto"), (e.AUTO_FALLBACK = "auto_fallback"), e;
     })({});
-let a = "2023-10_triggerdebuggingaa",
+let o = "2023-10_triggerdebuggingaa",
     s = "2023-10_guildaa",
-    l = [a, s];
+    l = [o, s];
 var c = (function (e) {
     return (
         (e[(e.NONE = 0)] = "NONE"),

@@ -1,21 +1,21 @@
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
 let r = n(959257),
     i = n(43767),
-    o = n(286110);
+    a = n(286110);
 t.DEFAULT_LOCALE = "en-US";
-class a {
+class o {
     constructor({
         initialLocale: e = t.DEFAULT_LOCALE,
         defaultLocale: n = t.DEFAULT_LOCALE,
         formatConfig: i = r.DEFAULT_FORMAT_CONFIG,
-        forceLookupMatcher: a = !1,
+        forceLookupMatcher: o = !1,
     }) {
         (this.onLocaleChange = (e) => (this._localeSubscriptions.add(e), () => this._localeSubscriptions.delete(e))),
             (this.currentLocale = e),
             (this.defaultLocale = n),
             (this.formatConfig = i),
-            (this._forceLookupMatcher = a),
-            (this.data = (0, o.makeDataFormatters)(
+            (this._forceLookupMatcher = o),
+            (this.data = (0, a.makeDataFormatters)(
                 [this.currentLocale, this.defaultLocale],
                 this.formatConfig,
                 this._forceLookupMatcher,
@@ -32,7 +32,7 @@ class a {
     }
     setLocale(e) {
         (this.currentLocale = e),
-            (this.data = (0, o.makeDataFormatters)(
+            (this.data = (0, a.makeDataFormatters)(
                 [this.currentLocale, this.defaultLocale],
                 this.formatConfig,
                 this._forceLookupMatcher,
@@ -61,4 +61,4 @@ class a {
         );
     }
 }
-t.IntlManager = a;
+t.IntlManager = o;

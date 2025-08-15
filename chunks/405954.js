@@ -3,40 +3,40 @@ var r = n(255367),
     i = n(73800),
     l = n(704215),
     a = n(481060),
-    s = n(436952),
-    o = n(839606),
+    o = n(436952),
+    s = n(839606),
     c = n(54480),
     u = n(266454),
     d = n(243778),
-    h = n(626135),
-    p = n(665149),
+    p = n(626135),
+    h = n(665149),
     f = n(981631),
-    g = n(921944),
-    m = n(388032);
+    m = n(921944),
+    g = n(388032);
 let b = function (e) {
     let { channel: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: b, closePicker: y } = (0, o.B)(),
-        { canAccessPicker: x, entryPoint: j } = (0, c.m)({
+        { activePickerChannelId: n, openPickerForChannel: b, closePicker: y } = (0, s.B)(),
+        { canAccessPicker: _, entryPoint: C } = (0, c.m)({
             location: "channel_header_toolbar",
             channelId: t.id,
         }),
-        _ = (0, u.Nj)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-        O = x && j === s.FN.TOOLBAR && _,
-        [v, C] = (0, d.US)(O ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
-        E = v === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
+        x = (0, u.Nj)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        v = _ && C === o.FN.TOOLBAR && x,
+        [j, O] = (0, d.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
+        E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
         S = i.useCallback(() => {
-            E && C(g.L.TAKE_ACTION),
+            E && O(m.L.TAKE_ACTION),
                 n === t.id
-                    ? (y(), h.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: "close" }))
-                    : (b(t.id), h.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: "open" }));
-        }, [n, t.id, y, b, E, C]);
-    return O
-        ? (0, r.jsx)(p.JO, {
+                    ? (y(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: "close" }))
+                    : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: "open" }));
+        }, [n, t.id, y, b, E, O]);
+    return v
+        ? (0, r.jsx)(h.JO, {
               onClick: S,
-              tooltip: m.intl.string(m.t.GixvUl),
+              tooltip: g.intl.string(g.t.GixvUl),
               icon: a.XBm,
               iconSize: 20,
-              "aria-label": m.intl.string(m.t.GixvUl),
+              "aria-label": g.intl.string(g.t.GixvUl),
               showBadge: E,
               selected: n === t.id,
           })

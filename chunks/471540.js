@@ -1,7 +1,7 @@
 var r = n(46015),
     i = n(77826),
-    o = n(382698),
-    a = n(497464),
+    a = n(382698),
+    o = n(497464),
     s = r("".charAt),
     l = r("".charCodeAt),
     c = r("".slice),
@@ -9,7 +9,7 @@ var r = n(46015),
         return function (t, n) {
             var r,
                 u,
-                d = o(a(t)),
+                d = a(o(t)),
                 f = i(n),
                 _ = d.length;
             return f < 0 || f >= _

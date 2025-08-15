@@ -1,39 +1,26 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
+    l = n(442837),
     a = n(25209),
-    s = n(39154),
-    l = n(627050),
+    o = n(39154),
+    s = n(627050),
     c = n(35125),
     u = n(905405),
     d = n(628238),
-    f = n(499401),
-    _ = n(693912),
-    p = n(869765),
-    h = n(699516),
-    m = n(352736),
-    g = n(937889),
-    E = n(739566),
-    b = n(267128),
-    y = n(507418),
-    O = n(348238),
+    p = n(499401),
+    h = n(693912),
+    f = n(869765),
+    m = n(699516),
+    g = n(352736),
+    b = n(937889),
+    y = n(739566),
+    _ = n(267128),
+    C = n(507418),
+    x = n(348238),
     v = n(981631),
-    I = n(388032);
-function T(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function S(e) {
+    j = n(388032);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,58 +31,62 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function A(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function N(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = i.memo(function (e) {
+let S = i.memo(function (e) {
     var t;
     let {
             baseMessage: n,
-            referencedMessage: T,
-            channel: A,
-            compact: C = !1,
-            referencedUsernameProfile: R,
-            referencedAvatarProfile: P,
-            setPopout: w,
-            isReplySpineClickable: D,
-            showReplySpine: L,
+            referencedMessage: S,
+            channel: P,
+            compact: I = !1,
+            referencedUsernameProfile: Z,
+            referencedAvatarProfile: T,
+            setPopout: N,
+            isReplySpineClickable: A,
+            showReplySpine: w,
         } = e,
-        x = T.state === p.Y.LOADED ? T.message : void 0,
-        M = (0, E.Uj)(x),
-        j = (0, u.p)(),
-        k = l.d.useExperiment({ location: "repliedMessage" }).enabled,
-        U = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        G = i.useMemo(() => {
-            if (null == x) return null;
-            let e = (0, s.Z)(x);
+        R = S.state === f.Y.LOADED ? S.message : void 0,
+        M = (0, y.Uj)(R),
+        k = (0, u.p)(),
+        D = s.d.useExperiment({ location: "repliedMessage" }).enabled,
+        L = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        U = i.useMemo(() => {
+            if (null == R) return null;
+            let e = (0, o.Z)(R);
             if (e.type === v.uaV.USER_JOIN)
                 return (0, a.Rp)(
-                    I.intl.formatToParts(m.Z.getSystemMessageUserJoin(e.id), {
+                    j.intl.formatToParts(g.Z.getSystemMessageUserJoin(e.id), {
                         username: null != M ? M.nick : e.author.username,
                         usernameHook: (e) => e,
                     }),
@@ -104,121 +95,121 @@ let C = i.memo(function (e) {
                 return (0, a.Rp)(
                     (0, c.PA)({
                         username: null != M ? M.nick : e.author.username,
-                        guildId: null == A ? void 0 : A.guild_id,
+                        guildId: null == P ? void 0 : P.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData,
                     }),
                 );
             if (e.type === v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, a.Rp)(
-                    (0, f.Y)({
+                    (0, p.Y)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
             if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, a.Rp)(
-                    (0, _.B2)({
+                    (0, h.B2)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
             if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.Rp)(
-                    (0, _.hj)({
+                    (0, h.hj)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
             else if (e.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : I.intl.string(I.t.wnn1DQ);
+                return "" !== e.content ? e.content : j.intl.string(j.t.wnn1DQ);
             if (null != e.content && "" !== e.content) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: j,
+                        shouldFilterKeywords: k,
                     },
-                    n = e.isFirstMessageInForumPost(A)
-                        ? N(S({}, t), {
+                    n = e.isFirstMessageInForumPost(P)
+                        ? E(O({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
-                              allowGameMentions: k,
+                              allowGameMentions: D,
                           })
-                        : N(S({}, t), {
+                        : E(O({}, t), {
                               formatInline: !0,
-                              allowHeading: U,
-                              allowList: U,
-                              allowGameMentions: k,
+                              allowHeading: L,
+                              allowList: L,
+                              allowGameMentions: D,
                           });
-                return (0, g.ZP)(e, n).content;
+                return (0, b.ZP)(e, n).content;
             }
             return null;
-        }, [x, M, A, U, j, k]),
-        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: Z } = (0, o.cj)(
-            [h.Z],
+        }, [R, M, P, L, k, D]),
+        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: F } = (0, l.cj)(
+            [m.Z],
             () => ({
-                isReplyAuthorBlocked: null != x && h.Z.isBlockedForMessage(x),
-                isReplyAuthorIgnored: null != x && h.Z.isIgnoredForMessage(x),
+                isReplyAuthorBlocked: null != R && m.Z.isBlockedForMessage(R),
+                isReplyAuthorIgnored: null != R && m.Z.isIgnoredForMessage(R),
             }),
-            [x],
+            [R],
         ),
-        F = (0, O.wq)(null == x ? void 0 : x.author.id, A.id),
-        V = (0, O.$3)(n, x),
-        H = (0, O.Wl)(x, A, R, w),
-        Y = (0, O.rY)(P, w),
+        H = (0, x.wq)(null == R ? void 0 : R.author.id, P.id),
+        G = (0, x.$3)(n, R),
+        V = (0, x.Wl)(R, P, Z, N),
+        z = (0, x.rY)(T, N),
         W = i.useCallback(() => {
-            w({
+            N({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
-        }, [w]),
-        K = (0, E.Uj)(n);
-    return (0, r.jsx)(b.Z, {
+        }, [N]),
+        Y = (0, y.Uj)(n);
+    return (0, r.jsx)(_.Z, {
         repliedAuthor: M,
         baseMessage: n,
-        channel: A,
-        baseAuthor: K,
-        referencedMessage: T,
-        content: G,
-        compact: C,
+        channel: P,
+        baseAuthor: Y,
+        referencedMessage: S,
+        content: U,
+        compact: I,
         isReplyAuthorBlocked: B,
-        isReplyAuthorIgnored: Z,
-        showAvatarPopout: P,
-        showUsernamePopout: R,
-        renderPopout: y.Z,
-        onClickAvatar: Y,
-        onClickUsername: H,
-        onClickReply: V,
-        onContextMenu: F,
+        isReplyAuthorIgnored: F,
+        showAvatarPopout: T,
+        showUsernamePopout: Z,
+        renderPopout: C.Z,
+        onClickAvatar: z,
+        onClickUsername: V,
+        onClickReply: G,
+        onContextMenu: H,
         onPopoutRequestClose: W,
-        isReplySpineClickable: D,
-        showReplySpine: L,
+        isReplySpineClickable: A,
+        showReplySpine: w,
     });
 });
-function R(e) {
+function P(e) {
     let {
         message: t,
         channel: n,
         compact: i,
-        setPopout: o,
+        setPopout: l,
         referencedUsernameProfile: a,
-        referencedAvatarProfile: s,
-        replyReference: l,
+        referencedAvatarProfile: o,
+        replyReference: s,
         replyMessage: c,
         isReplySpineClickable: u,
         showReplySpine: d = !0,
     } = e;
     return (
-        null != l &&
-        (0, r.jsx)(C, {
+        null != s &&
+        (0, r.jsx)(S, {
             baseMessage: t,
-            replyReference: l,
+            replyReference: s,
             referencedMessage: c,
             channel: n,
             compact: i,
-            setPopout: o,
+            setPopout: l,
             referencedUsernameProfile: a,
-            referencedAvatarProfile: s,
+            referencedAvatarProfile: o,
             isReplySpineClickable: u,
             showReplySpine: d,
         })

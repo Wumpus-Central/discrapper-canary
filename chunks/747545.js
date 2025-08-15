@@ -30,8 +30,8 @@ var i = n(255367),
     v = n(726985),
     S = n(65154),
     T = n(388032),
-    I = n(612232);
-let N = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
+    N = n(612232);
+let I = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
 function y() {
     let [e, t] = r.useState(!1),
         n = (0, c.e7)([j.Z], () => j.Z.isMediaFilterSettingLoading());
@@ -48,7 +48,7 @@ function y() {
     }, [n]),
     e)
         ? (0, i.jsx)("div", {
-              className: I.filterLoadingIndicator,
+              className: N.filterLoadingIndicator,
               children: (0, i.jsx)(u.$jN, {}),
           })
         : null;
@@ -76,7 +76,7 @@ function A(e) {
             j.Z.isEnabled()
                 ? null
                 : (0, i.jsx)(u.Text, {
-                      className: I.permissionWarning,
+                      className: N.permissionWarning,
                       color: "interactive-normal",
                       variant: "text-sm/normal",
                       children: T.intl.format(T.t.stagfH, { onEnableClick: () => m.Z.enable(!0) }),
@@ -84,7 +84,7 @@ function A(e) {
             A
                 ? null
                 : (0, i.jsx)(u.j7V, {
-                      className: I.previewToggle,
+                      className: N.previewToggle,
                       note: T.intl.string(T.t.WNbX4O),
                       onChange: (e) => {
                           x.qF.updateSetting(e),
@@ -93,7 +93,7 @@ function A(e) {
                       value: k,
                       hideBorder: !0,
                       children: (0, i.jsx)("div", {
-                          className: I.cameraPreviewTitle,
+                          className: N.cameraPreviewTitle,
                           children: T.intl.string(T.t["3Ppr1t"]),
                       }),
                   }),
@@ -106,7 +106,7 @@ function A(e) {
                             (0, i.jsx)(h.j, {
                                 deviceType: S.h7.VIDEO_INPUT,
                                 location: "CameraSettings",
-                                className: a()(I.selector, { [I.selectorNoHeader]: n }),
+                                className: a()(N.selector, { [N.selectorNoHeader]: n }),
                                 isDisabled: !w,
                                 showAllDevices: !0,
                             }),
@@ -115,7 +115,7 @@ function A(e) {
                                 !!C.isPlatformEmbedded &&
                                 o().satisfies(p.Z.os.release, ">=10.0.22000") &&
                                 (0, i.jsx)(u.R94, {
-                                    className: I.cameraDeeplink,
+                                    className: N.cameraDeeplink,
                                     children: T.intl.format(T.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
                                             null == R || R(),
@@ -126,7 +126,7 @@ function A(e) {
                                                                   ? "?cameraId=".concat(
                                                                         encodeURIComponent(
                                                                             Z.replace(
-                                                                                N,
+                                                                                I,
                                                                                 "{E5323777-F976-4f5b-9B55-B94699C46E44}",
                                                                             ),
                                                                         ),
@@ -146,7 +146,7 @@ function A(e) {
             (0, i.jsx)(b.F, {
                 setting: v.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
                 children: (0, i.jsx)(_.Z, {
-                    className: I.spacingTop24,
+                    className: N.spacingTop24,
                     onLearnMore: s,
                     selectedBackgroundOption: l,
                     onSelectBackgroundOption: d,

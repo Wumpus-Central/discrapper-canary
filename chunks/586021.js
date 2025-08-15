@@ -7,13 +7,13 @@ n.d(t, {
     n(415506);
 var r = n(579092),
     i = n(436620);
-let o = new r.Yd("LibDaveManager"),
-    a = null,
+let a = new r.Yd("LibDaveManager"),
+    o = null,
     s = null,
     l = null,
     c = {
         onRuntimeInitialized: () => {
-            o.info("DAVE loaded");
+            a.info("DAVE loaded");
         },
     };
 function u() {
@@ -28,23 +28,23 @@ function d() {
     return "object" == typeof WebAssembly;
 }
 function f() {
-    return null != a
-        ? a
-        : (a = new Promise((e, t) => {
+    return null != o
+        ? o
+        : (o = new Promise((e, t) => {
               Promise.all([n.e("69418"), n.e("13263")])
                   .then(n.bind(n, 129487))
                   .then((n) => {
                       let { DaveModuleFactory: r } = n;
                       r(c)
                           .then((t) => {
-                              o.info("Successfully initialized DAVE"), (s = t), e(t);
+                              a.info("Successfully initialized DAVE"), (s = t), e(t);
                           })
                           .catch((e) => {
-                              o.error("Failed to initialize DAVE", e), t(e);
+                              a.error("Failed to initialize DAVE", e), t(e);
                           });
                   })
                   .catch((e) => {
-                      o.error("Failed to load DAVE module", e), t(e);
+                      a.error("Failed to load DAVE module", e), t(e);
                   });
           }));
 }

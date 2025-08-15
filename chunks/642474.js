@@ -1,12 +1,12 @@
 n.d(t, { w: () => s }), n(997841);
 var r = n(255367),
     i = n(73800),
-    o = n(710260),
-    a = n(231338);
+    a = n(710260),
+    o = n(231338);
 function s(e) {
     let {
             children: t,
-            theme: n = a.BR.DARK,
+            theme: n = o.BR.DARK,
             primaryColor: s = null,
             secondaryColor: l = null,
             gradient: c = null,
@@ -19,7 +19,7 @@ function s(e) {
         } = e,
         m = i.useMemo(
             () =>
-                (0, o.TT)({
+                (0, a.TT)({
                     theme: n,
                     primaryColor: s,
                     secondaryColor: l,
@@ -33,7 +33,7 @@ function s(e) {
                 }),
             [n, s, l, c, u, d, f, _, p, h],
         );
-    return (0, r.jsx)(o.Ni.Provider, {
+    return (0, r.jsx)(a.Ni.Provider, {
         value: m,
         children: t,
     });

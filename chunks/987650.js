@@ -1,16 +1,16 @@
 n.d(t, {
     Vk: () => s,
-    YK: () => a,
+    YK: () => o,
     ap: () => u,
     bv: () => c,
     iP: () => i,
     n0: () => l,
-    nc: () => o,
+    nc: () => a,
     wF: () => d,
 });
 var r = n(358085);
 let i = r.isPlatformEmbedded && ((0, r.isWindows)() || !1);
-var o = (function (e) {
+var a = (function (e) {
     return (
         (e[(e.WELCOME = 0)] = "WELCOME"),
         (e[(e.NEWS = 1)] = "NEWS"),
@@ -22,7 +22,7 @@ var o = (function (e) {
         e
     );
 })({});
-function a(e) {
+function o(e) {
     switch (e) {
         case "News Nudge":
         case "Welcome Nudge":

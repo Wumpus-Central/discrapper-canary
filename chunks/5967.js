@@ -1,12 +1,12 @@
 n.d(t, {
-    VG: () => a,
+    VG: () => o,
     uB: () => s,
 }),
     n(388685),
     n(35282);
 let r = /input/i,
     i = /textarea/i,
-    o = new Set([
+    a = new Set([
         "text",
         "password",
         "number",
@@ -20,13 +20,13 @@ let r = /input/i,
         "tel",
         "url",
     ]);
-function a(e) {
+function o(e) {
     if (null == e) return !1;
     if ("true" === e.getAttribute("contenteditable") || i.test(e.tagName)) return !0;
     if (r.test(e.tagName)) {
         var t;
         let n = null != (t = e.getAttribute("type")) ? t : "text";
-        if (o.has(n)) return !0;
+        if (a.has(n)) return !0;
     }
     return !1;
 }

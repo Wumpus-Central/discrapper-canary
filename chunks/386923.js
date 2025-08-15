@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -17,15 +17,15 @@ var r = n(255367),
     b = n(388032),
     j = n(814346),
     v = n(816922),
-    C = n(586301),
-    _ = n(184476);
+    _ = n(586301),
+    C = n(184476);
 let y = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0,
     },
-    O = (e) => {
+    w = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
@@ -201,7 +201,7 @@ let y = {
                     ],
                 }),
                 (0, r.jsx)("img", {
-                    src: _,
+                    src: C,
                     alt: b.intl.string(b.t.gAlJzc),
                     width: u.TJ,
                     height: u.TJ,
@@ -209,7 +209,7 @@ let y = {
             ],
         });
     };
-function w(e) {
+function T(e) {
     let t,
         { guild: n } = e,
         [a, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
@@ -246,7 +246,7 @@ function w(e) {
                   ? (0, r.jsxs)(s.animated.div, {
                         style: e,
                         onClick: () => m(!u),
-                        className: l()(C.container, j.container, v.mainCard),
+                        className: l()(_.container, j.container, v.mainCard),
                         children: [
                             (0, r.jsxs)("div", {
                                 className: j.inline,
@@ -294,7 +294,7 @@ function w(e) {
                                           style: e,
                                           children: [
                                               (0, r.jsx)("hr", { className: j.separator }),
-                                              (0, r.jsx)(O, { guild: n }),
+                                              (0, r.jsx)(w, { guild: n }),
                                           ],
                                       })
                                     : null,

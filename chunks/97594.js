@@ -1,51 +1,51 @@
-n.d(t, { default: () => v }), n(388685);
-var i = n(255367),
+n.d(t, { default: () => S }), n(388685);
+var a = n(255367),
     r = n(73800),
-    o = n(120356),
-    l = n.n(o),
-    a = n(466377),
-    s = n(481060),
-    c = n(376641),
+    i = n(120356),
+    o = n.n(i),
+    l = n(466377),
+    c = n(481060),
+    s = n(376641),
     u = n(714338),
     d = n(607070),
     p = n(585483),
     m = n(254109),
-    f = n(212459),
+    g = n(212459),
     y = n(730606),
-    b = n(860153),
-    O = n(981631),
-    g = n(388032),
-    h = n(105969);
-function E(e, t) {
+    f = n(860153),
+    b = n(981631),
+    O = n(388032),
+    _ = n(105969);
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
 }
-function v(e) {
+function S(e) {
     var {
             onClose: t,
             items: n,
-            startingIndex: o,
-            enabledContentHarmTypeFlags: v,
-            shouldHideMediaOptions: S = !1,
-            transitionState: j,
+            startingIndex: i,
+            enabledContentHarmTypeFlags: S,
+            shouldHideMediaOptions: v = !1,
+            transitionState: T,
         } = e,
-        T = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
+                a,
                 r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
+                        a,
                         r = {},
-                        o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        i = Object.keys(e);
+                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++)
-                    (n = o[i]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < i.length; a++)
+                    (n = i[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
@@ -57,9 +57,9 @@ function v(e) {
             "shouldHideMediaOptions",
             "transitionState",
         ]);
-    let [C, x] = r.useState(null != o ? o : 0),
-        [P, _] = r.useState(!1),
-        [w, L] = (0, s.q_F)(() => ({
+    let [C, E] = r.useState(null != i ? i : 0),
+        [x, P] = r.useState(!1),
+        [M, w] = (0, c.q_F)(() => ({
             scale: d.Z.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
@@ -68,87 +68,87 @@ function v(e) {
                 tension: 300,
             },
         })),
-        M = r.useRef(null);
+        D = r.useRef(null);
     r.useEffect(() => {
         if (null != t)
             return (
-                p.S.subscribe(O.CkL.MEDIA_MODAL_CLOSE, t),
+                p.S.subscribe(b.CkL.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    p.S.unsubscribe(O.CkL.MEDIA_MODAL_CLOSE, t);
+                    p.S.unsubscribe(b.CkL.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]),
         r.useEffect(() => {
             var e, t;
-            j === s.Dvm.ENTERING && E(w.scale, 1),
-                j === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(c.P)),
-                j === s.Dvm.HIDDEN && (E(w.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)),
-                j === s.Dvm.EXITING && E(w.scale, 0.9);
+            T === c.Dvm.ENTERING && h(M.scale, 1),
+                T === c.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)),
+                T === c.Dvm.HIDDEN && (h(M.scale, 0.9), u.Z.disable(), u.Z.enableTemp(s.v)),
+                T === c.Dvm.EXITING && h(M.scale, 0.9);
             let n = () => {
-                    u.Z.disable(), j === s.Dvm.ENTERED ? u.Z.enableTemp(c.P) : u.Z.enableTemp(c.v);
+                    u.Z.disable(), T === c.Dvm.ENTERED ? u.Z.enableTemp(s.P) : u.Z.enableTemp(s.v);
                 },
-                i = () => {
+                a = () => {
                     u.Z.disableTemp();
                 },
-                r = null == (t = M.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = D.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
                 null == r || r.addEventListener("focus", n),
-                null == r || r.addEventListener("blur", i),
+                null == r || r.addEventListener("blur", a),
                 () => {
                     null == r || r.removeEventListener("focus", n),
-                        null == r || r.removeEventListener("blur", i),
+                        null == r || r.removeEventListener("blur", a),
                         u.Z.disableTemp();
                 }
             );
-        }, [j, w]);
-    let D = r.useCallback((e) => {
-            x(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
+        }, [T, M]);
+    let I = r.useCallback((e) => {
+            E(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        I = r.useMemo(
+        A = r.useMemo(
             () => ({
-                scale: w.scale,
-                x: w.x,
-                y: w.y,
+                scale: M.scale,
+                x: M.x,
+                y: M.y,
                 setScale(e, t) {
-                    E(w.scale, e, null == t ? void 0 : t.immediate);
+                    h(M.scale, e, null == t ? void 0 : t.immediate);
                 },
                 setOffset(e, t, n) {
-                    E(w.x, e, null == n ? void 0 : n.immediate), E(w.y, t, null == n ? void 0 : n.immediate);
+                    h(M.x, e, null == n ? void 0 : n.immediate), h(M.y, t, null == n ? void 0 : n.immediate);
                 },
-                zoomed: P,
+                zoomed: x,
                 setZoomed(e) {
-                    _(e), E(w.scale, e ? 2.5 : 1), e || (E(w.x, 0), E(w.y, 0));
+                    P(e), h(M.scale, e ? 2.5 : 1), e || (h(M.x, 0), h(M.y, 0));
                 },
             }),
-            [P, w],
+            [x, M],
         );
-    return (0, i.jsx)(s.f6W, {
-        theme: O.BRd.MIDNIGHT,
+    return (0, a.jsx)(c.f6W, {
+        theme: b.BRd.MIDNIGHT,
         children: (e) => {
-            var r, o;
-            return (0, i.jsx)(
-                s.Y0X,
+            var r, i;
+            return (0, a.jsx)(
+                c.Y0X,
                 ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
+                            a = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
+                            (a = a.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
+                            a.forEach(function (t) {
+                                var a;
+                                (a = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: i,
+                                              value: a,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = i);
+                                        : (e[t] = a);
                             });
                     }
                     return e;
@@ -156,52 +156,52 @@ function v(e) {
                     {
                         "data-migration-pending": !0,
                         hideShadow: !0,
-                        className: l()(h.carouselModal, e),
-                        transitionState: j,
+                        className: o()(_.carouselModal, e),
+                        transitionState: T,
                     },
-                    T,
+                    j,
                 )),
-                (o = o =
+                (i = i =
                     {
-                        size: s.CgR.DYNAMIC,
-                        animation: a.fM.SUBTLE,
+                        size: c.CgR.DYNAMIC,
+                        animation: l.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        "aria-label": g.intl.string(g.t.AMTX3t),
+                        "aria-label": O.intl.string(O.t.AMTX3t),
                         parentComponent: "MediaViewerModal",
-                        children: (0, i.jsxs)(f.z.Provider, {
-                            value: I,
+                        children: (0, a.jsxs)(g.z.Provider, {
+                            value: A,
                             children: [
-                                (0, i.jsx)(b.Z, {
+                                (0, a.jsx)(f.Z, {
                                     item: n[C],
-                                    hideMediaOptions: S,
+                                    hideMediaOptions: v,
                                     onClose: t,
                                 }),
-                                (0, i.jsx)("div", {
+                                (0, a.jsx)("div", {
                                     style: { display: "none" },
-                                    ref: M,
+                                    ref: D,
                                 }),
-                                (0, i.jsx)(y.ZP, {
+                                (0, a.jsx)(y.ZP, {
                                     items: n,
                                     startIndex: C,
-                                    onIndexChange: D,
-                                    enabledContentHarmTypeFlags: v,
-                                    shouldHideMediaOptions: S,
+                                    onIndexChange: I,
+                                    enabledContentHarmTypeFlags: S,
+                                    shouldHideMediaOptions: v,
                                 }),
                             ],
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
+                              var a = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, a);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 r),
             );

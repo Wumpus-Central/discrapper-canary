@@ -2,10 +2,10 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(755721),
-    s = n(481060),
-    l = n(5192),
+    o = n(481060),
+    s = n(5192),
     c = n(829820),
     u = n(191242);
 function d(e) {
@@ -14,34 +14,34 @@ function d(e) {
             user: n,
             channelId: i,
             guildId: d,
-            source: f,
-            size: _,
-            look: p,
-            color: h,
-            className: m,
-            onAction: g,
+            source: p,
+            size: f,
+            look: m,
+            color: g,
+            className: v,
+            onAction: _,
         } = e,
-        { tooltip: E, loading: b, disabled: y, onClick: O } = (0, c.Fe)(t, n, f, l.ZP.getNickname(d, i, n)),
-        v = () => {
-            null == g || g(), O();
+        { tooltip: b, loading: h, disabled: y, onClick: O } = (0, c.Fe)(t, n, p, s.ZP.getNickname(d, i, n)),
+        j = () => {
+            null == _ || _(), O();
         };
-    return (0, r.jsx)(s.ua7, {
-        text: E,
+    return (0, r.jsx)(o.ua7, {
+        text: b,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
             return (0, r.jsx)(a.zx, {
-                size: _,
-                className: o()(u.syncButton, m),
+                size: f,
+                className: l()(u.syncButton, v),
                 innerClassName: u.syncButtonInner,
-                look: p,
-                color: h,
-                onClick: v,
+                look: m,
+                color: g,
+                onClick: j,
                 onMouseEnter: n,
                 onMouseLeave: i,
                 disabled: y,
-                submitting: b,
-                "aria-label": null != E ? E : t.name,
-                children: (0, r.jsx)(s.iOO, {
+                submitting: h,
+                "aria-label": null != b ? b : t.name,
+                children: (0, r.jsx)(o.iOO, {
                     size: "xs",
                     color: "currentColor",
                 }),

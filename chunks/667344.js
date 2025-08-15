@@ -1,14 +1,14 @@
 n.d(t, { Q: () => u }), n(388685);
 var r = n(73800),
     i = n(442837),
-    o = n(588486),
-    a = n(492435),
+    a = n(588486),
+    o = n(492435),
     s = n(872780),
     l = n(633289),
     c = n(508825);
 function u() {
     (0, r.useEffect)(() => {
-        (0, s.e)(o.dR.APP);
+        (0, s.e)(a.dR.APP);
     }, []);
     let e = (0, i.e7)([l.Z], () => l.Z.getExperimentsMetadata()),
         t = (0, i.e7)([l.Z], () => l.Z.getRegisteredExperiments()),
@@ -16,7 +16,7 @@ function u() {
             let n = {};
             for (let [t, r] of Object.entries(e))
                 n[t] = {
-                    system: a.I.APEX,
+                    system: o.I.APEX,
                     kind: r.unitType === c.Cm.User ? "user" : "guild",
                     name: r.name,
                     title: r.title,
@@ -30,7 +30,7 @@ function u() {
             for (let [e, r] of Object.entries(t))
                 null == n[e] &&
                     (n[e] = {
-                        system: a.I.APEX,
+                        system: o.I.APEX,
                         kind: r.kind,
                         name: r.name,
                         title: r.name,
@@ -40,7 +40,7 @@ function u() {
                                 id: Number(t),
                                 label: "Variant ".concat(t),
                                 shortLabel: "Variant ".concat(t),
-                                type: o.k3.UNSPECIFIED,
+                                type: a.k3.UNSPECIFIED,
                             };
                         }),
                     });

@@ -7,8 +7,8 @@ n.d(t, {
     n(415506);
 var r = n(512722),
     i = n.n(r),
-    o = n(911969),
-    a = n(581364),
+    a = n(911969),
+    o = n(581364),
     s = n(752305),
     l = n(255963),
     c = n(365704),
@@ -45,7 +45,7 @@ function f(e) {
             commands: u.L8.DISABLED,
             allowStickers: !0 === _,
             allowSoundmoji: !0 === p,
-            forNonStringCommandOption: null != n && n.type !== o.jw.STRING,
+            forNonStringCommandOption: null != n && n.type !== a.jw.STRING,
             hideMentionDescription: !0 === h,
             hidePersonalInformation: !0 === m,
             chatInputType: g,
@@ -73,7 +73,7 @@ function f(e) {
             },
         };
     if (null != n) {
-        let e = (0, a.$z)(n);
+        let e = (0, o.$z)(n);
         e.canMentionChannels && (I.mentions.channel = u.nS.ALLOW_SELECTABLE),
             e.canMentionEveryone &&
                 (I.mentions.global = e.canMentionHere ? u.VV.ALLOW_EVERYONE_OR_HERE : u.VV.ALLOW_EVERYONE),
@@ -94,21 +94,21 @@ function f(e) {
     );
 }
 function _(e) {
-    let { type: t, channel: n, guild: r, query: i, isAtStart: o, options: a } = e,
+    let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: o } = e,
         s = c.W[t];
     if (null != s.sentinel) {
         if (!i.startsWith(s.sentinel)) return !1;
         i = i.substring(s.sentinel.length);
     }
-    return null == s.matches || !!s.matches(n, r, i, o, a);
+    return null == s.matches || !!s.matches(n, r, i, a, o);
 }
 function p(e) {
     let {
             channel: t,
             guild: n,
             options: r,
-            currentWord: o,
-            currentWordIsAtStart: a,
+            currentWord: a,
+            currentWordIsAtStart: o,
             textValue: s,
             optionText: f,
             parentAutocompleteInputType: p,
@@ -193,7 +193,7 @@ function p(e) {
                     channel: t,
                     guild: n,
                     query: s,
-                    isAtStart: a,
+                    isAtStart: o,
                     options: r,
                 })
             ) {
@@ -206,21 +206,21 @@ function p(e) {
             }
         } else if (e === u.eq.EMOJIS_AND_STICKERS) {
             if (
-                (null != o && o.length > 0 && (0, l.x)(d.qR.AutocompleteTyped),
-                null != o &&
+                (null != a && a.length > 0 && (0, l.x)(d.qR.AutocompleteTyped),
+                null != a &&
                     _({
                         type: e,
                         channel: t,
                         guild: n,
-                        query: o,
-                        isAtStart: a,
+                        query: a,
+                        isAtStart: o,
                         options: r,
                     }))
             ) {
                 m = {
                     type: e,
                     typeInfo: I,
-                    query: o.substring(null != (y = null == (b = I.sentinel) ? void 0 : b.length) ? y : 0),
+                    query: a.substring(null != (y = null == (b = I.sentinel) ? void 0 : b.length) ? y : 0),
                 };
                 break;
             }
@@ -233,20 +233,20 @@ function p(e) {
                     query: h,
                 }));
         else if (
-            null != o &&
+            null != a &&
             _({
                 type: e,
                 channel: t,
                 guild: n,
-                query: o,
-                isAtStart: a,
+                query: a,
+                isAtStart: o,
                 options: r,
             })
         ) {
             m = {
                 type: e,
                 typeInfo: I,
-                query: o.substring(null != (v = null == (O = I.sentinel) ? void 0 : O.length) ? v : 0),
+                query: a.substring(null != (v = null == (O = I.sentinel) ? void 0 : O.length) ? v : 0),
             };
             break;
         }
@@ -259,15 +259,15 @@ function h(e, t) {
     if (null != e.choices || e.autocomplete) n = u.eq.CHOICES;
     else
         switch (e.type) {
-            case o.jw.BOOLEAN:
+            case a.jw.BOOLEAN:
                 n = u.eq.CHOICES;
                 break;
-            case o.jw.CHANNEL:
+            case a.jw.CHANNEL:
                 n = u.eq.CHANNELS;
                 break;
-            case o.jw.ROLE:
-            case o.jw.USER:
-            case o.jw.MENTIONABLE:
+            case a.jw.ROLE:
+            case a.jw.USER:
+            case a.jw.MENTIONABLE:
                 n = u.eq.MENTIONS;
                 break;
             default:

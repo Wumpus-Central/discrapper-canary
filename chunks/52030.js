@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => S }), n(388685);
 var i,
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(215023),
     l = n(474936);
 function c(e, t, n) {
@@ -56,7 +56,7 @@ let u = [],
     I = (e) => {
         r = e.shopHomeConfigOverride;
     };
-class T extends (i = o.ZP.Store) {
+class T extends (i = a.ZP.Store) {
     getLastSuccessfulFetch(e) {
         return d.get(e);
     }
@@ -84,7 +84,7 @@ class T extends (i = o.ZP.Store) {
     }
 }
 c(T, "displayName", "CollectiblesShopHomesStore");
-let S = new T(a.Z, {
+let S = new T(o.Z, {
     COLLECTIBLES_SHOP_HOME_FETCH: E,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: b,
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: y,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(512722),
     l = n.n(s),
     c = n(755721),
@@ -22,19 +22,19 @@ function O(e, t) {
 }
 function v(e) {
     let { url: t } = e,
-        [n, o] = i.useState(!1),
+        [n, a] = i.useState(!1),
         s = i.useRef(void 0),
         l = i.useCallback(() => {
             n ||
                 (0, p.JG)(t, () => {
-                    o(!0), (s.current = setTimeout(() => o(!1), 2000));
+                    a(!0), (s.current = setTimeout(() => a(!1), 2000));
                 });
         }, [t, n]);
     return (
         i.useEffect(() => () => clearTimeout(s.current), []),
         p.wS
             ? (0, r.jsxs)(u.P3F, {
-                  className: a()(y.copyLink, n ? y.copied : null),
+                  className: o()(y.copyLink, n ? y.copied : null),
                   onClick: l,
                   children: [
                       (0, r.jsx)(u.xPt, {
@@ -54,7 +54,7 @@ function I() {
             (0, r.jsxs)("div", {
                 className: y.buildInfo,
                 children: [
-                    (0, r.jsx)("div", { className: a()(y.barLoader, y.barTitle) }),
+                    (0, r.jsx)("div", { className: o()(y.barLoader, y.barTitle) }),
                     (0, r.jsx)("div", { className: y.barLoader }),
                 ],
             }),
@@ -66,7 +66,7 @@ function T(e) {
     let {
         subHead: t,
         buildDetails: n,
-        buttonColor: o,
+        buttonColor: a,
         buttonClick: s,
         buttonText: l,
         disabled: d = !1,
@@ -90,9 +90,9 @@ function T(e) {
             }),
             (0, r.jsx)(c.zx, {
                 submitting: f,
-                color: o,
+                color: a,
                 onClick: s,
-                className: a()(y.button, d ? y.disabledButtonOverride : null),
+                className: o()(y.button, d ? y.disabledButtonOverride : null),
                 size: y.buttonSize,
                 disabled: d,
                 children: l,
@@ -104,13 +104,13 @@ function S(e) {
     let t,
         n,
         r,
-        { currentOverrides: i, linkMeta: o, applyBuildOverride: a, clearBuildOverride: s, submitting: u } = e,
+        { currentOverrides: i, linkMeta: a, applyBuildOverride: o, clearBuildOverride: s, submitting: u } = e,
         _ = ["discord_web"];
     m.isPlatformEmbedded || _.push("discord_marketing", "discord_developers");
-    let p = (0, g.Z)(o, _);
+    let p = (0, g.Z)(a, _);
     if (!p.valid) return A(p.reason);
-    l()(null != o, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
-    let { discord_web: h, discord_developers: E } = o.targetBuildOverride,
+    l()(null != a, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
+    let { discord_web: h, discord_developers: E } = a.targetBuildOverride,
         y = null != h ? h : E;
     l()(
         null != y,
@@ -118,7 +118,7 @@ function S(e) {
     ),
         O(y, i)
             ? ((n = b.intl.string(b.t.tX4xrq)), (t = s), (r = c.zx.Colors.RED))
-            : ((n = b.intl.string(b.t.nOunHB)), (t = a), (r = c.zx.Colors.GREEN));
+            : ((n = b.intl.string(b.t.nOunHB)), (t = o), (r = c.zx.Colors.GREEN));
     let v = () => {
         f.Z.isConnected()
             ? d.Z.show({
@@ -176,7 +176,7 @@ function N(e, t, n) {
     });
 }
 let C = (e) => {
-    let { loading: t = !1, currentOverrides: n, linkMeta: o, url: a, applyBuildOverride: s, clearBuildOverride: l } = e,
+    let { loading: t = !1, currentOverrides: n, linkMeta: a, url: o, applyBuildOverride: s, clearBuildOverride: l } = e,
         [c, u] = i.useState(!1),
         d = i.useCallback(() => {
             c || (u(!0), s().catch(() => u(!1)));
@@ -187,7 +187,7 @@ let C = (e) => {
     return (0, r.jsxs)("div", {
         className: y.wrapper,
         children: [
-            N(o, a, t),
+            N(a, o, t),
             (0, r.jsxs)("div", {
                 className: y.content,
                 children: [
@@ -196,7 +196,7 @@ let C = (e) => {
                         ? I()
                         : S({
                               currentOverrides: n,
-                              linkMeta: o,
+                              linkMeta: a,
                               applyBuildOverride: d,
                               clearBuildOverride: f,
                               submitting: c,

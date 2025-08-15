@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var i,
-    s = n(442837),
-    l = n(570140);
-function r(e, t, n) {
+    r = n(442837),
+    s = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function r(e, t, n) {
         e
     );
 }
-let a = {
+let o = {
         enable_recently_active: "Enable recently active channels",
         theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
         nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
@@ -23,38 +23,38 @@ let a = {
         show_icymi_debug_scores: "Show ICYMI debug scores",
         channel_list_scrim: "Dim the channel list when chat appears",
     },
-    d = {};
-class o extends (i = s.ZP.DeviceSettingsStore) {
+    a = {};
+class u extends (i = r.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: d };
+        return { toggleStates: a };
     }
     initialize(e) {
-        for (var t in a) {
+        for (var t in o) {
             var n, i;
-            let s = null != (i = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && i;
-            d[t] = s;
+            let r = null != (i = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && i;
+            a[t] = r;
         }
     }
     get(e) {
         var t;
-        return null != (t = d[e]) && t;
+        return null != (t = a[e]) && t;
     }
     set(e, t) {
-        return (d[e] = t), t;
+        return (a[e] = t), t;
     }
     all() {
-        return d;
+        return a;
     }
     allWithDescriptions() {
-        return Object.entries(d).map((e) => {
+        return Object.entries(a).map((e) => {
             let [t, n] = e;
-            return [t, n, a[t]];
+            return [t, n, o[t]];
         });
     }
 }
-r(o, "displayName", "DevToolsDesignTogglesStore"), r(o, "persistKey", "DevToolsDesignTogglesStore");
-let h = new o(l.Z, {
+l(u, "displayName", "DevToolsDesignTogglesStore"), l(u, "persistKey", "DevToolsDesignTogglesStore");
+let c = new u(s.Z, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
-        d[e.toggle] = e.value;
+        a[e.toggle] = e.value;
     },
 });

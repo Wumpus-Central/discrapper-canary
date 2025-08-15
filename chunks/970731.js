@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(755721),
+    a = n.n(i),
+    o = n(755721),
     s = n(481060),
     l = n(493773),
     c = n(921944),
@@ -107,10 +107,10 @@ function y(e) {
         onClick: O,
         onSecondaryClick: v,
         buttonProps: I = {
-            color: a.zx.Colors.BRAND,
-            look: a.zx.Looks.FILLED,
+            color: o.zx.Colors.BRAND,
+            look: o.zx.Looks.FILLED,
         },
-        secondaryButtonProps: T = { color: a.zx.Colors.BRAND_INVERTED },
+        secondaryButtonProps: T = { color: o.zx.Colors.BRAND_INVERTED },
         onComponentMount: S,
         asset: A,
         markAsDismissed: N,
@@ -128,33 +128,33 @@ function y(e) {
             null == v || v(), null == N || N(c.L.SECONDARY);
         };
     return (0, r.jsxs)("div", {
-        className: o()(n, g[t], u.upsellTooltipWrapper, u[C]),
+        className: a()(n, g[t], u.upsellTooltipWrapper, u[C]),
         children: [
             A,
             null == i
                 ? null
                 : (0, r.jsx)(s.X6q, {
                       color: E[t],
-                      className: o()(d, u.upsellTooltipHeader),
+                      className: a()(d, u.upsellTooltipHeader),
                       variant: "heading-md/semibold",
                       children: i,
                   }),
             (0, r.jsx)(s.Text, {
                 color: b[t],
-                className: o()(h, u.content),
+                className: a()(h, u.content),
                 variant: "text-sm/normal",
                 children: _,
             }),
             null != m || P
                 ? (0, r.jsxs)("div", {
-                      className: o()(u.upsellButtonsContainer, {
+                      className: a()(u.upsellButtonsContainer, {
                           [u.upsellButtonsAdjacent]: 0 === R,
                           [u.upsellButtonsStacked]: 1 === R,
                       }),
                       children: [
                           P
                               ? (0, r.jsx)(
-                                    a.zx,
+                                    o.zx,
                                     p(f({}, T), {
                                         fullWidth: 1 === R,
                                         onClick: D,
@@ -165,7 +165,7 @@ function y(e) {
                           null == m
                               ? null
                               : (0, r.jsx)(
-                                    a.zx,
+                                    o.zx,
                                     p(f({}, I), {
                                         fullWidth: !P || 1 === R,
                                         onClick: w,

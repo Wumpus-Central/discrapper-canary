@@ -1,60 +1,8 @@
-n.d(t, { w: () => d });
+n.d(t, { w: () => a });
 var r = n(255367),
-    i = n(73800),
-    o = n(709014);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let u = {
+    l = n(73800),
+    i = n(709014);
+let o = {
         hover: {
             name: "hover",
             start: 0,
@@ -66,43 +14,81 @@ let u = {
             duration: 26,
         },
     },
-    d = () => {
-        let e = i.useRef(null),
-            t = i.useCallback(() => {
+    a = () => {
+        let e = l.useRef(null),
+            t = l.useCallback(() => {
                 null != e.current && e.current.play("click");
             }, []),
-            a = i.useCallback(() => {
+            a = l.useCallback(() => {
                 null != e.current && e.current.play("hover");
             }, []),
-            l = i.useCallback(() => {
+            c = l.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying("hover");
             }, []),
-            d = i.useCallback(
-                (t) =>
-                    (0, r.jsx)(
-                        o.L,
-                        c(s({}, t), {
+            u = l.useCallback((t) => {
+                var l, a;
+                return (0, r.jsx)(
+                    i.L,
+                    ((l = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, t)),
+                    (a = a =
+                        {
                             src: () => n.e("56855").then(n.t.bind(n, 206509, 19)),
                             ref: e,
-                            markers: u,
+                            markers: o,
                         }),
-                    ),
-                [],
-            );
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                          }),
+                    l),
+                );
+            }, []);
         return {
             events: {
                 onMouseEnter: a,
-                onMouseLeave: l,
+                onMouseLeave: c,
             },
             play: t,
-            getDuration: i.useCallback(() => {
+            getDuration: l.useCallback(() => {
                 var t;
                 return null == (t = e.current) ? void 0 : t.getDuration();
             }, []),
-            getCurrentFrame: i.useCallback(() => {
+            getCurrentFrame: l.useCallback(() => {
                 var t, n;
                 return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),
-            Component: d,
+            Component: u,
         };
     };

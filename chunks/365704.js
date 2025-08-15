@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(590921),
     i = n(521090),
-    o = n(126226),
-    a = n(116364),
+    a = n(126226),
+    o = n(116364),
     s = n(941140),
     l = n(341561),
     c = n(707973),
@@ -29,9 +29,9 @@ let h = [
     ],
     m = {
         [r.eq.CHANNELS]: i.Z,
-        [r.eq.COMMANDS]: o.Z,
+        [r.eq.COMMANDS]: a.Z,
         [r.eq.COMMAND_OPTIONS]: s.Z,
-        [r.eq.CHOICES]: a.Z,
+        [r.eq.CHOICES]: o.Z,
         [r.eq.EMOJIS_AND_STICKERS]: l.Z,
         [r.eq.STICKERS]: p.Z,
         [r.eq.GIFS]: u.Z,

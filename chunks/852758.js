@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(990547),
@@ -17,9 +17,9 @@ var r = n(255367),
     b = n(23434),
     j = n(1964),
     v = n(762756),
-    O = n(308569),
-    E = n(981631),
-    x = n(815660),
+    x = n(308569),
+    O = n(981631),
+    E = n(815660),
     w = n(388032);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -46,7 +46,7 @@ function _(e) {
     }
     return e;
 }
-function P(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,25 +64,25 @@ function P(e, t) {
         e
     );
 }
-function A() {
+function P() {
     let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
             theme: g.Z.theme,
         })),
-        A = j.Z.getVerificationTypes(e),
-        [S, N] = i.useState(0),
-        k = (0, f.Z)(A);
+        P = j.Z.getVerificationTypes(e),
+        [k, S] = i.useState(0),
+        N = (0, f.Z)(P);
     (0, y.Z)(
         {
             type: a.ImpressionTypes.MODAL,
             name: a.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: A[0],
-                verification_types: A,
+                verification_type: P[0],
+                verification_types: P,
             },
         },
         {},
-        [A.toString()],
+        [P.toString()],
     );
     let R = () => {
         (0, d.FD)(),
@@ -92,7 +92,7 @@ function A() {
                     return (t) => (0, r.jsx)(e, _({}, t));
                 },
                 {
-                    modalKey: O.F0,
+                    modalKey: x.F0,
                     Layer: m.ZP,
                 },
             );
@@ -108,15 +108,15 @@ function A() {
             [],
         ),
         i.useEffect(() => {
-            (null == k ? void 0 : k[0]) === E.PUi.PHONE &&
-                (null == A ? void 0 : A[0]) === E.PUi.EMAIL &&
+            (null == N ? void 0 : N[0]) === O.PUi.PHONE &&
+                (null == P ? void 0 : P[0]) === O.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                P(_({}, t), {
+                                A(_({}, t), {
                                     title: w.intl.string(w.t.KLnLIC),
                                     body: w.intl.string(w.t.XGbCq6),
                                     confirmText: w.intl.string(w.t["3oK4q6"]),
@@ -124,30 +124,30 @@ function A() {
                             );
                     },
                     {
-                        modalKey: O.HR,
+                        modalKey: x.HR,
                         Layer: m.ZP,
                         onCloseCallback: R,
                     },
                 );
-        }, [A, k]),
+        }, [P, N]),
         (0, r.jsx)(v.Z, {
-            types: A,
-            captchaKey: S,
+            types: P,
+            captchaKey: k,
             onCaptchaVerify: (e) => {
                 c.tn
                     .post({
-                        url: E.ANM.CAPTCHA,
+                        url: O.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
                     .then(u.xf, () => {
-                        N((e) => e + 1);
+                        S((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === E.PUi.EMAIL_OR_PHONE || e === E.PUi.EMAIL || e === E.PUi.REVERIFY_EMAIL
+                e === O.PUi.EMAIL_OR_PHONE || e === O.PUi.EMAIL || e === O.PUi.REVERIFY_EMAIL
                     ? R()
                     : (0, o.ZDy)(
                           async () => {
@@ -155,7 +155,7 @@ function A() {
                               return (t) => (0, r.jsx)(e, _({ reason: h.L.USER_ACTION_REQUIRED }, t));
                           },
                           {
-                              modalKey: x.M,
+                              modalKey: E.M,
                               Layer: m.ZP,
                           },
                       );
@@ -167,7 +167,7 @@ function A() {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                P(
+                                A(
                                     _(
                                         {
                                             header: w.intl.string(w.t["2jxGen"]),

@@ -21,14 +21,14 @@ var i = n(255367),
     C = n(146085),
     N = n(192079),
     S = n(277053),
-    E = n(271383),
-    O = n(485386),
-    Z = n(430824),
-    w = n(496675),
-    T = n(594174),
+    O = n(271383),
+    E = n(485386),
+    w = n(430824),
+    T = n(496675),
+    Z = n(594174),
     R = n(903386),
-    _ = n(700785),
-    I = n(605436),
+    I = n(700785),
+    _ = n(605436),
     P = n(27544),
     A = n(415236),
     L = n(182905),
@@ -37,7 +37,7 @@ var i = n(255367),
     k = n(231338),
     B = n(388032),
     V = n(411851);
-function H(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,7 +62,7 @@ function H(e) {
     }
     return e;
 }
-function W(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function W(e, t) {
         e
     );
 }
-function U(e) {
+function W(e) {
     let { channel: t, roles: n, members: l, disabledReason: r, getRemoveTooltipHint: a } = e;
     return (0, i.jsx)(c.aVo, {
         className: V.roleMemberList,
@@ -175,7 +175,7 @@ function U(e) {
                         (0, i.jsx)(c.Text, {
                             color: "text-muted",
                             variant: "text-xs/normal",
-                            children: I.zB(h.rowType),
+                            children: _.zB(h.rowType),
                         }),
                         h.rowType !== D.aC.EMPTY_STATE &&
                             (0, i.jsx)(c.DY3, {
@@ -239,14 +239,14 @@ function U(e) {
 }
 function G(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        o = (0, a.e7)([O.Z], () => O.Z.getSortedRoles(t.id)),
-        d = I.RZ(t, o, l, C.yP, r),
-        u = (0, a.e7)([E.ZP], () => I.cR(E.ZP.getMemberIds(t.id), l, t, C.yP, r)),
+        o = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
+        d = _.RZ(t, o, l, C.yP, r),
+        u = (0, a.e7)([O.ZP], () => _.cR(O.ZP.getMemberIds(t.id), l, t, C.yP, r)),
         h = (0, y.nG)(l.id);
     function g() {
         (0, c.ZDy)(async () => {
             let { default: e } = await n.e("46786").then(n.bind(n, 388131));
-            return (t) => (0, i.jsx)(e, W(H({}, t), { channelId: l.id }));
+            return (t) => (0, i.jsx)(e, H(U({}, t), { channelId: l.id }));
         });
     }
     return (0, i.jsxs)("div", {
@@ -283,8 +283,8 @@ function G(e) {
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,
-                                        W(
-                                            H(
+                                        H(
+                                            U(
                                                 {
                                                     variant: "primary",
                                                     size: "sm",
@@ -301,7 +301,7 @@ function G(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(U, {
+                    (0, i.jsx)(W, {
                         channel: l,
                         roles: d,
                         members: u,
@@ -315,19 +315,19 @@ function G(e) {
 }
 function F(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: r, roles: d, members: u } = e,
-        h = (0, a.e7)([w.Z], () => w.Z.can(k.Pl.ADMINISTRATOR, t)),
-        g = _.Uu(k.Pl.VIEW_CHANNEL, t),
-        m = _.Uu(k.Pl.ADMINISTRATOR, t);
+        h = (0, a.e7)([T.Z], () => T.Z.can(k.Pl.ADMINISTRATOR, t)),
+        g = I.Uu(k.Pl.VIEW_CHANNEL, t),
+        m = I.Uu(k.Pl.ADMINISTRATOR, t);
     async function p() {
         let e = l.accessPermissions,
-            s = T.default.getCurrentUser();
+            s = Z.default.getCurrentUser();
         if (!r && null != (await (0, b.T)(t.id, l.id)))
             return void (0, c.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) =>
                     (0, i.jsx)(
                         e,
-                        W(H({}, n), {
+                        H(U({}, n), {
                             confirmButtonColor: o.Tt.BRAND,
                             header: B.intl.string(B.t.ZzdgUl),
                             confirmText: B.intl.string(B.t.BddRzc),
@@ -342,7 +342,7 @@ function F(e) {
                         }),
                     );
             });
-        I.$e(l, e, r), r || null == s || h || I.Yh(l, e);
+        _.$e(l, e, r), r || null == s || h || _.Yh(l, e);
     }
     let f = {
         title: B.intl.string(B.t.aUI70t),
@@ -418,7 +418,7 @@ function F(e) {
                                                         return (t) =>
                                                             (0, i.jsx)(
                                                                 e,
-                                                                W(H({}, t), {
+                                                                H(U({}, t), {
                                                                     channelId: l.id,
                                                                     inSettings: !0,
                                                                 }),
@@ -428,11 +428,11 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(U, {
+                                    (0, i.jsx)(W, {
                                         channel: l,
                                         roles: d,
                                         members: u,
-                                        getRemoveTooltipHint: I.yv,
+                                        getRemoveTooltipHint: _.yv,
                                     }),
                                 ],
                             }),
@@ -455,7 +455,7 @@ function z(e) {
         ],
     });
 }
-let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
+let X = a.ZP.connectStores([S.Z, T.Z, O.ZP, w.Z, E.Z], () => {
     let e,
         t = S.Z.channel,
         n = S.Z.category,
@@ -464,21 +464,21 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
         r = {},
         s = !1;
     if (null != t) {
-        e = Z.Z.getGuild(t.getGuildId());
-        let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
+        e = w.Z.getGuild(t.getGuildId());
+        let n = O.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = O.Z.getSortedRoles(e.id);
+            let a = E.Z.getSortedRoles(e.id);
             (r = S.Z.editedPermissionIds.reduce((e, t) => {
                 let n = S.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
             }, {})),
-                (i = I.kA(e, a, t, t.accessPermissions, r)),
-                (l = I.cR(n, t, e, t.accessPermissions, r)),
-                (s = I.Yk(t, r));
+                (i = _.kA(e, a, t, t.accessPermissions, r)),
+                (l = _.cR(n, t, e, t.accessPermissions, r)),
+                (s = _.Yk(t, r));
         }
     }
     return {
-        canSyncChannel: null != n && w.Z.can(k.Pl.MANAGE_ROLES, n),
+        canSyncChannel: null != n && T.Z.can(k.Pl.MANAGE_ROLES, n),
         category: n,
         channel: t,
         filteredMembers: l,
@@ -500,7 +500,7 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
             locked: g,
             permissionUpdates: m,
         } = e,
-        [p, f] = l.useState(!_.Uu(k.Pl.SEND_MESSAGES, s));
+        [p, f] = l.useState(!I.Uu(k.Pl.SEND_MESSAGES, s));
     if (null == s || null == d) return null;
     let x = {
         title: B.intl.string(B.t.BAZMBg),
@@ -534,13 +534,13 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
                                           return (t) =>
                                               (0, i.jsx)(
                                                   e,
-                                                  W(H({}, t), {
+                                                  H(U({}, t), {
                                                       channel: s,
                                                       category: r,
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
-                                                              t = H({}, r.permissionOverwrites);
-                                                          null != e && null == t[e] && (t[e] = _.we(e)),
+                                                              t = U({}, r.permissionOverwrites);
+                                                          null != e && null == t[e] && (t[e] = I.we(e)),
                                                               (await (0, j.u)(s, t[e].deny, t[e].allow)) &&
                                                                   (0, h.wk)(s.id, {
                                                                       permissionOverwrites: Object.values(t),

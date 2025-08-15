@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,14 +14,14 @@ var r = n(255367),
     f = n(670638),
     x = n(303385),
     h = n(388032),
-    j = n(579605);
-let b = (e) => {
+    b = n(579605);
+let _ = (e) => {
     let {
             quest: t,
             expansionSpring: n,
             onCtxMenuSelect: o,
-            onCtxMenuOpen: b,
-            onCtxMenuClose: _,
+            onCtxMenuOpen: _,
+            onCtxMenuClose: j,
             useReducedMotion: v,
             isExpanded: C,
             isExpansionAnimationComplete: y,
@@ -45,15 +45,15 @@ let b = (e) => {
         T = C && y,
         w = (0, r.jsx)(l.P3F, {
             onClick: S,
-            className: a()(j.clickable, { [j.logo]: T }),
+            className: a()(b.clickable, { [b.logo]: T }),
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
-                logotypeClassName: j.rewardHighlightLogotype,
+                logotypeClassName: b.rewardHighlightLogotype,
                 withGameTile: !1,
             }),
         });
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: T }),
+        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: T }),
         style: {
             transform: (0, i.to)(
                 [
@@ -67,7 +67,7 @@ let b = (e) => {
         },
         children: [
             (0, r.jsx)(i.animated.div, {
-                className: j.opaqueExpandedBackground,
+                className: b.opaqueExpandedBackground,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -83,7 +83,7 @@ let b = (e) => {
                 useReducedMotion: v,
             }),
             (0, r.jsxs)(i.animated.div, {
-                className: j.promotedBadgeWrapper,
+                className: b.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -92,7 +92,7 @@ let b = (e) => {
                 },
                 children: [
                     (0, r.jsxs)(l.P3F, {
-                        className: j.promotedBadge,
+                        className: b.promotedBadge,
                         onClick: O,
                         children: [
                             (0, r.jsx)(l.Text, {
@@ -102,13 +102,13 @@ let b = (e) => {
                             }),
                             (0, r.jsx)(l.idN, {
                                 color: l.TVs.colors.WHITE,
-                                className: j.promotedBadgeIcon,
+                                className: b.promotedBadgeIcon,
                             }),
                         ],
                     }),
                     (0, r.jsx)(f.r, {
-                        onOpen: b,
-                        onClose: _,
+                        onOpen: _,
+                        onClose: j,
                         onSelect: o,
                         questContent: p.jn.QUEST_BAR_V2,
                         quest: t,
@@ -146,12 +146,12 @@ let b = (e) => {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        className: j.submenuWrapper,
+                                        className: b.submenuWrapper,
                                         "aria-label": h.intl.string(h.t.DEoVWV),
                                         children: (0, r.jsx)(l.xhG, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: a()(j.submenuIcon, j.white),
+                                            className: a()(b.submenuIcon, b.white),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

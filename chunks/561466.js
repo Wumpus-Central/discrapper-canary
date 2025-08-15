@@ -1,7 +1,7 @@
 n.d(t, {
-    az: () => o,
+    az: () => a,
     pC: () => i,
-    si: () => a,
+    si: () => o,
 });
 let r = 3000;
 var i = (function (e) {
@@ -20,10 +20,10 @@ var i = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e[(e.TOP = 0)] = "TOP"), (e[(e.BOTTOM = 1)] = "BOTTOM"), e;
     })({});
-let a = {
+let o = {
     position: 0,
     component: null,
     duration: r,

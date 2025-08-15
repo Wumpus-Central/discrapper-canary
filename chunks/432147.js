@@ -1,156 +1,152 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(442837),
-    s = n(481060),
-    l = n(239091),
+    o = n(481060),
+    s = n(239091),
     c = n(901461),
     u = n(592125),
     d = n(709054),
-    f = n(723774),
-    _ = n(144140),
-    p = n(91159),
-    h = n(576799),
-    m = n(488131),
-    g = n(981631),
-    E = n(388032),
-    b = n(740810);
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function v(e) {
+    p = n(723774),
+    m = n(144140),
+    f = n(91159),
+    _ = n(576799),
+    g = n(488131),
+    h = n(981631),
+    b = n(388032),
+    E = n(740810);
+function C(e) {
     let { message: t, compact: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(I, {
+        : (0, r.jsx)(v, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.Z)(t),
           });
 }
-function I(e) {
-    let { channel: t, compact: i, isSystemMessage: c } = e;
-    function u(e) {
-        e.stopPropagation(), (0, m.ok)(t, e.shiftKey);
-    }
-    function d(e) {
-        e.stopPropagation();
-        let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
-            r = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-        (e.which === g.yXg.SPACE || e.which === g.yXg.ENTER) && (e.preventDefault(), (n || r) && (0, m.ok)(t, r));
-    }
-    function p(e) {
-        (0, l.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("46154"), n.e("18356")]).then(n.bind(n, 422200));
-            return (n) => (0, r.jsx)(e, O({ channel: t }, n));
-        });
-    }
-    let h = (0, a.e7)([_.Z], () => _.Z.getCount(t.id)),
-        y = T(t),
-        v = null != h && h > 0;
+function v(e) {
+    let { channel: t, compact: i, isSystemMessage: c } = e,
+        u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
+        d = (function (e) {
+            var t;
+            let n = (0, a.e7)([m.Z], () => m.Z.getMostRecentMessage(e.id)),
+                i = (0, a.e7)([m.Z], () => m.Z.getCount(e.id)),
+                l = (0, f.Ok)(e);
+            return (null == (t = e.threadMetadata) ? void 0 : t.archived)
+                ? b.intl.string(b.t.ZTo4HR)
+                : null == i || 0 === i
+                  ? b.intl.string(b.t.HYtNyM)
+                  : null == n
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)("span", { children: b.intl.string(b.t.ZTo4HR) }),
+                              (0, r.jsx)("span", {
+                                  className: E.timestamp,
+                                  children: (0, f.Ye)(l),
+                              }),
+                          ],
+                      })
+                    : (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(_.Z, {
+                                  message: n,
+                                  channel: e,
+                              }),
+                              (0, r.jsx)("span", {
+                                  className: E.timestamp,
+                                  children: (0, f.Ye)(l),
+                              }),
+                          ],
+                      });
+        })(t),
+        C = null != u && u > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(b.spine, {
-                    [b.cozy]: !i,
-                    [b.systemMessageSpine]: c,
+                className: l()(E.spine, {
+                    [E.cozy]: !i,
+                    [E.systemMessageSpine]: c,
                 }),
             }),
-            (0, r.jsx)(s.P3F, {
-                onClick: u,
-                onKeyDown: d,
-                onContextMenu: p,
-                "aria-roledescription": E.intl.string(E.t["8ipxiY"]),
-                className: o()(b.container, { [b.systemMessageContainer]: c }),
-                children: (0, r.jsxs)(s.nuw, {
+            (0, r.jsx)(o.P3F, {
+                onClick: function (e) {
+                    e.stopPropagation(), (0, g.ok)(t, e.shiftKey);
+                },
+                onKeyDown: function (e) {
+                    e.stopPropagation();
+                    let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
+                        r = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
+                    (e.which === h.yXg.SPACE || e.which === h.yXg.ENTER) &&
+                        (e.preventDefault(), (n || r) && (0, g.ok)(t, r));
+                },
+                onContextMenu: function (e) {
+                    (0, s.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("11300")]).then(n.bind(n, 422200));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({ channel: t }, n),
+                            );
+                    });
+                },
+                "aria-roledescription": b.intl.string(b.t["8ipxiY"]),
+                className: l()(E.container, { [E.systemMessageContainer]: c }),
+                children: (0, r.jsxs)(o.nuw, {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: b.topLine,
+                            className: E.topLine,
                             children: [
-                                (0, r.jsx)(s.nn4, { children: E.intl.string(E.t["7Xm5QE"]) }),
+                                (0, r.jsx)(o.nn4, { children: b.intl.string(b.t["7Xm5QE"]) }),
                                 (0, r.jsx)("span", {
-                                    className: b.name,
+                                    className: E.name,
                                     children: t.name,
                                 }),
                                 (0, r.jsx)("span", {
-                                    className: b.cta,
-                                    "aria-hidden": !v,
-                                    children: (0, f.WE)(h, t.id),
+                                    className: E.cta,
+                                    "aria-hidden": !C,
+                                    children: (0, p.WE)(u, t.id),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             "aria-hidden": !0,
                             lineClamp: 1,
                             color: "header-secondary",
-                            className: b.bottomLine,
-                            children: y,
+                            className: E.bottomLine,
+                            children: d,
                         }),
                     ],
                 }),
             }),
         ],
     });
-}
-function T(e) {
-    var t;
-    let n = (0, a.e7)([_.Z], () => _.Z.getMostRecentMessage(e.id)),
-        i = (0, a.e7)([_.Z], () => _.Z.getCount(e.id)),
-        o = (0, p.Ok)(e);
-    return (null == (t = e.threadMetadata) ? void 0 : t.archived)
-        ? E.intl.string(E.t.ZTo4HR)
-        : null == i || 0 === i
-          ? E.intl.string(E.t.HYtNyM)
-          : null == n
-            ? (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      (0, r.jsx)("span", { children: E.intl.string(E.t.ZTo4HR) }),
-                      (0, r.jsx)("span", {
-                          className: b.timestamp,
-                          children: (0, p.Ye)(o),
-                      }),
-                  ],
-              })
-            : (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      (0, r.jsx)(h.Z, {
-                          message: n,
-                          channel: e,
-                      }),
-                      (0, r.jsx)("span", {
-                          className: b.timestamp,
-                          children: (0, p.Ye)(o),
-                      }),
-                  ],
-              });
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => R,
+    Z: () => A,
     m: () => T,
 }),
     n(388685),
@@ -8,27 +8,27 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(755721),
+    o = n(442837),
+    s = n(755721),
     c = n(481060),
     u = n(239091),
     d = n(749210),
-    h = n(686546),
-    p = n(951394),
+    p = n(686546),
+    h = n(951394),
     f = n(565138),
-    g = n(372769),
-    m = n(134432),
+    m = n(372769),
+    g = n(134432),
     b = n(769654),
     y = n(430824),
-    x = n(768581),
-    j = n(411198),
-    _ = n(683818),
-    O = n(16853),
-    v = n(981631),
-    C = n(388032),
+    _ = n(768581),
+    C = n(411198),
+    x = n(683818),
+    v = n(16853),
+    j = n(981631),
+    O = n(388032),
     E = n(777261),
     S = n(883760);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function I(e) {
     }
     return e;
 }
-function Z(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function Z(e, t) {
         e
     );
 }
-function P(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,38 +105,38 @@ let T = (e) => {
                 variant: "text-sm/semibold",
                 color: "header-primary",
                 className: E.addServerText,
-                children: C.intl.string(C.t.H9jxS0),
+                children: O.intl.string(O.t.H9jxS0),
             }),
         ],
     });
 };
 function N(e) {
     let { entry: t } = e,
-        [l, s] = i.useState(!1),
-        o = i.useRef(null),
-        { canEdit: u } = (0, _.Z)(t);
+        [l, o] = i.useState(!1),
+        s = i.useRef(null),
+        { canEdit: u } = (0, x.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(E.actionButtonsContainer, { [E.forceButtonsShow]: l }),
-        children: (0, r.jsxs)(p.ZP, {
+        children: (0, r.jsxs)(h.ZP, {
             children: [
                 u
                     ? (0, r.jsx)(c.ua7, {
-                          text: C.intl.string(C.t.XnuOvL),
+                          text: O.intl.string(O.t.XnuOvL),
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = P(e, ["onClick"]);
+                                  l = Z(e, ["onClick"]);
                               return (0, r.jsx)(
-                                  p.zx,
-                                  Z(I({}, l), {
+                                  h.zx,
+                                  I(P({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, c.ZDy)(async () => {
                                                   let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, Z(I({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, I(P({}, n), { entry: t }));
                                               });
                                       },
-                                      "aria-label": C.intl.string(C.t.XnuOvL),
+                                      "aria-label": O.intl.string(O.t.XnuOvL),
                                       children: (0, r.jsx)(c.vdY, {
                                           size: "xs",
                                           color: "currentColor",
@@ -147,29 +147,29 @@ function N(e) {
                           },
                       })
                     : null,
-                (0, r.jsx)(O.Z, {
-                    targetElementRef: o,
-                    onRequestOpen: () => s(!0),
-                    onRequestClose: () => s(!1),
+                (0, r.jsx)(v.Z, {
+                    targetElementRef: s,
+                    onRequestOpen: () => o(!0),
+                    onRequestClose: () => o(!1),
                     entry: t,
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = P(e, ["onClick"]);
+                            n = Z(e, ["onClick"]);
                         return (0, r.jsx)(c.ua7, {
-                            text: C.intl.string(C.t.UKOtz8),
+                            text: O.intl.string(O.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = P(e, ["onClick"]);
+                                    l = Z(e, ["onClick"]);
                                 return (0, r.jsx)(
-                                    p.zx,
-                                    Z(I({}, n, l), {
-                                        ref: o,
+                                    h.zx,
+                                    I(P({}, n, l), {
+                                        ref: s,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
                                         },
-                                        "aria-label": C.intl.string(C.t.UKOtz8),
+                                        "aria-label": O.intl.string(O.t.UKOtz8),
                                         children: (0, r.jsx)(c.xhG, {
                                             size: "md",
                                             color: "currentColor",
@@ -185,42 +185,42 @@ function N(e) {
         }),
     });
 }
-let R = (e) => {
+let A = (e) => {
     var t;
     let { entry: l } = e,
-        [a, p] = i.useState(!1),
-        _ = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
-        O = async () => {
-            p(!0);
+        [a, h] = i.useState(!1),
+        x = null != (0, o.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        v = async () => {
+            h(!0);
             try {
-                _ ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                x ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: j.vtS.DIRECTORY_ENTRY });
             } finally {
-                p(!1);
+                h(!1);
             }
         },
-        S = x.ZP.getGuildSplashURL({
+        S = _.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
-            size: 300 * (0, m.x_)(),
+            size: 300 * (0, g.x_)(),
         }),
-        P =
+        Z =
             null !=
-            (t = x.ZP.getGuildIconURL({
+            (t = _.ZP.getGuildIconURL({
                 id: l.guildId,
                 icon: l.icon,
                 size: 40,
             }))
                 ? t
                 : void 0,
-        T = C.intl.string(C.t.VJlc0d);
+        T = O.intl.string(O.t.VJlc0d);
     return (
-        _ && (T = C.intl.string(C.t.cqWE2d)),
+        x && (T = O.intl.string(O.t.cqWE2d)),
         (0, r.jsxs)("div", {
             className: E.card,
             onContextMenu: (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, Z(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, I(P({}, t), { entry: l }));
                 });
             },
             children: [
@@ -239,16 +239,16 @@ let R = (e) => {
                         }),
                         (0, r.jsx)("div", {
                             className: E.guildIcon,
-                            children: (0, r.jsx)(h.ZP, {
-                                mask: h.ZP.Masks.SQUIRCLE,
+                            children: (0, r.jsx)(p.ZP, {
+                                mask: p.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, r.jsx)("div", {
                                     className: E.iconMask,
                                     children: (0, r.jsx)(f.Z, {
                                         className: E.icon,
-                                        iconSrc: P,
-                                        guild: (0, j.e)(l),
+                                        iconSrc: Z,
+                                        guild: (0, C.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
@@ -263,7 +263,7 @@ let R = (e) => {
                         (0, r.jsxs)("div", {
                             className: E.title,
                             children: [
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(m.Z, {
                                     className: E.guildBadge,
                                     guild: l,
                                     tooltipColor: c.ua7.Colors.PRIMARY,
@@ -293,7 +293,7 @@ let R = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: C.intl.format(C.t["LC+S+v"], {
+                                                children: O.intl.format(O.t["LC+S+v"], {
                                                     membersOnline: l.approximatePresenceCount,
                                                 }),
                                             }),
@@ -307,7 +307,7 @@ let R = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: C.intl.format(C.t.zRl6XV, {
+                                                children: O.intl.format(O.t.zRl6XV, {
                                                     count: l.approximateMemberCount,
                                                 }),
                                             }),
@@ -315,11 +315,11 @@ let R = (e) => {
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(o.zx, {
+                        (0, r.jsx)(s.zx, {
                             submitting: a,
                             className: E.joinButton,
-                            color: _ ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
-                            onClick: O,
+                            color: x ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN,
+                            onClick: v,
                             children: T,
                         }),
                     ],

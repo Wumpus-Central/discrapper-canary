@@ -98,8 +98,8 @@ let v = (e) => {
                 videoUrl: p,
                 shouldLoadVideo: S,
                 index: T,
-                customVideoStyle: I,
-                isReducedMotion: N,
+                customVideoStyle: N,
+                isReducedMotion: I,
                 onClick: y,
                 badgeText: A,
                 size: P,
@@ -141,10 +141,10 @@ let v = (e) => {
                 h.default.track(x.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
             }, 800),
             B = () => {
-                null == Z.current || N || ((Z.current.currentTime = w.current), Z.current.play());
+                null == Z.current || I || ((Z.current.currentTime = w.current), Z.current.play());
             },
             M = () => {
-                null == Z.current || N || ((w.current = Z.current.currentTime), Z.current.pause());
+                null == Z.current || I || ((w.current = Z.current.currentTime), Z.current.pause());
             },
             U = R ? E : j;
         t = R
@@ -204,7 +204,7 @@ let v = (e) => {
                             muted: !0,
                             poster: u,
                             loop: !0,
-                            className: a()(U.boxVideo, { [I]: null != I }),
+                            className: a()(U.boxVideo, { [N]: null != N }),
                             ref: Z,
                             children: (0, i.jsx)("source", {
                                 src: p,

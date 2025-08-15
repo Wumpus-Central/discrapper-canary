@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(973616);
+    a = n(570140),
+    o = n(973616);
 function s(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ class p extends (r = i.ZP.PersistedStore) {
                     (c[t] = {
                         application:
                             (null == e ? void 0 : e.universeIdToApplicationInfo[t].application) != null
-                                ? new a.ZP(null == e ? void 0 : e.universeIdToApplicationInfo[t].application)
+                                ? new o.ZP(null == e ? void 0 : e.universeIdToApplicationInfo[t].application)
                                 : null,
                         lastFetchedTime: null == e ? void 0 : e.universeIdToApplicationInfo[t].lastFetchedTime,
                     });
@@ -94,7 +94,7 @@ class p extends (r = i.ZP.PersistedStore) {
     }
 }
 s(p, "displayName", "RobloxSubgameStore"), s(p, "persistKey", "robloxSubgame");
-let h = new p(o.Z, {
+let h = new p(a.Z, {
     ROBLOX_SUBGAME_UPDATE: d,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: f,
     ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE: _,
