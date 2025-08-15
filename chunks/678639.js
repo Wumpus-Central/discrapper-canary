@@ -1,6 +1,6 @@
 a.d(t, { Z: () => _ }), a(388685), a(642613);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(120356),
     i = a.n(l),
     s = a(442837),
@@ -45,7 +45,7 @@ let f = [
             },
         },
     ],
-    j = [
+    g = [
         {
             id: "local",
             name: "Local Variables",
@@ -80,9 +80,9 @@ let f = [
             },
         },
     ];
-function g(e) {
+function j(e) {
     let { store: t, initialHeight: a } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
     return (0, n.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -149,7 +149,7 @@ function _() {
                 onClickRow: (e) => u(e.key),
             }),
             null != x &&
-                (0, n.jsx)(g, {
+                (0, n.jsx)(j, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

@@ -15,7 +15,7 @@ n.d(t, {
     n(472816),
     n(794429),
     n(642613);
-var r = n(73800),
+var r = n(647438),
     i = n(481060),
     a = n(406432),
     o = n(619899);
@@ -82,7 +82,6 @@ var d = (function (e) {
             (e.UPSELL_BANNER = "upsell_banner.jpg"),
             (e.UPSELL_BANNER_POPOUT = "upsell_banner_popout.png"),
             (e.PDP_BACKGROUND = "pdp_bg.jpg"),
-            (e.PDP_LOGO = "pdp_logo.png"),
             (e.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover.png"),
             (e.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark.png"),
             (e.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light.png"),
@@ -90,6 +89,7 @@ var d = (function (e) {
             (e.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark.png"),
             (e.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light.png"),
             (e.COACHTIP_AVATAR = "coachtip_avatar.png"),
+            (e.LOGO = "logo.png"),
             (e.MOBILE_BANNER = "mobile_banner.jpg"),
             (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
             e
@@ -108,7 +108,7 @@ let _ = {
         "upsell_banner.jpg": "upsell_banner.jpg",
         "upsell_banner_popout.png": "upsell_banner_popout.png",
         "pdp_bg.jpg": "pdp_bg.jpg",
-        "pdp_logo.png": "pdp_logo.png",
+        "logo.png": "logo.png",
         "shop_button_bg_hover.png": "shop_button_bg_hover.png",
         "shop_button_bg_hover_dark.png": "shop_button_bg_hover_dark.png",
         "shop_button_bg_hover_light.png": "shop_button_bg_hover_light.png",

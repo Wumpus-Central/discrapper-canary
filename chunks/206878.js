@@ -1,5 +1,5 @@
-a.d(t, { g: () => j }), a(388685), a(35282);
-var n = a(73800),
+a.d(t, { g: () => g }), a(388685), a(35282);
+var n = a(647438),
     r = a(281598);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -49,7 +49,7 @@ let s = new Set([
         r.jE.HERO_BANNER_STATIC,
         r.jE.HERO_LOGO,
         r.jE.PDP_BACKGROUND,
-        r.jE.PDP_LOGO,
+        r.jE.LOGO,
         r.jE.MOBILE_BANNER,
         r.jE.MOBILE_BACKGROUND,
     ]),
@@ -92,7 +92,7 @@ let s = new Set([
         [r.jE.MOBILE_BANNER]: m,
         [r.jE.MOBILE_BACKGROUND]: x,
         [r.jE.PDP_BACKGROUND]: x,
-        [r.jE.PDP_LOGO]: x,
+        [r.jE.LOGO]: x,
         [r.jE.COACHTIP_AVATAR]: x,
     },
     p = async (e) => {
@@ -126,7 +126,7 @@ let s = new Set([
         let r = h[e];
         if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
     },
-    j = () => {
+    g = () => {
         let [e, t] = n.useState(!1),
             [a, c] = n.useState({}),
             [d, u] = n.useState({}),
@@ -150,7 +150,7 @@ let s = new Set([
                     });
                 });
             }, []),
-            j = n.useCallback(() => {
+            g = n.useCallback(() => {
                 t(!1), u({}), c({});
             }, []);
         return {
@@ -253,6 +253,6 @@ let s = new Set([
                 },
                 [m, x],
             ),
-            reset: j,
+            reset: g,
         };
     };

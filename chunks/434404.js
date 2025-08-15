@@ -106,10 +106,10 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async open(e, t, r, i) {
             var a;
             await Promise.all([
-                n.e("95355"),
+                n.e("85911"),
                 n.e("66549"),
                 n.e("1806"),
-                n.e("44947"),
+                n.e("53414"),
                 n.e("70274"),
                 n.e("25292"),
                 n.e("31978"),

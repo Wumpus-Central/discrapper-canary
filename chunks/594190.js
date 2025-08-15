@@ -538,7 +538,7 @@ function ej(e) {
         }),
         ei.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ew(),
-        w.Z.setRecentGames(eU().map((e) => eD(e, e5, A.Z, N.Z))));
+        w.Z.setRecentGames(eU().map((e) => eD(e, e8, A.Z, N.Z))));
 }
 function eU() {
     let e = o().values(ei.gameOverrides);
@@ -916,7 +916,7 @@ class e4 extends (i = c.ZP.Store) {
     }
 }
 G(e4, "displayName", "RunningGameStore");
-let e5 = new e4(d.Z, {
+let e8 = new e4(d.Z, {
         ROBLOX_SUBGAME_UPDATE: eB,
         ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: eB,
         RUNNING_GAMES_CHANGE: eV,
@@ -937,4 +937,4 @@ let e5 = new e4(d.Z, {
         GAME_DETECTION_DEBUGGING_STOP: eX,
         GAME_DETECTION_DEBUGGING_TICK: eQ,
     }),
-    e6 = e5;
+    e6 = e8;

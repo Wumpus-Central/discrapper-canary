@@ -1,6 +1,6 @@
 r.d(t, { Z: () => v }), r(642613);
-var n = r(255367),
-    l = r(73800),
+var n = r(951288),
+    l = r(647438),
     a = r(120356),
     i = r.n(a),
     o = r(497598),
@@ -12,8 +12,8 @@ var n = r(255367),
     g = r(642909),
     f = r(215023),
     b = r(981631),
-    h = r(388032),
-    m = r(182668),
+    m = r(388032),
+    h = r(182668),
     _ = r(345213);
 let v = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: r } = (0, p.S)(),
@@ -25,30 +25,30 @@ let v = () => {
             let { sortType: t, sortDirection: r } = e;
             return t === s.E.RECENCY
                 ? {
-                      label: h.intl.string(h.t["51Bhi4"]),
+                      label: m.intl.string(m.t["51Bhi4"]),
                       value: "recent",
                   }
                 : t === s.E.PRICE
                   ? r === o.F.ASC
                       ? {
-                            label: h.intl.string(h.t.m8RVU1),
+                            label: m.intl.string(m.t.m8RVU1),
                             value: "price-asc",
                         }
                       : {
-                            label: h.intl.string(h.t.zBwQJC),
+                            label: m.intl.string(m.t.zBwQJC),
                             value: "price-desc",
                         }
                   : t === s.E.RELEVANCE
                     ? {
-                          label: h.intl.string(h.t["XoeT//"]),
+                          label: m.intl.string(m.t["XoeT//"]),
                           value: "relevance",
                       }
                     : {
-                          label: h.intl.string(h.t.Y68e5u),
+                          label: m.intl.string(m.t.Y68e5u),
                           value: "popularity",
                       };
         }, []),
-        S = l.useCallback(
+        y = l.useCallback(
             (e) =>
                 ({
                     recent: {
@@ -74,9 +74,9 @@ let v = () => {
                 })[e],
             [],
         ),
-        y = l.useCallback(
+        S = l.useCallback(
             (e) => {
-                let r = E(S(e));
+                let r = E(y(e));
                 u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == a ? void 0 : a.sessionId,
                     page_section: null == a ? void 0 : a.pageSection,
@@ -86,18 +86,18 @@ let v = () => {
                     cta_name: "sort by ".concat(r.label.toLowerCase()),
                     page_type: "catalog",
                 }),
-                    t(S(e));
+                    t(y(e));
             },
-            [a, E, S, t],
+            [a, E, y, t],
         ),
         x = E(e);
     return (0, n.jsx)("div", {
         className: i()({ [_.shopTakeOver]: v }),
         children: (0, n.jsx)(c.PhF, {
             look: c.qQH.CUSTOM,
-            className: m.custom,
+            className: h.custom,
             options: C.map(E),
-            select: y,
+            select: S,
             isSelected: (e) => e === x.value,
             serialize: (e) => e,
             popoutWidth: 224,

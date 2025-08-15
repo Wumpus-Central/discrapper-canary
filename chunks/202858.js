@@ -3,8 +3,8 @@ n.d(t, {
     ZP: () => c,
 }),
     n(415506);
-var i = n(255367);
-n(73800);
+var i = n(951288);
+n(647438);
 var r = n(481060),
     s = n(981631);
 function a(e) {
@@ -69,7 +69,7 @@ let c = {
     enableMFA: async function () {
         await new Promise((e) => {
             (0, r.ZDy)(async () => {
-                let { default: t } = await Promise.all([n.e("35992"), n.e("23746")]).then(n.bind(n, 837651));
+                let { default: t } = await Promise.all([n.e("87442"), n.e("23746")]).then(n.bind(n, 837651));
                 return (n) => (0, i.jsx)(t, l(a({}, n), { handleEnableMFASuccess: e }));
             });
         }),

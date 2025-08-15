@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(388685),
     n(539854);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(954955),
@@ -306,9 +306,9 @@ let eu = (e, t) => {
             { analyticsLocations: e2 } = (0, b.ZP)(g.Z.EMOJI_PICKER),
             { diversitySurrogate: e3 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eB, c, l, eP),
-            e5 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
+            e8 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
             e6 = D.d4.useSetting(),
-            e8 = i.useMemo(() => new Set(e6), [e6]),
+            e5 = i.useMemo(() => new Set(e6), [e6]),
             e7 = i.useCallback((e) => {
                 D.d4.updateSetting(Array.from(e));
             }, []),
@@ -329,7 +329,7 @@ let eu = (e, t) => {
                 includeCreateEmojiButton: et,
                 pickerIntention: l,
                 emojiSearchResults: e4,
-                collapsedSections: e8,
+                collapsedSections: e5,
                 emojiPaddingHorizontal: ea,
                 emojiSpriteSize: A,
                 shouldShowSoundmojiInEmojiPicker: eR,
@@ -434,13 +434,13 @@ let eu = (e, t) => {
                 (null == (e = tn[n]) ? void 0 : e[t]) == null && 0 !== t && T.kJ.setInspectedExpressionPosition(0, 0);
             }, [tn]),
             i.useEffect(() => {
-                if (("" === eG.current && "" !== eB && (0, U.PC)(e1, l), 0 === e5 && "" !== eB)) eh(e1, eB);
+                if (("" === eG.current && "" !== eB && (0, U.PC)(e1, l), 0 === e8 && "" !== eB)) eh(e1, eB);
                 else if ("" !== eB && eG.current !== eB) {
                     var e;
-                    em(e5, null != (e = null == e4 ? void 0 : e4.locked.length) ? e : 0, e1, eB, l);
+                    em(e8, null != (e = null == e4 ? void 0 : e4.locked.length) ? e : 0, e1, eB, l);
                 }
                 eG.current = eB;
-            }, [eB, e1, e5, e4, l]);
+            }, [eB, e1, e8, e4, l]);
         let t_ = null != eI ? eI : R ? "div" : _.VqE,
             tp = null != e9;
         if ((null == ej ? void 0 : ej.type) === Y.Bg.PREMIUM) {
@@ -540,7 +540,7 @@ let eu = (e, t) => {
                                                       {
                                                           children: tp
                                                               ? (0, r.jsx)(K.Z, {
-                                                                    collapsedSections: e8,
+                                                                    collapsedSections: e5,
                                                                     diversitySurrogate: e3,
                                                                     emojiGrid: tn,
                                                                     emojiListRef: eF,

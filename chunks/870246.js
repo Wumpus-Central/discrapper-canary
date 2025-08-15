@@ -3,7 +3,7 @@ n.d(t, {
     w: () => s,
 });
 var r,
-    o = n(73800),
+    o = n(647438),
     i = n(626135),
     a = n(981631),
     s = (((r = {}).DETAIL = "Boost Perk Shop Details"), (r.DEACTIVATE = "Boost Perk Shop Disable"), r);

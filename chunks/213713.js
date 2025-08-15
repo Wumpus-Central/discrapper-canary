@@ -1,6 +1,6 @@
 a.d(t, { Z: () => A }), a(388685);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(120356),
     i = a.n(l),
     s = a(392711),
@@ -15,14 +15,14 @@ var n = a(255367),
     b = a(812206),
     v = a(835473),
     f = a(246992),
-    j = a(681619),
-    g = a(810568),
+    g = a(681619),
+    j = a(810568),
     _ = a(168524),
     y = a(77498),
     C = a(823379),
     N = a(550532),
-    O = a(71585),
-    T = a(146282),
+    T = a(71585),
+    O = a(146282),
     E = a(780106),
     S = a(650613),
     P = a(789086),
@@ -66,7 +66,7 @@ let k = [
 function Z(e) {
     var t, a;
     let { type: r } = e,
-        l = (0, u.e7)([T.Z], () => T.Z.getFilters()),
+        l = (0, u.e7)([O.Z], () => O.Z.getFilters()),
         i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
     return (0, n.jsx)(h.XZJ, {
         value: i,
@@ -85,9 +85,9 @@ function Z(e) {
 }
 function A() {
     var e, t;
-    let a = (0, u.e7)([T.Z], () => T.Z.getFeed(I.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
+    let a = (0, u.e7)([O.Z], () => O.Z.getFeed(I.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,9 +99,9 @@ function A() {
                 };
             });
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([T.Z], () => {
+        c = (0, u.e7)([O.Z], () => {
             var e;
-            return (null == (e = T.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = O.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [Z, A] = r.useState(""),
         L = (0, u.e7)([y.Z, b.Z], () => {
@@ -117,7 +117,7 @@ function A() {
         M = (0, _.Z)({
             applicationId: L,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: j.m1.DevTools,
         }),
         U = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
@@ -139,7 +139,7 @@ function A() {
                     children: [
                         (0, n.jsx)(h.vwX, { children: "Inventory" }),
                         s.length > 0 &&
-                            (0, n.jsx)(j.Z, {
+                            (0, n.jsx)(g.Z, {
                                 columns: k,
                                 data: s,
                             }),
@@ -262,7 +262,7 @@ let D = (e) => {
         a = (0, _.Z)({
             applicationId: t.id,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: j.m1.DevTools,
         });
     return (0, n.jsx)(h.P3F, {
         onClick: a,

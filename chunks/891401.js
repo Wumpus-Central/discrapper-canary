@@ -1,6 +1,6 @@
 a.d(t, { Z: () => N }), a(49124);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(120356),
     i = a.n(l),
     s = a(392711),
@@ -15,8 +15,8 @@ var n = a(255367),
     b = a(680783),
     v = a(605236),
     f = a(675478),
-    j = a(944486),
-    g = a(388032),
+    g = a(944486),
+    j = a(388032),
     _ = a(715639);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -64,12 +64,12 @@ function C(e, t) {
 function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(T, {})],
+        children: [(0, n.jsx)(T, {}), (0, n.jsx)(O, {})],
     });
 }
-function O() {
+function T() {
     var e, t;
-    let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
+    let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
         l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, p.Z)(s),
@@ -91,13 +91,13 @@ function O() {
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        O = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         R = r.useCallback(
@@ -195,12 +195,12 @@ function O() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: T,
+                                    onClick: O,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -236,7 +236,7 @@ function O() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
@@ -300,13 +300,13 @@ function O() {
                                     {
                                         type: "color",
                                         value: d.link_color,
-                                        onChange: O,
+                                        onChange: T,
                                     },
                                     "linkColor-".concat(d.link_color),
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
@@ -326,7 +326,7 @@ function O() {
         ],
     });
 }
-function T() {
+function O() {
     let e = r.useCallback(() => {
             (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),

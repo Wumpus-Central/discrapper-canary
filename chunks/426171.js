@@ -1,15 +1,15 @@
 r.d(t, {
     Kp: () => E,
     u9: () => C,
-    xV: () => S,
+    xV: () => y,
 }),
     r(413496),
     r(433524),
     r(35282),
     r(704826),
     r(388685);
-var n = r(73800),
-    l = r(114858),
+var n = r(647438),
+    l = r(843611),
     a = r(442837),
     i = r(607070),
     o = r(100527),
@@ -21,11 +21,11 @@ var n = r(73800),
     g = r(410127),
     f = r(237031),
     b = r(258939),
-    h = r(956472),
-    m = r(981631);
+    m = r(956472),
+    h = r(981631);
 let _ = "".concat("#").concat("itemSkuId", "="),
     v = new RegExp("^".concat(_, "(\\d+)$")),
-    O = [m.Z5c.COLLECTIBLES_SHOP, m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    O = [h.Z5c.COLLECTIBLES_SHOP, h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
     C = (e) => {
         let t = (0, l.TH)();
         n.useEffect(() => {
@@ -36,14 +36,14 @@ let _ = "".concat("#").concat("itemSkuId", "="),
         }, [e, t.pathname]);
     },
     E = () => {
-        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(m.S9g.COLLECTIBLES_SHOP)),
+        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(h.S9g.COLLECTIBLES_SHOP)),
             t = (0, b.R)(),
             r = n.useRef(null),
             i = (0, l.TH)(),
             _ =
-                i.pathname === m.Z5c.COLLECTIBLES_SHOP
+                i.pathname === h.Z5c.COLLECTIBLES_SHOP
                     ? o.Z.HOME_PAGE_SHOP_TAB
-                    : i.pathname === m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
+                    : i.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
                       ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN
                       : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: O } = (0, s.ZP)(_),
@@ -65,7 +65,7 @@ let _ = "".concat("#").concat("itemSkuId", "="),
                             i = u.Z.getCategoryForProduct(t);
                         if (null != a && null != i) {
                             let e = a,
-                                s = (0, h.oQ)({ product: a }),
+                                s = (0, m.oQ)({ product: a }),
                                 c = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (c !== document.activeElement && (null == c || c.focus()),
@@ -99,7 +99,7 @@ let _ = "".concat("#").concat("itemSkuId", "="),
             }
         }, [e, O, _, t, E, C]);
     },
-    S = (e) => {
+    y = (e) => {
         let t = n.useRef({}),
             r = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
             l = (0, a.e7)([u.Z], () => u.Z.isFetchingCategories),

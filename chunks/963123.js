@@ -1,11 +1,11 @@
 n.d(t, { Z: () => J }), n(388685), n(539854);
-var r = n(255367),
-    l = n(73800),
+var r = n(951288),
+    l = n(647438),
     o = n(120356),
     i = n.n(o),
     a = n(10106),
-    s = n(717976),
-    c = n(94171),
+    s = n(815061),
+    c = n(524825),
     u = n(754700),
     d = n(670081),
     m = n(442837),
@@ -181,13 +181,13 @@ function J(e) {
         e1 = (0, l.useRef)(null),
         e2 = (0, l.useRef)(null),
         e8 = l.useRef(!0),
-        e6 = (null == (t = J.userStatus) ? void 0 : t.completedAt) != null,
-        e7 = (0, x.km)((e) => e.transcript),
-        [e4, e3] = l.useState(null),
+        e4 = (null == (t = J.userStatus) ? void 0 : t.completedAt) != null,
+        e6 = (0, x.km)((e) => e.transcript),
+        [e7, e3] = l.useState(null),
         [e9, e5] = l.useState(!1),
         [te, tt] = l.useState(!1),
         [tn, tr] = l.useState(null),
-        tl = e6
+        tl = e4
             ? null != (O = null == (n = e1.current) ? void 0 : n.duration)
                 ? O
                 : 0
@@ -222,7 +222,7 @@ function J(e) {
                 subtitle: m ? c : a,
             };
         })(J),
-        ts = e6
+        ts = e4
             ? eW.timestampSec >= eW.duration
                 ? 0
                 : eW.timestampSec
@@ -231,7 +231,7 @@ function J(e) {
         e8.current &&
             ((e8.current = !1),
             eV(b.Z.getEffectiveConnectionSpeed()),
-            e6 && eW.timestampSec >= eW.duration && eX(J.id, 0, eW.duration));
+            e4 && eW.timestampSec >= eW.duration && eX(J.id, 0, eW.duration));
     });
     let {
             videoVariant: tc,
@@ -329,7 +329,7 @@ function J(e) {
                 if ((to.info("[QV] | updatePlayerState | playerState: ".concat(e)), eS(e), null != e1.current))
                     switch (e) {
                         case V.rq.PLAYING:
-                            e1.current.paused && tE(e4), e3(null), e1.current.play();
+                            e1.current.paused && tE(e7), e3(null), e1.current.play();
                             break;
                         case V.rq.PAUSED:
                             e1.current.paused || tD(), e1.current.pause(), (ez.current = !1);
@@ -338,30 +338,30 @@ function J(e) {
                             tD(), eu(!1);
                     }
             },
-            [tE, e4, tD, eu, to],
+            [tE, e7, tD, eu, to],
         );
     l.useEffect(() => {
-        tg(e4);
-    }, [e4, tg]),
+        tg(e7);
+    }, [e7, tg]),
         l.useEffect(() => {
             eE && tO(ev, eC);
         }, [ev, eE, eC, tO]);
     let tP = l.useCallback(
         (e) => {
             var t;
-            e6 ||
+            e4 ||
                 (null == (t = J.userStatus) ? void 0 : t.enrolledAt) == null ||
                 (to.info("[QV] sendServerProgressUpdate: ".concat(e)), (0, _.FI)(J, e)),
                 tv();
         },
-        [e6, J, to, tv],
+        [e4, J, to, tv],
     );
     l.useEffect(() => {
         (el !== f.Dvm.HIDDEN &&
             el !== f.Dvm.EXITING &&
             el !== f.Dvm.EXITED &&
-            (null == el || !eO || eg || e6) &&
-            (!eE || ev || e6)) ||
+            (null == el || !eO || eg || e4) &&
+            (!eE || ev || e4)) ||
             null == e1.current ||
             eC !== V.rq.PLAYING ||
             (to.info(
@@ -370,11 +370,11 @@ function J(e) {
                     .concat(el, ", visible: ")
                     .concat(eg, ", focused: ")
                     .concat(ev, ", isQuestCompleted: ")
-                    .concat(e6),
+                    .concat(e4),
             ),
             tR(V.rq.PAUSED),
-            e6 || e3(y.yE.LOST_FOCUS));
-    }, [el, ev, eE, eg, eO, eC, e6, tR, tP, to]);
+            e4 || e3(y.yE.LOST_FOCUS));
+    }, [el, ev, eE, eg, eO, eC, e4, tR, tP, to]);
     let [tN, tI] = l.useState(!1),
         tk = l.useRef(null),
         tA = l.useRef(performance.now()),
@@ -586,8 +586,8 @@ function J(e) {
         ),
         t1 = l.useMemo(() => (0, N.z0)(J, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.THUMBNAIL), [J]),
         t2 = l.useMemo(() => (0, N.z0)(J, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.CAPTION), [J]),
-        t8 = e6 || eW.maxTimestampSec >= (null != (k = null == (o = e1.current) ? void 0 : o.currentTime) ? k : 0) + 1,
-        t6 = l.useMemo(() => null === (0, N.z0)(J, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.TRANSCRIPT), [J]);
+        t8 = e4 || eW.maxTimestampSec >= (null != (k = null == (o = e1.current) ? void 0 : o.currentTime) ? k : 0) + 1,
+        t4 = l.useMemo(() => null === (0, N.z0)(J, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.TRANSCRIPT), [J]);
     return (0, r.jsx)(f.P3F, {
         className: z.videoCont,
         "data-fullscreen": ep,
@@ -772,7 +772,7 @@ function J(e) {
                         type: f.$jN.Type.WANDERING_CUBES,
                         className: z.loadingSpinner,
                     }),
-                eC === V.rq.PAUSED && e4 === y.yE.LOST_FOCUS && (0, r.jsx)(W, {}),
+                eC === V.rq.PAUSED && e7 === y.yE.LOST_FOCUS && (0, r.jsx)(W, {}),
                 ec &&
                     eC !== V.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {
@@ -882,7 +882,7 @@ function J(e) {
                         (0, r.jsx)(L.Z, {
                             percent: eT,
                             animate: !0 !== e8.current && !eR,
-                            interactionEnabled: e6 && eH,
+                            interactionEnabled: e4 && eH,
                             backgroundColor: tM ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tM ? ew : void 0,
                             duration: null != (Z = null == (p = e1.current) ? void 0 : p.duration) ? Z : 1,
@@ -938,14 +938,14 @@ function J(e) {
                                 visible: tM,
                                 seekForwardEnabled: t8,
                                 hideCaptionBtn: null == t2,
-                                hideTranscriptBtn: t6,
+                                hideTranscriptBtn: t4,
                                 handlePlaybackBtnClick: tU,
                                 handleTranscriptBtnClick: () => {
                                     ec ||
-                                        (null != e7 &&
-                                            e7.questId === J.id &&
-                                            e7.fetchStatus !== x.iF.NONE &&
-                                            e7.fetchStatus !== x.iF.FAILURE) ||
+                                        (null != e6 &&
+                                            e6.questId === J.id &&
+                                            e6.fetchStatus !== x.iF.NONE &&
+                                            e6.fetchStatus !== x.iF.FAILURE) ||
                                         (0, j.lL)(J, u.X.WATCH_VIDEO),
                                         eu(!ec),
                                         tb(y.jn.VIDEO_MODAL, ec ? h.jZ.TRANSCRIPT_DISABLE : h.jZ.TRANSCRIPT_ENABLE);

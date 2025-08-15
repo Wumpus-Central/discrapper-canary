@@ -1,5 +1,5 @@
 r.d(t, { W: () => u }), r(388685);
-var n = r(73800),
+var n = r(647438),
     l = r(979554),
     a = r(809206),
     i = r(350327),
@@ -10,7 +10,7 @@ let u = (e) => {
     let { product: t, onSuccess: u, onError: d } = e,
         [p, g] = n.useState(!1),
         { firstAvatarDecoration: f, firstProfileEffect: b } = (0, s.Rj)(t),
-        h = (0, o.x6)(t)
+        m = (0, o.x6)(t)
             ? c.intl.string(c.t.tf1ZZ2)
             : t.type === l.Z.AVATAR_DECORATION
               ? c.intl.string(c.t.zOA4a2)
@@ -39,7 +39,7 @@ let u = (e) => {
                     } = await Promise.resolve().then(r.bind(r, 481060));
                     l(),
                         a(
-                            n(h, t.MESSAGE, {
+                            n(m, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,
                             }),
@@ -51,7 +51,7 @@ let u = (e) => {
             } finally {
                 g(!1);
             }
-        }, [f, b, t, u, h, d]),
+        }, [f, b, t, u, m, d]),
         isApplying: p,
     };
 };

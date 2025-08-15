@@ -884,7 +884,7 @@ t.exports = (function () {
                 })),
                 n.push(a);
         }
-        return t5(t, e, n);
+        return t6(t, e, n);
     }
     function t0(t, e, r) {
         return t && t.mergeDeep && y(e) ? t.mergeDeep(e) : tp(t, e) ? t : e;
@@ -896,7 +896,7 @@ t.exports = (function () {
             return tp(e, i) ? e : i;
         };
     }
-    function t5(t, e, r) {
+    function t6(t, e, r) {
         return 0 ===
             (r = r.filter(function (t) {
                 return 0 !== t.size;
@@ -922,7 +922,7 @@ t.exports = (function () {
                 })
               : t.constructor(r[0]);
     }
-    function t6(t) {
+    function t3(t) {
         return (
             (t -= (t >> 1) & 1431655765),
             (t = ((t = (858993459 & t) + ((t >> 2) & 858993459)) + (t >> 4)) & 252645135),
@@ -930,7 +930,7 @@ t.exports = (function () {
             127 & (t += t >> 16)
         );
     }
-    function t2(t, e, r, n) {
+    function t5(t, e, r, n) {
         var i = n ? t : A(t);
         return (i[e] = r), i;
     }
@@ -969,7 +969,7 @@ t.exports = (function () {
             void 0 === e && (e = tx(r));
             var i = 1 << ((0 === t ? e : e >>> t) & 31),
                 o = this.bitmap;
-            return (o & i) == 0 ? n : this.nodes[t6(o & (i - 1))].get(t + 5, e, r, n);
+            return (o & i) == 0 ? n : this.nodes[t3(o & (i - 1))].get(t + 5, e, r, n);
         }),
         (tP.prototype.update = function (t, e, r, n, i, o, a) {
             void 0 === r && (r = tx(n));
@@ -978,12 +978,12 @@ t.exports = (function () {
                 c = this.bitmap,
                 l = (c & s) != 0;
             if (!l && i === E) return this;
-            var f = t6(c & (s - 1)),
+            var f = t3(c & (s - 1)),
                 p = this.nodes,
                 h = l ? p[f] : void 0,
                 d = tY(h, t, e + 5, r, n, i, o, a);
             if (d === h) return this;
-            if (!l && d && p.length >= t3) {
+            if (!l && d && p.length >= t4) {
                 for (var g = t, y = p, v = c, m = u, _ = d, b = 0, S = Array(32), w = 0; 0 !== v; w++, v >>>= 1)
                     S[w] = 1 & v ? y[b++] : void 0;
                 return (S[m] = _), new tj(g, b + 1, S);
@@ -994,7 +994,7 @@ t.exports = (function () {
                 k = l ? (d ? c : c ^ s) : c | s,
                 C = l
                     ? d
-                        ? t2(p, f, d, x)
+                        ? t5(p, f, d, x)
                         : (function (t, e, r) {
                               var n = t.length - 1;
                               if (r && e === n) return t.pop(), t;
@@ -1037,7 +1037,7 @@ t.exports = (function () {
                     })(t, c, p, u);
             } else p++;
             var h = t && t === this.ownerID,
-                d = t2(c, u, f, h);
+                d = t5(c, u, f, h);
             return h ? ((this.count = p), (this.nodes = d), this) : new tj(t, p, d);
         }),
         (tU.prototype.get = function (t, e, r, n) {
@@ -1112,12 +1112,12 @@ t.exports = (function () {
             return q();
         });
     var t7 = 8,
-        t3 = 16,
+        t4 = 16,
         t8 = 8;
-    function t9(t) {
+    function t2(t) {
         var e = ea();
         if (null == t) return e;
-        if (t4(t)) return t;
+        if (t9(t)) return t;
         var r = d(t),
             n = r.size;
         return 0 === n
@@ -1131,24 +1131,24 @@ t.exports = (function () {
                         });
                 });
     }
-    function t4(t) {
+    function t9(t) {
         return !!(t && t[et]);
     }
-    f(t9, t_),
-        (t9.of = function () {
+    f(t2, t_),
+        (t2.of = function () {
             return this(arguments);
         }),
-        (t9.prototype.toString = function () {
+        (t2.prototype.toString = function () {
             return this.__toString("List [", "]");
         }),
-        (t9.prototype.get = function (t, e) {
+        (t2.prototype.get = function (t, e) {
             if ((t = B(this, t)) >= 0 && t < this.size) {
                 var r = ec(this, (t += this._origin));
                 return r && r.array[31 & t];
             }
             return e;
         }),
-        (t9.prototype.set = function (t, e) {
+        (t2.prototype.set = function (t, e) {
             return (function (t, e, r) {
                 if ((e = B(t, e)) != e) return t;
                 if (e >= t.size || e < 0)
@@ -1169,13 +1169,13 @@ t.exports = (function () {
                     : t;
             })(this, t, e);
         }),
-        (t9.prototype.remove = function (t) {
+        (t2.prototype.remove = function (t) {
             return this.has(t) ? (0 === t ? this.shift() : t === this.size - 1 ? this.pop() : this.splice(t, 1)) : this;
         }),
-        (t9.prototype.insert = function (t, e) {
+        (t2.prototype.insert = function (t, e) {
             return this.splice(t, 0, e);
         }),
-        (t9.prototype.clear = function () {
+        (t2.prototype.clear = function () {
             return 0 === this.size
                 ? this
                 : this.__ownerID
@@ -1187,7 +1187,7 @@ t.exports = (function () {
                     this)
                   : ea();
         }),
-        (t9.prototype.push = function () {
+        (t2.prototype.push = function () {
             var t = arguments,
                 e = this.size;
             return this.withMutations(function (r) {
@@ -1195,41 +1195,41 @@ t.exports = (function () {
                 for (var n = 0; n < t.length; n++) r.set(e + n, t[n]);
             });
         }),
-        (t9.prototype.pop = function () {
+        (t2.prototype.pop = function () {
             return el(this, 0, -1);
         }),
-        (t9.prototype.unshift = function () {
+        (t2.prototype.unshift = function () {
             var t = arguments;
             return this.withMutations(function (e) {
                 el(e, -t.length);
                 for (var r = 0; r < t.length; r++) e.set(r, t[r]);
             });
         }),
-        (t9.prototype.shift = function () {
+        (t2.prototype.shift = function () {
             return el(this, 1);
         }),
-        (t9.prototype.merge = function () {
+        (t2.prototype.merge = function () {
             return ef(this, void 0, arguments);
         }),
-        (t9.prototype.mergeWith = function (t) {
+        (t2.prototype.mergeWith = function (t) {
             var e = l.call(arguments, 1);
             return ef(this, t, e);
         }),
-        (t9.prototype.mergeDeep = function () {
+        (t2.prototype.mergeDeep = function () {
             return ef(this, t0, arguments);
         }),
-        (t9.prototype.mergeDeepWith = function (t) {
+        (t2.prototype.mergeDeepWith = function (t) {
             var e = l.call(arguments, 1);
             return ef(this, t1(t), e);
         }),
-        (t9.prototype.setSize = function (t) {
+        (t2.prototype.setSize = function (t) {
             return el(this, 0, t);
         }),
-        (t9.prototype.slice = function (t, e) {
+        (t2.prototype.slice = function (t, e) {
             var r = this.size;
             return R(t, e, r) ? this : el(this, N(t, r, 0), N(e, r, r));
         }),
-        (t9.prototype.__iterator = function (t, e) {
+        (t2.prototype.__iterator = function (t, e) {
             var r = 0,
                 n = ei(this, e);
             return new j(function () {
@@ -1237,20 +1237,20 @@ t.exports = (function () {
                 return e === en ? q() : U(t, r++, e);
             });
         }),
-        (t9.prototype.__iterate = function (t, e) {
+        (t2.prototype.__iterate = function (t, e) {
             for (var r, n = 0, i = ei(this, e); (r = i()) !== en && !1 !== t(r, n++, this); );
             return n;
         }),
-        (t9.prototype.__ensureOwner = function (t) {
+        (t2.prototype.__ensureOwner = function (t) {
             return t === this.__ownerID
                 ? this
                 : t
                   ? eo(this._origin, this._capacity, this._level, this._root, this._tail, t, this.__hash)
                   : ((this.__ownerID = t), this);
         }),
-        (t9.isList = t4);
+        (t2.isList = t9);
     var et = "@@__IMMUTABLE_LIST__@@",
-        ee = t9.prototype;
+        ee = t2.prototype;
     function er(t, e) {
         (this.array = t), (this.ownerID = e);
     }
@@ -1430,7 +1430,7 @@ t.exports = (function () {
                     })),
                 n.push(u);
         }
-        return i > t.size && (t = t.setSize(i)), t5(t, e, n);
+        return i > t.size && (t = t.setSize(i)), t6(t, e, n);
     }
     function ep(t) {
         return t < 32 ? 0 : ((t - 1) >>> 5) << 5;
@@ -2311,10 +2311,10 @@ t.exports = (function () {
     }
     function eQ(t) {
         return null == t
-            ? e6()
+            ? e3()
             : e0(t)
               ? t
-              : e6().withMutations(function (e) {
+              : e3().withMutations(function (e) {
                     var r = g(t);
                     tB(r.size),
                         r.forEach(function (t) {
@@ -2346,38 +2346,38 @@ t.exports = (function () {
         }),
         (eQ.isOrderedSet = e0);
     var e1 = eQ.prototype;
-    function e5(t, e) {
+    function e6(t, e) {
         var r = Object.create(e1);
         return (r.size = t ? t.size : 0), (r._map = t), (r.__ownerID = e), r;
     }
-    function e6() {
-        return s || (s = e5(ey()));
+    function e3() {
+        return s || (s = e6(ey()));
     }
-    function e2(t) {
-        return null == t ? e4() : e7(t) ? t : e4().unshiftAll(t);
+    function e5(t) {
+        return null == t ? e9() : e7(t) ? t : e9().unshiftAll(t);
     }
     function e7(t) {
-        return !!(t && t[e3]);
+        return !!(t && t[e4]);
     }
     (e1[k] = !0),
-        (e1.__empty = e6),
-        (e1.__make = e5),
-        f(e2, t_),
-        (e2.of = function () {
+        (e1.__empty = e3),
+        (e1.__make = e6),
+        f(e5, t_),
+        (e5.of = function () {
             return this(arguments);
         }),
-        (e2.prototype.toString = function () {
+        (e5.prototype.toString = function () {
             return this.__toString("Stack [", "]");
         }),
-        (e2.prototype.get = function (t, e) {
+        (e5.prototype.get = function (t, e) {
             var r = this._head;
             for (t = B(this, t); r && t--; ) r = r.next;
             return r ? r.value : e;
         }),
-        (e2.prototype.peek = function () {
+        (e5.prototype.peek = function () {
             return this._head && this._head.value;
         }),
-        (e2.prototype.push = function () {
+        (e5.prototype.push = function () {
             if (0 == arguments.length) return this;
             for (var t = this.size + arguments.length, e = this._head, r = arguments.length - 1; r >= 0; r--)
                 e = {
@@ -2386,9 +2386,9 @@ t.exports = (function () {
                 };
             return this.__ownerID
                 ? ((this.size = t), (this._head = e), (this.__hash = void 0), (this.__altered = !0), this)
-                : e9(t, e);
+                : e2(t, e);
         }),
-        (e2.prototype.pushAll = function (t) {
+        (e5.prototype.pushAll = function (t) {
             if (0 === (t = d(t)).size) return this;
             tB(t.size);
             var e = this.size,
@@ -2402,28 +2402,28 @@ t.exports = (function () {
             }),
             this.__ownerID)
                 ? ((this.size = e), (this._head = r), (this.__hash = void 0), (this.__altered = !0), this)
-                : e9(e, r);
+                : e2(e, r);
         }),
-        (e2.prototype.pop = function () {
+        (e5.prototype.pop = function () {
             return this.slice(1);
         }),
-        (e2.prototype.unshift = function () {
+        (e5.prototype.unshift = function () {
             return this.push.apply(this, arguments);
         }),
-        (e2.prototype.unshiftAll = function (t) {
+        (e5.prototype.unshiftAll = function (t) {
             return this.pushAll(t);
         }),
-        (e2.prototype.shift = function () {
+        (e5.prototype.shift = function () {
             return this.pop.apply(this, arguments);
         }),
-        (e2.prototype.clear = function () {
+        (e5.prototype.clear = function () {
             return 0 === this.size
                 ? this
                 : this.__ownerID
                   ? ((this.size = 0), (this._head = void 0), (this.__hash = void 0), (this.__altered = !0), this)
-                  : e4();
+                  : e9();
         }),
-        (e2.prototype.slice = function (t, e) {
+        (e5.prototype.slice = function (t, e) {
             if (R(t, e, this.size)) return this;
             var r,
                 n = N(t, this.size, 0);
@@ -2431,21 +2431,21 @@ t.exports = (function () {
             for (var i = this.size - n, o = this._head; n--; ) o = o.next;
             return this.__ownerID
                 ? ((this.size = i), (this._head = o), (this.__hash = void 0), (this.__altered = !0), this)
-                : e9(i, o);
+                : e2(i, o);
         }),
-        (e2.prototype.__ensureOwner = function (t) {
+        (e5.prototype.__ensureOwner = function (t) {
             return t === this.__ownerID
                 ? this
                 : t
-                  ? e9(this.size, this._head, t, this.__hash)
+                  ? e2(this.size, this._head, t, this.__hash)
                   : ((this.__ownerID = t), (this.__altered = !1), this);
         }),
-        (e2.prototype.__iterate = function (t, e) {
+        (e5.prototype.__iterate = function (t, e) {
             if (e) return this.reverse().__iterate(t);
             for (var r = 0, n = this._head; n && !1 !== t(n.value, r++, this); ) n = n.next;
             return r;
         }),
-        (e2.prototype.__iterator = function (t, e) {
+        (e5.prototype.__iterator = function (t, e) {
             if (e) return this.reverse().__iterator(t);
             var r = 0,
                 n = this._head;
@@ -2457,15 +2457,15 @@ t.exports = (function () {
                 return q();
             });
         }),
-        (e2.isStack = e7);
-    var e3 = "@@__IMMUTABLE_STACK__@@",
-        e8 = e2.prototype;
-    function e9(t, e, r, n) {
+        (e5.isStack = e7);
+    var e4 = "@@__IMMUTABLE_STACK__@@",
+        e8 = e5.prototype;
+    function e2(t, e, r, n) {
         var i = Object.create(e8);
         return (i.size = t), (i._head = e), (i.__ownerID = r), (i.__hash = n), (i.__altered = !1), i;
     }
-    function e4() {
-        return c || (c = e9(0));
+    function e9() {
+        return c || (c = e2(0));
     }
     function rt(t, e) {
         var r = function (r) {
@@ -2473,7 +2473,7 @@ t.exports = (function () {
         };
         return Object.keys(e).forEach(r), Object.getOwnPropertySymbols && Object.getOwnPropertySymbols(e).forEach(r), t;
     }
-    (e8[e3] = !0),
+    (e8[e4] = !0),
         (e8.withMutations = tF.withMutations),
         (e8.asMutable = tF.asMutable),
         (e8.asImmutable = tF.asImmutable),
@@ -2539,10 +2539,10 @@ t.exports = (function () {
                 return m(this) ? this.toIndexedSeq() : v(this) ? this.toKeyedSeq() : this.toSetSeq();
             },
             toStack: function () {
-                return e2(v(this) ? this.valueSeq() : this);
+                return e5(v(this) ? this.valueSeq() : this);
             },
             toList: function () {
-                return t9(v(this) ? this.valueSeq() : this);
+                return t2(v(this) ? this.valueSeq() : this);
             },
             toString: function () {
                 return "[Iterable]";
@@ -3163,8 +3163,8 @@ t.exports = (function () {
             Collection: tv,
             Map: tL,
             OrderedMap: eh,
-            List: t9,
-            Stack: e2,
+            List: t2,
+            Stack: e5,
             Set: eV,
             OrderedSet: eQ,
             Record: ej,

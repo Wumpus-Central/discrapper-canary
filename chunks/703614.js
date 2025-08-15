@@ -1,6 +1,6 @@
 t.d(n, { Z: () => r });
-var i = t(255367);
-t(73800);
+var i = t(951288);
+t(647438);
 let r = (e) => {
     let { className: n, width: t = 83, height: r = 45 } = e;
     return (0, i.jsxs)("svg", {

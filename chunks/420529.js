@@ -1,6 +1,6 @@
 e.d(n, { Z: () => U });
-var i = e(255367);
-e(73800);
+var i = e(951288);
+e(647438);
 var l = e(399606),
     d = e(481060),
     r = e(231757),
@@ -106,7 +106,7 @@ function U(t) {
                                       });
                                   n.type === c.ABu.XBOX
                                       ? (0, d.ZDy)(async () => {
-                                            let { default: n } = await Promise.all([e.e("35992"), e.e("522")]).then(
+                                            let { default: n } = await Promise.all([e.e("87442"), e.e("522")]).then(
                                                 e.bind(e, 200623),
                                             );
                                             return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));

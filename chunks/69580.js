@@ -19,11 +19,11 @@ n.r(t),
     n(642613),
     n(997841),
     n(539854);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(114858),
+    s = n(843611),
     l = n(873546),
     c = n(373793),
     u = n(243814),
@@ -378,7 +378,7 @@ function ed(e) {
                   : e.oauth2InstallParams;
         }, [null == e1 ? void 0 : e1.integrationTypesConfig, eJ]),
         e4 = I.w.useExperiment({ location: "oauth2_authorize" }),
-        { requestedScopes: e5, accountScopes: e6 } = i.useMemo(() => {
+        { requestedScopes: e8, accountScopes: e6 } = i.useMemo(() => {
             let e = e0 ? (null == e3 ? void 0 : e3.scopes) : ed,
                 t = (0, U.K)(null != e ? e : []),
                 n = F.Qe.filter((e) => t.includes(e));
@@ -387,7 +387,7 @@ function ed(e) {
                 accountScopes: n,
             };
         }, [null == e3 ? void 0 : e3.scopes, ed, e0]),
-        e8 = i.useMemo(() => {
+        e5 = i.useMemo(() => {
             var e;
             let t = e0 ? d.vB(null != (e = null == e3 ? void 0 : e3.permissions) ? e : 0) : ef;
             return null != t ? t : k.Hn;
@@ -440,7 +440,7 @@ function ed(e) {
                     let n = await (0, G.Iq)({
                         authorize: e,
                         clientId: P,
-                        scopes: e5,
+                        scopes: e8,
                         responseType: Q,
                         redirectUri: et,
                         codeChallenge: ei,
@@ -448,7 +448,7 @@ function ed(e) {
                         state: eo,
                         nonce: es,
                         integrationType: eJ,
-                        permissions: d.Od(e8, eY),
+                        permissions: d.Od(e5, eY),
                         guildId: eJ === c.Y.GUILD_INSTALL && null != eV ? eV : void 0,
                         channelId: eJ === c.Y.GUILD_INSTALL && null != eZ ? eZ : void 0,
                         dmSettings: { allowMobilePush: eK },
@@ -494,14 +494,14 @@ function ed(e) {
                 eQ,
                 eI,
                 P,
-                e5,
+                e8,
                 Q,
                 et,
                 ei,
                 ea,
                 eo,
                 es,
-                e8,
+                e5,
                 eY,
                 eV,
                 eJ,
@@ -521,7 +521,7 @@ function ed(e) {
                             ? eN
                             : await (0, G.Ww)({
                                   clientId: P,
-                                  scopes: e5,
+                                  scopes: e8,
                                   responseType: Q,
                                   redirectUri: et,
                                   codeChallenge: ei,
@@ -550,7 +550,7 @@ function ed(e) {
                     ti.current = !1;
                 }
             }
-        }, [eC, eN, P, e5, Q, et, ei, ea, eo, es, eJ, el, tr, tt]),
+        }, [eC, eN, P, e8, Q, et, ei, ea, eo, es, eJ, el, tr, tt]),
         to = i.useMemo(() => {
             var e;
             return null != e1 && e0
@@ -573,11 +573,11 @@ function ed(e) {
                 step: eD,
                 application_id: P,
                 integration_type: eJ,
-                scopes: e5,
-                permissions: e8.toString(),
+                scopes: e8,
+                permissions: e5.toString(),
                 mobile_push_notification_default_setting: !1,
             }));
-    }, [P, eJ, e8, e5, eD]),
+    }, [P, eJ, e5, e8, eD]),
         i.useEffect(() => {
             if (null == eD && (!e0 || null != e1) && eR)
                 if (null != eN) {
@@ -592,15 +592,15 @@ function ed(e) {
         i.useEffect(() => {
             if (null == eJ || null != eP || null != ex) return;
             eJ === c.Y.USER_INSTALL && (eF(null), eH(null));
-            let e = e5.filter((e) => !F.ak.includes(e));
-            0 === e5.length
+            let e = e8.filter((e) => !F.ak.includes(e));
+            0 === e8.length
                 ? eM(Error("No scopes were provided."))
                 : e.length > 0
                   ? eM(Error("Invalid scope: ".concat(e[0])))
-                  : (0, V._$)(e8)
+                  : (0, V._$)(e5)
                     ? eM(Error("Invalid permission(s) provided."))
                     : ta();
-        }, [tt, ta, e5, e8, eJ, eP, ex]);
+        }, [tt, ta, e8, e5, eJ, eP, ex]);
     let tl = i.useCallback((e) => {
             e && eG(!0);
         }, []),
@@ -680,10 +680,10 @@ function ed(e) {
                 };
             let tE = null == ex || ex instanceof Error ? {} : ex,
                 tb = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-                ty = eJ === c.Y.GUILD_INSTALL && e5.includes(u.x.WEBHOOK_INCOMING),
+                ty = eJ === c.Y.GUILD_INSTALL && e8.includes(u.x.WEBHOOK_INCOMING),
                 tO =
                     ty ||
-                    (eJ === c.Y.GUILD_INSTALL && (e5.includes(u.x.BOT) || e5.includes(u.x.APPLICATIONS_COMMANDS))),
+                    (eJ === c.Y.GUILD_INSTALL && (e8.includes(u.x.BOT) || e8.includes(u.x.APPLICATIONS_COMMANDS))),
                 tv =
                     (0, M.yE)(null != (n = eP.application.flags) ? n : 0, ee.udG.EMBEDDED) &&
                     eJ === c.Y.USER_INSTALL &&
@@ -697,7 +697,7 @@ function ed(e) {
                     (0, r.jsx)(W.Z, {
                         application: eP.application,
                         accountScopes: e6,
-                        requestedScopes: e5,
+                        requestedScopes: e8,
                         integrationType: eJ,
                         errors: tE,
                         isTrustedName: eb || eX,
@@ -741,7 +741,7 @@ function ed(e) {
                         : null,
                 ],
             })),
-                e5.includes(u.x.BOT) && !d.fS(e8, k.Hn) && (v = "AUTHORIZE_BOT_PERMISSIONS"),
+                e8.includes(u.x.BOT) && !d.fS(e5, k.Hn) && (v = "AUTHORIZE_BOT_PERMISSIONS"),
                 to.length > 1 && (m = "SELECT_INSTALL_TYPE"),
                 (t_ = (tO && null == eQ) || (ty && null == eZ)),
                 (tf = !0);
@@ -754,7 +754,7 @@ function ed(e) {
                 };
             (h = (0, r.jsx)(K.Z, {
                 application: eP.application,
-                permissions: e8,
+                permissions: e5,
                 deniedPermissions: eY,
                 onPermissionsChange: td,
                 guild: eQ,
@@ -769,7 +769,7 @@ function ed(e) {
             children: [
                 (0, r.jsx)(H.Z, {
                     application: eP.application,
-                    scopes: e5,
+                    scopes: e8,
                     disclosures: e9,
                     redirectUri: null != (p = eP.redirect_uri) ? p : null,
                     approximateGuildCount: void 0 !== e ? e : null,
@@ -793,7 +793,7 @@ function ed(e) {
                 accountScopes: e6,
                 showLogout: eg || !1,
                 location: eC,
-                scopes: e5,
+                scopes: e8,
             })),
         tm &&
             (tI.push(

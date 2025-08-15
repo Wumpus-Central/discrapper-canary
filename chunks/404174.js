@@ -1,5 +1,5 @@
 n.d(t, { j: () => i });
-var r = n(255367);
+var r = n(951288);
 let i = (e) => {
     let { width: t, height: n, color: i } = e;
     return (0, r.jsxs)("svg", {

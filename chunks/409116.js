@@ -1,6 +1,6 @@
 r.d(t, { F: () => p });
-var n = r(255367);
-r(73800);
+var n = r(951288);
+r(647438);
 var l = r(120356),
     a = r.n(l),
     i = r(481060),
@@ -27,12 +27,12 @@ let p = (e) => {
             className: g,
             discountOfferAmount: f,
             discount: b = s.f_,
-            variant: h = "heading-md/semibold",
+            variant: m = "heading-md/semibold",
         } = e,
-        m = null != f,
+        h = null != f,
         _ = (0, o.qr)(t, r),
         v =
-            b !== s.f_ && b.discountPercentage >= 5 && !m
+            b !== s.f_ && b.discountPercentage >= 5 && !h
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(i.nn4, {
@@ -46,7 +46,7 @@ let p = (e) => {
                               children: _,
                           }),
                           (0, n.jsxs)(i.Text, {
-                              variant: h,
+                              variant: m,
                               color: "text-feedback-positive",
                               className: u.discount,
                               "aria-hidden": !0,
@@ -59,14 +59,14 @@ let p = (e) => {
                           (0, n.jsx)(i.nn4, { children: c.intl.format(c.t["6C36MD"], { price: _ }) }),
                           (0, n.jsx)("span", {
                               "aria-hidden": !0,
-                              className: a()({ [u.priceStrikethrough]: m }, g),
+                              className: a()({ [u.priceStrikethrough]: h }, g),
                               children: _,
                           }),
                       ],
                   });
     return (0, n.jsxs)(i.Text, {
-        variant: h,
-        className: a()({ [u.discountBackgroundColor]: m }, u.container, g),
+        variant: m,
+        className: a()({ [u.discountBackgroundColor]: h }, u.container, g),
         children: [
             "tooltip" === l
                 ? (0, n.jsx)(i.ua7, {
@@ -140,7 +140,7 @@ let p = (e) => {
                     })
                   : null,
             v,
-            m &&
+            h &&
                 (0, n.jsxs)(i.X6q, {
                     variant: "heading-md/semibold",
                     className: u.discountPill,

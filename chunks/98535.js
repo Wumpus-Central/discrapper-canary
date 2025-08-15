@@ -1,6 +1,6 @@
 r.d(t, { Z: () => C }), r(388685);
-var n = r(255367),
-    l = r(73800),
+var n = r(951288),
+    l = r(647438),
     a = r(180650),
     i = r(442837),
     o = r(607070),
@@ -12,8 +12,8 @@ var n = r(255367),
     g = r(149705),
     f = r(929255),
     b = r(752053),
-    h = r(81136),
-    m = r(566564),
+    m = r(81136),
+    h = r(566564),
     _ = r(795477),
     v = r(215023);
 let O = [v.AW.HOME, v.AW.ORBS];
@@ -25,35 +25,35 @@ function C(e) {
             transitionToTab: c,
             transitionState: u,
             updateAnalyticsState: d,
-            refreshCategories: h,
+            refreshCategories: m,
         } = e,
         C = E();
-    S(C);
-    let y = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+    y(C);
+    let S = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         [x, j] = l.useState(void 0),
-        T = l.useCallback(
+        P = l.useCallback(
             async (e, t, n) => {
                 d(e, t);
-                let l = n && !r && !y,
+                let l = n && !r && !S,
                     i = t === a.T.ORB ? v.AW.ORBS : v.AW.CATALOG;
                 j(t), await c(i, l);
             },
-            [r, y, c, d],
+            [r, S, c, d],
         ),
-        P = (0, p.FF)("CollectiblesContent"),
+        T = (0, p.FF)("CollectiblesContent"),
         { searchError: L } = (0, g.a)();
-    return P && null != L
+    return T && null != L
         ? (0, n.jsx)(_.Z, {})
         : null != C
           ? (0, n.jsx)(b.Z, {
-                onRetry: h,
+                onRetry: m,
                 errorMessage: C,
                 errorOrigin: b.i.SHOP_PAGE,
             })
           : O.includes(t)
-            ? (0, n.jsx)(m.Z, {
+            ? (0, n.jsx)(h.Z, {
                   isFullScreen: r,
-                  handleTransition: T,
+                  handleTransition: P,
                   tab: t,
                   transitionState: u,
               })
@@ -75,9 +75,9 @@ let E = () =>
                     ? "shop load fetch purchase error: ".concat(d.Z.fetchError.message)
                     : void 0,
         ),
-    S = (e) => {
+    y = (e) => {
         let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            { noCache: r, includeUnpublished: n } = (0, h.Z)();
+            { noCache: r, includeUnpublished: n } = (0, m.Z)();
         l.useEffect(() => {
             var l, a;
             null != e &&

@@ -487,7 +487,7 @@ function e4(e) {
             about: null != c ? c : eu.about,
         }));
 }
-function e5(e) {
+function e8(e) {
     let { guildId: t, errors: n } = e;
     null != s && t === s.id && (X = null != n ? n : {});
 }
@@ -495,7 +495,7 @@ function e6(e) {
     let { profile: t } = e;
     t.id === (null == s ? void 0 : s.id) && (l = c = t);
 }
-function e8(e) {
+function e5(e) {
     let { guildId: t } = e;
     if (null == s || s.id !== t) return !1;
     Q = null;
@@ -647,10 +647,10 @@ let tn = new tt(
               GUILD_UPDATE: eU,
               GUILD_DELETE: eG,
               GUILD_PROFILE_FETCH_SUCCESS: e6,
-              GUILD_PROFILE_UPDATE: e8,
+              GUILD_PROFILE_UPDATE: e5,
               GUILD_PROFILE_UPDATE_SUCCESS: e7,
               GUILD_PROFILE_UPDATE_FAILURE: e9,
-              GUILD_PROFILE_UPDATE_VISIBILITY: e8,
+              GUILD_PROFILE_UPDATE_VISIBILITY: e5,
               GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: te,
               GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: e9,
               USER_CONNECTIONS_UPDATE: eq,
@@ -663,7 +663,7 @@ let tn = new tt(
               GUILD_DISCOVERY_CATEGORY_DELETE: e2,
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e3,
               GUILD_UPDATE_DISCOVERY_METADATA: e4,
-              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e5,
+              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e8,
               GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: e$,
               GUILD_DISCOVERY_SLUG_FETCH_FAIL: e0,
               GUILD_SETTINGS_WIDGET_UPDATE: eY,

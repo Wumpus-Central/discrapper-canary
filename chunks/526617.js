@@ -6,8 +6,8 @@ n.d(t, {
     n(856094),
     n(472816),
     n(794429);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(990547),
@@ -435,7 +435,7 @@ function ef(e) {
             [eV, eF, eB.length],
         ),
         e4 = i.useCallback((e) => ej((0, G.cK)(e, Array.from(ex.values()).flat(), eS, a, eb)), [a, eS, ex, eb]),
-        e5 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await n.e("56049").then(n.bind(n, 338991));
@@ -461,7 +461,7 @@ function ef(e) {
                     : (0, r.jsx)(c.P3F, {
                           tabIndex: 0,
                           className: q.settingsClickArea,
-                          onClick: e5,
+                          onClick: e8,
                           "aria-label": z.intl.string(z.t.kbFsAA),
                           children: (0, r.jsx)(c.gj8, {
                               size: "md",
@@ -469,9 +469,9 @@ function ef(e) {
                               className: q.settingsIcon,
                           }),
                       }),
-            [em, e5],
+            [em, e8],
         ),
-        e8 = i.useCallback(
+        e5 = i.useCallback(
             (e) =>
                 (0, r.jsx)(V.Z, {
                     soundboardListRef: e,
@@ -570,7 +570,7 @@ function ef(e) {
                     renderRow: eX,
                     renderSectionHeader: e2,
                     renderSectionFooter: e3,
-                    renderCategoryList: e8,
+                    renderCategoryList: e5,
                     renderHeaderAccessories: e6,
                     rowHeight: en,
                     sectionHeaderHeight: e0,

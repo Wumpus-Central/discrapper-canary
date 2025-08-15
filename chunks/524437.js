@@ -4768,7 +4768,7 @@ class e3 extends o.C {
     }
 }
 let e4 = new e3();
-class e5 extends o.C {
+class e8 extends o.C {
     create(e) {
         let t = { feedGeneratedAt: "0" };
         return (
@@ -4814,8 +4814,8 @@ class e5 extends o.C {
         ]);
     }
 }
-let e6 = new e5();
-class e8 extends o.C {
+let e6 = new e8();
+class e5 extends o.C {
     create(e) {
         let t = { appSettings: {} };
         return (
@@ -4891,7 +4891,7 @@ class e8 extends o.C {
         ]);
     }
 }
-let e7 = new e8();
+let e7 = new e5();
 class e9 extends o.C {
     create(e) {
         let t = {};

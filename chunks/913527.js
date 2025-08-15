@@ -509,12 +509,12 @@
             else if (k(this[(e = ee(e))])) return this[e](t);
             return this;
         }
-        function e5(e, t) {
+        function e8(e, t) {
             return ((e % t) + t) % t;
         }
         function e6(e, t) {
             if (isNaN(e) || isNaN(t)) return NaN;
-            var n = e5(t, 12);
+            var n = e8(t, 12);
             return (e += (t - n) / 12), 1 === n ? (eQ(e) ? 29 : 28) : 31 - ((n % 7) % 2);
         }
         (y = Array.prototype.indexOf
@@ -550,13 +550,13 @@
                 var i = n._locale.monthsParse(e, r, n._strict);
                 null != i ? (t[eF] = i) : (h(n).invalidMonth = e);
             });
-        var e8 = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
+        var e5 = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
             e7 = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
         function e9(e, t) {
             return e
                 ? i(this._months)
                     ? this._months[e.month()]
-                    : this._months[(this._months.isFormat || e8).test(t) ? "format" : "standalone"][e.month()]
+                    : this._months[(this._months.isFormat || e5).test(t) ? "format" : "standalone"][e.month()]
                 : i(this._months)
                   ? this._months
                   : this._months.standalone;
@@ -566,7 +566,7 @@
             return e
                 ? i(this._monthsShort)
                     ? this._monthsShort[e.month()]
-                    : this._monthsShort[e8.test(t) ? "format" : "standalone"][e.month()]
+                    : this._monthsShort[e5.test(t) ? "format" : "standalone"][e.month()]
                 : i(this._monthsShort)
                   ? this._monthsShort
                   : this._monthsShort.standalone;
@@ -1116,7 +1116,7 @@
             var n;
             return (
                 e &&
-                    ((n = s(t) ? t8(e) : t5(e, t))
+                    ((n = s(t) ? t5(e) : t8(e, t))
                         ? (O = n)
                         : "undefined" != typeof console &&
                           console.warn &&
@@ -1124,7 +1124,7 @@
                 O._abbr
             );
         }
-        function t5(e, t) {
+        function t8(e, t) {
             if (null === t) return delete t$[e], null;
             var n,
                 r = tJ;
@@ -1152,7 +1152,7 @@
                 (t$[e] = new G(U(r, t))),
                 t0[e] &&
                     t0[e].forEach(function (e) {
-                        t5(e.name, e.config);
+                        t8(e.name, e.config);
                     }),
                 t4(e),
                 t$[e]
@@ -1172,7 +1172,7 @@
                     (null != t$[e].parentLocale ? (t$[e] = t$[e].parentLocale) : null != t$[e] && delete t$[e]);
             return t$[e];
         }
-        function t8(e) {
+        function t5(e) {
             var t;
             if ((e && e._locale && e._locale._abbr && (e = e._locale._abbr), !e)) return O;
             if (!i(e)) {
@@ -1490,7 +1490,7 @@
         function nS(e) {
             var t = e._i,
                 n = e._f;
-            return ((e._locale = e._locale || t8(e._l)), null === t || (void 0 === n && "" === t))
+            return ((e._locale = e._locale || t5(e._l)), null === t || (void 0 === n && "" === t))
                 ? g({ nullInput: !0 })
                 : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), C(t))
                   ? new N(t9(t))
@@ -1603,7 +1603,7 @@
                 (this._days = +o + 7 * a),
                 (this._months = +i + 3 * r + 12 * n),
                 (this._data = {}),
-                (this._locale = t8()),
+                (this._locale = t5()),
                 this._bubble();
         }
         function nB(e) {
@@ -1714,7 +1714,7 @@
         }
         t.updateOffset = function () {};
         var n4 = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
-            n5 =
+            n8 =
                 /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
         function n6(e, t) {
             var n,
@@ -1741,16 +1741,16 @@
                               s: P(o[eW]) * n,
                               ms: P(nV(1000 * o[eK])) * n,
                           }))
-                        : (o = n5.exec(e))
+                        : (o = n8.exec(e))
                           ? ((n = "-" === o[1] ? -1 : (o[1], 1)),
                             (a = {
-                                y: n8(o[2], n),
-                                M: n8(o[3], n),
-                                w: n8(o[4], n),
-                                d: n8(o[5], n),
-                                h: n8(o[6], n),
-                                m: n8(o[7], n),
-                                s: n8(o[8], n),
+                                y: n5(o[2], n),
+                                M: n5(o[3], n),
+                                w: n5(o[4], n),
+                                d: n5(o[5], n),
+                                h: n5(o[6], n),
+                                m: n5(o[7], n),
+                                s: n5(o[8], n),
                             }))
                           : null == a
                             ? (a = {})
@@ -1762,7 +1762,7 @@
                 r
             );
         }
-        function n8(e, t) {
+        function n5(e, t) {
             var n = e && parseFloat(e.replace(",", "."));
             return (isNaN(n) ? 0 : n) * t;
         }
@@ -2001,7 +2001,7 @@
         }
         function rI(e) {
             var t;
-            return void 0 === e ? this._locale._abbr : (null != (t = t8(e)) && (this._locale = t), this);
+            return void 0 === e ? this._locale._abbr : (null != (t = t5(e)) && (this._locale = t), this);
         }
         (t.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ"), (t.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]");
         var rT = L(
@@ -2342,26 +2342,26 @@
                 n0,
             ));
         var r4 = G.prototype;
-        function r5(e, t, n, r) {
-            var i = t8(),
+        function r8(e, t, n, r) {
+            var i = t5(),
                 a = _().set(r, t);
             return i[n](a, e);
         }
         function r6(e, t, n) {
-            if ((l(e) && ((t = e), (e = void 0)), (e = e || ""), null != t)) return r5(e, t, n, "month");
+            if ((l(e) && ((t = e), (e = void 0)), (e = e || ""), null != t)) return r8(e, t, n, "month");
             var r,
                 i = [];
-            for (r = 0; r < 12; r++) i[r] = r5(e, r, n, "month");
+            for (r = 0; r < 12; r++) i[r] = r8(e, r, n, "month");
             return i;
         }
-        function r8(e, t, n, r) {
+        function r5(e, t, n, r) {
             "boolean" == typeof e || ((n = t = e), (e = !1)), l(t) && ((n = t), (t = void 0)), (t = t || "");
             var i,
-                a = t8(),
+                a = t5(),
                 o = e ? a._week.dow : 0;
-            if (null != n) return r5(t, (n + o) % 7, r, "day");
+            if (null != n) return r8(t, (n + o) % 7, r, "day");
             var s = [];
-            for (i = 0; i < 7; i++) s[i] = r5(t, (i + o) % 7, r, "day");
+            for (i = 0; i < 7; i++) s[i] = r8(t, (i + o) % 7, r, "day");
             return s;
         }
         function r7(e, t) {
@@ -2371,13 +2371,13 @@
             return r6(e, t, "monthsShort");
         }
         function ie(e, t, n) {
-            return r8(e, t, n, "weekdays");
+            return r5(e, t, n, "weekdays");
         }
         function it(e, t, n) {
-            return r8(e, t, n, "weekdaysShort");
+            return r5(e, t, n, "weekdaysShort");
         }
         function ir(e, t, n) {
-            return r8(e, t, n, "weekdaysMin");
+            return r5(e, t, n, "weekdaysMin");
         }
         (r4.calendar = V),
             (r4.longDateFormat = Z),
@@ -2414,7 +2414,7 @@
                 },
             }),
             (t.lang = L("moment.lang is deprecated. Use moment.locale instead.", t4)),
-            (t.langData = L("moment.langData is deprecated. Use moment.localeData instead.", t8));
+            (t.langData = L("moment.langData is deprecated. Use moment.localeData instead.", t5));
         var ii = Math.abs;
         function ia() {
             var e = this._data;
@@ -2695,11 +2695,11 @@
             (t.isMoment = C),
             (t.weekdays = ie),
             (t.parseZone = r2),
-            (t.localeData = t8),
+            (t.localeData = t5),
             (t.isDuration = nB),
             (t.monthsShort = r9),
             (t.weekdaysMin = ir),
-            (t.defineLocale = t5),
+            (t.defineLocale = t8),
             (t.updateLocale = t6),
             (t.locales = t7),
             (t.weekdaysShort = it),

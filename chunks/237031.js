@@ -2,8 +2,8 @@ r.d(t, {
     T: () => i,
     v: () => o,
 });
-var n = r(255367);
-r(73800);
+var n = r(951288);
+r(647438);
 var l = r(481060);
 let a = "collectibles shop product details modal",
     i = (e) => {
@@ -18,13 +18,9 @@ let a = "collectibles shop product details modal",
         } = e;
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([
-                    r.e("25292"),
-                    r.e("31978"),
-                    r.e("40694"),
-                    r.e("78223"),
-                    r.e("32160"),
-                ]).then(r.bind(r, 702370));
+                let { default: e } = await Promise.all([r.e("25292"), r.e("31978"), r.e("40694"), r.e("17768")]).then(
+                    r.bind(r, 702370),
+                );
                 return (r) => {
                     var l, a;
                     return (0, n.jsx)(

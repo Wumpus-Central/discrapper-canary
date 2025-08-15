@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var i = n(255367);
-n(73800);
+var i = n(951288);
+n(647438);
 var r = n(481060),
     s = n(626135),
     a = n(292352),
@@ -14,7 +14,7 @@ function d() {
         text: c.intl.string(o.default.Ta9byc),
         onClick: () => {
             (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("35992"), n.e("90688")]).then(n.bind(n, 978305));
+                let { default: e } = await Promise.all([n.e("87442"), n.e("90688")]).then(n.bind(n, 978305));
                 return (t) =>
                     (0, i.jsx)(
                         e,

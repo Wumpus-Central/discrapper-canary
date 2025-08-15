@@ -1,41 +1,41 @@
-n.d(t, { Z: () => b });
-var l = n(255367);
-n(73800);
-var i = n(442837),
-    r = n(481060),
+n.d(t, { Z: () => O });
+var l = n(951288);
+n(647438);
+var r = n(442837),
+    i = n(481060),
     o = n(493683),
     a = n(40851),
-    s = n(740492),
-    u = n(314897),
+    u = n(740492),
+    c = n(314897),
     d = n(592125),
-    c = n(699516),
-    g = n(944486),
-    Z = n(981631),
-    f = n(388032);
-function b(e) {
-    let { user: t, context: b, label: m, joinCallVideo: O, id: h, onCall: E } = e,
-        j = (0, a.Aq)(),
-        v = (0, i.e7)([u.default], () => u.default.getId() === t.id),
-        P = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        p = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
-    if (v || b === Z.IlC.POPOUT || p || t.bot || t.isProvisional) return null;
-    let y = () => {
-            null == E || E(),
+    s = n(699516),
+    f = n(944486),
+    g = n(981631),
+    b = n(388032);
+function O(e) {
+    let { user: t, context: O, label: E, joinCallVideo: _, id: y, onCall: v } = e,
+        h = (0, a.Aq)(),
+        Z = (0, r.e7)([c.default], () => c.default.getId() === t.id),
+        m = (0, r.e7)([s.Z], () => s.Z.isBlocked(t.id)),
+        p = (0, r.e7)([f.Z, d.Z], () => f.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
+    if (Z || O === g.IlC.POPOUT || p || t.bot || t.isProvisional) return null;
+    let S = () => {
+            null == v || v(),
                 o.Z.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: O,
+                    joinCallVideo: _,
                 }),
-                j.dispatch(Z.CkL.POPOUT_CLOSE),
-                (0, r.pTH)();
+                h.dispatch(g.CkL.POPOUT_CLOSE),
+                (0, i.pTH)();
         },
-        S = !s.ZP.disableCallUserConfirmationPrompt;
-    return (0, l.jsx)(r.sNh, {
-        id: null != h ? h : "call",
-        label: null != m ? m : f.intl.string(f.t.JJogjo),
-        action: S
+        j = !u.ZP.disableCallUserConfirmationPrompt;
+    return (0, l.jsx)(i.sNh, {
+        id: null != y ? y : "call",
+        label: null != E ? E : b.intl.string(b.t.JJogjo),
+        action: j
             ? () => {
-                  (0, r.ZDy)(async () => {
+                  (0, i.ZDy)(async () => {
                       let { default: e } = await n.e("27157").then(n.bind(n, 736454));
                       return (t) =>
                           (0, l.jsx)(
@@ -64,11 +64,11 @@ function b(e) {
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: y }, t),
+                              })({ onSubmit: S }, t),
                           );
                   });
               }
-            : y,
-        disabled: P,
+            : S,
+        disabled: m,
     });
 }

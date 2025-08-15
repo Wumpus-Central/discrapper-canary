@@ -1,11 +1,11 @@
 n.d(t, { default: () => ea }), n(388685), n(539854), n(35282);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     s = n.n(l),
     o = n(512722),
     a = n.n(o),
-    c = n(717976),
+    c = n(815061),
     d = n(209739),
     u = n.n(d),
     f = n(442837),
@@ -252,7 +252,7 @@ function eo(e) {
             },
             [e$],
         );
-    function e7(e) {
+    function e8(e) {
         if ((e.preventDefault(), 1 === eT)) return e3();
         if (2 === eT) return eE(3);
         if (null != e$) return eE(1);
@@ -273,7 +273,7 @@ function eo(e) {
             });
         } else e2();
     }
-    let e8 = i.useCallback(
+    let e4 = i.useCallback(
             (e) => {
                 eL(e),
                     null != e &&
@@ -285,7 +285,7 @@ function eo(e) {
             },
             [ey],
         ),
-        e4 = i.useCallback(
+        e7 = i.useCallback(
             (e) => {
                 eq(e);
                 eE(B ? 2 : 3);
@@ -438,7 +438,7 @@ function eo(e) {
                     children: () => {
                         var e;
                         return (0, r.jsxs)("form", {
-                            onSubmit: e7,
+                            onSubmit: e8,
                             ref: eh,
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
@@ -450,7 +450,7 @@ function eo(e) {
                                             id: 0,
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
-                                                children: (0, r.jsx)(V.Z, { onSelectGuild: e4 }),
+                                                children: (0, r.jsx)(V.Z, { onSelectGuild: e7 }),
                                             }),
                                         }),
                                         (0, r.jsx)(h.Mi4, {
@@ -458,10 +458,10 @@ function eo(e) {
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
                                                 children: ey
-                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e8 })
+                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e4 })
                                                     : (0, r.jsx)(Y.oA, {
                                                           selectedSource: ek,
-                                                          onChangeSelectedSource: e8,
+                                                          onChangeSelectedSource: e4,
                                                       }),
                                             }),
                                         }),
@@ -484,7 +484,7 @@ function eo(e) {
                                                     onChangeSelectedResolution: (e) => e5(eU, e, eH),
                                                     onChangeSelectedPreset: (e) => e5(e, eW, eH),
                                                     onChangeSelectedChannelId: eM,
-                                                    onChangeSelectedSource: e8,
+                                                    onChangeSelectedSource: e4,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eB(e),
                                                     onChangeGuild: () => eE(0),

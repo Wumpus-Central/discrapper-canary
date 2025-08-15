@@ -239,9 +239,9 @@ let eK = {},
     e2 = !1,
     e3 = !1,
     e4 = !1,
-    e5 = !1,
+    e8 = !1,
     e6 = !1,
-    e8 = eI.Av,
+    e5 = eI.Av,
     e7 = !1,
     e9 = !1,
     te = !1,
@@ -342,7 +342,7 @@ function tM() {
                 s.cameraSource.audioDeviceGuid !==
                     (null == o || null == (n = o.cameraSource) ? void 0 : n.audioDeviceGuid)) &&
             eW.setGoLiveSource(null, eQ),
-        (e6 || i) && ((e8 = (e6 = i) ? t0(e1, tP().videoDeviceId) : eI.Av), eW.setVideoInputDevice(e8)),
+        (e6 || i) && ((e5 = (e6 = i) ? t0(e1, tP().videoDeviceId) : eI.Av), eW.setVideoInputDevice(e5)),
         (a = o),
         null != o)
     ) {
@@ -948,8 +948,8 @@ function t3(e) {
     let t = e1;
     if (((e1 = t$(e, eT.intl.string(eT.t.WKWARU))), e6 && !p().isEqual(e1, t))) {
         var n;
-        let e = void 0 !== e1[e8],
-            r = e8 === eI.w5 && (null == (n = t[eI.w5]) ? void 0 : n.disabled);
+        let e = void 0 !== e1[e5],
+            r = e5 === eI.w5 && (null == (n = t[eI.w5]) ? void 0 : n.disabled);
         tM(e || r);
     }
 }
@@ -992,7 +992,7 @@ function t4() {
         );
     }
 }
-function t5(e) {
+function t8(e) {
     if (null == r)
         return (
             eR.info("Error: trying to get soundshare id before MediaEngineStore is instantiated."),
@@ -1026,10 +1026,10 @@ function t6(e, t) {
                 });
         });
 }
-function t8(e) {
+function t5(e) {
     (i = e.sessionId),
         (e2 = !1),
-        (e5 = !1),
+        (e8 = !1),
         (0, ea.isWeb)() ||
             (Y.Z.subscribe({ location: "handleConnectionOpen" }, (e) => {
                 let t = tP();
@@ -1042,7 +1042,7 @@ function t8(e) {
             nR());
     let t = tP();
     if (
-        (tH() && (tY() ? n6(eI.iA.AUTOMATIC) : t.automaticAudioSubsystem && n8()),
+        (tH() && (tY() ? n6(eI.iA.AUTOMATIC) : t.automaticAudioSubsystem && n5()),
         eW.supports(eI.AN.OFFLOAD_ADM_CONTROLS))
     ) {
         let e = !1;
@@ -1101,7 +1101,7 @@ function nt(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (i === t.sessionId) {
-            (e2 = t.mute || t.suppress), (e5 = t.deaf), eW.eachConnection(tL);
+            (e2 = t.mute || t.suppress), (e8 = t.deaf), eW.eachConnection(tL);
             let e = null != t.guildId && null != t.channelId && null != tm && tm !== t.channelId,
                 n = !ts && null == t.channelId;
             return tM(!e && !n && e6), (tm = t.channelId), !0;
@@ -1535,15 +1535,15 @@ function n4(e) {
     let t = e.bypassEnabled;
     tz({ bypassSystemInputProcessing: t }), eW.setAudioInputBypassSystemProcessing(t), nI(e.location);
 }
-function n5(e) {
+function n8(e) {
     n6(e.subsystem);
 }
 function n6(e) {
     e === eI.iA.AUTOMATIC
-        ? (tz({ automaticAudioSubsystem: !0 }), n8())
+        ? (tz({ automaticAudioSubsystem: !0 }), n5())
         : (tz({ automaticAudioSubsystem: !1 }), eW.setAudioSubsystem(e));
 }
-function n8() {
+function n5() {
     eW.queueAudioSubsystem(eI.iA.EXPERIMENTAL);
 }
 function n7(e) {
@@ -1602,7 +1602,7 @@ function ri(e) {
     let l = null,
         c = null,
         u = er.Z.getPidFromDesktopSource(t);
-    ({ soundshareId: l, soundshareSession: c } = t5(u));
+    ({ soundshareId: l, soundshareSession: c } = t8(u));
     let d = {
         desktopSource: {
             id: t,
@@ -1659,7 +1659,7 @@ function ro(e) {
             c = !1 === o ? null : er.Z.getPidFromDesktopSource(i);
         ea.isPlatformEmbedded &&
             !0 === o &&
-            (({ soundshareId: e, soundshareSession: r } = t5(c)), null != e && t6(e, r)),
+            (({ soundshareId: e, soundshareSession: r } = t8(c)), null != e && t6(e, r)),
             tx(s),
             tM(s === eI.Yn.STREAM && e6, {
                 desktopSource: {
@@ -1838,7 +1838,7 @@ class ry extends (u = E.ZP.Store) {
         return this.isSelfMute() || e2;
     }
     isDeaf() {
-        return this.isSelfDeaf() || e5;
+        return this.isSelfDeaf() || e8;
     }
     hasContext(e) {
         return null != eK[e];
@@ -2256,7 +2256,7 @@ eS(ry, "displayName", "MediaEngineStore");
 let rv = (r = new ry(v.Z, {
     VOICE_CHANNEL_SELECT: n7,
     VOICE_STATE_UPDATES: nt,
-    CONNECTION_OPEN: t8,
+    CONNECTION_OPEN: t5,
     CONNECTION_CLOSED: t9,
     RTC_CONNECTION_STATE: ne,
     AUDIO_SET_TEMPORARY_SELF_MUTE: nn,
@@ -2294,7 +2294,7 @@ let rv = (r = new ry(v.Z, {
     AUDIO_VOLUME_CHANGE: nv,
     AUDIO_RESET: nW,
     AUDIO_INPUT_DETECTED: nK,
-    AUDIO_SET_SUBSYSTEM: n5,
+    AUDIO_SET_SUBSYSTEM: n8,
     AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING: n4,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: rn,
     MEDIA_ENGINE_SET_VIDEO_ENABLED: rr,

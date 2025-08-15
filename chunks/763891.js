@@ -1,6 +1,6 @@
 r.d(t, { Z: () => N }), r(388685);
-var n = r(255367),
-    l = r(73800),
+var n = r(951288),
+    l = r(647438),
     a = r(979554),
     i = r(399606),
     o = r(780384),
@@ -12,25 +12,25 @@ var n = r(255367),
     g = r(597688),
     f = r(370039),
     b = r(937510),
-    h = r(303952),
-    m = r(38900),
+    m = r(303952),
+    h = r(38900),
     _ = r(709999),
     v = r(81136),
     O = r(215023),
     C = r(981631),
     E = r(388032),
-    S = r(887353),
-    y = r(558513),
+    y = r(887353),
+    S = r(558513),
     x = r(662128),
     j = r(676790),
-    T = r(665195),
-    P = r(42742),
+    P = r(665195),
+    T = r(42742),
     L = r(283727),
     k = r(266058),
     I = r(719138);
 function N(e) {
     var t;
-    let { isFetchingCategories: r, isFullScreen: N, scrollerRef: A, tab: w } = e,
+    let { isFetchingCategories: r, isFullScreen: N, scrollerRef: w, tab: A } = e,
         B = (0, p.sp)(),
         R = null != (t = null == B ? void 0 : B.sessionId) ? t : "",
         { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
@@ -40,17 +40,17 @@ function N(e) {
         V = (0, c.Fg)(),
         U = (0, o.ap)(V),
         [z, G, q] = l.useMemo(() => {
-            switch (w) {
+            switch (A) {
                 case O.AW.AVATAR_DECORATIONS:
-                    return [E.intl.string(E.t.dRZYND), U ? T.Z : j.Z, a.Z.AVATAR_DECORATION];
+                    return [E.intl.string(E.t.dRZYND), U ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
                     return [E.intl.string(E.t["1cNjt7"]), U ? I.Z : k.Z, a.Z.PROFILE_EFFECT];
                 case O.AW.NAMEPLATES:
-                    return [E.intl.string(E.t.V68Fq6), U ? L.Z : P.Z, a.Z.NAMEPLATE];
+                    return [E.intl.string(E.t.V68Fq6), U ? L.Z : T.Z, a.Z.NAMEPLATE];
                 case O.AW.BUNDLES:
-                    return [E.intl.string(E.t.FYFppq), U ? x.Z : y.Z, a.Z.BUNDLE];
+                    return [E.intl.string(E.t.FYFppq), U ? x.Z : S.Z, a.Z.BUNDLE];
             }
-        }, [w, U]),
+        }, [A, U]),
         K = (0, f.a)(),
         Y = l.useMemo(
             () =>
@@ -68,10 +68,10 @@ function N(e) {
         ),
         X = (0, b.l)(Y);
     return (l.useEffect(() => {
-        (0, h.n)({
+        (0, m.n)({
             sessionId: R,
-            checkpoint: h.a.SHOP_MOUNTED,
-            tab: w,
+            checkpoint: m.a.SHOP_MOUNTED,
+            tab: A,
             isFullScreen: N,
             unpublishedCategoriesShown: D,
             cacheDisabled: Z,
@@ -79,29 +79,29 @@ function N(e) {
     }, []),
     l.useEffect(() => {
         r ||
-            (0, h.n)({
+            (0, m.n)({
                 sessionId: R,
-                checkpoint: h.a.SHOP_RENDERED,
-                tab: w,
+                checkpoint: m.a.SHOP_RENDERED,
+                tab: A,
                 isFullScreen: N,
                 unpublishedCategoriesShown: D,
                 cacheDisabled: Z,
             });
-    }, [R, N, D, Z, r, w]),
+    }, [R, N, D, Z, r, A]),
     r || null == M)
-        ? (0, n.jsx)(m.Z, {})
+        ? (0, n.jsx)(h.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
                       style: { backgroundImage: "url(".concat(G, ")") },
-                      className: S.bannerContainer,
+                      className: y.bannerContainer,
                       children: (0, n.jsx)(s.X6q, {
                           variant: "heading-xxl/extrabold",
                           children: z,
                       }),
                   }),
                   (0, n.jsx)("div", {
-                      className: S.products,
+                      className: y.products,
                       children: X.slice(40 * (H - 1), 40 * H).map((e, t) => {
                           let r = g.Z.getCategory(e.categorySkuId);
                           return null == r
@@ -116,7 +116,7 @@ function N(e) {
                                                 product: e,
                                                 user: M,
                                                 category: r,
-                                                tab: w,
+                                                tab: A,
                                             },
                                             e.skuId,
                                         ),
@@ -127,7 +127,7 @@ function N(e) {
                   }),
                   X.length > 40 &&
                       (0, n.jsx)("div", {
-                          className: S.paginationContainer,
+                          className: y.paginationContainer,
                           children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(s.DsT, {
                                   currentPage: H,
@@ -141,11 +141,11 @@ function N(e) {
                                           page_category: null == B ? void 0 : B.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: "".concat(w, " page ").concat(e),
-                                          page_type: w,
+                                          cta_name: "".concat(A, " page ").concat(e),
+                                          page_type: A,
                                       }),
                                           W(e),
-                                          null == A || null == (t = A.current) || t.scrollToTop({ animate: !0 });
+                                          null == w || null == (t = w.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

@@ -1,6 +1,6 @@
 r.d(t, { Z: () => d });
-var n = r(255367);
-r(73800);
+var n = r(951288);
+r(647438);
 var l = r(120356),
     a = r.n(l),
     i = r(884697),
@@ -17,8 +17,8 @@ function d(e) {
             className: g,
             discountOfferAmount: f,
             hideStrikethroughPrice: b = !1,
-            nitroIconType: h,
-            nitroIconSize: m = "md",
+            nitroIconType: m,
+            nitroIconSize: h = "md",
         } = e,
         _ = (0, i.ql)(l, c.tuJ.DEFAULT);
     if (null == _) return null;
@@ -84,8 +84,8 @@ function d(e) {
                 price: C ? v : O,
                 discount: p,
                 className: a()({ [u.price]: null == f }),
-                nitroIconType: C ? h : void 0,
-                nitroIconSize: m,
+                nitroIconType: C ? m : void 0,
+                nitroIconSize: h,
                 discountOfferAmount: f,
             }),
         ],

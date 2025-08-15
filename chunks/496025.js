@@ -1,6 +1,6 @@
 a.d(t, { Z: () => E }), a(388685), a(35282);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(120356),
     i = a.n(l),
     s = a(602715),
@@ -15,13 +15,13 @@ var n = a(255367),
     b = a(594174),
     v = a(55589),
     f = a(630388),
-    j = a(98357),
-    g = a(432877),
+    g = a(98357),
+    j = a(432877),
     _ = a(246992),
     y = a(894257),
     C = a(165432),
     N = a(451429);
-function O() {
+function T() {
     var e;
     let t = (0, o.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
         [a, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
@@ -35,13 +35,13 @@ function O() {
                 };
             }),
         })),
-        j = r.useCallback(() => {
+        g = r.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
             let t = (0, f.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             x.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        g =
+        j =
             null != i &&
             !!i.isPrivate() &&
             (0, f.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
@@ -76,8 +76,8 @@ function O() {
                     (0, n.jsx)(c.zxk, {
                         variant: "primary",
                         size: "sm",
-                        text: g ? "Clear NUX Flag" : "Set NUX Flag",
-                        onClick: j,
+                        text: j ? "Clear NUX Flag" : "Set NUX Flag",
+                        onClick: g,
                         disabled: null == a,
                     }),
                 ],
@@ -85,7 +85,7 @@ function O() {
         ],
     });
 }
-function T() {
+function O() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -97,13 +97,13 @@ function T() {
     });
 }
 function E() {
-    let e = (0, o.e7)([g.ZP], () => g.ZP.allByCategory(g.zU.MESSAGING), [], o.pF).map((e) => {
+    let e = (0, o.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], o.pF).map((e) => {
         let [t, a, { label: r }] = e;
         return (0, n.jsx)(
             c.j7V,
             {
                 value: a,
-                onChange: (e) => (0, j.Z)(t, e),
+                onChange: (e) => (0, g.Z)(t, e),
                 hideBorder: !0,
                 className: C.switch,
                 children: r,
@@ -116,9 +116,9 @@ function E() {
         children: [
             e,
             (0, n.jsx)("div", { className: C.divider }),
-            (0, n.jsx)(O, {}),
-            (0, n.jsx)("div", { className: C.divider }),
             (0, n.jsx)(T, {}),
+            (0, n.jsx)("div", { className: C.divider }),
+            (0, n.jsx)(O, {}),
         ],
     });
 }

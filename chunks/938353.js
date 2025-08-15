@@ -1,7 +1,7 @@
 n.d(t, {
     $p: () => e9,
     BB: () => e6,
-    ZP: () => e4,
+    ZP: () => e7,
 }),
     n(388685),
     n(997841),
@@ -10,8 +10,8 @@ n.d(t, {
     n(361932),
     n(187205);
 var r,
-    i = n(255367),
-    l = n(73800),
+    i = n(951288),
+    l = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(275726),
@@ -177,10 +177,10 @@ function e3() {
         ],
     });
 }
-let e2 = [eK.hBH.GIFV],
-    e5 = 15 * eb.Z.Millis.MINUTE,
-    e8 = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-    e7 = (e) => () => {
+let e8 = [eK.hBH.GIFV],
+    e2 = 15 * eb.Z.Millis.MINUTE,
+    e4 = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+    e5 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: l, flags: a } = e,
             o = (0, eC.yE)(a, z.hR.IS_ANIMATED);
         return null != r && null != l && (W.uo.test(n) || (o && (W.YG.test(n) || W.FH.test(n))))
@@ -197,7 +197,7 @@ let e2 = [eK.hBH.GIFV],
 class e6 extends (r = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
-        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e8.has(e));
+        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e4.has(e));
     }
     shouldComponentUpdate(e, t) {
         var n, r;
@@ -463,7 +463,7 @@ class e6 extends (r = l.Component) {
                             duration: r,
                         });
                     },
-                    gifFavoriteButton: e7(o),
+                    gifFavoriteButton: e5(o),
                     isSearchResult: this.props.isSearchResult,
                 },
                 c = (0, eg.q)({
@@ -520,7 +520,7 @@ class e6 extends (r = l.Component) {
         } = this.props;
         return (0, i.jsx)(ek.F, {
             gifAutoPlay: t,
-            getGifFavButton: e7,
+            getGifFavButton: e5,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0
@@ -590,7 +590,7 @@ class e6 extends (r = l.Component) {
         if (
             e.hasFlag(eK.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) &&
             this.props.isCurrentUser &&
-            !(Date.now() - ev.default.extractTimestamp(e.id) >= e5)
+            !(Date.now() - ev.default.extractTimestamp(e.id) >= e2)
         )
             return (0, i.jsx)("div", {
                 className: eQ.threadRoleMentionFailure,
@@ -837,7 +837,7 @@ class e6 extends (r = l.Component) {
                     } = this.props,
                     _ = (0, ex.BP)(e, r, d, p);
                 if (e.type === eK.hBH.GIFT) return null;
-                let g = e2.includes(e.type)
+                let g = e8.includes(e.type)
                     ? e.url
                     : null != (o = null == (l = e.image) ? void 0 : l.url)
                       ? o
@@ -901,7 +901,7 @@ class e6 extends (r = l.Component) {
             });
     }
 }
-function e4(e) {
+function e7(e) {
     var t;
     let { channel: n, message: r, renderSuppressEmbeds: l, isMessageSnapshot: a } = e,
         o = (0, c.e7)([ed.default], () => ed.default.getId()),

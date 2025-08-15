@@ -46,7 +46,6 @@ let c = 360,
             y: 0,
         },
         sortedScreenKeys: [],
-        isRandomlyChangingPremiumOptions: !1,
     };
 function d(e) {
     o.Z.isDeveloper && (u = l({}, u, e.settings));
@@ -76,9 +75,6 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
     get sortedScreenKeys() {
         return u.sortedScreenKeys;
-    }
-    get isRandomlyChangingPremiumOptions() {
-        return u.isRandomlyChangingPremiumOptions;
     }
 }
 s(f, "displayName", "DevToolsSettingsStore"), s(f, "persistKey", "DevToolsSettingsStore");

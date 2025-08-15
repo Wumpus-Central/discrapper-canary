@@ -1,6 +1,6 @@
 r.d(t, { Z: () => D }), r(388685);
-var n = r(255367),
-    l = r(73800),
+var n = r(951288),
+    l = r(647438),
     a = r(120356),
     i = r.n(a),
     o = r(180650),
@@ -12,25 +12,25 @@ var n = r(255367),
     g = r(688465),
     f = r(110560),
     b = r(507808),
-    h = r(794231),
-    m = r(594174),
+    m = r(794231),
+    h = r(594174),
     _ = r(626135),
     v = r(381585),
     O = r(597688),
     C = r(884697),
     E = r(870289),
-    S = r(370039),
-    y = r(937510),
+    y = r(370039),
+    S = r(937510),
     x = r(823941),
     j = r(38900),
-    T = r(709999),
-    P = r(794324),
+    P = r(709999),
+    T = r(794324),
     L = r(934760),
     k = r(619899),
     I = r(859788),
     N = r(215023),
-    A = r(981631),
-    w = r(388032),
+    w = r(981631),
+    A = r(388032),
     B = r(310582);
 let R = {
         rankedSkuIds: [],
@@ -78,10 +78,10 @@ let R = {
                 0.1,
                 null != H,
             ),
-            V = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
+            V = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
             U = (0, L.Z)(),
             z = (0, v.sp)(),
-            { showBetaTag: G } = h.Z.useExperiment({ location: "collectible_hero_block" }),
+            { showBetaTag: G } = m.Z.useExperiment({ location: "collectible_hero_block" }),
             q = l.useMemo(() => {
                 var e, t, r, n;
                 return null != M
@@ -112,21 +112,21 @@ let R = {
                 bannerOverrides: K,
                 bannerStyleOverrides: Y,
                 logoStyleOverrides: X,
-                heroLogo: J,
-                heroBannerStatic: Q,
+                heroLogo: Q,
+                heroBannerStatic: J,
                 heroBannerAnimated: $,
-            } = (0, P.hr)(q),
+            } = (0, T.hr)(q),
             ee = null == K ? void 0 : K.heroBanner,
             et = null != (t = null == Y ? void 0 : Y.responsive) && t,
             er = null == Y ? void 0 : Y.backgroundStyle,
             en = l.useMemo(() => U(q.rankedSkuIds), [r, U, q.rankedSkuIds]),
-            el = (0, S.a)()(en),
-            ea = (0, y.l)(el).slice(0, 4),
+            el = (0, y.a)()(en),
+            ea = (0, S.l)(el).slice(0, 4),
             ei = (0, k.St)(ea),
             eo =
                 F === N.AW.ORBS
-                    ? w.intl.string(w.t["1CdL8f"])
-                    : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: q.name }),
+                    ? A.intl.string(A.t["1CdL8f"])
+                    : A.intl.formatToPlainString(A.t.wvKYCg, { category_name: q.name }),
             es = (0, E.FF)("CollectiblesContent");
         return null != V && (r || q !== R)
             ? (0, n.jsxs)("div", {
@@ -138,7 +138,7 @@ let R = {
                           style: null != er ? { background: er } : void 0,
                           children: [
                               (0, n.jsx)(I.Z, {
-                                  bannerStatic: Q,
+                                  bannerStatic: J,
                                   bannerAnimated: $,
                                   isResponsive: et,
                               }),
@@ -164,7 +164,7 @@ let R = {
                                                     null != q.unpublishedAt &&
                                                         (0, n.jsx)(d.IGR, {
                                                             disableColor: !0,
-                                                            text: w.intl.string(w.t["h/uBCQ"]),
+                                                            text: A.intl.string(A.t["h/uBCQ"]),
                                                             className: B.limitedTimeBadge,
                                                         }),
                                                     (0, n.jsxs)("div", {
@@ -173,7 +173,7 @@ let R = {
                                                             null != q.logoUrl &&
                                                                 (0, n.jsx)("img", {
                                                                     className: B.heroHeaderLogo,
-                                                                    src: J,
+                                                                    src: Q,
                                                                     alt: q.name,
                                                                     style: null == X ? void 0 : X.toDesktopStyles(),
                                                                 }),
@@ -221,9 +221,9 @@ let R = {
                                                   onClick: () => {
                                                       F === N.AW.ORBS
                                                           ? ((0, b.Y)({
-                                                                pageType: A.ZY5.SHOP_ORBS_TAB,
-                                                                sectionType: A.jXE.ORBS_SHOP_HERO_BLOCK,
-                                                                ctaObject: A.qAy.CTA_TO_QUEST_HOME,
+                                                                pageType: w.ZY5.SHOP_ORBS_TAB,
+                                                                sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
+                                                                ctaObject: w.qAy.CTA_TO_QUEST_HOME,
                                                             }),
                                                             (0, f.navigateToQuestHome)({
                                                                 fromContent: s.j.ORBS_SHOP_HERO_CTA,
@@ -234,7 +234,7 @@ let R = {
                                                                     ? void 0
                                                                     : q.categorySkuId,
                                                             ),
-                                                            _.default.track(A.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                            _.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                                 collectibles_shop_session_id:
                                                                     null == z ? void 0 : z.sessionId,
                                                                 sku_id: q.categorySkuId,
@@ -271,7 +271,7 @@ let R = {
                                                                   categoryPosition: 0,
                                                               },
                                                               children: (0, n.jsx)(
-                                                                  T.Z,
+                                                                  P.Z,
                                                                   {
                                                                       product: e,
                                                                       category: r,

@@ -1179,7 +1179,7 @@ function e4(e) {
     let { lazyPrivateChannels: t } = e;
     ej(t);
 }
-function e5(e) {
+function e8(e) {
     let { readStates: t, selectedChannelId: n } = e;
     eA(),
         (ep = null),
@@ -1201,7 +1201,7 @@ function e6(e) {
         null != t.channelTimestampUpdates && e3(t.channelTimestampUpdates),
         eG(t);
 }
-function e8(e) {
+function e5(e) {
     let { channelId: t, isAfter: n, messages: r } = e,
         i = ek.get(t);
     i.loadedMessages = !0;
@@ -1995,10 +1995,10 @@ let t$ = new tJ(f.Z, {
         CONNECTION_OPEN: e$,
         CONNECTION_OPEN_SUPPLEMENTAL: e4,
         LOGOUT: e0,
-        OVERLAY_INITIALIZE: e5,
+        OVERLAY_INITIALIZE: e8,
         CACHE_LOADED: tV,
         GUILD_CREATE: e6,
-        LOAD_MESSAGES_SUCCESS: e8,
+        LOAD_MESSAGES_SUCCESS: e5,
         MESSAGE_CREATE: e9,
         MESSAGE_DELETE: e7,
         MESSAGE_DELETE_BULK: e7,

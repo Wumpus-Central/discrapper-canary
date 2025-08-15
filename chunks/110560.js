@@ -13,8 +13,8 @@ n.r(t),
         openQuestsRewardCodeModal: () => k,
         openVideoQuestModal: () => Y,
     });
-var r = n(255367);
-n(73800);
+var r = n(951288);
+n(647438);
 var i = n(772848),
     a = n(271579),
     o = n(756647),
@@ -325,7 +325,7 @@ function K(e) {
 }
 function z(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("35992"), n.e("33628")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("87442"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
             (0, r.jsx)(
                 t,

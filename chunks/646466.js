@@ -1,6 +1,6 @@
-a.d(t, { O: () => O }), a(388685);
-var n = a(255367),
-    r = a(73800),
+a.d(t, { O: () => T }), a(388685);
+var n = a(951288),
+    r = a(647438),
     l = a(481060),
     i = a(373071),
     s = a(637443),
@@ -80,7 +80,7 @@ let h = [
                   },
               );
     },
-    j = () => {
+    g = () => {
         let e = (0, i.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: a } = (0, o.N9)(),
             s = r.useMemo(
@@ -122,7 +122,7 @@ let h = [
             ],
         });
     },
-    g = () => {
+    j = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
             { avatarDecorationAssets: a } = (0, o.xq)(),
             i = r.useMemo(
@@ -430,8 +430,8 @@ let h = [
                         }),
                     ],
                 }),
-                (0, n.jsx)(j, {}),
                 (0, n.jsx)(g, {}),
+                (0, n.jsx)(j, {}),
                 (0, n.jsx)(_, {
                     clearAssets: s,
                     clearIgnoredFiles: u,
@@ -443,7 +443,7 @@ let h = [
             ],
         });
     },
-    O = () => {
+    T = () => {
         let [e, t] = r.useState("preview");
         return (0, n.jsxs)("div", {
             className: m.container,

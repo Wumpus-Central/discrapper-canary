@@ -1,6 +1,6 @@
 r.d(t, { R: () => f });
-var n = r(255367);
-r(73800);
+var n = r(951288);
+r(647438);
 var l = r(120356),
     a = r.n(l),
     i = r(979554),
@@ -18,10 +18,10 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                 user: u,
                 isHighlighted: f = !1,
                 isPurchased: b = !1,
-                avatarSize: h = o.EFr.SIZE_152,
-                avatarPlaceholderSrc: m,
+                avatarSize: m = o.EFr.SIZE_152,
+                avatarPlaceholderSrc: h,
             } = e,
-            _ = (0, s.y9)(h),
+            _ = (0, s.y9)(m),
             {
                 avatarDecorationSrc: v,
                 eventHandlers: O,
@@ -63,10 +63,10 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
             (r = r =
                 {
                     avatarDecoration: v,
-                    src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : C,
+                    src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != h ? h : C,
                     imageClassName: f ? p.fadeInAvatarImg : void 0,
                     className: a()(p.avatar, { [p.avatarPurchased]: b && !f }),
-                    size: h,
+                    size: m,
                     "aria-label": E,
                 }),
             Object.getOwnPropertyDescriptors

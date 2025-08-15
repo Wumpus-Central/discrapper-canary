@@ -1,5 +1,5 @@
 a.d(t, { Z: () => v }), a(388685);
-var n = a(255367),
+var n = a(951288),
     r = a(120356),
     l = a.n(r),
     i = a(399606),
@@ -85,12 +85,12 @@ function v() {
             hasMoreToLoad: u.Z.hasMoreToLoad,
             isLoadingComplete: u.Z.isLoadingComplete,
         })),
-        j = (0, i.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
-        g = (0, i.cj)([u.Z], () => u.Z.getChannelInfoMap()),
+        g = (0, i.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
+        j = (0, i.cj)([u.Z], () => u.Z.getChannelInfoMap()),
         _ = (0, i.cj)([d.Z], () => {
             let e = {};
             return (
-                Object.entries(g).forEach((t) => {
+                Object.entries(j).forEach((t) => {
                     let [a] = t,
                         n = d.Z.getChannel(a);
                     e[a] = null != n ? n : null;
@@ -199,7 +199,7 @@ function v() {
                             children: ["Is Loading Complete: ", f ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Last Loading Trigger: ", null == j ? void 0 : j.loadingTrigger],
+                            children: ["Last Loading Trigger: ", null == g ? void 0 : g.loadingTrigger],
                         }),
                     ],
                 }),
@@ -210,11 +210,11 @@ function v() {
                             children: "Channel Info Map",
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Total Channels: ", Object.keys(g).length],
+                            children: ["Total Channels: ", Object.keys(j).length],
                         }),
                         (0, n.jsx)(c.Z, {
                             columns: b,
-                            data: Object.entries(g).map((e) => {
+                            data: Object.entries(j).map((e) => {
                                 var t, a;
                                 let [n, r] = e;
                                 return {

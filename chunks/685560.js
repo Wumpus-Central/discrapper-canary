@@ -12,7 +12,7 @@ a.d(t, { Z: () => P }),
     a(121784),
     a(644351),
     a(146733);
-var n = a(255367),
+var n = a(951288),
     r = a(913527),
     l = a.n(r),
     i = a(442837),
@@ -28,8 +28,8 @@ var n = a(255367),
     b = a(581883),
     v = a(899667),
     f = a(430824),
-    j = a(914010),
-    g = a(981631),
+    g = a(914010),
+    j = a(981631),
     _ = a(617659);
 let y = [
         o.z.GUILD_POWERUP_PERKS_COACHMARK,
@@ -46,12 +46,12 @@ let y = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     N = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    O = [
+    T = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function T(e) {
+function O(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -71,7 +71,7 @@ async function E(e, t, a) {
     await Promise.all(
         t.map((e) =>
             s.tn.patch({
-                url: g.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
+                url: j.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
                 body: a ? {} : { ends_at: l()().add(1, "day") },
                 rejectWithError: !0,
             }),
@@ -82,13 +82,13 @@ async function E(e, t, a) {
 }
 async function S(e) {
     await s.tn.post({
-        url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
+        url: j.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
         rejectWithError: !0,
     });
 }
 function P() {
     var e;
-    let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
+    let t = (0, i.e7)([g.Z], () => g.Z.getGuildId()),
         a = (0, i.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
@@ -219,7 +219,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: T(e),
+                                        children: O(e),
                                     }),
                                 },
                                 e,
@@ -247,7 +247,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: T(e),
+                                        children: O(e),
                                     }),
                                 },
                                 e,
@@ -263,7 +263,7 @@ function P() {
                             className: _.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        O.map((e) =>
+                        T.map((e) =>
                             (0, n.jsx)(
                                 u.u,
                                 {

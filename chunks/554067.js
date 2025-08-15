@@ -1,6 +1,6 @@
 r.d(t, { Z: () => g }), r(388685);
-var n = r(255367),
-    l = r(73800),
+var n = r(951288),
+    l = r(647438),
     a = r(481060),
     i = r(626135),
     o = r(381585),
@@ -12,8 +12,8 @@ var n = r(255367),
 function g(e) {
     let { handleTransition: t, selectedTab: r } = e,
         { searchQuery: g, onSetSearchQuery: f } = (0, s.S)(),
-        [b, h] = l.useState(""),
-        m = (0, o.sp)();
+        [b, m] = l.useState(""),
+        h = (0, o.sp)();
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -22,18 +22,18 @@ function g(e) {
             return () => clearTimeout(e);
         }, [b, f]),
         l.useEffect(() => {
-            h(g);
+            m(g);
         }, [g]),
         (0, n.jsx)(a.P3F, {
             ignoreKeyPress: !0,
             onClick: () => {
                 r !== c.AW.CATALOG && t(c.AW.CATALOG),
                     i.default.track(u.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
-                        page_section: null == m ? void 0 : m.pageSection,
-                        page_category: null == m ? void 0 : m.pageCategory,
-                        page_index: null == m ? void 0 : m.pageIndex,
-                        page_size: null == m ? void 0 : m.pageSize,
+                        collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
+                        page_section: null == h ? void 0 : h.pageSection,
+                        page_category: null == h ? void 0 : h.pageCategory,
+                        page_index: null == h ? void 0 : h.pageIndex,
+                        page_size: null == h ? void 0 : h.pageSize,
                         cta_name: "search bar",
                         page_type: r,
                     });
@@ -45,15 +45,15 @@ function g(e) {
                     "Enter" === e.key && f(b);
                 },
                 query: b,
-                onChange: h,
+                onChange: m,
                 onClear: () => {
-                    h(""),
+                    m(""),
                         i.default.track(u.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                            collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
-                            page_section: null == m ? void 0 : m.pageSection,
-                            page_category: null == m ? void 0 : m.pageCategory,
-                            page_index: null == m ? void 0 : m.pageIndex,
-                            page_size: null == m ? void 0 : m.pageSize,
+                            collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
+                            page_section: null == h ? void 0 : h.pageSection,
+                            page_category: null == h ? void 0 : h.pageCategory,
+                            page_index: null == h ? void 0 : h.pageIndex,
+                            page_size: null == h ? void 0 : h.pageSize,
                             cta_name: "search bar clear",
                             page_type: r,
                         });

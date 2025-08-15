@@ -1,6 +1,6 @@
 a.d(t, { Z: () => S }), a(388685), a(642613);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(120356),
     i = a.n(l),
     s = a(658722),
@@ -15,14 +15,14 @@ var n = a(255367),
     b = a(55935),
     v = a(120816),
     f = a(31336),
-    j = a(257785),
-    g = a(484036),
+    g = a(257785),
+    j = a(484036),
     _ = a(681619),
     y = a(621060),
     C = a(388032),
     N = a(599832),
-    O = a(451429);
-let T = [
+    T = a(451429);
+let O = [
         {
             key: "id",
             cellClassName: N.eventColumn,
@@ -69,7 +69,7 @@ let T = [
                 return (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)(p.ZP, {
-                            className: i()(O.headerBar, N.subPanelHeaderBar),
+                            className: i()(T.headerBar, N.subPanelHeaderBar),
                             children: [
                                 (0, n.jsx)(p.ZP.Icon, {
                                     icon: x.IeX,
@@ -78,10 +78,10 @@ let T = [
                                 (0, n.jsx)(p.ZP.Title, { children: t }),
                             ],
                         }),
-                        (0, n.jsxs)(j.E, {
+                        (0, n.jsxs)(g.E, {
                             className: N.commonProperties,
                             children: [
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Timestamp (local)",
                                     children: (0, n.jsx)("time", {
                                         dateTime: s.toISOString(),
@@ -90,35 +90,35 @@ let T = [
                                     }),
                                 }),
                                 "guild" === a.type &&
-                                    (0, n.jsx)(j.Z9, {
+                                    (0, n.jsx)(g.Z9, {
                                         name: "Guild ID",
                                         children: (0, n.jsx)("code", { children: a.guildId }),
                                     }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Bucket",
                                     children: (0, n.jsx)("code", { children: a.bucket }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Revision",
                                     children: (0, n.jsx)("code", { children: a.revision }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Override",
-                                    children: (0, n.jsx)(j.wl, { value: a.override }),
+                                    children: (0, n.jsx)(g.wl, { value: a.override }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Exposure type",
                                     children: (0, n.jsx)("code", { children: r }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Excluded",
-                                    children: (0, n.jsx)(j.wl, { value: l }),
+                                    children: (0, n.jsx)(g.wl, { value: l }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Previously tracked",
-                                    children: (0, n.jsx)(j.wl, { value: c }),
+                                    children: (0, n.jsx)(g.wl, { value: c }),
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: "Location",
                                     children: (0, n.jsx)("code", { children: o }),
                                 }),
@@ -142,7 +142,7 @@ function S() {
         ),
         [c, d] = r.useState(void 0),
         p = s.find((e) => e.key === c),
-        { TabBar: b, renderSelectedTab: j } = (0, y.ZP)({ tabs: E }, []),
+        { TabBar: b, renderSelectedTab: g } = (0, y.ZP)({ tabs: E }, []),
         S = (0, u.e7)([v.Z], () => v.Z.trackTriggers),
         P = r.useCallback((e) => {
             h.Z.dispatch({
@@ -152,7 +152,7 @@ function S() {
         }, []);
     return (0, n.jsxs)("div", {
         ref: a,
-        className: i()(O.panel, N.panel),
+        className: i()(T.panel, N.panel),
         children: [
             (0, n.jsxs)("div", {
                 className: N.toolbar,
@@ -191,17 +191,17 @@ function S() {
                 ],
             }),
             (0, n.jsx)(_.Z, {
-                columns: T,
+                columns: O,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key),
             }),
             null != p &&
-                (0, n.jsxs)(g.Z, {
+                (0, n.jsxs)(j.Z, {
                     className: N.subPanel,
                     minHeight: 100,
                     initialHeight: null != a.current ? a.current.clientHeight / 2 : 300,
-                    children: [(0, n.jsx)(b, {}), j({ loggedTrigger: p })],
+                    children: [(0, n.jsx)(b, {}), g({ loggedTrigger: p })],
                 }),
         ],
     });

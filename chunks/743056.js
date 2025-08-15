@@ -1,5 +1,5 @@
 n.d(t, { u: () => a });
-var r = n(73800),
+var r = n(647438),
     i = n(298213);
 function a(e) {
     let { userId: t, applicationId: n, isGameRelationship: a, location: o, onConfirm: s, onCancel: l } = e,

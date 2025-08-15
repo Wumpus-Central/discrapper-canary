@@ -15,14 +15,14 @@ n.d(t, {
     n(388685),
     n(415506),
     n(781311);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(836560),
     l = n(512722),
     c = n.n(l),
-    u = n(94171),
+    u = n(524825),
     d = n(873546),
     f = n(149765),
     _ = n(442837),
@@ -555,9 +555,9 @@ function eD(e, t) {
             isLurking: e2,
             isPendingMember: e3,
             disabled: e4,
-            canAttachFiles: e5,
+            canAttachFiles: e8,
             canCreateThreads: e6,
-            canEveryoneSendMessages: e8,
+            canEveryoneSendMessages: e5,
         } = eC(k, j, e0, L),
         e7 = j.toolbarType === X.OW.STATIC,
         e9 = !U.dN.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
@@ -605,7 +605,7 @@ function eD(e, t) {
         tC = ew(to, ez);
     (0, q.S)(to, k.guild_id, k.id);
     let tR = null != Y,
-        tP = (e4 && !((e2 || e3) && e8)) || (tl && (null == (s = j.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
+        tP = (e4 && !((e2 || e3) && e5)) || (tl && (null == (s = j.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tw = null;
     null != e0
         ? (tw = null == Z ? void 0 : Z(e0, e1, eu.attachButton))
@@ -691,7 +691,7 @@ function eD(e, t) {
                                     : (0, r.jsx)(en.Z, {
                                           channelId: k.id,
                                           type: j,
-                                          canAttachFiles: e5,
+                                          canAttachFiles: e8,
                                       }),
                                 (0, r.jsxs)("div", {
                                     className: o()(eu.inner, {
@@ -720,10 +720,10 @@ function eD(e, t) {
                                                 placeholder: x,
                                                 required: P,
                                                 accessibilityLabel: M,
-                                                isPreviewing: (e2 || e3) && e8,
+                                                isPreviewing: (e2 || e3) && e5,
                                                 channel: k,
                                                 type: j,
-                                                canPasteFiles: e5,
+                                                canPasteFiles: e8,
                                                 uploadPromptCharacterCount: es.en1,
                                                 maxCharacterCount: null != eg ? eg : tt,
                                                 allowNewLines: eL,

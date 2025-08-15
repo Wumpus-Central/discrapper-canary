@@ -1,6 +1,6 @@
 A.d(t, { default: () => ee }), A(388685), A(953529);
-var n = A(255367),
-    r = A(73800),
+var n = A(951288),
+    r = A(647438),
     a = A(120356),
     l = A.n(a),
     i = A(512722),
@@ -295,7 +295,7 @@ function $(e) {
             e3,
         );
     }, [$, e3, er]);
-    let e6 = async (e) => {
+    let e9 = async (e) => {
         let t = (0, I.pM)({ newRoleParams: eL });
         if ((ey(t), null != t)) return;
         let A = await eZ(e);
@@ -316,7 +316,7 @@ function $(e) {
         r.useEffect(() => {
             eJ && eH(void 0);
         }, [eJ]);
-    let e9 = r.useRef(null);
+    let e6 = r.useRef(null);
     return (0, n.jsxs)(g.Y0X, {
         transitionState: eA,
         size: g.CgR.DYNAMIC,
@@ -357,7 +357,7 @@ function $(e) {
                     (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: B.productFieldsSection,
-                            ref: e9,
+                            ref: e6,
                             children: [
                                 (0, n.jsx)(g.xJW, {
                                     title: k.intl.string(k.t.Hsk7xc),
@@ -448,7 +448,7 @@ function $(e) {
                                           children: (0, n.jsx)(K.s, {
                                               onFileAdded: () => {
                                                   var e;
-                                                  null == (e = e9.current) ||
+                                                  null == (e = e6.current) ||
                                                       e.scrollIntoView({
                                                           behavior: "smooth",
                                                           block: "end",
@@ -485,7 +485,7 @@ function $(e) {
                                     onClick: () => {
                                         o()(e0, "Attempting to publish/unpublish when not allowed"),
                                             eH(ei ? "unpublish" : "publish"),
-                                            e6(E(D({}, eM), { published: !ei }));
+                                            e9(E(D({}, eM), { published: !ei }));
                                     },
                                     submitting: eQ,
                                 }),
@@ -586,7 +586,7 @@ function $(e) {
                                               "cannot save changes for published product without adding all fields",
                                           ),
                                               eH("update_publish"),
-                                              e6(eM);
+                                              e9(eM);
                                       },
                                   })
                                 : (0, n.jsx)(g.zxk, {
@@ -597,7 +597,7 @@ function $(e) {
                                       onClick: () => {
                                           o()(e_, "cannot save changes without name or price tier"),
                                               eH("draft"),
-                                              e6(eM);
+                                              e9(eM);
                                       },
                                   }),
                         }),

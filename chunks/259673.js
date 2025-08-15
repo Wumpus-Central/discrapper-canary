@@ -1,18 +1,18 @@
-n.d(t, { M: () => u });
-var r = n(255367),
+n.d(t, { M: () => d });
+var r = n(951288),
     a = n(442837),
     i = n(678135),
     o = n(643879),
-    c = n(25990),
-    s = n(74538),
-    l = n(755419),
-    d = n(526666);
-let u = (e) => {
+    l = n(25990),
+    c = n(74538),
+    s = n(755419),
+    u = n(526666);
+let d = (e) => {
     var t, n;
-    let { user: u } = e,
-        m = s.ZP.canUsePremiumProfileCustomization(u),
-        p = (0, a.cj)([c.Z], () => c.Z.getAllPending()),
-        { pendingAvatar: _ } = p,
+    let { user: d } = e,
+        p = c.ZP.canUsePremiumProfileCustomization(d),
+        m = (0, a.cj)([l.Z], () => l.Z.getAllPending()),
+        { pendingAvatar: g } = m,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -33,13 +33,13 @@ let u = (e) => {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
             return a;
-        })(p, ["pendingAvatar"]),
-        g = (0, o.SD)({
-            userId: u.id,
-            image: _,
+        })(m, ["pendingAvatar"]),
+        b = (0, o.SD)({
+            userId: d.id,
+            image: g,
         });
     return (0, r.jsx)("div", {
-        className: d.container,
+        className: u.container,
         children: (0, r.jsx)(
             i.Z,
             ((t = (function (e) {
@@ -69,10 +69,10 @@ let u = (e) => {
             })({}, f)),
             (n = n =
                 {
-                    pendingAvatar: g,
-                    user: u,
-                    pendingBadges: [(0, l.X)()],
-                    canUsePremiumCustomization: m,
+                    pendingAvatar: b,
+                    user: d,
+                    pendingBadges: [(0, s.X)()],
+                    canUsePremiumCustomization: p,
                     disabledInputs: !0,
                     hideViewFullProfileButton: !0,
                 }),

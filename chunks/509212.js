@@ -16,7 +16,7 @@ n.d(t, {
     Fs: () => tc,
     GN: () => ef,
     Gd: () => th,
-    HJ: () => e5,
+    HJ: () => e8,
     Jg: () => eS,
     K: () => eO,
     KM: () => eD,
@@ -731,11 +731,11 @@ let e1 = eq([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
     e2 = eq([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
     e3 = eq([o.X.WATCH_VIDEO]),
     e4 = eq([o.X.WATCH_VIDEO_ON_MOBILE]),
-    e5 = (e) => e4(e) && !e3(e);
+    e8 = (e) => e4(e) && !e3(e);
 function e6(e) {
     return e1(e);
 }
-let e8 = (e, t) => {
+let e5 = (e, t) => {
     var n, r;
     let i = null == e || null == (r = e.progress[t]) || null == (n = r.heartbeat) ? void 0 : n.expiresAt;
     if (null == i) return !1;
@@ -743,7 +743,7 @@ let e8 = (e, t) => {
     return !isNaN(a) && a > Date.now();
 };
 function e7(e) {
-    return null != e.userStatus && (e8(e.userStatus, o.X.PLAY_ON_XBOX) || e8(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
+    return null != e.userStatus && (e5(e.userStatus, o.X.PLAY_ON_XBOX) || e5(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
 }
 function e9(e) {
     return !!e2(e) && (0, n(952265).nf)(tp(e.id));

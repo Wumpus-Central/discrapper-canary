@@ -1,15 +1,15 @@
-n.d(t, { Z: () => m });
-var r = n(255367);
-n(73800);
+n.d(t, { Z: () => p });
+var r = n(951288);
+n(647438);
 var a = n(481060),
     i = n(937615),
     o = n(884697),
-    c = n(200615),
-    s = n(981631),
-    l = n(388032),
-    d = n(58174);
-function u() {
-    return (u =
+    l = n(200615),
+    c = n(981631),
+    s = n(388032),
+    u = n(58174);
+function d() {
+    return (d =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -19,21 +19,21 @@ function u() {
             return e;
         }).apply(this, arguments);
 }
-function m(e) {
+function p(e) {
     let { product: t } = e,
-        n = (0, o.ql)(t, s.tuJ.PREMIUM_TIER_2);
+        n = (0, o.ql)(t, c.tuJ.PREMIUM_TIER_2);
     if (null == n) return null;
-    let m = (0, i.qr)(n.amount, n.currency);
+    let p = (0, i.qr)(n.amount, n.currency);
     return (0, r.jsxs)("div", {
-        className: d.container,
+        className: u.container,
         children: [
             (0, r.jsx)(a.ua7, {
-                text: l.intl.string(l.t.MPFyJy),
-                "aria-label": l.intl.string(l.t.X3Ekj4),
+                text: s.intl.string(s.t.MPFyJy),
+                "aria-label": s.intl.string(s.t.X3Ekj4),
                 children: (e) => {
                     var t,
                         n,
-                        i = u(
+                        i = d(
                             {},
                             (function (e) {
                                 if (null == e) throw TypeError("Cannot destructure " + e);
@@ -73,7 +73,7 @@ function m(e) {
                             },
                             i,
                         )),
-                        (n = n = { className: d.nitroIcon }),
+                        (n = n = { className: u.nitroIcon }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -92,9 +92,9 @@ function m(e) {
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-xs/medium",
-                children: l.intl.format(l.t.Sv8iiY, {
-                    price: m,
-                    subscribeNowHook: (e) => (0, r.jsx)(c.F, { text: e }),
+                children: s.intl.format(s.t.Sv8iiY, {
+                    price: p,
+                    subscribeNowHook: (e) => (0, r.jsx)(l.F, { text: e }),
                 }),
             }),
         ],

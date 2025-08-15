@@ -54,7 +54,7 @@ n.d(t, {
     GU0: () => eg,
     GZQ: () => E.GZ,
     H0J: () => E.H0,
-    HGf: () => n8,
+    HGf: () => n5,
     HN8: () => eH,
     HeQ: () => E.He,
     Hqc: () => nA,
@@ -107,7 +107,7 @@ n.d(t, {
     OYC: () => et,
     OcF: () => tt,
     Odu: () => en,
-    PEY: () => e5,
+    PEY: () => e8,
     PNu: () => eU,
     POd: () => rp,
     PRK: () => e2,
@@ -273,14 +273,14 @@ n.d(t, {
     oNc: () => V,
     o_z: () => eO,
     p3w: () => tE,
-    p6O: () => t8,
+    p6O: () => t5,
     pAY: () => tg,
     pJs: () => L,
     pKx: () => E.pK,
     pM4: () => j,
     pNK: () => C,
     pTL: () => rq,
-    pjP: () => n5,
+    pjP: () => n8,
     pmI: () => t9,
     q5t: () => tj,
     q9n: () => nY,
@@ -316,7 +316,7 @@ n.d(t, {
     vB8: () => nw,
     vID: () => nT,
     vTt: () => ns,
-    vbS: () => t5,
+    vbS: () => t8,
     vpv: () => tR,
     vtS: () => tY,
     vuo: () => eK,
@@ -341,7 +341,7 @@ n.d(t, {
     yb: () => z,
     ylB: () => rF,
     yqN: () => nE,
-    ys_: () => e8,
+    ys_: () => e5,
     z7k: () => tS,
     zMe: () => E.zM,
     zUn: () => nM,
@@ -2157,9 +2157,9 @@ let eL = 100,
     e2 = 524288000,
     e3 = (e) => "||".concat(e, "||"),
     e4 = /^\|\|([\s\S]+?)\|\|/,
-    e5 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e8 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e6 = /^\d{17,19}$/;
-var e8 = (function (e) {
+var e5 = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -3643,14 +3643,14 @@ Object.freeze({
     AUTHORIZATION_CANCEL_FRAGMENT: "/_discord/auth?cancel=true",
 });
 let t4 = new Set(["facebook", "contacts"]),
-    t5 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
+    t8 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t6 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t8 = 10070709,
-    t7 = (0, d.Rf)(t8),
+    t5 = 10070709,
+    t7 = (0, d.Rf)(t5),
     t9 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
@@ -5926,7 +5926,7 @@ let n2 = Object.freeze({
     }),
     n3 = 6016,
     n4 = 3384;
-var n5 = (function (e) {
+var n8 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
     n6 = (function (e) {
@@ -5937,7 +5937,7 @@ var n5 = (function (e) {
             e
         );
     })({});
-let n8 = 14,
+let n5 = 14,
     n7 = 6,
     n9 = 30;
 var re = (function (e) {

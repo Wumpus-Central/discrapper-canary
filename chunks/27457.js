@@ -3,8 +3,8 @@ n.d(t, {
     ZP: () => ea,
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
@@ -234,18 +234,18 @@ let et = [Y.fO.ACTIVITY],
                 },
                 [L, b],
             ),
-            e3 = i.useCallback(
+            e4 = i.useCallback(
                 (e, t, n) => {
                     null == M || M(b, e, t, n);
                 },
                 [M, b],
             ),
+            e8 = null,
             e6 = null,
-            e4 = null,
-            e8 = "";
+            e3 = "";
         switch (b.type) {
             case Y.fO.STREAM:
-                (e6 = (0, r.jsx)(H.Z, {
+                (e8 = (0, r.jsx)(H.Z, {
                     participant: b,
                     selected: ep,
                     width: es,
@@ -256,7 +256,7 @@ let et = [Y.fO.ACTIVITY],
                     focused: eg,
                     inOverlayPopout: ej,
                 })),
-                    (e4 = (0, r.jsx)(H._, {
+                    (e6 = (0, r.jsx)(H._, {
                         participant: b,
                         selected: ep,
                         width: es,
@@ -264,10 +264,10 @@ let et = [Y.fO.ACTIVITY],
                         idle: eC,
                         premiumIndicator: !1,
                     })),
-                    (e8 = Q.intl.formatToPlainString(Q.t.gHPz3d, { streamerName: b.user.username }));
+                    (e3 = Q.intl.formatToPlainString(Q.t.gHPz3d, { streamerName: b.user.username }));
                 break;
             case Y.fO.USER:
-                (e6 = (0, r.jsx)(F.Z, {
+                (e8 = (0, r.jsx)(F.Z, {
                     channel: ea,
                     inCall: ed,
                     participant: b,
@@ -282,24 +282,24 @@ let et = [Y.fO.ACTIVITY],
                     pulseSpeakingIndicator: ey,
                     inOverlayPopout: ej,
                 })),
-                    (e4 = (0, r.jsx)(F.T, {
+                    (e6 = (0, r.jsx)(F.T, {
                         participant: b,
                         channelId: ea.id,
                     })),
-                    (e8 = Q.intl.formatToPlainString(Q.t["iC/x/f"], { username: b.user.username }));
+                    (e3 = Q.intl.formatToPlainString(Q.t["iC/x/f"], { username: b.user.username }));
                 break;
             case Y.fO.ACTIVITY:
-                (e6 = (0, r.jsx)(B.ZP, {
+                (e8 = (0, r.jsx)(B.ZP, {
                     interactible: eg,
                     participant: b,
                     selected: ep,
                     channel: ea,
                     width: es,
                 })),
-                    (e8 = Q.intl.formatToPlainString(Q.t.YCvOsL, { activityName: null == eA ? void 0 : eA.name }));
+                    (e3 = Q.intl.formatToPlainString(Q.t.YCvOsL, { activityName: null == eA ? void 0 : eA.name }));
                 break;
             case Y.fO.HIDDEN_STREAM:
-                e6 = (0, r.jsx)(H.Z, {
+                e8 = (0, r.jsx)(H.Z, {
                     participant: b,
                     selected: ep,
                     width: es,
@@ -311,8 +311,8 @@ let et = [Y.fO.ACTIVITY],
                     inOverlayPopout: ej,
                 });
         }
-        let e7 = i.useRef(null),
-            e5 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
+        let e2 = i.useRef(null),
+            e7 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: K.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -330,7 +330,7 @@ let et = [Y.fO.ACTIVITY],
                     className: J.tile,
                     children: [
                         (0, r.jsx)(V.Z, {
-                            ref: e7,
+                            ref: e2,
                             className: o()(J.tile, {
                                 [J.noBorder]: ef,
                                 [J.noInteraction]: null == k,
@@ -340,10 +340,10 @@ let et = [Y.fO.ACTIVITY],
                             style: ei,
                             participantUserId: eT,
                             children: (0, r.jsxs)(u.kL8, {
-                                "aria-label": e8,
+                                "aria-label": e3,
                                 className: J.tileChild,
                                 onDoubleClick: e1,
-                                onContextMenu: (e) => e3(e, b.type === Y.fO.STREAM),
+                                onContextMenu: (e) => e4(e, b.type === Y.fO.STREAM),
                                 onClick: e0,
                                 onMouseDown: z,
                                 onKeyDown: en,
@@ -367,7 +367,7 @@ let et = [Y.fO.ACTIVITY],
                                                       width:
                                                           null !=
                                                           (s =
-                                                              null == e7 || null == (t = e7.current)
+                                                              null == e2 || null == (t = e2.current)
                                                                   ? void 0
                                                                   : t.clientWidth)
                                                               ? s
@@ -375,7 +375,7 @@ let et = [Y.fO.ACTIVITY],
                                                       height:
                                                           null !=
                                                           (c =
-                                                              null == e7 || null == (n = e7.current)
+                                                              null == e2 || null == (n = e2.current)
                                                                   ? void 0
                                                                   : n.clientHeight)
                                                               ? c
@@ -384,17 +384,17 @@ let et = [Y.fO.ACTIVITY],
                                               }),
                                           })
                                         : null,
-                                    e6,
+                                    e8,
                                     ef
                                         ? null
                                         : (0, r.jsx)("div", {
                                               className: J.indicators,
-                                              children: e4,
+                                              children: e6,
                                           }),
                                     ep
                                         ? (0, r.jsx)("div", {
                                               className: J.selectedScreen,
-                                              children: (0, r.jsx)(e5, {
+                                              children: (0, r.jsx)(e7, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: J.selectedIcon,
@@ -425,7 +425,7 @@ let et = [Y.fO.ACTIVITY],
                                                       localVideoDisabled: eD,
                                                       videoToggleState: eL,
                                                       hideAudioIcon: eH,
-                                                      onContextMenu: e3,
+                                                      onContextMenu: e4,
                                                       onToggleMute: e$,
                                                       participantUserId: eT,
                                                       participantDisplayNameStyles:
@@ -462,7 +462,7 @@ let et = [Y.fO.ACTIVITY],
                             }),
                         (0, r.jsx)(j.Z, {
                             isFiring: eE,
-                            callTileRef: e7.current,
+                            callTileRef: e2.current,
                         }),
                     ],
                 }),

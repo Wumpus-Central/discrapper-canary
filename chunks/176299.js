@@ -1,10 +1,10 @@
-n.d(t, { Z: () => e5 }), n(35282), n(388685);
-var r = n(255367),
-    i = n(73800),
+n.d(t, { Z: () => e3 }), n(35282), n(388685);
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(593473),
-    s = n(114858),
+    s = n(843611),
     c = n(990547),
     u = n(608787),
     d = n(873546),
@@ -364,10 +364,10 @@ let eZ = (0, u.Un)({
             })(e),
         });
     };
-function e3(e) {
+function e8(e) {
     document.body.style.setProperty("--custom-guild-sidebar-width", "".concat(e, "px"));
 }
-function e8(e) {
+function e4(e) {
     let {
         hasNotice: t,
         sidebarTheme: n,
@@ -389,7 +389,7 @@ function e8(e) {
             Number.isNaN(t) && (t = ev.qO),
                 (t = Math.min(Math.max(t, ev.li), ev.zx)),
                 !m && t <= ev.p8 && (t = ev.qO),
-                e3(t);
+                e8(t);
             let n = (e) => {
                 e.metaKey && "b" === e.key && P.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -402,18 +402,18 @@ function e8(e) {
         }
     }, [m]),
         i.useLayoutEffect(() => {
-            if (E) e3(ev.p8);
+            if (E) e8(ev.p8);
             else {
                 var e;
                 let t = parseInt(null != (e = f.K.get(ev.nT)) ? e : "");
-                Number.isNaN(t) && (t = ev.qO), e3(t);
+                Number.isNaN(t) && (t = ev.qO), e8(t);
             }
         }, [E]);
     let y = i.useRef(null),
         v = i.useCallback(
             (e, t) => {
                 var n;
-                e3(e);
+                e8(e);
                 let r = t < ev.li / 3;
                 t <= ev.li
                     ? document.body.classList.add(ex.draggingMin)
@@ -424,7 +424,7 @@ function e8(e) {
                 let i = t - e;
                 null == (n = y.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / ev.p8), 0.25))),
-                    m && (P.useAppSidebarState.setState({ isOpen: !r }), r && e3(ev.p8));
+                    m && (P.useAppSidebarState.setState({ isOpen: !r }), r && e8(ev.p8));
             },
             [m],
         ),
@@ -456,7 +456,7 @@ function e8(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            E && e3(ev.p8);
+            E && e8(ev.p8);
         }, [E]),
         l)
     )
@@ -516,7 +516,7 @@ function e8(e) {
         },
     });
 }
-function e5() {
+function e3() {
     var e;
     let t = (0, p.e7)([eh.ZP], () => eh.ZP.hasNotice()),
         n = (0, es.Ll)(),
@@ -591,7 +591,7 @@ function e5() {
                         className: ex.content,
                         children: [
                             (0, r.jsx)(N.Z, {}),
-                            (0, r.jsx)(e8, {
+                            (0, r.jsx)(e4, {
                                 isOnFullScreenCollectiblesShopRoute: u,
                                 isSidebarOpen: f,
                                 hasNotice: t,

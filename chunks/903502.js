@@ -1,6 +1,6 @@
 a.d(t, { Z: () => p }), a(388685);
-var n = a(255367),
-    r = a(73800),
+var n = a(951288),
+    r = a(647438),
     l = a(442837),
     i = a(481060),
     s = a(570140),
@@ -32,8 +32,8 @@ function p() {
     let [e, t] = r.useState(null),
         [a, p] = r.useState(0),
         [b, v] = r.useState(1000),
-        [f, j] = r.useState(0),
-        g = (0, l.e7)([c.Z], () => {
+        [f, g] = r.useState(0),
+        j = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(m.nw[e])) ? t : o.R[m.nw[e]];
         }),
@@ -68,7 +68,7 @@ function p() {
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != g &&
+                    null != j &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(d.Z, {
@@ -80,19 +80,19 @@ function p() {
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(g.cooldown / 1000, " second(s) or"),
+                                    children: "".concat(j.cooldown / 1000, " second(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(g.cooldown / 60000, " minute(s) or"),
+                                    children: "".concat(j.cooldown / 60000, " minute(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(g.cooldown / 3600000, " hour(s) or"),
+                                    children: "".concat(j.cooldown / 3600000, " hour(s) or"),
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(g.cooldown / 86400000, " day(s)"),
+                                    children: "".concat(j.cooldown / 86400000, " day(s)"),
                                 }),
                             ],
                         }),
@@ -130,7 +130,7 @@ function p() {
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != g &&
+                    null != j &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(d.Z, {
@@ -142,7 +142,7 @@ function p() {
                                 }),
                                 (0, n.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: "".concat(100 * g.chance, "%"),
+                                    children: "".concat(100 * j.chance, "%"),
                                 }),
                             ],
                         }),
@@ -161,7 +161,7 @@ function p() {
                                 max: 100,
                                 value: f.toString(),
                                 type: "number",
-                                onChange: (e) => j(parseFloat(e)),
+                                onChange: (e) => g(parseFloat(e)),
                             }),
                             (0, n.jsx)(i.Text, {
                                 variant: "text-md/normal",
@@ -179,10 +179,10 @@ function p() {
                         text: "Update",
                         onClick: () =>
                             void (
-                                null != g &&
+                                null != j &&
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_SET",
-                                    feedbackType: g.feedbackType,
+                                    feedbackType: j.feedbackType,
                                     cooldown: a * b,
                                     chance: f / 100,
                                 })
@@ -194,10 +194,10 @@ function p() {
                         text: "Clear Override",
                         onClick: () =>
                             void (
-                                null != g &&
+                                null != j &&
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_CLEAR",
-                                    feedbackType: g.feedbackType,
+                                    feedbackType: j.feedbackType,
                                 })
                             ),
                         disabled: !C,
