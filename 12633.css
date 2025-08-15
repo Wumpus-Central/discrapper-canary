@@ -43153,6 +43153,7 @@ body .headerAnimation_b54a5b {
 }
 
 .modalFooterDiscount_e125f1 {
+    border-radius: 0 0 11px 11px !important;
     box-sizing: border-box;
     max-height: 64px;
     padding-bottom: var(--space-24) !important
