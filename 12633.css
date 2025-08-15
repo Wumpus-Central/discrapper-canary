@@ -23971,7 +23971,7 @@ img.inlineAsset__9c640 {
 
 .chicle__89a31 {
     font-family: Chicle, gg sans, Arial, sans-serif;
-    letter-spacing: .04em
+    letter-spacing: .05em
 }
 
 .museoModerno__89a31 {
@@ -63629,7 +63629,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    ascent-override: 95%;
+    ascent-override: 100%;
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;
@@ -63637,7 +63637,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    ascent-override: 95%;
+    ascent-override: 100%;
     font-family: Chicle;
     font-style: normal;
     font-weight: 400;
@@ -63645,7 +63645,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    ascent-override: 90%;
+    ascent-override: 97%;
     font-family: Neo Castel;
     font-style: normal;
     font-weight: 400;
@@ -63653,13 +63653,16 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    ascent-override: 115%;
     font-family: Museo Moderno;
     font-style: normal;
     font-weight: 500;
+    size-adjust: 95%;
     src: url(/assets/70a13bfa8fb5fd84.woff2) format("woff2")
 }
 
 @font-face {
+    ascent-override: 100%;
     font-family: Pixelify Sans;
     font-style: normal;
     font-weight: 400;
