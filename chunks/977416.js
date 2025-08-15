@@ -70,7 +70,7 @@ function f(e) {
                       })({}, f)),
                       (n = n =
                           {
-                              className: u.coverContainer,
+                              className: u.cover,
                               disableInteraction: !0,
                           }),
                       Object.getOwnPropertyDescriptors

@@ -1099,18 +1099,15 @@ function ne(e) {
 }
 function nt(e) {
     let { voiceStates: t } = e;
-    return t.reduce(
-        (e, t) =>
-            i === t.sessionId
-                ? ((e2 = t.mute || t.suppress),
-                  (e5 = t.deaf),
-                  eW.eachConnection(tL),
-                  tM((null == t.guildId || null == t.channelId || null == tm || tm === t.channelId) && e6),
-                  (tm = t.channelId),
-                  !0)
-                : (__OVERLAY__ || t.userId !== eu.default.getId() || null != ep.Z.getChannelId() || tM(!1, null), e),
-        !1,
-    );
+    return t.reduce((e, t) => {
+        if (i === t.sessionId) {
+            (e2 = t.mute || t.suppress), (e5 = t.deaf), eW.eachConnection(tL);
+            let e = null != t.guildId && null != t.channelId && null != tm && tm !== t.channelId,
+                n = !ts && null == t.channelId;
+            return tM(!e && !n && e6), (tm = t.channelId), !0;
+        }
+        return __OVERLAY__ || t.userId !== eu.default.getId() || null != ep.Z.getChannelId() || tM(!1, null), e;
+    }, !1);
 }
 function nn(e) {
     let { mute: t } = e;

@@ -1,98 +1,115 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A }), n(388685);
 var i = n(255367),
     r = n(73800),
-    s = n(442837),
-    a = n(481060),
-    l = n(503089),
-    o = n(254901),
-    c = n(18438),
-    d = n(778825),
-    u = n(851894),
-    m = n(484459),
-    p = n(216045),
-    g = n(839469),
-    h = n(25990),
-    f = n(594174),
-    b = n(585483),
-    x = n(16703),
-    _ = n(785145),
-    j = n(981631),
-    E = n(526761),
-    C = n(726985),
-    O = n(388032),
-    v = n(455734);
-function S() {
-    o.Z.useExperiment({ location: "profile_customization_auto" });
-    let e = (0, s.e7)([d.Z], () => d.Z.getGuild()),
-        t = (0, x.Z)(),
-        n = (0, s.e7)([d.Z, h.Z], () => d.Z.showNotice() || h.Z.showNotice()),
-        S = null != e ? e : t,
-        T = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-        { subsection: N, setSubsection: I } = (0, _.Z)(),
-        { hasSearchResults: y, searchResults: A } = (0, g.E)();
-    function P(t) {
-        if (N !== t) {
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
+    o = n(704215),
+    c = n(481060),
+    d = n(503089),
+    u = n(243778),
+    m = n(254901),
+    p = n(18438),
+    g = n(778825),
+    h = n(851894),
+    f = n(484459),
+    b = n(216045),
+    x = n(839469),
+    _ = n(25990),
+    j = n(594174),
+    E = n(585483),
+    C = n(16703),
+    O = n(785145),
+    v = n(981631),
+    S = n(921944),
+    T = n(526761),
+    N = n(726985),
+    I = n(388032),
+    y = n(455734);
+function A() {
+    m.Z.useExperiment({ location: "profile_customization_auto" });
+    let e = (0, l.e7)([g.Z], () => g.Z.getGuild()),
+        t = (0, C.Z)(),
+        n = (0, l.e7)([g.Z, _.Z], () => g.Z.showNotice() || _.Z.showNotice()),
+        s = null != e ? e : t,
+        A = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
+        { subsection: P, setSubsection: R } = (0, O.Z)(),
+        { hasSearchResults: D, searchResults: Z } = (0, x.E)();
+    r.useEffect(() => {
+        null != A &&
+            (0, f.Z)(A.id, A.getAvatarURL(null == s ? void 0 : s.id, 80), { guildId: null == s ? void 0 : s.id });
+    }, [null == s ? void 0 : s.id, A]);
+    let w = [o.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE],
+        [k, L] = (0, u.US)(w),
+        B = k === o.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE;
+    function M(t) {
+        if (P !== t) {
             if (n) {
-                b.S.dispatch(j.CkL.SHAKE_APP, {
+                E.S.dispatch(v.CkL.SHAKE_APP, {
                     duration: 300,
-                    intensity: l.$x,
+                    intensity: d.$x,
                 }),
-                    b.S.dispatch(j.CkL.EMPHASIZE_NOTICE);
+                    E.S.dispatch(v.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === E.NB.GUILD && null == e && null != S && (0, c.Fq)(S), I(t);
+            t === T.NB.GUILD && null == e && null != s && (0, p.Fq)(s), R(t);
         }
     }
     r.useEffect(() => {
-        null != T &&
-            (0, m.Z)(T.id, T.getAvatarURL(null == S ? void 0 : S.id, 80), { guildId: null == S ? void 0 : S.id });
-    }, [null == S ? void 0 : S.id, T]);
-    let R = !0,
-        D = !0;
+        P === T.NB.GUILD && L(S.L.TAKE_ACTION);
+    }, [P, L]);
+    let U = !0,
+        V = !0;
     return (
-        y &&
-            1 === A.length &&
-            (A.includes(C.s6.PROFILE_SERVER_PROFILES)
-                ? (P(E.NB.GUILD), (D = !1))
-                : A.includes(C.s6.PROFILE_USER_PROFILE) && (P(E.NB.USER_PROFILE), (R = !1))),
-        (0, i.jsxs)(a.y5t, {
-            component: (0, i.jsx)(a.X6q, {
+        D &&
+            1 === Z.length &&
+            (Z.includes(N.s6.PROFILE_SERVER_PROFILES)
+                ? (M(T.NB.GUILD), (V = !1))
+                : Z.includes(N.s6.PROFILE_USER_PROFILE) && (M(T.NB.USER_PROFILE), (U = !1))),
+        (0, i.jsxs)(c.y5t, {
+            component: (0, i.jsx)(c.X6q, {
                 variant: "heading-lg/semibold",
-                children: O.intl.string(O.t["vi7f+v"]),
+                children: I.intl.string(I.t["vi7f+v"]),
             }),
             children: [
-                (0, i.jsxs)(a.njP, {
-                    className: v.tabBar,
+                (0, i.jsxs)(c.njP, {
+                    className: y.tabBar,
                     type: "top",
                     look: "brand",
-                    selectedItem: N,
-                    onItemSelect: P,
+                    selectedItem: P,
+                    onItemSelect: M,
                     children: [
-                        D
+                        V
                             ? (0, i.jsx)(
-                                  a.njP.Item,
+                                  c.njP.Item,
                                   {
-                                      className: v.tabBarItem,
-                                      id: E.NB.USER_PROFILE,
-                                      children: O.intl.string(O.t["2p07FR"]),
+                                      className: y.tabBarItem,
+                                      id: T.NB.USER_PROFILE,
+                                      children: I.intl.string(I.t["2p07FR"]),
                                   },
-                                  E.NB.USER_PROFILE,
+                                  T.NB.USER_PROFILE,
                               )
                             : null,
-                        R
-                            ? (0, i.jsx)(
-                                  a.njP.Item,
+                        U
+                            ? (0, i.jsxs)(
+                                  c.njP.Item,
                                   {
-                                      className: v.tabBarItem,
-                                      id: E.NB.GUILD,
-                                      children: O.intl.string(O.t.kPHroa),
+                                      className: a()(y.tabBarItem, y.guildTabBarItem),
+                                      "aria-label": I.intl.string(I.t.kPHroa),
+                                      id: T.NB.GUILD,
+                                      children: [
+                                          I.intl.string(I.t.kPHroa),
+                                          B &&
+                                              P !== T.NB.GUILD &&
+                                              (0, i.jsx)(c.IGR, { text: I.intl.string(I.t.y2b7CA) }),
+                                      ],
                                   },
-                                  E.NB.GUILD,
+                                  T.NB.GUILD,
                               )
                             : null,
                     ],
                 }),
-                N === E.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {}),
+                P === T.NB.GUILD ? (0, i.jsx)(h.Z, { selectedGuild: s }) : (0, i.jsx)(b.Z, {}),
             ],
         })
     );

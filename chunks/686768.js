@@ -1,113 +1,113 @@
-n.d(t, { default: () => N });
-var i = n(255367),
-    o = n(73800),
-    r = n(772848),
-    s = n(481060),
-    l = n(138201),
-    a = n(63063),
-    c = n(168107),
-    _ = n(480916),
-    d = n(81643),
-    E = n(981631),
-    u = n(800530),
-    m = n(388032),
-    I = n(740076);
-let N = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: N } = e,
-        { loading: p, initiateAgeVerification: S } = (0, d.WD)(N, !0),
-        L = o.useMemo(() => (0, r.Z)(), []);
+e.d(n, { default: () => b });
+var r = e(255367),
+    o = e(73800),
+    i = e(772848),
+    a = e(481060),
+    l = e(138201),
+    s = e(63063),
+    c = e(168107),
+    d = e(480916),
+    u = e(81643),
+    x = e(981631),
+    m = e(800530),
+    _ = e(388032),
+    f = e(740076);
+let b = function (t) {
+    let { transitionState: n, entryPoint: e, onClose: b } = t,
+        { loading: h, initiateAgeVerification: p } = (0, u.WD)(b, !0),
+        j = o.useMemo(() => (0, i.Z)(), []);
     o.useEffect(() => {
-        (0, _.lA)(L, _.d_.RETRY, n);
-    }, [L, n]);
-    let T = o.useMemo(
+        (0, d.lA)(j, d.d_.RETRY, e);
+    }, [j, e]);
+    let R = o.useMemo(
         () => [
             {
-                title: m.intl.string(m.t.FYkioq),
-                description: m.intl.string(m.t.xMfbR0),
-                buttonText: m.intl.string(m.t.RtOE1t),
+                title: _.intl.string(_.t.FYkioq),
+                description: _.intl.string(_.t.xMfbR0),
+                buttonText: _.intl.string(_.t.RtOE1t),
                 buttonVariant: "primary",
-                buttonIcon: s.Gr1,
-                buttonLoading: p,
+                buttonIcon: a.Gr1,
+                buttonLoading: h,
                 onButtonPress: () => {
-                    S(), (0, _.x3)(L, _.d_.RETRY, _.sU.GET_STARTED);
+                    p(), (0, d.x3)(j, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {
-                title: m.intl.string(m.t["LZO+HR"]),
-                description: m.intl.string(m.t.N2mHaG),
-                buttonText: m.intl.string(m.t["LZO+HR"]),
-                buttonIcon: s.Gr1,
+                title: _.intl.string(_.t["LZO+HR"]),
+                description: _.intl.string(_.t.N2mHaG),
+                buttonText: _.intl.string(_.t["LZO+HR"]),
+                buttonIcon: a.Gr1,
                 onButtonPress: () => {
-                    c.Z.openUrl(u.sQ.APPEALS_LINK), (0, _.x3)(L, _.d_.RETRY, _.sU.MANUAL_REVIEW_REQUEST);
+                    c.Z.openUrl(m.sQ.APPEALS_LINK), (0, d.x3)(j, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
                 },
             },
         ],
-        [S, L, p],
+        [p, j, h],
     );
-    return (0, i.jsx)(s.Y0X, {
-        transitionState: t,
-        className: I.root,
+    return (0, r.jsx)(a.Y0X, {
+        transitionState: n,
+        className: f.root,
         parentComponent: "AgeVerificationRetryModal",
-        children: (0, i.jsxs)(s.hzk, {
-            className: I.content,
+        children: (0, r.jsxs)(a.hzk, {
+            className: f.content,
             children: [
-                (0, i.jsxs)("div", {
-                    className: I.headersContainer,
+                (0, r.jsxs)("div", {
+                    className: f.headersContainer,
                     children: [
-                        (0, i.jsx)(s.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: "heading-xl/bold",
-                            children: m.intl.string(m.t["5l3R/v"]),
+                            children: _.intl.string(_.t["5l3R/v"]),
                         }),
-                        (0, i.jsx)(s.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: "heading-md/medium",
                             color: "text-default",
-                            children: m.intl.string(m.t.O7SO0N),
+                            children: _.intl.string(_.t.O7SO0N),
                         }),
-                        (0, i.jsx)(s.olH, {
-                            className: I.modalClose,
-                            onClick: N,
+                        (0, r.jsx)(a.olH, {
+                            className: f.modalClose,
+                            onClick: b,
                         }),
                     ],
                 }),
-                T.map((e, t) =>
-                    (0, i.jsx)(
+                R.map((t, n) =>
+                    (0, r.jsx)(
                         l.JZ,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
+                        (function (t) {
+                            for (var n = 1; n < arguments.length; n++) {
+                                var e = null != arguments[n] ? arguments[n] : {},
+                                    r = Object.keys(e);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(e).filter(function (t) {
+                                            return Object.getOwnPropertyDescriptor(e, t).enumerable;
                                         }),
                                     )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
+                                    r.forEach(function (n) {
+                                        var r;
+                                        (r = e[n]),
+                                            n in t
+                                                ? Object.defineProperty(t, n, {
+                                                      value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = i);
+                                                : (t[n] = r);
                                     });
                             }
-                            return e;
-                        })({ buttonIconPosition: "end" }, e),
-                        t,
+                            return t;
+                        })({ buttonIconPosition: "end" }, t),
+                        n,
                     ),
                 ),
-                (0, i.jsx)(s.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: I.learnMore,
-                    children: m.intl.format(m.t["L+FgkZ"], {
+                    className: f.learnMore,
+                    children: _.intl.format(_.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            c.Z.openUrl(a.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, _.x3)(L, _.d_.RETRY, _.sU.LEARN_MORE);
+                            c.Z.openUrl(s.Z.getArticleURL(x.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                                (0, d.x3)(j, d.d_.RETRY, d.sU.LEARN_MORE);
                         },
                     }),
                 }),
