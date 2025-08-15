@@ -23972,16 +23972,16 @@ img.inlineAsset__9c640 {
 
 .cherryBomb__89a31 {
     font-family: Cherry Bomb One, gg sans, Arial, sans-serif;
-    transform: translateY(-1px)
-}
-
-.cherryBomb__89a31,
-.chicle__89a31 {
     letter-spacing: .04em
 }
 
+.cherryBomb__89a31.safari__89a31 {
+    transform: translateY(-1px)
+}
+
 .chicle__89a31 {
-    font-family: Chicle, gg sans, Arial, sans-serif
+    font-family: Chicle, gg sans, Arial, sans-serif;
+    letter-spacing: .04em
 }
 
 .museoModerno__89a31 {
@@ -23991,7 +23991,10 @@ img.inlineAsset__9c640 {
 
 .neoCastel__89a31 {
     font-family: Neo Castel, gg sans, Arial, sans-serif;
-    letter-spacing: .02em;
+    letter-spacing: .02em
+}
+
+.neoCastel__89a31.safari__89a31 {
     transform: translateY(-1px)
 }
 
@@ -89353,6 +89356,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    ascent-override: 95%;
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;
@@ -89360,6 +89364,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    ascent-override: 95%;
     font-family: Chicle;
     font-style: normal;
     font-weight: 400;
@@ -89367,6 +89372,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    ascent-override: 90%;
     font-family: Neo Castel;
     font-style: normal;
     font-weight: 400;
