@@ -3,7 +3,7 @@ n.r(t),
         default: () => o,
         messagesLoader: () => i,
     });
-let { createLoader: r } = n(125697),
+let { createLoader: r } = n(631562),
     i = r(
         {
             bg: () => n.e("44089").then(n.t.bind(n, 52253, 19)),
@@ -40,5 +40,5 @@ let { createLoader: r } = n(125697),
         },
         "en-US",
     ),
-    { makeMessagesProxy: a } = n(125697),
+    { makeMessagesProxy: a } = n(631562),
     o = a(i);
