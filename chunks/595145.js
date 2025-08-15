@@ -41,10 +41,10 @@ var r = n(255367),
     F = n(530),
     V = n(4517),
     Y = n(179828),
-    H = n(993160),
-    W = n(574887),
-    K = n(693408),
-    z = n(661462),
+    W = n(993160),
+    H = n(574887),
+    z = n(693408),
+    K = n(661462),
     X = n(76076),
     q = n(872269),
     J = n(768111),
@@ -312,7 +312,7 @@ function en(e) {
                                                             n.isProvisional &&
                                                                 (0, r.jsx)(U.Z.Overlay, {
                                                                     className: et.profileOverlay,
-                                                                    children: (0, r.jsx)(K.Z, {
+                                                                    children: (0, r.jsx)(z.Z, {
                                                                         heading: ee.intl.string(ee.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(a.Mgn, {
@@ -337,7 +337,7 @@ function en(e) {
                                                             }),
                                                             (0, r.jsx)("div", {
                                                                 className: et.profileButtons,
-                                                                children: (0, r.jsx)(H.Z, {
+                                                                children: (0, r.jsx)(W.Z, {
                                                                     user: n,
                                                                     currentUser: en,
                                                                     guildId: er,
@@ -355,11 +355,11 @@ function en(e) {
                                                                     setLineClamp: !1,
                                                                 }),
                                                             eL.length > 0 &&
-                                                                (0, r.jsx)(K.Z, {
+                                                                (0, r.jsx)(z.Z, {
                                                                     heading: ee.intl.string(ee.t["Uv/eT0"]),
                                                                     children: (0, r.jsx)(R.Z, { applicationIds: eL }),
                                                                 }),
-                                                            (0, r.jsx)(K.Z, {
+                                                            (0, r.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
                                                                 children: (0, r.jsx)(B.Z, {
                                                                     userId: n.id,
@@ -378,16 +378,16 @@ function en(e) {
                                                                     scrollIntoView: es === Q.Tb.ROLES,
                                                                 }),
                                                             eG.length > 0 &&
-                                                                (0, r.jsx)(K.Z, {
+                                                                (0, r.jsx)(z.Z, {
                                                                     heading: ee.intl.string(ee.t["3fe7U1"]),
                                                                     scrollIntoView: es === Q.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(W.Z, {
+                                                                    children: (0, r.jsx)(H.Z, {
                                                                         connections: eG,
                                                                         userId: n.id,
                                                                         className: et.profileAppConnections,
                                                                     }),
                                                                 }),
-                                                            (0, r.jsx)(K.Z, {
+                                                            (0, r.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t["mQKv+v"]),
                                                                 scrollIntoView: es === Q.Tb.NOTE,
                                                                 children: (0, r.jsx)(c.Z, {
@@ -453,7 +453,7 @@ function en(e) {
                                                         }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(z.Z, {
+                                            (0, r.jsx)(K.Z, {
                                                 user: n,
                                                 currentUser: en,
                                                 displayProfile: eE,

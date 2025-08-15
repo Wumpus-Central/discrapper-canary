@@ -58,15 +58,15 @@ function p(e) {
           });
 }
 function m(e) {
-    let { imageSrc: t, gameName: n, applicationId: l, userId: i, className: f, disableHoverEffect: m } = e,
-        g = (0, s.Z)({
+    let { imageSrc: t, gameName: n, applicationId: l, userId: i, className: f } = e,
+        m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
             source: c.m1.UserProfile,
             sourceUserId: i,
             trackEntryPointImpression: !0,
         });
-    if (null == g)
+    if (null == m)
         return (0, r.jsx)("div", {
             className: f,
             children: (0, r.jsx)(p, {
@@ -74,11 +74,11 @@ function m(e) {
                 gameName: n,
             }),
         });
-    let b = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
+    let g = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: null != n ? n : d.intl.string(d.t.GIWFlJ) });
     return (0, r.jsx)(a.P3F, {
-        onClick: g,
-        "aria-label": b,
-        className: o()(u.clickable, !m && u.hoverEffect, f),
+        onClick: m,
+        "aria-label": g,
+        className: o()(u.clickable, f),
         children: (0, r.jsx)(p, {
             imageSrc: t,
             gameName: n,

@@ -38,7 +38,6 @@ function u(e) {
                                               checked: m.includes(e),
                                               action: () =>
                                                   ((e) => {
-                                                      if (null == n || null == u) return;
                                                       let t = new Set(m);
                                                       t.has(e)
                                                           ? (t.delete(e), p({ action: "REMOVE_GAME_TAGS" }))

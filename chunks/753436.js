@@ -22,8 +22,7 @@ function f(e) {
         j = (0, c.Z)(t.applicationId),
         y = j.length > 0,
         O = l.default.getCurrentUser(),
-        x = (null == O ? void 0 : O.id) === n,
-        h = !b && x;
+        x = (null == O ? void 0 : O.id) === n;
     return g
         ? (0, r.jsx)("div", { className: d.loadingCover })
         : (0, r.jsxs)("div", {
@@ -35,17 +34,16 @@ function f(e) {
                       applicationId: t.applicationId,
                       userId: n,
                       disableInteraction: b,
-                      disableHoverEffect: h,
                       className: y ? u.socialProofBackdrop : void 0,
                   }),
-                  h &&
+                  !b &&
+                      x &&
                       (0, r.jsx)(a.Z, {
                           game: t,
                           widgetType: f,
                           className: u.removeGameButton,
                           iconSize: "xs",
                       }),
-                  (0, r.jsx)("div", { className: u.hoverOverlay }),
                   !b &&
                       y &&
                       (0, r.jsx)(i.Z, {

@@ -463,6 +463,7 @@ var r = (function (e) {
             (e[(e.NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE = 578)] =
                 "NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE"),
             (e[(e.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE = 579)] = "DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE"),
+            (e[(e.CLOUD_PLAY_NEW_BADGE = 580)] = "CLOUD_PLAY_NEW_BADGE"),
             e
         );
     })({}),

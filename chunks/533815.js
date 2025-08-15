@@ -47,11 +47,10 @@ function d(e) {
                     {
                         onClick: u,
                         "aria-label": c.intl.string(c.t.HUvyDQ),
-                        role: "button",
-                        tabIndex: 0,
                         className: i()(d, s.clickable),
                         children: (0, r.jsx)(o.XHJ, {
                             size: l,
+                            className: s.icon,
                             color: o.TVs.colors.STATUS_DANGER,
                         }),
                     }),

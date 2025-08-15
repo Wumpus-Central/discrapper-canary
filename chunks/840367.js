@@ -61,7 +61,7 @@ function g(e) {
 function b(e) {
     let { widget: t, disabled: n, disabledInteraction: l, userId: a } = e,
         s = (0, o.e7)([c.default], () => c.default.getId() === a);
-    return (s || t.type === i.l.FAVORITE_GAMES) && !l
+    return !l && (s || (t.type === i.l.FAVORITE_GAMES && t.games.some((e) => null != e.comment)))
         ? (0, r.jsxs)("div", {
               className: p.actions,
               children: [

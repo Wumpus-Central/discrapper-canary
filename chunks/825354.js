@@ -61,17 +61,20 @@ function b(e) {
                 (0, d.y8)(t.type), (0, u.L$)(f.qb.WIDGET_REMOVED);
                 return;
             }
-            (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("70887").then(n.bind(n, 37668));
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        g(m({}, n), {
-                            userId: s.default.getId(),
-                            widget: t,
-                        }),
-                    );
-            });
+            (0, o.ZDy)(
+                async () => {
+                    let { default: e } = await n.e("70887").then(n.bind(n, 37668));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            g(m({}, n), {
+                                userId: s.default.getId(),
+                                widget: t,
+                            }),
+                        );
+                },
+                { stackingBehavior: "stack" },
+            );
         },
         O = () => {
             (0, c.G1)(b, t);

@@ -1,25 +1,25 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var l = n(255367);
 n(73800);
-var i = n(442837),
-    r = n(481060),
-    a = n(699516),
-    o = n(388032);
-function s(e) {
-    let { user: t, onAction: s, appContext: u } = e,
-        d = t.id,
-        [c, g] = (0, i.Wu)([a.Z], () => {
+var r = n(442837),
+    i = n(481060),
+    o = n(699516),
+    a = n(388032);
+function u(e) {
+    let { user: t, onAction: u, appContext: c } = e,
+        s = t.id,
+        [d, f] = (0, r.Wu)([o.Z], () => {
             var e;
-            return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
-        }, [d]);
-    if (!c) return null;
-    let f = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
-    return (0, l.jsx)(r.sNh, {
-        id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
-        label: f,
+            return [o.Z.isFriend(s), null != (e = o.Z.getNickname(s)) ? e : null];
+        }, [s]);
+    if (!d) return null;
+    let b = null == f ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t["8pOYUF"]);
+    return (0, l.jsx)(i.sNh, {
+        id: null == f ? "add-friend-nickname" : "edit-friend-nickname",
+        label: b,
         action: () => {
-            null == s || s(),
-                (0, r.ZDy)(
+            null == u || u(),
+                (0, i.ZDy)(
                     async () => {
                         let { default: e } = await n.e("25070").then(n.bind(n, 670794));
                         return (n) =>
@@ -52,13 +52,13 @@ function s(e) {
                                 })(
                                     {
                                         user: t,
-                                        nickname: g,
+                                        nickname: f,
                                     },
                                     n,
                                 ),
                             );
                     },
-                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 },
+                    { contextKey: null != c ? (0, i.VnL)(c) : void 0 },
                 );
         },
     });

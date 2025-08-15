@@ -1,23 +1,25 @@
 n.d(t, {
-    C: () => x,
-    Z: () => y,
+    C: () => _,
+    Z: () => h,
 });
-var r = n(255367);
-n(73800);
-var l = n(296009),
-    i = n(442837),
-    o = n(481060),
-    a = n(314897),
-    c = n(747101),
-    s = n(517157),
-    d = n(985748),
-    u = n(566007),
-    f = n(173951),
-    p = n(455731),
-    m = n(430790),
-    g = n(795990),
-    b = n(830202);
-function j(e) {
+var r = n(255367),
+    l = n(73800),
+    i = n(296009),
+    o = n(442837),
+    a = n(481060),
+    c = n(314897),
+    s = n(592183),
+    d = n(224724),
+    u = n(747101),
+    f = n(517157),
+    p = n(985748),
+    m = n(566007),
+    g = n(173951),
+    b = n(455731),
+    j = n(430790),
+    y = n(795990),
+    O = n(830202);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +44,7 @@ function j(e) {
     }
     return e;
 }
-function y(e) {
+function h(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -66,48 +68,54 @@ function y(e) {
             return l;
         })(e, ["widget"]);
     switch (t.type) {
-        case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(u.Z, j({ widget: t }, n));
-        case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(d.Z, j({ widget: t }, n));
-        case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(p.Z, j({ widget: t }, n));
-        case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(f.Z, j({ widget: t }, n));
+        case i.l.FAVORITE_GAMES:
+            return (0, r.jsx)(m.Z, x({ widget: t }, n));
+        case i.l.CURRENT_GAMES:
+            return (0, r.jsx)(p.Z, x({ widget: t }, n));
+        case i.l.WANT_TO_PLAY_GAMES:
+            return (0, r.jsx)(b.Z, x({ widget: t }, n));
+        case i.l.PLAYED_GAMES:
+            return (0, r.jsx)(g.Z, x({ widget: t }, n));
         default:
             return null;
     }
 }
-function O(e) {
+function v(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        o = (0, s.Z)(t.id),
-        { widgets: d, isGameFetching: u } = (0, c.Z)(o),
-        f = (0, i.e7)([a.default], () => a.default.getId() === t.id);
-    return 0 === d.length && f
-        ? (0, r.jsx)(g.Z, {})
+        i = (0, f.Z)(t.id),
+        { widgets: a, isGameFetching: s } = (0, u.Z)(i),
+        d = (0, o.e7)([c.default], () => c.default.getId() === t.id);
+    return 0 === a.length && d
+        ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  d.map((e) =>
+                  a.map((e) =>
                       (0, r.jsx)(
-                          y,
+                          h,
                           {
                               widget: e,
                               user: t,
                               guildId: n,
                               channelId: l,
-                              isGameFetching: u,
+                              isGameFetching: s,
                           },
                           e.id,
                       ),
                   ),
-                  f && (0, r.jsx)(m.Z, {}),
+                  d && (0, r.jsx)(j.Z, {}),
               ],
           });
 }
-function x(e) {
-    return (0, r.jsx)(o.Ttm, {
-        className: b.scroller,
-        fade: !0,
-        children: (0, r.jsx)(O, j({}, e)),
-    });
+function _(e) {
+    let t = (0, o.e7)([d.Z], () => d.Z.suggestedFetchAttempted);
+    return (
+        l.useEffect(() => {
+            t || s.Z.fetchSuggestedGames();
+        }, [t]),
+        (0, r.jsx)(a.Ttm, {
+            className: O.scroller,
+            fade: !0,
+            children: (0, r.jsx)(v, x({}, e)),
+        })
+    );
 }

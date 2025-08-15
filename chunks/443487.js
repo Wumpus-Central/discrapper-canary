@@ -3,7 +3,9 @@ n.d(t, {
     Zb: () => E,
     cA: () => g,
     e$: () => b,
+    lS: () => I,
     ll: () => v,
+    xx: () => T,
 });
 var r = n(255367);
 n(73800);
@@ -27,9 +29,18 @@ function g() {
     });
 }
 function E(e) {
-    let { children: t, selected: n } = e;
+    let { children: t, selected: n, className: i, usesCardRows: a = !1, isAutoHeight: s = !1 } = e;
     return (0, r.jsx)("div", {
-        className: o()(m.container, m.openOnHover, { [m.selected]: n }),
+        className: o()(
+            m.container,
+            m.openOnHover,
+            {
+                [m.selected]: n,
+                [m.usesCardRows]: a,
+                [m.isAutoHeight]: s,
+            },
+            i,
+        ),
         children: t,
     });
 }
@@ -143,4 +154,14 @@ function v(e) {
         lineClamp: 1,
         children: t,
     });
+}
+function I(e) {
+    let { children: t, className: n } = e;
+    return (0, r.jsx)("div", {
+        className: o()(m.cardRow, n),
+        children: t,
+    });
+}
+function T() {
+    return (0, r.jsx)("div", { className: m.divider });
 }

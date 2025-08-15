@@ -1,18 +1,18 @@
-t.d(n, { Z: () => l }), t(388685);
-var i = t(73800),
-    r = t(881052);
-function l(e, n) {
-    let [t, l] = i.useState(!1),
-        [o, c] = i.useState(null);
+t.d(n, { Z: () => i }), t(388685);
+var r = t(73800),
+    a = t(881052);
+function i(e, n) {
+    let [t, i] = r.useState(!1),
+        [o, l] = r.useState(null);
     return [
         async () => {
-            l(!0), c(null);
+            i(!0), l(null);
             try {
                 let n = await e();
-                return l(!1), c(null), n;
+                return i(!1), l(null), n;
             } catch (t) {
-                let e = new r.Hx(t);
-                return null == n || n(e), c(e), l(!1), null;
+                let e = new a.Hx(t);
+                return null == n || n(e), l(e), i(!1), null;
             }
         },
         {
