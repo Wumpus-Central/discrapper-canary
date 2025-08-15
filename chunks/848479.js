@@ -94,6 +94,19 @@ class c extends a.h {
             return null;
         }
     }
+    enablePerfMemoryHooks(e) {
+        return o.ZP.enablePerfMemoryHooks(e);
+    }
+    disablePerfMemoryHooks() {
+        return o.ZP.disablePerfMemoryHooks();
+    }
+    getPerfAttributedMemory() {
+        try {
+            return o.ZP.getPerfAttributedMemory();
+        } catch (e) {
+            return null;
+        }
+    }
     constructor() {
         var e, t;
         super(),

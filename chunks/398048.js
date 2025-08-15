@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -6,16 +6,16 @@ var i = n(442837),
     o = n(496675),
     c = n(981631),
     a = n(388032);
-function s(e, t) {
-    let s = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    return __OVERLAY__ || !s
+function u(e, t) {
+    let u = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
+    return __OVERLAY__ || !u
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "clone-channel",
               label: a.intl.string(a.t.dEaPc3),
               action: () =>
                   (0, l.ZDy)(async () => {
-                      let { default: i } = await Promise.all([n.e("7590"), n.e("45094"), n.e("76480")]).then(
+                      let { default: i } = await Promise.all([n.e("7590"), n.e("45094"), n.e("30946")]).then(
                           n.bind(n, 218613),
                       );
                       return (n) => {

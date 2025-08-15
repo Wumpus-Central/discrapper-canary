@@ -72,6 +72,10 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(863065).Z,
     },
+    DesktopPerfAnalyticsManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(905870).Z,
+    },
     HangStatusManager: {
         actions: ["POST_CONNECTION_OPEN", "VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
         inlineRequire: () => n(669750).Z,

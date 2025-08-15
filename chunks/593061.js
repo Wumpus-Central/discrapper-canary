@@ -46,20 +46,16 @@ function p(e) {
               children: [
                   (0, i.jsx)(a.eee, {
                       onClick: () => g(!1),
-                      children: d.intl.string(d.t.R0xzCA),
+                      children: d.intl.formatToPlainString(d.t.R0xzCA, {}),
                   }),
                   t.hasRefundInvoiceURLs
                       ? (0, i.jsx)(a.eee, {
                             className: u.downloadRefundInvoice,
                             onClick: () => g(!0),
-                            children: d.intl.string(d.t["3x6NGx"]),
+                            children: d.intl.formatToPlainString(d.t["3x6NGx"], {}),
                         })
                       : null,
-                  (0, i.jsx)(a.Text, {
-                      color: "text-danger",
-                      variant: "text-sm/semibold",
-                      children: o,
-                  }),
+                  null != o && "" !== o && (0, i.jsx)(a.kzN, { children: o }),
               ],
           })
         : t.hasInvoiceURL && null != n
@@ -68,7 +64,7 @@ function p(e) {
                 children: [
                     (0, i.jsx)(a.eee, {
                         href: f,
-                        children: d.intl.string(d.t.R0xzCA),
+                        children: d.intl.formatToPlainString(d.t.R0xzCA, {}),
                     }),
                     null != b
                         ? b.map((e, t) =>
@@ -77,17 +73,13 @@ function p(e) {
                                   {
                                       className: u.downloadRefundInvoice,
                                       href: e,
-                                      children: d.intl.string(d.t["3x6NGx"]),
+                                      children: d.intl.formatToPlainString(d.t["3x6NGx"], {}),
                                   },
                                   t,
                               ),
                           )
                         : null,
-                    (0, i.jsx)(a.Text, {
-                        color: "text-danger",
-                        variant: "text-sm/semibold",
-                        children: o,
-                    }),
+                    null != o && "" !== o && (0, i.jsx)(a.kzN, { children: o }),
                 ],
             })
           : h
@@ -98,7 +90,7 @@ function p(e) {
                           var e;
                           (e = t.paymentSource), l.Z.open(t, e);
                       },
-                      children: d.intl.string(d.t.onRIxc),
+                      children: d.intl.formatToPlainString(d.t.onRIxc, {}),
                   }),
               })
             : null;

@@ -1,7 +1,7 @@
 n.d(t, {
-    U: () => L,
-    default: () => Z,
-    t: () => P,
+    U: () => k,
+    default: () => P,
+    t: () => Z,
 }),
     n(953529),
     n(388685),
@@ -29,12 +29,12 @@ var r = n(255367),
     g = n(892880),
     j = n(226951),
     v = n(605436),
-    S = n(971628),
-    E = n(71080),
-    w = n(981631),
-    T = n(494831),
-    O = n(388032),
-    R = n(257803);
+    E = n(971628),
+    S = n(71080),
+    T = n(981631),
+    w = n(494831),
+    R = n(388032),
+    O = n(257803);
 function C(e) {
     var t = (function (e, t) {
         if ("object" !== N(e) || null === e) return e;
@@ -52,10 +52,10 @@ function N(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let M = (0, u.hQ)();
-function k(e, t) {
+function L(e, t) {
     return t ? e.slice(1) : e;
 }
-function L(e) {
+function k(e) {
     let t,
         {
             guild: n,
@@ -68,37 +68,37 @@ function L(e) {
         } = e,
         [x, y] = l.useState(!1),
         [f, p] = l.useState(""),
-        w = (0, i.e7)([b.Z], () => b.Z.getSortedRoles(n.id));
-    function T(e) {
-        let t = k(f.trim(), x);
+        T = (0, i.e7)([b.Z], () => b.Z.getSortedRoles(n.id));
+    function w(e) {
+        let t = L(f.trim(), x);
         return RegExp("".concat(j.Z.escape(t)), "i").test(e);
     }
-    let R = (0, i.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
+    let O = (0, i.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
     x
         ? (t = [])
         : u
-          ? (t = v.Wx(n, w, a, s, T))
-          : 0 === (t = v.ik(n, w, a, s, T)).length && "" === f.trim() && 1 === w.length && (t = v.aq());
-    let N = v.iI(R, a, n, s, T),
+          ? (t = v.Wx(n, T, a, s, w))
+          : 0 === (t = v.ik(n, T, a, s, w)).length && "" === f.trim() && 1 === T.length && (t = v.aq());
+    let N = v.iI(O, a, n, s, w),
         {
             placeholderText: M,
-            hintText: L,
-            renderEmptyText: Z,
+            hintText: k,
+            renderEmptyText: P,
         } = {
-            placeholderText: O.intl.string(O.t.iezLLi),
-            hintText: O.intl.string(O.t["rwFx8/"]),
-            renderEmptyText: (e) => O.intl.format(O.t.ErpIY2, { query: e }),
+            placeholderText: R.intl.string(R.t.iezLLi),
+            hintText: R.intl.string(R.t["rwFx8/"]),
+            renderEmptyText: (e) => R.intl.format(R.t.ErpIY2, { query: e }),
         };
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(Z, {
         pendingAdditions: o,
         query: f,
         onQueryChange: function (e) {
             let t = e.trim(),
                 r = "@" === t.charAt(0);
-            g.Z.requestMembers(n.id, k(t, r), E.EQ), p(e), y(r);
+            g.Z.requestMembers(n.id, L(t, r), S.EQ), p(e), y(r);
         },
         onClickRow: function (e) {
-            let t = (0, S.G)(e);
+            let t = (0, E.G)(e);
             d((n) => {
                 let r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -128,13 +128,13 @@ function L(e) {
                 if (t in r) delete r[t];
                 else {
                     let n;
-                    e.rowType === E.aC.ROLE || e.rowType === E.aC.ADMINISTRATOR
+                    e.rowType === S.aC.ROLE || e.rowType === S.aC.ADMINISTRATOR
                         ? (n = {
                               type: c.F.ROLE,
                               label: e.name,
                               color: e.colorString,
                           })
-                        : (e.rowType === E.aC.MEMBER || e.rowType === E.aC.OWNER) &&
+                        : (e.rowType === S.aC.MEMBER || e.rowType === S.aC.OWNER) &&
                           (n = {
                               type: c.F.MEMBER,
                               label: e.name,
@@ -180,13 +180,13 @@ function L(e) {
         roles: t,
         members: N,
         placeholderText: M,
-        hintText: L,
-        renderEmptyText: Z,
+        hintText: k,
+        renderEmptyText: P,
         isStageChannel: u,
         description: m,
     });
 }
-function P(e) {
+function Z(e) {
     let t,
         {
             listClassName: n,
@@ -206,17 +206,17 @@ function P(e) {
             description: p,
         } = e;
     return (0, r.jsxs)("div", {
-        className: R.content,
+        className: O.content,
         children: [
-            (null == (t = p) && b && (t = O.intl.string(O.t.f7VbhI)), null == t || "" === t)
+            (null == (t = p) && b && (t = R.intl.string(R.t.f7VbhI)), null == t || "" === t)
                 ? null
                 : (0, r.jsx)(s.Text, {
                       color: "header-secondary",
-                      className: R.description,
+                      className: O.description,
                       variant: "text-sm/normal",
                       children: t,
                   }),
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(E.Z, {
                 listClassName: n,
                 pendingAdditions: l,
                 query: i,
@@ -228,30 +228,30 @@ function P(e) {
                 placeholderText: m,
                 hintText: x,
                 renderEmptyText: h,
-                disabledText: b ? O.intl.string(O.t.MVVOCg) : null,
+                disabledText: b ? R.intl.string(R.t.MVVOCg) : null,
                 focusSearchAfterReady: y,
                 isReady: f,
-                maxCount: T.ey,
+                maxCount: w.ey,
             }),
         ],
     });
 }
-function Z(e) {
+function P(e) {
     let { transitionState: t, onClose: n, channelId: c, newChannel: u, inSettings: h } = e,
         [b, g] = l.useState(!1),
         [j, v] = l.useState({}),
-        S = (0, i.e7)([x.Z], () => x.Z.getChannel(c), [c]),
-        T = (0, i.e7)([y.Z], () => y.Z.getGuild(null == S ? void 0 : S.getGuildId()));
+        E = (0, i.e7)([x.Z], () => x.Z.getChannel(c), [c]),
+        w = (0, i.e7)([y.Z], () => y.Z.getGuild(null == E ? void 0 : E.getGuildId()));
     if (
         (l.useEffect(() => {
-            f.default.track(w.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
+            f.default.track(T.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
         }, []),
-        null == S || null == T)
+        null == E || null == w)
     )
         return null;
     let C = u && 0 === Object.keys(j).length;
     async function N() {
-        if (null == S || 0 === Object.keys(j).length) return void n();
+        if (null == E || 0 === Object.keys(j).length) return void n();
         g(!0);
         try {
             await (function (e, t, n) {
@@ -261,61 +261,59 @@ function Z(e) {
                         let { row: n } = t;
                         null != n.id &&
                             "" !== n.id &&
-                            (n.rowType === E.aC.ROLE
+                            (n.rowType === S.aC.ROLE
                                 ? r.push((0, p.rX)(n.id, e.type))
-                                : n.rowType === E.aC.MEMBER && r.push((0, p.jZ)(n.id, e.type)));
+                                : n.rowType === S.aC.MEMBER && r.push((0, p.jZ)(n.id, e.type)));
                     }),
                     (0, o.hw)(e.id, r, n)
                 );
-            })(S, j, h),
+            })(E, j, h),
                 n(),
                 g(!1);
         } catch (e) {
             g(!1);
         }
     }
-    let k = (0, m.zi)(S.type) ? s.W4G : s.gjC;
+    let L = (0, m.zi)(E.type) ? s.W4G : s.gjC;
     return (0, r.jsxs)(s.Y0X, {
         transitionState: t,
         size: s.CgR.SMALL,
         "aria-labelledby": M,
-        className: R.modalRoot,
+        className: O.modalRoot,
         parentComponent: "AddMembersModal",
         children: [
             (0, r.jsxs)(s.xBx, {
                 separator: !1,
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.CENTER,
-                className: R.header,
+                className: O.header,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         id: M,
                         variant: "heading-xl/semibold",
-                        children: O.intl.string(O.t.dMJ3Y2),
+                        children: R.intl.string(R.t.dMJ3Y2),
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        className: R.headerSubtitle,
+                        className: O.headerSubtitle,
                         children: [
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(L, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: R.headerSubtitleIcon,
+                                className: O.headerSubtitleIcon,
                             }),
-                            S.name,
+                            E.name,
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)(s.hzk, {
-                children: (0, r.jsx)(L, {
-                    guild: T,
-                    channel: S,
-                    permission: S.accessPermissions,
-                    pendingAdditions: j,
-                    setPendingAdditions: v,
-                }),
+            (0, r.jsx)(k, {
+                guild: w,
+                channel: E,
+                permission: E.accessPermissions,
+                pendingAdditions: j,
+                setPendingAdditions: v,
             }),
             (0, r.jsxs)(s.mzw, {
                 children: [
@@ -324,11 +322,11 @@ function Z(e) {
                             children: [
                                 (0, r.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
-                                    className: R.button,
+                                    className: O.button,
                                     children: (0, r.jsx)(s.zxk, {
                                         variant: "primary",
                                         size: "sm",
-                                        text: O.intl.string(O.t.i4jeWV),
+                                        text: R.intl.string(R.t.i4jeWV),
                                         onClick: N,
                                         loading: b,
                                     }),
@@ -338,7 +336,7 @@ function Z(e) {
                                     color: a.zx.Colors.TRANSPARENT,
                                     onClick: n,
                                     size: a.zx.Sizes.SMALL,
-                                    children: O.intl.string(O.t["ETE/oK"]),
+                                    children: R.intl.string(R.t["ETE/oK"]),
                                 }),
                             ],
                         }),
@@ -346,7 +344,7 @@ function Z(e) {
                         (0, r.jsx)(s.zxk, {
                             variant: "secondary",
                             size: "sm",
-                            text: O.intl.string(O.t.u46sxc),
+                            text: R.intl.string(R.t.u46sxc),
                             onClick: n,
                         }),
                 ],

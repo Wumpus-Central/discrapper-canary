@@ -632,6 +632,18 @@ let z = {
             let { getDiscordMemoryUsageElectronProcessTypeDetails: e } = this.getDiscordUtils();
             return null == e ? void 0 : e();
         },
+        enablePerfMemoryHooks(e) {
+            let { enablePerfMemoryHooks: t } = this.getDiscordUtils();
+            return null == t ? void 0 : t(e);
+        },
+        disablePerfMemoryHooks() {
+            let { disablePerfMemoryHooks: e } = this.getDiscordUtils();
+            return null == e ? void 0 : e();
+        },
+        getPerfAttributedMemory() {
+            let { getPerfAttributedMemory: e } = this.getDiscordUtils();
+            return null == e ? void 0 : e();
+        },
         showOpenDialog: (e) => I.fileManager.showOpenDialog({ properties: e }),
         flushStorageData: () =>
             h.isPlatformEmbedded

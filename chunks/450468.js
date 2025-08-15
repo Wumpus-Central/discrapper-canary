@@ -1,171 +1,141 @@
-n.d(t, { default: () => N }), n(388685), n(415506);
+n.d(t, { default: () => v }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
     a = n.n(s),
     l = n(442837),
-    o = n(780384),
-    c = n(755721),
-    d = n(481060),
-    u = n(355467),
-    m = n(179360),
-    p = n(881052),
-    g = n(128069),
-    h = n(100527),
-    f = n(906732),
-    b = n(600164),
-    x = n(431369),
-    _ = n(210887),
-    j = n(78839),
-    E = n(74538),
-    C = n(388032),
-    O = n(409150);
-async function v(e, t, n, i) {
-    let r = (0, E.MY)(e, t);
-    await (0, m.bG)(n),
-        await (0, u.Mg)(
+    o = n(82659),
+    c = n(481060),
+    d = n(355467),
+    u = n(179360),
+    m = n(881052),
+    p = n(128069),
+    g = n(100527),
+    h = n(906732),
+    f = n(431369),
+    b = n(78839),
+    x = n(74538),
+    _ = n(388032),
+    j = n(409150);
+async function E(e, t, n, i) {
+    let r = (0, x.MY)(e, t);
+    await (0, u.bG)(n),
+        await (0, d.Mg)(
             e,
             { items: r },
             {
                 amount: 0,
                 currency: e.currency,
             },
-            (0, E.UX)(r, e.currency, e.paymentSourceId),
+            (0, x.UX)(r, e.currency, e.paymentSourceId),
             i,
         );
 }
-function S(e) {
-    let { premiumSubscription: t, guildBoostSlotId: n, onNext: s, onClose: u } = e,
-        [m, h] = r.useState(!1),
-        j = (0, l.e7)([_.Z], () => _.Z.theme),
-        { analyticsLocations: S } = (0, f.ZP)(),
-        [T, N] = r.useState(null);
-    return (0, i.jsxs)(i.Fragment, {
+function C(e) {
+    let { errorMsg: t } = e;
+    return (0, i.jsxs)("div", {
+        className: j.body,
         children: [
-            (0, i.jsxs)(d.xBx, {
-                separator: !1,
-                children: [
-                    (0, i.jsx)(d.vwX, {
-                        tag: d.RB0.H4,
-                        children: C.intl.string(C.t.l52ih4),
-                    }),
-                    (0, i.jsx)(d.olH, { onClick: u }),
-                ],
-            }),
-            (0, i.jsxs)(d.hzk, {
-                className: O.body,
-                children: [
-                    null !== T &&
-                        (0, i.jsx)(d.kzN, {
-                            className: O.error,
-                            children: T,
-                        }),
-                    C.intl.string(C.t.DY2CXl),
-                ],
-            }),
-            (0, i.jsxs)(d.mzw, {
-                justify: b.Z.Justify.START,
-                children: [
-                    (0, i.jsx)(d.zxk, {
-                        variant: "primary",
-                        text: C.intl.string(C.t.etZP4O),
-                        onClick: async () => {
-                            try {
-                                h(!0), N(null);
-                                let e = (0, x.g)(t, 1);
-                                a()(
-                                    (0, E.uV)(e) <= (0, E.uV)(t.additionalPlans),
-                                    "Uncanceling should not increase the number of guild subscriptions",
-                                ),
-                                    await v(t, e, n, S),
-                                    s();
-                            } catch (t) {
-                                let e = t instanceof p.HF ? t : new p.HF(t, t.code);
-                                N(
-                                    C.intl.string(
-                                        e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t["5mlOCQ"],
-                                    ),
-                                ),
-                                    h(!1);
-                            }
-                        },
-                        loading: m,
-                    }),
-                    (0, i.jsx)(c.zx, {
-                        look: c.zx.Looks.LINK,
-                        color: (0, o.ap)(j) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
-                        onClick: u,
-                        disabled: m,
-                        children: C.intl.string(C.t.oEAioK),
-                    }),
-                ],
-            }),
-        ],
-    });
-}
-function T(e) {
-    let { onClose: t } = e;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsxs)(d.xBx, {
-                separator: !1,
-                children: [
-                    (0, i.jsx)(d.vwX, {
-                        tag: d.RB0.H4,
-                        children: C.intl.string(C.t.H9QUAA),
-                    }),
-                    (0, i.jsx)(d.olH, { onClick: t }),
-                ],
-            }),
-            (0, i.jsxs)(d.hzk, {
-                className: O.body,
-                children: [
-                    (0, i.jsx)("div", { className: O.uncancelImage }),
-                    (0, i.jsx)("div", { children: C.intl.string(C.t.G27uHR) }),
-                ],
-            }),
-            (0, i.jsx)(d.mzw, {
-                children: (0, i.jsx)(d.zxk, {
-                    variant: "primary",
-                    text: C.intl.string(C.t.BddRzc),
-                    onClick: t,
+            null !== t &&
+                (0, i.jsx)(c.kzN, {
+                    className: j.error,
+                    children: t,
                 }),
-            }),
+            (0, i.jsx)("div", { children: _.intl.string(_.t.DY2CXl) }),
         ],
     });
 }
-function N(e) {
-    let t,
-        { guildBoostSlotId: n, transitionState: s, onClose: a } = e,
-        { analyticsLocations: o } = (0, f.ZP)(h.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
+function O() {
+    return (0, i.jsxs)("div", {
+        className: j.body,
+        children: [
+            (0, i.jsx)("div", { className: j.uncancelImage }),
+            (0, i.jsx)("div", { children: _.intl.string(_.t.G27uHR) }),
+        ],
+    });
+}
+function v(e) {
+    let { guildBoostSlotId: t, transitionState: n, onClose: s } = e,
+        { analyticsLocations: u } = (0, h.ZP)(g.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     r.useEffect(() => {
-        j.Z.hasFetchedSubscriptions() || (0, u.jg)();
+        b.Z.hasFetchedSubscriptions() || (0, d.jg)();
     }, []);
-    let c = (0, l.e7)([j.Z], () => j.Z.getPremiumTypeSubscription()),
-        [m, p] = r.useState(1);
-    if (null == c) t = (0, i.jsx)(d.hzk, { children: (0, i.jsx)(d.$jN, {}) });
-    else
-        switch (m) {
-            case 1:
-                t = (0, i.jsx)(S, {
-                    premiumSubscription: c,
-                    guildBoostSlotId: n,
-                    onNext: () => p(2),
-                    onClose: a,
-                });
-                break;
-            case 2:
-                t = (0, i.jsx)(T, { onClose: a });
-                break;
-            default:
-                throw Error("Unexpected step: ".concat(m));
-        }
-    return (0, i.jsx)(f.Gt, {
-        value: o,
-        children: (0, i.jsx)(d.Y0X, {
-            transitionState: s,
-            parentComponent: "GuildBoostSlotUncancellationModal",
-            children: t,
+    let j = (0, l.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
+        [v, S] = r.useState(1),
+        [T, N] = r.useState(!1),
+        [I, y] = r.useState(null),
+        A = r.useCallback(async () => {
+            if (null != j)
+                try {
+                    N(!0), y(null);
+                    let e = (0, f.g)(j, 1);
+                    a()(
+                        (0, x.uV)(e) <= (0, x.uV)(j.additionalPlans),
+                        "Uncanceling should not increase the number of guild subscriptions",
+                    ),
+                        await E(j, e, t, u),
+                        S(2);
+                } catch (t) {
+                    let e = t instanceof m.HF ? t : new m.HF(t, t.code);
+                    y(_.intl.string(e.code === p.SM.BILLING_PAUSE_INVALID_UPDATE ? _.t.dq4vq6 : _.t["5mlOCQ"])), N(!1);
+                }
+        }, [j, t, u]);
+    return (0, i.jsx)(h.Gt, {
+        value: u,
+        children: (0, i.jsx)(o.Modal, {
+            transitionState: n,
+            onClose: async () => await s(),
+            size: "sm",
+            title: (() => {
+                switch (v) {
+                    case 1:
+                        return _.intl.string(_.t.l52ih4);
+                    case 2:
+                        return _.intl.string(_.t.H9QUAA);
+                    default:
+                        return "";
+                }
+            })(),
+            actions: (() => {
+                switch (v) {
+                    case 1:
+                        return [
+                            {
+                                variant: "secondary",
+                                text: _.intl.string(_.t.oEAioK),
+                                disabled: T,
+                                onClick: s,
+                            },
+                            {
+                                variant: "primary",
+                                text: _.intl.string(_.t.etZP4O),
+                                loading: T,
+                                onClick: A,
+                            },
+                        ];
+                    case 2:
+                        return [
+                            {
+                                variant: "primary",
+                                text: _.intl.string(_.t.BddRzc),
+                                onClick: s,
+                            },
+                        ];
+                    default:
+                        return [];
+                }
+            })(),
+            children: (() => {
+                if (null == j) return (0, i.jsx)(c.$jN, {});
+                switch (v) {
+                    case 1:
+                        return (0, i.jsx)(C, { errorMsg: I });
+                    case 2:
+                        return (0, i.jsx)(O, {});
+                    default:
+                        throw Error("Unexpected step: ".concat(v));
+                }
+            })(),
         }),
     });
 }
