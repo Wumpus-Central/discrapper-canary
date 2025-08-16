@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -22,120 +22,121 @@ var r = n(951288),
     _ = n(544989),
     I = n(228168),
     P = n(981631),
-    E = n(388032),
-    T = n(673517),
-    Z = n(54966),
-    N = n(602727);
-function w(e) {
+    E = n(671955),
+    T = n(388032),
+    Z = n(673517),
+    N = n(54966),
+    w = n(602727);
+function S(e) {
     let {
             user: t,
             guildId: n,
-            channelId: w,
-            messageId: S,
-            roleId: A,
-            sessionId: C,
-            transitionState: D,
-            openedAt: L,
-            onClose: R,
-            sourceAnalyticsLocations: G = [],
+            channelId: S,
+            messageId: A,
+            roleId: C,
+            sessionId: D,
+            transitionState: L,
+            openedAt: R,
+            onClose: G,
+            sourceAnalyticsLocations: k = [],
         } = e,
-        k = n === P.ME ? void 0 : n,
-        B = (0, p.ZP)(t.id, k),
-        M = u.ZP.getName(k, w, t),
-        U = (0, s.Dt)(),
-        { analyticsLocations: F } = (0, c.ZP)([...G, a.Z.USER_PROFILE_MODAL]),
-        V = (0, f.ZB)({
+        B = n === P.ME ? void 0 : n,
+        M = (0, p.ZP)(t.id, B),
+        U = u.ZP.getName(B, S, t),
+        F = (0, s.Dt)(),
+        { analyticsLocations: V } = (0, c.ZP)([...k, a.Z.USER_PROFILE_MODAL]),
+        W = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
-            sourceSessionId: C,
-            guildId: k,
-            channelId: w,
-            messageId: S,
-            roleId: A,
+            sourceSessionId: D,
+            guildId: B,
+            channelId: S,
+            messageId: A,
+            roleId: C,
         }),
         Y = i.useRef(null),
-        W = (0, o.Z)(Y);
+        z = (0, o.Z)(Y);
     return (0, r.jsx)(c.Gt, {
-        value: F,
+        value: V,
         children: (0, r.jsx)(f.Mt, {
-            value: V,
-            openedAt: L,
-            fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
-            fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
-            isLoaded: null == B ? void 0 : B.isLoaded,
+            value: W,
+            openedAt: R,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsxs)(l.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: D,
-                className: T.root,
+                transitionState: L,
+                className: Z.root,
                 hideShadow: !0,
-                "aria-labelledby": U,
+                "aria-labelledby": F,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
                     (0, r.jsx)(l.y5t, {
                         component: (0, r.jsx)(l.nn4, {
                             children: (0, r.jsx)(l.H, {
-                                id: U,
-                                children: E.intl.format(E.t.KRe1Fh, { name: M }),
+                                id: F,
+                                children: T.intl.format(T.t.KRe1Fh, { name: U }),
                             }),
                         }),
                         children: (0, r.jsxs)(h.Z, {
                             user: t,
-                            displayProfile: B,
-                            themeType: I.lY.MODAL,
-                            ref: (null == B ? void 0 : B.profileEffectId) != null ? Y : void 0,
+                            displayProfile: M,
+                            themeType: E.l.MODAL,
+                            ref: (null == M ? void 0 : M.profileEffectId) != null ? Y : void 0,
                             children: [
                                 (0, r.jsx)(_.Z, { children: (0, r.jsx)(v.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
                                         (0, r.jsx)(b.Z, {
                                             user: t,
-                                            displayProfile: B,
-                                            themeType: I.lY.MODAL,
+                                            displayProfile: M,
+                                            themeType: E.l.MODAL,
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: T.headerInner,
+                                            className: Z.headerInner,
                                             children: (0, r.jsx)(m.Z, {
                                                 user: t,
-                                                displayProfile: B,
-                                                guildId: k,
-                                                channelId: w,
-                                                themeType: I.lY.MODAL,
+                                                displayProfile: M,
+                                                guildId: B,
+                                                channelId: S,
+                                                themeType: E.l.MODAL,
                                             }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.body,
+                                    className: Z.body,
                                     children: [
                                         (0, r.jsx)(x.Z, {
-                                            className: T.username,
+                                            className: Z.username,
                                             user: t,
-                                            nickname: M,
-                                            pronouns: null == B ? void 0 : B.pronouns,
+                                            nickname: U,
+                                            pronouns: null == M ? void 0 : M.pronouns,
                                             nicknameVariant: "heading-xl/bold",
                                             tags: (0, r.jsx)(g.Z, {
-                                                displayProfile: B,
-                                                themeType: I.lY.MODAL,
-                                                onClose: R,
+                                                displayProfile: M,
+                                                themeType: E.l.MODAL,
+                                                onClose: G,
                                             }),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: N.container,
+                                            className: w.container,
                                             children: [
                                                 (0, r.jsx)(l.njP, {
-                                                    className: N.tabBar,
+                                                    className: w.tabBar,
                                                     type: "top",
                                                     selectedItem: I.oh.BOT_INFO,
                                                     onItemSelect: P.dG4,
                                                     children: (0, r.jsx)(
                                                         l.njP.Item,
                                                         {
-                                                            className: N.tabBarItem,
+                                                            className: w.tabBarItem,
                                                             id: I.oh.BOT_INFO,
-                                                            "aria-label": E.intl.string(E.t.jGoPJS),
+                                                            "aria-label": T.intl.string(T.t.jGoPJS),
                                                             children: (0, r.jsx)(l.Text, {
                                                                 variant: "text-sm/normal",
-                                                                children: E.intl.string(E.t.jGoPJS),
+                                                                children: T.intl.string(T.t.jGoPJS),
                                                             }),
                                                         },
                                                         I.oh.BOT_INFO,
@@ -143,18 +144,18 @@ function w(e) {
                                                 }),
                                                 (0, r.jsxs)(l.zJl, {
                                                     fade: !0,
-                                                    className: Z.scroller,
+                                                    className: N.scroller,
                                                     children: [
                                                         (0, r.jsx)(j.Z, {
                                                             userId: t.id,
-                                                            userBio: null == B ? void 0 : B.bio,
+                                                            userBio: null == M ? void 0 : M.bio,
                                                             setLineClamp: !1,
                                                         }),
                                                         (0, r.jsx)(O.Z, {
-                                                            heading: E.intl.string(E.t["A//N4u"]),
+                                                            heading: T.intl.string(T.t["A//N4u"]),
                                                             children: (0, r.jsx)(y.Z, {
                                                                 userId: t.id,
-                                                                guildId: k,
+                                                                guildId: B,
                                                                 tooltipDelay: I.vB,
                                                             }),
                                                         }),
@@ -167,10 +168,10 @@ function w(e) {
                             ],
                         }),
                     }),
-                    (null == B ? void 0 : B.profileEffectId) != null &&
+                    (null == M ? void 0 : M.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
-                            profileEffectId: null == B ? void 0 : B.profileEffectId,
-                            isHovering: W,
+                            profileEffectId: null == M ? void 0 : M.profileEffectId,
+                            isHovering: z,
                         }),
                 ],
             }),

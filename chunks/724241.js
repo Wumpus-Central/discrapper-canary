@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(271383),
     u = n(246946),
     d = n(654904),
-    f = n(228168),
+    f = n(671955),
     _ = n(116649);
 function p(e) {
     var t;
@@ -59,7 +59,7 @@ function p(e) {
                 isTryItOut: T,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,
-                    themeType: f.lY.POPOUT,
+                    themeType: f.l.POPOUT,
                     pendingLegacyUsernameDisabled: O,
                     pendingBadges: v,
                     shouldOpenBadgeTooltip: A,

@@ -6,7 +6,7 @@ var i = n(392711),
     o = n(111028),
     s = n(5192),
     l = n(652853),
-    c = n(228168),
+    c = n(671955),
     u = n(16535);
 function d(e, t, n) {
     return (
@@ -206,7 +206,7 @@ let h = 4,
 function y(e) {
     let { users: t, channel: n } = e,
         { themeType: d } = (0, l.z)(),
-        _ = d === c.lY.MODAL_V2 ? b : E,
+        _ = d === c.l.MODAL_V2 ? b : E,
         y = t.length > h,
         O = t.length - h + 1,
         v = O >= 10 ? g : m;

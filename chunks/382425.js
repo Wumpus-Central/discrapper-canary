@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -37,226 +37,227 @@ var r = n(951288),
     U = n(386019),
     G = n(228168),
     B = n(981631),
-    V = n(388032),
-    F = n(704543),
-    Z = n(936524),
-    H = n(924482),
-    Y = n(774797);
-function W(e) {
-    let { user: t, currentUser: n, stream: a, className: W, onClose: K, profileGuildId: z } = e,
-        q = i.useRef(null),
-        { themeType: X, theme: Q } = (0, w.z)(),
-        { interactionSource: J, interactionSourceId: $ } = (0, C.Xo)(),
-        ee = (0, s.e7)([v.Z], () => v.Z.getGuild(null == a ? void 0 : a.guildId)),
-        et = (0, s.e7)([O.Z], () => O.Z.getChannel(null == a ? void 0 : a.channelId)),
-        en = (0, s.Wu)([S.ZP], () =>
-            null != et
-                ? S.ZP.getVoiceStatesForChannel(et).map((e) => {
+    V = n(671955),
+    F = n(388032),
+    Z = n(704543),
+    H = n(936524),
+    Y = n(924482),
+    W = n(774797);
+function K(e) {
+    let { user: t, currentUser: n, stream: a, className: K, onClose: z, profileGuildId: q } = e,
+        X = i.useRef(null),
+        { themeType: Q, theme: J } = (0, w.z)(),
+        { interactionSource: $, interactionSourceId: ee } = (0, C.Xo)(),
+        et = (0, s.e7)([v.Z], () => v.Z.getGuild(null == a ? void 0 : a.guildId)),
+        en = (0, s.e7)([O.Z], () => O.Z.getChannel(null == a ? void 0 : a.channelId)),
+        er = (0, s.Wu)([S.ZP], () =>
+            null != en
+                ? S.ZP.getVoiceStatesForChannel(en).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
                 : [],
         ),
-        er = (0, s.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
-        { analyticsLocations: ei } = (0, m.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ea = (0, A.Z)({
+        ei = (0, s.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: ea } = (0, m.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        eo = (0, A.Z)({
             display: "live",
-            voiceChannelId: null == et ? void 0 : et.id,
+            voiceChannelId: null == en ? void 0 : en.id,
             user: t,
             stream: a,
-            analyticsLocations: ei,
+            analyticsLocations: ea,
         }),
-        eo = (0, N.Z)({
+        es = (0, N.Z)({
             userId: t.id,
-            onAction: ea,
+            onAction: eo,
         }),
-        [es, el] = (0, y.wq)(et),
-        ec = (0, p.Kt)() && (0, p.zd)(null == et ? void 0 : et.id),
-        { previewUrl: eu, isLoading: ed } = (0, b.Z)(a.guildId, a.channelId, a.ownerId),
-        ef = (0, s.e7)([I.Z], () => null != et && !ec && I.Z.canBasicChannel(B.S7T.CONNECT, et)),
-        e_ = (0, d.Z)(ed ? null : eu),
-        ep = ed || null == eu ? e_ : eu;
-    if (null == ee || null == et || !1 === a.discoverable || null === X) return null;
-    let eh = () => {
+        [el, ec] = (0, y.wq)(en),
+        eu = (0, p.Kt)() && (0, p.zd)(null == en ? void 0 : en.id),
+        { previewUrl: ed, isLoading: ef } = (0, b.Z)(a.guildId, a.channelId, a.ownerId),
+        e_ = (0, s.e7)([I.Z], () => null != en && !eu && I.Z.canBasicChannel(B.S7T.CONNECT, en)),
+        ep = (0, d.Z)(ef ? null : ed),
+        eh = ef || null == ed ? ep : ed;
+    if (null == et || null == en || !1 === a.discoverable || null === Q) return null;
+    let em = () => {
             let e = (e) => {
                 e.stopPropagation(),
-                    es &&
-                        (ea({ action: "PRESS_IMAGE" }),
+                    el &&
+                        (eo({ action: "PRESS_IMAGE" }),
                         c.default.selectVoiceChannel(a.channelId),
                         (0, u.iV)(a),
-                        null == K || K());
+                        null == z || z());
             };
-            return null == ep && ed
+            return null == eh && ef
                 ? (0, r.jsx)("div", {
-                      className: Z.preview,
+                      className: H.preview,
                       children: (0, r.jsx)(l.$jN, {}),
                   })
-                : null == ep || ec
+                : null == eh || eu
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(Z.preview, Z.overlay, es ? Z.clickable : Z.disabled),
+                        className: o()(H.preview, H.overlay, el ? H.clickable : H.disabled),
                         onClick: e,
-                        "aria-label": (0, y.gR)(el),
-                        "aria-disabled": !es,
+                        "aria-label": (0, y.gR)(ec),
+                        "aria-disabled": !el,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: Q === B.BRd.LIGHT ? Y : H,
+                                src: J === B.BRd.LIGHT ? W : Y,
                             }),
-                            X !== G.lY.MODAL &&
-                                X !== G.lY.MODAL_V2 &&
+                            Q !== V.l.MODAL &&
+                                Q !== V.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: Z.overlayText,
+                                            className: H.overlayText,
                                             variant: "text-sm/medium",
                                             color: "always-white",
-                                            children: (0, y.P9)(el),
+                                            children: (0, y.P9)(ec),
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: "text-sm/medium",
-                                            children: ef ? V.intl.string(V.t.uQZTBQ) : V.intl.string(V.t.pgUTZG),
+                                            children: e_ ? F.intl.string(F.t.uQZTBQ) : F.intl.string(F.t.pgUTZG),
                                         }),
                                     ],
                                 }),
                         ],
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(Z.preview, Z.overlay, es ? Z.clickable : Z.disabled),
+                        className: o()(H.preview, H.overlay, el ? H.clickable : H.disabled),
                         onClick: e,
-                        "aria-label": (0, y.gR)(el),
-                        "aria-disabled": !es,
+                        "aria-label": (0, y.gR)(ec),
+                        "aria-disabled": !el,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: ep,
-                                className: Z.image,
+                                src: eh,
+                                className: H.image,
                             }),
-                            X !== G.lY.MODAL &&
-                                X !== G.lY.MODAL_V2 &&
+                            Q !== V.l.MODAL &&
+                                Q !== V.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: Z.overlayText,
+                                            className: H.overlayText,
                                             variant: "text-sm/medium",
                                             color: "always-white",
-                                            children: (0, y.P9)(el),
+                                            children: (0, y.P9)(ec),
                                         }),
                                         (0, r.jsx)(l.gw7, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: Z.clyde,
+                                            className: H.clyde,
                                         }),
                                     ],
                                 }),
                         ],
                     });
         },
-        em = () =>
-            X !== G.lY.MODAL && X !== G.lY.MODAL_V2
+        eg = () =>
+            Q !== V.l.MODAL && Q !== V.l.MODAL_V2
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: F.details,
+                      className: Z.details,
                       children: [
                           (0, r.jsx)(M.Z, {
-                              channel: et,
-                              guild: ee,
-                              onAction: ea,
-                              onClose: K,
+                              channel: en,
+                              guild: et,
+                              onAction: eo,
+                              onClose: z,
                           }),
                           (0, r.jsx)(E.Z, {
-                              users: en,
-                              guildId: ee.id,
-                              channelId: et.id,
+                              users: er,
+                              guildId: et.id,
+                              channelId: en.id,
                               maxUsers: k.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
-                                      null == ea || ea({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                      null == eo || eo({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: "text-muted",
-                              "aria-label": V.intl.string(V.t.jNqDh4),
+                              "aria-label": F.intl.string(F.t.jNqDh4),
                           }),
-                          X === G.lY.MODAL_V2 && eE(),
+                          Q === V.l.MODAL_V2 && eb(),
                       ],
                   }),
-        eg = () =>
-            X === G.lY.MODAL || X === G.lY.MODAL_V2
+        eE = () =>
+            Q === V.l.MODAL || Q === V.l.MODAL_V2
                 ? null
                 : (0, r.jsx)(k.Z, {
                       user: t,
-                      guild: ee,
-                      channel: et,
-                      onAction: ea,
-                      onClose: K,
+                      guild: et,
+                      channel: en,
+                      onAction: eo,
+                      onClose: z,
                   }),
-        eE = () =>
+        eb = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: F.actions,
+                      className: Z.actions,
                       children: (0, r.jsx)(j.Z, {
-                          channel: et,
-                          onAction: ea,
-                          onClose: K,
+                          channel: en,
+                          onAction: eo,
+                          onClose: z,
                       }),
                   }),
-        eb = eu,
-        ey = J === G.n_.ACTIVITY && $ === eb,
-        eO = null != er ? V.intl.formatToPlainString(V.t["4CQq9f"], { name: er.name }) : V.intl.string(V.t["Jpkr/v"]);
+        ey = ed,
+        eO = $ === G.n_.ACTIVITY && ee === ey,
+        ev = null != ei ? F.intl.formatToPlainString(F.t["4CQq9f"], { name: ei.name }) : F.intl.string(F.t["Jpkr/v"]);
     return (0, r.jsx)(m.Gt, {
-        value: ei,
+        value: ea,
         children: (0, r.jsx)(D.Z, {
-            targetElementRef: q,
+            targetElementRef: X,
             sourceType: G.n_.ACTIVITY,
             user: t,
             children: (0, r.jsx)(R.Z, {
                 user: t,
-                guildId: z,
-                themeType: X,
-                sourceId: eb,
-                sourceDetails: eO,
+                guildId: q,
+                themeType: Q,
+                sourceId: ey,
+                sourceDetails: ev,
                 sourceType: G.n_.ACTIVITY,
-                onAction: ea,
+                onAction: eo,
                 children: () =>
                     (0, r.jsx)(P.Z, {
-                        ref: q,
+                        ref: X,
                         user: t,
-                        className: F.toolbarContainer,
-                        interactionSourceId: eb,
+                        className: Z.toolbarContainer,
+                        interactionSourceId: ey,
                         sourceType: G.n_.ACTIVITY,
-                        onAction: ea,
-                        onShowToolbar: () => ea({ action: "HOVER_ACTIVITY_CARD" }),
+                        onAction: eo,
+                        onShowToolbar: () => eo({ action: "HOVER_ACTIVITY_CARD" }),
                         renderMoreButtonPopout: (e) =>
                             (0, r.jsx)(U.Z, {
                                 display: "live",
                                 user: t,
-                                onClose: K,
+                                onClose: z,
                                 children: e,
                             }),
                         children: (0, r.jsxs)(L.Z, {
-                            ref: eo,
-                            className: o()(W, { [F.hoisted]: ey }),
-                            onAction: ea,
-                            onClose: K,
-                            "aria-label": eO,
+                            ref: es,
+                            className: o()(K, { [Z.hoisted]: eO }),
+                            onAction: eo,
+                            onClose: z,
+                            "aria-label": ev,
                             children: [
                                 (0, r.jsx)(x.Z, {
-                                    text: eO,
+                                    text: ev,
                                     tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: F.body,
+                                    className: Z.body,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: F.content,
-                                            children: [eh(), em(), X === G.lY.MODAL && eE()],
+                                            className: Z.content,
+                                            children: [em(), eg(), Q === V.l.MODAL && eb()],
                                         }),
-                                        eg(),
+                                        eE(),
                                     ],
                                 }),
-                                X !== G.lY.MODAL && X !== G.lY.MODAL_V2 && eE(),
+                                Q !== V.l.MODAL && Q !== V.l.MODAL_V2 && eb(),
                             ],
                         }),
                     }),

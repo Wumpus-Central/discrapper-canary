@@ -16,7 +16,7 @@ var r = n(951288),
     b = n(502762),
     y = n(848780),
     _ = n(907179),
-    C = n(228168),
+    C = n(671955),
     x = n(388032),
     v = n(491010),
     j = n(268293);
@@ -68,7 +68,7 @@ function E(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: C.lY.SIDEBAR,
+                themeType: C.l.SIDEBAR,
                 themeOverride: P,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)("div", {

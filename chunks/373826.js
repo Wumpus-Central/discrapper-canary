@@ -8,7 +8,7 @@ n(647438);
 var i = n(481060),
     a = n(111028),
     o = n(652853),
-    s = n(228168),
+    s = n(671955),
     l = n(704543);
 function c(e, t, n) {
     return (
@@ -90,7 +90,7 @@ function h(e) {
         h = "string" == typeof t ? t.trim() : t;
     if (null == h || "" === h) return null;
     let m = () =>
-        p === s.lY.MODAL || p === s.lY.MODAL_V2
+        p === s.l.MODAL || p === s.l.MODAL_V2
             ? (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: h }))
             : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(a.Z, { children: h }) }));
     return null != n

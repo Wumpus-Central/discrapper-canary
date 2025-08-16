@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -6,8 +6,9 @@ var i = n(481060),
     o = n(497805),
     s = n(511341),
     l = n(215105),
-    c = n(228168);
-function u(e, t, n) {
+    c = n(228168),
+    u = n(671955);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +32,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +49,22 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +72,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,7 +81,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function g(e) {
     let { interactionType: t, interactionSource: n, themeType: r } = e;
     return t === c.P.REACT
         ? {
@@ -89,7 +90,7 @@ function m(e) {
               animationPosition: "right",
               spacing: 8,
           }
-        : r === c.lY.MODAL || r === c.lY.MODAL_V2 || n === c.n_.ACTIVITY
+        : r === u.l.MODAL || r === u.l.MODAL_V2 || n === c.n_.ACTIVITY
           ? {
                 position: "bottom",
                 align: "center",
@@ -103,57 +104,57 @@ function m(e) {
                 spacing: 6,
             };
 }
-function g(e) {
-    var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
-        E = p(e, ["user", "guildId", "channelId", "themeType", "onClose", "children"]);
+function E(e) {
+    var { user: t, guildId: n, channelId: d, themeType: _, onClose: m, children: E } = e,
+        b = h(e, ["user", "guildId", "channelId", "themeType", "onClose", "children"]);
     let {
-            interactionType: b,
-            interactionSource: y,
-            resetInteraction: O,
-            interactionSourceId: v,
-            interactionPopoutTargetRef: I,
+            interactionType: y,
+            interactionSource: O,
+            resetInteraction: v,
+            interactionSourceId: I,
+            interactionPopoutTargetRef: T,
         } = (0, a.Xo)(),
-        T = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, o.z)(t.id, n) : void 0,
-        S = y === E.sourceType && b === c.P.REACT,
-        A = y === E.sourceType && b === c.P.REPLY,
-        N = (S || A) && v === E.sourceId;
+        S = [u.l.MODAL, u.l.MODAL_V2].includes(_) ? (0, o.z)(t.id, n) : void 0,
+        A = O === b.sourceType && y === c.P.REACT,
+        N = O === b.sourceType && y === c.P.REPLY,
+        C = (A || N) && I === b.sourceId;
     return (0, r.jsx)(
         i.yRy,
-        _(
-            d(
+        p(
+            f(
                 {
-                    targetElementRef: null != I ? I : void 0,
+                    targetElementRef: null != T ? T : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            a = S ? s.Z : l.Z;
+                            a = A ? s.Z : l.Z;
                         return (0, r.jsx)(
                             a,
-                            d(
+                            f(
                                 {
                                     user: t,
                                     guildId: n,
-                                    channelId: u,
-                                    themeType: f,
-                                    onClose: h,
-                                    modalKey: T,
+                                    channelId: d,
+                                    themeType: _,
+                                    onClose: m,
+                                    modalKey: S,
                                     setPopoutRef: i,
                                 },
-                                E,
+                                b,
                             ),
                         );
                     },
                     onRequestClose: () => {
-                        O(), null == h || h();
+                        v(), null == m || m();
                     },
-                    shouldShow: N,
+                    shouldShow: C,
                 },
-                m({
-                    interactionType: b,
-                    interactionSource: y,
-                    themeType: f,
+                g({
+                    interactionType: y,
+                    interactionSource: O,
+                    themeType: _,
                 }),
             ),
-            { children: g },
+            { children: E },
         ),
     );
 }

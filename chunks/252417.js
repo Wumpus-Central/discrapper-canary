@@ -12,8 +12,8 @@ var n = r(951288),
     p = r(545957),
     b = r(158776),
     f = r(652853),
-    j = r(228168),
-    v = r(981631),
+    j = r(981631),
+    v = r(671955),
     x = r(777267);
 let y = l.EFr.SIZE_40,
     O = (0, l.pxk)(y);
@@ -33,7 +33,7 @@ function h(e) {
         });
     return (0, n.jsxs)(l.P3F, {
         focusProps:
-            N === j.lY.MODAL_V2
+            N === v.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -101,7 +101,7 @@ function h(e) {
                 src: t.getAvatarURL(g, O),
                 "aria-label": t.username,
                 size: y,
-                status: S ? v.Skl.UNKNOWN : h,
+                status: S ? j.Skl.UNKNOWN : h,
                 statusBackdropColor: S ? void 0 : (0, l.QFD)(Z),
                 isMobile: C,
                 className: x.avatar,

@@ -11,7 +11,7 @@ var i = n(755721),
     l = n(591759),
     c = n(652853),
     u = n(475413),
-    d = n(228168),
+    d = n(671955),
     f = n(388032),
     _ = n(704543);
 async function p(e) {
@@ -34,7 +34,7 @@ function h(e) {
         { themeType: s } = (0, c.z)();
     if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1) return null;
     let l = (0, o.Z)(n);
-    return s === d.lY.MODAL_V2
+    return s === d.l.MODAL_V2
         ? (0, r.jsx)(r.Fragment, {
               children: n.buttons.map((e, o) =>
                   (0, r.jsx)(

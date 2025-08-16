@@ -16,7 +16,7 @@ var n = r(951288),
     h = r(81259),
     y = r(119848),
     O = r(801461),
-    b = r(228168),
+    b = r(671955),
     S = r(388032),
     _ = r(631936),
     x = r(733469);
@@ -143,12 +143,12 @@ let v = i.forwardRef(function (e, t) {
                             (0, n.jsx)(f.Z, {
                                 user: D,
                                 displayProfile: N,
-                                themeType: b.lY.SIDEBAR,
+                                themeType: b.l.SIDEBAR,
                             }),
                             (0, n.jsx)(g.Z, {
                                 user: D,
                                 displayProfile: N,
-                                themeType: b.lY.SIDEBAR,
+                                themeType: b.l.SIDEBAR,
                             }),
                             C === O.Wq.PREVIEW &&
                                 null != F &&

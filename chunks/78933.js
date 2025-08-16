@@ -51,7 +51,7 @@ var i = n(951288),
     Q = n(587243),
     $ = n(383832),
     ee = n(981631),
-    et = n(228168),
+    et = n(671955),
     en = n(388032),
     ei = n(54482),
     er = n(116649);
@@ -161,7 +161,7 @@ function ea(e) {
                         className: ei.themeContainer,
                         user: t,
                         displayProfile: ed,
-                        themeType: et.lY.POPOUT,
+                        themeType: et.l.POPOUT,
                         children: [
                             (0, i.jsxs)("div", {
                                 className: er.header,
@@ -169,12 +169,12 @@ function ea(e) {
                                     (0, i.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: ed,
-                                        themeType: et.lY.POPOUT,
+                                        themeType: et.l.POPOUT,
                                     }),
                                     (0, i.jsx)(N.Z, {
                                         user: t,
                                         displayProfile: ed,
-                                        themeType: et.lY.POPOUT,
+                                        themeType: et.l.POPOUT,
                                         onOpenProfile: ec ? void 0 : eM,
                                     }),
                                     eZ
@@ -188,7 +188,7 @@ function ea(e) {
                                                       ref: ey,
                                                       location: "UserProfileAccountPopout",
                                                       user: t,
-                                                      themeType: et.lY.POPOUT,
+                                                      themeType: et.l.POPOUT,
                                                       onCloseProfile: n,
                                                       prompt: ek,
                                                   }),
@@ -196,7 +196,7 @@ function ea(e) {
                                         : (0, i.jsx)(B.Z, {
                                               location: "UserProfileAccountPopout",
                                               user: t,
-                                              themeType: et.lY.POPOUT,
+                                              themeType: et.l.POPOUT,
                                               onCloseProfile: n,
                                               prompt: eT ? ek : null,
                                           }),
@@ -214,7 +214,7 @@ function ea(e) {
                                         pronouns: null == ed ? void 0 : ed.pronouns,
                                         tags: (0, i.jsx)(I.Z, {
                                             displayProfile: ed,
-                                            themeType: et.lY.POPOUT,
+                                            themeType: et.l.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != el ? (e) => e === el : void 0,
                                             shouldGlowTenureBadge: ew.current,

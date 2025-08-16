@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(502762),
     m = n(848780),
     g = n(907179),
-    E = n(228168),
+    E = n(671955),
     b = n(388032),
     y = n(637079),
     O = n(609440);
@@ -91,7 +91,7 @@ function T(e) {
                 children: (0, r.jsx)(h.Z, {
                     user: t,
                     displayProfile: M,
-                    themeType: E.lY.POPOUT,
+                    themeType: E.l.POPOUT,
                     children: (0, r.jsxs)("div", {
                         className: y.container,
                         children: [

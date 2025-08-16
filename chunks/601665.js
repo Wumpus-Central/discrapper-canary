@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(4517),
     I = n(895697),
     T = n(161572),
-    S = n(228168),
+    S = n(671955),
     A = n(388032),
     N = n(116649);
 function C(e, t, n) {
@@ -140,7 +140,7 @@ function P(e) {
                     (0, r.jsxs)(b.Z, {
                         user: t,
                         displayProfile: V,
-                        themeType: S.lY.POPOUT,
+                        themeType: S.l.POPOUT,
                         children: [
                             (0, r.jsx)(O.Z, {
                                 children: (0, r.jsx)(y.Z, {
@@ -157,20 +157,20 @@ function P(e) {
                                         user: t,
                                         displayProfile: V,
                                         guildId: C,
-                                        themeType: S.lY.POPOUT,
+                                        themeType: S.l.POPOUT,
                                     }),
                                     (0, r.jsx)(g.Z, {
                                         user: t,
                                         displayProfile: V,
                                         guildId: C,
                                         channelId: P,
-                                        themeType: S.lY.POPOUT,
+                                        themeType: S.l.POPOUT,
                                         onOpenProfile: k ? void 0 : Y,
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         location: "BotUserProfilePopout",
                                         user: t,
-                                        themeType: S.lY.POPOUT,
+                                        themeType: S.l.POPOUT,
                                         onCloseProfile: x,
                                         disableToolbar: !0,
                                     }),

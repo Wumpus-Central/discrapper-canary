@@ -10,7 +10,7 @@ var r = n(647438),
     d = n(168551),
     f = n(168631),
     _ = n(579132),
-    p = n(228168);
+    p = n(671955);
 function h(e, t, n) {
     return (
         t in e
@@ -41,10 +41,10 @@ function m(e) {
     return e;
 }
 let g = {
-        [p.lY.POPOUT]: "user-profile-popout",
-        [p.lY.MODAL]: "user-profile-modal",
-        [p.lY.MODAL_V2]: "user-profile-modal-v2",
-        [p.lY.SIDEBAR]: "user-profile-sidebar",
+        [p.l.POPOUT]: "user-profile-popout",
+        [p.l.MODAL]: "user-profile-modal",
+        [p.l.MODAL_V2]: "user-profile-modal-v2",
+        [p.l.SIDEBAR]: "user-profile-sidebar",
     },
     E = "custom-user-profile-theme",
     b = Object.freeze({

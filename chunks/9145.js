@@ -46,10 +46,10 @@ function G(e) {
     var t, n, l;
     let { maxHeight: G, connectedLocation: V, renderExternalHeader: z } = e,
         W = (0, T.Z)(),
-        Y = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
-        q = (0, Z.p)(V),
-        K = (0, o.e7)([_.Z], () => _.Z.getChannel(q)),
-        X = (0, P.gb)(Y),
+        q = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
+        Y = (0, Z.p)(V),
+        K = (0, o.e7)([_.Z], () => _.Z.getChannel(Y)),
+        X = (0, P.gb)(q),
         Q = (0, P.uF)(X),
         J = i.useCallback(() => {
             (0, E.tg)(D.Ez.PIP);

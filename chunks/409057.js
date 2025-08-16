@@ -33,9 +33,9 @@ var i = n(120356),
     L = n(262210),
     x = n(670451),
     M = n(881530),
-    k = n(228168),
-    j = n(981631),
-    U = n(701488),
+    k = n(981631),
+    j = n(701488),
+    U = n(671955),
     G = n(388032),
     B = n(704543);
 function V(e, t, n) {
@@ -135,11 +135,11 @@ function Y(e) {
         }),
         es = () => {
             let e = (0, s.Z)(i) ? "crunchyroll" : "default",
-                t = J === k.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
-            return i.type === j.IIU.HANG_STATUS
+                t = J === U.l.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
+            return i.type === k.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
                       hangStatusActivity: i,
-                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== k.lY.MODAL_V2 }),
+                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== U.l.MODAL_V2 }),
                   })
                 : null == eo
                   ? (0, r.jsx)(h.E, {
@@ -161,7 +161,7 @@ function Y(e) {
                     });
         },
         el = () =>
-            i.type === j.IIU.HANG_STATUS
+            i.type === k.IIU.HANG_STATUS
                 ? (0, r.jsx)(w.f, {
                       variant: "heading-sm/semibold",
                       text: (0, E.O8)(i),
@@ -204,7 +204,7 @@ function Y(e) {
                             id: q,
                         }),
         ec = () => {
-            if (i.type === j.IIU.HANG_STATUS) return null;
+            if (i.type === k.IIU.HANG_STATUS) return null;
             if ((0, u.Z)(i) && null != Z)
                 return (0, r.jsx)(w.Z, {
                     variant: "text-xs/normal",
@@ -238,7 +238,7 @@ function Y(e) {
         },
         eu = () => {
             var e, t, n, a, o, s, l, u;
-            if (i.type === j.IIU.WATCHING) return null;
+            if (i.type === k.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ed();
             if (
                 (0, O.dS)(i) &&
@@ -267,7 +267,7 @@ function Y(e) {
         },
         ed = () => {
             var e, t, n, a;
-            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === U.Zc
+            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === j.Zc
                 ? (0, r.jsxs)("div", {
                       className: B.gameState,
                       children: [
@@ -405,16 +405,16 @@ function Y(e) {
                                                 className: B.badges,
                                             }),
                                         ef(),
-                                        J === k.lY.MODAL_V2 && eh(),
+                                        J === U.l.MODAL_V2 && eh(),
                                     ],
                                 }),
-                                J === k.lY.MODAL && eh(),
+                                J === U.l.MODAL && eh(),
                             ],
                         }),
                         ep(),
                     ],
                 }),
-                J !== k.lY.MODAL && J !== k.lY.MODAL_V2 && eh(),
+                J !== U.l.MODAL && J !== U.l.MODAL_V2 && eh(),
             ],
         }),
     });

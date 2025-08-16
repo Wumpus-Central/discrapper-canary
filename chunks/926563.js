@@ -11,7 +11,7 @@ var a = n(481060),
     d = n(530),
     m = n(4517),
     f = n(5192),
-    p = n(228168),
+    p = n(671955),
     h = n(580792);
 function b(t) {
     let {
@@ -27,7 +27,7 @@ function b(t) {
     return (0, l.jsxs)(c.Z, {
         user: e,
         displayProfile: v,
-        themeType: p.lY.POPOUT,
+        themeType: p.l.POPOUT,
         className: h.profilePreviewContainer,
         children: [
             (0, l.jsxs)("header", {
@@ -35,14 +35,14 @@ function b(t) {
                     (0, l.jsx)(u.Z, {
                         user: e,
                         displayProfile: v,
-                        themeType: p.lY.POPOUT,
+                        themeType: p.l.POPOUT,
                     }),
                     (0, l.jsx)("div", {
                         inert: !0,
                         children: (0, l.jsx)(o.Z, {
                             user: e,
                             displayProfile: v,
-                            themeType: p.lY.POPOUT,
+                            themeType: p.l.POPOUT,
                             previewStatus: S,
                             className: h.avatar,
                         }),
@@ -50,7 +50,7 @@ function b(t) {
                     (0, l.jsx)(m.Z, {
                         location: "CustomStatusUserProfilePreview",
                         user: e,
-                        themeType: p.lY.POPOUT,
+                        themeType: p.l.POPOUT,
                         previewText: n,
                         previewEmoji: b,
                         placeholderText: g,
@@ -69,7 +69,7 @@ function b(t) {
                     pronouns: null == v ? void 0 : v.pronouns,
                     tags: (0, l.jsx)(s.Z, {
                         displayProfile: v,
-                        themeType: p.lY.POPOUT,
+                        themeType: p.l.POPOUT,
                     }),
                 }),
             }),

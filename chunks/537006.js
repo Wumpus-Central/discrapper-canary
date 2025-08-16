@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,30 +23,31 @@ var r = n(951288),
     T = n(981631),
     S = n(921944),
     A = n(474936),
-    N = n(388032),
-    C = n(131151);
-function R(e) {
+    N = n(671955),
+    C = n(388032),
+    R = n(131151);
+function P(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
-        "aria-label": N.intl.string(N.t.WAI6xs),
+        "aria-label": C.intl.string(C.t.WAI6xs),
         onClick: t,
-        className: C.upsellCloseIconWrapper,
+        className: R.upsellCloseIconWrapper,
         children: (0, r.jsx)(u.Dio, {
             size: "xs",
-            className: C.upsellCloseIcon,
+            className: R.upsellCloseIcon,
             color: "currentColor",
         }),
     });
 }
-function P(e) {
+function w(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
     return (0, r.jsxs)("div", {
-        className: C.upsellButtons,
+        className: R.upsellButtons,
         children: [
             (0, r.jsx)("div", {
-                className: C.upsellButtonWrapper,
+                className: R.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsx)(v.O1, {
                           action: I.yM.VIEW_PREMIUM_PERKS,
@@ -54,7 +55,7 @@ function P(e) {
                           size: "sm",
                           variant: "secondary",
                           icon: u.SrA,
-                          text: N.intl.string(N.t["0Q61kJ"]),
+                          text: C.intl.string(C.t["0Q61kJ"]),
                           onClick: () => {
                               (0, E.uL)(T.Z5c.APPLICATION_STORE), null == i || i();
                           },
@@ -63,10 +64,10 @@ function P(e) {
                           onClick: () => {
                               s({ action: I.yM.GET_PREMIUM }), null == i || i();
                           },
-                          textOptions: { textOverride: N.intl.string(N.t.x6rkDg) },
+                          textOptions: { textOverride: C.intl.string(C.t.x6rkDg) },
                           subscriptionTier: A.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: T.jXE.USER_PROFILE },
-                          className: C.matchManaColors,
+                          className: R.matchManaColors,
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                           look: c.zx.Looks.FILLED,
                           color: c.zx.Colors.PRIMARY,
@@ -75,12 +76,12 @@ function P(e) {
                       }),
             }),
             (0, r.jsx)("div", {
-                className: C.upsellButtonWrapper,
+                className: R.upsellButtonWrapper,
                 children: (0, r.jsx)(v.O1, {
                     action: I.yM.VISIT_SHOP,
                     fullWidth: !0,
                     icon: u.EOn,
-                    text: N.intl.string(N.t.b2d0Nz),
+                    text: C.intl.string(C.t.b2d0Nz),
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
@@ -96,11 +97,11 @@ function P(e) {
         ],
     });
 }
-function w(e) {
+function D(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, _.Dt)(),
         { themeType: d } = (0, O.z)(),
-        f = d === I.lY.MODAL,
+        f = d === N.l.MODAL,
         g = (0, h.Nj)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
         E = (0, s.e7)([b.Z], () => b.Z.getGuildId());
     if (
@@ -119,9 +120,9 @@ function w(e) {
     let y = (0, r.jsx)(u.X6q, {
             variant: "text-sm/normal",
             id: c,
-            children: N.intl.string(N.t.EIYbj4),
+            children: C.intl.string(C.t.EIYbj4),
         }),
-        v = (0, r.jsx)(R, {
+        v = (0, r.jsx)(P, {
             onClose: () => {
                 (0, h.Q3)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
                     dismissAction: S.L.USER_DISMISS,
@@ -130,37 +131,37 @@ function w(e) {
                 });
             },
         }),
-        T = (0, r.jsx)(P, {
+        I = (0, r.jsx)(w, {
             isPremiumUser: t,
             onInteraction: n,
             tiny: f,
         });
     return f
         ? (0, r.jsx)("aside", {
-              className: o()(C.upsellContainer, a),
+              className: o()(R.upsellContainer, a),
               "aria-labelledby": c,
               children: (0, r.jsxs)("div", {
-                  className: o()(C.upsellContent, C.upsellRowContent),
+                  className: o()(R.upsellContent, R.upsellRowContent),
                   children: [
                       y,
                       (0, r.jsxs)("div", {
-                          className: C.upsellRowRight,
-                          children: [(0, r.jsx)("div", { children: T }), (0, r.jsx)("div", { children: v })],
+                          className: R.upsellRowRight,
+                          children: [(0, r.jsx)("div", { children: I }), (0, r.jsx)("div", { children: v })],
                       }),
                   ],
               }),
           })
         : (0, r.jsx)("aside", {
-              className: o()(C.upsellContainer, a),
+              className: o()(R.upsellContainer, a),
               "aria-labelledby": c,
               children: (0, r.jsxs)("div", {
-                  className: o()(C.upsellContent, C.upsellDefaultContent),
+                  className: o()(R.upsellContent, R.upsellDefaultContent),
                   children: [
                       (0, r.jsxs)("div", {
-                          className: C.upsellHeader,
+                          className: R.upsellHeader,
                           children: [y, (0, r.jsx)("div", { children: v })],
                       }),
-                      T,
+                      I,
                   ],
               }),
           });

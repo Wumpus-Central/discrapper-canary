@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -103,7 +103,7 @@ function z(e, t) {
     return i;
 }
 let W = (0, o.animated)(u.eTT),
-    Y = i.memo(
+    q = i.memo(
         function (e) {
             var t, n;
             let {
@@ -126,9 +126,9 @@ let W = (0, o.animated)(u.eTT),
                     hideSummaries: w = !1,
                     jumpBarClassName: R,
                     typingGradient: k,
-                    isChatInputBottomAligned: Y,
+                    isChatInputBottomAligned: q,
                 } = e,
-                [q, K] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
+                [Y, K] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
                 X = i.useMemo(
                     () =>
                         x
@@ -160,7 +160,7 @@ let W = (0, o.animated)(u.eTT),
                     canLoadMore: null == T,
                     handleScrollToBottom: i.useCallback(() => K(!0), [K]),
                     handleScrollFromBottom: i.useCallback(() => K(!1), [K]),
-                    additionalMessagePadding: 48 * !!Y,
+                    additionalMessagePadding: 48 * !!q,
                 }),
                 J = (0, D.Z)({
                     scrollerRef: Q.ref,
@@ -235,8 +235,8 @@ let W = (0, o.animated)(u.eTT),
                         (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
                 { fadeStart: eu, fadeEnd: ed } = (0, u.q_F)({
-                    fadeStart: k && !q ? 96 : k ? 32 : 16,
-                    fadeEnd: k && !q ? 24 : 24 * !!k,
+                    fadeStart: k && !Y ? 96 : k ? 32 : 16,
+                    fadeEnd: k && !Y ? 24 : 24 * !!k,
                     config: {
                         tension: 150,
                         friction: 15,
@@ -256,7 +256,7 @@ let W = (0, o.animated)(u.eTT),
                                 V(
                                     G(
                                         {
-                                            style: Y
+                                            style: q
                                                 ? {
                                                       mask: (0, o.to)([eu, ed], (e, t) =>
                                                           "linear-gradient(180deg, black 0%, black calc(100% - "
@@ -333,7 +333,7 @@ let W = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    q = i.memo(function (e) {
+    Y = i.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,
@@ -406,7 +406,7 @@ let W = (0, o.animated)(u.eTT),
                 messages: F,
                 channelStream: H,
                 oldestUnreadMessageId: W,
-                editingMessageId: q,
+                editingMessageId: Y,
             } = (function (e) {
                 var t, n;
                 let r = (0, c.e7)([P.Z], () => P.Z.getMessages(e.id), [e.id]),
@@ -467,7 +467,7 @@ let W = (0, o.animated)(u.eTT),
             value: (0, w.Z)(L, h),
             children: (0, r.jsx)(k.v, {
                 children: (0, r.jsx)(
-                    Y,
+                    q,
                     V(G({}, d), {
                         messageGroupSpacing: A,
                         showNewMessagesBar: !0,
@@ -480,7 +480,7 @@ let W = (0, o.animated)(u.eTT),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != W,
                         canChat: O,
-                        editingMessageId: q,
+                        editingMessageId: Y,
                         fontSize: M,
                         keyboardModeEnabled: U,
                         showingQuarantineBanner: n,

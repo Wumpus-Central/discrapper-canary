@@ -18,8 +18,8 @@ var i = n(442837),
     h = n(483517),
     m = n(652853),
     g = n(788858),
-    E = n(228168),
-    b = n(981631),
+    E = n(981631),
+    b = n(671955),
     y = n(388032),
     O = n(704543);
 let v = 3;
@@ -29,8 +29,8 @@ function I(e) {
         N = (0, p.Z)(I),
         C = (0, s.ZP)(I),
         { canViewChannel: R, canConnect: P } = (0, i.cj)([_.Z], () => ({
-            canViewChannel: _.Z.can(b.Plq.VIEW_CHANNEL, I),
-            canConnect: I.isPrivate() || _.Z.can(b.Plq.CONNECT, I),
+            canViewChannel: _.Z.can(E.Plq.VIEW_CHANNEL, I),
+            canConnect: I.isPrivate() || _.Z.can(E.Plq.CONNECT, I),
         }));
     if (!R) return null;
     let w = () => {
@@ -74,7 +74,7 @@ function I(e) {
                 }),
             });
         },
-        L = A !== E.lY.MODAL && A !== E.lY.MODAL_V2 && A !== E.lY.SIDEBAR;
+        L = A !== b.l.MODAL && A !== b.l.MODAL_V2 && A !== b.l.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: O.voiceChannelDivider }),

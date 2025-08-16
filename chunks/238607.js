@@ -9,7 +9,7 @@ var i = n(755721),
     c = n(652853),
     u = n(475413),
     d = n(614716),
-    f = n(228168),
+    f = n(671955),
     _ = n(388032);
 function p(e, t, n) {
     return (
@@ -82,8 +82,8 @@ function E(e) {
         return (0, r.jsx)(u.tG, {
             icon: v,
             text: _.intl.string(_.t.RscU7O),
-            size: E === f.lY.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
-            fullWidth: E !== f.lY.MODAL_V2,
+            size: E === f.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
+            fullWidth: E !== f.l.MODAL_V2,
             themeColor: "secondary",
             onClick: (e) => {
                 e.stopPropagation(), null == p || p({ action: "PRESS_PLAY_BUTTON" }), b();
@@ -102,8 +102,8 @@ function E(e) {
                           text: S,
                           disabled: !N,
                           submitting: I,
-                          size: E === f.lY.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
-                          fullWidth: E !== f.lY.MODAL_V2,
+                          size: E === f.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
+                          fullWidth: E !== f.l.MODAL_V2,
                           themeColor: "secondary",
                           onClick: (e) => {
                               e.stopPropagation(), null == p || p({ action: "PRESS_JOIN_BUTTON" }), T();
@@ -121,8 +121,8 @@ function E(e) {
                           text: S,
                           disabled: !N,
                           submitting: I,
-                          size: E === f.lY.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
-                          fullWidth: E !== f.lY.MODAL_V2,
+                          size: E === f.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
+                          fullWidth: E !== f.l.MODAL_V2,
                           themeColor: "secondary",
                           onClick: (e) => {
                               e.stopPropagation(), null == p || p({ action: "PRESS_ASK_TO_JOIN_BUTTON" }), T();

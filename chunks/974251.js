@@ -82,7 +82,7 @@ function H(e, t) {
 }
 let G = i.memo(function (e) {
     var t, l;
-    let { className: G, channel: V, draftType: z, editorTextContent: W, setValue: Y, canOnlyUseTextCommands: q } = e,
+    let { className: G, channel: V, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
         K = (0, p.bp)(),
         X = i.useRef(null),
         Q = i.useRef(null),
@@ -148,7 +148,7 @@ let G = i.memo(function (e) {
             canStartThreads: eg || eb,
             useSlate: ey,
             hasClips: eu,
-            canUseApplicationCommands: !q,
+            canUseApplicationCommands: !Y,
             channel: V,
             activities: J,
             newClipsCount: ev,
@@ -209,7 +209,7 @@ let G = i.memo(function (e) {
                                 },
                                 draftType: z,
                                 editorTextContent: W,
-                                setValue: Y,
+                                setValue: q,
                                 openClips: em,
                             }),
                         );

@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(626135),
     m = n(652853),
     g = n(373826),
-    E = n(228168),
-    b = n(981631),
+    E = n(981631),
+    b = n(671955),
     y = n(388032),
     O = n(636235);
 function v(e) {
@@ -31,7 +31,7 @@ function v(e) {
         );
     i.useEffect(() => {
         null != N &&
-            h.default.track(b.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            h.default.track(E.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: I,
@@ -40,7 +40,7 @@ function v(e) {
     let C = (e) => {
         e.stopPropagation(),
             n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
-            v === E.lY.POPOUT && (null == a || a()),
+            v === b.l.POPOUT && (null == a || a()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I,

@@ -24,7 +24,7 @@ var r = n(951288),
     E = n(530),
     S = n(679332),
     P = n(544989),
-    I = n(228168),
+    I = n(671955),
     Z = n(388032),
     T = n(231688),
     N = n(892273);
@@ -91,7 +91,7 @@ function w(e) {
                 ref: U,
                 user: t,
                 displayProfile: R,
-                themeType: I.lY.SIDEBAR,
+                themeType: I.l.SIDEBAR,
                 themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
@@ -103,14 +103,14 @@ function w(e) {
                                     (0, r.jsx)(C.Z, {
                                         user: t,
                                         displayProfile: R,
-                                        themeType: I.lY.SIDEBAR,
+                                        themeType: I.l.SIDEBAR,
                                         animateOnHover: !B,
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: R,
                                         channelId: n.id,
-                                        themeType: I.lY.SIDEBAR,
+                                        themeType: I.l.SIDEBAR,
                                         onOpenProfile: w ? void 0 : F,
                                     }),
                                 ],
@@ -125,7 +125,7 @@ function w(e) {
                                         onOpenProfile: w ? void 0 : F,
                                         tags: (0, r.jsx)(_.Z, {
                                             displayProfile: R,
-                                            themeType: I.lY.SIDEBAR,
+                                            themeType: I.l.SIDEBAR,
                                         }),
                                     }),
                                     (0, r.jsxs)(O.Z.Overlay, {

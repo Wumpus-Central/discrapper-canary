@@ -36,7 +36,7 @@ var r = n(951288),
     j = n(4517),
     U = n(978395),
     G = n(161572),
-    B = n(228168),
+    B = n(671955),
     V = n(388032),
     F = n(116649);
 function Z(e, t, n) {
@@ -212,7 +212,7 @@ function z(e) {
                         (0, r.jsxs)(D.Z, {
                             user: t,
                             displayProfile: el,
-                            themeType: B.lY.POPOUT,
+                            themeType: B.l.POPOUT,
                             children: [
                                 null != eu.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
@@ -231,7 +231,7 @@ function z(e) {
                                         }),
                                         (0, r.jsx)(x.Z, {
                                             shouldShowTooltip: null === eu.interactionType,
-                                            themeType: B.lY.POPOUT,
+                                            themeType: B.l.POPOUT,
                                             user: t,
                                         }),
                                         !eE &&
@@ -251,7 +251,7 @@ function z(e) {
                                             user: t,
                                             displayProfile: el,
                                             guildId: Z,
-                                            themeType: B.lY.POPOUT,
+                                            themeType: B.l.POPOUT,
                                         }),
                                         (0, r.jsx)(w.Z, {
                                             userId: t.id,
@@ -264,7 +264,7 @@ function z(e) {
                                             displayProfile: el,
                                             guildId: Z,
                                             channelId: Y,
-                                            themeType: B.lY.POPOUT,
+                                            themeType: B.l.POPOUT,
                                             onOpenProfile: $ ? void 0 : eT,
                                         }),
                                         eO && eh
@@ -280,7 +280,7 @@ function z(e) {
                                                           user: t,
                                                           guildId: Z,
                                                           channelId: Y,
-                                                          themeType: B.lY.POPOUT,
+                                                          themeType: B.l.POPOUT,
                                                           onCloseProfile: Q,
                                                           prompt: eI,
                                                       }),
@@ -291,7 +291,7 @@ function z(e) {
                                                   user: t,
                                                   guildId: Z,
                                                   channelId: Y,
-                                                  themeType: B.lY.POPOUT,
+                                                  themeType: B.l.POPOUT,
                                                   onCloseProfile: Q,
                                                   prompt: ev ? eI : null,
                                               }),

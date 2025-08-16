@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(471253),
     z = n(922482),
     W = n(200498),
-    Y = n(146085),
-    q = n(88751),
+    q = n(146085),
+    Y = n(88751),
     K = n(427679),
     X = n(368442),
     Q = n(600518),
@@ -118,7 +118,7 @@ function ed(e) {
         { suppress: C } = (0, Z.Z)(t),
         x = L.default.getId(),
         [j] = (0, er.Z)(t),
-        O = q.ZP.isModerator(x, t.id),
+        O = Y.ZP.isModerator(x, t.id),
         S = (0, W.B)(t.id),
         P = f(g),
         { parentAnalyticsLocation: I } = (0, h.ZP)(),
@@ -261,11 +261,11 @@ let ef = i.memo(function (e) {
         G = j > 0,
         V = (O && !B) || (null != L && L.user.id !== (null == E ? void 0 : E.id)),
         z = (0, _.u)("AudioDeviceMenu", n, { entrypoint: el.A5.CARET }),
-        Y = i.useRef(null),
-        q = i.useRef(null);
+        q = i.useRef(null),
+        Y = i.useRef(null);
     if (null == E) return null;
     let K = (0, r.jsx)(c.yRy, {
-        targetElementRef: Y,
+        targetElementRef: q,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(w.Z, {
@@ -284,7 +284,7 @@ let ef = i.memo(function (e) {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, r.jsx)(D.C, {
-                ref: Y,
+                ref: q,
                 centerButton: !0,
                 hasPermission: v,
                 enabled: y,
@@ -306,7 +306,7 @@ let ef = i.memo(function (e) {
                       className: eo.buttonSection,
                       children: [
                           (0, r.jsx)(c.yRy, {
-                              targetElementRef: q,
+                              targetElementRef: Y,
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
                                   return (0, r.jsx)(w.Z, {
@@ -331,7 +331,7 @@ let ef = i.memo(function (e) {
                                   let { onClick: n } = e,
                                       { isShown: i } = t;
                                   return (0, r.jsx)(k.Z, {
-                                      ref: q,
+                                      ref: Y,
                                       centerButton: !0,
                                       onPopoutClick: n,
                                       selfMute: a,
@@ -388,7 +388,7 @@ let eg = i.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         i = (0, et.Z)(t.id),
         l = (0, W.B)(t.id),
-        a = (0, o.e7)([B.Z], () => B.Z.can(Y.yP, t), [t]),
+        a = (0, o.e7)([B.Z], () => B.Z.can(q.yP, t), [t]),
         s = (0, en.Z)(t.id),
         c = (0, o.e7)([f.Z], () => (null != t ? f.Z.getSelectedParticipant(t.id) : null)),
         u = !s && null == c;

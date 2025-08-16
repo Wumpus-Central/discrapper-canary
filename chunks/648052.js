@@ -5,12 +5,12 @@ var r = n(951288),
     o = n(485341),
     s = n(819325),
     l = n(184325),
-    c = n(228168);
+    c = n(671955);
 let u = {
-    [c.lY.POPOUT]: 12,
-    [c.lY.MODAL]: 26,
-    [c.lY.MODAL_V2]: 16,
-    [c.lY.SIDEBAR]: 13,
+    [c.l.POPOUT]: 12,
+    [c.l.MODAL]: 26,
+    [c.l.MODAL_V2]: 16,
+    [c.l.SIDEBAR]: 13,
 };
 function d(e) {
     let {

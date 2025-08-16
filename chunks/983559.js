@@ -25,7 +25,7 @@ var r = n(951288),
     S = n(4517),
     P = n(277117),
     I = n(52639),
-    Z = n(228168),
+    Z = n(671955),
     T = n(388032),
     N = n(231688);
 function A(e) {
@@ -98,7 +98,7 @@ function w(e) {
                     ref: U,
                     user: t,
                     displayProfile: w,
-                    themeType: Z.lY.SIDEBAR,
+                    themeType: Z.l.SIDEBAR,
                     themeOverride: M,
                     children: [
                         null != F.interactionType &&
@@ -112,7 +112,7 @@ function w(e) {
                                     children: [
                                         (0, r.jsx)(O.Z, {
                                             user: t,
-                                            themeType: Z.lY.SIDEBAR,
+                                            themeType: Z.l.SIDEBAR,
                                             shouldShowTooltip: null === F.interactionType,
                                         }),
                                         t.bot
@@ -129,7 +129,7 @@ function w(e) {
                                         (0, r.jsx)(_.Z, {
                                             user: t,
                                             displayProfile: w,
-                                            themeType: Z.lY.SIDEBAR,
+                                            themeType: Z.l.SIDEBAR,
                                             animateOnHover: !B,
                                             className: N.banner,
                                         }),
@@ -142,14 +142,14 @@ function w(e) {
                                             user: t,
                                             displayProfile: w,
                                             channelId: f.id,
-                                            themeType: Z.lY.SIDEBAR,
+                                            themeType: Z.l.SIDEBAR,
                                             onOpenProfile: T ? void 0 : G,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             location: "UserProfileSidebar",
                                             user: t,
                                             channelId: f.id,
-                                            themeType: Z.lY.SIDEBAR,
+                                            themeType: Z.l.SIDEBAR,
                                             disableToolbar: t.bot,
                                         }),
                                     ],

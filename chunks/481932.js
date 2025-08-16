@@ -7,8 +7,8 @@ var i = n(442837),
     s = n(699516),
     l = n(821706),
     c = n(562831),
-    u = n(228168),
-    d = n(981631);
+    u = n(981631),
+    d = n(671955);
 function f(e) {
     let { user: t, themeType: n, shouldShowTooltip: f = !1 } = e,
         { newestAnalyticsLocation: _ } = (0, a.ZP)(),
@@ -20,9 +20,9 @@ function f(e) {
             hasIncomingPendingGameFriends: E,
         } = (0, c.H)({ userId: t.id }),
         b = m.length > 0 || g || E;
-    if (null == t || t.bot || p || h === d.OGo.BLOCKED) return null;
-    if (h === d.OGo.NONE && b)
-        return n === u.lY.MODAL
+    if (null == t || t.bot || p || h === u.OGo.BLOCKED) return null;
+    if (h === u.OGo.NONE && b)
+        return n === d.l.MODAL
             ? null
             : (0, r.jsx)(l.k9, {
                   type: "banner",
@@ -34,10 +34,10 @@ function f(e) {
                   shouldShowTooltip: f,
               });
     switch (h) {
-        case d.OGo.FRIEND:
-        case d.OGo.PENDING_INCOMING:
-        case d.OGo.PENDING_OUTGOING:
-            if (n === u.lY.MODAL && h !== d.OGo.FRIEND) return null;
+        case u.OGo.FRIEND:
+        case u.OGo.PENDING_INCOMING:
+        case u.OGo.PENDING_OUTGOING:
+            if (n === d.l.MODAL && h !== u.OGo.FRIEND) return null;
             return (0, r.jsx)(l.g, {
                 type: "banner",
                 user: t,
@@ -46,7 +46,7 @@ function f(e) {
                 shouldShowTooltip: f,
             });
         default:
-            if (n === u.lY.MODAL) return null;
+            if (n === d.l.MODAL) return null;
             return (0, r.jsx)(l.Z7, {
                 type: "banner",
                 userId: t.id,

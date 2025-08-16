@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(724241),
     g = n(890876),
     E = n(981631),
-    b = n(228168),
+    b = n(671955),
     y = n(388032),
     O = n(448239);
 function v(e) {
@@ -71,7 +71,7 @@ function v(e) {
         J = (0, r.jsxs)(d.Z, {
             user: t,
             displayProfile: W,
-            themeType: b.lY.POPOUT,
+            themeType: b.l.POPOUT,
             pendingThemeColors: w,
             className: a()(O.container, k),
             forceShowPremium: i,
@@ -108,7 +108,7 @@ function v(e) {
                             (0, r.jsx)(f.Z, {
                                 location: "UserProfilePreview",
                                 user: t,
-                                themeType: b.lY.POPOUT,
+                                themeType: b.l.POPOUT,
                                 disableToolbar: U,
                             }),
                     ],

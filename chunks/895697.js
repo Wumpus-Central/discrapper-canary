@@ -22,7 +22,7 @@ var i = n(442837),
     v = n(420654),
     I = n(166584),
     T = n(915014),
-    S = n(228168),
+    S = n(671955),
     A = n(388032),
     N = n(57842),
     C = n(116649);
@@ -56,7 +56,7 @@ function R(e) {
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
-                    themeType: S.lY.POPOUT,
+                    themeType: S.l.POPOUT,
                     onClose: x,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {

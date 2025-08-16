@@ -31,8 +31,8 @@ var i = n(120356),
     w = n(668700),
     D = n(384298),
     L = n(670451),
-    x = n(228168),
-    M = n(981631),
+    x = n(981631),
+    M = n(671955),
     k = n(388032),
     j = n(704543),
     U = n(936524),
@@ -71,7 +71,7 @@ function V(e) {
         ),
         [ee, et] = (0, b.wq)(W),
         en = (0, _.Kt)() && (0, _.zd)(null == W ? void 0 : W.id),
-        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(M.S7T.CONNECT, W)),
+        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(x.S7T.CONNECT, W)),
         ei = (0, u.Z)($ ? null : J),
         ea = $ || null == J ? ei : J;
     if (null == Y || null == W || !1 === i.discoverable) return null;
@@ -98,10 +98,10 @@ function V(e) {
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: H === M.BRd.LIGHT ? B : G,
+                                src: H === x.BRd.LIGHT ? B : G,
                             }),
-                            Z !== x.lY.MODAL &&
-                                Z !== x.lY.MODAL_V2 &&
+                            Z !== M.l.MODAL &&
+                                Z !== M.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -129,8 +129,8 @@ function V(e) {
                                 src: ea,
                                 className: U.image,
                             }),
-                            Z !== x.lY.MODAL &&
-                                Z !== x.lY.MODAL_V2 &&
+                            Z !== M.l.MODAL &&
+                                Z !== M.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -150,7 +150,7 @@ function V(e) {
                     });
         },
         es = () =>
-            Z !== x.lY.MODAL && Z !== x.lY.MODAL_V2
+            Z !== M.l.MODAL && Z !== M.l.MODAL_V2
                 ? null
                 : (0, r.jsxs)("div", {
                       className: j.details,
@@ -175,11 +175,11 @@ function V(e) {
                               overflowCountColor: "text-muted",
                               "aria-label": k.intl.string(k.t.jNqDh4),
                           }),
-                          Z === x.lY.MODAL_V2 && ec(),
+                          Z === M.l.MODAL_V2 && ec(),
                       ],
                   }),
         el = () =>
-            Z === x.lY.MODAL || Z === x.lY.MODAL_V2
+            Z === M.l.MODAL || Z === M.l.MODAL_V2
                 ? null
                 : (0, r.jsx)(w.Z, {
                       user: t,
@@ -223,12 +223,12 @@ function V(e) {
                     children: [
                         (0, r.jsxs)("div", {
                             className: j.content,
-                            children: [eo(), es(), Z === x.lY.MODAL && ec()],
+                            children: [eo(), es(), Z === M.l.MODAL && ec()],
                         }),
                         el(),
                     ],
                 }),
-                Z !== x.lY.MODAL && Z !== x.lY.MODAL_V2 && ec(),
+                Z !== M.l.MODAL && Z !== M.l.MODAL_V2 && ec(),
             ],
         }),
     });

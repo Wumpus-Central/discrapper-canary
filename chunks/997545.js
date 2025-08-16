@@ -204,8 +204,11 @@ class L extends _.Z {
                             ),
                             t.getEncryptionModes((r) => {
                                 var i, a, c, u, d, f, _, p, h, g, E, b, y;
-                                this.logger.info("Encryption modes: ".concat(r)),
-                                    t.setTransportOptions(this.getConnectionTransportOptions()),
+                                this.logger.info("Encryption modes: ".concat(r));
+                                let O = A(T({}, this.getConnectionTransportOptions()), {
+                                    callMinBitRate: e.callMinBitrate,
+                                });
+                                t.setTransportOptions(O),
                                     t.setSelfMute(this.selfMute || this.context === v.Yn.STREAM),
                                     t.setSelfDeafen(this.selfDeaf),
                                     t.setOnSpeakingCallback(this.handleSpeakingNative),
@@ -250,8 +253,8 @@ class L extends _.Z {
                                         codecs: this.codecs,
                                     }),
                                     this.on(m.Sh.Stats, this.handleStats);
-                                let O = this.getUserOptions();
-                                for (let e of (O.forEach((e) => {
+                                let I = this.getUserOptions();
+                                for (let e of (I.forEach((e) => {
                                     var t, n;
                                     return this.logger.info(
                                         "Creating user: "
@@ -262,8 +265,8 @@ class L extends _.Z {
                                             ),
                                     );
                                 }),
-                                this.mergeUsers(O),
-                                this.emit(m.Sh.RemoteStreamsReady, O.length),
+                                this.mergeUsers(I),
+                                this.emit(m.Sh.RemoteStreamsReady, I.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                             });

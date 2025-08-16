@@ -41,8 +41,8 @@ class s {
     }
     trigger() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        o(this.triggerPoint, this.experiments, a({}, this.params, e)),
-            r.Z.trackCommonTriggerPointExposures(this.params.location);
+        r.Z.trackCommonTriggerPointExposures(this.params.location),
+            o(this.triggerPoint, this.experiments, a({}, this.params, e));
     }
     getExperiments() {
         return this.experiments;

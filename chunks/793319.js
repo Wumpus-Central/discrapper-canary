@@ -48,8 +48,8 @@ var r = n(951288),
     V = n(136995),
     z = n(402113),
     W = n(197016),
-    Y = n(386000),
-    q = n(331197),
+    q = n(386000),
+    Y = n(331197),
     K = n(698877),
     X = n(25827),
     Q = n(875527),
@@ -552,7 +552,7 @@ let eI = function (e) {
                                           children: (e, t) => {
                                               let { onClick: n } = e,
                                                   { isShown: i } = t;
-                                              return (0, r.jsx)(Y.Z, {
+                                              return (0, r.jsx)(q.Z, {
                                                   ref: $,
                                                   centerButton: !0,
                                                   onPopoutClick: L ? null : n,
@@ -622,7 +622,7 @@ let eI = function (e) {
                                               setWhichPopoutIsOpen: g,
                                           }),
                                       K &&
-                                          (0, r.jsx)(q.Z, {
+                                          (0, r.jsx)(Y.Z, {
                                               channel: n,
                                               themeable: !0,
                                               whichPopoutIsOpen: m,

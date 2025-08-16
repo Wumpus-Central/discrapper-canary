@@ -127,7 +127,7 @@ class b extends r.EventEmitter {
         let e = {};
         return (
             this.files.forEach((t) => {
-                e[t.id] = (0, u.S)(t.loaded, t.currentSize);
+                e[t.id] = (0, u.SB)(t.loaded, t.currentSize);
             }),
             e
         );
@@ -197,7 +197,7 @@ class b extends r.EventEmitter {
             }),
             p(this, "_handleProgress", (e, t, n) => {
                 let r = Date.now(),
-                    i = (0, u.S)(e, t),
+                    i = (0, u.SB)(e, t),
                     a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
                 if (null != n) {
                     var o;

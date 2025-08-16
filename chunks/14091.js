@@ -202,7 +202,7 @@ function z(e) {
     });
 }
 let W = [],
-    Y = i.memo(function (e) {
+    q = i.memo(function (e) {
         let {
                 searchContext: t,
                 search: n,
@@ -315,7 +315,7 @@ let W = [],
                 },
                 [H, L],
             ),
-            Y = i.useCallback(
+            q = i.useCallback(
                 (e) => {
                     e === v ||
                         n.isSearching ||
@@ -328,7 +328,7 @@ let W = [],
                 },
                 [y, n.isSearching, t, v, a],
             ),
-            q = i.useCallback(
+            Y = i.useCallback(
                 (e, r) => {
                     let i = g.Z.getChannel(e.channel_id),
                         l = null != i ? i.getGuildId() : null,
@@ -400,7 +400,7 @@ let W = [],
                 (0, r.jsx)(S.Z, {
                     searchContext: t,
                     searchMode: v,
-                    onSearchModeChange: Y,
+                    onSearchModeChange: q,
                     totalResults: n.totalResults,
                     isSearching: n.isSearching,
                     isIndexing: n.isHistoricalIndexing,
@@ -430,7 +430,7 @@ let W = [],
                             search: n,
                             searchContext: t,
                             renderEmbeds: l,
-                            onClick: q,
+                            onClick: Y,
                             onScrollTo: A,
                             onPageChange: K,
                             paginationTotalCount: H ? w : void 0,
@@ -450,7 +450,7 @@ let W = [],
             ],
         });
     });
-function q(e) {
+function Y(e) {
     let { searchContext: t } = e,
         n = (0, v.UX)({ location: "SearchResults" }),
         { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function (e) {
@@ -559,7 +559,7 @@ function q(e) {
         k = i.useDeferredValue(u);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(Y, {
+            (0, r.jsx)(q, {
                 searchContext: t,
                 search: R,
                 searchRequestAnalyticsId: k,
@@ -596,5 +596,5 @@ function K(e) {
             guildId: t,
             channelId: n,
         });
-    return null == i ? null : (0, r.jsx)(q, { searchContext: i });
+    return null == i ? null : (0, r.jsx)(Y, { searchContext: i });
 }

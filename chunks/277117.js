@@ -26,8 +26,8 @@ var i = n(657707),
     S = n(502762),
     P = n(530),
     I = n(827313),
-    Z = n(228168),
-    T = n(981631),
+    Z = n(981631),
+    T = n(671955),
     N = n(388032),
     A = n(892273);
 function w(e) {
@@ -54,7 +54,7 @@ function w(e) {
                 onOpenProfile: k,
                 tags: (0, r.jsx)(g.Z, {
                     displayProfile: w,
-                    themeType: Z.lY.SIDEBAR,
+                    themeType: T.l.SIDEBAR,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -68,7 +68,7 @@ function w(e) {
                     ],
                 }),
             }),
-            D === T.OGo.PENDING_INCOMING &&
+            D === Z.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,

@@ -6,7 +6,7 @@ var i = n(755721),
     o = n(206074),
     s = n(652853),
     l = n(475413),
-    c = n(228168),
+    c = n(671955),
     u = n(388032);
 function d(e) {
     let { application: t, onAction: n, onClose: d } = e,
@@ -20,8 +20,8 @@ function d(e) {
         : (0, r.jsx)(l.tG, {
               icon: a.v3n,
               text: u.intl.string(u.t["jaYS/v"]),
-              size: f === c.lY.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
-              fullWidth: f !== c.lY.MODAL_V2,
+              size: f === c.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
+              fullWidth: f !== c.l.MODAL_V2,
               themeColor: "secondary",
               onClick: (e) => {
                   e.stopPropagation(), null == n || n({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), null == d || d();

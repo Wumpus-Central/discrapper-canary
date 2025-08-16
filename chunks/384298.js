@@ -11,8 +11,8 @@ var i = n(442837),
     d = n(979651),
     f = n(652853),
     _ = n(475413),
-    p = n(228168),
-    h = n(981631),
+    p = n(981631),
+    h = n(671955),
     m = n(388032);
 function g(e) {
     let { channel: t, onAction: n, onClose: g } = e,
@@ -21,12 +21,12 @@ function g(e) {
     if (
         !(0, i.e7)([u.Z], () => {
             let e = (0, s.dl)() && (0, s.zd)(t.id);
-            return (t.isPrivate() || u.Z.can(h.Plq.CONNECT, t)) && !e;
+            return (t.isPrivate() || u.Z.can(p.Plq.CONNECT, t)) && !e;
         })
     )
         return null;
     let y = () =>
-            E === p.lY.MODAL || E === p.lY.MODAL_V2
+            E === h.l.MODAL || E === h.l.MODAL_V2
                 ? m.intl.string(m.t["3xjX0d"])
                 : t.isDM() || t.isGroupDM()
                   ? m.intl.string(m.t["7hwn2N"])
@@ -34,7 +34,7 @@ function g(e) {
                     ? m.intl.string(m.t.Acqcoq)
                     : m.intl.string(m.t.BXxdl5),
         O = () =>
-            E === p.lY.MODAL || E === p.lY.MODAL_V2
+            E === h.l.MODAL || E === h.l.MODAL_V2
                 ? m.intl.string(m.t.VJlc0d)
                 : t.isDM() || t.isGroupDM()
                   ? m.intl.string(m.t.ozoE2N)
@@ -47,7 +47,7 @@ function g(e) {
                 t.isGuildStageVoice() ? (0, c.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)),
                 null == g || g();
         };
-    return E === p.lY.MODAL_V2
+    return E === h.l.MODAL_V2
         ? (0, r.jsx)(_.tG, {
               text: b ? y() : O(),
               size: a.Ph.TINY,

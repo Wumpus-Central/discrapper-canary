@@ -15,8 +15,8 @@ var r = n(951288),
     b = n(502762),
     j = n(848780),
     y = n(907179),
-    O = n(228168),
-    h = n(981631),
+    O = n(981631),
+    h = n(671955),
     x = n(388032),
     v = n(220566);
 function _(e) {
@@ -56,7 +56,7 @@ function I(e) {
             onHide: N,
             sourceAnalyticsLocations: w = [],
         } = e,
-        S = n === h.ME ? void 0 : n,
+        S = n === O.ME ? void 0 : n,
         A = (0, i.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: C } = (0, c.ZP)([...w, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         D = (0, f.ZB)({
@@ -98,7 +98,7 @@ function I(e) {
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
                     displayProfile: R,
-                    themeType: O.lY.MODAL_V2,
+                    themeType: h.l.MODAL_V2,
                     children: [
                         (0, r.jsx)("div", { className: v.background }),
                         (0, r.jsxs)("div", {

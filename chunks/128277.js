@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(262210),
     S = n(666984),
     A = n(670451),
-    N = n(228168),
+    N = n(671955),
     C = n(704543);
 function R(e, t, n) {
     return (
@@ -186,7 +186,7 @@ function L(e) {
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: G,
-                                size: M === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                size: M === N.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
                                     e.stopPropagation(), V({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.Z5)(a, t.id);
@@ -214,14 +214,14 @@ function L(e) {
                                         className: C.badges,
                                     }),
                                     H(),
-                                    M === N.lY.MODAL_V2 && Y(),
+                                    M === N.l.MODAL_V2 && Y(),
                                 ],
                             }),
-                            M === N.lY.MODAL && Y(),
+                            M === N.l.MODAL && Y(),
                         ],
                     }),
                 }),
-                M !== N.lY.MODAL && M !== N.lY.MODAL_V2 && Y(),
+                M !== N.l.MODAL && M !== N.l.MODAL_V2 && Y(),
             ],
         }),
     });

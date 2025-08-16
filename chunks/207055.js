@@ -53,7 +53,7 @@ let D = i.memo((e) => {
         }),
         z = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(S.guild_id, L)),
         W = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(S.id).has(L)),
-        Y = (0, o.e7)(
+        q = (0, o.e7)(
             [u.ZP],
             () =>
                 u.ZP.getEmbeddedActivitiesForChannel(S.id).find((e) => {
@@ -62,7 +62,7 @@ let D = i.memo((e) => {
                 }),
             [L, S.id],
         ),
-        q = (0, p.Z)(null != Y ? [Y.applicationId] : []),
+        Y = (0, p.Z)(null != q ? [q.applicationId] : []),
         K = (0, o.e7)([P.Z, I.Z], () => (U ? I.Z.getActivities() : P.Z.getActivities(L, S.guild_id))).find(
             (e) => null != e.application_id && e.type === R.IIU.PLAYING,
         ),
@@ -131,7 +131,7 @@ let D = i.memo((e) => {
                     speaking: V,
                     ringing: W,
                     priority: G,
-                    embeddedApplication: q[0],
+                    embeddedApplication: Y[0],
                     isStreaming: null != Q && Q.channelId === S.id,
                     isWatching: null != J && J.state !== R.jm8.ENDED,
                     isGuest: z,

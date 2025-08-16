@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(979651),
     _ = n(652853),
     p = n(475413),
-    h = n(228168),
+    h = n(671955),
     m = n(388032);
 function g(e) {
     let { activity: t, onAction: n, onClose: g } = e,
@@ -30,7 +30,7 @@ function g(e) {
             (0, o.Kh)(y),
             null == g || g();
     };
-    return E === h.lY.MODAL_V2
+    return E === h.l.MODAL_V2
         ? (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
               size: a.Ph.TINY,

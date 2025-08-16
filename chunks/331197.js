@@ -99,9 +99,9 @@ function O(e) {
                 ? (null == S || S(void 0), V())
                 : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD));
     }
-    let Y = i.useRef(null);
+    let q = i.useRef(null);
     return (0, r.jsx)(s.y, {
-        targetElementRef: Y,
+        targetElementRef: q,
         shouldShow: (F && (E === v.D.SOUNDBOARD || null == E)) || E === v.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
@@ -136,7 +136,7 @@ function O(e) {
         },
         children: () =>
             (0, r.jsx)(x.d, {
-                ref: Y,
+                ref: q,
                 isTrayButton: !0,
                 themeable: O,
                 label: w

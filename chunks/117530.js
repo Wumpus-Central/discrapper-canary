@@ -60,7 +60,7 @@ function v(e) {
     let { channelId: t, id: n, draftType: r } = e,
         i = [...g(t, r)],
         a = i.findIndex((e) =>
-            (0, u.T)(
+            (0, u.TC)(
                 {
                     uri: n,
                     filename: n,

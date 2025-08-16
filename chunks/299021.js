@@ -221,12 +221,16 @@ class L extends (r = o.ZP.PersistedStore) {
         let o = D("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
         this.shouldTrackExposure(o) &&
             "user" === r &&
-            (this.track(u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-                evaluation_id: e,
-                experiment: t,
-                exposure_location: n,
-                unit_type: r,
-            }),
+            (this.track(
+                u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
+                {
+                    evaluation_id: e,
+                    experiment: t,
+                    exposure_location: n,
+                    unit_type: r,
+                },
+                { flush: !0 },
+            ),
             (P[o] = Date.now()),
             this.saveTrackedExposures(P));
     }
@@ -234,11 +238,15 @@ class L extends (r = o.ZP.PersistedStore) {
         for (let t of this.evaluationIds("user")) {
             let n = D("".concat(t, "|").concat(e));
             this.shouldTrackExposure(n) &&
-                (this.track(u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-                    evaluation_id: t,
-                    exposure_location: e,
-                    unit_type: "user",
-                }),
+                (this.track(
+                    u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
+                    {
+                        evaluation_id: t,
+                        exposure_location: e,
+                        unit_type: "user",
+                    },
+                    { flush: !0 },
+                ),
                 (P[n] = Date.now()),
                 this.saveTrackedExposures(P));
         }
@@ -247,11 +255,15 @@ class L extends (r = o.ZP.PersistedStore) {
         let n = I[e];
         null != n &&
             "user" === n.kind &&
-            this.track(u.j_.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, {
-                experiment: e,
-                unit_type: "user",
-                suppression_source: t,
-            });
+            this.track(
+                u.j_.EXPERIMENT_USER_EXPOSURE_SUPPRESSED,
+                {
+                    experiment: e,
+                    unit_type: "user",
+                    suppression_source: t,
+                },
+                { flush: !0 },
+            );
     }
     evaluationIds(e) {
         return Object.values(v[e])
@@ -279,10 +291,14 @@ class L extends (r = o.ZP.PersistedStore) {
             });
         } catch (e) {
             y.error("Error saving tracked exposures", e),
-                this.track(u.j_.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
-                    module: "discord_app",
-                    call: "ApexExperimentStore.saveTrackedExposures",
-                });
+                this.track(
+                    u.j_.EXPERIMENT_SAVE_EXPOSURE_FAILED,
+                    {
+                        module: "discord_app",
+                        call: "ApexExperimentStore.saveTrackedExposures",
+                    },
+                    { flush: !0 },
+                );
         }
     }
     clearAllServerAssignments() {

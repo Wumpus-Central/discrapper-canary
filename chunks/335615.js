@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(585483),
     z = n(823379),
     W = n(51144),
-    Y = n(998502),
-    q = n(981631),
+    q = n(998502),
+    Y = n(981631),
     K = n(388032),
     X = n(32482);
 function Q(e, t, n) {
@@ -114,7 +114,7 @@ function ee(e, t) {
     }
     return i;
 }
-let et = Y.ZP.getEnableHardwareAcceleration(),
+let et = q.ZP.getEnableHardwareAcceleration(),
     en = {
         origin: {
             x: 38,
@@ -197,8 +197,8 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             A = i.useCallback(() => {
                 let e = "@".concat(W.ZP.getUserTag(u, { decoration: "never" })),
                     t = "<@".concat(u.id, ">");
-                V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: _.id }),
-                    V.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
+                V.S.dispatch(Y.CkL.TEXTAREA_FOCUS, { channelId: _.id }),
+                    V.S.dispatchToLastSubscribed(Y.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
                     }),
@@ -211,8 +211,8 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                         (0, N.f)({
                             guildId: C,
                             location: {
-                                section: q.jXE.MEMBER_LIST,
-                                object: q.qAy.BOOST_GEM_ICON,
+                                section: Y.jXE.MEMBER_LIST,
+                                object: Y.qAy.BOOST_GEM_ICON,
                             },
                         }));
                 },
@@ -308,7 +308,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 size: 16,
             }),
             o = (0, h.e7)([D.default], () => new Intl.NumberFormat(D.default.locale).format(i), [i]);
-        return t === q.Skl.UNKNOWN
+        return t === Y.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
                   className: X.membersGroup,
                   children: (0, r.jsx)("div", { className: X.memberGroupsPlaceholder }),
@@ -626,7 +626,7 @@ class eo extends i.Component {
                                 null != t.activities &&
                                     t.activities.length > 0 &&
                                     (e.num_users_visible_with_activity++,
-                                    t.activities.some((e) => e.type === q.IIU.PLAYING) &&
+                                    t.activities.some((e) => e.type === Y.IIU.PLAYING) &&
                                         e.num_users_visible_with_game_activity++),
                                 null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++,
                                 (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null &&
@@ -644,7 +644,7 @@ class eo extends i.Component {
                     },
                 );
                 (this.lastReportedAnalyticsChannel = this.props.channel.id),
-                    x.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
+                    x.ZP.trackWithMetadata(Y.rMx.MEMBER_LIST_VIEWED, J({}, i));
             });
     }
 }

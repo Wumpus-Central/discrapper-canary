@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+n.d(t, { Z: () => q }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -372,7 +372,7 @@ class W extends i.PureComponent {
             });
     }
 }
-function Y(e) {
+function q(e) {
     var t, n;
     let { channel: i, children: l } = e,
         a = i.getGuildId(),

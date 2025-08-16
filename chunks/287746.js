@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(893718),
     z = n(436660),
     W = n(338390),
-    Y = n(680835),
-    q = n(436952),
+    q = n(680835),
+    Y = n(436952),
     K = n(131565),
     X = n(355888),
     Q = n(680783),
@@ -97,8 +97,8 @@ var r = n(951288),
     eV = n(709054),
     ez = n(838440),
     eW = n(127654),
-    eY = n(979956),
-    eq = n(413251),
+    eq = n(979956),
+    eY = n(413251),
     eK = n(655687),
     eX = n(165540),
     eQ = n(583027),
@@ -590,8 +590,8 @@ class ta extends i.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eY.KZ)(n);
-                        if ((0, eY.Bf)(e, null == u ? void 0 : u.id))
+                        let e = (0, eq.KZ)(n);
+                        if ((0, eq.Bf)(e, null == u ? void 0 : u.id))
                             return (
                                 (0, eW.G)(d, e),
                                 {
@@ -799,7 +799,7 @@ class to extends i.PureComponent {
                 guildId: null == Z ? void 0 : Z.guild_id,
                 location: "ChannelChat",
             }),
-            Y = q.qM.getCurrentConfig({ location: "ChannelChat" }).enabled,
+            q = Y.qM.getCurrentConfig({ location: "ChannelChat" }).enabled,
             X = W && null != I && null != Z && null != Z.guild_id;
         return (0, r.jsx)(
             y.Z,
@@ -830,8 +830,8 @@ class to extends i.PureComponent {
                                     isSidebar: B,
                                     className: a()(e6.chatContent, {
                                         [e6.hasWallpaper]: null == N ? void 0 : N.isViewable,
-                                        [J.e3]: Y ? (null == N ? void 0 : N.isViewable) : void 0,
-                                        [null != (e = (0, p.QeD)(T)) ? e : ""]: Y
+                                        [J.e3]: q ? (null == N ? void 0 : N.isViewable) : void 0,
+                                        [null != (e = (0, p.QeD)(T)) ? e : ""]: q
                                             ? null == N
                                                 ? void 0
                                                 : N.isViewable
@@ -1109,12 +1109,12 @@ let ts = i.memo(function (e) {
         G = (0, d.e7)([eT.Z], () => eT.Z.getChannel(H)),
         V = (0, d.e7)([eL.default], () => (t.type !== e3.d4z.DM ? null : eL.default.getUser(t.getRecipientId()))),
         z = (0, d.e7)([em.ZP, eI.default], () => em.ZP.getUserCombo(eI.default.getId(), t.id)),
-        q = (0, b.iD)(t),
+        Y = (0, b.iD)(t),
         K = (0, b.d7)(t),
-        J = q.length > 0 || t.rateLimitPerUser > 0 || null != z || null != K,
+        J = Y.length > 0 || t.rateLimitPerUser > 0 || null != z || null != K,
         $ = (0, W.Z)("ChannelChat"),
-        { showLinkedLobbyApplicationLoadingIndicator: et } = (0, eq.Z)(t.linkedLobby),
-        en = (0, Y.Z)("ChannelChat");
+        { showLinkedLobbyApplicationLoadingIndicator: et } = (0, eY.Z)(t.linkedLobby),
+        en = (0, q.Z)("ChannelChat");
     return (0, r.jsx)(to, {
         channel: t,
         isEditing: null != (0, d.e7)([eA.Z], () => eA.Z.getEditingMessageId(t.id)),

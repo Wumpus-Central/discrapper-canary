@@ -20,7 +20,7 @@ var r = n(951288),
     S = n(626135),
     C = n(63063),
     O = n(981631),
-    y = n(228168),
+    y = n(671955),
     v = n(693450),
     P = n(388032),
     k = n(270816);
@@ -120,7 +120,7 @@ function T(e) {
                 (0, r.jsx)(j.Z, {
                     user: t,
                     displayProfile: B,
-                    themeType: y.lY.MODAL_V2,
+                    themeType: y.l.MODAL_V2,
                     className: k.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, r.jsx)("div", {

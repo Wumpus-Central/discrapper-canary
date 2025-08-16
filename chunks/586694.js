@@ -10,8 +10,8 @@ var r = n(951288),
     a = n(974674),
     s = n(481060),
     c = n(686546),
-    u = n(182294),
-    d = n(419061),
+    u = n(419061),
+    d = n(268685),
     p = n(536537);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -62,7 +62,7 @@ function g(e) {
             size: n,
             onClick: l,
             onMouseDown: a,
-            onKeyDown: u,
+            onKeyDown: d,
             onContextMenu: f,
             onMouseEnter: h,
             onMouseLeave: g,
@@ -80,7 +80,7 @@ function g(e) {
             height: (0, s.pxk)(n),
         },
         S = (0, i.useId)(),
-        I = y.size * d.hs,
+        I = y.size * u.hs,
         P =
             null != _ &&
             (0, r.jsxs)("svg", {
@@ -156,7 +156,7 @@ function g(e) {
               onClick: l,
               onContextMenu: f,
               onMouseDown: a,
-              onKeyDown: u,
+              onKeyDown: d,
               onMouseEnter: null != h ? h : void 0,
               onMouseLeave: null != g ? g : void 0,
               "aria-label": null != E ? E : void 0,
@@ -181,12 +181,12 @@ function m(e) {
             size: n,
             "aria-hidden": l = !1,
             "aria-label": s,
-            imageClassName: d,
+            imageClassName: u,
             cornerIconUrl: m,
             cornerIconOffsetX: b = 0,
             cornerIconOffsetY: y = 0,
         } = e,
-        v = (0, u.UC)(n),
+        v = (0, d.UC)(n),
         j = v.size,
         C = (0, i.useId)();
     return (0, r.jsx)(
@@ -233,7 +233,7 @@ function m(e) {
                         mask: "url(#".concat(C, ")"),
                         children: (0, r.jsx)(a.qe, {
                             src: t,
-                            className: d,
+                            className: u,
                             isSpeaking: !1,
                         }),
                     }),
@@ -262,16 +262,16 @@ function b(e) {
             "aria-hidden": l = !1,
             "aria-label": a,
             cornerIconUrl: s,
-            cornerIconOffsetX: d = 0,
+            cornerIconOffsetX: u = 0,
             cornerIconOffsetY: m = 0,
         } = e,
         b = (0, i.useId)(),
         y = (0, i.useId)(),
-        v = (0, u.UC)(n),
-        j = v.size + d,
+        v = (0, d.UC)(n),
+        j = v.size + u,
         C = v.size + m,
-        E = O(v, d, m),
-        x = _(v, d, m);
+        E = O(v, u, m),
+        x = _(v, u, m);
     return (0, r.jsx)(
         g,
         h(f({}, e), {

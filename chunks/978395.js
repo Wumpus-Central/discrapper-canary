@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(116854),
     A = n(166584),
     N = n(915014),
-    C = n(228168),
-    R = n(981631),
+    C = n(981631),
+    R = n(671955),
     P = n(388032),
     w = n(116649);
 function D(e) {
@@ -67,7 +67,7 @@ function D(e) {
                 pronouns: null == D ? void 0 : D.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: D,
-                    themeType: C.lY.POPOUT,
+                    themeType: R.l.POPOUT,
                     onClose: j,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -82,7 +82,7 @@ function D(e) {
                     ],
                 }),
             }),
-            G === R.OGo.PENDING_INCOMING &&
+            G === C.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(O.Z.Overlay, {
                     children: (0, r.jsx)(g.Z, {
                         user: t,

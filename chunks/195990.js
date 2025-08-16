@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(594174),
     u = n(652853),
     d = n(475413),
-    f = n(228168),
-    _ = n(981631),
+    f = n(981631),
+    _ = n(671955),
     p = n(388032);
 function h(e) {
     var t;
@@ -17,15 +17,15 @@ function h(e) {
         { themeType: E } = (0, u.z)(),
         [b, y] = i.useState(!1),
         O = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        v = null == (t = h.thirdPartySkus.find((e) => e.distributor === _.GQo.ROBLOX)) ? void 0 : t.id,
+        v = null == (t = h.thirdPartySkus.find((e) => e.distributor === f.GQo.ROBLOX)) ? void 0 : t.id,
         I = (0, l.dW)(v);
     return null == O || n.id === O.id || null == v
         ? null
         : (0, r.jsx)(d.tG, {
               text: p.intl.string(p.t.RscU7O),
               submitting: b,
-              size: E === f.lY.MODAL_V2 ? o.Ph.TINY : o.Ph.SMALL,
-              fullWidth: E !== f.lY.MODAL_V2,
+              size: E === _.l.MODAL_V2 ? o.Ph.TINY : o.Ph.SMALL,
+              fullWidth: E !== _.l.MODAL_V2,
               themeColor: "secondary",
               onClick: async (e) => {
                   y(!0), e.stopPropagation(), null == m || m({ action: "PRESS_PLAY_BUTTON" });

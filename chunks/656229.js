@@ -7,7 +7,7 @@ var i = n(481060),
     s = n(867176),
     l = n(654904),
     c = n(486324),
-    u = n(228168),
+    u = n(671955),
     d = n(388032),
     f = n(579534);
 function _(e) {
@@ -42,7 +42,7 @@ function _(e) {
         user: t,
         displayProfile: n,
         guildId: _,
-        themeType: u.lY.POPOUT,
+        themeType: u.l.POPOUT,
         pendingBanner: h,
         pendingAccentColor: m,
         canUsePremiumProfileCustomization: p,

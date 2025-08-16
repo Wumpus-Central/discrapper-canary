@@ -43,7 +43,7 @@ var r = n(951288),
     V = n(388032),
     z = n(757212),
     W = n(149623);
-function Y(e) {
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ function Y(e) {
     }
     return e;
 }
-let q = y.Ie.THREAD_CREATION;
+let Y = y.Ie.THREAD_CREATION;
 function K(e) {
     let { parentChannelId: t, parentMessageId: n, location: i } = e,
         l = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t)),
@@ -159,10 +159,10 @@ function Q(e) {
                 a = i.useCallback(
                     (n) => {
                         var r, i;
-                        l((e) => Y({}, e, n)),
+                        l((e) => q({}, e, n)),
                             u.Z.changeThreadSettings(
                                 e.id,
-                                ((r = Y({}, n)),
+                                ((r = q({}, n)),
                                 (i = i = { parentMessageId: t }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -266,7 +266,7 @@ function Q(e) {
                             (e = e.trim()),
                             (null == i || 0 === i.length) &&
                                 (i =
-                                    null == (o = S.Z.getStickerPreview(t.id, q.drafts.type))
+                                    null == (o = S.Z.getStickerPreview(t.id, Y.drafts.type))
                                         ? void 0
                                         : o.map((e) => e.id)),
                             (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, T.d.FirstThreadMessage));
@@ -286,7 +286,7 @@ function Q(e) {
                                 content: e,
                                 stickers: i,
                                 uploads: l,
-                                type: q,
+                                type: Y,
                                 channel: t,
                             });
                             if (!n)
@@ -312,7 +312,7 @@ function Q(e) {
                             );
                         }
                         return (
-                            (0, P.qB)(t.id, q.drafts.type),
+                            (0, P.qB)(t.id, Y.drafts.type),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -539,7 +539,7 @@ function ee(e) {
         children: [
             (0, r.jsx)(x.Z, {
                 channelId: t.id,
-                type: q,
+                type: Y,
                 canAttachFiles: _,
             }),
             (0, r.jsx)("div", {
@@ -547,7 +547,7 @@ function ee(e) {
                 children: (0, r.jsx)(c.pdY, { error: v }),
             }),
             (0, r.jsx)(C.ZP, {
-                type: q,
+                type: Y,
                 channel: t,
                 placeholder: V.intl.string(V.t.taZfIC),
                 textValue: n.textValue,

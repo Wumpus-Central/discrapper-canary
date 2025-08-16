@@ -1,4 +1,4 @@
-r.d(t, { Z: () => j });
+r.d(t, { Z: () => v });
 var n = r(951288);
 r(647438);
 var i = r(780384),
@@ -11,15 +11,16 @@ var i = r(780384),
     d = r(652853),
     m = r(228168),
     p = r(981631),
-    b = r(323759);
-let f = (0, a.pxk)(a.EFr.SIZE_16);
-function j(e) {
-    let { user: t, guild: j, nick: v, onSelect: x } = e,
-        { theme: y, themeType: O } = (0, d.z)(),
-        h = t.hasAvatarForGuild(j.id);
+    b = r(671955),
+    f = r(323759);
+let j = (0, a.pxk)(a.EFr.SIZE_16);
+function v(e) {
+    let { user: t, guild: v, nick: x, onSelect: y } = e,
+        { theme: O, themeType: h } = (0, d.z)(),
+        g = t.hasAvatarForGuild(v.id);
     return (0, n.jsxs)(a.P3F, {
         focusProps:
-            O === m.lY.MODAL_V2
+            h === b.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -28,8 +29,8 @@ function j(e) {
                       },
                   }
                 : { offset: { right: 8 } },
-        className: b.row,
-        onClick: x,
+        className: f.row,
+        onClick: y,
         onContextMenu: (e) => {
             (0, l.jW)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -116,7 +117,7 @@ function j(e) {
                             }
                             return e;
                         })({}, t)),
-                        (i = i = { guild: j }),
+                        (i = i = { guild: v }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -137,48 +138,48 @@ function j(e) {
         children: [
             (0, n.jsx)(c.Z, {
                 tabIndex: -1,
-                guild: j,
+                guild: v,
                 showBadge: !0,
-                className: null != j.icon ? b.icon : b.noIcon,
-                badgeStrokeColor: (0, o.Lq)((0, i.wj)(y) ? p.Ilk.PRIMARY_600 : p.Ilk.WHITE_500),
+                className: null != v.icon ? f.icon : f.noIcon,
+                badgeStrokeColor: (0, o.Lq)((0, i.wj)(O) ? p.Ilk.PRIMARY_600 : p.Ilk.WHITE_500),
                 badgeTooltipColor: a.FGA.PRIMARY,
                 badgeTooltipDelay: m.vB,
                 size: c.Z.Sizes.MEDIUM,
                 active: !0,
             }),
             (0, n.jsxs)("div", {
-                className: b.details,
+                className: f.details,
                 children: [
                     (0, n.jsx)("div", {
-                        className: b.name,
-                        children: j.name,
+                        className: f.name,
+                        children: v.name,
                     }),
-                    h &&
+                    g &&
                         (0, n.jsxs)("div", {
-                            className: b.nick,
+                            className: f.nick,
                             children: [
                                 (0, n.jsx)(a.qEK, {
-                                    src: t.getAvatarURL(j.id, f),
+                                    src: t.getAvatarURL(v.id, j),
                                     size: a.EFr.SIZE_16,
-                                    className: b.avatar,
+                                    className: f.avatar,
                                     "aria-hidden": !0,
                                 }),
                                 (0, n.jsx)(a.Text, {
                                     variant: "text-xs/medium",
                                     children: (0, n.jsx)(s.Z, {
                                         delay: m.vB,
-                                        children: null != v ? v : u.ZP.getName(j.id, void 0, t),
+                                        children: null != x ? x : u.ZP.getName(v.id, void 0, t),
                                     }),
                                 }),
                             ],
                         }),
-                    !h &&
-                        null != v &&
+                    !g &&
+                        null != x &&
                         (0, n.jsx)(a.Text, {
                             variant: "text-xs/medium",
                             children: (0, n.jsx)(s.Z, {
                                 delay: m.vB,
-                                children: v,
+                                children: x,
                             }),
                         }),
                 ],

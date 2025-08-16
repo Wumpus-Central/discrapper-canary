@@ -29,8 +29,8 @@ var r,
     S = n(317271),
     T = n(474936),
     P = n(981631),
-    N = n(182294),
-    A = n(957825),
+    N = n(957825),
+    A = n(268685),
     w = n(388032),
     Z = n(553517),
     R = (((r = {}).SYSTEM_MESSAGE = "system_message"), (r.COACHMARK = "coachmark"), r);
@@ -91,14 +91,14 @@ function L(e) {
                                     className: z,
                                     user: r,
                                     "aria-label": r.username,
-                                    size: N.EF.SIZE_56,
+                                    size: A.EF.SIZE_56,
                                 }),
                                 null != F &&
                                     (0, i.jsx)(_.Z, {
                                         className: W,
                                         user: F,
                                         "aria-label": r.username,
-                                        size: N.EF.SIZE_24,
+                                        size: A.EF.SIZE_24,
                                     }),
                             ],
                         }),
@@ -146,7 +146,7 @@ function L(e) {
                                               ((0, j.PV)(r.id),
                                               m.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
-                                                      (0, E.PG)(A.X1.GIF, b.Ie.NORMAL),
+                                                      (0, E.PG)(N.X1.GIF, b.Ie.NORMAL),
                                                           setTimeout(() => {
                                                               (0, E.ql)(w.intl.string(w.t.jrtJi4), !0);
                                                           }, 50);

@@ -6,7 +6,7 @@ var i = n(755721),
     o = n(420660),
     s = n(652853),
     l = n(475413),
-    c = n(228168),
+    c = n(671955),
     u = n(388032);
 function d(e) {
     let { activity: t, onAction: n } = e,
@@ -14,7 +14,7 @@ function d(e) {
         f = (0, a.Z)(t);
     if (!(0, o.Z)(t) || null == f) return null;
     let _ = (e) => (e.stopPropagation(), null == n || n({ action: "PRESS_WATCH_BUTTON" }), window.open(f));
-    return d === c.lY.MODAL_V2
+    return d === c.l.MODAL_V2
         ? (0, r.jsx)(l.tG, {
               text: u.intl.string(u.t["I6JG4+"]),
               size: i.Ph.TINY,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -19,8 +19,9 @@ var r = n(951288),
     y = n(228168),
     O = n(981631),
     v = n(474936),
-    I = n(66856);
-function T(e, t, n) {
+    I = n(671955),
+    T = n(66856);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,87 +62,87 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function R(e) {
+let R = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
+function P(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: a,
             channelId: h,
-            themeType: T,
-            animateOnHover: A,
-            onOpenProfile: R,
-            className: P,
-            previewStatus: w,
+            themeType: S,
+            animateOnHover: N,
+            onOpenProfile: P,
+            className: w,
+            previewStatus: D,
         } = e,
-        { theme: D } = (0, b.z)(),
-        { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
-        { trackUserProfileAction: x } = (0, m.KZ)(),
-        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: j } = (0, g.Z)(t.id),
-        [U] = j,
-        { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
-            status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
+        { theme: L } = (0, b.z)(),
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.AVATAR),
+        { trackUserProfileAction: M } = (0, m.KZ)(),
+        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        j = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: U } = (0, g.Z)(t.id),
+        [G] = U,
+        { status: B, isMobileOnline: V } = (0, s.cj)([_.Z], () => ({
+            status: (0, c.Z)(G) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id),
         })),
-        V = void 0 !== w ? w : G,
-        F = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = o()(I.avatar, P),
+        F = void 0 !== D ? D : B,
+        Z = [I.l.MODAL, I.l.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        H = o()(T.avatar, w),
         {
-            avatarDecorationSrc: H,
-            avatarSrc: Y,
-            eventHandlers: W,
+            avatarDecorationSrc: Y,
+            avatarSrc: W,
+            eventHandlers: K,
         } = (0, E.Z)({
             userId: t.id,
             guildId: null != n ? n.guildId : a,
-            size: F,
-            animateOnHover: A,
+            size: Z,
+            animateOnHover: N,
         }),
-        K = (0, r.jsx)(C, {
-            src: Y,
-            avatarDecoration: H,
-            size: F,
+        z = (0, r.jsx)(R, {
+            src: W,
+            avatarDecoration: Y,
+            size: Z,
             "aria-label": t.username,
-            imageClassName: null != R ? I.overlay : void 0,
-            status: k ? O.Skl.UNKNOWN : V,
-            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
-            isMobile: B,
+            imageClassName: null != P ? T.overlay : void 0,
+            status: j ? O.Skl.UNKNOWN : F,
+            statusBackdropColor: k && !j ? (0, l.QFD)(L) : void 0,
+            isMobile: V,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,
         });
-    return null == R
+    return null == P
         ? (0, r.jsx)(
               "div",
-              N(S({}, W), {
-                  className: Z,
-                  children: K,
+              C(A({}, K), {
+                  className: H,
+                  children: z,
               }),
           )
         : (0, r.jsx)(
               l.P3F,
-              N(S({}, W), {
-                  className: o()(Z, I.clickable),
-                  focusProps: { ringClassName: I.focusRing },
+              C(A({}, K), {
+                  className: o()(H, T.clickable),
+                  focusProps: { ringClassName: T.focusRing },
                   onClick: () => {
-                      x({
+                      M({
                           action: "PRESS_VIEW_PROFILE",
-                          analyticsLocations: L,
+                          analyticsLocations: x,
                       }),
-                          null == R || R();
+                          null == P || P();
                   },
-                  children: K,
+                  children: z,
               }),
           );
 }

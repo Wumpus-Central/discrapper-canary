@@ -19,7 +19,7 @@ var r = n(951288),
     m = n(451478),
     g = n(768581),
     E = n(28660),
-    b = n(462997),
+    b = n(934424),
     y = n(572425);
 function O(e, t, n) {
     return (
@@ -168,7 +168,7 @@ function C(e) {
                 mask: "url(#".concat(L, ")"),
                 children: [
                     v,
-                    (0, r.jsxs)("div", {
+                    (0, r.jsx)("div", {
                         className: o()(y.banner, I),
                         onMouseMove: () => M(!0),
                         onMouseLeave: () => M(!1),
@@ -178,7 +178,7 @@ function C(e) {
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
                             backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : Z,
                         },
-                        children: [!j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v],
+                        children: !j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
                     }),
                 ],
             }),

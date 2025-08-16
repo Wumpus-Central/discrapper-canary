@@ -1,15 +1,14 @@
 n.d(t, {
-    Ej: () => d,
-    P: () => _,
+    Ej: () => u,
+    P: () => f,
     Tb: () => s,
     Tg: () => a,
-    cm: () => c,
-    lY: () => l,
-    n_: () => f,
+    cm: () => l,
+    n_: () => d,
     oh: () => o,
-    qb: () => p,
+    qb: () => _,
     vB: () => i,
-    yM: () => u,
+    yM: () => c,
 });
 var r = n(981631);
 let i = 300,
@@ -38,9 +37,6 @@ var o = (function (e) {
         );
     })({}),
     l = (function (e) {
-        return (e.POPOUT = "POPOUT"), (e.MODAL = "MODAL"), (e.MODAL_V2 = "MODAL_V2"), (e.SIDEBAR = "SIDEBAR"), e;
-    })({}),
-    c = (function (e) {
         return (
             (e[(e.NICKNAME = 0)] = "NICKNAME"),
             (e[(e.PRONOUNS = 1)] = "PRONOUNS"),
@@ -55,7 +51,7 @@ var o = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (
             (e.VIEW = "VIEW"),
             (e.SEND_MESSAGE = "SEND_MESSAGE"),
@@ -161,19 +157,19 @@ var o = (function (e) {
             e
         );
     })({});
-function d(e) {
+function u(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n
         ? "https://".concat(n, "/badge-icons/").concat(e, ".png")
         : "".concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
-var f = (function (e) {
+var d = (function (e) {
         return (e.ACTIVITY = "ACTIVITY"), (e.AVATAR = "AVATAR"), (e.STATUS = "STATUS"), e;
     })({}),
-    _ = (function (e) {
+    f = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
     })({}),
-    p = (function (e) {
+    _ = (function (e) {
         return (
             (e.WIDGET_ADDED = "WIDGET_ADDED"),
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),

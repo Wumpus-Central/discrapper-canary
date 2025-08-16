@@ -18,9 +18,9 @@ var r = n(951288),
     f = n(481060),
     _ = n(686546),
     p = n(51144),
-    h = n(182294),
-    m = n(981631),
-    g = n(419061),
+    h = n(981631),
+    m = n(419061),
+    g = n(268685),
     E = n(388032),
     b = n(536537);
 function y(e, t, n) {
@@ -106,10 +106,10 @@ function N() {
 function C(e) {
     var { size: t, isMobile: n, isTyping: i } = e,
         a = T(e, ["size", "isMobile", "isTyping"]);
-    let o = (0, h.UC)(t),
-        s = o.status * (n && !i ? h.EW : 1),
-        l = o.status * (i ? h.D6 : 1),
-        c = i ? (o.status * h.D6 - o.status) / 2 : 0,
+    let o = (0, g.UC)(t),
+        s = o.status * (n && !i ? g.EW : 1),
+        l = o.status * (i ? g.D6 : 1),
+        c = i ? (o.status * g.D6 - o.status) / 2 : 0,
         u = o.size - o.status - c - o.offset,
         d = o.size - s - o.offset;
     return (0, r.jsx)(
@@ -140,76 +140,76 @@ function P(e, t, n, r) {
     if (null == e) return null;
     if (r)
         switch (t) {
-            case h.EF.SIZE_16:
+            case g.EF.SIZE_16:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_16;
-            case h.EF.SIZE_20:
+            case g.EF.SIZE_20:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_20;
-            case h.EF.SIZE_24:
+            case g.EF.SIZE_24:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_24;
-            case h.EF.SIZE_32:
+            case g.EF.SIZE_32:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_32;
-            case h.EF.SIZE_40:
+            case g.EF.SIZE_40:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_40;
-            case h.EF.SIZE_44:
+            case g.EF.SIZE_44:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_44;
-            case h.EF.SIZE_48:
+            case g.EF.SIZE_48:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_48;
-            case h.EF.SIZE_56:
+            case g.EF.SIZE_56:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_56;
-            case h.EF.SIZE_80:
+            case g.EF.SIZE_80:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_80;
-            case h.EF.SIZE_96:
+            case g.EF.SIZE_96:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_96;
-            case h.EF.SIZE_120:
+            case g.EF.SIZE_120:
                 return _.QS.AVATAR_DECORATION_STATUS_TYPING_120;
         }
     if (n)
         switch (t) {
-            case h.EF.SIZE_16:
+            case g.EF.SIZE_16:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_16;
-            case h.EF.SIZE_20:
+            case g.EF.SIZE_20:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_20;
-            case h.EF.SIZE_24:
+            case g.EF.SIZE_24:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_24;
-            case h.EF.SIZE_32:
+            case g.EF.SIZE_32:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_32;
-            case h.EF.SIZE_40:
+            case g.EF.SIZE_40:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_40;
-            case h.EF.SIZE_44:
+            case g.EF.SIZE_44:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_44;
-            case h.EF.SIZE_48:
+            case g.EF.SIZE_48:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_48;
-            case h.EF.SIZE_56:
+            case g.EF.SIZE_56:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_56;
-            case h.EF.SIZE_80:
+            case g.EF.SIZE_80:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_80;
-            case h.EF.SIZE_96:
+            case g.EF.SIZE_96:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_96;
-            case h.EF.SIZE_120:
+            case g.EF.SIZE_120:
                 return _.QS.AVATAR_DECORATION_STATUS_MOBILE_120;
         }
     switch (t) {
-        case h.EF.SIZE_16:
+        case g.EF.SIZE_16:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_16;
-        case h.EF.SIZE_20:
+        case g.EF.SIZE_20:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_20;
-        case h.EF.SIZE_24:
+        case g.EF.SIZE_24:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_24;
-        case h.EF.SIZE_32:
+        case g.EF.SIZE_32:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_32;
-        case h.EF.SIZE_40:
+        case g.EF.SIZE_40:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_40;
-        case h.EF.SIZE_44:
+        case g.EF.SIZE_44:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_44;
-        case h.EF.SIZE_48:
+        case g.EF.SIZE_48:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_48;
-        case h.EF.SIZE_56:
+        case g.EF.SIZE_56:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_56;
-        case h.EF.SIZE_80:
+        case g.EF.SIZE_80:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_80;
-        case h.EF.SIZE_96:
+        case g.EF.SIZE_96:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_96;
-        case h.EF.SIZE_120:
+        case g.EF.SIZE_120:
             return _.QS.AVATAR_DECORATION_STATUS_ROUND_120;
     }
     return null;
@@ -218,76 +218,76 @@ function w(e, t, n, r) {
     if (null == e) return _.QS.AVATAR_DEFAULT;
     if (r)
         switch (t) {
-            case h.EF.SIZE_16:
+            case g.EF.SIZE_16:
                 return _.QS.AVATAR_STATUS_TYPING_16;
-            case h.EF.SIZE_20:
+            case g.EF.SIZE_20:
                 return _.QS.AVATAR_STATUS_TYPING_20;
-            case h.EF.SIZE_24:
+            case g.EF.SIZE_24:
                 return _.QS.AVATAR_STATUS_TYPING_24;
-            case h.EF.SIZE_32:
+            case g.EF.SIZE_32:
                 return _.QS.AVATAR_STATUS_TYPING_32;
-            case h.EF.SIZE_40:
+            case g.EF.SIZE_40:
                 return _.QS.AVATAR_STATUS_TYPING_40;
-            case h.EF.SIZE_44:
+            case g.EF.SIZE_44:
                 return _.QS.AVATAR_STATUS_TYPING_44;
-            case h.EF.SIZE_48:
+            case g.EF.SIZE_48:
                 return _.QS.AVATAR_STATUS_TYPING_48;
-            case h.EF.SIZE_56:
+            case g.EF.SIZE_56:
                 return _.QS.AVATAR_STATUS_TYPING_56;
-            case h.EF.SIZE_80:
+            case g.EF.SIZE_80:
                 return _.QS.AVATAR_STATUS_TYPING_80;
-            case h.EF.SIZE_96:
+            case g.EF.SIZE_96:
                 return _.QS.AVATAR_STATUS_TYPING_96;
-            case h.EF.SIZE_120:
+            case g.EF.SIZE_120:
                 return _.QS.AVATAR_STATUS_TYPING_120;
         }
-    if (e === m.Skl.ONLINE && n)
+    if (e === h.Skl.ONLINE && n)
         switch (t) {
-            case h.EF.SIZE_16:
+            case g.EF.SIZE_16:
                 return _.QS.AVATAR_STATUS_MOBILE_16;
-            case h.EF.SIZE_20:
+            case g.EF.SIZE_20:
                 return _.QS.AVATAR_STATUS_MOBILE_20;
-            case h.EF.SIZE_24:
+            case g.EF.SIZE_24:
                 return _.QS.AVATAR_STATUS_MOBILE_24;
-            case h.EF.SIZE_32:
+            case g.EF.SIZE_32:
                 return _.QS.AVATAR_STATUS_MOBILE_32;
-            case h.EF.SIZE_40:
+            case g.EF.SIZE_40:
                 return _.QS.AVATAR_STATUS_MOBILE_40;
-            case h.EF.SIZE_44:
+            case g.EF.SIZE_44:
                 return _.QS.AVATAR_STATUS_MOBILE_44;
-            case h.EF.SIZE_48:
+            case g.EF.SIZE_48:
                 return _.QS.AVATAR_STATUS_MOBILE_48;
-            case h.EF.SIZE_56:
+            case g.EF.SIZE_56:
                 return _.QS.AVATAR_STATUS_MOBILE_56;
-            case h.EF.SIZE_80:
+            case g.EF.SIZE_80:
                 return _.QS.AVATAR_STATUS_MOBILE_80;
-            case h.EF.SIZE_96:
+            case g.EF.SIZE_96:
                 return _.QS.AVATAR_STATUS_MOBILE_96;
-            case h.EF.SIZE_120:
+            case g.EF.SIZE_120:
                 return _.QS.AVATAR_STATUS_MOBILE_120;
         }
     switch (t) {
-        case h.EF.SIZE_16:
+        case g.EF.SIZE_16:
             return _.QS.AVATAR_STATUS_ROUND_16;
-        case h.EF.SIZE_20:
+        case g.EF.SIZE_20:
             return _.QS.AVATAR_STATUS_ROUND_20;
-        case h.EF.SIZE_24:
+        case g.EF.SIZE_24:
             return _.QS.AVATAR_STATUS_ROUND_24;
-        case h.EF.SIZE_32:
+        case g.EF.SIZE_32:
             return _.QS.AVATAR_STATUS_ROUND_32;
-        case h.EF.SIZE_40:
+        case g.EF.SIZE_40:
             return _.QS.AVATAR_STATUS_ROUND_40;
-        case h.EF.SIZE_44:
+        case g.EF.SIZE_44:
             return _.QS.AVATAR_STATUS_ROUND_44;
-        case h.EF.SIZE_48:
+        case g.EF.SIZE_48:
             return _.QS.AVATAR_STATUS_ROUND_48;
-        case h.EF.SIZE_56:
+        case g.EF.SIZE_56:
             return _.QS.AVATAR_STATUS_ROUND_56;
-        case h.EF.SIZE_80:
+        case g.EF.SIZE_80:
             return _.QS.AVATAR_STATUS_ROUND_80;
-        case h.EF.SIZE_96:
+        case g.EF.SIZE_96:
             return _.QS.AVATAR_STATUS_ROUND_96;
-        case h.EF.SIZE_120:
+        case g.EF.SIZE_120:
             return _.QS.AVATAR_STATUS_ROUND_120;
     }
     throw Error(
@@ -308,15 +308,15 @@ function D(e, t, n) {
 }
 function L(e, t, n) {
     let { size: r, status: i, stroke: a, offset: o } = e,
-        s = n ? i * h.D6 : i,
+        s = n ? i * g.D6 : i,
         l = (s - i) / 2,
-        c = t ? i * h.EW : i;
+        c = t ? i * g.EW : i;
     return {
         avatarCutoutX: r - s + l - a - o,
         avatarCutoutY: r - c - a - o,
         avatarCutoutWidth: s + 2 * a,
         avatarCutoutHeight: c + 2 * a,
-        avatarCutoutRadius: t ? (c + 2 * a) * h.ZC : (i + 2 * a) / 2,
+        avatarCutoutRadius: t ? (c + 2 * a) * g.ZC : (i + 2 * a) / 2,
     };
 }
 function x(e, t, n, i) {
@@ -349,8 +349,8 @@ function x(e, t, n, i) {
 }
 function M(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
-        a = n && !r && t === m.Skl.ONLINE,
-        o = (0, h.UC)(i);
+        a = n && !r && t === h.Skl.ONLINE,
+        o = (0, g.UC)(i);
     return O(
         {},
         L(o, a, r),
@@ -377,7 +377,7 @@ function k(e) {
             className: f,
             tabIndex: _,
             ariaLabel: p,
-            ariaHidden: m,
+            ariaHidden: h,
             status: E,
             isMobile: y = !1,
             isTyping: O = !1,
@@ -386,11 +386,11 @@ function k(e) {
             specs: T,
         } = e,
         S = {
-            width: (0, h.px)(n),
-            height: (0, h.px)(n),
+            width: (0, g.px)(n),
+            height: (0, g.px)(n),
         },
-        A = null == p || m ? void 0 : R(p, E, y),
-        N = T.size * g.hs,
+        A = null == p || h ? void 0 : R(p, E, y),
+        N = T.size * m.hs,
         C = P(E, n, y, O),
         w =
             null != v &&
@@ -429,7 +429,7 @@ function k(e) {
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
               "aria-label": A,
-              "aria-hidden": m,
+              "aria-hidden": h,
               children: [t, w],
           })
         : (0, r.jsxs)("div", {
@@ -440,7 +440,7 @@ function k(e) {
               onMouseLeave: null != d ? d : void 0,
               role: "img",
               "aria-label": A,
-              "aria-hidden": m,
+              "aria-hidden": h,
               children: [t, w],
           });
 }
@@ -474,7 +474,7 @@ function U(e) {
             isTyping: l = !1,
             typingIndicatorRef: f,
             avatarContentRef: _,
-            isSpeaking: g = !1,
+            isSpeaking: m = !1,
             statusTooltip: E = !1,
             statusTooltipDelay: y,
             statusBackdropColor: v,
@@ -483,9 +483,9 @@ function U(e) {
             imageClassName: A,
             ref: N,
         } = e,
-        C = n !== m.Skl.UNKNOWN ? n : null,
-        R = (0, h.UC)(i),
-        P = null != C ? Math.ceil((R.status * h.D6 - R.status) / 2) : 0,
+        C = n !== h.Skl.UNKNOWN ? n : null,
+        R = (0, g.UC)(i),
+        P = null != C ? Math.ceil((R.status * g.D6 - R.status) / 2) : 0,
         L = R.size + P,
         M = (0, u.vj)(C, a);
     return (0, r.jsx)(
@@ -513,7 +513,7 @@ function U(e) {
                         children: (0, r.jsx)(j, {
                             ref: _,
                             src: t,
-                            isSpeaking: g,
+                            isSpeaking: m,
                             className: A,
                         }),
                     }),
@@ -559,10 +559,10 @@ function G(e, t, n) {
 }
 function B(e, t, n) {
     let r = e.status * t,
-        i = null != n ? (r * h.D6 - r) / 2 : 0,
+        i = null != n ? (r * g.D6 - r) / 2 : 0,
         a = (e.status - r) / 2,
         o = e.size - r - i - e.offset - a,
-        s = e.size - r * h.EW - e.offset - a,
+        s = e.size - r * g.EW - e.offset - a,
         l = Math.round((o / t) * 100) / 100,
         c = Math.round((s / t) * 100) / 100;
     return "translate(".concat(l, ", ").concat(c, ")");
@@ -574,8 +574,8 @@ function V(e) {
             fromColor: a,
             isMobile: l = !1,
             isTyping: _ = !1,
-            typingIndicatorRef: m,
-            isSpeaking: g = !1,
+            typingIndicatorRef: h,
+            isSpeaking: m = !1,
             size: E,
             src: y,
             status: v,
@@ -639,11 +639,11 @@ function V(e) {
             "avatarCutoutRadius",
             "fill",
         ]),
-        et = (0, h.px)(E),
-        en = (0, h.UC)(E),
-        er = en.status * h.D6,
-        ei = en.status * h.EW,
-        ea = null != v ? (en.status * h.D6 - en.status) / 2 : 0,
+        et = (0, g.px)(E),
+        en = (0, g.UC)(E),
+        er = en.status * g.D6,
+        ei = en.status * g.EW,
+        ea = null != v ? (en.status * g.D6 - en.status) / 2 : 0,
         eo = en.size + Math.ceil(ea),
         [es, el, ec] = (0, f.q_F)(
             {
@@ -703,7 +703,7 @@ function V(e) {
                         mask: "url(#".concat(Z, ")"),
                         children: (0, r.jsx)(j, {
                             src: y,
-                            isSpeaking: g,
+                            isSpeaking: m,
                             className: U,
                         }),
                     }),
@@ -732,7 +732,7 @@ function V(e) {
                                                 mask: "url(#".concat(H, ")"),
                                             }),
                                             (0, r.jsx)(c.b, {
-                                                ref: m,
+                                                ref: h,
                                                 dotRadius: en.status / 4,
                                                 x: 0.15 * er,
                                                 y: 0.5 * ei,
@@ -761,7 +761,7 @@ function V(e) {
     );
 }
 function F(e, t, n, r, i) {
-    return null != n && null != t && (!!e || t !== n || (t === m.Skl.ONLINE && r !== i));
+    return null != n && null != t && (!!e || t !== n || (t === h.Skl.ONLINE && r !== i));
 }
 j.displayName = "AvatarImg";
 let Z = i.memo(function (e) {

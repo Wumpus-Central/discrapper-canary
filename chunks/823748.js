@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(591472),
     z = n(446226),
     W = n(517525),
-    Y = n(445384),
-    q = n(613464),
+    q = n(445384),
+    Y = n(613464),
     K = n(705563),
     X = n(730647),
     Q = n(66999),
@@ -97,8 +97,8 @@ var r = n(951288),
     eV = n(158776),
     ez = n(19780),
     eW = n(944486),
-    eY = n(914010),
-    eq = n(594174),
+    eq = n(914010),
+    eY = n(594174),
     eK = n(979651),
     eX = n(933557),
     eQ = n(287746),
@@ -211,7 +211,7 @@ class to extends i.PureComponent {
     }
     openDMContextMenu(e, t) {
         s()(null != t, "Missing channel in Channel.openDMContextMenu");
-        let i = eq.default.getUser(t.getRecipientId());
+        let i = eY.default.getUser(t.getRecipientId());
         s()(null != i, "Missing user in Channel.openDMContextMenu"),
             (0, y.jW)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -395,7 +395,7 @@ class to extends i.PureComponent {
                             return (n) => (0, r.jsx)(e, tl(ti({}, n), { guildId: t }));
                         },
                         {
-                            onCloseCallback: () => Y.Z.viewPrompt(e9.r.REAL_NAME_PROMPT, t),
+                            onCloseCallback: () => q.Z.viewPrompt(e9.r.REAL_NAME_PROMPT, t),
                             modalKey: "Guild Hub Real Name Modal",
                         },
                     ),
@@ -459,7 +459,7 @@ class to extends i.PureComponent {
                 return (0, r.jsx)("div", {
                     style: { width: e3.$Y6 },
                     className: tn.guildSidebar,
-                    children: (0, r.jsx)(q.Z, {
+                    children: (0, r.jsx)(Y.Z, {
                         guildId: e,
                         userId: t,
                         onClose: () => ev.Z.closeGuildSidebar(e),
@@ -903,8 +903,8 @@ let ts = (0, O.Z)(to),
             H = (0, p.e7)([V.Z], () => V.Z.getFrameLayoutMode() === e5.U.FOCUSED),
             { welcomeModalChannelId: G } = (0, d.TH)(),
             W = (0, p.e7)([em.Z], () => null != c && em.Z.isLurking(c.guild_id), [c]),
-            Y = (0, p.e7)([ek.Z], () => ek.Z.hasSeen(null == c ? void 0 : c.guild_id, W), [c, W]),
-            q = (0, p.e7)(
+            q = (0, p.e7)([ek.Z], () => ek.Z.hasSeen(null == c ? void 0 : c.guild_id, W), [c, W]),
+            Y = (0, p.e7)(
                 [R.Z, P.ZP],
                 () =>
                     null != P.ZP.getConnectedActivityLocation() && P.ZP.getActivityPanelMode() === e4.Ez.PANEL
@@ -917,7 +917,7 @@ let ts = (0, O.Z)(to),
                 [o],
             ),
             K = (0, p.e7)([R.Z], () => (null != c ? R.Z.getSelectedParticipant(c.id) : null)),
-            X = (0, p.e7)([eq.default], () => eq.default.getCurrentUser()),
+            X = (0, p.e7)([eY.default], () => eY.default.getCurrentUser()),
             J = (0, eh.Z)(null == _ ? void 0 : _.id),
             $ = (0, eD.Z)(G, null == _ ? void 0 : _.id),
             { section: ee, channelSidebarState: et } = (0, p.cj)(
@@ -930,7 +930,7 @@ let ts = (0, O.Z)(to),
             ),
             en = null == _ ? void 0 : _.id,
             er = (0, p.e7)([eL.ZP], () => eL.ZP.getGuildSidebarState(en), [en]),
-            ei = (0, p.e7)([eY.Z], () => eY.Z.getGuildId()) === e3.I_8,
+            ei = (0, p.e7)([eq.Z], () => eq.Z.getGuildId()) === e3.I_8,
             el = (0, eg.D)(),
             ea = (0, eX.ZP)(c),
             eo = (0, eX.ZP)(c, !0),
@@ -980,7 +980,7 @@ let ts = (0, O.Z)(to),
                         formattedChannelName: eo,
                         parentChannel: y,
                         voiceChannel: m,
-                        layout: q,
+                        layout: Y,
                         needSubscriptionToAccess: C,
                         isLurking: W,
                         hasModalOpen: ex,
@@ -1004,7 +1004,7 @@ let ts = (0, O.Z)(to),
                             [c],
                         ),
                         showRealNameModal: J,
-                        showWelcomeModal: !Y && $,
+                        showWelcomeModal: !q && $,
                         showFollowButton:
                             ((null == c ? void 0 : c.type) === e3.d4z.GUILD_ANNOUNCEMENT &&
                                 (null == _ ? void 0 : _.features.has(e3.oNc.NEWS))) ||

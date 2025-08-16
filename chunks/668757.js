@@ -5,6 +5,7 @@ n.d(t, {
     PJ: () => r.PJ,
     Ub: () => r.Ub,
     X6: () => r.X6,
+    gi: () => r.gi,
     oC: () => r.oC,
     pf: () => r.pf,
     rs: () => r.rs,
