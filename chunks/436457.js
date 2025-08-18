@@ -13,8 +13,8 @@ var a = n(951288),
     m = n(782605),
     b = n(981631),
     h = n(388032),
-    N = n(888113);
-let x =
+    x = n(888113);
+let N =
     ((r = window.GLOBAL_ENV.INVITE_HOST),
     (o = ""),
     null == r && ((r = location.host), (o = b.Z5c.INVITE(""))),
@@ -67,14 +67,14 @@ function y(e) {
         content: (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsxs)(u.xBx, {
-                    className: N.header,
+                    className: x.header,
                     direction: p.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
                         (0, a.jsx)(u.X6q, {
                             variant: "heading-xl/bold",
                             color: "header-primary",
-                            className: N.title,
+                            className: x.title,
                             children: h.intl.string(h.t.riOUtL),
                         }),
                         (0, a.jsx)(u.Text, {
@@ -88,16 +88,14 @@ function y(e) {
                     children: [
                         (0, a.jsx)("form", {
                             onSubmit: O,
-                            className: N.inputForm,
+                            className: x.inputForm,
                             children: (0, a.jsx)(u.xJW, {
                                 title: h.intl.string(h.t.qreV29),
                                 error: v,
-                                titleClassName: l()(N.formTitle, { [N.error]: null != v }),
-                                children: (0, a.jsx)(c.Is, {
+                                titleClassName: l()(x.formTitle, { [x.error]: null != v }),
+                                children: (0, a.jsx)(u.oil, {
                                     value: s,
                                     onChange: y,
-                                    className: N.input,
-                                    inputClassName: N.inputInner,
                                     inputRef: T,
                                 }),
                             }),
@@ -106,13 +104,13 @@ function y(e) {
                             color: "header-secondary",
                             variant: "text-xs/normal",
                             children: h.intl.format(h.t.lHTZl5, {
-                                examples: "".concat(x).concat("wumpus-friends", ", ").concat("hTKzmak"),
+                                examples: "".concat(N).concat("wumpus-friends", ", ").concat("hTKzmak"),
                             }),
                         }),
                         (0, a.jsx)(u.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            className: N.connectCTA,
+                            className: x.connectCTA,
                             children: h.intl.format(h.t["8F/who"], {
                                 onClick: () => {
                                     r(), f.Z.open(b.oAB.CONNECTIONS);
@@ -133,7 +131,7 @@ function y(e) {
                     loading: j,
                 }),
                 (0, a.jsx)(c.zx, {
-                    className: N.__invalid_skipButton,
+                    className: x.__invalid_skipButton,
                     look: c.zx.Looks.BLANK,
                     size: c.zx.Sizes.MIN,
                     onClick: t,

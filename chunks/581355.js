@@ -1,4 +1,4 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => p });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -11,10 +11,10 @@ var r = n(951288),
     h = n(609776),
     g = n(289584),
     _ = n(180899),
-    m = n(157925),
-    b = n(388032),
+    b = n(157925),
+    m = n(388032),
     f = n(785550);
-function p(e) {
+function x(e) {
     let {
         guild: t,
         channel: n,
@@ -49,13 +49,13 @@ function p(e) {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         className: f.headerTitle,
-                        children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj),
+                        children: null == i ? m.intl.string(m.t.DDF0cH) : m.intl.string(m.t.YPdQOj),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         className: f.headerSubtitle,
-                        children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t["I+9bLy"]),
+                        children: null == i ? m.intl.string(m.t.bqQIwc) : m.intl.string(m.t["I+9bLy"]),
                     }),
                 ],
             }),
@@ -72,11 +72,11 @@ function p(e) {
         ],
     });
 }
-function x(e) {
+function p(e) {
     var t,
         n,
-        { channel: d, onClose: h, transitionState: b } = e,
-        x = (function (e, t) {
+        { channel: d, onClose: h, transitionState: m } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -100,7 +100,7 @@ function x(e) {
     let v = (0, o.Dt)(),
         j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
         N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: y, error: I, onSave: O } = (0, g.Z)(d, h),
+        { loading: y, error: O, onSave: I } = (0, g.Z)(d, h),
         {
             modalStep: C,
             setModalStep: E,
@@ -111,9 +111,9 @@ function x(e) {
             handleDelayedSave: k,
         } = (0, _.Z)({
             stageInstance: N,
-            defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
-            error: I,
-            onSave: O,
+            defaultStep: b.lv.STAGE_CHANNEL_SETTINGS,
+            error: O,
+            onSave: I,
         });
     return (i.useEffect(() => {
         null == j && h();
@@ -148,10 +148,10 @@ function x(e) {
                   return e;
               })(
                   {
-                      transitionState: b,
+                      transitionState: m,
                       "aria-labelledby": v,
                   },
-                  x,
+                  p,
               )),
               (n = n =
                   {
@@ -163,25 +163,25 @@ function x(e) {
                           onSlideReady: T,
                           children: [
                               (0, r.jsx)(a.Mi4, {
-                                  id: m.lv.STAGE_CHANNEL_SETTINGS,
+                                  id: b.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)("div", {
                                       className: f.slideContainer,
-                                      children: (0, r.jsx)(p, {
+                                      children: (0, r.jsx)(x, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
                                           headerId: v,
                                           onClose: h,
                                           loading: y,
-                                          error: I,
+                                          error: O,
                                           onSave: P,
                                           defaultOptions: w,
-                                          isSlideReady: S === m.lv.STAGE_CHANNEL_SETTINGS,
+                                          isSlideReady: S === b.lv.STAGE_CHANNEL_SETTINGS,
                                       }),
                                   }),
                               }),
                               (0, r.jsx)(a.Mi4, {
-                                  id: m.lv.PUBLIC_STAGE_PREVIEW,
+                                  id: b.lv.PUBLIC_STAGE_PREVIEW,
                                   children: (0, r.jsx)("div", {
                                       className: f.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
@@ -192,7 +192,7 @@ function x(e) {
                                           loading: y,
                                           onNext: k,
                                           onCancel: h,
-                                          onBack: () => E(m.lv.STAGE_CHANNEL_SETTINGS),
+                                          onBack: () => E(b.lv.STAGE_CHANNEL_SETTINGS),
                                       }),
                                   }),
                               }),

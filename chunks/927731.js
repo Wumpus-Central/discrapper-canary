@@ -82,7 +82,7 @@ function I(e) {
         }, [E, w]),
         D = (0, p.ss)(t),
         A = (0, p.Gp)(),
-        k = i.useCallback(() => {
+        L = i.useCallback(() => {
             A &&
                 g.jJ.trackExposure({
                     guildId: t,
@@ -107,19 +107,19 @@ function I(e) {
                       )
                     : S();
         }, [t, T, S, l, A, D]),
-        L = x.Lo(Z),
+        k = x.Lo(Z),
         M = i.useCallback(() => Z.forEach(x.GM), [Z]),
         G = (0, b.mY)(),
         U = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         i.useEffect(
             () => (
-                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
+                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && L(),
                 () => {
                     (0, d.Mr3)(N);
                 }
             ),
-            [U, k],
+            [U, L],
         ),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -146,7 +146,7 @@ function I(e) {
                             ),
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: G ? void 0 : k,
+                            onClick: G ? void 0 : L,
                             className: a()(O.createTierButton, { [O.disabled]: G }),
                             "aria-disabled": G,
                             children: [
@@ -167,7 +167,7 @@ function I(e) {
                 (0, r.jsx)(c.W, {
                     component: "div",
                     className: O.contentRegion,
-                    children: L && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: M }) }),
+                    children: k && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: M }) }),
                 }),
             ],
         })

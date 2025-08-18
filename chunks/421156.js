@@ -3,7 +3,6 @@ e.exports = {
     modalCloseButton: "modalCloseButton__6c75d",
     content: "content__6c75d",
     icon: "icon__6c75d",
-    input: "input__6c75d",
     settings: "settings__6c75d",
     credentialList: "credentialList__6c75d",
     description: "description__6c75d",

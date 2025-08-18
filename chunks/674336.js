@@ -7,6 +7,5 @@ e.exports = {
     row: "row__6be08",
     buttonsContainer: "buttonsContainer__6be08",
     surveyOverride: "surveyOverride__6be08",
-    surveyOverrideInput: "surveyOverrideInput__6be08",
     codebox: "codebox__6be08",
 };

@@ -58,8 +58,8 @@ var r = n(230367),
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.DRAFT = 1)] = "DRAFT"),
-            (e[(e.TESTING = 2)] = "TESTING"),
-            (e[(e.TESTING_ENDED = 3)] = "TESTING_ENDED"),
+            (e[(e.MEASUREMENT = 2)] = "MEASUREMENT"),
+            (e[(e.MEASUREMENT_ENDED = 3)] = "MEASUREMENT_ENDED"),
             (e[(e.ROLLING_OUT = 4)] = "ROLLING_OUT"),
             (e[(e.ROLLED_OUT = 5)] = "ROLLED_OUT"),
             (e[(e.ARCHIVED = 6)] = "ARCHIVED"),
@@ -82,7 +82,7 @@ class g extends o.C {
             unitType: 0,
             variants: [],
             rules: [],
-            status: 0,
+            phase: 0,
             surfaces: [],
             owningTeamName: "",
             cachedNotificationChannelId: "0",
@@ -155,7 +155,7 @@ class g extends o.C {
                     a.rules.push(s.$9.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 18:
-                    a.status = e.int32();
+                    a.phase = e.int32();
                     break;
                 case 19:
                     if (i === r.TD.LengthDelimited)
@@ -212,7 +212,7 @@ class g extends o.C {
             b.internalBinaryWrite(e.variants[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
             s.$9.internalBinaryWrite(e.rules[i], t.tag(16, r.TD.LengthDelimited).fork(), n).join();
-        if ((0 !== e.status && t.tag(18, r.TD.Varint).int32(e.status), e.surfaces.length)) {
+        if ((0 !== e.phase && t.tag(18, r.TD.Varint).int32(e.phase), e.surfaces.length)) {
             t.tag(19, r.TD.LengthDelimited).fork();
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);
             t.join();
@@ -328,9 +328,9 @@ class g extends o.C {
             },
             {
                 no: 18,
-                name: "status",
+                name: "phase",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Status", m],
+                T: () => ["discord_protos.discord_experimentation.v1.Phase", m],
             },
             {
                 no: 19,

@@ -6,12 +6,12 @@ var r = n(951288),
     i = n(815061),
     l = n(442837),
     c = n(481060),
-    u = n(393238),
-    d = n(607070),
+    d = n(393238),
+    u = n(607070),
     p = n(960919),
     m = n(509212),
-    g = n(113434),
-    f = n(566078),
+    f = n(113434),
+    g = n(566078),
     x = n(472144),
     h = n(644646),
     b = n(251360),
@@ -34,11 +34,11 @@ function S(e) {
             onReceiveErrorHints: q,
             sourceQuestContent: I,
         } = e,
-        Q = s.useMemo(() => f.r.build(P.config), [P.config]),
+        Q = s.useMemo(() => g.r.build(P.config), [P.config]),
         D = Q.defaultRewardName,
         V = Q.defaultRewardNameWithArticle,
         M = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: L, scrollHeight: W } = (0, u.kE)(),
+        { ref: L, scrollHeight: W } = (0, d.kE)(),
         Z = 104 !== W,
         { onAssetLoadComplete: U } = s.useContext(b.k),
         { expansionSpring: H } = (0, c.q_F)({
@@ -88,8 +88,8 @@ function S(e) {
         z = (null == (o = P.userStatus) ? void 0 : o.claimedAt) != null,
         X = (0, m.xN)(P.config),
         K = (0, m.LM)(P.config),
-        { completedRatio: Y, completedRatioDisplay: G } = (0, g.I)(P),
-        J = (0, g.Bd)(P, I),
+        { completedRatio: Y, completedRatioDisplay: G } = (0, f.I)(P),
+        J = (0, f.Bd)(P, I),
         $ = s.useMemo(
             () =>
                 z && X
@@ -143,7 +143,7 @@ function S(e) {
                     children: J,
                 });
         }, [J]),
-        et = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+        et = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, r.jsxs)("div", {
         className: E.container,
         children: [

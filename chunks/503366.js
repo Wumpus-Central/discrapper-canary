@@ -1,5 +1,4 @@
 e.exports = {
-    guildSelector: "guildSelector_f494f4",
     iconTextWrap: "iconTextWrap_f494f4",
     text: "text_f494f4",
     value: "value_f494f4 iconTextWrap_f494f4",

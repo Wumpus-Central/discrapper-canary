@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(647438),
     r = n(626135),
     a = n(74538),
-    o = n(45474),
-    s = n(981631);
+    s = n(45474),
+    o = n(981631);
 let l = (e, t, n) => {
     let [a, l] = i.useState(e),
         [u, d] = i.useState(Date.now()),
@@ -15,7 +15,7 @@ let l = (e, t, n) => {
         p = i.useCallback(
             (e) => {
                 r.default.track(
-                    s.rMx.CANCELLATION_FLOW_STEP,
+                    o.rMx.CANCELLATION_FLOW_STEP,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -42,8 +42,8 @@ let l = (e, t, n) => {
                         return e;
                     })(
                         {
-                            from_step: o.O[a],
-                            to_step: o.O[e],
+                            from_step: s.O[a],
+                            to_step: s.O[e],
                             step_duration_ms: Date.now() - u,
                             flow_duration_ms: Date.now() - m,
                             location_stack: n,

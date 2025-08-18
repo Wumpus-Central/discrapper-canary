@@ -62,31 +62,31 @@ function O(e, t) {
     );
 }
 function v(e) {
-    let { transitionState: t, onClose: a, ticket: c, challenge: m } = e,
-        b = (0, d.Dt)(),
-        [C, O] = r.useState(""),
-        [v, S] = r.useState(!0),
-        [T, N] = r.useState(x.x.INIT),
-        [I, y] = r.useState(""),
-        [A, P] = r.useState(null),
-        R = async () => {
+    let { transitionState: t, onClose: a, ticket: l, challenge: c } = e,
+        m = (0, d.Dt)(),
+        [b, C] = r.useState(""),
+        [O, v] = r.useState(!0),
+        [S, T] = r.useState(x.x.INIT),
+        [N, I] = r.useState(""),
+        [y, A] = r.useState(null),
+        P = async () => {
             let e;
-            N(x.x.REGISTER);
+            T(x.x.REGISTER);
             let t =
                 p.isPlatformEmbedded && h.ZP.supportsFeature(_.eRX.WEBAUTHN)
-                    ? h.ZP.webAuthnRegister(m)
-                    : s.Ue(JSON.parse(m)).then((e) => JSON.stringify(e));
+                    ? h.ZP.webAuthnRegister(c)
+                    : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), N(x.x.INIT);
+                g.Z.captureException(e), A(j.intl.string(j.t.xSCvBQ)), T(x.x.INIT);
                 return;
             }
-            y(e), N(x.x.NAME);
+            I(e), T(x.x.NAME);
         };
     return (0, i.jsxs)(o.Y0X, {
         transitionState: t,
-        "aria-labelledby": b,
+        "aria-labelledby": m,
         parentComponent: "UserSettingsWebAuthn",
         children: [
             (0, i.jsxs)(o.xBx, {
@@ -94,12 +94,12 @@ function v(e) {
                 separator: !1,
                 children: [
                     (0, i.jsxs)(o.X6q, {
-                        id: b,
+                        id: m,
                         variant: "heading-lg/semibold",
                         children: [
-                            T === x.x.INIT && j.intl.string(j.t.vrOCCg),
-                            T === x.x.REGISTER && j.intl.string(j.t.wePEBA),
-                            T === x.x.NAME && j.intl.string(j.t["cY/IOj"]),
+                            S === x.x.INIT && j.intl.string(j.t.vrOCCg),
+                            S === x.x.REGISTER && j.intl.string(j.t.wePEBA),
+                            S === x.x.NAME && j.intl.string(j.t["cY/IOj"]),
                         ],
                     }),
                     (0, i.jsx)(o.olH, {
@@ -109,7 +109,7 @@ function v(e) {
                 ],
             }),
             (0, i.jsxs)(o.MyZ, {
-                activeSlide: T,
+                activeSlide: S,
                 width: 440,
                 children: [
                     (0, i.jsxs)(o.Mi4, {
@@ -127,11 +127,11 @@ function v(e) {
                                     }),
                                     (0, i.jsx)("div", {
                                         children:
-                                            null != A &&
+                                            null != y &&
                                             (0, i.jsx)(o.Text, {
                                                 variant: "text-md/normal",
                                                 color: "status-danger",
-                                                children: A,
+                                                children: y,
                                             }),
                                     }),
                                     (0, i.jsx)("div", {
@@ -146,7 +146,7 @@ function v(e) {
                                 children: (0, i.jsx)(o.zxk, {
                                     variant: "primary",
                                     text: j.intl.string(j.t.oibaQU),
-                                    onClick: R,
+                                    onClick: P,
                                 }),
                             }),
                         ],
@@ -186,13 +186,13 @@ function v(e) {
                         children: (0, i.jsxs)("form", {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, f.Sr)(C, c, I)
+                                    (0, f.Sr)(b, l, N)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            P(j.intl.string(j.t.fEptJC)), N(x.x.INIT);
+                                            A(j.intl.string(j.t.fEptJC)), T(x.x.INIT);
                                         });
                             },
                             children: [
@@ -206,17 +206,17 @@ function v(e) {
                                                 src: n(637163),
                                             }),
                                         }),
-                                        (0, i.jsxs)("div", {
+                                        (0, i.jsxs)(o.Kqy, {
+                                            gap: 8,
                                             children: [
                                                 (0, i.jsx)(o.Text, {
                                                     variant: "text-md/normal",
                                                     children: j.intl.string(j.t["Jzd+z8"]),
                                                 }),
-                                                (0, i.jsx)(l.Is, {
-                                                    className: E.input,
-                                                    value: C,
+                                                (0, i.jsx)(o.oil, {
+                                                    value: b,
                                                     onChange: (e) => {
-                                                        O(e), S(0 === e.length);
+                                                        C(e), v(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1,
@@ -234,13 +234,13 @@ function v(e) {
                                                 variant: "primary",
                                                 text: j.intl.string(j.t["5dyZ1d"]),
                                                 type: "submit",
-                                                disabled: v,
+                                                disabled: O,
                                             }),
                                             (0, i.jsx)(o.zxk, {
                                                 variant: "secondary",
                                                 text: j.intl.string(j.t["13/7kZ"]),
                                                 onClick: () => {
-                                                    N(x.x.INIT);
+                                                    T(x.x.INIT);
                                                 },
                                             }),
                                         ],

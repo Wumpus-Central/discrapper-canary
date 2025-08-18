@@ -6,10 +6,5 @@ e.exports = {
     content: "content_b404ff",
     password: "password_b404ff",
     cancel: "cancel_b404ff",
-    multiInput: "multiInput_b404ff",
-    multiInputFirst: "multiInputFirst_b404ff",
-    lowercase: "lowercase_b404ff",
-    multiInputField: "multiInputField_b404ff",
-    multiInputLast: "multiInputLast_b404ff",
     discriminatorChangeWarning: "discriminatorChangeWarning_b404ff",
 };

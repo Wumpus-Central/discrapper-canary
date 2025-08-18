@@ -1,73 +1,73 @@
 n.d(t, {
-    X: () => C,
+    X: () => j,
     o: () => f,
 });
-var r,
-    s = n(951288);
+var s,
+    o = n(951288);
 n(647438);
-var o = n(120356),
-    i = n.n(o),
+var r = n(120356),
+    i = n.n(r),
     a = n(755721),
     l = n(481060),
-    c = n(617136),
-    u = n(497505),
+    u = n(617136),
+    c = n(497505),
     d = n(110560),
     m = n(266843),
     p = n(46140),
-    g = n(388032),
-    h = n(107508),
+    h = n(388032),
+    g = n(107508),
     x = n(87181);
-function j() {
-    return (0, s.jsx)("div", {
-        className: h.buttonContainer,
-        children: (0, s.jsx)(a.zx, {
-            className: h.button,
+function C() {
+    return (0, o.jsx)("div", {
+        className: g.buttonContainer,
+        children: (0, o.jsx)(a.zx, {
+            className: g.button,
             color: a.Tt.BRAND,
             onClick: () => {
-                (0, d.navigateToQuestHome)({ fromContent: u.jn.QUESTS_EMBED });
+                (0, d.navigateToQuestHome)({ fromContent: c.jn.QUESTS_EMBED });
             },
-            children: g.intl.string(g.t.GURBQk),
+            children: h.intl.string(h.t.GURBQk),
         }),
     });
 }
-var C = (((r = {}).NOT_FOUND = "not_found"), (r.MOBILE_ONLY = "mobile_only"), r);
+var j = (((s = {}).NOT_FOUND = "not_found"), (s.MOBILE_ONLY = "mobile_only"), s);
 function f(e) {
     let { questId: t, reason: n = "not_found" } = e,
-        { containerRef: r, size: o } = (0, m.h)();
+        { containerRef: s, size: r } = (0, m.h)();
     return (
-        (0, c.Zk)(p.V_.UNKNOWN_QUEST, t),
-        (0, s.jsxs)("div", {
+        (0, u.Zk)(p.V_.UNKNOWN_QUEST, t),
+        (0, o.jsxs)("div", {
             ref: (e) => {
-                r.current = e;
+                s.current = e;
             },
-            className: i()(h.container, {
-                [h.wide]: "lg" === o,
-                [h.tall]: "lg" !== o,
+            className: i()(g.container, {
+                [g.wide]: "lg" === r,
+                [g.tall]: "lg" !== r,
             }),
             children: [
-                (0, s.jsxs)("div", {
-                    className: h.contentContainer,
+                (0, o.jsxs)("div", {
+                    className: g.contentContainer,
                     children: [
-                        (0, s.jsx)(l.X6q, {
-                            variant: "lg" === o ? "heading-xl/bold" : "heading-lg/bold",
+                        (0, o.jsx)(l.X6q, {
+                            variant: "lg" === r ? "heading-xl/bold" : "heading-lg/bold",
                             color: "header-primary",
-                            children: g.intl.string(g.t.vnP31d),
+                            children: h.intl.string(h.t.vnP31d),
                         }),
-                        (0, s.jsx)(l.Text, {
-                            variant: "lg" === o ? "text-sm/medium" : "text-xs/medium",
+                        (0, o.jsx)(l.Text, {
+                            variant: "lg" === r ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: h.__invalid_mobileWebCopy,
-                            children: g.intl.string("mobile_only" === n ? g.t.Pag1gY : g.t.CTn0yc),
+                            className: g.__invalid_mobileWebCopy,
+                            children: h.intl.string("mobile_only" === n ? h.t.Pag1gY : h.t.CTn0yc),
                         }),
-                        (0, s.jsx)(j, {}),
+                        (0, o.jsx)(C, {}),
                     ],
                 }),
-                (0, s.jsx)("div", {
-                    className: h.imgContainer,
-                    children: (0, s.jsx)("img", {
+                (0, o.jsx)("div", {
+                    className: g.imgContainer,
+                    children: (0, o.jsx)("img", {
                         src: x,
                         alt: "",
-                        className: h.missingQuestImage,
+                        className: g.missingQuestImage,
                     }),
                 }),
             ],

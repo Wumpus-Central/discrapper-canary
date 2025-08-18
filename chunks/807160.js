@@ -599,7 +599,8 @@ class el extends (i = s.PureComponent) {
                 className: K.descriptionIcon,
             })),
                 (t = i.description);
-        let b = (0, r.jsx)("div", {
+        let b = (0, r.jsx)(p.Text, {
+                variant: "text-sm/normal",
                 className: K.date,
                 children: (0, M.vc)(c()(i.createdAt), "MM/DD/YYYY"),
             }),
@@ -696,7 +697,8 @@ class el extends (i = s.PureComponent) {
                         X(
                             {
                                 onClick: this.handleExpandInfo,
-                                className: l()(i ? K.payment : K.hoverablePayment, t, { [K.compact]: n }),
+                                "data-expanded": i,
+                                className: l()(K.payment, t, { [K.compact]: n }),
                                 focusProps: { offset: 4 },
                             },
                             e,
@@ -706,6 +708,7 @@ class el extends (i = s.PureComponent) {
                                 (0, r.jsxs)(x.Z, {
                                     className: K.summaryInfo,
                                     align: x.Z.Align.CENTER,
+                                    "data-expanded": i,
                                     children: [
                                         this.renderDescription(),
                                         (0, r.jsxs)("div", {

@@ -6,12 +6,12 @@ var r = n(951288),
     i = n(959078),
     l = n(442837),
     c = n(481060),
-    u = n(607070),
-    d = n(553795),
+    d = n(607070),
+    u = n(553795),
     p = n(617136),
     m = n(915750),
-    g = n(111382),
-    f = n(509212),
+    f = n(111382),
+    g = n(509212),
     x = n(113434),
     h = n(497505),
     b = n(667105),
@@ -29,9 +29,9 @@ function y(e) {
 }
 function E(e) {
     let { quest: t, useReducedMotion: n } = e,
-        o = (0, g.n)(),
+        o = (0, f.n)(),
         l = (0, b.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
-        u = (0, b.g2)({ useReducedMotion: n }),
+        d = (0, b.g2)({ useReducedMotion: n }),
         _ = (0, p.O5)(),
         j = (0, m.aM)(),
         {
@@ -47,9 +47,9 @@ function E(e) {
                     questContentCTA: p.jZ.DEFIBRILLATOR,
                     sourceQuestContent: h.jn.QUEST_BAR_V2,
                 }),
-                    u.startAnimation();
+                    d.startAnimation();
             },
-            afterRequest: u.stopAnimation,
+            afterRequest: d.stopAnimation,
         }),
         { header: T, renderBody: w } = s.useMemo(() => {
             let e = E.length > 0,
@@ -63,16 +63,16 @@ function E(e) {
                           (0, r.jsx)(r.Fragment, {
                               children: E.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
-                                      let s = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          o = (0, f.C9)(e),
-                                          a = (0, f._j)(e);
+                                      let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
+                                          o = (0, g.C9)(e),
+                                          a = (0, g._j)(e);
                                       return (0, r.jsx)(
                                           y,
                                           {
                                               children: v.intl.format(o, {
                                                   account_name: null == s ? void 0 : s.name,
                                                   onClick: () => {
-                                                      (0, f.fY)(
+                                                      (0, g.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a,
@@ -122,7 +122,7 @@ function E(e) {
                     (0, r.jsx)(c.P3F, {
                         className: a()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: O }),
                         onClick: () => S(),
-                        children: u.render(),
+                        children: d.render(),
                     }),
                 ],
             }),
@@ -135,21 +135,21 @@ function E(e) {
 }
 let O = function (e) {
     let { quest: t, taskDetails: n } = e,
-        o = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, x.z6)(),
         i = s.useMemo(
-            () => (0, f.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            () => (0, g.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
             [a.xboxAndPlaystationAccounts, t],
         ),
         {
             steps: c,
-            hasConnectedAccounts: d,
+            hasConnectedAccounts: u,
             isProgressingQuestForLaunchedGame: p,
             isQuestComplete: m,
         } = s.useMemo(() => {
             var e;
             let s = i.length > 0,
-                o = s && (0, f.Bz)(t),
+                o = s && (0, g.Bz)(t),
                 l = t.config.messages.gameTitle,
                 c = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -228,7 +228,7 @@ let O = function (e) {
         heading: v.intl.string(v.t.UPWlJi),
         steps: c,
         children:
-            d &&
+            u &&
             !p &&
             !m &&
             (0, r.jsx)(E, {

@@ -110,25 +110,6 @@ let R = i.memo(function (e) {
                             }),
                         renderGuildHeaderDropdownButton: o,
                     });
-                case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
-                    return (0, r.jsx)(L, {
-                        renderPopout: (0, r.jsx)(O.ZP, {
-                            onComponentMount: f,
-                            header: T.intl.string(T.t.nxtaFx),
-                            asset: (0, r.jsx)("img", {
-                                alt: "",
-                                src: R,
-                                className: P.fullWidthImage,
-                            }),
-                            content: T.intl.format(T.t.ujItEh, {}),
-                            buttonCTA: T.intl.string(T.t.UzVPra),
-                            secondaryButtonCTA: T.intl.string(T.t["KkK/aG"]),
-                            onSecondaryClick: () => Z(),
-                            onClick: () => Z(i),
-                            markAsDismissed: k,
-                        }),
-                        renderGuildHeaderDropdownButton: o,
-                    });
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, r.jsx)(L, {
                         renderPopout: (0, r.jsx)(O.ZP, {

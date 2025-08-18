@@ -12,10 +12,10 @@ var i = n(442837),
     h = n(501655),
     g = n(659972),
     _ = n(981631),
-    m = n(765305),
-    b = n(388032),
+    b = n(765305),
+    m = n(388032),
     f = n(493748);
-function p(e) {
+function x(e) {
     let { icon: t } = e;
     return (0, r.jsx)("div", {
         className: f.iconContainer,
@@ -25,7 +25,7 @@ function p(e) {
         }),
     });
 }
-function x(e) {
+function p(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {
         className: f.listItemContainer,
@@ -53,18 +53,18 @@ function v(e) {
             channel_id: l.id,
             topic: a.topic,
             description: a.description,
-            privacy_level: null != (t = a.privacyLevel) ? t : m.j8.PUBLIC,
+            privacy_level: null != (t = a.privacyLevel) ? t : b.j8.PUBLIC,
         },
         _ = (0, u.w8)(l.id, h.pV.SPEAKER),
-        b = (0, u.Rk)(l.id, h.pV.AUDIENCE),
-        p = _.slice(0, 5);
+        m = (0, u.Rk)(l.id, h.pV.AUDIENCE),
+        x = _.slice(0, 5);
     return (
         null ==
-            p.find((e) => {
+            x.find((e) => {
                 var t;
                 return (null == (t = e.user) ? void 0 : t.id) === (null == s ? void 0 : s.id);
             }) &&
-            p.push({
+            x.push({
                 user: s,
                 userNick: d.ZP.getName(n.id, l.id, s),
             }),
@@ -78,9 +78,9 @@ function v(e) {
                     showGuildPopout: !1,
                     setShowGuildPopout: () => {},
                     source: g.k.UNSPECIFIED,
-                    speakers: p,
+                    speakers: x,
                     speakerCount: _.length,
-                    audienceCount: Math.max(1337, b),
+                    audienceCount: Math.max(1337, m),
                     channelName: l.name,
                 }),
             }),
@@ -108,39 +108,39 @@ function j(e) {
                                       id: o,
                                       className: f.__invalid_title,
                                       variant: "heading-xl/semibold",
-                                      children: b.intl.string(b.t.GXpXTE),
+                                      children: m.intl.string(m.t.GXpXTE),
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       className: f.subtitle,
                                       color: "header-secondary",
                                       variant: "text-sm/normal",
-                                      children: b.intl.string(b.t.JaYMvL),
+                                      children: m.intl.string(m.t.JaYMvL),
                                   }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
                               className: f.__invalid_list,
                               children: [
-                                  (0, r.jsx)(x, {
-                                      icon: (0, r.jsx)(p, { icon: a.Jmo }),
-                                      text: b.intl.string(b.t.u6oOcn),
+                                  (0, r.jsx)(p, {
+                                      icon: (0, r.jsx)(x, { icon: a.Jmo }),
+                                      text: m.intl.string(m.t.u6oOcn),
                                   }),
-                                  (0, r.jsx)(x, {
-                                      icon: (0, r.jsx)(p, { icon: a.iFz }),
-                                      text: b.intl.string(b.t.QC8ymZ),
+                                  (0, r.jsx)(p, {
+                                      icon: (0, r.jsx)(x, { icon: a.iFz }),
+                                      text: m.intl.string(m.t.QC8ymZ),
                                   }),
-                                  (0, r.jsx)(x, {
-                                      icon: (0, r.jsx)(p, { icon: a.vdY }),
-                                      text: b.intl.string(b.t.mgGOT0),
+                                  (0, r.jsx)(p, {
+                                      icon: (0, r.jsx)(x, { icon: a.vdY }),
+                                      text: m.intl.string(m.t.mgGOT0),
                                   }),
-                                  (0, r.jsx)(x, {
+                                  (0, r.jsx)(p, {
                                       icon: (0, r.jsx)(s.Z, {
                                           className: f.badgeIconBackground,
                                           foreground: f.badgeIconForeground,
                                           width: 40,
                                           height: 40,
                                       }),
-                                      text: b.intl.format(b.t.qLmNLC, {
+                                      text: m.intl.format(m.t.qLmNLC, {
                                           articleURL: c.Z.getArticleURL(_.BhN.STAGE_CHANNEL_GUIDELINES),
                                       }),
                                   }),
@@ -152,7 +152,7 @@ function j(e) {
                       children: [
                           (0, r.jsx)(a.zxk, {
                               variant: "active",
-                              text: b.intl.string(b.t.s8mM8P),
+                              text: m.intl.string(m.t.s8mM8P),
                               onClick: u,
                               loading: d,
                           }),
@@ -161,7 +161,7 @@ function j(e) {
                               className: f.cancelButton,
                               children: (0, r.jsx)(a.zxk, {
                                   variant: "secondary",
-                                  text: b.intl.string(b.t["ETE/oK"]),
+                                  text: m.intl.string(m.t["ETE/oK"]),
                                   onClick: h,
                               }),
                           }),
@@ -171,7 +171,7 @@ function j(e) {
                               className: f.backButton,
                               onClick: g,
                               size: l.zx.Sizes.MIN,
-                              children: b.intl.string(b.t["13/7kZ"]),
+                              children: m.intl.string(m.t["13/7kZ"]),
                           }),
                       ],
                   }),

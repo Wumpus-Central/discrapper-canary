@@ -126,7 +126,7 @@ function Z(e) {
                     D(
                         R(
                             {
-                                className: l()(y.verticalFit, y.paginator),
+                                className: y.verticalFit,
                                 currentPageIndex: c,
                                 onChangePage: x,
                                 numPages: a,

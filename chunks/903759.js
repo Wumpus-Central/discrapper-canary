@@ -1,14 +1,14 @@
-n.d(t, { u: () => m }), n(388685);
+n.d(t, { u: () => h }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(481060),
-    a = n(327802),
+    a = n(481060),
+    i = n(327802),
     s = n(372129),
     o = n(598117),
     u = n(746622),
     c = n(388032),
     d = n(443899);
-let m = (e) => {
+let h = (e) => {
         let { setImage: t } = e,
             [n, s] = l.useState(null);
         return (0, r.jsx)("div", {
@@ -16,20 +16,20 @@ let m = (e) => {
             children: (0, r.jsxs)("div", {
                 className: d.dropZone,
                 children: [
-                    (0, r.jsx)(i.FmF, {
+                    (0, r.jsx)(a.FmF, {
                         size: "lg",
-                        color: i.TVs.colors.HEADER_MUTED,
+                        color: a.TVs.colors.HEADER_MUTED,
                         className: d.imagePlusIcon,
                     }),
                     (0, r.jsxs)("div", {
                         className: d.textContainer,
                         children: [
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 children: c.intl.format(c.t["Ks2/3d"], {
                                     selectFileHook: (e, n) =>
                                         (0, r.jsx)(
-                                            h,
+                                            m,
                                             {
                                                 translatedContent: e,
                                                 setUserImage: t,
@@ -38,7 +38,7 @@ let m = (e) => {
                                         ),
                                 }),
                             }),
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-tertiary",
                                 children: c.intl.string(c.t.UTE8Cw),
@@ -51,7 +51,7 @@ let m = (e) => {
                             variant: "text-sm/normal",
                             color: "text-danger",
                         }),
-                    (0, r.jsx)(a.X, {
+                    (0, r.jsx)(i.X, {
                         onSuccess: t,
                         onError: s,
                     }),
@@ -59,9 +59,9 @@ let m = (e) => {
             }),
         });
     },
-    h = (e) => {
+    m = (e) => {
         let { setUserImage: t, translatedContent: n } = e;
-        return (0, r.jsx)(i.P3F, {
+        return (0, r.jsx)(a.P3F, {
             focusProps: { within: !0 },
             tag: "a",
             children: (0, r.jsxs)("label", {

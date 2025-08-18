@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(781311), n(953529), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(781311), n(953529), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -276,7 +276,7 @@ let A = i.forwardRef(function (e, t) {
         ref: t,
     });
 });
-function k(e) {
+function L(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, a] = i.useState(null != n ? n : ""),
         [s, c] = i.useState(!1),
@@ -356,7 +356,7 @@ function k(e) {
         "bans-header",
     );
 }
-function L() {
+function k() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, s.e7)([C.Z], () => C.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
@@ -399,7 +399,7 @@ function L() {
         ),
         Z = i.useMemo(() => P(x, u, v), [x, P, u, v]),
         D = null != x,
-        L = Z.length % 1000 == 0 && Z.length > 0 && D,
+        k = Z.length % 1000 == 0 && Z.length > 0 && D,
         M = 0 === Z.length,
         [G, U] = i.useState({
             currentPage: 1,
@@ -420,13 +420,13 @@ function L() {
                 var t, n, r;
                 null == (t = N.current) || t.scrollToSectionTop(0),
                     (e + 1) * G.pageSize > Z.length &&
-                        L &&
+                        k &&
                         !p &&
                         ((z.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null),
                         B(z.current)),
-                    (null != F[e - 1] || L) && U((t) => R(w({}, t), { currentPage: e }));
+                    (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e }));
             },
-            [G.pageSize, Z, L, F, B, p],
+            [G.pageSize, Z, k, F, B, p],
         ),
         z = i.useRef(null);
     i.useEffect(() => {
@@ -441,7 +441,7 @@ function L() {
         : (0, r.jsxs)("div", {
               className: T.container,
               children: [
-                  (0, r.jsx)(k, {
+                  (0, r.jsx)(L, {
                       guildId: y,
                       storedSearchQuery: u,
                   }),
@@ -455,7 +455,7 @@ function L() {
                                   sortedBans: W,
                                   ref: N,
                               }),
-                          !L &&
+                          !k &&
                               M &&
                               (0, r.jsxs)(o.ubH, {
                                   theme: O,
@@ -480,7 +480,7 @@ function L() {
                       className: T.__invalid_paginationContainer,
                       children: (0, r.jsx)(o.DsT, {
                           className: T.paginationInput,
-                          totalCount: Z.length + (L ? G.pageSize : 0),
+                          totalCount: Z.length + (k ? G.pageSize : 0),
                           pageSize: G.pageSize,
                           currentPage: G.currentPage,
                           onPageChange: H,

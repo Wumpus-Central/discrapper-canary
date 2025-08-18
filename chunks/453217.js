@@ -7,12 +7,12 @@ var s = n(120356),
     i = n(481060),
     l = n(113434),
     c = n(497505),
-    u = n(685613),
-    d = n(340100),
+    d = n(685613),
+    u = n(340100),
     p = n(644646),
     m = n(788284),
-    g = n(46140),
-    f = n(388032),
+    f = n(46140),
+    g = n(388032),
     x = n(785421);
 let h = function (e) {
     var t;
@@ -56,11 +56,11 @@ let h = function (e) {
                                   quest: _,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
-                                  location: g.dr.QUESTS_BAR,
+                                  location: f.dr.QUESTS_BAR,
                                   sourceQuestContent: c.jn.QUEST_BAR,
                               }),
                               E
-                                  ? (0, r.jsx)(d.Z, {
+                                  ? (0, r.jsx)(u.Z, {
                                         className: x.questProgressBar,
                                         quest: _,
                                     })
@@ -68,14 +68,14 @@ let h = function (e) {
                                         className: x.questProgressHint,
                                         color: "always-white",
                                         variant: "text-sm/semibold",
-                                        children: f.intl.string(f.t["7e5k7O"]),
+                                        children: g.intl.string(g.t["7e5k7O"]),
                                     }),
                           ],
                       })
                     : (0, r.jsxs)("div", {
                           className: x.brandingWrapper,
                           children: [
-                              (0, r.jsx)(u.ZP, {
+                              (0, r.jsx)(d.ZP, {
                                   className: x.partnerBranding,
                                   quest: _,
                               }),
@@ -83,7 +83,7 @@ let h = function (e) {
                                   color: "always-white",
                                   variant: "heading-sm/medium",
                                   className: x.questName,
-                                  children: f.intl.format(f.t.EAYZAg, { questName: _.config.messages.questName }),
+                                  children: g.intl.format(g.t.EAYZAg, { questName: _.config.messages.questName }),
                               }),
                           ],
                       }),

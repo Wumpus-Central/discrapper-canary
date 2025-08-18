@@ -49,7 +49,6 @@ class T extends r.PureComponent {
         return t
             ? (0, i.jsx)(d.Z, {})
             : (0, i.jsxs)("div", {
-                  className: v.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(n).length
                           ? (0, i.jsx)(S, {})
@@ -78,9 +77,9 @@ class T extends r.PureComponent {
                               }),
                           }),
                       }),
-                      (0, i.jsx)(a.Zbd, {
+                      (0, i.jsx)(a.Wn, {
+                          messageType: a.QYI.INFO,
                           className: v.codeRedemptionRedirect,
-                          type: a.Zbd.Types.CUSTOM,
                           children: O.intl.format(O.t["8b+FXF"], { onClick: this.handleRedemptionRedirect }),
                       }),
                   ],

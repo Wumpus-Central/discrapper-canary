@@ -40,7 +40,6 @@ function C(e) {
     return (0, r.jsx)(s.CA, {
         title: t.label,
         children: (0, r.jsx)(c.Gi, {
-            className: u.disabledFieldBackground,
             value: n,
             disabled: !0,
         }),

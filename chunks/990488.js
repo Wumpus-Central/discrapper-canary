@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(430824),
-    o = n(594174),
+    o = n(430824),
+    s = n(594174),
     a = n(246364),
     c = n(990686),
     u = n(118346),
@@ -62,9 +62,9 @@ function b(e, t) {
 }
 function v(e) {
     let { guildId: t, formFields: n, updateFormFields: i } = e,
-        o = (0, l.e7)([s.Z], () => {
+        s = (0, l.e7)([o.Z], () => {
             var e;
-            return null == (e = s.Z.getGuild(t)) ? void 0 : e.rulesChannelId;
+            return null == (e = o.Z.getGuild(t)) ? void 0 : e.rulesChannelId;
         }),
         c = (e, t) => {
             let r = n[e];
@@ -78,7 +78,7 @@ function v(e) {
                         return (0, r.jsx)(
                             h.dd,
                             {
-                                channelId: o,
+                                channelId: s,
                                 formField: e,
                                 onChange: (e, r) =>
                                     ((e, t) => {
@@ -129,8 +129,8 @@ function v(e) {
 }
 function _(e) {
     let t,
-        { guildId: n, formFields: i, updateFormFields: s, disableVerification: a } = e,
-        d = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        { guildId: n, formFields: i, updateFormFields: o, disableVerification: a } = e,
+        d = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         m = (0, c.i)({ guildId: n });
     return ((t = m === x.sFg.NONE ? null : m === x.sFg.VERY_HIGH ? f.l : u.b), null == d)
         ? null
@@ -140,15 +140,15 @@ function _(e) {
                   (0, r.jsx)(v, {
                       guildId: n,
                       formFields: i,
-                      updateFormFields: s,
+                      updateFormFields: o,
                   }),
               ],
           });
 }
 function j(e) {
     let t,
-        { guildId: n, formFields: s, updateFormFields: a, disableVerification: d } = e,
-        m = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        { guildId: n, formFields: o, updateFormFields: a, disableVerification: d } = e,
+        m = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         h = (0, c.i)({ guildId: n }),
         p = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
         g = (null == m ? void 0 : m.verified) || p,
@@ -166,7 +166,7 @@ function j(e) {
                   !d && !_.current && null != t && (0, r.jsx)(t, { isUserVerified: b }),
                   (0, r.jsx)(v, {
                       guildId: n,
-                      formFields: s,
+                      formFields: o,
                       updateFormFields: a,
                   }),
               ],

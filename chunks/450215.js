@@ -36,10 +36,10 @@ function C(e) {
         R = (0, c.e7)([h.Z], () => h.Z.getSubscriptionListing(P)),
         Z = null == R,
         [D, A] = i.useState(Z),
-        k = null == R ? void 0 : R.subscription_plans[0],
-        L = null != (t = null == R ? void 0 : R.published) && t,
+        L = null == R ? void 0 : R.subscription_plans[0],
+        k = null != (t = null == R ? void 0 : R.published) && t,
         M = null != (n = null == R ? void 0 : R.archived) && n,
-        G = !M && !L && void 0 !== R,
+        G = !M && !k && void 0 !== R,
         U = void 0 === R,
         B = (0, f.mY)(),
         [F] = x._T(P),
@@ -49,9 +49,9 @@ function C(e) {
         V = "" !== F ? F : O.intl.string(O.t.QWhe9P),
         Y = "" !== F && null != W && "" !== z && null != H && !B,
         K = x.rU(P),
-        { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = x.Xo(),
-        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = q || J;
+        { loading: X, error: q, handleCreateOrUpdateFromEditState: J } = x.Xo(),
+        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
+        et = X || Q;
     return (0, r.jsxs)("div", {
         className: y.container,
         children: [
@@ -102,11 +102,11 @@ function C(e) {
                                             text: O.intl.string(O.t.aiwXen),
                                             className: y.unsavedBadge,
                                         }),
-                                    null != k &&
+                                    null != L &&
                                         (0, r.jsxs)(d.Text, {
                                             color: "interactive-normal",
                                             variant: "text-sm/normal",
-                                            children: [(0, m.T4)(k.price, k.currency), "/", (0, g.JE)(k)],
+                                            children: [(0, m.T4)(L.price, L.currency), "/", (0, g.JE)(L)],
                                         }),
                                 ],
                             }),
@@ -126,7 +126,7 @@ function C(e) {
                                   (0, r.jsx)(d.zxk, {
                                       variant: "primary",
                                       onClick: () =>
-                                          Q({
+                                          J({
                                               guildId: l,
                                               editStateId: P,
                                               groupListingId: E,
@@ -161,7 +161,7 @@ function C(e) {
                         allSubscriptionListings: C,
                         priceTiers: N,
                         loading: et,
-                        error: null != X ? X : $,
+                        error: null != q ? q : $,
                         handlePublishTier: () => {
                             o()(null != E, "group listing doesnt exist"),
                                 o()(null != R, "subscription listing doesnt exist"),

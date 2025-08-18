@@ -1,4 +1,4 @@
-n.d(e, { Z: () => M }), n(388685);
+n.d(e, { Z: () => B }), n(388685);
 var l = n(951288),
     a = n(647438),
     r = n(120356),
@@ -19,12 +19,12 @@ var l = n(951288),
     O = n(644540),
     v = n(359588),
     C = n(368326),
-    _ = n(720449),
-    x = n(684269),
+    x = n(720449),
+    _ = n(684269),
     T = n(397416),
     y = n(745579),
-    P = n(74340),
-    w = n(166655),
+    w = n(74340),
+    P = n(166655),
     N = n(676035),
     E = n(346565),
     D = n(562577),
@@ -34,12 +34,12 @@ var l = n(951288),
     R = n(185923),
     L = n(388032),
     k = n(343190);
-let B = "CLEAR_AFTER";
-function M(t) {
+let M = "CLEAR_AFTER";
+function B(t) {
     var e, n;
     let {
             transitionState: r,
-            onClose: M,
+            onClose: B,
             sourceAnalyticsContext: U,
             sourceAnalyticsLocations: F = [],
             prompt: Y = null,
@@ -55,12 +55,12 @@ function M(t) {
         }),
         q = (0, N.a)(),
         [X, Q] = a.useState(null != (e = null == q ? void 0 : q.state) ? e : ""),
-        [$, J] = a.useState(null != (n = null == q ? void 0 : q.emoji) ? n : null),
-        [tt, te] = a.useState((0, x.Z)()),
+        [J, $] = a.useState(null != (n = null == q ? void 0 : q.emoji) ? n : null),
+        [tt, te] = a.useState((0, _.Z)()),
         tn = a.useRef(null),
         tl = a.useRef(null),
         ta = a.useRef(null),
-        [tr, ti] = a.useState(null != q && V ? (0, P.Z)(q) : null),
+        [tr, ti] = a.useState(null != q && V ? (0, w.Z)(q) : null),
         [to, ts] = a.useState(H),
         [tu, tc] = a.useState(() => (W && null != Y ? Y.label() : L.intl.string(L.t["xod36+"]))),
         [td, tm] = a.useState(tu),
@@ -89,17 +89,17 @@ function M(t) {
             null == (t = tn.current) || t.focus(), null == (e = tn.current) || e.setSelection(X.length, X.length);
         });
     let th = () => {
-            tt !== B &&
-                ((0, _.Z)({
+            tt !== M &&
+                ((0, x.Z)({
                     text: X,
-                    emojiInfo: $,
+                    emojiInfo: J,
                     clearAfter: tt,
                     prompt: Y,
                     customStatusLabel: tr,
                     analyticsLocations: G,
                     analyticsContext: U,
                 }),
-                M());
+                B());
         },
         tb = W ? L.intl.string(L.t.rp0aho) : L.intl.string(L.t.UcdRn5),
         tS = "custom-status-placeholder-text";
@@ -113,8 +113,8 @@ function M(t) {
                 options: z
                     ? [
                           {
-                              value: B,
-                              key: B,
+                              value: M,
+                              key: M,
                               label: L.intl.string(L.t.E45wvL),
                               disabled: !0,
                           },
@@ -135,7 +135,7 @@ function M(t) {
                     let { value: e, label: n, disabled: a } = t;
                     return (0, l.jsx)("span", {
                         className: i()(k.clearAfterSelectOptionLabel, a ? k.disabled : void 0),
-                        children: e === B ? n : (0, y.Z)(e, z),
+                        children: e === M ? n : (0, y.Z)(e, z),
                     });
                 },
                 look: c.qQH.CUSTOM,
@@ -144,7 +144,7 @@ function M(t) {
             }),
         }),
         onClose: async () => {
-            await M();
+            await B();
         },
         transitionState: r,
         actions: [
@@ -161,7 +161,7 @@ function M(t) {
                     children: (0, l.jsx)(I.Z, {
                         user: K,
                         previewText: X,
-                        previewEmoji: $,
+                        previewEmoji: J,
                         placeHolderText: tu,
                         transitionState: r,
                         label: tr,
@@ -194,7 +194,7 @@ function M(t) {
                                         }),
                                             ti(e),
                                             ts(!1),
-                                            null != e && tc((0, w.Z)(e));
+                                            null != e && tc((0, P.Z)(e));
                                     },
                                 }),
                             }),
@@ -220,7 +220,7 @@ function M(t) {
                                                 var n;
                                                 let { emoji: l, willClose: a } = t;
                                                 null != (n = l) &&
-                                                    J(
+                                                    $(
                                                         null != n.id
                                                             ? {
                                                                   id: n.id,
@@ -236,7 +236,7 @@ function M(t) {
                                                     a && e();
                                             },
                                             pickerIntention: R.Hz.STATUS,
-                                            onNavigateAway: M,
+                                            onNavigateAway: B,
                                         });
                                     },
                                     position: "left",
@@ -279,14 +279,14 @@ function M(t) {
                                                     className: k.emojiButton,
                                                     tabIndex: 0,
                                                     renderButtonContents:
-                                                        null == $
+                                                        null == J
                                                             ? null
                                                             : () =>
                                                                   (0, l.jsx)(d.Z, {
                                                                       className: k.emoji,
-                                                                      emojiId: $.id,
-                                                                      emojiName: $.name,
-                                                                      animated: !!$.animated,
+                                                                      emojiId: J.id,
+                                                                      emojiName: J.name,
+                                                                      animated: !!J.animated,
                                                                   }),
                                                 }),
                                             Object.getOwnPropertyDescriptors
@@ -340,7 +340,7 @@ function M(t) {
                                 id: tS,
                                 children: "".concat(L.intl.string(L.t.EVV6ub), ": ").concat(tu),
                             }),
-                            (X.length > 0 || null != $) &&
+                            (X.length > 0 || null != J) &&
                                 (0, l.jsx)("div", {
                                     className: i()(k.clearButtonWrapper, null != tr && k.buttonContainerWithLabel),
                                     children: (0, l.jsx)(c.P3F, {
@@ -355,7 +355,7 @@ function M(t) {
                                         "aria-label": L.intl.string(L.t.wfYTHR),
                                         className: k.clearButton,
                                         onClick: () => {
-                                            Q(""), J(null);
+                                            Q(""), $(null);
                                         },
                                         children: (0, l.jsx)(c.k$p, {
                                             size: "md",

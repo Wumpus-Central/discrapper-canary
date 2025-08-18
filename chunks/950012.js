@@ -9,21 +9,21 @@ var r = n(951288),
     d = n(888592);
 let u = (e) => {
     let { onClose: t, invite: n, forceGuildScrollHeight: u = !0, isNUXFlow: m } = e,
-        [h, x] = l.useState([d.tF.VERIFY_EMAIL]),
-        [p, f] = l.useState(""),
-        [g, _] = l.useState(""),
+        [h, f] = l.useState([d.tF.VERIFY_EMAIL]),
+        [g, p] = l.useState(""),
+        [x, _] = l.useState(""),
         [v, N] = l.useState(void 0),
         [E, S] = l.useState([]),
         y = (e) => {
-            x(h.concat(e).slice(-4));
+            f(h.concat(e).slice(-4));
         };
     switch (h[h.length - 1]) {
         case d.tF.VERIFY_EMAIL:
             return (0, r.jsx)(i.Z, {
                 setGuildsInfo: S,
                 setStep: y,
-                email: p,
-                setEmail: f,
+                email: g,
+                setEmail: p,
                 setGuildId: N,
                 invite: n,
                 onClose: t,
@@ -33,30 +33,30 @@ let u = (e) => {
             return (0, r.jsx)(a.Z, {
                 guildsInfo: E,
                 setStep: y,
-                email: p,
+                email: g,
                 setGuildId: N,
                 forceGuildScrollHeight: u,
             });
         case d.tF.SUBMIT_SCHOOL:
             return (0, r.jsx)(s.Z, {
                 onBack: () => {
-                    h.length > 1 && x(h.slice(0, -1).slice(-4));
+                    h.length > 1 && f(h.slice(0, -1).slice(-4));
                 },
                 setStep: y,
-                email: p,
-                school: g,
+                email: g,
+                school: x,
                 setSchool: _,
             });
         case d.tF.VERIFY_PIN:
             return (0, r.jsx)(o.Z, {
-                email: p,
+                email: g,
                 onClose: t,
                 guildId: v,
             });
         case d.tF.EMAIL_WAITLIST:
             return (0, r.jsx)(c.Z, {
                 setStep: y,
-                school: g,
+                school: x,
             });
         default:
             return null;

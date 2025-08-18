@@ -6,12 +6,12 @@ var r = n(951288),
     i = n(392711),
     l = n.n(i),
     c = n(442837),
-    u = n(481060),
-    d = n(451478),
+    d = n(481060),
+    u = n(451478),
     p = n(302221),
     m = n(746887);
-let g = [0, 0.5, 1],
-    f = {
+let f = [0, 0.5, 1],
+    g = {
         "layers[1].shapes[1].g.k.k": [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         "layers[2].shapes[1].g.k.k": [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757],
     };
@@ -28,14 +28,14 @@ async function x(e, t) {
                 });
                 l().set(e, r, s);
             }
-        })(r, f, t),
+        })(r, g, t),
         r
     );
 }
 function h(e) {
     var t;
     let { animationClassName: n, className: o, quest: i, useReducedMotion: l } = e,
-        f = (0, c.e7)([d.Z], () => d.Z.isFocused()),
+        g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
         h = s.useRef(null),
         [b, _] = s.useState(!1),
         j = s.useMemo(() => {
@@ -46,17 +46,17 @@ function h(e) {
                     g: e.g / 255,
                     b: e.b / 255,
                 },
-                n = g.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
+                n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
         }, [i]),
         v = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
-        C = !l && f;
+        C = !l && g;
     s.useEffect(() => {
         var e, t, n, r;
-        f
+        g
             ? C && (null == (r = h.current) || null == (n = r.animation) || n.play())
             : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
-    }, [C, f]);
+    }, [C, g]);
     let y = s.useCallback(() => {
         _(!0);
     }, []);
@@ -72,7 +72,7 @@ function h(e) {
         : (0, r.jsx)("div", {
               className: a()(m.lottieAnimationBackgroundWrapper, o),
               children: (0, r.jsx)(
-                  u.Fmz,
+                  d.Fmz,
                   {
                       ref: h,
                       onComplete: y,

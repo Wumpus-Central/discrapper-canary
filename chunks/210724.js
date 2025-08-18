@@ -10,12 +10,12 @@ var r = n(951288),
     i = n(815061),
     l = n(442837),
     c = n(481060),
-    u = n(110924),
-    d = n(607070),
+    d = n(110924),
+    u = n(607070),
     p = n(819640),
     m = n(617136),
-    g = n(823289),
-    f = n(509212),
+    f = n(823289),
+    g = n(509212),
     x = n(113434),
     h = n(569984),
     b = n(497505),
@@ -58,14 +58,14 @@ function k(e) {
             quest: o,
             location: A.dr.QUESTS_BAR,
         }),
-        D = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        D = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         V = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         M = s.useRef(null),
-        L = s.useMemo(() => (0, f.q8)(o), [o]),
+        L = s.useMemo(() => (0, g.q8)(o), [o]),
         W = (null == (t = o.userStatus) ? void 0 : t.enrolledAt) != null,
-        Z = (0, u.Z)(W),
+        Z = (0, d.Z)(W),
         U = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
-        H = (0, u.Z)(U),
+        H = (0, d.Z)(U),
         { hasError: F, isLoading: z } = (0, O.d7)(),
         X = s.useContext(P.T) || (k && I && !z && !q),
         K = s.useRef(X),
@@ -78,8 +78,8 @@ function k(e) {
         [es, eo] = s.useState(!0),
         [ea, ei] = s.useState(!0),
         [el, ec] = s.useState(Y.preEnrollmentExpandedHeight),
-        eu = s.useRef(null),
-        ed = s.useCallback(
+        ed = s.useRef(null),
+        eu = s.useCallback(
             (e) => {
                 $ || (eo(!1), er(e));
             },
@@ -87,20 +87,20 @@ function k(e) {
         ),
         ep = s.useCallback(() => {
             var e, t;
-            ec((null != (t = null == (e = eu.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * Y.paddingVertical);
+            ec((null != (t = null == (e = ed.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * Y.paddingVertical);
         }, [Y.paddingVertical]),
         em = s.useCallback(() => {
-            ep(), ed(!0);
-        }, [ep, ed]),
-        eg = s.useCallback(() => {
+            ep(), eu(!0);
+        }, [ep, eu]),
+        ef = s.useCallback(() => {
             et(!0);
         }, []),
-        ef = s.useCallback(() => {
-            et(!1), J.current || U || ed(!1);
-        }, [U, ed]),
+        eg = s.useCallback(() => {
+            et(!1), J.current || U || eu(!1);
+        }, [U, eu]),
         ex = s.useCallback(() => {
-            et(!1), U || ed(!1), (J.current = !1);
-        }, [U, ed]),
+            et(!1), U || eu(!1), (J.current = !1);
+        }, [U, eu]),
         eh = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -114,8 +114,8 @@ function k(e) {
             eh();
         }, [eh]),
         e_ = s.useCallback(() => {
-            window.clearTimeout(G.current), Y.canCollapseOnBlur && !ee && (J.current || ed(!1));
-        }, [ee, Y, ed]),
+            window.clearTimeout(G.current), Y.canCollapseOnBlur && !ee && (J.current || eu(!1));
+        }, [ee, Y, eu]),
         ej = s.useCallback(() => {
             var e;
             (0, m.dA)({
@@ -154,8 +154,8 @@ function k(e) {
             W && !Z && J.current && em();
         }, [em, W, Z]),
         s.useLayoutEffect(() => {
-            U || !W || Z || J.current || ed(!1);
-        }, [W, U, Z, ed]),
+            U || !W || Z || J.current || eu(!1);
+        }, [W, U, Z, eu]),
         s.useLayoutEffect(() => {
             X !== K.current && ei(!1), (K.current = X);
         }, [X]);
@@ -241,7 +241,7 @@ function k(e) {
             }
         }, [X, ea, z, o.id, Q, Y.trackingCtx.content]),
         s.useEffect(() => {
-            (!I || q) && g.Z.clearTracking(), X && ea && !z && !F && k && g.Z.stopTracking(o.id);
+            (!I || q) && f.Z.clearTracking(), X && ea && !z && !F && k && f.Z.stopTracking(o.id);
         }, [I, q, X, ea, z, F, k, o.id]);
     let eS = (0, _.h)({
         location: A.dr.QUESTS_BAR,
@@ -298,12 +298,12 @@ function k(e) {
                                     springConfig: eC,
                                     isExpanded: en,
                                     children: (0, r.jsx)(n, {
-                                        expandedContentRef: eu,
+                                        expandedContentRef: ed,
                                         expansionSpring: ey,
                                         isExpanded: en,
                                         isExpansionAnimationComplete: es,
-                                        onCtxMenuClosed: ef,
-                                        onCtxMenuOpened: eg,
+                                        onCtxMenuClosed: eg,
+                                        onCtxMenuOpened: ef,
                                         onCtxMenuSelection: ex,
                                         quest: o,
                                         useReducedMotion: D,

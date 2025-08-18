@@ -10,8 +10,8 @@ var r = n(951288),
     i = n(481060),
     l = n(393238),
     c = n(110924),
-    u = n(607070);
-let d = s.createContext({
+    d = n(607070);
+let u = s.createContext({
     springConfig: {},
     isExpanded: !1,
 });
@@ -23,7 +23,7 @@ function p(e) {
         }),
         [e.springConfig, e.isExpanded],
     );
-    return (0, r.jsx)(d.Provider, {
+    return (0, r.jsx)(u.Provider, {
         value: t,
         children: e.children,
     });
@@ -31,9 +31,9 @@ function p(e) {
 function m(e) {
     var t;
     let { children: n } = e,
-        { springConfig: p, isExpanded: m } = s.useContext(d),
-        g = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        { ref: f, height: x = null } = (0, l.ZP)(),
+        { springConfig: p, isExpanded: m } = s.useContext(u),
+        f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        { ref: g, height: x = null } = (0, l.ZP)(),
         h = null != (t = (0, c.Z)(x)) ? t : null,
         [{ height: b }, _] = (0, i.q_F)(() => ({
             from: { height: 0 },
@@ -44,9 +44,9 @@ function m(e) {
             null !== x &&
                 _({
                     height: x,
-                    immediate: !m || g || null === h,
+                    immediate: !m || f || null === h,
                 });
-        }, [x, _, m, g, h]),
+        }, [x, _, m, f, h]),
         (0, r.jsx)(o.animated.div, {
             style: {
                 height: null === h ? "auto" : b,
@@ -54,7 +54,7 @@ function m(e) {
             },
             children: (0, r.jsx)("div", {
                 style: { overflow: "hidden" },
-                ref: f,
+                ref: g,
                 children: n,
             }),
         })

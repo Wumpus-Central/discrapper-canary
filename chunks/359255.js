@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(755721),
-    l = n(481060),
+    s = n(481060),
+    l = n(388032),
     c = n(996014);
 function u(e) {
     return "" === e || "-" === e;
@@ -28,37 +28,32 @@ let d = (e) => {
             let t = parseInt(e);
             if (!isNaN(t)) return null != f && t >= f ? g(f) : null != d && t <= d ? g(d) : g(t);
         };
-    return (0, r.jsx)(l.tEY, {
-        within: !0,
-        children: (0, r.jsxs)("div", {
-            className: o()(c.actions, a),
-            children: [
-                (0, r.jsx)(l.P3F, {
-                    onClick: E,
-                    tabIndex: -1,
-                    className: o()(c.iconWrapper, c.__invalid_subtract, { [c.disabled]: h }),
-                    children: (0, r.jsx)(l.V_R, {
-                        size: "md",
-                        color: "currentColor",
-                        className: o()(c.icon, { [c.disabled]: h }),
-                    }),
-                }),
-                (0, r.jsx)(s.Is, {
+    return (0, r.jsxs)("div", {
+        className: o()(c.actions, a),
+        children: [
+            (0, r.jsx)(s.hU, {
+                variant: "icon-only",
+                size: "sm",
+                icon: s.V_R,
+                onClick: E,
+                "aria-label": l.intl.string(l.t["k+ohJi"]),
+                disabled: h,
+            }),
+            (0, r.jsx)("div", {
+                className: c.value,
+                children: (0, r.jsx)(s.oil, {
                     value: "".concat(_),
                     onChange: y,
-                    inputClassName: c.value,
                 }),
-                (0, r.jsx)(l.P3F, {
-                    onClick: b,
-                    tabIndex: -1,
-                    className: o()(c.iconWrapper, c.__invalid_add, { [c.disabled]: m }),
-                    children: (0, r.jsx)(l.qJs, {
-                        size: "md",
-                        color: "currentColor",
-                        className: o()(c.icon, { [c.disabled]: m }),
-                    }),
-                }),
-            ],
-        }),
+            }),
+            (0, r.jsx)(s.hU, {
+                size: "sm",
+                variant: "icon-only",
+                icon: s.qJs,
+                onClick: b,
+                "aria-label": l.intl.string(l.t.w8Sc4O),
+                disabled: m,
+            }),
+        ],
     });
 };

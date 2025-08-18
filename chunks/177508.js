@@ -1446,7 +1446,7 @@ function eh() {
                     align: "center",
                 },
                 title: "Header",
-                body: "Body",
+                body: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Only with Nitro"],
                 size: "sm",
                 asset: (0, i.jsx)("img", {
                     src: Y.Z,

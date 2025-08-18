@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(953529);
+n.d(t, { Z: () => k }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -88,7 +88,7 @@ function A() {
         },
     ];
 }
-function k(e) {
+function L(e) {
     let { value: t, "aria-labelledby": n, onChange: l, disabled: s = !1 } = e,
         { ref: o, width: c } = (0, f.ZP)(),
         d = (0, b.Z)(A),
@@ -128,7 +128,7 @@ function k(e) {
         }),
     });
 }
-function L(e) {
+function k(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: a } = (0, I.Z)(n.id),
@@ -141,18 +141,18 @@ function L(e) {
         }, [s]),
         [m, f] = i.useState(a),
         [b, O] = i.useState(null != (t = null == s ? void 0 : s.description) ? t : ""),
-        [A, L] = i.useState(c),
+        [A, k] = i.useState(c),
         [M, G] = i.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
         [U, B] = i.useState(null == s ? void 0 : s.server_shop_tab_order),
         { loading: F, error: H, updateSubscriptionsSettings: z } = (0, y.QV)(),
         { imageCTA: W, imageAriaLabel: V, setFilename: Y } = (0, N.Z)(null == s ? void 0 : s.cover_image_asset),
         K = (0, x.Dt)(),
-        q = (0, x.Dt)(),
-        X = (0, x.Dt)();
-    function Q(e, t) {
-        o()(null != e, "Null value not allowed"), null != t && Y(t.name), L(e);
+        X = (0, x.Dt)(),
+        q = (0, x.Dt)();
+    function J(e, t) {
+        o()(null != e, "Null value not allowed"), null != t && Y(t.name), k(e);
     }
-    let J = i.useMemo(() => {
+    let Q = i.useMemo(() => {
             var e;
             return (
                 (null != b && b !== (null != (e = null == s ? void 0 : s.description) ? e : "")) ||
@@ -166,7 +166,7 @@ function L(e) {
     i.useEffect(() => {
         var e;
         (null == s || null == (e = s.cover_image_asset) ? void 0 : e.application_id) != null &&
-            L((0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, D));
+            k((0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, D));
     }, [null == s ? void 0 : s.cover_image_asset]);
     let ee = (0, C.mY)(),
         et = i.useMemo(
@@ -212,7 +212,7 @@ function L(e) {
                                       disabled: ee,
                                       children: P.intl.string(P.t.x87YqK),
                                   }),
-                                  (0, r.jsx)(k, {
+                                  (0, r.jsx)(L, {
                                       value: m,
                                       onChange: (e) => {
                                           a !== e &&
@@ -243,7 +243,7 @@ function L(e) {
                   }),
             (0, r.jsx)(p.hjN, {
                 title: P.intl.string(P.t["1+Ho1d"]),
-                titleId: q,
+                titleId: X,
                 disabled: ee,
                 children: (0, r.jsx)(g.iS, {
                     placeholder: l ? P.intl.string(P.t.SD6LRU) : P.intl.string(P.t["aVhW/f"]),
@@ -252,7 +252,7 @@ function L(e) {
                     rows: 2,
                     autosize: !0,
                     onChange: O,
-                    "aria-labelledby": q,
+                    "aria-labelledby": X,
                     disabled: ee,
                 }),
             }),
@@ -277,13 +277,13 @@ function L(e) {
                         iconWrapperClassName: w.coverImageUploaderIconWrapper,
                         imageClassName: w.coverImageUploaderInner,
                         iconClassName: w.coverImageUploaderIcon,
-                        onChange: Q,
+                        onChange: J,
                         "aria-label": V,
                         disabled: ee,
                     }),
                     (0, r.jsx)(p.LZC, { size: 16 }),
                     (0, r.jsx)(j.Z, {
-                        onChange: Q,
+                        onChange: J,
                         buttonCTA: W,
                         "aria-label": V,
                         disabled: ee,
@@ -298,7 +298,7 @@ function L(e) {
                           (0, r.jsx)(p.$i$, { className: w.divider }),
                           (0, r.jsxs)(p.hjN, {
                               title: P.intl.string(P.t.aaZ9pK),
-                              titleId: X,
+                              titleId: q,
                               disabled: ee,
                               children: [
                                   (0, r.jsx)(p.R94, {
@@ -324,7 +324,7 @@ function L(e) {
                         (0, r.jsx)(p.$i$, { className: w.divider }),
                         (0, r.jsxs)(p.hjN, {
                             title: P.intl.string(P.t["+dtmw8"]),
-                            titleId: X,
+                            titleId: q,
                             disabled: ee,
                             children: [
                                 (0, r.jsx)(p.R94, {
@@ -347,7 +347,7 @@ function L(e) {
                 component: "div",
                 className: w.contentRegion,
                 children:
-                    J &&
+                    Q &&
                     (0, r.jsx)(p.oXn, {
                         children: (0, r.jsx)(h.Z, {
                             submitting: F,
@@ -356,7 +356,7 @@ function L(e) {
                                 var e;
                                 f(a),
                                     O(null != (e = null == s ? void 0 : s.description) ? e : ""),
-                                    L(c),
+                                    k(c),
                                     G(null == s ? void 0 : s.store_page_guild_products_default_sort),
                                     B(null == s ? void 0 : s.server_shop_tab_order);
                             },

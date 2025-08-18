@@ -11,12 +11,12 @@ var r = n(951288),
     i = n(278074),
     l = n(754700),
     c = n(887003),
-    u = n(820827),
-    d = n(458708),
+    d = n(820827),
+    u = n(458708),
     p = n(481060),
     m = n(70956),
-    g = n(509212),
-    f = n(497505),
+    f = n(509212),
+    g = n(497505),
     x = n(210724),
     h = n(130653),
     b = n(415104),
@@ -90,7 +90,7 @@ function M(e) {
     return {
         code: "PREVIEW-MODE-CODE",
         tier: 0,
-        platform: f.y$.CROSS_PLATFORM,
+        platform: g.y$.CROSS_PLATFORM,
         userId: "123",
         questId: e.id,
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : "",
@@ -168,7 +168,7 @@ let W = "1193992107035983872",
                 logotype: "game_logotype.png",
             },
             taskConfigV2: {
-                joinOperator: d.r.AND,
+                joinOperator: u.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         type: l.X.PLAY_ON_DESKTOP,
@@ -177,13 +177,13 @@ let W = "1193992107035983872",
                 },
             },
             features: [],
-            sharePolicy: u.X.SHAREABLE_EVERYWHERE,
+            sharePolicy: d.X.SHAREABLE_EVERYWHERE,
         },
         userStatus: null,
         targetedContent: [],
     };
 function U() {
-    var e, t, o, u, d, k, M, W;
+    var e, t, o, d, u, k, M, W;
     let [U, H] = s.useState(Z),
         F = s.useCallback((e) => {
             H(I(q({}, e), { preview: !0 }));
@@ -317,21 +317,21 @@ function U() {
         F(I(q({}, U), { config: I(q({}, U.config), { colors: I(q({}, U.config.colors), { [e]: t }) }) }));
     }
     function ec() {
-        (0, g.Xv)(U.config)
-            ? (0, E.m)(U, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
+        (0, f.Xv)(U.config)
+            ? (0, E.m)(U, g.jn.GIFT_INVENTORY_FOR_YOU, !0)
             : (0, _.openQuestsRewardCodeModal)({
                   questId: U.id,
-                  questContent: f.jn.GIFT_INVENTORY_FOR_YOU,
+                  questContent: g.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
                   previewQuest: U,
-                  sourceQuestContent: f.jn.INTERNAL_PREVIEW_TOOL,
+                  sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
               });
     }
-    let eu = s.useMemo(() => {
+    let ed = s.useMemo(() => {
             for (let [e, t] of Object.entries(U.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * m.Z.Seconds.MINUTE;
         }, [U.config.taskConfigV2.tasks]),
-        ed = s.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
+        eu = s.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
     a()(!1 !== U.preview && null != U.preview, "Preview config must have property preview: true");
     let ep = U.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)("div", {
@@ -352,7 +352,7 @@ function U() {
                                         if (null == e.userStatus) return R.a.UNENROLLED;
                                         if (null != e.userStatus.claimedAt) return R.a.CLAIMED;
                                         if (null != e.userStatus.completedAt) return R.a.COMPLETED_100;
-                                        let t = (0, g.il)(e),
+                                        let t = (0, f.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
@@ -379,7 +379,7 @@ function U() {
             (0, r.jsx)("div", {
                 className: B.fields,
                 children: (0, r.jsx)(A.Z, {
-                    taskDuration: eu,
+                    taskDuration: ed,
                     taskConfigV2: U.config.taskConfigV2,
                     onSelect: function (e) {
                         F(I(q({}, U), { config: I(q({}, U.config), { taskConfigV2: e }) }));
@@ -412,7 +412,7 @@ function U() {
                         onMessageChange: eo,
                         initialValue: U.config.messages.gamePublisher,
                     }),
-                    ed &&
+                    eu &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(w.Z, {
@@ -487,7 +487,7 @@ function U() {
                         filters: [...Q, "svg"],
                         initialValue: U.config.assets.logotype,
                     }),
-                    ed &&
+                    eu &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(T.Z, {
@@ -657,7 +657,7 @@ function U() {
                                         I(q({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * eu,
+                                                streamProgressSeconds: 0.25 * ed,
                                             }),
                                         }),
                                     );
@@ -667,7 +667,7 @@ function U() {
                                         I(q({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * eu,
+                                                streamProgressSeconds: 0.5 * ed,
                                             }),
                                         }),
                                     );
@@ -677,7 +677,7 @@ function U() {
                                         I(q({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * eu,
+                                                streamProgressSeconds: 0.75 * ed,
                                             }),
                                         }),
                                     );
@@ -688,7 +688,7 @@ function U() {
                                             userStatus: L({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: eu,
+                                                streamProgressSeconds: ed,
                                             }),
                                         }),
                                     );
@@ -700,7 +700,7 @@ function U() {
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: eu,
+                                                streamProgressSeconds: ed,
                                             }),
                                         }),
                                     );
@@ -725,7 +725,7 @@ function U() {
                             (0, r.jsxs)("div", {
                                 className: B.questBarPreviewWrapper,
                                 children: [
-                                    (null == (u = U.userStatus) ? void 0 : u.claimedAt) != null &&
+                                    (null == (d = U.userStatus) ? void 0 : d.claimedAt) != null &&
                                         (0, r.jsx)(p.Text, {
                                             color: "text-secondary",
                                             variant: "text-sm/normal",
@@ -755,10 +755,10 @@ function U() {
                                 children: (0, r.jsx)(b.Z, {
                                     quest: U,
                                     className: B.questTile,
-                                    questContent: f.jn.QUEST_HOME_DESKTOP,
+                                    questContent: g.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0,
-                                    sourceQuestContent: f.jn.INTERNAL_PREVIEW_TOOL,
+                                    sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
                                 }),
                             }),
                         ],
@@ -767,7 +767,7 @@ function U() {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.vwX, { children: "Channel Call Header" }),
-                            (null == (d = U.userStatus) ? void 0 : d.claimedAt) != null &&
+                            (null == (u = U.userStatus) ? void 0 : u.claimedAt) != null &&
                                 (0, r.jsx)(p.Text, {
                                     color: "text-secondary",
                                     variant: "text-sm/normal",
@@ -815,8 +815,8 @@ function U() {
                                       v.Z,
                                       {
                                           quest: U,
-                                          location: f.jn.QUESTS_EMBED,
-                                          sourceQuestContent: f.jn.INTERNAL_PREVIEW_TOOL,
+                                          location: g.jn.QUESTS_EMBED,
+                                          sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
                                       },
                                       U.id,
                                   ),
@@ -833,7 +833,7 @@ function U() {
                             }),
                         }),
                     }),
-                    ed &&
+                    eu &&
                         (0, r.jsxs)(S.Z, {
                             withBorder: !0,
                             allowClicks: !0,
@@ -859,7 +859,7 @@ function U() {
                                                         questId: null != (n = U.id) ? n : "fake-quest-id",
                                                         overrideQuest: U,
                                                         autoplay: !0,
-                                                        sourceQuestContent: f.jn.INTERNAL_PREVIEW_TOOL,
+                                                        sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
                                                     }),
                                                 );
                                             };

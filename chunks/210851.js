@@ -6,13 +6,13 @@ var r = n(951288),
     i = n(301188);
 let l = function (e) {
     var t, n;
-    let { assetKey: l, filters: c, initialValue: u, onFileChange: d, title: p } = e,
-        [m, g] = s.useState(null),
-        f = s.useRef(null);
+    let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: p } = e,
+        [m, f] = s.useState(null),
+        g = s.useRef(null);
     return (
         s.useEffect(
             () => () => {
-                null != f.current && URL.revokeObjectURL(f.current);
+                null != g.current && URL.revokeObjectURL(g.current);
             },
             [],
         ),
@@ -60,7 +60,7 @@ let l = function (e) {
                     }),
                 }),
                 (0, r.jsx)(a.Z, {
-                    filename: null != (n = null != (t = null == m ? void 0 : m.name) ? t : u) ? n : "",
+                    filename: null != (n = null != (t = null == m ? void 0 : m.name) ? t : d) ? n : "",
                     filters: [
                         {
                             name: p,
@@ -70,13 +70,13 @@ let l = function (e) {
                     buttonText: "Browse",
                     placeholder: "Select an asset",
                     onFileSelect: function (e) {
-                        if ((g(null != e ? e : null), null == e)) return;
+                        if ((f(null != e ? e : null), null == e)) return;
                         let t = URL.createObjectURL(e);
-                        f.current = t;
+                        g.current = t;
                         let n = new URL(t);
                         n.searchParams.append("mimetype", e.type),
                             n.searchParams.append("name", e.name),
-                            d(l, n.toString());
+                            u(l, n.toString());
                     },
                 }),
             ],

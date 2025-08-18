@@ -9,8 +9,8 @@ var a = n(951288),
     d = n(233828);
 let u = n(412998),
     f = n(515695),
-    p = "".concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]).concat(s.Z5c.ACTIVATE),
-    h = "".concat(location.protocol, "//").concat(p);
+    h = "".concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]).concat(s.Z5c.ACTIVATE),
+    p = "".concat(location.protocol, "//").concat(h);
 function x(e) {
     let { text: t = "" } = e,
         [n, l] = r.useState(!1);
@@ -64,7 +64,7 @@ let m = (e) => {
                                   (0, a.jsx)("div", {
                                       className: d.qrcodeCard,
                                       children: (0, a.jsx)(x, {
-                                          text: "".concat(h, "?user_code=").concat(encodeURIComponent(n)),
+                                          text: "".concat(p, "?user_code=").concat(encodeURIComponent(n)),
                                       }),
                                   }),
                                   (0, a.jsxs)("div", {
@@ -124,7 +124,7 @@ let m = (e) => {
                                               variant: "heading-xxl/semibold",
                                               color: "header-primary",
                                               className: d.fallbackContentHeading,
-                                              children: p,
+                                              children: h,
                                           }),
                                           (0, a.jsxs)("div", {
                                               className: d.fallbackContentTextGroup,

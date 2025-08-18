@@ -1,64 +1,62 @@
-n.d(t, { default: () => h }), n(388685);
-var a = n(951288),
-    i = n(647438),
-    s = n(755721),
-    r = n(481060),
-    l = n(313201),
-    o = n(117984),
-    c = n(388032),
-    d = n(662971);
-function h(e) {
+n.d(t, { default: () => d }), n(388685);
+var i = n(951288),
+    a = n(647438),
+    s = n(481060),
+    r = n(313201),
+    l = n(117984),
+    o = n(388032),
+    c = n(662971);
+function d(e) {
     let { onClose: t, transitionState: n } = e,
-        h = (0, l.Dt)(),
-        [u, x] = i.useState("");
-    return (0, a.jsx)("form", {
+        d = (0, r.Dt)(),
+        [h, u] = a.useState("");
+    return (0, i.jsx)("form", {
         onSubmit: function (e) {
-            e.preventDefault(), (0, o.CM)(u), t();
+            e.preventDefault(), (0, l.CM)(h), t();
         },
-        children: (0, a.jsxs)(r.Y0X, {
+        children: (0, i.jsxs)(s.Y0X, {
             transitionState: n,
-            "aria-labelledby": h,
+            "aria-labelledby": d,
             parentComponent: "AddFavoriteCategoryModal",
             children: [
-                (0, a.jsxs)(r.hzk, {
+                (0, i.jsxs)(s.hzk, {
                     children: [
-                        (0, a.jsx)(r.X6q, {
-                            id: h,
-                            className: d.header,
+                        (0, i.jsx)(s.X6q, {
+                            id: d,
+                            className: c.header,
                             variant: "heading-xl/semibold",
-                            children: c.intl.string(c.t["ISN+ND"]),
+                            children: o.intl.string(o.t["ISN+ND"]),
                         }),
-                        (0, a.jsx)(r.olH, {
+                        (0, i.jsx)(s.olH, {
                             onClick: t,
-                            className: d.closeButton,
+                            className: c.closeButton,
                         }),
-                        (0, a.jsx)(r.xJW, {
-                            title: c.intl.string(c.t.OCAkGB),
-                            className: d.name,
-                            children: (0, a.jsx)(s.Is, {
-                                value: u,
-                                onChange: x,
+                        (0, i.jsx)(s.xJW, {
+                            title: o.intl.string(o.t.OCAkGB),
+                            className: c.name,
+                            children: (0, i.jsx)(s.oil, {
+                                value: h,
+                                onChange: u,
                                 maxLength: 100,
-                                placeholder: c.intl.string(c.t.eTVbt7),
-                                className: d.__invalid_inputWrapper,
+                                placeholder: o.intl.string(o.t.eTVbt7),
                                 autoFocus: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, a.jsx)(r.mzw, {
-                    children: (0, a.jsxs)(r.hE2, {
+                (0, i.jsx)(s.mzw, {
+                    children: (0, i.jsxs)(s.hE2, {
                         direction: "horizontal-reverse",
                         children: [
-                            (0, a.jsx)(r.zxk, {
+                            (0, i.jsx)(s.zxk, {
                                 variant: "primary",
-                                text: c.intl.string(c.t["ISN+ND"]),
+                                text: o.intl.string(o.t["ISN+ND"]),
                                 type: "submit",
-                                disabled: "" === u,
+                                disabled: "" === h,
                             }),
-                            (0, a.jsx)(r.zxk, {
+                            (0, i.jsx)(s.zxk, {
                                 variant: "secondary",
-                                text: c.intl.string(c.t["ETE/oK"]),
+                                text: o.intl.string(o.t["ETE/oK"]),
                                 onClick: t,
                             }),
                         ],

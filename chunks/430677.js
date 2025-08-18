@@ -76,13 +76,13 @@ let _ = function (e) {
             null == (t = N.emoji) ? void 0 : t.id,
             null == (l = N.emoji) ? void 0 : l.name,
         ),
-        k = null == N.emoji || null != D || null != A,
-        L = f.ZP.getNewMemberActionIconURL({
+        L = null == N.emoji || null != D || null != A,
+        k = f.ZP.getNewMemberActionIconURL({
             channelId: N.channelId,
             icon: N.icon,
         }),
         M = null;
-    null != R && (0, m.kb)(R) ? k || (M = b.intl.string(b.t.wAkIZW)) : (M = b.intl.string(b.t.CbTEKC));
+    null != R && (0, m.kb)(R) ? L || (M = b.intl.string(b.t.wAkIZW)) : (M = b.intl.string(b.t.CbTEKC));
     let {
             drag: G,
             dragSourcePosition: U,
@@ -137,11 +137,11 @@ let _ = function (e) {
                             className: x.dragIcon,
                         }),
                     }),
-                    null != L
+                    null != k
                         ? (0, r.jsx)("div", {
                               className: x.iconWrapper,
                               children: (0, r.jsx)("img", {
-                                  src: L,
+                                  src: k,
                                   className: x.icon,
                                   width: 48,
                                   height: 48,

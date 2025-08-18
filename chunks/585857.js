@@ -7,14 +7,14 @@ var s = n(481060),
     i = n(497505),
     l = n(981631),
     c = n(388032),
-    u = n(39625);
-function d(e) {
+    d = n(39625);
+function u(e) {
     let { text: t, quest: n, sourceQuestContent: c } = e,
-        d = (0, a.O5)();
+        u = (0, a.O5)();
     return (0, r.jsx)(s.P3F, {
-        className: u.showConnectionsButton,
+        className: d.showConnectionsButton,
         onClick: () => {
-            d({
+            u({
                 questId: n.id,
                 questContent: i.jn.QUEST_BAR_V2,
                 questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -33,7 +33,7 @@ function d(e) {
 function p(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
     return t.length > 0
-        ? (0, r.jsx)(d, {
+        ? (0, r.jsx)(u, {
               text: c.intl.string(c.t["qiS+xs"]),
               quest: n,
               sourceQuestContent: s,

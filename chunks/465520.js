@@ -2,19 +2,19 @@ n.d(t, { z: () => r });
 let r = {
     facebook: {
         presentation: "Facebook",
-        baseUrl: "https://facebook.com",
+        baseUrl: "https://facebook.com/",
     },
     instagram: {
         presentation: "Instagram",
-        baseUrl: "https://instagram.com",
+        baseUrl: "https://instagram.com/",
     },
     twitter: {
         presentation: "Twitter",
-        baseUrl: "https://twitter.com",
+        baseUrl: "https://twitter.com/",
     },
     tiktok: {
         presentation: "TikTok",
-        baseUrl: "https://tiktok.com",
+        baseUrl: "https://tiktok.com/",
     },
     twitch: {
         presentation: "Twitch",
@@ -22,7 +22,7 @@ let r = {
     },
     patreon: {
         presentation: "Patreon",
-        baseUrl: "https://patreon.com",
+        baseUrl: "https://patreon.com/",
     },
     reddit: {
         presentation: "Reddit",
@@ -30,26 +30,26 @@ let r = {
     },
     youtube: {
         presentation: "YouTube",
-        baseUrl: "https://youtube.com",
+        baseUrl: "https://youtube.com/",
     },
     steamcommunity: {
         presentation: "Steam",
-        baseUrl: "https://steamcommunity.com",
+        baseUrl: "https://steamcommunity.com/",
     },
     soundcloud: {
         presentation: "SoundCloud",
-        baseUrl: "https://soundcloud.com",
+        baseUrl: "https://soundcloud.com/",
     },
     bandcamp: {
         presentation: "Bandcamp",
-        baseUrl: "https://bandcamp.com",
+        baseUrl: "https://bandcamp.com/",
     },
     github: {
         presentation: "GitHub",
-        baseUrl: "https://github.com",
+        baseUrl: "https://github.com/",
     },
     etsy: {
         presentation: "Etsy",
-        baseUrl: "https://etsy.com",
+        baseUrl: "https://etsy.com/",
     },
 };

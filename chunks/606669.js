@@ -171,7 +171,7 @@ function g() {
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "high-contrast",
-                            label: "Enable High Contrast Mode",
+                            label: d.intl.string(d.t.aZlePj),
                             checked: _,
                             action: () => (0, o.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
                         }),

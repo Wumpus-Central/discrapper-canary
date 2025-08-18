@@ -6,12 +6,12 @@ var r = n(951288),
     i = n(238651),
     l = n(603113),
     c = n(815061),
-    u = n(442837),
-    d = n(110924),
+    d = n(442837),
+    u = n(110924),
     p = n(607070),
     m = n(819640),
-    g = n(569379),
-    f = n(675654),
+    f = n(569379),
+    g = n(675654),
     x = n(674386),
     h = n(197857);
 let b = ["#51BC9D"],
@@ -26,13 +26,13 @@ let b = ["#51BC9D"],
                 isHovered: C,
                 shouldShowRewardsCTAWhenCollapsed: y,
             } = e,
-            { completionSpring: E, startCompletionAnimation: O } = (0, g.G)(),
+            { completionSpring: E, startCompletionAnimation: O } = (0, f.G)(),
             S = (null == (t = _.userStatus) ? void 0 : t.completedAt) != null,
             T = s.useRef(!1),
-            w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+            w = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             P = s.useRef(null),
-            A = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
-            N = (0, d.Z)(A),
+            A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
+            N = (0, u.Z)(A),
             [R, B] = s.useState(null),
             [k, q] = s.useState(null),
             I = s.useRef(
@@ -49,10 +49,10 @@ let b = ["#51BC9D"],
                 if (null != t && null != e && Q.isReady) {
                     var n, r, s, o, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
-                        { x: u, y: d } = t.getBoundingClientRect();
+                        { x: d, y: u } = t.getBoundingClientRect();
                     Q.createMultipleConfetti(
-                        ((n = l - u),
-                        (r = c - d),
+                        ((n = l - d),
+                        (r = c - u),
                         (s = e.clientHeight),
                         (o = e.clientWidth),
                         (a = (function (e) {
@@ -79,7 +79,7 @@ let b = ["#51BC9D"],
                                     });
                             }
                             return e;
-                        })({}, f.We)),
+                        })({}, g.We)),
                         (i = i =
                             {
                                 position: {
@@ -136,7 +136,7 @@ let b = ["#51BC9D"],
                     );
                 }
             }, [j, P, Q, w]),
-            V = (0, d.Z)(v);
+            V = (0, u.Z)(v);
         return (s.useEffect(() => {
             S && v && !V && (O(), D());
         }, [v, S, O, D, V]),
@@ -189,8 +189,8 @@ let b = ["#51BC9D"],
                                   ref: q,
                                   sprites: [h],
                                   colors: b,
-                                  spriteWidth: f.Ko,
-                                  spriteHeight: f.Ko,
+                                  spriteWidth: g.Ko,
+                                  spriteHeight: g.Ko,
                               }),
                               null != o.current &&
                                   (0, l.createPortal)(

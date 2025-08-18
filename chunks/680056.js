@@ -12,7 +12,7 @@ let o = (e) => {
                 let { clip: r, cropData: l, applicationAudioEnabled: s, voiceAudioEnabled: c, onShareComplete: u } = e;
                 n(r.id);
                 try {
-                    var d, p, m, f, b, g, j, h, y, x;
+                    var d, p, m, f, b, g, j, y, h, x;
                     let e = (0, a.W)(t);
                     await (0, i.e)(r, {
                         channelId: e ? t : void 0,
@@ -30,18 +30,18 @@ let o = (e) => {
                                     : 0,
                             end:
                                 null !=
-                                (h =
+                                (y =
                                     null != (j = null == l ? void 0 : l.end)
                                         ? j
                                         : null == (p = r.editMetadata)
                                           ? void 0
                                           : p.end)
-                                    ? h
+                                    ? y
                                     : r.length / 1000,
                             applicationAudio:
                                 null ==
-                                    (y = null != s ? s : null == (m = r.editMetadata) ? void 0 : m.applicationAudio) ||
-                                y,
+                                    (h = null != s ? s : null == (m = r.editMetadata) ? void 0 : m.applicationAudio) ||
+                                h,
                             voiceAudio:
                                 null == (x = null != c ? c : null == (f = r.editMetadata) ? void 0 : f.voiceAudio) || x,
                         },

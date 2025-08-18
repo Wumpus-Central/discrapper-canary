@@ -1,71 +1,71 @@
-n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => f });
+var i = n(951288),
+    r = n(647438),
     a = n(481060),
     l = n(493683),
     o = n(489618),
     d = n(699516),
-    c = n(594174),
-    s = n(933557),
-    u = n(388032);
-function b(e, t) {
-    let { rearrangeContextMenu: b } = o.Z.useExperiment({ location: "useChannelLeaveItem" }),
-        f = i.useCallback(() => {
-            let i = (0, s.F6)(e, c.default, d.Z),
-                o = u.intl.formatToPlainString(u.t.hJ5Ap6, { name: i }),
-                b = u.intl.format(u.t.SSIVOj, { name: i });
+    u = n(594174),
+    c = n(933557),
+    s = n(388032);
+function f(e, t) {
+    let { rearrangeContextMenu: f } = o.Z.useExperiment({ location: "useChannelLeaveItem" }),
+        v = r.useCallback(() => {
+            let r = (0, c.F6)(e, u.default, d.Z),
+                o = s.intl.formatToPlainString(s.t.hJ5Ap6, { name: r }),
+                f = s.intl.format(s.t.SSIVOj, { name: r });
             e.isManaged() &&
-                ((o = u.intl.formatToPlainString(u.t.hVGjER, { name: i })),
-                (b = u.intl.format(u.t.IK1Qvr, { name: i })));
-            let f = function (n) {
-                let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                l.Z.closePrivateChannel(e.id, t, r);
+                ((o = s.intl.formatToPlainString(s.t.hVGjER, { name: r })),
+                (f = s.intl.format(s.t.IK1Qvr, { name: r })));
+            let v = function (n) {
+                let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                l.Z.closePrivateChannel(e.id, t, i);
             };
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e("14604").then(n.bind(n, 960670));
                 return (t) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         e,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })(
                             {
                                 header: o,
-                                body: b,
-                                onSubmit: f,
+                                body: f,
+                                onSubmit: v,
                             },
                             t,
                         ),
                     );
             });
         }, [e, t]);
-    return (0, r.jsx)(a.sNh, {
+    return (0, i.jsx)(a.sNh, {
         id: "leave-channel",
-        label: u.intl.string(u.t["26C4oq"]),
-        action: f,
+        label: s.intl.string(s.t["26C4oq"]),
+        action: v,
         color: "danger",
-        subtext: b ? u.intl.string(u.t["2HOk0t"]) : void 0,
+        subtext: f ? s.intl.string(s.t["2HOk0t"]) : void 0,
     });
 }

@@ -38,7 +38,7 @@ function d(e) {
 function f(e) {
     var t;
     let { title: n, body: i, badge: s, className: u, textLink: d, hasBottomMargin: f = !1 } = e,
-        p = null == (t = null == d ? void 0 : d.external) || t;
+        h = null == (t = null == d ? void 0 : d.external) || t;
     return (0, r.jsxs)("div", {
         className: a()(c.header, u, { [c.hasActions]: f }),
         children: [
@@ -52,18 +52,12 @@ function f(e) {
                     }),
                 ],
             }),
-            null != i &&
-                "" !== i &&
-                (0, r.jsx)(l.Text, {
-                    variant: "text-sm/normal",
-                    className: c.headerBody,
-                    children: i,
-                }),
+            (0, r.jsx)(p, { body: i }),
             null != d &&
                 (0, r.jsx)(o.Anchor, {
                     href: d.link,
-                    target: p ? "_blank" : void 0,
-                    rel: p ? "noopener noreferrer" : void 0,
+                    target: h ? "_blank" : void 0,
+                    rel: h ? "noopener noreferrer" : void 0,
                     children: (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         className: c.footerLink,
@@ -81,4 +75,25 @@ function _(e) {
         className: c.badgeContainer,
         children: (0, r.jsx)(s.C, d({}, n)),
     });
+}
+function p(e) {
+    let { body: t } = e;
+    if (null == t) return null;
+    let n = Array.isArray(t) ? t : [t];
+    return 0 === n.length || n.every((e) => null == e || "" === e)
+        ? null
+        : (0, r.jsx)("div", {
+              className: c.headerBody,
+              children: n.map((e, t) =>
+                  (0, r.jsx)(
+                      l.Text,
+                      {
+                          variant: "text-sm/normal",
+                          color: "none",
+                          children: e,
+                      },
+                      t,
+                  ),
+              ),
+          });
 }

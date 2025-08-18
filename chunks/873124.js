@@ -7,7 +7,7 @@ var l = n(951288),
 function o(e) {
     let { mfaChallenge: t, finish: n, setSlide: o, onClose: d, isSlideReady: c, headerAlignStart: u } = e,
         [h, f] = r.useState(!1),
-        [m, g] = r.useState(null),
+        [g, m] = r.useState(null),
         [x, p] = r.useState(""),
         S = r.useRef(null);
     return (
@@ -27,7 +27,7 @@ function o(e) {
                     })
                         .catch((e) => {
                             var t, n;
-                            g(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                            m(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             f(!1);
@@ -51,7 +51,7 @@ function o(e) {
                                 spellCheck: "false",
                                 disabled: h,
                             }),
-                            (0, l.jsx)(s.Z.SlideError, { error: m }),
+                            (0, l.jsx)(s.Z.SlideError, { error: g }),
                         ],
                     }),
                 }),

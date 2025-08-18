@@ -45,8 +45,8 @@ var i = n(951288),
     V = n(131704),
     U = n(601964),
     H = n(314897),
-    W = n(388610),
-    G = n(430824),
+    G = n(388610),
+    W = n(430824),
     F = n(496675),
     z = n(903223),
     X = n(594174),
@@ -143,8 +143,8 @@ let eg = (0, w.hQ)(),
         },
     },
     ew = "AUTOMATIC_RTC_REGION",
-    eT = d.ZP.connectStores([W.Z], () => {
-        let { channel: e, submitting: t } = W.Z.getProps();
+    eT = d.ZP.connectStores([G.Z], () => {
+        let { channel: e, submitting: t } = G.Z.getProps();
         return {
             channel: e,
             submitting: t,
@@ -347,7 +347,7 @@ class eR extends l.PureComponent {
                           ],
                       })
                     : null,
-            W = e.isForumLikeChannel()
+            G = e.isForumLikeChannel()
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsxs)(m.xJW, {
@@ -381,7 +381,7 @@ class eR extends l.PureComponent {
                       ],
                   })
                 : null,
-            G = e.isForumLikeChannel()
+            W = e.isForumLikeChannel()
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsxs)("div", {
@@ -775,36 +775,32 @@ class eR extends l.PureComponent {
                 children: [
                     (0, i.jsx)(m.xJW, {
                         title: j,
-                        children: (0, i.jsxs)("div", {
-                            className: eo.nameInput,
-                            children: [
-                                (0, i.jsx)(g.Is, {
-                                    inputRef: this.nameInputRef,
-                                    value: t,
-                                    onChange: this.handleChangeName,
-                                    onBlur: this.handleBlurName,
-                                    error: this.getError("name"),
-                                    name: f,
-                                    autoFocus: !0,
-                                    disabled: T ? !v : !b,
-                                    maxLength: en.HN8,
-                                    className: eo.nameInputWrapper,
-                                    inputClassName: eo.nameInputInner,
-                                    focusProps: { offset: { right: -30 } },
-                                }),
-                                (0, i.jsx)(eZ, {
+                        children: (0, i.jsx)(m.oil, {
+                            fullWidth: !0,
+                            inputRef: this.nameInputRef,
+                            value: t,
+                            onChange: this.handleChangeName,
+                            onBlur: this.handleBlurName,
+                            error: this.getError("name"),
+                            name: f,
+                            autoFocus: !0,
+                            disabled: T ? !v : !b,
+                            maxLength: en.HN8,
+                            trailing: {
+                                type: "emoji",
+                                button: (0, i.jsx)(eZ, {
                                     onEmojiPicked: this.insertEmojiAtPosition,
                                     channel: e,
                                     guildId: null == e ? void 0 : e.guild_id,
                                 }),
-                            ],
+                            },
                         }),
                     }),
                     (0, i.jsx)(m.$i$, { className: s()(ec.marginTop40, ec.marginBottom40) }),
                     B,
                     H,
-                    W,
                     G,
+                    W,
                     q,
                     Q,
                     F,
@@ -1212,13 +1208,13 @@ class eR extends l.PureComponent {
     }
 }
 function eI() {
-    let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([W.Z], () => W.Z.getProps()),
+    let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([G.Z], () => G.Z.getProps()),
         s = (0, d.e7)([z.Z], () => {
             var e;
             return z.Z.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
         }),
         a = (0, d.e7)([B.Z], () => B.Z.theme),
-        o = (0, d.e7)([G.Z], () => G.Z.getGuild(null == t ? void 0 : t.getGuildId())),
+        o = (0, d.e7)([W.Z], () => W.Z.getGuild(null == t ? void 0 : t.getGuildId())),
         c = (0, D.C7)(t),
         u = (0, D.Xb)(t),
         { canManageChannels: h, canSendMessages: g } = (0, d.cj)([F.Z], () => ({

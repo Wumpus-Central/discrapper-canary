@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(953529);
+n.d(t, { Z: () => N }), n(388685), n(953529);
 var r = n(951288),
     o = n(647438),
     a = n(512722),
@@ -14,10 +14,10 @@ var r = n(951288),
     m = n(981631),
     b = n(723359),
     h = n(388032),
-    N = n(181576);
-function x(e) {
+    x = n(181576);
+function N(e) {
     let { onComplete: t, onClose: n } = e,
-        [a, x] = o.useState(null),
+        [a, N] = o.useState(null),
         [y, j] = o.useState(null),
         [E, v] = o.useState(!1),
         C = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
@@ -42,9 +42,9 @@ function x(e) {
     }, [C, t]);
     let I = o.useCallback(
             (e) => {
-                x(e);
+                N(e);
             },
-            [x],
+            [N],
         ),
         g = o.useCallback(() => {
             var e;
@@ -53,24 +53,24 @@ function x(e) {
     return null == C
         ? null
         : (0, r.jsxs)("form", {
-              className: N.content,
+              className: x.content,
               onSubmit: O,
               children: [
                   (0, r.jsx)(u.gw7, {
                       size: "custom",
                       width: 56,
                       height: 40,
-                      className: N.logo,
+                      className: x.logo,
                       color: l.Z.unsafe_rawColors.BRAND_500.css,
                   }),
                   (0, r.jsx)(u.X6q, {
-                      className: N.title,
+                      className: x.title,
                       variant: "heading-xl/semibold",
                       children: h.intl.string(h.t.n7i7sr),
                   }),
                   (0, r.jsx)(u.Text, {
                       color: "text-default",
-                      className: N.description,
+                      className: x.description,
                       variant: "text-md/normal",
                       children: h.intl.format(h.t.fa8kW1, { helpURL: p.Z.getArticleURL(m.BhN.AGE_GATE) }),
                   }),
@@ -79,7 +79,7 @@ function x(e) {
                       children: (0, r.jsx)(f.Z, {
                           required: !0,
                           autoFocus: !0,
-                          wrapperClassName: N.formItem,
+                          wrapperClassName: x.formItem,
                           label: h.intl.string(h.t.rhBeKS),
                           name: "birthday",
                           onChange: I,
@@ -89,9 +89,9 @@ function x(e) {
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: N.footer,
+                      className: x.footer,
                       children: (0, r.jsx)("div", {
-                          className: N.buttonWrapper,
+                          className: x.buttonWrapper,
                           children: (0, r.jsx)(c.zx, {
                               buttonRef: T,
                               type: "submit",

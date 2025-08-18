@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(781311), n(539338), n(388685);
+n.d(t, { Z: () => L }), n(781311), n(539338), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -73,7 +73,7 @@ function D(e, t) {
     );
 }
 let A = "DRAGGABLE_ROLE";
-function k(e) {
+function L(e) {
     let {
             setEditRoleId: t,
             guild: n,
@@ -103,7 +103,7 @@ function k(e) {
             (e) => {
                 var i;
                 let { row: l } = e;
-                if (0 === b.length) return (0, r.jsx)(L, {}, "empty-role");
+                if (0 === b.length) return (0, r.jsx)(k, {}, "empty-role");
                 let o = b[l];
                 return (0, r.jsx)(
                     M,
@@ -134,7 +134,7 @@ function k(e) {
         renderRow: P,
     });
 }
-function L() {
+function k() {
     return (0, r.jsxs)("div", {
         className: w.emptyRoles,
         children: [
@@ -168,8 +168,8 @@ function M(e) {
             setEditRoleId: E,
             setSelectedSection: T,
         } = e,
-        k = (0, I.T)(g, h, d),
-        L = null != k,
+        L = (0, I.T)(g, h, d),
+        k = null != L,
         [M, U] = i.useState(!1),
         B = i.useMemo(
             () => ({
@@ -181,7 +181,7 @@ function M(e) {
                         position: x,
                     }
                 ),
-                canDrag: () => M && !L,
+                canDrag: () => M && !k,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -189,13 +189,13 @@ function M(e) {
                     y(n.roleId);
                 },
             }),
-            [d, _, O, y, L, M, x],
+            [d, _, O, y, k, M, x],
         ),
         [{ isDragging: F }, H] = (0, s.c)(B),
         z = i.useMemo(
             () => ({
                 accept: A,
-                canDrop: () => !L,
+                canDrop: () => !k,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop()
@@ -204,7 +204,7 @@ function M(e) {
                 },
                 drop: () => ({ roleId: d.id }),
             }),
-            [L, d],
+            [k, d],
         ),
         [{ dragSourcePosition: W }, V] = (0, o.L)(z),
         Y = i.useCallback(
@@ -231,11 +231,11 @@ function M(e) {
             },
             className: a()(w.roleRow, w.roleRowDragging),
         });
-    function q() {
+    function X() {
         E(d.id);
     }
-    function X() {
-        q(), T(S.ZI.MEMBERS);
+    function q() {
+        X(), T(S.ZI.MEMBERS);
     }
     return (0, r.jsxs)(u.P3F, {
         className: a()(w.roleRow, {
@@ -243,7 +243,7 @@ function M(e) {
             [w.containerDragBefore]: null != W && x < W,
             [w.containerDragAfter]: null != W && x > W,
         }),
-        onClick: q,
+        onClick: X,
         onContextMenu: Y,
         innerRef: (e) => {
             H(V(e));
@@ -255,7 +255,7 @@ function M(e) {
         }),
         children: [
             (0, r.jsx)("div", {
-                className: a()(w.dragIcon, R.dragSpacing, { [w.dragIconHidden]: L || N }),
+                className: a()(w.dragIcon, R.dragSpacing, { [w.dragIconHidden]: k || N }),
                 onMouseEnter: () => U(!0),
                 onMouseLeave: () => U(!1),
                 children: (0, r.jsx)(u.Vni, {
@@ -279,10 +279,10 @@ function M(e) {
                               className: w.roleIcon,
                               defaultIconClassName: w.shield,
                           }),
-                    null != k
+                    null != L
                         ? (0, r.jsx)(I.Z, {
                               className: w.lock,
-                              tooltipText: k,
+                              tooltipText: L,
                           })
                         : null,
                     (0, r.jsx)(u.Text, {
@@ -308,7 +308,7 @@ function M(e) {
                         u.P3F,
                         D(Z({}, e), {
                             className: a()(w.memberCountContainer, R.memberSpacing),
-                            onClick: X,
+                            onClick: q,
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-md/normal",
@@ -330,15 +330,15 @@ function M(e) {
                 className: a()(w.buttonsContainer, R.buttonsSpacing),
                 children: [
                     (0, r.jsx)(u.ua7, {
-                        text: L ? P.intl.string(P.t["HO/oXl"]) : P.intl.string(P.t.bt75u7),
+                        text: k ? P.intl.string(P.t["HO/oXl"]) : P.intl.string(P.t.bt75u7),
                         children: (e) =>
                             (0, r.jsx)(
                                 u.hU,
                                 D(Z({}, e), {
                                     variant: "secondary",
-                                    "aria-label": L ? P.intl.string(P.t["HO/oXl"]) : P.intl.string(P.t.bt75u7),
-                                    icon: L ? u.tEF : u.vdY,
-                                    onClick: q,
+                                    "aria-label": k ? P.intl.string(P.t["HO/oXl"]) : P.intl.string(P.t.bt75u7),
+                                    icon: k ? u.tEF : u.vdY,
+                                    onClick: X,
                                 }),
                             ),
                     }),

@@ -6,18 +6,18 @@ var r = n(951288),
     i = n(113434),
     l = n(497505),
     c = n(670638),
-    u = n(388032),
-    d = n(319889);
+    d = n(388032),
+    u = n(319889);
 function p(e) {
     let { quest: t, onCtxMenuOpen: n, onCtxMenuClose: s, onCtxMenuSelect: p } = e,
         m = (0, i.B6)(t.config.expiresAt);
     return (0, r.jsxs)("div", {
-        className: d.questAcceptedHeader,
+        className: u.questAcceptedHeader,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-xxs/medium",
-                className: o()(d.flex, d.headerText),
-                children: u.intl.format(u.t["pX+fmp"], { expirationDate: m }),
+                className: o()(u.flex, u.headerText),
+                children: d.intl.format(d.t["pX+fmp"], { expirationDate: m }),
             }),
             (0, r.jsx)(c.r, {
                 onOpen: n,
@@ -59,12 +59,12 @@ function p(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                className: d.submenuWrapper,
-                                "aria-label": u.intl.string(u.t.DEoVWV),
+                                className: u.submenuWrapper,
+                                "aria-label": d.intl.string(d.t.DEoVWV),
                                 children: (0, r.jsx)(a.xhG, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: o()(d.submenuIcon, d.interactiveNormal),
+                                    className: o()(u.submenuIcon, u.interactiveNormal),
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors

@@ -56,7 +56,7 @@ function A(e) {
     }
     return e;
 }
-function k(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function k(e, t) {
         e
     );
 }
-let L = "WELCOME_CHANNEL",
+let k = "WELCOME_CHANNEL",
     M = (e) => {
         var t;
         let l,
@@ -92,7 +92,7 @@ let L = "WELCOME_CHANNEL",
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(A({}, t), {
+                                L(A({}, t), {
                                     onConfirm: () => {
                                         h(), t.onClose();
                                     },
@@ -104,7 +104,7 @@ let L = "WELCOME_CHANNEL",
                 );
             },
             [, G] = (0, c.c)({
-                type: L,
+                type: k,
                 item: {
                     channel: o,
                     index: _,
@@ -114,7 +114,7 @@ let L = "WELCOME_CHANNEL",
                 },
             }),
             [, U] = (0, d.L)({
-                accept: L,
+                accept: k,
                 hover: (e) => {
                     f(e.channel, _, !1);
                 },
@@ -159,7 +159,7 @@ let L = "WELCOME_CHANNEL",
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(A({}, t), {
+                                L(A({}, t), {
                                     guildId: s,
                                     welcomeChannel: o,
                                     onChannelReorder: f,
@@ -215,7 +215,7 @@ let L = "WELCOME_CHANNEL",
             R = (e) => {
                 null != t && (o()(e, a.channels) || ((0, y.Es)(t.id, { channels: e }), p(!0)));
             },
-            L = (e) => {
+            k = (e) => {
                 null != t && e !== a.enabled && ((0, y.Es)(t.id, { enabled: e }), x(!s), p(!0));
             },
             G = (e, t, n) => {
@@ -293,7 +293,7 @@ let L = "WELCOME_CHANNEL",
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        k(A({}, n), {
+                                                        L(A({}, n), {
                                                             guildId: t.id,
                                                             isPreview: !0,
                                                         }),
@@ -303,7 +303,7 @@ let L = "WELCOME_CHANNEL",
                           onToggle:
                               S || (null == N ? void 0 : N.length) !== 0
                                   ? () => {
-                                        L(!S);
+                                        k(!S);
                                     }
                                   : void 0,
                           animateStatus: b,
@@ -393,7 +393,7 @@ let L = "WELCOME_CHANNEL",
                                                                 R(t),
                                                                 0 === t.length &&
                                                                     S &&
-                                                                    ((0, y.VP)({ enabled: !1 }), L(!1));
+                                                                    ((0, y.VP)({ enabled: !1 }), k(!1));
                                                         },
                                                         onChannelReorder: G,
                                                         isDropHovered: n === c,

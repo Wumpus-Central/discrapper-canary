@@ -10,10 +10,10 @@ var r = n(951288),
     u = n(313201),
     m = n(592125),
     h = n(888592),
-    x = n(981631),
-    p = n(388032),
-    f = n(330966);
-let g = (0, u.hQ)(),
+    f = n(981631),
+    g = n(388032),
+    p = n(330966);
+let x = (0, u.hQ)(),
     _ = (e) => {
         let {
                 setStep: t,
@@ -26,9 +26,9 @@ let g = (0, u.hQ)(),
                 isNUXFlow: E,
             } = e,
             [S, y] = l.useState(null),
-            [j, I] = l.useState(!1),
-            b = async (e) => {
-                e.preventDefault(), y(null), I(!0);
+            [j, b] = l.useState(!1),
+            I = async (e) => {
+                e.preventDefault(), y(null), b(!0);
                 try {
                     var r, l, a, s, o;
                     let e =
@@ -54,90 +54,90 @@ let g = (0, u.hQ)(),
                 } catch (e) {
                     y(new d.Hx(e));
                 } finally {
-                    I(!1);
+                    b(!1);
                 }
             },
-            O = p.intl.string(p.t.H1jCHB),
-            C = p.intl.string(p.t.YfeHRE);
-        if (E) (O = p.intl.string(p.t.LVyxND)), (C = p.intl.string(p.t.ECd7Rk));
+            O = g.intl.string(g.t.H1jCHB),
+            T = g.intl.string(g.t.YfeHRE);
+        if (E) (O = g.intl.string(g.t.LVyxND)), (T = g.intl.string(g.t.ECd7Rk));
         else if (
             (null == v ? void 0 : v.guild) != null &&
             v.guild.id !== h.fQ &&
             (null == v ? void 0 : v.approximate_member_count) != null
         ) {
             let { name: e } = v.guild;
-            O = p.intl.formatToPlainString(p.t["4T4+p6"], {
+            O = g.intl.formatToPlainString(g.t["4T4+p6"], {
                 guildName: e,
                 count: v.approximate_member_count,
             });
         }
         return (0, r.jsxs)("div", {
-            className: f.container,
+            className: p.container,
             children: [
-                (0, r.jsx)("div", { className: f.topImage }),
+                (0, r.jsx)("div", { className: p.topImage }),
                 (0, r.jsx)(o.X6q, {
-                    className: a()(f.centerText, f.header),
+                    className: a()(p.centerText, p.header),
                     variant: "heading-xl/semibold",
                     children: O,
                 }),
                 (0, r.jsx)("div", {
-                    className: f.descriptionWidth,
+                    className: p.descriptionWidth,
                     children: (0, r.jsx)(o.Text, {
-                        className: f.centerText,
+                        className: p.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: C,
+                        children: T,
                     }),
                 }),
                 (0, r.jsxs)("form", {
-                    className: f.formContent,
-                    onSubmit: b,
+                    className: p.formContent,
+                    onSubmit: I,
                     children: [
                         (0, r.jsxs)(o.xJW, {
                             children: [
                                 (0, r.jsx)(o.vwX, {
-                                    id: g,
-                                    children: p.intl.string(p.t.kmCxkZ),
+                                    id: x,
+                                    children: g.intl.string(g.t.kmCxkZ),
                                 }),
                                 (0, r.jsx)(o.oil, {
-                                    placeholder: p.intl.string(p.t.ImAOh4),
+                                    placeholder: g.intl.string(g.t.ImAOh4),
                                     onChange: (e) => {
                                         u(e);
                                     },
                                     error: null == S ? void 0 : S.getAnyErrorMessage(),
-                                    "aria-labelledby": g,
+                                    "aria-labelledby": x,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(o.Text, {
                             color: "header-secondary",
-                            className: f.formDescription,
+                            className: p.formDescription,
                             variant: "text-sm/normal",
-                            children: p.intl.string(p.t.Cv7mmJ),
+                            children: g.intl.string(g.t.Cv7mmJ),
                         }),
                         (0, r.jsx)(s.zx, {
                             type: "submit",
                             size: s.zx.Sizes.LARGE,
                             color: s.zx.Colors.BRAND,
-                            className: f.submitButton,
+                            className: p.submitButton,
                             submitting: j,
-                            children: p.intl.string(p.t["8vmKOz"]),
+                            children: g.intl.string(g.t["8vmKOz"]),
                         }),
                         (0, r.jsx)(o.Text, {
-                            className: f.termsPhrase,
+                            className: p.termsPhrase,
                             color: "header-secondary",
                             variant: "text-xs/normal",
-                            children: p.intl.format(p.t.RPT0vr, {
-                                termsURL: x.EYA.TERMS,
-                                privacyURL: x.EYA.PRIVACY,
+                            children: g.intl.format(g.t.RPT0vr, {
+                                termsURL: f.EYA.TERMS,
+                                privacyURL: f.EYA.PRIVACY,
                             }),
                         }),
                         E &&
                             (0, r.jsx)(s.zx, {
                                 look: s.zx.Looks.LINK,
                                 onClick: N,
-                                className: f.cancelButton,
-                                children: p.intl.string(p.t.hO6qJy),
+                                className: p.cancelButton,
+                                children: g.intl.string(g.t.hO6qJy),
                             }),
                     ],
                 }),

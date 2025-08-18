@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => p,
-    default: () => x,
+    H: () => g,
+    default: () => f,
 });
 var r = n(951288),
     l = n(647438),
@@ -13,12 +13,12 @@ var r = n(951288),
     u = n(630724),
     m = n(388032),
     h = n(759137);
-function x(e) {
-    let { transitionState: t, onClose: n, isNUXFlow: x } = e;
+function f(e) {
+    let { transitionState: t, onClose: n, isNUXFlow: f } = e;
     return (
         l.useEffect(() => {
-            o.Z.hideHubUpsell(), x && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
-        }, [x]),
+            o.Z.hideHubUpsell(), f && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
+        }, [f]),
         (0, r.jsx)(a.Y0X, {
             className: h.modalRoot,
             transitionState: t,
@@ -47,7 +47,7 @@ function x(e) {
                                     className: h.closeButton,
                                 }),
                                 (0, r.jsx)(c.Z, {
-                                    isNUXFlow: x,
+                                    isNUXFlow: f,
                                     onClose: n,
                                 }),
                             ],
@@ -58,7 +58,7 @@ function x(e) {
         })
     );
 }
-let p = (e) => {
+let g = (e) => {
     let { invite: t } = e;
     return (0, r.jsxs)("div", {
         className: h.container,

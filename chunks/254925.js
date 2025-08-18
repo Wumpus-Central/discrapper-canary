@@ -47,8 +47,8 @@ let P = function () {
         });
     if (null == w || null == R) return null;
     let A = l.Y.VISIBLE.has(R.visibility),
-        k = (0, g.up)(w),
-        L = !k || (null == R ? void 0 : R.tag) == null,
+        L = (0, g.up)(w),
+        k = !L || (null == R ? void 0 : R.tag) == null,
         M = null != (e = R.badge) ? e : I.QV["0"],
         G = null != (t = R.badgeColorPrimary) ? t : I.Ek["0"].primary,
         U = null != (n = R.badgeColorSecondary) ? n : I.Ek["0"].secondary,
@@ -57,7 +57,7 @@ let P = function () {
                 (0, r.jsx)(v.Z, {
                     className: T.section,
                     guildId: w.id,
-                    isDisabled: L,
+                    isDisabled: k,
                     tag: null != (P = R.tag) ? P : "",
                     badge: M,
                     primaryColor: G,
@@ -118,7 +118,7 @@ let P = function () {
                                         }),
                                 ],
                             }),
-                            k
+                            L
                                 ? (0, r.jsxs)("div", {
                                       className: T.enableSwitchContainer,
                                       children: [
@@ -132,9 +132,9 @@ let P = function () {
                                           }),
                                           (0, r.jsx)(o.rsf, {
                                               id: "enable-server-tag",
-                                              checked: !L,
+                                              checked: !k,
                                               onChange: () => {
-                                                  if (L) {
+                                                  if (k) {
                                                       var e;
                                                       f.Z.updateGuildProfile(w.id, {
                                                           tag: null != (e = R.tag) ? e : "",
@@ -155,7 +155,7 @@ let P = function () {
                                           },
                                       }),
                                   }),
-                            L
+                            k
                                 ? (0, r.jsx)(o.nuw, {
                                       children: (0, r.jsx)("div", {
                                           className: T.disabledForm,
@@ -175,7 +175,7 @@ let P = function () {
                                 primaryColor: G,
                                 secondaryColor: U,
                             }),
-                            !L && (0, r.jsx)(O.Z, { guildId: w.id }),
+                            !k && (0, r.jsx)(O.Z, { guildId: w.id }),
                         ],
                     }),
                 ],

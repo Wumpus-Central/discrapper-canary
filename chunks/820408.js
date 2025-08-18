@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var i = n(951288),
     s = n(647438),
     l = n(755721),
@@ -15,27 +15,27 @@ var i = n(951288),
     p = n(981631),
     v = n(388032),
     j = n(586121);
-function S(e) {
+function N(e) {
     let { onClose: t } = e,
         n = (0, o.O)(),
-        { analyticsLocations: S } = (0, c.ZP)(),
-        [N, f] = s.useState(!1),
+        { analyticsLocations: N } = (0, c.ZP)(),
+        [S, f] = s.useState(!1),
         b = s.useCallback(
             (e) => {
-                !N &&
+                !S &&
                     e &&
                     (g.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: x.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
                         location: n.location,
-                        location_stack: S,
+                        location_stack: N,
                     }),
                     f(!0));
             },
-            [n.location, S, N],
+            [n.location, N, S],
         ),
-        C = (0, d.O)(b, 0.8, !0);
+        O = (0, d.O)(b, 0.8, !0);
     return (0, i.jsxs)("div", {
-        ref: C,
+        ref: O,
         className: j.container,
         children: [
             (0, i.jsx)(r.SrA, {

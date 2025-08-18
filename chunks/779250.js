@@ -29,8 +29,8 @@ var r,
     P = n(744782),
     w = n(129526),
     D = n(765305),
-    _ = n(981631),
-    R = n(388032),
+    R = n(981631),
+    _ = n(388032),
     A = n(869939);
 function X(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -153,28 +153,28 @@ function W(e) {
             () => [
                 {
                     slideId: 0,
-                    label: R.intl.string(R.t["56QlKS"]),
+                    label: _.intl.string(_.t["56QlKS"]),
                     valid: null == g.entity,
                     userErrorMessage: g.entity,
                 },
                 {
                     slideId: 1,
-                    label: R.intl.string(R.t["w5/ntb"]),
+                    label: _.intl.string(_.t["w5/ntb"]),
                     valid: null == g.schedule && null == g.topic && (!d || C),
                     userErrorMessage: g.schedule,
                 },
                 {
                     slideId: 2,
-                    label: R.intl.string(R.t["8aJzT0"]),
+                    label: _.intl.string(_.t["8aJzT0"]),
                     valid: !0,
                 },
             ],
             [g, d, C],
         ),
         D = Object.keys(k).length,
-        _ = (0, j.xt)(n),
+        R = (0, j.xt)(n),
         X = (e) => Math.max(0, Math.min(e, D - 1)),
-        [L, G] = i.useState(+!!_),
+        [L, G] = i.useState(+!!R),
         [W, V] = i.useState(!1),
         z = i.useMemo(
             () =>
@@ -205,9 +205,9 @@ function W(e) {
         K = () => {
             H(L - 1);
         },
-        Q = R.intl.string(R.t.PDTjLC);
+        Q = _.intl.string(_.t.PDTjLC);
     return (
-        2 === U && (Q = d ? R.intl.string(R.t.e5VEcH) : R.intl.string(R.t["60lJ0N"])),
+        2 === U && (Q = d ? _.intl.string(_.t.e5VEcH) : _.intl.string(_.t["60lJ0N"])),
         (0, l.jsxs)(o.Y0X, {
             transitionState: v,
             "aria-labelledby": O,
@@ -289,7 +289,7 @@ function W(e) {
                                 children: [
                                     (0, l.jsx)(o.zxk, {
                                         variant: "secondary",
-                                        text: R.intl.string(R.t["ETE/oK"]),
+                                        text: _.intl.string(_.t["ETE/oK"]),
                                         onClick: b,
                                     }),
                                     (0, l.jsx)("div", {
@@ -312,7 +312,7 @@ function W(e) {
                                         variant: "secondary",
                                         size: "sm",
                                         onClick: K,
-                                        text: R.intl.string(R.t["13/7kZ"]),
+                                        text: _.intl.string(_.t["13/7kZ"]),
                                     }),
                                 }),
                         ],
@@ -348,7 +348,7 @@ function V(e) {
                                 max_age: L.value,
                                 max_uses: G.value,
                             },
-                            _.t4x.GUILD_EVENTS,
+                            R.t4x.GUILD_EVENTS,
                         ),
                         n ? P(e) : u();
                 })(n.body),
@@ -387,19 +387,19 @@ function V(e) {
                               ((n = X({}, t)),
                               (r = r =
                                   {
-                                      header: R.intl.string(R.t.BW1Qoq),
-                                      confirmText: R.intl.string(R.t.e5VEcH),
-                                      cancelText: R.intl.string(R.t.oEAioK),
+                                      header: _.intl.string(_.t.BW1Qoq),
+                                      confirmText: _.intl.string(_.t.e5VEcH),
+                                      cancelText: _.intl.string(_.t.oEAioK),
                                       onConfirm: k,
                                       children: [
                                           (0, l.jsx)(o.Text, {
                                               variant: "text-md/normal",
-                                              children: R.intl.string(R.t.aNCYam),
+                                              children: _.intl.string(_.t.aNCYam),
                                           }),
                                           (0, l.jsx)("br", {}),
                                           (0, l.jsx)(o.Text, {
                                               variant: "text-md/normal",
-                                              children: R.intl.format(R.t.RWBa5e, {}),
+                                              children: _.intl.format(_.t.RWBa5e, {}),
                                           }),
                                       ],
                                   }),

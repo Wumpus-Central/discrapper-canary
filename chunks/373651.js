@@ -1,4 +1,4 @@
-t.d(n, { default: () => N });
+t.d(n, { default: () => B });
 var i = t(951288);
 t(647438);
 var r = t(481060),
@@ -9,10 +9,10 @@ var r = t(481060),
     d = t(100527),
     _ = t(299206),
     s = t(916069),
-    u = t(895563),
-    p = t(212205),
-    b = t(478035),
-    f = t(62420),
+    p = t(895563),
+    u = t(212205),
+    f = t(478035),
+    b = t(62420),
     m = t(423589),
     h = t(398048),
     g = t(109764),
@@ -25,8 +25,8 @@ var r = t(481060),
     I = t(218035),
     O = t(775666),
     T = t(593589),
-    Z = t(442754),
-    w = t(981631),
+    w = t(442754),
+    Z = t(981631),
     S = t(388032);
 function E(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -57,15 +57,15 @@ function k(e) {
     let { channel: n, onSelect: t } = e,
         a = (0, v.Z)(n),
         c = (0, g.Z)(n),
-        d = (0, u.l)(n),
-        s = (0, u.P)(n),
-        h = (0, p.Z)(n),
-        C = (0, b.Z)(n),
-        j = (0, f.Z)(n),
+        d = (0, p.l)(n),
+        s = (0, p.P)(n),
+        h = (0, u.Z)(n),
+        C = (0, f.Z)(n),
+        j = (0, b.Z)(n),
         P = (0, y.ZP)(n),
         T = (0, I.Z)(n),
-        Z = (0, x.Z)(n),
-        w = (0, _.Z)({
+        w = (0, x.Z)(n),
+        Z = (0, _.Z)({
             id: n.id,
             label: S.intl.string(S.t.gFHI3t),
         }),
@@ -85,11 +85,11 @@ function k(e) {
             (0, i.jsxs)(r.kSQ, {
                 children: [P, L ? k : T],
             }),
-            (0, i.jsx)(r.kSQ, { children: Z }),
+            (0, i.jsx)(r.kSQ, { children: w }),
             (0, i.jsx)(r.kSQ, { children: E }),
             (0, i.jsx)(r.kSQ, { children: s }),
             (0, i.jsx)(r.kSQ, { children: c }),
-            (0, i.jsx)(r.kSQ, { children: w }),
+            (0, i.jsx)(r.kSQ, { children: Z }),
         ],
     });
 }
@@ -97,22 +97,22 @@ function L(e) {
     let { channel: n, guild: t, onSelect: a } = e,
         c = (0, v.Z)(n),
         d = (0, g.Z)(n),
-        s = (0, u.l)(n),
-        p = (0, u.P)(n),
-        b = (0, Z.Z)(n),
-        f = (0, y.ZP)(n),
-        w = (0, x.Z)(n),
+        s = (0, p.l)(n),
+        u = (0, p.P)(n),
+        f = (0, w.Z)(n),
+        b = (0, y.ZP)(n),
+        Z = (0, x.Z)(n),
         E = (0, P.Z)(n, t),
         k = (0, h.Z)(n, t),
         L = (0, C.Z)(n, t),
-        N = (0, j.Z)(n),
-        B = (0, _.Z)({
+        B = (0, j.Z)(n),
+        N = (0, _.Z)({
             id: n.id,
             label: S.intl.string(S.t.gFHI3t),
         }),
         A = (0, l.Z)(n),
-        U = (0, T.Z)(n, "list_text_channel_context_menu"),
-        W = (0, I.Z)(n),
+        W = (0, T.Z)(n, "list_text_channel_context_menu"),
+        U = (0, I.Z)(n),
         Q = (0, O.ZP)(n),
         D = (0, m.Mn)("ChannelContextMenuNormal");
     return (0, i.jsxs)(r.v2r, {
@@ -131,36 +131,36 @@ function L(e) {
             (0, i.jsxs)(
                 r.kSQ,
                 {
-                    children: [E, b, d, U],
+                    children: [E, f, d, W],
                 },
                 "channel-actions",
             ),
             (0, i.jsxs)(
                 r.kSQ,
                 {
-                    children: [f, D ? Q : W],
+                    children: [b, D ? Q : U],
                 },
                 "notifications",
             ),
             (0, i.jsxs)(
                 r.kSQ,
                 {
-                    children: [w, k, L, N],
+                    children: [Z, k, L, B],
                 },
                 "admin-actions",
             ),
             (0, i.jsx)(r.kSQ, { children: A }),
-            (0, i.jsx)(r.kSQ, { children: p }),
-            (0, i.jsx)(r.kSQ, { children: B }, "developer-actions"),
+            (0, i.jsx)(r.kSQ, { children: u }),
+            (0, i.jsx)(r.kSQ, { children: N }, "developer-actions"),
         ],
     });
 }
-let N = (0, c.Z)(
+let B = (0, c.Z)(
     (0, a.Z)(
         function (e) {
             return (0, s.Z)() ? (0, i.jsx)(k, E({}, e)) : (0, i.jsx)(L, E({}, e));
         },
-        { object: w.qAy.CONTEXT_MENU },
+        { object: Z.qAy.CONTEXT_MENU },
     ),
     [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU],
 );

@@ -32,8 +32,8 @@ var r = n(951288),
     Z = n(999382),
     D = n(70409),
     A = n(981631),
-    k = n(710111),
-    L = n(388032),
+    L = n(710111),
+    k = n(388032),
     M = n(180208);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -88,7 +88,7 @@ function F() {
               value: t,
               children: (0, r.jsx)(m.hjN, {
                   tag: m.RB0.H1,
-                  title: L.intl.string(L.t.OWQNYm),
+                  title: k.intl.string(k.t.OWQNYm),
                   children: (0, r.jsx)(Y, { guild: e }),
               }),
           });
@@ -108,7 +108,7 @@ function z(e) {
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
-              children: L.intl.format(L.t["7E9Hd3"], {
+              children: k.intl.format(k.t["7E9Hd3"], {
                   slots: n,
                   totalSlots: a,
               }),
@@ -116,7 +116,7 @@ function z(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.ua7, {
-                      text: L.intl.formatToPlainString(L.t.tuuJJS, { currentBoostLevel: t }),
+                      text: k.intl.formatToPlainString(k.t.tuuJJS, { currentBoostLevel: t }),
                       children: (e) =>
                           (0, r.jsx)(m.P3F, {
                               className: M.boostingIconWrapper,
@@ -133,7 +133,7 @@ function z(e) {
                               children: (0, r.jsx)(S.Z, G({}, e)),
                           }),
                   }),
-                  L.intl.format(L.t.HHCdvb, {
+                  k.intl.format(k.t.HHCdvb, {
                       slots: n,
                       totalSlots: a,
                       boostLevel: t,
@@ -202,7 +202,7 @@ let W = (e) => {
                 (0, r.jsx)(m.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: L.intl.format(L.t.bGXPVl, {}),
+                    children: k.intl.format(k.t.bGXPVl, {}),
                 }),
             renderPopoutChildren: (t) =>
                 (0, r.jsx)(
@@ -210,7 +210,7 @@ let W = (e) => {
                     U(G({}, t), {
                         disabled: !0,
                         buttonRef: e,
-                        children: L.intl.string(L.t["/uNYPD"]),
+                        children: k.intl.string(k.t["/uNYPD"]),
                     }),
                 ),
             popoutTargetRef: e,
@@ -221,7 +221,7 @@ function Y(e) {
         [l, a] = (0, c.Wu)([_.Z], () => {
             var e;
             return [
-                null != (e = _.Z.getSoundsForGuild(t.id)) ? e : k.Hy,
+                null != (e = _.Z.getSoundsForGuild(t.id)) ? e : L.Hy,
                 _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds(),
             ];
         }),
@@ -255,7 +255,7 @@ function Y(e) {
     let x = B
         ? (0, r.jsx)(m.zxk, {
               variant: "primary",
-              text: L.intl.string(L.t["/uNYPD"]),
+              text: k.intl.string(k.t["/uNYPD"]),
               onClick: function () {
                   (0, m.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e("56035"), n.e("78356")]).then(n.bind(n, 758961));
@@ -273,7 +273,7 @@ function Y(e) {
                         className: M.helpText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: L.intl.string(L.t.BohnsL),
+                        children: k.intl.string(k.t.BohnsL),
                     }),
                     (0, r.jsx)("div", {
                         className: M.buttons,
@@ -293,9 +293,9 @@ function Y(e) {
                               height: 212,
                           }),
                           (0, r.jsx)(m.OZU, {
-                              note: L.intl.string(L.t.ZhoSBA),
+                              note: k.intl.string(k.t.ZhoSBA),
                               noteClassName: M.emptyText,
-                              children: L.intl.string(L.t.I6P1p6),
+                              children: k.intl.string(k.t.I6P1p6),
                           }),
                           x,
                       ],
@@ -324,9 +324,9 @@ function Y(e) {
                                   (0, r.jsxs)("div", {
                                       className: M.tableHeaders,
                                       children: [
-                                          (0, r.jsx)(H, { children: L.intl.string(L.t.sMOuub) }),
-                                          (0, r.jsx)(H, { children: L.intl.string(L.t.lLFvlZ) }),
-                                          (0, r.jsx)(H, { children: L.intl.string(L.t["85qMS0"]) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t.sMOuub) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t.lLFvlZ) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t["85qMS0"]) }),
                                       ],
                                   }),
                                   l.map((e) =>
@@ -374,7 +374,7 @@ function K(e) {
             await (0, g.PR)(f);
         }
     }, [y, f]);
-    let k = i.useCallback(() => {
+    let L = i.useCallback(() => {
             null != y &&
                 (0, N.openUserProfileModal)({
                     userId: y.id,
@@ -420,7 +420,7 @@ function K(e) {
             null != y &&
                 (0, r.jsxs)(m.P3F, {
                     className: M.uploader,
-                    onClick: k,
+                    onClick: L,
                     children: [
                         (0, r.jsx)(m.qEK, {
                             "aria-label": B,
@@ -457,7 +457,7 @@ function K(e) {
                                               );
                                       });
                               },
-                              "aria-label": L.intl.string(L.t.bt75u7),
+                              "aria-label": k.intl.string(k.t.bt75u7),
                               children: (0, r.jsx)(m.vdY, {
                                   size: "xs",
                                   color: "currentColor",
@@ -474,11 +474,11 @@ function K(e) {
                                               U(
                                                   G(
                                                       {
-                                                          header: L.intl.formatToPlainString(L.t["PR/VbG"], {
+                                                          header: k.intl.formatToPlainString(k.t["PR/VbG"], {
                                                               soundName: u,
                                                           }),
-                                                          confirmText: L.intl.string(L.t.oyYWHB),
-                                                          cancelText: L.intl.string(L.t["ETE/oK"]),
+                                                          confirmText: k.intl.string(k.t.oyYWHB),
+                                                          cancelText: k.intl.string(k.t["ETE/oK"]),
                                                           onConfirm: A,
                                                       },
                                                       e,
@@ -486,14 +486,14 @@ function K(e) {
                                                   {
                                                       children: (0, r.jsx)(m.Text, {
                                                           variant: "text-md/normal",
-                                                          children: L.intl.format(L.t["u6+CmJ"], { soundName: u }),
+                                                          children: k.intl.format(k.t["u6+CmJ"], { soundName: u }),
                                                       }),
                                                   },
                                               ),
                                           ),
                                       );
                               },
-                              "aria-label": L.intl.string(L.t.N86XcH),
+                              "aria-label": k.intl.string(k.t.N86XcH),
                               children: (0, r.jsx)(m.Dio, {
                                   size: "md",
                                   color: "currentColor",

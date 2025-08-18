@@ -24,8 +24,8 @@ var r,
     C = t(810561),
     O = t(187443),
     y = t(131154),
-    I = t(765305),
-    j = t(981631),
+    j = t(765305),
+    I = t(981631),
     E = t(388032),
     w = t(187881);
 function P(e) {
@@ -75,7 +75,7 @@ var k = (((r = {})[(r.BANNER = 0)] = "BANNER"), (r[(r.THUMBNAIL = 1)] = "THUMBNA
 function N(e) {
     let { channel: n, onClick: t } = e,
         { canManageAllEvents: r } = (0, b.XJ)(n),
-        o = (0, c.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(j.Plq.CONNECT, n), [n]),
+        o = (0, c.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(I.Plq.CONNECT, n), [n]),
         _ = a.useMemo(() => (0, d.Z)(n), [n]),
         f = (0, u.KS)(n);
     return (0, i.jsx)(s.ua7, {
@@ -283,7 +283,7 @@ function D(e) {
             isMember: h = !1,
             isHub: g = !1,
             speakers: O,
-            speakerCount: j,
+            speakerCount: I,
             rsvped: E,
             canInvite: P,
             location: S,
@@ -303,7 +303,7 @@ function D(e) {
             recurrenceRule: W,
             recurrenceId: q,
         } = e,
-        J = c === I.WX.EXTERNAL,
+        J = c === j.WX.EXTERNAL,
         V = J ? (e) => e.stopPropagation() : void 0,
         X = [];
     if (null != W && null != event) {
@@ -344,11 +344,11 @@ function D(e) {
                     b &&
                         null != t &&
                         null != O &&
-                        j > 0 &&
+                        I > 0 &&
                         (0, i.jsx)(y.Z, {
                             guild: t,
                             speakers: O,
-                            speakerCount: j,
+                            speakerCount: I,
                             className: w.spacing,
                         }),
                     (0, i.jsx)("hr", { className: w.divider }),

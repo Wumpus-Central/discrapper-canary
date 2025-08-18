@@ -14,8 +14,8 @@ var r = n(951288),
     b = n(213609),
     g = n(709054),
     j = n(435064),
-    h = n(39604),
-    y = n(680056),
+    y = n(39604),
+    h = n(680056),
     x = n(10217),
     v = n(410426),
     O = n(207346),
@@ -88,9 +88,9 @@ function E(e) {
     ),
         l.useEffect(
             () => (
-                (0, h.eL)(),
+                (0, y.eL)(),
                 () => {
-                    (0, h.eL)(), (0, h.zq)();
+                    (0, y.eL)(), (0, y.zq)();
                 }
             ),
             [],
@@ -121,7 +121,7 @@ function E(e) {
         !(async function () {
             D(!0);
             try {
-                await h.jv(R);
+                await y.jv(R);
             } finally {
                 D(!1);
             }
@@ -146,7 +146,7 @@ function E(e) {
             },
             [t],
         ),
-        { onShareClick: G } = (0, y.Z)({
+        { onShareClick: G } = (0, h.Z)({
             channelId: t,
             setExporting: T,
         }),

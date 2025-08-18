@@ -38,7 +38,7 @@ let I = [
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : S),
             [Z, D] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
             A = null == Z || null != Z.match(E),
-            [k, L] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
+            [L, k] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             M = i.useRef(null == c ? void 0 : c.store_page_slug).current,
             G =
                 T !== l.features.has(y.oNc.CREATOR_STORE_PAGE) ||
@@ -46,7 +46,7 @@ let I = [
                 ((null == c ? void 0 : c.store_page_primary_color) != null &&
                     w !== (null == c ? void 0 : c.store_page_primary_color)) ||
                 Z !== (null == c ? void 0 : c.store_page_trailer_url) ||
-                (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+                (null != L && L !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, "Settings must be defined");
                 let e = {};
@@ -56,8 +56,8 @@ let I = [
                             w !== (null == c ? void 0 : c.store_page_primary_color))) &&
                         (e.store_page_primary_color = w),
                     Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
-                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) &&
-                        (e.store_page_show_subscriber_count = k),
+                    L !== (null == c ? void 0 : c.store_page_show_subscriber_count) &&
+                        (e.store_page_show_subscriber_count = L),
                     Object.keys(e).length > 0 &&
                         (await _(l.id, e),
                         "store_page_enabled" in e &&
@@ -213,9 +213,9 @@ let I = [
                         }),
                         (0, r.jsx)(g.j7V, {
                             className: N.premiumMemberCountSwitchContainer,
-                            value: k,
+                            value: L,
                             hideBorder: !0,
-                            onChange: (e) => L(e),
+                            onChange: (e) => k(e),
                             disabled: H,
                             children: (0, r.jsxs)("div", {
                                 className: N.iconSwitchLabel,
@@ -262,7 +262,7 @@ let I = [
                                     P(l.features.has(y.oNc.CREATOR_STORE_PAGE)),
                                         R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : S),
                                         D(null == c ? void 0 : c.store_page_trailer_url),
-                                        L(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
+                                        k(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
                                 onSave: U,
                                 disabled: z,

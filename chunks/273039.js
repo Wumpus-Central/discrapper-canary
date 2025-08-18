@@ -1,17 +1,17 @@
 n.d(t, { Z: () => c }), n(388685);
-var i = n(951288),
-    l = n(647438),
+var l = n(951288),
+    i = n(647438),
     r = n(120356),
     o = n.n(r),
     s = n(225433),
     a = n(683608);
 function c(e) {
-    let { hasSetEmoji: t, onClick: n, children: r, className: c, buttonClassName: d, look: u } = e,
-        [m, j] = l.useState(!1),
-        v = l.useCallback(() => {
+    let { hasSetEmoji: t, onClick: n, children: r, className: c, buttonClassName: u, look: d } = e,
+        [m, j] = i.useState(!1),
+        v = i.useCallback(() => {
             n(), j(!1);
         }, [n, j]);
-    return (0, i.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: o()(a.container, c),
         onMouseEnter: () => {
             if (t) return void j(!0);
@@ -23,10 +23,10 @@ function c(e) {
         children: [
             r,
             t && m
-                ? (0, i.jsx)(s.Z, {
+                ? (0, l.jsx)(s.Z, {
                       onClick: v,
-                      className: o()(a.removeButton, d),
-                      look: u,
+                      className: o()(a.removeButton, u),
+                      look: d,
                   })
                 : null,
         ],

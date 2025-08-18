@@ -14,7 +14,6 @@ let a = i.createContext({
         analyticsLocations: [],
         analyticsLocation: void 0,
         confettiCanvas: null,
-        discountPrimary: !1,
         churnUserDiscountOffer: null,
         isFetchingChurnDiscountOffer: !1,
         paymentsBlocked: !1,

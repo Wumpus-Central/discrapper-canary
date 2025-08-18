@@ -1,25 +1,20 @@
 n.d(t, {
-    F: () => E,
-    X: () => y,
+    F: () => g,
+    X: () => m,
 });
 var r = n(951288);
 n(647438);
-var i = n(920155),
-    l = n(744399),
-    a = n(454028),
-    o = n(966902),
-    s = n(237872),
-    c = n(562618),
-    u = n(481060),
-    d = n(100527),
-    p = n(626135),
-    f = n(93237),
-    h = n(981631),
-    g = n(388032),
-    m = n(20456),
-    b = n(712793),
-    _ = n(295234);
-function O(e) {
+var i = n(907862),
+    l = n(481060),
+    a = n(100527),
+    o = n(626135),
+    s = n(93237),
+    c = n(981631),
+    u = n(388032),
+    d = n(20456),
+    p = n(712793),
+    f = n(295234);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,104 +39,89 @@ function O(e) {
     }
     return e;
 }
-let E = (e) => {
+let g = (e) => {
         let { targetElementRef: t } = e,
-            m = (0, f.eW)(),
-            b = () => {
-                (0, f.ZL)();
+            d = (0, s.eW)(),
+            p = () => {
+                (0, s.ZL)();
             };
-        return (0, r.jsxs)(i.m, {
+        return (0, r.jsx)(i.J2, {
             targetElementRef: t,
-            shouldShow: m,
+            title: u.intl.string(u.t.K2DyeX),
+            body: u.intl.string(u.t["JICo+/"]),
+            asset: (0, r.jsx)("img", {
+                src: f.Z,
+                alt: "",
+            }),
+            size: "md",
+            shouldShow: d,
             align: "top",
             position: "right",
             gradientColor: "nitro-pink",
-            children: [
-                (0, r.jsx)(s.u, {
-                    onClick: b,
-                    colorMix: !0,
-                }),
-                (0, r.jsx)(a.V, {
-                    asset: (0, r.jsx)("img", {
-                        src: _.Z,
-                        alt: "",
-                    }),
-                    size: "md",
-                }),
-                (0, r.jsx)(c.Y, {
-                    title: g.intl.string(g.t.K2DyeX),
-                    body: g.intl.string(g.t["JICo+/"]),
-                }),
-                (0, r.jsx)(l.k, {
-                    actions: [
-                        {
-                            text: g.intl.string(g.t.t2N819),
-                            onClick: () => {
-                                p.default.track(h.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
-                                    location_stack: [d.Z.HOME_PAGE_PREMIUM_TAB],
-                                }),
-                                    b(),
-                                    (0, u.ZDy)(async () => {
-                                        let { default: e } = await Promise.all([
-                                            n.e("83667"),
-                                            n.e("84533"),
-                                            n.e("27311"),
-                                        ]).then(n.bind(n, 656139));
-                                        return (t) => (0, r.jsx)(e, O({}, t));
-                                    });
-                            },
-                        },
-                    ],
-                }),
-                (0, r.jsx)(o.$, {
-                    caretConfig: {
-                        position: "left",
-                        align: "start",
+            caretConfig: {
+                position: "left",
+                align: "start",
+            },
+            actions: [
+                {
+                    text: u.intl.string(u.t.t2N819),
+                    onClick: () => {
+                        o.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                            location_stack: [a.Z.HOME_PAGE_PREMIUM_TAB],
+                        }),
+                            p(),
+                            (0, l.ZDy)(async () => {
+                                let { default: e } = await Promise.all([n.e("83667"), n.e("84533"), n.e("27311")]).then(
+                                    n.bind(n, 656139),
+                                );
+                                return (t) => (0, r.jsx)(e, h({}, t));
+                            });
                     },
-                }),
+                },
             ],
+            onRequestClose: p,
         });
     },
-    y = (e) => {
+    m = (e) => {
         let { children: t } = e,
             n = (0, r.jsxs)("div", {
-                className: m.flatContainer,
+                className: d.flatContainer,
                 children: [
                     (0, r.jsx)("div", {
                         children: (0, r.jsx)("img", {
-                            src: b.Z,
+                            src: p.Z,
                             alt: "",
-                            className: m.flatImage,
+                            className: d.flatImage,
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: m.flatContent,
+                        className: d.flatContent,
                         children: [
-                            (0, r.jsx)(u.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: "heading-md/semibold",
-                                children: g.intl.string(g.t.K2DyeX),
+                                children: u.intl.string(u.t.K2DyeX),
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: g.intl.string(g.t["JICo+/"]),
+                                children: u.intl.string(u.t["JICo+/"]),
                             }),
                         ],
                     }),
                 ],
             });
-        return (0, r.jsx)(u.ua7, {
-            tooltipClassName: m.flatContainerTooltip,
-            tooltipContentClassName: m.flatContainerTooltipContent,
+        return (0, r.jsx)(l.ua7, {
+            tooltipClassName: d.flatContainerTooltip,
+            tooltipContentClassName: d.flatContainerTooltipContent,
             text: n,
             position: "right",
-            "aria-label": g.intl.string(g.t.t2N819),
+            "aria-label": u.intl.string(u.t.t2N819),
             allowOverflow: !0,
             children: (e) => {
                 var n, i;
                 return (0, r.jsx)(
                     "div",
-                    ((n = O({}, e)),
+                    ((n = h({}, e)),
                     (i = i = { children: t }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

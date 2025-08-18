@@ -10,10 +10,10 @@ var r = n(951288),
     u = n(881052),
     m = n(686546),
     h = n(565138),
-    x = n(768581),
-    p = n(411198),
-    f = n(888592),
-    g = n(388032),
+    f = n(768581),
+    g = n(411198),
+    p = n(888592),
+    x = n(388032),
     _ = n(642480),
     v = n(216019);
 function N(e) {
@@ -21,7 +21,7 @@ function N(e) {
     let { guildInfo: i, onClick: a, submitting: s } = e,
         o =
             null !=
-            (t = x.ZP.getGuildIconURL({
+            (t = f.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
                 size: 40,
@@ -39,7 +39,7 @@ function N(e) {
                 children: (0, r.jsx)(h.Z, {
                     className: _.guildIcon,
                     iconSrc: o,
-                    guild: (0, p.yS)(
+                    guild: (0, g.yS)(
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -100,20 +100,20 @@ function N(e) {
 }
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [h, x] = l.useState(null),
-        [p, v] = l.useState(void 0),
+        [h, f] = l.useState(null),
+        [g, v] = l.useState(void 0),
         [E, S] = l.useState(null),
-        y = () => t(f.tF.SUBMIT_SCHOOL),
+        y = () => t(p.tF.SUBMIT_SCHOOL),
         j = i;
     return (
-        null != p && "" !== p && (j = i.filter((e) => o()(p.toLowerCase(), e.name.toLowerCase()))),
+        null != g && "" !== g && (j = i.filter((e) => o()(g.toLowerCase(), e.name.toLowerCase()))),
         (0, r.jsxs)("div", {
             className: _.container,
             children: [
                 (0, r.jsx)(c.X6q, {
                     className: a()(_.centerText, _.header),
                     variant: "heading-xl/semibold",
-                    children: g.intl.string(g.t.mOMeiY),
+                    children: x.intl.string(x.t.mOMeiY),
                 }),
                 (0, r.jsx)("div", {
                     className: _.description,
@@ -121,7 +121,7 @@ let E = (e) => {
                         className: _.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: g.intl.format(g.t.dZeiTE, { onJoinWaitlist: y }),
+                        children: x.intl.format(x.t.dZeiTE, { onJoinWaitlist: y }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -130,17 +130,13 @@ let E = (e) => {
                         (0, r.jsxs)("div", {
                             className: _.searchContainer,
                             children: [
-                                (0, r.jsx)(c.Rj2, {
-                                    placeholder: g.intl.string(g.t["5h0QOD"]),
-                                    className: _.searchBox,
-                                    inputClassName: _.searchBoxInput,
-                                    searchIconClassName: _.searchBoxIcon,
-                                    closeIconClassName: _.searchBoxIcon,
+                                (0, r.jsx)(c.E1j, {
+                                    placeholder: x.intl.string(x.t["5h0QOD"]),
                                     onChange: (e) => {
                                         v(e);
                                     },
-                                    label: g.intl.string(g.t["5h0QOD"]),
-                                    searchTerm: p,
+                                    "aria-label": x.intl.string(x.t["5h0QOD"]),
+                                    query: null != g ? g : "",
                                     onClear: () => {
                                         v(void 0);
                                     },
@@ -166,12 +162,12 @@ let E = (e) => {
                                                     onClick:
                                                         ((l = e.id),
                                                         async () => {
-                                                            x(null), s(l), S(l);
+                                                            f(null), s(l), S(l);
                                                             try {
                                                                 await d.Z.sendVerificationEmail(n, !0, l),
-                                                                    t(f.tF.VERIFY_PIN);
+                                                                    t(p.tF.VERIFY_PIN);
                                                             } catch (e) {
-                                                                x(new u.Hx(e));
+                                                                f(new u.Hx(e));
                                                             } finally {
                                                                 S(null);
                                                             }
@@ -191,12 +187,12 @@ let E = (e) => {
                                           (0, r.jsx)(c.X6q, {
                                               className: a()(_.centerText, _.header),
                                               variant: "heading-xl/semibold",
-                                              children: g.intl.string(g.t["1eUrDQ"]),
+                                              children: x.intl.string(x.t["1eUrDQ"]),
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               className: _.centerText,
                                               variant: "text-md/normal",
-                                              children: g.intl.format(g.t.flgDKC, { onJoinWaitlist: y }),
+                                              children: x.intl.format(x.t.flgDKC, { onJoinWaitlist: y }),
                                           }),
                                       ],
                                   }),

@@ -1,7 +1,7 @@
 n.d(t, {
-    FT: () => q,
+    FT: () => X,
     L3: () => K,
-    ZP: () => J,
+    ZP: () => Q,
 }),
     n(388685),
     n(583741);
@@ -38,8 +38,8 @@ var r = n(951288),
     Z = n(267642),
     D = n(51144),
     A = n(434404),
-    k = n(471613),
-    L = n(999382),
+    L = n(471613),
+    k = n(999382),
     M = n(806774),
     G = n(981631),
     U = n(185923),
@@ -219,7 +219,7 @@ let W = d().throttle(f.OQ, 1000),
                             maxSlots: (0, Z.y4)(s),
                             emojiCount: i.length,
                         }),
-                        (0, r.jsx)(q, {
+                        (0, r.jsx)(X, {
                             emojis: i,
                             guild: s,
                         }),
@@ -228,7 +228,7 @@ let W = d().throttle(f.OQ, 1000),
                             maxSlots: (0, Z.y4)(s),
                             emojiCount: l.length,
                         }),
-                        (0, r.jsx)(q, {
+                        (0, r.jsx)(X, {
                             emojis: l,
                             guild: s,
                         }),
@@ -249,7 +249,7 @@ let W = d().throttle(f.OQ, 1000),
             ],
         });
     },
-    q = (e) => {
+    X = (e) => {
         let { emojis: t, guild: n, onEdit: l, editingDisabled: a = !1 } = e,
             s = i.useMemo(() => [...t].reverse(), [t]),
             { canManageGuildExpression: o } = (0, S.Gw)(n);
@@ -297,7 +297,7 @@ let W = d().throttle(f.OQ, 1000),
                   ],
               });
     },
-    X = (e) => {
+    q = (e) => {
         let t,
             n,
             i,
@@ -327,7 +327,7 @@ let W = d().throttle(f.OQ, 1000),
                   },
               }));
     },
-    Q = () =>
+    J = () =>
         (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(p.vwX, {
@@ -366,9 +366,9 @@ let W = d().throttle(f.OQ, 1000),
                 }),
             ],
         }),
-    J = () => {
+    Q = () => {
         let e = i.useRef(null),
-            t = (0, m.e7)([L.Z], () => L.Z.getGuild()),
+            t = (0, m.e7)([k.Z], () => k.Z.getGuild()),
             [l, a] = i.useState("");
         o()(null != t, "ConnectedGuildSettingsEmoji must be rendered within a guild context");
         let s = (0, m.e7)([T.Z], () => T.Z.theme),
@@ -377,10 +377,10 @@ let W = d().throttle(f.OQ, 1000),
                 revision: d,
                 emojis: h,
                 autoOpen: f,
-            } = (0, m.cj)([k.Z], () => ({
-                revision: k.Z.getEmojiRevision(t.id),
-                emojis: k.Z.getEmojis(t.id),
-                autoOpen: k.Z.getEmojiFileInputAutoOpen(),
+            } = (0, m.cj)([L.Z], () => ({
+                revision: L.Z.getEmojiRevision(t.id),
+                emojis: L.Z.getEmojis(t.id),
+                autoOpen: L.Z.getEmojiFileInputAutoOpen(),
             })),
             b = (0, v.Z)(d),
             [x, I] = i.useState(!1),
@@ -392,9 +392,9 @@ let W = d().throttle(f.OQ, 1000),
                 staticEmoji: H,
                 totalStaticEmoji: V,
                 animatedEmoji: K,
-                totalAnimatedEmoji: q,
+                totalAnimatedEmoji: X,
             } = (0, C.t)({ guild: t }),
-            J = (0, O.qt)({
+            Q = (0, O.qt)({
                 location: "guild_settings",
                 autoTrackExposure: !0,
             }),
@@ -469,10 +469,10 @@ let W = d().throttle(f.OQ, 1000),
                     tag: p.RB0.H1,
                     title: B.intl.string(B.t.sMOuub),
                     children: [
-                        (0, r.jsx)(X, {
+                        (0, r.jsx)(q, {
                             guild: t,
                             staticEmojiCount: V,
-                            animatedEmojiCount: q,
+                            animatedEmojiCount: X,
                         }),
                         (0, r.jsxs)(p.hjN, {
                             className: F.uploader,
@@ -494,7 +494,7 @@ let W = d().throttle(f.OQ, 1000),
                                                 ),
                                         }),
                                     }),
-                                J.enabled
+                                Q.enabled
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(p.zxk, {
@@ -511,7 +511,7 @@ let W = d().throttle(f.OQ, 1000),
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(Q, {}),
+                                              (0, r.jsx)(J, {}),
                                               (0, r.jsxs)(g.zx, {
                                                   tabIndex: -1,
                                                   size: g.zx.Sizes.MEDIUM,

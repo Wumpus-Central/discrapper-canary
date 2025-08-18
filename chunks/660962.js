@@ -32,8 +32,8 @@ var r = n(951288),
     Z = n(420966),
     D = n(337344),
     A = n(275296),
-    k = n(203377),
-    L = n(494831),
+    L = n(203377),
+    k = n(494831),
     M = n(981631),
     G = n(141006),
     U = n(388032),
@@ -69,7 +69,7 @@ function K(e) {
         })
     );
 }
-function q(e) {
+function X(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, h.ZP)(),
@@ -106,7 +106,7 @@ function q(e) {
             }),
             (0, r.jsx)("div", {
                 className: F.roleStyleContainer,
-                children: L.pM.map((e) => {
+                children: k.pM.map((e) => {
                     let { id: u, colors: p, labelString: h } = e;
                     return (0, r.jsxs)(
                         "button",
@@ -160,7 +160,7 @@ function q(e) {
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-sm/semibold",
                                     color: "button-outline-primary-text",
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) }),
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(q, {}) }),
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-xs/medium",
@@ -182,7 +182,7 @@ function q(e) {
         ],
     });
 }
-function X() {
+function q() {
     let e = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
             colorStrings: (0, O.DX)(G.SK),
@@ -222,7 +222,7 @@ function X() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function Q(e) {
+function J(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsxs)(g.xJW, {
@@ -273,7 +273,7 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
+function Q(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -382,7 +382,7 @@ function ee(e) {
                     children: (0, r.jsx)(Z.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: k.ZI.DISPLAY,
+                        selectedSection: L.ZI.DISPLAY,
                         setSelectedSection: l,
                     }),
                 }),
@@ -397,7 +397,7 @@ function ee(e) {
                 (0, r.jsx)(g.$i$, { className: F.divider }),
                 (s || c) &&
                     null != u &&
-                    (0, r.jsx)(q, {
+                    (0, r.jsx)(X, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
@@ -406,7 +406,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)(J, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -425,7 +425,7 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(J, {
+                (0, r.jsx)(Q, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,

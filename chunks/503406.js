@@ -10,10 +10,10 @@ var r = n(951288),
     u = n(231239),
     m = n(881052),
     h = n(313201),
-    x = n(703656),
-    p = n(981631),
-    f = n(388032),
-    g = n(85890);
+    f = n(703656),
+    g = n(981631),
+    p = n(388032),
+    x = n(85890);
 let _ = (0, h.hQ)(),
     v = (e) => {
         let { email: t, guildId: n, onClose: i } = e,
@@ -23,7 +23,7 @@ let _ = (0, h.hQ)(),
                 if (null != n)
                     try {
                         let e = await u.Z.verifyCode(s, n, t);
-                        e.guild && (null == i || i(), (0, x.uL)(p.Z5c.CHANNEL(e.guild.id)));
+                        e.guild && (null == i || i(), (0, f.uL)(g.Z5c.CHANNEL(e.guild.id)));
                     } catch (e) {
                         N(new m.Hx(e));
                     }
@@ -32,35 +32,35 @@ let _ = (0, h.hQ)(),
                 u.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
             y = async (e) => {
-                null != s && "" !== s && e.charCode === p.yXg.ENTER && (await E());
+                null != s && "" !== s && e.charCode === g.yXg.ENTER && (await E());
             };
         return (0, r.jsxs)("div", {
-            className: g.container,
+            className: x.container,
             children: [
-                (0, r.jsx)("div", { className: g.topImage }),
+                (0, r.jsx)("div", { className: x.topImage }),
                 (0, r.jsx)(d.X6q, {
-                    className: a()(g.centerText, g.header),
+                    className: a()(x.centerText, x.header),
                     variant: "heading-xl/semibold",
-                    children: f.intl.string(f.t.SJ3Lxc),
+                    children: p.intl.string(p.t.SJ3Lxc),
                 }),
                 (0, r.jsx)("div", {
-                    className: g.descriptionWidth,
+                    className: x.descriptionWidth,
                     children: (0, r.jsx)(d.Text, {
-                        className: g.centerText,
+                        className: x.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: f.intl.format(f.t["b+W0oq"], {
+                        children: p.intl.format(p.t["b+W0oq"], {
                             email: t,
                             onClick: S,
                         }),
                     }),
                 }),
                 (0, r.jsxs)(d.xJW, {
-                    className: g.formItem,
+                    className: x.formItem,
                     children: [
                         (0, r.jsx)(d.vwX, {
                             id: _,
-                            children: f.intl.string(f.t.rpWT1t),
+                            children: p.intl.string(p.t.rpWT1t),
                         }),
                         (0, r.jsx)(d.oil, {
                             onKeyPress: y,
@@ -78,9 +78,9 @@ let _ = (0, h.hQ)(),
                     size: c.zx.Sizes.LARGE,
                     color: c.zx.Colors.BRAND,
                     children: (0, r.jsx)(d.Text, {
-                        className: g.submitText,
+                        className: x.submitText,
                         variant: "text-sm/normal",
-                        children: f.intl.string(f.t.geKm7u),
+                        children: p.intl.string(p.t.geKm7u),
                     }),
                 }),
             ],

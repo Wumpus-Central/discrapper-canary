@@ -1,39 +1,37 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(73880),
     l = n(137158),
-    a = n(388032),
-    s = n(31829);
-let o = function (e) {
+    a = n(388032);
+let s = function (e) {
     let {
             formField: t,
             index: n,
-            isDragEnabled: o,
-            isDropHovered: c,
-            onDrop: d,
-            onEdit: u,
-            onRemove: m,
-            canRemove: g,
-            actionsLocation: p,
-            fieldStyle: h,
+            isDragEnabled: s,
+            isDropHovered: o,
+            onDrop: c,
+            onEdit: d,
+            onRemove: u,
+            canRemove: m,
+            actionsLocation: g,
+            fieldStyle: p,
         } = e,
-        { label: f, placeholder: b } = t;
+        { label: h, placeholder: f } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
-        isDragEnabled: o,
-        isDropHovered: c,
-        onDrop: d,
-        onEdit: u,
-        onRemove: m,
-        title: f,
-        canRemove: g,
-        actionsLocation: p,
-        fieldStyle: h,
+        isDragEnabled: s,
+        isDropHovered: o,
+        onDrop: c,
+        onEdit: d,
+        onRemove: u,
+        title: h,
+        canRemove: m,
+        actionsLocation: g,
+        fieldStyle: p,
         children: (0, r.jsx)(i.Q8, {
-            className: s.fieldBackground,
-            placeholder: null != b ? b : a.intl.string(a.t["Sqn+Wl"]),
+            placeholder: null != f ? f : a.intl.string(a.t["Sqn+Wl"]),
             disabled: !0,
         }),
     });

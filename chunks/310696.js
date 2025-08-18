@@ -22,5 +22,4 @@ e.exports = {
     heading: "heading__092f9",
     iconsContainer: "iconsContainer__092f9",
     iconWrapper: "iconWrapper__092f9",
-    shareButton: "shareButton__092f9",
 };

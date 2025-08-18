@@ -44,8 +44,8 @@ var i = n(951288),
     V = n(700785),
     U = n(51144),
     H = n(257017),
-    W = n(188857),
-    G = n(981631),
+    G = n(188857),
+    W = n(981631),
     F = n(388032),
     z = n(198750);
 function X(e) {
@@ -94,7 +94,7 @@ function Y(e, t) {
 let J = o.ZP.connectStores([T.Z, Z.Z], () => {
     let e = Z.Z.getChannel();
     return {
-        submitting: T.Z.formState === G.QZA.SUBMITTING,
+        submitting: T.Z.formState === W.QZA.SUBMITTING,
         onReset() {
             (0, g.S1)();
         },
@@ -165,16 +165,16 @@ function q(e) {
             }
         },
         v = (e) => {
-            let t = P.Z.can(G.Plq.ADMINISTRATOR, l) || P.Z.can(G.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
+            let t = P.Z.can(W.Plq.ADMINISTRATOR, l) || P.Z.can(W.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
             return n.isGuildStageVoice() && O.xS.has(e)
                 ? F.intl.string(F.t.bTS5lZ)
-                : !((!a.fS(e, G.Plq.MANAGE_ROLES) || t) && (null == e || P.Z.can(e, l) || t)) &&
+                : !((!a.fS(e, W.Plq.MANAGE_ROLES) || t) && (null == e || P.Z.can(e, l) || t)) &&
                       F.intl.string(F.t.nOtPMD);
         },
         y = t.id === m,
-        E = n.isForumLikeChannel() && a.e$(t.deny, G.Plq.SEND_MESSAGES),
-        w = a.e$(t.deny, G.Plq.SEND_MESSAGES),
-        Z = a.e$(t.deny, G.Plq.READ_MESSAGE_HISTORY),
+        E = n.isForumLikeChannel() && a.e$(t.deny, W.Plq.SEND_MESSAGES),
+        w = a.e$(t.deny, W.Plq.SEND_MESSAGES),
+        Z = a.e$(t.deny, W.Plq.READ_MESSAGE_HISTORY),
         R = B.Z.generateChannelPermissionSpec(m, n, y, {
             createPostsDisabled: E,
             sendMessagesDisabled: w,
@@ -330,7 +330,7 @@ function ee() {
                 sortedGuildRoles: t,
             };
         }, [f]),
-        N = (0, W.Z)(f, r),
+        N = (0, G.Z)(f, r),
         S = (0, b.ZP)(),
         O = (0, o.e7)([v.Z], () => v.Z.roleStyle),
         w = l.useCallback(
@@ -502,7 +502,7 @@ function ee() {
                         (0, i.jsx)(d.R94, {
                             type: d.geA.DESCRIPTION,
                             children: (0, i.jsx)(d.eee, {
-                                href: M.Z.getArticleURL(G.BhN.PERMISSIONS_TUTORIAL),
+                                href: M.Z.getArticleURL(W.BhN.PERMISSIONS_TUTORIAL),
                                 target: "_blank",
                                 children: F.intl.string(F.t["pfoA8/"]),
                             }),

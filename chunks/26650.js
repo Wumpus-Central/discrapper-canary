@@ -1,51 +1,51 @@
-n.d(t, { Z: () => l });
-var r = n(951288),
-    s = n(647438),
-    o = n(481060),
+n.d(t, { Z: () => a });
+var l = n(951288),
+    r = n(647438),
+    s = n(481060),
     i = n(377171),
-    a = n(882771);
-let l = s.forwardRef(function (e, t) {
-    let { isInventory: n, style: s, children: l } = e;
-    return (0, r.jsxs)("div", {
+    o = n(882771);
+let a = r.forwardRef(function (e, t) {
+    let { isInventory: n, style: r, children: a } = e;
+    return (0, l.jsxs)("div", {
         ref: t,
-        className: a.desktopTooltip,
+        className: o.desktopTooltip,
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    l = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (l = l.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    l.forEach(function (t) {
+                        var l;
+                        (l = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[t] = l);
                     });
             }
             return e;
-        })({ marginTop: 8 * !!n }, s),
+        })({ marginTop: 8 * !!n }, r),
         children: [
-            (0, r.jsx)(o.d3s, {
+            (0, l.jsx)(s.d3s, {
                 size: "custom",
-                className: a.infoIcon,
+                className: o.infoIcon,
                 height: n ? 16 : 12,
                 width: n ? 16 : 12,
                 color: n ? i.Z.TEXT_MUTED : i.Z.WHITE,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, l.jsx)(s.Text, {
                 color: n ? "text-muted" : "always-white",
                 variant: n ? "text-xs/normal" : "text-xxs/normal",
-                children: l,
+                children: a,
             }),
         ],
     });

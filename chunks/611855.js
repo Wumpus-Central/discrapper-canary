@@ -1,29 +1,29 @@
 n.d(t, { Z: () => d });
-var r = n(951288);
+var s = n(951288);
 n(647438);
-var s = n(120356),
-    o = n.n(s),
+var o = n(120356),
+    r = n.n(o),
     i = n(780384),
     a = n(481060),
     l = n(410030),
-    c = n(388032),
-    u = n(896810);
+    u = n(388032),
+    c = n(896810);
 let d = function (e) {
-    let { className: t, color: n = "header-primary", textOpacity: s = 0.9 } = e,
+    let { className: t, color: n = "header-primary", textOpacity: o = 0.9 } = e,
         d = (0, l.Fg)(),
         m = (0, i.wj)(d);
-    return (0, r.jsxs)(a.Text, {
+    return (0, s.jsxs)(a.Text, {
         variant: "text-xxs/medium",
         color: n,
-        className: o()(u.promotedTag, t),
+        className: r()(c.promotedTag, t),
         children: [
-            (0, r.jsx)("span", {
-                className: u.promotedTagBackground,
+            (0, s.jsx)("span", {
+                className: c.promotedTagBackground,
                 style: { backgroundColor: "rgba(0, 0, 0, ".concat(m ? 0.2 : 0.08, ")") },
             }),
-            (0, r.jsx)("span", {
-                style: { opacity: s },
-                children: c.intl.string(c.t.o6FLcH),
+            (0, s.jsx)("span", {
+                style: { opacity: o },
+                children: u.intl.string(u.t.o6FLcH),
             }),
         ],
     });

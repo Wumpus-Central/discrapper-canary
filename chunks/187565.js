@@ -12,8 +12,8 @@ n.d(t, {
 var r,
     i = n(647438),
     l = n(442837),
-    s = n(999382),
-    o = n(658666),
+    o = n(999382),
+    s = n(658666),
     a = n(384632),
     c = n(430824),
     u = n(411198),
@@ -29,11 +29,11 @@ var r,
         (r[(r.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
         r);
 function b(e, t, n) {
-    let [r, s] = i.useState(!1),
+    let [r, o] = i.useState(!1),
         c = (0, l.e7)([m.Z], () => m.Z.get(e)),
-        u = (0, l.e7)([o.Z], () => o.Z.pendingState);
+        u = (0, l.e7)([s.Z], () => s.Z.pendingState);
     i.useEffect(() => {
-        t || d.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
+        t || d.ZP.fetchVerificationForm(e, n).finally(() => o(!0));
     }, [e, n, t]);
     let h = i.useMemo(() => {
         var e, n;
@@ -68,10 +68,10 @@ function b(e, t, n) {
 }
 function v(e, t, n) {
     let r = (0, l.e7)([c.Z], () => c.Z.getGuild(e)),
-        o = (0, l.e7)([s.Z], () => s.Z.getGuild());
+        s = (0, l.e7)([o.Z], () => o.Z.getGuild());
     return i.useMemo(
-        () => (n && (null == o ? void 0 : o.id) === e ? o : null != r ? r : null != t ? (0, u.Rj)(t) : null),
-        [n, o, e, r, t],
+        () => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, u.Rj)(t) : null),
+        [n, s, e, r, t],
     );
 }
 function _(e) {

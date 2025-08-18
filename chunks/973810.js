@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(49124);
+n.d(t, { Z: () => g }), n(388685), n(49124);
 var l = n(951288),
     r = n(647438),
     i = n(849055),
@@ -10,8 +10,8 @@ var l = n(951288),
     u = n(507453),
     h = n(981631),
     f = n(388032);
-function m(e) {
-    let { mfaChallenge: t, finish: n, setSlide: m, onClose: g, headerAlignStart: x } = e,
+function g(e) {
+    let { mfaChallenge: t, finish: n, setSlide: g, onClose: m, headerAlignStart: x } = e,
         [p, S] = r.useState(!1),
         [j, b] = r.useState(null),
         { challenge: y } = t.methods.find((e) => "webauthn" === e.type),
@@ -43,13 +43,13 @@ function m(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(u.Z.SlideHeader, {
-                onClose: g,
+                onClose: m,
                 headerAlignStart: x,
             }),
             null != j && (0, l.jsx)(u.Z.SlideContent, { children: (0, l.jsx)(u.Z.SlideError, { error: j }) }),
             (0, l.jsx)(u.Z.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: m,
+                setSlide: g,
                 leadingButton: (0, l.jsx)(a.zxk, {
                     variant: "primary",
                     text: f.intl.string(f.t.Xr3Ekp),

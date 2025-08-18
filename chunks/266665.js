@@ -105,7 +105,7 @@ function R(e) {
                 y(n.roleId);
             },
         }),
-        [{ dragSourcePosition: k }, L] = (0, o.L)({
+        [{ dragSourcePosition: L }, k] = (0, o.L)({
             accept: w,
             canDrop: () => R,
             collect: (e) => {
@@ -137,8 +137,8 @@ function R(e) {
                 })),
         (0, r.jsxs)(d.njP.Item, {
             className: a()(S.row, {
-                [S.dragBefore]: null !== k && j < k,
-                [S.dragAfter]: null !== k && j > k,
+                [S.dragBefore]: null !== L && j < L,
+                [S.dragAfter]: null !== L && j > L,
             }),
             id: m.id,
             selectedItem: p,
@@ -160,7 +160,7 @@ function R(e) {
             "aria-label": m.name,
             clickableRef: (e) => {
                 var t;
-                A(L(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                A(k(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 l,
@@ -189,7 +189,7 @@ function Z(e) {
         { scrolledToTop: O, handleScroll: I } = (0, C.V)(),
         { handleDragStart: w, handleDragReset: Z, handleDragComplete: D } = (0, y.Z)(o),
         A = i.useRef(null),
-        k = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 var t, n;
                 let r = o.findIndex((t) => t.id === e);
@@ -200,12 +200,12 @@ function Z(e) {
             [o],
         );
     (0, g.ZP)(() => {
-        k(n);
+        L(n);
     }),
         i.useEffect(() => {
-            o.length > b && k(n), o.length !== b && x(o.length);
-        }, [o.length, b, x, k, n]);
-    let L = () => {
+            o.length > b && L(n), o.length !== b && x(o.length);
+        }, [o.length, b, x, L, n]);
+    let k = () => {
         m.Z.createRole(t.id), s(N.ZI.DISPLAY);
     };
     return (0, r.jsx)(f.ZP.Sidebar, {
@@ -241,7 +241,7 @@ function Z(e) {
                                 (0, r.jsx)(
                                     d.P3F,
                                     P(T({ className: S.addRole }, e), {
-                                        onClick: L,
+                                        onClick: k,
                                         children: (0, r.jsx)(d.qJs, {
                                             size: "custom",
                                             color: "currentColor",

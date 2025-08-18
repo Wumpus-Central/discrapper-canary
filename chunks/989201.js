@@ -1,5 +1,4 @@
 e.exports = {
-    searchBar: "searchBar__4a43b",
     rowDivider: "rowDivider__4a43b",
     rowContainer: "rowContainer__4a43b",
     disabled: "disabled__4a43b",

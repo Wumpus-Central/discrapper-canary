@@ -15,8 +15,6 @@ e.exports = {
     dropHovered: "dropHovered_eaaeee",
     title: "title_eaaeee",
     containerTitle: "containerTitle_eaaeee title_eaaeee",
-    fieldBackground: "fieldBackground_eaaeee",
-    withFooter: "withFooter_eaaeee",
     clickable: "clickable_eaaeee",
     fieldPadding: "fieldPadding_eaaeee",
     fieldFooterContainer: "fieldFooterContainer_eaaeee",

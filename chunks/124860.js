@@ -1,5 +1,5 @@
 n.d(t, {
-    Cd: () => g,
+    Cd: () => m,
     YR: () => p,
 }),
     n(388685),
@@ -39,7 +39,7 @@ function f(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,14 +57,14 @@ function m(e, t) {
         e
     );
 }
-function g(e) {
+function m(e) {
     var t, n;
-    let { mfaChallenge: h, mfaFinish: g, onEarlyClose: x, onClose: p, headerAlignStart: S, width: j = 440 } = e,
+    let { mfaChallenge: h, mfaFinish: m, onEarlyClose: x, onClose: p, headerAlignStart: S, width: j = 440 } = e,
         [b, y] = r.useState(null != (n = null == (t = h.methods[0]) ? void 0 : t.type) ? n : "select"),
         [v, C] = r.useState(b),
         Z = async (e) => {
             let { mfaType: t, data: n } = e;
-            await g({
+            await m({
                 mfaType: t,
                 data: n,
                 ticket: h.ticket,
@@ -93,19 +93,19 @@ function g(e) {
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "totp",
-                children: (0, l.jsx)(c.Z, m(f({}, w), { isSlideReady: "totp" === v })),
+                children: (0, l.jsx)(c.Z, g(f({}, w), { isSlideReady: "totp" === v })),
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "sms",
-                children: (0, l.jsx)(d.Z, m(f({}, w), { isSlideReady: "sms" === v })),
+                children: (0, l.jsx)(d.Z, g(f({}, w), { isSlideReady: "sms" === v })),
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "backup",
-                children: (0, l.jsx)(s.Z, m(f({}, w), { isSlideReady: "backup" === v })),
+                children: (0, l.jsx)(s.Z, g(f({}, w), { isSlideReady: "backup" === v })),
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "password",
-                children: (0, l.jsx)(a.Z, m(f({}, w), { isSlideReady: "password" === v })),
+                children: (0, l.jsx)(a.Z, g(f({}, w), { isSlideReady: "password" === v })),
             }),
         ],
     });
@@ -117,7 +117,7 @@ function x(e) {
         size: i.CgR.SMALL,
         "aria-label": h.intl.string(h.t.saHocH),
         parentComponent: "MFAModal",
-        children: (0, l.jsx)(g, {
+        children: (0, l.jsx)(m, {
             mfaChallenge: t,
             mfaFinish: n,
             onClose: s,

@@ -11,8 +11,8 @@ var r = n(647438),
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [h, g] = r.useState(!1),
-        [_, m] = r.useState(null),
-        b = r.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+        [_, b] = r.useState(null),
+        m = r.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
         f = (0, s.J)(e);
     return {
         loading: h,
@@ -20,15 +20,15 @@ function h(e, t) {
         onSave: async (r) => {
             let { topic: s, privacyLevel: d, sendStartNotification: h } = r;
             if (null != e && "" !== s && null != d) {
-                g(!0), m(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
+                g(!0), b(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
                 try {
                     let n;
-                    null != b
+                    null != m
                         ? (n = await c.Ef(e, s, d))
                         : ((n = await c.HO(e, s, d, null != h && h)), f && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
                         t(n);
                 } catch (e) {
-                    m(new a.Hx(e)), g(!1);
+                    b(new a.Hx(e)), g(!1);
                 }
             }
         },

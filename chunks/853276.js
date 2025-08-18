@@ -210,14 +210,14 @@ function f(e) {
             },
             [D, t],
         ),
-        k = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : y(!0), e.stopPropagation();
             },
             [g],
         ),
-        L = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 p();
             },
@@ -238,7 +238,7 @@ function f(e) {
                 (0, r.jsxs)(o.P3F, {
                     tag: "div",
                     onBlur: () => D(!1),
-                    onClick: k,
+                    onClick: L,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => P(!0),
                     onMouseLeave: () => P(!1),
@@ -272,7 +272,7 @@ function f(e) {
                 !O &&
                     (0, r.jsx)(o.P3F, {
                         className: m.closeIconContainer,
-                        onClick: L,
+                        onClick: k,
                         children: (0, r.jsx)(o.Dio, {
                             size: "xxs",
                             color: "currentColor",

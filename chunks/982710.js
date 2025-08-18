@@ -1,6 +1,5 @@
 e.exports = {
     payment: "payment_e9cb00",
-    hoverablePayment: "hoverablePayment_e9cb00 payment_e9cb00",
     summaryInfo: "summaryInfo_e9cb00",
     expandedInfo: "expandedInfo_e9cb00",
     paymentHeader: "paymentHeader_e9cb00",

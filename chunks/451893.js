@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o }), n(388685), n(539854);
+n.d(t, { Z: () => s }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(481060);
-let s = [
+let o = [
     {
         position: 0,
         alpha: 0,
@@ -56,8 +56,8 @@ let s = [
         alpha: 1,
     },
 ];
-function o(e) {
-    let { className: t, children: n, containerRef: o, faderSize: a, faderEdgeThreshold: c } = e,
+function s(e) {
+    let { className: t, children: n, containerRef: s, faderSize: a, faderEdgeThreshold: c } = e,
         u = i.useRef(null),
         [d, m] = i.useState(0),
         [f, h] = i.useState(0),
@@ -69,24 +69,24 @@ function o(e) {
                 x(u.current.getScrollerState().offsetHeight));
         }, []);
     i.useEffect(() => {
-        if ((g(), null == o.current)) return;
+        if ((g(), null == s.current)) return;
         let e = new ResizeObserver(() => {
             g();
         });
         return (
-            e.observe(o.current),
+            e.observe(s.current),
             () => {
                 e.disconnect();
             }
         );
-    }, [u, o, g]);
+    }, [u, s, g]);
     let b = i.useMemo(() => {
         if (0 === d && 0 === f) return {};
         let e = [];
         if ((e.push("to bottom"), d > 0)) {
             let t = c > 0 ? 1 - Math.min(c, d) / c : 1;
-            for (let n = 0; n < s.length; n++) {
-                let { position: r, alpha: i } = s[n],
+            for (let n = 0; n < o.length; n++) {
+                let { position: r, alpha: i } = o[n],
                     l = (r * a).toFixed(2);
                 e.push("hsla(0, 0%, 0%, ".concat(t + i * (1 - t), ") ").concat(l, "px"));
             }
@@ -94,10 +94,10 @@ function o(e) {
         if (f > 0) {
             let t = p - a,
                 n = c > 0 ? 1 - Math.min(c, f) / c : 1;
-            for (let r = s.length - 1; r >= 0; r--) {
-                let { position: i, alpha: l } = s[r],
-                    o = (t + (1 - i) * a).toFixed(2);
-                e.push("hsla(0, 0%, 0%, ".concat(n + l * (1 - n), ") ").concat(o, "px"));
+            for (let r = o.length - 1; r >= 0; r--) {
+                let { position: i, alpha: l } = o[r],
+                    s = (t + (1 - i) * a).toFixed(2);
+                e.push("hsla(0, 0%, 0%, ".concat(n + l * (1 - n), ") ").concat(s, "px"));
             }
         }
         return { maskImage: "linear-gradient(".concat(e.join(","), ")") };

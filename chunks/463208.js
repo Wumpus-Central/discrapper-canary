@@ -101,7 +101,7 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let { accessory: t, inputSize: n } = e;
+    let { accessory: t, inputSize: n, disabled: i } = e;
     if ("string" == typeof t)
         return (0, r.jsx)(c.Text, {
             variant: "text-md/normal",
@@ -109,24 +109,30 @@ function O(e) {
             className: _.leadingText,
             children: t,
         });
-    let i = "md" === n ? "sm" : "xs";
+    let a = "md" === n ? "sm" : "xs";
     if ("icon" in t) {
-        let { icon: e, onClick: n, "aria-label": a } = t;
+        let { icon: e, onClick: n, "aria-label": o } = t;
         return (0, r.jsx)(c.P3F, {
             className: _.iconButton,
             onClick: n,
-            "aria-label": a,
+            "aria-label": o,
+            "aria-disabled": i,
             children: (0, r.jsx)(e, {
-                size: i,
+                size: a,
                 color: "currentColor",
             }),
         });
     }
-    let a = t;
+    if ("button" in t)
+        return (0, r.jsx)("div", {
+            className: _.icon,
+            children: t.button,
+        });
+    let o = t;
     return (0, r.jsx)("div", {
         className: _.icon,
-        children: (0, r.jsx)(a, {
-            size: i,
+        children: (0, r.jsx)(o, {
+            size: a,
             color: c.TVs.colors.ICON_PRIMARY,
         }),
     });
@@ -217,15 +223,18 @@ function I(e) {
             var t, n;
             null == (t = U.onBlur) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !1);
         },
-        Y = () => {
-            var e;
-            null == (e = U.onChange) || e.call(U, "", p);
+        Y = (e) => {
+            if (null != U.onClear) U.onClear(e);
+            else {
+                var t;
+                null == (t = U.onChange) || t.call(U, "", p);
+            }
         },
         W = i.useRef(null),
         K = U.readOnly;
     null == K && !1 === l && (K = !0);
     let z = null;
-    x && null != T && "" !== T && !K
+    ("boolean" == typeof x ? x && null != T && "" !== T && !K : x.show)
         ? (z = (0, r.jsx)(v, {
               inputSize: D,
               onClick: Y,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(997841);
+n.d(t, { Z: () => E }), n(388685), n(997841);
 var i = n(951288),
     s = n(647438),
     l = n(120356),
@@ -15,8 +15,8 @@ var i = n(951288),
     p = n(981631),
     v = n(490897),
     j = n(526761),
-    S = n(388032),
-    N = n(407937),
+    N = n(388032),
+    S = n(407937),
     f = n(650455);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -43,7 +43,7 @@ function b(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function C(e, t) {
         e
     );
 }
-function O(e) {
+function E(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([c.ZP], () => c.ZP.getGuildFlags(t)),
         l = (0, a.e7)([c.ZP], () => {
@@ -70,62 +70,62 @@ function O(e) {
             return e === v.i.UNSET ? (n === p.bL.ALL_MESSAGES ? v.i.ALL_MESSAGES : v.i.ONLY_MENTIONS) : e;
         }),
         r = (0, a.e7)([c.ZP], () => c.ZP.getMessageNotifications(t)),
-        [f, O] = (0, s.useState)(!1),
+        [f, E] = (0, s.useState)(!1),
         _ = f ? x.s8.CUSTOM : (0, x.gs)(l, r);
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)("div", {
-                className: N.segmentedControlsContainer,
+                className: S.segmentedControlsContainer,
                 children: (0, i.jsx)(o.sY7, {
                     value: _,
                     options: [
                         {
                             value: x.s8.ALL_MESSAGES,
-                            name: S.intl.string(S.t.hZrr6u),
+                            name: N.intl.string(N.t.hZrr6u),
                         },
                         {
                             value: x.s8.MENTIONS,
-                            name: S.intl.string(S.t.y59NJi),
+                            name: N.intl.string(N.t.y59NJi),
                         },
                         {
                             value: x.s8.NOTHING,
-                            name: S.intl.string(S.t["pGn/bG"]),
+                            name: N.intl.string(N.t["pGn/bG"]),
                         },
                         {
                             value: x.s8.CUSTOM,
-                            name: S.intl.string(S.t["32yow8"]),
+                            name: N.intl.string(N.t["32yow8"]),
                         },
                     ],
                     onChange: (e) => {
                         let { value: n } = e;
-                        return n === x.s8.CUSTOM ? void O(!0) : (O(!1), void (0, g.V)(t, n));
+                        return n === x.s8.CUSTOM ? void E(!0) : (E(!1), void (0, g.V)(t, n));
                     },
-                    className: N.segmentedControl,
+                    className: S.segmentedControl,
                     look: "pill",
                 }),
             }),
-            (0, i.jsx)("div", { className: N.presetSeparator }),
+            (0, i.jsx)("div", { className: S.presetSeparator }),
             (0, i.jsxs)("div", {
-                className: N.customPresetsContainer,
+                className: S.customPresetsContainer,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: N.grid,
-                        children: [(0, i.jsx)(E, { unreadSetting: l }), (0, i.jsx)(Z, { notificationSetting: r })],
+                        className: S.grid,
+                        children: [(0, i.jsx)(C, { unreadSetting: l }), (0, i.jsx)(Z, { notificationSetting: r })],
                     }),
                     (0, i.jsxs)("div", {
-                        className: N.grid,
+                        className: S.grid,
                         children: [
                             (0, i.jsxs)("div", {
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "header-primary",
-                                        children: S.intl.string(S.t.Tqd1AQ),
+                                        children: N.intl.string(N.t.Tqd1AQ),
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        children: S.intl.string(S.t.RpQgm5),
+                                        children: N.intl.string(N.t.RpQgm5),
                                     }),
                                 ],
                             }),
@@ -134,25 +134,25 @@ function O(e) {
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "header-primary",
-                                        children: S.intl.string(S.t["1m22ZG"]),
+                                        children: N.intl.string(N.t["1m22ZG"]),
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        children: S.intl.string(S.t["4bP2ZW"]),
+                                        children: N.intl.string(N.t["4bP2ZW"]),
                                     }),
                                 ],
                             }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: N.grid,
+                        className: S.grid,
                         children: [
                             (0, i.jsx)(o.q4e, {
                                 value: l,
-                                className: N.input,
+                                className: S.input,
                                 onChange: (e) => {
-                                    O(!1),
+                                    E(!1),
                                         d.Z.updateGuildNotificationSettings(
                                             t,
                                             {
@@ -180,14 +180,14 @@ function O(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.ua7, {
-                                                    text: S.intl.string(S.t.eP8yWV),
+                                                    text: N.intl.string(N.t.eP8yWV),
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.t6m,
-                                                            C(b({ size: "custom" }, e), {
+                                                            O(b({ size: "custom" }, e), {
                                                                 width: 20,
                                                                 height: 20,
-                                                                className: N.muted,
+                                                                className: S.muted,
                                                             }),
                                                         ),
                                                 }),
@@ -196,10 +196,10 @@ function O(e) {
                                 },
                             }),
                             (0, i.jsx)(o.q4e, {
-                                className: N.input,
+                                className: S.input,
                                 value: r,
                                 onChange: (e) => {
-                                    O(!1);
+                                    E(!1);
                                     let n = { message_notifications: e };
                                     e === p.bL.ALL_MESSAGES &&
                                         l !== v.i.ALL_MESSAGES &&
@@ -220,14 +220,14 @@ function O(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.ua7, {
-                                                    text: S.intl.string(S.t.idXSbG),
+                                                    text: N.intl.string(N.t.idXSbG),
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.d3s,
-                                                            C(b({ size: "custom" }, e), {
+                                                            O(b({ size: "custom" }, e), {
                                                                 width: 20,
                                                                 height: 20,
-                                                                className: N.muted,
+                                                                className: S.muted,
                                                             }),
                                                         ),
                                                 }),
@@ -242,51 +242,51 @@ function O(e) {
         ],
     });
 }
-function E(e) {
+function C(e) {
     let { unreadSetting: t } = e,
         n = [
             {
                 badged: !0,
                 unread: !0,
                 muted: !1,
-                name: S.intl.string(S.t.EjLobG),
+                name: N.intl.string(N.t.EjLobG),
             },
             {
                 badged: !1,
                 unread: !0,
                 muted: !0,
-                name: S.intl.string(S.t.Wgpwpq),
+                name: N.intl.string(N.t.Wgpwpq),
             },
             {
                 badged: !1,
                 unread: !1,
                 muted: !0,
-                name: S.intl.string(S.t.g9VImp),
+                name: N.intl.string(N.t.g9VImp),
             },
         ];
     return (
         t === v.i.ALL_MESSAGES && (n[1].muted = !1),
         (0, i.jsx)("div", {
-            className: N.channeList,
+            className: S.channeList,
             children: n.map((e) =>
                 (0, i.jsxs)(
                     "div",
                     {
-                        className: N.channelListChannel,
+                        className: S.channelListChannel,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: N.channelListChannelName,
+                                className: S.channelListChannelName,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: r()(N.unread, {
-                                            [N.hidden]: !e.unread,
-                                            [N.unreadMuted]: e.muted,
+                                        className: r()(S.unread, {
+                                            [S.hidden]: !e.unread,
+                                            [S.unreadMuted]: e.muted,
                                         }),
                                     }),
                                     (0, i.jsx)(o.VL1, {
                                         size: "xxs",
                                         color: "currentColor",
-                                        className: r()(N.channelListChannelIcon, { [N.muted]: e.muted }),
+                                        className: r()(S.channelListChannelIcon, { [S.muted]: e.muted }),
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-xs/normal",
@@ -296,7 +296,7 @@ function E(e) {
                                 ],
                             }),
                             (0, i.jsx)("div", {
-                                className: r()(N.badge, { [N.hidden]: !e.badged }),
+                                className: r()(S.badge, { [S.hidden]: !e.badged }),
                                 children: (0, i.jsx)(o.mAB, { count: 1 }),
                             }),
                         ],
@@ -309,12 +309,12 @@ function E(e) {
 }
 function Z(e) {
     return (0, i.jsxs)("div", {
-        className: N.mockMessage,
+        className: S.mockMessage,
         children: [
-            e.notificationSetting === p.bL.NO_MESSAGES && (0, i.jsx)("div", { className: N.mockMessageDisabled }),
+            e.notificationSetting === p.bL.NO_MESSAGES && (0, i.jsx)("div", { className: S.mockMessageDisabled }),
             (0, i.jsx)("div", {
                 children: (0, i.jsx)("img", {
-                    className: N.mockMessageAvatar,
+                    className: S.mockMessageAvatar,
                     src: f,
                     alt: "",
                 }),
@@ -323,13 +323,13 @@ function Z(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        children: S.intl.string(S.t.qSq0tL),
+                        children: N.intl.string(N.t.qSq0tL),
                     }),
                     e.notificationSetting === p.bL.ALL_MESSAGES &&
                         (0, i.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: S.intl.string(S.t.WYyzIy),
+                            children: N.intl.string(N.t.WYyzIy),
                         }),
                     e.notificationSetting !== p.bL.ALL_MESSAGES &&
                         (0, i.jsxs)(i.Fragment, {
@@ -344,7 +344,7 @@ function Z(e) {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     tag: "span",
-                                    children: S.intl.string(S.t.WYyzIy),
+                                    children: N.intl.string(N.t.WYyzIy),
                                 }),
                             ],
                         }),

@@ -123,8 +123,8 @@ function N(e) {
         {
             entityType: w,
             channelId: D,
-            description: _,
-            name: R,
+            description: R,
+            name: _,
             image: A,
             scheduledEndTime: X,
             scheduledStartTime: L,
@@ -189,14 +189,13 @@ function N(e) {
                         className: b.topicFormItem,
                         required: !0,
                         children: [
-                            (0, r.jsx)(s.Is, {
-                                className: b.textInput,
+                            (0, r.jsx)(o.oil, {
                                 onChange: (e) => {
                                     Z({ name: e });
                                 },
                                 placeholder: y.intl.string(y.t["6/yarq"]),
                                 maxLength: p.p,
-                                value: R,
+                                value: _,
                                 autoComplete: "off",
                                 inputRef: B,
                             }),
@@ -237,7 +236,7 @@ function N(e) {
                         children: [
                             (0, r.jsx)(s.iS, {
                                 placeholder: y.intl.string(y.t["kWO/Ex"]),
-                                value: _,
+                                value: R,
                                 onChange: (e) => {
                                     Z({ description: e });
                                 },

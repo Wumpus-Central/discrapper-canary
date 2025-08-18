@@ -16,9 +16,9 @@ async function f(e, t) {
         j = a.Z.getChannel(f);
     if (null != j)
         try {
-            var h;
+            var y;
             let t = await (0, d.rO)(e, b),
-                n = null != (h = e.name) ? h : (0, p.yl)(s.default.extractTimestamp(e.id)),
+                n = null != (y = e.name) ? y : (0, p.yl)(s.default.extractTimestamp(e.id)),
                 r = (0, u.Z)(n);
             (0, c.d)(
                 [new File([t], "".concat("" !== r ? r : "clip", ".mp4"), { type: "video/mp4" })],

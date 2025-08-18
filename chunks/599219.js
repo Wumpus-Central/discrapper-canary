@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(996453),
     b = n(446706),
     h = n(594174),
-    N = n(626135),
-    x = n(179645),
+    x = n(626135),
+    N = n(179645),
     y = n(436046),
     j = n(963209),
     E = n(436457),
@@ -106,12 +106,12 @@ function S(e) {
     let [R, z] = o.useState(null),
         [H, W] = o.useState(null),
         [J, Y] = o.useState(!1),
-        V = (0, l.e7)([x.Z], () => x.Z.getType() === C.M5.INVITE_UNCLAIMED),
+        V = (0, l.e7)([N.Z], () => N.Z.getType() === C.M5.INVITE_UNCLAIMED),
         q = o.useCallback(
             (e) => {
                 W(e),
                     k(T.F.CREATION_INTENT),
-                    N.default.track(O.rMx.GUILD_TEMPLATE_SELECTED, {
+                    x.default.track(O.rMx.GUILD_TEMPLATE_SELECTED, {
                         template_name: e.label,
                         template_code: e.code,
                     });

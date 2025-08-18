@@ -1,9 +1,11 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(973616);
-function s(e, t, n) {
+    o = n(973616),
+    s = n(626135),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,57 +29,62 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-let c = {},
-    u = {
+let d = {},
+    f = {
         application: null,
         subgameInfo: null,
     };
-function d(e) {
+function _(e) {
     let { subgameInfo: t } = e;
     if (null == t || null == t.universeId) {
-        u = {
+        f = {
             application: null,
             subgameInfo: null,
         };
         return;
     }
-    (u.subgameInfo = t),
-        null != c[t.universeId] && null != c[t.universeId].application && (u.application = c[t.universeId].application),
-        (u = l({}, u));
+    (f.subgameInfo = t),
+        null != t.universeId &&
+            s.default.track(l.rMx.ROBLOX_SUBGAME_DETECTED, {
+                universe_id: t.universeId,
+                place_id: t.placeId,
+            }),
+        null != d[t.universeId] && null != d[t.universeId].application && (f.application = d[t.universeId].application),
+        (f = u({}, f));
 }
-function f(e) {
+function p(e) {
     var t;
     let { universeId: n, application: r } = e;
-    (c[n] = {
+    (d[n] = {
         application: r,
         lastFetchedTime: Date.now(),
     }),
-        (c = l({}, c)),
+        (d = u({}, d)),
         null != r &&
-            (null == (t = u.subgameInfo) ? void 0 : t.universeId) === n &&
-            ((u.application = r), (u = l({}, u)));
+            (null == (t = f.subgameInfo) ? void 0 : t.universeId) === n &&
+            ((f.application = r), (f = u({}, f)));
 }
-function _(e) {
+function h(e) {
     let { universeId: t } = e;
-    (c[t] = {
+    (d[t] = {
         application: null,
         lastFetchedTime: Date.now(),
     }),
-        (c = l({}, c));
+        (d = u({}, d));
 }
-class p extends (r = i.ZP.PersistedStore) {
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        (c = {}),
+        (d = {}),
             Object.keys(null != (t = null == e ? void 0 : e.universeIdToApplicationInfo) ? t : {}).forEach((t) => {
                 (null == e ? void 0 : e.universeIdToApplicationInfo[t]) != null &&
                     (null == e ? void 0 : e.universeIdToApplicationInfo[t].lastFetchedTime) != null &&
-                    (c[t] = {
+                    (d[t] = {
                         application:
                             (null == e ? void 0 : e.universeIdToApplicationInfo[t].application) != null
                                 ? new o.ZP(null == e ? void 0 : e.universeIdToApplicationInfo[t].application)
@@ -87,15 +94,15 @@ class p extends (r = i.ZP.PersistedStore) {
             });
     }
     getCurrentSubgameInfo() {
-        return u;
+        return f;
     }
     getState() {
-        return { universeIdToApplicationInfo: c };
+        return { universeIdToApplicationInfo: d };
     }
 }
-s(p, "displayName", "RobloxSubgameStore"), s(p, "persistKey", "robloxSubgame");
-let h = new p(a.Z, {
-    ROBLOX_SUBGAME_UPDATE: d,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: f,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE: _,
+c(m, "displayName", "RobloxSubgameStore"), c(m, "persistKey", "robloxSubgame");
+let g = new m(a.Z, {
+    ROBLOX_SUBGAME_UPDATE: _,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: p,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE: h,
 });

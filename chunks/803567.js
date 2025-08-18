@@ -83,29 +83,33 @@ function I(e) {
                     className: C.marginBottom8,
                     children: E.intl.string(E.t.najZCQ),
                 }),
-                (0, i.jsx)(o.FXm, {
-                    options: p,
-                    onChange: (e) => {
-                        c.Z.setNoiseCancellation(2 === e.value, T), c.Z.setNoiseSuppression(1 === e.value, T);
-                    },
-                    value: r ? 2 : +!!s,
-                }),
-                m &&
-                    (0, i.jsx)(o.ToO, {
-                        className: C.marginBottom8,
-                        type: o.Dd5.PRIMARY,
-                        imageData: {
-                            src: (0, l.ap)(n) ? O : v,
-                            width: 70,
-                            height: 40,
-                        },
-                        align: d.Z.Align.CENTER,
-                        body: (0, i.jsx)(o.eee, {
-                            href: f.Z.getArticleURL(j.BhN.NOISE_SUPPRESSION),
-                            onClick: N,
-                            children: E.intl.string(E.t.hvVgAQ),
+                (0, i.jsxs)(o.Kqy, {
+                    gap: 8,
+                    children: [
+                        (0, i.jsx)(o.FXm, {
+                            options: p,
+                            onChange: (e) => {
+                                c.Z.setNoiseCancellation(2 === e.value, T), c.Z.setNoiseSuppression(1 === e.value, T);
+                            },
+                            value: r ? 2 : +!!s,
                         }),
-                    }),
+                        m &&
+                            (0, i.jsx)(o.ToO, {
+                                type: o.Dd5.PRIMARY,
+                                imageData: {
+                                    src: (0, l.ap)(n) ? O : v,
+                                    width: 70,
+                                    height: 40,
+                                },
+                                align: d.Z.Align.CENTER,
+                                body: (0, i.jsx)(o.eee, {
+                                    href: f.Z.getArticleURL(j.BhN.NOISE_SUPPRESSION),
+                                    onClick: N,
+                                    children: E.intl.string(E.t.hvVgAQ),
+                                }),
+                            }),
+                    ],
+                }),
                 t ? null : (0, i.jsx)(o.$i$, {}),
             ],
         })

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => L }), n(781311), n(642613), n(388685);
+n.d(t, { ZP: () => k }), n(781311), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -295,7 +295,7 @@ function A(e) {
         }),
     });
 }
-function k(e) {
+function L(e) {
     let { query: t, setQuery: n, locked: i, handleAddClick: l } = e;
     return (0, r.jsxs)("div", {
         className: S.searchContainer,
@@ -317,7 +317,7 @@ function k(e) {
         ],
     });
 }
-function L(e) {
+function k(e) {
     let { guild: t, role: l, locked: o, setSelectedSection: d } = e,
         [u, m] = i.useState(""),
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
@@ -364,7 +364,7 @@ function L(e) {
                                 selectedSection: N.ZI.MEMBERS,
                                 setSelectedSection: d,
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(L, {
                                 query: u,
                                 setQuery: m,
                                 locked: j,

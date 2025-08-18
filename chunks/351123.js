@@ -80,7 +80,7 @@ function H(e, t) {
         e
     );
 }
-function W(e) {
+function G(e) {
     let { channel: t, roles: n, members: l, disabledReason: r, getRemoveTooltipHint: a } = e;
     return (0, i.jsx)(c.aVo, {
         className: V.roleMemberList,
@@ -237,7 +237,7 @@ function W(e) {
         sectionHeight: 49,
     });
 }
-function G(e) {
+function W(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
         o = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
         d = _.RZ(t, o, l, C.yP, r),
@@ -301,7 +301,7 @@ function G(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(W, {
+                    (0, i.jsx)(G, {
                         channel: l,
                         roles: d,
                         members: u,
@@ -428,7 +428,7 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(W, {
+                                    (0, i.jsx)(G, {
                                         channel: l,
                                         roles: d,
                                         members: u,
@@ -553,7 +553,7 @@ let X = a.ZP.connectStores([S.Z, T.Z, O.ZP, w.Z, E.Z], () => {
                           })
                     : null,
                 s.isGuildStageVoice()
-                    ? (0, i.jsx)(G, {
+                    ? (0, i.jsx)(W, {
                           guild: d,
                           channel: s,
                           permissionUpdates: m,

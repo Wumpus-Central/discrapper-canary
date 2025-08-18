@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var s = n(815061),
@@ -7,14 +7,14 @@ var s = n(815061),
     i = n(644646),
     l = n(46140),
     c = n(388032),
-    u = n(895758);
-let d = (e) => {
-    let { quest: t, expansionSpring: n, isFullyExpanded: d, partnerBranding: p, useReducedMotion: m } = e;
+    d = n(895758);
+let u = (e) => {
+    let { quest: t, expansionSpring: n, isFullyExpanded: u, partnerBranding: p, useReducedMotion: m } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: u.rewardTileSpacer }),
+            (0, r.jsx)("div", { className: d.rewardTileSpacer }),
             (0, r.jsx)(s.animated.div, {
-                className: u.rewardTileContainer,
+                className: d.rewardTileContainer,
                 style: {
                     transform: (0, s.to)(
                         [
@@ -39,12 +39,12 @@ let d = (e) => {
                     quest: t,
                     questContent: a.jn.QUEST_BAR_V2,
                     location: l.dr.QUESTS_BAR,
-                    autoplay: d && !m,
+                    autoplay: u && !m,
                     sourceQuestContent: a.jn.QUEST_BAR_V2,
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                className: u.rewardHighlightLogoCTA,
+                className: d.rewardHighlightLogoCTA,
                 style: {
                     transform: (0, s.to)(
                         [
@@ -62,11 +62,11 @@ let d = (e) => {
                 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: u.partnerBranding,
+                        className: d.partnerBranding,
                         children: p,
                     }),
                     (0, r.jsx)(s.animated.div, {
-                        className: u.rewardHighlightCTA,
+                        className: d.rewardHighlightCTA,
                         style: {
                             opacity: n.to({
                                 range: [0, 1],

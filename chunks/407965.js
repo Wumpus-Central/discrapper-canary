@@ -1,4 +1,4 @@
-n.d(t, { n: () => j }), n(539854), n(583741);
+n.d(t, { n: () => j }), n(539854);
 var i = n(951288),
     r = n(647438),
     s = n(512722),
@@ -30,20 +30,19 @@ let _ = (e) => {
                 onClose: t,
                 premiumType: n,
                 setStep: s,
-                discountPrimary: g,
-                churnUserDiscountOffer: x,
-                isFetchingChurnDiscountOffer: j,
+                churnUserDiscountOffer: g,
+                isFetchingChurnDiscountOffer: x,
             } = (0, f.a)(),
-            E = (0, l.e7)([u.default], () => {
+            j = (0, l.e7)([u.default], () => {
                 let e = u.default.getCurrentUser();
                 return a()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
             });
         r.useEffect(() => {
-            (0, d.Z)(E.id, E.getAvatarURL(null, 80));
-        }, [E]);
-        let C = (0, m.Z)(),
-            O = "US" === C.ipCountryCode && "CA" === C.ipSubdivisionCode;
-        if (j)
+            (0, d.Z)(j.id, j.getAvatarURL(null, 80));
+        }, [j]);
+        let E = (0, m.Z)(),
+            C = "US" === E.ipCountryCode && "CA" === E.ipSubdivisionCode;
+        if (x)
             return (0, i.jsx)(o.Modal, {
                 transitionState: e,
                 title: "",
@@ -52,35 +51,34 @@ let _ = (e) => {
                     t();
                 },
             });
-        let v = [];
+        let O = [];
         return (
-            null != x
-                ? v.push({
+            null != g
+                ? O.push({
                       text: b.intl.string(b.t.zrCzVF),
                       onClick: () => s(h.R.CONFIRM_DISCOUNT),
-                      variant: g ? "primary" : "secondary",
+                      variant: "secondary",
                       icon: c.SrA,
                   })
-                : v.push({
+                : O.push({
                       text: b.intl.string(b.t.h9tkAA),
                       onClick: () => t(),
                       variant: "secondary",
                   }),
-            v.push({
-                text: O ? b.intl.string(b.t.PfnxqK) : b.intl.string(b.t["3PatS0"]),
+            O.push({
+                text: C ? b.intl.string(b.t.PfnxqK) : b.intl.string(b.t["3PatS0"]),
                 onClick: () => s(h.R.CONFIRM),
-                variant: null !== x && g ? "secondary" : "primary",
+                variant: "primary",
             }),
-            g && null !== x && v.reverse(),
             (0, i.jsx)(o.Modal, {
                 transitionState: e,
                 title: b.intl.string(b.t.PWq8TE),
                 subtitle: b.intl.formatToPlainString(b.t.nsGVzs, {}),
-                actions: v,
-                preview: null !== x && (0, i.jsx)(_, { churnUserDiscountOffer: x }),
+                actions: O,
+                preview: null !== g && (0, i.jsx)(_, { churnUserDiscountOffer: g }),
                 onClose: async () => t(),
                 children: (0, i.jsx)(p.g, {
-                    currentUser: E,
+                    currentUser: j,
                     premiumType: n,
                     onClose: t,
                     isDowngrade: !1,

@@ -1,4 +1,4 @@
-n.d(t, { f: () => N }), n(388685);
+n.d(t, { f: () => S }), n(388685);
 var i = n(951288),
     s = n(647438),
     l = n(481060),
@@ -14,8 +14,8 @@ var i = n(951288),
     x = n(621600),
     p = n(981631),
     v = n(388032),
-    j = n(848832);
-function S(e, t, n) {
+    j = n(385888);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,11 +28,17 @@ function S(e, t, n) {
         e
     );
 }
-class N extends s.PureComponent {
+class S extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
             null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
         });
+    }
+    componentDidMount() {
+        if (this.props.autoFocus) {
+            var e;
+            null == (e = this.contentDomRef.current) || e.scrollIntoView({ behavior: "smooth" }), this.highlight();
+        }
     }
     componentWillUnmount() {
         null != this._timeout && clearTimeout(this._timeout);
@@ -178,17 +184,17 @@ class N extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, "_timeout", void 0),
-            S(this, "contentDomRef", s.createRef()),
-            S(this, "state", { highlight: !1 }),
-            S(this, "unhighlight", () => {
+            N(this, "_timeout", void 0),
+            N(this, "contentDomRef", s.createRef()),
+            N(this, "state", { highlight: !1 }),
+            N(this, "unhighlight", () => {
                 this.setState({ highlight: !1 });
             }),
-            S(this, "handleMute", (e, t) => {
+            N(this, "handleMute", (e, t) => {
                 let { messageNotifications: n } = this.props;
                 this.setMessageNotification(null != n ? n : p.bL.NULL, t, x.UE.muted(t));
             }),
-            S(this, "handleDelete", () => {
+            N(this, "handleDelete", () => {
                 let { onDelete: e, channel: t } = this.props;
                 this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id);
             });

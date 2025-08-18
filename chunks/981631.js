@@ -3990,6 +3990,7 @@ var nb = (function (e) {
             (e.APPLICATION_OPENED = "application_opened"),
             (e.LAUNCH_GAME = "launch_game"),
             (e.GAME_DETECTED = "game_detected"),
+            (e.ROBLOX_SUBGAME_DETECTED = "roblox_subgame_detected"),
             (e.RUNNING_GAME_HEARTBEAT = "running_game_heartbeat"),
             (e.GAME_DETECTION_COMPARISON = "game_detection_comparison"),
             (e.ACTIVITY_UPDATED = "activity_updated"),

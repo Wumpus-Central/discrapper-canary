@@ -78,10 +78,10 @@ function I(e) {
         [R, Z] = i.useState(null),
         D = I.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         A = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
-        k = i.useCallback(() => {
+        L = i.useCallback(() => {
             Z(null), h.Z.init(T, _.pNK.ACCESS);
         }, [T]),
-        L = i.useCallback(async (e) => {
+        k = i.useCallback(async (e) => {
             try {
                 w(!0), await e(), Z(null);
             } finally {
@@ -134,7 +134,7 @@ function I(e) {
             (e) => {
                 if (
                     (l.isAgeRestricted !== (I.ownerConfiguredContentLevel === _.V_K.AGE_RESTRICTED) &&
-                        L(async () => {
+                        k(async () => {
                             let e = l.isAgeRestricted ? _.V_K.AGE_RESTRICTED : _.V_K.DEFAULT;
                             await M({ ownerConfiguredContentLevel: e });
                         }),
@@ -142,7 +142,7 @@ function I(e) {
                 ) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => "" !== e);
-                    L(async () => {
+                    k(async () => {
                         if (I.features.has(_.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
                             e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
@@ -152,7 +152,7 @@ function I(e) {
                 } else if (l.joinType === j.A.APPLY) {
                     let { pendingVerificationFields: t } = l;
                     if (null == t) return;
-                    L(async () => {
+                    k(async () => {
                         if (I.features.has(_.oNc.DISCOVERABLE)) {
                             let e = new Set(I.features);
                             e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
@@ -163,7 +163,7 @@ function I(e) {
                 } else if (l.joinType === j.A.DISCOVERABLE) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => "" !== e);
-                    L(async () => {
+                    k(async () => {
                         if ((f.verificationDirty && (await U(t, r, e)), f.guildDirty)) {
                             (0, b.UA)(I, x);
                             let e = new Set(I.features);
@@ -184,7 +184,7 @@ function I(e) {
                     });
                 }
             },
-            [l, L, I, f, M, U, S, G, x, E],
+            [l, k, I, f, M, U, S, G, x, E],
         ),
         F = i.useCallback(() => {
             var e;
@@ -238,7 +238,7 @@ function I(e) {
         onSaveText: H ? y.intl.string(y.t["qjtt/v"]) : void 0,
         submitting: P,
         errorMessage: R,
-        onReset: k,
+        onReset: L,
         onSave: F,
         disabled: H && !z,
     });

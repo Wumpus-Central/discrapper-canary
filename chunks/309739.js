@@ -290,22 +290,24 @@ function B() {
         ? null
         : (0, i.jsx)(j.F, {
               setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, i.jsxs)(p.hjN, {
+              children: (0, i.jsx)(p.hjN, {
                   className: R.marginBottom40,
-                  children: [
-                      (0, i.jsx)(p.vwX, {
-                          tag: p.RB0.H5,
-                          className: R.marginBottom8,
-                          children: A.intl.string(A.t["4F2KoK"]),
-                      }),
-                      (0, i.jsx)(m.Is, {
-                          className: P.searchInput,
-                          value: n,
-                          onChange: s,
-                          placeholder: A.intl.string(A.t.WPrtoa),
-                      }),
-                      a.map((e) => (0, i.jsx)(L, { account: e }, e.id)),
-                  ],
+                  children: (0, i.jsxs)(p.Kqy, {
+                      gap: 12,
+                      children: [
+                          (0, i.jsx)(p.vwX, {
+                              tag: p.RB0.H5,
+                              className: R.marginBottom8,
+                              children: A.intl.string(A.t["4F2KoK"]),
+                          }),
+                          (0, i.jsx)(p.E1j, {
+                              query: n,
+                              onChange: s,
+                              placeholder: A.intl.string(A.t.WPrtoa),
+                          }),
+                          a.map((e) => (0, i.jsx)(L, { account: e }, e.id)),
+                      ],
+                  }),
               }),
           });
 }

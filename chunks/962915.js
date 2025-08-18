@@ -42,7 +42,6 @@ let h = (e) => {
                     analyticsLocations: j,
                     analyticsLocation: g.Sbl.USER_SETTINGS,
                     confettiCanvas: null,
-                    discountPrimary: !1,
                     churnUserDiscountOffer: c,
                     isFetchingChurnDiscountOffer: !1,
                     fullPrice: "$9.99",

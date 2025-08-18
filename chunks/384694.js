@@ -1,15 +1,15 @@
 n.d(t, { q: () => j }), n(467055), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(442837),
-    a = n(481060),
+    a = n(442837),
+    i = n(481060),
     s = n(339085),
     o = n(565138),
     u = n(889564),
     c = n(430824),
     d = n(496675),
-    m = n(771845),
-    h = n(823379),
+    h = n(771845),
+    m = n(823379),
     g = n(267642),
     p = n(598117),
     f = n(981631),
@@ -22,15 +22,15 @@ let _ = (e) => ({
     b = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
     j = (e) => {
         let { onChange: t, selected: n, onError: d, labelledBy: j, isEmojiAnimated: O } = e,
-            E = (0, i.cj)([c.Z, m.ZP], () =>
+            E = (0, a.cj)([c.Z, h.ZP], () =>
                 Object.fromEntries(
-                    m.ZP.getFlattenedGuildIds()
+                    h.ZP.getFlattenedGuildIds()
                         .map((e) => c.Z.getGuild(e))
-                        .filter(h.lm)
+                        .filter(m.lm)
                         .map((e) => [e.id, e]),
                 ),
             ),
-            N = (0, i.cj)(
+            N = (0, a.cj)(
                 [s.ZP],
                 () =>
                     Object.fromEntries(
@@ -41,12 +41,12 @@ let _ = (e) => ({
                                 (function (e) {
                                     var t;
                                     let { guild: n, emojis: r, isEmojiAnimated: l } = e,
-                                        i =
+                                        a =
                                             null !=
                                             (t = r.filter((e) => e.animated === l && !(0, u.Kt)(e, n.id)).length)
                                                 ? t
                                                 : 0;
-                                    return (0, g.y4)(n) - i;
+                                    return (0, g.y4)(n) - a;
                                 })({
                                     guild: n,
                                     emojis: s.ZP.getGuildEmoji(t),
@@ -74,7 +74,7 @@ let _ = (e) => ({
                                       active: !0,
                                       className: x.icon,
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       className: x.text,
                                       children: t.label,
@@ -102,12 +102,12 @@ let _ = (e) => ({
                                   (0, r.jsxs)("div", {
                                       className: x.optionLabelContainer,
                                       children: [
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(i.Text, {
                                               variant: "text-sm/medium",
                                               className: x.text,
                                               children: e.label,
                                           }),
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(i.Text, {
                                               variant: "text-xs/normal",
                                               color: "text-tertiary",
                                               className: x.text,
@@ -129,8 +129,7 @@ let _ = (e) => ({
                       ? d(f.evJ.TOO_MANY_EMOJI)
                       : d(null);
             }, [C, t, d, n, N]),
-            (0, r.jsx)(a.q4e, {
-                className: x.guildSelector,
+            (0, r.jsx)(i.q4e, {
                 onChange: t,
                 options: C,
                 popoutPosition: "top",

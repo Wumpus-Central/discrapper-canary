@@ -6,16 +6,16 @@ var r = n(951288),
     i = n(613087),
     l = n(457153),
     c = n(495722),
-    u = n(321025),
-    d = n(975888);
+    d = n(321025),
+    u = n(975888);
 let p = function (e) {
     var t;
     let {
             expandedContentRef: n,
             expansionSpring: p,
             isExpanded: m,
-            isExpansionAnimationComplete: g,
-            onCtxMenuOpened: f,
+            isExpansionAnimationComplete: f,
+            onCtxMenuOpened: g,
             onCtxMenuClosed: x,
             onCtxMenuSelection: h,
             quest: b,
@@ -36,14 +36,14 @@ let p = function (e) {
                 l.Z,
                 {
                     ref: C,
-                    className: d.content,
+                    className: u.content,
                     expansionSpring: p,
                     isExpanded: m,
-                    isExpansionAnimationComplete: g,
+                    isExpansionAnimationComplete: f,
                     quest: b,
                     useReducedMotion: _,
                     taskDetails: O,
-                    onCtxMenuOpen: f,
+                    onCtxMenuOpen: g,
                     onCtxMenuClose: x,
                     onCtxMenuSelect: h,
                     overlayRef: y,
@@ -53,21 +53,21 @@ let p = function (e) {
             ),
             (0, r.jsx)(c.Z, {
                 expansionSpring: p,
-                className: d.content,
+                className: u.content,
                 collapsedHeight: j,
-                onCtxMenuOpen: f,
+                onCtxMenuOpen: g,
                 onCtxMenuClose: x,
                 onCtxMenuSelect: h,
                 overlayRef: y,
                 isExpanded: m,
-                isExpansionAnimationComplete: g,
+                isExpansionAnimationComplete: f,
                 quest: b,
                 useReducedMotion: _,
                 ref: n,
                 taskDetails: O,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(u.Z, {
+                        (0, r.jsx)(d.Z, {
                             expansionSpring: p,
                             isExpanded: m,
                         }),
@@ -77,8 +77,8 @@ let p = function (e) {
                                 expansionSpring: p,
                                 useReducedMotion: _,
                                 isExpanded: m,
-                                isExpansionAnimationComplete: g,
-                                onCtxMenuOpen: f,
+                                isExpansionAnimationComplete: f,
+                                onCtxMenuOpen: g,
                                 onCtxMenuClose: x,
                                 onCtxMenuSelect: h,
                             }),
@@ -87,7 +87,7 @@ let p = function (e) {
             }),
             (0, r.jsx)("div", {
                 ref: y,
-                className: d.overlay,
+                className: u.overlay,
             }),
         ],
     });

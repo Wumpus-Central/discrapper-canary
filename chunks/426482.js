@@ -1,46 +1,46 @@
-r.d(t, {
+n.d(t, {
     C: () => m,
     Z: () => d,
 }),
-    r(388685);
-var n,
-    a = r(951288),
-    i = r(647438),
-    l = r(120356),
-    o = r.n(l),
-    s = r(793030),
-    c = r(388032),
-    u = r(451697),
-    d = (((n = {})[(n.SMALL = 0)] = "SMALL"), (n[(n.LARGE = 1)] = "LARGE"), n);
+    n(388685);
+var r,
+    i = n(951288),
+    l = n(647438),
+    a = n(120356),
+    s = n.n(a),
+    o = n(793030),
+    c = n(388032),
+    u = n(451697),
+    d = (((r = {})[(r.SMALL = 0)] = "SMALL"), (r[(r.LARGE = 1)] = "LARGE"), r);
 function m(e) {
     var t;
-    let { game: r, application: n, size: l, className: d } = e,
-        [m, f] = i.useState(!1),
-        g = null != (t = null == n ? void 0 : n.name) ? t : r.name,
-        p = null != r.firstReleaseDate ? new Date(r.firstReleaseDate) : null;
-    return null == r.coverImageUrl || m
-        ? (0, a.jsxs)("div", {
-              className: o()(u.fallback, d),
+    let { game: n, application: r, size: a, className: d } = e,
+        [m, f] = l.useState(!1),
+        p = null != (t = null == r ? void 0 : r.name) ? t : n.name,
+        g = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
+    return null == n.coverImageUrl || m
+        ? (0, i.jsxs)("div", {
+              className: s()(u.fallback, d),
               children: [
-                  (0, a.jsx)("div", { className: u.spacer }),
-                  (0, a.jsx)(s.xv, {
-                      variant: 1 === l ? "text-md/medium" : "text-xs/medium",
+                  (0, i.jsx)("div", { className: u.spacer }),
+                  (0, i.jsx)(o.xv, {
+                      variant: 1 === a ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
-                      lineClamp: 1 === l ? 4 : 3,
-                      children: g,
+                      lineClamp: 1 === a ? 4 : 3,
+                      children: p,
                   }),
-                  (0, a.jsx)("div", { className: u.spacer }),
-                  (0, a.jsx)(s.xv, {
-                      variant: 1 === l ? "text-sm/normal" : "text-xxs/normal",
+                  (0, i.jsx)("div", { className: u.spacer }),
+                  (0, i.jsx)(o.xv, {
+                      variant: 1 === a ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != p ? "(".concat(null == p ? void 0 : p.getFullYear(), ")") : null,
+                      children: null != g ? "(".concat(null == g ? void 0 : g.getFullYear(), ")") : null,
                   }),
               ],
           })
-        : (0, a.jsx)("img", {
+        : (0, i.jsx)("img", {
               className: d,
-              src: r.coverImageUrl,
-              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: g }),
+              src: n.coverImageUrl,
+              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: p }),
               onError: () => {
                   f(!0);
               },

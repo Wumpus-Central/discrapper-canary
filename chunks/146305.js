@@ -32,8 +32,8 @@ var r = n(951288),
     Z = n(853714),
     D = n(359191),
     A = n(84658),
-    k = n(142961),
-    L = n(730910),
+    L = n(142961),
+    k = n(730910),
     M = n(475013),
     G = n(213956),
     U = n(702478),
@@ -45,10 +45,10 @@ var r = n(951288),
     V = n(29605),
     Y = n(365307),
     K = n(324330),
-    q = n(495300),
-    X = n(651780),
-    Q = n(279542),
-    J = n(665324),
+    X = n(495300),
+    q = n(651780),
+    J = n(279542),
+    Q = n(665324),
     $ = n(208150),
     ee = n(353398),
     et = n(365774),
@@ -235,7 +235,7 @@ let ev = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
                     label: ef.intl.string(ef.t.OWQNYm),
                     ariaLabel: ef.intl.string(ef.t.OWQNYm),
-                    element: J.Z,
+                    element: Q.Z,
                     predicate: () => t.canManageGuildExpressions,
                 };
             case ep.pNK.GUILD_TEMPLATES:
@@ -301,7 +301,7 @@ let ev = {
                     section: ep.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: ef.intl.string(ef.t["suhY+f"]),
-                    element: Q.ZP,
+                    element: J.ZP,
                     predicate: () => t.canManageGuild && !t.guild.features.has(ep.oNc.COMMUNITY),
                 };
             case ep.pNK.GUILD_AUTOMOD:
@@ -361,19 +361,19 @@ let ev = {
                 return {
                     section: ep.pNK.ONBOARDING,
                     label: ef.intl.string(ef.t.LdxCKy),
-                    element: q.Z,
+                    element: X.Z,
                     ariaLabel: ef.intl.string(ef.t.LdxCKy),
                     newIndicatorDismissibleContentTypes: t.onboardingEnabled
                         ? null
                         : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                     notice: {
                         stores: [D.Z],
-                        element: L.Z,
+                        element: k.Z,
                     },
                     predicate: () => (0, h.wC)(t.guild.id),
                     decoration: (function (e, t) {
                         if (p.Z.getEnabled(e)) return ef.intl.string(ef.t.pPSmxs).toUpperCase();
-                        if ((0, k.C)(e)) return ef.intl.string(ef.t.HDF4o6).toUpperCase();
+                        if ((0, L.C)(e)) return ef.intl.string(ef.t.HDF4o6).toUpperCase();
                         let n = A.ug,
                             r = n.findIndex((e) => e === t);
                         if (-1 !== r)
@@ -474,7 +474,7 @@ let ev = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                     label: ef.intl.string(ef.t["8+VX4+"]),
                     ariaLabel: ef.intl.string(ef.t["8+VX4+"]),
-                    element: X.Z,
+                    element: q.Z,
                     className: eb.serverBoostTabItem,
                     icon: (0, r.jsx)(a.$Eu, {
                         color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,

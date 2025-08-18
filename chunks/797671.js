@@ -29,13 +29,13 @@ function S(e) {
         E = (0, p.Dt)(),
         T = (0, p.Dt)(),
         R = (0, p.Dt)(),
-        [M, W] = r.useState(w.Sc2),
-        [G, k] = r.useState(w.d4z.GUILD_TEXT),
-        [A, H] = r.useState(""),
+        [M, G] = r.useState(w.Sc2),
+        [k, A] = r.useState(w.d4z.GUILD_TEXT),
+        [H, W] = r.useState(""),
         [U, O] = r.useState(!1),
-        P = (0, o.e7)([g.Z], () => g.Z.getGuild(S), [S]),
-        Z = (0, m.m)(S),
-        V = (0, h.Ui)(P),
+        Z = (0, o.e7)([g.Z], () => g.Z.getGuild(S), [S]),
+        V = (0, m.m)(S),
+        P = (0, h.Ui)(Z),
         z = r.useMemo(
             () =>
                 (function (e) {
@@ -105,10 +105,10 @@ function S(e) {
                         })
                     );
                 })({
-                    canCreateStageChannel: Z,
-                    canCreateMediaChannel: V,
+                    canCreateStageChannel: V,
+                    canCreateMediaChannel: P,
                 }),
-            [Z, V],
+            [V, P],
         ),
         F = (0, o.e7)([f.Z], () => f.Z.getCategories(S)._categories, [S]),
         X = r.useMemo(
@@ -122,15 +122,15 @@ function S(e) {
                 }),
             [F],
         ),
-        q = null != (a = null == (t = z.find((e) => e.value === G)) ? void 0 : t.channelIcon) ? a : C.Vq,
-        J = "" !== A;
+        q = null != (a = null == (t = z.find((e) => e.value === k)) ? void 0 : t.channelIcon) ? a : C.Vq,
+        J = "" !== H;
     return (0, n.jsx)("form", {
         onSubmit: function (e) {
             if ((e.preventDefault(), !J)) return;
             O(!0);
             let t = {
-                type: G,
-                name: A,
+                type: k,
+                name: H,
                 parent_id: "null" !== M ? M : void 0,
                 permission_overwrites: [
                     {
@@ -195,7 +195,7 @@ function S(e) {
                             placeholder: N.intl.string(N.t["g/Rr2d"]),
                             value: M,
                             options: X,
-                            onChange: (e) => W(e),
+                            onChange: (e) => G(e),
                             "aria-labelledby": E,
                         }),
                     }),
@@ -204,10 +204,10 @@ function S(e) {
                         titleId: T,
                         children: (0, n.jsx)(s.FXm, {
                             options: z,
-                            value: G,
+                            value: k,
                             onChange: (e) => {
                                 let { value: t } = e;
-                                return k(t);
+                                return A(t);
                             },
                             "aria-labelledby": T,
                         }),
@@ -216,9 +216,9 @@ function S(e) {
                         title: N.intl.string(N.t.PVbHDg),
                         titleId: R,
                         children: (0, n.jsx)(d.Is, {
-                            value: A,
+                            value: H,
                             onChange: function (e) {
-                                (0, x.zi)(G) && (e = (0, I.Nj)(e)), H(e);
+                                (0, x.zi)(k) && (e = (0, I.Nj)(e)), W(e);
                             },
                             maxLength: w.HN8,
                             placeholder: N.intl.string(N.t["bw/b8P"]),

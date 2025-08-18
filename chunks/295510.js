@@ -1,58 +1,58 @@
-n.d(t, { Z: () => u });
-var r = n(951288);
-n(647438);
-var i = n(153867),
-    l = n(468026),
-    o = n(394059),
-    a = n(388032);
-function u(e) {
-    var { type: t, onConfirm: n } = e,
-        u = (function (e, t) {
+t.d(n, { Z: () => c });
+var r = t(951288);
+t(647438);
+var i = t(153867),
+    l = t(468026),
+    o = t(394059),
+    a = t(388032);
+function c(e) {
+    var { type: n, onConfirm: t } = e,
+        c = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 r,
-                i = (function (e, t) {
+                i = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (r = 0; r < l.length; r++) (t = l[r]), n.indexOf(t) >= 0 || (i[t] = e[t]);
                     return i;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
                 for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    (t = l[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
             return i;
         })(e, ["type", "onConfirm"]);
-    let c = t === o.K.STREAM ? a.intl.string(a.t["/lFMWl"]) : a.intl.string(a.t.xzxhZW),
-        d = t === o.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
+    let s = n === o.K.STREAM ? a.intl.string(a.t["/lFMWl"]) : a.intl.string(a.t.xzxhZW),
+        u = n === o.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
     return (0, r.jsx)(
         l.default,
         (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
+                    r.forEach(function (n) {
                         var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (r = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[n] = r);
                     });
             }
             return e;
@@ -60,15 +60,15 @@ function u(e) {
             {
                 confirmText: a.intl.string(a.t["cY+Ooa"]),
                 secondaryConfirmText: a.intl.string(a.t["JdIQ/f"]),
-                title: c,
+                title: s,
                 cancelText: a.intl.string(a.t["ETE/oK"]),
-                onConfirm: n,
+                onConfirm: t,
                 onConfirmSecondary: () => {
                     i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 });
                 },
-                body: d,
+                body: u,
             },
-            u,
+            c,
         ),
     );
 }

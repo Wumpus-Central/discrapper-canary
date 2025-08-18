@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => b,
-    k: () => m,
+    Z: () => m,
+    k: () => b,
 }),
     n(953529);
 var r,
@@ -15,7 +15,7 @@ var r,
     h = n(131154),
     g = n(38981),
     _ = n(302592),
-    m =
+    b =
         (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (r[(r.TRENDING = 1)] = "TRENDING"),
         (r[(r.PERSONALIZED = 2)] = "PERSONALIZED"),
@@ -24,17 +24,17 @@ var r,
         (r[(r.INTRO_CARD = 5)] = "INTRO_CARD"),
         (r[(r.FEATURED = 6)] = "FEATURED"),
         r);
-function b(e) {
+function m(e) {
     let {
             guild: t,
             stageInstance: n,
             showGuildPopout: r,
             setShowGuildPopout: a,
-            handleGuildNameClick: m,
-            source: b,
+            handleGuildNameClick: b,
+            source: m,
             speakers: f,
-            speakerCount: p,
-            audienceCount: x,
+            speakerCount: x,
+            audienceCount: p,
             channelName: v,
         } = e,
         j = l.useRef(null),
@@ -55,7 +55,7 @@ function b(e) {
                             children: () =>
                                 (0, i.jsxs)(s.P3F, {
                                     className: _.flexContainerRow,
-                                    onClick: m,
+                                    onClick: b,
                                     innerRef: j,
                                     children: [
                                         (0, i.jsx)(c.Z, {
@@ -69,7 +69,7 @@ function b(e) {
                                                 (0, i.jsx)(s.Text, {
                                                     color: "header-secondary",
                                                     variant: "text-sm/normal",
-                                                    className: o()(_.guildName, { [_.disabled]: null == m }),
+                                                    className: o()(_.guildName, { [_.disabled]: null == b }),
                                                     children: t.name,
                                                 }),
                                                 (0, i.jsx)(d.Z, { guild: t }),
@@ -81,7 +81,7 @@ function b(e) {
                         (0, i.jsxs)("div", {
                             className: _.rightJustifiedContent,
                             children: [
-                                6 === b &&
+                                6 === m &&
                                     (0, i.jsx)("div", {
                                         className: _.featuredTag,
                                         children: (0, i.jsx)(s.Text, {
@@ -91,7 +91,7 @@ function b(e) {
                                         }),
                                     }),
                                 (0, i.jsx)(g.Z, {
-                                    count: x,
+                                    count: p,
                                     className: _.__invalid_audienceCount,
                                 }),
                             ],
@@ -113,7 +113,7 @@ function b(e) {
                 (0, i.jsx)(h.Z, {
                     guild: t,
                     speakers: f,
-                    speakerCount: p,
+                    speakerCount: x,
                     className: _.speakers,
                 }),
                 null != v &&

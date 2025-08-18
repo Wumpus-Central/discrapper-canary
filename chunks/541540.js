@@ -1,19 +1,17 @@
-n.d(t, { Z: () => E }), n(388685), n(415506);
+n.d(t, { Z: () => _ }), n(388685), n(415506);
 var i = n(951288),
     r = n(647438),
     s = n(442837),
-    a = n(755721),
-    l = n(481060),
-    o = n(533307),
-    c = n(600164),
-    d = n(930114),
-    u = n(246946),
-    m = n(626135),
-    p = n(669079),
-    g = n(981631),
-    h = n(388032),
-    f = n(954655);
-function b(e, t, n) {
+    a = n(481060),
+    l = n(533307),
+    o = n(930114),
+    c = n(246946),
+    d = n(626135),
+    u = n(669079),
+    m = n(981631),
+    p = n(388032),
+    g = n(954655);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +24,7 @@ function b(e, t, n) {
         e
     );
 }
-function x(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,12 +35,12 @@ function x(e) {
                 }),
             )),
             i.forEach(function (t) {
-                b(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,36 +58,38 @@ function _(e, t) {
         e
     );
 }
-class j extends r.Component {
+class x extends r.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
         } = this.props;
-        return _(x({}, e), { object: g.qAy.BUTTON_CTA });
+        return b(f({}, e), { object: m.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
             { codeInput: t, submitting: n, hasError: r, isPromoCode: s } = this.state;
-        return (0, i.jsxs)(l.hjN, {
-            tag: l.RB0.H1,
-            title: h.intl.string(h.t["il+VCg"]),
+        return (0, i.jsxs)(a.hjN, {
+            tag: a.RB0.H1,
+            title: p.intl.string(p.t["il+VCg"]),
             children: [
-                (0, i.jsx)(l.vwX, { children: h.intl.string(h.t.SeKIoa) }),
+                (0, i.jsx)(a.vwX, { children: p.intl.string(p.t.SeKIoa) }),
                 (0, i.jsx)("form", {
                     onSubmit: this.handleSubmit,
-                    children: (0, i.jsxs)(c.Z, {
+                    children: (0, i.jsxs)(a.Kqy, {
+                        direction: "horizontal",
+                        gap: 8,
                         children: [
-                            (0, i.jsx)(a.Is, {
+                            (0, i.jsx)(a.oil, {
                                 type: e ? "password" : "text",
                                 value: t,
                                 onChange: this.handleChange,
                                 placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
-                                error: !s && r ? h.intl.string(h.t.Y11a2t) : null,
-                                className: f.codeRedemptionInput,
+                                error: !s && r ? p.intl.string(p.t.Y11a2t) : null,
+                                fullWidth: !0,
                             }),
-                            (0, i.jsx)(l.zxk, {
+                            (0, i.jsx)(a.zxk, {
                                 variant: "primary",
-                                text: h.intl.string(h.t.KIpp7O),
+                                text: p.intl.string(p.t.KIpp7O),
                                 type: "submit",
                                 loading: n,
                             }),
@@ -97,10 +97,10 @@ class j extends r.Component {
                     }),
                 }),
                 s
-                    ? (0, i.jsx)(l.Text, {
-                          className: f.errorMessage,
+                    ? (0, i.jsx)(a.Text, {
+                          className: g.errorMessage,
                           variant: "text-sm/normal",
-                          children: h.intl.format(h.t.gPt3PD, {
+                          children: p.intl.format(p.t.gPt3PD, {
                               promoLink: () => {
                                   window.open("https://discord.com/billing/promotions/".concat(t));
                               },
@@ -112,34 +112,34 @@ class j extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            b(this, "state", {
+            h(this, "state", {
                 codeInput: "",
                 submitting: !1,
                 hasError: !1,
                 isPromoCode: !1,
             }),
-            b(this, "handleChange", (e) => {
+            h(this, "handleChange", (e) => {
                 this.setState({
                     codeInput: e,
                     hasError: !1,
                 });
             }),
-            b(this, "handleSubmit", async (e) => {
+            h(this, "handleSubmit", async (e) => {
                 e.preventDefault();
                 let { codeInput: t } = this.state;
                 if ("" === t) return;
-                let n = (0, p.JT)(t);
+                let n = (0, u.JT)(t);
                 if (null == n) return void this.setState({ hasError: !0 });
                 this.setState({ submitting: !0 });
                 try {
-                    let e = await o.Z.resolveGiftCode(n);
+                    let e = await l.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion)
                         throw (this.setState({ isPromoCode: !0 }), Error("Cannnot redeem promotion code as gift"));
-                    m.default.track(g.rMx.OPEN_MODAL, {
+                    d.default.track(m.rMx.OPEN_MODAL, {
                         type: "gift_accept",
-                        location: _(x({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA }),
+                        location: b(f({}, this.analyticsLocation), { object: m.qAy.BUTTON_CTA }),
                     }),
-                        (0, d.V)({ processedCode: n }),
+                        (0, o.V)({ processedCode: n }),
                         this.setState({ codeInput: "" });
                 } catch (e) {
                     this.setState({ hasError: !0 });
@@ -149,10 +149,10 @@ class j extends r.Component {
             });
     }
 }
-function E() {
-    let e = r.useContext(m.AnalyticsContext),
-        t = (0, s.e7)([u.Z], () => u.Z.enabled);
-    return (0, i.jsx)(j, {
+function _() {
+    let e = r.useContext(d.AnalyticsContext),
+        t = (0, s.e7)([c.Z], () => c.Z.enabled);
+    return (0, i.jsx)(x, {
         analyticsContext: e,
         obscureInput: t,
     });

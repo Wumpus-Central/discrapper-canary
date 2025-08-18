@@ -42,7 +42,6 @@ let g = function (e) {
         fieldStyle: _,
         children: [
             (0, r.jsx)(c.EK, {
-                className: l()(m.fieldBackground, { [m.withFooter]: 0 !== C }),
                 terms: y,
                 channelId: t,
             }),

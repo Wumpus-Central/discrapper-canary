@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(413496), n(433524), n(35282), n(539854), n(642613), n(953529);
+n.d(t, { Z: () => k }), n(388685), n(413496), n(433524), n(35282), n(539854), n(642613), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -363,7 +363,7 @@ class A extends i.PureComponent {
             });
     }
 }
-let k = o.ZP.connectStores([O.Z, p.Z, h.Z], () => {
+let L = o.ZP.connectStores([O.Z, p.Z, h.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = O.Z.getProps();
     return {
         searchQuery: null != n ? n : "",
@@ -373,7 +373,7 @@ let k = o.ZP.connectStores([O.Z, p.Z, h.Z], () => {
         streamerMode: h.Z.hidePersonalInformation,
     };
 })(A);
-function L() {
+function k() {
     var e;
     let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], s.isEqual),
         { enabled: n } = _.T.useExperiment(
@@ -383,5 +383,5 @@ function L() {
             },
             { autoTrackExposure: !0 },
         );
-    return n ? (0, r.jsx)(N.Z, {}) : (0, r.jsx)(k, {});
+    return n ? (0, r.jsx)(N.Z, {}) : (0, r.jsx)(L, {});
 }

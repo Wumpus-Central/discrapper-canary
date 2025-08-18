@@ -7,8 +7,8 @@ var l = n(951288),
     o = n(388032);
 function d(e) {
     let { mfaChallenge: t, finish: n, setSlide: d, onClose: c, isSlideReady: u, headerAlignStart: h } = e,
-        [f, m] = r.useState(!1),
-        [g, x] = r.useState(null),
+        [f, g] = r.useState(!1),
+        [m, x] = r.useState(null),
         [p, S] = r.useState(""),
         j = r.useRef(null),
         b = o.intl.string(o.t["C/ZAw8"]),
@@ -29,7 +29,7 @@ function d(e) {
         (0, l.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
-                    m(!0),
+                    g(!0),
                     n({
                         mfaType: "backup",
                         data: p.replace(/-/g, ""),
@@ -39,7 +39,7 @@ function d(e) {
                             x(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
-                            m(!1);
+                            g(!1);
                         });
             },
             children: [
@@ -61,7 +61,7 @@ function d(e) {
                                 spellCheck: "false",
                                 disabled: f,
                             }),
-                            (0, l.jsx)(a.Z.SlideError, { error: g }),
+                            (0, l.jsx)(a.Z.SlideError, { error: m }),
                         ],
                     }),
                 }),

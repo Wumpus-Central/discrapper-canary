@@ -1,121 +1,140 @@
-n.d(t, { Z: () => N });
-var i = n(951288),
-    s = n(647438),
-    l = n(120356),
-    r = n.n(l),
+n.d(t, { Z: () => j });
+var i = n(951288);
+n(647438);
+var s = n(120356),
+    l = n.n(s),
+    r = n(82659),
     a = n(481060),
-    o = n(493773),
-    d = n(11352),
-    c = n(610617),
-    u = n(413684),
-    h = n(298812),
-    g = n(200115),
-    m = n(406205),
-    x = n(388032),
-    p = n(101105);
-function v(e) {
+    o = n(11352),
+    d = n(610617),
+    c = n(413684),
+    u = n(298812),
+    h = n(200115),
+    g = n(406205),
+    m = n(388032),
+    x = n(101105);
+function p(e) {
     return (0, i.jsx)("div", {
-        className: p.sectionHeader,
+        className: x.sectionHeader,
         children: (0, i.jsx)(a.X6q, {
             variant: "text-xs/bold",
-            className: p.sectionHeaderTitle,
+            className: x.sectionHeaderTitle,
             color: "text-muted",
             children: e.title,
         }),
     });
 }
-function j(e) {
+function v(e) {
     return (0, i.jsxs)("div", {
         children: [
-            null != e.title && (0, i.jsx)(v, { title: e.title }),
+            null != e.title && (0, i.jsx)(p, { title: e.title }),
             (0, i.jsx)("div", {
-                className: r()(p.sectionContent, { [p.sectionContentPadding]: !0 !== e.noPadding }),
+                className: l()(x.sectionContent, { [x.sectionContentPadding]: !0 !== e.noPadding }),
                 children: e.children,
             }),
         ],
     });
 }
-function S(e) {
-    let { onClose: t } = e;
-    return (0, i.jsxs)(a.xBx, {
-        className: p.header,
-        children: [
-            (0, i.jsxs)("div", {
-                className: p.headerLeft,
+function j(e) {
+    var t,
+        n,
+        { guildId: s } = e,
+        l = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                s = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        i,
+                        s = {},
+                        l = Object.keys(e);
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                    return s;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+            }
+            return s;
+        })(e, ["guildId"]);
+    let a = o.Y.useExperiment({ location: "notification_settings_modal_redesign" }, { autoTrackExposure: !0 }).enabled;
+    return (0, i.jsxs)(
+        r.Modal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    i = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (i = i.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: i,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = i);
+                    });
+            }
+            return e;
+        })({}, l)),
+        (n = n =
+            {
+                title: m.intl.string(m.t.h850Sk),
+                actions: [
+                    {
+                        text: m.intl.string(m.t.i4jeWV),
+                        onClick: l.onClose,
+                    },
+                ],
                 children: [
-                    (0, i.jsx)(a.Dkj, {
-                        size: "md",
-                        color: "currentColor",
-                        className: p.headerBell,
+                    (0, i.jsx)(v, {
+                        noPadding: !0,
+                        children: (0, i.jsx)(h.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(a.X6q, {
-                        variant: "heading-lg/semibold",
-                        children: x.intl.string(x.t.h850Sk),
+                    (0, i.jsx)(v, {
+                        title: m.intl.string(m.t["R9Ej9/"]),
+                        noPadding: !0,
+                        children: (0, i.jsx)(g.Z, { guildId: s }),
                     }),
+                    a &&
+                        (0, i.jsx)(v, {
+                            children: (0, i.jsx)(d.Z, {
+                                onClose: l.onClose,
+                                guildId: s,
+                                isRedesign: !0,
+                            }),
+                        }),
+                    (0, i.jsx)(v, {
+                        title: m.intl.string(m.t["31DySk"]),
+                        children: (0, i.jsx)(c.Z, { guildId: s }),
+                    }),
+                    (0, i.jsx)(p, { title: m.intl.string(m.t.JrySi4) }),
+                    (0, i.jsx)(u.Z, { guildId: s }),
                 ],
             }),
-            (0, i.jsx)(a.olH, { onClick: t }),
-        ],
-    });
-}
-function N(e) {
-    let t = s.useRef(null),
-        n = d.Y.useExperiment({ location: "notification_settings_modal_redesign" }, { autoTrackExposure: !0 }).enabled,
-        l = s.useRef(null);
-    return (
-        (0, o.Ng)(() => {
-            let n = setTimeout(() => {
-                e.scrollToChannels &&
-                    null != t.current &&
-                    null != l.current &&
-                    t.current.scrollIntoViewNode({
-                        node: l.current,
-                        shouldScrollToStart: !0,
-                        padding: 40,
-                    });
-            }, 1000);
-            return () => clearTimeout(n);
-        }),
-        (0, i.jsxs)(a.Y0X, {
-            size: a.CgR.MEDIUM,
-            transitionState: e.transitionState,
-            "aria-label": x.intl.string(x.t.h850Sk),
-            parentComponent: "NotificationSettingsModalRedesign",
-            children: [
-                (0, i.jsx)(S, { onClose: e.onClose }),
-                (0, i.jsxs)(a.hzk, {
-                    className: p.content,
-                    scrollerRef: t,
-                    children: [
-                        (0, i.jsx)(j, { children: (0, i.jsx)(g.Z, { guildId: e.guildId }) }),
-                        (0, i.jsx)(j, {
-                            title: x.intl.string(x.t["R9Ej9/"]),
-                            noPadding: !0,
-                            children: (0, i.jsx)(m.Z, { guildId: e.guildId }),
-                        }),
-                        n &&
-                            (0, i.jsx)(j, {
-                                children: (0, i.jsx)(c.Z, {
-                                    onClose: e.onClose,
-                                    guildId: e.guildId,
-                                    isRedesign: !0,
-                                }),
-                            }),
-                        (0, i.jsx)(j, {
-                            title: x.intl.string(x.t["31DySk"]),
-                            children: (0, i.jsx)(u.Z, { guildId: e.guildId }),
-                        }),
-                        (0, i.jsx)(v, { title: x.intl.string(x.t.JrySi4) }),
-                        (0, i.jsx)(h.Z, {
-                            guildId: e.guildId,
-                            requestScrollToBottom: () => {
-                                null != t && null != t.current && t.current.scrollToBottom({ animate: !0 });
-                            },
-                            ref: l,
-                        }),
-                    ],
-                }),
-            ],
-        })
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
 }
