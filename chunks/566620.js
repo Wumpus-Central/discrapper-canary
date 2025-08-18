@@ -1,17 +1,18 @@
 n.d(t, {
-    $h: () => ed,
-    G6: () => eo,
-    Gj: () => eO,
-    W5: () => eE,
-    cG: () => ea,
-    gC: () => ey,
-    kv: () => ef,
-    mW: () => eu,
-    pu: () => em,
-    sN: () => eh,
-    tg: () => eb,
-    ux: () => eg,
-    w1: () => ep,
+    $h: () => ef,
+    G6: () => es,
+    Gj: () => ev,
+    W5: () => eb,
+    a_: () => eI,
+    cG: () => eo,
+    gC: () => eO,
+    kv: () => e_,
+    mW: () => ed,
+    pu: () => eg,
+    sN: () => em,
+    tg: () => ey,
+    ux: () => eE,
+    w1: () => eh,
 }),
     n(997841),
     n(388685),
@@ -56,21 +57,22 @@ var r = n(990547),
     B = n(573261),
     V = n(595519),
     F = n(317381),
-    Z = n(882347),
-    H = n(16609),
-    Y = n(224189),
-    W = n(374065),
-    K = n(917107),
-    z = n(89425),
-    q = n(275920),
-    X = n(701488),
-    Q = n(918559),
-    J = n(981631),
-    $ = n(674563),
-    ee = n(921944),
-    et = n(245335),
-    en = n(388032);
-function er(e, t, n) {
+    Z = n(729200),
+    H = n(882347),
+    Y = n(16609),
+    W = n(224189),
+    K = n(374065),
+    z = n(917107),
+    q = n(89425),
+    X = n(275920),
+    Q = n(701488),
+    J = n(918559),
+    $ = n(981631),
+    ee = n(674563),
+    et = n(921944),
+    en = n(245335),
+    er = n(388032);
+function ei(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -83,7 +85,7 @@ function er(e, t, n) {
         e
     );
 }
-function ei(e) {
+function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -94,21 +96,21 @@ function ei(e) {
                 }),
             )),
             r.forEach(function (t) {
-                er(e, t, n[t]);
+                ei(e, t, n[t]);
             });
     }
     return e;
 }
-function ea(e) {
+function eo(e) {
     let t = F.ZP.getSelfEmbeddedActivityForLocation(e);
     null != t &&
-        eu({
+        ed({
             location: t.location,
             applicationId: t.applicationId,
             showFeedback: !1,
         });
 }
-async function eo(e) {
+async function es(e) {
     var t, n;
     let {
             channelId: r,
@@ -133,7 +135,8 @@ async function eo(e) {
     let N = (0, C.r)();
     try {
         let e = A.Z.getConnectedFrame();
-        null != e && (0, S.xT)({ applicationId: e.applicationId }),
+        if (
+            (null != e && (0, S.xT)({ applicationId: e.applicationId }),
             s.Z.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_START",
                 nonce: N,
@@ -148,12 +151,22 @@ async function eo(e) {
                     customId: E,
                     referrerId: g,
                 },
+            }),
+            (0, Z.g)())
+        ) {
+            let e = await eI(a, null != r ? r : void 0);
+            s.Z.dispatch({
+                type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
+                applicationId: a,
+                channelId: null != r ? r : null,
+                proxyTicket: e,
             });
+        }
         let t = M.default.getCurrentUser();
         if (
             (null != t &&
-                (0, q.Z)({
-                    type: o ? J.q5t.LAUNCH : J.q5t.JOIN,
+                (0, X.Z)({
+                    type: o ? $.q5t.LAUNCH : $.q5t.JOIN,
                     userId: null == t ? void 0 : t.id,
                     guildId: v,
                     channelId: r,
@@ -167,8 +180,8 @@ async function eo(e) {
                 }),
             o)
         ) {
-            if (null == r || !es(a, O)) throw new I.Z(I.Z.Reasons.INVALID_CHANNEL);
-            let e = await el({
+            if (null == r || !el(a, O)) throw new I.Z(I.Z.Reasons.INVALID_CHANNEL);
+            let e = await ec({
                 applicationId: a,
                 nonce: N,
                 channelId: r,
@@ -182,7 +195,7 @@ async function eo(e) {
             });
             if ("failure" === e.result && 4 !== e.reason) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await ec({
+            let e = await eu({
                 applicationId: a,
                 channelId: r,
                 embeddedActivitiesManager: u,
@@ -216,14 +229,14 @@ async function eo(e) {
     }
     return !0;
 }
-function es(e, t) {
-    let n = (null == t ? void 0 : t.type) === J.d4z.GUILD_VOICE,
+function el(e, t) {
+    let n = (null == t ? void 0 : t.type) === $.d4z.GUILD_VOICE,
         r = E.Z.getApplication(e),
-        i = null != r && (0, U.yE)(r.flags, J.udG.EMBEDDED),
+        i = null != r && (0, U.yE)(r.flags, $.udG.EMBEDDED),
         a = (0, V.l5)(t);
     return (n && i) || a;
 }
-async function el(e) {
+async function ec(e) {
     let {
             applicationId: t,
             nonce: n,
@@ -248,7 +261,7 @@ async function el(e) {
         throw e;
     }
     let f = d.handler !== p.VC.APP_HANDLER;
-    if (!(f || $.Yq.includes(t))) {
+    if (!(f || ee.Yq.includes(t))) {
         null != r &&
             (await (0, h.FN)({
                 type: "channel",
@@ -283,7 +296,7 @@ async function el(e) {
         let i = M.default.getCurrentUser();
         if (
             null != i &&
-            !(await (0, Z.p)({
+            !(await (0, H.p)({
                 applicationId: t,
                 application: n,
                 channel: y,
@@ -318,7 +331,7 @@ async function el(e) {
                     },
                     onFailure: (e, n, a, o) => {
                         null == l || l(),
-                            j.default.track(J.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
+                            j.default.track($.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: r,
                                 guild_id: i,
                                 application_id: t,
@@ -349,7 +362,7 @@ async function el(e) {
         { result: "success" }
     );
 }
-async function ec(e) {
+async function eu(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
         c = w.default.getSessionId(),
@@ -360,7 +373,7 @@ async function ec(e) {
             result: "failure",
             reason: 1,
         };
-    let f = await (0, Y.Z)(d, i);
+    let f = await (0, W.Z)(d, i);
     if (null == u || null == f)
         return {
             result: "failure",
@@ -377,23 +390,23 @@ async function ec(e) {
             result: "failure",
             reason: 3,
         };
-    let p = (0, W.e4)({
+    let p = (0, K.e4)({
         channelId: i,
         ChannelStore: D.Z,
         GuildStore: L.Z,
         PermissionStore: x.Z,
         VoiceStateStore: k.Z,
     });
-    if (p !== W.jy.CAN_LAUNCH) {
+    if (p !== K.jy.CAN_LAUNCH) {
         let e = 4;
         return (
-            p === W.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            p === K.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? ((e = 5), (0, R.w)())
-                : p === W.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : p === K.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   l.Z.show({
-                      title: en.intl.string(en.t["IOy+Iy"]),
-                      body: en.intl.string(en.t.UXoQTk),
+                      title: er.intl.string(er.t["IOy+Iy"]),
+                      body: er.intl.string(er.t.UXoQTk),
                       hideActionSheet: !1,
                   })),
             {
@@ -408,7 +421,7 @@ async function ec(e) {
             (t = E.Z.getApplication(null == h ? void 0 : h.applicationId)),
         !(
             !o ||
-            (await (0, Z.p)({
+            (await (0, H.p)({
                 applicationId: n,
                 application: f,
                 channel: _,
@@ -423,11 +436,11 @@ async function ec(e) {
             reason: 7,
         };
     if (null != _) {
-        let e = (0, K.Z)(_.id),
-            n = X.wP.includes(_.type);
+        let e = (0, z.Z)(_.id),
+            n = Q.wP.includes(_.type);
         if (e) {
             if (
-                !(await (0, z.Z)({
+                !(await (0, q.Z)({
                     channelId: _.id,
                     bypassChangeModal: null != t,
                 }))
@@ -458,9 +471,9 @@ async function ec(e) {
     };
     return null != i
         ? (await B.Z.post(
-              ei(
+              ea(
                   {
-                      url: J.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
+                      url: $.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
                       body: {
                           session_id: c,
                           guild_id: null != s ? s : void 0,
@@ -475,7 +488,7 @@ async function ec(e) {
               reason: 0,
           };
 }
-function eu(e) {
+function ed(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
         i = F.ZP.getSelfEmbeddedActivityForLocation(t);
     s.Z.dispatch({
@@ -485,7 +498,7 @@ function eu(e) {
         instanceId: null == i ? void 0 : i.launchId,
         showFeedback: r,
     });
-    let a = (0, H.p)(t);
+    let a = (0, Y.p)(t);
     if (null != a) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
@@ -499,11 +512,11 @@ function eu(e) {
             }) && u.Z.selectParticipant(a, null);
     }
 }
-async function ed() {
+async function ef() {
     try {
         s.Z.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START" });
         let e = await a.tn.get({
-                url: J.ANM.APPLICATIONS_WITH_ASSETS,
+                url: $.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -523,12 +536,12 @@ async function ed() {
         s.Z.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
     }
 }
-async function ef(e, t, n) {
+async function e_(e, t, n) {
     try {
         s.Z.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START" });
         let r = null != t ? { channel_id: t } : void 0,
             i = await a.tn.post({
-                url: J.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
+                url: $.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
                 query: r,
                 attachments: [
                     {
@@ -549,11 +562,11 @@ async function ef(e, t, n) {
         return s.Z.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new _.Z(e);
     }
 }
-let e_ = (e, t, n) => {
+let ep = (e, t, n) => {
     let { guildId: r } = n;
     (r === e || (null == r && null == e)) && t();
 };
-async function ep(e) {
+async function eh(e) {
     var t, n, i, a;
     let { guildId: o, force: l = !1 } = e,
         c = F.ZP.getShelfActivities(o),
@@ -563,10 +576,10 @@ async function ep(e) {
             let e,
                 t,
                 n = new Promise((t) => {
-                    (e = e_.bind(null, o, t)), s.Z.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e);
+                    (e = ep.bind(null, o, t)), s.Z.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e);
                 }),
                 r = new Promise((e) => {
-                    (t = e_.bind(null, o, e)), s.Z.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t);
+                    (t = ep.bind(null, o, e)), s.Z.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t);
                 });
             await Promise.race([n, r]),
                 null != e && (s.Z.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), (e = null)),
@@ -584,7 +597,7 @@ async function ep(e) {
         });
         let e = void 0 !== o && "" !== o ? { guild_id: o } : void 0,
             t = await B.Z.get({
-                url: J.ANM.ACTIVITY_SHELF,
+                url: $.ANM.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
                     event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
@@ -628,24 +641,24 @@ async function ep(e) {
         );
     }
 }
-async function eh(e) {
+async function em(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i } = e,
         a = await d.ZP.createInvite(
             t,
             {
-                target_type: et.Iq.EMBEDDED_APPLICATION,
+                target_type: en.Iq.EMBEDDED_APPLICATION,
                 target_application_id: r,
             },
             i,
         );
     null != D.Z.getChannel(n) && f.Z.sendInvite(n, a.code, i, null);
 }
-async function em(e) {
+async function eg(e) {
     let { channelId: t, applicationId: n, userId: r, location: i, prefixedContent: a } = e,
         o = await d.ZP.createInvite(
             t,
             {
-                target_type: et.Iq.EMBEDDED_APPLICATION,
+                target_type: en.Iq.EMBEDDED_APPLICATION,
                 target_application_id: n,
             },
             i,
@@ -657,12 +670,12 @@ async function em(e) {
         null != a && (t = N.ZP.parse(n, a).content), f.Z.sendInvite(e, o.code, i, null, t);
     });
 }
-function eg() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ee.L.INDIRECT_ACTION;
+function eE() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : et.L.INDIRECT_ACTION;
     (0, v.wH)(o.z.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: e });
 }
-async function eE(e) {
-    let t = J.ANM.ACTIVITY_TEST_MODE(e);
+async function eb(e) {
+    let t = $.ANM.ACTIVITY_TEST_MODE(e);
     try {
         return (
             await a.tn.get({
@@ -676,18 +689,31 @@ async function eE(e) {
         return !1;
     }
 }
-function eb(e) {
+function ey(e) {
     s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
         activityPanelMode: e,
     });
 }
-function ey(e) {
+function eO(e) {
     s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
         focusedActivityLayout: e,
     });
 }
-function eO() {
-    eb(Q.Ez.ACTIVITY_POPOUT_WINDOW), s.Z.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+function ev() {
+    ey(J.Ez.ACTIVITY_POPOUT_WINDOW), s.Z.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+}
+async function eI(e, t) {
+    let n = {};
+    return (
+        null != t && (n.channel_id = t),
+        (
+            await a.tn.post({
+                url: $.ANM.APPLICATION_PROXY_TICKET(e),
+                body: n,
+                rejectWithError: !0,
+            })
+        ).body.ticket
+    );
 }

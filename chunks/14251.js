@@ -1,6 +1,6 @@
 n.d(t, {
-    a: () => _,
-    r: () => c,
+    a: () => d,
+    r: () => u,
 }),
     n(388685);
 var r = n(951288),
@@ -9,8 +9,8 @@ var r = n(951288),
     a = n(594174),
     l = n(5192),
     o = n(388032),
-    u = n(405842);
-let c = (e, t) => {
+    c = n(405842);
+let u = (e, t) => {
         if (1 === e.length) {
             let n = a.default.getUser(e[0]);
             return null != n
@@ -26,29 +26,29 @@ let c = (e, t) => {
             size: s.EFr.SIZE_32,
         });
     },
-    _ = (e, t, n, i) => {
-        let c = [...e].map((e) => a.default.getUser(e)),
-            _ = (e) =>
+    d = (e, t, n, i) => {
+        let u = [...e].map((e) => a.default.getUser(e)),
+            d = (e) =>
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/semibold",
-                    className: u.username,
+                    className: c.username,
                     children: l.ZP.getName(n, i, e),
                 });
         return t >= 4
             ? o.intl.format(o.t.qfo6KS, {
-                  usernameHook1: () => _(c[0]),
-                  usernameHook2: () => _(c[1]),
+                  usernameHook1: () => d(u[0]),
+                  usernameHook2: () => d(u[1]),
                   numberOfOtherUsers: t - e.length,
               })
             : 3 === t
               ? o.intl.format(o.t["67ZE+/"], {
-                    usernameHook1: () => _(c[0]),
-                    usernameHook2: () => _(c[1]),
+                    usernameHook1: () => d(u[0]),
+                    usernameHook2: () => d(u[1]),
                 })
               : 2 === t
                 ? o.intl.format(o.t.veV4IC, {
-                      usernameHook1: () => _(c[0]),
-                      usernameHook2: () => _(c[1]),
+                      usernameHook1: () => d(u[0]),
+                      usernameHook2: () => d(u[1]),
                   })
-                : o.intl.format(o.t["4WHCtr"], { usernameHook: () => _(c[0]) });
+                : o.intl.format(o.t["4WHCtr"], { usernameHook: () => d(u[0]) });
     };

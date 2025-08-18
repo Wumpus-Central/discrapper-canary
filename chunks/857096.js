@@ -62,46 +62,49 @@ function T(e) {
               })
             : null;
     }
-    return (0, r.jsx)(p.ZP, {
-        timeout: 2000,
-        children: (e) => {
-            let { idle: i, onActive: o, onForceIdle: f } = e;
-            return (0, r.jsxs)(_.Z, {
-                className: a()(O.root, {
-                    [O.pipMode]: T,
-                    [I.elevationHigh]: T,
-                    [v.idle]: i,
-                    [O.pipModeShort]: T,
-                    [O.hidden]: d,
-                    [O.multiPIPMode]: S,
-                }),
-                noBorder: !T,
-                children: [
-                    (0, r.jsx)("div", {
-                        className: "theme-dark",
-                        children: N({
-                            onActive: o,
-                            onForceIdle: f,
-                            idle: i,
-                        }),
+    return (
+        null != n.proxyTicket && (A.discord_proxy_ticket = n.proxyTicket),
+        (0, r.jsx)(p.ZP, {
+            timeout: 2000,
+            children: (e) => {
+                let { idle: i, onActive: o, onForceIdle: f } = e;
+                return (0, r.jsxs)(_.Z, {
+                    className: a()(O.root, {
+                        [O.pipMode]: T,
+                        [I.elevationHigh]: T,
+                        [v.idle]: i,
+                        [O.pipModeShort]: T,
+                        [O.hidden]: d,
+                        [O.multiPIPMode]: S,
                     }),
-                    t
-                        ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: T }) })
-                        : (0, r.jsx)(c.J, {
-                              allowPopups: (0, l.h)(u),
-                              referrerPolicy: "origin",
-                              url: n.url,
-                              queryParams: A,
-                              className: a()(O.iframe, {
-                                  [O.pipModeShort]: T,
-                                  [O.pipNonInteractive]: T,
+                    noBorder: !T,
+                    children: [
+                        (0, r.jsx)("div", {
+                            className: "theme-dark",
+                            children: N({
+                                onActive: o,
+                                onForceIdle: f,
+                                idle: i,
+                            }),
+                        }),
+                        t
+                            ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: T }) })
+                            : (0, r.jsx)(c.J, {
+                                  allowPopups: (0, l.h)(u),
+                                  referrerPolicy: "origin",
+                                  url: n.url,
+                                  queryParams: A,
+                                  className: a()(O.iframe, {
+                                      [O.pipModeShort]: T,
+                                      [O.pipNonInteractive]: T,
+                                  }),
+                                  shouldRefocus: !T,
                               }),
-                              shouldRefocus: !T,
-                          }),
-                ],
-            });
-        },
-    });
+                    ],
+                });
+            },
+        })
+    );
 }
 let S = () => {
     let { analyticsLocations: e } = (0, d.ZP)(u.Z.FRAME_PIP),

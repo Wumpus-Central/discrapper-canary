@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -56,28 +56,39 @@ function d(e, t) {
         e
     );
 }
-let f = null;
-function _(e) {
-    let { applicationId: t } = e,
-        n = (0, o.ZP)(t);
-    null != n &&
-        (null != f && (f = null),
+let f = null,
+    _ = new Map();
+function p(e) {
+    let { applicationId: t } = e;
+    _.set(t, !0);
+}
+function h(e) {
+    let { applicationId: t, proxyTicket: n } = e,
+        r = (0, o.ZP)(t);
+    if (null == r) return void _.delete(t);
+    _.delete(t),
+        null != f && (f = null),
         (f = {
             applicationId: t,
-            url: n,
+            url: r,
             connectedSince: Date.now(),
             layoutMode: s.U.FOCUSED,
-        }));
+            proxyTicket: n,
+        });
 }
-function p(e) {
+function m(e) {
+    let { applicationId: t } = e;
+    _.delete(t);
+}
+function g(e) {
     let { applicationId: t } = e;
     (null == f ? void 0 : f.applicationId) === t && (f = null);
 }
-function h(e) {
+function E(e) {
     let { applicationId: t, layoutMode: n } = e;
     (null == f ? void 0 : f.applicationId) === t && (f = d(c({}, f), { layoutMode: n }));
 }
-class m extends (r = i.ZP.Store) {
+class b extends (r = i.ZP.Store) {
     getConnectedFrame() {
         return f;
     }
@@ -87,10 +98,16 @@ class m extends (r = i.ZP.Store) {
     isFrameActive() {
         return null != f;
     }
+    isLaunchingFrame(e) {
+        var t;
+        return null != e ? null != (t = _.get(e)) && t : _.size > 0;
+    }
 }
-l(m, "displayName", "FramesStore");
-let g = new m(a.Z, {
-    FRAME_LAUNCH: _,
-    FRAME_STOP: p,
-    FRAME_UPDATE_LAYOUT_MODE: h,
+l(b, "displayName", "FramesStore");
+let y = new b(a.Z, {
+    FRAME_LAUNCH_START: p,
+    FRAME_LAUNCH: h,
+    FRAME_LAUNCH_FAIL: m,
+    FRAME_STOP: g,
+    FRAME_UPDATE_LAYOUT_MODE: E,
 });

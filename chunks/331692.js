@@ -1,56 +1,56 @@
-n.d(t, { Z: () => s });
+n.d(e, { Z: () => s });
 var i = n(951288);
 n(647438);
-var a = n(481060),
-    l = n(570140),
-    r = n(103879),
-    o = n(800530);
+var r = n(481060),
+    o = n(570140),
+    l = n(103879),
+    a = n(800530);
 let s = {
-    open(e, t) {
-        (0, a.ZDy)(
+    open(t, e) {
+        (0, r.ZDy)(
             async () => {
-                l.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                let { default: t } = await n.e("82961").then(n.bind(n, 751744));
+                o.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+                let { default: e } = await n.e("82961").then(n.bind(n, 751744));
                 return (n) =>
                     (0, i.jsx)(
-                        t,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
+                        e,
+                        (function (t) {
+                            for (var e = 1; e < arguments.length; e++) {
+                                var n = null != arguments[e] ? arguments[e] : {},
                                     i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                         }),
                                     )),
-                                    i.forEach(function (t) {
+                                    i.forEach(function (e) {
                                         var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
+                                        (i = n[e]),
+                                            e in t
+                                                ? Object.defineProperty(t, e, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = i);
+                                                : (t[e] = i);
                                     });
                             }
-                            return e;
-                        })({ classificationId: e }, n),
+                            return t;
+                        })({ classificationId: t }, n),
                     );
             },
-            { onCloseCallback: t },
+            { onCloseCallback: e },
         );
     },
     close() {
-        l.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
+        o.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
     },
     success() {
-        l.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
+        o.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
     },
     start_verification_check() {
-        l.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }), setTimeout(() => (0, r._w)(), o.TX);
+        o.Z.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }), setTimeout(() => (0, l._w)(), a.TX);
     },
 };

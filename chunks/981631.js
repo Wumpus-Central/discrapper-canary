@@ -1643,6 +1643,7 @@ let eE = "@me",
         ACTIVITY_LEAVE: (e, t, n) =>
             "/applications/".concat(e, "/activities/").concat(t, "/instances/").concat(n, "/leave"),
         APPLICATION_UPLOAD_ATTACHMENT: (e) => "/applications/".concat(e, "/attachment"),
+        APPLICATION_PROXY_TICKET: (e) => "/applications/".concat(e, "/proxy-tickets"),
         CHANNEL_THREADS: (e) => "/channels/".concat(e, "/threads"),
         CHANNEL_MESSAGE_THREADS: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/threads"),
         CHANNEL_LINKED_LOBBY: (e) => "/channels/".concat(e, "/linked-lobby"),

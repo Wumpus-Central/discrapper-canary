@@ -229,6 +229,7 @@ function Z(e) {
             custom_id: B.customId,
         };
     return (
+        null != B.proxyTicket && (el.discord_proxy_ticket = B.proxyTicket),
         (null == _ ? void 0 : _.guild_id) != null &&
             (null == _ ? void 0 : _.guild_id) !== "" &&
             (el.guild_id = _.guild_id),

@@ -1,44 +1,44 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     s = n(647438),
     i = n(120356),
     a = n.n(i),
     l = n(755721),
     o = n(481060),
-    u = n(511010),
-    c = n(64515),
-    _ = n(444812);
-function d(e) {
+    c = n(511010),
+    u = n(64515),
+    d = n(444812);
+function _(e) {
     let {
         headerText: t,
         secondaryHeaderText: n,
         descriptionText: i,
-        infoRows: d,
+        infoRows: _,
         onDismissAndStay: A,
-        onDismissAndLeave: f,
-        leaveButtonText: E,
+        onDismissAndLeave: E,
+        leaveButtonText: f,
         stayButtonText: I,
-        transitionState: S,
-        impression: N,
+        transitionState: m,
+        impression: g,
     } = e;
     return (0, r.jsxs)(o.Y0X, {
-        transitionState: S,
-        impression: N,
+        transitionState: m,
+        impression: g,
         parentComponent: "BlockedUserWarningModal",
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                className: c.headerImage,
-                src: _,
+                className: u.headerImage,
+                src: d,
             }),
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
-                className: c.header,
+                className: u.header,
                 children: [
                     (0, r.jsxs)(o.X6q, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
-                        className: c.title,
+                        className: u.title,
                         children: [
                             t,
                             null != n &&
@@ -56,17 +56,17 @@ function d(e) {
                 ],
             }),
             (0, r.jsxs)(o.hzk, {
-                className: c.content,
+                className: u.content,
                 children: [
                     (0, r.jsx)("div", {
-                        className: c.infoGroup,
-                        children: d.map((e, t) =>
+                        className: u.infoGroup,
+                        children: _.map((e, t) =>
                             (0, r.jsxs)(
                                 s.Fragment,
                                 {
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: a()(c.infoRow, e.className),
+                                            className: a()(u.infoRow, e.className),
                                             children: [
                                                 e.icon,
                                                 (0, r.jsx)(o.Text, {
@@ -75,7 +75,7 @@ function d(e) {
                                                 }),
                                             ],
                                         }),
-                                        t < d.length - 1 && (0, r.jsx)(u.Z, {}),
+                                        t < _.length - 1 && (0, r.jsx)(c.Z, {}),
                                     ],
                                 },
                                 t,
@@ -83,7 +83,7 @@ function d(e) {
                         ),
                     }),
                     (0, r.jsxs)("div", {
-                        className: c.buttonGroup,
+                        className: u.buttonGroup,
                         children: [
                             (0, r.jsx)(o.zxk, {
                                 variant: "secondary",
@@ -93,9 +93,9 @@ function d(e) {
                             (0, r.jsx)(l.zx, {
                                 color: l.zx.Colors.BRAND,
                                 size: l.zx.Sizes.MEDIUM,
-                                onClick: f,
-                                className: c.leave,
-                                children: E,
+                                onClick: E,
+                                className: u.leave,
+                                children: f,
                             }),
                         ],
                     }),

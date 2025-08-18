@@ -44,56 +44,59 @@ function d(e) {
             icon: t,
             title: n,
             titleVariant: a = "text-md/semibold",
-            description: s,
-            descriptionVariant: c = "text-xs/medium",
-            iconClassName: d,
-            color: u,
-            buttonText: m,
-            buttonVariant: p = "secondary",
-            buttonSize: _ = "sm",
-            buttonDisabled: g,
-            buttonIcon: b,
-            buttonIconPosition: h = "start",
-            buttonLoading: x,
-            onButtonPress: f,
-            listType: v = "icon",
-            index: j,
+            titleColor: s = "header-primary",
+            description: c,
+            descriptionVariant: d = "text-xs/medium",
+            descriptionColor: u = "text-secondary",
+            iconClassName: m,
+            color: p,
+            buttonText: _,
+            buttonVariant: g = "secondary",
+            buttonSize: b = "sm",
+            buttonDisabled: h,
+            buttonIcon: x,
+            buttonIconPosition: f = "start",
+            buttonLoading: v,
+            onButtonPress: j,
+            listType: y = "icon",
+            index: C,
+            noInset: O = !1,
         } = e,
-        y =
-            null != m
+        I =
+            null != _
                 ? (0, r.jsx)(l.zxk, {
-                      variant: p,
-                      size: _,
-                      text: m,
-                      icon: b,
-                      iconPosition: h,
-                      disabled: g,
-                      loading: x,
-                      onClick: f,
-                      "aria-label": m,
+                      variant: g,
+                      size: b,
+                      text: _,
+                      icon: x,
+                      iconPosition: f,
+                      disabled: h,
+                      loading: v,
+                      onClick: j,
+                      "aria-label": _,
                   })
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: i()(o.row, o.rowMana),
+        className: i()(o.row, o.rowMana, { [o.noInset]: O }),
         children: [
             (0, r.jsxs)(l.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 children: [
-                    "numbered" === v && null != j
+                    "numbered" === y && null != C
                         ? (0, r.jsx)(l.X6q, {
                               variant: "heading-md/semibold",
                               color: "text-brand",
                               className: o.number,
-                              children: j + 1,
+                              children: C + 1,
                           })
                         : null != t &&
                           (0, r.jsx)("div", {
                               className: o.iconContainer,
                               children: (0, r.jsx)(t, {
-                                  color: null != u ? u : "currentColor",
-                                  className: i()(o.icon, d),
+                                  color: null != p ? p : "currentColor",
+                                  className: i()(o.icon, m),
                               }),
                           }),
                     (0, r.jsxs)("div", {
@@ -101,20 +104,20 @@ function d(e) {
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: a,
-                                color: "header-primary",
+                                color: s,
                                 children: n,
                             }),
-                            null != s &&
+                            null != c &&
                                 (0, r.jsx)(l.Text, {
-                                    variant: c,
-                                    color: "text-secondary",
-                                    children: s,
+                                    variant: d,
+                                    color: u,
+                                    children: c,
                                 }),
                         ],
                     }),
                 ],
             }),
-            y,
+            I,
         ],
     });
 }

@@ -1,6 +1,7 @@
 e.exports = {
     row: "row__19fd1",
     rowMana: "rowMana__19fd1",
+    noInset: "noInset__19fd1",
     iconContainer: "iconContainer__19fd1",
     icon: "icon__19fd1",
     textContainer: "textContainer__19fd1",
