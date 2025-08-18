@@ -8,16 +8,16 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(834129),
-    a = n(388032),
-    o = n(304946);
+    o = n(388032),
+    a = n(304946);
 function s(e) {
     let { message: t, compact: i, onClick: s } = e;
     return (0, r.jsx)(l.Z, {
         icon: n(508933),
         timestamp: t.timestamp,
         compact: i,
-        contentClassName: o.messageContent,
-        children: a.intl.format(a.t.bYdG3d, { onClick: s }),
+        contentClassName: a.messageContent,
+        children: o.intl.format(o.t.bYdG3d, { onClick: s }),
     });
 }
 function c(e) {
@@ -26,8 +26,8 @@ function c(e) {
         icon: n(324606),
         timestamp: t.timestamp,
         compact: i,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t.tu6tOT),
+        contentClassName: a.messageContent,
+        children: o.intl.string(o.t.tu6tOT),
     });
 }
 function u(e) {
@@ -38,12 +38,12 @@ function u(e) {
             width: 20,
             height: 20,
             color: "currentColor",
-            className: o.alertIcon,
+            className: a.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t.vzfXqq),
+        contentClassName: a.messageContent,
+        children: o.intl.string(o.t.vzfXqq),
     });
 }
 function d(e) {
@@ -54,11 +54,11 @@ function d(e) {
             width: 20,
             height: 20,
             color: "currentColor",
-            className: o.alertIcon,
+            className: a.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t["/Tfvyc"]),
+        contentClassName: a.messageContent,
+        children: o.intl.string(o.t["/Tfvyc"]),
     });
 }

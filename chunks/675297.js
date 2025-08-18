@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(399606),
     l = n(166081),
-    a = n(54797),
-    o = n(674180),
+    o = n(54797),
+    a = n(674180),
     s = n(485386),
     c = n(430824),
     u = n(572004),
@@ -12,8 +12,8 @@ var i = n(399606),
     p = n(863663),
     m = n(676651),
     f = n(623488),
-    _ = n(942833),
-    g = n(391181),
+    g = n(942833),
+    _ = n(391181),
     h = n(964793),
     b = n(226060),
     E = n(981631);
@@ -22,8 +22,8 @@ function C(e) {
             guildProductListing: t,
             guildId: n,
             location: C,
-            shouldShowFullDescriptionButton: v = !0,
-            hideRoleTag: O = !1,
+            shouldShowFullDescriptionButton: O = !0,
+            hideRoleTag: v = !1,
             lineClamp: y = 1,
             cardWidth: x,
             cardHeight: j,
@@ -37,18 +37,18 @@ function C(e) {
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : E.lds);
         }),
         A = (0, l.U)(t, 600),
-        w = (0, _.C)(t),
+        w = (0, g.C)(t),
         Z = (0, d.SO)(P),
-        { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
-        L = (0, _.k)(t);
+        { shouldHideGuildPurchaseEntryPoints: R } = (0, a.uP)(n),
+        D = (0, g.k)(t);
     if (null == P || R) return null;
-    let D = () =>
+    let L = () =>
             (0, h.e)({
                 guildId: n,
                 guildProductListingId: t.id,
                 analyticsLocation: C,
             }),
-        M = (0, r.jsx)(g.m, {
+        M = (0, r.jsx)(_.m, {
             product: t,
             guildId: n,
             showEditProduct: Z,
@@ -65,7 +65,7 @@ function C(e) {
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-                (0, a.x)({ listing: t });
+                (0, o.x)({ listing: t });
             },
             onCopyProductLink: () => {
                 (0, u.JG)((0, p.ar)(n, t.id));
@@ -78,7 +78,7 @@ function C(e) {
             imageUrl: A,
             name: t.name,
             description: t.description,
-            formattedPrice: L,
+            formattedPrice: D,
             role: N,
             ctaComponent: (0, r.jsx)(b.Z, {
                 guildId: n,
@@ -86,12 +86,12 @@ function C(e) {
                 sourceAnalyticsLocations: C,
             }),
             productType: w,
-            shouldShowFullDescriptionButton: v,
-            onShowFullDescription: D,
-            onTapCard: D,
+            shouldShowFullDescriptionButton: O,
+            onShowFullDescription: L,
+            onTapCard: L,
             actionMenu: M,
             showOpaqueBackground: T,
-            hideRoleTag: O,
+            hideRoleTag: v,
             lineClamp: y,
             cardWidth: x,
             cardHeight: j,

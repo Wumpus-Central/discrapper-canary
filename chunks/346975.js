@@ -21,11 +21,11 @@ var r = n(951288),
     C = n(243778),
     y = n(71619),
     w = n(898188),
-    T = n(41776),
-    O = n(256413),
+    O = n(41776),
+    T = n(256413),
     S = n(292853),
-    N = n(869382),
-    P = n(982168),
+    P = n(869382),
+    N = n(982168),
     I = n(216572),
     E = n(543015),
     R = n(359110),
@@ -137,7 +137,7 @@ function e_(e) {
         ei.oL,
         {
             channel: t,
-            children: (0, r.jsx)(eP, {
+            children: (0, r.jsx)(eN, {
                 channel: t,
                 guild: n,
                 sidebarState: i,
@@ -155,7 +155,7 @@ function ey(e) {
     return "forum-grid-header-section-".concat(e);
 }
 let ew = (e, t, n) => (0 === e ? 0 : (0, ec.KW)(n));
-function eT(e) {
+function eO(e) {
     let { itemRole: t, coords: n, section: i } = e;
     return (0, r.jsx)(
         "div",
@@ -176,12 +176,12 @@ function eT(e) {
         "section-divider",
     );
 }
-function eO(e) {
+function eT(e) {
     let { section: t, coords: n, key: i, isShowingSearchResult: a, hasActiveThreads: l } = e;
     return () =>
         2 === t && !a && l
             ? (0, r.jsx)(
-                  eT,
+                  eO,
                   {
                       section: t,
                       coords: null == n ? void 0 : ej(eb({}, n), { position: "absolute" }),
@@ -194,14 +194,14 @@ function eO(e) {
 function eS(e, t) {
     return "card-".concat(e, "-").concat(t);
 }
-function eN(e) {
+function eP(e) {
     if ("string" == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
     }
     return null;
 }
-function eP(e) {
+function eN(e) {
     let { channel: t, sidebarState: n } = e,
         {
             editorHeight: a,
@@ -244,9 +244,9 @@ function eP(e) {
                     tagSetting: i,
                     shouldAutomaticallyAck: !0,
                 }),
-                l = (0, g.e7)([Z.Z, T.Z], () => {
+                l = (0, g.e7)([Z.Z, O.Z], () => {
                     let t = Z.Z.hasLoaded(e.guild_id),
-                        n = T.Z.isLurking(e.guild_id);
+                        n = O.Z.isLurking(e.guild_id);
                     return !t && !n;
                 }),
                 { threadIds: s, canLoadMore: o, loadMore: c, loading: d } = (0, k.qQ)(e, t, n, i),
@@ -269,7 +269,7 @@ function eP(e) {
         })(t),
         H = m.length > 0,
         U = H || f.length > 0,
-        V = (0, O.Z)(t),
+        V = (0, T.Z)(t),
         { tagFilter: G, tagSetting: X } = (0, K.H)(t.id);
     (0, J.ku)(t, G, X, u);
     let et = (0, J.jR)(t),
@@ -326,8 +326,8 @@ function eP(e) {
         eo = A === h.X.GRID,
         { searchQuery: ed } = (0, J.XZ)({ channelId: t.id }),
         e_ = null != x && null != ed && ed.length > 0,
-        eT = i.useRef(null),
-        { containerRef: eP, containerWidth: eM } = (0, eu.Z)();
+        eO = i.useRef(null),
+        { containerRef: eN, containerWidth: eM } = (0, eu.Z)();
     i.useEffect(
         () => () => {
             null != t.id && W.Z.clearForumSearch(t.id);
@@ -335,14 +335,14 @@ function eP(e) {
         [t.id],
     ),
         i.useEffect(() => {
-            if (null == eT.current && null != t.id) {
+            if (null == eO.current && null != t.id) {
                 let e = F.ZP.getSidebarState(t.id);
-                null != e && e.type === M.tI.VIEW_THREAD && (eT.current = e.channelId);
+                null != e && e.type === M.tI.VIEW_THREAD && (eO.current = e.channelId);
             }
         }, [t.id]);
     let { columns: ek } = i.useMemo(() => (eo ? eC.getRenderOptions(eM) : ec.eU), [eo, eM]),
         eA = i.useMemo(() => (w ? Math.round((window.innerHeight - 200) / 118) : 0), [w]),
-        { showResolvedFlags: eL } = (0, N.N)(t.id),
+        { showResolvedFlags: eL } = (0, P.N)(t.id),
         eF = t.isModeratorReportChannel(),
         eD = i.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, ec.KW)(eC.getWidth(eM))) * ek;
@@ -393,9 +393,9 @@ function eP(e) {
                         section: eg.jXE.FORUM_CHANNEL_POST,
                     },
                 }),
-                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((eT.current = e.id), (0, L.ok)(e));
+                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((eO.current = e.id), (0, L.ok)(e));
             },
-            [t.guild_id, t.id, eT],
+            [t.guild_id, t.id, eO],
         ),
         [eG, eq] = i.useState(a + s - 24),
         eW = i.useCallback(
@@ -491,7 +491,7 @@ function eP(e) {
                 ),
                 b = i.useCallback(
                     (e) =>
-                        eO({
+                        eT({
                             section: e.section,
                             isShowingSearchResult: h,
                             hasActiveThreads: n,
@@ -513,7 +513,7 @@ function eP(e) {
                                           "loading-".concat(e.row),
                                       );
                             let t = a[e.section][e.row],
-                                n = null != f && (0, P.UD)(f) ? E.ZP : er.ZP;
+                                n = null != f && (0, N.UD)(f) ? E.ZP : er.ZP;
                             return (0, r.jsx)(
                                 "li",
                                 {
@@ -608,13 +608,13 @@ function eP(e) {
                                 });
                             },
                         }),
-                            (h.current = eN(n));
+                            (h.current = eP(n));
                     },
                     [t, h],
                 ),
                 b = i.useCallback(
                     (e) => {
-                        let t = eN(e);
+                        let t = eP(e);
                         if (null == t) return;
                         let n = D.Z.getChannel(t);
                         null != n && a(n, !0);
@@ -637,7 +637,7 @@ function eP(e) {
                         s(
                             e,
                             t,
-                            eO({
+                            eT({
                                 section: e,
                                 coords: t,
                                 key: n,
@@ -714,7 +714,7 @@ function eP(e) {
             canSearchForumPosts: et,
             canViewArchivedPosts: en,
             observePostVisibilityAnalytics: es,
-            focusedThreadId: eT,
+            focusedThreadId: eO,
             headerHeight: eG,
         });
     !(function (e) {
@@ -753,7 +753,7 @@ function eP(e) {
         isGridLayout: eo,
         threadIdsBySection: eU,
         parentId: t.id,
-        focusedThreadId: eT,
+        focusedThreadId: eO,
     });
     let te = i.useCallback(() => {
             var e, n;
@@ -793,7 +793,7 @@ function eP(e) {
         tc = (0, g.e7)([F.ZP], () => F.ZP.getSection(t.id)) === eg.ULH.MEMBERS;
     return (0, r.jsx)("div", {
         className: ep.container,
-        ref: eP,
+        ref: eN,
         "data-member-list-open": tc,
         children: (0, r.jsx)(p.Wdt, {
             children: (e) =>
@@ -940,7 +940,7 @@ function eM() {
 }
 function eZ(e) {
     var t, n, a;
-    let { channel: s, isEmpty: b, isSearchLoading: _, numResults: T, children: O, coords: S, onHeightChange: N } = e,
+    let { channel: s, isEmpty: b, isSearchLoading: _, numResults: O, children: T, coords: S, onHeightChange: P } = e,
         {
             name: E,
             formOpen: R,
@@ -985,8 +985,8 @@ function eZ(e) {
     }, [ee]);
     let { ref: eh, height: ef } = (0, j.ZP)();
     i.useEffect(() => {
-        null != ef && N(ef);
-    }, [N, ef]);
+        null != ef && P(ef);
+    }, [P, ef]);
     let e_ = i.useCallback(() => {
         o()(() => {
             null != eh.current && q.getState().setEditorHeight(eh.current.offsetHeight);
@@ -1000,15 +1000,15 @@ function eZ(e) {
     let eC = (0, g.e7)([U.Z], () => U.Z.getUploads(s.id, z.d.FirstThreadMessage)),
         ey = (0, J.ql)(s),
         ew = i.useRef(null),
-        eT = i.useRef(null),
-        [eO, eS] = i.useState(0),
-        { width: eN } = (0, g.e7)([V.Z], () => V.Z.windowSize()),
-        eP = null == (n = ew.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
+        eO = i.useRef(null),
+        [eT, eS] = i.useState(0),
+        { width: eP } = (0, g.e7)([V.Z], () => V.Z.windowSize()),
+        eN = null == (n = ew.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
         eI = i.useRef(null),
         eE = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        let t = eT.current,
+        let t = eO.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0];
         if (null != ew.current && null != n && null != n.children) {
             let { left: e, top: t } = ew.current.getBoundingClientRect(),
@@ -1020,8 +1020,8 @@ function eZ(e) {
             }
             eS(r);
         }
-    }, [s.availableTags, eN, eP, D]);
-    let eR = E.length > 0 && !R && (_ || null != T),
+    }, [s.availableTags, eP, eN, D]);
+    let eR = E.length > 0 && !R && (_ || null != O),
         eZ =
             !__OVERLAY__ &&
             !Z &&
@@ -1076,7 +1076,7 @@ function eZ(e) {
             },
             [eD, eh, eB],
         ),
-        eV = i.useMemo(() => (ec ? (0, P.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
+        eV = i.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
         "div",
         ej(
@@ -1108,7 +1108,7 @@ function eZ(e) {
                                 parentChannel: s,
                                 onChange: e_,
                                 isSearchLoading: _,
-                                numResults: T,
+                                numResults: O,
                                 canCreatePost: eu,
                                 inputRef: eH,
                             }),
@@ -1127,10 +1127,10 @@ function eZ(e) {
                                                     color: "text-default",
                                                     children: _
                                                         ? ex.intl.string(ex.t["/9i3qq"])
-                                                        : 0 === T
+                                                        : 0 === O
                                                           ? ex.intl.string(ex.t.DbgHxs)
                                                           : ex.intl.formatToPlainString(ex.t["tBz/8f"], {
-                                                                numPosts: T,
+                                                                numPosts: O,
                                                                 query: E,
                                                             }),
                                                 }),
@@ -1214,7 +1214,7 @@ function eZ(e) {
                                               (0, r.jsx)("div", { className: ep.divider }),
                                               (0, r.jsx)("div", {
                                                   className: ep.tagList,
-                                                  ref: eT,
+                                                  ref: eO,
                                                   children: (0, r.jsx)(d.bG, {
                                                       navigator: eA,
                                                       children: (0, r.jsx)(d.SJ, {
@@ -1300,7 +1300,7 @@ function eZ(e) {
                                                               className: l()(ep.tagsButton, {
                                                                   [ep.tagsButtonWithCount]: D.size > 0,
                                                               }),
-                                                              style: { left: eO },
+                                                              style: { left: eT },
                                                               innerClassName: ep.tagsButtonInner,
                                                               "aria-label":
                                                                   D.size > 0
@@ -1365,7 +1365,7 @@ function eZ(e) {
                                     : null,
                             ],
                         }),
-                        O,
+                        T,
                         Q &&
                             !em &&
                             !ec &&

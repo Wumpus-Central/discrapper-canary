@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(512722),
     l = n.n(i),
-    a = n(399606),
-    o = n(481060),
+    o = n(399606),
+    a = n(481060),
     s = n(607070),
     c = n(430824),
     u = n(506071),
@@ -12,20 +12,20 @@ var i = n(512722),
     p = n(240864),
     m = n(57949),
     f = n(400916),
-    _ = n(388032);
-function g(e) {
+    g = n(388032);
+function _(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        g = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
-        h = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        _ = (0, o.e7)([p.Z], () => p.Z.getGuildProduct(n)),
+        h = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        b = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         E = (0, u.n)();
-    return (l()(null != h, "guild cannot be null"), l()(null != g, "guildProductListing cannot be null"), (0, d.SO)(h))
-        ? (0, r.jsx)(o.ua7, {
-              text: _.intl.string(_.t.sAJr9f),
+    return (l()(null != h, "guild cannot be null"), l()(null != _, "guildProductListing cannot be null"), (0, d.SO)(h))
+        ? (0, r.jsx)(a.ua7, {
+              text: g.intl.string(g.t.sAJr9f),
               children: (e) => {
                   var t, n;
                   return (0, r.jsx)(
-                      o.zxk,
+                      a.zxk,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -53,7 +53,7 @@ function g(e) {
                       })(
                           {
                               variant: "primary",
-                              text: _.intl.string(_.t.xUi3BA),
+                              text: g.intl.string(g.t.xUi3BA),
                           },
                           e,
                       )),
@@ -74,26 +74,26 @@ function g(e) {
                   );
               },
           })
-        : g.has_entitlement
-          ? null != g.attachments
+        : _.has_entitlement
+          ? null != _.attachments
               ? (0, r.jsx)(f.Z, {
                     guildId: h.id,
-                    productId: g.id,
+                    productId: _.id,
                 })
-              : (0, r.jsx)(o.zxk, {
+              : (0, r.jsx)(a.zxk, {
                     variant: "secondary",
-                    text: _.intl.string(_.t.RcTOGB),
+                    text: g.intl.string(g.t.RcTOGB),
                     disabled: !0,
                 })
-          : (0, r.jsx)(o.gtL, {
-                shineSize: o.gtL.ShineSizes.SMALL,
+          : (0, r.jsx)(a.gtL, {
+                shineSize: a.gtL.ShineSizes.SMALL,
                 pauseAnimation: b || !E,
                 onClick: () =>
                     (0, m.z)({
-                        guildProductListing: g,
+                        guildProductListing: _,
                         guildId: h.id,
                         sourceAnalyticsLocations: i,
                     }),
-                children: _.intl.string(_.t.xUi3BA),
+                children: g.intl.string(g.t.xUi3BA),
             });
 }

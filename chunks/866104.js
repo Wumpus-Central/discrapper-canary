@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(131388),
     u = n(357352),
@@ -17,14 +17,14 @@ var r = n(951288),
     p = n(565138),
     m = n(353254),
     f = n(695346),
-    _ = n(271383),
-    g = n(594174),
+    g = n(271383),
+    _ = n(594174),
     h = n(671533),
     b = n(51144),
     E = n(506071),
     C = n(696014),
-    v = n(847033),
-    O = n(544978),
+    O = n(847033),
+    v = n(544978),
     y = n(893182),
     x = n(388032),
     j = n(793701);
@@ -54,7 +54,7 @@ function S(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
         l = (0, E.n)() && i,
-        [a, o] = (0, m.Z)(t, l),
+        [o, a] = (0, m.Z)(t, l),
         s = l
             ? (0, r.jsx)(d.Z, {
                   autoPlay: !0,
@@ -70,13 +70,13 @@ function S(e) {
                   className: j.coverImage,
               });
     return (0, r.jsx)("div", {
-        ref: a,
+        ref: o,
         className: j.coverImageContainer,
         children:
-            null == o || n
+            null == a || n
                 ? s
                 : (0, r.jsx)("img", {
-                      src: o,
+                      src: a,
                       alt: "",
                       className: j.coverImage,
                   }),
@@ -86,11 +86,11 @@ function T(e) {
     var t, n;
     let { guild: l, subscriptionsSettings: d } = e,
         m = l.id,
-        { nickname: f, nickcolor: h } = (0, o.cj)([_.ZP, g.default], () => {
+        { nickname: f, nickcolor: h } = (0, a.cj)([g.ZP, _.default], () => {
             var e, t;
-            let n = g.default.getCurrentUser();
-            a()(null != n, "user cannot be null");
-            let r = _.ZP.getMember(m, n.id);
+            let n = _.default.getCurrentUser();
+            o()(null != n, "user cannot be null");
+            let r = g.ZP.getMember(m, n.id);
             return {
                 nickname: null != (e = null == r ? void 0 : r.nick) ? e : b.ZP.getName(n),
                 nickcolor: null != (t = null == r ? void 0 : r.colorString) ? t : void 0,
@@ -100,9 +100,9 @@ function T(e) {
         P = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [N, A] = i.useState(1),
         w = (0, c.Z)("(max-width: 1439px)"),
-        { selectedTab: Z, isPhantomPreview: R } = (0, v.m)(),
-        L = Z === O.y.GUILD_PRODUCTS_PREVIEW ? x.intl.string(x.t["LvXy/P"]) : x.intl.string(x.t.XyqKh4),
-        D = P
+        { selectedTab: Z, isPhantomPreview: R } = (0, O.m)(),
+        D = Z === v.y.GUILD_PRODUCTS_PREVIEW ? x.intl.string(x.t["LvXy/P"]) : x.intl.string(x.t.XyqKh4),
+        L = P
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(T, {
@@ -125,7 +125,7 @@ function T(e) {
             : (0, r.jsx)(s.Text, {
                   variant: "text-sm/normal",
                   color: "text-default",
-                  children: R ? L : x.intl.string(x.t["NY/FIS"]),
+                  children: R ? D : x.intl.string(x.t["NY/FIS"]),
               });
     return (0, r.jsxs)("div", {
         className: j.container,
@@ -181,7 +181,7 @@ function T(e) {
                                 }),
                             }),
                             (0, r.jsx)(s.LZC, { size: 9 }),
-                            D,
+                            L,
                         ],
                     }),
                 ],

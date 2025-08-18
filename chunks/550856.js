@@ -46,19 +46,19 @@ function E() {
             (p.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.Z.setKrispModelOverride(""));
         return;
     }
-    if (!o) return void i.Z.setKrispModelOverride("");
     let d = n.name.toLowerCase();
     if (m.some((e) => d.includes(e))) {
         s.Z.getKrispModelOverride() &&
             (p.info("BVC not compatible with device, disabling BVC."), i.Z.setKrispModelOverride(""));
         return;
     }
-    if (h.some((e) => d.includes(e))) {
-        r && u.F.trackExposure({ location: "KrispBVCDeviceManager" }),
-            s.Z.getKrispModelOverride() !== _ &&
-                (p.info("BVC compatible with device, enabling BVC."), i.Z.setKrispModelOverride(_));
-        return;
-    }
+    if (h.some((e) => d.includes(e)))
+        return (r && u.F.trackExposure({ location: "KrispBVCDeviceManager" }), o)
+            ? void (
+                  s.Z.getKrispModelOverride() !== _ &&
+                  (p.info("BVC compatible with device, enabling BVC."), i.Z.setKrispModelOverride(_))
+              )
+            : void i.Z.setKrispModelOverride("");
     s.Z.getKrispModelOverride() &&
         (p.info("Unknown BVC compatibility with device, disabling BVC."), i.Z.setKrispModelOverride(""));
 }

@@ -7,8 +7,8 @@ n.d(t, {
 var r,
     i,
     l = n(647438),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     c = n(25209),
     u = n(755721),
@@ -16,14 +16,14 @@ var r,
     p = n(542094),
     m = n(513202),
     f = n(367907),
-    _ = n(213459),
-    g = n(895924),
+    g = n(213459),
+    _ = n(895924),
     h = n(691424),
     b = n(428595),
     E = n(364458),
     C = n(585483),
-    v = n(499254),
-    O = n(541099),
+    O = n(499254),
+    v = n(541099),
     y = n(827498),
     x = n(346683),
     j = n(981631),
@@ -68,7 +68,7 @@ let S =
                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
               }),
         r),
-    T = o().pick(
+    T = a().pick(
         (0, E.Z)([
             b.Z.RULES,
             { commandMention: S },
@@ -101,8 +101,8 @@ function N(e) {
             application: n,
             location: r,
             sectionName: i,
-            commandName: a,
-            autoDismissOnClick: o = !0,
+            commandName: o,
+            autoDismissOnClick: a = !0,
             launchingComponentId: c,
             submitting: h = !1,
             fetchesApplication: b = !0,
@@ -115,13 +115,13 @@ function N(e) {
             fetchesApplication: b,
         }),
         T = (0, x.Q)(S),
-        P = (0, s.e7)([O.Z], () => O.Z.entrypoint()),
+        P = (0, s.e7)([v.Z], () => v.Z.entrypoint()),
         N = l.useMemo(() => {
             var e, r, i;
             if ("channel" !== t.type)
                 return null != (i = null == (e = n.bot) ? void 0 : e.id)
                     ? i
-                    : null == (r = (0, _.If)(t, n.id).descriptor)
+                    : null == (r = (0, g.If)(t, n.id).descriptor)
                       ? void 0
                       : r.botId;
         }, [t, n.id, n.bot]),
@@ -133,7 +133,7 @@ function N(e) {
             locationObject: C.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                o && v.yT(y.ti.ACTIVITY),
+                a && O.yT(y.ti.ACTIVITY),
                     (0, f.yw)(j.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: r,
                         application_id: t,
@@ -143,7 +143,7 @@ function N(e) {
                     });
             },
             launchingComponentId: c,
-            commandOrigin: g.bB.APPLICATION_LAUNCHER,
+            commandOrigin: _.bB.APPLICATION_LAUNCHER,
             sectionName: i,
             source: P,
             fetchesApplication: b,
@@ -151,7 +151,7 @@ function N(e) {
         }),
         w = "primary",
         Z = u.Tt.BRAND,
-        R = null != a ? a : I.intl.string(I.t.zKX8Nj);
+        R = null != o ? o : I.intl.string(I.t.zKX8Nj);
     return (
         T === p.JS.JOIN
             ? ((w = "active"), (Z = u.Tt.GREEN), (R = I.intl.string(I.t.d9PsMj)))
@@ -166,10 +166,10 @@ function N(e) {
     );
 }
 function A(e, t) {
-    let n = O.Z.entrypoint(),
+    let n = v.Z.entrypoint(),
         r = l.useMemo(
             () =>
-                (0, a.debounce)(
+                (0, o.debounce)(
                     (e, t) => {
                         (0, f.yw)(j.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,

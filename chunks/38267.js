@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(647438),
     i = n(585483),
     l = n(981631);
-function a(e) {
+function o(e) {
     return Object.keys(e).some((t) => e[t]);
 }
-function o(e, t) {
-    let [n, o] = r.useState(t),
-        [s, c] = r.useState(a(n)),
+function a(e, t) {
+    let [n, a] = r.useState(t),
+        [s, c] = r.useState(o(n)),
         u = r.useRef(s),
         d = r.useRef(null),
         p = r.useCallback((e) => {
-            o((t) => {
+            a((t) => {
                 let n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +37,7 @@ function o(e, t) {
                         }
                         return e;
                     })({}, t, e),
-                    r = a(n);
+                    r = o(n);
                 return (
                     r !== u.current &&
                         ((u.current = r),

@@ -2,8 +2,8 @@ n.d(t, { f: () => C });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(159691),
-    o = n(541716),
+    o = n(159691),
+    a = n(541716),
     s = n(419922),
     c = n(665906),
     u = n(271383),
@@ -11,26 +11,26 @@ var r = n(951288),
     p = n(496675),
     m = n(594174),
     f = n(838440),
-    _ = n(779139),
-    g = n(981631),
+    g = n(779139),
+    _ = n(981631),
     h = n(388032),
     b = n(628800);
 let E = (e) => {
         let { channel: t, message: n } = e,
-            l = (0, _.y6)(n.id),
+            l = (0, g.y6)(n.id),
             c = i.useCallback(() => {
                 (0, f.v)({
-                    type: o.Ie.FORM,
+                    type: a.Ie.FORM,
                     content: "",
                     channel: t,
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, _.TZ)(t, n, l.id);
+                    r && (0, g.TZ)(t, n, l.id);
                 });
             }, [t, n, l]);
         return (0, r.jsx)("div", {
             className: b.welcomeCTA,
-            children: (0, r.jsx)(a.zx, {
+            children: (0, r.jsx)(o.zx, {
                 icon: {
                     type: "sticker",
                     asset: l,
@@ -45,18 +45,18 @@ let E = (e) => {
     C = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
-            a = (0, l.e7)([m.default, p.Z, d.Z, u.ZP], () => {
+            o = (0, l.e7)([m.default, p.Z, d.Z, u.ZP], () => {
                 var e;
                 let r = m.default.getCurrentUser(),
                     l = (0, c.xl)(n),
-                    a = p.Z.can(g.Plq.SEND_MESSAGES, n),
-                    o = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
+                    o = p.Z.can(_.Plq.SEND_MESSAGES, n),
+                    a = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     f = d.Z.getGuild(i),
-                    _ = null != f && (f.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && _;
+                    g = null != f && (f.systemChannelFlags & _.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return o && !l && !a && !s && g;
             });
-        return null != i && a
+        return null != i && o
             ? (0, r.jsx)(E, {
                   message: t,
                   channel: n,

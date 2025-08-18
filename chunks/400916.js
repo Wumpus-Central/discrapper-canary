@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(512722),
     l = n.n(i),
-    a = n(399606),
-    o = n(755721),
+    o = n(399606),
+    a = n(755721),
     s = n(481060),
     c = n(671533),
     u = n(240864),
@@ -12,17 +12,17 @@ var i = n(512722),
     p = n(596211),
     m = n(388032),
     f = n(914388);
-function _(e) {
-    var t, n, i, _;
-    let { guildId: g, productId: h } = e,
-        b = (0, a.e7)([u.Z], () => u.Z.getGuildProduct(h)),
-        E = (null != (_ = null == b || null == (t = b.attachments) ? void 0 : t.length) ? _ : 0) > 1,
+function g(e) {
+    var t, n, i, g;
+    let { guildId: _, productId: h } = e,
+        b = (0, o.e7)([u.Z], () => u.Z.getGuildProduct(h)),
+        E = (null != (g = null == b || null == (t = b.attachments) ? void 0 : t.length) ? g : 0) > 1,
         C = null == b || null == (i = b.attachments) || null == (n = i[0]) ? void 0 : n.id;
     return E
-        ? (0, r.jsxs)(o.zx, {
+        ? (0, r.jsxs)(a.zx, {
               onClick: function () {
                   d.Z.open({
-                      guildId: g,
+                      guildId: _,
                       productId: h,
                   });
               },
@@ -42,7 +42,7 @@ function _(e) {
           })
         : (l()(null != C, "No attachment"),
           (0, r.jsxs)(p.Z, {
-              guildId: g,
+              guildId: _,
               productId: h,
               attachmentId: C,
               innerClassName: f.textWithIcon,

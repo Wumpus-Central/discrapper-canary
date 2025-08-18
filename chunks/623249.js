@@ -58,10 +58,10 @@ function S(e) {
     let [N, R] = (0, s.useState)(o),
         B = (0, h.KX)(),
         k = (0, f.O5)(),
-        q = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
-        I = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
+        q = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         Q = (0, j.g2)({
-            useReducedMotion: I,
+            useReducedMotion: q,
             className: y.colorTransition,
         }),
         D = N.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
@@ -234,7 +234,7 @@ function S(e) {
                                     {
                                         content: b.jn.CONNECTIONS_MODAL,
                                         ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: q,
+                                        impressionId: I,
                                         sourceQuestContent: P,
                                     },
                                 );

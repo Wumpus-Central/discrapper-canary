@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(512722),
     l = n.n(i),
-    a = n(527562),
-    o = n(245315),
+    o = n(527562),
+    a = n(245315),
     s = n(556041),
     c = n(726033),
     u = n(592125),
@@ -12,25 +12,25 @@ var i = n(512722),
     p = n(368859);
 function m(e, t) {
     var n, i, m, f;
-    if ((0, o.cp)(t)) return (0, r.jsx)(s.Z, {});
+    if ((0, a.cp)(t)) return (0, r.jsx)(s.Z, {});
     if ((0, p.Z)(t)) {
         let l = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : "")
                 .split(" ")
                 .slice(0, -1)
                 .join(" "),
-            { guild_id: o } = t.messageReference;
-        if (null != o)
-            return (0, r.jsx)(a.Z, {
+            { guild_id: a } = t.messageReference;
+        if (null != a)
+            return (0, r.jsx)(o.Z, {
                 setPopoutRef: e.setPopoutRef,
-                guildId: o,
+                guildId: a,
                 name: l,
             });
     }
     if (null != t.interaction && "SENDING" === t.state) return (0, r.jsx)(r.Fragment, {});
-    let _ = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
-    l()(null != _, "renderUserGuildPopout: user should never be null");
-    let g = d.default.getCurrentUser();
-    l()(null != g, "renderUserGuildPopout: currentUser should never be null");
+    let g = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
+    l()(null != g, "renderUserGuildPopout: user should never be null");
+    let _ = d.default.getCurrentUser();
+    l()(null != _, "renderUserGuildPopout: currentUser should never be null");
     let h = u.Z.getChannel(t.channel_id);
     return (
         l()(null != h, "renderUserGuildPopout: channel should never be null"),
@@ -63,8 +63,8 @@ function m(e, t) {
             })({}, e)),
             (f = f =
                 {
-                    user: _,
-                    currentUser: g,
+                    user: g,
+                    currentUser: _,
                     guildId: h.guild_id,
                     channelId: t.channel_id,
                     messageId: t.id,

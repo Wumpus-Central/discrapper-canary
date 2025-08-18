@@ -72,7 +72,7 @@ function k(e, t) {
         e
     );
 }
-function q(e) {
+function I(e) {
     var t;
     let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
         { ref: f, height: g = 0 } = (0, u.ZP)([o]),
@@ -148,7 +148,7 @@ function q(e) {
         }),
     });
 }
-function I(e) {
+function q(e) {
     let { quest: t, isHovering: n, showAssets: o } = e,
         a = s.useMemo(() => (0, j.fh)(t, j.eC.HERO_IMAGE), [t]),
         i = s.useMemo(() => (0, j.fh)(t, j.eC.HERO_VIDEO), [t]),
@@ -231,7 +231,7 @@ function Q(e) {
         children: [
             (0, r.jsx)("div", {
                 className: R.heroAssetWrapper,
-                children: (0, r.jsx)(I, {
+                children: (0, r.jsx)(q, {
                     quest: u,
                     isHovering: m,
                     showAssets: v,
@@ -349,7 +349,7 @@ function Q(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(q, {
+                    (0, r.jsx)(I, {
                         quest: u,
                         errorHints: _,
                         warningHints: j,

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(314940);
+n.d(t, { Z: () => O }), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(278074),
+    o = n.n(l),
+    a = n(278074),
     s = n(263568),
     c = n(481060),
     u = n(203143),
@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(294608),
     m = n(65145),
     f = n(920557),
-    _ = n(290550);
-function g(e) {
+    g = n(290550);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,15 +41,15 @@ function h(e) {
     let { media: t } = e;
     return (0, r.jsx)(c.X6q, {
         variant: "text-md/medium",
-        className: _.question,
+        className: g.question,
         scaleFontToUserSetting: !0,
         children: t.text,
     });
 }
 function b(e) {
-    let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: o } = e;
+    let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: a } = e;
     return (0, r.jsxs)("div", {
-        className: a()(_.detailsText, o),
+        className: o()(g.detailsText, a),
         children: [
             l
                 ? (0, r.jsx)(c.Avr, {
@@ -75,7 +75,7 @@ function b(e) {
     });
 }
 function E(e) {
-    let { action: t, channelId: n, messageId: l, isInteractive: a, className: o } = e,
+    let { action: t, channelId: n, messageId: l, isInteractive: o, className: a } = e,
         { actionButtonRef: s, manageFocusOnAction: d } = (0, m.dv)(),
         p = i.useCallback(async () => {
             (null == t ? void 0 : t.type) != null &&
@@ -113,8 +113,8 @@ function E(e) {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: p,
-                  isInteractive: a,
-                  className: o,
+                  isInteractive: o,
+                  className: a,
               });
 }
 function C(e) {
@@ -131,26 +131,26 @@ function C(e) {
                 myAvatarUrl: t.myAvatarUrl,
                 canShowVoteCounts: t.canShowVoteCounts,
             };
-            return (0, o.EQ)(t.layoutType)
-                .with(s.C.DEFAULT, () => (0, r.jsx)(f.K, g({}, n)))
-                .with(s.C.IMAGE_ONLY_ANSWERS, () => (0, r.jsx)(d.Z, g({}, n)))
+            return (0, a.EQ)(t.layoutType)
+                .with(s.C.DEFAULT, () => (0, r.jsx)(f.K, _({}, n)))
+                .with(s.C.IMAGE_ONLY_ANSWERS, () => (0, r.jsx)(d.Z, _({}, n)))
                 .otherwise(() => null);
         })(0, n);
     return null == u
         ? null
         : (0, r.jsx)("div", {
-              className: a()(_.container, l, i),
+              className: o()(g.container, l, i),
               children: (0, r.jsxs)(c.y5t, {
                   children: [
                       (0, r.jsxs)("div", {
-                          className: _.header,
+                          className: g.header,
                           children: [
                               (0, r.jsx)(h, { media: n.question }),
                               null != n.promptLabel &&
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      className: _.prompt,
+                                      className: g.prompt,
                                       scaleFontToUserSetting: !0,
                                       children: n.promptLabel,
                                   }),
@@ -158,20 +158,20 @@ function C(e) {
                       }),
                       u,
                       (0, r.jsxs)("div", {
-                          className: _.bottomBar,
+                          className: g.bottomBar,
                           children: [
                               (0, r.jsx)(E, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
-                                  className: _.secondaryAction,
+                                  className: g.secondaryAction,
                                   isInteractive: n.isInteractive,
                               }),
                               (0, r.jsx)(E, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
-                                  className: _.tertiaryAction,
+                                  className: g.tertiaryAction,
                               }),
                               (0, r.jsx)(E, {
                                   channelId: t.getChannelId(),
@@ -184,7 +184,7 @@ function C(e) {
               }),
           });
 }
-function v(e) {
+function O(e) {
     let { message: t, poll: n, className: i } = e;
     return (0, r.jsx)(p.XL, {
         message: t,

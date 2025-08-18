@@ -31,8 +31,8 @@ var r = n(951288),
     R = n(667105),
     B = n(46140),
     k = n(981631),
-    q = n(701488),
-    I = n(388032),
+    I = n(701488),
+    q = n(388032),
     Q = n(70858);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -90,7 +90,7 @@ function M(e) {
               fullWidth: !0,
               onClick: n,
               size: u.zx.Sizes.NONE,
-              children: I.intl.string(I.t.lwQdjI),
+              children: q.intl.string(q.t.lwQdjI),
           })
         : null;
 }
@@ -117,14 +117,14 @@ let L = s.forwardRef(function (e, t) {
         en = s.useMemo(() => (0, O.fh)(K, O.eC.HERO), [K]),
         er = (0, R.tP)(ee.application.id),
         es = ee.features.has(B.S7.START_QUEST_CTA) ? x.jZ.START_QUEST : x.jZ.ACCEPT_QUEST,
-        eo = ee.features.has(B.S7.START_QUEST_CTA) ? I.intl.string(I.t.E80Bdn) : I.intl.string(I.t.l7E81t),
+        eo = ee.features.has(B.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         ea = s.useCallback(() => {
             (0, _.AH)(K.id, {
                 questContent: C.jn.QUEST_BAR,
                 questContentCTA: es,
                 sourceQuestContent: C.jn.QUEST_BAR,
             }),
-                ee.features.has(B.S7.START_QUEST_CTA) && (0, f.uL)(k.Z5c.ACTIVITY_DETAILS(q.In), void 0);
+                ee.features.has(B.S7.START_QUEST_CTA) && (0, f.uL)(k.Z5c.ACTIVITY_DETAILS(I.In), void 0);
         }, [K, es, ee.features]),
         ei = (0, R.hf)({
             quest: K,
@@ -226,10 +226,10 @@ let L = s.forwardRef(function (e, t) {
                                                           color: "always-white",
                                                           variant: "text-xxs/normal",
                                                           children: ef
-                                                              ? I.intl.formatToPlainString(I.t.APddvL, {
+                                                              ? q.intl.formatToPlainString(q.t.APddvL, {
                                                                     expirationDate: et,
                                                                 })
-                                                              : I.intl.formatToPlainString(I.t["pX+fmp"], {
+                                                              : q.intl.formatToPlainString(q.t["pX+fmp"], {
                                                                     expirationDate: $,
                                                                 }),
                                                       }),
@@ -251,7 +251,7 @@ let L = s.forwardRef(function (e, t) {
                                                   p.P3F,
                                                   V(D({}, e), {
                                                       className: Q.submenuWrapper,
-                                                      "aria-label": I.intl.string(I.t.DEoVWV),
+                                                      "aria-label": q.intl.string(q.t.DEoVWV),
                                                       children: (0, r.jsx)(p.xhG, {
                                                           size: "md",
                                                           color: "currentColor",
@@ -270,7 +270,7 @@ let L = s.forwardRef(function (e, t) {
                                         fullWidth: !0,
                                         onClick: ei,
                                         size: u.zx.Sizes.NONE,
-                                        children: I.intl.string(I.t.cfY4PD),
+                                        children: q.intl.string(q.t.cfY4PD),
                                     })
                                   : (0, r.jsx)(p.Text, {
                                         className: Q.description,
@@ -306,7 +306,7 @@ let L = s.forwardRef(function (e, t) {
                                                           p.P3F,
                                                           V(D({}, e), {
                                                               className: Q.submenuWrapper,
-                                                              "aria-label": I.intl.string(I.t.DEoVWV),
+                                                              "aria-label": q.intl.string(q.t.DEoVWV),
                                                               children: (0, r.jsx)(p.xhG, {
                                                                   size: "md",
                                                                   color: "currentColor",
@@ -332,7 +332,7 @@ let L = s.forwardRef(function (e, t) {
                                                   className: Q.title,
                                                   color: "always-white",
                                                   variant: "heading-md/medium",
-                                                  children: I.intl.format(I.t.EQa7oq, {
+                                                  children: q.intl.format(q.t.EQa7oq, {
                                                       questName: K.config.messages.questName,
                                                   }),
                                               }),

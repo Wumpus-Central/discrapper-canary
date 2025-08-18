@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(447543),
     c = n(100527),
     u = n(906732),
@@ -11,19 +11,19 @@ var r = n(951288),
     p = n(131704),
     m = n(199902),
     f = n(914010),
-    _ = n(411198),
-    g = n(51144),
+    g = n(411198),
+    _ = n(51144),
     h = n(358595),
     b = n(981631),
     E = n(245335),
     C = n(388032),
-    v = n(105341);
-function O(e) {
+    O = n(105341);
+function v(e) {
     let t,
         n,
         l,
         {
-            invite: O,
+            invite: v,
             currentUserId: y,
             guild: x,
             message: j,
@@ -31,51 +31,51 @@ function O(e) {
             onAcceptInstantInvite: S,
         } = e,
         T = null == x ? void 0 : x.id,
-        P = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
-        N = (0, o.e7)(
+        P = (0, a.e7)([f.Z], () => f.Z.getGuildId()),
+        N = (0, a.e7)(
             [m.Z],
-            () => (null != O && null != O.target_user ? m.Z.getActiveStreamForUser(O.target_user.id, T) : null),
-            [O, T],
+            () => (null != v && null != v.target_user ? m.Z.getActiveStreamForUser(v.target_user.id, T) : null),
+            [v, T],
         ),
-        A = (0, o.e7)(
+        A = (0, a.e7)(
             [m.Z],
-            () => (null != O && null != O.target_user ? m.Z.getStreamForUser(O.target_user.id, T) : null),
-            [O, T],
+            () => (null != v && null != v.target_user ? m.Z.getStreamForUser(v.target_user.id, T) : null),
+            [v, T],
         ),
         { analyticsLocations: w } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        Z = null != O && O.target_type === E.Iq.STREAM && null != O.target_user && null != N,
+        Z = null != v && v.target_type === E.Iq.STREAM && null != v.target_user && null != N,
         R =
-            null != O &&
+            null != v &&
             null != A &&
-            null != O.channel &&
-            null != O.guild &&
-            A.channelId === O.channel.id &&
-            A.guildId === O.guild.id;
-    a()(null != O, "Invite cannot be null");
-    let { target_type: L, target_user: D } = O;
-    a()(L === E.Iq.STREAM && null != D, "invalid streaming invite");
-    let M = y === D.id,
-        k = O.state === b.r2o.ACCEPTING,
+            null != v.channel &&
+            null != v.guild &&
+            A.channelId === v.channel.id &&
+            A.guildId === v.guild.id;
+    o()(null != v, "Invite cannot be null");
+    let { target_type: D, target_user: L } = v;
+    o()(D === E.Iq.STREAM && null != L, "invalid streaming invite");
+    let M = y === L.id,
+        k = v.state === b.r2o.ACCEPTING,
         U = i.useCallback(() => {
             let e = "noop";
             Z ? (I(), (e = "transition")) : (S(), (e = "accept")),
                 (0, s.r$)(
                     {
-                        invite: O,
+                        invite: v,
                         action: e,
                         inviter_id: j.author.id,
                         invite_message_id: j.id,
                     },
                     w,
                 );
-        }, [O, j, w, Z, I, S]),
+        }, [v, j, w, Z, I, S]),
         F = null != x;
     if (null == x) {
-        if (null == O.guild) return (0, r.jsx)(h.Z, {});
-        x = (0, _.Qs)(O.guild);
+        if (null == v.guild) return (0, r.jsx)(h.Z, {});
+        x = (0, g.Qs)(v.guild);
     }
-    let B = null != O.channel ? (0, p.jD)(O.channel) : null,
-        G = g.ZP.getName(D);
+    let B = null != v.channel ? (0, p.jD)(v.channel) : null,
+        G = _.ZP.getName(L);
     F && !R
         ? (l = M ? C.intl.string(C.t.oBLoZG) : C.intl.formatToPlainString(C.t["0QJmAw"], { name: G }))
         : ((t = C.intl.string(C.t["I6JG4+"])),
@@ -92,7 +92,7 @@ function O(e) {
             (0, r.jsxs)(d.Z.Body, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.headerLine,
+                        className: O.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
                                 guild: x,

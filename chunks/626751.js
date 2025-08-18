@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(987909),
-    o = n(430824),
+    o = n(987909),
+    a = n(430824),
     s = n(630388),
     c = n(35125),
     u = n(523361),
@@ -12,16 +12,16 @@ function p(e) {
     var t, n;
     let { channel: p, message: m } = e,
         f = null != (n = null == (t = m.roleSubscriptionData) ? void 0 : t.is_renewal) && n ? (0, u.Md)() : (0, u.Q8)(),
-        _ = p.guild_id,
-        g = (0, l.e7)([o.Z], () => {
+        g = p.guild_id,
+        _ = (0, l.e7)([a.Z], () => {
             var e;
-            return null == (e = o.Z.getGuild(_)) ? void 0 : e.systemChannelFlags;
-        }, [_]),
-        h = null != g && (0, s.yE)(g, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+            return null == (e = a.Z.getGuild(g)) ? void 0 : e.systemChannelFlags;
+        }, [g]),
+        h = null != _ && (0, s.yE)(_, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
         b = i.useMemo(() => (0, c._i)(p, m), [p, m]);
     return h
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(o.Z, {
               channel: p,
               message: m,
               buttonLabels: f,

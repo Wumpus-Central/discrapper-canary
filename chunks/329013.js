@@ -43,22 +43,23 @@ let Z = () => {
     },
     w = () => {
         var e, t;
-        let { analyticsLocations: n } = (0, g.ZP)(p.Z.USER_SETTINGS),
-            a = (0, s.e7)([h.Z], () => h.Z.isPreview),
-            l = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === P.Si.TIER_2,
-            d = (0, j.Ng)(),
-            u = (0, j.Wp)(d, P.Si.TIER_2),
-            { v2EditorEnabled: m } = f.Mc.useExperiment({ location: "UserSettingsAppearanceClientThemes" });
+        let n,
+            { analyticsLocations: a } = (0, g.ZP)(p.Z.USER_SETTINGS),
+            l = (0, s.e7)([h.Z], () => h.Z.isPreview),
+            d = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === P.Si.TIER_2,
+            u = (0, j.Ng)(),
+            m = (0, j.Wp)(u, P.Si.TIER_2),
+            { v2EditorEnabled: x } = f.Mc.useExperiment({ location: "UserSettingsAppearanceClientThemes" });
         r.useEffect(() => {
-            a &&
+            l &&
                 N.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                    location_stack: n,
+                    location_stack: a,
                 });
-        }, [a, n]);
-        let x =
+        }, [l, a]);
+        let _ =
+                d &&
                 l &&
-                a &&
                 (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(o.zx, {
@@ -74,74 +75,77 @@ let Z = () => {
                         }),
                     ],
                 }),
-            _ = (0, i.jsxs)(i.Fragment, {
-                children: [
-                    (0, i.jsx)(b.ZP.Gradient, {
-                        disabled: !m && a,
-                        renderCTAButtons: () => {
-                            if (!a || l) return null;
-                            let e = u
-                                ? R.intl.formatToPlainString(R.t.bkQ4bG, {
-                                      percent: null == d ? void 0 : d.discount.amount,
-                                  })
-                                : R.intl.string(R.t.mr4K7O);
-                            return m
-                                ? (0, i.jsxs)("div", {
-                                      className: D.tryItOutButtonsV2,
-                                      children: [
-                                          (0, i.jsx)(c.zxk, {
-                                              variant: "secondary",
-                                              text: R.intl.string(R.t["E+COuL"]),
-                                              onClick: () => Z(),
-                                          }),
-                                          (0, i.jsx)(C.Z, {
-                                              subscriptionTier: P.Si.TIER_2,
-                                              defaultTextOverride: e,
-                                              premiumModalAnalyticsLocation: {
-                                                  object: y.qAy.BUTTON_CTA,
-                                                  objectType: y.Qqv.BUY,
-                                              },
-                                              fullWidth: !0,
-                                          }),
-                                      ],
-                                  })
-                                : (0, i.jsxs)("div", {
-                                      className: D.tryItOutButtons,
-                                      children: [
-                                          (0, i.jsx)(c.zxk, {
-                                              variant: "secondary",
-                                              text: R.intl.string(R.t["E+COuL"]),
-                                              onClick: () => Z(),
-                                          }),
-                                          (0, i.jsx)(O.Z, {
-                                              showGradient: !1,
-                                              subscriptionTier: P.Si.TIER_2,
-                                              textOptions: { textOverride: e },
-                                              className: D.premiumCta,
-                                          }),
-                                      ],
-                                  });
-                        },
-                    }),
-                    x,
-                ],
-            });
+            T =
+                ((n = (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(b.ZP.Gradient, {
+                            disabled: !x && l,
+                            renderCTAButtons: () => {
+                                if (!l || d) return null;
+                                let e = m
+                                    ? R.intl.formatToPlainString(R.t.bkQ4bG, {
+                                          percent: null == u ? void 0 : u.discount.amount,
+                                      })
+                                    : R.intl.string(R.t.mr4K7O);
+                                return x
+                                    ? (0, i.jsxs)("div", {
+                                          className: D.tryItOutButtonsV2,
+                                          children: [
+                                              (0, i.jsx)(c.zxk, {
+                                                  variant: "secondary",
+                                                  text: R.intl.string(R.t["E+COuL"]),
+                                                  onClick: () => Z(),
+                                              }),
+                                              (0, i.jsx)(C.Z, {
+                                                  subscriptionTier: P.Si.TIER_2,
+                                                  defaultTextOverride: e,
+                                                  premiumModalAnalyticsLocation: {
+                                                      object: y.qAy.BUTTON_CTA,
+                                                      objectType: y.Qqv.BUY,
+                                                  },
+                                                  fullWidth: !0,
+                                              }),
+                                          ],
+                                      })
+                                    : (0, i.jsxs)("div", {
+                                          className: D.tryItOutButtons,
+                                          children: [
+                                              (0, i.jsx)(c.zxk, {
+                                                  variant: "secondary",
+                                                  text: R.intl.string(R.t["E+COuL"]),
+                                                  onClick: () => Z(),
+                                              }),
+                                              (0, i.jsx)(O.Z, {
+                                                  showGradient: !1,
+                                                  subscriptionTier: P.Si.TIER_2,
+                                                  textOptions: { textOverride: e },
+                                                  className: D.premiumCta,
+                                              }),
+                                          ],
+                                      });
+                            },
+                        }),
+                        _,
+                    ],
+                })),
+                x
+                    ? l &&
+                      (n = (0, i.jsx)("div", {
+                          className: D.colorThemesBackground,
+                          children: n,
+                      }))
+                    : (n = (0, i.jsx)(S.Z, {
+                          className: D.featureBorder,
+                          isShown: l,
+                          type: S.Y.PREMIUM,
+                          children: n,
+                      })),
+                n);
         return (0, i.jsxs)("div", {
             children: [
                 (0, i.jsxs)(b.ZP, {
                     type: b.yH.SETTINGS,
-                    children: [
-                        (0, i.jsx)(b.ZP.Basic, { className: D.basicThemeSelectors }),
-                        (0, i.jsx)(k, {}),
-                        m
-                            ? _
-                            : (0, i.jsx)(S.Z, {
-                                  className: D.featureBorder,
-                                  isShown: a,
-                                  type: S.Y.PREMIUM,
-                                  children: _,
-                              }),
-                    ],
+                    children: [(0, i.jsx)(b.ZP.Basic, { className: D.basicThemeSelectors }), (0, i.jsx)(k, {}), T],
                 }),
                 (0, i.jsx)(c.$i$, { className: D.divider }),
             ],

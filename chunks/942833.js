@@ -1,11 +1,11 @@
 n.d(t, {
-    C: () => a,
-    k: () => o,
+    C: () => o,
+    k: () => a,
 });
 var r = n(647438),
     i = n(937615),
     l = n(388032);
-function a(e) {
+function o(e) {
     return r.useMemo(() => {
         if (null == e) return;
         let t = null != e.role_id,
@@ -19,7 +19,7 @@ function a(e) {
                 : void 0;
     }, [e]);
 }
-function o(e) {
+function a(e) {
     return r.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;
         let { amount: t, currency: n } = e.price;

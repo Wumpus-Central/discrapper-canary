@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(627050),
-    o = n(905405),
+    o = n(627050),
+    a = n(905405),
     s = n(869765),
     c = n(699516),
     u = n(937889),
@@ -12,33 +12,33 @@ var r = n(951288),
     m = n(981631);
 let f = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: m, compact: f = !1 } = e,
-        _ = m.state === s.Y.LOADED ? m.message : void 0,
-        g = (0, o.p)(),
-        h = a.d.useExperiment({ location: "repliedMessage" }).enabled,
+        g = m.state === s.Y.LOADED ? m.message : void 0,
+        _ = (0, a.p)(),
+        h = o.d.useExperiment({ location: "repliedMessage" }).enabled,
         b = i.useMemo(
             () =>
-                (null == _ ? void 0 : _.content) != null && "" !== _.content
-                    ? (0, u.ZP)(_, {
+                (null == g ? void 0 : g.content) != null && "" !== g.content
+                    ? (0, u.ZP)(g, {
                           formatInline: !0,
                           allowGameMentions: h,
-                          shouldFilterKeywords: g,
+                          shouldFilterKeywords: _,
                       }).content
                     : null,
-            [_, g, h],
+            [g, _, h],
         ),
         { isReplyAuthorBlocked: E, isReplyAuthorIgnored: C } = (0, l.cj)(
             [c.Z],
             () => ({
-                isReplyAuthorBlocked: null != _ && c.Z.isBlockedForMessage(_),
-                isReplyAuthorIgnored: null != _ && c.Z.isIgnoredForMessage(_),
+                isReplyAuthorBlocked: null != g && c.Z.isBlockedForMessage(g),
+                isReplyAuthorIgnored: null != g && c.Z.isIgnoredForMessage(g),
             }),
-            [_],
+            [g],
         ),
-        v = (0, d.Uj)(_),
-        O = (0, d.Uj)(t);
+        O = (0, d.Uj)(g),
+        v = (0, d.Uj)(t);
     return (0, r.jsx)(p.Z, {
-        repliedAuthor: v,
-        baseAuthor: O,
+        repliedAuthor: O,
+        baseAuthor: v,
         baseMessage: t,
         channel: n,
         referencedMessage: m,
@@ -50,7 +50,7 @@ let f = i.memo(function (e) {
         showReplySpine: !0,
     });
 });
-function _(e, t, n, i, l) {
+function g(e, t, n, i, l) {
     return e.type !== m.uaV.REPLY || null == n
         ? null
         : (0, r.jsx)(f, {

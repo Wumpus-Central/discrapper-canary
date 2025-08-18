@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(43267),
-    o = n(93687),
+    o = n(43267),
+    a = n(93687),
     s = n(785232);
 let c = i.memo(function (e) {
     var {
@@ -46,8 +46,8 @@ let c = i.memo(function (e) {
             "className",
             "animated",
         ]);
-    let { isFacepileEnabled: _ } = o.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && _ && null == t.icon
+    let { isFacepileEnabled: g } = a.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && g && null == t.icon
         ? (0, r.jsx)(s.Z, {
               "aria-label": f["aria-label"],
               "aria-hidden": f["aria-hidden"],
@@ -62,6 +62,6 @@ let c = i.memo(function (e) {
               "aria-label": f["aria-label"],
               className: p,
               size: n,
-              src: (0, a.x)(t, 80, m),
+              src: (0, o.x)(t, 80, m),
           });
 });

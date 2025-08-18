@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(871230),
-    o = n(481060),
+    o = n(871230),
+    a = n(481060),
     s = n(839963),
     c = n(139256),
     u = n(388032),
@@ -14,13 +14,13 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: d.votesData,
         children: [
-            t && (0, r.jsx)(a.T, { children: u.intl.string(u.t["8DAM+/"]) }),
-            (0, r.jsxs)(o.Text, {
+            t && (0, r.jsx)(o.T, { children: u.intl.string(u.t["8DAM+/"]) }),
+            (0, r.jsxs)(a.Text, {
                 variant: "text-md/semibold",
                 color: "none",
                 children: [i, "%"],
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-xs/semibold",
                 color: "none",
                 children: n,
@@ -29,26 +29,26 @@ function p(e) {
     });
 }
 function m(e) {
-    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: a } = e,
-        o = !0 === t.isSelected,
+    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: o } = e,
+        a = !0 === t.isSelected,
         s = !0 === t.didSelfVote,
         u = !0 === t.isVictor;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.$w, {
-                attachmentClassName: l()(d.attachment, { [d.attachmentWithResults]: a }),
+                attachmentClassName: l()(d.attachment, { [d.attachmentWithResults]: o }),
                 emojiClassName: d.emoji,
                 media: t.pollMedia,
                 fallback: (0, r.jsx)("div", { className: l()(d.attachment, d.mediaMissing) }),
             }),
-            o &&
+            a &&
                 (0, r.jsx)(c.ZY, {
                     size: 40,
                     isVictor: u,
                     isExpired: n,
                     className: d.selectedIcon,
                 }),
-            a &&
+            o &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(p, {
@@ -70,8 +70,8 @@ function m(e) {
     });
 }
 function f(e) {
-    var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a } = e,
-        o = (function (e, t) {
+    var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -130,10 +130,10 @@ function f(e) {
                         isExpired: t,
                         myAvatarUrl: n,
                         answersInteraction: i,
-                        canShowVoteCounts: a,
+                        canShowVoteCounts: o,
                     }),
             },
-            o,
+            a,
         ),
     );
 }

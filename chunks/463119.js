@@ -101,11 +101,16 @@ let L = (e) => {
     R = () => {
         let { noCache: e, includeUnpublished: t } = (0, C.Z)();
         return (
-            (0, y.E)(N.AW.HOME, {
-                noCache: e,
-                includeUnpublished: t,
-                includeBundles: !0,
-            }),
+            (0, y.E)(
+                N.AW.HOME,
+                {
+                    noCache: e,
+                    includeUnpublished: t,
+                    includeBundles: !0,
+                },
+                void 0,
+                !0,
+            ),
             null
         );
     },

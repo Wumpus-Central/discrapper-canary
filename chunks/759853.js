@@ -34,8 +34,8 @@ let b = ["#51BC9D"],
             A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             N = (0, u.Z)(A),
             [R, B] = s.useState(null),
-            [k, q] = s.useState(null),
-            I = s.useRef(
+            [k, I] = s.useState(null),
+            q = s.useRef(
                 new i.qA({
                     gravity: 0,
                     wind: 0,
@@ -183,10 +183,10 @@ let b = ["#51BC9D"],
                               (0, r.jsx)(i.O_, {
                                   ref: B,
                                   className: x.confetti,
-                                  environment: I.current,
+                                  environment: q.current,
                               }),
                               (0, r.jsx)(i.Ji, {
-                                  ref: q,
+                                  ref: I,
                                   sprites: [h],
                                   colors: b,
                                   spriteWidth: g.Ko,

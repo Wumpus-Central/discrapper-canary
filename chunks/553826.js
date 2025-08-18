@@ -5,7 +5,7 @@ var i = n(325767);
 function l(e) {
     var t,
         n,
-        { width: l = 24, height: a = 24, color: o = "currentColor", background: s, foreground: c } = e,
+        { width: l = 24, height: o = 24, color: a = "currentColor", background: s, foreground: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -57,7 +57,7 @@ function l(e) {
         (n = n =
             {
                 width: l,
-                height: a,
+                height: o,
                 viewBox: "0 0 24 24",
                 children: [
                     (0, r.jsx)("path", {
@@ -65,14 +65,14 @@ function l(e) {
                         clipRule: "evenodd",
                         d: "M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z",
                         className: s,
-                        fill: o,
+                        fill: a,
                     }),
                     (0, r.jsx)("circle", {
                         cx: "12",
                         cy: "12",
                         r: "5",
                         className: c,
-                        fill: o,
+                        fill: a,
                     }),
                 ],
             }),

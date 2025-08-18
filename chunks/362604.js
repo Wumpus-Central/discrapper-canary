@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(755721),
     c = n(481060),
     u = n(834129),
@@ -11,33 +11,33 @@ var r = n(951288),
     p = n(926491),
     m = n(419922),
     f = n(626135),
-    _ = n(585483),
-    g = n(115610),
+    g = n(585483),
+    _ = n(115610),
     h = n(981631),
     b = n(388032),
     E = n(38297);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
-        v = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [O, y] = i.useState(null);
+        O = (0, a.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [v, y] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            v.length > 0 && y(v[Math.floor(Math.random() * v.length)]);
+            O.length > 0 && y(O[Math.floor(Math.random() * O.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [v]),
+    }, [O]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(u.Z, {
-                      className: a()(E.mainContainer, { [E.compact]: C }),
+                      className: o()(E.mainContainer, { [E.compact]: C }),
                       icon: n(570111),
                       compact: C,
                       children: (0, r.jsx)("div", {
-                          className: a()(E.__invalid_content, { [E.compact]: C }),
+                          className: o()(E.__invalid_content, { [E.compact]: C }),
                           children: (0, r.jsx)("div", {
-                              className: a()(E.__invalid_messageContent, { [E.compact]: C }),
+                              className: o()(E.__invalid_messageContent, { [E.compact]: C }),
                               children: "" !== t.content ? t.content : b.intl.string(b.t.wnn1DQ),
                           }),
                       }),
@@ -56,7 +56,7 @@ function C(e) {
                                           guild_id: l.guild_id,
                                           action_type: "upload_file",
                                       }),
-                                          _.S.dispatch(h.CkL.UPLOAD_FILE),
+                                          g.S.dispatch(h.CkL.UPLOAD_FILE),
                                           (0, d.fE)({
                                               message: t,
                                               channel: l,
@@ -80,13 +80,13 @@ function C(e) {
                                           guild_id: l.guild_id,
                                           action_type: "sticker",
                                       }),
-                                          (0, g.O)(t.id, l);
+                                          (0, _.O)(t.id, l);
                                   },
                                   children:
-                                      null != O
+                                      null != v
                                           ? (0, r.jsx)(m.Z, {
                                                 size: 32,
-                                                sticker: O,
+                                                sticker: v,
                                             })
                                           : (0, r.jsx)(c.EO4, {
                                                 size: "md",

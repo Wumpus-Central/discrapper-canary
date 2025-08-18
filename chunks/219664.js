@@ -21,11 +21,11 @@ var r = n(951288),
     C = n(433355),
     y = n(592125),
     w = n(496675),
-    T = n(699516),
-    O = n(456269),
+    O = n(699516),
+    T = n(456269),
     S = n(109590),
-    N = n(368844),
-    P = n(73315),
+    P = n(368844),
+    N = n(73315),
     I = n(404616),
     E = n(510060),
     R = n(983200),
@@ -123,18 +123,18 @@ function V(e) {
         b = i.useRef(null),
         j = (0, o.e7)([C.ZP], () => C.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id),
         { firstMessage: v, loaded: _ } = (0, S.cl)(n),
-        { messageCountText: y } = (0, O.nP)(n),
-        { isNew: w, hasUnreads: T } = (0, O.J$)(n),
-        N = i.useRef(null),
-        { handleLeftClick: P, handleRightClick: R } = (0, A.Z)({
-            facepileRef: N,
+        { messageCountText: y } = (0, T.nP)(n),
+        { isNew: w, hasUnreads: O } = (0, T.J$)(n),
+        P = i.useRef(null),
+        { handleLeftClick: N, handleRightClick: R } = (0, A.Z)({
+            facepileRef: P,
             goToThread: a,
             channel: n,
         });
     i.useEffect(() => {
         null == x || x(b.current, p);
     }, [x, p]);
-    let Z = (0, O.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
+    let Z = (0, T.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
         F = (0, I.NN)(n),
         B = (0, k.nX)({
             id: t,
@@ -167,7 +167,7 @@ function V(e) {
         })(B, ["onFocus"]);
     return (0, r.jsxs)("li", {
         ref: b,
-        onClick: P,
+        onClick: N,
         onFocus: U,
         onContextMenu: R,
         className: l()(z.container, m, { [z.isOpen]: j }),
@@ -177,7 +177,7 @@ function V(e) {
                 d.P3F,
                 H(
                     {
-                        onClick: P,
+                        onClick: N,
                         focusProps: { ringTarget: b },
                         onContextMenu: R,
                         "aria-label": D.intl.formatToPlainString(D.t.pgYN6e, {
@@ -223,7 +223,7 @@ function V(e) {
                         children: (0, r.jsx)(d.X6q, {
                             variant: "heading-md/extrabold",
                             className: z.title,
-                            color: T ? "header-primary" : "text-muted",
+                            color: O ? "header-primary" : "text-muted",
                             style: { width: "".concat(h.width - 2 * E.I8, "px") },
                             children: F,
                         }),
@@ -248,7 +248,7 @@ function V(e) {
                     children: (0, r.jsx)(W, {
                         channel: n,
                         firstMessage: v,
-                        facepileRef: N,
+                        facepileRef: P,
                     }),
                 }),
             }),
@@ -257,9 +257,9 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
-        { isBlocked: s, isIgnored: c } = (0, o.cj)([T.Z], () => ({
-            isBlocked: null != n && T.Z.isBlockedForMessage(n),
-            isIgnored: null != n && T.Z.isIgnoredForMessage(n),
+        { isBlocked: s, isIgnored: c } = (0, o.cj)([O.Z], () => ({
+            isBlocked: null != n && O.Z.isBlockedForMessage(n),
+            isIgnored: null != n && O.Z.isIgnoredForMessage(n),
         }));
     return s
         ? (0, r.jsx)($, {
@@ -284,17 +284,17 @@ function G(e) {
 function q(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getChannel(t.parent_id)),
-        { firstMedia: c } = (0, O.mX)({
+        { firstMedia: c } = (0, T.mX)({
             firstMessage: n,
             formatInline: !1,
             noStyleAndInteraction: !1,
         }),
-        { hasUnreads: d } = (0, O.J$)(t),
+        { hasUnreads: d } = (0, T.J$)(t),
         u = (0, o.e7)([w.Z], () => w.Z.can(F.Plq.MANAGE_MESSAGES, t)),
         m = _.QK.useSetting(),
         h = _.cC.useSetting(),
         g = (0, b.Z)(h, u),
-        f = (0, N.aU)(n, s, !1),
+        f = (0, P.aU)(n, s, !1),
         [x, p] = (0, E.rI)(l.width - 2 * E.LT),
         j = (null == n ? void 0 : n.blocked) || null == (null != a ? a : c),
         v = t.isMediaPost();
@@ -413,7 +413,7 @@ let X = (e) => e.preventDefault(),
                 canAutoPlay: o,
                 shouldMaintainAspectRatio: c = !1,
             } = e,
-            { containsVideo: u, containsGif: m } = i.useMemo(() => (0, N.cp)(t), [t]),
+            { containsVideo: u, containsGif: m } = i.useMemo(() => (0, P.cp)(t), [t]),
             b = i.useMemo(() => t.slice(R.$x, R.GV), [t]),
             j = (0, R.tu)({
                 numAttachments: b.length,
@@ -480,7 +480,7 @@ let X = (e) => e.preventDefault(),
                                     a &&
                                         (0, r.jsx)("div", {
                                             className: z.obscuredTagContainer,
-                                            children: (0, r.jsx)(P.Z, {
+                                            children: (0, r.jsx)(N.Z, {
                                                 obscureReason: s,
                                                 iconClassname: z.obscuredTag,
                                             }),
@@ -554,7 +554,7 @@ function Q(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: a, containerWidth: s, hasUnreads: o } = e,
         c = _.jU.useSetting(),
         [u, m] = (0, E.rI)(s - 2 * E.LT),
-        { content: h } = (0, O.mX)({
+        { content: h } = (0, T.mX)({
             firstMessage: n,
             formatInline: !1,
             noStyleAndInteraction: !0,

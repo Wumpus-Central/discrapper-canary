@@ -2,7 +2,7 @@ n.d(t, { Z: () => u });
 var r,
     i = n(442837),
     l = n(570140);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-let o = s();
+let a = s();
 function s() {
     return { ignoreTimestamps: {} };
 }
@@ -34,7 +34,7 @@ class c extends (r = i.ZP.PersistedStore) {
                         }),
                     )),
                     r.forEach(function (t) {
-                        a(e, t, n[t]);
+                        o(e, t, n[t]);
                     });
             }
             return e;
@@ -52,19 +52,19 @@ class c extends (r = i.ZP.PersistedStore) {
                   })(Object(r)).forEach(function (e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
-            (o = n);
+            (a = n);
     }
     getState() {
-        return o;
+        return a;
     }
     getIgnoreTimestamps() {
-        return o.ignoreTimestamps;
+        return a.ignoreTimestamps;
     }
 }
-a(c, "displayName", "IgnoreNoticeStore"), a(c, "persistKey", "IgnoreNoticeStore");
+o(c, "displayName", "IgnoreNoticeStore"), o(c, "persistKey", "IgnoreNoticeStore");
 let u = new c(l.Z, {
     RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
         let { userId: t, timestamp: n } = e;
-        o.ignoreTimestamps[t] = n;
+        a.ignoreTimestamps[t] = n;
     },
 });

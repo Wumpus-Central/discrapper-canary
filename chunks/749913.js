@@ -21,11 +21,11 @@ var r = n(951288),
     C = n(284182),
     y = n(795639),
     w = n(957730),
-    T = n(25015),
-    O = n(252032),
+    O = n(25015),
+    T = n(252032),
     S = n(216572),
-    N = n(913663),
-    P = n(268350),
+    P = n(913663),
+    N = n(268350),
     I = n(456077),
     E = n(488131),
     R = n(602034),
@@ -119,8 +119,8 @@ function es(e) {
             j.bumpDispatchPriority();
         }, [j]),
         _ = (0, h.e7)([k.Z], () => k.Z.can(ee.Plq.ATTACH_FILES, t)),
-        T = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
-        O = g && _ && u,
+        O = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
+        T = g && _ && u,
         I = (null == t ? void 0 : t.isMediaChannel()) === !0,
         M = (function (e, t) {
             let n = (0, K.AF)(),
@@ -167,7 +167,7 @@ function es(e) {
                     let { content: s } = w.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        r = null == (o = N.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
+                        r = null == (o = P.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
                     if (
                         ((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)),
@@ -242,7 +242,7 @@ function es(e) {
                         return (
                             (0, E.ok)(n),
                             U.Z.resort(e.id),
-                            (0, P.qB)(e.id, el.drafts.type),
+                            (0, N.qB)(e.id, el.drafts.type),
                             d(),
                             m(!1),
                             h(!1),
@@ -273,7 +273,7 @@ function es(e) {
             );
         })(t);
     return (
-        i.useLayoutEffect(s, [g, m, T, s]),
+        i.useLayoutEffect(s, [g, m, O, s]),
         (0, r.jsx)(r.Fragment, {
             children: (0, r.jsx)("div", {
                 "aria-label": u ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t["5h0QOD"]),
@@ -316,13 +316,13 @@ function es(e) {
                                         x && (0, r.jsx)(eh, {}),
                                     ],
                                 }),
-                                O && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id })),
+                                T && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id })),
                             ],
                         }),
                         (0, r.jsxs)("div", {
                             className: er.form,
                             children: [
-                                O && I && (0, r.jsx)(C.Z, { parentChannel: t }),
+                                T && I && (0, r.jsx)(C.Z, { parentChannel: t }),
                                 g &&
                                     (0, r.jsx)(ep, {
                                         className: er.horizontalPadding,
@@ -488,7 +488,7 @@ let eo = i.memo(function (e) {
                 },
                 [t, j],
             ),
-            T = (0, B.Op)(m, { content: x });
+            O = (0, B.Op)(m, { content: x });
         return (0, r.jsxs)("div", {
             className: er.titleContainer,
             onPaste: w,
@@ -575,7 +575,7 @@ let eo = i.memo(function (e) {
                                   j.getState().setBodyFocused(!1),
                                   j.getState().setPreviewing(!1));
                           },
-                          error: T,
+                          error: O,
                           className: er.title,
                           inputRef: n,
                       }),
@@ -634,7 +634,7 @@ let eu = i.memo(function (e) {
                 channelId: t.id,
                 content: n,
             }),
-            { content: a } = (0, T.Z)(i, {
+            { content: a } = (0, O.Z)(i, {
                 hideSimpleEmbedContent: !0,
                 isInteracting: !1,
                 formatInline: !1,
@@ -643,7 +643,7 @@ let eu = i.memo(function (e) {
                 previewLinkTarget: !0,
                 allowLinks: !0,
             }),
-            s = (0, O.Z)(
+            s = (0, T.Z)(
                 {
                     message: i,
                     channel: t,
@@ -717,7 +717,7 @@ let eu = i.memo(function (e) {
                 event: ee.CkL.TEXTAREA_BLUR,
                 handler: C,
             });
-        let T = (0, B.Op)(m, { content: x.textValue });
+        let O = (0, B.Op)(m, { content: x.textValue });
         return (0, r.jsx)("div", {
             className: er.bodyContainer,
             children: (0, r.jsxs)("div", {
@@ -740,7 +740,7 @@ let eu = i.memo(function (e) {
                                   focused: p,
                                   className: er.channelTextArea,
                                   innerClassName: l()(er.channelTextAreaInner, {
-                                      [er.channelTextAreaInnerError]: null != T,
+                                      [er.channelTextAreaInnerError]: null != O,
                                   }),
                                   onChange: y,
                                   onSubmit: w,
@@ -760,7 +760,7 @@ let eu = i.memo(function (e) {
                                   autoCompletePosition: "bottom",
                               }),
                           }),
-                    (0, r.jsx)(f.pdY, { error: T }),
+                    (0, r.jsx)(f.pdY, { error: O }),
                 ],
             }),
         });

@@ -128,26 +128,28 @@ class W extends s.PureComponent {
                 className: s,
                 searchBarContainerClassName: l,
                 searchBarClassName: i,
+                popoutAlignment: o,
             } = this.props,
-            { focused: o } = this.state,
-            c = b.Sq(t).length > 0;
+            { focused: c } = this.state,
+            u = b.Sq(t).length > 0;
         return (0, r.jsx)(d.yRy, {
             targetElementRef: this._containerRef,
             renderPopout: this.renderPopout,
             position: "bottom",
+            align: o,
             animation: d.yRy.Animation.NONE,
-            shouldShow: o,
+            shouldShow: c,
             autoInvert: !1,
-            children: (t, u) => {
+            children: (t, o) => {
                 var h;
-                let { isShown: p } = u;
+                let { isShown: p } = o;
                 return (0, r.jsx)("div", {
                     className: s,
                     ref: this._containerRef,
                     children: (0, r.jsx)("div", {
                         className: a()(F.search, l, {
-                            [F.open]: c || o,
-                            [F.focused]: o,
+                            [F.open]: u || c,
+                            [F.focused]: c,
                         }),
                         children: (0, r.jsx)(d.tEY, {
                             focusTarget: { current: null == (h = this._editorRef) ? void 0 : h.editor },
@@ -161,7 +163,7 @@ class W extends s.PureComponent {
                                         this.renderInput(p),
                                         (0, r.jsx)(d.BK9, {
                                             onClear: this.handleClearSearch,
-                                            hasContent: c || n,
+                                            hasContent: u || n,
                                             className: F.icon,
                                             isLoading: !1,
                                         }),
@@ -419,28 +421,29 @@ function Q(e) {
             searchBarContainerClassName: l,
             searchBarClassName: a,
             searchPopoutClassName: i,
+            popoutAlignment: o,
         } = e,
-        o = (0, O.Tm)(t),
-        c = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        h = (0, u.e7)([w.Z], () => (null != o ? w.Z.getEditorState(o) : null)),
-        p = s.useMemo(() => (null != h ? h : b.nR(E.Jl(I.ZP))), [h]),
+        c = (0, O.Tm)(t),
+        h = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        p = (0, u.e7)([w.Z], () => (null != c ? w.Z.getEditorState(c) : null)),
+        _ = s.useMemo(() => (null != p ? p : b.nR(E.Jl(I.ZP))), [p]),
         {
-            isSearching: _,
-            isSearchActive: m,
-            hasResults: y,
+            isSearching: m,
+            isSearchActive: y,
+            hasResults: x,
         } = (0, u.cj)([C.Z], () => {
-            let e = C.Z.getTotalCount(o);
+            let e = C.Z.getTotalCount(c);
             return {
                 hasResults: null != e && e > 0,
-                isSearching: C.Z.getIsFetching(o),
-                isSearchActive: C.Z.hasSearchState(o),
+                isSearching: C.Z.getIsFetching(c),
+                isSearchActive: C.Z.hasSearchState(c),
             };
         }),
-        x = s.useRef(m);
+        v = s.useRef(y);
     s.useEffect(() => {
-        x.current && !m && ((x.current = !1), (0, k.IZ)({ searchContext: t })), !x.current && m && (x.current = !0);
-    }, [m, t]);
-    let v = s.useCallback(
+        v.current && !y && ((v.current = !1), (0, k.IZ)({ searchContext: t })), !v.current && y && (v.current = !0);
+    }, [y, t]);
+    let j = s.useCallback(
             (e) => {
                 let { queryString: n, query: r, searchEverywhere: s } = e;
                 T.ZP.refreshSearchQueryAnalyticsId(t),
@@ -466,7 +469,7 @@ function Q(e) {
             },
             [t],
         ),
-        j = (0, u.e7)([S.Z, g.Z], () => {
+        N = (0, u.e7)([S.Z, g.Z], () => {
             let e = (0, O.b7)(t) ? t.guildId : null;
             if (null != e) {
                 let t = S.Z.getGuild(e);
@@ -479,26 +482,26 @@ function Q(e) {
             }
             return null;
         }),
-        N = (0, P.xd)({
+        Z = (0, P.xd)({
             isXDMSearch: t.type === D.aib.DMS,
             location: "Search",
         }),
-        Z = (0, P.dB)({
+        M = (0, P.dB)({
             isXDMSearch: t.type === D.aib.DMS,
             location: "Search",
         }),
-        M = N || Z,
-        H = (0, R.$)({ location: "Search" }),
-        U = s.useMemo(
+        H = Z || M,
+        U = (0, R.$)({ location: "Search" }),
+        Q = s.useMemo(
             () =>
                 t.type === D.aib.DMS
                     ? L.intl.string(L.t.m7OrlZ)
-                    : H
-                      ? L.intl.formatToPlainString(L.t.LDZtFB, { name: j })
-                      : M
+                    : U
+                      ? L.intl.formatToPlainString(L.t.LDZtFB, { name: N })
+                      : H
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  L.intl.formatToPlainString(L.t.LDZtFB, { name: j }),
+                                  L.intl.formatToPlainString(L.t.LDZtFB, { name: N }),
                                   (0, r.jsx)("span", {
                                       className: F.keybind,
                                       children: (0, r.jsx)(d.M2$, {
@@ -509,7 +512,7 @@ function Q(e) {
                               ],
                           })
                         : L.intl.string(L.t["5h0QOD"]),
-            [t.type, M, j, H],
+            [t.type, H, N, U],
         );
     return (0, r.jsx)(W, {
         className: n,
@@ -517,13 +520,14 @@ function Q(e) {
         searchBarContainerClassName: l,
         searchBarClassName: a,
         searchContext: t,
-        isSearching: _,
-        editorState: p,
-        hasResults: y,
-        keyboardModeEnabled: c,
-        onSearch: v,
-        isSearchActive: m,
-        placeholder: U,
+        isSearching: m,
+        editorState: _,
+        hasResults: x,
+        keyboardModeEnabled: h,
+        onSearch: j,
+        isSearchActive: y,
+        placeholder: Q,
+        popoutAlignment: o,
     });
 }
 function G(e) {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685), n(997841);
 var r,
     i,
     l = n(442837),
-    a = n(433517),
-    o = n(570140),
+    o = n(433517),
+    a = n(570140),
     s = n(314897),
     c = n(592125),
     u = n(496675),
@@ -11,12 +11,12 @@ var r,
     p = n(630388),
     m = n(110630),
     f = n(981631);
-let _ = "ChannelFollowingBumpChannels",
-    g = new Set(),
+let g = "ChannelFollowingBumpChannels",
+    _ = new Set(),
     h = new Set();
 class b extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), (g = new Set(a.K.get(_)));
+        this.waitFor(s.default), (_ = new Set(o.K.get(g)));
     }
     shouldShowBump(e) {
         return h.has(e);
@@ -30,19 +30,19 @@ class b extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (b[i] = "ChannelFollowingPublishBumpStore");
-let E = new b(o.Z, {
+let E = new b(a.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: r, optimistic: i } = e;
-        if (i || g.has(n)) return !1;
+        if (i || _.has(n)) return !1;
         let l = c.Z.getChannel(n),
-            a = d.default.getCurrentUser();
+            o = d.default.getCurrentUser();
         if (
             !(
                 null != l &&
                 l.type === f.d4z.GUILD_ANNOUNCEMENT &&
                 (0, m.Z)(r) &&
-                (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id
+                (null != o && (null == (t = r.author) ? void 0 : t.id) === o.id
                     ? u.Z.can(f.Plq.SEND_MESSAGES, l)
                     : u.Z.can(f.Plq.MANAGE_MESSAGES, l)) &&
                 !p.yE(Number(r.flags), f.iLy.CROSSPOSTED)
@@ -64,6 +64,6 @@ let E = new b(o.Z, {
     },
     CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
         let { channelId: t } = e;
-        g.add(t), a.K.set(_, g), h.clear();
+        _.add(t), o.K.set(g, _), h.clear();
     },
 });

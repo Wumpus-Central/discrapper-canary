@@ -5,7 +5,7 @@ n.d(t, {
 var r,
     i = n(879690),
     l = n(731965);
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function a(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,12 +54,12 @@ var s =
     r);
 let c = (0, i.U)((e) => ({
     listings: {},
-    setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: o(a({}, e.listings), { [t]: n(e.listings[t]) }) }))),
+    setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: a(o({}, e.listings), { [t]: n(e.listings[t]) }) }))),
     editStateIdsForGroup: {},
     setEditStateIdsForGroup: (t, n) =>
         (0, l.j)(() => {
             e((e) => ({
-                editStateIdsForGroup: o(a({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }),
+                editStateIdsForGroup: a(o({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }),
             }));
         }),
 }));

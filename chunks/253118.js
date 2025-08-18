@@ -3,16 +3,16 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(904245),
-    a = n(739566),
-    o = n(834129),
+    o = n(739566),
+    a = n(834129),
     s = n(388032);
 function c(e) {
     var t, n;
     let { message: c, usernameHook: u, onClickPins: d, compact: p } = e,
-        m = (0, a.ZP)(c),
+        m = (0, o.ZP)(c),
         f = m.nick,
-        _ = u(m),
-        g = () => {
+        g = u(m),
+        _ = () => {
             if (null == c.messageReference) return;
             let { channel_id: e, message_id: t } = c.messageReference;
             l.Z.jumpToMessage({
@@ -28,7 +28,7 @@ function c(e) {
             }),
         };
     return (0, r.jsx)(
-        o.Z,
+        a.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -62,23 +62,23 @@ function c(e) {
                     null != c.messageReference
                         ? null == d
                             ? s.intl.format(s.t.lD5tur, {
-                                  usernameHook: _,
+                                  usernameHook: g,
                                   username: f,
-                                  messageOnClick: g,
+                                  messageOnClick: _,
                               })
                             : s.intl.format(s.t.yIDvPD, {
-                                  usernameHook: _,
+                                  usernameHook: g,
                                   username: f,
                                   pinsActionOnClick: d,
-                                  messageOnClick: g,
+                                  messageOnClick: _,
                               })
                         : null == d
                           ? s.intl.format(s.t.vfkjq6, {
-                                usernameHook: _,
+                                usernameHook: g,
                                 username: f,
                             })
                           : s.intl.format(s.t.R7vZGR, {
-                                usernameHook: _,
+                                usernameHook: g,
                                 username: f,
                                 pinsActionOnClick: d,
                             }),

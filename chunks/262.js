@@ -2,24 +2,24 @@ n.d(t, { Z: () => d }), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(857395),
-    o = n(739566),
+    o = n(857395),
+    a = n(739566),
     s = n(834129),
     c = n(388032);
 function u(e) {
-    let { children: t, messageReference: n, guildName: o } = e,
+    let { children: t, messageReference: n, guildName: a } = e,
         s = i.useRef(null);
     if (null == n) return (0, r.jsx)(l.eee, { children: t });
     let { guild_id: c } = n;
     return null == c
         ? (0, r.jsx)(l.eee, { children: t })
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(o.Z, {
               guildId: c,
-              name: o,
+              name: a,
               targetElementRef: s,
               children: (e) => {
                   var n, i;
-                  let { "aria-controls": a, "aria-expanded": o } = e,
+                  let { "aria-controls": o, "aria-expanded": a } = e,
                       c = (function (e, t) {
                           if (null == e) return {};
                           var n,
@@ -94,20 +94,20 @@ function u(e) {
 }
 function d(e) {
     let { usernameHook: t, message: i, compact: l } = e,
-        { content: a, timestamp: d, messageReference: p } = i,
-        m = (0, o.ZP)(i),
+        { content: o, timestamp: d, messageReference: p } = i,
+        m = (0, a.ZP)(i),
         f = t(m),
-        _ = (null != a ? a : "").split(" ").slice(0, -1).join(" "),
-        g = c.intl.format(c.t["47CZc3"], {
+        g = (null != o ? o : "").split(" ").slice(0, -1).join(" "),
+        _ = c.intl.format(c.t["47CZc3"], {
             username: m.nick,
             usernameHook: f,
-            webhookName: a,
+            webhookName: o,
             webhookNameHook: (e, t) =>
                 (0, r.jsx)(
                     u,
                     {
                         messageReference: p,
-                        guildName: _,
+                        guildName: g,
                         children: e,
                     },
                     t,
@@ -117,6 +117,6 @@ function d(e) {
         icon: n(570111),
         timestamp: d,
         compact: l,
-        children: g,
+        children: _,
     });
 }

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(385499),
+    o = n(481060),
+    a = n(385499),
     s = n(739566),
     c = n(464891),
     u = n(83561),
@@ -12,10 +12,10 @@ var i = n(120356),
     p = n(674563),
     m = n(388032),
     f = n(682392);
-function _(e) {
+function g(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        _ = (0, s.ZP)(t),
-        g = i(_),
+        g = (0, s.ZP)(t),
+        _ = i(g),
         {
             avatarSrc: h,
             eventHandlers: { onMouseEnter: b, onMouseLeave: E },
@@ -38,14 +38,14 @@ function _(e) {
                         username: (0, r.jsxs)("div", {
                             className: f.spanCorrection,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
                                     className: f.username,
                                     children: m.intl.string(m.t.hG1StL),
                                 }),
-                                (0, r.jsx)(o.Z, {
+                                (0, r.jsx)(a.Z, {
                                     type: p.Hb.SYSTEM_DM,
                                     className: f.systemTag,
                                 }),
@@ -57,8 +57,8 @@ function _(e) {
                     (0, r.jsx)("div", {
                         className: l()(f.__invalid_messageContent, { [f.compact]: n }),
                         children: m.intl.format(m.t.qntXNT, {
-                            username: _.nick,
-                            usernameHook: g,
+                            username: g.nick,
+                            usernameHook: _,
                         }),
                     }),
                 ],

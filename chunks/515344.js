@@ -1,12 +1,12 @@
 n.d(t, {
     G: () => C,
-    z: () => v,
+    z: () => O,
 });
 var r = n(647438),
     i = n(442837),
     l = n(783097),
-    a = n(176412),
-    o = n(749681),
+    o = n(176412),
+    a = n(749681),
     s = n(258971),
     c = n(592125),
     u = n(496675),
@@ -14,16 +14,16 @@ var r = n(647438),
     p = n(914010),
     m = n(135431),
     f = n(433534),
-    _ = n(914498),
-    g = n(981631),
+    g = n(914498),
+    _ = n(981631),
     h = n(49898),
     b = n(388032);
 function E(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
-        o = (0, f.Eb)({
+    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: o } = e,
+        a = (0, f.Eb)({
             customInstallUrl: n,
             installParams: r,
-            integrationTypesConfig: a,
+            integrationTypesConfig: o,
         }),
         s = (0, i.e7)([p.Z], () => {
             var e;
@@ -31,17 +31,17 @@ function E(e) {
         }),
         m = (0, i.e7)([c.Z, u.Z, d.Z], () => {
             let e = c.Z.getChannel(d.Z.getChannelId());
-            return null != e && (e.isPrivate() || u.Z.can(g.Plq.SEND_MESSAGES, e));
+            return null != e && (e.isPrivate() || u.Z.can(_.Plq.SEND_MESSAGES, e));
         }, []),
-        _ = (0, l.PZ)(e, s) && m;
+        g = (0, l.PZ)(e, s) && m;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
-        integrationTypesConfig: a,
-        canViewApp: t || _,
-        canOpenAppLauncher: _,
-        isInstallable: o,
+        integrationTypesConfig: o,
+        canViewApp: t || g,
+        canOpenAppLauncher: g,
+        isInstallable: a,
         selectedGuildId: s,
     };
 }
@@ -59,8 +59,8 @@ function C(e, t) {
         () =>
             n
                 ? () => {
-                      if ((null == t || t(), i)) return void (0, a.X)(e.id);
-                      (0, o.transitionToGlobalDiscovery)({
+                      if ((null == t || t(), i)) return void (0, o.X)(e.id);
+                      (0, a.transitionToGlobalDiscovery)({
                           tab: h.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
                           newSessionState: { entrypoint: { name: s.xF.APPLICATION_MESSAGE_EMBED } },
@@ -82,7 +82,7 @@ function C(e, t) {
         [e.id, i, n, c, u, d, l, t, p],
     );
 }
-function v(e) {
+function O(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
         i = C(e);
     return r.useMemo(
@@ -90,7 +90,7 @@ function v(e) {
             t && null != i
                 ? {
                       label: b.intl.string(b.t.hvVgAQ),
-                      trackingArea: _.j_.VIEW,
+                      trackingArea: g.j_.VIEW,
                       onClick() {
                           i();
                       },
@@ -98,7 +98,7 @@ function v(e) {
                 : n && null != i
                   ? {
                         label: b.intl.string(b.t.NgXl3N),
-                        trackingArea: _.j_.ADD_APP,
+                        trackingArea: g.j_.ADD_APP,
                         onClick() {
                             i();
                         },

@@ -36,14 +36,6 @@ let h = +a.Z.Millis.DAY,
                 regex: "placeid:([0-9]+)",
                 key: u.SQ.PLACE_ID,
             },
-            {
-                regex: "userid:([0-9]+)",
-                key: u.SQ.USER_ID,
-            },
-            {
-                regex: "sid:([0-9a-zA-Z-]+)",
-                key: u.SQ.JOB_ID,
-            },
         ],
         leaveGameLogPrefix: "[FLog::SingleSurfaceApp] returnToLuaApp:",
     };

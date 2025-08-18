@@ -2,12 +2,12 @@ n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(657707),
     l = n(793030),
-    a = n(834129),
-    o = n(664677);
+    o = n(834129),
+    a = n(664677);
 function s(e) {
     let { channel: t, message: n, content: s, subtitle: c, compact: u, action: d } = e,
         p = n.reactions.length > 0;
-    return (0, r.jsxs)(a.Z, {
+    return (0, r.jsxs)(o.Z, {
         iconNode: t.isGroupDM()
             ? (0, r.jsx)(i.Dkj, {
                   size: "md",
@@ -17,13 +17,13 @@ function s(e) {
                   size: "md",
                   color: "var(--premium-tier-2-purple-for-gradients-2)",
               }),
-        iconContainerClassName: o.iconContainer,
+        iconContainerClassName: a.iconContainer,
         compact: u,
-        contentClassName: o.content,
-        className: p ? o.withReactions : o.noReactions,
+        contentClassName: a.content,
+        className: p ? a.withReactions : a.noReactions,
         children: [
             (0, r.jsxs)("div", {
-                className: o.textContainer,
+                className: a.textContainer,
                 children: [
                     (0, r.jsx)(l.xv, {
                         variant: "text-md/medium",

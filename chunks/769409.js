@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(668781),
-    a = n(231338),
-    o = n(388032);
+    o = n(231338),
+    a = n(388032);
 let s = (e, t) => {
     let s = "group-dm-edit-modal-".concat(e),
         c = !1,
@@ -14,13 +14,13 @@ let s = (e, t) => {
         d = () => {
             c
                 ? l.Z.show({
-                      title: o.intl.string(o.t.pvRCSk),
-                      body: o.intl.string(o.t.DRi46e),
-                      confirmText: o.intl.string(o.t["6GQDFh"]),
+                      title: a.intl.string(a.t.pvRCSk),
+                      body: a.intl.string(a.t.DRi46e),
+                      confirmText: a.intl.string(a.t["6GQDFh"]),
                       confirmVariant: "critical-primary",
-                      cancelText: o.intl.string(o.t.DmDzZG),
+                      cancelText: a.intl.string(a.t.DmDzZG),
                       onConfirm: () => (0, i.Mr3)(s),
-                      onCancel: a.dG,
+                      onCancel: o.dG,
                   })
                 : (0, i.Mr3)(s);
         };

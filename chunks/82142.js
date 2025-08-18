@@ -2,8 +2,8 @@ n.d(t, { Z: () => A }), n(388685);
 var r,
     i,
     l = n(913527),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(846519),
     c = n(570140),
     u = n(533307),
@@ -11,26 +11,26 @@ var r,
     p = n(669079),
     m = n(981631);
 let f = {},
-    _ = new Map(),
-    g = [],
+    g = new Map(),
+    _ = [],
     h = [],
     b = [],
     E = new Set(),
     C = {},
-    v = {},
-    O = new Set();
+    O = {},
+    v = new Set();
 function y(e) {
     let t = d.Z.createFromServer(e),
         n = t.code;
-    if (_.has(n)) _.set(n, _.get(n).merge(t));
-    else if ((_.set(n, t), null != t.expiresAt)) {
+    if (g.has(n)) g.set(n, g.get(n).merge(t));
+    else if ((g.set(n, t), null != t.expiresAt)) {
         let e = new s.V7();
         (f[n] = e),
             (function e(t) {
-                let n = _.get(t);
+                let n = g.get(t);
                 if (null == n || null == n.expiresAt) return;
-                let r = n.expiresAt.valueOf() - a()().valueOf();
-                if (r <= 0) _.delete(t), delete f[t], N.emitChange();
+                let r = n.expiresAt.valueOf() - o()().valueOf();
+                if (r <= 0) g.delete(t), delete f[t], N.emitChange();
                 else {
                     let n = f[t];
                     if (null == n) return;
@@ -41,14 +41,14 @@ function y(e) {
 }
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !O.has(e.channel_id)) return !1;
+    if (t && !v.has(e.channel_id)) return !1;
     let n = (0, p.Fp)(e)
         ? (0, p.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0)
         : (0, p.Q_)(e.content);
     return (
         0 !== n.length &&
         (n.forEach((e) => {
-            g.includes(e) ||
+            _.includes(e) ||
                 b.includes(e) ||
                 (j({ code: e }), c.Z.wait(() => u.Z.resolveGiftCode(e, !1, !0).catch(m.VqG)));
         }),
@@ -57,7 +57,7 @@ function x(e) {
 }
 function j(e) {
     let { code: t } = e;
-    g.includes(t) || (g = [...g, t]);
+    _.includes(t) || (_ = [..._, t]);
 }
 function I(e) {
     let { message: t } = e;
@@ -65,28 +65,28 @@ function I(e) {
 }
 function S(e) {
     let { channelId: t, messages: n } = e;
-    O.add(t), n.forEach((e) => x(e, !0));
+    v.add(t), n.forEach((e) => x(e, !0));
 }
 function T(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
     null == t || t.forEach((e) => x(e));
 }
-class P extends (r = o.ZP.Store) {
+class P extends (r = a.ZP.Store) {
     get(e) {
-        let t = _.get(e);
+        let t = g.get(e);
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? v[e] : null;
+        return null != e ? O[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
-        return Array.from(_.values()).filter(
+        return Array.from(g.values()).filter(
             (r) => r.userId === e && r.skuId === t && (null == n || r.subscriptionPlanId === n) && !r.isExpired(),
         );
     }
     getIsResolving(e) {
-        return g.includes(e);
+        return _.includes(e);
     }
     getIsResolved(e) {
         return b.includes(e);
@@ -101,7 +101,7 @@ class P extends (r = o.ZP.Store) {
         return C[(0, p.Bg)(e, t)];
     }
     getResolvingCodes() {
-        return g;
+        return _;
     }
     getResolvedCodes() {
         return b;
@@ -120,20 +120,20 @@ class P extends (r = o.ZP.Store) {
     : (P[i] = "GiftCodeStore");
 let N = new P(c.Z, {
         CONNECTION_OPEN: function () {
-            return O.clear(), !1;
+            return v.clear(), !1;
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return null != t && O.add(t), !1;
+            return null != t && v.add(t), !1;
         },
         GIFT_CODE_RESOLVE: j,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            return (g = g.filter((e) => e !== t.code)), b.includes(t.code) || (b = [...b, t.code]), y(t);
+            return (_ = _.filter((e) => e !== t.code)), b.includes(t.code) || (b = [...b, t.code]), y(t);
         },
         GIFT_CODE_RESOLVE_FAILURE: function (e) {
             let { code: t } = e;
-            (g = g.filter((e) => e !== t)), b.includes(t) || (b = [...b, t]);
+            (_ = _.filter((e) => e !== t)), b.includes(t) || (b = [...b, t]);
         },
         GIFT_CODE_REDEEM: function (e) {
             let { code: t } = e;
@@ -142,9 +142,9 @@ let N = new P(c.Z, {
         GIFT_CODE_REDEEM_SUCCESS: function (e) {
             let { code: t } = e;
             h = h.filter((e) => e !== t);
-            let n = _.get(t);
+            let n = g.get(t);
             null != n &&
-                _.set(
+                g.set(
                     t,
                     n.merge({
                         redeemed: !0,
@@ -155,19 +155,19 @@ let N = new P(c.Z, {
         GIFT_CODE_REDEEM_FAILURE: function (e) {
             let { code: t, error: n } = e;
             h = h.filter((e) => e !== t);
-            let r = _.get(t);
-            if (((v[t] = n), null != r))
+            let r = g.get(t);
+            if (((O[t] = n), null != r))
                 switch (n.code) {
                     case m.evJ.UNKNOWN_GIFT_CODE:
-                        _.set(t, r.set("revoked", !0));
+                        g.set(t, r.set("revoked", !0));
                         break;
                     case m.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-                        _.set(t, r.set("uses", r.maxUses));
+                        g.set(t, r.set("uses", r.maxUses));
                 }
         },
         GIFT_CODE_REVOKE_SUCCESS: function (e) {
             let { code: t } = e;
-            _.delete(t);
+            g.delete(t);
             let n = f[t];
             null != n && (n.stop(), delete f[t]), b.includes(t) || (b = [...b, t]);
         },
@@ -216,8 +216,8 @@ let N = new P(c.Z, {
         },
         GIFT_CODE_UPDATE: function (e) {
             let { uses: t, code: n } = e,
-                r = _.get(n);
-            null != r && _.set(n, r.set("uses", Math.max(r.uses, t)));
+                r = g.get(n);
+            null != r && g.set(n, r.set("uses", Math.max(r.uses, t)));
         },
         LOAD_THREADS_SUCCESS: T,
         LOAD_ARCHIVED_THREADS_SUCCESS: T,

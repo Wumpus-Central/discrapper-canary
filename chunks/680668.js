@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(997841), n(388685);
+n.d(t, { Z: () => O }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(533800),
-    a = n(481060),
-    o = n(447543),
+    o = n(481060),
+    a = n(447543),
     s = n(100527),
     c = n(906732),
     u = n(857395),
@@ -11,14 +11,14 @@ var r = n(951288),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    _ = n(411198),
-    g = n(277707),
+    g = n(411198),
+    _ = n(277707),
     h = n(358595),
     b = n(981631),
     E = n(388032),
     C = n(105341);
-function v(e) {
-    var t, v, O;
+function O(e) {
+    var t, O, v;
     let y,
         x,
         j,
@@ -31,27 +31,27 @@ function v(e) {
             currentUserId: A,
         } = e,
         w = A === N.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = P,
-        D = P.state === b.r2o.ACCEPTING,
+        { channel: Z, approximate_member_count: R, approximate_presence_count: D } = P,
+        L = P.state === b.r2o.ACCEPTING,
         M = null != Z ? (0, m.jD)(Z) : null,
         k = null != T,
         U = null != M,
         F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = P.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (v = null == T ? void 0 : T.features.has(b.oNc.HUB)) && v,
+        H = null != (O = null == T ? void 0 : T.features.has(b.oNc.HUB)) && O,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, Y] = i.useState(!1),
         K = i.useCallback(() => Y(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            Y(!0), (0, o.CB)(V, "show profile", z);
+            Y(!0), (0, a.CB)(V, "show profile", z);
         }, [V, z]),
-        Q = i.useCallback(() => {
+        J = i.useCallback(() => {
             let e = "noop";
             k ? (I(), (e = "transition")) : (S(), (e = "accept")),
-                (0, o.r$)(
+                (0, a.r$)(
                     {
                         invite: P,
                         action: e,
@@ -63,9 +63,9 @@ function v(e) {
         }, [P, N, z, k, I, S]);
     if (null == T) {
         if (null == P.guild) return (0, r.jsx)(h.Z, {});
-        (T = _.Qs(P.guild)).premiumTier = null != (O = P.guild.premium_tier) ? O : b.Eu4.NONE;
+        (T = g.Qs(P.guild)).premiumTier = null != (v = P.guild.premium_tier) ? v : b.Eu4.NONE;
     }
-    let J = (0, g.e)({
+    let Q = (0, _.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
@@ -100,10 +100,10 @@ function v(e) {
             ],
         })),
         G &&
-            (j = (0, r.jsx)(a.DY3, {
+            (j = (0, r.jsx)(o.DY3, {
                 className: C.tooltipContainer,
                 text: E.intl.string(E.t["/FeTKy"]),
-                children: (0, r.jsx)(a.d3s, {
+                children: (0, r.jsx)(o.d3s, {
                     size: "md",
                     color: "currentColor",
                     className: C.infoIcon,
@@ -124,10 +124,10 @@ function v(e) {
                       }),
                   ],
               })))
-            : (null != R && R >= 5) || (null != L && L > 0)
+            : (null != R && R >= 5) || (null != D && D > 0)
               ? (y = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: L,
+                    membersOnline: D,
                 }))
               : U &&
                 (y = (0, r.jsx)(p.Z.Channel, {
@@ -138,7 +138,7 @@ function v(e) {
             children: [
                 (0, r.jsx)(p.Z.GuildSplash, { guild: T }),
                 (0, r.jsx)(p.Z.Header, {
-                    text: J,
+                    text: Q,
                     extra: j,
                 }),
                 (0, r.jsxs)(p.Z.Body, {
@@ -155,8 +155,8 @@ function v(e) {
                             ],
                         }),
                         (0, r.jsx)(p.Z.Button, {
-                            onClick: Q,
-                            submitting: D,
+                            onClick: J,
+                            submitting: L,
                             color: p.Z.Button.Colors.GREEN,
                             children: F
                                 ? B
@@ -172,12 +172,12 @@ function v(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", { className: C.separator }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: E.intl.format(E.t["/o1IfH"], {
                                     onClick: () =>
-                                        (0, a.ZDy)(async () => {
+                                        (0, o.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
                                                 n.bind(n, 650233),
                                             );

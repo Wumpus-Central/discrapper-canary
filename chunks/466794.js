@@ -1,9 +1,9 @@
-n.d(t, { X: () => a });
+n.d(t, { X: () => o });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(343908);
-function a(e) {
+function o(e) {
     let { tooltipText: t, textColor: n } = e;
     return (0, r.jsxs)("span", {
         className: l.tooltipTextContainer,

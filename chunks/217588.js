@@ -2,8 +2,8 @@ n.d(t, { Z: () => G }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(755721),
     c = n(481060),
     u = n(749210),
@@ -11,14 +11,14 @@ var r = n(951288),
     p = n(367907),
     m = n(600164),
     f = n(111028),
-    _ = n(231053),
-    g = n(697568),
+    g = n(231053),
+    _ = n(697568),
     h = n(183023),
     b = n(524444),
     E = n(98278),
     C = n(767714),
-    v = n(430824),
-    O = n(594174),
+    O = n(430824),
+    v = n(594174),
     y = n(626135),
     x = n(74538),
     j = n(453070),
@@ -31,7 +31,7 @@ var r = n(951288),
     w = n(388032),
     Z = n(564651),
     R = n(975900);
-function L(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -111,8 +111,8 @@ function k(e) {
     });
 }
 let U = (e) => {
-        let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
-            [s, u, d] = (0, o.Wu)(
+        let { closePopout: t, sticker: n, channel: l, refreshPositionKey: o } = e,
+            [s, u, d] = (0, a.Wu)(
                 [I.Z],
                 () => [I.Z.getStickerPack(n.pack_id), !I.Z.hasLoadedStickerPacks, I.Z.isPremiumPack(n.pack_id)],
                 [n],
@@ -134,23 +134,23 @@ let U = (e) => {
             });
         (0, j.Pq)(n.pack_id);
         let f = (0, j.Sd)(l),
-            _ = {
-                refreshPositionKey: a,
+            g = {
+                refreshPositionKey: o,
                 channel: l,
             },
-            g = i.useRef(_);
+            _ = i.useRef(g);
         return (i.useEffect(() => {
-            g.current = _;
+            _.current = g;
         }),
         i.useEffect(() => {
-            let { refreshPositionKey: e } = g.current;
+            let { refreshPositionKey: e } = _.current;
             e();
         }, [u]),
         i.useEffect(() => {
-            let { channel: e } = g.current;
+            let { channel: e } = _.current;
             y.default.track(
                 N.rMx.OPEN_POPOUT,
-                L(
+                D(
                     {
                         type: N.jXE.STICKER_POPOUT,
                         guild_id: e.getGuildId(),
@@ -218,9 +218,9 @@ let U = (e) => {
             { sticker: n, channel: l, closePopout: f, refreshPositionKey: E } = e,
             [j, I] = i.useState(null),
             [S, P] = i.useState(!1),
-            U = O.default.getCurrentUser(),
+            U = v.default.getCurrentUser(),
             F = x.ZP.canUseCustomStickersEverywhere(U),
-            B = (0, o.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
+            B = (0, a.e7)([O.Z], () => O.Z.getGuild(n.guild_id)),
             G = null != B,
             [H, V] = i.useState(!1),
             [z, W] = i.useState(null),
@@ -231,7 +231,7 @@ let U = (e) => {
                 }),
                 [l.guild_id],
             ),
-            { current: K } = i.useRef(L({ guild_id: l.getGuildId() }, (0, p.v_)(l))),
+            { current: K } = i.useRef(D({ guild_id: l.getGuildId() }, (0, p.v_)(l))),
             X = {
                 stickerSourceGuild: B,
                 refreshPositionKey: E,
@@ -243,26 +243,26 @@ let U = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = q.current;
                 (async () => {
-                    (null == e || e.features.has(N.oNc.DISCOVERABLE)) && I(await (0, g.Z)(n.id)), P(!0);
+                    (null == e || e.features.has(N.oNc.DISCOVERABLE)) && I(await (0, _.Z)(n.id)), P(!0);
                 })();
             }, [n.id, G]);
-        let Q = n.guild_id === l.getGuildId(),
-            J = null != j,
+        let J = n.guild_id === l.getGuildId(),
+            Q = null != j,
             $ = !1,
             ee = "Custom Sticker Popout";
         F
             ? (t = G
-                  ? Q
+                  ? J
                       ? w.intl.string(w.t.fZ0DiI)
                       : w.intl.string(w.t["1f6D9v"])
-                  : J
+                  : Q
                     ? w.intl.string(w.t.yHmoR0)
                     : w.intl.string(w.t.vZaScH))
             : G
-              ? ((t = Q ? w.intl.string(w.t.jNphpq) : w.intl.string(w.t.lyD5ZW)),
+              ? ((t = J ? w.intl.string(w.t.jNphpq) : w.intl.string(w.t.lyD5ZW)),
                 ($ = !0),
                 (ee = "Custom Sticker Popout (Upsell)"))
-              : J
+              : Q
                 ? ((t = w.intl.string(w.t.IuXYcn)), ($ = !0), (ee = "Custom Sticker Popout (Upsell)"))
                 : ((t = w.intl.format(w.t.hGWuxc, {
                       openPremiumSettings: () => {
@@ -270,13 +270,13 @@ let U = (e) => {
                       },
                   })),
                   (ee = "Custom Sticker Popout (Soft Upsell)"));
-        let et = !$ && !G && J && F;
+        let et = !$ && !G && Q && F;
         return (i.useEffect(() => {
             let { refreshPositionKey: e } = q.current;
             e();
         }, [S, j]),
         (0, d.ZP)(() => {
-            y.default.track(N.rMx.OPEN_POPOUT, L({ type: ee }, K));
+            y.default.track(N.rMx.OPEN_POPOUT, D({ type: ee }, K));
         }),
         S)
             ? (0, r.jsxs)(b.W_, {
@@ -327,12 +327,12 @@ let U = (e) => {
                       (null != B || null != j) &&
                           (() => {
                               var e;
-                              if (!J && !G) return;
+                              if (!Q && !G) return;
                               let t = (null != (e = null == j ? void 0 : j.stickers) ? e : [])
                                       .slice(0, 13)
                                       .filter((e) => e.id !== n.id)
                                       .slice(0, 12),
-                                  i = null != j ? _.JO.createFromDiscoverableGuild(j) : _.JO.createFromGuildRecord(B);
+                                  i = null != j ? g.JO.createFromDiscoverableGuild(j) : g.JO.createFromGuildRecord(B);
                               return (0, r.jsxs)("div", {
                                   className: R.guildSection,
                                   children: [
@@ -364,7 +364,7 @@ let U = (e) => {
                                                               (0, r.jsx)(c.CJ0, {
                                                                   size: "md",
                                                                   color: "currentColor",
-                                                                  className: a()(R.showMoreEmojisArrow, {
+                                                                  className: o()(R.showMoreEmojisArrow, {
                                                                       [R.showMoreEmojisArrowCollapsed]: !H,
                                                                   }),
                                                               }),
@@ -380,7 +380,7 @@ let U = (e) => {
                                                           children: t.map((e) =>
                                                               (0, r.jsx)(
                                                                   c.ua7,
-                                                                  D(L({ text: e.name }, b.b_), {
+                                                                  L(D({ text: e.name }, b.b_), {
                                                                       children: (t) => {
                                                                           var { onMouseEnter: n, onMouseLeave: i } = t,
                                                                               l = (function (e, t) {
@@ -417,10 +417,10 @@ let U = (e) => {
                                                                               })(t, ["onMouseEnter", "onMouseLeave"]);
                                                                           return (0, r.jsx)(
                                                                               "div",
-                                                                              D(
-                                                                                  L(
+                                                                              L(
+                                                                                  D(
                                                                                       {
-                                                                                          className: a()(R.otherEmoji, {
+                                                                                          className: o()(R.otherEmoji, {
                                                                                               [Z.nonInteractingSticker]:
                                                                                                   null != z &&
                                                                                                   z !== e.id,
@@ -478,23 +478,23 @@ function B(e) {
 }
 let G = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
-        [a, o] = (0, j.XW)(t, !0);
-    return null != a && (0, S.jl)(a)
+        [o, a] = (0, j.XW)(t, !0);
+    return null != o && (0, S.jl)(o)
         ? (0, r.jsx)(U, {
-              sticker: a,
+              sticker: o,
               closePopout: i,
               channel: n,
               refreshPositionKey: l,
           })
-        : null != a && (0, S.J8)(a)
+        : null != o && (0, S.J8)(o)
           ? (0, r.jsx)(F, {
-                sticker: a,
+                sticker: o,
                 channel: n,
                 closePopout: i,
                 refreshPositionKey: l,
             })
-          : o
-            ? o && null == a
+          : a
+            ? a && null == o
                 ? (0, r.jsx)(B, {
                       channel: n,
                       closePopout: i,

@@ -31,8 +31,8 @@ function S(e) {
             contentPosition: R,
             rowIndex: B,
             isVisibleInViewport: k,
-            onReceiveErrorHints: q,
-            sourceQuestContent: I,
+            onReceiveErrorHints: I,
+            sourceQuestContent: q,
         } = e,
         Q = s.useMemo(() => g.r.build(P.config), [P.config]),
         D = Q.defaultRewardName,
@@ -89,7 +89,7 @@ function S(e) {
         X = (0, m.xN)(P.config),
         K = (0, m.LM)(P.config),
         { completedRatio: Y, completedRatioDisplay: G } = (0, f.I)(P),
-        J = (0, f.Bd)(P, I),
+        J = (0, f.Bd)(P, q),
         $ = s.useMemo(
             () =>
                 z && X
@@ -188,7 +188,7 @@ function S(e) {
                                                           autoplay: N,
                                                           onLoadComplete: U,
                                                           lazyLoad: !0,
-                                                          sourceQuestContent: I,
+                                                          sourceQuestContent: q,
                                                       }),
                                                   }),
                                               }),
@@ -202,7 +202,7 @@ function S(e) {
                                           location: v.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           lazyLoad: !0,
-                                          sourceQuestContent: I,
+                                          sourceQuestContent: q,
                                       }),
                             ],
                         }),
@@ -240,8 +240,8 @@ function S(e) {
                 questContent: A,
                 contentPosition: R,
                 rowIndex: B,
-                onReceiveErrorHints: q,
-                sourceQuestContent: I,
+                onReceiveErrorHints: I,
+                sourceQuestContent: q,
             }),
         ],
     });

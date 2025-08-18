@@ -21,10 +21,10 @@ var r = n(951288),
     C = n(388032),
     y = n(220179),
     w = n(906739),
-    T = n(965358),
-    O = n(420196),
+    O = n(965358),
+    T = n(420196),
     S = n(433075);
-function N(e) {
+function P(e) {
     let { handleHide: t } = e;
     return (0, r.jsx)(d.P3F, {
         onClick: t,
@@ -37,7 +37,7 @@ function N(e) {
         }),
     });
 }
-function P(e) {
+function N(e) {
     let { username: t, title: n, videoSrc: i, messageCount: a, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)("div", {
         className: l()(y.videoPreview, c),
@@ -193,7 +193,7 @@ let I = (e) => {
                                           C.intl.string(C.t.znhX2d),
                                       ],
                                   }),
-                                  (0, r.jsx)(N, { handleHide: A }),
+                                  (0, r.jsx)(P, { handleHide: A }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
@@ -207,7 +207,7 @@ let I = (e) => {
                                               children: (0, r.jsxs)("div", {
                                                   className: y.contentVideoContainer,
                                                   children: [
-                                                      (0, r.jsx)(P, {
+                                                      (0, r.jsx)(N, {
                                                           username: C.intl.string(C.t.AkORcn),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
@@ -217,7 +217,7 @@ let I = (e) => {
                                                           reactionCount: "724",
                                                           classname: y.backgroundVideo,
                                                       }),
-                                                      (0, r.jsx)(P, {
+                                                      (0, r.jsx)(N, {
                                                           username: C.intl.string(C.t.DPg3YG),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
@@ -227,7 +227,7 @@ let I = (e) => {
                                                           reaction: "\uD83D\uDC9E",
                                                           classname: y.backgroundVideo,
                                                       }),
-                                                      (0, r.jsx)(P, {
+                                                      (0, r.jsx)(N, {
                                                           username: C.intl.string(C.t.KIele3),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
@@ -302,12 +302,12 @@ let I = (e) => {
                                                       className: y.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)("img", {
-                                                              src: I ? O : S,
+                                                              src: I ? T : S,
                                                               alt: "",
                                                               className: y.previewEmbedImage,
                                                           }),
                                                           (0, r.jsx)("img", {
-                                                              src: I ? w : T,
+                                                              src: I ? w : O,
                                                               alt: "",
                                                               className: y.previewEmbedImage,
                                                           }),

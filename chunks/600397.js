@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(657707),
     l = n(835473),
-    a = n(925329),
-    o = n(63063),
+    o = n(925329),
+    a = n(63063),
     s = n(739566),
     c = n(942951),
     u = n(834129),
@@ -12,8 +12,8 @@ var i = n(657707),
     p = n(388032),
     m = n(372563);
 function f(e) {
-    let { message: t, channel: n, author: f, compact: _ } = e,
-        { nick: g } = (0, s.Sw)(f, n),
+    let { message: t, channel: n, author: f, compact: g } = e,
+        { nick: _ } = (0, s.Sw)(f, n),
         h = (0, c.l)({
             user: f,
             channelId: n.id,
@@ -23,27 +23,27 @@ function f(e) {
         b = (0, l.q)(t.applicationId);
     if (null == b) return null;
     let E = p.intl.format(p.t.m7Lwam, {
-        username: g,
+        username: _,
         usernameHook: h,
         gameName: b.name,
         gameIconHook: (e) =>
             (0, r.jsxs)("span", {
                 className: m.gameContainer,
                 children: [
-                    (0, r.jsx)(a.Z, {
+                    (0, r.jsx)(o.Z, {
                         game: b,
-                        size: a.Z.Sizes.XXSMALL,
+                        size: o.Z.Sizes.XXSMALL,
                         className: m.inlineIcon,
                     }),
                     " ",
                     e,
                 ],
             }),
-        helpdeskArticle: o.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
+        helpdeskArticle: a.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, r.jsx)(u.Z, {
         iconNode: (0, r.jsx)(i.iWm, { size: "sm" }),
-        compact: _,
+        compact: g,
         contentClassName: m.content,
         children: (0, r.jsx)("div", { children: E }),
     });

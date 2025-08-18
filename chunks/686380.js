@@ -2,23 +2,23 @@ n.d(t, { Z: () => M }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(913527),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(913527),
+    s = n.n(a),
     c = n(873546),
     u = n(442837),
     d = n(755721),
     p = n(481060),
     m = n(568836),
     f = n(100527),
-    _ = n(906732),
-    g = n(834129),
+    g = n(906732),
+    _ = n(834129),
     h = n(963249),
     b = n(594174),
     E = n(78839),
     C = n(626135),
-    v = n(55935),
-    O = n(63063),
+    O = n(55935),
+    v = n(63063),
     y = n(74538),
     x = n(276444),
     j = n(623879),
@@ -31,7 +31,7 @@ var r = n(951288),
     w = n(269143),
     Z = n(754761),
     R = n(295234);
-function L(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function L(e, t, n) {
         e
     );
 }
-class D extends i.Component {
+class L extends i.Component {
     getTitleText() {
         let e = b.default.getUser(this.trialOffer.user_id),
             t = null != e ? e.username : "???",
@@ -63,7 +63,7 @@ class D extends i.Component {
     }
     getBodyText() {
         return this.recipientHasNitro && !this.isSender && void 0 === this.trialOffer.redeemed_at
-            ? A.intl.format(A.t.LwCwT0, { helpdeskArticle: O.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM) })
+            ? A.intl.format(A.t.LwCwT0, { helpdeskArticle: v.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM) })
             : this.offerExpired
               ? null
               : A.intl.string(A.t.lQLlOT);
@@ -106,11 +106,11 @@ class D extends i.Component {
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
         if (void 0 !== e.redeemed_at && !this.isSender && null !== t)
-            return A.intl.formatToPlainString(A.t.nP0ivb, { date: (0, v.vc)(s()(t), "LL") });
+            return A.intl.formatToPlainString(A.t.nP0ivb, { date: (0, O.vc)(s()(t), "LL") });
         if (this.recipientHasNitro || void 0 === e.expires_at) return null;
         let n = s()(e.expires_at);
         return this.offerExpired
-            ? A.intl.formatToPlainString(A.t.PuSHfX, { date: (0, v.vc)(s()(n), "LL") })
+            ? A.intl.formatToPlainString(A.t.PuSHfX, { date: (0, O.vc)(s()(n), "LL") })
             : (0, I.F6)(n.valueOf());
     }
     renderMedia() {
@@ -159,7 +159,7 @@ class D extends i.Component {
                                                         }),
                                                     )),
                                                     r.forEach(function (t) {
-                                                        L(e, t, n[t]);
+                                                        D(e, t, n[t]);
                                                     });
                                             }
                                             return e;
@@ -169,8 +169,8 @@ class D extends i.Component {
                     })({ analyticsLocations: [] }),
                 children: A.intl.string(A.t.Lm2nFR),
             }),
-            a = this.isSender ? l : i,
-            o =
+            o = this.isSender ? l : i,
+            a =
                 "SOCIAL" === t
                     ? (0, r.jsx)(p.Eep, {
                           src: R.Z,
@@ -184,11 +184,11 @@ class D extends i.Component {
                           width: 144,
                           className: w.imgDMEmbedXP,
                       });
-        return (0, r.jsxs)(g.Z, {
+        return (0, r.jsxs)(_.Z, {
             compact: !1,
             contentClassName: w.containerDMEmbedXP,
             children: [
-                o,
+                a,
                 (0, r.jsxs)("div", {
                     className: w.contentDMEmbedXP,
                     children: [
@@ -209,7 +209,7 @@ class D extends i.Component {
                         }),
                         (0, r.jsx)("div", {
                             className: w.buttonContainerDMEmbedXP,
-                            children: a,
+                            children: o,
                         }),
                     ],
                 }),
@@ -224,7 +224,7 @@ class D extends i.Component {
                 return this.renderRefreshedDMEmbed({ emphasis: "PERKS" });
             default:
                 return (0, r.jsxs)("div", {
-                    className: a()(w.tile, w.container),
+                    className: o()(w.tile, w.container),
                     children: [
                         (0, r.jsx)("div", {
                             className: w.media,
@@ -253,14 +253,14 @@ class D extends i.Component {
     }
     constructor(e) {
         super(e),
-            L(this, "trialOffer", void 0),
-            L(this, "currentUser", void 0),
-            L(this, "recipientHasNitro", void 0),
-            L(this, "trialEndsAt", void 0),
-            L(this, "analyticsLocations", void 0),
-            L(this, "offerExpired", void 0),
-            L(this, "isSender", void 0),
-            L(this, "dmRefreshXPCohort", void 0),
+            D(this, "trialOffer", void 0),
+            D(this, "currentUser", void 0),
+            D(this, "recipientHasNitro", void 0),
+            D(this, "trialEndsAt", void 0),
+            D(this, "analyticsLocations", void 0),
+            D(this, "offerExpired", void 0),
+            D(this, "isSender", void 0),
+            D(this, "dmRefreshXPCohort", void 0),
             (this.trialOffer = e.trialOffer),
             (this.currentUser = e.currentUser),
             (this.recipientHasNitro = e.recipientHasNitro),
@@ -281,24 +281,24 @@ function M(e) {
             }),
             [n, t],
         ),
-        a = b.default.getCurrentUser(),
-        o = (0, u.e7)(
+        o = b.default.getCurrentUser(),
+        a = (0, u.e7)(
             [b.default],
-            () => null != i && (0, y.I5)(void 0 !== a && i.user_id === a.id ? a : b.default.getUser(i.user_id)),
+            () => null != i && (0, y.I5)(void 0 !== o && i.user_id === o.id ? o : b.default.getUser(i.user_id)),
         ),
         s = (0, u.e7)([E.Z], () => {
             var e;
-            return o ? (null == (e = E.Z.getPremiumTypeSubscription()) ? void 0 : e.trialEndsAt) : null;
+            return a ? (null == (e = E.Z.getPremiumTypeSubscription()) ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: d } = (0, _.ZP)(f.Z.SHARE_NITRO_EMBED),
+        { analyticsLocations: d } = (0, g.ZP)(f.Z.SHARE_NITRO_EMBED),
         p = j.ZP.useExperiment({ location: "ConnectedReferralTrialEmbed" });
     return l
         ? (0, r.jsx)(m.OR, { isHorizontal: !c.tq })
-        : n && null != i && void 0 !== a
-          ? (0, r.jsx)(D, {
+        : n && null != i && void 0 !== o
+          ? (0, r.jsx)(L, {
                 trialOffer: i,
-                currentUser: a,
-                recipientHasNitro: o,
+                currentUser: o,
+                recipientHasNitro: a,
                 trialEndsAt: s,
                 analyticsLocations: d,
                 dmRefreshXPCohort: p.cohort,

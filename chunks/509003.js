@@ -126,20 +126,16 @@ function y(e, t) {
             (t[u.wF.ROBLOX_TIME_STARTED] = c.toString()),
             (a.sku = null != (i = s.universeId) ? i : void 0),
             null != s.placeId && (t[u.wF.PLACE_ID] = s.placeId),
-            null != s.jobId && (t[u.wF.JOB_ID] = s.jobId),
-            null != s.robloxUserId && (t[u.wF.ROBLOX_USER_ID] = s.robloxUserId),
             (a.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
     }
     return a;
 }
 function O(e) {
-    return null == e[u.SQ.UNIVERSE_ID] || null == e[u.SQ.PLACE_ID] || null == e[u.SQ.JOB_ID] || null == e[u.SQ.USER_ID]
+    return null == e[u.SQ.UNIVERSE_ID] || null == e[u.SQ.PLACE_ID]
         ? null
         : {
               universeId: e[u.SQ.UNIVERSE_ID],
               placeId: e[u.SQ.PLACE_ID],
-              jobId: e[u.SQ.JOB_ID],
-              robloxUserId: e[u.SQ.USER_ID],
           };
 }
 function v(e) {

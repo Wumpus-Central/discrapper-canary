@@ -182,9 +182,11 @@ function A(e) {
             i(!0);
             try {
                 await h.ZP.saveImage(d, t.contentType, m.wV),
+                    (0, S.rm)(d, !0),
                     (0, c.showToast)((0, c.createToast)(C.intl.string(C.t.cqpdJS), c.ToastType.SUCCESS));
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(C.intl.string(C.t["8Ve/S0"]), c.ToastType.FAILURE));
+                (0, S.rm)(d, !1),
+                    (0, c.showToast)((0, c.createToast)(C.intl.string(C.t["8Ve/S0"]), c.ToastType.FAILURE));
             } finally {
                 i(!1);
             }
@@ -203,7 +205,7 @@ function L(e) {
     let n = (0, m.s$)((0, m.lT)(t.original, t.url), t.contentType, t.originalContentType);
     return (0, a.jsx)(w, {
         onClick: () => {
-            (0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, O.q)({ href: n });
+            (0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, S.jc)(n), (0, O.q)({ href: n });
         },
         tooltipText: C.intl.string(C.t.q5jLJC),
         icon: c.rgF,
@@ -255,9 +257,10 @@ function N(e) {
         try {
             var t;
             await h.ZP.copyImage(e, null != (t = r.originalContentType) ? t : r.contentType),
+                (0, S.gR)(e, !0),
                 (0, c.showToast)((0, c.createToast)(C.intl.string(C.t.bhUpvL), c.ToastType.SUCCESS));
-        } catch (e) {
-            (0, c.showToast)((0, c.createToast)(C.intl.string(C.t.PTPbj4), c.ToastType.FAILURE));
+        } catch (t) {
+            (0, S.gR)(e, !1), (0, c.showToast)((0, c.createToast)(C.intl.string(C.t.PTPbj4), c.ToastType.FAILURE));
         }
     }
     return (0, a.jsxs)(c.v2r, {
@@ -293,10 +296,23 @@ function N(e) {
                                         r.contentType,
                                         r.originalContentType,
                                     );
-                                    (0, f.JG)(e, () =>
-                                        (0, c.showToast)(
-                                            (0, c.createToast)(C.intl.string(C.t["L/PwZW"]), c.ToastType.SUCCESS),
-                                        ),
+                                    (0, f.JG)(
+                                        e,
+                                        () => {
+                                            (0, S.mL)(e, !0),
+                                                (0, c.showToast)(
+                                                    (0, c.createToast)(
+                                                        C.intl.string(C.t["L/PwZW"]),
+                                                        c.ToastType.SUCCESS,
+                                                    ),
+                                                );
+                                        },
+                                        () => {
+                                            (0, S.mL)(e, !1),
+                                                (0, c.showToast)(
+                                                    (0, c.createToast)(C.intl.string(C.t.uVV00N), c.ToastType.FAILURE),
+                                                );
+                                        },
                                     );
                                 },
                             },

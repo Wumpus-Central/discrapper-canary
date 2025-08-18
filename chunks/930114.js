@@ -3,16 +3,16 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(594174),
-    a = n(78839),
-    o = n(585483),
+    o = n(78839),
+    a = n(585483),
     s = n(74538),
     c = n(138464),
     u = n(474936),
     d = n(981631);
 function p(e) {
     let { processedCode: t, channelContext: p, customGiftMessage: m, giftInfo: f } = e,
-        _ = !1,
-        g = null,
+        g = !1,
+        _ = null,
         h = l.default.getCurrentUser(),
         b = (0, s.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
@@ -54,10 +54,10 @@ function p(e) {
                             emojiName: null == f || null == (i = f.emoji) ? void 0 : i.name,
                             soundId: null == f || null == (l = f.sound) ? void 0 : l.id,
                             onComplete: (e, t) => {
-                                (g = e),
+                                (_ = e),
                                     t &&
-                                        ((_ = t),
-                                        e.isSubscription && null == a.Z.getPremiumSubscription(!1) && (0, c.H)(!0));
+                                        ((g = t),
+                                        e.isSubscription && null == o.Z.getPremiumSubscription(!1) && (0, c.H)(!0));
                             },
                         },
                         n,
@@ -68,13 +68,13 @@ function p(e) {
         {
             onCloseCallback: () => {
                 var e;
-                _ &&
-                    null != g &&
+                g &&
+                    null != _ &&
                     !b &&
-                    g.isSubscription &&
-                    (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
+                    _.isSubscription &&
+                    (null == _ || null == (e = _.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
                         u.p9.TIER_2 &&
-                    o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                    a.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

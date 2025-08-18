@@ -327,46 +327,37 @@ class eu extends (r = l.PureComponent) {
     }
     renderInviteHeader() {
         let { invite: e } = this.props;
-        return (null == e ? void 0 : e.stage_instance) != null && null != e.guild
-            ? (0, i.jsx)(S.Z, {
-                  stageInstance: e.stage_instance,
-                  guild: e.guild,
+        return (null == e ? void 0 : e.guild_scheduled_event) != null
+            ? (0, i.jsx)(O.r, {
+                  channel: e.channel,
+                  guildScheduledEvent: e.guild_scheduled_event,
               })
-            : (null == e ? void 0 : e.guild_scheduled_event) != null
-              ? (0, i.jsx)(O.r, {
-                    channel: e.channel,
-                    guildScheduledEvent: e.guild_scheduled_event,
-                })
-              : (0, i.jsx)(Y.Z, {
-                    invite: e,
-                    inUnclaimedFlow: !0,
-                });
+            : (0, i.jsx)(Y.Z, {
+                  invite: e,
+                  inUnclaimedFlow: !0,
+              });
     }
     renderInviteButton() {
-        let { invite: e, consentRequired: t } = this.props,
-            { consent: n, registering: r } = this.state,
-            l = I.zx.Colors.BRAND,
-            a = en.intl.string(en.t["825cFx"]);
-        return (
-            (null == e ? void 0 : e.stage_instance) != null &&
-                ((l = I.zx.Colors.GREEN), (a = en.intl.string(en.t["5UKyUl"]))),
-            (0, i.jsx)(p.ua7, {
-                text: !n && t ? en.intl.string(en.t.AY4IVF) : null,
-                children: (e) =>
-                    (0, i.jsx)(
-                        "div",
-                        es(ea({ className: ei.marginTop8 }, e), {
-                            children: (0, i.jsx)(I.zx, {
-                                type: "submit",
-                                submitting: r,
-                                disabled: !this.hasConsent(),
-                                color: l,
-                                children: a,
-                            }),
+        let { consentRequired: e } = this.props,
+            { consent: t, registering: n } = this.state,
+            r = I.zx.Colors.BRAND,
+            l = en.intl.string(en.t["825cFx"]);
+        return (0, i.jsx)(p.ua7, {
+            text: !t && e ? en.intl.string(en.t.AY4IVF) : null,
+            children: (e) =>
+                (0, i.jsx)(
+                    "div",
+                    es(ea({ className: ei.marginTop8 }, e), {
+                        children: (0, i.jsx)(I.zx, {
+                            type: "submit",
+                            submitting: n,
+                            disabled: !this.hasConsent(),
+                            color: r,
+                            children: l,
                         }),
-                    ),
-            })
-        );
+                    }),
+                ),
+        });
     }
     renderInvite() {
         let { invite: e, authBoxClassName: t } = this.props,
@@ -378,9 +369,7 @@ class eu extends (r = l.PureComponent) {
                 parsedDateOfBirth: c,
                 globalNameFocused: u,
             } = this.state,
-            d =
-                (null == e ? void 0 : e.stage_instance) != null ||
-                (null == e ? void 0 : e.guild_scheduled_event) != null,
+            d = (null == e ? void 0 : e.guild_scheduled_event) != null,
             h = (e) => {
                 this.setState({ globalName: e });
             };

@@ -115,13 +115,12 @@ let I = new S(o.Z, {
                     target_type: l,
                     target_user: o,
                     target_application: a,
-                    stage_instance: s,
-                    type: c,
-                    channel: u,
-                    guild: d,
-                    is_nickname_changeable: p,
+                    type: s,
+                    channel: c,
+                    guild: u,
+                    is_nickname_changeable: d,
                 } = e,
-                f = {
+                p = {
                     code: r,
                     state: i,
                     approximate_member_count: t,
@@ -129,15 +128,14 @@ let I = new S(o.Z, {
                     target_type: l,
                     target_user: o,
                     target_application: a,
-                    stage_instance: s,
-                    type: c,
-                    is_nickname_changeable: p,
+                    type: s,
+                    is_nickname_changeable: d,
                 };
             return (
-                null != u && (f.channel = y({}, u)),
-                null != d && (f.guild = (0, g.Qs)(d)),
-                null != e.inviter && (f.inviter = y({}, e.inviter)),
-                f
+                null != c && (p.channel = y({}, c)),
+                null != u && (p.guild = (0, g.Qs)(u)),
+                null != e.inviter && (p.inviter = y({}, e.inviter)),
+                p
             );
         })(t);
         E.push([n, e.resolve]);

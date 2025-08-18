@@ -1,12 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => u });
 var r = n(951288),
     i = n(647438),
-    l = n(208450),
-    a = n(921667);
-let o = i.memo(function (e) {
-    let { searchContext: t, focusSectionProps: n } = e;
+    l = n(442837),
+    a = n(738018),
+    o = n(607802),
+    s = n(208450),
+    c = n(921667);
+let u = i.memo(function (e) {
+    let { searchContext: t, focusSectionProps: n } = e,
+        i = (0, l.e7)([a.Z], () => {
+            let { mode: e } = a.Z.getState(t);
+            return (0, o.Fz)(e.filter);
+        });
     return (0, r.jsx)(
-        l.o,
+        s.o,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -34,10 +41,11 @@ let o = i.memo(function (e) {
         })(
             {
                 searchContext: t,
-                className: a.appTitleSearch,
-                searchBarContainerClassName: a.appTitleSearchBarContainer,
-                searchBarClassName: a.appTitleSearchBar,
-                searchPopoutClassName: a.appTitleSearchPopout,
+                className: c.appTitleSearch,
+                searchBarContainerClassName: c.appTitleSearchBarContainer,
+                searchBarClassName: c.appTitleSearchBar,
+                searchPopoutClassName: i ? c.appTitleSearchPopoutDatePicker : c.appTitleSearchPopout,
+                popoutAlignment: "center",
             },
             n,
         ),

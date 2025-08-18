@@ -80,8 +80,8 @@ function E(e) {
         R = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         B = (0, h.g2)({ useReducedMotion: R }),
         k = (0, d.O5)(),
-        q = (0, p._s)({ quest: S }),
-        I = (0, p.z)(S),
+        I = (0, p._s)({ quest: S }),
+        q = (0, p.z)(S),
         Q = (0, p.B6)(S.config.expiresAt, {
             month: "numeric",
             day: "numeric",
@@ -243,8 +243,8 @@ function E(e) {
                                     }
                                 },
                             })
-                          : (0, u.$J)(S) && !I && J !== f.LI.DESKTOP
-                            ? q
+                          : (0, u.$J)(S) && !q && J !== f.LI.DESKTOP
+                            ? I
                                 ? (0, r.jsx)(a.zx, {
                                       color: a.Tt.PRIMARY,
                                       className: j.button,

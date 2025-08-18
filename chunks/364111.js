@@ -1,4 +1,4 @@
-n.d(t, { E: () => p }), n(388685);
+n.d(t, { E: () => f }), n(388685);
 var r = n(647438),
     i = n(311570),
     l = n(442837),
@@ -6,13 +6,15 @@ var r = n(647438),
     o = n(358085),
     s = n(335131),
     c = n(597688),
-    u = n(52030);
-let d = i.v.VARIANTS_GROUP;
-function p(e, t, n) {
-    let i = (0, l.e7)([a.Z], () => a.Z.hasLoadedExperiments),
-        p = (0, l.e7)([c.Z], () => c.Z.skipNumCategories),
-        f = (0, o.isDesktop)() || (0, o.isWeb)(),
-        [h, g, m, b, _, O, E, y] = (0, l.Wu)([u.Z], () => {
+    u = n(52030),
+    d = n(447988);
+let p = i.v.VARIANTS_GROUP;
+function f(e, t, n) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        f = (0, l.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        h = (0, l.e7)([c.Z], () => c.Z.skipNumCategories),
+        g = (0, o.isDesktop)() || (0, o.isWeb)(),
+        [m, b, _, O, E, y, v, I] = (0, l.Wu)([u.Z], () => {
             var t, n;
             return [
                 u.Z.getShopBlocks(e),
@@ -25,7 +27,7 @@ function p(e, t, n) {
                 u.Z.getShopHomeConfigOverride(),
             ];
         }),
-        v = (0, r.useMemo)(() => {
+        C = (0, r.useMemo)(() => {
             var e, n;
             return (
                 (e = (function (e) {
@@ -55,12 +57,12 @@ function p(e, t, n) {
                 })({}, t)),
                 (n = n =
                     {
-                        variantsReturnStyle: d,
-                        includeBundles: f,
+                        variantsReturnStyle: p,
+                        includeBundles: g,
                         includePopularPicks: !0,
                         includeDynamicBlocks: !0,
-                        shopHomeConfig: y,
-                        skipNumCategories: p,
+                        shopHomeConfig: I,
+                        skipNumCategories: h,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -76,22 +78,23 @@ function p(e, t, n) {
                       }),
                 e
             );
-        }, [t, f, y, p]),
-        I = (0, r.useMemo)(() => !(0, s.oc)(b, v), [b, v]),
-        C = (0, r.useMemo)(() => Date.now() - g < 600000, [g]);
+        }, [t, g, I, h]),
+        S = (0, r.useMemo)(() => !(0, s.oc)(O, C), [O, C]),
+        N = (0, d.J)(m, null != y && y, i),
+        T = (0, r.useMemo)(() => !N && Date.now() - b < 600000, [b, N]);
     return (
         (0, r.useEffect)(() => {
-            if (!i || O) return;
-            let t = Date.now() - m < 600000;
-            (null == _ || !t) && (I || !C || E) && (0, s.Ov)(e, v, n);
-        }, [i, O, _, m, C, E, I, v, e, n]),
+            if (!f || y) return;
+            let t = Date.now() - _ < 600000;
+            (null == E || !t) && (S || !T || v) && (0, s.Ov)(e, C, n);
+        }, [f, y, E, _, T, v, S, C, e, n]),
         {
-            isFetchingShopHome: O,
-            fetchShopHomeError: _,
-            shopBlocks: h,
+            isFetchingShopHome: y,
+            fetchShopHomeError: E,
+            shopBlocks: m,
             refreshShopHome: (0, r.useCallback)(() => {
-                (0, s.Ov)(e, v, n);
-            }, [e, v, n]),
+                (0, s.Ov)(e, C, n);
+            }, [e, C, n]),
         }
     );
 }

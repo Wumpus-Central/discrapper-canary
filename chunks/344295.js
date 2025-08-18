@@ -217,21 +217,16 @@ class K extends i.PureComponent {
     }
     renderAuthenticatedHeader() {
         let { invite: e } = this.props;
-        return null != e.stage_instance && null != e.guild
-            ? (0, r.jsx)(_.Z, {
-                  stageInstance: e.stage_instance,
-                  guild: e.guild,
+        return null != e.guild_scheduled_event
+            ? (0, r.jsx)(f.r, {
+                  channel: e.channel,
+                  guildScheduledEvent: e.guild_scheduled_event,
               })
-            : null != e.guild_scheduled_event
-              ? (0, r.jsx)(f.r, {
-                    channel: e.channel,
-                    guildScheduledEvent: e.guild_scheduled_event,
-                })
-              : (0, r.jsx)(P.Z, { invite: e });
+            : (0, r.jsx)(P.Z, { invite: e });
     }
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
-        return (null != e.stage_instance || null != e.guild_scheduled_event) && null != e.guild
+        return null != e.guild_scheduled_event && null != e.guild
             ? (0, r.jsx)(g.ZP, {
                   className: U.marginTop20,
                   children: (0, r.jsx)(_.y, {
@@ -242,12 +237,13 @@ class K extends i.PureComponent {
             : null;
     }
     renderAuthenticatedOrDownload() {
-        let { invite: e } = this.props,
-            t = null != e.stage_instance ? B.intl.string(B.t["5UKyUl"]) : B.intl.string(B.t.ohMvm5);
         return (0, r.jsxs)("div", {
             children: [
                 (0, r.jsxs)(g.ZP, {
-                    children: [this.renderAuthenticatedHeader(), this.renderButton(t, this.handleAccept)],
+                    children: [
+                        this.renderAuthenticatedHeader(),
+                        this.renderButton(B.intl.string(B.t.ohMvm5), this.handleAccept),
+                    ],
                 }),
                 this.renderAuthenicatedFooter(),
             ],
@@ -356,7 +352,7 @@ class K extends i.PureComponent {
             F(this, "renderButton", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: i } = t.props,
-                    l = null != i.stage_instance || null != i.guild_scheduled_event;
+                    l = null != i.guild_scheduled_event;
                 return M.KO
                     ? (0, r.jsx)(g.zx, {
                           className: l ? U.marginTop20 : U.marginTop40,

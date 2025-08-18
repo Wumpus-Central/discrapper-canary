@@ -1,13 +1,14 @@
-n.d(t, { p: () => c }), n(388685);
+n.d(t, { p: () => u }), n(388685);
 var r = n(100527),
     i = n(474936),
     a = n(981631),
     o = n(388032),
-    s = n(700366);
-let l = {
+    s = n(59144),
+    l = n(700366);
+let c = {
         gradient: ["rgb(2, 25, 47)", "rgb(9, 95, 51)", "rgb(21, 209, 46)"],
     },
-    c = {
+    u = {
         rewards: [
             {
                 skuId: "1287835633615765524",
@@ -35,7 +36,7 @@ let l = {
         },
         dismissibleContentVersion: 4,
         firstTimeNotice: {
-            getImageUrl: () => s.Z,
+            getImageUrl: () => l.Z,
             title: () => o.intl.string(o.t.PWaKU1),
             description: () => o.intl.string(o.t.EWn7kZ),
             cta: () => o.intl.string(o.t.RzWDqa),
@@ -44,16 +45,23 @@ let l = {
         },
         planSelection: {
             heading: () => "Free Reward for YOU!",
-            subheading: () => "Choose one you love!",
-            gradientConfig: l,
-            getImageUrl: () => s.Z,
+            gradientConfig: c,
+            getImageUrl: () => l.Z,
             getBackgroundImageUrl: () => "",
         },
         eligiblePlanIds: [i.Xh.PREMIUM_YEAR_TIER_2, i.Xh.PREMIUM_MONTH_TIER_2],
         planSelectionBanner: {
             desktopBannerText: () => "You will receive a free deco with this purchase. Choose in the next step.",
             mobileBannerText: () => o.intl.string(o.t.VBnNJS),
-            getImageUrl: () => s.Z,
-            gradientConfig: () => l,
+            getImageUrl: () => l.Z,
+            gradientConfig: () => c,
+        },
+        billingSettingsMarketingBanner: {
+            getAnimatedImageUrl: () => s.Z,
+            getStaticImageUrl: () => "",
+            title: () => "Gift Nitro, Get Treated",
+            body: () =>
+                "All treat, no jumpscare. Gift Nitro this October and get this exclusive, spooky avatar decoration for free.",
+            gradientConfig: c,
         },
     };

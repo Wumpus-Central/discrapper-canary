@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(758371),
-    o = n(100527),
+    o = n(758371),
+    a = n(100527),
     s = n(906732),
     c = n(758199),
     u = n(914498),
@@ -12,14 +12,14 @@ var i = n(442837),
     p = n(594190),
     m = n(562224),
     f = n(199902),
-    _ = n(77498),
-    g = n(19780),
+    g = n(77498),
+    _ = n(19780),
     h = n(768581),
     b = n(358085),
     E = n(709054),
     C = n(915553),
-    v = n(658805),
-    O = n(388032);
+    O = n(658805),
+    v = n(388032);
 function y(e) {
     let t,
         { currentUserId: y, message: x, application: j, channel: I, analyticsLocations: S, onView: T } = e,
@@ -28,33 +28,33 @@ function y(e) {
             id: j.id,
             icon: j.icon,
         }),
-        Z = (0, i.e7)([p.ZP, _.Z], () =>
+        Z = (0, i.e7)([p.ZP, g.Z], () =>
             null != x.application
                 ? p.ZP.getVisibleRunningGames().find((e) => {
                       var t;
                       let { id: n, name: r } = e;
                       return (
                           null != x.application &&
-                          (null != n ? n : null == (t = _.Z.getGameByName(r)) ? void 0 : t.id) === x.application.id
+                          (null != n ? n : null == (t = g.Z.getGameByName(r)) ? void 0 : t.id) === x.application.id
                       );
                   })
                 : null,
         ),
         R = (0, i.e7)([f.Z], () => f.Z.getCurrentUserActiveStream()),
-        L = (0, i.e7)([g.Z], () => g.Z.getChannelId()),
-        D = E.default.extractTimestamp(x.id) + C.e < Date.now(),
-        M = (0, r.jsx)(r.Fragment, { children: (0, a._0)(x, j, I, y, !1) }),
-        { newestAnalyticsLocation: k } = (0, s.ZP)(S, o.Z.REQUEST_TO_STREAM_INVITE_EMBED);
+        D = (0, i.e7)([_.Z], () => _.Z.getChannelId()),
+        L = E.default.extractTimestamp(x.id) + C.e < Date.now(),
+        M = (0, r.jsx)(r.Fragment, { children: (0, o._0)(x, j, I, y, !1) }),
+        { newestAnalyticsLocation: k } = (0, s.ZP)(S, a.Z.REQUEST_TO_STREAM_INVITE_EMBED);
     return (
-        D
-            ? (t = O.intl.string(v.default.u4QmWl))
+        L
+            ? (t = v.intl.string(O.default.u4QmWl))
             : null != R
-              ? (t = O.intl.string(v.default.P0wwmJ))
-              : L !== I.id
-                ? (t = O.intl.string(v.default.qRXatr))
-                : null == Z && (t = O.intl.string(v.default["43zohI"])),
+              ? (t = v.intl.string(O.default.P0wwmJ))
+              : D !== I.id
+                ? (t = v.intl.string(O.default.qRXatr))
+                : null == Z && (t = v.intl.string(O.default["43zohI"])),
         (0, r.jsx)(c.W, {
-            header: O.intl.string(v.default.DKHheX),
+            header: v.intl.string(O.default.DKHheX),
             title: j.name,
             staticBannerSrc: P,
             videoBannerSrc: N,
@@ -66,7 +66,7 @@ function y(e) {
                     ? []
                     : [
                           {
-                              label: O.intl.string(v.default["5+172d"]),
+                              label: v.intl.string(O.default["5+172d"]),
                               trackingArea: u.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {

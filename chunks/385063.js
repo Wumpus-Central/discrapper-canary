@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(100527),
-    o = n(769409),
+    o = n(100527),
+    a = n(769409),
     s = n(592125),
     c = n(739566),
     u = n(834129),
@@ -12,8 +12,8 @@ var i = n(442837),
 function p(e) {
     let { message: t, usernameHook: n, compact: p, isForumPost: m } = e,
         f = (0, c.ZP)(t),
-        _ = n(f),
-        g = (0, i.e7)([s.Z], () => {
+        g = n(f),
+        _ = (0, i.e7)([s.Z], () => {
             var e, n;
             return null != (n = null == (e = s.Z.getChannel(t.channel_id)) ? void 0 : e.isGroupDM()) && n;
         });
@@ -24,10 +24,10 @@ function p(e) {
             color: "currentColor",
         }),
         timestamp: t.timestamp,
-        children: g
+        children: _
             ? d.intl.format("" === t.content ? d.t.AI1ZZm : d.t.geP3ra, {
                   username: f.nick,
-                  usernameHook: _,
+                  usernameHook: g,
                   channelName: (0, r.jsx)(
                       l.Text,
                       {
@@ -48,11 +48,11 @@ function p(e) {
                       },
                       "edit-group-button-".concat(t.id),
                   ),
-                  onEditGroup: () => (0, o.B)(t.channel_id, a.Z.GROUP_DM_SYSTEM_MESSAGE_NAME),
+                  onEditGroup: () => (0, a.B)(t.channel_id, o.Z.GROUP_DM_SYSTEM_MESSAGE_NAME),
               })
             : d.intl.format(m ? d.t.SOQ4hI : d.t.oItgEx, {
                   username: f.nick,
-                  usernameHook: _,
+                  usernameHook: g,
                   channelName: t.content,
               }),
     });

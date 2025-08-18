@@ -1,5 +1,5 @@
 r(492189)("Int8", function (t) {
-    return function (e, r, n) {
-        return t(this, e, r, n);
+    return function (n, r, e) {
+        return t(this, n, r, e);
     };
 });

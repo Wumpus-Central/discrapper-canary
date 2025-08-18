@@ -2,7 +2,7 @@ n.d(t, {
     $3: () => V,
     Go: () => B,
     JC: () => w,
-    NU: () => D,
+    NU: () => L,
     Nk: () => A,
     R9: () => R,
     RN: () => U,
@@ -11,7 +11,7 @@ n.d(t, {
     Xn: () => z,
     bb: () => H,
     qo: () => M,
-    rY: () => L,
+    rY: () => D,
     sR: () => F,
     tn: () => G,
     wq: () => k,
@@ -21,8 +21,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(239091),
-    a = n(904245),
-    o = n(144144),
+    o = n(904245),
+    a = n(144144),
     s = n(40851),
     c = n(407477),
     u = n(992970),
@@ -30,14 +30,14 @@ var r = n(951288),
     p = n(235894),
     m = n(675478),
     f = n(592125),
-    _ = n(323873),
-    g = n(375954),
+    g = n(323873),
+    _ = n(375954),
     h = n(594174),
     b = n(585483),
     E = n(5967),
     C = n(630388),
-    v = n(358085),
-    O = n(51144),
+    O = n(358085),
+    v = n(51144),
     y = n(91047),
     x = n(50284),
     j = n(804063),
@@ -53,13 +53,13 @@ function T(e, t, n) {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let l = "@".concat(O.ZP.getUserTag(i, { decoration: "never" })),
-                a = "<@".concat(e, ">");
+            let l = "@".concat(v.ZP.getUserTag(i, { decoration: "never" })),
+                o = "<@".concat(e, ">");
             b.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                 plainText: l,
-                rawText: a,
+                rawText: o,
             }),
-                o.Z.startTyping(t);
+                a.Z.startTyping(t);
         },
         [e, t, n],
     );
@@ -91,13 +91,13 @@ function Z(e) {
 function R(e, t) {
     return Z(S("avatarProfile", e, t));
 }
-function L(e, t) {
+function D(e, t) {
     return Z(S("referencedAvatarProfile", e, t));
 }
-function D(e, t) {
+function L(e, t) {
     return Z(S("interactionAvatarProfile", e, t));
 }
-function M(e, t, a, o) {
+function M(e, t, o, a) {
     let { id: c } = t,
         { id: u, flags: d } = e,
         p = (0, C.yE)(d, I.iLy.EPHEMERAL),
@@ -105,19 +105,19 @@ function M(e, t, a, o) {
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!v.isPlatformEmbedded) {
+            if (!O.isPlatformEmbedded) {
                 let t = e.target;
                 if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             let i = f.Z.getChannel(c),
-                s = g.Z.getMessage(c, u),
-                d = _.Z.isEditing(c, u);
+                s = _.Z.getMessage(c, u),
+                d = g.Z.isEditing(c, u);
             null == i ||
                 null == s ||
                 d ||
-                (a({ contextMenu: !0 }),
+                (o({ contextMenu: !0 }),
                 (0, l.jW)(
                     e,
                     async () => {
@@ -129,7 +129,7 @@ function M(e, t, a, o) {
                             n.e("45356"),
                         ]).then(n.bind(n, 225138));
                         return (n) => {
-                            var l, a;
+                            var l, o;
                             return (0, r.jsx)(
                                 e,
                                 ((l = (function (e) {
@@ -157,15 +157,15 @@ function M(e, t, a, o) {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a =
+                                (o = o =
                                     {
                                         message: s,
                                         channel: i,
                                         mediaItem: t,
-                                        shouldHideMediaOptions: o,
+                                        shouldHideMediaOptions: a,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -173,20 +173,20 @@ function M(e, t, a, o) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(o)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                                       }),
                                 l),
                             );
                         };
                     },
                     {
-                        onClose: () => a({ contextMenu: !1 }),
+                        onClose: () => o({ contextMenu: !1 }),
                         context: m,
                     },
                 ));
         },
-        [p, c, u, a, m, o],
+        [p, c, u, o, m, a],
     );
 }
 function k(e, t) {
@@ -238,17 +238,17 @@ function B(e, t) {
 }
 function G(e) {
     var t, n;
-    let { groupId: r, message: l, defaultValue: a, popouts: o } = e,
+    let { groupId: r, message: l, defaultValue: o, popouts: a } = e,
         { canShowReactionsOnMessageHover: s } = c.ZP.useExperiment(
             { location: "useHoveredMessage" },
             { autoTrackExposure: !1 },
         ),
         f = l.author.id,
-        _ = "".concat(r, ":").concat(f),
-        g = i.useRef(a),
+        g = "".concat(r, ":").concat(f),
+        _ = i.useRef(o),
         h =
             ((t = l),
-            (n = o),
+            (n = a),
             i.useCallback(
                 (e) => {
                     if (null == e || !(e.nativeEvent instanceof MouseEvent) || Object.values(n).some((e) => e)) return;
@@ -270,33 +270,33 @@ function G(e) {
                 },
                 [t, n],
             )),
-        [E, C] = i.useState(a);
-    g.current = E || g.current;
-    let v = i.useCallback(
+        [E, C] = i.useState(o);
+    _.current = E || _.current;
+    let O = i.useCallback(
             (e) => {
-                s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !0), h(e), C(!0));
+                s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !0), h(e), C(!0));
             },
-            [E, _, s, h],
+            [E, g, s, h],
         ),
-        O = i.useCallback(() => {
-            b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !1), C(!1);
-        }, [_]);
+        v = i.useCallback(() => {
+            b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !1), C(!1);
+        }, [g]);
     return {
-        hasHovered: g.current,
+        hasHovered: _.current,
         isHovered: E,
-        handleMouseEnter: v,
-        handleMouseLeave: O,
+        handleMouseEnter: O,
+        handleMouseLeave: v,
     };
 }
 function H(e, t) {
     let [n, r] = i.useState(!1),
-        [l, a] = i.useState(!1);
+        [l, o] = i.useState(!1);
     return {
         handleFocus: i.useCallback(
             (t) => {
                 var n, i;
                 let l = null != (i = null == (n = (0, E.uB)(t)) ? void 0 : n.activeElement) ? i : null;
-                (t.target === t.currentTarget || t.currentTarget.contains(l)) && (a(!0), r(!0)), null != e && e(t);
+                (t.target === t.currentTarget || t.currentTarget.contains(l)) && (o(!0), r(!0)), null != e && e(t);
             },
             [e],
         ),
@@ -316,7 +316,7 @@ function V(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e;
         (null == t || (0, j.Z)(t)) &&
-            a.Z.jumpToMessage({
+            o.Z.jumpToMessage({
                 channelId: n.channel_id,
                 messageId: n.message_id,
                 flash: !0,

@@ -349,30 +349,29 @@ class X extends (r = l.PureComponent) {
                 showMobileWebHandoff: c,
                 disableAutofocusOnDefaultForm: u,
             } = this.props,
-            h = !this.hasError("email") && this.hasError("password"),
-            p = (null == r ? void 0 : r.stage_instance) != null;
+            h = !this.hasError("email") && this.hasError("password");
         return (
             (n =
-                null == r || p
-                    ? null != l
-                        ? (0, i.jsx)(M.Z, { giftCode: l })
-                        : (0, i.jsxs)("div", {
-                              className: H.header,
-                              children: [
-                                  (0, i.jsx)(
-                                      _.Dx,
-                                      {
-                                          className: K.marginBottom8,
-                                          children: V.intl.string(V.t["7fNJgI"]),
-                                      },
-                                      "title",
-                                  ),
-                                  !1 === (0, k.isAndroidWeb)()
-                                      ? (0, i.jsx)(_.DK, { children: V.intl.string(V.t.euS7r6) }, "subtitle")
-                                      : null,
-                              ],
-                          })
-                    : (0, i.jsx)(B.Z, { invite: r })),
+                null != r
+                    ? (0, i.jsx)(B.Z, { invite: r })
+                    : null != l
+                      ? (0, i.jsx)(M.Z, { giftCode: l })
+                      : (0, i.jsxs)("div", {
+                            className: H.header,
+                            children: [
+                                (0, i.jsx)(
+                                    _.Dx,
+                                    {
+                                        className: K.marginBottom8,
+                                        children: V.intl.string(V.t["7fNJgI"]),
+                                    },
+                                    "title",
+                                ),
+                                !1 === (0, k.isAndroidWeb)()
+                                    ? (0, i.jsx)(_.DK, { children: V.intl.string(V.t.euS7r6) }, "subtitle")
+                                    : null,
+                            ],
+                        })),
             (0, i.jsxs)(
                 b.Z,
                 {
@@ -457,9 +456,9 @@ class X extends (r = l.PureComponent) {
                                             (0, i.jsx)(_.zx, {
                                                 type: "submit",
                                                 submitting: a === G.u34.LOGGING_IN,
-                                                color: p ? _.zx.Colors.GREEN : _.zx.Colors.BRAND,
+                                                color: _.zx.Colors.BRAND,
                                                 className: K.marginBottom8,
-                                                children: p ? V.intl.string(V.t.wvVThI) : V.intl.string(V.t.dKhVQE),
+                                                children: V.intl.string(V.t.dKhVQE),
                                             }),
                                             (0, i.jsxs)("div", {
                                                 className: K.marginTop4,

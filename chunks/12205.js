@@ -2,7 +2,6 @@ e.exports = {
     container: "container__9b0f4",
     contentWrapper: "contentWrapper__9b0f4",
     noThanksButton: "noThanksButton__9b0f4",
-    stage: "stage__9b0f4",
     inviteContent: "inviteContent__9b0f4",
     inviteSplash: "inviteSplash__9b0f4",
     buttonGroup: "buttonGroup__9b0f4",

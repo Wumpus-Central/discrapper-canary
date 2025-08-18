@@ -1,11 +1,11 @@
 n.d(t, {
     FZ: () => l,
-    ZP: () => a,
+    ZP: () => o,
 });
 var r,
     i = n(818083),
     l = (((r = {}).Control = "CONTROL"), (r.Social = "SOCIAL"), (r.Perks = "PERKS"), r);
-let a = (0, i.B)({
+let o = (0, i.B)({
     kind: "user",
     id: "2025-06_referral_program_dm_embed_refresh_experiment",
     label: "Referral Program DM Embed Refresh Experiment",

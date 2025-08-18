@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685), n(539854);
+n.d(t, { Z: () => v }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(215569),
+    o = n.n(l),
+    a = n(215569),
     s = n(481060),
     c = n(566006),
     u = n(60174),
@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(434624),
     m = n(287151),
     f = n(388032),
-    _ = n(127947),
-    g = n(893973);
+    g = n(127947),
+    _ = n(893973);
 function h(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ function E(e, t) {
     );
 }
 let C = (e, t) => (null == e && null == t) || e === t;
-class v extends i.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -84,8 +84,8 @@ class v extends i.PureComponent {
                 isForumToolbar: b,
                 channel: E,
                 className: C,
-                forceAddReactions: v,
-                reactionClassName: O,
+                forceAddReactions: O,
+                reactionClassName: v,
                 useChatFontScaling: y,
                 forceHideReactionCreates: x,
                 remainingReactions: j,
@@ -93,13 +93,13 @@ class v extends i.PureComponent {
                 visibleReactionsCount: S,
             } = this.props,
             { disableTransitionAppear: T } = this.state,
-            P = y ? g : _,
+            P = y ? _ : g,
             N = S > 0;
-        if (!N && !v) return null;
-        let A = v || N;
-        return (0, r.jsxs)(o.W, {
+        if (!N && !O) return null;
+        let A = O || N;
+        return (0, r.jsxs)(a.W, {
             component: "div",
-            className: a()(P.reactions, C),
+            className: o()(P.reactions, C),
             transitionAppear: !T,
             role: "group",
             transitionLeave: !1,
@@ -116,14 +116,14 @@ class v extends i.PureComponent {
                     isPendingMember: h,
                     isForumToolbar: b,
                     useChatFontScaling: y,
-                    className: O,
+                    className: v,
                 }),
                 j > 0 &&
                     (0, r.jsx)(s.P3F, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, m.op)(E, e);
                         },
-                        className: a()(P.reaction, O, P.remainingReactions),
+                        className: o()(P.reaction, v, P.remainingReactions),
                         "aria-label": f.intl.string(f.t.lfIHs7),
                         children: (0, r.jsxs)(s.Text, {
                             className: P.reactionInner,
@@ -140,7 +140,7 @@ class v extends i.PureComponent {
                         channel: E,
                         useChatFontScaling: y,
                         isHovered: this.state.isHovered,
-                        className: a()({ [P.forceShow]: A }),
+                        className: o()({ [P.forceShow]: A }),
                     }),
             ],
         });
@@ -154,11 +154,11 @@ class v extends i.PureComponent {
             });
     }
 }
-let O = (e) => {
+let v = (e) => {
     let { message: t, maxReactions: n, hoistReaction: l } = e,
         {
-            combinedReactions: a,
-            remainingReactions: o,
+            combinedReactions: o,
+            remainingReactions: a,
             visibleReactionsCount: s,
         } = i.useMemo(() => {
             let e = [],
@@ -170,27 +170,27 @@ let O = (e) => {
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, l),
                 i = null != n && n < r.length ? r.slice(0, n) : r,
-                a = r.length - i.length,
-                o = r.length;
+                o = r.length - i.length,
+                a = r.length;
             return (
                 i.forEach((t) => {
                     t.burst_count > 0 && e.push(E(b({}, t), { type: c.O.BURST })),
                         t.count > 0 && e.push(E(b({}, t), { type: c.O.NORMAL })),
-                        null != t.me_vote && --o;
+                        null != t.me_vote && --a;
                 }),
                 {
                     combinedReactions: e,
-                    visibleReactionsCount: o,
-                    remainingReactions: a,
+                    visibleReactionsCount: a,
+                    remainingReactions: o,
                 }
             );
         }, [l, n, t.reactions]);
     return (0, r.jsx)(
-        v,
+        O,
         E(b({}, e), {
             visibleReactionsCount: s,
-            combinedReactions: a,
-            remainingReactions: o,
+            combinedReactions: o,
+            remainingReactions: a,
         }),
     );
 };

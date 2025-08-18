@@ -1,7 +1,7 @@
 n.d(t, {
-    KB: () => O,
-    b6: () => I,
-    wD: () => b,
+    KB: () => y,
+    b6: () => v,
+    wD: () => E,
 }),
     n(388685);
 var r = n(951288),
@@ -9,108 +9,106 @@ var r = n(951288),
     a = n(442837),
     o = n(597688),
     s = n(479446),
-    l = n(347896),
-    c = n(717401),
-    u = n(975104),
-    d = n(669079),
-    f = n(563132),
-    _ = n(981631),
-    p = n(474936),
-    h = n(388032);
-let m = p.Cj.STANDARD_BOX,
-    g = void 0,
-    [E, b, y] = (0, u.Z)();
-function O(e) {
-    let { isGift: t = !1, giftRecipient: n, giftMessage: u, giftStyle: _, giftingOrigin: b, children: y } = e,
-        { selectedSkuId: O } = (0, f.JL)(),
-        [v, I] = i.useState(n),
-        [T, S] = i.useState(),
-        [A, N] = i.useState(!1),
-        C = (0, d.pO)(v),
-        R = null != (0, l.Z)(),
-        P = g;
-    C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
-    let [w, D] = i.useState(P),
-        L = (0, c.iE)(),
-        [x, M] = i.useState(),
-        [k, j] = i.useState(
-            t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u,
+    l = n(717401),
+    c = n(975104),
+    u = n(669079),
+    d = n(563132),
+    f = n(981631),
+    _ = n(474936),
+    p = n(388032);
+let h = _.Cj.STANDARD_BOX,
+    m = void 0,
+    [g, E, b] = (0, c.Z)();
+function y(e) {
+    let { isGift: t = !1, giftRecipient: n, giftMessage: c, giftStyle: f, giftingOrigin: _, children: E } = e,
+        { selectedSkuId: b } = (0, d.JL)(),
+        [y, O] = i.useState(n),
+        [v, I] = i.useState(),
+        [T, S] = i.useState(!1),
+        A = (0, u.pO)(y),
+        N = m;
+    A && (N = null != f ? f : h);
+    let [C, R] = i.useState(N),
+        P = (0, l.iE)(),
+        [w, D] = i.useState(),
+        [L, x] = i.useState(
+            t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? p.intl.string(p.t.ZkOo1d) : c,
         ),
-        [U, G] = i.useState(void 0),
-        [B, V] = i.useState(void 0),
-        F = (0, d.E5)(O, t),
-        [Z, H] = i.useState(!1),
-        [Y, W] = i.useState(!1),
-        [K, z] = i.useState(),
-        q = i.useCallback(
+        [M, k] = i.useState(void 0),
+        [j, U] = i.useState(void 0),
+        G = (0, u.E5)(b, t),
+        [B, V] = i.useState(!1),
+        [F, Z] = i.useState(!1),
+        [H, Y] = i.useState(),
+        W = i.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    W(!0),
-                    (0, s.YD)(v, F)
+                    Z(!0),
+                    (0, s.YD)(y, G)
                         .then(() => {
-                            W(!1), null == t || t(), H(!0);
+                            Z(!1), null == t || t(), V(!0);
                         })
                         .catch((e) => {
-                            W(!1), z(e), H(!0);
+                            Z(!1), Y(e), V(!0);
                         })
                 );
             },
-            [v, F, W, H, z],
+            [y, G, Z, V, Y],
         ),
-        X = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
-    return (0, r.jsx)(E.Provider, {
+        K = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
+    return (0, r.jsx)(g.Provider, {
         value: {
             isGift: t,
-            giftCode: F,
-            giftMessage: u,
-            giftRecipient: v,
-            setGiftRecipient: I,
-            giftRecipientError: T,
-            setGiftRecipientError: S,
-            validatingGiftRecipient: A,
-            setValidatingGiftRecipient: N,
-            soundEffect: U,
-            setSoundEffect: G,
-            emojiConfetti: B,
-            setEmojiConfetti: V,
-            customGiftMessage: k,
-            setCustomGiftMessage: j,
-            selectedGiftStyle: w,
-            setSelectedGiftStyle: D,
-            sendGiftMessage: q,
-            hasSentMessage: Z,
-            isSendingMessage: Y,
-            giftMessageError: K,
-            recommendedGiftSkuIds: X,
-            giftingOrigin: b,
-            claimableRewards: L,
-            selectedGiftingPromotionReward: x,
-            setSelectedGiftingPromotionReward: M,
+            giftCode: G,
+            giftMessage: c,
+            giftRecipient: y,
+            setGiftRecipient: O,
+            giftRecipientError: v,
+            setGiftRecipientError: I,
+            validatingGiftRecipient: T,
+            setValidatingGiftRecipient: S,
+            soundEffect: M,
+            setSoundEffect: k,
+            emojiConfetti: j,
+            setEmojiConfetti: U,
+            customGiftMessage: L,
+            setCustomGiftMessage: x,
+            selectedGiftStyle: C,
+            setSelectedGiftStyle: R,
+            sendGiftMessage: W,
+            hasSentMessage: B,
+            isSendingMessage: F,
+            giftMessageError: H,
+            recommendedGiftSkuIds: K,
+            giftingOrigin: _,
+            claimableRewards: P,
+            selectedGiftingPromotionReward: w,
+            setSelectedGiftingPromotionReward: D,
         },
-        children: y,
+        children: E,
     });
 }
-let v = {
+let O = {
         isGift: !1,
-        setGiftRecipient: _.dG4,
-        setGiftRecipientError: _.dG4,
-        setValidatingGiftRecipient: _.dG4,
+        setGiftRecipient: f.dG4,
+        setGiftRecipientError: f.dG4,
+        setValidatingGiftRecipient: f.dG4,
         selectedGiftStyle: void 0,
-        setSelectedGiftStyle: _.dG4,
+        setSelectedGiftStyle: f.dG4,
         giftCode: null,
-        sendGiftMessage: _.dG4,
+        sendGiftMessage: f.dG4,
         hasSentMessage: !1,
         isSendingMessage: !1,
         giftMessageError: void 0,
         recommendedGiftSkuIds: [],
         claimableRewards: void 0,
-        setSelectedGiftingPromotionReward: _.dG4,
+        setSelectedGiftingPromotionReward: f.dG4,
     },
-    I = (e) => {
+    v = (e) => {
         let { children: t } = e;
-        return (0, r.jsx)(E.Provider, {
-            value: v,
+        return (0, r.jsx)(g.Provider, {
+            value: O,
             children: t,
         });
     };

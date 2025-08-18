@@ -1,42 +1,42 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(913527),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(913527),
+    s = n.n(a),
     c = n(481060),
     u = n(739566),
     d = n(318713),
     p = n(223021),
     m = n(942951),
     f = n(594174),
-    _ = n(55935),
-    g = n(764295),
+    g = n(55935),
+    _ = n(764295),
     h = n(388032),
     b = n(424271),
     E = n(724913),
     C = n(328756);
-let v = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: v, reportedTimestamp: O } = e,
+let O = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: a, messageId: O, reportedTimestamp: v } = e,
         y = f.default.getUser(t),
-        x = i.useMemo(() => (l ? (0, p.Z)((0, _.vc)(s()(), "LT")) : null), [l]),
+        x = i.useMemo(() => (l ? (0, p.Z)((0, g.vc)(s()(), "LT")) : null), [l]),
         j = (0, m.l)({
             user: y,
-            channelId: o.id,
+            channelId: a.id,
             guildId: n,
-            messageId: v,
-        })((0, u.JZ)(y, o)),
+            messageId: O,
+        })((0, u.JZ)(y, a)),
         I = null != y ? y.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : C,
         S =
             null != y
-                ? h.intl.format(g.default["+zqXZm"], {
+                ? h.intl.format(_.default["+zqXZm"], {
                       username: y.username,
                       onUserClick: j,
                   })
-                : h.intl.string(g.default.xpRjfX);
+                : h.intl.string(_.default.xpRjfX);
     return (0, r.jsxs)("div", {
-        className: a()(E.messageSpine, E.repliedMessage, x),
+        className: o()(E.messageSpine, E.repliedMessage, x),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: I,
@@ -59,7 +59,7 @@ let v = (e) => {
                         children: "\u2022",
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: O,
+                        timestamp: v,
                         className: b.timestamp,
                     }),
                 ],

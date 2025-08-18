@@ -2,11 +2,11 @@ n.d(t, { Z: () => c });
 var r,
     i,
     l = n(442837),
-    a = n(570140);
-let o = { matureAgree: !1 };
+    o = n(570140);
+let a = { matureAgree: !1 };
 class s extends (i = l.ZP.Store) {
     get didMatureAgree() {
-        return o.matureAgree;
+        return a.matureAgree;
     }
 }
 (r = "displayName") in s
@@ -17,8 +17,8 @@ class s extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (s[r] = "ApplicationStoreSettingsStore");
-let c = new s(a.Z, {
+let c = new s(o.Z, {
     APPLICATION_STORE_MATURE_AGREE: function () {
-        o.matureAgree = !0;
+        a.matureAgree = !0;
     },
 });

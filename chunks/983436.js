@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(287734),
-    a = n(475468),
-    o = n(358555),
+    o = n(475468),
+    a = n(358555),
     s = n(955415),
     c = n(944486),
     u = n(914010),
@@ -11,23 +11,23 @@ var r = n(951288),
     p = n(981631),
     m = n(388032),
     f = n(105341);
-function _(e) {
-    let { guild: t, channel: n, message: _ } = e,
-        g = u.Z.getGuildId(),
-        h = c.Z.getChannelId(g),
+function g(e) {
+    let { guild: t, channel: n, message: g } = e,
+        _ = u.Z.getGuildId(),
+        h = c.Z.getChannelId(_),
         b = i.useCallback(() => {
             var e;
             d.default.track(p.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null == (e = _.author) ? void 0 : e.id,
+                author_id: null == (e = g.author) ? void 0 : e.id,
                 link_guild_id: t.id,
                 link_channel_id: n.id,
                 link_channel_type: n.type,
-                guild_id: g,
+                guild_id: _,
                 channel_id: h,
             }),
-                (0, a.K)(t.id, n.id),
+                (0, o.K)(t.id, n.id),
                 l.default.selectVoiceChannel(n.id);
-        }, [_, t, n, g, h]),
+        }, [g, t, n, _, h]),
         E = (0, r.jsx)(s.Z.Channel, { channel: n });
     return (0, r.jsx)(s.Z, {
         children: (0, r.jsxs)(s.Z.Body, {
@@ -45,7 +45,7 @@ function _(e) {
                                     m.intl.format(m.t["2wimj4"], { guildName: t.name }),
                                     (0, r.jsx)("span", {
                                         className: f.infoBadge,
-                                        children: (0, r.jsx)(o.Z, {
+                                        children: (0, r.jsx)(a.Z, {
                                             guild: t,
                                             isBannerVisible: !1,
                                         }),

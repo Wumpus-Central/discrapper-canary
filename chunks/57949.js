@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(772848),
     l = n(481060),
-    a = n(159351),
-    o = n(667),
+    o = n(159351),
+    a = n(667),
     s = n(626135),
     c = n(981631);
 function u(e) {
@@ -12,7 +12,7 @@ function u(e) {
         p = !1,
         m = (0, i.Z)(),
         f = t.id,
-        _ = () => {
+        g = () => {
             p = !0;
         };
     (0, l.ZDy)(
@@ -57,7 +57,7 @@ function u(e) {
                                 guildId: u,
                             },
                             loadId: m,
-                            onComplete: _,
+                            onComplete: g,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -85,8 +85,8 @@ function u(e) {
                         sku_id: f,
                         location_stack: Array.isArray(d) ? d : [d],
                     }),
-                    (0, a.fw)(),
-                    (0, o.p)();
+                    (0, o.fw)(),
+                    (0, a.p)();
             },
             onCloseRequest: c.dG4,
         },

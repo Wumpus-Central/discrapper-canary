@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => P,
+    Z: () => N,
     _: () => S,
 }),
     n(388685);
@@ -31,11 +31,11 @@ let y = {
         scale: 1,
         opacity: 1,
     },
-    T = {
+    O = {
         scale: 1,
         opacity: 1,
     },
-    O = {
+    T = {
         tension: 2400,
         friction: 52,
     };
@@ -85,15 +85,15 @@ function S(e) {
         })
     );
 }
-function N(e) {
+function P(e) {
     let { channelId: t, closePopout: n } = e,
         [a, l] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
         f = (0, c.q_F)(
             {
                 from: d.enabled ? w : y,
-                to: T,
-                config: O,
+                to: O,
+                config: T,
             },
             "animate-always",
         ),
@@ -141,7 +141,7 @@ function N(e) {
         }),
     });
 }
-function P(e) {
+function N(e) {
     let { channelId: t } = e,
         [n, a] = i.useState(!1),
         l = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
@@ -176,7 +176,7 @@ function P(e) {
                       channelId: t,
                   }),
             n &&
-                (0, r.jsx)(N, {
+                (0, r.jsx)(P, {
                     channelId: t,
                     closePopout: () => {
                         a(!1);

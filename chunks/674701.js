@@ -1,12 +1,12 @@
 n.d(t, {
     U: () => R,
-    Z: () => L,
+    Z: () => D,
 });
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(990547),
     c = n(442837),
     u = n(692547),
@@ -14,14 +14,14 @@ var r,
     p = n(481060),
     m = n(493683),
     f = n(529103),
-    _ = n(700582),
-    g = n(906732),
+    g = n(700582),
+    _ = n(906732),
     h = n(213609),
     b = n(541716),
     E = n(28546),
     C = n(963249),
-    v = n(594174),
-    O = n(626135),
+    O = n(594174),
+    v = n(626135),
     y = n(51144),
     x = n(479446),
     j = n(795448),
@@ -34,21 +34,21 @@ var r,
     w = n(388032),
     Z = n(553517),
     R = (((r = {}).SYSTEM_MESSAGE = "system_message"), (r.COACHMARK = "coachmark"), r);
-function L(e) {
+function D(e) {
     let {
             giftIntentType: t,
             premiumGiftIntentCardType: n,
             recipientUser: r,
-            onMouseEnter: a,
+            onMouseEnter: o,
             onMouseLeave: R,
-            popoutPosition: L,
-            analyticsPage: D,
+            popoutPosition: D,
+            analyticsPage: L,
             analyticsSection: M,
             glow: k,
             giftIntentSecondaryAction: U,
         } = e,
-        F = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-        { analyticsLocations: B } = (0, g.ZP)(),
+        F = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
+        { analyticsLocations: B } = (0, _.ZP)(),
         G = (0, c.e7)([I.Z], () => I.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
         (0, h.h)({
@@ -69,17 +69,17 @@ function L(e) {
         K = H ? d.zx.Colors.BRAND : d.zx.Colors.WHITE,
         X = H ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
         q = H ? Z.buttonTextPrimaryCoachmark : Z.buttonTextPrimary,
-        Q = H ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
-        J = H ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
+        J = H ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
+        Q = H ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
     return (0, i.jsx)("div", {
-        className: o()(Z.content, {
+        className: a()(Z.content, {
             [Z.outerGlow]: k,
             [Z.contentCoachmark]: H,
         }),
-        onMouseEnter: a,
+        onMouseEnter: o,
         onMouseLeave: R,
         children: (0, i.jsxs)("div", {
-            className: o()(V, { [Z.innerGlow]: k }),
+            className: a()(V, { [Z.innerGlow]: k }),
             children: [
                 (0, i.jsxs)("div", {
                     className: Z.subContent,
@@ -87,14 +87,14 @@ function L(e) {
                         (0, i.jsxs)("div", {
                             className: Z.avatars,
                             children: [
-                                (0, i.jsx)(_.Z, {
+                                (0, i.jsx)(g.Z, {
                                     className: z,
                                     user: r,
                                     "aria-label": r.username,
                                     size: A.EF.SIZE_56,
                                 }),
                                 null != F &&
-                                    (0, i.jsx)(_.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         className: W,
                                         user: F,
                                         "aria-label": r.username,
@@ -133,10 +133,10 @@ function L(e) {
                     children: [
                         null != U &&
                             (0, i.jsx)(d.zx, {
-                                className: o()(Z.button, Q),
+                                className: a()(Z.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        O.default.track(P.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        v.default.track(P.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: U,
                                         }),
@@ -160,7 +160,7 @@ function L(e) {
                                     className: Z.buttonContentContainer,
                                     children: (0, i.jsx)(p.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(Z.buttonText, J),
+                                        className: a()(Z.buttonText, Q),
                                         children: (() => {
                                             switch (U) {
                                                 case T.X2.VIEW_ALL:
@@ -186,7 +186,7 @@ function L(e) {
                                     analyticsLocation: "system_message" === n ? i.chat : i.actionButtonCoachmark,
                                     analyticsLocations: B,
                                     analyticsObject: {
-                                        page: D,
+                                        page: L,
                                         section: M,
                                         object: P.qAy.BUTTON_CTA,
                                         objectType: P.Qqv.GIFT,
@@ -210,7 +210,7 @@ function L(e) {
                                     }),
                                     (0, i.jsx)(p.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(Z.buttonText, q),
+                                        className: a()(Z.buttonText, q),
                                         children: w.intl.string(w.t["wg/30t"]),
                                     }),
                                 ],
@@ -218,11 +218,11 @@ function L(e) {
                         }),
                     ],
                 }),
-                null != L &&
+                null != D &&
                     (0, i.jsx)("div", {
-                        className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: "left" === L,
-                            [Z.rightPopoutConnector]: "right" === L,
+                        className: a()(Z.connector, {
+                            [Z.leftPopoutConnector]: "left" === D,
+                            [Z.rightPopoutConnector]: "right" === D,
                         }),
                     }),
             ],

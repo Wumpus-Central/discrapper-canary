@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(415506);
 var r = n(990547),
     i = n(283693),
     l = n(570140),
-    a = n(408987),
-    o = n(9156),
+    o = n(408987),
+    a = n(9156),
     s = n(621600),
     c = n(573261),
     u = n(87051),
@@ -16,8 +16,8 @@ let m = {
             type: n,
             name: m,
             permissionOverwrites: f = [],
-            bitrate: _,
-            userLimit: g,
+            bitrate: g,
+            userLimit: _,
             parentId: h,
             skuId: b,
             branchId: E,
@@ -33,8 +33,8 @@ let m = {
             permission_overwrites: f,
         };
         if (
-            (null != _ && _ !== d.epw && (C.bitrate = _),
-            null != g && g > 0 && (C.user_limit = g),
+            (null != g && g !== d.epw && (C.bitrate = g),
+            null != _ && _ > 0 && (C.user_limit = _),
             null != h && (C.parent_id = h),
             n === d.d4z.GUILD_STORE)
         ) {
@@ -59,9 +59,9 @@ let m = {
             rejectWithError: !1,
         }).then(
             (e) => (
-                o.ZP.isOptInEnabled(t) &&
+                a.ZP.isOptInEnabled(t) &&
                     u.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, s.ZB.OptedIn),
-                a.Z.checkGuildTemplateDirty(t),
+                o.Z.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {

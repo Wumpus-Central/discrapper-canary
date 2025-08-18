@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => k,
-    Z: () => q,
+    Z: () => I,
 }),
     n(388685);
 var r = n(951288),
@@ -53,8 +53,8 @@ function k(e) {
             location: A.dr.QUESTS_BAR,
         }),
         k = (0, v.Zy)({ location: A.dr.QUESTS_BAR }),
-        q = (0, l.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: I, reason: Q } = (0, S.qN)({
+        I = (0, l.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil),
+        { isQuestBarVisible: q, reason: Q } = (0, S.qN)({
             quest: o,
             location: A.dr.QUESTS_BAR,
         }),
@@ -67,7 +67,7 @@ function k(e) {
         U = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
         H = (0, d.Z)(U),
         { hasError: F, isLoading: z } = (0, O.d7)(),
-        X = s.useContext(P.T) || (k && I && !z && !q),
+        X = s.useContext(P.T) || (k && q && !z && !I),
         K = s.useRef(X),
         Y = (0, w.B)(o, X && !F),
         G = s.useRef(-1),
@@ -241,8 +241,8 @@ function k(e) {
             }
         }, [X, ea, z, o.id, Q, Y.trackingCtx.content]),
         s.useEffect(() => {
-            (!I || q) && f.Z.clearTracking(), X && ea && !z && !F && k && f.Z.stopTracking(o.id);
-        }, [I, q, X, ea, z, F, k, o.id]);
+            (!q || I) && f.Z.clearTracking(), X && ea && !z && !F && k && f.Z.stopTracking(o.id);
+        }, [q, I, X, ea, z, F, k, o.id]);
     let eS = (0, _.h)({
         location: A.dr.QUESTS_BAR,
         questConfig: o.config,
@@ -319,7 +319,7 @@ function k(e) {
         },
     });
 }
-let q =
+let I =
     12633 == n.j
         ? function () {
               let e = (0, S.DH)();

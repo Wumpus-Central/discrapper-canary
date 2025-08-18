@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(900849),
     l = n(981631);
-let a = (e) =>
+let o = (e) =>
     r.tn
         .get({
             url: l.ANM.STICKER_GUILD_DATA(e),

@@ -7,7 +7,6 @@ e.exports = {
     countText: "countText__5808f",
     tagContainer: "tagContainer__5808f",
     tag: "tag__5808f",
-    clear: "clear__5808f",
     row: "row__5808f",
     separator: "separator__5808f",
 };

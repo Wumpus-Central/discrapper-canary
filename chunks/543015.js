@@ -21,11 +21,11 @@ var r = n(951288),
     C = n(95398),
     y = n(247206),
     w = n(109434),
-    T = n(456269),
-    O = n(109590),
+    O = n(456269),
+    T = n(109590),
     S = n(368844),
-    N = n(660189),
-    P = n(73315),
+    P = n(660189),
+    N = n(73315),
     I = n(470623),
     E = n(858543),
     R = n(265641),
@@ -97,7 +97,7 @@ let ec = i.memo(function (e) {
                 r = (0, h.e7)([W.Z], () => W.Z.getChannel(t));
             o()(null != r, "the thread should not be null here, a store must have missed an update");
             let a = (0, h.e7)([q.ZP], () => q.ZP.getCurrentSidebarChannelId(r.parent_id) === r.id),
-                { firstMessage: l } = (0, O.cl)(r),
+                { firstMessage: l } = (0, T.cl)(r),
                 s = (function (e) {
                     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: r = !0 } = e,
                         a = (0, k.p)(),
@@ -134,7 +134,7 @@ let ec = i.memo(function (e) {
                 })({ firstMessage: l }),
                 c = null == s ? void 0 : s.content,
                 d = null == s ? void 0 : s.firstMedia,
-                { messageCountText: u } = (0, T.nP)(r);
+                { messageCountText: u } = (0, O.nP)(r);
             return {
                 channel: r,
                 isOpen: a,
@@ -176,9 +176,9 @@ let ec = i.memo(function (e) {
         i.useEffect(() => {
             null == a || a(C.current, t);
         }, [C, a, t]);
-    let N = i.useRef(null),
-        { handleLeftClick: P, handleRightClick: E } = (0, M.Z)({
-            facepileRef: N,
+    let P = i.useRef(null),
+        { handleLeftClick: N, handleRightClick: E } = (0, M.Z)({
+            facepileRef: P,
             goToThread: n,
             channel: d,
         }),
@@ -209,7 +209,7 @@ let ec = i.memo(function (e) {
     return (0, r.jsxs)("div", {
         ref: C,
         "data-item-id": t,
-        onClick: P,
+        onClick: N,
         onContextMenu: E,
         className: l()(el.container, ea.container, c, { [el.isOpen]: f }),
         children: [
@@ -217,7 +217,7 @@ let ec = i.memo(function (e) {
                 g.P3F,
                 eo(
                     {
-                        onClick: P,
+                        onClick: N,
                         focusProps: { ringTarget: C },
                         onContextMenu: E,
                         "aria-label": ei.intl.formatToPlainString(ei.t.pgYN6e, {
@@ -259,7 +259,7 @@ let ec = i.memo(function (e) {
                         children: (0, r.jsx)(em, {
                             channel: d,
                             firstMessage: j,
-                            facepileRef: N,
+                            facepileRef: P,
                         }),
                     }),
                 ],
@@ -269,7 +269,7 @@ let ec = i.memo(function (e) {
 });
 function ed(e) {
     let { channel: t, firstMessage: n, content: i, hasMediaAttachment: a, originalAuthor: s } = e,
-        { hasUnreads: o } = (0, T.J$)(t);
+        { hasUnreads: o } = (0, O.J$)(t);
     return (0, r.jsxs)("div", {
         className: l()(ea.body, el.body),
         children: [
@@ -290,7 +290,7 @@ function ed(e) {
 }
 let eu = i.memo(function (e) {
     let { message: t, channel: n, content: i, hasMediaAttachment: a, hasUnreads: s, originalAuthor: o } = e,
-        c = (0, h.e7)([N.Z], () => N.Z.isLoading(n.id)),
+        c = (0, h.e7)([P.Z], () => P.Z.isLoading(n.id)),
         d = (0, h.e7)([K.Z], () => K.Z.can(en.Plq.MANAGE_MESSAGES, n)),
         u = G.cC.useSetting(),
         m = (0, h.e7)([J.Z], () => J.Z.getGuildId()),
@@ -358,7 +358,7 @@ let eu = i.memo(function (e) {
 });
 function em(e) {
     let { channel: t, facepileRef: n, firstMessage: i } = e,
-        { isNew: a } = (0, T.J$)(t),
+        { isNew: a } = (0, O.J$)(t),
         l = (0, _.Q)(t.id),
         s = (null == i ? void 0 : i.reactions) != null && i.reactions.length > 0;
     return (0, r.jsxs)("div", {
@@ -433,7 +433,7 @@ function em(e) {
 }
 function eh(e) {
     let { channel: t, iconSize: n, showReadState: i = !1 } = e,
-        { messageCountText: a, unreadCount: s } = (0, T.nP)(t);
+        { messageCountText: a, unreadCount: s } = (0, O.nP)(t);
     return (0, r.jsxs)("div", {
         className: l()(el.messageCountBox, { [el.hasRead]: i && null == s }),
         children: [
@@ -470,7 +470,7 @@ function eh(e) {
 function eg(e) {
     let { firstMessage: t, channel: n } = e,
         i = (0, h.e7)([W.Z], () => W.Z.getChannel(n.parent_id)),
-        a = (0, T.Bs)(i),
+        a = (0, O.Bs)(i),
         { disableReactionCreates: l, isLurking: s, isPendingMember: o } = (0, H.Z)(n);
     return null == a || l
         ? null
@@ -496,7 +496,7 @@ function ef(e) {
     var t;
     let { channel: n } = e,
         { sortOrder: i } = (0, w.H)(n.parent_id),
-        a = (0, T.xw)(n, i),
+        a = (0, O.xw)(n, i),
         l = null == (t = n.threadMetadata) ? void 0 : t.createTimestamp,
         s = null == l ? null : ei.intl.formatToPlainString(ei.t["13euCQ"], { timestamp: (0, $.vc)(d()(l), "LLLL") });
     return (0, r.jsx)(g.ua7, {
@@ -534,7 +534,7 @@ function ef(e) {
 }
 function ex(e) {
     let { channel: t, userIds: n, facepileRef: i } = e,
-        a = (0, T.iM)(t, n);
+        a = (0, O.iM)(t, n);
     return (0, r.jsx)("div", {
         ref: i,
         children: (0, r.jsx)(p.ZP, {
@@ -626,7 +626,7 @@ function eb(e) {
                     shouldShowAgeVerification: s,
                 }),
                 i &&
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(N.Z, {
                         iconClassname: el.obscuredTag,
                         obscureReason: a,
                     }),

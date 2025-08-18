@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(239091),
     c = n(901461),
     u = n(592125),
@@ -12,29 +12,29 @@ var i = n(120356),
     p = n(723774),
     m = n(144140),
     f = n(91159),
-    _ = n(576799),
-    g = n(488131),
+    g = n(576799),
+    _ = n(488131),
     h = n(981631),
     b = n(388032),
     E = n(740810);
 function C(e) {
     let { message: t, compact: n } = e,
-        i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+        i = (0, o.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(v, {
+        : (0, r.jsx)(O, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.Z)(t),
           });
 }
-function v(e) {
+function O(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e,
-        u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
+        u = (0, o.e7)([m.Z], () => m.Z.getCount(t.id)),
         d = (function (e) {
             var t;
-            let n = (0, a.e7)([m.Z], () => m.Z.getMostRecentMessage(e.id)),
-                i = (0, a.e7)([m.Z], () => m.Z.getCount(e.id)),
+            let n = (0, o.e7)([m.Z], () => m.Z.getMostRecentMessage(e.id)),
+                i = (0, o.e7)([m.Z], () => m.Z.getCount(e.id)),
                 l = (0, f.Ok)(e);
             return (null == (t = e.threadMetadata) ? void 0 : t.archived)
                 ? b.intl.string(b.t.ZTo4HR)
@@ -52,7 +52,7 @@ function v(e) {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(_.Z, {
+                              (0, r.jsx)(g.Z, {
                                   message: n,
                                   channel: e,
                               }),
@@ -72,16 +72,16 @@ function v(e) {
                     [E.systemMessageSpine]: c,
                 }),
             }),
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(a.P3F, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, g.ok)(t, e.shiftKey);
+                    e.stopPropagation(), (0, _.ok)(t, e.shiftKey);
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         r = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
                     (e.which === h.yXg.SPACE || e.which === h.yXg.ENTER) &&
-                        (e.preventDefault(), (n || r) && (0, g.ok)(t, r));
+                        (e.preventDefault(), (n || r) && (0, _.ok)(t, r));
                 },
                 onContextMenu: function (e) {
                     (0, s.jW)(e, async () => {
@@ -119,12 +119,12 @@ function v(e) {
                 },
                 "aria-roledescription": b.intl.string(b.t["8ipxiY"]),
                 className: l()(E.container, { [E.systemMessageContainer]: c }),
-                children: (0, r.jsxs)(o.nuw, {
+                children: (0, r.jsxs)(a.nuw, {
                     children: [
                         (0, r.jsxs)("div", {
                             className: E.topLine,
                             children: [
-                                (0, r.jsx)(o.nn4, { children: b.intl.string(b.t["7Xm5QE"]) }),
+                                (0, r.jsx)(a.nn4, { children: b.intl.string(b.t["7Xm5QE"]) }),
                                 (0, r.jsx)("span", {
                                     className: E.name,
                                     children: t.name,
@@ -136,7 +136,7 @@ function v(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             "aria-hidden": !0,
                             lineClamp: 1,

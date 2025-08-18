@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(159691),
-    o = n(904245),
+    o = n(159691),
+    a = n(904245),
     s = n(541716),
     c = n(419922),
     u = n(665906),
@@ -11,18 +11,18 @@ var r = n(951288),
     p = n(496675),
     m = n(594174),
     f = n(626135),
-    _ = n(709054),
-    g = n(838440),
+    g = n(709054),
+    _ = n(838440),
     h = n(981631),
     b = n(463116);
 function E(e) {
     let { assets: t, currentUser: n, message: r } = e,
-        i = (_.default.extractTimestamp(n.id) + _.default.extractTimestamp(r.id)) % t.length;
+        i = (g.default.extractTimestamp(n.id) + g.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
 function C(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
-        _ = i.useMemo(
+        g = i.useMemo(
             () =>
                 E({
                     assets: d,
@@ -41,7 +41,7 @@ function C(e) {
             [u, t, l],
         ),
         b = i.useCallback(async () => {
-            let { valid: e } = await (0, g.v)({
+            let { valid: e } = await (0, _.v)({
                 type: s.Ie.FORM,
                 content: "",
                 channel: n,
@@ -49,10 +49,10 @@ function C(e) {
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: r } = e;
-                    o.Z.sendGreetMessage(
+                    a.Z.sendGreetMessage(
                         t.id,
                         r.id,
-                        o.Z.getSendMessageOptionsForReply({
+                        a.Z.getSendMessageOptionsForReply({
                             channel: t,
                             message: n,
                             shouldMention: !0,
@@ -62,7 +62,7 @@ function C(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: _,
+                    sticker: g,
                 }),
                 (function (e) {
                     var t, n;
@@ -111,15 +111,15 @@ function C(e) {
                             t),
                         );
                 })({
-                    sticker: _,
+                    sticker: g,
                     event: p,
                     eventProperties: m,
                 }));
-        }, [n, l, _, p, m]);
-    return (0, r.jsx)(a.zx, {
+        }, [n, l, g, p, m]);
+    return (0, r.jsx)(o.zx, {
         icon: {
             type: "sticker",
-            asset: _,
+            asset: g,
             component: c.Z,
         },
         text: h,
@@ -127,8 +127,8 @@ function C(e) {
         variant: "secondary",
     });
 }
-function v(e) {
-    let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
+function O(e) {
+    let { channel: t, message: n, buttonLabels: i, stickers: o, event: a, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
             let { channel: t, message: n, currentUser: r } = e;
@@ -137,10 +137,10 @@ function v(e) {
                 let i = t.guild_id;
                 if (null == r || null == i) return !1;
                 let l = (0, u.xl)(t),
-                    a = p.Z.can(h.Plq.SEND_MESSAGES, t),
-                    o = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
+                    o = p.Z.can(h.Plq.SEND_MESSAGES, t),
+                    a = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
                     s = n.author.bot;
-                return a && !l && !o && !s;
+                return o && !l && !a && !s;
             });
         })({
             channel: t,
@@ -155,8 +155,8 @@ function v(e) {
                   channel: t,
                   message: n,
                   buttonLabels: i,
-                  stickers: a,
-                  event: o,
+                  stickers: o,
+                  event: a,
                   eventProperties: s,
               }),
           })

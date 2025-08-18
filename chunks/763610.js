@@ -1,39 +1,39 @@
-n.d(t, { Z: () => d });
-var r = n(951288),
-    s = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    i = n(755721),
-    l = n(53281),
-    c = n(557441);
-function d(e) {
-    let { filename: t, className: n, filters: o, buttonText: d, placeholder: u, onFileSelect: p } = e,
-        m = s.useRef(null);
-    return (0, r.jsxs)("div", {
-        className: a()(n, c.fileUpload),
+n.d(t, { Z: () => c });
+var l = n(951288),
+    a = n(647438),
+    i = n(120356),
+    r = n.n(i),
+    s = n(755721),
+    o = n(53281),
+    u = n(557441);
+function c(e) {
+    let { filename: t, className: n, filters: i, buttonText: c, placeholder: d, onFileSelect: f } = e,
+        m = a.useRef(null);
+    return (0, l.jsxs)("div", {
+        className: r()(n, u.fileUpload),
         children: [
-            (0, r.jsx)("input", {
-                className: c.fileUploadInput,
+            (0, l.jsx)("input", {
+                className: u.fileUploadInput,
                 tabIndex: -1,
                 readOnly: !0,
-                placeholder: u,
+                placeholder: d,
                 type: "text",
                 value: t,
             }),
-            (0, r.jsxs)(i.zx, {
-                size: i.zx.Sizes.MIN,
-                className: c.fileUploadButton,
+            (0, l.jsxs)(s.zx, {
+                size: s.zx.Sizes.MIN,
+                className: u.fileUploadButton,
                 children: [
-                    d,
-                    (0, r.jsx)(l.Z, {
+                    c,
+                    (0, l.jsx)(o.Z, {
                         ref: m,
                         tabIndex: -1,
                         onChange: (e) => {
                             var t;
-                            p(null == (t = e.currentTarget.files) ? void 0 : t[0]);
+                            f(null == (t = e.currentTarget.files) ? void 0 : t[0]);
                         },
                         multiple: !1,
-                        filters: o,
+                        filters: i,
                     }),
                 ],
             }),

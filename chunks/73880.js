@@ -1,34 +1,34 @@
 n.d(t, {
     Q8: () => d,
-    jn: () => C,
-    lX: () => m,
+    jn: () => m,
+    lX: () => f,
 });
 var r = n(951288);
 n(647438);
-var l = n(120356),
-    o = n.n(l),
-    i = n(755721),
-    a = n(489813),
-    s = n(592286),
+var i = n(120356),
+    l = n.n(i),
+    o = n(755721),
+    s = n(489813),
+    a = n(592286),
     c = n(388032),
     u = n(624463);
 function d(e) {
-    let { value: t, placeholder: n, onChange: l, disabled: a, className: c, autofocus: d } = e;
-    return (0, r.jsx)(i.iS, {
-        className: o()(u.paragraphFieldBody, c),
-        maxLength: s.RS,
+    let { value: t, placeholder: n, onChange: i, disabled: s, className: c, autofocus: d } = e;
+    return (0, r.jsx)(o.iS, {
+        className: l()(u.paragraphFieldBody, c),
+        maxLength: a.RS,
         value: null != t ? t : "",
         placeholder: null != n ? n : "",
-        onChange: l,
-        disabled: a,
+        onChange: i,
+        disabled: s,
         autoFocus: d,
         autosize: !0,
-        showRemainingCharacterCount: !a,
+        showRemainingCharacterCount: !s,
     });
 }
-function C(e) {
+function m(e) {
     let { formField: t } = e;
-    return (0, r.jsx)(a.CA, {
+    return (0, r.jsx)(s.CA, {
         title: t.label,
         children: (0, r.jsx)(d, {
             className: u.disabledFieldBackground,
@@ -37,13 +37,13 @@ function C(e) {
         }),
     });
 }
-function m(e) {
-    let { formField: t, autofocus: n, onChange: l } = e;
-    return (0, r.jsx)(a.hK, {
+function f(e) {
+    let { formField: t, autofocus: n, onChange: i } = e;
+    return (0, r.jsx)(s.hK, {
         title: t.label,
         children: (0, r.jsx)(d, {
             value: t.response,
-            onChange: l,
+            onChange: i,
             autofocus: n,
             placeholder: c.intl.string(c.t["Sqn+Wl"]),
         }),
