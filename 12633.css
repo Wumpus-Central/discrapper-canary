@@ -20623,6 +20623,9 @@ svg.radioIcon_c1e9c4 {
 
 .headerBody_d6f39b {
     color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     margin: 0
 }
 
