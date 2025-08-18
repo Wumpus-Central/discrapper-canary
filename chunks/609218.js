@@ -120,7 +120,7 @@ function j(e) {
                                                 loopAt: 5,
                                             }),
                                         }),
-                                        null != J && (0, r.jsx)(l.C, { badge: { text: J } }),
+                                        null != J && (0, r.jsx)(l.C, { type: { text: J } }),
                                         (0, r.jsx)(d.X6q, {
                                             className: o()(R.title, { [R.withBadge]: null != J }),
                                             variant: "heading-xl/bold",

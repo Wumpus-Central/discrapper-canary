@@ -3991,6 +3991,7 @@ var nb = (function (e) {
             (e.LAUNCH_GAME = "launch_game"),
             (e.GAME_DETECTED = "game_detected"),
             (e.RUNNING_GAME_HEARTBEAT = "running_game_heartbeat"),
+            (e.GAME_DETECTION_COMPARISON = "game_detection_comparison"),
             (e.ACTIVITY_UPDATED = "activity_updated"),
             (e.ACTIVITY_SESSION_JOINED = "activity_session_joined"),
             (e.ACTIVITY_SESSION_JOIN_FAILED = "activity_session_join_failed"),

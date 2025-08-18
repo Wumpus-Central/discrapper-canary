@@ -1050,6 +1050,7 @@ function q(e) {
                         placeholder: n,
                         selectValue: s,
                         selectedOptions: a,
+                        hidePills: m,
                         isEditing: c,
                         isDisabled: u,
                         isProcessing: d,
@@ -1089,6 +1090,8 @@ function X(e) {
         loading: v,
         style: I,
         className: T,
+        selectedOptions: S,
+        hidePills: A,
     } = e;
     return (0, r.jsx)("input", {
         role: "combobox",
@@ -1116,7 +1119,7 @@ function X(e) {
             [R.disabled]: u,
         }),
         onKeyDown: b,
-        placeholder: "" !== (null != t ? t : "").trim() ? void 0 : y,
+        placeholder: "" !== (null != t ? t : "").trim() || (S.length > 0 && !A) ? void 0 : y,
         ref: g,
     });
 }

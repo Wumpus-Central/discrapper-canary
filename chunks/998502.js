@@ -238,13 +238,13 @@ let z = {
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
-        setObservedGamesCallback(e, t) {
+        setObservedGamesCallback(e, t, n) {
             try {
                 w = {};
-                let n = 0;
+                let r = 0;
                 this.getDiscordUtils().setObservedGamesCallback(
                     e.map((e) => {
-                        let t = ++n;
+                        let t = ++r;
                         return (
                             null != e.id && (w[t] = e.id),
                             v(y({}, e), {
@@ -253,9 +253,13 @@ let z = {
                             })
                         );
                     }),
-                    (e) => t(e.map(Y)),
+                    t,
+                    (e) => n(e.map(Y)),
                 );
             } catch (e) {}
+        },
+        setGameDetectionCallback(e) {
+            this.getDiscordUtils().setGameDetectionCallback((t, n) => e(t.map(Y), n.map(Y)));
         },
         setRobloxSubgameDetectionConfig(e, t) {
             var n, r;

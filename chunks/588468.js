@@ -185,7 +185,7 @@ class Y extends H {
             children: [
                 (0, i.jsx)(P.z5, {
                     children: (0, i.jsxs)(P.BR, {
-                        children: [e, " ", null != n && (0, i.jsx)(d.C, { badge: n })],
+                        children: [e, " ", null != n && (0, i.jsx)(d.C, { type: n })],
                     }),
                 }),
                 null != t ? (0, i.jsx)(P.dY, { children: t }) : null,

@@ -139,7 +139,7 @@ function B(e) {
         H = (0, N.A1)(V, M, U, L, B);
     return (0, i.jsxs)(c.$, {
         color: "nitro-pink",
-        className: s()(R.card, o),
+        className: s()(R.card, o, { [R.withGiftBanner]: h }),
         children: [
             (0, i.jsx)(
                 () =>
