@@ -2357,19 +2357,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     flex: 1
 }
 
-.backdrop__78332 {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: var(--devtools-sidebar-width, 0);
-    top: 0;
-    transform: translateZ(0)
-}
-
-.backdrop__78332.withLayer__78332 {
-    pointer-events: all
-}
-
 .scrim_d9cec8 {
     background-color: var(--scrim-default);
     bottom: 0;
@@ -9512,6 +9499,19 @@ svg.radioIcon_c1e9c4 {
 .slider__65039 {
     position: relative;
     top: -4px
+}
+
+.backdrop__78332 {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: var(--devtools-sidebar-width, 0);
+    top: 0;
+    transform: translateZ(0)
+}
+
+.backdrop__78332.withLayer__78332 {
+    pointer-events: all
 }
 
 .backdrop_bc663c {
@@ -49161,11 +49161,6 @@ img.thumbnail__0f2e8 {
     height: 150px;
     margin: 12px auto;
     width: 250px
-}
-
-.inputSection__08bd2 {
-    margin: 16px 0;
-    margin-bottom: var(--space-12)
 }
 
 .titleRow__08bd2 {
