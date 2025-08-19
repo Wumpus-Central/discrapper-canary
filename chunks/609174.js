@@ -1,14 +1,16 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(185514),
-    s = n(703656),
-    c = n(388032),
-    u = n(861265);
-function d(e) {
+    a = n(442837),
+    o = n(481060),
+    s = n(185514),
+    c = n(365355),
+    u = n(891304),
+    d = n(388032),
+    p = n(861265);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,32 +53,36 @@ function p(e, t) {
         e
     );
 }
-let f = o.Nx.binds["0"],
-    h = o.On.binds["0"],
-    g = (e) => {
-        let { firstElementFocusJumpSectionProps: t = {} } = e;
+let g = s.Nx.binds["0"],
+    m = s.On.binds["0"],
+    b = (e) => {
+        let { firstElementFocusJumpSectionProps: t = {} } = e,
+            n = (0, a.e7)([c.Z], () => c.Z.canGoBack),
+            i = (0, a.e7)([c.Z], () => c.Z.canGoForward);
         return (0, r.jsxs)("div", {
-            className: u.backForwardButtons,
+            className: p.backForwardButtons,
             children: [
-                (0, r.jsx)(a.ua7, {
-                    "aria-label": c.intl.string(c.t.B9vzIC),
-                    tooltipContentClassName: u.navigationTooltip,
+                (0, r.jsx)(o.ua7, {
+                    "aria-label": d.intl.string(d.t.B9vzIC),
+                    tooltipContentClassName: p.navigationTooltip,
+                    shouldShow: n,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [c.intl.string(c.t.B9vzIC), (0, r.jsx)(a.M2$, { shortcut: f })],
+                        children: [d.intl.string(d.t.B9vzIC), (0, r.jsx)(o.M2$, { shortcut: g })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
-                            a.P3F,
-                            p(
-                                d(
-                                    p(d({}, e), {
-                                        className: l()(u.button, u.back),
-                                        onClick: s.op,
+                            o.P3F,
+                            h(
+                                f(
+                                    h(f({}, e), {
+                                        "aria-disabled": !n,
+                                        className: l()(p.button, p.back, { [p.disabled]: !n }),
+                                        onClick: () => (0, u.Hm)("arrow"),
                                     }),
                                     t,
                                 ),
                                 {
-                                    children: (0, r.jsx)(a.whL, {
+                                    children: (0, r.jsx)(o.whL, {
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -84,19 +90,21 @@ let f = o.Nx.binds["0"],
                             ),
                         ),
                 }),
-                (0, r.jsx)(a.ua7, {
-                    "aria-label": c.intl.string(c.t["9KJ29f"]),
-                    tooltipContentClassName: u.navigationTooltip,
+                (0, r.jsx)(o.ua7, {
+                    "aria-label": d.intl.string(d.t["9KJ29f"]),
+                    tooltipContentClassName: p.navigationTooltip,
+                    shouldShow: i,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [c.intl.string(c.t["9KJ29f"]), (0, r.jsx)(a.M2$, { shortcut: h })],
+                        children: [d.intl.string(d.t["9KJ29f"]), (0, r.jsx)(o.M2$, { shortcut: m })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
-                            a.P3F,
-                            p(d({}, e), {
-                                className: l()(u.button, u.forward),
-                                onClick: s.eH,
-                                children: (0, r.jsx)(a.ZSh, {
+                            o.P3F,
+                            h(f({}, e), {
+                                "aria-disabled": !i,
+                                className: l()(p.button, p.forward, { [p.disabled]: !i }),
+                                onClick: () => (0, u.TL)("arrow"),
+                                children: (0, r.jsx)(o.ZSh, {
                                     size: "sm",
                                     color: "currentColor",
                                 }),

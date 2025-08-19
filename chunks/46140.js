@@ -95,7 +95,12 @@ var m = (function (e) {
 let g = "545364944258990091",
     E = "{reward_code}";
 var b = (function (e) {
-    return (e.EXCLUDED_QUEST = "excluded_quest"), (e.UNKNOWN_QUEST = "unknown_quest"), e;
+    return (
+        (e.EXCLUDED_QUEST = "excluded_quest"),
+        (e.UNKNOWN_QUEST = "unknown_quest"),
+        (e.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+        e
+    );
 })({});
 let y = "1333839522189938740",
     O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),

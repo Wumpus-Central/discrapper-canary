@@ -1,34 +1,34 @@
-n.d(e, { Z: () => _ });
-var i = n(951288),
-    r = n(647438),
+n.d(e, { Z: () => c });
+var r = n(951288),
+    i = n(647438),
     s = n(120356),
     a = n.n(s),
     l = n(82659),
     o = n(481060),
     u = n(511010),
-    c = n(64515);
-function _(t) {
+    _ = n(64515);
+function c(t) {
     let {
         headerText: e,
         descriptionText: n,
         infoRows: s,
-        onDismissAndStay: _,
+        onDismissAndStay: c,
         onDismissAndLeave: d,
         leaveButtonText: A,
         stayButtonText: E,
-        transitionState: I,
-        impression: f,
+        transitionState: f,
+        impression: I,
     } = t;
-    return (0, i.jsx)(l.Modal, {
-        transitionState: I,
-        onClose: () => (_(), Promise.resolve()),
-        trackingProps: { impression: f },
+    return (0, r.jsx)(l.Modal, {
+        transitionState: f,
+        onClose: () => (c(), Promise.resolve()),
+        trackingProps: { impression: I },
         title: e,
         subtitle: null != n ? n : void 0,
         actions: [
             {
                 text: E,
-                onClick: _,
+                onClick: c,
                 variant: "secondary",
             },
             {
@@ -36,24 +36,24 @@ function _(t) {
                 onClick: d,
             },
         ],
-        children: (0, i.jsx)("div", {
-            className: c.infoGroup,
+        children: (0, r.jsx)("div", {
+            className: _.infoGroup,
             children: s.map((t, e) =>
-                (0, i.jsxs)(
-                    r.Fragment,
+                (0, r.jsxs)(
+                    i.Fragment,
                     {
                         children: [
-                            (0, i.jsxs)("div", {
-                                className: a()(c.infoRow, t.className),
+                            (0, r.jsxs)("div", {
+                                className: a()(_.infoRow, t.className),
                                 children: [
                                     t.icon,
-                                    (0, i.jsx)(o.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: "text-md/medium",
                                         children: t.text,
                                     }),
                                 ],
                             }),
-                            e < s.length - 1 && (0, i.jsx)(u.Z, {}),
+                            e < s.length - 1 && (0, r.jsx)(u.Z, {}),
                         ],
                     },
                     e,

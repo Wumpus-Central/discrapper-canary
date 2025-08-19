@@ -10,9 +10,9 @@ var r = n(570140),
     d = n(100527),
     p = n(924557),
     f = n(39604),
-    h = n(569545),
-    g = n(722835),
-    m = n(703656),
+    h = n(891304),
+    g = n(569545),
+    m = n(722835),
     b = n(352527),
     _ = n(641015),
     O = n(183584),
@@ -186,8 +186,8 @@ let R = {
         [A.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
                 let e = y.Z.getCurrentUserActiveStream();
-                if (null != e) return (0, o.g)((0, h.V9)(e));
-                (0, g.Z)(!0, [d.Z.GO_LIVE_KEYBIND]);
+                if (null != e) return (0, o.g)((0, g.V9)(e));
+                (0, m.Z)(!0, [d.Z.GO_LIVE_KEYBIND]);
             },
             keyEvents: {
                 keyup: !0,
@@ -204,7 +204,7 @@ let R = {
             },
         },
         [A.kg4.NAVIGATE_BACK]: {
-            onTrigger: () => (0, m.op)(),
+            onTrigger: () => (0, h.Hm)("global_keybind"),
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
@@ -213,7 +213,7 @@ let R = {
             },
         },
         [A.kg4.NAVIGATE_FORWARD]: {
-            onTrigger: () => (0, m.eH)(),
+            onTrigger: () => (0, h.TL)("global_keybind"),
             keyEvents: {
                 keyup: !0,
                 keydown: !1,

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var i = n(153867),
     l = n(468026),
     o = n(394059),
-    u = n(388032);
-function a(e) {
+    a = n(388032);
+function u(e) {
     var { type: t, onConfirm: n } = e,
-        a = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,8 +28,8 @@ function a(e) {
             }
             return i;
         })(e, ["type", "onConfirm"]);
-    let c = t === o.K.STREAM ? u.intl.string(u.t["/lFMWl"]) : u.intl.string(u.t.xzxhZW),
-        d = t === o.K.STREAM ? u.intl.string(u.t.xaOX7e) : u.intl.string(u.t.oU1p9P);
+    let c = t === o.K.STREAM ? a.intl.string(a.t["/lFMWl"]) : a.intl.string(a.t.xzxhZW),
+        d = t === o.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
     return (0, r.jsx)(
         l.default,
         (function (e) {
@@ -58,17 +58,17 @@ function a(e) {
             return e;
         })(
             {
-                confirmText: u.intl.string(u.t["cY+Ooa"]),
-                secondaryConfirmText: u.intl.string(u.t["JdIQ/f"]),
+                confirmText: a.intl.string(a.t["cY+Ooa"]),
+                secondaryConfirmText: a.intl.string(a.t["JdIQ/f"]),
                 title: c,
-                cancelText: u.intl.string(u.t["ETE/oK"]),
+                cancelText: a.intl.string(a.t["ETE/oK"]),
                 onConfirm: n,
                 onConfirmSecondary: () => {
                     i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 });
                 },
                 body: d,
             },
-            a,
+            u,
         ),
     );
 }

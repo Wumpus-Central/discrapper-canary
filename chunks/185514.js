@@ -7,7 +7,7 @@ n.d(t, {
 });
 var i = n(140492),
     r = n(475468),
-    s = n(703656),
+    s = n(891304),
     a = n(769654),
     l = n(944486),
     o = n(914010),
@@ -39,10 +39,10 @@ let u = {
     g = {
         binds: (0, c.isMac)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, s.op)(), !1),
+        action: () => ((0, s.Hm)("keybind"), !1),
     },
     h = {
         binds: (0, c.isMac)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, s.eH)(), !1),
+        action: () => ((0, s.TL)("keybind"), !1),
     };
