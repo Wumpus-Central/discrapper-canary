@@ -21901,7 +21901,7 @@ svg.radioIcon_c1e9c4 {
 }
 
 .freeTrialPill_ac86f6.modBackgroundPill_ac86f6 {
-    background: var(--background-surface-highest)
+    background: hsla(240, 4%, 61%, .2)
 }
 
 .freeTrialPill_ac86f6.freeTrialPillTier2OldGradientFill_ac86f6 {
