@@ -93,14 +93,17 @@ function T(e, t) {
     return i;
 }
 let S = {
+        xs: "text-xs/medium",
         sm: "text-sm/medium",
         md: "text-md/medium",
     },
     A = {
+        xs: "xxs",
         sm: "xs",
         md: "refresh_sm",
     },
     N = {
+        xs: "sm",
         sm: "sm",
         md: "md",
     };

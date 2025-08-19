@@ -1388,8 +1388,7 @@ function eh() {
         [M, U] = r.useState(!1),
         [V, F] = r.useState(!1),
         [H, z] = r.useState(!1),
-        q = r.useRef(null),
-        X = r.useRef(null),
+        [q, X] = r.useState(!1),
         J = r.useRef(null),
         Q = r.useRef(null),
         $ = r.useRef(null),
@@ -1408,7 +1407,10 @@ function eh() {
         em = r.useRef(null),
         ep = r.useRef(null),
         eg = r.useRef(null),
-        eh = r.useCallback(() => {
+        eh = r.useRef(null),
+        ef = r.useRef(null),
+        eb = r.useRef(null),
+        ex = r.useCallback(() => {
             t(!1),
                 s(!1),
                 l(!1),
@@ -1428,7 +1430,8 @@ function eh() {
                 B(!1),
                 U(!1),
                 F(!1),
-                z(!1);
+                z(!1),
+                X(!1);
         }, []);
     return (0, i.jsxs)("div", {
         className: G.section,
@@ -1438,9 +1441,9 @@ function eh() {
                 children: "Popovers",
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: q,
+                targetElementRef: J,
                 shouldShow: e,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1456,14 +1459,14 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: X,
+                targetElementRef: Q,
                 shouldShow: n,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1478,14 +1481,14 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: J,
+                targetElementRef: $,
                 shouldShow: a,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1495,14 +1498,14 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: Q,
+                targetElementRef: ee,
                 shouldShow: o,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1517,7 +1520,7 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
                 textLink: {
@@ -1527,9 +1530,9 @@ function eh() {
                 },
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: $,
+                targetElementRef: et,
                 shouldShow: d,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1544,20 +1547,20 @@ function eh() {
                 actions: [
                     {
                         text: "Primary",
-                        onClick: eh,
+                        onClick: ex,
                         variant: "primary",
                     },
                     {
                         text: "Secondary",
-                        onClick: eh,
+                        onClick: ex,
                         variant: "secondary",
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ee,
+                targetElementRef: en,
                 shouldShow: m,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1571,9 +1574,9 @@ function eh() {
                 badge: "new",
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: et,
+                targetElementRef: ei,
                 shouldShow: g,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "top",
                     align: "end",
@@ -1588,14 +1591,14 @@ function eh() {
                 actions: [
                     {
                         text: "Got it",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: en,
+                targetElementRef: er,
                 shouldShow: f,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "left",
                     align: "start",
@@ -1610,14 +1613,14 @@ function eh() {
                 actions: [
                     {
                         text: "Close",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ei,
+                targetElementRef: es,
                 shouldShow: x,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "custom",
@@ -1633,14 +1636,14 @@ function eh() {
                 actions: [
                     {
                         text: "Amazing!",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: er,
+                targetElementRef: ea,
                 shouldShow: j,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 position: "right",
                 caretConfig: {
                     position: "left",
@@ -1656,14 +1659,14 @@ function eh() {
                 actions: [
                     {
                         text: "Perfect!",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: es,
+                targetElementRef: el,
                 shouldShow: C,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1679,14 +1682,14 @@ function eh() {
                 actions: [
                     {
                         text: "Looks Great!",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: ea,
+                targetElementRef: eo,
                 shouldShow: T,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1702,14 +1705,14 @@ function eh() {
                 actions: [
                     {
                         text: "Nice!",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: el,
+                targetElementRef: ec,
                 shouldShow: y,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1729,14 +1732,14 @@ function eh() {
                 actions: [
                     {
                         text: "Get Nitro",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: eo,
+                targetElementRef: ed,
                 shouldShow: P,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1752,14 +1755,14 @@ function eh() {
                 actions: [
                     {
                         text: "Try it now",
-                        onClick: eh,
+                        onClick: ex,
                     },
                 ],
             }),
             (0, i.jsx)(v.Mb, {
-                targetElementRef: ec,
+                targetElementRef: eu,
                 shouldShow: D,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1771,13 +1774,13 @@ function eh() {
                 gradientColor: "blue",
                 action: {
                     text: "Learn More",
-                    onClick: eh,
+                    onClick: ex,
                 },
             }),
             (0, i.jsx)(v.Mb, {
-                targetElementRef: ed,
+                targetElementRef: em,
                 shouldShow: w,
-                onRequestClose: eh,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1790,13 +1793,31 @@ function eh() {
                 gradientColor: "blue",
                 action: {
                     text: "Learn More",
-                    onClick: eh,
+                    onClick: ex,
+                },
+            }),
+            (0, i.jsx)(v.Mb, {
+                targetElementRef: ep,
+                shouldShow: L,
+                onRequestClose: ex,
+                caretConfig: {
+                    position: "bottom",
+                    align: "center",
+                },
+                title: "Vith Image",
+                body: "Click the video to view it in the media viewer!",
+                assetUrl: "https://placehold.co/232x131.png",
+                badge: "new",
+                gradientColor: "blue",
+                action: {
+                    text: "Learn More",
+                    onClick: ex,
                 },
             }),
             (0, i.jsx)(S.e, {
-                targetElementRef: eu,
-                shouldShow: L,
-                onRequestClose: eh,
+                targetElementRef: eg,
+                shouldShow: M,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1842,9 +1863,9 @@ function eh() {
                 onStepChange: (e) => {},
             }),
             (0, i.jsx)(v.J2, {
-                targetElementRef: em,
-                shouldShow: M,
-                onRequestClose: eh,
+                targetElementRef: eh,
+                shouldShow: V,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1860,15 +1881,15 @@ function eh() {
                 actions: [
                     {
                         text: "Subscribe to Nitro",
-                        onClick: eh,
+                        onClick: ex,
                         variant: "expressive",
                     },
                 ],
             }),
             (0, i.jsx)(S.e, {
-                targetElementRef: ep,
-                shouldShow: V,
-                onRequestClose: eh,
+                targetElementRef: ef,
+                shouldShow: H,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1917,9 +1938,9 @@ function eh() {
                 onStepChange: (e) => {},
             }),
             (0, i.jsx)(v.Mb, {
-                targetElementRef: eg,
-                shouldShow: H,
-                onRequestClose: eh,
+                targetElementRef: eb,
+                shouldShow: q,
+                onRequestClose: ex,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1930,7 +1951,7 @@ function eh() {
                 badge: "new",
                 action: {
                     text: "Experience More",
-                    onClick: eh,
+                    onClick: ex,
                     variant: "expressive",
                 },
             }),
@@ -1952,23 +1973,23 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Small Content",
-                                buttonRef: q,
+                                buttonRef: J,
                                 onClick: () => {
-                                    eh(), t(!0);
+                                    ex(), t(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Medium Content",
-                                buttonRef: X,
+                                buttonRef: Q,
                                 onClick: () => {
-                                    eh(), s(!0);
+                                    ex(), s(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
-                                buttonRef: J,
+                                buttonRef: $,
                                 onClick: () => {
-                                    eh(), l(!0);
+                                    ex(), l(!0);
                                 },
                                 text: "No Asset",
                             }),
@@ -1994,23 +2015,23 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "External Link",
-                                buttonRef: Q,
+                                buttonRef: ee,
                                 onClick: () => {
-                                    eh(), c(!0);
+                                    ex(), c(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Two Actions",
-                                buttonRef: $,
+                                buttonRef: et,
                                 onClick: () => {
-                                    eh(), u(!0);
+                                    ex(), u(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
-                                buttonRef: ee,
+                                buttonRef: en,
                                 onClick: () => {
-                                    eh(), p(!0);
+                                    ex(), p(!0);
                                 },
                                 text: "No Actions",
                             }),
@@ -2036,33 +2057,33 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Custom Caret API",
-                                buttonRef: et,
+                                buttonRef: ei,
                                 onClick: () => {
-                                    eh(), h(!0);
+                                    ex(), h(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Left Side Caret",
-                                buttonRef: en,
+                                buttonRef: er,
                                 onClick: () => {
-                                    eh(), b(!0);
+                                    ex(), b(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Custom Offset",
-                                buttonRef: ei,
+                                buttonRef: es,
                                 onClick: () => {
-                                    eh(), _(!0);
+                                    ex(), _(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Left Center",
-                                buttonRef: er,
+                                buttonRef: ea,
                                 onClick: () => {
-                                    eh(), E(!0);
+                                    ex(), E(!0);
                                 },
                             }),
                         ],
@@ -2087,25 +2108,25 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Purple Gradient",
-                                buttonRef: es,
+                                buttonRef: el,
                                 onClick: () => {
-                                    eh(), O(!0);
+                                    ex(), O(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Blue Gradient",
-                                buttonRef: ea,
+                                buttonRef: eo,
                                 onClick: () => {
-                                    eh(), I(!0);
+                                    ex(), I(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Nitro Pink Gradient",
-                                buttonRef: el,
+                                buttonRef: ec,
                                 onClick: () => {
-                                    eh(), A(!0);
+                                    ex(), A(!0);
                                 },
                             }),
                         ],
@@ -2130,25 +2151,33 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Voice Filters",
-                                buttonRef: eo,
+                                buttonRef: ed,
                                 onClick: () => {
-                                    eh(), R(!0);
+                                    ex(), R(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Video Media Viewer",
-                                buttonRef: ec,
+                                buttonRef: eu,
                                 onClick: () => {
-                                    eh(), Z(!0);
+                                    ex(), Z(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Video with Different Preview",
-                                buttonRef: ed,
+                                buttonRef: em,
                                 onClick: () => {
-                                    eh(), k(!0);
+                                    ex(), k(!0);
+                                },
+                            }),
+                            (0, i.jsx)(N.zxk, {
+                                variant: "primary",
+                                text: "With image",
+                                buttonRef: ep,
+                                onClick: () => {
+                                    ex(), B(!0);
                                 },
                             }),
                         ],
@@ -2172,9 +2201,9 @@ function eh() {
                         children: (0, i.jsx)(N.zxk, {
                             variant: "primary",
                             text: "Multi-Step",
-                            buttonRef: eu,
+                            buttonRef: eg,
                             onClick: () => {
-                                eh(), B(!0);
+                                ex(), U(!0);
                             },
                         }),
                     }),
@@ -2198,25 +2227,25 @@ function eh() {
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Expressive Popover",
-                                buttonRef: em,
+                                buttonRef: eh,
                                 onClick: () => {
-                                    eh(), U(!0);
+                                    ex(), F(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Expressive Multi-Step",
-                                buttonRef: ep,
+                                buttonRef: ef,
                                 onClick: () => {
-                                    eh(), F(!0);
+                                    ex(), z(!0);
                                 },
                             }),
                             (0, i.jsx)(N.zxk, {
                                 variant: "primary",
                                 text: "Expressive Video",
-                                buttonRef: eg,
+                                buttonRef: eb,
                                 onClick: () => {
-                                    eh(), z(!0);
+                                    ex(), X(!0);
                                 },
                             }),
                         ],

@@ -1,59 +1,59 @@
 t.d(n, {
-    Q: () => k,
-    Z: () => D,
+    Q: () => O,
+    Z: () => k,
 }),
     t(953529);
-var r,
-    i = t(951288),
-    a = t(647438),
-    o = t(120356),
-    l = t.n(o),
-    c = t(442837),
-    s = t(481060),
-    d = t(447003),
-    u = t(471445),
-    _ = t(565138),
-    b = t(357156),
-    p = t(496675),
-    f = t(725436),
-    h = t(274311),
-    m = t(954313),
-    g = t(285784),
-    v = t(95291),
-    x = t(742593),
-    C = t(810561),
-    O = t(187443),
-    y = t(131154),
-    j = t(765305),
-    I = t(981631),
-    E = t(388032),
-    w = t(187881);
-function P(e) {
+var i,
+    a = t(951288),
+    r = t(647438),
+    l = t(120356),
+    o = t.n(l),
+    d = t(442837),
+    _ = t(481060),
+    c = t(447003),
+    s = t(471445),
+    p = t(565138),
+    u = t(357156),
+    m = t(496675),
+    g = t(725436),
+    I = t(274311),
+    b = t(954313),
+    C = t(285784),
+    f = t(95291),
+    h = t(742593),
+    U = t(810561),
+    v = t(187443),
+    T = t(131154),
+    E = t(765305),
+    L = t(981631),
+    x = t(388032),
+    y = t(187881);
+function D(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            i = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            i.forEach(function (n) {
+                var i;
+                (i = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[n] = i);
             });
     }
     return e;
 }
-function S(e, n) {
+function G(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -61,8 +61,8 @@ function S(e, n) {
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, i);
                   }
                   return t;
               })(Object(n)).forEach(function (t) {
@@ -71,47 +71,47 @@ function S(e, n) {
         e
     );
 }
-var k = (((r = {})[(r.BANNER = 0)] = "BANNER"), (r[(r.THUMBNAIL = 1)] = "THUMBNAIL"), r);
-function N(e) {
+var O = (((i = {})[(i.BANNER = 0)] = "BANNER"), (i[(i.THUMBNAIL = 1)] = "THUMBNAIL"), i);
+function S(e) {
     let { channel: n, onClick: t } = e,
-        { canManageAllEvents: r } = (0, b.XJ)(n),
-        o = (0, c.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(I.Plq.CONNECT, n), [n]),
-        _ = a.useMemo(() => (0, d.Z)(n), [n]),
-        f = (0, u.KS)(n);
-    return (0, i.jsx)(s.ua7, {
-        text: E.intl.string(E.t.nHjY9P),
-        shouldShow: !o && null != t,
+        { canManageAllEvents: i } = (0, u.XJ)(n),
+        l = (0, d.e7)([m.Z], () => !n.isGuildVocal() || m.Z.can(L.Plq.CONNECT, n), [n]),
+        p = r.useMemo(() => (0, c.Z)(n), [n]),
+        g = (0, s.KS)(n);
+    return (0, a.jsx)(_.ua7, {
+        text: x.intl.string(x.t.nHjY9P),
+        shouldShow: !l && null != t,
         children: (e) =>
-            (0, i.jsxs)(
-                s.P3F,
-                S(P({}, e), {
-                    className: l()(w.inline, w.channelContainer, {
-                        [w.channelContainerEnabled]: o && null != t,
-                        [w.channelContainerDisabled]: !o && null != t,
+            (0, a.jsxs)(
+                _.P3F,
+                G(D({}, e), {
+                    className: o()(y.inline, y.channelContainer, {
+                        [y.channelContainerEnabled]: l && null != t,
+                        [y.channelContainerDisabled]: !l && null != t,
                     }),
                     onClick: t,
                     children: [
-                        (0, i.jsx)(s.ua7, {
-                            text: E.intl.string(E.t["48WXaW"]),
-                            shouldShow: r && _ && o && null != t,
+                        (0, a.jsx)(_.ua7, {
+                            text: x.intl.string(x.t["48WXaW"]),
+                            shouldShow: i && p && l && null != t,
                             children: (e) =>
-                                null != f
-                                    ? (0, i.jsx)(
-                                          f,
-                                          S(P({}, e), {
+                                null != g
+                                    ? (0, a.jsx)(
+                                          g,
+                                          G(D({}, e), {
                                               color: "currentColor",
                                               size: "custom",
                                               width: 20,
                                               height: 20,
-                                              className: w.icon,
+                                              className: y.icon,
                                           }),
                                       )
                                     : null,
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, a.jsx)(_.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            className: w.channelLocation,
+                            className: y.channelLocation,
                             children: n.name,
                         }),
                     ],
@@ -119,21 +119,21 @@ function N(e) {
             ),
     });
 }
-function Z(e) {
-    let { guild: n, channel: t, onJoinClick: r, handleLocationClick: a, location: o, isExternal: c, isHub: d } = e;
-    return d
+function z(e) {
+    let { guild: n, channel: t, onJoinClick: i, handleLocationClick: r, location: l, isExternal: d, isHub: c } = e;
+    return c
         ? null == n
-            ? (0, i.jsx)("div", {})
-            : (0, i.jsxs)("div", {
-                  className: w.inline,
+            ? (0, a.jsx)("div", {})
+            : (0, a.jsxs)("div", {
+                  className: y.inline,
                   children: [
-                      (0, i.jsx)(_.Z, {
-                          className: w.guildIcon,
-                          size: _.Z.Sizes.MINI,
+                      (0, a.jsx)(p.Z, {
+                          className: y.guildIcon,
+                          size: p.Z.Sizes.MINI,
                           active: !0,
                           guild: n,
                       }),
-                      (0, i.jsx)(s.Text, {
+                      (0, a.jsx)(_.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
                           children: null == n ? void 0 : n.name,
@@ -141,262 +141,262 @@ function Z(e) {
                   ],
               })
         : null != t
-          ? (0, i.jsx)(N, {
+          ? (0, a.jsx)(S, {
                 channel: t,
-                onClick: r,
+                onClick: i,
             })
-          : (0, i.jsxs)(s.P3F, {
-                className: w.inline,
-                onClick: a,
+          : (0, a.jsxs)(_.P3F, {
+                className: y.inline,
+                onClick: r,
                 children: [
-                    (0, i.jsx)(s._tJ, {
+                    (0, a.jsx)(_._tJ, {
                         size: "custom",
                         color: "currentColor",
                         height: 20,
                         width: 20,
-                        className: l()(w.channelContainer, w.icon),
+                        className: o()(y.channelContainer, y.icon),
                     }),
-                    (0, i.jsx)(s.Text, {
-                        className: c ? w.externalLocation : w.channelLocation,
+                    (0, a.jsx)(_.Text, {
+                        className: d ? y.externalLocation : y.channelLocation,
                         variant: "text-sm/normal",
-                        children: (0, f.m)(o, !0),
+                        children: (0, g.m)(l, !0),
                     }),
                 ],
             });
 }
-function T(e) {
+function N(e) {
     var { isHub: n } = e,
         t = (function (e, n) {
             if (null == e) return {};
             var t,
-                r,
-                i = (function (e, n) {
+                i,
+                a = (function (e, n) {
                     if (null == e) return {};
                     var t,
-                        r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (t = a[r]), n.indexOf(t) >= 0 || (i[t] = e[t]);
-                    return i;
+                        i,
+                        a = {},
+                        r = Object.keys(e);
+                    for (i = 0; i < r.length; i++) (t = r[i]), n.indexOf(t) >= 0 || (a[t] = e[t]);
+                    return a;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (t = a[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < r.length; i++)
+                    (t = r[i]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]);
             }
-            return i;
+            return a;
         })(e, ["isHub"]);
-    return n ? (0, i.jsx)(U, P({}, t)) : (0, i.jsx)(R, P({}, t));
+    return n ? (0, a.jsx)(j, D({}, t)) : (0, a.jsx)(A, D({}, t));
 }
-function R(e) {
+function A(e) {
     let {
             channel: n,
             entityType: t,
-            isJoined: r,
-            isActive: a,
-            isUserLurking: o,
-            rsvped: l,
-            canInvite: c,
-            onContextMenu: d,
-            onJoinClick: u,
-            onRsvpClick: _,
-            onStartClick: b,
-            onInviteClick: p,
-            onEndClick: f,
-            onJoinGuildClick: m,
+            isJoined: i,
+            isActive: r,
+            isUserLurking: l,
+            rsvped: o,
+            canInvite: d,
+            onContextMenu: c,
+            onJoinClick: s,
+            onRsvpClick: p,
+            onStartClick: u,
+            onInviteClick: m,
+            onEndClick: g,
+            onJoinGuildClick: b,
         } = e,
-        v = (0, h.Q)(n, t),
-        x = (0, g.Zs)({
+        f = (0, I.Q)(n, t),
+        h = (0, C.Zs)({
             entityType: t,
-            isJoined: r,
-            isActive: a,
-            isUserLurking: o,
-            rsvped: l,
-            canInvite: c,
-            isChannelPublic: v,
-            onJoinClick: u,
-            onRsvpClick: _,
-            onStartClick: b,
-            onInviteClick: p,
-            onEndClick: f,
-            onJoinGuildClick: m,
+            isJoined: i,
+            isActive: r,
+            isUserLurking: l,
+            rsvped: o,
+            canInvite: d,
+            isChannelPublic: f,
+            onJoinClick: s,
+            onRsvpClick: p,
+            onStartClick: u,
+            onInviteClick: m,
+            onEndClick: g,
+            onJoinGuildClick: b,
         });
-    return (0, i.jsxs)(s.hE2, {
+    return (0, a.jsxs)(_.hE2, {
         fullWidth: !1,
         size: "sm",
         children: [
-            null != d ? (0, i.jsx)(g.b5, { onClick: d }) : null,
-            null == x ? void 0 : x.map((e, n) => (0, i.jsx)(s.zxk, P({}, e), n)),
+            null != c ? (0, a.jsx)(C.b5, { onClick: c }) : null,
+            null == h ? void 0 : h.map((e, n) => (0, a.jsx)(_.zxk, D({}, e), n)),
         ],
     });
 }
-function U(e) {
+function j(e) {
     let {
             channel: n,
             entityType: t,
-            guild: r,
-            isActive: a,
-            isUserLurking: o,
-            isMember: l,
-            rsvped: c,
-            canInvite: d,
-            onRsvpClick: u,
-            onJoinGuildClick: _,
-            onGoToGuildClick: b,
-            onInviteClick: p,
+            guild: i,
+            isActive: r,
+            isUserLurking: l,
+            isMember: o,
+            rsvped: d,
+            canInvite: c,
+            onRsvpClick: s,
+            onJoinGuildClick: p,
+            onGoToGuildClick: u,
+            onInviteClick: m,
         } = e,
-        f = (0, h.Q)(n, t),
-        m = (0, O.u)({
-            isActive: a,
-            isUserLurking: o,
-            isMember: l,
-            rsvped: c,
-            canInvite: d,
-            isChannelPublic: f,
-            guildName: null == r ? void 0 : r.name,
-            onRsvpClick: u,
-            onJoinGuildClick: _,
-            onGoToGuildClick: b,
-            onInviteClick: p,
+        g = (0, I.Q)(n, t),
+        b = (0, v.u)({
+            isActive: r,
+            isUserLurking: l,
+            isMember: o,
+            rsvped: d,
+            canInvite: c,
+            isChannelPublic: g,
+            guildName: null == i ? void 0 : i.name,
+            onRsvpClick: s,
+            onJoinGuildClick: p,
+            onGoToGuildClick: u,
+            onInviteClick: m,
         });
-    return (0, i.jsx)(s.hE2, {
+    return (0, a.jsx)(_.hE2, {
         fullWidth: !1,
         size: "sm",
-        children: null == m ? void 0 : m.map((e, n) => (0, i.jsx)(s.zxk, P({}, e), n)),
+        children: null == b ? void 0 : b.map((e, n) => (0, a.jsx)(_.zxk, D({}, e), n)),
     });
 }
-function D(e) {
+function k(e) {
     let {
             className: n,
             guild: t,
-            channel: r,
-            creator: a,
-            name: o,
-            entityType: c,
-            description: d,
-            imageLocation: u = 0,
-            imageSource: _,
-            isActive: b,
-            isUserLurking: p,
-            isJoined: f = !1,
-            isMember: h = !1,
-            isHub: g = !1,
-            speakers: O,
-            speakerCount: I,
-            rsvped: E,
-            canInvite: P,
-            location: S,
-            truncate: k,
-            onContextMenu: N,
-            onJoinClick: R,
-            onJoinGuildClick: U,
-            onGoToGuildClick: D,
-            onRsvpClick: A,
-            onStartClick: L,
-            onInviteClick: B,
-            onEndClick: M,
-            onClick: F,
-            isNew: H,
-            guildEvent: G,
-            eventPreview: z,
-            recurrenceRule: W,
-            recurrenceId: q,
+            channel: i,
+            creator: r,
+            name: l,
+            entityType: d,
+            description: c,
+            imageLocation: s = 0,
+            imageSource: p,
+            isActive: u,
+            isUserLurking: m,
+            isJoined: g = !1,
+            isMember: I = !1,
+            isHub: C = !1,
+            speakers: v,
+            speakerCount: L,
+            rsvped: x,
+            canInvite: D,
+            location: G,
+            truncate: O,
+            onContextMenu: S,
+            onJoinClick: A,
+            onJoinGuildClick: j,
+            onGoToGuildClick: k,
+            onRsvpClick: H,
+            onStartClick: B,
+            onInviteClick: R,
+            onEndClick: w,
+            onClick: P,
+            isNew: M,
+            guildEvent: Z,
+            eventPreview: X,
+            recurrenceRule: V,
+            recurrenceId: Y,
         } = e,
-        J = c === j.WX.EXTERNAL,
-        V = J ? (e) => e.stopPropagation() : void 0,
-        X = [];
-    if (null != W && null != event) {
-        let e = (0, m.Ho)(W);
-        X = (0, m.PJ)(4, e, new Date(G.scheduled_start_time));
+        q = d === E.WX.EXTERNAL,
+        W = q ? (e) => e.stopPropagation() : void 0,
+        F = [];
+    if (null != V && null != event) {
+        let e = (0, b.Ho)(V);
+        F = (0, b.PJ)(4, e, new Date(Z.scheduled_start_time));
     }
-    let Y = X.length > 0;
-    return (0, i.jsxs)(s.kL8, {
-        "aria-label": o,
-        onClick: () => (null == F ? void 0 : F(q)),
-        onContextMenu: N,
-        className: l()(
-            w.card,
+    let J = F.length > 0;
+    return (0, a.jsxs)(_.kL8, {
+        "aria-label": l,
+        onClick: () => (null == P ? void 0 : P(Y)),
+        onContextMenu: S,
+        className: o()(
+            y.card,
             {
-                [w.joined]: f,
-                [w.lurking]: p,
+                [y.joined]: g,
+                [y.lurking]: m,
             },
             n,
         ),
         children: [
-            (0, i.jsxs)("div", {
-                className: l()(w.padding, { [w.isRecurring]: Y }),
+            (0, a.jsxs)("div", {
+                className: o()(y.padding, { [y.isRecurring]: J }),
                 children: [
-                    0 === u && (0, i.jsx)(v.Z, { source: _ }),
-                    (0, i.jsx)(x.ZP, {
-                        creator: a,
-                        name: o,
-                        description: d,
-                        imageSource: 1 === u ? _ : null,
-                        truncate: k,
+                    0 === s && (0, a.jsx)(f.Z, { source: p }),
+                    (0, a.jsx)(h.ZP, {
+                        creator: r,
+                        name: l,
+                        description: c,
+                        imageSource: 1 === s ? p : null,
+                        truncate: O,
                         guildId: null == t ? void 0 : t.id,
-                        isHub: g,
-                        isNew: H,
-                        guildEvent: G,
-                        eventPreview: z,
-                        recurrenceId: q,
+                        isHub: C,
+                        isNew: M,
+                        guildEvent: Z,
+                        eventPreview: X,
+                        recurrenceId: Y,
                     }),
-                    b &&
+                    u &&
                         null != t &&
-                        null != O &&
-                        I > 0 &&
-                        (0, i.jsx)(y.Z, {
+                        null != v &&
+                        L > 0 &&
+                        (0, a.jsx)(T.Z, {
                             guild: t,
-                            speakers: O,
-                            speakerCount: I,
-                            className: w.spacing,
+                            speakers: v,
+                            speakerCount: L,
+                            className: y.spacing,
                         }),
-                    (0, i.jsx)("hr", { className: w.divider }),
-                    (0, i.jsxs)("div", {
-                        className: l()(w.inline, w.footer),
+                    (0, a.jsx)("hr", { className: y.divider }),
+                    (0, a.jsxs)("div", {
+                        className: o()(y.inline, y.footer),
                         children: [
-                            (0, i.jsx)(Z, {
+                            (0, a.jsx)(z, {
                                 guild: t,
-                                channel: r,
-                                onJoinClick: R,
-                                handleLocationClick: V,
-                                location: S,
-                                isExternal: J,
-                                isHub: g,
+                                channel: i,
+                                onJoinClick: A,
+                                handleLocationClick: W,
+                                location: G,
+                                isExternal: q,
+                                isHub: C,
                             }),
-                            (0, i.jsx)("div", {
-                                children: (0, i.jsx)(T, {
-                                    isHub: g,
-                                    channel: r,
-                                    entityType: c,
+                            (0, a.jsx)("div", {
+                                children: (0, a.jsx)(N, {
+                                    isHub: C,
+                                    channel: i,
+                                    entityType: d,
                                     guild: t,
-                                    isActive: b,
-                                    isJoined: f,
-                                    isUserLurking: p,
-                                    isMember: h,
-                                    rsvped: E,
-                                    canInvite: P,
-                                    onContextMenu: N,
-                                    onRsvpClick: A,
-                                    onJoinGuildClick: U,
-                                    onGoToGuildClick: D,
-                                    onInviteClick: B,
-                                    onJoinClick: R,
-                                    onStartClick: L,
-                                    onEndClick: M,
+                                    isActive: u,
+                                    isJoined: g,
+                                    isUserLurking: m,
+                                    isMember: I,
+                                    rsvped: x,
+                                    canInvite: D,
+                                    onContextMenu: S,
+                                    onRsvpClick: H,
+                                    onJoinGuildClick: j,
+                                    onGoToGuildClick: k,
+                                    onInviteClick: R,
+                                    onJoinClick: A,
+                                    onStartClick: B,
+                                    onEndClick: w,
                                 }),
                             }),
                         ],
                     }),
-                    Y && (0, i.jsx)("hr", { className: w.divider }),
+                    J && (0, a.jsx)("hr", { className: y.divider }),
                 ],
             }),
-            Y &&
-                (0, i.jsx)(C.Z, {
+            J &&
+                (0, a.jsx)(U.Z, {
                     guildId: null == t ? void 0 : t.id,
-                    recurrenceRule: W,
-                    guildEventId: G.id,
-                    onRecurrenceClick: F,
+                    recurrenceRule: V,
+                    guildEventId: Z.id,
+                    onRecurrenceClick: P,
                 }),
         ],
     });

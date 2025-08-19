@@ -106,7 +106,7 @@ function U(t) {
                                       });
                                   n.type === c.ABu.XBOX
                                       ? (0, d.ZDy)(async () => {
-                                            let { default: n } = await Promise.all([e.e("87442"), e.e("522")]).then(
+                                            let { default: n } = await Promise.all([e.e("20193"), e.e("522")]).then(
                                                 e.bind(e, 200623),
                                             );
                                             return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));

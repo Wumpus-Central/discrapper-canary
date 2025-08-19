@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(744399),
     u = n(454028),
     d = n(966902),
-    f = n(237872),
-    _ = n(562618),
+    f = n(562618),
+    _ = n(803866),
     p = n(37751);
 function h(e, t, n) {
     return (
@@ -161,8 +161,8 @@ function v(e) {
                       (0, r.jsx)(o.Z, {
                           ref: R,
                           src: g,
-                          width: 240,
-                          height: 135,
+                          width: 232,
+                          height: 131,
                           autoPlay: !0,
                           muted: !0,
                           loop: !0,
@@ -190,10 +190,7 @@ function v(e) {
             children: (0, r.jsxs)("div", {
                 ref: N,
                 children: [
-                    (0, r.jsx)(f.u, {
-                        onClick: L,
-                        colorMix: !0,
-                    }),
+                    (0, r.jsx)(_.N, { onClick: L }),
                     (0, r.jsx)(d.$, { caretConfig: v }),
                     (0, r.jsx)(u.V, {
                         asset: (0, r.jsx)("div", {
@@ -202,7 +199,7 @@ function v(e) {
                         }),
                         size: "video",
                     }),
-                    (0, r.jsx)(_.Y, {
+                    (0, r.jsx)(f.Y, {
                         title: t,
                         body: n,
                         badge: I,

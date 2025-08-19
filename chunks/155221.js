@@ -126,7 +126,7 @@ let M = (0, h.Un)({
         name: "LinkAuthorize",
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e("87442"), n.e("69773")]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e("20193"), n.e("69773")]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: "ActivateDevice",
     }),
@@ -235,7 +235,7 @@ let M = (0, h.Un)({
                 n.e("91584"),
                 n.e("85911"),
                 n.e("8895"),
-                n.e("87442"),
+                n.e("20193"),
                 n.e("70791"),
                 n.e("71172"),
                 n.e("70274"),

@@ -14,7 +14,7 @@ function d() {
         text: c.intl.string(o.default.Ta9byc),
         onClick: () => {
             (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("87442"), n.e("90688")]).then(n.bind(n, 978305));
+                let { default: e } = await Promise.all([n.e("20193"), n.e("90688")]).then(n.bind(n, 978305));
                 return (t) =>
                     (0, i.jsx)(
                         e,

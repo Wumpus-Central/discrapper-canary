@@ -145,7 +145,7 @@ function y(e) {
                 children: [
                     (0, r.jsx)(u.u, {
                         onClick: L,
-                        colorMix: null != R.gradientColor,
+                        variant: null != R.gradientColor ? "color-mix" : void 0,
                     }),
                     null != R.asset
                         ? (0, r.jsx)(l.V, {

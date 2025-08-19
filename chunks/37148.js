@@ -49,7 +49,7 @@ function g(e) {
         { onClose: n } = (0, _.v)();
     return (0, r.jsx)(c.P, {
         onClick: n,
-        colorMix: t,
+        variant: t ? "color-mix" : void 0,
     });
 }
 function E(e) {
