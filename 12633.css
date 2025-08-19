@@ -2910,6 +2910,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     justify-content: center;
     overflow: hidden;
     pointer-events: none;
+    position: relative;
     width: 100%
 }
 
@@ -2923,6 +2924,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .aspect-ratio-6\/4__20ba8 {
     aspect-ratio: 6/4
+}
+
+.aspect-ratio-2\/1__20ba8 {
+    aspect-ratio: 2/1
 }
 
 .aspect-ratio-1\/1__20ba8 {
@@ -20662,69 +20667,29 @@ svg.radioIcon_c1e9c4 {
 }
 
 .content_d6f39b {
+    align-items: center;
+    display: flex;
     flex-direction: column;
+    position: relative;
     z-index: 1
 }
 
-.asset_d6f39b,
-.content_d6f39b {
-    align-items: center;
-    display: flex;
-    position: relative
-}
-
-.asset_d6f39b {
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
-    justify-content: center;
-    margin: var(--space-16) auto var(--space-20)
-}
-
-.asset_d6f39b img {
-    border-radius: inherit;
-    height: 100%;
-    object-fit: contain;
+.graphic_d6f39b {
+    margin: var(--space-16) auto var(--space-20);
     width: 100%
 }
 
-.assetPlaceholder_d6f39b {
-    background-color: var(--opacity-yellow-20);
-    border: 2px dashed var(--yellow-new-49)
+.graphic--md_d6f39b,
+.graphic--sm_d6f39b {
+    max-width: 144px
 }
 
-.asset--sm_d6f39b {
-    aspect-ratio: 2/1;
-    width: 144px
+.graphic--lg_d6f39b {
+    max-width: 160px
 }
 
-.asset--md_d6f39b {
-    aspect-ratio: 16/9;
-    width: 144px
-}
-
-.asset--lg_d6f39b {
-    aspect-ratio: 16/9;
-    width: 160
-}
-
-.asset--video_d6f39b {
-    aspect-ratio: 16/9;
-    margin: 0 auto;
-    width: 232px
-}
-
-.videoAsset_d6f39b {
-    border-radius: var(--radius-md) var(--radius-md) 0 0;
-    box-sizing: border-box;
-    height: 135px;
-    margin-bottom: var(--space-20);
-    width: 240px
-}
-
-.assetInline_d6f39b {
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative
+.graphic--video_d6f39b {
+    max-width: 232px
 }
 
 .footer_d6f39b {
@@ -20924,14 +20889,12 @@ svg.radioIcon_c1e9c4 {
     border-radius: var(--radius-md)
 }
 
-.inlineAsset__9c640,
-img.inlineAsset__9c640 {
-    border-radius: var(--radius-sm)
-}
-
 .assetContainer__9c640 {
+    border-radius: var(--radius-sm);
     display: inline-block;
-    position: relative
+    overflow: hidden;
+    position: relative;
+    width: 100%
 }
 
 .playButton__9c640 {
@@ -20945,6 +20908,7 @@ img.inlineAsset__9c640 {
     z-index: 2
 }
 
+.assetContainer__9c640:focus-within .playButton__9c640,
 .assetContainer__9c640:hover .playButton__9c640 {
     opacity: 1;
     pointer-events: auto
