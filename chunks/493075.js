@@ -7,7 +7,7 @@ var r = n(647438),
     l = n(353926),
     c = n(987338);
 function u(e) {
-    return e === c.NZ.CONTROL ? a.k3.CONTROL : e === c.NZ.NOT_ELIGIBLE ? a.k3.UNSPECIFIED : a.k3.TREATMENT;
+    return e === c.NZ.CONTROL ? a.qK.CONTROL : e === c.NZ.NOT_ELIGIBLE ? a.qK.UNSPECIFIED : a.qK.TREATMENT;
 }
 function d() {
     let e = (0, i.cj)([l.Z], () => l.Z.getRegisteredExperiments()),

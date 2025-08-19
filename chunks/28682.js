@@ -1,27 +1,28 @@
 n.d(t, {
     J: () => l,
-    L: () => r,
+    L: () => o,
 }),
     n(647438);
 var i,
     l =
         (((i = {})[(i.ROOT = 0)] = "ROOT"),
-        (i[(i.PANEL = 1)] = "PANEL"),
-        (i[(i.PANE = 2)] = "PANE"),
-        (i[(i.SPLIT = 3)] = "SPLIT"),
-        (i[(i.CATEGORY = 4)] = "CATEGORY"),
-        (i[(i.ACCORDION = 5)] = "ACCORDION"),
-        (i[(i.LIST = 6)] = "LIST"),
-        (i[(i.STATIC = 7)] = "STATIC"),
-        (i[(i.BUTTON = 8)] = "BUTTON"),
-        (i[(i.TOGGLE = 9)] = "TOGGLE"),
-        (i[(i.SLIDER = 10)] = "SLIDER"),
-        (i[(i.SELECT = 11)] = "SELECT"),
-        (i[(i.RADIO = 12)] = "RADIO"),
-        (i[(i.CHECKBOX = 13)] = "CHECKBOX"),
-        (i[(i.NAVIGATOR = 14)] = "NAVIGATOR"),
-        (i[(i.CUSTOM = 15)] = "CUSTOM"),
+        (i[(i.SECTION = 1)] = "SECTION"),
+        (i[(i.PANEL = 2)] = "PANEL"),
+        (i[(i.PANE = 3)] = "PANE"),
+        (i[(i.SPLIT = 4)] = "SPLIT"),
+        (i[(i.CATEGORY = 5)] = "CATEGORY"),
+        (i[(i.ACCORDION = 6)] = "ACCORDION"),
+        (i[(i.LIST = 7)] = "LIST"),
+        (i[(i.STATIC = 8)] = "STATIC"),
+        (i[(i.BUTTON = 9)] = "BUTTON"),
+        (i[(i.TOGGLE = 10)] = "TOGGLE"),
+        (i[(i.SLIDER = 11)] = "SLIDER"),
+        (i[(i.SELECT = 12)] = "SELECT"),
+        (i[(i.RADIO = 13)] = "RADIO"),
+        (i[(i.CHECKBOX = 14)] = "CHECKBOX"),
+        (i[(i.NAVIGATOR = 15)] = "NAVIGATOR"),
+        (i[(i.CUSTOM = 16)] = "CUSTOM"),
         i);
-function r(e) {
+function o(e) {
     return "layout" in e;
 }

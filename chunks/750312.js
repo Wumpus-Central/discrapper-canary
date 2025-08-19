@@ -1,44 +1,46 @@
-n.d(t, { Z: () => g }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    a = n(793030),
-    c = n(442837),
-    s = n(313201),
-    d = n(314897),
-    u = n(86419),
-    f = n(840367),
-    p = n(272289),
-    m = n(415734);
-function g(e) {
-    let { userId: t, widget: n, children: l, disableInteraction: g, className: b } = e,
-        [j, y] = i.useState(!1),
-        O = (0, s.Dt)(),
-        h = (0, c.e7)([d.default], () => d.default.getId() === t),
-        x = (0, u.kQ)(n);
-    return (0, r.jsxs)("section", {
-        className: o()(m.container, b),
-        "aria-labelledby": O,
+r.d(t, { Z: () => b }), r(388685);
+var n = r(951288),
+    l = r(647438),
+    i = r(120356),
+    a = r.n(i),
+    o = r(793030),
+    c = r(442837),
+    s = r(313201),
+    u = r(314897),
+    d = r(86419),
+    f = r(840367),
+    g = r(272289),
+    p = r(415734);
+function b(e) {
+    let { userId: t, widget: r, children: i, disableInteraction: b, className: O } = e,
+        [m, j] = l.useState(!1),
+        y = (0, s.Dt)(),
+        v = (0, c.e7)([u.default], () => u.default.getId() === t),
+        x = (0, d.kQ)(r),
+        h = l.useCallback(() => {
+            j(!0);
+        }, []);
+    return (0, n.jsxs)("section", {
+        className: a()(p.container, O),
+        "aria-labelledby": y,
         children: [
-            (0, r.jsx)(f.Z, {
+            (0, n.jsx)(f.Z, {
                 userId: t,
-                headingId: O,
-                widget: n,
-                disableInteraction: g,
+                headingId: y,
+                widget: r,
+                disableInteraction: b,
             }),
-            (0, r.jsxs)(a.y5, {
+            (0, n.jsxs)(o.y5, {
                 children: [
-                    l,
-                    h &&
+                    i,
+                    v &&
                         !x &&
-                        !g &&
-                        !j &&
-                        (0, r.jsx)(p.Z, {
+                        !b &&
+                        !m &&
+                        (0, n.jsx)(g.Z, {
                             userId: t,
-                            widgetType: n.type,
-                            widgetGames: n.games,
-                            onDismiss: () => y(!0),
+                            widgetType: r.type,
+                            onDismiss: h,
                         }),
                 ],
             }),

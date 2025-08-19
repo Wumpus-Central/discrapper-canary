@@ -108,6 +108,9 @@ class h extends (r = i.ZP.Store) {
         let r = null == (n = s.get(e)) ? void 0 : n.coverImageUrl;
         return null == r ? null : null == t ? r : "".concat(r, "?width=").concat(t.width, "&height=").concat(t.height);
     }
+    noDataAvailable(e) {
+        return u.has(e);
+    }
 }
 o(h, "displayName", "DetectableGameSupplementalStore");
 let m = new h(a.Z, {

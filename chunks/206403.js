@@ -1,8 +1,8 @@
 n.d(t, { x: () => u }), n(953529);
 var i = n(951288),
     l = n(120356),
-    r = n.n(l),
-    o = n(793030),
+    o = n.n(l),
+    r = n(793030),
     s = n(481060),
     a = n(845442);
 function u(e) {
@@ -17,7 +17,7 @@ function u(e) {
         onClick: g,
     } = e;
     return (0, i.jsxs)(s.P3F, {
-        className: r()(a.baseControlItem, { [a.compact]: f }),
+        className: o()(a.baseControlItem, { [a.compact]: f }),
         onClick: g,
         children: [
             null != t &&
@@ -31,13 +31,13 @@ function u(e) {
                     (0, i.jsxs)("div", {
                         className: a.baseControlItemTitle,
                         children: [
-                            (0, i.jsx)(o.X6, {
+                            (0, i.jsx)(r.X6, {
                                 variant: "heading-md/semibold",
                                 color: "text-primary",
                                 children: u,
                             }),
                             null != c &&
-                                (0, i.jsx)(o.X6, {
+                                (0, i.jsx)(r.X6, {
                                     variant: "heading-md/semibold",
                                     color: "text-secondary",
                                     className: a.secondaryTitle,
@@ -46,7 +46,7 @@ function u(e) {
                         ],
                     }),
                     null != d &&
-                        (0, i.jsx)(o.xv, {
+                        (0, i.jsx)(r.xv, {
                             variant: "text-md/normal",
                             color: "text-secondary",
                             children: d,

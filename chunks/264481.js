@@ -1,14 +1,14 @@
 n.d(t, {
-    P9: () => _,
-    Uf: () => P,
-    b0: () => v,
-    s_: () => x,
+    P9: () => I,
+    Uf: () => Z,
+    b0: () => y,
+    s_: () => v,
 }),
     n(388685);
 var r = n(951288),
-    i = n(647438),
-    l = n(392711),
-    o = n(481060),
+    o = n(647438),
+    i = n(392711),
+    l = n(481060),
     a = n(493683),
     c = n(230711),
     s = n(410030),
@@ -17,22 +17,22 @@ var r = n(951288),
     f = n(475413),
     p = n(981631),
     m = n(388032),
-    g = n(839468);
-let b = [
+    b = n(839468);
+let g = [
         () => m.intl.string(m.t.madJdH),
         () => m.intl.string(m.t.NYmfoK),
         () => m.intl.string(m.t.R2PaCg),
         () => m.intl.string(m.t.laSR8v),
         () => m.intl.string(m.t.DnsJEx),
     ],
-    j = [
+    h = [
         () => m.intl.string(m.t.nFSbeH),
         () => m.intl.string(m.t.gTcxOz),
         () => m.intl.string(m.t["8T0wYm"]),
         () => m.intl.string(m.t.BIHl1t),
         () => m.intl.string(m.t.jhBm09),
     ],
-    y = [
+    x = [
         () => m.intl.string(m.t.AyMGXF),
         () => m.intl.string(m.t.aAFW7e),
         (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
@@ -50,7 +50,7 @@ let b = [
         () => m.intl.string(m.t.HQPAVV),
         () => m.intl.string(m.t.YolGh4),
     ],
-    O = [
+    _ = [
         p.ABu.STEAM,
         p.ABu.PLAYSTATION,
         p.ABu.XBOX,
@@ -65,112 +65,112 @@ let b = [
         p.ABu.CRUNCHYROLL,
         p.ABu.BUNGIE,
     ];
-function h(e) {
-    let { heading: t, bodyText: n, children: i } = e;
+function j(e) {
+    let { heading: t, bodyText: n, children: o } = e;
     return (0, r.jsxs)("div", {
-        className: g.empty,
+        className: b.empty,
         children: [
             (0, r.jsxs)("div", {
-                className: g.textContainer,
+                className: b.textContainer,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: t,
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: n,
                     }),
                 ],
             }),
-            i,
+            o,
         ],
     });
 }
-function x() {
-    let e = m.intl.string(m.t.RnD2yc),
-        [t] = i.useState(() => {
-            var e;
-            return (null != (e = (0, l.sample)(b)) ? e : b[0])();
-        });
-    return (0, r.jsx)(h, {
-        heading: e,
-        bodyText: t,
-    });
-}
 function v() {
-    let e = m.intl.string(m.t.bFgqYG),
-        [t] = i.useState(() => {
+    let e = m.intl.string(m.t.RnD2yc),
+        [t] = o.useState(() => {
             var e;
-            return (null != (e = (0, l.sample)(j)) ? e : j[0])();
+            return (null != (e = (0, i.sample)(g)) ? e : g[0])();
         });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(j, {
         heading: e,
         bodyText: t,
     });
 }
-function _(e) {
+function y() {
+    let e = m.intl.string(m.t.bFgqYG),
+        [t] = o.useState(() => {
+            var e;
+            return (null != (e = (0, i.sample)(h)) ? e : h[0])();
+        });
+    return (0, r.jsx)(j, {
+        heading: e,
+        bodyText: t,
+    });
+}
+function I(e) {
     let { user: t, guildId: n, channelId: c, onClose: s } = e,
         d = u.ZP.getName(n, c, t),
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
-        [b] = i.useState(() => {
+        [g] = o.useState(() => {
             var e;
-            return (null != (e = (0, l.sample)(y)) ? e : y[0])(d);
+            return (null != (e = (0, i.sample)(x)) ? e : x[0])(d);
         }),
-        j = i.useCallback(() => {
+        h = o.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(j, {
         heading: p,
-        bodyText: b,
+        bodyText: g,
         children: (0, r.jsx)("div", {
-            className: g.buttonRow,
+            className: b.buttonRow,
             children: (0, r.jsx)(f.tG, {
-                icon: o.kBi,
+                icon: l.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
-                onClick: j,
+                onClick: h,
                 themeColor: "secondary",
             }),
         }),
     });
 }
-function I() {
+function O() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
-        className: g.connectionPlatforms,
-        children: O.map((t, n) => {
-            let i = d.Z.get(t);
-            if (null == i) return null;
-            let l = (0, o.wjy)(e) ? i.icon.darkPNG : i.icon.lightPNG;
+        className: b.connectionPlatforms,
+        children: _.map((t, n) => {
+            let o = d.Z.get(t);
+            if (null == o) return null;
+            let i = (0, l.wjy)(e) ? o.icon.darkPNG : o.icon.lightPNG;
             return (0, r.jsx)(
                 "img",
                 {
-                    src: l,
-                    alt: i.name,
-                    className: g.connectionIcon,
+                    src: i,
+                    alt: o.name,
+                    className: b.connectionIcon,
                 },
                 n,
             );
         }),
     });
 }
-function P(e) {
+function Z(e) {
     let { onClose: t } = e,
-        n = i.useCallback(() => {
+        n = o.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONNECTIONS);
         }, [t]),
-        l = i.useCallback(() => {
+        i = o.useCallback(() => {
             null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
-    return (0, r.jsxs)(h, {
+    return (0, r.jsxs)(j, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [
-            (0, r.jsx)(I, {}),
+            (0, r.jsx)(O, {}),
             (0, r.jsxs)("div", {
-                className: g.buttonRow,
+                className: b.buttonRow,
                 children: [
                     (0, r.jsx)(f.tG, {
                         text: m.intl.string(m.t["/Hl24e"]),
@@ -179,7 +179,7 @@ function P(e) {
                     }),
                     (0, r.jsx)(f.tG, {
                         text: m.intl.string(m.t.GTCx0t),
-                        onClick: l,
+                        onClick: i,
                         themeColor: "secondary",
                     }),
                 ],

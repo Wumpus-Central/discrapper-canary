@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var i = n(442837),
     l = n(509613),
-    r = n(960412),
-    o = n(151662),
+    o = n(960412),
+    r = n(151662),
     s = n(930441),
     a = n(388032);
 let u = (0, l.ax)("UnsubscribeFromAllMarketingEmails", {
@@ -11,8 +11,8 @@ let u = (0, l.ax)("UnsubscribeFromAllMarketingEmails", {
     useLabel: () => a.intl.string(a.t.KT1pBA),
     useVariant: () => "critical-secondary",
     useDisabled: () => {
-        let { categories: e } = (0, i.cj)([o.Z], () => o.Z.getEmailSettings());
+        let { categories: e } = (0, i.cj)([r.Z], () => r.Z.getEmailSettings());
         return s.M0.every((t) => !e[t]);
     },
-    onClick: () => (0, r.oc)(),
+    onClick: () => (0, o.oc)(),
 });

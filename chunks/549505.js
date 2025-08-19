@@ -1,128 +1,90 @@
-a.d(t, { default: () => _ });
-var s = a(951288);
-a(647438);
-var n = a(481060),
-    i = a(688465),
-    r = a(547972),
-    o = a(63063),
-    l = a(981631),
-    d = a(332325),
-    c = a(388032),
-    m = a(688364),
-    x = a(83173);
-function _(e) {
-    let { transitionState: t, onClose: a } = e;
-    return (0, s.jsxs)(n.Y0X, {
-        transitionState: t,
-        size: n.CgR.DYNAMIC,
-        className: m.modalRoot,
-        parentComponent: "MemberListContentLearnMoreModal",
+r.d(e, { default: () => m });
+var i = r(951288);
+r(647438);
+var n = r(82659),
+    s = r(481060),
+    o = r(547972),
+    l = r(63063),
+    c = r(981631),
+    a = r(332325),
+    d = r(388032),
+    x = r(688364);
+function m(t) {
+    let { transitionState: e, onClose: r } = t;
+    return (0, i.jsx)(n.Modal, {
+        transitionState: e,
+        title: d.intl.string(d.t.pWLGnJ),
+        subtitle: d.intl.string(d.t.WKxo8v),
+        actions: [],
+        onClose: r,
+        children: (0, i.jsx)(u, { onClose: r }),
+    });
+}
+function u(t) {
+    let { onClose: e } = t,
+        r = [
+            {
+                icon: (0, i.jsx)(s.iFz, {
+                    size: "refresh_sm",
+                    color: "currentColor",
+                }),
+                text: d.intl.string(d.t.vXBrdn),
+            },
+            {
+                icon: (0, i.jsx)(s.kBi, {
+                    size: "refresh_sm",
+                    color: "currentColor",
+                }),
+                text: d.intl.string(d.t["i7/QHB"]),
+            },
+            {
+                icon: (0, i.jsx)(s.lMe, {
+                    size: "refresh_sm",
+                    color: "currentColor",
+                }),
+                text: d.intl.string(d.t.ZmBfKC),
+            },
+            {
+                icon: (0, i.jsx)(s.ewm, {
+                    size: "refresh_sm",
+                    color: "currentColor",
+                }),
+                text: d.intl.format(d.t.wBlJCg, {
+                    recentActivityURL: l.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                    handleActivityPrivacyClick: () => {
+                        e(), (0, o.Z)(a.Z.ACTIVITY_PRIVACY);
+                    },
+                }),
+            },
+        ];
+    return (0, i.jsxs)("div", {
+        className: x.notes,
         children: [
-            (0, s.jsxs)(n.xBx, {
-                separator: !1,
-                className: m.modalHeader,
-                children: [
-                    (0, s.jsx)("div", {
-                        className: m.imageFrame,
-                        children: (0, s.jsx)("img", {
-                            alt: c.intl.string(c.t.AWkQTk),
-                            src: x,
-                            className: m.heroImage,
-                        }),
-                    }),
-                    (0, s.jsxs)("div", {
-                        className: m.headerWrapper,
-                        children: [
-                            (0, s.jsx)(n.X6q, {
-                                variant: "heading-xl/bold",
-                                children: c.intl.string(c.t.gb37Ky),
-                            }),
-                            (0, s.jsx)(i.Z, { className: m.betaTag }),
-                        ],
-                    }),
-                ],
+            (0, i.jsx)(s.Text, {
+                variant: "text-sm/semibold",
+                children: d.intl.string(d.t.YjqBbm),
             }),
-            (0, s.jsxs)(n.hzk, {
-                className: m.modalContent,
-                children: [
-                    (0, s.jsxs)("div", {
-                        className: m.modalContentFrame,
+            r.map((t, e) => {
+                let { icon: r, text: n } = t;
+                return (0, i.jsxs)(
+                    "div",
+                    {
+                        className: x.badgeNote,
                         children: [
-                            (0, s.jsx)(n.Text, {
-                                variant: "text-md/medium",
-                                color: "header-secondary",
-                                children: c.intl.string(c.t.WKxo8v),
+                            (0, i.jsx)("div", {
+                                className: x.badge,
+                                children: r,
                             }),
-                            (0, s.jsx)(h, {}),
-                        ],
-                    }),
-                    (0, s.jsxs)("div", {
-                        className: m.modalFooter,
-                        children: [
-                            (0, s.jsx)(n.zxk, {
-                                onClick: a,
-                                variant: "primary",
-                                fullWidth: !0,
-                                text: c.intl.string(c.t["x/26d3"]),
-                            }),
-                            (0, s.jsx)(n.Text, {
-                                variant: "text-xs/normal",
-                                color: "text-muted",
-                                className: m.disclosureText,
-                                children: c.intl.format(c.t["5Ey5Dw"], {
-                                    recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
-                                    handleActivityPrivacyClick: () => {
-                                        a(), (0, r.Z)(d.Z.ACTIVITY_PRIVACY);
-                                    },
-                                }),
+                            (0, i.jsx)(s.Text, {
+                                variant: "text-sm/medium",
+                                color: "text-tertiary",
+                                children: n,
                             }),
                         ],
-                    }),
-                ],
+                    },
+                    "memberlist-learn-more-note-".concat(e),
+                );
             }),
         ],
     });
 }
-let h = () => {
-    let e = [
-        {
-            icon: (0, s.jsx)(n.iFz, { className: m.icon }),
-            text: c.intl.string(c.t.vXBrdn),
-        },
-        {
-            icon: (0, s.jsx)(n.iWm, { className: m.icon }),
-            text: c.intl.string(c.t.aExjOz),
-        },
-        {
-            icon: (0, s.jsx)(n.kBi, { className: m.icon }),
-            text: c.intl.string(c.t["i7/QHB"]),
-        },
-        {
-            icon: (0, s.jsx)(n.lMe, { className: m.icon }),
-            text: c.intl.string(c.t.ZmBfKC),
-        },
-    ];
-    return (0, s.jsx)("div", {
-        className: m.notes,
-        children: e.map((e, t) => {
-            let { icon: a, text: i } = e;
-            return (0, s.jsxs)(
-                "div",
-                {
-                    className: m.badgeNote,
-                    children: [
-                        (0, s.jsx)("div", {
-                            className: m.badge,
-                            children: a,
-                        }),
-                        (0, s.jsx)(n.Text, {
-                            variant: "text-sm/medium",
-                            children: i,
-                        }),
-                    ],
-                },
-                "memberlist-learn-more-note-".concat(t),
-            );
-        }),
-    });
-};

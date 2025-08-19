@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(524437),
     a = n(925513),
     i = n(82554),
-    l = n(388032);
-let o = {
-    getTitle: () => l.intl.string(l.t.RVX1zc),
-    getDisabledTitle: () => l.intl.string(l.t.SYkEBg),
-    getDescription: () => l.intl.string(l.t.aqlmp6),
+    o = n(388032);
+let l = {
+    getTitle: () => o.intl.string(o.t.RVX1zc),
+    getDisabledTitle: () => o.intl.string(o.t.SYkEBg),
+    getDescription: () => o.intl.string(o.t.aqlmp6),
     eligibleReportSubtypes: [i.i5.SUB_GORE, i.i5.SUB_GLORIFYING_VIOLENCE],
     onApply: () =>
         (0, a.Jr)(

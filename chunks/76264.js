@@ -3,25 +3,25 @@ var r = n(951288);
 n(647438);
 var a = n(120356),
     i = n.n(a),
-    l = n(481060),
-    o = n(259580),
+    o = n(481060),
+    l = n(259580),
     s = n(520310),
     c = n(452847);
 let d = (e) => {
         let { child: t, onClick: n } = e,
             [a] = t;
-        return (0, r.jsxs)(l.P3F, {
+        return (0, r.jsxs)(o.P3F, {
             className: i()(c.childButton, s.listElement),
             onClick: () => n(t),
             children: [
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(o.Text, {
                     className: c.childText,
                     variant: "text-md/semibold",
                     children: a,
                 }),
-                (0, r.jsx)(o.Z, {
+                (0, r.jsx)(l.Z, {
                     className: c.childIcon,
-                    direction: o.Z.Directions.RIGHT,
+                    direction: l.Z.Directions.RIGHT,
                 }),
             ],
         });

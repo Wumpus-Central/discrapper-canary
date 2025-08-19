@@ -1,9 +1,9 @@
 n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(906732),
-    o = n(335131),
+var o = n(481060),
+    i = n(906732),
+    l = n(335131),
     a = n(475413),
     c = n(388032);
 function s(e) {
@@ -12,24 +12,24 @@ function s(e) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        o = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return i;
+            return o;
         })(e, ["onClose"]);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, l.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
     return (0, r.jsx)(
         a.ef,
         (function (e) {
@@ -59,11 +59,11 @@ function s(e) {
         })(
             {
                 action: "VISIT_SHOP",
-                icon: i.EOn,
+                icon: o.EOn,
                 tooltipText: c.intl.string(c.t.b2d0Nz),
                 themeColor: "secondary",
                 onClick: () => {
-                    (0, o.mK)({
+                    (0, l.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
                         analyticsSource: d,

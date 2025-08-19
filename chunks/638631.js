@@ -1,20 +1,15 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var i = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(717975),
-    a = n(132415);
-let l = (e) => {
+var r = n(717975),
+    s = n(543581);
+let a = (e) => {
     let { enablePremiumBrandRefresh: t = !1 } = e,
-        n = (0, s.Z)();
+        n = (0, r.Z)();
     return null == n
         ? null
-        : (0, i.jsx)("div", {
-              className: t ? a.premiumBrandRefreshOfferPill : a.offerPill,
-              children: (0, i.jsx)(r.Text, {
-                  variant: t ? "text-sm/bold" : "text-xs/bold",
-                  color: "always-white",
-                  children: n,
-              }),
+        : (0, i.jsx)(s.Z, {
+              enablePremiumBrandRefresh: t,
+              text: n,
           });
 };

@@ -78,7 +78,7 @@ function T(e) {
             size: 413,
             canAnimate: !1,
         }),
-        G = (0, i.e7)([_.Z], () => _.Z.getAllPending()),
+        G = (0, i.cj)([_.Z], () => _.Z.getAllPending()),
         Z = (0, h.SD)({
             userId: t.id,
             image: G.pendingAvatar,

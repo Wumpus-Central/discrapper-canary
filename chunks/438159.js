@@ -5,7 +5,7 @@ let a = {
     id: -1,
     label: "Not Eligible",
     shortLabel: "Not Eligible",
-    type: r.k3.OVERRIDE,
+    type: r.qK.OVERRIDE,
 };
 function o(e) {
     return e.system !== i.I.APEX ? e.variants : [a].concat(e.variants);

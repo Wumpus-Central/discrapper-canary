@@ -1,6 +1,6 @@
 n.d(t, {
     dR: () => d,
-    k3: () => p,
+    qK: () => p,
 }),
     n(980754),
     n(388685),
@@ -80,7 +80,7 @@ class g extends o.C {
             revision: 0,
             hashKey: "",
             unitType: 0,
-            variants: [],
+            variations: [],
             rules: [],
             phase: 0,
             surfaces: [],
@@ -89,7 +89,7 @@ class g extends o.C {
             exposureTracking: 0,
             assignmentMode: 0,
             enableEditRawJsonUi: !1,
-            winningVariantId: 0,
+            winningVariationId: 0,
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -149,7 +149,7 @@ class g extends o.C {
                     a.unitType = e.int32();
                     break;
                 case 15:
-                    a.variants.push(b.internalBinaryRead(e, e.uint32(), n));
+                    a.variations.push(b.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
                     a.rules.push(s.$9.internalBinaryRead(e, e.uint32(), n));
@@ -178,7 +178,7 @@ class g extends o.C {
                     a.enableEditRawJsonUi = e.bool();
                     break;
                 case 24:
-                    a.winningVariantId = e.int32();
+                    a.winningVariationId = e.int32();
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -208,8 +208,8 @@ class g extends o.C {
             0 !== e.revision && t.tag(12, r.TD.Varint).int32(e.revision),
             "" !== e.hashKey && t.tag(13, r.TD.LengthDelimited).string(e.hashKey),
             0 !== e.unitType && t.tag(14, r.TD.Varint).int32(e.unitType);
-        for (let i = 0; i < e.variants.length; i++)
-            b.internalBinaryWrite(e.variants[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.variations.length; i++)
+            b.internalBinaryWrite(e.variations[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
             s.$9.internalBinaryWrite(e.rules[i], t.tag(16, r.TD.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, r.TD.Varint).int32(e.phase), e.surfaces.length)) {
@@ -222,7 +222,7 @@ class g extends o.C {
             0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking),
             0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode),
             !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi),
-            0 !== e.winningVariantId && t.tag(24, r.TD.Varint).int32(e.winningVariantId);
+            0 !== e.winningVariationId && t.tag(24, r.TD.Varint).int32(e.winningVariationId);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -314,7 +314,7 @@ class g extends o.C {
             },
             {
                 no: 15,
-                name: "variants",
+                name: "variations",
                 kind: "message",
                 repeat: 1,
                 T: () => b,
@@ -371,7 +371,7 @@ class g extends o.C {
             },
             {
                 no: 24,
-                name: "winning_variant_id",
+                name: "winning_variation_id",
                 kind: "scalar",
                 T: 5,
             },
@@ -385,7 +385,7 @@ class E extends o.C {
             id: 0,
             label: "",
             targetAllocation: 0,
-            allocations: [],
+            buckets: [],
             type: 0,
         };
         return (
@@ -413,7 +413,7 @@ class E extends o.C {
                     a.targetAllocation = e.int32();
                     break;
                 case 4:
-                    a.allocations.push(O.internalBinaryRead(e, e.uint32(), n));
+                    a.buckets.push(O.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 5:
                     a.type = e.int32();
@@ -434,14 +434,14 @@ class E extends o.C {
         0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id),
             "" !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label),
             0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation);
-        for (let i = 0; i < e.allocations.length; i++)
-            O.internalBinaryWrite(e.allocations[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.buckets.length; i++)
+            O.internalBinaryWrite(e.buckets[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
-        super("discord_protos.discord_experimentation.v1.Variant", [
+        super("discord_protos.discord_experimentation.v1.Variation", [
             {
                 no: 1,
                 name: "id",
@@ -462,7 +462,7 @@ class E extends o.C {
             },
             {
                 no: 4,
-                name: "allocations",
+                name: "buckets",
                 kind: "message",
                 repeat: 1,
                 T: () => O,
@@ -471,7 +471,7 @@ class E extends o.C {
                 no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variant.Type", p],
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", p],
             },
         ]);
     }
@@ -528,7 +528,7 @@ class y extends o.C {
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
-        super("discord_protos.discord_experimentation.v1.VariantAllocation", [
+        super("discord_protos.discord_experimentation.v1.Bucket", [
             {
                 no: 1,
                 name: "start",
@@ -545,7 +545,7 @@ class y extends o.C {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.VariantAllocation.Type", h],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", h],
             },
         ]);
     }

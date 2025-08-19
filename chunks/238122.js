@@ -1,22 +1,22 @@
-n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
+n.d(t, { Z: () => _ }), n(388685), n(413496), n(433524), n(35282);
 var r = n(951288),
     a = n(647438),
     i = n(481060),
-    l = n(454585),
-    o = n(273744),
+    o = n(454585),
+    l = n(273744),
     s = n(388032),
     c = n(124252),
     d = n(197571);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: _, character_limit: g, pattern: b },
-                onChange: h,
-                initialText: x,
-                isRequired: f,
+                data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
+                onChange: b,
+                initialText: h,
+                isRequired: x,
             } = e,
             v = a.useRef(
-                l.Z.reactParserFor(
+                o.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -41,8 +41,8 @@ let u = (e) => {
                                 });
                         }
                         return e;
-                    })({}, l.Z.defaultRules)),
-                    (n = n = { link: o.s }),
+                    })({}, o.Z.defaultRules)),
+                    (n = n = { link: l.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -62,26 +62,26 @@ let u = (e) => {
             [C, O] = a.useState(null);
         a.useEffect(() => {
             var e;
-            y(null != (e = null == x ? void 0 : x.value) ? e : "");
-        }, [x]);
+            y(null != (e = null == h ? void 0 : h.value) ? e : "");
+        }, [h]);
         let I = a.useCallback(
             (e) => {
-                let t = null != b ? new RegExp(b) : null;
+                let t = null != f ? new RegExp(f) : null;
                 null == t || t.test(e)
                     ? null != e &&
                       (O(null),
                       y(e),
-                      h({
+                      b({
                           value: e,
                           isValid: !0,
                       }))
                     : (O(s.intl.string(s.t["24xrGR"])),
-                      h({
+                      b({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [h, b],
+            [b, f],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -93,7 +93,7 @@ let u = (e) => {
                             variant: "text-sm/bold",
                             children: [
                                 u,
-                                f &&
+                                x &&
                                     (0, r.jsx)("span", {
                                         className: c.required,
                                         children: "*",
@@ -106,21 +106,21 @@ let u = (e) => {
                     onChange: I,
                     value: j,
                     error: C,
-                    rows: _,
-                    placeholder: p,
+                    rows: p,
+                    placeholder: m,
                     autoFocus: !0,
                 }),
-                null != m &&
+                null != _ &&
                     (0, r.jsx)("div", {
                         children: (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
-                            children: v.current(m),
+                            children: v.current(_),
                         }),
                     }),
             ],
         });
     },
-    m = (e) => {
+    _ = (e) => {
         let { elements: t, onChange: n, state: a } = e,
             i = t.map((e) => {
                 var t;

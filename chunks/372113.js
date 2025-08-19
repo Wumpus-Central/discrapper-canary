@@ -19,8 +19,8 @@ var s = n(951288),
     b = n(566078),
     y = n(644646),
     v = n(110560),
-    N = n(667105),
-    O = n(87894),
+    O = n(667105),
+    N = n(87894),
     q = n(46140),
     E = n(981631),
     T = n(388032),
@@ -104,7 +104,7 @@ function M(e) {
         h = (0, a.e7)([C.Z], () => C.Z.isEnrolling(t.id)),
         j = (0, g.q8)(t),
         f = (0, g.Vl)(t),
-        b = (0, N.Ks)({
+        b = (0, O.Ks)({
             progressState: n,
             quest: t,
             questContent: r,
@@ -148,21 +148,21 @@ let _ = (e) => {
             quest: n,
             location: r,
             size: c,
-            isFocused: N,
+            isFocused: O,
             isQuestExpired: _,
             isExpanded: D,
             isAnimating: Q,
             contentPosition: A,
             sourceQuestContent: L,
         } = e,
-        B = (0, x._Q)(n),
-        k = (0, x.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
+        k = (0, x._Q)(n),
+        B = (0, x.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
         }),
-        I = B >= x.OH.ACCEPTED,
-        Z = B >= x.OH.COMPLETED,
+        I = k >= x.OH.ACCEPTED,
+        Z = k >= x.OH.COMPLETED,
         U = (0, g.Xv)(n.config),
         W = D || Q,
         G = (0, x.t5)(n, q.dr.QUESTS_CARD, r, L),
@@ -204,7 +204,7 @@ let _ = (e) => {
                                             children: (0, s.jsx)(u.Mgn, { color: u.TVs.colors.WHITE }),
                                         }),
                                     (0, s.jsx)(y.Z, {
-                                        autoplay: N,
+                                        autoplay: O,
                                         className: i()(S.gridImg, {
                                             [S.questRewardEmbed]: "lg" === c,
                                             [S.questRewardEmbedSm]: "sm" === c,
@@ -226,7 +226,7 @@ let _ = (e) => {
                     children: [
                         (0, s.jsx)(u.Text, {
                             variant:
-                                (0, O.uq)(r) && !I && "lg" === c
+                                (0, N.uq)(r) && !I && "lg" === c
                                     ? "text-lg/medium"
                                     : "lg" === c
                                       ? "text-md/medium"
@@ -303,7 +303,7 @@ let _ = (e) => {
                                 isQuestExpired: _,
                                 sharedQuestFields: H,
                                 collectibleQuestRewardDescription: Y,
-                                formattedCompletionDate: k,
+                                formattedCompletionDate: B,
                             }),
                         }),
                     ],
@@ -350,7 +350,7 @@ let _ = (e) => {
                                   ? null
                                   : (0, s.jsx)(M, {
                                         quest: n,
-                                        progressState: B,
+                                        progressState: k,
                                         isCollectibleQuest: U,
                                         questContent: r,
                                         sourceQuestContent: L,

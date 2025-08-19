@@ -1,42 +1,42 @@
-n.d(t, { Z: () => u });
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    a = n(481060),
-    c = n(810473),
-    s = n(388032),
-    d = n(684066);
-function u() {
+r.d(t, { Z: () => d });
+var n = r(951288),
+    l = r(647438),
+    i = r(120356),
+    a = r.n(i),
+    o = r(481060),
+    c = r(810473),
+    s = r(388032),
+    u = r(684066);
+function d() {
     let e = 0 === (0, c.Z)().length,
-        t = i.useCallback(() => {
-            (0, a.ZDy)(
+        t = l.useCallback(() => {
+            (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await n.e("38576").then(n.bind(n, 925170));
+                    let { default: e } = await r.e("38576").then(r.bind(r, 925170));
                     return (t) =>
-                        (0, r.jsx)(
+                        (0, n.jsx)(
                             e,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        n = Object.keys(r);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        (n = n.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = r[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = n);
                                         });
                                 }
                                 return e;
@@ -46,16 +46,16 @@ function u() {
                 { stackingBehavior: "stack" },
             );
         }, []);
-    return (0, r.jsxs)(a.P3F, {
-        className: o()(d.addWidgetButton, e && d.disabled),
+    return (0, n.jsxs)(o.P3F, {
+        className: a()(u.addWidgetButton, e && u.disabled),
         onClick: e ? void 0 : t,
         "aria-disabled": e,
         children: [
-            (0, r.jsx)(a.qJs, {
+            (0, n.jsx)(o.qJs, {
                 size: "sm",
                 color: "currentColor",
             }),
-            (0, r.jsx)(a.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: e ? "text-muted" : "text-default",
                 children: s.intl.string(s.t.lBG2s7),

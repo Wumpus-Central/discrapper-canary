@@ -1,57 +1,57 @@
-n.d(t, { S: () => f });
-var r = n(951288);
-n(647438);
-var i = n(594174),
-    l = n(971082),
-    o = n(817053),
-    a = n(533815),
-    c = n(853072),
-    s = n(388032),
-    d = n(932366),
-    u = n(133458);
+r.d(t, { S: () => f });
+var n = r(951288);
+r(647438);
+var l = r(594174),
+    i = r(971082),
+    a = r(817053),
+    o = r(533815),
+    c = r(853072),
+    s = r(388032),
+    u = r(932366),
+    d = r(133458);
 function f(e) {
     let {
             game: t,
-            userId: n,
+            userId: r,
             widgetType: f,
-            guildId: p,
-            channelId: m,
-            loading: g = !1,
-            disableInteraction: b = !1,
+            guildId: g,
+            channelId: p,
+            loading: b = !1,
+            disableInteraction: O = !1,
         } = e,
-        j = (0, c.Z)(t.applicationId),
-        y = j.length > 0,
-        O = i.default.getCurrentUser(),
-        h = (null == O ? void 0 : O.id) === n;
-    return g
-        ? (0, r.jsx)("div", { className: d.loadingCover })
-        : (0, r.jsxs)("div", {
-              className: u.container,
+        m = (0, c.Z)(t.applicationId),
+        j = m.length > 0,
+        y = l.default.getCurrentUser(),
+        v = (null == y ? void 0 : y.id) === r;
+    return b
+        ? (0, n.jsx)("div", { className: u.loadingCover })
+        : (0, n.jsxs)("div", {
+              className: d.container,
               children: [
-                  (0, r.jsx)(o.Z, {
+                  (0, n.jsx)(a.Z, {
                       imageSrc: t.imageSrc,
                       gameName: t.gameName,
                       applicationId: t.applicationId,
-                      userId: n,
-                      disableInteraction: b,
-                      className: y ? u.socialProofBackdrop : void 0,
+                      userId: r,
+                      disableInteraction: O,
+                      className: j ? d.socialProofBackdrop : void 0,
                   }),
-                  !b &&
-                      h &&
-                      (0, r.jsx)(a.Z, {
+                  !O &&
+                      v &&
+                      (0, n.jsx)(o.Z, {
                           game: t,
                           widgetType: f,
-                          className: u.removeGameButton,
+                          className: d.removeGameButton,
                           iconSize: "xs",
                       }),
-                  !b &&
-                      y &&
-                      (0, r.jsx)(l.Z, {
-                          label: s.intl.formatToPlainString(s.t.ujhJdH, { numFriends: j.length }),
-                          className: u.socialProof,
-                          users: j,
-                          guildId: p,
-                          channelId: m,
+                  !O &&
+                      j &&
+                      (0, n.jsx)(i.Z, {
+                          label: s.intl.formatToPlainString(s.t.ujhJdH, { numFriends: m.length }),
+                          className: d.socialProof,
+                          users: m,
+                          guildId: g,
+                          channelId: p,
                           visuallyHideLabel: !0,
                       }),
               ],

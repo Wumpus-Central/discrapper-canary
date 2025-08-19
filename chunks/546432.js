@@ -497,7 +497,7 @@ let k = function (e) {
                     focusable: !e,
                     mediaLayoutType: u,
                     hasFooter: null != d,
-                    useFullWidth: !!k || s,
+                    useFullWidth: (!!k && !!e) || s,
                     isVisualMediaType: _,
                     onVideoControlsShow: F,
                     onVideoControlsHide: R,

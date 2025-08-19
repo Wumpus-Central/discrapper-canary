@@ -1,151 +1,81 @@
-n.d(t, { Z: () => m }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
-    l = n(392711),
-    o = n(296009),
-    a = n(399606),
-    c = n(804919),
-    s = n(592183),
-    d = n(224724),
-    u = n(86419),
-    f = n(747101),
-    p = n(977416);
-function m(e) {
-    var { widgetGames: t, widgetType: n } = e,
-        m = (function (e, t) {
+r.d(t, { Z: () => u }), r(388685);
+var n = r(951288),
+    l = r(647438),
+    i = r(399606),
+    a = r(224724),
+    o = r(86419),
+    c = r(117029),
+    s = r(977416);
+function u(e) {
+    var { widgetType: t } = e,
+        r = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
+            var r,
+                n,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
-            return i;
-        })(e, ["widgetGames", "widgetType"]);
-    let {
-            games: g,
-            isGameFetching: b,
-            isSuggestedGamesLoading: j,
-        } = (function (e, t) {
-            let { games: n } = (function () {
-                    let [e] = i.useState(() => (0, l.sampleSize)(c.qs, 4)),
-                        { gameDataMap: t, isGameFetching: n } = (0, f.F)(e);
-                    return {
-                        games: i.useMemo(
-                            () =>
-                                e.map((e) => {
-                                    let n = t[e];
-                                    return {
-                                        applicationId: e,
-                                        gameName: null == n ? void 0 : n.name,
-                                        imageSrc: null == n ? void 0 : n.coverImageUrl,
-                                    };
-                                }),
-                            [e, t],
-                        ),
-                        isGameFetching: n,
-                    };
-                })(),
-                r = new Set(t.map((e) => e.applicationId)),
-                s = n.filter((e) => !r.has(e.applicationId)),
-                [u, p, m] = (0, a.Wu)([d.Z], () => [
-                    d.Z.suggestedFetchIsLoading,
-                    d.Z.suggestedFetchError,
-                    d.Z.suggestedGameIds,
-                ]),
-                g = i.useMemo(() => {
-                    var t, n;
-                    if (
-                        p ||
-                        (e === o.l.WANT_TO_PLAY_GAMES &&
-                            (null == m || null == (t = m.suggestedWishlistGamesIds) ? void 0 : t.length) === 0) ||
-                        (null == m || null == (n = m.suggestedGamesIds) ? void 0 : n.length) === 0
-                    )
-                        return s.map((e) => e.applicationId);
-                    let r = [];
-                    return (
-                        e === o.l.WANT_TO_PLAY_GAMES
-                            ? r.push(...m.suggestedWishlistGamesIds.slice(0, 4))
-                            : r.push(...m.suggestedGamesIds.slice(0, 4)),
-                        r.length < 4 && r.push(...s.slice(0, 4 - r.length).map((e) => e.applicationId)),
-                        r
-                    );
-                }, [s, m, p, e]),
-                { gameDataMap: b, isGameFetching: j } = (0, f.F)(g);
-            return {
-                games: i.useMemo(
-                    () =>
-                        g.map((e) => {
-                            let t = b[e];
-                            return {
-                                applicationId: e,
-                                gameName: null == t ? void 0 : t.name,
-                                imageSrc: null == t ? void 0 : t.coverImageUrl,
-                                comment: null == t ? void 0 : t.comment,
-                            };
-                        }),
-                    [g, b],
-                ),
-                isGameFetching: j,
-                isSuggestedGamesLoading: u,
-            };
-        })(n, t),
-        y = i.useCallback(
-            (e, t, r) => {
-                s.Z.removeGameFromSuggestedGames(e),
-                    (0, u.ES)(n, {
+            return l;
+        })(e, ["widgetType"]);
+    let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
+        [g] = (0, i.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
+        p = l.useCallback(
+            (e, r, n) => {
+                f(e),
+                    (0, o.ES)(t, {
                         applicationId: e,
-                        gameName: t,
-                        imageSrc: r,
+                        gameName: r,
+                        imageSrc: n,
                     });
             },
-            [n],
+            [f, t],
         );
-    return (0, r.jsx)(
-        p.Z,
+    return (0, n.jsx)(
+        s.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[t] = n);
                     });
             }
             return e;
         })(
             {
-                games: g,
-                isGameFetching: b,
-                isSuggestedGamesLoading: j,
-                onClick: y,
+                games: u,
+                isGameFetching: d,
+                isSuggestedGamesLoading: g,
+                onClick: p,
             },
-            m,
+            r,
         ),
     );
 }

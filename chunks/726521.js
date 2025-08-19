@@ -290,6 +290,7 @@ function R(e, t, n, r) {
             name: l.b.WIDGET,
             widget_id: t.id,
             user_id: e,
+            widget: t,
         },
         {},
         {

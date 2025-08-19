@@ -1,143 +1,143 @@
 n.d(t, {
-    As: () => b,
+    As: () => O,
     BP: () => f,
-    MC: () => T,
-    dn: () => _,
-    hL: () => h,
-    lK: () => g,
+    MC: () => I,
+    dn: () => p,
+    hL: () => g,
+    lK: () => y,
 }),
     n(997841);
-var a = n(399606),
-    o = n(991621),
-    i = n(936141),
-    r = n(629710),
-    c = n(368844),
-    l = n(695346),
-    s = n(496675),
-    u = n(630388),
+var r = n(399606),
+    i = n(991621),
+    l = n(936141),
+    o = n(629710),
+    a = n(368844),
+    s = n(695346),
+    u = n(496675),
+    c = n(630388),
     d = n(255269),
     m = n(981631),
-    p = n(388032);
-let _ = (e, t) => {
-        let { spoiler: n, flags: a = 0 } = e,
-            c = (0, r.LD)(
+    h = n(388032);
+let p = (e, t) => {
+        let { spoiler: n, flags: r = 0 } = e,
+            a = (0, o.LD)(
                 {
-                    type: o.l.Attachment,
+                    type: i.l.Attachment,
                     media: e,
                 },
                 t,
             ),
-            l = (0, r.UJ)(
+            s = (0, o.UJ)(
                 {
-                    type: o.l.Attachment,
+                    type: i.l.Attachment,
                     media: e,
                 },
                 t,
             );
-        return c.length > 0
-            ? c[0]
-            : l
-              ? i.wk.POTENTIAL_EXPLICIT_CONTENT
-              : n || (0, u.yE)(a, m.J0y.IS_SPOILER)
-                ? i.wk.SPOILER
+        return a.length > 0
+            ? a[0]
+            : s
+              ? l.wk.POTENTIAL_EXPLICIT_CONTENT
+              : n || (0, c.yE)(r, m.J0y.IS_SPOILER)
+                ? l.wk.SPOILER
                 : null;
     },
-    f = (e, t, n, a) => {
-        let c = (0, r.LD)(
+    f = (e, t, n, r) => {
+        let a = (0, o.LD)(
                 {
-                    type: o.l.Embed,
+                    type: i.l.Embed,
                     media: e,
                 },
-                a,
+                r,
             ),
-            l =
+            s =
                 !t.author.bot &&
-                (0, r.UJ)(
+                (0, o.UJ)(
                     {
-                        type: o.l.Embed,
+                        type: i.l.Embed,
                         media: e,
                     },
-                    a,
+                    r,
                 );
-        return c.length > 0 ? c[0] : l ? i.wk.POTENTIAL_EXPLICIT_CONTENT : n ? i.wk.SPOILER : null;
+        return a.length > 0 ? a[0] : s ? l.wk.POTENTIAL_EXPLICIT_CONTENT : n ? l.wk.SPOILER : null;
     },
-    g = function (e, t) {
+    y = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            c = (0, r.LD)(
+            r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            a = (0, o.LD)(
                 {
-                    type: o.l.GenericMedia,
+                    type: i.l.GenericMedia,
                     media: e,
                 },
                 t,
             ),
-            l =
-                !a &&
-                (0, r.UJ)(
+            s =
+                !r &&
+                (0, o.UJ)(
                     {
-                        type: o.l.GenericMedia,
+                        type: i.l.GenericMedia,
                         media: e,
                     },
                     t,
                 );
-        return c.includes(i.wk.EXPLICIT_CONTENT)
-            ? i.wk.EXPLICIT_CONTENT
-            : c.includes(i.wk.GORE_CONTENT)
-              ? i.wk.GORE_CONTENT
-              : l
-                ? i.wk.POTENTIAL_EXPLICIT_CONTENT
+        return a.includes(l.wk.EXPLICIT_CONTENT)
+            ? l.wk.EXPLICIT_CONTENT
+            : a.includes(l.wk.GORE_CONTENT)
+              ? l.wk.GORE_CONTENT
+              : s
+                ? l.wk.POTENTIAL_EXPLICIT_CONTENT
                 : n
-                  ? i.wk.SPOILER
+                  ? l.wk.SPOILER
                   : null;
     };
-function b(e, t, n) {
+function O(e, t, n) {
     if (null == e) return [!1, void 0];
-    let a = (function (e) {
+    let r = (function (e) {
         switch (e.type) {
-            case c.Ah.EMBED:
+            case a.Ah.EMBED:
                 return {
-                    type: o.l.Embed,
+                    type: i.l.Embed,
                     media: e,
                 };
-            case c.Ah.ATTACHMENT:
+            case a.Ah.ATTACHMENT:
                 return {
-                    type: o.l.Attachment,
+                    type: i.l.Attachment,
                     media: e,
                 };
-            case c.Ah.COMPONENT:
+            case a.Ah.COMPONENT:
                 return {
-                    type: o.l.GenericMedia,
+                    type: i.l.GenericMedia,
                     media: e.srcUnfurledMediaItem,
                 };
             default:
                 return null;
         }
     })(e);
-    if (null == a) return [!1, void 0];
-    let l = (0, r.LD)(a, n),
-        s = (0, r.UJ)(a, n);
-    return l.length > 0
-        ? [!0, l[0]]
-        : s
-          ? [!0, i.wk.POTENTIAL_EXPLICIT_CONTENT]
+    if (null == r) return [!1, void 0];
+    let s = (0, o.LD)(r, n),
+        u = (0, o.UJ)(r, n);
+    return s.length > 0
+        ? [!0, s[0]]
+        : u
+          ? [!0, l.wk.POTENTIAL_EXPLICIT_CONTENT]
           : e.spoiler
-            ? [t, i.wk.SPOILER]
+            ? [t, l.wk.SPOILER]
             : [!1, void 0];
 }
-function h(e) {
+function g(e) {
     let { channel: t, media: n } = e,
-        i = (0, a.e7)([s.Z], () => null != t && s.Z.can(m.Plq.MANAGE_MESSAGES, t)),
-        c = l.cC.useSetting(),
-        u = (0, r.kh)(o.n.GUILD);
-    return b(n, !(0, d.Z)(c, i), u);
+        l = (0, r.e7)([u.Z], () => null != t && u.Z.can(m.Plq.MANAGE_MESSAGES, t)),
+        a = s.cC.useSetting(),
+        c = (0, o.kh)(i.n.GUILD);
+    return O(n, !(0, d.Z)(a, l), c);
 }
-let T = (e) => {
+let I = (e) => {
     switch (e) {
-        case i.wk.EXPLICIT_CONTENT:
-        case i.wk.GORE_CONTENT:
-            return p.intl.string(p.t.SEgHFh);
-        case i.wk.SPOILER:
-            return p.intl.string(p.t.XpfDHx);
+        case l.wk.EXPLICIT_CONTENT:
+        case l.wk.GORE_CONTENT:
+            return h.intl.string(h.t.SEgHFh);
+        case l.wk.SPOILER:
+            return h.intl.string(h.t.XpfDHx);
         default:
             return;
     }

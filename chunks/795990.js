@@ -1,135 +1,135 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    i = n(647438),
-    l = n(296009),
-    o = n(481060),
-    a = n(210753),
-    c = n(804919),
-    s = n(86419),
-    d = n(872269),
-    u = n(228168),
-    f = n(247397),
-    p = n(388032),
-    m = n(958461);
-function g(e) {
+r.d(t, { Z: () => y });
+var n = r(951288),
+    l = r(647438),
+    i = r(296009),
+    a = r(481060),
+    o = r(210753),
+    c = r(804919),
+    s = r(86419),
+    u = r(872269),
+    d = r(228168),
+    f = r(247397),
+    g = r(388032),
+    p = r(958461);
+function b(e) {
     let { widgetType: t } = e,
-        n = t === l.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
-        { coverImageUrl: i, localizedName: o } = (0, a.$)(n);
-    return (0, r.jsxs)("div", {
-        className: m.placeholderDetailCard,
+        r = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
+        { coverImageUrl: l, localizedName: a } = (0, o.$)(r);
+    return (0, n.jsxs)("div", {
+        className: p.placeholderDetailCard,
         children: [
-            (0, r.jsx)("div", {
-                className: m.placeholderCover,
+            (0, n.jsx)("div", {
+                className: p.placeholderCover,
                 children:
-                    null != i && "" !== i
-                        ? (0, r.jsx)("img", {
-                              src: i,
-                              alt: null != o ? o : "",
-                              className: m.placeholderGameImage,
+                    null != l && "" !== l
+                        ? (0, n.jsx)("img", {
+                              src: l,
+                              alt: null != a ? a : "",
+                              className: p.placeholderGameImage,
                           })
-                        : (0, r.jsx)("div", { className: m.placeholderGameFallback }),
+                        : (0, n.jsx)("div", { className: p.placeholderGameFallback }),
             }),
-            (0, r.jsxs)("div", {
-                className: m.placeholderText,
+            (0, n.jsxs)("div", {
+                className: p.placeholderText,
                 children: [
-                    (0, r.jsx)("div", { className: m.placeholderBar }),
-                    (0, r.jsx)("div", { className: m.placeholderBar }),
+                    (0, n.jsx)("div", { className: p.placeholderBar }),
+                    (0, n.jsx)("div", { className: p.placeholderBar }),
                 ],
             }),
         ],
     });
 }
-function b(e) {
+function O(e) {
     let { widgetType: t } = e,
-        n =
-            t === l.l.WANT_TO_PLAY_GAMES
+        r =
+            t === i.l.WANT_TO_PLAY_GAMES
                 ? [c.LM.ROBLOX, c.LM.VALORANT, c.LM.LEAGUE_OF_LEGENDS]
                 : [c.LM.ZENLESS_ZONE_ZERO, c.LM.ELDEN_RING, c.LM.RED_DEAD_REDEMPTION_2];
-    return (0, r.jsx)("div", {
-        className: m.placeholderCoverGrid,
-        children: n.map((e, t) => (0, r.jsx)(j, { applicationId: e }, t)),
+    return (0, n.jsx)("div", {
+        className: p.placeholderCoverGrid,
+        children: r.map((e, t) => (0, n.jsx)(m, { applicationId: e }, t)),
+    });
+}
+function m(e) {
+    let { applicationId: t } = e,
+        { coverImageUrl: r, localizedName: l } = (0, o.$)(t);
+    return (0, n.jsx)("div", {
+        className: p.placeholderCoverItem,
+        children:
+            null != r && "" !== r
+                ? (0, n.jsx)("img", {
+                      src: r,
+                      alt: null != l ? l : "",
+                      className: p.placeholderGameImage,
+                  })
+                : (0, n.jsx)("div", { className: p.placeholderGameFallback }),
     });
 }
 function j(e) {
-    let { applicationId: t } = e,
-        { coverImageUrl: n, localizedName: i } = (0, a.$)(t);
-    return (0, r.jsx)("div", {
-        className: m.placeholderCoverItem,
-        children:
-            null != n && "" !== n
-                ? (0, r.jsx)("img", {
-                      src: n,
-                      alt: null != i ? i : "",
-                      className: m.placeholderGameImage,
-                  })
-                : (0, r.jsx)("div", { className: m.placeholderGameFallback }),
-    });
-}
-function y(e) {
     let { widgetType: t } = e,
-        n = i.useCallback(() => {
-            (0, s.qH)(t), (0, d.L$)(u.qb.WIDGET_ADDED);
+        r = l.useCallback(() => {
+            (0, s.qH)(t), (0, u.L$)(d.qb.WIDGET_ADDED);
         }, [t]);
-    return (0, r.jsxs)(o.P3F, {
-        className: m.widgetPromptContainer,
-        onClick: n,
-        "aria-label": "Add widget: ".concat(p.intl.string(f.N[t])),
+    return (0, n.jsxs)(a.P3F, {
+        className: p.widgetPromptContainer,
+        onClick: r,
+        "aria-label": "Add widget: ".concat(g.intl.string(f.N[t])),
         children: [
             (() => {
                 switch (t) {
-                    case l.l.FAVORITE_GAMES:
-                    case l.l.CURRENT_GAMES:
-                        return (0, r.jsx)(g, { widgetType: t });
-                    case l.l.WANT_TO_PLAY_GAMES:
-                    case l.l.PLAYED_GAMES:
-                        return (0, r.jsx)(b, { widgetType: t });
+                    case i.l.FAVORITE_GAMES:
+                    case i.l.CURRENT_GAMES:
+                        return (0, n.jsx)(b, { widgetType: t });
+                    case i.l.WANT_TO_PLAY_GAMES:
+                    case i.l.PLAYED_GAMES:
+                        return (0, n.jsx)(O, { widgetType: t });
                     default:
                         return null;
                 }
             })(),
-            (0, r.jsxs)("div", {
-                className: m.widgetPromptOverlay,
+            (0, n.jsxs)("div", {
+                className: p.widgetPromptOverlay,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: m.addButton,
-                        children: (0, r.jsx)(o.oFk, {
+                    (0, n.jsx)("div", {
+                        className: p.addButton,
+                        children: (0, n.jsx)(a.oFk, {
                             size: "md",
                             color: "currentColor",
                         }),
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(f.N[t]),
+                        children: g.intl.string(f.N[t]),
                     }),
                 ],
             }),
         ],
     });
 }
-function O() {
-    return (0, r.jsxs)("div", {
-        className: m.empty,
+function y() {
+    return (0, n.jsxs)("div", {
+        className: p.empty,
         children: [
-            (0, r.jsxs)("div", {
-                className: m.textContainer,
+            (0, n.jsxs)("div", {
+                className: p.textContainer,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, n.jsx)(a.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(p.t.oqalCw),
+                        children: g.intl.string(g.t.oqalCw),
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: p.intl.string(p.t.O9SQ1d),
+                        children: g.intl.string(g.t.O9SQ1d),
                     }),
                 ],
             }),
-            (0, r.jsx)("ul", {
-                className: m.widgetGrid,
-                "aria-label": p.intl.string(p.t["+EIBSE"]),
-                children: f.r.map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(y, { widgetType: e }) }, e)),
+            (0, n.jsx)("ul", {
+                className: p.widgetGrid,
+                "aria-label": g.intl.string(g.t["+EIBSE"]),
+                children: f.r.map((e) => (0, n.jsx)("li", { children: (0, n.jsx)(j, { widgetType: e }) }, e)),
             }),
         ],
     });

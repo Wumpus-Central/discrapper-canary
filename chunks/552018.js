@@ -101,7 +101,7 @@ class c extends o.C {
 let u = new c();
 class d extends o.C {
     create(e) {
-        let t = { variantId: 0 };
+        let t = { variationId: 0 };
         return (
             globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
@@ -116,7 +116,7 @@ class d extends o.C {
             o = e.pos + t;
         for (; e.pos < o; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.variantId = e.int32();
+            if (1 === t) a.variationId = e.int32();
             else {
                 let o = n.readUnknownField;
                 if ("throw" === o)
@@ -130,7 +130,7 @@ class d extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.variantId && t.tag(1, r.TD.Varint).int32(e.variantId);
+        0 !== e.variationId && t.tag(1, r.TD.Varint).int32(e.variationId);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -138,7 +138,7 @@ class d extends o.C {
         super("discord_protos.discord_experimentation.v1.Override", [
             {
                 no: 1,
-                name: "variant_id",
+                name: "variation_id",
                 kind: "scalar",
                 T: 5,
             },

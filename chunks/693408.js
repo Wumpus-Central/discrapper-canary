@@ -1,9 +1,9 @@
 n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    l = n.n(i),
-    o = n(678738),
+var o = n(120356),
+    i = n.n(o),
+    l = n(678738),
     a = n(207911);
 function c(e) {
     var { className: t } = e,
@@ -11,25 +11,25 @@ function c(e) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        o = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return i;
+            return o;
         })(e, ["className"]);
     return (0, r.jsx)(
-        o.Z,
+        l.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +56,7 @@ function c(e) {
             return e;
         })(
             {
-                className: l()(a.section, t),
+                className: i()(a.section, t),
                 headingVariant: "text-xs/medium",
                 headingColor: "currentColor",
             },

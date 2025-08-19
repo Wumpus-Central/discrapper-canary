@@ -1,8 +1,8 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    o = n.n(l),
+    o = n(647438),
+    i = n(120356),
+    l = n.n(i),
     a = n(815061),
     c = n(442837),
     s = n(481060),
@@ -11,8 +11,8 @@ var r = n(951288),
     f = n(228168),
     p = n(388032),
     m = n(361623),
-    g = n(583140);
-let b = {
+    b = n(583140);
+let g = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, r.jsx)(s.dz2, {
@@ -39,11 +39,11 @@ let b = {
             type: s.ToastType.FAILURE,
         },
     },
-    j = (e) => {
-        let { message: t, icon: n, type: i } = e;
+    h = (e) => {
+        let { message: t, icon: n, type: o } = e;
         return (0, r.jsxs)("div", {
-            className: o()(g.toast, m.toast),
-            "data-type": i,
+            className: l()(b.toast, m.toast),
+            "data-type": o,
             children: [
                 (0, r.jsx)("div", {
                     className: m.toastIcon,
@@ -57,16 +57,16 @@ let b = {
             ],
         });
     },
-    y = (e) => {
+    x = (e) => {
         let { className: t, onAutoHide: n } = e,
-            l = (0, u.be)(),
+            i = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, g] = i.useState(!1),
-            [y, O] = i.useState(null);
-        i.useEffect(() => {
-            null !== l ? (g(!0), O(b[l]), s.uvj.announce(b[l].message)) : g(!1);
-        }, [l]);
-        let h = (0, s.Yzy)(
+            [p, b] = o.useState(!1),
+            [x, _] = o.useState(null);
+        o.useEffect(() => {
+            null !== i ? (b(!0), _(g[i]), s.uvj.announce(g[i].message)) : b(!1);
+        }, [i]);
+        let j = (0, s.Yzy)(
             p,
             {
                 from: {
@@ -91,7 +91,7 @@ let b = {
             "animate-always",
         );
         return (
-            i.useEffect(() => {
+            o.useEffect(() => {
                 if (p) {
                     let e = setTimeout(() => {
                         null == n || n();
@@ -100,15 +100,15 @@ let b = {
                 }
             }, [p, n]),
             (0, r.jsx)(r.Fragment, {
-                children: h(
+                children: j(
                     (e, n) =>
                         n &&
-                        null !== y &&
+                        null !== x &&
                         (0, r.jsx)(a.animated.div, {
-                            className: o()(t, m.toastContainer),
+                            className: l()(t, m.toastContainer),
                             style: e,
                             children: (0, r.jsx)(
-                                j,
+                                h,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -133,7 +133,7 @@ let b = {
                                             });
                                     }
                                     return e;
-                                })({}, y),
+                                })({}, x),
                             ),
                         }),
                 ),

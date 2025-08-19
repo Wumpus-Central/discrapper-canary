@@ -63,6 +63,7 @@ function h(e) {
                 gradientButtonClassName: m.gradientPicker,
                 gradientDegrees: 90,
                 allowBlackCustomColor: !0,
+                customPickerPosition: "top",
             }),
         ],
     });

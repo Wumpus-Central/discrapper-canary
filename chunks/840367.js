@@ -1,78 +1,78 @@
-n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
-var i = n(624238),
-    l = n(296009),
-    o = n(442837),
-    a = n(481060),
-    c = n(314897),
-    s = n(86419),
-    d = n(881410),
-    u = n(825354),
-    f = n(388032),
-    p = n(635318);
-let m = {
-    [l.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
-    [l.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
-    [l.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
-    [l.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
+r.d(t, { Z: () => b });
+var n = r(951288);
+r(647438);
+var l = r(624238),
+    i = r(296009),
+    a = r(442837),
+    o = r(481060),
+    c = r(314897),
+    s = r(86419),
+    u = r(881410),
+    d = r(825354),
+    f = r(388032),
+    g = r(635318);
+let p = {
+    [i.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
+    [i.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
+    [i.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
+    [i.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
 };
-function g(e) {
+function b(e) {
     var t;
-    let { userId: n, headingId: d, widget: u, disableInteraction: g = !1 } = e,
-        j = (0, o.e7)([c.default], () => c.default.getId() === n),
-        y = (0, s.kQ)(u),
-        O = m[u.type](),
-        h =
-            j && u.games.length > 0
-                ? (t = u.type) === l.l.FAVORITE_GAMES
+    let { userId: r, headingId: u, widget: d, disableInteraction: b = !1 } = e,
+        m = (0, a.e7)([c.default], () => c.default.getId() === r),
+        j = (0, s.kQ)(d),
+        y = p[d.type](),
+        v =
+            m && d.games.length > 0
+                ? (t = d.type) === i.l.FAVORITE_GAMES
                     ? f.intl.string(f.t.wiXdER)
-                    : f.intl.format(f.t["zR1+09"], { numGames: i.k[t] })
+                    : f.intl.format(f.t["zR1+09"], { numGames: l.k[t] })
                 : void 0;
-    return (0, r.jsxs)("div", {
-        className: p.headerRow,
+    return (0, n.jsxs)("div", {
+        className: g.headerRow,
         children: [
-            (0, r.jsxs)("div", {
-                className: p.title,
+            (0, n.jsxs)("div", {
+                className: g.title,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, n.jsx)(o.X6q, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        id: d,
-                        children: O,
+                        id: u,
+                        children: y,
                     }),
-                    null != h &&
-                        (0, r.jsx)(a.Text, {
+                    null != v &&
+                        (0, n.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: h,
+                            children: v,
                         }),
                 ],
             }),
-            (0, r.jsx)(b, {
-                widget: u,
-                disabled: y,
-                disabledInteraction: g,
-                userId: n,
+            (0, n.jsx)(O, {
+                widget: d,
+                disabled: j,
+                disabledInteraction: b,
+                userId: r,
             }),
         ],
     });
 }
-function b(e) {
-    let { widget: t, disabled: n, disabledInteraction: i, userId: a } = e,
-        s = (0, o.e7)([c.default], () => c.default.getId() === a);
-    return !i && (s || (t.type === l.l.FAVORITE_GAMES && t.games.some((e) => null != e.comment)))
-        ? (0, r.jsxs)("div", {
-              className: p.actions,
+function O(e) {
+    let { widget: t, disabled: r, disabledInteraction: l, userId: o } = e,
+        s = (0, a.e7)([c.default], () => c.default.getId() === o);
+    return !l && (s || (t.type === i.l.FAVORITE_GAMES && t.games.some((e) => null != e.comment)))
+        ? (0, n.jsxs)("div", {
+              className: g.actions,
               children: [
                   s &&
-                      (0, r.jsx)(d.Z, {
-                          disabled: n,
+                      (0, n.jsx)(u.Z, {
+                          disabled: r,
                           widgetType: t.type,
                       }),
-                  (0, r.jsx)(u.Z, {
+                  (0, n.jsx)(d.Z, {
                       widget: t,
-                      userId: a,
+                      userId: o,
                   }),
               ],
           })

@@ -1,73 +1,73 @@
-n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
-    l = n(442837),
-    o = n(481060),
-    a = n(239091),
-    c = n(726521),
-    s = n(314897),
-    d = n(86419),
-    u = n(872269),
-    f = n(228168),
-    p = n(388032);
-function m(e) {
+r.d(t, { Z: () => O });
+var n = r(951288),
+    l = r(647438),
+    i = r(442837),
+    a = r(481060),
+    o = r(239091),
+    c = r(726521),
+    s = r(314897),
+    u = r(86419),
+    d = r(872269),
+    f = r(228168),
+    g = r(388032);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
-function b(e) {
-    let { widget: t, userId: b } = e,
-        j = i.useRef(null),
-        y = (e) => {
+function O(e) {
+    let { widget: t, userId: O } = e,
+        m = l.useRef(null),
+        j = (e) => {
             if (e.shiftKey) {
-                (0, d.y8)(t.type), (0, u.L$)(f.qb.WIDGET_REMOVED);
+                (0, u.y8)(t.type), (0, d.L$)(f.qb.WIDGET_REMOVED);
                 return;
             }
-            (0, o.ZDy)(
+            (0, a.ZDy)(
                 async () => {
-                    let { default: e } = await n.e("70887").then(n.bind(n, 37668));
-                    return (n) =>
-                        (0, r.jsx)(
+                    let { default: e } = await r.e("70887").then(r.bind(r, 37668));
+                    return (r) =>
+                        (0, n.jsx)(
                             e,
-                            g(m({}, n), {
+                            b(p({}, r), {
                                 userId: s.default.getId(),
                                 widget: t,
                             }),
@@ -76,51 +76,51 @@ function b(e) {
                 { stackingBehavior: "stack" },
             );
         },
-        O = () => {
-            (0, c.G1)(b, t);
+        y = () => {
+            (0, c.G1)(O, t);
         },
-        h = (0, l.e7)([s.default], () => s.default.getId() === b);
-    return (0, r.jsx)(o.yRy, {
-        targetElementRef: j,
+        v = (0, i.e7)([s.default], () => s.default.getId() === O);
+    return (0, n.jsx)(a.yRy, {
+        targetElementRef: m,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(o.v2r, {
+            return (0, n.jsx)(a.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, a.Zy)(), t();
+                    (0, o.Zy)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": p.intl.string(p.t.xpSHSk),
-                children: (0, r.jsx)(o.kSQ, {
-                    children: h
-                        ? (0, r.jsx)(o.sNh, {
+                "aria-label": g.intl.string(g.t.xpSHSk),
+                children: (0, n.jsx)(a.kSQ, {
+                    children: v
+                        ? (0, n.jsx)(a.sNh, {
                               id: "remove-widget",
-                              label: p.intl.string(p.t.Mm07YW),
+                              label: g.intl.string(g.t.Mm07YW),
+                              action: j,
+                              color: "danger",
+                              icon: a.XHJ,
+                          })
+                        : (0, n.jsx)(a.sNh, {
+                              id: "flag-widget",
+                              label: g.intl.string(g.t.D4GvHB),
                               action: y,
                               color: "danger",
-                              icon: o.XHJ,
-                          })
-                        : (0, r.jsx)(o.sNh, {
-                              id: "flag-widget",
-                              label: p.intl.string(p.t.D4GvHB),
-                              action: O,
-                              color: "danger",
-                              icon: o.U65,
+                              icon: a.U65,
                           }),
                 }),
             });
         },
         children: (e) =>
-            (0, r.jsx)(
-                o.hU,
-                g(m({}, e), {
-                    buttonRef: j,
-                    icon: o.xhG,
+            (0, n.jsx)(
+                a.hU,
+                b(p({}, e), {
+                    buttonRef: m,
+                    icon: a.xhG,
                     variant: "secondary",
-                    "aria-label": p.intl.string(p.t.xpSHSk),
+                    "aria-label": g.intl.string(g.t.xpSHSk),
                     size: "sm",
                 }),
             ),

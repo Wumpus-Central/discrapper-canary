@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(35282);
 var r = n(951288),
-    i = n(647438),
-    l = n(442837),
-    o = n(481060),
+    o = n(647438),
+    i = n(442837),
+    l = n(481060),
     a = n(34854),
     c = n(531301),
     s = n(246946),
@@ -11,27 +11,27 @@ var r = n(951288),
     f = n(215258);
 function p(e) {
     let { autoFocus: t = !1, className: n, userId: p, onUpdate: m } = e,
-        g = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        { loading: b, note: j } = (0, c.Z)(p),
-        y = i.useRef(null);
-    return (i.useEffect(() => {
-        if (!t || g) return;
-        let e = y.current;
+        b = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        { loading: g, note: h } = (0, c.Z)(p),
+        x = o.useRef(null);
+    return (o.useEffect(() => {
+        if (!t || b) return;
+        let e = x.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [t, g]),
-    g)
+    }, [t, b]),
+    b)
         ? null
         : (0, r.jsx)("div", {
               className: n,
-              children: (0, r.jsx)(o.lcI, {
-                  ref: y,
+              children: (0, r.jsx)(l.lcI, {
+                  ref: x,
                   className: f.textarea,
-                  disabled: b,
-                  placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
+                  disabled: g,
+                  placeholder: g ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
                   "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let t = e.currentTarget.value;
-                      (null != j ? j : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
+                      (null != h ? h : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -42,7 +42,7 @@ function p(e) {
                           } else e.preventDefault(), e.currentTarget.blur();
                       else e.which === d.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != j ? j : void 0,
+                  defaultValue: null != h ? h : void 0,
                   maxLength: d.vuo,
               }),
           });

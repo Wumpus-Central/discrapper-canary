@@ -1,21 +1,21 @@
 n.d(t, { ZP: () => u });
 var i = n(657707),
     l = n(509613),
-    r = n(388032);
-let o = (0, l.k4)("Voice", {
-        useTitle: () => r.intl.string(r.t.K3lovL),
+    o = n(388032);
+let r = (0, l.k4)("Voice", {
+        useTitle: () => o.intl.string(o.t.K3lovL),
         getLayout: () => [],
     }),
     s = (0, l.k4)("Camera", {
-        useTitle: () => r.intl.string(r.t.FlNoSU),
+        useTitle: () => o.intl.string(o.t.FlNoSU),
         getLayout: () => [],
     }),
     a = (0, l.x1)("VoiceAndVideoPane", {
-        useTitle: () => r.intl.string(r.t.B1fFpa),
-        getLayout: () => [o, s],
+        useTitle: () => o.intl.string(o.t.B1fFpa),
+        getLayout: () => [r, s],
     }),
     u = (0, l.wf)("VoiceAndVideo", {
         icon: i.S6n,
-        useTitle: () => r.intl.string(r.t.B1fFpa),
+        useTitle: () => o.intl.string(o.t.B1fFpa),
         getLayout: () => [a],
     });

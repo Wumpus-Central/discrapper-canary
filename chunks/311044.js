@@ -1,8 +1,8 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(951288),
-    i = n(647438),
-    l = n(481060),
-    o = n(81897),
+    o = n(647438),
+    i = n(481060),
+    l = n(81897),
     a = n(906732),
     c = n(566898),
     s = n(785717),
@@ -11,27 +11,27 @@ var r = n(951288),
     f = n(892001),
     p = n(252417),
     m = n(264481),
-    g = n(443680);
-function b(e) {
-    let { user: t, guildId: n, channelId: b, onClose: j } = e,
-        { analyticsLocations: y } = (0, a.ZP)(),
-        { context: O, trackUserProfileAction: h } = (0, s.KZ)(),
-        { mutualFriends: x, mutualFriendsCount: v } = (0, d.Z)(t),
-        _ = (0, o.Z)();
+    b = n(443680);
+function g(e) {
+    let { user: t, guildId: n, channelId: g, onClose: h } = e,
+        { analyticsLocations: x } = (0, a.ZP)(),
+        { context: _, trackUserProfileAction: j } = (0, s.KZ)(),
+        { mutualFriends: v, mutualFriendsCount: y } = (0, d.Z)(t),
+        I = (0, l.Z)();
     return (
-        i.useEffect(() => {
-            (0, u.Z)(t.id, _);
-        }, [t.id, _]),
-        (0, r.jsx)(l.Ttm, {
-            className: g.scroller,
+        o.useEffect(() => {
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
+        (0, r.jsx)(i.Ttm, {
+            className: b.scroller,
             fade: !0,
             children:
-                null == x
-                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
+                null == v
+                    ? Array.from({ length: null != y ? y : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
                               {
-                                  className: g.friendsLoadingItem,
+                                  className: b.friendsLoadingItem,
                                   children: [
                                       (0, r.jsx)(c.ZT, {
                                           width: 40,
@@ -46,21 +46,21 @@ function b(e) {
                               t,
                           ),
                       )
-                    : 0 === x.length
+                    : 0 === v.length
                       ? (0, r.jsx)(m.s_, {})
-                      : x.map((e) => {
-                            let { key: t, user: i, status: l } = e;
+                      : v.map((e) => {
+                            let { key: t, user: o, status: i } = e;
                             return (0, r.jsx)(
                                 p.Z,
                                 {
-                                    user: i,
-                                    status: l,
+                                    user: o,
+                                    status: i,
                                     guildId: n,
-                                    channelId: b,
+                                    channelId: g,
                                     onSelect: () => {
                                         var e, t;
-                                        null == j || j(),
-                                            h({ action: "PRESS_MUTUAL_FRIEND" }),
+                                        null == h || h(),
+                                            j({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -87,11 +87,11 @@ function b(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, O)),
+                                                })({}, _)),
                                                 (t = t =
                                                     {
-                                                        userId: i.id,
-                                                        sourceAnalyticsLocations: y,
+                                                        userId: o.id,
+                                                        sourceAnalyticsLocations: x,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

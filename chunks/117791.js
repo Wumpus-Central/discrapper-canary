@@ -49,8 +49,14 @@ function c(e, t) {
     );
 }
 let d = (e) => {
-    var { subscriptionTier: t, premiumModalAnalyticsLocation: n, giftMessage: d, onClick: u } = e,
-        m = (function (e, t) {
+    var {
+            subscriptionTier: t,
+            premiumModalAnalyticsLocation: n,
+            giftMessage: d,
+            onClick: u,
+            buttonTextOverride: m,
+        } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -70,7 +76,7 @@ let d = (e) => {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick"]);
+        })(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick", "buttonTextOverride"]);
     return (0, i.jsx)(
         l.Z,
         c(
@@ -86,7 +92,7 @@ let d = (e) => {
             {
                 children: (e) => {
                     let { onClick: n } = e,
-                        l = (0, a.L)(t);
+                        l = null != m ? m : (0, a.L)(t);
                     return (0, i.jsx)(
                         r.z,
                         c(
@@ -95,7 +101,7 @@ let d = (e) => {
                                     onClick: n,
                                     icon: s.OgN,
                                 },
-                                m,
+                                p,
                             ),
                             { text: l },
                         ),

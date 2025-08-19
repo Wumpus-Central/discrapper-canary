@@ -1,10 +1,10 @@
 n.d(t, { Z: () => a });
 var i = n(524437),
     l = n(995774),
-    r = n(509613),
-    o = n(695346),
+    o = n(509613),
+    r = n(695346),
     s = n(388032);
-let a = (0, r.Em)("ReactionNotifications", {
+let a = (0, o.Em)("ReactionNotifications", {
     useTitle: () => s.intl.string(s.t.Rq0NFh),
     useSubtitle: () => s.intl.string(s.t.oWF6eX),
     useOptions: () => [
@@ -21,6 +21,6 @@ let a = (0, r.Em)("ReactionNotifications", {
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],
-    useValue: o.fz.useSetting,
-    setValue: (e) => (0, l.MR)(e, o.fz.getSetting()),
+    useValue: r.fz.useSetting,
+    setValue: (e) => (0, l.MR)(e, r.fz.getSetting()),
 });

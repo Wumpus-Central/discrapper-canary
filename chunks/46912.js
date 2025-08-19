@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(524437),
     a = n(656577),
     i = n(82554),
-    l = n(388032);
-let o = {
-    getTitle: () => l.intl.string(l.t["Gtck/v"]),
-    getDisabledTitle: () => l.intl.string(l.t.E6UmXV),
-    getDescription: () => l.intl.string(l.t.jcRSp6),
+    o = n(388032);
+let l = {
+    getTitle: () => o.intl.string(o.t["Gtck/v"]),
+    getDisabledTitle: () => o.intl.string(o.t.E6UmXV),
+    getDescription: () => o.intl.string(o.t.jcRSp6),
     eligibleReportSubtypes: [
         i.i5.SUB_CSAM,
         i.i5.SUB_LOLI,

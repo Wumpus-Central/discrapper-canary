@@ -1,21 +1,21 @@
 n.d(t, {
     fW: () => u,
-    jc: () => m,
+    jc: () => _,
 }),
     n(388685),
     n(539854);
 var r = n(647438),
     a = n(823379),
     i = n(568315),
-    l = n(83126),
-    o = n(218471),
+    o = n(83126),
+    l = n(218471),
     s = n(46912),
     c = n(82554);
 let d = {
     [c.zR.SAFETY_DM_SPAM_FILTER]: i.Z,
     [c.zR.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.Z,
-    [c.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: o.Z,
-    [c.zR.SAFETY_LANGUAGE_FILTER]: l.Z,
+    [c.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: l.Z,
+    [c.zR.SAFETY_LANGUAGE_FILTER]: o.Z,
 };
 function u(e) {
     return r.useMemo(
@@ -35,7 +35,7 @@ function u(e) {
         [e],
     );
 }
-function m(e, t) {
+function _(e, t) {
     return r.useMemo(
         () =>
             e

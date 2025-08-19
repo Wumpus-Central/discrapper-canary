@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a });
 var i = n(951288),
     l = n(647438),
-    r = n(770102),
-    o = n(36361),
+    o = n(770102),
+    r = n(36361),
     s = n(770877);
 let a = l.memo(function (e) {
     let { node: t } = e;
@@ -15,8 +15,8 @@ let a = l.memo(function (e) {
                       l.Fragment,
                       {
                           children: [
-                              (0, i.jsx)(o.Z, { node: e }),
-                              n !== t.layout.length - 1 && (0, i.jsx)(r.$, { className: s.divider }),
+                              (0, i.jsx)(r.Z, { node: e }),
+                              n !== t.layout.length - 1 && (0, i.jsx)(o.$, { className: s.divider }),
                           ],
                       },
                       e.key,

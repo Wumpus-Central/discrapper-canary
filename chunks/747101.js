@@ -1,34 +1,34 @@
-n.d(t, {
+r.d(t, {
     F: () => s,
-    Z: () => d,
+    Z: () => u,
 }),
-    n(539854),
-    n(388685);
-var r = n(647438),
-    i = n(442837),
-    l = n(224706),
-    o = n(669764);
-function a(e) {
+    r(539854),
+    r(388685);
+var n = r(647438),
+    l = r(442837),
+    i = r(224706),
+    a = r(669764);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
@@ -39,43 +39,43 @@ function c(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
 function s(e) {
     return (
-        r.useEffect(() => {
+        n.useEffect(() => {
             if (e.length > 0) {
-                let t = e.filter((e) => o.Z.canFetch(e));
-                t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
+                let t = e.filter((e) => a.Z.canFetch(e));
+                t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
             }
         }, [e]),
         {
-            gameDataMap: (0, i.cj)([o.Z], () => {
+            gameDataMap: (0, l.cj)([a.Z], () => {
                 let t = {};
                 return (
                     e.forEach((e) => {
-                        t[e] = o.Z.getGame(e);
+                        t[e] = a.Z.getGame(e);
                     }),
                     t
                 );
             }),
-            isGameFetching: r.useCallback((e) => o.Z.isFetching(e), []),
+            isGameFetching: n.useCallback((e) => a.Z.isFetching(e), []),
         }
     );
 }
-function d(e) {
-    let { gameDataMap: t, isGameFetching: n } = s(
-        r.useMemo(
+function u(e) {
+    let { gameDataMap: t, isGameFetching: r } = s(
+        n.useMemo(
             () =>
                 (function (e) {
                     let t = [];
@@ -92,20 +92,20 @@ function d(e) {
         ),
     );
     return {
-        widgets: r.useMemo(
+        widgets: n.useMemo(
             () =>
                 e.map((e) => {
-                    let n = e.games.map((e) => {
-                        let n = t[e.applicationId];
-                        return c(a({}, e), {
-                            gameName: null == n ? void 0 : n.name,
-                            imageSrc: null == n ? void 0 : n.coverImageUrl,
+                    let r = e.games.map((e) => {
+                        let r = t[e.applicationId];
+                        return c(o({}, e), {
+                            gameName: null == r ? void 0 : r.name,
+                            imageSrc: null == r ? void 0 : r.coverImageUrl,
                         });
                     });
-                    return c(a({}, e), { games: n });
+                    return c(o({}, e), { games: r });
                 }),
             [e, t],
         ),
-        isGameFetching: n,
+        isGameFetching: r,
     };
 }

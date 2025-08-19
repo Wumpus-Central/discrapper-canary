@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => r });
 var i = n(951288),
     l = n(481060),
-    r = n(465919);
-function o(e) {
+    o = n(465919);
+function r(e) {
     let { node: t } = e,
-        { useValue: n, setValue: o, useTitle: s, useSubtitle: a, useOptions: u } = t,
+        { useValue: n, setValue: r, useTitle: s, useSubtitle: a, useOptions: u } = t,
         c = s(),
         d = null == a ? void 0 : a(),
         f = n(),
         g = u();
     return (0, i.jsx)(l.xJW, {
         title: c,
-        className: r.radioContainer,
+        className: o.radioContainer,
         children: (0, i.jsxs)("div", {
-            className: r.radioContent,
+            className: o.radioContent,
             children: [
                 null != d &&
                     (0, i.jsx)(l.R94, {
@@ -23,7 +23,7 @@ function o(e) {
                 (0, i.jsx)(l.FXm, {
                     options: g,
                     value: f,
-                    onChange: (e) => o(e.value),
+                    onChange: (e) => r(e.value),
                 }),
             ],
         }),

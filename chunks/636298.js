@@ -1,8 +1,8 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => m });
 var i = n(951288),
     l = n(647438),
-    r = n(120356),
-    o = n.n(r),
+    o = n(120356),
+    r = n.n(o),
     s = n(873546),
     a = n(755721),
     u = n(481060),
@@ -48,18 +48,18 @@ function v(e) {
         ],
     });
 }
-let b = l.memo(function (e) {
+let m = l.memo(function (e) {
     let { onClose: t, setShowNavigationMobile: n, setting: l } = e,
-        r = null == l ? void 0 : l.useTitle(),
+        o = null == l ? void 0 : l.useTitle(),
         { showNavigationMobile: a } = (0, c.t)();
     return (0, i.jsxs)("div", {
-        className: o()(f.content, {
+        className: r()(f.content, {
             [f.mobile]: s.tq,
             [f.mobileNavigationOpen]: a,
         }),
         children: [
             (0, i.jsx)(v, {
-                title: r,
+                title: o,
                 onClose: t,
                 setShowNavigationMobile: n,
             }),

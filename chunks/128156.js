@@ -1,9 +1,9 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => Z });
 var r = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(481060),
-    o = n(468363),
+var o = n(442837),
+    i = n(481060),
+    l = n(468363),
     a = n(353647),
     c = n(566898),
     s = n(158776),
@@ -12,43 +12,43 @@ var i = n(442837),
     f = n(209698),
     p = n(369566),
     m = n(29899),
-    g = n(151545),
-    b = n(744802),
-    j = n(493043),
-    y = n(864141),
-    O = n(264481),
-    h = n(693408),
-    x = n(228168),
-    v = n(981631),
-    _ = n(388032),
-    I = n(158069);
-function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: E, channelId: T, subsection: Z, onClose: N } = e,
-        { voiceActivityStatusEnabled: w } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
-        S = (0, f.b)({ location: "UserProfileModalV2Activity" }),
-        { live: A, recent: C, stream: D } = (0, p.Z)(t.id),
-        { voiceChannel: L, voiceActivity: R } = (0, m.Z)({
+    b = n(151545),
+    g = n(744802),
+    h = n(493043),
+    x = n(864141),
+    _ = n(264481),
+    j = n(693408),
+    v = n(228168),
+    y = n(981631),
+    I = n(388032),
+    O = n(158069);
+function Z(e) {
+    let { user: t, currentUser: n, displayProfile: Z, guildId: P, channelId: T, subsection: C, onClose: A } = e,
+        { voiceActivityStatusEnabled: N } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
+        E = (0, f.b)({ location: "UserProfileModalV2Activity" }),
+        { live: S, recent: w, stream: B } = (0, p.Z)(t.id),
+        { voiceChannel: L, voiceActivity: D } = (0, m.Z)({
             userId: t.id,
-            guildId: E,
+            guildId: P,
         }),
-        G = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
-        k = t.id === n.id,
-        B = (0, i.e7)([d.Z, s.Z], () => {
-            let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
-            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
+        M = (0, o.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
+        U = t.id === n.id,
+        R = (0, o.e7)([d.Z, s.Z], () => {
+            let e = U ? d.Z.getStatus() : s.Z.getStatus(t.id);
+            return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        M = A.length > 0 || null != D,
-        U = w && null == D && null == R && null != L,
-        F = !B && (M || U),
-        V = C.length > 0;
-    if (!F && !V && G)
+        k = S.length > 0 || null != B,
+        G = N && null == B && null == D && null != L,
+        V = !R && (k || G),
+        F = w.length > 0;
+    if (!V && !F && M)
         return (0, r.jsx)("div", {
-            className: I.cards,
+            className: O.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: I.loadingItem,
+                        className: O.loadingItem,
                         children: [
                             (0, r.jsx)(c.ZT, {
                                 width: 60,
@@ -64,107 +64,107 @@ function P(e) {
                 ),
             ),
         });
-    if (!F && !V && !G) {
-        var W;
-        return k
-            ? (0, r.jsx)(O.Uf, { onClose: N })
-            : (0, r.jsx)(O.P9, {
+    if (!V && !F && !M) {
+        var Y;
+        return U
+            ? (0, r.jsx)(_.Uf, { onClose: A })
+            : (0, r.jsx)(_.P9, {
                   user: t,
-                  guildId: null != (W = null == P ? void 0 : P.guildId) ? W : void 0,
+                  guildId: null != (Y = null == Z ? void 0 : Z.guildId) ? Y : void 0,
                   channelId: T,
-                  onClose: N,
+                  onClose: A,
               });
     }
-    return (0, r.jsxs)(l.Ttm, {
-        className: I.scroller,
+    return (0, r.jsxs)(i.Ttm, {
+        className: O.scroller,
         fade: !0,
         children: [
-            F
-                ? (0, r.jsx)(h.Z, {
-                      heading: _.intl.string(_.t.J6STd3),
+            V
+                ? (0, r.jsx)(j.Z, {
+                      heading: I.intl.string(I.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
-                          className: I.cards,
+                          className: O.cards,
                           children: [
-                              !S &&
-                                  U &&
+                              !E &&
+                                  G &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: N,
+                                          onClose: A,
                                       }),
                                   }),
-                              null != D &&
+                              null != B &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(j.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,
-                                          stream: D,
-                                          onClose: N,
-                                          profileGuildId: null == P ? void 0 : P.guildId,
+                                          stream: B,
+                                          onClose: A,
+                                          profileGuildId: null == Z ? void 0 : Z.guildId,
                                       }),
                                   }),
-                              A.map((e, i) =>
+                              S.map((e, o) =>
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(g.Z, {
+                                          children: (0, r.jsx)(b.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: N,
-                                              profileGuildId: null == P ? void 0 : P.guildId,
+                                              onClose: A,
+                                              profileGuildId: null == Z ? void 0 : Z.guildId,
                                           }),
                                       },
-                                      "live-".concat(i),
+                                      "live-".concat(o),
                                   ),
                               ),
-                              S &&
-                                  U &&
+                              E &&
+                                  G &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: L,
-                                          onClose: N,
+                                          onClose: A,
                                       }),
                                   }),
                           ],
                       }),
                   })
                 : null,
-            V
-                ? (0, r.jsx)(h.Z, {
-                      heading: _.intl.string(_.t.jzgEoK),
-                      introText: k
-                          ? _.intl.format(_.t["4bk9Ag"], {
+            F
+                ? (0, r.jsx)(j.Z, {
+                      heading: I.intl.string(I.t.jzgEoK),
+                      introText: U
+                          ? I.intl.format(I.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        l.eee,
+                                        i.eee,
                                         {
-                                            href: u.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: u.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
                                         },
                                         t,
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: Z === x.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: C === v.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: I.cards,
-                          children: C.map((e) =>
+                          className: O.cards,
+                          children: w.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(b.Z, {
+                                      children: (0, r.jsx)(g.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: t,
                                           currentUser: n,
                                           entry: e,
-                                          profileGuildId: null == P ? void 0 : P.guildId,
-                                          onClose: N,
+                                          profileGuildId: null == Z ? void 0 : Z.guildId,
+                                          onClose: A,
                                       }),
                                   },
                                   e.id,

@@ -1,12 +1,12 @@
-n.d(t, {
-    LM: () => o,
+r.d(t, {
+    LM: () => a,
     oD: () => c,
-    qs: () => a,
+    qs: () => o,
 });
-var r = n(379405),
-    i = n(296009),
-    l = n(388032);
-let o = {
+var n = r(379405),
+    l = r(296009),
+    i = r(388032);
+let a = {
         VALORANT: "700136079562375258",
         ROBLOX: "363445589247131668",
         LEAGUE_OF_LEGENDS: "1402418696126992445",
@@ -24,50 +24,50 @@ let o = {
         RED_DEAD_REDEMPTION_2: "1402418648332898466",
         ELDEN_RING: "1402418436809953330",
     },
-    a = Object.values(o),
+    o = Object.values(a),
     c = () => [
         {
             id: "0",
-            type: i.l.FAVORITE_GAMES,
+            type: l.l.FAVORITE_GAMES,
             games: [
                 {
-                    applicationId: o.VALORANT,
-                    comment: l.intl.string(l.t["7CCylJ"]),
+                    applicationId: a.VALORANT,
+                    comment: i.intl.string(i.t["7CCylJ"]),
                 },
             ],
         },
         {
             id: "1",
-            type: i.l.CURRENT_GAMES,
+            type: l.l.CURRENT_GAMES,
             games: [
                 {
-                    applicationId: o.ROBLOX,
-                    tags: [r._.OPEN_TO_PLAY, r._.LIKE_IT],
+                    applicationId: a.ROBLOX,
+                    tags: [n._.OPEN_TO_PLAY, n._.LIKE_IT],
                 },
                 {
-                    applicationId: o.LEAGUE_OF_LEGENDS,
-                    tags: [r._.LFG, r._.LIKE_IT],
+                    applicationId: a.LEAGUE_OF_LEGENDS,
+                    tags: [n._.LFG, n._.LIKE_IT],
                 },
             ],
         },
         {
             id: "2",
-            type: i.l.WANT_TO_PLAY_GAMES,
+            type: l.l.WANT_TO_PLAY_GAMES,
             games: [
-                { applicationId: o.MINECRAFT },
-                { applicationId: o.COUNTERSTRIKE_2 },
-                { applicationId: o.OVERWATCH_2 },
-                { applicationId: o.APEX_LEGENDS },
+                { applicationId: a.MINECRAFT },
+                { applicationId: a.COUNTERSTRIKE_2 },
+                { applicationId: a.OVERWATCH_2 },
+                { applicationId: a.APEX_LEGENDS },
             ],
         },
         {
             id: "3",
-            type: i.l.PLAYED_GAMES,
+            type: l.l.PLAYED_GAMES,
             games: [
-                { applicationId: o.FORTNITE },
-                { applicationId: o.GRAND_THEFT_AUTO_V },
-                { applicationId: o.DOTA_2 },
-                { applicationId: o.ROCKET_LEAGUE },
+                { applicationId: a.FORTNITE },
+                { applicationId: a.GRAND_THEFT_AUTO_V },
+                { applicationId: a.DOTA_2 },
+                { applicationId: a.ROCKET_LEAGUE },
             ],
         },
     ];

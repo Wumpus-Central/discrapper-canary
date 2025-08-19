@@ -1,121 +1,115 @@
-n.d(t, {
-    C: () => _,
-    Z: () => x,
+r.d(t, {
+    C: () => x,
+    Z: () => y,
 });
-var r = n(951288),
-    i = n(647438),
-    l = n(296009),
-    o = n(442837),
-    a = n(481060),
-    c = n(314897),
-    s = n(592183),
-    d = n(224724),
-    u = n(747101),
-    f = n(517157),
-    p = n(985748),
-    m = n(566007),
-    g = n(173951),
-    b = n(455731),
-    j = n(430790),
-    y = n(795990),
-    O = n(830202);
-function h(e) {
+var n = r(951288);
+r(647438);
+var l = r(296009),
+    i = r(442837),
+    a = r(481060),
+    o = r(314897),
+    c = r(117029),
+    s = r(747101),
+    u = r(517157),
+    d = r(985748),
+    f = r(566007),
+    g = r(173951),
+    p = r(455731),
+    b = r(430790),
+    O = r(795990),
+    m = r(830202);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function x(e) {
+function y(e) {
     var { widget: t } = e,
-        n = (function (e, t) {
+        r = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
+            var r,
+                n,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
-            return i;
+            return l;
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(m.Z, h({ widget: t }, n));
+            return (0, n.jsx)(f.Z, j({ widget: t }, r));
         case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(p.Z, h({ widget: t }, n));
+            return (0, n.jsx)(d.Z, j({ widget: t }, r));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(b.Z, h({ widget: t }, n));
+            return (0, n.jsx)(p.Z, j({ widget: t }, r));
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(g.Z, h({ widget: t }, n));
+            return (0, n.jsx)(g.Z, j({ widget: t }, r));
         default:
             return null;
     }
 }
 function v(e) {
-    let { user: t, guildId: n, channelId: i } = e,
-        l = (0, f.Z)(t.id),
-        { widgets: a, isGameFetching: s } = (0, u.Z)(l),
-        d = (0, o.e7)([c.default], () => c.default.getId() === t.id);
-    return 0 === a.length && d
-        ? (0, r.jsx)(y.Z, {})
-        : (0, r.jsxs)(r.Fragment, {
+    let { user: t, guildId: r, channelId: l } = e,
+        a = (0, u.Z)(t.id),
+        { widgets: d, isGameFetching: f } = (0, s.Z)(a),
+        g = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+        p = 0 === d.length && g;
+    return ((0, c.J)(g, d), p)
+        ? (0, n.jsx)(O.Z, {})
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  a.map((e) =>
-                      (0, r.jsx)(
-                          x,
+                  d.map((e) =>
+                      (0, n.jsx)(
+                          y,
                           {
                               widget: e,
                               user: t,
-                              guildId: n,
-                              channelId: i,
-                              isGameFetching: s,
+                              guildId: r,
+                              channelId: l,
+                              isGameFetching: f,
                           },
                           e.id,
                       ),
                   ),
-                  d && (0, r.jsx)(j.Z, {}),
+                  g && (0, n.jsx)(b.Z, {}),
               ],
           });
 }
-function _(e) {
-    let t = (0, o.e7)([d.Z], () => d.Z.suggestedFetchAttempted);
-    return (
-        i.useEffect(() => {
-            t || s.Z.fetchSuggestedGames();
-        }, [t]),
-        (0, r.jsx)(a.Ttm, {
-            className: O.scroller,
-            fade: !0,
-            children: (0, r.jsx)(v, h({}, e)),
-        })
-    );
+function x(e) {
+    return (0, n.jsx)(a.Ttm, {
+        className: m.scroller,
+        fade: !0,
+        children: (0, n.jsx)(v, j({}, e)),
+    });
 }

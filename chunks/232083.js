@@ -1,70 +1,70 @@
-n.d(t, { Z: () => o });
-var r = n(951288);
-n(647438);
-var i = n(623132),
-    l = n(112794);
-function o(e) {
-    var { games: t, widgetType: n, isGameFetching: o } = e,
-        a = (function (e, t) {
+r.d(t, { Z: () => a });
+var n = r(951288);
+r(647438);
+var l = r(623132),
+    i = r(112794);
+function a(e) {
+    var { games: t, widgetType: r, isGameFetching: a } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
+            var r,
+                n,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
-            return i;
+            return l;
         })(e, ["games", "widgetType", "isGameFetching"]);
-    return (0, r.jsx)("ul", {
-        className: l.cardList,
+    return (0, n.jsx)("ul", {
+        className: i.cardList,
         children: t.map((e, t) =>
-            (0, r.jsx)(
+            (0, n.jsx)(
                 "li",
                 {
-                    children: (0, r.jsx)(
-                        i.Z,
+                    children: (0, n.jsx)(
+                        l.Z,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = n);
                                     });
                             }
                             return e;
                         })(
                             {
                                 game: e,
-                                widgetType: n,
-                                loading: o(e.applicationId),
+                                widgetType: r,
+                                loading: a(e.applicationId),
                             },
-                            a,
+                            o,
                         ),
                     ),
                 },
