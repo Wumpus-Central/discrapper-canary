@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(695346),
     m = n(598077),
     b = n(594174),
-    _ = n(626135),
-    O = n(709054),
+    O = n(626135),
+    _ = n(709054),
     y = n(591759),
     v = n(833592),
     j = n(497089),
@@ -23,8 +23,8 @@ var r = n(951288),
     E = n(418316),
     x = n(382865),
     S = n(526146),
-    I = n(400565),
-    P = n(148789),
+    P = n(400565),
+    I = n(148789),
     N = n(11825),
     w = n(981631),
     Z = n(388032),
@@ -157,7 +157,7 @@ let U = i.memo(function (e) {
                             });
                         } else await (0, d.Z)(r);
                     }
-                    _.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
+                    O.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
                         action_type: j.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
@@ -167,10 +167,10 @@ let U = i.memo(function (e) {
             }, [l, f, u]),
             m = null;
         l.type === j.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
-            ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
+            ? (m = (0, r.jsx)(I.Z, { userId: l.other_user.id }))
             : l.type === j.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
-              (m = (0, r.jsx)(P.Z, {
+              (m = (0, r.jsx)(I.Z, {
                   userId: l.other_user.id,
                   applicationId: l.applicationId,
               }));
@@ -198,7 +198,7 @@ let U = i.memo(function (e) {
                     onClick: g,
                     children: [
                         f ? null : (0, r.jsx)("div", { className: T.unread }),
-                        (0, r.jsx)(I.U, { item: l }),
+                        (0, r.jsx)(P.U, { item: l }),
                         (0, r.jsxs)("div", {
                             className: T.body,
                             children: [
@@ -215,7 +215,7 @@ let U = i.memo(function (e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: f ? "text-muted" : "header-secondary",
-                                    children: (0, C.a3)(O.default.extractTimestamp(l.id)),
+                                    children: (0, C.a3)(_.default.extractTimestamp(l.id)),
                                 }),
                                 m,
                             ],

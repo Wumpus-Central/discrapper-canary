@@ -47,7 +47,7 @@ function g(e) {
             isProductDisabled: g,
             discountOfferAmount: f,
         } = e,
-        b = null != f;
+        _ = null != f;
     return 0 === n.length
         ? null
         : n[0].currency === u.pK.DISCORD_ORB
@@ -66,12 +66,12 @@ function g(e) {
                                 product: o,
                                 discount: i,
                                 isPremiumUser: a,
-                                hideStrikethroughPrice: !a || b,
+                                hideStrikethroughPrice: !a || _,
                                 nitroIconType: "tooltip",
                                 nitroIconSize: "xs",
                                 discountOfferAmount: f,
                             }),
-                            a || b ? null : (0, r.jsx)(c.Z, { product: o }),
+                            a || _ ? null : (0, r.jsx)(c.Z, { product: o }),
                         ],
                     }),
                     n.length > 1 &&

@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(381585),
     g = r(597688),
     f = r(370039),
-    b = r(937510),
-    m = r(303952),
+    m = r(937510),
+    b = r(303952),
     h = r(38900),
     _ = r(709999),
     v = r(81136),
@@ -30,7 +30,7 @@ var n = r(951288),
     I = r(719138);
 function N(e) {
     var t;
-    let { isFetchingCategories: r, isFullScreen: N, scrollerRef: w, tab: A } = e,
+    let { isFetchingCategories: r, isFullScreen: N, scrollerRef: A, tab: w } = e,
         B = (0, p.sp)(),
         R = null != (t = null == B ? void 0 : B.sessionId) ? t : "",
         { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
@@ -40,7 +40,7 @@ function N(e) {
         V = (0, c.Fg)(),
         U = (0, o.ap)(V),
         [z, G, q] = l.useMemo(() => {
-            switch (A) {
+            switch (w) {
                 case O.AW.AVATAR_DECORATIONS:
                     return [E.intl.string(E.t.dRZYND), U ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
@@ -50,7 +50,7 @@ function N(e) {
                 case O.AW.BUNDLES:
                     return [E.intl.string(E.t.FYFppq), U ? x.Z : S.Z, a.Z.BUNDLE];
             }
-        }, [A, U]),
+        }, [w, U]),
         K = (0, f.a)(),
         Y = l.useMemo(
             () =>
@@ -66,12 +66,12 @@ function N(e) {
                 ),
             [F, q, K],
         ),
-        X = (0, b.l)(Y);
+        X = (0, m.l)(Y);
     return (l.useEffect(() => {
-        (0, m.n)({
+        (0, b.n)({
             sessionId: R,
-            checkpoint: m.a.SHOP_MOUNTED,
-            tab: A,
+            checkpoint: b.a.SHOP_MOUNTED,
+            tab: w,
             isFullScreen: N,
             unpublishedCategoriesShown: D,
             cacheDisabled: Z,
@@ -79,15 +79,15 @@ function N(e) {
     }, []),
     l.useEffect(() => {
         r ||
-            (0, m.n)({
+            (0, b.n)({
                 sessionId: R,
-                checkpoint: m.a.SHOP_RENDERED,
-                tab: A,
+                checkpoint: b.a.SHOP_RENDERED,
+                tab: w,
                 isFullScreen: N,
                 unpublishedCategoriesShown: D,
                 cacheDisabled: Z,
             });
-    }, [R, N, D, Z, r, A]),
+    }, [R, N, D, Z, r, w]),
     r || null == M)
         ? (0, n.jsx)(h.Z, {})
         : (0, n.jsxs)(n.Fragment, {
@@ -116,7 +116,7 @@ function N(e) {
                                                 product: e,
                                                 user: M,
                                                 category: r,
-                                                tab: A,
+                                                tab: w,
                                             },
                                             e.skuId,
                                         ),
@@ -141,11 +141,11 @@ function N(e) {
                                           page_category: null == B ? void 0 : B.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: "".concat(A, " page ").concat(e),
-                                          page_type: A,
+                                          cta_name: "".concat(w, " page ").concat(e),
+                                          page_type: w,
                                       }),
                                           W(e),
-                                          null == w || null == (t = w.current) || t.scrollToTop({ animate: !0 });
+                                          null == A || null == (t = A.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

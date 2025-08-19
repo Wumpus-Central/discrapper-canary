@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var i,
     r = n(442837),
     s = n(570140);
@@ -24,7 +24,7 @@ let o = {
         channel_list_scrim: "Dim the channel list when chat appears",
     },
     a = {};
-class u extends (i = r.ZP.DeviceSettingsStore) {
+class c extends (i = r.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: a };
     }
@@ -52,8 +52,8 @@ class u extends (i = r.ZP.DeviceSettingsStore) {
         });
     }
 }
-l(u, "displayName", "DevToolsDesignTogglesStore"), l(u, "persistKey", "DevToolsDesignTogglesStore");
-let c = new u(s.Z, {
+l(c, "displayName", "DevToolsDesignTogglesStore"), l(c, "persistKey", "DevToolsDesignTogglesStore");
+let u = new c(s.Z, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
         a[e.toggle] = e.value;
     },

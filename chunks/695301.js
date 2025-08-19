@@ -15,28 +15,28 @@ var r = n(951288),
     m = n(144618);
 let b = i.memo(function (e) {
     var t, n;
-    let { guildNode: b, lowerBadge: _ } = e,
-        O = b.id,
-        y = (0, l.e7)([p.Z], () => p.Z.getGuild(O)),
+    let { guildNode: b, lowerBadge: O } = e,
+        _ = b.id,
+        y = (0, l.e7)([p.Z], () => p.Z.getGuild(_)),
         v = (0, a.E)(y),
         j = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        C = (0, l.e7)([u.Z], () => u.Z.isUnavailable(O)),
+        C = (0, l.e7)([u.Z], () => u.Z.isUnavailable(_)),
         E = (0, c.Z)((e) => e.guildId),
-        x = (0, h.Z)(O),
+        x = (0, h.Z)(_),
         {
             badge: S,
-            unread: I,
-            isMentionLowImportance: P,
+            unread: P,
+            isMentionLowImportance: I,
         } = (0, l.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(O),
-            isMentionLowImportance: d.default.getIsMentionLowImportance(O),
-            unread: d.default.hasUnread(O),
+            badge: d.default.getMentionCount(_),
+            isMentionLowImportance: d.default.getIsMentionLowImportance(_),
+            unread: d.default.hasUnread(_),
         })),
         N = (0, s.Ij)(y) && 0 === S,
         w = i.useMemo(
             () =>
-                null != _
-                    ? _
+                null != O
+                    ? O
                     : N
                       ? (0, r.jsx)("div", {
                             className: m.pauseBackground,
@@ -49,7 +49,7 @@ let b = i.memo(function (e) {
                             }),
                         })
                       : null,
-            [_, N],
+            [O, N],
         );
     return (0, r.jsx)(
         g.Z,
@@ -83,11 +83,11 @@ let b = i.memo(function (e) {
                 guild: y,
                 unavailable: C,
                 animatable: j,
-                selected: E === O,
+                selected: E === _,
                 badge: S,
-                isMentionLowImportance: P,
+                isMentionLowImportance: I,
                 lowerBadge: w,
-                unread: I,
+                unread: P,
                 mediaState: x,
                 guildJoinRequestStatus: v,
             }),

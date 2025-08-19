@@ -1,94 +1,88 @@
-n.d(t, { default: () => h });
+n.d(e, { default: () => g });
 var r = n(951288),
-    s = n(647438),
-    i = n(990547),
+    i = n(647438),
+    s = n(990547),
     a = n(442837),
     l = n(481060),
     o = n(287734),
     u = n(493773),
-    c = n(592125),
-    _ = n(699516),
+    _ = n(592125),
+    c = n(699516),
     d = n(594174),
     A = n(626135),
-    f = n(33194),
-    E = n(343544),
+    E = n(33194),
+    f = n(343544),
     I = n(14251),
     S = n(110223),
     N = n(981631),
-    g = n(388032),
-    m = n(623146);
-function h(e) {
-    let { channelId: t, userId: n, transitionState: h, onClose: x } = e,
-        p = s.useRef(!1),
-        L = (0, a.e7)([_.Z], () => _.Z.isBlocked(n)),
-        O = (0, a.e7)([c.Z], () => c.Z.getChannel(t));
+    L = n(388032),
+    O = n(623146);
+function g(t) {
+    let { channelId: e, userId: n, transitionState: g, onClose: p } = t,
+        m = i.useRef(!1),
+        h = (0, a.e7)([c.Z], () => c.Z.isBlocked(n)),
+        C = (0, a.e7)([_.Z], () => _.Z.getChannel(e));
     if (
         ((0, u.zq)(() => {
-            p.current || (0, f.nC)(n);
+            m.current || (0, E.nC)(n);
         }),
         null == d.default.getUser(n))
     )
         return null;
-    let C = [
+    let P = [
             {
-                icon: (0, I.r)([n], null == O ? void 0 : O.guild_id),
-                text: (0, I.a)([n], 1, null == O ? void 0 : O.guild_id, t),
-                className: m.row,
+                icon: (0, I.r)([n], null == C ? void 0 : C.guild_id),
+                text: (0, I.a)([n], 1, null == C ? void 0 : C.guild_id, e),
+                className: O.row,
             },
             {
                 icon: (0, r.jsx)("div", {
-                    className: m.icon,
+                    className: O.icon,
                     children: (0, r.jsx)(l.aNP, {}),
                 }),
-                text: g.intl.string(g.t["+4O9nZ"]),
-                className: m.row,
+                text: L.intl.string(L.t["+4O9nZ"]),
+                className: O.row,
             },
         ],
-        j = L
-            ? (0, r.jsxs)(r.Fragment, {
-                  children: [g.intl.string(g.t.cpgfFh), (0, r.jsx)("br", {}), g.intl.string(g.t.UKQ4Cg)],
-              })
-            : (0, r.jsxs)(r.Fragment, {
-                  children: [g.intl.string(g.t["xj3j4+"]), (0, r.jsx)("br", {}), g.intl.string(g.t.wWueRU)],
-              });
-    return (0, r.jsx)(E.Z, {
-        headerText: g.intl.string(g.t["1/gpFh"]),
-        descriptionText: j,
-        infoRows: C,
+        x = h ? L.intl.string(L.t.QnTzrq) : L.intl.string(L.t.QsWbfX);
+    return (0, r.jsx)(f.Z, {
+        headerText: L.intl.string(L.t["1/gpFh"]),
+        descriptionText: x,
+        infoRows: P,
         onDismissAndStay: () => {
-            (p.current = !0),
-                x(),
-                (0, f.nC)(n),
+            (m.current = !0),
+                p(),
+                (0, E.nC)(n),
                 A.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: S.q.CLICK_TO_STAY,
-                    channel_id: t,
-                    blocked_user_ids: L ? [n] : [],
-                    ignored_user_ids: L ? [] : [n],
+                    channel_id: e,
+                    blocked_user_ids: h ? [n] : [],
+                    ignored_user_ids: h ? [] : [n],
                     warning_surface: S.fz.POST_JOIN_MODAL,
                 });
         },
         onDismissAndLeave: () => {
-            (p.current = !0),
-                x(),
+            (m.current = !0),
+                p(),
                 o.default.disconnect(),
                 A.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: S.q.CLICK_TO_LEAVE,
-                    channel_id: t,
-                    blocked_user_ids: L ? [n] : [],
-                    ignored_user_ids: L ? [] : [n],
+                    channel_id: e,
+                    blocked_user_ids: h ? [n] : [],
+                    ignored_user_ids: h ? [] : [n],
                     warning_surface: S.fz.POST_JOIN_MODAL,
                 });
         },
-        leaveButtonText: g.intl.string(g.t["Y56/oK"]),
-        stayButtonText: g.intl.string(g.t["Z+/hfX"]),
-        transitionState: h,
-        onClose: x,
+        leaveButtonText: L.intl.string(L.t["Hi1/aW"]),
+        stayButtonText: L.intl.string(L.t["Z+/hfX"]),
+        transitionState: g,
+        onClose: p,
         impression: {
-            impressionName: i.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: s.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
-                channel_id: t,
-                blocked_user_ids: L ? [n] : [],
-                ignored_user_ids: L ? [] : [n],
+                channel_id: e,
+                blocked_user_ids: h ? [n] : [],
+                ignored_user_ids: h ? [] : [n],
                 warning_surface: S.fz.POST_JOIN_MODAL,
             },
         },

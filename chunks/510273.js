@@ -76,12 +76,12 @@ function f(e) {
             clearTimeout(e);
         };
     }, []);
-    let _ = null != m && n,
-        O = _ ? a.P3F : "div";
-    return (0, r.jsxs)(O, {
-        className: o()(d.container, _ && d.actionable),
+    let O = null != m && n,
+        _ = O ? a.P3F : "div";
+    return (0, r.jsxs)(_, {
+        className: o()(d.container, O && d.actionable),
         onClick: () => {
-            _ && m();
+            O && m();
         },
         children: [
             (0, r.jsx)("div", {

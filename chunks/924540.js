@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => f,
-    GN: () => v,
-    _y: () => m,
+    GN: () => m,
+    _y: () => b,
 });
 var i = n(951288),
     r = n(647438),
@@ -9,19 +9,19 @@ var i = n(951288),
     l = n.n(s),
     o = n(481060),
     a = n(774078),
-    u = n(55935),
-    c = n(74538),
+    c = n(55935),
+    u = n(74538),
     d = n(639119),
     h = n(388032),
     p = n(788963);
 function g(e) {
-    let { isTabSelected: t, expiresAt: n, trialDuration: s, className: c } = e,
+    let { isTabSelected: t, expiresAt: n, trialDuration: s, className: u } = e,
         d = r.useMemo(() => Date.parse(n), [n]),
         g = (0, a.Z)(d, 60000);
     return Object.values(g).every((e) => 0 === e)
         ? null
         : (0, i.jsx)(o.ua7, {
-              text: (0, u.QX)(g, {
+              text: (0, c.QX)(g, {
                   days: h.t.qVGNkZ,
                   hours: h.t.wyg9a2,
                   minutes: h.t.IzmIlZ,
@@ -57,7 +57,7 @@ function g(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: l()(p.premiumTrialBadge, p.premiumTrialAcknowledgedBadge, c, {
+                              className: l()(p.premiumTrialBadge, p.premiumTrialAcknowledgedBadge, u, {
                                   [p.premiumTrialBadgeSelected]: t,
                               }),
                               children: [
@@ -95,26 +95,26 @@ function f(e) {
     var t;
     let { isTabSelected: n, trialOffer: r } = e,
         s = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
-        l = (0, c.a5)({
+        l = (0, u.a5)({
             intervalType: null == s ? void 0 : s.interval,
             intervalCount: null == s ? void 0 : s.interval_count,
         });
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(b, {
         isTabSelected: n,
         badgeCopy: l,
         offerExpiresAt: r.expires_at,
     });
 }
-function v(e) {
+function m(e) {
     let { isTabSelected: t, userDiscount: n, includesAmountOff: r } = e,
         s = h.intl.formatToPlainString(h.t.iiLbvr, { percent: n.discount.amount });
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(b, {
         isTabSelected: t,
         badgeCopy: r ? s : h.intl.string(h.t["/DTtr6"]),
         offerExpiresAt: n.expires_at,
     });
 }
-function m(e) {
+function b(e) {
     let { isTabSelected: t, badgeCopy: n, offerExpiresAt: r } = e;
     return null != r
         ? (0, i.jsx)(g, {

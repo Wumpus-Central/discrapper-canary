@@ -4,8 +4,8 @@ n(647438);
 var i = n(481060),
     l = n(388905),
     a = n(63063),
-    s = n(981631),
-    o = n(388032),
+    o = n(981631),
+    s = n(388032),
     c = n(820796);
 let u = () =>
     (0, r.jsx)(l.ZP, {
@@ -14,16 +14,16 @@ let u = () =>
             children: [
                 (0, r.jsx)(l.Dx, {
                     className: c.title,
-                    children: o.intl.string(o.t.nCB6GR),
+                    children: s.intl.string(s.t.nCB6GR),
                 }),
                 (0, r.jsx)(l.DK, {
                     className: c.subtitle,
-                    children: o.intl.format(o.t.KQgoxM, { underageMessage: o.intl.string(o.t.WqEH4O) }),
+                    children: s.intl.format(s.t.KQgoxM, { underageMessage: s.intl.string(s.t.WqEH4O) }),
                 }),
                 (0, r.jsx)(i.zxk, {
                     icon: i.Gr1,
-                    text: o.intl.string(o.t.hvVgAQ),
-                    onClick: () => window.open(a.Z.getArticleURL(s.BhN.AGE_GATE), "_blank"),
+                    text: s.intl.string(s.t.hvVgAQ),
+                    onClick: () => window.open(a.Z.getArticleURL(o.BhN.AGE_GATE), "_blank"),
                     iconPosition: "end",
                 }),
             ],

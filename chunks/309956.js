@@ -17,16 +17,16 @@ let p = {
     g = (e, t) => {
         let { enabled: r } = (0, i.WX)({ location: "useShopViewTransition" }),
             a = (0, o.FF)("CollectiblesBrowse"),
-            { setItemTypeFilter: g, reset: f, setCurrentTab: b } = (0, s.S)(),
-            m = n.useMemo(() => (e !== u.AW.ORBS || r ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, r, a]),
-            [h, _] = n.useState(m),
+            { setItemTypeFilter: g, reset: f, setCurrentTab: m } = (0, s.S)(),
+            b = n.useMemo(() => (e !== u.AW.ORBS || r ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, r, a]),
+            [h, _] = n.useState(b),
             [v, O] = n.useState(u.f7.VISIBLE);
         n.useEffect(() => {
-            b(h);
-        }, [h, b]),
+            m(h);
+        }, [h, m]),
             n.useEffect(() => {
-                _(m);
-            }, [m]);
+                _(b);
+            }, [b]);
         let { clearError: C } = (0, c.a)(),
             E = (0, l.k6)(),
             y = n.useCallback(

@@ -6,13 +6,13 @@ var r = n(481060),
     l = n(471445),
     o = n(823379),
     a = n(303737),
-    u = n(293810),
-    c = n(388032),
+    c = n(293810),
+    u = n(388032),
     d = n(24132);
 function h(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);
-    if (null == n) return "[".concat(c.intl.string(c.t.bz1PZW), "]");
+    if (null == n) return "[".concat(u.intl.string(u.t.bz1PZW), "]");
     let o = n.isMediaChannel() ? r.XBm : (0, l.Th)(n.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -33,9 +33,9 @@ function h(e) {
 }
 function p(e) {
     switch (e.ref_type) {
-        case u.Qs.CHANNEL:
+        case c.Qs.CHANNEL:
             return (0, i.jsx)(h, { channelId: e.ref_id });
-        case u.Qs.INTANGIBLE:
+        case c.Qs.INTANGIBLE:
             return e.name;
         default:
             (0, o.vE)(e);

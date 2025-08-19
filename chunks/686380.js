@@ -150,7 +150,7 @@ class D extends i.Component {
                         let { analyticsLocations: t } = e;
                         E.default.track(P.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
                             (0, d.ZDy)(async () => {
-                                let { default: e } = await Promise.all([n.e("83667"), n.e("84533"), n.e("83773")]).then(
+                                let { default: e } = await Promise.all([n.e("84533"), n.e("83773")]).then(
                                     n.bind(n, 656139),
                                 );
                                 return (t) =>

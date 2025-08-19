@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(913527),
@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(55935),
     m = n(388032),
     b = n(313227);
-function _(e) {
+function O(e) {
     let { invite: t, expired: n } = e,
         l = (0, a.e7)([h.default], () => {
             var e, n;
@@ -48,7 +48,7 @@ function _(e) {
                         (0, r.jsxs)("div", {
                             className: b.buttonContainer,
                             children: [
-                                (0, r.jsx)(O, {
+                                (0, r.jsx)(_, {
                                     expired: n,
                                     invite: t,
                                     isHoveringInvite: p,
@@ -92,19 +92,19 @@ function _(e) {
         })
     );
 }
-function O(e) {
+function _(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
         o = (0, a.e7)([p.Z], () => p.Z.isInviteGameInstalled(n)),
         u = (0, a.e7)([p.Z], () => p.Z.isInviteJoinable(n)),
         [h, g] = i.useState(!1),
-        _ = i.useCallback(async () => {
+        O = i.useCallback(async () => {
             g(!0);
             try {
                 await (0, f.MH)(n);
             } catch (e) {}
             g(!1);
         }, [n]),
-        O = i.useCallback(async () => {
+        _ = i.useCallback(async () => {
             g(!0);
             try {
                 await (0, f.Ol)(n);
@@ -118,7 +118,7 @@ function O(e) {
                 color: s.Tt.TRANSPARENT,
                 disabled: h,
                 size: s.Ph.SMALL,
-                onClick: _,
+                onClick: O,
                 children: m.intl.string(m.t["s+J8Dg"]),
             });
         else return null;
@@ -128,7 +128,7 @@ function O(e) {
               color: s.Tt.GREEN,
               disabled: h,
               size: s.Ph.SMALL,
-              onClick: O,
+              onClick: _,
               children: m.intl.string(m.t["/loN9/"]),
           })
         : null != n.fallback_url

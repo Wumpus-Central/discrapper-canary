@@ -13,11 +13,11 @@ function p(e, t) {
         p = (0, o.sp)(),
         g = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         f = (0, u.x)(),
-        b = i.ZP.canUseCollectibles(f),
-        m = n.useRef(null),
+        m = i.ZP.canUseCollectibles(f),
+        b = n.useRef(null),
         h = n.useCallback(() => {
-            let n = null != g ? (0, c.Vw)(g, b, !1) : null,
-                l = null != g ? (0, c.eu)(g, b, !1) : void 0;
+            let n = null != g ? (0, c.Vw)(g, m, !1) : null,
+                l = null != g ? (0, c.eu)(g, m, !1) : void 0;
             a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
@@ -37,7 +37,7 @@ function p(e, t) {
             null == p ? void 0 : p.pageCategory,
             null == p ? void 0 : p.pageSection,
             null == p ? void 0 : p.tilePosition,
-            b,
+            m,
             t,
             g,
             e,
@@ -46,18 +46,18 @@ function p(e, t) {
         _ = n.useCallback(
             (e) => {
                 e
-                    ? null === m.current &&
-                      (m.current = setTimeout(() => {
-                          h(), (m.current = null);
+                    ? null === b.current &&
+                      (b.current = setTimeout(() => {
+                          h(), (b.current = null);
                       }, 1000))
-                    : null !== m.current && (clearTimeout(m.current), (m.current = null));
+                    : null !== b.current && (clearTimeout(b.current), (b.current = null));
             },
             [h],
         );
     return (
         n.useEffect(
             () => () => {
-                null !== m.current && (clearTimeout(m.current), (m.current = null));
+                null !== b.current && (clearTimeout(b.current), (b.current = null));
             },
             [],
         ),

@@ -1,5 +1,5 @@
 r.d(t, {
-    EB: () => b,
+    EB: () => m,
     MV: () => g,
     q3: () => f,
 }),
@@ -56,7 +56,7 @@ let g = (e) => {
             });
         }, [i, e, t, r, c, l, a, s, p]);
     },
-    b = (e, t) => {
+    m = (e, t) => {
         let { analyticsLocations: r } = g(e);
         n.useEffect(() => {
             null == t ||

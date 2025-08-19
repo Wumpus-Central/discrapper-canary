@@ -17,8 +17,8 @@ var r = n(951288),
     g = n(668519),
     m = n(562224),
     b = n(803647),
-    _ = n(131704),
-    O = n(944486),
+    O = n(131704),
+    _ = n(944486),
     y = n(626135),
     v = n(870569),
     j = n(981631),
@@ -38,8 +38,8 @@ let S = i.memo(function (e) {
         u,
         S,
         {
-            stream: I,
-            canGoLive: P,
+            stream: P,
+            canGoLive: I,
             guildId: N,
             isStreaming: w,
             channel: Z,
@@ -66,7 +66,7 @@ let S = i.memo(function (e) {
                 }),
                 (0, s.h7)(D, !1);
         }, [D, M, G]),
-        H = i.useCallback(
+        F = i.useCallback(
             (e, t) => () => {
                 (0, f.v)(G, f.d.LEAVE_ACTIVITY),
                     d.Z.leaveActivity({
@@ -77,13 +77,13 @@ let S = i.memo(function (e) {
             },
             [G],
         ),
-        F = i.useCallback(() => {
-            (0, b.Z)(I);
-        }, [I]),
+        H = i.useCallback(() => {
+            (0, b.Z)(P);
+        }, [P]),
         z = i.useCallback(() => {
-            let e = null != Z && (0, _.vd)(Z.type) ? Z : null,
+            let e = null != Z && (0, O.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : N;
-            if (k && null != A && null != O.Z.getVoiceChannelId()) {
+            if (k && null != A && null != _.Z.getVoiceChannelId()) {
                 (0, g.s)("Activity Panel"), (0, m.Z)(A.pid);
                 return;
             }
@@ -121,7 +121,7 @@ let S = i.memo(function (e) {
                         (l = l =
                             {
                                 sourcePID: null == A ? void 0 : A.pid,
-                                selectSource: !!U && null != O.Z.getVoiceChannelId(),
+                                selectSource: !!U && null != _.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: j.Sbl.ACTIVITY_PANEL,
                             }),
@@ -143,11 +143,11 @@ let S = i.memo(function (e) {
             });
         }, [Z, N, A, U, k]),
         W =
-            (null != A || null == R || (0, c.R)()) && (w || P)
+            (null != A || null == R || (0, c.R)()) && (w || I)
                 ? (w
                       ? ((t = !1),
                         (l = () => {
-                            F(), (0, f.v)(G, f.d.STREAM, !1);
+                            H(), (0, f.v)(G, f.d.STREAM, !1);
                         }),
                         (u = a.g5r),
                         (S = C.intl.string(C.t.S5anIS)))
@@ -165,7 +165,7 @@ let S = i.memo(function (e) {
                           (l = null),
                           (u = a.hGI),
                           (S =
-                              null != Z && (0, _.vd)(Z.type)
+                              null != Z && (0, O.vd)(Z.type)
                                   ? C.intl.string(C.t.uQn9Bw)
                                   : null != N
                                     ? C.intl.string(C.t.fBXEoK)
@@ -193,10 +193,10 @@ let S = i.memo(function (e) {
                 ? null
                 : (0, r.jsx)(v.Z, {
                       tooltipText: C.intl.string(C.t["R/FK4O"]),
-                      onClick: H(R.applicationId, R.location),
+                      onClick: F(R.applicationId, R.location),
                       icon: a.PBZ,
                   }),
-        q = null == I ? null : (0, r.jsx)(h.Z, {});
+        q = null == P ? null : (0, r.jsx)(h.Z, {});
     return null == W && null == K && null == Y
         ? null
         : (0, r.jsxs)("div", {

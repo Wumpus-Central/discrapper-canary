@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b }), r(388685);
+r.d(t, { Z: () => m }), r(388685);
 var n = r(951288),
     l = r(647438),
     a = r(120356),
@@ -99,10 +99,10 @@ let g = {
             skuId: "1217625794382401577",
         },
     ],
-    b = (e) => {
+    m = (e) => {
         let { peaking: t, transitioning: r, style: a } = e,
             g = window.innerHeight,
-            [b, m] = l.useState(!1),
+            [m, b] = l.useState(!1),
             h = f.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
@@ -111,18 +111,18 @@ let g = {
             l.useEffect(() => {
                 r &&
                     setTimeout(() => {
-                        m(!0);
+                        b(!0);
                     }, d.lb);
             }, [r]),
             (0, n.jsx)("div", {
                 style: a,
                 className: i()(p.jumbleWrapper, {
                     [p.peaking]: t,
-                    [p.transitioned]: b,
+                    [p.transitioned]: m,
                 }),
                 children: f.map((e, t) => {
                     var l, a;
-                    let { top: i, left: c, rotation: f, size: b, skuId: m } = e,
+                    let { top: i, left: c, rotation: f, size: m, skuId: b } = e,
                         _ = null == (l = h[t]) ? void 0 : l.items[0],
                         v = null == (a = h[t]) ? void 0 : a.type,
                         O = v === o.Z.AVATAR_DECORATION ? 384 : 512;
@@ -134,8 +134,8 @@ let g = {
                                 top: r ? -g - O : i,
                                 left: r ? "".concat(c - 75 - 350 * Math.random()) : c,
                                 transform: "rotate(".concat(f, "deg)"),
-                                height: b.y,
-                                width: b.x,
+                                height: m.y,
+                                width: m.x,
                                 transitionDelay: "".concat(Math.random() / 3, "s"),
                                 transitionDuration: "".concat(d.lb - 200 * Math.random(), "ms"),
                             },
@@ -150,7 +150,7 @@ let g = {
                                     }),
                             ],
                         },
-                        m + t,
+                        b + t,
                     );
                 }),
             })

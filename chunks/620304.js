@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(667815),
     m = n(531572),
     b = n(259580),
-    _ = n(538445),
-    O = n(639777),
+    O = n(538445),
+    _ = n(639777),
     y = n(495804),
     v = n(441536),
     j = n(921944),
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,10 +65,10 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
-    let { guild: t, tooltipTypes: l, withMargin: P } = e,
+function I(e) {
+    let { guild: t, tooltipTypes: l, withMargin: I } = e,
         N = (0, y.Z)(t, "GuildPowerupsProgressBar"),
-        w = (0, O.Z)(t.id),
+        w = (0, _.Z)(t.id),
         Z = i.useCallback(() => {
             (0, v.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
@@ -101,7 +101,7 @@ function P(e) {
         G = (e) =>
             (0, r.jsx)(
                 d.P3F,
-                I(S({}, e), {
+                P(S({}, e), {
                     "aria-label": void 0,
                     role: "button",
                     focusProps: {
@@ -114,12 +114,12 @@ function P(e) {
                         var t;
                         null == e || null == (t = e.onClick) || t.call(e), Z();
                     },
-                    className: o()(x.container, { [x.containerWithMargin]: P }),
+                    className: o()(x.container, { [x.containerWithMargin]: I }),
                     onContextMenu: (e) => {
                         w &&
                             (0, p.jW)(e, async () => {
                                 let { default: e } = await n.e("8570").then(n.bind(n, 651138));
-                                return (n) => (0, r.jsx)(e, I(S({}, n), { guild: t }));
+                                return (n) => (0, r.jsx)(e, P(S({}, n), { guild: t }));
                             });
                     },
                     children: (0, r.jsxs)("div", {
@@ -183,7 +183,7 @@ function P(e) {
               targetElementRef: M,
               renderPopout: () =>
                   k === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
-                      ? (0, r.jsx)(_.Z, {
+                      ? (0, r.jsx)(O.Z, {
                             guild: t,
                             markAsDismissed: U,
                         })
@@ -204,7 +204,7 @@ function P(e) {
 }
 function N(e) {
     let { guild: t, tooltipTypes: n, withMargin: i } = e;
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(I, {
         guild: t,
         tooltipTypes: n,
         withMargin: i,

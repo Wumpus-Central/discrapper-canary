@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(594174),
     m = n(74538),
     b = n(507808),
-    _ = n(822857),
-    O = n(479766),
+    O = n(822857),
+    _ = n(479766),
     y = n(275388),
     v = n(331663),
     j = n(981631),
@@ -23,12 +23,12 @@ var r = n(951288),
     E = n(46140);
 let x = "orb-announcement-modal-key";
 function S() {
-    let { enabled: e } = (0, _.hl)({ location: "virtual_currency_announcement_modal" }),
-        t = (0, o.e7)([O.Z], () => O.Z.onboardingModalOpenedPrior),
+    let { enabled: e } = (0, O.hl)({ location: "virtual_currency_announcement_modal" }),
+        t = (0, o.e7)([_.Z], () => _.Z.onboardingModalOpenedPrior),
         { user: S } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
-        I = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
-        P = (0, y.GE)(x),
-        N = (0, m.EO)(S) || I || P,
+        P = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
+        I = (0, y.GE)(x),
+        N = (0, m.EO)(S) || P || I,
         [w, Z] = (0, p.US)(
             e && !N ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
             ...v.b.useSelectedDismissibleContent,
@@ -79,5 +79,5 @@ function S() {
                     },
                 },
             ));
-    }, [w, e, t, Z, I]);
+    }, [w, e, t, Z, P]);
 }

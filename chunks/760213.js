@@ -7,8 +7,8 @@ var r,
     i = n(951288),
     l = n(647438),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     c = n(481060),
     u = n(893776),
     d = n(239091),
@@ -35,7 +35,7 @@ function O(e) {
             currentUser: l,
             hidePrivateData: a,
             isAuthenticated: v,
-        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
+        } = (0, s.cj)([f.default, m.Z, p.default], () => ({
             currentUser: f.default.getCurrentUser(),
             hidePrivateData: m.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated(),
@@ -71,7 +71,7 @@ function O(e) {
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: s()(I.usernameSection, { [I.hasActionMaxWidth]: !O }),
+                        className: o()(I.usernameSection, { [I.hasActionMaxWidth]: !O }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: I.username,

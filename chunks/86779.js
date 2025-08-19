@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(593473),
     a = n(756647),
-    s = n(442837),
-    o = n(544891),
+    o = n(442837),
+    s = n(544891),
     c = n(433517),
     u = n(755721),
     d = n(481060),
@@ -26,7 +26,7 @@ let E = "mweb_handoff_nonce",
         c.K.remove(E), c.K.remove(j);
     },
     S = () => {
-        let e = (0, s.e7)([m.default], () => m.default.getFingerprint()),
+        let e = (0, o.e7)([m.default], () => m.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
             g = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
             S = null != g ? g : null !== e ? e : void 0;
@@ -68,7 +68,7 @@ let E = "mweb_handoff_nonce",
                     "null" !== n &&
                     null != Z &&
                     null == C &&
-                    o.tn
+                    s.tn
                         .post({
                             url: x.ANM.HANDOFF_EXCHANGE,
                             body: {

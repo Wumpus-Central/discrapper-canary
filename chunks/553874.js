@@ -1,18 +1,18 @@
-a.d(t, { P: () => o });
-var r = a(951288),
-    i = a(257465),
-    s = a(82659),
-    n = a(687555),
-    l = a(388032);
-let o = (e) => {
+r.d(t, { P: () => c });
+var a = r(951288),
+    s = r(257465),
+    n = r(82659),
+    i = r(687555),
+    l = r(388032);
+let c = (e) => {
     let { onClose: t } = e;
-    return (0, r.jsx)(s.Modal, {
+    return (0, a.jsx)(n.Modal, {
         size: "sm",
-        transitionState: i.D.ENTERED,
+        transitionState: s.D.ENTERED,
         title: l.intl.string(l.t.a9HOKi),
         subtitle: l.intl.string(l.t.JjjeZW),
         onClose: t,
         actions: [],
-        children: (0, r.jsx)(n.d, {}),
+        children: (0, a.jsx)(i.d, {}),
     });
 };

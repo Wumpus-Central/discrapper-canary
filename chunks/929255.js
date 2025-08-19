@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(501431),
     g = r(888302),
     f = r(193227),
-    b = r(426171),
-    m = r(845796),
+    m = r(426171),
+    b = r(845796),
     h = r(841875),
     _ = r(312030),
     v = r(795343),
@@ -26,8 +26,8 @@ function x(e) {
     (0, p.A)();
     let g = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: m } = (0, s.z)(f, r),
-        { setCategoryRef: _, handleScrollToCategory: v } = (0, b.xV)(f.current),
+        { handleScroll: b } = (0, s.z)(f, r),
+        { setCategoryRef: _, handleScrollToCategory: v } = (0, m.xV)(f.current),
         [O, C] = l.useState(g),
         [E, y] = l.useState(!1);
     return (
@@ -57,7 +57,7 @@ function x(e) {
                     (0, n.jsx)(o.yWw, {
                         className: S.shopScroll,
                         ref: f,
-                        onScroll: m,
+                        onScroll: b,
                         children: (0, n.jsx)(j, {
                             isFullScreen: t,
                             isSmallScreen: E,
@@ -87,7 +87,7 @@ let j = (e) => {
             isSmallScreen: r,
             filterBarOpen: a,
             setFilterBarOpen: s,
-            tab: b,
+            tab: m,
             scrollerRef: x,
             sortedCategories: j,
             setCategoryRef: P,
@@ -96,11 +96,11 @@ let j = (e) => {
         L = l.useRef(null),
         k = (0, p.S)((e) => e.hasDefaultFilters()),
         I = (0, u.sp)(),
-        { handlePageChange: N, currentPage: w } = (0, _.h)({
+        { handlePageChange: N, currentPage: A } = (0, _.h)({
             scrollerRef: x,
             sortedCategories: j,
         }),
-        A = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 c.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -164,7 +164,7 @@ let j = (e) => {
                                                     variant: "text-md/semibold",
                                                     children: y.intl.string(y.t.uaX709),
                                                 }),
-                                                (0, n.jsx)(m.Z, {}),
+                                                (0, n.jsx)(b.Z, {}),
                                             ],
                                         }),
                                         (0, n.jsx)("div", {
@@ -209,28 +209,28 @@ let j = (e) => {
                               {
                                   isFullScreen: t,
                                   scrollerRef: x,
-                                  tab: b,
+                                  tab: m,
                               },
-                              b,
+                              m,
                           )
-                        : (0, C.RE)(b)
+                        : (0, C.RE)(m)
                           ? (0, n.jsx)(
                                 O.Z,
                                 {
                                     isFullScreen: t,
                                     scrollerRef: x,
-                                    tab: b,
+                                    tab: m,
                                 },
-                                b,
+                                m,
                             )
                           : (0, n.jsx)(u.k0, {
-                                newValue: { pageIndex: w },
+                                newValue: { pageIndex: A },
                                 children: (0, n.jsx)(f.Z, {
                                     isFullScreen: t,
                                     sortedCategories: j,
                                     setCategoryRef: P,
-                                    currentPage: w,
-                                    handlePageChange: A,
+                                    currentPage: A,
+                                    handlePageChange: w,
                                 }),
                             }),
                 ],

@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => O,
+    R: () => _,
     Z: () => y,
 });
 var r,
@@ -18,7 +18,7 @@ var l = n(442837),
     g = n(815660),
     m = n(388032),
     b = n(36973);
-function _(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,9 +43,9 @@ function _(e) {
     }
     return e;
 }
-var O = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
+var _ = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
 let y = (e) => {
-    let { type: t, guildId: r, closePopout: O } = e,
+    let { type: t, guildId: r, closePopout: _ } = e,
         y = (0, u.Dt)(),
         {
             notClaimed: v,
@@ -55,22 +55,22 @@ let y = (e) => {
             newMember: x,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
-        I = null,
-        P = null;
+        P = null,
+        I = null;
     return (0 === t &&
         (v
-            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
+            ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
             : C
-              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
               : j
-                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
                 : x
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))
+                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
+                    (I = m.intl.string(m.t.BddRzc)))
                   : E &&
-                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))),
-    null == S || null == I)
+                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
+                    (I = m.intl.string(m.t.BddRzc)))),
+    null == S || null == P)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
@@ -92,18 +92,18 @@ let y = (e) => {
                           (0, i.jsx)(a.Text, {
                               color: "header-secondary",
                               variant: "text-sm/normal",
-                              children: I,
+                              children: P,
                           }),
                           (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
-                                  null != P
+                                  null != I
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(a.zxk, {
                                                 variant: "primary",
-                                                text: P,
+                                                text: I,
                                                 onClick: () => {
                                                     v
                                                         ? c.j()
@@ -116,7 +116,7 @@ let y = (e) => {
                                                                     return (t) =>
                                                                         (0, i.jsx)(
                                                                             e,
-                                                                            _({ reason: d.L.GUILD_PHONE_REQUIRED }, t),
+                                                                            O({ reason: d.L.GUILD_PHONE_REQUIRED }, t),
                                                                         );
                                                                 },
                                                                 { modalKey: g.M },
@@ -127,7 +127,7 @@ let y = (e) => {
                                                                 var t, n, r;
                                                                 return (0, i.jsx)(
                                                                     a.ConfirmModal,
-                                                                    ((n = _(
+                                                                    ((n = O(
                                                                         {
                                                                             header: m.intl.string(m.t.LykQYm),
                                                                             confirmText: m.intl.string(m.t.BddRzc),
@@ -171,14 +171,14 @@ let y = (e) => {
                                                                     n),
                                                                 );
                                                             })),
-                                                        O();
+                                                        _();
                                                 },
                                             }),
                                         })
                                       : null,
                                   v || C || j
                                       ? (0, i.jsx)(o.zx, {
-                                            onClick: O,
+                                            onClick: _,
                                             look: o.zx.Looks.BLANK,
                                             className: b.cancel,
                                             children: m.intl.string(m.t.oEAioK),

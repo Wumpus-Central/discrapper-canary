@@ -18,7 +18,7 @@ function g(e) {
         { selectedFilter: g, setSelectedFilter: m } = (0, c.Z)(),
         b = (0, d.d)((e) => e.setInboxReadState);
     if (!i) return null;
-    let _ = () => {
+    let O = () => {
             let e = g === p.V5.ALL ? p.V5.BOOKMARKS : p.V5.ALL;
             m(e),
                 e === p.V5.ALL && b(!1),
@@ -28,10 +28,10 @@ function g(e) {
                     viewId: n,
                 });
         },
-        O = g === p.V5.ALL ? f.intl.string(f.t["2pAkDA"]) : f.intl.string(f.t.HcoRu7);
+        _ = g === p.V5.ALL ? f.intl.string(f.t["2pAkDA"]) : f.intl.string(f.t.HcoRu7);
     return (0, r.jsx)(o.ua7, {
         position: "bottom",
-        text: O,
+        text: _,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(
@@ -64,8 +64,8 @@ function g(e) {
                 (i = i =
                     {
                         className: l()(t, h.headerButton, { [h.enabled]: g === p.V5.BOOKMARKS }),
-                        "aria-label": O,
-                        onClick: _,
+                        "aria-label": _,
+                        onClick: O,
                         children:
                             g === p.V5.BOOKMARKS
                                 ? (0, r.jsx)(o.plf, {

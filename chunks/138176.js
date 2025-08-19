@@ -71,9 +71,7 @@ let g = (e) => {
                         }),
                             p(),
                             (0, l.ZDy)(async () => {
-                                let { default: e } = await Promise.all([n.e("83667"), n.e("84533"), n.e("27311")]).then(
-                                    n.bind(n, 656139),
-                                );
+                                let { default: e } = await Promise.resolve().then(n.bind(n, 656139));
                                 return (t) => (0, r.jsx)(e, h({}, t));
                             });
                     },

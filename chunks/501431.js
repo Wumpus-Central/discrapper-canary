@@ -65,11 +65,11 @@ let f = {
         sortType: o.E.RECENCY,
         sortDirection: i.F.DESC,
     },
-    b = {
+    m = {
         sortType: o.E.POPULARITY,
         sortDirection: i.F.DESC,
     },
-    m = {
+    b = {
         sortType: o.E.RELEVANCE,
         sortDirection: i.F.DESC,
     },
@@ -89,7 +89,7 @@ let f = {
     },
     _ = (e) => {
         let { colorFilters: t, themeFilters: r, searchQuery: n, itemTypeFilters: l } = e;
-        return t.size > 0 || r.size > 0 || "" !== n.trim() ? m : l.size > 0 ? b : f;
+        return t.size > 0 || r.size > 0 || "" !== n.trim() ? b : l.size > 0 ? m : f;
     },
     v = (0, l.U)(
         (0, a.XR)((e, t) =>
@@ -161,7 +161,7 @@ let f = {
                         });
                         return (
                             "" !== t.trim()
-                                ? ((r.sort = m), (r.userHasSelectedSort = !1))
+                                ? ((r.sort = b), (r.userHasSelectedSort = !1))
                                 : e.userHasSelectedSort || (r.sort = _(r)),
                             r
                         );

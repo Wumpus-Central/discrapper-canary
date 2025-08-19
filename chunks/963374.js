@@ -1,10 +1,9 @@
-t.d(e, { nC: () => v }), t(388685), t(704826), t(35282), t(539854);
+t.d(e, { nC: () => f }), t(388685), t(704826), t(35282), t(539854);
 var n = t(392711),
     r = t.n(n),
-    l = t(697741),
-    i = t(619864),
-    a = t(193995);
-let s = new Set([
+    l = t(619864),
+    i = t(193995);
+let a = new Set([
     "a",
     "an",
     "and",
@@ -39,27 +38,22 @@ let s = new Set([
     "will",
     "with",
 ]);
-function o(A) {
+function s(A) {
     return A.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
-function g(A) {
+function o(A) {
     return A.toLowerCase();
 }
-function c(A) {
-    return s.has(A);
+function g(A) {
+    return a.has(A);
 }
-function f(A) {
+function c(A) {
     return 0 === A.length;
 }
-function v(A) {
+function f(A) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        t = A.length >= i.zV && A.length <= i.y_ && e,
-        n = new Set(
-            (function (A) {
-                let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.$;
-                return r()(A.split(/\W+/)).map(o).reject(f).map(g).reject(c).map(e).value();
-            })(A, t ? a.a : l.$),
-        );
+        t = A.length >= l.zV && A.length <= l.y_ && e,
+        n = new Set(r()(A.split(/\W+/)).map(s).reject(c).map(o).reject(g).map(i.a).value());
     return (A) =>
         (function A(e, t, n) {
             if (Array.isArray(e)) e.forEach((e) => A(e, t, n));
@@ -70,12 +64,13 @@ function v(A) {
                 e.content.split(/(\W+)/g).forEach((e) => {
                     !(function (A, e) {
                         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (f((A = g(o(A)))) || c(A)) return !1;
+                        if (c((A = o(s(A)))) || g(A)) return !1;
+                        let n = (0, i.a)(A);
                         if (t) {
-                            for (let t of e.values()) if (A.includes(t)) return !0;
+                            for (let A of e.values()) if (n.includes(A)) return !0;
                             return !1;
                         }
-                        return e.has((0, l.$)(A));
+                        return e.has(n);
                     })(e, t, n)
                         ? (r += e)
                         : (r.length > 0 &&

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -14,8 +14,8 @@ var i,
     g = n(411198),
     m = n(998502),
     b = n(981631),
-    _ = n(176505);
-function O(e, t, n) {
+    O = n(176505);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -67,8 +67,8 @@ class S extends (i = l.ZP.Store) {
         };
     }
 }
-O(S, "displayName", "InviteModalStore");
-let I = new S(o.Z, {
+_(S, "displayName", "InviteModalStore");
+let P = new S(o.Z, {
     OVERLAY_INITIALIZE: x,
     CONNECTION_OPEN: x,
     CONNECTION_CLOSED: function () {
@@ -86,7 +86,7 @@ let I = new S(o.Z, {
                 if (null == n) return !1;
                 if (null != d.Z.getGuild(n.id) && !(0, a.TY)(t)) {
                     let e = (function (e) {
-                        if ((0, a.W6)(e)) return _.oC.ROLE_SUBSCRIPTIONS;
+                        if ((0, a.W6)(e)) return O.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
                             let e = u.Z.getChannel(t.id);

@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(411149),
     h = a(151480),
     p = a(461762),
-    v = a(680783),
-    b = a(605236),
+    b = a(680783),
+    v = a(605236),
     f = a(675478),
     g = a(944486),
     j = a(388032),
@@ -70,10 +70,10 @@ function N() {
 function T() {
     var e, t;
     let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
-        l = (0, v.Z)(a),
+        l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, p.Z)(s),
-        b = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { opacity: e });
             },
@@ -100,13 +100,13 @@ function T() {
         O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        R = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s],
         ),
-        k = r.useCallback(() => {
+        R = r.useCallback(() => {
             null != s && (0, h.i)(s, null);
         }, [s]),
         Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -160,7 +160,7 @@ function T() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: b,
+                                onValueChange: v,
                             },
                             "opacity-".concat(Z),
                         ),
@@ -271,7 +271,7 @@ function T() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: R,
+                                onValueChange: k,
                             },
                             "tokenMixAmount-".concat(A),
                         ),
@@ -318,7 +318,7 @@ function T() {
                         }),
                         (0, n.jsx)(u.zx, {
                             className: _.resetButton,
-                            onClick: k,
+                            onClick: R,
                             children: "Reset",
                         }),
                     ],
@@ -330,7 +330,7 @@ function O() {
     let e = r.useCallback(() => {
             (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, b.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, v.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
         a = null != t ? new Date(t) : null;
     return (0, n.jsxs)(n.Fragment, {
         children: [

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b }), r(388685);
+r.d(t, { Z: () => m }), r(388685);
 var n = r(951288);
 r(647438);
 var l = r(120356),
@@ -83,7 +83,7 @@ let p = ["1366494385738354769", "1385035256125591633"],
             }),
         });
     },
-    b = (e) => {
+    m = (e) => {
         let { isLoading: t, handleTransition: r, categories: l, featuredBlockRecord: i } = e;
         return t
             ? (0, n.jsxs)("div", {

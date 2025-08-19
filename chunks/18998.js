@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(583741), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(583741), n(388685), n(539854);
 var r,
     i = n(951288),
     l = n(647438),
@@ -107,7 +107,7 @@ class b extends l.Component {
             });
     }
 }
-class _ extends (r = l.PureComponent) {
+class O extends (r = l.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -210,11 +210,11 @@ class _ extends (r = l.PureComponent) {
             });
     }
 }
-h(_, "contextType", p.Sfi),
-    h(_, "defaultProps", {
+h(O, "contextType", p.Sfi),
+    h(O, "defaultProps", {
         className: f.container,
         reverse: !1,
         hide: !1,
         animate: !0,
     });
-let O = _;
+let _ = O;

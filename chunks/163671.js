@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(388905),
-    s = n(646956);
-function o(e) {
+    o = n(646956);
+function s(e) {
     var t,
         n,
-        { children: i, className: o } = e,
+        { children: i, className: s } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -60,13 +60,13 @@ function o(e) {
         })({}, c)),
         (n = n =
             {
-                className: l()(o, s.container),
-                contentClassName: s.content,
+                className: l()(s, o.container),
+                contentClassName: o.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(
                         "div",
                         {
-                            className: s.column,
+                            className: o.column,
                             style: { flexBasis: "".concat(100 / u.length, "%") },
                             children: e,
                         },

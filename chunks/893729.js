@@ -1,27 +1,27 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => v });
 var i = n(951288),
     r = n(647438),
     s = n(120356),
     l = n.n(s),
     o = n(442837),
     a = n(481060),
-    u = n(518738),
-    c = n(786761),
+    c = n(518738),
+    u = n(786761),
     d = n(3148),
     h = n(753206),
     p = n(594174),
     g = n(5192),
     f = n(981631),
-    v = n(388032),
-    m = n(914933);
-function C(e) {
-    let { guildId: t, role: n, theme: s, content: C = v.intl.string(v.t["6OSasb"]), className: b } = e,
-        y = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        O = g.ZP.useName(t, null, y),
-        S = (0, u.Kz)(n),
-        E = r.useMemo(() => {
+    m = n(388032),
+    b = n(914933);
+function v(e) {
+    let { guildId: t, role: n, theme: s, content: v = m.intl.string(m.t["6OSasb"]), className: C } = e,
+        _ = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        y = g.ZP.useName(t, null, _),
+        O = (0, c.Kz)(n),
+        S = r.useMemo(() => {
             var e, t;
-            return (0, c.e5)(
+            return (0, u.e5)(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,12 +50,12 @@ function C(e) {
                     {},
                     (0, d.ZP)({
                         channelId: "0",
-                        content: C,
+                        content: v,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: y,
+                        author: _,
                     }),
                 )),
                 (t = t =
@@ -77,9 +77,9 @@ function C(e) {
                       }),
                 e),
             );
-        }, [y, C]),
-        _ = {
-            nick: O,
+        }, [_, v]),
+        E = {
+            nick: y,
             colorString: n.colorString,
             colorStrings: n.colorStrings,
         };
@@ -87,12 +87,12 @@ function C(e) {
         theme: s,
         children: (e) =>
             (0, i.jsx)("div", {
-                className: l()(e, m.container, b),
+                className: l()(e, b.container, C),
                 children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
-                    author: _,
-                    roleIcon: S,
-                    message: E,
+                    author: E,
+                    roleIcon: O,
+                    message: S,
                     isGroupStart: !0,
                     disableInteraction: !0,
                 }),

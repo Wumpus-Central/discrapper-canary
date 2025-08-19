@@ -6,12 +6,12 @@ var r = n(755721),
     l = n(313201),
     o = n(192635),
     a = n(388032),
-    u = n(818235);
-function c(e) {
-    let { transitionState: t, Icon: n, title: c, body: d, onClose: h } = e,
+    c = n(818235);
+function u(e) {
+    let { transitionState: t, Icon: n, title: u, body: d, onClose: h } = e,
         p = (0, l.Dt)();
     return (0, i.jsxs)(s.Y0X, {
-        className: u.container,
+        className: c.container,
         transitionState: t,
         "aria-labelledby": p,
         parentComponent: "ActionCompletedSuccessModal",
@@ -22,13 +22,13 @@ function c(e) {
                     (0, i.jsx)(s.LZC, { size: 24 }),
                     (0, i.jsx)(s.X6q, {
                         id: p,
-                        className: u.__invalid_title,
+                        className: c.__invalid_title,
                         variant: "heading-xl/semibold",
-                        children: c,
+                        children: u,
                     }),
                     (0, i.jsx)(s.LZC, { size: 8 }),
                     (0, i.jsx)(s.Text, {
-                        className: u.body,
+                        className: c.body,
                         variant: "text-sm/normal",
                         children: d,
                     }),
@@ -47,7 +47,7 @@ function c(e) {
 function d(e) {
     (0, s.h7j)((t) =>
         (0, i.jsx)(
-            c,
+            u,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

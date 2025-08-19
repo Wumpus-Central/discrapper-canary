@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(570140),
+    o = n(442837),
+    s = n(570140),
     c = n(893776),
     u = n(533307),
     d = n(978085),
@@ -39,7 +39,7 @@ function A(e, t, n) {
         e
     );
 }
-s.ZP.initialize();
+o.ZP.initialize();
 class Z extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
@@ -48,7 +48,7 @@ class Z extends i.PureComponent {
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            o.Z.wait(() => {
+            s.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -197,8 +197,8 @@ class Z extends i.PureComponent {
                 giftCode: i,
                 isResolved: l,
                 isAccepting: a,
-                transitionTo: s,
-                location: o,
+                transitionTo: o,
+                location: s,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
         if (e === S.kEZ.OPEN && !u) return this.renderAppOpened();
@@ -218,14 +218,14 @@ class Z extends i.PureComponent {
                 ? (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: s,
-                      location: o,
+                      transitionTo: o,
+                      location: s,
                   })
                 : (0, r.jsx)(N.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: s,
-                      location: o,
+                      transitionTo: o,
+                      location: s,
                   });
         }
         return null;
@@ -277,7 +277,7 @@ class Z extends i.PureComponent {
             });
     }
 }
-let P = s.ZP.connectStores([x.Z, b.Z, g.default, v.Z, _.Z, m.Z], (e) => {
+let P = o.ZP.connectStores([x.Z, b.Z, g.default, v.Z, _.Z, m.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
         r = null != n ? v.Z.get(n.skuId) : null;

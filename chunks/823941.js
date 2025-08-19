@@ -15,8 +15,8 @@ var n = r(951288),
     p = r(70097),
     g = r(963249),
     f = r(594174),
-    b = r(451478),
-    m = r(754347),
+    m = r(451478),
+    b = r(754347),
     h = r(74538),
     _ = r(884697),
     v = r(624377),
@@ -76,7 +76,7 @@ function k(e) {
     let { category: t, className: r, hideLimitedTimeBadge: l = !1 } = e,
         { backgroundColors: a } = (0, v.Z)(t.styles),
         d = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        p = (0, s.e7)([b.Z], () => b.Z.isFocused()),
+        p = (0, s.e7)([m.Z], () => m.Z.isFocused()),
         { bannerOverrides: g, shopAllBannerStatic: f, shopAllBannerAnimated: h } = (0, y.t0)(t),
         S = !!(null == g ? void 0 : g.showDarkBannerText);
     return (0, n.jsxs)(O.Z, {
@@ -102,7 +102,7 @@ function k(e) {
                               color: "currentColor",
                               className: j.discordIcon,
                           }),
-                          (0, n.jsx)(m.Z, { className: j.discordWordmark }),
+                          (0, n.jsx)(b.Z, { className: j.discordWordmark }),
                       ],
                   })
                 : (0, n.jsx)(c.LZC, { size: 28 }),
@@ -125,7 +125,7 @@ function k(e) {
                 (0, n.jsx)(C.Z, {
                     category: t,
                     className: j.limitedTimeBadge,
-                    display: "banner",
+                    display: C.k.BANNER,
                 }),
         ],
     });

@@ -6,8 +6,8 @@ var r,
     i = n(951288),
     l = n(647438),
     a = n(120356),
-    s = n.n(a),
-    o = n(873546),
+    o = n.n(a),
+    s = n(873546),
     c = n(442837),
     u = n(573385),
     d = n(865672),
@@ -113,8 +113,8 @@ function M(e) {
         { analyticsLocations: ee } = (0, f.ZP)(m.Z.USERNAME),
         et = M ? "@" : "",
         { nick: en, colorString: er, colorStrings: ei, colorRoleName: el, displayNameStyles: ea } = n,
-        es = (0, c.e7)([p.Z], () => p.Z.roleStyle),
-        eo = "username" === es,
+        eo = (0, c.e7)([p.Z], () => p.Z.roleStyle),
+        es = "username" === eo,
         ec = (0, y.X$)(),
         eu = (0, b.j)({ displayNameStyles: ea }),
         ed = (0, c.e7)([N.Z], () =>
@@ -124,7 +124,7 @@ function M(e) {
         ep = (0, A.Z)(r),
         em = l.useContext(u.d),
         ef = eh && (0, j.S2)(n),
-        eg = eo && ef;
+        eg = es && ef;
     l.useEffect(() => {
         if (null == J || !eg || null == em) return;
         let { setAnimate: e } = em;
@@ -142,9 +142,9 @@ function M(e) {
         eb = (0, d.EJ)(et + en),
         ev = (null == a ? void 0 : a.isPrivate()) && null != ea,
         eE = {
-            className: s()([R.username, eg && ex, eu]),
+            className: o()([R.username, eg && ex, eu]),
             style: (() => {
-                if (eo) {
+                if (es) {
                     if (eg && null != ei) {
                         var e;
                         return L(w({}, e_), {
@@ -188,7 +188,7 @@ function M(e) {
                       renderPopout: K,
                       shouldShow: B,
                       shouldPreload: ep,
-                      position: o.tq ? "window_center" : "right",
+                      position: s.tq ? "window_center" : "right",
                       avatarUrl:
                           null != n.guildMemberAvatar && null != $
                               ? (0, S.JM)({
@@ -238,7 +238,7 @@ function M(e) {
                                               n,
                                               eE,
                                           ),
-                                          { className: s()(eE.className, R.clickable, G) },
+                                          { className: o()(eE.className, R.clickable, G) },
                                       ),
                                   ),
                                   ej,
@@ -247,7 +247,7 @@ function M(e) {
                       },
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(h.P3F, L(w({}, eE), { className: s()(eE.className, G) })), ej],
+                      children: [(0, i.jsx)(h.P3F, L(w({}, eE), { className: o()(eE.className, G) })), ej],
                   }),
         eO = null != q ? q[0] : null,
         eN = null != q ? q[1] : null;
@@ -259,7 +259,7 @@ function M(e) {
                       children: [" ", eO, " "],
                   })
                 : null,
-            "dot" === es
+            "dot" === eo
                 ? (0, i.jsx)(h.FhE, {
                       color: er,
                       colors: ef ? ei : null,

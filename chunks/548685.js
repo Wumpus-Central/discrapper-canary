@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(451478),
     g = r(626135),
     f = r(63063),
-    b = r(74538),
-    m = r(381585),
+    m = r(74538),
+    b = r(381585),
     h = r(597688),
     _ = r(38900),
     v = r(709999),
@@ -34,10 +34,10 @@ let T = (e) => {
             hasSorting: k,
             prioritizeUserDiscounts: I,
             tab: N,
-            buttonContainerClassName: w,
+            buttonContainerClassName: A,
         } = e,
-        A = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        B = b.ZP.canUseCollectibles(A),
+        w = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        B = m.ZP.canUseCollectibles(w),
         R = (0, y.G)("FeedBlock"),
         {
             sortType: Z,
@@ -52,7 +52,7 @@ let T = (e) => {
         z = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         G = !U && z,
         { animationPhase: q, startAnimation: K } = (0, O.y)(),
-        Y = (0, m.sp)(),
+        Y = (0, b.sp)(),
         X = null != (t = null == Y ? void 0 : Y.sessionId) ? t : "",
         Q = l.useRef(null),
         J = l.useCallback(
@@ -68,7 +68,7 @@ let T = (e) => {
             },
             [K, D, X],
         );
-    return null == A
+    return null == w
         ? null
         : (0, n.jsxs)("div", {
               className: i()(P.popularPicksSection, P.centeredSection),
@@ -158,7 +158,7 @@ let T = (e) => {
                                             children: x.intl.string(x.t.uaX709),
                                         }),
                                         (0, n.jsx)("div", {
-                                            className: w,
+                                            className: A,
                                             children: (0, n.jsx)(s.PhF, {
                                                 options: F,
                                                 select: J,
@@ -169,7 +169,7 @@ let T = (e) => {
                                             }),
                                         }),
                                         (0, n.jsx)("div", {
-                                            className: w,
+                                            className: A,
                                             children: (0, n.jsx)(s.zxk, {
                                                 variant: "secondary",
                                                 text: x.intl.string(x.t.X3tnc3),
@@ -216,7 +216,7 @@ let T = (e) => {
                                               ? (r = P.shuffleIntro)
                                               : q === O.g.SORT_IN && (r = P.sortChangedIntro);
                                 return (0, n.jsx)(
-                                    m.k0,
+                                    b.k0,
                                     {
                                         newValue: {
                                             tilePosition: t,
@@ -226,7 +226,7 @@ let T = (e) => {
                                         children: (0, n.jsx)(v.Z, {
                                             product: e,
                                             category: l,
-                                            user: A,
+                                            user: w,
                                             tab: N,
                                             className: r,
                                         }),

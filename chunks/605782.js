@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(843611),
     a = n(215569);
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,7 +28,7 @@ function s(e) {
     }
     return e;
 }
-function o(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,8 +80,8 @@ class u extends i.Component {
                         { component: r, render: a } = t,
                         h = c(t, ["component", "render"]),
                         p = h.path || h.from;
-                    null != (m = null != p ? (0, l.LX)(n.pathname, o(s({}, h), { path: p })) : null) &&
-                        ((h = o(s({}, h), {
+                    null != (m = null != p ? (0, l.LX)(n.pathname, s(o({}, h), { path: p })) : null) &&
+                        ((h = s(o({}, h), {
                             key: p,
                             location: n,
                             match: m,
@@ -91,7 +91,7 @@ class u extends i.Component {
                         null != r ? (f = i.createElement(r, h)) : null != a && (f = a(h)));
                 }
             }),
-            (0, r.jsx)(a.W, o(s({}, p), { children: f }))
+            (0, r.jsx)(a.W, s(o({}, p), { children: f }))
         );
     }
 }

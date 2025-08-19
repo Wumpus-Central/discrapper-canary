@@ -1,4 +1,4 @@
-r.d(t, { d: () => m });
+r.d(t, { d: () => b });
 var n = r(951288);
 r(647438);
 var l = r(120356),
@@ -12,13 +12,13 @@ var l = r(120356),
     p = r(616066),
     g = r(881937),
     f = r(63243),
-    b = r(244488);
-let m = (e) => {
+    m = r(244488);
+let b = (e) => {
     let {
             product: t,
             isPurchased: r,
             isHighlighted: l,
-            user: m,
+            user: b,
             forCollectedModal: h,
             containerClassName: _,
             profileEffectClassName: v,
@@ -48,11 +48,11 @@ let m = (e) => {
                       className: a()(g.avatarDecorationPreview, O),
                       children: (0, n.jsx)(p.R, {
                           item: y,
-                          user: m,
+                          user: b,
                           avatarSize: o.EFr.SIZE_120,
                           isPurchased: r,
                           isHighlighted: l,
-                          avatarPlaceholderSrc: x ? b : f,
+                          avatarPlaceholderSrc: x ? m : f,
                       }),
                   })
                 : null,

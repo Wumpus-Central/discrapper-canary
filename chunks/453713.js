@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(481060),
     g = r(209613),
     f = r(429368),
-    b = r(724994),
-    m = r(388032),
+    m = r(724994),
+    b = r(388032),
     h = r(270132);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -96,7 +96,7 @@ let C = s()((e) => {
                 onLeave: g,
                 minimal: E,
             } = e,
-            { isPurchased: y } = (0, b.L)(r),
+            { isPurchased: y } = (0, m.L)(r),
             S = (0, c.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(a)),
             { onFocus: x } = S,
             j = O(S, ["onFocus"]),
@@ -107,7 +107,7 @@ let C = s()((e) => {
                 [x, t, a],
             );
         return (0, n.jsx)(p.ua7, {
-            text: m.intl.string(m.t["6cfuDg"]),
+            text: b.intl.string(b.t["6cfuDg"]),
             "aria-label": !1,
             shouldShow: !E && y,
             children: (e) =>
@@ -165,7 +165,7 @@ let C = s()((e) => {
                 setIsHoveringOnSwitch: s,
                 minimal: d,
                 selectedVariantIndex: f,
-                alternativeBackgroundColor: b,
+                alternativeBackgroundColor: m,
             } = e,
             C = o.previewingVariantIndex,
             y = null == (t = l.variants) ? void 0 : t[f],
@@ -185,7 +185,7 @@ let C = s()((e) => {
                         v(_({ ref: r }, c), {
                             className: i()(h.variantsPanel, a, {
                                 [h.minimalState]: d,
-                                [h.alternativeColor]: b,
+                                [h.alternativeColor]: m,
                             }),
                             onMouseEnter: () => (null == s ? void 0 : s(!0)),
                             onMouseLeave: () => (null == s ? void 0 : s(!1)),
@@ -220,7 +220,7 @@ let C = s()((e) => {
                                     variant: "text-xs/medium",
                                     color: "text-secondary",
                                     className: h.variantLabel,
-                                    children: d ? m.intl.string(m.t.wbgaj4) : j,
+                                    children: d ? b.intl.string(b.t.wbgaj4) : j,
                                 }),
                             ],
                         }),

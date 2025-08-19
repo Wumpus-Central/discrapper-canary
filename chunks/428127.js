@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,7 +17,7 @@ let b = {
     friction: 30,
     tension: 300,
 };
-function _(e) {
+function O(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -62,11 +62,11 @@ function _(e) {
         ],
     });
 }
-function O(e) {
+function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: f, topBar: O } = (0, s.cj)([h.Z], () => h.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: f, topBar: _ } = (0, s.cj)([h.Z], () => h.Z.getUnreadStateForGuildId(n.id)),
         y = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? f : O,
+        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? f : _,
         E = v === h.x.HIDDEN,
         x = (0, c.q_F)(
             {
@@ -133,7 +133,7 @@ function O(e) {
                               }),
                           })
                         : v === h.x.VOICE_CHANNELS
-                          ? (0, r.jsx)(_, {
+                          ? (0, r.jsx)(O, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,
                                 guildChannelsVersion: l,

@@ -9,8 +9,8 @@ var r = n(120356),
     l = n(780384),
     o = n(755721),
     a = n(481060),
-    u = n(410030),
-    c = n(696936),
+    c = n(410030),
+    u = n(696936),
     d = n(903773),
     h = n(672628);
 let p = {
@@ -20,19 +20,19 @@ let p = {
 function g(e) {
     let {
             className: t,
-            color: n = c.W.YELLOW,
+            color: n = u.W.YELLOW,
             buttonPosition: r = p.BOTTOM,
             notice: g,
             ctaLabel: f,
-            ctaLoading: v,
-            ctaDisabled: m,
-            ctaClassName: C,
-            onClick: b,
+            ctaLoading: m,
+            ctaDisabled: b,
+            ctaClassName: v,
+            onClick: C,
         } = e,
-        y = (0, u.ZP)();
+        _ = (0, c.ZP)();
     return (0, i.jsx)(d.Z, {
         className: s()(h.statusWarningBlock, { [h.statusWarningBlockWithCta]: null != f }, t),
-        color: (0, l.wj)(y) ? n : c.W.BROWN,
+        color: (0, l.wj)(_) ? n : u.W.BROWN,
         children: (0, i.jsxs)("div", {
             className: r,
             children: [
@@ -42,16 +42,16 @@ function g(e) {
                     children: g,
                 }),
                 null != f &&
-                    null != b &&
+                    null != C &&
                     (0, i.jsx)("div", {
                         className: h.ctaButtonContainer,
                         children: (0, i.jsx)(o.zx, {
-                            className: s()(h.ctaButton, (0, l.wj)(y) ? void 0 : h.ctaBlackButton, C),
-                            color: (0, l.wj)(y) ? o.zx.Colors.WHITE : o.zx.Colors.CUSTOM,
+                            className: s()(h.ctaButton, (0, l.wj)(_) ? void 0 : h.ctaBlackButton, v),
+                            color: (0, l.wj)(_) ? o.zx.Colors.WHITE : o.zx.Colors.CUSTOM,
                             size: o.Ph.MEDIUM,
-                            onClick: b,
-                            disabled: m,
-                            submitting: v,
+                            onClick: C,
+                            disabled: b,
+                            submitting: m,
                             children: (0, i.jsx)(a.Text, {
                                 className: h.ctaButtonText,
                                 variant: "text-sm/medium",

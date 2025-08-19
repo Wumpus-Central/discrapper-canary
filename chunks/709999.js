@@ -726,7 +726,7 @@ let ev =
                                     (0, r.jsx)(H.Z, {
                                         category: l,
                                         className: ea.limitedTimeBadge,
-                                        display: "card",
+                                        display: H.k.CARD,
                                     }),
                                     el || ei || !Y
                                         ? eP

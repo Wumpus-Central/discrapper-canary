@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(258732),
     h = a(592125),
     p = a(699516),
-    v = a(594174),
-    b = a(55589),
+    b = a(594174),
+    v = a(55589),
     f = a(630388),
     g = a(98357),
     j = a(432877),
@@ -23,15 +23,15 @@ var n = a(951288),
     N = a(451429);
 function T() {
     var e;
-    let t = (0, o.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
+    let t = (0, o.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
         [a, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: d } = (0, o.cj)([h.Z, v.default, p.Z], () => ({
+        { selectedChannel: i, options: d } = (0, o.cj)([h.Z, b.default, p.Z], () => ({
             selectedChannel: h.Z.getChannel(a),
             options: t.map((e) => {
                 let t = h.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, m.F6)(t, v.default, p.Z) : e.channelId,
+                    label: null != t ? (0, m.F6)(t, b.default, p.Z) : e.channelId,
                 };
             }),
         })),

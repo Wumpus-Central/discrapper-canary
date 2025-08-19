@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -55,9 +55,9 @@ function b(e, t) {
         e
     );
 }
-let _ = i.memo(function (e) {
+let O = i.memo(function (e) {
     var { folderNode: t } = e,
-        _ = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -78,10 +78,10 @@ let _ = i.memo(function (e) {
             }
             return i;
         })(e, ["folderNode"]);
-    let { id: O, name: y, color: v, children: j } = t,
+    let { id: _, name: y, color: v, children: j } = t,
         C = j.map((e) => e.id),
         E = (0, s.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
+        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         S = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -95,9 +95,9 @@ let _ = i.memo(function (e) {
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
-        I = (0, h.Z)(t),
+        P = (0, h.Z)(t),
         {
-            mentionCount: P,
+            mentionCount: I,
             isMentionLowImportance: N,
             unread: w,
         } = (0, l.cj)([u.default], () => ({
@@ -106,8 +106,8 @@ let _ = i.memo(function (e) {
             unread: C.some((e) => u.default.hasUnread(e)),
         })),
         Z = i.useCallback(() => {
-            a.Z.toggleGuildFolderExpand(O);
-        }, [O]),
+            a.Z.toggleGuildFolderExpand(_);
+        }, [_]),
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
@@ -116,26 +116,26 @@ let _ = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             b(m({}, t), {
-                                folderId: O,
+                                folderId: _,
                                 folderName: y,
                                 folderColor: v,
-                                unread: w || P > 0,
+                                unread: w || I > 0,
                             }),
                         );
                 });
             },
-            [O, y, v, w, P],
+            [_, y, v, w, I],
         );
     return (0, r.jsx)(
         f.Z,
-        b(m({}, _), {
+        b(m({}, O), {
             folderNode: t,
             expanded: x,
             selected: null != E && C.includes(E),
-            mentionCount: P,
+            mentionCount: I,
             isMentionLowImportance: N,
             unread: w,
-            mediaState: I,
+            mediaState: P,
             defaultFolderName: S,
             onExpandCollapse: Z,
             onContextMenu: T,

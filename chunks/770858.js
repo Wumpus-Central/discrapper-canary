@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(821020),
     m = n(370774),
     b = n(128008),
-    _ = n(961040),
-    O = n(932711),
+    O = n(961040),
+    _ = n(932711),
     y = n(871301),
     v = n(981631),
     j = n(490897),
@@ -29,11 +29,11 @@ function E() {
 }
 function x(e) {
     var t, n;
-    let { onClick: d, selectedOverride: p = !1, popoutProps: h, ref: _ } = e,
+    let { onClick: d, selectedOverride: p = !1, popoutProps: h, ref: O } = e,
         j = (0, l.Ie)("notifications-inbox"),
         [x, S] = i.useState(!1),
-        I = (0, m.D)(),
-        P = p || I,
+        P = (0, m.D)(),
+        I = p || P,
         { notificationCenterVariant: N } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
         {
             badge: w,
@@ -67,25 +67,25 @@ function x(e) {
                       unreadChannelsCount: n.length,
                       badgeDimensions: o,
                   };
-        })(P),
+        })(I),
         A = N === g.jP.LEGACY ? a.xx7 : a.Dkj,
         R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         D = i.useMemo(() => {
             if (N === g.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, R);
         }, [N, R]);
     return (0, r.jsxs)(u.H, {
-        ref: _,
+        ref: O,
         children: [
             (0, r.jsx)(c.Z, {
-                selected: P && N === g.jP.SIDEBAR,
+                selected: I && N === g.jP.SIDEBAR,
                 hovered: x && N === g.jP.SIDEBAR,
                 unread: T > 0,
                 className: C.pill,
                 disabled: N === g.jP.LEGACY,
             }),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(_.Z, {
                 children: (0, r.jsx)(a.aRk, {
-                    selected: P || x,
+                    selected: I || x,
                     lowerBadge: w,
                     lowerBadgeSize: Z,
                     children: (0, r.jsx)(
@@ -119,7 +119,7 @@ function x(e) {
                             {
                                 onClick: d,
                                 to: D,
-                                selected: P || x,
+                                selected: I || x,
                                 onMouseEnter: () => S(!0),
                                 onMouseLeave: () => S(!1),
                                 children: (0, r.jsx)(A, {
@@ -157,7 +157,7 @@ function S() {
     return t === g.jP.SIDEBAR
         ? (0, r.jsx)(x, { onClick: l })
         : t === g.jP.POPOUT
-          ? (0, r.jsx)(_.Z, {
+          ? (0, r.jsx)(O.Z, {
                 targetElementRef: e,
                 popoutPosition: "right",
                 popoutAlign: "bottom",

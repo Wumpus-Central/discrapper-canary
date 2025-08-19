@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(434650),
     g = r(688465),
     f = r(110560),
-    b = r(507808),
-    m = r(794231),
+    m = r(507808),
+    b = r(794231),
     h = r(594174),
     _ = r(626135),
     v = r(381585),
@@ -29,8 +29,8 @@ var n = r(951288),
     k = r(619899),
     I = r(859788),
     N = r(215023),
-    w = r(981631),
-    A = r(388032),
+    A = r(981631),
+    w = r(388032),
     B = r(310582);
 let R = {
         rankedSkuIds: [],
@@ -81,9 +81,9 @@ let R = {
             V = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
             U = (0, L.Z)(),
             z = (0, v.sp)(),
-            { showBetaTag: G } = m.Z.useExperiment({ location: "collectible_hero_block" }),
+            { showBetaTag: G } = b.Z.useExperiment({ location: "collectible_hero_block" }),
             q = l.useMemo(() => {
-                var e, t, r, n;
+                var e, t;
                 return null != M
                     ? M
                     : null == D
@@ -92,12 +92,10 @@ let R = {
                             rankedSkuIds: null != (e = D.heroRanking) ? e : [],
                             name: D.name,
                             unpublishedAt: D.unpublishedAt,
-                            logoUrl: (0, C.uV)(null != (r = null != (t = D.heroLogo) ? t : D.logo) ? r : "", {
-                                size: x.n,
-                            }),
+                            logoUrl: (0, C.uV)(null != (t = D.heroLogo) ? t : D.logo, { size: x.n }),
                             categorySkuId: D.skuId,
                             bannerAsset: D.heroBannerAsset,
-                            fallbackBannerUrl: (0, C.uV)(null != (n = D.heroBanner) ? n : "", {
+                            fallbackBannerUrl: (0, C.uV)(D.heroBanner, {
                                 size: N.pv,
                                 format: "jpg",
                             }),
@@ -125,8 +123,8 @@ let R = {
             ei = (0, k.St)(ea),
             eo =
                 F === N.AW.ORBS
-                    ? A.intl.string(A.t["1CdL8f"])
-                    : A.intl.formatToPlainString(A.t.wvKYCg, { category_name: q.name }),
+                    ? w.intl.string(w.t["1CdL8f"])
+                    : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: q.name }),
             es = (0, E.FF)("CollectiblesContent");
         return null != V && (r || q !== R)
             ? (0, n.jsxs)("div", {
@@ -164,7 +162,7 @@ let R = {
                                                     null != q.unpublishedAt &&
                                                         (0, n.jsx)(d.IGR, {
                                                             disableColor: !0,
-                                                            text: A.intl.string(A.t["h/uBCQ"]),
+                                                            text: w.intl.string(w.t["h/uBCQ"]),
                                                             className: B.limitedTimeBadge,
                                                         }),
                                                     (0, n.jsxs)("div", {
@@ -220,10 +218,10 @@ let R = {
                                                   variant: "overlay-primary",
                                                   onClick: () => {
                                                       F === N.AW.ORBS
-                                                          ? ((0, b.Y)({
-                                                                pageType: w.ZY5.SHOP_ORBS_TAB,
-                                                                sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
-                                                                ctaObject: w.qAy.CTA_TO_QUEST_HOME,
+                                                          ? ((0, m.Y)({
+                                                                pageType: A.ZY5.SHOP_ORBS_TAB,
+                                                                sectionType: A.jXE.ORBS_SHOP_HERO_BLOCK,
+                                                                ctaObject: A.qAy.CTA_TO_QUEST_HOME,
                                                             }),
                                                             (0, f.navigateToQuestHome)({
                                                                 fromContent: s.j.ORBS_SHOP_HERO_CTA,
@@ -234,7 +232,7 @@ let R = {
                                                                     ? void 0
                                                                     : q.categorySkuId,
                                                             ),
-                                                            _.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                            _.default.track(A.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                                 collectibles_shop_session_id:
                                                                     null == z ? void 0 : z.sessionId,
                                                                 sku_id: q.categorySkuId,

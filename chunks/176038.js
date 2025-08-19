@@ -19,8 +19,8 @@ var n = a(647438),
     x = a(695346),
     h = a(675478),
     p = a(25990),
-    v = a(594174),
-    b = a(74538),
+    b = a(594174),
+    v = a(74538),
     f = a(981631),
     g = a(469115),
     j = a(959517);
@@ -31,8 +31,8 @@ function C(e) {
 }
 async function N() {
     let e = (function () {
-            let e = v.default.getCurrentUser();
-            return b.ZP.canUseClientThemes(e) ? Object.keys(g.qt).map((e) => Number(e)) : [];
+            let e = b.default.getCurrentUser();
+            return v.ZP.canUseClientThemes(e) ? Object.keys(g.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
@@ -100,15 +100,15 @@ function O() {
 function E() {
     n.useEffect(() => {
         var e, t, a, n, r;
-        let b = v.default.getCurrentUser(),
+        let v = b.default.getCurrentUser(),
             f = x.L1.getSetting(),
             g = c.Z.purchases,
             j = (0, d.Ad)(g),
             _ = (0, d.jT)(g),
             y = m.Z.theme,
             C = f.backgroundGradientPresetId,
-            N = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            T = null == b || null == (a = b.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
+            N = null == v || null == (e = v.avatarDecoration) ? void 0 : e.skuId,
+            T = null == v || null == (a = v.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
             O = null != N && null != (n = j.find((e) => e.skuId === N)) ? n : null,
             E = null != T && null != (r = _.find((e) => e.skuId === T)) ? r : null,
             S = o.Z.fontSize,

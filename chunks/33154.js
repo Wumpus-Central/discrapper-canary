@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(388685);
 var i,
-    r = n(951288),
-    l = n(647438),
+    l = n(951288),
+    r = n(647438),
     o = n(442837),
     a = n(755721),
     s = n(481060),
@@ -20,13 +20,13 @@ var i,
 let b = (e) => {
     let { type: t, guild: i, closePopout: g, ctaRef: b } = e,
         j = (0, u.Dt)(),
-        [O, y] = l.useState(!1),
-        v = (0, o.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    l.useEffect(() => {
-        O && !v && g();
-    }, [O, v, g]);
+        [v, O] = r.useState(!1),
+        y = (0, o.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
+    r.useEffect(() => {
+        v && !y && g();
+    }, [v, y, g]);
     let T = null,
-        S = m.intl.string(m.t.d7b1p6);
+        x = m.intl.string(m.t.d7b1p6);
     switch (t) {
         case 0:
             T = m.intl.string(m.t.Xiwf1d);
@@ -38,47 +38,47 @@ let b = (e) => {
             return (0, d.vE)(t);
     }
     if (null == T) return null;
-    let x = async () => {
-        y(!0);
+    let S = async () => {
+        O(!0);
         try {
             await c.Z.joinGuild(i.id, { source: p.vtS.CHAT_INPUT_BLOCKER }), g();
         } catch (e) {
-            y(!1);
+            O(!1);
         }
     };
-    return (0, r.jsxs)(s.VqE, {
+    return (0, l.jsxs)(s.VqE, {
         className: f.container,
         "aria-labelledby": j,
         children: [
-            (0, r.jsx)("img", {
+            (0, l.jsx)("img", {
                 alt: "",
                 className: f.image,
                 src: n(64395),
             }),
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: f.content,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, l.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
                         id: j,
                         children: T,
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, l.jsx)(s.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: S,
+                        children: x,
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: f.buttonContainer,
                         children: [
-                            (0, r.jsx)(s.zxk, {
+                            (0, l.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: m.intl.string(m.t["9VLmlZ"]),
                                 buttonRef: b,
-                                onClick: x,
-                                loading: O,
+                                onClick: S,
+                                loading: v,
                             }),
-                            (0, r.jsx)(a.zx, {
+                            (0, l.jsx)(a.zx, {
                                 onClick: g,
                                 look: a.zx.Looks.BLANK,
                                 className: f.cancel,

@@ -20,8 +20,8 @@ var n = r(647438),
     p = r(429368),
     g = r(410127),
     f = r(237031),
-    b = r(258939),
-    m = r(956472),
+    m = r(258939),
+    b = r(956472),
     h = r(981631);
 let _ = "".concat("#").concat("itemSkuId", "="),
     v = new RegExp("^".concat(_, "(\\d+)$")),
@@ -37,7 +37,7 @@ let _ = "".concat("#").concat("itemSkuId", "="),
     },
     E = () => {
         let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(h.S9g.COLLECTIBLES_SHOP)),
-            t = (0, b.R)(),
+            t = (0, m.R)(),
             r = n.useRef(null),
             i = (0, l.TH)(),
             _ =
@@ -65,7 +65,7 @@ let _ = "".concat("#").concat("itemSkuId", "="),
                             i = u.Z.getCategoryForProduct(t);
                         if (null != a && null != i) {
                             let e = a,
-                                s = (0, m.oQ)({ product: a }),
+                                s = (0, b.oQ)({ product: a }),
                                 c = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (c !== document.activeElement && (null == c || c.focus()),

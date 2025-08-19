@@ -14,10 +14,10 @@ let s = function () {
             } catch (e) {}
             o(!1);
         },
-        u = i.useRef(!0);
+        c = i.useRef(!0);
     return (
         i.useEffect(() => {
-            (u.current || t) && ((u.current = !1), a());
+            (c.current || t) && ((c.current = !1), a());
         }, [t]),
         {
             teams: n,

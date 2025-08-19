@@ -58,10 +58,10 @@ let m = () => {
         let { className: t, onDrop: a } = e,
             [l, h] = r.useState(!1),
             p = r.useRef(null),
-            v = r.useCallback((e) => {
+            b = r.useCallback((e) => {
                 x(e), h(!0), (0, s.Mr3)(c.A);
             }, []),
-            b = r.useCallback((e) => {
+            v = r.useCallback((e) => {
                 x(e), h(!1);
             }, []),
             f = r.useCallback(
@@ -82,8 +82,8 @@ let m = () => {
         return (0, n.jsx)("div", {
             ref: p,
             className: i()(t, u.uploadArea),
-            onDragEnter: v,
-            onDragLeave: b,
+            onDragEnter: b,
+            onDragLeave: v,
             onDrop: f,
             children: (0, n.jsx)("div", {
                 className: i()(u.uploadModal, { [u.droppable]: l }),

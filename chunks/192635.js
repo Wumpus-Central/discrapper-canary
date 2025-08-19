@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var i = n(951288);
 n(647438);
 var r = n(120356),
@@ -6,7 +6,7 @@ var r = n(120356),
     l = n(870670),
     o = n(742795),
     a = n(200289);
-function u(e) {
+function c(e) {
     let { Icon: t, className: n } = e;
     return (0, i.jsx)("div", {
         className: s()(l.container, n),

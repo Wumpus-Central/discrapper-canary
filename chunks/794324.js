@@ -1,9 +1,10 @@
 n.d(t, {
+    Oi: () => p,
     YG: () => d,
     hr: () => u,
-    kc: () => f,
-    mB: () => h,
-    t0: () => p,
+    kc: () => h,
+    mB: () => g,
+    t0: () => f,
 });
 var r = n(647438),
     i = n(264181),
@@ -42,21 +43,24 @@ let u = (e) => {
         }, [t, n, i, e, l]);
     },
     d = (e, t) => {
-        let n = (0, o.zL)(s.jE.FEATURED_BLOCK);
-        return r.useMemo(() => {
-            var r;
-            let i = null == e ? void 0 : e.featuredBlock,
-                a =
-                    null != i
-                        ? (0, l.uV)(i, {
-                              size: c.J0,
-                              format: "png",
-                          })
-                        : void 0;
-            return { featuredBlockBanner: null != (r = null != n ? n : null == t ? void 0 : t.bannerUrl) ? r : a };
-        }, [n, e, t]);
+        var n;
+        let r = (0, o.zL)(s.jE.FEATURED_BLOCK),
+            i = (0, l.uV)(null == e ? void 0 : e.featuredBlock, {
+                size: c.J0,
+                format: "png",
+            });
+        return null != (n = null != r ? r : null == t ? void 0 : t.bannerUrl) ? n : i;
     },
     p = (e) => {
+        var t, n;
+        let r = (0, o.zL)(s.jE.CATALOG_BANNER_STATIC),
+            i = (0, o.zL)(s.jE.CATALOG_BANNER_ANIMATED);
+        return {
+            catalogBannerStatic: null != r ? r : null == (t = e.catalogBannerAsset) ? void 0 : t.static,
+            catalogBannerAnimated: null != i ? i : null == (n = e.catalogBannerAsset) ? void 0 : n.animated,
+        };
+    },
+    f = (e) => {
         let t = (0, o.zL)(s.jE.SHOP_ALL_BANNER_STATIC),
             n = (0, o.zL)(s.jE.SHOP_ALL_BANNER_ANIMATED);
         return r.useMemo(() => {
@@ -77,11 +81,11 @@ let u = (e) => {
             };
         }, [t, n, e]);
     },
-    f = (e) => {
+    h = (e) => {
         let t = (0, o.zL)(s.jE.PDP_BACKGROUND);
         return null != t ? t : e.pdpBg;
     },
-    h = (e) => {
+    g = (e) => {
         let t = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER),
             n = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER_DARK),
             l = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER_LIGHT),

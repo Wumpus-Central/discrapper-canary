@@ -1,6 +1,6 @@
 n.d(t, {
     Gp: () => y,
-    ZP: () => _,
+    ZP: () => O,
 }),
     n(388685),
     n(642613);
@@ -19,9 +19,9 @@ var r = n(951288),
     g = n(981631),
     m = n(388032),
     b = n(407067);
-function _() {
+function O() {
     let { initialized: e, items: t, loading: n, loadMore: i } = (0, u.y6)(),
-        o = O(
+        o = _(
             t,
             (0, l.e7)([a.Z], () => a.Z.localItems),
         );
@@ -32,13 +32,13 @@ function _() {
         loadMore: i,
     });
 }
-function O(e, t) {
+function _(e, t) {
     return i.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * h.default.compare(e.id, t.id))], [e, t]);
 }
 function y() {
     let { items: e } = (0, u.y6)(),
         t = e.length > 0 ? e[0] : null,
-        n = O(
+        n = _(
             e,
             (0, l.e7)([a.Z], () => a.Z.localItems),
         ),

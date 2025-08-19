@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    s = n(893776),
-    o = n(232567),
+    o = n(893776),
+    s = n(232567),
     c = n(129293),
     u = n(388905),
     d = n(353926),
@@ -47,14 +47,14 @@ let b = (e) => {
         i.useEffect(() => {
             n
                 ? (N(!0),
-                  o
+                  s
                       .k({ withAnalyticsToken: !0 })
                       .then(() => N(!1))
                       .catch(() => N(!1)))
                 : N(!1);
         }, [n]),
         i.useEffect(() => {
-            b || v || s.Z.getExperiments();
+            b || v || o.Z.getExperiments();
         }, [b, v]),
         i.useEffect(() => {
             let e = async (e) => {

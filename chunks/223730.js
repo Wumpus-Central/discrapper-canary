@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => _,
+    K: () => O,
     y: () => b,
 });
 var r = n(951288),
@@ -55,7 +55,7 @@ function b(e) {
               ],
           });
 }
-function _(e) {
+function O(e) {
     let { onClosePopout: t } = e;
     return (0, r.jsx)(l.P3F, {
         className: h.customizeLink,

@@ -138,23 +138,23 @@ function d(e, t, n, r, l) {
         return null;
     }
     let b = l[(null != (d = c(n, l, !0)) ? d : 0) + 1],
-        _ = s(-1, n.id, e.type, l);
-    if (null == _) return null;
+        O = s(-1, n.id, e.type, l);
+    if (null == O) return null;
     if (e.isGuildVocal()) {
         if (null == b || b.channel.isCategory())
             return {
-                referenceId: _.channel.id,
+                referenceId: O.channel.id,
                 parentId: n.parent_id,
             };
         if (b.channel.isGuildVocal())
             return {
-                referenceId: _.channel.id,
+                referenceId: O.channel.id,
                 parentId: b.channel.parent_id,
             };
     }
     return e.isCategory() && (null == b || b.channel.isCategory())
         ? {
-              referenceId: _.channel.id,
+              referenceId: O.channel.id,
               parentId: null,
           }
         : null;

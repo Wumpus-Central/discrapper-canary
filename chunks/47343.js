@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(481060),
-    o = n(590965),
+    o = n(481060),
+    s = n(590965),
     c = n(695346),
     u = n(51331),
     d = n(259580),
@@ -30,12 +30,12 @@ let x = () => {
             guildId: N,
             inviteCode: S,
         } = (0, m.XW)(),
-        C = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         T = (0, p.m4)({ location: "InviteSettingsControls" });
     return (0, r.jsxs)("div", {
         className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
-            (0, r.jsxs)(s.P3F, {
+            (0, r.jsxs)(o.P3F, {
                 className: _.header,
                 onClick: () => {
                     t ||
@@ -48,17 +48,17 @@ let x = () => {
                 children: [
                     (0, r.jsx)("div", {
                         className: _.headerIconWrapper,
-                        children: (0, r.jsx)(s.ewm, { size: "md" }),
+                        children: (0, r.jsx)(o.ewm, { size: "md" }),
                     }),
                     (0, r.jsxs)("div", {
                         className: _.title,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
                                 children: g.intl.string(g.t.A5wHQ0),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
                                 children: g.intl.string(g.t.UKCSER),
@@ -82,12 +82,12 @@ let x = () => {
                         (0, r.jsxs)("div", {
                             className: _.serverNickname,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
                                     children: g.intl.string(g.t.me1lRk),
                                 }),
-                                (0, r.jsx)(s.oil, {
+                                (0, r.jsx)(o.oil, {
                                     placeholder: g.intl.string(g.t["09Q8ys"]),
                                     maxLength: f.l$U,
                                     value: x,

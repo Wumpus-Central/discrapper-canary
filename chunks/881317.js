@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(990547),
     a = n(442837),
-    s = n(481060),
-    o = n(893776),
+    o = n(481060),
+    s = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
@@ -73,7 +73,7 @@ let I = {
                         await (0, m.yL)(i, e);
                     },
                     a = async (t) => await (0, m.RV)(i, e, t),
-                    o = (e) => {
+                    s = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
                             ? (0, p.eE)(t)
@@ -82,7 +82,7 @@ let I = {
                               : i === h.BM.GUILD && (0, p.FO)(t);
                     };
                 t(),
-                    (0, s.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("94566").then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
@@ -90,7 +90,7 @@ let I = {
                                 j(E({}, n), {
                                     onFormSubmit: a,
                                     onResend: t,
-                                    onSuccess: o,
+                                    onSuccess: s,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
                                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -98,10 +98,10 @@ let I = {
                             );
                     });
             };
-        return (0, r.jsxs)(s.P3F, {
+        return (0, r.jsxs)(o.P3F, {
             className: b.reportButton,
             onClick: () =>
-                void (0, s.ZDy)(async () => {
+                void (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
@@ -114,11 +114,11 @@ let I = {
                         );
                 }),
             children: [
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(s.LJT, {
+                (0, r.jsx)(o.LJT, {
                     size: "sm",
                     color: "currentColor",
                 }),
@@ -154,11 +154,11 @@ let I = {
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await o.Z.getLocationMetadata(), o.Z.getExperiments());
+                    p || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
             }, [p]),
             e || !p
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(s.$jN, {}) })
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {

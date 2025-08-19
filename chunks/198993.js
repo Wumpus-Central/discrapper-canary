@@ -7,9 +7,9 @@ var r,
     i,
     l,
     a = n(951288),
-    s = n(647438),
-    o = n(120356),
-    c = n.n(o),
+    o = n(647438),
+    s = n(120356),
+    c = n.n(s),
     u = n(598390),
     d = n(678249);
 function h(e, t, n) {
@@ -47,7 +47,7 @@ let f = Object.freeze({
         SIZE_60: "size-60",
     }),
     g = n(515695);
-class _ extends (i = s.PureComponent) {
+class _ extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             { className: t, text: n } = e,
@@ -97,7 +97,7 @@ h(_, "defaultProps", {
     bgColor: "#ffffff",
     fgColor: "#000000",
 });
-class x extends (l = s.PureComponent) {
+class x extends (l = o.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
             t = f[null != e ? e : "SIZE_40"];

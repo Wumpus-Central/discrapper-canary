@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(144114),
     u = n(742458),
     d = n(541692),
@@ -21,7 +21,7 @@ let x = () => {
         [E, j] = i.useState(!1),
         [I, y] = i.useState(null),
         [O, N] = i.useState(null),
-        S = (0, s.e7)([d.Z], () => d.Z.getCountryCode()),
+        S = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
         C = S.code.split(" ")[0],
         T = async () => {
             try {
@@ -48,7 +48,7 @@ let x = () => {
                     className: a()(_.marginTop20, g.flex, g.justifyCenter, g.alignCenter),
                     children: [
                         f.intl.string(f.t.WWzQtb),
-                        (0, r.jsx)(o.owK, {
+                        (0, r.jsx)(s.owK, {
                             size: "md",
                             color: "currentColor",
                             className: _.marginLeft8,

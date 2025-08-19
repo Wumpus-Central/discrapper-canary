@@ -1,5 +1,5 @@
 n.d(t, {
-    h6: () => _,
+    h6: () => O,
     mv: () => b,
 });
 var r = n(951288),
@@ -23,7 +23,7 @@ function b() {
         e(h.V5.ALL), t(!1);
     };
 }
-function _(e) {
+function O(e) {
     let { isSelected: t } = e,
         { unreadRecentMentionsCount: n, unreadChannelIds: l } = (0, p.O4)(),
         d = (function () {

@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(612226),
     m = n(951483),
     b = n(714338),
-    _ = n(607070),
-    O = n(460181),
+    O = n(607070),
+    _ = n(460181),
     y = n(585483),
     v = n(264549),
     j = n(981631),
@@ -35,12 +35,12 @@ function x(e, t, n) {
     );
 }
 let S = {
-    UP: u().throttle(() => (0, O.GN)("ddr-up"), 100),
-    DOWN: u().throttle(() => (0, O.GN)("ddr-down"), 100),
-    LEFT: u().throttle(() => (0, O.GN)("ddr-left"), 100),
-    RIGHT: u().throttle(() => (0, O.GN)("ddr-right"), 100),
+    UP: u().throttle(() => (0, _.GN)("ddr-up"), 100),
+    DOWN: u().throttle(() => (0, _.GN)("ddr-down"), 100),
+    LEFT: u().throttle(() => (0, _.GN)("ddr-left"), 100),
+    RIGHT: u().throttle(() => (0, _.GN)("ddr-right"), 100),
 };
-function I(e) {
+function P(e) {
     switch (e.keyCode) {
         case j.yXg.ARROW_UP:
             return "UP";
@@ -54,7 +54,7 @@ function I(e) {
             return null;
     }
 }
-let P = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
+let I = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
 function N(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)("div", { className: o()(E.backdrop, { [E.show]: t }) });
@@ -69,7 +69,7 @@ function w() {
     );
     return (0, r.jsx)("div", {
         className: E.keyboardShortcutList,
-        children: P.map((t) => {
+        children: I.map((t) => {
             let n = e[t],
                 i = (0, g.UD)(t),
                 l = (0, g.U6)(t);
@@ -287,12 +287,12 @@ class Z extends i.PureComponent {
                     this.props.keyboardModeEnabled)
                 )
                     return;
-                let t = I(e);
+                let t = P(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             x(this, "handleKeyUp", (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = I(e);
+                let t = P(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             x(this, "onArrowClick", (e) => {
@@ -325,9 +325,9 @@ function A(e) {
         [l, a] = i.useState(!1),
         [s, c] = i.useState(!1),
         u = i.useMemo(() => (__OVERLAY__ ? (0, m.Zg)() : (0, g.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: O } = (0, p.cj)([_.Z], () => ({
-            keyboardModeEnabled: _.Z.keyboardModeEnabled,
-            useReducedMotion: _.Z.useReducedMotion,
+        { keyboardModeEnabled: d, useReducedMotion: _ } = (0, p.cj)([O.Z], () => ({
+            keyboardModeEnabled: O.Z.keyboardModeEnabled,
+            useReducedMotion: O.Z.useReducedMotion,
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -356,7 +356,7 @@ function A(e) {
                                   content: u,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      O || (b.Z.disable(), a(!0), c(!0));
+                                      _ || (b.Z.disable(), a(!0), c(!0));
                                   },
                               },
                               "modal",

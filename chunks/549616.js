@@ -89,15 +89,16 @@ class h extends a.Z {
                 mobile_banner: u,
                 banner: _,
                 banner_asset: m,
-                hero_banner: g,
-                hero_banner_asset: E,
-                featured_block: b,
-                hero_logo: y,
-                banner_text_color: O,
-                hero_banner_config: v,
-                hero_logo_display_config: I,
+                catalog_banner_asset: g,
+                hero_banner: E,
+                hero_banner_asset: b,
+                featured_block: y,
+                hero_logo: O,
+                banner_text_color: v,
+                hero_banner_config: I,
+                hero_logo_display_config: T,
             } = e,
-            T = f(e, [
+            S = f(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -106,6 +107,7 @@ class h extends a.Z {
                 "mobile_banner",
                 "banner",
                 "banner_asset",
+                "catalog_banner_asset",
                 "hero_banner",
                 "hero_banner_asset",
                 "featured_block",
@@ -115,7 +117,7 @@ class h extends a.Z {
                 "hero_logo_display_config",
             ]);
         return new h(
-            d(c({}, super.fromServer(T)), {
+            d(c({}, super.fromServer(S)), {
                 products: t.reduce((e, t) => {
                     let n = i.Z.fromServer(t);
                     return (p(n.type) || 0 !== n.items.length) && e.push(n), e;
@@ -127,13 +129,14 @@ class h extends a.Z {
                 mobileBanner: u,
                 banner: _,
                 bannerAsset: m,
-                heroBanner: g,
-                heroBannerAsset: E,
-                featuredBlock: b,
-                heroLogo: y,
-                bannerTextColor: O,
-                heroBannerConfig: null != v ? o.Z.fromServer(v) : void 0,
-                heroLogoDisplayConfig: null != I ? s.X.fromServer(I) : void 0,
+                catalogBannerAsset: g,
+                heroBanner: E,
+                heroBannerAsset: b,
+                featuredBlock: y,
+                heroLogo: O,
+                bannerTextColor: v,
+                heroBannerConfig: null != I ? o.Z.fromServer(I) : void 0,
+                heroLogoDisplayConfig: null != T ? s.X.fromServer(T) : void 0,
             }),
         );
     }
@@ -147,6 +150,7 @@ class h extends a.Z {
             l(this, "mobileBanner", void 0),
             l(this, "banner", void 0),
             l(this, "bannerAsset", void 0),
+            l(this, "catalogBannerAsset", void 0),
             l(this, "heroBanner", void 0),
             l(this, "heroBannerAsset", void 0),
             l(this, "featuredBlock", void 0),
@@ -162,6 +166,7 @@ class h extends a.Z {
             (this.mobileBanner = e.mobileBanner),
             (this.banner = e.banner),
             (this.bannerAsset = e.bannerAsset),
+            (this.catalogBannerAsset = e.catalogBannerAsset),
             (this.heroBanner = e.heroBanner),
             (this.featuredBlock = e.featuredBlock),
             (this.heroLogo = e.heroLogo),

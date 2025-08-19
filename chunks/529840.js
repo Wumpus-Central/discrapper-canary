@@ -1,74 +1,74 @@
-s.d(t, { Z: () => c });
-var n = s(951288);
-s(647438);
-var r = s(120356),
-    a = s.n(r),
-    i = s(481060),
-    l = s(518950),
-    d = s(715156);
-function c(e) {
+r.d(t, { Z: () => d });
+var a = r(951288);
+r(647438);
+var s = r(120356),
+    n = r.n(s),
+    i = r(481060),
+    l = r(518950),
+    c = r(715156);
+function d(e) {
     var t;
-    let { user: s, checked: r, onChange: c, disabled: o } = e,
-        { avatarSrc: u, eventHandlers: h } = (0, l.Z)({
-            userId: null == s ? void 0 : s.id,
+    let { user: r, checked: s, onChange: d, disabled: o } = e,
+        { avatarSrc: u, eventHandlers: m } = (0, l.Z)({
+            userId: null == r ? void 0 : r.id,
             size: i.EFr.SIZE_32,
         }),
-        m = null != (t = s.globalName) ? t : s.username;
-    return (0, n.jsxs)("div", {
-        className: d.container,
+        h = null != (t = r.globalName) ? t : r.username;
+    return (0, a.jsxs)("div", {
+        className: c.container,
         children: [
-            (0, n.jsxs)("div", {
-                className: d.user,
+            (0, a.jsxs)("div", {
+                className: c.user,
                 children: [
-                    (0, n.jsx)(
+                    (0, a.jsx)(
                         i.qEK,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var s = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(s);
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    a = Object.keys(r);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(s).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                                    (a = a.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = s[t]),
+                                    a.forEach(function (t) {
+                                        var a;
+                                        (a = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: a,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = a);
                                     });
                             }
                             return e;
                         })(
                             {
-                                className: a()({ [d.muted]: o }),
+                                className: n()({ [c.muted]: o }),
                                 src: u,
-                                "aria-label": m,
+                                "aria-label": h,
                                 size: i.EFr.SIZE_32,
                             },
-                            h,
+                            m,
                         ),
                     ),
-                    (0, n.jsx)(i.Text, {
+                    (0, a.jsx)(i.Text, {
                         color: o ? "text-muted" : "text-default",
                         variant: "text-md/semibold",
-                        children: m,
+                        children: h,
                     }),
                 ],
             }),
-            (0, n.jsx)("div", {
-                className: d.checkbox,
-                children: (0, n.jsx)(i.XZJ, {
+            (0, a.jsx)("div", {
+                className: c.checkbox,
+                children: (0, a.jsx)(i.XZJ, {
                     disabled: o,
-                    value: r,
-                    onChange: (e, t) => c(s, t),
+                    value: s,
+                    onChange: (e, t) => d(r, t),
                 }),
             }),
         ],

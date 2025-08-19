@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i,
     r = n(442837),
     s = n(570140);
@@ -20,7 +20,7 @@ function a(e) {
     let { guildId: t, expand: n } = e;
     n ? (o[t] = !0) : delete o[t];
 }
-class u extends (i = r.ZP.PersistedStore) {
+class c extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         o = null != e ? e : {};
     }
@@ -35,8 +35,8 @@ class u extends (i = r.ZP.PersistedStore) {
         return o;
     }
 }
-l(u, "displayName", "ChannelListVoiceCategoryStore"), l(u, "persistKey", "ChannelListVoiceCategoryStore");
-let c = new u(s.Z, {
+l(c, "displayName", "ChannelListVoiceCategoryStore"), l(c, "persistKey", "ChannelListVoiceCategoryStore");
+let u = new c(s.Z, {
     VOICE_CATEGORY_COLLAPSE: a,
     VOICE_CATEGORY_EXPAND: a,
 });

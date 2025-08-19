@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => P,
+    h6: () => I,
 }),
     n(388685);
 var r = n(951288),
@@ -19,8 +19,8 @@ var r = n(951288),
     g = n(724757),
     m = n(626135),
     b = n(585483),
-    _ = n(358085),
-    O = n(143316),
+    O = n(358085),
+    _ = n(143316),
     y = n(240126),
     v = n(147522),
     j = n(809780),
@@ -28,7 +28,7 @@ var r = n(951288),
     E = n(388032),
     x = n(915087);
 function S(e) {
-    var t, n, l, a, O, S, P;
+    var t, n, l, a, _, S, I;
     let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
@@ -52,11 +52,11 @@ function S(e) {
             (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
         (a = R),
-        (O = D),
+        (_ = D),
         i.useEffect(() => {
             let e = () => {
                 let e = a.channels.find((e) => !e.collapsed);
-                null != e && O.markChannelRead(e);
+                null != e && _.markChannelRead(e);
             };
             return (
                 b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
@@ -64,11 +64,11 @@ function S(e) {
                     b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [O, a.channels]),
+        }, [_, a.channels]),
         (S = D),
         i.useEffect(() => {
             let e = (e) => {
-                ((0, _.isMac)() || (0, _.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
+                ((0, O.isMac)() || (0, O.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
@@ -107,7 +107,7 @@ function S(e) {
             Icon: d.xx7,
             header: E.intl.string(E.t["6XMM+P"]),
             tip:
-                (null == (P = s().os) ? void 0 : P.family) === "OS X"
+                (null == (I = s().os) ? void 0 : I.family) === "OS X"
                     ? E.intl.string(E.t.w9uDOT)
                     : E.intl.string(E.t.BiUJCw),
         });
@@ -183,7 +183,7 @@ function S(e) {
                             onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(x.scroller, "group-spacing-".concat(U)),
                             children: [
-                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
+                                w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
                                 (0, v.Z)(M, D, N),
                                 L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: x.spinner }),
                             ],
@@ -206,7 +206,7 @@ function S(e) {
         }),
     });
 }
-function I(e) {
+function P(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
         className: x.tutorial,
@@ -245,7 +245,7 @@ function I(e) {
         ],
     });
 }
-function P() {
+function I() {
     return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
@@ -254,7 +254,7 @@ function P() {
     });
 }
 let N = () =>
-    (0, r.jsx)(O.Z, {
+    (0, r.jsx)(_.Z, {
         onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

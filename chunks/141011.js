@@ -1,4 +1,4 @@
-r.d(t, { Z: () => m }), r(35282);
+r.d(t, { Z: () => b }), r(35282);
 var n = r(951288),
     l = r(647438),
     a = r(120356),
@@ -35,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,11 +53,11 @@ function b(e, t) {
         e
     );
 }
-let m = (e) => {
-    let { asset: t, size: r = p.yV, className: a, style: m, children: h, categoryBannerOverride: _ } = e,
+let b = (e) => {
+    let { asset: t, size: r = p.yV, className: a, style: b, children: h, categoryBannerOverride: _ } = e,
         v = (0, o.e7)([c.Z], () => c.Z.saturation),
         O = l.useMemo(() => {
-            if (null == t) return m;
+            if (null == t) return b;
             let e =
                     (null != t && /^http/i.test(t)) || (null != t && /^blob:https?:\/\/[^\/]+\//i.test(t))
                         ? t
@@ -73,7 +73,7 @@ let m = (e) => {
                     : {};
             if (1 === v)
                 return f(
-                    b(f({}, m), {
+                    m(f({}, b), {
                         backgroundImage: (null == _ ? void 0 : _.addGradient)
                             ? "url(".concat(
                                   e,
@@ -88,7 +88,7 @@ let m = (e) => {
                 );
             let l = (0, u.aD)(s.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - v);
             return f(
-                b(f({}, m), {
+                m(f({}, b), {
                     backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),
                     backgroundBlendMode: "saturation",
                     backgroundSize: "cover",
@@ -96,7 +96,7 @@ let m = (e) => {
                 }),
                 n,
             );
-        }, [t, r, v, m, null == _ ? void 0 : _.blur, null == _ ? void 0 : _.addGradient]);
+        }, [t, r, v, b, null == _ ? void 0 : _.blur, null == _ ? void 0 : _.addGradient]);
     return (0, n.jsx)("div", {
         className: i()(g.banner, a),
         style: O,

@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(179809),
     m = n(588275),
     b = n(388032),
-    _ = n(264096);
-function O(e) {
+    O = n(264096);
+function _(e) {
     let { onActivate: t, children: n } = e,
         s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
@@ -38,7 +38,7 @@ function O(e) {
             }
         }, [h, d, f, t]),
         (0, r.jsxs)("div", {
-            className: _.container,
+            className: O.container,
             children: [
                 (0, r.jsx)(o.yRy, {
                     ref: h,
@@ -46,13 +46,13 @@ function O(e) {
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
-                            className: _.popoutContainer,
+                            className: O.popoutContainer,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: _.popoutContent,
+                                    className: O.popoutContent,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: _.coachmarkTextContainer,
+                                            className: O.coachmarkTextContainer,
                                             children: [
                                                 (0, r.jsx)(o.X6q, {
                                                     variant: "heading-md/medium",
@@ -74,7 +74,7 @@ function O(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: _.popoutCaretLeft }),
+                                (0, r.jsx)("div", { className: O.popoutCaretLeft }),
                             ],
                         }),
                     position: "right",
@@ -112,7 +112,7 @@ function O(e) {
                             })({}, e)),
                             (n = n =
                                 {
-                                    className: _.popoutAnchor,
+                                    className: O.popoutAnchor,
                                     ref: s,
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -162,7 +162,7 @@ function y(e) {
     }, [n, S, E, v]),
     0 === C.length)
         ? null
-        : (0, r.jsx)(O, {
+        : (0, r.jsx)(_, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
                   folderNode: x,
@@ -175,7 +175,7 @@ function y(e) {
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
-                      className: _.pendingFolderButtonIcon,
+                      className: O.pendingFolderButtonIcon,
                       children: (0, r.jsx)(o.wGF, {
                           size: "sm",
                           color: "currentColor",

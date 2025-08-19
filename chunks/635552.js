@@ -9,8 +9,8 @@ var n = r(647438),
 let u = (e) => {
     let { product: t, onSuccess: u, onError: d } = e,
         [p, g] = n.useState(!1),
-        { firstAvatarDecoration: f, firstProfileEffect: b } = (0, s.Rj)(t),
-        m = (0, o.x6)(t)
+        { firstAvatarDecoration: f, firstProfileEffect: m } = (0, s.Rj)(t),
+        b = (0, o.x6)(t)
             ? c.intl.string(c.t.tf1ZZ2)
             : t.type === l.Z.AVATAR_DECORATION
               ? c.intl.string(c.t.zOA4a2)
@@ -21,8 +21,8 @@ let u = (e) => {
         handleUseNow: n.useCallback(async () => {
             g(!0);
             try {
-                if ((null != f && (await (0, a.Mn)({ avatarDecoration: f })), null != b)) {
-                    let e = { profile_effect_id: b.id };
+                if ((null != f && (await (0, a.Mn)({ avatarDecoration: f })), null != m)) {
+                    let e = { profile_effect_id: m.id };
                     await (0, i.Z)(e);
                 }
                 if (t.type === l.Z.NAMEPLATE) {
@@ -39,7 +39,7 @@ let u = (e) => {
                     } = await Promise.resolve().then(r.bind(r, 481060));
                     l(),
                         a(
-                            n(m, t.MESSAGE, {
+                            n(b, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,
                             }),
@@ -51,7 +51,7 @@ let u = (e) => {
             } finally {
                 g(!1);
             }
-        }, [f, b, t, u, m, d]),
+        }, [f, m, t, u, b, d]),
         isApplying: p,
     };
 };

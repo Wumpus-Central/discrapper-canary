@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(682662),
     m = n(674552),
     b = n(593364),
-    _ = n(905423),
-    O = n(199902),
+    O = n(905423),
+    _ = n(199902),
     y = n(592125),
     v = n(944486),
     j = n(979651),
@@ -23,8 +23,8 @@ var r = n(951288),
     E = n(853856),
     x = n(593214),
     S = n(919755),
-    I = n(110977),
-    P = n(603274),
+    P = n(110977),
+    I = n(603274),
     N = n(981631),
     w = n(388032),
     Z = n(499951);
@@ -71,17 +71,17 @@ function R() {
         })),
         G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
         B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
-        V = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: H, unread: F } = (0, S.Z)(U),
+        V = (0, O.Z)((e) => e.guildId) === N.I_8,
+        { badge: F, unread: H } = (0, S.Z)(U),
         z = (function (e) {
             let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, s.e7)([O.Z], () => {
+                r = (0, s.e7)([_.Z], () => {
                     if (!n) return !1;
-                    let t = O.Z.getCurrentUserActiveStream();
+                    let t = _.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                i = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([p.ZP], () =>
                     C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
@@ -110,7 +110,7 @@ function R() {
                 })
             );
         })(U),
-        W = H > 0 ? (0, b.N)(H) : null,
+        W = F > 0 ? (0, b.N)(F) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
@@ -119,12 +119,12 @@ function R() {
             (0, r.jsx)(h.Z, {
                 selected: V,
                 hovered: L,
-                unread: F && !k,
+                unread: H && !k,
                 className: Z.pill,
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 onShow: K,
-                children: (0, r.jsx)(I.S, {
+                children: (0, r.jsx)(P.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: !0,
                         upperBadge: z,
@@ -136,7 +136,7 @@ function R() {
                                 {
                                     ariaLabel: w.intl.formatToPlainString(w.t["/uzRsr"], {
                                         guildName: w.intl.string(w.t.wMWycn),
-                                        mentions: H,
+                                        mentions: F,
                                     }),
                                     "aria-selected": V,
                                     to: {

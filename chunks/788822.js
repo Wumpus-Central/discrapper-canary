@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(597688),
     g = r(297651),
     f = r(794324),
-    b = r(981631),
-    m = r(388032),
+    m = r(981631),
+    b = r(388032),
     h = r(310582);
 let _ = (e) => {
     var t, r, a, _;
@@ -25,7 +25,7 @@ let _ = (e) => {
                 : t.skuId);
     let S = null != (r = null != v ? v : null == O ? void 0 : O.skuId) ? r : "",
         { handleCardVisibilityChange: x } = (0, g.E)(S, "home", "marketing featured block"),
-        { featuredBlockBanner: j } = (0, f.YG)(O, C),
+        j = (0, f.YG)(O, C),
         P = l.useRef(null),
         T = S === o.T.NAMEPLATES_V3,
         L = T ? "NAMEPLATES VOL.3" : null,
@@ -41,7 +41,7 @@ let _ = (e) => {
             style: { backgroundImage: "url(".concat(j, ")") },
             onClick: () => {
                 y("shop marketing tile", S),
-                    u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    u.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                         sku_id: S,
                         page_type: "home",
@@ -84,11 +84,11 @@ let _ = (e) => {
                     className: h.featuredBlockButtonContainer,
                     children: (0, n.jsx)(c.zxk, {
                         variant: "overlay-primary",
-                        text: m.intl.string(m.t.jVcuVV),
+                        text: b.intl.string(b.t.jVcuVV),
                         onClick: (e) => {
                             y("shop marketing take me there button", S),
                                 e.stopPropagation(),
-                                u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                u.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                                     sku_id: S,
                                     page_type: "home",

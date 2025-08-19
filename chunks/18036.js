@@ -5,7 +5,7 @@ var i,
     l = n(592125),
     o = n(944486),
     a = n(9156);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-let c = {},
+let u = {},
     d = {},
     h = {};
 function p() {
@@ -31,13 +31,13 @@ function p() {
         (null == h[e] && (h[e] = 0),
         t.isThread() || (a.ZP.isOptInEnabled(n) && !a.ZP.isChannelOrParentOptedIn(n, t.id)))
     ) {
-        delete h[e], null != c[n] && c[n].delete(e);
+        delete h[e], null != u[n] && u[n].delete(e);
         return;
     }
-    return (h[e]++, null == c[n] && (c[n] = new Set()), a.ZP.isFavorite(n, e))
-        ? void c[n].delete(e)
+    return (h[e]++, null == u[n] && (u[n] = new Set()), a.ZP.isFavorite(n, e))
+        ? void u[n].delete(e)
         : (null == d[n] || !d[n].has(e)) && h[e] > 50
-          ? (c[n].add(e), !0)
+          ? (u[n].add(e), !0)
           : void 0;
 }
 class g extends (i = r.ZP.PersistedStore) {
@@ -45,7 +45,7 @@ class g extends (i = r.ZP.PersistedStore) {
         var t, n;
         if ((this.syncWith([o.Z], p), null == e)) return;
         let { suggestedChannels: i, dismissedSuggestions: r, channelOpensByChannelId: s } = e;
-        if (null != i) for (let e in i) (t = new Set(i[e])), (c[e] = void 0 !== t ? t : new Set());
+        if (null != i) for (let e in i) (t = new Set(i[e])), (u[e] = void 0 !== t ? t : new Set());
         if (null != r) for (let e in r) (n = new Set(r[e])), (d[e] = void 0 !== n ? n : new Set());
         h = null != s ? s : {};
     }
@@ -60,10 +60,10 @@ class g extends (i = r.ZP.PersistedStore) {
         };
     }
 }
-u(g, "displayName", "FavoritesSuggestionStore"), u(g, "persistKey", "FavoritesSuggestionStore");
+c(g, "displayName", "FavoritesSuggestionStore"), c(g, "persistKey", "FavoritesSuggestionStore");
 let f = new g(s.Z, {
     DISMISS_FAVORITE_SUGGESTION: function (e) {
         let { guildId: t, channelId: n } = e;
-        return null == d[t] && (d[t] = new Set()), d[t].add(n), c[t].delete(n), !0;
+        return null == d[t] && (d[t] = new Set()), d[t].add(n), u[t].delete(n), !0;
     },
 });

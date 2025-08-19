@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(211266),
     g = r(906732),
     f = r(977395),
-    b = r(214852),
-    m = r(238359),
+    m = r(214852),
+    b = r(238359),
     h = r(511050),
     _ = r(819640),
     v = r(594174),
@@ -29,8 +29,8 @@ var n = r(951288),
     k = r(508498),
     I = r(681435),
     N = r(642909),
-    w = r(215023),
-    A = r(981631),
+    A = r(215023),
+    w = r(981631),
     B = r(420212),
     R = r(887353),
     Z = r(345213);
@@ -49,8 +49,8 @@ let D = (e) => {
         );
     },
     M = function (e) {
-        let { isFullScreen: t = !0, tab: r = w.AW.HOME } = e;
-        (0, b.z)(f.f);
+        let { isFullScreen: t = !0, tab: r = A.AW.HOME } = e;
+        (0, m.z)(f.f);
         let a = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
             B = (0, N.G)("CollectiblesShop"),
@@ -63,7 +63,7 @@ let D = (e) => {
         );
         let { onClose: F } = (0, k.Db)(),
             { currentTab: H, hasFilters: W } = (0, j.S)(),
-            V = l.useMemo(() => (r === w.AW.HOME && H && W() ? H : r), [r, H, W]),
+            V = l.useMemo(() => (r === A.AW.HOME && H && W() ? H : r), [r, H, W]),
             { categories: U, refreshCategories: z } = (0, y.ZP)(
                 { logPerf: !0 },
                 {
@@ -72,7 +72,7 @@ let D = (e) => {
                     isFullScreen: t,
                 },
             );
-        (0, m.D)();
+        (0, b.D)();
         let G = (0, S.O)(U),
             [q, K] = l.useState(),
             Y = (0, s.e7)([C.Z], () => {
@@ -91,9 +91,9 @@ let D = (e) => {
             er();
         }, [er]),
             l.useEffect(() => {
-                t || (0, d.Y)(A.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
             }, [t]);
-        let en = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(A.S9g.COLLECTIBLES_SHOP)),
+        let en = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
             el = l.useRef(null),
             ea = l.useRef(null);
         (0, u.Tbt)(el);
@@ -114,7 +114,7 @@ let D = (e) => {
                       newValue: {
                           sessionId: a,
                           pageCategory: Y,
-                          pageSize: w.kN,
+                          pageSize: A.kN,
                       },
                       children: (0, n.jsx)(D, {
                           onClose: F,
@@ -133,9 +133,9 @@ let D = (e) => {
                                   }),
                                   (0, n.jsx)("div", {
                                       className: i()(R.shopViewWrapper, {
-                                          [R.visible]: ee === w.f7.VISIBLE,
-                                          [R.in]: ee === w.f7.IN,
-                                          [R.out]: ee === w.f7.OUT,
+                                          [R.visible]: ee === A.f7.VISIBLE,
+                                          [R.in]: ee === A.f7.IN,
+                                          [R.out]: ee === A.f7.OUT,
                                       }),
                                       children: (0, n.jsx)(P.Z, {
                                           tab: $,

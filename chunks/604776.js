@@ -16,8 +16,8 @@ var n = a(951288),
     x = a(232867),
     h = a(981631),
     p = a(696450),
-    v = a(711322),
-    b = a(451429);
+    b = a(711322),
+    v = a(451429);
 let f = {
         [h.kNB.QUEST_REWARD]: "Quest Reward",
         [h.kNB.DEVELOPER_GIFT]: "Developer Gift",
@@ -30,7 +30,7 @@ let f = {
         let { entitlement: a, active: r, onDelete: l } = e,
             s = (e) => (null != e ? (0, u.vc)(e, "LLL") : "---");
         return (0, n.jsxs)("div", {
-            className: i()(p.card, r ? v.gradientWrapperTier2 : ""),
+            className: i()(p.card, r ? b.gradientWrapperTier2 : ""),
             children: [
                 (0, n.jsxs)(c.Text, {
                     variant: "text-md/normal",
@@ -114,12 +114,12 @@ function _() {
                 y(E.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt));
         }, [E]),
         (0, n.jsx)(c.zJl, {
-            className: b.panel,
+            className: v.panel,
             children: (0, n.jsxs)("div", {
-                className: v.panelInner,
+                className: b.panelInner,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: v.headerWrapper,
+                        className: b.headerWrapper,
                         children: [
                             (0, n.jsx)(c.Text, {
                                 style: { marginBottom: "8px" },
@@ -164,7 +164,7 @@ function _() {
                         }),
                     (0, n.jsxs)("section", {
                         style: { marginBottom: "8px" },
-                        className: i()([p.section, v.buttons]),
+                        className: i()([p.section, b.buttons]),
                         children: [
                             (0, n.jsx)(c.Text, {
                                 variant: "text-md/normal",
@@ -189,7 +189,7 @@ function _() {
                         children: [
                             (0, n.jsxs)("div", {
                                 style: { flexWrap: "wrap" },
-                                className: v.headerWrapper,
+                                className: b.headerWrapper,
                                 children: [
                                     (0, n.jsx)(c.Text, {
                                         style: { marginBottom: "8px" },

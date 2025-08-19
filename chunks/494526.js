@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(533126),
     a = n(261470),
-    s = n(399606),
-    o = n(544891),
+    o = n(399606),
+    s = n(544891),
     c = n(755721),
     u = n(481060),
     d = n(893776),
@@ -81,7 +81,7 @@ let P = (e) => {
     });
 };
 function R(e) {
-    let { state: t, cancel: n, errorMessage: i, conditionalMediationAbortController: a, isPasswordlessActive: s } = e;
+    let { state: t, cancel: n, errorMessage: i, conditionalMediationAbortController: a, isPasswordlessActive: o } = e;
     switch (t.step) {
         case 0:
         case 1:
@@ -99,7 +99,7 @@ function R(e) {
                         size: c.Ph.LARGE,
                         look: c.iL.LINK,
                         color: c.Tt.LINK,
-                        disabled: s,
+                        disabled: o,
                         onClick: () =>
                             (function (e) {
                                 let t =
@@ -155,7 +155,7 @@ function R(e) {
 }
 function w(e) {
     let { authTokenCallback: t, conditionalMediationAbortController: n } = e,
-        l = (0, s.e7)([x.default], () => x.default.getIsPasswordlessActive()),
+        l = (0, o.e7)([x.default], () => x.default.getIsPasswordlessActive()),
         {
             state: c,
             rsaKeyPair: d,
@@ -164,12 +164,12 @@ function w(e) {
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, l] = i.useState(!1),
-                [s, o] = i.useState({ step: 0 }),
+                [o, s] = i.useState({ step: 0 }),
                 [c, u] = i.useState(null),
                 d = (0, p.Z)(),
                 h = i.useMemo(() => new a.Z(1500, 30000), []),
                 f = (0, m.Z)(() => {
-                    o({ step: 0 }),
+                    s({ step: 0 }),
                         d
                             ? n((e) => e + 1)
                             : (A.info(
@@ -179,16 +179,16 @@ function w(e) {
                 }),
                 g = i.useCallback(() => {
                     A.error("Could not complete QR code login, trying to restart with a new QR code."),
-                        o({ step: 0 }),
+                        s({ step: 0 }),
                         h.pending || h.fail(f);
                 }, [f, h]);
             return (
                 i.useEffect(() => {
                     d &&
                         r &&
-                        0 === s.step &&
+                        0 === o.step &&
                         (A.info("reconnecting, now that document is visible"), l(!1), n((e) => e + 1));
-                }, [s, d, r, l]),
+                }, [o, d, r, l]),
                 i.useEffect(() => {
                     let t = Date.now(),
                         n = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
@@ -197,7 +197,7 @@ function w(e) {
                     let i = (e) => A.info("[".concat("".concat(Date.now() - t, "ms"), "] ").concat(e)),
                         l = null,
                         a = null,
-                        s = null,
+                        o = null,
                         c = null,
                         d = !0;
                     function p() {
@@ -232,7 +232,7 @@ function w(e) {
                                     if (e !== l.fingerprint)
                                         throw Error("bad fingerprint ".concat(e, " !== ").concat(l.fingerprint));
                                     i("handshake complete awaiting remote auth."),
-                                        o({
+                                        s({
                                             step: 1,
                                             fingerprint: e,
                                         });
@@ -241,7 +241,7 @@ function w(e) {
                                 case "pending_login": {
                                     let e = l.ticket;
                                     null == e && g(),
-                                        o({
+                                        s({
                                             step: 4,
                                             ticket: e,
                                         });
@@ -251,7 +251,7 @@ function w(e) {
                                     b.S.dispatch(y.CkL.WAVE_EMPHASIZE),
                                         i("remote auth handshake started, awaiting ticket/cancel.");
                                     let e = l.encrypted_user_payload;
-                                    o({
+                                    s({
                                         step: 3,
                                         user: await (0, E.Rq)(p(), e),
                                     });
@@ -261,7 +261,7 @@ function w(e) {
                                     b.S.dispatch(y.CkL.WAVE_EMPHASIZE),
                                         i("remote auth handshake started, awaiting finish/cancel.");
                                     let e = l.encrypted_user_payload;
-                                    o({
+                                    s({
                                         step: 2,
                                         user: await (0, E.Rq)(p(), e),
                                     });
@@ -270,7 +270,7 @@ function w(e) {
                                 case "finish": {
                                     b.S.dispatch(y.CkL.WAVE_EMPHASIZE), i("remote auth handshake finished.");
                                     let t = l.encrypted_token;
-                                    o({ step: 5 }), e(await (0, E.FW)(p(), t));
+                                    s({ step: 5 }), e(await (0, E.FW)(p(), t));
                                     return;
                                 }
                                 case "cancel":
@@ -281,7 +281,7 @@ function w(e) {
                                     let e = l.heartbeat_interval;
                                     c = setTimeout(
                                         () => {
-                                            (c = null), m(), (s = setInterval(m, e));
+                                            (c = null), m(), (o = setInterval(m, e));
                                         },
                                         Math.floor(e * Math.random()),
                                     );
@@ -318,12 +318,12 @@ function w(e) {
                                 r.close(1000),
                                 h.cancel(),
                                 null != c && clearTimeout(c),
-                                null != s && clearInterval(s);
+                                null != o && clearInterval(o);
                         }
                     );
                 }, [f, e, t, h, g]),
                 {
-                    state: s,
+                    state: o,
                     rsaKeyPair: c,
                     cancel: f,
                     handleFailure: g,
@@ -346,7 +346,7 @@ function w(e) {
         i.useEffect(() => {
             4 === c.step &&
                 null != c.ticket &&
-                o.tn
+                s.tn
                     .post({
                         url: y.ANM.REMOTE_AUTH_LOGIN,
                         body: { ticket: c.ticket },

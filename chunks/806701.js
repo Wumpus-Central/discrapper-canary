@@ -4,8 +4,8 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    s = n(388905),
-    o = n(661824),
+    o = n(388905),
+    s = n(661824),
     c = n(720196),
     u = n(981631),
     d = n(388032),
@@ -26,11 +26,11 @@ function f(e) {
     let { setSlide: t, transitionTo: i } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.Ee, {
+            (0, r.jsx)(o.Ee, {
                 src: n(26230),
                 className: l()(p.marginBottom20, p.marginTop8),
             }),
-            (0, r.jsx)(s.Dx, {
+            (0, r.jsx)(o.Dx, {
                 className: p.marginBottom8,
                 children: d.intl.string(d.t["8UcxIy"]),
             }),
@@ -38,7 +38,7 @@ function f(e) {
                 variant: "text-md/normal",
                 children: d.intl.string(d.t.O37hMj),
             }),
-            (0, r.jsxs)(s.gO, {
+            (0, r.jsxs)(o.gO, {
                 className: l()(p.marginBottom20, p.marginTop20),
                 children: [
                     (0, r.jsx)(a.Text, { variant: "text-sm/normal" }),
@@ -46,13 +46,13 @@ function f(e) {
                         className: h.listContainer,
                         children: [
                             (0, r.jsx)(m, { children: d.intl.string(d.t.Gj1Zr6) }),
-                            (0, r.jsx)(o.Z, {}),
+                            (0, r.jsx)(s.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t["8C6t3N"]) }),
-                            (0, r.jsx)(o.Z, {}),
+                            (0, r.jsx)(s.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.mToZMD) }),
-                            (0, r.jsx)(o.Z, {}),
+                            (0, r.jsx)(s.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.TPEvkZ) }),
-                            (0, r.jsx)(o.Z, {}),
+                            (0, r.jsx)(s.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.H8Y1Li) }),
                         ],
                     }),
@@ -61,12 +61,12 @@ function f(e) {
             (0, r.jsxs)("div", {
                 className: h.buttonContainer,
                 children: [
-                    (0, r.jsx)(s.zx, {
+                    (0, r.jsx)(o.zx, {
                         onClick: () => t(c.n.PASSWORD),
                         children: d.intl.string(d.t.GgCRqa),
                     }),
-                    (0, r.jsx)(s.zx, {
-                        color: s.zx.Colors.PRIMARY,
+                    (0, r.jsx)(o.zx, {
+                        color: o.zx.Colors.PRIMARY,
                         onClick: () => i(u.Z5c.LOGIN, { source: "account_revert" }),
                         children: d.intl.string(d.t["B/yHcX"]),
                     }),

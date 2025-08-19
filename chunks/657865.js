@@ -6,23 +6,23 @@ function r(e, t) {
             i,
             l,
             a,
-            s = [],
-            o = !0,
+            o = [],
+            s = !0,
             c = !1;
         try {
             if (((l = (n = n.call(e)).next), 0 === t)) {
                 if (Object(n) !== n) return;
-                o = !1;
-            } else for (; !(o = (r = l.call(n)).done) && (s.push(r.value), s.length !== t); o = !0);
+                s = !1;
+            } else for (; !(s = (r = l.call(n)).done) && (o.push(r.value), o.length !== t); s = !0);
         } catch (e) {
             (c = !0), (i = e);
         } finally {
             try {
-                if (!o && null != n.return && ((a = n.return()), Object(a) !== a)) return;
+                if (!s && null != n.return && ((a = n.return()), Object(a) !== a)) return;
             } finally {
                 if (c) throw i;
             }
         }
-        return s;
+        return o;
     }
 }

@@ -19,9 +19,9 @@ let p = () => {
         let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: f = !1, initialPageSize: h } = e,
             g = (0, i.e7)([u.Z], () => u.Z.shouldReload()),
             m = r.useRef(!1),
-            [b, _] = r.useState(!1),
+            [b, O] = r.useState(!1),
             {
-                initialized: O,
+                initialized: _,
                 loading: y,
                 items: v,
                 hasMore: j,
@@ -41,34 +41,34 @@ let p = () => {
             }));
         r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             r.useEffect(() => {
-                O && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, O]);
-        let I = (0, o.Z)();
+                _ && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, _]);
+        let P = (0, o.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (E || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !P() && (E || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, v, p, I, E],
+            [n, v, p, P, E],
         ),
             r.useEffect(() => {
                 let e = g && t;
-                (!O || e) &&
+                (!_ || e) &&
                     (0, s.jk)({
                         limit: null != h ? h : f ? 8 : 20,
                         with_mentions: f,
                         roles_filter: x,
                         everyone_filter: S,
                     });
-            }, [O, g, t, f, x, S, h]);
-        let P = r.useCallback(
+            }, [_, g, t, f, x, S, h]);
+        let I = r.useCallback(
             async (e) => {
                 !m.current &&
-                    O &&
+                    _ &&
                     j &&
                     null != C &&
                     (e || !E) &&
                     ((m.current = !0),
-                    _(!0),
+                    O(!0),
                     await (0, s.jk)(
                         {
                             after: C,
@@ -81,16 +81,16 @@ let p = () => {
                             m.current = !1;
                         },
                     ),
-                    _(!1));
+                    O(!1));
             },
-            [O, j, C, E, f, x, S],
+            [_, j, C, E, f, x, S],
         );
         return {
-            initialized: O,
+            initialized: _,
             loading: y,
             items: v,
             hasMore: j,
-            loadMore: P,
+            loadMore: I,
             loadingMore: b,
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);

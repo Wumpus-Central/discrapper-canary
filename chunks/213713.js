@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(481060),
     h = a(570140),
     p = a(812206),
-    v = a(835473),
-    b = a(246992),
+    b = a(835473),
+    v = a(246992),
     f = a(681619),
     g = a(810568),
     j = a(168524),
@@ -28,7 +28,7 @@ var n = a(951288),
     P = a(206583),
     I = a(680027),
     w = a(451429);
-let R = [
+let k = [
     {
         key: "type",
         cellClassName: i()(I.cell, I.cellType),
@@ -58,11 +58,11 @@ let R = [
         cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(k, { type: t });
+            return (0, n.jsx)(R, { type: t });
         },
     },
 ];
-function k(e) {
+function R(e) {
     var t, a;
     let { type: r } = e,
         l = (0, u.e7)([T.Z], () => T.Z.getFilters()),
@@ -102,17 +102,17 @@ function Z() {
             var e;
             return (null == (e = T.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [k, Z] = r.useState(""),
+        [R, Z] = r.useState(""),
         D = (0, u.e7)([_.Z, p.Z], () => {
             var e, t, a;
-            return parseInt(k) > 0
-                ? k
-                : null != (a = null == (e = _.Z.getGameByName(k)) ? void 0 : e.id)
+            return parseInt(R) > 0
+                ? R
+                : null != (a = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
                   ? a
-                  : null == (t = p.Z.getApplicationByName(k))
+                  : null == (t = p.Z.getApplicationByName(R))
                     ? void 0
                     : t.id;
-        }, [k]),
+        }, [R]),
         L = (0, j.Z)({
             applicationId: D,
             location: "DevToolsContentInventory",
@@ -127,7 +127,7 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        U = (0, v.Z)(M).filter(y.lm),
+        U = (0, b.Z)(M).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, n.jsx)("div", {
         className: w.panel,
@@ -139,7 +139,7 @@ function Z() {
                         (0, n.jsx)(x.vwX, { children: "Inventory" }),
                         s.length > 0 &&
                             (0, n.jsx)(f.Z, {
-                                columns: R,
+                                columns: k,
                                 data: s,
                             }),
                         (0, n.jsx)(x.LZC, { size: 8 }),
@@ -209,11 +209,11 @@ function Z() {
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (k === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
+                                    (R === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
                             },
                             error:
-                                k.length > 0 && null == L
-                                    ? "No game profile for ".concat(null != D ? D : k + " - try by id", ".")
+                                R.length > 0 && null == L
+                                    ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
                                     : void 0,
                             successMessage: null != L ? "Game profile found" : void 0,
                         }),
@@ -248,7 +248,7 @@ function Z() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: b.O$,
+                            popoutLayerContext: v.O$,
                         }),
                     ],
                 }),

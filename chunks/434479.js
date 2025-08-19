@@ -61,8 +61,8 @@ function h(e) {
             renderIcon: g,
             text: m,
             selected: b,
-            trailing: _,
-            background: O,
+            trailing: O,
+            background: _,
             showUnread: y = !1,
             ref: v,
         } = e,
@@ -126,7 +126,7 @@ function h(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    O,
+                    _,
                     y ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
                         className: l()([d.link, d.basicChannelRowLink, h]),
@@ -142,7 +142,7 @@ function h(e) {
                                     "aria-hidden": !0,
                                     children: m,
                                 }),
-                                _,
+                                O,
                             ],
                         }),
                     }),

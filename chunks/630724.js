@@ -1,7 +1,7 @@
 n.d(t, {
     EW: () => h,
     FF: () => c,
-    MK: () => o,
+    MK: () => s,
     X2: () => d,
     mx: () => u,
 });
@@ -9,8 +9,8 @@ var r,
     i,
     l,
     a,
-    s,
-    o =
+    o,
+    s =
         (((r = {}).UNKNOWN = "unknown"),
         (r.ANY = "any"),
         (r.INVITE = "invite"),
@@ -30,8 +30,8 @@ var r,
         (a.SUCCESS = "create_success"),
         a),
     h =
-        (((s = {}).NUF_STARTED = "nuf_started"),
-        (s.AGE_GATE = "age_gate"),
-        (s.NUF_COMPLETE = "nuf_complete"),
-        (s.HUB_CONNECTION = "hub_connection"),
-        s);
+        (((o = {}).NUF_STARTED = "nuf_started"),
+        (o.AGE_GATE = "age_gate"),
+        (o.NUF_COMPLETE = "nuf_complete"),
+        (o.HUB_CONNECTION = "hub_connection"),
+        o);

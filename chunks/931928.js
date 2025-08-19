@@ -1,4 +1,4 @@
-n.d(t, { u: () => O });
+n.d(t, { u: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(843611),
@@ -14,9 +14,9 @@ var r = n(951288),
     g = n(921944),
     m = n(46140),
     b = n(388032);
-let _ = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
-    O = (e) => {
-        let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: O, isGuildBarScrolling: y } = e,
+let O = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
+    _ = (e) => {
+        let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: _, isGuildBarScrolling: y } = e,
             { enabled: v } = (0, u.WX)({ location: "orbs_discovery_onboarding_coachmark" }),
             {
                 shouldShow: j,
@@ -42,8 +42,8 @@ let _ = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
                         },
                         [d],
                     ),
-                    O = i.useCallback(() => {
-                        d("CTA_CLICK"), _.includes(r) || (0, s.uL)(f.Z5c.COLLECTIBLES_SHOP_WITH_TAB(h.AW.ORBS));
+                    _ = i.useCallback(() => {
+                        d("CTA_CLICK"), O.includes(r) || (0, s.uL)(f.Z5c.COLLECTIBLES_SHOP_WITH_TAB(h.AW.ORBS));
                     }, [d, r]),
                     y = i.useCallback(() => {
                         b("CTA_CLICK"),
@@ -58,7 +58,7 @@ let _ = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
                           shouldShow: u,
                           questId: m.V6,
                           onClose: b,
-                          onCtaClick: O,
+                          onCtaClick: _,
                           onDiscoveryButtonClick: y,
                       }
                     : {
@@ -75,7 +75,7 @@ let _ = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
                     scrollToBottom: n,
                 }),
             }),
-            I = i.useMemo(
+            P = i.useMemo(
                 () => ({
                     onCtaClick: x,
                     onClose: E,
@@ -89,10 +89,10 @@ let _ = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
             errorBoundarySource: "ORBS_DISCOVERY_ONBOARDING_COACHMARK",
             targetElementRef: t,
             targetQuestId: C,
-            renderDiscoveryButton: O,
+            renderDiscoveryButton: _,
             showingCoachmark: j,
             isGuildBarScrolling: y,
             onDiscoveryButtonClick: S,
-            innerCoachmarkProps: I,
+            innerCoachmarkProps: P,
         });
     };

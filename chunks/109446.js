@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(306680),
     m = n(594174),
     b = n(768581),
-    _ = n(709054),
-    O = n(981631),
+    O = n(709054),
+    _ = n(981631),
     y = n(124368),
     v = n(388032),
     j = n(531198);
@@ -27,11 +27,11 @@ function C(e) {
                 .values()
                 .map((e) => e.channel)
                 .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && h.Z.can(O.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && h.Z.can(_.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
-                    return _.default.compare(n, r);
+                    return O.default.compare(n, r);
                 })
                 .reverse()
                 .value();

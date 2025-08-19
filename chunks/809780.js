@@ -21,8 +21,8 @@ var r,
     g = n(81643),
     m = n(974814),
     b = n(622822),
-    _ = n(853856),
-    O = n(181945),
+    O = n(853856),
+    _ = n(181945),
     y = n(220444),
     v = n(601070),
     j = n(344185),
@@ -30,8 +30,8 @@ var r,
     E = n(723170),
     x = n(675478),
     S = n(581883),
-    I = n(131704),
-    P = n(592125),
+    P = n(131704),
+    I = n(592125),
     N = n(984933),
     w = n(731290),
     Z = n(430824),
@@ -58,7 +58,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +74,7 @@ function H(e) {
     }
     return e;
 }
-function F(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -113,7 +113,7 @@ class Y extends o.EventEmitter {
             r = t.map((e) => {
                 if (e.isFullyLoaded || e.deleted || n) return e;
                 if (e.collapsed)
-                    if (!e.hasLoadedAnything) return F(H({}, e), { hasLoadedAnything: !0 });
+                    if (!e.hasLoadedAnything) return H(F({}, e), { hasLoadedAnything: !0 });
                     else return e;
                 return (
                     (e = this.populateInitialStateFromStore(e)).isFullyLoaded ||
@@ -131,13 +131,13 @@ class Y extends o.EventEmitter {
     populateInitialStateFromStore(e) {
         if ("messages" === e.type) return q(e, !1);
         if ("nsfw" === e.type)
-            return F(H({}, e), {
+            return H(F({}, e), {
                 isFullyLoaded: !0,
                 hasLoadedAnything: !0,
             });
         if ("forum" === e.type) {
             let t = j.Z.hasLoaded(e.guildId);
-            return F(H({}, e), {
+            return H(F({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0,
             });
@@ -170,7 +170,7 @@ class Y extends o.EventEmitter {
                             let n = q(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
-                                    (n = F(H({}, n), {
+                                    (n = H(F({}, n), {
                                         hasLoadedAnything: !0,
                                         isFullyLoaded: !0,
                                         hasError: !t,
@@ -187,7 +187,7 @@ class Y extends o.EventEmitter {
                             var t;
                             return (
                                 s()("messages" === e.type, "channel cannot change type"),
-                                F(H({}, q(e, !0)), {
+                                H(F({}, q(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -208,7 +208,7 @@ class Y extends o.EventEmitter {
     setState(e) {
         for (let t in e)
             if (e[t] !== this.state[t]) {
-                (this.state = H({}, this.state, e)), this.emit("change", this.state);
+                (this.state = F({}, this.state, e)), this.emit("change", this.state);
                 return;
             }
     }
@@ -263,7 +263,7 @@ class Y extends o.EventEmitter {
                 let r = this.state.channels.find((e) => e.channelId === t);
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length))
                     return void this.deleteChannel(t);
-                this.setState({ channels: this.updateChannel(t, (e) => F(H({}, e), { deleted: !0 })) }),
+                this.setState({ channels: this.updateChannel(t, (e) => H(F({}, e), { deleted: !0 })) }),
                     h.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
@@ -291,7 +291,7 @@ class Y extends o.EventEmitter {
                     });
             }),
             (this.markGuildRead = (e) => {
-                d.Z.wait(() => (0, O.Z)([e], G.jXE.INBOX)),
+                d.Z.wait(() => (0, _.Z)([e], G.jXE.INBOX)),
                     this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
                     this.maybeLoadMore();
             }),
@@ -330,7 +330,7 @@ class Y extends o.EventEmitter {
                         scrollToChannelIndex: o,
                         collapsedChannels: i,
                         loadState: "done" !== l || s || a.isFullyLoaded ? l : "loaded",
-                        channels: this.updateChannel(t, (e) => F(H({}, e), { collapsed: s })),
+                        channels: this.updateChannel(t, (e) => H(F({}, e), { collapsed: s })),
                     }),
                     a.collapsed ? a.isFullyLoaded || this.loadMore() : this.maybeLoadMore();
             }),
@@ -350,7 +350,7 @@ class Y extends o.EventEmitter {
                     {
                         if (!e.hasLoadedAnything) return e;
                         let t = j.Z.hasLoaded(e.guildId);
-                        return F(H({}, e), {
+                        return H(F({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0,
                         });
@@ -378,7 +378,7 @@ function q(e, t) {
             (null == (n = l[0]) ? void 0 : n.id) === e.oldestUnreadMessageId,
         a = l[l.length - 1],
         s = U.default.compare(null == a ? void 0 : a.id, e.newestUnreadMessageId) >= 0 || l.length >= K;
-    return F(H({}, e), {
+    return H(F({}, e), {
         messages: l,
         hasLoadedAnything: e.hasLoadedAnything || o || t,
         hasLoadedFirst: e.hasLoadedFirst || o || t,
@@ -392,7 +392,7 @@ function X() {
                 r = null != (t = null == (e = S.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
             for (let e in r)
                 for (let t in r[e].channels) {
-                    let i = P.Z.getChannel(t);
+                    let i = I.Z.getChannel(t);
                     (t in n && (null == i ? void 0 : i.guild_id) !== e) || (n[t] = r[e].channels[t].collapsedInInbox);
                 }
             return n;
@@ -400,7 +400,7 @@ function X() {
         t = (function (e) {
             let t = [];
             return (
-                P.Z.getSortedPrivateChannels().forEach((n) => Q(e, t, null, n.id)),
+                I.Z.getSortedPrivateChannels().forEach((n) => Q(e, t, null, n.id)),
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let r = N.ZP.getSelectableChannelIds(n),
@@ -433,8 +433,8 @@ function X() {
 }
 function Q(e, t, n, r) {
     if (null == r) return;
-    let i = P.Z.getChannel(r);
-    if (null == i || (!I.Ec.has(i.type) && L.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
+    let i = I.Z.getChannel(r);
+    if (null == i || (!P.Ec.has(i.type) && L.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
     if (i.isPrivate()) {
         if (0 === R.ZP.getMentionCount(r)) return;
     } else if (!(0, y.d)(i) && 0 === R.ZP.getMentionCount(r)) return;
@@ -468,8 +468,8 @@ function Q(e, t, n, r) {
         hasMentionsOrUnreads: c,
         mentionCount: s,
         sortOrder: (function (e, t, n) {
-            let r = P.Z.getChannel(t);
-            if (_.Z.isFavorite(t)) return 0;
+            let r = I.Z.getChannel(t);
+            if (O.Z.isFavorite(t)) return 0;
             if (r.isPrivate()) return 1;
             if (R.ZP.getMentionCount(t) > 0) return R.ZP.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
@@ -490,11 +490,11 @@ function Q(e, t, n, r) {
         order: 0,
     };
     (0, b.aC)(i) && !w.Z.didAgree(i.guild_id)
-        ? t.push(F(H({}, u), { type: "nsfw" }))
+        ? t.push(H(F({}, u), { type: "nsfw" }))
         : i.isForumLikeChannel()
-          ? t.push(F(H({}, u), { type: "forum" }))
+          ? t.push(H(F({}, u), { type: "forum" }))
           : t.push(
-                F(H({}, u), {
+                H(F({}, u), {
                     type: "messages",
                     messages: [],
                 }),

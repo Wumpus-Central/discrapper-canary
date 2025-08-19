@@ -25,8 +25,8 @@ var n = a(951288),
     x = a(645041),
     h = a(713081),
     p = a(675478),
-    v = a(581883),
-    b = a(899667),
+    b = a(581883),
+    v = a(899667),
     f = a(430824),
     g = a(914010),
     j = a(981631),
@@ -93,18 +93,18 @@ function P() {
             var e;
             return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        r = (0, i.Wu)([v.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
+        r = (0, i.Wu)([b.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
         l =
             null !=
-            (e = (0, i.e7)([v.Z], () => {
+            (e = (0, i.e7)([b.Z], () => {
                 var e;
-                return null == (e = v.Z.settings.userContent) ? void 0 : e.dismissedContents;
+                return null == (e = b.Z.settings.userContent) ? void 0 : e.dismissedContents;
             }))
                 ? e
                 : new Uint8Array(),
-        s = (0, i.Wu)([b.Z], () => {
+        s = (0, i.Wu)([v.Z], () => {
             var e;
-            return null != t && null != (e = b.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
+            return null != t && null != (e = v.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
         });
     if (null != t)
         return (0, n.jsxs)(c.zJl, {

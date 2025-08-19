@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(923576),
     h = a(981631),
     p = a(362786),
-    v = a(474936),
-    b = a(711322),
+    b = a(474936),
+    v = a(711322),
     f = a(855091);
 let g = {
         [h.O0b.UNPAID]: "Unpaid",
@@ -76,8 +76,8 @@ function y(e) {
     let { subscription: T, onUpdated: O } = e,
         [E, S] = r.useState(!1),
         [P, I] = r.useState(!1),
-        [w, R] = r.useState(!1),
-        [k, Z] = r.useState(!1),
+        [w, k] = r.useState(!1),
+        [R, Z] = r.useState(!1),
         [A, D] = r.useState(null),
         L = (e) => ((null == e && (e = T.status), e in g) ? g[e] : "Unknown status ".concat(e)),
         M = (e) => {
@@ -139,13 +139,13 @@ function y(e) {
             }
             O();
         },
-        B = (null == (t = v.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === v.p9.TIER_0,
+        B = (null == (t = b.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
         z = null == (a = T.metadata) ? void 0 : a.ended_at,
         G = null != z ? new Date(z).toISOString().substring(0, 10) : "",
         V = T.hasActiveTrial,
         H = (null == (l = T.metadata) ? void 0 : l.active_discount_id) != null;
     return (0, n.jsxs)("div", {
-        className: i()(b.card, B ? b.gradientWrapperTier0 : b.gradientWrapperTier2),
+        className: i()(v.card, B ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
         children: [
             V &&
                 (0, n.jsx)(o.P3F, {
@@ -176,8 +176,8 @@ function y(e) {
                                 let e = T.planIdFromItems;
                                 return null == e
                                     ? "No plan id"
-                                    : e in v.GP
-                                      ? v.GP[e].name
+                                    : e in b.GP
+                                      ? b.GP[e].name
                                       : "Unknown plan id ".concat(e);
                             })(),
                             " ",
@@ -228,7 +228,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                R(!w);
+                                k(!w);
                             },
                             className: f.collapsablePaneHeader,
                             children: [
@@ -280,7 +280,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                Z(!k);
+                                Z(!R);
                             },
                             className: f.collapsablePaneHeader,
                             children: [
@@ -290,10 +290,10 @@ function y(e) {
                                         children: "Active Discount Info",
                                     }),
                                 }),
-                                (0, n.jsx)(c.Z, { direction: k ? c.Z.Directions.UP : c.Z.Directions.DOWN }),
+                                (0, n.jsx)(c.Z, { direction: R ? c.Z.Directions.UP : c.Z.Directions.DOWN }),
                             ],
                         }),
-                        k &&
+                        R &&
                             (0, n.jsxs)("ul", {
                                 className: f.collapsiblePaneList,
                                 children: [

@@ -1,66 +1,66 @@
-l.d(t, {
+l.d(r, {
     Cl: () => c,
-    ey: () => d,
-    pM: () => _,
+    ey: () => E,
+    pM: () => f,
 });
-var r = l(149765),
+var t = l(149765),
     n = l(900089),
     o = l(700785),
     i = l(946724),
-    a = l(981631),
-    s = l(141006),
-    u = l(388032);
+    u = l(981631),
+    a = l(141006),
+    _ = l(388032);
 let c = 371,
-    d = 30,
-    E = o.TP;
-r.Od(E, a.Plq.MENTION_EVERYONE);
-let f = r.$e(
-        E,
-        a.Plq.VIEW_AUDIT_LOG,
-        a.Plq.MANAGE_NICKNAMES,
-        a.Plq.KICK_MEMBERS,
-        a.Plq.BAN_MEMBERS,
-        a.Plq.MANAGE_MESSAGES,
-        a.Plq.MUTE_MEMBERS,
-        a.Plq.DEAFEN_MEMBERS,
-        a.Plq.MOVE_MEMBERS,
-        a.Plq.PRIORITY_SPEAKER,
-        a.Plq.MODERATE_MEMBERS,
+    E = 30,
+    S = o.TP;
+t.Od(S, u.Plq.MENTION_EVERYONE);
+let s = t.$e(
+        S,
+        u.Plq.VIEW_AUDIT_LOG,
+        u.Plq.MANAGE_NICKNAMES,
+        u.Plq.KICK_MEMBERS,
+        u.Plq.BAN_MEMBERS,
+        u.Plq.MANAGE_MESSAGES,
+        u.Plq.MUTE_MEMBERS,
+        u.Plq.DEAFEN_MEMBERS,
+        u.Plq.MOVE_MEMBERS,
+        u.Plq.PRIORITY_SPEAKER,
+        u.Plq.MODERATE_MEMBERS,
     ),
-    S = r.$e(
-        f,
-        a.Plq.MANAGE_CHANNELS,
-        a.Plq.MANAGE_THREADS,
-        a.Plq.MANAGE_ROLES,
-        a.Plq.MANAGE_GUILD_EXPRESSIONS,
-        a.Plq.MANAGE_GUILD,
-        a.Plq.MANAGE_WEBHOOKS,
-        a.Plq.SEND_TTS_MESSAGES,
+    d = t.$e(
+        s,
+        u.Plq.MANAGE_CHANNELS,
+        u.Plq.MANAGE_THREADS,
+        u.Plq.MANAGE_ROLES,
+        u.Plq.MANAGE_GUILD_EXPRESSIONS,
+        u.Plq.MANAGE_GUILD,
+        u.Plq.MANAGE_WEBHOOKS,
+        u.Plq.SEND_TTS_MESSAGES,
     );
-r.IH(S, a.Plq.VIEW_GUILD_ANALYTICS),
+t.IH(d, u.Plq.VIEW_GUILD_ANALYTICS),
     (0, n.Fw)("BRAND_500"),
     o.Hn,
     (0, n.Fw)("GREEN_360"),
     (0, n.Fw)("YELLOW_300"),
     (0, n.Fw)("RED_400");
-let _ = [
+let f = [
     {
         id: i.g.SOLID,
         colors: {
-            primary_color: a.p6O,
+            primary_color: u.p6O,
             secondary_color: null,
             tertiary_color: null,
         },
-        labelString: u.t["8Qyaho"],
+        labelString: _.t["8Qyaho"],
     },
     {
         id: i.g.GRADIENT,
-        colors: s.Eg,
-        labelString: u.t.XpWmJy,
+        colors: a.Eg,
+        labelString: _.t.XpWmJy,
     },
     {
         id: i.g.HOLOGRAPHIC,
-        colors: s.SK,
-        labelString: u.t.QTKppa,
+        colors: a.SK,
+        labelString: _.t.QTKppa,
     },
 ];

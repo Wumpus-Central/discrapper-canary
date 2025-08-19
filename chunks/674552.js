@@ -2,7 +2,7 @@ n.d(t, {
     Ne: () => h,
     Ny: () => g,
     Or: () => b,
-    jt: () => _,
+    jt: () => O,
 }),
     n(388685);
 var r = n(951288);
@@ -80,12 +80,12 @@ function b(e) {
         if (!c) return null;
         t = m;
     }
-    return O({
+    return _({
         icon: t,
         isCurrentUserConnected: l,
     });
 }
-function _(e) {
+function O(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, r] = (function (e) {
             switch (e) {
@@ -99,12 +99,12 @@ function _(e) {
                     return [void 0, o.vdY];
             }
         })(t);
-    return O({
+    return _({
         icon: r,
         color: n,
     });
 }
-function O(e) {
+function _(e) {
     let { icon: t, color: n, isCurrentUserConnected: i } = e,
         a = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
     return (0, r.jsx)(

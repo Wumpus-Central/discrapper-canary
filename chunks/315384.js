@@ -16,7 +16,7 @@ function x() {
     let e,
         [t, a] = (0, r.useState)([]),
         [x, h] = (0, r.useState)(null),
-        [p, v] = (0, r.useState)(!1);
+        [p, b] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(
             () => (
@@ -53,7 +53,7 @@ function x() {
                                     onClick:
                                         ((e = o.D1),
                                         async () => {
-                                            v(!0);
+                                            b(!0);
                                             try {
                                                 let n = await l.tn.post({
                                                         url: u,
@@ -65,7 +65,7 @@ function x() {
                                             } catch (e) {
                                                 h("Failed to create entitlement");
                                             } finally {
-                                                v(!1);
+                                                b(!1);
                                             }
                                         }),
                                     className: d.button,

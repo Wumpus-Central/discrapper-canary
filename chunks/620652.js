@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => j,
 });
 var i,
-    r = n(951288),
-    l = n(647438),
+    l = n(951288),
+    r = n(647438),
     o = n(120356),
     a = n.n(o),
     s = n(500923),
@@ -20,21 +20,21 @@ let b = async (e) => {
     var t;
     let { effect: n } = e,
         i = await (0, h.T)(n.channelId, null != (t = n.messageId) ? t : m.lds, n.emoji.name),
-        r = await (0, p.aB)(
+        l = await (0, p.aB)(
             "".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name),
             n.url,
             i,
             n.color,
         );
-    return (r.assets[0].p = n.url), r;
+    return (l.assets[0].p = n.url), l;
 };
 function j(e) {
     let { className: t, effect: n, onComplete: i, emojiSize: o = 20 } = e,
-        s = l.useRef(null),
+        s = r.useRef(null),
         h = o * p.Vz,
         m = (h + o) / 2;
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             let e;
             if (null != n)
                 return (
@@ -68,9 +68,9 @@ function j(e) {
                     }
                 );
         }, [i, n, o]),
-        (0, r.jsx)("div", {
+        (0, l.jsx)("div", {
             className: f.effectsWrapper,
-            children: (0, r.jsx)("div", {
+            children: (0, l.jsx)("div", {
                 className: a()(f.effect, t),
                 style: {
                     transform: "translateY(".concat(m, "px)"),

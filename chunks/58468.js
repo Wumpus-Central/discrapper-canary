@@ -17,25 +17,25 @@ function a(e, t, n) {
         e
     );
 }
-let u = {},
-    c = u;
+let c = {},
+    u = c;
 function d() {
-    l.default.keys(c).forEach((e) => {
-        null == o.Z.getChannel(e) && delete c[e];
+    l.default.keys(u).forEach((e) => {
+        null == o.Z.getChannel(e) && delete u[e];
     });
 }
 class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.Z), (c = null != e ? e : u);
+        this.waitFor(o.Z), (u = null != e ? e : c);
     }
     getState() {
-        return c;
+        return u;
     }
     getCollapsed() {
-        return c;
+        return u;
     }
     isCollapsed(e) {
-        return c[e] || !1;
+        return u[e] || !1;
     }
 }
 a(h, "displayName", "CollapsedVoiceChannelStore"), a(h, "persistKey", "collapsedChannels");
@@ -44,8 +44,8 @@ let p = new h(s.Z, {
     OVERLAY_INITIALIZE: d,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        c[t] ? delete c[t] : (c[t] = !0),
-            (c = (function (e) {
+        u[t] ? delete u[t] : (u[t] = !0),
+            (u = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
@@ -60,6 +60,6 @@ let p = new h(s.Z, {
                         });
                 }
                 return e;
-            })({}, c));
+            })({}, u));
     },
 });

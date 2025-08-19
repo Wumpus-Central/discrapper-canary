@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => P,
+    E: () => I,
     Z: () => N,
 }),
     n(388685),
@@ -19,8 +19,8 @@ var r,
     g = n(703656),
     m = n(417363),
     b = n(941128),
-    _ = n(780570),
-    O = n(353042),
+    O = n(780570),
+    _ = n(353042),
     y = n(981631),
     v = n(388032),
     j = n(820093);
@@ -115,7 +115,7 @@ class S extends l.PureComponent {
         if (e.type === y.vxO.UPDATING || e.type === y.vxO.REPAIRING || e.type === y.vxO.INSTALLING) {
             if (t) return v.intl.string(v.t["5oxtFR"]);
             else if (e.stage === y.f07.PATCHING || e.stage === y.f07.REPAIRING)
-                return (0, i.jsx)(O.Z, {
+                return (0, i.jsx)(_.Z, {
                     getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody,
@@ -146,7 +146,7 @@ class S extends l.PureComponent {
             });
     }
 }
-class I extends (r = l.PureComponent) {
+class P extends (r = l.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -226,20 +226,20 @@ class I extends (r = l.PureComponent) {
             });
     }
 }
-function P(e, t) {
+function I(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: r, branchId: i } = n,
             l = t.getState(r, i);
         return null != l && e.push(l), e;
     }, []);
 }
-C(I, "defaultProps", { strokeSize: p._3P.StrokeSizes.MEDIUM });
+C(P, "defaultProps", { strokeSize: p._3P.StrokeSizes.MEDIUM });
 let N = c.ZP.connectStores([b.Z, m.Z, f.Z], () => {
     let e = b.Z.activeItems,
-        t = P(e, m.Z),
-        { total: n, progress: r } = _.lK(t);
+        t = I(e, m.Z),
+        { total: n, progress: r } = O.lK(t);
     return {
-        percent: _.xI(r, n),
+        percent: O.xI(r, n),
         isPaused: b.Z.paused,
         firstApplication: e.length > 0 ? f.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null,
@@ -270,7 +270,7 @@ let N = c.ZP.connectStores([b.Z, m.Z, f.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, E({}, n)) : null,
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, E({}, n)) : null,
           })
-        : (0, i.jsx)(I, E({}, n));
+        : (0, i.jsx)(P, E({}, n));
 });

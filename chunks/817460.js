@@ -2,8 +2,8 @@ n.d(t, {
     JE: () => o,
     ab: () => l,
     iG: () => a,
-    lL: () => c,
-    rC: () => u,
+    lL: () => u,
+    rC: () => c,
 });
 var i = n(293810),
     r = n(474936),
@@ -41,9 +41,9 @@ function a(e) {
             return s.intl.formatToPlainString(s.t.IfYQVF, { years: n });
     }
 }
-function u(e) {
+function c(e) {
     return e.ref_type === i.Qs.CHANNEL;
 }
-function c(e) {
+function u(e) {
     return e.ref_type === i.Qs.INTANGIBLE;
 }

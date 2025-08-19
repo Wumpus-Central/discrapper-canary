@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(592125),
     m = n(259580),
     b = n(617379),
-    _ = n(324081),
-    O = n(305248),
+    O = n(324081),
+    _ = n(305248),
     y = n(520116),
     v = n(981631),
     j = n(388032),
@@ -123,7 +123,7 @@ let x = i.memo(function (e) {
         return (0, r.jsx)("div", {
             className: C.channel,
             children: (0, r.jsx)(u.y5t, {
-                component: (0, r.jsxs)(_.Z, {
+                component: (0, r.jsxs)(O.Z, {
                     channel: a,
                     gotoChannel: s,
                     mentionCount: t.mentionCount,
@@ -131,8 +131,8 @@ let x = i.memo(function (e) {
                     channelState: t,
                     children: [
                         (0, r.jsx)(b.Z, { channel: a }),
-                        (0, r.jsx)(I, E({}, e)),
-                        "nsfw" === t.type ? null : (0, r.jsx)(P, E({}, e)),
+                        (0, r.jsx)(P, E({}, e)),
+                        "nsfw" === t.type ? null : (0, r.jsx)(I, E({}, e)),
                     ],
                 }),
                 children: t.collapsed
@@ -144,7 +144,7 @@ let x = i.memo(function (e) {
                             gotoChannel: s,
                         })
                       : "forum" === t.type
-                        ? (0, r.jsx)(O.Z, {
+                        ? (0, r.jsx)(_.Z, {
                               channel: t,
                               channelRecord: a,
                               deleteChannel: l,
@@ -153,7 +153,7 @@ let x = i.memo(function (e) {
             }),
         });
     });
-function I(e) {
+function P(e) {
     let { channel: t, markChannelRead: n, markGuildRead: i, getNumUnreadChannels: l } = e,
         o = (0, s.Z)() && null != t.guildId;
     return (0, r.jsx)(u.M0o, {
@@ -180,7 +180,7 @@ function I(e) {
         },
     });
 }
-function P(e) {
+function I(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: i } = e;
     function l() {
         n(t),

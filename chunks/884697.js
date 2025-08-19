@@ -204,6 +204,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     D = (e, t) => {
         var n;
+        if (null == e || "" === e) return "";
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
             o = (0, a.oO)(t.size * (0, a.x_)()),
             s = null != (n = null == t ? void 0 : t.format) ? n : "png";

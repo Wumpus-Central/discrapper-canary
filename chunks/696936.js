@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => a,
-    Z: () => u,
+    Z: () => c,
 });
 var i = n(951288);
 n(647438);
@@ -13,7 +13,7 @@ let a = {
     YELLOW: o.yellowMessageBlock,
     BROWN: o.brownMessageBlock,
 };
-function u(e) {
+function c(e) {
     let { color: t, icon: n, children: r, className: a } = e;
     return (0, i.jsx)(l.kzN, {
         icon: (e) =>

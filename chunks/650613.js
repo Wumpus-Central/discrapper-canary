@@ -1,4 +1,4 @@
-a.d(t, { Z: () => b }), a(388685), a(361932), a(187205);
+a.d(t, { Z: () => v }), a(388685), a(361932), a(187205);
 var n = a(951288),
     r = a(442837),
     l = a(481060),
@@ -12,7 +12,7 @@ var n = a(951288),
     x = a(561308),
     h = a(206583),
     p = a(281327);
-function v(e) {
+function b(e) {
     let { id: t } = e,
         a = (0, r.e7)([o.default], () => o.default.getUser(t));
     return null == a
@@ -31,7 +31,7 @@ function v(e) {
               }),
           });
 }
-function b() {
+function v() {
     var e;
     let t = (0, r.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
         a = (0, r.e7)([u.Z], () => u.Z.getFilters()),
@@ -56,7 +56,7 @@ function b() {
                       {
                           className: p.locatorEntry,
                           children: [
-                              (0, n.jsx)(v, {
+                              (0, n.jsx)(b, {
                                   type: t.author_type,
                                   id: t.author_id,
                               }),

@@ -39,8 +39,8 @@ var n,
     x = a(566162),
     h = a(567027),
     p = a(461195),
-    v = a(857702),
-    b = a(20450),
+    b = a(857702),
+    v = a(20450),
     f = a(312976),
     g = a(147591),
     j = a(135164),
@@ -55,8 +55,8 @@ var n,
     P = a(596136),
     I = a(341901),
     w = a(856308),
-    R = a(665352),
-    k = a(394900),
+    k = a(665352),
+    R = a(394900),
     Z = a(661105),
     A = a(525169),
     D = a(433517),
@@ -116,8 +116,8 @@ let B = {
         HSV: x.Z,
         HWB: h.Z,
         ICTCP: p.Z,
-        JzCzHz: v.Z,
-        Jzazbz: b.Z,
+        JzCzHz: b.Z,
+        Jzazbz: v.Z,
         LCH: f.Z,
         LCHuv: g.Z,
         Lab: j.Z,
@@ -134,7 +134,7 @@ let B = {
         XYZ_D65: w.Z,
     },
     z = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
-Object.values(B).forEach((e) => R.Z.register(e));
+Object.values(B).forEach((e) => k.Z.register(e));
 let { SemanticColors: G } = L.V,
     V = G,
     H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
@@ -182,7 +182,7 @@ function Y(e) {
     return F(U({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, k.Z)((0, Z.Z)(e, i.Z), { format: "hex" });
+    return (0, R.Z)((0, Z.Z)(e, i.Z), { format: "hex" });
 }
 var q = (((n = {}).TOKENS = "Tokens"), (n.PALETTES = "Palettes"), n);
 function $() {
@@ -264,17 +264,17 @@ function er(e) {
             space: o,
             progression: (e) => e ** s,
         }),
-        v = [];
+        b = [];
     for (let e = 0; e < m; e++) {
         let t = h(e / m);
-        v.push(t);
+        b.push(t);
     }
-    v.push(c);
+    b.push(c);
     for (let e = 1; e < x; e++) {
         let t = p(1 - e / x);
-        v.push(t);
+        b.push(t);
     }
-    return Object.fromEntries(v.map((e, a) => ["".concat(t, "-").concat(a), e]));
+    return Object.fromEntries(b.map((e, a) => ["".concat(t, "-").concat(a), e]));
 }
 function el(e, t, a) {
     a((a) =>

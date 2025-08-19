@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(970731),
     m = n(485386),
     b = n(594174),
-    _ = n(5192),
-    O = n(944888),
+    O = n(5192),
+    _ = n(944888),
     y = n(234368),
     v = n(981631),
     j = n(921944),
@@ -23,8 +23,8 @@ var r = n(951288),
     E = n(388032),
     x = n(49777),
     S = n(842926),
-    I = n(445648),
-    P = n(128647);
+    P = n(445648),
+    I = n(128647);
 function N(e) {
     let { guild: t, markAsDismissed: n } = e,
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
@@ -40,7 +40,7 @@ function N(e) {
         }, [t, w]),
         T = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         A = (function (e) {
-            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(O.YB));
+            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(_.YB));
             return (null == t ? void 0 : t.colorStrings) != null
                 ? t.colorStrings
                 : {
@@ -71,16 +71,16 @@ function N(e) {
                               }),
                               usernameStyle: R,
                               usernameClassName: o()(D, S.animateGradient),
-                              username: _.ZP.getName(t.id, null, T),
+                              username: O.ZP.getName(t.id, null, T),
                               asset: (0, r.jsx)("img", {
                                   alt: "",
-                                  src: I.Z,
+                                  src: P.Z,
                               }),
                           }),
                       })
                     : (0, r.jsx)("img", {
                           alt: "",
-                          src: P.Z,
+                          src: I.Z,
                           className: x.image,
                       }),
                 (0, r.jsx)(c.olH, {

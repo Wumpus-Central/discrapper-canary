@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(139668),
     g = r(364111),
     f = r(303952),
-    b = r(752053),
-    m = r(258939),
+    m = r(752053),
+    b = r(258939),
     h = r(81136),
     _ = r(302933),
     v = r(953655),
@@ -29,7 +29,7 @@ var n = r(951288),
 let k = (e) => {
         var t;
         let { handleTransition: r, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
-            { noCache: p, includeUnpublished: m } = (0, h.Z)(),
+            { noCache: p, includeUnpublished: b } = (0, h.Z)(),
             [S, P] = l.useState(!1),
             k = (0, d.sp)(),
             I = null != (t = null == k ? void 0 : k.sessionId) ? t : "";
@@ -39,20 +39,20 @@ let k = (e) => {
                 checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: u,
-                unpublishedCategoriesShown: m,
+                unpublishedCategoriesShown: b,
                 cacheDisabled: p,
             });
         }, [c]);
         let {
                 isFetchingShopHome: N,
-                fetchShopHomeError: w,
-                shopBlocks: A,
+                fetchShopHomeError: A,
+                shopBlocks: w,
                 refreshShopHome: B,
             } = (0, g.E)(
                 c,
                 {
                     noCache: p,
-                    includeUnpublished: m,
+                    includeUnpublished: b,
                     includeBundles: !0,
                     logPerf: !0,
                 },
@@ -66,25 +66,25 @@ let k = (e) => {
                 B();
             }, [B]);
         return (l.useEffect(() => {
-            null != w ||
+            null != A ||
                 N ||
-                0 === A.length ||
+                0 === w.length ||
                 (0, f.n)({
                     sessionId: I,
                     checkpoint: f.a.SHOP_RENDERED,
                     tab: c,
                     isFullScreen: u,
-                    unpublishedCategoriesShown: m,
+                    unpublishedCategoriesShown: b,
                     cacheDisabled: p,
                 });
-        }, [w, N, A.length, m, p, I, c, u]),
-        null != w)
-            ? (0, n.jsx)(b.Z, {
+        }, [A, N, w.length, b, p, I, c, u]),
+        null != A)
+            ? (0, n.jsx)(m.Z, {
                   onRetry: R,
-                  errorOrigin: b.i.SHOP_PAGE,
-                  errorMessage: w.message,
+                  errorOrigin: m.i.SHOP_PAGE,
+                  errorMessage: A.message,
               })
-            : N || 0 === A.length
+            : N || 0 === w.length
               ? (0, n.jsxs)("div", {
                     className: i()(L.loadingContainer, L.feedContent),
                     children: [
@@ -108,7 +108,7 @@ let k = (e) => {
                     ],
                 })
               : (0, n.jsx)(n.Fragment, {
-                    children: A.map((e, t) =>
+                    children: w.map((e, t) =>
                         ((e, t, l) => {
                             if (null == e) return null;
                             let d = null,
@@ -213,7 +213,7 @@ let k = (e) => {
                                 },
                                 l,
                             );
-                        })(e, t > 0 ? A[t - 1] : null, t),
+                        })(e, t > 0 ? w[t - 1] : null, t),
                     ),
                 });
     },
@@ -222,7 +222,7 @@ let k = (e) => {
             o = l.useRef(null),
             { handleScroll: g } = (0, c.z)(o, a),
             f = (0, p.R)("CollectiblesFeedShop"),
-            b = (0, m.R)(),
+            m = (0, b.R)(),
             h = (0, d.sp)(),
             [_, v] = l.useState(j.IV),
             [O, C] = l.useState(!1);
@@ -256,7 +256,7 @@ let k = (e) => {
                                 (0, n.jsx)(k, {
                                     handleTransition: r,
                                     numVisibleItems: _,
-                                    isFetchingCategories: b,
+                                    isFetchingCategories: m,
                                     tab: a,
                                     isFullScreen: t,
                                 }),

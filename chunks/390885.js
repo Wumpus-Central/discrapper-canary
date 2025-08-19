@@ -3,8 +3,8 @@ var r = n(879690),
     i = n(8058),
     l = n(731965),
     a = n(433517),
-    s = n(710845),
-    o = n(626135),
+    o = n(710845),
+    s = n(626135),
     c = n(630724),
     u = n(981631);
 function d(e) {
@@ -96,7 +96,7 @@ function x(e) {
         r = p(t, ["version"]);
     return 1 !== n ? null : r;
 }
-new s.Z("UserFlowAnalytics");
+new o.Z("UserFlowAnalytics");
 let b = (0, r.U)()(
     (0, i.XR)((e, t) => ({
         flows: {},
@@ -141,15 +141,15 @@ function E(e, t) {
         r = null != (i = b.getState().activeFlow()) ? i : c.MK.UNKNOWN;
     }
     let a = b.getState().flows,
-        { [r]: s } = a,
-        o = p(a, [r].map(m)),
-        u = null != s ? s : x(r);
+        { [r]: o } = a,
+        s = p(a, [r].map(m)),
+        u = null != o ? o : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
         (0, l.j)(() => {
             b.setState({
-                flows: h(d({}, o), {
+                flows: h(d({}, s), {
                     [r]: h(d({}, u), {
                         lastStep: u.currentStep,
                         lastTimestamp: u.currentTimestamp,
@@ -178,7 +178,7 @@ b.subscribe(
                     ? (a.K.remove(t), a.K.remove(g))
                     : (a.K.set("".concat(_, "-").concat(e.type), h(d({}, e), { version: 1 })), a.K.set(g, e.type));
             })(e),
-            o.default.track(
+            s.default.track(
                 u.rMx.NUO_TRANSITION,
                 {
                     flow_type: e.type,

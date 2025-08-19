@@ -13,8 +13,8 @@ var r = a(442837),
     x = a(695346),
     h = a(594174),
     p = a(176038),
-    v = a(469115),
-    b = a(685960);
+    b = a(469115),
+    v = a(685960);
 function f() {
     var e, t, a, f, g, j, _, y;
     (0, u.mw)();
@@ -27,17 +27,17 @@ function f() {
         P = (0, d.jT)(E),
         I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
         w = null == C || null == (a = C.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
-        R = null != I && null != (g = S.find((e) => e.skuId === I)) ? g : null,
-        k = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
-        Z = (0, r.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
-        A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
+        k = null != I && null != (g = S.find((e) => e.skuId === I)) ? g : null,
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        Z = (0, r.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
+        A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, r.e7)([s.Z], () => s.Z.fontSize),
         L = (0, r.e7)([s.Z], () => s.Z.messageGroupSpacing),
         M = x.YC.useSetting();
     return (
         (0, p.ub)(),
         (0, n.jsxs)("div", {
-            className: b.container,
+            className: v.container,
             children: [
                 (0, n.jsxs)("div", {
                     children: [
@@ -85,7 +85,7 @@ function f() {
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != O ? (null == (f = v.qt[O]) ? void 0 : f.getName()) : "None",
+                                null != O ? (null == (f = b.qt[O]) ? void 0 : f.getName()) : "None",
                             ],
                         }),
                         (0, n.jsxs)(i.Text, {

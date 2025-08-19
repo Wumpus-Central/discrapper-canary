@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(665149),
     h = a(611565),
     p = a(238246),
-    v = a(788983),
-    b = a(906467),
+    b = a(788983),
+    v = a(906467),
     f = a(259580),
     g = a(31336),
     j = a(19759),
@@ -29,8 +29,8 @@ var y = a(392750),
     P = a(903502),
     I = a(604776),
     w = a(912072),
-    R = a(272193),
-    k = a(685560),
+    k = a(272193),
+    R = a(685560),
     Z = a(735959),
     A = a(572444),
     D = a(636500),
@@ -105,7 +105,7 @@ function ed(e) {
                 },
             ];
             return (
-                b.Z.isDeveloper &&
+                v.Z.isDeveloper &&
                     (e.push({
                         id: "shop",
                         name: "Shop",
@@ -226,7 +226,7 @@ function ed(e) {
                     group: er.v0.USERS,
                     render: () => (0, n.jsx)(ea.Z, {}),
                 }),
-                b.Z.isDeveloper &&
+                v.Z.isDeveloper &&
                     (e.push({
                         id: "content_inventory",
                         name: "Content Inventory",
@@ -286,7 +286,7 @@ function ed(e) {
                     id: "gifting_intent",
                     name: "Gifting Intent",
                     group: er.v0.PREMIUM,
-                    render: () => (0, n.jsx)(R.Z, {}),
+                    render: () => (0, n.jsx)(k.Z, {}),
                 }),
                 e.push({
                     id: "voice_filters",
@@ -304,7 +304,7 @@ function ed(e) {
                     id: "skill_trees",
                     name: "Skill Trees",
                     group: er.v0.GUILDS,
-                    render: () => (0, n.jsx)(k.Z, {}),
+                    render: () => (0, n.jsx)(R.Z, {}),
                 }),
                 e.push({
                     id: "language",
@@ -347,7 +347,7 @@ function ed(e) {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
                                       onClick: () => {
-                                          (0, v.bA)(
+                                          (0, b.bA)(
                                               el.KJ3.DEVTOOLS_POPOUT,
                                               () =>
                                                   (0, n.jsx)(p.Z, {

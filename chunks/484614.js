@@ -5,8 +5,8 @@ var i,
     l = n(846519),
     o = n(755721),
     a = n(481060),
-    u = n(572004),
-    c = n(388032);
+    c = n(572004),
+    u = n(388032);
 function d(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ class h extends (i = s.PureComponent) {
         var e, t;
         let { text: n } = this.props,
             { mode: i } = this.state,
-            s = i === a.kO8.Modes.SUCCESS ? c.intl.string(c.t["t5VZ8/"]) : n;
+            s = i === a.kO8.Modes.SUCCESS ? u.intl.string(u.t["t5VZ8/"]) : n;
         return (0, r.jsx)(
             a.kO8,
             ((e = (function (e) {
@@ -52,7 +52,7 @@ class h extends (i = s.PureComponent) {
                     onCopy: this.handleCopy,
                     mode: i,
                     text: s,
-                    supportsCopy: u.wS,
+                    supportsCopy: c.wS,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -71,7 +71,7 @@ class h extends (i = s.PureComponent) {
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1000 } = this.props;
-        (0, u.JG)(
+        (0, c.JG)(
             e,
             () => this.setState({ mode: a.kO8.Modes.SUCCESS }),
             () => this.setState({ mode: a.kO8.Modes.ERROR }),

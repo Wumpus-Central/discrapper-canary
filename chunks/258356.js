@@ -8,8 +8,8 @@ n(647438);
 var i = n(755721),
     l = n(481060),
     a = n(565138),
-    s = n(372769),
-    o = n(742593),
+    o = n(372769),
+    s = n(742593),
     c = n(390072),
     u = n(411198),
     d = n(230224),
@@ -17,11 +17,11 @@ var i = n(755721),
     p = n(694527);
 function m(e) {
     var t;
-    let { guildScheduledEvent: n, channel: l, onAcceptInvite: a, isSubmitting: s } = e;
+    let { guildScheduledEvent: n, channel: l, onAcceptInvite: a, isSubmitting: o } = e;
     return (0, r.jsxs)("div", {
         className: p.guildEventCard,
         children: [
-            (0, r.jsx)(o.ZP, {
+            (0, r.jsx)(s.ZP, {
                 name: n.name,
                 description: null != (t = n.description) ? t : void 0,
                 headerVariant: "heading-md/medium",
@@ -42,7 +42,7 @@ function m(e) {
                 className: p.acceptButton,
                 color: i.zx.Colors.GREEN,
                 onClick: a,
-                submitting: s,
+                submitting: o,
                 children: h.intl.string(h.t.riu2R0),
             }),
         ],
@@ -53,7 +53,7 @@ function f(e) {
     let { invite: n } = e,
         i = null != n.guild ? (0, u.Qs)(n.guild) : null;
     if (null == i) return null;
-    let o = null != (t = i.description) ? t : "";
+    let s = null != (t = i.description) ? t : "";
     return (0, r.jsxs)("div", {
         className: p.guildInfoCard,
         children: [
@@ -80,7 +80,7 @@ function f(e) {
                                 tag: "span",
                                 children: [
                                     i.name,
-                                    (0, r.jsx)(s.Z, {
+                                    (0, r.jsx)(o.Z, {
                                         guild: i,
                                         className: p.guildBadge,
                                         tooltipPosition: "left",
@@ -96,13 +96,13 @@ function f(e) {
                     }),
                 ],
             }),
-            o.length > 0 &&
+            s.length > 0 &&
                 (0, r.jsx)("details", {
                     className: p.guildDescriptionContainer,
                     children: (0, r.jsx)(l.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: o,
+                        children: s,
                     }),
                 }),
         ],

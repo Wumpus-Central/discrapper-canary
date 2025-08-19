@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(481060),
     h = a(570140),
     p = a(665149),
-    v = a(55935),
-    b = a(120816),
+    b = a(55935),
+    v = a(120816),
     f = a(31336),
     g = a(257785),
     j = a(484036),
@@ -85,8 +85,8 @@ let O = [
                                     name: "Timestamp (local)",
                                     children: (0, n.jsx)("time", {
                                         dateTime: s.toISOString(),
-                                        title: (0, v.vc)(u, "LLLL"),
-                                        children: (0, v.Y4)(u),
+                                        title: (0, b.vc)(u, "LLLL"),
+                                        children: (0, b.Y4)(u),
                                     }),
                                 }),
                                 "guild" === a.type &&
@@ -132,7 +132,7 @@ let O = [
 function S() {
     let [e, t] = r.useState(""),
         a = r.useRef(null),
-        l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
+        l = (0, u.Wu)([v.Z], () => v.Z.loggedTriggers),
         s = r.useMemo(
             () =>
                 l
@@ -142,8 +142,8 @@ function S() {
         ),
         [c, d] = r.useState(void 0),
         p = s.find((e) => e.key === c),
-        { TabBar: v, renderSelectedTab: g } = (0, y.ZP)({ tabs: E }, []),
-        S = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
+        { TabBar: b, renderSelectedTab: g } = (0, y.ZP)({ tabs: E }, []),
+        S = (0, u.e7)([v.Z], () => v.Z.trackTriggers),
         P = r.useCallback((e) => {
             h.Z.dispatch({
                 type: "SET_TRACK_TRIGGERS",
@@ -201,7 +201,7 @@ function S() {
                     className: N.subPanel,
                     minHeight: 100,
                     initialHeight: null != a.current ? a.current.clientHeight / 2 : 300,
-                    children: [(0, n.jsx)(v, {}), g({ loggedTrigger: p })],
+                    children: [(0, n.jsx)(b, {}), g({ loggedTrigger: p })],
                 }),
         ],
     });

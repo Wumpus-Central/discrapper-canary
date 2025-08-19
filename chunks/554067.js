@@ -12,17 +12,17 @@ var n = r(951288),
 function g(e) {
     let { handleTransition: t, selectedTab: r } = e,
         { searchQuery: g, onSetSearchQuery: f } = (0, s.S)(),
-        [b, m] = l.useState(""),
+        [m, b] = l.useState(""),
         h = (0, o.sp)();
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
-                f(b);
+                f(m);
             }, 250);
             return () => clearTimeout(e);
-        }, [b, f]),
+        }, [m, f]),
         l.useEffect(() => {
-            m(g);
+            b(g);
         }, [g]),
         (0, n.jsx)(a.P3F, {
             ignoreKeyPress: !0,
@@ -42,12 +42,12 @@ function g(e) {
                 size: "sm",
                 className: p.searchBar,
                 onKeyDown: (e) => {
-                    "Enter" === e.key && f(b);
+                    "Enter" === e.key && f(m);
                 },
-                query: b,
-                onChange: m,
+                query: m,
+                onChange: b,
                 onClear: () => {
-                    m(""),
+                    b(""),
                         i.default.track(u.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
                             page_section: null == h ? void 0 : h.pageSection,

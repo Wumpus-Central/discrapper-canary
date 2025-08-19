@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(525654),
     a = n.n(l),
-    s = n(442837),
-    o = n(893776),
+    o = n(442837),
+    s = n(893776),
     c = n(493773),
     u = n(129293),
     d = n(388905),
@@ -15,7 +15,7 @@ var r = n(951288),
     g = n(197571);
 function _(e) {
     let { location: t, transitionTo: l = h.uL } = e,
-        [s, _] = i.useState("submitting");
+        [o, _] = i.useState("submitting");
     function x() {
         return "Android" === a().os.family || "iOS" === a().os.family
             ? null
@@ -30,13 +30,13 @@ function _(e) {
         if (null == e) return void _("failed");
         (async () => {
             try {
-                await o.Z.authorizeIPAddress(e), _("succeeded");
+                await s.Z.authorizeIPAddress(e), _("succeeded");
             } catch (e) {
                 _("failed");
             }
         })();
     }),
-    "failed" === s)
+    "failed" === o)
         ? (0, r.jsxs)(d.ZP, {
               children: [
                   (0, r.jsx)("img", {
@@ -55,7 +55,7 @@ function _(e) {
                   x(),
               ],
           })
-        : "succeeded" === s
+        : "succeeded" === o
           ? (0, r.jsxs)(d.ZP, {
                 children: [
                     (0, r.jsx)("img", {
@@ -78,4 +78,4 @@ function _(e) {
                 children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: f.intl.string(f.t["9exy+f"]) })],
             });
 }
-s.ZP.initialize();
+o.ZP.initialize();

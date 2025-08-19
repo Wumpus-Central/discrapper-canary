@@ -1,7 +1,7 @@
 n.d(t, {
     EM: () => m,
     WW: () => b,
-    ZP: () => _,
+    ZP: () => O,
 });
 var r = n(951288),
     i = n(647438),
@@ -49,14 +49,14 @@ function b(e, t) {
         }
     }
 }
-let _ = i.memo(function (e) {
+let O = i.memo(function (e) {
     let {
             sectionIndex: t,
             guild: n,
             guildChannels: m,
             guildChannelsVersion: b,
-            selectedChannelId: _,
-            disableManageChannels: O,
+            selectedChannelId: O,
+            disableManageChannels: _,
         } = e,
         { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
         v = i.useCallback(() => {
@@ -64,8 +64,8 @@ let _ = i.memo(function (e) {
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
-        }, [n.id, _, m, b]),
+            null != O && r.includes(O) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
+        }, [n.id, O, m, b]),
         { density: j } = (0, l.TCT)(),
         C = "compact" === j ? 8 : p.$k;
     switch (t) {
@@ -102,7 +102,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O,
+                disableManageChannels: _,
                 children: (0, r.jsx)(c.Z, {
                     inlineSpecs: p.MF,
                     arrowAlignment: o.cy.TOP,
@@ -117,7 +117,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O,
+                disableManageChannels: _,
             });
         }
     }

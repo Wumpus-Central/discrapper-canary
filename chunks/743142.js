@@ -1,16 +1,16 @@
 n.d(t, {
-    F: () => s,
-    L: () => o,
+    F: () => o,
+    L: () => s,
 });
 var r,
     i = n(754688),
     l = n(981631),
     a = n(176505),
-    s =
+    o =
         (((r = {}).ROLE_SUBSCRIPTION = "role_subscription"),
         (r.ROLE_SUBSCRIPTION_SETTING = "role_subscription_setting"),
         r);
-function o(e) {
+function s(e) {
     let t = decodeURIComponent(e),
         n = (0, i.Qj)(t);
     return null != n && n.channelId === a.oC.ROLE_SUBSCRIPTIONS

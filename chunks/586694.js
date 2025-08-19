@@ -68,7 +68,7 @@ function g(e) {
             onMouseLeave: g,
             className: m,
             ariaHidden: b,
-            avatarDecoration: _,
+            avatarDecoration: O,
             specs: y,
             cornerIconUrl: v,
             cornerIconOffsetX: j,
@@ -80,13 +80,13 @@ function g(e) {
             height: (0, s.pxk)(n),
         },
         S = (0, i.useId)(),
-        I = y.size * u.hs,
-        P =
-            null != _ &&
+        P = y.size * u.hs,
+        I =
+            null != O &&
             (0, r.jsxs)("svg", {
-                width: I,
-                height: I,
-                viewBox: "0 0 ".concat(I, " ").concat(I),
+                width: P,
+                height: P,
+                viewBox: "0 0 ".concat(P, " ").concat(P),
                 className: p.avatarDecoration,
                 "aria-hidden": !0,
                 children: [
@@ -96,8 +96,8 @@ function g(e) {
                             (0, r.jsx)("rect", {
                                 x: 0,
                                 y: 0,
-                                width: I,
-                                height: I,
+                                width: P,
+                                height: P,
                                 fill: "white",
                             }),
                             null != v &&
@@ -110,7 +110,7 @@ function g(e) {
                                             x: a,
                                             y: s,
                                         } = (function (e, t, n, r) {
-                                            let { height: i, width: l, x: o, y: a } = O(e, n, r),
+                                            let { height: i, width: l, x: o, y: a } = _(e, n, r),
                                                 s = (t - e.size) / 2;
                                             return {
                                                 width: l,
@@ -128,20 +128,20 @@ function g(e) {
                                         rx: e.stroke,
                                         fill: "black",
                                     });
-                                })(y, I, j, C),
+                                })(y, P, j, C),
                         ],
                     }),
                     (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: I,
-                        height: I,
+                        width: P,
+                        height: P,
                         mask: "url(#".concat(S, ")"),
                         children: (0, r.jsx)("div", {
                             className: p.avatarStack,
                             children: (0, r.jsx)("img", {
                                 className: p.avatar,
-                                src: _,
+                                src: O,
                                 alt: " ",
                                 "aria-hidden": !0,
                             }),
@@ -161,7 +161,7 @@ function g(e) {
               onMouseLeave: null != g ? g : void 0,
               "aria-label": null != E ? E : void 0,
               "aria-hidden": b,
-              children: [t, P],
+              children: [t, I],
           })
         : (0, r.jsxs)("div", {
               className: o()(p.wrapper, m),
@@ -172,7 +172,7 @@ function g(e) {
               role: "img",
               "aria-label": null != E ? E : void 0,
               "aria-hidden": b,
-              children: [t, P],
+              children: [t, I],
           });
 }
 function m(e) {
@@ -213,7 +213,7 @@ function m(e) {
                             }),
                             null != m &&
                                 (function (e, t, n) {
-                                    let { height: i, width: l, x: o, y: a } = O(e, t, n);
+                                    let { height: i, width: l, x: o, y: a } = _(e, t, n);
                                     return (0, r.jsx)("rect", {
                                         mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                                         height: i,
@@ -240,7 +240,7 @@ function m(e) {
                     null != m &&
                         (0, r.jsx)(
                             "foreignObject",
-                            h(f({}, _(v, b, y)), {
+                            h(f({}, O(v, b, y)), {
                                 mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                                 children: (0, r.jsx)("img", {
                                     src: m,
@@ -270,8 +270,8 @@ function b(e) {
         v = (0, d.UC)(n),
         j = v.size + u,
         C = v.size + m,
-        E = O(v, u, m),
-        x = _(v, u, m);
+        E = _(v, u, m),
+        x = O(v, u, m);
     return (0, r.jsx)(
         g,
         h(f({}, e), {
@@ -351,7 +351,7 @@ function b(e) {
         }),
     );
 }
-function _(e, t, n) {
+function O(e, t, n) {
     return {
         width: 16,
         height: 16,
@@ -359,8 +359,8 @@ function _(e, t, n) {
         y: e.size - 16 - e.offset + n,
     };
 }
-function O(e, t, n) {
-    let r = _(e, t, n),
+function _(e, t, n) {
+    let r = O(e, t, n),
         i = r.x - 2,
         l = r.y - 2;
     return {

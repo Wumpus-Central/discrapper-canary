@@ -26,19 +26,19 @@ let p = (e) => {
             nitroIconSize: p = "md",
             className: g,
             discountOfferAmount: f,
-            discount: b = s.f_,
-            variant: m = "heading-md/semibold",
+            discount: m = s.f_,
+            variant: b = "heading-md/semibold",
         } = e,
         h = null != f,
         _ = (0, o.qr)(t, r),
         v =
-            b !== s.f_ && b.discountPercentage >= 5 && !h
+            m !== s.f_ && m.discountPercentage >= 5 && !h
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(i.nn4, {
                               children: c.intl.format(c.t.niC6DA, {
                                   price: _,
-                                  discountPercentage: b.discountPercentage,
+                                  discountPercentage: m.discountPercentage,
                               }),
                           }),
                           (0, n.jsx)("span", {
@@ -46,11 +46,11 @@ let p = (e) => {
                               children: _,
                           }),
                           (0, n.jsxs)(i.Text, {
-                              variant: m,
+                              variant: b,
                               color: "text-feedback-positive",
                               className: u.discount,
                               "aria-hidden": !0,
-                              children: ["(-", b.discountPercentage, "%)"],
+                              children: ["(-", m.discountPercentage, "%)"],
                           }),
                       ],
                   })
@@ -65,7 +65,7 @@ let p = (e) => {
                       ],
                   });
     return (0, n.jsxs)(i.Text, {
-        variant: m,
+        variant: b,
         className: a()({ [u.discountBackgroundColor]: h }, u.container, g),
         children: [
             "tooltip" === l

@@ -14,8 +14,8 @@ var r,
     g = n(815372),
     m = n(14429),
     b = n(576855),
-    _ = n(313201),
-    O = n(991346),
+    O = n(313201),
+    _ = n(991346),
     y = n(592125),
     v = n(888369),
     j = n(430824),
@@ -23,8 +23,8 @@ var r,
     E = n(944486),
     x = n(938475),
     S = n(483360),
-    I = n(585483),
-    P = n(63063),
+    P = n(585483),
+    I = n(63063),
     N = n(51596),
     w = n(823385),
     Z = n(415795),
@@ -91,7 +91,7 @@ let G = () =>
             (0, i.jsx)("div", {
                 className: L.emptyStateCTA,
                 children: (0, i.jsx)(u.eee, {
-                    href: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: D.intl.string(D.t["4iPfEB"]),
                 }),
             }),
@@ -121,13 +121,13 @@ let V = s.ZP.connectStores([C.ZP, y.Z], (e) => {
             category: y.Z.getChannel(t.parent_id),
         };
     })(B),
-    H = s.ZP.connectStores([x.ZP], (e) => {
+    F = s.ZP.connectStores([x.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(B),
-    F = s.ZP.connectStores([v.default], (e) => {
+    H = s.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(Z.ic),
@@ -240,7 +240,7 @@ class Y extends l.PureComponent {
         });
     }
     focusNode(e) {
-        I.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        P.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
@@ -254,7 +254,7 @@ class Y extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => K(t, h.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => K(t, h.xQ.VOICE_CHANNEL, D.intl.string(D.t["jz+hJi"])),
                 guildSymbolHook: (e, t) => K(t, h.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
-                helpdeskArticle: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -280,7 +280,7 @@ class Y extends l.PureComponent {
         super(...e),
             M(this, "scrollerRef", l.createRef()),
             M(this, "inputRef", l.createRef()),
-            M(this, "_listId", (0, _.hQ)()),
+            M(this, "_listId", (0, O.hQ)()),
             M(this, "state", {
                 query: this.props.query,
                 mouseFocusDisabled: !0,
@@ -512,7 +512,7 @@ class Y extends l.PureComponent {
                         );
                     case h.h8.VOICE_CHANNEL:
                         return (0, i.jsx)(
-                            H,
+                            F,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -527,7 +527,7 @@ class Y extends l.PureComponent {
                         );
                     case h.h8.GUILD:
                         return (0, i.jsx)(
-                            F,
+                            H,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -628,7 +628,7 @@ class Y extends l.PureComponent {
 }
 function q(e) {
     let t = (0, s.cj)([w.Z], () => w.Z.getProps()),
-        n = (0, O.Pt)(),
+        n = (0, _.Pt)(),
         r = A.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(
             () =>

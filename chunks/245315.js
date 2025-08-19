@@ -7,17 +7,17 @@ var r = n(367907),
     i = n(368859),
     l = n(626135),
     a = n(135899),
-    s = n(981631),
-    o = n(943702);
+    o = n(981631),
+    s = n(943702);
 function c(e) {
     return ((0, i.Z)(e) && e.messageReference.guild_id === a.M_) || (null != e.author && e.author.id === a.c9);
 }
 function u() {
-    return o;
+    return s;
 }
 let d = (e) => {
     l.default.track(
-        s.rMx.USER_FLOW_TRANSITION,
+        o.rMx.USER_FLOW_TRANSITION,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

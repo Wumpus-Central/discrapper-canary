@@ -6,8 +6,8 @@ var r = n(913527),
     i = n.n(r),
     l = n(990547),
     a = n(570140),
-    s = n(479531),
-    o = n(771308),
+    o = n(479531),
+    s = n(771308),
     c = n(353250),
     u = n(314897),
     d = n(626135),
@@ -155,9 +155,9 @@ function _(e) {
         },
         (e) => {
             if (e instanceof c.CaptchaCancelError) throw e;
-            let t = new s.Z(e);
+            let t = new o.Z(e);
             throw (
-                (null != t.getFieldErrors("date_of_birth") && o.wE(f.L0.REGISTER),
+                (null != t.getFieldErrors("date_of_birth") && s.wE(f.L0.REGISTER),
                 d.default.track(m.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),

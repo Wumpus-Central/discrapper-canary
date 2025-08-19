@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(726521),
     m = n(294218),
     b = n(501517),
-    _ = n(699516),
-    O = n(594174),
+    O = n(699516),
+    _ = n(594174),
     y = n(630388),
     v = n(970257),
     j = n(981631),
@@ -35,7 +35,7 @@ function S(e, t, n) {
         e
     );
 }
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -112,7 +112,7 @@ class N extends i.PureComponent {
                     children: C.intl.string(C.t.x0jzo6),
                 }));
         let b = g ? C.intl.string(C.t["2kHABQ"]) : C.intl.string(C.t.AMvpS0),
-            _ = (0, r.jsxs)(r.Fragment, {
+            O = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
                         className: x.message,
@@ -132,7 +132,7 @@ class N extends i.PureComponent {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
-                    P(I({ parentComponent: "DeleteModal" }, p), {
+                    I(P({ parentComponent: "DeleteModal" }, p), {
                         children: [
                             (0, r.jsx)(c.xBx, {
                                 separator: !1,
@@ -158,7 +158,7 @@ class N extends i.PureComponent {
                                         className: x.spacing,
                                         children: b,
                                     }),
-                                    _,
+                                    O,
                                 ],
                             }),
                             (0, r.jsxs)(c.mzw, {
@@ -202,7 +202,7 @@ class N extends i.PureComponent {
                 ],
                 onClose: p.onClose,
                 transitionState: p.transitionState,
-                children: _,
+                children: O,
             }),
         });
     }
@@ -248,7 +248,7 @@ let w = {
     confirmPin: function (e, t) {
         (0, c.h7j)((n) => {
             let i,
-                l = (0, p.F6)(e, O.default, _.Z);
+                l = (0, p.F6)(e, _.default, O.Z);
             return (
                 (i = e.isPrivate()
                     ? C.intl.string(C.t.hMRngI)
@@ -257,8 +257,8 @@ let w = {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
                         c.ConfirmModal,
-                        P(
-                            I(
+                        I(
+                            P(
                                 {
                                     header: C.intl.string(C.t.bKMaZW),
                                     confirmText: C.intl.string(C.t.rOQ5BQ),
@@ -298,8 +298,8 @@ let w = {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     c.ConfirmModal,
-                    P(
-                        I(
+                    I(
+                        P(
                             {
                                 header: C.intl.string(C.t.CFF2vL),
                                 confirmText: C.intl.string(C.t.lAU5jI),
@@ -337,7 +337,7 @@ let w = {
         (0, c.h7j)((l) =>
             (0, r.jsx)(
                 N,
-                I(
+                P(
                     {
                         channel: e,
                         message: t,
@@ -353,8 +353,8 @@ let w = {
         (0, c.h7j)((i) =>
             (0, r.jsx)(
                 c.ConfirmModal,
-                P(
-                    I(
+                I(
+                    P(
                         {
                             header: C.intl.string(C.t.aIz1oa),
                             confirmText: C.intl.string(C.t["cY+Ooa"]),

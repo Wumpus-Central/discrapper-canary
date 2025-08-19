@@ -18,8 +18,8 @@ var r = n(951288),
     g = n(210887),
     m = n(695346),
     b = n(496675),
-    _ = n(768581),
-    O = n(598056),
+    O = n(768581),
+    _ = n(598056),
     y = n(358555),
     v = n(981631),
     j = n(647086),
@@ -68,7 +68,7 @@ function S(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     var t;
     let { guild: n, controller: i, guildBanner: l, animate: c } = e,
         { value: u } = i.springs;
@@ -85,7 +85,7 @@ function I(e) {
                 className: o()(E.bannerImg, { [E.bannerImgFullWidth]: s.tq }),
                 src:
                     null !=
-                    (t = _.ZP.getGuildBannerURL(
+                    (t = O.ZP.getGuildBannerURL(
                         {
                             id: n.id,
                             banner: l,
@@ -100,7 +100,7 @@ function I(e) {
         }),
     });
 }
-function P(e) {
+function I(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: s } = n.springs,
         c = t.features.has(v.oNc.DISCOVERABLE),
@@ -234,9 +234,9 @@ function R(e) {
                 });
             };
         }, [l, p]),
-        _ = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, l)),
-        O = i.useCallback(() => {
-            _
+        O = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, l)),
+        _ = i.useCallback(() => {
+            O
                 ? (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
                       return (t) =>
@@ -252,7 +252,7 @@ function R(e) {
                       let { default: e } = await n.e("88358").then(n.bind(n, 598402));
                       return (t) => (0, r.jsx)(e, x({}, t));
                   });
-        }, [_, l]);
+        }, [O, l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.KeG, {
@@ -315,7 +315,7 @@ function R(e) {
                             S(x({ className: E.inviteButton }, e), {
                                 onClick: () => {
                                     var t;
-                                    null == (t = e.onClick) || t.call(e), O();
+                                    null == (t = e.onClick) || t.call(e), _();
                                 },
                                 children: (0, r.jsx)(u.ejJ, {
                                     size: "refresh_sm",
@@ -350,21 +350,21 @@ let D = i.memo(function (e) {
         } = e,
         M = j.features.has(v.oNc.ANIMATED_BANNER),
         k = (0, d.Z)(j),
-        U = !k && (0, O.Z)(j),
+        U = !k && (0, _.Z)(j),
         G = !k && A,
-        B = (0, _.xR)(C) && M && !g,
-        [V, H] = i.useState(!1),
-        F = i.useRef(!1),
+        B = (0, O.xR)(C) && M && !g,
+        [V, F] = i.useState(!1),
+        H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
         K = i.useRef(void 0),
         Y = m.QK.getSetting();
     i.useEffect(() => {
-        if (B && n && !F.current && Y)
+        if (B && n && !H.current && Y)
             return (
-                H(!0),
+                F(!0),
                 (K.current = setTimeout(() => {
-                    H(!1);
+                    F(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -372,7 +372,7 @@ let D = i.memo(function (e) {
             );
     }, [B, n, Y]),
         i.useEffect(() => {
-            F.current = n;
+            H.current = n;
         }, [n]);
     let q = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -421,7 +421,7 @@ let D = i.memo(function (e) {
                                             : (0, r.jsx)(T, S(x({}, Q), { children: w })),
                                     }),
                                     U &&
-                                        (0, r.jsx)(P, {
+                                        (0, r.jsx)(I, {
                                             guild: j,
                                             controller: l,
                                             hasBanner: null != C,
@@ -430,7 +430,7 @@ let D = i.memo(function (e) {
                                 ],
                             }),
                             null != C
-                                ? (0, r.jsx)(I, {
+                                ? (0, r.jsx)(P, {
                                       guild: j,
                                       controller: l,
                                       guildBanner: C,
@@ -444,9 +444,9 @@ let D = i.memo(function (e) {
                         ? (0, r.jsx)("div", {
                               className: E.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  H(!0), clearTimeout(K.current);
+                                  F(!0), clearTimeout(K.current);
                               },
-                              onMouseLeave: () => H(!1),
+                              onMouseLeave: () => F(!1),
                               style: { height: N },
                           })
                         : null,

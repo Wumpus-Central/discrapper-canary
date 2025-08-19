@@ -12,10 +12,10 @@ var n = a(951288),
     x = a(621060),
     h = a(451429),
     p = a(104444);
-function v(e, t) {
+function b(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function b(e) {
+function v(e) {
     let { store: t, dataGetter: a } = e,
         [l, i] = r.useState(a(t));
     return (
@@ -61,7 +61,7 @@ let f = [
                               " method.",
                           ],
                       })
-                    : (0, n.jsx)(b, {
+                    : (0, n.jsx)(v, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,7 +73,7 @@ let f = [
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, n.jsx)(b, {
+                return (0, n.jsx)(v, {
                     store: t,
                     dataGetter: (e) => e,
                 });
@@ -115,7 +115,7 @@ function _() {
                             key: e._dispatchToken,
                             store: e,
                         }))
-                        .sort(v),
+                        .sort(b),
                 [l],
             )
             .filter((e) =>

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(803948),
     a = n(442837),
-    s = n(481060),
-    o = n(447543),
+    o = n(481060),
+    s = n(447543),
     c = n(587444),
     u = n(393238),
     d = n(388905),
@@ -67,7 +67,7 @@ function N(e, t) {
 function S() {
     return (0, r.jsx)("div", {
         className: y.centerFlex,
-        children: (0, r.jsx)(s.$jN, {}),
+        children: (0, r.jsx)(o.$jN, {}),
     });
 }
 let C = (e) => {
@@ -107,7 +107,7 @@ function T(e) {
           });
 }
 function A(e) {
-    var { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: o } = e;
+    var { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s } = e;
     let { invite: c } = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -131,7 +131,7 @@ function A(e) {
         })(e, ["children", "cardChildren", "startAnimHeightPx", "innerStyle"]),
         [d, h] = i.useState(C(c)),
         { ref: p, height: m } = (0, u.ZP)(),
-        f = (0, s.q_F)({
+        f = (0, o.q_F)({
             height: null != m && 0 !== m ? "".concat(m, "px") : "".concat(a, "px"),
             config: l.config.stiff,
         });
@@ -149,7 +149,7 @@ function A(e) {
                     style: f,
                     children: (0, r.jsx)("section", {
                         ref: p,
-                        className: null == o ? void 0 : o(d),
+                        className: null == s ? void 0 : s(d),
                         children: t(d),
                     }),
                 }),
@@ -261,13 +261,13 @@ function w(e) {
                             inviter_id: null == n || null == (l = n.inviter) ? void 0 : l.id,
                         });
                     let a = null != n && n.state !== j.r2o.EXPIRED && n.state !== j.r2o.BANNED ? t : void 0,
-                        s = p.default.getFingerprint(),
-                        c = null != s ? s : p.default.getId(),
+                        o = p.default.getFingerprint(),
+                        c = null != o ? o : p.default.getId(),
                         u =
                             null != n && (null == n ? void 0 : n.type) != null
                                 ? Number(null == n ? void 0 : n.type)
                                 : void 0;
-                    o.ZP.openApp(a, void 0, c, void 0, u);
+                    s.ZP.openApp(a, void 0, c, void 0, u);
                 })(e, t, l);
             },
             transitionTo: n,

@@ -3,14 +3,14 @@ var r,
     i,
     l = n(442837),
     a = n(570140);
-let s = !1,
-    o = null,
+let o = !1,
+    s = null,
     c = null;
 class u extends (i = l.ZP.Store) {
     getState() {
         return {
-            verifySuccess: s,
-            verifyErrors: o,
+            verifySuccess: o,
+            verifyErrors: s,
             redirectGuildId: c,
         };
     }
@@ -26,10 +26,10 @@ class u extends (i = l.ZP.Store) {
 let d = new u(a.Z, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
-        (s = !0), (o = null), (c = t);
+        (o = !0), (s = null), (c = t);
     },
     HUB_VERIFY_EMAIL_FAILURE: function (e) {
         let { errors: t } = e;
-        (s = !1), (o = t);
+        (o = !1), (s = t);
     },
 });

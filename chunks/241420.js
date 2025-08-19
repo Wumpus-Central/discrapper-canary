@@ -1,69 +1,69 @@
-a.d(t, { default: () => g });
-var n = a(951288);
-a(647438);
-var i = a(481060),
-    r = a(546957),
-    c = a(190014),
-    o = a(301812),
-    s = a(988043),
-    l = a(919539),
-    d = a(526761),
-    p = a(388032),
-    _ = a(942465);
+n.d(t, { default: () => m });
+var a = n(951288);
+n(647438);
+var o = n(481060),
+    i = n(546957),
+    c = n(190014),
+    r = n(301812),
+    s = n(988043),
+    l = n(919539),
+    d = n(526761),
+    _ = n(388032),
+    p = n(942465);
 function u(e) {
     let { guildId: t } = e;
-    return (0, n.jsxs)(r.Z, {
+    return (0, a.jsxs)(i.Z, {
         children: [
-            (0, n.jsx)(s.Z, {
+            (0, a.jsx)(s.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: t,
             }),
-            (0, n.jsx)(l.Z, {
+            (0, a.jsx)(l.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: t,
             }),
-            (0, n.jsx)(o.Z, {
+            (0, a.jsx)(r.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: t,
             }),
-            (0, n.jsx)(c.Z, {
+            (0, a.jsx)(c.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: t,
             }),
-            (0, n.jsx)(i.Text, {
+            (0, a.jsx)(o.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: p.intl.format(p.t.LNsV09, {
+                children: _.intl.format(_.t.LNsV09, {
                     policyLink: "https://discord.com/safety/360043709612-our-policies",
                 }),
             }),
         ],
     });
 }
-function g(e) {
-    let { guild: t, transitionState: a, onClose: r } = e,
-        c = "".concat(p.intl.string(p.t.BayiAg), "\u2014").concat(null != t ? t.name : "??");
-    return (0, n.jsxs)(i.Y0X, {
-        transitionState: a,
-        size: i.CgR.SMALL,
+function m(e) {
+    let { guild: t, transitionState: n, onClose: i } = e,
+        c = "".concat(_.intl.string(_.t.BayiAg), "\u2014").concat(null != t ? t.name : "??");
+    return (0, a.jsxs)(o.Y0X, {
+        transitionState: n,
+        size: o.CgR.SMALL,
         "aria-label": c,
         parentComponent: "PrivacySettings",
         children: [
-            (0, n.jsx)(i.xBx, {
-                children: (0, n.jsx)(i.X6q, {
+            (0, a.jsx)(o.xBx, {
+                children: (0, a.jsx)(o.X6q, {
                     variant: "heading-lg/semibold",
                     children: c,
                 }),
             }),
-            (0, n.jsx)(i.hzk, {
-                className: _.content,
-                children: (0, n.jsx)(u, { guildId: t.id }),
+            (0, a.jsx)(o.hzk, {
+                className: p.content,
+                children: (0, a.jsx)(u, { guildId: t.id }),
             }),
-            (0, n.jsx)(i.mzw, {
-                children: (0, n.jsx)(i.zxk, {
+            (0, a.jsx)(o.mzw, {
+                children: (0, a.jsx)(o.zxk, {
                     variant: "primary",
-                    text: p.intl.string(p.t.i4jeWV),
-                    onClick: () => r(),
+                    text: _.intl.string(_.t.i4jeWV),
+                    onClick: () => i(),
                 }),
             }),
         ],

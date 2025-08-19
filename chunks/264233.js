@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => _,
+    S: () => O,
     Z: () => g,
 }),
     n(388685);
@@ -151,7 +151,7 @@ function b() {
         };
     });
 }
-function _() {
+function O() {
     return 0 === (0, a.Wu)([c.Z], () => c.Z.getInvites()).length
         ? null
         : (0, r.jsx)(s.M0o, {

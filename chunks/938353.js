@@ -180,8 +180,8 @@ function e8() {
 }
 let e2 = [eX.hBH.GIFV],
     e4 = 15 * eE.Z.Millis.MINUTE,
-    e6 = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-    e5 = (e) => () => {
+    e5 = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+    e6 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: l, flags: a } = e,
             o = (0, ev.yE)(a, z.hR.IS_ANIMATED);
         return null != r && null != l && (W.uo.test(n) || (o && (W.YG.test(n) || W.FH.test(n))))
@@ -198,7 +198,7 @@ let e2 = [eX.hBH.GIFV],
 class e7 extends (r = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
-        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e6.has(e));
+        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e5.has(e));
     }
     shouldComponentUpdate(e, t) {
         var n, r;
@@ -465,7 +465,7 @@ class e7 extends (r = l.Component) {
                             duration: r,
                         });
                     },
-                    gifFavoriteButton: e5(o),
+                    gifFavoriteButton: e6(o),
                     isSearchResult: this.props.isSearchResult,
                 },
                 c = (0, eh.q)({
@@ -522,7 +522,7 @@ class e7 extends (r = l.Component) {
         } = this.props;
         return (0, i.jsx)(eU.F, {
             gifAutoPlay: t,
-            getGifFavButton: e5,
+            getGifFavButton: e6,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0

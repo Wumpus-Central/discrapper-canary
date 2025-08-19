@@ -14,8 +14,8 @@ var r = n(951288),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    _ = n(989308),
-    O = n(388032),
+    O = n(989308),
+    _ = n(388032),
     y = n(969649);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -77,9 +77,9 @@ let j = {
                 }
             }, [t, null == C ? void 0 : C.popout]),
             S = (0, s.s9z)(s.JQI),
-            I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-            [P, N] = i.useState(null),
-            w = null == P ? "animation" : "LOOP";
+            P = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
+            [I, N] = i.useState(null),
+            w = null == I ? "animation" : "LOOP";
         i.useEffect(() => {
             (null == C ? void 0 : C.popout) == null && N(null);
         }, [null == C ? void 0 : C.popout]);
@@ -89,7 +89,7 @@ let j = {
             T = i.useRef(null);
         return (0, r.jsx)(s.yRy, {
             targetElementRef: T,
-            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || I),
+            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || P),
             nudgeAlignIntoViewport: !0,
             animationPosition: "bottom",
             position: "right",
@@ -125,7 +125,7 @@ let j = {
                                 }),
                             text: (0, r.jsx)("span", {
                                 className: o()({ [y.textImportant]: (null == C ? void 0 : C.showUnread) === !0 }),
-                                children: O.intl.string(_.default.yv3DJC),
+                                children: _.intl.string(O.default.yv3DJC),
                             }),
                             selected: l,
                             onClick: E,

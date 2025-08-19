@@ -3,8 +3,8 @@ n.d(t, { Z: () => y }), n(388685), n(35282);
 var i = n(951288),
     l = n(647438),
     a = n(873546),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(980591),
     u = n(605782),
     d = n(133853),
@@ -52,7 +52,7 @@ function j(e) {
         (function () {
             let [e, t] = l.useState(!1),
                 [n, i] = l.useState(!0),
-                a = (0, s.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+                a = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
             return ((0, c.Z)(() => {}, 300), void 0 !== r)
                 ? r
                 : !n && a
@@ -113,7 +113,7 @@ class I extends l.Component {
             });
         return (0, i.jsx)("div", {
             className: g.characterBackground,
-            children: (0, i.jsx)(o.y5t, {
+            children: (0, i.jsx)(s.y5t, {
                 forceLevel: 1,
                 children:
                     null != e

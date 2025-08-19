@@ -1,7 +1,7 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var i = n(951288),
-    r = n(647438),
-    l = n(238651),
+    l = n(647438),
+    r = n(238651),
     o = n(803948),
     a = n(748780),
     s = n(481060),
@@ -56,15 +56,15 @@ function j(e, t) {
         e
     );
 }
-let O = [];
-function y(e) {
-    let { messageId: t, emoji: n, startPosition: y, targetPosition: v } = e,
-        [T, S] = r.useState(0),
-        [x, E] = r.useState(0),
-        [R, I] = r.useState(null),
-        { confettiCanvas: N } = r.useContext(u.h),
-        P = (0, l.uR)(N, R),
-        C = r.useMemo(
+let v = [];
+function O(e) {
+    let { messageId: t, emoji: n, startPosition: O, targetPosition: y } = e,
+        [T, x] = l.useState(0),
+        [S, E] = l.useState(0),
+        [R, I] = l.useState(null),
+        { confettiCanvas: N } = l.useContext(u.h),
+        P = (0, r.uR)(N, R),
+        C = l.useMemo(
             () => [
                 {
                     src:
@@ -80,10 +80,10 @@ function y(e) {
             ],
             [n.name, n.id],
         ),
-        w = v.x - (v.width / 2) * 0.5,
-        Z = v.y - (v.height / 2) * 0.5,
+        w = y.x - (y.width / 2) * 0.5,
+        Z = y.y - (y.height / 2) * 0.5,
         A = (0, s.q_F)({
-            from: { y: y.y },
+            from: { y: O.y },
             to: { y: Z },
             config: {
                 duration: 450,
@@ -96,7 +96,7 @@ function y(e) {
         }),
         M = (0, s.q_F)({
             from: {
-                x: y.x,
+                x: O.x,
                 scale: 1,
                 opacity: 1,
             },
@@ -114,31 +114,31 @@ function y(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                S(t);
+                x(t);
             },
         });
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             T > 0 &&
-                x > 0 &&
+                S > 0 &&
                 P.createConfetti(
                     j(b({}, f.We), {
                         position: {
                             type: "static",
                             value: {
                                 x: T,
-                                y: x,
+                                y: S,
                             },
                         },
                     }),
                 );
-        }, [P, T, x]),
+        }, [P, T, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.Ji, {
+                (0, i.jsx)(r.Ji, {
                     ref: I,
                     sprites: C,
-                    colors: O,
+                    colors: v,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko,
                 }),

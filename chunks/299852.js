@@ -3,8 +3,8 @@ var r,
     i = n(951288),
     l = n(647438),
     a = n(593473),
-    s = n(442837),
-    o = n(544891),
+    o = n(442837),
+    s = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
@@ -28,12 +28,12 @@ function b(e, t, n) {
         e
     );
 }
-s.ZP.initialize();
+o.ZP.initialize();
 class v extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
-        o.tn
+        s.tn
             .post({
                 url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
@@ -157,4 +157,4 @@ class v extends (r = l.PureComponent) {
     }
 }
 b(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let E = s.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);
+let E = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);

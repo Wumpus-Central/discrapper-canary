@@ -5,8 +5,8 @@ var i = n(951288),
     l = n.n(s),
     o = n(628238),
     a = n(750030),
-    u = n(492593),
-    c = n(25015),
+    c = n(492593),
+    u = n(25015),
     d = n(963550),
     h = n(845080),
     p = n(360514);
@@ -17,23 +17,23 @@ let g = r.memo(function (e) {
             channel: s,
             compact: g,
             className: f,
-            isGroupStart: v,
-            hideSimpleEmbedContent: m = !0,
-            disableInteraction: C,
-            previewGuildId: b,
-            preview: y,
-            author: O,
+            isGroupStart: m,
+            hideSimpleEmbedContent: b = !0,
+            disableInteraction: v,
+            previewGuildId: C,
+            preview: _,
+            author: y,
         } = e,
-        S = null != b ? b : (0, a.k)(n),
-        E = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: _ } = (0, c.Z)(n, {
-            hideSimpleEmbedContent: m,
-            allowList: E,
-            allowHeading: E,
+        O = null != C ? C : (0, a.k)(n),
+        S = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        { content: E } = (0, u.Z)(n, {
+            hideSimpleEmbedContent: b,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        I = r.useMemo(() => {
+        w = r.useMemo(() => {
             var t, n;
             return (0, h.Z)(
                 ((t = (function (e) {
@@ -64,7 +64,7 @@ let g = r.memo(function (e) {
                 (n = n =
                     {
                         channel: s,
-                        guildId: S,
+                        guildId: O,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -80,18 +80,18 @@ let g = r.memo(function (e) {
                       }),
                 t),
             );
-        }, [e, s, S]);
-    return (0, i.jsx)(u.Z, {
+        }, [e, s, O]);
+    return (0, i.jsx)(c.Z, {
         compact: g,
         className: l()(f, {
             [p.message]: !0,
             [p.cozyMessage]: !g,
-            [p.groupStart]: v,
+            [p.groupStart]: m,
         }),
-        childrenHeader: I,
-        childrenMessageContent: (0, d.Z)(e, _),
-        disableInteraction: C,
-        author: O,
-        preview: y,
+        childrenHeader: w,
+        childrenMessageContent: (0, d.Z)(e, E),
+        disableInteraction: v,
+        author: y,
+        preview: _,
     });
 });

@@ -1,7 +1,7 @@
 n.d(t, { l: () => m });
 var i = n(951288),
-    r = n(647438),
-    l = n(481060),
+    l = n(647438),
+    r = n(481060),
     o = n(100527),
     a = n(906732),
     s = n(7284),
@@ -36,36 +36,36 @@ function p(e) {
 }
 function m(e) {
     let { user: t, channelId: n, guildId: m, messageId: f, stopPropagation: g = !1, ariaLabel: b } = e,
-        j = r.useRef(null),
-        { analyticsLocations: O } = (0, a.ZP)(o.Z.USERNAME),
-        y = (0, c.ZP)(m, null == t ? void 0 : t.id),
-        v = (0, s.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles }),
-        T = r.useCallback(
+        j = l.useRef(null),
+        { analyticsLocations: v } = (0, a.ZP)(o.Z.USERNAME),
+        O = (0, c.ZP)(m, null == t ? void 0 : t.id),
+        y = (0, s.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles }),
+        T = l.useCallback(
             (e) => {
                 let i = d.Z.getChannel(n);
                 null != i && null != t && (0, h.Pv)(e, t, i);
             },
             [t, n],
         );
-    return r.useCallback(
-        (e) => (r, o) => {
+    return l.useCallback(
+        (e) => (l, o) => {
             let s = null == e ? void 0 : e.colorStrings,
-                c = y && null != s && null != s.primaryColor && null != s.secondaryColor,
+                c = O && null != s && null != s.primaryColor && null != s.secondaryColor,
                 d = (t) => {
                     var n, o, a;
                     return (0, i.jsx)(
-                        l.rz2,
+                        r.rz2,
                         ((o = p({}, null != t ? t : {})),
                         (a = a =
                             {
                                 ref: j,
                                 onContextMenu: T,
-                                name: (0, l.qgQ)(r),
+                                name: (0, r.qgQ)(l),
                                 colorString: null != (n = null == e ? void 0 : e.colorString) ? n : null,
                                 roleName: null == e ? void 0 : e.colorRoleName,
                                 colorStrings: c ? s : null,
                                 "aria-label": b,
-                                className: v,
+                                className: y,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
@@ -85,7 +85,7 @@ function m(e) {
             return (0, i.jsx)(
                 a.Gt,
                 {
-                    value: O,
+                    value: v,
                     children:
                         null != t
                             ? (0, i.jsx)(u.Z, {
@@ -109,25 +109,25 @@ function m(e) {
                                                   if (null == e) return {};
                                                   var n,
                                                       i,
-                                                      r = (function (e, t) {
+                                                      l = (function (e, t) {
                                                           if (null == e) return {};
                                                           var n,
                                                               i,
-                                                              r = {},
-                                                              l = Object.keys(e);
-                                                          for (i = 0; i < l.length; i++)
-                                                              (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                                                          return r;
+                                                              l = {},
+                                                              r = Object.keys(e);
+                                                          for (i = 0; i < r.length; i++)
+                                                              (n = r[i]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                                          return l;
                                                       })(e, t);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var l = Object.getOwnPropertySymbols(e);
-                                                      for (i = 0; i < l.length; i++)
-                                                          (n = l[i]),
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      for (i = 0; i < r.length; i++)
+                                                          (n = r[i]),
                                                               !(t.indexOf(n) >= 0) &&
                                                                   Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                                  (r[n] = e[n]);
+                                                                  (l[n] = e[n]);
                                                   }
-                                                  return r;
+                                                  return l;
                                               })(e, ["onClick"]),
                                           ),
                                       );
@@ -138,6 +138,6 @@ function m(e) {
                 o,
             );
         },
-        [O, t, n, m, f, T, g, b, y, v],
+        [v, t, n, m, f, T, g, b, O, y],
     );
 }

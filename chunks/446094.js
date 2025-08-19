@@ -8,12 +8,12 @@ function o(e, t) {
         a = i.useCallback(async () => {
             o(!0), await (0, s.c)(e, !0), o(!1), null == t || t();
         }, [e, t]),
-        u = (0, r.Z)({ scrollPosition: l.Y_.GUILD_TAG });
+        c = (0, r.Z)({ scrollPosition: l.Y_.GUILD_TAG });
     return {
         isAdopting: n,
         onAdoptTag: a,
         onEditProfile: i.useCallback(() => {
-            null == t || t(), u();
-        }, [u, t]),
+            null == t || t(), c();
+        }, [c, t]),
     };
 }

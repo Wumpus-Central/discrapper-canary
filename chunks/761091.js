@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => O }), n(539854);
 var r = n(399606),
     i = n(897345);
 n(265153);
@@ -15,11 +15,11 @@ var l = n(697379),
     g = n(330791),
     m = n(443063),
     b = n(981631);
-function _(e) {
+function O(e) {
     let t = (0, p.Z)(e.id),
         n = (0, l.W)(e.id),
-        _ = (0, d.j0)(e.id),
-        O = (0, i.u)(e),
+        O = (0, d.j0)(e.id),
+        _ = (0, i.u)(e),
         y = (0, c.g)(e.id),
         v = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e.id), [e.id]),
         j = (0, u.Z)(e.id),
@@ -27,8 +27,8 @@ function _(e) {
         E = (0, o.n2)(e.id),
         x = [],
         S = e.features.has(b.oNc.HUB),
-        I = e.features.has(b.oNc.COMMUNITY),
-        P = (0, g.lN)(!(0, f.r1)(e.id)),
+        P = e.features.has(b.oNc.COMMUNITY),
+        I = (0, g.lN)(!(0, f.r1)(e.id)),
         N = e.features.has(b.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         w = (0, h.Z)(e.id);
     return (
@@ -38,10 +38,10 @@ function _(e) {
             : e.premiumProgressBarEnabled && x.push(m.z.GUILD_PREMIUM_PROGRESS_BAR),
         !S && y && x.push(m.z.GUILD_HOME),
         t && x.push(m.z.GUILD_SCHEDULED_EVENTS),
-        !S && I && P && x.push(m.z.CHANNELS_AND_ROLES),
-        _ && x.push(m.z.GUILD_ROLE_SUBSCRIPTIONS),
-        O && x.push(m.z.GUILD_SHOP),
-        ((E && (I || N)) || (n && e.features.has(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
+        !S && P && I && x.push(m.z.CHANNELS_AND_ROLES),
+        O && x.push(m.z.GUILD_ROLE_SUBSCRIPTIONS),
+        _ && x.push(m.z.GUILD_SHOP),
+        ((E && (P || N)) || (n && e.features.has(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
             x.push(m.z.GUILD_MOD_DASH_MEMBER_SAFETY),
         w && x.push(m.z.GUILD_BOOSTS),
         x

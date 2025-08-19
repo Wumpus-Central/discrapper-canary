@@ -11,8 +11,8 @@ var n = r(951288),
     p = r(410030),
     g = r(857595),
     f = r(607070),
-    b = r(984370),
-    m = r(110560),
+    m = r(984370),
+    b = r(110560),
     h = r(507808),
     _ = r(822857),
     v = r(775451),
@@ -28,7 +28,7 @@ var n = r(951288),
     L = r(421200);
 function k(e) {
     let { tab: t, displayText: r, selected: l, handleTransition: a } = e;
-    return (0, n.jsx)(b.Z.Title, {
+    return (0, n.jsx)(m.Z.Title, {
         onClick: () => a(t),
         wrapperClassName: L.tabWrapper,
         className: i()(L.tab, { [L.selected]: l }),
@@ -39,11 +39,11 @@ function I(e) {
     let { tab: t, selected: r, displayText: a, handleTransition: o } = e,
         [s, u] = l.useState(!1),
         d = l.useRef(null),
-        [p, m] = l.useState(0),
+        [p, b] = l.useState(0),
         h = l.useRef(!1),
         _ = (e) => {
             clearTimeout(p),
-                m(
+                b(
                     setTimeout(() => {
                         u(e);
                     }, 100),
@@ -78,7 +78,7 @@ function I(e) {
                 var s, u;
                 let { isShown: p } = l;
                 return (0, n.jsx)(
-                    b.Z.Title,
+                    m.Z.Title,
                     ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -149,8 +149,8 @@ function N(e) {
     let { isFullScreen: t, isLayer: r, onClose: a, selectedTab: g, handleTransition: f } = e,
         S = (0, p.ZP)(),
         N = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-        w = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
-        { enabled: A } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
+        A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
+        { enabled: w } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
         B = [
             {
                 tab: j.AW.HOME,
@@ -161,7 +161,7 @@ function N(e) {
                 displayText: T.intl.string(T.t.Ah5sJi),
             },
         ];
-    A &&
+    w &&
         B.push({
             tab: j.AW.ORBS,
             displayText: T.intl.string(T.t.EBYkzs),
@@ -175,17 +175,17 @@ function N(e) {
                     sectionType: P.jXE.ORBS_BALANCE_MENU,
                     ctaObject: P.qAy.CTA_TO_QUEST_HOME,
                 }),
-                (0, m.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
+                (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [R, t, Z]),
         M = (0, y.eN)("collectibles_shop_header_bar");
     return (0, n.jsx)(c.f6W, {
         theme: S,
         children: (e) =>
-            (0, n.jsxs)(b.Z, {
+            (0, n.jsxs)(m.Z, {
                 disableDoubleClick: !0,
                 className: i()(e, L.headerBar, { [L.fullscreenHeaderBar]: t }),
-                innerClassname: A ? L.headerBarInner : void 0,
-                toolbar: t || !w ? null : (0, n.jsx)(l.Fragment, {}),
+                innerClassname: w ? L.headerBarInner : void 0,
+                toolbar: t || !A ? null : (0, n.jsx)(l.Fragment, {}),
                 children: [
                     (0, n.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
@@ -193,7 +193,7 @@ function N(e) {
                         "aria-label": T.intl.string(T.t.pWG4zc) + " home",
                         children: [
                             (0, n.jsx)(C.Z, { className: L.discordLogo }),
-                            (0, n.jsx)(b.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
+                            (0, n.jsx)(m.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
                         ],
                     }),
                     (0, n.jsx)("div", {
@@ -223,7 +223,7 @@ function N(e) {
                                   );
                         }),
                     }),
-                    (A || t || M) &&
+                    (w || t || M) &&
                         (0, n.jsxs)("div", {
                             className: L.alignedRightContent,
                             children: [
@@ -232,7 +232,7 @@ function N(e) {
                                         handleTransition: f,
                                         selectedTab: g,
                                     }),
-                                A &&
+                                w &&
                                     (0, n.jsx)(v.V9, {
                                         anchorPillType: t ? "SHOP_FULLSCREEN" : "SHOP",
                                         analyticsPage: Z,
