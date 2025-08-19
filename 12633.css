@@ -2547,6 +2547,20 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     }
 }
 
+.xs__6af3a {
+    border-radius: var(--radius-xs)
+}
+
+.xs__6af3a .buttonChildrenWrapper__6af3a {
+    min-height: 22px;
+    min-width: 22px
+}
+
+.xs__6af3a.hasText__6af3a .buttonChildrenWrapper__6af3a {
+    min-width: 60px;
+    padding: calc(var(--space-4) - 1px) calc(var(--space-8) - 1px)
+}
+
 .sm__6af3a .buttonChildrenWrapper__6af3a {
     min-height: 30px;
     min-width: 30px
@@ -2575,7 +2589,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     height: 100%
 }
 
-.spinner-sm__6af3a {
+.spinner-sm__6af3a,
+.spinner-xs__6af3a {
     min-height: 16px;
     min-width: 16px;
     transform: scale(.75)
@@ -12186,6 +12201,20 @@ svg.radioIcon_c1e9c4 {
     }
 }
 
+.xs__0f084 {
+    border-radius: var(--radius-xs)
+}
+
+.xs__0f084 .buttonChildrenWrapper__0f084 {
+    min-height: 22px;
+    min-width: 22px
+}
+
+.xs__0f084.hasText__0f084 .buttonChildrenWrapper__0f084 {
+    min-width: 60px;
+    padding: calc(var(--space-4) - 1px) calc(var(--space-8) - 1px)
+}
+
 .sm__0f084 .buttonChildrenWrapper__0f084 {
     min-height: 30px;
     min-width: 30px
@@ -12214,7 +12243,8 @@ svg.radioIcon_c1e9c4 {
     height: 100%
 }
 
-.spinner-sm__0f084 {
+.spinner-sm__0f084,
+.spinner-xs__0f084 {
     min-height: 16px;
     min-width: 16px;
     transform: scale(.75)
@@ -20580,7 +20610,7 @@ svg.radioIcon_c1e9c4 {
 
 .popover--video_d6f39b,
 .popoverContentWithGradient_d6f39b.popover--video_d6f39b {
-    padding: 0
+    padding: var(--space-4)
 }
 
 .popover--video_d6f39b .footer_d6f39b,
@@ -20678,9 +20708,9 @@ svg.radioIcon_c1e9c4 {
 }
 
 .asset--video_d6f39b {
-    height: 135px;
+    aspect-ratio: 16/9;
     margin: 0 auto;
-    width: 240px
+    width: 232px
 }
 
 .videoAsset_d6f39b {
@@ -20896,7 +20926,7 @@ svg.radioIcon_c1e9c4 {
 
 .inlineAsset__9c640,
 img.inlineAsset__9c640 {
-    border-radius: var(--radius-md) var(--radius-md) 0 0
+    border-radius: var(--radius-sm)
 }
 
 .assetContainer__9c640 {
@@ -20918,6 +20948,13 @@ img.inlineAsset__9c640 {
 .assetContainer__9c640:hover .playButton__9c640 {
     opacity: 1;
     pointer-events: auto
+}
+
+.closeButton__9c640 {
+    position: absolute;
+    right: calc(var(--space-8) - 1px);
+    top: calc(var(--space-8) - 1px);
+    z-index: 2
 }
 
 .variants_f72374 {
