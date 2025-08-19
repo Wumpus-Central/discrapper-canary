@@ -36213,6 +36213,12 @@ body .headerAnimation_b54a5b {
     width: 100%
 }
 
+@media (max-width:485px) {
+    .headerAnimation_b54a5b {
+        min-width: auto !important
+    }
+}
+
 .headerAnimation_b54a5b {
     border-top-left-radius: calc(var(--radius-md) - 1px);
     border-top-right-radius: calc(var(--radius-md) - 1px)
@@ -36265,6 +36271,12 @@ body .headerAnimation_b54a5b {
 
 .body_c6f1a4.reviewStep_c6f1a4 {
     padding: 0 var(--modal-horizontal-padding)
+}
+
+@media (max-width:485px) {
+    .body_c6f1a4.reviewStep_c6f1a4 {
+        width: 100%
+    }
 }
 
 .body_c6f1a4.addPaymentStepForPremium_c6f1a4 {
@@ -54452,7 +54464,8 @@ html.disable-forced-colors * {
 }
 
 .mobileAppAsidePanelWrapper_a3002d {
-    flex-direction: column
+    flex-direction: column;
+    overflow-y: scroll
 }
 
 .notAppAsidePanel_a3002d {
