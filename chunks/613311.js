@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(646288),
     P = n(984370),
     j = n(706454),
-    x = n(210887),
-    A = n(430824),
+    A = n(210887),
+    x = n(430824),
     Z = n(496675),
     w = n(525395),
     L = n(558314),
@@ -46,8 +46,8 @@ var r = n(951288),
     Y = n(15470),
     K = n(506648),
     q = n(449275),
-    X = n(445986),
-    Q = n(119520),
+    Q = n(445986),
+    X = n(119520),
     J = n(450233),
     $ = n(726581),
     ee = n(74153),
@@ -445,7 +445,7 @@ class ep extends i.PureComponent {
                     (0, r.jsx)(S.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
-                    (0, r.jsx)(Q.Z, { game: e }),
+                    (0, r.jsx)(X.Z, { game: e }),
                     n,
                 ],
             });
@@ -630,7 +630,7 @@ class ep extends i.PureComponent {
                 let { pageSize: n, isFocused: i } = this.props;
                 return (0, r.jsx)(m.Z, {
                     section: el.jXE.HERO,
-                    children: (0, r.jsx)(X.Z, {
+                    children: (0, r.jsx)(Q.Z, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,
@@ -655,7 +655,7 @@ class ep extends i.PureComponent {
 }
 let ef = (0, _.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([L.Z, x.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, A.Z, R.Z], (e) => {
+        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, x.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
@@ -685,9 +685,9 @@ let ef = (0, _.Z)(
                 }),
                 isInTestMode: null != l && c,
                 matureAgree: L.Z.didMatureAgree,
-                theme: x.Z.theme,
+                theme: A.Z.theme,
                 locale: j.default.locale,
-                guild: null != s ? A.Z.getGuild(s.getGuildId()) : null,
+                guild: null != s ? x.Z.getGuild(s.getGuildId()) : null,
             };
         })(ep),
     ),

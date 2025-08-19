@@ -31,13 +31,13 @@ function T() {
         T = (0, u.N)(),
         P = (0, p.Z)("message-requests-spam-list"),
         { channelId: j } = (0, _._)(),
-        x = i.useCallback(() => {
+        A = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: A } = (0, b.m)({ onError: x }),
+        { rejectAll: x } = (0, b.m)({ onError: A }),
         Z = i.useCallback(() => {
-            A(t.map((e) => e.channel.id));
-        }, [t, A]);
+            x(t.map((e) => e.channel.id));
+        }, [t, x]);
     (0, d.ZP)(() => {
         g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
             h.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });

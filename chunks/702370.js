@@ -885,7 +885,7 @@ let eN = (e) => {
                                         (0, r.jsx)(b.Text, {
                                             variant: "text-sm/semibold",
                                             className: ek.modalFooterText,
-                                            children: eS.intl.format(eS.t["5KE2fX"], { discountOfferAmount: A }),
+                                            children: eS.intl.format(eS.t["78ph4e"], { discountOfferAmount: A }),
                                         }),
                                         (null == E ? void 0 : E.expiresAt) != null &&
                                             (0, r.jsx)(et.R, { endDate: E.expiresAt }),

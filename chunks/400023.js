@@ -234,15 +234,19 @@ let W = (0, o.animated)(u.eTT),
                     (Q.ref.current = e),
                         (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
-                { fadeStart: eu, fadeEnd: ed } = (0, u.q_F)({
-                    fadeStart: k && !Y ? 96 : k ? 32 : 16,
-                    fadeEnd: k && !Y ? 24 : 24 * !!k,
-                    config: {
-                        tension: 150,
-                        friction: 15,
-                        clamp: !0,
+                [{ fadeStart: eu, fadeEnd: ed }] = (0, u.q_F)(
+                    {
+                        fadeStart: k && !Y ? 96 : k ? 32 : 16,
+                        fadeEnd: k && !Y ? 24 : 24 * !!k,
+                        config: {
+                            tension: 150,
+                            friction: 15,
+                            clamp: !0,
+                        },
                     },
-                });
+                    "respect-motion-settings",
+                    [k, Y],
+                );
             return (0, r.jsxs)(s.bG, {
                 navigator: J,
                 children: [

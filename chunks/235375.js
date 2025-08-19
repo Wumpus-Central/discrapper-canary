@@ -44,8 +44,8 @@ function h(e) {
     }
     return e;
 }
-let y = s().defaultRules.link,
-    O = { section: f.jXE.SETTINGS_CHANGELOG },
+let O = s().defaultRules.link,
+    y = { section: f.jXE.SETTINGS_CHANGELOG },
     v = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: o = {} } = e,
             a = (0, c.xSt)(),
@@ -73,7 +73,7 @@ let y = s().defaultRules.link,
                     (o =
                         a || s
                             ? (e) => {
-                                  g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: O }),
+                                  g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }),
                                       a ? d.Z.open(f.oAB.PREMIUM) : s && d.Z.open(f.oAB.HYPESQUAD_ONLINE),
                                       n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
                                       (0, c.Mr3)(b.Xd),
@@ -103,7 +103,7 @@ let y = s().defaultRules.link,
                                             ),
                                         );
                                 }),
-                    (r = h({}, y.parse(e, t, n))),
+                    (r = h({}, O.parse(e, t, n))),
                     (l = l = { callToAction: o }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))

@@ -86,12 +86,12 @@ let N = (0, g.Un)({
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    x = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e("32104"), n.e("45620")]).then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("1806"),
@@ -115,8 +115,8 @@ let N = (0, g.Un)({
     Z = {
         [y.S9g.USER_SETTINGS]: () => ((0, _.yP)("Layers") ? (0, i.jsx)(P, {}) : (0, i.jsx)(N, {})),
         [y.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(j, {}),
-        [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(A, {}),
-        [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(x, {}),
+        [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(x, {}),
+        [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(A, {}),
         [y.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(T, {}),
     },
     w = "SHOWN",

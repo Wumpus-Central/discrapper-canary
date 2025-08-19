@@ -115,6 +115,18 @@ let l = {
             request: (e) => ({ id: e.string().max(64).required() }),
             response: (e) => o(e).allow(null),
         },
+        [i.Q5.GET_QUEST_ENROLLMENT_STATUS]: {
+            request: (e) => ({ quest_id: e.string().required() }),
+            response: (e) => ({
+                quest_id: e.string().required(),
+                is_enrolled: e.boolean().required(),
+                enrolled_at: e.string().allow(null).optional(),
+            }),
+        },
+        [i.Q5.QUEST_START_TIMER]: {
+            request: (e) => ({ quest_id: e.string().required() }),
+            response: (e) => ({ success: e.boolean().required() }),
+        },
     },
     a = (e) =>
         e.object({

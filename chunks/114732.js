@@ -15,6 +15,7 @@ let d = function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(a.xBx, {
+                "data-migration-pending": !0,
                 separator: !1,
                 className: l.header,
                 children: [
@@ -29,12 +30,14 @@ let d = function (e) {
                         children: s.intl.string(s.t.tWYWJy),
                     }),
                     (0, r.jsx)(a.olH, {
+                        "data-migration-pending": !0,
                         onClick: t,
                         className: l.modalCloseButton,
                     }),
                 ],
             }),
             (0, r.jsx)(a.hzk, {
+                "data-migration-pending": !0,
                 className: l.content,
                 scrollbarType: "none",
                 children: (0, r.jsx)(a.Text, {
@@ -43,6 +46,7 @@ let d = function (e) {
                 }),
             }),
             (0, r.jsx)(a.mzw, {
+                "data-migration-pending": !0,
                 className: l.modalFooter,
                 children: (0, r.jsx)(a.zxk, {
                     variant: "primary",

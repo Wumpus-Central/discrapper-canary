@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => O,
+    ZP: () => y,
     c4: () => h,
-    st: () => y,
+    st: () => O,
 });
 var r = n(951288),
     l = n(647438),
@@ -37,7 +37,7 @@ function h(e) {
         }),
     };
 }
-function y(e) {
+function O(e) {
     let { className: t, icon: n, text: l, color: o } = e;
     return (0, r.jsxs)("div", {
         className: i()(f.wrapper, t),
@@ -52,7 +52,7 @@ function y(e) {
         ],
     });
 }
-let O = l.memo(function (e) {
+let y = l.memo(function (e) {
     let { message: t, className: n, component: o } = e,
         i = (0, a.Z)(),
         c = (0, s.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
@@ -85,10 +85,10 @@ let O = l.memo(function (e) {
         null != e && (f = h(e));
     }
     if (null == f) return null;
-    let { text: O, icon: v, color: j } = f;
-    return (0, r.jsx)(y, {
+    let { text: y, icon: v, color: j } = f;
+    return (0, r.jsx)(O, {
         icon: v,
-        text: O,
+        text: y,
         className: n,
         color: j,
     });

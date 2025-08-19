@@ -20,8 +20,8 @@ var r = n(951288),
     S = n(626135),
     C = n(63063),
     O = n(981631),
-    y = n(671955),
-    v = n(693450),
+    v = n(671955),
+    y = n(693450),
     P = n(388032),
     k = n(270816);
 function N(e) {
@@ -68,10 +68,10 @@ function E(e, t) {
     );
 }
 function T(e) {
-    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: w } = e,
-        R = (0, c.ZP)(),
-        A = (0, s.wjy)(R),
-        [I, L] = (0, o.useState)(A),
+    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: R } = e,
+        A = (0, c.ZP)(),
+        w = (0, s.wjy)(A),
+        [I, L] = (0, o.useState)(w),
         B = (0, b.ZP)(t.id, null),
         { bannerSrc: M } = (0, x.Z)({
             displayProfile: B,
@@ -84,10 +84,10 @@ function T(e) {
             image: G.pendingAvatar,
         }),
         Y = I ? O.BRd.DARK : O.BRd.LIGHT;
-    ((A && I) || (!A && !I)) && (Y = R);
+    ((w && I) || (!w && !I)) && (Y = A);
     let H = (0, o.useCallback)(() => {
-            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), w();
-        }, [w]),
+            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), R();
+        }, [R]),
         z = (0, o.useCallback)((e) => {
             L(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
         }, []),
@@ -120,7 +120,7 @@ function T(e) {
                 (0, r.jsx)(j.Z, {
                     user: t,
                     displayProfile: B,
-                    themeType: y.l.MODAL_V2,
+                    themeType: v.l.MODAL_V2,
                     className: k.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, r.jsx)("div", {
@@ -157,7 +157,7 @@ function T(e) {
                                             {},
                                             (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: P.intl.string(v.default.h5Cuen),
+                                                content: P.intl.string(y.default.h5Cuen),
                                             }),
                                         ),
                                         {
@@ -188,7 +188,7 @@ function T(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: P.intl.format(v.default.prQba2, {
+                        children: P.intl.format(y.default.prQba2, {
                             helpArticleLink: C.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),

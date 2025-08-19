@@ -108,7 +108,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 [M, T, G, U],
             ),
             V = t.premiumTier < L && M >= x.oCV[L],
-            H = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, x.jXE.PREMIUM_GUILD_PROGRESS_BAR),
+            H = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             F = I.intl.formatToPlainString(I.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
             z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: T,

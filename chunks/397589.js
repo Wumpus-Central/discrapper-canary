@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(951288),
     l = n(647438),
     o = n(481060),
@@ -14,11 +14,11 @@ var r = n(951288),
     f = n(235894),
     b = n(981631),
     h = n(388032),
-    y = n(975405);
-let O = (e) => {
+    O = n(975405);
+let y = (e) => {
     var t;
     let { message: n } = e,
-        O = l.useRef(null),
+        y = l.useRef(null),
         v = (0, p.p7)("Message Header") && n.hasPotions(),
         j = a.Z.getChannel(n.getChannelId()),
         P = null == (t = n.potions) ? void 0 : t[0],
@@ -33,8 +33,8 @@ let O = (e) => {
                   : t.globalName;
         }, [P, j]),
         w = l.useCallback(() => {
-            if (null != O.current && (0, f.Uw)(n)) {
-                let { x: e, y: t, width: r, height: l } = O.current.getBoundingClientRect();
+            if (null != y.current && (0, f.Uw)(n)) {
+                let { x: e, y: t, width: r, height: l } = y.current.getBoundingClientRect();
                 (0, m.Z)(
                     n,
                     {
@@ -88,8 +88,8 @@ let O = (e) => {
                               return e;
                           })(
                               {
-                                  ref: O,
-                                  className: y.potionBadge,
+                                  ref: y,
+                                  className: O.potionBadge,
                               },
                               e,
                           )),

@@ -1,16 +1,33 @@
-n.r(t), n.d(t, { default: () => a });
+n.r(t), n.d(t, { default: () => f });
 var i = n(951288);
 n(647438);
-var l = n(37234),
-    s = n(79808),
-    o = n(604227),
-    r = n(535514);
-function a() {
-    let e = (0, r.M)();
-    return (0, i.jsx)(s.Z, {
-        onClose: l.xf,
-        root: e,
-        sidebarFooter: o.Z,
-        initialPanel: e.layout[0],
+var l = n(481060),
+    r = n(37234),
+    o = n(79808),
+    s = n(131051),
+    a = n(996733),
+    u = n(604227),
+    c = n(92959),
+    d = n(920952);
+function f() {
+    let e = (0, a.Z7)(),
+        t = (0, s.Z)(d.Z, e);
+    return (0, i.jsx)(o.Z, {
+        onClose: r.xf,
+        root: t,
+        sidebarHeader: g,
+        sidebarFooter: u.Z,
+        initialPanel: c.Z,
+    });
+}
+function g() {
+    let e = (0, a.Z7)();
+    return (0, i.jsx)("div", {
+        children: (0, i.jsx)(l.E1j, {
+            size: "md",
+            query: e,
+            onChange: a.yN,
+            onClear: () => (0, a.yN)(""),
+        }),
     });
 }

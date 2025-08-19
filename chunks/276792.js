@@ -64,8 +64,8 @@ function E(e) {
         { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
         P = "AnnouncementModalVariant1_".concat(i.z[Number(I.dismissKey)]),
         { onClose: j } = C,
-        x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
-        A =
+        A = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
+        x =
             (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
@@ -168,7 +168,7 @@ function E(e) {
                 onClick: () => {
                     u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
-                        cta_type: A,
+                        cta_type: x,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: P,
                     }),
@@ -180,7 +180,7 @@ function E(e) {
                         className: m.nitroIconSubHeader,
                         src: b,
                     }),
-                    x,
+                    A,
                 ],
             });
         },

@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(981631),
     P = n(921944),
     j = n(388032),
-    x = n(677372);
-function A(e) {
+    A = n(677372);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -93,7 +93,7 @@ function w(e, t) {
 let L = (e) => {
         let { color: t } = e;
         return (0, r.jsx)(s.IGR, {
-            className: x.newBadge,
+            className: A.newBadge,
             color: null != t ? t : m.Z.STATUS_DANGER_BACKGROUND,
             text: j.intl.string(j.t.y2b7CA),
         });
@@ -161,7 +161,7 @@ let L = (e) => {
                 (0, r.jsx)(
                     u.Qj,
                     Z(
-                        A(
+                        x(
                             {
                                 selected: t,
                                 route: C,
@@ -183,7 +183,7 @@ let L = (e) => {
             ],
         });
     },
-    k = (e) => (0, r.jsx)(D, Z(A({}, e), { children: (0, r.jsx)(L, {}) })),
+    k = (e) => (0, r.jsx)(D, Z(x({}, e), { children: (0, r.jsx)(L, {}) })),
     M = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -192,12 +192,12 @@ let L = (e) => {
             c = null == (t = n.body) ? void 0 : t.call(n),
             u = null == c || "" === c;
         return (0, r.jsxs)("div", {
-            className: x.shopMarketingTooltipContent,
+            className: A.shopMarketingTooltipContent,
             children: [
                 (0, r.jsx)("div", {
-                    className: x.avatarContainer,
+                    className: A.avatarContainer,
                     children: (0, r.jsx)(s.qEK, {
-                        className: x.avatar,
+                        className: A.avatar,
                         src: n.imageSrc,
                         avatarDecoration: a,
                         size: s.EFr.SIZE_80,
@@ -205,7 +205,7 @@ let L = (e) => {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: x.shopMarketingTooltipText,
+                    className: A.shopMarketingTooltipText,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: u ? "heading-sm/medium" : "heading-sm/bold",
@@ -214,7 +214,7 @@ let L = (e) => {
                         !u &&
                             (0, r.jsx)(s.Text, {
                                 variant: "text-xs/normal",
-                                className: x.marketingBadgeTooltipContent,
+                                className: A.marketingBadgeTooltipContent,
                                 children: c,
                             }),
                     ],
@@ -270,7 +270,7 @@ let L = (e) => {
                 assetId: I.assetIds[N],
                 reducedMotion: S,
             }),
-            tooltipClassName: x.marketingBadgeTooltip,
+            tooltipClassName: A.marketingBadgeTooltip,
             position: "right",
             delay: 100,
             allowOverflow: !0,
@@ -280,12 +280,12 @@ let L = (e) => {
                 (0, r.jsxs)(
                     D,
                     Z(
-                        A(
+                        x(
                             Z(
-                                A(
+                                x(
                                     {
                                         className:
-                                            null != I.entryPointClassName ? (0, O.l)(x, I.entryPointClassName) : void 0,
+                                            null != I.entryPointClassName ? (0, O.l)(A, I.entryPointClassName) : void 0,
                                     },
                                     C,
                                 ),
@@ -298,13 +298,13 @@ let L = (e) => {
                             onMouseLeave: () => B(e.onMouseLeave),
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: x.marketingButtonBackground,
+                                    className: A.marketingButtonBackground,
                                     style: { background: n },
                                     children:
                                         null != t &&
                                         (0, r.jsx)("img", {
                                             src: t,
-                                            className: x.marketingButtonBackgroundImage,
+                                            className: A.marketingButtonBackgroundImage,
                                             alt: "",
                                             "aria-hidden": !0,
                                         }),
@@ -324,18 +324,18 @@ let L = (e) => {
             let n = null != t.emojiName ? (null == (e = b.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
             return (0, r.jsxs)(s.Text, {
                 variant: "text-sm/medium",
-                className: x.marketingBadgeTooltipContent,
+                className: A.marketingBadgeTooltipContent,
                 children: [null != n && (0, r.jsx)(c.Z, { emojiName: n }), t.title()],
             });
         }, [t]);
         return (0, r.jsx)(s.ua7, {
             text: l,
-            tooltipClassName: x.marketingBadgeTooltip,
+            tooltipClassName: A.marketingBadgeTooltip,
             position: "right",
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(D, Z(A({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(D, Z(x({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) })),
         });
     },
     B = (e) => {
@@ -348,7 +348,7 @@ let L = (e) => {
         return (0, r.jsx)(
             _.Pk,
             Z(
-                A(
+                x(
                     {
                         targetElementRef: l,
                         positionControlRef: o,
@@ -358,7 +358,7 @@ let L = (e) => {
                 {
                     children: (0, r.jsx)(
                         D,
-                        Z(A({}, n), {
+                        Z(x({}, n), {
                             listItemRef: l,
                             collectibleShopTab: N.AW.ORBS,
                             onClick: s,
@@ -390,18 +390,18 @@ let L = (e) => {
             children: [
                 (0, r.jsxs)(
                     D,
-                    Z(A({}, s), {
+                    Z(x({}, s), {
                         onClick: () => a(P.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
                             (0, r.jsx)("div", {
-                                className: x.marketingButtonBackground,
+                                className: A.marketingButtonBackground,
                                 style: null != m ? { background: m } : void 0,
                                 children:
                                     null != g &&
                                     (0, r.jsx)("img", {
                                         src: g,
-                                        className: x.marketingButtonBackgroundImage,
+                                        className: A.marketingButtonBackgroundImage,
                                         alt: "",
                                         "aria-hidden": !0,
                                     }),
@@ -431,17 +431,17 @@ let L = (e) => {
                 },
                 listItemRef: l,
             };
-        if (o) return (0, r.jsx)(B, Z(A({}, u), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(B, Z(x({}, u), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case S.k2.TOOLTIP:
-                    return (0, r.jsx)(G, Z(A({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(G, Z(x({}, u), { displayOptions: s }));
                 case S.k2.COACHTIP:
-                    return (0, r.jsx)(U, Z(A({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(U, Z(x({}, u), { displayOptions: s }));
                 case S.k2.BADGE:
-                    return (0, r.jsx)(k, A({}, u));
+                    return (0, r.jsx)(k, x({}, u));
                 case S.k2.COACHMARK:
-                    return (0, r.jsx)(V, Z(A({ dismissContent: c }, u), { displayOptions: s }));
+                    return (0, r.jsx)(V, Z(x({ dismissContent: c }, u), { displayOptions: s }));
             }
-        return (0, r.jsx)(D, A({}, u));
+        return (0, r.jsx)(D, x({}, u));
     };

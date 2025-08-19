@@ -3,13 +3,13 @@ var r = n(951288),
     o = n(647438),
     a = n(481060),
     i = n(661111),
-    s = n(766411),
-    l = n(626135),
-    c = n(388080),
+    l = n(766411),
+    c = n(626135),
+    s = n(388080),
     d = n(981631),
     u = n(596401),
-    p = n(388032),
-    m = n(344396);
+    m = n(388032),
+    p = n(344396);
 function b(e, t, n) {
     return (
         t in e
@@ -23,7 +23,7 @@ function b(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-class h extends o.PureComponent {
+class _ extends o.PureComponent {
     componentDidMount() {
         (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
@@ -49,8 +49,8 @@ class h extends o.PureComponent {
     render() {
         var e, t;
         return (0, r.jsx)(
-            c.Z,
-            ((e = _({}, this.props)),
+            s.Z,
+            ((e = h({}, this.props)),
             (t = t =
                 {
                     onClose: this.close,
@@ -90,35 +90,35 @@ class h extends o.PureComponent {
                     r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: o } = t.props,
                     { date: a, revision: i } = o,
-                    s = _({ change_log_id: "".concat(a, ":").concat(i) }, n);
+                    l = h({ change_log_id: "".concat(a, ":").concat(i) }, n);
                 r ||
-                    (s = _(
+                    (l = h(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
                         },
-                        s,
+                        l,
                     )),
-                    l.default.track(e, s);
+                    c.default.track(e, l);
             });
     }
 }
 function g(e) {
-    let { changelog: t, loaded: n, clientTooOld: l } = (0, s.E)();
+    let { changelog: t, loaded: n, clientTooOld: c } = (0, l.E)();
     if (
         (o.useEffect(() => {
             if (n && null != t) return () => i.Z.markChangelogAsSeen(t.id, t.date);
         }, [n, t]),
-        l)
+        c)
     )
         return (0, r.jsx)(a.Y0X, {
             transitionState: e.transitionState,
             parentComponent: "ChangeLog",
             children: (0, r.jsx)("div", {
-                className: m.empty,
+                className: p.empty,
                 children: (0, r.jsx)(a.X6q, {
                     variant: "heading-lg/medium",
-                    children: p.intl.string(p.t.V9ospq),
+                    children: m.intl.string(m.t.V9ospq),
                 }),
             }),
         });
@@ -128,10 +128,10 @@ function g(e) {
                 transitionState: e.transitionState,
                 parentComponent: "ChangeLog",
                 children: (0, r.jsx)("div", {
-                    className: m.empty,
+                    className: p.empty,
                     children: (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
-                        children: p.intl.string(p.t.O1iRT0),
+                        children: m.intl.string(m.t.O1iRT0),
                     }),
                 }),
             });
@@ -140,13 +140,13 @@ function g(e) {
                 transitionState: e.transitionState,
                 parentComponent: "ChangeLog",
                 children: (0, r.jsx)("div", {
-                    className: m.empty,
+                    className: p.empty,
                     children: (0, r.jsx)(a.$jN, { type: a.$jN.Type.WANDERING_CUBES }),
                 }),
             });
     return (0, r.jsx)(a.Y0X, {
         transitionState: e.transitionState,
         parentComponent: "ChangeLog",
-        children: (0, r.jsx)(h, { changeLog: t }),
+        children: (0, r.jsx)(_, { changeLog: t }),
     });
 }

@@ -111,8 +111,8 @@ function P(e) {
             heroArtClassName: N,
             modalDismissibleContent: P,
             modalTopExtra: j,
-            header: x,
-            headerClassName: A,
+            header: A,
+            headerClassName: x,
             subHeader: Z,
             subHeaderExtra: w,
             featureCards: L,
@@ -127,13 +127,13 @@ function P(e) {
         [H, F] = i.useState(Date.now()),
         [z, W] = i.useState(0),
         [Y, K] = i.useState(0),
-        [q, X] = i.useState(!1),
-        [Q, J] = i.useState(!0),
+        [q, Q] = i.useState(!1),
+        [X, J] = i.useState(!0),
         $ = i.useRef(H),
         ee = i.useRef(z),
         et = i.useRef(Y),
         en = i.useRef(q),
-        er = i.useRef(Q),
+        er = i.useRef(X),
         [ei, el] = i.useState(S),
         ea = i.useRef(!1);
     function eo() {
@@ -177,8 +177,8 @@ function P(e) {
             [ei],
         ),
         i.useEffect(() => {
-            ($.current = H), (ee.current = z), (et.current = Y), (en.current = q), (er.current = Q);
-        }, [H, z, Y, q, Q]),
+            ($.current = H), (ee.current = z), (et.current = Y), (en.current = q), (er.current = X);
+        }, [H, z, Y, q, X]),
         i.useEffect(
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
@@ -228,8 +228,8 @@ function P(e) {
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: "display-md",
-                            className: a()(v.headerText, A),
-                            children: x,
+                            className: a()(v.headerText, x),
+                            children: A,
                         }),
                         "video" === l.type
                             ? (0, r.jsx)(f.Z, {
@@ -244,17 +244,17 @@ function P(e) {
                                   onPlay: (e) => {
                                       b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }),
                                           F(Date.now()),
-                                          X(!0),
+                                          Q(!0),
                                           J(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      eo(), J(e.currentTarget.muted), X(!1);
+                                      eo(), J(e.currentTarget.muted), Q(!1);
                                   },
                                   onVolumeChange: (e) => {
                                       eo(), J(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      eo(), J(e.currentTarget.muted), X(!1);
+                                      eo(), J(e.currentTarget.muted), Q(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:

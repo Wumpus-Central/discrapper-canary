@@ -61,15 +61,15 @@ let p = o().defaultRules.lheading,
     f = o().defaultRules.image,
     b = o().defaultRules.list,
     h = o().defaultRules.blockQuote,
-    y = o().defaultRules.paragraph,
-    O = /\{(.+?)}/,
+    O = o().defaultRules.paragraph,
+    y = /\{(.+?)}/,
     v = /^\$(\w+?)\$/;
 r = n(235375);
 let j = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
-            let l = O.exec(e[1]),
-                i = e[1].replace(O, "");
+            let l = y.exec(e[1]),
+                i = e[1].replace(y, "");
             return (
                 t && (i = i.toUpperCase()),
                 {
@@ -118,7 +118,7 @@ let j = (e) => {
             ),
             paragraph: u(
                 {},
-                y,
+                O,
                 "function" == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph,
             ),
         });

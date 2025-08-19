@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X });
+n.d(t, { Z: () => Q });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(775451),
     P = n(451478),
     j = n(526167),
-    x = n(63063),
-    A = n(113434),
+    A = n(63063),
+    x = n(113434),
     Z = n(833435),
     w = n(150560),
     L = n(672188),
@@ -86,7 +86,7 @@ function q(e) {
         onLoad: t,
     });
 }
-let X = function () {
+let Q = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
@@ -114,12 +114,12 @@ let X = function () {
         { showBetaTag: W } = S.Z.useExperiment({ location: B.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
             if (L) return void window.open(V.EYA.PAID_TERMS_ORBS);
-            window.open(x.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
+            window.open(A.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
-        X = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
-        Q = i.useRef(null),
+        Q = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
+        X = i.useRef(null),
         J = i.useCallback(() => {
             (0, C.Y)({
                 pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -139,10 +139,10 @@ let X = function () {
             className: z.container,
             children: L
                 ? (0, r.jsx)(U.t.Provider, {
-                      value: Q,
+                      value: X,
                       children: (0, r.jsxs)(I.Z, {
                           onScroll: l,
-                          ref: Q,
+                          ref: X,
                           children: [
                               (0, r.jsx)(v.a, {
                                   selectedTabId: e,
@@ -158,7 +158,7 @@ let X = function () {
                               }),
                               (0, r.jsxs)(_.Z, {
                                   title: K,
-                                  description: X,
+                                  description: Q,
                                   betaTag: L && W,
                                   button: L
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -198,7 +198,7 @@ let X = function () {
                               }),
                               (0, r.jsx)(O.Z, {
                                   children:
-                                      e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
+                                      e === x.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
                               }),
                           ],
                       }),
@@ -214,14 +214,14 @@ let X = function () {
                               ],
                           }),
                           (0, r.jsx)(U.t.Provider, {
-                              value: Q,
+                              value: X,
                               children: (0, r.jsxs)(I.Z, {
                                   onScroll: l,
-                                  ref: Q,
+                                  ref: X,
                                   children: [
                                       (0, r.jsxs)(_.Z, {
                                           title: K,
-                                          description: X,
+                                          description: Q,
                                           button: (0, r.jsx)(u.zxk, {
                                               variant: "overlay-primary",
                                               text: F.intl.string(F.t.hvVgAQ),
@@ -247,7 +247,7 @@ let X = function () {
                                                       onTabSelect: t,
                                                   }),
                                               }),
-                                              e === A.e5.CLAIMED
+                                              e === x.e5.CLAIMED
                                                   ? (0, r.jsx)(m, { onSelectTab: t })
                                                   : (0, r.jsx)(R.Z, {}),
                                           ],

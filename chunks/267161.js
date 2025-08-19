@@ -30,8 +30,8 @@ var r = n(951288),
     T = n(340137),
     P = n(522474),
     j = n(51596),
-    x = n(141321),
-    A = n(819439),
+    A = n(141321),
+    x = n(819439),
     Z = n(296241),
     w = n(165017),
     L = n(984802),
@@ -50,8 +50,8 @@ var r = n(951288),
     Y = n(741764),
     K = n(408491),
     q = n(388032),
-    X = n(345909),
-    Q = n(82504);
+    Q = n(345909),
+    X = n(82504);
 function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -125,7 +125,7 @@ function et(e) {
     null != v && I
         ? ((t = v.name),
           (S = (0, r.jsx)("img", {
-              className: Q.appIcon,
+              className: X.appIcon,
               alt: q.intl.string(q.t.X4IxWF),
               src: C,
               "aria-hidden": !0,
@@ -140,7 +140,7 @@ function et(e) {
                         guild: m,
                         size: y.Z.Sizes.MINI,
                         active: !0,
-                        className: Q.guildIcon,
+                        className: X.guildIcon,
                     })),
               (t = m.name))
             : null != h && (h.isDM() || h.isGroupDM())
@@ -154,7 +154,7 @@ function et(e) {
                     : d.pathname.startsWith(z.Z5c.FRIENDS)
                       ? ((t = q.intl.string(q.t.TdEu5e)), (S = (0, r.jsx)(u.iFz, { size: "xs" })))
                       : d.pathname.startsWith(z.Z5c.FAMILY_CENTER) &&
-                        ((t = q.intl.string(X.default.RZqaJi)), (S = (0, r.jsx)(u.BFJ, { size: "xs" })));
+                        ((t = q.intl.string(Q.default.RZqaJi)), (S = (0, r.jsx)(u.BFJ, { size: "xs" })));
     let T = i.useCallback((e) => {
         (0, j.ZN)("fast-travel");
     }, []);
@@ -163,7 +163,7 @@ function et(e) {
         : (0, r.jsx)(u.ua7, {
               shouldShow: l,
               "aria-label": q.intl.string(q.t["7P/+q6"]),
-              tooltipContentClassName: Q.navigationTooltip,
+              tooltipContentClassName: X.navigationTooltip,
               text: (0, r.jsxs)(r.Fragment, {
                   children: [
                       q.intl.string(q.t["7P/+q6"]),
@@ -175,7 +175,7 @@ function et(e) {
               children: (e) =>
                   (0, r.jsxs)(
                       u.P3F,
-                      $(J({ className: a()(Q.title, { [Q.fastTravel]: l }) }, e, s), {
+                      $(J({ className: a()(X.title, { [X.fastTravel]: l }) }, e, s), {
                           onClick: l ? T : void 0,
                           children: [
                               S,
@@ -215,7 +215,7 @@ function en(e) {
 function er(e) {
     let { withFastTravel: t, focusSectionProps: n } = e,
         i = (0, c.e7)([k.Z], () => k.Z.getChannelId()),
-        l = (0, A.$)({ location: "TitleText" }),
+        l = (0, x.$)({ location: "TitleText" }),
         a = (0, c.e7)([R.Z], () => {
             let e = R.Z.getChannel(i);
             return null != e && !e.isDirectory() && !e.isGuildVocal();
@@ -250,7 +250,7 @@ let ei = i.memo(function () {
     }, []);
     let N = (0, L.Ll)(),
         j = (0, c.e7)([U.Z, P.Z], () => (0, H.rB)()),
-        A = (function (e) {
+        x = (function (e) {
             let {
                 showBackForwardButtons: t,
                 showCollapsedSidebarIcons: n,
@@ -294,15 +294,15 @@ let ei = i.memo(function () {
                                       s &&
                                           (0, r.jsx)(b.Z, {
                                               firstElementFocusJumpSectionProps:
-                                                  "BACK_FORWARD_NAVIGATION" === A ? e : void 0,
+                                                  "BACK_FORWARD_NAVIGATION" === x ? e : void 0,
                                           }),
                                       _ &&
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)(
                                                       u.P3F,
-                                                      $(J({}, "SIDEBAR" === A ? e : {}), {
-                                                          className: Q.button,
+                                                      $(J({}, "SIDEBAR" === x ? e : {}), {
+                                                          className: X.button,
                                                           onClick: () => {
                                                               ee.setState({ isOpen: !ee.getState().isOpen });
                                                           },
@@ -310,7 +310,7 @@ let ei = i.memo(function () {
                                                       }),
                                                   ),
                                                   (0, r.jsx)(u.P3F, {
-                                                      className: Q.button,
+                                                      className: X.button,
                                                       onClick: () => {
                                                           d.Z.open(z.oAB.ACCOUNT);
                                                       },
@@ -323,32 +323,32 @@ let ei = i.memo(function () {
                                           }),
                                       O &&
                                           (0, r.jsx)(T.Z, {
-                                              focusSectionProps: "NOTIFICATIONS_INBOX" === A ? e : void 0,
+                                              focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0,
                                           }),
                                   ],
                               }),
                               title: (0, r.jsx)(er, {
                                   withFastTravel: o,
-                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === A ? e : void 0,
+                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === x ? e : void 0,
                               }),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(E.Z, { className: Q.button }),
+                                      (0, r.jsx)(E.Z, { className: X.button }),
                                       (0, r.jsx)(h.Z, {
                                           canShowReminder: !0,
-                                          className: Q.button,
+                                          className: X.button,
                                       }),
-                                      y && (0, r.jsx)(x.Z, $(J({}, "RECENTS" === A ? e : {}), { className: Q.button })),
+                                      y && (0, r.jsx)(A.Z, $(J({}, "RECENTS" === x ? e : {}), { className: X.button })),
                                       p
                                           ? (0, r.jsx)(I.Z, {
-                                                focusSectionProps: "HELP" === A ? e : void 0,
-                                                className: Q.button,
+                                                focusSectionProps: "HELP" === x ? e : void 0,
+                                                className: X.button,
                                             })
                                           : (0, r.jsx)(v.Z, {
-                                                focusSectionProps: "HELP" === A ? e : void 0,
-                                                className: Q.button,
+                                                focusSectionProps: "HELP" === x ? e : void 0,
+                                                className: X.button,
                                             }),
-                                      (0, r.jsx)(C.Z, { className: Q.button }),
+                                      (0, r.jsx)(C.Z, { className: X.button }),
                                   ],
                               }),
                           }),
@@ -358,7 +358,7 @@ let ei = i.memo(function () {
 function el() {
     return (0, r.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
-        className: Q.icon,
+        className: X.icon,
         width: "24",
         height: "24",
         viewBox: "0 0 24 24",

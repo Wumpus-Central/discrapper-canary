@@ -15,8 +15,8 @@ var l = n(442837),
     f = n(485386),
     b = n(944486),
     h = n(626135),
-    y = n(524444),
-    O = n(981631),
+    O = n(524444),
+    y = n(981631),
     v = n(176505),
     j = n(388032),
     P = n(804309);
@@ -68,7 +68,7 @@ let C = (e) => {
         { name: C } = t;
     (0, i.ZP)(() => {
         h.default.track(
-            O.rMx.OPEN_POPOUT,
+            y.rMx.OPEN_POPOUT,
             x(
                 {
                     type: "Role Icon Popout",
@@ -78,27 +78,27 @@ let C = (e) => {
             ),
         );
     });
-    let S = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
-        E = (0, p.Z)(S),
-        N = E
+    let N = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
+        S = (0, p.Z)(N),
+        E = S
             ? j.intl.formatToPlainString(j.t.t0928f, { name: C })
             : j.intl.formatToPlainString(j.t.UDDkGx, { name: C }),
-        R = w(x({}, t), {
+        Z = w(x({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40,
         }),
-        T = E
+        R = S
             ? () => {
-                  (0, m.uL)(O.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
+                  (0, m.uL)(y.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: O.jXE.ROLE_ICON_POPOUT },
+                      location: { section: y.jXE.ROLE_ICON_POPOUT },
                   });
               };
     return (0, r.jsx)(o.VqE, {
-        children: (0, r.jsx)(y.W_, {
+        children: (0, r.jsx)(O.W_, {
             children: (0, r.jsxs)("div", {
                 className: P.popoutContainer,
                 children: [
@@ -109,7 +109,7 @@ let C = (e) => {
                                 className: P.roleIconContainer,
                                 children: (0, r.jsx)(
                                     c.Z,
-                                    w(x({}, R), {
+                                    w(x({}, Z), {
                                         enableTooltip: !1,
                                         className: P.__invalid_roleIcon,
                                         enableHeight: !1,
@@ -126,7 +126,7 @@ let C = (e) => {
                                     }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/normal",
-                                        children: N,
+                                        children: E,
                                     }),
                                 ],
                             }),
@@ -136,7 +136,7 @@ let C = (e) => {
                         size: "sm",
                         variant: "secondary",
                         text: j.intl.string(j.t["H930+P"]),
-                        onClick: T,
+                        onClick: R,
                         icon: o.$Eu,
                         fullWidth: !0,
                         autoFocus: !0,

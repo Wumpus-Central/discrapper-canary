@@ -5,17 +5,34 @@ let a = (0, r.B)({
     kind: "user",
     id: "2025-07_image_attachment_mezzanine",
     label: "Convert attachment images to WebP format for size optimization",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+        compressOversizedClipboard: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Control - No WebP conversion",
-            config: { enabled: !1 },
+            config: {
+                enabled: !1,
+                compressOversizedClipboard: !1,
+            },
         },
         {
             id: 2,
             label: "WebP conversion enabled",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+                compressOversizedClipboard: !1,
+            },
+        },
+        {
+            id: 3,
+            label: "WebP conversion + compress oversized clipboard",
+            config: {
+                enabled: !0,
+                compressOversizedClipboard: !0,
+            },
         },
     ],
 });

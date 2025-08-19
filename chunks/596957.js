@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(617015),
     P = n(981631),
     j = n(388032),
-    x = n(983703);
-function A(e) {
+    A = n(983703);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,14 +77,14 @@ function L() {
 function R() {
     (0, c.ZDy)(async () => {
         let { default: e } = await n.e("36312").then(n.bind(n, 153932));
-        return (t) => (0, r.jsx)(e, A({}, t));
+        return (t) => (0, r.jsx)(e, x({}, t));
     });
 }
 function D(e) {
     let { section: t, showSpamCta: n } = e,
         l = i.useMemo(() => (n ? R : t !== P.pJs.PENDING ? L : void 0), [n, t]);
     return (0, r.jsx)("div", {
-        className: x.emptyStateContainer,
+        className: A.emptyStateContainer,
         children: (0, r.jsx)(
             y.Z,
             {
@@ -137,25 +137,25 @@ let k = function (e) {
                     })(e, ["key"]);
                 switch (u) {
                     case P.pJs.PENDING:
-                        return (0, r.jsx)(v.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(v.Z, Z(x({}, n), { isFocused: L }), t);
                     case P.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(N.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(N.Z, Z(x({}, n), { isFocused: L }), t);
                     case P.pJs.ONLINE:
                     case P.pJs.ALL:
                     default:
-                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(E.Z, Z(x({}, n), { isFocused: L }), t);
                 }
             },
             [L, u],
         ),
         V = i.useCallback(
             (e) => {
-                G(Z(A({}, U), { [u]: e }));
+                G(Z(x({}, U), { [u]: e }));
             },
             [U, u],
         ),
         H = i.useCallback(() => {
-            G(Z(A({}, U), { [u]: "" }));
+            G(Z(x({}, U), { [u]: "" }));
         }, [U, u]),
         F = i.useMemo(
             () =>
@@ -190,8 +190,8 @@ let k = function (e) {
             }
         }, [z, u]),
         q = i.useMemo(() => z.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [z]),
-        X = u === P.pJs.PENDING && q > 0 && q >= T.yf,
-        Q = i.useCallback(
+        Q = u === P.pJs.PENDING && q > 0 && q >= T.yf,
+        X = i.useCallback(
             (e) => {
                 e.stopPropagation(), d.Z.confirmClearPendingRelationships(q);
             },
@@ -217,19 +217,19 @@ let k = function (e) {
                     ? (0, r.jsxs)(
                           "div",
                           {
-                              className: x.sectionTitle,
+                              className: A.sectionTitle,
                               children: [
                                   (0, r.jsx)(S.Z, {
                                       id: t,
                                       title: n,
                                   }),
-                                  X &&
+                                  Q &&
                                       (0, r.jsx)(s.zx, {
                                           look: s.iL.LINK,
                                           color: s.Tt.LINK,
-                                          className: x.clearButton,
+                                          className: A.clearButton,
                                           size: s.zx.Sizes.TINY,
-                                          onClick: Q,
+                                          onClick: X,
                                           "aria-label": j.intl.string(j.t.O8k7Oz),
                                           children: j.intl.string(j.t.O8k7Oz),
                                       }),
@@ -240,7 +240,7 @@ let k = function (e) {
                     : (0, r.jsx)(
                           "div",
                           {
-                              className: x.sectionTitle,
+                              className: A.sectionTitle,
                               children: (0, r.jsx)(S.Z, {
                                   id: t,
                                   title: n,
@@ -249,7 +249,7 @@ let k = function (e) {
                           n,
                       );
             },
-            [K, u, t, X, Q],
+            [K, u, t, Q, X],
         );
     if (
         (i.useEffect(() => {
@@ -270,7 +270,7 @@ let k = function (e) {
             children: [
                 M && (0, r.jsx)(C.R, {}),
                 (0, r.jsx)(c.E1j, {
-                    className: a()(x.searchBar, ee ? x.searchEmptyState : null),
+                    className: a()(A.searchBar, ee ? A.searchEmptyState : null),
                     query: U[u],
                     onChange: V,
                     onClear: H,
@@ -286,8 +286,8 @@ let k = function (e) {
                         F && !ee
                             ? (0, r.jsx)(s.zx, {
                                   look: s.zx.Looks.LINK,
-                                  color: x.viewSpamButtonColor,
-                                  className: x.viewSpamButton,
+                                  color: A.viewSpamButtonColor,
+                                  className: A.viewSpamButton,
                                   onClick: R,
                                   size: s.Ph.TINY,
                                   children: (0, r.jsx)(c.Text, {
@@ -299,7 +299,7 @@ let k = function (e) {
                 }),
                 ee &&
                     (0, r.jsx)("div", {
-                        className: x.emptyStateContainer,
+                        className: A.emptyStateContainer,
                         children: (0, r.jsx)(y.Z, { type: y.j.SECTION_NO_RESULTS }, u),
                     }),
             ],

@@ -1,6 +1,6 @@
 n.d(t, {
-    Co: () => X,
-    ZP: () => Q,
+    Co: () => Q,
+    ZP: () => X,
     bZ: () => q,
     gt: () => B,
 }),
@@ -32,8 +32,8 @@ var r,
     T = n(504160),
     P = n(151864),
     j = n(835184),
-    x = n(725436),
-    A = n(497656),
+    A = n(725436),
+    x = n(497656),
     Z = n(79874),
     w = n(554747),
     L = n(230900),
@@ -145,7 +145,7 @@ function V(e) {
                       className: G.stageIcon,
                   })
                 : null,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 1,
@@ -179,7 +179,7 @@ function F(e) {
     var t;
     let { guildEvent: n, noticeType: r } = e,
         a = (0, L.cS)(n),
-        s = null != a ? (0, x.m)(a, !0) : null,
+        s = null != a ? (0, A.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
         { startTime: f, endTime: h } = (0, Z.ZP)(n),
@@ -292,7 +292,7 @@ function z(e) {
               onClickCloseIcon: () => (0, T.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: U.intl.string(U.t["1+boPj"]),
               topic: t.name,
-              location: (0, x.m)(n, !0),
+              location: (0, A.m)(n, !0),
               locationIcon: (0, i.jsx)(c._tJ, {
                   size: "custom",
                   color: "currentColor",
@@ -363,7 +363,7 @@ function K(e) {
             className: G.stageIcon,
         }),
         topic: t.topic,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 2,
@@ -371,7 +371,7 @@ function K(e) {
     });
 }
 var q = (((r = {})[(r.VOICE = 1)] = "VOICE"), (r[(r.STAGE = 2)] = "STAGE"), (r[(r.STUDY_ROOM = 3)] = "STUDY_ROOM"), r);
-function X(e) {
+function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
@@ -426,10 +426,10 @@ function X(e) {
               ],
           });
 }
-let Q = l.memo(function (e) {
+let X = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
-        r = (0, A.y)(t.id),
+        r = (0, x.y)(t.id),
         l = (0, w.k5)(t.id),
         a = (0, w.Vm)(t.id),
         o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),

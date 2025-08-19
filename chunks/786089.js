@@ -25,8 +25,8 @@ var r = n(951288),
     N = n(388032),
     T = n(199679);
 let P = (0, i.memo)(function (e) {
-    var t, n, l, P, j, x;
-    let { quest: A } = e,
+    var t, n, l, P, j, A;
+    let { quest: x } = e,
         [Z, w] = (0, i.useState)(!1),
         [L, R] = (0, i.useState)(24),
         [D, k] = (0, i.useState)(!1),
@@ -36,17 +36,17 @@ let P = (0, i.memo)(function (e) {
         B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         { ref: V, height: H = 0 } = (0, p.ZP)(),
         F = (0, f.ZP)(),
-        z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
+        z = (0, O.B6)(null == (t = x.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
             day: "numeric",
         }),
-        W = null != (j = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? j : 0,
-        Y = A.config.rewards[W],
+        W = null != (j = null == (n = x.userStatus) ? void 0 : n.claimedTier) ? j : 0,
+        Y = x.config.rewards[W],
         K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
         q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
-        X = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
-        Q = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
-        J = (null == Q ? void 0 : Q.type) === o.Z.AVATAR_DECORATION ? Q : null;
+        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
         if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
@@ -56,8 +56,8 @@ let P = (0, i.memo)(function (e) {
         R((r.top - n.top - i.height) / 2);
     });
     let $ = (0, u.wj)(F),
-        ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
-        et = (0, i.useMemo)(() => (0, y.fh)(A, y.eC.REWARD), [A]),
+        ee = (0, i.useMemo)(() => null != x.config.cosponsorMetadata, [x]),
+        et = (0, i.useMemo)(() => (0, y.fh)(x, y.eC.REWARD), [x]),
         en = Z ? H + 8 : 0,
         er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
@@ -110,7 +110,7 @@ let P = (0, i.memo)(function (e) {
                                 });
                         }
                         return e;
-                    })({ quest_id: A.id }, ea),
+                    })({ quest_id: x.id }, ea),
                 );
         },
         es = () => w(!1),
@@ -119,7 +119,7 @@ let P = (0, i.memo)(function (e) {
                 b.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: A.id,
+                    quest_id: x.id,
                 });
         };
     return null == Y || D
@@ -149,7 +149,7 @@ let P = (0, i.memo)(function (e) {
                           }),
                       K
                           ? (0, r.jsx)(v.Z, { className: T.image })
-                          : X
+                          : Q
                             ? (0, r.jsx)(I.Z, { className: T.image })
                             : et.isAnimated
                               ? (0, r.jsx)(g.Z, {
@@ -157,14 +157,14 @@ let P = (0, i.memo)(function (e) {
                                     autoPlay: !1,
                                     children: (0, r.jsx)("source", {
                                         src: et.url,
-                                        type: null != (x = et.mimetype) ? x : void 0,
+                                        type: null != (A = et.mimetype) ? A : void 0,
                                         onError: () => ec(et.url),
                                     }),
                                 })
                               : (0, r.jsx)("img", {
                                     className: T.image,
                                     src: et.url,
-                                    alt: A.config.messages.questName,
+                                    alt: x.config.messages.questName,
                                     onError: () => ec(et.url),
                                 }),
                       (0, r.jsx)("div", {
@@ -179,7 +179,7 @@ let P = (0, i.memo)(function (e) {
                           style: { transform: "translateY(-".concat(en, "px)") },
                           children: (0, r.jsx)(C.ZP, {
                               logotypeClassName: a()(T.logo, { [T.logoWithCosponsor]: ee }),
-                              quest: A,
+                              quest: x,
                               withGameTile: !1,
                           }),
                       }),
@@ -191,7 +191,7 @@ let P = (0, i.memo)(function (e) {
                                   className: T.title,
                                   variant: "heading-md/semibold",
                                   color: "always-white",
-                                  children: N.intl.format(N.t.EAYZAg, { questName: A.config.messages.questName }),
+                                  children: N.intl.format(N.t.EAYZAg, { questName: x.config.messages.questName }),
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",

@@ -1,9 +1,9 @@
 n.d(t, { x: () => u }), n(953529);
 var i = n(951288),
     l = n(120356),
-    s = n.n(l),
+    r = n.n(l),
     o = n(793030),
-    r = n(481060),
+    s = n(481060),
     a = n(845442);
 function u(e) {
     let {
@@ -16,8 +16,8 @@ function u(e) {
         compact: f = !1,
         onClick: g,
     } = e;
-    return (0, i.jsxs)(r.P3F, {
-        className: s()(a.baseControlItem, { [a.compact]: f }),
+    return (0, i.jsxs)(s.P3F, {
+        className: r()(a.baseControlItem, { [a.compact]: f }),
         onClick: g,
         children: [
             null != t &&

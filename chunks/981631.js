@@ -2717,7 +2717,6 @@ var tB = (function (e) {
             (e.IOS_TWO_FA_VERIFY_SMS = "Two Factor Auth Verify SMS"),
             (e.IOS_CANNOT_MANAGE_SUBSCRIPTION = "iOS Cannot Manage Subscription"),
             (e.PREMIUM_GUILD_INVITE_SPLASH = "Premium Guild Invite Splash"),
-            (e.PREMIUM_GUILD_PROGRESS_BAR = "Premium Guild Progress Bar"),
             (e.PREMIUM_GUILD_SUBSCRIBE_MODAL = "Premium Guild Subscribe Modal"),
             (e.PREMIUM_GUILD_SUBSCRIBE_CONFIRMATION_MODAL = "Premium Guild Subscribe Confirmation Modal"),
             (e.PREMIUM_GUILD_UNSUBSCRIBE_MODAL = "Premium Guild Unsubscribe Modal"),

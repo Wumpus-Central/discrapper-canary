@@ -4,16 +4,16 @@ r.d(t, {
 }),
     r(388685);
 var n = r(647438),
-    o = r(782568),
-    a = r(49012),
+    a = r(782568),
+    o = r(49012),
     s = r(617136),
     i = r(272008);
 function l(e) {
     let {
             isClaimingReward: t,
             isFetchingRewardCode: r,
-            questContent: o,
-            quest: a,
+            questContent: a,
+            quest: o,
             requiresPlatformSelection: s,
             rewardCode: l,
             selectedPlatformType: c,
@@ -46,10 +46,10 @@ function l(e) {
                 r ||
                 s ||
                 (p(!1),
-                (null == (e = a.userStatus) ? void 0 : e.claimedAt) == null && null != c
-                    ? _(a.id, c, o)
-                    : (null == (n = a.userStatus) ? void 0 : n.claimedAt) != null && C(a.id));
-        }, [_, C, u, t, m, r, o, a, s, l, c, d]),
+                (null == (e = o.userStatus) ? void 0 : e.claimedAt) == null && null != c
+                    ? _(o.id, c, a)
+                    : (null == (n = o.userStatus) ? void 0 : n.claimedAt) != null && C(o.id));
+        }, [_, C, u, t, m, r, a, o, s, l, c, d]),
         {
             claimCode: _,
             fetchCode: C,
@@ -106,7 +106,7 @@ function c(e) {
                         questContentPosition: m,
                         sourceQuestContent: h,
                     }),
-                    (0, a.q)({
+                    (0, o.q)({
                         href: C,
                         onConfirm: () => {
                             b({
@@ -116,7 +116,7 @@ function c(e) {
                                 questContentPosition: m,
                                 sourceQuestContent: h,
                             }),
-                                (0, o.Z)(C);
+                                (0, a.Z)(C);
                         },
                     })),
                 c());

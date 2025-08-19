@@ -158,6 +158,7 @@ function K(e) {
             (0, r.jsx)("div", {
                 ref: g,
                 children: (0, r.jsx)(u.Y0X, {
+                    "data-migration-pending": !0,
                     transitionState: n,
                     size: u.CgR.DYNAMIC,
                     className: o()(G.rootContainer, { [G.rootContainerLoading]: x }),
@@ -236,6 +237,7 @@ function q(e) {
                     (0, r.jsx)("div", {
                         className: G.headerForeground,
                         children: (0, r.jsx)(u.olH, {
+                            "data-migration-pending": !0,
                             className: G.close,
                             withCircleBackground: !0,
                             onClick: o,
@@ -244,6 +246,7 @@ function q(e) {
                 ],
             }),
             (0, r.jsx)(u.mzw, {
+                "data-migration-pending": !0,
                 separator: !1,
                 children: (0, r.jsxs)("div", {
                     className: G.footerBody,

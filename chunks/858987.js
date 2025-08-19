@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => O,
-    Z: () => I,
+    K: () => v,
+    Z: () => T,
 }),
     n(997841);
 var r = n(951288);
@@ -14,11 +14,12 @@ var i = n(512722),
     u = n(630388),
     d = n(74538),
     f = n(296848),
-    _ = n(244923),
-    p = n(981631),
-    h = n(231338),
-    m = n(388032);
-function g(e, t, n) {
+    _ = n(212029),
+    p = n(244923),
+    h = n(981631),
+    m = n(231338),
+    g = n(388032);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +43,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,18 +60,18 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
+function v(e) {
     let {
         purchaseType: t,
         plan: n,
@@ -83,28 +84,28 @@ function O(e) {
         paymentSourceId: u,
         hasPaymentSources: _,
     } = e;
-    if (null === u && _) return m.intl.string(m.t.CpOiEB);
-    if (t === h.GZ.ONE_TIME) return o ? m.intl.string(m.t.ouo4FB) : m.intl.string(m.t.ExD0Nj);
-    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === p.POd.BOOST))
-        return m.intl.string(m.t.eUEeCg);
-    if (o) return m.intl.string(m.t.ouo4FB);
-    if (c) return m.intl.string(m.t.LQVQIi);
+    if (null === u && _) return g.intl.string(g.t.CpOiEB);
+    if (t === m.GZ.ONE_TIME) return o ? g.intl.string(g.t.ouo4FB) : g.intl.string(g.t.ExD0Nj);
+    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === h.POd.BOOST))
+        return g.intl.string(g.t.eUEeCg);
+    if (o) return g.intl.string(g.t.ouo4FB);
+    if (c) return g.intl.string(g.t.LQVQIi);
     if ((0, d.PV)(n.id))
         return l
-            ? m.intl.string(m.t.cRCCJy)
+            ? g.intl.string(g.t.cRCCJy)
             : null != r
               ? r.isPausedAllowsResumeButNotUpdates
-                  ? m.intl.string(m.t.zpi5pq)
+                  ? g.intl.string(g.t.zpi5pq)
                   : (0, f.R4)(r, n.id, s)
-                    ? m.intl.string(m.t.IJI7ys)
-                    : m.intl.string(m.t.VPuTc3)
+                    ? g.intl.string(g.t.IJI7ys)
+                    : g.intl.string(g.t.VPuTc3)
               : (0, d.W_)(null, n);
-    return m.intl.string(m.t.YScQSE);
+    return g.intl.string(g.t.YScQSE);
 }
-function v(e, t) {
+function I(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-function I(e) {
+function T(e) {
     var t;
     let {
             legalTermsNodeRef: n,
@@ -112,79 +113,82 @@ function I(e) {
             planError: a,
             disablePurchase: d,
             flashLegalTerms: f,
-            isSubmitting: h,
-            premiumSubscription: g,
-            isGift: b,
-            planGroup: I,
-            isPrepaid: T,
-            isTrial: S,
-            makePurchase: A,
-            needsPaymentSource: N,
-            inReverseTrial: C,
-            onNext: R,
-            onPaymentSourceAdd: P,
+            isSubmitting: m,
+            premiumSubscription: E,
+            isGift: y,
+            planGroup: T,
+            isPrepaid: S,
+            isTrial: A,
+            makePurchase: N,
+            needsPaymentSource: C,
+            inReverseTrial: R,
+            onNext: P,
+            onPaymentSourceAdd: w,
         } = e,
         {
-            application: w,
-            selectedPlan: D,
-            hasAcceptedTerms: L,
-            purchaseType: x,
-            paymentSourceId: M,
-            activeSubscription: k,
-            devShelfFetchState: j,
-            hasPaymentSources: U,
+            application: D,
+            selectedPlan: L,
+            hasAcceptedTerms: x,
+            purchaseType: M,
+            paymentSourceId: k,
+            activeSubscription: j,
+            devShelfFetchState: U,
+            hasPaymentSources: G,
         } = (0, c.JL)(),
-        G = O({
-            purchaseType: x,
-            plan: D,
-            premiumSubscription: g,
-            isGift: b,
-            planGroup: I,
-            isPrepaidPaymentSource: T,
-            inReverseTrial: C,
-            paymentSourceId: M,
-            hasPaymentSources: U,
+        { enabled: B } = _.Z.useConfig({ location: "SubscriptionReviewButton" }),
+        V = v({
+            purchaseType: M,
+            plan: L,
+            premiumSubscription: E,
+            isGift: y,
+            planGroup: T,
+            isPrepaidPaymentSource: S,
+            inReverseTrial: R,
+            paymentSourceId: k,
+            hasPaymentSources: G,
         }),
-        { analyticsLocations: B } = (0, l.ZP)();
-    if (null != i || null != a || d)
+        { analyticsLocations: F } = (0, l.ZP)();
+    if (null != i || null != a || d) {
+        let e = y && B ? "expressive" : "active";
         return (0, r.jsx)(o.zxk, {
-            variant: "active",
-            text: G,
+            variant: e,
+            text: V,
             disabled: !0,
         });
-    if (N && U)
+    }
+    if (C && G)
         return (0, r.jsx)(o.ua7, {
-            text: m.intl.string(m.t.L7jbQU),
+            text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
                     o.zxk,
-                    y(
-                        E(
+                    O(
+                        b(
                             {
                                 variant: "primary",
-                                text: G,
+                                text: V,
                             },
                             e,
                         ),
                         {
                             type: "submit",
                             "data-testid": "submitButton",
-                            onClick: P,
+                            onClick: w,
                         },
                     ),
                 ),
         });
-    if (N && !U)
+    if (C && !G)
         return (0, r.jsx)(o.ua7, {
-            text: m.intl.string(m.t.L7jbQU),
+            text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
                     o.zxk,
-                    y(
-                        E(
+                    O(
+                        b(
                             {
                                 variant: "active",
-                                text: G,
+                                text: V,
                             },
                             e,
                         ),
@@ -196,17 +200,17 @@ function I(e) {
                     ),
                 ),
         });
-    if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
+    if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, h.udG.EMBEDDED) && U === s.O.LOADING)
         return (0, r.jsx)(o.ua7, {
-            text: m.intl.string(m.t.cjA5tr),
+            text: g.intl.string(g.t.cjA5tr),
             children: (e) =>
                 (0, r.jsx)(
                     o.zxk,
-                    y(
-                        E(
+                    O(
+                        b(
                             {
                                 variant: "active",
-                                text: G,
+                                text: V,
                             },
                             e,
                         ),
@@ -218,53 +222,61 @@ function I(e) {
                     ),
                 ),
         });
-    if (S)
+    if (A)
         return (0, r.jsx)(o.zxk, {
             variant: "expressive",
-            "data-testid": L ? "purchase" : "submitButton",
-            text: G,
-            onClick: L ? A : () => v(n, f),
-            loading: h,
+            "data-testid": x ? "purchase" : "submitButton",
+            text: V,
+            onClick: x ? N : () => I(n, f),
+            loading: m,
             iconPosition: "start",
             icon: () => (0, r.jsx)(o.SrA, { color: "currentColor" }),
         });
-    else if (!L)
+    else if (!x)
         return (0, r.jsx)(o.ua7, {
-            text: m.intl.string(m.t.XdvBLS),
+            text: g.intl.string(g.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
                     o.zxk,
-                    y(
-                        E(
+                    O(
+                        b(
                             {
                                 variant: "active",
-                                text: G,
+                                text: V,
                             },
                             e,
                         ),
                         {
                             type: "submit",
-                            onClick: () => v(n, f),
+                            onClick: () => I(n, f),
                             "data-testid": "submitButton",
                         },
                     ),
                 ),
         });
-    else if (C && null != k && null != M)
-        return (0, r.jsx)(_.Z, {
-            activeSubscription: k,
-            onNext: R,
-            isSubmitting: h,
-            paymentSourceId: M,
-            buttonLabel: G,
-            analyticsLocations: B,
+    else if (R && null != j && null != k)
+        return (0, r.jsx)(p.Z, {
+            activeSubscription: j,
+            onNext: P,
+            isSubmitting: m,
+            paymentSourceId: k,
+            buttonLabel: V,
+            analyticsLocations: F,
+        });
+    else if (y && B)
+        return (0, r.jsx)(o.zxk, {
+            variant: "expressive",
+            text: V,
+            "data-testid": "purchase",
+            onClick: N,
+            loading: m,
         });
     else
         return (0, r.jsx)(o.zxk, {
             variant: "active",
-            text: G,
+            text: V,
             "data-testid": "purchase",
-            onClick: A,
-            loading: h,
+            onClick: N,
+            loading: m,
         });
 }

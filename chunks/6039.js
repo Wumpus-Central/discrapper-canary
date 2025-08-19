@@ -65,7 +65,7 @@ let T = (e) => {
         [f, h] = i.useState(I.hO.INITIAL),
         T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
         P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
-        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
+        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: A } = (0, l.cj)([_.Z], () => ({
             hasFetchedRequestToJoinGuilds: _.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: _.Z.getJoinRequestGuild(t),
         }));
@@ -75,7 +75,7 @@ let T = (e) => {
         i.useEffect(() => {
             j || g.Z.fetchRequestToJoinGuilds();
         }, [j]);
-    let A = i.useCallback(() => {
+    let x = i.useCallback(() => {
             h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
         }, [t, f]),
         Z = (e, t) => () => {
@@ -144,14 +144,14 @@ let T = (e) => {
         w = async () => {
             await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t);
         },
-        L = Z(C.intl.format(C.t["9ZezpK"], { name: null == x ? void 0 : x.name }), A),
-        R = Z(C.intl.format(C.t.fJwWVl, { name: null == x ? void 0 : x.name }), A);
+        L = Z(C.intl.format(C.t["9ZezpK"], { name: null == A ? void 0 : A.name }), x),
+        R = Z(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), x);
     return (0, r.jsxs)("div", {
         className: S.page,
         ref: n,
         children: [
             (0, r.jsx)(N, {
-                guild: x,
+                guild: A,
                 height: u,
                 width: c,
             }),
@@ -163,7 +163,7 @@ let T = (e) => {
                         case b.wB.SUBMITTED:
                             return (0, r.jsx)(y.Z, {
                                 onWithdrawApplication: L,
-                                guild: x,
+                                guild: A,
                             });
                         case b.wB.REJECTED:
                             return (0, r.jsx)(E.Z, {
@@ -172,13 +172,13 @@ let T = (e) => {
                                 confirmText: C.intl.string(C.t.g9tK0t),
                                 onWithdrawApplication: L,
                                 rejectionReason: T.rejectionReason,
-                                guild: x,
+                                guild: A,
                             });
                         default:
                             return (0, r.jsx)(O.s, {
                                 onDiscardApplication: R,
                                 onContinueApplication: () => (0, m.hk)(t),
-                                guild: x,
+                                guild: A,
                             });
                     }
                 })(),

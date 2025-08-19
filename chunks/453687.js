@@ -39,9 +39,9 @@ function p(e, t, n) {
         f = e.codedLinks.length > 0,
         b = e.components.length > 0,
         h = e.hasFlag(o.iLy.HAS_THREAD),
-        y = p || m || g || f || h || b || e.type === o.uaV.THREAD_CREATED,
-        O = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
-        v = e.type !== o.uaV.DEFAULT || (!O && "" !== e.content),
+        O = p || m || g || f || h || b || e.type === o.uaV.THREAD_CREATED,
+        y = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
+        v = e.type !== o.uaV.DEFAULT || (!y && "" !== e.content),
         j = (0, l.Z)(e),
         P = !j && (null == n ? void 0 : n.hasTimestamp) !== !1,
         x = s(e, t),
@@ -51,7 +51,7 @@ function p(e, t, n) {
         let t = i(e);
         C += " ".concat(t);
     }
-    if (y) {
+    if (O) {
         let t = d(e);
         C += " ".concat(t);
     }

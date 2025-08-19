@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => b });
 var i = n(951288),
     l = n(647438),
-    s = n(120356),
-    o = n.n(s),
-    r = n(873546),
+    r = n(120356),
+    o = n.n(r),
+    s = n(873546),
     a = n(755721),
     u = n(481060),
     c = n(59662),
@@ -20,7 +20,7 @@ function g(e) {
         children: (0, i.jsx)(t, { size: "sm" }),
     });
 }
-function m(e) {
+function v(e) {
     let { title: t, onClose: n, setShowNavigationMobile: l } = e;
     return (0, i.jsxs)("div", {
         className: f.contentHeader,
@@ -28,7 +28,7 @@ function m(e) {
             (0, i.jsxs)("div", {
                 className: f.contentHeaderLeft,
                 children: [
-                    r.tq &&
+                    s.tq &&
                         (0, i.jsx)(g, {
                             icon: u.yFM,
                             onClick: () => l(!0),
@@ -40,7 +40,7 @@ function m(e) {
                     }),
                 ],
             }),
-            !r.tq &&
+            !s.tq &&
                 (0, i.jsx)(g, {
                     icon: u.Uz9,
                     onClick: n,
@@ -48,24 +48,24 @@ function m(e) {
         ],
     });
 }
-let v = l.memo(function (e) {
+let b = l.memo(function (e) {
     let { onClose: t, setShowNavigationMobile: n, setting: l } = e,
-        s = l.useTitle(),
+        r = null == l ? void 0 : l.useTitle(),
         { showNavigationMobile: a } = (0, c.t)();
     return (0, i.jsxs)("div", {
         className: o()(f.content, {
-            [f.mobile]: r.tq,
+            [f.mobile]: s.tq,
             [f.mobileNavigationOpen]: a,
         }),
         children: [
-            (0, i.jsx)(m, {
-                title: s,
+            (0, i.jsx)(v, {
+                title: r,
                 onClose: t,
                 setShowNavigationMobile: n,
             }),
             (0, i.jsx)(u.w0Z, {
                 className: f.contentScroller,
-                children: (0, i.jsx)(d.Z, { node: l }),
+                children: null != l && (0, i.jsx)(d.Z, { node: l }),
             }),
         ],
     });

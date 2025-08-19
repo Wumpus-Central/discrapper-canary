@@ -16,26 +16,26 @@ let b = l.lazy(() => Promise.all([n.e("51889"), n.e("85831")]).then(n.bind(n, 12
 function h(e, t) {
     let {
             hideSimpleEmbedContent: h,
-            formatInline: y = !1,
-            noStyleAndInteraction: O = !1,
+            formatInline: O = !1,
+            noStyleAndInteraction: y = !1,
             isInteracting: v = !1,
             allowHeading: j = !1,
             allowList: P = !1,
             allowLinks: x = !1,
             allowDevLinks: w = !1,
             previewLinkTarget: C = !1,
-            viewingChannelId: S,
+            viewingChannelId: N,
         } = t,
-        E = (0, i.p)(),
-        N = o.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        R = (0, p.o)({ location: "useMessageRenderedContent" }),
-        [T, Z] = l.useState(!1),
+        S = (0, i.p)(),
+        E = o.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        Z = (0, p.o)({ location: "useMessageRenderedContent" }),
+        [R, T] = l.useState(!1),
         I = l.useCallback((e) => {
-            e && Z(!0);
+            e && T(!0);
         }, []);
     return (
         l.useEffect(() => {
-            Z(!1);
+            T(!1);
         }, [e.content]),
         l.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -53,35 +53,35 @@ function h(e, t) {
                     },
                 });
             }
-            return R.enabled
+            return Z.enabled
                 ? {
                       content: (0, r.jsx)(l.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: S,
+                                  viewingChannelId: N,
                                   guildId: (0, s.k)(e),
                                   setHasSpoilerEmbeds: I,
                               },
                               children: (0, r.jsx)(b, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: T,
+                      hasSpoilerEmbeds: R,
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: h,
-                      formatInline: y,
-                      noStyleAndInteraction: O,
+                      formatInline: O,
+                      noStyleAndInteraction: y,
                       isInteracting: v,
                       allowHeading: j,
                       allowList: P,
                       allowLinks: x,
                       allowDevLinks: w,
                       previewLinkTarget: C,
-                      shouldFilterKeywords: E,
-                      viewingChannelId: S,
-                      allowGameMentions: N,
+                      shouldFilterKeywords: S,
+                      viewingChannelId: N,
+                      allowGameMentions: E,
                   });
         }, [
             e.content,
@@ -91,19 +91,19 @@ function h(e, t) {
             e.state,
             e.type,
             h,
-            y,
             O,
+            y,
             v,
             j,
             P,
             x,
             C,
-            E,
-            w,
             S,
-            R.enabled,
+            w,
             N,
-            T,
+            Z.enabled,
+            E,
+            R,
         ])
     );
 }

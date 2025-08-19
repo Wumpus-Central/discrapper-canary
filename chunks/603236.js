@@ -1,105 +1,105 @@
 n.d(t, {
-    I: () => T,
-    S: () => w,
+    I: () => S,
+    S: () => N,
 }),
     n(997841);
-var o = n(951288),
-    i = n(647438),
-    a = n(120356),
-    r = n.n(a),
-    _ = n(533800),
-    l = n(442837),
-    d = n(755721),
-    s = n(481060),
-    c = n(484614),
-    b = n(914010),
-    u = n(246946),
-    g = n(626135),
-    h = n(630388),
-    v = n(971130),
-    p = n(530436),
-    x = n(245335),
-    m = n(981631),
-    C = n(388032),
-    I = n(451964),
-    f = n(197571);
-let w = l.ZP.connectStores([u.Z], () => ({ hideValue: u.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: i, onCopy: a, disabled: r } = e;
-        return (0, o.jsx)(c.Z, {
+var i = n(951288),
+    l = n(647438),
+    r = n(120356),
+    s = n.n(r),
+    a = n(533800),
+    o = n(442837),
+    c = n(755721),
+    d = n(481060),
+    u = n(484614),
+    h = n(914010),
+    g = n(246946),
+    m = n(626135),
+    p = n(630388),
+    f = n(971130),
+    x = n(530436),
+    j = n(245335),
+    b = n(981631),
+    v = n(388032),
+    y = n(451964),
+    C = n(197571);
+let N = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: l, onCopy: r, disabled: s } = e;
+        return (0, i.jsx)(u.Z, {
             value: t,
-            hideMessage: i ? C.intl.string(C.t["6HzNgY"]) : null,
-            buttonColor: d.zx.Colors.BRAND,
-            onCopy: a,
+            hideMessage: l ? v.intl.string(v.t["6HzNgY"]) : null,
+            buttonColor: c.zx.Colors.BRAND,
+            onCopy: r,
             autoFocus: n,
-            disabled: r,
+            disabled: s,
         });
     }),
-    T = (e) => {
+    S = (e) => {
         let {
                 guild: t,
                 noInvitesAvailable: n,
-                showFriends: a,
-                onClose: l,
-                modalState: d,
-                isApplicationBypassToggleEnabled: c,
-                setInviteFlags: u,
-                copyValue: T,
-                changePage: S,
-                inviteChannel: j,
-                source: N,
-                code: O,
-                guildScheduledEvent: y,
+                showFriends: r,
+                onClose: o,
+                modalState: c,
+                isApplicationBypassToggleEnabled: u,
+                setInviteFlags: g,
+                copyValue: S,
+                changePage: O,
+                inviteChannel: E,
+                source: w,
+                code: T,
+                guildScheduledEvent: Z,
                 disabled: R,
-                application: k,
+                application: I,
             } = e,
-            { maxAge: P, maxUses: A, networkError: B, showVanityURL: L, flags: E } = d,
-            F = i.useCallback(() => {
-                g.default.track(m.rMx.COPY_INSTANT_INVITE, {
-                    server: b.Z.getGuildId(),
-                    channel: null == j ? void 0 : j.id,
-                    channel_type: null == j ? void 0 : j.type,
-                    location: N,
-                    code: O,
-                    guild_scheduled_event_id: null == y ? void 0 : y.id,
-                    application_id: null == k ? void 0 : k.id,
+            { maxAge: _, maxUses: P, networkError: A, showVanityURL: L, flags: D } = c,
+            M = l.useCallback(() => {
+                m.default.track(b.rMx.COPY_INSTANT_INVITE, {
+                    server: h.Z.getGuildId(),
+                    channel: null == E ? void 0 : E.id,
+                    channel_type: null == E ? void 0 : E.type,
+                    location: w,
+                    code: T,
+                    guild_scheduled_event_id: null == Z ? void 0 : Z.id,
+                    application_id: null == I ? void 0 : I.id,
                 });
-            }, [null == k ? void 0 : k.id, j, N, O, y]);
-        return (0, o.jsxs)(o.Fragment, {
+            }, [null == I ? void 0 : I.id, E, w, T, Z]);
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, o.jsx)(w, {
-                    value: T,
-                    autoFocus: a,
-                    onCopy: F,
+                (0, i.jsx)(N, {
+                    value: S,
+                    autoFocus: r,
+                    onCopy: M,
                     disabled: R,
                 }),
-                c &&
-                    (0, o.jsxs)(o.Fragment, {
+                u &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, o.jsx)("div", { className: I.divider }),
-                            (0, o.jsx)(s.j7V, {
-                                className: I.toggle,
-                                value: (0, h.yE)(E, _.$.IS_APPLICATION_BYPASS),
-                                onChange: (e) => u((0, h.mB)(E, _.$.IS_APPLICATION_BYPASS, e)),
+                            (0, i.jsx)("div", { className: y.divider }),
+                            (0, i.jsx)(d.j7V, {
+                                className: y.toggle,
+                                value: (0, p.yE)(D, a.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => g((0, p.mB)(D, a.$.IS_APPLICATION_BYPASS, e)),
                                 disabled: R,
                                 hideBorder: !0,
-                                children: (0, o.jsxs)("div", {
-                                    className: I.formText,
+                                children: (0, i.jsxs)("div", {
+                                    className: y.formText,
                                     children: [
-                                        (0, o.jsx)(s.Text, {
+                                        (0, i.jsx)(d.Text, {
                                             variant: "text-md/semibold",
-                                            children: C.intl.string(C.t["1i1bUl"]),
+                                            children: v.intl.string(v.t["1i1bUl"]),
                                         }),
-                                        (0, o.jsx)(s.ua7, {
-                                            text: C.intl.string(C.t["jvd/LC"]),
+                                        (0, i.jsx)(d.ua7, {
+                                            text: v.intl.string(v.t["jvd/LC"]),
                                             children: (e) =>
-                                                (0, o.jsx)(
-                                                    s.d3s,
+                                                (0, i.jsx)(
+                                                    d.d3s,
                                                     (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                                o = Object.keys(n);
+                                                                i = Object.keys(n);
                                                             "function" == typeof Object.getOwnPropertySymbols &&
-                                                                (o = o.concat(
+                                                                (i = i.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(
                                                                         function (e) {
                                                                             return Object.getOwnPropertyDescriptor(n, e)
@@ -107,17 +107,17 @@ let w = l.ZP.connectStores([u.Z], () => ({ hideValue: u.Z.hideInstantInvites }))
                                                                         },
                                                                     ),
                                                                 )),
-                                                                o.forEach(function (t) {
-                                                                    var o;
-                                                                    (o = n[t]),
+                                                                i.forEach(function (t) {
+                                                                    var i;
+                                                                    (i = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
-                                                                                  value: o,
+                                                                                  value: i,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
                                                                                   writable: !0,
                                                                               })
-                                                                            : (e[t] = o);
+                                                                            : (e[t] = i);
                                                                 });
                                                         }
                                                         return e;
@@ -137,32 +137,32 @@ let w = l.ZP.connectStores([u.Z], () => ({ hideValue: u.Z.hideInstantInvites }))
                     }),
                 n || L
                     ? null
-                    : (0, o.jsxs)(s.Text, {
+                    : (0, i.jsxs)(d.Text, {
                           variant: "text-xs/normal",
-                          className: r()(f.marginTop8, I.footerText),
+                          className: s()(C.marginTop8, y.footerText),
                           children: [
-                              (0, v.Vg)(P, A),
+                              (0, f.Vg)(_, P),
                               " ",
-                              a
-                                  ? (0, o.jsx)(s.eee, {
-                                        onClick: () => S(x.RV.SETTINGS),
-                                        children: C.intl.string(C.t.VNe8Pz),
+                              r
+                                  ? (0, i.jsx)(d.eee, {
+                                        onClick: () => O(j.RV.SETTINGS),
+                                        children: v.intl.string(v.t.VNe8Pz),
                                     })
                                   : null,
                           ],
                       }),
-                !n && a && L
-                    ? (0, o.jsxs)(s.Text, {
+                !n && r && L
+                    ? (0, i.jsxs)(d.Text, {
                           variant: "text-xs/normal",
-                          className: r()(f.marginTop8, I.footerText),
-                          children: [C.intl.string(C.t["0M2U9/"]), " "],
+                          className: s()(C.marginTop8, y.footerText),
+                          children: [v.intl.string(v.t["0M2U9/"]), " "],
                       })
                     : null,
-                null != B
-                    ? (0, o.jsx)(p.W, {
+                null != A
+                    ? (0, i.jsx)(x.W, {
                           guild: t,
-                          error: B,
-                          onClose: l,
+                          error: A,
+                          onClose: o,
                       })
                     : null,
             ],

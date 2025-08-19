@@ -1,68 +1,68 @@
 n.d(t, { default: () => g }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
+var i = n(951288),
+    r = n(647438),
+    s = n(442837),
     o = n(82659),
-    c = n(481060),
-    s = n(660216),
-    l = n(825209),
-    u = n(714338),
-    b = n(556296),
-    d = n(13140),
+    a = n(481060),
+    l = n(660216),
+    c = n(825209),
+    d = n(714338),
+    u = n(556296),
+    h = n(13140),
     p = n(710111),
-    O = n(981631),
+    b = n(981631),
     f = n(388032),
-    y = n(687213);
+    m = n(687213);
 function g(e) {
     var t;
     let { transitionState: n, onClose: g } = e,
-        m = (0, a.e7)([b.ZP], () => b.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD)),
-        [h, j] = i.useState(null != (t = null == m ? void 0 : m.shortcut) ? t : []),
-        v = i.useCallback(() => {
-            if (0 === h.length) return null != m && s.Z.deleteKeybind(m.id), g();
-            if (null == m)
-                s.Z.addKeybind({
-                    action: O.kg4.SOUNDBOARD_HOLD,
-                    shortcut: h,
+        _ = (0, s.e7)([u.ZP], () => u.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD)),
+        [E, y] = r.useState(null != (t = null == _ ? void 0 : _.shortcut) ? t : []),
+        D = r.useCallback(() => {
+            if (0 === E.length) return null != _ && l.Z.deleteKeybind(_.id), g();
+            if (null == _)
+                l.Z.addKeybind({
+                    action: b.kg4.SOUNDBOARD_HOLD,
+                    shortcut: E,
                     enabled: !0,
                     params: {},
                 });
             else {
                 var e, t;
-                s.Z.setKeybind(
+                l.Z.setKeybind(
                     ((e = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
-                    })({}, m)),
-                    (t = t = { shortcut: h }),
+                    })({}, _)),
+                    (t = t = { shortcut: E }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(t)).forEach(function (n) {
@@ -72,17 +72,17 @@ function g(e) {
                 );
             }
             g();
-        }, [m, g, h]);
-    i.useEffect(
+        }, [_, g, E]);
+    r.useEffect(
         () => (
-            u.Z.disable(),
+            d.Z.disable(),
             () => {
-                u.Z.enable();
+                d.Z.enable();
             }
         ),
         [],
     );
-    let w = i.useMemo(
+    let C = r.useMemo(
         () => [
             {
                 text: f.intl.string(f.t["ETE/oK"]),
@@ -91,52 +91,52 @@ function g(e) {
             },
             {
                 text: f.intl.string(f.t.R3BPHx),
-                onClick: v,
+                onClick: D,
                 variant: "primary",
             },
         ],
-        [g, v],
+        [g, D],
     );
-    return (0, r.jsxs)(o.Modal, {
+    return (0, i.jsxs)(o.Modal, {
         transitionState: n,
         title: f.intl.string(f.t["0Osu39"]),
-        actions: w,
+        actions: C,
         onClose: g,
         children: [
-            (0, r.jsx)(c.Wn, {
-                className: y.warning,
-                messageType: c.QYI.WARNING,
+            (0, i.jsx)(a.Wn, {
+                className: m.warning,
+                messageType: a.QYI.WARNING,
                 children: f.intl.string(f.t["O2v/eH"]),
             }),
-            (0, r.jsx)(c.X6q, {
-                className: y.formHeader,
+            (0, i.jsx)(a.X6q, {
+                className: m.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
                 children: f.intl.string(f.t.UUpADw),
             }),
-            (0, r.jsx)(c.Text, {
-                className: y.action,
+            (0, i.jsx)(a.Text, {
+                className: m.action,
                 variant: "text-md/normal",
                 children: f.intl.string(f.t["1xFbPz"]),
             }),
-            (0, r.jsx)(c.Text, {
-                className: y.actionDescription,
+            (0, i.jsx)(a.Text, {
+                className: m.actionDescription,
                 variant: "text-sm/normal",
                 children: f.intl.string(f.t.laNlTk),
             }),
-            (0, r.jsx)(c.X6q, {
-                className: y.formHeader,
+            (0, i.jsx)(a.X6q, {
+                className: m.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
                 children: f.intl.string(f.t["1La4tL"]),
             }),
-            (0, r.jsx)(l.Z, {
-                defaultValue: h,
-                onChange: j,
+            (0, i.jsx)(c.Z, {
+                defaultValue: E,
+                onChange: y,
             }),
-            (0, r.jsx)(c.eee, {
-                className: y.resetButton,
-                onClick: () => j((0, d.Kd)(p.D_)),
+            (0, i.jsx)(a.eee, {
+                className: m.resetButton,
+                onClick: () => y((0, h.Kd)(p.D_)),
                 children: f.intl.string(f.t["s7+2ra"]),
             }),
         ],

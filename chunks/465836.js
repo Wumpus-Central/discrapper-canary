@@ -13,7 +13,7 @@ var o = n(703558),
     p = n(330226);
 function b(t) {
     var { channel: e, onClose: n, content: b } = t,
-        g = (function (t, e) {
+        y = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -34,8 +34,17 @@ function b(t) {
             }
             return o;
         })(t, ["channel", "onClose", "content"]);
-    function y() {
+    function g() {
         n(), (0, l.z)(!0);
+    }
+    async function L() {
+        n();
+        let t = new Blob([b], { type: "text/plain" });
+        await (0, c.d)([(0, i.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
+            requireConfirm: !0,
+            showLargeMessageDialog: !0,
+        }),
+            a.S.dispatchToLastSubscribed(f.CkL.CLEAR_TEXT);
     }
     return (0, r.jsx)(
         s.Z,
@@ -70,10 +79,10 @@ function b(t) {
                 title: d.intl.string(d.t.TZT3sL),
                 body: d.intl.format(d.t.QhcEAA, {
                     maxLength: f.J6R,
-                    onLearnMore: y,
+                    onLearnMore: g,
                 }),
                 context: d.intl.formatToPlainString(d.t.Fc1uVV, { maxLength: f.J6R }),
-                glowUp: d.intl.format(d.t.Mi8kt7, { onLearnMore: y }),
+                glowUp: d.intl.format(d.t.Mi8kt7, { onLearnMore: g }),
                 analyticsSource: {
                     page:
                         (null == e ? void 0 : e.getGuildId()) != null
@@ -88,17 +97,9 @@ function b(t) {
                 },
                 onClose: n,
                 secondaryCTA: d.intl.string(d.t.Fnsb1t),
-                onSecondaryClick: function () {
-                    n();
-                    let t = new Blob([b], { type: "text/plain" });
-                    (0, c.d)([(0, i.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
-                        requireConfirm: !0,
-                        showLargeMessageDialog: !0,
-                    }),
-                        a.S.dispatchToLastSubscribed(f.CkL.CLEAR_TEXT);
-                },
+                onSecondaryClick: L,
             },
-            g,
+            y,
         ),
     );
 }

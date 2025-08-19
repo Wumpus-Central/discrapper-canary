@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(899740),
     P = n(28476),
     j = n(880257),
-    x = n(631885),
-    A = n(849862),
+    A = n(631885),
+    x = n(849862),
     Z = n(522558),
     w = n(870041),
     L = n(795448),
@@ -46,8 +46,8 @@ var r = n(951288),
     Y = n(55563),
     K = n(774343),
     q = n(974042),
-    X = n(626135),
-    Q = n(814225),
+    Q = n(626135),
+    X = n(814225),
     J = n(515753),
     $ = n(831218),
     ee = n(339149),
@@ -124,7 +124,7 @@ let eu = (e) => {
         var { selected: t } = e,
             n = ec(e, ["selected"]);
         let l = (0, c.JA)("friends"),
-            a = (0, A.If)(),
+            a = (0, x.If)(),
             o = (0, d.e7)([R.Z], () => R.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: p } = Z.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
@@ -149,7 +149,7 @@ let eu = (e) => {
                                 onClick: () => {
                                     let e;
                                     f
-                                        ? (X.default.track(et.rMx.GIFT_INTENT_BADGE_CLICKED, {
+                                        ? (Q.default.track(et.rMx.GIFT_INTENT_BADGE_CLICKED, {
                                               gift_intent_type: er.hX.FRIEND_ANNIVERSARY,
                                           }),
                                           (e = et.pJs.ALL),
@@ -294,7 +294,7 @@ let eu = (e) => {
     },
     em = (e) => {
         let { isParentHovered: t } = e,
-            i = (0, x.gU)();
+            i = (0, A.gU)();
         return t
             ? (0, r.jsx)("div", {
                   className: ea.familyCenterButtonContainer,
@@ -495,7 +495,7 @@ function ey() {
     let e = (0, d.e7)([K.Z], () => K.Z.getHomeLink()),
         t = (0, d.e7)([Y.Z], () => {
             if (e === et.Z5c.APPLICATION_STORE) return !0;
-            let t = (0, Q.ZK)(e);
+            let t = (0, X.ZK)(e);
             if (null != t) {
                 var n, r;
                 return null != (r = null == (n = Y.Z.get(t)) ? void 0 : n.premium) && r;

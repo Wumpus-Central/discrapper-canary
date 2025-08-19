@@ -1,8 +1,8 @@
 t.d(n, { default: () => R }), t(388685);
 var r = t(951288),
     a = t(647438),
-    c = t(120356),
-    o = t.n(c),
+    o = t(120356),
+    c = t.n(o),
     s = t(815061),
     i = t(442837),
     l = t(755721),
@@ -33,7 +33,7 @@ var r = t(951288),
 function L() {
     let e = (0, i.e7)([f.Z], () => f.Z.useReducedMotion),
         [n, t] = a.useState(!e),
-        [c, l] = a.useState(!1),
+        [o, l] = a.useState(!1),
         u = a.useRef(null),
         p = (0, b.ZP)(),
         m = (0, d.apv)(p),
@@ -57,14 +57,14 @@ function L() {
         className: Z.videoLayers,
         style: x,
         children: [
-            !c && (0, r.jsx)("div", { className: Z.videoPlaceholder }),
+            !o && (0, r.jsx)("div", { className: Z.videoPlaceholder }),
             (0, r.jsx)(g.Z, {
                 ref: u,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: o()(Z.videoAsset, { [Z.hidden]: n }),
+                className: c()(Z.videoAsset, { [Z.hidden]: n }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
                     src: h,
@@ -75,7 +75,7 @@ function L() {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: o()(Z.videoAsset, { [Z.hidden]: !n }),
+                className: c()(Z.videoAsset, { [Z.hidden]: !n }),
                 controls: !1,
                 onLoadedData: () => l(!0),
                 onEnded: () => {
@@ -90,8 +90,9 @@ function L() {
     });
 }
 function A(e) {
-    let { transitionState: n, balance: t, onSubmit: a, onClose: c, state: o } = e;
+    let { transitionState: n, balance: t, onSubmit: a, onClose: o, state: c } = e;
     return (0, r.jsxs)(d.Y0X, {
+        "data-migration-pending": !0,
         transitionState: n,
         size: d.CgR.DYNAMIC,
         className: Z.modal,
@@ -100,16 +101,17 @@ function A(e) {
             (0, r.jsx)("div", {
                 className: Z.header,
                 children: (0, r.jsx)(d.olH, {
+                    "data-migration-pending": !0,
                     className: Z.closeBtn,
-                    onClick: c,
+                    onClick: o,
                 }),
             }),
-            "loading" === o
+            "loading" === c
                 ? (0, r.jsx)("div", {
                       className: Z.spinnerContainer,
                       children: (0, r.jsx)(d.$jN, { type: d.RAz.SPINNING_CIRCLE }),
                   })
-                : "success" === o
+                : "success" === c
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(L, {}),
@@ -174,7 +176,7 @@ function A(e) {
                             }),
                             (0, r.jsx)(l.zx, {
                                 className: Z.ctaBtn,
-                                onClick: c,
+                                onClick: o,
                                 children: B.intl.string(B.t.cpT0Cg),
                             }),
                         ],
@@ -185,7 +187,7 @@ function A(e) {
 function R(e) {
     var n,
         t,
-        { quest: c, onClose: o } = e,
+        { quest: o, onClose: c } = e,
         s = (function (e, n) {
             if (null == e) return {};
             var t,
@@ -195,22 +197,22 @@ function R(e) {
                     var t,
                         r,
                         a = {},
-                        c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) (t = c[r]), n.indexOf(t) >= 0 || (a[t] = e[t]);
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (a[t] = e[t]);
                     return a;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++)
-                    (t = c[r]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (t = o[r]),
                         !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]);
             }
             return a;
         })(e, ["quest", "onClose"]);
     let { balance: i } = (0, h.A)(),
         l = (function (e, n, t) {
-            let [r, c] = a.useState("loading"),
-                [o, s] = a.useState(!1),
+            let [r, o] = a.useState("loading"),
+                [c, s] = a.useState(!1),
                 { balance: i } = (0, h.A)(),
                 l = (0, u.Z)(i),
                 [d, b] = a.useState(!1);
@@ -228,27 +230,27 @@ function R(e) {
                 );
             }, [r, n]),
             a.useEffect(() => {
-                !o && null != i && null != l && i > l && s(!0);
-            }, [i, l, o]),
+                !c && null != i && null != l && i > l && s(!0);
+            }, [i, l, c]),
             a.useEffect(() => {
                 (0, j.QB)(e, C.y$.CROSS_PLATFORM, t)
                     .then((e) => {
-                        if ((null == e ? void 0 : e.claimedAt) != null) return void c("success");
-                        c("error");
+                        if ((null == e ? void 0 : e.claimedAt) != null) return void o("success");
+                        o("error");
                     })
                     .catch(() => {
-                        c("error");
+                        o("error");
                     });
             }, [e, t]),
             "error" === r)
                 ? r
-                : "success" === r && (o || d)
+                : "success" === r && (c || d)
                   ? "success"
                   : "loading";
-        })(c.id, c.preview, s.location),
+        })(o.id, o.preview, s.location),
         { openIntroToOrbsClaimedCoachmark: d } = (0, x.Z)({ location: "QuestsOrbsRewardModal" }),
         b = a.useCallback(() => {
-            o(),
+            c(),
                 (0, _.Y)({
                     pageType: S.ZY5.GLOBAL_DISCOVERY_QUESTS,
                     sectionType: S.jXE.ORBS_REWARD_MODAL,
@@ -258,10 +260,10 @@ function R(e) {
                     openInLayer: !1,
                     tab: N.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: c.id === v.V6 ? p.Z.INTRO_TO_ORBS_QUEST : p.Z.QUEST_HOME_PAGE,
+                    analyticsSource: o.id === v.V6 ? p.Z.INTRO_TO_ORBS_QUEST : p.Z.QUEST_HOME_PAGE,
                 }),
                 d({ delayMS: 300 });
-        }, [o, d, c.id]);
+        }, [c, d, o.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.o, {}),
@@ -295,7 +297,7 @@ function R(e) {
                 (t = t =
                     {
                         balance: i,
-                        onClose: o,
+                        onClose: c,
                         onSubmit: b,
                         state: l,
                     }),

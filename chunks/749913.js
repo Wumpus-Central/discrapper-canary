@@ -478,12 +478,12 @@ let eo = i.memo(function (e) {
                 },
             });
         let w = i.useCallback(
-                (e) => {
+                async (e) => {
                     let n = e.clipboardData.files[0];
                     null != n &&
                         n.type.startsWith("image/") &&
                         (e.preventDefault(),
-                        (0, H.d)([n], t, Z.d.FirstThreadMessage, { origin: "clipboard" }),
+                        await (0, H.d)([n], t, Z.d.FirstThreadMessage, { origin: "clipboard" }),
                         j.getState().setFormOpenFromUserAction());
                 },
                 [t, j],

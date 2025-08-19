@@ -26,8 +26,8 @@ var r,
     T = n(548816),
     P = n(925329),
     j = n(102172),
-    x = n(871118),
-    A = n(707409),
+    A = n(871118),
+    x = n(707409),
     Z = n(359110),
     w = n(769654),
     L = n(849171),
@@ -53,7 +53,7 @@ let K = [14, 14, 12, 12, 10, 8, 6],
             children: e,
         });
     },
-    X = function (e) {
+    Q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -61,7 +61,7 @@ let K = [14, 14, 12, 12, 10, 8, 6],
             children: e,
         });
     },
-    Q = (0, p.Z)((e) => {
+    X = (0, p.Z)((e) => {
         let { message: t } = e;
         return (0, i.jsx)("div", {
             className: Y.__invalid_timestamp,
@@ -81,13 +81,13 @@ class $ extends l.Component {
             { timestamps: t } = e;
         return null == t || !(0, _.Z)(e) || (0, O.Z)(e)
             ? null
-            : X(
+            : Q(
                   (0, b.Z)(e)
-                      ? (0, i.jsx)(Q, { timestamps: t })
-                      : (0, i.jsx)(A.ZP, {
+                      ? (0, i.jsx)(X, { timestamps: t })
+                      : (0, i.jsx)(x.ZP, {
                             start: t.start,
                             end: t.end,
-                            location: A.ZP.Locations.USER_ACTIVITY,
+                            location: x.ZP.Locations.USER_ACTIVITY,
                             className: Y.__invalid_playTime,
                         }),
               );
@@ -131,7 +131,7 @@ class $ extends l.Component {
                     (0, i.jsxs)("div", {
                         children: [
                             q(null != l && "" !== l ? l : W.intl.string(W.t["2TbM/P"])),
-                            null != a ? X(a) : null,
+                            null != a ? Q(a) : null,
                             this.renderTimePlayed(),
                         ],
                     }),
@@ -382,7 +382,7 @@ let er = (e) => {
                         focusProps: { ringTarget: p },
                         children: (0, i.jsxs)("div", {
                             className: Y.voiceSectionDetails,
-                            children: [q(n.name, Y.voiceSectionText), X(f, Y.voiceSectionText)],
+                            children: [q(n.name, Y.voiceSectionText), Q(f, Y.voiceSectionText)],
                         }),
                     }),
                     (0, i.jsx)(F.Z, {
@@ -408,7 +408,7 @@ let er = (e) => {
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        children: [q(n), X(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
+                        children: [q(n), Q(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))],
                     }),
                     (0, i.jsx)(F.Z, {
                         partySize: r,
@@ -428,7 +428,7 @@ let er = (e) => {
                     (0, i.jsx)(G.Z, { className: Y.xboxSectionIcon }),
                     (0, i.jsxs)("div", {
                         className: Y.__invalid_xboxSectionDetails,
-                        children: [q(t), X(W.intl.string(W.t["JG9r+/"]))],
+                        children: [q(t), Q(W.intl.string(W.t["JG9r+/"]))],
                     }),
                 ],
             }),
@@ -468,7 +468,7 @@ let er = (e) => {
                           })
                         : (0, i.jsx)("div", {}),
                     (0, i.jsxs)("div", {
-                        children: [null != r ? q(r) : null, null != l ? X(l) : null],
+                        children: [null != r ? q(r) : null, null != l ? Q(l) : null],
                     }),
                     (0, i.jsx)(F.Z, {
                         minAvatarsShown: d ? 2 : 1,
@@ -521,7 +521,7 @@ let er = (e) => {
                             className: Y.twitchSectionIcon,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [q(c), null != d ? X(d) : null],
+                            children: [q(c), null != d ? Q(d) : null],
                         }),
                         null != l
                             ? (0, i.jsx)(u.qEK, {
@@ -546,7 +546,7 @@ let er = (e) => {
                 onClick: p ? o : void 0,
                 className: Y.applicationStreamingPreviewWrapper,
                 children: [
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(A.Z, {
                         stream: a,
                         className: Y.applicationStreamingPreviewSize,
                     }),
@@ -571,7 +571,7 @@ let er = (e) => {
                             className: Y.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [q(H.ZP.getName(l)), X(g)],
+                            children: [q(H.ZP.getName(l)), Q(g)],
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL }),
                     ],
@@ -626,7 +626,7 @@ let er = (e) => {
                                   children: (0, i.jsx)(u.Text, {
                                       color: "text-muted",
                                       variant: "text-sm/normal",
-                                      children: (0, i.jsx)(Q, { timestamps: _ }),
+                                      children: (0, i.jsx)(X, { timestamps: _ }),
                                   }),
                               })
                             : null,

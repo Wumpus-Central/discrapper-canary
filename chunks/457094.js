@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(77987),
     P = n(679891),
     j = n(491575),
-    x = n(954709),
-    A = n(644679),
+    A = n(954709),
+    x = n(644679),
     Z = n(403763),
     w = n(314533),
     L = n(9029),
@@ -46,8 +46,8 @@ var r = n(951288),
     Y = n(306721),
     K = n(531551),
     q = n(38618),
-    X = n(972830),
-    Q = n(684572),
+    Q = n(972830),
+    X = n(684572),
     J = n(584233),
     $ = n(15274),
     ee = n(434404),
@@ -80,8 +80,8 @@ var r = n(951288),
     eT = n(377368),
     eP = n(262702),
     ej = n(639033),
-    ex = n(479313),
-    eA = n(911560),
+    eA = n(479313),
+    ex = n(911560),
     eZ = n(703016),
     ew = n(892001),
     eL = n(497805),
@@ -100,8 +100,8 @@ var r = n(951288),
     eY = n(944486),
     eK = n(914010),
     eq = n(695103),
-    eX = n(241890),
-    eQ = n(417363),
+    eQ = n(241890),
+    eX = n(417363),
     eJ = n(900974),
     e$ = n(358085),
     e0 = n(998502),
@@ -185,7 +185,7 @@ let e9 = (0, m.l)((e) => {
             n = (0, ek.default)(t.pathname);
         return (
             null != n &&
-                (0, X.h)(() =>
+                (0, Q.h)(() =>
                     h.Z.open(n.section, n.subsection, {
                         openWithoutBackstack: !1,
                         impressionSource: n.source,
@@ -234,7 +234,7 @@ let e9 = (0, m.l)((e) => {
         },
     ),
     tt = (0, m.l)((0, T.e)(j.Z, null, { passProps: !1 })),
-    tn = (0, T.e)(Q.default, null, { passProps: !1 }),
+    tn = (0, T.e)(X.default, null, { passProps: !1 }),
     tr = [
         e8.Z5c.GUILD_BOOSTING_MARKETING(ey.Hw.guildId()),
         ...Array.from(e4.Vg).map((e) => e8.Z5c.CHANNEL(ey.Hw.guildId(), e)),
@@ -268,7 +268,7 @@ let tl = [
             let { match: t } = e,
                 { id: n } = t.params;
             return (
-                (0, X.h)(() =>
+                (0, Q.h)(() =>
                     (0, ew.openUserProfileModal)({
                         userId: n,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME],
@@ -284,7 +284,7 @@ let tl = [
             let { match: t } = e,
                 { gameId: n, action: i } = t.params;
             return (
-                eQ.Z.whenInitialized(() => {
+                eX.Z.whenInitialized(() => {
                     eW.Z.whenInitialized(() => {
                         switch (i) {
                             case "launch": {
@@ -319,7 +319,7 @@ let tl = [
         path: [e8.Z5c.GUILD_CREATE],
         render: function () {
             return (
-                (0, X.h)(() => D.Z.openCreateGuildModal({ location: "External link" })),
+                (0, Q.h)(() => D.Z.openCreateGuildModal({ location: "External link" })),
                 (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute })
             );
         },
@@ -331,7 +331,7 @@ let tl = [
                 { section: n, subsection: i } = t.params,
                 o = (0, l.parse)(location.search).feature;
             return (
-                (0, X.h)(() =>
+                (0, Q.h)(() =>
                     en.v({
                         section: (0, et.Z)(e8.pNK, n),
                         subsection: (0, et.Z)(e8.KsC, i),
@@ -354,7 +354,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: i } = t.params;
             return (
-                (0, X.h)(() => {
+                (0, Q.h)(() => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("15076"), n.e("39672")]).then(n.bind(n, 907941));
                         return (t) => {
@@ -388,7 +388,7 @@ let tl = [
     {
         path: [e8.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, X.h)(() => h.Z.open(e8.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute });
+            return (0, Q.h)(() => h.Z.open(e8.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute });
         },
         isSessionRequired: !0,
     },
@@ -409,7 +409,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
             return (
-                (0, X.h)(() => {
+                (0, Q.h)(() => {
                     (0, $.bO)({ eventId: i });
                 }),
                 (0, r.jsx)(a.l_, { to: e8.Z5c.CHANNEL(n) })
@@ -423,7 +423,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, section: i, subsection: l } = t.params;
             return (
-                (0, X.h)(() => {
+                (0, Q.h)(() => {
                     ee.Z.open(n, (0, et.Z)(e8.pNK, i), void 0, (0, et.Z)(e8.KsC, l));
                 }),
                 (0, r.jsx)(a.l_, { to: e8.Z5c.CHANNEL(n) })
@@ -509,7 +509,7 @@ class ts extends i.PureComponent {
             eJ.Z.init(),
             E.Z.initialize(),
             eZ.Z.init(),
-            eX.Z.init(),
+            eQ.Z.init(),
             eR.Z.init(),
             eP.Z.initialize(),
             ej.Z.initialize(),
@@ -538,8 +538,8 @@ class ts extends i.PureComponent {
             eO.Z.initialize(),
             em.Z.initialize(),
             k.Z.initialize(),
-            x.Z.initialize(),
             A.Z.initialize(),
+            x.Z.initialize(),
             C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
@@ -572,8 +572,8 @@ class ts extends i.PureComponent {
             em.Z.terminate(),
             k.Z.terminate(),
             H.Z.terminate(),
-            x.Z.terminate(),
             A.Z.terminate(),
+            x.Z.terminate(),
             C.Z.terminate(),
             F.Z.terminate(),
             this.historyUnlisten(),
@@ -616,7 +616,7 @@ class ts extends i.PureComponent {
                                 messageId: o,
                             });
                         let { summaryId: e } = (0, l.parse)(t);
-                        null != e && ex.ZP.setSelectedSummary(i, e);
+                        null != e && eA.ZP.setSelectedSummary(i, e);
                     }
                     if (null != s && f) {
                         let e = eB.ZP.getCurrentSidebarChannelId(n) !== s,
@@ -658,7 +658,7 @@ class ts extends i.PureComponent {
         if (null != i && (0, ey.cq)(i) && !(0, e4.AB)(i) && a) {
             let n = eV.Z.getChannel(i);
             if (null == n)
-                eA.Z.loadThread(i).then(() =>
+                ex.Z.loadThread(i).then(() =>
                     to({
                         channelId: i,
                         guildId: r,
@@ -674,7 +674,7 @@ class ts extends i.PureComponent {
                 if (!((0, ey.cq)(l) && !(0, e4.AB)(i))) return null;
                 let n = eV.Z.getChannel(l);
                 if (null == n)
-                    eA.Z.loadThread(l).then(() =>
+                    ex.Z.loadThread(l).then(() =>
                         to({
                             channelId: l,
                             guildId: r,

@@ -1,20 +1,20 @@
-n.d(t, { ZP: () => p }), n(415506), n(539854), n(388685);
+n.d(t, { ZP: () => j }), n(415506), n(539854), n(388685);
 var i = n(951288),
     l = n(647438),
-    s = n(442837),
+    r = n(442837),
     o = n(481060),
-    r = n(292556),
+    s = n(292556),
     a = n(734934),
     u = n(509613),
     c = n(460181),
     d = n(292959),
     f = n(388032),
     g = n(881449);
-let m = l.createContext(void 0);
-function v(e) {
+let v = l.createContext(void 0);
+function b(e) {
     let { sound: t } = e,
         { handlePreviewSound: n } = (function () {
-            let e = l.useContext(m);
+            let e = l.useContext(v);
             if (null == e) throw Error("useSoundPlayback must be used within a SoundPlaybackProvider");
             return e;
         })();
@@ -30,7 +30,7 @@ function v(e) {
         }),
     });
 }
-let b = [
+let m = [
         {
             useLabel: () => f.intl.string(f.t.jD1qzM),
             sound: "message1",
@@ -135,40 +135,40 @@ let b = [
                 let t = e.useLabel();
                 return (0, i.jsxs)("div", {
                     className: g.soundRow,
-                    children: [(0, i.jsx)("span", { children: t }), (0, i.jsx)(v, { sound: e.sound })],
+                    children: [(0, i.jsx)("span", { children: t }), (0, i.jsx)(b, { sound: e.sound })],
                 });
             },
             useValue: () => {
                 var t;
-                let n = (0, s.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
+                let n = (0, r.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
                     i = null == (t = e.useDisabled) ? void 0 : t.call(e);
                 return !n && !i;
             },
             setValue: (t) => {
                 let n = d.Z.getDisabledSounds().filter((t) => t !== e.sound);
-                t || n.push(e.sound), r.default.setDisabledSounds(n);
+                t || n.push(e.sound), s.default.setDisabledSounds(n);
             },
             useDisabled: () => {
                 var t;
                 let n = null == (t = e.useDisabled) ? void 0 : t.call(e),
-                    i = (0, s.e7)([d.Z], () => d.Z.getDisableAllSounds());
+                    i = (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds());
                 return n || i;
             },
             useTooltip: e.useTooltip,
         }),
     })),
-    x = (0, u.qs)("SelectedChannelNotifications", {
+    p = (0, u.qs)("SelectedChannelNotifications", {
         useTitle: () => f.intl.string(f.t.TzjwV1),
-        useValue: () => (0, s.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
-        setValue: (e) => r.default.setNotifyMessagesInSelectedChannel(e),
+        useValue: () => (0, r.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
+        setValue: (e) => s.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    j = (0, u.qs)("DisableAllNotificationSounds", {
+    x = (0, u.qs)("DisableAllNotificationSounds", {
         useTitle: () => f.intl.string(f.t["2ZhCOT"]),
         useSubtitle: () => f.intl.string(f.t["+B0XLC"]),
-        useValue: () => (0, s.e7)([d.Z], () => d.Z.getDisableAllSounds()),
-        setValue: (e) => r.default.toggleDisableAllSounds(e),
+        useValue: () => (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds()),
+        setValue: (e) => s.default.toggleDisableAllSounds(e),
     }),
-    p = (0, u.$l)("NotificationSoundsSettingList", {
+    j = (0, u.$l)("NotificationSoundsSettingList", {
         collapseAfter: 4,
         useCollapsibleTitle: (e, t) =>
             e
@@ -177,7 +177,7 @@ let b = [
         ContextProvider: function (e) {
             let { children: t } = e,
                 n = l.useRef(null),
-                s = l.useCallback((e, t) => {
+                r = l.useCallback((e, t) => {
                     t.stopPropagation(),
                         t.preventDefault(),
                         null != n.current && n.current.stop(),
@@ -190,11 +190,11 @@ let b = [
                 },
                 [],
             );
-            let o = l.useMemo(() => ({ handlePreviewSound: s }), [s]);
-            return (0, i.jsx)(m.Provider, {
+            let o = l.useMemo(() => ({ handlePreviewSound: r }), [r]);
+            return (0, i.jsx)(v.Provider, {
                 value: o,
                 children: t,
             });
         },
-        getLayout: () => [b[0].node, x, b[1].node, j, ...b.slice(2).map((e) => e.node)],
+        getLayout: () => [m[0].node, p, m[1].node, x, ...m.slice(2).map((e) => e.node)],
     });

@@ -1,4 +1,8 @@
-n.d(t, { J: () => l }), n(647438);
+n.d(t, {
+    J: () => l,
+    L: () => r,
+}),
+    n(647438);
 var i,
     l =
         (((i = {})[(i.ROOT = 0)] = "ROOT"),
@@ -18,3 +22,6 @@ var i,
         (i[(i.NAVIGATOR = 14)] = "NAVIGATOR"),
         (i[(i.CUSTOM = 15)] = "CUSTOM"),
         i);
+function r(e) {
+    return "layout" in e;
+}

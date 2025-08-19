@@ -1,7 +1,7 @@
 n.d(t, {
     HR: () => h,
     L5: () => b,
-    ZP: () => y,
+    ZP: () => O,
 });
 var r = n(951288),
     l = n(647438),
@@ -35,10 +35,10 @@ function h(e, t) {
             (null == (r = o.editedTimestamp) ? void 0 : r.toString())
     );
 }
-let y = l.memo(function (e) {
+let O = l.memo(function (e) {
     var t;
-    let { className: n, message: o, children: a, content: c, onUpdate: m, contentRef: h, compact: y } = e,
-        O = o.state === p.yb.SEND_FAILED,
+    let { className: n, message: o, children: a, content: c, onUpdate: m, contentRef: h, compact: O } = e,
+        y = o.state === p.yb.SEND_FAILED,
         v = o.state === p.yb.SENDING,
         j = o.isCommandType(),
         P = null == (t = o.editedTimestamp) ? void 0 : t.toString(),
@@ -54,14 +54,14 @@ let y = l.memo(function (e) {
                 [g.messageContent]: !0,
                 [g.isSending]: v && !j,
                 [g.markupRtl]: "rtl" === s()(o.content),
-                [g.isFailed]: O,
+                [g.isFailed]: y,
                 [g.isUnsupported]: o.isUnsupported,
             }),
             children: [
                 null != a ? a : b(o, c),
                 (0, r.jsx)(d.Z, {
                     message: o,
-                    compact: y,
+                    compact: O,
                     location: d.H.WITH_CONTENT,
                 }),
             ],

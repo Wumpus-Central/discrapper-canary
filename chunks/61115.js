@@ -102,6 +102,7 @@ function S(e) {
         }),
         null == p && o(),
         (0, r.jsx)(l.Y0X, {
+            "data-migration-pending": !0,
             transitionState: a,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
@@ -115,11 +116,13 @@ function S(e) {
                         id: 0,
                         children: [
                             (0, r.jsxs)(l.xBx, {
+                                "data-migration-pending": !0,
                                 direction: u.Z.Direction.VERTICAL,
                                 separator: !1,
                                 className: g.modalHeader,
                                 children: [
                                     (0, r.jsx)(l.olH, {
+                                        "data-migration-pending": !0,
                                         className: g.closeBtn,
                                         onClick: o,
                                     }),
@@ -140,6 +143,7 @@ function S(e) {
                                 ],
                             }),
                             (0, r.jsx)(l.hzk, {
+                                "data-migration-pending": !0,
                                 className: g.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, r.jsx)(
@@ -158,6 +162,7 @@ function S(e) {
                         id: 1,
                         children: [
                             (0, r.jsxs)(l.hzk, {
+                                "data-migration-pending": !0,
                                 className: g.completedModalContent,
                                 children: [
                                     (0, r.jsx)("img", {
@@ -177,6 +182,7 @@ function S(e) {
                                 ],
                             }),
                             (0, r.jsx)(l.mzw, {
+                                "data-migration-pending": !0,
                                 children: (0, r.jsxs)("div", {
                                     className: g.closeButtonContainer,
                                     children: [

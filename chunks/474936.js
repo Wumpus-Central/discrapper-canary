@@ -495,7 +495,6 @@ var ev = (function (e) {
             (e.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = "custom profiles settings banner upsell"),
             (e.STICKER_PICKER_UPSELL = "sticker_picker_upsell"),
             (e.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = "animated avatar preview gif modal"),
-            (e.PREMIUM_PROGRESS_BAR = "premium_progress_bar_tooltip"),
             (e.INVITE_SPLASH_UPSELL = "premium_invite_splash_upsell"),
             (e.ANIMATED_USER_AVATAR_MODAL = "animated user avatar upsell modal"),
             (e.UPLOAD_ERROR_UPSELL = "upload error upsell"),

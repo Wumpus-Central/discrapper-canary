@@ -1,47 +1,43 @@
-n.d(t, { d: () => d });
+n.d(t, { d: () => c });
 var i = n(951288),
     l = n(873546),
-    s = n(755721),
+    r = n(755721),
     o = n(481060),
-    r = n(950796),
-    a = n(59662),
-    u = n(990757);
-function c(e) {
+    s = n(950796),
+    a = n(990757);
+function u(e) {
     let { icon: t, onClick: n, disabled: l } = e;
-    return (0, i.jsx)(s.zx, {
-        look: s.zx.Looks.BLANK,
-        size: s.zx.Sizes.NONE,
-        className: u.topBarButton,
-        innerClassName: u.iconButtonInner,
+    return (0, i.jsx)(r.zx, {
+        look: r.zx.Looks.BLANK,
+        size: r.zx.Sizes.NONE,
+        className: a.topBarButton,
+        innerClassName: a.iconButtonInner,
         onClick: n,
         disabled: l,
         children: (0, i.jsx)(t, { size: "sm" }),
     });
 }
-function d(e) {
-    let { onClose: t } = e,
-        { history: n, activeIndex: s, forward: d, back: f } = (0, a.t)();
+function c(e) {
+    let { onClose: t } = e;
     return (0, i.jsx)("div", {
-        className: u.topBar,
-        children: (0, i.jsx)(r.TF, {
+        className: a.topBar,
+        children: (0, i.jsx)(s.TF, {
             leading: (0, i.jsxs)("div", {
-                className: u.arrowButtons,
+                className: a.arrowButtons,
                 children: [
-                    (0, i.jsx)(c, {
+                    (0, i.jsx)(u, {
                         icon: o.whL,
-                        disabled: 0 === s,
-                        onClick: f,
+                        disabled: !0,
                     }),
-                    (0, i.jsx)(c, {
+                    (0, i.jsx)(u, {
                         icon: o.ZSh,
-                        disabled: s === n.length - 1,
-                        onClick: d,
+                        disabled: !0,
                     }),
                 ],
             }),
             trailing:
                 l.tq &&
-                (0, i.jsx)(c, {
+                (0, i.jsx)(u, {
                     icon: o.Dio,
                     onClick: t,
                 }),

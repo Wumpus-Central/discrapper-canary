@@ -416,11 +416,11 @@ class U extends i.Component {
                     _ = null != (r = null != d ? d : f) ? r : a,
                     E = (0, S._K)(i, this._getEditorWindow()) ? a : _;
                 if (null == l || (!E.isPrivate() && !o) || (E.isPrivate() && E.isManaged())) return !1;
-                let y = (e, t) => {
+                let y = async (e, t) => {
                         var n, r;
                         let i = g.Z.getActiveCommand(E.id);
                         if (null == i)
-                            return l(e, E, u.drafts.type, {
+                            return await l(e, E, u.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: t,
                                 origin: "clipboard",
