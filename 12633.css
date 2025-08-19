@@ -46276,6 +46276,24 @@ html:not(.chat-input) .inputInner_b1f01d {
     height: 1px
 }
 
+.cloudPlaySection__33ecd {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 4px 0
+}
+
+.cloudPlaySectionTextContainer__33ecd {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.cloudPlayDivider__33ecd {
+    width: 100%
+}
+
 .container__8e51c {
     align-items: center;
     display: flex;
