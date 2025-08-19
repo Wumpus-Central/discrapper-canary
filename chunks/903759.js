@@ -1,4 +1,4 @@
-n.d(t, { u: () => h }), n(388685);
+n.d(t, { u: () => m }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(481060),
@@ -8,7 +8,7 @@ var r = n(951288),
     u = n(746622),
     c = n(388032),
     d = n(443899);
-let h = (e) => {
+let m = (e) => {
         let { setImage: t } = e,
             [n, s] = l.useState(null);
         return (0, r.jsx)("div", {
@@ -29,7 +29,7 @@ let h = (e) => {
                                 children: c.intl.format(c.t["Ks2/3d"], {
                                     selectFileHook: (e, n) =>
                                         (0, r.jsx)(
-                                            m,
+                                            h,
                                             {
                                                 translatedContent: e,
                                                 setUserImage: t,
@@ -59,7 +59,7 @@ let h = (e) => {
             }),
         });
     },
-    m = (e) => {
+    h = (e) => {
         let { setUserImage: t, translatedContent: n } = e;
         return (0, r.jsx)(a.P3F, {
             focusProps: { within: !0 },

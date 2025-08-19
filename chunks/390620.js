@@ -9,8 +9,8 @@ var l = n(120356),
     u = n(430824),
     c = n(70956),
     d = n(388032),
-    h = n(384490),
-    m = n(583140);
+    m = n(384490),
+    h = n(583140);
 let g = 6 * c.Z.Millis.SECOND;
 function p(e) {
     let { emoji: t, guildId: n } = e,
@@ -19,7 +19,7 @@ function p(e) {
             return null == (e = u.Z.getGuild(n)) ? void 0 : e.name;
         });
     return (0, r.jsxs)("div", {
-        className: a()(m.toast, h.toast),
+        className: a()(h.toast, m.toast),
         children: [
             (0, r.jsx)(o.Z, {
                 emojiId: t.id,

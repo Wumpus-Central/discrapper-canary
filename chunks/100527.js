@@ -235,6 +235,7 @@ var r = (function (e) {
         (e.GUILD_CHANNEL_USER_MENU = "guild channel user menu"),
         (e.GUILD_MODERATION_USER_MENU = "guild moderation user menu"),
         (e.GUILD_MODERATION_RAID_MENU = "guild moderation raid menu"),
+        (e.GUILD_SETTINGS_EMOJI_EDIT_BUTTON = "guild settings edit emoji"),
         (e.GUILD_SETTINGS_USER_MENU = "guild settings user menu"),
         (e.GUILD_SETTINGS_SOUNDBOARD = "guild settings soundboard"),
         (e.GUILD_USER_MENU = "guild user menu"),

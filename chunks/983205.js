@@ -9,7 +9,7 @@ let o = (e) => {
         o = l.useRef(null),
         u = l.useRef(null),
         [c, d] = l.useState(!1),
-        h = l.useCallback(
+        m = l.useCallback(
             (e) => {
                 var t;
                 (u.current = null == (t = o.current) ? void 0 : t.selectionStart),
@@ -23,7 +23,7 @@ let o = (e) => {
             null == (e = o.current) || e.setSelectionRange(u.current, u.current), (u.current = null);
         }
     });
-    let m = l.useCallback(() => {
+    let h = l.useCallback(() => {
             d(!1);
         }, []),
         g = l.useCallback(() => {
@@ -34,10 +34,10 @@ let o = (e) => {
         error: c ? "" : void 0,
         minLength: 2,
         value: t,
-        onChange: h,
+        onChange: m,
         placeholder: s.intl.string(s.t.U2JFHR),
         name: "emoji_name",
-        onBlur: m,
+        onBlur: h,
         onFocus: g,
         required: !0,
     });

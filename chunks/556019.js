@@ -1,4 +1,4 @@
-n.d(t, { qt: () => l });
+n.d(t, { qt: () => c });
 var r = n(203311),
     i = n(818083);
 let a = (0, i.B)({
@@ -61,35 +61,56 @@ let a = (0, i.B)({
                 config: { enabled: !0 },
             },
         ],
+    }),
+    l = (0, i.B)({
+        kind: "user",
+        id: "2025-08-emoji_studio_speedrun",
+        label: "Emoji Studio V2 Speedrun",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "Enabled - Instant Upload, Emoji Editing Support",
+                config: { enabled: !0 },
+            },
+        ],
     });
-function l(e) {
+function c(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
-        l = (0, r.$u)(t),
-        { enabled: c, showExpressionPickerButton: u } = a.useExperiment(
+        c = (0, r.$u)(t),
+        { enabled: u, showExpressionPickerButton: d } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: c || i,
             },
         ),
-        { enabled: d } = o.useExperiment(
+        { enabled: f } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: c || i,
             },
         ),
-        { enabled: f } = s.useExperiment(
+        { enabled: _ } = s.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: c || i,
+            },
+        ),
+        { enabled: p } = l.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: c || i,
             },
         );
     return {
-        enabled: c,
-        isMobileEnabled: d,
-        isEntrypointEnabled: f || u,
-        isEntrypointExperimentEnabled: f,
+        enabled: u,
+        isMobileEnabled: f,
+        isEntrypointEnabled: d || _ || p,
+        isEntrypointExperimentEnabled: _,
+        isV2SpeedrunExperimentEnabled: p,
     };
 }

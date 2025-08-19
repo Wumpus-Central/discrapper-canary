@@ -40,8 +40,8 @@ async function i(e) {
             resizeHeight: d = null,
         } = e,
         {
-            sourceX: h,
-            sourceY: m,
+            sourceX: m,
+            sourceY: h,
             sourceWidth: g,
             sourceHeight: p,
         } = (0, l.GS)({
@@ -80,8 +80,8 @@ async function i(e) {
         v.postMessage({
             type: a.u.CROP_GIF_START,
             gif: new Uint8Array(f),
-            x: 0 | h,
-            y: 0 | m,
+            x: 0 | m,
+            y: 0 | h,
             width: 0 | g,
             height: 0 | p,
             imageRotation: 0 | u,

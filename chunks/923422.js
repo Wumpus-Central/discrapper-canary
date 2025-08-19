@@ -1,8 +1,8 @@
-n.d(t, { default: () => A }), n(388685), n(704826), n(35282);
+n.d(t, { default: () => x }), n(388685), n(704826), n(35282);
 var a = n(951288),
     l = n(647438),
-    i = n(481060),
-    r = n(239091),
+    r = n(481060),
+    i = n(239091),
     o = n(230711),
     c = n(493544),
     s = n(108843),
@@ -13,56 +13,58 @@ var a = n(951288),
     p = n(991346),
     y = n(606669),
     O = n(53432),
+    f = n(226884),
     E = n(74869),
-    f = n(45570),
-    v = n(308512),
-    S = n(594791),
-    h = n(393431),
-    j = n(69021),
-    P = n(981631),
-    w = n(388032);
-let A = (0, s.Z)(
+    v = n(45570),
+    S = n(308512),
+    h = n(594791),
+    j = n(393431),
+    P = n(69021),
+    w = n(981631),
+    A = n(388032);
+let x = (0, s.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
-            [u, A] = l.useState(!1),
-            x = (0, f.Z)(),
+            [u, x] = l.useState(!1),
             D = (0, v.Z)(),
-            I = (0, O.Z)(),
-            _ = (0, y.Z)(),
-            T = (0, h.Z)(),
-            Z = (0, S.Z)(),
-            N = (0, E.Z)(),
-            m = (0, j.Z)(),
-            { analyticsLocations: k } = (0, d.ZP)(),
-            C = l.useMemo(() => (0, b.j)(), []);
-        async function R() {
+            I = (0, S.Z)(),
+            _ = (0, O.Z)(),
+            N = (0, y.Z)(),
+            T = (0, j.Z)(),
+            Z = (0, h.Z)(),
+            m = (0, E.Z)(),
+            k = (0, P.Z)(),
+            C = (0, f.Z)(),
+            { analyticsLocations: R } = (0, d.ZP)(),
+            L = l.useMemo(() => (0, b.j)(), []);
+        async function B() {
             try {
-                A(!0), await (0, g.bF)(), window.location.reload(!0);
+                x(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
-                A(!1);
+                x(!1);
             }
         }
-        let L = (0, p.VO)()
+        let V = (0, p.VO)()
             .filter((e) => {
                 let { section: t } = e;
                 return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && "logout" !== t;
             })
             .filter((e) => null == e.predicate || e.predicate());
         return (0, a.jsx)(d.Gt, {
-            value: k,
-            children: (0, a.jsxs)(i.v2r, {
+            value: R,
+            children: (0, a.jsxs)(r.v2r, {
                 navId: "user-settings-cog",
-                onClose: r.Zy,
-                "aria-label": w.intl.string(w.t.opYYHh),
+                onClose: i.Zy,
+                "aria-label": A.intl.string(A.t.opYYHh),
                 onSelect: n,
                 onInteraction: s,
                 children: [
-                    L.map((e) => {
+                    V.map((e) => {
                         var t, n;
-                        let { section: l, label: r, onClick: c } = e,
+                        let { section: l, label: i, onClick: c } = e,
                             s = l.replace(/\W/gi, "_");
                         return (0, a.jsx)(
-                            i.sNh,
+                            r.sNh,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -90,36 +92,38 @@ let A = (0, s.Z)(
                             })(
                                 { id: s },
                                 {
-                                    label: r,
+                                    label: i,
                                     action: () =>
                                         null != c
                                             ? c()
                                             : (function (e, t) {
-                                                  let n = Object.values(P.oAB).filter((t) => t === e)[0];
+                                                  let n = Object.values(w.oAB).filter((t) => t === e)[0];
                                                   null != n && o.Z.open(n, void 0, { analyticsLocations: t });
-                                              })(l, k),
+                                              })(l, R),
                                 },
                             )),
                             (n = n =
                                 {
                                     children: ((e) => {
                                         switch (e) {
-                                            case P.oAB.GAMES:
-                                                return x;
-                                            case P.oAB.STREAMER_MODE:
+                                            case w.oAB.GAMES:
                                                 return D;
-                                            case P.oAB.APPEARANCE:
+                                            case w.oAB.STREAMER_MODE:
                                                 return I;
-                                            case P.oAB.ACCESSIBILITY:
+                                            case w.oAB.APPEARANCE:
                                                 return _;
-                                            case P.oAB.VOICE:
-                                                return T;
-                                            case P.oAB.TEXT:
-                                                return Z;
-                                            case P.oAB.EXPERIMENTS:
+                                            case w.oAB.ACCESSIBILITY:
                                                 return N;
-                                            case P.oAB.DEVELOPER_OPTIONS:
+                                            case w.oAB.VOICE:
+                                                return T;
+                                            case w.oAB.TEXT:
+                                                return Z;
+                                            case w.oAB.EXPERIMENTS:
                                                 return m;
+                                            case w.oAB.DEVELOPER_OPTIONS:
+                                                return k;
+                                            case w.oAB.DESIGN_SYSTEMS:
+                                                return C;
                                             default:
                                                 return null;
                                         }
@@ -141,14 +145,14 @@ let A = (0, s.Z)(
                             s,
                         );
                     }),
-                    e.user.isStaff() && C.length > 0
-                        ? (0, a.jsx)(i.sNh, {
+                    e.user.isStaff() && L.length > 0
+                        ? (0, a.jsx)(r.sNh, {
                               label: "Build Overrides",
                               id: "build_overrides",
-                              children: (0, a.jsx)(i.kSQ, {
-                                  children: C.map((e) =>
+                              children: (0, a.jsx)(r.kSQ, {
+                                  children: L.map((e) =>
                                       (0, a.jsx)(
-                                          i.k5B,
+                                          r.k5B,
                                           {
                                               id: "input-".concat(e.payload),
                                               group: "build_overrides",
@@ -167,12 +171,12 @@ let A = (0, s.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, a.jsx)(i.kSQ, {
-                              children: (0, a.jsx)(i.sNh, {
+                        ? (0, a.jsx)(r.kSQ, {
+                              children: (0, a.jsx)(r.sNh, {
                                   id: "clear-build-override",
                                   disabled: u,
-                                  label: w.intl.string(w.t["/Nz9ra"]),
-                                  action: R,
+                                  label: A.intl.string(A.t["/Nz9ra"]),
+                                  action: B,
                                   color: "danger",
                               }),
                           })

@@ -21,4 +21,8 @@ e.exports = {
     emojiUploadContainer: "emojiUploadContainer_e7d73e",
     editEmojiRolesIcon: "editEmojiRolesIcon_e7d73e",
     editEmojiRolesButton: "editEmojiRolesButton_e7d73e",
+    newlyAddedHighlightContainer: "newlyAddedHighlightContainer_e7d73e",
+    newlyAddedHighlight: "newlyAddedHighlight_e7d73e",
+    newlyAddedBadge: "newlyAddedBadge_e7d73e",
+    newlyAddedBadgeStar: "newlyAddedBadgeStar_e7d73e",
 };

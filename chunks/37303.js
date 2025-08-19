@@ -18,12 +18,12 @@ function h(e) {
         f = o.useCallback(() => j(!0), []),
         b = o.useCallback(() => j(!1), []),
         y = (0, i.tP)(t),
-        { containerRef: v, size: O, height: N } = (0, m.h)(),
+        { containerRef: v, size: O, height: E } = (0, m.h)(),
         {
-            expansionSpring: q,
-            isAnimating: E,
-            isExpanded: T,
-            toggleExpanded: S,
+            expansionSpring: N,
+            isAnimating: q,
+            isExpanded: S,
+            toggleExpanded: T,
         } = (0, m.O)({
             initiallyExpanded:
                 h ||
@@ -32,7 +32,7 @@ function h(e) {
                     quest: t,
                 }),
         }),
-        P = null != N ? N : u.U0;
+        P = null != E ? E : u.U0;
     return (0, s.jsx)(l.A, {
         questOrQuests: t,
         questContent: n,
@@ -45,7 +45,7 @@ function h(e) {
                     maxHeight:
                         n === a.jn.QUESTS_EMBED
                             ? void 0
-                            : q.to({
+                            : N.to({
                                   range: [0, 1],
                                   output: [u.DJ, P],
                               }),
@@ -65,11 +65,11 @@ function h(e) {
                             location: n,
                             quest: t,
                             size: O,
-                            expansionSpring: q,
-                            isAnimating: E,
-                            isExpanded: T,
+                            expansionSpring: N,
+                            isAnimating: q,
+                            isExpanded: S,
                             contentPosition: g,
-                            toggleExpanded: S,
+                            toggleExpanded: T,
                             sourceQuestContent: x,
                         }),
                         (0, s.jsx)(c.Z, {
@@ -78,8 +78,8 @@ function h(e) {
                             location: n,
                             size: O,
                             isFocused: C,
-                            isExpanded: T,
-                            isAnimating: E,
+                            isExpanded: S,
+                            isAnimating: q,
                             contentPosition: g,
                             sourceQuestContent: x,
                         }),

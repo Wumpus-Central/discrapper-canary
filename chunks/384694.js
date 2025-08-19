@@ -8,25 +8,25 @@ var r = n(951288),
     u = n(889564),
     c = n(430824),
     d = n(496675),
-    h = n(771845),
-    m = n(823379),
+    m = n(771845),
+    h = n(823379),
     g = n(267642),
     p = n(598117),
     f = n(981631),
     v = n(388032),
     x = n(503366);
-let _ = (e) => ({
+let b = (e) => ({
         label: e.name,
         value: e.id,
     }),
-    b = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    _ = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
     j = (e) => {
         let { onChange: t, selected: n, onError: d, labelledBy: j, isEmojiAnimated: O } = e,
-            E = (0, a.cj)([c.Z, h.ZP], () =>
+            E = (0, a.cj)([c.Z, m.ZP], () =>
                 Object.fromEntries(
-                    h.ZP.getFlattenedGuildIds()
+                    m.ZP.getFlattenedGuildIds()
                         .map((e) => c.Z.getGuild(e))
-                        .filter(m.lm)
+                        .filter(h.lm)
                         .map((e) => [e.id, e]),
                 ),
             ),
@@ -57,7 +57,7 @@ let _ = (e) => ({
                     ),
                 [E, O],
             ),
-            C = l.useMemo(() => Object.values(E).filter(b).map(_), [E]),
+            y = l.useMemo(() => Object.values(E).filter(_).map(b), [E]),
             D = l.useCallback(
                 (e) => {
                     let [t] = e;
@@ -84,7 +84,7 @@ let _ = (e) => ({
                 },
                 [E],
             ),
-            y = l.useCallback(
+            C = l.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
                     let t = E[e.value];
@@ -123,23 +123,23 @@ let _ = (e) => ({
         return (
             l.useEffect(() => {
                 var e;
-                C.length < 1
+                y.length < 1
                     ? d(p.ze.NO_PERMISSIONS)
                     : null != n && (null != (e = null == N ? void 0 : N[n]) ? e : 0) < 1
                       ? d(f.evJ.TOO_MANY_EMOJI)
                       : d(null);
-            }, [C, t, d, n, N]),
+            }, [y, t, d, n, N]),
             (0, r.jsx)(i.q4e, {
                 onChange: t,
-                options: C,
+                options: y,
                 popoutPosition: "top",
                 popoutWidth: 240,
-                renderOptionLabel: y,
+                renderOptionLabel: C,
                 renderOptionValue: D,
                 value: n,
                 "aria-labelledby": j,
-                placeholder: C.length < 1 ? v.intl.string(v.t.jHpxws) : v.intl.string(v.t["4mqeQE"]),
-                isDisabled: C.length < 1,
+                placeholder: y.length < 1 ? v.intl.string(v.t.jHpxws) : v.intl.string(v.t["4mqeQE"]),
+                isDisabled: y.length < 1,
             })
         );
     };

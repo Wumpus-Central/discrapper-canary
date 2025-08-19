@@ -26,25 +26,27 @@ function g(e) {
         { canCreateExpressions: v } = (0, _.XJ)(b),
         I = g || 0 === O || !v,
         T = i.useCallback(async () => {
-            if (!I) {
-                if ((E(!0), y.enabled)) {
-                    await (0, u.i)({
-                        analyticsLocation: {
-                            section: h.jXE.EXPRESSION_PICKER,
-                            page: (null == t ? void 0 : t.guild_id) != null ? h.ZY5.GUILD_CHANNEL : h.ZY5.DM_CHANNEL,
-                        },
-                    }),
-                        E(!1);
-                    return;
-                }
-                if (null == t) return void E(!1);
-                f.K({
-                    guildId: t.guild_id,
-                    autoOpenFileInput: y.isEntrypointExperimentEnabled,
-                    analyticsLocation: n,
+            if (I) return;
+            if ((E(!0), y.enabled)) {
+                var e;
+                await (0, u.i)({
+                    guildId: null != (e = null == t ? void 0 : t.guild_id) ? e : null,
+                    analyticsLocation: {
+                        section: h.jXE.EXPRESSION_PICKER,
+                        page: (null == t ? void 0 : t.guild_id) != null ? h.ZY5.GUILD_CHANNEL : h.ZY5.DM_CHANNEL,
+                    },
                 }),
                     E(!1);
+                return;
             }
+            if (null == t) return void E(!1);
+            let r = y.isEntrypointExperimentEnabled || y.isV2SpeedrunExperimentEnabled;
+            f.K({
+                guildId: t.guild_id,
+                autoOpenFileInput: r,
+                analyticsLocation: n,
+            }),
+                E(!1);
         }, [t, n, y, I]);
     return (0, r.jsx)(o.z, {
         variant: "secondary",

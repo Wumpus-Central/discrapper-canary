@@ -34,51 +34,39 @@ function c(e) {
     return e;
 }
 function u(e, t) {
-    var n = Object.keys(e);
+    if (null == e) return {};
+    var n,
+        r,
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return n;
+    return i;
 }
 function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
-let f = async function () {
-    let {
-        userImage: e = null,
-        guildId: t = null,
-        analyticsLocation: l = null,
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+let f = async (e) => {
+    let { analyticsLocation: t = null } = e,
+        l = u(e, ["analyticsLocation"]);
     a.default.track(s.rMx.OPEN_MODAL, {
         type: "Emoji Studio",
-        source: l,
+        source: t,
     }),
         await (0, i.ZDy)(
             async () => {
-                let { EmojiStudioModal: i } = await Promise.all([n.e("63575"), n.e("20087"), n.e("67079")]).then(
+                let { EmojiStudioModal: e } = await Promise.all([n.e("63575"), n.e("20087"), n.e("67079")]).then(
                     n.bind(n, 546200),
                 );
-                return (n) =>
-                    (0, r.jsx)(
-                        i,
-                        d(c({}, n), {
-                            userImage: e,
-                            guildId: t,
-                        }),
-                    );
+                return (t) => (0, r.jsx)(e, c({}, t, l));
             },
             { modalKey: o.Hj },
         );

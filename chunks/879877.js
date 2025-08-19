@@ -17,18 +17,18 @@ function p(e) {
         p = (0, l.useRef)(null),
         [y, v] = (0, l.useState)(0),
         [x, h] = (0, l.useState)(!1),
-        { trackUserProfileAction: P } = (0, o.KZ)(),
-        E = j(p, c, s, v);
+        { trackUserProfileAction: E } = (0, o.KZ)(),
+        P = j(p, c, s, v);
     if (
         ((0, l.useEffect)(
             () => (
-                E(),
-                window.addEventListener("resize", E),
+                P(),
+                window.addEventListener("resize", P),
                 () => {
-                    window.removeEventListener("resize", E);
+                    window.removeEventListener("resize", P);
                 }
             ),
-            [E, null == c ? void 0 : c.join("")],
+            [P, null == c ? void 0 : c.join("")],
         ),
         null == c || 0 === c.length)
     )
@@ -60,13 +60,13 @@ function p(e) {
                 (x
                     ? (0, n.jsx)(m, {
                           onClick: () => {
-                              h(!1), P({ action: "COLLAPSE_GAME_TAGS" });
+                              h(!1), E({ action: "COLLAPSE_GAME_TAGS" });
                           },
                       })
                     : (0, n.jsx)(O, {
                           numHidden: y,
                           onClick: () => {
-                              h(!0), P({ action: "EXPAND_GAME_TAGS" });
+                              h(!0), E({ action: "EXPAND_GAME_TAGS" });
                           },
                           ref: p,
                       })),

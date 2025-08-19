@@ -1,63 +1,63 @@
-t.d(n, { default: () => f }), t(388685);
-var i = t(951288),
-    a = t(647438),
-    o = t(481060),
-    r = t(313201),
-    l = t(117984),
-    s = t(388032),
-    d = t(662971);
-function f(e) {
-    let { onClose: n, transitionState: t } = e,
-        f = (0, r.Dt)(),
-        [c, u] = a.useState("");
+n.d(t, { default: () => d }), n(388685);
+var i = n(951288),
+    a = n(647438),
+    s = n(481060),
+    r = n(313201),
+    l = n(117984),
+    o = n(388032),
+    c = n(662971);
+function d(e) {
+    let { onClose: t, transitionState: n } = e,
+        d = (0, r.Dt)(),
+        [h, u] = a.useState("");
     return (0, i.jsx)("form", {
         onSubmit: function (e) {
-            e.preventDefault(), (0, l.CM)(c), n();
+            e.preventDefault(), (0, l.CM)(h), t();
         },
-        children: (0, i.jsxs)(o.Y0X, {
-            transitionState: t,
-            "aria-labelledby": f,
+        children: (0, i.jsxs)(s.Y0X, {
+            transitionState: n,
+            "aria-labelledby": d,
             parentComponent: "AddFavoriteCategoryModal",
             children: [
-                (0, i.jsxs)(o.hzk, {
+                (0, i.jsxs)(s.hzk, {
                     children: [
-                        (0, i.jsx)(o.X6q, {
-                            id: f,
-                            className: d.header,
+                        (0, i.jsx)(s.X6q, {
+                            id: d,
+                            className: c.header,
                             variant: "heading-xl/semibold",
-                            children: s.intl.string(s.t["ISN+ND"]),
+                            children: o.intl.string(o.t["ISN+ND"]),
                         }),
-                        (0, i.jsx)(o.olH, {
-                            onClick: n,
-                            className: d.closeButton,
+                        (0, i.jsx)(s.olH, {
+                            onClick: t,
+                            className: c.closeButton,
                         }),
-                        (0, i.jsx)(o.xJW, {
-                            title: s.intl.string(s.t.OCAkGB),
-                            className: d.name,
-                            children: (0, i.jsx)(o.oil, {
-                                value: c,
+                        (0, i.jsx)(s.xJW, {
+                            title: o.intl.string(o.t.OCAkGB),
+                            className: c.name,
+                            children: (0, i.jsx)(s.oil, {
+                                value: h,
                                 onChange: u,
                                 maxLength: 100,
-                                placeholder: s.intl.string(s.t.eTVbt7),
+                                placeholder: o.intl.string(o.t.eTVbt7),
                                 autoFocus: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(o.mzw, {
-                    children: (0, i.jsxs)(o.hE2, {
+                (0, i.jsx)(s.mzw, {
+                    children: (0, i.jsxs)(s.hE2, {
                         direction: "horizontal-reverse",
                         children: [
-                            (0, i.jsx)(o.zxk, {
+                            (0, i.jsx)(s.zxk, {
                                 variant: "primary",
-                                text: s.intl.string(s.t["ISN+ND"]),
+                                text: o.intl.string(o.t["ISN+ND"]),
                                 type: "submit",
-                                disabled: "" === c,
+                                disabled: "" === h,
                             }),
-                            (0, i.jsx)(o.zxk, {
+                            (0, i.jsx)(s.zxk, {
                                 variant: "secondary",
-                                text: s.intl.string(s.t["ETE/oK"]),
-                                onClick: n,
+                                text: o.intl.string(o.t["ETE/oK"]),
+                                onClick: t,
                             }),
                         ],
                     }),

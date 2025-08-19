@@ -4,5 +4,4 @@ e.exports = {
     cancelImage: "cancelImage__968a4",
     invoiceCancelRow: "invoiceCancelRow__968a4",
     error: "error__968a4",
-    textButton: "textButton__968a4",
 };

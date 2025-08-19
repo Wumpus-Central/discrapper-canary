@@ -1,4 +1,4 @@
-r.d(t, { Z: () => P });
+r.d(t, { Z: () => E });
 var n = r(951288);
 r(647438);
 var l = r(481060),
@@ -132,9 +132,9 @@ function h(e) {
           })
         : null;
 }
-function P(e) {
+function E(e) {
     let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: g = !1 } = e,
-        { gameName: P = p.intl.string(p.t.GIWFlJ), imageSrc: E, applicationId: w, comment: _, tags: S } = a,
+        { gameName: E = p.intl.string(p.t.GIWFlJ), imageSrc: P, applicationId: w, comment: _, tags: S } = a,
         I = {
             variant: "heading-sm/semibold",
             color: "text-default",
@@ -162,8 +162,8 @@ function P(e) {
               className: m.card,
               children: [
                   (0, n.jsx)(u.Z, {
-                      imageSrc: E,
-                      gameName: P,
+                      imageSrc: P,
+                      gameName: E,
                       applicationId: w,
                       userId: t.id,
                       disableInteraction: g,
@@ -173,14 +173,14 @@ function P(e) {
                       className: m.details,
                       children: [
                           g
-                              ? (0, n.jsx)(l.X6q, y(j({}, I), { children: P }))
+                              ? (0, n.jsx)(l.X6q, y(j({}, I), { children: E }))
                               : (0, n.jsx)(
                                     v,
                                     j(
                                         {
                                             applicationId: w,
                                             userId: t.id,
-                                            gameName: P,
+                                            gameName: E,
                                         },
                                         I,
                                     ),
