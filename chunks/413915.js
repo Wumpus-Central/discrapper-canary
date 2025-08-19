@@ -1,29 +1,29 @@
-n.d(t, { Z: () => d });
-var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(731722),
-    l = n(172751),
-    o = n(131085),
-    c = n(298282);
-let d = r.memo(function (e) {
-    let { guildId: t, guildProfile: n } = e;
-    return (0, i.jsx)("div", {
-        className: c.tagContainer,
-        children: (0, i.jsxs)("div", {
-            className: c.tag,
+t.r(e), t.d(e, { default: () => b });
+var s = t(951288),
+    n = t(647438),
+    d = t(481060),
+    i = t(731722),
+    c = t(172751),
+    g = t(131085),
+    r = t(298282);
+let b = n.memo(function (a) {
+    let { guildId: e, guildProfile: t } = a;
+    return (0, s.jsx)("div", {
+        className: r.tagContainer,
+        children: (0, s.jsxs)("div", {
+            className: r.tag,
             children: [
-                null != n.badge &&
-                    (0, i.jsx)(l.eI, {
-                        src: (0, a.Ic)(t, n.badge, o.Gg.SIZE_32),
-                        tag: n.tag,
-                        size: o.Gg.SIZE_32,
-                        className: c.badge,
+                null != t.badge &&
+                    (0, s.jsx)(c.eI, {
+                        src: (0, i.Ic)(e, t.badge, g.Gg.SIZE_32),
+                        tag: t.tag,
+                        size: g.Gg.SIZE_32,
+                        className: r.badge,
                     }),
-                (0, i.jsx)(s.Text, {
+                (0, s.jsx)(d.Text, {
                     tag: "span",
                     variant: "heading-xl/semibold",
-                    children: n.tag,
+                    children: t.tag,
                 }),
             ],
         }),

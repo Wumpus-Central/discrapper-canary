@@ -242,9 +242,7 @@ class k extends O.ZP {
         let n = (0, d.G)({ location: "CloudUpload" }).enableResumableUploads,
             r = (0, f.m)({ location: "CloudUpload" }).enableResumableUploads;
         if (
-            (r &&
-                this.item.platform === O.ow.REACT_NATIVE &&
-                ((this._uploadHttpClient = new I.Qn()), (this._libdiscoreEnabled = !0)),
+            (r && (0, I.Z_)(this.item) && ((this._uploadHttpClient = new I.Qn()), (this._libdiscoreEnabled = !0)),
             n || r)
         )
             return await this.uploadFileWithResumption(this.responseUrl, e, t);

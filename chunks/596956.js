@@ -1,8 +1,9 @@
 n.d(t, {
     LD: () => c,
-    Qn: () => u,
+    Qn: () => d,
     SB: () => l,
     TC: () => s,
+    Z_: () => u,
 }),
     n(415506);
 var r = n(544891),
@@ -36,7 +37,10 @@ class c {
         );
     }
 }
-class u {
+function u(e) {
+    return !!(e.platform === a.ow.REACT_NATIVE && null != e.uri && e.uri.startsWith("file://") && (0, i.X6)());
+}
+class d {
     doUpload(e, t) {
         var n, r, a;
         let s,

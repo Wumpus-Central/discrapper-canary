@@ -1,13 +1,16 @@
-n.d(t, { J: () => g });
+n.d(t, { J: () => y });
 var r = n(951288),
     i = n(647438),
-    a = n(920155),
-    o = n(744399),
-    s = n(454028),
-    l = n(966902),
-    c = n(237872),
-    u = n(562618);
-function d(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(751334),
+    l = n(920155),
+    c = n(744399),
+    u = n(966902),
+    d = n(237872),
+    f = n(562618),
+    _ = n(254477);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +34,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +51,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +74,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,29 +83,30 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g(e) {
-    var {
-            title: t,
-            body: n,
-            caretConfig: d = {
+function y(e) {
+    var t,
+        {
+            title: n,
+            body: a,
+            caretConfig: p = {
                 position: "bottom",
                 align: "center",
             },
-            badge: _,
-            asset: m,
-            size: g = "md",
-            actions: E,
-            textLink: b,
-            gradientColor: y,
-            onRequestClose: O,
-            popoverRef: v,
+            badge: m,
+            graphic: b,
+            size: y = "md",
+            actions: O,
+            textLink: v,
+            gradientColor: I,
+            onRequestClose: T,
+            popoverRef: S,
         } = e,
-        I = h(e, [
+        A = E(e, [
             "title",
             "body",
             "caretConfig",
             "badge",
-            "asset",
+            "graphic",
             "size",
             "actions",
             "textLink",
@@ -110,40 +114,44 @@ function g(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let T = i.useCallback(() => {
-            null == O || O();
-        }, [O]),
-        S = i.useCallback(() => {
-            null == O || O();
-        }, [O]);
+    let N = i.useCallback(() => {
+            null == T || T();
+        }, [T]),
+        C = i.useCallback(() => {
+            null == T || T();
+        }, [T]);
     return (0, r.jsx)(
-        a.m,
-        p(f({}, I), {
-            onRequestClose: T,
-            gradientColor: y,
-            caretConfig: d,
+        l.m,
+        g(h({}, A), {
+            onRequestClose: N,
+            gradientColor: I,
+            caretConfig: p,
             children: (0, r.jsxs)("div", {
-                ref: v,
+                ref: S,
                 children: [
-                    (0, r.jsx)(c.u, {
-                        onClick: S,
-                        variant: null != y ? "color-mix" : void 0,
+                    (0, r.jsx)(d.u, {
+                        onClick: C,
+                        variant: null != I ? "color-mix" : void 0,
                     }),
-                    null != m
-                        ? (0, r.jsx)(s.V, {
-                              asset: m,
-                              size: g,
-                          })
-                        : null,
-                    (0, r.jsx)(u.Y, {
-                        title: t,
-                        body: n,
-                        badge: _,
-                        textLink: b,
-                        hasBottomMargin: null != E,
+                    null != b &&
+                        (0, r.jsx)("div", {
+                            className: o()(_.graphic, { [_["graphic--".concat(y)]]: null != y }),
+                            children: (0, r.jsx)(
+                                s.z,
+                                g(h({}, b), {
+                                    aspectRatio: null != (t = b.aspectRatio) ? t : "sm" === y ? "2/1" : "16/9",
+                                }),
+                            ),
+                        }),
+                    (0, r.jsx)(f.Y, {
+                        title: n,
+                        body: a,
+                        badge: m,
+                        textLink: v,
+                        hasBottomMargin: null != O,
                     }),
-                    null != E && E.length > 0 ? (0, r.jsx)(o.k, { actions: E }) : null,
-                    (0, r.jsx)(l.$, { caretConfig: d }),
+                    null != O && O.length > 0 ? (0, r.jsx)(c.k, { actions: O }) : null,
+                    (0, r.jsx)(u.$, { caretConfig: p }),
                 ],
             }),
         }),

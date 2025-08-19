@@ -49,10 +49,10 @@ let g = (e) => {
             targetElementRef: t,
             title: u.intl.string(u.t.K2DyeX),
             body: u.intl.string(u.t["JICo+/"]),
-            asset: (0, r.jsx)("img", {
+            graphic: {
+                type: "image",
                 src: f.Z,
-                alt: "",
-            }),
+            },
             size: "md",
             shouldShow: d,
             align: "top",

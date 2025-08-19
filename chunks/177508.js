@@ -1451,10 +1451,10 @@ function eh() {
                 title: "Header",
                 body: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Only with Nitro"],
                 size: "sm",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: Y.Z,
-                    alt: "Small placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1473,10 +1473,10 @@ function eh() {
                 },
                 title: "Header",
                 body: "Body",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1512,10 +1512,10 @@ function eh() {
                 },
                 title: "Ipsum Dolor",
                 body: "Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod.",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1539,10 +1539,10 @@ function eh() {
                 },
                 title: "Header",
                 body: "Body",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1567,10 +1567,10 @@ function eh() {
                 },
                 title: "No Actions",
                 body: "This popover has no action buttons, just content to display.",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
             }),
             (0, i.jsx)(v.J2, {
@@ -1583,10 +1583,10 @@ function eh() {
                 },
                 title: "Custom Caret API",
                 body: "Using CaretConfig with END placement",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1605,10 +1605,10 @@ function eh() {
                 },
                 title: "Left Side Caret",
                 body: "Caret positioned on the left side at start",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "early_access",
                 actions: [
                     {
@@ -1628,10 +1628,10 @@ function eh() {
                 },
                 title: "Custom Offset",
                 body: "Caret positioned 50px from center with custom offset",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "beta",
                 actions: [
                     {
@@ -1651,10 +1651,10 @@ function eh() {
                 },
                 title: "Left Center Positioning",
                 body: "Popover appears to the right with caret centered on the left side",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 badge: "new",
                 actions: [
                     {
@@ -1673,10 +1673,10 @@ function eh() {
                 },
                 title: "Purple Gradient",
                 body: "This popover has a beautiful purple gradient background",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 gradientColor: "purple",
                 badge: "new",
                 actions: [
@@ -1696,10 +1696,10 @@ function eh() {
                 },
                 title: "Blue Gradient",
                 body: "This popover showcases the blue gradient option",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 gradientColor: "blue",
                 badge: "beta",
                 actions: [
@@ -1719,10 +1719,10 @@ function eh() {
                 },
                 title: "Nitro Pink Gradient",
                 body: "Experience the premium nitro-pink gradient effect",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: W.Z,
-                    alt: "Medium placeholder",
-                }),
+                },
                 gradientColor: "nitro-pink",
                 textLink: {
                     text: "Learn about Nitro",
@@ -1746,10 +1746,10 @@ function eh() {
                 },
                 title: "Voice Filters",
                 body: "Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: K.Z,
-                    alt: "Voice Filters",
-                }),
+                },
                 badge: "new",
                 gradientColor: "purple",
                 actions: [
@@ -1823,10 +1823,10 @@ function eh() {
                     {
                         title: "Welcome to Quests!",
                         body: "Journey to Quest Home in Discover to start earning Orbs.",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: W.Z,
-                            alt: "Medium placeholder",
-                        }),
+                        },
                         badge: "new",
                         action: { text: "Next" },
                         gradientColor: "blue",
@@ -1834,20 +1834,20 @@ function eh() {
                     {
                         title: "Earn Rewards",
                         body: "Complete quests to earn Orbs and unlock exclusive rewards.",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: K.Z,
-                            alt: "Quest Rewards",
-                        }),
+                        },
                         action: { text: "Next" },
                         gradientColor: "blue",
                     },
                     {
                         title: "Quest Complete!",
                         body: "You're all set to start your quest adventure. Good luck!",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: W.Z,
-                            alt: "Medium placeholder",
-                        }),
+                        },
                         action: { text: "Get Started" },
                         gradientColor: "blue",
                         textLink: {
@@ -1869,10 +1869,10 @@ function eh() {
                 },
                 title: "Experience Voice Filters",
                 body: "Enhanced voice quality with our latest filtering technology. Try the expressive button!",
-                asset: (0, i.jsx)("img", {
+                graphic: {
+                    type: "image",
                     src: K.Z,
-                    alt: "Voice Filters",
-                }),
+                },
                 badge: "new",
                 gradientColor: "nitro-pink",
                 actions: [
@@ -1895,10 +1895,10 @@ function eh() {
                     {
                         title: "Discover Features",
                         body: "Explore amazing new capabilities in Discord.",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: W.Z,
-                            alt: "Medium placeholder",
-                        }),
+                        },
                         badge: "new",
                         action: { text: "Continue" },
                         gradientColor: "purple",
@@ -1906,20 +1906,20 @@ function eh() {
                     {
                         title: "Unlock Potential",
                         body: "Learn how to make the most of your Discord experience.",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: K.Z,
-                            alt: "Features",
-                        }),
+                        },
                         action: { text: "Almost There" },
                         gradientColor: "blue",
                     },
                     {
                         title: "Ready to Go!",
                         body: "You're all set! Notice the expressive button animation.",
-                        asset: (0, i.jsx)("img", {
+                        graphic: {
+                            type: "image",
                             src: W.Z,
-                            alt: "Medium placeholder",
-                        }),
+                        },
                         action: {
                             text: "Get Started",
                             variant: "expressive",

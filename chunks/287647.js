@@ -1,99 +1,73 @@
-n.d(t, { e: () => N });
+n.d(t, { e: () => x });
 var i = n(951288),
     r = n(647438),
-    s = n(793030),
-    a = n(442837),
-    l = n(920155),
-    o = n(744399),
-    c = n(454028),
-    d = n(966902),
-    u = n(237872),
-    m = n(562618),
-    p = n(230711),
-    g = n(906732),
-    h = n(70097),
-    f = n(710845),
-    b = n(688465),
-    x = n(451478),
-    _ = n(829716),
-    j = n(981631),
-    E = n(921944),
-    C = n(693450),
-    O = n(388032),
-    v = n(520005),
-    S = n(374104);
-let T = new f.Z("DisplayNameStylesCoachmark");
-function N(e) {
-    let { markAsDismissed: t, targetElementRef: n, children: f } = e,
-        { analyticsLocations: N } = (0, g.ZP)(),
-        I = (0, r.useRef)(null),
-        y = (0, a.e7)([x.Z], () => x.Z.isFocused()),
-        A = (0, r.useCallback)(() => {
-            t(E.L.TAKE_ACTION),
-                p.Z.open(j.oAB.PROFILE_CUSTOMIZATION, null, { analyticsLocations: N }),
-                (0, _.I)({ analyticsLocations: N });
-        }, [t, N]),
-        P = (0, r.useCallback)(() => {
-            t(E.L.USER_DISMISS);
+    s = n(442837),
+    a = n(264418),
+    l = n(230711),
+    o = n(906732),
+    c = n(710845),
+    d = n(451478),
+    u = n(829716),
+    m = n(981631),
+    p = n(921944),
+    g = n(693450),
+    h = n(388032),
+    f = n(374104);
+let b = new c.Z("DisplayNameStylesCoachmark");
+function x(e) {
+    let { markAsDismissed: t, targetElementRef: n, children: c } = e,
+        { analyticsLocations: x } = (0, o.ZP)(),
+        _ = (0, r.useRef)(null),
+        j = (0, s.e7)([d.Z], () => d.Z.isFocused()),
+        E = (0, r.useCallback)(() => {
+            t(p.L.TAKE_ACTION),
+                l.Z.open(m.oAB.PROFILE_CUSTOMIZATION, null, { analyticsLocations: x }),
+                (0, u.I)({ analyticsLocations: x });
+        }, [t, x]),
+        C = (0, r.useCallback)(() => {
+            t(p.L.USER_DISMISS);
         }, [t]);
     return (
         (0, r.useEffect)(() => {
             var e, t, n;
-            y && (null == (e = I.current) ? void 0 : e.paused)
-                ? null == (t = I.current) || t.play().catch(T.error)
-                : y || null == (n = I.current) || n.pause();
-        }, [y]),
+            j && (null == (e = _.current) ? void 0 : e.paused)
+                ? null == (t = _.current) || t.play().catch(b.error)
+                : j || null == (n = _.current) || n.pause();
+        }, [j]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                f,
-                (0, i.jsxs)(l.m, {
+                c,
+                (0, i.jsx)(a.J, {
                     targetElementRef: n,
                     shouldShow: !0,
+                    onRequestClose: C,
                     align: "right",
                     position: "top",
+                    caretConfig: {
+                        position: "bottom",
+                        align: "center",
+                    },
                     gradientColor: "nitro-pink",
-                    children: [
-                        (0, i.jsx)(u.u, { onClick: P }),
-                        (0, i.jsx)(c.V, {
-                            asset: (0, i.jsx)(h.Z, {
-                                src: S.Z,
-                                width: 160,
-                                height: 69,
-                                autoPlay: !0,
-                                loop: !0,
-                                muted: !0,
-                                ref: I,
-                            }),
-                            size: "md",
-                            className: v.asset,
-                        }),
-                        (0, i.jsx)(b.Z, { className: v.betaTag }),
-                        (0, i.jsx)(m.Y, { title: O.intl.string(C.default["1AE46+"]) }),
-                        (0, i.jsxs)(s.xv, {
-                            variant: "text-sm/normal",
-                            color: "text-secondary",
-                            className: v.subtitle,
-                            children: [
-                                O.intl.string(C.default.cNc1g4),
-                                (0, i.jsx)("br", {}),
-                                O.intl.string(O.t["4JNXHB"]),
-                            ],
-                        }),
-                        (0, i.jsx)(o.k, {
-                            actions: [
-                                {
-                                    text: O.intl.string(O.t.uw9zIy),
-                                    variant: "primary",
-                                    onClick: A,
-                                },
-                            ],
-                        }),
-                        (0, i.jsx)(d.$, {
-                            caretConfig: {
-                                position: "bottom",
-                                align: "center",
-                            },
-                        }),
+                    graphic: {
+                        type: "video",
+                        ref: _,
+                        src: f.Z,
+                        aspectRatio: "21/9",
+                        loop: !0,
+                    },
+                    size: "lg",
+                    badge: {
+                        type: "beta",
+                        variant: "expressive",
+                    },
+                    title: h.intl.string(g.default["1AE46+"]),
+                    body: [h.intl.string(g.default.cNc1g4), h.intl.string(h.t["4JNXHB"])],
+                    actions: [
+                        {
+                            text: h.intl.string(h.t.uw9zIy),
+                            variant: "primary",
+                            onClick: E,
+                        },
                     ],
                 }),
             ],

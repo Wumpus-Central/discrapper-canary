@@ -1,17 +1,20 @@
-n.d(t, { M: () => v });
+n.d(t, { M: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(780842),
-    o = n(70097),
-    s = n(312097),
-    l = n(920155),
-    c = n(744399),
-    u = n(454028),
-    d = n(966902),
-    f = n(562618),
-    _ = n(803866),
-    p = n(37751);
-function h(e, t, n) {
+    o = n(751334),
+    s = n(587272),
+    l = n(70097),
+    c = n(312097),
+    u = n(920155),
+    d = n(744399),
+    f = n(966902),
+    _ = n(562618),
+    p = n(803866),
+    h = n(490340),
+    m = n(388032),
+    g = n(37751);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +38,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +55,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -75,7 +78,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,27 +87,24 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function O(e) {
-    return e.endsWith(".gif") || e.endsWith(".webp") || e.endsWith(".png");
-}
-function v(e) {
+function T(e) {
     var {
             title: t,
             body: n,
-            assetUrl: h,
-            previewUrl: g = h,
-            action: y,
-            caretConfig: v = {
+            assetUrl: E,
+            previewUrl: y = E,
+            action: I,
+            caretConfig: T = {
                 position: "bottom",
                 align: "center",
             },
-            badge: I,
-            textLink: T,
-            onWatchVideo: S,
-            onRequestClose: A,
-            popoverRef: N,
+            badge: S,
+            textLink: A,
+            onWatchVideo: N,
+            onRequestClose: C,
+            popoverRef: R,
         } = e,
-        C = b(e, [
+        P = v(e, [
             "title",
             "body",
             "assetUrl",
@@ -117,96 +117,90 @@ function v(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let R = i.useRef(null),
-        P = O(g),
-        w = i.useCallback(
+    let w = i.useRef(null),
+        D = (0, s.j1)(y),
+        L = i.useCallback(
             () => ({
                 type: "VIDEO",
-                url: h,
-                proxyUrl: h,
+                url: E,
+                proxyUrl: E,
                 alt: t,
                 width: 1280,
                 height: 720,
-                className: p.media,
+                className: g.media,
             }),
-            [h, t],
+            [E, t],
         ),
-        D = i.useCallback(() => {
-            null !== R.current && R.current.pause(), null == A || A();
-        }, [A]),
-        L = i.useCallback(() => {
-            null !== R.current && R.current.pause(), null == A || A();
-        }, [A]),
         x = i.useCallback(() => {
-            null !== R.current && R.current.pause();
-            let e = w();
-            (0, s.K)({
+            null !== w.current && w.current.pause(), null == C || C();
+        }, [C]),
+        M = i.useCallback(() => {
+            null !== w.current && w.current.pause(), null == C || C();
+        }, [C]),
+        k = i.useCallback(() => {
+            null !== w.current && w.current.pause();
+            let e = L();
+            (0, c.K)({
                 items: [e],
                 startingIndex: 0,
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == A || A(),
-                null == S || S();
-        }, [w, S, A]),
-        M = P
-            ? (0, r.jsx)("img", {
-                  src: g,
-                  alt: "",
-                  draggable: !1,
-                  className: p.inlineAsset,
+                null == C || C(),
+                null == N || N();
+        }, [L, N, C]),
+        j = D
+            ? (0, r.jsx)(o.z, {
+                  type: "image",
+                  src: y,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(o.Z, {
-                          ref: R,
-                          src: g,
+                      (0, r.jsx)(l.Z, {
+                          ref: w,
+                          src: y,
                           width: 232,
                           height: 131,
                           autoPlay: !0,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          className: p.inlineAsset,
                           controls: !1,
                           preload: "metadata",
                       }),
                       (0, r.jsx)("div", {
-                          className: p.playButton,
+                          className: g.playButton,
                           children: (0, r.jsx)(a.J, {
                               playing: !1,
                               size: "sm",
-                              "aria-label": "Play video: ".concat(t),
-                              onClick: x,
+                              "aria-label": m.intl.string(h.default.YpT3kp),
+                              onClick: k,
                           }),
                       }),
                   ],
               });
     return (0, r.jsx)(
-        l.m,
-        E(m({}, C), {
-            onRequestClose: D,
+        u.m,
+        O(b({}, P), {
+            onRequestClose: x,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
-                ref: N,
+                ref: R,
                 children: [
-                    (0, r.jsx)(_.N, { onClick: L }),
-                    (0, r.jsx)(d.$, { caretConfig: v }),
-                    (0, r.jsx)(u.V, {
-                        asset: (0, r.jsx)("div", {
-                            className: p.assetContainer,
-                            children: M,
-                        }),
-                        size: "video",
+                    (0, r.jsx)(p.N, { onClick: M }),
+                    (0, r.jsx)(f.$, { caretConfig: T }),
+                    (0, r.jsx)("div", {
+                        className: g.assetContainer,
+                        children: j,
                     }),
-                    (0, r.jsx)(f.Y, {
+                    (0, r.jsx)(_.Y, {
                         title: t,
                         body: n,
-                        badge: I,
-                        textLink: T,
-                        hasBottomMargin: null != y,
+                        badge: S,
+                        textLink: A,
+                        hasBottomMargin: null != I,
                     }),
-                    null != y ? (0, r.jsx)(c.k, { actions: [y] }) : null,
+                    null != I ? (0, r.jsx)(d.k, { actions: [I] }) : null,
                 ],
             }),
         }),

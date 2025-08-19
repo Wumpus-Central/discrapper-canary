@@ -100,36 +100,39 @@ function E(e) {
     );
 }
 function b(e) {
-    let { src: t, fallbackImageSrc: n, loop: a, loopAt: o = 0, playbackRate: l } = e,
-        { reducedMotion: c } = i.useContext(s.S),
-        u = i.useRef(null);
-    return (i.useEffect(() => {
-        let e = u.current;
+    let { ref: t, src: n, fallbackImageSrc: a, loop: o, loopAt: l = 0, playbackRate: c } = e,
+        { reducedMotion: u } = i.useContext(s.S),
+        f = i.useRef(null);
+    return (i.useImperativeHandle(t, () => f.current),
+    i.useEffect(() => {
+        let e = f.current;
         if (null != e)
             return (
-                null != l && (e.playbackRate = l),
-                null != a && (e.loop = 0 === o && a),
+                null != c && (e.playbackRate = c),
+                null != o && (e.loop = 0 === l && o),
                 e.addEventListener("ended", t),
                 () => {
                     e.removeEventListener("ended", t);
                 }
             );
         function t() {
-            null != e && !0 === a && 0 !== o && ((e.currentTime = o), e.play());
+            null != e && !0 === o && 0 !== l && ((e.currentTime = l), e.play());
         }
-    }, [a, o, l]),
-    c.enabled && null != n)
+    }, [o, l, c]),
+    u.enabled && null != a)
         ? (0, r.jsx)(m, {
               type: "image",
-              src: n,
+              src: a,
           })
         : (0, r.jsx)("video", {
               className: d.video,
-              ref: u,
-              src: t,
-              autoPlay: !c.enabled,
+              ref: f,
+              src: n,
+              autoPlay: !u.enabled,
               muted: !0,
               playsInline: !0,
+              controls: !1,
+              preload: "metadata",
           });
 }
 function y(e) {

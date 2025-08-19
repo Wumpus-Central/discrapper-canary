@@ -1,15 +1,14 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(951288),
     i = n(647438),
     l = n(907862),
     a = n(481060),
     o = n(921944),
-    s = n(388032),
-    c = n(934919);
-function u(e) {
-    let { guildId: t, markAsDismissed: u, targetElementRef: d } = e,
-        p = i.useCallback(() => {
-            u(o.L.TAKE_ACTION),
+    s = n(388032);
+function c(e) {
+    let { guildId: t, markAsDismissed: c, targetElementRef: u } = e,
+        d = i.useCallback(() => {
+            c(o.L.TAKE_ACTION),
                 (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("15076"), n.e("39672")]).then(n.bind(n, 907941));
                     return (n) => {
@@ -58,20 +57,20 @@ function u(e) {
                         );
                     };
                 });
-        }, [t, u]),
-        f = i.useCallback(() => {
-            u(o.L.USER_DISMISS);
-        }, [u]);
+        }, [t, c]),
+        p = i.useCallback(() => {
+            c(o.L.USER_DISMISS);
+        }, [c]);
     return (0, r.jsx)(l.J2, {
-        targetElementRef: d,
+        targetElementRef: u,
         shouldShow: !0,
         title: s.intl.string(s.t["2l9beX"]),
         body: s.intl.string(s.t.gdqdND),
-        asset: (0, r.jsx)("img", {
-            className: c.image,
+        graphic: {
+            type: "image",
             src: n(297806),
-            alt: "",
-        }),
+            aspectRatio: "6/4",
+        },
         size: "lg",
         caretConfig: {
             position: "top",
@@ -81,14 +80,14 @@ function u(e) {
             {
                 text: s.intl.string(s.t.RzWDqa),
                 variant: "primary",
-                onClick: p,
+                onClick: d,
             },
             {
                 text: s.intl.string(s.t.TulDPj),
                 variant: "secondary",
-                onClick: f,
+                onClick: p,
             },
         ],
-        onRequestClose: f,
+        onRequestClose: p,
     });
 }

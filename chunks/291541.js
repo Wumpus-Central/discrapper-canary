@@ -100,11 +100,11 @@ let m = {
                                 targetElementRef: b,
                                 shouldShow: g,
                                 onRequestClose: () => E(!1),
-                                asset: t
-                                    ? (0, r.jsx)("img", {
+                                graphic: t
+                                    ? {
+                                          type: "image",
                                           src: "sm" === h ? l.Z : s.Z,
-                                          alt: "Placeholder",
-                                      })
+                                      }
                                     : void 0,
                                 caretConfig: {
                                     position: u,

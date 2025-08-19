@@ -34,15 +34,22 @@ function o(e) {
     return e;
 }
 var s = (function (e) {
-    return (e[(e.COLLECTIBLES_PREVIEW = 0)] = "COLLECTIBLES_PREVIEW"), (e[(e.DEMO = 1)] = "DEMO"), e;
+    return (
+        (e[(e.DEMO = 0)] = "DEMO"),
+        (e[(e.COLLECTIBLES_PREVIEW = 1)] = "COLLECTIBLES_PREVIEW"),
+        (e[(e.GUILD_TAG_COACHMARK_ASSET = 2)] = "GUILD_TAG_COACHMARK_ASSET"),
+        e
+    );
 })({});
 let l = {
-        1: () => n.e("64861").then(n.bind(n, 564172)),
-        0: () => n.e("96887").then(n.bind(n, 669636)),
+        0: () => n.e("64861").then(n.bind(n, 564172)),
+        1: () => n.e("96887").then(n.bind(n, 669636)),
+        2: () => n.e("8124").then(n.bind(n, 413915)),
     },
     c = {
-        1: i.lazy(l[1]),
         0: i.lazy(l[0]),
+        1: i.lazy(l[1]),
+        2: i.lazy(l[2]),
     };
 function u(e) {
     let { data: t } = e,

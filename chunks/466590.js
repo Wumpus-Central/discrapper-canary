@@ -1,16 +1,18 @@
-n.d(t, { e: () => y }), n(388685);
+n.d(t, { e: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(680018),
-    o = n(481060),
-    s = n(920155),
-    l = n(454028),
-    c = n(966902),
-    u = n(237872),
-    d = n(562618),
-    f = n(388032),
-    _ = n(254477);
-function p(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(793030),
+    l = n(680018),
+    c = n(751334),
+    u = n(920155),
+    d = n(966902),
+    f = n(237872),
+    _ = n(562618),
+    p = n(388032),
+    h = n(254477);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +36,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +53,22 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +76,7 @@ function E(e, t) {
     }
     return i;
 }
-function b(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,101 +85,106 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function y(e) {
+function v(e) {
     var t,
         n,
-        p,
+        a,
         m,
+        E,
         {
-            steps: b,
-            caretConfig: y = {
+            steps: O,
+            caretConfig: v = {
                 position: "bottom",
                 align: "center",
             },
-            size: O = "md",
-            onStepChange: v,
-            onRequestClose: I,
-            popoverRef: T,
-            shouldShow: S,
+            size: I = "md",
+            onStepChange: T,
+            onRequestClose: S,
+            popoverRef: A,
+            shouldShow: N,
         } = e,
-        A = E(e, ["steps", "caretConfig", "size", "onStepChange", "onRequestClose", "popoverRef", "shouldShow"]);
-    let [N, C] = i.useState(0);
+        C = y(e, ["steps", "caretConfig", "size", "onStepChange", "onRequestClose", "popoverRef", "shouldShow"]);
+    let [R, P] = i.useState(0);
     i.useEffect(() => {
-        S && C(0);
-    }, [S]),
+        N && P(0);
+    }, [N]),
         i.useEffect(() => {
-            null == v || v(N);
-        }, [N, v]);
-    let R = b[N],
-        P = N + 1 === b.length,
-        w = i.useCallback(() => {
-            var e;
-            null == R || null == (e = R.onCta) || e.call(R), P ? null == I || I() : C((e) => e + 1);
-        }, [R, P, I]),
-        D = i.useCallback(() => {
-            null == I || I();
-        }, [I]),
+            null == T || T(R);
+        }, [R, T]);
+    let w = O[R],
+        D = R + 1 === O.length,
         L = i.useCallback(() => {
-            null == I || I();
-        }, [I]);
-    if (!S || null == R) return null;
-    let x = h(
+            var e;
+            null == w || null == (e = w.onCta) || e.call(w), D ? null == S || S() : P((e) => e + 1);
+        }, [w, D, S]),
+        x = i.useCallback(() => {
+            null == S || S();
+        }, [S]),
+        M = i.useCallback(() => {
+            null == S || S();
+        }, [S]);
+    if (!N || null == w) return null;
+    let k = g(
         {
             text:
-                null != (p = null == (t = R.action) ? void 0 : t.text)
-                    ? p
-                    : P
-                      ? f.intl.string(f.t.i4jeWV)
-                      : f.intl.string(f.t.PDTjLC),
-            variant: null != (m = null == (n = R.action) ? void 0 : n.variant) ? m : "primary",
-            onClick: w,
+                null != (a = null == (t = w.action) ? void 0 : t.text)
+                    ? a
+                    : D
+                      ? p.intl.string(p.t.i4jeWV)
+                      : p.intl.string(p.t.PDTjLC),
+            variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : "primary",
+            onClick: L,
         },
-        R.action,
+        w.action,
     );
     return (0, r.jsx)(
-        s.m,
-        g(h({}, A), {
-            shouldShow: S,
-            onRequestClose: D,
-            gradientColor: R.gradientColor,
+        u.m,
+        b(g({}, C), {
+            shouldShow: N,
+            onRequestClose: x,
+            gradientColor: w.gradientColor,
             children: (0, r.jsxs)("div", {
-                ref: T,
+                ref: A,
                 children: [
-                    (0, r.jsx)(u.u, {
-                        onClick: L,
-                        variant: null != R.gradientColor ? "color-mix" : void 0,
+                    (0, r.jsx)(f.u, {
+                        onClick: M,
+                        variant: null != w.gradientColor ? "color-mix" : void 0,
                     }),
-                    null != R.asset
-                        ? (0, r.jsx)(l.V, {
-                              asset: R.asset,
-                              size: O,
-                          })
-                        : null,
-                    (0, r.jsx)(d.Y, {
-                        title: R.title,
-                        body: R.body,
-                        badge: R.badge,
-                        textLink: R.textLink,
+                    null != w.graphic &&
+                        (0, r.jsx)("div", {
+                            className: o()(h.graphic, { [h["graphic--".concat(I)]]: null != I }),
+                            children: (0, r.jsx)(
+                                c.z,
+                                b(g({}, w.graphic), {
+                                    aspectRatio: null != (E = w.graphic.aspectRatio) ? E : "sm" === I ? "2/1" : "16/9",
+                                }),
+                            ),
+                        }),
+                    (0, r.jsx)(_.Y, {
+                        title: w.title,
+                        body: w.body,
+                        badge: w.badge,
+                        textLink: w.textLink,
                         hasBottomMargin: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: _.actionBar,
+                        className: h.actionBar,
                         children: (0, r.jsxs)("div", {
-                            className: _.multistepActionLayout,
+                            className: h.multistepActionLayout,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.xv, {
                                     variant: "text-xs/normal",
-                                    className: _.multistepIndicator,
-                                    children: f.intl.formatToPlainString(f.t.rO31eX, {
-                                        count: N + 1,
-                                        totalSteps: b.length,
+                                    className: h.multistepIndicator,
+                                    children: p.intl.formatToPlainString(p.t.rO31eX, {
+                                        count: R + 1,
+                                        totalSteps: O.length,
                                     }),
                                 }),
-                                (0, r.jsx)(a.z, h({ size: "sm" }, x)),
+                                (0, r.jsx)(l.z, g({ size: "sm" }, k)),
                             ],
                         }),
                     }),
-                    (0, r.jsx)(c.$, { caretConfig: y }),
+                    (0, r.jsx)(d.$, { caretConfig: v }),
                 ],
             }),
         }),

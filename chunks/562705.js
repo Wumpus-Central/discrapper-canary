@@ -1,42 +1,36 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => j });
 var i = n(951288),
     r = n(647438),
     s = n(442837),
     a = n(704215),
-    l = n(920155),
-    o = n(744399),
-    c = n(454028),
-    d = n(966902),
-    u = n(237872),
-    m = n(562618),
-    p = n(243778),
-    g = n(7093),
-    h = n(819640),
-    f = n(585483),
-    b = n(553896),
-    x = n(101966),
-    _ = n(804413),
-    j = n(787528),
-    E = n(474936),
-    C = n(981631),
-    O = n(921944),
-    v = n(388032),
-    S = n(30083);
-function T(e) {
+    l = n(264418),
+    o = n(243778),
+    c = n(7093),
+    d = n(819640),
+    u = n(585483),
+    m = n(553896),
+    p = n(101966),
+    g = n(804413),
+    h = n(787528),
+    f = n(474936),
+    b = n(981631),
+    x = n(921944),
+    _ = n(388032);
+function j(e) {
     let { groupName: t, targetElementRef: n } = e,
-        r = (0, _.Z)(),
-        l = (0, x.Z)({ location: "TenureLevelUpPopover" }),
-        o = (0, g.Z)((e) => e.isOpen),
-        c = (0, s.e7)([h.Z], () => h.Z.getLayers().includes(C.S9g.USER_SETTINGS));
-    return !l || null == r || o || c
+        r = (0, g.Z)(),
+        l = (0, p.Z)({ location: "TenureLevelUpPopover" }),
+        u = (0, c.Z)((e) => e.isOpen),
+        m = (0, s.e7)([d.Z], () => d.Z.getLayers().includes(b.S9g.USER_SETTINGS));
+    return !l || null == r || u || m
         ? null
-        : (0, i.jsx)(p.Nq, {
+        : (0, i.jsx)(o.Nq, {
               contentType: a.z.NITRO_TENURE_BADGE_LEVEL_UP,
               timeRecurringConfig: { cooldownDurationMs: 1209600000 },
               groupName: t,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: s } = e;
-                  return (0, i.jsx)(N, {
+                  return (0, i.jsx)(E, {
                       recentlyLeveledTenureBadge: r,
                       markAsDismissed: s,
                       targetElementRef: n,
@@ -45,59 +39,49 @@ function T(e) {
               },
           });
 }
-function N(e) {
+function E(e) {
     var t;
-    let { recentlyLeveledTenureBadge: n, markAsDismissed: s, targetElementRef: a, shouldShow: p } = e,
-        h = E.Qh.indexOf(n),
-        x = (0, j.J)(E.Qh[h > 0 ? h - 1 : h], { ambient: !0 }),
-        _ = (0, r.useCallback)(() => {
-            s(O.L.TAKE_ACTION),
-                g.Z.setState({ shouldRenderTenureLevelUp: !0 }),
-                f.S.dispatch(C.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+    let { recentlyLeveledTenureBadge: n, markAsDismissed: s, targetElementRef: a, shouldShow: o } = e,
+        d = f.Qh.indexOf(n),
+        p = (0, h.J)(f.Qh[d > 0 ? d - 1 : d], { ambient: !0 }),
+        g = (0, r.useCallback)(() => {
+            s(x.L.TAKE_ACTION),
+                c.Z.setState({ shouldRenderTenureLevelUp: !0 }),
+                u.S.dispatch(b.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [s]),
-        T = (0, r.useCallback)(() => {
-            s(O.L.USER_DISMISS);
+        j = (0, r.useCallback)(() => {
+            s(x.L.USER_DISMISS);
         }, [s]),
-        N = E.vK[n],
-        I = v.intl.formatToPlainString(v.t.ewkaVV, {
-            timeMilestone: null == (t = (0, b.q)(N.id, N.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
+        E = f.vK[n],
+        C = _.intl.formatToPlainString(_.t.ewkaVV, {
+            timeMilestone: null == (t = (0, m.q)(E.id, E.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),
-        y = {
+        O = [
+            {
+                text: _.intl.string(_.t.RzWDqa),
+                variant: "primary",
+                onClick: g,
+            },
+        ];
+    return (0, i.jsx)(l.J, {
+        targetElementRef: a,
+        onRequestClose: j,
+        shouldShow: o,
+        caretConfig: {
             position: "bottom",
             align: "center",
         },
-        A = [
-            {
-                text: v.intl.string(v.t.RzWDqa),
-                variant: "primary",
-                onClick: _,
-            },
-        ];
-    return (0, i.jsx)(l.m, {
-        targetElementRef: a,
-        shouldShow: p,
-        caretConfig: y,
-        children: (0, i.jsxs)("div", {
-            children: [
-                (0, i.jsx)(u.u, { onClick: T }),
-                null != x
-                    ? (0, i.jsx)(c.V, {
-                          asset: (0, i.jsx)("img", {
-                              src: x,
-                              alt: v.intl.string(N.nameUnformatted),
-                              className: S.badgeImage,
-                          }),
-                          size: "md",
-                      })
-                    : null,
-                (0, i.jsx)(m.Y, {
-                    title: v.intl.string(v.t.VoDxsb),
-                    body: I,
-                    hasBottomMargin: !0,
-                }),
-                (0, i.jsx)(o.k, { actions: A }),
-                (0, i.jsx)(d.$, { caretConfig: y }),
-            ],
-        }),
+        graphic:
+            null != p
+                ? {
+                      type: "image",
+                      src: p,
+                      aspectRatio: "6/4",
+                  }
+                : void 0,
+        size: "lg",
+        title: _.intl.string(_.t.VoDxsb),
+        body: C,
+        actions: O,
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(907862),
@@ -9,20 +9,19 @@ var r = n(951288),
     u = n(703656),
     d = n(335131),
     p = n(981631),
-    f = n(388032),
-    h = n(524970);
-let g = (e) => {
-    let { displayOptions: t, targetElementRef: n, onRequestClose: g, onClick: m } = e,
-        { analyticsLocations: b } = (0, c.ZP)(s.Z.HOME_PAGE_SHOP_TAB),
-        _ = (0, o.ZP)(),
-        O = (0, a.wj)(_) ? t.assetDark : t.assetLight,
-        E = i.useRef(g);
+    f = n(388032);
+let h = (e) => {
+    let { displayOptions: t, targetElementRef: n, onRequestClose: h, onClick: g } = e,
+        { analyticsLocations: m } = (0, c.ZP)(s.Z.HOME_PAGE_SHOP_TAB),
+        b = (0, o.ZP)(),
+        _ = (0, a.wj)(b) ? t.assetDark : t.assetLight,
+        O = i.useRef(h);
     return (
-        (E.current = g),
+        (O.current = h),
         i.useEffect(
             () => () => {
                 var e;
-                null == (e = E.current) || e.call(E);
+                null == (e = O.current) || e.call(O);
             },
             [],
         ),
@@ -37,27 +36,26 @@ let g = (e) => {
             },
             title: t.title(),
             body: t.body(),
-            asset: (0, r.jsx)("img", {
-                className: h.art,
-                src: O,
-                alt: "",
-            }),
+            graphic: {
+                type: "image",
+                src: _,
+            },
             actions: [
                 {
                     text: f.intl.string(f.t.fYfGgI),
                     variant: "primary",
                     onClick: () => {
-                        null == m || m(),
+                        null == g || g(),
                             (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
                             (0, d.mK)({
                                 openInLayer: !1,
-                                analyticsLocations: b,
+                                analyticsLocations: m,
                                 analyticsSource: s.Z.HOME_PAGE_SHOP_TAB,
                             });
                     },
                 },
             ],
-            onRequestClose: g,
+            onRequestClose: h,
         })
     );
 };
