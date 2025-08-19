@@ -22,6 +22,7 @@ var r = n(230367),
             (e[(e.SURFACE_UNSPECIFIED = 0)] = "SURFACE_UNSPECIFIED"),
             (e[(e.API = 1)] = "API"),
             (e[(e.APP = 2)] = "APP"),
+            (e[(e.DEVELOPER_PORTAL = 3)] = "DEVELOPER_PORTAL"),
             e
         );
     })({}),

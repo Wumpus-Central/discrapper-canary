@@ -97,8 +97,9 @@ function E(e) {
 function b(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let y = new s.Yd("ApexExperimentStore"),
-    O = [c.Cm.User],
+let y = new s.Yd("ApexExperimentStore");
+(null == window.TextEncoder || null == window.TextDecoder) && n(251171);
+let O = [c.Cm.User],
     v = {
         user: {},
         guild: {},
@@ -160,6 +161,7 @@ class L extends (r = o.ZP.PersistedStore) {
                         });
             }
         }
+        return !0;
     }
     createOverride(e, t) {
         (T = p(f({}, T), {
@@ -294,7 +296,7 @@ class L extends (r = o.ZP.PersistedStore) {
                 this.track(
                     u.j_.EXPERIMENT_SAVE_EXPOSURE_FAILED,
                     {
-                        module: "discord_app",
+                        module: this.surface,
                         call: "ApexExperimentStore.saveTrackedExposures",
                     },
                     { flush: !0 },
@@ -317,7 +319,7 @@ class L extends (r = o.ZP.PersistedStore) {
         return D(e);
     }
     constructor(...e) {
-        super(...e), d(this, "track", () => Promise.resolve());
+        super(...e), d(this, "track", () => Promise.resolve()), d(this, "surface", "unset");
     }
 }
 d(L, "displayName", "ApexExperimentStore"), d(L, "persistKey", "ApexExperimentStore");

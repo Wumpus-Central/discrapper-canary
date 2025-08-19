@@ -174,6 +174,7 @@ class C extends s.Z {
         return Promise.reject(Error("getNoiseCancellationStats is not supported on browsers."));
     }
     setNoiseCancellationEnableStats(e) {}
+    setNoiseCancellationDuringProcessing(e) {}
     getAudioInputDevices() {
         return (0, E.Hg)();
     }

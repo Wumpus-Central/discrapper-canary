@@ -3,10 +3,10 @@ var i,
     r,
     l,
     a,
-    d = n(133080),
-    u = n(750041),
+    o = n(133080),
+    d = n(750041),
     s = n(594174),
-    o = n(411198),
+    u = n(411198),
     E = n(709054),
     c = n(260722),
     _ = n(546791),
@@ -59,10 +59,10 @@ function I(t, e) {
     );
 }
 let C = null,
-    A = null,
+    p = null,
     g = {},
-    y = U(),
-    p = Y(),
+    y = b(),
+    A = O(),
     N = null,
     L =
         (null == (r = window) || null == (i = r.location) ? void 0 : i.pathname) === T.ix.FAMILY_CENTER_MY_FAMILY
@@ -73,27 +73,31 @@ let C = null,
     h = !1,
     R = !1,
     M = null,
-    b = null,
+    U = null,
     D = {};
-function U() {
+function b() {
     return {
         [T.MY.USER_ADD]: {},
         [T.MY.GUILD_ADD]: {},
         [T.MY.USER_INTERACTION]: {},
         [T.MY.GUILD_INTERACTION]: {},
         [T.MY.USER_CALLED]: {},
+        [T.MY.TOTAL_VOICE_MINUTES]: {},
+        [T.MY.PURCHASES]: {},
     };
 }
-function Y() {
+function O() {
     return {
         [T.MY.USER_ADD]: 0,
         [T.MY.GUILD_ADD]: 0,
         [T.MY.USER_INTERACTION]: 0,
         [T.MY.GUILD_INTERACTION]: 0,
         [T.MY.USER_CALLED]: 0,
+        [T.MY.TOTAL_VOICE_MINUTES]: 0,
+        [T.MY.PURCHASES]: 0,
     };
 }
-function O() {
+function Y() {
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return (
         arguments.length > 1 && arguments[1],
@@ -101,10 +105,10 @@ function O() {
     );
 }
 function m(t) {
-    void 0 !== t && (p = t);
+    void 0 !== t && (A = t);
 }
 function v(t, e) {
-    let n = e ? y : U();
+    let n = e ? y : b();
     return (y = t.reduce((t, e) => {
         let i = e.display_type;
         return void 0 !== n[i] && void 0 === n[i][e.event_id] && (t[i][e.event_id] = e), t;
@@ -114,7 +118,7 @@ function F(t) {
     D = t.reduce((t, e) => {
         var n;
         return I(S({}, t), {
-            [e.id]: I(S({}, (0, o.Jh)(e)), {
+            [e.id]: I(S({}, (0, u.Jh)(e)), {
                 approximateMemberCount: null != (n = e.approximate_member_count) ? n : 0,
             }),
         });
@@ -123,37 +127,37 @@ function F(t) {
 function w() {
     R = !0;
 }
-function j(t) {
-    let { linkedUsers: e, familyCenterTeenActivity: n } = t,
-        { actions: i, guilds: r, totals: l, teenId: a, rangeStartId: d } = n;
-    (C = a), (A = d), v(i), m(l), F(r), O(e), (R = !1), (M = E.default.fromTimestamp(Date.now())), (h = !0);
-}
 function P(t) {
-    let { linkedUsers: e } = t;
-    O(e);
-}
-function k(t) {
-    let { linkedUsers: e } = t;
-    O(e);
+    let { linkedUsers: e, familyCenterTeenActivity: n } = t,
+        { actions: i, guilds: r, totals: l, teenId: a, rangeStartId: o } = n;
+    (C = a), (p = o), v(i), m(l), F(r), Y(e), (R = !1), (M = E.default.fromTimestamp(Date.now())), (h = !0);
 }
 function H(t) {
+    let { linkedUsers: e } = t;
+    Y(e);
+}
+function j(t) {
+    let { linkedUsers: e } = t;
+    Y(e);
+}
+function k(t) {
     let { familyCenterTeenActivity: e } = t;
     if (void 0 === e) return;
     let { actions: n, totals: i, guilds: r, teenId: l, rangeStartId: a } = e;
-    (C = l), (A = a), v(n), m(i), F(r), (R = !1), (M = E.default.fromTimestamp(Date.now()));
+    (C = l), (p = a), v(n), m(i), F(r), (R = !1), (M = E.default.fromTimestamp(Date.now()));
 }
-function G(t) {
+function V(t) {
     let { familyCenterTeenActivity: e } = t,
         { actions: n, guilds: i } = e;
     v(n, !0), F(i);
 }
-function V(t) {
+function G(t) {
     let { linkedUsers: e } = t;
-    O(e);
+    Y(e);
 }
 function Q(t) {
     let { linkedUsers: e } = t;
-    O(e, !0);
+    Y(e, !0);
 }
 function Z(t) {
     let { linkCode: e } = t;
@@ -163,7 +167,7 @@ function W(t) {
     let { tab: e } = t;
     L = e;
 }
-function K(t) {
+function x(t) {
     let { user: e } = t;
     if (void 0 === e.linked_users) return;
     let n = s.default.getUsers();
@@ -172,38 +176,38 @@ function K(t) {
         return void 0 === n[e];
     }) && e.linked_users.length > Object.keys(g).length
         ? c.ZP.fetchLinkedUsers()
-        : O(e.linked_users);
+        : Y(e.linked_users);
 }
-function x(t) {
+function K(t) {
     var e;
     let { countryCode: n } = t;
-    null != n && (b = null != (e = (0, d.Zz)(n)) ? e : null);
+    null != n && (U = null != (e = (0, o.Zz)(n)) ? e : null);
 }
 function z() {
-    (C = null), (A = null), (g = {}), (y = U()), (p = Y()), (D = {}), (R = !1), (M = null);
+    (C = null), (p = null), (g = {}), (y = b()), (A = O()), (D = {}), (R = !1), (M = null);
 }
-class B extends u.Z {
+class B extends d.Z {
     initialize() {
         this.waitFor(s.default);
     }
     loadCache() {
         let t = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
         null != t &&
-            (O(t.linkedUsers),
+            (Y(t.linkedUsers),
             F(t.guilds),
             v(t.teenActivity),
-            (p = t.teenActivityTotals.reduce((t, e) => {
+            (A = t.teenActivityTotals.reduce((t, e) => {
                 let [n, i] = e.split(":"),
                     r = (0, _.jV)(n);
                 return void 0 === r ? t : I(S({}, t), { [r]: parseInt(i, 10) });
-            }, Y())));
+            }, O())));
     }
     takeSnapshot() {
         return {
             version: B.LATEST_SNAPSHOT_VERSION,
             data: {
                 linkedUsers: Object.values(g),
-                teenActivityTotals: Object.entries(p).map((t) => {
+                teenActivityTotals: Object.entries(A).map((t) => {
                     let [e, n] = t;
                     return "".concat(e, ":").concat(n);
                 }),
@@ -233,13 +237,13 @@ class B extends u.Z {
         return null == n ? null : null != (e = n.updated_at) ? e : n.created_at;
     }
     getRangeStartTimestamp() {
-        return null == A ? null : E.default.extractTimestamp(A);
+        return null == p ? null : E.default.extractTimestamp(p);
     }
     getActionsForDisplayType(t) {
         return Object.values(y[t]);
     }
     getTotalForDisplayType(t) {
-        return p[t];
+        return A[t];
     }
     getLinkCode() {
         return N;
@@ -251,13 +255,13 @@ class B extends u.Z {
         return L;
     }
     getStartId() {
-        return A;
+        return p;
     }
     getIsInitialized() {
         return h;
     }
     getUserCountry() {
-        return b;
+        return U;
     }
     isLoading() {
         return R;
@@ -267,19 +271,19 @@ class B extends u.Z {
     }
     constructor() {
         super({
-            CURRENT_USER_UPDATE: K,
+            CURRENT_USER_UPDATE: x,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            FAMILY_CENTER_INITIAL_LOAD: j,
+            FAMILY_CENTER_INITIAL_LOAD: P,
             FAMILY_CENTER_FETCH_START: w,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: P,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: H,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: G,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: k,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: V,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: H,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: k,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: V,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: j,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: G,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Q,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
             FAMILY_CENTER_HANDLE_TAB_SELECT: W,
-            SET_LOCATION_METADATA: x,
+            SET_LOCATION_METADATA: K,
             LOGOUT: z,
         });
     }

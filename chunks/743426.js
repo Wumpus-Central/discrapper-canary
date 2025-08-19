@@ -467,6 +467,7 @@ class v extends a.Z {
                 automaticGainControl: null == (n = t.automaticGainControlConfig) ? void 0 : n.enabled,
                 automaticGainControlConfig: t.automaticGainControlConfig,
                 noiseCancellation: t.noiseCancellation,
+                noiseCancellationDuringProcessing: t.noiseCancellationDuringProcessing,
                 voiceFilters: t.voiceFilters,
                 loopbackUseAudioMode: t.loopbackUseAudioMode,
             }),
@@ -477,6 +478,7 @@ class v extends a.Z {
                       noiseSuppression: t.noiseSuppression,
                       automaticGainControl: null == (r = t.automaticGainControlConfig) ? void 0 : r.enabled,
                       noiseCancellation: t.noiseCancellation,
+                      noiseCancellationDuringProcessing: t.noiseCancellationDuringProcessing,
                   });
     }
     setMaybePreprocessMute(e) {

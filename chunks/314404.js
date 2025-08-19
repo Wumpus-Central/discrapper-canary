@@ -453,8 +453,8 @@ function et(e) {
             isTrial: c,
         } = e,
         { paymentSources: d, selectedPlan: f } = (0, m.JL)(),
-        { isGift: _, claimableRewards: p, giftRecipient: g } = (0, h.wD)(),
-        E = (0, y.pO)(g);
+        { isGift: _, giftRecipient: p, claimableRewards: g } = (0, h.wD)(),
+        E = (0, y.pO)(p);
     return (
         (i = null != i ? i : d),
         (n = null != n ? n : null == f ? void 0 : f.id),
@@ -466,7 +466,7 @@ function et(e) {
                           onStepChange: t,
                           selectedPlanId: n,
                           isGift: _,
-                          claimableRewards: p,
+                          claimableRewards: g,
                           shouldRenderUpdatedPaymentModal: l,
                           isTrial: c,
                       })

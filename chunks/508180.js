@@ -1,15 +1,13 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(82659),
     s = n(481060),
     l = n(846027),
-    c = n(468026),
-    u = n(724723),
-    d = n(131951),
-    f = n(388032);
-function _(e, t, n) {
+    c = n(131951),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +20,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,62 +31,51 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-let h = () => {
-    let e = (0, a.e7)([d.Z], () => d.Z.isInteractionRequired(), []),
+let _ = () => {
+    let e = (0, a.e7)([c.Z], () => c.Z.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
         null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
     }
-    function _() {
+    function d() {
         l.Z.interact();
     }
     return (
-        i.useEffect(() => {
-            if (e) {
-                let e = u.Z.getCurrentConfig({ location: "InteractionRequired" }).enabled;
-                t.current = (0, s.h7j)((t) =>
-                    e
-                        ? (0, r.jsx)(
+        i.useEffect(
+            () => (
+                e
+                    ? (t.current = (0, s.h7j)((e) =>
+                          (0, r.jsx)(
                               o.Modal,
-                              p(
+                              f(
                                   {
-                                      title: f.intl.string(f.t.dLLxCw),
-                                      subtitle: f.intl.string(f.t["64lmt7"]),
+                                      title: u.intl.string(u.t.dLLxCw),
+                                      subtitle: u.intl.string(u.t["64lmt7"]),
                                       actions: [
                                           {
-                                              text: f.intl.string(f.t.BddRzc),
+                                              text: u.intl.string(u.t.BddRzc),
                                               onClick: () => {
-                                                  _(), t.onClose();
+                                                  d(), e.onClose();
                                               },
                                           },
                                       ],
                                   },
-                                  t,
-                              ),
-                          )
-                        : (0, r.jsx)(
-                              c.default,
-                              p(
-                                  {
-                                      title: f.intl.string(f.t.dLLxCw),
-                                      body: f.intl.string(f.t["64lmt7"]),
-                                      onConfirm: _,
-                                      confirmText: f.intl.string(f.t.BddRzc),
-                                  },
-                                  t,
+                                  e,
                               ),
                           ),
-                );
-            } else n();
-            return () => {
-                n();
-            };
-        }, [e]),
+                      ))
+                    : n(),
+                () => {
+                    n();
+                }
+            ),
+            [e],
+        ),
         null
     );
 };

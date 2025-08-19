@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => h,
-    Z: () => g,
+    O: () => p,
+    Z: () => m,
 });
 var r = n(951288),
     i = n(647438),
@@ -8,11 +8,10 @@ var r = n(951288),
     o = n.n(a),
     s = n(803948),
     l = n(558452),
-    c = n(770278),
-    u = n(724723),
-    d = n(985316),
-    f = n(336088);
-function _(e, t, n) {
+    c = n(481060),
+    u = n(985316),
+    d = n(336088);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,28 +35,28 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
-    return e !== c.f.TOP_RADIAL && e !== c.f.SUBTLE && e !== c.f.BLUR;
+function p(e) {
+    return e !== c.fCB.TOP_RADIAL && e !== c.fCB.SUBTLE && e !== c.fCB.BLUR;
 }
-function m(e) {
+function h(e) {
     let {
         variant: t = "default",
         animationVariant: n = "default",
         onClick: i,
         isVisible: a,
         disabled: c = !1,
-        disablePointerEvents: u = !1,
+        disablePointerEvents: f = !1,
     } = e;
     return (0, l.Y)(
         a,
         {
             keys: (e) => (e ? "scrim" : "empty"),
-            config: d.Px,
+            config: u.Px,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -67,9 +66,9 @@ function m(e) {
         n
             ? (0, r.jsx)(s.animated.div, {
                   role: "none",
-                  className: o()(f.scrim, {
-                      [f.lightbox]: "lightbox" === t,
-                      [f.pointerEventsNone]: u,
+                  className: o()(d.scrim, {
+                      [d.lightbox]: "lightbox" === t,
+                      [d.pointerEventsNone]: f,
                   }),
                   style: e,
                   onClick: c ? void 0 : i,
@@ -77,13 +76,6 @@ function m(e) {
             : null,
     );
 }
-let g = i.forwardRef(function (e) {
-    return (0, u.q)("Scrim")
-        ? (0, r.jsx)(m, p({}, e))
-        : (0, r.jsx)(c.Z, {
-              backdropStyle: "lightbox" === e.variant ? c.f.LIGHTBOX : c.f.DARK,
-              onClose: e.onClick,
-              isVisible: e.isVisible,
-              backdropInstant: "instant" === e.animationVariant,
-          });
+let m = i.forwardRef(function (e) {
+    return (0, r.jsx)(h, _({}, e));
 });

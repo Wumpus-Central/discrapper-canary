@@ -26,7 +26,8 @@ class l extends r.Z {
             (this.track = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                 return s.default.track(...t);
-            });
+            }),
+            (this.surface = "discord_app");
     }
 }
 let c = new l();

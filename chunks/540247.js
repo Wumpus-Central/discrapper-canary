@@ -13,17 +13,17 @@ r.d(t, { P: () => a }),
     r(146733);
 var n = r(647438),
     l = r(442837),
-    i = r(974167),
-    u = r(651941);
+    u = r(974167),
+    i = r(651941);
 function a(e) {
     let { userId: t, keyToOmit: r } = e,
         a = n.useMemo(() => {
             if (null == r) return null;
             let e = new Uint8Array(r);
-            return (0, i.MK)(e);
+            return (0, u.MK)(e);
         }, [r]);
-    return (0, l.e7)([u.Z], () => {
-        let e = u.Z.getUserVerifiedKeys(t);
+    return (0, l.e7)([i.Z], () => {
+        let e = i.Z.getUserVerifiedKeys(t);
         return null == e ? 0 : Object.keys(e).filter((e) => e !== a).length;
     }, [a, t]);
 }

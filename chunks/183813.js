@@ -20,16 +20,20 @@ var i = t(951288),
 function g(e) {
     let { handleStepChange: n, handleClose: t } = e,
         { selectedPlan: l, selectedSkuId: g, step: y } = (0, h.JL)(),
-        { setSelectedGiftingPromotionReward: E, selectedGiftingPromotionReward: S, claimableRewards: v } = (0, x.wD)(),
-        P = (0, a.e7)([u.default], () => u.default.getCurrentUser());
+        {
+            setSelectedGiftingPromotionReward: E,
+            selectedGiftingPromotionReward: S,
+            claimableRewards: v,
+            claimableVariants: P,
+        } = (0, x.wD)(),
+        O = (0, a.e7)([u.default], () => u.default.getCurrentUser());
     r.useEffect(() => {
-        let e = null != v && v.length > 0;
-        null == S && e && E(v[0]);
+        null != v && v.length > 0 && null == S && E(v[0]);
     }, [v, S, E]),
         s()(null != l, "Expected plan to selected"),
         s()(null != g, "Expected selectedSkuId"),
         s()(null != y, "Step should be set");
-    let O =
+    let b =
             null == v
                 ? void 0
                 : v.map((e) =>
@@ -48,24 +52,24 @@ function g(e) {
                           );
                       })(e),
                   ),
-        b =
-            null != S && null != P
+        Z =
+            null != S && null != O
                 ? (0, i.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: S.assetId },
-                      user: P,
+                      user: O,
                       guildId: null,
                       avatarSize: o.EFr.SIZE_152,
                   })
                 : null,
-        Z = (0, i.jsx)(f.O3, {
+        I = (0, i.jsx)(f.O3, {
             children: (0, i.jsx)(o.mzw, {
                 className: L.modalFooter,
                 children: (0, i.jsx)(c.y, {
                     onStepChange: (e) => {
-                        null != P &&
+                        null != O &&
                             null != S &&
                             p.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: P.id,
+                                user_id: O.id,
                                 reward_sku_id: S.skuId,
                             }),
                             n(e);
@@ -78,7 +82,7 @@ function g(e) {
                 }),
             }),
         }),
-        I = (0, i.jsx)(o.X6q, {
+        M = (0, i.jsx)(o.X6q, {
             variant: "heading-lg/bold",
             color: "header-primary",
             children: _.intl.string(_.t["Rp0+ZG"]),
@@ -91,7 +95,7 @@ function g(e) {
                     direction: "horizontal",
                     justify: "space-between",
                     align: "center",
-                    children: [I, (0, i.jsx)(o.olH, { onClick: t })],
+                    children: [M, (0, i.jsx)(o.olH, { onClick: t })],
                 }),
             }),
             (0, i.jsx)(o.hzk, {
@@ -100,16 +104,16 @@ function g(e) {
                     align: "center",
                     padding: { top: 24 },
                     children: [
-                        b,
+                        Z,
                         (0, i.jsx)(o.Kqy, {
                             gap: 8,
                             padding: { top: 12 },
-                            children: O,
+                            children: b,
                         }),
                     ],
                 }),
             }),
-            Z,
+            I,
         ],
     });
 }

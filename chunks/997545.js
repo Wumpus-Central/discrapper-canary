@@ -231,6 +231,7 @@ class L extends _.Z {
                                         automaticGainControl: this.automaticGainControl.enabled,
                                         automaticGainControlConfig: this.automaticGainControl,
                                         noiseCancellation: this.noiseCancellation,
+                                        noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
                                         voiceFilters: null != this.voiceFilterId,
                                     }),
                                     n.setNoInputThreshold(-100),
@@ -574,6 +575,12 @@ class L extends _.Z {
     }
     setNoiseCancellation(e) {
         (this.noiseCancellation = e), (0, b.zS)().setTransportOptions({ noiseCancellation: this.noiseCancellation });
+    }
+    setNoiseCancellationDuringProcessing(e) {
+        (this.noiseCancellationDuringProcessing = e),
+            (0, b.zS)().setTransportOptions({
+                noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
+            });
     }
     getNoiseCancellation() {
         return this.noiseCancellation;
@@ -1139,6 +1146,7 @@ class L extends _.Z {
             I(this, "noiseSuppression", !0),
             I(this, "automaticGainControl", { enabled: !0 }),
             I(this, "noiseCancellation", !1),
+            I(this, "noiseCancellationDuringProcessing", !1),
             I(this, "voiceFilterId", null),
             I(this, "experimentalEncoders", !1),
             I(this, "hardwareH264", !0),

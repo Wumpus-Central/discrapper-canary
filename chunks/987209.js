@@ -30,37 +30,38 @@ function y(e) {
     A && (N = null != f ? f : h);
     let [C, R] = i.useState(N),
         P = (0, l.iE)(),
-        [w, D] = i.useState(),
-        [L, x] = i.useState(
+        w = (0, l.yX)(),
+        [D, L] = i.useState(),
+        [x, M] = i.useState(
             t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? p.intl.string(p.t.ZkOo1d) : c,
         ),
-        [M, k] = i.useState(void 0),
-        [j, U] = i.useState(void 0),
-        G = (0, u.E5)(b, t),
-        [B, V] = i.useState(!1),
-        [F, Z] = i.useState(!1),
-        [H, Y] = i.useState(),
-        W = i.useCallback(
+        [k, j] = i.useState(void 0),
+        [U, G] = i.useState(void 0),
+        B = (0, u.E5)(b, t),
+        [V, F] = i.useState(!1),
+        [Z, H] = i.useState(!1),
+        [Y, W] = i.useState(),
+        K = i.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    Z(!0),
-                    (0, s.YD)(y, G)
+                    H(!0),
+                    (0, s.YD)(y, B)
                         .then(() => {
-                            Z(!1), null == t || t(), V(!0);
+                            H(!1), null == t || t(), F(!0);
                         })
                         .catch((e) => {
-                            Z(!1), Y(e), V(!0);
+                            H(!1), W(e), F(!0);
                         })
                 );
             },
-            [y, G, Z, V, Y],
+            [y, B, H, F, W],
         ),
-        K = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
+        z = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(g.Provider, {
         value: {
             isGift: t,
-            giftCode: G,
+            giftCode: B,
             giftMessage: c,
             giftRecipient: y,
             setGiftRecipient: O,
@@ -68,23 +69,24 @@ function y(e) {
             setGiftRecipientError: I,
             validatingGiftRecipient: T,
             setValidatingGiftRecipient: S,
-            soundEffect: M,
-            setSoundEffect: k,
-            emojiConfetti: j,
-            setEmojiConfetti: U,
-            customGiftMessage: L,
-            setCustomGiftMessage: x,
+            soundEffect: k,
+            setSoundEffect: j,
+            emojiConfetti: U,
+            setEmojiConfetti: G,
+            customGiftMessage: x,
+            setCustomGiftMessage: M,
             selectedGiftStyle: C,
             setSelectedGiftStyle: R,
-            sendGiftMessage: W,
-            hasSentMessage: B,
-            isSendingMessage: F,
-            giftMessageError: H,
-            recommendedGiftSkuIds: K,
+            sendGiftMessage: K,
+            hasSentMessage: V,
+            isSendingMessage: Z,
+            giftMessageError: Y,
+            recommendedGiftSkuIds: z,
             giftingOrigin: _,
             claimableRewards: P,
-            selectedGiftingPromotionReward: w,
-            setSelectedGiftingPromotionReward: D,
+            claimableVariants: w,
+            selectedGiftingPromotionReward: D,
+            setSelectedGiftingPromotionReward: L,
         },
         children: E,
     });
@@ -103,6 +105,7 @@ let O = {
         giftMessageError: void 0,
         recommendedGiftSkuIds: [],
         claimableRewards: void 0,
+        claimableVariants: void 0,
         setSelectedGiftingPromotionReward: f.dG4,
     },
     v = (e) => {

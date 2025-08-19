@@ -1,32 +1,31 @@
-n.d(t, { default: () => g }), n(388685);
+n.d(t, { default: () => m }), n(388685);
 var r = n(951288),
     a = n(647438),
     i = n(120356),
     o = n.n(i),
     c = n(667202),
     s = n(481060),
-    l = n(724723),
     p = n(626135),
-    d = n(585483),
-    u = n(637538),
-    h = n(747387),
-    f = n(981631),
-    y = n(388032),
-    b = n(518840),
-    v = n(140238);
-let m = new Set([s.Dvm.ENTERING, s.Dvm.ENTERED]);
-function g(e) {
+    l = n(585483),
+    d = n(637538),
+    u = n(747387),
+    h = n(981631),
+    f = n(388032),
+    y = n(518840),
+    b = n(140238);
+let v = new Set([s.Dvm.ENTERING, s.Dvm.ENTERED]);
+function m(e) {
     var {
             onClose: t,
             onCaptchaVerify: n,
             onReject: i,
-            transitionState: g,
-            headerText: C,
-            bodyText: O,
-            rqtoken: E,
-            serveInvisible: w,
+            transitionState: m,
+            headerText: O,
+            bodyText: g,
+            rqtoken: C,
+            serveInvisible: E,
         } = e,
-        j = (function (e, t) {
+        w = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -56,24 +55,23 @@ function g(e) {
             "rqtoken",
             "serveInvisible",
         ]);
-    let x = l.Z.getCurrentConfig({ location: "CaptchaModal" }, { autoTrackExposure: !0 }).enabled,
-        R = (0, u.Z)({ onReject: i });
+    let R = (0, d.Z)({ onReject: i });
     if (
         (a.useEffect(() => {
-            d.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, t);
+            l.S.subscribe(h.CkL.LAYER_POP_ESCAPE_KEY, t);
         }, [t]),
         a.useEffect(() => {
-            p.default.track(f.rMx.OPEN_MODAL, { type: "Captcha Modal" });
+            p.default.track(h.rMx.OPEN_MODAL, { type: "Captcha Modal" });
         }, []),
-        null == g || !m.has(g))
+        null == m || !v.has(m))
     )
         return null;
-    let _ = (0, r.jsxs)("div", {
-        className: o()(b.captchaContainer, { [b.manaDesktopModal]: x }),
+    let j = (0, r.jsxs)("div", {
+        className: o()(y.captchaContainer, y.manaDesktopModal),
         children: [
-            w && (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
+            E && (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
             (0, r.jsx)(
-                h.Z,
+                u.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,72 +98,28 @@ function g(e) {
                     return e;
                 })(
                     {
-                        size: w ? "invisible" : void 0,
+                        size: E ? "invisible" : void 0,
                         onVerify: (e) => {
-                            R(), n(e, E), t();
+                            R(), n(e, C), t();
                         },
-                        onClose: w ? t : void 0,
+                        onClose: E ? t : void 0,
                     },
-                    j,
+                    w,
                 ),
             ),
         ],
     });
-    return x
-        ? (0, r.jsx)(c.I, {
-              transitionState: g,
-              onClose: t,
-              size: "sm",
-              gradientColor: "blue",
-              graphic: {
-                  type: "image",
-                  src: v,
-              },
-              title: null != C ? C : y.intl.string(y.t.FpoiHR),
-              subtitle: null != O ? O : y.intl.string(y.t["/CidxM"]),
-              children: _,
-          })
-        : (0, r.jsx)(s.Y0X, {
-              transitionState: g,
-              "aria-label": "CAPTCHA",
-              className: o()(b.modal, b.gradientBorder),
-              parentComponent: "CaptchaModal",
-              "data-migration-pending": !0,
-              children: (0, r.jsxs)(s.hzk, {
-                  "data-migration-pending": !0,
-                  className: b.container,
-                  children: [
-                      (0, r.jsx)(s.olH, {
-                          "data-migration-pending": !0,
-                          className: b.close,
-                          onClick: t,
-                      }),
-                      (0, r.jsx)("div", {
-                          className: b.content,
-                          children:
-                              g !== s.Dvm.ENTERED
-                                  ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
-                                  : (0, r.jsxs)(r.Fragment, {
-                                        children: [
-                                            (0, r.jsx)("div", {
-                                                children: (0, r.jsx)("img", {
-                                                    src: v,
-                                                    alt: "",
-                                                }),
-                                            }),
-                                            (0, r.jsx)("div", {
-                                                className: b.title,
-                                                "aria-hidden": !0,
-                                                children: null != C ? C : y.intl.string(y.t.FpoiHR),
-                                            }),
-                                            (0, r.jsx)("div", {
-                                                children: null != O ? O : y.intl.string(y.t["/CidxM"]),
-                                            }),
-                                            _,
-                                        ],
-                                    }),
-                      }),
-                  ],
-              }),
-          });
+    return (0, r.jsx)(c.I, {
+        transitionState: m,
+        onClose: t,
+        size: "sm",
+        gradientColor: "blue",
+        graphic: {
+            type: "image",
+            src: b,
+        },
+        title: null != O ? O : f.intl.string(f.t.FpoiHR),
+        subtitle: null != g ? g : f.intl.string(f.t["/CidxM"]),
+        children: j,
+    });
 }

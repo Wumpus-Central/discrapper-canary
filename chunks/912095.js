@@ -70,6 +70,7 @@ class E extends s.Z {
             t = null !== this.input.getVideoStreamId();
         return (0, f.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants, t);
     }
+    setNoiseCancellationDuringProcessing(e) {}
     getSelfMute() {
         return this.selfMute;
     }

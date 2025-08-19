@@ -1,30 +1,30 @@
 r.d(t, { i: () => s });
 var n = r(647438),
     l = r(442837),
-    i = r(19780),
-    u = r(959457),
+    u = r(19780),
+    i = r(959457),
     a = r(630759);
 function s(e) {
-    let { channelId: t, userId: r, nickname: s, onAlertOpen: o } = e,
-        c = (function (e) {
+    let { channelId: t, userId: r, nickname: s, onAlertOpen: c } = e,
+        o = (function (e) {
             let { userId: t } = e;
-            return (0, l.e7)([i.Z, u.Z], () => (0, a.UB)(t, [i.Z, u.Z]));
+            return (0, l.e7)([u.Z, i.Z], () => (0, a.UB)(t, [u.Z, i.Z]));
         })({ userId: r }),
-        d = n.useRef(null);
+        f = n.useRef(null);
     n.useEffect(() => {
-        c && null == d.current
-            ? (d.current = setTimeout(() => {
-                  o(),
+        o && null == f.current
+            ? (f.current = setTimeout(() => {
+                  c(),
                       (0, a.lg)({
                           userId: r,
                           channelId: t,
                           nickname: s,
                       });
               }, 1000))
-            : (clearTimeout(d.current), (d.current = null));
-        let e = d.current;
+            : (clearTimeout(f.current), (f.current = null));
+        let e = f.current;
         return () => {
             clearTimeout(e);
         };
-    }, [t, c, s, o, r]);
+    }, [t, o, s, c, r]);
 }

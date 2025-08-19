@@ -19,8 +19,8 @@ function u(e, t, n) {
         e
     );
 }
-let d = 5 * o.Z.Millis.MINUTE,
-    f = 1048576;
+let d = 15 * o.Z.Millis.MINUTE,
+    f = 1835008;
 function _() {
     return s.isPlatformEmbedded && (0, s.isWindows)();
 }
@@ -31,8 +31,9 @@ class p extends r.Z {
     }
     handlePostConnectionOpen() {
         var e, t;
-        _() &&
-            "development" === (null == (e = (t = i.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t)) &&
+        if (!_()) return;
+        let n = null == (e = (t = i.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t);
+        ("development" === n || "canary" === n) &&
             (this._checkInterval = setInterval(() => {
                 this.trackPerformanceStats();
             }, d));
@@ -43,7 +44,7 @@ class p extends r.Z {
             let n = l.Z.getMemoryUsageElectronProcessTypeDetails();
             if (null == n) return;
             (null != (t = null == (e = n.renderer) ? void 0 : e.wss_priv_kb) ? t : 0) > f &&
-                l.Z.enablePerfMemoryHooks({ allocationThresholdKB: 256 }) &&
+                l.Z.enablePerfMemoryHooks({ allocationThresholdKB: 128 }) &&
                 (this._heapHooksInstalled = !0);
         }
         if (this._heapHooksInstalled) {

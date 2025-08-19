@@ -1,13 +1,16 @@
 n.d(t, {
-    Tl: () => f,
-    YV: () => l,
-    a5: () => d,
-    cF: () => u,
+    Tl: () => _,
+    YV: () => c,
+    a5: () => f,
+    cF: () => d,
     iE: () => o,
-    id: () => c,
-    tK: () => s,
+    id: () => u,
+    tK: () => l,
+    yX: () => s,
 }),
-    n(388685);
+    n(388685),
+    n(361932),
+    n(187205);
 var r = n(647438),
     i = n(223143),
     a = n(347896);
@@ -15,41 +18,48 @@ function o() {
     let [e, t] = r.useState(),
         n = (0, a.Z)(),
         o = null == n ? void 0 : n.rewards,
-        { purchases: s, hasPreviouslyFetched: l, fetchPurchasesError: c } = (0, i.c7)(),
-        u = r.useRef(!1);
+        s = null == n ? void 0 : n.variants;
+    null != s && (o = s.flatMap((e) => e.variants));
+    let { purchases: l, hasPreviouslyFetched: c, fetchPurchasesError: u } = (0, i.c7)(),
+        d = r.useRef(!1);
     return (
         r.useEffect(() => {
-            l &&
-                !u.current &&
+            c &&
+                !d.current &&
                 null != o &&
-                (t(null == c ? o.filter((e) => null == s.get(e.skuId)) : []), (u.current = !0));
-        }, [o, s, l, c]),
+                (t(null == u ? o.filter((e) => null == l.get(e.skuId)) : []), (d.current = !0));
+        }, [o, l, c, u]),
         null != e ? e : void 0
     );
 }
-function s(e) {
+function s() {
+    var e;
+    let t = (0, a.Z)();
+    return null != (e = null == t ? void 0 : t.variants) ? e : void 0;
+}
+function l(e) {
     let { purchases: t } = (0, i.c7)();
     return null != e ? t.get(e) : null;
 }
-function l(e) {
+function c(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e.skuId, e.assetId)), t;
 }
-function c(e, t, n) {
-    let r = d(e),
+function u(e, t, n) {
+    let r = f(e),
         i = null != n && n.length > 1;
     return t && r && i;
 }
-function u(e, t, n) {
-    let r = d(e);
+function d(e, t, n) {
+    let r = f(e);
     return null != n && 1 === n.length && r && t;
 }
-function d(e) {
+function f(e) {
     var t;
     let n = null == (t = (0, a.Z)()) ? void 0 : t.eligiblePlanIds;
     return null == n ? void 0 : n.includes(null == e ? void 0 : e.id);
 }
-function f(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 78.98;
     if (null == e) return;
     let n = Array.isArray(e) ? e : e.gradient,
