@@ -54494,7 +54494,7 @@ html.disable-forced-colors * {
     height: 20px;
     line-height: 20px;
     outline: none;
-    padding: 0 12px;
+    padding: 0 0 0 12px;
     text-align: right;
     transition: border-color .15s ease;
     width: 40px
