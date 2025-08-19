@@ -15,8 +15,8 @@ var r,
     h = n(598077),
     p = n(314897),
     m = n(246946),
-    g = n(594174),
-    f = n(626135),
+    f = n(594174),
+    g = n(626135),
     _ = n(51144),
     x = n(480387),
     b = n(726745),
@@ -35,8 +35,8 @@ function O(e) {
             currentUser: l,
             hidePrivateData: a,
             isAuthenticated: v,
-        } = (0, o.cj)([g.default, m.Z, p.default], () => ({
-            currentUser: g.default.getCurrentUser(),
+        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
+            currentUser: f.default.getCurrentUser(),
             hidePrivateData: m.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated(),
         })),
@@ -104,7 +104,7 @@ function O(e) {
                                     text: N ? j.intl.string(j.t["DSN+h4"]) : t,
                                     onClick: function () {
                                         if (N) return void r(0, n.id);
-                                        f.default.track(E.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                        g.default.track(E.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                             location: { section: E.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
                                             x.yD(n.id),
@@ -132,7 +132,7 @@ function O(e) {
                                                     null != l
                                                         ? (e.section = E.jXE.MANAGE_ACCOUNTS_MODAL)
                                                         : (e.page = E.Usc.LOGIN),
-                                                        f.default.track(E.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        g.default.track(E.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         r(2, n.id),

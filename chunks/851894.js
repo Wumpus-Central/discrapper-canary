@@ -167,7 +167,7 @@ function w(e) {
                                                 user: s,
                                                 guildId: null == t ? void 0 : t.id,
                                                 nameplate: U,
-                                                nameplateData: void 0 === U ? F : void 0,
+                                                nameplateData: null == U ? F : void 0,
                                                 isHighlighted: !0,
                                             })
                                           : null,

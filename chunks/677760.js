@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(108427),
     p = n(314897),
     m = n(701190),
-    g = n(626135),
-    f = n(768581),
+    f = n(626135),
+    g = n(768581),
     _ = n(823379),
     x = n(264229),
     b = n(230224),
@@ -131,7 +131,7 @@ function A(e) {
         })(e, ["children", "cardChildren", "startAnimHeightPx", "innerStyle"]),
         [d, h] = i.useState(C(c)),
         { ref: p, height: m } = (0, u.ZP)(),
-        g = (0, s.q_F)({
+        f = (0, s.q_F)({
             height: null != m && 0 !== m ? "".concat(m, "px") : "".concat(a, "px"),
             config: l.config.stiff,
         });
@@ -142,11 +142,11 @@ function A(e) {
         }, [c, d]),
         (0, r.jsxs)(l.animated.div, {
             className: y.inviteCard,
-            style: g,
+            style: f,
             children: [
                 (0, r.jsx)(l.animated.div, {
                     className: y.inviteChildContainer,
-                    style: g,
+                    style: f,
                     children: (0, r.jsx)("section", {
                         ref: p,
                         className: null == o ? void 0 : o(d),
@@ -215,7 +215,7 @@ function R(e) {
         { guild: i } = null != t ? t : {},
         l = {};
     if ((null == i ? void 0 : i.splash) != null) {
-        let e = f.ZP.getGuildSplashURL({
+        let e = g.ZP.getGuildSplashURL({
             id: i.id,
             splash: i.splash,
         });
@@ -239,7 +239,7 @@ function w(e) {
         i.useEffect(() => {
             null != l &&
                 l.state === j.r2o.RESOLVED &&
-                g.default.track(
+                f.default.track(
                     j.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
@@ -254,7 +254,7 @@ function w(e) {
                 !(function (e, t, n) {
                     var r, i, l;
                     null == e || e.preventDefault(),
-                        g.default.track(j.rMx.INVITE_APP_OPENED, {
+                        f.default.track(j.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, x.jX)(t),
                             guild_id: null == n || null == (r = n.guild) ? void 0 : r.id,
                             channel_id: null == n || null == (i = n.channel) ? void 0 : i.id,

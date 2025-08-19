@@ -11,8 +11,8 @@ var r,
     h = n(846519),
     p = n(481060),
     m = n(893776),
-    g = n(881052),
-    f = n(899370),
+    f = n(881052),
+    g = n(899370),
     _ = n(224841),
     x = n(13430),
     b = n(213609),
@@ -199,7 +199,7 @@ class eu extends (r = l.PureComponent) {
             h = null != o ? o.skuId : null,
             p = v.MD.getState(),
             m = (0, W.Ew)(u) ? null : t === u,
-            f = $.a ? await (0, C.K)(t) : t,
+            g = $.a ? await (0, C.K)(t) : t,
             _ = $.a ? await (0, C.K)(n) : n;
         H.S.dispatch(X.CkL.WAVE_EMPHASIZE),
             this.setState({
@@ -218,7 +218,7 @@ class eu extends (r = l.PureComponent) {
                   })
                 : await (0, j.R$)({
                       email: e,
-                      username: f,
+                      username: g,
                       globalName: _,
                       consent: i,
                       password: r,
@@ -231,7 +231,7 @@ class eu extends (r = l.PureComponent) {
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof g.Hx))) return;
+            if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
             let e = (0, E.F)(t);
             this.setState({ apiErrors: e });
         }
@@ -485,8 +485,8 @@ class eu extends (r = l.PureComponent) {
                 globalNameFocused: d,
                 emailClientError: h,
                 usernameClientError: m,
-                passwordClientError: g,
-                dateOfBirthClientError: f,
+                passwordClientError: f,
+                dateOfBirthClientError: g,
                 registering: _,
                 apiErrors: { email: b, username: v, global_name: E, password: j, date_of_birth: y } = {},
             } = this.state,
@@ -608,7 +608,7 @@ class eu extends (r = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null,
                             }),
-                        error: null != g ? g : ec(j),
+                        error: null != f ? f : ec(j),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {
@@ -624,7 +624,7 @@ class eu extends (r = l.PureComponent) {
                         name: "date_of_birth",
                         onChange: this.handleBirthdayChange,
                         ref: this.dateOfBirthRef,
-                        error: null != f ? f : ec(y),
+                        error: null != g ? g : ec(y),
                         value: u,
                         required: !0,
                         onFocus: this.trackInputFocus,
@@ -826,10 +826,10 @@ class eu extends (r = l.PureComponent) {
     }
 }
 function ed(e) {
-    let t = (0, d.cj)([G.Z, F.default, f.Z, R.Z, Z.Z], () => ({
+    let t = (0, d.cj)([G.Z, F.default, g.Z, R.Z, Z.Z], () => ({
             consentRequired: G.Z.getAuthenticationConsentRequired(),
             authenticated: F.default.isAuthenticated(),
-            isUnderage: f.Z.isUnderageAnonymous(),
+            isUnderage: g.Z.isUnderageAnonymous(),
             country: R.Z.getCountryCode(),
             hasLoggedInAccounts: Z.Z.getHasLoggedInAccounts(),
         })),

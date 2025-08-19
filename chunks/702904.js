@@ -265,7 +265,7 @@ let p = [
             value: "TH",
         },
     ],
-    b = {
+    v = {
         OTHER: [
             {
                 label: "Always Authenticate",
@@ -687,7 +687,7 @@ let p = [
             },
         ],
     };
-function v(e) {
+function b(e) {
     let { label: t, value: a, disabled: r } = e;
     return r
         ? (0, n.jsx)(s.Text, {
@@ -712,7 +712,7 @@ function f() {
         [a, c] = r.useState("pm_card_us"),
         [f, j] = r.useState(!1),
         _ = Object.values((0, l.e7)([d.Z], () => d.Z.paymentSources)),
-        y = b[e],
+        y = v[e],
         C = async () => {
             let e = a;
             "" === e && (e = "pm_card_us"),
@@ -763,11 +763,11 @@ function f() {
                                 isSelected: (t) => t === e,
                                 options: p,
                                 select: (e) => {
-                                    t(e), c(b[e][0].value), j(1 === b[e].length);
+                                    t(e), c(v[e][0].value), j(1 === v[e].length);
                                 },
                                 popoutLayerContext: u.O$,
                                 popoutWidth: 200,
-                                renderOptionLabel: v,
+                                renderOptionLabel: b,
                                 optionClassName: x.countryOption,
                             }),
                             (0, n.jsx)(s.PhF, {

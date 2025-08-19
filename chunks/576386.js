@@ -45,7 +45,7 @@ let h = (e) => {
               });
     },
     f = (e) => {
-        let { selected: t, onSelect: r, onOpenShop: a, available: i, purchased: c } = e;
+        let { selected: t, onSelect: r, onOpenShop: a, available: i, purchased: c, isPerGuild: u } = e;
         return null == (0, o.e7)([d.default], () => d.default.getCurrentUser())
             ? null
             : (0, n.jsxs)(s.u2D, {
@@ -67,7 +67,7 @@ let h = (e) => {
                                               }),
                                               (0, n.jsx)(s.Text, {
                                                   variant: "text-xs/normal",
-                                                  children: p.intl.string(p.t.PoWNfX),
+                                                  children: u ? p.intl.string(p.t.CHf9iI) : p.intl.string(p.t.PoWNfX),
                                               }),
                                           ],
                                       }),

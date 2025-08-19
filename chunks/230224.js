@@ -21,8 +21,8 @@ var r = n(951288),
     h = n(51144),
     p = n(245335),
     m = n(981631),
-    g = n(888592),
-    f = n(388032),
+    f = n(888592),
+    g = n(388032),
     _ = n(215613);
 let x = 100,
     b = (e) => {
@@ -81,7 +81,7 @@ function S(e) {
     var t;
     let { invite: n, textClassName: i, className: l } = e,
         s = b(n);
-    return null == s || O(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === g.fQ
+    return null == s || O(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === f.fQ
         ? null
         : (0, r.jsx)(o.EJ, {
               className: a()(_.activityCount, l),
@@ -104,22 +104,22 @@ function C(e) {
                         : null,
             [t, n],
         ),
-        a = f.intl.string(f.t["3rE1Pz"]);
+        a = g.intl.string(g.t["3rE1Pz"]);
     if (E(t)) {
         var c, u;
         a =
             (null == (c = t.channel) ? void 0 : c.name) != null &&
             (null == (u = t.inviter) ? void 0 : u.username) != null
-                ? f.intl.format(f.t.Lu4h19, { username: t.inviter.username })
-                : f.intl.string(f.t.OsdY8P);
+                ? g.intl.format(g.t.Lu4h19, { username: t.inviter.username })
+                : g.intl.string(g.t.OsdY8P);
     } else
         v(t) && null != t.target_user
-            ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username }))
+            ? (a = g.intl.formatToPlainString(g.t.x2L32d, { username: t.target_user.username }))
             : I(t)
-              ? (a = f.intl.string(f.t["FDsl+P"]))
+              ? (a = g.intl.string(g.t["FDsl+P"]))
               : O(t) &&
                 null != t.inviter &&
-                (a = f.intl.format(f.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
+                (a = g.intl.format(g.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {
         className: _.inviteJoinContainer,
         children: [
@@ -158,7 +158,7 @@ function T(e) {
                     children: [
                         (0, r.jsx)(o.DK, {
                             className: _.appIn,
-                            children: f.intl.string(f.t["3gg9fH"]),
+                            children: g.intl.string(g.t["3gg9fH"]),
                         }),
                         (0, r.jsxs)("div", {
                             className: _.guildContainer,
@@ -189,10 +189,10 @@ function T(e) {
             : (n = e);
     } else if (null != l) {
         let e = h.ZP.getFormattedName(l);
-        (n = f.intl.formatToPlainString(f.t["4aF92d"], { username: e })),
+        (n = g.intl.formatToPlainString(g.t["4aF92d"], { username: e })),
             (i = (0, r.jsx)(o.DK, {
                 className: _.directInviteSubTitle,
-                children: f.intl.format(f.t.Quj7HR, { username: e }),
+                children: g.intl.format(g.t.Quj7HR, { username: e }),
             }));
     }
     return (0, r.jsxs)(r.Fragment, {

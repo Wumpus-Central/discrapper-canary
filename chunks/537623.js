@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(388685);
+n.d(e, { default: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,114 +8,85 @@ var r = n(951288),
     c = n(481060),
     u = n(367907),
     d = n(369994),
+    _ = n(681678),
     p = n(177862),
-    _ = n(981631),
-    f = n(388032),
-    O = n(833894);
-function b(t) {
-    let { guildId: e, messageId: l, transitionState: b, onClose: y } = t,
-        [h, I] = i.useState([]),
-        [g, x] = i.useState(),
-        A = i.useCallback(() => {
+    f = n(981631),
+    O = n(484710),
+    h = n(388032),
+    E = n(833894);
+function I(t) {
+    let { guildId: e, messageId: n, transitionState: l, onClose: I } = t,
+        [b, A] = i.useState([]),
+        [y, T] = i.useState(),
+        x = i.useCallback(() => {
             let t = {
                 raid_alert_type: p.wR.JOIN_RAID,
-                raid_alert_id: l,
-                false_alarm_type: h.map((t) => t.toString()),
-                false_alarm_other_reason: g,
+                raid_alert_id: n,
+                false_alarm_type: b.map((t) => t.toString()),
+                false_alarm_other_reason: y,
                 guild_id: e,
             };
-            (0, u.yw)(_.rMx.GUILD_RAID_FEEDBACK, t),
-                (0, d.Fi)(e, l, (0, p.J$)(h)),
-                y(),
-                (0, c.ZDy)(async () => {
-                    let { default: t } = await n.e("37564").then(n.bind(n, 969214));
-                    return (e) =>
-                        (0, r.jsx)(
-                            t,
-                            (function (t) {
-                                for (var e = 1; e < arguments.length; e++) {
-                                    var n = null != arguments[e] ? arguments[e] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (e) {
-                                            var r;
-                                            (r = n[e]),
-                                                e in t
-                                                    ? Object.defineProperty(t, e, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (t[e] = r);
-                                        });
-                                }
-                                return t;
-                            })({}, e),
-                        );
-                });
-        }, [y, l, e, g, h]),
-        E = [
+            (0, u.yw)(f.rMx.GUILD_RAID_FEEDBACK, t),
+                (0, d.Fi)(e, n, (0, p.J$)(b)),
+                I(),
+                _.Z.showSuccessToast(O.wQ.SAFETY_FEEDBACK_SUCCESS);
+        }, [I, n, e, y, b]),
+        C = [
             {
-                text: f.intl.string(f.t.yeaXw8),
+                text: h.intl.string(h.t.yeaXw8),
                 value: p.$l.LEGITIMATE_ACTIVITY,
             },
             {
-                text: f.intl.string(f.t["o++3Bw"]),
+                text: h.intl.string(h.t["o++3Bw"]),
                 value: p.$l.DM_SPAM,
             },
             {
-                text: f.intl.string(f.t.UfHAwc),
+                text: h.intl.string(h.t.UfHAwc),
                 value: p.$l.JOIN_RAID,
             },
             {
-                text: f.intl.string(f.t.K3UWeX),
+                text: h.intl.string(h.t.K3UWeX),
                 value: p.$l.OTHER,
             },
         ];
-    function j(t) {
-        h.includes(t) ? I((e) => e.filter((e) => e !== t)) : I((e) => [...e, t]);
+    function N(t) {
+        b.includes(t) ? A((e) => e.filter((e) => e !== t)) : A((e) => [...e, t]);
     }
     return (0, r.jsx)(a.Modal, {
-        onClose: y,
-        transitionState: b,
-        title: f.intl.string(f.t["1zmw/P"]),
-        subtitle: f.intl.string(f.t.nF79oK),
+        onClose: I,
+        transitionState: l,
+        title: h.intl.string(h.t["1zmw/P"]),
+        subtitle: h.intl.string(h.t.nF79oK),
         actions: [
             {
-                text: f.intl.string(f.t["ETE/oK"]),
-                onClick: y,
+                text: h.intl.string(h.t["ETE/oK"]),
+                onClick: I,
                 variant: "secondary",
             },
             {
-                text: f.intl.string(f.t.Gh3A0N),
-                onClick: A,
+                text: h.intl.string(h.t.Gh3A0N),
+                onClick: x,
             },
         ],
         children: (0, r.jsx)("div", {
-            className: O.options,
-            children: E.map((t) => {
+            className: E.options,
+            children: C.map((t) => {
                 let { text: e, value: n } = t;
                 return (0, r.jsxs)(
                     "div",
                     {
-                        className: o()(O.optionContainer, { [O.optionContainerOther]: n === p.$l.OTHER }),
+                        className: o()(E.optionContainer, { [E.optionContainerOther]: n === p.$l.OTHER }),
                         children: [
                             (0, r.jsxs)(c.P3F, {
-                                className: O.optionText,
-                                onClick: () => j(n),
+                                className: E.optionText,
+                                onClick: () => N(n),
                                 children: [
                                     (0, r.jsx)("div", {
                                         children: (0, r.jsx)(c.XZJ, {
                                             type: c.XZJ.Types.INVERTED,
                                             size: 20,
-                                            value: h.includes(n),
-                                            onChange: () => j(n),
+                                            value: b.includes(n),
+                                            onChange: () => N(n),
                                         }),
                                     }),
                                     (0, r.jsx)(c.Text, {
@@ -126,14 +97,14 @@ function b(t) {
                                 ],
                             }),
                             n === p.$l.OTHER &&
-                                h.includes(p.$l.OTHER) &&
+                                b.includes(p.$l.OTHER) &&
                                 (0, r.jsx)("div", {
-                                    className: O.textboxContainer,
+                                    className: E.textboxContainer,
                                     children: (0, r.jsx)(s.iS, {
-                                        className: O.falseAlarmReasonText,
-                                        placeholder: f.intl.string(f.t["PAM+JS"]),
-                                        onChange: (t) => x(t),
-                                        value: g,
+                                        className: E.falseAlarmReasonText,
+                                        placeholder: h.intl.string(h.t["PAM+JS"]),
+                                        onChange: (t) => T(t),
+                                        value: y,
                                         rows: 2,
                                         autoFocus: !0,
                                         flex: !0,

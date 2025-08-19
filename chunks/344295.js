@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(881052),
     p = n(899370),
     m = n(267394),
-    g = n(388905),
-    f = n(639946),
+    f = n(388905),
+    g = n(639946),
     _ = n(792766),
     x = n(362762),
     b = n(978684),
@@ -154,28 +154,28 @@ class K extends i.PureComponent {
         );
     }
     renderSpinner(e) {
-        return (0, r.jsxs)(g.ZP, {
-            children: [(0, r.jsx)(g.Dx, { children: e }), (0, r.jsx)(g.Hh, {})],
+        return (0, r.jsxs)(f.ZP, {
+            children: [(0, r.jsx)(f.Dx, { children: e }), (0, r.jsx)(f.Hh, {})],
         });
     }
     renderInvalidInvite() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
-                (0, r.jsx)(g.Ee, {
+                (0, r.jsx)(f.Ee, {
                     src: n(167969),
                     className: U.marginBottom8,
                 }),
-                (0, r.jsx)(g.Dx, {
+                (0, r.jsx)(f.Dx, {
                     className: a()(U.marginTop8, U.marginBottom8),
                     children: B.intl.string(B.t.kux01N),
                 }),
-                (0, r.jsx)(g.DK, { children: e ? B.intl.string(B.t["5AkWAQ"]) : B.intl.string(B.t["+qUJAg"]) }),
+                (0, r.jsx)(f.DK, { children: e ? B.intl.string(B.t["5AkWAQ"]) : B.intl.string(B.t["+qUJAg"]) }),
                 this.renderButton(B.intl.string(B.t.fIv16O)),
-                (0, r.jsx)(g.zx, {
+                (0, r.jsx)(f.zx, {
                     onClick: () => window.open(T.Z.getArticleURL(L.BhN.INVALID_INVITES), "_blank"),
-                    look: g.zx.Looks.LINK,
-                    color: g.zx.Colors.LINK,
+                    look: f.zx.Looks.LINK,
+                    color: f.zx.Colors.LINK,
                     className: U.marginTop8,
                     children: B.intl.string(B.t.urIwn5),
                 }),
@@ -184,7 +184,7 @@ class K extends i.PureComponent {
     }
     renderErrorInvite() {
         var e, t;
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
                 (0, r.jsx)(P.Z, {
                     invite: this.props.invite,
@@ -204,13 +204,13 @@ class K extends i.PureComponent {
     }
     renderAppOpened(e) {
         let t = null != e ? e : this.handleContinue;
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
-                (0, r.jsx)(g.Dx, {
+                (0, r.jsx)(f.Dx, {
                     className: U.marginBottom8,
                     children: B.intl.string(B.t.csrAMD),
                 }),
-                (0, r.jsx)(g.DK, { children: B.intl.string(B.t["m1+IBg"]) }),
+                (0, r.jsx)(f.DK, { children: B.intl.string(B.t["m1+IBg"]) }),
                 this.renderButton(B.intl.string(B.t.fIv16O), () => t()),
             ],
         });
@@ -218,7 +218,7 @@ class K extends i.PureComponent {
     renderAuthenticatedHeader() {
         let { invite: e } = this.props;
         return null != e.guild_scheduled_event
-            ? (0, r.jsx)(f.r, {
+            ? (0, r.jsx)(g.r, {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
@@ -227,7 +227,7 @@ class K extends i.PureComponent {
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
         return null != e.guild_scheduled_event && null != e.guild
-            ? (0, r.jsx)(g.ZP, {
+            ? (0, r.jsx)(f.ZP, {
                   className: U.marginTop20,
                   children: (0, r.jsx)(_.y, {
                       guild: e.guild,
@@ -239,7 +239,7 @@ class K extends i.PureComponent {
     renderAuthenticatedOrDownload() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsxs)(g.ZP, {
+                (0, r.jsxs)(f.ZP, {
                     children: [
                         this.renderAuthenticatedHeader(),
                         this.renderButton(B.intl.string(B.t.ohMvm5), this.handleAccept),
@@ -250,9 +250,9 @@ class K extends i.PureComponent {
         });
     }
     renderContinue() {
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
-                (0, r.jsx)(g.Dx, { children: B.intl.string(B.t.fOc4go) }),
+                (0, r.jsx)(f.Dx, { children: B.intl.string(B.t.fOc4go) }),
                 this.renderButton(B.intl.string(B.t.fIv16O)),
             ],
         });
@@ -354,13 +354,13 @@ class K extends i.PureComponent {
                     { invite: i } = t.props,
                     l = null != i.guild_scheduled_event;
                 return M.KO
-                    ? (0, r.jsx)(g.zx, {
+                    ? (0, r.jsx)(f.zx, {
                           className: l ? U.marginTop20 : U.marginTop40,
                           onClick: n,
-                          color: l ? g.zx.Colors.GREEN : g.zx.Colors.BRAND,
+                          color: l ? f.zx.Colors.GREEN : f.zx.Colors.BRAND,
                           children: e,
                       })
-                    : (0, r.jsx)(g.v6, { className: U.marginTop40 });
+                    : (0, r.jsx)(f.v6, { className: U.marginTop40 });
             });
     }
 }

@@ -35,7 +35,7 @@ function u(e) {
             [l, e],
         ),
         { gameDataMap: O, isGameFetching: m } = (0, s.F)(p),
-        [y, j] = n.useState([]),
+        [j, y] = n.useState([]),
         v = n.useCallback((e) => i.Z.noDataAvailable(e), []),
         x = ((r = p.map((e) => m(e))), n.useMemo(() => r.join("\x1F"), [r]));
     return (
@@ -44,7 +44,7 @@ function u(e) {
             t.length > 0 && a(t, e);
         }, [O, x, p, e, a, v]),
         n.useEffect(() => {
-            j(
+            y(
                 p.map((e) => {
                     let t = O[e];
                     return {
@@ -56,7 +56,7 @@ function u(e) {
             );
         }, [p, O, e]),
         {
-            games: y,
+            games: j,
             isGameFetching: m,
             onAddGame: b,
         }

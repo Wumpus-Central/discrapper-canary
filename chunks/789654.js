@@ -40,8 +40,8 @@ var n = a(951288),
     x = a(481060),
     h = a(410030),
     p = a(705262),
-    b = a(374794),
-    v = a(58755),
+    v = a(374794),
+    b = a(58755),
     f = a(246992),
     g = a(500949),
     j = a(416825);
@@ -233,7 +233,7 @@ function E() {
                                 disabled: !u,
                                 children: (0, n.jsx)(x.zGS, {}),
                             }),
-                            (0, n.jsx)(b.Z, {
+                            (0, n.jsx)(v.Z, {
                                 "aria-label": "Import",
                                 filters: [
                                     {
@@ -286,7 +286,7 @@ function E() {
             (0, n.jsx)("div", {
                 className: j.tab,
                 hidden: T !== g.H8.PALETTES,
-                children: (0, n.jsx)(v.P, {
+                children: (0, n.jsx)(b.P, {
                     state: t,
                     setState: a,
                 }),
@@ -369,11 +369,11 @@ function S(e) {
             },
             [a],
         ),
-        b = Object.keys(C).map((e) => ({
+        v = Object.keys(C).map((e) => ({
             value: e,
             label: N(e),
         })),
-        v = Object.keys(u.b).map((e) => ({
+        b = Object.keys(u.b).map((e) => ({
             value: e,
             label: e,
         }));
@@ -384,7 +384,7 @@ function S(e) {
                 children: "Semantic Tokens",
             }),
             (0, n.jsx)(x.VcW, {
-                options: b,
+                options: v,
                 placeholder: "Search for a semantic token...",
                 value: void 0,
                 onChange: c,
@@ -488,7 +488,7 @@ function S(e) {
                 children: "Raw Tokens",
             }),
             (0, n.jsx)(x.VcW, {
-                options: v,
+                options: b,
                 placeholder: "Search for a raw color...",
                 value: void 0,
                 onChange: d,

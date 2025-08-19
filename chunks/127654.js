@@ -1,6 +1,6 @@
 i.d(e, {
     G: () => Z,
-    d: () => C,
+    d5: () => C,
 }),
     i(539854),
     i(388685),
@@ -122,19 +122,20 @@ async function C(t, e, i) {
     if (t.length < 1) return;
     if (null != n && n.length !== t.length) throw Error("Unexpected mismatch between files and file metadata");
     let O = e.getGuildId(),
-        b = await P(Array.from(t), m, {
+        b = Array.from(t).map((t) => t.type),
+        T = await P(Array.from(t), m, {
             channel: e,
             currentGuildId: O,
         });
-    if ((0, y.Bf)(b, O)) return void Z(e, b);
-    if (f.Z.getUploadCount(e.id, i) + b.length > S.dN1) {
+    if ((0, y.Bf)(T, O)) return void Z(e, T);
+    if (f.Z.getUploadCount(e.id, i) + T.length > S.dN1) {
         (0, l.openUploadError)({
             title: w.intl.string(w.t.wOr6hI),
             help: w.intl.formatToPlainString(w.t["qqyp/f"], { limit: S.dN1 }),
         }),
             v.default.track(S.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: f.Z.getUploadCount(e.id, i),
-                new_count: b.length,
+                new_count: T.length,
             });
         return;
     }
@@ -144,14 +145,14 @@ async function C(t, e, i) {
             r.Z.updateChatOpen(e.id, !0),
         u)
     ) {
-        let t = b.map((t, e) =>
+        let t = T.map((t, e) =>
             I(
                 {
                     file: t,
                     platform: d.ow.WEB,
                     isThumbnail: p,
                     origin: m,
-                    originalContentType: t.type,
+                    originalContentType: b[e],
                 },
                 null == n ? void 0 : n[e],
             ),
@@ -163,7 +164,7 @@ async function C(t, e, i) {
             draftType: i,
         });
     } else {
-        let t = b.map((t, i) => {
+        let t = T.map((t, i) => {
             let r = null != n ? n[i] : {};
             return new a.nH(
                 I(
@@ -172,7 +173,7 @@ async function C(t, e, i) {
                         platform: d.ow.WEB,
                         isThumbnail: p,
                         origin: m,
-                        originalContentType: t.type,
+                        originalContentType: b[i],
                     },
                     r,
                 ),

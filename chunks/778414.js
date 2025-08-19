@@ -1,24 +1,29 @@
 r.d(t, {
-    C: () => x,
-    Z: () => y,
-});
-var n = r(951288);
-r(647438);
-var l = r(296009),
-    i = r(442837),
-    a = r(481060),
-    o = r(314897),
-    c = r(117029),
-    s = r(747101),
-    u = r(517157),
-    d = r(985748),
-    f = r(566007),
-    g = r(173951),
-    p = r(455731),
-    b = r(430790),
-    O = r(795990),
-    m = r(830202);
-function j(e) {
+    C: () => S,
+    Z: () => P,
+}),
+    r(388685);
+var n = r(951288),
+    l = r(647438),
+    i = r(296009),
+    a = r(442837),
+    o = r(481060),
+    c = r(355467),
+    s = r(981312),
+    u = r(314897),
+    d = r(351402),
+    f = r(206599),
+    g = r(747101),
+    p = r(517157),
+    b = r(985748),
+    O = r(566007),
+    m = r(173951),
+    j = r(455731),
+    y = r(430790),
+    v = r(795990),
+    x = r(388032),
+    h = r(830202);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -43,7 +48,7 @@ function j(e) {
     }
     return e;
 }
-function y(e) {
+function P(e) {
     var { widget: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
@@ -67,49 +72,74 @@ function y(e) {
             return l;
         })(e, ["widget"]);
     switch (t.type) {
-        case l.l.FAVORITE_GAMES:
-            return (0, n.jsx)(f.Z, j({ widget: t }, r));
-        case l.l.CURRENT_GAMES:
-            return (0, n.jsx)(d.Z, j({ widget: t }, r));
-        case l.l.WANT_TO_PLAY_GAMES:
-            return (0, n.jsx)(p.Z, j({ widget: t }, r));
-        case l.l.PLAYED_GAMES:
-            return (0, n.jsx)(g.Z, j({ widget: t }, r));
+        case i.l.FAVORITE_GAMES:
+            return (0, n.jsx)(O.Z, E({ widget: t }, r));
+        case i.l.CURRENT_GAMES:
+            return (0, n.jsx)(b.Z, E({ widget: t }, r));
+        case i.l.WANT_TO_PLAY_GAMES:
+            return (0, n.jsx)(j.Z, E({ widget: t }, r));
+        case i.l.PLAYED_GAMES:
+            return (0, n.jsx)(m.Z, E({ widget: t }, r));
         default:
             return null;
     }
 }
-function v(e) {
-    let { user: t, guildId: r, channelId: l } = e,
-        a = (0, u.Z)(t.id),
-        { widgets: d, isGameFetching: f } = (0, s.Z)(a),
-        g = (0, i.e7)([o.default], () => o.default.getId() === t.id),
-        p = 0 === d.length && g;
-    return ((0, c.J)(g, d), p)
-        ? (0, n.jsx)(O.Z, {})
+function w() {
+    return (0, n.jsxs)("div", {
+        className: h.ukTeenDisclaimer,
+        children: [
+            (0, n.jsx)(o.d3s, { size: "xs" }),
+            (0, n.jsx)(o.Text, {
+                "aria-label": x.intl.string(x.t["7blcz8"]),
+                variant: "text-xs/normal",
+                color: "text-muted",
+                children: x.intl.string(x.t["7blcz8"]),
+            }),
+        ],
+    });
+}
+function _(e) {
+    let { user: t, guildId: r, channelId: i } = e,
+        o = (0, p.Z)(t.id),
+        { widgets: b, isGameFetching: O } = (0, g.Z)(o),
+        m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
+        j = (() => {
+            let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
+                r = (0, s.U)();
+            return (
+                l.useEffect(() => {
+                    null == e && null == t && r && (0, c.GE)();
+                }, [e, t, r]),
+                "GB" === e && r
+            );
+        })(),
+        x = 0 === b.length && m;
+    return ((0, f.J)(m, b), x)
+        ? (0, n.jsx)(v.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  d.map((e) =>
+                  j && (0, n.jsx)(w, {}),
+                  b.map((e) =>
                       (0, n.jsx)(
-                          y,
+                          P,
                           {
                               widget: e,
                               user: t,
                               guildId: r,
-                              channelId: l,
-                              isGameFetching: f,
+                              channelId: i,
+                              isGameFetching: O,
                           },
                           e.id,
                       ),
                   ),
-                  g && (0, n.jsx)(b.Z, {}),
+                  m && (0, n.jsx)(y.Z, {}),
               ],
           });
 }
-function x(e) {
-    return (0, n.jsx)(a.Ttm, {
-        className: m.scroller,
+function S(e) {
+    return (0, n.jsx)(o.Ttm, {
+        className: h.scroller,
         fade: !0,
-        children: (0, n.jsx)(v, j({}, e)),
+        children: (0, n.jsx)(_, E({}, e)),
     });
 }

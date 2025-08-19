@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(665149),
     h = a(886118),
     p = a(301801),
-    b = a(594174),
-    v = a(572004),
+    v = a(594174),
+    b = a(572004),
     f = a(55935),
     g = a(120816),
     j = a(31336),
@@ -70,7 +70,7 @@ function I(e) {
                 (0, n.jsx)(u.P3F, {
                     tag: "span",
                     className: O.copyPropertyButton,
-                    onClick: () => (0, v.JG)(JSON.stringify(l), () => s(!0)),
+                    onClick: () => (0, b.JG)(JSON.stringify(l), () => s(!0)),
                     children: i
                         ? (0, n.jsx)(u.kmB, {
                               color: "currentColor",
@@ -97,7 +97,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                         onClose: s,
                         filteredEvents: c,
                     } = e,
-                    d = b.default.getUser(l),
+                    d = v.default.getUser(l),
                     h = o()(r);
                 return (0, n.jsxs)("div", {
                     "data-mtctest-ignore": "true",
@@ -116,7 +116,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                         (0, n.jsx)(u.P3F, {
                                             tag: "span",
                                             className: O.copyEventButton,
-                                            onClick: () => (0, v.JG)(t),
+                                            onClick: () => (0, b.JG)(t),
                                             children: (0, n.jsx)(u.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -128,7 +128,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     icon: u.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, v.JG)(
+                                        (0, b.JG)(
                                             JSON.stringify(
                                                 (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -314,12 +314,12 @@ function A() {
             x(e);
         }, []);
     (0, p.BO)(t, g.Z.loggedEvents, h, Z, [l]);
-    let b = m.filter((e) => {
+    let v = m.filter((e) => {
             for (let t of s) if (k[t].filter(e)) return !0;
             return !1;
         }),
-        [v, f] = r.useState(void 0),
-        _ = b.find((e) => e.key === v),
+        [b, f] = r.useState(void 0),
+        _ = v.find((e) => e.key === b),
         { TabBar: P, renderSelectedTab: I } = (0, N.ZP)({ tabs: R }, []);
     return (0, n.jsxs)("div", {
         ref: e,
@@ -375,8 +375,8 @@ function A() {
             }),
             (0, n.jsx)(C.Z, {
                 columns: S,
-                data: b,
-                selectedRowKey: v,
+                data: v,
+                selectedRowKey: b,
                 onClickRow: (e) => f(e.key),
             }),
             null != _ &&
@@ -389,7 +389,7 @@ function A() {
                         I({
                             loggedEvent: _,
                             onClose: () => f(void 0),
-                            filteredEvents: b,
+                            filteredEvents: v,
                         }),
                     ],
                 }),

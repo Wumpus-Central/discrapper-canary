@@ -32,8 +32,8 @@ var n = a(951288),
     x = a(72897),
     h = a(131951),
     p = a(246992),
-    b = a(65154),
-    v = a(653301),
+    v = a(65154),
+    b = a(653301),
     f = a(451429);
 function g(e) {
     let { recording: t } = e;
@@ -109,7 +109,7 @@ function j(e) {
     });
 }
 function _() {
-    let { name: e } = (0, x.p6)(b.h7.AUDIO_INPUT),
+    let { name: e } = (0, x.p6)(v.h7.AUDIO_INPUT),
         [t, a] = r.useState(!1),
         [l, i] = r.useState([]),
         g = (0, s.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
@@ -188,7 +188,7 @@ function _() {
         (0, n.jsx)(c.zJl, {
             className: f.panel,
             children: (0, n.jsxs)("div", {
-                className: v.innerPanel,
+                className: b.innerPanel,
                 children: [
                     (0, n.jsx)(c.Text, {
                         variant: "text-lg/bold",
@@ -198,7 +198,7 @@ function _() {
                         title: "Input Device",
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(m.j, {
-                            deviceType: b.h7.AUDIO_INPUT,
+                            deviceType: v.h7.AUDIO_INPUT,
                             location: "DevToolsKrispTester",
                         }),
                     }),
@@ -258,7 +258,7 @@ function _() {
                                 }),
                             ],
                         }),
-                    P === b.pM.VOICE_ACTIVITY &&
+                    P === v.pM.VOICE_ACTIVITY &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(c.hjN, {
@@ -267,7 +267,7 @@ function _() {
                                     children: (0, n.jsx)(c.j7V, {
                                         hideBorder: !0,
                                         value: w,
-                                        onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
+                                        onChange: (e) => d.Z.setMode(v.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                         children: "Auto Threshold",
                                     }),
                                 }),
@@ -281,7 +281,7 @@ function _() {
                                                     hideBorder: !0,
                                                     value: R,
                                                     onChange: (e) =>
-                                                        d.Z.setMode(b.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
+                                                        d.Z.setMode(v.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                                     children: "Use Krisp VAD",
                                                 }),
                                             }),
@@ -292,7 +292,7 @@ function _() {
                                                     children: (0, n.jsx)(c.iRW, {
                                                         initialValue: k,
                                                         onValueChange: (e) =>
-                                                            d.Z.setMode(b.pM.VOICE_ACTIVITY, {
+                                                            d.Z.setMode(v.pM.VOICE_ACTIVITY, {
                                                                 vadKrispActivationThreshold: e,
                                                             }),
                                                         minValue: 0,

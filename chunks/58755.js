@@ -36,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function b(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function b(e, t) {
         e
     );
 }
-let v = Object.keys(x.jQ).map((e) => ({
+let b = Object.keys(x.jQ).map((e) => ({
         value: e,
         label: e,
     })),
@@ -96,7 +96,7 @@ function g(e) {
                                 steps: 26,
                             }),
                             a(
-                                b(p({}, t), {
+                                v(p({}, t), {
                                     scales: [...t.scales, n],
                                 }),
                             ));
@@ -115,7 +115,7 @@ function g(e) {
                                     children: (0, n.jsx)(_, {
                                         scale: e,
                                         onRemove: () =>
-                                            a(b(p({}, t), { scales: t.scales.filter((t) => t.name !== e.name) })),
+                                            a(v(p({}, t), { scales: t.scales.filter((t) => t.name !== e.name) })),
                                     }),
                                 }),
                             },
@@ -126,7 +126,7 @@ function g(e) {
             ],
         }),
         u = l.find((e) => e.name === i),
-        v =
+        b =
             null != u
                 ? (0, n.jsx)(j, {
                       onClose: () => s(null),
@@ -134,14 +134,14 @@ function g(e) {
                       setState: a,
                   })
                 : o;
-    return (0, n.jsx)("div", { children: v });
+    return (0, n.jsx)("div", { children: b });
 }
 function j(e) {
     let { scale: t, setState: a, onClose: r } = e,
         {
             name: c,
             base: p,
-            darkness: b,
+            darkness: v,
             lightness: f,
             showColumnarPalettePreview: g,
             colorSpace: j,
@@ -214,7 +214,7 @@ function j(e) {
                             "The color space used to generate the palette. Different color spaces will produce different results.",
                     }),
                     (0, n.jsx)(d.q4e, {
-                        options: v,
+                        options: b,
                         value: j,
                         onChange: (e) => (0, x.t4)(c, e, a),
                         popoutLayerContext: m.O$,
@@ -246,7 +246,7 @@ function j(e) {
                         ],
                     }),
                     (0, n.jsxs)(d.xJW, {
-                        title: "Darken (".concat((100 * b).toFixed(), "%)"),
+                        title: "Darken (".concat((100 * v).toFixed(), "%)"),
                         children: [
                             (0, n.jsx)(d.R94, {
                                 type: d.geA.DESCRIPTION,

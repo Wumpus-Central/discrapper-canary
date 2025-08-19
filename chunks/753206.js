@@ -33,7 +33,7 @@ let g = r.memo(function (e) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        w = r.useMemo(() => {
+        I = r.useMemo(() => {
             var t, n;
             return (0, h.Z)(
                 ((t = (function (e) {
@@ -88,7 +88,7 @@ let g = r.memo(function (e) {
             [p.cozyMessage]: !g,
             [p.groupStart]: v,
         }),
-        childrenHeader: w,
+        childrenHeader: I,
         childrenMessageContent: (0, d.Z)(e, _),
         disableInteraction: C,
         author: O,

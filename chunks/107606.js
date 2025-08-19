@@ -13,8 +13,8 @@ var r = a(442837),
     x = a(695346),
     h = a(594174),
     p = a(176038),
-    b = a(469115),
-    v = a(685960);
+    v = a(469115),
+    b = a(685960);
 function f() {
     var e, t, a, f, g, j, _, y;
     (0, u.mw)();
@@ -37,7 +37,7 @@ function f() {
     return (
         (0, p.ub)(),
         (0, n.jsxs)("div", {
-            className: v.container,
+            className: b.container,
             children: [
                 (0, n.jsxs)("div", {
                     children: [
@@ -85,7 +85,7 @@ function f() {
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != O ? (null == (f = b.qt[O]) ? void 0 : f.getName()) : "None",
+                                null != O ? (null == (f = v.qt[O]) ? void 0 : f.getName()) : "None",
                             ],
                         }),
                         (0, n.jsxs)(i.Text, {

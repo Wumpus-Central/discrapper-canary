@@ -20,7 +20,7 @@ async function f(e, t) {
             let t = await (0, d.rO)(e, b),
                 n = null != (y = e.name) ? y : (0, p.yl)(s.default.extractTimestamp(e.id)),
                 r = (0, u.Z)(n);
-            await (0, c.d)(
+            await (0, c.d5)(
                 [new File([t], "".concat("" !== r ? r : "clip", ".mp4"), { type: "video/mp4" })],
                 j,
                 i.d.ChannelMessage,

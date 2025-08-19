@@ -631,7 +631,7 @@ function eC(e) {
     return !(0, p.isValidGamePID)(e.pid) || ((0, p.setPID)(e.pid), !0);
 }
 function eR(e) {
-    X(e.pid) && Q(e.pid, "successfullyShown", !0), F(e.pid, "overlay_successfully_shown");
+    X(e.pid) && Q(e.pid, "successfullyShown", !0), F(e.pid, "overlay_successfully_shown", { pid: e.pid });
     let t = W(e.pid);
     return null == t || (s.Z.updateTrackedGame(e.pid, t), !0);
 }

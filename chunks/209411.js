@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(893607),
     p = n(703656),
     m = n(314897),
-    g = n(781428),
-    f = n(981631),
+    f = n(781428),
+    g = n(981631),
     _ = n(176505);
 function x(e) {
     var t, n;
@@ -21,7 +21,7 @@ function x(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, a.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: g.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
@@ -69,10 +69,10 @@ function x(e) {
             }
         }
     }),
-    I || v === f.u34.LOGGING_IN)
-        ? (0, r.jsx)(g.q, {})
+    I || v === g.u34.LOGGING_IN)
+        ? (0, r.jsx)(f.q, {})
         : (0, r.jsx)(
-              g.Z,
+              f.Z,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

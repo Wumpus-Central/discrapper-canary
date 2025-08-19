@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(512722),
     i = n.n(r),
     l = n(525654),
@@ -11,8 +11,8 @@ var r = n(512722),
     h = n(896797),
     p = n(626135),
     m = n(954824),
-    g = n(981631);
-function f(e) {
+    f = n(981631);
+function g(e) {
     let t = (function (e) {
             var t;
             let n = null == (t = a().os) ? void 0 : t.family;
@@ -32,7 +32,7 @@ function f(e) {
         })(e),
         n = (0, o.zS)(t);
     null != n &&
-        p.default.track(g.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(f.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,

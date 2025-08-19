@@ -302,27 +302,7 @@ let m = {
                     ],
                 });
             },
-            controls: {
-                gradientColor: {
-                    label: "Gradient Color",
-                    type: "select",
-                    defaultValue: "blue",
-                    options: [
-                        {
-                            label: "Purple",
-                            value: "purple",
-                        },
-                        {
-                            label: "Blue",
-                            value: "blue",
-                        },
-                        {
-                            label: "Nitro Pink",
-                            value: "nitro-pink",
-                        },
-                    ],
-                },
-            },
+            controls: {},
         },
         {
             name: "MultiStepPopover",

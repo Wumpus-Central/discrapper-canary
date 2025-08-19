@@ -11,13 +11,13 @@ var r = n(951288),
     h = n(314897),
     p = n(626135),
     m = n(587444),
-    g = n(981631),
-    f = n(260539),
+    f = n(981631),
+    g = n(260539),
     _ = n(388032),
     x = n(197571);
 function b(e, t, n) {
     e.preventDefault(),
-        p.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        p.default.track(f.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -25,7 +25,7 @@ function b(e, t, n) {
         });
     let r = h.default.getFingerprint(),
         i = null != r ? r : h.default.getId();
-    c.Z.openMobileApp(n.state === f.Rj.RESOLVED ? t : void 0, i);
+    c.Z.openMobileApp(n.state === g.Rj.RESOLVED ? t : void 0, i);
 }
 function v(e) {
     let { code: t } = e,
@@ -33,9 +33,9 @@ function v(e) {
     return (i.useEffect(() => {
         (0, d.e)("guild_template_mobile");
     }, []),
-    null == n || n.state === f.Rj.RESOLVING)
+    null == n || n.state === g.Rj.RESOLVING)
         ? (0, r.jsx)(s.ZP, { children: (0, r.jsx)(a.$jN, {}) })
-        : n.state === f.Rj.RESOLVED
+        : n.state === g.Rj.RESOLVED
           ? (0, r.jsxs)(s.ZP, {
                 children: [
                     (0, r.jsx)(u.Z, {

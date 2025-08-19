@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(82554),
     p = n(726521),
     m = n(185625),
-    g = n(314897),
-    f = n(63063),
+    f = n(314897),
+    g = n(63063),
     _ = n(981631),
     x = n(388032),
     b = n(884110),
@@ -128,7 +128,7 @@ let I = {
     O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+            h = (0, a.e7)([f.default], () => f.default.isAuthenticated()),
             p = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             E = () => {
                 (0, m.Jj)()
@@ -170,7 +170,7 @@ let I = {
                           (0, r.jsx)(u.DK, {
                               className: v.marginBottom8,
                               children: x.intl.format(x.t["532l+v"], {
-                                  supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
+                                  supportURL: g.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),
                           (0, r.jsx)("div", {

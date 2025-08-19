@@ -40,7 +40,7 @@ function b(t) {
     async function L() {
         n();
         let t = new Blob([b], { type: "text/plain" });
-        await (0, c.d)([(0, i.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
+        await (0, c.d5)([(0, i.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
             requireConfirm: !0,
             showLargeMessageDialog: !0,
         }),

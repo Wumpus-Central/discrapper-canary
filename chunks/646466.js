@@ -48,11 +48,11 @@ let h = [
         label: "[none selected]",
         value: null,
     },
-    b = {
+    v = {
         label: "[preview all]",
         value: null,
     },
-    v = () => {
+    b = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
@@ -127,7 +127,7 @@ let h = [
             { avatarDecorationAssets: a } = (0, o.xq)(),
             i = r.useMemo(
                 () => [
-                    b,
+                    v,
                     ...a.map((e) => ({
                         label: e.name,
                         value: e.name,
@@ -424,7 +424,7 @@ let h = [
                         (0, n.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: v,
+                            onClick: b,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),

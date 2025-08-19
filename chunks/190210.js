@@ -701,7 +701,7 @@ function el(e) {
         color: "transparent",
         look: "blank",
         onChange: (e) => {
-            (0, D.d)(e.currentTarget.files, t, A.d.ChannelMessage, {
+            (0, D.d5)(e.currentTarget.files, t, A.d.ChannelMessage, {
                 requireConfirm: !0,
                 origin: "file_picker",
             }),

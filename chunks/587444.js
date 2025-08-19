@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => f,
-    u: () => g,
+    Z: () => g,
+    u: () => f,
 });
 var r = n(951288);
 n(647438);
@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(736688),
     p = n(149715),
     m = n(197571);
-function g(e) {
+function f(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,11 +67,11 @@ function g(e) {
         ],
     });
 }
-function f(e) {
+function g(e) {
     let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: l } = e;
     return (0, r.jsx)(o.ZP, {
         theme: i,
-        children: (0, r.jsx)(g, {
+        children: (0, r.jsx)(f, {
             text: t,
             buttonCta: n,
             onClick: l,

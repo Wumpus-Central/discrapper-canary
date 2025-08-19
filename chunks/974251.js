@@ -253,7 +253,7 @@ let G = i.memo(function (e) {
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, N.G)(V, [])
-                                : (0, N.d)(t, V, z, {
+                                : (0, N.d5)(t, V, z, {
                                       requireConfirm: !0,
                                       showLargeMessageDialog: r,
                                       origin: "file_picker",

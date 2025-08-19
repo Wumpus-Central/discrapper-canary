@@ -1,4 +1,4 @@
-a.d(t, { Z: () => v }), a(388685);
+a.d(t, { Z: () => b }), a(388685);
 var n = a(951288),
     r = a(120356),
     l = a.n(r),
@@ -35,7 +35,7 @@ let p = [
             },
         },
     ],
-    b = [
+    v = [
         {
             key: "channelName",
             cellClassName: l()(x.cell, x.channelName),
@@ -70,13 +70,13 @@ let p = [
             },
         },
     ];
-function v() {
+function b() {
     let { unreadRecentMentionsCount: e, unreadChannelIds: t } = (0, m.O4)(),
         {
             isLoading: a,
             hasLoadedEver: r,
             hasPreloaded: l,
-            hasMoreToLoad: v,
+            hasMoreToLoad: b,
             isLoadingComplete: f,
         } = (0, i.cj)([u.Z], () => ({
             isLoading: u.Z.isLoading,
@@ -193,7 +193,7 @@ function v() {
                             children: ["Has Loaded Ever: ", r ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
-                            children: ["Has More To Load: ", v ? "\u2705" : "\u274C"],
+                            children: ["Has More To Load: ", b ? "\u2705" : "\u274C"],
                         }),
                         (0, n.jsxs)("div", {
                             children: ["Is Loading Complete: ", f ? "\u2705" : "\u274C"],
@@ -213,7 +213,7 @@ function v() {
                             children: ["Total Channels: ", Object.keys(j).length],
                         }),
                         (0, n.jsx)(c.Z, {
-                            columns: b,
+                            columns: v,
                             data: Object.entries(j).map((e) => {
                                 var t, a;
                                 let [n, r] = e;

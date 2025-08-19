@@ -23,11 +23,11 @@ function C(e) {
         S = (null == b ? void 0 : b.trial_id) === v.a7,
         E = [];
     O && E.push(o.z.BOGO_2025_NITRO_TAB_BADGE);
-    let [_, w] = (0, a.US)(E, void 0, !0);
+    let [_, I] = (0, a.US)(E, void 0, !0);
     return (
         r.useEffect(() => {
-            !0 === C && _ === o.z.BOGO_2025_NITRO_TAB_BADGE && w(f.L.AUTO_DISMISS);
-        }, [w, C, _]),
+            !0 === C && _ === o.z.BOGO_2025_NITRO_TAB_BADGE && I(f.L.AUTO_DISMISS);
+        }, [I, C, _]),
         (t = O
             ? (0, i.jsx)(h.Z, {})
             : null != y

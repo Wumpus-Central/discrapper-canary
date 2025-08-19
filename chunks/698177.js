@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(952802),
     p = n(388905),
     m = n(815660),
-    g = n(388032),
-    f = n(149715),
+    f = n(388032),
+    g = n(149715),
     _ = n(197571);
 let x = () => {
     let [e, t] = i.useState(""),
@@ -45,9 +45,9 @@ let x = () => {
             children: [
                 (0, r.jsx)(p.Ee, { src: n(292824) }),
                 (0, r.jsxs)(p.Dx, {
-                    className: a()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
+                    className: a()(_.marginTop20, g.flex, g.justifyCenter, g.alignCenter),
                     children: [
-                        g.intl.string(g.t.WWzQtb),
+                        f.intl.string(f.t.WWzQtb),
                         (0, r.jsx)(o.owK, {
                             size: "md",
                             color: "currentColor",
@@ -61,16 +61,16 @@ let x = () => {
         ? Z
         : (0, r.jsxs)(p.ZP, {
               children: [
-                  (0, r.jsx)(p.Dx, { children: g.intl.string(g.t.o4JNrK) }),
+                  (0, r.jsx)(p.Dx, { children: f.intl.string(f.t.o4JNrK) }),
                   (0, r.jsx)(p.DK, {
                       className: _.marginTop8,
-                      children: g.intl.string(g.t.y0tVbm),
+                      children: f.intl.string(f.t.y0tVbm),
                   }),
                   (0, r.jsxs)(p.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(h.Z, {
-                              label: g.intl.string(g.t.eJnn09),
+                              label: f.intl.string(f.t.eJnn09),
                               alpha2: S.alpha2,
                               countryCode: C,
                               value: e,
@@ -82,7 +82,7 @@ let x = () => {
                           }),
                           (0, r.jsx)(p.II, {
                               className: _.marginTop20,
-                              label: g.intl.string(g.t.OdzNbm),
+                              label: f.intl.string(f.t.OdzNbm),
                               value: l,
                               onChange: x,
                               maxLength: m.z,
@@ -92,13 +92,13 @@ let x = () => {
                               size: p.zx.Sizes.SMALL,
                               look: p.zx.Looks.LINK,
                               onClick: T,
-                              children: g.intl.string(g.t["5b60go"]),
+                              children: f.intl.string(f.t["5b60go"]),
                           }),
                           (0, r.jsx)(p.zx, {
                               className: _.marginTop20,
                               onClick: A,
                               submitting: b,
-                              children: g.intl.string(g.t.i4jeWV),
+                              children: f.intl.string(f.t.i4jeWV),
                           }),
                       ],
                   }),

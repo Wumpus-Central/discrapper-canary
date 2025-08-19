@@ -291,7 +291,7 @@ class ta extends i.PureComponent {
                           renderAttachButton: this.renderAttachButton,
                           renderAppLauncherButton: g,
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
-                          promptToUpload: eW.d,
+                          promptToUpload: eW.d5,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
@@ -316,7 +316,7 @@ class ta extends i.PureComponent {
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
                           renderAppLauncherButton: g,
                           renderAppCommandButton: b,
-                          promptToUpload: eW.d,
+                          promptToUpload: eW.d5,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                           onCommandSentinelTyped: m,

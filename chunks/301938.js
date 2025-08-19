@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(573261),
     p = n(720196),
     m = n(981631),
-    g = n(388032),
-    f = n(710509),
+    f = n(388032),
+    g = n(710509),
     _ = n(197571);
 function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: b } = e,
@@ -34,7 +34,7 @@ function x(e) {
                     src: null == y ? n(26230) : n(935227),
                     className: a()(_.marginBottom20, _.marginTop8),
                 }),
-                (0, r.jsx)(u.Dx, { children: g.intl.string(g.t["IfBQ5+"]) }),
+                (0, r.jsx)(u.Dx, { children: f.intl.string(f.t["IfBQ5+"]) }),
                 null != y && "" !== y
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -48,7 +48,7 @@ function x(e) {
                         (0, r.jsx)(u.II, {
                             name: "password",
                             type: "password",
-                            label: g.intl.string(g.t["8dM4FB"]),
+                            label: f.intl.string(f.t["8dM4FB"]),
                             setRef: C,
                             className: _.marginBottom20,
                             value: N,
@@ -56,14 +56,14 @@ function x(e) {
                             error: j,
                             autoComplete: "new-password",
                             maxLength: 72,
-                            placeholder: g.intl.string(g.t["yY/PXV"]),
+                            placeholder: f.intl.string(f.t["yY/PXV"]),
                         }),
                         (0, r.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!v) {
                                     if (0 === N.length) {
-                                        I(g.intl.string(g.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                        I(f.intl.string(f.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
@@ -89,7 +89,7 @@ function x(e) {
                                             .catch((e) => {
                                                 if (e instanceof Error)
                                                     O(
-                                                        g.intl.formatToPlainString(g.t.aTVNen, {
+                                                        f.intl.formatToPlainString(f.t.aTVNen, {
                                                             statusPageURL: m.yXt.STATUS,
                                                         }),
                                                     );
@@ -101,13 +101,13 @@ function x(e) {
                                                               (function (e) {
                                                                   switch (e) {
                                                                       case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                          return g.intl.string(g.t["11zzGR"]);
+                                                                          return f.intl.string(f.t["11zzGR"]);
                                                                       case m.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                          return g.intl.string(g.t["6qmgaG"]);
+                                                                          return f.intl.string(f.t["6qmgaG"]);
                                                                       case m.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                          return g.intl.string(g.t.bChnKi);
+                                                                          return f.intl.string(f.t.bChnKi);
                                                                       default:
-                                                                          return g.intl.format(g.t.aTVNen, {
+                                                                          return f.intl.format(f.t.aTVNen, {
                                                                               statusPageURL: m.yXt.STATUS,
                                                                           });
                                                                   }
@@ -124,18 +124,18 @@ function x(e) {
                             },
                             submitting: v,
                             disabled: v,
-                            children: g.intl.string(g.t.ezv91d),
+                            children: f.intl.string(f.t.ezv91d),
                         }),
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: f.buttonContainer,
+                    className: g.buttonContainer,
                     children: (0, r.jsx)(u.zx, {
                         color: u.zx.Colors.PRIMARY,
                         onClick: () => {
                             S(""), l(p.n.START);
                         },
-                        children: g.intl.string(g.t.rzxnQ0),
+                        children: f.intl.string(f.t.rzxnQ0),
                     }),
                 }),
             ],

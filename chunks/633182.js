@@ -37,6 +37,8 @@ function u(e, t, n) {
             return l.intl.string(l.t.zBpoc3);
         case s.wQ.REPORT_TO_MOD_SUCCESS:
             return l.intl.string(c.default.iBypeX);
+        case s.wQ.SAFETY_FEEDBACK_SUCCESS:
+            return l.intl.string(l.t.TcFR5u);
         default:
             return l.intl.string(l.t["+c5xtb"]);
     }

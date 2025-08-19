@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(626135),
     p = n(44609),
     m = n(731971),
-    g = n(981631),
-    f = n(388032),
+    f = n(981631),
+    g = n(388032),
     _ = n(152143);
 let x = () => {
     var e;
@@ -39,7 +39,7 @@ let x = () => {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                        h.default.track(f.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                             guild_id: N,
                             invite_code: S,
                         }),
@@ -56,12 +56,12 @@ let x = () => {
                             (0, r.jsx)(s.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: f.intl.string(f.t.A5wHQ0),
+                                children: g.intl.string(g.t.A5wHQ0),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: f.intl.string(f.t.UKCSER),
+                                children: g.intl.string(g.t.UKCSER),
                             }),
                         ],
                     }),
@@ -85,30 +85,30 @@ let x = () => {
                                 (0, r.jsx)(s.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
-                                    children: f.intl.string(f.t.me1lRk),
+                                    children: g.intl.string(g.t.me1lRk),
                                 }),
                                 (0, r.jsx)(s.oil, {
-                                    placeholder: f.intl.string(f.t["09Q8ys"]),
-                                    maxLength: g.l$U,
+                                    placeholder: g.intl.string(g.t["09Q8ys"]),
+                                    maxLength: f.l$U,
                                     value: x,
                                     onChange: j,
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.Z, {
-                        title: f.intl.string(f.t["/2ed39"]),
+                        title: g.intl.string(g.t["/2ed39"]),
                         value: b,
                         onChange: I,
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
-                            title: f.intl.string(f.t.bN4m1N),
+                            title: g.intl.string(g.t.bN4m1N),
                             value: v,
                             onChange: y,
                         }),
                     T &&
                         (0, r.jsx)(u.Z, {
-                            title: f.intl.string(f.t["0nZCqK"]),
+                            title: g.intl.string(g.t["0nZCqK"]),
                             value: E,
                             onChange: O,
                         }),

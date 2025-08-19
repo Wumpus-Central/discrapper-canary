@@ -57,7 +57,7 @@ let v = function (e) {
                   if (I) return !1;
                   w &&
                       null != v &&
-                      ((0, b.d)(e, v, j, {
+                      ((0, b.d5)(e, v, j, {
                           requireConfirm: O,
                           showLargeMessageDialog: !1,
                           origin: "drag_drop",

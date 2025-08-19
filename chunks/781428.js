@@ -15,8 +15,8 @@ var r,
     h = n(570140),
     p = n(893776),
     m = n(899742),
-    g = n(743142),
-    f = n(254942),
+    f = n(743142),
+    g = n(254942),
     _ = n(388905),
     x = n(379760),
     b = n(600164),
@@ -157,7 +157,7 @@ class X extends (r = l.PureComponent) {
             else if (null != n.channel) return "dm_invite";
             else if (null != n.inviter) return "friend_invite";
         }
-        return null != i ? (0, g.L)(i) : null;
+        return null != i ? (0, f.L)(i) : null;
     }
     get giftCodeSKUId() {
         let { giftCode: e } = this.props;
@@ -657,7 +657,7 @@ class X extends (r = l.PureComponent) {
                         invite: this.props.invite,
                     });
                 } catch (t) {
-                    let e = (0, f.p)(t);
+                    let e = (0, g.p)(t);
                     this.setState({ errors: e });
                 }
             }),
@@ -728,7 +728,7 @@ class X extends (r = l.PureComponent) {
                         ),
                     );
                 } catch (t) {
-                    let e = (0, f.p)(t);
+                    let e = (0, g.p)(t);
                     this.setState({ errors: e });
                 }
             }),

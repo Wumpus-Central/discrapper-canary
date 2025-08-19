@@ -2,7 +2,7 @@ r.d(t, { b: () => u }), r(388685);
 var n = r(392711),
     l = r(879690),
     i = r(296009),
-    a = r(804919);
+    a = r(570911);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -46,7 +46,7 @@ function c(e, t) {
         e
     );
 }
-let s = Object.values((0, n.sampleSize)(a.qs, a.qs.length)),
+let s = (0, n.sampleSize)(a.J6, a.J6.length),
     u = (0, l.U)((e, t) => ({
         stack: [],
         wishlistStack: [],

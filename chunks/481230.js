@@ -1,6 +1,6 @@
 n.d(t, {
     R$: () => _,
-    ZP: () => f,
+    ZP: () => g,
 });
 var r = n(913527),
     i = n.n(r),
@@ -14,8 +14,8 @@ var r = n(913527),
     h = n(573261),
     p = n(959776),
     m = n(981631),
-    g = n(723359);
-function f(e) {
+    f = n(723359);
+function g(e) {
     var t,
         n,
         { invite: r = null, giftCodeSKUId: i = null } = e;
@@ -93,7 +93,7 @@ function _(e) {
         email: t,
         phoneToken: n,
         username: r,
-        globalName: f,
+        globalName: g,
         consent: _,
         password: x,
         guildTemplateCode: b,
@@ -106,8 +106,8 @@ function _(e) {
     if ((a.Z.dispatch({ type: "REGISTER" }), null != v)) {
         (0, p.Z)(v, m.jXE.REGISTER),
             d.default.track(m.rMx.AGE_GATE_ACTION, {
-                source: g.L0.REGISTER,
-                action: g.Al.AGE_GATE_SUBMITTED,
+                source: f.L0.REGISTER,
+                action: f.Al.AGE_GATE_SUBMITTED,
             });
         let e = i()().diff(v, "years");
         e < 13 ||
@@ -121,7 +121,7 @@ function _(e) {
             fingerprint: u.default.getFingerprint(),
             email: t,
             username: r,
-            global_name: f,
+            global_name: g,
             password: x,
             invite: E,
             consent: _,
@@ -149,15 +149,15 @@ function _(e) {
                 token: e.body.token,
             }),
                 d.default.track(m.rMx.AGE_GATE_ACTION, {
-                    source: g.L0.REGISTER,
-                    action: g.Al.AGE_GATE_SUCCESS,
+                    source: f.L0.REGISTER,
+                    action: f.Al.AGE_GATE_SUCCESS,
                 });
         },
         (e) => {
             if (e instanceof c.CaptchaCancelError) throw e;
             let t = new s.Z(e);
             throw (
-                (null != t.getFieldErrors("date_of_birth") && o.wE(g.L0.REGISTER),
+                (null != t.getFieldErrors("date_of_birth") && o.wE(f.L0.REGISTER),
                 d.default.track(m.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),

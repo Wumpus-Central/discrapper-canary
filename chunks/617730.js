@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(755721),
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,13 +54,13 @@ function g(e, t) {
         e
     );
 }
-function f(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: f = !1 } = e;
+function g(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
     if (null == t) return null;
     let _ = null != t.guild ? (0, o.Qs)(t.guild) : null,
         x = null != t.channel ? (0, a.jD)(t.channel) : null,
         b = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = f || null == t.inviter ? null : new s.Z(t.inviter),
+        v = g || null == t.inviter ? null : new s.Z(t.inviter),
         E =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
@@ -100,8 +100,8 @@ function f(e) {
                       guild: _,
                       user: E || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, g(m({}, I), { showBigUserIcon: E })),
-                  (0, r.jsx)(c.UM, g(m({}, I), { showBigUserIcon: E })),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, f(m({}, I), { showBigUserIcon: E })),
+                  (0, r.jsx)(c.UM, f(m({}, I), { showBigUserIcon: E })),
                   (0, r.jsx)(c.V6, m({}, I)),
                   (0, r.jsx)(i.zx, {
                       onClick: n,

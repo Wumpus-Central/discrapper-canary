@@ -15,8 +15,8 @@ var r = n(951288),
     h = n(47343),
     p = n(973616),
     m = n(131704),
-    g = n(598077),
-    f = n(594174),
+    f = n(598077),
+    g = n(594174),
     _ = n(411198),
     x = n(51144),
     b = n(981631),
@@ -80,13 +80,13 @@ let y = () =>
                 isRegister: C = !1,
                 inUnclaimedFlow: T = !1,
             } = e,
-            { currentUser: A } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() })),
+            { currentUser: A } = (0, l.cj)([g.default], () => ({ currentUser: g.default.getCurrentUser() })),
             Z = (0, d.WR)({ location: "invite" }) && null != A;
         if (null == c) return null;
         let P = null != c.guild ? (_.lM(c.guild) ? c.guild : _.Qs(c.guild)) : null,
             R = null != c.channel ? (0, m.jD)(c.channel) : null,
             w = null != c.target_application ? new p.ZP(c.target_application) : null,
-            L = y || null == c.inviter ? null : new g.Z(c.inviter),
+            L = y || null == c.inviter ? null : new f.Z(c.inviter),
             D =
                 !(
                     (null != c.approximate_member_count && c.approximate_member_count > 100) ||

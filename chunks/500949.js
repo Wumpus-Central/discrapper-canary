@@ -39,8 +39,8 @@ var n,
     x = a(566162),
     h = a(567027),
     p = a(461195),
-    b = a(857702),
-    v = a(20450),
+    v = a(857702),
+    b = a(20450),
     f = a(312976),
     g = a(147591),
     j = a(135164),
@@ -116,8 +116,8 @@ let B = {
         HSV: x.Z,
         HWB: h.Z,
         ICTCP: p.Z,
-        JzCzHz: b.Z,
-        Jzazbz: v.Z,
+        JzCzHz: v.Z,
+        Jzazbz: b.Z,
         LCH: f.Z,
         LCHuv: g.Z,
         Lab: j.Z,
@@ -264,17 +264,17 @@ function er(e) {
             space: o,
             progression: (e) => e ** s,
         }),
-        b = [];
+        v = [];
     for (let e = 0; e < m; e++) {
         let t = h(e / m);
-        b.push(t);
+        v.push(t);
     }
-    b.push(c);
+    v.push(c);
     for (let e = 1; e < x; e++) {
         let t = p(1 - e / x);
-        b.push(t);
+        v.push(t);
     }
-    return Object.fromEntries(b.map((e, a) => ["".concat(t, "-").concat(a), e]));
+    return Object.fromEntries(v.map((e, a) => ["".concat(t, "-").concat(a), e]));
 }
 function el(e, t, a) {
     a((a) =>

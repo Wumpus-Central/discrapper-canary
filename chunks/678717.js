@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(665149),
     h = a(611565),
     p = a(238246),
-    b = a(788983),
-    v = a(906467),
+    v = a(788983),
+    b = a(906467),
     f = a(259580),
     g = a(31336),
     j = a(19759),
@@ -105,7 +105,7 @@ function ed(e) {
                 },
             ];
             return (
-                v.Z.isDeveloper &&
+                b.Z.isDeveloper &&
                     (e.push({
                         id: "shop",
                         name: "Shop",
@@ -226,7 +226,7 @@ function ed(e) {
                     group: er.v0.USERS,
                     render: () => (0, n.jsx)(ea.Z, {}),
                 }),
-                v.Z.isDeveloper &&
+                b.Z.isDeveloper &&
                     (e.push({
                         id: "content_inventory",
                         name: "Content Inventory",
@@ -347,7 +347,7 @@ function ed(e) {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
                                       onClick: () => {
-                                          (0, b.bA)(
+                                          (0, v.bA)(
                                               el.KJ3.DEVTOOLS_POPOUT,
                                               () =>
                                                   (0, n.jsx)(p.Z, {

@@ -483,7 +483,7 @@ let eo = i.memo(function (e) {
                     null != n &&
                         n.type.startsWith("image/") &&
                         (e.preventDefault(),
-                        await (0, H.d)([n], t, Z.d.FirstThreadMessage, { origin: "clipboard" }),
+                        await (0, H.d5)([n], t, Z.d.FirstThreadMessage, { origin: "clipboard" }),
                         j.getState().setFormOpenFromUserAction());
                 },
                 [t, j],
@@ -744,7 +744,7 @@ let eu = i.memo(function (e) {
                                   }),
                                   onChange: y,
                                   onSubmit: w,
-                                  promptToUpload: H.d,
+                                  promptToUpload: H.d5,
                                   disabled: a,
                                   onKeyDown: (e) => {
                                       ("ArrowUp" === e.key || "ArrowDown" === e.key) && e.stopPropagation(),

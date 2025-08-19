@@ -12,8 +12,8 @@ var n = a(951288),
     x = a(481060),
     h = a(570140),
     p = a(812206),
-    b = a(835473),
-    v = a(246992),
+    v = a(835473),
+    b = a(246992),
     f = a(681619),
     g = a(810568),
     j = a(168524),
@@ -127,7 +127,7 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        U = (0, b.Z)(M).filter(y.lm),
+        U = (0, v.Z)(M).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, n.jsx)("div", {
         className: w.panel,
@@ -248,7 +248,7 @@ function Z() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: v.O$,
+                            popoutLayerContext: b.O$,
                         }),
                     ],
                 }),

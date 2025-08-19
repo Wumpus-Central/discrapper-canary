@@ -24,7 +24,7 @@ let p = (e) => {
                 return "UNKNOWN TYPE:";
         }
     },
-    b = [
+    v = [
         {
             key: "events",
             render(e) {
@@ -33,7 +33,7 @@ let p = (e) => {
             },
         },
     ],
-    v = [
+    b = [
         {
             key: "candidates",
             render(e) {
@@ -110,13 +110,13 @@ function f() {
                 className: h.candidatesTableContainer,
                 children: (0, n.jsx)(x.Z, {
                     className: h.candidatesTable,
-                    columns: v,
+                    columns: b,
                     data: j,
                 }),
             }),
             (0, n.jsx)("br", {}),
             (0, n.jsx)(x.Z, {
-                columns: b,
+                columns: v,
                 data: g,
             }),
         ],

@@ -11,8 +11,8 @@ var r = n(951288),
     h = n(479446),
     p = n(981632),
     m = n(594174),
-    g = n(509545),
-    f = n(55563),
+    f = n(509545),
+    g = n(55563),
     _ = n(296848),
     x = n(981631),
     b = n(474936),
@@ -20,9 +20,9 @@ var r = n(951288),
     E = n(569964),
     j = n(149715),
     I = n(197571);
-let y = s.ZP.connectStores([f.Z, c.Z, g.Z, m.default], (e) => {
+let y = s.ZP.connectStores([g.Z, c.Z, f.Z, m.default], (e) => {
     let { giftCode: t } = e,
-        n = f.Z.get(t.skuId),
+        n = g.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
     return {
         sku: n,
@@ -32,11 +32,11 @@ let y = s.ZP.connectStores([f.Z, c.Z, g.Z, m.default], (e) => {
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: l, sku: s, application: c, subscriptionPlan: m } = e,
-        g = null == l ? v.intl.string(v.t.lTGZAg) : v.intl.formatToPlainString(v.t.TjWdPT, { username: l.username }),
-        f = s.name;
+        f = null == l ? v.intl.string(v.t.lTGZAg) : v.intl.formatToPlainString(v.t.TjWdPT, { username: l.username }),
+        g = s.name;
     return (
         null != m &&
-            (f = v.intl.formatToPlainString(m.interval === b.rV.MONTH ? v.t.CTpcCQ : v.t.rgPWGx, {
+            (g = v.intl.formatToPlainString(m.interval === b.rV.MONTH ? v.t.CTpcCQ : v.t.rgPWGx, {
                 skuName: s.name,
                 intervalCount: m.intervalCount,
             })),
@@ -62,7 +62,7 @@ let y = s.ZP.connectStores([f.Z, c.Z, g.Z, m.default], (e) => {
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: g }),
+                              (0, r.jsx)(u.DK, { children: f }),
                               (0, r.jsxs)(u.Dx, {
                                   className: a()(I.marginTop8, j.flexCenter),
                                   children: [
@@ -73,7 +73,7 @@ let y = s.ZP.connectStores([f.Z, c.Z, g.Z, m.default], (e) => {
                                               game: c,
                                               skuId: s.id,
                                           }),
-                                      f,
+                                      g,
                                   ],
                               }),
                           ],

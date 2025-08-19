@@ -70,25 +70,20 @@ function j(e) {
             initialSelectedNameplate: E,
         } = e,
         x = (0, i.e7)([h.ZP], () => (null != P && null != f ? h.ZP.getMember(P, f.id) : null)),
-        S =
-            null != P
-                ? null == x || null == (r = x.collectibles) || null == (t = r.nameplate)
-                    ? void 0
-                    : t.skuId
-                : null == f || null == (d = f.collectibles) || null == (c = d.nameplate)
-                  ? void 0
-                  : c.skuId,
-        w = g.find((e) => e.skuId === S),
-        { pendingNameplate: R } = (0, b.Zx)(f, P),
-        [I, A] = (0, a.useState)(() => {
+        S = null == x || null == (r = x.collectibles) || null == (t = r.nameplate) ? void 0 : t.skuId,
+        w = null == f || null == (d = f.collectibles) || null == (c = d.nameplate) ? void 0 : c.skuId,
+        R = null != P ? S : w,
+        I = g.find((e) => e.skuId === R),
+        { pendingNameplate: A } = (0, b.Zx)(f, P),
+        [N, k] = (0, a.useState)(() => {
             var e;
-            return void 0 !== R ? R : null != (e = null != E ? E : w) ? e : null;
+            return void 0 !== A ? A : null != (e = null != E ? E : I) ? e : null;
         }),
-        N =
-            (null == I ? void 0 : I.skuId) ===
-            (void 0 === R ? (null == w ? void 0 : w.skuId) : null == R ? void 0 : R.skuId),
-        [k, T] = (0, a.useState)(() => null != I && g.some((e) => e.id === I.id)),
-        D = (0, a.useCallback)(
+        T =
+            (null == N ? void 0 : N.skuId) ===
+            (void 0 === A ? (null == I ? void 0 : I.skuId) : null == A ? void 0 : A.skuId),
+        [D, L] = (0, a.useState)(() => null != N && g.some((e) => e.id === N.id)),
+        B = (0, a.useCallback)(
             (e) => {
                 j(),
                     (0, u.mK)({
@@ -123,19 +118,20 @@ function j(e) {
                 scrollbarType: "none",
                 children: [
                     (0, n.jsx)(_.Z, {
-                        selected: I,
+                        selected: N,
                         onSelect: (e, t) => {
-                            A(e), T(null != t && t);
+                            k(e), L(null != t && t);
                         },
-                        onOpenShop: D,
+                        onOpenShop: B,
                         available: v,
                         purchased: g,
+                        isPerGuild: null != P,
                     }),
                     (0, n.jsx)(m.Z, {
                         user: f,
                         guildId: P,
-                        selectedNameplate: I,
-                        purchased: k,
+                        selectedNameplate: N,
+                        purchased: D,
                     }),
                 ],
             }),
@@ -143,18 +139,18 @@ function j(e) {
                 "data-migration-pending": !0,
                 className: y.modalFooter,
                 children: [
-                    k || null == I
+                    D || null == N
                         ? (0, n.jsx)(l.zxk, {
                               variant: "primary",
                               text: O.intl.string(O.t.Jh8fJy),
-                              disabled: N,
+                              disabled: T,
                               onClick: () => {
-                                  null != P ? (0, p.RH)(I) : (0, o.Rx)(I), j();
+                                  null != P ? (0, p.RH)(N) : (0, o.Rx)(N), j();
                               },
                           })
                         : (0, n.jsx)(l.zxk, {
                               variant: "primary",
-                              onClick: () => D(null == I ? void 0 : I.skuId),
+                              onClick: () => B(null == N ? void 0 : N.skuId),
                               text: O.intl.string(O.t.fYfGgI),
                           }),
                     (0, n.jsx)(l.zxk, {

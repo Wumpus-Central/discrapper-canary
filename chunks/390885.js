@@ -72,21 +72,21 @@ function p(e, t) {
 }
 function m(e) {
     var t = (function (e, t) {
-        if ("object" !== g(e) || null === e) return e;
+        if ("object" !== f(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || "default");
-            if ("object" !== g(r)) return r;
+            if ("object" !== f(r)) return r;
             throw TypeError("@@toPrimitive must return a primitive value.");
         }
         return ("string" === t ? String : Number)(e);
     })(e, "string");
-    return "symbol" === g(t) ? t : String(t);
+    return "symbol" === f(t) ? t : String(t);
 }
-function g(e) {
+function f(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let f = "UserFlowAnalyticsStore_current",
+let g = "UserFlowAnalyticsStore_current",
     _ = "UserFlowAnalyticsStore";
 function x(e) {
     if (e === c.MK.UNKNOWN) return null;
@@ -103,7 +103,7 @@ let b = (0, r.U)()(
         currentFlow: null,
         activeFlow: () => {
             var e;
-            let n = null != (e = t().currentFlow) ? e : a.K.get(f);
+            let n = null != (e = t().currentFlow) ? e : a.K.get(g);
             if (null == n) return null;
             let { [n]: r } = t().flows,
                 i = null != r ? r : x(n);
@@ -175,8 +175,8 @@ b.subscribe(
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = "".concat(_, "-").concat(e.type);
                 e.ended
-                    ? (a.K.remove(t), a.K.remove(f))
-                    : (a.K.set("".concat(_, "-").concat(e.type), h(d({}, e), { version: 1 })), a.K.set(f, e.type));
+                    ? (a.K.remove(t), a.K.remove(g))
+                    : (a.K.set("".concat(_, "-").concat(e.type), h(d({}, e), { version: 1 })), a.K.set(g, e.type));
             })(e),
             o.default.track(
                 u.rMx.NUO_TRANSITION,

@@ -13,22 +13,22 @@ var r = a(120356),
     x = a(944486),
     h = a(914010),
     p = a(233608),
-    b = a(71080),
-    v = a(989295),
+    v = a(71080),
+    b = a(989295),
     f = a(451429);
 function g(e) {
     let { title: t, can: a } = e,
         r = a ? o.dz2 : o.Dio,
         i = (0, n.jsx)("div", {
-            className: l()(v.iconOuter, a ? v.iconCheck : v.iconCross),
-            children: (0, n.jsx)(r, { className: v.icon }),
+            className: l()(b.iconOuter, a ? b.iconCheck : b.iconCross),
+            children: (0, n.jsx)(r, { className: b.icon }),
         });
     return (0, n.jsxs)("div", {
-        className: v.scope,
+        className: b.scope,
         children: [
             i,
             (0, n.jsx)("div", {
-                className: v.scopeInner,
+                className: b.scopeInner,
                 children: (0, n.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
@@ -45,7 +45,7 @@ function j() {
         j = (0, s.e7)([m.Z], () => m.Z.computePermissions(a)),
         _ = (0, s.e7)([m.Z], () => m.Z.computePermissions(r)),
         y = (0, c.ZP)(a, !0),
-        C = null != a ? (0, b.IG)(a, !1) : null,
+        C = null != a ? (0, v.IG)(a, !1) : null,
         N = null != r ? p.Z.getGuildPermissionSpecMap(r) : null,
         T = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: a } = e,
@@ -72,12 +72,12 @@ function j() {
             );
         });
     return (0, n.jsx)("div", {
-        className: l()(f.panel, v.panel),
+        className: l()(f.panel, b.panel),
         children: (0, n.jsxs)("div", {
-            className: v.panelInner,
+            className: b.panelInner,
             children: [
                 (0, n.jsxs)("section", {
-                    className: v.section,
+                    className: b.section,
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: "heading-md/semibold",
@@ -87,7 +87,7 @@ function j() {
                     ],
                 }),
                 (0, n.jsxs)("section", {
-                    className: v.section,
+                    className: b.section,
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: "heading-md/semibold",

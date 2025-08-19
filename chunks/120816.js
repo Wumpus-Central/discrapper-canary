@@ -1,4 +1,4 @@
-a.d(t, { Z: () => v }), a(539854), a(388685);
+a.d(t, { Z: () => b }), a(539854), a(388685);
 var n,
     r,
     l = a(772848),
@@ -12,7 +12,7 @@ let u = 0,
     x = 0,
     h = [],
     p = !1;
-class b extends (n = s.ZP.Store) {
+class v extends (n = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -29,15 +29,15 @@ class b extends (n = s.ZP.Store) {
         return p;
     }
 }
-(r = "displayName") in b
-    ? Object.defineProperty(b, r, {
+(r = "displayName") in v
+    ? Object.defineProperty(v, r, {
           value: "AnalyticsLogStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (b[r] = "AnalyticsLogStore");
-let v = new b(o.Z, {
+    : (v[r] = "AnalyticsLogStore");
+let b = new v(o.Z, {
     TRACK: function (e) {
         let { event: t, properties: a, fingerprint: n } = e;
         d.Z.isDeveloper &&

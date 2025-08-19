@@ -16,6 +16,7 @@ var r = (function (e) {
             (e.TIGGER_PAWTECT_VERIFIED = "TIGGER_PAWTECT_VERIFIED"),
             (e.GENERIC_ERROR = "GENERIC_ERROR"),
             (e.REPORT_TO_MOD_SUCCESS = "REPORT_TO_MOD_SUCCESS"),
+            (e.SAFETY_FEEDBACK_SUCCESS = "SAFETY_FEEDBACK_SUCCESS"),
             e
         );
     })({}),

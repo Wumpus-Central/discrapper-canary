@@ -66,7 +66,7 @@ function x(e) {
                     (0, i.jsx)(a.zxk, {
                         variant: "secondary",
                         size: "sm",
-                        text: f.intl.string(f.t["9zwziY"]),
+                        text: j ? f.intl.string(f.t.CHf9iI) : f.intl.string(f.t["9zwziY"]),
                         onClick: P,
                     }),
             ],

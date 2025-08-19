@@ -2,7 +2,7 @@ n.d(t, {
     ID: () => b,
     NM: () => S,
     Xi: () => O,
-    ZP: () => I,
+    ZP: () => w,
     bT: () => E,
 });
 var i,
@@ -144,7 +144,7 @@ let _ = Object.freeze({
     wide: "contentColumnWide",
     scrollableCustom: "contentColumnCustom",
 });
-function w(e) {
+function I(e) {
     let { isMobile: t, mobileSidebarOpen: n, closeAction: i } = e,
         r = l.useRef(null);
     return null == i
@@ -170,7 +170,7 @@ function w(e) {
               }),
           });
 }
-let I = function (e) {
+let w = function (e) {
     let {
             sidebar: t,
             content: n,
@@ -185,7 +185,7 @@ let I = function (e) {
             hideSidebar: S = !1,
         } = e,
         E = l.useRef(null),
-        I = l.useRef(null),
+        w = l.useRef(null),
         j = (0, g.Z)(r),
         P = (0, p.Yzy)(
             S,
@@ -209,7 +209,7 @@ let I = function (e) {
     l.useLayoutEffect(() => {
         null != E.current && j !== r && E.current.scrollTo({ to: 0 });
     }, [r, j, E]);
-    let x = (0, s.jsx)(w, {
+    let x = (0, s.jsx)(I, {
         isMobile: d.tq,
         mobileSidebarOpen: b,
         closeAction: o,
@@ -290,10 +290,10 @@ let I = function (e) {
                                             (0, s.jsx)(y.Provider, {
                                                 value: E.current,
                                                 children: (0, s.jsx)("div", {
-                                                    ref: I,
+                                                    ref: w,
                                                     className: m.contentColumnScrollable,
                                                     children: (0, s.jsx)(p.JcV, {
-                                                        containerRef: I,
+                                                        containerRef: w,
                                                         children: n,
                                                     }),
                                                 }),
@@ -327,12 +327,12 @@ let I = function (e) {
                                                         className: a()(m.contentColumn, m[i], {
                                                             [m.mobileContent]: d.tq,
                                                         }),
-                                                        ref: I,
+                                                        ref: w,
                                                         style: d.tq ? { maxWidth: window.innerWidth } : void 0,
                                                         children: S
                                                             ? n
                                                             : (0, s.jsx)(p.JcV, {
-                                                                  containerRef: I,
+                                                                  containerRef: w,
                                                                   children: n,
                                                               }),
                                                     }),

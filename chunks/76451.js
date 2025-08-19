@@ -63,7 +63,7 @@ function S(e) {
                     ref: u,
                     onChange: (e) => {
                         null == a || a(),
-                            (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
+                            (0, j.d5)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
                                 requireConfirm: !0,
                                 origin: "file_picker",
                             }),

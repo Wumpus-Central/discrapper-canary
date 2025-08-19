@@ -13,8 +13,8 @@ var r = a(120356),
     x = a(695346),
     h = a(306052),
     p = a(594174),
-    b = a(517269),
-    v = a(197571);
+    v = a(517269),
+    b = a(197571);
 let f = () => {
     Promise.all([a.e("52030"), a.e("1286")])
         .then(a.bind(a, 24031))
@@ -48,11 +48,11 @@ function g() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom20),
+                className: l()(v.buttonsContainer, b.marginBottom20),
                 children: (0, n.jsx)(h.g, { isDevTools: !0 }),
             }),
             (0, n.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom20),
+                className: l()(v.buttonsContainer, b.marginBottom20),
                 children: (0, n.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch MFA",
@@ -60,7 +60,7 @@ function g() {
                 }),
             }),
             (0, n.jsx)("div", {
-                className: l()(b.buttonsContainer, v.marginBottom20),
+                className: l()(v.buttonsContainer, b.marginBottom20),
                 children: (0, n.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch Vibing Wumpus",
@@ -71,7 +71,7 @@ function g() {
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: l()(v.buttonsContainer, b.marginBottom20),
                             children: (0, n.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Captcha Test Tool",
@@ -79,7 +79,7 @@ function g() {
                             }),
                         }),
                         (0, n.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: l()(v.buttonsContainer, b.marginBottom20),
                             children: (0, n.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Test Tool",
@@ -87,7 +87,7 @@ function g() {
                             }),
                         }),
                         (0, n.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: l()(v.buttonsContainer, b.marginBottom20),
                             children: (0, n.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Modal",
@@ -95,7 +95,7 @@ function g() {
                             }),
                         }),
                         (0, n.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: l()(v.buttonsContainer, b.marginBottom20),
                             children: (0, n.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Force libdiscore Crash",
@@ -103,7 +103,7 @@ function g() {
                             }),
                         }),
                         (0, n.jsx)("div", {
-                            className: l()(b.buttonsContainer, v.marginBottom20),
+                            className: l()(v.buttonsContainer, b.marginBottom20),
                             children: (0, n.jsx)(s.j7V, {
                                 value: a,
                                 onChange: (e) => x.Rt.updateSetting(e),

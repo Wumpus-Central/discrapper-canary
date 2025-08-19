@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -11,10 +11,10 @@ var r = n(951288),
     h = n(580497),
     p = n(981631),
     m = n(388032),
-    g = n(894892);
-function f(e) {
+    f = n(894892);
+function g(e) {
     let { location: t } = e,
-        [f, _] = i.useState(!1),
+        [g, _] = i.useState(!1),
         { verifySuccess: x, verifyErrors: b, redirectGuildId: v } = (0, l.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
         let e = (0, s.Z)(t);
@@ -23,19 +23,19 @@ function f(e) {
     let E = () => {
         (0, h.Z)(v), _(!0);
     };
-    return f
+    return g
         ? (0, r.jsxs)(o.ZP, {
               children: [
                   (0, r.jsx)(o.Dx, {
-                      className: g.title,
+                      className: f.title,
                       children: m.intl.string(m.t.csrAMD),
                   }),
                   (0, r.jsx)(o.DK, {
-                      className: g.subtitle,
+                      className: f.subtitle,
                       children: m.intl.string(m.t["m1+IBg"]),
                   }),
                   (0, r.jsx)(o.zx, {
-                      className: g.spacedButton,
+                      className: f.spacedButton,
                       onClick: () => (0, c.uL)(p.Z5c.CHANNEL(v)),
                       children: m.intl.string(m.t.fIv16O),
                   }),
@@ -45,11 +45,11 @@ function f(e) {
           ? (0, r.jsxs)(o.ZP, {
                 children: [
                     (0, r.jsx)(o.Ee, {
-                        className: g.image,
+                        className: f.image,
                         src: n(73962),
                     }),
                     (0, r.jsx)(o.Dx, {
-                        className: g.title,
+                        className: f.title,
                         children: m.intl.string(m.t.dAfGb2),
                     }),
                     (0, r.jsx)(o.zx, {
@@ -62,15 +62,15 @@ function f(e) {
             ? (0, r.jsxs)(o.ZP, {
                   children: [
                       (0, r.jsx)(o.Ee, {
-                          className: g.image,
+                          className: f.image,
                           src: n(375673),
                       }),
                       (0, r.jsx)(o.Dx, {
-                          className: g.title,
+                          className: f.title,
                           children: m.intl.string(m.t.PCgG39),
                       }),
                       (0, r.jsx)(o.DK, {
-                          className: g.subtitle,
+                          className: f.subtitle,
                           children: m.intl.string(m.t.tQpeAw),
                       }),
                       (0, r.jsx)(o.zx, {
@@ -82,15 +82,15 @@ function f(e) {
             : (0, r.jsxs)(o.ZP, {
                   children: [
                       (0, r.jsx)(o.Ee, {
-                          className: g.image,
+                          className: f.image,
                           src: n(892235),
                       }),
                       (0, r.jsx)(o.Dx, {
-                          className: g.title,
+                          className: f.title,
                           children: m.intl.string(m.t["0c8+5u"]),
                       }),
                       (0, r.jsx)(o.DK, {
-                          className: g.subtitle,
+                          className: f.subtitle,
                           children: m.intl.string(m.t.ULTCBA),
                       }),
                       (0, r.jsx)(o.zx, {

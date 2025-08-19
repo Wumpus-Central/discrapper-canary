@@ -14,8 +14,8 @@ var r,
     h = n(481060),
     p = n(607070),
     m = n(100527),
-    g = n(906732),
-    f = n(385499),
+    f = n(906732),
+    g = n(385499),
     _ = n(821795),
     x = n(892567),
     b = n(7284),
@@ -79,9 +79,9 @@ function L(e, t) {
 var D = (((r = {})[(r.SYSTEM_TAG = 0)] = "SYSTEM_TAG"), (r[(r.BADGES = 1)] = "BADGES"), r);
 function k(e) {
     let { compact: t } = e;
-    return (0, i.jsx)(f.Z, {
+    return (0, i.jsx)(g.Z, {
         className: t ? R.botTagCompact : R.botTagCozy,
-        type: f.Z.Types.REMIX,
+        type: g.Z.Types.REMIX,
         useRemSizes: !0,
     });
 }
@@ -91,7 +91,7 @@ function M(e) {
             author: n,
             message: r,
             channel: a,
-            userOverride: f,
+            userOverride: g,
             compact: D = !1,
             withMentionPrefix: M = !1,
             showPopout: B = !1,
@@ -110,7 +110,7 @@ function M(e) {
         X = l.useRef(null),
         Q = l.useContext(v.Z),
         $ = null != (t = null == a ? void 0 : a.guild_id) ? t : Q,
-        { analyticsLocations: ee } = (0, g.ZP)(m.Z.USERNAME),
+        { analyticsLocations: ee } = (0, f.ZP)(m.Z.USERNAME),
         et = M ? "@" : "",
         { nick: en, colorString: er, colorStrings: ei, colorRoleName: el, displayNameStyles: ea } = n,
         es = (0, c.e7)([p.Z], () => p.Z.roleStyle),
@@ -123,16 +123,16 @@ function M(e) {
         eh = (0, I.yH)(null != Y ? Y : $, ed),
         ep = (0, A.Z)(r),
         em = l.useContext(u.d),
-        eg = eh && (0, j.S2)(n),
-        ef = eo && eg;
+        ef = eh && (0, j.S2)(n),
+        eg = eo && ef;
     l.useEffect(() => {
-        if (null == J || !ef || null == em) return;
+        if (null == J || !eg || null == em) return;
         let { setAnimate: e } = em;
         return (
             C.S.subscribeKeyed(Z.LPv.ANIMATE_CHAT_AVATAR, "".concat(J, ":").concat(r.author.id), e),
             () => void C.S.unsubscribeKeyed(Z.LPv.ANIMATE_CHAT_AVATAR, "".concat(J, ":").concat(r.author.id), e)
         );
-    }, [r.author.id, J, ef, em]);
+    }, [r.author.id, J, eg, em]);
     let { gradientStyle: e_, gradientClassname: ex } = (0, h.Icv)({
             colorStrings: ei,
             roleStyle: "username",
@@ -142,10 +142,10 @@ function M(e) {
         eb = (0, d.EJ)(et + en),
         ev = (null == a ? void 0 : a.isPrivate()) && null != ea,
         eE = {
-            className: s()([R.username, ef && ex, eu]),
+            className: s()([R.username, eg && ex, eu]),
             style: (() => {
                 if (eo) {
-                    if (ef && null != ei) {
+                    if (eg && null != ei) {
                         var e;
                         return L(w({}, e_), {
                             textDecorationColor: null != (e = null == ei ? void 0 : ei.primaryColor) ? e : void 0,
@@ -179,7 +179,7 @@ function M(e) {
                     : null,
             [D, n.primaryGuild, $, r.author.id, U],
         ),
-        eI = null != f ? f : r.author,
+        eI = null != g ? g : r.author,
         ey =
             null != K && null != B
                 ? (0, i.jsx)(O.Z, {
@@ -251,7 +251,7 @@ function M(e) {
                   }),
         eO = null != q ? q[0] : null,
         eN = null != q ? q[1] : null;
-    return (0, i.jsxs)(g.Gt, {
+    return (0, i.jsxs)(f.Gt, {
         value: ee,
         children: [
             null != eO && !F && D
@@ -262,7 +262,7 @@ function M(e) {
             "dot" === es
                 ? (0, i.jsx)(h.FhE, {
                       color: er,
-                      colors: eg ? ei : null,
+                      colors: ef ? ei : null,
                       name: el,
                       className: R.roleDot,
                       hoverOverride: null == em ? void 0 : em.animate,

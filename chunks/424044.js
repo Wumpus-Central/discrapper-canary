@@ -11,14 +11,14 @@ var r = n(951288),
     h = n(185625),
     p = n(551549),
     m = n(108427),
-    g = n(314897),
-    f = n(981631),
+    f = n(314897),
+    g = n(981631),
     _ = n(388032),
     x = n(197571);
 l.ZP.initialize();
 let b = (e) => {
     let { location: t } = e,
-        n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
+        n = (0, l.e7)([f.default], () => f.default.isAuthenticated()),
         b = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, p.oK)("RSL - Landing Page"),
         [E, j] = i.useState(!1),
@@ -26,17 +26,17 @@ let b = (e) => {
         [O, N] = i.useState(!0),
         S = (e) => {
             switch (e) {
-                case f.evJ.INVALID_FORM_BODY:
-                case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
+                case g.evJ.INVALID_FORM_BODY:
+                case g.evJ.DSA_RSL_REPORT_NOT_FOUND:
                     y(_.intl.string(_.t.bzXDfX));
                     break;
-                case f.evJ.DSA_RSL_ALREADY_REQUESTED:
+                case g.evJ.DSA_RSL_ALREADY_REQUESTED:
                     y(_.intl.string(_.t.rV00ws));
                     break;
-                case f.evJ.DSA_RSL_LIMITED_TIME:
+                case g.evJ.DSA_RSL_LIMITED_TIME:
                     y(_.intl.string(_.t["0dI29v"]));
                     break;
-                case f.evJ.DSA_RSL_REPORT_INELIGIBLE:
+                case g.evJ.DSA_RSL_REPORT_INELIGIBLE:
                     y(_.intl.string(_.t["RGa/GR"]));
                     break;
                 default:
