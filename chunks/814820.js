@@ -2,8 +2,8 @@ n.d(t, { f: () => C });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    o = n(159691),
-    a = n(541716),
+    a = n(159691),
+    o = n(541716),
     s = n(419922),
     c = n(665906),
     u = n(271383),
@@ -20,7 +20,7 @@ let E = (e) => {
             l = (0, g.y6)(n.id),
             c = i.useCallback(() => {
                 (0, f.v)({
-                    type: a.Ie.FORM,
+                    type: o.Ie.FORM,
                     content: "",
                     channel: t,
                 }).then((e) => {
@@ -30,7 +30,7 @@ let E = (e) => {
             }, [t, n, l]);
         return (0, r.jsx)("div", {
             className: b.welcomeCTA,
-            children: (0, r.jsx)(o.zx, {
+            children: (0, r.jsx)(a.zx, {
                 icon: {
                     type: "sticker",
                     asset: l,
@@ -45,18 +45,18 @@ let E = (e) => {
     C = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
-            o = (0, l.e7)([m.default, p.Z, d.Z, u.ZP], () => {
+            a = (0, l.e7)([m.default, p.Z, d.Z, u.ZP], () => {
                 var e;
                 let r = m.default.getCurrentUser(),
                     l = (0, c.xl)(n),
-                    o = p.Z.can(_.Plq.SEND_MESSAGES, n),
-                    a = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
+                    a = p.Z.can(_.Plq.SEND_MESSAGES, n),
+                    o = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     f = d.Z.getGuild(i),
                     g = null != f && (f.systemChannelFlags & _.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return o && !l && !a && !s && g;
+                return a && !l && !o && !s && g;
             });
-        return null != i && o
+        return null != i && a
             ? (0, r.jsx)(E, {
                   message: t,
                   channel: n,

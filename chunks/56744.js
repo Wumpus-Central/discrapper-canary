@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    o = n(627050),
-    a = n(905405),
+    a = n(627050),
+    o = n(905405),
     s = n(869765),
     c = n(699516),
     u = n(937889),
@@ -13,8 +13,8 @@ var r = n(951288),
 let f = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: m, compact: f = !1 } = e,
         g = m.state === s.Y.LOADED ? m.message : void 0,
-        _ = (0, a.p)(),
-        h = o.d.useExperiment({ location: "repliedMessage" }).enabled,
+        _ = (0, o.p)(),
+        h = a.d.useExperiment({ location: "repliedMessage" }).enabled,
         b = i.useMemo(
             () =>
                 (null == g ? void 0 : g.content) != null && "" !== g.content
@@ -34,11 +34,11 @@ let f = i.memo(function (e) {
             }),
             [g],
         ),
-        O = (0, d.Uj)(g),
-        v = (0, d.Uj)(t);
+        v = (0, d.Uj)(g),
+        O = (0, d.Uj)(t);
     return (0, r.jsx)(p.Z, {
-        repliedAuthor: O,
-        baseAuthor: v,
+        repliedAuthor: v,
+        baseAuthor: O,
         baseMessage: t,
         channel: n,
         referencedMessage: m,

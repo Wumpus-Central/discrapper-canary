@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    o = n(100527),
-    a = n(906732),
+    a = n(100527),
+    o = n(906732),
     s = n(739566),
     c = n(942951),
     u = n(834129),
@@ -58,11 +58,11 @@ function C(e) {
         ],
     });
 }
-function O(e) {
+function v(e) {
     var t, l;
     let { channel: f, message: h, compact: b } = e,
         E = (0, s.ZP)(h),
-        O = (function (e) {
+        v = (function (e) {
             let { author: t, channel: n, message: r } = e,
                 l = n.guild_id,
                 s = (0, c.l)({
@@ -71,7 +71,7 @@ function O(e) {
                     guildId: l,
                     messageId: r.id,
                 })(t),
-                { analyticsLocations: u } = (0, a.ZP)(o.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
+                { analyticsLocations: u } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
                 m = r.roleSubscriptionData,
                 f = i.useCallback(() => {
                     (0, d.uL)(g.Z5c.CHANNEL(l, _.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
@@ -92,10 +92,10 @@ function O(e) {
             message: h,
             author: E,
         }),
-        v =
+        O =
             (null == (t = h.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null &&
             (null == (l = h.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
-    return null == O
+    return null == v
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -103,9 +103,9 @@ function O(e) {
                       icon: n(570111),
                       timestamp: h.timestamp,
                       compact: b,
-                      children: O,
+                      children: v,
                   }),
-                  v &&
+                  O &&
                       (0, r.jsx)(C, {
                           guildId: f.guild_id,
                           user: h.author,

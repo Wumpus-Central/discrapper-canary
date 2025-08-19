@@ -1,12 +1,12 @@
 n.d(t, {
     G: () => C,
-    z: () => O,
+    z: () => v,
 });
 var r = n(647438),
     i = n(442837),
     l = n(783097),
-    o = n(176412),
-    a = n(749681),
+    a = n(176412),
+    o = n(749681),
     s = n(258971),
     c = n(592125),
     u = n(496675),
@@ -19,11 +19,11 @@ var r = n(647438),
     h = n(49898),
     b = n(388032);
 function E(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: o } = e,
-        a = (0, f.Eb)({
+    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
+        o = (0, f.Eb)({
             customInstallUrl: n,
             installParams: r,
-            integrationTypesConfig: o,
+            integrationTypesConfig: a,
         }),
         s = (0, i.e7)([p.Z], () => {
             var e;
@@ -38,10 +38,10 @@ function E(e) {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
-        integrationTypesConfig: o,
+        integrationTypesConfig: a,
         canViewApp: t || g,
         canOpenAppLauncher: g,
-        isInstallable: a,
+        isInstallable: o,
         selectedGuildId: s,
     };
 }
@@ -59,8 +59,8 @@ function C(e, t) {
         () =>
             n
                 ? () => {
-                      if ((null == t || t(), i)) return void (0, o.X)(e.id);
-                      (0, a.transitionToGlobalDiscovery)({
+                      if ((null == t || t(), i)) return void (0, a.X)(e.id);
+                      (0, o.transitionToGlobalDiscovery)({
                           tab: h.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
                           newSessionState: { entrypoint: { name: s.xF.APPLICATION_MESSAGE_EMBED } },
@@ -82,7 +82,7 @@ function C(e, t) {
         [e.id, i, n, c, u, d, l, t, p],
     );
 }
-function O(e) {
+function v(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
         i = C(e);
     return r.useMemo(

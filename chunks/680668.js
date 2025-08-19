@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(997841), n(388685);
+n.d(t, { Z: () => v }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(533800),
-    o = n(481060),
-    a = n(447543),
+    a = n(481060),
+    o = n(447543),
     s = n(100527),
     c = n(906732),
     u = n(857395),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(981631),
     E = n(388032),
     C = n(105341);
-function O(e) {
-    var t, O, v;
+function v(e) {
+    var t, v, O;
     let y,
         x,
         j,
@@ -39,19 +39,19 @@ function O(e) {
         F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = P.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (O = null == T ? void 0 : T.features.has(b.oNc.HUB)) && O,
+        H = null != (v = null == T ? void 0 : T.features.has(b.oNc.HUB)) && v,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, Y] = i.useState(!1),
         K = i.useCallback(() => Y(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            Y(!0), (0, a.CB)(V, "show profile", z);
+            Y(!0), (0, o.CB)(V, "show profile", z);
         }, [V, z]),
         J = i.useCallback(() => {
             let e = "noop";
             k ? (I(), (e = "transition")) : (S(), (e = "accept")),
-                (0, a.r$)(
+                (0, o.r$)(
                     {
                         invite: P,
                         action: e,
@@ -63,7 +63,7 @@ function O(e) {
         }, [P, N, z, k, I, S]);
     if (null == T) {
         if (null == P.guild) return (0, r.jsx)(h.Z, {});
-        (T = g.Qs(P.guild)).premiumTier = null != (v = P.guild.premium_tier) ? v : b.Eu4.NONE;
+        (T = g.Qs(P.guild)).premiumTier = null != (O = P.guild.premium_tier) ? O : b.Eu4.NONE;
     }
     let Q = (0, _.e)({
         isVoiceChannel: F,
@@ -100,10 +100,10 @@ function O(e) {
             ],
         })),
         G &&
-            (j = (0, r.jsx)(o.DY3, {
+            (j = (0, r.jsx)(a.DY3, {
                 className: C.tooltipContainer,
                 text: E.intl.string(E.t["/FeTKy"]),
-                children: (0, r.jsx)(o.d3s, {
+                children: (0, r.jsx)(a.d3s, {
                     size: "md",
                     color: "currentColor",
                     className: C.infoIcon,
@@ -172,12 +172,12 @@ function O(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", { className: C.separator }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: E.intl.format(E.t["/o1IfH"], {
                                     onClick: () =>
-                                        (0, o.ZDy)(async () => {
+                                        (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
                                                 n.bind(n, 650233),
                                             );

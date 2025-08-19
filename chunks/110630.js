@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o }), n(997841);
+n.d(t, { Z: () => a }), n(997841);
 var r = n(978003),
     i = n(630388),
     l = n(981631);
-function o(e) {
+function a(e) {
     var t;
     return !(
         e.type !== l.uaV.DEFAULT ||

@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => l,
-    k: () => o,
+    k: () => a,
 });
 var r = n(570140),
     i = n(155414);
@@ -26,7 +26,7 @@ async function l(e, t) {
         });
     }
 }
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: "CREATOR_MONETIZATION_SET_HAS_SEEN_ONBOARDING_FOR_GUILD",
         guildId: e,

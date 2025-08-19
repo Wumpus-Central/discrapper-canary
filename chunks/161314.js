@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(990547),
+    a = n.n(l),
+    o = n(990547),
     s = n(831209),
     c = n(442837),
     u = n(159691),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(430824),
     E = n(626135),
     C = n(76535),
-    O = n(866104),
-    v = n(886176),
+    v = n(866104),
+    O = n(886176),
     y = n(981631),
     x = n(388032),
     j = n(736636);
@@ -62,15 +62,15 @@ function I(e) {
         }, [n]);
     (0, m.Z)(
         {
-            type: a.ImpressionTypes.VIEW,
-            name: a.ImpressionNames.GUILD_SHOP_EMBED,
+            type: o.ImpressionTypes.VIEW,
+            name: o.ImpressionNames.GUILD_SHOP_EMBED,
         },
         { disableTrack: null == l },
     );
     let A = P.length > 0 ? new Date(Math.min(...P.map((e) => Date.parse(e.published_at)))) : void 0;
     return I || !T
         ? (0, r.jsx)("div", {
-              className: o()(j.guildShopEmbed, j.spinnerContainer),
+              className: a()(j.guildShopEmbed, j.spinnerContainer),
               children: (0, r.jsx)(d.$jN, {}),
           })
         : null == l || null == S
@@ -78,12 +78,12 @@ function I(e) {
           : (0, r.jsxs)("div", {
                 className: j.guildShopEmbed,
                 children: [
-                    (0, r.jsx)(O.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
+                    (0, r.jsx)(v.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
                     (0, r.jsxs)("div", {
                         className: j.serverShopLabel,
                         children: [
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(O.Z, {
                                 height: "16px",
                                 width: "16px",
                                 color: s.Z.INTERACTIVE_NORMAL,
@@ -142,7 +142,7 @@ function I(e) {
                                 className: j.guildShopEmbedCta,
                                 children: (0, r.jsx)(u.zx, {
                                     onClick: N,
-                                    icon: v.P,
+                                    icon: O.P,
                                     text: x.intl.string(x.t.jXx1CA),
                                 }),
                             }),

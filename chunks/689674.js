@@ -2,17 +2,17 @@ n.d(t, { Z: () => d });
 var r = n(647438),
     i = n(106351),
     l = n(442837),
-    o = n(434650),
-    a = n(430824),
+    a = n(434650),
+    o = n(430824),
     s = n(63205),
     c = n(529726),
     u = n(981631);
 function d(e) {
     var t, n;
     let { message: d, channel: p, enabled: m = !0 } = e,
-        f = (0, l.e7)([a.Z], () => {
+        f = (0, l.e7)([o.Z], () => {
             var e;
-            let t = a.Z.getGuild(p.guild_id);
+            let t = o.Z.getGuild(p.guild_id);
             return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
         }, [p.guild_id]),
         g =
@@ -28,7 +28,7 @@ function d(e) {
             g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null
                 ? d.messageReference.guild_id
                 : p.guild_id,
-        O = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
@@ -42,14 +42,14 @@ function d(e) {
             },
             [b, p.id, p.guild_id, E, C],
         ),
-        v = s.Z.useExperiment(
+        O = s.Z.useExperiment(
             { location: "836a4b_1" },
             {
                 disable: !h || !m,
                 autoTrackExposure: !0,
             },
         ).enabled,
-        y = (0, o.O)(O, 0, v);
+        y = (0, a.O)(v, 0, O);
     return (
         r.useEffect(
             () => () => {

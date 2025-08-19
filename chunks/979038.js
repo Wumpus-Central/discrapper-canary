@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => P });
 var r = n(951288);
 n(647438);
 var i = n(620662),
@@ -13,107 +13,111 @@ var i = n(620662),
     _ = n(750154),
     p = n(374129),
     h = n(639351),
-    m = n(103479),
-    g = n(191764),
-    E = n(238607),
-    b = n(414402),
-    y = n(934393),
-    O = n(195990),
-    v = n(803663),
-    I = n(585253),
-    T = n(715547),
-    S = n(994102),
-    A = n(981631),
-    N = n(723701);
-function C(e) {
-    let { user: t, activity: n, onAction: C, onClose: R, application: P } = e,
-        w = (0, c.q)(P, "UserProfileActivityButtons"),
-        D = (0, u.L)(null != n ? n : void 0, void 0),
-        { showPlayButton: L } = d.m.useConfig({ location: "UserProfileActivityButtons" });
-    if (L && null != P && (0, f.bP)(P))
-        return (0, r.jsx)(O.Z, {
+    m = n(652853),
+    g = n(103479),
+    E = n(191764),
+    b = n(238607),
+    y = n(414402),
+    O = n(934393),
+    v = n(195990),
+    I = n(803663),
+    T = n(585253),
+    S = n(715547),
+    A = n(994102),
+    N = n(981631),
+    C = n(671955),
+    R = n(723701);
+function P(e) {
+    let { user: t, activity: n, onAction: P, onClose: w, application: D } = e,
+        { themeType: L } = (0, m.z)(),
+        x = (0, c.q)(D, "UserProfileActivityButtons"),
+        M = (0, u.L)(null != n ? n : void 0, void 0),
+        { showPlayButton: k } = d.m.useConfig({ location: "UserProfileActivityButtons" });
+    if (k && null != D && (0, f.bP)(D))
+        return (0, r.jsx)(v.Z, {
             user: t,
-            application: P,
-            onAction: C,
-            onClose: R,
+            application: D,
+            onAction: P,
+            onClose: w,
         });
     if ((0, s.Z)(n))
-        return (0, r.jsx)(y.Z, {
-            platformType: A.ABu.XBOX,
+        return (0, r.jsx)(O.Z, {
+            platformType: N.ABu.XBOX,
             icon: () => (0, r.jsx)(h.Z, {}),
-            onAction: C,
+            onAction: P,
         });
     if ((0, o.Z)(n))
-        return (0, r.jsx)(y.Z, {
-            platformType: A.ABu.PLAYSTATION,
+        return (0, r.jsx)(O.Z, {
+            platformType: N.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(p.Z, {}),
-            onAction: C,
+            onAction: P,
         });
     if ((0, l.Z)(n))
-        return (0, r.jsx)(T.Z, {
+        return (0, r.jsx)(S.Z, {
             activity: n,
-            onAction: C,
+            onAction: P,
         });
-    let x = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
-        M = (null == n ? void 0 : n.application_id) != null;
-    return !D && w && null != P
-        ? (0, r.jsx)(S.Z, {
-              application: P,
-              onAction: C,
-              onClose: R,
+    let j = L === C.l.MODAL || L === C.l.MODAL_V2;
+    if (!M && x && null != D && !j)
+        return (0, r.jsx)(A.Z, {
+            application: D,
+            onAction: P,
+            onClose: w,
+        });
+    let U = (0, i.Z)(n, N.xjy.JOIN) || (0, a.Z)(n),
+        G = (null == n ? void 0 : n.application_id) != null;
+    return U && G
+        ? (0, r.jsxs)("div", {
+              className: R.buttonContainer,
+              children: [
+                  (0, r.jsx)(b.Z, {
+                      user: t,
+                      activity: n,
+                      onAction: P,
+                      onClose: w,
+                  }),
+                  (0, r.jsx)(T.Z, {
+                      activity: n,
+                      onAction: P,
+                  }),
+              ],
           })
-        : x && M
-          ? (0, r.jsxs)("div", {
-                className: N.buttonContainer,
-                children: [
-                    (0, r.jsx)(E.Z, {
-                        user: t,
-                        activity: n,
-                        onAction: C,
-                        onClose: R,
-                    }),
-                    (0, r.jsx)(I.Z, {
-                        activity: n,
-                        onAction: C,
-                    }),
-                ],
+        : U
+          ? (0, r.jsx)(b.Z, {
+                user: t,
+                activity: n,
+                onAction: P,
+                onClose: w,
             })
-          : x
+          : (null == n ? void 0 : n.type) === N.IIU.HANG_STATUS
             ? (0, r.jsx)(E.Z, {
                   user: t,
                   activity: n,
-                  onAction: C,
-                  onClose: R,
+                  onAction: P,
+                  onClose: w,
               })
-            : (null == n ? void 0 : n.type) === A.IIU.HANG_STATUS
+            : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
               ? (0, r.jsx)(g.Z, {
                     user: t,
                     activity: n,
-                    onAction: C,
-                    onClose: R,
+                    onAction: P,
                 })
-              : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
-                ? (0, r.jsx)(m.Z, {
-                      user: t,
+              : G
+                ? (0, r.jsx)(T.Z, {
                       activity: n,
-                      onAction: C,
+                      onAction: P,
                   })
-                : M
-                  ? (0, r.jsx)(I.Z, {
+                : (0, i.Z)(n, N.xjy.INSTANCE)
+                  ? (0, r.jsx)(y.Z, {
+                        user: t,
                         activity: n,
-                        onAction: C,
+                        onAction: P,
                     })
-                  : (0, i.Z)(n, A.xjy.INSTANCE)
-                    ? (0, r.jsx)(b.Z, {
-                          user: t,
+                  : (0, _.dS)(n)
+                    ? (0, r.jsx)(I.Z, {
                           activity: n,
-                          onAction: C,
+                          onAction: P,
+                          onClose: w,
                       })
-                    : (0, _.dS)(n)
-                      ? (0, r.jsx)(v.Z, {
-                            activity: n,
-                            onAction: C,
-                            onClose: R,
-                        })
-                      : null;
+                    : null;
 }

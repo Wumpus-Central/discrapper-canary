@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(825829),
     l = n(33803),
-    o = n(517820);
-function a(e) {
+    a = n(517820);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,5 +52,5 @@ function s(e) {
             }
             return i;
         })(e, ["message"]);
-    return (0, i.OP)(t) ? (0, r.jsx)(o.Z, a({ message: t }, n)) : (0, r.jsx)(l.Z, a({ message: t }, n));
+    return (0, i.OP)(t) ? (0, r.jsx)(a.Z, o({ message: t }, n)) : (0, r.jsx)(l.Z, o({ message: t }, n));
 }

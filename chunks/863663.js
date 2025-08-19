@@ -1,8 +1,8 @@
 n.d(t, {
-    NB: () => o,
+    NB: () => a,
     ar: () => u,
     fG: () => c,
-    kg: () => a,
+    kg: () => o,
     pM: () => s,
 }),
     n(781311),
@@ -11,8 +11,8 @@ var r = n(881052);
 n(496675);
 var i = n(981631),
     l = n(388032);
-let o = "_role";
-function a(e) {
+let a = "_role";
+function o(e) {
     if (!(e >= 0))
         switch (-e) {
             case i.evJ.ENTITY_TOO_LARGE:
@@ -36,7 +36,7 @@ function s(e) {
                 body: {
                     message: "Invalid form body",
                     errors: {
-                        [o]: {
+                        [a]: {
                             _errors: [
                                 {
                                     code: "",
@@ -57,8 +57,8 @@ function c(e) {
             name: r,
             priceTier: i,
             description: l,
-            image: o,
-            imageName: a,
+            image: a,
+            imageName: o,
             isImageChanged: s,
             newRoleParams: c,
             hasUnsavedAttachmentChanges: u,
@@ -68,9 +68,9 @@ function c(e) {
         (null != (t = null == n ? void 0 : n.description) ? t : "") !== l && (d.description = l),
         (null == n ? void 0 : n.price_tier) !== i && null != i && (d.priceTier = i),
         null != c && "" !== c.name.trim() ? (d.createNewRole = !0) : null === c && (d.unlinkRole = !0),
-        o.startsWith("data:") &&
+        a.startsWith("data:") &&
             (s || (null == n && (Object.keys(d).length > 0 || u))) &&
-            ((d.image = o), (d.imageName = a));
+            ((d.image = a), (d.imageName = o));
     let p = Object.keys(d).length > 0 || u;
     return {
         changes: d,

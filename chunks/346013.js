@@ -2,8 +2,8 @@ n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(772848),
+    a = n.n(l),
+    o = n(772848),
     s = n(831209),
     c = n(399606),
     u = n(481060),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(348238),
     E = n(38267),
     C = n(884902),
-    O = n(670188),
-    v = n(695346),
+    v = n(670188),
+    O = n(695346),
     y = n(271383),
     x = n(594174),
     j = n(768581),
@@ -82,7 +82,7 @@ function M(e) {
         H = (0, P.J)(k, U),
         { setPopout: V } = (0, E.Z)(U.id, A.d$),
         z = (0, b.qo)(U, F, V, !0),
-        W = v.QK.useSetting(),
+        W = O.QK.useSetting(),
         Y = (0, S.n)(),
         [K, X] = i.useState(!1),
         [q, J] = i.useState((null == H ? void 0 : H.coverImage) == null),
@@ -115,7 +115,7 @@ function M(e) {
         }, [$]),
         ei = (0, C.X7)(null == $ ? void 0 : $.guildId, null != (l = null == H ? void 0 : H.authorId) ? l : void 0, en),
         { reducedMotion: el } = i.useContext(u.Sfi),
-        [eo, ea] = i.useState(!1),
+        [ea, eo] = i.useState(!1),
         es = i.useCallback(() => {
             X(!0);
         }, [X]),
@@ -140,11 +140,11 @@ function M(e) {
     let ed = (0, j.NZ)({
             avatarDecoration: ee,
             size: (0, f.y9)(u.EFr.SIZE_40),
-            canAnimate: eo,
+            canAnimate: ea,
         }),
-        ep = null == (n = H.user) ? void 0 : n.getAvatarURL(H.guildId, 40, eo),
+        ep = null == (n = H.user) ? void 0 : n.getAvatarURL(H.guildId, 40, ea),
         em = () => {
-            el.enabled || ea((e) => !e);
+            el.enabled || eo((e) => !e);
         },
         ef = H.coverImage,
         eg = null != ef && (0, h.d$)(ef);
@@ -161,7 +161,7 @@ function M(e) {
                             ? (0, r.jsx)("img", {
                                   src: R,
                                   alt: w.intl.string(w.t.rIbh8P),
-                                  className: o()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
+                                  className: a()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
                                   onContextMenu: z,
                                   onError: () => J(!0),
                               })
@@ -170,7 +170,7 @@ function M(e) {
                                   backgroundSrc: "".concat(ef, "?format=png"),
                                   alt: w.intl.string(w.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: o()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
+                                  className: a()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
                                   imageChildClassName: Z.thumbnailImage,
                                   onContextMenu: z,
                                   onError: () => J(!0),
@@ -210,7 +210,7 @@ function M(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                className: o()(Z.descriptionHeaderText, Z.descriptionSubtitle),
+                                className: a()(Z.descriptionHeaderText, Z.descriptionSubtitle),
                                 children: H.subtitle,
                             }),
                         ],
@@ -220,7 +220,7 @@ function M(e) {
                         children: [
                             null != H.authorId &&
                                 null != ep &&
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(v.Z, {
                                     targetElementRef: G,
                                     userId: H.authorId,
                                     guildId: H.guildId,
@@ -285,7 +285,7 @@ function M(e) {
                                                               className: Z.authorName,
                                                           })
                                                         : (0, r.jsx)(
-                                                              O.Z,
+                                                              v.Z,
                                                               {
                                                                   targetElementRef: B,
                                                                   userId: H.authorId,
@@ -307,7 +307,7 @@ function M(e) {
                                                                           }),
                                                                       ),
                                                               },
-                                                              (0, a.Z)(),
+                                                              (0, o.Z)(),
                                                           ),
                                             }),
                                         }),

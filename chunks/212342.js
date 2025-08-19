@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685), n(997841);
 var r,
     i,
     l = n(442837),
-    o = n(433517),
-    a = n(570140),
+    a = n(433517),
+    o = n(570140),
     s = n(314897),
     c = n(592125),
     u = n(496675),
@@ -16,7 +16,7 @@ let g = "ChannelFollowingBumpChannels",
     h = new Set();
 class b extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), (_ = new Set(o.K.get(g)));
+        this.waitFor(s.default), (_ = new Set(a.K.get(g)));
     }
     shouldShowBump(e) {
         return h.has(e);
@@ -30,19 +30,19 @@ class b extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (b[i] = "ChannelFollowingPublishBumpStore");
-let E = new b(a.Z, {
+let E = new b(o.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: r, optimistic: i } = e;
         if (i || _.has(n)) return !1;
         let l = c.Z.getChannel(n),
-            o = d.default.getCurrentUser();
+            a = d.default.getCurrentUser();
         if (
             !(
                 null != l &&
                 l.type === f.d4z.GUILD_ANNOUNCEMENT &&
                 (0, m.Z)(r) &&
-                (null != o && (null == (t = r.author) ? void 0 : t.id) === o.id
+                (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id
                     ? u.Z.can(f.Plq.SEND_MESSAGES, l)
                     : u.Z.can(f.Plq.MANAGE_MESSAGES, l)) &&
                 !p.yE(Number(r.flags), f.iLy.CROSSPOSTED)
@@ -64,6 +64,6 @@ let E = new b(a.Z, {
     },
     CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
         let { channelId: t } = e;
-        _.add(t), o.K.set(g, _), h.clear();
+        _.add(t), a.K.set(g, _), h.clear();
     },
 });

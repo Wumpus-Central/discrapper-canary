@@ -7,7 +7,7 @@ function l(e) {
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e("74590").then(n.bind(n, 651081));
         return (n) => {
-            var i, o;
+            var i, a;
             return (0, r.jsx)(
                 e,
                 ((i = (function (e) {
@@ -35,13 +35,13 @@ function l(e) {
                     }
                     return e;
                 })({}, n)),
-                (o = o =
+                (a = a =
                     {
                         message: t,
                         initialAnswerId: l,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -49,8 +49,8 @@ function l(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 i),
             );

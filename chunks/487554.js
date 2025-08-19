@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     i,
     l = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,8 +39,8 @@ class d extends (i = l.ZP.Store) {
         return c;
     }
 }
-a(d, "displayName", "MediaPostEmbedStore");
-let p = new d(o.Z, {
+o(d, "displayName", "MediaPostEmbedStore");
+let p = new d(a.Z, {
     CONNECTION_OPEN: function () {
         (c = {}), (u = {});
     },
@@ -62,7 +62,7 @@ let p = new d(o.Z, {
                         }),
                     )),
                     r.forEach(function (t) {
-                        a(e, t, n[t]);
+                        o(e, t, n[t]);
                     });
             }
             return e;

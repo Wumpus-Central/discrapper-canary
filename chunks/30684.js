@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r,
     i,
     l = n(442837),
-    o = n(570140);
-let a = !1,
+    a = n(570140);
+let o = !1,
     s = !1,
     c = !1;
 class u extends (i = l.ZP.Store) {
@@ -11,7 +11,7 @@ class u extends (i = l.ZP.Store) {
         return c;
     }
     shouldFetchCheckoutRecovery() {
-        return !a && !s;
+        return !o && !s;
     }
 }
 (r = "displayName") in u
@@ -22,17 +22,17 @@ class u extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (u[r] = "CheckoutRecoveryStore");
-let d = new u(o.Z, {
+let d = new u(a.Z, {
     CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
-        (s = !0), (a = !1), (c = e.isTargeted);
+        (s = !0), (o = !1), (c = e.isTargeted);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function () {
-        (s = !0), (a = !1);
+        (s = !0), (o = !1);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH: function () {
-        a = !0;
+        o = !0;
     },
     LOGOUT: function () {
-        (a = !1), (s = !1), (c = !1);
+        (o = !1), (s = !1), (c = !1);
     },
 });

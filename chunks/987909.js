@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    o = n(159691),
-    a = n(904245),
+    a = n(159691),
+    o = n(904245),
     s = n(541716),
     c = n(419922),
     u = n(665906),
@@ -49,10 +49,10 @@ function C(e) {
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: r } = e;
-                    a.Z.sendGreetMessage(
+                    o.Z.sendGreetMessage(
                         t.id,
                         r.id,
-                        a.Z.getSendMessageOptionsForReply({
+                        o.Z.getSendMessageOptionsForReply({
                             channel: t,
                             message: n,
                             shouldMention: !0,
@@ -116,7 +116,7 @@ function C(e) {
                     eventProperties: m,
                 }));
         }, [n, l, g, p, m]);
-    return (0, r.jsx)(o.zx, {
+    return (0, r.jsx)(a.zx, {
         icon: {
             type: "sticker",
             asset: g,
@@ -127,8 +127,8 @@ function C(e) {
         variant: "secondary",
     });
 }
-function O(e) {
-    let { channel: t, message: n, buttonLabels: i, stickers: o, event: a, eventProperties: s } = e,
+function v(e) {
+    let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
             let { channel: t, message: n, currentUser: r } = e;
@@ -137,10 +137,10 @@ function O(e) {
                 let i = t.guild_id;
                 if (null == r || null == i) return !1;
                 let l = (0, u.xl)(t),
-                    o = p.Z.can(h.Plq.SEND_MESSAGES, t),
-                    a = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
+                    a = p.Z.can(h.Plq.SEND_MESSAGES, t),
+                    o = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
                     s = n.author.bot;
-                return o && !l && !a && !s;
+                return a && !l && !o && !s;
             });
         })({
             channel: t,
@@ -155,8 +155,8 @@ function O(e) {
                   channel: t,
                   message: n,
                   buttonLabels: i,
-                  stickers: o,
-                  event: a,
+                  stickers: a,
+                  event: o,
                   eventProperties: s,
               }),
           })

@@ -2,8 +2,8 @@ n.d(t, { ZP: () => U }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(238651),
     c = n(772848),
     u = n(468194),
@@ -17,8 +17,8 @@ var r,
     b = n(267642),
     E = n(739566),
     C = n(834129),
-    O = n(981631),
-    v = n(388032),
+    v = n(981631),
+    O = n(388032),
     y = n(465687);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -167,7 +167,7 @@ function M() {
         });
 }
 function k(e) {
-    let { onAnimationComplete: t, onClick: n, position: r, size: o } = e,
+    let { onAnimationComplete: t, onClick: n, position: r, size: a } = e,
         u = l.useRef(null),
         [d, m] = l.useState(null),
         [g] = l.useState(
@@ -189,7 +189,7 @@ function k(e) {
         { createMultipleConfettiAt: _, confettiCanvas: h } = l.useContext(f.h),
         [b, E] = l.useState(null),
         C = (0, s.uR)(h, b),
-        O = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return "enter";
             switch (e) {
                 case "enter":
@@ -205,8 +205,8 @@ function k(e) {
                     return "enter";
             }
         })(d, g),
-        v = T.includes(g),
-        x = v && "exit" === d,
+        O = T.includes(g),
+        x = O && "exit" === d,
         j = l.useCallback((e) => {
             m(e);
         }, []),
@@ -233,7 +233,7 @@ function k(e) {
                             x: r.left + i.x,
                             y: r.top + i.y,
                         };
-                    })(u.current, g, o);
+                    })(u.current, g, a);
                 _(t.x, t.y, {
                     velocity: {
                         type: "static-random",
@@ -248,9 +248,9 @@ function k(e) {
                     },
                 });
             }
-        }, [_, g, d, o]),
+        }, [_, g, d, a]),
         l.useEffect(() => {
-            if (v && "leaf_fall" === d) {
+            if (O && "leaf_fall" === d) {
                 let e = A[g].leafRotationDirection;
                 C.createConfetti(
                     {
@@ -302,7 +302,7 @@ function k(e) {
                     { sprite: "TOP_LEFT" === g ? R : D },
                 );
             }
-        }, [v, C, g, d]),
+        }, [O, C, g, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -314,7 +314,7 @@ function k(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: a()(y.easterEggAnimationClickTarget, {
+                    className: o()(y.easterEggAnimationClickTarget, {
                         [y.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === g,
                         [y.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === g,
                         [y.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === g,
@@ -322,8 +322,8 @@ function k(e) {
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: k,
-                        className: a()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: x }),
-                        nextScene: O,
+                        className: o()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: x }),
+                        nextScene: v,
                         sceneSegments: I,
                         onScenePlay: j,
                         onSceneComplete: N,
@@ -337,15 +337,15 @@ function k(e) {
 }
 function U(e) {
     let t,
-        { message: n, compact: r, guild: o, usernameHook: a, onClickMessage: s } = e,
+        { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
-                case O.uaV.GUILD_BOOST_TIER_1:
-                    return O.Eu4.TIER_1;
-                case O.uaV.GUILD_BOOST_TIER_2:
-                    return O.Eu4.TIER_2;
-                case O.uaV.GUILD_BOOST_TIER_3:
-                    return O.Eu4.TIER_3;
+                case v.uaV.GUILD_BOOST_TIER_1:
+                    return v.Eu4.TIER_1;
+                case v.uaV.GUILD_BOOST_TIER_2:
+                    return v.Eu4.TIER_2;
+                case v.uaV.GUILD_BOOST_TIER_3:
+                    return v.Eu4.TIER_3;
             }
             return null;
         })(n),
@@ -356,31 +356,31 @@ function U(e) {
         { reducedMotion: T } = l.useContext(p.Sfi),
         P = (0, E.ZP)(n),
         N = P.nick,
-        A = a(P);
+        A = o(P);
     t =
-        null == c || null == o
+        null == c || null == a
             ? u > 1
-                ? v.intl.format(v.t.yfC9dn, {
+                ? O.intl.format(O.t.yfC9dn, {
                       username: N,
                       usernameHook: A,
                       numSubscriptions: u,
                   })
-                : v.intl.format(v.t["57St//"], {
+                : O.intl.format(O.t["57St//"], {
                       username: N,
                       usernameHook: A,
                   })
             : u > 1
-              ? v.intl.format(v.t.PO9uJC, {
+              ? O.intl.format(O.t.PO9uJC, {
                     username: N,
                     usernameHook: A,
                     numSubscriptions: u,
-                    guildName: o.name,
+                    guildName: a.name,
                     newTierName: (0, b.nW)(c),
                 })
-              : v.intl.format(v.t.cUfTTE, {
+              : O.intl.format(O.t.cUfTTE, {
                     username: N,
                     usernameHook: A,
-                    guildName: o.name,
+                    guildName: a.name,
                     newTierName: (0, b.nW)(c),
                 });
     let Z = l.useCallback(() => {
@@ -396,7 +396,7 @@ function U(e) {
             I(!1);
         }, []),
         D = l.useCallback(() => {
-            (0, _.AI)({ settingsVisible: !0 }), m.Z.open(O.oAB.POGGERMODE), I(!1);
+            (0, _.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), I(!1);
         }, []),
         L = l.useCallback(
             (e, t) => {

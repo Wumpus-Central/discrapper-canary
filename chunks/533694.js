@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(399606),
     l = n(481060),
-    o = n(607070),
-    a = n(739566),
+    a = n(607070),
+    o = n(739566),
     s = n(942951),
     c = n(834129),
     u = n(703656),
@@ -13,8 +13,8 @@ var i = n(399606),
     m = n(388032),
     f = n(418783);
 function g(e) {
-    let { guildId: t, user: n, username: a } = e,
-        s = (0, i.e7)([o.Z], () => !o.Z.useReducedMotion),
+    let { guildId: t, user: n, username: o } = e,
+        s = (0, i.e7)([a.Z], () => !a.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, s),
         u = (0, r.jsx)("img", {
             src: c,
@@ -24,7 +24,7 @@ function g(e) {
     return (0, r.jsxs)("div", {
         className: f.thankYouCard,
         role: "img",
-        "aria-label": m.intl.formatToPlainString(m.t["utf8+f"], { username: a }),
+        "aria-label": m.intl.formatToPlainString(m.t["utf8+f"], { username: o }),
         children: [
             (0, r.jsx)(d.Z, { avatar: u }),
             (0, r.jsx)(l.Text, {
@@ -33,7 +33,7 @@ function g(e) {
                 color: "status-positive-text",
                 variant: "heading-xl/medium",
                 children: m.intl.format(m.t["52BAtL"], {
-                    username: a,
+                    username: o,
                     usernameHook: (e, t) =>
                         (0, r.jsx)(
                             l.Text,
@@ -53,12 +53,12 @@ function g(e) {
 }
 function _(e) {
     var t, i, l;
-    let { channel: o, message: d, compact: f } = e,
-        _ = (0, a.ZP)(d),
+    let { channel: a, message: d, compact: f } = e,
+        _ = (0, o.ZP)(d),
         h = (0, s.l)({
             user: d.author,
-            channelId: o.id,
-            guildId: o.guild_id,
+            channelId: a.id,
+            guildId: a.guild_id,
             messageId: d.id,
         })(_),
         b = m.intl.format(m.t.TQs67u, {
@@ -76,7 +76,7 @@ function _(e) {
                 var e, t, n;
                 (0, u.uL)(
                     p.Z5c.GUILD_PRODUCT(
-                        o.guild_id,
+                        a.guild_id,
                         null !=
                             (n =
                                 null == (t = d.purchaseNotification) || null == (e = t.guild_product_purchase)
@@ -98,7 +98,7 @@ function _(e) {
             }),
             (0, r.jsx)(g, {
                 username: _.nick,
-                guildId: o.guild_id,
+                guildId: a.guild_id,
                 user: d.author,
             }),
         ],

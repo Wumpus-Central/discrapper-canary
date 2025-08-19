@@ -1,13 +1,13 @@
 n.d(t, {
-    $: () => O,
+    $: () => v,
     s: () => C,
 }),
     n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(470167),
+    a = n.n(l),
+    o = n(470167),
     s = n(82659),
     c = n(572691),
     u = n(70097),
@@ -31,15 +31,15 @@ let h = (e) => {
         var t, n, i;
         let { embed: l } = e;
         if (!f.n2.has(l.type)) return null;
-        let o =
-            void 0 !== l.video && l.type !== a.h.GIFV
+        let a =
+            void 0 !== l.video && l.type !== o.h.GIFV
                 ? l.video.url
                 : null != (i = null == (t = l.thumbnail) ? void 0 : t.url)
                   ? i
                   : null == (n = l.image)
                     ? void 0
                     : n.url;
-        return null == o ? null : (0, r.jsx)(E, { url: o });
+        return null == a ? null : (0, r.jsx)(E, { url: a });
     },
     E = (e) => {
         let { url: t, description: n } = e,
@@ -48,12 +48,12 @@ let h = (e) => {
             className: _.mediaContainer,
             children: i
                 ? (0, r.jsx)(u.Z, {
-                      className: o()(_.video, _.media),
+                      className: a()(_.video, _.media),
                       controls: !0,
                       src: t,
                   })
                 : (0, r.jsx)("img", {
-                      className: o()(_.image, _.media),
+                      className: a()(_.image, _.media),
                       src: t,
                       alt: n,
                   }),
@@ -67,13 +67,13 @@ function C(e) {
         }),
         e();
 }
-function O(e) {
+function v(e) {
     let {
             channelId: t,
             messageId: n,
             isReportFalsePositiveLoading: l,
-            analyticsContext: o,
-            attachmentPreview: a,
+            analyticsContext: a,
+            attachmentPreview: o,
             embedPreview: c,
             onConfirmPress: u,
             transitionState: d,
@@ -84,28 +84,28 @@ function O(e) {
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
-                context: o,
+                context: a,
             }),
                 p();
-        }, [t, n, o, p]),
+        }, [t, n, a, p]),
         _ = i.useCallback(() => {
             null == u || u(),
                 (0, m.aP)({
                     action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
-                    context: o,
+                    context: a,
                 });
-        }, [t, n, o, u]);
+        }, [t, n, a, u]);
     return (
         i.useEffect(() => {
             (0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
                 messageId: n,
-                context: o,
+                context: a,
             });
-        }, [t, n, o]),
+        }, [t, n, a]),
         (0, r.jsxs)(s.Modal, {
             transitionState: d,
             onClose: p,
@@ -125,7 +125,7 @@ function O(e) {
                     disabled: l,
                 },
             ],
-            children: [null != a && (0, r.jsx)(h, { attachment: a }), null != c && (0, r.jsx)(b, { embed: c })],
+            children: [null != o && (0, r.jsx)(h, { attachment: o }), null != c && (0, r.jsx)(b, { embed: c })],
         })
     );
 }

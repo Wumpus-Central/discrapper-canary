@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(278074),
     i = n(263568),
     l = n(607070),
-    o = n(339085),
-    a = n(633302),
+    a = n(339085),
+    o = n(633302),
     s = n(715903),
     c = n(69882),
     u = n(592125),
@@ -24,8 +24,8 @@ var r = n(278074),
     b = n(79390),
     E = n(839963),
     C = n(897325),
-    O = n(57101),
-    v = n(562293),
+    v = n(57101),
+    O = n(562293),
     y = n(981631),
     x = n(388032);
 let j = {
@@ -43,11 +43,11 @@ function S(e) {
 }
 function T(e, t) {
     var n, r, i, l;
-    let { formattedExpirationLabel: o } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { poll: a } = e;
-    if (null == a) return;
+    let { formattedExpirationLabel: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { poll: o } = e;
+    if (null == o) return;
     let m = e.state === y.yb.SENT,
-        f = m ? (null != o ? o : (0, v.H)(a.expiry)) : "",
+        f = m ? (null != a ? a : (0, O.H)(o.expiry)) : "",
         g = null == f && m,
         {
             selectedAnswerIds: _,
@@ -55,14 +55,14 @@ function T(e, t) {
             editing: E,
             showResults: C,
         } = null != (i = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) ? i : j,
-        O = e.reactions,
+        v = e.reactions,
         x = !0;
     if (!S(e)) {
         let t = p.Z.getMessage(e.channel_id, e.id);
-        (x = !e.isSearchHit && null != t), (O = null != (l = null == t ? void 0 : t.reactions) ? l : O);
+        (x = !e.isSearchHit && null != t), (v = null != (l = null == t ? void 0 : t.reactions) ? l : v);
     }
     let I = _.size > 0,
-        T = O.some((e) => !0 === e.me_vote),
+        T = v.some((e) => !0 === e.me_vote),
         P = !E && T,
         N = P || g || C,
         A = m && x && (!T || E || N),
@@ -72,7 +72,7 @@ function T(e, t) {
         D = (0, c.b)(Z),
         L = !b && I && !P && m && !R && !D;
     return {
-        poll: a,
+        poll: o,
         canTapAnswers: A,
         canRemoveVote: P && m && !g,
         canShowVoteCounts: N,
@@ -85,7 +85,7 @@ function T(e, t) {
         isExpired: g,
         isInteractive: x,
         isSent: m,
-        reactions: O,
+        reactions: v,
         selectedAnswerIds: _,
         submitting: b,
         tapShouldOpenVotersModal: N,
@@ -101,11 +101,11 @@ function P(e, t) {
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: h } = e;
     if (null == h) return;
-    let v = m.default.getCurrentUser();
-    if (null == v) return;
+    let O = m.default.getCurrentUser();
+    if (null == O) return;
     let y = l.Z.useReducedMotion,
         j = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        S = (0, C.E)(v, j),
+        S = (0, C.E)(O, j),
         P = h.answers,
         N = h.layout_type,
         A = T(e, t, { formattedExpirationLabel: p });
@@ -214,13 +214,13 @@ function P(e, t) {
                         let r = e.animated;
                         if (null == r && null != e.id) {
                             var i, l;
-                            r = null != (l = null == (i = o.ZP.getCustomEmojiById(e.id)) ? void 0 : i.animated) && l;
+                            r = null != (l = null == (i = a.ZP.getCustomEmojiById(e.id)) ? void 0 : i.animated) && l;
                         }
                         let s = t && null != r && r;
                         return {
                             id: null == e.id ? null : "".concat(e.id),
                             name: e.name,
-                            displayName: null == e.id ? a.ZP.convertSurrogateToName(e.name) : e.name,
+                            displayName: null == e.id ? o.ZP.convertSurrogateToName(e.name) : e.name,
                             src:
                                 null == e.id
                                     ? g.ZP.getURL(e.name)
@@ -353,7 +353,7 @@ function P(e, t) {
             .exhaustive(),
         answerTapAccessibilityLabel: z ? Q : void 0,
         layoutType: N,
-        resources: (0, O.Z)({
+        resources: (0, v.Z)({
             theme: d,
             layoutType: N,
         }),

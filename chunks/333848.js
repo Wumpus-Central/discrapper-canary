@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(415506);
 var r = n(990547),
     i = n(283693),
     l = n(570140),
-    o = n(408987),
-    a = n(9156),
+    a = n(408987),
+    o = n(9156),
     s = n(621600),
     c = n(573261),
     u = n(87051),
@@ -59,9 +59,9 @@ let m = {
             rejectWithError: !1,
         }).then(
             (e) => (
-                a.ZP.isOptInEnabled(t) &&
+                o.ZP.isOptInEnabled(t) &&
                     u.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, s.ZB.OptedIn),
-                o.Z.checkGuildTemplateDirty(t),
+                a.Z.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {

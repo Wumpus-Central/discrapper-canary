@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(664751),
     i = n(544891),
     l = n(710845),
-    o = n(70956),
-    a = n(981631);
+    a = n(70956),
+    o = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ class c {
                     )
                         return;
                     let l = parseInt(i.headers["retry-after"]);
-                    (this.retryDelay = isNaN(l) || 0 === l ? 5000 : l * o.Z.Millis.SECOND),
+                    (this.retryDelay = isNaN(l) || 0 === l ? 5000 : l * a.Z.Millis.SECOND),
                         this.retryLater(e, t, n),
                         t(i);
                 }
@@ -66,14 +66,14 @@ class c {
 class u extends c {
     getEndpoint() {
         switch (this.searchType) {
-            case a.aib.FAVORITES:
-                return a.ANM.SEARCH_FAVORITES;
-            case a.aib.GUILD:
+            case o.aib.FAVORITES:
+                return o.ANM.SEARCH_FAVORITES;
+            case o.aib.GUILD:
                 if (null == this.searchId || "" === this.searchId) return;
-                return a.ANM.SEARCH_GUILD(this.searchId);
-            case a.aib.CHANNEL:
+                return o.ANM.SEARCH_GUILD(this.searchId);
+            case o.aib.CHANNEL:
                 if (null == this.searchId || "" === this.searchId) return;
-                return a.ANM.SEARCH_CHANNEL(this.searchId);
+                return o.ANM.SEARCH_CHANNEL(this.searchId);
             default:
                 throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType));
         }
@@ -94,16 +94,16 @@ class u extends c {
 class d extends c {
     getEndpoint() {
         switch (this.searchType) {
-            case a.aib.DMS:
-                return a.ANM.SEARCH_TABS_DMS;
-            case a.aib.GUILD_CHANNEL:
-            case a.aib.GUILD:
-            case a.aib.THREAD:
+            case o.aib.DMS:
+                return o.ANM.SEARCH_TABS_DMS;
+            case o.aib.GUILD_CHANNEL:
+            case o.aib.GUILD:
+            case o.aib.THREAD:
                 if (null == this.searchId || "" === this.searchId) return;
-                return a.ANM.SEARCH_TABS_GUILD(this.searchId);
-            case a.aib.CHANNEL:
+                return o.ANM.SEARCH_TABS_GUILD(this.searchId);
+            case o.aib.CHANNEL:
                 if (null == this.searchId || "" === this.searchId) return;
-                return a.ANM.SEARCH_TABS_CHANNEL(this.searchId);
+                return o.ANM.SEARCH_TABS_CHANNEL(this.searchId);
             default:
                 throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType));
         }

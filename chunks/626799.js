@@ -7,8 +7,8 @@ n.d(t, {
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(799899),
-    a = n(442837),
+    a = n(799899),
+    o = n(442837),
     s = n(755721),
     c = n(558381),
     u = n(410575),
@@ -22,8 +22,8 @@ var r,
     b = n(283595),
     E = n(558314),
     C = n(55563),
-    O = n(551428),
-    v = n(73346),
+    v = n(551428),
+    O = n(73346),
     y = n(981631),
     x = n(388032),
     j = n(550125);
@@ -99,11 +99,11 @@ class S extends (r = l.Component) {
     }
     render() {
         let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: l } = this.props,
-            a = n > f.aL;
+            o = n > f.aL;
         return null == e || null == t
             ? r
                 ? l()
-                : (0, i.jsx)(f.OR, { isHorizontal: a })
+                : (0, i.jsx)(f.OR, { isHorizontal: o })
             : e.productLine === y.POd.COLLECTIBLES
               ? (0, i.jsx)(u.Z, {
                     section: y.jXE.APPLICATION_EMBED,
@@ -111,7 +111,7 @@ class S extends (r = l.Component) {
                 })
               : (0, i.jsx)(u.Z, {
                     section: y.jXE.APPLICATION_EMBED,
-                    children: (0, i.jsx)(o.rU, {
+                    children: (0, i.jsx)(a.rU, {
                         onClick: this.handleLinkClick,
                         to: this.getStoreListingLocation(),
                         onMouseEnter: this.handleMouseEnter,
@@ -138,7 +138,7 @@ class S extends (r = l.Component) {
             I(this, "getStoreListingLocation", () => {
                 let { sku: e } = this.props;
                 if (null == e) throw Error("Should not be link to ApplicationStoreListing without SKU");
-                return (0, v.ZI)(e.id, {
+                return (0, O.ZI)(e.id, {
                     slug: e.slug,
                     analyticsSource: this.analyticsLocation,
                 });
@@ -154,8 +154,8 @@ class S extends (r = l.Component) {
                         inLibrary: n,
                         width: r,
                         renderCustomTitle: l,
-                        renderCustomTagline: o,
-                        renderCustomMedia: a,
+                        renderCustomTagline: a,
+                        renderCustomMedia: o,
                     } = this.props,
                     { playing: s, muted: c } = this.state,
                     u = r > f.aL;
@@ -168,8 +168,8 @@ class S extends (r = l.Component) {
                     onToggleMute: this.handleToggleMute,
                     renderCustomActions: () => this.renderActions(e),
                     renderCustomTitle: l,
-                    renderCustomTagline: o,
-                    renderCustomMedia: a,
+                    renderCustomTagline: a,
+                    renderCustomMedia: o,
                     isHorizontal: u,
                     isEmbed: !0,
                 });
@@ -180,20 +180,20 @@ class S extends (r = l.Component) {
                     application: n,
                     skuId: r,
                     libraryApplication: l,
-                    renderCustomActions: o,
+                    renderCustomActions: a,
                 } = this.props;
-                if (null != o)
+                if (null != a)
                     return (0, i.jsx)("div", {
                         className: j.tileActions,
-                        children: o(),
+                        children: a(),
                     });
                 if (null == n) return null;
-                let a = null != n && n.primarySkuId === r,
+                let o = null != n && n.primarySkuId === r,
                     c = null != l && l.hasFlag(y.eHb.HIDDEN);
                 return (0, i.jsxs)("div", {
                     className: j.tileActions,
                     children: [
-                        !a || c
+                        !o || c
                             ? this.renderViewInStoreButton()
                             : (0, i.jsx)(d.Z, {
                                   application: n,
@@ -216,7 +216,7 @@ class S extends (r = l.Component) {
     }
 }
 I(S, "defaultProps", { renderFallback: y.dG4 });
-let T = [C.Z, E.Z, b.Z, O.Z];
+let T = [C.Z, E.Z, b.Z, v.Z];
 function P(e) {
     let { skuId: t } = e,
         n = C.Z.get(t),
@@ -226,10 +226,10 @@ function P(e) {
         application: r,
         fetchFailed: C.Z.didFetchingSkuFail(t),
         inLibrary: null != n && b.Z.hasApplication(n.applicationId, n.applicationId, !0),
-        storeListing: null != n ? O.Z.getForSKU(n.id) : null,
+        storeListing: null != n ? v.Z.getForSKU(n.id) : null,
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
 let N = (0, _.Z)((0, g.Z)(S)),
-    A = a.ZP.connectStores(T, P)(N),
-    w = (0, g.Z)(a.ZP.connectStores(T, P)(S));
+    A = o.ZP.connectStores(T, P)(N),
+    w = (0, g.Z)(o.ZP.connectStores(T, P)(S));

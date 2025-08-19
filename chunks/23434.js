@@ -2,18 +2,18 @@ n.d(t, { Z: () => u });
 var r,
     i,
     l = n(442837),
-    o = n(570140);
-let a = null;
+    a = n(570140);
+let o = null;
 class s extends (i = l.ZP.Store) {
     hasAction() {
-        return null != a;
+        return null != o;
     }
     getAction() {
-        return a;
+        return o;
     }
 }
 function c(e) {
-    a = e.requiredAction;
+    o = e.requiredAction;
 }
 (r = "displayName") in s
     ? Object.defineProperty(s, r, {
@@ -23,7 +23,7 @@ function c(e) {
           writable: !0,
       })
     : (s[r] = "UserRequiredActionStore");
-let u = new s(o.Z, {
+let u = new s(a.Z, {
     CONNECTION_OPEN: c,
     USER_REQUIRED_ACTION_UPDATE: c,
 });

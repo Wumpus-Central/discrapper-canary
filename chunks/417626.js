@@ -2,11 +2,11 @@ n.d(t, { Z: () => c });
 var r,
     i,
     l = n(442837),
-    o = n(570140);
-let a = !1;
+    a = n(570140);
+let o = !1;
 class s extends (i = l.ZP.Store) {
     get blockedByProxy() {
-        return a;
+        return o;
     }
 }
 (r = "displayName") in s
@@ -17,8 +17,8 @@ class s extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (s[r] = "ProxyBlockStore");
-let c = new s(o.Z, {
+let c = new s(a.Z, {
     PROXY_BLOCKED_REQUEST: function (e) {
-        a = !0;
+        o = !0;
     },
 });

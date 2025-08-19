@@ -2,8 +2,8 @@ n.d(t, { l: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(866442),
+    a = n.n(l),
+    o = n(866442),
     s = n(596454),
     c = n(434650),
     u = n(446489),
@@ -24,8 +24,8 @@ let _ = i.memo(function (e) {
                 me: b,
                 me_burst: E,
                 burst_count: C,
-                burst_colors: O,
-                readOnly: v,
+                burst_colors: v,
+                readOnly: O,
                 isLurking: y,
                 isGuest: x,
                 isPendingMember: j,
@@ -34,7 +34,7 @@ let _ = i.memo(function (e) {
             } = e,
             T = I === p.O.BURST,
             P = (0, m.y4)(b, E, I),
-            N = (0, d.v)(T && null != O ? O : []),
+            N = (0, d.v)(T && null != v ? v : []),
             A = i ? g : f,
             w = T ? C : h,
             Z = (0, u.y)(w, m.aO),
@@ -42,7 +42,7 @@ let _ = i.memo(function (e) {
         if (T && null != N) {
             var D;
             let { accentColor: e, backgroundColor: r, opacity: i } = N,
-                l = null != (D = (0, a.wK)(null != r ? r : "", i)) ? D : "";
+                l = null != (D = (0, o.wK)(null != r ? r : "", i)) ? D : "";
             P && (R.borderColor = r), (R.background = l), (t = e), (n = e);
         }
         let L = {
@@ -51,14 +51,14 @@ let _ = i.memo(function (e) {
             borderColor: n,
         };
         return (0, r.jsxs)("div", {
-            className: o()(A.reaction, A.reactionInner, _, {
+            className: a()(A.reaction, A.reactionInner, _, {
                 [A.reactionMe]: P,
-                [A.reactionReadOnly]: v && !y && !j && !x,
+                [A.reactionReadOnly]: O && !y && !j && !x,
             }),
             style: R,
             children: [
                 (0, r.jsx)(s.Z, {
-                    className: o()({ [A.hideEmoji]: l }),
+                    className: a()({ [A.hideEmoji]: l }),
                     emojiId: c.id,
                     emojiName: c.name,
                     size: S,
@@ -95,21 +95,21 @@ let _ = i.memo(function (e) {
                 }
                 return i;
             })(e, ["showImmediate", "reactions"]);
-        let [o, a] = i.useState(!1),
+        let [a, o] = i.useState(!1),
             [s, u] = i.useTransition(),
             d = i.useCallback(
                 (e) => {
                     !e ||
-                        o ||
+                        a ||
                         s ||
                         u(() => {
-                            a(!0);
+                            o(!0);
                         });
                 },
-                [o, s],
+                [a, s],
             ),
             f = (0, c.O)(d),
-            g = (o && !s) || t ? m.le : _;
+            g = (a && !s) || t ? m.le : _;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", { ref: f }),

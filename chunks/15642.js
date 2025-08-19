@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(674701),
-    o = n(934415),
-    a = n(834129),
+    a = n(934415),
+    o = n(834129),
     s = n(981631),
     c = n(60044);
 function u(e) {
     let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: u, channel: d } = e;
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         contentClassName: c.messageContentContainer,
         iconContainerClassName: c.iconContainer,
         iconNode: (0, r.jsx)(i.Dkj, { colorClass: c.icon }),
@@ -17,7 +17,7 @@ function u(e) {
             giftIntentType: t,
             premiumGiftIntentCardType: l.U.SYSTEM_MESSAGE,
             recipientUser: n,
-            analyticsPage: (0, o.mE)(d),
+            analyticsPage: (0, a.mE)(d),
             analyticsSection: s.jXE.CHANNEL,
             giftIntentSecondaryAction: u,
         }),

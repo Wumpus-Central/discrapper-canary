@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(430824);
-function o(e) {
-    var { onCloseCallback: t, analyticsLocations: o } = e,
-        a = (function (e, t) {
+function a(e) {
+    var { onCloseCallback: t, analyticsLocations: a } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -57,10 +57,10 @@ function o(e) {
                                 });
                         }
                         return e;
-                    })({}, t, a)),
+                    })({}, t, o)),
                     (i = i =
                         {
-                            analyticsLocations: o,
+                            analyticsLocations: a,
                             guildCount: l.Z.getGuildCount(),
                             "aria-labelledby": "nitro-guild-cap-upsell",
                         }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(447543),
     c = n(100527),
     u = n(906732),
@@ -18,16 +18,16 @@ var r = n(951288),
     E = n(105341);
 function C(e) {
     let t,
-        { invite: n, message: l, currentUserId: C, onTransitionToInviteChannel: O, onAcceptInstantInvite: v } = e,
+        { invite: n, message: l, currentUserId: C, onTransitionToInviteChannel: v, onAcceptInstantInvite: O } = e,
         y = C === l.author.id,
         x = n.state === h.r2o.ACCEPTING,
-        j = (0, a.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
-    o()(null == j || j.isPrivate(), "must be a private channel");
+        j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
+    a()(null == j || j.isPrivate(), "must be a private channel");
     let { analyticsLocations: I } = (0, u.ZP)(c.Z.INVITE_EMBED),
         S = null != j,
         T = i.useCallback(() => {
             let e = "noop";
-            S ? (O(), (e = "transition")) : (v(), (e = "accept")),
+            S ? (v(), (e = "transition")) : (O(), (e = "accept")),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,7 +37,7 @@ function C(e) {
                     },
                     I,
                 );
-        }, [n, l, I, S, O, v]);
+        }, [n, l, I, S, v, O]);
     if (null == j) {
         if (null == n.channel) return (0, r.jsx)(_.Z, {});
         (j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);

@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(194082),
-    o = n(739566),
-    a = n(834129),
+    a = n(739566),
+    o = n(834129),
     s = n(388032);
 function c(e) {
     var t;
     let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
-        f = (0, o.ZP)(n),
+        f = (0, a.ZP)(n),
         g = null == (t = n.call) ? void 0 : t.duration,
         _ = p(f),
         h = s.intl.format(s.t.FKXvaG, {
@@ -26,7 +26,7 @@ function c(e) {
                 channelName: c.name,
                 usernameHook: _,
             })),
-        (0, r.jsx)(a.Z, {
+        (0, r.jsx)(o.Z, {
             iconNode:
                 null != g
                     ? (0, r.jsx)(i.g5r, {

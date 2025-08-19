@@ -1,13 +1,13 @@
 n.d(t, {
-    EB: () => o,
+    EB: () => a,
     Je: () => s,
-    cf: () => a,
+    cf: () => o,
     mh: () => c,
 });
 var r = n(570140),
     i = n(881052),
     l = n(824389);
-let o = async (e) => {
+let a = async (e) => {
         r.Z.dispatch({
             type: "GUILD_PRODUCTS_FETCH",
             guildId: e,
@@ -26,7 +26,7 @@ let o = async (e) => {
             });
         }
     },
-    a = async (e, t) => {
+    o = async (e, t) => {
         r.Z.dispatch({
             type: "GUILD_PRODUCT_FETCH",
             productId: t,

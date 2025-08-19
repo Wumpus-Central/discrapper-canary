@@ -2,8 +2,8 @@ n.d(t, { Z: () => H }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(793030),
-    o = n(442837),
-    a = n(902704),
+    a = n(442837),
+    o = n(902704),
     s = n(692547),
     c = n(481060),
     u = n(232567),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(464891),
     E = n(507418),
     C = n(348238),
-    O = n(38267),
-    v = n(25015),
+    v = n(38267),
+    O = n(25015),
     y = n(438075),
     x = n(359110),
     j = n(6025),
@@ -39,20 +39,20 @@ var r = n(951288),
 function F(e) {
     let { message: t, snapshot: n, index: u } = e,
         p = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
-        f = (0, o.e7)(
+        f = (0, a.e7)(
             [T.Z, R.default, w.Z, A.Z, N.Z, m.Z],
             () => p.getForwardInfo(T.Z, R.default, w.Z, A.Z, N.Z, m.Z).footerInfo,
             [p],
-            a.Z,
+            o.Z,
         ),
         g = i.useCallback(() => {
             var e, n;
             let r = T.Z.getChannel(t.channel_id),
                 i = N.Z.getGuild(null == r ? void 0 : r.guild_id),
                 l = null == (e = t.messageReference) ? void 0 : e.channel_id,
-                o = Z.Z.getCurrentlySelectedChannelId(),
-                a = S.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
-                s = o === l && a === (null == r ? void 0 : r.id);
+                a = Z.Z.getCurrentlySelectedChannelId(),
+                o = S.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
+                s = a === l && o === (null == r ? void 0 : r.id);
             null == r ||
                 null == i ||
                 s ||
@@ -96,7 +96,7 @@ function F(e) {
           });
 }
 function B(e) {
-    let { mergedMessageRecord: t, content: n, channel: l, reportingUserId: o, reportedTimestamp: a } = e,
+    let { mergedMessageRecord: t, content: n, channel: l, reportingUserId: a, reportedTimestamp: o } = e,
         s = (0, g.JZ)(t.author, l),
         {
             onClickUsername: c,
@@ -105,12 +105,12 @@ function B(e) {
             showUsernamePopout: p,
             showAvatarPopout: m,
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, O.Z)(e.id, k.d$),
-                { usernameProfile: l, avatarProfile: o } = n,
-                a = (0, C.XO)(e, t, l, r);
+            let { popouts: n, setPopout: r } = (0, v.Z)(e.id, k.d$),
+                { usernameProfile: l, avatarProfile: a } = n,
+                o = (0, C.XO)(e, t, l, r);
             return {
-                onClickUsername: a,
-                onClickAvatar: (0, C.R9)(o, r),
+                onClickUsername: o,
+                onClickAvatar: (0, C.R9)(a, r),
                 onPopoutRequestClose: i.useCallback(
                     () =>
                         r({
@@ -121,16 +121,16 @@ function B(e) {
                     [r],
                 ),
                 showUsernamePopout: l,
-                showAvatarPopout: o,
+                showAvatarPopout: a,
             };
         })(t, l);
     return (0, r.jsx)(_.Z, {
         childrenExecutedCommand: (0, r.jsx)(L.Z, {
-            reportingUserId: o,
+            reportingUserId: a,
             guildId: l.guild_id,
             channel: l,
             messageId: t.id,
-            reportedTimestamp: a,
+            reportedTimestamp: o,
             compact: !1,
         }),
         childrenHeader: (0, r.jsx)(b.ZP, {
@@ -161,7 +161,7 @@ function B(e) {
 }
 function G(e) {
     var t, n, l;
-    let { message: a, snapshot: s, index: c } = e,
+    let { message: o, snapshot: s, index: c } = e,
         [d, m] = i.useState(void 0);
     i.useEffect(() => {
         var e;
@@ -174,16 +174,16 @@ function G(e) {
     }, [null == s || null == (t = s.moderatorReport) ? void 0 : t.reported_user_id]);
     let g = i.useMemo(() => {
             var e;
-            let t = (0, p.Z)(a, s);
+            let t = (0, p.Z)(o, s);
             return null != d && (null == s || null == (e = s.moderatorReport) ? void 0 : e.reported_user_id) != null
                 ? t.set("author", d)
                 : t;
-        }, [a, s, d]),
+        }, [o, s, d]),
         _ = I.RS.useSetting(),
         h = I.NA.useSetting(),
-        b = (0, o.e7)([P.Z], () => P.Z.isDeveloper),
+        b = (0, a.e7)([P.Z], () => P.Z.isDeveloper),
         E = (0, f.A)((null != (l = g.editedTimestamp) ? l : g.timestamp).valueOf()),
-        { content: C, hasSpoilerEmbeds: O } = (0, v.Z)(g, {
+        { content: C, hasSpoilerEmbeds: v } = (0, O.Z)(g, {
             hideSimpleEmbedContent: _ && h,
             isInteracting: !1,
             formatInline: !1,
@@ -193,7 +193,7 @@ function G(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        x = (0, o.e7)([T.Z], () => T.Z.getChannel(a.channel_id));
+        x = (0, a.e7)([T.Z], () => T.Z.getChannel(o.channel_id));
     return null == x
         ? null
         : (0, r.jsx)(
@@ -209,7 +209,7 @@ function G(e) {
                               channel: x,
                               reportingUserId:
                                   null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
-                              reportedTimestamp: a.timestamp,
+                              reportedTimestamp: o.timestamp,
                           }),
                           (0, y.Z)({
                               channelMessageProps: {
@@ -217,14 +217,14 @@ function G(e) {
                                   channel: x,
                                   compact: !1,
                               },
-                              hasSpoilerEmbeds: O,
+                              hasSpoilerEmbeds: v,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
                               className: U.nestedAccessories,
                           }),
                           (0, r.jsx)(F, {
-                              message: a,
+                              message: o,
                               snapshot: s,
                               index: c,
                           }),

@@ -80,25 +80,25 @@ function p(e, t) {
 }
 let h = 500;
 function m(e) {
-    let { children: t, "aria-label": n, className: a, position: c } = e,
-        d = _(e, ["children", "aria-label", "className", "position"]),
-        p = i.useRef(null),
-        m = null != n ? n : "string" == typeof t && t;
+    let { children: t, "aria-label": n, className: a, position: c, delay: d } = e,
+        p = _(e, ["children", "aria-label", "className", "position", "delay"]),
+        m = i.useRef(null),
+        g = null != n ? n : "string" == typeof t && t;
     return (0, r.jsx)(
         s.ua7,
-        f(u({}, d), {
+        f(u({}, p), {
             position: null != c ? c : "top",
-            delay: h,
+            delay: null != d ? d : h,
             text: t,
-            "aria-label": m,
+            "aria-label": g,
             children: (n) => {
                 let { onMouseEnter: i, onMouseLeave: s } = n;
                 return (0, r.jsx)("div", {
                     className: o()(a, l.overflow),
-                    ref: p,
+                    ref: m,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
-                        let { current: e } = p;
+                        let { current: e } = m;
                         null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
                     },
                     onMouseLeave: s,

@@ -4,14 +4,14 @@ n.d(t, {
     Lg: () => b,
     OU: () => _,
     RH: () => s,
-    Ux: () => a,
+    Ux: () => o,
     VW: () => d,
     Vg: () => h,
     Vk: () => m,
     _6: () => C,
     aj: () => g,
-    dc: () => O,
-    fX: () => o.f,
+    dc: () => v,
+    fX: () => a.f,
     hu: () => p,
     jj: () => i.j,
     n4: () => c,
@@ -21,13 +21,13 @@ n.d(t, {
 var r,
     i = n(401653),
     l = n(95930),
-    o = n(41381),
-    a =
+    a = n(41381),
+    o =
         (((r = {})[(r.PROFANITY = 1)] = "PROFANITY"),
         (r[(r.SEXUAL_CONTENT = 2)] = "SEXUAL_CONTENT"),
         (r[(r.SLURS = 3)] = "SLURS"),
         r);
-o.f.USER_PROFILE, o.f.SERVER_POLICY, o.f.MENTION_SPAM, o.f.ML_SPAM, o.f.DEFAULT_KEYWORD_LIST, o.f.KEYWORD;
+a.f.USER_PROFILE, a.f.SERVER_POLICY, a.f.MENTION_SPAM, a.f.ML_SPAM, a.f.DEFAULT_KEYWORD_LIST, a.f.KEYWORD;
 let s = 1000,
     c = 100,
     u = 1000,
@@ -41,4 +41,4 @@ let s = 1000,
     b = 50,
     E = 20,
     C = 150,
-    O = "automod-profile-quarantine-alert";
+    v = "automod-profile-quarantine-alert";

@@ -30,7 +30,7 @@ function l(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,7 +48,7 @@ function o(e, t) {
         e
     );
 }
-function a(e, t) {
+function o(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -70,10 +70,10 @@ function a(e, t) {
 }
 function s(e) {
     var { width: t = 24, height: n = 24, color: s = "currentColor" } = e,
-        c = a(e, ["width", "height", "color"]);
+        c = o(e, ["width", "height", "color"]);
     return (0, r.jsxs)(
         "svg",
-        o(l({}, (0, i.Z)(c)), {
+        a(l({}, (0, i.Z)(c)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: t,
             height: n,
@@ -111,10 +111,10 @@ function s(e) {
 }
 function c(e) {
     var { width: t = 24, height: n = 24, color: s = "currentColor" } = e,
-        c = a(e, ["width", "height", "color"]);
+        c = o(e, ["width", "height", "color"]);
     return (0, r.jsxs)(
         "svg",
-        o(l({}, (0, i.Z)(c)), {
+        a(l({}, (0, i.Z)(c)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: t,
             height: n,

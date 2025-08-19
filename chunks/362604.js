@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(755721),
     c = n(481060),
     u = n(834129),
@@ -18,26 +18,26 @@ var r = n(951288),
     E = n(38297);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
-        O = (0, a.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [v, y] = i.useState(null);
+        v = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [O, y] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            O.length > 0 && y(O[Math.floor(Math.random() * O.length)]);
+            v.length > 0 && y(v[Math.floor(Math.random() * v.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [O]),
+    }, [v]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(u.Z, {
-                      className: o()(E.mainContainer, { [E.compact]: C }),
+                      className: a()(E.mainContainer, { [E.compact]: C }),
                       icon: n(570111),
                       compact: C,
                       children: (0, r.jsx)("div", {
-                          className: o()(E.__invalid_content, { [E.compact]: C }),
+                          className: a()(E.__invalid_content, { [E.compact]: C }),
                           children: (0, r.jsx)("div", {
-                              className: o()(E.__invalid_messageContent, { [E.compact]: C }),
+                              className: a()(E.__invalid_messageContent, { [E.compact]: C }),
                               children: "" !== t.content ? t.content : b.intl.string(b.t.wnn1DQ),
                           }),
                       }),
@@ -83,10 +83,10 @@ function C(e) {
                                           (0, _.O)(t.id, l);
                                   },
                                   children:
-                                      null != v
+                                      null != O
                                           ? (0, r.jsx)(m.Z, {
                                                 size: 32,
-                                                sticker: v,
+                                                sticker: O,
                                             })
                                           : (0, r.jsx)(c.EO4, {
                                                 size: "md",

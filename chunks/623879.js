@@ -1,15 +1,18 @@
 n.d(t, {
-    FZ: () => l,
+    FZ: () => a,
     ZP: () => o,
 });
-var r,
-    i = n(818083),
-    l = (((r = {}).Control = "CONTROL"), (r.Social = "SOCIAL"), (r.Perks = "PERKS"), r);
-let o = (0, i.B)({
+var r = n(818083),
+    i = n(987338),
+    a = (function (e) {
+        return (e.Control = "CONTROL"), (e.Social = "SOCIAL"), (e.Perks = "PERKS"), e;
+    })({});
+let o = (0, r.B)({
     kind: "user",
     id: "2025-06_referral_program_dm_embed_refresh_experiment",
     label: "Referral Program DM Embed Refresh Experiment",
     defaultConfig: { cohort: "CONTROL" },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,

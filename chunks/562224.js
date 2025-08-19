@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(268146),
     i = n(872810),
     l = n(594190),
-    o = n(751571),
-    a = n(695346),
+    a = n(751571),
+    o = n(695346),
     s = n(361291),
     c = n(592125),
     u = n(430824),
@@ -17,7 +17,7 @@ var r = n(268146),
     b = n(37113),
     E = n(761274);
 async function C(e, t) {
-    var n, C, O, v, y, x, j, I, S, T;
+    var n, C, v, O, y, x, j, I, S, T;
     let P = m.default.getCurrentUser(),
         N = p.Z.getVoiceChannelId(),
         A = c.Z.getChannel(N),
@@ -28,15 +28,15 @@ async function C(e, t) {
     if (null == (R = "number" == typeof e ? l.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
         !d.Z.getUseSystemScreensharePicker() &&
-        !(await o.Z.hasPermission(E.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
+        !(await a.Z.hasPermission(E.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
     let { preset: D, resolution: L, fps: M, soundshareEnabled: k } = s.Z.getState(),
-        U = null != (O = null == t ? void 0 : t.preset) ? O : D,
-        [F, B] = null != (v = (0, _.Z)(U, P, Z)) ? v : [],
+        U = null != (v = null == t ? void 0 : t.preset) ? v : D,
+        [F, B] = null != (O = (0, _.Z)(U, P, Z)) ? O : [],
         G = null != (y = null != F ? F : null == t ? void 0 : t.resolution) ? y : L,
         H = null != (x = null != B ? B : null == t ? void 0 : t.fps) ? x : M,
-        V = null != (j = null == t ? void 0 : t.previewDisabled) ? j : a.I0.getSetting(),
+        V = null != (j = null == t ? void 0 : t.previewDisabled) ? j : o.I0.getSetting(),
         z = null != (I = null == t ? void 0 : t.soundshareEnabled) ? I : k;
     return (
         (0, g.Z)(U, G, H, P, Z, A) || ((U = b.tI.PRESET_VIDEO), (G = b.LY.RESOLUTION_720), (H = b.ws.FPS_30)),

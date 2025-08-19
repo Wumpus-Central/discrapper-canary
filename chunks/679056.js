@@ -2,8 +2,8 @@ n.d(t, { Z: () => c }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(846519);
-function a(e, t, n) {
+    a = n(846519);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ class s extends (r = l.Component) {
     render() {
         var e, t;
         let { children: n, className: r, disable: l } = this.props,
-            o = l
+            a = l
                 ? null
                 : {
                       onMouseEnter: this.handlePause,
@@ -69,11 +69,11 @@ class s extends (r = l.Component) {
                             }),
                         )),
                         r.forEach(function (t) {
-                            a(e, t, n[t]);
+                            o(e, t, n[t]);
                         });
                 }
                 return e;
-            })({}, o)),
+            })({}, a)),
             (t = t =
                 {
                     className: r,
@@ -96,17 +96,17 @@ class s extends (r = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            a(this, "timer", new o.Xp()),
-            a(this, "state", { hovered: !1 }),
-            a(this, "handlePause", () => {
+            o(this, "timer", new a.Xp()),
+            o(this, "state", { hovered: !1 }),
+            o(this, "handlePause", () => {
                 this.state.hovered || this.setState({ hovered: !0 });
             }),
-            a(this, "handleResume", () => {
+            o(this, "handleResume", () => {
                 this.setState({ hovered: !1 });
             });
     }
 }
-a(s, "defaultProps", {
+o(s, "defaultProps", {
     disable: !1,
     pauseOnHover: !1,
 });

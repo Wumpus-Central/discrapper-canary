@@ -1,13 +1,13 @@
 n.d(t, {
     Cx: () => s,
-    Ol: () => o,
+    Ol: () => a,
 }),
     n(388685),
     n(539854);
 var r,
     i = n(647438),
     l = n(981631),
-    o =
+    a =
         (((r = {}).DESKTOP = "desktop"),
         (r.MOBILE = "mobile"),
         (r.ANDROID = "android"),
@@ -15,7 +15,7 @@ var r,
         (r.PLAYSTATION = "playstation"),
         (r.XBOX = "xbox"),
         r);
-let a = [];
+let o = [];
 function s(e) {
     let { platforms: t, currentPlatform: n } = e;
     return i.useMemo(
@@ -25,7 +25,7 @@ function s(e) {
                     r = new Set(t),
                     i = [];
                 return null == t || 0 === t.length || (null != n && r.has(n))
-                    ? a
+                    ? o
                     : (r.has(l.M7m.ANDROID) && r.has(l.M7m.IOS)
                           ? i.push("mobile")
                           : r.has(l.M7m.ANDROID)

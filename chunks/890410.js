@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(739566),
-    a = n(492593),
+    a = n(739566),
+    o = n(492593),
     s = n(930282),
     c = n(464891),
     u = n(62440);
@@ -67,11 +67,11 @@ function p(e) {
             }
             return i;
         })(e, ["message", "channel", "content", "className", "compact", "popoutProps", "hideTimestamp", "withFooter"]);
-    let C = (0, o.ZP)(i);
+    let C = (0, a.ZP)(i);
     return (0, r.jsx)("div", {
         className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: g }, f),
         children: (0, r.jsx)(
-            a.Z,
+            o.Z,
             ((t = d({}, E)),
             (n = n =
                 {

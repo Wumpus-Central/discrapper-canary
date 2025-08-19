@@ -10,8 +10,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(373793),
-    o = n(705512),
-    a = n(442837),
+    a = n(705512),
+    o = n(442837),
     s = n(481060),
     c = n(566620),
     u = n(574952),
@@ -25,8 +25,8 @@ var r = n(951288),
     b = n(706454),
     E = n(314897),
     C = n(699516),
-    O = n(914010),
-    v = n(594174),
+    v = n(914010),
+    O = n(594174),
     y = n(768581),
     x = n(433534),
     j = n(506895),
@@ -39,17 +39,17 @@ var r = n(951288),
     w = n(388032),
     Z = n(217648);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: o, activityReferrerId: s, onView: _ } = e,
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
         { name: h, bot: b } = (t = (0, P.O)(t)),
         C = null == b ? void 0 : b.id,
-        O = (0, f.ye)(t),
-        v = y.ZP.getApplicationIconURL({
+        v = (0, f.ye)(t),
+        O = y.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b,
         }),
         { staticBannerSrc: x, videoBannerSrc: S, bannerAspectRatio: Z } = (0, N.E)(t),
-        R = (0, a.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
+        R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
         { analyticsLocations: M } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: k, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
@@ -58,14 +58,14 @@ function R(e) {
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id,
         }),
-        V = null != C && O && H,
-        z = B && O,
+        V = null != C && v && H,
+        z = B && v,
         W = (0, A.G)(t),
         Y = (0, A.z)(t),
         K = i.useMemo(() => {
             let e = [];
             return (
-                O
+                v
                     ? (z &&
                           e.push({
                               label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
@@ -76,7 +76,7 @@ function R(e) {
                                       applicationId: t.id,
                                       isStart: null == U,
                                       embeddedActivitiesManager: G,
-                                      customId: o,
+                                      customId: a,
                                       referrerId: R,
                                       analyticsLocations: M,
                                   });
@@ -93,7 +93,7 @@ function R(e) {
                                       appId: t.id,
                                       botId: C,
                                       analyticsLocations: M,
-                                      customId: o,
+                                      customId: a,
                                       referrerId: R,
                                   });
                               },
@@ -101,15 +101,15 @@ function R(e) {
                     : null != Y && e.push(Y),
                 e
             );
-        }, [z, V, U, F, k, t.id, G, o, R, M, O, Y, C]),
-        X = O ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(D, { app: t });
+        }, [z, V, U, F, k, t.id, G, a, R, M, v, Y, C]),
+        X = v ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(D, { app: t });
     return (0, r.jsx)(I.W, {
         title: h,
         staticBannerSrc: x,
         videoBannerSrc: S,
         onClickBanner: W,
         bannerAspectRatio: Z,
-        iconSrc: v,
+        iconSrc: O,
         embedUrl: n,
         info: X,
         actions: K,
@@ -118,13 +118,13 @@ function R(e) {
             id: t.id,
             linkType: l,
             referrerId: R,
-            activityCustomId: o,
+            activityCustomId: a,
             onView: _,
         },
     });
 }
 function D(e) {
-    var t, n, o;
+    var t, n, a;
     let { app: c } = e,
         u =
             (0, x.Eb)({
@@ -134,7 +134,7 @@ function D(e) {
             }) &&
             null != c.integrationTypesConfig &&
             l.Y.GUILD_INSTALL in c.integrationTypesConfig,
-        d = (0, a.e7)([b.default], () => b.default.locale, []),
+        d = (0, o.e7)([b.default], () => b.default.locale, []),
         p = i.useMemo(() => {
             var e, t;
             if (!u) return null;
@@ -145,7 +145,7 @@ function D(e) {
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
             return 0 === r ? null : w.intl.format(w.t["6IW6Wl"], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        m = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
+        m = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != m &&
@@ -175,16 +175,16 @@ function D(e) {
 function L(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
-        c = (0, a.e7)([O.Z], () => {
+        c = (0, o.e7)([v.Z], () => {
             var e;
-            return null != (e = O.Z.getGuildId()) ? e : void 0;
+            return null != (e = v.Z.getGuildId()) ? e : void 0;
         }, []),
         u = (0, h.N)(t.id),
-        d = (0, a.Wu)([v.default, C.Z], () => {
+        d = (0, o.Wu)([O.default, C.Z], () => {
             let e = [];
             for (let [t, n] of u.entries()) {
                 if (t >= 5) break;
-                let r = v.default.getUser(n.author_id),
+                let r = O.default.getUser(n.author_id),
                     i = C.Z.isFriend(n.author_id);
                 null != r && i && e.push(r);
             }
@@ -197,7 +197,7 @@ function L(e) {
                     guildId: c,
                     activityText: w.intl.formatToPlainString(w.t["IJa+4+"], { count: d.length }),
                 });
-            if (u.some((e) => (0, _.ig)(e) === o.o.GLOBAL))
+            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

@@ -1,252 +1,228 @@
-n.d(t, { default: () => y }), n(388685);
-var l = n(951288),
-    r = n(647438),
-    i = n(512722),
-    s = n.n(i),
-    a = n(442837),
-    o = n(481060),
-    d = n(179360),
-    c = n(899667),
-    u = n(430824),
-    m = n(314884),
-    x = n(626135),
-    h = n(267642),
-    p = n(395199),
-    g = n(719228),
-    j = n(4434),
-    f = n(981631),
-    C = n(388032),
-    v = n(252633);
+l.d(t, { default: () => y }), l(388685);
+var n = l(951288),
+    r = l(647438),
+    i = l(512722),
+    s = l.n(i),
+    a = l(442837),
+    o = l(82659),
+    c = l(481060),
+    d = l(179360),
+    u = l(899667),
+    m = l(430824),
+    x = l(314884),
+    g = l(626135),
+    h = l(267642),
+    f = l(395199),
+    C = l(719228),
+    j = l(4434),
+    p = l(981631),
+    v = l(388032),
+    S = l(252633);
 let y = (e) => {
-    var t, n;
-    let { guildBoostSlots: i, selectedGuild: y, locationSection: b, transitionState: S, onClose: N } = e,
-        O = (0, h.vx)(m.Z.boostSlots);
-    s()(null != i || null != y, "Must either provide slots or an initial selected guild"),
+    let { guildBoostSlots: t, selectedGuild: l, locationSection: i, transitionState: y, onClose: b } = e,
+        E = (0, h.vx)(x.Z.boostSlots);
+    s()(null != t || null != l, "Must either provide slots or an initial selected guild"),
         s()(
-            !(null == i ? void 0 : i.some((e) => e.isOnCooldown())),
+            !(null == t ? void 0 : t.some((e) => e.isOnCooldown())),
             "If slots are provided, they must not be on cooldown",
         );
-    let E = [
-            null == i ? "UNUSED_QUANTITY_SELECT" : null,
-            null == y ? "GUILD_SELECT" : null,
+    let O = [
+            null == t ? "UNUSED_QUANTITY_SELECT" : null,
+            null == l ? "GUILD_SELECT" : null,
             "CONFIRM",
             "SUCCESS",
         ].filter((e) => null != e),
-        [P, T] = (0, a.Wu)([c.Z], () => [c.Z.isModifyingAppliedBoost, c.Z.applyBoostError]),
-        [Z, w] = r.useState(""),
-        [L, G] = r.useState(E[0]),
-        [I, M] = r.useState(!1),
-        [D, k] = r.useState(y),
-        [U, B] = r.useState(null != i ? i : O.slice(0, 1)),
-        F = r.useMemo(
+        [N, P] = (0, a.Wu)([u.Z], () => [u.Z.isModifyingAppliedBoost, u.Z.applyBoostError]),
+        [T, w] = r.useState(O[0]),
+        [Z, G] = r.useState(!1),
+        [I, L] = r.useState(l),
+        [D, M] = r.useState(null != t ? t : E.slice(0, 1)),
+        U = r.useMemo(
             () =>
-                null == U
+                null == D
                     ? []
-                    : U.map((e) => {
+                    : D.map((e) => {
                           let { premiumGuildSubscription: t } = e;
-                          return u.Z.getGuild(null == t ? void 0 : t.guildId);
+                          return m.Z.getGuild(null == t ? void 0 : t.guildId);
                       }).filter((e) => null != e),
-            [U],
+            [D],
         ),
-        z = r.useMemo(() => {
+        k = r.useMemo(() => {
             var e;
-            return (null == U || null == (e = U[0]) ? void 0 : e.premiumGuildSubscription) != null;
-        }, [U]),
-        R = () => {
-            N("SUCCESS" === L),
-                x.default.track(f.rMx.MODAL_DISMISSED, {
-                    type: f.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
-                    location_section: b,
-                });
-        },
-        _ = {
-            UNUSED_QUANTITY_SELECT: {
-                body: () => (
-                    s()(null != i || 0 !== O.length, "Cannot provide no slots if there are no other available slots"),
-                    (0, l.jsxs)("div", {
-                        className: v.quantitySelectorBody,
-                        children: [
-                            (0, l.jsx)(o.X6q, {
-                                variant: "heading-md/semibold",
-                                className: v.quantitySelectorHeader,
-                                children: C.intl.string(C.t["9FFrra"]),
-                            }),
-                            (0, l.jsx)(o.Text, {
-                                variant: "text-md/normal",
-                                className: v.quantitySelectorDescription,
-                                children: C.intl.string(C.t.x5qw5e),
-                            }),
-                            (0, l.jsxs)("div", {
-                                className: v.quantitySelectorWrapper,
-                                children: [
-                                    (0, l.jsx)(o.FiK, {
-                                        value: U.length,
-                                        onChange: (e) => B(O.slice(0, e)),
-                                        minValue: 1,
-                                        maxValue: O.length,
-                                    }),
-                                    (0, l.jsx)(o.Text, {
-                                        className: v.quantitySelectorLabel,
-                                        variant: "text-md/normal",
-                                        children: C.intl.string(C.t.Vl8TCw),
-                                    }),
-                                ],
-                            }),
-                        ],
-                    })
-                ),
-                footer: () =>
-                    (0, l.jsx)(o.mzw, {
-                        children: (0, l.jsxs)(o.hE2, {
-                            direction: "horizontal-reverse",
+            return (null == D || null == (e = D[0]) ? void 0 : e.premiumGuildSubscription) != null;
+        }, [D]),
+        F = () => (
+            b("SUCCESS" === T),
+            g.default.track(p.rMx.MODAL_DISMISSED, {
+                type: p.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+                location_section: i,
+            }),
+            Promise.resolve()
+        );
+    r.useEffect(() => {
+        g.default.track(p.rMx.OPEN_MODAL, {
+            type: p.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+            location_section: i,
+        });
+    }, [i]);
+    let R = {
+        UNUSED_QUANTITY_SELECT: () => (
+            s()(null != t || 0 !== E.length, "Cannot provide no slots if there are no other available slots"),
+            (0, n.jsx)(o.Modal, {
+                transitionState: y,
+                onClose: F,
+                size: "md",
+                title: v.intl.string(v.t["9FFrra"]),
+                actions: [
+                    {
+                        variant: "secondary",
+                        text: v.intl.string(v.t["1BPTsL"]),
+                        onClick: F,
+                    },
+                    {
+                        variant: "primary",
+                        text: v.intl.string(v.t["/uwYdX"]),
+                        onClick: () => w("CONFIRM"),
+                    },
+                ],
+                children: (0, n.jsxs)("div", {
+                    className: S.quantitySelectorBody,
+                    children: [
+                        (0, n.jsx)(c.Text, {
+                            variant: "text-md/normal",
+                            className: S.quantitySelectorDescription,
+                            children: v.intl.string(v.t.x5qw5e),
+                        }),
+                        (0, n.jsxs)("div", {
+                            className: S.quantitySelectorWrapper,
                             children: [
-                                (0, l.jsx)(o.zxk, {
-                                    variant: "primary",
-                                    text: C.intl.string(C.t["/uwYdX"]),
-                                    onClick: () => G("CONFIRM"),
+                                (0, n.jsx)(c.FiK, {
+                                    value: D.length,
+                                    onChange: (e) => M(E.slice(0, e)),
+                                    minValue: 1,
+                                    maxValue: E.length,
                                 }),
-                                (0, l.jsx)(o.zxk, {
-                                    variant: "secondary",
-                                    text: C.intl.string(C.t["1BPTsL"]),
-                                    onClick: R,
+                                (0, n.jsx)(c.Text, {
+                                    className: S.quantitySelectorLabel,
+                                    variant: "text-md/normal",
+                                    children: v.intl.string(v.t.Vl8TCw),
                                 }),
                             ],
                         }),
-                    }),
-            },
-            GUILD_SELECT: {
-                header: () =>
-                    (0, l.jsx)(g.g, {
-                        isTransfer: z,
-                        query: Z,
-                        setQuery: w,
-                    }),
-                bodyClass: v.selectContent,
-                body: () =>
-                    (0, l.jsx)(g.e, {
-                        onClose: R,
-                        onSelectGuild: (e) => {
-                            k(e), G("CONFIRM");
-                        },
-                        isTransfer: z,
-                        selectedSlotGuilds: F,
-                        query: Z,
-                    }),
-            },
-            CONFIRM: {
-                body() {
-                    if (null == D) return null;
-                    let e = U.filter((e) => (0, h.tl)(e)).length,
-                        t = U.length,
-                        n = F.length;
-                    return z
-                        ? (0, l.jsx)(p.Z.TransferBody, {
-                              fromGuilds: F,
-                              toGuild: D,
-                              blurb: C.intl.formatToPlainString(C.t.SSA2lp, {
-                                  slotCount: t,
-                                  guildCount: n,
-                              }),
-                              imageClass: v.transferConfirmImage,
-                              error: I ? T : null,
-                              onDismissError: () => M(!1),
-                              slotCount: t,
-                              canceledCount: e,
-                          })
-                        : (0, l.jsx)(p.Z.ApplyBody, {
-                              guild: D,
-                              blurb: C.intl.string(C.t.yTlZV1),
-                              warning: C.intl.formatToPlainString(C.t.KPnDlp, {
-                                  days: f.o3l,
-                                  slotCount: t,
-                              }),
-                              imageClass: v.confirmImage,
-                              error: I ? T : null,
-                              onDismissError: () => M(!1),
-                              slotCount: t,
-                              canceledCount: e,
-                          });
-                },
-                footer() {
-                    let e = U.length,
-                        t = "CONFIRM" === E[0] ? R : () => G(E[E.indexOf(L) - 1]),
-                        n = async () => {
-                            if (null != D && (null == U ? void 0 : U.length) !== 0) {
-                                s()(
-                                    !U.some((e) => e.isOnCooldown()),
-                                    "Cannot use a premium guild subscription slot while on cooldown",
-                                );
-                                try {
-                                    await Promise.all(
-                                        U.map((e) => {
-                                            let { premiumGuildSubscription: t } = e;
-                                            return null != t ? (0, d.dG)(t.guildId, t.id) : Promise.resolve();
-                                        }),
-                                    ),
-                                        await (0, d.W3)(
-                                            D.id,
-                                            U.map((e) => {
-                                                let { id: t } = e;
-                                                return t;
-                                            }),
-                                        ),
-                                        G("SUCCESS");
-                                } catch (e) {
-                                    M(!0);
-                                }
-                            }
-                        };
-                    return (0, l.jsx)(p.Z.Footer, {
-                        confirmation: z
-                            ? C.intl.formatToPlainString(C.t.Oh6mxc, { slotCount: e })
-                            : C.intl.formatToPlainString(C.t["ZU5x5+"], { slotCount: e }),
-                        confirmationLabel: z
-                            ? C.intl.formatToPlainString(C.t.fnZRmZ, { slotCount: e })
-                            : C.intl.formatToPlainString(C.t.d0vwWV, { slotCount: e }),
-                        onConfirm: n,
-                        onCancel: t,
-                        isModifyingSubscription: P,
-                    });
-                },
-            },
-            SUCCESS: {
-                body: () =>
-                    (0, l.jsx)(j.R7, {
-                        guild: D,
-                        isTransfer: z,
-                        guildBoostQuantity: U.length,
-                        onClose: R,
-                        didPurchaseOnFractionalPremium: !1,
-                    }),
-            },
-        };
-    r.useEffect(() => {
-        x.default.track(f.rMx.OPEN_MODAL, {
-            type: f.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
-            location_section: b,
-        });
-    }, [b]);
-    let A = _[L];
-    return (0, l.jsxs)(o.Y0X, {
-        transitionState: S,
-        className: v.modal,
-        size: o.CgR.SMALL,
-        parentComponent: "ApplyGuildBoostModal",
-        children: [
-            null == (t = A.header) ? void 0 : t.call(A),
-            (0, l.jsx)(o.hzk, {
-                className: A.bodyClass,
-                children: (0, l.jsx)(o.qBt, {
-                    step: L,
-                    steps: E,
-                    children: A.body(),
+                    ],
                 }),
+            })
+        ),
+        GUILD_SELECT: () =>
+            (0, n.jsx)(C.default, {
+                onClose: F,
+                onSelectGuild: (e) => {
+                    L(e), w("CONFIRM");
+                },
+                transitionState: y,
+                isTransfer: k,
+                selectedSlotGuilds: U,
             }),
-            null == (n = A.footer) ? void 0 : n.call(A),
-            (0, l.jsx)(o.olH, {
-                className: v.modalCloseButton,
-                onClick: R,
-            }),
-        ],
-    });
+        CONFIRM() {
+            if (null == I) return null;
+            let e = D.filter((e) => (0, h.tl)(e)).length,
+                t = D.length,
+                l = U.length,
+                r = "CONFIRM" === O[0] ? F : () => w(O[O.indexOf(T) - 1]),
+                i = async () => {
+                    if (null != I && (null == D ? void 0 : D.length) !== 0) {
+                        s()(
+                            !D.some((e) => e.isOnCooldown()),
+                            "Cannot use a premium guild subscription slot while on cooldown",
+                        );
+                        try {
+                            await Promise.all(
+                                D.map((e) => {
+                                    let { premiumGuildSubscription: t } = e;
+                                    return null != t ? (0, d.dG)(t.guildId, t.id) : Promise.resolve();
+                                }),
+                            ),
+                                await (0, d.W3)(
+                                    I.id,
+                                    D.map((e) => {
+                                        let { id: t } = e;
+                                        return t;
+                                    }),
+                                ),
+                                w("SUCCESS");
+                        } catch (e) {
+                            G(!0);
+                        }
+                    }
+                },
+                a = k ? v.intl.string(v.t["PR0n//"]) : v.intl.string(v.t["7KP/fH"]);
+            return (0, n.jsx)(o.Modal, {
+                transitionState: y,
+                onClose: F,
+                size: "md",
+                title: a,
+                actions: [
+                    {
+                        variant: "secondary",
+                        text: v.intl.string(v.t["ETE/oK"]),
+                        onClick: r,
+                    },
+                    {
+                        variant: "primary",
+                        text: k
+                            ? v.intl.formatToPlainString(v.t.Oh6mxc, { slotCount: t })
+                            : v.intl.formatToPlainString(v.t["ZU5x5+"], { slotCount: t }),
+                        onClick: i,
+                        loading: N,
+                        disabled: N,
+                    },
+                ],
+                children: k
+                    ? (0, n.jsx)(f.Z.TransferBody, {
+                          fromGuilds: U,
+                          toGuild: I,
+                          blurb: v.intl.formatToPlainString(v.t.SSA2lp, {
+                              slotCount: t,
+                              guildCount: l,
+                          }),
+                          imageClass: S.transferConfirmImage,
+                          error: Z ? P : null,
+                          onDismissError: () => G(!1),
+                          slotCount: t,
+                          canceledCount: e,
+                      })
+                    : (0, n.jsx)(f.Z.ApplyBody, {
+                          guild: I,
+                          blurb: v.intl.string(v.t.yTlZV1),
+                          warning: v.intl.formatToPlainString(v.t.KPnDlp, {
+                              days: p.o3l,
+                              slotCount: t,
+                          }),
+                          imageClass: S.confirmImage,
+                          error: Z ? P : null,
+                          onDismissError: () => G(!1),
+                          slotCount: t,
+                          canceledCount: e,
+                      }),
+            });
+        },
+        SUCCESS() {
+            let e = k ? v.intl.string(v.t["PR0n//"]) : v.intl.string(v.t["7KP/fH"]);
+            return (0, n.jsx)(o.Modal, {
+                transitionState: y,
+                onClose: F,
+                size: "md",
+                title: e,
+                actions: [],
+                children: (0, n.jsx)(j.R7, {
+                    guild: I,
+                    isTransfer: k,
+                    guildBoostQuantity: D.length,
+                    onClose: F,
+                    didPurchaseOnFractionalPremium: !1,
+                }),
+            });
+        },
+    }[T];
+    return null == R ? null : R();
 };

@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    o = n(955415),
-    a = n(846587),
+    a = n(955415),
+    o = n(846587),
     s = n(409059),
     c = n(260539),
     u = n(388032),
@@ -15,20 +15,20 @@ function m(e) {
     let { code: m } = e,
         f = (0, i.e7)([s.Z], () => s.Z.getGuildTemplate(m));
     if (null == f || f.state === c.Rj.RESOLVING)
-        return (0, r.jsxs)(o.Z, {
+        return (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.Xj87YW) }),
-                (0, r.jsx)(o.Z.Body, { resolving: !0 }),
+                (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.Xj87YW) }),
+                (0, r.jsx)(a.Z.Body, { resolving: !0 }),
             ],
         });
     if (f.state === c.Rj.EXPIRED)
-        return (0, r.jsxs)(o.Z, {
+        return (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.C7ZRNz) }),
-                (0, r.jsxs)(o.Z.Body, {
+                (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.C7ZRNz) }),
+                (0, r.jsxs)(a.Z.Body, {
                     children: [
-                        (0, r.jsx)(o.Z.Icon, { expired: !0 }),
-                        (0, r.jsx)(o.Z.Info, {
+                        (0, r.jsx)(a.Z.Icon, { expired: !0 }),
+                        (0, r.jsx)(a.Z.Info, {
                             expired: !0,
                             title: u.intl.string(u.t.A6MwXF),
                         }),
@@ -37,12 +37,12 @@ function m(e) {
             ],
         });
     let g = __OVERLAY__
-        ? (0, r.jsx)(o.Z.Button, {
+        ? (0, r.jsx)(a.Z.Button, {
               isDisabled: !0,
-              color: o.Z.Button.Colors.PRIMARY,
+              color: a.Z.Button.Colors.PRIMARY,
               children: u.intl.string(u.t.W7NTWl),
           })
-        : (0, r.jsx)(o.Z.Button, {
+        : (0, r.jsx)(a.Z.Button, {
               onClick: () => {
                   (0, l.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
@@ -94,19 +94,19 @@ function m(e) {
                   });
               },
               submitting: f.state === c.Rj.ACCEPTING,
-              color: o.Z.Button.Colors.GREEN,
+              color: a.Z.Button.Colors.GREEN,
               children: u.intl.string(u.t["a3Gl+f"]),
           });
-    return (0, r.jsxs)(o.Z, {
+    return (0, r.jsxs)(a.Z, {
         children: [
-            (0, r.jsx)(o.Z.Header, { text: u.intl.string(u.t.kAvFkJ) }),
-            (0, r.jsxs)(o.Z.Body, {
+            (0, r.jsx)(a.Z.Header, { text: u.intl.string(u.t.kAvFkJ) }),
+            (0, r.jsxs)(a.Z.Body, {
                 children: [
                     (0, r.jsxs)("div", {
                         className: p.headerLine,
                         children: [
-                            (0, r.jsx)(a.Z, { className: d.icon }),
-                            (0, r.jsx)(o.Z.Info, {
+                            (0, r.jsx)(o.Z, { className: d.icon }),
+                            (0, r.jsx)(a.Z.Info, {
                                 title: f.name,
                                 children: u.intl.format(u.t.cGXXHB, {
                                     usageCount: String(null != (t = f.usageCount) ? t : 0),

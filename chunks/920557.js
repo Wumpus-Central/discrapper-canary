@@ -2,8 +2,8 @@ n.d(t, { K: () => I }), n(388685), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(871230),
+    a = n.n(l),
+    o = n(871230),
     s = n(803948),
     c = n(278074),
     u = n(748780),
@@ -17,7 +17,7 @@ var r = n(951288),
     b = n(294608),
     E = n(388032),
     C = n(390840);
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,29 +42,29 @@ function O(e) {
     }
     return e;
 }
-function v(e) {
-    let { percentage: t, label: n, canShowVoterDetails: l, answerId: o } = e,
+function O(e) {
+    let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [_, h] = i.useState(""),
-        [E, v] = i.useState(!1),
+        [E, O] = i.useState(!1),
         y = "" !== _ && E,
         x = i.useCallback(() => {
-            h((0, g.e1)(u, c, o));
-        }, [u, c, o]),
+            h((0, g.e1)(u, c, a));
+        }, [u, c, a]),
         j = i.useCallback(() => {
-            x(), v(!0);
+            x(), O(!0);
         }, [x]),
         I = i.useCallback(() => {
-            v(!1);
+            O(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
                 channelId: c,
                 messageId: u,
-                answerId: o,
+                answerId: a,
             });
-        }, [c, u, o]);
+        }, [c, u, a]);
     return (
         i.useEffect(() => {
             if (E)
@@ -94,7 +94,7 @@ function v(e) {
                                       var t, i;
                                       return (0, r.jsx)(
                                           d.Avr,
-                                          ((t = O({}, e)),
+                                          ((t = v({}, e)),
                                           (i = i =
                                               {
                                                   onMouseEnter: j,
@@ -124,7 +124,7 @@ function v(e) {
                                   },
                               }),
                               y &&
-                                  (0, r.jsx)(a.T, {
+                                  (0, r.jsx)(o.T, {
                                       id: s,
                                       children: _,
                                   }),
@@ -166,7 +166,7 @@ function y(e) {
     });
 }
 function x(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: o, className: a } = e;
+    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
         didSelfVote: i,
@@ -175,14 +175,14 @@ function x(e) {
             (0, r.jsx)(h.Og, {
                 isSelected: n,
                 size: 24,
-                className: a,
+                className: o,
             }),
         )
         .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
             (0, r.jsx)(h.zs, {
                 isSelected: n,
                 size: 20,
-                className: a,
+                className: o,
             }),
         )
         .with(
@@ -193,9 +193,9 @@ function x(e) {
             () =>
                 (0, r.jsx)(h.ZY, {
                     isVictor: l,
-                    isExpired: o,
+                    isExpired: a,
                     size: 24,
-                    className: a,
+                    className: o,
                 }),
         )
         .otherwise(() => null);
@@ -207,7 +207,7 @@ function j(e) {
         p = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
     return (0, r.jsxs)("div", {
-        className: o()(C.answerInner, {
+        className: a()(C.answerInner, {
             [C.currentlyVoting]: i !== _.Y7.LIST,
             [C.selected]: c,
         }),
@@ -230,9 +230,9 @@ function j(e) {
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
             }),
-            t.didSelfVote && (0, r.jsx)(a.T, { children: E.intl.string(E.t["8DAM+/"]) }),
+            t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t["8DAM+/"]) }),
             l &&
-                (0, r.jsx)(v, {
+                (0, r.jsx)(O, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,
@@ -251,7 +251,7 @@ function j(e) {
 }
 function I(e) {
     var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: l } = e,
-        o = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -274,7 +274,7 @@ function I(e) {
         })(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
     return (0, r.jsx)(
         h.$e,
-        O(
+        v(
             {
                 className: C.answersContainer,
                 answerClassName: C.answer,
@@ -289,7 +289,7 @@ function I(e) {
                         canShowVoterDetails: l,
                     }),
             },
-            o,
+            a,
         ),
     );
 }

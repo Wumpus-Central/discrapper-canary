@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(477690),
-    o = n(481060),
-    a = n(100527),
+    a = n(481060),
+    o = n(100527),
     s = n(367907),
     c = n(906732),
     u = n(524444),
@@ -58,18 +58,18 @@ function C(e, t) {
         e
     );
 }
-let O = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    v = (e) => {
+let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    O = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: l } = e,
             d = i.useRef(null),
-            [v, y] = i.useState(!0),
+            [O, y] = i.useState(!0),
             [x, j] = i.useState(String(Date.now())),
             [I] = (0, p.XW)(t, l),
-            { analyticsLocations: S } = (0, c.ZP)(a.Z.STICKER_MESSAGE),
+            { analyticsLocations: S } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             T = (0, r.jsxs)("span", {
                 className: b.stickerName,
                 children: [
-                    (0, r.jsx)(o.B7q, {
+                    (0, r.jsx)(a.B7q, {
                         size: "xs",
                         color: "currentColor",
                         className: b.stickerIcon,
@@ -79,9 +79,9 @@ let O = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             });
         return (0, r.jsx)(c.Gt, {
             value: S,
-            children: (0, r.jsx)(o.yRy, {
+            children: (0, r.jsx)(a.yRy, {
                 align: "center",
-                animation: o.yRy.Animation.TRANSLATE,
+                animation: a.yRy.Animation.TRANSLATE,
                 positionKey: x,
                 onRequestClose: () => {
                     y(!0);
@@ -99,9 +99,9 @@ let O = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 children: (e) => {
                     let { onClick: n } = e;
                     return (0, r.jsx)(
-                        o.ua7,
+                        a.ua7,
                         C(E({}, u.b_), {
-                            shouldShow: v,
+                            shouldShow: O,
                             text: (0, u.Y)(T),
                             "aria-label": !1,
                             onTooltipShow: () => {
@@ -117,17 +117,17 @@ let O = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             },
                             children: (e) =>
                                 (0, r.jsx)(
-                                    o.P3F,
+                                    a.P3F,
                                     C(E({}, e), {
                                         innerRef: d,
                                         className: b.clickableSticker,
                                         onClick: (e) => {
-                                            y(!v), n(e);
+                                            y(!O), n(e);
                                         },
                                         tag: "span",
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: O,
+                                            size: v,
                                             sticker: null != I ? I : t,
                                         }),
                                     }),

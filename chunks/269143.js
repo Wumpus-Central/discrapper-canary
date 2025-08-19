@@ -4,6 +4,8 @@ e.exports = {
     buttonContainer: "buttonContainer__076c1",
     metadata: "metadata__076c1",
     container: "container__076c1",
+    systemMessageContainerDMEmbedXP: "systemMessageContainerDMEmbedXP__076c1",
+    systemMessageContainerIcon: "systemMessageContainerIcon__076c1",
     containerDMEmbedXP: "containerDMEmbedXP__076c1",
     contentDMEmbedXP: "contentDMEmbedXP__076c1",
     contentTextDMEmbedXP: "contentTextDMEmbedXP__076c1",

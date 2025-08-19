@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(100527),
-    o = n(769409),
-    a = n(739566),
+    a = n(769409),
+    o = n(739566),
     s = n(834129),
     c = n(388032);
 function u(e) {
     let { message: t, usernameHook: n, compact: u } = e,
-        d = (0, a.ZP)(t),
+        d = (0, o.ZP)(t),
         p = n(d);
     return (0, r.jsx)(s.Z, {
         iconNode: (0, r.jsx)(i.vdY, {
@@ -31,7 +31,7 @@ function u(e) {
                 },
                 "edit-group-button-".concat(t.id),
             ),
-            onEditGroup: () => (0, o.B)(t.channel_id, l.Z.GROUP_DM_SYSTEM_MESSAGE_ICON),
+            onEditGroup: () => (0, a.B)(t.channel_id, l.Z.GROUP_DM_SYSTEM_MESSAGE_ICON),
         }),
     });
 }

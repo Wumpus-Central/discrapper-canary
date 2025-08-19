@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685), n(539854);
 var r,
     i,
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(433517),
     c = n(570140),
     u = n(496929),
@@ -17,12 +17,12 @@ var r,
     b = n(981631);
 let E = "DetectedOffPlatformPremiumPerksStore",
     C = {},
-    O = {},
-    v = [];
+    v = {},
+    O = [];
 function y() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(O)) {
-        if (v.includes(t)) continue;
+    for (let { skuId: t, applicationId: n } of a().values(v)) {
+        if (O.includes(t)) continue;
         let r = m.Z.getApplication(n);
         if (null == r) {
             m.Z.isFetchingApplication(n) || m.Z.didFetchingApplicationFail(n) || p.ZP.fetchApplication(n);
@@ -45,13 +45,13 @@ function y() {
     }
     return e;
 }
-class x extends (r = a.ZP.Store) {
+class x extends (r = o.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(f.ZP, h.Z, _.Z), (v = null != (e = s.K.get(E)) ? e : v);
+        this.waitFor(f.ZP, h.Z, _.Z), (O = null != (e = s.K.get(E)) ? e : O);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return o().values(C);
+        return a().values(C);
     }
 }
 (i = "displayName") in x
@@ -64,7 +64,7 @@ class x extends (r = a.ZP.Store) {
     : (x[i] = "DetectedOffPlatformPremiumPerksStore");
 let j = new x(c.Z, {
     LOGOUT: function () {
-        (C = {}), (O = {});
+        (C = {}), (v = {});
     },
     SKU_FETCH_SUCCESS: y,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: y,
@@ -72,8 +72,8 @@ let j = new x(c.Z, {
     APPLICATION_FETCH_SUCCESS: y,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete C[t], v.includes(t))) return !1;
-        v.push(t), s.K.set(E, v);
+        if ((delete C[t], O.includes(t))) return !1;
+        O.push(t), s.K.set(E, O);
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -81,13 +81,13 @@ let j = new x(c.Z, {
             if (null != t && n !== b.GQo.DISCORD)
                 for (let { skuId: n, applicationId: r } of b.Lg6)
                     r !== t ||
-                        v.includes(n) ||
-                        (null == O[n] &&
+                        O.includes(n) ||
+                        (null == v[n] &&
                             (_.Z.applicationIdsFetched.has(r) ||
                                 _.Z.applicationIdsFetching.has(r) ||
                                 null != _.Z.getForSku(n) ||
                                 u.yD(r),
-                            (O[n] = {
+                            (v[n] = {
                                 skuId: n,
                                 applicationId: r,
                             }),

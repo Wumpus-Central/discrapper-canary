@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    o = n(993365),
-    a = n(981729),
+    a = n(993365),
+    o = n(981729),
     s = n(481060),
     c = n(543651),
     u = n(177751),
@@ -27,7 +27,7 @@ var r = n(951288),
     b = n(981631),
     E = n(388032),
     C = n(512399);
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function O(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function y(e) {
     var t;
     let n = e.item.originalItem;
     return (0, h.Yi)(
-        v(O({}, e), {
+        O(v({}, e), {
             alt: n.description,
             src: (0, m.q)({
                 proxyURL: n.proxy_url,
@@ -106,7 +106,7 @@ function x(e) {
         l = i.useCallback(() => {
             var e;
             return (0, f.yE)(null != (e = n.flags) ? e : 0, b.J0y.IS_CLIP)
-                ? (0, r.jsxs)(a.DY, {
+                ? (0, r.jsxs)(o.DY, {
                       text: E.intl.string(E.t["/fgfWl"]),
                       className: C.clipPill,
                       children: [
@@ -114,7 +114,7 @@ function x(e) {
                               size: "xs",
                               color: "currentColor",
                           }),
-                          (0, r.jsx)(o.x, {
+                          (0, r.jsx)(a.x, {
                               variant: "text-xs/semibold",
                               color: "always-white",
                               children: E.intl.string(E.t.oA4afH),
@@ -128,7 +128,7 @@ function x(e) {
         ? null
         : (c.searchParams.append("format", "webp"),
           (0, h.lV)(
-              v(O({}, e), {
+              O(v({}, e), {
                   alt: n.description,
                   poster: c.toString(),
                   fileSize: n.size,
@@ -153,7 +153,7 @@ function x(e) {
 function j(e) {
     let t = e.item.originalItem;
     return (0, h.hX)(
-        v(O({}, e), {
+        O(v({}, e), {
             fileSize: t.size,
             fileName: (0, _.Z)(t),
             src: t.url,
@@ -164,14 +164,14 @@ function I(e) {
     let { message: t, item: n } = e,
         r = n.originalItem,
         l = (0, u.RT)(u.Ir.VOICE_MESSAGE, r.id),
-        o = i.useCallback(
+        a = i.useCallback(
             (e, n, i) => {
                 var l;
                 (0, d.tb)(t.id, null != (l = r.duration_secs) ? l : null, n, t.author.id);
             },
             [t, r.duration_secs],
         ),
-        a = i.useCallback(
+        o = i.useCallback(
             (e, n) => {
                 var i;
                 (0, d.EW)(t.id, null != (i = r.duration_secs) ? i : null, e, t.author.id, n);
@@ -186,14 +186,14 @@ function I(e) {
             [t],
         );
     return (0, h.wj)(
-        v(O({}, e), {
+        O(v({}, e), {
             fileSize: r.size,
             fileName: (0, _.Z)(r),
             src: r.url,
             durationSecs: r.duration_secs,
             waveform: r.waveform,
-            onPlay: o,
-            onPause: a,
+            onPlay: a,
+            onPause: o,
             onError: s,
             playbackCacheKey: l,
         }),
@@ -202,7 +202,7 @@ function I(e) {
 function S(e) {
     let t = e.item.originalItem;
     return (0, h.xi)(
-        v(O({}, e), {
+        O(v({}, e), {
             url: t.url,
             fileName: (0, _.Z)(t),
             fileSize: t.size,
@@ -213,7 +213,7 @@ function S(e) {
 function T(e) {
     let t = e.item.originalItem;
     return (0, h.ur)(
-        v(O({}, e), {
+        O(v({}, e), {
             url: t.url,
             fileName: (0, _.Z)(t),
             fileSize: t.size,
@@ -231,10 +231,10 @@ function P(e) {
 function N(e) {
     var t;
     let { attachment: n, message: i } = e,
-        o = i.channel_id,
-        a = (0, l.e7)([p.Z], () => {
+        a = i.channel_id,
+        o = (0, l.e7)([p.Z], () => {
             var e;
-            return null == (e = p.Z.getBasicChannel(o)) ? void 0 : e.guild_id;
+            return null == (e = p.Z.getBasicChannel(a)) ? void 0 : e.guild_id;
         }),
         { clip_created_at: s, clip_participants: u, title: d, application: m } = n;
     return (0, r.jsx)(c.Z, {
@@ -252,6 +252,6 @@ function N(e) {
                 : [],
         applicationId: null == m ? void 0 : m.id,
         title: d,
-        guildId: a,
+        guildId: o,
     });
 }

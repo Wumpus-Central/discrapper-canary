@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    o = n(475179),
-    a = n(287734),
+    a = n(475179),
+    o = n(287734),
     s = n(933557),
     c = n(124072),
     u = n(703656),
@@ -17,10 +17,10 @@ var i = n(442837),
     h = n(900849),
     b = n(981631);
 function E(e) {
-    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: O } = e,
-        v = (0, i.e7)([g.default, f.Z], () => (null == t ? "" : (0, s.F6)(t, g.default, f.Z)), [t]);
+    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: v } = e,
+        O = (0, i.e7)([g.default, f.Z], () => (null == t ? "" : (0, s.F6)(t, g.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
-        text: v,
+        text: O,
         position: "top",
         children: (e) => {
             let { onMouseEnter: i, onMouseLeave: s } = e;
@@ -41,19 +41,19 @@ function E(e) {
                                   let i = p.Z.getChannel(t);
                                   if (null != i && (0, d.bw)(i.type)) {
                                       if (n) {
-                                          o.Z.updateChatOpen(i.id, !0), (0, u.uL)(b.Z5c.CHANNEL(e, t));
+                                          a.Z.updateChatOpen(i.id, !0), (0, u.uL)(b.Z5c.CHANNEL(e, t));
                                           return;
                                       }
-                                      a.default.selectVoiceChannel(i.id);
+                                      o.default.selectVoiceChannel(i.id);
                                       return;
                                   }
                                   (0, u.uL)(b.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, O));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, v));
                 },
                 onMouseEnter: i,
                 onMouseLeave: s,
                 iconType: (0, _.wl)(t),
-                children: v,
+                children: O,
             });
         },
     });

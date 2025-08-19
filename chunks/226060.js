@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(512722),
     l = n.n(i),
-    o = n(399606),
-    a = n(481060),
+    a = n(399606),
+    o = n(481060),
     s = n(607070),
     c = n(430824),
     u = n(506071),
@@ -15,17 +15,17 @@ var i = n(512722),
     g = n(388032);
 function _(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        _ = (0, o.e7)([p.Z], () => p.Z.getGuildProduct(n)),
-        h = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        b = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        _ = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
+        h = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         E = (0, u.n)();
     return (l()(null != h, "guild cannot be null"), l()(null != _, "guildProductListing cannot be null"), (0, d.SO)(h))
-        ? (0, r.jsx)(a.ua7, {
+        ? (0, r.jsx)(o.ua7, {
               text: g.intl.string(g.t.sAJr9f),
               children: (e) => {
                   var t, n;
                   return (0, r.jsx)(
-                      a.zxk,
+                      o.zxk,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -80,13 +80,13 @@ function _(e) {
                     guildId: h.id,
                     productId: _.id,
                 })
-              : (0, r.jsx)(a.zxk, {
+              : (0, r.jsx)(o.zxk, {
                     variant: "secondary",
                     text: g.intl.string(g.t.RcTOGB),
                     disabled: !0,
                 })
-          : (0, r.jsx)(a.gtL, {
-                shineSize: a.gtL.ShineSizes.SMALL,
+          : (0, r.jsx)(o.gtL, {
+                shineSize: o.gtL.ShineSizes.SMALL,
                 pauseAnimation: b || !E,
                 onClick: () =>
                     (0, m.z)({

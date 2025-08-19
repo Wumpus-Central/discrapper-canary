@@ -2,14 +2,14 @@ n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
     l = n(901461),
-    o = n(464891);
-let a = i.memo(o.ZP);
+    a = n(464891);
+let o = i.memo(a.ZP);
 function s(e) {
     let {
         message: t,
         channel: n,
         author: i,
-        compact: o,
+        compact: a,
         animateAvatar: s,
         guildId: c,
         isGroupStart: u = !0,
@@ -18,13 +18,13 @@ function s(e) {
         hideGuildTag: m,
         preview: f,
     } = e;
-    return !(0, l.Z)(t) && (u || o)
-        ? (0, r.jsx)(a, {
+    return !(0, l.Z)(t) && (u || a)
+        ? (0, r.jsx)(o, {
               message: t,
               channel: n,
               author: i,
               guildId: c,
-              compact: o,
+              compact: a,
               animate: s,
               roleIcon: d,
               hideTimestamp: p,

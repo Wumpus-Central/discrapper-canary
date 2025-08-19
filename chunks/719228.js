@@ -1,111 +1,95 @@
-n.d(t, {
-    default: () => v,
-    e: () => C,
-    g: () => f,
-}),
-    n(539854),
-    n(388685);
-var l = n(951288),
-    r = n(647438),
-    i = n(658722),
-    s = n.n(i),
-    a = n(442837),
-    o = n(481060),
-    d = n(37234),
-    c = n(565138),
-    u = n(703656),
-    m = n(430824),
-    x = n(771845),
-    h = n(267642),
-    p = n(981631),
-    g = n(388032),
-    j = n(30408);
-function f(e) {
-    let { isTransfer: t = !1, setQuery: n, query: r } = e;
-    return (0, l.jsxs)(o.xBx, {
-        className: j.selectHeaderContainer,
-        children: [
-            (0, l.jsx)(o.X6q, {
-                className: j.selectHeader,
-                variant: "heading-md/semibold",
-                children: t ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX),
-            }),
-            (0, l.jsx)(o.E1j, {
-                placeholder: g.intl.string(g.t.vf3ZTU),
-                "aria-label": g.intl.string(g.t.vf3ZTU),
-                className: j.selectSearch,
-                query: r,
-                onChange: n,
-                onClear: () => n(""),
-            }),
-        ],
+l.d(t, { default: () => S }), l(539854), l(388685);
+var n = l(951288),
+    r = l(647438),
+    i = l(658722),
+    s = l.n(i),
+    a = l(442837),
+    o = l(82659),
+    c = l(481060),
+    d = l(37234),
+    u = l(565138),
+    m = l(703656),
+    x = l(430824),
+    g = l(771845),
+    h = l(267642),
+    f = l(981631),
+    C = l(388032),
+    j = l(30408);
+function p(e) {
+    let { setQuery: t, query: l } = e;
+    return (0, n.jsx)(c.E1j, {
+        placeholder: C.intl.string(C.t.vf3ZTU),
+        "aria-label": C.intl.string(C.t.vf3ZTU),
+        query: l,
+        onChange: t,
+        onClear: () => t(""),
     });
 }
-function C(e) {
-    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: r, onSelectGuild: i, query: f } = e,
-        C = (0, a.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds()),
-        v = (0, a.Wu)([m.Z], () =>
-            C.reduce((e, t) => {
-                let l = m.Z.getGuild(t);
+function v(e) {
+    let { isTransfer: t = !1, selectedSlotGuilds: l, onClose: r, onSelectGuild: i, query: o } = e,
+        p = (0, a.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
+        v = (0, a.Wu)([x.Z], () =>
+            p.reduce((e, t) => {
+                let n = x.Z.getGuild(t);
                 return (
-                    null == l ||
-                        (null != n && n.some((e) => e.id === t)) ||
-                        ((f.length <= 0 || s()(f.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) &&
-                            e.push(l)),
+                    null == n ||
+                        (null != l && l.some((e) => e.id === t)) ||
+                        ((o.length <= 0 || s()(o.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) &&
+                            e.push(n)),
                     e
                 );
             }, []),
         );
-    function y() {
-        r(), (0, d.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY);
+    function S() {
+        r(), (0, d.xf)(), (0, m.uL)(f.Z5c.GUILD_DISCOVERY);
     }
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
             0 === v.length &&
-                (0, l.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: j.emptyStateWrapper,
-                    children: (0, l.jsx)(o.Text, {
+                    children: (0, n.jsx)(c.Text, {
                         variant: "text-md/normal",
                         children:
-                            0 === C.length
-                                ? g.intl.format(g.t["E3tB6+"], {
+                            0 === p.length
+                                ? C.intl.format(C.t["E3tB6+"], {
                                       publicGuildDirectoryHook: (e, t) =>
-                                          (0, l.jsx)(
-                                              o.P3F,
+                                          (0, n.jsx)(
+                                              c.P3F,
                                               {
-                                                  onClick: y,
+                                                  onClick: S,
                                                   tag: "a",
                                                   children: e,
                                               },
                                               t,
                                           ),
                                   })
-                                : g.intl.string(g.t.w3GLl5),
+                                : C.intl.string(C.t.w3GLl5),
                     }),
                 }),
             v.map((e) =>
-                (0, l.jsxs)(
-                    o.P3F,
+                (0, n.jsxs)(
+                    c.P3F,
                     {
                         className: j.selectGuild,
                         onClick: () => {
                             i(e);
                         },
                         children: [
-                            (0, l.jsx)(c.Z, {
+                            (0, n.jsx)(u.Z, {
                                 className: j.selectGuildIcon,
                                 guild: e,
-                                size: c.Z.Sizes.SMALL,
+                                size: u.Z.Sizes.SMALL,
                             }),
-                            (0, l.jsxs)("div", {
+                            (0, n.jsxs)("div", {
                                 className: j.selectGuildCopy,
                                 children: [
-                                    (0, l.jsx)(o.Text, {
+                                    (0, n.jsx)(c.Text, {
                                         className: j.selectGuildName,
                                         variant: "text-md/normal",
                                         children: e.name,
                                     }),
-                                    (0, l.jsx)(o.Text, {
+                                    (0, n.jsx)(c.Text, {
                                         className: j.selectGuildLevel,
                                         color: "text-muted",
                                         variant: "text-xs/normal",
@@ -113,11 +97,11 @@ function C(e) {
                                     }),
                                 ],
                             }),
-                            (0, l.jsx)(o.Text, {
+                            (0, n.jsx)(c.Text, {
                                 className: j.selectGuildPseudoCta,
                                 color: "always-white",
                                 variant: "text-sm/medium",
-                                children: t ? g.intl.string(g.t.dUgaFx) : g.intl.string(g.t.Uj0md3),
+                                children: t ? C.intl.string(C.t.dUgaFx) : C.intl.string(C.t.Uj0md3),
                             }),
                         ],
                     },
@@ -127,31 +111,29 @@ function C(e) {
         ],
     });
 }
-function v(e) {
-    let { onClose: t, onSelectGuild: n, transitionState: i } = e,
-        [s, a] = r.useState("");
-    return (0, l.jsxs)(o.Y0X, {
+function S(e) {
+    let { onClose: t, onSelectGuild: l, transitionState: i, isTransfer: s = !1, selectedSlotGuilds: a } = e,
+        [c, d] = r.useState(""),
+        u = async () => {
+            await t();
+        },
+        m = s ? C.intl.string(C.t.IB13DQ) : C.intl.string(C.t.cQYceX);
+    return (0, n.jsx)(o.Modal, {
         transitionState: i,
-        className: j.modal,
-        size: o.CgR.SMALL,
-        parentComponent: "GuildSelectModal",
-        children: [
-            (0, l.jsx)(f, {
-                query: s,
-                setQuery: a,
-            }),
-            (0, l.jsx)(o.hzk, {
-                className: j.modalContent,
-                children: (0, l.jsx)(C, {
-                    onClose: t,
-                    onSelectGuild: n,
-                    query: s,
-                }),
-            }),
-            (0, l.jsx)(o.olH, {
-                className: j.modalCloseButton,
-                onClick: t,
-            }),
-        ],
+        onClose: u,
+        size: "md",
+        title: m,
+        input: (0, n.jsx)(p, {
+            query: c,
+            setQuery: d,
+        }),
+        actions: [],
+        children: (0, n.jsx)(v, {
+            onClose: t,
+            onSelectGuild: l,
+            query: c,
+            isTransfer: s,
+            selectedSlotGuilds: a,
+        }),
     });
 }

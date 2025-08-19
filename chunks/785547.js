@@ -2,8 +2,8 @@ n.d(t, { Z: () => R }), n(415506), n(388685);
 var r,
     i,
     l = n(951288),
-    o = n(647438),
-    a = n(442837),
+    a = n(647438),
+    o = n(442837),
     s = n(692547),
     c = n(755721),
     u = n(481060),
@@ -17,8 +17,8 @@ var r,
     b = n(417363),
     E = n(941128),
     C = n(780570),
-    O = n(358085),
-    v = n(814225),
+    v = n(358085),
+    O = n(814225),
     y = n(346329),
     x = n(701560),
     j = n(981631),
@@ -93,7 +93,7 @@ let w = Object.freeze({
     [j.apO.MOVE_UP]: "queued",
     [j.apO.RESUME]: "paused",
 });
-class Z extends (r = o.Component) {
+class Z extends (r = a.Component) {
     get analyticsLocation() {
         return N(P({}, this.props.analyticsContext.location), { object: j.qAy.BUTTON_CTA });
     }
@@ -147,7 +147,7 @@ class Z extends (r = o.Component) {
             ? r
             : null != t && t.type === j.vxO.UNINSTALLING
               ? "uninstalling"
-              : (0, O.isWeb)()
+              : (0, v.isWeb)()
                 ? "play"
                 : "unsupported_os";
     }
@@ -158,8 +158,8 @@ class Z extends (r = o.Component) {
             size: n,
             color: r,
             customDisabledColor: i,
-            isPlayShiny: o,
-            onDropdownOpen: a,
+            isPlayShiny: a,
+            onDropdownOpen: o,
             onDropdownClose: s,
             analyticsListSort: c,
             analyticsListIndex: u,
@@ -171,15 +171,15 @@ class Z extends (r = o.Component) {
             size: n,
             color: r,
             customDisabledColor: i,
-            isShiny: o,
-            onDropdownOpen: a,
+            isShiny: a,
+            onDropdownOpen: o,
             onDropdownClose: s,
             analyticsListSort: c,
             analyticsListIndex: u,
         });
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: r, size: i, customDisabledColor: o, tooltipPosition: a } = this.props;
+        let { className: n, fullWidth: r, size: i, customDisabledColor: a, tooltipPosition: o } = this.props;
         return (0, l.jsxs)("div", {
             className: S.disabledButtonWrapper,
             children: [
@@ -187,13 +187,13 @@ class Z extends (r = o.Component) {
                     className: n,
                     fullWidth: r,
                     size: i,
-                    color: null != o ? o : S.disabledButtonColor,
+                    color: null != a ? a : S.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()],
                 }),
                 (0, l.jsx)(u.ua7, {
                     text: t,
-                    position: a,
+                    position: o,
                     children: (e) => (0, l.jsx)("div", P({ className: S.disabledButtonOverlay }, e)),
                 }),
             ],
@@ -214,13 +214,13 @@ class Z extends (r = o.Component) {
         });
     }
     renderActionButton(e, t) {
-        let { className: n, fullWidth: r, size: i, color: o, isCloudSyncing: a } = this.props;
+        let { className: n, fullWidth: r, size: i, color: a, isCloudSyncing: o } = this.props;
         return (0, l.jsxs)(c.zx, {
             className: n,
             fullWidth: r,
             size: i,
-            color: null != o ? o : c.zx.Colors.GREEN,
-            submitting: "uninstalling" === e || a,
+            color: null != a ? a : c.zx.Colors.GREEN,
+            submitting: "uninstalling" === e || o,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()],
         });
@@ -233,7 +233,7 @@ class Z extends (r = o.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
+                    let t = O.en(e.sku);
                     return null != t ? I.intl.formatToPlainString(I.t.Aqe2ZG, { date: t }) : null;
                 })(t),
             );
@@ -279,16 +279,16 @@ class Z extends (r = o.Component) {
 function R(e) {
     let { libraryApplication: t } = e,
         n = (0, p.O)(),
-        [r, i] = (0, a.Wu)([b.Z, E.Z], () => [(0, _.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
-        o = (0, a.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
-        s = (0, a.e7)([g.Z], () => g.Z.hasNoBuild(t.id, t.branchId), [t]);
+        [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, _.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
+        a = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
+        s = (0, o.e7)([g.Z], () => g.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, l.jsx)(
         Z,
         N(P({}, e), {
             analyticsContext: n,
             actionState: r,
             dispatchState: i,
-            isCloudSyncing: o,
+            isCloudSyncing: a,
             hasNoBuild: s,
         }),
     );

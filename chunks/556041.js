@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(600164),
-    o = n(245315),
-    a = n(388032),
+    a = n(245315),
+    o = n(388032),
     s = n(5146);
 let c = () =>
     (0, r.jsxs)(l.Z, {
@@ -15,7 +15,7 @@ let c = () =>
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: (0, o.QA)(),
+                src: (0, a.QA)(),
                 className: s.avatar,
             }),
             (0, r.jsxs)(l.Z, {
@@ -24,7 +24,7 @@ let c = () =>
                 className: s.nameWrapper,
                 children: [
                     (0, r.jsx)(i.ua7, {
-                        text: a.intl.string(a.t.oMx98P),
+                        text: o.intl.string(o.t.oMx98P),
                         children: (e) => {
                             var t, n;
                             return (0, r.jsx)(
@@ -74,7 +74,7 @@ let c = () =>
                     (0, r.jsx)(i.X6q, {
                         className: s.header,
                         variant: "heading-md/semibold",
-                        children: a.intl.string(a.t.xfAlNz),
+                        children: o.intl.string(o.t.xfAlNz),
                     }),
                 ],
             }),
@@ -82,13 +82,13 @@ let c = () =>
                 className: s.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: a.intl.string(a.t.BUZ0sr),
+                children: o.intl.string(o.t.BUZ0sr),
             }),
             (0, r.jsx)(i.Text, {
                 className: s.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: a.intl.string(a.t.w5beJC),
+                children: o.intl.string(o.t.w5beJC),
             }),
         ],
     });

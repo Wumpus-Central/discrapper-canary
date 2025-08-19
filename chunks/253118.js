@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(904245),
-    o = n(739566),
-    a = n(834129),
+    a = n(739566),
+    o = n(834129),
     s = n(388032);
 function c(e) {
     var t, n;
     let { message: c, usernameHook: u, onClickPins: d, compact: p } = e,
-        m = (0, o.ZP)(c),
+        m = (0, a.ZP)(c),
         f = m.nick,
         g = u(m),
         _ = () => {
@@ -28,7 +28,7 @@ function c(e) {
             }),
         };
     return (0, r.jsx)(
-        a.Z,
+        o.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

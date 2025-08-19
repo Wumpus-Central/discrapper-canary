@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(392711),
     i = n.n(r),
     l = n(723454),
-    o = n(428595),
-    a = n(454585);
+    a = n(428595),
+    o = n(454585);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,14 +47,14 @@ function c(e, t) {
         e
     );
 }
-let u = i().omit(o.Z.RULES, ["codeBlock", "heading"]),
+let u = i().omit(a.Z.RULES, ["codeBlock", "heading"]),
     d = c(s({}, l.Z), {
         parse: function (e, t, n) {
             var r;
             let i = l.Z.parse(e, t, n),
-                o = Math.min(6, (null != (r = n.initialHeaderLevel) ? r : 3) + i.level);
-            return c(s({}, i), { level: o });
+                a = Math.min(6, (null != (r = n.initialHeaderLevel) ? r : 3) + i.level);
+            return c(s({}, i), { level: a });
         },
     }),
-    p = a.Z.combineAndInjectMentionRule(u, [a.Z.createReactRules(a.Z.defaultReactRuleOptions), { header: d }]),
-    m = a.Z.reactParserFor(p);
+    p = o.Z.combineAndInjectMentionRule(u, [o.Z.createReactRules(o.Z.defaultReactRuleOptions), { header: d }]),
+    m = o.Z.reactParserFor(p);

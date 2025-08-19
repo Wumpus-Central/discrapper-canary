@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685), n(457542);
 var r = n(647438),
     i = n(442837),
     l = n(430824),
-    o = n(496675),
-    a = n(709054),
+    a = n(496675),
+    o = n(709054),
     s = n(693546),
     c = n(826581),
     u = n(937111),
@@ -11,8 +11,8 @@ var r = n(647438),
 function p(e) {
     let [t, n] = r.useState(!1),
         [p, m] = r.useState(!1),
-        f = a.default.cast(e),
-        { joinRequest: g, guild: _ } = (0, i.cj)([c.Z, u.Z, l.Z, o.Z], () => {
+        f = o.default.cast(e),
+        { joinRequest: g, guild: _ } = (0, i.cj)([c.Z, u.Z, l.Z, a.Z], () => {
             var e;
             let t = c.Z.getRequest(f);
             if (null == t)
@@ -24,7 +24,7 @@ function p(e) {
             let n = null != (e = l.Z.getGuild(t.guildId)) ? e : u.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
-                isModmin: null != n && o.Z.can(d.Plq.KICK_MEMBERS, n),
+                isModmin: null != n && a.Z.can(d.Plq.KICK_MEMBERS, n),
                 guild: n,
             };
         });

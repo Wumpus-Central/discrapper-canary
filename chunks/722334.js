@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(772848),
-    a = n(481060),
+    a = n(772848),
+    o = n(481060),
     s = n(626135),
     c = n(617136),
     u = n(497505),
@@ -19,7 +19,7 @@ function b(e) {
     let { questId: t, fullWidth: n } = e;
     return (0, r.jsx)("div", {
         className: _.buttonContainer,
-        children: (0, r.jsx)(a.zxk, {
+        children: (0, r.jsx)(o.zxk, {
             fullWidth: n,
             variant: "primary",
             onClick: () => {
@@ -53,7 +53,7 @@ function b(e) {
                         })(
                             {
                                 quest_id: t,
-                                click_id: (0, o.Z)(),
+                                click_id: (0, a.Z)(),
                                 cta_name: c.jZ.VIEW_QUESTS,
                                 is_targeted: !1,
                             },
@@ -82,12 +82,12 @@ function E(e) {
                 (0, r.jsxs)("div", {
                     className: _.contentContainer,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             variant: "lg" === i ? "heading-xl/bold" : "heading-lg/bold",
                             color: "header-primary",
                             children: g.intl.string(g.t.vnP31d),
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "lg" === i ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
                             className: _.__invalid_mobileWebCopy,

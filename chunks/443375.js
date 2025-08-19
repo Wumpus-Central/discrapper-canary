@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X });
+n.d(t, { Z: () => Q });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -31,20 +31,21 @@ var r = n(951288),
     D = n(64621),
     L = n(979038),
     x = n(448980),
-    M = n(336383),
-    k = n(194811),
-    j = n(373826),
-    U = n(668700),
-    G = n(262210),
-    B = n(386019),
-    V = n(881530),
-    F = n(228168),
-    Z = n(981631),
-    H = n(701488),
-    Y = n(671955),
-    W = n(388032),
-    K = n(704543);
-function z(e, t, n) {
+    M = n(576759),
+    k = n(336383),
+    j = n(194811),
+    U = n(373826),
+    G = n(668700),
+    B = n(262210),
+    V = n(386019),
+    F = n(881530),
+    Z = n(228168),
+    H = n(981631),
+    Y = n(701488),
+    W = n(671955),
+    K = n(388032),
+    z = n(704543);
+function q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +58,7 @@ function z(e, t, n) {
         e
     );
 }
-function q(e) {
+function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,361 +69,366 @@ function q(e) {
                 }),
             )),
             r.forEach(function (t) {
-                z(e, t, n[t]);
+                q(e, t, n[t]);
             });
     }
     return e;
 }
-function X(e) {
+function Q(e) {
     var t;
     let {
             user: n,
             currentUser: a,
-            activity: z,
-            application: X,
-            voiceGuild: Q,
-            voiceChannel: J,
-            profileGuildId: $,
-            className: ee,
-            onClose: et,
+            activity: q,
+            application: Q,
+            voiceGuild: J,
+            voiceChannel: $,
+            profileGuildId: ee,
+            className: et,
+            onClose: en,
         } = e,
-        en = (0, E.Dt)(),
         er = (0, E.Dt)(),
-        ei = i.useRef(null),
-        { analyticsLocations: ea } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { themeType: eo } = (0, w.z)(),
-        { interactionSource: es, interactionSourceId: el } = (0, C.Xo)(),
-        ec = (0, g.Z)({
-            activity: z,
+        ei = (0, E.Dt)(),
+        ea = i.useRef(null),
+        { analyticsLocations: eo } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { themeType: es } = (0, w.z)(),
+        { interactionSource: el, interactionSourceId: ec } = (0, C.Xo)(),
+        eu = (0, g.Z)({
+            activity: q,
             user: n,
         }),
-        eu = (0, I.Z)({
+        ed = (0, I.Z)({
             display: "live",
             user: n,
-            activity: z,
-            entry: ec,
-            analyticsLocations: ea,
+            activity: q,
+            entry: eu,
+            analyticsLocations: eo,
         }),
-        ed = (0, T.Z)({
+        ef = (0, T.Z)({
             userId: n.id,
-            onAction: eu,
+            onAction: ed,
         }),
-        ef = (0, S.Z)(z),
-        e_ = null != ef.text && "" !== ef.text,
-        { largeImage: ep, smallImage: eh } = (0, p.FO)(z, X),
-        em = (0, V.Z)({
+        e_ = (0, S.Z)(q),
+        ep = null != e_.text && "" !== e_.text,
+        { largeImage: eh, smallImage: em } = (0, p.FO)(q, Q),
+        eg = (0, F.Z)({
             location: "UserProfileActivityCardWithInteractionToolbar",
             user: n,
             currentUser: a,
-            activity: z,
-            application: X,
-            entry: ec,
-            onClose: et,
+            activity: q,
+            application: Q,
+            entry: eu,
+            onClose: en,
         }),
-        eg = () => {
-            let e = (0, l.Z)(z) ? "crunchyroll" : "default",
-                t = eo === Y.l.MODAL_V2 ? m.J.SIZE_100 : m.J.SIZE_60;
-            return z.type === Z.IIU.HANG_STATUS
+        eE = () => {
+            let e = (0, l.Z)(q) ? "crunchyroll" : "default",
+                t = es === W.l.MODAL_V2 ? m.J.SIZE_100 : m.J.SIZE_60;
+            return q.type === H.IIU.HANG_STATUS
                 ? (0, r.jsx)(y.Z, {
-                      hangStatusActivity: z,
-                      className: o()(K.hangStatusIcon, K.image, { [K.small]: eo !== Y.l.MODAL_V2 }),
+                      hangStatusActivity: q,
+                      className: o()(z.hangStatusIcon, z.image, { [z.small]: es !== W.l.MODAL_V2 }),
                   })
-                : null == em
+                : null == eg
                   ? (0, r.jsx)(m.E, {
-                        image: ep,
-                        smallImage: eh,
+                        image: eh,
+                        smallImage: em,
                         size: t,
                         aspectRatio: e,
-                        className: K.image,
+                        className: z.image,
                     })
                   : (0, r.jsx)(m.E, {
-                        image: ep,
-                        smallImage: eh,
+                        image: eh,
+                        smallImage: em,
                         size: t,
-                        className: K.clickableImage,
+                        className: z.clickableImage,
                         aspectRatio: e,
                         onClick: (e) => {
-                            e.stopPropagation(), eu({ action: "PRESS_IMAGE" }), em(e);
+                            e.stopPropagation(), ed({ action: "PRESS_IMAGE" }), eg(e);
                         },
                     });
         },
-        eE = () =>
-            z.type === Z.IIU.HANG_STATUS
-                ? (0, r.jsx)(j.f, {
+        eb = () =>
+            q.type === H.IIU.HANG_STATUS
+                ? (0, r.jsx)(U.f, {
                       variant: "heading-sm/semibold",
-                      text: (0, b.O8)(z),
-                      id: en,
+                      text: (0, b.O8)(q),
+                      id: er,
                   })
-                : (0, d.Z)(z) && null != J
+                : (0, d.Z)(q) && null != $
                   ? (0, r.jsxs)("div", {
-                        className: K.voiceChannelText,
+                        className: z.voiceChannelText,
                         children: [
                             (0, r.jsx)(s.gj8, {
                                 size: "xxs",
                                 color: s.TVs.colors.TEXT_DEFAULT,
-                                className: K.voiceIcon,
+                                className: z.voiceIcon,
                             }),
-                            (0, r.jsx)(j.f, {
+                            (0, r.jsx)(U.f, {
                                 variant: "heading-sm/semibold",
-                                text: J.name,
-                                id: en,
+                                text: $.name,
+                                id: er,
                             }),
                         ],
                     })
-                  : (0, u.Z)(z) || (0, v.dS)(z)
-                    ? (0, r.jsx)(j.f, {
+                  : (0, u.Z)(q) || (0, v.dS)(q)
+                    ? (0, r.jsx)(U.f, {
                           variant: "heading-sm/semibold",
-                          text: z.name,
-                          id: en,
+                          text: q.name,
+                          id: er,
                       })
-                    : null != z.details
+                    : null != q.details
                       ? (0, r.jsx)(h._, {
-                            href: z.details_url,
-                            children: (0, r.jsx)(j.f, {
+                            href: q.details_url,
+                            children: (0, r.jsx)(U.f, {
                                 variant: "heading-sm/semibold",
-                                text: z.details,
-                                id: en,
+                                text: q.details,
+                                id: er,
                             }),
                         })
-                      : (0, r.jsx)(j.f, {
+                      : (0, r.jsx)(U.f, {
                             variant: "heading-sm/semibold",
-                            text: z.name,
-                            id: en,
+                            text: q.name,
+                            id: er,
                         }),
-        eb = () => {
-            if (z.type === Z.IIU.HANG_STATUS) return null;
-            if ((0, d.Z)(z) && null != Q)
-                return (0, r.jsx)(j.Z, {
+        ey = () => {
+            if (q.type === H.IIU.HANG_STATUS) return null;
+            if ((0, d.Z)(q) && null != J)
+                return (0, r.jsx)(U.Z, {
                     variant: "text-xs/normal",
-                    text: W.intl.formatToPlainString(W.t["hq/Qzc"], { guildName: Q.name }),
+                    text: K.intl.formatToPlainString(K.t["hq/Qzc"], { guildName: J.name }),
                     onClick: () => {
-                        (0, O.X)(Q.id), eu({ action: "OPEN_VOICE_GUILD" }), null == et || et();
+                        (0, O.X)(J.id), ed({ action: "OPEN_VOICE_GUILD" }), null == en || en();
                     },
                 });
-            if ((0, u.Z)(z))
+            if ((0, u.Z)(q))
                 return (0, r.jsx)(h._, {
-                    href: z.details_url,
-                    children: (0, r.jsx)(j.Z, {
+                    href: q.details_url,
+                    children: (0, r.jsx)(U.Z, {
                         variant: "text-xs/normal",
-                        text: z.details,
+                        text: q.details,
                     }),
                 });
-            if ((0, v.dS)(z)) {
+            if ((0, v.dS)(q)) {
                 var e;
-                return (0, r.jsx)(j.Z, {
+                return (0, r.jsx)(U.Z, {
                     variant: "text-xs/normal",
-                    text: null == z || null == (e = z.assets) ? void 0 : e.small_text,
+                    text: null == q || null == (e = q.assets) ? void 0 : e.small_text,
                 });
             }
             return (0, r.jsx)(h._, {
-                href: z.state_url,
-                children: (0, r.jsx)(j.Z, {
+                href: q.state_url,
+                children: (0, r.jsx)(U.Z, {
                     variant: "text-xs/normal",
-                    text: z.state,
+                    text: q.state,
                 }),
             });
         },
-        ey = () => {
+        eO = () => {
             var e, t, n, i, a, o, s, l;
-            if (z.type === Z.IIU.WATCHING) return null;
-            if ((0, u.Z)(z)) return eO();
+            if (q.type === H.IIU.WATCHING) return null;
+            if ((0, u.Z)(q)) return ev();
             if (
-                (0, v.dS)(z) &&
-                (null == (e = z.party) ? void 0 : e.size) != null &&
-                (null == (t = z.party) ? void 0 : t.size.length) >= 2
+                (0, v.dS)(q) &&
+                (null == (e = q.party) ? void 0 : e.size) != null &&
+                (null == (t = q.party) ? void 0 : t.size.length) >= 2
             ) {
-                let e = W.intl.formatToPlainString(W.t["JC/3x8"], {
-                    numSpeakers: null == (i = z.party) ? void 0 : i.size[0],
+                let e = K.intl.formatToPlainString(K.t["JC/3x8"], {
+                    numSpeakers: null == (i = q.party) ? void 0 : i.size[0],
                     numListeners:
-                        (null == (a = z.party) ? void 0 : a.size[1]) - (null == (o = z.party) ? void 0 : o.size[0]),
+                        (null == (a = q.party) ? void 0 : a.size[1]) - (null == (o = q.party) ? void 0 : o.size[0]),
                 });
-                return (0, r.jsx)(j.Z, {
+                return (0, r.jsx)(U.Z, {
                     variant: "text-xs/normal",
                     text: e,
                 });
             }
-            return (null == (n = z.assets) ? void 0 : n.large_text) != null
+            return (null == (n = q.assets) ? void 0 : n.large_text) != null
                 ? (0, r.jsx)(h._, {
-                      href: null == (s = z.assets) ? void 0 : s.large_url,
-                      children: (0, r.jsx)(j.Z, {
-                          text: null == (l = z.assets) ? void 0 : l.large_text,
+                      href: null == (s = q.assets) ? void 0 : s.large_url,
+                      children: (0, r.jsx)(U.Z, {
+                          text: null == (l = q.assets) ? void 0 : l.large_text,
                           variant: "text-xs/normal",
                       }),
                   })
                 : null;
         },
-        eO = () => {
+        ev = () => {
             var e, t, n, i;
-            return (null == (e = z.party) ? void 0 : e.size) == null && z.application_id === H.Zc
+            return (null == (e = q.party) ? void 0 : e.size) == null && q.application_id === Y.Zc
                 ? (0, r.jsxs)("div", {
-                      className: K.gameState,
+                      className: z.gameState,
                       children: [
                           (0, r.jsx)(h._, {
-                              href: z.state_url,
-                              children: (0, r.jsx)(j.Z, {
+                              href: q.state_url,
+                              children: (0, r.jsx)(U.Z, {
                                   variant: "text-xs/normal",
-                                  text: z.state,
+                                  text: q.state,
                               }),
                           }),
-                          (0, r.jsx)(j.Z, {
+                          (0, r.jsx)(U.Z, {
                               variant: "text-xs/normal",
-                              text: W.intl.formatToPlainString(W.t["u//9Bw"], {
+                              text: K.intl.formatToPlainString(K.t["u//9Bw"], {
                                   count: "0",
-                                  max: null != (i = null == X ? void 0 : X.getMaxParticipants()) ? i : 0,
+                                  max: null != (i = null == Q ? void 0 : Q.getMaxParticipants()) ? i : 0,
                               }),
                           }),
                       ],
                   })
-                : (0, c.Z)(z) &&
-                    (null == (t = z.party) ? void 0 : t.size) != null &&
-                    (null == (n = z.party) ? void 0 : n.size.length) >= 2
+                : (0, c.Z)(q) &&
+                    (null == (t = q.party) ? void 0 : t.size) != null &&
+                    (null == (n = q.party) ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)("div", {
-                        className: K.gameState,
+                        className: z.gameState,
                         children: [
                             (0, r.jsx)(h._, {
-                                href: z.state_url,
-                                children: (0, r.jsx)(j.Z, {
+                                href: q.state_url,
+                                children: (0, r.jsx)(U.Z, {
                                     variant: "text-xs/normal",
-                                    text: z.state,
+                                    text: q.state,
                                 }),
                             }),
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(U.Z, {
                                 variant: "text-xs/normal",
                                 text:
-                                    0 === z.party.size[1]
-                                        ? W.intl.formatToPlainString(W.t.IM4J4e, { count: z.party.size[0] })
-                                        : W.intl.formatToPlainString(W.t["u//9Bw"], {
-                                              count: z.party.size[0],
-                                              max: z.party.size[1],
+                                    0 === q.party.size[1]
+                                        ? K.intl.formatToPlainString(K.t.IM4J4e, { count: q.party.size[0] })
+                                        : K.intl.formatToPlainString(K.t["u//9Bw"], {
+                                              count: q.party.size[0],
+                                              max: q.party.size[1],
                                           }),
                             }),
                         ],
                     })
-                  : null == z.party
+                  : null == q.party
                     ? (0, r.jsx)(h._, {
-                          href: z.state_url,
-                          children: (0, r.jsx)(j.Z, {
+                          href: q.state_url,
+                          children: (0, r.jsx)(U.Z, {
                               variant: "text-xs/normal",
-                              text: z.state,
+                              text: q.state,
                           }),
                       })
                     : null;
         },
-        ev = () => {
-            if (!(0, N.Z)(z)) return null;
-            let { start: e, end: t } = z.timestamps;
-            return (0, r.jsx)(G.Z, {
+        eI = () => {
+            if (!(0, N.Z)(q)) return null;
+            let { start: e, end: t } = q.timestamps;
+            return (0, r.jsx)(B.Z, {
                 start: e,
                 end: t,
             });
         },
-        eI = () =>
-            null == em
+        eT = () =>
+            null == eg
                 ? (0, r.jsxs)("div", {
-                      children: [eE(), eb(), ey()],
+                      children: [eb(), ey(), eO()],
                   })
                 : (0, r.jsxs)(s.P3F, {
-                      className: K.clickableText,
+                      className: z.clickableText,
                       onClick: (e) => {
-                          e.stopPropagation(), eu({ action: "PRESS_TEXT" }), em(e);
+                          e.stopPropagation(), ed({ action: "PRESS_TEXT" }), eg(e);
                       },
-                      children: [eE(), eb(), ey()],
-                  }),
-        eT = () =>
-            null == Q || null == J
-                ? null
-                : (0, r.jsx)(U.Z, {
-                      user: n,
-                      guild: Q,
-                      channel: J,
-                      onAction: eu,
-                      onClose: et,
+                      children: [eb(), ey(), eO()],
                   }),
         eS = () =>
+            null == J || null == $
+                ? null
+                : (0, r.jsx)(G.Z, {
+                      user: n,
+                      guild: J,
+                      channel: $,
+                      onAction: ed,
+                      onClose: en,
+                  }),
+        eA = () =>
             n.id === a.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: K.actions,
+                      className: z.actions,
                       children: (0, r.jsx)(L.Z, {
-                          activity: z,
+                          activity: q,
                           user: n,
-                          onAction: eu,
-                          onClose: et,
-                          application: X,
+                          onAction: ed,
+                          onClose: en,
+                          application: Q,
                       }),
                   });
-    if (null === eo) return null;
-    let eA = null != (t = z.application_id) ? t : z.name,
-        eN = es === F.n_.ACTIVITY && el === eA;
+    if (null === es) return null;
+    let eN = null != (t = q.application_id) ? t : q.name,
+        eC = el === Z.n_.ACTIVITY && ec === eN;
     return (0, r.jsx)(_.Gt, {
-        value: ea,
+        value: eo,
         children: (0, r.jsx)(D.Z, {
-            targetElementRef: ei,
-            sourceType: F.n_.ACTIVITY,
+            targetElementRef: ea,
+            sourceType: Z.n_.ACTIVITY,
             user: n,
             children: (0, r.jsx)(R.Z, {
                 user: n,
-                guildId: $,
-                themeType: eo,
-                sourceId: eA,
-                sourceDetails: null == ec ? (0, A.Z)(z) : null,
-                entry: ec,
-                onAction: eu,
-                sourceType: F.n_.ACTIVITY,
+                guildId: ee,
+                themeType: es,
+                sourceId: eN,
+                sourceDetails: null == eu ? (0, A.Z)(q) : null,
+                entry: eu,
+                onAction: ed,
+                sourceType: Z.n_.ACTIVITY,
                 children: () =>
                     (0, r.jsx)(P.Z, {
-                        ref: ei,
+                        ref: ea,
                         user: n,
-                        className: K.toolbarContainer,
-                        interactionSourceId: eA,
-                        sourceType: F.n_.ACTIVITY,
-                        onAction: eu,
+                        className: z.toolbarContainer,
+                        interactionSourceId: eN,
+                        sourceType: Z.n_.ACTIVITY,
+                        onAction: ed,
                         renderMoreButtonPopout: (e) =>
-                            (0, r.jsx)(B.Z, {
+                            (0, r.jsx)(V.Z, {
                                 display: "live",
                                 user: n,
-                                activity: z,
-                                entry: ec,
-                                onClose: et,
+                                activity: q,
+                                entry: eu,
+                                onClose: en,
                                 children: e,
                             }),
-                        onShowToolbar: () => eu({ action: "HOVER_ACTIVITY_CARD" }),
-                        children: (0, r.jsxs)(M.Z, {
-                            ref: ed,
-                            className: o()(ee, { [K.hoisted]: eN }),
-                            onAction: eu,
-                            onClose: et,
-                            "aria-labelledby": e_ ? "".concat(er, " ").concat(en) : en,
+                        onShowToolbar: () => ed({ action: "HOVER_ACTIVITY_CARD" }),
+                        children: (0, r.jsxs)(k.Z, {
+                            ref: ef,
+                            className: o()(et, { [z.hoisted]: eC }),
+                            onAction: ed,
+                            onClose: en,
+                            "aria-labelledby": ep ? "".concat(ei, " ").concat(er) : er,
                             children: [
-                                (0, r.jsx)(k.Z, q({ textId: er }, ef)),
+                                (0, r.jsx)(j.Z, X({ textId: ei }, e_)),
                                 (0, r.jsxs)("div", {
-                                    className: K.body,
+                                    className: z.body,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: K.content,
+                                            className: z.content,
                                             children: [
-                                                !n.bot && eg(),
+                                                !n.bot && eE(),
                                                 (0, r.jsxs)("div", {
-                                                    className: K.details,
+                                                    className: z.details,
                                                     children: [
-                                                        eI(),
+                                                        eT(),
                                                         !n.bot &&
                                                             (0, r.jsx)(x.Z, {
                                                                 user: n,
-                                                                activity: z,
-                                                                className: K.badges,
+                                                                activity: q,
+                                                                className: z.badges,
                                                             }),
-                                                        ev(),
-                                                        eo === Y.l.MODAL_V2 && eS(),
+                                                        eI(),
+                                                        es === W.l.MODAL_V2 && eA(),
                                                     ],
                                                 }),
-                                                eo === Y.l.MODAL && eS(),
+                                                es === W.l.MODAL && eA(),
                                             ],
                                         }),
-                                        eT(),
+                                        eS(),
                                     ],
                                 }),
-                                eo !== Y.l.MODAL && eo !== Y.l.MODAL_V2 && eS(),
+                                es !== W.l.MODAL && es !== W.l.MODAL_V2 && eA(),
+                                (0, r.jsx)(M.Z, {
+                                    applicationId: null == Q ? void 0 : Q.id,
+                                    onAction: ed,
+                                    onClose: en,
+                                }),
                             ],
                         }),
                     }),

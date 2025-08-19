@@ -21,8 +21,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(239091),
-    o = n(904245),
-    a = n(144144),
+    a = n(904245),
+    o = n(144144),
     s = n(40851),
     c = n(407477),
     u = n(992970),
@@ -36,8 +36,8 @@ var r = n(951288),
     b = n(585483),
     E = n(5967),
     C = n(630388),
-    O = n(358085),
-    v = n(51144),
+    v = n(358085),
+    O = n(51144),
     y = n(91047),
     x = n(50284),
     j = n(804063),
@@ -53,13 +53,13 @@ function T(e, t, n) {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let l = "@".concat(v.ZP.getUserTag(i, { decoration: "never" })),
-                o = "<@".concat(e, ">");
+            let l = "@".concat(O.ZP.getUserTag(i, { decoration: "never" })),
+                a = "<@".concat(e, ">");
             b.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                 plainText: l,
-                rawText: o,
+                rawText: a,
             }),
-                a.Z.startTyping(t);
+                o.Z.startTyping(t);
         },
         [e, t, n],
     );
@@ -97,7 +97,7 @@ function D(e, t) {
 function L(e, t) {
     return Z(S("interactionAvatarProfile", e, t));
 }
-function M(e, t, o, a) {
+function M(e, t, a, o) {
     let { id: c } = t,
         { id: u, flags: d } = e,
         p = (0, C.yE)(d, I.iLy.EPHEMERAL),
@@ -105,7 +105,7 @@ function M(e, t, o, a) {
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!O.isPlatformEmbedded) {
+            if (!v.isPlatformEmbedded) {
                 let t = e.target;
                 if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -117,7 +117,7 @@ function M(e, t, o, a) {
             null == i ||
                 null == s ||
                 d ||
-                (o({ contextMenu: !0 }),
+                (a({ contextMenu: !0 }),
                 (0, l.jW)(
                     e,
                     async () => {
@@ -129,7 +129,7 @@ function M(e, t, o, a) {
                             n.e("45356"),
                         ]).then(n.bind(n, 225138));
                         return (n) => {
-                            var l, o;
+                            var l, a;
                             return (0, r.jsx)(
                                 e,
                                 ((l = (function (e) {
@@ -157,15 +157,15 @@ function M(e, t, o, a) {
                                     }
                                     return e;
                                 })({}, n)),
-                                (o = o =
+                                (a = a =
                                     {
                                         message: s,
                                         channel: i,
                                         mediaItem: t,
-                                        shouldHideMediaOptions: a,
+                                        shouldHideMediaOptions: o,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -173,20 +173,20 @@ function M(e, t, o, a) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(o)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
                                 l),
                             );
                         };
                     },
                     {
-                        onClose: () => o({ contextMenu: !1 }),
+                        onClose: () => a({ contextMenu: !1 }),
                         context: m,
                     },
                 ));
         },
-        [p, c, u, o, m, a],
+        [p, c, u, a, m, o],
     );
 }
 function k(e, t) {
@@ -238,17 +238,17 @@ function B(e, t) {
 }
 function G(e) {
     var t, n;
-    let { groupId: r, message: l, defaultValue: o, popouts: a } = e,
+    let { groupId: r, message: l, defaultValue: a, popouts: o } = e,
         { canShowReactionsOnMessageHover: s } = c.ZP.useExperiment(
             { location: "useHoveredMessage" },
             { autoTrackExposure: !1 },
         ),
         f = l.author.id,
         g = "".concat(r, ":").concat(f),
-        _ = i.useRef(o),
+        _ = i.useRef(a),
         h =
             ((t = l),
-            (n = a),
+            (n = o),
             i.useCallback(
                 (e) => {
                     if (null == e || !(e.nativeEvent instanceof MouseEvent) || Object.values(n).some((e) => e)) return;
@@ -270,33 +270,33 @@ function G(e) {
                 },
                 [t, n],
             )),
-        [E, C] = i.useState(o);
+        [E, C] = i.useState(a);
     _.current = E || _.current;
-    let O = i.useCallback(
+    let v = i.useCallback(
             (e) => {
                 s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !0), h(e), C(!0));
             },
             [E, g, s, h],
         ),
-        v = i.useCallback(() => {
+        O = i.useCallback(() => {
             b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !1), C(!1);
         }, [g]);
     return {
         hasHovered: _.current,
         isHovered: E,
-        handleMouseEnter: O,
-        handleMouseLeave: v,
+        handleMouseEnter: v,
+        handleMouseLeave: O,
     };
 }
 function H(e, t) {
     let [n, r] = i.useState(!1),
-        [l, o] = i.useState(!1);
+        [l, a] = i.useState(!1);
     return {
         handleFocus: i.useCallback(
             (t) => {
                 var n, i;
                 let l = null != (i = null == (n = (0, E.uB)(t)) ? void 0 : n.activeElement) ? i : null;
-                (t.target === t.currentTarget || t.currentTarget.contains(l)) && (o(!0), r(!0)), null != e && e(t);
+                (t.target === t.currentTarget || t.currentTarget.contains(l)) && (a(!0), r(!0)), null != e && e(t);
             },
             [e],
         ),
@@ -316,7 +316,7 @@ function V(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e;
         (null == t || (0, j.Z)(t)) &&
-            o.Z.jumpToMessage({
+            a.Z.jumpToMessage({
                 channelId: n.channel_id,
                 messageId: n.message_id,
                 flash: !0,

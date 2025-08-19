@@ -1,7 +1,8 @@
 e.exports = {
     root: "root_d06335",
+    largeBorderRadius: "largeBorderRadius_d06335",
     headerText: "headerText_d06335",
-    closeButton: "closeButton_d06335",
+    closeButtonContainer: "closeButtonContainer_d06335",
     video: "video_d06335",
     content: "content_d06335",
     subHeader: "subHeader_d06335",

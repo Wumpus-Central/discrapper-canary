@@ -2,8 +2,8 @@ n.d(t, { r: () => g });
 var r = n(933557),
     i = n(356264),
     l = n(592125),
-    o = n(430824),
-    a = n(496675),
+    a = n(430824),
+    o = n(496675),
     s = n(699516),
     c = n(594174),
     u = n(768581),
@@ -45,14 +45,14 @@ class g {
         let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
             g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             _ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
-            h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Z,
-            b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.Z,
+            h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
+            b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
-            { snapshotIndex: C, parentMessage: O, messageSnapshot: v } = this,
-            y = (0, d.Xf)(v.message.timestamp),
+            { snapshotIndex: C, parentMessage: v, messageSnapshot: O } = this,
+            y = (0, d.Xf)(O.message.timestamp),
             x = m.getChannel(this.parentMessage.channel_id);
-        if (null != x && x.guild_id === (null == (e = O.messageReference) ? void 0 : e.guild_id)) {
-            let e = m.getChannel(null == (n = O.messageReference) ? void 0 : n.channel_id);
+        if (null != x && x.guild_id === (null == (e = v.messageReference) ? void 0 : e.guild_id)) {
+            let e = m.getChannel(null == (n = v.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
                 let e = b.getGuild(x.guild_id);
                 return null == e
@@ -76,7 +76,7 @@ class g {
                 },
             };
         }
-        let j = null == (t = O.messageReference) ? void 0 : t.guild_id;
+        let j = null == (t = v.messageReference) ? void 0 : t.guild_id;
         if (null == j) return { snapshotIndex: C };
         let I = null != (u = b.getGuild(j)) ? u : E.getGuild(j);
         return null == I

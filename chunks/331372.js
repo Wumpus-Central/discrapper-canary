@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(325767);
@@ -27,7 +27,7 @@ function l(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -45,8 +45,8 @@ function o(e, t) {
         e
     );
 }
-function a(e) {
-    var { width: t = 440, height: n = 200, avatar: a } = e,
+function o(e) {
+    var { width: t = 440, height: n = 200, avatar: o } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -70,9 +70,9 @@ function a(e) {
         })(e, ["width", "height", "avatar"]);
     return (0, r.jsxs)(
         "svg",
-        o(
+        a(
             l(
-                o(l({}, (0, i.Z)(s)), {
+                a(l({}, (0, i.Z)(s)), {
                     width: t,
                     height: n,
                     viewBox: "0 0 ".concat(t, " ").concat(n),
@@ -154,7 +154,7 @@ function a(e) {
                         y: "100",
                         width: "56",
                         height: "56",
-                        children: a,
+                        children: o,
                     }),
                 ],
             },

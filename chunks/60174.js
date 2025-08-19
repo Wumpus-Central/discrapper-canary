@@ -2,9 +2,9 @@ n.d(t, { X: () => N }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(954955),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(954955),
+    s = n.n(o),
     c = n(507274),
     u = n(481060),
     d = n(255963),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(594174),
     E = n(630388),
     C = n(74538),
-    O = n(566006),
-    v = n(981631),
+    v = n(566006),
+    O = n(981631),
     y = n(185923),
     x = n(474936),
     j = n(388032),
@@ -55,11 +55,11 @@ function P(e) {
 }
 class N extends i.Component {
     render() {
-        let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: a = 0 } = this.props,
+        let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === v.yb.SENDING,
-            f = e === O.O.BURST;
-        if (c || (0, E.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
+            c = t.state === O.yb.SENDING,
+            f = e === v.O.BURST;
+        if (c || (0, E.yE)(t.flags, O.iLy.EPHEMERAL)) return null;
         let g = b.default.getCurrentUser(),
             _ = (0, C.I5)(g),
             h = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
@@ -70,10 +70,10 @@ class N extends i.Component {
                 color: "currentColor",
                 className: x.icon,
             };
-        return t.type === v.uaV.EMOJI_ADDED && 0 === t.reactions.length
+        return t.type === O.uaV.EMOJI_ADDED && 0 === t.reactions.length
             ? (0, r.jsx)(p.e, {
                   message: t,
-                  className: o()(x.reactionBtn, n),
+                  className: a()(x.reactionBtn, n),
               })
             : (0, r.jsx)(u.yRy, {
                   targetElementRef: this.ref,
@@ -95,13 +95,13 @@ class N extends i.Component {
                               (s = s =
                                   {
                                       innerRef: this.ref,
-                                      tabIndex: a,
+                                      tabIndex: o,
                                       onClick: (e) => {
                                           this.handleAddReactionClick(e);
                                       },
                                       onMouseEnter: () => (0, d.x)(y.qR.AddReactionPopoutMouseEntered),
                                       onFocus: () => (0, d.x)(y.qR.AddReactionPopoutFocused),
-                                      className: o()(x.reactionBtn, { [x.active]: c }, n),
+                                      className: a()(x.reactionBtn, { [x.active]: c }, n),
                                       children: [f ? (0, r.jsx)(u.Pt5, P({}, T)) : (0, r.jsx)(u.EO4, P({}, T)), i],
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -138,14 +138,14 @@ class N extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = b.default.getCurrentUser();
-                t !== O.O.BURST ||
+                t !== v.O.BURST ||
                     (0, C.I5)(r) ||
                     (0, f.m)({
                         analytics: {
                             type: x.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
                             section: (0, _.s4)(n),
-                            object: v.qAy.INLINE_REACTION_PICKER_UPSELL,
+                            object: O.qAy.INLINE_REACTION_PICKER_UPSELL,
                         },
                     }),
                     this.handleReactionPickerToggle();
@@ -153,23 +153,23 @@ class N extends i.Component {
             T(this, "renderReactionPopout", (e) => {
                 let { closePopout: t } = e,
                     { type: n, channel: i, message: l } = this.props,
-                    o = P(
+                    a = P(
                         { openPopoutType: "message_reaction_emoji_picker" },
-                        n === O.O.BURST && {
+                        n === v.O.BURST && {
                             openPopoutType: "message_super_reaction_emoji_picker",
-                            page: null != i.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
                             section: (0, _.s4)(i),
-                            object: v.qAy.REACTION_RAIL,
+                            object: O.qAy.REACTION_RAIL,
                         },
                     ),
-                    a = (0, r.jsx)(h.$, {
+                    o = (0, r.jsx)(h.$, {
                         closePopout: t,
                         channel: i,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: r, isBurst: i } = e;
                             this.onAddReaction(n, i), r && (i ? s()(t, 150)() : t());
                         },
-                        analyticsOverride: o,
+                        analyticsOverride: a,
                         messageId: l.id,
                     });
                 return (0, r.jsx)(c.M.Consumer, {
@@ -178,9 +178,9 @@ class N extends i.Component {
                         return t
                             ? (0, r.jsx)(u.VqE, {
                                   "aria-label": j.intl.string(j.t["7Xqzdn"]),
-                                  children: a,
+                                  children: o,
                               })
-                            : a;
+                            : o;
                     },
                 });
             });

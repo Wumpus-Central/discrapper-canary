@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    o = n(289823),
-    a = n(594174);
+    a = n(289823),
+    o = n(594174);
 let s = function (e) {
     var { recipients: t, size: n, status: s, isTyping: c, className: u } = e,
         d = (function (e, t) {
@@ -30,15 +30,15 @@ let s = function (e) {
         })(e, ["recipients", "size", "status", "isTyping", "className"]);
     let p = l.ny6[n],
         m = (0, i.Wu)(
-            [a.default],
+            [o.default],
             () =>
                 t.slice(0, 2).map((e) => {
-                    let t = a.default.getUser(e);
+                    let t = o.default.getUser(e);
                     if (null != t) return t.getAvatarURL(void 0, p.size, !1);
                 }),
             [t, p.size],
         );
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         "aria-label": d["aria-label"],
         "aria-hidden": d["aria-hidden"],
         backSrc: m[0],

@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(670081),
-    o = n(481060),
-    a = n(509212),
+    a = n(481060),
+    o = n(509212),
     s = n(113434),
     c = n(497505),
     u = n(530691),
@@ -28,14 +28,14 @@ function _(e) {
             () => (null == b ? void 0 : b.config.features.includes(l.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
             [null == b ? void 0 : b.config.features],
         );
-    if (h) return (0, r.jsx)(o.$jN, { className: g.spinner });
+    if (h) return (0, r.jsx)(a.$jN, { className: g.spinner });
     if (null != E) return (0, r.jsx)(p.W, { questId: t });
     if (null == b)
         return (0, r.jsx)(m.o, {
             questId: t,
             reason: m.X.NOT_FOUND,
         });
-    if ((0, a.HJ)(b)) {
+    if ((0, o.HJ)(b)) {
         let { enabled: e } = u.S.getCurrentConfig({ location: f.dr.EMBED_DESKTOP }, { autoTrackExposure: C });
         if (!C || !e)
             return (0, r.jsx)(m.o, {

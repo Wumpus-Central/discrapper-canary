@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(755721),
     l = n(406877);
-function o(e) {
+function a(e) {
     var t,
         n,
-        { guildId: o, productId: a, attachmentId: s } = e,
+        { guildId: a, productId: o, attachmentId: s } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -28,7 +28,7 @@ function o(e) {
             }
             return i;
         })(e, ["guildId", "productId", "attachmentId"]);
-    let { isLoading: u, downloadAttachment: d } = (0, l.Z)(o, a);
+    let { isLoading: u, downloadAttachment: d } = (0, l.Z)(a, o);
     return (0, r.jsx)(
         i.zx,
         ((t = (function (e) {

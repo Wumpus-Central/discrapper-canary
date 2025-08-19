@@ -1,16 +1,16 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(739566),
     l = n(834129),
-    o = n(388032);
-function a(e) {
-    let { message: t, channel: a, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
+    a = n(388032);
+function o(e) {
+    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
         p = (0, i.ZP)(t),
-        m = (0, i.Sw)(s, a),
+        m = (0, i.Sw)(s, o),
         f = c(p),
         g = u(null != m ? m : void 0),
-        _ = o.intl.format(o.t["32QI5+"], {
+        _ = a.intl.format(a.t["32QI5+"], {
             actorName: p.nick,
             actorHook: f,
             targetName: null == m ? void 0 : m.nick,

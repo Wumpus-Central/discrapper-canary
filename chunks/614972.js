@@ -3,18 +3,18 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(739566),
-    o = n(834129),
-    a = n(388032),
+    a = n(834129),
+    o = n(388032),
     s = n(519824);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
         u = (0, l.ZP)(t),
         d = c(u),
-        p = a.intl.format(a.t.tv2DNz, {
+        p = o.intl.format(o.t.tv2DNz, {
             username: u.nick,
             usernameHook: d,
         });
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         className: s.stageSystemMessage,
         iconNode: (0, r.jsx)(i.V9, {
             size: "md",

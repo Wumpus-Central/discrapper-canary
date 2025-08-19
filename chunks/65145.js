@@ -1,56 +1,56 @@
 n.d(t, {
     Pk: () => c,
-    dv: () => a,
+    dv: () => o,
 }),
     n(415506),
     n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(823379);
-let o = i.createContext(void 0);
-function a() {
-    let e = i.useContext(o);
+let a = i.createContext(void 0);
+function o() {
+    let e = i.useContext(a);
     if (null == e) throw Error("No PollFocusContextProvider found");
     return e;
 }
 function s(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: l, manageFocusOnAction: a } = e,
+    let { children: t, actionButtonRef: n, pollAnswerRef: l, manageFocusOnAction: o } = e,
         s = i.useMemo(
             () => ({
                 actionButtonRef: n,
                 pollAnswerRef: l,
-                manageFocusOnAction: a,
+                manageFocusOnAction: o,
             }),
-            [n, l, a],
+            [n, l, o],
         );
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(a.Provider, {
         value: s,
         children: t,
     });
 }
 function c(e) {
     let { children: t } = e,
-        [n, o] = i.useState(),
-        a = i.useRef(null),
+        [n, a] = i.useState(),
+        o = i.useRef(null),
         c = i.useRef(null);
     return (
         i.useEffect(() => {
             var e, t, r;
             "POLL_ANSWERS" === n && null != c.current && (null == (t = c.current) || null == (e = t.ref) || e.focus()),
-                "ACTION_BUTTON" === n && null != a.current && (null == (r = a.current) || r.focus());
+                "ACTION_BUTTON" === n && null != o.current && (null == (r = o.current) || r.focus());
         }, [n]),
         (0, r.jsx)(s, {
             pollAnswerRef: c,
-            actionButtonRef: a,
+            actionButtonRef: o,
             manageFocusOnAction: (e) => {
                 switch (e) {
                     case "submit":
                     case "cancel":
-                        o("ACTION_BUTTON");
+                        a("ACTION_BUTTON");
                         break;
                     case "remove":
                     case "showVotes":
-                        o("POLL_ANSWERS");
+                        a("POLL_ANSWERS");
                         break;
                     case "showVoterDetails":
                         break;
