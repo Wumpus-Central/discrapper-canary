@@ -8017,8 +8017,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .h2_b717a1 {
     font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase
+    line-height: 20px
 }
 
 .h3_b717a1 {
@@ -8034,21 +8033,21 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .h4_b717a1 {
     font-weight: var(--font-weight-semibold);
     letter-spacing: .3px;
-    line-height: 20px;
-    text-transform: uppercase
+    line-height: 20px
 }
 
 .h5_b717a1,
 .label_b717a1,
-.legend_b717a1 {}
+.legend_b717a1 {
+    text-transform: unset
+}
 
 .h5_b717a1 {
     color: var(--header-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-    margin-bottom: 8px;
-    text-transform: capitalize
+    margin-bottom: 8px
 }
 
 .defaultMarginh4_b717a1 {
@@ -8081,8 +8080,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .errorMessage_b717a1 {
     font-size: 12px;
     font-style: italic;
-    font-weight: var(--font-weight-medium);
-    text-transform: none
+    font-weight: var(--font-weight-medium)
 }
 
 .errorSeparator_b717a1 {
