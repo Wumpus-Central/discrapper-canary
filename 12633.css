@@ -102681,7 +102681,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    ascent-override: 97%;
+    ascent-override: 90%;
     font-family: Neo Castel;
     font-style: normal;
     font-weight: 400;
@@ -102700,7 +102700,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    ascent-override: 100%;
+    ascent-override: 90%;
     font-family: Pixelify Sans;
     font-style: normal;
     font-weight: 400;
