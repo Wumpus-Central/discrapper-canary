@@ -89868,7 +89868,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -93451,7 +93451,7 @@ html.disable-forced-colors * {
 }
 
 .editorBody__5a2df {
-    gap: 25px;
+    gap: 32px;
     margin-top: 16px;
     padding-left: var(--space-12);
     padding-right: calc(var(--space-12) - 8px)
