@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(993365),
-    o = n(981729),
+    o = n(993365),
+    a = n(981729),
     s = n(481060),
     c = n(543651),
     u = n(177751),
@@ -106,7 +106,7 @@ function x(e) {
         l = i.useCallback(() => {
             var e;
             return (0, f.yE)(null != (e = n.flags) ? e : 0, b.J0y.IS_CLIP)
-                ? (0, r.jsxs)(o.DY, {
+                ? (0, r.jsxs)(a.DY, {
                       text: E.intl.string(E.t["/fgfWl"]),
                       className: C.clipPill,
                       children: [
@@ -114,7 +114,7 @@ function x(e) {
                               size: "xs",
                               color: "currentColor",
                           }),
-                          (0, r.jsx)(a.x, {
+                          (0, r.jsx)(o.x, {
                               variant: "text-xs/semibold",
                               color: "always-white",
                               children: E.intl.string(E.t.oA4afH),
@@ -164,14 +164,14 @@ function I(e) {
     let { message: t, item: n } = e,
         r = n.originalItem,
         l = (0, u.RT)(u.Ir.VOICE_MESSAGE, r.id),
-        a = i.useCallback(
+        o = i.useCallback(
             (e, n, i) => {
                 var l;
                 (0, d.tb)(t.id, null != (l = r.duration_secs) ? l : null, n, t.author.id);
             },
             [t, r.duration_secs],
         ),
-        o = i.useCallback(
+        a = i.useCallback(
             (e, n) => {
                 var i;
                 (0, d.EW)(t.id, null != (i = r.duration_secs) ? i : null, e, t.author.id, n);
@@ -192,8 +192,8 @@ function I(e) {
             src: r.url,
             durationSecs: r.duration_secs,
             waveform: r.waveform,
-            onPlay: a,
-            onPause: o,
+            onPlay: o,
+            onPause: a,
             onError: s,
             playbackCacheKey: l,
         }),
@@ -231,10 +231,10 @@ function P(e) {
 function N(e) {
     var t;
     let { attachment: n, message: i } = e,
-        a = i.channel_id,
-        o = (0, l.e7)([p.Z], () => {
+        o = i.channel_id,
+        a = (0, l.e7)([p.Z], () => {
             var e;
-            return null == (e = p.Z.getBasicChannel(a)) ? void 0 : e.guild_id;
+            return null == (e = p.Z.getBasicChannel(o)) ? void 0 : e.guild_id;
         }),
         { clip_created_at: s, clip_participants: u, title: d, application: m } = n;
     return (0, r.jsx)(c.Z, {
@@ -252,6 +252,6 @@ function N(e) {
                 : [],
         applicationId: null == m ? void 0 : m.id,
         title: d,
-        guildId: o,
+        guildId: a,
     });
 }

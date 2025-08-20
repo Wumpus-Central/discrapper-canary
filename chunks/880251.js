@@ -2,12 +2,12 @@ n.d(t, { E: () => c });
 var r = n(647438),
     i = n(361213),
     l = n(778569),
-    a = n(783097),
-    o = n(768581),
+    o = n(783097),
+    a = n(768581),
     s = n(758199);
 function c(e) {
     let { bot: t } = e,
-        n = (0, a.ye)(e),
+        n = (0, o.ye)(e),
         { url: c } = (0, l.Z)({
             applicationId: n ? e.id : void 0,
             size: 600,
@@ -19,15 +19,15 @@ function c(e) {
             u = s.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            (r = (0, o.aN)({
+            (r = (0, a.aN)({
                 id: t.id,
                 banner: e,
                 size: 512,
                 canAnimate: !1,
             })),
-                (0, o.xR)(e) &&
+                (0, a.xR)(e) &&
                     null == c &&
-                    (l = (0, o.aN)({
+                    (l = (0, a.aN)({
                         id: t.id,
                         banner: e,
                         size: 512,
@@ -35,7 +35,7 @@ function c(e) {
                     }));
         }
         if (n) {
-            let t = (0, a.yJ)(e);
+            let t = (0, o.yJ)(e);
             null != c && ((r = c), (u = s.u.ACTIVITY));
             let n = null == t ? void 0 : t.activity_preview_video_asset_id;
             null != n && ((l = (0, i.Z)(e.id, n)), (u = s.u.ACTIVITY));

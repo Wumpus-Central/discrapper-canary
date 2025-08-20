@@ -7,8 +7,8 @@ n.d(t, {
 var r,
     i,
     l,
-    a = n(442837),
-    o = n(759174),
+    o = n(442837),
+    a = n(759174),
     s = n(570140),
     c = n(70956),
     u = n(709054),
@@ -27,7 +27,7 @@ function _(e) {
 function h(e) {
     return "guild:".concat(e, ":published");
 }
-let b = new o.h(
+let b = new a.h(
         (e) => {
             let t = [_(e.guild_id)];
             return e.published && t.push(h(e.guild_id)), t;
@@ -39,7 +39,7 @@ let b = new o.h(
             })(e),
     ),
     E = [];
-class C extends (r = a.ZP.Store) {
+class C extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = p[e]) ? t : 0;

@@ -2,8 +2,8 @@ n.d(t, { Z: () => G }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(755721),
     c = n(481060),
     u = n(749210),
@@ -111,8 +111,8 @@ function k(e) {
     });
 }
 let U = (e) => {
-        let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
-            [s, u, d] = (0, o.Wu)(
+        let { closePopout: t, sticker: n, channel: l, refreshPositionKey: o } = e,
+            [s, u, d] = (0, a.Wu)(
                 [I.Z],
                 () => [I.Z.getStickerPack(n.pack_id), !I.Z.hasLoadedStickerPacks, I.Z.isPremiumPack(n.pack_id)],
                 [n],
@@ -135,7 +135,7 @@ let U = (e) => {
         (0, j.Pq)(n.pack_id);
         let f = (0, j.Sd)(l),
             g = {
-                refreshPositionKey: a,
+                refreshPositionKey: o,
                 channel: l,
             },
             _ = i.useRef(g);
@@ -220,7 +220,7 @@ let U = (e) => {
             [S, P] = i.useState(!1),
             U = O.default.getCurrentUser(),
             F = x.ZP.canUseCustomStickersEverywhere(U),
-            B = (0, o.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
+            B = (0, a.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             G = null != B,
             [H, V] = i.useState(!1),
             [z, W] = i.useState(null),
@@ -364,7 +364,7 @@ let U = (e) => {
                                                               (0, r.jsx)(c.CJ0, {
                                                                   size: "md",
                                                                   color: "currentColor",
-                                                                  className: a()(R.showMoreEmojisArrow, {
+                                                                  className: o()(R.showMoreEmojisArrow, {
                                                                       [R.showMoreEmojisArrowCollapsed]: !H,
                                                                   }),
                                                               }),
@@ -420,7 +420,7 @@ let U = (e) => {
                                                                               L(
                                                                                   D(
                                                                                       {
-                                                                                          className: a()(R.otherEmoji, {
+                                                                                          className: o()(R.otherEmoji, {
                                                                                               [Z.nonInteractingSticker]:
                                                                                                   null != z &&
                                                                                                   z !== e.id,
@@ -478,23 +478,23 @@ function B(e) {
 }
 let G = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
-        [a, o] = (0, j.XW)(t, !0);
-    return null != a && (0, S.jl)(a)
+        [o, a] = (0, j.XW)(t, !0);
+    return null != o && (0, S.jl)(o)
         ? (0, r.jsx)(U, {
-              sticker: a,
+              sticker: o,
               closePopout: i,
               channel: n,
               refreshPositionKey: l,
           })
-        : null != a && (0, S.J8)(a)
+        : null != o && (0, S.J8)(o)
           ? (0, r.jsx)(F, {
-                sticker: a,
+                sticker: o,
                 channel: n,
                 closePopout: i,
                 refreshPositionKey: l,
             })
-          : o
-            ? o && null == a
+          : a
+            ? a && null == o
                 ? (0, r.jsx)(B, {
                       channel: n,
                       closePopout: i,

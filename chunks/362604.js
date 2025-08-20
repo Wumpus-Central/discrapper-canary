@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(755721),
     c = n(481060),
     u = n(834129),
@@ -18,7 +18,7 @@ var r = n(951288),
     E = n(38297);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
-        v = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        v = (0, a.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [O, y] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
@@ -31,13 +31,13 @@ function C(e) {
         : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(u.Z, {
-                      className: a()(E.mainContainer, { [E.compact]: C }),
+                      className: o()(E.mainContainer, { [E.compact]: C }),
                       icon: n(570111),
                       compact: C,
                       children: (0, r.jsx)("div", {
-                          className: a()(E.__invalid_content, { [E.compact]: C }),
+                          className: o()(E.__invalid_content, { [E.compact]: C }),
                           children: (0, r.jsx)("div", {
-                              className: a()(E.__invalid_messageContent, { [E.compact]: C }),
+                              className: o()(E.__invalid_messageContent, { [E.compact]: C }),
                               children: "" !== t.content ? t.content : b.intl.string(b.t.wnn1DQ),
                           }),
                       }),

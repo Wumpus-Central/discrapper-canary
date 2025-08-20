@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(475179),
-    o = n(287734),
+    o = n(475179),
+    a = n(287734),
     s = n(933557),
     c = n(124072),
     u = n(703656),
@@ -41,10 +41,10 @@ function E(e) {
                                   let i = p.Z.getChannel(t);
                                   if (null != i && (0, d.bw)(i.type)) {
                                       if (n) {
-                                          a.Z.updateChatOpen(i.id, !0), (0, u.uL)(b.Z5c.CHANNEL(e, t));
+                                          o.Z.updateChatOpen(i.id, !0), (0, u.uL)(b.Z5c.CHANNEL(e, t));
                                           return;
                                       }
-                                      o.default.selectVoiceChannel(i.id);
+                                      a.default.selectVoiceChannel(i.id);
                                       return;
                                   }
                                   (0, u.uL)(b.Z5c.CHANNEL(e, t));

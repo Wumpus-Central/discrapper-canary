@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(278074),
     i = n(263568),
     l = n(607070),
-    a = n(339085),
-    o = n(633302),
+    o = n(339085),
+    a = n(633302),
     s = n(715903),
     c = n(69882),
     u = n(592125),
@@ -43,11 +43,11 @@ function S(e) {
 }
 function T(e, t) {
     var n, r, i, l;
-    let { formattedExpirationLabel: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { poll: o } = e;
-    if (null == o) return;
+    let { formattedExpirationLabel: o } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { poll: a } = e;
+    if (null == a) return;
     let m = e.state === y.yb.SENT,
-        f = m ? (null != a ? a : (0, O.H)(o.expiry)) : "",
+        f = m ? (null != o ? o : (0, O.H)(a.expiry)) : "",
         g = null == f && m,
         {
             selectedAnswerIds: _,
@@ -72,7 +72,7 @@ function T(e, t) {
         D = (0, c.b)(Z),
         L = !b && I && !P && m && !R && !D;
     return {
-        poll: o,
+        poll: a,
         canTapAnswers: A,
         canRemoveVote: P && m && !g,
         canShowVoteCounts: N,
@@ -214,13 +214,13 @@ function P(e, t) {
                         let r = e.animated;
                         if (null == r && null != e.id) {
                             var i, l;
-                            r = null != (l = null == (i = a.ZP.getCustomEmojiById(e.id)) ? void 0 : i.animated) && l;
+                            r = null != (l = null == (i = o.ZP.getCustomEmojiById(e.id)) ? void 0 : i.animated) && l;
                         }
                         let s = t && null != r && r;
                         return {
                             id: null == e.id ? null : "".concat(e.id),
                             name: e.name,
-                            displayName: null == e.id ? o.ZP.convertSurrogateToName(e.name) : e.name,
+                            displayName: null == e.id ? a.ZP.convertSurrogateToName(e.name) : e.name,
                             src:
                                 null == e.id
                                     ? g.ZP.getURL(e.name)

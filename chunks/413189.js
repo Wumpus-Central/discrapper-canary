@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(680018),
-    o = n(481060),
+    o = n(680018),
+    a = n(481060),
     s = n(410030),
     c = n(739566),
     u = n(612659),
@@ -30,7 +30,7 @@ function x(e) {
         { enabled: Z } = (0, f.sX)({ location: "ChatWallpaperSetSystemMessage" }),
         R = f.qM.useExperiment({ location: "ChatWallpaperSetSystemMessage" }).lightMode,
         D = (0, c.ZP)(P),
-        L = (0, o.wjy)((0, s.ZP)()),
+        L = (0, a.wjy)((0, s.ZP)()),
         {
             chatWallpaper: M,
             isUpdatingChatWallpaperFlag: k,
@@ -81,7 +81,7 @@ function x(e) {
               !H &&
               (T = (0, r.jsx)("div", {
                   className: y.action,
-                  children: (0, r.jsx)(a.z, {
+                  children: (0, r.jsx)(o.z, {
                       variant: "primary",
                       text: O.intl.string(z ? O.t.o6850d : O.t["/ubFp6"]),
                       loading: k,
@@ -89,7 +89,7 @@ function x(e) {
                           h.X(N, w, {
                               shouldClear: !z,
                               onError: () => {
-                                  (0, o.showToast)((0, o.createToast)(O.intl.string(O.t.F8FvU1), o.ToastType.FAILURE));
+                                  (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.F8FvU1), a.ToastType.FAILURE));
                               },
                           });
                       },

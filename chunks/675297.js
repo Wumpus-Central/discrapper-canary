@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(399606),
     l = n(166081),
-    a = n(54797),
-    o = n(674180),
+    o = n(54797),
+    a = n(674180),
     s = n(485386),
     c = n(430824),
     u = n(572004),
@@ -39,7 +39,7 @@ function C(e) {
         A = (0, l.U)(t, 600),
         w = (0, g.C)(t),
         Z = (0, d.SO)(P),
-        { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
+        { shouldHideGuildPurchaseEntryPoints: R } = (0, a.uP)(n),
         D = (0, g.k)(t);
     if (null == P || R) return null;
     let L = () =>
@@ -65,7 +65,7 @@ function C(e) {
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-                (0, a.x)({ listing: t });
+                (0, o.x)({ listing: t });
             },
             onCopyProductLink: () => {
                 (0, u.JG)((0, p.ar)(n, t.id));

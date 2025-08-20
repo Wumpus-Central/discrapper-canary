@@ -23,8 +23,8 @@ var n = r(951288),
     S = r(937510),
     x = r(823941),
     j = r(38900),
-    P = r(709999),
-    T = r(794324),
+    T = r(709999),
+    P = r(794324),
     L = r(934760),
     k = r(619899),
     I = r(859788),
@@ -78,8 +78,8 @@ let R = {
                 0.1,
                 null != H,
             ),
-            V = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-            U = (0, L.Z)(),
+            U = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+            V = (0, L.Z)(),
             z = (0, v.sp)(),
             { showBetaTag: G } = b.Z.useExperiment({ location: "collectible_hero_block" }),
             q = l.useMemo(() => {
@@ -113,11 +113,11 @@ let R = {
                 heroLogo: Q,
                 heroBannerStatic: J,
                 heroBannerAnimated: $,
-            } = (0, T.hr)(q),
+            } = (0, P.hr)(q),
             ee = null == K ? void 0 : K.heroBanner,
             et = null != (t = null == Y ? void 0 : Y.responsive) && t,
             er = null == Y ? void 0 : Y.backgroundStyle,
-            en = l.useMemo(() => U(q.rankedSkuIds), [r, U, q.rankedSkuIds]),
+            en = l.useMemo(() => V(q.rankedSkuIds), [r, V, q.rankedSkuIds]),
             el = (0, y.a)()(en),
             ea = (0, S.l)(el).slice(0, 4),
             ei = (0, k.St)(ea),
@@ -126,7 +126,7 @@ let R = {
                     ? w.intl.string(w.t["1CdL8f"])
                     : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: q.name }),
             es = (0, E.FF)("CollectiblesContent");
-        return null != V && (r || q !== R)
+        return null != U && (r || q !== R)
             ? (0, n.jsxs)("div", {
                   ref: W,
                   className: B.heroBlock,
@@ -269,11 +269,11 @@ let R = {
                                                                   categoryPosition: 0,
                                                               },
                                                               children: (0, n.jsx)(
-                                                                  P.Z,
+                                                                  T.Z,
                                                                   {
                                                                       product: e,
                                                                       category: r,
-                                                                      user: V,
+                                                                      user: U,
                                                                       tab: F,
                                                                       _isInHeroBlock: !0,
                                                                   },

@@ -2,8 +2,8 @@ n.d(t, { O: () => b }), n(642613), n(472816), n(794429);
 var r = n(904245),
     i = n(339085),
     l = n(957730),
-    a = n(285651),
-    o = n(268350),
+    o = n(285651),
+    a = n(268350),
     s = n(926491),
     c = n(373228),
     u = n(430824),
@@ -23,11 +23,11 @@ async function b(e, t) {
     if (null == E || null == u.Z.getGuild(E)) return;
     let C = d.default.getCurrentUser();
     if (null == C) return;
-    await (0, o.$p)();
+    await (0, a.$p)();
     let v = Array.from(s.Z.getAllStickersIterator()),
         O = v
             .filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => h(e.guild_id) && (0, a.kl)(e, C, t))
+            .filter((e) => h(e.guild_id) && (0, o.kl)(e, C, t))
             .sort((e, t) => -m.default.compare(e.id, t.id));
     if (O.length > 5) {
         let i = [O[Math.floor(Math.pow(Math.random(), 2) * O.length)].id];

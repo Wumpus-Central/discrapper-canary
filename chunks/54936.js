@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(910111),
+    o = n(481060),
+    a = n(910111),
     s = n(732559),
     c = n(723851),
     u = n(981631),
@@ -20,7 +20,7 @@ let m = {
         getLabel: () => d.intl.string(d.t.E4u4n5),
     },
     [u.TaA.LINUX]: {
-        icon: o.Z,
+        icon: a.Z,
         getLabel: () => d.intl.string(d.t.tcawo6),
     },
 };
@@ -29,7 +29,7 @@ function f(e) {
         i = m[t];
     if (null == i) throw Error("Unexpected operating system: ".concat(t));
     let l = i.icon;
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(o.ua7, {
         text: i.getLabel(),
         children: (e) => {
             var t, i;

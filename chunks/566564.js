@@ -23,14 +23,14 @@ var n = r(951288),
     S = r(531864),
     x = r(384067),
     j = r(215023),
-    P = r(981631),
-    T = r(388032),
+    T = r(981631),
+    P = r(388032),
     L = r(310582);
 let k = (e) => {
         var t;
         let { handleTransition: r, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
             { noCache: p, includeUnpublished: b } = (0, h.Z)(),
-            [S, P] = l.useState(!1),
+            [S, T] = l.useState(!1),
             k = (0, d.sp)(),
             I = null != (t = null == k ? void 0 : k.sessionId) ? t : "";
         l.useEffect(() => {
@@ -100,7 +100,7 @@ let k = (e) => {
                         }),
                         (0, n.jsx)(O.Z, {
                             isLoading: N,
-                            title: c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
+                            title: c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
                             numVisibleItems: a,
                             hasSorting: c === j.AW.HOME,
                             tab: c,
@@ -143,7 +143,7 @@ let k = (e) => {
                                         O.Z,
                                         {
                                             title:
-                                                c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
+                                                c === j.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
                                             isLoading: N || s,
                                             numVisibleItems: a,
                                             sortedSkuIds: g,
@@ -197,7 +197,7 @@ let k = (e) => {
                                         E.Z,
                                         {
                                             immersiveBannerBlock: e,
-                                            onVisibilityChange: (e) => P(!e),
+                                            onVisibilityChange: (e) => T(!e),
                                         },
                                         l,
                                     );
@@ -267,14 +267,14 @@ let k = (e) => {
                                         children: [
                                             (0, n.jsx)(s.X6q, {
                                                 variant: "heading-md/semibold",
-                                                children: T.intl.string(T.t.Yr70c3),
+                                                children: P.intl.string(P.t.Yr70c3),
                                             }),
                                             (0, n.jsx)(s.zxk, {
                                                 variant: "primary",
-                                                text: T.intl.string(T.t.AfrvRE),
+                                                text: P.intl.string(P.t.AfrvRE),
                                                 onClick: () => {
                                                     r("shop all button", void 0, !0),
-                                                        u.default.track(P.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        u.default.track(T.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == h ? void 0 : h.sessionId,
                                                             page_type: a,

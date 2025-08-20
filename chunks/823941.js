@@ -1,6 +1,6 @@
 r.d(t, {
     Z: () => k,
-    n: () => P,
+    n: () => T,
 }),
     r(35282);
 var n = r(951288),
@@ -27,8 +27,8 @@ var n = r(951288),
     S = r(474936),
     x = r(388032),
     j = r(923732);
-let P = (0, _.IC)(90),
-    T = (e) => {
+let T = (0, _.IC)(90),
+    P = (e) => {
         let { category: t } = e,
             { analyticsLocations: r } = (0, d.ZP)(),
             a = l.useRef(null),
@@ -109,7 +109,7 @@ function k(e) {
             (null == g ? void 0 : g.addLogo)
                 ? (0, n.jsx)("img", {
                       className: j.categoryLogo,
-                      src: (0, _.uV)(t.logo, { size: P }),
+                      src: (0, _.uV)(t.logo, { size: T }),
                       alt: t.name,
                       style: { maxWidth: null == g ? void 0 : g.logoMaxWidth },
                   })
@@ -119,7 +119,7 @@ function k(e) {
                     className: i()(j.summary, { [j.blackSummary]: S }),
                     style: null != t.bannerTextColor ? { color: t.bannerTextColor } : void 0,
                     variant: "text-md/normal",
-                    children: t.skuId === o.T.DISXCORE ? (0, n.jsx)(T, { category: t }) : t.summary,
+                    children: t.skuId === o.T.DISXCORE ? (0, n.jsx)(P, { category: t }) : t.summary,
                 }),
             !l &&
                 (0, n.jsx)(C.Z, {

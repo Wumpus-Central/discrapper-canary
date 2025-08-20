@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(739566),
     l = n(834129),
-    a = n(388032);
-function o(e) {
-    let { message: t, compact: o, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
+    o = n(388032);
+function a(e) {
+    let { message: t, compact: a, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
         p = (0, i.ZP)(t),
         m = p.nick,
         f = u(p),
@@ -17,15 +17,15 @@ function o(e) {
         ? (0, r.jsx)(l.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
-              compact: o,
+              compact: a,
               children:
                   null != g
-                      ? a.intl.format(a.t.AcqBmJ, {
+                      ? o.intl.format(o.t.AcqBmJ, {
                             username: m,
                             usernameHook: f,
                             callDuration: g,
                         })
-                      : a.intl.format(a.t["43phHx"], {
+                      : o.intl.format(o.t["43phHx"], {
                             username: m,
                             usernameHook: f,
                         }),
@@ -33,22 +33,22 @@ function o(e) {
         : (0, r.jsxs)(l.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
-              compact: o,
+              compact: a,
               children: [
                   null != g
-                      ? a.intl.format(a.t["7TeC1N"], {
+                      ? o.intl.format(o.t["7TeC1N"], {
                             username: m,
                             usernameHook: f,
                             callDuration: g,
                         })
-                      : a.intl.format(a.t.LuB5RE, {
+                      : o.intl.format(o.t.LuB5RE, {
                             username: m,
                             usernameHook: f,
                         }),
                   c
                       ? (0, r.jsx)(l.Z.Action, {
                             onClick: d,
-                            children: a.intl.string(a.t.oa9mvb),
+                            children: o.intl.string(o.t.oa9mvb),
                         })
                       : null,
               ],

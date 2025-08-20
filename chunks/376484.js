@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(446411),
+    o = n(481060),
+    a = n(446411),
     s = n(454585),
     c = n(834129),
     u = n(553385),
@@ -12,29 +12,29 @@ var i = n(120356),
     p = n(388032),
     m = n(356177);
 function f(e) {
-    let { message: t, channel: i, compact: o } = e,
+    let { message: t, channel: i, compact: a } = e,
         s = null != t.embeds && t.embeds.length > 0;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(c.Z, {
-                className: l()(m.mainContainer, { [m.compact]: o }),
+                className: l()(m.mainContainer, { [m.compact]: a }),
                 icon: n(570111),
-                compact: o,
+                compact: a,
                 children: (0, r.jsx)("div", {
-                    className: l()(m.__invalid_content, { [m.compact]: o }),
+                    className: l()(m.__invalid_content, { [m.compact]: a }),
                     children: (0, r.jsx)("div", {
-                        className: l()(m.__invalid_messageContent, { [m.compact]: o }),
+                        className: l()(m.__invalid_messageContent, { [m.compact]: a }),
                         children: t.content,
                     }),
                 }),
             }),
             (0, r.jsx)("div", {
-                className: l()(m.__invalid_embedContent, { [m.compact]: o }),
+                className: l()(m.__invalid_embedContent, { [m.compact]: a }),
                 children: (0, r.jsx)(g, { message: t }),
             }),
             (0, r.jsx)("div", {
                 className: m.actions,
-                children: (0, r.jsx)(a.zxk, {
+                children: (0, r.jsx)(o.zxk, {
                     variant: "secondary",
                     text: p.intl.string(p.t.zdBCIi),
                     onClick: () => {
@@ -51,7 +51,7 @@ function g(e) {
         [i] = null != (t = n.embeds) ? t : [];
     return null == i
         ? null
-        : (0, r.jsx)(o.ZP, {
+        : (0, r.jsx)(a.ZP, {
               className: m.embed,
               embed: i,
               renderTitle: (e, t) => s.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),

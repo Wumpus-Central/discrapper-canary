@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(658722),
-    a = n.n(l),
-    o = n(149765),
+    o = n.n(l),
+    a = n(149765),
     s = n(442837),
     c = n(481060),
     u = n(601964),
@@ -74,12 +74,12 @@ function j(e) {
         let t = j[e];
         null != t && (L[t.id] = t);
     }),
-    o.e$(
+    a.e$(
         _.I0({
             forceRoles: L,
             context: l,
         }),
-        o.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES),
+        a.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES),
     ) || (0, u.eM)(l, n))
         ? (0, r.jsx)("div", {
               className: y.container,
@@ -91,7 +91,7 @@ function j(e) {
                   children: (e) => {
                       let t = D.reduce(
                               (t, n) => (
-                                  a()(e.toLowerCase(), n.name.toLowerCase()) &&
+                                  o()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(
                                           (0, r.jsxs)(
                                               c.lo1,

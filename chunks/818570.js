@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(755721),
     l = n(481060),
-    a = n(767714),
-    o = n(834129),
+    o = n(767714),
+    a = n(834129),
     s = n(981631),
     c = n(474936),
     u = n(388032),
@@ -12,7 +12,7 @@ var i = n(755721),
 function p(e) {
     let { message: t, channel: n } = e,
         p = null != n.guild_id ? s.jXE.TEXT_IN_VOICE : s.jXE.CHANNEL_TEXT_AREA;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         contentClassName: d.messageContentContainer,
         iconContainerClassName: d.iconContainer,
         iconNode: (0, r.jsx)(l.Dkj, { colorClass: d.icon }),
@@ -43,7 +43,7 @@ function p(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: d.buttonContainer,
-                    children: (0, r.jsx)(a.Z, {
+                    children: (0, r.jsx)(o.Z, {
                         showGradient: !0,
                         iconClassName: d.premiumIcon,
                         subscriptionTier: c.Si.TIER_2,

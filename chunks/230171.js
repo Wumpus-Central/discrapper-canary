@@ -10,8 +10,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(373793),
-    a = n(705512),
-    o = n(442837),
+    o = n(705512),
+    a = n(442837),
     s = n(481060),
     c = n(566620),
     u = n(574952),
@@ -39,7 +39,7 @@ var r = n(951288),
     w = n(388032),
     Z = n(217648);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: o, activityReferrerId: s, onView: _ } = e,
         { name: h, bot: b } = (t = (0, P.O)(t)),
         C = null == b ? void 0 : b.id,
         v = (0, f.ye)(t),
@@ -49,7 +49,7 @@ function R(e) {
             bot: b,
         }),
         { staticBannerSrc: x, videoBannerSrc: S, bannerAspectRatio: Z } = (0, N.E)(t),
-        R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
+        R = (0, a.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
         { analyticsLocations: M } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: k, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
@@ -76,7 +76,7 @@ function R(e) {
                                       applicationId: t.id,
                                       isStart: null == U,
                                       embeddedActivitiesManager: G,
-                                      customId: a,
+                                      customId: o,
                                       referrerId: R,
                                       analyticsLocations: M,
                                   });
@@ -93,7 +93,7 @@ function R(e) {
                                       appId: t.id,
                                       botId: C,
                                       analyticsLocations: M,
-                                      customId: a,
+                                      customId: o,
                                       referrerId: R,
                                   });
                               },
@@ -101,7 +101,7 @@ function R(e) {
                     : null != Y && e.push(Y),
                 e
             );
-        }, [z, V, U, F, k, t.id, G, a, R, M, v, Y, C]),
+        }, [z, V, U, F, k, t.id, G, o, R, M, v, Y, C]),
         X = v ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(D, { app: t });
     return (0, r.jsx)(I.W, {
         title: h,
@@ -118,13 +118,13 @@ function R(e) {
             id: t.id,
             linkType: l,
             referrerId: R,
-            activityCustomId: a,
+            activityCustomId: o,
             onView: _,
         },
     });
 }
 function D(e) {
-    var t, n, a;
+    var t, n, o;
     let { app: c } = e,
         u =
             (0, x.Eb)({
@@ -134,7 +134,7 @@ function D(e) {
             }) &&
             null != c.integrationTypesConfig &&
             l.Y.GUILD_INSTALL in c.integrationTypesConfig,
-        d = (0, o.e7)([b.default], () => b.default.locale, []),
+        d = (0, a.e7)([b.default], () => b.default.locale, []),
         p = i.useMemo(() => {
             var e, t;
             if (!u) return null;
@@ -145,7 +145,7 @@ function D(e) {
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
             return 0 === r ? null : w.intl.format(w.t["6IW6Wl"], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        m = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
+        m = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != m &&
@@ -175,12 +175,12 @@ function D(e) {
 function L(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
-        c = (0, o.e7)([v.Z], () => {
+        c = (0, a.e7)([v.Z], () => {
             var e;
             return null != (e = v.Z.getGuildId()) ? e : void 0;
         }, []),
         u = (0, h.N)(t.id),
-        d = (0, o.Wu)([O.default, C.Z], () => {
+        d = (0, a.Wu)([O.default, C.Z], () => {
             let e = [];
             for (let [t, n] of u.entries()) {
                 if (t >= 5) break;
@@ -197,7 +197,7 @@ function L(e) {
                     guildId: c,
                     activityText: w.intl.formatToPlainString(w.t["IJa+4+"], { count: d.length }),
                 });
-            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, _.ig)(e) === o.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

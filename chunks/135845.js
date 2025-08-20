@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(447543),
     c = n(100527),
     u = n(906732),
@@ -31,13 +31,13 @@ function O(e) {
             onAcceptInstantInvite: S,
         } = e,
         T = null == x ? void 0 : x.id,
-        P = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
-        N = (0, o.e7)(
+        P = (0, a.e7)([f.Z], () => f.Z.getGuildId()),
+        N = (0, a.e7)(
             [m.Z],
             () => (null != O && null != O.target_user ? m.Z.getActiveStreamForUser(O.target_user.id, T) : null),
             [O, T],
         ),
-        A = (0, o.e7)(
+        A = (0, a.e7)(
             [m.Z],
             () => (null != O && null != O.target_user ? m.Z.getStreamForUser(O.target_user.id, T) : null),
             [O, T],
@@ -51,9 +51,9 @@ function O(e) {
             null != O.guild &&
             A.channelId === O.channel.id &&
             A.guildId === O.guild.id;
-    a()(null != O, "Invite cannot be null");
+    o()(null != O, "Invite cannot be null");
     let { target_type: D, target_user: L } = O;
-    a()(D === E.Iq.STREAM && null != L, "invalid streaming invite");
+    o()(D === E.Iq.STREAM && null != L, "invalid streaming invite");
     let M = y === L.id,
         k = O.state === b.r2o.ACCEPTING,
         U = i.useCallback(() => {

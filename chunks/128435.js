@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(278074),
+    o = n.n(l),
+    a = n(278074),
     s = n(263568),
     c = n(481060),
     u = n(203143),
@@ -47,9 +47,9 @@ function h(e) {
     });
 }
 function b(e) {
-    let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: o } = e;
+    let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: a } = e;
     return (0, r.jsxs)("div", {
-        className: a()(g.detailsText, o),
+        className: o()(g.detailsText, a),
         children: [
             l
                 ? (0, r.jsx)(c.Avr, {
@@ -75,7 +75,7 @@ function b(e) {
     });
 }
 function E(e) {
-    let { action: t, channelId: n, messageId: l, isInteractive: a, className: o } = e,
+    let { action: t, channelId: n, messageId: l, isInteractive: o, className: a } = e,
         { actionButtonRef: s, manageFocusOnAction: d } = (0, m.dv)(),
         p = i.useCallback(async () => {
             (null == t ? void 0 : t.type) != null &&
@@ -113,8 +113,8 @@ function E(e) {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: p,
-                  isInteractive: a,
-                  className: o,
+                  isInteractive: o,
+                  className: a,
               });
 }
 function C(e) {
@@ -131,7 +131,7 @@ function C(e) {
                 myAvatarUrl: t.myAvatarUrl,
                 canShowVoteCounts: t.canShowVoteCounts,
             };
-            return (0, o.EQ)(t.layoutType)
+            return (0, a.EQ)(t.layoutType)
                 .with(s.C.DEFAULT, () => (0, r.jsx)(f.K, _({}, n)))
                 .with(s.C.IMAGE_ONLY_ANSWERS, () => (0, r.jsx)(d.Z, _({}, n)))
                 .otherwise(() => null);
@@ -139,7 +139,7 @@ function C(e) {
     return null == u
         ? null
         : (0, r.jsx)("div", {
-              className: a()(g.container, l, i),
+              className: o()(g.container, l, i),
               children: (0, r.jsxs)(c.y5t, {
                   children: [
                       (0, r.jsxs)("div", {

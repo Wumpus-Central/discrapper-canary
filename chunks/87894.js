@@ -1,7 +1,7 @@
 n.d(t, {
     DJ: () => a,
     U0: () => c,
-    W_: () => r,
+    W_: () => s,
     Z$: () => u,
     Z0: () => m,
     iM: () => i,
@@ -9,17 +9,17 @@ n.d(t, {
     jc: () => l,
     uq: () => o,
 });
-var s = n(497505);
+var r = n(497505);
 function o(e) {
-    return [s.jn.GIFT_INVENTORY_FOR_YOU, s.jn.GIFT_INVENTORY_OTHER].includes(e);
+    return [r.jn.GIFT_INVENTORY_FOR_YOU, r.jn.GIFT_INVENTORY_OTHER].includes(e);
 }
-function r(e) {
-    return e === s.jn.GIFT_INVENTORY_FOR_YOU || !o(e);
+function s(e) {
+    return e === r.jn.GIFT_INVENTORY_FOR_YOU || !o(e);
 }
 function i(e) {
     let { quest: t, location: n } = e,
-        { userStatus: s } = t;
-    return ((null == s ? void 0 : s.enrolledAt) != null && null == s.completedAt) || r(n);
+        { userStatus: r } = t;
+    return ((null == r ? void 0 : r.enrolledAt) != null && null == r.completedAt) || s(n);
 }
 let a = 100,
     l = 20,

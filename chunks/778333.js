@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(493683),
-    o = n(447543),
+    o = n(493683),
+    a = n(447543),
     s = n(100527),
     c = n(906732),
     u = n(955415),
@@ -30,8 +30,8 @@ function E(e) {
             let e = "noop";
             null != n.inviter &&
                 null != m.Z.getDMFromUserId(n.inviter.id) &&
-                ((e = "transition"), a.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })),
-                (0, o.r$)(
+                ((e = "transition"), o.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })),
+                (0, a.r$)(
                     {
                         invite: n,
                         action: e,
@@ -42,7 +42,7 @@ function E(e) {
                 );
         }, [n, E, x]),
         S = i.useCallback(() => {
-            (0, o.r$)(
+            (0, a.r$)(
                 {
                     invite: n,
                     action: "accept",
@@ -52,7 +52,7 @@ function E(e) {
                 x,
             );
             let e = C("Invite Button Embed");
-            o.ZP.acceptInviteAndTransitionToInviteChannel({
+            a.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e,
             });

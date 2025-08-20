@@ -15,10 +15,11 @@ var r = n(951288),
     m = n(461671);
 function g() {
     let [e, t] = i.useState(!1),
-        { saveablePendingWidgets: n, hasSaveablePendingChanges: a } = (0, s.cj)([d.Z], () => ({
-            saveablePendingWidgets: d.Z.getSaveablePendingWidgets(),
-            hasSaveablePendingChanges: d.Z.hasSaveablePendingChanges(),
-        }));
+        n = (0, s.Wu)([d.Z], () => {
+            var e;
+            return null != (e = d.Z.getSaveablePendingWidgets()) ? e : [];
+        }),
+        a = (0, s.e7)([d.Z], () => d.Z.hasSaveablePendingChanges());
     i.useEffect(() => {
         let e = null;
         function n() {
@@ -32,13 +33,13 @@ function g() {
         );
     }, []);
     let g = i.useCallback(async () => {
-            if (null !== n)
+            if (a)
                 try {
                     await u.Z.savePendingWidgets(n);
                 } catch (e) {
                     (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
                 }
-        }, [n]),
+        }, [a, n]),
         E = i.useCallback(() => {
             u.Z.clearPendingWidgets();
         }, []);

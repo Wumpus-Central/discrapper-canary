@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(67390),
-    a = n(63063),
-    o = n(739566),
+    o = n(63063),
+    a = n(739566),
     s = n(942951),
     c = n(834129),
     u = n(981631),
@@ -12,14 +12,14 @@ var i = n(481060),
     p = n(587091);
 function m(e) {
     let { compact: t, message: n, channel: m } = e,
-        f = (0, o.ZP)(n),
+        f = (0, a.ZP)(n),
         g = (0, s.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: m.guild_id,
             messageId: n.id,
         })(f),
-        _ = a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
+        _ = o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -36,7 +36,7 @@ function m(e) {
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    window.open(a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), "_blank");
+                    window.open(o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), "_blank");
                 },
                 className: p.embed,
                 children: [

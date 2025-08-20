@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(447543),
     u = n(607070),
@@ -25,7 +25,7 @@ function y(e) {
         [f, _] = i.useState(!0),
         [y, j] = i.useState(!1),
         I = t.state === C.r2o.ACCEPTING,
-        S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+        S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
         j((null != (t = null == (e = p.current) ? void 0 : e.clientHeight) ? t : 0) > 292);
@@ -49,7 +49,7 @@ function y(e) {
     return null == T
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: a()(O.guildInviteContainer, { [O.clickable]: y && f }),
+              className: o()(O.guildInviteContainer, { [O.clickable]: y && f }),
               onClick: P,
               style: A,
               children: [
@@ -82,11 +82,11 @@ function y(e) {
                         })
                       : null,
                   (0, r.jsxs)("div", {
-                      className: a()(O.footer, { [O.floatingFooter]: y }),
+                      className: o()(O.footer, { [O.floatingFooter]: y }),
                       children: [
                           y && f ? (0, r.jsx)("div", { className: O.gradient }) : null,
                           (0, r.jsx)("div", {
-                              className: a()(O.footerContent, { [O.collapsedFooterContent]: y && f }),
+                              className: o()(O.footerContent, { [O.collapsedFooterContent]: y && f }),
                               children: (0, r.jsx)("div", {
                                   className: O.buttonContainer,
                                   children: (0, r.jsx)(x, {
@@ -110,8 +110,8 @@ function x(e) {
             invite: t,
             profile: n,
             isMemberOfGuild: l,
-            message: a,
-            submitting: o,
+            message: o,
+            submitting: a,
             onTransitionToInviteChannel: s,
             onAcceptInstantInvite: u,
         } = e,
@@ -123,18 +123,18 @@ function x(e) {
                 {
                     invite: t,
                     action: e,
-                    inviter_id: a.author.id,
-                    invite_message_id: a.id,
+                    inviter_id: o.author.id,
+                    invite_message_id: o.id,
                 },
                 h,
             );
-        }, [t, a, h, l]);
+        }, [t, o, h, l]);
     return null == g
         ? null
         : (0, r.jsx)(_.o, {
               guildId: m,
               ctaType: g,
-              submitting: o,
+              submitting: a,
               onGoToGuild: s,
               onAcceptInvite: u,
               onStartApplication: u,

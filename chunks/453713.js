@@ -100,7 +100,7 @@ let C = s()((e) => {
             S = (0, c.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(a)),
             { onFocus: x } = S,
             j = O(S, ["onFocus"]),
-            P = l.useCallback(
+            T = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, f.$)(t, a), x();
                 },
@@ -131,9 +131,9 @@ let C = s()((e) => {
                             var t;
                             g(), null == (t = e.onMouseLeave) || t.call(e);
                         },
-                        onClick: P,
+                        onClick: T,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && P(e);
+                            e.key === u.R8.ENTER && T(e);
                         },
                         className: h.colorVariant,
                         children: (0, n.jsx)("div", {

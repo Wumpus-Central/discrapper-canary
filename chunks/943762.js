@@ -6,11 +6,11 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(884338),
-    a = n(981631),
-    o = n(388032),
+    o = n(981631),
+    a = n(388032),
     s = n(188206);
 function c(e) {
-    let { activityUsers: t, guildId: n, activityText: a } = e;
+    let { activityUsers: t, guildId: n, activityText: o } = e;
     return (0, r.jsxs)("div", {
         className: s.wrapper,
         children: [
@@ -23,26 +23,26 @@ function c(e) {
             (0, r.jsxs)(i.Text, {
                 variant: "text-xs/normal",
                 color: "none",
-                children: [t.length, " ", a],
+                children: [t.length, " ", o],
             }),
         ],
     });
 }
 function u(e) {
     switch (null == e ? void 0 : e.type) {
-        case a.IIU.STREAMING:
+        case o.IIU.STREAMING:
             return {
-                text: o.intl.string(o.t["Jpkr/v"]),
+                text: a.intl.string(a.t["Jpkr/v"]),
                 Icon: i.m3e,
             };
-        case a.IIU.LISTENING:
+        case o.IIU.LISTENING:
             return {
-                text: o.intl.string(o.t.kUEnxM),
+                text: a.intl.string(a.t.kUEnxM),
                 Icon: i.RZG,
             };
         default:
             return {
-                text: o.intl.string(o.t.BMTj29),
+                text: a.intl.string(a.t.BMTj29),
                 Icon: i.iWm,
             };
     }

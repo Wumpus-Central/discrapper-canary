@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(942951),
-    o = n(834129),
+    o = n(942951),
+    a = n(834129),
     s = n(703656),
     c = n(314897),
     u = n(271383),
@@ -16,9 +16,9 @@ var r = n(951288),
     m = n(388032);
 let f = (e, t) => {
     let { joinRequest: n, joinRequestGuild: r } = (0, p.Z)(t.id),
-        o = (0, l.e7)([d.default], () => d.default.getUser(null == n ? void 0 : n.userId)),
-        m = (0, a.l)({
-            user: o,
+        a = (0, l.e7)([d.default], () => d.default.getUser(null == n ? void 0 : n.userId)),
+        m = (0, o.l)({
+            user: a,
             channelId: t.id,
             guildId: t.guild_id,
             messageId: e.id,
@@ -36,14 +36,14 @@ let f = (e, t) => {
 };
 function g(e) {
     var t;
-    let { message: i, channel: l, compact: a } = e,
+    let { message: i, channel: l, compact: o } = e,
         { guild: s, joinRequest: c, usernameHook: u, guildNameClick: d } = f(i, l),
         p = null == c || null == (t = c.user) ? void 0 : t.username,
         g = null == s ? void 0 : s.name;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(570111),
         timestamp: i.timestamp,
-        compact: a,
+        compact: o,
         children:
             null != p && null != g
                 ? m.intl.format(m.t["21R6Cg"], {
@@ -57,14 +57,14 @@ function g(e) {
 }
 function _(e) {
     var t;
-    let { message: i, channel: l, compact: a } = e,
+    let { message: i, channel: l, compact: o } = e,
         { guild: s, joinRequest: c, usernameHook: u, guildNameClick: d } = f(i, l),
         p = null == c || null == (t = c.user) ? void 0 : t.username,
         g = null == s ? void 0 : s.name;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(474019),
         timestamp: i.timestamp,
-        compact: a,
+        compact: o,
         children:
             null != p && null != g
                 ? m.intl.format(m.t["Bz/QCw"], {
@@ -78,14 +78,14 @@ function _(e) {
 }
 function h(e) {
     var t;
-    let { message: i, channel: l, compact: a } = e,
+    let { message: i, channel: l, compact: o } = e,
         { guild: s, joinRequest: c, usernameHook: u, guildNameClick: d } = f(i, l),
         p = null == c || null == (t = c.user) ? void 0 : t.username,
         g = null == s ? void 0 : s.name;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(474019),
         timestamp: i.timestamp,
-        compact: a,
+        compact: o,
         children:
             null != p && null != g
                 ? m.intl.format(m.t.Kpkesr, {

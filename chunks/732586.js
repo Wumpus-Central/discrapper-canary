@@ -79,9 +79,8 @@ function p(e) {
         ? (0, n.jsx)(o.xJW, {
               title: f,
               required: y,
-              error: x,
               className: u.formItem,
-              titleClassName: u.title,
+              error: x,
               children: t,
           })
         : t;

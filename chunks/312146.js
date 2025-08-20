@@ -1,5 +1,5 @@
 n.d(t, {
-    Ui: () => a,
+    Ui: () => o,
     p$: () => s,
 });
 var r = n(818083),
@@ -17,7 +17,7 @@ let l = (0, r.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     var t;
     let { enabled: n } = l.useExperiment(
         {
@@ -28,7 +28,7 @@ function a(e) {
     );
     return (null == e ? void 0 : e.id) != null && n;
 }
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2023-04_guild_media_channel_post_preview_embed_users",
     label: "Guild Role Subscription Users",
@@ -42,6 +42,6 @@ let o = (0, r.B)({
     ],
 });
 function s() {
-    let { enabledForUser: e } = o.useExperiment({ location: "96e84c_2" }, { autoTrackExposure: !0 });
+    let { enabledForUser: e } = a.useExperiment({ location: "96e84c_2" }, { autoTrackExposure: !0 });
     return e;
 }

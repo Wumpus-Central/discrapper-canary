@@ -2,8 +2,8 @@ n.d(t, { ZP: () => U }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(238651),
     c = n(772848),
     u = n(468194),
@@ -167,7 +167,7 @@ function M() {
         });
 }
 function k(e) {
-    let { onAnimationComplete: t, onClick: n, position: r, size: a } = e,
+    let { onAnimationComplete: t, onClick: n, position: r, size: o } = e,
         u = l.useRef(null),
         [d, m] = l.useState(null),
         [g] = l.useState(
@@ -233,7 +233,7 @@ function k(e) {
                             x: r.left + i.x,
                             y: r.top + i.y,
                         };
-                    })(u.current, g, a);
+                    })(u.current, g, o);
                 _(t.x, t.y, {
                     velocity: {
                         type: "static-random",
@@ -248,7 +248,7 @@ function k(e) {
                     },
                 });
             }
-        }, [_, g, d, a]),
+        }, [_, g, d, o]),
         l.useEffect(() => {
             if (O && "leaf_fall" === d) {
                 let e = A[g].leafRotationDirection;
@@ -314,7 +314,7 @@ function k(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: o()(y.easterEggAnimationClickTarget, {
+                    className: a()(y.easterEggAnimationClickTarget, {
                         [y.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === g,
                         [y.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === g,
                         [y.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === g,
@@ -322,7 +322,7 @@ function k(e) {
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: k,
-                        className: o()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: x }),
+                        className: a()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: x }),
                         nextScene: v,
                         sceneSegments: I,
                         onScenePlay: j,
@@ -337,7 +337,7 @@ function k(e) {
 }
 function U(e) {
     let t,
-        { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
+        { message: n, compact: r, guild: o, usernameHook: a, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
                 case v.uaV.GUILD_BOOST_TIER_1:
@@ -356,9 +356,9 @@ function U(e) {
         { reducedMotion: T } = l.useContext(p.Sfi),
         P = (0, E.ZP)(n),
         N = P.nick,
-        A = o(P);
+        A = a(P);
     t =
-        null == c || null == a
+        null == c || null == o
             ? u > 1
                 ? O.intl.format(O.t.yfC9dn, {
                       username: N,
@@ -374,13 +374,13 @@ function U(e) {
                     username: N,
                     usernameHook: A,
                     numSubscriptions: u,
-                    guildName: a.name,
+                    guildName: o.name,
                     newTierName: (0, b.nW)(c),
                 })
               : O.intl.format(O.t.cUfTTE, {
                     username: N,
                     usernameHook: A,
-                    guildName: a.name,
+                    guildName: o.name,
                     newTierName: (0, b.nW)(c),
                 });
     let Z = l.useCallback(() => {

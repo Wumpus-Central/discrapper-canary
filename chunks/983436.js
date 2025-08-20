@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(287734),
-    a = n(475468),
-    o = n(358555),
+    o = n(475468),
+    a = n(358555),
     s = n(955415),
     c = n(944486),
     u = n(914010),
@@ -25,7 +25,7 @@ function g(e) {
                 guild_id: _,
                 channel_id: h,
             }),
-                (0, a.K)(t.id, n.id),
+                (0, o.K)(t.id, n.id),
                 l.default.selectVoiceChannel(n.id);
         }, [g, t, n, _, h]),
         E = (0, r.jsx)(s.Z.Channel, { channel: n });
@@ -45,7 +45,7 @@ function g(e) {
                                     m.intl.format(m.t["2wimj4"], { guildName: t.name }),
                                     (0, r.jsx)("span", {
                                         className: f.infoBadge,
-                                        children: (0, r.jsx)(o.Z, {
+                                        children: (0, r.jsx)(a.Z, {
                                             guild: t,
                                             isBannerVisible: !1,
                                         }),

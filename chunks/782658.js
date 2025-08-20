@@ -2,8 +2,8 @@ n.d(t, { Z: () => Z });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(447543),
-    o = n(410575),
+    o = n(447543),
+    a = n(410575),
     s = n(758119),
     c = n(622822),
     u = n(906732),
@@ -41,7 +41,7 @@ function Z(e) {
         ),
         L = null == R;
     i.useEffect(() => {
-        L && a.ZP.resolveInvite(t);
+        L && o.ZP.resolveInvite(t);
     }, [t, L]);
     let M =
             null != R
@@ -59,7 +59,7 @@ function Z(e) {
             return m.ZP.getGuildScheduledEvent(null == (e = M.guild_scheduled_event) ? void 0 : e.id);
         }, [M]),
         H = () => {
-            null != M.channel && a.ZP.transitionToInviteSync(M);
+            null != M.channel && o.ZP.transitionToInviteSync(M);
         },
         V = () => {
             if (null == F && (null == R ? void 0 : R.guild) != null) {
@@ -75,7 +75,7 @@ function Z(e) {
                       },
                       analyticsLocations: k,
                   })
-                : a.ZP.acceptInviteAndTransitionToInviteChannel({
+                : o.ZP.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
                       context: Z("Invite Button Embed"),
                   });
@@ -166,7 +166,7 @@ function Z(e) {
                         }));
             }
     }
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         section: A.jXE.INVITE_LINK,
         children: z,
     });

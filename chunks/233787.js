@@ -1,11 +1,11 @@
-r.d(t, { C: () => p }), r(539854);
+r.d(t, { C: () => m }), r(539854);
 var n,
     i = r(951288),
     a = r(647438),
-    c = r(82659),
-    l = r(584649),
-    o =
-        (((n = o || {}).UPGRADE = "UPGRADE"),
+    l = r(82659),
+    o = r(584649),
+    c =
+        (((n = c || {}).UPGRADE = "UPGRADE"),
         (n.CANCEL = "CANCEL"),
         (n.UNVERIFIED = "UNVERIFIED"),
         (n.UNCLAIMED = "UNCLAIMED"),
@@ -21,8 +21,8 @@ let s = {
     u = (e) => {
         var t,
             r,
-            { children: n, premiumModalType: o, primary: u, secondary: p } = e,
-            b = (function (e, t) {
+            { children: n, premiumModalType: c, primary: u, secondary: m } = e,
+            p = (function (e, t) {
                 if (null == e) return {};
                 var r,
                     n,
@@ -43,14 +43,14 @@ let s = {
                 }
                 return i;
             })(e, ["children", "premiumModalType", "primary", "secondary"]);
-        let m = a.useMemo(() => {
+        let d = a.useMemo(() => {
             let e = [];
             return (
-                null != p &&
+                null != m &&
                     e.push({
                         variant: "secondary",
-                        text: p.label,
-                        onClick: p.onClick,
+                        text: m.label,
+                        onClick: m.onClick,
                     }),
                 null != u &&
                     e.push({
@@ -60,9 +60,9 @@ let s = {
                     }),
                 e
             );
-        }, [u, p]);
+        }, [u, m]);
         return (0, i.jsxs)(
-            c.Modal,
+            l.Modal,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
@@ -87,14 +87,14 @@ let s = {
                         });
                 }
                 return e;
-            })({}, b)),
+            })({}, p)),
             (r = r =
                 {
-                    actions: m,
+                    actions: d,
                     children: [
-                        (0, i.jsx)("div", { className: l[s[o]] }),
+                        (0, i.jsx)("div", { className: o[s[c]] }),
                         (0, i.jsx)("div", {
-                            className: l.message,
+                            className: o.message,
                             children: n,
                         }),
                     ],
@@ -114,5 +114,5 @@ let s = {
             t),
         );
     };
-u.Types = o;
-let p = u;
+u.Types = c;
+let m = u;

@@ -21,8 +21,8 @@ n.d(t, {
 var r,
     i,
     l,
-    a,
     o,
+    a,
     s,
     c,
     u = n(990547),
@@ -89,22 +89,22 @@ Object.freeze({
     SPAM: d.jXE.APPEAL_INGESTION_SPAM,
 });
 var E =
-    (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
-    (a[(a.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
-    (a[(a.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
-    (a[(a.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
-    a);
+    (((o = {})[(o.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
+    (o[(o.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
+    (o[(o.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
+    (o[(o.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
+    o);
 let C = [0, 1, 2, 3],
     v = 372,
     O = 279,
     y = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
 var x =
-    (((o = {}).SPEED_BUMP = "speed-bump"),
-    (o.COLLECT_SIGNAL = "collect-signal"),
-    (o.CONFIRM_SUBMISSION = "confirm-submission"),
-    (o.REQUEST_SENT = "request-sent"),
-    (o.THANKS = "thanks"),
-    o);
+    (((a = {}).SPEED_BUMP = "speed-bump"),
+    (a.COLLECT_SIGNAL = "collect-signal"),
+    (a.CONFIRM_SUBMISSION = "confirm-submission"),
+    (a.REQUEST_SENT = "request-sent"),
+    (a.THANKS = "thanks"),
+    a);
 let j = {
     "speed-bump": {
         next: "collect-signal",

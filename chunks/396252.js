@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(385499),
     c = n(430824),
     u = n(739566),
@@ -17,7 +17,7 @@ var i = n(120356),
 function h(e) {
     var t;
     let { message: n, compact: i, usernameHook: h, channel: b } = e,
-        E = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
+        E = (0, o.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
         C = (0, u.ZP)(n),
         v = h(C),
         {
@@ -42,7 +42,7 @@ function h(e) {
                         username: (0, r.jsxs)("div", {
                             className: _.spanCorrection,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",

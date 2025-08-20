@@ -1,134 +1,134 @@
-t.d(n, { Z: () => _ });
-var r = t(951288),
-    i = t(647438),
-    l = t(512722),
-    o = t.n(l),
-    a = t(442837),
-    c = t(481060),
-    s = t(10718),
-    u = t(667204),
-    d = t(826298),
-    f = t(276022),
-    h = t(978983),
-    p = t(430824),
-    g = t(594174),
-    b = t(981631),
-    m = t(689079),
-    v = t(388032),
-    y = t(891628);
-let _ = (e) => {
-    let n,
-        { commandType: t, commandTargetId: l, channel: _, guildId: O, onHeightUpdate: E, context: Z } = e,
-        j = (0, a.e7)([p.Z], () => p.Z.getGuild(null != O ? O : _.guild_id)),
-        T = (0, a.e7)([g.default], () => g.default.getUser(l)),
-        S = (0, f.Z)({
-            user: T,
-            guildId: null == j ? void 0 : j.id,
-            context: Z,
+n.d(t, { Z: () => T });
+var s = n(951288),
+    i = n(647438),
+    r = n(512722),
+    c = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    u = n(10718),
+    l = n(667204),
+    p = n(826298),
+    f = n(276022),
+    d = n(978983),
+    g = n(430824),
+    b = n(594174),
+    h = n(981631),
+    m = n(689079),
+    x = n(388032),
+    y = n(891628);
+let T = (e) => {
+    let t,
+        { commandType: n, commandTargetId: r, channel: T, guildId: O, onHeightUpdate: _, context: v } = e,
+        S = (0, a.e7)([g.Z], () => g.Z.getGuild(null != O ? O : T.guild_id)),
+        E = (0, a.e7)([b.default], () => b.default.getUser(r)),
+        j = (0, f.Z)({
+            user: E,
+            guildId: null == S ? void 0 : S.id,
+            context: v,
         }),
-        x = i.useMemo(
+        w = i.useMemo(
             () => ({
-                channel: _,
+                channel: T,
                 type: "channel",
             }),
-            [_],
+            [T],
         ),
         {
-            commands: A,
-            sectionDescriptors: I,
-            loading: P,
-        } = s.wi({
-            context: x,
-            filters: { commandTypes: [t] },
+            commands: I,
+            sectionDescriptors: P,
+            loading: Z,
+        } = u.wi({
+            context: w,
+            filters: { commandTypes: [n] },
             options: { limit: m.lr },
             allowFetch: !0,
         }),
-        { sections: C } = i.useMemo(() => {
+        { sections: N } = i.useMemo(() => {
             let e = {};
             return (
-                I.forEach((n) => {
-                    e[n.id] = n;
+                P.forEach((t) => {
+                    e[t.id] = t;
                 }),
                 { sections: e }
             );
-        }, [I]),
-        w = i.useRef(P);
+        }, [P]),
+        C = i.useRef(Z);
     i.useEffect(() => {
-        P !== w.current && ((w.current = P), null == E || E());
-    }, [P, E]);
-    let N = i.useCallback(
+        Z !== C.current && ((C.current = Z), null == _ || _());
+    }, [Z, _]);
+    let R = i.useCallback(
         (e) => {
-            o()(null != _, "menu item should not show if channel is null");
-            let n = C[e.applicationId],
-                t = null != n ? (0, d.ky)(n) : void 0;
-            return (0, r.jsx)(
-                c.sNh,
+            c()(null != T, "menu item should not show if channel is null");
+            let t = N[e.applicationId],
+                n = null != t ? (0, p.ky)(t) : void 0;
+            return (0, s.jsx)(
+                o.sNh,
                 {
                     id: e.id,
                     label: e.displayName,
                     iconLeft: () =>
-                        null != t
-                            ? (0, r.jsx)(t, {
-                                  channel: _,
-                                  section: n,
+                        null != n
+                            ? (0, s.jsx)(n, {
+                                  channel: T,
+                                  section: t,
                                   width: 18,
                                   height: 18,
                                   selectable: !1,
                               })
                             : null,
                     action: () => {
-                        (0, u.Z)({
+                        (0, l.Z)({
                             command: e,
                             optionValues: {},
                             context: {
-                                channel: _,
-                                guild: j,
+                                channel: T,
+                                guild: S,
                             },
-                            commandTargetId: l,
+                            commandTargetId: r,
                         });
                     },
                 },
                 e.id,
             );
         },
-        [_, j, l, C],
+        [T, S, r, N],
     );
     if (
-        (P
-            ? (n = (0, r.jsx)(
-                  c.sNh,
+        (Z
+            ? (t = (0, s.jsx)(
+                  o.sNh,
                   {
                       id: "menu-commands-placeholder",
-                      render: () => (0, r.jsx)(h.Z, {}),
+                      render: () => (0, s.jsx)(d.Z, {}),
                       disabled: !0,
                   },
                   "menu-commands-placeholder",
               ))
-            : ((n =
-                  0 === A.length
-                      ? (0, r.jsx)(
-                            c.sNh,
+            : ((t =
+                  0 === I.length
+                      ? (0, s.jsx)(
+                            o.sNh,
                             {
                                 id: "menu-commands-empty",
-                                label: v.intl.string(v.t.YSNlV1),
+                                label: x.intl.string(x.t.YSNlV1),
                                 disabled: !0,
                             },
                             "menu-commands-empty",
                         )
-                      : A.map(N)),
-              null != S &&
-                  S.length > 0 &&
-                  (n = (0, r.jsxs)(r.Fragment, {
-                      children: [n, (0, r.jsx)(c.Clw, {}, "separator"), S],
+                      : I.map(R)),
+              null != j &&
+                  j.length > 0 &&
+                  (t = (0, s.jsxs)(s.Fragment, {
+                      children: [t, (0, s.jsx)(o.Clw, {}, "separator"), j],
                   }))),
-        !b.TPd.TEXTUAL.has(_.type))
+        !h.TPd.TEXTUAL.has(T.type))
     )
-        if (null == S) return null;
-        else n = S;
-    return (0, r.jsx)(c.sNh, {
+        if (null == j) return null;
+        else t = j;
+    return (0, s.jsx)(o.sNh, {
         id: "apps",
-        label: v.intl.string(v.t.PHjkRE),
+        label: x.intl.string(x.t.PHjkRE),
         listClassName: y.list,
-        children: n,
+        children: t,
     });
 };

@@ -2,9 +2,9 @@ n.d(t, { Z: () => L }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(913527),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(913527),
+    s = n.n(a),
     c = n(873546),
     u = n(442837),
     d = n(481060),
@@ -177,8 +177,8 @@ class D extends i.Component {
                     })({ analyticsLocations: [] }),
                 text: N.intl.string(N.t.Lm2nFR),
             }),
-            a = this.isSender ? l : i,
-            o =
+            o = this.isSender ? l : i,
+            a =
                 "SOCIAL" === t
                     ? (0, r.jsx)(d.Eep, {
                           src: Z.Z,
@@ -209,7 +209,7 @@ class D extends i.Component {
                 (0, r.jsxs)("div", {
                     className: A.containerDMEmbedXP,
                     children: [
-                        o,
+                        a,
                         (0, r.jsxs)("div", {
                             className: A.contentDMEmbedXP,
                             children: [
@@ -230,7 +230,7 @@ class D extends i.Component {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: A.buttonContainerDMEmbedXP,
-                                    children: a,
+                                    children: o,
                                 }),
                             ],
                         }),
@@ -247,7 +247,7 @@ class D extends i.Component {
                 return this.renderRefreshedDMEmbed({ emphasis: "PERKS" });
             default:
                 return (0, r.jsxs)("div", {
-                    className: a()(A.tile, A.container),
+                    className: o()(A.tile, A.container),
                     children: [
                         (0, r.jsx)("div", {
                             className: A.media,
@@ -298,7 +298,7 @@ class D extends i.Component {
 }
 function L(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n, compact: i } = e,
-        { trialOffer: l, isResolving: a } = (0, u.cj)(
+        { trialOffer: l, isResolving: o } = (0, u.cj)(
             [y.Z],
             () => ({
                 trialOffer: n ? y.Z.getRelevantUserTrialOffer(t) : null,
@@ -306,10 +306,10 @@ function L(e) {
             }),
             [n, t],
         ),
-        o = h.default.getCurrentUser(),
+        a = h.default.getCurrentUser(),
         s = (0, u.e7)(
             [h.default],
-            () => null != l && (0, O.I5)(void 0 !== o && l.user_id === o.id ? o : h.default.getUser(l.user_id)),
+            () => null != l && (0, O.I5)(void 0 !== a && l.user_id === a.id ? a : h.default.getUser(l.user_id)),
         ),
         d = (0, u.e7)([b.Z], () => {
             var e;
@@ -317,12 +317,12 @@ function L(e) {
         }),
         { analyticsLocations: g } = (0, f.ZP)(m.Z.SHARE_NITRO_EMBED),
         _ = x.ZP.useExperiment({ location: "ConnectedReferralTrialEmbed" });
-    return a
+    return o
         ? (0, r.jsx)(p.OR, { isHorizontal: !c.tq })
-        : n && null != l && void 0 !== o
+        : n && null != l && void 0 !== a
           ? (0, r.jsx)(D, {
                 trialOffer: l,
-                currentUser: o,
+                currentUser: a,
                 recipientHasNitro: s,
                 trialEndsAt: d,
                 analyticsLocations: g,

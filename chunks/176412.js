@@ -7,8 +7,8 @@ n.d(t, {
 var r,
     i,
     l = n(647438),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     c = n(25209),
     u = n(755721),
@@ -68,7 +68,7 @@ let S =
                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
               }),
         r),
-    T = o().pick(
+    T = a().pick(
         (0, E.Z)([
             b.Z.RULES,
             { commandMention: S },
@@ -101,8 +101,8 @@ function N(e) {
             application: n,
             location: r,
             sectionName: i,
-            commandName: a,
-            autoDismissOnClick: o = !0,
+            commandName: o,
+            autoDismissOnClick: a = !0,
             launchingComponentId: c,
             submitting: h = !1,
             fetchesApplication: b = !0,
@@ -133,7 +133,7 @@ function N(e) {
             locationObject: C.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                o && v.yT(y.ti.ACTIVITY),
+                a && v.yT(y.ti.ACTIVITY),
                     (0, f.yw)(j.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: r,
                         application_id: t,
@@ -151,7 +151,7 @@ function N(e) {
         }),
         w = "primary",
         Z = u.Tt.BRAND,
-        R = null != a ? a : I.intl.string(I.t.zKX8Nj);
+        R = null != o ? o : I.intl.string(I.t.zKX8Nj);
     return (
         T === p.JS.JOIN
             ? ((w = "active"), (Z = u.Tt.GREEN), (R = I.intl.string(I.t.d9PsMj)))
@@ -169,7 +169,7 @@ function A(e, t) {
     let n = O.Z.entrypoint(),
         r = l.useMemo(
             () =>
-                (0, a.debounce)(
+                (0, o.debounce)(
                     (e, t) => {
                         (0, f.yw)(j.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,

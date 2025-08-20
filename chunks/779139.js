@@ -5,17 +5,17 @@ n.d(t, {
 var r = n(904245),
     i = n(594174),
     l = n(626135),
-    a = n(709054),
-    o = n(8532),
+    o = n(709054),
+    a = n(8532),
     s = n(981631);
 let c = (e) => {
         var t;
         let n = null == (t = i.default.getCurrentUser()) ? void 0 : t.id,
-            r = ((null != n ? a.default.extractTimestamp(n) : 0) + a.default.extractTimestamp(e)) % o.m.length;
-        return o.m[r];
+            r = ((null != n ? o.default.extractTimestamp(n) : 0) + o.default.extractTimestamp(e)) % a.m.length;
+        return a.m[r];
     },
     u = (e, t, n) => {
-        var a;
+        var o;
         r.Z.sendGreetMessage(
             e.id,
             n,
@@ -30,6 +30,6 @@ let c = (e) => {
                 is_reply: !0,
                 sticker_id: n,
                 target_user: t.author.id,
-                sender: null == (a = i.default.getCurrentUser()) ? void 0 : a.id,
+                sender: null == (o = i.default.getCurrentUser()) ? void 0 : o.id,
             });
     };

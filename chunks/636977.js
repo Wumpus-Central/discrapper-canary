@@ -36,6 +36,8 @@ var r = (function (e) {
         (e[(e.QUEST_ENROLLMENT_BLOCKED_MODAL = 32)] = "QUEST_ENROLLMENT_BLOCKED_MODAL"),
         (e[(e.INTERNAL_PREVIEW_TOOL = 33)] = "INTERNAL_PREVIEW_TOOL"),
         (e[(e.ORBS_REHEAT_COACHMARK_CTA = 34)] = "ORBS_REHEAT_COACHMARK_CTA"),
+        (e[(e.INVALID_QUEST_EMBED = 35)] = "INVALID_QUEST_EMBED"),
+        (e[(e.NOT_SHAREABLE_QUEST_EMBED = 36)] = "NOT_SHAREABLE_QUEST_EMBED"),
         e
     );
 })({});

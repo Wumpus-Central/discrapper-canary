@@ -1,12 +1,12 @@
 n.d(t, {
-    E: () => o,
-    _: () => a,
+    E: () => a,
+    _: () => o,
 }),
     n(314940);
 var r = n(278074),
     i = n(263568),
     l = n(807554);
-function a(e, t) {
+function o(e, t) {
     let n = (0, r.EQ)(t)
         .with(i.C.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers)
         .otherwise(() => l.normalStylesDefault);
@@ -23,6 +23,6 @@ function a(e, t) {
         },
     };
 }
-function o(e, t) {
+function a(e, t) {
     return e.getAvatarURL(t, 20, !1);
 }

@@ -1,31 +1,31 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(668781),
     i = n(699516),
     l = n(493892),
-    a = n(388032);
-function o(e) {
+    o = n(388032);
+function a(e) {
     let t = null;
     return (
         i.Z.isBlockedForMessage(e)
             ? (t = {
-                  title: a.t["j7eA/v"],
-                  body: a.t.dTNNgo,
+                  title: o.t["j7eA/v"],
+                  body: o.t.dTNNgo,
               })
             : i.Z.isIgnoredForMessage(e)
               ? (t = {
-                    title: a.t.XyWoKS,
-                    body: a.t["8t8doK"],
+                    title: o.t.XyWoKS,
+                    body: o.t["8t8doK"],
                 })
               : (0, l.DQ)(e) &&
                 (t = {
-                    title: a.t["6vJKFh"],
-                    body: a.t.zKNgPD,
+                    title: o.t["6vJKFh"],
+                    body: o.t.zKNgPD,
                 }),
         null == t ||
             (r.Z.show({
-                title: a.intl.string(t.title),
-                body: a.intl.formatToPlainString(t.body, { name: e.author.username }),
-                confirmText: a.intl.string(a.t.BddRzc),
+                title: o.intl.string(t.title),
+                body: o.intl.formatToPlainString(t.body, { name: e.author.username }),
+                confirmText: o.intl.string(o.t.BddRzc),
             }),
             !1)
     );

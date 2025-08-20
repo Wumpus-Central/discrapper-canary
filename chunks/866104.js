@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(131388),
     u = n(357352),
@@ -54,7 +54,7 @@ function S(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
         l = (0, E.n)() && i,
-        [a, o] = (0, m.Z)(t, l),
+        [o, a] = (0, m.Z)(t, l),
         s = l
             ? (0, r.jsx)(d.Z, {
                   autoPlay: !0,
@@ -70,13 +70,13 @@ function S(e) {
                   className: j.coverImage,
               });
     return (0, r.jsx)("div", {
-        ref: a,
+        ref: o,
         className: j.coverImageContainer,
         children:
-            null == o || n
+            null == a || n
                 ? s
                 : (0, r.jsx)("img", {
-                      src: o,
+                      src: a,
                       alt: "",
                       className: j.coverImage,
                   }),
@@ -86,10 +86,10 @@ function T(e) {
     var t, n;
     let { guild: l, subscriptionsSettings: d } = e,
         m = l.id,
-        { nickname: f, nickcolor: h } = (0, o.cj)([g.ZP, _.default], () => {
+        { nickname: f, nickcolor: h } = (0, a.cj)([g.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
-            a()(null != n, "user cannot be null");
+            o()(null != n, "user cannot be null");
             let r = g.ZP.getMember(m, n.id);
             return {
                 nickname: null != (e = null == r ? void 0 : r.nick) ? e : b.ZP.getName(n),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(951288),
     i = n(647438),
     l = n(793030),
-    a = n(442837),
-    o = n(902704),
+    o = n(442837),
+    a = n(902704),
     s = n(692547),
     c = n(481060),
     u = n(356264),
@@ -45,11 +45,11 @@ function T() {
 function P(e) {
     let { message: t, snapshot: n, index: d } = e,
         p = i.useMemo(() => new O.r(t, n, d), [t, n, d]),
-        m = (0, a.e7)(
+        m = (0, o.e7)(
             [_.Z, v.default, C.Z, E.Z, b.Z, u.Z],
             () => p.getForwardInfo(_.Z, v.default, C.Z, E.Z, b.Z, u.Z).footerInfo,
             [p],
-            o.Z,
+            a.Z,
         ),
         f = i.useCallback(() => {
             (0, y.Z)(t);
@@ -82,11 +82,11 @@ function P(e) {
 }
 function N(e) {
     var t;
-    let { message: n, snapshot: l, index: o } = e,
+    let { message: n, snapshot: l, index: a } = e,
         s = i.useMemo(() => (0, x.Z)(n, l), [n, l]),
         c = g.RS.useSetting(),
         u = g.NA.useSetting(),
-        b = (0, a.e7)([h.Z], () => h.Z.isDeveloper),
+        b = (0, o.e7)([h.Z], () => h.Z.isDeveloper),
         E = (0, d.A)((null != (t = s.editedTimestamp) ? t : s.timestamp).valueOf()),
         { content: C, hasSpoilerEmbeds: v } = (0, m.Z)(s, {
             hideSimpleEmbedContent: c && u,
@@ -98,7 +98,7 @@ function N(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        O = (0, a.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
+        O = (0, o.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
         y = g.jU.useSetting();
     return null == O
         ? null
@@ -131,13 +131,13 @@ function N(e) {
                               (0, r.jsx)(P, {
                                   message: n,
                                   snapshot: l,
-                                  index: o,
+                                  index: a,
                               }),
                           ],
                       }),
                   ],
               },
-              o,
+              a,
           );
 }
 function A(e) {

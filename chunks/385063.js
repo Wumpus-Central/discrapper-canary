@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(100527),
-    o = n(769409),
+    o = n(100527),
+    a = n(769409),
     s = n(592125),
     c = n(739566),
     u = n(834129),
@@ -48,7 +48,7 @@ function p(e) {
                       },
                       "edit-group-button-".concat(t.id),
                   ),
-                  onEditGroup: () => (0, o.B)(t.channel_id, a.Z.GROUP_DM_SYSTEM_MESSAGE_NAME),
+                  onEditGroup: () => (0, a.B)(t.channel_id, o.Z.GROUP_DM_SYSTEM_MESSAGE_NAME),
               })
             : d.intl.format(m ? d.t.SOQ4hI : d.t.oItgEx, {
                   username: f.nick,

@@ -6,8 +6,8 @@ n.d(t, {
 var r,
     i,
     l,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 let s = new Map(),
     c = new Map();
 var u =
@@ -15,7 +15,7 @@ var u =
     (i[(i.FETCHING = 1)] = "FETCHING"),
     (i[(i.FETCHED = 2)] = "FETCHED"),
     i);
-class d extends (r = a.ZP.Store) {
+class d extends (r = o.ZP.Store) {
     getPriceTiersFetchStateForGuildAndType(e, t) {
         var n, r;
         return null != (r = null == (n = c.get(e)) ? void 0 : n.get(t)) ? r : 0;
@@ -33,7 +33,7 @@ class d extends (r = a.ZP.Store) {
           writable: !0,
       })
     : (d[l] = "CreatorMonetizationStore");
-let p = new d(o.Z, {
+let p = new d(a.Z, {
     CONNECTION_OPEN: function () {
         s.clear(), c.clear();
     },

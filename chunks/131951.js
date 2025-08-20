@@ -343,10 +343,12 @@ function tk() {
                 s.cameraSource.audioDeviceGuid !==
                     (null == o || null == (n = o.cameraSource) ? void 0 : n.audioDeviceGuid)) &&
             eK.setGoLiveSource(null, eJ),
-        (e5 || i) && ((e7 = (e5 = i) ? t2(e2, tw().videoDeviceId) : eT.Av), eK.setVideoInputDevice(e7)),
-        (a = o),
-        null != o)
+        e5 || i)
     ) {
+        let e = tw().videoDeviceId;
+        e5 && e === eT.w5 && e7 !== eT.Av && (e = e7), (e7 = (e5 = i) ? t2(e2, e) : eT.Av), eK.setVideoInputDevice(e7);
+    }
+    if (((a = o), null != o)) {
         let e = {
             resolution: o.quality.resolution,
             frameRate: o.quality.frameRate,

@@ -2,22 +2,22 @@ n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(627861),
     l = n(100527),
-    a = n(906732),
-    o = n(728345),
+    o = n(906732),
+    a = n(728345),
     s = n(973616),
     c = n(789407),
     u = n(616922);
 let d = (e) => {
     var t;
     let { channel: n, message: d, hideParty: p } = e,
-        { analyticsLocations: m } = (0, a.ZP)(l.Z.INVITE_EMBED),
+        { analyticsLocations: m } = (0, o.ZP)(l.Z.INVITE_EMBED),
         f =
             null != d.application
                 ? s.ZP.createFromServer(d.application)
                 : null != d.activity && null != d.activity.party_id && (0, u.Ps)(d.activity.party_id)
                   ? c.r9
                   : void 0,
-        { data: g } = (0, o.IX)(null == (t = d.application) ? void 0 : t.id),
+        { data: g } = (0, a.IX)(null == (t = d.application) ? void 0 : t.id),
         _ = null != g ? g : f;
     return null == _
         ? null

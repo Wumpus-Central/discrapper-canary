@@ -23,8 +23,8 @@ var n = r(951288),
     S = r(304742),
     x = r(554067),
     j = r(215023),
-    P = r(981631),
-    T = r(388032),
+    T = r(981631),
+    P = r(388032),
     L = r(421200);
 function k(e) {
     let { tab: t, displayText: r, selected: l, handleTransition: a } = e;
@@ -154,26 +154,26 @@ function N(e) {
         B = [
             {
                 tab: j.AW.HOME,
-                displayText: T.intl.string(T.t.ijDDw8),
+                displayText: P.intl.string(P.t.ijDDw8),
             },
             {
                 tab: j.AW.CATALOG,
-                displayText: T.intl.string(T.t.Ah5sJi),
+                displayText: P.intl.string(P.t.Ah5sJi),
             },
         ];
     w &&
         B.push({
             tab: j.AW.ORBS,
-            displayText: T.intl.string(T.t.EBYkzs),
+            displayText: P.intl.string(P.t.EBYkzs),
         });
     let R = r ? E.DR : a,
-        Z = g === j.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
+        Z = g === j.AW.ORBS ? T.ZY5.SHOP_ORBS_TAB : T.ZY5.COLLECTIBLES_SHOP,
         D = l.useCallback(() => {
             t && (R(), (0, u.Ou)()),
                 (0, h.Y)({
                     pageType: Z,
-                    sectionType: P.jXE.ORBS_BALANCE_MENU,
-                    ctaObject: P.qAy.CTA_TO_QUEST_HOME,
+                    sectionType: T.jXE.ORBS_BALANCE_MENU,
+                    ctaObject: T.qAy.CTA_TO_QUEST_HOME,
                 }),
                 (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [R, t, Z]),
@@ -190,10 +190,10 @@ function N(e) {
                     (0, n.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
                         onClick: () => f(j.AW.HOME),
-                        "aria-label": T.intl.string(T.t.pWG4zc) + " home",
+                        "aria-label": P.intl.string(P.t.pWG4zc) + " home",
                         children: [
                             (0, n.jsx)(C.Z, { className: L.discordLogo }),
-                            (0, n.jsx)(m.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
+                            (0, n.jsx)(m.Z.Title, { children: P.intl.string(P.t.pWG4zc) }),
                         ],
                     }),
                     (0, n.jsx)("div", {
@@ -237,7 +237,7 @@ function N(e) {
                                         anchorPillType: t ? "SHOP_FULLSCREEN" : "SHOP",
                                         analyticsPage: Z,
                                         cardAlignment: v.V9.CardAlignment.END,
-                                        ctaText: T.intl.string(T.t.VC4Mq6),
+                                        ctaText: P.intl.string(P.t.VC4Mq6),
                                         ctaOnClick: D,
                                         className: L.balanceWidgetMenu,
                                     }),

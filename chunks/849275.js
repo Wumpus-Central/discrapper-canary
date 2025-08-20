@@ -30,12 +30,12 @@ function h(e, t) {
         y = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         S = (0, o.e7)([u.Z], () => u.Z.getUserDiscounts()),
         x = (0, p.a)(),
-        [j, P] = n.useState([]),
-        T = n.useCallback(() => {
-            C(i.m.RANDOM), P(a().shuffle(y));
+        [j, T] = n.useState([]),
+        P = n.useCallback(() => {
+            C(i.m.RANDOM), T(a().shuffle(y));
         }, [y]);
     n.useEffect(() => {
-        P(a().shuffle(y));
+        T(a().shuffle(y));
     }, [y]);
     let L = n.useMemo(() => {
         let e = [];
@@ -81,6 +81,6 @@ function h(e, t) {
             );
         }, [v]),
         showRecommendationOption: v,
-        shuffleProducts: T,
+        shuffleProducts: P,
     };
 }

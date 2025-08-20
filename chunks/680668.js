@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(533800),
-    a = n(481060),
-    o = n(447543),
+    o = n(481060),
+    a = n(447543),
     s = n(100527),
     c = n(906732),
     u = n(857395),
@@ -46,12 +46,12 @@ function v(e) {
         K = i.useCallback(() => Y(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            Y(!0), (0, o.CB)(V, "show profile", z);
+            Y(!0), (0, a.CB)(V, "show profile", z);
         }, [V, z]),
         J = i.useCallback(() => {
             let e = "noop";
             k ? (I(), (e = "transition")) : (S(), (e = "accept")),
-                (0, o.r$)(
+                (0, a.r$)(
                     {
                         invite: P,
                         action: e,
@@ -100,10 +100,10 @@ function v(e) {
             ],
         })),
         G &&
-            (j = (0, r.jsx)(a.DY3, {
+            (j = (0, r.jsx)(o.DY3, {
                 className: C.tooltipContainer,
                 text: E.intl.string(E.t["/FeTKy"]),
-                children: (0, r.jsx)(a.d3s, {
+                children: (0, r.jsx)(o.d3s, {
                     size: "md",
                     color: "currentColor",
                     className: C.infoIcon,
@@ -172,12 +172,12 @@ function v(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", { className: C.separator }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: E.intl.format(E.t["/o1IfH"], {
                                     onClick: () =>
-                                        (0, a.ZDy)(async () => {
+                                        (0, o.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
                                                 n.bind(n, 650233),
                                             );

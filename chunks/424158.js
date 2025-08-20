@@ -11,7 +11,6 @@ function a(e) {
         title: t,
         required: a.required,
         error: s,
-        titleClassName: o.title,
         children: [
             null != r &&
                 (0, n.jsx)(l.R94, {

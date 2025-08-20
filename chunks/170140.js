@@ -2,8 +2,8 @@ n.d(t, { J: () => b });
 var r = n(647438),
     i = n(399606),
     l = n(430198),
-    a = n(754688),
-    o = n(314897),
+    o = n(754688),
+    a = n(314897),
     s = n(592125),
     c = n(271383),
     u = n(430824),
@@ -17,8 +17,8 @@ var r = n(647438),
 function b(e, t) {
     let n = (0, f.p$)(),
         b = (0, _.LR)(e),
-        E = (0, i.e7)([c.ZP, o.default], () => {
-            let e = o.default.getId();
+        E = (0, i.e7)([c.ZP, a.default], () => {
+            let e = a.default.getId();
             return c.ZP.isMember(null == b ? void 0 : b.guildId, e);
         }, [b]),
         C = (0, i.e7)(
@@ -41,14 +41,14 @@ function b(e, t) {
                 r = s.Z.getChannel(null == b ? void 0 : b.channelId),
                 i = p.default.getUser(null == t ? void 0 : t.author_id),
                 l = d.Z.getGuildId(),
-                o = null != r && (0, a.YO)(r);
+                a = null != r && (0, o.YO)(r);
             return {
                 rawMediaPostEmbedData: t,
                 guild: n,
                 parentChannel: r,
                 user: i,
                 selectedGuildId: l,
-                canAccess: o,
+                canAccess: a,
             };
         }, [b]),
         T = r.useMemo(() => {

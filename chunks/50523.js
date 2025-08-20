@@ -2,8 +2,8 @@ n.d(t, { b: () => v }), n(539854), n(953529);
 var r = n(951288),
     i = n(442837),
     l = n(100527),
-    a = n(906732),
-    o = n(915346),
+    o = n(906732),
+    a = n(915346),
     s = n(783097),
     c = n(812236),
     u = n(230171),
@@ -28,7 +28,7 @@ function v(e) {
         }),
         T = null != v && (0, s.ye)(v),
         P = null != I && T && S,
-        { analyticsLocations: N } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
+        { analyticsLocations: N } = (0, o.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, E.KF)(A),
         Z = (0, i.e7)([h.ZP], () => {
@@ -65,7 +65,7 @@ function v(e) {
                 label: C.intl.string(C.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
-                    (0, o.W)({
+                    (0, a.W)({
                         appId: v.id,
                         botId: I,
                         analyticsLocations: N,

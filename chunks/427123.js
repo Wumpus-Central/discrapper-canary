@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685), n(539854);
 var r,
     i,
     l = n(392711),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(433517),
     c = n(570140),
     u = n(496929),
@@ -21,7 +21,7 @@ let E = "DetectedOffPlatformPremiumPerksStore",
     O = [];
 function y() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of a().values(v)) {
+    for (let { skuId: t, applicationId: n } of o().values(v)) {
         if (O.includes(t)) continue;
         let r = m.Z.getApplication(n);
         if (null == r) {
@@ -45,13 +45,13 @@ function y() {
     }
     return e;
 }
-class x extends (r = o.ZP.Store) {
+class x extends (r = a.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(f.ZP, h.Z, _.Z), (O = null != (e = s.K.get(E)) ? e : O);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return a().values(C);
+        return o().values(C);
     }
 }
 (i = "displayName") in x

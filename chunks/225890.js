@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(305325),
-    o = n(281956),
+    o = n(305325),
+    a = n(281956),
     s = n(922482),
     c = n(592125),
     u = n(271383),
@@ -47,7 +47,7 @@ function b(e) {
             isMember: y,
             onAcceptInstantInvite: h.dG,
             onTransitionToInviteChannel: function () {
-                if ((0, o.n)(n)) return void (0, a.hk)(n);
+                if ((0, a.n)(n)) return void (0, o.hk)(n);
                 (null == O ? void 0 : O.isGuildStageVoice())
                     ? (0, s.Cq)(O)
                     : (null == O ? void 0 : O.isGuildVoice()) && g.Z.joinVoiceEvent(O.guild_id, O.id);

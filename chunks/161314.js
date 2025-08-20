@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(990547),
+    o = n.n(l),
+    a = n(990547),
     s = n(831209),
     c = n(442837),
     u = n(159691),
@@ -62,15 +62,15 @@ function I(e) {
         }, [n]);
     (0, m.Z)(
         {
-            type: o.ImpressionTypes.VIEW,
-            name: o.ImpressionNames.GUILD_SHOP_EMBED,
+            type: a.ImpressionTypes.VIEW,
+            name: a.ImpressionNames.GUILD_SHOP_EMBED,
         },
         { disableTrack: null == l },
     );
     let A = P.length > 0 ? new Date(Math.min(...P.map((e) => Date.parse(e.published_at)))) : void 0;
     return I || !T
         ? (0, r.jsx)("div", {
-              className: a()(j.guildShopEmbed, j.spinnerContainer),
+              className: o()(j.guildShopEmbed, j.spinnerContainer),
               children: (0, r.jsx)(d.$jN, {}),
           })
         : null == l || null == S

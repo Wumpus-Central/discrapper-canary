@@ -5,8 +5,8 @@ var i = n(325767);
 function l(e) {
     var t,
         n,
-        { color: l = "currentColor", foreground: a } = e,
-        o = (function (e, t) {
+        { color: l = "currentColor", foreground: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -53,14 +53,14 @@ function l(e) {
                     });
             }
             return e;
-        })({}, (0, i.Z)(o))),
+        })({}, (0, i.Z)(a))),
         (n = n =
             {
                 viewBox: "0 0 136 56",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
                 children: (0, r.jsxs)("g", {
-                    className: a,
+                    className: o,
                     fill: l,
                     children: [
                         (0, r.jsx)("path", {

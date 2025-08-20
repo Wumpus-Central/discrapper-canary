@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(131193),
     i = n(731965),
     l = n(902704);
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function a(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,8 +57,8 @@ let s = {},
                 e((e) => {
                     var i;
                     return {
-                        polls: o(a({}, e.polls), {
-                            [t]: o(a({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }),
+                        polls: a(o({}, e.polls), {
+                            [t]: a(o({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }),
                         }),
                     };
                 });

@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(385499),
+    o = n(481060),
+    a = n(385499),
     s = n(739566),
     c = n(464891),
     u = n(83561),
@@ -38,14 +38,14 @@ function g(e) {
                         username: (0, r.jsxs)("div", {
                             className: f.spanCorrection,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
                                     className: f.username,
                                     children: m.intl.string(m.t.hG1StL),
                                 }),
-                                (0, r.jsx)(o.Z, {
+                                (0, r.jsx)(a.Z, {
                                     type: p.Hb.SYSTEM_DM,
                                     className: f.systemTag,
                                 }),

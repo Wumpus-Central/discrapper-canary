@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(974674),
+    o = n.n(l),
+    a = n(974674),
     s = n(438784),
     c = n(481060),
     u = n(686546),
@@ -157,13 +157,13 @@ let b = {
                           let r = c.ny6[e],
                               i = r.size / (d.z3 + d.o),
                               l = i * d.z3,
-                              a = i * d.o,
+                              o = i * d.o,
                               s = {
-                                  statusCoords: (0, o.Vq)(r, c.Skl.ONLINE, !1, t),
+                                  statusCoords: (0, a.Vq)(r, c.Skl.ONLINE, !1, t),
                                   frontAvatarSizePx: l,
                                   backAvatarSizePx: i,
-                                  frontAvatarOffsetPx: a,
-                                  frontAvatarCenter: a + l / 2,
+                                  frontAvatarOffsetPx: o,
+                                  frontAvatarCenter: o + l / 2,
                               };
                           return (m[n] = s), s;
                       })(s, f, t);
@@ -203,7 +203,7 @@ let b = {
             ),
             "aria-label": v["aria-label"],
             "aria-hidden": v["aria-hidden"],
-            className: a()(p.container, C),
+            className: o()(p.container, C),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,

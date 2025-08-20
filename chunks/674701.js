@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(990547),
     c = n(442837),
     u = n(692547),
@@ -39,7 +39,7 @@ function D(e) {
             giftIntentType: t,
             premiumGiftIntentCardType: n,
             recipientUser: r,
-            onMouseEnter: a,
+            onMouseEnter: o,
             onMouseLeave: R,
             popoutPosition: D,
             analyticsPage: L,
@@ -72,14 +72,14 @@ function D(e) {
         J = H ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
         Q = H ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
     return (0, i.jsx)("div", {
-        className: o()(Z.content, {
+        className: a()(Z.content, {
             [Z.outerGlow]: k,
             [Z.contentCoachmark]: H,
         }),
-        onMouseEnter: a,
+        onMouseEnter: o,
         onMouseLeave: R,
         children: (0, i.jsxs)("div", {
-            className: o()(V, { [Z.innerGlow]: k }),
+            className: a()(V, { [Z.innerGlow]: k }),
             children: [
                 (0, i.jsxs)("div", {
                     className: Z.subContent,
@@ -133,7 +133,7 @@ function D(e) {
                     children: [
                         null != U &&
                             (0, i.jsx)(d.zx, {
-                                className: o()(Z.button, J),
+                                className: a()(Z.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
                                         O.default.track(P.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
@@ -160,7 +160,7 @@ function D(e) {
                                     className: Z.buttonContentContainer,
                                     children: (0, i.jsx)(p.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(Z.buttonText, Q),
+                                        className: a()(Z.buttonText, Q),
                                         children: (() => {
                                             switch (U) {
                                                 case T.X2.VIEW_ALL:
@@ -210,7 +210,7 @@ function D(e) {
                                     }),
                                     (0, i.jsx)(p.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(Z.buttonText, q),
+                                        className: a()(Z.buttonText, q),
                                         children: w.intl.string(w.t["wg/30t"]),
                                     }),
                                 ],
@@ -220,7 +220,7 @@ function D(e) {
                 }),
                 null != D &&
                     (0, i.jsx)("div", {
-                        className: o()(Z.connector, {
+                        className: a()(Z.connector, {
                             [Z.leftPopoutConnector]: "left" === D,
                             [Z.rightPopoutConnector]: "right" === D,
                         }),

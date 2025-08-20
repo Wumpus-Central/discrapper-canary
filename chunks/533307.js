@@ -2,8 +2,8 @@ let r;
 n.d(t, { Z: () => m });
 var i = n(544891),
     l = n(570140),
-    a = n(728345),
-    o = n(812206),
+    o = n(728345),
+    a = n(812206),
     s = n(625128),
     c = n(335131),
     u = n(669079),
@@ -46,10 +46,10 @@ let m = (function (e) {
             try {
                 let r = await (0, u.bT)(e, t, n);
                 if (null != r.application_id && r.application_id !== p.CL) {
-                    let e = o.Z.getApplication(r.application_id);
+                    let e = a.Z.getApplication(r.application_id);
                     if (null == e)
                         try {
-                            await a.ZP.fetchApplication(r.application_id);
+                            await o.ZP.fetchApplication(r.application_id);
                         } catch (e) {}
                 }
                 return (

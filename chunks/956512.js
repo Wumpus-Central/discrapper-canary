@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(758371),
-    o = n(100527),
+    o = n(758371),
+    a = n(100527),
     s = n(906732),
     c = n(758199),
     u = n(914498),
@@ -43,8 +43,8 @@ function y(e) {
         R = (0, i.e7)([f.Z], () => f.Z.getCurrentUserActiveStream()),
         D = (0, i.e7)([_.Z], () => _.Z.getChannelId()),
         L = E.default.extractTimestamp(x.id) + C.e < Date.now(),
-        M = (0, r.jsx)(r.Fragment, { children: (0, a._0)(x, j, I, y, !1) }),
-        { newestAnalyticsLocation: k } = (0, s.ZP)(S, o.Z.REQUEST_TO_STREAM_INVITE_EMBED);
+        M = (0, r.jsx)(r.Fragment, { children: (0, o._0)(x, j, I, y, !1) }),
+        { newestAnalyticsLocation: k } = (0, s.ZP)(S, a.Z.REQUEST_TO_STREAM_INVITE_EMBED);
     return (
         L
             ? (t = O.intl.string(v.default.u4QmWl))

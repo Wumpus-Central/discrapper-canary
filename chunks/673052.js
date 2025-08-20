@@ -3,15 +3,15 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(835473),
-    a = n(739566),
-    o = n(942951),
+    o = n(739566),
+    a = n(942951),
     s = n(834129),
     c = n(388032),
     u = n(427070);
 function d(e) {
     let { message: t, channel: n, compact: d } = e,
-        p = (0, a.ZP)(t),
-        m = (0, o.l)({
+        p = (0, o.ZP)(t),
+        m = (0, a.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,

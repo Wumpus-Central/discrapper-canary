@@ -1,4 +1,4 @@
-r.d(t, { Z: () => T }), r(388685);
+r.d(t, { Z: () => P }), r(388685);
 var n = r(951288),
     l = r(647438),
     a = r(120356),
@@ -23,13 +23,13 @@ var n = r(951288),
     S = r(981631),
     x = r(388032),
     j = r(345213),
-    P = r(310582);
-let T = (e) => {
+    T = r(310582);
+let P = (e) => {
     var t;
     let {
             isLoading: r,
             title: a,
-            sortedSkuIds: T,
+            sortedSkuIds: P,
             numVisibleItems: L,
             hasSorting: k,
             prioritizeUserDiscounts: I,
@@ -46,11 +46,11 @@ let T = (e) => {
             sortOptions: F,
             shuffleProducts: H,
             showRecommendationOption: W,
-        } = (0, C.Z)(T, B, I),
-        V = (0, E.St)(M),
-        U = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        } = (0, C.Z)(P, B, I),
+        U = (0, E.St)(M),
+        V = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         z = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        G = !U && z,
+        G = !V && z,
         { animationPhase: q, startAnimation: K } = (0, O.y)(),
         Y = (0, b.sp)(),
         X = null != (t = null == Y ? void 0 : Y.sessionId) ? t : "",
@@ -71,13 +71,13 @@ let T = (e) => {
     return null == w
         ? null
         : (0, n.jsxs)("div", {
-              className: i()(P.popularPicksSection, P.centeredSection),
+              className: i()(T.popularPicksSection, T.centeredSection),
               children: [
                   (0, n.jsxs)("div", {
-                      className: P.blockHeader,
+                      className: T.blockHeader,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: P.headerLeft,
+                              className: T.headerLeft,
                               children: [
                                   (0, n.jsx)(s.X6q, {
                                       variant: "heading-lg/semibold",
@@ -124,7 +124,7 @@ let T = (e) => {
                                                               (0, c.Z)(
                                                                   f.Z.getArticleURL(S.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
-                                                          className: P.informationIcon,
+                                                          className: T.informationIcon,
                                                           children: (0, n.jsx)(s.d3s, { size: "sm" }),
                                                       }),
                                                   Object.getOwnPropertyDescriptors
@@ -151,7 +151,7 @@ let T = (e) => {
                           }),
                           k
                               ? (0, n.jsxs)("div", {
-                                    className: i()(P.headerRight, { [j.shopTakeOver]: R }),
+                                    className: i()(T.headerRight, { [j.shopTakeOver]: R }),
                                     children: [
                                         (0, n.jsx)(s.Text, {
                                             variant: "text-md/medium",
@@ -162,7 +162,7 @@ let T = (e) => {
                                             children: (0, n.jsx)(s.PhF, {
                                                 options: F,
                                                 select: J,
-                                                className: P.sortSelect,
+                                                className: T.sortSelect,
                                                 popoutClassName: i()({ [j.shopTakeOver]: R }),
                                                 isSelected: (e) => e === Z,
                                                 serialize: (e) => e,
@@ -193,12 +193,12 @@ let T = (e) => {
                       ],
                   }),
                   (0, n.jsx)("div", {
-                      className: P.feed,
+                      className: T.feed,
                       children: r
                           ? (0, n.jsx)(n.Fragment, {
                                 children: [...Array(12)].map((e, t) => (0, n.jsx)(_.K, {}, t + 1)),
                             })
-                          : V.slice(0, L).map((e, t) => {
+                          : U.slice(0, L).map((e, t) => {
                                 let r,
                                     l = h.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
@@ -206,15 +206,15 @@ let T = (e) => {
                                     if (q === O.g.SHUFFLE_OUT)
                                         return (0, n.jsx)(
                                             "div",
-                                            { className: P.shuffleOutro },
+                                            { className: T.shuffleOutro },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
                                         q === O.g.SORT_OUT
-                                            ? (r = P.sortChangedOutro)
+                                            ? (r = T.sortChangedOutro)
                                             : q === O.g.SHUFFLE_IN
-                                              ? (r = P.shuffleIntro)
-                                              : q === O.g.SORT_IN && (r = P.sortChangedIntro);
+                                              ? (r = T.shuffleIntro)
+                                              : q === O.g.SORT_IN && (r = T.sortChangedIntro);
                                 return (0, n.jsx)(
                                     b.k0,
                                     {

@@ -36,22 +36,22 @@ let b = (e) => {
         { handleCardVisibilityChange: x } = (0, d.E)(S, "home", "marketing wide banner"),
         j = b.bannerUrl;
     if (null == j) return null;
-    let P = _ === p.AW.ORBS;
+    let T = _ === p.AW.ORBS;
     return (0, n.jsx)(o.$, {
         innerRef: O,
         onChange: x,
         threshold: 0,
         children: (0, n.jsxs)("div", {
             ref: O,
-            className: i()(m.row, m.between, m.bannerBlockContainer, m.centeredSection, { [m.extraRounded]: P }),
+            className: i()(m.row, m.between, m.bannerBlockContainer, m.centeredSection, { [m.extraRounded]: T }),
             children: [
                 (0, n.jsx)("div", {
-                    className: i()(m.wideBannerBackgroundImg, { [m.extraRounded]: P }),
+                    className: i()(m.wideBannerBackgroundImg, { [m.extraRounded]: T }),
                     children: (0, n.jsx)("img", {
                         ref: C,
                         src: j,
                         alt: b.title,
-                        className: i()(m.wideBannerArt, { [m.wideBannerArtOrbs]: P }),
+                        className: i()(m.wideBannerArt, { [m.wideBannerArtOrbs]: T }),
                         style: { height: null != E ? "".concat(E, "px") : "auto" },
                     }),
                 }),
@@ -63,15 +63,15 @@ let b = (e) => {
                         children: [
                             (0, n.jsx)(s.X6q, {
                                 style: { color: null != (r = b.bannerTextColor) ? r : "var(--header-primary)" },
-                                className: P ? m.wideBannerOrbsHeading : void 0,
-                                variant: P ? "heading-xl/bold" : "heading-lg/semibold",
+                                className: T ? m.wideBannerOrbsHeading : void 0,
+                                variant: T ? "heading-xl/bold" : "heading-lg/semibold",
                                 children: b.title,
                             }),
                             (0, n.jsx)(s.Text, {
                                 style: { color: null != (a = b.bannerTextColor) ? a : "var(--text-muted)" },
                                 lineClamp: 2,
-                                variant: P ? "text-md/medium" : "text-sm/medium",
-                                children: P
+                                variant: T ? "text-md/medium" : "text-sm/medium",
+                                children: T
                                     ? f.intl.format(f.t.SFFP7O, {
                                           helpdeskArticle: c.Z.getArticleURL(g.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })

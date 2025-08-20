@@ -2,8 +2,8 @@ n.d(t, { Z: () => T }), n(467055), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(911969),
     u = n(906732),
@@ -67,7 +67,7 @@ let j = {
         variant: "text-md/normal",
         color: "header-secondary",
     },
-    I = { className: a()("mention", O.mention) };
+    I = { className: o()("mention", O.mention) };
 function S(e) {
     return (0, r.jsx)(
         s.Text,
@@ -78,12 +78,12 @@ function S(e) {
     );
 }
 let T = i.memo(function (e) {
-    var t, n, l, a, T, P;
+    var t, n, l, o, T, P;
     let N,
         { channel: A, messageId: w, interactionData: Z } = e,
         { analyticsLocations: R } = (0, u.ZP)(),
         { onCopy: D, copyRef: L } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
-        M = (0, o.e7)([h.Z], () => h.Z.getGuild(A.guild_id), [A.guild_id]);
+        M = (0, a.e7)([h.Z], () => h.Z.getGuild(A.guild_id), [A.guild_id]);
     if (
         (i.useEffect(() => {
             (null == Z || (Z.type === c.yU.CHAT && void 0 === Z.application_command)) && p.OG(A.id, w);
@@ -97,7 +97,7 @@ let T = i.memo(function (e) {
     else {
         let e = [],
             t = Object.fromEntries(
-                (null != (a = null == (n = Z.application_command) ? void 0 : n.options) ? a : []).map((e) => [
+                (null != (o = null == (n = Z.application_command) ? void 0 : n.options) ? o : []).map((e) => [
                     e.name,
                     e,
                 ]),
@@ -105,7 +105,7 @@ let T = i.memo(function (e) {
         for (let n of null != (T = Z.options) ? T : [])
             e = e.concat(
                 (function e(t) {
-                    var n, l, a, o, u, d, p;
+                    var n, l, o, a, u, d, p;
                     let h,
                         {
                             option: O,
@@ -139,11 +139,11 @@ let T = i.memo(function (e) {
                                 ),
                             ],
                             c = Object.fromEntries(
-                                null == (n = null != (a = null == w ? void 0 : w.options) ? a : [])
+                                null == (n = null != (o = null == w ? void 0 : w.options) ? o : [])
                                     ? void 0
                                     : n.map((e) => [e.name, e]),
                             );
-                        for (let n of null != (o = O.options) ? o : [])
+                        for (let n of null != (a = O.options) ? a : [])
                             t = t.concat(
                                 e({
                                     option: n,

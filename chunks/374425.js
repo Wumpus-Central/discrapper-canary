@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(477690),
-    a = n(481060),
-    o = n(100527),
+    o = n(481060),
+    a = n(100527),
     s = n(367907),
     c = n(906732),
     u = n(524444),
@@ -65,11 +65,11 @@ let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             [O, y] = i.useState(!0),
             [x, j] = i.useState(String(Date.now())),
             [I] = (0, p.XW)(t, l),
-            { analyticsLocations: S } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
+            { analyticsLocations: S } = (0, c.ZP)(a.Z.STICKER_MESSAGE),
             T = (0, r.jsxs)("span", {
                 className: b.stickerName,
                 children: [
-                    (0, r.jsx)(a.B7q, {
+                    (0, r.jsx)(o.B7q, {
                         size: "xs",
                         color: "currentColor",
                         className: b.stickerIcon,
@@ -79,9 +79,9 @@ let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             });
         return (0, r.jsx)(c.Gt, {
             value: S,
-            children: (0, r.jsx)(a.yRy, {
+            children: (0, r.jsx)(o.yRy, {
                 align: "center",
-                animation: a.yRy.Animation.TRANSLATE,
+                animation: o.yRy.Animation.TRANSLATE,
                 positionKey: x,
                 onRequestClose: () => {
                     y(!0);
@@ -99,7 +99,7 @@ let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 children: (e) => {
                     let { onClick: n } = e;
                     return (0, r.jsx)(
-                        a.ua7,
+                        o.ua7,
                         C(E({}, u.b_), {
                             shouldShow: O,
                             text: (0, u.Y)(T),
@@ -117,7 +117,7 @@ let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             },
                             children: (e) =>
                                 (0, r.jsx)(
-                                    a.P3F,
+                                    o.P3F,
                                     C(E({}, e), {
                                         innerRef: d,
                                         className: b.clickableSticker,

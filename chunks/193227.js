@@ -63,7 +63,7 @@ function j(e) {
               ],
           });
 }
-function P(e) {
+function T(e) {
     let { category: t } = e,
         r = (0, m.l)(t.products),
         l = (0, f.a)()(r);
@@ -72,7 +72,7 @@ function P(e) {
         category: t,
     });
 }
-function T(e) {
+function P(e) {
     let { category: t, isFullScreen: r } = e,
         [a, i] = l.useState(!1),
         o = (0, c.O)(
@@ -92,7 +92,7 @@ function T(e) {
                       category: t,
                       hideLimitedTimeBadge: !1,
                   }),
-            (0, n.jsx)(P, { category: t }),
+            (0, n.jsx)(T, { category: t }),
         ],
     });
 }
@@ -152,7 +152,7 @@ function L(e) {
                               ref: (t) => a(e.skuId, t),
                               children: (0, n.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, n.jsx)(T, {
+                                  children: (0, n.jsx)(P, {
                                       category: e,
                                       isFullScreen: o,
                                   }),
