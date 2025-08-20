@@ -1,18 +1,20 @@
 n.d(t, {
-    $b: () => R,
-    ES: () => C,
-    RZ: () => N,
-    X6: () => w,
-    kQ: () => L,
-    n$: () => A,
+    $b: () => P,
+    ES: () => R,
+    RZ: () => C,
+    X6: () => D,
+    kQ: () => x,
+    n$: () => N,
     np: () => b,
-    qH: () => T,
-    tk: () => D,
-    vH: () => P,
-    y8: () => S,
+    ou: () => G,
+    qH: () => S,
+    tk: () => L,
+    vH: () => w,
+    y8: () => A,
 }),
     n(388685),
-    n(642613);
+    n(642613),
+    n(415506);
 var r = n(624238),
     i = n(296009),
     a = n(224706),
@@ -92,60 +94,63 @@ function b(e) {
     );
 }
 function y() {
-    var e, t;
-    if (c.Z.hasPendingChanges()) return null != (e = c.Z.getPendingWidgets()) ? e : [];
-    {
-        let e = o.default.getCurrentUser(),
-            n = null != e ? s.Z.getUserProfile(e.id) : null;
-        return null != (t = null == n ? void 0 : n.widgets) ? t : [];
-    }
+    var e;
+    let t = o.default.getCurrentUser(),
+        n = null != t ? s.Z.getUserProfile(t.id) : null;
+    return null != (e = null == n ? void 0 : n.widgets) ? e : [];
 }
-function O(e) {
-    return e.sort((e, t) => u.r.indexOf(e.type) - u.r.indexOf(t.type));
+function O() {
+    var e;
+    return c.Z.hasPendingChanges() ? (null != (e = c.Z.getPendingWidgets()) ? e : []) : y();
 }
 function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return m(p({}, { id: e }), {
+    return e.sort((e, t) => u.r.indexOf(e.type) - u.r.indexOf(t.type));
+}
+function I(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+        r = y().find((t) => t.type === e);
+    return m(p({}, { id: null != (t = null == r ? void 0 : r.id) ? t : e }), {
         type: e,
-        games: t,
+        games: n,
     });
 }
-function I(e, t) {
-    let n = e.filter((e) => e.type !== t.type);
-    return O([t, ...n]);
-}
-function T(e) {
-    let t = y();
-    if (null != t.find((t) => t.type === e)) return;
-    let n = v(e);
-    l.Z.setPendingWidgets(O([n, ...t]));
+function T(e, t) {
+    let n = e.filter((e) => e.id !== t.id);
+    return v([t, ...n]);
 }
 function S(e) {
-    let t = y().filter((t) => t.type !== e);
+    let t = O();
+    if (null != t.find((t) => t.type === e)) return;
+    let n = I(e);
+    l.Z.setPendingWidgets(v([n, ...t]));
+}
+function A(e) {
+    let t = O().filter((t) => t.type !== e);
     l.Z.setPendingWidgets(t);
 }
-function A(e, t, n) {
-    let r = y(),
+function N(e, t, n) {
+    let r = O(),
         i = r.find((t) => t.type === e);
     if (null == i) return;
     let a = i.games.find((e) => e.applicationId === t);
     if (null == a) return;
     let o = m(p({}, a), { tags: n }),
         s = i.games.map((e) => (e.applicationId === t ? o : e)),
-        c = I(r, m(p({}, i), { games: s }));
+        c = T(r, m(p({}, i), { games: s }));
     l.Z.setPendingWidgets(c);
 }
-function N(e, t, n) {
-    let r = y().find((t) => t.type === e);
+function C(e, t, n) {
+    let r = O().find((t) => t.type === e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
     let a = i.tags.filter((e) => e !== n);
-    A(e, t, a.length > 0 ? a : []);
+    N(e, t, a.length > 0 ? a : []);
 }
-function C(e, t) {
+function R(e, t) {
     let n,
-        o = y(),
+        o = O(),
         s = o.find((t) => t.type === e),
         c = r.k[e];
     if (null != s) {
@@ -158,23 +163,23 @@ function C(e, t) {
         tags: t.tags,
     };
     n = null != s ? (e === i.l.FAVORITE_GAMES ? [f] : [...(s.games || []), f]) : [f];
-    let _ = I(o, v(e, n));
+    let _ = T(o, I(e, n));
     l.Z.setPendingWidgets(_), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function R(e, t) {
-    let n = y(),
+function P(e, t) {
+    let n = O(),
         r = n.find((t) => t.type === e);
     if (null == r) return;
-    let i = I(
+    let i = T(
         n,
-        v(
+        I(
             e,
             (null != r.games ? r.games : []).filter((e) => e.applicationId !== t),
         ),
     );
     l.Z.setPendingWidgets(i);
 }
-function P(e) {
+function w(e) {
     let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
@@ -182,13 +187,14 @@ function P(e) {
         }),
         n = e.games.map(t);
     return {
+        id: e.id !== e.type ? e.id : void 0,
         data: {
             type: e.type,
             games: n,
         },
     };
 }
-async function w() {
+async function D() {
     let e = c.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -197,14 +203,51 @@ async function w() {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function D() {
+async function L() {
     try {
         await l.Z.savePendingWidgets([]);
     } catch (e) {
         console.error("Failed to clear saved widgets", e);
     }
 }
-function L(e) {
+function x(e) {
     let t = r.k[e.type];
     return e.games.length >= t;
+}
+function M(e) {
+    return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
+}
+function k(e, t) {
+    return e.applicationId === t.applicationId && M(e.comment) === M(t.comment);
+}
+function j(e, t) {
+    if (e.applicationId !== t.applicationId) return !1;
+    let n = M(e.tags),
+        r = M(t.tags);
+    return (
+        (null === n && null === r) ||
+        (null !== n && null !== r && n.length === r.length && n.every((e, t) => e === r[t]))
+    );
+}
+function U(e, t) {
+    return e.applicationId === t.applicationId;
+}
+function G(e, t, n) {
+    let r;
+    if (e.length !== t.length) return !1;
+    switch (n) {
+        case i.l.FAVORITE_GAMES:
+            r = k;
+            break;
+        case i.l.CURRENT_GAMES:
+            r = j;
+            break;
+        case i.l.WANT_TO_PLAY_GAMES:
+        case i.l.PLAYED_GAMES:
+            r = U;
+            break;
+        default:
+            throw Error("Unknown widget type: ".concat(n));
+    }
+    return e.every((e, n) => r(e, t[n]));
 }

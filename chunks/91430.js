@@ -410,44 +410,46 @@ function $(e) {
         } = e;
     null != s && null != s[0] && (r = s[0]);
     let { analyticsLocations: m } = (0, b.ZP)(f.Z.SUBSCRIPTION_DETAILS),
-        p = null != s ? s.slice(1) : [],
-        [h] = (0, y.ED)({
+        p = (0, R.$)(),
+        h = null != s ? s.slice(1) : [],
+        [x] = (0, y.ED)({
             subscriptionId: r.id,
             renewal: !0,
             analyticsLocations: m,
             analyticsLocation: c,
         }),
-        [x] = (0, y.ED)({
+        [_] = (0, y.ED)({
             subscriptionId: r.id,
             renewal: !0,
             applyEntitlements: !0,
             analyticsLocations: m,
             analyticsLocation: c,
+            userDiscountOfferId: null == p ? void 0 : p.id,
         }),
-        _ = null == a ? void 0 : a.invalid,
-        j = (0, u.e7)([v.default], () => {
+        j = null == a ? void 0 : a.invalid,
+        E = (0, u.e7)([v.default], () => {
             var e;
             return null == (e = v.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
-        E = d()(r.currentPeriodEnd),
-        C = null != r.paymentSourceId,
-        S = null != (t = null == x ? void 0 : x.total) ? t : 0,
-        T =
-            !C &&
-            S > 0 &&
-            (7 >= E.diff(d()(), "days") || r.status === U.O0b.PAST_DUE) &&
-            !j &&
+        C = d()(r.currentPeriodEnd),
+        S = null != r.paymentSourceId,
+        T = null != (t = null == _ ? void 0 : _.total) ? t : 0,
+        N =
+            !S &&
+            T > 0 &&
+            (7 >= C.diff(d()(), "days") || r.status === U.O0b.PAST_DUE) &&
+            !E &&
             !r.isPurchasedExternally,
-        N = _ && r.status === U.O0b.PAST_DUE && !j && !r.isPurchasedExternally,
-        I = (0, P.U)(),
-        A = !j && I,
-        R = (null == r ? void 0 : r.status) === U.O0b.PAST_DUE,
-        D = R ? d()().diff(d()(r.currentPeriodStart), "days") : 0,
-        [Z] = (0, y.Ox)({
+        I = j && r.status === U.O0b.PAST_DUE && !E && !r.isPurchasedExternally,
+        A = (0, P.U)(),
+        D = !E && A,
+        Z = (null == r ? void 0 : r.status) === U.O0b.PAST_DUE,
+        w = Z ? d()().diff(d()(r.currentPeriodStart), "days") : 0,
+        [k] = (0, y.Ox)({
             subscriptionId: r.id,
-            preventFetch: !(A || R),
+            preventFetch: !(D || Z),
         });
-    return null == h || null == x
+    return null == x || null == _
         ? (0, i.jsx)(g.$jN, {})
         : (null != r.renewalMutations &&
               ((r.renewalMutations.planId !== r.planId && !(0, O.Q0)(r.renewalMutations.planId)) ||
@@ -466,13 +468,13 @@ function $(e) {
                       children: G.intl.string(G.t["/gs+Pz"]),
                   }),
                   children: [
-                      T ? (0, i.jsx)(z, {}) : null,
-                      N ? (0, i.jsx)(W, {}) : null,
-                      A && null != Z
+                      N ? (0, i.jsx)(z, {}) : null,
+                      I ? (0, i.jsx)(W, {}) : null,
+                      D && null != k
                           ? (0, i.jsx)(Y, {
-                                daysPastDue: D,
+                                daysPastDue: w,
                                 subscription: r,
-                                openInvoiceId: Z.id,
+                                openInvoiceId: k.id,
                             })
                           : null,
                       n,
@@ -485,21 +487,21 @@ function $(e) {
                       (0, i.jsxs)("div", {
                           children: [
                               (0, i.jsx)("div", {
-                                  className: p.length > 0 ? F.dupSubscriptionRow : F.__invalid_singleSubscription,
+                                  className: h.length > 0 ? F.dupSubscriptionRow : F.__invalid_singleSubscription,
                                   children: (0, i.jsx)(X, {
                                       subscription: r,
                                       analyticsLocation: c,
                                       paymentSource: a,
                                       busy: l,
                                       fromStandaloneBillingPage: o,
-                                      showNoPaymentMethod: T,
-                                      showInvalidPaymentMethod: N,
-                                      fetchedCurrentInvoicePreview: h,
-                                      fetchedRenewalInvoicePreview: x,
-                                      fetchedOpenInvoice: Z,
+                                      showNoPaymentMethod: N,
+                                      showInvalidPaymentMethod: I,
+                                      fetchedCurrentInvoicePreview: x,
+                                      fetchedRenewalInvoicePreview: _,
+                                      fetchedOpenInvoice: k,
                                   }),
                               }),
-                              p.map((e, t) =>
+                              h.map((e, t) =>
                                   (0, i.jsxs)(
                                       "div",
                                       {
@@ -516,8 +518,8 @@ function $(e) {
                                                   paymentSource: a,
                                                   busy: l,
                                                   fromStandaloneBillingPage: o,
-                                                  showNoPaymentMethod: T,
-                                                  showInvalidPaymentMethod: N,
+                                                  showNoPaymentMethod: N,
+                                                  showInvalidPaymentMethod: I,
                                                   fetchedCurrentInvoicePreview: null,
                                                   fetchedRenewalInvoicePreview: null,
                                                   fetchedOpenInvoice: null,

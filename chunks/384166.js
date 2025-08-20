@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(461671);
 function g() {
     let [e, t] = i.useState(!1),
-        { hasPendingChanges: n, pendingWidgets: a } = (0, s.cj)([d.Z], () => ({
-            hasPendingChanges: d.Z.hasPendingChanges(),
-            pendingWidgets: d.Z.getPendingWidgets(),
+        { saveablePendingWidgets: n, hasSaveablePendingChanges: a } = (0, s.cj)([d.Z], () => ({
+            saveablePendingWidgets: d.Z.getSaveablePendingWidgets(),
+            hasSaveablePendingChanges: d.Z.hasSaveablePendingChanges(),
         }));
     i.useEffect(() => {
         let e = null;
@@ -32,19 +32,19 @@ function g() {
         );
     }, []);
     let g = i.useCallback(async () => {
-            if (null !== a)
+            if (null !== n)
                 try {
-                    await u.Z.savePendingWidgets(a);
+                    await u.Z.savePendingWidgets(n);
                 } catch (e) {
                     (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
                 }
-        }, [a]),
+        }, [n]),
         E = i.useCallback(() => {
             u.Z.clearPendingWidgets();
         }, []);
-    return n
+    return a
         ? (0, r.jsx)("div", {
-              className: o()(m.container, { [m.visible]: n }),
+              className: o()(m.container, { [m.visible]: a }),
               role: "status",
               children: (0, r.jsxs)("div", {
                   className: o()(m.content, { [m.emphasized]: e }),

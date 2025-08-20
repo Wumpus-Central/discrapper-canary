@@ -1,89 +1,107 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(442837),
     o = n(570140),
     s = n(594174),
-    l = n(621853);
-let c = null,
-    u = null,
-    d = !1,
-    f = {
+    l = n(621853),
+    c = n(86419);
+let u = null,
+    d = null,
+    f = !1,
+    _ = {
         suggestedGamesIds: [],
         suggestedWishlistGamesIds: [],
     },
-    _ = !1,
     p = !1,
-    h = !1;
-function m(e) {
+    h = !1,
+    m = !1;
+function g(e) {
     let { widgets: t } = e;
-    if (((c = t), null === u)) {
+    if (((u = t), null === d)) {
         let e = s.default.getCurrentUser();
         if (null != e) {
             var n;
             let t = l.Z.getUserProfile(e.id);
-            u = null != (n = null == t ? void 0 : t.widgets) ? n : [];
+            d = null != (n = null == t ? void 0 : t.widgets) ? n : [];
         }
     }
 }
-function g() {
-    (c = null), (u = null);
+function E() {
+    (u = null), (d = null);
 }
-function E(e) {
+function b(e) {
     let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-    (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (p = !1), (_ = !1);
-}
-function b() {
-    (_ = !0), (p = !1);
+    (_.suggestedGamesIds = t), (_.suggestedWishlistGamesIds = n), (h = !1), (p = !1);
 }
 function y() {
-    (p = !0), (_ = !1), (h = !0);
+    (p = !0), (h = !1);
 }
-function O(e) {
-    d = !0;
+function O() {
+    (h = !0), (p = !1), (m = !0);
 }
 function v(e) {
-    (d = !1), null !== c && ((u = c), (c = null));
+    f = !0;
 }
 function I(e) {
-    d = !1;
+    (f = !1), null !== u && ((d = null), (u = null));
 }
 function T(e) {
-    let { applicationId: t } = e;
-    (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),
-        (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
+    f = !1;
 }
-class S extends a.ZP.Store {
+function S(e) {
+    let { applicationId: t } = e;
+    (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
+        (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
+}
+class A extends a.ZP.Store {
     getPendingWidgets() {
-        return c;
+        return u;
+    }
+    getSaveablePendingWidgets() {
+        return null == u ? null : u.filter((e) => e.games.length > 0);
     }
     hasPendingChanges() {
-        return null !== c && (null === u || !i().isEqual(c, u));
+        return null !== u && (null === d || !i().isEqual(u, d));
+    }
+    hasSaveablePendingChanges() {
+        if (null == u) return !1;
+        if (null == d) return !0;
+        let e = new Map(d.map((e) => [e.id, e])),
+            t = new Map(u.map((e) => [e.id, e]));
+        for (let [n, r] of t) {
+            let t = e.get(n);
+            if (null == t) {
+                if (r.games.length > 0) return !0;
+            } else if (!(0, c.ou)(r.games, t.games, r.type)) return !0;
+        }
+        for (let [n] of e) if (!t.has(n)) return !0;
+        return !1;
     }
     get isSubmitting() {
-        return d;
-    }
-    get suggestedFetchError() {
-        return _;
-    }
-    get suggestedFetchIsLoading() {
-        return p;
-    }
-    get suggestedFetchAttempted() {
-        return h;
-    }
-    get suggestedGameIds() {
         return f;
     }
+    get suggestedFetchError() {
+        return p;
+    }
+    get suggestedFetchIsLoading() {
+        return h;
+    }
+    get suggestedFetchAttempted() {
+        return m;
+    }
+    get suggestedGameIds() {
+        return _;
+    }
 }
-let A = new S(o.Z, {
-    WIDGET_PENDING_SET: m,
-    WIDGET_PENDING_SAVE_START: O,
-    WIDGET_PENDING_SAVE_SUCCESS: v,
-    WIDGET_PENDING_SAVE_FAILURE: I,
-    WIDGET_SUGGESTED_FETCH_SUCCESS: E,
-    WIDGET_SUGGESTED_FETCH_FAILURE: b,
-    WIDGET_SUGGESTED_FETCH_START: y,
-    WIDGET_PENDING_CLEAR: g,
-    WIDGET_SUGGESTED_REMOVE_GAME: T,
+let N = new A(o.Z, {
+    WIDGET_PENDING_SET: g,
+    WIDGET_PENDING_SAVE_START: v,
+    WIDGET_PENDING_SAVE_SUCCESS: I,
+    WIDGET_PENDING_SAVE_FAILURE: T,
+    WIDGET_SUGGESTED_FETCH_SUCCESS: b,
+    WIDGET_SUGGESTED_FETCH_FAILURE: y,
+    WIDGET_SUGGESTED_FETCH_START: O,
+    WIDGET_PENDING_CLEAR: E,
+    WIDGET_SUGGESTED_REMOVE_GAME: S,
 });

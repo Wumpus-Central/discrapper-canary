@@ -3,20 +3,20 @@ var l = n(951288);
 n(647438);
 var i = n(442837),
     r = n(481060),
-    a = n(699516),
-    o = n(388032);
+    o = n(699516),
+    a = n(388032);
 function s(e) {
     let { user: t, onAction: s, appContext: u } = e,
         d = t.id,
-        [c, g] = (0, i.Wu)([a.Z], () => {
+        [c, g] = (0, i.Wu)([o.Z], () => {
             var e;
-            return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
+            return [o.Z.isFriend(d), null != (e = o.Z.getNickname(d)) ? e : null];
         }, [d]);
     if (!c) return null;
-    let f = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
+    let Z = null == g ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t["8pOYUF"]);
     return (0, l.jsx)(r.sNh, {
         id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
-        label: f,
+        label: Z,
         action: () => {
             null == s || s(),
                 (0, r.ZDy)(

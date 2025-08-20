@@ -64,7 +64,7 @@ let _ = () => {
         gradientColor: A ? "nitro-pink" : "nitro-green",
         transitionState: e,
         title:
-            null != _.canceledAt
+            _.status === g.O0b.CANCELED
                 ? h.intl.string(h.t["2Otztr"])
                 : "".concat(h.intl.format(h.t.q9Vxu7, { percent: C.discount.amount })),
         actions: P,
@@ -83,7 +83,7 @@ let _ = () => {
                     variant: "text-xs/medium",
                     color: "text-secondary",
                     children:
-                        null != _.canceledAt
+                        _.status === g.O0b.CANCELED
                             ? h.intl.format(h.t.mY3ysL, {
                                   discountedPrice: O,
                                   billingPeriod: (0, c.JP)(C.discount.user_usage_limit_interval),

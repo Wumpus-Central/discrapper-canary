@@ -1,27 +1,27 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var i = n(951288),
     r = n(647438),
-    a = n(481060),
-    l = n(493683),
-    o = n(489618),
-    d = n(699516),
-    u = n(594174),
-    c = n(933557),
-    s = n(388032);
-function f(e, t) {
-    let { rearrangeContextMenu: f } = o.Z.useExperiment({ location: "useChannelLeaveItem" }),
-        v = r.useCallback(() => {
-            let r = (0, c.F6)(e, u.default, d.Z),
-                o = s.intl.formatToPlainString(s.t.hJ5Ap6, { name: r }),
-                f = s.intl.format(s.t.SSIVOj, { name: r });
+    o = n(481060),
+    a = n(493683),
+    l = n(489618),
+    c = n(699516),
+    s = n(594174),
+    u = n(933557),
+    f = n(388032);
+function d(e, t) {
+    let { rearrangeContextMenu: d } = l.Z.useExperiment({ location: "useChannelLeaveItem" }),
+        b = r.useCallback(() => {
+            let r = (0, u.F6)(e, s.default, c.Z),
+                l = f.intl.formatToPlainString(f.t.hJ5Ap6, { name: r }),
+                d = f.intl.format(f.t.SSIVOj, { name: r });
             e.isManaged() &&
-                ((o = s.intl.formatToPlainString(s.t.hVGjER, { name: r })),
-                (f = s.intl.format(s.t.IK1Qvr, { name: r })));
-            let v = function (n) {
+                ((l = f.intl.formatToPlainString(f.t.hVGjER, { name: r })),
+                (d = f.intl.format(f.t.IK1Qvr, { name: r })));
+            let b = function (n) {
                 let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                l.Z.closePrivateChannel(e.id, t, i);
+                a.Z.closePrivateChannel(e.id, t, i);
             };
-            (0, a.ZDy)(async () => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("14604").then(n.bind(n, 960670));
                 return (t) =>
                     (0, i.jsx)(
@@ -52,20 +52,20 @@ function f(e, t) {
                             return e;
                         })(
                             {
-                                header: o,
-                                body: f,
-                                onSubmit: v,
+                                header: l,
+                                body: d,
+                                onSubmit: b,
                             },
                             t,
                         ),
                     );
             });
         }, [e, t]);
-    return (0, i.jsx)(a.sNh, {
+    return (0, i.jsx)(o.sNh, {
         id: "leave-channel",
-        label: s.intl.string(s.t["26C4oq"]),
-        action: v,
+        label: f.intl.string(f.t["26C4oq"]),
+        action: b,
         color: "danger",
-        subtext: f ? s.intl.string(s.t["2HOk0t"]) : void 0,
+        subtext: d ? f.intl.string(f.t["2HOk0t"]) : void 0,
     });
 }
