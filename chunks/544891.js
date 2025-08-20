@@ -1,6 +1,6 @@
 n.d(t, {
     J9: () => l.J,
-    Jt: () => x,
+    Jt: () => L,
     K0: () => P,
     Pd: () => g,
     f$: () => s.f$,
@@ -127,7 +127,7 @@ function E(e, t, n, r, o) {
             }),
         null != t.context)
     ) {
-        let e = M(t.context);
+        let e = j(t.context);
         null != e && b.set("X-Context-Properties", e);
     }
     null != t.retried && 0 !== t.retried && b.set("X-Failed-Requests", "".concat(t.retried)),
@@ -141,7 +141,7 @@ function E(e, t, n, r, o) {
     let y = () => {
         (t.backoff = null != t.backoff ? t.backoff : new a.Z()),
             (t.retried = (null != t.retried ? t.retried : 0) + 1),
-            t.backoff.fail(() => L(t.url).then(() => E(e, t, n, r, o)));
+            t.backoff.fail(() => x(t.url).then(() => E(e, t, n, r, o)));
     };
     null == w || null == (d = w.prepareRequest) || d.call(w, b),
         b.ok((e) => null != e.status),
@@ -297,14 +297,14 @@ function I(e, t, n) {
 let T = I.bind(null, "get"),
     S = I.bind(null, "post"),
     A = I.bind(null, "put"),
-    N = I.bind(null, "patch"),
-    C = I.bind(null, "del"),
+    C = I.bind(null, "patch"),
+    N = I.bind(null, "del"),
     R = {
         get: T,
         post: S,
         put: A,
-        patch: N,
-        del: C,
+        patch: C,
+        del: N,
     };
 if (n.g.isServerRendering) {
     let e = (e, t) =>
@@ -315,7 +315,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: "",
         });
-    (T = e), (S = e), (A = e), (N = e), (C = e);
+    (T = e), (S = e), (A = e), (C = e), (N = e);
 }
 function P() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -325,11 +325,11 @@ let w = null;
 function D(e) {
     w = e;
 }
-let L = () => Promise.resolve();
-function x(e) {
-    L = e;
+let x = () => Promise.resolve();
+function L(e) {
+    x = e;
 }
-function M(e) {
+function j(e) {
     try {
         return u.from(JSON.stringify(e)).toString("base64");
     } catch (e) {

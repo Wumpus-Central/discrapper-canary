@@ -1,117 +1,117 @@
-n.d(t, { Z: () => _ }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(780384),
-    l = n(481060),
-    o = n(670863),
+n.d(t, { Z: () => b }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(780384),
+    s = n(481060),
+    l = n(670863),
     c = n(72897),
-    d = n(463395),
-    u = n(131951),
-    m = n(358085),
-    p = n(210887),
-    g = n(494620),
+    u = n(463395),
+    d = n(131951),
+    f = n(358085),
+    _ = n(210887),
+    p = n(494620),
     h = n(65154),
-    f = n(388032),
-    b = n(28025);
-let x = m.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
-function _() {
+    m = n(388032),
+    g = n(28025);
+let E = f.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
+function b() {
     var e, t;
-    let m = (0, s.e7)([p.Z], () => p.Z.theme),
-        { canSetInputDevice: _, canSetOutputDevice: j } = (0, s.cj)([u.Z], () => ({
-            canSetInputDevice: u.Z.supports(h.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: u.Z.supports(h.AN.AUDIO_OUTPUT_DEVICE),
+    let f = (0, a.e7)([_.Z], () => _.Z.theme),
+        { canSetInputDevice: b, canSetOutputDevice: y } = (0, a.cj)([d.Z], () => ({
+            canSetInputDevice: d.Z.supports(h.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: d.Z.supports(h.AN.AUDIO_OUTPUT_DEVICE),
         })),
-        E = (0, c.p6)(h.h7.AUDIO_INPUT),
-        C = (0, c.p6)(h.h7.AUDIO_OUTPUT),
-        [O, v] = (0, c.Ls)(h.h7.AUDIO_INPUT, { location: "UserSettingsDevices" }),
-        [S, T] = (0, c.Ls)(h.h7.AUDIO_OUTPUT, { location: "UserSettingsDevices" }),
-        N = O.concat(v),
-        I = S.concat(T),
-        y = r.useMemo(() => {
-            let e = x.some((e) => {
+        O = (0, c.p6)(h.h7.AUDIO_INPUT),
+        v = (0, c.p6)(h.h7.AUDIO_OUTPUT),
+        [I, T] = (0, c.Ls)(h.h7.AUDIO_INPUT, { location: "UserSettingsDevices" }),
+        [S, A] = (0, c.Ls)(h.h7.AUDIO_OUTPUT, { location: "UserSettingsDevices" }),
+        C = I.concat(T),
+        N = S.concat(A),
+        R = i.useMemo(() => {
+            let e = E.some((e) => {
                     var t;
-                    return null == E || null == (t = E.hardwareId) ? void 0 : t.startsWith(e);
+                    return null == O || null == (t = O.hardwareId) ? void 0 : t.startsWith(e);
                 }),
-                t = x.some((e) => {
+                t = E.some((e) => {
                     var t;
-                    return null == C || null == (t = C.hardwareId) ? void 0 : t.startsWith(e);
+                    return null == v || null == (t = v.hardwareId) ? void 0 : t.startsWith(e);
                 });
             return (
                 e &&
                 t &&
-                (null == E ? void 0 : E.containerId) != null &&
-                E.containerId === (null == C ? void 0 : C.containerId)
+                (null == O ? void 0 : O.containerId) != null &&
+                O.containerId === (null == v ? void 0 : v.containerId)
             );
-        }, [E, C]),
-        A = N[0],
-        P = I[0],
-        R = null != (e = null == A ? void 0 : A.disabled) ? e : !_,
-        D = null != (t = null == P ? void 0 : P.disabled) ? t : !j;
-    function Z(e) {
+        }, [O, v]),
+        P = C[0],
+        w = N[0],
+        D = null != (e = null == P ? void 0 : P.disabled) ? e : !b,
+        x = null != (t = null == w ? void 0 : w.disabled) ? t : !y;
+    function L(e) {
         let t,
-            { label: r, value: s } = e;
-        if (d.Z.isCertified(s)) {
-            let e = (0, a.ap)(m) ? n(561259) : n(887695);
-            t = (0, i.jsx)("img", {
+            { label: i, value: a } = e;
+        if (u.Z.isCertified(a)) {
+            let e = (0, o.ap)(f) ? n(561259) : n(887695);
+            t = (0, r.jsx)("img", {
                 src: e,
                 alt: "Certified",
-                className: b.deviceOptionCertified,
+                className: g.deviceOptionCertified,
             });
         }
-        return (0, i.jsxs)(
+        return (0, r.jsxs)(
             "span",
             {
-                className: b.deviceOption,
+                className: g.deviceOption,
                 children: [
-                    (0, i.jsx)("span", {
-                        className: b.deviceOptionLabel,
-                        children: d.Z.getCertifiedDeviceName(s, r),
+                    (0, r.jsx)("span", {
+                        className: g.deviceOptionLabel,
+                        children: u.Z.getCertifiedDeviceName(a, i),
                     }),
                     t,
                 ],
             },
-            s,
+            a,
         );
     }
-    return (0, i.jsxs)("div", {
-        className: b.devices,
+    return (0, r.jsxs)("div", {
+        className: g.devices,
         children: [
-            (0, i.jsxs)("div", {
-                className: b.deviceColumns,
+            (0, r.jsxs)("div", {
+                className: g.deviceColumns,
                 children: [
-                    (0, i.jsx)("div", {
-                        className: b.column,
-                        children: (0, i.jsx)(l.xJW, {
-                            title: f.intl.string(f.t.hHMYbW),
-                            children: (0, i.jsx)(o.j, {
+                    (0, r.jsx)("div", {
+                        className: g.column,
+                        children: (0, r.jsx)(s.xJW, {
+                            title: m.intl.string(m.t.hHMYbW),
+                            children: (0, r.jsx)(l.j, {
                                 deviceType: h.h7.AUDIO_INPUT,
                                 location: "UserSettingsDevices",
                                 hideDeviceTypeIcon: !0,
-                                isDisabled: R,
-                                renderOptionLabel: Z,
+                                isDisabled: D,
+                                renderOptionLabel: L,
                             }),
                         }),
                     }),
-                    (0, i.jsx)("div", {
-                        className: b.column,
-                        children: (0, i.jsx)(l.xJW, {
-                            title: f.intl.string(f.t.dl18zc),
-                            children: (0, i.jsx)(o.j, {
+                    (0, r.jsx)("div", {
+                        className: g.column,
+                        children: (0, r.jsx)(s.xJW, {
+                            title: m.intl.string(m.t.dl18zc),
+                            children: (0, r.jsx)(l.j, {
                                 deviceType: h.h7.AUDIO_OUTPUT,
                                 location: "UserSettingsDevices",
                                 hideDeviceTypeIcon: !0,
-                                isDisabled: D,
-                                renderOptionLabel: Z,
+                                isDisabled: x,
+                                renderOptionLabel: L,
                             }),
                         }),
                     }),
                 ],
             }),
-            y &&
-                (0, i.jsx)(g.Z, {
-                    look: g.z.WARNING,
-                    children: f.intl.string(f.t.Ioz3g4),
+            R &&
+                (0, r.jsx)(p.Z, {
+                    look: p.z.WARNING,
+                    children: m.intl.string(m.t.Ioz3g4),
                 }),
         ],
     });

@@ -23,8 +23,8 @@ var r,
     T = n(645436),
     S = n(344651),
     A = n(981631),
-    N = n(526761);
-function C(e, t, n) {
+    C = n(526761);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,11 +42,11 @@ I.Wb.dispatcher.getDispatchHandler = S.Z;
 let P = new c.Z("ConnectionStore"),
     w = 100,
     D = 0,
-    L = null,
-    x = !0,
-    M = null,
-    k = null;
-function j() {
+    x = null,
+    L = !0,
+    j = null,
+    M = null;
+function k() {
     return I.Wb.isClosed()
         ? (P.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
         : (P.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
@@ -61,7 +61,7 @@ function G() {
     );
 }
 async function B(e) {
-    (D = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
+    (D = Date.now()), (x = e.sessionId), I.RR.handleConnectionOpen();
     let t = {},
         n = E.Z.getVoiceChannelId();
     if (null != n) {
@@ -78,7 +78,7 @@ async function B(e) {
             (c = await (null == R || null == (d = R.processUtils) || null == (u = d.getLastCrash) ? void 0 : u.call(d)))
                 ? void 0
                 : c.rendererCrashReason) == null &&
-            x
+            L
         )
             m.Z.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
         else {
@@ -90,15 +90,15 @@ async function B(e) {
                 });
         }
     }
-    I.GC.update(t, !0), (x = !1), (k = null);
+    I.GC.update(t, !0), (L = !1), (M = null);
 }
-function V() {
+function Z() {
     P.verbose("connection closed dispatched"), (D = Date.now());
 }
-function F() {
-    k = null;
+function V() {
+    M = null;
 }
-function Z(e) {
+function F(e) {
     return e.resetSocket && (I.Wb.close(), I.Wb.dispatcher.clear(), I.Wb.connect()), !1;
 }
 function H(e) {
@@ -107,9 +107,9 @@ function H(e) {
             guildId: e.guildId,
             channelId: e.channelId,
         }),
-        (k = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+        (M = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
         (0, O.isIOS)() &&
-            M === A.$7l.BACKGROUND &&
+            j === A.$7l.BACKGROUND &&
             (null == e.channelId ? I.Wb.close(!0) : I.Wb.isClosed() && (T.Y(!1), I.Wb.connect())),
         !1
     );
@@ -119,7 +119,7 @@ function Y() {
 }
 function W(e) {
     var t;
-    e.settings.type === N.yP.PRELOADED_USER_SETTINGS &&
+    e.settings.type === C.yP.PRELOADED_USER_SETTINGS &&
         (null == (t = e.settings.proto.clips) ? void 0 : t.allowVoiceRecording) != null &&
         Y();
 }
@@ -127,8 +127,8 @@ function K(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (f.default.getId() !== t.userId) return e;
-        if (t.sessionId === L) {
-            if (null != k) return P.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
+        if (t.sessionId === x) {
+            if (null != M) return P.verbose("Ignoring voice state for own session due to VSU lock on channel:", M), e;
             I.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
@@ -153,7 +153,7 @@ function z(e) {
 function q(e) {
     let { channelId: t } = e;
     if (t === I.GC.channelId) {
-        if (k === t) return !1;
+        if (M === t) return !1;
         I.GC.setState({
             guildId: null,
             channelId: null,
@@ -176,13 +176,13 @@ function J(e) {
     return (
         (0, O.isIOS)()
             ? (f.default.isAuthenticated() &&
-                  (M === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId
+                  (j === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId
                       ? I.Wb.close(!0)
-                      : M === A.$7l.BACKGROUND &&
+                      : j === A.$7l.BACKGROUND &&
                         e.state === A.$7l.ACTIVE &&
                         I.Wb.isClosed() &&
                         (T.Y(!1), I.Wb.connect())),
-              (M = e.state))
+              (j = e.state))
             : e.state === A.$7l.ACTIVE &&
               (T.Y(!1), f.default.isAuthenticated() && I.Wb.resetBackoff("App state is active")),
         !1
@@ -318,17 +318,17 @@ class eE extends (r = o.ZP.Store) {
         return D;
     }
 }
-C(eE, "displayName", "GatewayConnectionStore");
+N(eE, "displayName", "GatewayConnectionStore");
 let eb = new eE(s.Z, {
-    START_SESSION: j,
+    START_SESSION: k,
     LOGIN_SUCCESS: G,
     LOGOUT: U,
-    CLEAR_CACHES: Z,
+    CLEAR_CACHES: F,
     CONNECTION_OPEN: (e) => {
         B(e);
     },
-    CONNECTION_RESUMED: F,
-    CONNECTION_CLOSED: V,
+    CONNECTION_RESUMED: V,
+    CONNECTION_CLOSED: Z,
     RTC_CONNECTION_STATE: Q,
     VOICE_CHANNEL_SELECT: H,
     VOICE_STATE_UPDATES: K,

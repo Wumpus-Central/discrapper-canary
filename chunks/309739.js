@@ -1,327 +1,335 @@
-n.d(t, { Z: () => M }), n(388685), n(781311);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(658722),
-    o = n.n(l),
+n.d(t, { Z: () => H }), n(388685), n(781311);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(658722),
+    l = n.n(s),
     c = n(442837),
-    d = n(524437),
-    u = n(780384),
-    m = n(755721),
-    p = n(481060),
-    g = n(457330),
+    u = n(524437),
+    d = n(780384),
+    f = n(755721),
+    _ = n(481060),
+    p = n(457330),
     h = n(410030),
-    f = n(726542),
-    b = n(316496),
-    x = n(116841),
-    _ = n(335082),
-    j = n(921801),
-    E = n(553795),
-    C = n(430824),
-    O = n(63063),
-    v = n(358085),
+    m = n(726542),
+    g = n(316496),
+    E = n(116841),
+    b = n(335082),
+    y = n(921801),
+    O = n(553795),
+    v = n(430824),
+    I = n(63063),
+    T = n(358085),
     S = n(362352),
-    T = n(413182),
-    N = n(695346),
-    I = n(726985),
-    y = n(981631),
-    A = n(388032),
-    P = n(85240),
-    R = n(197571);
-function D(e) {
-    let t = () => {
-        N.SE.updateSetting(e ? C.Z.getGuildIds() : []);
-    };
-    (0, p.h7j)((e) => {
-        var n, r;
-        return (0, i.jsx)(
-            p.ConfirmModal,
-            ((n = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })(
-                {
-                    header: A.intl.string(A.t["uUr+GR"]),
-                    confirmText: A.intl.string(A.t.gm1Ven),
-                    cancelText: A.intl.string(A.t.p89ACg),
-                    onCancel: t,
-                    confirmButtonColor: m.zx.Colors.BRAND,
-                },
-                e,
-            )),
-            (r = r =
-                {
-                    children: (0, i.jsx)(p.Text, {
-                        variant: "text-md/normal",
-                        children: A.intl.string(A.t.EFu2Ki),
-                    }),
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, i);
-                      }
-                      return n;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                  }),
-            n),
-        );
-    });
+    A = n(413182),
+    C = n(695346),
+    N = n(726985),
+    R = n(981631),
+    P = n(388032),
+    w = n(85240),
+    D = n(197571);
+function x(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function Z() {
-    let e = N.G6.useSetting(),
-        t = N.no.useSetting(),
+function L(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                x(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function j(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function M(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : j(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function k(e) {
+    let t = () => {
+        C.SE.updateSetting(e ? v.Z.getGuildIds() : []);
+    };
+    (0, _.h7j)((e) =>
+        (0, r.jsx)(
+            _.ConfirmModal,
+            M(
+                L(
+                    {
+                        header: P.intl.string(P.t["uUr+GR"]),
+                        confirmText: P.intl.string(P.t.gm1Ven),
+                        cancelText: P.intl.string(P.t.p89ACg),
+                        onCancel: t,
+                        confirmButtonColor: f.zx.Colors.BRAND,
+                    },
+                    e,
+                ),
+                {
+                    children: (0, r.jsx)(_.Text, {
+                        variant: "text-md/normal",
+                        children: P.intl.string(P.t.EFu2Ki),
+                    }),
+                },
+            ),
+        ),
+    );
+}
+function U() {
+    let e = C.G6.useSetting(),
+        t = C.no.useSetting(),
         n = (0, S.Yd)("activity privacy tab"),
-        r = v.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
-        s = [
+        i = T.isPlatformEmbedded ? P.intl.string(P.t.MznbeH) : P.intl.string(P.t.oKqC4u),
+        a = (e) => {
+            C.no.updateSetting(e ? u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : u.GI.ACTIVITY_STATUS_OFF), k(e);
+        },
+        s = (e) => {
+            C.no.updateSetting(e), k(e !== u.GI.ACTIVITY_STATUS_OFF);
+        },
+        l = [
             {
-                value: d.GI.ACTIVITY_STATUS_ON,
-                label: A.intl.string(A.t.UzGMHx),
+                value: u.GI.ACTIVITY_STATUS_ON,
+                label: P.intl.string(P.t.UzGMHx),
             },
             {
-                value: d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                label: A.intl.string(A.t.OFqxQU),
+                value: u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+                label: P.intl.string(P.t.OFqxQU),
             },
             {
-                value: d.GI.ACTIVITY_STATUS_OFF,
-                label: A.intl.string(A.t.MIgNPD),
+                value: u.GI.ACTIVITY_STATUS_OFF,
+                label: P.intl.string(P.t.MIgNPD),
             },
         ];
-    return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(p.hjN, {
+    return (0, r.jsx)(y.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, r.jsxs)(_.hjN, {
             children: [
-                (0, i.jsx)(p.vwX, {
-                    tag: p.RB0.H5,
-                    className: R.marginBottom8,
-                    children: A.intl.string(A.t["8ka8lp"]),
+                (0, r.jsx)(_.vwX, {
+                    tag: _.RB0.H5,
+                    className: D.marginBottom8,
+                    children: P.intl.string(P.t["8ka8lp"]),
                 }),
-                (0, i.jsx)(p.j7V, {
+                (0, r.jsx)(_.j7V, {
                     value: e,
-                    onChange: (e) => N.G6.updateSetting(e),
-                    note: r,
-                    children: A.intl.string(A.t["4q/Ewc"]),
+                    onChange: (e) => C.G6.updateSetting(e),
+                    note: i,
+                    children: P.intl.string(P.t["4q/Ewc"]),
                 }),
                 n
-                    ? (0, i.jsxs)(i.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsxs)(p.xJW, {
-                                  tag: p.RB0.H3,
-                                  title: A.intl.string(A.t.ffGYGx),
+                              (0, r.jsxs)(_.xJW, {
+                                  tag: _.RB0.H3,
+                                  title: P.intl.string(P.t.ffGYGx),
                                   children: [
-                                      (0, i.jsx)(p.Text, {
+                                      (0, r.jsx)(_.Text, {
                                           variant: "text-sm/normal",
                                           color: "header-secondary",
-                                          className: R.marginBottom8,
-                                          children: A.intl.format(A.t.aUxRra, {
-                                              helpdeskArticle: O.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS),
+                                          className: D.marginBottom8,
+                                          children: P.intl.format(P.t.aUxRra, {
+                                              helpdeskArticle: I.Z.getArticleURL(R.BhN.ACTIVITY_STATUS_SETTINGS),
                                           }),
                                       }),
-                                      (0, i.jsx)(p.q4e, {
-                                          options: s,
+                                      (0, r.jsx)(_.q4e, {
+                                          options: l,
                                           value: t,
-                                          onChange: (e) => {
-                                              N.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF);
-                                          },
+                                          onChange: (e) => s(e),
                                       }),
                                   ],
                               }),
-                              (0, i.jsx)(p.$i$, { className: a()(R.marginBottom20, R.marginTop20) }),
+                              (0, r.jsx)(_.$i$, { className: o()(D.marginBottom20, D.marginTop20) }),
                           ],
                       })
-                    : (0, i.jsx)(p.j7V, {
-                          value: t === d.GI.ACTIVITY_STATUS_OFF,
-                          note: A.intl.format(A.t["+5/xu7"], {
-                              helpdeskArticle: O.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS),
+                    : (0, r.jsx)(_.j7V, {
+                          value: t === u.GI.ACTIVITY_STATUS_OFF,
+                          note: P.intl.format(P.t["+5/xu7"], {
+                              helpdeskArticle: I.Z.getArticleURL(R.BhN.ACTIVITY_STATUS_SETTINGS),
                           }),
-                          onChange: (e) => {
-                              var t;
-                              return (
-                                  (t = !e),
-                                  void (N.no.updateSetting(
-                                      t ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF,
-                                  ),
-                                  D(t))
-                              );
-                          },
-                          children: A.intl.string(A.t.D5GXTU),
+                          onChange: (e) => a(!e),
+                          children: P.intl.string(P.t.D5GXTU),
                       }),
             ],
         }),
     });
 }
-function w() {
-    let e = N.cP.useSetting(),
-        t = N.Ou.useSetting();
-    return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(p.hjN, {
-            className: R.marginBottom40,
+function G() {
+    let e = C.cP.useSetting(),
+        t = C.Ou.useSetting();
+    return (0, r.jsx)(y.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, r.jsxs)(_.hjN, {
+            className: D.marginBottom40,
             children: [
-                (0, i.jsx)(p.vwX, {
-                    tag: p.RB0.H5,
-                    className: R.marginBottom8,
-                    children: A.intl.string(A.t.VOszPD),
+                (0, r.jsx)(_.vwX, {
+                    tag: _.RB0.H5,
+                    className: D.marginBottom8,
+                    children: P.intl.string(P.t.VOszPD),
                 }),
-                (0, i.jsx)(p.j7V, {
+                (0, r.jsx)(_.j7V, {
                     value: e,
-                    note: A.intl.string(A.t.Hdh7sb),
-                    onChange: (e) => N.cP.updateSetting(e),
-                    children: A.intl.string(A.t.WEWQQk),
+                    note: P.intl.string(P.t.Hdh7sb),
+                    onChange: (e) => C.cP.updateSetting(e),
+                    children: P.intl.string(P.t.WEWQQk),
                 }),
-                (0, i.jsx)(p.j7V, {
+                (0, r.jsx)(_.j7V, {
                     value: t,
-                    note: A.intl.string(A.t.Czr3Bg),
-                    onChange: (e) => N.Ou.updateSetting(e),
-                    children: A.intl.string(A.t.UUvJVl),
+                    note: P.intl.string(P.t.Czr3Bg),
+                    onChange: (e) => C.Ou.updateSetting(e),
+                    children: P.intl.string(P.t.UUvJVl),
                 }),
             ],
         }),
     });
 }
-function k() {
-    return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(p.hjN, {
-            className: R.marginBottom40,
-            children: (0, i.jsx)(p.ToO, {
-                type: p.ToO.Types.PRIMARY,
-                body: A.intl.format(A.t.xvCsx8, {
-                    termsLink: y.EYA.TERMS,
-                    privacyLink: y.EYA.PRIVACY,
+function B() {
+    return (0, r.jsx)(y.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, r.jsx)(_.hjN, {
+            className: D.marginBottom40,
+            children: (0, r.jsx)(_.ToO, {
+                type: _.ToO.Types.PRIMARY,
+                body: P.intl.format(P.t.xvCsx8, {
+                    termsLink: R.EYA.TERMS,
+                    privacyLink: R.EYA.PRIVACY,
                 }),
             }),
         }),
     });
 }
-function L(e) {
+let Z = (e) => {
+    switch (e.type) {
+        case R.ABu.SPOTIFY:
+            return P.intl.format(P.t["5sYPnp"], { name: e.name });
+        case R.ABu.CRUNCHYROLL:
+            return P.intl.format(P.t.Ge29Z2, { name: e.name });
+        default:
+            return P.intl.format(P.t.nmMsys, { game: e.name });
+    }
+};
+function V(e) {
     let { account: t } = e,
-        [n, s] = r.useState(t.showActivity),
-        a = (0, h.ZP)();
-    r.useEffect(() => {
-        s(t.showActivity);
+        [n, a] = i.useState(t.showActivity),
+        o = (0, h.ZP)();
+    function s(e) {
+        a(e), p.Z.setShowActivity(t.type, t.id, e);
+    }
+    i.useEffect(() => {
+        a(t.showActivity);
     }, [t]);
-    let l = f.Z.get(t.type);
-    return (0, i.jsxs)(i.Fragment, {
+    let l = m.Z.get(t.type);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(p.j7V, {
-                className: P.switchRowContainer,
+            (0, r.jsx)(_.j7V, {
+                className: w.switchRowContainer,
                 hideBorder: !0,
                 value: n,
-                onChange: function (e) {
-                    s(e), g.Z.setShowActivity(t.type, t.id, e);
-                },
-                children: (0, i.jsxs)("div", {
-                    className: P.activitySwitchRow,
+                onChange: s,
+                children: (0, r.jsxs)("div", {
+                    className: w.activitySwitchRow,
                     children: [
-                        (0, i.jsx)("img", {
+                        (0, r.jsx)("img", {
                             alt: l.name,
-                            className: P.connectionIcon,
-                            src: (0, u.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG,
+                            className: w.connectionIcon,
+                            src: (0, d.wj)(o) ? l.icon.darkSVG : l.icon.lightSVG,
                         }),
-                        (0, i.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             children: [
-                                (0, i.jsx)(p.Text, {
+                                (0, r.jsx)(_.Text, {
                                     variant: "text-md/semibold",
                                     children: l.name,
                                 }),
-                                (0, i.jsxs)(p.Text, {
+                                (0, r.jsxs)(_.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: [
-                                        '"',
-                                        ((e) => {
-                                            switch (e.type) {
-                                                case y.ABu.SPOTIFY:
-                                                    return A.intl.format(A.t["5sYPnp"], { name: e.name });
-                                                case y.ABu.CRUNCHYROLL:
-                                                    return A.intl.format(A.t.Ge29Z2, { name: e.name });
-                                                default:
-                                                    return A.intl.format(A.t.nmMsys, { game: e.name });
-                                            }
-                                        })(l),
-                                        '"',
-                                    ],
+                                    children: ['"', Z(l), '"'],
                                 }),
                             ],
                         }),
                     ],
                 }),
             }),
-            (0, i.jsx)("div", { className: P.divider }),
+            (0, r.jsx)("div", { className: w.divider }),
         ],
     });
 }
-function B() {
-    let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
-        t = r.useMemo(() => e.filter((e) => f.Z.isSupported(e.type) && y.vbS.has(e.type)), [e]),
-        [n, s] = r.useState(""),
-        a = r.useMemo(() => {
+function F() {
+    let e = (0, c.e7)([O.Z], () => O.Z.getAccounts()),
+        t = i.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && R.vbS.has(e.type)), [e]),
+        [n, a] = i.useState(""),
+        o = i.useMemo(() => {
             let e = n.trim().toLowerCase();
-            return "" === e ? t : t.filter((t) => o()(e, f.Z.get(t.type).name.toLowerCase()));
+            return "" === e ? t : t.filter((t) => l()(e, m.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, i.jsx)(j.F, {
-              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, i.jsx)(p.hjN, {
-                  className: R.marginBottom40,
-                  children: (0, i.jsxs)(p.Kqy, {
+        : (0, r.jsx)(y.F, {
+              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              children: (0, r.jsx)(_.hjN, {
+                  className: D.marginBottom40,
+                  children: (0, r.jsxs)(_.Kqy, {
                       gap: 12,
                       children: [
-                          (0, i.jsx)(p.vwX, {
-                              tag: p.RB0.H5,
-                              className: R.marginBottom8,
-                              children: A.intl.string(A.t["4F2KoK"]),
+                          (0, r.jsx)(_.vwX, {
+                              tag: _.RB0.H5,
+                              className: D.marginBottom8,
+                              children: P.intl.string(P.t["4F2KoK"]),
                           }),
-                          (0, i.jsx)(p.E1j, {
+                          (0, r.jsx)(_.E1j, {
                               query: n,
-                              onChange: s,
-                              placeholder: A.intl.string(A.t.WPrtoa),
+                              onChange: a,
+                              placeholder: P.intl.string(P.t.WPrtoa),
                           }),
-                          a.map((e) => (0, i.jsx)(L, { account: e }, e.id)),
+                          o.map((e) => (0, r.jsx)(V, { account: e }, e.id)),
                       ],
                   }),
               }),
           });
 }
-function M(e) {
+function H(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: r } = T.b.useExperiment({ location: "activity privacy tab" }),
-        { showPerGuildActivityStatusSetting: s } = (0, x.c)("activity privacy tab"),
-        { showUpdatedSettingsPage: a } = (0, b.D)("activity privacy tab");
-    return s || a
-        ? (0, i.jsx)(_.Z, {})
-        : (0, i.jsxs)(p.hjN, {
+        { showRedesign: i } = A.b.useExperiment({ location: "activity privacy tab" }),
+        { showPerGuildActivityStatusSetting: a } = (0, E.c)("activity privacy tab"),
+        { showUpdatedSettingsPage: o } = (0, g.D)("activity privacy tab");
+    return a || o
+        ? (0, r.jsx)(b.Z, {})
+        : (0, r.jsxs)(_.hjN, {
               className: t,
-              tag: p.RB0.H1,
-              title: n ? A.intl.string(A.t.Cq98yM) : null,
-              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {}), r && (0, i.jsx)(B, {})],
+              tag: _.RB0.H1,
+              title: n ? P.intl.string(P.t.Cq98yM) : null,
+              children: [(0, r.jsx)(U, {}), (0, r.jsx)(G, {}), (0, r.jsx)(B, {}), i && (0, r.jsx)(F, {})],
           });
 }

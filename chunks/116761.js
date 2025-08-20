@@ -1,256 +1,256 @@
-var n = r(381538);
+var r = n(381538);
 function i() {
     return (i =
-        n ||
-        function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var r = arguments[e];
-                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
+        r ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
-            return t;
+            return e;
         }).apply(this, arguments);
 }
-function o(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
+function a(e) {
+    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return e;
+}
+function o(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                a(t, e, r[e]);
+            r.forEach(function (t) {
+                l(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-function a(t, e, r) {
+function l(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = r),
-        t
+            : (e[t] = n),
+        e
     );
 }
-var u = r(715579),
-    s = r(654530),
-    c = r(647438),
-    l = r(1231),
-    f = r(292489),
-    p = r(675411),
-    h = r(685536),
-    d = r(126502),
-    g = r(65183),
-    y = r(581079),
-    v = r(246974);
+var c = n(715579),
+    u = n(654530),
+    d = n(647438),
+    f = n(1231),
+    _ = n(292489),
+    p = n(675411),
+    h = n(685536),
+    m = n(126502),
+    g = n(65183),
+    E = n(581079),
+    b = n(246974),
+    y = 10;
 g.List;
-var m = function (t, e) {
-        return t.getAnchorKey() === e || t.getFocusKey() === e;
+var O = function (e, t) {
+        return e.getAnchorKey() === t || e.getFocusKey() === t;
     },
-    _ = function (t, e) {
-        var r = t.getNextSiblingKey();
-        return !!r && e.getBlockForKey(r).getType() === t.getType();
+    v = function (e, t) {
+        var n = e.getNextSiblingKey();
+        return !!n && t.getBlockForKey(n).getType() === e.getType();
     },
-    b = function (t, e, r) {
-        var n = [],
+    I = function (e, t, n) {
+        var r = [],
             i = !0,
-            o = !1,
-            a = void 0;
+            a = !1,
+            o = void 0;
         try {
-            for (var u, l = r.reverse()[Symbol.iterator](); !(i = (u = l.next()).done); i = !0) {
-                var f = u.value;
-                if (f.type !== e) break;
-                n.push(f);
+            for (var s, l = n.reverse()[Symbol.iterator](); !(i = (s = l.next()).done); i = !0) {
+                var c = s.value;
+                if (c.type !== t) break;
+                r.push(c);
             }
-        } catch (t) {
-            (o = !0), (a = t);
+        } catch (e) {
+            (a = !0), (o = e);
         } finally {
             try {
                 i || null == l.return || l.return();
             } finally {
-                if (o) throw a;
+                if (a) throw o;
             }
         }
-        r.splice(r.indexOf(n[0]), n.length + 1);
-        var p = n.reverse(),
-            h = p[0].key;
+        n.splice(n.indexOf(r[0]), r.length + 1);
+        var f = r.reverse(),
+            _ = f[0].key;
         return (
-            r.push(
-                c.cloneElement(
-                    t,
+            n.push(
+                d.cloneElement(
+                    e,
                     {
-                        key: "".concat(h, "-wrap"),
-                        "data-offset-key": s.encode(h, 0, 0),
+                        key: "".concat(_, "-wrap"),
+                        "data-offset-key": u.encode(_, 0, 0),
                     },
-                    p,
+                    f,
                 ),
             ),
-            r
+            n
         );
     },
-    S = function (t, e) {
-        var r = e.get(t.getType()) || e.get("unstyled"),
-            n = r.wrapper;
+    T = function (e, t) {
+        var n = t.get(e.getType()) || t.get("unstyled"),
+            r = n.wrapper;
         return {
-            Element: r.element || e.get("unstyled").element,
-            wrapperTemplate: n,
+            Element: n.element || t.get("unstyled").element,
+            wrapperTemplate: r,
         };
     },
-    w = function (t, e) {
-        var r = e(t);
-        return r
+    S = function (e, t) {
+        var n = t(e);
+        return n
             ? {
-                  CustomComponent: r.component,
-                  customProps: r.props,
-                  customEditable: r.editable,
+                  CustomComponent: n.component,
+                  customProps: n.props,
+                  customEditable: n.editable,
               }
             : {};
     },
-    x = function (t, e, r, n, i, a) {
-        var u = {
+    A = function (e, t, n, r, i, a) {
+        var o = {
                 "data-block": !0,
-                "data-editor": e,
-                "data-offset-key": r,
-                key: t.getKey(),
+                "data-editor": t,
+                "data-offset-key": n,
+                key: e.getKey(),
                 ref: a,
             },
-            s = n(t);
+            l = r(e);
         return (
-            s && (u.className = s),
+            l && (o.className = l),
             void 0 !== i.customEditable &&
-                (u = o({}, u, {
+                (o = s({}, o, {
                     contentEditable: i.customEditable,
                     suppressContentEditableWarning: !0,
                 })),
-            u
+            o
         );
     };
-t.exports = (function (t) {
-    function e() {
-        for (var e, r = arguments.length, n = Array(r), i = 0; i < r; i++) n[i] = arguments[i];
-        return (
-            a(
-                (function (t) {
-                    if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                    return t;
-                })((e = t.call.apply(t, [this].concat(n)) || this)),
-                "wrapperRef",
-                c.createRef(),
-            ),
-            e
-        );
+e.exports = (function (e) {
+    function t() {
+        for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+        return l(a((t = e.call.apply(e, [this].concat(r)) || this)), "wrapperRef", d.createRef()), t;
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-    var r = e.prototype;
+    o(t, e);
+    var n = t.prototype;
     return (
-        (r.shouldComponentUpdate = function (t) {
-            var e = this.props,
-                r = e.block,
-                n = e.direction,
-                i = e.tree,
-                o = !r.getChildKeys().isEmpty(),
-                a =
-                    r !== t.block ||
-                    i !== t.tree ||
-                    n !== t.direction ||
-                    (m(t.selection, t.block.getKey()) && t.forceSelection);
-            return o || a;
+        (n.shouldComponentUpdate = function (e) {
+            var t = this.props,
+                n = t.block,
+                r = t.direction,
+                i = t.tree,
+                a = !n.getChildKeys().isEmpty(),
+                o =
+                    n !== e.block ||
+                    i !== e.tree ||
+                    r !== e.direction ||
+                    (O(e.selection, e.block.getKey()) && e.forceSelection);
+            return a || o;
         }),
-        (r.componentDidMount = function () {
-            var t,
-                e = this.props.selection,
-                r = e.getEndKey();
-            if (e.getHasFocus() && r === this.props.block.getKey()) {
-                var n = this.wrapperRef.current;
-                if (n) {
-                    var i = f.getScrollParent(n),
-                        o = h(i);
+        (n.componentDidMount = function () {
+            var e,
+                t = this.props.selection,
+                n = t.getEndKey();
+            if (t.getHasFocus() && n === this.props.block.getKey()) {
+                var r = this.wrapperRef.current;
+                if (r) {
+                    var i = _.getScrollParent(r),
+                        a = h(i);
                     if (i === window) {
-                        var a = p(n);
-                        (t = a.y + a.height - d().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
-                    } else
-                        v(n) || y(!1),
-                            (t = n.offsetHeight + n.offsetTop - (i.offsetHeight + o.y)) > 0 &&
-                                l.setTop(i, l.getTop(i) + t + 10);
+                        var o = p(r);
+                        (e = o.y + o.height - m().height) > 0 && window.scrollTo(a.x, a.y + e + y);
+                    } else {
+                        b(r) || E(!1);
+                        var s = r;
+                        (e = s.offsetHeight + s.offsetTop - (i.offsetHeight + a.y)) > 0 &&
+                            f.setTop(i, f.getTop(i) + e + y);
+                    }
                 }
             }
         }),
-        (r.render = function () {
-            var t = this,
-                r = this.props,
-                n = r.block,
-                a = r.blockRenderMap,
-                l = r.blockRendererFn,
-                f = r.blockStyleFn,
-                p = r.contentState,
-                h = r.decorator,
-                d = r.editorKey,
-                g = r.editorState,
-                y = r.customStyleFn,
-                v = r.customStyleMap,
-                k = r.direction,
-                C = r.forceSelection,
-                E = r.selection,
-                D = r.tree,
-                O = null;
-            n.children.size &&
-                (O = n.children.reduce(function (r, n) {
-                    var i = s.encode(n, 0, 0),
-                        u = p.getBlockForKey(n),
-                        h = w(u, l),
-                        y = h.CustomComponent || e,
-                        v = S(u, a),
-                        m = v.Element,
-                        k = v.wrapperTemplate,
-                        C = x(u, d, i, f, h, null),
-                        E = o({}, t.props, {
-                            tree: g.getBlockTree(n),
-                            blockProps: h.customProps,
+        (n.render = function () {
+            var e = this,
+                n = this.props,
+                r = n.block,
+                a = n.blockRenderMap,
+                o = n.blockRendererFn,
+                l = n.blockStyleFn,
+                f = n.contentState,
+                _ = n.decorator,
+                p = n.editorKey,
+                h = n.editorState,
+                m = n.customStyleFn,
+                g = n.customStyleMap,
+                E = n.direction,
+                b = n.forceSelection,
+                y = n.selection,
+                C = n.tree,
+                N = null;
+            r.children.size &&
+                (N = r.children.reduce(function (n, r) {
+                    var i = u.encode(r, 0, 0),
+                        c = f.getBlockForKey(r),
+                        _ = S(c, o),
+                        m = _.CustomComponent || t,
+                        g = T(c, a),
+                        E = g.Element,
+                        b = g.wrapperTemplate,
+                        y = A(c, p, i, l, _, null),
+                        O = s({}, e.props, {
+                            tree: h.getBlockTree(r),
+                            blockProps: _.customProps,
                             offsetKey: i,
-                            block: u,
+                            block: c,
                         });
-                    return r.push(c.createElement(m, C, c.createElement(y, E))), !k || _(u, p) || b(k, m, r), r;
+                    return n.push(d.createElement(E, y, d.createElement(m, O))), !b || v(c, f) || I(b, E, n), n;
                 }, []));
-            var K = n.getKey(),
-                T = s.encode(K, 0, 0),
-                M = w(n, l),
-                A = M.CustomComponent,
-                I =
-                    null != A
-                        ? c.createElement(
-                              A,
+            var R = r.getKey(),
+                P = u.encode(R, 0, 0),
+                w = S(r, o),
+                D = w.CustomComponent,
+                x =
+                    null != D
+                        ? d.createElement(
+                              D,
                               i({}, this.props, {
-                                  tree: g.getBlockTree(K),
-                                  blockProps: M.customProps,
-                                  offsetKey: T,
-                                  block: n,
+                                  tree: h.getBlockTree(R),
+                                  blockProps: w.customProps,
+                                  offsetKey: P,
+                                  block: r,
                               }),
                           )
-                        : c.createElement(u, {
-                              block: n,
-                              children: O,
-                              contentState: p,
-                              customStyleFn: y,
-                              customStyleMap: v,
-                              decorator: h,
-                              direction: k,
-                              forceSelection: C,
-                              hasSelection: m(E, K),
-                              selection: E,
-                              tree: D,
+                        : d.createElement(c, {
+                              block: r,
+                              children: N,
+                              contentState: f,
+                              customStyleFn: m,
+                              customStyleMap: g,
+                              decorator: _,
+                              direction: E,
+                              forceSelection: b,
+                              hasSelection: O(y, R),
+                              selection: y,
+                              tree: C,
                           });
-            if (n.getParentKey()) return I;
-            var B = S(n, a).Element,
-                L = x(n, d, T, f, M, this.wrapperRef);
-            return c.createElement(B, L, I);
+            if (r.getParentKey()) return x;
+            var L = T(r, a).Element,
+                j = A(r, p, P, l, w, this.wrapperRef);
+            return d.createElement(L, j, x);
         }),
-        e
+        t
     );
-})(c.Component);
+})(d.Component);

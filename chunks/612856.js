@@ -1,35 +1,35 @@
-n.d(t, { Z: () => d });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    l = n(481060),
-    a = n(569471),
-    o = n(346479),
-    s = n(723170),
-    c = n(124368),
-    u = n(388032);
-function d(e) {
-    let t = (0, s.B)(e);
-    return (0, i.e7)([a.Z], () => a.Z.hasJoined(e.id))
-        ? (0, r.jsx)(l.sNh, {
+i.d(n, { Z: () => c });
+var e = i(951288);
+i(647438);
+var l = i(442837),
+    r = i(481060),
+    a = i(569471),
+    d = i(346479),
+    o = i(723170),
+    s = i(124368),
+    u = i(388032);
+function c(t) {
+    let n = (0, o.B)(t);
+    return (0, l.e7)([a.Z], () => a.Z.hasJoined(t.id))
+        ? (0, e.jsx)(r.sNh, {
               id: "thread-notifications",
               label: u.intl.string(u.t.h850Sk),
-              children: (0, c.zb)().map((n) => {
-                  let { setting: i, label: a } = n;
-                  return (0, r.jsx)(
-                      l.k5B,
+              children: (0, s.zb)().map((i) => {
+                  let { setting: l, label: a } = i;
+                  return (0, e.jsx)(
+                      r.k5B,
                       {
                           group: "thread-notifications",
-                          id: "".concat(i),
+                          id: "".concat(l),
                           label: a,
-                          action: () => o.Z.setNotificationSettings(e, { flags: i }),
-                          checked: i === t,
+                          action: () => d.Z.setNotificationSettings(t, { flags: l }),
+                          checked: l === n,
                       },
-                      i,
+                      l,
                   );
               }),
           })
-        : (0, r.jsx)(l.sNh, {
+        : (0, e.jsx)(r.sNh, {
               id: "notifications-disabled",
               label: u.intl.string(u.t.h850Sk),
               disabled: !0,

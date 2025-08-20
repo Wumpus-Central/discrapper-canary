@@ -1,16 +1,16 @@
-n.d(t, { Z: () => m }), n(388685), n(953529);
-var s = n(951288),
-    a = n(647438),
+n.d(t, { Z: () => x }), n(388685), n(953529);
+var a = n(951288),
+    s = n(647438),
     r = n(442837),
     i = n(481060),
     l = n(479531),
     o = n(393869),
     c = n(594174),
     d = n(388032),
-    x = n(780187);
-function m(e) {
+    m = n(780187);
+function x(e) {
     let { onNext: t, onClose: n } = e,
-        [m, u] = a.useState(!1),
+        [x, u] = s.useState(!1),
         _ = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         E = async (e) => {
             e.preventDefault(), u(!0);
@@ -23,49 +23,49 @@ function m(e) {
                 u(!1);
             }
         };
-    return (0, s.jsxs)("form", {
+    return (0, a.jsxs)("form", {
         onSubmit: E,
         children: [
-            (0, s.jsxs)(i.xBx, {
+            (0, a.jsxs)(i.xBx, {
                 separator: !1,
-                className: x.header,
+                className: m.header,
                 children: [
-                    (0, s.jsx)(i.X6q, {
-                        className: x.title,
+                    (0, a.jsx)(i.X6q, {
+                        className: m.title,
                         variant: "heading-xl/extrabold",
                         children: d.intl.string(d.t.uFxYq6),
                     }),
-                    (0, s.jsx)(i.olH, {
+                    (0, a.jsx)(i.olH, {
                         onClick: n,
-                        className: x.modalCloseButton,
+                        className: m.modalCloseButton,
                     }),
                 ],
             }),
-            (0, s.jsx)(i.hzk, {
-                className: x.content,
-                children: (0, s.jsx)(i.Text, {
-                    className: x.description,
+            (0, a.jsx)(i.hzk, {
+                className: m.content,
+                children: (0, a.jsx)(i.Text, {
+                    className: m.description,
                     variant: "text-md/normal",
                     children: d.intl.format(d.t.oMFSgo, { oldEmail: null == _ ? void 0 : _.email }),
                 }),
             }),
-            (0, s.jsxs)(i.mzw, {
-                className: x.modalFooter,
+            (0, a.jsxs)(i.mzw, {
+                className: m.modalFooter,
                 children: [
-                    (0, s.jsx)("div", {
+                    (0, a.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: x.__invalid_submit,
-                        children: (0, s.jsx)(i.zxk, {
+                        className: m.__invalid_submit,
+                        children: (0, a.jsx)(i.zxk, {
                             variant: "primary",
                             text: d.intl.string(d.t.rXV81N),
                             type: "submit",
-                            loading: m,
+                            loading: x,
                         }),
                     }),
-                    (0, s.jsx)("div", {
+                    (0, a.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: x.__invalid_cancel,
-                        children: (0, s.jsx)(i.zxk, {
+                        className: m.__invalid_cancel,
+                        children: (0, a.jsx)(i.zxk, {
                             variant: "secondary",
                             text: d.intl.string(d.t["ETE/oK"]),
                             onClick: n,

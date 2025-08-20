@@ -39,38 +39,38 @@ function O(e, t) {
     let O = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
         _ = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
         y = null != (b = (0, u.Z)(e)) && b,
-        v = (0, c.q8)(e, t),
-        j = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
-        C = (null == j || null == (n = j.unlockedPowerups) ? void 0 : n[i.A$]) != null,
-        E = null == j || null == (d = j.allPowerups) ? void 0 : d[i.A$],
-        x = null == E ? void 0 : E.storeRemovalDate,
-        S = null == j || null == (h = j.allPowerups) ? void 0 : h[i.XW],
-        { onActivate: P } = (0, f._C)(e, S),
-        I = !_ && y && v && C && null != E && null != x && null != S && null != O,
+        j = (0, c.q8)(e, t),
+        v = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
+        C = (null == v || null == (n = v.unlockedPowerups) ? void 0 : n[i.A$]) != null,
+        x = null == v || null == (d = v.allPowerups) ? void 0 : d[i.A$],
+        E = null == x ? void 0 : x.storeRemovalDate,
+        S = null == v || null == (h = v.allPowerups) ? void 0 : h[i.XW],
+        { onActivate: I } = (0, f._C)(e, S),
+        P = !_ && y && j && C && null != x && null != E && null != S && null != O,
         N = r.useCallback(
             (e) => {
-                P(e);
+                I(e);
             },
-            [P],
+            [I],
         ),
         w = r.useMemo(() => {
-            if (!I) return null;
-            let e = (0, p.Z)(x);
+            if (!P) return null;
+            let e = (0, p.Z)(E);
             return {
-                firstHeader: E.title,
+                firstHeader: x.title,
                 secondHeader: m.intl.formatToPlainString(g.default["8imxAg"], { dateString: e }),
                 firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: O.name }),
                 secondBody: m.intl.formatToPlainString(g.default.D09fdn, {
                     dateString: e,
-                    boostCount: E.cost,
+                    boostCount: x.cost,
                 }),
                 thirdBody: m.intl.string(g.default["+zvKPj"]),
                 primaryButtonText: m.intl.string(g.default["0uo/LC"]),
                 onPrimaryClick: N,
             };
-        }, [I, E, x, O, N]);
+        }, [P, x, E, O, N]);
     return {
-        shouldShow: I,
+        shouldShow: P,
         modalConfig: w,
     };
 }

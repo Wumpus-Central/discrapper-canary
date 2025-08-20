@@ -1,30 +1,32 @@
 n.d(t, {
-    Z: () => i,
+    Z: () => o,
     a: () => a,
 });
-var r,
-    s = n(951288);
+var r = n(951288);
 n(647438);
-var o = n(481060),
-    a =
-        (((r = {})[(r.UNENROLLED = 0)] = "UNENROLLED"),
-        (r[(r.ENROLLED = 1)] = "ENROLLED"),
-        (r[(r.COMPLETED_25 = 2)] = "COMPLETED_25"),
-        (r[(r.COMPLETED_50 = 3)] = "COMPLETED_50"),
-        (r[(r.COMPLETED_75 = 4)] = "COMPLETED_75"),
-        (r[(r.COMPLETED_100 = 5)] = "COMPLETED_100"),
-        (r[(r.CLAIMED = 6)] = "CLAIMED"),
-        r);
-let i = function (e) {
+var i = n(481060),
+    a = (function (e) {
+        return (
+            (e[(e.UNENROLLED = 0)] = "UNENROLLED"),
+            (e[(e.ENROLLED = 1)] = "ENROLLED"),
+            (e[(e.COMPLETED_25 = 2)] = "COMPLETED_25"),
+            (e[(e.COMPLETED_50 = 3)] = "COMPLETED_50"),
+            (e[(e.COMPLETED_75 = 4)] = "COMPLETED_75"),
+            (e[(e.COMPLETED_100 = 5)] = "COMPLETED_100"),
+            (e[(e.CLAIMED = 6)] = "CLAIMED"),
+            e
+        );
+    })({});
+let o = function (e) {
     let { onChange: t, value: n } = e;
-    return (0, s.jsxs)(o.xJW, {
+    return (0, r.jsxs)(i.xJW, {
         children: [
-            (0, s.jsx)(o.vwX, {
-                tag: o.RB0.H5,
+            (0, r.jsx)(i.vwX, {
+                tag: i.RB0.H5,
                 children: "User State",
             }),
-            (0, s.jsx)(o.R94, {
-                children: (0, s.jsx)(o.PhF, {
+            (0, r.jsx)(i.R94, {
+                children: (0, r.jsx)(i.PhF, {
                     "aria-label": "User State",
                     options: [
                         {

@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(410030),
     x = n(857595),
     v = n(607070),
-    j = n(367907),
-    O = n(450936),
+    O = n(367907),
+    j = n(450936),
     E = n(993766),
     S = n(989573),
     P = n(499254),
@@ -73,8 +73,8 @@ var r = n(951288),
     eC = n(807092),
     ex = n(773359),
     ev = n(45251),
-    ej = n(705533),
-    eO = n(618857),
+    eO = n(705533),
+    ej = n(618857),
     eE = n(268350),
     eS = n(155409),
     eP = n(163612),
@@ -214,7 +214,7 @@ class ta extends i.PureComponent {
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
-        f.Z.startEditMessageRecord(t.id, e), j.ZP.trackWithMetadata(e3.rMx.MESSAGE_EDIT_UP_ARROW);
+        f.Z.startEditMessageRecord(t.id, e), O.ZP.trackWithMetadata(e3.rMx.MESSAGE_EDIT_UP_ARROW);
     }
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
@@ -558,7 +558,7 @@ class ta extends i.PureComponent {
                     null != x && (null != x.content && (t = x.content), null != x.tts && (b = x.tts));
                     let v = eu.ZP.parse(d, t);
                     (v.tts = v.tts || b), null != s && ((v.content = ""), (v.components = s));
-                    let j = tt(
+                    let O = tt(
                         te(
                             {},
                             f.Z.getSendMessageOptions({
@@ -577,12 +577,12 @@ class ta extends i.PureComponent {
                         { location: e4.dy.CHAT_INPUT },
                     );
                     if (
-                        (null != c && (j.announcementSendOptions = c),
-                        null != s && (j.flags = (0, eG.pj)(null != (y = j.flags) ? y : 0, e3.iLy.IS_COMPONENTS_V2)),
+                        (null != c && (O.announcementSendOptions = c),
+                        null != s && (O.flags = (0, eG.pj)(null != (y = O.flags) ? y : 0, e3.iLy.IS_COMPONENTS_V2)),
                         o)
                     )
                         return (
-                            f.Z.sendMessage(d.id, v, void 0, j),
+                            f.Z.sendMessage(d.id, v, void 0, O),
                             (0, e_.A6)(d.id),
                             {
                                 shouldClear: !1,
@@ -599,9 +599,9 @@ class ta extends i.PureComponent {
                                     shouldRefocus: !1,
                                 }
                             );
-                        (j.eagerDispatch = !1),
-                            (j.attachmentsToUpload = n),
-                            (j.onAttachmentUploadError = (e, r, i) => {
+                        (O.eagerDispatch = !1),
+                            (O.attachmentsToUpload = n),
+                            (O.onAttachmentUploadError = (e, r, i) => {
                                 (0, es.A)({
                                     file: e,
                                     guildId: d.getGuildId(),
@@ -621,33 +621,33 @@ class ta extends i.PureComponent {
                             }),
                             g.Z.clearAll(d.id, eN.d.ChannelMessage);
                     }
-                    if (null != j.scheduledTimestamp)
+                    if (null != O.scheduledTimestamp)
                         try {
                             await (0, ev.PV)({
                                 channelId: d.id,
-                                scheduledTimestamp: j.scheduledTimestamp,
+                                scheduledTimestamp: O.scheduledTimestamp,
                                 messageSendData: {
                                     channelId: d.id,
                                     content: t,
                                     nonce: (0, ed.r)(),
                                     tts: b,
-                                    message_reference: j.messageReference,
-                                    allowed_mentions: j.allowedMentions,
-                                    flags: j.flags,
+                                    message_reference: O.messageReference,
+                                    allowed_mentions: O.allowedMentions,
+                                    flags: O.flags,
                                 },
                                 attachmentsToUpload: n,
                             }),
-                                (0, eO.Hw)(j.scheduledTimestamp);
+                                (0, ej.Hw)(O.scheduledTimestamp);
                         } catch (e) {
                             return (
-                                (0, eO.wW)(e.message),
+                                (0, ej.wW)(e.message),
                                 {
                                     shouldClear: !1,
                                     shouldRefocus: !1,
                                 }
                             );
                         }
-                    else f.Z.sendMessage(d.id, v, void 0, j);
+                    else f.Z.sendMessage(d.id, v, void 0, O);
                     return (
                         this.setState((0, B.H2)()),
                         (0, e_.A6)(d.id),
@@ -724,8 +724,8 @@ class to extends i.PureComponent {
                 shakeIntensity: C,
                 poggermodeEnabled: x,
                 isSelectedResourceChannel: v,
-                showAutomodUserProfileChatBlocker: j,
-                showAppLauncherButton: O,
+                showAutomodUserProfileChatBlocker: O,
+                showAppLauncherButton: j,
                 showAppDMsUI: E,
                 isInitialLoading: S,
                 pendingScheduledMessage: P,
@@ -792,7 +792,7 @@ class to extends i.PureComponent {
             G = (E && S) || M,
             V = G ? F : H,
             z = a()({
-                [e5.barWithAppLauncherButton]: O,
+                [e5.barWithAppLauncherButton]: j,
                 [e5.barWithAppsDMsUI]: E,
             }),
             { enabled: W } = eP.Z.getCurrentConfig({
@@ -878,7 +878,7 @@ class to extends i.PureComponent {
                                                             showQuarantinedUserBanner: m,
                                                             guild: l,
                                                             communicationDisabledUntil: _,
-                                                            showAutomodUserProfileChatBlocker: j,
+                                                            showAutomodUserProfileChatBlocker: O,
                                                         }))
                                                       ? t
                                                       : (0, r.jsxs)("form", {
@@ -1077,8 +1077,8 @@ let ts = i.memo(function (e) {
             channel: t,
             chatInputType: l,
         }),
-        j = (0, S.Z)(t),
-        P = (0, ej.k)(t.id),
+        O = (0, S.Z)(t),
+        P = (0, eO.k)(t.id),
         Z = (0, C.ZP)(),
         N = (0, Q.Z)(t.id),
         A = (0, X.Z)(null == N ? void 0 : N.wallpaperId),
@@ -1090,7 +1090,7 @@ let ts = i.memo(function (e) {
             applicationId: D,
             channelId: L,
             commands: U,
-        } = (0, O.Z)({
+        } = (0, j.Z)({
             context: {
                 channel: t,
                 type: "channel",
@@ -1133,7 +1133,7 @@ let ts = i.memo(function (e) {
         isSelectedResourceChannel: _,
         showAutomodUserProfileChatBlocker: h && !m,
         showAppLauncherButton: x,
-        showAppDMsUI: j,
+        showAppDMsUI: O,
         isInitialLoading: w,
         showEntryPointAppCommandButton: null != R,
         entryPointCommandButtonRef: B,

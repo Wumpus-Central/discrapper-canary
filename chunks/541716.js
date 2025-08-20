@@ -371,7 +371,7 @@ let d = {
         disableAutoFocus: !0,
         hideAccessoryBar: !0,
     },
-    N = {
+    C = {
         analyticsName: "forum_channel_guidelines",
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -386,7 +386,7 @@ let d = {
         showCharacterCount: !0,
         toolbarType: 1,
     },
-    C = {
+    N = {
         analyticsName: "channel_topic",
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -423,8 +423,8 @@ let d = {
         CREATE_FORUM_POST: b,
         CREATE_ANNOUNCEMENT_POST: E,
         CREATE_POLL: y,
-        FORUM_CHANNEL_GUIDELINES: N,
-        CHANNEL_TOPIC: C,
+        FORUM_CHANNEL_GUIDELINES: C,
+        CHANNEL_TOPIC: N,
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: "atomic_reator_reply_input",
             drafts: { type: i.d.ChannelMessage },

@@ -122,7 +122,7 @@ function _(e, n, r) {
         l = f(s);
     if (
         (e.showHidden && (s = Object.getOwnPropertyNames(n)),
-        C(n) && (s.indexOf("message") >= 0 || s.indexOf("description") >= 0))
+        N(n) && (s.indexOf("message") >= 0 || s.indexOf("description") >= 0))
     )
         return h(n);
     if (0 === s.length) {
@@ -131,8 +131,8 @@ function _(e, n, r) {
             return e.stylize("[Function" + c + "]", "special");
         }
         if (S(n)) return e.stylize(RegExp.prototype.toString.call(n), "regexp");
-        if (N(n)) return e.stylize(Date.prototype.toString.call(n), "date");
-        if (C(n)) return h(n);
+        if (C(n)) return e.stylize(Date.prototype.toString.call(n), "date");
+        if (N(n)) return h(n);
     }
     var u = "",
         d = !1,
@@ -141,8 +141,8 @@ function _(e, n, r) {
         (b(n) && ((d = !0), (y = ["[", "]"])),
         R(n) && (u = " [Function" + (n.name ? ": " + n.name : "") + "]"),
         S(n) && (u = " " + RegExp.prototype.toString.call(n)),
-        N(n) && (u = " " + Date.prototype.toUTCString.call(n)),
-        C(n) && (u = " " + h(n)),
+        C(n) && (u = " " + Date.prototype.toUTCString.call(n)),
+        N(n) && (u = " " + h(n)),
         0 === s.length && (!d || 0 == n.length))
     )
         return y[0] + u + y[1];
@@ -179,7 +179,7 @@ function h(e) {
 }
 function m(e, t, n, r, i) {
     for (var a = [], o = 0, s = t.length; o < s; ++o)
-        x(t, String(o)) ? a.push(g(e, t, n, r, String(o), !0)) : a.push("");
+        L(t, String(o)) ? a.push(g(e, t, n, r, String(o), !0)) : a.push("");
     return (
         i.forEach(function (i) {
             i.match(/^\d+$/) || a.push(g(e, t, n, r, i, !0));
@@ -193,7 +193,7 @@ function g(e, t, n, r, i, a) {
         ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get
             ? (s = l.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special"))
             : l.set && (s = e.stylize("[Setter]", "special")),
-        x(r, i) || (o = "[" + i + "]"),
+        L(r, i) || (o = "[" + i + "]"),
         !s &&
             (0 > e.seen.indexOf(l.value)
                 ? (s = O(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf("\n") > -1 &&
@@ -258,10 +258,10 @@ function S(e) {
 function A(e) {
     return "object" == typeof e && null !== e;
 }
-function N(e) {
+function C(e) {
     return A(e) && "[object Date]" === P(e);
 }
-function C(e) {
+function N(e) {
     return A(e) && ("[object Error]" === P(e) || e instanceof Error);
 }
 function R(e) {
@@ -326,10 +326,10 @@ function w(e) {
     (t.isRegExp = S),
     (t.types.isRegExp = S),
     (t.isObject = A),
-    (t.isDate = N),
-    (t.types.isDate = N),
-    (t.isError = C),
-    (t.types.isNativeError = C),
+    (t.isDate = C),
+    (t.types.isDate = C),
+    (t.isError = N),
+    (t.types.isNativeError = N),
     (t.isFunction = R),
     (t.isPrimitive = function (e) {
         return (
@@ -343,16 +343,16 @@ function w(e) {
     }),
     (t.isBuffer = n(102439));
 var D = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-function L() {
+function x() {
     var e = new Date(),
         t = [w(e.getHours()), w(e.getMinutes()), w(e.getSeconds())].join(":");
     return [e.getDate(), D[e.getMonth()], t].join(" ");
 }
-function x(e, t) {
+function L(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
 (t.log = function () {
-    console.log("%s - %s", L(), t.format.apply(t, arguments));
+    console.log("%s - %s", x(), t.format.apply(t, arguments));
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
@@ -360,8 +360,8 @@ function x(e, t) {
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });
-var M = "undefined" != typeof Symbol ? Symbol("util.promisify.custom") : void 0;
-function k(e, t) {
+var j = "undefined" != typeof Symbol ? Symbol("util.promisify.custom") : void 0;
+function M(e, t) {
     if (!e) {
         var n = Error("Promise was rejected with a falsy value");
         (n.reason = e), (e = n);
@@ -370,11 +370,11 @@ function k(e, t) {
 }
 (t.promisify = function (e) {
     if ("function" != typeof e) throw TypeError('The "original" argument must be of type Function');
-    if (M && e[M]) {
-        var t = e[M];
+    if (j && e[j]) {
+        var t = e[j];
         if ("function" != typeof t) throw TypeError('The "util.promisify.custom" argument must be of type Function');
         return (
-            Object.defineProperty(t, M, {
+            Object.defineProperty(t, j, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -408,8 +408,8 @@ function k(e, t) {
     }
     return (
         Object.setPrototypeOf(t, Object.getPrototypeOf(e)),
-        M &&
-            Object.defineProperty(t, M, {
+        j &&
+            Object.defineProperty(t, j, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -418,7 +418,7 @@ function k(e, t) {
         Object.defineProperties(t, i(e))
     );
 }),
-    (t.promisify.custom = M),
+    (t.promisify.custom = j),
     (t.callbackify = function (e) {
         if ("function" != typeof e) throw TypeError('The "original" argument must be of type Function');
         function t() {
@@ -434,7 +434,7 @@ function k(e, t) {
                     r.nextTick(o.bind(null, null, e));
                 },
                 function (e) {
-                    r.nextTick(k.bind(null, e, o));
+                    r.nextTick(M.bind(null, e, o));
                 },
             );
         }

@@ -1,223 +1,228 @@
-n.d(e, { N: () => k }), n(953529), n(388685);
-var s = n(951288),
+n.d(t, { N: () => L }), n(953529), n(388685);
+var r = n(951288),
     i = n(647438),
     a = n(120356),
-    r = n.n(a),
-    l = n(442837),
-    c = n(481060),
-    o = n(259580),
-    d = n(499033),
-    u = n(626135),
-    m = n(709054),
-    h = n(531441),
-    x = n(236289),
-    g = n(788080),
-    j = n(467432),
-    p = n(451284),
-    f = n(613734),
-    v = n(800530),
-    N = n(981631),
-    S = n(388032),
-    b = n(712243);
-function E(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            s = Object.keys(n);
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
+    c = n(259580),
+    u = n(499033),
+    d = n(626135),
+    f = n(709054),
+    _ = n(531441),
+    p = n(236289),
+    h = n(788080),
+    m = n(467432),
+    g = n(451284),
+    E = n(613734),
+    b = n(800530),
+    y = n(981631),
+    O = n(388032),
+    v = n(712243);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (s = s.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            s.forEach(function (e) {
-                var s;
-                (s = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: s,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = s);
+            r.forEach(function (t) {
+                I(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-let T = (t) => {
-        let { status: e, onClick: n, opened: i, count: a } = t;
-        return (0, s.jsxs)(c.P3F, {
-            className: b.header,
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : S(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let C = (e) => {
+        let { status: t, onClick: n, opened: i, count: a } = e;
+        return (0, r.jsxs)(l.P3F, {
+            className: v.header,
             onClick: n,
             children: [
-                (0, s.jsx)("div", {
-                    className: b.headerIconWrapper,
-                    children: (0, s.jsx)(c.aNP, {
+                (0, r.jsx)("div", {
+                    className: v.headerIconWrapper,
+                    children: (0, r.jsx)(l.aNP, {
                         size: "md",
-                        color: "active" === e ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_MUTED,
+                        color: "active" === t ? l.TVs.colors.INTERACTIVE_ACTIVE : l.TVs.colors.INTERACTIVE_MUTED,
                     }),
                 }),
-                (0, s.jsxs)("div", {
-                    className: b.title,
+                (0, r.jsxs)("div", {
+                    className: v.title,
                     children: [
-                        (0, s.jsx)(c.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             children:
-                                "active" === e
-                                    ? S.intl.formatToPlainString(S.t.IeV2oa, { count: a.toString() })
-                                    : S.intl.formatToPlainString(S.t.fZAHBQ, { count: a.toString() }),
+                                "active" === t
+                                    ? O.intl.formatToPlainString(O.t.IeV2oa, { count: a.toString() })
+                                    : O.intl.formatToPlainString(O.t.fZAHBQ, { count: a.toString() }),
                         }),
-                        (0, s.jsx)(c.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: "active" === e ? S.intl.string(S.t.XJ2YVV) : S.intl.string(S.t.SzGV0t),
+                            children: "active" === t ? O.intl.string(O.t.XJ2YVV) : O.intl.string(O.t.SzGV0t),
                         }),
                     ],
                 }),
-                (0, s.jsx)("div", {
-                    className: b.caret,
-                    children: (0, s.jsx)(o.Z, {
+                (0, r.jsx)("div", {
+                    className: v.caret,
+                    children: (0, r.jsx)(c.Z, {
                         width: 18,
                         height: 18,
-                        direction: i ? o.Z.Directions.UP : o.Z.Directions.DOWN,
+                        direction: i ? c.Z.Directions.UP : c.Z.Directions.DOWN,
                     }),
                 }),
             ],
         });
     },
-    O = () =>
-        (0, s.jsxs)("div", {
-            className: b.emptyState,
+    N = () =>
+        (0, r.jsxs)("div", {
+            className: v.emptyState,
             children: [
-                (0, s.jsxs)("div", {
-                    className: b.iconContainer,
+                (0, r.jsxs)("div", {
+                    className: v.iconContainer,
                     children: [
-                        (0, s.jsx)("div", {
-                            className: b.iconBackground,
-                            children: (0, s.jsx)(c.rm8, {
+                        (0, r.jsx)("div", {
+                            className: v.iconBackground,
+                            children: (0, r.jsx)(l.rm8, {
                                 size: "md",
                                 color: "currentColor",
-                                className: b.icon,
+                                className: v.icon,
                             }),
                         }),
-                        (0, s.jsx)(d.Z, { className: b.stars }),
+                        (0, r.jsx)(u.Z, { className: v.stars }),
                     ],
                 }),
-                (0, s.jsx)(c.X6q, {
+                (0, r.jsx)(l.X6q, {
                     variant: "heading-md/bold",
-                    className: b.emptyStateText,
-                    children: S.intl.string(S.t.reLFaW),
+                    className: v.emptyStateText,
+                    children: O.intl.string(O.t.reLFaW),
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
-                    className: b.emptyStateSubtext,
-                    children: S.intl.string(S.t.ERdH1t),
+                    className: v.emptyStateSubtext,
+                    children: O.intl.string(O.t.ERdH1t),
                 }),
             ],
         }),
-    y = () =>
-        (0, s.jsx)("div", {
-            className: b.emptyState,
-            children: (0, s.jsx)(c.Text, {
+    R = () =>
+        (0, r.jsx)("div", {
+            className: v.emptyState,
+            children: (0, r.jsx)(l.Text, {
                 variant: "text-xs/normal",
-                className: b.emptyStateSubtext,
-                children: S.intl.string(S.t.RV3AXV),
+                className: v.emptyStateSubtext,
+                children: O.intl.string(O.t.RV3AXV),
             }),
         }),
-    I = (t) => {
-        let { timestamp: e } = t;
-        return (0, s.jsx)(c.Text, {
+    P = (e) => {
+        let { timestamp: t } = e;
+        return (0, r.jsx)(l.Text, {
             variant: "text-xs/normal",
-            className: b.timestamp,
-            children: (0, g.XX)(e),
+            className: v.timestamp,
+            children: (0, h.XX)(t),
         });
     },
-    _ = () =>
-        (0, s.jsx)(c.Text, {
+    w = () =>
+        (0, r.jsx)(l.Text, {
             variant: "text-xs/bold",
-            className: b.newBadge,
-            children: S.intl.string(S.t.QKMRCw),
+            className: v.newBadge,
+            children: O.intl.string(O.t.QKMRCw),
         }),
-    D = (t) => {
-        let { classification: e } = t,
-            { id: a, description: l } = e,
-            o = m.default.extractTimestamp(a),
-            d = (0, j.e)(e),
-            u = i.useMemo(() => {
-                var t, n, i, a, r;
-                let o = {
-                    description: l,
-                    descriptionHook: (t) =>
-                        (0, s.jsx)(c.Text, {
+    D = (e) => {
+        let { classification: t } = e,
+            { id: a, description: s } = t,
+            c = f.default.extractTimestamp(a),
+            u = (0, m.e)(t),
+            d = i.useMemo(() => {
+                var e, n, i;
+                let a = {
+                    description: s,
+                    descriptionHook: (e) =>
+                        (0, r.jsx)(l.Text, {
                             tag: "span",
                             variant: "heading-lg/bold",
-                            children: t,
+                            children: e,
                         }),
                 };
-                return (0, g.FB)(e)
-                    ? (null == e || null == (t = e.guild_metadata) ? void 0 : t.member_type) !== h.wO.OWNER
-                        ? S.intl.format(S.t.rmpEPD, {
-                              guildName: null == e || null == (i = e.guild_metadata) ? void 0 : i.name,
-                              classification_type: o.description,
-                              classificationHook: o.descriptionHook,
-                          })
-                        : S.intl.format(
-                              S.t.Lb0HVl,
-                              ((a = E({}, o)),
-                              (r = r = { guildName: null == e || null == (n = e.guild_metadata) ? void 0 : n.name }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
-                                  : (function (t, e) {
-                                        var n = Object.keys(t);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var s = Object.getOwnPropertySymbols(t);
-                                            n.push.apply(n, s);
-                                        }
-                                        return n;
-                                    })(Object(r)).forEach(function (t) {
-                                        Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(r, t));
-                                    }),
-                              a),
+                return (0, h.FB)(t)
+                    ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === _.wO.OWNER
+                        ? O.intl.format(
+                              O.t.Lb0HVl,
+                              A(T({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
                           )
-                    : S.intl.format(S.t.QY4g5u, o);
-            }, [e, l]);
-        return (0, s.jsx)(
-            c.P3F,
-            {
-                onClick: () => {
-                    (0, c.ZDy)(async () => {
-                        let { default: t } = await Promise.all([
-                            n.e("25292"),
-                            n.e("31978"),
-                            n.e("22878"),
-                            n.e("85372"),
-                            n.e("40694"),
-                            n.e("25183"),
-                            n.e("18831"),
-                            n.e("43694"),
-                        ]).then(n.bind(n, 41164));
-                        return (e) =>
-                            (0, s.jsx)(
+                        : O.intl.format(O.t.rmpEPD, {
+                              guildName: null == t || null == (i = t.guild_metadata) ? void 0 : i.name,
+                              classification_type: a.description,
+                              classificationHook: a.descriptionHook,
+                          })
+                    : O.intl.format(O.t.QY4g5u, a);
+            }, [t, s]),
+            p = () => {
+                (0, l.ZDy)(async () => {
+                    let { default: e } = await n.e("18831").then(n.bind(n, 41164));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            T(
+                                {
+                                    classificationId: a,
+                                    source: b.s.StandingTab,
+                                },
                                 t,
-                                E(
-                                    {
-                                        classificationId: a,
-                                        source: v.s.StandingTab,
-                                    },
-                                    e,
-                                ),
-                            );
-                    });
-                },
-                className: r()(b.itemDetail, { [b.itemDetailNew]: d }),
-                children: (0, s.jsxs)("div", {
-                    className: b.descriptionContainer,
+                            ),
+                        );
+                });
+            };
+        return (0, r.jsx)(
+            l.P3F,
+            {
+                onClick: p,
+                className: o()(v.itemDetail, { [v.itemDetailNew]: u }),
+                children: (0, r.jsxs)("div", {
+                    className: v.descriptionContainer,
                     children: [
-                        d ? (0, s.jsx)(_, {}) : (0, s.jsx)(I, { timestamp: o }),
-                        (0, s.jsx)(c.X6q, {
+                        u ? (0, r.jsx)(w, {}) : (0, r.jsx)(P, { timestamp: c }),
+                        (0, r.jsx)(l.X6q, {
                             variant: "heading-lg/normal",
-                            children: u,
+                            children: d,
                         }),
                     ],
                 }),
@@ -225,82 +230,82 @@ let T = (t) => {
             a,
         );
     },
-    w = (t) => {
-        let { status: e, classifications: n } = t,
-            [a, r] = i.useState(!1),
-            [o, d] = i.useState(3),
-            m = (0, p.P)(),
-            h = (0, l.e7)([x.Z], () => x.Z.getIsDsaEligible()),
-            g = i.useMemo(() => n.slice(0, o), [n, o]);
+    x = (e) => {
+        let { status: t, classifications: n } = e,
+            [a, o] = i.useState(!1),
+            [c, u] = i.useState(3),
+            f = (0, g.P)(),
+            _ = (0, s.e7)([p.Z], () => p.Z.getIsDsaEligible()),
+            h = i.useMemo(() => n.slice(0, c), [n, c]);
         i.useEffect(() => {
             a &&
-                u.default.track(N.rMx.SAFETY_HUB_ACTION, {
-                    action: v.n0.ViewViolationsDropdown,
-                    account_standing: m.state,
-                    classification_ids: g.map((t) => Number(t.id)),
-                    source: v.s.StandingTab,
+                d.default.track(y.rMx.SAFETY_HUB_ACTION, {
+                    action: b.n0.ViewViolationsDropdown,
+                    account_standing: f.state,
+                    classification_ids: h.map((e) => Number(e.id)),
+                    source: b.s.StandingTab,
                     is_violative_content_shown: !1,
-                    is_dsa_eligible: h,
+                    is_dsa_eligible: _,
                 });
-        }, [a, m.state, g, h]);
-        let j = n.length - g.length > 3 ? 3 : n.length - g.length;
-        return (0, s.jsxs)("div", {
-            className: b.dropdown,
+        }, [a, f.state, h, _]);
+        let m = n.length - h.length > 3 ? 3 : n.length - h.length;
+        return (0, r.jsxs)("div", {
+            className: v.dropdown,
             children: [
-                (0, s.jsx)(T, {
-                    status: e,
-                    onClick: () => r((t) => !t),
+                (0, r.jsx)(C, {
+                    status: t,
+                    onClick: () => o((e) => !e),
                     opened: a,
                     count: n.length,
                 }),
                 a &&
-                    (0, s.jsxs)("div", {
-                        className: b.items,
+                    (0, r.jsxs)("div", {
+                        className: v.items,
                         children: [
-                            (0, s.jsx)(c.njP.Separator, {
+                            (0, r.jsx)(l.njP.Separator, {
                                 style: {
                                     height: "1px",
                                     width: "100%",
                                 },
                             }),
-                            g.length > 0 && g.map((t) => (0, s.jsx)(D, { classification: t }, t.id)),
-                            g.length < n.length &&
-                                (0, s.jsxs)(s.Fragment, {
+                            h.length > 0 && h.map((e) => (0, r.jsx)(D, { classification: e }, e.id)),
+                            h.length < n.length &&
+                                (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, s.jsx)(c.njP.Separator, {
+                                        (0, r.jsx)(l.njP.Separator, {
                                             style: {
                                                 height: "1px",
                                                 width: "100%",
                                             },
                                         }),
-                                        (0, s.jsx)("button", {
-                                            className: b.paginationButton,
-                                            onClick: () => d((t) => t + j),
-                                            children: S.intl.format(S.t["9Ml56O"], { nextPageSize: j }),
+                                        (0, r.jsx)("button", {
+                                            className: v.paginationButton,
+                                            onClick: () => u((e) => e + m),
+                                            children: O.intl.format(O.t["9Ml56O"], { nextPageSize: m }),
                                         }),
                                     ],
                                 }),
-                            0 === g.length && "active" === e && (0, s.jsx)(O, {}),
-                            0 === g.length && "expired" === e && (0, s.jsx)(y, {}),
+                            0 === h.length && "active" === t && (0, r.jsx)(N, {}),
+                            0 === h.length && "expired" === t && (0, r.jsx)(R, {}),
                         ],
                     }),
             ],
         });
     },
-    k = () => {
-        let t = (0, f.y9)(),
-            e = (0, f.KM)();
-        return 0 === t.length && 0 === e.length
+    L = () => {
+        let e = (0, E.y9)(),
+            t = (0, E.KM)();
+        return 0 === e.length && 0 === t.length
             ? null
-            : (0, s.jsxs)("div", {
+            : (0, r.jsxs)("div", {
                   children: [
-                      (0, s.jsx)(w, {
+                      (0, r.jsx)(x, {
                           status: "active",
-                          classifications: t,
-                      }),
-                      (0, s.jsx)(w, {
-                          status: "expired",
                           classifications: e,
+                      }),
+                      (0, r.jsx)(x, {
+                          status: "expired",
+                          classifications: t,
                       }),
                   ],
               });

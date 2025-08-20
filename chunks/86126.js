@@ -26,8 +26,8 @@ function x(e) {
             return null != y && null != _ && (null != (e = y[_.role_id]) ? e : 0);
         }, [y, _]),
         N = 0 === C,
-        I = null == O,
-        E = null != (t = null == _ ? void 0 : _.archived) && t,
+        E = null == O,
+        I = null != (t = null == _ ? void 0 : _.archived) && t,
         { error: S, deleteSubscriptionListing: T, submitting: P } = (0, d.r4)(),
         { error: w, archiveSubscriptionListing: R, submitting: Z } = (0, d._1)(),
         { allowSelfRemoveMonetization: D } = (0, c.gX)(j);
@@ -48,7 +48,7 @@ function x(e) {
                               messageType: o.QYI.ERROR,
                               children: h.intl.string(h.t.up8gUl),
                           }),
-                      E
+                      I
                           ? (0, r.jsxs)(o.hjN, {
                                 title: h.intl.string(h.t["2D14T0"]),
                                 disabled: !D,
@@ -74,7 +74,7 @@ function x(e) {
                                                 variant: "critical-primary",
                                                 onClick: () => {
                                                     let e = async () => {
-                                                        (I ||
+                                                        (E ||
                                                             (a()(null != v, "group listing doesnt exist"),
                                                             a()(null != O, "subscription listing doesnt exist"),
                                                             await T(j, v, O))) &&

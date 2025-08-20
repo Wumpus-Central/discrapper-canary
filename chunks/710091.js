@@ -3,25 +3,25 @@ var n = i(442837),
     l = i(223892),
     r = i(738774),
     a = i(353926),
-    s = i(601964),
-    u = i(923726),
-    d = i(144507),
-    o = i(388032);
+    o = i(601964),
+    s = i(923726),
+    u = i(144507),
+    d = i(388032);
 let c = {
-    title: () => o.intl.string(o.t["KzCF//"]),
-    description: () => o.intl.string(o.t.xMW8FB),
+    title: () => d.intl.string(d.t["KzCF//"]),
+    description: () => d.intl.string(d.t.xMW8FB),
     canCreateGuild: !1,
     useIsGuildSupported: () =>
         (0, n.e7)(
             [a.Z],
             () => (e, t) =>
-                (0, s.eM)(e, t) &&
-                (0, d.X$)({
+                (0, o.eM)(e, t) &&
+                (0, u.X$)({
                     guild: e,
                     isOwner: !0,
                     canManageGuildRoleSubscriptions: !0,
                     isMonetizationWaitlistEnabledForGuild: (0, l.mG)(e.id),
-                    isGuildEligibleForRoleSubscriptions: (0, u.kT)(e.id),
+                    isGuildEligibleForRoleSubscriptions: (0, s.kT)(e.id),
                     isExpeditedMonetizationOnboardingGuild: (0, l.Rw)(e),
                     isUserInCreatorMonetizationEligibleCountry: (0, l.DB)(),
                     shouldRestrictUpdatingRoleSubscriptionSettings: (0, r.cu)(e.id),

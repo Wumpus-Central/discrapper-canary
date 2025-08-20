@@ -38,17 +38,17 @@ function g(e) {
             location: "useChatWallpaperPickerConfig",
             channelId: y,
         }),
-        N = I && !t,
-        [C, R] = (0, l.US)(N ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
-        P = C === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        C = I && !t,
+        [N, R] = (0, l.US)(C ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
+        P = N === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
         [w, D] = (0, l.US)(P ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
-        L = (0, o.ZP)((e) => e.recentlyShown[0]),
-        x = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
+        x = (0, o.ZP)((e) => e.recentlyShown[0]),
+        L = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
     if (
         (r.useMemo(() => {
             S &&
                 !0 === O &&
-                !x &&
+                !L &&
                 w !== a.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
                 d.default.track(h.rMx.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON, {
                     channel_id: y,
@@ -56,20 +56,20 @@ function g(e) {
                     is_settings_open: t,
                     is_dark_theme: A,
                     is_overseer_dismissible_content_selected: P,
-                    last_dismissible_content_winner: null != L ? a.z[L] : "None",
+                    last_dismissible_content_winner: null != x ? a.z[x] : "None",
                 });
-        }, [O, S, v, y, x, w]),
+        }, [O, S, v, y, L, w]),
         !I)
     )
         return;
-    let M = P && w === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((M && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
-        let e = M ? _.j.COACHMARK : _.j.DEFAULT;
+    let j = P && w === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((j && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
+        let e = j ? _.j.COACHMARK : _.j.DEFAULT;
         return (
             b !== e && E(e),
             {
                 pickerType: e,
-                markDismissed: M
+                markDismissed: j
                     ? (e) => {
                           D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION);
                       }

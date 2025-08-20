@@ -1,18 +1,18 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => u });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(481060),
-    a = n(670863),
-    l = n(131951),
-    o = n(65154),
+var i = n(442837),
+    a = n(481060),
+    o = n(670863),
+    s = n(131951),
+    l = n(65154),
     c = n(388032);
-function d() {
-    let e = (0, r.e7)([l.Z], () => l.Z.isVideoAvailable());
-    return (0, i.jsx)(s.xJW, {
+function u() {
+    let e = (0, i.e7)([s.Z], () => s.Z.isVideoAvailable());
+    return (0, r.jsx)(a.xJW, {
         title: c.intl.string(c.t.FsQ3OT),
-        children: (0, i.jsx)(a.j, {
-            deviceType: o.h7.VIDEO_INPUT,
+        children: (0, r.jsx)(o.j, {
+            deviceType: l.h7.VIDEO_INPUT,
             location: "UserSettingsCameraSelect",
             isDisabled: !e,
             showAllDevices: !0,

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZB: () => S,
-    ZP: () => v,
+    ZB: () => v,
+    ZP: () => S,
     cF: () => p,
 }),
     n(388685),
@@ -23,7 +23,7 @@ function g(e) {
     let n = o.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null == (t = e.voiceState) ? void 0 : t.selfVideo);
 }
-function S(e, t) {
+function v(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
@@ -35,10 +35,10 @@ function S(e, t) {
                       cropSelfVideo: !1,
                   },
         { tileWidth: r, tileMinWidth: o, tileMargin: u, limit: c, cropSelfVideo: f, version: p } = n,
-        [S, v] = l.useState(Date.now());
+        [v, S] = l.useState(Date.now());
     l.useEffect(() => {
         let e = setTimeout(() => {
-            v(Date.now());
+            S(Date.now());
         }, E);
         return () => {
             clearTimeout(e);
@@ -79,10 +79,10 @@ function S(e, t) {
                     })(e, n),
                 ),
                 [p, m] = (0, i.partition)(l, d.Io),
-                S = p.findIndex(g),
-                v = null;
-            -1 !== S && ((v = p[S]), p.splice(S, 1));
-            let b = null == v || f ? e : e - r - u,
+                v = p.findIndex(g),
+                S = null;
+            -1 !== v && ((S = p[v]), p.splice(v, 1));
+            let b = null == S || f ? e : e - r - u,
                 O = Math.max(0, Math.min(Math.floor((b - u) / (o + u)), c, t.length)),
                 y = Math.min((b - u) / O - u, r),
                 _ = Math.max(0, O - m.length),
@@ -106,19 +106,19 @@ function S(e, t) {
             h.current = (0, i.keyBy)((0, i.range)(w.length), (e) => w[e].id);
             let P = [...Z, ...w];
             return (
-                null != v && (f && P.length >= O ? (P[Math.max(0, P.length - 1)] = v) : P.push(v)),
+                null != S && (f && P.length >= O ? (P[Math.max(0, P.length - 1)] = S) : P.push(S)),
                 {
                     visibleParticipants: P,
                     participantTileWidth: y,
                 }
             );
-        }, [e, t, S, p, f, c, u, o, r]);
+        }, [e, t, v, p, f, c, u, o, r]);
     return {
         visibleParticipants: b,
         participantTileWidth: O,
     };
 }
-function v(e) {
+function S(e) {
     let {
             participants: t,
             participantTileWidth: n,

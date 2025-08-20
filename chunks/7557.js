@@ -1,13 +1,13 @@
 n.d(t, { Z: () => p }), n(388685), n(539854);
-var s,
+var r,
     i,
-    r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(951288),
+    o = n(647438),
+    s = n(120356),
+    l = n.n(s),
     c = n(600164),
-    h = n(501640);
-function u(e, t, n) {
+    u = n(501640);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +20,12 @@ function u(e, t, n) {
         e
     );
 }
-class d extends (s = l.PureComponent) {
+class f extends (r = o.PureComponent) {
     render() {
         let { className: e } = this.props;
-        return (0, r.jsx)("input", {
+        return (0, a.jsx)("input", {
             ref: this.setCodeBlockRef,
-            className: a()(h.input, e),
+            className: l()(u.input, e),
             maxLength: 1,
             value: null != this.props.code ? this.props.code : void 0,
             autoFocus: this.props.autoFocus,
@@ -43,34 +43,34 @@ class d extends (s = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, "_codeBlockRef", void 0),
-            u(this, "setCodeBlockRef", (e) => {
+            d(this, "_codeBlockRef", void 0),
+            d(this, "setCodeBlockRef", (e) => {
                 this._codeBlockRef = e;
             }),
-            u(this, "handleKeyDown", (e) => {
+            d(this, "handleKeyDown", (e) => {
                 let t = 8 === e.which || 37 === e.which || 39 === e.which,
                     n = (e.which >= 48 && e.which <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
                 t || n || e.preventDefault();
-                let { onKeyDown: s } = this.props;
-                null == s || s(e);
+                let { onKeyDown: r } = this.props;
+                null == r || r(e);
             }),
-            u(this, "handleChange", (e) => {
+            d(this, "handleChange", (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             });
     }
 }
-u(d, "defaultProps", { autoFocus: !1 });
-class E extends (i = l.PureComponent) {
+d(f, "defaultProps", { autoFocus: !1 });
+class _ extends (i = o.PureComponent) {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: n } = this.state,
-            s = [];
+            r = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && s.push((0, r.jsx)("div", { className: h.spacer }, "spacer")),
-                s.push(
-                    (0, r.jsx)(
-                        d,
+            e === n.length / 2 && r.push((0, a.jsx)("div", { className: u.spacer }, "spacer")),
+                r.push(
+                    (0, a.jsx)(
+                        f,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
                             code: n[e],
@@ -82,11 +82,11 @@ class E extends (i = l.PureComponent) {
                         e,
                     ),
                 );
-        return (0, r.jsx)(c.Z, {
+        return (0, a.jsx)(c.Z, {
             align: c.Z.Align.CENTER,
             justify: c.Z.Justify.CENTER,
             className: e,
-            children: s,
+            children: r,
         });
     }
     setCodeBlockRef(e, t) {
@@ -106,8 +106,8 @@ class E extends (i = l.PureComponent) {
         if (8 === t.which && e > 0 && (null == n[e] || 0 === n[e].length)) {
             let t = e - 1;
             n[t] = "";
-            let s = this._codeBlockRefs[t];
-            null == s || s.focus();
+            let r = this._codeBlockRefs[t];
+            null == r || r.focus();
         }
     }
     getCodeOrFirstEmptyIndex() {
@@ -124,8 +124,8 @@ class E extends (i = l.PureComponent) {
         null == t || t(e);
     }
     constructor(e) {
-        super(e), u(this, "_codeBlockRefs", Array(this.props.count)), (this.state = { codes: Array(e.count) });
+        super(e), d(this, "_codeBlockRefs", Array(this.props.count)), (this.state = { codes: Array(e.count) });
     }
 }
-u(E, "defaultProps", { count: 6 });
-let p = E;
+d(_, "defaultProps", { count: 6 });
+let p = _;

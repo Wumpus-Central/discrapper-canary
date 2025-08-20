@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,10 +96,10 @@ function R(e, t) {
 let P = 20,
     w = 125,
     D = (0, g.hQ)(),
-    L = d.Z.convert.fromCodePoint("1f44f"),
-    x = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-    M = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
-function k(e) {
+    x = d.Z.convert.fromCodePoint("1f44f"),
+    L = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    j = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
+function M(e) {
     switch (d.Z.convert.toCodePoint(e)) {
         case "1f3fb":
             return v.intl.string(v.t.BVK5b2);
@@ -115,10 +115,10 @@ function k(e) {
             return v.intl.string(v.t.bGN1o6);
     }
 }
-let j = (e) => {
+let k = (e) => {
         let { fade: t, surrogate: n, onClick: i, delay: a, index: o } = e,
             s = (0, u.JA)("item-".concat(o)),
-            l = b.ZP.getURL(L + n),
+            l = b.ZP.getURL(x + n),
             d = (0, _.q_F)(
                 {
                     opacity: 1,
@@ -129,13 +129,13 @@ let j = (e) => {
             );
         return (0, r.jsx)(
             _.P3F,
-            N(S({}, s), {
+            C(S({}, s), {
                 role: "option",
                 "aria-selected": 0 === o,
                 onClick: () => i(n),
                 className: I.diversityEmojiItem,
                 children: (0, r.jsx)(c.animated.div, {
-                    "aria-label": k(n),
+                    "aria-label": M(n),
                     className: I.diversityEmojiItemImage,
                     style: S({ backgroundImage: 'url("'.concat(l, '")') }, d),
                 }),
@@ -146,8 +146,8 @@ let j = (e) => {
         let { id: t, selectedSurrogate: n, onClick: a } = e,
             o = (0, m.Z)("diversity"),
             s = (0, _.q_F)({
-                height: (M + 2 * x) * (E.gw.length + 1),
-                from: { height: M },
+                height: (j + 2 * L) * (E.gw.length + 1),
+                from: { height: j },
                 config: { duration: w },
             });
         i.useEffect(() => {
@@ -162,10 +162,10 @@ let j = (e) => {
                 children: (0, r.jsx)(u.SJ, {
                     children: (e) => {
                         var { ref: n } = e,
-                            i = C(e, ["ref"]);
+                            i = N(e, ["ref"]);
                         return (0, r.jsx)(
                             c.animated.div,
-                            N(S({}, i), {
+                            C(S({}, i), {
                                 id: t,
                                 ref: n,
                                 className: I.diversitySelectorOptions,
@@ -173,7 +173,7 @@ let j = (e) => {
                                 role: "listbox",
                                 children: d.map((e, t) =>
                                     (0, r.jsx)(
-                                        j,
+                                        k,
                                         {
                                             index: t,
                                             fade: 0 !== t,
@@ -193,7 +193,7 @@ let j = (e) => {
     },
     G = (e) => {
         let { searchBarRef: t, selectedSurrogate: n, className: a } = e,
-            s = b.ZP.getURL(L + n),
+            s = b.ZP.getURL(x + n),
             [l, c] = i.useState(!1),
             u = (0, h.Z)(null, () => c(!1)),
             d = i.useRef(null),

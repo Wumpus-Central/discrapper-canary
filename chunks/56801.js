@@ -118,7 +118,7 @@ function I(e) {
             },
             [a],
         ),
-        N = i.useCallback(
+        C = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -181,7 +181,7 @@ function I(e) {
                   store: l.Xn,
                   categories: a,
                   className: f.list,
-                  renderCategoryListItem: N,
+                  renderCategoryListItem: C,
                   rowCount: a.length,
                   categoryHeight: S,
                   listPadding: b,

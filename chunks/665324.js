@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(747071),
     C = n(286654),
     N = n(892001),
-    I = n(430824),
-    E = n(594174),
+    E = n(430824),
+    I = n(594174),
     S = n(15385),
     T = n(768581),
     P = n(267642),
@@ -104,7 +104,7 @@ function H(e) {
 }
 function z(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
-        l = I.Z.getGuild(i),
+        l = E.Z.getGuild(i),
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
@@ -258,7 +258,7 @@ function Y(e) {
               text: k.intl.string(k.t["/uNYPD"]),
               onClick: function () {
                   (0, m.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("56035"), n.e("78356")]).then(n.bind(n, 758961));
+                      let { default: e } = await n.e("56035").then(n.bind(n, 758961));
                       return (n) => (0, r.jsx)(e, U(G({}, n), { guildId: t.id }));
                   });
               },
@@ -352,9 +352,9 @@ function K(e) {
     let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
         { soundId: d, name: u, user: h, userId: f, emojiId: x, emojiName: _ } = t,
         { analyticsLocations: O } = (0, b.ZP)(),
-        y = (0, c.e7)([E.default], () => (null != h ? h : E.default.getUser(f)), [f, h]),
-        { canManageGuildExpression: I } = (0, j.XJ)(o),
-        S = i.useMemo(() => I(t), [t, I]),
+        y = (0, c.e7)([I.default], () => (null != h ? h : I.default.getUser(f)), [f, h]),
+        { canManageGuildExpression: E } = (0, j.XJ)(o),
+        S = i.useMemo(() => E(t), [t, E]),
         P = null != x || null != _,
         [w, Z] = i.useState(!1),
         D = (0, C.z)(t, o.id);
@@ -444,9 +444,7 @@ function K(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, m.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([n.e("56035"), n.e("78356")]).then(
-                                              n.bind(n, 758961),
-                                          );
+                                          let { default: e } = await n.e("56035").then(n.bind(n, 758961));
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,

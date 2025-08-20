@@ -32,8 +32,8 @@ function E(e) {
         } = e,
         [I, T] = i.useState(null != f ? f : E),
         [S, A] = i.useState((0, c.JM)(I)),
-        N = i.useRef(!1);
-    function C(e, t, n) {
+        C = i.useRef(!1);
+    function N(e, t, n) {
         t !== I && (T(t), A(n), a(t));
     }
     function R() {
@@ -46,7 +46,7 @@ function E(e) {
     }
     return (
         i.useEffect(() => {
-            N.current = !0;
+            C.current = !0;
         }, []),
         i.useEffect(() => {
             if (void 0 === f) {
@@ -65,19 +65,19 @@ function E(e) {
                         innerClassName: o()(m.textArea, y),
                         editorClassName: m.editorTextArea,
                         maxCharacterCount: _.$n,
-                        onChange: C,
+                        onChange: N,
                         placeholder: p,
                         channel: g,
                         textValue: I,
                         richValue: S,
                         type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
-                            N.current = !1;
+                            C.current = !1;
                         },
                         onFocus: () => {
-                            N.current = !0;
+                            C.current = !0;
                         },
-                        focused: N.current,
+                        focused: C.current,
                         onSubmit: R,
                         disableThemedBackground: v,
                     }),

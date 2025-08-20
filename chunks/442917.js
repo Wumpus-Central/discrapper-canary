@@ -23,23 +23,23 @@ var r = n(951288),
     T = n(502053),
     S = n(965048),
     A = n(569545),
-    N = n(74299),
-    C = n(863908),
+    C = n(74299),
+    N = n(863908),
     R = n(803647),
     P = n(266910),
     w = n(788983),
     D = n(703656),
-    L = n(937995),
-    x = n(618158),
-    M = n(922745),
-    k = n(197016),
-    j = n(800965),
+    x = n(937995),
+    L = n(618158),
+    j = n(922745),
+    M = n(197016),
+    k = n(800965),
     U = n(445062),
     G = n(7188),
     B = n(199902),
-    V = n(314897),
-    F = n(131951),
-    Z = n(699516),
+    Z = n(314897),
+    V = n(131951),
+    F = n(699516),
     H = n(594174),
     Y = n(248402),
     W = n(33039),
@@ -139,7 +139,7 @@ class ef extends i.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, ea._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, C.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, N.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
@@ -210,8 +210,8 @@ class ef extends i.PureComponent {
     }
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: a } = this.props,
-            o = (0, I.F6)(e, H.default, Z.Z),
-            s = (null == n ? void 0 : n.id) === V.default.getId() && i,
+            o = (0, I.F6)(e, H.default, F.Z),
+            s = (null == n ? void 0 : n.id) === Z.default.getId() && i,
             l = this.renderStreamState(),
             c = this.activeStreamForSelectedParticipant,
             u = null;
@@ -224,7 +224,7 @@ class ef extends i.PureComponent {
                       (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
-                          component: F.Z.getVideoComponent(),
+                          component: V.Z.getVideoComponent(),
                           mirror: s,
                           children: (0, r.jsx)(P.Z, {
                               size: d.EFr.SIZE_80,
@@ -232,12 +232,12 @@ class ef extends i.PureComponent {
                               "aria-label": null == n ? void 0 : n.user.username,
                           }),
                       }))),
-            (0, r.jsx)(L.ZP, {
+            (0, r.jsx)(x.ZP, {
                 timeout: 1800,
                 children: (e) => {
                     var t;
                     return (0, r.jsx)(
-                        M.Z,
+                        j.Z,
                         ed(
                             ec(
                                 {
@@ -248,7 +248,7 @@ class ef extends i.PureComponent {
                                     onHide: this.handleHidePIP,
                                     renderBottomLeftControls: this.renderBottomLeftControls,
                                     renderBottomRightControls: this.renderBottomRightControls,
-                                    preventIdleComponent: x.Z,
+                                    preventIdleComponent: L.Z,
                                     width: a,
                                     className: es.elevationHigh,
                                     videoControlsClassName:
@@ -320,7 +320,7 @@ class ef extends i.PureComponent {
                 });
             }),
             el(this, "renderDisconnectButton", () =>
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(M.Z, {
                     className: eo.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT),
                 }),
@@ -340,7 +340,7 @@ class ef extends i.PureComponent {
                         (0, ea._5)(e) || (null == e ? void 0 : e.type) === ea.fO.ACTIVITY,
                         "Cannot render participants for participant type ".concat(null == e ? void 0 : e.type),
                     ),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(L.Z, {
                         children: (0, r.jsx)(O.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),
@@ -352,7 +352,7 @@ class ef extends i.PureComponent {
                 );
             }),
             el(this, "renderPopoutIcon", () =>
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(k.Z, {
                     className: eo.rightTrayIcon,
                     popoutOpen: !1,
                     onOpenPopout: this.handleOpenPopout,
@@ -378,7 +378,7 @@ function e_(e) {
     let { channel: t, width: n } = e,
         i = (0, c.e7)([Y.Z], () => Y.Z.getSpeaker(t.id)),
         a = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
-        o = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
+        o = (0, c.e7)([V.Z], () => l()(V.Z.getVideoDevices()).values().first()),
         s = (0, c.e7)(
             [W.Z],
             () =>
@@ -389,9 +389,9 @@ function e_(e) {
         ),
         d = null == o || o.disabled,
         f = !d,
-        _ = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
-        p = (0, c.e7)([F.Z], () => (0, N.Z)(F.Z)),
-        h = (0, c.e7)([V.default], () => V.default.getId()),
+        _ = (0, c.e7)([V.Z], () => !d && V.Z.isVideoEnabled(), [d]),
+        p = (0, c.e7)([V.Z], () => (0, C.Z)(V.Z)),
+        h = (0, c.e7)([Z.default], () => Z.default.getId()),
         m = (0, c.e7)([B.Z], () => B.Z.getCurrentUserActiveStream()),
         g = null != a && "user" in a ? a.user.id : "",
         E = (0, S.Z)((null == a ? void 0 : a.type) === ea.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),

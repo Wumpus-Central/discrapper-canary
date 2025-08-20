@@ -1,12 +1,12 @@
 n.d(t, {
     AW: () => v,
-    Cm: () => N,
-    HU: () => x,
-    IV: () => C,
+    Cm: () => C,
+    HU: () => L,
+    IV: () => N,
     J0: () => P,
-    K8: () => L,
+    K8: () => x,
     RE: () => T,
-    Vt: () => k,
+    Vt: () => M,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
@@ -16,7 +16,7 @@ n.d(t, {
     kN: () => w,
     lb: () => A,
     o0: () => U,
-    o8: () => M,
+    o8: () => j,
     pv: () => R,
     rL: () => m,
     xg: () => G,
@@ -201,15 +201,15 @@ let I = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
     T = (e) => I.includes(e),
     S = (e) => null != e && "home" !== e && "catalog" !== e,
     A = 800,
-    N = 604800000,
-    C = 12,
+    C = 604800000,
+    N = 12,
     R = 1128,
     P = 518,
     w = 5,
     D = new Date("2025-02-15T23:59:00-08:00"),
-    L = 3,
-    x = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
-var M = (function (e) {
+    x = 3,
+    L = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
+var j = (function (e) {
     return (
         (e[(e.FIAT = 0)] = "FIAT"),
         (e[(e.ORB = 1)] = "ORB"),
@@ -220,12 +220,12 @@ var M = (function (e) {
         e
     );
 })({});
-let k = {
+let M = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY,
     },
-    j = new Set(Object.values(k)),
-    U = (e) => j.has(e),
+    k = new Set(Object.values(M)),
+    U = (e) => k.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     B = [
         {

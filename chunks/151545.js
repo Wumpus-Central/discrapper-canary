@@ -21,8 +21,8 @@ function O(e) {
     let { user: t, currentUser: n, activity: O, className: v, onClose: I, profileGuildId: T } = e,
         S = (0, h.T)({ location: "UserProfileActivityCardWrapper" }),
         A = t.id === n.id,
-        N = S && !A && !t.bot,
-        { voiceGuild: C, voiceChannel: R } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
+        C = S && !A && !t.bot,
+        { voiceGuild: N, voiceChannel: R } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
             var e, n;
             let r = (0, o.Z)(O);
             if (!r && (null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS) return {};
@@ -60,7 +60,7 @@ function O(e) {
     }, [null == O ? void 0 : O.type, P, null == w ? void 0 : w.id, null == w ? void 0 : w.guild_id]),
     (null == O ? void 0 : O.type) !== y.IIU.CUSTOM_STATUS && ((null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS || P))
         ? (0, s.Z)(O)
-            ? N
+            ? C
                 ? (0, r.jsx)(b.Z, {
                       user: t,
                       currentUser: n,
@@ -76,13 +76,13 @@ function O(e) {
                       className: v,
                       onClose: I,
                   })
-            : N
+            : C
               ? (0, r.jsx)(g.Z, {
                     user: t,
                     currentUser: n,
                     activity: O,
                     application: D,
-                    voiceGuild: C,
+                    voiceGuild: N,
                     voiceChannel: R,
                     profileGuildId: T,
                     className: v,
@@ -93,7 +93,7 @@ function O(e) {
                     currentUser: n,
                     activity: O,
                     application: D,
-                    voiceGuild: C,
+                    voiceGuild: N,
                     voiceChannel: R,
                     className: v,
                     onClose: I,

@@ -50,10 +50,10 @@ let f = c.QZA.CLOSED,
     T = [],
     S = null,
     A = null;
-function N(e) {
-    (y = !0), C(e);
-}
 function C(e) {
+    (y = !0), N(e);
+}
+function N(e) {
     var t, n, r, i, a, o;
     let s = l.default.getCurrentUser();
     if (null == s) return R();
@@ -115,18 +115,18 @@ function D(e) {
     let { forSection: t } = e;
     null != t ? delete m[t] : null != p && delete m[p];
 }
-function L(e) {
+function x(e) {
     let { settings: t } = e;
     null == b && (b = {});
     let n = b[c.oAB.ACCOUNT];
     b[c.oAB.ACCOUNT] = d({}, n, t);
 }
-function x() {
+function L() {
     f = c.QZA.SUBMITTING;
 }
-function M() {
+function j() {
     let e = l.default.getCurrentUser();
-    k(),
+    M(),
         null != e &&
             (b = d(
                 {},
@@ -144,10 +144,10 @@ function M() {
                 }),
             ));
 }
-function k() {
+function M() {
     (f = c.QZA.OPEN), (g = {});
 }
-function j(e) {
+function k(e) {
     var t;
     if (f !== c.QZA.SUBMITTING) return !1;
     (f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {});
@@ -199,16 +199,16 @@ class U extends (r = o.ZP.Store) {
 }
 u(U, "displayName", "UserSettingsModalStore");
 let G = new U(s.Z, {
-    USER_SETTINGS_MODAL_OPEN: N,
-    USER_SETTINGS_MODAL_INIT: C,
+    USER_SETTINGS_MODAL_OPEN: C,
+    USER_SETTINGS_MODAL_INIT: N,
     USER_SETTINGS_MODAL_CLOSE: R,
     LOGOUT: R,
-    USER_SETTINGS_MODAL_SUBMIT: x,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: j,
+    USER_SETTINGS_MODAL_SUBMIT: L,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: k,
     USER_SETTINGS_MODAL_SET_SECTION: P,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
-    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
-    USER_SETTINGS_MODAL_RESET: M,
+    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: x,
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
+    USER_SETTINGS_MODAL_RESET: j,
 });

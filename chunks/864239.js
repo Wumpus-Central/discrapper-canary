@@ -1,22 +1,22 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => u });
+var r = n(951288);
 n(647438);
-var r = n(695346),
-    s = n(682578),
-    a = n(838436),
-    l = n(51331),
-    o = n(726985),
+var i = n(695346),
+    a = n(682578),
+    o = n(838436),
+    s = n(51331),
+    l = n(726985),
     c = n(388032);
-function d() {
+function u() {
     var e;
-    let t = null == (e = (0, s.J)()) || e,
-        n = r.DC.useSetting();
-    return (0, i.jsx)(a.U, {
-        setting: o.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
-        children: (0, i.jsx)(l.Z, {
+    let t = null == (e = (0, a.J)()) || e,
+        n = i.DC.useSetting();
+    return (0, r.jsx)(o.U, {
+        setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
+        children: (0, r.jsx)(s.Z, {
             title: c.intl.string(c.t["L+yTsb"]),
             value: n,
-            onChange: r.DC.updateSetting,
+            onChange: i.DC.updateSetting,
             disabled: !t,
             note: c.intl.string(c.t.hiM8pa),
         }),

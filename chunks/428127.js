@@ -66,11 +66,11 @@ function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
         { bottomBar: f, topBar: _ } = (0, s.cj)([h.Z], () => h.Z.getUnreadStateForGuildId(n.id)),
         y = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? f : _,
-        E = v === h.x.HIDDEN,
-        x = (0, c.q_F)(
+        { mode: j, mentionCount: v, targetChannelId: C } = "bottom" === t ? f : _,
+        x = j === h.x.HIDDEN,
+        E = (0, c.q_F)(
             {
-                to: { transform: E ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
+                to: { transform: x ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: b,
             },
             y ? "respect-motion-settings" : "animate-never",
@@ -88,12 +88,12 @@ function _(e) {
         }),
         children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
-            style: x,
-            "aria-hidden": E,
+            style: E,
+            "aria-hidden": x,
             children:
-                v === h.x.HIDDEN
+                j === h.x.HIDDEN
                     ? (0, r.jsx)("div", { className: o()(m.bar, m.emptyBar) })
-                    : v === h.x.UNREAD
+                    : j === h.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: S,
@@ -121,7 +121,7 @@ function _(e) {
                                 }),
                             ],
                         })
-                      : v === h.x.MENTIONS
+                      : j === h.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: S,
@@ -129,10 +129,10 @@ function _(e) {
                                   variant: "text-xs/semibold",
                                   color: "status-danger-text",
                                   className: m.barText,
-                                  children: g.intl.format(g.t.EQcLys, { count: j }),
+                                  children: g.intl.format(g.t.EQcLys, { count: v }),
                               }),
                           })
-                        : v === h.x.VOICE_CHANNELS
+                        : j === h.x.VOICE_CHANNELS
                           ? (0, r.jsx)(O, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,

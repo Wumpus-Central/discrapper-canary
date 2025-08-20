@@ -1,21 +1,34 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(477690),
+    a = n(477690),
     o = n(481060),
-    a = n(100527),
-    s = n(367907),
+    s = n(100527),
+    l = n(367907),
     c = n(906732),
     u = n(524444),
     d = n(624138),
-    p = n(453070),
-    m = n(373228),
-    f = n(419922),
-    g = n(217588),
-    _ = n(981631),
-    h = n(474936),
-    b = n(205844);
-function E(e) {
+    f = n(453070),
+    _ = n(373228),
+    p = n(419922),
+    h = n(217588),
+    m = n(981631),
+    g = n(474936),
+    E = n(205844);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,109 +39,107 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let v = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    O = (e) => {
-        let { renderableSticker: t, channel: n, isInteracting: l } = e,
-            d = i.useRef(null),
-            [O, y] = i.useState(!0),
-            [x, j] = i.useState(String(Date.now())),
-            [I] = (0, p.XW)(t, l),
-            { analyticsLocations: S } = (0, c.ZP)(a.Z.STICKER_MESSAGE),
-            T = (0, r.jsxs)("span", {
-                className: b.stickerName,
+let I = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    T = (e) => {
+        null != e &&
+            l.ZP.trackWithMetadata(m.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+                type: g.cd.STICKER_IN_MESSAGE_HOVER,
+                expression_id: e.id,
+                expression_name: e.name,
+                is_animated: (0, _.aQ)(e.format_type),
+                is_custom: (0, _.z)(e.type),
+            });
+    },
+    S = (e) => {
+        let { renderableSticker: t, channel: n, isInteracting: a } = e,
+            l = i.useRef(null),
+            [d, _] = i.useState(!0),
+            [m, g] = i.useState(String(Date.now())),
+            [b] = (0, f.XW)(t, a),
+            { analyticsLocations: O } = (0, c.ZP)(s.Z.STICKER_MESSAGE),
+            S = (0, r.jsxs)("span", {
+                className: E.stickerName,
                 children: [
                     (0, r.jsx)(o.B7q, {
                         size: "xs",
                         color: "currentColor",
-                        className: b.stickerIcon,
+                        className: E.stickerIcon,
                     }),
-                    (null != I ? I : t).name,
+                    (null != b ? b : t).name,
                 ],
             });
         return (0, r.jsx)(c.Gt, {
-            value: S,
+            value: O,
             children: (0, r.jsx)(o.yRy, {
                 align: "center",
                 animation: o.yRy.Animation.TRANSLATE,
-                positionKey: x,
+                positionKey: m,
                 onRequestClose: () => {
-                    y(!0);
+                    _(!0);
                 },
                 renderPopout: (e) =>
                     (0, r.jsx)(
-                        g.Z,
-                        C(E({}, e), {
+                        h.Z,
+                        v(y({}, e), {
                             renderableSticker: t,
                             channel: n,
-                            refreshPositionKey: () => j(String(Date.now())),
+                            refreshPositionKey: () => g(String(Date.now())),
                         }),
                     ),
-                targetElementRef: d,
+                targetElementRef: l,
                 children: (e) => {
                     let { onClick: n } = e;
                     return (0, r.jsx)(
                         o.ua7,
-                        C(E({}, u.b_), {
-                            shouldShow: O,
-                            text: (0, u.Y)(T),
+                        v(y({}, u.b_), {
+                            shouldShow: d,
+                            text: (0, u.Y)(S),
                             "aria-label": !1,
                             onTooltipShow: () => {
-                                var e;
-                                null != (e = I) &&
-                                    s.ZP.trackWithMetadata(_.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                                        type: h.cd.STICKER_IN_MESSAGE_HOVER,
-                                        expression_id: e.id,
-                                        expression_name: e.name,
-                                        is_animated: (0, m.aQ)(e.format_type),
-                                        is_custom: (0, m.z)(e.type),
-                                    });
+                                T(b);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
                                     o.P3F,
-                                    C(E({}, e), {
-                                        innerRef: d,
-                                        className: b.clickableSticker,
+                                    v(y({}, e), {
+                                        innerRef: l,
+                                        className: E.clickableSticker,
                                         onClick: (e) => {
-                                            y(!O), n(e);
+                                            _(!d), n(e);
                                         },
                                         tag: "span",
-                                        children: (0, r.jsx)(f.Z, {
-                                            isInteracting: l,
-                                            size: v,
-                                            sticker: null != I ? I : t,
+                                        children: (0, r.jsx)(p.Z, {
+                                            isInteracting: a,
+                                            size: I,
+                                            sticker: null != b ? b : t,
                                         }),
                                     }),
                                 ),

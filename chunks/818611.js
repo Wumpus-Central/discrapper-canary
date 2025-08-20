@@ -90,8 +90,8 @@ let I = 3,
     T = 80,
     S = 12,
     A = 16,
-    N = () => T,
-    C = (e) => {
+    C = () => T,
+    N = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: a = !1 } = e,
             s = O(e, ["children", "className", "onSelect", "isSelected"]);
         return (0, r.jsx)(
@@ -121,7 +121,7 @@ let I = 3,
                 onlyAnimateOnHover: !h,
             });
         return (0, r.jsxs)(
-            C,
+            N,
             y(
                 E(
                     {
@@ -164,7 +164,7 @@ let I = 3,
                 return (0, s.EQ)(O[d])
                     .with(_.Tm, () =>
                         (0, r.jsxs)(
-                            C,
+                            N,
                             {
                                 style: E({}, g),
                                 isSelected: null === i,
@@ -189,7 +189,7 @@ let I = 3,
                     )
                     .with(_.oT, () =>
                         (0, r.jsxs)(
-                            C,
+                            N,
                             {
                                 style: g,
                                 onSelect: c,
@@ -254,6 +254,6 @@ let I = 3,
             renderSection: b,
             getSectionHeight: (e) => u[e].height,
             getItemKey: (e, t) => u[e].items[t].id,
-            getItemHeight: N,
+            getItemHeight: C,
         });
     };

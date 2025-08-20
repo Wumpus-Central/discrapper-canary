@@ -22,23 +22,23 @@ var r = n(687249),
     T = 1,
     S = 2,
     A = 4,
-    N = "[object Arguments]",
-    C = "[object Array]",
+    C = "[object Arguments]",
+    N = "[object Array]",
     R = "[object Boolean]",
     P = "[object Date]",
     w = "[object Error]",
     D = "[object Function]",
-    L = "[object GeneratorFunction]",
-    x = "[object Map]",
-    M = "[object Number]",
-    k = "[object Object]",
-    j = "[object RegExp]",
+    x = "[object GeneratorFunction]",
+    L = "[object Map]",
+    j = "[object Number]",
+    M = "[object Object]",
+    k = "[object RegExp]",
     U = "[object Set]",
     G = "[object String]",
     B = "[object Symbol]",
-    V = "[object WeakMap]",
-    F = "[object ArrayBuffer]",
-    Z = "[object DataView]",
+    Z = "[object WeakMap]",
+    V = "[object ArrayBuffer]",
+    F = "[object DataView]",
     H = "[object Float32Array]",
     Y = "[object Float64Array]",
     W = "[object Int8Array]",
@@ -49,30 +49,30 @@ var r = n(687249),
     Q = "[object Uint16Array]",
     J = "[object Uint32Array]",
     $ = {};
-function ee(e, t, n, C, R, P) {
+function ee(e, t, n, N, R, P) {
     var w,
-        x = t & T,
-        M = t & S,
-        j = t & A;
-    if ((n && (w = R ? n(e, C, R, P) : n(e)), void 0 !== w)) return w;
+        L = t & T,
+        j = t & S,
+        k = t & A;
+    if ((n && (w = R ? n(e, N, R, P) : n(e)), void 0 !== w)) return w;
     if (!O(e)) return e;
     var U = E(e);
     if (U) {
-        if (((w = h(e)), !x)) return c(e, w);
+        if (((w = h(e)), !L)) return c(e, w);
     } else {
         var G = p(e),
-            B = G == D || G == L;
-        if (b(e)) return l(e, x);
-        if (G == k || G == N || (B && !R)) {
-            if (((w = M || B ? {} : g(e)), !x)) return M ? d(e, s(w, e)) : u(e, o(w, e));
+            B = G == D || G == x;
+        if (b(e)) return l(e, L);
+        if (G == M || G == C || (B && !R)) {
+            if (((w = j || B ? {} : g(e)), !L)) return j ? d(e, s(w, e)) : u(e, o(w, e));
         } else {
             if (!$[G]) return R ? e : {};
-            w = m(e, G, x);
+            w = m(e, G, L);
         }
     }
     P || (P = new r());
-    var V = P.get(e);
-    if (V) return V;
+    var Z = P.get(e);
+    if (Z) return Z;
     P.set(e, w),
         v(e)
             ? e.forEach(function (r) {
@@ -82,19 +82,19 @@ function ee(e, t, n, C, R, P) {
               e.forEach(function (r, i) {
                   w.set(i, ee(r, t, n, i, e, P));
               });
-    var F = j ? (M ? _ : f) : M ? keysIn : I,
-        Z = U ? void 0 : F(e);
+    var V = k ? (j ? _ : f) : j ? keysIn : I,
+        F = U ? void 0 : V(e);
     return (
-        i(Z || e, function (r, i) {
-            Z && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
+        i(F || e, function (r, i) {
+            F && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
         }),
         w
     );
 }
-($[N] =
-    $[C] =
+($[C] =
+    $[N] =
+    $[V] =
     $[F] =
-    $[Z] =
     $[R] =
     $[P] =
     $[H] =
@@ -102,10 +102,10 @@ function ee(e, t, n, C, R, P) {
     $[W] =
     $[K] =
     $[z] =
-    $[x] =
+    $[L] =
+    $[j] =
     $[M] =
     $[k] =
-    $[j] =
     $[U] =
     $[G] =
     $[B] =
@@ -114,5 +114,5 @@ function ee(e, t, n, C, R, P) {
     $[Q] =
     $[J] =
         !0),
-    ($[w] = $[D] = $[V] = !1),
+    ($[w] = $[D] = $[Z] = !1),
     (e.exports = ee);

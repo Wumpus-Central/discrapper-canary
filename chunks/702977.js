@@ -1,5 +1,5 @@
-n.d(t, { av: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { av: () => i });
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-05_flamingo_intro_nux",
     label: "Flamingo Intro NUX",
@@ -12,14 +12,14 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { enabled: r } = i.useExperiment(
+        { enabled: i } = r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: __OVERLAY__,
             },
         );
-    return r;
+    return i;
 }

@@ -1,14 +1,14 @@
 n.d(t, { H: () => d }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(120356),
-    o = n.n(i),
-    s = n(481060),
-    a = n(572004),
+    s = n(120356),
+    i = n.n(s),
+    a = n(481060),
+    o = n(572004),
     c = n(388032),
     u = n(198473);
 function d(e) {
-    var { chunks: t, className: n, onCopy: i } = e,
+    var { chunks: t, className: n, onCopy: s } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -18,31 +18,31 @@ function d(e) {
                     var n,
                         r,
                         l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["chunks", "className", "onCopy"]);
-    let f = l.useMemo(() => (null == t ? void 0 : t.join(" ")), [t]),
-        [h, g] = l.useState(!1),
+    let h = l.useMemo(() => (null == t ? void 0 : t.join(" ")), [t]),
+        [f, g] = l.useState(!1),
         p = l.useCallback(() => {
-            (0, a.JG)(f, () => {
-                g(!0), null == i || i();
+            (0, o.JG)(h, () => {
+                g(!0), null == s || s();
             });
-        }, [i, f]),
-        O = h ? s.owK : s.TIy;
-    return (0, r.jsx)(s.P3F, {
-        className: o()(u.container, n),
+        }, [s, h]),
+        O = f ? a.owK : a.TIy;
+    return (0, r.jsx)(a.P3F, {
+        className: i()(u.container, n),
         onClick: p,
-        children: (0, r.jsx)(s.ua7, {
-            text: h ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
+        children: (0, r.jsx)(a.ua7, {
+            text: f ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
@@ -75,7 +75,7 @@ function d(e) {
                     (n = n =
                         {
                             size: "xxs",
-                            color: h ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL,
+                            color: f ? a.TVs.colors.TEXT_FEEDBACK_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

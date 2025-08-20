@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(480608),
     C = n(243730),
     N = n(130341),
-    I = n(970129),
-    E = n(712181),
+    E = n(970129),
+    I = n(712181),
     S = n(203377),
     T = n(981631),
     P = n(388032),
@@ -98,7 +98,7 @@ function L(e) {
     }, [u]);
     let b = i.useMemo(() => a.filter((e) => (0, N.uo)(e, h)), [a, h]),
         x = i.useMemo(() => [...a, l], [a, l]),
-        { draggingId: j, handleDragStart: v, handleDragReset: I, handleDragComplete: S } = (0, E.Z)(x),
+        { draggingId: j, handleDragStart: v, handleDragReset: E, handleDragComplete: S } = (0, I.Z)(x),
         P = i.useCallback(
             (e) => {
                 var i;
@@ -114,7 +114,7 @@ function L(e) {
                         currentPosition: l,
                         memberCount: null != (i = null == m ? void 0 : m[o.id]) ? i : 0,
                         onDragStart: v,
-                        onDragReset: I,
+                        onDragReset: E,
                         onDragComplete: S,
                         disableHover: null != j,
                         disableDrag: a.length !== b.length,
@@ -124,7 +124,7 @@ function L(e) {
                     o.id,
                 );
             },
-            [b, n, p, m, v, I, S, j, a, t, s],
+            [b, n, p, m, v, E, S, j, a, t, s],
         );
     return (0, r.jsx)(g.Xi, {
         sections: [Math.max(b.length, 1)],
@@ -165,10 +165,10 @@ function M(e) {
             onDragComplete: y,
             disableHover: C,
             disableDrag: N,
-            setEditRoleId: E,
+            setEditRoleId: I,
             setSelectedSection: T,
         } = e,
-        L = (0, I.T)(g, h, d),
+        L = (0, E.T)(g, h, d),
         k = null != L,
         [M, U] = i.useState(!1),
         B = i.useMemo(
@@ -232,7 +232,7 @@ function M(e) {
             className: a()(w.roleRow, w.roleRowDragging),
         });
     function X() {
-        E(d.id);
+        I(d.id);
     }
     function q() {
         X(), T(S.ZI.MEMBERS);
@@ -280,7 +280,7 @@ function M(e) {
                               defaultIconClassName: w.shield,
                           }),
                     null != L
-                        ? (0, r.jsx)(I.Z, {
+                        ? (0, r.jsx)(E.Z, {
                               className: w.lock,
                               tooltipText: L,
                           })

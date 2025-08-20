@@ -21,8 +21,8 @@ function b(e) {
     (0, o.Z)(y.id);
     let x = (0, s.Z)(y.id),
         v = y.isSystemDM(),
-        j = C && !v && !y.isMultiUserDM(),
-        O = {};
+        O = C && !v && !y.isMultiUserDM(),
+        j = {};
     if (v) {
         let e = x
             ? (0, r.jsxs)(r.Fragment, {
@@ -35,10 +35,10 @@ function b(e) {
                   ],
               })
             : g.intl.string(g.t.hvVgAQ);
-        (O.message = g.intl.string(g.t.Bt2N7O)),
-            (O.subtitle = g.intl.string(g.t["n/Vzk5"])),
-            (O.buttonText = e),
-            (O.onButtonClick = () => {
+        (j.message = g.intl.string(g.t.Bt2N7O)),
+            (j.subtitle = g.intl.string(g.t["n/Vzk5"])),
+            (j.buttonText = e),
+            (j.onButtonClick = () => {
                 if (x) {
                     open(m.D2),
                         d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
@@ -49,12 +49,12 @@ function b(e) {
                 }
                 open(p.Z.getArticleURL(f.BhN.SYSTEM_DMS));
             }),
-            (O.imageSrc = n(780961));
+            (j.imageSrc = n(780961));
     } else
-        j &&
-            ((O.message = g.intl.string(g.t["9T6N5+"])),
-            (O.buttonText = g.intl.string(g.t.XyHpKC)),
-            (O.onButtonClick = () => {
+        O &&
+            ((j.message = g.intl.string(g.t["9T6N5+"])),
+            (j.buttonText = g.intl.string(g.t.XyHpKC)),
+            (j.onButtonClick = () => {
                 a.Z.unblockUser(y.getRecipientId());
             }));
     return (0, r.jsx)(
@@ -83,7 +83,7 @@ function b(e) {
                     });
             }
             return e;
-        })({}, O)),
+        })({}, j)),
         (b = b = { children: _ }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))

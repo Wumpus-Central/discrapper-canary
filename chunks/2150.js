@@ -1,10 +1,12 @@
 n.d(t, { q: () => r });
-var i,
-    r =
-        (((i = {}).ACCENT = "accent"),
-        (i.GREEN = "statusGreen"),
-        (i.YELLOW = "statusYellow"),
-        (i.ORANGE = "statusOrange"),
-        (i.RED = "statusRed"),
-        (i.NONE = "transparent"),
-        i);
+var r = (function (e) {
+    return (
+        (e.ACCENT = "accent"),
+        (e.GREEN = "statusGreen"),
+        (e.YELLOW = "statusYellow"),
+        (e.ORANGE = "statusOrange"),
+        (e.RED = "statusRed"),
+        (e.NONE = "transparent"),
+        e
+    );
+})({});

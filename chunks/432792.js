@@ -1,7 +1,7 @@
 n.d(t, {
-    M: () => x,
-    M4: () => P,
-    WS: () => I,
+    M: () => E,
+    M4: () => I,
+    WS: () => P,
     t4: () => C,
 }),
     n(388685),
@@ -24,25 +24,25 @@ var r = n(951288),
     O = n(937860),
     _ = n(921944),
     y = n(557766),
-    v = n(447489),
-    j = n(484885);
+    j = n(447489),
+    v = n(484885);
 let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panels-height"), 56) + 8,
-    E = {
+    x = {
         discover: o.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
         shop: o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK,
     },
-    x = (e) => {
+    E = (e) => {
         let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: r } = e,
             l = (0, p.Nj)(o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
             { enabled: a } = (0, m.WX)({ location: "virtual_currency_onboarding_coachmark" }),
-            s = E[t],
+            s = x[t],
             c = (0, p.Nj)(s),
             u = a && l && n && !c,
             d = i.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "CLOSE";
                     c ||
-                        (0, p.Q3)(E[t], {
+                        (0, p.Q3)(x[t], {
                             forceTrack: !0,
                             dismissAction: "CTA_CLICK" === e ? _.L.TAKE_ACTION : _.L.USER_DISMISS,
                             groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING,
@@ -66,8 +66,8 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
     S = (e) => {
         let { customIconSrcs: t } = e,
             n = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-            i = void 0 !== t ? t.animated : j.Z,
-            o = void 0 !== t ? t.static : v.Z;
+            i = void 0 !== t ? t.animated : v.Z,
+            o = void 0 !== t ? t.static : j.Z;
         return n || null == i
             ? (0, r.jsx)("img", {
                   src: o,
@@ -80,18 +80,18 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
                   className: y.orbAsset,
                   children: [
                       (0, r.jsx)("source", {
-                          src: j.Z,
+                          src: v.Z,
                           type: "video/webm",
                       }),
                       (0, r.jsx)("img", {
-                          src: v.Z,
+                          src: j.Z,
                           className: y.orbAsset,
                           alt: "Orb",
                       }),
                   ],
               });
     },
-    P = (e) => {
+    I = (e) => {
         let {
             titleText: t,
             descriptionText: n,
@@ -129,7 +129,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
             art: (0, r.jsx)(S, { customIconSrcs: u }),
         });
     };
-function I(e) {
+function P(e) {
     let {
             calculateVisibility: t,
             children: n,
@@ -144,8 +144,8 @@ function I(e) {
         } = e,
         [g, m] = i.useState("bottom" === u),
         [O, _] = i.useState(!0),
-        [y, v] = i.useState(String(Date.now())),
-        j = (0, c.Z)(),
+        [y, j] = i.useState(String(Date.now())),
+        v = (0, c.Z)(),
         C = i.useCallback(
             (e) => {
                 let n = t(e);
@@ -153,18 +153,18 @@ function I(e) {
             },
             [O, t],
         ),
-        E = a.current,
-        x = i.useCallback(() => {
+        x = a.current,
+        E = i.useCallback(() => {
             null != o && null != o.current && o.current.updateElementPosition();
         }, [o]);
     i.useEffect(
         () => (
-            null != E && E.ownerDocument.addEventListener("scroll", x, !0),
+            null != x && x.ownerDocument.addEventListener("scroll", E, !0),
             () => {
-                null != E && E.ownerDocument.removeEventListener("scroll", x, !0);
+                null != x && x.ownerDocument.removeEventListener("scroll", E, !0);
             }
         ),
-        [E, x],
+        [x, E],
     );
     let S = i.useCallback(
         (e) => {
@@ -177,10 +177,10 @@ function I(e) {
                     }),
                 null != r)
             ) {
-                if ((C(r), i && v(String(Date.now())), d)) return;
+                if ((C(r), i && j(String(Date.now())), d)) return;
                 let e = r.top < window.innerHeight / 2;
                 if (e === g) return;
-                m(e), v(String(Date.now()));
+                m(e), j(String(Date.now()));
             }
         },
         [g, C, p, d],
@@ -191,16 +191,16 @@ function I(e) {
         shouldPollPositionOnMount: !0,
         targetElementRef: a,
     });
-    let P = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
-        I = O && !j,
-        N = i.Children.map(l, (e) => i.cloneElement(e, { align: P }));
+    let I = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
+        P = O && !v,
+        N = i.Children.map(l, (e) => i.cloneElement(e, { align: I }));
     return (0, r.jsx)(s.yRy, {
         autoInvert: !1,
         renderPopout: () => N,
         position: h,
-        align: P,
+        align: I,
         nudgeAlignIntoViewport: !1,
-        shouldShow: I,
+        shouldShow: P,
         spacing: f,
         positionKey: y,
         animation: s.yRy.Animation.TRANSLATE,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(642613), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -189,21 +189,21 @@ function T(e) {
     null != a && ((y[t] = new O(n, a, t)), y[t].rebuild(r.map((e) => e.user_id)));
 }
 function S(e) {
-    return C(e.user.id);
+    return N(e.user.id);
 }
 function A(e) {
     let { updates: t } = e;
     return t
         .map((e) => {
             let { user: t } = e;
-            return C(t.id);
+            return N(t.id);
         })
         .some((e) => e);
 }
-function N(e) {
-    return e.members.reduce((e, t) => C(t.user.id) || e, !1);
-}
 function C(e) {
+    return e.members.reduce((e, t) => N(t.user.id) || e, !1);
+}
+function N(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in y) y[n].updateUserId(e) && (t = !0);
@@ -243,20 +243,20 @@ function D(e) {
     if (!(t.id in y)) return !1;
     delete y[t.id];
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in y) y[e].guildId === t && (y[e].rebuild(), (n = !0));
     return n;
 }
-function x(e) {
+function L(e) {
     let { channels: t } = e,
         n = new Set(t.map((e) => e.id)),
         r = !1;
     for (let e in y) n.has(y[e].parentId) && (y[e].rebuild(), (r = !0));
     return r;
 }
-class M extends (r = o.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, _.default),
             this.syncWith([u.Z], () => {
@@ -267,7 +267,7 @@ class M extends (r = o.ZP.Store) {
             }),
             this.syncWith([f.Z], () => {
                 var e;
-                return C(null == (e = _.default.getCurrentUser()) ? void 0 : e.id);
+                return N(null == (e = _.default.getCurrentUser()) ? void 0 : e.id);
             });
     }
     getMemberListVersion(e) {
@@ -286,13 +286,13 @@ class M extends (r = o.ZP.Store) {
         return null != (i = null == o ? void 0 : o.canViewChannel) && i;
     }
 }
-b(M, "displayName", "ThreadMemberListStore");
-let k = new M(s.Z, {
+b(j, "displayName", "ThreadMemberListStore");
+let M = new j(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: I,
     THREAD_UPDATE: w,
     THREAD_DELETE: D,
-    CHANNEL_UPDATES: x,
+    CHANNEL_UPDATES: L,
     THREAD_MEMBER_LIST_UPDATE: T,
     USER_UPDATE: S,
     PRESENCE_UPDATES: A,
@@ -301,7 +301,7 @@ let k = new M(s.Z, {
     GUILD_MEMBER_REMOVE: S,
     PRESENCES_REPLACE: R,
     GUILD_MEMBERS_CHUNK_BATCH: P,
-    GUILD_ROLE_UPDATE: L,
-    GUILD_ROLE_DELETE: L,
-    PASSIVE_UPDATE_V2: N,
+    GUILD_ROLE_UPDATE: x,
+    GUILD_ROLE_DELETE: x,
+    PASSIVE_UPDATE_V2: C,
 });

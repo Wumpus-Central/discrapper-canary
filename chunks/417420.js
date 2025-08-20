@@ -1,25 +1,25 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(921801),
-    a = n(626135),
-    l = n(695346),
-    o = n(726985),
+var i = n(481060),
+    a = n(921801),
+    o = n(626135),
+    s = n(695346),
+    l = n(726985),
     c = n(981631),
-    d = n(388032);
-function u() {
-    let e = l.qF.useSetting();
-    return (0, i.jsx)(s.F, {
-        setting: o.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
-        children: (0, i.jsx)(r.j7V, {
-            note: d.intl.string(d.t.WNbX4O),
+    u = n(388032);
+function d() {
+    let e = s.qF.useSetting();
+    return (0, r.jsx)(a.F, {
+        setting: l.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
+        children: (0, r.jsx)(i.j7V, {
+            note: u.intl.string(u.t.WNbX4O),
             onChange: (e) => {
-                l.qF.updateSetting(e), a.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                s.qF.updateSetting(e), o.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
             },
             value: e,
             hideBorder: !0,
-            children: d.intl.string(d.t["3Ppr1t"]),
+            children: u.intl.string(u.t["3Ppr1t"]),
         }),
     });
 }

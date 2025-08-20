@@ -1,13 +1,13 @@
-function e(t) {
-    return t.replace(/\//g, "-");
+function t(e) {
+    return e.replace(/\//g, "-");
 }
-t.exports = function (t) {
-    return "object" == typeof t
-        ? Object.keys(t)
-              .filter(function (e) {
-                  return t[e];
+e.exports = function (e) {
+    return "object" == typeof e
+        ? Object.keys(e)
+              .filter(function (t) {
+                  return e[t];
               })
-              .map(e)
+              .map(t)
               .join(" ")
-        : Array.prototype.map.call(arguments, e).join(" ");
+        : Array.prototype.map.call(arguments, t).join(" ");
 };

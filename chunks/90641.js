@@ -1,24 +1,33 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => g });
 var r = n(570140),
     i = n(668781),
     a = n(287734),
     o = n(881052),
-    c = n(314897),
+    s = n(314897),
     l = n(592125),
-    u = n(979651),
-    s = n(352954),
-    E = n(630759),
-    d = n(760373),
-    f = n(981631),
-    _ = n(388032);
-async function S(e, t) {
+    c = n(979651),
+    u = n(352954),
+    d = n(630759),
+    f = n(760373),
+    _ = n(981631),
+    p = n(388032);
+function h() {
+    let e = c.Z.getVoiceStateForUser(s.default.getId()),
+        t = l.Z.getChannel(null == e ? void 0 : e.channelId);
+    return s.default.getSessionId() === (null == e ? void 0 : e.sessionId) &&
+        null != t &&
+        t.type !== _.d4z.GUILD_STAGE_VOICE
+        ? t.id
+        : null;
+}
+async function m(e, t) {
     if (e) {
         r.Z.dispatch({
             type: "SECURE_FRAMES_SETTINGS_UPDATE",
             persistentCodesEnabled: e,
         });
         try {
-            await (0, E.om)(d.GB), null == t || t();
+            await (0, d.om)(f.GB), null == t || t();
         } catch (t) {
             var n;
             let e = new o.Hx(t);
@@ -27,8 +36,8 @@ async function S(e, t) {
                 persistentCodesEnabled: !1,
             }),
                 i.Z.show({
-                    title: _.intl.string(_.t.R0RpRU),
-                    body: null != (n = e.getAnyErrorMessage()) ? n : _.intl.string(_.t.eAn6z8),
+                    title: p.intl.string(p.t.R0RpRU),
+                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z8),
                 });
         }
     } else
@@ -38,32 +47,24 @@ async function S(e, t) {
         }),
             null == t || t();
 }
-let y = {
+let g = {
     clearUploadedKeyVersions: function () {
         r.Z.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
     },
-    updatePersistentCodesEnabled: async function e(e) {
-        let t = (function () {
-            let e = u.Z.getVoiceStateForUser(c.default.getId()),
-                t = l.Z.getChannel(null == e ? void 0 : e.channelId);
-            return c.default.getSessionId() === (null == e ? void 0 : e.sessionId) &&
-                null != t &&
-                t.type !== f.d4z.GUILD_STAGE_VOICE
-                ? t.id
-                : null;
-        })();
+    updatePersistentCodesEnabled: async function (e) {
+        let t = h();
         null != t
-            ? s.Z.openSecureFramesUpdateConfirmation({
-                  title: e ? _.intl.string(_.t.DRFN1N) : _.intl.string(_.t.q29xJy),
-                  subtitle: e ? _.intl.string(_.t.y015ZW) : _.intl.string(_.t.E66FQk),
-                  confirmText: _.intl.string(_.t.aTuFYW),
+            ? u.Z.openSecureFramesUpdateConfirmation({
+                  title: e ? p.intl.string(p.t.DRFN1N) : p.intl.string(p.t.q29xJy),
+                  subtitle: e ? p.intl.string(p.t.y015ZW) : p.intl.string(p.t.E66FQk),
+                  confirmText: p.intl.string(p.t.aTuFYW),
                   onConfirm: async () => {
-                      await S(e, () => {
+                      await m(e, () => {
                           a.default.disconnect(), a.default.selectVoiceChannel(t);
                       });
                   },
               })
-            : await S(e);
+            : await m(e);
     },
     addUploadedKeyVersion: function (e) {
         r.Z.dispatch({

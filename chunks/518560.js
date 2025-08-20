@@ -1,54 +1,54 @@
-n.d(e, { Z: () => N });
-var s = n(951288),
+n.d(t, { Z: () => y });
+var r = n(951288),
     i = n(647438),
     a = n(286379),
-    r = n(481060),
-    l = n(493773),
-    c = n(797614),
-    o = n(626135),
-    d = n(103879),
-    u = n(451284),
-    m = n(802429),
-    h = n(846488),
-    x = n(181211),
-    g = n(811085),
-    j = n(967254),
-    p = n(981631),
-    f = n(388032),
-    v = n(737943);
-function N() {
-    let t = (0, x.Z)(),
-        e = (0, h.e)(),
-        n = (0, u.P)(),
-        N = (0, m.i)();
-    (0, l.ZP)(() => {
-        d.yq();
+    o = n(481060),
+    s = n(493773),
+    l = n(797614),
+    c = n(626135),
+    u = n(103879),
+    d = n(451284),
+    f = n(802429),
+    _ = n(846488),
+    p = n(181211),
+    h = n(811085),
+    m = n(967254),
+    g = n(981631),
+    E = n(388032),
+    b = n(737943);
+function y() {
+    let e = (0, p.Z)(),
+        t = (0, _.e)(),
+        n = (0, d.P)(),
+        y = (0, f.i)();
+    (0, s.ZP)(() => {
+        u.yq();
     });
-    let S = i.useRef(n);
+    let O = i.useRef(n);
     return (i.useEffect(() => {
-        S.current = n;
+        O.current = n;
     }),
     i.useEffect(() => {
-        e &&
-            (o.default.track(p.rMx.SAFETY_HUB_VIEWED, { account_standing: S.current.state }),
-            c.Z.increment({ name: a.V.SAFETY_HUB_VIEW }));
-    }, [e]),
-    t)
-        ? (0, s.jsx)(r.$jN, {})
-        : null != N
-          ? (0, s.jsxs)(r.qXd, {
-                color: r.DM8.DANGER,
-                className: v.nagbar,
+        t &&
+            (c.default.track(g.rMx.SAFETY_HUB_VIEWED, { account_standing: O.current.state }),
+            l.Z.increment({ name: a.V.SAFETY_HUB_VIEW }));
+    }, [t]),
+    e)
+        ? (0, r.jsx)(o.$jN, {})
+        : null != y
+          ? (0, r.jsxs)(o.qXd, {
+                color: o.DM8.DANGER,
+                className: b.nagbar,
                 children: [
-                    f.intl.string(f.t.TDRvqq),
-                    (0, s.jsx)(r.EyT, {
-                        onClick: () => d.yq(),
-                        children: f.intl.string(f.t.R1AN4O),
+                    E.intl.string(E.t.TDRvqq),
+                    (0, r.jsx)(o.EyT, {
+                        onClick: () => u.yq(),
+                        children: E.intl.string(E.t.R1AN4O),
                     }),
                 ],
             })
-          : (0, s.jsxs)("div", {
-                className: v.container,
-                children: [(0, s.jsx)(g.Z, {}), (0, s.jsx)(j.N, {})],
+          : (0, r.jsxs)("div", {
+                className: b.container,
+                children: [(0, r.jsx)(h.Z, {}), (0, r.jsx)(m.N, {})],
             });
 }

@@ -1,66 +1,68 @@
-r.d(t, {
-    Mm: () => h,
-    jj: () => b,
-    wH: () => d,
+n.d(t, {
+    Mm: () => m,
+    jj: () => _,
+    wH: () => f,
 });
-var n = r(951288),
-    a = r(647438),
-    l = r(442837),
-    i = r(481060),
-    o = r(751648),
-    u = r(479766);
-function c(e) {
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(751648),
+    l = n(479766);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
+            r.forEach(function (t) {
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-let s = "balance-widget-menu-coachmark-modal",
-    d = () => (0, i.nfh)(s),
-    b = () => (0, i.Mr3)(s),
-    f = {
-        modalKey: s,
-        onCloseCallback: o.j2,
+let d = "balance-widget-menu-coachmark-modal",
+    f = () => (0, o.nfh)(d),
+    _ = () => (0, o.Mr3)(d),
+    p = {
+        modalKey: d,
+        onCloseCallback: s.j2,
         onCloseRequest: async () => {
-            await (0, o.j2)();
+            await (0, s.j2)();
         },
     };
 function h(e) {
-    let t = (0, l.cj)([u.Z], () => u.Z.earnedOrbsCoachmark),
-        { shouldOpen: o } = t;
+    e.isCoachmarkEnabled &&
+        (0, o.ZDy)(async () => {
+            let { WrappedBalanceWidgetEarnedOrbsCoachmarkModal: t } = await Promise.resolve().then(n.bind(n, 720463));
+            return (n) => (0, r.jsx)(t, u({}, e, n));
+        }, p);
+}
+function m(e) {
+    let t = (0, a.cj)([l.Z], () => l.Z.earnedOrbsCoachmark),
+        { shouldOpen: n } = t;
     return (
-        (0, a.useEffect)(() => {
-            let t = d();
-            if (o && !t) {
-                var a;
-                (a = c({}, e)).isCoachmarkEnabled &&
-                    (0, i.ZDy)(async () => {
-                        let { WrappedBalanceWidgetEarnedOrbsCoachmarkModal: e } = await r
-                            .e("82081")
-                            .then(r.bind(r, 720463));
-                        return (t) => (0, n.jsx)(e, c({}, a, t));
-                    }, f);
-            } else !o && t && b();
-        }, [o, e]),
-        c({}, t)
+        (0, i.useEffect)(() => {
+            let t = f();
+            n && !t ? h(u({}, e)) : !n && t && _();
+        }, [n, e]),
+        u({}, t)
     );
 }

@@ -185,8 +185,8 @@ class m extends r.EventEmitter {
         for (let e of Object.values(v)) Array.isArray(e) && (T += e.length);
         let S = !0 === v.isLoading,
             A = this.shouldShow(T, S, g),
-            N = this.state.selectedIndex;
-        !A || S ? (N = null) : null != N && N >= T && (N = T - 1),
+            C = this.state.selectedIndex;
+        !A || S ? (C = null) : null != C && C >= T && (C = T - 1),
             A && !this.state.isVisible && (0, a.a7)(m, this.props.channel, I),
             this.setState({
                 query: {
@@ -199,7 +199,7 @@ class m extends r.EventEmitter {
                     isLoading: S,
                 },
                 isVisible: A,
-                selectedIndex: N,
+                selectedIndex: C,
             });
     }
     shouldShow(e, t, n) {

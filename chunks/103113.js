@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(544989),
     S = n(671955),
     A = n(388032),
-    N = n(116649);
-function C(e, t, n) {
+    C = n(116649);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -57,33 +57,33 @@ function P(e) {
     let {
             user: t,
             guildId: n,
-            channelId: C,
+            channelId: N,
             messageId: P,
             roleId: w,
             openedAt: D,
-            setPopoutRef: L,
-            closePopout: x,
-            disableUserProfileLink: M = __OVERLAY__,
-            newAnalyticsLocations: k = [],
-            disableAutoFocus: j = !1,
+            setPopoutRef: x,
+            closePopout: L,
+            disableUserProfileLink: j = __OVERLAY__,
+            newAnalyticsLocations: M = [],
+            disableAutoFocus: k = !1,
         } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
             guildId: n,
-            channelId: C,
+            channelId: N,
             messageId: P,
             roleId: w,
         }),
-        V = i.useRef(null),
-        F = (0, o.Z)(V);
+        Z = i.useRef(null),
+        V = (0, o.Z)(Z);
     i.useEffect(() => {
-        null == L || L(null == V ? void 0 : V.current);
-    }, [V, L]);
-    let Z = () => {
-            null == x || x(),
+        null == x || x(null == Z ? void 0 : Z.current);
+    }, [Z, x]);
+    let F = () => {
+            null == L || L(),
                 (0, m.openUserProfileModal)(
                     R(
                         {
@@ -94,14 +94,14 @@ function P(e) {
                     ),
                 );
         },
-        H = !M && (0, c.Z)(t.id),
+        H = !j && (0, c.Z)(t.id),
         Y = () =>
             H
                 ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
                       label: A.intl.string(A.t["+Xp3ho"]),
                       action: () => {
-                          Z(),
+                          F(),
                               (0, p.pQ)(
                                   R(
                                       {
@@ -114,9 +114,9 @@ function P(e) {
                       },
                   })
                 : null,
-        W = j ? "div" : a.VqE,
+        W = k ? "div" : a.VqE,
         K = (0, u.Dt)(),
-        z = f.ZP.useName(n, C, t);
+        z = f.ZP.useName(n, N, t);
     return (0, r.jsx)(l.Gt, {
         value: G,
         children: (0, r.jsx)(_.Mt, {
@@ -126,7 +126,7 @@ function P(e) {
             fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
             isLoaded: null == U ? void 0 : U.isLoaded,
             children: (0, r.jsxs)(W, {
-                ref: V,
+                ref: Z,
                 "aria-labelledby": K,
                 children: [
                     (0, r.jsx)(a.nn4, {
@@ -147,7 +147,7 @@ function P(e) {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.header,
+                                className: C.header,
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         user: t,
@@ -159,24 +159,24 @@ function P(e) {
                                         user: t,
                                         displayProfile: U,
                                         guildId: n,
-                                        channelId: C,
+                                        channelId: N,
                                         themeType: S.l.POPOUT,
-                                        onOpenProfile: H ? Z : void 0,
+                                        onOpenProfile: H ? F : void 0,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)(a.Ttm, {
                                 fade: !0,
-                                className: N.body,
+                                className: C.body,
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: t,
-                                        nickname: f.ZP.getName(n, C, t),
-                                        onOpenProfile: H ? Z : void 0,
+                                        nickname: f.ZP.getName(n, N, t),
+                                        onOpenProfile: H ? F : void 0,
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: U,
                                             themeType: S.l.POPOUT,
-                                            onClose: x,
+                                            onClose: L,
                                         }),
                                     }),
                                     (0, r.jsx)(y.Z, {
@@ -187,13 +187,13 @@ function P(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", { className: N.footer }),
+                            (0, r.jsx)("div", { className: C.footer }),
                         ],
                     }),
                     (null == U ? void 0 : U.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == U ? void 0 : U.profileEffectId,
-                            isHovering: F,
+                            isHovering: V,
                         }),
                 ],
             }),

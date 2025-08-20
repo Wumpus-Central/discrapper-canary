@@ -1,23 +1,23 @@
 n.d(t, {
     V: () => c,
-    x: () => d,
+    x: () => u,
 }),
     n(388685);
-var i = n(647438),
-    r = n(704215),
-    s = n(266454),
-    a = n(243778),
-    l = n(848572),
-    o = n(388032);
+var r = n(647438),
+    i = n(704215),
+    a = n(266454),
+    o = n(243778),
+    s = n(848572),
+    l = n(388032);
 let c = () => {
-        let e = (0, l.y3)(),
-            [t] = (0, a.US)(null != e ? [r.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return t === r.z.WHATS_NEW_TENURE_BADGE_REWARD ? o.intl.string(o.t.jyYgZ2).toLocaleUpperCase() : null;
+        let e = null != (0, s.y3)(),
+            [t] = (0, o.US)(e ? [i.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
+        return t === i.z.WHATS_NEW_TENURE_BADGE_REWARD ? l.intl.string(l.t.jyYgZ2).toLocaleUpperCase() : null;
     },
-    d = () => {
-        let e = (0, l.y3)(),
-            [t] = (0, a.US)(null != e ? [r.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return i.useCallback(() => {
-            t === r.z.WHATS_NEW_TENURE_BADGE_REWARD && (0, s.Q3)(t);
+    u = () => {
+        let e = null != (0, s.y3)(),
+            [t] = (0, o.US)(e ? [i.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
+        return r.useCallback(() => {
+            t === i.z.WHATS_NEW_TENURE_BADGE_REWARD && (0, a.Q3)(t);
         }, [t]);
     };

@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     contentPadding: "contentPadding__1db97",
     title: "title__1db97",
     subtitle: "subtitle__1db97",

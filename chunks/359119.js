@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => C,
+    ZP: () => N,
     ny: () => f,
     pj: () => d,
 }),
@@ -127,7 +127,7 @@ function S() {
 function A(e) {
     return new Date(e).getTime() > Date.now() - u;
 }
-class N extends r.ZP.Store {
+class C extends r.ZP.Store {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -143,7 +143,7 @@ class N extends r.ZP.Store {
         return h.has(e);
     }
 }
-let C = new N(i.Z, {
+let N = new C(i.Z, {
     CHANNEL_CREATE: E,
     CHANNEL_DELETE: y,
     CHANNEL_UPDATES: b,

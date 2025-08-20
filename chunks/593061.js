@@ -1,18 +1,18 @@
-n.d(t, { Z: () => p }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(544891),
-    a = n(481060),
-    l = n(357841),
-    o = n(981631),
+n.d(t, { Z: () => _ }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(544891),
+    o = n(481060),
+    s = n(357841),
+    l = n(981631),
     c = n(231338),
-    d = n(388032),
-    u = n(982710);
-async function m(e) {
+    u = n(388032),
+    d = n(982710);
+async function f(e) {
     try {
         return (
-            await s.tn.get({
-                url: o.ANM.BILLING_INVOICE_BREAKDOWN,
+            await a.tn.get({
+                url: l.ANM.BILLING_INVOICE_BREAKDOWN,
                 query: { payment_id: e },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -22,75 +22,77 @@ async function m(e) {
         throw e;
     }
 }
-function p(e) {
+function _(e) {
     let { payment: t } = e,
-        [n, s] = r.useState(null),
-        [o, p] = r.useState(null),
-        g = async (e) => {
+        [n, a] = i.useState(null),
+        [l, _] = i.useState(null),
+        p = async (e) => {
             try {
-                let n = await m(t.id);
-                s(n);
-                let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(i, "_blank"), p(null);
+                let n = await f(t.id);
+                a(n);
+                let r = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
+                window.open(r, "_blank"), _(null);
             } catch (e) {
                 var n;
-                p(null == (n = e.body) ? void 0 : n.message);
+                _(null == (n = e.body) ? void 0 : n.message);
             }
-        },
-        h = null != t.paymentSource && t.status === c.Py.COMPLETED,
-        f = null == n ? void 0 : n.invoiceLink,
-        b = null == n ? void 0 : n.refundInvoiceLinks;
+        };
+    function h(e, t) {
+        s.Z.open(e, t);
+    }
+    let m = null != t.paymentSource && t.status === c.Py.COMPLETED,
+        g = null == n ? void 0 : n.invoiceLink,
+        E = null == n ? void 0 : n.refundInvoiceLinks;
     return t.hasInvoiceURL && null == n
-        ? (0, i.jsxs)("div", {
-              className: u.downloadInvoice,
+        ? (0, r.jsxs)("div", {
+              className: d.downloadInvoice,
               children: [
-                  (0, i.jsx)(a.eee, {
-                      onClick: () => g(!1),
-                      children: d.intl.formatToPlainString(d.t.R0xzCA, {}),
+                  (0, r.jsx)(o.eee, {
+                      onClick: () => p(!1),
+                      children: u.intl.formatToPlainString(u.t.R0xzCA, {}),
                   }),
                   t.hasRefundInvoiceURLs
-                      ? (0, i.jsx)(a.eee, {
-                            className: u.downloadRefundInvoice,
-                            onClick: () => g(!0),
-                            children: d.intl.formatToPlainString(d.t["3x6NGx"], {}),
+                      ? (0, r.jsx)(o.eee, {
+                            className: d.downloadRefundInvoice,
+                            onClick: () => p(!0),
+                            children: u.intl.formatToPlainString(u.t["3x6NGx"], {}),
                         })
                       : null,
-                  null != o && "" !== o && (0, i.jsx)(a.kzN, { children: o }),
+                  null != l && "" !== l && (0, r.jsx)(o.kzN, { children: l }),
               ],
           })
         : t.hasInvoiceURL && null != n
-          ? (0, i.jsxs)("div", {
-                className: u.downloadInvoice,
+          ? (0, r.jsxs)("div", {
+                className: d.downloadInvoice,
                 children: [
-                    (0, i.jsx)(a.eee, {
-                        href: f,
-                        children: d.intl.formatToPlainString(d.t.R0xzCA, {}),
+                    (0, r.jsx)(o.eee, {
+                        href: g,
+                        children: u.intl.formatToPlainString(u.t.R0xzCA, {}),
                     }),
-                    null != b
-                        ? b.map((e, t) =>
-                              (0, i.jsx)(
-                                  a.eee,
+                    null != E
+                        ? E.map((e, t) =>
+                              (0, r.jsx)(
+                                  o.eee,
                                   {
-                                      className: u.downloadRefundInvoice,
+                                      className: d.downloadRefundInvoice,
                                       href: e,
-                                      children: d.intl.formatToPlainString(d.t["3x6NGx"], {}),
+                                      children: u.intl.formatToPlainString(u.t["3x6NGx"], {}),
                                   },
                                   t,
                               ),
                           )
                         : null,
-                    null != o && "" !== o && (0, i.jsx)(a.kzN, { children: o }),
+                    null != l && "" !== l && (0, r.jsx)(o.kzN, { children: l }),
                 ],
             })
-          : h
-            ? (0, i.jsx)("div", {
-                  className: u.downloadInvoice,
-                  children: (0, i.jsx)(a.eee, {
+          : m
+            ? (0, r.jsx)("div", {
+                  className: d.downloadInvoice,
+                  children: (0, r.jsx)(o.eee, {
                       onClick: () => {
-                          var e;
-                          (e = t.paymentSource), l.Z.open(t, e);
+                          h(t, t.paymentSource);
                       },
-                      children: d.intl.formatToPlainString(d.t.onRIxc, {}),
+                      children: u.intl.formatToPlainString(u.t.onRIxc, {}),
                   }),
               })
             : null;

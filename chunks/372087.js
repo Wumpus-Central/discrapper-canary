@@ -57,7 +57,7 @@ var T = Array.isArray,
         S: null,
     },
     A = Object.prototype.hasOwnProperty;
-function N(e, t, n, r, a, o) {
+function C(e, t, n, r, a, o) {
     return {
         $$typeof: i,
         type: e,
@@ -66,8 +66,8 @@ function N(e, t, n, r, a, o) {
         props: o,
     };
 }
-function C(e, t) {
-    return N(e.type, t, void 0, void 0, void 0, e.props);
+function N(e, t) {
+    return C(e.type, t, void 0, void 0, void 0, e.props);
 }
 function R(e) {
     return "object" == typeof e && null !== e && e.$$typeof === i;
@@ -88,8 +88,8 @@ var w = /\/+/g;
 function D(e, t) {
     return "object" == typeof e && null !== e && null != e.key ? P("" + e.key) : t.toString(36);
 }
-function L() {}
-function x(e) {
+function x() {}
+function L(e) {
     switch (e.status) {
         case "fulfilled":
             return e.value;
@@ -98,7 +98,7 @@ function x(e) {
         default:
             switch (
                 ("string" == typeof e.status
-                    ? e.then(L, L)
+                    ? e.then(x, x)
                     : ((e.status = "pending"),
                       e.then(
                           function (t) {
@@ -118,7 +118,7 @@ function x(e) {
     }
     throw e;
 }
-function M(e, t, n, r, o) {
+function j(e, t, n, r, o) {
     var s = typeof e;
     ("undefined" === s || "boolean" === s) && (e = null);
     var l = !1;
@@ -137,7 +137,7 @@ function M(e, t, n, r, o) {
                         l = !0;
                         break;
                     case p:
-                        return M((l = e._init)(e._payload), t, n, r, o);
+                        return j((l = e._init)(e._payload), t, n, r, o);
                 }
         }
     if (l)
@@ -147,12 +147,12 @@ function M(e, t, n, r, o) {
             T(o)
                 ? ((n = ""),
                   null != l && (n = l.replace(w, "$&/") + "/"),
-                  M(o, t, n, "", function (e) {
+                  j(o, t, n, "", function (e) {
                       return e;
                   }))
                 : null != o &&
                   (R(o) &&
-                      (o = C(
+                      (o = N(
                           o,
                           n + (null == o.key || (e && e.key === o.key) ? "" : ("" + o.key).replace(w, "$&/") + "/") + l,
                       )),
@@ -161,11 +161,11 @@ function M(e, t, n, r, o) {
         );
     l = 0;
     var c = "" === r ? "." : r + ":";
-    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += M(r, t, n, s, o));
+    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += j(r, t, n, s, o));
     else if ("function" == typeof (u = m(e)))
-        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += M(r, t, n, s, o));
+        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += j(r, t, n, s, o));
     else if ("object" === s) {
-        if ("function" == typeof e.then) return M(x(e), t, n, r, o);
+        if ("function" == typeof e.then) return j(L(e), t, n, r, o);
         throw Error(
             "Objects are not valid as a React child (found: " +
                 ("[object Object]" === (t = String(e)) ? "object with keys {" + Object.keys(e).join(", ") + "}" : t) +
@@ -174,18 +174,18 @@ function M(e, t, n, r, o) {
     }
     return l;
 }
-function k(e, t, n) {
+function M(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
     return (
-        M(e, r, "", "", function (e) {
+        j(e, r, "", "", function (e) {
             return t.call(n, e, i++);
         }),
         r
     );
 }
-function j(e) {
+function k(e) {
     if (-1 === e._status) {
         var t = e._result;
         (t = t()).then(
@@ -222,9 +222,9 @@ var U =
           };
 function G() {}
 (t.Children = {
-    map: k,
+    map: M,
     forEach: function (e, t, n) {
-        k(
+        M(
             e,
             function () {
                 t.apply(this, arguments);
@@ -235,7 +235,7 @@ function G() {}
     count: function (e) {
         var t = 0;
         return (
-            k(e, function () {
+            M(e, function () {
                 t++;
             }),
             t
@@ -243,7 +243,7 @@ function G() {}
     },
     toArray: function (e) {
         return (
-            k(e, function (e) {
+            M(e, function (e) {
                 return e;
             }) || []
         );
@@ -287,7 +287,7 @@ function G() {}
             for (var s = Array(o), l = 0; l < o; l++) s[l] = arguments[l + 2];
             r.children = s;
         }
-        return N(e.type, i, void 0, void 0, a, r);
+        return C(e.type, i, void 0, void 0, a, r);
     }),
     (t.createContext = function (e) {
         return (
@@ -320,7 +320,7 @@ function G() {}
             i.children = s;
         }
         if (e && e.defaultProps) for (r in (o = e.defaultProps)) void 0 === i[r] && (i[r] = o[r]);
-        return N(e, a, void 0, void 0, null, i);
+        return C(e, a, void 0, void 0, null, i);
     }),
     (t.createRef = function () {
         return { current: null };
@@ -339,7 +339,7 @@ function G() {}
                 _status: -1,
                 _result: e,
             },
-            _init: j,
+            _init: k,
         };
     }),
     (t.memo = function (e, t) {

@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(566620),
     _ = n(317381),
     y = n(889441),
-    v = n(736409),
-    j = n(835473),
+    j = n(736409),
+    v = n(835473),
     C = n(413523),
-    E = n(933557),
-    x = n(194082),
+    x = n(933557),
+    E = n(194082),
     S = n(550532),
-    P = n(436774),
-    I = n(594190),
+    I = n(436774),
+    P = n(594190),
     N = n(925329),
     w = n(102172),
     Z = n(74299),
@@ -32,8 +32,8 @@ var r = n(951288),
     A = n(662304),
     R = n(989941),
     D = n(690221),
-    L = n(522474),
-    M = n(231664),
+    M = n(522474),
+    L = n(231664),
     k = n(759198),
     U = n(131704),
     G = n(199902),
@@ -136,9 +136,9 @@ class ec extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon,
                       })
-                    : (0, r.jsx)(x.ZP, {
-                          look: x.ZP.Looks.GRAY,
-                          size: x.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(E.ZP, {
+                          look: E.ZP.Looks.GRAY,
+                          size: E.ZP.Sizes.SMALL,
                           className: el.liveIndicator,
                       }),
                 (0, r.jsxs)("div", {
@@ -151,7 +151,7 @@ class ec extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(u.SrA, {
                                         size: "xxs",
-                                        color: P.JX.PREMIUM_TIER_2,
+                                        color: I.JX.PREMIUM_TIER_2,
                                     }),
                                     (0, r.jsx)(k.Z, {
                                         className: el.perksDemoText,
@@ -205,7 +205,7 @@ class ec extends i.PureComponent {
                         game: t,
                         size: N.Z.Sizes.SMALL,
                     }),
-                    (0, r.jsx)(v.j, {
+                    (0, r.jsx)(j.j, {
                         isForceShowSharingPopout: a,
                         setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
@@ -299,18 +299,18 @@ let eu = (0, g.Z)(function (e) {
             return i;
         })(e, ["guildId"]);
     let s = (0, c.e7)([B.default], () => B.default.getId()),
-        u = (0, c.e7)([I.ZP, Q.Z], () => (0, R.Z)(I.ZP, Q.Z)),
+        u = (0, c.e7)([P.ZP, Q.Z], () => (0, R.Z)(P.ZP, Q.Z)),
         d = (0, c.e7)([q.Z, V.Z], () => V.Z.getChannel(q.Z.getVoiceChannelId())),
         p = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
         f = (0, c.e7)([V.Z], () => V.Z.getChannel(p)),
         h = (0, c.e7)([H.Z], () => H.Z.getGuild(null == f ? void 0 : f.guild_id)),
         [g, O] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
-        v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        j = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         C = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        x = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
+        E = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
             null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0,
         ),
-        [P] = (0, j.Z)([
+        [I] = (0, v.Z)([
             null !=
             (l =
                 null != O && null != O.id
@@ -329,10 +329,10 @@ let eu = (0, g.Z)(function (e) {
         D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
         k = (0, c.e7)([K.Z], () => (null != s ? K.Z.findActivity(s, (e) => e.type === er.IIU.PLAYING) : null)),
         U = null != g && g.ownerId === s && g.state !== er.jm8.ENDED,
-        $ = (0, c.e7)([X.default, Y.Z], () => (null != f ? (0, E.F6)(f, X.default, Y.Z) : void 0)),
-        ee = (0, M.Z)(),
+        $ = (0, c.e7)([X.default, Y.Z], () => (null != f ? (0, x.F6)(f, X.default, Y.Z) : void 0)),
+        ee = (0, L.Z)(),
         [et, en] = i.useState(!1),
-        ei = (0, c.e7)([L.Z], () => L.Z.getWindowOpen(er.KJ3.ACTIVITY_POPOUT));
+        ei = (0, c.e7)([M.Z], () => M.Z.getWindowOpen(er.KJ3.ACTIVITY_POPOUT));
     return (0, r.jsx)(
         ec,
         ((t = ea({}, a)),
@@ -344,11 +344,11 @@ let eu = (0, g.Z)(function (e) {
                 embeddedActivity: C,
                 userId: s,
                 runningGame: null != N ? N : u,
-                application: P,
-                useReducedMotion: v,
+                application: I,
+                useReducedMotion: j,
                 isStreaming: U,
                 channel: f,
-                canStream: x,
+                canStream: E,
                 stream: g,
                 streamMetadata: O,
                 channelName: $,

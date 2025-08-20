@@ -1,8 +1,8 @@
 n.d(t, {
-    Ox: () => N,
+    Ox: () => C,
     QP: () => I,
     ob: () => R,
-    q4: () => C,
+    q4: () => N,
 }),
     n(388685);
 var r = n(951288),
@@ -130,7 +130,7 @@ let S = {
         exitActive: g.exitActiveReducedMotion,
         exitDone: g.exitDoneReducedMotion,
     };
-function N() {
+function C() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
         t = e.enabled ? A : S,
         n = I((e) => e.fullScreenLayers),
@@ -167,7 +167,7 @@ function N() {
         }),
     });
 }
-function C(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         { layerKey: n, Layer: r } = t,
         i = null != n ? n : o()();

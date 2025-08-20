@@ -1,8 +1,8 @@
-n.d(t, { Z: () => d }), n(388685);
-var i,
-    r = n(442837),
-    s = n(570140);
-function a(e, t, n) {
+n.d(t, { Z: () => h }), n(388685);
+var r,
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,66 +15,73 @@ function a(e, t, n) {
         e
     );
 }
-let l = [];
-function o() {
-    l = [];
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
 }
-class c extends (i = r.ZP.Store) {
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = [];
+function d() {
+    u = [];
+}
+function f(e) {
+    let { sessions: t } = e;
+    u = t.map((e) => c(s({}, e), { approx_last_used_time: new Date(e.approx_last_used_time) }));
+}
+function _(e) {
+    let { sessionIdHashes: t } = e,
+        n = [...u],
+        r = !1;
+    for (let e of t) {
+        let t = n.findIndex((t) => t.id_hash === e);
+        t >= 0 && (n.splice(t, 1), (r = !0));
+    }
+    if (!r) return !1;
+    u = n;
+}
+class p extends (r = i.ZP.Store) {
     getSessions() {
-        return l;
+        return u;
     }
 }
-a(c, "displayName", "AuthSessionsStore");
-let d = new c(s.Z, {
-    LOGOUT: o,
-    LOGIN_SUCCESS: o,
-    FETCH_AUTH_SESSIONS_SUCCESS: function (e) {
-        let { sessions: t } = e;
-        l = t.map((e) => {
-            var t, n;
-            return (
-                (t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (t) {
-                                a(e, t, n[t]);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (n = n = { approx_last_used_time: new Date(e.approx_last_used_time) }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t
-            );
-        });
-    },
-    LOGOUT_AUTH_SESSIONS_SUCCESS: function (e) {
-        let { sessionIdHashes: t } = e,
-            n = [...l],
-            i = !1;
-        for (let e of t) {
-            let t = n.findIndex((t) => t.id_hash === e);
-            t >= 0 && (n.splice(t, 1), (i = !0));
-        }
-        if (!i) return !1;
-        l = n;
-    },
+o(p, "displayName", "AuthSessionsStore");
+let h = new p(a.Z, {
+    LOGOUT: d,
+    LOGIN_SUCCESS: d,
+    FETCH_AUTH_SESSIONS_SUCCESS: f,
+    LOGOUT_AUTH_SESSIONS_SUCCESS: _,
 });

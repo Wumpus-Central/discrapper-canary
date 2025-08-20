@@ -1,15 +1,15 @@
 n.d(t, {
     $d: () => T,
     AA: () => S,
-    Db: () => L,
+    Db: () => x,
     Dx: () => I,
     R: () => w,
     TB: () => A,
     XE: () => R,
-    hs: () => N,
+    hs: () => C,
     w: () => v,
     xR: () => P,
-    xU: () => C,
+    xU: () => N,
     xz: () => D,
 }),
     n(388685),
@@ -125,7 +125,7 @@ function A(e) {
         m.fy.INFREQUENT_USER_ACTION,
     );
 }
-function N(e) {
+function C(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {
@@ -134,7 +134,7 @@ function N(e) {
         m.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function C(e, t) {
+async function N(e, t) {
     try {
         let n = await a.tn.get({
             url: h.ANM.SOUNDBOARD_SOUND_GUILD_DATA(e, t),
@@ -174,7 +174,7 @@ function D(e, t) {
         location: t,
     });
 }
-function L(e) {
+function x(e) {
     o.Z.dispatch({
         type: "SOUNDBOARD_MUTE_JOIN_SOUND",
         channelId: e,

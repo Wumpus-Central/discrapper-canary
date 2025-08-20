@@ -17,14 +17,14 @@ var r,
     O = n(313201),
     _ = n(991346),
     y = n(592125),
-    v = n(888369),
-    j = n(430824),
+    j = n(888369),
+    v = n(430824),
     C = n(306680),
-    E = n(944486),
-    x = n(938475),
+    x = n(944486),
+    E = n(938475),
     S = n(483360),
-    P = n(585483),
-    I = n(63063),
+    I = n(585483),
+    P = n(63063),
     N = n(51596),
     w = n(823385),
     Z = n(415795),
@@ -32,8 +32,8 @@ var r,
     A = n(558631),
     R = n(981631),
     D = n(388032),
-    L = n(712198);
-function M(e, t, n) {
+    M = n(712198);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -82,16 +82,16 @@ function U(e, t) {
 }
 let G = () =>
     (0, i.jsxs)("div", {
-        className: L.emptyState,
+        className: M.emptyState,
         children: [
             (0, i.jsx)("div", {
-                className: L.emptyStateNote,
+                className: M.emptyStateNote,
                 children: D.intl.string(D.t.bpbATE),
             }),
             (0, i.jsx)("div", {
-                className: L.emptyStateCTA,
+                className: M.emptyStateCTA,
                 children: (0, i.jsx)(u.eee, {
-                    href: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: D.intl.string(D.t["4iPfEB"]),
                 }),
             }),
@@ -99,19 +99,19 @@ let G = () =>
     });
 class B extends (r = l.Component) {
     render() {
-        let e = j.Z.getGuild(this.props.channel.guild_id);
+        let e = v.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             Z.$W,
             U(k({}, this.props), {
                 children: (0, i.jsx)("div", {
-                    className: L.miscContainer,
+                    className: M.miscContainer,
                     children: null != e ? e.name : null,
                 }),
             }),
         );
     }
 }
-M(B, "defaultProps", { unread: !1 });
+L(B, "defaultProps", { unread: !1 });
 let V = s.ZP.connectStores([C.ZP, y.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -121,15 +121,15 @@ let V = s.ZP.connectStores([C.ZP, y.Z], (e) => {
             category: y.Z.getChannel(t.parent_id),
         };
     })(B),
-    F = s.ZP.connectStores([x.ZP], (e) => {
+    F = s.ZP.connectStores([E.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(B),
-    H = s.ZP.connectStores([v.default], (e) => {
+    H = s.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(Z.ic),
     z = s.ZP.connectStores([C.ZP], (e) => {
         let { channel: t } = e;
@@ -149,7 +149,7 @@ function K(e, t, n) {
                 (0, i.jsx)(
                     "span",
                     U(k({}, e), {
-                        className: L.autocompleteQuerySymbol,
+                        className: M.autocompleteQuerySymbol,
                         children: t,
                     }),
                 ),
@@ -191,7 +191,7 @@ class Y extends l.PureComponent {
             r = t.length > 0 && "" !== n;
         return (0, i.jsx)(u.tEY, {
             children: (0, i.jsx)("input", {
-                className: L.input,
+                className: M.input,
                 "aria-label": D.intl.string(D.t.ZvKwYW),
                 ref: this.inputRef,
                 type: "text",
@@ -229,32 +229,32 @@ class Y extends l.PureComponent {
                         rowHeight: 34,
                         paddingBottom: 10,
                         sections: [t.length],
-                        className: L.scroller,
+                        className: M.scroller,
                         renderRow: this.renderRow,
                         renderSection: this.renderSection,
                     });
         };
         return (0, i.jsx)("div", {
-            className: L.resultsArea,
+            className: M.resultsArea,
             children: e(),
         });
     }
     focusNode(e) {
-        P.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        I.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
     }
     renderProtip() {
         return (0, i.jsx)(b.Z, {
-            className: a()(L.protip, { [L.hasContent]: this.state.query.length > 0 }),
+            className: a()(M.protip, { [M.hasContent]: this.state.query.length > 0 }),
             type: b.Z.Types.INLINE,
             children: D.intl.format(D.t.wukqXV, {
                 userSymbolHook: (e, t) => K(t, h.xQ.USER, D.intl.string(D.t.GQRCGh)),
                 textChannelSymbolHook: (e, t) => K(t, h.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => K(t, h.xQ.VOICE_CHANNEL, D.intl.string(D.t["jz+hJi"])),
                 guildSymbolHook: (e, t) => K(t, h.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
-                helpdeskArticle: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -270,7 +270,7 @@ class Y extends l.PureComponent {
             transitionState: this.props.transitionState,
             onClose: this.props.onClose,
             children: (0, i.jsxs)("div", {
-                className: L.quickswitcher,
+                className: M.quickswitcher,
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()],
             }),
@@ -278,28 +278,28 @@ class Y extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            M(this, "scrollerRef", l.createRef()),
-            M(this, "inputRef", l.createRef()),
-            M(this, "_listId", (0, O.hQ)()),
-            M(this, "state", {
+            L(this, "scrollerRef", l.createRef()),
+            L(this, "inputRef", l.createRef()),
+            L(this, "_listId", (0, O.hQ)()),
+            L(this, "state", {
                 query: this.props.query,
                 mouseFocusDisabled: !0,
             }),
-            M(this, "handleInputChange", () => {
+            L(this, "handleInputChange", () => {
                 let { current: e } = this.inputRef;
                 null != e && this.search(e.value);
             }),
-            M(this, "handleMouseMove", () => {
+            L(this, "handleMouseMove", () => {
                 let { mouseFocusDisabled: e } = this.state;
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
-            M(this, "focusResult", (e) => {
+            L(this, "focusResult", (e) => {
                 this.state.mouseFocusDisabled || (0, N.tF)(this.props.results.indexOf(e));
             }),
-            M(this, "selectResult", (e) => {
+            L(this, "selectResult", (e) => {
                 (0, N.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
             }),
-            M(this, "handleContextMenu", (e) => {
+            L(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case h.h8.GUILD:
@@ -336,7 +336,7 @@ class Y extends l.PureComponent {
                     case h.h8.TEXT_CHANNEL:
                     case h.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = j.Z.getGuild(r.getGuildId());
+                            l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case R.d4z.GUILD_TEXT:
@@ -422,14 +422,14 @@ class Y extends l.PureComponent {
                                     e,
                                     U(k({}, n), {
                                         channel: t.record,
-                                        selected: E.Z.getChannelId() === t.record.id,
+                                        selected: x.Z.getChannelId() === t.record.id,
                                         onSelect: N.Cp,
                                     }),
                                 );
                         });
                     case h.h8.USER:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) =>
@@ -443,7 +443,7 @@ class Y extends l.PureComponent {
                         });
                 }
             }),
-            M(this, "handleKeyDown", (e) => {
+            L(this, "handleKeyDown", (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: r } = this.props;
                 !1 === t && this.setState({ mouseFocusDisabled: !0 });
@@ -483,7 +483,7 @@ class Y extends l.PureComponent {
                 }
                 e.preventDefault(), (0, N.tF)(l);
             }),
-            M(this, "renderRow", (e) => {
+            L(this, "renderRow", (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: r } = this.props,
@@ -614,7 +614,7 @@ class Y extends l.PureComponent {
                                 children:
                                     n.record.type === g.Ky.SETTINGS &&
                                     (0, i.jsx)("div", {
-                                        className: L.miscContainer,
+                                        className: M.miscContainer,
                                         children: D.intl.string(D.t["3D5yo6"]),
                                     }),
                             },

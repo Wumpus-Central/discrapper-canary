@@ -1,67 +1,67 @@
-n.d(t, { Z: () => p }), n(388685);
-var l = n(951288),
-    a = n(647438),
-    i = n(120356),
-    r = n.n(i),
-    s = n(392711),
-    o = n(780384),
-    u = n(481060),
-    c = n(410030),
-    d = n(44315),
-    f = n(293501),
-    m = n(943351),
-    h = n(231338),
-    g = n(782445);
-let p = a.memo(function (e) {
-    let { file: t, audio: n, className: i, waveformSettings: p } = e,
-        [y, b] = a.useState({
+t.d(n, { Z: () => p }), t(388685);
+var a = t(951288),
+    l = t(647438),
+    i = t(120356),
+    r = t.n(i),
+    o = t(392711),
+    s = t(780384),
+    u = t(481060),
+    c = t(410030),
+    d = t(44315),
+    f = t(293501),
+    m = t(943351),
+    h = t(231338),
+    g = t(782445);
+let p = l.memo(function (e) {
+    let { file: n, audio: t, className: i, waveformSettings: p } = e,
+        [y, b] = l.useState({
             width: 0,
             height: 0,
         }),
-        v = a.useRef(null),
-        x = a.useMemo(() => {
+        v = l.useRef(null),
+        x = l.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.duration) ? e : 1;
+            let n = null != (e = null == t ? void 0 : t.duration) ? e : 1;
             return (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        l = Object.keys(n);
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        a = Object.keys(t);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (l = l.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (a = a.concat(
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             }),
                         )),
-                        l.forEach(function (t) {
-                            var l;
-                            (l = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: l,
+                        a.forEach(function (n) {
+                            var a;
+                            (a = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
+                                          value: a,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = l);
+                                    : (e[n] = a);
                         });
                 }
                 return e;
             })(
                 {
                     fineTuning: -1,
-                    fineTuningResolution: t / m.nl.fineTuningScale,
-                    duration: t,
+                    fineTuningResolution: n / m.nl.fineTuningScale,
+                    duration: n,
                 },
                 null != p ? p : {},
             );
-        }, [n, p]),
-        j = (0, f.b1)(t),
-        w = (0, f.NN)(j, v.current, x),
-        N = (0, c.ZP)(),
-        C = (0, d.Sl)((0, o.wj)(N) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
-        S = null == j || null == w,
-        O = (0 === y.width || 0 === y.height || S) && null != t,
-        E = a.useCallback(() => {
+        }, [t, p]),
+        j = (0, f.b1)(n),
+        _ = (0, f.NN)(j, v.current, x),
+        w = (0, c.ZP)(),
+        N = (0, d.Sl)((0, s.wj)(w) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
+        C = null == j || null == _,
+        S = (0 === y.width || 0 === y.height || C) && null != n,
+        O = l.useCallback(() => {
             null != v.current &&
                 b({
                     width: v.current.offsetWidth,
@@ -69,9 +69,9 @@ let p = a.memo(function (e) {
                 });
         }, []);
     return (
-        a.useEffect(() => {
+        l.useEffect(() => {
             if (null != v.current) {
-                let e = new ResizeObserver((0, s.debounce)(E, 50));
+                let e = new ResizeObserver((0, o.debounce)(O, 50));
                 return (
                     e.observe(v.current),
                     () => {
@@ -79,38 +79,38 @@ let p = a.memo(function (e) {
                     }
                 );
             }
-        }, [E]),
-        a.useEffect(() => {
+        }, [O]),
+        l.useEffect(() => {
             if (null == v.current) return;
             let e = v.current,
-                t = e.getContext("2d");
-            if (null == t) return;
-            let { width: n, height: l } = e;
-            if (0 !== y.width && 0 !== y.height && null != w && w.length > 0) {
-                let e = n / w.length,
-                    a = -(e * (m.nl.waveformBarWidth - 1));
-                t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
-                for (let n = 0; n < w.length; n++) {
-                    let i = w[n] * l,
-                        r = n * e + a,
-                        s = l / 2 - i / 2;
-                    t.fillRect(r, s, e - a, i);
+                n = e.getContext("2d");
+            if (null == n) return;
+            let { width: t, height: a } = e;
+            if (0 !== y.width && 0 !== y.height && null != _ && _.length > 0) {
+                let e = t / _.length,
+                    l = -(e * (m.nl.waveformBarWidth - 1));
+                n.clearRect(0, 0, t, a), (n.fillStyle = N.hex);
+                for (let t = 0; t < _.length; t++) {
+                    let i = _[t] * a,
+                        r = t * e + l,
+                        o = a / 2 - i / 2;
+                    n.fillRect(r, o, e - l, i);
                 }
             }
-        }, [C, y, N, w]),
-        (0, l.jsxs)("div", {
+        }, [N, y, w, _]),
+        (0, a.jsxs)("div", {
             className: r()(g.container, i),
             children: [
-                (0, l.jsx)("canvas", {
+                (0, a.jsx)("canvas", {
                     className: g.waveformCanvas,
                     ref: v,
                     width: 4 * y.width,
                     height: 4 * y.height,
                 }),
-                O &&
-                    (0, l.jsx)("div", {
+                S &&
+                    (0, a.jsx)("div", {
                         className: g.loading,
-                        children: (0, l.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE }),
+                        children: (0, a.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE }),
                     }),
             ],
         })

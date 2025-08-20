@@ -28,8 +28,8 @@ function v(e) {
         iconClassName: T,
         textSize: S = "xs",
         animateEmoji: A = !0,
-        hasQuest: N = !1,
-        hideEmoji: C = !1,
+        hasQuest: C = !1,
+        hideEmoji: N = !1,
         hideTooltip: R = !1,
     } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
@@ -38,7 +38,7 @@ function v(e) {
         D = (0, l.e7)([d.Z], () =>
             w ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null,
         ),
-        L = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -52,9 +52,9 @@ function v(e) {
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let x = (null == t ? void 0 : t.bot) === !0,
-        M = (null == L ? void 0 : L.state) != null && "xs" === S,
-        k = () => {
+    let L = (null == t ? void 0 : t.bot) === !0,
+        j = (null == x ? void 0 : x.state) != null && "xs" === S,
+        M = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
                     stream: P,
@@ -62,8 +62,8 @@ function v(e) {
                     textVariant: "text-".concat(S, "/medium"),
                     textClassName: I,
                     iconClassName: T,
-                    hideText: M,
-                    hideIcon: x,
+                    hideText: j,
+                    hideIcon: L,
                     hideTooltip: R,
                 });
             let e =
@@ -79,8 +79,8 @@ function v(e) {
                       textVariant: "text-".concat(S, "/medium"),
                       textClassName: I,
                       iconClassName: T,
-                      hideText: M,
-                      hideIcon: x,
+                      hideText: j,
+                      hideIcon: L,
                       hideTooltip: R,
                   })
                 : null != v
@@ -89,41 +89,41 @@ function v(e) {
                         textVariant: "text-".concat(S, "/medium"),
                         textClassName: I,
                         iconClassName: T,
-                        hideText: M,
+                        hideText: j,
                         hideTooltip: R,
                     })
                   : null;
         },
-        j = o()(O.container, {
+        k = o()(O.container, {
             [O.textXs]: "xs" === S,
             [O.textSm]: "sm" === S,
         }),
         U = () =>
-            null == L
+            null == x
                 ? null
                 : (0, r.jsx)(m.Z, {
-                      customStatusActivity: L,
+                      customStatusActivity: x,
                       textSize: S,
                       animateEmoji: A,
-                      hideEmoji: C,
+                      hideEmoji: N,
                       hideTooltip: R,
                       textClassName: I,
                       iconClassName: T,
-                      tooltipClassName: j,
+                      tooltipClassName: k,
                       voiceChannel: v,
                       hangStatus: D,
                   });
     return (0, r.jsxs)("div", {
-        className: j,
+        className: k,
         children: [
-            k(),
+            M(),
             (0, r.jsx)(s.xv, {
                 variant: "text-".concat(S, "/normal"),
                 className: o()(O.truncated, O.dot, I),
                 children: b.l,
             }),
             U(),
-            N && (0, r.jsx)(p.Z, {}),
+            C && (0, r.jsx)(p.Z, {}),
         ],
     });
 }

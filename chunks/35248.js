@@ -64,9 +64,9 @@ let I = (e) => {
                 browserCheckoutStateLoadId: T,
                 browserCheckoutStateSkuId: S,
                 browserCheckoutStatePlanId: A,
-                contextMetadata: N,
+                contextMetadata: C,
             } = (0, p.JL)(),
-            { isGift: C } = (0, _.wD)(),
+            { isGift: N } = (0, _.wD)(),
             [R, P] = i.useState(!1);
         switch (n) {
             case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
@@ -81,16 +81,16 @@ let I = (e) => {
                     var e;
                     R ||
                         (P(!0),
-                        (0, l.r5)(N.loadId),
-                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, o, t));
+                        (0, l.r5)(C.loadId),
+                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, N, C.loadId, o, t));
                 }, O);
                 return () => clearTimeout(e);
-            }, [u, C, N, o, P, R, t]),
+            }, [u, N, C, o, P, R, t]),
             i.useEffect(() => {
                 null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)),
                     null !== A && d(A),
-                    T === N.loadId && I === m.Y.DONE && a();
-            }, [f, d, I, T, S, A, N, a]),
+                    T === C.loadId && I === m.Y.DONE && a();
+            }, [f, d, I, T, S, A, C, a]),
             (0, r.jsxs)("div", {
                 className: y.body,
                 children: [

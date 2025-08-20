@@ -31,8 +31,8 @@ function x() {
             [l, _],
         ),
         N = (0, d.mY)(),
-        I = (0, o.Dt)(),
-        E = (0, o.Dt)();
+        E = (0, o.Dt)(),
+        I = (0, o.Dt)();
     return (0, r.jsxs)(h.Z, {
         title: f.intl.string(f.t["6antoq"]),
         description: f.intl.string(f.t.urVijY),
@@ -46,7 +46,7 @@ function x() {
             }),
             (0, r.jsxs)(s.hjN, {
                 title: f.intl.string(f.t.m1KuWV),
-                titleId: I,
+                titleId: E,
                 disabled: !y || N,
                 children: [
                     (0, r.jsx)(s.R94, {
@@ -57,7 +57,7 @@ function x() {
                     }),
                     (0, r.jsx)(s.LZC, { size: 8 }),
                     (0, r.jsx)(s.q4e, {
-                        "aria-labelledby": I,
+                        "aria-labelledby": E,
                         options: _,
                         className: b.formInput,
                         placeholder: f.intl.string(f.t.WZG1BQ),
@@ -72,7 +72,7 @@ function x() {
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsxs)(s.hjN, {
                 title: f.intl.string(f.t["/JD9oa"]),
-                titleId: E,
+                titleId: I,
                 disabled: !y || N,
                 children: [
                     (0, r.jsx)(s.R94, {
@@ -82,7 +82,7 @@ function x() {
                         children: f.intl.string(f.t.Cg5eBg),
                     }),
                     (0, r.jsx)(s.q4e, {
-                        "aria-labelledby": E,
+                        "aria-labelledby": I,
                         options: O,
                         className: b.formInput,
                         value: x,

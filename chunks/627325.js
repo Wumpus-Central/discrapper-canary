@@ -1,41 +1,42 @@
-n.d(t, { w: () => j });
+n.d(t, { w: () => I });
 var r = n(951288),
     i = n(647438),
-    l = n(658722),
-    a = n.n(l),
-    o = n(468194),
-    s = n(442837),
+    a = n(658722),
+    o = n.n(a),
+    s = n(468194),
+    l = n(442837),
     c = n(692547),
     u = n(481060),
     d = n(218867),
-    p = n(594174),
-    f = n(111361),
-    m = n(778033),
-    g = n(709706),
-    v = n(358820),
-    _ = n(990525),
-    b = n(388032),
-    h = n(335189);
-let y = [51],
-    O = [b.t.OpqAoq];
-function j(e) {
-    let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: l = !1, query: a } = e,
-        o = x(),
-        j = (0, s.e7)([p.default], () => (0, f.I5)(p.default.getCurrentUser())),
-        P = I(a, j),
-        C = Math.ceil(P.length / t),
+    f = n(594174),
+    _ = n(111361),
+    p = n(778033),
+    h = n(709706),
+    m = n(358820),
+    g = n(990525),
+    E = n(388032),
+    b = n(335189);
+let y = 130,
+    O = [51],
+    v = [E.t.OpqAoq];
+function I(e) {
+    let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: o } = e,
+        s = S(),
+        I = (0, l.e7)([f.default], () => (0, _.I5)(f.default.getCurrentUser())),
+        A = C(o, I),
+        N = Math.ceil(A.length / t),
         {
-            isNativeModuleLoaded: E,
-            isNativeModuleLoading: w,
-            catalogLastFetchTime: T,
-        } = (0, s.cj)([g.Z], () => ({
-            isNativeModuleLoaded: g.Z.isNativeModuleLoaded(),
-            isNativeModuleLoading: g.Z.isNativeModuleLoading(),
-            catalogLastFetchTime: g.Z.getCatalogLastFetchTime(),
+            isNativeModuleLoaded: R,
+            isNativeModuleLoading: P,
+            catalogLastFetchTime: w,
+        } = (0, l.cj)([h.Z], () => ({
+            isNativeModuleLoaded: h.Z.isNativeModuleLoaded(),
+            isNativeModuleLoading: h.Z.isNativeModuleLoading(),
+            catalogLastFetchTime: h.Z.getCatalogLastFetchTime(),
         }));
-    return a && 0 === P.length
+    return o && 0 === A.length
         ? (0, r.jsxs)("div", {
-              className: h.iconMessage,
+              className: b.iconMessage,
               children: [
                   (0, r.jsx)(u._Ve, {
                       width: 40,
@@ -46,13 +47,13 @@ function j(e) {
                   (0, r.jsx)(u.X6q, {
                       variant: "heading-sm/medium",
                       color: "header-muted",
-                      children: b.intl.string(b.t.ZzukHh),
+                      children: E.intl.string(E.t.ZzukHh),
                   }),
               ],
           })
-        : o
+        : s
           ? (0, r.jsxs)("div", {
-                className: h.iconMessage,
+                className: b.iconMessage,
                 children: [
                     (0, r.jsx)(u.aNP, {
                         width: 40,
@@ -63,18 +64,18 @@ function j(e) {
                     (0, r.jsx)(u.X6q, {
                         variant: "heading-md/normal",
                         color: "header-muted",
-                        children: b.intl.string(b.t.DpZNJy),
+                        children: E.intl.string(E.t.DpZNJy),
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "header-muted",
-                        children: b.intl.format(b.t["5afO9f"], { onClick: E ? v.wV : v.r5 }),
+                        children: E.intl.format(E.t["5afO9f"], { onClick: R ? m.wV : m.r5 }),
                     }),
                 ],
             })
-          : w || null == T
+          : P || null == w
             ? (0, r.jsx)("div", {
-                  className: h.loading,
+                  className: b.loading,
                   children: (0, r.jsx)(u.$jN, {
                       type: u.$jN.Type.CHASING_DOTS,
                       animated: !0,
@@ -82,22 +83,22 @@ function j(e) {
               })
             : (0, r.jsx)(d.Z, {
                   fade: !0,
-                  className: h.container,
+                  className: b.container,
                   renderRow: (e) => {
                       let n = e * t,
-                          i = P.slice(n, n + t);
+                          i = A.slice(n, n + t);
                       return (0, r.jsx)(
-                          S,
+                          T,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
-                                      _.J,
+                                      g.J,
                                       {
                                           voiceFilter: n,
-                                          hasNitro: j,
+                                          hasNitro: I,
                                           analyticsContext: {
-                                              reason: m.W.USER_SELECTION,
-                                              gridRows: C,
+                                              reason: p.W.USER_SELECTION,
+                                              gridRows: N,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: i,
@@ -111,54 +112,56 @@ function j(e) {
                       );
                   },
                   renderSectionHeader:
-                      !1 === l
+                      !1 === a
                           ? void 0
                           : (e) =>
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "header-muted",
-                                    className: h.header,
-                                    children: b.intl.string(O[e]),
+                                    className: b.header,
+                                    children: E.intl.string(v[e]),
                                 }),
-                  sectionHeaderHeight: !1 === l ? void 0 : (e) => y[e],
-                  rowCount: C,
-                  rowHeight: 130,
+                  sectionHeaderHeight: !1 === a ? void 0 : (e) => O[e],
+                  rowCount: N,
+                  rowHeight: y,
                   onScroll: n,
                   ref: i,
-                  sectionFooterHeight: 40 * !j,
+                  sectionFooterHeight: 40 * !I,
               });
 }
-function S(e) {
+function T(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)("div", {
         ref: n,
-        className: h.row,
+        className: b.row,
         children: (0, r.jsx)(u.JcV, {
             containerRef: n,
             children: t,
         }),
     });
 }
-let x = () =>
-        (0, s.e7)([g.Z], () => {
+let S = () =>
+        (0, l.e7)([h.Z], () => {
             var e;
             return (
-                !Object.keys(null != (e = g.Z.getVoiceFilterModels()) ? e : {}).length &&
-                (g.Z.getCatalogFetchFailed() || g.Z.hasNativeModuleFailed())
+                !Object.keys(null != (e = h.Z.getVoiceFilterModels()) ? e : {}).length &&
+                (h.Z.getCatalogFetchFailed() || h.Z.hasNativeModuleFailed())
             );
         }),
-    I = (e, t) =>
-        (0, s.Wu)([g.Z], () => {
-            let n = g.Z.getVoiceFilters(),
-                r = g.Z.getSortedVoiceFilters();
-            var i = t ? Object.values(n) : r;
-            let l = (0, o._I)(e.toLowerCase());
-            return "" === l
-                ? i
-                : i.filter((e) => {
-                      let { name: t } = e,
-                          n = (0, o._I)(b.intl.string(t)).toLowerCase();
-                      return a()(l, n);
-                  });
+    A = (e, t) => {
+        let n = (0, s._I)(t.toLowerCase());
+        return "" === n
+            ? e
+            : e.filter((e) => {
+                  let { name: t } = e,
+                      r = (0, s._I)(E.intl.string(t)).toLowerCase();
+                  return o()(n, r);
+              });
+    },
+    C = (e, t) =>
+        (0, l.Wu)([h.Z], () => {
+            let n = h.Z.getVoiceFilters(),
+                r = h.Z.getSortedVoiceFilters();
+            return A(t ? Object.values(n) : r, e);
         }, [e, t]);

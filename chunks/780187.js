@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     header: "header_ad198f",
     emailHeaderImg: "emailHeaderImg_ad198f",
     wumpusExclamationImg: "wumpusExclamationImg_ad198f",

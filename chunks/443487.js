@@ -102,8 +102,8 @@ function O(e) {
         }, [n, T]),
         A = (0, c.X7)(n, g, null != (t = null == T ? void 0 : T.colorStrings) ? t : null);
     if (null == E) return null;
-    let N = null == T ? void 0 : T.colorString,
-        C = _.ZP.getName(n, i, E);
+    let C = null == T ? void 0 : T.colorString,
+        N = _.ZP.getName(n, i, E);
     return (0, r.jsxs)("div", {
         className: m.userSection,
         children: [
@@ -113,10 +113,10 @@ function O(e) {
                 "aria-hidden": !0,
             }),
             (0, r.jsx)(s.PUh, {
-                colorString: null != N ? N : null,
+                colorString: null != C ? C : null,
                 roleName: S,
                 colorStrings: A,
-                name: C,
+                name: N,
                 className: m.userName,
                 "aria-hidden": !0,
             }),

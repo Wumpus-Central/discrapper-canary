@@ -4,8 +4,8 @@ n.d(t, {
     Jc: () => A,
     LK: () => I,
     ON: () => y,
-    bP: () => C,
-    le: () => N,
+    bP: () => N,
+    le: () => C,
     oK: () => w,
     sD: () => v,
     x3: () => E,
@@ -97,7 +97,7 @@ function y(e, t) {
         l = t.application,
         c = Number(null == (n = e.gameMetadata) ? void 0 : n[u.wF.ROBLOX_TIME_STARTED]);
     if (((isNaN(c) || 0 === c) && (c = null != (r = e.start) ? r : Date.now()), null == s))
-        N(e) && ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX])),
+        C(e) && ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX])),
             (a.gameMetadata = void 0),
             (a.sku = void 0),
             (a.start = c),
@@ -170,10 +170,10 @@ function A(e) {
         n = h({}, e);
     return (n.application_id = u.eB), (n.name = f.EOG[f.GQo.ROBLOX]), isNaN(t) || (n.timestamps = { start: t }), n;
 }
-function N(e) {
+function C(e) {
     return e.distributor === f.GQo.ROBLOX && e.id !== u.eB;
 }
-function C(e) {
+function N(e) {
     return e.thirdPartySkus.some((e) => e.distributor === f.GQo.ROBLOX);
 }
 async function R(e) {

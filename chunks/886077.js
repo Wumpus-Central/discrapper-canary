@@ -1,14 +1,15 @@
-n.d(t, { U: () => f }), n(388685), n(35282);
-var i = n(34415),
-    r = n(607070),
-    s = n(819640),
-    a = n(131951),
-    l = n(19780),
-    o = n(585483),
+n.d(t, { U: () => g }), n(388685), n(35282);
+var r = n(34415),
+    i = n(607070),
+    a = n(819640),
+    o = n(131951),
+    s = n(19780),
+    l = n(585483),
     c = n(5967),
-    d = n(13140),
-    u = n(981631);
-let m = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    u = n(13140),
+    d = n(981631);
+let f = "BODY",
+    _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
     p = new Set([
         "Alt",
         "AltGraph",
@@ -26,7 +27,7 @@ let m = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "Symbol",
         "SymbolLock",
     ]),
-    g = new Set([
+    h = new Set([
         "F1",
         "F2",
         "F3",
@@ -53,7 +54,7 @@ let m = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "ZoomIn",
         "ZoomOut",
     ]),
-    h = new Set([
+    m = new Set([
         "ChannelDown",
         "ChannelUp",
         "MediaFastForward",
@@ -84,36 +85,36 @@ let m = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "VolumeDown",
         "VolumeMute",
     ]),
-    f = {
+    g = {
         binds: ["any-character"],
         keydown(e, t) {
             var n;
-            let f = null == (n = (0, c.uB)(e)) ? void 0 : n.activeElement;
-            if ((0, c.VG)(f) || i.fC.isActive() || p.has(t) || g.has(t) || h.has(t)) return !1;
-            let b = null != f && "BODY" === f.tagName;
+            let g = null == (n = (0, c.uB)(e)) ? void 0 : n.activeElement;
+            if ((0, c.VG)(g) || r.fC.isActive() || p.has(t) || h.has(t) || m.has(t)) return !1;
+            let E = null != g && g.tagName === f;
             return (
                 !(
-                    (r.Z.keyboardModeEnabled && !b && !/^[a-zA-Z0-9]$/.test(t)) ||
-                    o.S.hasSubscribers(u.CkL.MODAL_CLOSE) ||
-                    s.Z.hasLayers()
+                    (i.Z.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
+                    l.S.hasSubscribers(d.CkL.MODAL_CLOSE) ||
+                    a.Z.hasLayers()
                 ) &&
                 ("Tab" === t &&
-                o.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) &&
+                l.S.hasSubscribers(d.CkL.TEXTAREA_FOCUS) &&
                 null != document.querySelector('[data-can-focus="true"]')
-                    ? (e.preventDefault(), o.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
+                    ? (e.preventDefault(), l.S.dispatch(d.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          l.Z.isConnected() &&
-                          a.Z.getMode() === u.pM4.PUSH_TO_TALK &&
-                          !a.Z.isSelfMute() &&
-                          Object.values(a.Z.getShortcuts())
-                              .map(d.d2)
+                          s.Z.isConnected() &&
+                          o.Z.getMode() === d.pM4.PUSH_TO_TALK &&
+                          !o.Z.isSelfMute() &&
+                          Object.values(o.Z.getShortcuts())
+                              .map(u.d2)
                               .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
                       ) &&
                       void (
                           !e.metaKey &&
                           !e.ctrlKey &&
-                          !m.has(t) &&
-                          o.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS)
+                          !_.has(t) &&
+                          l.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)
                       ))
             );
         },

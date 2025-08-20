@@ -1,4 +1,3 @@
-n.d(t, { Z: () => r });
 function r(e) {
     let t = 0;
     return (
@@ -11,3 +10,4 @@ function r(e) {
         t
     );
 }
+n.d(t, { Z: () => r });

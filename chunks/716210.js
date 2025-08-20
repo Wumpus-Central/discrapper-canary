@@ -1,31 +1,31 @@
-n.d(t, { Z: () => m });
-var i = n(951288);
+n.d(t, { Z: () => f });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(481060),
-    a = n(846027),
-    l = n(921801),
-    o = n(131951),
+var i = n(442837),
+    a = n(481060),
+    o = n(846027),
+    s = n(921801),
+    l = n(131951),
     c = n(726985),
-    d = n(388032),
-    u = n(197571);
-function m(e) {
+    u = n(388032),
+    d = n(197571);
+function f(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, r.e7)([o.Z], () => o.Z.getEnableSilenceWarning()),
-        m = (0, i.jsx)(s.j7V, {
+        n = (0, i.e7)([l.Z], () => l.Z.getEnableSilenceWarning()),
+        f = (0, r.jsx)(a.j7V, {
             value: n,
-            onChange: (e) => a.Z.setSilenceWarning(e),
+            onChange: (e) => o.Z.setSilenceWarning(e),
             hideBorder: t,
-            children: d.intl.string(d.t.jtiiCw),
+            children: u.intl.string(u.t.jtiiCw),
         });
-    return (0, i.jsx)(l.F, {
+    return (0, r.jsx)(s.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
         children: t
-            ? m
-            : (0, i.jsx)(s.hjN, {
-                  className: u.marginBottom20,
-                  title: d.intl.string(d.t["aP1N/v"]),
-                  children: m,
+            ? f
+            : (0, r.jsx)(a.hjN, {
+                  className: d.marginBottom20,
+                  title: u.intl.string(u.t["aP1N/v"]),
+                  children: f,
               }),
     });
 }

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a }), n(997841);
-var s = n(978003);
-function a(e, t) {
-    return null == (t = null != t ? t : (0, s.Z)(e) ? e.messageSnapshots[0] : void 0)
+n.d(t, { Z: () => i }), n(997841);
+var r = n(978003);
+function i(e, t) {
+    return null == (t = null != t ? t : (0, r.Z)(e) ? e.messageSnapshots[0] : void 0)
         ? e
         : e.merge({
               content: t.message.content,

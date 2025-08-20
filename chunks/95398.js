@@ -146,7 +146,7 @@ let v = (e) => {
               });
     },
     A = i.createContext(!1);
-class N extends i.PureComponent {
+class C extends i.PureComponent {
     renderWithTooltip(e) {
         return (0, r.jsx)(l.ua7, {
             position: "left",
@@ -409,16 +409,16 @@ class N extends i.PureComponent {
             });
     }
 }
-let C = (e) => {
+let N = (e) => {
     let t = (0, f.m8)() && null != e.reason && _.eq.has(e.reason),
         n = (0, d.Jm)();
     return (0, r.jsx)(
-        N,
+        C,
         y(E({}, e), {
             shouldAgeVerify: t,
             isVerifiedTeen: n,
         }),
     );
 };
-(C.Types = O), (C.Reasons = _.wk);
-let R = C;
+(N.Types = O), (N.Reasons = _.wk);
+let R = N;

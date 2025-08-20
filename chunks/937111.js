@@ -128,11 +128,11 @@ function A(e) {
     let { guildId: t } = e;
     m(t);
 }
-function N(e) {
+function C(e) {
     let { guildId: t } = e;
     u = t;
 }
-function C() {
+function N() {
     u = null;
 }
 class R extends (r = i.ZP.Store) {
@@ -169,7 +169,7 @@ let P = new R(a.Z, {
     MEMBER_VERIFICATION_FORM_UPDATE: S,
     INVITE_ACCEPT_SUCCESS: v,
     ACK_APPROVED_GUILD_JOIN_REQUEST: A,
-    USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: N,
-    USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: C,
+    USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: C,
+    USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: N,
     USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: T,
 });

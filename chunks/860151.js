@@ -1,52 +1,52 @@
 n.d(t, { Z: () => d });
-var l = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    i = n(481060),
-    o = n(192023),
-    a = n(373370),
-    u = n(644646),
-    c = n(73231);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(381176),
+    l = n(373370),
+    c = n(644646),
+    u = n(73231);
 let d = function (e) {
     let {
             className: t,
             autoplay: n,
-            quest: r,
+            quest: i,
             questContent: d,
-            taskDetails: E,
-            location: m,
+            taskDetails: f,
+            location: _,
             sourceQuestContent: p,
         } = e,
-        f = (0, a.DD)({
-            quest: r,
-            taskDetails: E,
-            location: m,
+        h = (0, l.DD)({
+            quest: i,
+            taskDetails: f,
+            location: _,
             questContent: d,
             sourceQuestContent: p,
         }),
-        j = (0, o.h)({
-            location: m,
-            questConfig: r.config,
+        m = (0, s.h)({
+            location: _,
+            questConfig: i.config,
         });
-    return (0, l.jsxs)("div", {
-        className: s()(c.wrapper, t),
-        style: j ? void 0 : { color: r.config.colors.primary },
+    return (0, r.jsxs)("div", {
+        className: a()(u.wrapper, t),
+        style: m ? void 0 : { color: i.config.colors.primary },
         children: [
-            (0, l.jsx)(u.Z, {
+            (0, r.jsx)(c.Z, {
                 autoplay: n,
-                className: c.rewardTile,
-                quest: r,
+                className: u.rewardTile,
+                quest: i,
                 questContent: d,
-                location: m,
+                location: _,
                 sourceQuestContent: p,
             }),
-            (0, l.jsx)("div", {
-                className: c.copy,
-                children: (0, l.jsx)(i.Text, {
+            (0, r.jsx)("div", {
+                className: u.copy,
+                children: (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: f,
+                    children: h,
                 }),
             }),
         ],

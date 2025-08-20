@@ -109,7 +109,7 @@ void 0 === b && (b = E),
             T = e.style,
             S = e.to,
             A = e.innerRef,
-            N = (0, l.Z)(e, [
+            C = (0, l.Z)(e, [
                 "aria-current",
                 "activeClassName",
                 "activeStyle",
@@ -128,10 +128,10 @@ void 0 === b && (b = E),
             var n = O || e.location,
                 o = f(d(S, n), n),
                 l = o.pathname,
-                C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-                R = C
+                N = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+                R = N
                     ? (0, r.LX)(n.pathname, {
-                          path: C,
+                          path: N,
                           exact: h,
                           sensitive: v,
                           strict: I,
@@ -140,15 +140,15 @@ void 0 === b && (b = E),
                 P = !!(m ? m(R, n) : R),
                 w = P ? y(p, u) : p,
                 D = P ? (0, s.Z)({}, T, {}, _) : T,
-                L = (0, s.Z)(
+                x = (0, s.Z)(
                     {
                         "aria-current": (P && i) || null,
                         className: w,
                         style: D,
                         to: o,
                     },
-                    N,
+                    C,
                 );
-            return E !== b ? (L.ref = t || A) : (L.innerRef = A), a.createElement(g, L);
+            return E !== b ? (x.ref = t || A) : (x.innerRef = A), a.createElement(g, x);
         });
     });

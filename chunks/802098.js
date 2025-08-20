@@ -66,16 +66,16 @@ function A(e) {
     let { id: t } = e;
     h = t;
 }
-function N(e) {
+function C(e) {
     let { changelogDate: t } = e;
     (b = new Date(t)), a.K.set(g, t);
 }
-function C() {
+function N() {
     E = l.l4.getSetting();
 }
 class R extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], C);
+        this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], N);
         let e = a.K.get(g);
         if (null != e)
             try {
@@ -130,5 +130,5 @@ let P = new R(o.Z, {
     CHANGE_LOG_FETCH_SUCCESS: T,
     CHANGE_LOG_FETCH_FAILED: S,
     CHANGE_LOG_SET_OVERRIDE: A,
-    CHANGE_LOG_MARK_SEEN: N,
+    CHANGE_LOG_MARK_SEEN: C,
 });

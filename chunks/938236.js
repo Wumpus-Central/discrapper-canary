@@ -3,7 +3,7 @@ var n = r(392711),
     l = r(879690),
     i = r(296009),
     a = r(570911);
-function o(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -28,7 +28,7 @@ function o(e) {
     }
     return e;
 }
-function c(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,12 +59,12 @@ let s = (0, n.sampleSize)(a.J6, a.J6.length),
                 wishlistStack: [...n.filter((e) => !a.has(e)), ...s],
             }),
             Object.values(i.l)))
-                t().setNext(4, l);
+                t().setNext(6, l);
         },
         setNext: (e, r) => {
             let n = t().getNext(e, r);
             t()._setGameIds(r, n);
-            let l = t().peekNext(5, r);
+            let l = t().peekNext(7, r);
             t()._setPeekedGameIds(r, l);
         },
         getNext: (e, r) => {
@@ -81,28 +81,28 @@ let s = (0, n.sampleSize)(a.J6, a.J6.length),
             if (-1 === i) return;
             let a = [...l];
             a.splice(i, 1);
-            let o = t().getNext(1, r),
-                c = t().peekNext(5, r);
-            t()._setGameIds(r, [...a, ...o]), t()._setPeekedGameIds(r, [...c, ...o]);
+            let c = t().getNext(1, r),
+                o = t().peekNext(7, r);
+            t()._setGameIds(r, [...a, ...c]), t()._setPeekedGameIds(r, [...o, ...c]);
         },
         bumpMultiple: (e, r) => {
             var n;
             let l = (null != (n = t().gameIds[r]) ? n : []).filter((t) => !e.includes(t)),
-                i = t().getNext(4 - l.length, r),
-                a = t().peekNext(5, r);
+                i = t().getNext(6 - l.length, r),
+                a = t().peekNext(7, r);
             t()._setGameIds(r, [...l, ...i]), t()._setPeekedGameIds(r, [...a, ...i]);
         },
         remove: (e, r) => {
             let n = (r === i.l.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
-            t()._setStack(r, n), t()._setPeekedGameIds(r, t().peekNext(5, r));
+            t()._setStack(r, n), t()._setPeekedGameIds(r, t().peekNext(7, r));
         },
         _setGameIds: (t, r) => {
-            e((e) => ({ gameIds: c(o({}, e.gameIds), { [t]: r }) }));
+            e((e) => ({ gameIds: o(c({}, e.gameIds), { [t]: r }) }));
         },
         _setStack: (t, r) => {
             t === i.l.WANT_TO_PLAY_GAMES ? e({ wishlistStack: r }) : e({ stack: r });
         },
         _setPeekedGameIds: (t, r) => {
-            e((e) => ({ peekedGameIds: c(o({}, e.peekedGameIds), { [t]: r }) }));
+            e((e) => ({ peekedGameIds: o(c({}, e.peekedGameIds), { [t]: r }) }));
         },
     }));

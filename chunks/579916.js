@@ -1,51 +1,55 @@
-var n = r(65183).List;
-t.exports = (function () {
-    function t(t) {
-        var e, r;
-        (r = void 0),
-            (e = "_decorators") in this
-                ? Object.defineProperty(this, e, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[e] = r),
-            (this._decorators = t.slice());
-    }
-    var e = t.prototype;
+function r(e, t, n) {
     return (
-        (e.getDecorations = function (t, e) {
-            var r = Array(t.getText().length).fill(null);
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var i = n(65183).List,
+    a = ".";
+function o(e, t, n) {
+    for (var r = t; r < n; r++) if (null != e[r]) return !1;
+    return !0;
+}
+function s(e, t, n, r) {
+    for (var i = t; i < n; i++) e[i] = r;
+}
+e.exports = (function () {
+    function e(e) {
+        r(this, "_decorators", void 0), (this._decorators = e.slice());
+    }
+    var t = e.prototype;
+    return (
+        (t.getDecorations = function (e, t) {
+            var n = Array(e.getText().length).fill(null);
             return (
-                this._decorators.forEach(function (n, i) {
-                    var o = 0;
-                    (0, n.strategy)(
-                        t,
-                        function (t, e) {
-                            (function (t, e, r) {
-                                for (var n = e; n < r; n++) if (null != t[n]) return !1;
-                                return !0;
-                            })(r, t, e) &&
-                                ((function (t, e, r, n) {
-                                    for (var i = e; i < r; i++) t[i] = n;
-                                })(r, t, e, i + "." + o),
-                                o++);
-                        },
+                this._decorators.forEach(function (r, i) {
+                    var l = 0;
+                    (0, r.strategy)(
                         e,
+                        function (e, t) {
+                            o(n, e, t) && (s(n, e, t, i + a + l), l++);
+                        },
+                        t,
                     );
                 }),
-                n(r)
+                i(n)
             );
         }),
-        (e.getComponentForKey = function (t) {
-            var e = parseInt(t.split(".")[0], 10);
-            return this._decorators[e].component;
+        (t.getComponentForKey = function (e) {
+            var t = parseInt(e.split(a)[0], 10);
+            return this._decorators[t].component;
         }),
-        (e.getPropsForKey = function (t) {
-            var e = parseInt(t.split(".")[0], 10);
-            return this._decorators[e].props;
+        (t.getPropsForKey = function (e) {
+            var t = parseInt(e.split(a)[0], 10);
+            return this._decorators[t].props;
         }),
-        t
+        e
     );
 })();

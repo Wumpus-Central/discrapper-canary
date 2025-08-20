@@ -1,8 +1,8 @@
-n.d(t, { T: () => a });
+n.d(t, { T: () => l });
 var r = n(506364),
     i = n(647438),
-    o = n(764075);
-let u = {
+    a = n(764075);
+let o = {
     border: 0,
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -14,33 +14,34 @@ let u = {
     width: "1px",
     whiteSpace: "nowrap",
 };
-function a(e) {
-    let { children: t, elementType: n = "div", isFocusable: a, style: s, ...l } = e,
-        { visuallyHiddenProps: c } = (function (e = {}) {
-            let { style: t, isFocusable: n } = e,
-                [r, a] = (0, i.useState)(!1),
-                { focusWithinProps: s } = (0, o.L)({
-                    isDisabled: !n,
-                    onFocusWithinChange: (e) => a(e),
-                }),
-                l = (0, i.useMemo)(
-                    () =>
-                        r
-                            ? t
-                            : t
-                              ? {
-                                    ...u,
-                                    ...t,
-                                }
-                              : u,
-                    [r],
-                );
-            return {
-                visuallyHiddenProps: {
-                    ...s,
-                    style: l,
-                },
-            };
-        })(e);
+function s(e = {}) {
+    let { style: t, isFocusable: n } = e,
+        [r, l] = (0, i.useState)(!1),
+        { focusWithinProps: c } = (0, a.L)({
+            isDisabled: !n,
+            onFocusWithinChange: (e) => l(e),
+        }),
+        u = (0, i.useMemo)(
+            () =>
+                r
+                    ? t
+                    : t
+                      ? {
+                            ...o,
+                            ...t,
+                        }
+                      : o,
+            [r],
+        );
+    return {
+        visuallyHiddenProps: {
+            ...c,
+            style: u,
+        },
+    };
+}
+function l(e) {
+    let { children: t, elementType: n = "div", isFocusable: a, style: o, ...l } = e,
+        { visuallyHiddenProps: c } = s(e);
     return i.createElement(n, (0, r.d)(l, c), t);
 }

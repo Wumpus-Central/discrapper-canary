@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(981631),
     C = n(388032),
     N = n(561646),
-    I = n(21321);
-function E(e) {
+    E = n(21321);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,7 +77,7 @@ function T(e) {
                 }),
             [a, t],
         ),
-        u = i.useMemo(() => ({ [n.id]: S(E({}, n), { permissions: f.Hn }) }), [n]),
+        u = i.useMemo(() => ({ [n.id]: S(I({}, n), { permissions: f.Hn }) }), [n]),
         m = i.useMemo(
             () =>
                 f.uB({
@@ -128,7 +128,7 @@ function P(e) {
         });
     function o(e) {
         return m.Z.can(e, t)
-            ? !m.Z.can(e, t, null, { [n.id]: S(E({}, n), { permissions: s.Od(n.permissions, e) }) }) &&
+            ? !m.Z.can(e, t, null, { [n.id]: S(I({}, n), { permissions: s.Od(n.permissions, e) }) }) &&
                   C.intl.string(C.t["K+D+GB"])
             : C.intl.string(C.t.nOtPMD);
     }
@@ -167,7 +167,7 @@ function w(e) {
         m = i
             .useMemo(() => h.Z.generateGuildPermissionSpec(t), [t])
             .map((e) =>
-                S(E({}, e), {
+                S(I({}, e), {
                     permissions: e.permissions.filter((e) => {
                         let t = d.trimStart().toLowerCase();
                         return (
@@ -192,10 +192,10 @@ function w(e) {
             style: { scrollPaddingTop: g },
             onScroll: x,
             children: (0, r.jsxs)("div", {
-                className: I.contentWidth,
+                className: E.contentWidth,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !b }),
+                        className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !b }),
                         ref: f,
                         children: [
                             (0, r.jsx)(v.Z, {

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => k }), n(388685);
+n.d(t, { ZP: () => M }), n(388685);
 var r = n(592125),
     i = n(650774),
     a = n(750041),
@@ -111,13 +111,13 @@ class S extends a.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: M,
+            CACHE_LOADED_LAZY_NO_CACHE: j,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: P,
             CHANNEL_UPDATES: R,
-            CONNECTION_OPEN_SUPPLEMENTAL: N,
-            GUILD_DELETE: L,
-            LOGIN_SUCCESS: x,
+            CONNECTION_OPEN_SUPPLEMENTAL: C,
+            GUILD_DELETE: x,
+            LOGIN_SUCCESS: L,
             THREAD_DELETE: D,
             THREAD_UPDATE: w,
         });
@@ -127,35 +127,35 @@ function A() {
     let e = o.Z.getChannelId();
     null != e && S.recordChannel(e);
 }
-function N() {
+function C() {
     S.dropUnreachableChannels(), S.replaceLru((0, _.J)(v, h + g));
 }
-function C(e) {
+function N(e) {
     let t = e.id,
         n = (0, f.v)(e),
         r = o.Z.getChannelId();
     n && t === r && S.recordChannel(t), n || S.deleteChannel(t);
 }
 function R(e) {
-    for (let t of e.channels) C(t);
+    for (let t of e.channels) N(t);
 }
 function P(e) {
     S.deleteChannel(e.channel.id);
 }
 function w(e) {
-    C(e.channel);
+    N(e.channel);
 }
 function D(e) {
     S.deleteChannel(e.channel.id);
 }
-function L(e) {
+function x(e) {
     return !e.guild.unavailable && (S.deleteGuild(e.guild.id), !0);
 }
-function x(e) {
+function L(e) {
     v.clear(), I.clear(), (T = !1);
 }
-function M(e) {
+function j(e) {
     T = !0;
 }
 p(S, "displayName", "SaveableChannelsStore"), p(S, "LATEST_SNAPSHOT_VERSION", 1);
-let k = new S();
+let M = new S();

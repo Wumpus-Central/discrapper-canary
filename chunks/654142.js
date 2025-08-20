@@ -78,10 +78,10 @@ let O = i.memo(function (e) {
             }
             return i;
         })(e, ["folderNode"]);
-    let { id: _, name: y, color: v, children: j } = t,
-        C = j.map((e) => e.id),
-        E = (0, s.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
+    let { id: _, name: y, color: j, children: v } = t,
+        C = v.map((e) => e.id),
+        x = (0, s.Z)((e) => e.guildId),
+        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         S = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -95,9 +95,9 @@ let O = i.memo(function (e) {
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
-        P = (0, h.Z)(t),
+        I = (0, h.Z)(t),
         {
-            mentionCount: I,
+            mentionCount: P,
             isMentionLowImportance: N,
             unread: w,
         } = (0, l.cj)([u.default], () => ({
@@ -118,24 +118,24 @@ let O = i.memo(function (e) {
                             b(m({}, t), {
                                 folderId: _,
                                 folderName: y,
-                                folderColor: v,
-                                unread: w || I > 0,
+                                folderColor: j,
+                                unread: w || P > 0,
                             }),
                         );
                 });
             },
-            [_, y, v, w, I],
+            [_, y, j, w, P],
         );
     return (0, r.jsx)(
         f.Z,
         b(m({}, O), {
             folderNode: t,
-            expanded: x,
-            selected: null != E && C.includes(E),
-            mentionCount: I,
+            expanded: E,
+            selected: null != x && C.includes(x),
+            mentionCount: P,
             isMentionLowImportance: N,
             unread: w,
-            mediaState: P,
+            mediaState: I,
             defaultFolderName: S,
             onExpandCollapse: Z,
             onContextMenu: T,

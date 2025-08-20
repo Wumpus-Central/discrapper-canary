@@ -1,24 +1,24 @@
 n.d(t, {
-    h: () => d,
-    p: () => u,
+    h: () => u,
+    p: () => d,
 }),
     n(388685),
     n(642613);
-var i = n(647438),
-    r = n(913527),
-    s = n.n(r),
-    a = n(442837),
-    l = n(314897),
-    o = n(673096),
+var r = n(647438),
+    i = n(913527),
+    a = n.n(i),
+    o = n(442837),
+    s = n(314897),
+    l = n(673096),
     c = n(388032);
-function d() {
-    let e = (0, a.cj)([o.Z], () => o.Z.getSessions());
-    return i.useMemo(() => {
+function u() {
+    let e = (0, o.cj)([l.Z], () => l.Z.getSessions());
+    return r.useMemo(() => {
         let t = [...e],
             n = null,
-            i = l.default.getAuthSessionIdHash();
-        if (null != i) {
-            let e = t.findIndex((e) => e.id_hash === i);
+            r = s.default.getAuthSessionIdHash();
+        if (null != r) {
+            let e = t.findIndex((e) => e.id_hash === r);
             e >= 0 && (n = t.splice(e, 1)[0]);
         }
         return (
@@ -30,6 +30,6 @@ function d() {
         );
     }, [e]);
 }
-function u(e) {
-    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : s()(e).fromNow();
+function d(e) {
+    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : a()(e).fromNow();
 }

@@ -1,200 +1,195 @@
 n.d(t, {
-    C: () => O,
-    Z: () => v,
+    C: () => v,
+    Z: () => I,
 });
-var i,
-    r = n(951288);
+var r = n(951288);
 n(647438);
-var s = n(120356),
-    a = n.n(s),
-    l = n(755721),
-    o = n(481060),
-    c = n(410030),
-    d = n(100527),
+var i = n(120356),
+    a = n.n(i),
+    o = n(755721),
+    s = n(481060),
+    l = n(410030),
+    c = n(100527),
     u = n(182567),
-    m = n(63063),
-    p = n(367074),
-    g = n(784238),
-    h = n(474936),
-    f = n(981631),
-    b = n(388032),
-    x = n(402197),
-    _ = n(917062),
-    j = n(579273),
-    E = n(38874),
-    C = n(267201),
-    O =
-        (((i = {}).SUBSCRIBER_HOME = "SUBSCRIBER_HOME"),
-        (i.NITRO_SETTINGS = "SETTINGS"),
-        (i.APPLICATION_NITRO_HOME = "APPLICATION_NITRO_HOME"),
-        i);
-let v = function (e) {
+    d = n(63063),
+    f = n(367074),
+    _ = n(784238),
+    p = n(474936),
+    h = n(981631),
+    m = n(388032),
+    g = n(402197),
+    E = n(917062),
+    b = n(579273),
+    y = n(38874),
+    O = n(267201),
+    v = (function (e) {
+        return (
+            (e.SUBSCRIBER_HOME = "SUBSCRIBER_HOME"),
+            (e.NITRO_SETTINGS = "SETTINGS"),
+            (e.APPLICATION_NITRO_HOME = "APPLICATION_NITRO_HOME"),
+            e
+        );
+    })({});
+let I = function (e) {
     let { variant: t } = e,
-        n = (0, p.Vi)(),
-        i = (0, c.ZP)(),
-        s = (0, o.wjy)(i) ? l.Tt.BRAND_INVERTED : l.Tt.BRAND;
-    return n
-        ? "APPLICATION_NITRO_HOME" === t
-            ? (0, r.jsx)(
-                  () =>
-                      (0, r.jsx)(u.O, {
-                          newLocations: [d.Z.PREMIUM_MARKETING_PAGE_BANNER],
-                          children: (0, r.jsxs)("div", {
-                              className: x.applicationHomeBanner,
-                              children: [
-                                  (0, r.jsx)("div", {
-                                      className: x.bannerBoxOutlinePosition,
-                                      children: (0, r.jsx)("div", { className: x.backgroundGradient }),
-                                  }),
-                                  (0, r.jsx)("div", {
-                                      className: a()(x.premiumTrialBadge, x.badgeGradient),
-                                      children: (0, r.jsx)(o.Text, {
-                                          variant: "eyebrow",
-                                          color: "always-white",
-                                          children: b.intl.string(b.t.OS9KPj),
-                                      }),
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: x.bannerContent,
-                                      children: [
-                                          (0, r.jsx)(o.X6q, {
-                                              className: x.bannerHeader,
-                                              variant: "heading-xxl/extrabold",
-                                              color: "header-primary",
-                                              children: b.intl.string(b.t["+5UxMD"]),
-                                          }),
-                                          (0, r.jsx)(o.Text, {
-                                              className: x.bannerText,
-                                              variant: "text-md/medium",
-                                              color: "text-secondary",
-                                              children: b.intl.format(b.t["lVOH/v"], {
-                                                  helpCenterLink: m.Z.getArticleURL(f.BhN.SUMMER_BOGO_2025),
-                                              }),
-                                          }),
-                                          (0, r.jsx)(g.Z, {
-                                              textOptions: {
-                                                  textOverride: b.intl.string(b.t.J61px8),
-                                                  textClassName: x.subscribeButtonText,
-                                              },
-                                              subscriptionTier: h.Si.TIER_2,
-                                              showIcon: !1,
-                                              className: x.subscribeButton,
-                                              color: s,
-                                          }),
-                                      ],
-                                  }),
-                                  (0, r.jsx)("div", {
-                                      className: x.imageContainer,
-                                      children: (0, r.jsx)("img", {
-                                          alt: "",
-                                          src: j.Z,
-                                          className: x.applicationHomeImage,
-                                      }),
-                                  }),
-                              ],
-                          }),
-                      }),
-                  {},
-              )
-            : "SETTINGS" === t
-              ? (0, r.jsx)(
-                    () =>
-                        (0, r.jsx)(u.O, {
-                            newLocations: [d.Z.PREMIUM_SETTINGS],
-                            children: (0, r.jsxs)("div", {
-                                className: x.settingsBanner,
-                                children: [
-                                    (0, r.jsx)("div", {
-                                        className: x.settingsBannerLeftImageContainer,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: E.Z,
-                                            className: x.settingsImage,
-                                        }),
-                                    }),
-                                    (0, r.jsxs)("div", {
-                                        className: x.settingsBannerContent,
-                                        children: [
-                                            (0, r.jsx)(o.X6q, {
-                                                className: x.bannerHeader,
-                                                variant: "heading-lg/extrabold",
-                                                color: "header-primary",
-                                                children: b.intl.string(b.t["+5UxMD"]),
-                                            }),
-                                            (0, r.jsx)(o.Text, {
-                                                className: x.bannerText,
-                                                variant: "text-sm/medium",
-                                                color: "text-secondary",
-                                                children: b.intl.format(b.t["lVOH/v"], {
-                                                    helpCenterLink: m.Z.getArticleURL(f.BhN.SUMMER_BOGO_2025),
-                                                }),
-                                            }),
-                                            (0, r.jsx)(g.Z, {
-                                                textOptions: {
-                                                    textOverride: b.intl.string(b.t.J61px8),
-                                                    textClassName: x.subscribeButtonText,
-                                                },
-                                                subscriptionTier: h.Si.TIER_2,
-                                                showIcon: !1,
-                                                className: x.subscribeButton,
-                                                color: s,
-                                            }),
-                                        ],
-                                    }),
-                                    (0, r.jsx)("div", {
-                                        className: x.settingsBannerRightImageContainer,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: C.Z,
-                                            className: x.settingsImage,
-                                        }),
-                                    }),
-                                ],
+        n = (0, f.Vi)(),
+        i = (0, l.ZP)(),
+        v = (0, s.wjy)(i) ? o.Tt.BRAND_INVERTED : o.Tt.BRAND;
+    if (!n) return null;
+    let I = () =>
+            (0, r.jsxs)("div", {
+                className: g.subBanner,
+                children: [
+                    (0, r.jsx)("div", {
+                        className: g.subHomeBannerImageContainer,
+                        children: (0, r.jsx)("img", {
+                            alt: "",
+                            src: E.Z,
+                            className: g.settingsImage,
+                        }),
+                    }),
+                    (0, r.jsxs)("div", {
+                        className: g.subBannerContent,
+                        children: [
+                            (0, r.jsx)(s.X6q, {
+                                className: g.bannerHeader,
+                                variant: "heading-md/extrabold",
+                                color: "header-primary",
+                                children: m.intl.string(m.t["+5UxMD"]),
+                            }),
+                            (0, r.jsx)(s.Text, {
+                                className: g.bannerText,
+                                variant: "text-sm/medium",
+                                color: "text-secondary",
+                                children: m.intl.format(m.t["lVOH/v"], {
+                                    helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
+                                }),
+                            }),
+                        ],
+                    }),
+                    (0, r.jsx)(_.Z, {
+                        subscriptionTier: p.Si.TIER_2,
+                        showIcon: !0,
+                        shinyButtonClassName: g.buttonGradient,
+                        hasActivePromotion: !0,
+                    }),
+                ],
+            }),
+        T = () =>
+            (0, r.jsx)(u.O, {
+                newLocations: [c.Z.PREMIUM_SETTINGS],
+                children: (0, r.jsxs)("div", {
+                    className: g.settingsBanner,
+                    children: [
+                        (0, r.jsx)("div", {
+                            className: g.settingsBannerLeftImageContainer,
+                            children: (0, r.jsx)("img", {
+                                alt: "",
+                                src: y.Z,
+                                className: g.settingsImage,
                             }),
                         }),
-                    {},
-                )
-              : (0, r.jsx)(
-                    () =>
                         (0, r.jsxs)("div", {
-                            className: x.subBanner,
+                            className: g.settingsBannerContent,
                             children: [
-                                (0, r.jsx)("div", {
-                                    className: x.subHomeBannerImageContainer,
-                                    children: (0, r.jsx)("img", {
-                                        alt: "",
-                                        src: _.Z,
-                                        className: x.settingsImage,
+                                (0, r.jsx)(s.X6q, {
+                                    className: g.bannerHeader,
+                                    variant: "heading-lg/extrabold",
+                                    color: "header-primary",
+                                    children: m.intl.string(m.t["+5UxMD"]),
+                                }),
+                                (0, r.jsx)(s.Text, {
+                                    className: g.bannerText,
+                                    variant: "text-sm/medium",
+                                    color: "text-secondary",
+                                    children: m.intl.format(m.t["lVOH/v"], {
+                                        helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
                                     }),
                                 }),
-                                (0, r.jsxs)("div", {
-                                    className: x.subBannerContent,
-                                    children: [
-                                        (0, r.jsx)(o.X6q, {
-                                            className: x.bannerHeader,
-                                            variant: "heading-md/extrabold",
-                                            color: "header-primary",
-                                            children: b.intl.string(b.t["+5UxMD"]),
-                                        }),
-                                        (0, r.jsx)(o.Text, {
-                                            className: x.bannerText,
-                                            variant: "text-sm/medium",
-                                            color: "text-secondary",
-                                            children: b.intl.format(b.t["lVOH/v"], {
-                                                helpCenterLink: m.Z.getArticleURL(f.BhN.SUMMER_BOGO_2025),
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                                (0, r.jsx)(g.Z, {
-                                    subscriptionTier: h.Si.TIER_2,
-                                    showIcon: !0,
-                                    shinyButtonClassName: x.buttonGradient,
-                                    hasActivePromotion: !0,
+                                (0, r.jsx)(_.Z, {
+                                    textOptions: {
+                                        textOverride: m.intl.string(m.t.J61px8),
+                                        textClassName: g.subscribeButtonText,
+                                    },
+                                    subscriptionTier: p.Si.TIER_2,
+                                    showIcon: !1,
+                                    className: g.subscribeButton,
+                                    color: v,
                                 }),
                             ],
                         }),
-                    {},
-                )
-        : null;
+                        (0, r.jsx)("div", {
+                            className: g.settingsBannerRightImageContainer,
+                            children: (0, r.jsx)("img", {
+                                alt: "",
+                                src: O.Z,
+                                className: g.settingsImage,
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+        S = () =>
+            (0, r.jsx)(u.O, {
+                newLocations: [c.Z.PREMIUM_MARKETING_PAGE_BANNER],
+                children: (0, r.jsxs)("div", {
+                    className: g.applicationHomeBanner,
+                    children: [
+                        (0, r.jsx)("div", {
+                            className: g.bannerBoxOutlinePosition,
+                            children: (0, r.jsx)("div", { className: g.backgroundGradient }),
+                        }),
+                        (0, r.jsx)("div", {
+                            className: a()(g.premiumTrialBadge, g.badgeGradient),
+                            children: (0, r.jsx)(s.Text, {
+                                variant: "eyebrow",
+                                color: "always-white",
+                                children: m.intl.string(m.t.OS9KPj),
+                            }),
+                        }),
+                        (0, r.jsxs)("div", {
+                            className: g.bannerContent,
+                            children: [
+                                (0, r.jsx)(s.X6q, {
+                                    className: g.bannerHeader,
+                                    variant: "heading-xxl/extrabold",
+                                    color: "header-primary",
+                                    children: m.intl.string(m.t["+5UxMD"]),
+                                }),
+                                (0, r.jsx)(s.Text, {
+                                    className: g.bannerText,
+                                    variant: "text-md/medium",
+                                    color: "text-secondary",
+                                    children: m.intl.format(m.t["lVOH/v"], {
+                                        helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
+                                    }),
+                                }),
+                                (0, r.jsx)(_.Z, {
+                                    textOptions: {
+                                        textOverride: m.intl.string(m.t.J61px8),
+                                        textClassName: g.subscribeButtonText,
+                                    },
+                                    subscriptionTier: p.Si.TIER_2,
+                                    showIcon: !1,
+                                    className: g.subscribeButton,
+                                    color: v,
+                                }),
+                            ],
+                        }),
+                        (0, r.jsx)("div", {
+                            className: g.imageContainer,
+                            children: (0, r.jsx)("img", {
+                                alt: "",
+                                src: b.Z,
+                                className: g.applicationHomeImage,
+                            }),
+                        }),
+                    ],
+                }),
+            });
+    return "APPLICATION_NITRO_HOME" === t
+        ? (0, r.jsx)(S, {})
+        : "SETTINGS" === t
+          ? (0, r.jsx)(T, {})
+          : (0, r.jsx)(I, {});
 };

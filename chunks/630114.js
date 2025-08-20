@@ -32,7 +32,7 @@ function E(e, t, n, r, i) {
         a.push(O()),
         a.push(...I(o)),
         a.push(...T(o)),
-        a.push(...N(o)),
+        a.push(...C(o)),
         l.Z.hasConsented(m.pjP.PERSONALIZATION) ? a.push(...S(e, o, n, r, i)) : a.push(...A(e, o)),
         a.filter(p.lm)
     );
@@ -59,7 +59,7 @@ function b(e, t) {
                 debug: r.map((e) => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
                     for (let n of r)
-                        C(e, t, n.id, (e) => {
+                        N(e, t, n.id, (e) => {
                             e.message_notifications = m.bL.ONLY_MENTIONS;
                         });
                 },
@@ -128,7 +128,7 @@ function T(e) {
                 apply: (e, t) => {
                     for (let r of n)
                         R(e, t, r.id, !1),
-                            C(e, t, r.id, (e) => {
+                            N(e, t, r.id, (e) => {
                                 (e.muted = !1), (e.mute_config = null);
                             });
                 },
@@ -219,7 +219,7 @@ function A(e, t) {
         n
     );
 }
-function N(e) {
+function C(e) {
     let t = [],
         n = [],
         r = [];
@@ -248,14 +248,14 @@ function N(e) {
         t
     );
 }
-function C(e, t, n, r) {
+function N(e, t, n, r) {
     var a, o, s, l;
     let c = null != (s = null == (a = e.channel_overrides) ? void 0 : a[n]) ? s : {};
     r(c, null != (l = null == (o = t.channel_overrides) ? void 0 : o[n]) ? l : {}),
         i().isEmpty(c) || (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = c));
 }
 function R(e, t, n, r) {
-    C(e, t, n, (e, t) => {
+    N(e, t, n, (e, t) => {
         var n, i;
         (e.flags = (0, _.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)),
             (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));

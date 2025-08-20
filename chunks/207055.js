@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(470956),
     x = n(597998),
     v = n(199902),
-    j = n(314897),
-    O = n(271383),
+    O = n(314897),
+    j = n(271383),
     E = n(131951),
     S = n(496675),
     P = n(158776),
@@ -37,7 +37,7 @@ let D = i.memo((e) => {
     var t, n, i, l;
     let { mute: a, deaf: s, user: x, channel: S, sessionId: k, nick: D } = e,
         L = x.id,
-        U = (0, o.e7)([j.default], () => j.default.getId() === L, [L]),
+        U = (0, o.e7)([O.default], () => O.default.getId() === L, [L]),
         [B, F, H] = (0, o.Wu)(
             [E.Z],
             () =>
@@ -51,7 +51,7 @@ let D = i.memo((e) => {
             userId: L,
             checkSoundSharing: !0,
         }),
-        z = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(S.guild_id, L)),
+        z = (0, o.e7)([j.ZP], () => j.ZP.isGuestOrLurker(S.guild_id, L)),
         W = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(S.id).has(L)),
         q = (0, o.e7)(
             [u.ZP],
@@ -174,18 +174,18 @@ let L = [],
                 className: y,
                 children: _,
             } = e,
-            [v, O] = i.useState(null),
+            [v, j] = i.useState(null),
             [E, I] = i.useState(!1),
             Z = i.useRef(null),
             T = (0, C.Es)(l.id, null != c ? c : L),
             N = i.useRef(
                 new s.sW(50, () => {
-                    O(Z.current), (Z.current = null);
+                    j(Z.current), (Z.current = null);
                 }),
             ),
             A = i.useRef(
                 new s.sW(175, () => {
-                    O(null);
+                    j(null);
                 }),
             ),
             M = i.useCallback(
@@ -228,7 +228,7 @@ let L = [],
                         {
                             user: a,
                             nick: o,
-                            isSelfOnOtherClient: j.default.getId() === a.id && s.sessionId !== j.default.getSessionId(),
+                            isSelfOnOtherClient: O.default.getId() === a.id && s.sessionId !== O.default.getSessionId(),
                             mute: s.isVoiceMuted(),
                             deaf: s.isVoiceDeafened(),
                             video: s.selfVideo,

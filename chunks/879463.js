@@ -1,5 +1,5 @@
-n.d(t, { ZP: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { ZP: () => i });
+let r = (0, n(818083).B)({
         kind: "user",
         id: "2023-12_pause_subscriptions_experiment",
         label: "Pause Subscriptions Experiment",
@@ -12,13 +12,13 @@ let i = (0, n(818083).B)({
             },
         ],
     }),
-    r = (e) => {
-        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: r = {} } = e;
-        return i.useExperiment(
+    i = (e) => {
+        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: i = {} } = e;
+        return r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                trackExposureOptions: r,
+                trackExposureOptions: i,
             },
         );
     };

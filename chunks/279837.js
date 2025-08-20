@@ -1,10 +1,10 @@
-n.d(t, { Z: () => u }), n(388685), n(457542);
-var s,
+n.d(t, { Z: () => d }), n(388685), n(457542);
+var r,
     i = n(951288),
-    r = n(647438),
-    l = n(481060),
-    o = n(388032),
-    a = n(405289);
+    a = n(647438),
+    o = n(481060),
+    s = n(388032),
+    l = n(405289);
 function c(e, t, n) {
     return (
         t in e
@@ -18,55 +18,55 @@ function c(e, t, n) {
         e
     );
 }
-class h extends (s = r.PureComponent) {
+class u extends (r = a.PureComponent) {
     render() {
-        let { title: e, actionText: t, children: n, transitionState: s } = this.props,
-            { error: c, isLoading: h, value: u } = this.state,
-            d =
-                r.Children.count(n) > 0
-                    ? (0, i.jsx)(l.Zbd, {
-                          type: l.Zbd.Types.WARNING,
-                          className: a.card,
-                          children: (0, i.jsx)(l.Text, {
+        let { title: e, actionText: t, children: n, transitionState: r } = this.props,
+            { error: c, isLoading: u, value: d } = this.state,
+            f =
+                a.Children.count(n) > 0
+                    ? (0, i.jsx)(o.Zbd, {
+                          type: o.Zbd.Types.WARNING,
+                          className: l.card,
+                          children: (0, i.jsx)(o.Text, {
                               color: "currentColor",
                               variant: "text-md/normal",
                               children: n,
                           }),
                       })
                     : null;
-        return (0, i.jsx)(l.Y0X, {
-            transitionState: s,
+        return (0, i.jsx)(o.Y0X, {
+            transitionState: r,
             parentComponent: "PasswordConfirm",
             children: (0, i.jsxs)("form", {
                 onSubmit: this.handleSubmit,
                 children: [
-                    (0, i.jsx)(l.xBx, {
+                    (0, i.jsx)(o.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(l.X6q, {
+                        children: (0, i.jsx)(o.X6q, {
                             variant: "heading-lg/semibold",
                             children: e,
                         }),
                     }),
-                    (0, i.jsxs)(l.hzk, {
+                    (0, i.jsxs)(o.hzk, {
                         children: [
-                            d,
-                            (0, i.jsxs)(l.xJW, {
-                                title: o.intl.string(o.t["CIGa+/"]),
-                                className: a.spacing,
+                            f,
+                            (0, i.jsxs)(o.xJW, {
+                                title: s.intl.string(s.t["CIGa+/"]),
+                                className: l.spacing,
                                 children: [
-                                    (0, i.jsx)(l.oil, {
+                                    (0, i.jsx)(o.oil, {
                                         type: "password",
                                         autoComplete: "current-password",
                                         autoFocus: !0,
-                                        value: u,
+                                        value: d,
                                         onChange: this.handlePasswordChange,
                                         required: !0,
                                     }),
                                     null != c && "" !== c
-                                        ? (0, i.jsxs)(l.Text, {
+                                        ? (0, i.jsxs)(o.Text, {
                                               variant: "text-xs/normal",
                                               color: "text-danger",
-                                              className: a.error,
+                                              className: l.error,
                                               children: [" ", c, " "],
                                           })
                                         : null,
@@ -74,19 +74,19 @@ class h extends (s = r.PureComponent) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(l.mzw, {
-                        children: (0, i.jsxs)(l.hE2, {
+                    (0, i.jsx)(o.mzw, {
+                        children: (0, i.jsxs)(o.hE2, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, i.jsx)(l.zxk, {
+                                (0, i.jsx)(o.zxk, {
                                     variant: "primary",
-                                    text: null != t ? t : o.intl.string(o.t["cY+Ooa"]),
+                                    text: null != t ? t : s.intl.string(s.t["cY+Ooa"]),
                                     type: "submit",
-                                    disabled: h || 0 === u.length,
+                                    disabled: u || 0 === d.length,
                                 }),
-                                (0, i.jsx)(l.zxk, {
+                                (0, i.jsx)(o.zxk, {
                                     variant: "secondary",
-                                    text: o.intl.string(o.t["ETE/oK"]),
+                                    text: s.intl.string(s.t["ETE/oK"]),
                                     onClick: this.handleCancel,
                                 }),
                             ],
@@ -106,11 +106,11 @@ class h extends (s = r.PureComponent) {
             c(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { value: t } = this.state,
-                    { handleSubmit: n, onClose: s, onError: i } = this.props;
+                    { handleSubmit: n, onClose: r, onError: i } = this.props;
                 this.setState({ isLoading: !0 }),
                     n(t)
                         .then(
-                            (e) => s(null != e ? e : void 0),
+                            (e) => r(null != e ? e : void 0),
                             (e) => {
                                 null != e.body &&
                                     (null == i || i(e.body),
@@ -143,5 +143,5 @@ class h extends (s = r.PureComponent) {
             });
     }
 }
-c(h, "key", () => "password-confirm-modal");
-let u = h;
+c(u, "key", () => "password-confirm-modal");
+let d = u;

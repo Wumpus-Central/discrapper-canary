@@ -159,24 +159,24 @@ function T(e) {
             type: T = "button",
             style: S,
             wrapperClassName: A,
-            className: N,
-            innerClassName: C,
+            className: C,
+            innerClassName: N,
             onClick: R,
             onDoubleClick: P,
             onMouseDown: w,
             onMouseUp: D,
-            onMouseEnter: L,
-            onMouseLeave: x,
-            onKeyDown: M,
-            children: k,
-            rel: j,
+            onMouseEnter: x,
+            onMouseLeave: L,
+            onKeyDown: j,
+            children: M,
+            rel: k,
             buttonRef: U,
             focusProps: G,
             "aria-label": B,
-            submittingStartedLabel: V,
-            submittingFinishedLabel: F,
+            submittingStartedLabel: Z,
+            submittingFinishedLabel: V,
         } = e,
-        Z = g(e, [
+        F = g(e, [
             "look",
             "color",
             "size",
@@ -205,21 +205,21 @@ function T(e) {
             "submittingFinishedLabel",
         ]);
     let H = h || E,
-        Y = H && (null != L || null != x),
+        Y = H && (null != x || null != L),
         W = Y ? null : A,
         K = v(G, t),
         z = i.useRef(!1);
     i.useEffect(() => {
-        !0 === E && ((z.current = !0), l.u.announce(null != V ? V : d.intl.string(d.t.pfChQk))),
-            !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara));
-    }, [E, V, F]);
+        !0 === E && ((z.current = !0), l.u.announce(null != Z ? Z : d.intl.string(d.t.pfChQk))),
+            !1 === E && !0 === z.current && l.u.announce(null != V ? V : d.intl.string(d.t.SVPara));
+    }, [E, Z, V]);
     let q = (0, r.jsx)(
         c.t,
         m(p({}, G), {
             offset: K,
             children: (0, r.jsxs)(
                 "button",
-                m(p({}, H ? null : Z), {
+                m(p({}, H ? null : F), {
                     "aria-label": B,
                     "aria-busy": !!E || void 0,
                     ref: U,
@@ -227,15 +227,15 @@ function T(e) {
                     onDoubleClick: H ? (e) => e.preventDefault() : P,
                     onMouseUp: h ? void 0 : D,
                     onMouseDown: h ? void 0 : w,
-                    onMouseEnter: L,
-                    onMouseLeave: x,
-                    onKeyDown: h ? void 0 : M,
+                    onMouseEnter: x,
+                    onMouseLeave: L,
+                    onKeyDown: h ? void 0 : j,
                     type: T,
                     disabled: h,
                     style: S,
-                    rel: j,
+                    rel: k,
                     className: o()(
-                        N,
+                        C,
                         I({
                             look: t,
                             color: n,
@@ -256,8 +256,8 @@ function T(e) {
                               })
                             : null,
                         (0, r.jsx)("div", {
-                            className: o()(f.contents, C),
-                            children: k,
+                            className: o()(f.contents, N),
+                            children: M,
                         }),
                     ],
                 }),
@@ -273,8 +273,8 @@ function T(e) {
               children: [
                   q,
                   (0, r.jsx)("span", {
-                      onMouseEnter: L,
-                      onMouseLeave: x,
+                      onMouseEnter: x,
+                      onMouseLeave: L,
                       className: f.disabledButtonOverlay,
                   }),
               ],

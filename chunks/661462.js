@@ -1,144 +1,144 @@
-n.d(t, { Z: () => m }), n(388685);
-var r = n(951288),
-    o = n(647438),
-    i = n(481060),
-    l = n(785717),
-    a = n(128156),
-    c = n(311044),
-    s = n(408986),
-    d = n(778414),
-    u = n(228168),
-    f = n(883101);
-function p(e) {
+t.d(n, { Z: () => p }), t(388685);
+var r = t(951288),
+    o = t(647438),
+    l = t(481060),
+    i = t(785717),
+    c = t(128156),
+    a = t(311044),
+    s = t(408986),
+    d = t(778414),
+    u = t(228168),
+    f = t(883101);
+function m(e) {
     let {
-        user: t,
-        currentUser: n,
+        user: n,
+        currentUser: t,
         section: o,
-        subsection: i,
-        displayProfile: l,
+        subsection: l,
+        displayProfile: i,
         guildId: f,
-        channelId: p,
-        onClose: m,
+        channelId: m,
+        onClose: p,
     } = e;
     return o === u.oh.ACTIVITY
-        ? (0, r.jsx)(a.Z, {
-              user: t,
-              currentUser: n,
-              displayProfile: l,
+        ? (0, r.jsx)(c.Z, {
+              user: n,
+              currentUser: t,
+              displayProfile: i,
               guildId: f,
-              channelId: p,
-              subsection: i,
-              onClose: m,
+              channelId: m,
+              subsection: l,
+              onClose: p,
           })
         : o === u.oh.MUTUAL_FRIENDS
-          ? (0, r.jsx)(c.Z, {
-                user: t,
+          ? (0, r.jsx)(a.Z, {
+                user: n,
                 guildId: f,
-                channelId: p,
-                onClose: m,
+                channelId: m,
+                onClose: p,
             })
           : o === u.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(s.Z, {
-                  user: t,
-                  onClose: m,
+                  user: n,
+                  onClose: p,
               })
             : o === u.oh.WIDGETS
               ? (0, r.jsx)(d.C, {
-                    user: t,
+                    user: n,
                     guildId: f,
-                    channelId: p,
+                    channelId: m,
                 })
               : null;
 }
-function m(e) {
-    var t, n, a;
+function p(e) {
+    var n, t, c;
     let {
-            user: c,
+            user: a,
             currentUser: s,
             displayProfile: d,
             guildId: u,
-            channelId: m,
+            channelId: p,
             items: b,
             initialSection: g,
-            initialSubsection: h,
-            onClose: x,
+            initialSubsection: x,
+            onClose: h,
         } = e,
-        { trackUserProfileAction: _ } = (0, l.KZ)(),
-        [{ section: j, subsection: v, text: y }, I] = o.useState(
-            ((n = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+        { trackUserProfileAction: j } = (0, i.KZ)(),
+        [{ section: v, subsection: _, text: y }, I] = o.useState(
+            ((t = (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        r = Object.keys(t);
                     "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
+                        r.forEach(function (n) {
                             var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
+                            (r = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[n] = r);
                         });
                 }
                 return e;
             })(
                 {},
                 null !=
-                    (t = b.find((e) => {
-                        let { section: t } = e;
-                        return t === g;
+                    (n = b.find((e) => {
+                        let { section: n } = e;
+                        return n === g;
                     }))
-                    ? t
+                    ? n
                     : b[0],
             )),
-            (a = a = { subsection: h }),
+            (c = c = { subsection: x }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                : (function (e, t) {
-                      var n = Object.keys(e);
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(c))
+                : (function (e, n) {
+                      var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
                           var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          t.push.apply(t, r);
                       }
-                      return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                      return t;
+                  })(Object(c)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(c, e));
                   }),
-            n),
+            t),
         );
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)(i.Ttm, {
+            (0, r.jsx)(l.Ttm, {
                 orientation: "horizontal",
                 className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, r.jsx)(i.njP, {
+                children: (0, r.jsx)(l.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: j,
+                    selectedItem: v,
                     onItemSelect: (e) => {
-                        _({
+                        j({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            I((t) => {
-                                var n;
-                                return null != (n = b.find((t) => t.section === e)) ? n : t;
+                            I((n) => {
+                                var t;
+                                return null != (t = b.find((n) => n.section === e)) ? t : n;
                             });
                     },
                     children: b.map((e) =>
                         (0, r.jsx)(
-                            i.njP.Item,
+                            l.njP.Item,
                             {
                                 className: f.tabBarItem,
                                 id: e.section,
@@ -150,19 +150,19 @@ function m(e) {
                     ),
                 }),
             }),
-            (0, r.jsx)(i.njP.Panel, {
-                id: j,
+            (0, r.jsx)(l.njP.Panel, {
+                id: v,
                 "aria-label": y,
                 className: f.tabBarPanel,
-                children: (0, r.jsx)(p, {
-                    user: c,
+                children: (0, r.jsx)(m, {
+                    user: a,
                     currentUser: s,
                     displayProfile: d,
                     guildId: u,
-                    channelId: m,
-                    section: j,
-                    subsection: v,
-                    onClose: x,
+                    channelId: p,
+                    section: v,
+                    subsection: _,
+                    onClose: h,
                 }),
             }),
         ],

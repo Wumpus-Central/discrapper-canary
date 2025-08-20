@@ -1,62 +1,62 @@
-n.d(t, { Z: () => g });
-var i = n(951288);
+n.d(t, { Z: () => p });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(755721),
-    l = n(481060),
-    o = n(906732),
+var i = n(120356),
+    a = n.n(i),
+    o = n(755721),
+    s = n(481060),
+    l = n(906732),
     c = n(654904),
-    d = n(993413),
-    u = n(486324),
-    m = n(388032),
-    p = n(808639);
-function g(e) {
+    u = n(993413),
+    d = n(486324),
+    f = n(388032),
+    _ = n(808639);
+function p(e) {
     let {
             showRemoveBannerButton: t,
             errors: n,
-            onBannerChange: r,
-            guildId: g,
+            onBannerChange: i,
+            guildId: p,
             className: h,
-            disabled: f = !1,
-            showPremiumIcon: b = !0,
-            isTryItOutFlow: x = !1,
-            forcedDivider: _,
-            withHighlight: j = !1,
+            disabled: m = !1,
+            showPremiumIcon: g = !0,
+            isTryItOutFlow: E = !1,
+            forcedDivider: b,
+            withHighlight: y = !1,
         } = e,
-        { newestAnalyticsLocation: E } = (0, o.ZP)(),
-        C = j ? l.gtL : a.zx;
-    return (0, i.jsx)(d.Z, {
+        { newestAnalyticsLocation: O } = (0, l.ZP)(),
+        v = y ? s.gtL : o.zx;
+    return (0, r.jsx)(u.Z, {
         className: h,
-        title: m.intl.string(m.t.Vgdusr),
-        showPremiumIcon: b,
+        title: f.intl.string(f.t.Vgdusr),
+        showPremiumIcon: g,
         errors: n,
-        disabled: f,
-        forcedDivider: _,
-        children: (0, i.jsxs)("div", {
-            className: p.buttonsContainer,
+        disabled: m,
+        forcedDivider: b,
+        children: (0, r.jsxs)("div", {
+            className: _.buttonsContainer,
             children: [
-                (0, i.jsx)(C, {
-                    className: s()({ [p.buttonHighlighted]: j }),
-                    size: a.zx.Sizes.SMALL,
+                (0, r.jsx)(v, {
+                    className: a()({ [_.buttonHighlighted]: y }),
+                    size: o.zx.Sizes.SMALL,
                     onClick: () =>
                         (0, c.$r)({
-                            uploadType: u.pC.BANNER,
-                            analyticsSource: E,
-                            guildId: g,
-                            isTryItOutFlow: x,
+                            uploadType: d.pC.BANNER,
+                            analyticsSource: O,
+                            guildId: p,
+                            isTryItOutFlow: E,
                         }),
-                    children: m.intl.string(m.t.N0bC3N),
+                    children: f.intl.string(f.t.N0bC3N),
                 }),
                 t &&
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: p.removeButton,
-                        children: (0, i.jsx)(l.zxk, {
+                        className: _.removeButton,
+                        children: (0, r.jsx)(s.zxk, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != g ? m.intl.string(m.t.jHlJNT) : m.intl.string(m.t.tT9n7O),
-                            onClick: () => r(null),
+                            text: null != p ? f.intl.string(f.t.jHlJNT) : f.intl.string(f.t.tT9n7O),
+                            onClick: () => i(null),
                         }),
                     }),
             ],

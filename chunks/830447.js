@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => C,
-    v: () => N,
+    T: () => N,
+    v: () => C,
 }),
     n(361932),
     n(187205),
@@ -373,7 +373,7 @@ function A(e, t, n, i) {
         return e;
     }, []);
 }
-function N(e) {
+function C(e) {
     var t;
     let {
             navId: n,
@@ -385,11 +385,11 @@ function N(e) {
             onSelect: O,
             onInteraction: I,
         } = e,
-        N = T(h),
-        C = S(N),
+        C = T(h),
+        N = S(C),
         P = i.useRef([]);
-    l()(P.current, C) || (P.current = C);
-    let w = null == (t = N.find((e) => null != e.key)) ? void 0 : t.key,
+    l()(P.current, N) || (P.current = N);
+    let w = null == (t = C.find((e) => null != e.key)) ? void 0 : t.key,
         D = (0, c.ZP)({
             navId: n,
             items: P.current,
@@ -400,10 +400,10 @@ function N(e) {
     i.useEffect(() => {
         D.isUsingKeyboardNavigation ? p.Z.keyboardModeEnabled || (0, _.Qj)() : p.Z.keyboardModeEnabled && (0, _.rf)();
     }, [D.isUsingKeyboardNavigation]);
-    let L = i.useRef(null);
-    (0, u.T)(L);
-    let x = s ? d.u2 : d.zJ,
-        M = i.useMemo(
+    let x = i.useRef(null);
+    (0, u.T)(x);
+    let L = s ? d.u2 : d.zJ,
+        j = i.useMemo(
             () => ({
                 onSelect: O,
                 onInteraction: I,
@@ -411,16 +411,16 @@ function N(e) {
             [O, I],
         );
     return (0, r.jsx)(m.p.Provider, {
-        value: M,
+        value: j,
         children: (0, r.jsx)(
             "div",
             v(y({ className: o()(E.menu, E[a], f) }, D.getContainerProps()), {
-                ref: L,
+                ref: x,
                 "aria-label": e["aria-label"],
-                children: (0, r.jsxs)(x, {
+                children: (0, r.jsxs)(L, {
                     className: E.scroller,
                     children: [
-                        0 === N.length &&
+                        0 === C.length &&
                             (0, r.jsx)(g.ck, {
                                 disabled: !0,
                                 label: () => (0, r.jsx)(R, {}),
@@ -429,14 +429,14 @@ function N(e) {
                                 onFocus: () => {},
                                 onClose: b,
                             }),
-                        N.length > 0 && A(N, D, [], b),
+                        C.length > 0 && A(C, D, [], b),
                     ],
                 }),
             }),
         ),
     });
 }
-function C() {
+function N() {
     return (0, r.jsx)("div", {
         className: o()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(f.$, {}),

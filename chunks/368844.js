@@ -1,11 +1,11 @@
 n.d(t, {
     Ah: () => O,
     CB: () => w,
-    aU: () => N,
+    aU: () => C,
     cp: () => D,
     eL: () => R,
     vg: () => P,
-    zy: () => C,
+    zy: () => N,
 }),
     n(953529),
     n(997841),
@@ -177,9 +177,9 @@ function A(e, t) {
               srcUnfurledMediaItem: e,
           };
 }
-function N(e, t) {
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = C(e, n);
+        i = N(e, n);
     return r.useMemo(() => {
         if (null == t) return [];
         if (!t.isMediaChannel()) return i;
@@ -189,7 +189,7 @@ function N(e, t) {
         }
     }, [t, i]);
 }
-function C(e, t) {
+function N(e, t) {
     let n = I(e);
     return [...n, ...T(e, t), ...S(e)];
 }

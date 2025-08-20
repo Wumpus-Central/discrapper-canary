@@ -1,46 +1,46 @@
-n.d(t, { Z: () => l }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(652339);
-let o = (e) => {
-        let { onChange: t, label: n, subtitle: o, selected: l } = e;
+var i = n(481060),
+    l = n(652339);
+let a = (e) => {
+        let { onChange: t, label: n, subtitle: a, selected: o } = e;
         return (0, r.jsx)("div", {
-            className: i.checkboxRow,
-            children: (0, r.jsxs)(a.XZJ, {
-                type: a.XZJ.Types.INVERTED,
+            className: l.checkboxRow,
+            children: (0, r.jsxs)(i.XZJ, {
+                type: i.XZJ.Types.INVERTED,
                 onChange: () => t(),
-                value: l,
+                value: o,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: "interactive-active",
                         variant: "text-md/semibold",
                         children: n,
                     }),
-                    null != o
-                        ? (0, r.jsx)(a.Text, {
+                    null != a
+                        ? (0, r.jsx)(i.Text, {
                               color: "interactive-active",
                               variant: "text-sm/normal",
-                              children: o,
+                              children: a,
                           })
                         : null,
                 ],
             }),
         });
     },
-    l = (e) => {
-        let { element: t, state: n, onChange: a } = e;
+    o = (e) => {
+        let { element: t, state: n, onChange: i } = e;
         if ((null == t ? void 0 : t.type) !== "checkbox") return null;
-        let { data: i } = t;
+        let { data: l } = t;
         return (0, r.jsx)("div", {
-            children: i.map((e, t) => {
-                let [i, l, s] = e;
+            children: l.map((e, t) => {
+                let [l, o, s] = e;
                 return (0, r.jsx)(
-                    o,
+                    a,
                     {
-                        onChange: () => a(i, l),
-                        selected: i in n,
-                        label: l,
+                        onChange: () => i(l, o),
+                        selected: l in n,
+                        label: o,
                         subtitle: s,
                     },
                     "".concat(t, "+button"),

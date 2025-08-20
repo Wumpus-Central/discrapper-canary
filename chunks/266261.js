@@ -387,7 +387,7 @@ a.Globals.assign({
     createStringInterpolator: s.createStringInterpolator,
     batchedUpdates: o.unstable_batchedUpdates,
 });
-var N = c.createHost(A, {
+var C = c.createHost(A, {
     applyAnimatedValues: h,
     createAnimatedStyle: function (e) {
         return new T(e);
@@ -405,5 +405,5 @@ Object.keys(a).forEach(function (e) {
             },
         });
 }),
-    (t.a = N),
-    (t.animated = N);
+    (t.a = C),
+    (t.animated = C);

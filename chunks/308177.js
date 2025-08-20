@@ -23,8 +23,8 @@ let C = (0, a.Z)((e) => {
     let { channel: a, width: C, onScroll: x } = e,
         {
             selectedParticipantId: v,
-            largeStream: j,
-            chatOpen: O,
+            largeStream: O,
+            chatOpen: j,
         } = (0, l.cj)(
             [o.Z],
             () => ({
@@ -41,7 +41,7 @@ let C = (0, a.Z)((e) => {
         Z = I.filter(_),
         T = null != I.find((e) => e.type === u.Ui.STREAM),
         N = Math.floor((C - 32) / 102),
-        A = C < 424 ? 1 : C < 624 ? 2 : C < 824 || O ? 3 : 4,
+        A = C < 424 ? 1 : C < 624 ? 2 : C < 824 || j ? 3 : 4,
         w = {
             [u.pV.SPEAKER]: A,
             [u.pV.AUDIENCE]: N,
@@ -58,7 +58,7 @@ let C = (0, a.Z)((e) => {
                 speakerTileHeight: r,
             };
         })(C, A),
-        B = j ? C - 32 : Math.min(C - 64, 3 * L + 8),
+        B = O ? C - 32 : Math.min(C - 64, 3 * L + 8),
         F = (e) => e === M.length - 1 || (0 === S && 1 === e),
         [H, G] = i.useState(!1),
         [V, z] = i.useState(!1);

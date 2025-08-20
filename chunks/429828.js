@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(647438),
-    s = n(192720);
-function l() {
+    i = n(192720);
+function a() {
     r.useEffect(() => {
-        (0, s.sE)();
+        (0, i.sE)();
     }, []);
 }

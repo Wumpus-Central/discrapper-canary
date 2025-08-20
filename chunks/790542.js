@@ -1,26 +1,26 @@
-r.d(t, { A: () => o });
-var n = r(647438),
-    a = r(442837),
-    i = r(751648),
-    l = r(479766);
-function o() {
+n.d(t, { A: () => s });
+var r = n(647438),
+    i = n(442837),
+    a = n(751648),
+    o = n(479766);
+function s() {
     let {
         balance: e,
         isFetching: t,
-        error: r,
-    } = (0, a.cj)([l.Z], () => ({
-        balance: l.Z.balance,
-        isFetching: l.Z.isFetchingBalance,
-        error: l.Z.fetchBalanceError,
+        error: n,
+    } = (0, i.cj)([o.Z], () => ({
+        balance: o.Z.balance,
+        isFetching: o.Z.isFetchingBalance,
+        error: o.Z.fetchBalanceError,
     }));
     return (
-        (0, n.useEffect)(() => {
-            null !== e || null !== r || t || (0, i.ZO)();
-        }, [e, r, t]),
+        (0, r.useEffect)(() => {
+            null !== e || null !== n || t || (0, a.ZO)();
+        }, [e, n, t]),
         {
             balance: e,
             isFetching: t,
-            error: r,
+            error: n,
         }
     );
 }

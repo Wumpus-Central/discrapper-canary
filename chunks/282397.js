@@ -97,18 +97,18 @@ function A(e) {
     if (null == i || i.state !== _.F.QUEUED) return !1;
     (i.state = _.F.CREATED), null == (t = i.onCreate) || t.call(i, r);
 }
-function N(e) {
-    let { nonce: t } = e;
-    k(t);
-}
 function C(e) {
+    let { nonce: t } = e;
+    M(t);
+}
+function N(e) {
     let { message: t } = e;
     if (null == t.nonce) return !1;
     {
         var n;
         let e = y[t.nonce];
         if (null == e) return !1;
-        null == (n = e.onSuccess) || n.call(e), j(t.nonce);
+        null == (n = e.onSuccess) || n.call(e), k(t.nonce);
     }
 }
 function R(e) {
@@ -119,7 +119,7 @@ function R(e) {
     if (null == s) return !1;
     null == (t = s.onFailure) || t.call(s, r, i, a, o),
         s.data.interactionType === c.B8.APPLICATION_COMMAND
-            ? j(n)
+            ? k(n)
             : (y[n] = g(h({}, s), {
                   state: _.F.FAILED,
                   errorCode: r,
@@ -129,24 +129,24 @@ function R(e) {
 function P(e) {
     let { channelId: t } = e;
     if (null == d.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && j(e);
+    for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && k(e);
 }
 function w(e) {
     let { nonce: t } = e;
-    k(t);
+    M(t);
 }
 function D(e) {
     let { application: t, nonce: n } = e;
-    (i = t.id), k(n);
+    (i = t.id), M(n);
 }
-function L() {
+function x() {
     (r = void 0), (i = void 0);
 }
-function x(e) {
+function L(e) {
     let { modalKey: t } = e;
     r = t;
 }
-function M(e) {
+function j(e) {
     let t,
         n,
         { participants: r } = e,
@@ -158,16 +158,16 @@ function M(e) {
     null == s ? ((t = v[o.nonce]), (n = y[o.nonce])) : ((t = s.messageId), (n = s.interaction)),
         null != n &&
             null != t &&
-            (j(o.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
+            (k(o.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
-function k(e) {
+function M(e) {
     var t;
     if (null == e) return !1;
     let n = y[e];
     if (null == n) return !1;
-    null == (t = n.onSuccess) || t.call(n), j(e);
+    null == (t = n.onSuccess) || t.call(n), k(e);
 }
-function j(e) {
+function k(e) {
     if (null != I[e]) return void delete I[e];
     let t = y[e];
     delete y[e];
@@ -210,13 +210,13 @@ let G = new U(s.Z, {
     LOGOUT: T,
     INTERACTION_QUEUE: S,
     INTERACTION_CREATE: A,
-    INTERACTION_SUCCESS: N,
+    INTERACTION_SUCCESS: C,
     INTERACTION_FAILURE: R,
-    MESSAGE_CREATE: C,
+    MESSAGE_CREATE: N,
     CHANNEL_SELECT: P,
     INTERACTION_IFRAME_MODAL_CREATE: D,
-    INTERACTION_IFRAME_MODAL_CLOSE: L,
-    INTERACTION_IFRAME_MODAL_KEY_CREATE: x,
+    INTERACTION_IFRAME_MODAL_CLOSE: x,
+    INTERACTION_IFRAME_MODAL_KEY_CREATE: L,
     INTERACTION_MODAL_CREATE: w,
-    EMBEDDED_ACTIVITY_UPDATE_V2: M,
+    EMBEDDED_ACTIVITY_UPDATE_V2: j,
 });

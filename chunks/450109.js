@@ -50,13 +50,13 @@ function m(e, t, n, r, i) {
         S = h(v) ? (null != (u = v.frameRateEncode) ? u : 0) : null != (d = v.frameRateDecode) ? d : 0,
         A = null != (f = null == (a = v.resolution) ? void 0 : a.height) ? f : 0;
     (n.numDatapoints += 1), (n.frameRateAggregated += S), (n.resolutionAggregated += A);
-    let N = null == i ? void 0 : i.find((e) => "video" === e.type);
-    if (null != N && t >= n.minVersion) {
+    let C = null == i ? void 0 : i.find((e) => "video" === e.type);
+    if (null != C && t >= n.minVersion) {
         n.numDatapoints -= 1;
-        let e = h(N) ? (null != (p = N.packetsSent) ? p : 0) : null != (m = N.packetsReceived) ? m : 0,
-            t = h(N) ? (null != (g = N.packetsLost) ? g : 0) : null != (E = N.packetsLost) ? E : 0,
-            r = h(N) ? (null != (b = N.frameRateEncode) ? b : 0) : null != (y = N.frameRateDecode) ? y : 0,
-            i = null != (O = null == (_ = N.resolution) ? void 0 : _.height) ? O : 0;
+        let e = h(C) ? (null != (p = C.packetsSent) ? p : 0) : null != (m = C.packetsReceived) ? m : 0,
+            t = h(C) ? (null != (g = C.packetsLost) ? g : 0) : null != (E = C.packetsLost) ? E : 0,
+            r = h(C) ? (null != (b = C.frameRateEncode) ? b : 0) : null != (y = C.frameRateDecode) ? y : 0,
+            i = null != (O = null == (_ = C.resolution) ? void 0 : _.height) ? O : 0;
         (n.frameRateAggregated -= r),
             (n.resolutionAggregated -= i),
             (n.packetsSentOrReceived = I - e),

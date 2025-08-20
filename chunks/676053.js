@@ -100,8 +100,8 @@ function T(e) {
             },
             badge: S,
             textLink: A,
-            onWatchVideo: N,
-            onRequestClose: C,
+            onWatchVideo: C,
+            onRequestClose: N,
             popoverRef: R,
         } = e,
         P = v(e, [
@@ -119,7 +119,7 @@ function T(e) {
         ]);
     let w = i.useRef(null),
         D = (0, s.j1)(y),
-        L = i.useCallback(
+        x = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: E,
@@ -131,25 +131,25 @@ function T(e) {
             }),
             [E, t],
         ),
-        x = i.useCallback(() => {
-            null !== w.current && w.current.pause(), null == C || C();
-        }, [C]),
+        L = i.useCallback(() => {
+            null !== w.current && w.current.pause(), null == N || N();
+        }, [N]),
+        j = i.useCallback(() => {
+            null !== w.current && w.current.pause(), null == N || N();
+        }, [N]),
         M = i.useCallback(() => {
-            null !== w.current && w.current.pause(), null == C || C();
-        }, [C]),
-        k = i.useCallback(() => {
             null !== w.current && w.current.pause();
-            let e = L();
+            let e = x();
             (0, c.K)({
                 items: [e],
                 startingIndex: 0,
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == C || C(),
-                null == N || N();
-        }, [L, N, C]),
-        j = D
+                null == N || N(),
+                null == C || C();
+        }, [x, C, N]),
+        k = D
             ? (0, r.jsx)(o.z, {
                   type: "image",
                   src: y,
@@ -174,7 +174,7 @@ function T(e) {
                               playing: !1,
                               size: "sm",
                               "aria-label": m.intl.string(h.default.YpT3kp),
-                              onClick: k,
+                              onClick: M,
                           }),
                       }),
                   ],
@@ -182,16 +182,16 @@ function T(e) {
     return (0, r.jsx)(
         u.m,
         O(b({}, P), {
-            onRequestClose: x,
+            onRequestClose: L,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
                 ref: R,
                 children: [
-                    (0, r.jsx)(p.N, { onClick: M }),
+                    (0, r.jsx)(p.N, { onClick: j }),
                     (0, r.jsx)(f.$, { caretConfig: T }),
                     (0, r.jsx)("div", {
                         className: g.assetContainer,
-                        children: j,
+                        children: k,
                     }),
                     (0, r.jsx)(_.Y, {
                         title: t,

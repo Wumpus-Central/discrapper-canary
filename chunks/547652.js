@@ -1,111 +1,109 @@
-n.d(t, { default: () => j }), n(415506);
+n.d(e, { default: () => P }), n(415506);
 var r = n(951288),
     o = n(647438),
     i = n(817080),
-    a = n(442837),
+    l = n(442837),
     c = n(481060),
-    u = n(668781),
-    l = n(239091),
+    a = n(668781),
+    u = n(239091),
     s = n(883385),
     d = n(108843),
-    f = n(100527),
-    b = n(299206),
+    b = n(100527),
+    f = n(299206),
     p = n(496675),
     y = n(358085),
-    w = n(998502),
-    O = n(22382),
-    g = n(51078),
-    v = n(710111),
-    h = n(981631),
-    m = n(388032);
-let j = (0, d.Z)(
+    g = n(998502),
+    j = n(22382),
+    O = n(51078),
+    h = n(710111),
+    w = n(981631),
+    v = n(388032);
+let P = (0, d.Z)(
     (0, s.Z)(
-        function (e) {
-            let { soundGuild: t, sound: s, activeCallGuildId: d, onSelect: f } = e,
-                h = (function (e, t) {
-                    let { canManageGuildExpressions: i } = (0, a.cj)(
+        function (t) {
+            let { soundGuild: e, sound: s, activeCallGuildId: d, onSelect: b } = t,
+                w = (function (t, e) {
+                    let { canManageGuildExpressions: i } = (0, l.cj)(
                             [p.Z],
-                            () => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)),
-                            [t],
+                            () => (null == e ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(e)),
+                            [e],
                         ),
-                        u = o.useCallback(() => {
-                            if ((null == t ? void 0 : t.id) == null) return null;
+                        a = o.useCallback(() => {
+                            if ((null == e ? void 0 : e.id) == null) return null;
                             (0, c.ZDy)(async () => {
-                                let { default: o } = await Promise.all([n.e("12830"), n.e("56035"), n.e("62599")]).then(
-                                    n.bind(n, 758961),
-                                );
+                                let { default: o } = await n.e("56035").then(n.bind(n, 758961));
                                 return (n) => {
-                                    var i, a;
+                                    var i, l;
                                     return (0, r.jsx)(
                                         o,
-                                        ((i = (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var n = null != arguments[t] ? arguments[t] : {},
+                                        ((i = (function (t) {
+                                            for (var e = 1; e < arguments.length; e++) {
+                                                var n = null != arguments[e] ? arguments[e] : {},
                                                     r = Object.keys(n);
                                                 "function" == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
-                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                         }),
                                                     )),
-                                                    r.forEach(function (t) {
+                                                    r.forEach(function (e) {
                                                         var r;
-                                                        (r = n[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
+                                                        (r = n[e]),
+                                                            e in t
+                                                                ? Object.defineProperty(t, e, {
                                                                       value: r,
                                                                       enumerable: !0,
                                                                       configurable: !0,
                                                                       writable: !0,
                                                                   })
-                                                                : (e[t] = r);
+                                                                : (t[e] = r);
                                                     });
                                             }
-                                            return e;
+                                            return t;
                                         })({}, n)),
-                                        (a = a =
+                                        (l = l =
                                             {
-                                                existingSound: e,
-                                                guildId: t.id,
+                                                existingSound: t,
+                                                guildId: e.id,
                                             }),
                                         Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
-                                            : (function (e, t) {
-                                                  var n = Object.keys(e);
+                                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                            : (function (t, e) {
+                                                  var n = Object.keys(t);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      var r = Object.getOwnPropertySymbols(t);
                                                       n.push.apply(n, r);
                                                   }
                                                   return n;
-                                              })(Object(a)).forEach(function (e) {
-                                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                              })(Object(l)).forEach(function (t) {
+                                                  Object.defineProperty(i, t, Object.getOwnPropertyDescriptor(l, t));
                                               }),
                                         i),
                                     );
                                 };
                             });
-                        }, [t, e]);
+                        }, [e, t]);
                     return i
                         ? (0, r.jsx)(
                               c.sNh,
                               {
                                   id: "edit-soundboard-sound",
-                                  label: m.intl.string(m.t.ponZcH),
-                                  action: u,
+                                  label: v.intl.string(v.t.ponZcH),
+                                  action: a,
                               },
                               "edit-soundboard-sound",
                           )
                         : null;
-                })(s, t),
-                j = (function (e) {
-                    let { soundId: t } = e,
+                })(s, e),
+                P = (function (t) {
+                    let { soundId: e } = t,
                         n = o.useCallback(async () => {
                             try {
-                                let e = (0, O.Z)(t),
-                                    n = await fetch(e),
+                                let t = (0, j.Z)(e),
+                                    n = await fetch(t),
                                     r = await n.blob(),
-                                    o = (function (e) {
-                                        switch (e.type) {
+                                    o = (function (t) {
+                                        switch (t.type) {
                                             case "audio/mpeg":
                                             case "audio/mpeg3":
                                                 return "mp3";
@@ -115,44 +113,44 @@ let j = (0, d.Z)(
                                                 throw Error("unable to determine file type");
                                         }
                                     })(r),
-                                    a = "".concat(t, ".").concat(o);
-                                y.isPlatformEmbedded ? await w.ZP.saveFile(e, a) : (0, i.saveAs)(r, a);
-                            } catch (e) {
-                                u.Z.show({
-                                    title: m.intl.string(m.t.mK3tDA),
-                                    body: m.intl.string(m.t.jLlfDA),
-                                    confirmText: m.intl.string(m.t.BddRzc),
+                                    l = "".concat(e, ".").concat(o);
+                                y.isPlatformEmbedded ? await g.ZP.saveFile(t, l) : (0, i.saveAs)(r, l);
+                            } catch (t) {
+                                a.Z.show({
+                                    title: v.intl.string(v.t.mK3tDA),
+                                    body: v.intl.string(v.t.jLlfDA),
+                                    confirmText: v.intl.string(v.t.BddRzc),
                                 });
                             }
-                        }, [t]);
-                    return e.guildId === v.X8
+                        }, [e]);
+                    return t.guildId === h.X8
                         ? null
                         : (0, r.jsx)(
                               c.sNh,
                               {
                                   id: "download-soundboard-sound",
-                                  label: m.intl.string(m.t["/fzLLC"]),
+                                  label: v.intl.string(v.t["/fzLLC"]),
                                   action: n,
                               },
                               "download-soundboard-sound",
                           );
                 })(s),
-                S = (0, g.Z)(s, d),
-                P = (0, b.Z)({
+                m = (0, O.Z)(s, d),
+                Z = (0, f.Z)({
                     id: s.soundId,
-                    label: m.intl.string(m.t.HJikXl),
+                    label: v.intl.string(v.t.HJikXl),
                 });
             return (0, r.jsx)(c.v2r, {
                 navId: "sound-button-context",
-                onClose: l.Zy,
-                "aria-label": m.intl.string(m.t.liqwPD),
-                onSelect: f,
+                onClose: u.Zy,
+                "aria-label": v.intl.string(v.t.liqwPD),
+                onSelect: b,
                 children: (0, r.jsxs)(c.kSQ, {
-                    children: [h, S, j, P],
+                    children: [w, m, P, Z],
                 }),
             });
         },
-        { object: h.qAy.CONTEXT_MENU },
+        { object: w.qAy.CONTEXT_MENU },
     ),
-    [f.Z.CONTEXT_MENU, f.Z.SOUNDBOARD_BUTTON],
+    [b.Z.CONTEXT_MENU, b.Z.SOUNDBOARD_BUTTON],
 );

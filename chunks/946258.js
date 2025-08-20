@@ -1,17 +1,17 @@
-var n = r(207549).getPunctuation(),
+var r = n(207549).getPunctuation(),
     i = "['\u2018\u2019]",
-    o = "\\s|(?![_])" + n,
-    a = RegExp("^(?:" + o + ")*(?:" + i + "|(?!" + o + ").)*(?:(?!" + o + ").)"),
-    u = RegExp("(?:(?!" + o + ").)(?:" + i + "|(?!" + o + ").)*(?:" + o + ")*$");
-function s(t, e) {
-    var r = e ? u.exec(t) : a.exec(t);
-    return r ? r[0] : t;
+    a = "\\s|(?![_])" + r,
+    o = RegExp("^(?:" + a + ")*(?:" + i + "|(?!" + a + ").)*(?:(?!" + a + ").)"),
+    s = RegExp("(?:(?!" + a + ").)(?:" + i + "|(?!" + a + ").)*(?:" + a + ")*$");
+function l(e, t) {
+    var n = t ? s.exec(e) : o.exec(e);
+    return n ? n[0] : e;
 }
-t.exports = {
-    getBackward: function (t) {
-        return s(t, !0);
+e.exports = {
+    getBackward: function (e) {
+        return l(e, !0);
     },
-    getForward: function (t) {
-        return s(t, !1);
+    getForward: function (e) {
+        return l(e, !1);
     },
 };

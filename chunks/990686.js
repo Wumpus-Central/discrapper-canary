@@ -1,17 +1,17 @@
-n.d(t, { i: () => s });
+n.d(t, { i: () => a });
 var r = n(442837),
-    i = n(430824),
-    l = n(944163),
-    o = n(981631);
-function s(e) {
+    l = n(430824),
+    i = n(944163),
+    s = n(981631);
+function a(e) {
     let { guildId: t } = e;
-    return (0, r.e7)([l.Z, i.Z], () => {
+    return (0, r.e7)([i.Z, l.Z], () => {
         var e;
-        let n = l.Z.get(t),
+        let n = i.Z.get(t),
             r = null == n ? void 0 : n.guild,
-            s = i.Z.getGuild(t),
-            a = null == s ? void 0 : s.verificationLevel,
+            a = l.Z.getGuild(t),
+            o = null == a ? void 0 : a.verificationLevel,
             c = null == r ? void 0 : r.verification_level;
-        return null != (e = null != a ? a : c) ? e : o.sFg.NONE;
+        return null != (e = null != o ? o : c) ? e : s.sFg.NONE;
     }, [t]);
 }

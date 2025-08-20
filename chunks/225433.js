@@ -1,20 +1,20 @@
 n.d(t, { Z: () => u });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    l = n(481060),
-    o = n(388032),
-    a = n(903443);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(388032),
+    l = n(903443);
 let c = Object.freeze({
-    DEFAULT: a.default,
-    FILLED: a.filled,
+    DEFAULT: l.default,
+    FILLED: l.filled,
 });
 function u(e) {
-    let { className: t, onClick: n, "aria-label": r, look: u = c.DEFAULT } = e;
-    return (0, i.jsx)(l.P3F, {
-        "aria-label": null != r ? r : o.intl.string(o.t.N86XcH),
-        className: s()(a.button, u, t),
+    let { className: t, onClick: n, "aria-label": i, look: u = c.DEFAULT } = e;
+    return (0, r.jsx)(o.P3F, {
+        "aria-label": null != i ? i : s.intl.string(s.t.N86XcH),
+        className: a()(l.button, u, t),
         onClick: n,
     });
 }

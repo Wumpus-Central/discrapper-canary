@@ -29,7 +29,7 @@ var r,
     y = n(388032),
     C = n(86477),
     N = n(197571);
-function I(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function I(e, t, n) {
         e
     );
 }
-class E extends (r = d.ZP.Store) {
+class I extends (r = d.ZP.Store) {
     getTemplate() {
         let e = _.Z.getProps().guild;
         if (null == e) return null;
@@ -57,10 +57,10 @@ class E extends (r = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            I(this, "name", ""),
-            I(this, "description", ""),
-            I(this, "error", null),
-            I(this, "reset", () => {
+            E(this, "name", ""),
+            E(this, "description", ""),
+            E(this, "error", null),
+            E(this, "reset", () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,16 +69,16 @@ class E extends (r = d.ZP.Store) {
                 } else (this.name = ""), (this.description = "");
                 this.emitChange();
             }),
-            I(this, "setName", (e) => {
+            E(this, "setName", (e) => {
                 (this.name = e), this.emitChange();
             }),
-            I(this, "setDescription", (e) => {
+            E(this, "setDescription", (e) => {
                 (this.description = e), this.emitChange();
             }),
-            I(this, "setError", (e) => {
+            E(this, "setError", (e) => {
                 (this.error = e), this.emitChange();
             }),
-            I(this, "save", async () => {
+            E(this, "save", async () => {
                 await x.Z.updateGuildTemplate(
                     _.Z.getProps().guild.id,
                     this.getTemplate().code,
@@ -89,8 +89,8 @@ class E extends (r = d.ZP.Store) {
             });
     }
 }
-I(E, "displayName", "GuildSettingsTemplateMetadataStore_");
-let S = new E(p.Z);
+E(I, "displayName", "GuildSettingsTemplateMetadataStore_");
+let S = new I(p.Z);
 function T() {
     let [e, t] = l.useState(!1),
         n = async () => {
@@ -506,7 +506,7 @@ function U(e) {
                                             }),
                                         )),
                                         r.forEach(function (t) {
-                                            I(e, t, n[t]);
+                                            E(e, t, n[t]);
                                         });
                                 }
                                 return e;

@@ -38,8 +38,8 @@ var r = n(951288),
     y = n(190287),
     C = n(465520),
     N = n(981631),
-    I = n(388032),
-    E = n(539981);
+    E = n(388032),
+    I = n(539981);
 let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     T = () => {
         let {
@@ -179,22 +179,22 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             },
             Y = [
                 {
-                    title: I.intl.string(I.t["/SWsHx"]),
+                    title: E.intl.string(E.t["/SWsHx"]),
                     items: [
                         {
-                            description: I.intl.string(I.t.DU8jFx),
+                            description: E.intl.string(E.t.DU8jFx),
                             completed: null !== c.discoverySplash && "" !== c.discoverySplash,
                         },
                         {
-                            description: I.intl.string(I.t.SW5OHx),
+                            description: E.intl.string(E.t.SW5OHx),
                             completed: null !== c.description && "" !== c.description,
                         },
                         {
-                            description: I.intl.string(I.t.m3b3WF),
+                            description: E.intl.string(E.t.m3b3WF),
                             completed: null !== Z.about && Z.about.length >= 300 && Z.about.length <= 2400,
                         },
                         {
-                            description: I.intl.string(I.t.qpx5MD),
+                            description: E.intl.string(E.t.qpx5MD),
                             completed:
                                 null !== Z.reasonsToJoin &&
                                 Z.reasonsToJoin.every(
@@ -214,39 +214,39 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                 (n[e] = t), U(n);
             };
         return (0, r.jsx)("div", {
-            className: E.settingsColumn,
+            className: I.settingsColumn,
             children: (0, r.jsx)("div", {
-                className: E.settingsContainer,
+                className: I.settingsContainer,
                 children: (0, r.jsx)(s.w0Z, {
-                    className: E.settingsScroller,
+                    className: I.settingsScroller,
                     children: (0, r.jsx)("main", {
                         ref: t,
-                        className: E.settingsContent,
+                        className: I.settingsContent,
                         children: (0, r.jsx)(s.JcV, {
                             containerRef: t,
                             children: (0, r.jsxs)("div", {
-                                className: E.container,
+                                className: I.container,
                                 children: [
                                     (0, r.jsxs)(s.hjN, {
-                                        className: E.mainContent,
+                                        className: I.mainContent,
                                         title: (0, r.jsxs)("div", {
                                             children: [
-                                                I.intl.string(I.t.kGlQGB),
+                                                E.intl.string(E.t.kGlQGB),
                                                 " ",
-                                                (0, r.jsx)(d.Z, { className: E.betaTag }),
+                                                (0, r.jsx)(d.Z, { className: I.betaTag }),
                                             ],
                                         }),
                                         tag: s.RB0.H1,
                                         children: [
                                             (0, r.jsxs)(s.R94, {
-                                                className: E.tabMainDescription,
+                                                className: I.tabMainDescription,
                                                 type: s.geA.DESCRIPTION,
                                                 children: [
-                                                    I.intl.format(I.t["+ScrMT"], {
+                                                    E.intl.format(E.t["+ScrMT"], {
                                                         discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT,
                                                     }),
                                                     " ",
-                                                    I.intl.format(I.t.T6WtKy, {
+                                                    E.intl.format(E.t.T6WtKy, {
                                                         learnMoreURL: x.Z.getArticleURL(N.BhN.SERVER_WEB_PAGES),
                                                     }),
                                                 ],
@@ -255,27 +255,27 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 if (!Z.isPublished || null == D) return;
                                                 let e = S + D;
                                                 return (0, r.jsxs)(s.hjN, {
-                                                    className: E.noDividerFormSection,
+                                                    className: I.noDividerFormSection,
                                                     children: [
                                                         (0, r.jsx)(s.vwX, {
-                                                            className: E.formTitle,
-                                                            children: I.intl.string(I.t.safBZ2),
+                                                            className: I.formTitle,
+                                                            children: E.intl.string(E.t.safBZ2),
                                                         }),
                                                         (0, r.jsx)(o.Z, { value: e }),
                                                         (0, r.jsx)("div", {
                                                             "data-button-hoisted-classname-wrapper": !0,
-                                                            className: E.viewPageButton,
+                                                            className: I.viewPageButton,
                                                             children: (0, r.jsx)(s.zxk, {
                                                                 variant: "primary",
                                                                 size: "sm",
-                                                                text: I.intl.string(I.t.NI8iGB),
+                                                                text: E.intl.string(E.t.NI8iGB),
                                                                 onClick: () => window.open(e),
                                                             }),
                                                         }),
                                                     ],
                                                 });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (() => {
                                                 if (null != c)
                                                     return (0, r.jsxs)(r.Fragment, {
@@ -283,13 +283,13 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             (0, r.jsxs)(s.hjN, {
                                                                 children: [
                                                                     (0, r.jsx)(s.vwX, {
-                                                                        className: E.formTitle,
-                                                                        children: I.intl.string(I.t.GjPpSk),
+                                                                        className: I.formTitle,
+                                                                        children: E.intl.string(E.t.GjPpSk),
                                                                     }),
                                                                     (0, r.jsx)(s.R94, {
                                                                         type: s.geA.DESCRIPTION,
-                                                                        className: E.description,
-                                                                        children: I.intl.string(I.t.MVXonJ),
+                                                                        className: I.description,
+                                                                        children: E.intl.string(E.t.MVXonJ),
                                                                     }),
                                                                 ],
                                                             }),
@@ -299,11 +299,11 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 isDisabled: !w,
                                                             }),
                                                             (0, r.jsxs)(s.hjN, {
-                                                                className: E.noDividerFormSection,
+                                                                className: I.noDividerFormSection,
                                                                 children: [
                                                                     (0, r.jsx)(s.vwX, {
-                                                                        className: E.formTitle,
-                                                                        children: I.intl.string(I.t.oOPlPD),
+                                                                        className: I.formTitle,
+                                                                        children: E.intl.string(E.t.oOPlPD),
                                                                     }),
                                                                     (0, r.jsx)(O.Z, {
                                                                         guild: c,
@@ -315,7 +315,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             (null == H ? void 0 : H.category) != null
                                                                 ? (0, r.jsx)(s.Text, {
                                                                       color: "text-danger",
-                                                                      className: E.error,
+                                                                      className: I.error,
                                                                       variant: "text-sm/normal",
                                                                       children: H.category,
                                                                   })
@@ -323,30 +323,30 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         ],
                                                     });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (() => {
                                                 if (null != c)
                                                     return (0, r.jsxs)(r.Fragment, {
                                                         children: [
                                                             (0, r.jsxs)(s.hjN, {
-                                                                className: E.twoColumnFormSection,
+                                                                className: I.twoColumnFormSection,
                                                                 children: [
                                                                     (0, r.jsxs)("div", {
                                                                         children: [
                                                                             (0, r.jsx)(s.vwX, {
-                                                                                className: E.formTitle,
-                                                                                children: I.intl.string(I.t["8bT/Cg"]),
+                                                                                className: I.formTitle,
+                                                                                children: E.intl.string(E.t["8bT/Cg"]),
                                                                             }),
                                                                             (0, r.jsx)(s.R94, {
                                                                                 type: s.geA.DESCRIPTION,
-                                                                                className: E.formDescription,
-                                                                                children: I.intl.string(I.t.WCWT7O),
+                                                                                className: I.formDescription,
+                                                                                children: E.intl.string(E.t.WCWT7O),
                                                                             }),
                                                                             (0, r.jsxs)(a.zx, {
                                                                                 size: a.zx.Sizes.SMALL,
                                                                                 color: a.zx.Colors.PRIMARY,
                                                                                 children: [
-                                                                                    I.intl.string(I.t.yG2pUl),
+                                                                                    E.intl.string(E.t.yG2pUl),
                                                                                     (0, r.jsx)(p.ZP, {
                                                                                         disabled: !w,
                                                                                         onChange: z,
@@ -365,8 +365,8 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                             }),
                                                                         disabled: !w,
                                                                         onChange: z,
-                                                                        hint: I.intl.string(I.t.uPvxqK),
-                                                                        imageClassName: E.imageUploaderInnerSquare,
+                                                                        hint: E.intl.string(E.t.uPvxqK),
+                                                                        imageClassName: I.imageUploaderInnerSquare,
                                                                         hideSize: !0,
                                                                     }),
                                                                 ],
@@ -381,21 +381,21 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         ],
                                                     });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (0, r.jsxs)(s.hjN, {
                                                 children: [
                                                     (0, r.jsx)(s.vwX, {
-                                                        className: E.formTitle,
-                                                        children: I.intl.string(I.t["RSfm+v"]),
+                                                        className: I.formTitle,
+                                                        children: E.intl.string(E.t["RSfm+v"]),
                                                     }),
                                                     (0, r.jsx)(s.R94, {
-                                                        className: E.description,
+                                                        className: I.description,
                                                         type: s.geA.DESCRIPTION,
-                                                        children: I.intl.string(I.t.IBi6h4),
+                                                        children: E.intl.string(E.t.IBi6h4),
                                                     }),
                                                     (0, r.jsx)(a.iS, {
                                                         value: null !== c.description ? c.description : "",
-                                                        placeholder: I.intl.string(I.t.rFa9Ul),
+                                                        placeholder: E.intl.string(E.t.rFa9Ul),
                                                         onChange: (e) => {
                                                             var t;
                                                             j.Z.updateGuild({
@@ -411,7 +411,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                     }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (() => {
                                                 if (null == Z) return null;
                                                 let e =
@@ -424,16 +424,16 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 return (0, r.jsxs)(s.hjN, {
                                                     children: [
                                                         (0, r.jsx)(s.vwX, {
-                                                            className: E.formTitle,
-                                                            children: I.intl.string(I.t.vUmXsb),
+                                                            className: I.formTitle,
+                                                            children: E.intl.string(E.t.vUmXsb),
                                                         }),
                                                         (0, r.jsx)(s.R94, {
                                                             type: s.geA.DESCRIPTION,
-                                                            className: E.description,
-                                                            children: I.intl.string(I.t.esnBnZ),
+                                                            className: I.description,
+                                                            children: E.intl.string(E.t.esnBnZ),
                                                         }),
                                                         (0, r.jsx)("div", {
-                                                            className: E.reasonToJoin,
+                                                            className: I.reasonToJoin,
                                                             children: (0, r.jsx)(y.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
@@ -451,27 +451,27 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                     ],
                                                 });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
                                                     (0, r.jsxs)(s.hjN, {
                                                         children: [
                                                             (0, r.jsx)(s.vwX, {
-                                                                className: E.formTitle,
-                                                                children: I.intl.string(I.t["lu+BmJ"]),
+                                                                className: I.formTitle,
+                                                                children: E.intl.string(E.t["lu+BmJ"]),
                                                             }),
                                                             (0, r.jsx)(s.R94, {
-                                                                className: E.description,
+                                                                className: I.description,
                                                                 type: s.geA.DESCRIPTION,
-                                                                children: I.intl.string(I.t.ozSi8v),
+                                                                children: E.intl.string(E.t.ozSi8v),
                                                             }),
                                                             (0, r.jsx)(
                                                                 a.iS,
                                                                 {
                                                                     showCharacterCount: !0,
-                                                                    className: E.textArea,
+                                                                    className: I.textArea,
                                                                     value: Z.about,
-                                                                    placeholder: I.intl.string(I.t.TduTbm),
+                                                                    placeholder: E.intl.string(E.t.TduTbm),
                                                                     onChange: (e) => {
                                                                         (0, m.mA)(c.id, e);
                                                                     },
@@ -494,17 +494,17 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         : null,
                                                 ],
                                             }),
-                                            (0, r.jsx)(s.$i$, { className: E.divider }),
+                                            (0, r.jsx)(s.$i$, { className: I.divider }),
                                             (0, r.jsxs)(s.hjN, {
                                                 children: [
                                                     (0, r.jsx)(s.vwX, {
-                                                        className: E.formTitle,
-                                                        children: I.intl.string(I.t.V5mNyc),
+                                                        className: I.formTitle,
+                                                        children: E.intl.string(E.t.V5mNyc),
                                                     }),
                                                     (0, r.jsx)(s.R94, {
-                                                        className: E.description,
+                                                        className: I.description,
                                                         type: s.geA.DESCRIPTION,
-                                                        children: I.intl.string(I.t.d3kA9f),
+                                                        children: E.intl.string(E.t.d3kA9f),
                                                     }),
                                                     Z.socialLinks.map((e, t) => {
                                                         let n = B[t],
@@ -513,7 +513,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         return (0, r.jsxs)(
                                                             "div",
                                                             {
-                                                                className: E.socialLinksContainer,
+                                                                className: I.socialLinksContainer,
                                                                 onMouseOver: () => K(t, !0),
                                                                 onFocus: () => K(t, !0),
                                                                 onMouseOut: () => K(t, !1),
@@ -521,8 +521,8 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 children: [
                                                                     (0, r.jsx)(s.q4e, {
                                                                         className: Z.isPublished
-                                                                            ? E.socialLinksDropdownMax
-                                                                            : E.socialLinksDropdownMin,
+                                                                            ? I.socialLinksDropdownMax
+                                                                            : I.socialLinksDropdownMin,
                                                                         options: ((e) => {
                                                                             let t = Object.entries(C.z)
                                                                                 .filter(
@@ -540,7 +540,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                       value: e,
                                                                                   });
                                                                         })(B[t]),
-                                                                        placeholder: I.intl.string(I.t.xSALIC),
+                                                                        placeholder: E.intl.string(E.t.xSALIC),
                                                                         value: B[t],
                                                                         onChange: (e) =>
                                                                             ((e, t) => {
@@ -577,7 +577,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         placeholder:
                                                                             null != l
                                                                                 ? void 0
-                                                                                : I.intl.string(I.t.Q6o4pK),
+                                                                                : E.intl.string(E.t.Q6o4pK),
                                                                         maxLength: 150,
                                                                         disabled: !w || null == B[t],
                                                                         fullWidth: !0,
@@ -585,8 +585,8 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         trailing: w
                                                                             ? {
                                                                                   icon: s.XHJ,
-                                                                                  "aria-label": I.intl.string(
-                                                                                      I.t.N86XcH,
+                                                                                  "aria-label": E.intl.string(
+                                                                                      E.t.N86XcH,
                                                                                   ),
                                                                                   onClick: () =>
                                                                                       ((e) => {
@@ -618,7 +618,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                     (0, r.jsx)(s.zxk, {
                                                         variant: "secondary",
                                                         size: "sm",
-                                                        text: I.intl.string(I.t.QvovjY),
+                                                        text: E.intl.string(E.t.QvovjY),
                                                         onClick: () => {
                                                             if (Z.socialLinks.length < 9) {
                                                                 let e = [...Z.socialLinks];
@@ -632,22 +632,22 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                             Z.isPublished &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [
-                                                        (0, r.jsx)(s.$i$, { className: E.divider }),
+                                                        (0, r.jsx)(s.$i$, { className: I.divider }),
                                                         (0, r.jsxs)(s.hjN, {
                                                             children: [
                                                                 (0, r.jsx)(s.vwX, {
-                                                                    className: E.formTitle,
-                                                                    children: I.intl.string(I.t["5yF7e3"]),
+                                                                    className: I.formTitle,
+                                                                    children: E.intl.string(E.t["5yF7e3"]),
                                                                 }),
                                                                 (0, r.jsx)(s.R94, {
-                                                                    className: E.description,
+                                                                    className: I.description,
                                                                     type: s.geA.DESCRIPTION,
-                                                                    children: I.intl.string(I.t.eOFvqa),
+                                                                    children: E.intl.string(E.t.eOFvqa),
                                                                 }),
                                                                 (0, r.jsx)(s.zxk, {
                                                                     variant: "critical-primary",
                                                                     size: "sm",
-                                                                    text: I.intl.string(I.t["DCHd/P"]),
+                                                                    text: E.intl.string(E.t["DCHd/P"]),
                                                                     onClick: () => W(!1),
                                                                     disabled: !w,
                                                                 }),
@@ -666,11 +666,11 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                     }),
                                     !Z.isPublished &&
                                         (0, r.jsx)("div", {
-                                            className: E.checklist,
+                                            className: I.checklist,
                                             children: (0, r.jsx)(u.Z, {
-                                                title: I.intl.string(I.t["2kCyn5"]),
+                                                title: E.intl.string(E.t["2kCyn5"]),
                                                 children: Y,
-                                                buttonLabel: I.intl.string(I.t.tVK6S0),
+                                                buttonLabel: E.intl.string(E.t.tVK6S0),
                                                 buttonCallback: () => W(!0),
                                                 disabled: !w || !k,
                                             }),

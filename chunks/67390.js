@@ -1,24 +1,25 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
+    a = n.n(i),
     o = n(410030),
-    a = n(231338),
-    s = n(388032),
+    s = n(231338),
+    l = n(388032),
     c = n(110563);
-function u(e) {
+let u =
+        "https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png",
+    d =
+        "https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png";
+function f(e) {
     let { className: t, size: n = "md" } = e,
-        i =
-            (0, o.ZP)() === a.BR.LIGHT
-                ? "https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png"
-                : "https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png";
+        i = (0, o.ZP)() === s.BR.LIGHT ? d : u;
     return (0, r.jsx)("img", {
-        className: l()(t, {
+        className: a()(t, {
             [c.sm]: "sm" === n,
             [c.md]: "md" === n,
         }),
         src: i,
-        alt: s.intl.string(s.t.htEhYm),
+        alt: l.intl.string(l.t.htEhYm),
     });
 }

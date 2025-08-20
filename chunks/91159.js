@@ -1,9 +1,9 @@
 n.d(t, {
     A_: () => T,
-    Ok: () => C,
+    Ok: () => N,
     U4: () => S,
     Ye: () => h.Z,
-    ZJ: () => N,
+    ZJ: () => C,
     q: () => A,
 }),
     n(997841);
@@ -109,7 +109,7 @@ function S() {
 function A() {
     u.default.track(g.rMx.OPEN_POPOUT, { type: "Active Threads Popout" });
 }
-function N(e, t) {
+function C(e, t) {
     var n, r;
     let i = (0, s.K)(e);
     if (null == i) return;
@@ -146,7 +146,7 @@ function N(e, t) {
         });
     u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, A);
 }
-let C = (e) => {
+let N = (e) => {
     var t, n;
     let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
         o = null != r ? _.default.extractTimestamp(r) : null,

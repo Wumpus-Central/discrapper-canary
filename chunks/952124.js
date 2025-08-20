@@ -50,9 +50,9 @@ function v(e) {
         I = i.useRef(null),
         { trackUserProfileAction: T } = (0, m.KZ)(),
         { analyticsLocations: S, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        N = c.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
-        C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
-        R = null == C ? void 0 : C.application,
+        C = c.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
+        N = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
+        R = null == N ? void 0 : N.application,
         P = (0, f.Z)({
             user: t,
             application: null != R ? R : void 0,
@@ -96,7 +96,7 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        L = (0, h.Z)({
+        x = (0, h.Z)({
             user: t,
             guildId: n,
             location: A,
@@ -107,7 +107,7 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        x = (0, d.Z)({
+        L = (0, d.Z)({
             id: null == R ? void 0 : R.id,
             label: b.intl.string(b.t["+NP/b2"]),
             onSuccess: () =>
@@ -116,10 +116,10 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        M = [
+        j = [
             [y],
-            N ? [P] : [],
-            [D, w, L],
+            C ? [P] : [],
+            [D, w, x],
             [
                 (0, u.Z)({
                     application: R,
@@ -130,10 +130,10 @@ function v(e) {
                             analyticsLocations: S,
                         }),
                 }),
-                x,
+                L,
             ],
         ];
-    return M.every((e) => e.every((e) => null == e))
+    return j.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(o.yRy, {
               targetElementRef: I,
@@ -144,7 +144,7 @@ function v(e) {
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": b.intl.string(b.t.AXIHpa),
-                      children: M.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
+                      children: j.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>

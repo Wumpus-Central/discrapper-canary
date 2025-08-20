@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => X,
-    default: () => B,
+    S: () => B,
+    default: () => X,
 });
 var r = n(951288);
 n(647438);
@@ -30,8 +30,8 @@ var i = n(374470),
     T = n(759875),
     w = n(168405),
     I = n(536639),
-    A = n(720904),
-    N = n(88791),
+    N = n(720904),
+    A = n(88791),
     x = n(385302),
     D = n(873699),
     M = n(134323),
@@ -44,7 +44,7 @@ var i = n(374470),
     F = n(481300),
     H = n(975368),
     z = n(388032);
-function B(e) {
+function X(e) {
     var t, n;
     let l,
         o,
@@ -82,7 +82,7 @@ function B(e) {
     let P = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : "";
     return (0, r.jsx)(c.Gt, {
         value: h,
-        children: X({
+        children: B({
             message: g,
             channel: f,
             mediaItem: p,
@@ -104,7 +104,7 @@ function B(e) {
         }),
     });
 }
-function X(e) {
+function B(e) {
     let {
             message: t,
             channel: n,
@@ -112,8 +112,8 @@ function X(e) {
             textSelection: a,
             favoriteableType: s,
             favoriteableId: c,
-            favoriteableName: B,
-            itemHref: X,
+            favoriteableName: X,
+            itemHref: B,
             itemSrc: K,
             itemSafeSrc: W,
             itemTextContent: q,
@@ -127,18 +127,18 @@ function X(e) {
         } = e,
         en = (0, d.Z)(a),
         er = (0, b.Z)(a),
-        ei = (0, A.Z)(t, n),
+        ei = (0, N.Z)(t, n),
         el = (0, v.Z)(t, n),
         ea = (0, _.Z)(t, n),
         eo = (0, I.Z)(t, n),
         es = (0, Z.Z)({
             type: s,
             id: c,
-            name: B,
+            name: X,
         }),
         ec = (0, R.Z)(t, n),
         eu = (0, w.Z)(t, n),
-        ed = (0, N.Z)(t),
+        ed = (0, A.Z)(t),
         ef = (0, j.Z)(t, n),
         eg = (0, S.Z)(t, n),
         eb = (0, x.Z)(t, n),
@@ -148,7 +148,7 @@ function X(e) {
         em = (0, C.wY)(t),
         eh = (0, C.eH)(t),
         ev = (0, L.Z)(t, n),
-        ej = (0, g.Z)(null != X ? X : K, q, t, { shouldHideMediaOptions: et }),
+        ej = (0, g.Z)(null != B ? B : K, q, t, { shouldHideMediaOptions: et }),
         eS = (0, f.Z)(W, t, {
             shouldHideMediaOptions: et,
             contentType: null == i ? void 0 : i.contentType,
@@ -165,8 +165,8 @@ function X(e) {
         eT = (0, k.Z)(t, n),
         ew = (0, y.Z)(a, n.getGuildId()),
         eI = (0, m.Z)(t),
-        eA = (0, E.Z)(t),
-        eN = (0, G.Z)(t, n),
+        eN = (0, E.Z)(t),
+        eA = (0, G.Z)(t, n),
         ex = (0, H.Z)(t),
         eD = (0, h.Z)(t, n),
         eM = (0, O.Z)({
@@ -193,7 +193,7 @@ function X(e) {
                 children: [ea, e_, eZ, eT],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [eA, eN, eo, eI, eM, ec, eu, ef, eg, ev, eR, eC],
+                children: [eN, eA, eo, eI, eM, ec, eu, ef, eg, ev, eR, eC],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [ep, eb, eO, V && ey, V && eh, em],

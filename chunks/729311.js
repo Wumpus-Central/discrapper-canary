@@ -26,8 +26,8 @@ var r = n(951288),
     y = n(868814),
     C = n(974513),
     N = n(2348),
-    I = n(353890),
-    E = n(716130),
+    E = n(353890),
+    I = n(716130),
     S = n(388032),
     T = n(868893),
     P = n(430864);
@@ -331,7 +331,7 @@ function R(e) {
                                         (0, r.jsx)("div", {
                                             ref: m,
                                             className: T.advancedModeQuestions,
-                                            children: (0, r.jsx)(E.Z, {
+                                            children: (0, r.jsx)(I.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
                                                 includeCount: !0,
@@ -342,7 +342,7 @@ function R(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(E.Z, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != m.current && m.current.scrollIntoView({ behavior: "smooth" });

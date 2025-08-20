@@ -1,17 +1,30 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
-    a = n(300284),
-    o = n(314897),
-    c = n(271383),
-    s = n(715903),
+    a = n(481060),
+    o = n(300284),
+    s = n(314897),
+    l = n(271383),
+    c = n(715903),
     u = n(295474),
     d = n(372897),
-    _ = n(526761),
-    E = n(388032);
-function I(e) {
+    f = n(526761),
+    _ = n(388032);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -22,63 +35,54 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e) {
+function m(e) {
     let { guildId: t, analyticsLocations: n, analyticsLocation: i } = e,
-        [a, o] = (0, u.ww)({
+        [o, s] = (0, u.ww)({
             guildId: t,
             analyticsLocations: n,
             analyticsLocation: i,
             openWithoutBackstack: !0,
         }),
-        c = o ? E.intl.string(E.t["6ndMcn"]) : E.intl.string(E.t["0eiu6O"]),
-        s = o ? E.intl.string(E.t.S09nw8) : E.intl.string(E.t.tEttXV);
-    return (0, r.jsxs)(l.qXd, {
-        color: l.DM8.DANGER,
+        l = s ? _.intl.string(_.t["6ndMcn"]) : _.intl.string(_.t["0eiu6O"]),
+        c = s ? _.intl.string(_.t.S09nw8) : _.intl.string(_.t.tEttXV);
+    return (0, r.jsxs)(a.qXd, {
+        color: a.DM8.DANGER,
         children: [
-            c,
-            (0, r.jsx)(l.EyT, {
-                onClick: a,
-                children: s,
+            l,
+            (0, r.jsx)(a.EyT, {
+                onClick: o,
+                children: c,
             }),
         ],
     });
 }
-function O() {
-    let e = (0, a.Z)({ scrollPosition: _.Y_.GUILD_TAG });
-    return (0, r.jsxs)(l.qXd, {
-        color: l.DM8.DANGER,
+function g() {
+    let e = (0, o.Z)({ scrollPosition: f.Y_.GUILD_TAG });
+    return (0, r.jsxs)(a.qXd, {
+        color: a.DM8.DANGER,
         children: [
-            E.intl.string(E.t.ZqlecX),
-            (0, r.jsx)(l.EyT, {
+            _.intl.string(_.t.ZqlecX),
+            (0, r.jsx)(a.EyT, {
                 onClick: e,
-                children: E.intl.string(E.t.SJehVV),
+                children: _.intl.string(_.t.SJehVV),
             }),
         ],
     });
 }
-function p(e) {
-    let t = (0, i.e7)([o.default, c.ZP], () => {
+function E(e) {
+    let t = (0, i.e7)([s.default, l.ZP], () => {
         if (null == e.guildId) return new Set();
-        let t = o.default.getId();
-        return (0, s.no)(c.ZP.getMember(e.guildId, t));
+        let t = s.default.getId();
+        return (0, c.no)(l.ZP.getMember(e.guildId, t));
     }, [e.guildId]);
     return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO)
-        ? (0, r.jsx)(T, I({}, e))
+        ? (0, r.jsx)(m, h({}, e))
         : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, r.jsx)(O, {})
-          : (0, r.jsx)(T, I({}, e));
+          ? (0, r.jsx)(g, {})
+          : (0, r.jsx)(m, h({}, e));
 }

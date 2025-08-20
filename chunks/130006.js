@@ -25,12 +25,12 @@ var r = n(98405),
     };
 e.exports = function (e, t, n, o, p, m, A) {
     l(n, t, o);
-    var N,
-        C,
+    var C,
+        N,
         R,
         P = function (e) {
-            if (e === p && M) return M;
-            if (!y && e && e in L) return L[e];
+            if (e === p && j) return j;
+            if (!y && e && e in x) return x[e];
             switch (e) {
                 case v:
                 case I:
@@ -45,36 +45,36 @@ e.exports = function (e, t, n, o, p, m, A) {
         },
         w = t + " Iterator",
         D = !1,
-        L = e.prototype,
-        x = L[O] || L["@@iterator"] || (p && L[p]),
-        M = (!y && x) || P(p),
-        k = ("Array" === t && L.entries) || x;
+        x = e.prototype,
+        L = x[O] || x["@@iterator"] || (p && x[p]),
+        j = (!y && L) || P(p),
+        M = ("Array" === t && x.entries) || L;
     if (
-        (k &&
-            (N = c(k.call(new e()))) !== Object.prototype &&
-            N.next &&
-            (!a && c(N) !== b && (u ? u(N, b) : s(N[O]) || _(N, O, S)), d(N, w, !0, !0), a && (h[w] = S)),
+        (M &&
+            (C = c(M.call(new e()))) !== Object.prototype &&
+            C.next &&
+            (!a && c(C) !== b && (u ? u(C, b) : s(C[O]) || _(C, O, S)), d(C, w, !0, !0), a && (h[w] = S)),
         g &&
             p === I &&
-            x &&
-            x.name !== I &&
+            L &&
+            L.name !== I &&
             (!a && E
-                ? f(L, "name", I)
+                ? f(x, "name", I)
                 : ((D = !0),
-                  (M = function () {
-                      return i(x, this);
+                  (j = function () {
+                      return i(L, this);
                   }))),
         p)
     )
         if (
-            ((C = {
+            ((N = {
                 values: P(I),
-                keys: m ? M : P(v),
+                keys: m ? j : P(v),
                 entries: P(T),
             }),
             A)
         )
-            for (R in C) (!y && !D && R in L) || _(L, R, C[R]);
+            for (R in N) (!y && !D && R in x) || _(x, R, N[R]);
         else
             r(
                 {
@@ -82,7 +82,7 @@ e.exports = function (e, t, n, o, p, m, A) {
                     proto: !0,
                     forced: y || D,
                 },
-                C,
+                N,
             );
-    return (!a || A) && L[O] !== M && _(L, O, M, { name: p }), (h[t] = M), C;
+    return (!a || A) && x[O] !== j && _(x, O, j, { name: p }), (h[t] = j), N;
 };

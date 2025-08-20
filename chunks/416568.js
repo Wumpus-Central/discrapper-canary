@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(493773),
     _ = n(209613),
     y = n(100527),
-    v = n(906732),
-    j = n(358221),
+    j = n(906732),
+    v = n(358221),
     C = n(706590),
-    E = n(940777),
-    x = n(113544),
+    x = n(940777),
+    E = n(113544),
     S = n(41776),
-    P = n(821020),
-    I = n(770858),
+    I = n(821020),
+    P = n(770858),
     N = n(905423),
     w = n(346356),
     Z = n(431286),
@@ -32,8 +32,8 @@ var r = n(951288),
     A = n(478738),
     R = n(271383),
     D = n(430824),
-    L = n(771845),
-    M = n(358085),
+    M = n(771845),
+    L = n(358085),
     k = n(727258),
     U = n(605951),
     G = n(474109),
@@ -82,7 +82,7 @@ function ei(e) {
     }
     return e;
 }
-let el = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
+let el = (0, L.isWindows)() ? 4 : 12 * !(0, L.isMac)();
 function eo(e) {
     return e.startsWith(ee.Z5c.GUILD_DISCOVERY) || e.startsWith(ee.Z5c.GLOBAL_DISCOVERY);
 }
@@ -225,7 +225,7 @@ class ea {
             (this.setNodeRef = (e, t) => {
                 this.nodeRefs[e] = t;
             }),
-            (0, x.zb)(this.getVisibleGuildIds);
+            (0, E.zb)(this.getVisibleGuildIds);
     }
 }
 function es(e) {
@@ -235,12 +235,12 @@ function es(e) {
         a = o.startsWith(ee.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB("")),
         s = (0, p.Wu)([D.Z, R.ZP], () => D.Z.getGuildIds().filter((e) => R.ZP.isCurrentUserGuest(e))),
         u = i.concat(s),
-        { entrypoint: d } = (0, P.pN)({ location: "GuildsBar" });
+        { entrypoint: d } = (0, I.pN)({ location: "GuildsBar" });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(W.u, {}),
-            d === P.u3.SERVER_RAIL_TOP && (0, r.jsx)(I.Z, {}),
-            l ? (0, r.jsx)(E.Z, {}) : null,
+            d === I.u3.SERVER_RAIL_TOP && (0, r.jsx)(P.Z, {}),
+            l ? (0, r.jsx)(x.Z, {}) : null,
             (0, r.jsx)(K.Z, { isOnHubVerificationRoute: a }),
             !t && (0, r.jsx)(B.Z, {}),
             u.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)),
@@ -250,8 +250,8 @@ function es(e) {
 }
 function ec(e) {
     let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: i, renderTreeNode: l, lurkingGuildIds: o } = e,
-        [a] = (0, p.Wu)([L.ZP], () => {
-            let e = L.ZP.getGuildsTree();
+        [a] = (0, p.Wu)([M.ZP], () => {
+            let e = M.ZP.getGuildsTree();
             return [e, e.version];
         }),
         s = a.getRoots(),
@@ -288,17 +288,17 @@ function ec(e) {
     });
 }
 function eu(e) {
-    let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
-        [s] = (0, p.Wu)([L.ZP], () => {
-            let e = L.ZP.getGuildsTree();
+    let { disableAppDownload: t = L.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
+        [s] = (0, p.Wu)([M.ZP], () => {
+            let e = M.ZP.getGuildsTree();
             return [e, e.version];
         }),
         d = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         f = i.useMemo(() => (n ? [] : d), [d, n]),
-        b = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
+        b = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext()),
         [_, C] = i.useState(!1),
-        E = i.useCallback(() => C(!0), []),
-        x = i.useCallback(() => C(!1), []),
+        x = i.useCallback(() => C(!0), []),
+        E = i.useCallback(() => C(!1), []),
         A = i.useRef(!1),
         [R] = i.useState(() => new h.V7()),
         D = i.useRef(null),
@@ -362,7 +362,7 @@ function eu(e) {
         ),
         [er],
     );
-    let { analyticsLocations: eu } = (0, v.ZP)(y.Z.GUILDS_LIST),
+    let { analyticsLocations: eu } = (0, j.ZP)(y.Z.GUILDS_LIST),
         { pathname: ed } = (0, c.TH)(),
         ep = eo(ed);
     (0, O.Ng)(() => {
@@ -405,8 +405,8 @@ function eu(e) {
                             setNodeRef: er.setNodeRef,
                             draggable: !0,
                             sorting: _,
-                            onDragStart: E,
-                            onDragEnd: x,
+                            onDragStart: x,
+                            onDragEnd: E,
                             renderChildNode: e,
                             "aria-setsize": i,
                             "aria-posinset": void 0 !== n ? n + 1 : void 0,
@@ -421,8 +421,8 @@ function eu(e) {
                             setRef: er.setNodeRef,
                             draggable: !0,
                             sorting: _,
-                            onDragStart: E,
-                            onDragEnd: x,
+                            onDragStart: x,
+                            onDragEnd: E,
                             "aria-setsize": i,
                             "aria-posinset": void 0 !== n ? n + 1 : void 0,
                         },
@@ -432,7 +432,7 @@ function eu(e) {
                     return null;
             }
         },
-        [E, x, _, er.setNodeRef],
+        [x, E, _, er.setNodeRef],
     );
     (0, Z.t)();
     let eg = i.useRef(null),
@@ -457,9 +457,9 @@ function eu(e) {
             isGuildBarScrolling: K,
             renderDiscoveryButton: em,
         }),
-        { entrypoint: eO } = (0, P.pN)({ location: "GuildsBar" }),
-        e_ = eO === P.u3.SERVER_RAIL_BOTTOM;
-    return (0, r.jsx)(v.Gt, {
+        { entrypoint: eO } = (0, I.pN)({ location: "GuildsBar" }),
+        e_ = eO === I.u3.SERVER_RAIL_BOTTOM;
+    return (0, r.jsx)(j.Gt, {
         value: eu,
         children: (0, r.jsx)(m.f6W, {
             theme: a,
@@ -516,7 +516,7 @@ function eu(e) {
                                                         (0, r.jsx)(Y.Z, { fullWidth: !0 }),
                                                         (0, r.jsx)("div", {
                                                             className: en.bottomRailNotifCenterButton,
-                                                            children: (0, r.jsx)(I.Z, {}),
+                                                            children: (0, r.jsx)(P.Z, {}),
                                                         }),
                                                     ],
                                                 }),

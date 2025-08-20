@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-let C = (e, t) => (0, r.jsx)(b.G0, { columns: e }, t);
+let N = (e, t) => (0, r.jsx)(b.G0, { columns: e }, t);
 function R(e) {
     var t;
     let n = l().sample(l().values(e));
@@ -197,7 +197,7 @@ class P extends i.PureComponent {
                     ? (0, r.jsx)(b.u$, {
                           columns: e,
                           width: t,
-                          renderColumn: C,
+                          renderColumn: N,
                       })
                     : (0, r.jsx)(f.GMG, {
                           ref: this._masonryRef,
@@ -228,7 +228,7 @@ function w(e) {
         i = (0, y.PY)();
     return (0, r.jsx)(
         P,
-        N(S({}, e, i), {
+        C(S({}, e, i), {
             trendingCategories: t,
             favorites: n,
         }),

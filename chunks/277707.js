@@ -1,16 +1,16 @@
 n.d(t, { e: () => i });
 var r = n(388032);
 function i(e) {
-    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: l, isStage: o, isStream: a } = e;
+    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: a, isStage: o, isStream: s } = e;
     if (t)
         if (i)
-            if (a) return r.intl.string(r.t.N85DCg);
+            if (s) return r.intl.string(r.t.N85DCg);
             else if (o) return r.intl.string(r.t.TJQcNj);
-            else if (l) return r.intl.string(r.t.mJyBio);
+            else if (a) return r.intl.string(r.t.mJyBio);
             else return r.intl.string(r.t.lxTgPz);
-        else if (a) return r.intl.string(r.t.Mnvc3N);
+        else if (s) return r.intl.string(r.t.Mnvc3N);
         else if (o) return r.intl.string(r.t.FdPNr6);
-        else if (l) return r.intl.string(r.t.f4gmra);
+        else if (a) return r.intl.string(r.t.f4gmra);
         else return r.intl.string(r.t.H39rER);
     return n
         ? i

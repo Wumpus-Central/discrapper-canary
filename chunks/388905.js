@@ -1,18 +1,18 @@
 n.d(t, {
     DK: () => T,
     Dx: () => I,
-    EJ: () => x,
+    EJ: () => L,
     Ee: () => S,
-    Hh: () => L,
+    Hh: () => x,
     II: () => P,
     MC: () => R,
-    Vj: () => C,
-    ZP: () => j,
+    Vj: () => N,
+    ZP: () => k,
     gO: () => w,
     i_: () => D,
-    jQ: () => M,
-    qE: () => N,
-    v6: () => k,
+    jQ: () => j,
+    qE: () => C,
+    v6: () => M,
     zx: () => A,
 }),
     n(953529),
@@ -133,7 +133,7 @@ let I = (e) => {
         );
     };
 (A.Looks = o.zx.Looks), (A.Colors = o.zx.Colors), (A.Sizes = o.zx.Sizes);
-let N = (e) => {
+let C = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(v, {
             src: n,
@@ -142,7 +142,7 @@ let N = (e) => {
             "aria-hidden": !0,
         });
     },
-    C = (e) => {
+    N = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
         return (0, r.jsx)(f.Z, {
             active: !0,
@@ -152,7 +152,7 @@ let N = (e) => {
             className: a,
         });
     };
-C.Sizes = f.Z.Sizes;
+N.Sizes = f.Z.Sizes;
 let R = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(v, {
@@ -233,7 +233,7 @@ let P = (e) => {
             children: n,
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { className: t } = e;
         return (0, r.jsx)(u.Z, {
             direction: u.Z.Direction.VERTICAL,
@@ -242,7 +242,7 @@ let P = (e) => {
             children: (0, r.jsx)(c.Z, { className: g.spinnerVideo }),
         });
     },
-    x = (e) => {
+    L = (e) => {
         let t,
             { online: n, total: i, className: o, flat: l, textClassName: c } = e;
         return null == i
@@ -283,7 +283,7 @@ let P = (e) => {
                   ],
               }));
     },
-    M = (e) => {
+    j = (e) => {
         let { user: t } = e;
         return null == t
             ? null
@@ -296,7 +296,7 @@ let P = (e) => {
                           color: "header-secondary",
                           children: m.intl.string(m.t["/8WWvL"]),
                       }),
-                      (0, r.jsx)(N, {
+                      (0, r.jsx)(C, {
                           className: g.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.EFr.SIZE_24,
@@ -312,7 +312,7 @@ let P = (e) => {
                   ],
               });
     },
-    k = (e) => {
+    M = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(w, {
             className: t,
@@ -330,7 +330,7 @@ let P = (e) => {
             ],
         });
     },
-    j = (e) => {
+    k = (e) => {
         let {
             className: t,
             contentClassName: n,

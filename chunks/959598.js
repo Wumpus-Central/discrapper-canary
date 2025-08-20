@@ -14,7 +14,7 @@ var r = {
     "./gg-sans/ggsans-400-normal.woff2": ["776764"],
     "./sinistre/sinistre-400-normal.woff2": ["905386"],
     "./gg-sans/ggsans-600-semibold.woff2": ["151859"],
-    "./noto-sans/notosans-600-semibold.woff2": ["381176"],
+    "./noto-sans/notosans-600-semibold.woff2": ["81972"],
     "./abc-ginto-normal/abcgintonormal-500-mediumitalic.woff2": ["455480"],
     "./abc-ginto-normal/abcgintonormal-800-extrabold.woff2": ["131883"],
     "./gg-mono/ggmono-600-semibold.woff2": ["750499", "44999"],

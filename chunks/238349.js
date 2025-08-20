@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    U: () => V,
+    U: () => Z,
     Z: () => Q,
 }),
     n(388685),
@@ -40,30 +40,30 @@ let O = [],
     T = new Set(),
     S = l.z.LATEST_ACTIVITY,
     A = s.z.MATCH_SOME,
-    N = 0,
-    C = [],
+    C = 0,
+    N = [],
     R = !1,
     P = [],
     w = o().chain(O),
     D = o().chain(O),
-    L = new Set(),
-    x = new Set();
-function M(e) {
+    x = new Set(),
+    L = new Set();
+function j(e) {
     var t;
     return null != (t = m.ZP.lastMessageId(e)) ? t : e;
 }
-function k(e) {
+function M(e) {
     let t = _.Z.getCount(e);
     return null === t || 0 === t;
 }
-function j(e) {
+function k(e) {
     return function (t, n) {
         return (0, b.yv)(t)
             ? -1
             : (0, b.yv)(n)
               ? 1
               : e === l.z.LATEST_ACTIVITY
-                ? E.default.compare(M(n), M(t))
+                ? E.default.compare(j(n), j(t))
                 : E.default.compare(n, t);
     };
 }
@@ -78,26 +78,26 @@ function U(e, t) {
     };
 }
 function G() {
-    (C = []),
+    (N = []),
         (r = null),
         (I = null),
         (T = new Set()),
         (S = l.z.LATEST_ACTIVITY),
         (A = s.z.MATCH_SOME),
-        (N = 0),
+        (C = 0),
         (P = []),
         (w = o().chain(O)),
         (D = o().chain(O)),
-        x.clear(),
-        L.clear();
+        L.clear(),
+        x.clear();
 }
 function B() {
     var e;
     let t = g.Z.getChannelId();
     if (null == t || !(null == (e = h.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return G(), !1;
-    F({ refreshThreadIds: !0 });
+    V({ refreshThreadIds: !0 });
 }
-function V(e) {
+function Z(e) {
     let t = h.Z.getChannel(e);
     return null == t
         ? []
@@ -106,9 +106,9 @@ function V(e) {
                   let { id: t } = e;
                   return t;
               })
-              .sort(j(S));
+              .sort(k(S));
 }
-function F(e) {
+function V(e) {
     let t = h.Z.getChannel(I);
     if (null == t) return;
     (null == e ? void 0 : e.refreshThreadIds) &&
@@ -116,42 +116,42 @@ function F(e) {
             let { id: t } = e;
             return t;
         })),
-        (N = 0),
+        (C = 0),
         (R = !0)),
-        0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
-        0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
+        0 !== x.size && ((P = P.filter((e) => !x.has(e))), x.clear()),
+        0 !== L.size && ((P = Array.from(new Set([...P, ...L]))), L.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
-            ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE))));
+            ((D = o().chain(P).sort(k(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(k(l.z.CREATION_DATE))));
     let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
-        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
+        i = (N = 0 === T.size ? n : n.filter(U(T, A))).find((e) => M(e));
     r = null == i ? null : i;
 }
-function Z(e) {
+function F(e) {
     var t;
     let { guildId: n } = e;
     if (null == I || n !== (null == (t = h.Z.getChannel(I)) ? void 0 : t.guild_id)) return !1;
-    F({ refreshThreadIds: !0 });
+    V({ refreshThreadIds: !0 });
 }
 function H(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
     let n = (0, b.yv)(t.id),
-        r = x.has(t.id);
-    if (n && !r) x.add(t.id), F({ sortThreadIds: !0 });
+        r = L.has(t.id);
+    if (n && !r) L.add(t.id), V({ sortThreadIds: !0 });
     else {
         if (n || !r) return !1;
-        x.delete(t.id), F({ sortThreadIds: !0 });
+        L.delete(t.id), V({ sortThreadIds: !0 });
     }
 }
 function Y(e) {
     let { channel: t, isNewlyCreated: n } = e;
     if (null == t.parent_id || t.parent_id !== I || !n) return !1;
-    t.ownerId !== p.default.getId() ? N++ : (v = t.id);
+    t.ownerId !== p.default.getId() ? C++ : (v = t.id);
 }
 function W(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
-    L.add(t.id), F({ sortThreadIds: !0 });
+    x.add(t.id), V({ sortThreadIds: !0 });
 }
 function K(e) {
     let { channel: t } = e;
@@ -161,7 +161,7 @@ function K(e) {
 function z(e) {
     let { channelId: t } = e;
     if (null == t || t !== I) return !1;
-    F({ refreshThreadIds: !0 });
+    V({ refreshThreadIds: !0 });
 }
 function q(e) {
     let { channelId: t } = e;
@@ -173,7 +173,7 @@ class X extends (i = u.ZP.Store) {
         this.waitFor(h.Z, f.Z, g.Z, m.ZP);
     }
     getNewThreadCount() {
-        return N;
+        return C;
     }
     getCanAckThreads() {
         return R;
@@ -188,12 +188,12 @@ class X extends (i = u.ZP.Store) {
             (T = n),
             (S = t),
             (A = r),
-            i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(),
-            C
+            i ? V({ refreshThreadIds: !0 }) : o ? V({ sortThreadIds: !0 }) : (a || s) && V(),
+            N
         );
     }
     getCurrentThreadIds() {
-        return C;
+        return N;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
         let e = v;
@@ -210,7 +210,7 @@ let Q = new X(d.Z, {
     GUILD_CREATE: B,
     CHANNEL_SELECT: B,
     CHANNEL_DELETE: K,
-    THREAD_LIST_SYNC: Z,
+    THREAD_LIST_SYNC: F,
     THREAD_CREATE: Y,
     THREAD_UPDATE: H,
     THREAD_DELETE: W,

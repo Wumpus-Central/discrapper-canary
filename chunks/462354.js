@@ -1,8 +1,8 @@
 n.d(t, {
-    Az: () => r,
-    JN: () => s,
+    Az: () => i,
+    JN: () => a,
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-07_voice_activity_notifications",
     label: "Voice Activity Notifications",
@@ -30,9 +30,9 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function r(e) {
-    return i.useExperiment({ location: e }, { autoTrackExposure: !1 });
+function i(e) {
+    return r.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }
-function s(e) {
-    return i.getCurrentConfig({ location: e }).enabled;
+function a(e) {
+    return r.getCurrentConfig({ location: e }).enabled;
 }

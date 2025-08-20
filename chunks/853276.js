@@ -161,11 +161,11 @@ function f(e) {
         _ = i.useRef(null),
         [O, y] = i.useState(!1),
         { ref: C, width: N = 0 } = (0, c.ZP)(O),
-        { ref: I, width: E = 0 } = (0, c.ZP)(O),
+        { ref: E, width: I = 0 } = (0, c.ZP)(O),
         S = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
-        R = N > E ? N : E;
+        R = N > I ? N : I;
     i.useEffect(() => {
         j
             ? (P(!0),
@@ -226,7 +226,7 @@ function f(e) {
     return (0, r.jsx)("div", {
         className: m.chipletFlexContainer,
         children: (0, r.jsxs)("div", {
-            ref: I,
+            ref: E,
             className: a()(m.chipletContainer, {
                 [m.isEditing]: O,
                 [m.smallBlink]: !O && !S,

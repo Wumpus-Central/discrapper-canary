@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -50,14 +50,14 @@ function A(e) {
         defaultComponent: (0, r.jsx)(s, { className: I.channelIcon }),
     });
 }
-function N(e) {
+function C(e) {
     var t, n, a, d;
     let { guildId: f, channel: _, className: p } = e,
         { channelAction: h, completed: b } = (0, E.P3)(f, _),
         y = (0, E.K_)(f, null == h ? void 0 : h.channelId),
         O = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        N = (null == h ? void 0 : h.actionType) === g.oi.VIEW,
-        C = (0, c.dQu)(c.TVs.colors.WHITE),
+        C = (null == h ? void 0 : h.actionType) === g.oi.VIEW,
+        N = (0, c.dQu)(c.TVs.colors.WHITE),
         [R, P] = i.useState(!1),
         [w] = i.useState(new s.Z.Value(0)),
         [D] = i.useState(new s.Z.Value(0));
@@ -67,7 +67,7 @@ function N(e) {
                   toValue: 0,
                   duration: O ? 1 : 350,
                   easing: s.Z.Easing.quad,
-                  delay: 500 * !N,
+                  delay: 500 * !C,
               }).start(() => P(!0))
             : s.Z.timing(w, {
                   toValue: 1,
@@ -75,7 +75,7 @@ function N(e) {
                   easing: s.Z.Easing.quad,
                   delay: 400,
               }).start();
-    }, [b, w, N, O]),
+    }, [b, w, C, O]),
         i.useEffect(() => {
             b &&
                 R &&
@@ -86,10 +86,10 @@ function N(e) {
                     delay: 400,
                 }).start();
         }, [b, D, R, O]);
-    let L = i.useCallback(() => {
+    let x = i.useCallback(() => {
         null != y && (0, m.gp)(f, y.channelId);
     }, [f, y]);
-    return null == h || (N && !R)
+    return null == h || (C && !R)
         ? null
         : (0, r.jsx)("div", {
               className: o()(I.container, p),
@@ -104,7 +104,7 @@ function N(e) {
                             },
                             children: (0, r.jsxs)(c.P3F, {
                                 className: o()(I.banner, I.clickable),
-                                onClick: L,
+                                onClick: x,
                                 children: [
                                     (0, r.jsx)(A, {
                                         channelId: y.channelId,
@@ -126,7 +126,7 @@ function N(e) {
                                         className: I.iconCircle,
                                         children: (0, r.jsx)(c.ZSh, {
                                             size: "xs",
-                                            color: C.hex(),
+                                            color: N.hex(),
                                             className: I.nextIcon,
                                         }),
                                     }),
@@ -167,7 +167,7 @@ function N(e) {
                                           size: "custom",
                                           color: "currentColor",
                                           className: I.completed,
-                                          secondaryColor: C.hex(),
+                                          secondaryColor: N.hex(),
                                           width: 20,
                                           height: 20,
                                       })
@@ -176,7 +176,7 @@ function N(e) {
                         }),
           });
 }
-function C(e) {
+function N(e) {
     let { guildId: t, channel: n, className: i } = e,
         a = (0, b.g)(t),
         o = (0, l.e7)([p.ZP], () => {
@@ -190,7 +190,7 @@ function C(e) {
         });
     return s || o || !a || !c
         ? null
-        : (0, r.jsx)(N, {
+        : (0, r.jsx)(C, {
               guildId: t,
               channel: n,
               className: i,

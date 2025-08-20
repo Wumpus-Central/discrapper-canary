@@ -1,21 +1,21 @@
-n.d(t, { Z: () => g }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(852860),
-    l = n(164946),
-    o = n(350327),
+n.d(t, { Z: () => p }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(852860),
+    s = n(164946),
+    l = n(350327),
     c = n(330055),
-    d = n(647699),
-    u = n(18438),
-    m = n(778825),
-    p = n(388032);
-function g() {
-    let e = (0, s.e7)([m.Z], () => m.Z.getIsSubmitDisabled()),
-        t = (0, s.e7)([m.Z], () => m.Z.getGuild()),
-        n = (0, s.e7)([m.Z], () => m.Z.getErrors()),
-        [g, h] = r.useState(!1),
-        f = r.useMemo(
+    u = n(647699),
+    d = n(18438),
+    f = n(778825),
+    _ = n(388032);
+function p() {
+    let e = (0, a.e7)([f.Z], () => f.Z.getIsSubmitDisabled()),
+        t = (0, a.e7)([f.Z], () => f.Z.getGuild()),
+        n = (0, a.e7)([f.Z], () => f.Z.getErrors()),
+        [p, h] = i.useState(!1),
+        m = i.useMemo(
             () =>
                 (null == n ? void 0 : n.message) != null
                     ? null == n
@@ -24,46 +24,46 @@ function g() {
                     : (null == n ? void 0 : n.guild_tag) !== void 0 && n.guild_tag.length > 0
                       ? n.guild_tag[0]
                       : Object.keys(null != n ? n : {}).length > 0
-                        ? p.intl.string(p.t.s35OuL)
+                        ? _.intl.string(_.t.s35OuL)
                         : null,
             [n],
         ),
-        b = r.useCallback(async () => {
-            var e, n, i;
+        g = i.useCallback(async () => {
+            var e, n, r;
             h(!0);
-            let r = m.Z.getAllPending(),
-                s = (0, l.Jo)(r),
-                a = (0, l.g9)(r),
-                p = !0;
-            if (Object.keys(s).length > 0) {
-                let i = await (0, u.iq)(null == t ? void 0 : t.id, s);
-                if (((p = p && null != (e = null == i ? void 0 : i.ok) && e), null == i ? void 0 : i.ok)) {
-                    let e = i.body;
-                    void 0 !== r.pendingAvatar &&
+            let i = f.Z.getAllPending(),
+                a = (0, s.Jo)(i),
+                o = (0, s.g9)(i),
+                _ = !0;
+            if (Object.keys(a).length > 0) {
+                let r = await (0, d.iq)(null == t ? void 0 : t.id, a);
+                if (((_ = _ && null != (e = null == r ? void 0 : r.ok) && e), null == r ? void 0 : r.ok)) {
+                    let e = r.body;
+                    void 0 !== i.pendingAvatar &&
                         (0, c.Z)({
                             isGuildProfile: !0,
                             avatarHash: e.avatar,
-                            avatarId: s.avatarId,
-                            avatarAssetOrigin: null == (n = r.pendingAvatar) ? void 0 : n.assetOrigin,
+                            avatarId: a.avatarId,
+                            avatarAssetOrigin: null == (n = i.pendingAvatar) ? void 0 : n.assetOrigin,
                         }),
-                        (0, u.IO)();
+                        (0, d.IO)();
                 }
             }
-            if (Object.keys(a).length > 0) {
-                let e = await (0, o.Z)(a, null == t ? void 0 : t.id);
-                (p = p && null != (i = null == e ? void 0 : e.ok) && i),
-                    (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, d.v)();
+            if (Object.keys(o).length > 0) {
+                let e = await (0, l.Z)(o, null == t ? void 0 : t.id);
+                (_ = _ && null != (r = null == e ? void 0 : e.ok) && r),
+                    (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, u.v)();
             }
-            p && (0, u.b9)(), h(!1);
+            _ && (0, d.b9)(), h(!1);
         }, [null == t ? void 0 : t.id]),
-        x = r.useCallback(() => {
-            (0, u.W3)();
+        E = i.useCallback(() => {
+            (0, d.W3)();
         }, []);
-    return (0, i.jsx)(a.Z, {
-        submitting: g,
-        onSave: b,
-        onReset: x,
+    return (0, r.jsx)(o.Z, {
+        submitting: p,
+        onSave: g,
+        onReset: E,
         disabled: e,
-        errorMessage: null != f ? f : void 0,
+        errorMessage: null != m ? m : void 0,
     });
 }

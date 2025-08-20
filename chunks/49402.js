@@ -106,19 +106,19 @@ function m(e, t, n) {
                 "gap",
                 "experimental_useStack",
             ]);
-        let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
-            C = (0, c.t2)(A, E);
+        let { scrollerRef: A, getScrollerState: C } = (0, c.Ke)(),
+            N = (0, c.t2)(A, E);
         i.useImperativeHandle(
             f,
             () =>
                 d(
                     {
                         getScrollerNode: () => A.current,
-                        getScrollerState: N,
+                        getScrollerState: C,
                     },
-                    (0, c.Ue)(A, N, C, E),
+                    (0, c.Ue)(A, C, N, E),
                 ),
-            [A, N, E, C],
+            [A, C, E, N],
         );
         let R = (0, c.tT)({
             paddingFix: O,

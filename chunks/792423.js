@@ -1,12 +1,12 @@
-n.d(t, { Z: () => u }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(755721),
-    a = n(481060),
-    l = n(401190),
-    o = n(388032),
+n.d(t, { Z: () => d }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(755721),
+    o = n(481060),
+    s = n(401190),
+    l = n(388032),
     c = n(919047);
-function d(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,13 +19,13 @@ function d(e, t, n) {
         e
     );
 }
-class u extends r.PureComponent {
+class d extends i.PureComponent {
     renderErrorMessage() {
         let { hasError: e } = this.state;
         return e
-            ? (0, i.jsx)("div", {
+            ? (0, r.jsx)("div", {
                   className: c.error,
-                  children: o.intl.string(o.t.UUcECA),
+                  children: l.intl.string(l.t.UUcECA),
               })
             : null;
     }
@@ -33,22 +33,22 @@ class u extends r.PureComponent {
         let { isRequestPending: e } = this.state,
             { isHypeSquadOnlineMember: t } = this.props;
         return t
-            ? (0, i.jsxs)("div", {
+            ? (0, r.jsxs)("div", {
                   className: c.leaveActionWrapper,
                   children: [
                       this.renderErrorMessage(),
-                      (0, i.jsxs)(a.Text, {
+                      (0, r.jsxs)(o.Text, {
                           variant: "text-sm/normal",
                           children: [
-                              o.intl.string(o.t.ziWmcH),
-                              (0, i.jsx)(s.zx, {
+                              l.intl.string(l.t.ziWmcH),
+                              (0, r.jsx)(a.zx, {
                                   className: c.leaveButton,
-                                  color: s.zx.Colors.LINK,
-                                  look: s.zx.Looks.LINK,
+                                  color: a.zx.Colors.LINK,
+                                  look: a.zx.Looks.LINK,
                                   onClick: this.handleLeaveHypeSquadClick,
-                                  size: s.zx.Sizes.NONE,
+                                  size: a.zx.Sizes.NONE,
                                   submitting: e,
-                                  children: o.intl.string(o.t["WH+dho"]),
+                                  children: l.intl.string(l.t["WH+dho"]),
                               }),
                           ],
                       }),
@@ -58,16 +58,16 @@ class u extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            d(this, "state", {
+            u(this, "state", {
                 isRequestPending: !1,
                 hasError: !1,
             }),
-            d(this, "handleLeaveHypeSquadError", () => {
+            u(this, "handleLeaveHypeSquadError", () => {
                 this.setState({ hasError: !0 });
             }),
-            d(this, "handleLeaveHypeSquadClick", () => {
+            u(this, "handleLeaveHypeSquadClick", () => {
                 this.setState({ isRequestPending: !0 }, () => {
-                    l.Z.leaveHypeSquadOnline()
+                    s.Z.leaveHypeSquadOnline()
                         .then(() => {
                             this.setState({ isRequestPending: !1 });
                         })

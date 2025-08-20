@@ -1,6 +1,6 @@
 n.d(t, {
     L: () => P,
-    Z: () => N,
+    Z: () => C,
 }),
     n(388685),
     n(781311),
@@ -34,7 +34,7 @@ var r = n(373793),
 let T = new Set(["applicationCommandOption"]),
     S = new Set([i.jw.ATTACHMENT]),
     A = new Set(["line", "applicationCommand"]);
-function N(e, t, n, r) {
+function C(e, t, n, r) {
     let {
         insertData: i,
         isInline: d,
@@ -84,13 +84,13 @@ function N(e, t, n, r) {
         (e.isInline = (e) => !!T.has(e.type) || d(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && S.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            M(e, () => p(t));
+            j(e, () => p(t));
         }),
         (e.deleteForward = (t) => {
-            M(e, () => h(t));
+            j(e, () => h(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => m(t));
+            j(e, () => m(t));
         });
     let E = null,
         b = null,
@@ -114,7 +114,7 @@ function N(e, t, n, r) {
                 ) {
                     let o = g.T.withMergedEntry(e, () => {
                         var a;
-                        return C({
+                        return N({
                             editor: e,
                             storeCommandState: i,
                             channel: t,
@@ -137,7 +137,7 @@ function N(e, t, n, r) {
         e
     );
 }
-function C(e) {
+function N(e) {
     var t, n;
     let {
             editor: i,
@@ -148,7 +148,7 @@ function C(e) {
             commandChanged: d,
             previousOptionValues: f,
         } = e,
-        { command: _, commandText: p } = x(i),
+        { command: _, commandText: p } = L(i),
         h = o.activeCommand;
     if (
         (!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) ||
@@ -167,7 +167,7 @@ function C(e) {
             let e = R(i, s, o),
                 t = m.tM(i, h, s.id);
             return (
-                L({
+                x({
                     guildId: s.guild_id,
                     channelId: s.id,
                     command: h,
@@ -195,7 +195,7 @@ function C(e) {
         let e = y.bN.richValue(i)[0],
             t = e.children[0];
         if (A.has(e.type) && y.LC.isText(t)) {
-            let e = k(t.text, s);
+            let e = M(t.text, s);
             if (null != e)
                 return (
                     a.Po({
@@ -216,7 +216,7 @@ function C(e) {
             }),
             r = null != (n = null == t ? void 0 : t[0].optionName) ? n : null;
         return (
-            L({
+            x({
                 guildId: s.guild_id,
                 channelId: s.id,
                 command: h,
@@ -260,7 +260,7 @@ function R(e, t, n) {
         if (null != d)
             for (let r of d) {
                 e.add(r.name);
-                let i = null != (s = j(n, t, r.name)) ? s : r.text,
+                let i = null != (s = k(n, t, r.name)) ? s : r.text,
                     a = {
                         type: "applicationCommandOption",
                         optionName: r.name,
@@ -273,7 +273,7 @@ function R(e, t, n) {
         for (let r of u.options)
             if (!e.has(r.name) && (r.required || null != c[r.name])) {
                 let e, i;
-                _.length > 0 && !S.has(r.type) ? ((e = _), (_ = "")) : (e = null != (i = j(n, t, r.name)) ? i : "");
+                _.length > 0 && !S.has(r.type) ? ((e = _), (_ = "")) : (e = null != (i = k(n, t, r.name)) ? i : "");
                 let a = {
                     type: "applicationCommandOption",
                     optionName: r.name,
@@ -291,7 +291,7 @@ function R(e, t, n) {
               ? "".concat(I.GI).concat(u.displayName, " ")
               : "".concat(I.GI).concat(u.displayName)),
         v.unshift({ text: l });
-    let N = {
+    let C = {
         type: "applicationCommand",
         children: v,
         command: {
@@ -301,22 +301,22 @@ function R(e, t, n) {
         },
     };
     y.bN.withoutNormalizing(e, () => {
-        for (let [, t] of (b.Q.insertNodes(e, [N], { at: O.YD }), y.bN.blocks(e).reverse()))
+        for (let [, t] of (b.Q.insertNodes(e, [C], { at: O.YD }), y.bN.blocks(e).reverse()))
             y.C0.isAfter(t, O.YD) &&
                 b.Q.removeNodes(e, {
                     at: t,
                     voids: !0,
                 });
     });
-    let C = null;
+    let N = null;
     return (
         null != T
-            ? (b.Q.selectCommandOption(e, T.optionName), (C = T.optionName))
+            ? (b.Q.selectCommandOption(e, T.optionName), (N = T.optionName))
             : null != A
-              ? (b.Q.selectCommandOption(e, A.optionName, !1), (C = A.optionName))
+              ? (b.Q.selectCommandOption(e, A.optionName, !1), (N = A.optionName))
               : b.Q.resetSelectionToEditorEnd(e),
         null == A && D(e, u),
-        C
+        N
     );
 }
 function P(e, t, n, r) {
@@ -420,7 +420,7 @@ function D(e, t) {
         !0)
     );
 }
-function L(e) {
+function x(e) {
     let {
         guildId: t,
         channelId: n,
@@ -467,7 +467,7 @@ function L(e) {
     }
     h && a.g7(n, _);
 }
-function x(e) {
+function L(e) {
     let t = m.cr(e);
     if (null == t)
         return {
@@ -486,12 +486,12 @@ function x(e) {
               commandText: null,
           };
 }
-function M(e, t) {
+function j(e, t) {
     let n = m.cu(e)[0];
     t();
     let r = y.M8.toPoint(e.selection);
     if (null == r || n === m.cu(e)[0]) return;
-    let { command: i, commandText: a } = x(e);
+    let { command: i, commandText: a } = L(e);
     !(null == i || null == a || a.endsWith(" ")) &&
         y.Jz.equals(r, {
             path: O.u9,
@@ -499,7 +499,7 @@ function M(e, t) {
         }) &&
         b.Q.insertText(e, " ");
 }
-function k(e, t) {
+function M(e, t) {
     if (!e.startsWith("/")) return null;
     let n = (0, f.hV)(t, e.substring(1));
     if (!n.hasSpaceTerminator) return null;
@@ -528,7 +528,7 @@ function k(e, t) {
     }
     return null;
 }
-function j(e, t, n) {
+function k(e, t, n) {
     var r, a, o, s;
     let l = null == (a = e.activeCommand) || null == (r = a.options) ? void 0 : r.find((e) => e.name === n),
         c = e.initialValues[n];

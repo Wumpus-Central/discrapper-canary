@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(703656),
     _ = n(769654),
     y = n(601964),
-    v = n(271383),
-    j = n(771845),
+    j = n(271383),
+    v = n(771845),
     C = n(727258),
-    E = n(276952),
-    x = n(249792),
+    x = n(276952),
+    E = n(249792),
     S = n(40153),
-    P = n(593618),
-    I = n(252686),
+    I = n(593618),
+    P = n(252686),
     N = n(682662),
     w = n(674552),
     Z = n(981631),
@@ -73,14 +73,14 @@ function D(e, t) {
         e
     );
 }
-let L = {
+let M = {
     analyticsSource: {
         page: Z.ZY5.GUILD_CHANNEL,
         section: Z.jXE.CHANNEL_LIST,
         object: Z.qAy.CHANNEL,
     },
 };
-function M(e, t) {
+function L(e, t) {
     (0, h.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("1806"),
@@ -120,7 +120,7 @@ let k = i.memo(function (e) {
             unavailable: q = !1,
             badge: X = 0,
             isMentionLowImportance: Q,
-            contextMenu: J = M,
+            contextMenu: J = L,
             draggable: $ = !1,
             sorting: ee = !1,
             preloadOnClick: et = !0,
@@ -148,7 +148,7 @@ let k = i.memo(function (e) {
                 }
             ),
             end() {
-                null == V || V(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
+                null == V || V(), (0, g.V1)(v.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -157,23 +157,23 @@ let k = i.memo(function (e) {
         em = !ee && eh,
         [eb, eO] = i.useState(!1),
         [e_, ey] = i.useState(!1),
-        [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
-    i.useEffect(() => () => ev.cancel(), [ev]);
-    let ej = i.useCallback(() => {
-            if (null != F) return void (0, O.uL)(F, { state: L });
-            (0, _.X)(eo, { state: L });
+        [ej] = i.useState(() => new d.sW(70, () => ey(!0)));
+    i.useEffect(() => () => ej.cancel(), [ej]);
+    let ev = i.useCallback(() => {
+            if (null != F) return void (0, O.uL)(F, { state: M });
+            (0, _.X)(eo, { state: M });
         }, [eo, F]),
         eC = i.useCallback(() => {
             if (null != F || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
             null != e && f.Z.preload(H.id, e);
         }, [F, H, q, et]),
-        eE = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
-        ex = i.useCallback(
+        ex = (0, u.e7)([j.ZP], () => j.ZP.isCurrentUserGuest(eo)),
+        eE = i.useCallback(
             (e) => {
-                null == H || eE || J(e, H);
+                null == H || ex || J(e, H);
             },
-            [H, J, eE],
+            [H, J, ex],
         ),
         eS = i.useCallback(
             (e) => {
@@ -184,14 +184,14 @@ let k = i.memo(function (e) {
             },
             [ea],
         ),
-        eP = i.useCallback(
-            (e) => {
-                if (e) return void ev.delay();
-                ev.cancel(), ey(!1);
-            },
-            [ev],
-        ),
         eI = i.useCallback(
+            (e) => {
+                if (e) return void ej.delay();
+                ej.cancel(), ey(!1);
+            },
+            [ej],
+        ),
+        eP = i.useCallback(
             (e) => {
                 null == G || G(eo, e);
             },
@@ -201,7 +201,7 @@ let k = i.memo(function (e) {
     if (null == H) return null;
     let ew =
             e_ || eb
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(E.Z, {
                       guild: H,
                       show: e_,
                       active: W,
@@ -222,7 +222,7 @@ let k = i.memo(function (e) {
                                       mentions: X,
                                   }),
                                   name: H.name,
-                                  onClick: ej,
+                                  onClick: ev,
                                   onMouseEnter: function () {
                                       ee || eg(!0);
                                   },
@@ -230,7 +230,7 @@ let k = i.memo(function (e) {
                                       ee || eg(!1);
                                   },
                                   onMouseDown: eC,
-                                  onContextMenu: ex,
+                                  onContextMenu: eE,
                                   onKeyDown: eS,
                                   icon: (0, y.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em,
@@ -245,7 +245,7 @@ let k = i.memo(function (e) {
                       ),
                   ),
         eZ = ed
-            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(I.Z, {}) })
+            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
                       ? (e) => {
@@ -269,15 +269,15 @@ let k = i.memo(function (e) {
                   }),
               });
     return (0, r.jsxs)(N.H, {
-        ref: eI,
+        ref: eP,
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(x.Z, {
                 hovered: !ed && em,
                 selected: !ed && W,
                 unread: !ed && K,
                 className: A.pill,
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 guild: H,
                 disabled: ee,
                 isDragging: ed,
@@ -287,7 +287,7 @@ let k = i.memo(function (e) {
                 ? (0, r.jsx)(S.ZP, {
                       name: H.name,
                       targetNode: U,
-                      onDragOverChanged: eP,
+                      onDragOverChanged: eI,
                   })
                 : null,
         ],

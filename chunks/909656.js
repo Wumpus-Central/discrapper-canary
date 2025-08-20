@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(584825),
     C = n(723047),
     N = n(927954),
-    I = n(164000),
-    E = n(587431),
+    E = n(164000),
+    I = n(587431),
     S = n(293810),
     T = n(333866),
     P = n(388032),
@@ -131,7 +131,7 @@ function L(e) {
 function k(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
-        { format: a } = (0, I.Z)(n.id),
+        { format: a } = (0, E.Z)(n.id),
         s = (0, y.YB)(n.id),
         c = i.useCallback(() => {
             var e;
@@ -195,7 +195,7 @@ function k(e) {
         children: [
             null != H &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(E.Z, { children: H.getAnyErrorMessage() }), (0, r.jsx)(p.LZC, { size: 16 })],
+                    children: [(0, r.jsx)(I.Z, { children: H.getAnyErrorMessage() }), (0, r.jsx)(p.LZC, { size: 16 })],
                 }),
             l
                 ? null

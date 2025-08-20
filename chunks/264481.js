@@ -1,87 +1,87 @@
-n.d(t, {
+t.d(n, {
     P9: () => I,
-    Uf: () => Z,
+    Uf: () => P,
     b0: () => y,
-    s_: () => v,
+    s_: () => _,
 }),
-    n(388685);
-var r = n(951288),
-    o = n(647438),
-    i = n(392711),
-    l = n(481060),
-    a = n(493683),
-    c = n(230711),
-    s = n(410030),
-    d = n(726542),
-    u = n(5192),
-    f = n(475413),
-    p = n(981631),
-    m = n(388032),
-    b = n(839468);
+    t(388685);
+var r = t(951288),
+    o = t(647438),
+    l = t(392711),
+    i = t(481060),
+    c = t(493683),
+    a = t(230711),
+    s = t(410030),
+    d = t(726542),
+    u = t(5192),
+    f = t(475413),
+    m = t(981631),
+    p = t(388032),
+    b = t(839468);
 let g = [
-        () => m.intl.string(m.t.madJdH),
-        () => m.intl.string(m.t.NYmfoK),
-        () => m.intl.string(m.t.R2PaCg),
-        () => m.intl.string(m.t.laSR8v),
-        () => m.intl.string(m.t.DnsJEx),
-    ],
-    h = [
-        () => m.intl.string(m.t.nFSbeH),
-        () => m.intl.string(m.t.gTcxOz),
-        () => m.intl.string(m.t["8T0wYm"]),
-        () => m.intl.string(m.t.BIHl1t),
-        () => m.intl.string(m.t.jhBm09),
+        () => p.intl.string(p.t.madJdH),
+        () => p.intl.string(p.t.NYmfoK),
+        () => p.intl.string(p.t.R2PaCg),
+        () => p.intl.string(p.t.laSR8v),
+        () => p.intl.string(p.t.DnsJEx),
     ],
     x = [
-        () => m.intl.string(m.t.AyMGXF),
-        () => m.intl.string(m.t.aAFW7e),
-        (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
-        () => m.intl.string(m.t["rrYh5+"]),
-        () => m.intl.string(m.t["HX3K+P"]),
-        () => m.intl.string(m.t["/yW3aW"]),
-        () => m.intl.string(m.t["PmL/v7"]),
-        () => m.intl.string(m.t.IALa3t),
-        () => m.intl.string(m.t.HRcTFB),
-        () => m.intl.string(m.t.NuCqPj),
-        () => m.intl.string(m.t["M1tw+/"]),
-        () => m.intl.string(m.t.UBm1y8),
-        () => m.intl.string(m.t.Cu95PT),
-        () => m.intl.string(m.t["R/wFur"]),
-        () => m.intl.string(m.t.HQPAVV),
-        () => m.intl.string(m.t.YolGh4),
+        () => p.intl.string(p.t.nFSbeH),
+        () => p.intl.string(p.t.gTcxOz),
+        () => p.intl.string(p.t["8T0wYm"]),
+        () => p.intl.string(p.t.BIHl1t),
+        () => p.intl.string(p.t.jhBm09),
     ],
-    _ = [
-        p.ABu.STEAM,
-        p.ABu.PLAYSTATION,
-        p.ABu.XBOX,
-        p.ABu.TWITCH,
-        p.ABu.BATTLENET,
-        p.ABu.LEAGUE_OF_LEGENDS,
-        p.ABu.EPIC_GAMES,
-        p.ABu.RIOT_GAMES,
-        p.ABu.ROBLOX,
-        p.ABu.SPOTIFY,
-        p.ABu.YOUTUBE,
-        p.ABu.CRUNCHYROLL,
-        p.ABu.BUNGIE,
+    h = [
+        () => p.intl.string(p.t.AyMGXF),
+        () => p.intl.string(p.t.aAFW7e),
+        (e) => p.intl.formatToPlainString(p.t.h2g0cH, { name: e }),
+        () => p.intl.string(p.t["rrYh5+"]),
+        () => p.intl.string(p.t["HX3K+P"]),
+        () => p.intl.string(p.t["/yW3aW"]),
+        () => p.intl.string(p.t["PmL/v7"]),
+        () => p.intl.string(p.t.IALa3t),
+        () => p.intl.string(p.t.HRcTFB),
+        () => p.intl.string(p.t.NuCqPj),
+        () => p.intl.string(p.t["M1tw+/"]),
+        () => p.intl.string(p.t.UBm1y8),
+        () => p.intl.string(p.t.Cu95PT),
+        () => p.intl.string(p.t["R/wFur"]),
+        () => p.intl.string(p.t.HQPAVV),
+        () => p.intl.string(p.t.YolGh4),
+    ],
+    j = [
+        m.ABu.STEAM,
+        m.ABu.PLAYSTATION,
+        m.ABu.XBOX,
+        m.ABu.TWITCH,
+        m.ABu.BATTLENET,
+        m.ABu.LEAGUE_OF_LEGENDS,
+        m.ABu.EPIC_GAMES,
+        m.ABu.RIOT_GAMES,
+        m.ABu.ROBLOX,
+        m.ABu.SPOTIFY,
+        m.ABu.YOUTUBE,
+        m.ABu.CRUNCHYROLL,
+        m.ABu.BUNGIE,
     ];
-function j(e) {
-    let { heading: t, bodyText: n, children: o } = e;
+function v(e) {
+    let { heading: n, bodyText: t, children: o } = e;
     return (0, r.jsxs)("div", {
         className: b.empty,
         children: [
             (0, r.jsxs)("div", {
                 className: b.textContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: t,
+                        children: n,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: n,
+                        children: t,
                     }),
                 ],
             }),
@@ -89,48 +89,48 @@ function j(e) {
         ],
     });
 }
-function v() {
-    let e = m.intl.string(m.t.RnD2yc),
-        [t] = o.useState(() => {
+function _() {
+    let e = p.intl.string(p.t.RnD2yc),
+        [n] = o.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(g)) ? e : g[0])();
+            return (null != (e = (0, l.sample)(g)) ? e : g[0])();
         });
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(v, {
         heading: e,
-        bodyText: t,
+        bodyText: n,
     });
 }
 function y() {
-    let e = m.intl.string(m.t.bFgqYG),
-        [t] = o.useState(() => {
+    let e = p.intl.string(p.t.bFgqYG),
+        [n] = o.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(h)) ? e : h[0])();
+            return (null != (e = (0, l.sample)(x)) ? e : x[0])();
         });
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(v, {
         heading: e,
-        bodyText: t,
+        bodyText: n,
     });
 }
 function I(e) {
-    let { user: t, guildId: n, channelId: c, onClose: s } = e,
-        d = u.ZP.getName(n, c, t),
-        p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
+    let { user: n, guildId: t, channelId: a, onClose: s } = e,
+        d = u.ZP.getName(t, a, n),
+        m = p.intl.formatToPlainString(p.t.sjSitL, { name: d }),
         [g] = o.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(x)) ? e : x[0])(d);
+            return (null != (e = (0, l.sample)(h)) ? e : h[0])(d);
         }),
-        h = o.useCallback(() => {
-            a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
-        }, [t.id, s]);
-    return (0, r.jsx)(j, {
-        heading: p,
+        x = o.useCallback(() => {
+            c.Z.openPrivateChannel({ recipientIds: n.id }), null == s || s();
+        }, [n.id, s]);
+    return (0, r.jsx)(v, {
+        heading: m,
         bodyText: g,
         children: (0, r.jsx)("div", {
             className: b.buttonRow,
             children: (0, r.jsx)(f.tG, {
-                icon: l.kBi,
-                text: m.intl.string(m.t["g33r/P"]),
-                onClick: h,
+                icon: i.kBi,
+                text: p.intl.string(p.t["g33r/P"]),
+                onClick: x,
                 themeColor: "secondary",
             }),
         }),
@@ -140,46 +140,46 @@ function O() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
-        children: _.map((t, n) => {
-            let o = d.Z.get(t);
+        children: j.map((n, t) => {
+            let o = d.Z.get(n);
             if (null == o) return null;
-            let i = (0, l.wjy)(e) ? o.icon.darkPNG : o.icon.lightPNG;
+            let l = (0, i.wjy)(e) ? o.icon.darkPNG : o.icon.lightPNG;
             return (0, r.jsx)(
                 "img",
                 {
-                    src: i,
+                    src: l,
                     alt: o.name,
                     className: b.connectionIcon,
                 },
-                n,
+                t,
             );
         }),
     });
 }
-function Z(e) {
-    let { onClose: t } = e,
-        n = o.useCallback(() => {
-            null == t || t(), c.Z.open(p.oAB.CONNECTIONS);
-        }, [t]),
-        i = o.useCallback(() => {
-            null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
-        }, [t]);
-    return (0, r.jsxs)(j, {
-        heading: m.intl.string(m.t.VB6LWV),
-        bodyText: m.intl.string(m.t.KpjsU1),
+function P(e) {
+    let { onClose: n } = e,
+        t = o.useCallback(() => {
+            null == n || n(), a.Z.open(m.oAB.CONNECTIONS);
+        }, [n]),
+        l = o.useCallback(() => {
+            null == n || n(), a.Z.open(m.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
+        }, [n]);
+    return (0, r.jsxs)(v, {
+        heading: p.intl.string(p.t.VB6LWV),
+        bodyText: p.intl.string(p.t.KpjsU1),
         children: [
             (0, r.jsx)(O, {}),
             (0, r.jsxs)("div", {
                 className: b.buttonRow,
                 children: [
                     (0, r.jsx)(f.tG, {
-                        text: m.intl.string(m.t["/Hl24e"]),
-                        onClick: n,
+                        text: p.intl.string(p.t["/Hl24e"]),
+                        onClick: t,
                         themeColor: "secondary",
                     }),
                     (0, r.jsx)(f.tG, {
-                        text: m.intl.string(m.t.GTCx0t),
-                        onClick: i,
+                        text: p.intl.string(p.t.GTCx0t),
+                        onClick: l,
                         themeColor: "secondary",
                     }),
                 ],

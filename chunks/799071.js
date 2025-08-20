@@ -1,24 +1,24 @@
-n.d(t, { Z: () => l }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(173511),
-    a = n(481060);
-function l() {
-    let [e, t] = r.useState("");
-    return (0, i.jsxs)(a.hjN, {
+n.d(t, { Z: () => s }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(173511),
+    o = n(481060);
+function s() {
+    let [e, t] = i.useState("");
+    return (0, r.jsxs)(o.hjN, {
         title: "Text components",
-        tag: a.RB0.H1,
+        tag: o.RB0.H1,
         children: [
-            (0, i.jsx)(a.oil, {
+            (0, r.jsx)(o.oil, {
                 placeholder: "Enter custom text...",
                 onChange: (e) => t(e),
             }),
-            (0, i.jsx)(a.$i$, { style: { margin: "10px 0" } }),
-            s.O.map((t) =>
+            (0, r.jsx)(o.$i$, { style: { margin: "10px 0" } }),
+            a.O.map((t) =>
                 "code" === t
                     ? null
-                    : (0, i.jsx)(
-                          a.Text,
+                    : (0, r.jsx)(
+                          o.Text,
                           {
                               variant: t,
                               children: "" !== e ? "".concat(e, " (").concat(t, ")") : t,

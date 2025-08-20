@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(333031),
     S = n(610394),
     A = n(380736),
-    N = n(987650),
-    C = n(981631),
+    C = n(987650),
+    N = n(981631),
     R = n(388032),
     P = n(534887);
 function w(e, t, n) {
@@ -53,8 +53,8 @@ let D = o().throttle(
         100,
         { trailing: !1 },
     ),
-    L = 10 * y.Z.Millis.SECOND;
-function x(e) {
+    x = 10 * y.Z.Millis.SECOND;
+function L(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         _ = i.useMemo(() => new s.SpringValue(1), []),
@@ -64,8 +64,8 @@ function x(e) {
         I = (0, d.e7)([E.default], () => E.default.getCurrentUser());
     (0, h.ZP)(
         () => (
-            (m.current = setTimeout(T, L)),
-            p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: N.n0.OverlayCrashed }),
+            (m.current = setTimeout(T, x)),
+            p.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed }),
             () => {
                 null != m.current && clearTimeout(m.current);
             }
@@ -84,9 +84,9 @@ function x(e) {
                     (v(!0),
                     null == o || o(),
                     p.Z.track(
-                        C.rMx.NOTIFICATION_CLICKED,
+                        N.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: N.n0.OverlayCrashed,
+                            notif_type: C.n0.OverlayCrashed,
                             action_type: "reload",
                         },
                         !0,
@@ -102,14 +102,14 @@ function x(e) {
             },
             [y],
         ),
-        x = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == o || o(), null == c || c();
             },
             [c, o],
         ),
-        M = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
-        k = g
+        j = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
+        M = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -138,16 +138,16 @@ function x(e) {
                   ],
               })
             : null,
-        j = g ? null : R.intl.string(R.t.oEJEFh),
+        k = g ? null : R.intl.string(R.t.oEJEFh),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(A.Y, {
         title: R.intl.string(R.t.U38qZm),
-        body: k,
-        hint: U ? j : void 0,
+        body: M,
+        hint: U ? k : void 0,
         confirmText: R.intl.string(R.t.a3HlgI),
-        cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
+        cancelText: null != j ? R.intl.string(R.t.qIYnPj) : void 0,
         icon: (0, r.jsx)(b.Z, {
             width: 40,
             height: 40,
@@ -155,20 +155,20 @@ function x(e) {
         }),
         onNotificationClick: D,
         onConfirmClick: w,
-        onCancelClick: null != M ? x : void 0,
+        onCancelClick: null != j ? L : void 0,
         onDismissClick: o,
         expand: !0,
         locked: !0,
         notificationId: "overlay-crashed",
         index: 0,
-        status: C._1z.ACTIVE,
+        status: N._1z.ACTIVE,
         containerRef: null,
         contentOpacity: _,
         className: P.errorNotificationContainer,
         wrapperClassName: P.errorNotificationWrapper,
     });
 }
-class M extends i.PureComponent {
+class j extends i.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, g.s1)().location;
         this.setState({
@@ -183,7 +183,7 @@ class M extends i.PureComponent {
                 location: n,
             },
         });
-        p.Z.track(C.rMx.APP_CRASHED, {
+        p.Z.track(N.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -201,7 +201,7 @@ class M extends i.PureComponent {
             ? i
                 ? (0, r.jsx)(T.Z, {
                       className: P.errorClickNotification,
-                      children: (0, r.jsx)(x, {
+                      children: (0, r.jsx)(L, {
                           error: n,
                           onLock: () => {
                               var e;
@@ -239,4 +239,4 @@ class M extends i.PureComponent {
             w(this, "pid", null);
     }
 }
-let k = M;
+let M = j;

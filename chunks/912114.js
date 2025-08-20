@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => O,
+    B: () => j,
     default: () => E,
 }),
     n(388685);
@@ -47,7 +47,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
+function j(e) {
     let {
             channel: t,
             previewIcon: n,
@@ -155,9 +155,9 @@ let E = function (e) {
     }, [Z, P, w, a]),
     (0, d.ZP)(
         () => (
-            b.default.track(_.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: "opened" })),
+            b.default.track(_.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "opened" })),
             () => {
-                b.default.track(_.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: "dismissed" }));
+                b.default.track(_.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "dismissed" }));
             }
         ),
     ),
@@ -173,7 +173,7 @@ let E = function (e) {
                       if (
                           (b.default.track(
                               _.rMx.GDM_EDIT_INTERACTED,
-                              j(v({}, M), {
+                              O(v({}, M), {
                                   action: "saved",
                                   new_name_set: "" !== Z,
                                   new_icon_set: (i ? N : null == S ? void 0 : S.icon) != null,
@@ -208,7 +208,7 @@ let E = function (e) {
                       children: (0, r.jsxs)("div", {
                           className: x.modalContent,
                           children: [
-                              (0, r.jsx)(O, {
+                              (0, r.jsx)(j, {
                                   channel: S,
                                   previewIcon: N,
                                   onIconChange: (e) => A(e.imageUri),

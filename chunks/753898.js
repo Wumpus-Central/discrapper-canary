@@ -19,15 +19,15 @@ var i = n(442837),
     _ = n(963392);
 function C(e) {
     var t, n, C;
-    let { channel: x, children: v, user: j } = e,
-        O = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { channel: x, children: v, user: O } = e,
+        j = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
         E = null != (t = (0, d.ZP)(x)) ? t : "",
         {
             avatarDecorationSrc: S,
             eventHandlers: P,
             isAnimating: I,
         } = (0, g.Z)({
-            userId: null == j ? void 0 : j.id,
+            userId: null == O ? void 0 : O.id,
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
         });
@@ -62,7 +62,7 @@ function C(e) {
             {
                 children: [
                     (() => {
-                        let e = !O && I;
+                        let e = !j && I;
                         return x.isMultiUserDM()
                             ? (0, r.jsx)(h.v, {
                                   channel: x,

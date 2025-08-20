@@ -82,14 +82,14 @@ function b(e) {
             folderGroupId: O,
             folderButtonContent: _,
             onClick: y,
-            onContextMenu: v,
-            onHoverChange: j,
+            onContextMenu: j,
+            onHoverChange: v,
             onKeyDown: C,
-            treeItemProps: { onFocus: E },
-            "aria-setsize": x,
+            treeItemProps: { onFocus: x },
+            "aria-setsize": E,
             "aria-posinset": S,
         } = e,
-        P = (function (e, t) {
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -110,13 +110,13 @@ function b(e) {
             }
             return i;
         })(e.treeItemProps, ["onFocus"]),
-        [I, N] = i.useState(!1),
+        [P, N] = i.useState(!1),
         w = i.useCallback(() => {
-            a || N(!0), null == j || j(!0);
-        }, [a, j]),
+            a || N(!0), null == v || v(!0);
+        }, [a, v]),
         Z = i.useCallback(() => {
-            a || N(!1), null == j || j(!1);
-        }, [a, j]),
+            a || N(!1), null == v || v(!1);
+        }, [a, v]),
         T = o || null == u ? null : (0, p.Or)(u),
         A = !o && d > 0 ? (0, p.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(s.tEY, {
@@ -150,19 +150,19 @@ function b(e) {
                 {
                     className: h.folderButton,
                     onClick: y,
-                    onContextMenu: v,
+                    onContextMenu: j,
                     onMouseEnter: w,
                     onMouseLeave: Z,
                     onKeyDown: C,
-                    onFocus: E,
+                    onFocus: x,
                     focusProps: { enabled: !1 },
                 },
-                P,
+                I,
             )),
             (n = n =
                 {
                     role: "treeitem",
-                    "aria-setsize": x,
+                    "aria-setsize": E,
                     "aria-posinset": S,
                     "aria-expanded": o,
                     "aria-owns": O,
@@ -188,7 +188,7 @@ function b(e) {
                                           })
                                         : (0, r.jsx)(m, {
                                               folderNode: l,
-                                              hovered: I,
+                                              hovered: P,
                                               sorting: a,
                                           }),
                             }),

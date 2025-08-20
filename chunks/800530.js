@@ -1,33 +1,26 @@
 n.d(t, {
-    Cg: () => f,
-    Cp: () => P,
-    Cs: () => x,
-    EY: () => O,
-    I5: () => _,
-    JQ: () => j,
-    RY: () => C,
-    Sv: () => v,
-    TX: () => T,
-    ZW: () => y,
-    bK: () => E,
-    n0: () => h,
-    o6: () => N,
-    oE: () => S,
-    qS: () => I,
-    s: () => b,
-    sQ: () => m,
-    wo: () => g,
+    Cg: () => s,
+    Cp: () => v,
+    Cs: () => g,
+    EY: () => h,
+    I5: () => c,
+    JQ: () => E,
+    RY: () => _,
+    Sv: () => p,
+    TX: () => O,
+    ZW: () => m,
+    bK: () => f,
+    n0: () => u,
+    o6: () => I,
+    oE: () => y,
+    qS: () => b,
+    s: () => d,
+    sQ: () => o,
+    wo: () => l,
 });
-var r,
-    i,
-    l,
-    o,
-    a,
-    s,
-    c,
-    u = n(990547),
-    d = n(981631);
-function p(e, t, n) {
+var r = n(990547),
+    i = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,72 +33,86 @@ function p(e, t, n) {
         e
     );
 }
-class m {}
-p(m, "TOS_LINK", "https://discord.com/terms"),
-    p(m, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"),
-    p(m, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
-    p(m, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"),
-    p(m, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
-    p(
-        m,
+class o {}
+a(o, "TOS_LINK", "https://discord.com/terms"),
+    a(o, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"),
+    a(o, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
+    a(o, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"),
+    a(o, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
+    a(
+        o,
         "SPAM_LINK",
         "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__",
     ),
-    p(m, "LEARN_MORE_UU_APPEAL_LINK", "https://support.discord.com/hc/articles/360041820932");
-class f {}
-p(f, "CLASSIFICATION_ID", "classification_id"), p(f, "INCIDENT_TIMESTAMP", "incident_time");
-var g = (((r = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (r.LEARN_MORE_LINK = "learn_more_link"), r);
-class _ {}
-p(_, "ICON_TYPE", "icon_type"),
-    p(_, "HEADER", "header"),
-    p(_, "BODY", "body"),
-    p(_, "CTAS", "ctas"),
-    p(_, "TIMESTAMP", "timestamp"),
-    p(_, "THEME", "theme"),
-    p(_, "CLIENT_VERSION_MESSAGE", "client_version_message"),
-    p(_, "LEARN_MORE_LINK", "learn_more_link"),
-    p(_, "CLASSIFICATION_ID", "classification_id");
-var h =
-        (((i = {})[(i.ViewViolationDetail = 0)] = "ViewViolationDetail"),
-        (i[(i.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
-        (i[(i.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
-        (i[(i.ClickAgeVerificationLink = 3)] = "ClickAgeVerificationLink"),
-        (i[(i.ClickSpamWebformLink = 4)] = "ClickSpamWebformLink"),
-        (i[(i.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
-        (i[(i.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
-        (i[(i.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
-        i),
-    b =
-        (((l = {})[(l.SystemDM = 0)] = "SystemDM"),
-        (l[(l.StandingTab = 1)] = "StandingTab"),
-        (l[(l.AppealIngestion = 2)] = "AppealIngestion"),
-        l);
+    a(o, "LEARN_MORE_UU_APPEAL_LINK", "https://support.discord.com/hc/articles/360041820932");
+class s {}
+a(s, "CLASSIFICATION_ID", "classification_id"), a(s, "INCIDENT_TIMESTAMP", "incident_time");
+var l = (function (e) {
+    return (e.POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (e.LEARN_MORE_LINK = "learn_more_link"), e;
+})({});
+class c {}
+a(c, "ICON_TYPE", "icon_type"),
+    a(c, "HEADER", "header"),
+    a(c, "BODY", "body"),
+    a(c, "CTAS", "ctas"),
+    a(c, "TIMESTAMP", "timestamp"),
+    a(c, "THEME", "theme"),
+    a(c, "CLIENT_VERSION_MESSAGE", "client_version_message"),
+    a(c, "LEARN_MORE_LINK", "learn_more_link"),
+    a(c, "CLASSIFICATION_ID", "classification_id");
+var u = (function (e) {
+        return (
+            (e[(e.ViewViolationDetail = 0)] = "ViewViolationDetail"),
+            (e[(e.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
+            (e[(e.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
+            (e[(e.ClickAgeVerificationLink = 3)] = "ClickAgeVerificationLink"),
+            (e[(e.ClickSpamWebformLink = 4)] = "ClickSpamWebformLink"),
+            (e[(e.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
+            (e[(e.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
+            (e[(e.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
+            e
+        );
+    })({}),
+    d = (function (e) {
+        return (
+            (e[(e.SystemDM = 0)] = "SystemDM"),
+            (e[(e.StandingTab = 1)] = "StandingTab"),
+            (e[(e.AppealIngestion = 2)] = "AppealIngestion"),
+            e
+        );
+    })({});
 Object.freeze({
-    SPEED_BUMP: d.jXE.APPEAL_INGESTION_SPEED_BUMP,
-    COLLECT_SIGNAL: d.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
-    CONFIRM_SUBMISSION: d.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-    REQUEST_SENT: d.jXE.APPEAL_INGESTION_REQUEST_SENT,
-    THANKS: d.jXE.APPEAL_INGESTION_THANKS,
-    SPAM: d.jXE.APPEAL_INGESTION_SPAM,
+    SPEED_BUMP: i.jXE.APPEAL_INGESTION_SPEED_BUMP,
+    COLLECT_SIGNAL: i.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
+    CONFIRM_SUBMISSION: i.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+    REQUEST_SENT: i.jXE.APPEAL_INGESTION_REQUEST_SENT,
+    THANKS: i.jXE.APPEAL_INGESTION_THANKS,
+    SPAM: i.jXE.APPEAL_INGESTION_SPAM,
 });
-var E =
-    (((o = {})[(o.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
-    (o[(o.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
-    (o[(o.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
-    (o[(o.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
-    o);
-let C = [0, 1, 2, 3],
-    v = 372,
-    O = 279,
-    y = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
-var x =
-    (((a = {}).SPEED_BUMP = "speed-bump"),
-    (a.COLLECT_SIGNAL = "collect-signal"),
-    (a.CONFIRM_SUBMISSION = "confirm-submission"),
-    (a.REQUEST_SENT = "request-sent"),
-    (a.THANKS = "thanks"),
-    a);
-let j = {
+var f = (function (e) {
+    return (
+        (e[(e.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
+        (e[(e.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
+        (e[(e.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
+        (e[(e.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
+        e
+    );
+})({});
+let _ = [0, 1, 2, 3],
+    p = 372,
+    h = 279,
+    m = { impression_group: r.ImpressionGroups.APPEAL_INGESTION };
+var g = (function (e) {
+    return (
+        (e.SPEED_BUMP = "speed-bump"),
+        (e.COLLECT_SIGNAL = "collect-signal"),
+        (e.CONFIRM_SUBMISSION = "confirm-submission"),
+        (e.REQUEST_SENT = "request-sent"),
+        (e.THANKS = "thanks"),
+        e
+    );
+})({});
+let E = {
     "speed-bump": {
         next: "collect-signal",
         prev: null,
@@ -123,18 +130,24 @@ let j = {
         prev: null,
     },
 };
-var I =
-        (((s = {})[(s.USER = 1)] = "USER"),
-        (s[(s.GUILD_OWNER = 2)] = "GUILD_OWNER"),
-        (s[(s.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
-        s),
-    S =
-        (((c = {}).LOADING = "loading"),
-        (c.ERROR = "error"),
-        (c.SUCCESS = "success"),
-        (c.FAILURE = "failure"),
-        (c.NONE = "none"),
-        c);
-let T = 2000,
-    P = 15000,
-    N = 5;
+var b = (function (e) {
+        return (
+            (e[(e.USER = 1)] = "USER"),
+            (e[(e.GUILD_OWNER = 2)] = "GUILD_OWNER"),
+            (e[(e.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
+            e
+        );
+    })({}),
+    y = (function (e) {
+        return (
+            (e.LOADING = "loading"),
+            (e.ERROR = "error"),
+            (e.SUCCESS = "success"),
+            (e.FAILURE = "failure"),
+            (e.NONE = "none"),
+            e
+        );
+    })({});
+let O = 2000,
+    v = 15000,
+    I = 5;

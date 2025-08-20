@@ -1,19 +1,19 @@
-n.d(t, { T: () => l });
-var i = n(749681),
-    r = n(258971),
-    s = n(914010),
-    a = n(49898);
-let l = {
+n.d(t, { T: () => s });
+var r = n(749681),
+    i = n(258971),
+    a = n(914010),
+    o = n(49898);
+let s = {
     binds: ["mod+ctrl+a"],
     comboKeysBindGlobal: !0,
     action() {
         var e;
-        let t = null != (e = s.Z.getGuildId()) ? e : void 0;
-        (0, i.transitionToGlobalDiscovery)({
-            tab: a.GlobalDiscoveryTab.APPS,
+        let t = null != (e = a.Z.getGuildId()) ? e : void 0;
+        (0, r.transitionToGlobalDiscovery)({
+            tab: o.GlobalDiscoveryTab.APPS,
             newSessionState: {
                 guildId: null != t ? t : null,
-                entrypoint: { name: r.xF.KEYBOARD_SHORTCUT },
+                entrypoint: { name: i.xF.KEYBOARD_SHORTCUT },
             },
         });
     },

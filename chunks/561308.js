@@ -8,10 +8,10 @@ n.d(t, {
     PJ: () => g,
     T_: () => _,
     V5: () => T,
-    ap: () => N,
-    bT: () => C,
+    ap: () => C,
+    bT: () => N,
     dw: () => S,
-    ig: () => L,
+    ig: () => x,
     kr: () => E,
     n2: () => y,
     q_: () => w,
@@ -144,7 +144,7 @@ function A(e) {
         days: t > 0 || n > 0 ? 0 : i,
     });
 }
-function N(e) {
+function C(e) {
     if (null == e || "" === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
@@ -154,7 +154,7 @@ function N(e) {
               episodeNum: t[2],
           });
 }
-function C(e, t) {
+function N(e, t) {
     var n, r, i, a;
     let o,
         s = null != (i = null == t || null == (n = t.size) ? void 0 : n[0]) ? i : void 0,
@@ -200,7 +200,7 @@ function D(e) {
               tooltipText: u.intl.formatToPlainString(u.t["S5F48/"], { hours: n }),
           };
 }
-function L(e) {
+function x(e) {
     var t;
     return null == (t = g(e, o.N.TRENDING_CONTENT)) ? void 0 : t.trending;
 }

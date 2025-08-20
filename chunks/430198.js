@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -76,7 +76,7 @@ function A(e, t) {
     }
     return !1;
 }
-function N(e) {
+function C(e) {
     let t = E.Z.getGuild(e);
     if (null == t) return;
     let n = (v[e] = new Set());
@@ -87,7 +87,7 @@ function N(e) {
         A(i, t) && n.add(i.id);
     }
 }
-function C(e, t) {
+function N(e, t) {
     let n = v[e];
     if (null == n) return !1;
     let r = h.Z.getChannel(t);
@@ -111,30 +111,30 @@ function w(e) {
 }
 function D(e) {
     let { channel: t } = e;
-    return null != t.guild_id && C(t.guild_id, t.id);
-}
-function L(e) {
-    let { channels: t } = e,
-        n = !1;
-    for (let e of t) null != e.guild_id && C(e.guild_id, e.id) && (n = !0);
-    return n;
+    return null != t.guild_id && N(t.guild_id, t.id);
 }
 function x(e) {
+    let { channels: t } = e,
+        n = !1;
+    for (let e of t) null != e.guild_id && N(e.guild_id, e.id) && (n = !0);
+    return n;
+}
+function L(e) {
     let { guildId: t, restrictions: n } = e;
     (0, s.uq)(n) ? I.add(t) : I.delete(t);
 }
-function M(e) {
+function j(e) {
     let { guildId: t } = e;
     I.add(t);
 }
-class k extends (r = i.ZP.Store) {
+class M extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: "1" }, () => R());
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
         let n = v[e];
-        return null == n && (N(e), (n = v[e])), null != n && n.has(t);
+        return null == n && (C(e), (n = v[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
         return null != e && this.isChannelGated(e, t) && !I.has(e);
@@ -149,8 +149,8 @@ class k extends (r = i.ZP.Store) {
         );
     }
 }
-O(k, "displayName", "GatedChannelStore");
-let j = new k(a.Z, {
+O(M, "displayName", "GatedChannelStore");
+let k = new M(a.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     CACHE_LOADED_LAZY: R,
@@ -164,7 +164,7 @@ let j = new k(a.Z, {
     IMPERSONATE_STOP: w,
     CHANNEL_CREATE: D,
     CHANNEL_DELETE: D,
-    CHANNEL_UPDATES: L,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M,
+    CHANNEL_UPDATES: x,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: L,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: j,
 });

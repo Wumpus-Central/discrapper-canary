@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(539854), n(388685), n(997841);
+n.d(t, { Z: () => Z }), n(539854), n(388685), n(997841);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -23,7 +23,7 @@ var r,
     T = n(77498),
     S = n(797258),
     A = n(981631);
-function N(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -77,7 +77,7 @@ function P(e, t) {
 }
 let w = [],
     D = {};
-function L() {
+function x() {
     let e = [],
         t = y.Ok.getSetting();
     null != t &&
@@ -86,7 +86,7 @@ function L() {
     let n = m.Z.getActivities();
     e.push(...n);
     let r = I.Z.getStream();
-    null != r && e.push(C({ type: A.IIU.STREAMING }, r));
+    null != r && e.push(N({ type: A.IIU.STREAMING }, r));
     let i = new Set();
     s().forEach(D, (t) => {
         let [, n] = t;
@@ -98,14 +98,14 @@ function L() {
         u = null != v.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
     if (null != o && null != o.name && !d) {
-        var f, O, N;
+        var f, O, C;
         e.push(
-            C(
+            N(
                 {
                     type: A.IIU.PLAYING,
                     name: o.name,
                     application_id: null != (O = o.id) ? O : null == (f = T.Z.getGameByName(o.name)) ? void 0 : f.id,
-                    metadata: { distributor: null != (N = o.distributor) ? N : void 0 },
+                    metadata: { distributor: null != (C = o.distributor) ? C : void 0 },
                     timestamps: { start: o.start },
                 },
                 (0, E.LK)(o),
@@ -113,7 +113,7 @@ function L() {
         );
     }
     let R = b.Z.getActivity();
-    null != R && e.push(C({ type: A.IIU.LISTENING }, R));
+    null != R && e.push(N({ type: A.IIU.LISTENING }, R));
     let P = h.Z.getCurrentHangStatus();
     if (null != P) {
         let t = h.Z.getCustomHangStatus();
@@ -127,21 +127,21 @@ function L() {
     }
     a()(w, e) || (w = e);
 }
-function x() {
-    (D = {}), L();
-}
-function M(e) {
-    let { socketId: t, pid: n, activity: r } = e;
-    if (a()(D[t], [n, r])) return !1;
-    null != r ? (D[t] = [n, r]) : delete D[t], L();
-}
-function k(e) {
-    let { socketId: t } = e;
-    delete D[t], L();
+function L() {
+    (D = {}), x();
 }
 function j(e) {
+    let { socketId: t, pid: n, activity: r } = e;
+    if (a()(D[t], [n, r])) return !1;
+    null != r ? (D[t] = [n, r]) : delete D[t], x();
+}
+function M(e) {
+    let { socketId: t } = e;
+    delete D[t], x();
+}
+function k(e) {
     let { localActivities: t } = e;
-    (D = C({}, t)), L();
+    (D = N({}, t)), x();
 }
 function U() {
     let e = {},
@@ -150,16 +150,16 @@ function U() {
         var n;
         let o = null != (n = a.flags) ? n : 0,
             s = (0, d.Ix)(o);
-        s !== o ? ((e[r] = [i, P(C({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
+        s !== o ? ((e[r] = [i, P(N({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
     }
     return t ? ((D = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
 function G() {
-    U(), L();
+    U(), x();
 }
 class B extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, u.ZP, I.Z, v.Z, b.Z, O.Z, T.Z, h.Z, S.Z, f.Z), this.syncWith([m.Z, h.Z], () => L());
+        this.waitFor(p.ZP, u.ZP, I.Z, v.Z, b.Z, O.Z, T.Z, h.Z, S.Z, f.Z), this.syncWith([m.Z, h.Z], () => x());
     }
     getActivities() {
         return w;
@@ -184,24 +184,24 @@ class B extends (r = l.ZP.Store) {
         return null;
     }
 }
-N(B, "displayName", "LocalActivityStore");
-let V = new B(c.Z, {
-    ROBLOX_SUBGAME_UPDATE: L,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: L,
-    OVERLAY_INITIALIZE: j,
-    START_SESSION: x,
-    LOCAL_ACTIVITY_UPDATE: M,
-    RPC_APP_DISCONNECTED: k,
-    RUNNING_GAMES_CHANGE: L,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
-    SPOTIFY_PLAYER_STATE: L,
-    SPOTIFY_PLAYER_PLAY: L,
-    STREAMING_UPDATE: L,
-    USER_CONNECTIONS_UPDATE: L,
-    STREAM_START: L,
-    STREAM_STOP: L,
+C(B, "displayName", "LocalActivityStore");
+let Z = new B(c.Z, {
+    ROBLOX_SUBGAME_UPDATE: x,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: x,
+    OVERLAY_INITIALIZE: k,
+    START_SESSION: L,
+    LOCAL_ACTIVITY_UPDATE: j,
+    RPC_APP_DISCONNECTED: M,
+    RUNNING_GAMES_CHANGE: x,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
+    SPOTIFY_PLAYER_STATE: x,
+    SPOTIFY_PLAYER_PLAY: x,
+    STREAMING_UPDATE: x,
+    USER_CONNECTIONS_UPDATE: x,
+    STREAM_START: x,
+    STREAM_STOP: x,
     USER_SETTINGS_PROTO_UPDATE: G,
-    EMBEDDED_ACTIVITY_CLOSE: L,
-    UPDATE_HANG_STATUS: L,
-    RUNNING_GAME_TOGGLE_DETECTION: L,
+    EMBEDDED_ACTIVITY_CLOSE: x,
+    UPDATE_HANG_STATUS: x,
+    RUNNING_GAME_TOGGLE_DETECTION: x,
 });

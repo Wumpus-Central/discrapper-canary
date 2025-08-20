@@ -1,77 +1,77 @@
-n.d(t, { Z: () => h }), n(953529), n(388685);
+n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(951288),
-    a = n(647438),
-    i = n(442837),
-    o = n(481060),
-    l = n(230711),
+    i = n(647438),
+    l = n(442837),
+    a = n(481060),
+    o = n(230711),
     s = n(493773),
     c = n(367907),
     d = n(138201),
     u = n(592125),
-    _ = n(155647),
-    m = n(185625),
+    m = n(155647),
+    _ = n(185625),
     p = n(981631),
-    g = n(388032),
-    f = n(769450);
-function b(e) {
-    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: o } = e,
-        [l, c] = a.useState(!1);
+    f = n(388032),
+    g = n(769450);
+function x(e) {
+    let { title: t, description: n, onButtonClick: l, trackSettingsUpsellsAction: a } = e,
+        [o, c] = i.useState(!1);
     return (
         (0, s.ZP)(() => {
-            o(m.M4.SETTINGS_UPSELLS_VIEWED);
+            a(_.M4.SETTINGS_UPSELLS_VIEWED);
         }),
         (0, r.jsx)(d.JZ, {
             title: t,
             description: n,
-            buttonText: l ? g.intl.string(g.t["h+WsPT"]) : g.intl.string(g.t.A8t4NT),
-            buttonDisabled: l,
+            buttonText: o ? f.intl.string(f.t["h+WsPT"]) : f.intl.string(f.t.A8t4NT),
+            buttonDisabled: o,
             onButtonPress: () => {
-                i(), c(!0), o(m.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                l(), c(!0), a(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             },
         })
     );
 }
-function h(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: d, reportSubType: h } = e,
-        x = (0, i.e7)([u.Z], () => u.Z.getChannel(n)),
-        v = (0, _.jc)(t, null == x ? void 0 : x.type),
-        j = (0, m.i_)(d, h, s);
+function b(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: s, reportType: d, reportSubType: b } = e,
+        h = (0, l.e7)([u.Z], () => u.Z.getChannel(n)),
+        v = (0, m.jc)(t, null == h ? void 0 : h.type),
+        j = (0, _.i_)(d, b, s);
     return 0 === v.length
         ? null
         : (0, r.jsxs)("div", {
-              className: f.container,
+              className: g.container,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(a.X6q, {
                       variant: "text-sm/semibold",
-                      className: f.header,
-                      children: g.intl.string(g.t["1yxTIC"]),
+                      className: g.header,
+                      children: f.intl.string(f.t["1yxTIC"]),
                   }),
                   (0, r.jsx)("div", {
-                      className: f.upsellsContainer,
+                      className: g.upsellsContainer,
                       children: v.map((e, n) => {
-                          let { getTitle: a, getDescription: i, onApply: o } = e;
+                          let { getTitle: i, getDescription: l, onApply: a } = e;
                           return (0, r.jsx)(
-                              b,
+                              x,
                               {
-                                  title: a(),
-                                  description: i(),
-                                  onButtonClick: o,
+                                  title: i(),
+                                  description: l(),
+                                  onButtonClick: a,
                                   trackSettingsUpsellsAction: j(t[n]),
                               },
                               n,
                           );
                       }),
                   }),
-                  (0, r.jsx)(o.Avr, {
-                      text: g.intl.string(g.t.olebGx),
+                  (0, r.jsx)(a.Avr, {
+                      text: f.intl.string(f.t.olebGx),
                       onClick: () => {
-                          l.Z.open(p.oAB.CONTENT_AND_SOCIAL),
-                              a(),
+                          o.Z.open(p.oAB.CONTENT_AND_SOCIAL),
+                              i(),
                               c.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,
                                   report_type: d.name,
-                                  report_subtype: h,
-                                  action: m.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+                                  report_subtype: b,
+                                  action: _.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
                               });
                       },
                   }),

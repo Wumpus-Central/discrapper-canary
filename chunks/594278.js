@@ -34,7 +34,7 @@ let g = function (e) {
         N = i.useCallback(() => {
             O || C(t, 1);
         }, [C, t, O]),
-        I = i.useCallback(() => {
+        E = i.useCallback(() => {
             O || C(t, -1);
         }, [C, t, O]);
     return (
@@ -48,7 +48,7 @@ let g = function (e) {
             children: [
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, l),
-                    onClick: I,
+                    onClick: E,
                     onMouseEnter: () => b(d.n.RIGHT),
                     ignoreKeyPress: O,
                     children: (0, r.jsx)(c.Z, {

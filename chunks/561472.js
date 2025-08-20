@@ -19,13 +19,13 @@ var r = n(951288),
     C = n(981631),
     x = n(388032);
 let v = function (e) {
-    let { className: t, style: n, channel: v, draftType: j } = e,
-        [O, E] = i.useState(!0),
+    let { className: t, style: n, channel: v, draftType: O } = e,
+        [j, E] = i.useState(!0),
         S = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         P = (0, l.e7)([h.Z], () => null != v && h.Z.can(C.Plq.ATTACH_FILES, v), [v]),
         I = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(v.id)),
         Z = v.getGuildId(),
-        T = j === c.d.FirstThreadMessage,
+        T = O === c.d.FirstThreadMessage,
         N = (0, l.e7)([m.default], () => {
             var e;
             return !0 == !(null == (e = m.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
@@ -42,7 +42,7 @@ let v = function (e) {
             ? C.TPd.GUILD_THREADS_ONLY.has(v.type)
                 ? x.intl.string(x.t.RBBLhI)
                 : x.intl.string(x.t.gUx4en)
-            : O
+            : j
               ? x.intl.format(x.t.dYP2FR, { destination: (0, s.F6)(v, m.default, f.Z, !0) })
               : x.intl.string(x.t.h76ulJ);
     return I || !w
@@ -57,8 +57,8 @@ let v = function (e) {
                   if (I) return !1;
                   w &&
                       null != v &&
-                      ((0, b.d5)(e, v, j, {
-                          requireConfirm: O,
+                      ((0, b.d5)(e, v, O, {
+                          requireConfirm: j,
                           showLargeMessageDialog: !1,
                           origin: "drag_drop",
                       }),
@@ -67,7 +67,7 @@ let v = function (e) {
               onDragClear: () => E(!0),
               onDragOver: (e) => {
                   if (I) return !1;
-                  T || e.shiftKey !== O || E(!e.shiftKey);
+                  T || e.shiftKey !== j || E(!e.shiftKey);
               },
           });
 };

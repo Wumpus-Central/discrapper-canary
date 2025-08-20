@@ -1,53 +1,58 @@
-n.d(t, { b: () => d });
+n.d(t, { b: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(846027),
-    a = n(468026),
-    o = n(388032);
-let c = null;
-function s() {
-    null !== c && (0, i.Mr3)(c), (c = null);
+    a = n(846027),
+    o = n(468026),
+    s = n(388032);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function u() {
-    l.Z.setSilenceWarning(!1);
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
 }
+let u = null;
 function d() {
-    c = (0, i.h7j)((e) =>
+    null !== u && (0, i.Mr3)(u), (u = null);
+}
+function f() {
+    a.Z.setSilenceWarning(!1);
+}
+function _() {
+    u = (0, i.h7j)((e) =>
         (0, r.jsx)(
-            a.default,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
+            o.default,
+            c(
                 {
-                    title: o.intl.string(o.t["zQ1+Jy"]),
-                    body: o.intl.string(o.t.K1gWXl),
-                    secondaryConfirmText: o.intl.string(o.t.XAiAgI),
-                    onConfirmSecondary: u,
-                    onConfirm: s,
-                    confirmText: o.intl.string(o.t.BddRzc),
+                    title: s.intl.string(s.t["zQ1+Jy"]),
+                    body: s.intl.string(s.t.K1gWXl),
+                    secondaryConfirmText: s.intl.string(s.t.XAiAgI),
+                    onConfirmSecondary: f,
+                    onConfirm: d,
+                    confirmText: s.intl.string(s.t.BddRzc),
                 },
                 e,
             ),

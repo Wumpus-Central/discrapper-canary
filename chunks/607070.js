@@ -143,11 +143,11 @@ function A() {
     (O = p({}, O)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT),
         O.zoom !== d.yqN.ZOOM_DEFAULT && ((O.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(O.zoom));
 }
-function N() {
+function C() {
     if (O.keyboardModeEnabled) return !1;
     (O = p({}, O)).keyboardModeEnabled = !0;
 }
-function C() {
+function N() {
     if (!O.keyboardModeEnabled) return !1;
     (O = p({}, O)).keyboardModeEnabled = !1;
 }
@@ -163,19 +163,19 @@ function w(e) {
 function D(e) {
     (O = p({}, O)).saturation = e.saturation;
 }
-function L() {
+function x() {
     (O = p({}, O)).desaturateUserColors = !O.desaturateUserColors;
 }
-function x(e) {
+function L(e) {
     O.roleStyle = e.roleStyle;
 }
-function M(e) {
+function j(e) {
     O.displayNameStylesEnabled = e.enabled;
 }
-function k() {
+function M() {
     (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
 }
-function j() {
+function k() {
     (O = p({}, O)).syncProfileThemeWithUserTheme = !O.syncProfileThemeWithUserTheme;
 }
 function U(e) {
@@ -190,14 +190,14 @@ function B(e) {
     if (O.prefersReducedMotion === e.prefersReducedMotion) return !1;
     O = m(p({}, O), { prefersReducedMotion: e.prefersReducedMotion });
 }
-function V(e) {
+function Z(e) {
     if (O.systemPrefersContrast === e.systemPrefersContrast) return !1;
     O = m(p({}, O), { systemPrefersContrast: e.systemPrefersContrast });
 }
-function F(e) {
+function V(e) {
     O = m(p({}, O), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
 }
-function Z(e) {
+function F(e) {
     O = m(p({}, O), { enableCustomCursor: e.enableCustomCursor });
 }
 function H(e) {
@@ -424,27 +424,27 @@ let Q = new X(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: S,
     ACCESSIBILITY_RESET_TO_DEFAULT: A,
-    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: C,
+    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: C,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: N,
     ACCESSIBILITY_COLORBLIND_TOGGLE: R,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: P,
     ACCESSIBILITY_SET_SATURATION: D,
-    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
+    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: x,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: H,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: Z,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: U,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: G,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: B,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
-    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: F,
-    ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: Z,
-    ACCESSIBILITY_SET_ROLE_STYLE: x,
-    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: M,
+    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: V,
+    ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: F,
+    ACCESSIBILITY_SET_ROLE_STYLE: L,
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: j,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: Y,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: W,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: K,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: M,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: k,
     ACCESSIBILITY_SET_CONTRAST: z,
     ACCESSIBILITY_SET_CONTRAST_MODE: q,
 });

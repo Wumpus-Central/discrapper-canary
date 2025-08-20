@@ -71,11 +71,11 @@ function A(e, t) {
         e
     );
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = N(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +83,7 @@ function N(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -102,19 +102,19 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 getStickerItemProps: l,
                 getStickerRowProps: I,
                 gutterWidth: S,
-                inspectedStickerPosition: C,
+                inspectedStickerPosition: N,
                 isScrolling: D,
-                isUsingKeyboardNavigation: L,
-                onInspect: x,
-                onSelect: M,
-                rowIndex: k,
-                stickerClassName: j,
+                isUsingKeyboardNavigation: x,
+                onInspect: L,
+                onSelect: j,
+                rowIndex: M,
+                stickerClassName: k,
                 stickerDescriptors: U,
                 stickerPadding: G = P,
                 stickerSize: B = R,
-                ownedStickerPacks: V,
-                enlargeOnInteraction: F = !1,
-                channel: Z,
+                ownedStickerPacks: Z,
+                enlargeOnInteraction: V = !1,
+                channel: F,
                 currentUser: H,
                 checkSendability: Y = !0,
             } = e,
@@ -146,28 +146,28 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         className: v.row,
                         style: z,
                     },
-                    null == I ? void 0 : I(k),
+                    null == I ? void 0 : I(M),
                 ),
                 {
                     children: U.map((e) => {
                         var d;
                         let f =
-                                e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) &&
-                                e.columnIndex === (null == C ? void 0 : C.columnIndex),
-                            I = e.type === m.al.STICKER && F && f,
+                                e.visibleRowIndex === (null == N ? void 0 : N.rowIndex) &&
+                                e.columnIndex === (null == N ? void 0 : N.columnIndex),
+                            I = e.type === m.al.STICKER && V && f,
                             S = (t) => {
-                                if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0)
+                                if ((null == D ? void 0 : D.current) === !0 || (null == x ? void 0 : x.current) === !0)
                                     return;
                                 let n = t.altKey;
                                 n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id),
-                                    null == M || M(e, n);
+                                    null == j || j(e, n);
                             },
                             R = (0, s.throttle)(() => {
                                 (null == D ? void 0 : D.current) === !0 ||
-                                    (null == L ? void 0 : L.current) === !0 ||
+                                    (null == x ? void 0 : x.current) === !0 ||
                                     f ||
-                                    null == x ||
-                                    x(e);
+                                    null == L ||
+                                    L(e);
                             }, w),
                             P = () => {
                                 e.type === m.al.CREATE_STICKER &&
@@ -176,17 +176,15 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([
-                                            n.e("12830"),
-                                            n.e("93626"),
-                                            n.e("46311"),
-                                        ]).then(n.bind(n, 136735));
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("24291")]).then(
+                                            n.bind(n, 136735),
+                                        );
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));
                                     }));
                             },
-                            U = null != (d = null == l ? void 0 : l(e.columnIndex, k)) ? d : {},
+                            U = null != (d = null == l ? void 0 : l(e.columnIndex, M)) ? d : {},
                             { ref: G, tabIndex: K, onFocus: z } = U,
-                            J = N(U, ["ref", "tabIndex", "onFocus"]);
+                            J = C(U, ["ref", "tabIndex", "onFocus"]);
                         switch (e.type) {
                             case m.al.CREATE_STICKER:
                                 return (0, r.jsx)(
@@ -194,7 +192,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     A(T({}, J), {
                                         children: (0, r.jsxs)(c.P3F, {
                                             "aria-label": e.name,
-                                            className: o()(v.createSticker, j, { [v.createInspected]: f }),
+                                            className: o()(v.createSticker, k, { [v.createInspected]: f }),
                                             innerRef: G,
                                             tabIndex: K,
                                             onFocus: null != z ? z : R,
@@ -202,7 +200,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             onClick: P,
                                             style: q,
                                             children: [
-                                                !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                !V && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                 (0, r.jsx)("div", {
                                                     className: v.iconWrapper,
                                                     children: (0, r.jsx)(c.qJs, {
@@ -222,7 +220,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     e.guild_id,
                                 );
                             case m.al.STICKER: {
-                                let s = t && null != V && (0, g.jl)(e.sticker) && !V.has(e.sticker.pack_id),
+                                let s = t && null != Z && (0, g.jl)(e.sticker) && !Z.has(e.sticker.pack_id),
                                     l = (e) => {
                                         (0, u.jW)(e, async () => {
                                             let { default: e } = await n.e("39010").then(n.bind(n, 269254));
@@ -233,7 +231,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     "div",
                                     A(T({}, J), { key: e.sticker.id }),
                                     (0, r.jsxs)(c.P3F, {
-                                        className: o()(v.sticker, j, {
+                                        className: o()(v.sticker, k, {
                                             [v.stickerInspected]: f,
                                             [v.showPulse]: X === e.sticker.id,
                                         }),
@@ -251,20 +249,20 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             (0, r.jsxs)("div", {
                                                 "aria-hidden": !0,
                                                 children: [
-                                                    !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                    !V && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                     (0, r.jsx)(E.Z, {
                                                         className: o()(v.stickerNode, {
                                                             [v.stickerNodeDimmed]:
-                                                                F &&
+                                                                V &&
                                                                 !f &&
-                                                                null != C &&
-                                                                -1 !== C.rowIndex &&
-                                                                -1 !== C.columnIndex,
+                                                                null != N &&
+                                                                -1 !== N.rowIndex &&
+                                                                -1 !== N.columnIndex,
                                                             [v.stickerNodeHidden]: I,
-                                                            [v.stickerUnsendable]: Y && !(0, h.kl)(e.sticker, H, Z),
+                                                            [v.stickerUnsendable]: Y && !(0, h.kl)(e.sticker, H, F),
                                                         }),
                                                         disableAnimation: !f && !a,
-                                                        enlargeOnInteraction: F,
+                                                        enlargeOnInteraction: V,
                                                         isInteracting: f,
                                                         maskAsset: f,
                                                         sticker: e.sticker,

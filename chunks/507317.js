@@ -23,7 +23,7 @@ let v = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, a.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("67040")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>

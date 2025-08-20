@@ -98,8 +98,8 @@ let E = function (e) {
             to: T,
             avatarClassName: S,
             selectedClassName: A,
-            innerClassName: N,
-            wrapContent: C,
+            innerClassName: C,
+            wrapContent: N,
             highlighted: R,
             focusProps: P,
         } = e,
@@ -131,7 +131,7 @@ let E = function (e) {
     })),
         (w["aria-selected"] = null != (t = w["aria-selected"]) ? t : v);
     let D = i.useRef(null),
-        L = (0, r.jsxs)("div", {
+        x = (0, r.jsxs)("div", {
             className: o()(d.childContainer, { [d.nameplated]: null != p }),
             children: [
                 (0, r.jsx)(u.Z, {
@@ -143,9 +143,9 @@ let E = function (e) {
                 }),
                 (0, r.jsxs)("div", {
                     ref: D,
-                    className: o()(N, d.layout, {
+                    className: o()(C, d.layout, {
                         [d.muted]: !v && I,
-                        [d.wrappedLayout]: C,
+                        [d.wrappedLayout]: N,
                     }),
                     children: [
                         (0, r.jsx)("div", {
@@ -159,7 +159,7 @@ let E = function (e) {
                                     className: d.nameAndDecorators,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: o()(d.name, { [d.wrappedName]: C }),
+                                            className: o()(d.name, { [d.wrappedName]: N }),
                                             children: f,
                                         }),
                                         b,
@@ -200,7 +200,7 @@ let E = function (e) {
                           {
                               role: "listitem",
                               ref: n,
-                              children: L,
+                              children: x,
                           },
                       ),
                   ),
@@ -220,7 +220,7 @@ let E = function (e) {
                     {
                         role: "listitem",
                         innerRef: n,
-                        children: L,
+                        children: x,
                     },
                 ),
             )
@@ -232,7 +232,7 @@ let E = function (e) {
                         h(_({}, w), {
                             role: "listitem",
                             ref: n,
-                            children: L,
+                            children: x,
                         }),
                     ),
                 }),

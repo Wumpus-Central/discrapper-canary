@@ -1,7 +1,20 @@
-n.d(t, { x: () => l }), n(388685);
+n.d(t, { x: () => o }), n(388685);
 var r = n(647438),
     i = n(960048);
-class l extends r.PureComponent {
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class o extends r.PureComponent {
     componentDidCatch(e, t) {
         i.Z.captureException(e, {
             tags: {
@@ -24,16 +37,7 @@ class l extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: n,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = n);
-            })(this, "state", {
+            a(this, "state", {
                 error: null,
                 info: null,
             });

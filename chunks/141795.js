@@ -1,5 +1,5 @@
 n.d(t, {
-    mw: () => k,
+    mw: () => M,
     nH: () => U,
 }),
     n(415506),
@@ -31,8 +31,8 @@ var r = n(392711),
     T = n(983544),
     S = n(596956),
     A = n(125186),
-    N = n(981631);
-function C(e, t, n) {
+    C = n(981631);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -85,8 +85,8 @@ function w(e, t) {
     );
 }
 let D = new s.Z("CloudUpload.tsx"),
-    L = n(224497).Z;
-class x extends Error {
+    x = n(224497).Z;
+class L extends Error {
     static getErrorKind(e, t) {
         var n;
         let r = null != (n = null == t ? void 0 : t.status) ? n : 0,
@@ -100,9 +100,9 @@ class x extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.Pd) throw new x(e, { response: t });
-            if (t instanceof Error) throw new x(e, { cause: t });
-            throw new x(e, { cause: Error(String(t)) });
+            if (t instanceof o.Pd) throw new L(e, { response: t });
+            if (t instanceof Error) throw new L(e, { cause: t });
+            throw new L(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
@@ -111,7 +111,7 @@ class x extends Error {
     constructor(e, t = {}) {
         var n, r;
         let { cause: i, response: a } = t,
-            o = x.getErrorKind(
+            o = L.getErrorKind(
                 null != i ? i : Error("".concat(null != (n = null == a ? void 0 : a.text) ? n : "Unknown error")),
                 a,
             ),
@@ -123,17 +123,17 @@ class x extends Error {
                           .concat(null != (r = null == a ? void 0 : a.status) ? r : 0)
                     : "".concat(e, ":").concat(o);
         super(s, { cause: i }),
-            C(this, "kind", void 0),
-            C(this, "phase", void 0),
-            C(this, "messageShort", void 0),
+            N(this, "kind", void 0),
+            N(this, "phase", void 0),
+            N(this, "messageShort", void 0),
             (this.name = "ResumableUploadError"),
             (this.phase = e),
             (this.kind = o),
             (this.messageShort = s);
     }
 }
-let M = "Content-MD5";
-var k = (function (e) {
+let j = "Content-MD5";
+var M = (function (e) {
     return (
         (e.NOT_STARTED = "NOT_STARTED"),
         (e.STARTED = "STARTED"),
@@ -144,41 +144,41 @@ var k = (function (e) {
         e
     );
 })({});
-class j {
+class k {
     constructor() {
-        C(this, "numUploadAttempts", void 0),
-            C(this, "timing", {}),
-            C(this, "compressAndExtractDisabled", void 0),
-            C(this, "fileAlreadyPrepped", void 0),
-            C(this, "imageCompressionQuality", void 0),
-            C(this, "videoCompressionQuality", void 0),
-            C(this, "convertedMimeType", void 0),
-            C(this, "sourceMediaWidth", void 0),
-            C(this, "sourceMediaHeight", void 0),
-            C(this, "sourceMediaFormat", void 0),
-            C(this, "sourceVideoBitrate", void 0),
-            C(this, "sourceVideoFramerate", void 0),
-            C(this, "videoDurationMs", void 0),
-            C(this, "sourceVideoProfile", void 0),
-            C(this, "sourceVideoLevel", void 0),
-            C(this, "targetVideoWidth", void 0),
-            C(this, "targetVideoHeight", void 0),
-            C(this, "targetVideoBitrate", void 0),
-            C(this, "targetVideoCodec", void 0),
-            C(this, "targetVideoFramerate", void 0),
-            C(this, "targetVideoIsHdr", void 0),
-            C(this, "hevcIsSupported", void 0),
-            C(this, "progressUpdateGranularity", void 0),
-            C(this, "validUploadHash", void 0),
-            C(this, "psnr", void 0),
-            C(this, "ssim", void 0),
-            C(this, "origin", void 0),
-            C(this, "psnrMeasurementLatencyMs", void 0),
-            C(this, "ssimMeasurementLatencyMs", void 0),
-            C(this, "uploadResumptionCount", 0),
-            C(this, "uploadResumptionPosition", 0),
-            C(this, "uploadResumptionReason", void 0),
-            C(this, "conversionFailureReason", void 0);
+        N(this, "numUploadAttempts", void 0),
+            N(this, "timing", {}),
+            N(this, "compressAndExtractDisabled", void 0),
+            N(this, "fileAlreadyPrepped", void 0),
+            N(this, "imageCompressionQuality", void 0),
+            N(this, "videoCompressionQuality", void 0),
+            N(this, "convertedMimeType", void 0),
+            N(this, "sourceMediaWidth", void 0),
+            N(this, "sourceMediaHeight", void 0),
+            N(this, "sourceMediaFormat", void 0),
+            N(this, "sourceVideoBitrate", void 0),
+            N(this, "sourceVideoFramerate", void 0),
+            N(this, "videoDurationMs", void 0),
+            N(this, "sourceVideoProfile", void 0),
+            N(this, "sourceVideoLevel", void 0),
+            N(this, "targetVideoWidth", void 0),
+            N(this, "targetVideoHeight", void 0),
+            N(this, "targetVideoBitrate", void 0),
+            N(this, "targetVideoCodec", void 0),
+            N(this, "targetVideoFramerate", void 0),
+            N(this, "targetVideoIsHdr", void 0),
+            N(this, "hevcIsSupported", void 0),
+            N(this, "progressUpdateGranularity", void 0),
+            N(this, "validUploadHash", void 0),
+            N(this, "psnr", void 0),
+            N(this, "ssim", void 0),
+            N(this, "origin", void 0),
+            N(this, "psnrMeasurementLatencyMs", void 0),
+            N(this, "ssimMeasurementLatencyMs", void 0),
+            N(this, "uploadResumptionCount", 0),
+            N(this, "uploadResumptionPosition", 0),
+            N(this, "uploadResumptionReason", void 0),
+            N(this, "conversionFailureReason", void 0);
     }
 }
 class U extends I.ZP {
@@ -249,7 +249,7 @@ class U extends I.ZP {
         )
             return await this.uploadFileWithResumption(this.responseUrl, e, t);
         let a = { "Content-Type": t };
-        void 0 !== this.contentHash && (a[M] = this.contentHash);
+        void 0 !== this.contentHash && (a[j] = this.contentHash);
         let s = R(
             {
                 url: this.responseUrl,
@@ -275,7 +275,7 @@ class U extends I.ZP {
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : x.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : L.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof o.Pd && 308 === e.status) {
@@ -283,7 +283,7 @@ class U extends I.ZP {
                     let n = this.parseRangeHeader(null != (t = e.headers.range) ? t : "");
                     return null != n ? n[1] + 1 : 0;
                 }
-                return x.rejectionHandler("status_check")(e);
+                return L.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
@@ -308,8 +308,8 @@ class U extends I.ZP {
         e.onRequestProgress = i().throttle(this.createResumeAwareProgressFn(t), 50);
         let r = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(x.rejectionHandler("upload"));
-        if (200 !== r.status && 201 !== r.status) throw new x("upload", { response: r });
+            .catch(L.rejectionHandler("upload"));
+        if (200 !== r.status && 201 !== r.status) throw new L("upload", { response: r });
         return r;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -336,7 +336,7 @@ class U extends I.ZP {
                 }
                 return await this.startOrResumeUpload(s, l);
             } catch (e) {
-                if (e instanceof x && e.canRetry()) {
+                if (e instanceof L && e.canRetry()) {
                     D.warn("Error uploading ".concat(this.id, ": ").concat(e.message, ", attempting resumption")),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
                         await y.Z.awaitOnline();
@@ -379,11 +379,11 @@ class U extends I.ZP {
         )
             return void this.handleComplete(this.id);
         this.item.platform === I.ow.WEB && (await this.maybeConvertToWebP());
-        let i = await L.getUploadPayload(this),
+        let i = await x.getUploadPayload(this),
             a = (0, T.F)(this.item.target),
             s = (0, d.G)({ location: "CloudUpload.upload" });
         if (null == i.filename || "" === i.filename) {
-            D.error("File does not have a filename.", JSON.stringify(i)), this.handleError(N.evJ.INVALID_FILE_ASSET);
+            D.error("File does not have a filename.", JSON.stringify(i)), this.handleError(C.evJ.INVALID_FILE_ASSET);
             return;
         }
         if (s.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
@@ -396,9 +396,9 @@ class U extends I.ZP {
                     error: e instanceof Error ? e.message : String(e),
                 });
             }
-        if (0 === this.currentSize) return void this.handleError(N.evJ.INVALID_FILE_ASSET);
+        if (0 === this.currentSize) return void this.handleError(C.evJ.INVALID_FILE_ASSET);
         if ((null != (e = this.currentSize) ? e : 0) > a.getMaxFileSize(this.channelId))
-            return void this.handleError(N.evJ.ENTITY_TOO_LARGE);
+            return void this.handleError(C.evJ.ENTITY_TOO_LARGE);
         if (l.ZP.get("upload_fail_50") && 0.5 > Math.random())
             return void setTimeout(() => {
                 this.handleError(500);
@@ -428,7 +428,7 @@ class U extends I.ZP {
                 this.setUploadedFilename(e.body.attachments[0].upload_filename);
         } catch (r) {
             let e = null != (n = null == r || null == (t = r.body) ? void 0 : t.code) ? n : r.status;
-            e !== N.evJ.ENTITY_TOO_LARGE &&
+            e !== C.evJ.ENTITY_TOO_LARGE &&
                 (D.error(
                     "Requesting upload url failed with code "
                         .concat(null != e ? e : JSON.stringify(r.body), " for ")
@@ -459,7 +459,7 @@ class U extends I.ZP {
                         )
                         .concat(this.etag, ", expected ")
                         .concat(this.contentHash);
-                    D.error(e), O.Z.captureMessage(e), this.handleError(N.evJ.INVALID_FILE_ASSET);
+                    D.error(e), O.Z.captureMessage(e), this.handleError(C.evJ.INVALID_FILE_ASSET);
                     return;
                 }
             }
@@ -630,7 +630,7 @@ class U extends I.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new j()),
+            (this.uploadAnalytics = new k()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -658,7 +658,7 @@ class U extends I.ZP {
     }
     trackUploadStart() {
         var e;
-        g.default.track(N.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        g.default.track(C.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : "unknown",
             video_upload_quality: h.ZP.videoUploadQuality,
@@ -673,7 +673,7 @@ class U extends I.ZP {
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let o = null != this.startTime ? performance.now() - this.startTime : -1;
-        g.default.track(N.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        g.default.track(C.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
@@ -732,27 +732,27 @@ class U extends I.ZP {
     constructor(e, t, n, r) {
         var i, a, o, s;
         super(e, n),
-            C(this, "status", "NOT_STARTED"),
-            C(this, "channelId", void 0),
-            C(this, "responseUrl", void 0),
-            C(this, "currentSize", void 0),
-            C(this, "preCompressionSize", void 0),
-            C(this, "postCompressionSize", void 0),
-            C(this, "loaded", 0),
-            C(this, "reactNativeFileIndex", void 0),
-            C(this, "error", void 0),
-            C(this, "reactNativeFilePrepped", !1),
-            C(this, "startTime", void 0),
-            C(this, "uploadAnalytics", new j()),
-            C(this, "contentHash", void 0),
-            C(this, "etag", void 0),
-            C(this, "uploadAttempts", 0),
-            C(this, "_abortController", void 0),
-            C(this, "_xhr", void 0),
-            C(this, "_aborted", !1),
-            C(this, "_uploadHttpClient", void 0),
-            C(this, "_libdiscoreEnabled", void 0),
-            C(this, "createResumeAwareProgressFn", (e) => (t) => {
+            N(this, "status", "NOT_STARTED"),
+            N(this, "channelId", void 0),
+            N(this, "responseUrl", void 0),
+            N(this, "currentSize", void 0),
+            N(this, "preCompressionSize", void 0),
+            N(this, "postCompressionSize", void 0),
+            N(this, "loaded", 0),
+            N(this, "reactNativeFileIndex", void 0),
+            N(this, "error", void 0),
+            N(this, "reactNativeFilePrepped", !1),
+            N(this, "startTime", void 0),
+            N(this, "uploadAnalytics", new k()),
+            N(this, "contentHash", void 0),
+            N(this, "etag", void 0),
+            N(this, "uploadAttempts", 0),
+            N(this, "_abortController", void 0),
+            N(this, "_xhr", void 0),
+            N(this, "_aborted", !1),
+            N(this, "_uploadHttpClient", void 0),
+            N(this, "_libdiscoreEnabled", void 0),
+            N(this, "createResumeAwareProgressFn", (e) => (t) => {
                 let n = t.loaded + e,
                     r = t.total + e,
                     i = n - this.loaded;

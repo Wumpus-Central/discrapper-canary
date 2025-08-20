@@ -1,6 +1,6 @@
-var n = r(581079),
-    i = r(246974);
-t.exports = function (t) {
-    var e = t.editorContainer;
-    return e || n(!1), i(e.firstChild) || n(!1), e.firstChild;
+var r = n(581079),
+    i = n(246974);
+e.exports = function (e) {
+    var t = e.editorContainer;
+    return t || r(!1), i(t.firstChild) || r(!1), t.firstChild;
 };

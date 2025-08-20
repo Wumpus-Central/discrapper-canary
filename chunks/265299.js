@@ -1,58 +1,58 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
-    l = n(670081),
+    a = n(670081),
     o = n(481060),
-    a = n(509212),
-    s = n(113434),
+    s = n(509212),
+    l = n(113434),
     c = n(497505),
     u = n(530691),
     d = n(37303),
-    p = n(722334),
-    m = n(683650),
-    f = n(864306),
-    g = n(46140),
-    _ = n(506207);
-function h(e) {
+    f = n(722334),
+    _ = n(683650),
+    p = n(864306),
+    h = n(46140),
+    m = n(506207);
+function g(e) {
     let { questId: t } = e,
         {
             quests: n,
-            excludedQuests: h,
-            isFetchingCurrentQuests: b,
-        } = (0, s.J2)({
+            excludedQuests: g,
+            isFetchingCurrentQuests: E,
+        } = (0, l.J2)({
             fetchPolicy: "cache-or-network",
             callerSource: "embed",
         }),
-        E = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
-        C = i.useMemo(() => h.find((e) => e.id === t), [t, h]),
-        v = i.useMemo(
-            () => (null == E ? void 0 : E.config.features.includes(l.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
-            [null == E ? void 0 : E.config.features],
+        b = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
+        y = i.useMemo(() => g.find((e) => e.id === t), [t, g]),
+        O = i.useMemo(
+            () => (null == b ? void 0 : b.config.features.includes(a.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
+            [null == b ? void 0 : b.config.features],
         );
-    if (b) return (0, r.jsx)(o.$jN, { className: _.spinner });
-    if (null != C) return (0, r.jsx)(p.W, { questId: t });
-    if (null == E)
-        return (0, r.jsx)(m.o, {
+    if (E) return (0, r.jsx)(o.$jN, { className: m.spinner });
+    if (null != y) return (0, r.jsx)(f.W, { questId: t });
+    if (null == b)
+        return (0, r.jsx)(_.o, {
             questId: t,
-            reason: m.X.NOT_FOUND,
+            reason: _.X.NOT_FOUND,
         });
-    if ((0, a.HJ)(E)) {
-        let { enabled: e } = u.S.getCurrentConfig({ location: g.dr.EMBED_DESKTOP }, { autoTrackExposure: v });
-        if (!v || !e)
-            return (0, r.jsx)(m.o, {
+    if ((0, s.HJ)(b)) {
+        let { enabled: e } = u.S.getCurrentConfig({ location: h.dr.EMBED_DESKTOP }, { autoTrackExposure: O });
+        if (!O || !e)
+            return (0, r.jsx)(_.o, {
                 questId: t,
-                reason: m.X.MOBILE_ONLY,
+                reason: _.X.MOBILE_ONLY,
             });
     }
-    return (0, a.vB)(E.config)
+    return (0, s.vB)(b.config)
         ? (0, r.jsx)(
               d.Z,
               {
-                  quest: E,
+                  quest: b,
                   location: c.jn.QUESTS_EMBED,
                   sourceQuestContent: c.jn.QUESTS_EMBED,
               },
-              E.id,
+              b.id,
           )
-        : (0, r.jsx)(f.J, { questId: t });
+        : (0, r.jsx)(p.J, { questId: t });
 }

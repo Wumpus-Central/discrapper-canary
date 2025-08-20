@@ -2,41 +2,41 @@ n.d(e, { default: () => v });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    c = n(239091),
-    o = n(883385),
+    o = n(239091),
+    c = n(883385),
     a = n(108843),
     l = n(100527),
     u = n(299206),
     s = n(51182),
     f = n(393910),
-    d = n(745437),
-    p = n(981631),
-    b = n(388032);
+    b = n(745437),
+    d = n(981631),
+    p = n(388032);
 let v = (0, a.Z)(
-    (0, o.Z)(
+    (0, c.Z)(
         function (t) {
-            let { game: e, guildId: n, context: o, onSelect: a } = t,
+            let { game: e, guildId: n, context: c, onSelect: a } = t,
                 l = (0, f.Z)(e.id),
-                p = (0, d.Z)(e),
-                v = (0, s.Z)(e, n, o),
+                d = (0, b.Z)(e),
+                v = (0, s.Z)(e, n, c),
                 Z = (0, u.Z)({
                     id: e.id,
-                    label: b.intl.string(b.t["FfCL+/"]),
+                    label: p.intl.string(p.t["FfCL+/"]),
                 });
             return (0, r.jsxs)(i.v2r, {
                 navId: "game-context",
-                onClose: c.Zy,
-                "aria-label": b.intl.string(b.t.liqwPD),
+                onClose: o.Zy,
+                "aria-label": p.intl.string(p.t.liqwPD),
                 onSelect: a,
                 children: [
                     (0, r.jsxs)(i.kSQ, {
-                        children: [l, p, v],
+                        children: [l, d, v],
                     }),
                     (0, r.jsx)(i.kSQ, { children: Z }),
                 ],
             });
         },
-        { object: p.qAy.CONTEXT_MENU },
+        { object: d.qAy.CONTEXT_MENU },
     ),
     [l.Z.CONTEXT_MENU, l.Z.GAME_MENU],
 );

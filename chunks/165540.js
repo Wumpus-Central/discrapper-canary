@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(685006),
     x = n(61356),
     v = n(314734),
-    j = n(921944),
-    O = n(388032),
+    O = n(921944),
+    j = n(388032),
     E = n(124886);
 let S = i.forwardRef(function (e, t) {
         var n, l;
@@ -39,7 +39,7 @@ let S = i.forwardRef(function (e, t) {
         let S = i.useCallback(() => {
                 g
                     ? p.yT(f.ti.DISMISSED)
-                    : ((0, y.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }),
+                    : ((0, y.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }),
                       p.__(f._b.TEXT, d),
                       u.ux()),
                     x();
@@ -84,7 +84,7 @@ let S = i.forwardRef(function (e, t) {
                         tabIndex: 0,
                         className: a()(E.button, { [E.buttonActive]: g }),
                         onClick: S,
-                        "aria-label": O.intl.string(O.t.erHFxM),
+                        "aria-label": j.intl.string(j.t.erHFxM),
                         "aria-expanded": g,
                         "aria-haspopup": "dialog",
                         focusProps: {

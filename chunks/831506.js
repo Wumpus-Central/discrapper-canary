@@ -103,7 +103,7 @@ function T(e) {
 }
 function S(e) {
     let { guildId: t, members: n } = e;
-    return N(
+    return C(
         t,
         n.map((e) => e.presence),
     );
@@ -112,13 +112,13 @@ function A(e) {
     let { guildId: t, addedMembers: n } = e;
     return (
         null != n &&
-        N(
+        C(
             t,
             n.map((e) => e.presence),
         )
     );
 }
-function N(e, t) {
+function C(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -127,7 +127,7 @@ function N(e, t) {
         n
     );
 }
-function C() {
+function N() {
     let e = l.default.getId(),
         t = u.Z.getActivities();
     return b(d.ME, e, t);
@@ -153,7 +153,7 @@ function P(e) {
 }
 class w extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([u.Z], C), this.waitFor(u.Z, c.Z);
+        this.syncWith([u.Z], N), this.waitFor(u.Z, c.Z);
     }
     getParty(e) {
         return null != e && h.has(e) ? h.get(e) : null;

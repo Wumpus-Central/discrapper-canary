@@ -60,11 +60,11 @@ function y(e, t) {
     );
 }
 let _ = function (e) {
-    var t, n, l, _, P, k;
-    let { sourceURL: O } = e,
+    var t, n, l, _, k, O;
+    let { sourceURL: P } = e,
         { videoPlayerRef: S, cropData: N, setCropData: E } = (0, h.S)(),
         [R, L] = a.useState(
-            ((k = !(null == (n = S.current) || null == (t = n.videoElement) ? void 0 : t.paused)), true, k),
+            ((O = !(null == (n = S.current) || null == (t = n.videoElement) ? void 0 : t.paused)), true, O),
         ),
         T = a.useRef(null),
         [F, D] = a.useState(null),
@@ -321,7 +321,7 @@ let _ = function (e) {
                             },
                             className: b.timelineVideo,
                             ref: T,
-                            src: O,
+                            src: P,
                             muted: !0,
                         }),
                         (0, r.jsxs)("div", {
@@ -377,7 +377,7 @@ let _ = function (e) {
                                         "aria-valuenow": N.end,
                                         "aria-valuetext": C(N.end),
                                         "aria-valuemax":
-                                            null == (P = S.current) || null == (_ = P.videoElement)
+                                            null == (k = S.current) || null == (_ = k.videoElement)
                                                 ? void 0
                                                 : _.duration,
                                         "aria-label": x.intl.string(x.t.bBgBYm),

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => d }), n(388685);
-var i = n(392711),
-    r = n.n(i),
-    s = n(710845),
-    a = n(9156),
-    l = n(287328);
-function o(e, t, n) {
+n.d(t, { Z: () => h }), n(388685);
+var r = n(392711),
+    i = n.n(r),
+    a = n(710845),
+    o = n(9156),
+    s = n(287328);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,79 +17,85 @@ function o(e, t, n) {
         e
     );
 }
-let c = new s.Z("ReadStates"),
-    d = new (class {
-        async getAll(e) {
-            let t = performance.now(),
-                n = await l.Z.userGuildSettings(e).getMany(),
-                i = performance.now();
-            return c.log("asynchronously loaded in ".concat(i - t, "ms (userGuildSettings: ").concat(n.length, ")")), n;
-        }
-        resetInMemoryState() {}
-        handleConnectionOpen(e, t) {
-            e.userGuildSettings.partial || l.Z.userGuildSettingsTransaction(t).delete(),
-                this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
-        }
-        handleUserGuildSettingsUpdate(e, t) {
-            let n = r().max(
-                e.userGuildSettings.map((e) => {
-                    var t;
-                    return null != (t = e.version) ? t : -1;
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
-            );
-            null != n && this.write(e.userGuildSettings, n, t);
-        }
-        write(e, t, n) {
-            let i = l.Z.userGuildSettingsTransaction(n);
-            for (let t of e) {
-                var r;
-                let e = (function (e, t) {
-                    return (
-                        (t = null != t ? t : {}),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(t)).forEach(function (n) {
-                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                              }),
-                        e
-                    );
-                })(
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                i.forEach(function (t) {
-                                    o(e, t, n[t]);
-                                });
-                        }
-                        return e;
-                    })({}, (0, a.wL)(t.guild_id), t),
-                    { channel_overrides: (0, a.U2)(t.channel_overrides) },
-                );
-                i.put(null != (r = t.guild_id) ? r : "dm-sentinel", e);
-            }
-            l.Z.nonGuildVersionsTransaction(n).put({
-                id: "user_guild_settings_version",
-                version: t,
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
             });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = new a.Z("ReadStates"),
+    _ = "dm-sentinel";
+class p {
+    async getAll(e) {
+        let t = performance.now(),
+            n = await s.Z.userGuildSettings(e).getMany(),
+            r = performance.now();
+        return f.log("asynchronously loaded in ".concat(r - t, "ms (userGuildSettings: ").concat(n.length, ")")), n;
+    }
+    resetInMemoryState() {}
+    handleConnectionOpen(e, t) {
+        e.userGuildSettings.partial || s.Z.userGuildSettingsTransaction(t).delete(),
+            this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
+    }
+    handleUserGuildSettingsUpdate(e, t) {
+        let n = i().max(
+            e.userGuildSettings.map((e) => {
+                var t;
+                return null != (t = e.version) ? t : -1;
+            }),
+        );
+        null != n && this.write(e.userGuildSettings, n, t);
+    }
+    write(e, t, n) {
+        let r = s.Z.userGuildSettingsTransaction(n);
+        for (let t of e) {
+            var i;
+            let e = d(c({}, (0, o.wL)(t.guild_id), t), { channel_overrides: (0, o.U2)(t.channel_overrides) });
+            r.put(null != (i = t.guild_id) ? i : _, e);
         }
-        constructor() {
-            o(this, "actions", {
-                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-                USER_GUILD_SETTINGS_FULL_UPDATE: (e, t) => this.handleUserGuildSettingsUpdate(e, t),
-            });
-        }
-    })();
+        s.Z.nonGuildVersionsTransaction(n).put({
+            id: "user_guild_settings_version",
+            version: t,
+        });
+    }
+    constructor() {
+        l(this, "actions", {
+            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+            USER_GUILD_SETTINGS_FULL_UPDATE: (e, t) => this.handleUserGuildSettingsUpdate(e, t),
+        });
+    }
+}
+let h = new p();

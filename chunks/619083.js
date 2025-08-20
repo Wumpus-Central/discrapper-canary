@@ -1,5 +1,5 @@
-var n = r(76466);
-t.exports = function (t, e, r, i) {
-    for (var o = e, a = t.getCharacterList(); o < r; ) (a = a.set(o, n.applyEntity(a.get(o), i))), o++;
-    return t.set("characterList", a);
+var r = n(76466);
+e.exports = function (e, t, n, i) {
+    for (var a = t, o = e.getCharacterList(); a < n; ) (o = o.set(a, r.applyEntity(o.get(a), i))), a++;
+    return e.set("characterList", o);
 };

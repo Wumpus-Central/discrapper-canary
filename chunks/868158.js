@@ -1,8 +1,8 @@
 n.d(t, {
     Eb: () => D,
-    Fx: () => M,
-    IM: () => L,
-    J2: () => V,
+    Fx: () => j,
+    IM: () => x,
+    J2: () => Z,
     r$: () => w,
 }),
     n(539854),
@@ -99,23 +99,23 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = new _.Z("ReadyPayloadUtils"),
-    C = {},
+let C = new _.Z("ReadyPayloadUtils"),
+    N = {},
     R = null,
     P = {};
 function w(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = S(e, ["guilds", "merged_members", "merged_presences"]);
-    let s = k(P, null == a ? void 0 : a.friends),
+    let s = M(P, null == a ? void 0 : a.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = k(P, null == a ? void 0 : a.guilds[t]),
-                              r = k(P, null == i ? void 0 : i[t]);
+                          let n = M(P, null == a ? void 0 : a.guilds[t]),
+                              r = M(P, null == i ? void 0 : i[t]);
                           return T(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -124,7 +124,7 @@ function w(e, t) {
                       }))
                 ? n
                 : [],
-        c = x(t, r, (e) => ({
+        c = L(t, r, (e) => ({
             id: e.id,
             members: e.members,
             presences: e.presences,
@@ -157,12 +157,12 @@ function D() {
         };
     });
 }
-function L(e, t, n) {
+function x(e, t, n) {
     var r,
         { users: a, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ["users", "relationships", "private_channels", "merged_members", "guilds"]);
     U(n);
-    let f = k((P = o().keyBy(a, (e) => e.id)), s);
+    let f = M((P = o().keyBy(a, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
@@ -176,11 +176,11 @@ function L(e, t, n) {
                 null == u
                     ? void 0
                     : u.map((e, t) =>
-                          !0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), B(e)),
+                          !0 === e.unavailable ? e : ((e.members = M(P, null == c ? void 0 : c[t])), B(e)),
                       ))
                 ? r
                 : [],
-        p = x(t, u, (e) => B(e));
+        p = L(t, u, (e) => B(e));
     return (
         null != p && _.push(p),
         T(v({}, d), {
@@ -192,13 +192,13 @@ function L(e, t, n) {
         })
     );
 }
-function x(e, t, n) {
+function L(e, t, n) {
     return null == R || R.identifyTime !== e || (null != t && t.some((e) => e.id === R.guild.id)) ? null : n(R.guild);
 }
-function M(e, t) {
+function j(e, t) {
     var n, r, i;
     let a = E.Z.getGuild(e.id),
-        o = V(
+        o = Z(
             e,
             null == a
                 ? void 0
@@ -217,7 +217,7 @@ function M(e, t) {
         o
     );
 }
-function k(e, t) {
+function M(e, t) {
     let n = [];
     return (
         null == t ||
@@ -232,15 +232,15 @@ function k(e, t) {
         n
     );
 }
-function j(e) {
-    let t = C[e];
-    return delete C[e], t;
+function k(e) {
+    let t = N[e];
+    return delete N[e], t;
 }
 function U(e) {
     null != s.Z.database() &&
         !1 === e.databaseOk &&
         d.Z.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-        (C = {});
+        (N = {});
     let t = E.Z.getGuildsArray(),
         n = p.ZP.getGuilds(),
         r = h.Z.getRawStickersByGuild();
@@ -248,7 +248,7 @@ function U(e) {
         var i, a, o;
         s.id in e.guildVersions &&
             e.guildChannels.has(s.id) &&
-            (C[s.id] = {
+            (N[s.id] = {
                 properties: b.dS(s),
                 roles: g.Z.getRolesSnapshot(s.id),
                 emojis: null != (a = null == (i = n[s.id]) ? void 0 : i.rawEmojis) ? a : null,
@@ -273,7 +273,7 @@ function G(e, t, n) {
 }
 function B(e) {
     var t, n, r, i, a, o, s, l;
-    let c = j(e.id);
+    let c = k(e.id);
     if ("partial" !== e.data_mode)
         return {
             id: e.id,
@@ -296,7 +296,7 @@ function B(e) {
                 items: e.stickers,
             },
             threads: null != (i = null == (r = e.threads) ? void 0 : r.map((t) => (0, m.q_)(t, e.id))) ? i : [],
-            threadMessages: F(e.threads),
+            threadMessages: V(e.threads),
             channels: {
                 op: "full_sync",
                 items: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
@@ -306,7 +306,7 @@ function B(e) {
         };
     if (null == c)
         throw (
-            (N.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")),
+            (C.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")),
             Error("Guild data was missing from store, but hash was still available."))
         );
     return {
@@ -334,14 +334,14 @@ function B(e) {
         stickers: G(c.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null != (l = null == (n = e.threads) ? void 0 : n.map((t) => (0, m.q_)(t, e.id))) ? l : [],
-        threadMessages: F(e.threads),
+        threadMessages: V(e.threads),
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription,
     };
 }
-function V(e, t) {
+function Z(e, t) {
     var n, r, i, a, o, s, l, c;
-    if ((null == t && (t = j(e.id)), "partial" !== e.data_mode))
+    if ((null == t && (t = k(e.id)), "partial" !== e.data_mode))
         return {
             id: e.id,
             guild_scheduled_events: e.guild_scheduled_events,
@@ -354,7 +354,7 @@ function V(e, t) {
             roles: e.roles,
             stage_instances: e.stage_instances,
             threads: null != (a = null == (i = e.threads) ? void 0 : i.map((t) => (0, m.q_)(t, e.id))) ? a : [],
-            threadMessages: F(e.threads),
+            threadMessages: V(e.threads),
             presences: e.presences,
             activity_instances: e.activity_instances,
             voice_states: e.voice_states,
@@ -375,7 +375,7 @@ function V(e, t) {
         };
     if (null == t)
         throw (
-            (N.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")),
+            (C.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")),
             Error("Guild data was missing from store, but hash was still available."))
         );
     return {
@@ -404,13 +404,13 @@ function V(e, t) {
         stickers: G(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null != (c = null == (r = e.threads) ? void 0 : r.map((t) => (0, m.q_)(t, e.id))) ? c : [],
-        threadMessages: F(e.threads),
+        threadMessages: V(e.threads),
         voice_states: e.voice_states,
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription,
     };
 }
-function F(e) {
+function V(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;

@@ -194,7 +194,7 @@ class b extends i.Z {
         return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
-        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
+        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, w, D, x, L, j, M, k, U;
         super(),
             h(this, "id", void 0),
             h(this, "username", void 0),
@@ -247,16 +247,16 @@ class b extends i.Z {
             (this.purchasedFlags = null != (T = null != (I = e.purchased_flags) ? I : e.purchasedFlags) ? T : 0),
             (this.premiumUsageFlags =
                 null != (A = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? A : 0),
-            (this.phone = null != (N = e.phone) ? N : null),
-            (this.nsfwAllowed = null != (C = e.nsfw_allowed) ? C : e.nsfwAllowed),
+            (this.phone = null != (C = e.phone) ? C : null),
+            (this.nsfwAllowed = null != (N = e.nsfw_allowed) ? N : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),
             (this.guildMemberAvatars = null != (P = e.guildMemberAvatars) ? P : {}),
             (this.hasBouncedEmail = null != (D = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && D),
             (this.personalConnectionId =
-                null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
-            (this.globalName = null != (M = e.global_name) ? M : e.globalName),
+                null != (L = null != (x = e.personal_connection_id) ? x : e.personalConnectionId) ? L : null),
+            (this.globalName = null != (j = e.global_name) ? j : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
+            (this.primaryGuild = (0, s.l)(null != (k = null != (M = e.primary_guild) ? M : e.primaryGuild) ? k : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.bN)(e.display_name_styles)),
             Object.defineProperties(this, {

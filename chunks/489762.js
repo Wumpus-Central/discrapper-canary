@@ -23,21 +23,21 @@ var r = n(951288),
     T = n(624138),
     S = n(45521),
     A = n(285651),
-    N = n(268350),
-    C = n(217590),
+    C = n(268350),
+    N = n(217590),
     R = n(926491),
     P = n(373228),
     w = n(378233),
     D = n(419922),
-    L = n(1450),
-    x = n(491173),
-    M = n(515005),
-    k = n(981631),
-    j = n(957825),
+    x = n(1450),
+    L = n(491173),
+    j = n(515005),
+    M = n(981631),
+    k = n(957825),
     U = n(388032),
     G = n(473049),
     B = n(239840);
-function V(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function V(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,12 +61,12 @@ function F(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                Z(e, t, n[t]);
             });
     }
     return e;
 }
-function Z(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +83,7 @@ function H(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Z(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -147,8 +147,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     if (e.type !== P.al.STICKER) return;
                     let { sticker: s } = e;
                     if (null == s) return;
-                    let l = H(F({}, a.location), {
-                        object: "" === o ? k.qAy.STICKER_PICKER_VIEW_ALL : k.qAy.STICKER_SEARCH_VIEW_ALL,
+                    let l = H(V({}, a.location), {
+                        object: "" === o ? M.qAy.STICKER_PICKER_VIEW_ALL : M.qAy.STICKER_SEARCH_VIEW_ALL,
                     });
                     if (null != s && !(0, A.kl)(s, r, n)) {
                         let e = (0, w.J8)(s);
@@ -158,12 +158,12 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     }
                     if (i)
                         return void ((0, w.gM)(s.id)
-                            ? (0, N.hW)(s.id)
-                            : ((0, C.cQ)({
+                            ? (0, C.hW)(s.id)
+                            : ((0, N.cQ)({
                                   sticker: s,
-                                  location: H(F({}, l), { object: k.qAy.STICKER }),
+                                  location: H(V({}, l), { object: M.qAy.STICKER }),
                               }),
-                              (0, N.SA)(s.id)));
+                              (0, C.SA)(s.id)));
                     t(e);
                 },
                 [a.location, o, r, n, t],
@@ -188,22 +188,22 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 channel: S,
             } = e,
             A = (0, u.O)(),
-            N = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-            { handleStickerInspect: C, handleSelect: x } = e_({
+            C = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+            { handleStickerInspect: N, handleSelect: L } = e_({
                 onSelectSticker: a,
                 channel: S,
-                currentUser: N,
+                currentUser: C,
             }),
-            [B, V] = i.useState(!1),
-            F = i.useCallback((e) => {
+            [B, Z] = i.useState(!1),
+            V = i.useCallback((e) => {
                 y._O.updateSetting(Array.from(e));
             }, []),
-            Z = i.useCallback(
+            F = i.useCallback(
                 (e) => {
                     let t = m[e];
                     return null != t
                         ? (0, r.jsx)(
-                              M.Z,
+                              j.Z,
                               {
                                   getStickerItemProps: s,
                                   getStickerRowProps: c,
@@ -211,8 +211,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   inspectedStickerPosition: f,
                                   isScrolling: _,
                                   isUsingKeyboardNavigation: h,
-                                  onInspect: C,
-                                  onSelect: x,
+                                  onInspect: N,
+                                  onSelect: L,
                                   rowIndex: e,
                                   stickerClassName: G.sticker,
                                   stickerDescriptors: t,
@@ -221,13 +221,13 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   ownedStickerPacks: T,
                                   isDisplayingIndividualStickers: !0,
                                   channel: S,
-                                  currentUser: N,
+                                  currentUser: C,
                               },
                               e,
                           )
                         : null;
                 },
-                [m, s, c, d, f, _, h, C, x, n, T, S, N],
+                [m, s, c, d, f, _, h, N, L, n, T, S, C],
             ),
             H = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
             K = i.useCallback(
@@ -236,15 +236,15 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         r = new Set(t),
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
-                        I.default.track(k.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        I.default.track(M.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == A ? void 0 : A.location,
-                            tab: j.X1.STICKER,
+                            tab: k.X1.STICKER,
                             collapsed: !i,
                             sticker_pack_id: n ? e : null,
                         }),
-                        F(r);
+                        V(r);
                 },
-                [A, t, F],
+                [A, t, V],
             ),
             z = i.useCallback(
                 (e) => {
@@ -362,7 +362,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [E],
             );
         return {
-            renderRow: Z,
+            renderRow: F,
             renderSection: H,
             renderSectionHeader: z,
             sectionHeaderHeight: q,
@@ -373,13 +373,13 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     return n.type !== P.Ih.EMPTY_GUILD_UPSELL || null != E || i
                         ? null
                         : (0, r.jsx)(
-                              L.Z,
+                              x.Z,
                               {
                                   className: G.emptyGuildUpsell,
                                   guildId: n.id,
                                   channel: S,
                                   shouldTrackUpsellViewed: !B,
-                                  setTrackedUpsellViewed: V,
+                                  setTrackedUpsellViewed: Z,
                               },
                               "sticker-picker-empty-guild-inline-upsell-".concat(n.id),
                           );
@@ -413,18 +413,18 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 channel: S,
             } = e,
             A = i.useRef(!1),
-            N = i.useRef(null),
-            [C, P] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
+            C = i.useRef(null),
+            [N, P] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
             { analyticsLocations: w } = (0, f.ZP)(d.Z.STICKER_PICKER),
             D = (0, m.Iu)((e) => e.searchQuery),
-            L = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
+            x = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
             {
-                renderRow: M,
-                renderSection: k,
-                renderSectionFooter: j,
-                sectionFooterHeight: V,
-                renderSectionHeader: F,
-                sectionHeaderHeight: Z,
+                renderRow: j,
+                renderSection: M,
+                renderSectionFooter: k,
+                sectionFooterHeight: Z,
+                renderSectionHeader: V,
+                sectionHeaderHeight: F,
             } = ep({
                 collapsedStickersCategories: n,
                 gridWidth: s,
@@ -438,13 +438,13 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 gutterWidth: g,
                 inspectedStickerPosition: P,
                 filteredStickers: l,
-                ownedStickerPacks: i.useMemo(() => new Set(L.map((e) => e.id)), [L]),
+                ownedStickerPacks: i.useMemo(() => new Set(x.map((e) => e.id)), [x]),
                 channel: S,
             }),
             H = (0, E.Qs)({
-                activeCategoryIndex: C,
+                activeCategoryIndex: N,
                 isScrolling: A,
-                listRef: N,
+                listRef: C,
                 onActiveCategoryIndexChange: h.ZN.setActiveCategoryIndex,
                 scrollOffset: eo,
                 searchQuery: D,
@@ -452,43 +452,43 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         return (
             (0, E.Xs)({
                 searchQuery: D,
-                activeCategoryIndex: C,
-                listRef: N,
+                activeCategoryIndex: N,
+                listRef: C,
             }),
             i.useImperativeHandle(
                 t,
                 () => ({
                     scrollTo: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = N.current) ? void 0 : e.scrollTo(...n);
+                        return null == (e = C.current) ? void 0 : e.scrollTo(...n);
                     },
                     getRowDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = N.current) ? void 0 : e.getRowDescriptors()) ? t : [];
+                        return null != (t = null == (e = C.current) ? void 0 : e.getRowDescriptors()) ? t : [];
                     },
                     getSectionDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = N.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
+                        return null != (t = null == (e = C.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
                     },
                     scrollToSectionTop: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = N.current) ? void 0 : e.scrollToSectionTop(...n);
+                        return null == (e = C.current) ? void 0 : e.scrollToSectionTop(...n);
                     },
                     scrollRowIntoView: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = N.current) ? void 0 : e.scrollRowIntoView(...n);
+                        return null == (e = C.current) ? void 0 : e.scrollRowIntoView(...n);
                     },
                     getScrollerNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = N.current) ? void 0 : e.getScrollerNode(...n);
+                        return null == (e = C.current) ? void 0 : e.getScrollerNode(...n);
                     },
                     scrollIntoViewNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = N.current) ? void 0 : e.scrollIntoViewNode(...n);
+                        return null == (e = C.current) ? void 0 : e.scrollIntoViewNode(...n);
                     },
                     getListDimensions: function () {
                         for (var e, t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                        return null != (t = null == (e = N.current) ? void 0 : e.getListDimensions(...r))
+                        return null != (t = null == (e = C.current) ? void 0 : e.getListDimensions(...r))
                             ? t
                             : {
                                   height: -1,
@@ -514,19 +514,19 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   role: "none presentation",
                                   listPadding: null != l ? el : es,
                                   onScroll: H,
-                                  renderRow: M,
-                                  renderSection: null == l ? k : void 0,
-                                  renderSectionHeader: F,
-                                  renderSectionFooter: j,
+                                  renderRow: j,
+                                  renderSection: null == l ? M : void 0,
+                                  renderSectionHeader: V,
+                                  renderSectionFooter: k,
                                   rowCount: O,
                                   rowCountBySection: v,
                                   rowHeight: s > Y ? ei : ea,
-                                  sectionHeaderHeight: Z,
-                                  sectionFooterHeight: V,
+                                  sectionHeaderHeight: F,
+                                  sectionFooterHeight: Z,
                                   stickyHeaders: !0,
-                                  ref: N,
+                                  ref: C,
                               }),
-                        (0, r.jsx)(x.Z, { stickersGrid: T }),
+                        (0, r.jsx)(L.Z, { stickersGrid: T }),
                     ],
                 }),
             })

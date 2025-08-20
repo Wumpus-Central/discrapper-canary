@@ -58,7 +58,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -129,7 +129,7 @@ function D(e, t, n, r) {
             };
     }
 }
-function L(e, t, n) {
+function x(e, t, n) {
     let r = n === p.default.getId(),
         i = y.Z.isMobileOnline(n),
         a = r ? O.Z.getStatus() : y.Z.getStatus(n, e),
@@ -138,7 +138,7 @@ function L(e, t, n) {
         l = v.default.getUser(n);
     return null == l
         ? null
-        : C(A({ type: "MEMBER" }, g.ZP.getMember(e, n)), {
+        : N(A({ type: "MEMBER" }, g.ZP.getMember(e, n)), {
               user: l,
               status: a,
               activities: o,
@@ -147,11 +147,11 @@ function L(e, t, n) {
               isMobileOnline: i,
           });
 }
-function x(e) {
+function L(e) {
     let t = h.Z.getChannel(e);
-    return null == t ? R : null == t.memberListId ? M(t) : t.memberListId;
+    return null == t ? R : null == t.memberListId ? j(t) : t.memberListId;
 }
-function M(e) {
+function j(e) {
     return f.oz(I.Plq.VIEW_CHANNEL, e)
         ? R
         : s()
@@ -171,7 +171,7 @@ function M(e) {
               )
               .toString();
 }
-class k {
+class M {
     updateOwnerId() {
         let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
@@ -205,7 +205,7 @@ class k {
         let { group: n, member: r } = t;
         if (null != n) this.rows.splice(e, 0, D(this.guildId, n.id, n.count));
         else if (null != r) {
-            let t = L(this.guildId, this.ownerId, r.user.id);
+            let t = x(this.guildId, this.ownerId, r.user.id);
             if (null == t) return;
             this.rows.splice(e, 0, t), (this.members[r.user.id] = t);
         }
@@ -217,7 +217,7 @@ class k {
         if ((null != i && "MEMBER" === i.type && delete this.members[i.user.id], null != n))
             this.rows[e] = D(this.guildId, n.id, n.count);
         else if (null != r) {
-            let t = L(this.guildId, this.ownerId, r.user.id);
+            let t = x(this.guildId, this.ownerId, r.user.id);
             if (null == t) return;
             (this.rows[e] = t), (this.members[r.user.id] = t);
         }
@@ -229,7 +229,7 @@ class k {
     }
     rebuildMember(e) {
         let t = this.members[e];
-        null != t && (Object.assign(t, L(this.guildId, this.ownerId, e)), this.version++);
+        null != t && (Object.assign(t, x(this.guildId, this.ownerId, e)), this.version++);
     }
     rebuildMembers() {
         let e = Object.keys(this.members);
@@ -251,14 +251,14 @@ class k {
             this.updateOwnerId();
     }
 }
-class j {
+class k {
     get(e, t) {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let r = n[t];
         return (
             null == r &&
-                ((r = new k(e, t)).setGroups([
+                ((r = new M(e, t)).setGroups([
                     {
                         id: I.Skl.UNKNOWN,
                         count: 0,
@@ -288,7 +288,7 @@ class j {
         S(this, "_guildLists", {});
     }
 }
-let U = new j();
+let U = new k();
 function G(e) {
     let t = U.get(e.guildId, e.id);
     e.ops.forEach((e) => {
@@ -314,17 +314,17 @@ function G(e) {
 function B() {
     U.reset();
 }
-function V(e) {
+function Z(e) {
     let { guild: t } = e;
     U.forEach(t.id, (e) => {
         e.updateOwnerId() && e.rebuildMembers();
     });
 }
-function F(e) {
+function V(e) {
     let { guild: t } = e;
     U.delete(t.id);
 }
-function Z(e) {
+function F(e) {
     let { guildId: t } = e;
     U.forEach(t, (e) => e.rebuildMembers());
 }
@@ -355,7 +355,7 @@ class q extends (r = c.ZP.Store) {
             this.syncWith([_.Z], W);
     }
     getProps(e, t) {
-        let n = U.get(e, x(t));
+        let n = U.get(e, L(t));
         return {
             listId: "".concat(n.guildId, ":").concat(n.listId),
             groups: n.groups,
@@ -364,7 +364,7 @@ class q extends (r = c.ZP.Store) {
         };
     }
     getRows(e, t) {
-        return U.get(e, x(t)).rows;
+        return U.get(e, L(t)).rows;
     }
 }
 S(q, "displayName", "ChannelMemberStore");
@@ -372,9 +372,9 @@ let X = new q(u.Z, {
     CONNECTION_OPEN: B,
     OVERLAY_INITIALIZE: B,
     GUILD_MEMBER_LIST_UPDATE: G,
-    GUILD_UPDATE: V,
-    GUILD_DELETE: F,
-    GUILD_ROLE_UPDATE: Z,
+    GUILD_UPDATE: Z,
+    GUILD_DELETE: V,
+    GUILD_ROLE_UPDATE: F,
     GUILD_MEMBER_UPDATE: H,
     CHANNEL_UPDATES: z,
 });

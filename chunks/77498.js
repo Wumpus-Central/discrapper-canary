@@ -68,11 +68,11 @@ function A(e) {
     for (let n of (E.set(e.id, t), (b[e.name.toLowerCase()] = t), e.aliases)) b[n.toLowerCase()] = t;
     if ((0, _.isDesktop)()) for (let n of e.executables) y[n.name] = t;
 }
-function N(e) {
+function C(e) {
     let { detectableApplications: t } = e;
     for (let e of t) A(e);
 }
-function C() {
+function N() {
     r = !0;
 }
 function R() {
@@ -190,8 +190,8 @@ p(w, "displayName", "GameStore"),
         }),
     ]);
 let D = new w(l.Z, {
-    OVERLAY_INITIALIZE: N,
-    GAMES_DATABASE_FETCH: C,
+    OVERLAY_INITIALIZE: C,
+    GAMES_DATABASE_FETCH: N,
     GAMES_DATABASE_FETCH_FAIL: R,
     GAMES_DATABASE_UPDATE: P,
 });

@@ -1,121 +1,137 @@
-n.d(t, { Z: () => x }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
-    l = n(570140),
-    o = n(2052),
+n.d(t, { Z: () => T }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(570140),
+    l = n(2052),
     c = n(932724),
-    d = n(716161),
-    u = n(672339),
-    m = n(747545),
-    p = n(131951),
-    g = n(594174),
+    u = n(716161),
+    d = n(672339),
+    f = n(747545),
+    _ = n(131951),
+    p = n(594174),
     h = n(981631),
-    f = n(388032),
-    b = n(766625);
-function x(e) {
-    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
-        _ = p.Z.getCameraComponent(),
-        [j, E] = r.useState((0, c.P)(g.default.getCurrentUser())),
-        C = r.useRef(!1),
-        O = r.useRef(j),
-        v = (0, o.O)(),
-        S = (0, s.e7)([p.Z], () => p.Z.isVideoAvailable());
+    m = n(388032),
+    g = n(766625);
+function E(e, t, n) {
     return (
-        r.useEffect(
-            () => () => {
-                C.current && l.Z.wait(() => (0, d.Up)(O.current));
-            },
-            [],
-        ),
-        (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: j,
-            onSelectBackgroundOption: (e) => {
-                (C.current = !0), (O.current = e), E(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
-            },
-            onCancelPreview: x,
-            renderCamera: (e) =>
-                t
-                    ? (0, i.jsx)("div", {
-                          className: b.cameraWrapper,
-                          children: (0, i.jsxs)("div", {
-                              className: b.camera,
-                              children: [
-                                  (0, i.jsx)(_, {
-                                      deviceId: e,
-                                      width: 387,
-                                      height: 218,
-                                      disabled: !t,
-                                  }),
-                                  (0, i.jsx)(m.S, {}),
-                              ],
-                          }),
-                      })
-                    : (0, i.jsxs)("div", {
-                          className: b.cameraWrapper,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let v = 387,
+    I = 218;
+function T(e) {
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: E } = e,
+        y = _.Z.getCameraComponent(),
+        [T, S] = i.useState((0, c.P)(p.default.getCurrentUser())),
+        A = i.useRef(!1),
+        C = i.useRef(T),
+        N = (0, l.O)(),
+        R = (0, a.e7)([_.Z], () => _.Z.isVideoAvailable());
+    i.useEffect(
+        () => () => {
+            A.current && s.Z.wait(() => (0, u.Up)(C.current));
+        },
+        [],
+    );
+    let P = (e) => {
+            (A.current = !0), (C.current = e), S(e), (0, d.wG)(e, { location: N.location }).catch(h.dG4);
+        },
+        w = (e) =>
+            t
+                ? (0, r.jsx)("div", {
+                      className: g.cameraWrapper,
+                      children: (0, r.jsxs)("div", {
+                          className: g.camera,
                           children: [
-                              (0, i.jsx)("div", { className: b.previewImage }),
-                              (0, i.jsx)(a.ua7, {
-                                  text: S ? null : f.intl.string(f.t["8jSzSU"]),
-                                  children: (e) => {
-                                      var t, r;
-                                      return (0, i.jsx)(
-                                          a.zxk,
-                                          ((t = (function (e) {
-                                              for (var t = 1; t < arguments.length; t++) {
-                                                  var n = null != arguments[t] ? arguments[t] : {},
-                                                      i = Object.keys(n);
-                                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                                      (i = i.concat(
-                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          }),
-                                                      )),
-                                                      i.forEach(function (t) {
-                                                          var i;
-                                                          (i = n[t]),
-                                                              t in e
-                                                                  ? Object.defineProperty(e, t, {
-                                                                        value: i,
-                                                                        enumerable: !0,
-                                                                        configurable: !0,
-                                                                        writable: !0,
-                                                                    })
-                                                                  : (e[t] = i);
-                                                      });
-                                              }
-                                              return e;
-                                          })(
-                                              {
-                                                  variant: "primary",
-                                                  text: f.intl.string(f.t.JIf4v7),
-                                              },
-                                              e,
-                                          )),
-                                          (r = r =
-                                              {
-                                                  onClick: n,
-                                                  disabled: !S,
-                                              }),
-                                          Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                                              : (function (e, t) {
-                                                    var n = Object.keys(e);
-                                                    if (Object.getOwnPropertySymbols) {
-                                                        var i = Object.getOwnPropertySymbols(e);
-                                                        n.push.apply(n, i);
-                                                    }
-                                                    return n;
-                                                })(Object(r)).forEach(function (e) {
-                                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                                                }),
-                                          t),
-                                      );
-                                  },
+                              (0, r.jsx)(y, {
+                                  deviceId: e,
+                                  width: v,
+                                  height: I,
+                                  disabled: !t,
                               }),
+                              (0, r.jsx)(f.S, {}),
                           ],
                       }),
-        })
-    );
+                  })
+                : (0, r.jsxs)("div", {
+                      className: g.cameraWrapper,
+                      children: [
+                          (0, r.jsx)("div", { className: g.previewImage }),
+                          (0, r.jsx)(o.ua7, {
+                              text: R ? null : m.intl.string(m.t["8jSzSU"]),
+                              children: (e) =>
+                                  (0, r.jsx)(
+                                      o.zxk,
+                                      O(
+                                          b(
+                                              {
+                                                  variant: "primary",
+                                                  text: m.intl.string(m.t.JIf4v7),
+                                              },
+                                              e,
+                                          ),
+                                          {
+                                              onClick: n,
+                                              disabled: !R,
+                                          },
+                                      ),
+                                  ),
+                          }),
+                      ],
+                  });
+    return (0, r.jsx)(f.Z, {
+        selectedBackgroundOption: T,
+        onSelectBackgroundOption: P,
+        onCancelPreview: E,
+        renderCamera: w,
+    });
 }

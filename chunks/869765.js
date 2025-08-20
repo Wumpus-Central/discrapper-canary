@@ -172,7 +172,7 @@ function A(e) {
         message: (0, l.Cm)(r.message),
     });
 }
-function N(e) {
+function C(e) {
     let { message: t } = e,
         n = t.id,
         r = t.channel_id;
@@ -184,7 +184,7 @@ function N(e) {
         message: (0, c.wi)(i.message, t),
     });
 }
-function C(e) {
+function N(e) {
     return b.deleteChannelCache(e.channel.id);
 }
 function R() {
@@ -202,28 +202,28 @@ function D(e) {
     let { ids: t, channelId: n } = e;
     return O(t, (e) => P(n, e));
 }
-function L(e) {
+function x(e) {
     let { message: t } = e;
     b.set(t.channel_id, t.id, {
         state: 0,
         message: t,
     });
 }
-function x() {
+function L() {
     b.clear();
 }
-function M(e) {
+function j(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
-function k(e) {
+function M(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {
         let { first_message: t } = e;
         return null != t && y(t);
     });
 }
-class j extends (r = o.ZP.Store) {
+class k extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, u.Z);
     }
@@ -240,26 +240,26 @@ class j extends (r = o.ZP.Store) {
         return null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m;
     }
 }
-_(j, "displayName", "ReferencedMessageStore");
-let U = new j(s.Z, {
+_(k, "displayName", "ReferencedMessageStore");
+let U = new k(s.Z, {
     CACHE_LOADED: I,
     LOCAL_MESSAGES_LOADED: v,
     LOAD_MESSAGES_SUCCESS: v,
     LOAD_MESSAGES_AROUND_SUCCESS: v,
     SEARCH_MESSAGES_SUCCESS: T,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
-    LOAD_THREADS_SUCCESS: M,
-    LOAD_ARCHIVED_THREADS_SUCCESS: M,
+    LOAD_THREADS_SUCCESS: j,
+    LOAD_ARCHIVED_THREADS_SUCCESS: j,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
-    LOAD_FORUM_POSTS: k,
+    LOAD_FORUM_POSTS: M,
     MESSAGE_CREATE: S,
-    MESSAGE_UPDATE: N,
+    MESSAGE_UPDATE: C,
     MESSAGE_DELETE: w,
     MESSAGE_DELETE_BULK: D,
-    CREATE_PENDING_REPLY: L,
-    CHANNEL_DELETE: C,
-    THREAD_DELETE: C,
+    CREATE_PENDING_REPLY: x,
+    CHANNEL_DELETE: N,
+    THREAD_DELETE: N,
     GUILD_DELETE: R,
-    CONNECTION_OPEN: x,
-    LOGOUT: x,
+    CONNECTION_OPEN: L,
+    LOGOUT: L,
 });

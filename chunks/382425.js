@@ -23,23 +23,23 @@ var r = n(951288),
     T = n(158776),
     S = n(938475),
     A = n(960870),
-    N = n(139793),
-    C = n(510659),
+    C = n(139793),
+    N = n(510659),
     R = n(287954),
     P = n(660579),
     w = n(652853),
     D = n(64621),
-    L = n(336383),
-    x = n(194811),
-    M = n(265386),
-    k = n(668700),
-    j = n(384298),
+    x = n(336383),
+    L = n(194811),
+    j = n(265386),
+    M = n(668700),
+    k = n(384298),
     U = n(386019),
     G = n(228168),
     B = n(981631),
-    V = n(671955),
-    F = n(388032),
-    Z = n(704543),
+    Z = n(671955),
+    V = n(388032),
+    F = n(704543),
     H = n(936524),
     Y = n(924482),
     W = n(774797);
@@ -47,7 +47,7 @@ function K(e) {
     let { user: t, currentUser: n, stream: a, className: K, onClose: z, profileGuildId: q } = e,
         X = i.useRef(null),
         { themeType: Q, theme: J } = (0, w.z)(),
-        { interactionSource: $, interactionSourceId: ee } = (0, C.Xo)(),
+        { interactionSource: $, interactionSourceId: ee } = (0, N.Xo)(),
         et = (0, s.e7)([v.Z], () => v.Z.getGuild(null == a ? void 0 : a.guildId)),
         en = (0, s.e7)([O.Z], () => O.Z.getChannel(null == a ? void 0 : a.channelId)),
         er = (0, s.Wu)([S.ZP], () =>
@@ -67,7 +67,7 @@ function K(e) {
             stream: a,
             analyticsLocations: ea,
         }),
-        es = (0, N.Z)({
+        es = (0, C.Z)({
             userId: t.id,
             onAction: eo,
         }),
@@ -103,8 +103,8 @@ function K(e) {
                                 alt: "",
                                 src: J === B.BRd.LIGHT ? W : Y,
                             }),
-                            Q !== V.l.MODAL &&
-                                Q !== V.l.MODAL_V2 &&
+                            Q !== Z.l.MODAL &&
+                                Q !== Z.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -115,7 +115,7 @@ function K(e) {
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: "text-sm/medium",
-                                            children: e_ ? F.intl.string(F.t.uQZTBQ) : F.intl.string(F.t.pgUTZG),
+                                            children: e_ ? V.intl.string(V.t.uQZTBQ) : V.intl.string(V.t.pgUTZG),
                                         }),
                                     ],
                                 }),
@@ -132,8 +132,8 @@ function K(e) {
                                 src: eh,
                                 className: H.image,
                             }),
-                            Q !== V.l.MODAL &&
-                                Q !== V.l.MODAL_V2 &&
+                            Q !== Z.l.MODAL &&
+                                Q !== Z.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -153,12 +153,12 @@ function K(e) {
                     });
         },
         eg = () =>
-            Q !== V.l.MODAL && Q !== V.l.MODAL_V2
+            Q !== Z.l.MODAL && Q !== Z.l.MODAL_V2
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: Z.details,
+                      className: F.details,
                       children: [
-                          (0, r.jsx)(M.Z, {
+                          (0, r.jsx)(j.Z, {
                               channel: en,
                               guild: et,
                               onAction: eo,
@@ -168,7 +168,7 @@ function K(e) {
                               users: er,
                               guildId: et.id,
                               channelId: en.id,
-                              maxUsers: k.W,
+                              maxUsers: M.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
@@ -177,15 +177,15 @@ function K(e) {
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: "text-muted",
-                              "aria-label": F.intl.string(F.t.jNqDh4),
+                              "aria-label": V.intl.string(V.t.jNqDh4),
                           }),
-                          Q === V.l.MODAL_V2 && eb(),
+                          Q === Z.l.MODAL_V2 && eb(),
                       ],
                   }),
         eE = () =>
-            Q === V.l.MODAL || Q === V.l.MODAL_V2
+            Q === Z.l.MODAL || Q === Z.l.MODAL_V2
                 ? null
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(M.Z, {
                       user: t,
                       guild: et,
                       channel: en,
@@ -196,8 +196,8 @@ function K(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: Z.actions,
-                      children: (0, r.jsx)(j.Z, {
+                      className: F.actions,
+                      children: (0, r.jsx)(k.Z, {
                           channel: en,
                           onAction: eo,
                           onClose: z,
@@ -205,7 +205,7 @@ function K(e) {
                   }),
         ey = ed,
         eO = $ === G.n_.ACTIVITY && ee === ey,
-        ev = null != ei ? F.intl.formatToPlainString(F.t["4CQq9f"], { name: ei.name }) : F.intl.string(F.t["Jpkr/v"]);
+        ev = null != ei ? V.intl.formatToPlainString(V.t["4CQq9f"], { name: ei.name }) : V.intl.string(V.t["Jpkr/v"]);
     return (0, r.jsx)(m.Gt, {
         value: ea,
         children: (0, r.jsx)(D.Z, {
@@ -224,7 +224,7 @@ function K(e) {
                     (0, r.jsx)(P.Z, {
                         ref: X,
                         user: t,
-                        className: Z.toolbarContainer,
+                        className: F.toolbarContainer,
                         interactionSourceId: ey,
                         sourceType: G.n_.ACTIVITY,
                         onAction: eo,
@@ -236,28 +236,28 @@ function K(e) {
                                 onClose: z,
                                 children: e,
                             }),
-                        children: (0, r.jsxs)(L.Z, {
+                        children: (0, r.jsxs)(x.Z, {
                             ref: es,
-                            className: o()(K, { [Z.hoisted]: eO }),
+                            className: o()(K, { [F.hoisted]: eO }),
                             onAction: eo,
                             onClose: z,
                             "aria-label": ev,
                             children: [
-                                (0, r.jsx)(x.Z, {
+                                (0, r.jsx)(L.Z, {
                                     text: ev,
                                     tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: Z.body,
+                                    className: F.body,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: Z.content,
-                                            children: [em(), eg(), Q === V.l.MODAL && eb()],
+                                            className: F.content,
+                                            children: [em(), eg(), Q === Z.l.MODAL && eb()],
                                         }),
                                         eE(),
                                     ],
                                 }),
-                                Q !== V.l.MODAL && Q !== V.l.MODAL_V2 && eb(),
+                                Q !== Z.l.MODAL && Q !== Z.l.MODAL_V2 && eb(),
                             ],
                         }),
                     }),

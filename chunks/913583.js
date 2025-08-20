@@ -3,15 +3,15 @@ var r = n(951288);
 n(647438);
 var i = n(990547),
     l = n(481060),
-    a = n(213609),
+    s = n(213609),
     o = n(388905),
-    s = n(760213),
+    a = n(760213),
     c = n(388032),
     u = n(307847);
 function d(e) {
     let { onDismiss: t } = e;
     return (
-        (0, a.Z)({
+        (0, s.Z)({
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
@@ -25,10 +25,10 @@ function d(e) {
                     color: "header-secondary",
                     children: c.intl.string(c.t["0M5fNz"]),
                 }),
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(a.Z, {
                     actionText: c.intl.string(c.t["DSN+h4"]),
                     onAction: (e) => {
-                        e === s.W.LOGIN_REQUIRED && t();
+                        e === a.W.LOGIN_REQUIRED && t();
                     },
                 }),
                 (0, r.jsx)("div", {

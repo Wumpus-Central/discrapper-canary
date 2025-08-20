@@ -23,23 +23,23 @@ var r = n(951288),
     T = n(923973),
     S = n(189771),
     A = n(560688),
-    N = n(88479),
-    C = n(136995),
+    C = n(88479),
+    N = n(136995),
     R = n(25827),
     P = n(163612),
     w = n(601964),
     D = n(430824),
-    L = n(131951),
-    x = n(594174),
-    M = n(451478),
-    k = n(626135),
-    j = n(768581),
+    x = n(131951),
+    L = n(594174),
+    j = n(451478),
+    M = n(626135),
+    k = n(768581),
     U = n(358221),
     G = n(584511),
     B = n(793865),
-    V = n(522651),
-    F = n(795318),
-    Z = n(354459),
+    Z = n(522651),
+    V = n(795318),
+    F = n(354459),
     H = n(981631),
     Y = n(65154),
     W = n(388032),
@@ -111,12 +111,12 @@ let ee = {
     ei = 128;
 function ea(e) {
     let { header: t } = e,
-        n = L.Z.getCameraComponent(),
-        a = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
+        n = x.Z.getCameraComponent(),
+        a = (0, l.e7)([x.Z], () => x.Z.getVideoDeviceId()),
         o = (0, I.Z)();
     return (
         i.useEffect(() => {
-            let e = x.default.getCurrentUser();
+            let e = L.default.getCurrentUser();
             if (o && null != e) {
                 let t = (0, O.P)(e);
                 (0, v.FU)(t, a, { track: !1 }).catch(H.dG4);
@@ -153,13 +153,13 @@ function eo(e) {
     return (0, r.jsxs)("div", {
         className: o()(z.wrapper, z.actions),
         children: [
-            (0, r.jsx)(N.Z, {
+            (0, r.jsx)(C.Z, {
                 iconComponent: c.Dio,
                 label: W.intl.string(W.t.WAI6xs),
                 className: z.actionButton,
                 onClick: () => {
-                    (0, V.v)(s, V.d.DISCONNECT),
-                        k.default.track(
+                    (0, Z.v)(s, Z.d.DISCONNECT),
+                        M.default.track(
                             H.rMx.RING_CALL_DECLINED,
                             Q(
                                 {
@@ -179,7 +179,7 @@ function eo(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(B.Z, {
                             onClose: t,
-                            onInteraction: (0, F.u)("VideoDeviceMenu", s, { entrypoint: Z.A5.CARET }),
+                            onInteraction: (0, V.u)("VideoDeviceMenu", s, { entrypoint: F.A5.CARET }),
                         });
                     },
                     position: "top",
@@ -203,8 +203,8 @@ function eo(e) {
                             onCameraUnavailable: A.Z,
                             onChange: () => {
                                 var e;
-                                (0, V.v)(s, V.d.JOIN_VIDEO_CALL),
-                                    k.default.track(
+                                (0, Z.v)(s, Z.d.JOIN_VIDEO_CALL),
+                                    M.default.track(
                                         H.rMx.RING_CALL_ACCEPTED,
                                         Q(
                                             {
@@ -220,12 +220,12 @@ function eo(e) {
                         });
                     },
                 }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(N.Z, {
                 channel: n,
                 color: "join",
                 centerButton: !0,
                 onCallJoined: () =>
-                    k.default.track(
+                    M.default.track(
                         H.rMx.RING_CALL_ACCEPTED,
                         Q(
                             {
@@ -248,7 +248,7 @@ function es(e) {
         I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
         T =
             null != I
-                ? j.ZP.getGuildIconURL({
+                ? k.ZP.getGuildIconURL({
                       id: I.id,
                       icon: I.icon,
                       size: ei,
@@ -256,14 +256,14 @@ function es(e) {
                 : null,
         S = null != (t = (0, g.x)(h, ei, !0)) ? t : T,
         A = (0, E.ZP)(h),
-        [N, C] = (0, l.Wu)([L.Z], () => [L.Z.supports(Y.AN.VIDEO), Object.keys(L.Z.getVideoDevices()).length]),
+        [C, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(Y.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         R = null != I ? "".concat(A, ", ").concat(I.name) : A,
-        x = (0, l.e7)([M.Z], () => M.Z.isFocused()),
-        k = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
+        L = (0, l.e7)([j.Z], () => j.Z.isFocused()),
+        M = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
         B = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        V = (0, c.q_F)(
+        Z = (0, c.q_F)(
             {
                 value: +!!O,
                 config: $(Q({}, s.config.stiff), { clamp: !0 }),
@@ -276,13 +276,13 @@ function es(e) {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [h]);
-    let F = k === H.WtW.VIDEO && N && C > 0,
-        { enabled: Z } = P.Z.useExperiment({
+    let V = M === H.WtW.VIDEO && C && N > 0,
+        { enabled: F } = P.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
             location: "IncomingCallModal",
         }),
         X =
-            k === H.WtW.VOICE || (Z && h.type === H.d4z.GUILD_VOICE)
+            M === H.WtW.VOICE || (F && h.type === H.d4z.GUILD_VOICE)
                 ? W.intl.string(W.t.Js8cKy)
                 : W.intl.string(W.t.KcnWCA),
         J = (0, r.jsxs)(r.Fragment, {
@@ -306,7 +306,7 @@ function es(e) {
                       })
                     : (0, r.jsx)(G.Z, {
                           className: z.icon,
-                          ringing: x,
+                          ringing: L,
                           src: null != S ? S : "",
                           ringingType: G.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80,
@@ -330,8 +330,8 @@ function es(e) {
                 }),
             ],
         }),
-        es = F ? ee : et,
-        el = (0, l.e7)([M.Z], () => M.Z.windowSize());
+        es = V ? ee : et,
+        el = (0, l.e7)([j.Z], () => j.Z.windowSize());
     return (0, r.jsx)(m.Gt, {
         value: y,
         children: (0, r.jsx)(_.Z, {
@@ -351,9 +351,9 @@ function es(e) {
                     (0, r.jsxs)(s.animated.div, {
                         className: o()(z.root, q.elevationHigh, { [z.previewCamera]: O }, e),
                         style: $(Q({}, n), {
-                            width: V.value.interpolate([0, 1], [es.width, en]),
-                            minHeight: V.value.interpolate([0, 1], [es.height, er]),
-                            translateX: V.value.interpolate([0, 1], [0, (-1 * Math.abs(en - es.width)) / 2]),
+                            width: Z.value.interpolate([0, 1], [es.width, en]),
+                            minHeight: Z.value.interpolate([0, 1], [es.height, er]),
+                            translateX: Z.value.interpolate([0, 1], [0, (-1 * Math.abs(en - es.width)) / 2]),
                         }),
                         children: [
                             O
@@ -363,11 +363,11 @@ function es(e) {
                                       children: J,
                                   }),
                             (0, r.jsx)(eo, {
-                                canVideo: F,
+                                canVideo: V,
                                 channel: h,
-                                numVideoDevices: C,
+                                numVideoDevices: N,
                             }),
-                            F && !O
+                            V && !O
                                 ? (0, r.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
                                       className: z.previewButton,

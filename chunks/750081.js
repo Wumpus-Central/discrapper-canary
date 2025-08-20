@@ -24,34 +24,34 @@ var d = n(602954),
     T = n(998502),
     S = n(513566),
     A = n(534713),
-    N = n(358085),
-    C = n(703656),
+    C = n(358085),
+    N = n(703656),
     R = n(284737),
     P = n(473159),
     w = n(846519),
     D = n(579806),
-    L = n(896361),
-    x = n(746106),
-    M = n(177692);
+    x = n(896361),
+    L = n(746106),
+    j = n(177692);
 n(986484);
-var k = n(857192),
-    j = n(113752),
+var M = n(857192),
+    k = n(113752),
     U = n(44163),
     G = n(710845),
     B = n(70956),
-    V = n(378799);
-k.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, V.s5)();
-let F = 5 * B.Z.Millis.MINUTE,
-    Z = document.getElementById("app-mount");
-_()(null != Z, "Could not find app-mount"), (Z.className = __OVERLAY__ ? "" : j.appMount);
-let H = (0, d.createRoot)(Z),
+    Z = n(378799);
+M.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, Z.s5)();
+let V = 5 * B.Z.Millis.MINUTE,
+    F = document.getElementById("app-mount");
+_()(null != F, "Could not find app-mount"), (F.className = __OVERLAY__ ? "" : k.appMount);
+let H = (0, d.createRoot)(F),
     Y = { "/oauth2/authorize": A.Z };
 function W(e, t, n) {
     var r;
     let i = null != n ? new URLSearchParams(n) : null;
-    (null != (r = Y[t]) && r.call(Y, i)) || (0, C.uL)(t);
+    (null != (r = Y[t]) && r.call(Y, i)) || (0, N.uL)(t);
 }
-let K = (e) => H.render((0, u.jsx)(x.w, { children: (0, u.jsx)(L.Z, { children: (0, u.jsx)(e, {}) }) }));
+let K = (e) => H.render((0, u.jsx)(L.w, { children: (0, u.jsx)(x.Z, { children: (0, u.jsx)(e, {}) }) }));
 if (null != D.Z) {
     null == (r = D.Z.setUncaughtExceptionHandler) ||
         r.call(D.Z, (e, t) => {
@@ -82,10 +82,10 @@ if (null != D.Z) {
 if (((0, P.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
-    if ((document.addEventListener("scroll", (e) => e.preventDefault()), N.isPlatformEmbedded)) {
+    if ((document.addEventListener("scroll", (e) => e.preventDefault()), C.isPlatformEmbedded)) {
         (window.onbeforeunload = () => T.ZP.beforeUnload()),
             T.ZP.on("HELP_OPEN", () => window.open(v.Z.getCommunityURL()));
-        let e = new w.sW(F, () => T.ZP.purgeMemory());
+        let e = new w.sW(V, () => T.ZP.purgeMemory());
         T.ZP.on("MAIN_WINDOW_BLUR", () => {
             e.delay(), T.ZP.setFocused(!1), (0, R.T_)(window, !1);
         }),
@@ -106,6 +106,6 @@ else {
         I.Z.initialize(),
         S.Z.initialize(),
         b.j(),
-        (0, M.Mn)(),
+        (0, j.Mn)(),
         K(p.Z.App);
 }

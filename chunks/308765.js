@@ -747,6 +747,10 @@ let i = {
         actions: ["POST_CONNECTION_OPEN", "RTC_CONNECTION_STATE"],
         inlineRequire: () => n(891812).Z,
     },
+    NegativeHardwareAccelerationExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(851862).Z,
+    },
     FramesManager: {
         actions: ["RPC_APP_DISCONNECTED"],
         inlineRequire: () => n(460093).Z,

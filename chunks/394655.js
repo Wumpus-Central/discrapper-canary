@@ -1,27 +1,27 @@
-n.d(t, { Z: () => m });
-var i = n(951288),
-    r = n(905405),
-    s = n(63063),
-    a = n(695346),
-    l = n(838436),
-    o = n(51331),
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(905405),
+    a = n(63063),
+    o = n(695346),
+    s = n(838436),
+    l = n(51331),
     c = n(726985),
-    d = n(981631),
-    u = n(388032);
-function m() {
-    let e = (0, r.p)();
-    return (0, i.jsx)(l.U, {
+    u = n(981631),
+    d = n(388032);
+function f() {
+    let e = (0, i.p)();
+    return (0, r.jsx)(s.U, {
         setting: c.s6.PRIVACY_KEYWORD_FILTER_V2,
-        children: (0, i.jsx)(o.Z, {
+        children: (0, r.jsx)(l.Z, {
             value: e,
             onChange: (e) =>
-                a.gw.updateSetting({
+                o.gw.updateSetting({
                     profanity: e,
                     slurs: e,
                     sexualContent: e,
                 }),
-            title: u.intl.string(u.t.CB5reH),
-            note: u.intl.format(u.t.kAyJIS, { learnMoreLink: s.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) }),
+            title: d.intl.string(d.t.CB5reH),
+            note: d.intl.format(d.t.kAyJIS, { learnMoreLink: a.Z.getArticleURL(u.BhN.KEYWORD_FILTERS) }),
         }),
     });
 }

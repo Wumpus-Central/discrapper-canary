@@ -1,73 +1,84 @@
-n.d(e, { L: () => c });
-var i = n(951288);
+n.d(t, { L: () => f });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    l = n(51025),
+var i = n(481060),
+    a = n(51025),
     o = n(850840),
-    a = n(391690);
-function c(t, e, c, s, d) {
-    let u = a.Z.getInstallationPath(t.id, e),
-        p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
-    null == u || p
-        ? (0, r.ZDy)(async () => {
-              let { default: r } = await n.e("226").then(n.bind(n, 472064));
-              return (n) => {
-                  var l, o;
-                  return (0, i.jsx)(
-                      r,
-                      ((l = (function (t) {
-                          for (var e = 1; e < arguments.length; e++) {
-                              var n = null != arguments[e] ? arguments[e] : {},
-                                  i = Object.keys(n);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (i = i.concat(
-                                      Object.getOwnPropertySymbols(n).filter(function (t) {
-                                          return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                      }),
-                                  )),
-                                  i.forEach(function (e) {
-                                      var i;
-                                      (i = n[e]),
-                                          e in t
-                                              ? Object.defineProperty(t, e, {
-                                                    value: i,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (t[e] = i);
-                                  });
-                          }
-                          return t;
-                      })({}, n)),
-                      (o = o =
-                          {
-                              applicationId: t.id,
-                              branchId: e,
-                              analyticsLocation: d,
-                          }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                          : (function (t, e) {
-                                var n = Object.keys(t);
-                                if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(t);
-                                    n.push.apply(n, i);
-                                }
-                                return n;
-                            })(Object(o)).forEach(function (t) {
-                                Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(o, t));
-                            }),
-                      l),
+    s = n(391690);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e, t, l, u, f) {
+    let _ = s.Z.getInstallationPath(e.id, t),
+        p = null != e.eulaId && !o.Z.hasAcceptedEULA(e.eulaId);
+    null == _ || p
+        ? (0, i.ZDy)(async () => {
+              let { default: i } = await n.e("226").then(n.bind(n, 472064));
+              return (n) =>
+                  (0, r.jsx)(
+                      i,
+                      d(c({}, n), {
+                          applicationId: e.id,
+                          branchId: t,
+                          analyticsLocation: f,
+                      }),
                   );
-              };
           })
-        : (0, l.LO)({
-              application: t,
-              branchId: e,
-              buildId: c,
-              manifestIds: s,
-              installationPath: u,
-              analyticsLocation: d,
+        : (0, a.LO)({
+              application: e,
+              branchId: t,
+              buildId: l,
+              manifestIds: u,
+              installationPath: _,
+              analyticsLocation: f,
           });
 }

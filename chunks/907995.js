@@ -1,49 +1,49 @@
-n.d(t, { f: () => m });
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    o = n(711703),
+n.d(t, { f: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(711703),
     c = n(484710),
-    d = n(388032),
-    u = n(449081);
-function m(e) {
-    let { label: t, labelHook: n, dismissNotice: s, className: m, noticeType: p } = e,
-        g = null != s;
-    r.useEffect(() => {
-        (0, o.l)(p, c.up.VIEWED);
-    }, [p]);
-    let h = r.useCallback(() => {
-            null != s && (s(), (0, o.l)(p, c.up.DISMISS));
-        }, [p, s]),
-        f = r.useCallback(() => {
-            n(), (0, o.l)(p, c.up.LEARN_MORE);
-        }, [p, n]);
-    return (0, i.jsxs)("div", {
-        className: a()(u.safetySettingsNotice, m),
+    u = n(388032),
+    d = n(449081);
+function f(e) {
+    let { label: t, labelHook: n, dismissNotice: a, className: f, noticeType: _ } = e,
+        p = null != a;
+    i.useEffect(() => {
+        (0, l.l)(_, c.up.VIEWED);
+    }, [_]);
+    let h = i.useCallback(() => {
+            null != a && (a(), (0, l.l)(_, c.up.DISMISS));
+        }, [_, a]),
+        m = i.useCallback(() => {
+            n(), (0, l.l)(_, c.up.LEARN_MORE);
+        }, [_, n]);
+    return (0, r.jsxs)("div", {
+        className: o()(d.safetySettingsNotice, f),
         children: [
-            (0, i.jsx)(l.d3s, { size: "md" }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(s.d3s, { size: "md" }),
+            (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "interactive-active",
-                children: d.intl.format(t, {
+                children: u.intl.format(t, {
                     hook: (e, t) =>
-                        (0, i.jsx)(
-                            l.eee,
+                        (0, r.jsx)(
+                            s.eee,
                             {
-                                onClick: f,
+                                onClick: m,
                                 children: e,
                             },
                             t,
                         ),
                 }),
             }),
-            g &&
-                (0, i.jsx)(l.P3F, {
-                    className: u.closeButton,
+            p &&
+                (0, r.jsx)(s.P3F, {
+                    className: d.closeButton,
                     onClick: h,
-                    children: (0, i.jsx)(l.Dio, {}),
+                    children: (0, r.jsx)(s.Dio, {}),
                 }),
         ],
     });

@@ -52,10 +52,10 @@ function d(e) {
         _ = t || n || d,
         C = p ? u.d : u.Z,
         x = (0, o.Z)(t, n, d, h),
-        { events: v, play: j, Component: O } = (0, c.b)(_),
-        E = n || d ? l.v0G : O;
+        { events: v, play: O, Component: j } = (0, c.b)(_),
+        E = n || d ? l.v0G : j;
     return (
-        i.useEffect(() => () => j(), [j, _]),
+        i.useEffect(() => () => O(), [O, _]),
         (0, r.jsx)(
             C,
             (function (e) {

@@ -12,7 +12,7 @@ function u(e) {
         [p, m] = l.useState(),
         E = n.id.split(":").at(-1),
         g = t === E,
-        S = l.useCallback((e, t, n) => {
+        v = l.useCallback((e, t, n) => {
             var r, l, i;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
             c(null != (r = null == o ? void 0 : o.codec) ? r : "unknown"),
@@ -29,11 +29,11 @@ function u(e) {
         }, []);
     return (
         l.useEffect(() => {
-            let e = () => S(E, u, g);
+            let e = () => v(E, u, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, E, u, S]),
+        }, [g, E, u, v]),
         (0, r.jsxs)("div", {
             className: o.streamInfoContainer,
             children: [

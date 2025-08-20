@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(158776),
     x = n(471253),
     v = n(431328),
-    j = n(145834),
-    O = n(590415),
+    O = n(145834),
+    j = n(590415),
     E = n(614173),
     S = n(618896),
     P = n(231338),
@@ -113,7 +113,7 @@ let A = i.memo(function (e) {
             ),
             R = i.useMemo(() => ({ [E]: [a.user.id] }), [E, a.user.id]);
         (0, f.$)(R);
-        let M = a.rtsState === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let M = a.rtsState === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function k() {
             (0, x.DT)(l, a.user.id, !1);
         }
@@ -187,7 +187,7 @@ let A = i.memo(function (e) {
                                                 (0, r.jsx)(u.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "header-secondary",
-                                                    children: (0, j.$)(a),
+                                                    children: (0, O.$)(a),
                                                 }),
                                             ],
                                         }),

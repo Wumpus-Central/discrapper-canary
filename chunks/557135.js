@@ -66,10 +66,10 @@ let v = {
         t.isThread() &&
             (await d.Z.unarchiveThreadIfNecessary(t.id),
             u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, "Join Voice")));
-        let N = o.Z.getRemoteSessionId(),
-            C = p.Z.getVoiceStateForSession(f.default.getId(), N),
+        let C = o.Z.getRemoteSessionId(),
+            N = p.Z.getVoiceStateForSession(f.default.getId(), C),
             R =
-                (null == C ? void 0 : C.channelId) === t.id ||
+                (null == N ? void 0 : N.channelId) === t.id ||
                 _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);

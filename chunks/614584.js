@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(507418),
     x = n(348238),
     v = n(981631),
-    j = n(388032);
-function O(e) {
+    O = n(388032);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -86,7 +86,7 @@ let S = i.memo(function (e) {
             let e = (0, o.Z)(R);
             if (e.type === v.uaV.USER_JOIN)
                 return (0, a.Rp)(
-                    j.intl.formatToParts(g.Z.getSystemMessageUserJoin(e.id), {
+                    O.intl.formatToParts(g.Z.getSystemMessageUserJoin(e.id), {
                         username: null != M ? M.nick : e.author.username,
                         usernameHook: (e) => e,
                     }),
@@ -121,7 +121,7 @@ let S = i.memo(function (e) {
                     }),
                 );
             else if (e.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : j.intl.string(j.t.wnn1DQ);
+                return "" !== e.content ? e.content : O.intl.string(O.t.wnn1DQ);
             if (null != e.content && "" !== e.content) {
                 let t = {
                         formatInline: !0,
@@ -129,13 +129,13 @@ let S = i.memo(function (e) {
                         shouldFilterKeywords: k,
                     },
                     n = e.isFirstMessageInForumPost(P)
-                        ? E(O({}, t), {
+                        ? E(j({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
                               allowGameMentions: D,
                           })
-                        : E(O({}, t), {
+                        : E(j({}, t), {
                               formatInline: !0,
                               allowHeading: L,
                               allowList: L,

@@ -1,37 +1,37 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(399606),
-    s = n(481060),
-    a = n(594174),
-    l = n(51144),
-    o = n(546791),
+var i = n(399606),
+    a = n(481060),
+    o = n(594174),
+    s = n(51144),
+    l = n(546791),
     c = n(198952),
-    d = n(905599);
-let u = (e) => {
-    let { userId: t, timestamp: n, timestampFormatter: u } = e,
-        m = (0, r.e7)([a.default], () => a.default.getUser(t));
-    return void 0 === m
+    u = n(905599);
+let d = (e) => {
+    let { userId: t, timestamp: n, timestampFormatter: d } = e,
+        f = (0, i.e7)([o.default], () => o.default.getUser(t));
+    return void 0 === f
         ? null
-        : (0, i.jsxs)("div", {
-              className: d.container,
+        : (0, r.jsxs)("div", {
+              className: u.container,
               children: [
-                  (0, i.jsx)(c.r, {
-                      user: m,
-                      avatarSize: s.EFr.SIZE_40,
+                  (0, r.jsx)(c.r, {
+                      user: f,
+                      avatarSize: a.EFr.SIZE_40,
                   }),
-                  (0, i.jsx)("div", {
-                      children: (0, i.jsxs)("div", {
-                          className: d.descriptors,
+                  (0, r.jsx)("div", {
+                      children: (0, r.jsxs)("div", {
+                          className: u.descriptors,
                           children: [
-                              (0, i.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
-                                  children: l.ZP.getName(m),
+                                  children: s.ZP.getName(f),
                               }),
-                              (0, i.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-muted",
-                                  children: (0, o.LI)(new Date(n).getTime(), u),
+                                  children: (0, l.LI)(new Date(n).getTime(), d),
                               }),
                           ],
                       }),

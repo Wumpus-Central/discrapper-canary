@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -149,7 +149,7 @@ function A(e) {
         disabled: !0,
     });
 }
-function N(e, t, n) {
+function C(e, t, n) {
     return (0, r.jsxs)(u.Text, {
         variant: "text-xs/normal",
         className: y.titleRegion,
@@ -175,7 +175,7 @@ function N(e, t, n) {
         ],
     });
 }
-let C = (e) => {
+let N = (e) => {
     let { loading: t = !1, currentOverrides: n, linkMeta: a, url: o, applyBuildOverride: s, clearBuildOverride: l } = e,
         [c, u] = i.useState(!1),
         d = i.useCallback(() => {
@@ -187,7 +187,7 @@ let C = (e) => {
     return (0, r.jsxs)("div", {
         className: y.wrapper,
         children: [
-            N(a, o, t),
+            C(a, o, t),
             (0, r.jsxs)("div", {
                 className: y.content,
                 children: [

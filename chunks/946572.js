@@ -1,21 +1,24 @@
-t.exports = (function () {
-    function t(t) {
-        var e, r;
-        (r = void 0),
-            (e = "_uri") in this
-                ? Object.defineProperty(this, e, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (this[e] = r),
-            (this._uri = t);
+function t(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+e.exports = (function () {
+    function e(e) {
+        t(this, "_uri", void 0), (this._uri = e);
     }
     return (
-        (t.prototype.toString = function () {
+        (e.prototype.toString = function () {
             return this._uri;
         }),
-        t
+        e
     );
 })();

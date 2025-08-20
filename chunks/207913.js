@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(739566),
     _ = n(930282),
     y = n(318713),
-    v = n(47930),
-    j = n(123145),
+    j = n(47930),
+    v = n(123145),
     C = n(25015),
-    E = n(178480),
-    x = n(518950),
+    x = n(178480),
+    E = n(518950),
     S = n(131704),
-    P = n(601964),
-    I = n(592125),
+    I = n(601964),
+    P = n(592125),
     N = n(720202),
     w = n(430824),
     Z = n(821020),
@@ -32,8 +32,8 @@ var r = n(951288),
     A = n(804932),
     R = n(993609),
     D = n(987889),
-    L = n(586694),
-    M = n(981631),
+    M = n(586694),
+    L = n(981631),
     k = n(677642),
     U = n(388032),
     G = n(361584);
@@ -82,18 +82,18 @@ function V(e, t) {
 }
 function F(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
-        p = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
+        p = n.type === L.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
         m = (0, f.ZP)(n, !1),
         b = (0, c.e7)([w.Z], () => w.Z.getGuild(n.getGuildId())),
         { nick: _, colorString: y } = (0, O.ZP)(t),
-        { avatarSrc: C, eventHandlers: E } = (0, x.Z)({
+        { avatarSrc: C, eventHandlers: x } = (0, E.Z)({
             userId: t.author.id,
             size: u.EFr.SIZE_32,
             guildId: null == b ? void 0 : b.id,
             animateOnHover: !0,
         }),
-        S = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == b,
-        I = (0, v.x)({
+        S = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == b,
+        P = (0, j.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -103,7 +103,7 @@ function F(e) {
         Z = (0, r.jsx)("div", {
             className: G.usernameTagContainer,
             inert: !0,
-            children: (0, r.jsx)(j.Z, {
+            children: (0, r.jsx)(v.Z, {
                 channel: n,
                 message: t,
                 hideGuildTag: !0,
@@ -119,8 +119,8 @@ function F(e) {
             u.tEY,
             V(B({}, l), {
                 children: (0, r.jsxs)("div", {
-                    onMouseLeave: E.onMouseLeave,
-                    onMouseEnter: E.onMouseEnter,
+                    onMouseLeave: x.onMouseLeave,
+                    onMouseEnter: x.onMouseEnter,
                     className: G.messageContainer,
                     children: [
                         s && !a && (0, r.jsx)("div", { className: G.unreadDot }),
@@ -131,17 +131,17 @@ function F(e) {
                                 marginTop: "4px",
                             },
                             children: S
-                                ? (0, r.jsx)(L.q, {
+                                ? (0, r.jsx)(M.q, {
                                       "aria-label": "User Avatar",
                                       src: C,
                                       size: u.EFr.SIZE_32,
-                                      cornerIconUrl: null != b ? (0, P.EB)(b, 24) : void 0,
+                                      cornerIconUrl: null != b ? (0, I.EB)(b, 24) : void 0,
                                       cornerIconOffsetX: 4,
                                       cornerIconOffsetY: 3,
                                   })
-                                : (0, r.jsx)(L.E, {
+                                : (0, r.jsx)(M.E, {
                                       "aria-label": "Guild Icon",
-                                      src: (0, P.EB)(b, 32),
+                                      src: (0, I.EB)(b, 32),
                                       size: u.EFr.SIZE_32,
                                       cornerIconUrl: t.author.getAvatarURL(b.id, 24),
                                       cornerIconOffsetX: 4,
@@ -170,7 +170,7 @@ function F(e) {
                                                           style: { color: null != y ? y : void 0 },
                                                           children: (0, r.jsx)(g.Z, { children: Z }),
                                                       }),
-                                                      I,
+                                                      P,
                                                   ],
                                               })
                                             : (0, r.jsx)(g.Z, {
@@ -278,7 +278,7 @@ function H(e) {
 }
 function z(e) {
     let { message: t } = e,
-        n = (0, E.a3)(t.timestamp.getTime());
+        n = (0, x.a3)(t.timestamp.getTime());
     return (0, r.jsx)(y.Z, {
         timestamp: t.timestamp,
         className: G.timestamp,
@@ -302,17 +302,17 @@ function W(e) {
                 });
             return (0, i.useMemo)(() => {
                 let e = "" === t.content,
-                    i = t.embeds.some((e) => e.type === M.hBH.GIFV),
+                    i = t.embeds.some((e) => e.type === L.hBH.GIFV),
                     s = (function (e) {
-                        let t = e.embeds.some((e) => e.type === M.hBH.GIFV);
+                        let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
                     c = (0, m.Z)(t),
                     d = t.stickerItems.length > 0,
                     p = t.isPoll(),
-                    f = t.type === M.uaV.POLL_RESULT,
-                    h = t.hasFlag(M.iLy.IS_VOICE_MESSAGE),
-                    g = t.type === M.uaV.USER_JOIN,
+                    f = t.type === L.uaV.POLL_RESULT,
+                    h = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
+                    g = t.type === L.uaV.USER_JOIN,
                     O = null;
                 1 === s
                     ? (O = u.XBm)
@@ -326,14 +326,14 @@ function W(e) {
                             ? (O = u.SlE)
                             : h && (O = u.gj8);
                 let y = !0,
-                    v = null;
+                    j = null;
                 if (e)
-                    if (c) v = U.intl.string(U.t["9ddYKi"]);
+                    if (c) j = U.intl.string(U.t["9ddYKi"]);
                     else if (p) {
-                        var j;
-                        (y = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
+                        var v;
+                        (y = !1), (j = null == (v = t.poll) ? void 0 : v.question.text);
                     } else
-                        v = f
+                        j = f
                             ? U.intl.string(U.t.sad2PD)
                             : i
                               ? U.intl.string(U.t.p0oZm5)
@@ -350,7 +350,7 @@ function W(e) {
                                         : U.intl.string(U.t.sDqZHB);
                 else
                     (y = !1),
-                        (v = (0, r.jsx)(_.ZP, {
+                        (j = (0, r.jsx)(_.ZP, {
                             content: a,
                             message: t,
                             compact: !1,
@@ -361,16 +361,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (v = (0, r.jsx)("div", {
+                        (j = (0, r.jsx)("div", {
                             className: o()(G.message, {
                                 [G.unread]: n,
                                 [G.selected]: l,
                                 [G.descriptionMessage]: y,
                             }),
-                            children: v,
+                            children: j,
                         })),
                     {
-                        previewContent: v,
+                        previewContent: j,
                         Icon: O,
                     }
                 );
@@ -408,15 +408,15 @@ let K = (0, i.memo)(
             f = l.message,
             h = (0, A.fJ)(),
             { params: g } = (0, s.$B)(),
-            m = (0, c.e7)([I.Z], () => {
+            m = (0, c.e7)([P.Z], () => {
                 if (null == f) return null;
-                let e = I.Z.getChannel(l.channelId);
+                let e = P.Z.getChannel(l.channelId);
                 return null != e
                     ? e
                     : new S.nl({
                           id: l.channelId,
                           guild_id: l.guildId,
-                          type: M.d4z.UNKNOWN,
+                          type: L.d4z.UNKNOWN,
                           name: U.intl.string(U.t.J90oLS),
                       });
             }),

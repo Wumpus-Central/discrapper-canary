@@ -1,10 +1,10 @@
 n.d(t, {
     VF: () => P,
-    WW: () => N,
+    WW: () => C,
     XO: () => S,
     Yp: () => T,
     hC: () => R,
-    o9: () => C,
+    o9: () => N,
     zC: () => A,
 });
 var r = n(692547),
@@ -139,10 +139,10 @@ function S() {
 function A() {
     return [h(s.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), v(), m(), O()];
 }
-function N() {
+function C() {
     return [m(), f(), h(s.Eu4.TIER_3), O()];
 }
-function C() {
+function N() {
     return [c(), p(), u(), O()];
 }
 function R() {

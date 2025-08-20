@@ -90,8 +90,8 @@ function E(e) {
             },
         });
     if (null == y) return null;
-    let { isJoining: I, handleJoinRequest: T, buttonCTA: S, tooltip: A, isEnabled: N, isEmbedded: C } = y;
-    return C
+    let { isJoining: I, handleJoinRequest: T, buttonCTA: S, tooltip: A, isEnabled: C, isEmbedded: N } = y;
+    return N
         ? (0, r.jsx)(a.ua7, {
               text: A,
               children: (e) =>
@@ -100,7 +100,7 @@ function E(e) {
                       g(h({}, e), {
                           icon: a.YVR,
                           text: S,
-                          disabled: !N,
+                          disabled: !C,
                           submitting: I,
                           size: E === f.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
                           fullWidth: E !== f.l.MODAL_V2,
@@ -119,7 +119,7 @@ function E(e) {
                       g(h({}, e), {
                           icon: a.iWm,
                           text: S,
-                          disabled: !N,
+                          disabled: !C,
                           submitting: I,
                           size: E === f.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
                           fullWidth: E !== f.l.MODAL_V2,

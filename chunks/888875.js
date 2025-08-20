@@ -118,7 +118,7 @@ class T extends o.Z {
             b(this, "actions", {
                 POST_CONNECTION_OPEN: S,
                 CONNECTION_RESUMED: S,
-                CONNECTION_CLOSED: N,
+                CONNECTION_CLOSED: C,
                 APP_STATE_UPDATE: A,
             });
     }
@@ -127,12 +127,12 @@ function S() {
     (I = !0), R(y, !0);
 }
 function A(e) {
-    I && "active" !== e.state && (clearTimeout(v), (v = null), C(!1));
+    I && "active" !== e.state && (clearTimeout(v), (v = null), N(!1));
 }
-function N() {
-    I && (clearTimeout(v), (v = null), C(!1));
+function C() {
+    I && (clearTimeout(v), (v = null), N(!1));
 }
-async function C(e) {
+async function N(e) {
     R(O, !1),
         !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) &&
             (d.Z.hasPendingUsage() ||
@@ -146,6 +146,6 @@ async function C(e) {
         });
 }
 function R(e, t) {
-    null != v && clearTimeout(v), (v = setTimeout(() => C(t), e));
+    null != v && clearTimeout(v), (v = setTimeout(() => N(t), e));
 }
 let P = new T();

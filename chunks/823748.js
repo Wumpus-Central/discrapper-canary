@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(697309),
     x = n(457868),
     v = n(561472),
-    j = n(36311),
-    O = n(112724),
+    O = n(36311),
+    j = n(112724),
     E = n(902840),
     S = n(110924),
     P = n(317381),
@@ -73,13 +73,13 @@ var r = n(951288),
     eC = n(607802),
     ex = n(14091),
     ev = n(6025),
-    ej = n(897473),
-    eO = n(922482),
+    eO = n(897473),
+    ej = n(922482),
     eE = n(504185),
     eS = n(657218),
     eP = n(407908),
     eI = n(66556),
-    eZ = n(739830),
+    eZ = n(131694),
     eT = n(377929),
     eN = n(900157),
     eA = n(108427),
@@ -220,7 +220,7 @@ class to extends i.PureComponent {
                     n.e("98783"),
                     n.e("57789"),
                     n.e("56826"),
-                    n.e("36658"),
+                    n.e("92595"),
                 ]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
@@ -286,7 +286,7 @@ class to extends i.PureComponent {
                       }),
                   });
         if ((0, N.aC)(e) && (!i || !t))
-            return (0, r.jsx)(j.Z, {
+            return (0, r.jsx)(O.Z, {
                 guild: n,
                 channelId: e.id,
             });
@@ -428,7 +428,7 @@ class to extends i.PureComponent {
         if (n === e3.ULH.SIDEBAR_CHAT && null != i) {
             if ((0, N.aC)(t) && (!o || !a)) return null;
             switch (i.type) {
-                case ej.tI.CREATE_THREAD:
+                case eO.tI.CREATE_THREAD:
                     if (null == t ? void 0 : t.isForumLikeChannel()) return null;
                     e = (0, r.jsx)(eS.Z, {
                         parentChannelId: i.parentChannelId,
@@ -436,24 +436,24 @@ class to extends i.PureComponent {
                         location: i.location,
                     });
                     break;
-                case ej.tI.VIEW_THREAD:
+                case eO.tI.VIEW_THREAD:
                     let n = (null == t ? void 0 : t.isForumLikeChannel()) ? G.Z : eN.Z;
                     e = (0, r.jsx)(n, { channelId: i.channelId });
                     break;
-                case ej.tI.VIEW_MOD_REPORT:
+                case eO.tI.VIEW_MOD_REPORT:
                     e = (0, r.jsx)(eN.Z, {
                         channelId: i.channelId,
                         baseChannelId: i.baseChannelId,
                     });
                     break;
-                case ej.tI.VIEW_CHANNEL:
-                case ej.tI.VIEW_MESSAGE_REQUEST:
+                case eO.tI.VIEW_CHANNEL:
+                case eO.tI.VIEW_MESSAGE_REQUEST:
                 default:
                     return null;
             }
         }
         if (null != l && null == e)
-            if (l.type !== ej.jL.GUILD_MEMBER_MOD_VIEW) return null;
+            if (l.type !== eO.jL.GUILD_MEMBER_MOD_VIEW) return null;
             else {
                 let { guildId: e, userId: t } = l.details;
                 return (0, r.jsx)("div", {
@@ -690,7 +690,7 @@ class to extends i.PureComponent {
                     case e3.d4z.ANNOUNCEMENT_THREAD:
                     case e3.d4z.PRIVATE_THREAD:
                     case e3.d4z.PUBLIC_THREAD:
-                        o.push((0, r.jsx)(eP.Z, { channel: e })),
+                        e.isModeratorReportChannel() && o.push((0, r.jsx)(eP.Z, { channel: e })),
                             null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eI.Z, { channel: t }, "browser")),
                             e.isVocalThread() && o.push((0, r.jsx)(ed.Z, { channel: e }, "thread-call")),
                             o.push((0, r.jsx)(eZ.Z, { channel: e }, "notifications")),
@@ -847,7 +847,7 @@ class to extends i.PureComponent {
             });
     }
 }
-let ts = (0, O.Z)(to),
+let ts = (0, j.Z)(to),
     tc = i.memo(function (e) {
         var t;
         let { providedChannel: n } = e,
@@ -866,30 +866,30 @@ let ts = (0, O.Z)(to),
                 return e.length - t.length > 0;
             }, [o]),
             v = (0, z.Z)(),
-            j = (0, p.e7)([eW.Z], () => {
+            O = (0, p.e7)([eW.Z], () => {
                 var e;
                 return (
                     (null != (e = null == v ? void 0 : v.channelId) ? e : eW.Z.getVoiceChannelId()) ===
                     (null == c ? void 0 : c.id)
                 );
             }),
-            O = (0, p.e7)([P.ZP], () => (null != c ? P.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
+            j = (0, p.e7)([P.ZP], () => (null != c ? P.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
             I = (0, p.e7)([ez.Z], () => ez.Z.isConnected()),
             N = (0, S.Z)(I),
             A = I && !1 === N;
         i.useEffect(() => {
-            j &&
+            O &&
                 A &&
-                null != O &&
+                null != j &&
                 null != c &&
                 b.Z.selectParticipant(
                     c.id,
                     (0, w.gN)({
-                        applicationId: O.applicationId,
-                        instanceId: O.compositeInstanceId,
+                        applicationId: j.applicationId,
+                        instanceId: j.compositeInstanceId,
                     }),
                 );
-        }, [A, c, j, O]);
+        }, [A, c, O, j]);
         let M = (0, p.e7)([P.ZP], () => P.ZP.getCurrentEmbeddedActivity()),
             k = (0, p.e7)([P.ZP], () => P.ZP.getActivityPanelMode()),
             D = null != M && !(0, Z.Z)(null == c ? void 0 : c.id) && k === e4.Ez.PANEL,
@@ -956,7 +956,7 @@ let ts = (0, O.Z)(to),
         }),
             i.useEffect(() => {
                 let { channel: e, inCurrentVoiceChannel: t } = ed.current;
-                null != l && null != e && ec && e.id === l && !t && ((0, eO.Cq)(e), a(null));
+                null != l && null != e && ec && e.id === l && !t && ((0, ej.Cq)(e), a(null));
             }, [l, ec]);
         let ep = (0, E.ts)(c),
             eb = null != c && c.isPrivate(),

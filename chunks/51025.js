@@ -1,10 +1,10 @@
 n.d(t, {
-    A1: () => N,
+    A1: () => C,
     LO: () => y,
     S1: () => E,
     Wx: () => P,
     XT: () => w,
-    al: () => C,
+    al: () => N,
     cG: () => O,
     li: () => I,
     ob: () => b,
@@ -138,14 +138,14 @@ function S() {
 function A() {
     _.Z.pause();
 }
-function N(e, t) {
+function C(e, t) {
     i.Z.dispatch({
         type: "DISPATCH_APPLICATION_MOVE_UP",
         applicationId: e,
         branchId: t,
     });
 }
-function C(e, t) {
+function N(e, t) {
     _.Z.cancel(e, t),
         i.Z.dispatch({
             type: "DISPATCH_APPLICATION_CANCEL",

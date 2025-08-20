@@ -1,29 +1,30 @@
-n.d(t, { Y: () => u });
-var i = n(951288);
+n.d(t, { Y: () => f });
+var r = n(951288);
 n(647438);
-var r = n(704215),
-    s = n(231757),
-    a = n(63063),
-    l = n(249881),
-    o = n(981631),
+var i = n(704215),
+    a = n(231757),
+    o = n(63063),
+    s = n(249881),
+    l = n(981631),
     c = n(388032),
-    d = n(195794);
-let u = () => {
-    let e = a.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
-    return (0, i.jsx)(l.t, {
-        title: c.intl.string(c.t["2okkZW"]),
-        body: c.intl.format(c.t.OnERSU, { help_article: e }),
-        img: (0, i.jsx)("img", {
-            src: d,
-            width: "auto",
-            height: "45",
-            alt: "",
-        }),
-        newIndicatorDismissibleContent: r.z.XBOX_ONE_WAY_RECONNECT,
-        onClick: () =>
-            (0, s.Z)({
-                platformType: o.ABu.XBOX,
-                location: "Xbox two way upsell",
+    u = n(195794);
+let d = "Xbox two way upsell",
+    f = () => {
+        let e = o.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
+        return (0, r.jsx)(s.t, {
+            title: c.intl.string(c.t["2okkZW"]),
+            body: c.intl.format(c.t.OnERSU, { help_article: e }),
+            img: (0, r.jsx)("img", {
+                src: u,
+                width: "auto",
+                height: "45",
+                alt: "",
             }),
-    });
-};
+            newIndicatorDismissibleContent: i.z.XBOX_ONE_WAY_RECONNECT,
+            onClick: () =>
+                (0, a.Z)({
+                    platformType: l.ABu.XBOX,
+                    location: d,
+                }),
+        });
+    };

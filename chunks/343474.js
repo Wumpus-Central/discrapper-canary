@@ -1,17 +1,18 @@
-var n = r(169774),
-    i = r(581079);
-t.exports = n.isBrowser("Chrome")
-    ? function (t) {
-          for (var e = t.cloneRange(), r = [], n = t.endContainer; null != n; n = n.parentNode) {
-              var o,
-                  a = n === t.commonAncestorContainer;
-              a ? e.setStart(t.startContainer, t.startOffset) : e.setStart(e.endContainer, 0);
-              var u = Array.from(e.getClientRects());
-              if ((r.push(u), a)) return r.reverse(), (o = []).concat.apply(o, r);
-              e.setEndBefore(n);
-          }
-          i(!1);
-      }
-    : function (t) {
-          return Array.from(t.getClientRects());
+var r = n(169774),
+    i = n(581079);
+function a(e) {
+    for (var t = e.cloneRange(), n = [], r = e.endContainer; null != r; r = r.parentNode) {
+        var a,
+            o = r === e.commonAncestorContainer;
+        o ? t.setStart(e.startContainer, e.startOffset) : t.setStart(t.endContainer, 0);
+        var s = Array.from(t.getClientRects());
+        if ((n.push(s), o)) return n.reverse(), (a = []).concat.apply(a, n);
+        t.setEndBefore(r);
+    }
+    i(!1);
+}
+e.exports = r.isBrowser("Chrome")
+    ? a
+    : function (e) {
+          return Array.from(e.getClientRects());
       };

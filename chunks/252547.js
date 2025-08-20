@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,11 +9,11 @@ var r = n(951288),
     u = n(388032),
     d = n(226788),
     m = n(5463);
-function f(e) {
-    let { entries: t, viewId: n, officialGuildId: l, onClose: f } = e,
-        p = t.length > 7,
+function p(e) {
+    let { entries: t, viewId: n, officialGuildId: l, onClose: p } = e,
+        f = t.length > 7,
         [g, x] = i.useState(!1),
-        h = i.useMemo(() => t.slice(0, p && !g ? 6 : void 0), [t, p, g]);
+        j = i.useMemo(() => t.slice(0, f && !g ? 6 : void 0), [t, f, g]);
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.X6, {
@@ -32,16 +32,16 @@ function f(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)("div", {
-                              className: a()(m.friends, { [m.fadedEntries]: p && !g }),
+                              className: a()(m.friends, { [m.fadedEntries]: f && !g }),
                               children: (0, r.jsx)("div", {
                                   className: d.column,
-                                  children: h.map((e) =>
+                                  children: j.map((e) =>
                                       (0, r.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
                                               viewId: n,
-                                              onClose: f,
+                                              onClose: p,
                                               officialGuildId: l,
                                           },
                                           e.id,
@@ -49,7 +49,7 @@ function f(e) {
                                   ),
                               }),
                           }),
-                          p &&
+                          f &&
                               !g &&
                               (0, r.jsxs)(o.P3F, {
                                   className: m.expandEntriesButton,

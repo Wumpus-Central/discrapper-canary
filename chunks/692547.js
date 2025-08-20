@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => L }), n(388685), n(704826), n(35282);
 var r = n(688619),
     i = n.n(r),
     a = n(595182),
@@ -22,15 +22,15 @@ let { Themes: E } = n(15202).V,
     { Shadows: I } = m.V,
     { Spacing: T } = g.V,
     { Modules: S } = p.V,
-    { Layout: A, Space: N } = _.VV,
-    C = l()(y, (e) => i()(e)),
+    { Layout: A, Space: C } = _.VV,
+    N = l()(y, (e) => i()(e)),
     R = {
         themes: E,
         modules: S,
         colors: l()(b, (e, t) => {
             let n = t;
             return {
-                css: L(n),
+                css: x(n),
                 resolve(t) {
                     var r, i, a, o, s, l, c;
                     let u = e[t.theme],
@@ -47,7 +47,7 @@ let { Themes: E } = n(15202).V,
                     }
                     if (1 === f) return R.unsafe_rawColors[d].resolve(t);
                     {
-                        let e = C[d];
+                        let e = N[d];
                         return 0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), P(e, t.saturation);
                     }
                 },
@@ -55,9 +55,9 @@ let { Themes: E } = n(15202).V,
         }),
         unsafe_rawColors: l()(y, (e, t) => {
             let n = t,
-                r = C[n];
+                r = N[n];
             return {
-                css: L(n),
+                css: x(n),
                 resolve(e) {
                     var t;
                     return P(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
@@ -65,7 +65,7 @@ let { Themes: E } = n(15202).V,
             };
         }),
         shadows: l()(I, (e, t) => ({
-            css: L(t),
+            css: x(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
@@ -75,7 +75,7 @@ let { Themes: E } = n(15202).V,
         radii: h.w,
         spacing: l()(T, (e) => "".concat(e, "px")),
         layout: l()(A, (e) => ("number" == typeof e ? "".concat(e, "px") : e)),
-        space: l()(N, (e) => ({
+        space: l()(C, (e) => ({
             css: e.css,
             resolve(t) {
                 let { density: n } = t;
@@ -118,9 +118,9 @@ function w(e, t, n) {
 function D(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function L(e, t) {
+function x(e, t) {
     let n = null != t ? D(t) : null,
         r = D(e);
     return "var(--".concat([n, r].filter(Boolean).join("-"), ")");
 }
-let x = R;
+let L = R;

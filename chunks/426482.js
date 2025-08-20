@@ -15,8 +15,8 @@ var r,
 function m(e) {
     var t;
     let { game: n, application: r, size: a, className: d } = e,
-        [m, f] = l.useState(!1),
-        p = null != (t = null == r ? void 0 : r.name) ? t : n.name,
+        [m, p] = l.useState(!1),
+        f = null != (t = null == r ? void 0 : r.name) ? t : n.name,
         g = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
     return null == n.coverImageUrl || m
         ? (0, i.jsxs)("div", {
@@ -27,7 +27,7 @@ function m(e) {
                       variant: 1 === a ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === a ? 4 : 3,
-                      children: p,
+                      children: f,
                   }),
                   (0, i.jsx)("div", { className: u.spacer }),
                   (0, i.jsx)(o.xv, {
@@ -40,12 +40,12 @@ function m(e) {
         : (0, i.jsx)("img", {
               className: d,
               src: n.coverImageUrl,
-              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: p }),
+              alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: f }),
               onError: () => {
-                  f(!0);
+                  p(!0);
               },
               onLoad: () => {
-                  f(!1);
+                  p(!1);
               },
           });
 }

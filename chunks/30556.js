@@ -1,57 +1,57 @@
-n.d(t, { Z: () => c });
-var r = n(951288);
-n(647438);
-var o = n(481060),
-    i = n(493683),
-    l = n(475413),
-    a = n(388032);
-function c(e) {
-    var { type: t, userId: n, onClose: c } = e,
-        s = (function (e, t) {
+t.d(n, { Z: () => a });
+var r = t(951288);
+t(647438);
+var o = t(481060),
+    l = t(493683),
+    i = t(475413),
+    c = t(388032);
+function a(e) {
+    var { type: n, userId: t, onClose: a } = e,
+        s = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 r,
-                o = (function (e, t) {
+                o = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (t = l[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (t = l[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
         })(e, ["type", "userId", "onClose"]);
-    let d = t === l.j8.TEXT ? l.tG : l.ef;
+    let d = n === i.j8.TEXT ? i.tG : i.ef;
     return (0, r.jsx)(
         d,
         (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
+                    r.forEach(function (n) {
                         var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (r = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[n] = r);
                     });
             }
             return e;
@@ -59,10 +59,10 @@ function c(e) {
             {
                 action: "SEND_MESSAGE",
                 icon: o.kBi,
-                text: a.intl.string(a.t.zROXER),
-                tooltipText: a.intl.string(a.t.zROXER),
+                text: c.intl.string(c.t.zROXER),
+                tooltipText: c.intl.string(c.t.zROXER),
                 onClick: () => {
-                    i.Z.openPrivateChannel({ recipientIds: n }), null == c || c();
+                    l.Z.openPrivateChannel({ recipientIds: t }), null == a || a();
                 },
             },
             s,

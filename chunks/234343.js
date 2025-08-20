@@ -1,3 +1,3 @@
-t.exports = function (t) {
-    return t && t.ownerDocument ? t.ownerDocument : document;
+e.exports = function (e) {
+    return e && e.ownerDocument ? e.ownerDocument : document;
 };

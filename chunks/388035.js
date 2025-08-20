@@ -1,51 +1,54 @@
 n.d(t, { U: () => g }), n(388685);
 var r = n(951288),
-    s = n(704215),
-    l = n(755721),
-    a = n(481060),
-    i = n(243778),
-    o = n(970731),
+    i = n(704215),
+    a = n(755721),
+    o = n(481060),
+    s = n(243778),
+    l = n(970731),
     c = n(2818),
     u = n(921944),
     d = n(388032),
-    h = n(684642),
-    p = n(235810);
-let f = s.z.FOR_LATER_POPOUT_COACHMARK,
-    _ = () =>
+    f = n(684642),
+    _ = n(235810);
+let p = i.z.FOR_LATER_POPOUT_COACHMARK,
+    h = () =>
         (0, r.jsx)("div", {
-            className: h.imageContainer,
+            className: f.imageContainer,
             children: (0, r.jsx)("img", {
-                className: h.image,
-                src: p,
+                className: f.image,
+                src: _,
                 alt: "",
             }),
+        }),
+    m = (e) =>
+        (0, r.jsx)(l.ZP, {
+            className: f.container,
+            asset: (0, r.jsx)(h, {}),
+            header: d.intl.string(d.t.qPbFKy),
+            content: d.intl.string(d.t.URrJq6),
+            buttonCTA: d.intl.string(d.t["NX+WJC"]),
+            buttonProps: {
+                color: a.Tt.WHITE,
+                innerClassName: f.primaryButton,
+            },
+            onClick: () => e(u.L.USER_DISMISS),
+            markAsDismissed: e,
+            caretPosition: l.DF.TOP_RIGHT,
         });
 function g(e) {
-    let { location: t, children: n, targetElementRef: s } = e,
-        { enabled: p, inInbox: g } = c.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
-        [S, m] = (0, i.US)(p && t === (g ? "inbox-button" : "bookmarks-button") ? [f] : [], void 0);
-    return S !== f
+    let { location: t, children: n, targetElementRef: i } = e,
+        { enabled: a, inInbox: l } = c.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
+        u = t === (l ? "inbox-button" : "bookmarks-button"),
+        d = a && u ? [p] : [],
+        [f, _] = (0, s.US)(d, void 0);
+    return f !== p
         ? n
-        : (0, r.jsx)(a.yRy, {
-              targetElementRef: s,
-              renderPopout: () =>
-                  (0, r.jsx)(o.ZP, {
-                      className: h.container,
-                      asset: (0, r.jsx)(_, {}),
-                      header: d.intl.string(d.t.qPbFKy),
-                      content: d.intl.string(d.t.URrJq6),
-                      buttonCTA: d.intl.string(d.t["NX+WJC"]),
-                      buttonProps: {
-                          color: l.Tt.WHITE,
-                          innerClassName: h.primaryButton,
-                      },
-                      onClick: () => m(u.L.USER_DISMISS),
-                      markAsDismissed: m,
-                      caretPosition: o.DF.TOP_RIGHT,
-                  }),
+        : (0, r.jsx)(o.yRy, {
+              targetElementRef: i,
+              renderPopout: () => m(_),
               position: "bottom",
               align: "right",
-              animation: a.yRy.Animation.TRANSLATE,
+              animation: o.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n,
           });

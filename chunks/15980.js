@@ -1,14 +1,29 @@
-n.d(t, { Z: () => u }), n(388685);
-var i,
-    r,
-    s = n(442837),
+n.d(t, { Z: () => f }), n(388685);
+var r,
+    i = n(442837),
     a = n(570140),
-    l = n(911969);
-let o = !1,
+    o = n(911969);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = !1,
     c = [];
-class d extends (i = s.ZP.Store) {
+function u() {
+    (c = []), (l = !1);
+}
+class d extends (r = i.ZP.Store) {
     hasFetchedCredentials() {
-        return o;
+        return l;
     }
     get hasCredentials() {
         return c.length > 0;
@@ -17,31 +32,22 @@ class d extends (i = s.ZP.Store) {
         return c;
     }
 }
-(r = "displayName") in d
-    ? Object.defineProperty(d, r, {
-          value: "WebAuthnStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[r] = "WebAuthnStore");
-let u = new d(a.Z, {
-    LOGOUT: function () {
-        (c = []), (o = !1);
-    },
+s(d, "displayName", "WebAuthnStore");
+let f = new d(a.Z, {
+    LOGOUT: u,
     MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
-        (c = e.credentials), (o = !0);
+        (c = e.credentials), (l = !0);
     },
     AUTHENTICATOR_CREATE(e) {
         let { credential: t } = e;
-        t.type === l.Pi.WEBAUTHN && void 0 === c.find((e) => e.id === t.id) && (c = [...c, t]);
+        t.type === o.Pi.WEBAUTHN && void 0 === c.find((e) => e.id === t.id) && (c = [...c, t]);
     },
     AUTHENTICATOR_UPDATE(e) {
         let { credential: t } = e;
-        t.type === l.Pi.WEBAUTHN && (c = c.map((e) => (e.id === t.id ? t : e)));
+        t.type === o.Pi.WEBAUTHN && (c = c.map((e) => (e.id === t.id ? t : e)));
     },
     AUTHENTICATOR_DELETE(e) {
         let { credential: t } = e;
-        t.type === l.Pi.WEBAUTHN && (c = c.filter((e) => e.id !== t.id));
+        t.type === o.Pi.WEBAUTHN && (c = c.filter((e) => e.id !== t.id));
     },
 });

@@ -111,10 +111,9 @@ function N(e, t) {
                             (0, o.ZD)(
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("70274"),
                                         n.e("38697"),
                                         n.e("46746"),
-                                        n.e("69416"),
+                                        n.e("79839"),
                                     ]).then(n.bind(n, 60594));
                                     return (t) =>
                                         (0, i.jsx)(

@@ -1,5 +1,5 @@
 n.d(t, {
-    Af: () => j,
+    Af: () => k,
     An: () => W,
     E6: () => Y,
     EE: () => G,
@@ -11,13 +11,13 @@ n.d(t, {
     U9: () => z,
     XF: () => B,
     Yl: () => q,
-    ej: () => k,
+    ej: () => M,
     f: () => H,
-    m7: () => M,
+    m7: () => j,
     n8: () => K,
-    pQ: () => F,
-    v1: () => Z,
-    wO: () => V,
+    pQ: () => V,
+    v1: () => F,
+    wO: () => Z,
 });
 var r = n(951288),
     i = n(647438),
@@ -70,7 +70,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,12 +82,12 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -116,10 +116,10 @@ function P(e, t) {
 }
 let w = {
     [c.s.TOP_ARTIST]: [W],
-    [c.s.PLAYED_GAME]: [U, G, j, z, V, H, K, Z, F],
+    [c.s.PLAYED_GAME]: [U, G, k, z, Z, H, K, F, V],
     [c.s.TOP_GAME]: [Y],
     [c.s.WATCHED_MEDIA]: [q, X],
-    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, F],
+    [c.s.LAUNCHED_ACTIVITY]: [U, G, k, z, K, V],
 };
 var D = (function (e) {
     return (
@@ -136,25 +136,25 @@ var D = (function (e) {
         e
     );
 })({});
-let L = i.createContext({});
-function x() {
-    return i.useContext(L);
+let x = i.createContext({});
+function L() {
+    return i.useContext(x);
 }
-function M(e) {
+function j(e) {
     var { children: t } = e,
         n = R(e, ["children"]);
-    return (0, r.jsx)("div", C(A({ className: T.badgeContainer }, n), { children: t }));
+    return (0, r.jsx)("div", N(A({ className: T.badgeContainer }, n), { children: t }));
 }
-function k(e) {
+function M(e) {
     let { Icon: t, text: n, iconColor: i, tooltipText: a, showTooltip: o } = e,
-        { defaultTextColor: s, defaultIconColor: l, location: c } = x();
+        { defaultTextColor: s, defaultIconColor: l, location: c } = L();
     return (0, r.jsx)(f.ua7, {
         text: a,
         shouldShow: o,
         children: (e) =>
             (0, r.jsxs)(
-                M,
-                C(A({}, e), {
+                j,
+                N(A({}, e), {
                     children: [
                         (0, r.jsx)(t, {
                             size: "xxs",
@@ -172,27 +172,27 @@ function k(e) {
             ),
     });
 }
-function j(e) {
+function k(e) {
     let { entry: t } = e,
         { channel: n } = (0, E.Z)(t),
-        { location: i } = x();
+        { location: i } = L();
     return null == n || (0, h.Hi)(i, [1, 2, 3, 4])
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(M, {
               Icon: f.gj8,
               text: n.name,
           });
 }
 function U(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
+        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7, 9]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i,
         { streamPreviewUrl: u } = (0, E.Z)(t),
         { enabled: d } = _.c.useExperiment({ location: "GameTimestampBadge" }, { autoTrackExposure: !0 }),
         p = null != u ? f.hGI : (0, g.Mq)(t) && !d ? f.jje : f.iWm;
-    return (0, r.jsxs)(M, {
+    return (0, r.jsxs)(j, {
         children: [
             (0, r.jsx)(p, {
                 size: "xxs",
@@ -210,12 +210,12 @@ function U(e) {
 }
 function G(e) {
     let { entry: t } = e,
-        { defaultTextColor: n, defaultIconColor: i } = x(),
+        { defaultTextColor: n, defaultIconColor: i } = L(),
         { state: a, party: o } = (0, y.n)(t),
         s = (0, b.bT)(a, o);
     return null == s
         ? null
-        : (0, r.jsxs)(M, {
+        : (0, r.jsxs)(j, {
               children: [
                   (0, r.jsx)(f.BFJ, {
                       size: "xxs",
@@ -232,7 +232,7 @@ function G(e) {
 }
 function B(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
+        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i;
@@ -252,42 +252,42 @@ function B(e) {
         ],
     });
 }
-function V(e) {
+function Z(e) {
     let { entry: t } = e,
-        { location: n } = x(),
+        { location: n } = L(),
         i = (0, h.Hi)(n, [0, 3]) ? f.TVs.colors.STATUS_POSITIVE : void 0;
     return (0, b.Ol)(t)
-        ? (0, r.jsx)(k, {
+        ? (0, r.jsx)(M, {
               Icon: f._IE,
               text: I.intl.string(I.t.keY6mZ),
               iconColor: i,
           })
         : null;
 }
-function F(e) {
+function V(e) {
     let { entry: t } = e,
-        { location: n } = x();
+        { location: n } = L();
     if (!(0, b.V5)(t)) return null;
     let i = (0, b.kr)(t),
         a = 0 === n && !i,
         { text: o, tooltipText: s } = (0, b.zo)(t);
     return null == o
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(M, {
               Icon: f.ANZ,
               text: o,
               tooltipText: s,
               showTooltip: a,
           });
 }
-function Z(e) {
+function F(e) {
     let { entry: t } = e,
-        { location: n } = x(),
+        { location: n } = L(),
         i = 0 !== n,
         a = (0, b.dw)(t);
     if (null == a) return null;
     let o = (0, b.GE)(a);
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(M, {
         Icon: f.Oe7,
         showTooltip: !i,
         tooltipText: o,
@@ -296,10 +296,10 @@ function Z(e) {
 }
 function H(e) {
     let { entry: t } = e,
-        { location: n } = x(),
+        { location: n } = L(),
         i = (0, b.vU)(t);
     return (0, b.q_)(t)
-        ? (0, r.jsx)(k, {
+        ? (0, r.jsx)(M, {
               Icon: f.qOE,
               showTooltip: 0 === n,
               text: I.intl.formatToPlainString(I.t["Klie/P"], { days: i }),
@@ -309,13 +309,13 @@ function H(e) {
 }
 function Y(e) {
     let { entry: t } = e,
-        { location: n } = x(),
+        { location: n } = L(),
         i = 0 !== n,
         a = (0, b.yA)(t);
     if (null == a) return null;
     let o = i ? " \u2014 " : ": ",
         s = i ? I.t.C0Axoa : I.t.SDRHgo;
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(M, {
         Icon: f.rm8,
         text: (0, r.jsxs)(r.Fragment, {
             children: [I.intl.string(I.t["/50eHh"]), o, I.intl.format(s, { hours: Math.round(a / p.Z.Seconds.HOUR) })],
@@ -325,44 +325,44 @@ function Y(e) {
 function W(e) {
     var t;
     let { entry: n } = e,
-        { location: i } = x(),
+        { location: i } = L(),
         a = null == (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == a) return null;
     let o = (0, h.Hi)(i, [1, 2, 5])
         ? I.intl.formatToPlainString(I.t.HtifnJ, { count: a })
         : I.intl.formatToPlainString(I.t["jq/Bmp"], { count: a });
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(M, {
         Icon: f.rm8,
         text: o,
     });
 }
 function K(e) {
     let { entry: t } = e,
-        { location: n } = x();
+        { location: n } = L();
     if (3 === n) return null;
     let i = (0, b.ig)(t);
     return null == i || i === d.o.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(M, {
               Icon: f.YqE,
               text: I.intl.string(I.t.kAlUs7),
           });
 }
 function z(e) {
     let { entry: t } = e,
-        { location: n } = x();
+        { location: n } = L();
     if (3 === n) return null;
     let i = m.default.extractTimestamp(t.extra.application_id);
     return l()().diff(l()(i), "days") > v.G
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(M, {
               Icon: f.rIT,
               text: I.intl.string(I.t.vYuyWV),
           });
 }
 function q(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
+        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
         s = (0, b.Jg)(t) && 4 === o,
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i;
@@ -387,7 +387,7 @@ function X(e) {
         n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(M, {
               Icon: f.sVe,
               text: n,
           });
@@ -411,7 +411,7 @@ function Q(e) {
                         defaultIconColor: f.TVs.colors.TEXT_SECONDARY,
                     }
                   : { defaultTextColor: "text-secondary" }),
-        (0, r.jsx)(L.Provider, {
+        (0, r.jsx)(x.Provider, {
             value: A({ location: n }, t),
             children: (0, r.jsx)("div", {
                 className: o()(

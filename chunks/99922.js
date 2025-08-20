@@ -1,32 +1,34 @@
-var n = r(581079),
+var r = n(581079),
     i = /\.textClipping$/,
-    o = {
+    a = {
         "text/plain": !0,
         "text/html": !0,
         "text/rtf": !0,
-    };
-t.exports = function (t, e) {
-    var a = 0,
-        u = [];
-    t.forEach(function (s) {
-        !(function (t, e) {
-            if (!r.g.FileReader || (t.type && !(t.type in o))) return e("");
-            if ("" === t.type) {
-                var a = "";
-                i.test(t.name) && (a = t.name.replace(i, "")), e(a);
-                return;
-            }
-            var u = new FileReader();
-            (u.onload = function () {
-                var t = u.result;
-                "string" != typeof t && n(!1), e(t);
-            }),
-                (u.onerror = function () {
-                    e("");
-                }),
-                u.readAsText(t);
-        })(s, function (r) {
-            a++, r && u.push(r.slice(0, 5000)), a == t.length && e(u.join("\r"));
+    },
+    o = 5000;
+function s(e, t) {
+    if (!n.g.FileReader || (e.type && !(e.type in a))) return void t("");
+    if ("" === e.type) {
+        var o = "";
+        i.test(e.name) && (o = e.name.replace(i, "")), t(o);
+        return;
+    }
+    var s = new FileReader();
+    (s.onload = function () {
+        var e = s.result;
+        "string" != typeof e && r(!1), t(e);
+    }),
+        (s.onerror = function () {
+            t("");
+        }),
+        s.readAsText(e);
+}
+e.exports = function (e, t) {
+    var n = 0,
+        r = [];
+    e.forEach(function (i) {
+        s(i, function (i) {
+            n++, i && r.push(i.slice(0, o)), n == e.length && t(r.join("\r"));
         });
     });
 };

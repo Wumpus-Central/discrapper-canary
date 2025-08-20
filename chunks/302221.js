@@ -1,6 +1,6 @@
 n.d(t, {
-    AZ: () => N,
-    BM: () => x,
+    AZ: () => C,
+    BM: () => L,
     Cj: () => c,
     WY: () => A,
     YD: () => w,
@@ -12,7 +12,7 @@ n.d(t, {
     rj: () => f,
     vq: () => m,
     wh: () => P,
-    xj: () => L,
+    xj: () => x,
 }),
     n(415506),
     n(388685),
@@ -265,7 +265,7 @@ function A(e) {
     }
     return n;
 }
-function N(e, t, n) {
+function C(e, t, n) {
     let r,
         i,
         a = Math.max((e /= 255), (t /= 255), (n /= 255)),
@@ -293,7 +293,7 @@ function N(e, t, n) {
         alpha: 1,
     };
 }
-function C(e, t, n) {
+function N(e, t, n) {
     let r, i, o;
     if (((e /= 360), 0 === t)) r = i = o = n;
     else {
@@ -314,12 +314,12 @@ function C(e, t, n) {
 }
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = N(e.red, e.green, e.blue);
+        r = C(e.red, e.green, e.blue);
     return (
         n
             ? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t)
             : (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t),
-        C(r.hue, r.saturation, r.lightness)
+        N(r.hue, r.saturation, r.lightness)
     );
 }
 function P(e) {
@@ -362,20 +362,20 @@ function D(e, t) {
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function L(e) {
+function x(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;
-    let i = N(n.get("rgb.r"), n.get("rgb.g"), n.get("rgb.b"));
+    let i = C(n.get("rgb.r"), n.get("rgb.g"), n.get("rgb.b"));
     return null == i
         ? null == n
             ? void 0
             : n.hex()
-        : null == (t = C(i.hue, i.saturation * r, i.lightness))
+        : null == (t = N(i.hue, i.saturation * r, i.lightness))
           ? void 0
           : t.toHexString();
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),
         i = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),

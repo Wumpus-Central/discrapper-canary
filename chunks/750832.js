@@ -1,11 +1,11 @@
 n.d(t, {
-    SI: () => c,
-    nS: () => o,
+    SI: () => u,
+    nS: () => l,
 });
-var i = n(81643),
-    r = n(818083),
-    s = n(128064);
-let a = (0, r.B)({
+var r = n(81643),
+    i = n(818083),
+    a = n(128064);
+let o = (0, i.B)({
         kind: "user",
         id: "2025-02_dm_defaults_new_users",
         label: "Default DM Settings - New Users",
@@ -35,7 +35,7 @@ let a = (0, r.B)({
             },
         ],
     }),
-    l = (0, r.B)({
+    s = (0, i.B)({
         kind: "user",
         id: "2025-02_dm_defaults",
         label: "Default DM Settings",
@@ -65,15 +65,14 @@ let a = (0, r.B)({
             },
         ],
     }),
-    o = (e) => {
-        let t = l.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            n = a.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    l = (e) => {
+        let t = s.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            n = o.useExperiment({ location: e }, { autoTrackExposure: !1 });
         return t.dmOffByDefault || n.dmOffByDefault;
     },
-    c = () =>
-        (0, i.sf)() &&
-        ((e) => {
-            let t = l.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
-                n = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
-            return t.messageRequestOnByDefault || n.messageRequestOnByDefault || (0, s.c_)(e);
-        })("shouldAgeVerifyForDMDefaultOff");
+    c = (e) => {
+        let t = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+            n = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+        return t.messageRequestOnByDefault || n.messageRequestOnByDefault || (0, a.c_)(e);
+    },
+    u = () => (0, r.sf)() && c("shouldAgeVerifyForDMDefaultOff");

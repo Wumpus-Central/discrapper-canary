@@ -27,8 +27,8 @@ function C(e) {
             initialEditStateId: s,
             allSubscriptionListings: C,
             priceTiers: N,
-            onDeleteEditState: I,
-            groupListingId: E,
+            onDeleteEditState: E,
+            groupListingId: I,
             onBeforeDispatchNewListing: S,
             onAfterDispatchNewListing: T,
         } = e,
@@ -119,7 +119,7 @@ function C(e) {
                                   (0, r.jsx)(d.Avr, {
                                       variant: "secondary",
                                       onClick: () => {
-                                          x.GM(P), Z ? null == I || I() : A(!1);
+                                          x.GM(P), Z ? null == E || E() : A(!1);
                                       },
                                       text: O.intl.string(O.t["ETE/oK"]),
                                   }),
@@ -129,7 +129,7 @@ function C(e) {
                                           J({
                                               guildId: l,
                                               editStateId: P,
-                                              groupListingId: E,
+                                              groupListingId: I,
                                               onBeforeDispatchNewListing: S,
                                               onAfterDispatchNewListing: (e) => {
                                                   w(e.id), null == T || T(e);
@@ -156,22 +156,22 @@ function C(e) {
                 (0, r.jsx)(b.I, {
                     editStateId: P,
                     guildId: l,
-                    groupListingId: E,
+                    groupListingId: I,
                     children: (0, r.jsx)(v.Z, {
                         allSubscriptionListings: C,
                         priceTiers: N,
                         loading: et,
                         error: null != q ? q : $,
                         handlePublishTier: () => {
-                            o()(null != E, "group listing doesnt exist"),
+                            o()(null != I, "group listing doesnt exist"),
                                 o()(null != R, "subscription listing doesnt exist"),
                                 ee({
                                     guildId: l,
-                                    groupListingId: E,
+                                    groupListingId: I,
                                     listingId: R.id,
                                 });
                         },
-                        onDeleteEditState: I,
+                        onDeleteEditState: E,
                     }),
                 }),
         ],

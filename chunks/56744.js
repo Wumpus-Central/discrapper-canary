@@ -1,62 +1,62 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
+    a = n(442837),
     o = n(627050),
-    a = n(905405),
-    s = n(869765),
+    s = n(905405),
+    l = n(869765),
     c = n(699516),
     u = n(937889),
     d = n(739566),
-    p = n(267128),
-    m = n(981631);
-let f = i.memo(function (e) {
-    let { baseMessage: t, channel: n, referencedMessage: m, compact: f = !1 } = e,
-        g = m.state === s.Y.LOADED ? m.message : void 0,
-        _ = (0, a.p)(),
-        h = o.d.useExperiment({ location: "repliedMessage" }).enabled,
-        b = i.useMemo(
+    f = n(267128),
+    _ = n(981631);
+let p = i.memo(function (e) {
+    let { baseMessage: t, channel: n, referencedMessage: _, compact: p = !1 } = e,
+        h = _.state === l.Y.LOADED ? _.message : void 0,
+        m = (0, s.p)(),
+        g = o.d.useExperiment({ location: "repliedMessage" }).enabled,
+        E = i.useMemo(
             () =>
-                (null == g ? void 0 : g.content) != null && "" !== g.content
-                    ? (0, u.ZP)(g, {
+                (null == h ? void 0 : h.content) != null && "" !== h.content
+                    ? (0, u.ZP)(h, {
                           formatInline: !0,
-                          allowGameMentions: h,
-                          shouldFilterKeywords: _,
+                          allowGameMentions: g,
+                          shouldFilterKeywords: m,
                       }).content
                     : null,
-            [g, _, h],
+            [h, m, g],
         ),
-        { isReplyAuthorBlocked: E, isReplyAuthorIgnored: C } = (0, l.cj)(
+        { isReplyAuthorBlocked: b, isReplyAuthorIgnored: y } = (0, a.cj)(
             [c.Z],
             () => ({
-                isReplyAuthorBlocked: null != g && c.Z.isBlockedForMessage(g),
-                isReplyAuthorIgnored: null != g && c.Z.isIgnoredForMessage(g),
+                isReplyAuthorBlocked: null != h && c.Z.isBlockedForMessage(h),
+                isReplyAuthorIgnored: null != h && c.Z.isIgnoredForMessage(h),
             }),
-            [g],
+            [h],
         ),
-        v = (0, d.Uj)(g),
-        O = (0, d.Uj)(t);
-    return (0, r.jsx)(p.Z, {
-        repliedAuthor: v,
-        baseAuthor: O,
+        O = (0, d.Uj)(h),
+        v = (0, d.Uj)(t);
+    return (0, r.jsx)(f.Z, {
+        repliedAuthor: O,
+        baseAuthor: v,
         baseMessage: t,
         channel: n,
-        referencedMessage: m,
-        content: b,
-        compact: f,
-        isReplyAuthorBlocked: E,
-        isReplyAuthorIgnored: C,
+        referencedMessage: _,
+        content: E,
+        compact: p,
+        isReplyAuthorBlocked: b,
+        isReplyAuthorIgnored: y,
         isReplySpineClickable: !1,
         showReplySpine: !0,
     });
 });
-function g(e, t, n, i, l) {
-    return e.type !== m.uaV.REPLY || null == n
+function h(e, t, n, i, a) {
+    return e.type !== _.uaV.REPLY || null == n
         ? null
-        : (0, r.jsx)(f, {
+        : (0, r.jsx)(p, {
               baseMessage: e,
               channel: t,
               referencedMessage: i,
-              compact: l,
+              compact: a,
           });
 }

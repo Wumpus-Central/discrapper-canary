@@ -1,70 +1,70 @@
-n.d(t, { Z: () => _ });
-var r = n(951288);
-n(647438);
-var o = n(442837),
-    i = n(481060),
-    l = n(666520),
-    a = n(592125),
-    c = n(944486),
-    s = n(785717),
-    d = n(621853),
-    u = n(172351),
-    f = n(280885),
-    p = n(900927),
-    m = n(678738),
-    b = n(179828),
-    g = n(228168),
-    h = n(388032),
-    x = n(54966);
-function _(e) {
-    let { user: t, currentUser: n, displayProfile: _, guildId: j, subsection: v, onClose: y } = e,
+t.d(n, { Z: () => j });
+var r = t(951288);
+t(647438);
+var o = t(442837),
+    l = t(481060),
+    i = t(666520),
+    c = t(592125),
+    a = t(944486),
+    s = t(785717),
+    d = t(621853),
+    u = t(172351),
+    f = t(280885),
+    m = t(900927),
+    p = t(678738),
+    b = t(179828),
+    g = t(228168),
+    x = t(388032),
+    h = t(54966);
+function j(e) {
+    let { user: n, currentUser: t, displayProfile: j, guildId: v, subsection: _, onClose: y } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
         O = (0, o.e7)([d.Z], () => {
             var e;
-            return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
+            return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        Z = (0, o.e7)([a.Z, c.Z], () => a.Z.getChannel(c.Z.getChannelId()));
-    return (0, r.jsxs)(i.zJl, {
+        P = (0, o.e7)([c.Z, a.Z], () => c.Z.getChannel(a.Z.getChannelId()));
+    return (0, r.jsxs)(l.zJl, {
         fade: !0,
-        className: x.scroller,
+        className: h.scroller,
         children: [
-            (null == _ ? void 0 : _.bio) != null &&
-                (null == _ ? void 0 : _.bio) !== "" &&
+            (null == j ? void 0 : j.bio) != null &&
+                (null == j ? void 0 : j.bio) !== "" &&
                 (0, r.jsx)(f.Z, {
-                    userBio: _.bio,
+                    userBio: j.bio,
                     setLineClamp: !1,
                 }),
             (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
-                null != Z &&
+                null != P &&
                 (0, r.jsx)(u.Z, {
                     applicationId: O.id,
                     commandIds: O.popularApplicationCommandIds,
-                    channel: Z,
-                    guildId: j,
+                    channel: P,
+                    guildId: v,
                     onClick: y,
                 }),
-            (null == _ ? void 0 : _.guildId) != null &&
+            (null == j ? void 0 : j.guildId) != null &&
                 (0, r.jsx)(b.Z, {
-                    user: t,
-                    currentUser: n,
-                    guildId: _.guildId,
-                    scrollIntoView: v === g.Tb.ROLES,
+                    user: n,
+                    currentUser: t,
+                    guildId: j.guildId,
+                    scrollIntoView: _ === g.Tb.ROLES,
                 }),
-            (0, r.jsx)(m.Z, {
-                heading: h.intl.string(h.t["A//N4u"]),
-                children: (0, r.jsx)(p.Z, {
-                    userId: t.id,
-                    guildId: j,
+            (0, r.jsx)(p.Z, {
+                heading: x.intl.string(x.t["A//N4u"]),
+                children: (0, r.jsx)(m.Z, {
+                    userId: n.id,
+                    guildId: v,
                     tooltipDelay: g.vB,
                 }),
             }),
-            (0, r.jsx)(m.Z, {
-                heading: h.intl.string(h.t["mQKv+v"]),
-                scrollIntoView: v === g.Tb.NOTE,
-                children: (0, r.jsx)(l.Z, {
-                    userId: t.id,
-                    className: x.note,
-                    autoFocus: v === g.Tb.NOTE,
+            (0, r.jsx)(p.Z, {
+                heading: x.intl.string(x.t["mQKv+v"]),
+                scrollIntoView: _ === g.Tb.NOTE,
+                children: (0, r.jsx)(i.Z, {
+                    userId: n.id,
+                    className: h.note,
+                    autoFocus: _ === g.Tb.NOTE,
                     onUpdate: () => I({ action: "SET_NOTE" }),
                 }),
             }),

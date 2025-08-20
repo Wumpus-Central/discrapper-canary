@@ -52,8 +52,8 @@ function _(e) {
     (O = T.x), (I = T.y);
     var S = p.hasOwnProperty("x"),
         A = p.hasOwnProperty("y"),
-        N = r.t$,
-        C = r.we,
+        C = r.t$,
+        N = r.we,
         R = window;
     if (g) {
         var P = (0, i.Z)(l),
@@ -63,16 +63,16 @@ function _(e) {
             ((P = (0, o.Z)(l)),
             "static" !== (0, s.Z)(P).position && "absolute" === h && ((w = "scrollHeight"), (D = "scrollWidth"))),
             (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) &&
-                ((C = r.I),
+                ((N = r.I),
                 (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height),
                 (I *= m ? 1 : -1)),
             (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) &&
-                ((N = r.F2),
+                ((C = r.F2),
                 (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width),
                 (O *= m ? 1 : -1));
     }
-    var L = Object.assign({ position: h }, g && d),
-        x =
+    var x = Object.assign({ position: h }, g && d),
+        L =
             !0 === E
                 ? f(
                       {
@@ -85,19 +85,19 @@ function _(e) {
                       x: O,
                       y: I,
                   };
-    return ((O = x.x), (I = x.y), m)
+    return ((O = L.x), (I = L.y), m)
         ? Object.assign(
               {},
-              L,
-              (((n = {})[C] = A ? "0" : ""),
-              (n[N] = S ? "0" : ""),
+              x,
+              (((n = {})[N] = A ? "0" : ""),
+              (n[C] = S ? "0" : ""),
               (n.transform =
                   1 >= (R.devicePixelRatio || 1)
                       ? "translate(" + O + "px, " + I + "px)"
                       : "translate3d(" + O + "px, " + I + "px, 0)"),
               n),
           )
-        : Object.assign({}, L, (((t = {})[C] = A ? I + "px" : ""), (t[N] = S ? O + "px" : ""), (t.transform = ""), t));
+        : Object.assign({}, x, (((t = {})[N] = A ? I + "px" : ""), (t[C] = S ? O + "px" : ""), (t.transform = ""), t));
 }
 let p = {
     name: "computeStyles",

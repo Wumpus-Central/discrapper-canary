@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(30465),
     S = n(330122),
     A = n(140963),
-    N = n(4484),
-    C = n(925994),
+    C = n(4484),
+    N = n(925994),
     R = n(981631),
     P = n(388032),
     w = n(564355);
@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,22 +69,22 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 new E.Z("ChannelEditor.tsx");
-let k = function () {
+let M = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    j = 1000;
+    k = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,13 +106,13 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: "plain" })),
+            (e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: "plain" })),
                 null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
@@ -246,22 +246,22 @@ class U extends i.Component {
                 useNewSlashCommands: O,
                 canOnlyUseTextCommands: T,
                 className: S,
-                id: C,
+                id: N,
                 required: P,
                 maxCharacterCount: D,
-                allowNewLines: x,
-                "aria-describedby": k,
-                "aria-labelledby": j,
+                allowNewLines: L,
+                "aria-describedby": M,
+                "aria-labelledby": k,
                 accessibilityLabel: U,
             } = this.props,
             { submitting: G, popup: B } = this.state,
-            V = {
+            Z = {
                 channel: m,
                 className: o()(S, w.textArea, {
                     [w.textAreaSlate]: E,
                     [w.textAreaDisabled]: u || G,
                 }),
-                id: C,
+                id: N,
                 placeholder: this.getPlaceholder(),
                 required: P,
                 accessibilityLabel: U,
@@ -276,7 +276,7 @@ class U extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: x,
+                allowNewLines: L,
                 onChange: d,
                 onResize: p,
                 onKeyDown: _,
@@ -296,21 +296,21 @@ class U extends i.Component {
                 "aria-expanded": null !== B.id || void 0,
                 "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
                 "aria-invalid": l.length > D,
-                "aria-describedby": k,
-                "aria-labelledby": j,
+                "aria-describedby": M,
+                "aria-labelledby": k,
                 "aria-autocomplete": "list",
             },
-            F = E
+            V = E
                 ? (0, r.jsx)(
-                      N.Z,
-                      M(L({ ref: this.ref }, V), {
+                      C.Z,
+                      j(x({ ref: this.ref }, Z), {
                           type: g,
                           value: u ? (0, I.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: T,
                       }),
                   )
-                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, V), { value: u ? "" : l }));
+                : (0, r.jsx)(A.Z, j(x({ ref: this.ref }, Z), { value: u ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.d9, {
@@ -321,7 +321,7 @@ class U extends i.Component {
                     event: R.CkL.CLEAR_TEXT,
                     handler: this.handleClearText,
                 }),
-                F,
+                V,
             ],
         });
     }
@@ -452,7 +452,7 @@ class U extends i.Component {
                     O = null != s ? s : c,
                     { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
                 return (
-                    k(
+                    M(
                         "onPaste",
                         [...e.clipboardData.items].map((e) => {
                             if ("file" !== e.kind)

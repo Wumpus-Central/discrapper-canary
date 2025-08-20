@@ -4,7 +4,7 @@ n.d(t, {
     JC: () => A,
     Om: () => S,
     Sf: () => h,
-    U4: () => N,
+    U4: () => C,
     Vg: () => g,
     Xc: () => T,
     ZP: () => f,
@@ -15,7 +15,7 @@ n.d(t, {
     o_: () => O,
     qo: () => p,
     sn: () => y,
-    u_: () => C,
+    u_: () => N,
     z: () => I,
 }),
     n(997841),
@@ -140,11 +140,11 @@ class f extends r.Z {
             case s.HeQ.GOPAY_WALLET:
                 return new A(c({}, r));
             case s.HeQ.BANCONTACT:
-                return new N(c({}, r));
+                return new C(c({}, r));
             case s.HeQ.IDEAL:
                 return new b(d(c({}, r), { bank: e.bank }));
             case s.HeQ.CASH_APP:
-                return new C(d(c({}, r), { username: e.username }));
+                return new N(d(c({}, r), { username: e.username }));
             default:
                 (0, o.vE)(e);
         }
@@ -178,13 +178,13 @@ class f extends r.Z {
             case s.HeQ.GOPAY_WALLET:
                 return new A(e);
             case s.HeQ.BANCONTACT:
-                return new N(e);
+                return new C(e);
             case s.HeQ.EPS:
                 return new E(e);
             case s.HeQ.IDEAL:
                 return new b(e);
             case s.HeQ.CASH_APP:
-                return new C(e);
+                return new N(e);
             default:
                 (0, o.vE)(t);
         }
@@ -372,7 +372,7 @@ class A extends f {
             );
     }
 }
-class N extends f {
+class C extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.BANCONTACT))
             throw Error(
@@ -382,7 +382,7 @@ class N extends f {
             );
     }
 }
-class C extends f {
+class N extends f {
     constructor(e) {
         if ((super(e), l(this, "username", void 0), e.type !== s.HeQ.CASH_APP))
             throw Error("Cannot instantiate Cashapp with type: ".concat(e.type, ", must be ").concat(s.HeQ.CASH_APP));

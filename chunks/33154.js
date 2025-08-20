@@ -1,88 +1,89 @@
 n.d(t, {
-    Z: () => b,
-    s: () => g,
+    Z: () => m,
+    s: () => h,
 }),
     n(388685);
-var i,
-    l = n(951288),
-    r = n(647438),
-    o = n(442837),
-    a = n(755721),
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
-    c = n(749210),
-    u = n(313201),
-    d = n(823379),
-    h = n(41776),
-    p = n(981631),
-    m = n(388032),
-    f = n(576385),
-    g = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
-let b = (e) => {
-    let { type: t, guild: i, closePopout: g, ctaRef: b } = e,
-        j = (0, u.Dt)(),
-        [v, O] = r.useState(!1),
-        y = (0, o.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    r.useEffect(() => {
-        v && !y && g();
-    }, [v, y, g]);
-    let T = null,
-        x = m.intl.string(m.t.d7b1p6);
+    l = n(749210),
+    c = n(313201),
+    u = n(823379),
+    d = n(41776),
+    f = n(981631),
+    _ = n(388032),
+    p = n(576385),
+    h = (function (e) {
+        return (e[(e.CHAT = 0)] = "CHAT"), (e[(e.REACTIONS = 1)] = "REACTIONS"), e;
+    })({});
+let m = (e) => {
+    let { type: t, guild: h, closePopout: m, ctaRef: g } = e,
+        E = (0, c.Dt)(),
+        [b, y] = i.useState(!1),
+        O = (0, a.e7)([d.Z], () => d.Z.isLurking(h.id), [h.id]);
+    i.useEffect(() => {
+        b && !O && m();
+    }, [b, O, m]);
+    let v = null,
+        I = _.intl.string(_.t.d7b1p6);
     switch (t) {
         case 0:
-            T = m.intl.string(m.t.Xiwf1d);
+            v = _.intl.string(_.t.Xiwf1d);
             break;
         case 1:
-            T = m.intl.string(m.t.GXvlU1);
+            v = _.intl.string(_.t.GXvlU1);
             break;
         default:
-            return (0, d.vE)(t);
+            return (0, u.vE)(t);
     }
-    if (null == T) return null;
-    let S = async () => {
-        O(!0);
+    if (null == v) return null;
+    let T = async () => {
+        y(!0);
         try {
-            await c.Z.joinGuild(i.id, { source: p.vtS.CHAT_INPUT_BLOCKER }), g();
+            await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m();
         } catch (e) {
-            O(!1);
+            y(!1);
         }
     };
-    return (0, l.jsxs)(s.VqE, {
-        className: f.container,
-        "aria-labelledby": j,
+    return (0, r.jsxs)(s.VqE, {
+        className: p.container,
+        "aria-labelledby": E,
         children: [
-            (0, l.jsx)("img", {
+            (0, r.jsx)("img", {
                 alt: "",
-                className: f.image,
+                className: p.image,
                 src: n(64395),
             }),
-            (0, l.jsxs)("div", {
-                className: f.content,
+            (0, r.jsxs)("div", {
+                className: p.content,
                 children: [
-                    (0, l.jsx)(s.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
-                        id: j,
-                        children: T,
+                        id: E,
+                        children: v,
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, r.jsx)(s.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: x,
+                        children: I,
                     }),
-                    (0, l.jsxs)("div", {
-                        className: f.buttonContainer,
+                    (0, r.jsxs)("div", {
+                        className: p.buttonContainer,
                         children: [
-                            (0, l.jsx)(s.zxk, {
+                            (0, r.jsx)(s.zxk, {
                                 variant: "primary",
-                                text: m.intl.string(m.t["9VLmlZ"]),
-                                buttonRef: b,
-                                onClick: S,
-                                loading: v,
+                                text: _.intl.string(_.t["9VLmlZ"]),
+                                buttonRef: g,
+                                onClick: T,
+                                loading: b,
                             }),
-                            (0, l.jsx)(a.zx, {
-                                onClick: g,
-                                look: a.zx.Looks.BLANK,
-                                className: f.cancel,
-                                children: m.intl.string(m.t["2m+Sqq"]),
+                            (0, r.jsx)(o.zx, {
+                                onClick: m,
+                                look: o.zx.Looks.BLANK,
+                                className: p.cancel,
+                                children: _.intl.string(_.t["2m+Sqq"]),
                             }),
                         ],
                     }),

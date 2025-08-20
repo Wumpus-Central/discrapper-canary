@@ -1,11 +1,11 @@
 n.d(t, {
     V_: () => o,
-    cR: () => l,
-    zl: () => a,
+    cR: () => a,
+    zl: () => s,
 });
 var r = n(442837),
     i = n(479766);
-function l() {
+function a() {
     return (0, r.e7)([i.Z], () => i.Z.balance);
 }
 function o(e) {
@@ -14,6 +14,6 @@ function o(e) {
         return null != e && (null != (t = i.Z.balance) ? t : 0) >= e;
     });
 }
-function a() {
+function s() {
     return i.Z.getCurrentBalance();
 }

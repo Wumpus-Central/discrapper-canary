@@ -1,43 +1,44 @@
 n.d(t, {
-    o: () => p,
-    w: () => m,
+    o: () => f,
+    w: () => d,
 });
-var i,
-    r = n(951288);
+var r = n(951288);
 n(647438);
-var s = n(793030),
+var i = n(793030),
     a = n(74538),
-    l = n(594135),
-    o = n(981631),
-    c = n(388032),
-    d = n(623361),
+    o = n(594135),
+    s = n(981631),
+    l = n(388032),
+    c = n(623361),
     u = n(947866),
-    m = (((i = {}).NONE = "none"), (i.CONFIRMING = "confirming"), (i.APPLIED = "applied"), i);
-let p = (e) => {
+    d = (function (e) {
+        return (e.NONE = "none"), (e.CONFIRMING = "confirming"), (e.APPLIED = "applied"), e;
+    })({});
+let f = (e) => {
         let { userDiscountOffer: t, offerState: n = "none" } = e,
-            { discountedPrice: i, premiumSubscription: a } = (0, l.a)();
+            { discountedPrice: a, premiumSubscription: d } = (0, o.a)();
         return (0, r.jsxs)("div", {
-            className: d.discountOfferContainer,
+            className: c.discountOfferContainer,
             children: [
                 (0, r.jsx)("img", {
                     alt: "",
                     src: u,
-                    className: d.nitroIcon,
+                    className: c.nitroIcon,
                 }),
                 (0, r.jsxs)("div", {
-                    className: d.discountOfferContent,
+                    className: c.discountOfferContent,
                     children: [
-                        (0, r.jsx)(s.xv, {
+                        (0, r.jsx)(i.xv, {
                             variant: "text-md/semibold",
                             children:
-                                a.status === o.O0b.CANCELED
-                                    ? c.intl.format(c.t["DC+nPD"], {
+                                d.status === s.O0b.CANCELED
+                                    ? l.intl.format(l.t["DC+nPD"], {
                                           numMonths: t.discount.user_usage_limit,
-                                          discountedPrice: i,
+                                          discountedPrice: a,
                                       })
-                                    : c.intl.format(c.t.tQvNlp, { numMonths: t.discount.user_usage_limit }),
+                                    : l.intl.format(l.t.tQvNlp, { numMonths: t.discount.user_usage_limit }),
                         }),
-                        (0, r.jsx)(g, {
+                        (0, r.jsx)(_, {
                             userDiscountOffer: t,
                             offerState: n,
                         }),
@@ -46,55 +47,55 @@ let p = (e) => {
             ],
         });
     },
-    g = (e) => {
+    _ = (e) => {
         let { userDiscountOffer: t, offerState: n } = e,
-            { discountedPrice: i, fullPrice: d, premiumSubscription: u } = (0, l.a)();
+            { discountedPrice: c, fullPrice: u, premiumSubscription: d } = (0, o.a)();
         switch (n) {
             case "applied":
-                if (u.status === o.O0b.CANCELED)
-                    return (0, r.jsx)(s.xv, {
+                if (d.status === s.O0b.CANCELED)
+                    return (0, r.jsx)(i.xv, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: c.intl.formatToPlainString(c.t.h2g1IS, {
+                        children: l.intl.formatToPlainString(l.t.h2g1IS, {
                             billingPeriod: (0, a.JP)(t.discount.user_usage_limit_interval),
                             numMonths: t.discount.user_usage_limit,
-                            fullPrice: d,
+                            fullPrice: u,
                         }),
                     });
-                return (0, r.jsx)(s.xv, {
+                return (0, r.jsx)(i.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t.gPzMHR, {
+                    children: l.intl.formatToPlainString(l.t.gPzMHR, {
                         numMonths: t.discount.user_usage_limit,
-                        discountedPrice: i,
-                        regularPrice: d,
+                        discountedPrice: c,
+                        regularPrice: u,
                     }),
                 });
             case "confirming":
-                if (u.status === o.O0b.CANCELED)
-                    return (0, r.jsx)(s.xv, {
+                if (d.status === s.O0b.CANCELED)
+                    return (0, r.jsx)(i.xv, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: c.intl.formatToPlainString(c.t.iDFk3t, {
+                        children: l.intl.formatToPlainString(l.t.iDFk3t, {
                             billingPeriod: (0, a.JP)(t.discount.user_usage_limit_interval),
                             numMonths: t.discount.user_usage_limit,
-                            fullPrice: d,
+                            fullPrice: u,
                         }),
                     });
-                return (0, r.jsx)(s.xv, {
+                return (0, r.jsx)(i.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t.Eq1RHB, {
+                    children: l.intl.formatToPlainString(l.t.Eq1RHB, {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit,
-                        price: d,
+                        price: u,
                     }),
                 });
             default:
-                return (0, r.jsx)(s.xv, {
+                return (0, r.jsx)(i.xv, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t["2gem09"], {
+                    children: l.intl.formatToPlainString(l.t["2gem09"], {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit,
                     }),

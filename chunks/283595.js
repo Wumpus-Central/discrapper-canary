@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(997841), n(358797);
+n.d(t, { Z: () => F }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -74,10 +74,10 @@ let y = !1,
     T = {},
     S = {},
     A = !1;
-function N() {
+function C() {
     s.K.set(E, g(h({}, b()), { activeLaunchOptionIds: S }));
 }
-function C() {
+function N() {
     s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: T }));
 }
 function R(e) {
@@ -97,28 +97,28 @@ function D(e) {
     let { libraryApplications: t } = e;
     R(t);
 }
-function L(e) {
+function x(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         a = B(t, n);
     null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
 }
-function x(e) {
+function L(e) {
     let { libraryApplication: t } = e,
         n = c.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
     (O[r] = n), I.delete(r);
 }
-function M(e) {
+function j(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
-    (S[(0, d.Tu)(t, n)] = r), N();
+    (S[(0, d.Tu)(t, n)] = r), C();
 }
-function k(e) {
+function M(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
-    (T[t] = n), C();
+    (T[t] = n), N();
 }
-function j(e) {
+function k(e) {
     let { libraryApplications: t } = e;
     for (let e of t) v[(0, d.Tu)(e.id, e.branchId)] = e;
 }
@@ -126,7 +126,7 @@ function U() {
     v = {};
 }
 function G(e) {
-    let t = V();
+    let t = Z();
     return (
         Object.keys(t).forEach((n) => {
             e(t[n]) || delete t[n];
@@ -139,25 +139,25 @@ function B(e, t) {
     let r = (0, d.Tu)(e, t);
     return null != (n = O[r]) ? n : v[r];
 }
-function V() {
+function Z() {
     return h({}, v, O);
 }
-class F extends (r = o.ZP.Store) {
+class V extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
         null != e &&
-            (null == e.activeLaunchOptionIds ? N() : (S = e.activeLaunchOptionIds),
-            null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
+            (null == e.activeLaunchOptionIds ? C() : (S = e.activeLaunchOptionIds),
+            null == e.activeLibraryApplicationBranchIds ? N() : (T = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return G((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return V();
+        return Z();
     }
     hasLibraryApplication() {
-        return Object.keys(V()).length > 0;
+        return Object.keys(Z()).length > 0;
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -178,7 +178,7 @@ class F extends (r = o.ZP.Store) {
                 a = null != (r = O[i]) ? r : v[i];
             if (null != a && (0, d.Je)(a) && (t || !a.isHidden())) return a;
         }
-        let i = V();
+        let i = Z();
         for (let n in i)
             if (i[n].id === e) {
                 let e = i[n];
@@ -195,7 +195,7 @@ class F extends (r = o.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return a()(V())
+        return a()(Z())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -210,16 +210,16 @@ class F extends (r = o.ZP.Store) {
         });
     }
 }
-p(F, "displayName", "LibraryApplicationStore");
-let Z = new F(l.Z, {
+p(V, "displayName", "LibraryApplicationStore");
+let F = new V(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
-    LIBRARY_APPLICATION_UPDATE: x,
-    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
-    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_START: x,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
+    LIBRARY_APPLICATION_UPDATE: L,
+    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: j,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: M,
+    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: k,
     DEVELOPER_TEST_MODE_RESET: U,
 });

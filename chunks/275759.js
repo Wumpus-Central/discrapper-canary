@@ -126,6 +126,27 @@ function g(e) {
                         return null;
                 }
                 break;
+            case f.ABu.BLUESKY:
+                switch (n) {
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, {
+                            platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }),
+                        });
+                        break;
+                    case d.PC.BLUESKY_FOLLOWERS_COUNT:
+                        o = _.intl.format(o, {
+                            platformQuantityHook: () => _.intl.formatToPlainString(_.t.xIdKU1, { count: s }),
+                        });
+                        break;
+                    case d.PC.BLUESKY_STATUSES_COUNT:
+                        o = _.intl.format(o, {
+                            platformQuantityHook: () => _.intl.formatToPlainString(_.t["dy3+NT"], { count: s }),
+                        });
+                        break;
+                    default:
+                        return null;
+                }
+                break;
             case f.ABu.TWITTER:
                 switch (n) {
                     case d.PC.CREATED_AT:

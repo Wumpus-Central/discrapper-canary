@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => C,
+    Z: () => N,
     a: () => f,
 }),
     n(388685),
@@ -230,7 +230,7 @@ function A(e) {
     });
     _.set(i.id, d(c({}, a), { profile: o }));
 }
-class N extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null != (n = null == (t = _.get(e)) ? void 0 : t.profile) ? n : null;
@@ -260,8 +260,8 @@ class N extends (r = i.ZP.Store) {
               : null;
     }
 }
-l(N, "displayName", "GuildProfileStore");
-let C = new N(a.Z, {
+l(C, "displayName", "GuildProfileStore");
+let N = new C(a.Z, {
     GUILD_PROFILE_FETCH: h,
     GUILD_PROFILE_FETCH_SUCCESS: m,
     GUILD_PROFILE_FETCH_FAILURE: g,

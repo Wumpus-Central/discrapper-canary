@@ -2,41 +2,41 @@ n.d(t, { Z: () => w }), n(388685), n(415506), n(49124);
 var r = n(951288),
     i = n(647438),
     l = n(533126),
-    a = n(261470),
+    s = n(261470),
     o = n(399606),
-    s = n(544891),
+    a = n(544891),
     c = n(755721),
     u = n(481060),
     d = n(893776),
     h = n(99690),
     p = n(937154),
     m = n(448986),
-    f = n(388905),
-    g = n(198993),
+    g = n(388905),
+    f = n(198993),
     _ = n(710845),
     x = n(314897),
-    b = n(585483),
+    E = n(585483),
     v = n(358085),
-    E = n(172517),
-    j = n(51144),
+    j = n(172517),
+    b = n(51144),
     I = n(998502),
-    y = n(981631),
-    O = n(231338),
-    N = n(388032),
+    O = n(981631),
+    N = n(231338),
+    y = n(388032),
     S = n(819286),
     C = n(197571);
-let T = n(515695),
+let Z = n(515695),
     A = new _.Z("LoginQRSocket");
-function Z(e) {
+function T(e) {
     let { text: t = "" } = e,
         [n, l] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e = new Image();
-            (e.src = T), (e.onload = () => l(!0)), (e.onerror = () => l(!0));
-        }, [T]),
+            (e.src = Z), (e.onload = () => l(!0)), (e.onerror = () => l(!0));
+        }, [Z]),
         i.useEffect(() => {
-            n && u.uvj.announce(N.intl.string(N.t.j2p129));
+            n && u.uvj.announce(y.intl.string(y.t.j2p129));
         }, [n]),
         (0, r.jsx)("div", {
             className: S.qrCodeContainer,
@@ -44,7 +44,7 @@ function Z(e) {
                 "" !== t && n
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(g.ZP, {
+                              (0, r.jsx)(f.ZP, {
                                   className: S.qrCode,
                                   size: 160,
                                   text: t,
@@ -52,7 +52,7 @@ function Z(e) {
                               (0, r.jsx)("div", {
                                   className: S.qrCodeOverlay,
                                   children: (0, r.jsx)("img", {
-                                      src: T,
+                                      src: Z,
                                       alt: "",
                                   }),
                               }),
@@ -60,7 +60,7 @@ function Z(e) {
                       })
                     : (0, r.jsx)("div", {
                           className: S.qrCodeOverlay,
-                          "aria-label": N.intl.string(N.t.BUGkVF),
+                          "aria-label": y.intl.string(y.t.BUGkVF),
                           "aria-busy": !0,
                           children: (0, r.jsx)(u.$jN, {
                               className: S.qrCode,
@@ -81,20 +81,20 @@ let P = (e) => {
     });
 };
 function R(e) {
-    let { state: t, cancel: n, errorMessage: i, conditionalMediationAbortController: a, isPasswordlessActive: o } = e;
+    let { state: t, cancel: n, errorMessage: i, conditionalMediationAbortController: s, isPasswordlessActive: o } = e;
     switch (t.step) {
         case 0:
         case 1:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(Z, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
-                    (0, r.jsx)(f.Dx, {
+                    (0, r.jsx)(T, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
+                    (0, r.jsx)(g.Dx, {
                         className: C.marginBottom8,
-                        children: N.intl.string(N.t.UPiHaG),
+                        children: y.intl.string(y.t.UPiHaG),
                     }),
                     null != i
                         ? (0, r.jsx)(P, { children: i })
-                        : (0, r.jsx)(f.DK, { children: N.intl.format(N.t["Qq+A6u"], {}) }),
+                        : (0, r.jsx)(g.DK, { children: y.intl.format(y.t["Qq+A6u"], {}) }),
                     (0, r.jsx)(c.zx, {
                         size: c.Ph.LARGE,
                         look: c.iL.LINK,
@@ -103,7 +103,7 @@ function R(e) {
                         onClick: () =>
                             (function (e) {
                                 let t =
-                                    v.isPlatformEmbedded && I.ZP.supportsFeature(y.eRX.WEBAUTHN)
+                                    v.isPlatformEmbedded && I.ZP.supportsFeature(O.eRX.WEBAUTHN)
                                         ? I.ZP.webAuthnAuthenticate
                                         : (e) => {
                                               let t = (0, l.wz)(JSON.parse(e));
@@ -113,8 +113,8 @@ function R(e) {
                                     authenticateFunc: t,
                                     conditionalMediationAbortController: e,
                                 }).catch(() => {});
-                            })(a),
-                        children: N.intl.string(N.t["/kpMDg"]),
+                            })(s),
+                        children: y.intl.string(y.t["/kpMDg"]),
                     }),
                 ],
             });
@@ -128,14 +128,14 @@ function R(e) {
                         user: e,
                         size: u.EFr.SIZE_120,
                         isMobile: !0,
-                        status: O.Sk.ONLINE,
+                        status: N.Sk.ONLINE,
                     }),
-                    (0, r.jsx)(f.Dx, {
+                    (0, r.jsx)(g.Dx, {
                         className: C.marginBottom8,
-                        children: N.intl.string(N.t.apGCUV),
+                        children: y.intl.string(y.t.apGCUV),
                     }),
-                    (0, r.jsx)(f.DK, {
-                        children: N.intl.format(N.t.Cbl5JC, { username: "".concat(j.ZP.getUserTag(e)) }),
+                    (0, r.jsx)(g.DK, {
+                        children: y.intl.format(y.t.Cbl5JC, { username: "".concat(b.ZP.getUserTag(e)) }),
                     }),
                     (0, r.jsx)(c.zx, {
                         look: c.zx.Looks.BLANK,
@@ -143,7 +143,7 @@ function R(e) {
                         size: c.zx.Sizes.MIN,
                         onClick: n,
                         className: S.startOverButton,
-                        children: N.intl.string(N.t.nOOhws),
+                        children: y.intl.string(y.t.nOOhws),
                     }),
                 ],
             });
@@ -160,16 +160,16 @@ function w(e) {
             state: c,
             rsaKeyPair: d,
             cancel: h,
-            handleFailure: f,
+            handleFailure: g,
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, l] = i.useState(!1),
-                [o, s] = i.useState({ step: 0 }),
+                [o, a] = i.useState({ step: 0 }),
                 [c, u] = i.useState(null),
                 d = (0, p.Z)(),
-                h = i.useMemo(() => new a.Z(1500, 30000), []),
-                f = (0, m.Z)(() => {
-                    s({ step: 0 }),
+                h = i.useMemo(() => new s.Z(1500, 30000), []),
+                g = (0, m.Z)(() => {
+                    a({ step: 0 }),
                         d
                             ? n((e) => e + 1)
                             : (A.info(
@@ -177,11 +177,11 @@ function w(e) {
                               ),
                               l(!0));
                 }),
-                g = i.useCallback(() => {
+                f = i.useCallback(() => {
                     A.error("Could not complete QR code login, trying to restart with a new QR code."),
-                        s({ step: 0 }),
-                        h.pending || h.fail(f);
-                }, [f, h]);
+                        a({ step: 0 }),
+                        h.pending || h.fail(g);
+                }, [g, h]);
             return (
                 i.useEffect(() => {
                     d &&
@@ -196,7 +196,7 @@ function w(e) {
                     A.info("[0ms] connecting to ".concat(n));
                     let i = (e) => A.info("[".concat("".concat(Date.now() - t, "ms"), "] ").concat(e)),
                         l = null,
-                        a = null,
+                        s = null,
                         o = null,
                         c = null,
                         d = !0;
@@ -207,7 +207,7 @@ function w(e) {
                     let m = () => {
                         d
                             ? ((d = !1), r.send(JSON.stringify({ op: "heartbeat" })))
-                            : (i("heartbeat timeout, reconnecting."), r.close(), g());
+                            : (i("heartbeat timeout, reconnecting."), r.close(), f());
                     };
                     return (
                         (r.onmessage = async (t) => {
@@ -216,7 +216,7 @@ function w(e) {
                             switch (l.op) {
                                 case "nonce_proof": {
                                     let e = l.encrypted_nonce,
-                                        t = await (0, E.qd)(p(), e);
+                                        t = await (0, j.qd)(p(), e);
                                     i("computed nonce proof"),
                                         r.send(
                                             JSON.stringify({
@@ -227,12 +227,12 @@ function w(e) {
                                     return;
                                 }
                                 case "pending_remote_init": {
-                                    h.succeed(), b.S.dispatch(y.CkL.WAVE_EMPHASIZE);
-                                    let e = await (0, E.Pk)(p());
+                                    h.succeed(), E.S.dispatch(O.CkL.WAVE_EMPHASIZE);
+                                    let e = await (0, j.Pk)(p());
                                     if (e !== l.fingerprint)
                                         throw Error("bad fingerprint ".concat(e, " !== ").concat(l.fingerprint));
                                     i("handshake complete awaiting remote auth."),
-                                        s({
+                                        a({
                                             step: 1,
                                             fingerprint: e,
                                         });
@@ -240,41 +240,41 @@ function w(e) {
                                 }
                                 case "pending_login": {
                                     let e = l.ticket;
-                                    null == e && g(),
-                                        s({
+                                    null == e && f(),
+                                        a({
                                             step: 4,
                                             ticket: e,
                                         });
                                     return;
                                 }
                                 case "pending_ticket": {
-                                    b.S.dispatch(y.CkL.WAVE_EMPHASIZE),
+                                    E.S.dispatch(O.CkL.WAVE_EMPHASIZE),
                                         i("remote auth handshake started, awaiting ticket/cancel.");
                                     let e = l.encrypted_user_payload;
-                                    s({
+                                    a({
                                         step: 3,
-                                        user: await (0, E.Rq)(p(), e),
+                                        user: await (0, j.Rq)(p(), e),
                                     });
                                     return;
                                 }
                                 case "pending_finish": {
-                                    b.S.dispatch(y.CkL.WAVE_EMPHASIZE),
+                                    E.S.dispatch(O.CkL.WAVE_EMPHASIZE),
                                         i("remote auth handshake started, awaiting finish/cancel.");
                                     let e = l.encrypted_user_payload;
-                                    s({
+                                    a({
                                         step: 2,
-                                        user: await (0, E.Rq)(p(), e),
+                                        user: await (0, j.Rq)(p(), e),
                                     });
                                     return;
                                 }
                                 case "finish": {
-                                    b.S.dispatch(y.CkL.WAVE_EMPHASIZE), i("remote auth handshake finished.");
+                                    E.S.dispatch(O.CkL.WAVE_EMPHASIZE), i("remote auth handshake finished.");
                                     let t = l.encrypted_token;
-                                    s({ step: 5 }), e(await (0, E.FW)(p(), t));
+                                    a({ step: 5 }), e(await (0, j.FW)(p(), t));
                                     return;
                                 }
                                 case "cancel":
-                                    i("remote auth handshake cancelled."), f();
+                                    i("remote auth handshake cancelled."), g();
                                     return;
                                 case "hello": {
                                     i("got hello, auth timeout=".concat(l.timeout_ms, "ms"));
@@ -292,22 +292,22 @@ function w(e) {
                             }
                         }),
                         (r.onopen = async () => {
-                            (l = await (0, E.W_)()), (a = await (0, E.dK)(l));
-                            let e = await (0, E.Pk)(l);
+                            (l = await (0, j.W_)()), (s = await (0, j.dK)(l));
+                            let e = await (0, j.Pk)(l);
                             i("connected, handshaking with fingerprint: ".concat(e)),
                                 r.send(
                                     JSON.stringify({
                                         op: "init",
-                                        encoded_public_key: a,
+                                        encoded_public_key: s,
                                     }),
                                 ),
                                 u(l);
                         }),
                         (r.onclose = (e) => {
-                            i("disconnected, code: ".concat(e.code, " ").concat(e.reason)), g();
+                            i("disconnected, code: ".concat(e.code, " ").concat(e.reason)), f();
                         }),
                         (r.onerror = (e) => {
-                            i("disconnected, error: ".concat(JSON.stringify(e))), g();
+                            i("disconnected, error: ".concat(JSON.stringify(e))), f();
                         }),
                         () => {
                             i("cleaning up"),
@@ -321,16 +321,16 @@ function w(e) {
                                 null != o && clearInterval(o);
                         }
                     );
-                }, [f, e, t, h, g]),
+                }, [g, e, t, h, f]),
                 {
                     state: o,
                     rsaKeyPair: c,
-                    cancel: f,
-                    handleFailure: g,
+                    cancel: g,
+                    handleFailure: f,
                 }
             );
         })(t),
-        g = (function (e) {
+        f = (function (e) {
             switch (e) {
                 case 0:
                 case 1:
@@ -346,9 +346,9 @@ function w(e) {
         i.useEffect(() => {
             4 === c.step &&
                 null != c.ticket &&
-                s.tn
+                a.tn
                     .post({
-                        url: y.ANM.REMOTE_AUTH_LOGIN,
+                        url: O.ANM.REMOTE_AUTH_LOGIN,
                         body: { ticket: c.ticket },
                         oldFormErrors: !0,
                         rejectWithError: !0,
@@ -356,24 +356,24 @@ function w(e) {
                     .then(async (e) => {
                         if (null != d)
                             try {
-                                let n = await (0, E.FW)(d, e.body.encrypted_token);
+                                let n = await (0, j.FW)(d, e.body.encrypted_token);
                                 t(n);
                             } catch (e) {
-                                f();
+                                g();
                             }
-                        else f();
+                        else g();
                     })
                     .catch(() => {
-                        f();
+                        g();
                     });
-        }, [c, t, d, f]),
+        }, [c, t, d, g]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", { className: S.verticalSeparator }),
                 (0, r.jsx)(u.qBt, {
                     fillParent: !0,
                     className: S.qrLogin,
-                    step: g,
+                    step: f,
                     steps: [0, 1],
                     children: (0, r.jsx)("div", {
                         className: S.qrLoginInner,

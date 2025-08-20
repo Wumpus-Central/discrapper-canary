@@ -4,8 +4,8 @@ r(647438);
 var l = r(594174),
     i = r(971082),
     a = r(817053),
-    o = r(533815),
-    c = r(853072),
+    c = r(533815),
+    o = r(853072),
     s = r(388032),
     u = r(932366),
     d = r(133458);
@@ -15,15 +15,15 @@ function f(e) {
             userId: r,
             widgetType: f,
             guildId: g,
-            channelId: p,
-            loading: b = !1,
+            channelId: b,
+            loading: p = !1,
             disableInteraction: O = !1,
         } = e,
-        m = (0, c.Z)(t.applicationId),
+        m = (0, o.Z)(t.applicationId),
         j = m.length > 0,
         y = l.default.getCurrentUser(),
         v = (null == y ? void 0 : y.id) === r;
-    return b
+    return p
         ? (0, n.jsx)("div", { className: u.loadingCover })
         : (0, n.jsxs)("div", {
               className: d.container,
@@ -38,7 +38,7 @@ function f(e) {
                   }),
                   !O &&
                       v &&
-                      (0, n.jsx)(o.Z, {
+                      (0, n.jsx)(c.Z, {
                           game: t,
                           widgetType: f,
                           className: d.removeGameButton,
@@ -51,7 +51,7 @@ function f(e) {
                           className: d.socialProof,
                           users: m,
                           guildId: g,
-                          channelId: p,
+                          channelId: b,
                           visuallyHideLabel: !0,
                       }),
               ],

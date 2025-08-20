@@ -98,10 +98,10 @@ function S(e) {
 function A() {
     g !== c.Z.getVoiceChannelId() && (E = !1), I() && (E = !0), (g = c.Z.getVoiceChannelId());
 }
-function N() {
+function C() {
     (m = !1), (E = !1), (g = null), (b = {});
 }
-class C extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, c.Z, l.Z), this.syncWith([c.Z, l.Z], A);
     }
@@ -115,12 +115,12 @@ class C extends (r = i.ZP.Store) {
         return E;
     }
 }
-f(C, "displayName", "VideoBackgroundStore");
-let R = new C(o.Z, {
+f(N, "displayName", "VideoBackgroundStore");
+let R = new N(o.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: O,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: T,
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S,
-    LOGOUT: N,
+    LOGOUT: C,
 });

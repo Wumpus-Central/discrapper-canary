@@ -1,20 +1,20 @@
 let r;
-n.d(t, { Z: () => _ }), n(388685), n(539854), n(781311), n(35282);
+n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282);
 var l,
-    i = n(442837),
-    o = n(570140),
-    s = n(278323),
-    a = n(212819),
+    s = n(442837),
+    i = n(570140),
+    a = n(278323),
+    o = n(212819),
     c = n(933557),
     u = n(592125),
     d = n(430824),
-    f = n(293273),
-    h = n(158776),
+    h = n(293273),
+    f = n(158776),
     g = n(699516),
     p = n(594174),
     O = n(55589),
     y = n(981631);
-function N(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,13 +27,13 @@ function N(e, t, n) {
         e
     );
 }
-let b = [a.h8.TEXT_CHANNEL, a.h8.GROUP_DM, a.h8.USER],
-    x = null,
-    E = null,
-    m = [],
+let b = [o.h8.TEXT_CHANNEL, o.h8.GROUP_DM, o.h8.USER],
+    N = null,
+    m = null,
+    E = [],
     C = [];
-function v(e) {
-    (m = [...m, e]),
+function j(e) {
+    (E = [...E, e]),
         (C = C.map((e) => {
             var t, n;
             return (
@@ -48,12 +48,12 @@ function v(e) {
                                 }),
                             )),
                             r.forEach(function (t) {
-                                N(e, t, n[t]);
+                                x(e, t, n[t]);
                             });
                     }
                     return e;
                 })({}, e)),
-                (n = n = { sent: m.includes(e.data.record.id) }),
+                (n = n = { sent: E.includes(e.data.record.id) }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -69,21 +69,21 @@ function v(e) {
                 t
             );
         })),
-        S.emitChange();
+        P.emitChange();
+}
+function v() {
+    (N = null), null != r && (r.destroy(), (r = null)), null != m && m();
 }
 function T() {
-    (x = null), null != r && (r.destroy(), (r = null)), null != E && E();
+    let e = null != N && null != N.application_id ? h.Z.getApplicationActivity(N.application_id) : null;
+    if (null != N && (null == e || null == e.party || null == e.party.id)) return v();
 }
-function j() {
-    let e = null != x && null != x.application_id ? f.Z.getApplicationActivity(x.application_id) : null;
-    if (null != x && (null == e || null == e.party || null == e.party.id)) return T();
-}
-class I extends (l = i.ZP.Store) {
+class I extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z);
+        this.waitFor(h.Z);
     }
     getActivity() {
-        return x;
+        return N;
     }
     getQuery() {
         var e;
@@ -93,14 +93,14 @@ class I extends (l = i.ZP.Store) {
         return C;
     }
 }
-N(I, "displayName", "ActivityInviteModalStore");
-let S = new I(o.Z, {
+x(I, "displayName", "ActivityInviteModalStore");
+let P = new I(i.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (x = e.activity),
-                (E = e.resolve),
-                (m = []),
+            (N = e.activity),
+                (m = e.resolve),
+                (E = []),
                 null == r &&
-                    (r = new a.ZP(
+                    (r = new o.ZP(
                         (e, t) => {
                             (C = (
                                 "" === t.trim()
@@ -115,14 +115,14 @@ let S = new I(o.Z, {
                                                               r = null != t ? p.default.getUser(t) : null;
                                                           null != r &&
                                                               e.push({
-                                                                  type: a.h8.USER,
+                                                                  type: o.h8.USER,
                                                                   record: r,
                                                                   score: 0,
                                                               });
                                                       } else
                                                           n.isMultiUserDM() &&
                                                               e.push({
-                                                                  type: a.h8.GROUP_DM,
+                                                                  type: o.h8.GROUP_DM,
                                                                   record: n,
                                                                   score: 0,
                                                               });
@@ -134,33 +134,33 @@ let S = new I(o.Z, {
                             )
                                 .map((e) => {
                                     switch (e.type) {
-                                        case a.h8.USER: {
+                                        case o.h8.USER: {
                                             let { record: t } = e;
                                             return {
-                                                type: a.h8.USER,
-                                                sent: m.includes(t.id),
-                                                status: h.Z.getStatus(t.id),
+                                                type: o.h8.USER,
+                                                sent: E.includes(t.id),
+                                                status: f.Z.getStatus(t.id),
                                                 data: e,
                                             };
                                         }
-                                        case a.h8.TEXT_CHANNEL: {
+                                        case o.h8.TEXT_CHANNEL: {
                                             var t;
                                             let { record: n } = e,
                                                 r = u.Z.getChannel(n.parent_id),
                                                 l = d.Z.getGuild(n.guild_id);
                                             return {
-                                                type: a.h8.TEXT_CHANNEL,
-                                                sent: m.includes(n.id),
+                                                type: o.h8.TEXT_CHANNEL,
+                                                sent: E.includes(n.id),
                                                 categoryName: null != r ? (0, c.F6)(r, p.default, g.Z) : "",
                                                 guildName: null != (t = null == l ? void 0 : l.name) ? t : "",
                                                 data: e,
                                             };
                                         }
-                                        case a.h8.GROUP_DM: {
+                                        case o.h8.GROUP_DM: {
                                             let { record: t } = e;
                                             return {
-                                                type: a.h8.GROUP_DM,
-                                                sent: m.includes(t.id),
+                                                type: o.h8.GROUP_DM,
+                                                sent: E.includes(t.id),
                                                 data: e,
                                             };
                                         }
@@ -169,7 +169,7 @@ let S = new I(o.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                S.emitChange();
+                                P.emitChange();
                         },
                         b,
                         100,
@@ -181,30 +181,30 @@ let S = new I(o.Z, {
             null != r && r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == x) return;
+            if (null == N) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? s.Z.sendActivityInvite({
+                ? a.Z.sendActivityInvite({
                       channelId: t,
                       type: y.mFx.JOIN,
-                      activity: x,
+                      activity: N,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => v(t))
+                  }).then(() => j(t))
                 : null != n &&
-                  s.Z.sendActivityInviteUser({
+                  a.Z.sendActivityInviteUser({
                       userId: n,
                       type: y.mFx.JOIN,
-                      activity: x,
+                      activity: N,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => v(n));
+                  }).then(() => j(n));
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: T,
+        ACTIVITY_INVITE_MODAL_CLOSE: v,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != x && (T(), !0);
+            return !!t && null != N && (v(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: j,
-        RPC_APP_DISCONNECTED: j,
+        LOCAL_ACTIVITY_UPDATE: T,
+        RPC_APP_DISCONNECTED: T,
     }),
-    _ = 12633 == n.j ? S : null;
+    S = 12633 == n.j ? P : null;

@@ -79,10 +79,10 @@ function S() {
 function A(e) {
     m = e.idle;
 }
-function N(e) {
+function C(e) {
     g = e.afk;
 }
-function C(e) {
+function N(e) {
     let { userId: t, speakingFlags: n } = e;
     return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
 }
@@ -141,8 +141,8 @@ class w extends (r = i.ZP.Store) {
 p(w, "displayName", "IdleStore");
 let D = new w(a.Z, {
     IDLE: A,
-    AFK: N,
-    SPEAKING: C,
+    AFK: C,
+    SPEAKING: N,
     APP_STATE_UPDATE: R,
     OVERLAY_SET_NOT_IDLE: P,
     CHANNEL_SELECT: P,

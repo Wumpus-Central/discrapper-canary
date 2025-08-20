@@ -65,7 +65,7 @@ function E(e) {
             }
         );
     }, [O, T, S, A]);
-    let N = (e) => {
+    let C = (e) => {
         var r, i;
         if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {
             let r = {
@@ -140,7 +140,7 @@ function E(e) {
                               }),
                               (0, r.jsx)(c.Z, {
                                   ref: E,
-                                  onChange: N,
+                                  onChange: C,
                                   multiple: !1,
                                   tabIndex: -1,
                                   "aria-hidden": !0,

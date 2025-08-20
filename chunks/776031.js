@@ -81,11 +81,11 @@ function S(e, t) {
     let { preset: n, resolution: y, fps: v } = (0, a.cj)([u.Z], () => u.Z.getState()),
         S = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
         A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        N = (0, a.e7)([f.Z], () => {
+        C = (0, a.e7)([f.Z], () => {
             var t;
             return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
-        { location: C } = (0, l.O)(),
+        { location: N } = (0, l.O)(),
         R = (0, a.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
         P = i.useCallback(
             (e, n, r, i) => {
@@ -114,19 +114,19 @@ function S(e, t) {
                 } else
                     T(
                         t,
-                        I(O({}, C), {
+                        I(O({}, N), {
                             object: m.qAy.RADIO_ITEM,
                             objectType: i,
                         }),
                     );
             },
-            [t, C, S],
+            [t, N, S],
         );
     if (null == e) return null;
     let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
         D = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, N, R);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, C, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -139,9 +139,9 @@ function S(e, t) {
                 "stream-settings-fps-".concat(t),
             );
         }),
-        L = g.km.map((e) => {
+        x = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, A, N, R);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, A, C, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -162,7 +162,7 @@ function S(e, t) {
             }),
             (0, r.jsx)(o.kSQ, {
                 label: b.intl.string(b.t.rHyPXl),
-                children: L,
+                children: x,
             }),
         ],
     });

@@ -1,31 +1,33 @@
 n.d(t, { Z: () => l });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(993413),
-    a = n(388032);
+var i = n(481060),
+    a = n(993413),
+    o = n(388032);
+let s = 40;
 function l(e) {
     let {
         sectionTitle: t,
         errors: n,
         onPronounsChange: l,
-        pendingPronouns: o,
-        placeholder: c,
+        pendingPronouns: c,
+        placeholder: u,
         currentPronouns: d,
-        disabled: u = !1,
+        disabled: f = !1,
     } = e;
-    return (0, i.jsx)(s.Z, {
+    function _(e) {
+        l(e === d ? void 0 : e);
+    }
+    return (0, r.jsx)(a.Z, {
         title: t,
         errors: n,
-        disabled: u,
-        children: (0, i.jsx)(r.oil, {
-            placeholder: null != c ? c : a.intl.string(a.t.NPEUUl),
-            maxLength: 40,
-            value: null != o ? o : d,
-            onChange: function (e) {
-                l(e === d ? void 0 : e);
-            },
-            disabled: u,
+        disabled: f,
+        children: (0, r.jsx)(i.oil, {
+            placeholder: null != u ? u : o.intl.string(o.t.NPEUUl),
+            maxLength: s,
+            value: null != c ? c : d,
+            onChange: _,
+            disabled: f,
         }),
     });
 }

@@ -1,88 +1,89 @@
-n.d(t, { Z: () => E });
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(799899),
-    o = n(435935),
+n.d(t, { Z: () => O });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(799899),
+    l = n(435935),
     c = n(442837),
-    d = n(481060),
-    u = n(37234),
-    m = n(960412),
-    p = n(151662),
-    g = n(695346),
+    u = n(481060),
+    d = n(37234),
+    f = n(960412),
+    _ = n(151662),
+    p = n(695346),
     h = n(981631),
-    f = n(930441),
-    b = n(345909),
-    x = n(388032),
-    _ = n(286661),
-    j = n(197571);
-let E = () => {
-    let e = g.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([p.Z], () => p.Z.getEmailSettings());
+    m = n(930441),
+    g = n(345909),
+    E = n(388032),
+    b = n(286661),
+    y = n(197571);
+let O = () => {
+    let e = p.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([_.Z], () => _.Z.getEmailSettings());
+    function a(e) {
+        (0, f.pR)(m.$Z.FAMILY_CENTER_DIGEST, e);
+    }
     return (
-        r.useEffect(() => {
-            null == n && (0, m.Y7)();
+        i.useEffect(() => {
+            null == n && (0, f.Y7)();
         }, [n]),
-        (0, i.jsxs)("div", {
-            className: _.container,
+        (0, r.jsxs)("div", {
+            className: b.container,
             children: [
-                (0, i.jsx)(d.Text, {
+                (0, r.jsx)(u.Text, {
                     variant: "eyebrow",
                     color: "text-muted",
-                    children: x.intl.string(b.default.USIXU1),
+                    children: E.intl.string(g.default.USIXU1),
                 }),
-                (0, i.jsx)(d.j7V, {
-                    className: a()(j.marginTop8, j.marginBottom20),
+                (0, r.jsx)(u.j7V, {
+                    className: o()(y.marginTop8, y.marginBottom20),
                     value: e,
-                    note: x.intl.string(b.default["5MdB3t"]),
+                    note: E.intl.string(g.default["5MdB3t"]),
                     hideBorder: !0,
-                    onChange: g.Ex.updateSetting,
-                    children: x.intl.string(b.default.zkEceX),
+                    onChange: p.Ex.updateSetting,
+                    children: E.intl.string(g.default.zkEceX),
                 }),
                 e
-                    ? (0, i.jsx)(d.Zbd, {
-                          className: _.enableCard,
-                          type: d.Zbd.Types.CUSTOM,
+                    ? (0, r.jsx)(u.Zbd, {
+                          className: b.enableCard,
+                          type: u.Zbd.Types.CUSTOM,
                           outline: !0,
-                          children: (0, i.jsxs)(o.k, {
-                              justify: o.k.Justify.END,
+                          children: (0, r.jsxs)(l.k, {
+                              justify: l.k.Justify.END,
                               children: [
-                                  (0, i.jsx)(o.k.Child, {
-                                      children: (0, i.jsx)(d.Text, {
+                                  (0, r.jsx)(l.k.Child, {
+                                      children: (0, r.jsx)(u.Text, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: x.intl.string(b.default.xAVm7O),
+                                          children: E.intl.string(g.default.xAVm7O),
                                       }),
                                   }),
-                                  (0, i.jsx)(d.P3F, {
-                                      children: (0, i.jsx)(l.rU, {
-                                          onClick: u.xf,
+                                  (0, r.jsx)(u.P3F, {
+                                      children: (0, r.jsx)(s.rU, {
+                                          onClick: d.xf,
                                           to: {
                                               pathname: h.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 },
                                           },
-                                          children: x.intl.string(b.default.cUIXFR),
+                                          children: E.intl.string(g.default.cUIXFR),
                                       }),
                                   }),
-                                  (0, i.jsx)(d.G2e, {
-                                      icon: d.ZSh,
-                                      className: _.arrow,
+                                  (0, r.jsx)(u.G2e, {
+                                      icon: u.ZSh,
+                                      className: b.arrow,
                                       disableColor: !0,
                                   }),
                               ],
                           }),
                       })
                     : null,
-                (0, i.jsx)(d.j7V, {
-                    className: a()(j.marginTop20, j.marginBottom20),
-                    value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
-                    note: x.intl.string(b.default["y34S4+"]),
+                (0, r.jsx)(u.j7V, {
+                    className: o()(y.marginTop20, y.marginBottom20),
+                    value: !!t[m.$Z.FAMILY_CENTER_DIGEST],
+                    note: E.intl.string(g.default["y34S4+"]),
                     hideBorder: !0,
-                    onChange: function (e) {
-                        (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
-                    },
-                    children: x.intl.string(b.default.irvJKS),
+                    onChange: a,
+                    children: E.intl.string(g.default.irvJKS),
                 }),
             ],
         })

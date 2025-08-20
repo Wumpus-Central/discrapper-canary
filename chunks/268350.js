@@ -3,11 +3,11 @@ n.d(t, {
     FQ: () => I,
     Il: () => S,
     Jf: () => R,
-    SA: () => L,
-    Um: () => N,
+    SA: () => x,
+    Um: () => C,
     eu: () => P,
-    hW: () => x,
-    lY: () => C,
+    hW: () => L,
+    lY: () => N,
     pk: () => A,
     qB: () => w,
 }),
@@ -135,13 +135,13 @@ let I = async (e, t) => {
             stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.Z(e.user) }) : e)),
         });
     },
-    N = async (e) => {
+    C = async (e) => {
         await a.tn.del({
             url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1,
         });
     },
-    C = async (e) => {
+    N = async (e) => {
         let { guildId: t } = e,
             n = await a.tn.post({
                 url: m.ANM.GUILD_STICKER_PACKS(t),
@@ -213,7 +213,7 @@ function w(e, t) {
 function D(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function L(e) {
+function x(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
@@ -227,7 +227,7 @@ function L(e) {
         g.fy.INFREQUENT_USER_ACTION,
     );
 }
-function x(e) {
+function L(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {

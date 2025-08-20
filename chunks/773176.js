@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(856985),
     x = n(660189),
     v = n(868643),
-    j = n(245216),
-    O = n(223606),
+    O = n(245216),
+    j = n(223606),
     E = n(188597),
     S = n(41776),
     P = n(980463),
@@ -188,7 +188,7 @@ function eg(e) {
             canPublish: b,
             canReact: _,
             canConfigureJoin: C,
-            canReply: O,
+            canReply: j,
             canStartThread: E,
             canViewThread: w,
             canForward: R,
@@ -219,14 +219,14 @@ function eg(e) {
                 { firstMessage: y } = (0, u.e7)([x.Z], () => x.Z.getMessage(t.id), [t.id]),
                 _ = B.nc.useSetting(),
                 C = B.Sb.useSetting(),
-                j = (0, u.e7)([z.Z], () => null == t.guild_id || z.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: O, canAddNewReactions: E } = (0, u.cj)(
+                O = (0, u.e7)([z.Z], () => null == t.guild_id || z.Z.canChatInGuild(t.guild_id), [t]),
+                { canManageMessages: j, canAddNewReactions: E } = (0, u.cj)(
                     [W.Z],
                     () => ({
-                        canAddNewReactions: j && W.Z.can(ea.Plq.ADD_REACTIONS, t),
+                        canAddNewReactions: O && W.Z.can(ea.Plq.ADD_REACTIONS, t),
                         canManageMessages: W.Z.can(ea.Plq.MANAGE_MESSAGES, t),
                     }),
-                    [t, j],
+                    [t, O],
                 ),
                 P = (0, k.U)(t, n),
                 I = (0, U.NE)(t, n),
@@ -234,15 +234,15 @@ function eg(e) {
                 T = (0, u.e7)([S.Z], () => null != t.guild_id && S.Z.isLurking(t.guild_id), [t]),
                 N = (0, u.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = d.id === h,
-                w = (O || n.canDeleteOwnMessage(h)) && g && !ea.V$x.UNDELETABLE.has(n.type);
-            n.type === ea.uaV.AUTO_MODERATION_ACTION && (w = w && O),
+                w = (j || n.canDeleteOwnMessage(h)) && g && !ea.V$x.UNDELETABLE.has(n.type);
+            n.type === ea.uaV.AUTO_MODERATION_ACTION && (w = w && j),
                 t.isModeratorReportChannel() && (w = w && n.id !== (null == y ? void 0 : y.id) && !(0, ee.Z)(n));
             let R = (0, Q.a4)(n),
                 M = (0, $.Z)(n, t),
                 H = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
                 { disableReactionCreates: q } = (0, et.Z)({
                     channel: t,
-                    canChat: j,
+                    canChat: O,
                     renderReactions: _,
                     canAddNewReactions: E,
                     isLurking: T,
@@ -253,7 +253,7 @@ function eg(e) {
                     t.type === ea.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
                     p.features.has(ea.oNc.NEWS) &&
-                    (A || O) &&
+                    (A || j) &&
                     (0, m.Z)(n),
                 X = t.getGuildId(),
                 en =
@@ -306,8 +306,8 @@ function eg(e) {
         ey = (0, U.$R)(t),
         eC = n.hasFlag(ea.iLy.CROSSPOSTED),
         [ex, ev] = (0, g.cv)(R ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ej = ex === d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [eO, eE] = i.useState(!1),
+        eO = ex === d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [ej, eE] = i.useState(!1),
         eS = i.useCallback(() => {
             eE(!0);
         }, []),
@@ -422,7 +422,7 @@ function eg(e) {
                                     "thread",
                                 )
                               : null,
-                          O && h
+                          j && h
                               ? (0, r.jsx)(
                                     en.sF,
                                     {
@@ -483,7 +483,7 @@ function eg(e) {
                       ],
                   })
                 : null,
-            O && !h
+            j && !h
                 ? (0, r.jsx)(
                       en.sF,
                       {
@@ -510,11 +510,11 @@ function eg(e) {
                       en.sF,
                       {
                           label: ec.intl.string(ec.t.I3ltXF),
-                          icon: j.Z,
+                          icon: O.Z,
                           onClick: () => eI(t, n),
                           onTooltipShow: eS,
                           onTooltipHide: eP,
-                          showNewBadge: !eO && ej,
+                          showNewBadge: !ej && eO,
                       },
                       "forward",
                   )
@@ -632,7 +632,7 @@ function eg(e) {
 }
 function eb(e) {
     let { channel: t, message: n } = e,
-        i = (0, u.e7)([O.Z], () => null != O.Z.getMessage(n.id), [n.id]),
+        i = (0, u.e7)([j.Z], () => null != j.Z.getMessage(n.id), [n.id]),
         l = null == n.interaction || (null != n.interactionData && (0, E.$s)(n.interactionData));
     return (0, r.jsxs)(r.Fragment, {
         children: [

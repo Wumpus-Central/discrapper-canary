@@ -17,7 +17,7 @@ let h = (e) => {
         [j, v] = (0, c.Z)(null, 4000),
         _ = () => {
             (0, s.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("93626"), n.e("34765")]).then(n.bind(n, 136735));
+                let { default: e } = await Promise.all([n.e("93626"), n.e("74395")]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, r.jsx)(
                         e,

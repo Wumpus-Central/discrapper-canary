@@ -1,31 +1,32 @@
 n.d(t, {
     D: () => d,
-    T: () => c,
+    T: () => u,
 });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(570140),
-    a = n(955204),
-    l = n(510273),
-    o = n(388032);
-function c(e) {
-    s.Z.dispatch({
+var i = n(481060),
+    a = n(570140),
+    o = n(955204),
+    s = n(510273),
+    l = n(388032);
+let c = 6000;
+function u(e) {
+    a.Z.dispatch({
         type: "POGGERMODE_ACHIEVEMENT_UNLOCK",
         achievementId: e,
     });
 }
 function d(e, t) {
-    let n = (0, a.oX)(e);
+    let n = (0, o.oX)(e);
     null != n &&
-        (0, r.showToast)(
-            (0, r.createToast)(o.intl.string(o.t.MPpEUF), r.ToastType.CUSTOM, {
-                position: r.ToastPosition.BOTTOM,
-                component: (0, i.jsx)(l.Z, {
+        (0, i.showToast)(
+            (0, i.createToast)(l.intl.string(l.t.MPpEUF), i.ToastType.CUSTOM, {
+                position: i.ToastPosition.BOTTOM,
+                component: (0, r.jsx)(s.Z, {
                     achievement: n,
                     unlocked: t,
                 }),
-                duration: 6000,
+                duration: c,
             }),
         );
 }

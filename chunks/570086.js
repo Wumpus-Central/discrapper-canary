@@ -38,11 +38,11 @@ r(
     { DOMException: S ? b : E },
 );
 var A = a(m),
-    N = A.prototype;
-if (N.constructor !== A) {
-    for (var C in (h || s(N, "constructor", o(1, A)), f))
-        if (l(f, C)) {
-            var R = f[C],
+    C = A.prototype;
+if (C.constructor !== A) {
+    for (var N in (h || s(C, "constructor", o(1, A)), f))
+        if (l(f, N)) {
+            var R = f[N],
                 P = R.s;
             l(A, P) || s(A, P, o(6, R.c));
         }

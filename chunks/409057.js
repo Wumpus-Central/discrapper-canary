@@ -23,22 +23,22 @@ var r = n(951288),
     T = n(994746),
     S = n(232174),
     A = n(652853),
-    N = n(979038),
-    C = n(448980),
+    C = n(979038),
+    N = n(448980),
     R = n(576759),
     P = n(336383),
     w = n(194811),
     D = n(373826),
-    L = n(668700),
-    x = n(262210),
-    M = n(670451),
-    k = n(881530),
-    j = n(981631),
+    x = n(668700),
+    L = n(262210),
+    j = n(670451),
+    M = n(881530),
+    k = n(981631),
     U = n(701488),
     G = n(671955),
     B = n(388032),
-    V = n(704543);
-function F(e, t, n) {
+    Z = n(704543);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function F(e, t, n) {
         e
     );
 }
-function Z(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function Z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function W(e) {
             user: t,
             currentUser: n,
             activity: i,
-            application: F,
+            application: V,
             voiceGuild: H,
             voiceChannel: W,
             className: K,
@@ -123,23 +123,23 @@ function W(e) {
         }),
         er = (0, T.Z)(i),
         ei = null != er.text && "" !== er.text,
-        { largeImage: ea, smallImage: eo } = (0, _.FO)(i, F),
-        es = (0, k.Z)({
+        { largeImage: ea, smallImage: eo } = (0, _.FO)(i, V),
+        es = (0, M.Z)({
             location: "UserProfileActivityCard",
             user: t,
             currentUser: n,
             activity: i,
-            application: F,
+            application: V,
             entry: ee,
             onClose: z,
         }),
         el = () => {
             let e = (0, s.Z)(i) ? "crunchyroll" : "default",
                 t = $ === G.l.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
-            return i.type === j.IIU.HANG_STATUS
+            return i.type === k.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
                       hangStatusActivity: i,
-                      className: a()(V.hangStatusIcon, V.image, { [V.small]: $ !== G.l.MODAL_V2 }),
+                      className: a()(Z.hangStatusIcon, Z.image, { [Z.small]: $ !== G.l.MODAL_V2 }),
                   })
                 : null == es
                   ? (0, r.jsx)(h.E, {
@@ -147,13 +147,13 @@ function W(e) {
                         smallImage: eo,
                         size: t,
                         aspectRatio: e,
-                        className: V.image,
+                        className: Z.image,
                     })
                   : (0, r.jsx)(h.E, {
                         image: ea,
                         smallImage: eo,
                         size: t,
-                        className: V.clickableImage,
+                        className: Z.clickableImage,
                         aspectRatio: e,
                         onClick: (e) => {
                             et({ action: "PRESS_IMAGE" }), es(e);
@@ -161,7 +161,7 @@ function W(e) {
                     });
         },
         ec = () =>
-            i.type === j.IIU.HANG_STATUS
+            i.type === k.IIU.HANG_STATUS
                 ? (0, r.jsx)(D.f, {
                       variant: "heading-sm/semibold",
                       text: (0, E.O8)(i),
@@ -169,12 +169,12 @@ function W(e) {
                   })
                 : (0, u.Z)(i) && null != W
                   ? (0, r.jsxs)("div", {
-                        className: V.voiceChannelText,
+                        className: Z.voiceChannelText,
                         children: [
                             (0, r.jsx)(o.gj8, {
                                 size: "xxs",
                                 color: o.TVs.colors.TEXT_DEFAULT,
-                                className: V.voiceIcon,
+                                className: Z.voiceIcon,
                             }),
                             (0, r.jsx)(D.f, {
                                 variant: "heading-sm/semibold",
@@ -204,7 +204,7 @@ function W(e) {
                             id: X,
                         }),
         eu = () => {
-            if (i.type === j.IIU.HANG_STATUS) return null;
+            if (i.type === k.IIU.HANG_STATUS) return null;
             if ((0, u.Z)(i) && null != H)
                 return (0, r.jsx)(D.Z, {
                     variant: "text-xs/normal",
@@ -238,7 +238,7 @@ function W(e) {
         },
         ed = () => {
             var e, t, n, a, o, s, l, u;
-            if (i.type === j.IIU.WATCHING) return null;
+            if (i.type === k.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ef();
             if (
                 (0, O.dS)(i) &&
@@ -269,7 +269,7 @@ function W(e) {
             var e, t, n, a;
             return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === U.Zc
                 ? (0, r.jsxs)("div", {
-                      className: V.gameState,
+                      className: Z.gameState,
                       children: [
                           (0, r.jsx)(p._, {
                               href: i.state_url,
@@ -282,7 +282,7 @@ function W(e) {
                               variant: "text-xs/normal",
                               text: B.intl.formatToPlainString(B.t["u//9Bw"], {
                                   count: "0",
-                                  max: null != (a = null == F ? void 0 : F.getMaxParticipants()) ? a : 0,
+                                  max: null != (a = null == V ? void 0 : V.getMaxParticipants()) ? a : 0,
                               }),
                           }),
                       ],
@@ -291,7 +291,7 @@ function W(e) {
                     (null == (t = i.party) ? void 0 : t.size) != null &&
                     (null == (n = i.party) ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)("div", {
-                        className: V.gameState,
+                        className: Z.gameState,
                         children: [
                             (0, r.jsx)(p._, {
                                 href: i.state_url,
@@ -325,7 +325,7 @@ function W(e) {
         e_ = () => {
             if (!(0, S.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
-            return (0, r.jsx)(x.Z, {
+            return (0, r.jsx)(L.Z, {
                 start: e,
                 end: t,
             });
@@ -336,7 +336,7 @@ function W(e) {
                       children: [ec(), eu(), ed()],
                   })
                 : (0, r.jsxs)(o.P3F, {
-                      className: V.clickableText,
+                      className: Z.clickableText,
                       onClick: (e) => {
                           et({ action: "PRESS_TEXT" }), es(e);
                       },
@@ -345,7 +345,7 @@ function W(e) {
         eh = () =>
             null == H || null == W
                 ? null
-                : (0, r.jsx)(L.Z, {
+                : (0, r.jsx)(x.Z, {
                       user: t,
                       guild: H,
                       channel: W,
@@ -356,28 +356,28 @@ function W(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: V.actions,
-                      children: (0, r.jsx)(N.Z, {
+                      className: Z.actions,
+                      children: (0, r.jsx)(C.Z, {
                           activity: i,
                           user: t,
                           onAction: et,
                           onClose: z,
-                          application: F,
+                          application: V,
                       }),
                   });
     return (0, r.jsx)(f.Gt, {
         value: J,
         children: (0, r.jsxs)(P.Z, {
             ref: en,
-            className: a()(V.card, K),
+            className: a()(Z.card, K),
             onAction: et,
             onClose: z,
             "aria-labelledby": ei ? "".concat(Q, " ").concat(X) : X,
             children: [
                 (0, r.jsx)(
                     w.Z,
-                    Y(Z({ textId: Q }, er), {
-                        contextMenu: (0, r.jsx)(M.Z, {
+                    Y(F({ textId: Q }, er), {
+                        contextMenu: (0, r.jsx)(j.Z, {
                             display: "live",
                             user: t,
                             activity: i,
@@ -388,21 +388,21 @@ function W(e) {
                     }),
                 ),
                 (0, r.jsxs)("div", {
-                    className: V.body,
+                    className: Z.body,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: V.content,
+                            className: Z.content,
                             children: [
                                 !t.bot && el(),
                                 (0, r.jsxs)("div", {
-                                    className: V.details,
+                                    className: Z.details,
                                     children: [
                                         ep(),
                                         !t.bot &&
-                                            (0, r.jsx)(C.Z, {
+                                            (0, r.jsx)(N.Z, {
                                                 user: t,
                                                 activity: i,
-                                                className: V.badges,
+                                                className: Z.badges,
                                             }),
                                         e_(),
                                         $ === G.l.MODAL_V2 && em(),
@@ -416,7 +416,7 @@ function W(e) {
                 }),
                 $ !== G.l.MODAL && $ !== G.l.MODAL_V2 && em(),
                 (0, r.jsx)(R.Z, {
-                    applicationId: null == F ? void 0 : F.id,
+                    applicationId: null == V ? void 0 : V.id,
                     onAction: et,
                     onClose: z,
                 }),

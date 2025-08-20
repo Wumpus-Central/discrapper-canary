@@ -1,149 +1,145 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
+    a = n(481060),
     o = n(758371),
-    a = n(100527),
-    s = n(906732),
+    s = n(100527),
+    l = n(906732),
     c = n(758199),
     u = n(914498),
     d = n(880251),
-    p = n(594190),
-    m = n(562224),
-    f = n(199902),
-    g = n(77498),
-    _ = n(19780),
-    h = n(768581),
-    b = n(358085),
-    E = n(709054),
-    C = n(915553),
-    v = n(658805),
-    O = n(388032);
-function y(e) {
+    f = n(594190),
+    _ = n(562224),
+    p = n(199902),
+    h = n(77498),
+    m = n(19780),
+    g = n(768581),
+    E = n(358085),
+    b = n(709054),
+    y = n(915553),
+    O = n(658805),
+    v = n(388032);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                I(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : S(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function C(e) {
     let t,
-        { currentUserId: y, message: x, application: j, channel: I, analyticsLocations: S, onView: T } = e,
-        { staticBannerSrc: P, videoBannerSrc: N, bannerAspectRatio: A } = (0, d.E)(j),
-        w = h.ZP.getApplicationIconURL({
-            id: j.id,
-            icon: j.icon,
+        { currentUserId: I, message: S, application: C, channel: N, analyticsLocations: R, onView: P } = e,
+        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(C),
+        L = g.ZP.getApplicationIconURL({
+            id: C.id,
+            icon: C.icon,
         }),
-        Z = (0, i.e7)([p.ZP, g.Z], () =>
-            null != x.application
-                ? p.ZP.getVisibleRunningGames().find((e) => {
+        j = (0, i.e7)([f.ZP, h.Z], () =>
+            null != S.application
+                ? f.ZP.getVisibleRunningGames().find((e) => {
                       var t;
                       let { id: n, name: r } = e;
                       return (
-                          null != x.application &&
-                          (null != n ? n : null == (t = g.Z.getGameByName(r)) ? void 0 : t.id) === x.application.id
+                          null != S.application &&
+                          (null != n ? n : null == (t = h.Z.getGameByName(r)) ? void 0 : t.id) === S.application.id
                       );
                   })
                 : null,
         ),
-        R = (0, i.e7)([f.Z], () => f.Z.getCurrentUserActiveStream()),
-        D = (0, i.e7)([_.Z], () => _.Z.getChannelId()),
-        L = E.default.extractTimestamp(x.id) + C.e < Date.now(),
-        M = (0, r.jsx)(r.Fragment, { children: (0, o._0)(x, j, I, y, !1) }),
-        { newestAnalyticsLocation: k } = (0, s.ZP)(S, a.Z.REQUEST_TO_STREAM_INVITE_EMBED);
+        M = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
+        k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
+        U = b.default.extractTimestamp(S.id) + y.e < Date.now(),
+        G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(S, C, N, I, !1) }),
+        { newestAnalyticsLocation: B } = (0, l.ZP)(R, s.Z.REQUEST_TO_STREAM_INVITE_EMBED);
     return (
-        L
-            ? (t = O.intl.string(v.default.u4QmWl))
-            : null != R
-              ? (t = O.intl.string(v.default.P0wwmJ))
-              : D !== I.id
-                ? (t = O.intl.string(v.default.qRXatr))
-                : null == Z && (t = O.intl.string(v.default["43zohI"])),
+        U
+            ? (t = v.intl.string(O.default.u4QmWl))
+            : null != M
+              ? (t = v.intl.string(O.default.P0wwmJ))
+              : k !== N.id
+                ? (t = v.intl.string(O.default.qRXatr))
+                : null == j && (t = v.intl.string(O.default["43zohI"])),
         (0, r.jsx)(c.W, {
-            header: O.intl.string(v.default.DKHheX),
-            title: j.name,
-            staticBannerSrc: P,
-            videoBannerSrc: N,
-            bannerAspectRatio: A,
-            iconSrc: null != w ? w : void 0,
-            info: M,
+            header: v.intl.string(O.default.DKHheX),
+            title: C.name,
+            staticBannerSrc: w,
+            videoBannerSrc: D,
+            bannerAspectRatio: x,
+            iconSrc: null != L ? L : void 0,
+            info: G,
             actions:
-                x.author.id === y
+                S.author.id === I
                     ? []
                     : [
                           {
-                              label: O.intl.string(v.default["5+172d"]),
+                              label: v.intl.string(O.default["5+172d"]),
                               trackingArea: u.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {
-                                  null != Z &&
-                                      ((0, b.isWindows)()
-                                          ? (0, m.Z)(Z.pid)
-                                          : (0, l.ZDy)(async () => {
+                                  null != j &&
+                                      ((0, E.isWindows)()
+                                          ? (0, _.Z)(j.pid)
+                                          : (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),
                                                     n.e("46746"),
-                                                    n.e("34983"),
+                                                    n.e("79839"),
                                                 ]).then(n.bind(n, 60594));
-                                                return (t) => {
-                                                    var n, i;
-                                                    return (0, r.jsx)(
-                                                        e,
-                                                        ((n = (function (e) {
-                                                            for (var t = 1; t < arguments.length; t++) {
-                                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                                    r = Object.keys(n);
-                                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                                    (r = r.concat(
-                                                                        Object.getOwnPropertySymbols(n).filter(
-                                                                            function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(
-                                                                                    n,
-                                                                                    e,
-                                                                                ).enumerable;
-                                                                            },
-                                                                        ),
-                                                                    )),
-                                                                    r.forEach(function (t) {
-                                                                        var r;
-                                                                        (r = n[t]),
-                                                                            t in e
-                                                                                ? Object.defineProperty(e, t, {
-                                                                                      value: r,
-                                                                                      enumerable: !0,
-                                                                                      configurable: !0,
-                                                                                      writable: !0,
-                                                                                  })
-                                                                                : (e[t] = r);
-                                                                    });
-                                                            }
-                                                            return e;
-                                                        })({}, t)),
-                                                        (i = i = { analyticsLocation: k }),
-                                                        Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(
-                                                                  n,
-                                                                  Object.getOwnPropertyDescriptors(i),
-                                                              )
-                                                            : (function (e, t) {
-                                                                  var n = Object.keys(e);
-                                                                  if (Object.getOwnPropertySymbols) {
-                                                                      var r = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, r);
-                                                                  }
-                                                                  return n;
-                                                              })(Object(i)).forEach(function (e) {
-                                                                  Object.defineProperty(
-                                                                      n,
-                                                                      e,
-                                                                      Object.getOwnPropertyDescriptor(i, e),
-                                                                  );
-                                                              }),
-                                                        n),
-                                                    );
-                                                };
+                                                return (t) => (0, r.jsx)(e, A(T({}, t), { analyticsLocation: B }));
                                             }));
                               },
                           },
                       ],
             trackingConfig: {
-                id: j.id,
+                id: C.id,
                 linkType: u.Un.REQUEST_TO_STREAM,
-                onView: T,
+                onView: P,
             },
         })
     );

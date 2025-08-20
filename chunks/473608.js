@@ -1,4 +1,4 @@
-n.d(t, { O: () => N }), n(388685), n(314940);
+n.d(t, { O: () => C }), n(388685), n(314940);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -114,7 +114,7 @@ let T = (e) => {
                   }),
               });
     },
-    N = (e) => {
+    C = (e) => {
         var t;
         let { product: n, sku: i, fallbackLabel: a } = e,
             u = null == i ? void 0 : i.id,

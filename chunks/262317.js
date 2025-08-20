@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(102172),
     x = n(525925),
     v = n(701362),
-    j = n(224184),
-    O = n(821415),
+    O = n(224184),
+    j = n(821415),
     E = n(670188),
     S = n(597998),
     P = n(314897),
@@ -156,10 +156,10 @@ let B = (0, h.$)(function (e) {
         [ey, e_] = i.useState(!1),
         [eC, ex] = i.useState(!1),
         ev = (null == em ? void 0 : em.session_id) != null,
-        ej = () => {
+        eO = () => {
             e_(!ey);
         },
-        eO = () => {
+        ej = () => {
             ($ || eg || ev) && (null == ei || ei(h.id));
         },
         eE = i.useMemo(
@@ -213,7 +213,7 @@ let B = (0, h.$)(function (e) {
             });
         },
         eT = () =>
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(O.Z, {
                 previewIsOpen: ea,
                 channel: L,
                 hangStatusActivity: ef,
@@ -221,7 +221,7 @@ let B = (0, h.$)(function (e) {
                 targetElementRef: eb,
             }),
         eN = () =>
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(j.Z, {
                 userId: h.id,
                 channel: L,
             }),
@@ -243,7 +243,7 @@ let B = (0, h.$)(function (e) {
                 : () => {
                       ($ || eg || ev) && !ey && (null == er || er(h.id));
                   },
-            onMouseLeave: ec ? void 0 : eO,
+            onMouseLeave: ec ? void 0 : ej,
             children: (0, r.jsx)(E.Z, {
                 clickTrap:
                     (null == h ? void 0 : h.id) === (null == (t = T.default.getCurrentUser()) ? void 0 : t.id) && ey,
@@ -282,7 +282,7 @@ let B = (0, h.$)(function (e) {
                                 avatarContainerClass: a()({ [M.userAvatar]: !0 }),
                                 disabled: ec && !t,
                                 selected: ey,
-                                onClick: t ? void 0 : ej,
+                                onClick: t ? void 0 : eO,
                                 onDoubleClick: eI,
                                 onContextMenu: eZ,
                                 guildId: L.guild_id,
@@ -334,7 +334,7 @@ let B = (0, h.$)(function (e) {
                                 position: "right",
                                 renderPopout: o,
                                 shouldShow: el && !ey,
-                                onRequestClose: eO,
+                                onRequestClose: ej,
                                 spacing: 0,
                                 children: () =>
                                     (0, r.jsx)(

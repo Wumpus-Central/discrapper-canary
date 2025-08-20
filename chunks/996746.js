@@ -1,15 +1,15 @@
 n.d(t, { Z: () => c });
-var i = n(951288),
-    r = n(442837),
-    s = n(696826),
-    a = n(181430),
-    l = n(720734),
-    o = n(594174);
+var r = n(951288),
+    i = n(442837),
+    a = n(696826),
+    o = n(181430),
+    s = n(720734),
+    l = n(594174);
 function c(e) {
     let { nameplate: t } = e,
-        n = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        c = (0, a.Y)({ location: "AccountPreview" });
-    return (0, i.jsx)(l.m, {
+        n = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
+        c = (0, o.Y)({ location: "AccountPreview" });
+    return (0, r.jsx)(s.m, {
         selfMute: !1,
         selfDeaf: !1,
         serverMute: !1,
@@ -17,7 +17,7 @@ function c(e) {
         suppress: !1,
         speaking: !1,
         streaming: !1,
-        status: s.Sk.ONLINE,
+        status: a.Sk.ONLINE,
         currentUser: n,
         activities: [],
         applicationStream: void 0,

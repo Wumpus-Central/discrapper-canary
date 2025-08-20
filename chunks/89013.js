@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var i = n(951288),
     l = n(647438),
-    r = n(512722),
-    s = n.n(r),
+    s = n(512722),
+    r = n.n(s),
     a = n(481060),
     o = n(626135),
     u = n(358085),
@@ -10,7 +10,7 @@ var i = n(951288),
     d = n(388032);
 function E(e) {
     let t = l.useCallback(() => {
-        s()(null != e, "text cannot be null"),
+        r()(null != e, "text cannot be null"),
             o.default.track(c.rMx.MESSAGE_MENU_GOOGLE_SEARCHED),
             window.open("https://www.google.com/search?q=".concat(encodeURIComponent(e)), "_blank");
     }, [e]);

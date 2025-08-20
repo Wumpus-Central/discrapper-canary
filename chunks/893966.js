@@ -57,13 +57,13 @@ function A(e) {
     let { guildId: t, userIds: n } = e;
     return y(t).updateMembersByMemberIds(n);
 }
-function N(e) {
+function C(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t) n = y(e.guildId).updateServerMembers(e.members) || n;
     return n;
 }
-function C(e) {
+function N(e) {
     let { guildId: t } = e,
         n = o.default.getId();
     return y(t).updateMembersByMemberIds([n]);
@@ -94,7 +94,7 @@ function D(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function L(e) {
+function x(e) {
     let { guildId: t, addedMembers: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -104,7 +104,7 @@ function L(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function x(e) {
+function L(e) {
     let { guildId: t, members: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -114,7 +114,7 @@ function x(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function M(e) {
+function j(e) {
     let { guildId: t, threads: n } = e,
         r = Object.values(n);
     if (0 === r.length) return !1;
@@ -128,11 +128,11 @@ function M(e) {
         }, []);
     return i.updateMembersByMemberIds(a);
 }
-function k(e) {
+function M(e) {
     let { guildId: t, guildMember: n } = e;
     return y(t).updateMembersByMemberIds([n.user.id]);
 }
-function j(e) {
+function k(e) {
     let t = !1;
     return (
         e.guilds.forEach((e) => {
@@ -163,12 +163,12 @@ function U(e) {
     );
 }
 function G(e) {
-    return E ? (E = !1) : v(!0), j(e);
+    return E ? (E = !1) : v(!0), k(e);
 }
 function B(e) {
     return U(e);
 }
-function V(e) {
+function Z(e) {
     let { guildMembers: t } = e,
         n = !1;
     return (
@@ -180,7 +180,7 @@ function V(e) {
         n
     );
 }
-function F(e) {
+function V(e) {
     let { guildId: t, members: n } = e;
     if (null == t || null == l.Z.getGuild(t)) return !1;
     E = !0;
@@ -189,7 +189,7 @@ function F(e) {
     for (let e of n) null == r.getMember(e.userId) && i.push(e);
     return i.length > 0 && r.updateClientMembers(i);
 }
-function Z(e) {
+function F(e) {
     let { members: t, guildId: n } = e;
     return t.length > 0 && y(n).updateServerMembers(t);
 }
@@ -336,25 +336,25 @@ g(Q, "displayName", "MemberSafetyStore");
 let J = new Q(a.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: B,
-    LOCAL_MESSAGES_LOADED: F,
-    CACHE_LOADED: V,
-    PASSIVE_UPDATE_V2: Z,
+    LOCAL_MESSAGES_LOADED: V,
+    CACHE_LOADED: Z,
+    PASSIVE_UPDATE_V2: F,
     GUILD_CREATE: I,
     GUILD_DELETE: T,
-    GUILD_MEMBERS_CHUNK_BATCH: N,
+    GUILD_MEMBERS_CHUNK_BATCH: C,
     GUILD_MEMBER_ADD: S,
     GUILD_MEMBER_UPDATE: S,
-    GUILD_MEMBER_UPDATE_LOCAL: C,
+    GUILD_MEMBER_UPDATE_LOCAL: N,
     GUILD_MEMBER_REMOVE: R,
     GUILD_ROLE_UPDATE: P,
     GUILD_ROLE_DELETE: P,
-    GUILD_MEMBER_PROFILE_UPDATE: k,
+    GUILD_MEMBER_PROFILE_UPDATE: M,
     GUILD_ROLE_MEMBER_REMOVE: w,
     GUILD_ROLE_MEMBER_ADD: w,
     THREAD_MEMBER_LIST_UPDATE: D,
-    THREAD_MEMBERS_UPDATE: L,
-    LOAD_ARCHIVED_THREADS_SUCCESS: x,
-    LOAD_FORUM_POSTS: M,
+    THREAD_MEMBERS_UPDATE: x,
+    LOAD_ARCHIVED_THREADS_SUCCESS: L,
+    LOAD_FORUM_POSTS: j,
     INITIALIZE_MEMBER_SAFETY_STORE: H,
     MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: Y,
     MEMBER_SAFETY_PAGINATION_UPDATE: W,

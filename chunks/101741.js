@@ -1,7 +1,7 @@
-n.d(t, { i: () => o });
+n.d(t, { i: () => a });
 var r = n(436283),
     i = n(647438);
-function o(e) {
+function a(e) {
     let t = (0, i.useRef)(null);
     return (
         (0, r.b)(() => {

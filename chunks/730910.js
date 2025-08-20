@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(84658),
     C = n(142961),
     N = n(232764),
-    I = n(729311),
-    E = n(966301),
+    E = n(729311),
+    I = n(966301),
     S = n(976269),
     T = n(981631),
     P = n(388032),
@@ -123,8 +123,8 @@ function A(e) {
             output: [V, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
-        if (D === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(I.j, {});
-        else if (D === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(E.Zm, {});
+        if (D === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
+        else if (D === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
         else if (D === y.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
     }
     let K = D === y.xh[y.xh.length - 1],

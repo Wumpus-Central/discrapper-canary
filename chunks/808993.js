@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
+    s = n(481060),
     o = n(388905),
-    s = n(388032),
+    a = n(388032),
     c = n(197571);
 function u(e) {
     let { email: t } = e;
@@ -15,12 +15,12 @@ function u(e) {
                 src: n(26230),
                 className: l()(c.marginBottom20, c.marginTop8),
             }),
-            (0, r.jsx)(o.Dx, { children: s.intl.string(s.t.ailkVF) }),
-            (0, r.jsx)(o.DK, { children: s.intl.format(s.t["4ZMVCA"], { email: t }) }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Dx, { children: a.intl.string(a.t.ailkVF) }),
+            (0, r.jsx)(o.DK, { children: a.intl.format(a.t["4ZMVCA"], { email: t }) }),
+            (0, r.jsx)(s.Text, {
                 className: l()(c.marginBottom8, c.marginTop20),
                 variant: "text-md/normal",
-                children: s.intl.string(s.t["dpAn+/"]),
+                children: a.intl.string(a.t["dpAn+/"]),
             }),
         ],
     });

@@ -29,8 +29,8 @@ var r = n(951288),
     T = n(235894),
     S = n(883998),
     A = n(576645),
-    N = n(981631),
-    C = n(921944),
+    C = n(981631),
+    N = n(921944),
     R = n(388032),
     P = n(393919),
     w = n(99713);
@@ -47,7 +47,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,32 +75,32 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let k = 190,
-    j = 178,
+let M = 190,
+    k = 178,
     U = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     G = (e) => {
         let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: l = "activate", source: u } = e,
             d = m.Z.getChannel(t);
         null != d &&
-            ((0, _.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: C.L.INDIRECT_ACTION }),
+            ((0, _.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
             (0, c.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            M(L({}, t), {
+                            j(x({}, t), {
                                 channel: d,
                                 message: i,
                                 onRedeem: a,
@@ -126,7 +126,7 @@ function B(e) {
                 impressionProperties: { source: f },
             },
         },
-        children: (0, r.jsx)(V, {
+        children: (0, r.jsx)(Z, {
             channel: n,
             message: o,
             onRedeem: s,
@@ -134,7 +134,7 @@ function B(e) {
         }),
     });
 }
-function V(e) {
+function Z(e) {
     let { channel: t, message: n, onRedeem: a, buttonUseState: s } = e,
         l = null != n,
         u = l && (0, T.Uw)(n),
@@ -142,7 +142,7 @@ function V(e) {
         { price: p, fetchingPrice: m, error: g } = (0, A.R2)(v.D1),
         { entitlement: E, fetchedEntitlement: O, error: I } = (0, A.t6)(v.D1),
         S = g || I,
-        { analyticsLocations: C } = (0, f.ZP)([d.Z.CONFETTI_POTION_MODAL]),
+        { analyticsLocations: N } = (0, f.ZP)([d.Z.CONFETTI_POTION_MODAL]),
         R = null != E && !E.consumed,
         P = m || !O;
     (0, i.useEffect)(
@@ -157,35 +157,35 @@ function V(e) {
         D = (0, i.useCallback)(() => {
             (0, h.Z)({
                 skuId: v.D1,
-                analyticsLocations: C,
+                analyticsLocations: N,
                 onComplete: () => {
                     w(), (0, b.gA)(v.D1);
                 },
                 variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS,
             });
-        }, [w, C]),
-        L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
-        x = (0, i.useMemo)(() => {
+        }, [w, N]),
+        x = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
+        L = (0, i.useMemo)(() => {
             if (null != E) {
                 if ("apply" === s) return 3;
-                if (E.type === N.qc2.DEVELOPER_GIFT) return 1;
+                if (E.type === C.qc2.DEVELOPER_GIFT) return 1;
                 if (R) return 2;
             }
             return 0;
         }, [E, R, s]),
-        M = (0, i.useMemo)(() => (0 === x ? 1 : u ? 2 : 3 * (null == _)), [u, _, x]);
-    return (0, r.jsx)(F, {
+        j = (0, i.useMemo)(() => (0 === L ? 1 : u ? 2 : 3 * (null == _)), [u, _, L]);
+    return (0, r.jsx)(V, {
         channel: t,
-        buttonPurchaseState: x,
-        buttonDisabledState: M,
+        buttonPurchaseState: L,
+        buttonDisabledState: j,
         price: p,
-        onActionClick: L,
+        onActionClick: x,
         loading: P,
         selectedEmoji: null != _ ? _ : void 0,
         isReaction: l,
     });
 }
-let F = (e) => {
+let V = (e) => {
         let {
                 channel: t,
                 buttonPurchaseState: n,
@@ -225,7 +225,7 @@ let F = (e) => {
                         (0, r.jsx)("div", {
                             className: P.modal,
                             ref: d,
-                            children: (0, r.jsx)(Z, {
+                            children: (0, r.jsx)(F, {
                                 channel: t,
                                 selectedEmoji: c,
                                 isReaction: u,
@@ -240,7 +240,7 @@ let F = (e) => {
                     ],
                 });
     },
-    Z = (e) => {
+    F = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
         return (0, r.jsxs)("div", {
             className: P.body,
@@ -266,7 +266,7 @@ let F = (e) => {
                             color: "text-link",
                             variant: "text-sm/normal",
                             children: R.intl.format(R.t["jerM9/"], {
-                                helpCenterLink: g.Z.getArticleURL(N.BhN.CONFETTI_POTION),
+                                helpCenterLink: g.Z.getArticleURL(C.BhN.CONFETTI_POTION),
                             }),
                         }),
                     ],
@@ -397,7 +397,7 @@ let F = (e) => {
     W = () => {
         let { entitlement: e, numPotions: t } = (0, A.t6)(v.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === N.qc2.DEVELOPER_GIFT ? R.t["b+P6ra"] : R.t.RiQ4cn;
+        let n = (null == e ? void 0 : e.type) === C.qc2.DEVELOPER_GIFT ? R.t["b+P6ra"] : R.t.RiQ4cn;
         return (0, r.jsxs)("div", {
             className: P.remaining,
             children: [
@@ -448,7 +448,7 @@ let F = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     c.zxk,
-                    M(L({}, e), {
+                    j(x({}, e), {
                         onClick: o,
                         disabled: s,
                         text: l,
@@ -464,8 +464,8 @@ let F = (e) => {
                 children: [
                     (0, r.jsx)(c.Eep, {
                         src: w,
-                        width: j,
-                        height: k,
+                        width: k,
+                        height: M,
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",

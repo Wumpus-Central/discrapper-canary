@@ -1,55 +1,54 @@
-n.d(t, { Z: () => d }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(921944),
-    l = n(388032),
-    o = n(971631);
+n.d(t, { Z: () => u }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(921944),
+    s = n(388032),
+    l = n(971631);
 function c(e) {
     let { markAsDismissed: t } = e;
-    return (
-        r.useEffect(() => {
-            let e = setTimeout(() => {
-                t(a.L.AUTO_DISMISS);
-            }, 8000);
-            return () => {
-                clearTimeout(e);
-            };
-        }, [t]),
-        (0, i.jsxs)(s.P3F, {
-            className: o.container,
-            onClick: () => {
-                t(a.L.USER_DISMISS);
-            },
-            children: [
-                (0, i.jsx)(s.Text, {
-                    variant: "text-sm/medium",
-                    color: "always-white",
-                    children: l.intl.string(l.t.fJNqJi),
-                }),
-                (0, i.jsx)("div", { className: o.pointer }),
-            ],
-        })
-    );
+    i.useEffect(() => {
+        let e = setTimeout(() => {
+            t(o.L.AUTO_DISMISS);
+        }, 8000);
+        return () => {
+            clearTimeout(e);
+        };
+    }, [t]);
+    let n = () => {
+        t(o.L.USER_DISMISS);
+    };
+    return (0, r.jsxs)(a.P3F, {
+        className: l.container,
+        onClick: n,
+        children: [
+            (0, r.jsx)(a.Text, {
+                variant: "text-sm/medium",
+                color: "always-white",
+                children: s.intl.string(s.t.fJNqJi),
+            }),
+            (0, r.jsx)("div", { className: l.pointer }),
+        ],
+    });
 }
-function d(e) {
-    let { children: t, markAsDismissed: n, targetElementRef: a } = e,
-        [l, o] = r.useState(!1);
+function u(e) {
+    let { children: t, markAsDismissed: n, targetElementRef: o } = e,
+        [s, l] = i.useState(!1);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = setTimeout(() => {
-                o(!0);
+                l(!0);
             }, 1000);
             return () => {
                 clearTimeout(e);
             };
-        }, [o]),
-        (0, i.jsx)(s.yRy, {
-            targetElementRef: a,
+        }, [l]),
+        (0, r.jsx)(a.yRy, {
+            targetElementRef: o,
             position: "top",
             align: "left",
-            shouldShow: l,
-            renderPopout: () => (0, i.jsx)(c, { markAsDismissed: n }),
+            shouldShow: s,
+            renderPopout: () => (0, r.jsx)(c, { markAsDismissed: n }),
             children: t,
         })
     );

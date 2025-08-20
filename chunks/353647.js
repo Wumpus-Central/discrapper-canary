@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -122,7 +122,7 @@ class A extends (r = i.ZP.Store) {
     }
 }
 s(A, "displayName", "ContentInventoryOutboxStore");
-let N = new A(a.Z, {
+let C = new A(a.Z, {
     CONNECTION_OPEN: T,
     LOGOUT: S,
     CONTENT_INVENTORY_FETCH_OUTBOX_START: m,

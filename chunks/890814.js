@@ -1,7 +1,7 @@
 r.d(t, { Z: () => i });
 var n = r(951288);
 r(647438);
-var l = r(443933);
+var l = r(956636);
 function i(e) {
     let { games: t, renderGame: r } = e;
     return (0, n.jsx)("ul", {

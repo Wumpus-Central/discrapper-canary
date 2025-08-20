@@ -1,25 +1,25 @@
 n.d(t, {
     B: () => m,
-    b: () => d,
+    b: () => u,
 }),
     n(388685);
 var r = n(951288),
-    i = n(647438),
-    l = n(481060),
-    o = n(893776),
-    s = n(489813),
-    a = n(388032),
+    l = n(647438),
+    i = n(481060),
+    s = n(893776),
+    a = n(489813),
+    o = n(388032),
     c = n(624463);
-function u() {
-    let [e, t] = i.useState(!1),
-        [n, s] = i.useState(!1),
-        [u, d] = i.useState(!1);
-    i.useEffect(() => {
+function d() {
+    let [e, t] = l.useState(!1),
+        [n, a] = l.useState(!1),
+        [d, u] = l.useState(!1);
+    l.useEffect(() => {
         let e;
         return (
             n &&
                 (e = setTimeout(() => {
-                    s(!1);
+                    a(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
@@ -30,7 +30,7 @@ function u() {
         if (!e) {
             t(!0);
             try {
-                await o.Z.verifyResend(), s(!0), d(!0);
+                await s.Z.verifyResend(), a(!0), u(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -38,47 +38,47 @@ function u() {
         }
     };
     return n
-        ? (0, r.jsx)(l.Text, {
+        ? (0, r.jsx)(i.Text, {
               className: c.verifyConfirmText,
               variant: "text-sm/normal",
               color: "text-feedback-positive",
-              children: a.intl.string(a.t.H3Q7U1),
+              children: o.intl.string(o.t.H3Q7U1),
           })
-        : (0, r.jsx)(l.zxk, {
+        : (0, r.jsx)(i.zxk, {
               variant: "primary",
               size: "sm",
-              text: u ? a.intl.string(a.t.WnX4Jy) : a.intl.string(a.t["13ofGh"]),
+              text: d ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t["13ofGh"]),
               loading: e,
               onClick: m,
           });
 }
-function d() {
-    return (0, r.jsx)(s.PU, {
+function u() {
+    return (0, r.jsx)(a.PU, {
         className: c.editableRequirementContainer,
-        icon: l._XJ,
-        text: a.intl.string(a.t.c6EUJC),
-        footnote: a.intl.string(a.t["jMh+TU"]),
+        icon: i._XJ,
+        text: o.intl.string(o.t.c6EUJC),
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: !1,
-        children: (0, r.jsx)(l.DY3, {
-            text: a.intl.string(a.t.mGlP39),
-            children: (0, r.jsx)(l.zxk, {
+        children: (0, r.jsx)(i.DY3, {
+            text: o.intl.string(o.t.mGlP39),
+            children: (0, r.jsx)(i.zxk, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: a.intl.string(a.t["13ofGh"]),
+                text: o.intl.string(o.t["13ofGh"]),
             }),
         }),
     });
 }
 function m(e) {
     let { isUserVerified: t } = e,
-        n = t ? a.intl.string(a.t.qY1jHB) : a.intl.string(a.t.c6EUJC);
-    return (0, r.jsx)(s.PU, {
+        n = t ? o.intl.string(o.t.qY1jHB) : o.intl.string(o.t.c6EUJC);
+    return (0, r.jsx)(a.PU, {
         className: c.editableRequirementContainer,
-        icon: l._XJ,
+        icon: i._XJ,
         text: n,
-        footnote: a.intl.string(a.t["jMh+TU"]),
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(u, {}),
+        children: (0, r.jsx)(d, {}),
     });
 }

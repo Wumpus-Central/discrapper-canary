@@ -1,4 +1,4 @@
-n.d(t, { K: () => C }), n(539854);
+n.d(t, { K: () => N }), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -90,8 +90,8 @@ let I = (0, s.Z)(),
     T = (0, s.Z)(),
     S = (0, s.Z)(),
     A = 10,
-    N = 7.23;
-function C(e) {
+    C = 7.23;
+function N(e) {
     var t,
         {
             value: n,
@@ -100,14 +100,14 @@ function C(e) {
             minLength: g,
             maxLength: b,
             error: v,
-            defaultDirty: C,
+            defaultDirty: N,
             showCharacterCountFullPadding: w,
             showCharacterCount: D,
-            showRemainingCharacterCount: L = !0,
-            "aria-labelledby": x,
-            rows: M = 3,
-            disabled: k,
-            helperText: j,
+            showRemainingCharacterCount: x = !0,
+            "aria-labelledby": L,
+            rows: j = 3,
+            disabled: M,
+            helperText: k,
             successMessage: U,
         } = e,
         G = O(e, [
@@ -128,42 +128,42 @@ function C(e) {
             "successMessage",
         ]);
     let B = (0, _.U)("UserSettingsDesignSystems"),
-        V = (0, f.m)({
+        Z = (0, f.m)({
             validateOn: "change",
             error: v,
             value: n,
             minLength: g,
             maxLength: b,
-            defaultDirty: C,
+            defaultDirty: N,
         }),
-        F = i.useContext(c.q3),
-        Z = null != x ? x : null == F ? void 0 : F.titleId,
+        V = i.useContext(c.q3),
+        F = null != L ? L : null == V ? void 0 : V.titleId,
         H = i.useMemo(() => {
             let e = [],
-                t = null == F ? void 0 : F.errorId;
+                t = null == V ? void 0 : V.errorId;
             return (
                 null != t && e.push(t),
                 null != v ? e.push(I) : (null != b && e.push(S), null != g && e.push(T)),
                 e.length > 0 ? e.join(" ") : void 0
             );
-        }, [v, null == F ? void 0 : F.errorId, b, g]),
+        }, [v, null == V ? void 0 : V.errorId, b, g]),
         Y = i.useMemo(() => {
             if (B) return;
             if (null == b) return A;
             let e = "".concat(b).length;
-            return w && (e += "".concat(b, " / ").length), N * e + A;
+            return w && (e += "".concat(b, " / ").length), C * e + A;
         }, [B, b, w]),
         W = (e) => {
             let { onChange: t } = G;
-            null == t || t(e.currentTarget.value), V.setShouldValidate(!0);
+            null == t || t(e.currentTarget.value), Z.setShouldValidate(!0);
         };
     return (0, r.jsxs)(d.J, {
-        validation: V,
-        disabled: k,
-        helperText: j,
+        validation: Z,
+        disabled: M,
+        helperText: k,
         successMessage: U,
         characterCount: B && D ? (null != (t = null == n ? void 0 : n.length) ? t : 0) : void 0,
-        characterCountMaxLength: B && L ? b : void 0,
+        characterCountMaxLength: B && x ? b : void 0,
         children: [
             (0, r.jsx)(l.t, {
                 children: (0, r.jsx)(
@@ -172,17 +172,17 @@ function C(e) {
                         E(
                             {
                                 className: o()(h.textArea, m.scrollbarDefault),
-                                "aria-labelledby": Z,
+                                "aria-labelledby": F,
                                 "aria-describedby": H,
-                                "aria-invalid": V.hasError,
+                                "aria-invalid": Z.hasError,
                                 style: { paddingRight: Y },
                                 placeholder: a,
                                 value: n,
                                 autoFocus: s,
                                 minLength: g,
                                 maxLength: b,
-                                rows: M,
-                                disabled: k,
+                                rows: j,
+                                disabled: M,
                             },
                             G,
                         ),
@@ -204,10 +204,10 @@ function C(e) {
                 ? (0, r.jsx)(R, {
                       value: n,
                       maxLength: b,
-                      hasError: V.hasError,
+                      hasError: Z.hasError,
                   })
                 : null,
-            B || D || !1 === L
+            B || D || !1 === x
                 ? null
                 : (0, r.jsx)(P, {
                       value: n,

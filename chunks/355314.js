@@ -77,11 +77,11 @@ function I(e) {
             alt: "File Upload Nitro Perk",
             src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(S, "_v2.png"),
         }),
-        N = i.useMemo(() => {
+        C = i.useMemo(() => {
             let e = _.ZP.getUserMaxFileSize(v);
             return (0, u.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
-        C = (0, d.iL)({
+        N = (0, d.iL)({
             guildId: T,
             onClick: () => {
                 window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), "_blank");
@@ -91,7 +91,7 @@ function I(e) {
             className: E.body,
             children: (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
-                children: C,
+                children: N,
             }),
         });
     return (0, r.jsx)(
@@ -104,8 +104,8 @@ function I(e) {
                 type: h.cd.UPLOAD_ERROR_UPSELL,
                 title: g.intl.string(g.t["9C+41t"]),
                 body: R,
-                context: g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: N }),
-                glowUp: C,
+                context: g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: C }),
+                glowUp: N,
                 analyticsLocation: { section: m.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,
                 subscriptionTier: h.Si.TIER_2,

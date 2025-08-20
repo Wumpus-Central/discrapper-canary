@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(607802),
     x = n(375123),
     v = n(945577),
-    j = n(56522),
-    O = n(759209),
+    O = n(56522),
+    j = n(759209),
     E = n(532428),
     S = n(406326),
     P = n(994463),
@@ -190,13 +190,13 @@ function z(e) {
             isFavoritesSearch: b,
         });
     let { showNoResultsAlt: v } = l,
-        j = v ? U.intl.string(U.t["VrK/2d"]) : U.intl.string(U.t.V6nAfH);
+        O = v ? U.intl.string(U.t["VrK/2d"]) : U.intl.string(U.t.V6nAfH);
     return (0, r.jsxs)(G, {
         children: [
             (0, r.jsx)("div", { className: a()(B.noResultsImage, { [B.alt]: v }) }),
             (0, r.jsx)("div", {
                 className: a()(B.emptyResultsText, B.noResults, { [B.alt]: v }),
-                children: j,
+                children: O,
             }),
         ],
     });
@@ -216,8 +216,8 @@ let W = [],
                 onSearchModeChange: y,
                 onPageChange: _,
                 searchMode: v,
-                onBlockedResultsClick: j,
-                searchResultsQuery: O,
+                onBlockedResultsClick: O,
+                searchResultsQuery: j,
                 isFavoritesSearch: P,
             } = e,
             Z = i.useRef(null),
@@ -435,9 +435,9 @@ let W = [],
                             onPageChange: K,
                             paginationTotalCount: H ? w : void 0,
                             renderPageWrapper: G,
-                            onBlockedResultsClick: j,
+                            onBlockedResultsClick: O,
                             searchRequestAnalyticsId: a,
-                            searchResultsQuery: O,
+                            searchResultsQuery: j,
                             isFavoritesSearch: P,
                         }),
                     ],
@@ -455,8 +455,8 @@ function Y(e) {
         n = (0, v.UX)({ location: "SearchResults" }),
         { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function (e) {
             let [t, n] = i.useState(!1),
-                r = (0, j.M)({ location: "SearchResults" }),
-                { enabled: l, force: a } = (0, O.f)({ location: "SearchResults" }),
+                r = (0, O.M)({ location: "SearchResults" }),
+                { enabled: l, force: a } = (0, j.f)({ location: "SearchResults" }),
                 o = e.type === D.aib.DMS || e.type === D.aib.CHANNEL,
                 s = (r && o) || l;
             return (

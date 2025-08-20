@@ -1,10 +1,10 @@
 n.d(t, {
-    H: () => l,
-    f: () => a,
+    H: () => s,
+    f: () => o,
 });
-var i = n(818083),
-    r = n(984134);
-let s = (0, i.B)({
+var r = n(818083),
+    i = n(984134);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-05_push_to_talk_latching",
     label: "Push to Talk Latching",
@@ -17,24 +17,24 @@ let s = (0, i.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: i } = r.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return s.getCurrentConfig(
+        { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return a.getCurrentConfig(
         { location: t },
         {
-            disable: i,
+            disable: r,
             autoTrackExposure: n,
         },
     );
 }
-function l(e) {
+function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: i } = r.Y.useExperiment({ location: t }, { autoTrackExposure: n });
-    return s.useExperiment(
+        { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
+    return a.useExperiment(
         { location: t },
         {
-            disable: i,
+            disable: r,
             autoTrackExposure: n,
         },
     );

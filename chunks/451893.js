@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s }), n(388685), n(539854);
+n.d(t, { Z: () => a }), n(388685), n(539854);
 var r = n(951288),
-    i = n(647438),
-    l = n(481060);
-let o = [
+    l = n(647438),
+    i = n(481060);
+let s = [
     {
         position: 0,
         alpha: 0,
@@ -56,55 +56,55 @@ let o = [
         alpha: 1,
     },
 ];
-function s(e) {
-    let { className: t, children: n, containerRef: s, faderSize: a, faderEdgeThreshold: c } = e,
-        u = i.useRef(null),
-        [d, m] = i.useState(0),
-        [f, h] = i.useState(0),
-        [p, x] = i.useState(0),
-        g = i.useCallback(() => {
-            null != u.current &&
-                (m(u.current.getDistanceFromTop()),
-                h(u.current.getDistanceFromBottom()),
-                x(u.current.getScrollerState().offsetHeight));
+function a(e) {
+    let { className: t, children: n, containerRef: a, faderSize: o, faderEdgeThreshold: c } = e,
+        d = l.useRef(null),
+        [u, m] = l.useState(0),
+        [f, h] = l.useState(0),
+        [x, p] = l.useState(0),
+        g = l.useCallback(() => {
+            null != d.current &&
+                (m(d.current.getDistanceFromTop()),
+                h(d.current.getDistanceFromBottom()),
+                p(d.current.getScrollerState().offsetHeight));
         }, []);
-    i.useEffect(() => {
-        if ((g(), null == s.current)) return;
+    l.useEffect(() => {
+        if ((g(), null == a.current)) return;
         let e = new ResizeObserver(() => {
             g();
         });
         return (
-            e.observe(s.current),
+            e.observe(a.current),
             () => {
                 e.disconnect();
             }
         );
-    }, [u, s, g]);
-    let b = i.useMemo(() => {
-        if (0 === d && 0 === f) return {};
+    }, [d, a, g]);
+    let v = l.useMemo(() => {
+        if (0 === u && 0 === f) return {};
         let e = [];
-        if ((e.push("to bottom"), d > 0)) {
-            let t = c > 0 ? 1 - Math.min(c, d) / c : 1;
-            for (let n = 0; n < o.length; n++) {
-                let { position: r, alpha: i } = o[n],
-                    l = (r * a).toFixed(2);
-                e.push("hsla(0, 0%, 0%, ".concat(t + i * (1 - t), ") ").concat(l, "px"));
+        if ((e.push("to bottom"), u > 0)) {
+            let t = c > 0 ? 1 - Math.min(c, u) / c : 1;
+            for (let n = 0; n < s.length; n++) {
+                let { position: r, alpha: l } = s[n],
+                    i = (r * o).toFixed(2);
+                e.push("hsla(0, 0%, 0%, ".concat(t + l * (1 - t), ") ").concat(i, "px"));
             }
         }
         if (f > 0) {
-            let t = p - a,
+            let t = x - o,
                 n = c > 0 ? 1 - Math.min(c, f) / c : 1;
-            for (let r = o.length - 1; r >= 0; r--) {
-                let { position: i, alpha: l } = o[r],
-                    s = (t + (1 - i) * a).toFixed(2);
-                e.push("hsla(0, 0%, 0%, ".concat(n + l * (1 - n), ") ").concat(s, "px"));
+            for (let r = s.length - 1; r >= 0; r--) {
+                let { position: l, alpha: i } = s[r],
+                    a = (t + (1 - l) * o).toFixed(2);
+                e.push("hsla(0, 0%, 0%, ".concat(n + i * (1 - n), ") ").concat(a, "px"));
             }
         }
         return { maskImage: "linear-gradient(".concat(e.join(","), ")") };
-    }, [f, d, c, a, p]);
-    return (0, r.jsx)(l.xVE, {
-        ref: u,
-        style: b,
+    }, [f, u, c, o, x]);
+    return (0, r.jsx)(i.xVE, {
+        ref: d,
+        style: v,
         className: t,
         onScroll: g,
         children: n,

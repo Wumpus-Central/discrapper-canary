@@ -2,9 +2,9 @@ n.d(t, {
     NE: () => P,
     QN: () => A,
     Qf: () => w,
-    RV: () => C,
+    RV: () => N,
     TY: () => D,
-    pQ: () => N,
+    pQ: () => C,
     te: () => T,
     z7: () => R,
 }),
@@ -163,7 +163,7 @@ let v = (e) => {
             communication_rank: null == r ? void 0 : r.communicationRank,
         };
     },
-    N = (e) => {
+    C = (e) => {
         let { guildId: t, channelId: n, messageId: i, roleId: a, analyticsLocations: o, action: s, section: l } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTION,
@@ -176,7 +176,7 @@ let v = (e) => {
             }),
         );
     },
-    C = (e) => {
+    N = (e) => {
         if (!(0, _.E)({ location: "UserProfileAnalyticsUtils" })) return;
         let {
             guildId: t,

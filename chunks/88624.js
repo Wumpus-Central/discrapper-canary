@@ -1,62 +1,65 @@
-n.d(t, { Z: () => f });
-var i = n(951288);
+n.d(t, { Z: () => m });
+var r = n(951288);
 n(647438);
-var r = n(512722),
-    s = n.n(r),
-    a = n(442837),
-    l = n(481060),
-    o = n(346951),
+var i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    l = n(346951),
     c = n(644744),
-    d = n(792423),
-    u = n(674985),
-    m = n(594174),
-    p = n(843200),
-    g = n(388032),
+    u = n(792423),
+    d = n(674985),
+    f = n(594174),
+    _ = n(843200),
+    p = n(388032),
     h = n(133365);
-function f() {
+function m() {
     let {
         houseMembership: e,
         isClaimed: t,
         isVerified: n,
-    } = (0, a.cj)([m.default, u.Z], () => {
-        let e = m.default.getCurrentUser();
+    } = (0, o.cj)([f.default, d.Z], () => {
+        let e = f.default.getCurrentUser();
         return (
-            s()(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"),
+            a()(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"),
             {
-                houseMembership: u.Z.getHouseMembership(),
+                houseMembership: d.Z.getHouseMembership(),
                 isClaimed: e.isClaimed(),
                 isVerified: e.verified,
             }
         );
     });
-    return (0, i.jsxs)(l.y5t, {
-        component: (0, i.jsxs)("div", {
+    function i() {
+        return null == e ? p.intl.string(p.t.iZowCQ) : p.intl.string(p.t.e7fL7O);
+    }
+    return (0, r.jsxs)(s.y5t, {
+        component: (0, r.jsxs)("div", {
             className: h.intro,
             children: [
-                (0, i.jsx)(l.X6q, {
+                (0, r.jsx)(s.X6q, {
                     variant: "heading-xxl/semibold",
                     className: h.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O),
+                    children: i(),
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",
-                    children: g.intl.string(g.t["6FaVFB"]),
+                    children: p.intl.string(p.t["6FaVFB"]),
                 }),
             ],
         }),
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, r.jsx)(_.Z, {
                 className: h.verificationNotice,
-                unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB),
+                unclaimedNotice: p.intl.string(p.t.vZU8Ki),
+                unverifiedNotice: p.intl.string(p.t.T7TYEB),
             }),
-            (0, i.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 houseMembership: e,
                 isClaimed: t,
                 isVerified: n,
             }),
-            (0, i.jsx)(o.Z, {}),
-            (0, i.jsx)(d.Z, { isHypeSquadOnlineMember: null != e }),
+            (0, r.jsx)(l.Z, {}),
+            (0, r.jsx)(u.Z, { isHypeSquadOnlineMember: null != e }),
         ],
     });
 }

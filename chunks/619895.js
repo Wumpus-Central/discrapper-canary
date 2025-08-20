@@ -1,17 +1,69 @@
 n.d(t, {
-    Q: () => d,
+    Q: () => h,
     h: () => m,
 }),
     n(35282);
 var r = n(647438),
-    l = n(228458),
-    i = n(442837),
+    i = n(228458),
+    a = n(442837),
     o = n(895924),
-    a = n(581364),
-    c = n(823379),
-    u = n(399654),
-    s = n(844439);
-function d(e) {
+    s = n(581364),
+    l = n(823379),
+    c = n(399654),
+    u = n(844439);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e) {
     let { contentType: t } = e;
     switch (t) {
         case "image/jpeg":
@@ -28,33 +80,11 @@ function d(e) {
 }
 function m(e) {
     let { channelId: t } = e,
-        { fetchState: n, recommendationsSections: d } = (function (e) {
-            let { channelId: t } = e,
-                n = l.I.CONTEXTUAL_IMAGE,
-                o = r.useMemo(
-                    () => ({
-                        channelId: t,
-                        location: n,
-                        withCommands: !0,
-                    }),
-                    [t, n],
-                );
-            r.useEffect(() => {
-                (0, u.a)(o);
-            }, [o]);
-            let { fetchState: a, recommendationsSections: c } = (0, i.cj)([s.ZP], () => ({
-                fetchState: s.ZP.getFetchState(o),
-                recommendationsSections: s.ZP.getRecommendations(o),
-            }));
-            return {
-                fetchState: a,
-                recommendationsSections: c,
-            };
-        })({ channelId: t });
+        { fetchState: n, recommendationsSections: i } = g({ channelId: t });
     return {
         fetchState: n,
         imageRecCommandContexts: r.useMemo(() => {
-            let e = d.length > 0 ? d[0].items : void 0;
+            let e = i.length > 0 ? i[0].items : void 0;
             if (void 0 === e) return [];
             let t = {};
             return (
@@ -67,104 +97,87 @@ function m(e) {
                 }),
                 Object.keys(t)
                     .map((t) => {
-                        var n, r, l, i, c, u, s, d, m, p, f, b, O, g;
+                        var n, r, i, a, l, c, u, d, _, h, m, g;
                         let E,
-                            y,
-                            h = e.find((e) => {
+                            b,
+                            y = e.find((e) => {
                                 var n;
                                 return null != (E = null == (n = e.commands) ? void 0 : n.find((e) => e.id === t));
                             });
-                        if (null == h) return null;
-                        let { application: v } = h;
+                        if (null == y) return null;
+                        let { application: O } = y;
                         if (null == E) return null;
-                        let C = (0, a.Z8)({
+                        let v = (0, s.Z8)({
                                 rootCommand: E,
                                 command: E,
-                                applicationId: v.id,
+                                applicationId: O.id,
                             }),
-                            j =
-                                null == (l = h.command_metadata) ||
-                                null == (r = l[t]) ||
+                            I =
+                                null == (i = y.command_metadata) ||
+                                null == (r = i[t]) ||
                                 null == (n = r.overrideSendCommandInfo)
                                     ? void 0
                                     : n.commandId;
-                        if (null != j) {
+                        if (null != I) {
                             let e =
-                                null != j ? (null == (f = h.commands) ? void 0 : f.find((e) => e.id === j)) : void 0;
+                                null != I ? (null == (m = y.commands) ? void 0 : m.find((e) => e.id === I)) : void 0;
                             null != e &&
-                                (y = (0, a.Z8)({
+                                (b = (0, s.Z8)({
                                     rootCommand: e,
                                     command: e,
-                                    applicationId: v.id,
+                                    applicationId: O.id,
                                 }));
                         }
                         return {
-                            command:
-                                ((O = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, C)),
-                                (g = g =
-                                    {
-                                        displayName: C.displayName
-                                            .split(/[_ ]/)
-                                            .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
-                                            .join(" "),
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(g))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(g)).forEach(function (e) {
-                                          Object.defineProperty(O, e, Object.getOwnPropertyDescriptor(g, e));
-                                      }),
-                                O),
+                            command: p(f({}, v), {
+                                displayName: v.displayName
+                                    .split(/[_ ]/)
+                                    .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+                                    .join(" "),
+                            }),
                             imageOption:
-                                null == (c = h.command_metadata) || null == (i = c[t]) ? void 0 : i.imageOption,
-                            overrideSendCommand: y,
+                                null == (l = y.command_metadata) || null == (a = l[t]) ? void 0 : a.imageOption,
+                            overrideSendCommand: b,
                             overrideSendCommandInfo:
-                                null == (s = h.command_metadata) || null == (u = s[t])
+                                null == (u = y.command_metadata) || null == (c = u[t])
                                     ? void 0
-                                    : u.overrideSendCommandInfo,
+                                    : c.overrideSendCommandInfo,
                             onlyAllowEdit:
-                                null == (m = h.command_metadata) || null == (d = m[t]) ? void 0 : d.onlyAllowEdit,
+                                null == (_ = y.command_metadata) || null == (d = _[t]) ? void 0 : d.onlyAllowEdit,
                             section: {
                                 type: o.Qi.APPLICATION,
-                                id: v.id,
-                                icon: v.icon,
-                                name: null != (b = null == v || null == (p = v.bot) ? void 0 : p.username) ? b : v.name,
-                                application: v,
+                                id: O.id,
+                                icon: O.icon,
+                                name: null != (g = null == O || null == (h = O.bot) ? void 0 : h.username) ? g : O.name,
+                                application: O,
                             },
                         };
                     })
-                    .filter(c.lm)
+                    .filter(l.lm)
             );
-        }, [d]),
+        }, [i]),
+    };
+}
+function g(e) {
+    let { channelId: t } = e,
+        n = i.I.CONTEXTUAL_IMAGE,
+        o = r.useMemo(
+            () => ({
+                channelId: t,
+                location: n,
+                withCommands: !0,
+            }),
+            [t, n],
+        );
+    r.useEffect(() => {
+        (0, c.a)(o);
+    }, [o]);
+    let { fetchState: s, recommendationsSections: l } = (0, a.cj)([u.ZP], () => ({
+        fetchState: u.ZP.getFetchState(o),
+        recommendationsSections: u.ZP.getRecommendations(o),
+    }));
+    return {
+        fetchState: s,
+        recommendationsSections: l,
     };
 }

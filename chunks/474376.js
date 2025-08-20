@@ -1,118 +1,115 @@
-n.d(t, { g: () => E }), n(539854);
-var i = n(951288);
+n.d(t, { g: () => O }), n(539854);
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(780384),
-    a = n(481060),
-    l = n(44315),
-    o = n(210887),
+var i = n(442837),
+    a = n(780384),
+    o = n(481060),
+    s = n(44315),
+    l = n(210887),
     c = n(598077),
-    d = n(246946),
-    u = n(594174),
-    m = n(626135),
-    p = n(51144),
-    g = n(480387),
+    u = n(246946),
+    d = n(594174),
+    f = n(626135),
+    _ = n(51144),
+    p = n(480387),
     h = n(726745),
-    f = n(251423),
-    b = n(383832),
-    x = n(981631),
-    _ = n(388032),
-    j = n(681285);
-function E(e) {
-    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
-        n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        E = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
-        { multiAccountUsers: C } = (0, f.L)(),
-        O = C.map((r) => {
-            let s = new c.Z(r),
-                o = s.id === (null == t ? void 0 : t.id),
-                d = r.tokenStatus === h.q.INVALID,
-                u = n ? null : "#".concat(s.discriminator);
-            return (0, i.jsx)(
-                a.sNh,
+    m = n(251423),
+    g = n(383832),
+    E = n(981631),
+    b = n(388032),
+    y = n(681285);
+function O(e) {
+    let t = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
+        n = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        O = (0, i.e7)([l.Z], () => (0, a.wj)(l.Z.theme)),
+        { multiAccountUsers: v } = (0, m.L)(),
+        I = (e) => {
+            e !== (null == t ? void 0 : t.id) &&
+                (f.default.track(E.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: E.jXE.USER_PROFILE } }),
+                p.yD(e));
+        },
+        T = v.map((i) => {
+            let a = new c.Z(i),
+                l = a.id === (null == t ? void 0 : t.id),
+                u = i.tokenStatus === h.q.INVALID,
+                d = n ? null : "#".concat(a.discriminator);
+            return (0, r.jsx)(
+                o.sNh,
                 {
-                    id: s.id,
-                    focusedClassName: j.focused,
+                    id: a.id,
+                    focusedClassName: y.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
-                        return (0, i.jsxs)("div", {
-                            className: j.userMenuItem,
+                        return (0, r.jsxs)("div", {
+                            className: y.userMenuItem,
                             children: [
-                                (0, i.jsx)(a.qEK, {
-                                    src: s.getAvatarURL(void 0, 40),
-                                    size: a.EFr.SIZE_24,
-                                    "aria-label": r.username,
+                                (0, r.jsx)(o.qEK, {
+                                    src: a.getAvatarURL(void 0, 40),
+                                    size: o.EFr.SIZE_24,
+                                    "aria-label": i.username,
                                 }),
-                                (0, i.jsxs)("div", {
-                                    className: j.userMenuUsername,
+                                (0, r.jsxs)("div", {
+                                    className: y.userMenuUsername,
                                     children: [
-                                        (0, i.jsx)(a.Text, {
-                                            className: j.userMenuText,
+                                        (0, r.jsx)(o.Text, {
+                                            className: y.userMenuText,
                                             variant: "text-sm/normal",
-                                            children: p.ZP.getUserTag(s, {
+                                            children: _.ZP.getUserTag(a, {
                                                 mode: "username",
                                                 identifiable: n ? "never" : "always",
                                             }),
                                         }),
-                                        !s.hasUniqueUsername() &&
-                                            (0, i.jsx)(a.Text, {
-                                                className: j.userMenuDiscriminator,
+                                        !a.hasUniqueUsername() &&
+                                            (0, r.jsx)(o.Text, {
+                                                className: y.userMenuDiscriminator,
                                                 variant: "text-sm/normal",
-                                                children: u,
+                                                children: d,
                                             }),
                                     ],
                                 }),
-                                o &&
-                                    (0, i.jsx)(a.owK, {
+                                l &&
+                                    (0, r.jsx)(o.owK, {
                                         size: "sm",
-                                        color: (0, l.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, l.Lq)(
-                                            (t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500,
+                                        color: (0, s.Lq)(t ? E.Ilk.WHITE_500 : E.Ilk.BRAND_500),
+                                        secondaryColor: (0, s.Lq)(
+                                            (t && O) || (t && !O) ? E.Ilk.BRAND_500 : E.Ilk.WHITE_500,
                                         ),
-                                        className: j.activeIcon,
+                                        className: y.activeIcon,
                                     }),
-                                d &&
-                                    (0, i.jsx)(a.Mgn, {
-                                        color: (0, l.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, l.Lq)(
-                                            (t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500,
+                                u &&
+                                    (0, r.jsx)(o.Mgn, {
+                                        color: (0, s.Lq)(E.Ilk.RED_400),
+                                        secondaryColor: (0, s.Lq)(
+                                            (t && O) || (t && !O) ? E.Ilk.BRAND_500 : E.Ilk.WHITE_500,
                                         ),
                                         size: "xs",
-                                        className: j.activeIcon,
+                                        className: y.activeIcon,
                                     }),
                             ],
                         });
                     },
                     action: () => {
-                        if ((null == e || e(), d)) (0, b.Z)();
-                        else {
-                            var n;
-                            (n = s.id) !== (null == t ? void 0 : t.id) &&
-                                (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: x.jXE.USER_PROFILE },
-                                }),
-                                g.yD(n));
-                        }
+                        null == e || e(), u ? (0, g.Z)() : I(a.id);
                     },
                 },
-                s.id,
+                a.id,
             );
         });
     return (
-        O.push(
-            (0, i.jsxs)(i.Fragment, {
+        T.push(
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(a.Clw, {}),
-                    (0, i.jsx)(a.sNh, {
+                    (0, r.jsx)(o.Clw, {}),
+                    (0, r.jsx)(o.sNh, {
                         id: "manage-accounts",
-                        label: _.intl.string(_.t.WbFpq6),
+                        label: b.intl.string(b.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, b.Z)();
+                            null == e || e(), (0, g.Z)();
                         },
                     }),
                 ],
             }),
         ),
-        O
+        T
     );
 }

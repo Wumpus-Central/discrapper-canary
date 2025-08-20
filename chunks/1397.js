@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(937111),
     x = n(270801),
     v = n(652730),
-    j = n(41776),
-    O = n(657352),
+    O = n(41776),
+    j = n(657352),
     E = n(33154),
     S = n(144114),
     P = n(703656),
@@ -120,9 +120,9 @@ class W extends i.PureComponent {
                 isStaff: C,
                 guildJoinRequest: x,
                 showLinkedLobbyApplicationLoadingIndicator: v,
-                requiredLinkedLobbyApplication: j,
+                requiredLinkedLobbyApplication: O,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: O, shouldShowLurkerModeSuccessPopout: E } = this.state,
+            { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: E } = this.state,
             S = {
                 theme: p,
                 useReducedMotion: _,
@@ -160,7 +160,7 @@ class W extends i.PureComponent {
                         (S.buttonColor = s.Tt.BRAND),
                         (S.onButtonClick = this.handleShowMemberVerification);
             }
-        else if (v || null == j)
+        else if (v || null == O)
             i && !C
                 ? ((S.message = F.intl.string(F.t["2dThMD"])),
                   (S.buttonText = F.intl.string(F.t["50gfOj"])),
@@ -177,12 +177,12 @@ class W extends i.PureComponent {
                       (S.countdown = d));
         else {
             var P;
-            (S.imageSrc = null != (P = j.getIconURL(U.Si.SMALL)) ? P : void 0),
-                (S.message = F.intl.format(F.t.EvDn1N, { name: j.name })),
-                null != j.connectionEntrypointUrl &&
+            (S.imageSrc = null != (P = O.getIconURL(U.Si.SMALL)) ? P : void 0),
+                (S.message = F.intl.format(F.t.EvDn1N, { name: O.name })),
+                null != O.connectionEntrypointUrl &&
                     ((S.buttonText = F.intl.string(F.t.S0W8Z2)),
                     (S.onButtonClick = () => {
-                        window.open(j.connectionEntrypointUrl, "_blank");
+                        window.open(O.connectionEntrypointUrl, "_blank");
                     }));
         }
         return (0, r.jsx)(c.yRy, {
@@ -204,7 +204,7 @@ class W extends i.PureComponent {
                                     ? (0, r.jsx)(c.yRy, {
                                           targetElementRef: this.upsellTargetRef,
                                           renderPopout: this.renderLurkerModeUpsellPopout,
-                                          shouldShow: O,
+                                          shouldShow: j,
                                           position: "top",
                                           children: (e) =>
                                               (0, r.jsx)(
@@ -237,7 +237,7 @@ class W extends i.PureComponent {
                     { guild: n } = this.props;
                 return (
                     a()(null != n, "This guildID cannot be null"),
-                    (0, r.jsx)(O.Z, {
+                    (0, r.jsx)(j.Z, {
                         onClose: t,
                         guild: n,
                     })
@@ -288,7 +288,7 @@ class W extends i.PureComponent {
             G(this, "handleVerifyPhone", () => {
                 (0, c.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("76540"), n.e("92304")]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                         return (t) => (0, r.jsx)(e, V({ reason: S.L.GUILD_PHONE_REQUIRED }, t));
                     },
                     { modalKey: B.M },
@@ -380,7 +380,7 @@ function q(e) {
         c = (0, o.e7)([A.Z], () => A.Z.getCheck(a)),
         u = i.type === L.d4z.GUILD_ANNOUNCEMENT && null != s && s.features.has(L.oNc.NEWS),
         d = (0, o.e7)([Z.Z], () => (u ? Z.Z.getFollowerStatsForChannel(i.id) : null)),
-        p = (0, o.e7)([j.Z], () => j.Z.isLurking(a)),
+        p = (0, o.e7)([O.Z], () => O.Z.isLurking(a)),
         f = (0, o.e7)([R.default], () => R.default.getCurrentUser()),
         m = null != (t = null == f ? void 0 : f.isStaff()) && t,
         g = (0, o.e7)([T.ZP], () => {
@@ -389,7 +389,7 @@ function q(e) {
         }),
         b = !!(0, _.Dc)(s),
         x = (0, o.e7)([v.Z], () => v.Z.shouldShowPopout(a)),
-        O = (0, o.e7)([w.Z], () => w.Z.can(L.Plq.SEND_MESSAGES, i)),
+        j = (0, o.e7)([w.Z], () => w.Z.can(L.Plq.SEND_MESSAGES, i)),
         E = (0, o.e7)([C.Z], () => C.Z.getRequest(a)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, k.Z)(i.linkedLobby),
         D = z(V({}, c), {
@@ -399,7 +399,7 @@ function q(e) {
             shouldShowLurkerModeSuccessPopout: x,
             showLurkerModeUpsellPopout: p && null != s && M.Uu(L.Plq.SEND_MESSAGES, i),
             theme: I.Z.theme,
-            canSendMessages: O,
+            canSendMessages: j,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: b,
             showMemberVerificationModal: g && b,

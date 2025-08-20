@@ -1,43 +1,43 @@
-n.d(t, { n: () => g });
-var i = n(951288);
+n.d(t, { n: () => p });
+var r = n(951288);
 n(647438);
-var r = n(925513),
-    s = n(63063),
-    a = n(526156),
-    l = n(821035),
-    o = n(768604),
+var i = n(925513),
+    a = n(63063),
+    o = n(526156),
+    s = n(821035),
+    l = n(768604),
     c = n(838436),
-    d = n(526761),
-    u = n(726985),
-    m = n(981631),
-    p = n(388032);
-function g() {
-    let e = (0, r.v6)(),
+    u = n(526761),
+    d = n(726985),
+    f = n(981631),
+    _ = n(388032);
+function p() {
+    let e = (0, i.v6)(),
         t = [
             {
-                title: p.intl.string(p.t.GYpoAg),
-                component: () => (0, i.jsx)(l.P, { isNested: !0 }),
+                title: _.intl.string(_.t.GYpoAg),
+                component: () => (0, r.jsx)(s.P, { isNested: !0 }),
                 orientation: "vertical",
-                setting: u.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
+                setting: d.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
             {
-                title: p.intl.string(p.t["16/3Bg"]),
-                component: o.I,
+                title: _.intl.string(_.t["16/3Bg"]),
+                component: l.I,
                 orientation: "vertical",
-                setting: u.s6.GORE_MEDIA_REDACTION,
+                setting: d.s6.GORE_MEDIA_REDACTION,
             },
         ];
-    return (0, i.jsxs)(c.U, {
-        setting: u.s6.SENSITIVE_CONTENT_FILTERS,
-        scrollPosition: d.FY.EXPLICIT_MEDIA_REDACTION_V2,
+    return (0, r.jsxs)(c.U, {
+        setting: d.s6.SENSITIVE_CONTENT_FILTERS,
+        scrollPosition: u.FY.EXPLICIT_MEDIA_REDACTION_V2,
         children: [
-            (0, i.jsx)(c.H, {
-                header: p.intl.string(p.t["Hj/Bur"]),
-                description: p.intl.format(p.t.dliU4u, { learnMoreLink: s.Z.getArticleURL(e) }),
+            (0, r.jsx)(c.H, {
+                header: _.intl.string(_.t["Hj/Bur"]),
+                description: _.intl.format(_.t.dliU4u, { learnMoreLink: a.Z.getArticleURL(e) }),
             }),
-            (0, i.jsx)(a.Z, {
-                parentSetting: u.s6.CONTENT_SOCIAL,
-                settingsSection: m.oAB.CONTENT_AND_SOCIAL,
+            (0, r.jsx)(o.Z, {
+                parentSetting: d.s6.CONTENT_SOCIAL,
+                settingsSection: f.oAB.CONTENT_AND_SOCIAL,
                 tabs: t,
                 orientation: "vertical",
             }),

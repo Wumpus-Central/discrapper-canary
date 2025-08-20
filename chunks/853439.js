@@ -1,13 +1,43 @@
 n.d(t, { Z: () => p });
 var r,
-    i,
-    l = n(442837),
-    o = n(570140),
-    a = n(131704),
+    i = n(442837),
+    a = n(570140),
+    o = n(131704),
     s = n(592125);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let c = {},
     u = {};
-class d extends (i = l.ZP.Store) {
+function d(e) {
+    let { templates: t, guildId: n } = e;
+    c[n] = t;
+}
+function f(e) {
+    let { selectedTemplate: t, guildId: n } = e,
+        r = Object.values(s.Z.getMutableGuildChannelsForGuild(n));
+    t.listings.forEach((e) => {
+        e.channels.forEach((e) => {
+            let t = r.find((t) => t.name === e.name);
+            if (void 0 !== t) e.id = t.id;
+            else if (!(e.id in u)) {
+                let t = (0, o.kt)(e);
+                u[e.id] = t;
+            }
+        });
+    });
+}
+class _ extends (r = i.ZP.Store) {
     getTemplates(e) {
         return c[e];
     }
@@ -19,31 +49,8 @@ class d extends (i = l.ZP.Store) {
         return u[e];
     }
 }
-(r = "displayName") in d
-    ? Object.defineProperty(d, r, {
-          value: "GuildRoleSubscriptionTierTemplatesStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[r] = "GuildRoleSubscriptionTierTemplatesStore");
-let p = new d(o.Z, {
-    GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
-        let { selectedTemplate: t, guildId: n } = e,
-            r = Object.values(s.Z.getMutableGuildChannelsForGuild(n));
-        t.listings.forEach((e) => {
-            e.channels.forEach((e) => {
-                let t = r.find((t) => t.name === e.name);
-                if (void 0 !== t) e.id = t.id;
-                else if (!(e.id in u)) {
-                    let t = (0, a.kt)(e);
-                    u[e.id] = t;
-                }
-            });
-        });
-    },
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: function (e) {
-        let { templates: t, guildId: n } = e;
-        c[n] = t;
-    },
+l(_, "displayName", "GuildRoleSubscriptionTierTemplatesStore");
+let p = new _(a.Z, {
+    GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: f,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d,
 });

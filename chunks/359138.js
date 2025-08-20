@@ -1,92 +1,108 @@
-n.d(t, { Z: () => u }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
-    l = n(747545),
-    o = n(131951),
+n.d(t, { Z: () => g }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(747545),
+    l = n(131951),
     c = n(388032),
-    d = n(766625);
-function u() {
-    let e = o.Z.getCameraComponent(),
-        t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
-        [n, u] = r.useState(!1),
-        m = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
+    u = n(766625);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = 387,
+    m = 218;
+function g() {
+    let e = l.Z.getCameraComponent(),
+        t = (0, a.e7)([l.Z], () => l.Z.getVideoDeviceId()),
+        [n, d] = i.useState(!1),
+        _ = (0, a.e7)([l.Z], () => l.Z.isVideoAvailable());
     return n
-        ? (0, i.jsx)("div", {
-              className: d.cameraWrapper,
-              children: (0, i.jsxs)("div", {
-                  className: d.camera,
+        ? (0, r.jsx)("div", {
+              className: u.cameraWrapper,
+              children: (0, r.jsxs)("div", {
+                  className: u.camera,
                   children: [
-                      (0, i.jsx)(e, {
+                      (0, r.jsx)(e, {
                           deviceId: t,
-                          width: 387,
-                          height: 218,
+                          width: h,
+                          height: m,
                           disabled: !n,
                       }),
-                      (0, i.jsx)(l.S, {}),
+                      (0, r.jsx)(s.S, {}),
                   ],
               }),
           })
-        : (0, i.jsx)("div", {
-              className: d.cameraWrapper,
-              children: (0, i.jsx)(a.ua7, {
-                  text: m ? null : c.intl.string(c.t["8jSzSU"]),
-                  children: (e) => {
-                      var t, n;
-                      return (0, i.jsx)(
-                          a.zxk,
-                          ((t = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      i = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      i.forEach(function (t) {
-                                          var i;
-                                          (i = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: i,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = i);
-                                      });
-                              }
-                              return e;
-                          })(
+        : (0, r.jsx)("div", {
+              className: u.cameraWrapper,
+              children: (0, r.jsx)(o.ua7, {
+                  text: _ ? null : c.intl.string(c.t["8jSzSU"]),
+                  children: (e) =>
+                      (0, r.jsx)(
+                          o.zxk,
+                          p(
+                              f(
+                                  {
+                                      variant: "primary",
+                                      text: c.intl.string(c.t.JIf4v7),
+                                  },
+                                  e,
+                              ),
                               {
-                                  variant: "primary",
-                                  text: c.intl.string(c.t.JIf4v7),
+                                  onClick: () => d(!0),
+                                  disabled: !_,
                               },
-                              e,
-                          )),
-                          (n = n =
-                              {
-                                  onClick: () => u(!0),
-                                  disabled: !m,
-                              }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var i = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, i);
-                                    }
-                                    return n;
-                                })(Object(n)).forEach(function (e) {
-                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                }),
-                          t),
-                      );
-                  },
+                          ),
+                      ),
               }),
           });
 }

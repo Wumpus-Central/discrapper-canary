@@ -90,7 +90,7 @@ let T = function (e) {
                       });
                   }
                 : void 0,
-        N =
+        C =
             null != v
                 ? (0, r.jsx)("img", {
                       alt: "",
@@ -102,7 +102,7 @@ let T = function (e) {
                       }),
                   })
                 : null,
-        C = (0, d.ZP)({
+        N = (0, d.ZP)({
             applicationId: t,
             location: "GameMention",
             source: u.m1.GameMention,
@@ -138,13 +138,13 @@ let T = function (e) {
                         ),
                         {
                             onClick: (n) => {
-                                if (C.shouldOpenGameProfile && null != t) {
+                                if (N.shouldOpenGameProfile && null != t) {
                                     var r;
                                     null == (r = e.onClick) || r.call(e, n);
                                 } else R();
                             },
                             children: [
-                                (0, r.jsx)(g.Z, { children: N }),
+                                (0, r.jsx)(g.Z, { children: C }),
                                 (0, r.jsx)("span", {
                                     className: b.name,
                                     children:

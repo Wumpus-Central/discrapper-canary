@@ -63,7 +63,7 @@ function A() {
         children: I.intl.string(I.t["/Nz9ra"]),
     });
 }
-let N = o().throttle(
+let C = o().throttle(
     (e) => {
         g.Z.increment(
             {
@@ -80,7 +80,7 @@ let N = o().throttle(
     100,
     { trailing: !1 },
 );
-class C extends i.PureComponent {
+class N extends i.PureComponent {
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
@@ -101,7 +101,7 @@ class C extends i.PureComponent {
             uses_client_mods: r,
             error_level: "fatal",
         }),
-            N(r),
+            C(r),
             O.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
@@ -157,4 +157,4 @@ class C extends i.PureComponent {
             S(this, "discordErrorsSet", !1);
     }
 }
-let R = C;
+let R = N;

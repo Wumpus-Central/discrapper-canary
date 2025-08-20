@@ -22,8 +22,8 @@ var r = n(951288),
     C = n(569545),
     x = n(102172),
     v = n(352978),
-    j = n(880395),
-    O = n(670188),
+    O = n(880395),
+    j = n(670188),
     E = n(199902),
     S = n(314897),
     P = n(430824),
@@ -94,7 +94,7 @@ let L = 16 / 9,
             h = i.useRef(null),
             { reducedMotion: f } = i.useContext(c.Sfi),
             { blocked: m, ignored: g, id: b } = t;
-        return (0, r.jsx)(O.Z, {
+        return (0, r.jsx)(j.Z, {
             targetElementRef: h,
             user: o,
             guildId: a,
@@ -147,8 +147,8 @@ let L = 16 / 9,
             } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
             { id: m, blocked: g, ignored: y } = t,
-            j = (0, s.Wu)([E.Z], () => E.Z.getAllActiveStreams(), []),
-            { selectedParticipant: O, largeStream: S } = (0, s.cj)([b.Z], () => ({
+            O = (0, s.Wu)([E.Z], () => E.Z.getAllActiveStreams(), []),
+            { selectedParticipant: j, largeStream: S } = (0, s.cj)([b.Z], () => ({
                 selectedParticipant: null != l ? b.Z.getSelectedParticipant(l.id) : null,
                 largeStream: null != l && b.Z.getStageStreamSize(l.id),
             })),
@@ -156,18 +156,18 @@ let L = 16 / 9,
                 (e, t) => {
                     if (
                         e.type === R.fO.STREAM &&
-                        0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
+                        0 === O.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
                     ) {
                         if (!(0, x.p9)(l, Z.Z, P.Z, I.Z, _.Z)[0]) return;
                         (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == O ? void 0 : O.id) === e.id
+                    (null == j ? void 0 : j.id) === e.id
                         ? S
                             ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1))
                             : u.Z.updateStageStreamSize(l.id, !0)
                         : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
                 },
-                [j, l, O, S],
+                [O, l, j, S],
             );
         return (0, r.jsx)(
             N.Z,
@@ -200,7 +200,7 @@ let L = 16 / 9,
         a()(null != _, "Channel cannot be guildless");
         let { user: x } = i,
             v = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            O = (0, s.e7)([T.ZP], () => T.ZP.isModerator(x.id, l.id), [l.id, x.id]);
+            j = (0, s.e7)([T.ZP], () => T.ZP.isModerator(x.id, l.id), [l.id, x.id]);
         if (null == v || v.type === R.fO.ACTIVITY) return null;
         let E = (e) => {
                 (0, g.h)({
@@ -243,7 +243,7 @@ let L = 16 / 9,
                     case R.fO.USER:
                     default:
                         if ((E(R.TH.USER), i))
-                            return (0, j.D)(t, x, l, { context: p }, (e, t) =>
+                            return (0, O.D)(t, x, l, { context: p }, (e, t) =>
                                 (0, y.o)({
                                     menuName: e,
                                     menuItemProps: t,
@@ -292,7 +292,7 @@ let L = 16 / 9,
                   guildId: _,
                   user: x,
                   width: c,
-                  isModerator: O,
+                  isModerator: j,
                   onContextMenu: P,
                   inPopout: p === w.IlC.POPOUT,
               })
@@ -303,7 +303,7 @@ let L = 16 / 9,
                   guildId: _,
                   user: x,
                   width: c,
-                  isModerator: O,
+                  isModerator: j,
                   onContextMenu: P,
                   inPopout: p === w.IlC.POPOUT,
               });

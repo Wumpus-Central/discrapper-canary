@@ -60,7 +60,7 @@ function v(e) {
         I = _.default.getCurrentUser(),
         T = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [S, A] = (0, f.US)(T),
-        [N, C] = i.useState(!1),
+        [C, N] = i.useState(!1),
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
     function D() {
@@ -70,24 +70,24 @@ function v(e) {
             config: E,
         }),
             null == n || n(),
-            C(!1);
+            N(!1);
     }
     i.useEffect(() => {
         let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (A(h.L.DISMISS), setTimeout(() => C(e), 200));
+        e && (A(h.L.DISMISS), setTimeout(() => N(e), 200));
     }, [S, A]);
-    let L = N ? m.intl.string(m.t["Osi/u7"]) : O(t),
-        x = N ? m.intl.string(m.t.ORK94u) : void 0;
+    let x = C ? m.intl.string(m.t["Osi/u7"]) : O(t),
+        L = C ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {
         position: "top",
         text: (0, r.jsx)(y, {
             textColor: "always-white",
-            tooltipText: L,
-            headingText: x,
+            tooltipText: x,
+            headingText: L,
         }),
         color: u.ua7.Colors.BRAND,
-        forceOpen: N,
-        "aria-label": L,
+        forceOpen: C,
+        "aria-label": x,
         tooltipClassName: g.tooltip,
         children: [
             (0, r.jsx)("input", {

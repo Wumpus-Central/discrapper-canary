@@ -197,13 +197,13 @@ function c(e) {
                 subLanguage: "graphql",
             },
         },
-        N = {
+        C = {
             className: "string",
             begin: "`",
             end: "`",
             contains: [e.BACKSLASH_ESCAPE, I],
         },
-        C = {
+        N = {
             className: "comment",
             variants: [
                 e.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
@@ -243,14 +243,14 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE,
             ],
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, S, A, N, { match: /\$\d+/ }, v];
+        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, S, A, C, { match: /\$\d+/ }, v];
     I.contains = R.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
         contains: ["self"].concat(R),
     });
-    let P = [].concat(C, I.contains),
+    let P = [].concat(N, I.contains),
         w = P.concat([
             {
                 begin: /(\s*)\(/,
@@ -268,7 +268,7 @@ function c(e) {
             keywords: E,
             contains: w,
         },
-        L = {
+        x = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, "(", c.concat(/\./, d), ")*")],
@@ -288,7 +288,7 @@ function c(e) {
                 },
             ],
         },
-        x = {
+        L = {
             relevance: 0,
             match: c.either(
                 /\bJSON/,
@@ -301,13 +301,13 @@ function c(e) {
                 _: [...i, ...a],
             },
         },
-        M = {
+        j = {
             label: "use_strict",
             className: "meta",
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/,
         },
-        k = {
+        M = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/],
@@ -324,7 +324,7 @@ function c(e) {
             contains: [D],
             illegal: /%/,
         },
-        j = {
+        k = {
             relevance: 0,
             match: /\b[A-Z][A-Z_0-9]+\b/,
             className: "variable.constant",
@@ -345,7 +345,7 @@ function c(e) {
             className: "property",
             relevance: 0,
         },
-        V = {
+        Z = {
             match: [/get|set/, /\s+/, d, /(?=\()/],
             className: {
                 1: "keyword",
@@ -353,9 +353,9 @@ function c(e) {
             },
             contains: [{ begin: /\(\)/ }, D],
         },
-        F = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        Z = {
-            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
+        V = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        F = {
+            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(V)],
             keywords: "async",
             className: {
                 1: "keyword",
@@ -369,7 +369,7 @@ function c(e) {
         keywords: E,
         exports: {
             PARAMS_CONTAINS: w,
-            CLASS_REFERENCE: x,
+            CLASS_REFERENCE: L,
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -378,33 +378,33 @@ function c(e) {
                 binary: "node",
                 relevance: 5,
             }),
-            M,
+            j,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             T,
             S,
             A,
-            N,
             C,
+            N,
             { match: /\$\d+/ },
             v,
-            x,
+            L,
             {
                 scope: "attr",
                 match: d + c.lookahead(":"),
                 relevance: 0,
             },
-            Z,
+            F,
             {
                 begin: "(" + e.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
                 keywords: "return throw case",
                 relevance: 0,
                 contains: [
-                    C,
+                    N,
                     e.REGEXP_MODE,
                     {
                         className: "function",
-                        begin: F,
+                        begin: V,
                         returnBegin: !0,
                         end: "\\s*=>",
                         contains: [
@@ -465,7 +465,7 @@ function c(e) {
                     },
                 ],
             },
-            k,
+            M,
             { beginKeywords: "while if switch catch for" },
             {
                 begin:
@@ -497,9 +497,9 @@ function c(e) {
                 contains: [D],
             },
             G,
-            j,
-            L,
-            V,
+            k,
+            x,
+            Z,
             { match: /\$[(.]/ },
         ],
     };

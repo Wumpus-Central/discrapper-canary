@@ -1,58 +1,58 @@
 t.a(e, async function (e, r) {
     try {
-        t.d(n, { d: () => f });
+        t.d(n, { d: () => j });
         var l = t(951288);
         t(647438);
         var c = t(823282),
-            i = t(442837),
-            o = t(339085),
-            a = t(633302),
+            a = t(442837),
+            i = t(339085),
+            o = t(633302),
             s = t(590956),
             u = t(488968),
             d = t(176354),
             h = e([c]);
-        function f(e) {
+        function j(e) {
             let { value: n, type: t } = e,
                 r = (0, c.Kq)(),
-                i =
+                a =
                     1 === r.length &&
                     "paragraph" === r[0].type &&
                     1 === r[0].value.length &&
                     "emoji" === r[0].value[0].type;
             switch (t) {
                 case "unicode":
-                    return (0, l.jsx)(j, {
-                        value: n,
-                        jumboable: i,
-                    });
-                case "custom":
                     return (0, l.jsx)(m, {
                         value: n,
-                        jumboable: i,
+                        jumboable: a,
+                    });
+                case "custom":
+                    return (0, l.jsx)(f, {
+                        value: n,
+                        jumboable: a,
                     });
             }
         }
-        function j(e) {
+        function m(e) {
             let { value: n, jumboable: t } = e,
                 r = d.ZP.getURL(n),
-                c = a.ZP.convertSurrogateToName(n),
-                i = (0, u.d)();
+                c = o.ZP.convertSurrogateToName(n),
+                a = (0, u.d)();
             return (0, l.jsx)(s.c, {
                 node: {
                     name: c,
                     src: r,
                     jumboable: t,
                 },
-                channelId: null == i ? void 0 : i.channelId,
-                messageId: null == i ? void 0 : i.messageId,
+                channelId: null == a ? void 0 : a.channelId,
+                messageId: null == a ? void 0 : a.messageId,
             });
         }
-        function m(e) {
+        function f(e) {
             var n;
             let { value: t, jumboable: r } = e,
                 c = (0, u.d)(),
-                a = null == c ? void 0 : c.guildId,
-                d = (0, i.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(a).getById(t.id), [a, t.id]),
+                o = null == c ? void 0 : c.guildId,
+                d = (0, a.e7)([i.ZP], () => i.ZP.getDisambiguatedEmojiContext(o).getById(t.id), [o, t.id]),
                 h = null != (n = null == d ? void 0 : d.name) ? n : t.name;
             return (
                 null != d && d.require_colons && (h = ":".concat(d.name, ":")),

@@ -1,44 +1,45 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(194082),
+    a = n(194082),
     o = n(739566),
-    a = n(834129),
-    s = n(388032);
-function c(e) {
+    s = n(834129),
+    l = n(388032);
+let c = 20;
+function u(e) {
     var t;
-    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
-        f = (0, o.ZP)(n),
-        g = null == (t = n.call) ? void 0 : t.duration,
-        _ = p(f),
-        h = s.intl.format(s.t.FKXvaG, {
-            username: f.nick,
-            activityName: null != u ? u.name : "unknown",
-            onJoinStream: d,
-            usernameHook: _,
+    let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: _, compact: p } = e,
+        h = (0, o.ZP)(n),
+        m = null == (t = n.call) ? void 0 : t.duration,
+        g = _(h),
+        E = l.intl.format(l.t.FKXvaG, {
+            username: h.nick,
+            activityName: null != d ? d.name : "unknown",
+            onJoinStream: f,
+            usernameHook: g,
         });
     return (
-        null != g &&
-            (h = s.intl.format(s.t.NEFxtb, {
-                username: f.nick,
-                duration: g.humanize(),
-                channelName: c.name,
-                usernameHook: _,
+        null != m &&
+            (E = l.intl.format(l.t.NEFxtb, {
+                username: h.nick,
+                duration: m.humanize(),
+                channelName: u.name,
+                usernameHook: g,
             })),
-        (0, r.jsx)(a.Z, {
+        (0, r.jsx)(s.Z, {
             iconNode:
-                null != g
+                null != m
                     ? (0, r.jsx)(i.g5r, {
                           size: "custom",
                           color: "currentColor",
-                          width: 20,
-                          height: 20,
+                          width: c,
+                          height: c,
                       })
-                    : (0, r.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
+                    : (0, r.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: m,
-            children: h,
+            compact: p,
+            children: E,
         })
     );
 }

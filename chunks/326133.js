@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,31 +96,31 @@ function R(e, t) {
 let P = 490,
     w = 490,
     D = 245,
-    L = 200,
-    x = 120,
-    M = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, M, k;
-        let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: V, barsHeight: F } = e,
-            Z = (0, h.Dt)(),
+    x = 200,
+    L = 120,
+    j = i.forwardRef(function (e, t) {
+        var n, a, T, A, R, j, M;
+        let { channel: k, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: V } = e,
+            F = (0, h.Dt)(),
             H = (0, l.e7)([E.Z], () => {
                 var e;
-                return null != (e = E.Z.getGuild(j.guild_id)) ? e : null;
-            }, [j.guild_id]),
+                return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
+            }, [k.guild_id]),
             Y = i.useRef(null),
-            [W, K, z] = (0, O.Z)(N(S({}, e), { guild: H }), t, Y),
+            [W, K, z] = (0, O.Z)(C(S({}, e), { guild: H }), t, Y),
             q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             X = (0, _.DJ)(W.selectedIndex);
-        (0, p.KR)(Z, W.isVisible, X);
+        (0, p.KR)(F, W.isVisible, X);
         let Q = (0, y.Z)({
                 editorHeight: G,
                 type: U,
                 state: W,
             }),
             J = (0, l.e7)([d.ZP], () => {
-                let e = d.ZP.getSelfEmbeddedActivityForChannel(j.id),
+                let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
                     t = d.ZP.getActivityPanelMode();
-                return (0, u.l5)(j) && null != e && (0, f.p)(e.location) === j.id && t === v.Ez.PANEL;
-            }, [j]),
+                return (0, u.l5)(k) && null != e && (0, f.p)(e.location) === k.id && t === v.Ez.PANEL;
+            }, [k]),
             $ = i.useMemo(
                 () =>
                     (null == Q ? void 0 : Q.top) == null &&
@@ -148,7 +148,7 @@ let P = 490,
             (T = W.query.typeInfo.renderResults({
                 results: W.query.results,
                 selectedIndex: W.selectedIndex,
-                channel: j,
+                channel: k,
                 guild: H,
                 query: W.query.queryText,
                 options: W.query.options,
@@ -167,15 +167,15 @@ let P = 490,
             en = P;
         null != Q &&
             (en = (null == (A = U.autocomplete) ? void 0 : A.small)
-                ? L
+                ? x
                 : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS
                   ? w
                   : D);
-        let er = Math.max(G, null != (M = null == V || null == (a = V.current) ? void 0 : a.clientHeight) ? M : 0),
+        let er = Math.max(G, null != (j = null == Z || null == (a = Z.current) ? void 0 : a.clientHeight) ? j : 0),
             ei = Math.min(0.5 * window.innerHeight, er);
-        en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
+        en = Math.min(window.innerHeight - L - ei - (null != V ? V : 0), en);
         let ea = (0, r.jsx)(_.ZP, {
-            id: Z,
+            id: F,
             className: o()(I.autocomplete, et),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
@@ -184,13 +184,13 @@ let P = 490,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
-                            n = C(e, ["ref"]);
+                            n = N(e, ["ref"]);
                         return (0, r.jsx)(
                             c.h21,
-                            N(
+                            C(
                                 S(
                                     {
-                                        id: Z,
+                                        id: F,
                                         ref: (e) => {
                                             var n;
                                             (t.current =
@@ -204,7 +204,7 @@ let P = 490,
                                     className: I.scroller,
                                     style: { maxHeight: en },
                                     role: "listbox",
-                                    "aria-labelledby": (0, _.rp)(Z),
+                                    "aria-labelledby": (0, _.rp)(F),
                                     children: ee,
                                 },
                             ),
@@ -219,7 +219,7 @@ let P = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: Q,
                       positionKey: $,
-                      position: null != (k = e.position) ? k : "top",
+                      position: null != (M = e.position) ? M : "top",
                       align: "left",
                       spacing: 8,
                       autoInvert: !0,

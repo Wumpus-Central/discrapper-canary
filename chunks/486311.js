@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(989308),
     _ = n(388032),
     y = n(969649);
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-let j = {
+let v = {
         animation: {
             BEG: 0,
             END: 75,
@@ -55,31 +55,31 @@ let j = {
     C = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
             C = (0, m.ZP)(t),
-            E = i.useCallback(() => {
+            x = i.useCallback(() => {
                 var e;
                 (0, p.jd)(t),
                     (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     null == C || null == (e = C.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, C]),
-            x = i.useCallback(() => {
+            E = i.useCallback(() => {
                 var e;
                 switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
                     case f.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(g.jG, j({ guildId: t }, C.popout));
                     case f.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(g.$h, j({ guildId: t }, C.popout));
                     case f.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(g.yI, j({ guildId: t }, C.popout));
                     case f.J.NEW_PERK_AVAILABLE:
-                        return (0, r.jsx)(g.cO, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(g.cO, j({ guildId: t }, C.popout));
                     default:
                         return (0, r.jsx)("div", {});
                 }
             }, [t, null == C ? void 0 : C.popout]),
             S = (0, s.s9z)(s.JQI),
-            P = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-            [I, N] = i.useState(null),
-            w = null == I ? "animation" : "LOOP";
+            I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
+            [P, N] = i.useState(null),
+            w = null == P ? "animation" : "LOOP";
         i.useEffect(() => {
             (null == C ? void 0 : C.popout) == null && N(null);
         }, [null == C ? void 0 : C.popout]);
@@ -89,16 +89,16 @@ let j = {
             T = i.useRef(null);
         return (0, r.jsx)(s.yRy, {
             targetElementRef: T,
-            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || P),
+            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: "bottom",
             position: "right",
-            renderPopout: x,
+            renderPopout: E,
             children: (e) => {
                 var i, a;
                 return (0, r.jsx)(
                     u.m,
-                    ((i = v({}, e)),
+                    ((i = j({}, e)),
                     (a = a =
                         {
                             ref: T,
@@ -117,7 +117,7 @@ let j = {
                                     children: (0, r.jsx)(s.kci, {
                                         nextScene: w,
                                         className: y.lottie,
-                                        sceneSegments: j,
+                                        sceneSegments: v,
                                         importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
                                         rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
@@ -128,7 +128,7 @@ let j = {
                                 children: _.intl.string(O.default.yv3DJC),
                             }),
                             selected: l,
-                            onClick: E,
+                            onClick: x,
                             showUnread: (null == C ? void 0 : C.showUnread) === !0,
                             trailing: null == C ? void 0 : C.trailing,
                         }),

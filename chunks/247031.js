@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(84613),
     C = n(740903),
     N = n(1080),
-    I = n(981631),
-    E = n(388032),
+    E = n(981631),
+    I = n(388032),
     S = n(121884),
     T = n(620842);
 function P(e, t, n) {
@@ -119,11 +119,11 @@ function Z(e) {
                     (0, r.jsx)(c.Text, {
                         className: S.reasonHeader,
                         variant: "text-xs/normal",
-                        children: E.intl.string(E.t["9Ki66O"]),
+                        children: I.intl.string(I.t["9Ki66O"]),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        children: null != a.reason && "" !== a.reason ? a.reason : E.intl.string(E.t["t+2Zcn"]),
+                        children: null != a.reason && "" !== a.reason ? a.reason : I.intl.string(I.t["t+2Zcn"]),
                     }),
                     null != p
                         ? (0, r.jsx)(c.Text, {
@@ -142,13 +142,13 @@ function Z(e) {
                     children: [
                         (0, r.jsx)(c.zxk, {
                             variant: "critical-secondary",
-                            text: E.intl.string(E.t.UPcIa2),
+                            text: I.intl.string(I.t.UPcIa2),
                             onClick: f,
                             loading: d,
                         }),
                         (0, r.jsx)(c.zxk, {
                             variant: "primary",
-                            text: E.intl.string(E.t.i4jeWV),
+                            text: I.intl.string(I.t.i4jeWV),
                             onClick: o,
                         }),
                     ],
@@ -234,7 +234,7 @@ class A extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        v.Z.setSection(I.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION);
+        v.Z.setSection(E.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
         v.Z.setSearchQuery(e);
@@ -319,9 +319,9 @@ class A extends i.PureComponent {
                                   height: 212,
                               }),
                               (0, r.jsx)(c.OZU, {
-                                  note: E.intl.string(E.t.zfCsAw),
+                                  note: I.intl.string(I.t.zfCsAw),
                                   style: { maxWidth: 300 },
-                                  children: E.intl.string(E.t.ZEiY1N),
+                                  children: I.intl.string(I.t.ZEiY1N),
                               }),
                           ],
                       }));
@@ -330,7 +330,7 @@ class A extends i.PureComponent {
                     c.hjN,
                     {
                         tag: c.RB0.H1,
-                        title: E.intl.formatToPlainString(E.t["bW+JJy"], { bans: s }),
+                        title: I.intl.formatToPlainString(I.t["bW+JJy"], { bans: s }),
                         children: [
                             (0, r.jsxs)("div", {
                                 className: S.settingsHeader,
@@ -338,7 +338,7 @@ class A extends i.PureComponent {
                                     (0, r.jsx)(c.R94, {
                                         type: c.geA.DESCRIPTION,
                                         className: S.description,
-                                        children: E.intl.format(E.t.JcZ36u, {
+                                        children: I.intl.format(I.t.JcZ36u, {
                                             onModerationClick: this.handleModerationClick,
                                         }),
                                     }),
@@ -347,8 +347,8 @@ class A extends i.PureComponent {
                                             size: "sm",
                                             className: S.searchBar,
                                             query: null != a ? a : "",
-                                            placeholder: E.intl.string(E.t.rTL1RE),
-                                            "aria-label": E.intl.string(E.t.rTL1RE),
+                                            placeholder: I.intl.string(I.t.rTL1RE),
+                                            "aria-label": I.intl.string(I.t.rTL1RE),
                                             onChange: this.handleQueryChange,
                                             onClear: this.handleQueryClear,
                                         }),
@@ -378,7 +378,7 @@ function k() {
     let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], s.isEqual),
         { enabled: n } = _.T.useExperiment(
             {
-                guildId: null != (e = null == t ? void 0 : t.id) ? e : I.lds,
+                guildId: null != (e = null == t ? void 0 : t.id) ? e : E.lds,
                 location: "4d6318_1",
             },
             { autoTrackExposure: !0 },

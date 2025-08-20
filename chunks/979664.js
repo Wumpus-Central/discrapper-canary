@@ -17,7 +17,7 @@ function g(e) {
         g = i.useCallback(
             (e, t) => {
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("67040")]).then(
+                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>

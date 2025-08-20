@@ -73,19 +73,19 @@ function g() {
         }, []);
     let A = {};
     for (let { code: e, promotion: t } of O) A[t.id] = e;
-    let N = m(n, g, E, A),
-        C = new Set(
-            N.map((e) => {
+    let C = m(n, g, E, A),
+        N = new Set(
+            C.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
         );
     return {
         promotionsLoaded: b && (!S || null != e || E),
-        activeOutboundPromotions: N,
+        activeOutboundPromotions: C,
         claimedEndedOutboundPromotions: O.filter((e) => {
             let { promotion: t } = e;
-            return !C.has(t.id);
+            return !N.has(t.id);
         }).filter((e) => (0, f.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: A,
         addClaimedOutboundPromotionCode: I,

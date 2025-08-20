@@ -1,11 +1,11 @@
 n.d(t, {
-    Yf: () => u,
-    d0: () => a,
+    Yf: () => o,
+    d0: () => s,
 });
 var r = n(436283),
     i = n(101741),
-    o = n(647438);
-class u {
+    a = n(647438);
+class o {
     isDefaultPrevented() {
         return this.nativeEvent.defaultPrevented;
     }
@@ -33,8 +33,8 @@ class u {
             (this.type = e);
     }
 }
-function a(e) {
-    let t = (0, o.useRef)({
+function s(e) {
+    let t = (0, a.useRef)({
         isFocused: !1,
         observer: null,
     });
@@ -47,7 +47,7 @@ function a(e) {
     let n = (0, i.i)((t) => {
         null == e || e(t);
     });
-    return (0, o.useCallback)(
+    return (0, a.useCallback)(
         (e) => {
             if (
                 e.target instanceof HTMLButtonElement ||
@@ -56,16 +56,13 @@ function a(e) {
                 e.target instanceof HTMLSelectElement
             ) {
                 t.current.isFocused = !0;
-                let r = e.target;
-                r.addEventListener(
-                    "focusout",
-                    (e) => {
+                let r = e.target,
+                    i = (e) => {
                         (t.current.isFocused = !1),
-                            r.disabled && n(new u("blur", e)),
+                            r.disabled && n(new o("blur", e)),
                             t.current.observer && (t.current.observer.disconnect(), (t.current.observer = null));
-                    },
-                    { once: !0 },
-                ),
+                    };
+                r.addEventListener("focusout", i, { once: !0 }),
                     (t.current.observer = new MutationObserver(() => {
                         if (t.current.isFocused && r.disabled) {
                             var e;

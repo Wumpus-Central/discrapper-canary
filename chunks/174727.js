@@ -1,45 +1,45 @@
-n.d(t, {
-    MN: () => s,
+t.d(n, {
+    MN: () => o,
     XG: () => d,
     ao: () => i,
     kD: () => u,
     lj: () => c,
     my: () => r,
-    pN: () => o,
+    pN: () => s,
 }),
-    n(415506),
-    n(190126),
-    n(368063),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
-    n(388685);
-var l = n(943351),
-    a = n(388032);
-let i = (e, t, n) => (-1 === e ? 0 : e - (t * e) / n);
+    t(415506),
+    t(190126),
+    t(368063),
+    t(65234),
+    t(111804),
+    t(490233),
+    t(97749),
+    t(388685);
+var a = t(943351),
+    l = t(388032);
+let i = (e, n, t) => (-1 === e ? 0 : e - (n * e) / t);
 function r(e) {
     return e / 1000;
 }
-let s = (e, t, n) => (-1 === e ? n : e + (t * (n - e)) / n),
-    o = (e, t, n, l) => (t >= 0 && n > 0 ? ((e - (t - (n * t) / l)) * 100) / n : (100 * e) / l).toFixed(4),
-    u = (e, t, n, l) =>
-        (t >= 0 && n > 0 ? -((e - (t + (n * (l - t)) / l)) * 100) / n : -(100 * e * 1) / l + 100).toFixed(4);
+let o = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
+    s = (e, n, t, a) => (n >= 0 && t > 0 ? ((e - (n - (t * n) / a)) * 100) / t : (100 * e) / a).toFixed(4),
+    u = (e, n, t, a) =>
+        (n >= 0 && t > 0 ? -((e - (n + (t * (a - n)) / a)) * 100) / t : -(100 * e * 1) / a + 100).toFixed(4);
 async function c(e) {
-    if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !l.bp.has(e.type))
-        throw Error(a.intl.formatToPlainString(a.t["2y3xGR"], { fileType: e.type }));
-    let t = new Audio(URL.createObjectURL(e));
+    if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.bp.has(e.type))
+        throw Error(l.intl.formatToPlainString(l.t["2y3xGR"], { fileType: e.type }));
+    let n = new Audio(URL.createObjectURL(e));
     return (
         await new Promise((e) => {
-            let n = () => {
-                e(), t.removeEventListener("canplaythrough", n);
+            let t = () => {
+                e(), n.removeEventListener("canplaythrough", t);
             };
-            t.addEventListener("canplaythrough", n), t.load();
+            n.addEventListener("canplaythrough", t), n.load();
         }),
-        t
+        n
     );
 }
-async function d(e, t) {
-    let n = await fetch(e);
-    return new File([await n.blob()], t, { type: "audio/mp3" });
+async function d(e, n) {
+    let t = await fetch(e);
+    return new File([await t.blob()], n, { type: "audio/mp3" });
 }

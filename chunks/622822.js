@@ -1,8 +1,8 @@
 n.d(t, {
     Gb: () => P,
-    I8: () => C,
+    I8: () => N,
     Kt: () => O,
-    RW: () => N,
+    RW: () => C,
     T5: () => w,
     Yt: () => b,
     a1: () => v,
@@ -76,8 +76,8 @@ let I = () => {
     },
     S = (e) => !!I() && null != e && R(s.Z.getChannel(e)),
     A = (e) => y() && S(e),
-    N = (e) => !!A(e) && ((0, d.mN)(f.L0.NSFW_VOICE_CHANNEL), !0);
-function C(e, t, n) {
+    C = (e) => !!A(e) && ((0, d.mN)(f.L0.NSFW_VOICE_CHANNEL), !0);
+function N(e, t, n) {
     if (T(e)) {
         let e = null != n && g.includes(n) ? n : f.L0.NSFW_SERVER;
         (0, d.mN)(e);

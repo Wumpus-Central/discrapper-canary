@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => N });
 var r,
     i = n(843611),
     a = n(442837),
@@ -65,7 +65,7 @@ function S(e) {
 function A() {
     (m = null), (g = null);
 }
-class N extends (r = a.ZP.PersistedStore) {
+class C extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, a;
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
@@ -94,8 +94,8 @@ class N extends (r = a.ZP.PersistedStore) {
         return m === e ? h : E[e];
     }
 }
-p(N, "displayName", "SelectedGuildStore"), p(N, "persistKey", "SelectedGuildStore");
-let C = new N(o.Z, {
+p(C, "displayName", "SelectedGuildStore"), p(C, "persistKey", "SelectedGuildStore");
+let N = new C(o.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     CHANNEL_SELECT: v,

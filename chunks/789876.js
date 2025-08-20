@@ -77,7 +77,7 @@
     function A(e) {
         return p++, l.push(e), T(), p;
     }
-    function N(e) {
+    function C(e) {
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
@@ -106,7 +106,7 @@
         }
     else
         (a.requestIdleCallback = A),
-            (a.cancelIdleCallback = N),
+            (a.cancelIdleCallback = C),
             a.document &&
                 document.addEventListener &&
                 (a.addEventListener("scroll", O, !0),
@@ -127,6 +127,6 @@
                     }));
     return {
         request: A,
-        cancel: N,
+        cancel: C,
     };
 });

@@ -17,14 +17,14 @@ var r,
     O = n(306680),
     _ = n(944486),
     y = n(594174),
-    v = n(451478),
-    j = n(276952),
+    j = n(451478),
+    v = n(276952),
     C = n(682662),
-    E = n(662146),
-    x = n(674552),
+    x = n(662146),
+    E = n(674552),
     S = n(981631),
-    P = n(388032),
-    I = n(514483);
+    I = n(388032),
+    P = n(514483);
 function N(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ class R extends (r = l.PureComponent) {
         e(),
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !j.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
@@ -119,7 +119,7 @@ class R extends (r = l.PureComponent) {
         this.setState({ animating: !0 }, () =>
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !j.Z.isFocused(),
                     height: 0,
                     opacity: 0,
                     scale: 0,
@@ -174,7 +174,7 @@ class R extends (r = l.PureComponent) {
                             selected: n || h,
                             ariaLabel:
                                 null != t
-                                    ? P.intl.formatToPlainString(P.t.hKarnZ, {
+                                    ? I.intl.formatToPlainString(I.t.hKarnZ, {
                                           mentions: r,
                                           name: t,
                                       })
@@ -199,20 +199,20 @@ class R extends (r = l.PureComponent) {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(C.H, {
                 children: [
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(v.Z, {
                         hovered: !m && h,
                         selected: !m && n,
                         unread: !m && d,
-                        className: I.pill,
+                        className: P.pill,
                     }),
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(x.Z, {
                         text: null != t ? t : "",
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, x.Or)({
+                            lowerBadge: r > 0 ? (0, E.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, E.Or)({
                                 audio: l,
                                 video: a,
                                 screenshare: s,
@@ -290,12 +290,12 @@ let D = l.forwardRef(function (e, t) {
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, s.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: v } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
-        j = o === n,
+        { isFacepileEnabled: j } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
+        v = o === n,
         C = !1,
-        E = !1;
-    j && ((C = u === S.WtW.VOICE), (E = u === S.WtW.VIDEO));
-    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+        x = !1;
+    v && ((C = u === S.WtW.VOICE), (x = u === S.WtW.VIDEO));
+    let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
         Z(w({}, e), {
@@ -305,11 +305,11 @@ let D = l.forwardRef(function (e, t) {
             selected: g === n,
             badge: y,
             audio: C,
-            video: E,
+            video: x,
             stream: p,
-            isCurrentUserInThisDMCall: j,
-            isGDMFacepileEnabled: v,
-            size: x,
+            isCurrentUserInThisDMCall: v,
+            isGDMFacepileEnabled: j,
+            size: E,
             treeItemProps: l,
         }),
     );

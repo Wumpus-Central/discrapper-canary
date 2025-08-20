@@ -1,4 +1,4 @@
-e.d(n, { Z: () => u });
+e.d(n, { Z: () => s });
 var l = e(951288);
 e(647438);
 var i = e(442837),
@@ -6,7 +6,7 @@ var i = e(442837),
     o = e(726521),
     a = e(924301),
     c = e(388032);
-function u(t) {
+function s(t) {
     let n = (0, i.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(t), [t]);
     return null == t || null == n
         ? null

@@ -34,7 +34,7 @@ function T(e) {
         instance_id: "example-cl-instance",
         platform: y.S4.DESKTOP,
     };
-    function N(e) {
+    function C(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
         return T && null != n
             ? (0, r.jsxs)(r.Fragment, {
@@ -81,7 +81,7 @@ function T(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: "theme-dark",
-                            children: N({
+                            children: C({
                                 onActive: o,
                                 onForceIdle: f,
                                 idle: i,

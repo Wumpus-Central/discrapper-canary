@@ -23,13 +23,13 @@ var r,
     T = n(70956),
     S = n(251625),
     A = n(823379),
-    N = n(780570),
-    C = n(358085),
+    C = n(780570),
+    N = n(358085),
     R = n(998502),
     P = n(804739),
     w = n(7956),
     D = n(981631);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,18 +42,18 @@ function L(e, t, n) {
         e
     );
 }
-let x = 5,
-    M = c()().subtract(1, "week"),
-    k = [],
-    j = "",
+let L = 5,
+    j = c()().subtract(1, "week"),
+    M = [],
+    k = "",
     U = !1;
 function G(e, t) {
     return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: "base" });
 }
 function B(e, t) {
-    return null != e && c()(e.createdAt).isAfter(M) && 0 === t;
+    return null != e && c()(e.createdAt).isAfter(j) && 0 === t;
 }
-let V = {
+let Z = {
         [D.iEv.NAME]: G,
         [D.iEv.PLATFORM]: (e, t, n) => {
             let r = e.libraryApplication.getDistributor(),
@@ -78,8 +78,8 @@ let V = {
                       : 1,
         [D.iEv.ACTIONS]: null,
     },
-    F = (0, S.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
-    Z = (0, S.oH)((e) =>
+    V = (0, S.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
+    F = (0, S.oH)((e) =>
         e.filter(
             (e) =>
                 null != e.libraryApplication &&
@@ -88,7 +88,7 @@ let V = {
     ),
     H = (0, S.oH)((e, t) => e.filter((e) => a()(t.toLowerCase(), e.application.name.toLowerCase()))),
     Y = (0, S.oH)((e, t, n, r) => {
-        let i = V[t];
+        let i = Z[t];
         if (null == i) return e;
         let a = [...e].sort(i);
         return n === D.sHY.DESCENDING ? a.reverse() : a;
@@ -102,14 +102,14 @@ function K(e, t) {
 }
 function z(e) {
     let { query: t } = e;
-    j = t;
+    k = t;
 }
 function q(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
     let a = f.Z.getApplication(e.id);
     if (null == a) return null;
     let o = K(a, n);
-    return (t.add(e.id), (0, N.Je)(e) || v.Z.isInstalled(e.id, e.branchId))
+    return (t.add(e.id), (0, C.Je)(e) || v.Z.isInstalled(e.id, e.branchId))
         ? {
               key: "".concat(e.id, "-").concat(e.branchId),
               application: a,
@@ -128,7 +128,7 @@ function q(e, t, n, r, i) {
                   branchId: e.branchId,
               }),
               isUpdatingFlags: E.Z.isUpdatingFlags(e.id, e.branchId),
-              shouldShowInLibrary: (0, N.d0)(a, e, b.Z),
+              shouldShowInLibrary: (0, C.d0)(a, e, b.Z),
               defaultAction: (0, w.i)(e, v.Z, I.Z),
           }
         : null;
@@ -178,13 +178,13 @@ function Q() {
         );
     return (
         (U = null != g.Z.lastFetched && E.Z.fetched),
-        !s().isEqual(a, k) &&
-            ((k = a),
-            C.isPlatformEmbedded &&
+        !s().isEqual(a, M) &&
+            ((M = a),
+            N.isPlatformEmbedded &&
                 R.ZP.setSystemTrayApplications(
-                    Z(k)
+                    F(M)
                         .map((e) => e.application)
-                        .slice(0, x),
+                        .slice(0, L),
                 ),
             !0)
     );
@@ -195,29 +195,29 @@ class J extends (r = u.ZP.Store) {
             this.syncWith([O.Z, h.default], () => !0);
     }
     get applicationFilterQuery() {
-        return j;
-    }
-    get applicationViewItems() {
         return k;
     }
+    get applicationViewItems() {
+        return M;
+    }
     get launchableApplicationViewItems() {
-        return Z(k);
+        return F(M);
     }
     get libraryApplicationViewItems() {
-        return F(k);
+        return V(M);
     }
     get filteredLibraryApplicationViewItems() {
-        return H(this.libraryApplicationViewItems, j);
+        return H(this.libraryApplicationViewItems, k);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, h.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
-        return W(k);
+        return W(M);
     }
     get hasFetchedApplications() {
         return U;
     }
 }
-L(J, "displayName", "ApplicationViewStore");
+x(J, "displayName", "ApplicationViewStore");
 let $ = new J(d.Z, { LIBRARY_APPLICATION_FILTER_UPDATE: z });

@@ -1,20 +1,20 @@
-n.d(t, { Z: () => x }), n(388685);
-var r = n(951288),
-    o = n(647438),
-    i = n(120356),
-    l = n.n(i),
-    a = n(803948),
-    c = n(442837),
-    s = n(481060),
-    d = n(607070),
-    u = n(872269),
-    f = n(228168),
-    p = n(388032),
-    m = n(361623),
-    b = n(583140);
+t.d(n, { Z: () => h }), t(388685);
+var r = t(951288),
+    o = t(647438),
+    l = t(120356),
+    i = t.n(l),
+    c = t(803948),
+    a = t(442837),
+    s = t(481060),
+    d = t(607070),
+    u = t(872269),
+    f = t(228168),
+    m = t(388032),
+    p = t(361623),
+    b = t(583140);
 let g = {
         [f.qb.WIDGET_ADDED]: {
-            message: p.intl.string(p.t.fFP1U1),
+            message: m.intl.string(m.t.fFP1U1),
             icon: (0, r.jsx)(s.dz2, {
                 size: "sm",
                 color: s.TVs.colors.STATUS_POSITIVE.css,
@@ -22,7 +22,7 @@ let g = {
             toast_id: "user_profile_widget_added",
         },
         [f.qb.WIDGET_REMOVED]: {
-            message: p.intl.string(p.t.zzsK7u),
+            message: m.intl.string(m.t.zzsK7u),
             icon: (0, r.jsx)(s.dz2, {
                 size: "sm",
                 color: s.TVs.colors.STATUS_POSITIVE.css,
@@ -30,7 +30,7 @@ let g = {
             toast_id: "user_profile_widget_removed",
         },
         [f.qb.WIDGET_SAVE_FAILURE]: {
-            message: p.intl.string(p.t["84MExs"]),
+            message: m.intl.string(m.t["84MExs"]),
             icon: (0, r.jsx)(s.Uz9, {
                 size: "sm",
                 color: s.TVs.colors.STATUS_DANGER.css,
@@ -39,35 +39,35 @@ let g = {
             type: s.ToastType.FAILURE,
         },
     },
-    h = (e) => {
-        let { message: t, icon: n, type: o } = e;
+    x = (e) => {
+        let { message: n, icon: t, type: o } = e;
         return (0, r.jsxs)("div", {
-            className: l()(b.toast, m.toast),
+            className: i()(b.toast, p.toast),
             "data-type": o,
             children: [
                 (0, r.jsx)("div", {
-                    className: m.toastIcon,
-                    children: n,
+                    className: p.toastIcon,
+                    children: t,
                 }),
                 (0, r.jsx)(s.Text, {
                     color: "header-primary",
                     variant: "text-sm/semibold",
-                    children: t,
+                    children: n,
                 }),
             ],
         });
     },
-    x = (e) => {
-        let { className: t, onAutoHide: n } = e,
-            i = (0, u.be)(),
-            f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, b] = o.useState(!1),
-            [x, _] = o.useState(null);
+    h = (e) => {
+        let { className: n, onAutoHide: t } = e,
+            l = (0, u.be)(),
+            f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+            [m, b] = o.useState(!1),
+            [h, j] = o.useState(null);
         o.useEffect(() => {
-            null !== i ? (b(!0), _(g[i]), s.uvj.announce(g[i].message)) : b(!1);
-        }, [i]);
-        let j = (0, s.Yzy)(
-            p,
+            null !== l ? (b(!0), j(g[l]), s.uvj.announce(g[l].message)) : b(!1);
+        }, [l]);
+        let v = (0, s.Yzy)(
+            m,
             {
                 from: {
                     transform: f ? "translateY(0)" : "translateY(-12px)",
@@ -92,48 +92,48 @@ let g = {
         );
         return (
             o.useEffect(() => {
-                if (p) {
+                if (m) {
                     let e = setTimeout(() => {
-                        null == n || n();
+                        null == t || t();
                     }, 2000);
                     return () => clearTimeout(e);
                 }
-            }, [p, n]),
+            }, [m, t]),
             (0, r.jsx)(r.Fragment, {
-                children: j(
-                    (e, n) =>
-                        n &&
-                        null !== x &&
-                        (0, r.jsx)(a.animated.div, {
-                            className: l()(t, m.toastContainer),
+                children: v(
+                    (e, t) =>
+                        t &&
+                        null !== h &&
+                        (0, r.jsx)(c.animated.div, {
+                            className: i()(n, p.toastContainer),
                             style: e,
                             children: (0, r.jsx)(
-                                h,
+                                x,
                                 (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                    for (var n = 1; n < arguments.length; n++) {
+                                        var t = null != arguments[n] ? arguments[n] : {},
+                                            r = Object.keys(t);
                                         "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                                 }),
                                             )),
-                                            r.forEach(function (t) {
+                                            r.forEach(function (n) {
                                                 var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
+                                                (r = t[n]),
+                                                    n in e
+                                                        ? Object.defineProperty(e, n, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = r);
+                                                        : (e[n] = r);
                                             });
                                     }
                                     return e;
-                                })({}, x),
+                                })({}, h),
                             ),
                         }),
                 ),

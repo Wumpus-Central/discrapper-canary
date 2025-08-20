@@ -1,113 +1,113 @@
-n.d(t, { Z: () => b });
-var r = n(951288),
-    o = n(647438),
-    i = n(481060),
-    l = n(81897),
-    a = n(906732),
-    c = n(785717),
-    s = n(806729),
-    d = n(857302),
-    u = n(892001),
-    f = n(252417),
-    p = n(388032),
-    m = n(878449);
+t.d(n, { Z: () => b });
+var r = t(951288),
+    o = t(647438),
+    l = t(481060),
+    i = t(81897),
+    c = t(906732),
+    a = t(785717),
+    s = t(806729),
+    d = t(857302),
+    u = t(892001),
+    f = t(252417),
+    m = t(388032),
+    p = t(878449);
 function b(e) {
-    let { user: t, guildId: n, channelId: b, onClose: g } = e,
-        { mutualFriends: h } = (0, s.Z)(t),
-        { analyticsLocations: x } = (0, a.ZP)(),
-        { context: _, trackUserProfileAction: j } = (0, c.KZ)(),
-        v = (0, l.Z)();
+    let { user: n, guildId: t, channelId: b, onClose: g } = e,
+        { mutualFriends: x } = (0, s.Z)(n),
+        { analyticsLocations: h } = (0, c.ZP)(),
+        { context: j, trackUserProfileAction: v } = (0, a.KZ)(),
+        _ = (0, i.Z)();
     return (
         o.useEffect(() => {
-            (0, d.Z)(t.id, v);
-        }, [t.id, v]),
-        (0, r.jsx)(i.zJl, {
-            className: m.listScroller,
+            (0, d.Z)(n.id, _);
+        }, [n.id, _]),
+        (0, r.jsx)(l.zJl, {
+            className: p.listScroller,
             fade: !0,
             children:
-                null == h
+                null == x
                     ? (0, r.jsx)("div", {
-                          className: m.empty,
-                          children: (0, r.jsx)(i.$jN, {}),
+                          className: p.empty,
+                          children: (0, r.jsx)(l.$jN, {}),
                       })
-                    : 0 === h.length
+                    : 0 === x.length
                       ? (0, r.jsxs)("div", {
-                            className: m.empty,
+                            className: p.empty,
                             children: [
-                                (0, r.jsx)("div", { className: m.emptyIconFriends }),
+                                (0, r.jsx)("div", { className: p.emptyIconFriends }),
                                 (0, r.jsx)("div", {
-                                    className: m.emptyText,
-                                    children: p.intl.string(p.t["/5p4g4"]),
+                                    className: p.emptyText,
+                                    children: m.intl.string(m.t["/5p4g4"]),
                                 }),
                             ],
                         })
-                      : h.map((e) => {
-                            let { key: t, user: o, status: i } = e;
+                      : x.map((e) => {
+                            let { key: n, user: o, status: l } = e;
                             return (0, r.jsx)(
                                 f.Z,
                                 {
                                     user: o,
-                                    status: i,
-                                    guildId: n,
+                                    status: l,
+                                    guildId: t,
                                     channelId: b,
                                     onSelect: () => {
-                                        var e, t, n;
+                                        var e, n, t;
                                         null == g || g(),
-                                            j({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            v({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = o.id),
                                             (0, u.openUserProfileModal)(
-                                                ((t = (function (e) {
-                                                    for (var t = 1; t < arguments.length; t++) {
-                                                        var n = null != arguments[t] ? arguments[t] : {},
-                                                            r = Object.keys(n);
+                                                ((n = (function (e) {
+                                                    for (var n = 1; n < arguments.length; n++) {
+                                                        var t = null != arguments[n] ? arguments[n] : {},
+                                                            r = Object.keys(t);
                                                         "function" == typeof Object.getOwnPropertySymbols &&
                                                             (r = r.concat(
-                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(t, e)
                                                                         .enumerable;
                                                                 }),
                                                             )),
-                                                            r.forEach(function (t) {
+                                                            r.forEach(function (n) {
                                                                 var r;
-                                                                (r = n[t]),
-                                                                    t in e
-                                                                        ? Object.defineProperty(e, t, {
+                                                                (r = t[n]),
+                                                                    n in e
+                                                                        ? Object.defineProperty(e, n, {
                                                                               value: r,
                                                                               enumerable: !0,
                                                                               configurable: !0,
                                                                               writable: !0,
                                                                           })
-                                                                        : (e[t] = r);
+                                                                        : (e[n] = r);
                                                             });
                                                     }
                                                     return e;
-                                                })({}, _)),
-                                                (n = n =
+                                                })({}, j)),
+                                                (t = t =
                                                     {
                                                         userId: e,
-                                                        sourceAnalyticsLocations: x,
+                                                        sourceAnalyticsLocations: h,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                                    : (function (e, t) {
-                                                          var n = Object.keys(e);
+                                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                                                    : (function (e, n) {
+                                                          var t = Object.keys(e);
                                                           if (Object.getOwnPropertySymbols) {
                                                               var r = Object.getOwnPropertySymbols(e);
-                                                              n.push.apply(n, r);
+                                                              t.push.apply(t, r);
                                                           }
-                                                          return n;
-                                                      })(Object(n)).forEach(function (e) {
+                                                          return t;
+                                                      })(Object(t)).forEach(function (e) {
                                                           Object.defineProperty(
-                                                              t,
+                                                              n,
                                                               e,
-                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                              Object.getOwnPropertyDescriptor(t, e),
                                                           );
                                                       }),
-                                                t),
+                                                n),
                                             );
                                     },
                                 },
-                                t,
+                                n,
                             );
                         }),
         })

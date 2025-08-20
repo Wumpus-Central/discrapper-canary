@@ -17,21 +17,21 @@ var r = n(951288),
     O = n(822857),
     _ = n(479766),
     y = n(275388),
-    v = n(331663),
-    j = n(981631),
+    j = n(331663),
+    v = n(981631),
     C = n(921944),
-    E = n(46140);
-let x = "orb-announcement-modal-key";
+    x = n(46140);
+let E = "orb-announcement-modal-key";
 function S() {
     let { enabled: e } = (0, O.hl)({ location: "virtual_currency_announcement_modal" }),
         t = (0, o.e7)([_.Z], () => _.Z.onboardingModalOpenedPrior),
         { user: S } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
-        P = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
-        I = (0, y.GE)(x),
-        N = (0, m.EO)(S) || P || I,
+        I = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
+        P = (0, y.GE)(E),
+        N = (0, m.EO)(S) || I || P,
         [w, Z] = (0, p.US)(
             e && !N ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
-            ...v.b.useSelectedDismissibleContent,
+            ...j.b.useSelectedDismissibleContent,
         );
     i.useEffect(() => {
         w !== a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
@@ -59,12 +59,12 @@ function S() {
                                         groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING,
                                     }),
                                     (0, b.Y)({
-                                        pageType: j.ZY5.ORBS_ANNOUNCEMENT_MODAL,
-                                        sectionType: j.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                        ctaObject: j.qAy.CTA_TO_ORB_INTRO_QUEST,
+                                        pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
+                                        sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
+                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST,
                                     }),
                                     (0, f.navigateToQuestHome)({
-                                        questId: E.V6,
+                                        questId: x.V6,
                                         fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL,
                                     }),
                                     n();
@@ -73,11 +73,11 @@ function S() {
                     };
                 },
                 {
-                    modalKey: x,
+                    modalKey: E,
                     onCloseRequest: () => {
-                        Z(C.L.USER_DISMISS), (0, c.Mr3)(x);
+                        Z(C.L.USER_DISMISS), (0, c.Mr3)(E);
                     },
                 },
             ));
-    }, [w, e, t, Z, P]);
+    }, [w, e, t, Z, I]);
 }

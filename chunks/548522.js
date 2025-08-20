@@ -38,7 +38,7 @@ function h(e) {
             },
             [h, y],
         ),
-        I = i.useCallback(
+        E = i.useCallback(
             (e, t) => {
                 if (h[e] === t) return;
                 let n = [...h];
@@ -46,7 +46,7 @@ function h(e) {
             },
             [h, y],
         ),
-        E = i.useCallback(
+        I = i.useCallback(
             (e, t, n) => {
                 let r = h.indexOf(e),
                     i = [...h];
@@ -75,8 +75,8 @@ function h(e) {
                     isDragEnabled: h.length > 1,
                     submittedGuildJoinRequestsCount: x,
                     removeFormField: N,
-                    updateFormField: I,
-                    updateFormFieldOrder: E,
+                    updateFormField: E,
+                    updateFormFieldOrder: I,
                     canRemove: h.length > 1,
                     actionsLocation: "side",
                     fieldStyle: a.it.COMPACT,

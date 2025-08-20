@@ -91,12 +91,12 @@ let h = (e) => {
         T = (0, s.N)(),
         S = null == T ? void 0 : T.subscription_trial,
         A = null != S && I === S.sku_id,
-        N = null != b ? b : (0, i.wj)(O) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
+        C = null != b ? b : (0, i.wj)(O) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
     return (0, r.jsx)(
         l.Z,
         f(
             {
-                color: N,
+                color: C,
                 textOptions: f(
                     {
                         textOverride: v,

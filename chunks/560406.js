@@ -22,7 +22,7 @@ var r = n(46015),
     T = r("".replace),
     S = r("".split),
     A = r("".toLowerCase),
-    N = function (e) {
+    C = function (e) {
         for (var t = [], n = 0, r = e.length; n < r; ) {
             var i = O(e, n++);
             if (i >= 55296 && i <= 56319 && n < r) {
@@ -32,7 +32,7 @@ var r = n(46015),
         }
         return t;
     },
-    C = function (e) {
+    N = function (e) {
         return e + 22 + 75 * (e < 26);
     },
     R = function (e, t, n) {
@@ -44,7 +44,7 @@ var r = n(46015),
         var t,
             n,
             r = [],
-            l = (e = N(e)).length,
+            l = (e = C(e)).length,
             c = d,
             _ = 0,
             p = u;
@@ -64,9 +64,9 @@ var r = n(46015),
                         if (S < P) break;
                         var w = S - P,
                             D = a - P;
-                        I(r, y(C(P + (w % D)))), (S = b(w / D)), (A += a);
+                        I(r, y(N(P + (w % D)))), (S = b(w / D)), (A += a);
                     }
-                    I(r, y(C(S))), (p = R(_, T, E === m)), (_ = 0), E++;
+                    I(r, y(N(S))), (p = R(_, T, E === m)), (_ = 0), E++;
                 }
             }
             _++, c++;

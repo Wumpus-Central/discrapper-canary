@@ -1,78 +1,78 @@
-r.d(t, { q: () => o }), r(388685), r(539854);
-var a = r(647438),
-    s = r(512722),
-    n = r.n(s),
-    i = r(442837),
-    l = r(232567),
-    c = r(281494),
-    d = r(276444);
-let o = (e) => {
-    let { searchQuery: t, selectedUsers: r, limit: s } = e,
-        o = (0, i.e7)([d.Z], () => d.Z.getRecipientStatus()),
-        u = (0, i.e7)([d.Z], () => d.Z.getReferralsRemaining()),
-        [m, h] = a.useState(0),
-        [f, x] = a.useState([]),
-        [g, p] = a.useState(!1),
-        [j, v] = a.useState(!1),
-        [N, R] = a.useState(new Map());
-    n()(null != u, "Referrals remaining should not be null");
-    let b = async (e, a) => {
-            if (!g && !j && null != e && 0 !== u)
+n.d(t, { q: () => u }), n(388685), n(539854);
+var r = n(647438),
+    i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    s = n(232567),
+    l = n(281494),
+    c = n(276444);
+let u = (e) => {
+    let { searchQuery: t, selectedUsers: n, limit: i } = e,
+        u = (0, o.e7)([c.Z], () => c.Z.getRecipientStatus()),
+        d = (0, o.e7)([c.Z], () => c.Z.getReferralsRemaining()),
+        [f, _] = r.useState(0),
+        [p, h] = r.useState([]),
+        [m, g] = r.useState(!1),
+        [E, b] = r.useState(!1),
+        [y, O] = r.useState(new Map());
+    a()(null != d, "Referrals remaining should not be null");
+    let v = async (e, r) => {
+            if (!m && !E && null != e && 0 !== d)
                 try {
-                    p(!0);
-                    let s = [...N.values()];
-                    for (let [e, t] of o)
-                        if (t === c.Fe.PENDING && !N.has(e)) {
-                            let t = await (0, l.PR)(e);
-                            s.push(t);
+                    g(!0);
+                    let i = [...y.values()];
+                    for (let [e, t] of u)
+                        if (t === l.Fe.PENDING && !y.has(e)) {
+                            let t = await (0, s.PR)(e);
+                            i.push(t);
                         }
-                    let n = await (0, c.iF)(e, t, a);
-                    x((t) => {
-                        let a = n.users.filter((e) => !r.has(e.id));
-                        return ((s = s.filter((e) => !r.has(e.id))), 0 === e)
-                            ? [...r.values(), ...s.values(), ...a]
-                            : [...t, ...a];
+                    let a = await (0, l.iF)(e, t, r);
+                    h((t) => {
+                        let r = a.users.filter((e) => !n.has(e.id));
+                        return ((i = i.filter((e) => !n.has(e.id))), 0 === e)
+                            ? [...n.values(), ...i.values(), ...r]
+                            : [...t, ...r];
                     }),
-                        R((e) => {
+                        O((e) => {
                             let t = new Map(e);
-                            for (let e of s) t.set(e.id, e);
+                            for (let e of i) t.set(e.id, e);
                             return t;
                         }),
-                        h(n.nextIndex);
+                        _(a.nextIndex);
                 } catch (e) {
-                    v(!0);
+                    b(!0);
                 } finally {
-                    p(!1);
+                    g(!1);
                 }
         },
-        E = {
-            limit: s,
-            getNextRows: b,
+        I = {
+            limit: i,
+            getNextRows: v,
             getLocalReferrals: async () => {
                 let e = new Map();
-                for (let [t, r] of o)
-                    if (r === c.Fe.PENDING && !N.has(t)) {
-                        let r = await (0, l.PR)(t);
-                        e.set(r.id, r);
+                for (let [t, n] of u)
+                    if (n === l.Fe.PENDING && !y.has(t)) {
+                        let n = await (0, s.PR)(t);
+                        e.set(n.id, n);
                     }
-                R(e), x(Array.from(e.values()));
+                O(e), h(Array.from(e.values()));
             },
         },
-        S = a.useRef(E);
+        T = r.useRef(I);
     return (
-        a.useEffect(() => {
-            S.current = E;
+        r.useEffect(() => {
+            T.current = I;
         }),
-        a.useEffect(() => {
-            let { getNextRows: e, limit: t, getLocalReferrals: r } = S.current;
-            u > 0 ? e(0, t) : r();
-        }, [t, u]),
+        r.useEffect(() => {
+            let { getNextRows: e, limit: t, getLocalReferrals: n } = T.current;
+            d > 0 ? e(0, t) : n();
+        }, [t, d]),
         {
-            eligibleUsers: f,
-            fetchUsers: () => b(m, s),
-            hasError: j,
-            isFetching: g,
-            resendUsers: N,
+            eligibleUsers: p,
+            fetchUsers: () => v(f, i),
+            hasError: E,
+            isFetching: m,
+            resendUsers: y,
         }
     );
 };

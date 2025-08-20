@@ -24,7 +24,7 @@ let p = (e) => {
                 return "UNKNOWN TYPE:";
         }
     },
-    b = [
+    v = [
         {
             key: "events",
             render(e) {
@@ -33,7 +33,7 @@ let p = (e) => {
             },
         },
     ],
-    v = [
+    b = [
         {
             key: "candidates",
             render(e) {
@@ -48,7 +48,7 @@ function f() {
         a = (0, u.ZP)((e) => e.lastWinnerTime),
         r = 0 !== a ? l()(a).fromNow() : "n/a",
         f = (0, u.ZP)((e) => e.recentlyShown[0]),
-        g = e.map((e) => {
+        j = e.map((e) => {
             let { eventType: t, dismissibleContent: a } = e;
             return {
                 key: p(t) + a.toString(),
@@ -56,7 +56,7 @@ function f() {
                 dismissibleContent: a,
             };
         }),
-        j = Array.from(t.keys()).map((e) => ({
+        g = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e,
         }));
@@ -110,14 +110,14 @@ function f() {
                 className: h.candidatesTableContainer,
                 children: (0, n.jsx)(x.Z, {
                     className: h.candidatesTable,
-                    columns: v,
-                    data: j,
+                    columns: b,
+                    data: g,
                 }),
             }),
             (0, n.jsx)("br", {}),
             (0, n.jsx)(x.Z, {
-                columns: b,
-                data: g,
+                columns: v,
+                data: j,
             }),
         ],
     });

@@ -1,21 +1,21 @@
-r.d(t, { Z: () => s }), r(539854);
-var n,
-    a = r(442837),
-    i = r(570140);
-function l(e, t, r) {
+n.d(t, { Z: () => l }), n(539854);
+var r,
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class o extends (n = a.ZP.Store) {
+class s extends (r = i.ZP.Store) {
     get earnedOrbsCoachmark() {
         return {
             shouldOpen: this._earnedOrbsCoachmarkOpen,
@@ -104,18 +104,18 @@ class o extends (n = a.ZP.Store) {
             (this._earnedOrbsCoachmarkQuantity = 0);
     }
     handleEarnedOrbsCoachmarkOpen(e) {
-        let { earnedOrbsQuantity: t, dedupeKey: r } = e;
-        (void 0 !== r && this._earnedOrbsCoachmarkDedupeKeys.includes(r)) ||
+        let { earnedOrbsQuantity: t, dedupeKey: n } = e;
+        (void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.includes(n)) ||
             ((this._earnedOrbsCoachmarkOpen = !0),
             (this._earnedOrbsCoachmarkQuantity = t),
-            void 0 !== r && this._earnedOrbsCoachmarkDedupeKeys.push(r));
+            void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.push(n));
     }
     handleEarnedOrbsCoachmarkClose(e) {
         let {} = e;
         (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0);
     }
     constructor() {
-        super(i.Z, {
+        super(a.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -132,19 +132,19 @@ class o extends (n = a.ZP.Store) {
                 this.setBalancePillOverlay(e.balancePillOverlay);
             },
         }),
-            l(this, "_entitlements", null),
-            l(this, "_redeemingSkuId", null),
-            l(this, "_isRedeemingVirtualCurrency", !1),
-            l(this, "_redeemVirtualCurrencyError", null),
-            l(this, "_balance", null),
-            l(this, "_fetchBalanceError", null),
-            l(this, "_isFetchingBalance", !1),
-            l(this, "_onboardingModalOpenedPrior", !1),
-            l(this, "_earnedOrbsCoachmarkOpen", !1),
-            l(this, "_earnedOrbsCoachmarkDedupeKeys", []),
-            l(this, "_earnedOrbsCoachmarkQuantity", 0),
-            l(this, "_balancePillOverlay", !1);
+            o(this, "_entitlements", null),
+            o(this, "_redeemingSkuId", null),
+            o(this, "_isRedeemingVirtualCurrency", !1),
+            o(this, "_redeemVirtualCurrencyError", null),
+            o(this, "_balance", null),
+            o(this, "_fetchBalanceError", null),
+            o(this, "_isFetchingBalance", !1),
+            o(this, "_onboardingModalOpenedPrior", !1),
+            o(this, "_earnedOrbsCoachmarkOpen", !1),
+            o(this, "_earnedOrbsCoachmarkDedupeKeys", []),
+            o(this, "_earnedOrbsCoachmarkQuantity", 0),
+            o(this, "_balancePillOverlay", !1);
     }
 }
-l(o, "displayName", "VirtualCurrencyStore");
-let s = new o();
+o(s, "displayName", "VirtualCurrencyStore");
+let l = new s();

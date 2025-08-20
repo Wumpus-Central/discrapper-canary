@@ -5,47 +5,47 @@ n.d(t, {
     CW: () => eD,
     Cr: () => eh,
     DC: () => eo,
-    Ex: () => ek,
+    Ex: () => eM,
     Fg: () => $,
     G6: () => ef,
-    H1: () => x,
-    I0: () => j,
+    H1: () => L,
+    I0: () => k,
     JG: () => eG,
     L1: () => eA,
     NA: () => ey,
     OW: () => ec,
     Ok: () => em,
     Ou: () => H,
-    Pe: () => F,
-    QK: () => eN,
-    QZ: () => C,
+    Pe: () => V,
+    QK: () => eC,
+    QZ: () => N,
     Qq: () => A,
     R$: () => b,
     RS: () => eb,
-    R_: () => ej,
+    R_: () => ek,
     Rt: () => eW,
     SE: () => ew,
     Sb: () => eS,
-    Sh: () => eV,
-    T4: () => L,
+    Sh: () => eZ,
+    T4: () => x,
     UP: () => eu,
     Wp: () => eR,
-    Xc: () => V,
-    Xk: () => M,
+    Xc: () => Z,
+    Xk: () => j,
     Xr: () => ed,
     YC: () => eK,
     YT: () => S,
-    Yk: () => eC,
+    Yk: () => eN,
     _O: () => D,
     _j: () => eU,
     bh: () => ei,
     bm: () => el,
     cC: () => v,
-    cP: () => Z,
+    cP: () => F,
     co: () => ep,
     d$: () => B,
     d4: () => w,
-    d8: () => N,
+    d8: () => C,
     dN: () => E,
     eR: () => O,
     eo: () => U,
@@ -54,20 +54,20 @@ n.d(t, {
     fv: () => R,
     fz: () => T,
     gR: () => X,
-    gw: () => eZ,
+    gw: () => eF,
     h2: () => Q,
     hg: () => eH,
     iG: () => q,
-    iH: () => ex,
-    j7: () => eF,
+    iH: () => eL,
+    j7: () => eV,
     jU: () => et,
     kJ: () => z,
     kU: () => en,
     l4: () => eY,
     mX: () => K,
     nc: () => eO,
-    no: () => eM,
-    qF: () => k,
+    no: () => ej,
+    qF: () => M,
     rN: () => ev,
     tU: () => eg,
     uL: () => G,
@@ -184,7 +184,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: !!e }),
     ),
-    N = (0, d.Zc)(
+    C = (0, d.Zc)(
         "notifications",
         "enableVoiceActivityNotifications",
         (e) => {
@@ -193,7 +193,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: !!e }),
     ),
-    C = (0, d.Zc)(
+    N = (0, d.Zc)(
         "notifications",
         "quietMode",
         (e) => {
@@ -221,13 +221,13 @@ let S = (0, d.Zc)(
         (e) => (null != e ? e : P),
         (e) => e,
     ),
-    L = (0, d.Zc)(
+    x = (0, d.Zc)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
         (e) => (null != e ? e : P),
         (e) => e,
     ),
-    x = (0, d.Zc)(
+    L = (0, d.Zc)(
         "textAndImages",
         "viewImageDescriptions",
         (e) => {
@@ -236,7 +236,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    M = (0, d.Zc)(
+    j = (0, d.Zc)(
         "textAndImages",
         "showCommandSuggestions",
         (e) => {
@@ -245,7 +245,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    k = (0, d.Zc)(
+    M = (0, d.Zc)(
         "voiceAndVideo",
         "alwaysPreviewVideo",
         (e) => {
@@ -254,7 +254,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    j = (0, d.Zc)(
+    k = (0, d.Zc)(
         "voiceAndVideo",
         "disableStreamPreviews",
         (e) => (null == e ? void 0 : e.value),
@@ -273,7 +273,7 @@ let S = (0, d.Zc)(
         (e) => (null != e ? e : G),
         (e) => e,
     ),
-    V = (0, d.Zc)(
+    Z = (0, d.Zc)(
         "gameLibrary",
         "installShortcutDesktop",
         (e) => {
@@ -282,7 +282,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    F = (0, d.Zc)(
+    V = (0, d.Zc)(
         "gameLibrary",
         "installShortcutStartMenu",
         (e) => {
@@ -291,7 +291,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    Z = (0, d.Zc)(
+    F = (0, d.Zc)(
         "privacy",
         "allowActivityPartyPrivacyFriends",
         (e) => {
@@ -690,7 +690,7 @@ let eS = (0, d.KM)(
                     : void 0,
         }),
     ),
-    eN = (0, d.R2)(
+    eC = (0, d.R2)(
         (0, d.KM)(
             (0, d.Zc)(
                 "textAndImages",
@@ -715,7 +715,7 @@ let eS = (0, d.KM)(
                 return null == (e = f.Z.getOverride("gifAutoPlay")) ? void 0 : e.value;
             }),
     ),
-    eC = (0, d.R2)(
+    eN = (0, d.R2)(
         (0, d.KM)(
             (0, d.Zc)(
                 "textAndImages",
@@ -779,11 +779,11 @@ let eS = (0, d.KM)(
         (e) => e,
         p.fy.FREQUENT_USER_ACTION,
     ),
-    eL = [],
-    ex = (0, d.Zc)(
+    ex = [],
+    eL = (0, d.Zc)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => (null != e ? e : eL),
+        (e) => (null != e ? e : ex),
         (e) => e,
     );
 (0, d.TG)({
@@ -798,7 +798,7 @@ let eS = (0, d.KM)(
     ineligibleDefault: a.E5.OFF,
     eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS,
 });
-let eM = (0, d.TG)({
+let ej = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             "privacy",
             "defaultGuildsActivityRestrictedV2",
@@ -810,13 +810,13 @@ let eM = (0, d.TG)({
         ineligibleDefault: a.GI.ACTIVITY_STATUS_OFF,
         eligibleDefault: () => a.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
     }),
-    ek = (0, d.Zc)(
+    eM = (0, d.Zc)(
         "privacy",
         "familyCenterEnabledV2",
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e }),
     ),
-    ej = (0, d.Zc)(
+    ek = (0, d.Zc)(
         "privacy",
         "hideLegacyUsername",
         (e) => {
@@ -846,7 +846,7 @@ let eM = (0, d.TG)({
         (e) => null != e && e,
         (e) => e,
     ),
-    eV = (0, d.Zc)(
+    eZ = (0, d.Zc)(
         "textAndImages",
         "explicitContentSettings",
         (e) => {
@@ -870,7 +870,7 @@ let eM = (0, d.TG)({
             };
         },
     ),
-    eF = (0, d.Zc)(
+    eV = (0, d.Zc)(
         "textAndImages",
         "goreContentSettings",
         (e) => {
@@ -890,7 +890,7 @@ let eM = (0, d.TG)({
             };
         },
     ),
-    eZ = (0, d.Zc)(
+    eF = (0, d.Zc)(
         "textAndImages",
         "keywordFilterSettings",
         (e) => {

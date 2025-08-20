@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(467055);
+n.d(t, { Z: () => x }), n(388685), n(467055);
 var r,
     i = n(108131),
     a = n.n(i),
@@ -108,8 +108,8 @@ let O = [c.Cm.User],
     T = {},
     S = {},
     A = {},
-    N = "apexTrackedExposures",
-    C = 1,
+    C = "apexTrackedExposures",
+    N = 1,
     R = 604800000,
     P = {},
     w = {};
@@ -117,7 +117,7 @@ function D(e) {
     let t = w[e];
     return null == t && ((t = a().v3(e)), (w[e] = t)), t;
 }
-class L extends (r = o.ZP.PersistedStore) {
+class x extends (r = o.ZP.PersistedStore) {
     loadStoredState(e, t) {
         for (let n in (null != e && 1 === e.version && ((T = e.clientOverrides), (v = e.evaluatedExperiments)),
         (S = {}),
@@ -190,7 +190,7 @@ class L extends (r = o.ZP.PersistedStore) {
         return T[e];
     }
     handleLogout(e) {
-        e || this.clearAllServerAssignments(), l.K.remove(N), this.clearAllTrackedExposures();
+        e || this.clearAllServerAssignments(), l.K.remove(C), this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
         (I[e.name] = e), null != S[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
@@ -277,8 +277,8 @@ class L extends (r = o.ZP.PersistedStore) {
         return null == t || Date.now() - t > R;
     }
     loadTrackedExposures() {
-        let e = l.K.get(N);
-        if (null == e || e.version !== C) return {};
+        let e = l.K.get(C);
+        if (null == e || e.version !== N) return {};
         let t = e.exposures,
             n = Date.now(),
             r = !1;
@@ -287,8 +287,8 @@ class L extends (r = o.ZP.PersistedStore) {
     }
     saveTrackedExposures(e) {
         try {
-            l.K.set(N, {
-                version: C,
+            l.K.set(C, {
+                version: N,
                 exposures: e,
             });
         } catch (e) {
@@ -322,4 +322,4 @@ class L extends (r = o.ZP.PersistedStore) {
         super(...e), d(this, "track", () => Promise.resolve()), d(this, "surface", "unset");
     }
 }
-d(L, "displayName", "ApexExperimentStore"), d(L, "persistKey", "ApexExperimentStore");
+d(x, "displayName", "ApexExperimentStore"), d(x, "persistKey", "ApexExperimentStore");

@@ -1,46 +1,46 @@
-n.d(t, { Z: () => u });
-var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(707558),
-    l = n(577720),
-    o = n(388032),
+n.d(t, { Z: () => _ });
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(707558),
+    s = n(577720),
+    l = n(388032),
     c = n(342156);
-class d extends r.Component {
+let u = "SWzB1mx2o5k",
+    d = () => [
+        {
+            icon: c.perkNewsletter,
+            title: l.intl.string(l.t.vURCf3),
+            description: l.intl.string(l.t.qqp5ZW),
+        },
+        {
+            icon: c.perkBadge,
+            title: l.intl.string(l.t.j4RYIy),
+            description: l.intl.string(l.t["3N3YOD"]),
+        },
+        {
+            icon: c.perkChallenges,
+            title: l.intl.string(l.t.Yu1bAg),
+            description: l.intl.string(l.t.noChoK),
+        },
+    ];
+class f extends i.Component {
     render() {
-        return (0, i.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             className: c.features,
             children: [
-                (0, i.jsx)(l.Z, {
+                (0, r.jsx)(s.Z, {
                     className: c.video,
-                    videoID: "SWzB1mx2o5k",
+                    videoID: u,
                 }),
-                (0, i.jsx)(s.X6q, {
+                (0, r.jsx)(a.X6q, {
                     className: c.perksHeading,
                     variant: "heading-sm/semibold",
-                    children: o.intl.string(o.t["ITh5+/"]),
+                    children: l.intl.string(l.t["ITh5+/"]),
                 }),
-                (0, i.jsx)(a.Z, {
-                    features: [
-                        {
-                            icon: c.perkNewsletter,
-                            title: o.intl.string(o.t.vURCf3),
-                            description: o.intl.string(o.t.qqp5ZW),
-                        },
-                        {
-                            icon: c.perkBadge,
-                            title: o.intl.string(o.t.j4RYIy),
-                            description: o.intl.string(o.t["3N3YOD"]),
-                        },
-                        {
-                            icon: c.perkChallenges,
-                            title: o.intl.string(o.t.Yu1bAg),
-                            description: o.intl.string(o.t.noChoK),
-                        },
-                    ],
-                }),
+                (0, r.jsx)(o.Z, { features: d() }),
             ],
         });
     }
 }
-let u = d;
+let _ = f;

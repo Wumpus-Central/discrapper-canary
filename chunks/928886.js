@@ -28,38 +28,38 @@ function I(e) {
             selectedSkuId: T,
             step: S,
             selectedPlan: A,
-            purchaseState: N,
-            purchaseType: C,
+            purchaseState: C,
+            purchaseType: N,
             selectedSku: R,
             enablePremiumBrandRefresh: P,
             isDisplayingWowMomentConfirmation: w,
         } = (0, m.JL)(),
-        { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, h.wD)(),
-        M =
+        { isGift: D, selectedGiftStyle: x, giftRecipient: L } = (0, h.wD)(),
+        j =
             D &&
-            (0, p.pO)(x) &&
+            (0, p.pO)(L) &&
             S === g.h8.CONFIRM &&
-            null != L &&
+            null != x &&
             (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
-        k = null != n && null != S,
-        j = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
-        U = null != S && !j.includes(S) && null != T,
+        M = null != n && null != S,
+        k = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
+        U = null != S && !k.includes(S) && null != T,
         G = (0, u.N)(a),
         B = !D && null != G && null != T && b.nG[G.trial_id].skus.includes(T),
-        V = (0, c.Ng)(),
-        F = null == V || null == (t = V.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
-        Z = !D && null != V && null != T && F;
+        Z = (0, c.Ng)(),
+        V = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
+        F = !D && null != Z && null != T && V;
     return i.useMemo(() => {
         if (null == S) return;
         let e = null;
         return (
-            M
+            j
                 ? (e = (0, r.jsxs)("div", {
                       className: O.container,
                       children: [
                           (0, r.jsx)(d.Z, {
                               defaultAnimationState: l.SR.LOOP,
-                              giftStyle: L,
+                              giftStyle: x,
                               className: O.seasonalGiftBoxHeaderIcon,
                           }),
                           (0, r.jsx)(s.olH, {
@@ -69,9 +69,9 @@ function I(e) {
                           }),
                       ],
                   }))
-                : k
+                : M
                   ? (e = n(null != A ? A : null, I, S))
-                  : C === y.GZ.ONE_TIME
+                  : N === y.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(_.t, {
                           step: S,
                           onClose: I,
@@ -80,18 +80,18 @@ function I(e) {
                       (o()(v(T, b.y7), "invalid sku id: ".concat(T)),
                       (e = (0, r.jsx)(f.Z, {
                           currentStep: null != S ? S : void 0,
-                          purchaseState: N,
+                          purchaseState: C,
                           premiumType: b.y7[T],
                           onClose: I,
                           showTrialBadge: B,
-                          showDiscountBadge: Z,
+                          showDiscountBadge: F,
                           isGift: D,
-                          giftRecipient: x,
+                          giftRecipient: L,
                           isEligibleForTrial: B,
                           enablePremiumBrandRefresh: P,
                           isDisplayingWowMomentConfirmation: w,
                       }))),
             e
         );
-    }, [L, I, N, n, A, T, S, B, Z, M, U, k, C, D, x, P, w]);
+    }, [x, I, C, n, A, T, S, B, F, j, U, M, N, D, L, P, w]);
 }

@@ -30,13 +30,13 @@ let I = 1000,
             [I, T] = (0, i.useState)("entry"),
             S = (0, i.useRef)(null),
             A = (0, i.useRef)(null),
-            N = (0, i.useCallback)(() => {
+            C = (0, i.useCallback)(() => {
                 if ("entry" === I && (T("idle"), null != S.current)) {
                     var e;
                     null == (e = S.current) || e.play();
                 }
             }, [I]),
-            C = (0, i.useCallback)(() => {
+            N = (0, i.useCallback)(() => {
                 if ("exit" !== I && (T("exit"), null != A.current)) {
                     var e;
                     null == (e = A.current) || e.play();
@@ -44,25 +44,25 @@ let I = 1000,
             }, [I]),
             { isGift: R } = (0, h.wD)(),
             { wasTier2PremiumBeforePurchase: P, selectedSkuId: w, purchaseState: D } = (0, m.JL)(),
-            [L, x] = (0, i.useState)(!1);
+            [x, L] = (0, i.useState)(!1);
         (0, i.useEffect)(() => {
-            D === g.A.PURCHASING && x(!0);
+            D === g.A.PURCHASING && L(!0);
         }, [D]);
-        let M = (0, f.P)(R, !!P, w),
-            { mediaUrls: k, isSuccess: j } = (0, E.Z)(!a && M && L),
+        let j = (0, f.P)(R, !!P, w),
+            { mediaUrls: M, isSuccess: k } = (0, E.Z)(!a && j && x),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
-            [V, F] = (0, i.useState)(!1),
-            [Z, H] = (0, i.useState)("none"),
+            [Z, V] = (0, i.useState)(!1),
+            [F, H] = (0, i.useState)("none"),
             [Y, W] = (0, i.useState)(!1);
         if (
             ((0, i.useEffect)(() => {
                 let e;
-                M &&
+                j &&
                     n &&
                     !Y &&
-                    "none" === Z &&
-                    (a || !j
+                    "none" === F &&
+                    (a || !k
                         ? (H("static"),
                           a ||
                               (W(!0),
@@ -70,7 +70,7 @@ let I = 1000,
                                   b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION,
                               )),
                           (e = !1))
-                        : (H("animated"), F(!0), (e = !0)),
+                        : (H("animated"), V(!0), (e = !0)),
                     c.Z.dispatch({
                         type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                         value: !0,
@@ -79,10 +79,10 @@ let I = 1000,
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [a, M, n, j, Y, Z]),
+            }, [a, j, n, k, Y, F]),
             (0, i.useEffect)(() => {
                 function e() {
-                    B(!0), C();
+                    B(!0), N();
                 }
                 return (
                     p.S.subscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
@@ -90,7 +90,7 @@ let I = 1000,
                         p.S.unsubscribe(b.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
                     }
                 );
-            }, [C]),
+            }, [N]),
             (0, i.useEffect)(
                 () => () => {
                     c.Z.dispatch({
@@ -101,7 +101,7 @@ let I = 1000,
                 },
                 [],
             ),
-            "animated" === Z)
+            "animated" === F)
         )
             return (0, r.jsxs)("div", {
                 children: [
@@ -114,9 +114,9 @@ let I = 1000,
                                     playsInline: !0,
                                     muted: !0,
                                     autoPlay: !0,
-                                    onEnded: N,
+                                    onEnded: C,
                                     className: o()(y.video, "entry" === I ? y.visible : y.hidden),
-                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
+                                    children: (0, r.jsx)("source", { src: M.modalGlowEntry }),
                                 }),
                             }),
                             (0, r.jsx)(d.Z, {
@@ -125,14 +125,14 @@ let I = 1000,
                                 muted: !0,
                                 loop: !0,
                                 className: o()(y.video, "idle" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
+                                children: (0, r.jsx)("source", { src: M.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: A,
                                 playsInline: !0,
                                 muted: !0,
                                 className: o()(y.video, "exit" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
+                                children: (0, r.jsx)("source", { src: M.modalGlowExit }),
                             }),
                         ],
                     }),
@@ -143,7 +143,7 @@ let I = 1000,
                             ref: U,
                             dataBinding: {
                                 ExitTrigger: G,
-                                EntryTrigger: V,
+                                EntryTrigger: Z,
                             },
                         }),
                     }),
@@ -154,7 +154,7 @@ let I = 1000,
                 ],
             });
         let K = !G;
-        return "static" === Z
+        return "static" === F
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       K &&

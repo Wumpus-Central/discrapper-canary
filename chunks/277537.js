@@ -1,15 +1,15 @@
 n.d(t, {
-    PO: () => a,
-    yI: () => s,
+    PO: () => o,
+    yI: () => a,
 });
-var i = n(818083),
-    r = n(987338);
-let s = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_family_center_v2",
     label: "Family Center V2",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -18,6 +18,6 @@ let s = (0, i.B)({
         },
     ],
 });
-function a(e) {
-    return s.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+function o(e) {
+    return a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
 }

@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,11 +61,11 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
+function j(e) {
     var t, l, p;
     let { userId: y, channel: _ } = e,
         C = i.useRef(null),
-        { analyticsLocations: O } = (0, d.ZP)(u.Z.USERNAME),
+        { analyticsLocations: j } = (0, d.ZP)(u.Z.USERNAME),
         E = (0, o.e7)([g.default], () => g.default.getUser(y)),
         S = (0, o.e7)([m.ZP], () => (null != y ? m.ZP.getMember(_.guild_id, y) : null)),
         P = (0, h.X7)(_.guild_id, null != y ? y : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
@@ -76,7 +76,7 @@ function O(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    j(v({}, t), {
+                    O(v({}, t), {
                         user: E,
                         guildId: _.guild_id,
                         channel: _,
@@ -92,7 +92,7 @@ function O(e) {
               children: Z,
           })
         : (0, r.jsx)(d.Gt, {
-              value: O,
+              value: j,
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: C,
                   user: E,
@@ -103,7 +103,7 @@ function O(e) {
                   children: (e) =>
                       (0, r.jsx)(
                           s.P3F,
-                          j(v({}, e), {
+                          O(v({}, e), {
                               innerRef: C,
                               tag: "span",
                               className: x.threadCreatorName,
@@ -133,7 +133,7 @@ function E(e) {
                           children: C.intl.format(C.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
-                                      O,
+                                      j,
                                       {
                                           userId: t.ownerId,
                                           channel: t,

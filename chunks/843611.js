@@ -1,12 +1,12 @@
 n.d(t, {
-    $B: () => j,
+    $B: () => k,
     AW: () => R,
     EN: () => D,
     F0: () => m,
-    LX: () => C,
-    TH: () => M,
-    UO: () => k,
-    k6: () => x,
+    LX: () => N,
+    TH: () => j,
+    UO: () => M,
+    k6: () => L,
     l_: () => I,
     rs: () => w,
     s6: () => h,
@@ -151,7 +151,7 @@ function I(e) {
 var T = {},
     S = 10000,
     A = 0;
-function N(e, t) {
+function C(e, t) {
     var n = "" + t.end + t.strict + t.sensitive,
         r = T[n] || (T[n] = {});
     if (r[e]) return r[e];
@@ -162,7 +162,7 @@ function N(e, t) {
         };
     return A < S && ((r[e] = a), A++), a;
 }
-function C(e, t) {
+function N(e, t) {
     void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t });
     var n = t,
         r = n.path,
@@ -175,7 +175,7 @@ function C(e, t) {
     return [].concat(r).reduce(function (t, n) {
         if (!n && "" !== n) return null;
         if (t) return t;
-        var r = N(n, {
+        var r = C(n, {
                 end: a,
                 strict: s,
                 sensitive: c,
@@ -210,7 +210,7 @@ var R = (function (e) {
             return i.createElement(h.Consumer, null, function (t) {
                 t || (0, s.Z)(!1);
                 var n = e.props.location || t.location,
-                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? C(n.pathname, e.props) : t.match,
+                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? N(n.pathname, e.props) : t.match,
                     a = (0, l.Z)({}, t, {
                         location: n,
                         match: r,
@@ -266,7 +266,7 @@ var w = (function (e) {
                         if (null == r && i.isValidElement(e)) {
                             n = e;
                             var o = e.props.path || e.props.from;
-                            r = o ? C(a.pathname, (0, l.Z)({}, e.props, { path: o })) : t.match;
+                            r = o ? N(a.pathname, (0, l.Z)({}, e.props, { path: o })) : t.match;
                         }
                     }),
                     r
@@ -292,19 +292,19 @@ function D(e) {
         };
     return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
 }
-var L = i.useContext;
-function x() {
-    return L(p);
+var x = i.useContext;
+function L() {
+    return x(p);
+}
+function j() {
+    return x(h).location;
 }
 function M() {
-    return L(h).location;
-}
-function k() {
-    var e = L(h).match;
+    var e = x(h).match;
     return e ? e.params : {};
 }
-function j(e) {
-    var t = M(),
-        n = L(h).match;
-    return e ? C(t.pathname, e) : n;
+function k(e) {
+    var t = j(),
+        n = x(h).match;
+    return e ? N(t.pathname, e) : n;
 }

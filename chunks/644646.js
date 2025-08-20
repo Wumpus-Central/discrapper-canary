@@ -29,8 +29,8 @@ let I = function (e) {
             sourceQuestContent: S,
             lazyLoad: A = !1,
         } = e,
-        N = (0, _.O5)(),
-        C = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        C = (0, _.O5)(),
+        N = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         R = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         P = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
         w = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD_IMAGE), [a]),
@@ -38,7 +38,7 @@ let I = function (e) {
             (t) => {
                 var n;
                 (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    N({
+                    C({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -51,25 +51,25 @@ let I = function (e) {
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [N, a.id, e, S],
+            [C, a.id, e, S],
         ),
-        L = i.useRef(null),
-        x = i.useRef(I),
-        M = (0, p.Bg)(a.config);
+        x = i.useRef(null),
+        L = i.useRef(I),
+        j = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
-            if (null != L.current) {
+            if (null != x.current) {
                 if (!P.isAnimated || R) {
-                    (L.current.currentTime = 0), L.current.pause();
+                    (x.current.currentTime = 0), x.current.pause();
                     return;
                 }
-                I && !x.current
-                    ? L.current.play()
-                    : !I && x.current && ((L.current.currentTime = 0), L.current.pause()),
-                    (x.current = I);
+                I && !L.current
+                    ? x.current.play()
+                    : !I && L.current && ((x.current.currentTime = 0), x.current.pause()),
+                    (L.current = I);
             }
         }, [I, P, R]),
-        (t = M
+        (t = j
             ? (0, r.jsx)(y.Fl, {
                   id: "QuestRewardTile_rewardTileNitro",
                   children: (e) =>
@@ -104,7 +104,7 @@ let I = function (e) {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  (t.current = e), (L.current = e);
+                                  (t.current = e), (x.current = e);
                               },
                               autoPlay: !R && I,
                               loop: !0,
@@ -144,7 +144,7 @@ let I = function (e) {
                       (0, r.jsx)(c.ZX5, {
                           className: v.shine,
                           shineSize: c.rHe.SMALL,
-                          shinePaused: !C || R,
+                          shinePaused: !N || R,
                       }),
                       "text" === T &&
                           (0, r.jsx)(c.Text, {

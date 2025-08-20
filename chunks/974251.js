@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(79390),
     x = n(216789),
     v = n(665906),
-    j = n(695346),
-    O = n(433355),
+    O = n(695346),
+    j = n(433355),
     E = n(819640),
     S = n(375954),
     P = n(496675),
@@ -90,7 +90,7 @@ let G = i.memo(function (e) {
         $ = (0, o.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
         ee = (0, o.e7)([g.Z], () => g.Z.getLastClipsSession()),
         et = (0, o.Wu)([g.Z], () => g.Z.getNewClipIds()),
-        en = (0, o.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(V.id)),
+        en = (0, o.e7)([j.ZP], () => null == j.ZP.getCurrentSidebarChannelId(V.id)),
         { showClipsHeaderEntrypoint: er } = m.NV.useExperiment(
             { location: "ChannelAttachButton" },
             { autoTrackExposure: !1 },
@@ -117,7 +117,7 @@ let G = i.memo(function (e) {
     function em() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("2668"), n.e("10286")]).then(n.bind(n, 542055));
+                let { default: e } = await n.e("57478").then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, H(F({}, t), { channelId: V.id }));
             },
             { modalKey: D.Qr },
@@ -138,12 +138,12 @@ let G = i.memo(function (e) {
     });
     let eg = (0, v.NE)(V),
         eb = (0, v.Xu)(V),
-        ey = !j.dN.useSetting() && !(0, T.isAndroidWeb)() && null != window.ResizeObserver,
+        ey = !O.dN.useSetting() && !(0, T.isAndroidWeb)() && null != window.ResizeObserver,
         e_ = (0, C.UI)(null != V ? V : void 0),
         eC = (0, h.qB)(),
         ex = (0, x.Us)({ location: "ChannelAttachButton" }),
         ev = null != (l = null == et ? void 0 : et.length) ? l : 0,
-        ej = (0, M.Z)({
+        eO = (0, M.Z)({
             canAttachFiles: ep,
             canStartThreads: eg || eb,
             useSlate: ey,
@@ -157,10 +157,10 @@ let G = i.memo(function (e) {
             appContext: K,
             canSendScheduledMessages: ex,
         }),
-        eO = (0, f.Z)("ChannelAttachButton");
-    if (0 === ej.length) return null;
+        ej = (0, f.Z)("ChannelAttachButton");
+    if (0 === eO.length) return null;
     let eE = "refresh_sm",
-        eS = eO
+        eS = ej
             ? (0, r.jsx)(c.svS, {
                   size: eE,
                   color: "currentColor",
@@ -201,7 +201,7 @@ let G = i.memo(function (e) {
                             R.Z,
                             H(F({}, e), {
                                 onClose: () => ec(null),
-                                options: ej,
+                                options: eO,
                                 channel: V,
                                 onFileUpload: () => {
                                     var e;

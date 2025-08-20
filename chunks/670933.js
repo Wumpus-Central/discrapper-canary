@@ -106,7 +106,7 @@ function b(e) {
     var n = "+" === t[1] ? -1 : 1,
         i = parseInt(t[2]),
         a = (t[3] && parseInt(t[3])) || 0;
-    return N(i, a) ? n * (i * r.vh + a * r.yJ) : NaN;
+    return C(i, a) ? n * (i * r.vh + a * r.yJ) : NaN;
 }
 function y(e, t, n) {
     var r = new Date(0);
@@ -130,6 +130,6 @@ function S(e, t, n) {
 function A(e, t, n) {
     return 24 === e ? 0 === t && 0 === n : n >= 0 && n < 60 && t >= 0 && t < 60 && e >= 0 && e < 25;
 }
-function N(e, t) {
+function C(e, t) {
     return t >= 0 && t <= 59;
 }

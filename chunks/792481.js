@@ -1,12 +1,12 @@
-n.d(t, { X: () => s });
-var i = n(818083),
-    r = n(987338);
-let s = (0, i.B)({
+n.d(t, { X: () => a });
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     id: "2025-04_tenure_level_up_moment",
     kind: "user",
     label: "Tenure Level Up Moment",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

@@ -23,13 +23,13 @@ var r = n(951288),
     T = n(510659),
     S = n(287954),
     A = n(810097),
-    N = n(64621),
-    C = n(913002),
+    C = n(64621),
+    N = n(913002),
     R = n(228168),
     P = n(244096),
     w = n(388032),
     D = n(516089);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,18 +70,18 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -127,7 +127,7 @@ let B = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(x({}, t), {
+                                M(L({}, t), {
                                     sourceAnalyticsLocations: s,
                                     location: "UserProfileCustomStatusBubble",
                                     prompt: a,
@@ -185,7 +185,7 @@ let B = i.forwardRef(function (e, t) {
             ],
         });
     }),
-    V = i.forwardRef(function (e, t) {
+    Z = i.forwardRef(function (e, t) {
         var n, a;
         let {
                 emoji: _,
@@ -198,20 +198,20 @@ let B = i.forwardRef(function (e, t) {
                 label: S,
                 hasEntered: A = !0,
             } = e,
-            N = (0, T.yi)(),
-            { trackUserProfileAction: C } = (0, v.KZ)(),
-            L = (0, h.p)({ location: "CustomStatusBubble" }),
-            [x, M] = i.useState(!1);
+            C = (0, T.yi)(),
+            { trackUserProfileAction: N } = (0, v.KZ)(),
+            x = (0, h.p)({ location: "CustomStatusBubble" }),
+            [L, j] = i.useState(!1);
         i.useEffect(() => {
-            null != W.current ? M(W.current.getBoundingClientRect().height > P.Ow + P.P) : M(!1);
-        }, [S, x]);
-        let k = null != _ ? P.Hp : 0,
-            j = null != S ? P.du : 0,
-            U = (x && (null == _ || null != p) ? P._v : P.hT) + k + j,
-            B = P.YF + k + j,
+            null != W.current ? j(W.current.getBoundingClientRect().height > P.Ow + P.P) : j(!1);
+        }, [S, L]);
+        let M = null != _ ? P.Hp : 0,
+            k = null != S ? P.du : 0,
+            U = (L && (null == _ || null != p) ? P._v : P.hT) + M + k,
+            B = P.YF + M + k,
+            Z = i.useRef(null),
             V = i.useRef(null),
             F = i.useRef(null),
-            Z = i.useRef(null),
             H = i.useRef(U),
             Y = i.useRef(B),
             W = i.useRef(null),
@@ -224,8 +224,8 @@ let B = i.forwardRef(function (e, t) {
             [en] = i.useState(() => new c.V7());
         i.useEffect(() => () => en.stop(), [en]),
             i.useEffect(() => {
-                null == N || N.onInteractionPopoutTargetRefChange(V);
-            }, [N]);
+                null == C || C.onInteractionPopoutTargetRefChange(Z);
+            }, [C]);
         let [er, ei] = (0, u.q_F)(() => ({
             maxHeight: "".concat(H.current, "px"),
             config: {
@@ -234,9 +234,9 @@ let B = i.forwardRef(function (e, t) {
             },
         }));
         i.useLayoutEffect(() => {
-            if ((q(!0), null == F.current || null == Z.current || !ee)) return;
-            let e = F.current.getBoundingClientRect().height,
-                t = Z.current.getBoundingClientRect().height;
+            if ((q(!0), null == V.current || null == F.current || !ee)) return;
+            let e = V.current.getBoundingClientRect().height,
+                t = F.current.getBoundingClientRect().height;
             $(t > e),
                 (H.current = e),
                 (Y.current = t),
@@ -286,23 +286,23 @@ let B = i.forwardRef(function (e, t) {
                       })
                     : null,
             ec =
-                void 0 === I || (null != _ && L)
+                void 0 === I || (null != _ && x)
                     ? null
                     : (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           "aria-label": "".concat(w.intl.string(w.t.EVV6ub), ": ").concat(I),
-                          className: o()(D.statusText, L && D.italicPrompt),
+                          className: o()(D.statusText, x && D.italicPrompt),
                           children: null != I ? I : "",
                       }),
             eu = null == el || "" === p ? ec : el,
             ed = (0, r.jsxs)("div", {
-                ref: F,
-                className: o()(D.content, x && D.singleLineTextClamp),
+                ref: V,
+                className: o()(D.content, L && D.singleLineTextClamp),
                 children: [eo, es, eu],
             }),
             ef = (0, r.jsxs)("div", {
-                ref: Z,
+                ref: F,
                 className: o()(D.content, D.unclamped),
                 children: [eo, es, eu],
             }),
@@ -314,7 +314,7 @@ let B = i.forwardRef(function (e, t) {
                     children: (0, r.jsxs)(s.animated.div, {
                         style: er,
                         className: o()(D.content, {
-                            [D.singleLineTextClamp]: x,
+                            [D.singleLineTextClamp]: L,
                             [D.unclamped]: !X,
                         }),
                         children: [eo, es, eu],
@@ -332,7 +332,7 @@ let B = i.forwardRef(function (e, t) {
                       (0, r.jsx)(u.tEY, {
                           ringClassName: D.ring,
                           children: (0, r.jsxs)("div", {
-                              ref: V,
+                              ref: Z,
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(D.container, E),
@@ -342,7 +342,7 @@ let B = i.forwardRef(function (e, t) {
                                   label: null != S ? "".concat((0, g.Z)(S), ":") : "",
                               }),
                               onMouseEnter: () => {
-                                  C({ action: "HOVER_CUSTOM_STATUS" }), ea(!0);
+                                  N({ action: "HOVER_CUSTOM_STATUS" }), ea(!0);
                               },
                               onMouseLeave: () => {
                                   ea(!1);
@@ -360,7 +360,7 @@ let B = i.forwardRef(function (e, t) {
                       (0, r.jsx)(u.tEY, {
                           ringClassName: D.ring,
                           children: (0, r.jsxs)("div", {
-                              ref: V,
+                              ref: Z,
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(D.container, E),
@@ -374,10 +374,10 @@ let B = i.forwardRef(function (e, t) {
                               },
                               onBlur: (e) => {
                                   var t;
-                                  (null == (t = V.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), ea(!1));
+                                  (null == (t = Z.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), ea(!1));
                               },
                               onMouseEnter: () => {
-                                  C({ action: "HOVER_CUSTOM_STATUS" }), O(!0), ea(!0);
+                                  N({ action: "HOVER_CUSTOM_STATUS" }), O(!0), ea(!0);
                               },
                               onMouseLeave: () => {
                                   O(!1), ea(!1);
@@ -388,13 +388,13 @@ let B = i.forwardRef(function (e, t) {
                   ],
               });
     }),
-    F = i.forwardRef(function (e, t) {
+    V = i.forwardRef(function (e, t) {
         var { emoji: n, text: a, label: o, onCloseProfile: s } = e,
-            l = j(e, ["emoji", "text", "label", "onCloseProfile"]);
+            l = k(e, ["emoji", "text", "label", "onCloseProfile"]);
         let [c, u] = i.useState(!1);
         return (0, r.jsx)(
-            V,
-            k(x({}, l), {
+            Z,
+            M(L({}, l), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -402,7 +402,7 @@ let B = i.forwardRef(function (e, t) {
                 className: D.editable,
                 onShowToolbar: u,
                 renderToolbar: (e) =>
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(N.Z, {
                         isVisible: c,
                         isExpandable: e,
                         onCloseProfile: s,
@@ -410,9 +410,9 @@ let B = i.forwardRef(function (e, t) {
             }),
         );
     });
-function Z(e) {
+function F(e) {
     var { emoji: t, text: n, label: a, user: o, guildId: s, channelId: l, themeType: c } = e,
-        u = j(e, ["emoji", "text", "label", "user", "guildId", "channelId", "themeType"]);
+        u = k(e, ["emoji", "text", "label", "user", "guildId", "channelId", "themeType"]);
     let { trackUserProfileAction: d } = (0, v.KZ)(),
         { interactionType: f, interactionSource: _, resetInteraction: p } = (0, T.Xo)(),
         h = _ === R.n_.STATUS && f === R.P.REACT,
@@ -424,23 +424,23 @@ function Z(e) {
     i.useEffect(() => {
         _ === R.n_.STATUS && ((O.current !== t || I.current !== n) && p(), (O.current = t), (I.current = n));
     }, [_, p, t, n]);
-    let [C, P] = i.useState(!1),
+    let [N, P] = i.useState(!1),
         w = i.useCallback(
             (e) => {
                 (e || !E) && P(e);
             },
             [E],
         ),
-        L = (e) =>
+        x = (e) =>
             null == e
                 ? null
                 : null != e.id
                   ? "`" + ":".concat(e.name, ":") + "`"
                   : y.ZP.translateSurrogatesToInlineEmoji(e.name),
-        M = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
+        j = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
         U = () => {
-            let e = L(t),
-                r = null == n ? e : M(e, n);
+            let e = x(t),
+                r = null == n ? e : j(e, n);
             return null != a ? "".concat((0, g.Z)(a), ":\n> ").concat(r) : r;
         };
     return (0, r.jsx)(S.Z, {
@@ -453,13 +453,13 @@ function Z(e) {
         onAction: d,
         onClose: () => P(!1),
         children: () =>
-            (0, r.jsx)(N.Z, {
+            (0, r.jsx)(C.Z, {
                 targetElementRef: b,
                 sourceType: R.n_.STATUS,
                 user: o,
                 children: (0, r.jsx)(
-                    V,
-                    k(x({}, u), {
+                    Z,
+                    M(L({}, u), {
                         ref: b,
                         emoji: t,
                         text: n,
@@ -472,7 +472,7 @@ function Z(e) {
                                 targetRef: b,
                                 user: o,
                                 sourceType: R.n_.STATUS,
-                                isVisible: C && !E,
+                                isVisible: N && !E,
                                 isExpandable: e,
                                 onAction: d,
                             }),
@@ -494,7 +494,7 @@ let H = i.forwardRef(function (e, t) {
             prompt: h,
             disableToolbar: g = !1,
         } = e,
-        b = j(e, [
+        b = k(e, [
             "location",
             "user",
             "onCloseProfile",
@@ -510,7 +510,7 @@ let H = i.forwardRef(function (e, t) {
         T = (0, l.e7)([O.default], () => O.default.getId() === o.id),
         S = T && !g,
         A = (0, I.T)({ location: a }),
-        N = !T && !o.bot && !g && A;
+        C = !T && !o.bot && !g && A;
     if (null != c || null != u) {
         let e = null != u ? u : null,
             n = null != c && "" !== c ? c : null,
@@ -518,8 +518,8 @@ let H = i.forwardRef(function (e, t) {
         return (0, r.jsx)(p.Gt, {
             value: v,
             children: (0, r.jsx)(
-                V,
-                x(
+                Z,
+                L(
                     {
                         emoji: e,
                         text: n,
@@ -532,17 +532,17 @@ let H = i.forwardRef(function (e, t) {
             ),
         });
     }
-    let C = null != (n = null == y ? void 0 : y.emoji) ? n : null,
+    let N = null != (n = null == y ? void 0 : y.emoji) ? n : null,
         R = null != (i = null == y ? void 0 : y.state) ? i : null,
         P = null != R && "" !== R ? R : null,
         w = null != y ? (0, m.Z)(y) : null;
-    return null != C || null != P || S
-        ? null == C && null == P
+    return null != N || null != P || S
+        ? null == N && null == P
             ? (0, r.jsx)(p.Gt, {
                   value: v,
                   children: (0, r.jsx)(
                       B,
-                      x(
+                      L(
                           {
                               onCloseProfile: s,
                               prompt: h,
@@ -552,15 +552,15 @@ let H = i.forwardRef(function (e, t) {
                       ),
                   ),
               })
-            : N
+            : C
               ? (0, r.jsx)(p.Gt, {
                     value: v,
                     children: (0, r.jsx)(
-                        Z,
-                        x(
+                        F,
+                        L(
                             {
                                 user: o,
-                                emoji: C,
+                                emoji: N,
                                 text: P,
                                 label: w,
                             },
@@ -572,10 +572,10 @@ let H = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(p.Gt, {
                       value: v,
                       children: (0, r.jsx)(
-                          F,
-                          x(
+                          V,
+                          L(
                               {
-                                  emoji: C,
+                                  emoji: N,
                                   text: P,
                                   label: w,
                                   onCloseProfile: s,
@@ -588,10 +588,10 @@ let H = i.forwardRef(function (e, t) {
                 : (0, r.jsx)(p.Gt, {
                       value: v,
                       children: (0, r.jsx)(
-                          V,
-                          x(
+                          Z,
+                          L(
                               {
-                                  emoji: C,
+                                  emoji: N,
                                   text: P,
                                   label: w,
                                   ref: t,

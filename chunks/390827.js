@@ -22,15 +22,15 @@ var r,
     T = s.MessageChannel,
     S = s.String,
     A = 0,
-    N = {},
-    C = "onreadystatechange";
+    C = {},
+    N = "onreadystatechange";
 f(function () {
     r = s.location;
 });
 var R = function (e) {
-        if (d(N, e)) {
-            var t = N[e];
-            delete N[e], t();
+        if (d(C, e)) {
+            var t = C[e];
+            delete C[e], t();
         }
     },
     P = function (e) {
@@ -50,7 +50,7 @@ var R = function (e) {
         var t = u(e) ? e : I(e),
             n = p(arguments, 1);
         return (
-            (N[++A] = function () {
+            (C[++A] = function () {
                 l(t, void 0, n);
             }),
             i(A),
@@ -58,7 +58,7 @@ var R = function (e) {
         );
     }),
     (y = function (e) {
-        delete N[e];
+        delete C[e];
     }),
     E
         ? (i = function (e) {
@@ -73,9 +73,9 @@ var R = function (e) {
             : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(D)
               ? ((i = D), s.addEventListener("message", w, !1))
               : (i =
-                    C in h("script")
+                    N in h("script")
                         ? function (e) {
-                              _.appendChild(h("script"))[C] = function () {
+                              _.appendChild(h("script"))[N] = function () {
                                   _.removeChild(this), R(e);
                               };
                           }

@@ -1,224 +1,224 @@
-n.d(t, { Z: () => j });
-var i = n(951288);
+n.d(t, { Z: () => y });
+var r = n(951288);
 n(647438);
-var r = n(524437),
-    s = n(481060),
-    a = n(921801),
-    l = n(695346),
-    o = n(358085),
+var i = n(524437),
+    a = n(481060),
+    o = n(921801),
+    s = n(695346),
+    l = n(358085),
     c = n(940276),
-    d = n(981631),
-    u = n(726985),
-    m = n(933554),
-    p = n(388032),
-    g = n(764055);
+    u = n(981631),
+    d = n(726985),
+    f = n(933554),
+    _ = n(388032),
+    p = n(764055);
 function h(e) {
-    let { label: t, sublabel: n, id: r, checked: a, onChange: l } = e;
-    return (0, i.jsxs)("div", {
-        className: g.settingSwitch,
+    let { label: t, sublabel: n, id: i, checked: o, onChange: s } = e;
+    return (0, r.jsxs)("div", {
+        className: p.settingSwitch,
         children: [
-            (0, i.jsxs)("label", {
-                className: g.settingSwitchLabel,
-                htmlFor: r,
+            (0, r.jsxs)("label", {
+                className: p.settingSwitchLabel,
+                htmlFor: i,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "heading-md/semibold",
                         children: t,
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: n,
                     }),
                 ],
             }),
-            (0, i.jsx)(s.rsf, {
-                id: r,
-                checked: a,
-                onChange: l,
+            (0, r.jsx)(a.rsf, {
+                id: i,
+                checked: o,
+                onChange: s,
             }),
         ],
     });
 }
-function f() {
-    let e = l.G6.useSetting(),
-        t = l.no.useSetting(),
-        n = [
+function m() {
+    let e = s.G6.useSetting(),
+        t = s.no.useSetting(),
+        n = (e) => {
+            s.no.updateSetting(e);
+        },
+        o = [
             {
-                value: r.GI.ACTIVITY_STATUS_ON,
-                name: p.intl.string(p.t.UzGMHx),
+                value: i.GI.ACTIVITY_STATUS_ON,
+                name: _.intl.string(_.t.UzGMHx),
             },
             {
-                value: r.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                name: p.intl.string(m.default["/sAeRU"]),
+                value: i.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+                name: _.intl.string(f.default["/sAeRU"]),
             },
             {
-                value: r.GI.ACTIVITY_STATUS_OFF,
-                name: p.intl.string(m.default.m3oL7e),
+                value: i.GI.ACTIVITY_STATUS_OFF,
+                name: _.intl.string(f.default.m3oL7e),
             },
         ];
-    return (0, i.jsx)(s.hjN, {
-        className: g.formSection,
-        children: (0, i.jsxs)(s.y5t, {
-            component: (0, i.jsxs)("div", {
+    return (0, r.jsx)(a.hjN, {
+        className: p.formSection,
+        children: (0, r.jsxs)(a.y5t, {
+            component: (0, r.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(s.X6q, {
-                        className: g.formTitle,
+                    (0, r.jsx)(a.X6q, {
+                        className: p.formTitle,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
-                        children: p.intl.string(m.default.TG0Qsb),
+                        children: _.intl.string(f.default.TG0Qsb),
                     }),
-                    (0, i.jsx)(s.R94, {
-                        className: g.formDescription,
-                        type: s.R94.Types.DESCRIPTION,
-                        children: p.intl.string(m.default.OO17Li),
+                    (0, r.jsx)(a.R94, {
+                        className: p.formDescription,
+                        type: a.R94.Types.DESCRIPTION,
+                        children: _.intl.string(f.default.OO17Li),
                     }),
                 ],
             }),
             children: [
-                (0, i.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(s.X6q, {
-                            className: g.defaultSetting,
+                        (0, r.jsx)(a.X6q, {
+                            className: p.defaultSetting,
                             variant: "heading-md/medium",
                             color: "header-primary",
-                            children: p.intl.string(m.default["/LHVbm"]),
+                            children: _.intl.string(f.default["/LHVbm"]),
                         }),
-                        (0, i.jsx)(s.FXm, {
-                            options: n,
+                        (0, r.jsx)(a.FXm, {
+                            options: o,
                             value: t,
-                            onChange: (e) => {
-                                var t;
-                                return (t = e.value), void l.no.updateSetting(t);
-                            },
+                            onChange: (e) => n(e.value),
                         }),
                     ],
                 }),
-                (0, i.jsxs)("div", {
-                    className: g.myServersContainer,
+                (0, r.jsxs)("div", {
+                    className: p.myServersContainer,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: g.myServersHeaderContainer,
+                        (0, r.jsxs)("div", {
+                            className: p.myServersHeaderContainer,
                             children: [
-                                (0, i.jsx)(s.X6q, {
-                                    className: g.myServersTitle,
+                                (0, r.jsx)(a.X6q, {
+                                    className: p.myServersTitle,
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: p.intl.string(p.t.TqdOvL),
+                                    children: _.intl.string(_.t.TqdOvL),
                                 }),
                                 !e &&
-                                    (0, i.jsx)(s.Wn, {
-                                        className: g.myServersIgnoredWarning,
-                                        messageType: s.QYI.WARNING,
+                                    (0, r.jsx)(a.Wn, {
+                                        className: p.myServersIgnoredWarning,
+                                        messageType: a.QYI.WARNING,
                                         textColor: "text-feedback-warning",
-                                        children: p.intl.string(m.default["xxI0/f"]),
+                                        children: _.intl.string(f.default["xxI0/f"]),
                                     }),
                             ],
                         }),
-                        (0, i.jsx)(c.Z, {}),
+                        (0, r.jsx)(c.Z, {}),
                     ],
+                }),
+            ],
+        }),
+    });
+}
+function g() {
+    let e = s.cP.useSetting(),
+        t = s.Ou.useSetting();
+    return (0, r.jsx)(o.F, {
+        setting: d.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, r.jsxs)(a.hjN, {
+            className: p.formSection,
+            children: [
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(a.X6q, {
+                        className: p.formTitle,
+                        variant: "heading-lg/semibold",
+                        color: "header-primary",
+                        children: _.intl.string(f.default["5rYBAQ"]),
+                    }),
+                }),
+                (0, r.jsx)(h, {
+                    label: _.intl.string(f.default.khuuzs),
+                    sublabel: _.intl.string(f.default["8EWsJy"]),
+                    id: "allow-friends-to-join-my-game",
+                    checked: e,
+                    onChange: (e) => s.cP.updateSetting(e),
+                }),
+                (0, r.jsx)(h, {
+                    label: _.intl.string(f.default.Uz5Ipq),
+                    sublabel: _.intl.string(f.default.CZI2GR),
+                    id: "allow-vc-join-without-request",
+                    checked: t,
+                    onChange: (e) => s.Ou.updateSetting(e),
+                }),
+            ],
+        }),
+    });
+}
+function E() {
+    let e = s.G6.useSetting(),
+        t = l.isPlatformEmbedded ? _.intl.string(f.default.UQ9RHB) : _.intl.string(_.t.oKqC4u);
+    return (0, r.jsx)(o.F, {
+        setting: d.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, r.jsxs)(a.hjN, {
+            className: p.formSection,
+            children: [
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(a.R94, {
+                        className: p.formDescription,
+                        type: a.R94.Types.DESCRIPTION,
+                        children: _.intl.string(f.default.t2Ysra),
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: p.switchContainer,
+                    children: (0, r.jsx)(h, {
+                        label: _.intl.string(f.default.WhdCGB),
+                        sublabel: t,
+                        id: "share-my-activity",
+                        checked: e,
+                        onChange: s.G6.updateSetting,
+                    }),
                 }),
             ],
         }),
     });
 }
 function b() {
-    let e = l.cP.useSetting(),
-        t = l.Ou.useSetting();
-    return (0, i.jsx)(a.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(s.hjN, {
-            className: g.formSection,
-            children: [
-                (0, i.jsx)("div", {
-                    children: (0, i.jsx)(s.X6q, {
-                        className: g.formTitle,
-                        variant: "heading-lg/semibold",
-                        color: "header-primary",
-                        children: p.intl.string(m.default["5rYBAQ"]),
-                    }),
-                }),
-                (0, i.jsx)(h, {
-                    label: p.intl.string(m.default.khuuzs),
-                    sublabel: p.intl.string(m.default["8EWsJy"]),
-                    id: "allow-friends-to-join-my-game",
-                    checked: e,
-                    onChange: (e) => l.cP.updateSetting(e),
-                }),
-                (0, i.jsx)(h, {
-                    label: p.intl.string(m.default.Uz5Ipq),
-                    sublabel: p.intl.string(m.default.CZI2GR),
-                    id: "allow-vc-join-without-request",
-                    checked: t,
-                    onChange: (e) => l.Ou.updateSetting(e),
-                }),
-            ],
-        }),
-    });
-}
-function x() {
-    let e = l.G6.useSetting(),
-        t = o.isPlatformEmbedded ? p.intl.string(m.default.UQ9RHB) : p.intl.string(p.t.oKqC4u);
-    return (0, i.jsx)(a.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(s.hjN, {
-            className: g.formSection,
-            children: [
-                (0, i.jsx)("div", {
-                    children: (0, i.jsx)(s.R94, {
-                        className: g.formDescription,
-                        type: s.R94.Types.DESCRIPTION,
-                        children: p.intl.string(m.default.t2Ysra),
-                    }),
-                }),
-                (0, i.jsx)("div", {
-                    className: g.switchContainer,
-                    children: (0, i.jsx)(h, {
-                        label: p.intl.string(m.default.WhdCGB),
-                        sublabel: t,
-                        id: "share-my-activity",
-                        checked: e,
-                        onChange: l.G6.updateSetting,
-                    }),
-                }),
-            ],
-        }),
-    });
-}
-function _() {
-    return (0, i.jsx)(a.F, {
-        setting: u.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(s.hjN, {
-            children: (0, i.jsx)(s.ToO, {
-                type: s.ToO.Types.PRIMARY,
-                body: p.intl.format(p.t.xvCsx8, {
-                    termsLink: d.EYA.TERMS,
-                    privacyLink: d.EYA.PRIVACY,
+    return (0, r.jsx)(o.F, {
+        setting: d.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, r.jsx)(a.hjN, {
+            children: (0, r.jsx)(a.ToO, {
+                type: a.ToO.Types.PRIMARY,
+                body: _.intl.format(_.t.xvCsx8, {
+                    termsLink: u.EYA.TERMS,
+                    privacyLink: u.EYA.PRIVACY,
                 }),
             }),
         }),
     });
 }
-let j = function (e) {
+let y = function (e) {
     let { className: t } = e;
-    return (0, i.jsx)(s.hjN, {
+    return (0, r.jsx)(a.hjN, {
         className: t,
-        children: (0, i.jsxs)(s.y5t, {
+        children: (0, r.jsxs)(a.y5t, {
             forceLevel: 1,
-            component: (0, i.jsx)(s.X6q, {
-                className: g.formTitle,
+            component: (0, r.jsx)(a.X6q, {
+                className: p.formTitle,
                 variant: "heading-xl/semibold",
                 color: "header-primary",
-                children: p.intl.string(p.t.Cq98yM),
+                children: _.intl.string(_.t.Cq98yM),
             }),
             children: [
-                (0, i.jsx)(x, {}),
-                (0, i.jsx)(s.$i$, { className: g.divider }),
-                (0, i.jsx)(f, {}),
-                (0, i.jsx)(s.$i$, { className: g.divider }),
-                (0, i.jsx)(b, {}),
-                (0, i.jsx)(s.$i$, { className: g.divider }),
-                (0, i.jsx)(_, {}),
+                (0, r.jsx)(E, {}),
+                (0, r.jsx)(a.$i$, { className: p.divider }),
+                (0, r.jsx)(m, {}),
+                (0, r.jsx)(a.$i$, { className: p.divider }),
+                (0, r.jsx)(g, {}),
+                (0, r.jsx)(a.$i$, { className: p.divider }),
+                (0, r.jsx)(b, {}),
             ],
         }),
     });

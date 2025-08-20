@@ -23,17 +23,17 @@ var r = n(951288),
     T = n(566620),
     S = n(317381),
     A = n(531826),
-    N = n(175894),
-    C = n(963614),
+    C = n(175894),
+    N = n(963614),
     R = n(917107),
     P = n(208156),
     w = n(748492),
     D = n(701488),
-    L = n(918559),
-    x = n(981631),
-    M = n(354459),
-    k = n(505386),
-    j = n(186880),
+    x = n(918559),
+    L = n(981631),
+    j = n(354459),
+    M = n(505386),
+    k = n(186880),
     U = n(315091);
 function G(e, t, n) {
     return (
@@ -64,11 +64,11 @@ function B(e) {
     }
     return e;
 }
-function V(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = F(e, t);
+        i = V(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +76,7 @@ function V(e, t) {
     }
     return i;
 }
-function F(e, t) {
+function V(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,14 +85,14 @@ function F(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function Z(e) {
+function F(e) {
     var t, n, a;
     let { channel: _, isLoading: p } = e,
-        [N, G] = i.useState(!1),
+        [C, G] = i.useState(!1),
         B = (0, s.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
-        V = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
-        F = (0, h.q)(null == B ? void 0 : B.applicationId),
-        Z = null == B ? void 0 : B.launchId,
+        Z = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
+        V = (0, h.q)(null == B ? void 0 : B.applicationId),
+        F = null == B ? void 0 : B.launchId,
         H = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == _ ? void 0 : _.id)),
         { dockedRect: Y, isHidden: W } = (0, s.cj)([O.Z], () => {
             let e = O.Z.pipWindow;
@@ -122,8 +122,8 @@ function Z(e) {
         })),
         Q = H || null != K,
         J = (0, R.Z)(null == _ ? void 0 : _.id),
-        $ = J && (null == q ? void 0 : q.type) !== M.fO.ACTIVITY,
-        ee = !J && V === L.Ez.PIP,
+        $ = J && (null == q ? void 0 : q.type) !== j.fO.ACTIVITY,
+        ee = !J && Z === x.Ez.PIP,
         et = Q && ($ || ee) && null == Y,
         en = (!Q || et) && !W,
         er = en && null != O.Z.pipVideoWindow && null != O.Z.pipActivityWindow;
@@ -138,18 +138,18 @@ function Z(e) {
                         instanceId: B.compositeInstanceId,
                     }),
                 );
-            let t = null != (e = _.getGuildId()) ? e : x.ME;
+            let t = null != (e = _.getGuildId()) ? e : L.ME;
             d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
         }
         null == K && (0, f.Ou)();
     }
     function ea() {
-        G(!N);
+        G(!C);
     }
     function eo(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
-        return en && null != B && ((null == z ? void 0 : z.type) === M.fO.ACTIVITY || o)
+        return en && null != B && ((null == z ? void 0 : z.type) === j.fO.ACTIVITY || o)
             ? (null == (t = B.config) ? void 0 : t.useInteractivePIP)
                 ? (0, r.jsx)(w.of, {
                       onJumpToChannel: ei,
@@ -160,7 +160,7 @@ function Z(e) {
                       onMouseMove: n,
                       onMouseLeave: i,
                       onToggleHeight: ea,
-                      isExpanded: N,
+                      isExpanded: C,
                       hideExpandedButton: o,
                       embeddedActivity: B,
                   })
@@ -171,7 +171,7 @@ function Z(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            ei(), (0, T.tg)(L.Ez.PANEL);
+                            ei(), (0, T.tg)(x.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,
@@ -186,7 +186,7 @@ function Z(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: k.clickShield,
+                                  className: M.clickShield,
                                   onDoubleClick: ei,
                               }),
                               (0, r.jsx)(w.YB, {
@@ -215,7 +215,7 @@ function Z(e) {
                 });
             }
         }, [null == B ? void 0 : B.applicationId, en]),
-        null == B || null == Z || ((0, R.Z)(null == _ ? void 0 : _.id) && null == z) || null == F)
+        null == B || null == F || ((0, R.Z)(null == _ ? void 0 : _.id) && null == z) || null == V)
     )
         return null;
     let es = Array.from(B.userIds)
@@ -240,14 +240,14 @@ function Z(e) {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(k.root, {
-                        [k.pipMode]: en,
+                    className: o()(M.root, {
+                        [M.pipMode]: en,
                         [U.elevationHigh]: en,
-                        [j.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [k.pipModeShort]: en && !N,
-                        [k.pipModeTall]: en && N,
-                        [k.hidden]: W,
-                        [k.multiPIPMode]: er,
+                        [k.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
+                        [M.pipModeShort]: en && !C,
+                        [M.pipModeTall]: en && C,
+                        [M.hidden]: W,
+                        [M.multiPIPMode]: er,
                     }),
                     noBorder: !en,
                     children: [
@@ -263,20 +263,20 @@ function Z(e) {
                         }),
                         p
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: en && !N,
-                                      [k.pipModeTall]: en && N,
+                                  className: o()(M.iframe, {
+                                      [M.pipModeShort]: en && !C,
+                                      [M.pipModeTall]: en && C,
                                   }),
                               })
                             : (0, r.jsx)(P.J, {
-                                  allowPopups: (0, C.h)(F),
+                                  allowPopups: (0, N.h)(V),
                                   referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: el,
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: en && !N,
-                                      [k.pipModeTall]: en && N,
-                                      [k.pipNonInteractive]:
+                                  className: o()(M.iframe, {
+                                      [M.pipModeShort]: en && !C,
+                                      [M.pipModeTall]: en && C,
+                                      [M.pipNonInteractive]:
                                           en && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !en && H,
@@ -296,15 +296,15 @@ function Z(e) {
 }
 let H = (e) => {
     var { channel: t } = e,
-        n = V(e, ["channel"]);
+        n = Z(e, ["channel"]);
     let i = S.ZP.getCurrentEmbeddedActivity();
-    (0, N.Z)({ connectedEmbeddedActivity: i });
+    (0, C.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
         o = null == i;
     return (0, r.jsx)(p.Gt, {
         value: a,
         children: (0, r.jsx)(
-            Z,
+            F,
             B(
                 {
                     channel: t,

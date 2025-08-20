@@ -2,61 +2,66 @@ n.d(t, { V: () => p });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(594174),
+    a = n(594174),
     o = n(78839),
-    a = n(585483),
-    s = n(74538),
+    s = n(585483),
+    l = n(74538),
     c = n(138464),
     u = n(474936),
     d = n(981631);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
 function p(e) {
-    let { processedCode: t, channelContext: p, customGiftMessage: m, giftInfo: f } = e,
-        g = !1,
-        _ = null,
-        h = l.default.getCurrentUser(),
-        b = (0, s.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
+    let { processedCode: t, channelContext: f, customGiftMessage: p, giftInfo: h } = e,
+        m = !1,
+        g = null,
+        E = a.default.getCurrentUser(),
+        b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e("92446"), n.e("50981")]).then(n.bind(n, 409858));
             return (n) => {
-                var i, l;
+                var i, a;
                 return (0, r.jsx)(
                     e,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })(
+                    _(
                         {
                             code: t,
-                            channelContext: p,
-                            customGiftMessage: m,
-                            emojiName: null == f || null == (i = f.emoji) ? void 0 : i.name,
-                            soundId: null == f || null == (l = f.sound) ? void 0 : l.id,
+                            channelContext: f,
+                            customGiftMessage: p,
+                            emojiName: null == h || null == (i = h.emoji) ? void 0 : i.name,
+                            soundId: null == h || null == (a = h.sound) ? void 0 : a.id,
                             onComplete: (e, t) => {
-                                (_ = e),
+                                (g = e),
                                     t &&
-                                        ((g = t),
+                                        ((m = t),
                                         e.isSubscription && null == o.Z.getPremiumSubscription(!1) && (0, c.H)(!0));
                             },
                         },
@@ -68,13 +73,13 @@ function p(e) {
         {
             onCloseCallback: () => {
                 var e;
-                g &&
-                    null != _ &&
+                m &&
+                    null != g &&
                     !b &&
-                    _.isSubscription &&
-                    (null == _ || null == (e = _.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
+                    g.isSubscription &&
+                    (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
                         u.p9.TIER_2 &&
-                    a.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                    s.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

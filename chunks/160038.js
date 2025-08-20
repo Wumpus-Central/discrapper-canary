@@ -1,26 +1,26 @@
-n.d(t, { Z: () => m }), n(388685), n(49124);
+n.d(t, { Z: () => E }), n(388685), n(49124);
 var r = n(951288),
     l = n(647438),
-    i = n(120356),
-    o = n.n(i),
-    s = n(46973),
-    a = n(481060),
+    s = n(120356),
+    i = n.n(s),
+    a = n(46973),
+    o = n(481060),
     c = n(304680),
     u = n(706619),
     d = n(695346),
-    f = n(131951),
-    h = n(626135),
+    h = n(131951),
+    f = n(626135),
     g = n(572004),
     p = n(63063),
     O = n(476221),
     y = n(981631),
-    N = n(65154),
+    x = n(65154),
     b = n(388032),
-    x = n(827297);
-let E = () => {
-        f.Z.getMediaEngine().once(s.aB.ConnectionStats, (e) => {
+    N = n(827297);
+let m = () => {
+        h.Z.getMediaEngine().once(a.aB.ConnectionStats, (e) => {
             let t = JSON.stringify(
-                Object.values(N.Yn)
+                Object.values(x.Yn)
                     .map((t) => {
                         let n = e
                             .filter((e) => {
@@ -42,27 +42,27 @@ let E = () => {
                 null,
                 2,
             );
-            (0, g.JG)(t, () => (0, a.showToast)((0, a.createToast)(b.intl.string(b.t["t5VZ8/"]), a.ToastType.SUCCESS)));
+            (0, g.JG)(t, () => (0, o.showToast)((0, o.createToast)(b.intl.string(b.t["t5VZ8/"]), o.ToastType.SUCCESS)));
         });
     },
-    m = function (e) {
+    E = function (e) {
         (0, l.useEffect)(() => {
-            h.default.track(y.rMx.OPEN_POPOUT, { type: "RTC Connection" });
+            f.default.track(y.rMx.OPEN_POPOUT, { type: "RTC Connection" });
         }, []);
         let t = (0, l.useCallback)(() => {
                 let { closePopout: t } = e;
                 null != t && t(), c.bA();
             }, [e]),
             n = (0, l.useCallback)(() => {
-                let { hostname: t, averagePing: n, lastPing: i, outboundLossRate: s } = e,
-                    a = d.Sb.getSetting();
+                let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: a } = e,
+                    o = d.Sb.getSetting();
                 return (0, r.jsxs)(l.Fragment, {
                     children: [
-                        a &&
+                        o &&
                             (0, r.jsxs)("div", {
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: x.graphContainer,
+                                        className: N.graphContainer,
                                         children: (0, r.jsx)(u.Z, {
                                             dataPoints: e.pings,
                                             width: 258,
@@ -70,32 +70,32 @@ let E = () => {
                                         }),
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: x.popoutText,
+                                        className: N.popoutText,
                                         children: (0, r.jsx)("strong", { children: O.Z.getShortHostname(t) }),
                                     }),
                                 ],
                             }),
                         (0, r.jsx)("div", {
-                            className: x.popoutText,
+                            className: N.popoutText,
                             children: b.intl.format(b.t["X58/lJ"], { averagePing: n.toFixed(0) }),
                         }),
-                        null != i
-                            ? (0, r.jsx)("div", {
-                                  className: x.popoutText,
-                                  children: b.intl.format(b.t["6iv2TE"], { lastPing: i.toFixed(0) }),
-                              })
-                            : null,
                         null != s
                             ? (0, r.jsx)("div", {
-                                  className: x.popoutText,
-                                  children: b.intl.format(b.t.VIBJMz, { outboundLossRate: s.toFixed(1) }),
+                                  className: N.popoutText,
+                                  children: b.intl.format(b.t["6iv2TE"], { lastPing: s.toFixed(0) }),
+                              })
+                            : null,
+                        null != a
+                            ? (0, r.jsx)("div", {
+                                  className: N.popoutText,
+                                  children: b.intl.format(b.t.VIBJMz, { outboundLossRate: a.toFixed(1) }),
                               })
                             : null,
                         (0, r.jsxs)("div", {
-                            className: o()(x.popoutText, x.popoutTextDetails),
+                            className: i()(N.popoutText, N.popoutTextDetails),
                             children: [
-                                null == s ? b.intl.formatToPlainString(b.t.vggaMj, { badPing: 250 }) : null,
-                                null != s
+                                null == a ? b.intl.formatToPlainString(b.t.vggaMj, { badPing: 250 }) : null,
+                                null != a
                                     ? b.intl.formatToPlainString(b.t["3pFz1N"], {
                                           badPing: 250,
                                           badLossRate: 10,
@@ -106,9 +106,9 @@ let E = () => {
                     ],
                 });
             }, [e]),
-            { connectionState: i, connectionTypeText: s } = e,
+            { connectionState: s, connectionTypeText: a } = e,
             g = d.Sb.getSetting(),
-            m = {
+            E = {
                 [y.hes.AWAITING_ENDPOINT]: b.intl.format(b.t.Eu2vUV, { url: y.yXt.STATUS }),
                 [y.hes.CONNECTING]: b.intl.string(b.t["y+E8aG"]),
                 [y.hes.AUTHENTICATING]: b.intl.string(b.t["5lGIZG"]),
@@ -125,57 +125,57 @@ let E = () => {
                     url: p.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS),
                 }),
                 [y.hes.RTC_DISCONNECTED]: b.intl.string(b.t.fOX25O),
-            }[i];
+            }[s];
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                "function" == typeof m
-                    ? m()
+                "function" == typeof E
+                    ? E()
                     : (0, r.jsx)("p", {
-                          className: o()(x.popoutText, x.popoutTextDetails),
-                          children: m,
+                          className: i()(N.popoutText, N.popoutTextDetails),
+                          children: E,
                       }),
-                (0, r.jsx)("hr", { className: x.separator }),
+                (0, r.jsx)("hr", { className: N.separator }),
                 (0, r.jsxs)("div", {
-                    className: x.popoutBottom,
+                    className: N.popoutBottom,
                     children: [
                         (0, r.jsxs)("span", {
-                            className: o()(x.secured, x.textWithIcon),
+                            className: i()(N.secured, N.textWithIcon),
                             children: [
-                                (0, r.jsx)(a.mBM, {
+                                (0, r.jsx)(o.mBM, {
                                     size: "xxs",
-                                    color: a.TVs.colors.TEXT_FEEDBACK_POSITIVE.css,
-                                    className: x.__invalid_icon,
+                                    color: o.TVs.colors.TEXT_FEEDBACK_POSITIVE.css,
+                                    className: N.__invalid_icon,
                                 }),
-                                s,
+                                a,
                             ],
                         }),
                         g &&
-                            f.Z.supports(N.AN.DIAGNOSTICS) &&
+                            h.Z.supports(x.AN.DIAGNOSTICS) &&
                             !__OVERLAY__ &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsxs)(a.eee, {
-                                        className: o()(x.debugButton, x.textWithIcon),
+                                    (0, r.jsxs)(o.eee, {
+                                        className: i()(N.debugButton, N.textWithIcon),
                                         onClick: t,
                                         children: [
                                             b.intl.string(b.t.KBoWg4),
-                                            (0, r.jsx)(a.rgF, {
+                                            (0, r.jsx)(o.rgF, {
                                                 size: "xxs",
                                                 color: "currentColor",
-                                                className: x.__invalid_icon,
+                                                className: N.__invalid_icon,
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsxs)(a.eee, {
-                                        className: o()(x.copyStatsButton, x.textWithIcon),
-                                        onClick: E,
+                                    (0, r.jsxs)(o.eee, {
+                                        className: i()(N.copyStatsButton, N.textWithIcon),
+                                        onClick: m,
                                         title: "Copy to clipboard",
                                         children: [
                                             b.intl.string(b.t["XEb+Sk"]),
-                                            (0, r.jsx)(a.TIy, {
+                                            (0, r.jsx)(o.TIy, {
                                                 size: "xxs",
                                                 color: "currentColor",
-                                                className: x.__invalid_icon,
+                                                className: N.__invalid_icon,
                                             }),
                                         ],
                                     }),
@@ -183,8 +183,8 @@ let E = () => {
                             }),
                         !g &&
                             !__OVERLAY__ &&
-                            (0, r.jsx)(a.eee, {
-                                className: x.debugButton,
+                            (0, r.jsx)(o.eee, {
+                                className: N.debugButton,
                                 href: p.Z.getArticleURL(y.BhN.VOICE_VIDEO_TROUBLESHOOTING),
                                 children: b.intl.string(b.t.hvVgAQ),
                             }),

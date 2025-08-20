@@ -165,9 +165,9 @@ function S() {
 }
 function A(e) {
     let t = o.Z.getDMChannelFromUserId(e);
-    null != t && N([t]);
+    null != t && C([t]);
 }
-function N(e) {
+function C(e) {
     if (!g()) return;
     let t = [],
         n = [],
@@ -193,7 +193,7 @@ function N(e) {
         } else n.push(a.id);
     t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n);
 }
-class C extends r.Z {
+class N extends r.Z {
     handleInit() {
         T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S();
     }
@@ -225,7 +225,7 @@ class C extends r.Z {
     }
     handleChannelUpdates(e) {
         let { channels: t } = e;
-        N(t);
+        C(t);
     }
     handleGuildCreateOrUpdate(e) {
         let { guild: t, type: n } = e;
@@ -240,7 +240,7 @@ class C extends r.Z {
     }
     handleThreadUpdate(e) {
         let { channel: t } = e;
-        N([t]);
+        C([t]);
     }
     handleUserUpdate(e) {
         let { user: t } = e;
@@ -272,4 +272,4 @@ class C extends r.Z {
             });
     }
 }
-let R = new C();
+let R = new N();

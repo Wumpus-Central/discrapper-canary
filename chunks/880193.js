@@ -26,8 +26,8 @@ function O(e) {
             return null == (e = m.Z.getSubscriptionListing(n)) ? void 0 : e.image_asset;
         }),
         [y, C] = h._T(n),
-        [N, I] = h.mR(n),
-        [E, S] = h.PK(n),
+        [N, E] = h.mR(n),
+        [I, S] = h.PK(n),
         [T, P] = h.d9(n, 1024),
         { imageCTA: w, imageAriaLabel: R, setFilename: Z } = (0, f.Z)(O),
         D = i.useMemo(() => {
@@ -85,7 +85,7 @@ function O(e) {
                                 isDisabled: L || null == t,
                                 placeholder: j.intl.string(j.t["88XZDg"]),
                                 value: N,
-                                onChange: I,
+                                onChange: E,
                                 maxVisibleItems: 5,
                                 look: s.qQH.CUSTOM,
                                 "aria-labelledby": M,
@@ -101,7 +101,7 @@ function O(e) {
                 disabled: L,
                 children: (0, r.jsx)(a.iS, {
                     placeholder: j.intl.string(j.t.p7Jr4O),
-                    value: E,
+                    value: I,
                     rows: 2,
                     autosize: !0,
                     className: v.formInput,

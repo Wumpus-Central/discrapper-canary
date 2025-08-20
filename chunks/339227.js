@@ -197,10 +197,10 @@ for (let e in d.Z.RULES) {
                 "then you probably need to add it to this file so that the rich chat box understands it.",
         );
     let t = I[e];
-    "skip" !== t.type && (S[e] = N(d.Z.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (A[e] = N("text" === e ? f.ZP : d.Z.RULES[e]));
+    "skip" !== t.type && (S[e] = C(d.Z.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (A[e] = C("text" === e ? f.ZP : d.Z.RULES[e]));
 }
-function N(e) {
+function C(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return O(b({}, e), {
@@ -210,7 +210,7 @@ function N(e) {
         },
     });
 }
-function C(e) {
+function N(e) {
     return {
         type: "autolink",
         content: e[1],
@@ -240,10 +240,10 @@ let R = {
                           content: e[0],
                           originalMatch: e,
                       }
-                    : C(e),
+                    : N(e),
         },
-        mailto: { parse: C },
-        tel: { parse: C },
+        mailto: { parse: N },
+        tel: { parse: N },
         codeBlockSyntax: {
             order: s.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -271,15 +271,15 @@ let R = {
     P = /(-# +)/,
     w = (0, _.Z)([S, R]),
     D = (0, _.Z)([A, R]),
-    L = l._p(w),
-    x = l._p(D),
-    M = {
+    x = l._p(w),
+    L = l._p(D),
+    j = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    k = new (o())(M),
-    j = new (o())(M);
+    M = new (o())(j),
+    k = new (o())(j);
 function U(e, t, n) {
     let r = [],
         i = {
@@ -289,8 +289,8 @@ function U(e, t, n) {
             isSlate: !0,
             allowGameMentions: !0,
         },
-        a = n ? x : L,
-        o = n ? j : k,
+        a = n ? L : x,
+        o = n ? k : M,
         s = o.get(e);
     if (null != s) return s;
     let l =
@@ -306,7 +306,7 @@ function U(e, t, n) {
             type: "paragraph",
             content: a(l, !0, i),
         };
-    V(r, l, c, 0, []);
+    Z(r, l, c, 0, []);
     let u = B(r);
     return o.set(e, u), u;
 }
@@ -352,7 +352,7 @@ function B(e) {
     }
     return t;
 }
-function V(e, t, n, r, a) {
+function Z(e, t, n, r, a) {
     let { content: o, type: s, originalMatch: l } = n;
     switch ((i()(null != l, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), s)) {
         case "newline":
@@ -360,7 +360,7 @@ function V(e, t, n, r, a) {
         case "paragraph":
         case "text":
         case "emoticon":
-            return Z(e, t, o || "", r, a);
+            return F(e, t, o || "", r, a);
         case "emoji":
         case "customEmoji": {
             let i = t.substring(r);
@@ -449,7 +449,7 @@ function V(e, t, n, r, a) {
                     attributes: [s],
                     data: n,
                 });
-            return Z(e, t, l[0], r, a);
+            return F(e, t, l[0], r, a);
         case "em":
         case "autolink":
         case "mailto":
@@ -466,11 +466,11 @@ function V(e, t, n, r, a) {
         case "link":
         case "subtext": {
             r = W(t, r);
-            let { before: n, after: i } = F(t, s, r, l);
+            let { before: n, after: i } = V(t, s, r, l);
             return (
                 (r = H(e, t, n, r, "syntaxBefore")),
                 a.push(s),
-                (r = Z(e, t, null != o ? o : "", r, a)),
+                (r = F(e, t, null != o ? o : "", r, a)),
                 a.pop(),
                 (r = H(e, t, i, r, "syntaxAfter")),
                 W(t, r)
@@ -480,7 +480,7 @@ function V(e, t, n, r, a) {
             throw Error("Slate: Unknown rule type: ".concat(s));
     }
 }
-function F(e, t, n, r) {
+function V(e, t, n, r) {
     if ("inlineCode" === t)
         return {
             before: r[1],
@@ -500,7 +500,7 @@ function F(e, t, n, r) {
     if ("inlineStyle" === i.type) return i;
     throw Error("Slate: rule must be an inlineStyle");
 }
-function Z(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     return (
         "string" == typeof n
             ? (r = Y({
@@ -513,7 +513,7 @@ function Z(e, t, n, r, i) {
               }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  r = V(e, t, n, r, i);
+                  r = Z(e, t, n, r, i);
               })),
         W(t, r)
     );

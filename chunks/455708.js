@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(35282), n(388685);
+n.d(t, { Z: () => N }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -71,7 +71,7 @@ function S(e, t) {
     );
 }
 let A = (e) => e.stopPropagation();
-class N extends i.PureComponent {
+class C extends i.PureComponent {
     componentDidMount() {
         d.gK(),
             document.addEventListener("keydown", this.backToFrontPage),
@@ -231,7 +231,7 @@ class N extends i.PureComponent {
             });
     }
 }
-let C = i.forwardRef((e, t) => {
+let N = i.forwardRef((e, t) => {
     e.persistSearch || (0, _.ql)("");
     let {
             query: n,
@@ -262,7 +262,7 @@ let C = i.forwardRef((e, t) => {
             }
         }, [d, g]),
         (0, r.jsx)(
-            N,
+            C,
             S(I({}, e), {
                 forwardedRef: t,
                 query: f,

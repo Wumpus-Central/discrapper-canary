@@ -1,10 +1,10 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(647438),
     i = n(668781),
-    l = n(881052),
+    a = n(881052),
     o = n(824389),
-    a = n(179838),
-    s = n(388032);
+    s = n(179838),
+    l = n(388032);
 function c(e, t) {
     let [n, c] = r.useState(!1);
     return {
@@ -19,12 +19,12 @@ function c(e, t) {
                             productId: t,
                             attachmentId: n,
                         });
-                        await a.L(r);
+                        await s.L(r);
                     } catch (t) {
-                        let e = t instanceof l.Hx ? t.getAnyErrorMessage() : void 0;
+                        let e = t instanceof a.Hx ? t.getAnyErrorMessage() : void 0;
                         i.Z.show({
-                            title: s.intl.string(s.t.R0RpRU),
-                            body: null != e ? e : s.intl.string(s.t.eAn6z8),
+                            title: l.intl.string(l.t.R0RpRU),
+                            body: null != e ? e : l.intl.string(l.t.eAn6z8),
                         });
                     } finally {
                         c(!1);

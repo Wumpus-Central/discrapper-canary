@@ -1,37 +1,37 @@
-n.d(t, { Z: () => p }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(793030),
-    o = n(481060),
+n.d(t, { Z: () => _ }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(793030),
+    l = n(481060),
     c = n(715495),
-    d = n(538645),
-    u = n(646420);
-let m = (e) => {
+    u = n(538645),
+    d = n(646420);
+let f = (e) => {
         let { setTab: t } = e;
-        return (0, i.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             children: [
-                (0, i.jsx)(o.P3F, {
+                (0, r.jsx)(l.P3F, {
                     onClick: () => {
                         t(1);
                     },
-                    children: (0, i.jsx)("div", {
-                        className: a()(u.banner, u.pfxBanner),
-                        children: (0, i.jsx)(l.xv, {
+                    children: (0, r.jsx)("div", {
+                        className: o()(d.banner, d.pfxBanner),
+                        children: (0, r.jsx)(s.xv, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Profile Effects",
                         }),
                     }),
                 }),
-                (0, i.jsx)(o.P3F, {
+                (0, r.jsx)(l.P3F, {
                     onClick: () => {
                         t(2);
                     },
-                    children: (0, i.jsx)("div", {
-                        className: a()(u.banner, u.nameplateBanner),
-                        children: (0, i.jsx)(l.xv, {
+                    children: (0, r.jsx)("div", {
+                        className: o()(d.banner, d.nameplateBanner),
+                        children: (0, r.jsx)(s.xv, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Nameplates",
@@ -41,36 +41,37 @@ let m = (e) => {
             ],
         });
     },
-    p = () => {
-        let [e, t] = r.useState(0);
-        return (0, i.jsxs)("div", {
-            className: u.wrapper,
+    _ = () => {
+        let [e, t] = i.useState(0),
+            n = () => {
+                switch (e) {
+                    case 1:
+                        return (0, r.jsx)(u.Z, {});
+                    case 2:
+                        return (0, r.jsx)(c.Z, {});
+                    default:
+                        return (0, r.jsx)(f, { setTab: t });
+                }
+            };
+        return (0, r.jsxs)("div", {
+            className: d.wrapper,
             children: [
-                (0, i.jsxs)("div", {
-                    className: u.nav,
+                (0, r.jsxs)("div", {
+                    className: d.nav,
                     children: [
-                        (0, i.jsx)(l.X6, {
+                        (0, r.jsx)(s.X6, {
                             variant: "heading-xxl/medium",
                             children: "ShopKeeper",
                         }),
                         0 !== e &&
-                            (0, i.jsx)(o.zxk, {
+                            (0, r.jsx)(l.zxk, {
                                 variant: "primary",
                                 onClick: () => t(0),
                                 text: "Back",
                             }),
                     ],
                 }),
-                (() => {
-                    switch (e) {
-                        case 1:
-                            return (0, i.jsx)(d.Z, {});
-                        case 2:
-                            return (0, i.jsx)(c.Z, {});
-                        default:
-                            return (0, i.jsx)(m, { setTab: t });
-                    }
-                })(),
+                n(),
             ],
         });
     };

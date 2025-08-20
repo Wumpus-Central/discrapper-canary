@@ -22,21 +22,21 @@ function f(e) {
             return null != e && (0, a.eM)(e, t);
         }),
         { error: j, loading: v, createEnableRequest: _, submittedRequest: O } = (0, d.Z)(null == e ? void 0 : e.id),
-        { loading: y, error: C, refresh: N, eligibility: I } = (0, u.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: E, requestCooldownDuration: S } = (0, m.Z)(I),
+        { loading: y, error: C, refresh: N, eligibility: E } = (0, u.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: I, requestCooldownDuration: S } = (0, m.Z)(E),
         T =
             (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
             (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
-        w = O || (null == I ? void 0 : I.isApplicationPending) === !0,
-        R = (null == I ? void 0 : I.canApply) === !0,
+        w = O || (null == E ? void 0 : E.isApplicationPending) === !0,
+        R = (null == E ? void 0 : E.canApply) === !0,
         Z = h.intl.format(h.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
-    E && P
+    I && P
         ? (t =
               !0 === f
                   ? h.intl.format(h.t["0o1Q+v"], { communityGuidelineUrl: p.EYA.GUIDELINES })
                   : h.intl.format(h.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
-        : E &&
+        : I &&
           null != S &&
           (t = h.intl.format(h.t.TvX209, {
               requestCooldownDuration: S,
@@ -45,7 +45,7 @@ function f(e) {
     let D = n && x && !1 === b,
         A = n && !1 === f,
         L = (0, g.f)(),
-        k = E && R && x ? h.intl.format(h.t.wbVIUF, {}) : void 0;
+        k = I && R && x ? h.intl.format(h.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             D && N();
@@ -59,14 +59,14 @@ function f(e) {
             eligibilityLoading: y,
             eligibilityError: C,
             refreshEligibility: N,
-            eligibility: I,
+            eligibility: E,
             eligibleForMonetization: R,
             isApplicationPending: w,
-            hasPreviousApplicationRejection: E,
+            hasPreviousApplicationRejection: I,
             requestRejectedNoticeText: t,
             reapplyNoticeText: k,
             showAcceptTermsFlow: A,
-            wasRejectedInV1: A && (T || E),
+            wasRejectedInV1: A && (T || I),
             requirementsFinePrintText: Z,
             acceptTermsCheckboxText: L,
         }

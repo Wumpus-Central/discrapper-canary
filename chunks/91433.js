@@ -21,18 +21,18 @@ function E(e) {
         I = f.ZP.getName(n, a, t),
         { trackUserProfileAction: T } = (0, _.KZ)(),
         { newestAnalyticsLocation: S } = (0, l.ZP)(),
-        { acceptFriendRequest: A, cancelFriendRequest: N } = (0, d.u)({
+        { acceptFriendRequest: A, cancelFriendRequest: C } = (0, d.u)({
             userId: t.id,
             applicationId: E,
             isGameRelationship: b,
             location: S,
         }),
-        C = i.useCallback(() => {
+        N = i.useCallback(() => {
             A(), T({ action: b ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
         }, [A, b, T]),
         R = i.useCallback(() => {
-            N(), T({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
-        }, [N, b, T]),
+            C(), T({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
+        }, [C, b, T]),
         P = null != E,
         w = (0, c.q)(E);
     return P && null == w
@@ -68,7 +68,7 @@ function E(e) {
                           (0, r.jsx)(s.zxk, {
                               variant: v ? "secondary" : "primary",
                               size: "sm",
-                              onClick: C,
+                              onClick: N,
                               text: m.intl.string(m.t.ZcibdX),
                           }),
                           (0, r.jsx)(s.zxk, {

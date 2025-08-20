@@ -1,5 +1,5 @@
-s.d(t, { Z: () => i });
-let i = (0, s(818083).B)({
+i.d(t, { Z: () => l });
+let l = (0, i(818083).B)({
     kind: "user",
     id: "2021-10_runtime_accessibility_system",
     label: "Runtime Accessibility System",

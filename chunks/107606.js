@@ -13,22 +13,22 @@ var r = a(442837),
     x = a(695346),
     h = a(594174),
     p = a(176038),
-    b = a(469115),
-    v = a(685960);
+    v = a(469115),
+    b = a(685960);
 function f() {
-    var e, t, a, f, g, j, _, y;
+    var e, t, a, f, j, g, _, y;
     (0, u.mw)();
     let C = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         N = x.L1.useSetting(),
-        T = (0, r.e7)([m.Z], () => m.Z.theme),
-        O = N.backgroundGradientPresetId,
-        E = (0, r.e7)([c.Z], () => c.Z.purchases),
-        S = (0, d.Ad)(E),
-        P = (0, d.jT)(E),
-        I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
-        w = null == C || null == (a = C.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
-        k = null != I && null != (g = S.find((e) => e.skuId === I)) ? g : null,
-        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        O = (0, r.e7)([m.Z], () => m.Z.theme),
+        E = N.backgroundGradientPresetId,
+        T = (0, r.e7)([c.Z], () => c.Z.purchases),
+        S = (0, d.Ad)(T),
+        P = (0, d.jT)(T),
+        w = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
+        I = null == C || null == (a = C.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
+        k = null != w && null != (j = S.find((e) => e.skuId === w)) ? j : null,
+        R = null != I && null != (g = P.find((e) => e.skuId === I)) ? g : null,
         Z = (0, r.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
         A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, r.e7)([s.Z], () => s.Z.fontSize),
@@ -37,7 +37,7 @@ function f() {
     return (
         (0, p.ub)(),
         (0, n.jsxs)("div", {
-            className: v.container,
+            className: b.container,
             children: [
                 (0, n.jsxs)("div", {
                     children: [
@@ -78,14 +78,14 @@ function f() {
                         }),
                         (0, n.jsxs)(i.Text, {
                             variant: "text-md/normal",
-                            children: ["Theme: ", T],
+                            children: ["Theme: ", O],
                         }),
                         (0, n.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != O ? (null == (f = b.qt[O]) ? void 0 : f.getName()) : "None",
+                                null != E ? (null == (f = v.qt[E]) ? void 0 : f.getName()) : "None",
                             ],
                         }),
                         (0, n.jsxs)(i.Text, {

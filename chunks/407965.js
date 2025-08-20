@@ -1,49 +1,49 @@
-n.d(t, { n: () => j }), n(539854);
-var i = n(951288),
-    r = n(647438),
-    s = n(512722),
-    a = n.n(s),
-    l = n(442837),
-    o = n(82659),
+n.d(t, { n: () => y }), n(539854);
+var r = n(951288),
+    i = n(647438),
+    a = n(512722),
+    o = n.n(a),
+    s = n(442837),
+    l = n(82659),
     c = n(481060),
-    d = n(484459),
-    u = n(594174),
-    m = n(847903),
-    p = n(807163),
-    g = n(10508),
+    u = n(484459),
+    d = n(594174),
+    f = n(847903),
+    _ = n(807163),
+    p = n(10508),
     h = n(45474),
-    f = n(594135),
-    b = n(388032),
-    x = n(181679);
-let _ = (e) => {
+    m = n(594135),
+    g = n(388032),
+    E = n(181679);
+let b = (e) => {
         let { churnUserDiscountOffer: t } = e;
         return null == t
             ? null
-            : (0, i.jsx)("div", {
-                  className: x.previewContainer,
-                  children: (0, i.jsx)(g.o, { userDiscountOffer: t }),
+            : (0, r.jsx)("div", {
+                  className: E.previewContainer,
+                  children: (0, r.jsx)(p.o, { userDiscountOffer: t }),
               });
     },
-    j = () => {
+    y = () => {
         let {
                 transitionState: e,
                 onClose: t,
                 premiumType: n,
-                setStep: s,
-                churnUserDiscountOffer: g,
-                isFetchingChurnDiscountOffer: x,
-            } = (0, f.a)(),
-            j = (0, l.e7)([u.default], () => {
-                let e = u.default.getCurrentUser();
-                return a()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
+                setStep: a,
+                churnUserDiscountOffer: p,
+                isFetchingChurnDiscountOffer: E,
+            } = (0, m.a)(),
+            y = (0, s.e7)([d.default], () => {
+                let e = d.default.getCurrentUser();
+                return o()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
             });
-        r.useEffect(() => {
-            (0, d.Z)(j.id, j.getAvatarURL(null, 80));
-        }, [j]);
-        let E = (0, m.Z)(),
-            C = "US" === E.ipCountryCode && "CA" === E.ipSubdivisionCode;
-        if (x)
-            return (0, i.jsx)(o.Modal, {
+        i.useEffect(() => {
+            (0, u.Z)(y.id, y.getAvatarURL(null, 80));
+        }, [y]);
+        let O = (0, f.Z)(),
+            v = "US" === O.ipCountryCode && "CA" === O.ipSubdivisionCode;
+        if (E)
+            return (0, r.jsx)(l.Modal, {
                 transitionState: e,
                 title: "",
                 actions: [],
@@ -51,34 +51,34 @@ let _ = (e) => {
                     t();
                 },
             });
-        let O = [];
+        let I = [];
         return (
-            null != g
-                ? O.push({
-                      text: b.intl.string(b.t.zrCzVF),
-                      onClick: () => s(h.R.CONFIRM_DISCOUNT),
+            null != p
+                ? I.push({
+                      text: g.intl.string(g.t.zrCzVF),
+                      onClick: () => a(h.R.CONFIRM_DISCOUNT),
                       variant: "secondary",
                       icon: c.SrA,
                   })
-                : O.push({
-                      text: b.intl.string(b.t.h9tkAA),
+                : I.push({
+                      text: g.intl.string(g.t.h9tkAA),
                       onClick: () => t(),
                       variant: "secondary",
                   }),
-            O.push({
-                text: C ? b.intl.string(b.t.PfnxqK) : b.intl.string(b.t["3PatS0"]),
-                onClick: () => s(h.R.CONFIRM),
+            I.push({
+                text: v ? g.intl.string(g.t.PfnxqK) : g.intl.string(g.t["3PatS0"]),
+                onClick: () => a(h.R.CONFIRM),
                 variant: "primary",
             }),
-            (0, i.jsx)(o.Modal, {
+            (0, r.jsx)(l.Modal, {
                 transitionState: e,
-                title: b.intl.string(b.t.PWq8TE),
-                subtitle: b.intl.formatToPlainString(b.t.nsGVzs, {}),
-                actions: O,
-                preview: null !== g && (0, i.jsx)(_, { churnUserDiscountOffer: g }),
+                title: g.intl.string(g.t.PWq8TE),
+                subtitle: g.intl.formatToPlainString(g.t.nsGVzs, {}),
+                actions: I,
+                preview: null !== p && (0, r.jsx)(b, { churnUserDiscountOffer: p }),
                 onClose: async () => t(),
-                children: (0, i.jsx)(p.g, {
-                    currentUser: j,
+                children: (0, r.jsx)(_.g, {
+                    currentUser: y,
                     premiumType: n,
                     onClose: t,
                     isDowngrade: !1,

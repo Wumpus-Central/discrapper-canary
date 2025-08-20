@@ -1,33 +1,33 @@
-n.d(t, { Z: () => d });
-var i = n(951288),
-    r = n(647438),
-    s = n(657707),
-    a = n(524437),
-    l = n(481060),
-    o = n(75100);
+n.d(t, { Z: () => u });
+var r = n(951288),
+    i = n(647438),
+    a = n(657707),
+    o = n(524437),
+    s = n(481060),
+    l = n(75100);
 function c(e) {
     let { redactionType: t, label: n } = e,
-        c = r.useMemo(() => {
+        c = i.useMemo(() => {
             switch (t) {
-                case a.Q4.BLUR:
-                    return s.XBm;
-                case a.Q4.BLOCK:
-                    return s.t6m;
-                case a.Q4.SHOW:
-                    return s.tEF;
+                case o.Q4.BLUR:
+                    return a.XBm;
+                case o.Q4.BLOCK:
+                    return a.t6m;
+                case o.Q4.SHOW:
+                    return a.tEF;
                 default:
                     return null;
             }
         }, [t]);
-    return (0, i.jsxs)("div", {
-        className: o.rowContainer,
+    return (0, r.jsxs)("div", {
+        className: l.rowContainer,
         children: [
             null != c &&
-                (0, i.jsx)(c, {
+                (0, r.jsx)(c, {
                     size: "xs",
                     color: "currentColor",
                 }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 children: n,
@@ -35,9 +35,9 @@ function c(e) {
         ],
     });
 }
-let d = r.memo(function (e) {
+let u = i.memo(function (e) {
     let { option: t } = e;
-    return (0, i.jsx)(c, {
+    return (0, r.jsx)(c, {
         redactionType: t.value,
         label: t.label,
     });

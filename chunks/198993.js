@@ -1,15 +1,15 @@
 n.d(t, {
-    ZP: () => b,
+    ZP: () => E,
     c2: () => x,
     cK: () => m,
 });
 var r,
     i,
     l,
-    a = n(951288),
+    s = n(951288),
     o = n(647438),
-    s = n(120356),
-    c = n.n(s),
+    a = n(120356),
+    c = n.n(a),
     u = n(598390),
     d = n(678249);
 function h(e, t, n) {
@@ -42,11 +42,11 @@ function p(e) {
     return e;
 }
 var m = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let f = Object.freeze({
+let g = Object.freeze({
         SIZE_40: "size-40",
         SIZE_60: "size-60",
     }),
-    g = n(515695);
+    f = n(515695);
 class _ extends (i = o.PureComponent) {
     render() {
         let e = this.props,
@@ -72,14 +72,14 @@ class _ extends (i = o.PureComponent) {
                 }
                 return i;
             })(e, ["className", "text"]);
-        return (0, a.jsx)("div", {
+        return (0, s.jsx)("div", {
             style: {
                 width: r.size,
                 height: r.size,
                 backgroundColor: r.bgColor,
             },
             className: c()(d.qrCodeContainer, t),
-            children: (0, a.jsx)(
+            children: (0, s.jsx)(
                 u.default,
                 p(
                     {
@@ -100,16 +100,16 @@ h(_, "defaultProps", {
 class x extends (l = o.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : "SIZE_40"];
-        return (0, a.jsxs)("div", {
+            t = g[null != e ? e : "SIZE_40"];
+        return (0, s.jsxs)("div", {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, a.jsx)(_, p({}, this.props)),
-                (0, a.jsx)("div", {
+                (0, s.jsx)(_, p({}, this.props)),
+                (0, s.jsx)("div", {
                     className: d.qrCodeOverlay,
-                    children: (0, a.jsx)("img", {
+                    children: (0, s.jsx)("img", {
                         className: d[t],
-                        src: g,
+                        src: f,
                         alt: "",
                     }),
                 }),
@@ -122,4 +122,4 @@ h(x, "defaultProps", {
     bgColor: "#ffffff",
     fgColor: "#000000",
 });
-let b = _;
+let E = _;

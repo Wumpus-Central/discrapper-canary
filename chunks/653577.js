@@ -22,12 +22,12 @@ function O(e) {
             subtitle: O,
             onClick: _,
             enableHangStatus: y,
-            allowChannelTopic: v,
+            allowChannelTopic: j,
         } = e,
-        j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        C = null != j && j.length > 0,
-        E = (0, c.ZP)(t, !0),
-        x = (!y || !!v) && E,
+        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        C = null != v && v.length > 0,
+        x = (0, c.ZP)(t, !0),
+        E = (!y || !!j) && x,
         S = null != O && O.length > 0;
     if (
         (i.useEffect(() => {
@@ -40,20 +40,20 @@ function O(e) {
         null == t.guild_id)
     )
         return null;
-    let P = o()(m.statusDiv, n && x ? m.hoverable : null);
+    let I = o()(m.statusDiv, n && E ? m.hoverable : null);
     return C
         ? (0, r.jsx)(s.P3F, {
-              className: P,
-              onClick: x ? _ : void 0,
+              className: I,
+              onClick: E ? _ : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
               }),
           })
-        : n && x && (!S || l)
+        : n && E && (!S || l)
           ? (0, r.jsxs)(s.P3F, {
-                className: P,
+                className: I,
                 onClick: _,
                 children: [
                     (0, r.jsx)(s.Text, {

@@ -35,7 +35,7 @@ let y = "premiumRetentionEmojiPickerNotice",
         let S = I.status === m.O0b.PAST_DUE ? (0, p.lY)(I).expiresDate : o()(I.currentPeriodStart).add(g.gh),
             A = "".concat(I.id, ":").concat(S.toISOString());
         if (O === A) return null;
-        let N =
+        let C =
             p.ZP.getPremiumType(I.planId) === g.p9.TIER_0
                 ? f.JX.PREMIUM_TIER_0
                 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1
@@ -47,7 +47,7 @@ let y = "premiumRetentionEmojiPickerNotice",
                 (0, r.jsx)(c.SrA, {
                     size: "md",
                     className: b.premiumRetentionNoticeIcon,
-                    color: N,
+                    color: C,
                 }),
                 (0, r.jsxs)("div", {
                     className: b.premiumRetentionNoticeContent,

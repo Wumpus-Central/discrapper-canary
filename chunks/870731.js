@@ -39,7 +39,7 @@ function i() {
     }
     function _(e, t, n, r) {
         var i = Object.create((t && t.prototype instanceof y ? t : y).prototype);
-        return s(i, "_invoke", { value: R(e, n, new L(r || [])) }), i;
+        return s(i, "_invoke", { value: R(e, n, new x(r || [])) }), i;
     }
     function p(e, t, n) {
         try {
@@ -68,17 +68,17 @@ function i() {
         return this;
     });
     var T = Object.getPrototypeOf,
-        S = T && T(T(x([])));
+        S = T && T(T(L([])));
     S && S !== a && o.call(S, c) && (I = S);
     var A = (v.prototype = y.prototype = Object.create(I));
-    function N(e) {
+    function C(e) {
         ["next", "throw", "return"].forEach(function (t) {
             f(e, t, function (e) {
                 return this._invoke(t, e);
             });
         });
     }
-    function C(e, t) {
+    function N(e, t) {
         var n;
         function i(n, a, s, l) {
             var c = p(e[n], e, a);
@@ -189,10 +189,10 @@ function i() {
         var t = e.completion || {};
         (t.type = "normal"), delete t.arg, (e.completion = t);
     }
-    function L(e) {
+    function x(e) {
         (this.tryEntries = [{ tryLoc: "root" }]), e.forEach(w, this), this.reset(!0);
     }
-    function x(e) {
+    function L(e) {
         if (e || "" === e) {
             var n = e[c];
             if (n) return n.call(e);
@@ -233,21 +233,21 @@ function i() {
         (n.awrap = function (e) {
             return { __await: e };
         }),
-        N(C.prototype),
-        f(C.prototype, u, function () {
+        C(N.prototype),
+        f(N.prototype, u, function () {
             return this;
         }),
-        (n.AsyncIterator = C),
+        (n.AsyncIterator = N),
         (n.async = function (e, t, r, i, a) {
             void 0 === a && (a = Promise);
-            var o = new C(_(e, t, r, i), a);
+            var o = new N(_(e, t, r, i), a);
             return n.isGeneratorFunction(t)
                 ? o
                 : o.next().then(function (e) {
                       return e.done ? e.value : o.next();
                   });
         }),
-        N(A),
+        C(A),
         f(A, d, "Generator"),
         f(A, c, function () {
             return this;
@@ -270,9 +270,9 @@ function i() {
                 }
             );
         }),
-        (n.values = x),
-        (L.prototype = {
-            constructor: L,
+        (n.values = L),
+        (x.prototype = {
+            constructor: x,
             reset: function (e) {
                 if (
                     ((this.prev = 0),
@@ -368,7 +368,7 @@ function i() {
             delegateYield: function (e, n, r) {
                 return (
                     (this.delegate = {
-                        iterator: x(e),
+                        iterator: L(e),
                         resultName: n,
                         nextLoc: r,
                     }),

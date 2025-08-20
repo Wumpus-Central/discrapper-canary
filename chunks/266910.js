@@ -91,7 +91,7 @@ let O = function (e) {
         T = (0, s.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
         S = (0, l.c)(!0, "VideoBackground-web").enabled,
         A = (0, u.ZP)(null != g ? g : _.lds),
-        N =
+        C =
             null == A
                 ? void 0
                 : A.getBannerURL({
@@ -105,7 +105,7 @@ let O = function (e) {
         null == n)
     )
         return null;
-    let C = (0, r.jsx)(
+    let N = (0, r.jsx)(
             o.qEK,
             m(
                 {
@@ -117,16 +117,16 @@ let O = function (e) {
         ),
         R = E(m({}, t), { backgroundColor: T });
     return (
-        null != N && O && S && ((R.backgroundImage = "url(".concat(N, ")")), (R.backgroundSize = "cover")),
+        null != C && O && S && ((R.backgroundImage = "url(".concat(C, ")")), (R.backgroundSize = "cover")),
         (0, r.jsx)("div", {
             style: R,
             className: p.background,
             children: y
                 ? (0, r.jsx)(c.Z, {
                       shouldAnimate: O,
-                      children: C,
+                      children: N,
                   })
-                : C,
+                : N,
         })
     );
 };

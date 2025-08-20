@@ -17,22 +17,22 @@ var r = n(951288),
     O = n(5192),
     _ = n(944888),
     y = n(234368),
-    v = n(981631),
-    j = n(921944),
+    j = n(981631),
+    v = n(921944),
     C = n(989308),
-    E = n(388032),
-    x = n(49777),
+    x = n(388032),
+    E = n(49777),
     S = n(842926),
-    P = n(445648),
-    I = n(128647);
+    I = n(445648),
+    P = n(128647);
 function N(e) {
     let { guild: t, markAsDismissed: n } = e,
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
-        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? x[l] : "",
+        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? E[l] : "",
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         Z = i.useCallback(() => {
             (0, f.u)({
-                analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
+                analyticsLocation: { section: j.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: w,
                 guild: t,
@@ -57,11 +57,11 @@ function N(e) {
         });
     return (0, r.jsx)(g.ZP, {
         asset: (0, r.jsxs)("div", {
-            className: x.imageContainer,
+            className: E.imageContainer,
             children: [
                 null != T
                     ? (0, r.jsx)("div", {
-                          className: x.messageContainer,
+                          className: E.messageContainer,
                           children: (0, r.jsx)(h.l, {
                               avatar: (0, r.jsx)(p.Z, {
                                   user: T,
@@ -74,34 +74,34 @@ function N(e) {
                               username: O.ZP.getName(t.id, null, T),
                               asset: (0, r.jsx)("img", {
                                   alt: "",
-                                  src: P.Z,
+                                  src: I.Z,
                               }),
                           }),
                       })
                     : (0, r.jsx)("img", {
                           alt: "",
-                          src: I.Z,
-                          className: x.image,
+                          src: P.Z,
+                          className: E.image,
                       }),
                 (0, r.jsx)(c.olH, {
-                    className: x.close,
-                    innerClassName: x.innerClose,
-                    onClick: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
+                    className: E.close,
+                    innerClassName: E.innerClose,
+                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS)),
                 }),
             ],
         }),
         header: (0, r.jsx)(c.Text, {
             variant: "text-md/semibold",
-            children: E.intl.string(C.default.bw76aG),
+            children: x.intl.string(C.default.bw76aG),
         }),
         content: (0, r.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            children: E.intl.string(C.default["/DTbiY"]),
+            children: x.intl.string(C.default["/DTbiY"]),
         }),
-        buttonCTA: E.intl.string(E.t["oPAx7+"]),
+        buttonCTA: x.intl.string(x.t["oPAx7+"]),
         onClick: Z,
-        className: o()(x.container, N),
+        className: o()(E.container, N),
         caretPosition: l,
         markAsDismissed: n,
     });

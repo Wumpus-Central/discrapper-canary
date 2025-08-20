@@ -1,20 +1,20 @@
 n.d(t, {
-    FI: () => a,
-    IL: () => s,
+    FI: () => o,
+    IL: () => a,
 });
-var i = n(585483),
-    r = n(981631);
-let s = {
+var r = n(585483),
+    i = n(981631);
+let a = {
         binds: ["mod+return"],
         comboKeysBindGlobal: !0,
         action() {
-            if (i.S.hasSubscribers(r.CkL.CALL_ACCEPT)) return i.S.dispatch(r.CkL.CALL_ACCEPT), !1;
+            if (r.S.hasSubscribers(i.CkL.CALL_ACCEPT)) return r.S.dispatch(i.CkL.CALL_ACCEPT), !1;
         },
     },
-    a = {
+    o = {
         binds: ["ctrl+'", "ctrl+shift+'"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if (i.S.hasSubscribers(r.CkL.CALL_START)) return i.S.dispatch(r.CkL.CALL_START, e), !1;
+            if (r.S.hasSubscribers(i.CkL.CALL_START)) return r.S.dispatch(i.CkL.CALL_START, e), !1;
         },
     };

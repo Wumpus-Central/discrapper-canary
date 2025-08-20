@@ -1,4 +1,4 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -8,13 +8,13 @@ var r = n(951288),
     c = n(427679),
     d = n(939863),
     u = n(540186),
-    h = n(609776),
-    g = n(289584),
-    _ = n(180899),
-    b = n(157925),
-    m = n(388032),
+    x = n(609776),
+    h = n(289584),
+    g = n(180899),
+    m = n(157925),
+    b = n(388032),
     f = n(785550);
-function x(e) {
+function p(e) {
     let {
         guild: t,
         channel: n,
@@ -24,8 +24,8 @@ function x(e) {
         loading: s,
         error: c,
         onSave: u,
-        defaultOptions: g,
-        isSlideReady: _,
+        defaultOptions: h,
+        isSlideReady: g,
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -49,34 +49,34 @@ function x(e) {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         className: f.headerTitle,
-                        children: null == i ? m.intl.string(m.t.DDF0cH) : m.intl.string(m.t.YPdQOj),
+                        children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         className: f.headerSubtitle,
-                        children: null == i ? m.intl.string(m.t.bqQIwc) : m.intl.string(m.t["I+9bLy"]),
+                        children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t["I+9bLy"]),
                     }),
                 ],
             }),
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(x.Z, {
                 guild: t,
                 channel: n,
                 onSave: u,
                 error: c,
                 loading: s,
                 onClose: o,
-                defaultOptions: g,
-                isSlideReady: _,
+                defaultOptions: h,
+                isSlideReady: g,
             }),
         ],
     });
 }
-function p(e) {
+function v(e) {
     var t,
         n,
-        { channel: d, onClose: h, transitionState: m } = e,
-        p = (function (e, t) {
+        { channel: d, onClose: x, transitionState: b } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -97,27 +97,27 @@ function p(e) {
             }
             return i;
         })(e, ["channel", "onClose", "transitionState"]);
-    let v = (0, o.Dt)(),
+    let _ = (0, o.Dt)(),
         j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
         N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: y, error: O, onSave: I } = (0, g.Z)(d, h),
+        { loading: C, error: y, onSave: O } = (0, h.Z)(d, x),
         {
-            modalStep: C,
-            setModalStep: E,
-            readySlide: S,
-            handleSlideReady: T,
-            savedOptions: w,
-            handleSettingsSave: P,
-            handleDelayedSave: k,
-        } = (0, _.Z)({
+            modalStep: I,
+            setModalStep: S,
+            readySlide: E,
+            handleSlideReady: w,
+            savedOptions: T,
+            handleSettingsSave: k,
+            handleDelayedSave: P,
+        } = (0, g.Z)({
             stageInstance: N,
-            defaultStep: b.lv.STAGE_CHANNEL_SETTINGS,
-            error: O,
-            onSave: I,
+            defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
+            error: y,
+            onSave: O,
         });
     return (i.useEffect(() => {
-        null == j && h();
-    }, [j, h]),
+        null == j && x();
+    }, [j, x]),
     null == j)
         ? null
         : (0, r.jsx)(
@@ -148,51 +148,51 @@ function p(e) {
                   return e;
               })(
                   {
-                      transitionState: m,
-                      "aria-labelledby": v,
+                      transitionState: b,
+                      "aria-labelledby": _,
                   },
-                  p,
+                  v,
               )),
               (n = n =
                   {
                       size: a.CgR.SMALL,
                       parentComponent: "StageChannelSettingsModal",
                       children: (0, r.jsxs)(a.MyZ, {
-                          activeSlide: C,
+                          activeSlide: I,
                           width: 440,
-                          onSlideReady: T,
+                          onSlideReady: w,
                           children: [
                               (0, r.jsx)(a.Mi4, {
-                                  id: b.lv.STAGE_CHANNEL_SETTINGS,
+                                  id: m.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)("div", {
                                       className: f.slideContainer,
-                                      children: (0, r.jsx)(x, {
+                                      children: (0, r.jsx)(p, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
-                                          headerId: v,
-                                          onClose: h,
-                                          loading: y,
-                                          error: O,
-                                          onSave: P,
-                                          defaultOptions: w,
-                                          isSlideReady: S === b.lv.STAGE_CHANNEL_SETTINGS,
+                                          headerId: _,
+                                          onClose: x,
+                                          loading: C,
+                                          error: y,
+                                          onSave: k,
+                                          defaultOptions: T,
+                                          isSlideReady: E === m.lv.STAGE_CHANNEL_SETTINGS,
                                       }),
                                   }),
                               }),
                               (0, r.jsx)(a.Mi4, {
-                                  id: b.lv.PUBLIC_STAGE_PREVIEW,
+                                  id: m.lv.PUBLIC_STAGE_PREVIEW,
                                   children: (0, r.jsx)("div", {
                                       className: f.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
-                                          headerId: v,
+                                          headerId: _,
                                           guild: j,
                                           channel: d,
-                                          stageData: w,
-                                          loading: y,
-                                          onNext: k,
-                                          onCancel: h,
-                                          onBack: () => E(b.lv.STAGE_CHANNEL_SETTINGS),
+                                          stageData: T,
+                                          loading: C,
+                                          onNext: P,
+                                          onCancel: x,
+                                          onBack: () => S(m.lv.STAGE_CHANNEL_SETTINGS),
                                       }),
                                   }),
                               }),

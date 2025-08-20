@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => q,
-    jK: () => Z,
+    jK: () => F,
     tS: () => H,
     xG: () => W,
 }),
@@ -82,13 +82,13 @@ let I = window.DiscordNative,
     T = new Set(["jpg", "jpeg", "png"]),
     S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
-    N = 5,
-    C = null,
+    C = 5,
+    N = null,
     R = null,
     P = null,
     w = {};
 null != I &&
-    ((C = I.remoteApp
+    ((N = I.remoteApp
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
@@ -102,25 +102,25 @@ let D = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    L = !1,
-    x = "lastImageSaveDirectory",
-    M = /[<>:"/\\|?*@]/g,
-    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    j = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    x = !1,
+    L = "lastImageSaveDirectory",
+    j = /[<>:"/\\|?*@]/g,
+    M = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    k = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
 function B(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(k, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
+        return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(j, "_");
     } catch (t) {
         return e
-            .replace(j, "$1")
+            .replace(k, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(M, "_");
+            .replace(j, "_");
     }
 }
-async function V(e) {
+async function Z(e) {
     let t = {
             method: "GET",
             mode: "cors",
@@ -130,10 +130,10 @@ async function V(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, "Data is null"), r;
 }
-function F(e) {
-    return V(e);
+function V(e) {
+    return Z(e);
 }
-var Z = (function (e) {
+var F = (function (e) {
         return (
             (e[(e.Camera = 0)] = "Camera"),
             (e[(e.Microphone = 1)] = "Microphone"),
@@ -181,7 +181,7 @@ function W(e, t) {
     let o = m.Z.toURLSafe(e);
     if (null == o) return;
     let s = null == (i = o.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
-    return null != s && s.length <= N ? s : void 0;
+    return null != s && s.length <= C ? s : void 0;
 }
 function K(e) {
     if ((0, h.isDesktop)())
@@ -300,16 +300,16 @@ let z = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                L ||
+                x ||
                     (0, d.Bl)((t, n, r) => {
                         e.consoleLog(n, "[".concat(t, "] ").concat(r));
                     }),
-                (L = !0),
+                (x = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!L)
+            if (!x)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -376,7 +376,7 @@ let z = {
             return "";
         },
         get version() {
-            return C;
+            return N;
         },
         get buildNumber() {
             return R;
@@ -394,7 +394,7 @@ let z = {
         async copyImage(e, t) {
             l()(h.isPlatformEmbedded, "Copy image method called outside native app"),
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
-            let n = await F(e),
+            let n = await V(e),
                 r = W(e, t),
                 i = null != r && T.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
@@ -426,11 +426,11 @@ let z = {
                 let r = null != (a = null != (i = W(e, t)) ? i : n) ? a : "png";
                 s = "".concat(s, ".").concat(r);
             }
-            let u = f.K.get(x),
-                d = await F(e),
+            let u = f.K.get(L),
+                d = await V(e),
                 _ = E.from(d),
                 p = await I.fileManager.saveWithDialog(_, s, null != u ? u : void 0);
-            null != p && f.K.set(x, p);
+            null != p && f.K.set(L, p);
         },
         async saveFile(e, t) {
             var n;
@@ -439,7 +439,7 @@ let z = {
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split("/").pop()) ? n : "unknown";
             null == t && (i = B(i));
-            let a = await V(e),
+            let a = await Z(e),
                 o = E.from(a);
             return I.fileManager.saveWithDialog(o, i);
         },
@@ -568,6 +568,10 @@ let z = {
         },
         setChromiumSwitches(e) {
             I.gpuSettings.setChromiumSwitches(e);
+        },
+        setSetting(e, t) {
+            var n, r;
+            null == (n = (r = I.gpuSettings).setSetting) || n.call(r, e, t);
         },
         getOptionalUpdates: async () => await I.settings.get("OPTIN_OPTIONAL_UPDATES", !1),
         async setOptionalUpdates(e) {
@@ -800,7 +804,7 @@ let z = {
         },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
-            let a = [...(null != C ? C : [0, 0, 0])];
+            let a = [...(null != N ? N : [0, 0, 0])];
             a.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
             let o = null != (i = t[this.releaseChannel]) ? i : t.stable;
             for (let [e, t] of a.entries())

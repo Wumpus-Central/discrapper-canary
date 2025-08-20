@@ -1,14 +1,14 @@
 n.d(e, { Z: () => o });
 var i = n(951288);
 n(647438);
-var r = n(353672),
-    s = n(993750),
+var s = n(353672),
+    r = n(993750),
     l = n(134612),
     a = n(388032);
 let o = function () {
     let t = (0, l.Nn)();
-    return (0, i.jsx)(s.Z, {
-        children: (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(r.Z, {
+        children: (0, i.jsx)(s.Z, {
             tips: t,
             headerText: a.intl.string(a.t["0QSL1N"]),
         }),

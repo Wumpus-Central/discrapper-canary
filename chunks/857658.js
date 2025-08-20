@@ -1,4 +1,4 @@
-n.d(t, { U: () => x }), n(388685), n(781311);
+n.d(t, { U: () => L }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(688619),
@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(408886),
     m = n(233398),
     g = n(866419),
-    E = n(507962),
+    E = n(771934),
     b = n(119475),
     y = n(388032),
     O = n(209289);
@@ -76,13 +76,13 @@ function A() {
         children: (0, r.jsx)(p.$jN, {}),
     });
 }
-let N = (0, c.Un)({
+let C = (0, c.Un)({
         createPromise: () => Promise.all([n.e("3115"), n.e("35855")]).then(n.bind(n, 164267)),
         webpackId: 164267,
         name: "CustomThemeColorPickerControlV2",
         renderLoader: A,
     }),
-    C = 5,
+    N = 5,
     R = "#000000";
 function P(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
@@ -134,12 +134,12 @@ function D(e) {
         "aria-label": "Color preview",
     });
 }
-function L(e) {
+function x(e) {
     if (!(0, u.FX)(e)) return e;
     let t = o()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
-function x(e) {
+function L(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
         c = (0, h.Z)(),
         [v, T] = i.useState(0),
@@ -155,34 +155,34 @@ function x(e) {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
-        x = (e) => {
+        L = (e) => {
             let t = P(e);
             if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
                 let e = [...o];
                 (e[v] = t), s(e);
             }
         },
-        M = i.useCallback((e) => {
+        j = i.useCallback((e) => {
             R(e.hex);
         }, []),
-        k = (e) => {
+        M = (e) => {
             if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 (t[v] = e.hex), s(t);
             }
         },
-        j = async () => {
+        k = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    (0, E.J4)(), x(e);
+                    (0, E.J4)(), L(e);
                 } catch (e) {}
         },
         U = () => {
-            if (o.length === C) return;
+            if (o.length === N) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
-                t = o.length > 0 ? L(e) : e,
+                t = o.length > 0 ? x(e) : e,
                 n = [...o, t];
             s(n), T(n.length - 1);
         },
@@ -196,19 +196,19 @@ function x(e) {
         B = (e) => {
             T(e), (0, E.w8)();
         },
-        V = o.length > 1;
+        Z = o.length > 1;
     return (0, r.jsxs)("div", {
         className: l()(O.container, a),
         children: [
-            V &&
+            Z &&
                 (0, r.jsx)(w, {
                     colors: o,
                     selectedIndex: v,
                     onColorSelect: B,
                 }),
-            (0, r.jsx)(N, {
-                onChange: M,
-                onChangeComplete: k,
+            (0, r.jsx)(C, {
+                onChange: j,
+                onChangeComplete: M,
                 color: A,
             }),
             (0, r.jsxs)("div", {
@@ -218,7 +218,7 @@ function x(e) {
                     (0, r.jsx)("input", {
                         className: O.hexInput,
                         value: A.toUpperCase(),
-                        onChange: (e) => x(e.target.value),
+                        onChange: (e) => L(e.target.value),
                         maxLength: 7,
                         placeholder: m.Dp,
                         type: "text",
@@ -242,14 +242,14 @@ function x(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: j,
+                                                    onClick: k,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["NCFz+P"]),
                                                 },
                                             ),
                                         ),
                                 }),
-                            V &&
+                            Z &&
                                 (0, r.jsx)(p.ua7, {
                                     text: y.intl.string(y.t.N86XcH),
                                     children: (e) =>
@@ -268,7 +268,7 @@ function x(e) {
                     }),
                 ],
             }),
-            o.length < C &&
+            o.length < N &&
                 (0, r.jsx)(f.z, {
                     variant: "secondary",
                     size: "md",

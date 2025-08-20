@@ -112,7 +112,7 @@ function S(e) {
 function A(e) {
     return b(e.channelId, e.id);
 }
-function N(e) {
+function C(e) {
     let { threads: t, mostRecentMessages: n } = e;
     t.forEach((e) => g(e.id, null)),
         null == n ||
@@ -120,7 +120,7 @@ function N(e) {
                 g(e.channel_id, e);
             });
 }
-class C extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, l.default);
     }
@@ -135,13 +135,13 @@ class C extends (r = i.ZP.Store) {
         );
     }
 }
-d(C, "displayName", "ForumPostRecentMessageStore"),
-    new C(a.Z, {
+d(N, "displayName", "ForumPostRecentMessageStore"),
+    new N(a.Z, {
         CONNECTION_OPEN: v,
         MESSAGE_CREATE: T,
         MESSAGE_UPDATE: S,
         MESSAGE_DELETE: A,
         LOAD_FORUM_POSTS: I,
-        LOAD_ARCHIVED_THREADS_SUCCESS: N,
-        LOAD_THREADS_SUCCESS: N,
+        LOAD_ARCHIVED_THREADS_SUCCESS: C,
+        LOAD_THREADS_SUCCESS: C,
     });

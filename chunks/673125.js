@@ -40,8 +40,8 @@ function p(e) {
 let m = {},
     E = {},
     g = {},
-    S = !0,
-    v = null;
+    v = !0,
+    S = null;
 function h(e) {
     if (null == E[e]) {
         let t = o.default.getUser(e);
@@ -53,7 +53,7 @@ function h(e) {
 }
 class b extends (r = l.ZP.Store) {
     get visibleOverlayCanvas() {
-        return S;
+        return v;
     }
     getDrawables(e) {
         return null != m[e] ? m[e] : [];
@@ -65,7 +65,7 @@ class b extends (r = l.ZP.Store) {
         return g[e];
     }
     getDrawMode() {
-        return v;
+        return S;
     }
 }
 f(b, "displayName", "SharedCanvasStore");
@@ -119,11 +119,11 @@ let O = new b(i.Z, {
             let e = m[c].findIndex((e) => e.id === o.id);
             e >= 0 ? (m[c][e] = p({}, m[c][e], E)) : m[c].push(E);
         }
-        let S = null != (n = null != (t = o.emojiId) ? t : o.emojiName) ? n : "";
-        if (null == g[S]) {
+        let v = null != (n = null != (t = o.emojiId) ? t : o.emojiName) ? n : "";
+        if (null == g[v]) {
             let e = null != o.emojiName ? a.ZP.convertNameToSurrogate(o.emojiName) : null;
-            (g[S] = new Image()),
-                (g[S].src = (0, u.qc)(
+            (g[v] = new Image()),
+                (g[v].src = (0, u.qc)(
                     {
                         id: o.emojiId,
                         name: null != (r = null != e ? e : o.emojiName) ? r : "",
@@ -143,10 +143,10 @@ let O = new b(i.Z, {
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        v = t;
+        S = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;
-        S = !S;
+        v = !v;
     },
 });

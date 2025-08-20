@@ -1,8 +1,10 @@
-n.d(t, { y: () => i });
-var r,
-    i =
-        (((r = {}).GUILD_PRODUCTS = "guild_products"),
-        (r.GUILD_ROLE_SUBSCRIPTIONS = "guild_role_subscriptions"),
-        (r.GUILD_PRODUCTS_PREVIEW = "guild_products_preview"),
-        (r.GUILD_SHOP_FULL_PREVIEW = "guild_shop_full_preview"),
-        r);
+n.d(t, { y: () => r });
+var r = (function (e) {
+    return (
+        (e.GUILD_PRODUCTS = "guild_products"),
+        (e.GUILD_ROLE_SUBSCRIPTIONS = "guild_role_subscriptions"),
+        (e.GUILD_PRODUCTS_PREVIEW = "guild_products_preview"),
+        (e.GUILD_SHOP_FULL_PREVIEW = "guild_shop_full_preview"),
+        e
+    );
+})({});

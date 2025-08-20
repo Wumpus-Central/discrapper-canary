@@ -105,9 +105,9 @@ function x(e) {
             exitFullScreen: u,
             appContext: x,
             analyticsLocation: v,
-            className: j,
+            className: O,
         } = e,
-        O = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -143,7 +143,7 @@ function x(e) {
                     _(
                         y(
                             {
-                                size: null != (t = O.size) ? t : c.zx.Sizes.SMALL,
+                                size: null != (t = j.size) ? t : c.zx.Sizes.SMALL,
                                 color: b.buttonColor,
                                 onClick: () => {
                                     o()(null != P, "guild cannot be null"),
@@ -159,9 +159,9 @@ function x(e) {
                                             guildScheduledEvent: I,
                                         });
                                 },
-                                className: l()(j, b.textButton),
+                                className: l()(O, b.textButton),
                             },
-                            O,
+                            j,
                         ),
                         { children: Z },
                     ),
@@ -170,7 +170,7 @@ function x(e) {
                     channel: a,
                     stream: n,
                     appContext: x,
-                    className: l()(j, b.iconButton),
+                    className: l()(O, b.iconButton),
                     exitFullScreen: u,
                     analyticsLocation: v,
                     guildScheduledEvent: I,

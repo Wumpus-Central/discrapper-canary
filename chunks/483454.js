@@ -151,7 +151,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
             ),
         );
     }),
-    N = i.memo(function (e) {
+    C = i.memo(function (e) {
         var { options: t, renderWithoutElement: n, billingAddressInfo: o } = e,
             s = I(e, ["options", "renderWithoutElement", "billingAddressInfo"]);
         let l = i.useMemo(() => {
@@ -195,7 +195,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                   children: d,
               });
     }),
-    C = (e) => {
+    N = (e) => {
         let {
                 step: t,
                 billingAddressInfo: n,
@@ -232,7 +232,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                 (0, r.jsx)("div", {
                     className: s()(E.addressElementContainer, m ? E.visible : E.hidden),
                     children: (0, r.jsx)(
-                        N,
+                        C,
                         v(y({}, l), {
                             renderWithoutElement: !0,
                             billingAddressInfo: n,
@@ -255,7 +255,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
             : (0, r.jsx)(a.Elements, {
                   stripe: c,
                   options: y({}, i),
-                  children: (0, r.jsx)(C, y({}, n)),
+                  children: (0, r.jsx)(N, y({}, n)),
               });
     },
     P = ["city", "country", "line1"],

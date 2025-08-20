@@ -68,18 +68,18 @@ function T(e) {
             else if (null != b[n]) return b[n];
             else if (null != T[n]) return T[n];
         }, [b, T, n]),
-        N = l.default.getId(),
-        C = (0, h.a)(S, N),
+        C = l.default.getId(),
+        N = (0, h.a)(S, C),
         R = i.useMemo(
             () =>
-                null == C || null == S
+                null == N || null == S
                     ? null
                     : S.system === f.I.LEGACY
-                      ? d.Z.getExperimentBucketName(C.bucket)
+                      ? d.Z.getExperimentBucketName(N.bucket)
                       : S.system === f.I.APEX
-                        ? "Variant ".concat(C.variantId)
+                        ? "Variant ".concat(N.variantId)
                         : null,
-            [C, S],
+            [N, S],
         ),
         P = (0, a.e7)([c.default], () => {
             let e = c.default.getCurrentUser();
@@ -88,20 +88,20 @@ function T(e) {
     if (null == n || null == S) return null;
     let w = (0, _.a)(S).find((e) => e.value === u),
         D = +(null != w),
-        L = null != A && null != w && A.variantId === w.value,
-        x = () => {
-            null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
+        x = null != A && null != w && A.variantId === w.value,
+        L = () => {
+            null != w && (x ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
-        M = (0, r.jsx)(I, { url: t }),
-        k = null;
+        j = (0, r.jsx)(I, { url: t }),
+        M = null;
     return (1 === D && null != w
-        ? (k = (0, r.jsx)(s.Text, {
+        ? (M = (0, r.jsx)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: w.label,
           }))
-        : null != C &&
-          (k = (0, r.jsxs)(s.Text, {
+        : null != N &&
+          (M = (0, r.jsxs)(s.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", R],
@@ -127,10 +127,10 @@ function T(e) {
                                               variant: "text-md/semibold",
                                               children: S.title,
                                           }),
-                                          k,
+                                          M,
                                       ],
                                   }),
-                                  M,
+                                  j,
                               ],
                           }),
                       }),
@@ -149,9 +149,9 @@ function T(e) {
                                     justify: "end",
                                     children: (0, r.jsx)(o.zx, {
                                         fullWidth: !0,
-                                        onClick: x,
-                                        color: L ? o.zx.Colors.RED : o.zx.Colors.BRAND,
-                                        children: L
+                                        onClick: L,
+                                        color: x ? o.zx.Colors.RED : o.zx.Colors.BRAND,
+                                        children: x
                                             ? "Clear Treatment ".concat(w.value)
                                             : "Apply Treatment ".concat(w.value),
                                     }),

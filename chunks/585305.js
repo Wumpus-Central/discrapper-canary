@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var r = n(442837),
-    o = n(594174),
-    i = n(184242),
-    l = n(349902);
-function a(e) {
-    let t = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        n = (0, l.Z)(e);
-    return !(0, i.Ac)({ location: "useShouldShowMutualInfo" }) || ((null == t ? void 0 : t.id) !== e.id && !n);
+t.d(n, { Z: () => c });
+var r = t(442837),
+    o = t(594174),
+    l = t(184242),
+    i = t(349902);
+function c(e) {
+    let n = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        t = (0, i.Z)(e);
+    return !(0, l.Ac)({ location: "useShouldShowMutualInfo" }) || ((null == n ? void 0 : n.id) !== e.id && !t);
 }

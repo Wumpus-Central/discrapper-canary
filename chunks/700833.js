@@ -70,10 +70,10 @@ function p(e) {
             actionsLocation: C,
             fieldStyle: N,
         } = e,
-        I = async () => {
+        E = async () => {
             await v(b);
         },
-        E = async (e) => {
+        I = async (e) => {
             await _(b, e);
         },
         S = async (e, t, n) => {
@@ -88,7 +88,7 @@ function p(e) {
             isDropHovered: P,
             onEdit: () => {
                 0 === j
-                    ? f(p, E, h)
+                    ? f(p, I, h)
                     : (0, l.ZDy)(async () => {
                           let { default: e } = await n.e("74673").then(n.bind(n, 394045));
                           return (t) =>
@@ -97,12 +97,12 @@ function p(e) {
                                   g(m({}, t), {
                                       guildId: h.id,
                                       submittedGuildJoinRequestsCount: j,
-                                      onConfirm: () => f(p, E, h),
+                                      onConfirm: () => f(p, I, h),
                                   }),
                               );
                       });
             },
-            onRemove: I,
+            onRemove: E,
             onDrop: S,
             canRemove: y,
             actionsLocation: C,

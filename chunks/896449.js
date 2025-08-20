@@ -82,9 +82,9 @@ function y(e) {
             id: n.id,
             label: _.intl.string(_.t["/AXYnJ"]),
         }),
-        N = "application_id" in y.extra ? y.extra.application_id : null,
-        C = (0, s.Z)({
-            id: N,
+        C = "application_id" in y.extra ? y.extra.application_id : null,
+        N = (0, s.Z)({
+            id: C,
             label: _.intl.string(_.t["FfCL+/"]),
         }),
         R = (0, d.dX)(y),
@@ -125,7 +125,7 @@ function y(e) {
                             ],
                         }),
                         (0, r.jsxs)(a.kSQ, {
-                            children: [A, C],
+                            children: [A, N],
                         }),
                     ],
                 }),

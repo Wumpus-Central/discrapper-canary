@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(539854), n(388685);
+n.d(t, { Z: () => N }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(759174),
@@ -84,7 +84,7 @@ function S(e) {
 function A(e) {
     v(e.userId, e.applicationId), y();
 }
-class N extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -122,8 +122,8 @@ class N extends (r = i.ZP.Store) {
         return m.version;
     }
 }
-c(N, "displayName", "GameRelationshipStore");
-let C = new N(o.Z, {
+c(C, "displayName", "GameRelationshipStore");
+let N = new C(o.Z, {
     CONNECTION_OPEN: T,
     GAME_RELATIONSHIP_ADD: S,
     GAME_RELATIONSHIP_REMOVE: A,

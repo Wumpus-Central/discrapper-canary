@@ -1,52 +1,53 @@
 n.d(t, { Z: () => g }), n(388685);
-var i = n(647438),
-    r = n(913527),
-    s = n.n(r),
-    a = n(442837),
-    l = n(430824),
-    o = n(937615),
+var r = n(647438),
+    i = n(913527),
+    a = n.n(i),
+    o = n(442837),
+    s = n(430824),
+    l = n(937615),
     c = n(584825),
-    d = n(289393),
-    u = n(697227),
-    m = n(981631),
-    p = n(388032);
-function g(e) {
-    let t = (0, u.W)(e),
-        n = (0, a.e7)([d.Z], () => d.Z.getSubscriptionListingForPlan(t)),
-        r = (0, a.e7)([d.Z], () => (null != n ? d.Z.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
-        g = (0, a.e7)([l.Z], () => l.Z.getGuild(null == r ? void 0 : r.guild_id)),
-        [h, f] = i.useState(!1),
-        { fetchSubscriptionsSettings: b } = (0, c.JH)();
-    i.useEffect(() => {
-        h && null != g && null == d.Z.getSubscriptionSettings(g.id) && b(g.id);
-    }, [h, g, b]);
-    let x =
-        null == n
-            ? void 0
-            : (function (e) {
-                  let { subscription: t } = e,
-                      n = s()(t.currentPeriodEnd).format("M/D/YY"),
-                      i = null != t.price ? (0, o.T4)(t.price, t.currency) : "",
-                      r = s()(t.createdAt).format("M/D/YY"),
-                      a = t.status === m.O0b.CANCELED,
-                      l = t.status === m.O0b.PAST_DUE,
-                      c = t.hasActiveTrial;
-                  return {
-                      memberSince: r,
-                      nextRenewalDate: n,
-                      nextRenewalLabel: a ? p.intl.string(p.t.UAfot7) : p.intl.string(p.t.CVjLcH),
-                      subscriptionPrice: i,
-                      isCancelled: a,
-                      isPastDue: l,
-                      isTrial: c,
-                  };
-              })({ subscription: e });
+    u = n(289393),
+    d = n(697227),
+    f = n(981631),
+    _ = n(388032);
+let p = "M/D/YY",
+    h = "M/D/YY";
+function m(e) {
+    let { subscription: t } = e,
+        n = a()(t.currentPeriodEnd).format(p),
+        r = null != t.price ? (0, l.T4)(t.price, t.currency) : "",
+        i = a()(t.createdAt).format(h),
+        o = t.status === f.O0b.CANCELED,
+        s = t.status === f.O0b.PAST_DUE,
+        c = t.hasActiveTrial;
     return {
-        guild: g,
-        expanded: h,
-        handleToggleExpanded: () => f((e) => !e),
+        memberSince: i,
+        nextRenewalDate: n,
+        nextRenewalLabel: o ? _.intl.string(_.t.UAfot7) : _.intl.string(_.t.CVjLcH),
+        subscriptionPrice: r,
+        isCancelled: o,
+        isPastDue: s,
+        isTrial: c,
+    };
+}
+function g(e) {
+    let t = (0, d.W)(e),
+        n = (0, o.e7)([u.Z], () => u.Z.getSubscriptionListingForPlan(t)),
+        i = (0, o.e7)([u.Z], () => (null != n ? u.Z.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
+        a = (0, o.e7)([s.Z], () => s.Z.getGuild(null == i ? void 0 : i.guild_id)),
+        [l, f] = r.useState(!1),
+        _ = () => f((e) => !e),
+        { fetchSubscriptionsSettings: p } = (0, c.JH)();
+    r.useEffect(() => {
+        l && null != a && null == u.Z.getSubscriptionSettings(a.id) && p(a.id);
+    }, [l, a, p]);
+    let h = null == n ? void 0 : m({ subscription: e });
+    return {
+        guild: a,
+        expanded: l,
+        handleToggleExpanded: _,
         listing: n,
-        groupListing: r,
-        subscriptionInfo: x,
+        groupListing: i,
+        subscriptionInfo: h,
     };
 }

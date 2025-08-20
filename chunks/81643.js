@@ -1,11 +1,11 @@
 n.d(t, {
     AY: () => R,
-    F5: () => C,
+    F5: () => N,
     Jm: () => y,
     L0: () => I,
     L5: () => b,
     M$: () => O,
-    WD: () => N,
+    WD: () => C,
     g0: () => v,
     kJ: () => S,
     l6: () => A,
@@ -78,7 +78,7 @@ function A() {
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function N(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [o, s] = r.useState(!1),
@@ -120,7 +120,7 @@ function N(e) {
         ),
     };
 }
-function C(e) {
+function N(e) {
     let t = (0, i.e7)([f.default], () => {
             var e;
             return null == (e = f.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;

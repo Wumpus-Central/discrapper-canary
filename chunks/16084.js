@@ -1,10 +1,10 @@
 n.d(t, {
     $N: () => v,
     ZZ: () => A,
-    pB: () => C,
+    pB: () => N,
     uE: () => I,
     x2: () => T,
-    xA: () => N,
+    xA: () => C,
 }),
     n(415506);
 var r = n(311570),
@@ -186,7 +186,7 @@ async function A(e, t, n) {
             skuId: t,
         });
     });
-    let N = d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e);
+    let C = d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e);
     try {
         let e = {
             gift: E,
@@ -194,7 +194,7 @@ async function A(e, t, n) {
             gateway_checkout_context: await (0, f.cn)(r),
             load_id: I,
         };
-        if (N) e.test_mode = !0;
+        if (C) e.test_mode = !0;
         else {
             if (
                 null != r &&
@@ -255,7 +255,7 @@ async function A(e, t, n) {
         return (0, m.sk)(i.body, r);
     }
 }
-async function N() {
+async function C() {
     try {
         let e = { purchase_token: (0, p.d)() },
             t = await i.tn.post({
@@ -269,6 +269,6 @@ async function N() {
         throw e instanceof o.HF ? e : new o.HF(e);
     }
 }
-function C() {
+function N() {
     a.Z.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 }

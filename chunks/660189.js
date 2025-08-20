@@ -141,7 +141,7 @@ function A(e) {
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
     p[t] = _(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
 }
-function N(e) {
+function C(e) {
     let { channelId: t, messages: n } = e,
         r = n[n.length - 1];
     null != r &&
@@ -151,7 +151,7 @@ function N(e) {
             firstMessage: (0, o.e5)(r),
         });
 }
-class C extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, l.default);
     }
@@ -170,8 +170,8 @@ class C extends (r = i.ZP.Store) {
         );
     }
 }
-u(C, "displayName", "ForumPostMessagesStore");
-let R = new C(a.Z, {
+u(N, "displayName", "ForumPostMessagesStore");
+let R = new N(a.Z, {
     CONNECTION_OPEN: h,
     MESSAGE_CREATE: E,
     MESSAGE_UPDATE: y,
@@ -185,5 +185,5 @@ let R = new C(a.Z, {
     LOAD_FORUM_POSTS: m,
     LOAD_THREADS_SUCCESS: g,
     LOAD_ARCHIVED_THREADS_SUCCESS: g,
-    LOAD_MESSAGES_SUCCESS: N,
+    LOAD_MESSAGES_SUCCESS: C,
 });

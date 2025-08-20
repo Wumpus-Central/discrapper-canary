@@ -122,7 +122,7 @@ function I(e) {
     (E.limitedTimeVoices.current_set_end = e.toISOString()),
         (E.limitedTimeVoices.next_set_start = e.toISOString()),
         (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()),
-        C();
+        N();
 }
 function T(e) {
     return Object.entries(e)
@@ -164,7 +164,7 @@ function S(e) {
 function A() {
     E.catalogFetchFailed = !0;
 }
-class N extends (r = o.ZP.Store) {
+class C extends (r = o.ZP.Store) {
     getVoiceFilterModels() {
         return E.models;
     }
@@ -229,7 +229,7 @@ class N extends (r = o.ZP.Store) {
         return b;
     }
 }
-function C() {
+function N() {
     let e = v(E.limitedTimeVoices);
     (E.catalogUpdateTime = e.catalogUpdateTime),
         Object.keys(E.voiceFilters).forEach((t) => {
@@ -265,34 +265,34 @@ function D(e) {
         downloadedBytes: void 0,
     });
 }
-function L(e) {
+function x(e) {
     let { timeInSeconds: t } = e;
     I((0, a.Z)(new Date(), t));
 }
-function x(e) {
+function L(e) {
     E.nativeVoiceFilterModuleState = e.state;
 }
-function M() {
+function j() {
     E.error = "ERROR_ACTIVATING_VOICE_FILTER";
 }
-function k() {
+function M() {
     E.error = null;
 }
-function j() {
+function k() {
     b = Date.now();
 }
-f(N, "displayName", "VoiceFilterStore");
-let U = new N(s.Z, {
+f(C, "displayName", "VoiceFilterStore");
+let U = new C(s.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: R,
     VOICE_FILTER_DOWNLOAD_PROGRESS: P,
     VOICE_FILTER_DOWNLOAD_FAILED: w,
     VOICE_FILTER_FILE_READY: D,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: S,
     VOICE_FILTER_CATALOG_FETCH_FAILED: A,
-    VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: C,
-    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: L,
-    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: x,
-    VOICE_FILTER_APPLY_FAILED: M,
-    VOICE_FILTER_REQUEST_SWITCH: k,
-    VOICE_FILTER_LAGGING: j,
+    VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: N,
+    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: x,
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: L,
+    VOICE_FILTER_APPLY_FAILED: j,
+    VOICE_FILTER_REQUEST_SWITCH: M,
+    VOICE_FILTER_LAGGING: k,
 });

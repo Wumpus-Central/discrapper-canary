@@ -1,38 +1,38 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(693789),
-    s = n(481060),
-    a = n(37234),
-    l = n(703656),
-    o = n(52647),
+var i = n(693789),
+    a = n(481060),
+    o = n(37234),
+    s = n(703656),
+    l = n(52647),
     c = n(450272),
-    d = n(981631);
-let u = function () {
-    let { resetOnboardingAnnouncementModal: e, resetQuestStatus: t } = (0, o.Z)();
-    return (0, i.jsxs)(c.$0, {
+    u = n(981631);
+let d = function () {
+    let { resetOnboardingAnnouncementModal: e, resetQuestStatus: t } = (0, l.Z)();
+    return (0, r.jsxs)(c.$0, {
         children: [
-            (0, i.jsx)(s.X6q, {
+            (0, r.jsx)(a.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Virtual Currency Configuration",
             }),
-            (0, i.jsxs)(c.E_, {
+            (0, r.jsxs)(c.E_, {
                 label: "Reset Onboarding State",
                 direction: "vertical",
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "text-feedback-info",
                         style: { marginBottom: "8px" },
                         children: "Click the button below to reset your onboarding state for Virtual Currency.",
                     }),
-                    (0, i.jsx)(r.zx, {
+                    (0, r.jsx)(i.zx, {
                         onClick: () => {
-                            e(), t(), (0, a.xf)(), (0, l.uL)(d.Z5c.APP);
+                            e(), t(), (0, o.xf)(), (0, s.uL)(u.Z5c.APP);
                         },
                         children: "Reset Onboarding State",
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "text-feedback-info",
                         children:

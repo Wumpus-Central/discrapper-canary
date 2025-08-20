@@ -1,33 +1,33 @@
 n.d(t, {
-    Z: () => d,
+    Z: () => u,
     g: () => c,
 }),
     n(388685);
 var r = n(647438),
-    a = n(442837),
-    i = n(146282),
+    i = n(442837),
+    a = n(146282),
     o = n(327220),
-    l = n(959580),
-    s = n(371177);
+    s = n(959580),
+    l = n(371177);
 function c(e, t) {
     let { types: n } = e;
     return null == n || !!n.has(t.content_type);
 }
-function d(e) {
+function u(e) {
     let { id: t, unrankedEntries: n = !1 } = e,
-        { feed: d, filters: u } = (0, a.cj)([i.Z], () => ({
-            feed: i.Z.getFeed(t),
-            filters: i.Z.getFilters(),
+        { feed: u, filters: d } = (0, i.cj)([a.Z], () => ({
+            feed: a.Z.getFeed(t),
+            filters: a.Z.getFilters(),
         })),
-        _ = r.useMemo(() => {
+        f = r.useMemo(() => {
             let e = n
-                ? null == d
+                ? null == u
                     ? void 0
-                    : d.unranked_game_entries.map((e) => e.content)
-                : null == d
+                    : u.unranked_game_entries.map((e) => e.content)
+                : null == u
                   ? void 0
-                  : d.entries.map((e) => e.content);
-            return null != u ? (null == e ? void 0 : e.filter((e) => c(u, e))) : e;
-        }, [d, u, n]);
-    return (_ = (0, o.Z)(_)), (_ = (0, l.Z)(_)), (_ = (0, s.Z)(_));
+                  : u.entries.map((e) => e.content);
+            return null != d ? (null == e ? void 0 : e.filter((e) => c(d, e))) : e;
+        }, [u, d, n]);
+    return (f = (0, o.Z)(f)), (f = (0, s.Z)(f)), (f = (0, l.Z)(f));
 }

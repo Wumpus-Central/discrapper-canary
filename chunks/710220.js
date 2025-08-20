@@ -1,67 +1,73 @@
-n.d(t, { Z: () => c });
-var i = n(951288);
+n.d(t, { Z: () => f });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(518950),
-    a = n(268685),
-    l = n(388032),
-    o = n(215062);
-function c(e) {
+var i = n(481060),
+    a = n(518950),
+    o = n(268685),
+    s = n(388032),
+    l = n(215062);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let d = (e) => (null != e.globalName ? e.globalName : e.username);
+function f(e) {
     let { referrer: t, enablePremiumBrandRefresh: n } = e,
-        { avatarSrc: c, eventHandlers: d } = (0, s.Z)({
+        { avatarSrc: c, eventHandlers: f } = (0, a.Z)({
             userId: null == t ? void 0 : t.id,
-            size: n ? a.EF.SIZE_24 : a.EF.SIZE_32,
+            size: n ? o.EF.SIZE_24 : o.EF.SIZE_32,
             animateOnHover: !0,
         });
-    return (0, i.jsx)("div", {
-        className: o.attributionBannerContainerRebranded,
-        children: (0, i.jsxs)("div", {
-            className: o.attributionBannerContentApplicationHomeRebranded,
+    return (0, r.jsx)("div", {
+        className: l.attributionBannerContainerRebranded,
+        children: (0, r.jsxs)("div", {
+            className: l.attributionBannerContentApplicationHomeRebranded,
             children: [
-                (0, i.jsx)("div", {
-                    className: o.iconContainerApplicationHome,
-                    children: (0, i.jsx)(
-                        r.qEK,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = i);
-                                    });
-                            }
-                            return e;
-                        })(
+                (0, r.jsx)("div", {
+                    className: l.iconContainerApplicationHome,
+                    children: (0, r.jsx)(
+                        i.qEK,
+                        u(
                             {
-                                className: o.icon,
+                                className: l.icon,
                                 src: c,
                                 "aria-label": t.username,
-                                size: a.EF.SIZE_32,
+                                size: o.EF.SIZE_32,
                             },
-                            d,
+                            f,
                         ),
                     ),
                 }),
-                (0, i.jsx)(r.X6q, {
+                (0, r.jsx)(i.X6q, {
                     variant: "heading-sm/normal",
-                    className: o.textContainerRebranded,
+                    className: l.textContainerRebranded,
                     color: "header-primary",
-                    children: l.intl.format(l.t.IqxblZ, { username: null != t.globalName ? t.globalName : t.username }),
+                    children: s.intl.format(s.t.IqxblZ, { username: d(t) }),
                 }),
             ],
         }),

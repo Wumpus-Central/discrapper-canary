@@ -1,103 +1,107 @@
-n.d(t, { default: () => x });
-var i = n(951288);
+n.d(t, { default: () => y });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(512722),
-    l = n.n(a),
-    o = n(257465),
+var i = n(120356),
+    a = n.n(i),
+    o = n(512722),
+    s = n.n(o),
+    l = n(257465),
     c = n(37148),
-    d = n(481060),
-    u = n(563132),
-    m = n(409813),
-    p = n(3409),
-    g = n(388032),
+    u = n(481060),
+    d = n(563132),
+    f = n(409813),
+    _ = n(3409),
+    p = n(388032),
     h = n(214820),
-    f = n(149715);
+    m = n(149715);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
 function b(e) {
     let {
             transitionState: t,
             analyticsLocation: n,
-            onClose: r,
-            onAddPaymentSource: a,
-            toastContent: u,
-            initialStep: b = m.h8.PAYMENT_TYPE,
-            overwriteSubscriptionPaymentSource: x = !1,
+            onClose: i,
+            onAddPaymentSource: o,
+            toastContent: d,
+            initialStep: g = f.h8.PAYMENT_TYPE,
+            overwriteSubscriptionPaymentSource: E = !1,
         } = e,
-        _ = (0, p.fL)(),
-        j = (0, p.vP)({
-            paymentModalArgs: _,
-            initialStep: b,
+        b = (0, _.fL)(),
+        y = (0, _.vP)({
+            paymentModalArgs: b,
+            initialStep: g,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
-                r();
+                i();
             },
             onComplete: (e, t) => {
-                l()(null != t, "paymentSource missing"), null == a || a(t), r();
+                s()(null != t, "paymentSource missing"), null == o || o(t), i();
             },
             onStepChange: () => {},
-            header: (0, i.jsxs)("div", {
-                className: s()(h.modalTitle, f.flex, f.justifyBetween, f.alignCenter),
+            header: (0, r.jsxs)("div", {
+                className: a()(h.modalTitle, m.flex, m.justifyBetween, m.alignCenter),
                 children: [
-                    (0, i.jsx)(d.vwX, {
-                        tag: d.RB0.H4,
-                        children: g.intl.string(g.t.eQ2bLi),
+                    (0, r.jsx)(u.vwX, {
+                        tag: u.RB0.H4,
+                        children: p.intl.string(p.t.eQ2bLi),
                     }),
-                    (0, i.jsx)(c.o, {}),
+                    (0, r.jsx)(c.o, {}),
                 ],
             }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
-            toastContent: u,
-            overwriteSubscriptionPaymentSource: x,
+            toastContent: d,
+            overwriteSubscriptionPaymentSource: E,
         });
-    return (0, i.jsx)(o.I, {
+    function O(e) {
+        e.preventDefault();
+    }
+    return (0, r.jsx)(l.I, {
         transitionState: t,
-        onClose: r,
+        onClose: i,
         size: "sm",
-        "aria-label": g.intl.string(g.t.eQ2bLi),
-        children: (0, i.jsx)("form", {
+        "aria-label": p.intl.string(p.t.eQ2bLi),
+        children: (0, r.jsx)("form", {
             className: h.form,
-            onSubmit: function (e) {
-                e.preventDefault();
-            },
-            children: j,
+            onSubmit: O,
+            children: y,
         }),
     });
 }
-function x(e) {
-    return (0, i.jsx)(u.PaymentContextProvider, {
-        activeSubscription: null,
+function y(e) {
+    let t = null;
+    return (0, r.jsx)(d.PaymentContextProvider, {
+        activeSubscription: t,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, i.jsx)(
-            b,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, e),
-        ),
+        children: (0, r.jsx)(b, E({}, e)),
     });
 }

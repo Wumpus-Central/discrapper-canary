@@ -1,51 +1,51 @@
-n.d(t, { Z: () => C });
-var i = n(951288);
+n.d(t, { Z: () => v });
+var r = n(951288);
 n(647438);
-var r = n(924628),
-    s = n(493773),
-    a = n(630759),
-    l = n(398826),
-    o = n(10298),
+var i = n(924628),
+    a = n(493773),
+    o = n(630759),
+    s = n(398826),
+    l = n(10298),
     c = n(623196),
-    d = n(993315),
-    u = n(883382),
-    m = n(940021),
-    p = n(402583),
-    g = n(230341),
+    u = n(993315),
+    d = n(883382),
+    f = n(940021),
+    _ = n(402583),
+    p = n(230341),
     h = n(893996),
-    f = n(266132),
-    b = n(726985),
-    x = n(388032);
-function _() {
-    return (0, i.jsxs)(h.Z, {
-        title: x.intl.string(x.t.WWaFn5),
-        description: x.intl.format(x.t["/6sFWV"], { helpArticle: (0, a.uV)() }),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(f.Z, {})],
+    m = n(266132),
+    g = n(726985),
+    E = n(388032);
+function b() {
+    return (0, r.jsxs)(h.Z, {
+        title: E.intl.string(E.t.WWaFn5),
+        description: E.intl.format(E.t["/6sFWV"], { helpArticle: (0, o.uV)() }),
+        webSetting: g.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+        children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(m.Z, {})],
     });
 }
-function j() {
-    return (0, i.jsx)(h.Z, {
-        title: x.intl.string(x.t.BG7Qsb),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
-        children: (0, i.jsx)(c.Z, {}),
+function y() {
+    return (0, r.jsx)(h.Z, {
+        title: E.intl.string(E.t.BG7Qsb),
+        webSetting: g.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        children: (0, r.jsx)(c.Z, {}),
     });
 }
-function E() {
-    return (0, i.jsxs)(h.Z, {
-        title: x.intl.string(x.t.SRZyHh),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})],
+function O() {
+    return (0, r.jsxs)(h.Z, {
+        title: E.intl.string(E.t.SRZyHh),
+        webSetting: g.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        children: [(0, r.jsx)(_.Z, {}), (0, r.jsx)(f.Z, {}), (0, r.jsx)(d.Z, {}), (0, r.jsx)(u.Z, {})],
     });
 }
-function C() {
+function v() {
     return (
-        (0, s.ZP)(() => {
-            (0, r.I)(), (0, l.A)();
+        (0, a.ZP)(() => {
+            (0, i.I)(), (0, s.A)();
         }),
-        (0, i.jsxs)(o.N, {
-            header: x.intl.string(x.t.OAuOHB),
-            children: [(0, i.jsx)(E, {}), (0, i.jsx)(j, {}), (0, i.jsx)(_, {})],
+        (0, r.jsxs)(l.N, {
+            header: E.intl.string(E.t.OAuOHB),
+            children: [(0, r.jsx)(O, {}), (0, r.jsx)(y, {}), (0, r.jsx)(b, {})],
         })
     );
 }

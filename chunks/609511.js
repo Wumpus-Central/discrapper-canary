@@ -23,13 +23,13 @@ var r = n(939793),
     S = "[object Uint16Array]",
     A = "[object Uint32Array]";
 e.exports = function (e, t, n) {
-    var N = e.constructor;
+    var C = e.constructor;
     switch (t) {
         case m:
             return r(e);
         case l:
         case c:
-            return new N(+e);
+            return new C(+e);
         case g:
             return i(e, n);
         case E:
@@ -43,14 +43,14 @@ e.exports = function (e, t, n) {
         case A:
             return s(e, n);
         case u:
-            return new N();
+            return new C();
         case d:
         case p:
-            return new N(e);
+            return new C(e);
         case f:
             return a(e);
         case _:
-            return new N();
+            return new C();
         case h:
             return o(e);
     }

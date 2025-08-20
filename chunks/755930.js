@@ -2,7 +2,7 @@ n.d(t, {
     GW: () => _,
     Qg: () => f,
     Yn: () => O,
-    ZP: () => E,
+    ZP: () => I,
     bL: () => C,
     i$: () => v,
     nn: () => j,
@@ -165,7 +165,7 @@ function _(e) {
                 renderHeader: l,
                 renderContent(e) {
                     let t = n(e);
-                    return (0, r.jsx)(I, { children: t });
+                    return (0, r.jsx)(E, { children: t });
                 },
             },
             a,
@@ -220,7 +220,7 @@ let y = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(C, { children: (0, c.T4)(null != t ? t : 0, u.pKx.USD) });
     },
-    I = (e) => {
+    E = (e) => {
         let { children: t } = e;
         return (0, r.jsxs)(C, {
             className: g.personCountCell,
@@ -236,7 +236,7 @@ let y = (e) => {
             ],
         });
     };
-function E(e) {
+function I(e) {
     var {
             className: t,
             headerClassName: n,

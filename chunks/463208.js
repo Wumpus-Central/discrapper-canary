@@ -164,17 +164,17 @@ function I(e) {
             value: T,
             defaultValue: S,
             minLength: A,
-            error: N,
-            defaultDirty: C = !1,
+            error: C,
+            defaultDirty: N = !1,
             leading: R,
             trailing: P,
             validateOn: w = "change",
             size: D = "md",
-            fullWidth: L = !1,
-            clearable: x = !1,
-            helperText: M,
-            showCharacterCount: k = !1,
-            successMessage: j,
+            fullWidth: x = !1,
+            clearable: L = !1,
+            helperText: j,
+            showCharacterCount: M = !1,
+            successMessage: k,
         } = e,
         U = E(e, [
             "disabled",
@@ -203,19 +203,19 @@ function I(e) {
         G = y(T, S),
         B = (0, d.m)({
             validateOn: w,
-            error: N,
+            error: C,
             value: T,
             minLength: A,
             maxLength: I,
-            defaultDirty: C,
+            defaultDirty: N,
         }),
-        { setShouldValidate: V } = B,
-        F = (e) => {
+        { setShouldValidate: Z } = B,
+        V = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            null == (t = U.onChange) || t.call(U, r, p), V(!0), null == (n = G.setHasValue) || n.call(G, "" !== r);
+            null == (t = U.onChange) || t.call(U, r, p), Z(!0), null == (n = G.setHasValue) || n.call(G, "" !== r);
         },
-        Z = (e) => {
+        F = (e) => {
             var t, n;
             null == (t = U.onFocus) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !0);
         },
@@ -234,7 +234,7 @@ function I(e) {
         K = U.readOnly;
     null == K && !1 === l && (K = !0);
     let z = null;
-    ("boolean" == typeof x ? x && null != T && "" !== T && !K : x.show)
+    ("boolean" == typeof L ? L && null != T && "" !== T && !K : L.show)
         ? (z = (0, r.jsx)(v, {
               inputSize: D,
               onClick: Y,
@@ -254,11 +254,11 @@ function I(e) {
         (0, r.jsxs)(u.J, {
             disabled: a,
             validation: B,
-            fullWidth: L,
+            fullWidth: x,
             readOnly: K,
-            helperText: M,
-            successMessage: j,
-            characterCount: k ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
+            helperText: j,
+            successMessage: k,
+            characterCount: M ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
             characterCountMaxLength: I,
             className: o()(_.container, _[D], {
                 [_.leading]: null != q,
@@ -289,9 +289,9 @@ function I(e) {
                                 ),
                                 {
                                     "aria-labelledby": null != (n = U["aria-labelledby"]) ? n : G.titleId,
-                                    onChange: F,
+                                    onChange: V,
                                     onBlur: H,
-                                    onFocus: Z,
+                                    onFocus: F,
                                     ref: c,
                                 },
                             ),

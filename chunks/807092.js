@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -152,7 +152,7 @@ class A extends (r = i.ZP.PersistedStore) {
 c(A, "displayName", "PendingReplyStore"),
     c(A, "persistKey", "PendingReplyStore"),
     c(A, "migrations", [(e) => (null != e ? e : {})]);
-let N = new A(a.Z, {
+let C = new A(a.Z, {
     CREATE_PENDING_REPLY: m,
     CREATE_SHALLOW_PENDING_REPLY: g,
     SET_PENDING_REPLY_SHOULD_MENTION: E,

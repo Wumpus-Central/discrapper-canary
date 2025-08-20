@@ -1,10 +1,10 @@
 n.d(t, { Z: () => m }), n(539854);
-var i,
-    r = n(442837),
-    s = n(570140),
-    a = n(381496),
-    l = n(430824);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    a = n(570140),
+    o = n(381496),
+    s = n(430824);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,53 +17,57 @@ function o(e, t, n) {
         e
     );
 }
-let c = {},
+let c = 86400000,
+    u = {},
     d = () => {
-        c = {
+        u = {
             guildAffinitiesByGuildId: {},
             guildAffinities: [],
             lastFetched: 0,
         };
     };
+function f(e) {
+    let { guildAffinities: t } = e;
+    (u.guildAffinities = []),
+        (u.guildAffinitiesByGuildId = {}),
+        (u.lastFetched = Date.now()),
+        t.forEach((e, t) => {
+            let { affinity: n, guild_id: r } = e,
+                i = {
+                    score: n,
+                    guildId: r,
+                    index: t,
+                };
+            (u.guildAffinitiesByGuildId[r] = i), u.guildAffinities.push(i);
+        });
+}
+function _() {
+    return Date.now() - u.lastFetched > c && (0, o.j)(), !1;
+}
+function p() {
+    d();
+}
 d();
-class u extends (i = r.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(l.Z);
+        null != e && (u = e), this.waitFor(s.Z);
     }
     getState() {
-        return c;
+        return u;
     }
     getGuildAffinity(e) {
-        return c.guildAffinitiesByGuildId[e];
+        return u.guildAffinitiesByGuildId[e];
     }
     get affinities() {
-        return c.guildAffinities;
+        return u.guildAffinities;
     }
     get hasRequestResolved() {
-        return 0 !== c.lastFetched;
+        return 0 !== u.lastFetched;
     }
 }
-o(u, "displayName", "GuildAffinitiesStore"), o(u, "persistKey", "GuildAffinitiesStore");
-let m = new u(s.Z, {
-    CONNECTION_OPEN: function () {
-        return Date.now() - c.lastFetched > 86400000 && (0, a.j)(), !1;
-    },
-    LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
-        let { guildAffinities: t } = e;
-        (c.guildAffinities = []),
-            (c.guildAffinitiesByGuildId = {}),
-            (c.lastFetched = Date.now()),
-            t.forEach((e, t) => {
-                let { affinity: n, guild_id: i } = e,
-                    r = {
-                        score: n,
-                        guildId: i,
-                        index: t,
-                    };
-                (c.guildAffinitiesByGuildId[i] = r), c.guildAffinities.push(r);
-            });
-    },
-    LOGOUT: function () {
-        d();
-    },
+l(h, "displayName", "GuildAffinitiesStore"), l(h, "persistKey", "GuildAffinitiesStore");
+let m = new h(a.Z, {
+    CONNECTION_OPEN: _,
+    LOAD_GUILD_AFFINITIES_SUCCESS: f,
+    LOGOUT: p,
 });

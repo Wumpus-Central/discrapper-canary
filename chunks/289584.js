@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(647438),
     i = n(749210),
     l = n(287734),
@@ -8,27 +8,27 @@ var r = n(647438),
     c = n(471253),
     d = n(427679),
     u = n(190378);
-function h(e, t) {
+function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        [h, g] = r.useState(!1),
-        [_, b] = r.useState(null),
-        m = r.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+        [x, h] = r.useState(!1),
+        [g, m] = r.useState(null),
+        b = r.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
         f = (0, s.J)(e);
     return {
-        loading: h,
-        error: _,
+        loading: x,
+        error: g,
         onSave: async (r) => {
-            let { topic: s, privacyLevel: d, sendStartNotification: h } = r;
+            let { topic: s, privacyLevel: d, sendStartNotification: x } = r;
             if (null != e && "" !== s && null != d) {
-                g(!0), b(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
+                h(!0), m(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
                 try {
                     let n;
-                    null != m
+                    null != b
                         ? (n = await c.Ef(e, s, d))
-                        : ((n = await c.HO(e, s, d, null != h && h)), f && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
+                        : ((n = await c.HO(e, s, d, null != x && x)), f && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
                         t(n);
                 } catch (e) {
-                    b(new a.Hx(e)), g(!1);
+                    m(new a.Hx(e)), h(!1);
                 }
             }
         },

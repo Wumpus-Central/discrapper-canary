@@ -22,13 +22,13 @@ var r = n(951288),
     y = n(981631),
     C = n(388032),
     N = n(737543);
-let I = [
+let E = [
         14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000,
         12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236,
     ],
-    E =
+    I =
         /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-    S = I[4],
+    S = E[4],
     T = (e) => {
         var t, n;
         let { guild: l, canEnable: s } = e,
@@ -37,7 +37,7 @@ let I = [
             [T, P] = i.useState(l.features.has(y.oNc.CREATOR_STORE_PAGE)),
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : S),
             [Z, D] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
-            A = null == Z || null != Z.match(E),
+            A = null == Z || null != Z.match(I),
             [L, k] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             M = i.useRef(null == c ? void 0 : c.store_page_slug).current,
             G =
@@ -156,7 +156,7 @@ let I = [
                                     children: C.intl.string(C.t.l6iM39),
                                 }),
                                 (0, r.jsx)(g.zH8, {
-                                    colors: I,
+                                    colors: E,
                                     customColor: null,
                                     defaultColor: S,
                                     value: w,

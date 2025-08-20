@@ -1,46 +1,50 @@
-n.d(t, { Z: () => o });
-var i = n(951288);
+n.d(t, { Z: () => c });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(723359),
-    a = n(231338);
+var i = n(481060),
+    a = n(723359),
+    o = n(231338);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-let o = {
+let c = {
     openNewUserAgeGateModal: (e) => {
-        (0, r.ZDy)(
+        (0, i.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("71172"), n.e("1337"), n.e("75816")]).then(
                     n.bind(n, 298237),
                 );
-                return (t) => (0, i.jsx)(e, l({}, t));
+                return (t) => (0, r.jsx)(e, l({}, t));
             },
             {
-                modalKey: s.$$,
-                onCloseRequest: a.dG,
+                modalKey: a.$$,
+                onCloseRequest: o.dG,
                 onCloseCallback: e,
             },
         );
@@ -48,13 +52,13 @@ let o = {
     openClaimAccountModal: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 ? arguments[1] : void 0;
-        (0, r.ZDy)(
+        (0, i.ZDy)(
             async () => {
                 let { default: t } = await n.e("60827").then(n.bind(n, 324239));
-                return (n) => (0, i.jsx)(t, l({ claimRequired: e }, n));
+                return (n) => (0, r.jsx)(t, l({ claimRequired: e }, n));
             },
             {
-                onCloseRequest: e ? a.dG : null,
+                onCloseRequest: e ? o.dG : null,
                 onCloseCallback: t,
             },
         );

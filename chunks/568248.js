@@ -1,64 +1,65 @@
-r.d(t, { Z: () => y }), r(953529), r(997841), r(388685);
-var n = r(951288),
-    l = r(647438),
-    i = r(120356),
-    o = r.n(i),
-    a = r(95398),
-    c = r(936141),
-    s = r(768494),
-    u = r(499376),
-    d = r(128854),
-    p = r(524444),
-    f = r(630388),
-    b = r(295435),
-    m = r(217702),
-    O = r(156259);
-function y(e) {
-    let { media: t, spoiler: r, description: i } = e,
-        y = (0, u.pU)(t),
-        j = (0, f.yE)(t.flags, s.hR.IS_ANIMATED),
-        { gifAutoPlay: g } = (0, d.c)(),
-        [h, v] = l.useState(r),
-        P = (e) => {
-            var r, l;
-            return "IMAGE" !== y
-                ? (0, n.jsx)(b.S, {
-                      className: O.imgContainer,
+n.d(t, { Z: () => E }), n(953529), n(997841), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(95398),
+    l = n(936141),
+    c = n(768494),
+    u = n(499376),
+    d = n(128854),
+    f = n(524444),
+    _ = n(630388),
+    p = n(295435),
+    h = n(217702),
+    m = n(156259);
+let g = 85;
+function E(e) {
+    let { media: t, spoiler: n, description: a } = e,
+        E = (0, u.pU)(t),
+        b = (0, _.yE)(t.flags, c.hR.IS_ANIMATED),
+        { gifAutoPlay: y } = (0, d.c)(),
+        [O, v] = i.useState(n),
+        I = (e) => {
+            var n, i;
+            return "IMAGE" !== E
+                ? (0, r.jsx)(p.S, {
+                      className: m.imgContainer,
                       media: t,
-                      placeholderWidth: 85,
-                      placeholderHeight: 85,
-                      maxWidth: 85,
-                      maxHeight: 85,
+                      placeholderWidth: g,
+                      placeholderHeight: g,
+                      maxWidth: g,
+                      maxHeight: g,
                       hiddenSpoilers: e,
                   })
-                : (0, n.jsx)(p.Yi, {
-                      containerClassName: o()(O.imgContainer, { [O.hiddenSpoiler]: e }),
-                      imageClassName: O.img,
+                : (0, r.jsx)(f.Yi, {
+                      containerClassName: o()(m.imgContainer, { [m.hiddenSpoiler]: e }),
+                      imageClassName: m.img,
                       src: t.proxyUrl,
-                      alt: i,
+                      alt: a,
                       original: t.url,
                       placeholder: t.placeholder,
                       placeholderVersion: t.placeholderVersion,
-                      width: null != (r = t.width) ? r : 0,
-                      height: null != (l = t.height) ? l : 0,
+                      width: null != (n = t.width) ? n : 0,
+                      height: null != (i = t.height) ? i : 0,
                       hiddenSpoilers: e,
-                      maxWidth: 170,
-                      maxHeight: 170,
-                      minWidth: 85,
-                      minHeight: 85,
-                      autoPlay: g && !e,
-                      mediaLayoutType: m.hV.MOSAIC,
+                      maxWidth: 2 * g,
+                      maxHeight: 2 * g,
+                      minWidth: g,
+                      minHeight: g,
+                      autoPlay: y && !e,
+                      mediaLayoutType: h.hV.MOSAIC,
                       reducedSizeAltTextButton: !0,
-                      srcIsAnimated: j,
+                      srcIsAnimated: b,
                   });
         };
-    return r
-        ? (0, n.jsx)(a.ZP, {
-              type: a.ZP.Types.ATTACHMENT,
-              reason: c.wk.SPOILER,
-              obscured: h,
+    return n
+        ? (0, r.jsx)(s.ZP, {
+              type: s.ZP.Types.ATTACHMENT,
+              reason: l.wk.SPOILER,
+              obscured: O,
               onToggleObscurity: () => v((e) => !e),
-              children: (e) => P(e),
+              children: (e) => I(e),
           })
-        : P(!1);
+        : I(!1);
 }

@@ -1,9 +1,9 @@
-t.exports = function (t, e, r, n) {
-    if (t.size) {
+e.exports = function (e, t, n, r) {
+    if (e.size) {
         var i = 0;
-        t.reduce(function (t, o, a) {
-            return e(t, o) || (r(t) && n(i, a), (i = a)), o;
+        e.reduce(function (e, a, o) {
+            return t(e, a) || (n(e) && r(i, o), (i = o)), a;
         }),
-            r(t.last()) && n(i, t.count());
+            n(e.last()) && r(i, e.count());
     }
 };

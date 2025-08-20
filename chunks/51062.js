@@ -67,11 +67,11 @@ function O(e, t) {
     );
 }
 function v(e, t, n) {
-    var E, y, v, I, T, S, A, N, C, R;
+    var E, y, v, I, T, S, A, C, N, R;
     let { channel: P, type: w } = e,
-        [D, L] = r.useState(() => (0, p.PA)()),
-        x = (0, i.Z)(),
-        M = (0, a.e7)([u.ZP, _.default], () => {
+        [D, x] = r.useState(() => (0, p.PA)()),
+        L = (0, i.Z)(),
+        j = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return (
@@ -84,13 +84,13 @@ function v(e, t, n) {
                             : null) && t
             );
         }),
-        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
+        { canMentionEveryone: M, hidePersonalInformation: k } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
+                canMentionEveryone: P.isPrivate() || j || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [P, w, M],
+            [P, w, j],
         ),
         { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(P.id),
@@ -102,22 +102,22 @@ function v(e, t, n) {
             state: D,
             onFocus: (e) => Y.setSelectedIndex(e),
         }),
-        V = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
-        F = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
-        Z = null;
-    null != F && (Z = null != (A = null == (S = c.bN.getSelectedParentOfType(F, p.un)) ? void 0 : S[0]) ? A : null);
+        Z = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
+        V = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
+        F = null;
+    null != V && (F = null != (A = null == (S = c.bN.getSelectedParentOfType(V, p.un)) ? void 0 : S[0]) ? A : null);
     let H = O(b({}, e), {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
-            activeInlineAutocompleteInput: Z,
-            canMentionUsers: null != (N = null == (v = w.users) ? void 0 : v.allowMentioning) && N,
-            canMentionEveryone: k,
-            hidePersonalInformation: j,
+            activeInlineAutocompleteInput: F,
+            canMentionUsers: null != (C = null == (v = w.users) ? void 0 : v.allowMentioning) && C,
+            canMentionEveryone: M,
+            hidePersonalInformation: k,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
-            currentWord: null != (C = null == V ? void 0 : V.word) ? C : "",
-            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
+            currentWord: null != (N = null == Z ? void 0 : Z.word) ? N : "",
+            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
             optionText:
                 null != G
                     ? (0, o.KF)(
@@ -139,15 +139,15 @@ function v(e, t, n) {
         }),
         r.useImperativeHandle(t, () => Y, [Y]),
         r.useEffect(() => {
-            let e = (e) => L(e);
+            let e = (e) => x(e);
             return (
                 Y.on("change", e),
-                Y.on("update", x),
+                Y.on("update", L),
                 () => {
-                    Y.off("change", e), Y.off("update", x);
+                    Y.off("change", e), Y.off("update", L);
                 }
             );
-        }, [x, Y]),
+        }, [L, Y]),
         r.useEffect(() => {
             var e;
             let t = null == (e = D.query) ? void 0 : e.typeInfo.stores;

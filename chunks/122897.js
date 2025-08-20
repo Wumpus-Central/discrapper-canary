@@ -1,37 +1,38 @@
-n.d(t, { Z: () => h });
-var i = n(951288);
+n.d(t, { Z: () => m });
+var r = n(951288);
 n(647438);
-var r = n(524437),
-    s = n(481060),
-    a = n(63063),
-    l = n(78451),
-    o = n(695346),
+var i = n(524437),
+    a = n(481060),
+    o = n(63063),
+    s = n(78451),
+    l = n(695346),
     c = n(838436),
-    d = n(973005),
-    u = n(726985),
-    m = n(981631),
-    p = n(388032),
-    g = n(918526);
-function h() {
-    var e;
-    let t = o.Xr.useSetting(),
-        n = o.UP.useSetting(),
-        h = t !== r.Xr.DEFAULT_UNSET ? t : null != (e = d.O7.get(n)) ? e : r.Xr.NON_FRIENDS;
-    return (0, i.jsxs)(c.U, {
-        setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
+    u = n(973005),
+    d = n(726985),
+    f = n(981631),
+    _ = n(388032),
+    p = n(918526);
+function h(e, t) {
+    var n;
+    return e !== i.Xr.DEFAULT_UNSET ? e : null != (n = u.O7.get(t)) ? n : i.Xr.NON_FRIENDS;
+}
+function m() {
+    let e = h(l.Xr.useSetting(), l.UP.useSetting());
+    return (0, r.jsxs)(c.U, {
+        setting: d.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
-            (0, i.jsx)(c.H, {
-                header: p.intl.string(p.t.tiCXaG),
-                description: p.intl.format(p.t.RvjRRE, { appealLink: a.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) }),
+            (0, r.jsx)(c.H, {
+                header: _.intl.string(_.t.tiCXaG),
+                description: _.intl.format(_.t.RvjRRE, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
-            (0, i.jsx)(s.FXm, {
-                className: g.radioGroup,
-                radioItemClassName: g.radioGroupItem,
-                value: h,
-                options: (0, l.c7)(),
+            (0, r.jsx)(a.FXm, {
+                className: p.radioGroup,
+                radioItemClassName: p.radioGroupItem,
+                value: e,
+                options: (0, s.c7)(),
                 onChange: (e) => {
                     let { value: t } = e;
-                    return o.Xr.updateSetting(t);
+                    return l.Xr.updateSetting(t);
                 },
             }),
         ],

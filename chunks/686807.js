@@ -1,27 +1,27 @@
-n.d(t, { Z: () => p });
-var i = n(951288);
+n.d(t, { Z: () => _ });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(201895),
-    l = n(471445),
-    o = n(823379),
-    a = n(303737),
+var i = n(481060),
+    a = n(201895),
+    o = n(471445),
+    s = n(823379),
+    l = n(303737),
     c = n(293810),
     u = n(388032),
     d = n(24132);
-function h(e) {
+function f(e) {
     let { channelId: t } = e,
-        n = (0, a.m7)(t);
+        n = (0, l.m7)(t);
     if (null == n) return "[".concat(u.intl.string(u.t.bz1PZW), "]");
-    let o = n.isMediaChannel() ? r.XBm : (0, l.Th)(n.type);
-    return (0, i.jsxs)(i.Fragment, {
+    let s = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(r.nn4, { children: (0, s.ZP)({ channel: n }) }),
-            (0, i.jsxs)("div", {
+            (0, r.jsx)(i.nn4, { children: (0, a.ZP)({ channel: n }) }),
+            (0, r.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [
-                    null != o &&
-                        (0, i.jsx)(o, {
+                    null != s &&
+                        (0, r.jsx)(s, {
                             className: d.icon,
                             "aria-hidden": !0,
                         }),
@@ -31,13 +31,13 @@ function h(e) {
         ],
     });
 }
-function p(e) {
+function _(e) {
     switch (e.ref_type) {
         case c.Qs.CHANNEL:
-            return (0, i.jsx)(h, { channelId: e.ref_id });
+            return (0, r.jsx)(f, { channelId: e.ref_id });
         case c.Qs.INTANGIBLE:
             return e.name;
         default:
-            (0, o.vE)(e);
+            (0, s.vE)(e);
     }
 }

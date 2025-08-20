@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => E,
-    Z: () => S,
+    Z: () => v,
 }),
     n(539854);
 var r = n(392711),
@@ -34,12 +34,12 @@ function g(e, t) {
     var n;
     l()(null != (n = E.getState().particles[e.id]) ? n : {}).forEach(t);
 }
-function S(e) {
+function v(e) {
     var t, n, r;
     let {
         emojiHose: a,
-        context: S,
-        canvasWidth: v,
+        context: v,
+        canvasWidth: S,
         canvasHeight: h,
         fallbackColor: b,
         outlineColorDark: O,
@@ -47,9 +47,9 @@ function S(e) {
         streamerId: _,
         deadDrawables: Z,
     } = e;
-    S.save();
+    v.save();
     let j = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
-        I = (0, d.np)(a.x, v),
+        I = (0, d.np)(a.x, S),
         w = (0, d.np)(a.y, h),
         { outlineColor: P } = (0, d.bg)(a.userId, O, y, b);
     g(a, (e) => {
@@ -96,8 +96,8 @@ function S(e) {
                     });
                 });
         })(a, I, w),
-        (0, f.I)(S, I, w, P, p.q2),
-        (0, f.T)(S, I, w, a.userId),
+        (0, f.I)(v, I, w, P, p.q2),
+        (0, f.T)(v, I, w, a.userId),
         g(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -105,11 +105,11 @@ function S(e) {
                     l = n.x - (r / 2) * window.devicePixelRatio,
                     i = n.y - 1.2 * r * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, r / 2 + l, r / 2 + i, r, r);
-            })(S, j, e),
+            })(v, j, e),
         ),
         a.lastUpdatedAt + p.FO < Date.now() && (0, u.ZZ)(_, a),
         a.state !== c.f.STOP ||
             Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 ||
             Z.push(a),
-        S.restore();
+        v.restore();
 }

@@ -71,11 +71,11 @@ function A(e, t) {
         e
     );
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = N(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +83,7 @@ function N(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -106,48 +106,21 @@ let R = new s.Z("GuildSettingsActionCreators"),
         async open(e, t, r, i) {
             var a;
             await Promise.all([
-                n.e("85911"),
                 n.e("57804"),
                 n.e("1806"),
                 n.e("53414"),
-                n.e("70274"),
-                n.e("25292"),
-                n.e("31978"),
-                n.e("22878"),
-                n.e("74891"),
-                n.e("85372"),
-                n.e("6380"),
-                n.e("28467"),
-                n.e("8739"),
-                n.e("86282"),
-                n.e("12830"),
-                n.e("38626"),
-                n.e("30243"),
-                n.e("37447"),
-                n.e("53937"),
-                n.e("63575"),
-                n.e("34082"),
-                n.e("40694"),
-                n.e("55719"),
-                n.e("26434"),
-                n.e("94136"),
-                n.e("79312"),
                 n.e("36599"),
-                n.e("31930"),
-                n.e("16766"),
                 n.e("60962"),
                 n.e("58175"),
                 n.e("7654"),
-                n.e("4067"),
-                n.e("38697"),
                 n.e("44156"),
-                n.e("6565"),
                 n.e("49049"),
                 n.e("47463"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("54408"),
                 n.e("42926"),
+                n.e("38697"),
                 n.e("20087"),
                 n.e("6049"),
                 n.e("79381"),
@@ -155,7 +128,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("64679"),
                 n.e("12630"),
                 n.e("56534"),
-                n.e("63653"),
+                n.e("11699"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) &&
                     (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)),
@@ -273,7 +246,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
         updateGuild(e) {
             var t,
                 { safetyAlertsChannelId: n, profile: r } = e;
-            let i = T({}, N(e, ["safetyAlertsChannelId", "profile"]));
+            let i = T({}, C(e, ["safetyAlertsChannelId", "profile"]));
             null != r && (i.profile = T({}, null != (t = i.profile) ? t : {}, r)),
                 null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n),
                 a.Z.dispatch(T({ type: "GUILD_SETTINGS_UPDATE" }, i));
@@ -309,14 +282,14 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     rulesChannelId: v,
                     safetyAlertsChannelId: I,
                     ownerConfiguredContentLevel: S,
-                    discoverySplash: N,
-                    publicUpdatesChannelId: C,
+                    discoverySplash: C,
+                    publicUpdatesChannelId: N,
                     premiumProgressBarEnabled: P,
                     profile: w,
                     moderatorReportingEnabled: D,
                 } = t,
-                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                x = A(
+                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                L = A(
                     T(
                         {
                             name: n,
@@ -336,8 +309,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                             system_channel_flags: b,
                             rules_channel_id: v,
                             owner_configured_content_level: S,
-                            discovery_splash: N,
-                            public_updates_channel_id: C,
+                            discovery_splash: C,
+                            public_updates_channel_id: N,
                             safety_alerts_channel_id: I,
                         },
                         null != P ? { premium_progress_bar_enabled: P } : null,
@@ -352,8 +325,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 i.tn
                     .patch({
                         url: O.ANM.GUILD(e),
-                        query: { for_discovery: L.isForDiscovery },
-                        body: x,
+                        query: { for_discovery: x.isForDiscovery },
+                        body: L,
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     })
@@ -372,7 +345,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                                     errors: e.body,
                                 }),
                                 R.error("Failed to save guild settings", { errors: e.body }),
-                                L.throwErr)
+                                x.throwErr)
                             )
                                 throw e.body;
                         },

@@ -107,14 +107,14 @@ function I(e) {
         isActive: T = !1,
         tooltipPosition: S = "top",
         shouldShowTooltip: A = !0,
-        forceTooltipOpen: N = !1,
-        buttonRef: C,
+        forceTooltipOpen: C = !1,
+        buttonRef: N,
         grow: R,
         "aria-label": P,
         look: w,
         buttonText: D,
-        size: L,
-        color: x,
+        size: x,
+        color: L,
     } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.ua7, {
@@ -122,7 +122,7 @@ function I(e) {
             text: t,
             "aria-label": P,
             shouldShow: A,
-            forceOpen: N,
+            forceOpen: C,
             children: (e) => {
                 var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: S } = e,
                     A = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
@@ -132,8 +132,8 @@ function I(e) {
                         E(
                             {
                                 look: null != w ? w : l.zx.Looks.BLANK,
-                                size: null != L ? L : l.zx.Sizes.NONE,
-                                color: x,
+                                size: null != x ? x : l.zx.Sizes.NONE,
+                                color: L,
                                 onKeyDown: (e) => {
                                     null == i || i(e);
                                 },
@@ -162,7 +162,7 @@ function I(e) {
                                 innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != D }),
                                 className: o()({ [m.active]: T }, f),
                                 wrapperClassName: p,
-                                buttonRef: C,
+                                buttonRef: N,
                                 grow: R,
                                 "aria-label": P,
                             },
@@ -223,8 +223,8 @@ function A(e) {
             iconClassName: b,
             onPopoutClick: v,
             popoutOpen: A = !1,
-            popoutDisabled: N = !1,
-            isTrayButton: C,
+            popoutDisabled: C = !1,
+            isTrayButton: N,
             applyStyles: R = !1,
         } = e,
         P = O(e, [
@@ -242,33 +242,33 @@ function A(e) {
         ]);
     let w = (0, p.Z)(a, l),
         D = null != s ? s : w,
-        L = (0, u.Z)("(max-width: 456px)"),
-        x = i.useRef(null),
-        M = i.useContext(f.h9);
+        x = (0, u.Z)("(max-width: 456px)"),
+        L = i.useRef(null),
+        j = i.useContext(f.h9);
     i.useEffect(() => {
-        null != x.current && (M ? x.current.pause() : x.current.play());
-    }, [M]);
-    let k = null != (t = P.onContextMenu) ? t : v,
-        j = null == v && !C,
-        U = null != v && !C,
-        G = C && null != v,
+        null != L.current && (j ? L.current.pause() : L.current.play());
+    }, [j]);
+    let M = null != (t = P.onContextMenu) ? t : v,
+        k = null == v && !N,
+        U = null != v && !N,
+        G = N && null != v,
         B = (0, r.jsx)(
             I,
             y(E({}, P), {
                 grow: !1,
-                onContextMenu: k,
-                iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
+                onContextMenu: M,
+                iconClassName: o()(b, m.centerIcon, k && m.fullRegionIcon),
                 className: o()(
-                    L || R ? g : null,
+                    x || R ? g : null,
                     l && m.active,
                     m.centerButton,
                     S[w],
-                    j && m.fullRegionButton,
+                    k && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
             }),
         );
-    return L
+    return x
         ? B
         : (0, r.jsxs)("div", {
               ref: n,
@@ -284,16 +284,16 @@ function A(e) {
                       ? (0, r.jsx)(_.Z, {
                             children: (0, r.jsx)(c.P3F, {
                                 "aria-label": h.intl.string(h.t.PdRCRk),
-                                onClick: N ? void 0 : v,
+                                onClick: C ? void 0 : v,
                                 className: o()(
                                     m.contextMenuNub,
-                                    C && m.attachedCaret,
+                                    N && m.attachedCaret,
                                     S[D],
                                     A && [m.popoutOpen, m.active],
-                                    N && m.disabled,
+                                    C && m.disabled,
                                 ),
                                 children: (0, r.jsx)(d.Z, {
-                                    className: o()(m.contextMenuCaret, A && m.open, N && m.disabled),
+                                    className: o()(m.contextMenuCaret, A && m.open, C && m.disabled),
                                 }),
                             }),
                         })

@@ -59,15 +59,15 @@ let O = i.memo(function (e) {
             disableManageChannels: _,
         } = e,
         { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
             null != O && r.includes(O) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
         }, [n.id, O, m, b]),
-        { density: j } = (0, l.TCT)(),
-        C = "compact" === j ? 8 : p.$k;
+        { density: v } = (0, l.TCT)(),
+        C = "compact" === v ? 8 : p.$k;
     switch (t) {
         case u.wZ:
             return (0, r.jsx)("div", { style: { height: C } });
@@ -79,13 +79,13 @@ let O = i.memo(function (e) {
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
                 name: h.intl.string(h.t.gKcrqK),
-                onDismiss: v,
+                onDismiss: j,
             });
         case m.voiceChannelsSectionNumber: {
-            var E;
+            var x;
             let e = m.getCategoryFromSection(m.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null == (E = m.getChannelFromSectionRow(t, 0)) ? void 0 : E.channel;
+            let n = null == (x = m.getChannelFromSectionRow(t, 0)) ? void 0 : x.channel;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)("div", { className: g.sectionDivider }),

@@ -1,83 +1,83 @@
-n.d(t, { Z: () => b }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(809206),
-    l = n(852860),
-    o = n(321114),
+n.d(t, { Z: () => g }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(809206),
+    s = n(852860),
+    l = n(321114),
     c = n(164946),
-    d = n(350327),
-    u = n(330055),
-    m = n(25990),
-    p = n(695346),
-    g = n(647699),
+    u = n(350327),
+    d = n(330055),
+    f = n(25990),
+    _ = n(695346),
+    p = n(647699),
     h = n(155433),
-    f = n(388032);
-function b() {
-    let e = (0, s.e7)([m.Z], () => m.Z.getIsSubmitDisabled()),
-        t = (0, s.e7)([m.Z], () => m.Z.getErrors()),
-        [n, b] = r.useState(!1),
-        x = r.useMemo(
+    m = n(388032);
+function g() {
+    let e = (0, a.e7)([f.Z], () => f.Z.getIsSubmitDisabled()),
+        t = (0, a.e7)([f.Z], () => f.Z.getErrors()),
+        [n, g] = i.useState(!1),
+        E = i.useMemo(
             () =>
                 (null == t ? void 0 : t.message) != null
                     ? null == t
                         ? void 0
                         : t.message
                     : Object.keys(null != t ? t : {}).length > 0
-                      ? f.intl.string(f.t["84MExs"])
+                      ? m.intl.string(m.t["84MExs"])
                       : null,
             [t],
         ),
-        _ = r.useCallback(async () => {
-            var e, t, n, i, r;
-            b(!0);
-            let s = m.Z.getAllPending(),
-                l = (0, c.ED)(s),
-                f = (0, c.g9)(s),
-                x = (0, c.jE)(s),
-                _ = !0;
-            if (Object.keys(l).length > 0) {
-                let i = await (0, a.Mn)(l);
-                if (((_ = _ && null != (t = null == i ? void 0 : i.ok) && t), null == i ? void 0 : i.ok)) {
-                    let e = i.body;
-                    void 0 !== s.pendingAvatar &&
-                        (0, u.Z)({
+        b = i.useCallback(async () => {
+            var e, t, n, r, i;
+            g(!0);
+            let a = f.Z.getAllPending(),
+                s = (0, c.ED)(a),
+                m = (0, c.g9)(a),
+                E = (0, c.jE)(a),
+                b = !0;
+            if (Object.keys(s).length > 0) {
+                let r = await (0, o.Mn)(s);
+                if (((b = b && null != (t = null == r ? void 0 : r.ok) && t), null == r ? void 0 : r.ok)) {
+                    let e = r.body;
+                    void 0 !== a.pendingAvatar &&
+                        (0, d.Z)({
                             avatarHash: e.avatar,
-                            avatarId: l.avatarId,
-                            avatarAssetOrigin: null == (n = s.pendingAvatar) ? void 0 : n.assetOrigin,
+                            avatarId: s.avatarId,
+                            avatarAssetOrigin: null == (n = a.pendingAvatar) ? void 0 : n.assetOrigin,
                         }),
-                        (0, a.si)();
-                } else (null == i || null == (e = i.body) ? void 0 : e.username) != null && (0, h.P)();
+                        (0, o.si)();
+                } else (null == r || null == (e = r.body) ? void 0 : e.username) != null && (0, h.P)();
             }
-            if (Object.keys(f).length > 0) {
-                let e = await (0, d.Z)(f);
-                (_ = _ && null != (i = null == e ? void 0 : e.ok) && i),
-                    (null == e ? void 0 : e.ok) ? (0, d.pG)() : (0, g.r)();
+            if (Object.keys(m).length > 0) {
+                let e = await (0, u.Z)(m);
+                (b = b && null != (r = null == e ? void 0 : e.ok) && r),
+                    (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, p.r)();
             }
-            if (void 0 !== s.pendingLegacyUsernameDisabled)
+            if (void 0 !== a.pendingLegacyUsernameDisabled)
                 try {
-                    await p.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, a.iR)();
+                    await _.R_.updateSetting(a.pendingLegacyUsernameDisabled), (0, o.iR)();
                 } catch (e) {
-                    (0, g.r)(), (_ = !1);
+                    (0, p.r)(), (b = !1);
                 }
-            if (Object.keys(x).length > 0) {
-                let { primaryGuildId: e } = x;
+            if (Object.keys(E).length > 0) {
+                let { primaryGuildId: e } = E;
                 if (void 0 !== e) {
-                    let t = await (0, o.c)(e, null !== e);
-                    (_ = _ && null != (r = null == t ? void 0 : t.ok) && r),
-                        (null == t ? void 0 : t.ok) ? (0, a.OU)() : (0, g.r)();
+                    let t = await (0, l.c)(e, null !== e);
+                    (b = b && null != (i = null == t ? void 0 : t.ok) && i),
+                        (null == t ? void 0 : t.ok) ? (0, o.OU)() : (0, p.r)();
                 }
             }
-            _ && (0, a.b9)(), b(!1);
+            b && (0, o.b9)(), g(!1);
         }, []),
-        j = r.useCallback(() => {
-            (0, a.W3)();
+        y = i.useCallback(() => {
+            (0, o.W3)();
         }, []);
-    return (0, i.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         submitting: n,
-        onSave: _,
-        onReset: j,
+        onSave: b,
+        onReset: y,
         disabled: e,
-        errorMessage: null != x ? x : void 0,
+        errorMessage: null != E ? E : void 0,
     });
 }

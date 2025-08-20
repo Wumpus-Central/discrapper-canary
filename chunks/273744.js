@@ -1,10 +1,10 @@
 n.d(t, { s: () => c });
 var r,
-    a,
-    i = n(951288);
+    i,
+    l = n(951288);
 n(647438);
-var o = n(159635),
-    l = n.n(o),
+var a = n(159635),
+    o = n.n(a),
     s = n(481060);
 let c =
     ((r = (function (e) {
@@ -31,11 +31,11 @@ let c =
                 });
         }
         return e;
-    })({}, l().defaultRules.link)),
-    (a = a =
+    })({}, o().defaultRules.link)),
+    (i = i =
         {
             react: function (e, t, n) {
-                return (0, i.jsx)(s.eee, {
+                return (0, l.jsx)(s.eee, {
                     href: e.target,
                     target: "_blank",
                     children: t(e.content, n),
@@ -43,7 +43,7 @@ let c =
             },
         }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
         : (function (e, t) {
               var n = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
@@ -51,7 +51,7 @@ let c =
                   n.push.apply(n, r);
               }
               return n;
-          })(Object(a)).forEach(function (e) {
-              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+          })(Object(i)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
           }),
     r);

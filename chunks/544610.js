@@ -19,12 +19,12 @@ var i,
 let C = !1,
     x = "",
     v = 0,
-    j = [],
-    O = !1,
+    O = [],
+    j = !1,
     E = new Set(),
     S = null;
 function P() {
-    (x = ""), (v = 0), (j = []), (E = new Set()), (C = !1), (S = null);
+    (x = ""), (v = 0), (O = []), (E = new Set()), (C = !1), (S = null);
 }
 function I(e) {
     (x = e), (v = 0), Z();
@@ -35,7 +35,7 @@ function Z() {
     if (0 === x.trim().length)
         return (
             null != r && r.clearQuery(),
-            (j = (function (e) {
+            (O = (function (e) {
                 let t = b.Z.getFriendIDs(),
                     n = y.default.getCurrentUser();
                 return (
@@ -104,8 +104,8 @@ function Z() {
 }
 function T() {
     if (!C) return !1;
-    let e = O;
-    return (O = b.Z.getFriendCount() > 0) !== e;
+    let e = j;
+    return (j = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
     if (m.Z.hasConsented(_.pjP.PERSONALIZATION)) {
@@ -136,7 +136,7 @@ function A(e) {
                 comparator: r,
             });
     }
-    (j = n), L.emitChange();
+    (O = n), L.emitChange();
 }
 function w() {
     return null != r && (r.destroy(), (r = null)), s.Z.getUserSearchContext(A, 1000);
@@ -157,10 +157,10 @@ class D extends (i = a.ZP.Store) {
         this.waitFor(y.default, f.Z, b.Z, c.Z, m.Z), this.syncWith([y.default, f.Z], Z), this.syncWith([b.Z], T);
     }
     getResults() {
-        return j;
+        return O;
     }
     hasFriends() {
-        return O;
+        return j;
     }
     getSelectedUsers() {
         return E;
@@ -173,8 +173,8 @@ class D extends (i = a.ZP.Store) {
             query: x,
             selectedRow: v,
             selectedUsers: E,
-            results: j,
-            hasFriends: O,
+            results: O,
+            hasFriends: j,
         };
     }
 }

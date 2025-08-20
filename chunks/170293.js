@@ -1,16 +1,16 @@
-n.d(t, { $: () => a });
-var i = n(668781),
-    r = n(743498),
-    s = n(388032);
-function a(e) {
-    i.Z.show({
-        title: s.intl.string(s.t.RpjdLy),
-        body: s.intl.string(s.t.nOSopa),
-        confirmText: s.intl.string(s.t["sKJ7+f"]),
+n.d(t, { $: () => o });
+var r = n(668781),
+    i = n(743498),
+    a = n(388032);
+function o(e) {
+    r.Z.show({
+        title: a.intl.string(a.t.RpjdLy),
+        body: a.intl.string(a.t.nOSopa),
+        confirmText: a.intl.string(a.t["sKJ7+f"]),
         confirmVariant: "critical-primary",
-        cancelText: s.intl.string(s.t["7wZ1GR"]),
+        cancelText: a.intl.string(a.t["7wZ1GR"]),
         onConfirm: () => {
-            (0, r.v6)(null);
+            (0, i.v6)(null);
         },
         onCancel: e,
     });

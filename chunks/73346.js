@@ -1,9 +1,9 @@
 n.d(t, {
-    Gg: () => x,
+    Gg: () => L,
     Kb: () => R,
-    Ww: () => k,
+    Ww: () => M,
     ZI: () => A,
-    _W: () => N,
+    _W: () => C,
     uF: () => P,
 }),
     n(539854),
@@ -78,7 +78,7 @@ function A(e, t) {
         l,
     );
 }
-function N(e, t, n, r) {
+function C(e, t, n, r) {
     var i;
     let a,
         o = window.GLOBAL_ENV.CDN_HOST;
@@ -109,7 +109,7 @@ function N(e, t, n, r) {
         a
     );
 }
-function C() {
+function N() {
     return new Promise(async (e) => {
         if (m.Z.hasFetchedSubscriptions()) e();
         else if (p.Z.isSubscriptionFetching) {
@@ -128,7 +128,7 @@ async function R(e) {
         let e = [];
         h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()),
             p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()),
-            e.push(C()),
+            e.push(N()),
             await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
     let s = h.Z.getDefaultBillingCountryCode(),
@@ -201,10 +201,10 @@ function D(e, t, n) {
               userInfo: i,
           };
 }
-let L = [];
-function x(e, t, n, r, a) {
+let x = [];
+function L(e, t, n, r, a) {
     let o = t.get(e);
-    if (null == o) return L;
+    if (null == o) return x;
     let s = o.applicationId,
         l = [],
         c = [],
@@ -225,11 +225,11 @@ function x(e, t, n, r, a) {
     }
     return l;
 }
-let M = [];
-function k(e, t, n) {
+let j = [];
+function M(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return M;
+    if (null == r || null == i) return j;
     let a = [];
     (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;

@@ -1,70 +1,69 @@
 n.d(t, { Z: () => h });
-var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(100527),
-    l = n(906732),
-    o = n(626135),
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
+    l = n(626135),
     c = n(335131),
-    d = n(196033),
-    u = n(981631),
-    m = n(474936),
-    p = n(388032),
-    g = n(227919);
+    u = n(196033),
+    d = n(981631),
+    f = n(474936),
+    _ = n(388032),
+    p = n(227919);
 let h = () => {
-    let { analyticsLocations: e } = (0, l.ZP)(a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
-        t = r.useRef(null),
-        { asset: n, popoutAsset: h, title: f, body: b, version: x, revertTextColor: _ } = (0, d.W)();
-    return (
-        r.useEffect(() => {
-            o.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: m.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
-                location_stack: e,
-                version: x,
-            });
-        }, [e, x]),
-        (0, i.jsxs)("div", {
-            ref: t,
-            className: g.container,
-            style: { backgroundImage: "url(".concat(n, ")") },
-            children: [
-                (0, i.jsx)("div", {
-                    className: g.artContainer,
-                    "aria-hidden": !0,
-                    role: "presentation",
-                    children: (0, i.jsx)("img", {
-                        src: h,
-                        className: g.art,
-                        alt: "",
+    let { analyticsLocations: e } = (0, s.ZP)(o.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+        t = i.useRef(null),
+        { asset: n, popoutAsset: h, title: m, body: g, version: E, revertTextColor: b } = (0, u.W)();
+    i.useEffect(() => {
+        l.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
+            type: f.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            location_stack: e,
+            version: E,
+        });
+    }, [e, E]);
+    let y = () => {
+        (0, c.mK)({
+            analyticsLocations: e,
+            analyticsSource: o.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+        });
+    };
+    return (0, r.jsxs)("div", {
+        ref: t,
+        className: p.container,
+        style: { backgroundImage: "url(".concat(n, ")") },
+        children: [
+            (0, r.jsx)("div", {
+                className: p.artContainer,
+                "aria-hidden": !0,
+                role: "presentation",
+                children: (0, r.jsx)("img", {
+                    src: h,
+                    className: p.art,
+                    alt: "",
+                }),
+            }),
+            (0, r.jsxs)("div", {
+                className: p.mainColumn,
+                children: [
+                    (0, r.jsx)(a.X6q, {
+                        variant: "heading-lg/extrabold",
+                        color: b ? "redesign-button-overlay-text" : "currentColor",
+                        className: p.title,
+                        children: m,
                     }),
-                }),
-                (0, i.jsxs)("div", {
-                    className: g.mainColumn,
-                    children: [
-                        (0, i.jsx)(s.X6q, {
-                            variant: "heading-lg/extrabold",
-                            color: _ ? "redesign-button-overlay-text" : "currentColor",
-                            className: g.title,
-                            children: f,
-                        }),
-                        (0, i.jsx)(s.Text, {
-                            variant: "text-sm/normal",
-                            color: _ ? "redesign-button-overlay-text" : "currentColor",
-                            children: b,
-                        }),
-                    ],
-                }),
-                (0, i.jsx)(s.zxk, {
-                    onClick: () => {
-                        (0, c.mK)({
-                            analyticsLocations: e,
-                            analyticsSource: a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
-                        });
-                    },
-                    variant: "overlay-primary",
-                    text: p.intl.string(p.t.fYfGgI),
-                }),
-            ],
-        })
-    );
+                    (0, r.jsx)(a.Text, {
+                        variant: "text-sm/normal",
+                        color: b ? "redesign-button-overlay-text" : "currentColor",
+                        children: g,
+                    }),
+                ],
+            }),
+            (0, r.jsx)(a.zxk, {
+                onClick: y,
+                variant: "overlay-primary",
+                text: _.intl.string(_.t.fYfGgI),
+            }),
+        ],
+    });
 };

@@ -1,23 +1,23 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(990547),
-    a = n(442837),
+    s = n(442837),
     o = n(481060),
-    s = n(893776),
+    a = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
     p = n(726521),
     m = n(185625),
-    f = n(314897),
-    g = n(63063),
+    g = n(314897),
+    f = n(63063),
     _ = n(981631),
     x = n(388032),
-    b = n(884110),
+    E = n(884110),
     v = n(197571);
-function E(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function j(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,20 +60,20 @@ function j(e, t) {
         e
     );
 }
-a.ZP.initialize();
+s.ZP.initialize();
 let I = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj,
     },
-    y = (e) => {
+    O = (e) => {
         let { title: t, menuType: i } = e,
-            a = (e) => {
+            s = (e) => {
                 let t = async () => {
                         await (0, m.yL)(i, e);
                     },
-                    a = async (t) => await (0, m.RV)(i, e, t),
-                    s = (e) => {
+                    s = async (t) => await (0, m.RV)(i, e, t),
+                    a = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
                             ? (0, p.eE)(t)
@@ -87,10 +87,10 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                j(E({}, n), {
-                                    onFormSubmit: a,
+                                b(j({}, n), {
+                                    onFormSubmit: s,
                                     onResend: t,
-                                    onSuccess: s,
+                                    onSuccess: a,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
                                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -99,15 +99,15 @@ let I = {
                     });
             };
         return (0, r.jsxs)(o.P3F, {
-            className: b.reportButton,
+            className: E.reportButton,
             onClick: () =>
                 void (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(E({}, t), {
-                                onSuccess: a,
+                            b(j({}, t), {
+                                onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
                             }),
@@ -125,12 +125,12 @@ let I = {
             ],
         });
     },
-    O = () => {
+    N = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, a.e7)([f.default], () => f.default.isAuthenticated()),
-            p = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            E = () => {
+            h = (0, s.e7)([g.default], () => g.default.isAuthenticated()),
+            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            j = () => {
                 (0, m.Jj)()
                     .then((e) => {
                         let {
@@ -148,13 +148,13 @@ let I = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => E())
+                          .then(() => j())
                           .catch(() => t(!1)))
-                    : E();
+                    : j();
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    p || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
                 })();
             }, [p]),
             e || !p
@@ -170,16 +170,16 @@ let I = {
                           (0, r.jsx)(u.DK, {
                               className: v.marginBottom8,
                               children: x.intl.format(x.t["532l+v"], {
-                                  supportURL: g.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
+                                  supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: b.container,
+                              className: E.container,
                               children: n.map((e) =>
                                   null == I[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            y,
+                                            O,
                                             {
                                                 title: x.intl.string(I[e]),
                                                 menuType: e,

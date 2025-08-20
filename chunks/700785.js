@@ -2,18 +2,18 @@ n.d(t, {
     BT: () => W,
     Hn: () => A,
     Hu: () => H,
-    I0: () => j,
+    I0: () => k,
     Og: () => G,
-    TP: () => C,
+    TP: () => N,
     Uu: () => K,
-    e9: () => Z,
-    iJ: () => V,
+    e9: () => F,
+    iJ: () => Z,
     o4: () => B,
     oz: () => z,
-    r6: () => F,
+    r6: () => V,
     uB: () => U,
     we: () => Y,
-    ym: () => L,
+    ym: () => x,
 }),
     n(388685);
 var r = n(392711),
@@ -67,8 +67,8 @@ function S(e) {
     return e;
 }
 let A = a.vB(0),
-    N = a.$e(...i().values(I.Plq)),
-    C = a.$e(
+    C = a.$e(...i().values(I.Plq)),
+    N = a.$e(
         I.Plq.CREATE_INSTANT_INVITE,
         I.Plq.CHANGE_NICKNAME,
         I.Plq.VIEW_CHANNEL,
@@ -113,7 +113,7 @@ let A = a.vB(0),
     ),
     w = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY),
     D = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY, I.Plq.CHANGE_NICKNAME),
-    L = a.$e(
+    x = a.$e(
         I.Plq.MANAGE_GUILD,
         I.Plq.MANAGE_ROLES,
         I.Plq.ADMINISTRATOR,
@@ -124,7 +124,7 @@ let A = a.vB(0),
         I.Plq.MANAGE_WEBHOOKS,
         I.Plq.VIEW_AUDIT_LOG,
     );
-function x(e, t, n) {
+function L(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === I.BpS.ELEVATED && n === h.default.getId()) {
         var i;
@@ -132,7 +132,7 @@ function x(e, t, n) {
     }
     return e;
 }
-function M(e, t, n, r) {
+function j(e, t, n, r) {
     let i = r[e];
     if ((null != i && ((n = a.Od(n, i.deny)), (n = a.IH(n, i.allow))), null != t)) {
         let e = A,
@@ -149,7 +149,7 @@ function M(e, t, n, r) {
     }
     return n;
 }
-function k(e) {
+function M(e) {
     let {
         userId: t,
         member: n,
@@ -160,22 +160,22 @@ function k(e) {
         excludeGuildPermissions: l = !1,
         lurkerPermissionsMask: c = R,
     } = e;
-    if (l) return M(r.id, n, A, i);
+    if (l) return j(r.id, n, A, i);
     let d = (o = null != o ? S({}, E.Z.getUnsafeMutableRoles(r.id), o) : E.Z.getUnsafeMutableRoles(r.id))[(0, _.lV)(r)],
-        f = null != d ? d.permissions : C;
+        f = null != d ? d.permissions : N;
     if (null != n)
         for (let e = 0; e < n.roles.length; e++) {
             let t = o[n.roles[e]];
             void 0 !== t && (f = a.IH(f, t.permissions));
         }
     return (
-        (f = a.e$(f, I.Plq.ADMINISTRATOR) ? N : M(r.id, n, f, i)),
+        (f = a.e$(f, I.Plq.ADMINISTRATOR) ? C : j(r.id, n, f, i)),
         (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)),
         g.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, P)),
-        x(f, r, t, s)
+        L(f, r, t, s)
     );
 }
-function j(e) {
+function k(e) {
     let t,
         { forceRoles: n, context: r, overwrites: i, roles: a, checkElevated: o = !0, excludeGuildPermissions: s } = e,
         l = R;
@@ -188,7 +188,7 @@ function j(e) {
                 ? A
                 : G(
                       r,
-                      j({
+                      k({
                           forceRoles: n,
                           context: e,
                           overwrites: i,
@@ -219,7 +219,7 @@ function j(e) {
         joinedAt: new Date().toISOString(),
         communicationDisabledUntil: null,
     };
-    return k({
+    return M({
         userId: I.lds,
         member: u,
         guild: t,
@@ -266,9 +266,9 @@ function U(e) {
         !(h === (null == (t = y.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) &&
         (0, _.eM)(i, h)
     )
-        return x(N, i, h, u);
+        return L(C, i, h, u);
     let O = g.ZP.getMember(i.id, h);
-    return k({
+    return M({
         userId: h,
         member: O,
         guild: i,
@@ -305,7 +305,7 @@ function B(e, t) {
             })
     );
 }
-function V(e) {
+function Z(e) {
     var t;
     return i().some(E.Z.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, p.Fs)(e, I.Plq.ADMINISTRATOR))
         ? void 0
@@ -313,10 +313,10 @@ function V(e) {
           ? t
           : void 0;
 }
-function F(e, t, n, r) {
+function V(e, t, n, r) {
     return !!(null != t && (0, _.eM)(e, t)) || (null != n && (null == r || (0, O.C$)(n, r)));
 }
-function Z(e, t) {
+function F(e, t) {
     let n = g.ZP.getMember(e.id, t);
     if (null != n) return E.Z.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
 }

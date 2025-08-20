@@ -1,12 +1,12 @@
-var n = r(102736);
-t.exports = function (t) {
-    var e = t.getSelection(),
-        r = e.getStartKey();
-    return n.set(t, {
-        selection: e.merge({
-            anchorKey: r,
+var r = n(102736);
+e.exports = function (e) {
+    var t = e.getSelection(),
+        n = t.getStartKey();
+    return r.set(e, {
+        selection: t.merge({
+            anchorKey: n,
             anchorOffset: 0,
-            focusKey: r,
+            focusKey: n,
             focusOffset: 0,
             isBackward: !1,
         }),

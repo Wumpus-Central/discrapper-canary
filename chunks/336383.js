@@ -99,8 +99,8 @@ let I = i.forwardRef(function (e, t) {
         T = O(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
     let { themeType: S } = (0, f.z)(),
         { analyticsLocations: A } = (0, l.ZP)(),
-        { context: N } = (0, c.KZ)();
-    return S === p.l.MODAL || S === p.l.MODAL_V2 || (null == N ? void 0 : N.userId) == null
+        { context: C } = (0, c.KZ)();
+    return S === p.l.MODAL || S === p.l.MODAL_V2 || (null == C ? void 0 : C.userId) == null
         ? (0, r.jsx)("article", {
               "aria-label": v,
               "aria-labelledby": I,
@@ -133,7 +133,7 @@ let I = i.forwardRef(function (e, t) {
                                       sourceAnalyticsLocations: A,
                                       subsection: a,
                                   },
-                                  N,
+                                  C,
                               ),
                           ),
                           null == b || b();

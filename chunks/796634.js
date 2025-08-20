@@ -1,26 +1,26 @@
 n.d(t, {
     G: () => c,
-    Q: () => o,
+    Q: () => l,
 });
-var i = n(647438),
-    r = n(442837),
-    s = n(232567),
-    a = n(594174),
-    l = n(276444);
-let o = 3;
+var r = n(647438),
+    i = n(442837),
+    a = n(232567),
+    o = n(594174),
+    s = n(276444);
+let l = 3;
 function c() {
-    let e = (0, r.Wu)([l.Z], () => l.Z.getSentUserIds()),
-        t = (0, r.Wu)([a.default], () => e.map((e) => a.default.getUser(e)).filter((e) => null != e));
+    let e = (0, i.Wu)([s.Z], () => s.Z.getSentUserIds()),
+        t = (0, i.Wu)([o.default], () => e.map((e) => o.default.getUser(e)).filter((e) => null != e));
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             e.forEach((e) => {
-                (0, s.PR)(e);
+                (0, a.PR)(e);
             });
         }, [e]),
         {
             referralSentUsers: t,
-            hasSentAllReferrals: e.length === o,
-            refreshAt: (0, r.e7)([l.Z], () => l.Z.getRefreshAt()),
+            hasSentAllReferrals: e.length === l,
+            refreshAt: (0, i.e7)([s.Z], () => s.Z.getRefreshAt()),
         }
     );
 }

@@ -1,8 +1,8 @@
 n.d(t, {
     $u: () => i,
-    Bk: () => c,
+    Bk: () => o,
     pF: () => r,
-    wq: () => o,
+    wq: () => a,
 });
 let r = [
         "asscock",
@@ -603,7 +603,7 @@ let r = [
         "xvideos",
         "youporn",
     ],
-    o = [
+    a = [
         "africoon",
         "americoon",
         "arabshits",
@@ -902,4 +902,4 @@ let r = [
         "wigger",
         "zipperhead",
     ],
-    c = ["hunter2", "frik"];
+    o = ["hunter2", "frik"];

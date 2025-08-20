@@ -23,14 +23,14 @@ var r = n(392711),
     T = n(143223),
     S = n(945884),
     A = n(594199),
-    N = n(97734),
-    C = n(303694),
+    C = n(97734),
+    N = n(303694),
     R = n(660199),
     P = n(364458),
     w = n(981631),
     D = n(689079),
-    L = n(388032);
-function x(e, t, n) {
+    x = n(388032);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,9 +85,9 @@ function j(e, t) {
 let U = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     G = /^$|\n *$/,
     B = /^ *>>> ?/,
-    V = /^ *> ?/gm,
-    F = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function Z(e) {
+    Z = /^ *> ?/gm,
+    V = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+function F(e) {
     let t = (0, v.yw)(e[1]);
     if (null == t)
         return {
@@ -116,10 +116,10 @@ let H = (e) => {
     W = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: j(M({}, o().defaultRules.escape), {
+        escape: k(j({}, o().defaultRules.escape), {
             match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)),
         }),
-        blockQuote: j(M({}, o().defaultRules.blockQuote), {
+        blockQuote: k(j({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [" ", ">"],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
@@ -131,7 +131,7 @@ let H = (e) => {
             parse(e, t, n) {
                 let r = e[0],
                     i = !!B.exec(r),
-                    a = i ? B : V,
+                    a = i ? B : Z,
                     o = r.replace(a, ""),
                     s = n.inQuote || !1,
                     l = n.inline || !1;
@@ -153,12 +153,12 @@ let H = (e) => {
             },
         }),
         link: v.ZP,
-        autolink: j(M({}, o().defaultRules.autolink), { parse: Z }),
-        mailto: j(M({}, o().defaultRules.mailto), {
+        autolink: k(j({}, o().defaultRules.autolink), { parse: F }),
+        mailto: k(j({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ["<"],
         }),
-        tel: j(M({}, o().defaultRules.mailto), {
+        tel: k(j({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ["<"],
             match: o().inlineRegex(
                 /^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/,
@@ -181,11 +181,11 @@ let H = (e) => {
                 );
             },
         }),
-        url: j(M({}, o().defaultRules.url), {
+        url: k(j({}, o().defaultRules.url), {
             requiredFirstCharacters: ["h", "s"],
             match(e, t) {
                 if (!t.inline) return null;
-                let n = F.exec(e);
+                let n = V.exec(e);
                 if (null != n) {
                     let e = 0,
                         t = n[0];
@@ -201,18 +201,18 @@ let H = (e) => {
                 }
                 return n;
             },
-            parse: Z,
+            parse: F,
         }),
         strong: o().defaultRules.strong,
         em: o().defaultRules.em,
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: A.ZP,
-        inlineCode: j(M({}, o().defaultRules.inlineCode), {
+        inlineCode: k(j({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
                 return !0 === n.parseInlineCodeChildContent
-                    ? j(M({}, r), { validationChildContent: t(r.content, n) })
+                    ? k(j({}, r), { validationChildContent: t(r.content, n) })
                     : r;
             },
         }),
@@ -255,7 +255,7 @@ let H = (e) => {
                 if (null == d)
                     return {
                         type: "text",
-                        content: "@".concat(L.intl.string(L.t["YV4F/v"])),
+                        content: "@".concat(x.intl.string(x.t["YV4F/v"])),
                     };
                 let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
@@ -310,7 +310,7 @@ let H = (e) => {
                 }
                 let l = e[1],
                     c = null != l && w.Xyh.test(l.trim()),
-                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6e)) : e[0];
+                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(x.intl.string(x.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -387,7 +387,7 @@ let H = (e) => {
                         content: [
                             {
                                 type: "text",
-                                content: L.intl.string(L.t["11pdXV"]),
+                                content: x.intl.string(x.t["11pdXV"]),
                             },
                         ],
                         icon: void 0,
@@ -402,7 +402,7 @@ let H = (e) => {
                         {
                             type: "text",
                             content: "".concat(
-                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXV"]),
+                                null != (a = null == l ? void 0 : l.name) ? a : x.intl.string(x.t["11pdXV"]),
                             ),
                         },
                     ],
@@ -484,8 +484,8 @@ let H = (e) => {
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    o = (0, C.l)(i),
-                    s = (0, C.W)(i, a, null == (r = Y(n)) ? void 0 : r.id);
+                    o = (0, N.l)(i),
+                    s = (0, N.W)(i, a, null == (r = Y(n)) ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -511,7 +511,7 @@ let H = (e) => {
         list: I.Z,
         subtext: S.Z,
     },
-    K = (0, P.Z)([W, N.Z]),
+    K = (0, P.Z)([W, C.Z]),
     z = i().omit(K, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
     q = i().omit(K, [
         "inlineCode",
@@ -601,7 +601,7 @@ let er = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = j(M({}, n), { parseDepth: i + 1 }),
+                        a = k(j({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

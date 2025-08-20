@@ -7,8 +7,8 @@ n.d(t, {
     Qs: () => b,
     R: () => E,
     Rj: () => T,
-    cL: () => C,
-    dS: () => N,
+    cL: () => N,
+    dS: () => C,
     e: () => I,
     lM: () => _,
     rk: () => m,
@@ -80,7 +80,7 @@ function _(e) {
     return (0, o.Wh)(s.VI, e);
 }
 function p(e, t, n) {
-    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, D, x;
+    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, L;
     return (0, o.oI)(s.VI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -112,14 +112,14 @@ function p(e, t, n) {
         publicUpdatesChannelId: null != (T = e.public_updates_channel_id) ? T : null,
         maxStageVideoChannelUsers: null != (S = e.max_stage_video_channel_users) ? S : s.Cx.maxStageVideoChannelUsers,
         maxVideoChannelUsers: null != (A = e.max_video_channel_users) ? A : s.Cx.maxVideoChannelUsers,
-        maxMembers: null != (N = e.max_members) ? N : s.Cx.maxMembers,
-        nsfwLevel: null != (C = e.nsfw_level) ? C : s.Cx.nsfwLevel,
+        maxMembers: null != (C = e.max_members) ? C : s.Cx.maxMembers,
+        nsfwLevel: null != (N = e.nsfw_level) ? N : s.Cx.nsfwLevel,
         ownerConfiguredContentLevel: null != (R = e.owner_configured_content_level) ? R : null,
         hubType: null != (P = e.hub_type) ? P : null,
         latestOnboardingQuestionId: null != (D = e.latest_onboarding_question_id) ? D : null,
-        profile: null != (x = e.profile) ? x : null,
+        profile: null != (L = e.profile) ? L : null,
         premiumFeatures: null != e.premium_features ? w(e.premium_features) : null,
-        moderatorReporting: null != e.moderator_reporting ? L(e.moderator_reporting) : null,
+        moderatorReporting: null != e.moderator_reporting ? x(e.moderator_reporting) : null,
     });
 }
 function h(e, t) {
@@ -305,7 +305,7 @@ function A(e) {
         moderatorReporting: null != (l = e.moderatorReporting) ? l : null,
     });
 }
-function N(e) {
+function C(e) {
     var t;
     return {
         id: e.id,
@@ -344,11 +344,11 @@ function N(e) {
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
-        moderator_reporting: null != e.moderatorReporting ? x(e.moderatorReporting) : null,
+        moderator_reporting: null != e.moderatorReporting ? L(e.moderatorReporting) : null,
         incidents_data: null,
     };
 }
-function C(e) {
+function N(e) {
     let t = f(u({}, e), {
         features: (0, a.G)(e.features),
         joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null,
@@ -377,13 +377,13 @@ function D(e) {
         additional_sound_slots: e.additionalSoundSlots,
     };
 }
-function L(e) {
+function x(e) {
     return {
         moderatorReportingEnabled: e.moderator_reporting_enabled,
         moderatorReportChannelId: e.moderator_report_channel_id,
     };
 }
-function x(e) {
+function L(e) {
     return {
         moderator_reporting_enabled: e.moderatorReportingEnabled,
         moderator_report_channel_id: e.moderatorReportChannelId,

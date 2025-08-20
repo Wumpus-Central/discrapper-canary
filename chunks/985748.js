@@ -1,11 +1,11 @@
-r.d(t, { Z: () => o });
+r.d(t, { Z: () => c });
 var n = r(951288);
 r(647438);
 var l = r(750312),
     i = r(189988),
     a = r(232083);
-function o(e) {
-    var { user: t, widget: r, containerClassName: o, disableInteraction: c } = e,
+function c(e) {
+    var { user: t, widget: r, containerClassName: c, disableInteraction: o } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -30,8 +30,8 @@ function o(e) {
     return (0, n.jsx)(l.Z, {
         userId: t.id,
         widget: r,
-        className: o,
-        disableInteraction: c,
+        className: c,
+        disableInteraction: o,
         children:
             r.games.length > 0
                 ? (0, n.jsx)(
@@ -65,7 +65,7 @@ function o(e) {
                               user: t,
                               games: r.games,
                               widgetType: r.type,
-                              disableInteraction: c,
+                              disableInteraction: o,
                           },
                           s,
                       ),

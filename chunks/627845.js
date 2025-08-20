@@ -84,7 +84,7 @@ let S = {
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== v ||
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("6380"), n.e("62634")]).then(n.bind(n, 461964));
+                    let { default: e } = await n.e("73872").then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, h({}, t));
                 });
     },

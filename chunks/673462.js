@@ -70,14 +70,14 @@ let c = a.forwardRef(function (e, t) {
             Object.values(g.current)))
                 null != n && (n.currentTime = e);
         }, []),
-        P = a.useCallback(() => {
+        k = a.useCallback(() => {
             var e;
             (null == (e = g.current.main) ? void 0 : e.paused) ? _() : w();
         }, [_, w]),
-        k = a.useCallback((e) => {
+        O = a.useCallback((e) => {
             g.current.main = e;
         }, []),
-        O = a.useCallback((e) => {
+        P = a.useCallback((e) => {
             let t = [];
             for (let n of Object.values(e.currentTarget.audioTracks))
                 n.label.includes(":application")
@@ -101,9 +101,9 @@ let c = a.forwardRef(function (e, t) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Z, {
-                      onClick: P,
+                      onClick: k,
                       className: p ? s.hidden : s.displayVideo,
-                      ref: k,
+                      ref: O,
                       src: n,
                       muted: !0,
                       onLoadedData: f,
@@ -116,7 +116,7 @@ let c = a.forwardRef(function (e, t) {
                       preload: "auto",
                       className: s.hidden,
                       ref: (e) => S(e, "application"),
-                      onLoadedMetadata: O,
+                      onLoadedMetadata: P,
                   }),
                   x.map((e) =>
                       (0, r.jsx)(

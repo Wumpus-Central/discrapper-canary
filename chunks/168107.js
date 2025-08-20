@@ -101,7 +101,7 @@ let h = {
         if ((0, o.kJ)() && (0, a.G7)("age_verification_utils"))
             return void (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await n.e("53893").then(n.bind(n, 686768));
+                    let { default: t } = await n.e("22447").then(n.bind(n, 686768));
                     return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
                 },
                 {

@@ -4,12 +4,12 @@ n.d(t, {
     F4: () => P,
     HH: () => x,
     Hd: () => T,
-    Xl: () => A,
+    Xl: () => N,
     dF: () => C,
     eM: () => R,
     fB: () => _,
     gK: () => D,
-    mG: () => N,
+    mG: () => A,
     qe: () => M,
     rY: () => I,
     ts: () => L,
@@ -68,10 +68,10 @@ function I(e, t, n) {
     if (!1 === t.pinned) return void (n.shiftKey ? r.Z.pinMessage(e, t.id) : l.Z.confirmPin(e, t));
     n.shiftKey ? r.Z.unpinMessage(e, t.id) : l.Z.confirmUnpin(e, t);
 }
-function A(e, t) {
+function N(e, t) {
     (0, a.Z)(e.id, t.id);
 }
-function N(e, t) {
+function A(e, t) {
     (0, j.Z)(e, t, void 0, h.Z.getOptions(t.id));
 }
 function x(e, t, n) {

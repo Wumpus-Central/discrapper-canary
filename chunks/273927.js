@@ -1,94 +1,95 @@
 n.d(t, {
-    GF: () => v,
-    ZP: () => T,
-    yo: () => S,
+    GF: () => S,
+    ZP: () => C,
+    yo: () => A,
 }),
     n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    o = n(481060),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
     c = n(194359),
-    d = n(99690),
-    u = n(100527),
-    m = n(699516),
-    p = n(594174),
-    g = n(63063),
+    u = n(99690),
+    d = n(100527),
+    f = n(699516),
+    _ = n(594174),
+    p = n(63063),
     h = n(838436),
-    f = n(526761),
-    b = n(726985),
-    x = n(981631),
-    _ = n(388032),
-    j = n(602201);
-function E(e) {
+    m = n(526761),
+    g = n(726985),
+    E = n(981631),
+    b = n(388032),
+    y = n(602201);
+let O = 5;
+function v(e) {
     let { listType: t, numberOfUsers: n } = e,
-        r = "blocked" === t;
-    return (0, i.jsxs)("div", {
-        className: j.header,
+        i = "blocked" === t;
+    return (0, r.jsxs)("div", {
+        className: y.header,
         children: [
-            (0, i.jsx)("div", {
-                className: j.iconContainer,
-                children: r ? (0, i.jsx)(o.t6m, {}) : (0, i.jsx)(o.kZF, {}),
+            (0, r.jsx)("div", {
+                className: y.iconContainer,
+                children: i ? (0, r.jsx)(l.t6m, {}) : (0, r.jsx)(l.kZF, {}),
             }),
-            (0, i.jsxs)("div", {
-                className: j.text,
+            (0, r.jsxs)("div", {
+                className: y.text,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
-                        children: _.intl.string(r ? _.t.PFOUKS : _.t["93ZDWF"]),
+                        children: b.intl.string(i ? b.t.PFOUKS : b.t["93ZDWF"]),
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
                         color: "header-secondary",
-                        children: r
-                            ? _.intl.format(_.t["r91W/v"], { numberOfBlockedUsers: n })
-                            : _.intl.format(_.t.rXUeOj, { numberOfIgnoredUsers: n }),
+                        children: i
+                            ? b.intl.format(b.t["r91W/v"], { numberOfBlockedUsers: n })
+                            : b.intl.format(b.t.rXUeOj, { numberOfIgnoredUsers: n }),
                     }),
                 ],
             }),
         ],
     });
 }
-function C(e) {
+function I(e) {
     var t;
-    let { userId: n, last: s } = e,
-        g = (0, l.e7)([m.Z], () => m.Z.isBlocked(n)),
-        h = (0, l.e7)([p.default], () => p.default.getUser(n)),
-        [f, b] = r.useState(!1),
-        x = r.useCallback(() => {
-            b(!0),
-                g
+    let { userId: n, last: a } = e,
+        p = (0, s.e7)([f.Z], () => f.Z.isBlocked(n)),
+        h = (0, s.e7)([_.default], () => _.default.getUser(n)),
+        [m, g] = i.useState(!1),
+        E = i.useCallback(() => {
+            g(!0),
+                p
                     ? c.Z.unblockUser(n).catch(() => {
-                          b(!1);
+                          g(!1);
                       })
-                    : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
-                          b(!1);
+                    : c.Z.unignoreUser(n, d.Z.USER_SETTINGS).catch(() => {
+                          g(!1);
                       });
-        }, [g, n]);
+        }, [p, n]);
     return null == h
         ? null
-        : (0, i.jsxs)("div", {
-              className: a()(j.row, { [j.lastRow]: s }),
+        : (0, r.jsxs)("div", {
+              className: o()(y.row, { [y.lastRow]: a }),
               children: [
-                  (0, i.jsxs)("div", {
-                      className: j.userInfo,
+                  (0, r.jsxs)("div", {
+                      className: y.userInfo,
                       children: [
-                          (0, i.jsx)(d.Z, {
+                          (0, r.jsx)(u.Z, {
                               user: h,
-                              size: o.EFr.SIZE_40,
+                              size: l.EFr.SIZE_40,
                           }),
-                          (0, i.jsxs)("div", {
-                              className: j.text,
+                          (0, r.jsxs)("div", {
+                              className: y.text,
                               children: [
-                                  (0, i.jsx)(o.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       variant: "text-md/semibold",
                                       color: "header-primary",
                                       children: null != (t = h.globalName) ? t : h.username,
                                   }),
-                                  (0, i.jsx)(o.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       variant: "text-sm/medium",
                                       color: "header-secondary",
                                       children: null != h.globalName ? h.username : null,
@@ -97,32 +98,35 @@ function C(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(o.zxk, {
+                  (0, r.jsx)(l.zxk, {
                       variant: "secondary",
-                      text: _.intl.string(g ? _.t.XyHpKC : _.t["8wXU9P"]),
-                      onClick: x,
-                      loading: f,
+                      text: b.intl.string(p ? b.t.XyHpKC : b.t["8wXU9P"]),
+                      onClick: E,
+                      loading: m,
                   }),
               ],
           });
 }
-function O(e) {
-    let { setting: t, userIds: n, listType: s } = e,
-        [a, l] = r.useState(5);
-    return (0, i.jsx)(h.U, {
+function T(e) {
+    let { setting: t, userIds: n, listType: a } = e,
+        [o, s] = i.useState(O),
+        c = () => {
+            s((e) => e + O);
+        };
+    return (0, r.jsx)(h.U, {
         setting: t,
-        children: (0, i.jsxs)("div", {
-            className: j.card,
+        children: (0, r.jsxs)("div", {
+            className: y.card,
             children: [
-                (0, i.jsx)(E, {
-                    listType: s,
+                (0, r.jsx)(v, {
+                    listType: a,
                     numberOfUsers: n.length,
                 }),
-                (0, i.jsx)("div", {
-                    className: j.usersList,
-                    children: n.slice(0, a).map((e, t) =>
-                        (0, i.jsx)(
-                            C,
+                (0, r.jsx)("div", {
+                    className: y.usersList,
+                    children: n.slice(0, o).map((e, t) =>
+                        (0, r.jsx)(
+                            I,
                             {
                                 userId: e,
                                 last: t === n.length - 1,
@@ -131,19 +135,17 @@ function O(e) {
                         ),
                     ),
                 }),
-                a < n.length
-                    ? (0, i.jsx)("div", {
-                          className: j.loadMoreContainer,
-                          children: (0, i.jsx)(o.P3F, {
-                              onClick: () => {
-                                  l((e) => e + 5);
-                              },
-                              className: j.loadMoreButton,
-                              children: (0, i.jsx)(o.Text, {
+                o < n.length
+                    ? (0, r.jsx)("div", {
+                          className: y.loadMoreContainer,
+                          children: (0, r.jsx)(l.P3F, {
+                              onClick: c,
+                              className: y.loadMoreButton,
+                              children: (0, r.jsx)(l.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: _.intl.format(_.t.jULEDg, {
-                                      numberOfUsers: a + 5 < n.length ? 5 : n.length - a,
+                                  children: b.intl.format(b.t.jULEDg, {
+                                      numberOfUsers: o + O < n.length ? O : n.length - o,
                                   }),
                               }),
                           }),
@@ -153,36 +155,36 @@ function O(e) {
         }),
     });
 }
-function v() {
-    let e = (0, l.Wu)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, i.jsx)(O, {
-        setting: b.s6.BLOCKED_USERS,
+function S() {
+    let e = (0, s.Wu)([f.Z], () => f.Z.getBlockedIDs());
+    return (0, r.jsx)(T, {
+        setting: g.s6.BLOCKED_USERS,
         userIds: e,
         listType: "blocked",
     });
 }
-function S() {
-    let e = (0, l.Wu)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, i.jsx)(O, {
-        setting: b.s6.IGNORED_USERS,
+function A() {
+    let e = (0, s.Wu)([f.Z], () => f.Z.getIgnoredIDs());
+    return (0, r.jsx)(T, {
+        setting: g.s6.IGNORED_USERS,
         userIds: e,
         listType: "ignored",
     });
 }
-function T() {
-    return (0, i.jsxs)(h.U, {
-        setting: b.s6.RESTRICTED_USERS,
-        scrollPosition: f.FY.RESTRICTED_ACCOUNTS,
+function C() {
+    return (0, r.jsxs)(h.U, {
+        setting: g.s6.RESTRICTED_USERS,
+        scrollPosition: m.FY.RESTRICTED_ACCOUNTS,
         scrollHighlightDelay: 900,
         children: [
-            (0, i.jsx)(h.H, {
-                header: _.intl.string(_.t["3wRorq"]),
-                description: _.intl.format(_.t["0aNQo6"], {
-                    helpArticle: g.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+            (0, r.jsx)(h.H, {
+                header: b.intl.string(b.t["3wRorq"]),
+                description: b.intl.format(b.t["0aNQo6"], {
+                    helpArticle: p.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                 }),
             }),
-            (0, i.jsx)(v, {}),
-            (0, i.jsx)(S, {}),
+            (0, r.jsx)(S, {}),
+            (0, r.jsx)(A, {}),
         ],
     });
 }

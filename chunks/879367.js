@@ -1,89 +1,89 @@
-n.d(t, { default: () => S });
-var i = n(951288),
-    E = n(647438),
-    l = n(120356),
-    s = n.n(l),
-    r = n(481060),
-    a = n(788080),
-    I = n(81643),
-    _ = n(469775),
-    o = n(388032),
-    c = n(248319);
-let S = function (e) {
-    let { onClose: t, onComplete: n, onCancel: l, transitionState: S, webviewUrl: A, useV1: N = !1 } = e,
-        L = (0, a.GE)(),
-        u = E.useCallback(() => {
-            n(), t();
-        }, [n, t]),
-        T = E.useCallback(() => {
-            (0, r.nfh)(_.zJ) && u();
-        }, [u]);
-    (0, I.F5)(T);
-    let d = E.useCallback(
+t.d(n, { default: () => m });
+var a = t(951288),
+    i = t(647438),
+    s = t(120356),
+    r = t.n(s),
+    l = t(481060),
+    o = t(788080),
+    c = t(81643),
+    d = t(469775),
+    f = t(388032),
+    u = t(248319);
+let m = function (e) {
+    let { onClose: n, onComplete: t, onCancel: s, transitionState: m, webviewUrl: g, useV1: p = !1 } = e,
+        h = (0, o.GE)(),
+        x = i.useCallback(() => {
+            t(), n();
+        }, [t, n]),
+        v = i.useCallback(() => {
+            (0, l.nfh)(d.zJ) && x();
+        }, [x]);
+    (0, c.F5)(v);
+    let j = i.useCallback(
         (e) => {
-            if (L && "" !== A) {
-                var t;
-                (null == e || null == (t = e.data) ? void 0 : t.eventType) === "Verification.Result" && u();
+            if (h && "" !== g) {
+                var n;
+                (null == e || null == (n = e.data) ? void 0 : n.eventType) === "Verification.Result" && x();
             }
         },
-        [A, u, L],
+        [g, x, h],
     );
     return (
-        E.useEffect(
+        i.useEffect(
             () => (
-                window.addEventListener("message", d),
+                window.addEventListener("message", j),
                 () => {
-                    window.removeEventListener("message", d);
+                    window.removeEventListener("message", j);
                 }
             ),
-            [d],
+            [j],
         ),
-        (0, i.jsxs)(r.Y0X, {
+        (0, a.jsxs)(l.Y0X, {
             "data-migration-pending": !0,
-            transitionState: S,
-            className: c.root,
+            transitionState: m,
+            className: u.root,
             parentComponent: "AgeVerificationModal",
-            size: r.CgR.MEDIUM,
+            size: l.CgR.MEDIUM,
             children: [
-                (0, i.jsxs)(r.hzk, {
+                (0, a.jsxs)(l.hzk, {
                     "data-migration-pending": !0,
-                    className: s()(c.content, { [c.fullbleed]: !N }),
+                    className: r()(u.content, { [u.fullbleed]: !p }),
                     scrollbarType: "none",
                     children: [
-                        N &&
-                            (0, i.jsx)(r.X6q, {
+                        p &&
+                            (0, a.jsx)(l.X6q, {
                                 variant: "heading-xl/bold",
-                                children: o.intl.string(o.t.tYNaXF),
+                                children: f.intl.string(f.t.tYNaXF),
                             }),
-                        (0, i.jsx)("iframe", {
+                        (0, a.jsx)("iframe", {
                             id: "frame",
-                            src: A,
-                            className: c.iframe,
+                            src: g,
+                            className: u.iframe,
                             allow: "camera; microphone",
                         }),
                     ],
                 }),
-                (0, i.jsx)(r.mzw, {
+                (0, a.jsx)(l.mzw, {
                     "data-migration-pending": !0,
-                    children: N
-                        ? (0, i.jsx)(r.Avr, {
-                              text: o.intl.string(o.t["4gTnU1"]),
-                              onClick: t,
+                    children: p
+                        ? (0, a.jsx)(l.Avr, {
+                              text: f.intl.string(f.t["4gTnU1"]),
+                              onClick: n,
                           })
-                        : (0, i.jsx)("div", {
-                              className: c.footer,
-                              children: (0, i.jsxs)(r.hE2, {
+                        : (0, a.jsx)("div", {
+                              className: u.footer,
+                              children: (0, a.jsxs)(l.hE2, {
                                   justify: "space-between",
                                   children: [
-                                      (0, i.jsx)(r.Avr, {
+                                      (0, a.jsx)(l.Avr, {
                                           variant: "secondary",
-                                          text: o.intl.string(o.t.fjKFaW),
-                                          onClick: t,
+                                          text: f.intl.string(f.t.fjKFaW),
+                                          onClick: n,
                                       }),
-                                      (0, i.jsx)(r.Avr, {
+                                      (0, a.jsx)(l.Avr, {
                                           variant: "secondary",
-                                          text: o.intl.string(o.t["4gTnU1"]),
-                                          onClick: l,
+                                          text: f.intl.string(f.t["4gTnU1"]),
+                                          onClick: s,
                                       }),
                                   ],
                               }),

@@ -71,8 +71,8 @@ function A(e, t) {
         e
     );
 }
-let N = new p.Z("ChoosePaymentSourceType"),
-    C = {
+let C = new p.Z("ChoosePaymentSourceType"),
+    N = {
         [b.HeQ.CARD]: h.ZP.Types.UNKNOWN,
         [b.HeQ.PAYPAL]: h.ZP.Types.PAYPAL,
         [b.HeQ.SOFORT]: h.ZP.Types.SOFORT,
@@ -105,7 +105,7 @@ class w extends i.PureComponent {
         var e;
         let t = null != (e = this.props.paymentRequestWallets) ? e : [];
         if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
-        N.warn(
+        C.warn(
             "Payment request wallets failed to load in time: "
                 .concat(t.join(", "), ". Max time allowed: ")
                 .concat(R, " ms"),
@@ -128,7 +128,7 @@ class w extends i.PureComponent {
     createPaymentButtons(e) {
         return e.map((e) => {
             var t;
-            let n = C[e],
+            let n = N[e],
                 i = m.W[e](),
                 a =
                     null == this.props.paymentSourceTypeRestrictions ||

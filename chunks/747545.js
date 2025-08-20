@@ -1,42 +1,52 @@
 n.d(t, {
-    S: () => y,
-    Z: () => A,
+    S: () => x,
+    Z: () => L,
 }),
     n(704826),
     n(35282),
     n(415506),
     n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(209739),
-    o = n.n(l),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(209739),
+    l = n.n(s),
     c = n(442837),
-    d = n(846519),
-    u = n(481060),
-    m = n(846027),
-    p = n(579806),
-    g = n(906732),
+    u = n(846519),
+    d = n(481060),
+    f = n(846027),
+    _ = n(579806),
+    p = n(906732),
     h = n(670863),
-    f = n(72897),
-    b = n(921801),
-    x = n(695346),
-    _ = n(938117),
-    j = n(131951),
-    E = n(626135),
-    C = n(358085),
-    O = n(981631),
-    v = n(726985),
+    m = n(72897),
+    g = n(921801),
+    E = n(695346),
+    b = n(938117),
+    y = n(131951),
+    O = n(626135),
+    v = n(358085),
+    I = n(981631),
+    T = n(726985),
     S = n(65154),
-    T = n(388032),
-    N = n(612232);
-let I = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
-function y() {
-    let [e, t] = r.useState(!1),
-        n = (0, c.e7)([j.Z], () => j.Z.isMediaFilterSettingLoading());
-    return (r.useEffect(() => {
-        let e = new d.V7();
+    A = n(388032),
+    C = n(612232);
+let N = ">=10.0.22000",
+    R = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i,
+    P = "{E5323777-F976-4f5b-9B55-B94699C46E44}";
+function w() {
+    return !!(0, v.isWindows)() && !!v.isPlatformEmbedded && l().satisfies(_.Z.os.release, N);
+}
+function D(e) {
+    return (0, v.getPlatform)() === v.PlatformTypes.WINDOWS
+        ? "ms-settings:camera" + (null != e ? "?cameraId=".concat(encodeURIComponent(e.replace(R, P))) : "")
+        : "";
+}
+function x() {
+    let [e, t] = i.useState(!1),
+        n = (0, c.e7)([y.Z], () => y.Z.isMediaFilterSettingLoading());
+    return (i.useEffect(() => {
+        let e = new u.V7();
         return (
             n
                 ? e.start(150, () => {
@@ -47,95 +57,79 @@ function y() {
         );
     }, [n]),
     e)
-        ? (0, i.jsx)("div", {
-              className: N.filterLoadingIndicator,
-              children: (0, i.jsx)(u.$jN, {}),
+        ? (0, r.jsx)("div", {
+              className: C.filterLoadingIndicator,
+              children: (0, r.jsx)(d.$jN, {}),
           })
         : null;
 }
-function A(e) {
+function L(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
-            hideCameraSettingsLink: r = !1,
-            onLearnMore: s,
-            selectedBackgroundOption: l,
-            onSelectBackgroundOption: d,
-            renderCamera: y,
-            hidePreviewToggle: A = !1,
-            showSmallBackgroundOptions: P = !1,
-            onCancelPreview: R,
+            hideCameraSettingsLink: i = !1,
+            onLearnMore: a,
+            selectedBackgroundOption: s,
+            onSelectBackgroundOption: l,
+            renderCamera: u,
+            hidePreviewToggle: _ = !1,
+            showSmallBackgroundOptions: v = !1,
+            onCancelPreview: N,
         } = e,
-        { analyticsLocations: D } = (0, g.ZP)(),
-        { id: Z } = (0, f.p6)(S.h7.VIDEO_INPUT),
-        w = (0, c.e7)([j.Z], () => j.Z.isVideoAvailable()),
-        k = x.qF.useSetting();
-    return (0, i.jsxs)(i.Fragment, {
+        { analyticsLocations: R } = (0, p.ZP)(),
+        { id: P } = (0, m.p6)(S.h7.VIDEO_INPUT),
+        x = (0, c.e7)([y.Z], () => y.Z.isVideoAvailable()),
+        L = E.qF.useSetting();
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            y(Z),
-            j.Z.isEnabled()
+            u(P),
+            y.Z.isEnabled()
                 ? null
-                : (0, i.jsx)(u.Text, {
-                      className: N.permissionWarning,
+                : (0, r.jsx)(d.Text, {
+                      className: C.permissionWarning,
                       color: "interactive-normal",
                       variant: "text-sm/normal",
-                      children: T.intl.format(T.t.stagfH, { onEnableClick: () => m.Z.enable(!0) }),
+                      children: A.intl.format(A.t.stagfH, { onEnableClick: () => f.Z.enable(!0) }),
                   }),
-            A
+            _
                 ? null
-                : (0, i.jsx)(u.j7V, {
-                      className: N.previewToggle,
-                      note: T.intl.string(T.t.WNbX4O),
+                : (0, r.jsx)(d.j7V, {
+                      className: C.previewToggle,
+                      note: A.intl.string(A.t.WNbX4O),
                       onChange: (e) => {
-                          x.qF.updateSetting(e),
-                              E.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          E.qF.updateSetting(e),
+                              O.default.track(I.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
-                      value: k,
+                      value: L,
                       hideBorder: !0,
-                      children: (0, i.jsx)("div", {
-                          className: N.cameraPreviewTitle,
-                          children: T.intl.string(T.t["3Ppr1t"]),
+                      children: (0, r.jsx)("div", {
+                          className: C.cameraPreviewTitle,
+                          children: A.intl.string(A.t["3Ppr1t"]),
                       }),
                   }),
             !t &&
-                (0, i.jsx)(b.F, {
-                    setting: v.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
-                    children: (0, i.jsxs)(u.xJW, {
-                        title: n ? null : T.intl.string(T.t.FsQ3OT),
+                (0, r.jsx)(g.F, {
+                    setting: T.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
+                    children: (0, r.jsxs)(d.xJW, {
+                        title: n ? null : A.intl.string(A.t.FsQ3OT),
                         children: [
-                            (0, i.jsx)(h.j, {
+                            (0, r.jsx)(h.j, {
                                 deviceType: S.h7.VIDEO_INPUT,
                                 location: "CameraSettings",
-                                className: a()(N.selector, { [N.selectorNoHeader]: n }),
-                                isDisabled: !w,
+                                className: o()(C.selector, { [C.selectorNoHeader]: n }),
+                                isDisabled: !x,
                                 showAllDevices: !0,
                             }),
-                            !r &&
-                                !!(0, C.isWindows)() &&
-                                !!C.isPlatformEmbedded &&
-                                o().satisfies(p.Z.os.release, ">=10.0.22000") &&
-                                (0, i.jsx)(u.R94, {
-                                    className: N.cameraDeeplink,
-                                    children: T.intl.format(T.t.aJYgRk, {
+                            !i &&
+                                w() &&
+                                (0, r.jsx)(d.R94, {
+                                    className: C.cameraDeeplink,
+                                    children: A.intl.format(A.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
-                                            null == R || R(),
-                                                window.open(
-                                                    (0, C.getPlatform)() === C.PlatformTypes.WINDOWS
-                                                        ? "ms-settings:camera" +
-                                                              (null != Z
-                                                                  ? "?cameraId=".concat(
-                                                                        encodeURIComponent(
-                                                                            Z.replace(
-                                                                                I,
-                                                                                "{E5323777-F976-4f5b-9B55-B94699C46E44}",
-                                                                            ),
-                                                                        ),
-                                                                    )
-                                                                  : "")
-                                                        : "",
-                                                ),
-                                                E.default.track(O.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, {
-                                                    location_stack: D,
+                                            null == N || N(),
+                                                window.open(D(P)),
+                                                O.default.track(I.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, {
+                                                    location_stack: R,
                                                 });
                                         },
                                     }),
@@ -143,15 +137,15 @@ function A(e) {
                         ],
                     }),
                 }),
-            (0, i.jsx)(b.F, {
-                setting: v.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                children: (0, i.jsx)(_.Z, {
-                    className: N.spacingTop24,
-                    onLearnMore: s,
-                    selectedBackgroundOption: l,
-                    onSelectBackgroundOption: d,
-                    currentDeviceId: Z,
-                    smallerBackgroundOptions: P,
+            (0, r.jsx)(g.F, {
+                setting: T.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+                children: (0, r.jsx)(b.Z, {
+                    className: C.spacingTop24,
+                    onLearnMore: a,
+                    selectedBackgroundOption: s,
+                    onSelectBackgroundOption: l,
+                    currentDeviceId: P,
+                    smallerBackgroundOptions: v,
                 }),
             }),
         ],

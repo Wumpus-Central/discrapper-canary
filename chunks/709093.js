@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(361932), n(187205);
+n.d(t, { Z: () => C }), n(361932), n(187205);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -72,7 +72,7 @@ function A(e) {
         ],
     });
 }
-let N = function (e) {
+let C = function (e) {
     var t, n, i;
     let {
             hideCloseButton: f = !1,
@@ -80,24 +80,24 @@ let N = function (e) {
             onClose: y,
             upgradeToPremiumType: O,
             isEligibleForTrial: v = !1,
-            showTrialBadge: N = !1,
-            showDiscountBadge: C = !1,
+            showTrialBadge: C = !1,
+            showDiscountBadge: N = !1,
         } = e,
         R = (0, s.apv)((0, l.ZP)()),
         P = O === g.p9.TIER_2,
         w = (0, d.Fv)(v),
         D = (0, h.Ng)(),
-        L = null == D || null == (t = D.discount) ? void 0 : t.amount,
-        x = P ? T : I,
-        M = P ? p.Z : _.Z,
+        x = null == D || null == (t = D.discount) ? void 0 : t.amount,
+        L = P ? T : I,
+        j = P ? p.Z : _.Z,
         {
-            step: k,
-            breadcrumbs: j,
+            step: M,
+            breadcrumbs: k,
             startedPaymentFlowWithPaymentSourcesRef: U,
             isDisplayingWowMomentConfirmation: G,
         } = (0, c.JL)();
-    if (null == j || 0 === j.length) return null;
-    let B = j.flatMap((e) => {
+    if (null == k || 0 === k.length) return null;
+    let B = k.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
             n = e.sectionHeaderText;
         return null != t
@@ -109,19 +109,19 @@ let N = function (e) {
             : [];
     });
     if (0 === B.length) return null;
-    let V = (B = B.filter((e) => {
+    let Z = (B = B.filter((e) => {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
-        })).find((e) => e.id === k),
-        F =
-            null != (i = null == V || null == (n = V.sectionHeaderText) ? void 0 : n.call(V))
+        })).find((e) => e.id === M),
+        V =
+            null != (i = null == Z || null == (n = Z.sectionHeaderText) ? void 0 : n.call(Z))
                 ? i
-                : null == V
+                : null == Z
                   ? void 0
-                  : V.label,
-        Z = null != F && null != k,
-        H = w && Z && k === u.h8.REVIEW,
+                  : Z.label,
+        F = null != V && null != M,
+        H = w && F && M === u.h8.REVIEW,
         Y = P ? "nitro-pink" : "nitro-green";
     return G
         ? (0, r.jsx)("div", {
@@ -136,7 +136,7 @@ let N = function (e) {
               children: [
                   (0, r.jsxs)(o.$, {
                       color: Y,
-                      className: a()(E.headerContainer, { [E.containerBottomPadding]: !Z }),
+                      className: a()(E.headerContainer, { [E.containerBottomPadding]: !F }),
                       children: [
                           (0, r.jsx)(A, { isTier2: P }),
                           !f &&
@@ -147,25 +147,25 @@ let N = function (e) {
                                   className: E.closeButtonPosition,
                               }),
                           (0, r.jsx)("img", {
-                              src: x,
+                              src: L,
                               alt: "",
                               className: H ? E.bigWumpus : E.wumpus,
                           }),
                           (0, r.jsx)("div", {
                               className: E.textContainer,
-                              children: (0, r.jsx)(M, {
+                              children: (0, r.jsx)(j, {
                                   color: R ? "black" : "white",
                                   className: E.wordmark,
                               }),
                           }),
                       ],
                   }),
-                  (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
-                  Z &&
+                  (C || N) && (0, r.jsx)(m.Z, { discountAmount: x }),
+                  F &&
                       (0, r.jsx)(S, {
                           isOneStepCheckout: w,
-                          headerText: F,
-                          step: k,
+                          headerText: V,
+                          step: M,
                           filteredBreadcrumbs: B,
                       }),
                   H &&

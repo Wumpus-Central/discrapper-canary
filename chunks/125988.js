@@ -44,7 +44,7 @@ let f = (e) => {
         }),
         S = h && void 0 !== T && void 0 !== v && v === (null == n ? void 0 : n.id),
         A = null != f && null === T,
-        N = (0, u.Z)(
+        C = (0, u.Z)(
             S
                 ? A
                     ? null == n
@@ -59,18 +59,18 @@ let f = (e) => {
                     ? void 0
                     : n.avatarDecoration,
         ),
-        C = r.useMemo(
+        N = r.useMemo(
             () =>
                 (0, c.NZ)({
-                    avatarDecoration: void 0 !== g ? g : N,
+                    avatarDecoration: void 0 !== g ? g : C,
                     canAnimate: y,
                     size: _,
                 }),
-            [N, y, _, g],
+            [C, y, _, g],
         );
     return {
         avatarPlaceholderSrc: d,
-        avatarDecorationSrc: C,
+        avatarDecorationSrc: N,
         isAvatarDecorationAnimating: y,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => b(!0), []),

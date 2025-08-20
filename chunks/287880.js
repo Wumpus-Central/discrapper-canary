@@ -1,8 +1,8 @@
 n.d(t, {
-    Ae: () => d,
-    Qe: () => m,
-    U0: () => p,
-    bV: () => u,
+    Ae: () => u,
+    Qe: () => h,
+    U0: () => m,
+    bV: () => p,
     uZ: () => c,
 }),
     n(410992),
@@ -20,35 +20,38 @@ n.d(t, {
     n(704826),
     n(35282),
     n(781311);
-var i,
-    r,
-    s,
-    a = n(943418);
-let l = null != (s = null == (i = window) ? void 0 : i.crypto) ? s : null == (r = window) ? void 0 : r.msCrypto,
-    o = "Uint8Array" in window,
-    c = null != l && "getRandomValues" in l && o,
-    d = "PublicKeyCredential" in window && o;
-function u() {
-    var e;
-    return (
-        (e = l.getRandomValues(new Uint8Array(20))),
-        a
-            .encode(e)
-            .toString("utf8")
-            .replace(/=/g, "")
-            .toLowerCase()
-            .replace(/(\w{4})/g, "$1 ")
-            .trim()
-    );
+var r,
+    i,
+    a,
+    o = n(943418);
+let s = null != (a = null == (r = window) ? void 0 : r.crypto) ? a : null == (i = window) ? void 0 : i.msCrypto,
+    l = "Uint8Array" in window,
+    c = null != s && "getRandomValues" in s && l,
+    u = "PublicKeyCredential" in window && l,
+    d = 20;
+function f(e) {
+    return s.getRandomValues(new Uint8Array(e));
 }
-function m(e) {
+function _(e) {
+    return o
+        .encode(e)
+        .toString("utf8")
+        .replace(/=/g, "")
+        .toLowerCase()
+        .replace(/(\w{4})/g, "$1 ")
+        .trim();
+}
+function p() {
+    return _(f(d));
+}
+function h(e) {
     return e.replace(/[\s._-]+/g, "").toUpperCase();
 }
-function p(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
     return "otpauth://totp/"
         .concat(encodeURI(n), ":")
         .concat(encodeURI(e), "?secret=")
-        .concat(m(t), "&issuer=")
+        .concat(h(t), "&issuer=")
         .concat(encodeURIComponent(n));
 }

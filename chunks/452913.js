@@ -1,33 +1,35 @@
-n.d(t, { Z: () => h });
-var i = n(392711),
-    r = n.n(i),
-    s = n(853856),
-    a = n(706590),
-    l = n(905423),
-    o = n(592125),
+n.d(t, { Z: () => b });
+var r = n(392711),
+    i = n.n(r),
+    a = n(853856),
+    o = n(706590),
+    s = n(905423),
+    l = n(592125),
     c = n(496675),
-    d = n(944486),
-    u = n(771845),
-    m = n(774343),
-    p = n(475468),
-    g = n(981631);
-let h = r().throttle(function () {
+    u = n(944486),
+    d = n(771845),
+    f = n(774343),
+    _ = n(475468),
+    p = n(981631);
+let h = -3,
+    m = -2,
+    g = -1;
+function E(e) {
+    let t = s.Z.getState().guildId;
+    if (null == t) return m;
+    if (t === p.I_8) return g;
+    let n = e.indexOf(t);
+    return -1 === n ? m : n;
+}
+let b = i().throttle(function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        t = u.ZP.getFlattenedGuildIds(),
-        n = (function (e) {
-            let t = l.Z.getState().guildId;
-            if (null == t) return -2;
-            if (t === g.I_8) return -1;
-            let n = e.indexOf(t);
-            return -1 === n ? -2 : n;
-        })(t);
+        t = d.ZP.getFlattenedGuildIds(),
+        n = E(t);
     if (
-        (-1 !== (n += e) || (0, a.z)(s.Z, o.Z, c.Z) || (n += e),
-        -3 === n && (n = t.length - 1),
-        n >= t.length || -2 === n)
+        ((n += e) !== g || (0, o.z)(a.Z, l.Z, c.Z) || (n += e), n === h && (n = t.length - 1), n >= t.length || n === m)
     )
-        return void (0, p.z)(m.Z.getHomeLink());
-    let i = -1 === n ? g.I_8 : t[n],
-        r = d.Z.getChannelId(i);
-    (0, p.K)(i, r === i ? null : r, !1);
-}, g.aZC);
+        return void (0, _.z)(f.Z.getHomeLink());
+    let r = n === g ? p.I_8 : t[n],
+        i = u.Z.getChannelId(r);
+    (0, _.K)(r, i === r ? null : i, !1);
+}, p.aZC);

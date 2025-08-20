@@ -1,143 +1,143 @@
-n.d(t, { default: () => M }), n(388685), n(953529);
+n.d(t, { default: () => S }), n(388685), n(953529);
 var a = n(951288),
     o = n(647438),
     i = n(442837),
-    r = n(544891),
-    c = n(179538),
-    l = n(82659),
-    s = n(904245),
+    l = n(544891),
+    r = n(179538),
+    s = n(82659),
+    c = n(904245),
     u = n(166459),
     d = n(680287),
-    m = n(247206),
-    p = n(813197),
-    _ = n(592125),
-    f = n(703558),
-    g = n(430824),
-    b = n(375954),
-    h = n(403182),
-    T = n(709054),
-    y = n(861990),
-    C = n(127654),
-    O = n(979956),
-    v = n(228392),
-    I = n(404616),
-    E = n(470623),
-    x = n(981631),
-    S = n(231338),
-    j = n(388032),
-    w = n(646632);
+    b = n(247206),
+    f = n(813197),
+    g = n(592125),
+    p = n(703558),
+    _ = n(430824),
+    h = n(375954),
+    m = n(403182),
+    y = n(709054),
+    x = n(861990),
+    v = n(127654),
+    w = n(979956),
+    C = n(228392),
+    j = n(404616),
+    T = n(470623),
+    I = n(981631),
+    O = n(231338),
+    M = n(388032),
+    E = n(646632);
 async function P(e) {
     var t, n, a;
     let o,
-        { thread: i, attachments: c, setIsUploading: l, guild: p, onClose: _ } = e,
-        g = T.default.castChannelIdAsMessageId(i.id),
-        v = new d.Z();
-    v.on("progress", (e) => {
-        let t = (0, h.dg)(p.id);
-        e.currentSize > t && (v.cancel(), l(!1), _(), (0, C.G)(i, (0, O.KZ)(c)));
+        { thread: i, attachments: r, setIsUploading: s, guild: f, onClose: g } = e,
+        _ = y.default.castChannelIdAsMessageId(i.id),
+        C = new d.Z();
+    C.on("progress", (e) => {
+        let t = (0, m.dg)(f.id);
+        e.currentSize > t && (C.cancel(), s(!1), g(), (0, v.G)(i, (0, w.KZ)(r)));
     });
-    let I = b.Z.getMessage(i.id, g),
-        E = null != I ? I.attachments : [];
-    l(!0);
+    let j = h.Z.getMessage(i.id, _),
+        T = null != j ? j.attachments : [];
+    s(!0);
     try {
-        o = await v.uploadFiles(c);
+        o = await C.uploadFiles(r);
     } catch (e) {
-        l(!1);
+        s(!1);
         return;
     }
-    let S = [...E, ...(null != (t = o.map((e, t) => (0, y.B)(e, t))) ? t : [])];
+    let O = [...T, ...(null != (t = o.map((e, t) => (0, x.B)(e, t))) ? t : [])];
     try {
-        await r.tn.patch({
-            url: x.ANM.MESSAGE(i.id, g),
-            body: { attachments: S },
+        await l.tn.patch({
+            url: I.ANM.MESSAGE(i.id, _),
+            body: { attachments: O },
             rejectWithError: !1,
         }),
-            _(),
-            u.Z.clearAll(i.id, f.d.ChannelMessage);
+            g(),
+            u.Z.clearAll(i.id, p.d.ChannelMessage);
     } catch (e) {
-        l(!1),
-            (null == (n = e.body) ? void 0 : n.code) === x.evJ.EXPLICIT_CONTENT &&
-                (_(),
-                s.Z.sendExplicitMediaClydeError(
+        s(!1),
+            (null == (n = e.body) ? void 0 : n.code) === I.evJ.EXPLICIT_CONTENT &&
+                (g(),
+                c.Z.sendExplicitMediaClydeError(
                     i.id,
                     null == (a = e.body) ? void 0 : a.attachments,
-                    m.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+                    b.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
                 ),
-                u.Z.clearAll(i.id, f.d.ChannelMessage));
+                u.Z.clearAll(i.id, p.d.ChannelMessage));
     }
 }
-function M(e) {
+function S(e) {
     var t;
-    let { threadId: n, attachments: r, sendMessage: s, transitionState: u, onClose: d } = e,
-        m = (0, i.e7)([_.Z], () => _.Z.getChannel(n), [n]),
-        f = (0, i.e7)([g.Z], () => g.Z.getGuild(null == m ? void 0 : m.getGuildId()), [m]),
-        b = (0, i.e7)([_.Z], () => _.Z.getChannel(null == m ? void 0 : m.parent_id), [m]),
-        h = null == (t = r[0]) ? void 0 : t.item,
-        [T, y] = o.useState(null);
+    let { threadId: n, attachments: l, sendMessage: c, transitionState: u, onClose: d } = e,
+        b = (0, i.e7)([g.Z], () => g.Z.getChannel(n), [n]),
+        p = (0, i.e7)([_.Z], () => _.Z.getGuild(null == b ? void 0 : b.getGuildId()), [b]),
+        h = (0, i.e7)([g.Z], () => g.Z.getChannel(null == b ? void 0 : b.parent_id), [b]),
+        m = null == (t = l[0]) ? void 0 : t.item,
+        [y, x] = o.useState(null);
     o.useEffect(() => {
-        null != h && (0, p.Fq)(h.file, (e, t) => y(e), S.dG);
-    }, [h]);
-    let C =
-            null != h && null != T
+        null != m && (0, f.Fq)(m.file, (e, t) => x(e), O.dG);
+    }, [m]);
+    let v =
+            null != m && null != y
                 ? {
-                      src: T,
-                      width: I.TJ,
-                      height: I.Lp,
-                      spoiler: r[0].spoiler,
-                      alt: r[0].description,
+                      src: y,
+                      width: j.TJ,
+                      height: j.Lp,
+                      spoiler: l[0].spoiler,
+                      alt: l[0].description,
                   }
                 : null,
-        [O, x] = o.useState(!1),
-        M = o.useCallback(() => {
-            (0, v.xI)({ added: !1 }), s(), d();
-        }, [s, d]),
-        A = o.useCallback(() => {
-            null != m &&
-                null != f &&
-                ((0, v.xI)({ added: !0 }),
+        [w, I] = o.useState(!1),
+        S = o.useCallback(() => {
+            (0, C.xI)({ added: !1 }), c(), d();
+        }, [c, d]),
+        k = o.useCallback(() => {
+            null != b &&
+                null != p &&
+                ((0, C.xI)({ added: !0 }),
                 P({
-                    thread: m,
-                    attachments: r,
-                    setIsUploading: x,
-                    guild: f,
+                    thread: b,
+                    attachments: l,
+                    setIsUploading: I,
+                    guild: p,
                     onClose: d,
                 }));
-        }, [m, r, x, f, d]);
-    return null == b
+        }, [b, l, I, p, d]);
+    return null == h
         ? null
-        : (0, a.jsx)(l.Modal, {
-              title: j.intl.string(j.t["+SZF6e"]),
-              subtitle: j.intl.string(j.t["0Ycgw8"]),
+        : (0, a.jsx)(s.Modal, {
+              title: M.intl.string(M.t["+SZF6e"]),
+              subtitle: M.intl.string(M.t["0Ycgw8"]),
               transitionState: u,
               onClose: d,
-              actionBarInput: (0, a.jsx)(c.A, {
+              actionBarInput: (0, a.jsx)(r.A, {
                   variant: "secondary",
-                  disabled: O,
+                  disabled: w,
                   onClick: d,
-                  text: j.intl.string(j.t["ETE/oK"]),
+                  text: M.intl.string(M.t["ETE/oK"]),
               }),
               actions: [
                   {
                       variant: "secondary",
-                      text: j.intl.string(j.t["8rKVHB"]),
-                      disabled: O,
-                      onClick: M,
+                      text: M.intl.string(M.t["8rKVHB"]),
+                      disabled: w,
+                      onClick: S,
                   },
                   {
                       variant: "primary",
-                      text: j.intl.string(j.t.d611xM),
-                      loading: O,
-                      onClick: A,
+                      text: M.intl.string(M.t.d611xM),
+                      loading: w,
+                      onClick: k,
                       autoFocus: !0,
                   },
               ],
-              children: (0, a.jsx)(E.oL, {
-                  channel: b,
-                  children: (0, a.jsx)(I.ZP, {
+              children: (0, a.jsx)(T.oL, {
+                  channel: h,
+                  children: (0, a.jsx)(j.ZP, {
                       threadId: n,
-                      goToThread: S.dG,
-                      overrideMedia: C,
-                      className: w.forumPost,
+                      goToThread: O.dG,
+                      overrideMedia: v,
+                      className: E.forumPost,
                   }),
               }),
           });

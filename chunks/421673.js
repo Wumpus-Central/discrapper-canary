@@ -1,4 +1,4 @@
-n.d(t, { cK: () => N }), n(642613);
+n.d(t, { cK: () => C }), n(642613);
 var r = n(658722),
     i = n.n(r),
     a = n(954955),
@@ -57,7 +57,7 @@ function A(e, t, n, r) {
         o
     );
 }
-function N(e, t, n, r, i) {
+function C(e, t, n, r, i) {
     let a = t.reduce(
             (t, a) => (v(i, null == r ? void 0 : r.id), (t[a.soundId] = A(e.toLocaleLowerCase(), a, n, r)), t),
             {},

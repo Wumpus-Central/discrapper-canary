@@ -23,13 +23,13 @@ var r = n(392711),
     T = n(699516),
     S = n(246946),
     A = n(594174),
-    N = n(483360),
-    C = n(176354),
+    C = n(483360),
+    N = n(176354),
     R = n(51144),
     P = n(981631),
     w = n(185923),
     D = n(388032);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,18 +70,18 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -107,7 +107,7 @@ function j(e, t, n) {
 function U(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
-    if ('"' !== t[1]) return j(e, t, n, r);
+    if ('"' !== t[1]) return k(e, t, n, r);
     let i = 2;
     for (; i < t.length; i++) {
         if ("\\" === t[i]) {
@@ -152,9 +152,9 @@ function B(e) {
         }),
     };
 }
-let V = d.Z.RULES,
-    F = f.ZP,
-    Z = /^<@!?(\d+)>/,
+let Z = d.Z.RULES,
+    V = f.ZP,
+    F = /^<@!?(\d+)>/,
     H = /^<@&(\d+)>/,
     Y = /^<@\$(\d+)>/,
     W = /^<#(\d+)>/,
@@ -164,9 +164,9 @@ let V = d.Z.RULES,
         link: G(o().defaultRules.link),
         autolink: G(o().defaultRules.autolink),
         url: G(o().defaultRules.url),
-        inlineCode: G(V.inlineCode),
-        codeBlock: G(V.codeBlock),
-        rawUserMention: B(Z),
+        inlineCode: G(Z.inlineCode),
+        codeBlock: G(Z.codeBlock),
+        rawUserMention: B(F),
         rawRoleMention: B(H),
         rawChannelMention: B(W),
         rawEmoji: B(K),
@@ -174,13 +174,13 @@ let V = d.Z.RULES,
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = j("@", e, t.users, "mention");
-                if (i || (i = j("@", e, t.mentionableRoles, "roleMention"))) return i;
+                let i = k("@", e, t.users, "mention");
+                if (i || (i = k("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
-                    !(i = j(
+                    !(i = k(
                         "@",
                         e,
-                        t.users.map((e) => k(x({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) => M(L({}, e), { text: e.text.split("#")[0] })),
                         "mention",
                     ))
                 )
@@ -227,7 +227,7 @@ let V = d.Z.RULES,
             }),
         },
         emoji: {
-            order: V.emoji.order,
+            order: Z.emoji.order,
             match: (e) => c.ZP.EMOJI_NAME_RE.exec(e),
             parse(e, t, n) {
                 let [r, i] = e,
@@ -274,20 +274,20 @@ let V = d.Z.RULES,
                       };
             },
         },
-        text: k(x({}, F), {
+        text: M(L({}, V), {
             match: (e, t) =>
                 "string" == typeof t.textExclusions && "" !== t.textExclusions
                     ? (0, f.T9)(t.textExclusions).exec(e)
-                    : null != F.match
-                      ? F.match(e, t, "")
+                    : null != V.match
+                      ? V.match(e, t, "")
                       : null,
         }),
     },
     X = {
-        inlineCode: G(V.inlineCode),
-        codeBlock: G(V.codeBlock),
+        inlineCode: G(Z.inlineCode),
+        codeBlock: G(Z.codeBlock),
         mention: {
-            match: o().anyScopeRegex(Z),
+            match: o().anyScopeRegex(F),
             parse(e, t, n) {
                 let { isNotification: r, guild: a } = n,
                     o = A.default.getUser(e[1]);
@@ -375,14 +375,14 @@ let V = d.Z.RULES,
             match: o().anyScopeRegex(P.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
-        timestamp: k(x({}, V.timestamp), {
+        timestamp: M(L({}, Z.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                let r = V.timestamp.parse(...t);
+                let r = Z.timestamp.parse(...t);
                 return "text" === r.type ? { content: r.content } : { content: r.formatted };
             },
         }),
-        text: x({}, F),
+        text: L({}, V),
     };
 [q, X].forEach((e) => {
     Object.keys(e).forEach((t, n) => {
@@ -486,7 +486,7 @@ function en(e) {
         }),
         u =
             null != n
-                ? i()(N.k1)
+                ? i()(C.k1)
                       .filter((e) => e !== b.sH)
                       .flatMap((e) =>
                           b.ZP.getChannels(n)[e].map((e) => ({
@@ -532,7 +532,7 @@ let ei = {
             };
         return (
             (i.content = et(i.content, r, (t, n) => {
-                C.ZP.isEmojiPremiumLocked({
+                N.ZP.isEmojiPremiumLocked({
                     emoji: t,
                     channel: e,
                     intention: w.Hz.CHAT,

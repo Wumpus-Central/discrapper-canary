@@ -1,52 +1,56 @@
-t.d(l, {
-    Z: () => h,
-    j: () => u,
+n.d(t, {
+    Z: () => m,
+    j: () => p,
 }),
-    t(35282);
-var r = t(951288);
-t(647438);
-var n = t(120356),
-    i = t.n(n),
-    s = t(729594),
-    a = t(388032),
-    o = t(126425);
-let d = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
-    u = ["PlayStation"];
-function h(e) {
-    var l;
-    let t = e.embed.url,
-        n = null == (l = e.embed.provider) ? void 0 : l.name;
-    if (null == t || null == n) return null;
-    let u = null;
-    try {
-        u = s.parse(t, !0);
-    } catch (e) {
-        return null;
-    }
-    let h = ((e, l) => {
-        let { host: t, pathname: r } = l,
-            n = [];
-        if ((null != r && (n = r.split("/")), "PlayStation" === e)) {
-            let e;
-            if (null == t || !d.includes(t) || 2 !== n.length) return null;
-            let l = n[1];
+    n(35282);
+var r = n(951288);
+n(647438);
+var i = n(120356),
+    a = n.n(i),
+    o = n(729594),
+    s = n(388032),
+    l = n(126425);
+let c = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
+    u = (e, t, n) => "https://".concat(e, "/embed/").concat(t, "?locale=").concat(n),
+    d = 400,
+    f = 300,
+    _ = 6,
+    p = ["PlayStation"],
+    h = (e, t) => {
+        let { host: n, pathname: r } = t,
+            i = [];
+        if ((null != r && (i = r.split("/")), "PlayStation" === e)) {
+            if (null == n || !c.includes(n) || 2 !== i.length) return null;
+            let e = i[1];
             return {
-                embedUrl: ((e = a.intl.currentLocale), "https://".concat(t, "/embed/").concat(l, "?locale=").concat(e)),
+                embedUrl: u(n, e, s.intl.currentLocale),
                 style: {
-                    width: 400,
-                    height: 300,
-                    borderRadius: 6,
+                    width: d,
+                    height: f,
+                    borderRadius: _,
                 },
             };
         }
         return null;
-    })(n, u);
-    return null == h
+    };
+function m(e) {
+    var t;
+    let n = e.embed.url,
+        i = null == (t = e.embed.provider) ? void 0 : t.name;
+    if (null == n || null == i) return null;
+    let s = null;
+    try {
+        s = o.parse(n, !0);
+    } catch (e) {
+        return null;
+    }
+    let c = h(i, s);
+    return null == c
         ? null
         : (0, r.jsx)("iframe", {
-              src: h.embedUrl,
-              className: i()(o.embedIFrame, e.className),
-              style: h.style,
+              src: c.embedUrl,
+              className: a()(l.embedIFrame, e.className),
+              style: c.style,
               sandbox:
                   "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
           });

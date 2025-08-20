@@ -1,7 +1,7 @@
 n.d(t, { M: () => o }), n(388685);
 var r = n(876215),
     i = n(911969);
-let l = new Set([
+let a = new Set([
     r.s.TOP_ARTIST,
     r.s.TOP_GAME,
     r.s.PLAYED_GAME,
@@ -16,7 +16,7 @@ function o(e) {
         0 === n.length ||
         n.some((e) => {
             let { contentInventoryEntry: t } = e;
-            return !l.has(t.content_type);
+            return !a.has(t.content_type);
         })
     );
 }

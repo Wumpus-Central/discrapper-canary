@@ -1,4 +1,4 @@
-var n = r(102736);
-t.exports = function (t, e) {
-    t.setMode("composite"), t.update(n.set(t._latestEditorState, { inCompositionMode: !0 })), t._onCompositionStart(e);
+var r = n(102736);
+e.exports = function (e, t) {
+    e.setMode("composite"), e.update(r.set(e._latestEditorState, { inCompositionMode: !0 })), e._onCompositionStart(t);
 };

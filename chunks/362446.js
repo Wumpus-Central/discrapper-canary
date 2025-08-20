@@ -1,18 +1,18 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r,
     l,
-    i = n(442837),
-    o = n(570140),
-    s = n(981631);
-let a = {};
+    s = n(442837),
+    i = n(570140),
+    a = n(981631);
+let o = {};
 function c(e) {
-    let t = a[(e = null != e ? e : "null")];
+    let t = o[(e = null != e ? e : "null")];
     return (
         null == t &&
-            (t = a[e] =
+            (t = o[e] =
                 {
-                    state: s.hes.DISCONNECTED,
-                    quality: s.IE4.UNKNOWN,
+                    state: a.hes.DISCONNECTED,
+                    quality: a.IE4.UNKNOWN,
                     pings: [],
                     hostname: null,
                     lossRate: null,
@@ -21,10 +21,10 @@ function c(e) {
     );
 }
 function u(e, t, n) {
-    let r = a[(e = null != e ? e : "null")];
+    let r = o[(e = null != e ? e : "null")];
     return null != r ? t(r) : n;
 }
-class d extends (l = i.ZP.Store) {
+class d extends (l = s.ZP.Store) {
     getConnectionState(e) {
         return u(
             e,
@@ -32,7 +32,7 @@ class d extends (l = i.ZP.Store) {
                 let { state: t } = e;
                 return t;
             },
-            s.hes.DISCONNECTED,
+            a.hes.DISCONNECTED,
         );
     }
     getQuality(e) {
@@ -42,7 +42,7 @@ class d extends (l = i.ZP.Store) {
                 let { quality: t } = e;
                 return t;
             },
-            s.IE4.UNKNOWN,
+            a.IE4.UNKNOWN,
         );
     }
     getHostname(e) {
@@ -93,9 +93,9 @@ class d extends (l = i.ZP.Store) {
           writable: !0,
       })
     : (d[r] = "OverlayRTCConnectionStore");
-let f = new d(o.Z, {
+let h = new d(i.Z, {
     OVERLAY_INITIALIZE: function (e) {
-        a = e.rtcConnectionStates;
+        o = e.rtcConnectionStates;
     },
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;

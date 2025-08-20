@@ -25,13 +25,13 @@ function _(e) {
             { location: "ActionBarClipsButton" },
             { autoTrackExposure: !1 },
         ),
-        { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
+        { viewerClippingAllowed: O, isAtMaxSavingClipOperations: j } = (0, l.cj)([s.Z], () => ({
             viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations(),
         })),
         E = s.Z.getSettings().clipsEnabled,
         S = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        P = !E || !(S || j) || O || null == _,
+        P = !E || !(S || O) || j || null == _,
         I = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
@@ -87,9 +87,9 @@ function _(e) {
         label:
             null == x
                 ? b.intl.string(b.t.eg5qtb)
-                : S || j
+                : S || O
                   ? E
-                      ? O
+                      ? j
                           ? void 0
                           : b.intl.string(b.t.U4URzM)
                       : b.intl.string(b.t.wSS1yM)

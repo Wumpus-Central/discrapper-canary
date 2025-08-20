@@ -102,22 +102,22 @@ function g(e, t, n) {
                 getSectionHeight: T,
                 chunkSize: S,
                 renderSection: A,
-                renderItem: N,
-                getSectionProps: C,
+                renderItem: C,
+                getSectionProps: N,
                 itemGutter: R,
                 removeEdgeItemGutters: P,
                 sectionGutter: w,
                 padding: D,
-                paddingVertical: L,
-                paddingHorizontal: x,
-                fade: M = !1,
-                className: k,
-                style: j,
+                paddingVertical: x,
+                paddingHorizontal: L,
+                fade: j = !1,
+                className: M,
+                style: k,
                 maxContentWidth: U,
                 renderAccessory: G,
                 onItemVisibilityChange: B,
             } = n,
-            V = h(n, [
+            Z = h(n, [
                 "onScroll",
                 "dir",
                 "sections",
@@ -142,14 +142,14 @@ function g(e, t, n) {
                 "renderAccessory",
                 "onItemVisibilityChange",
             ]);
-        let F = i.useRef(null),
-            Z = i.useRef(null),
+        let V = i.useRef(null),
+            F = i.useRef(null),
             H = i.useRef({}),
             [Y, W] = i.useState(!1),
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
-            className: k,
+            className: M,
             specs: a,
             orientation: "vertical",
             dir: b,
@@ -173,8 +173,8 @@ function g(e, t, n) {
             removeEdgeItemGutters: P,
             sectionGutter: w,
             padding: D,
-            paddingVertical: L,
-            paddingHorizontal: x,
+            paddingVertical: x,
+            paddingHorizontal: L,
             getScrollerState: q,
             dir: b,
             maxBufferWidth: U,
@@ -217,9 +217,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == F.current ? W(!0) : clearTimeout(F.current),
-                    (F.current = setTimeout(() => {
-                        (F.current = null), W(!1);
+                    null == V.current ? W(!0) : clearTimeout(V.current),
+                    (V.current = setTimeout(() => {
+                        (V.current = null), W(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -236,14 +236,14 @@ function g(e, t, n) {
                         {
                             ref: K,
                             onScroll: el,
-                            className: o()(k, {
+                            className: o()(M, {
                                 [e]: !0,
-                                [t]: M,
+                                [t]: j,
                                 [u.scrolling]: Y,
                             }),
-                            style: (0, c.uT)(j),
+                            style: (0, c.uT)(k),
                         },
-                        V,
+                        Z,
                     ),
                     {
                         children: [
@@ -251,18 +251,18 @@ function g(e, t, n) {
                             (0, i.useMemo)(
                                 () =>
                                     (0, r.jsx)(l.J, {
-                                        containerRef: Z,
+                                        containerRef: F,
                                         children: (0, r.jsx)("div", {
                                             style: { height: ee },
                                             className: u.content,
-                                            ref: Z,
+                                            ref: F,
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, c.t$)(e),
                                                     i = Q[e],
                                                     a = $[e],
                                                     o = Q[(0, c.DP)(n)],
-                                                    s = null == C ? void 0 : C(n);
+                                                    s = null == N ? void 0 : N(n);
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
                                                           "div",
@@ -277,7 +277,7 @@ function g(e, t, n) {
                                                                   a.map((e) => {
                                                                       let [t, n, r] = e,
                                                                           i = Q[t];
-                                                                      return null != i ? N(n, r, i, t, J) : null;
+                                                                      return null != i ? C(n, r, i, t, J) : null;
                                                                   }),
                                                               ],
                                                           }),
@@ -287,7 +287,7 @@ function g(e, t, n) {
                                             }),
                                         }),
                                     }),
-                                [$, N, A, Q, ee, C, J],
+                                [$, C, A, Q, ee, N, J],
                             ),
                         ],
                     },

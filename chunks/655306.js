@@ -1,7 +1,7 @@
 n.d(t, {
     Yy: () => O,
-    ZP: () => C,
-    ai: () => N,
+    ZP: () => N,
+    ai: () => C,
 }),
     n(388685),
     n(539854);
@@ -41,10 +41,10 @@ let b = 100,
     T = 30 * _.Z.Millis.SECOND,
     S = 120 * _.Z.Millis.SECOND,
     A = -1 !== (0, f.hY)();
-var N = (function (e) {
+var C = (function (e) {
     return (e.UserSSRCUpdate = "user-ssrc-update"), (e.Update = "update"), e;
 })({});
-class C extends a.Z {
+class N extends a.Z {
     getWantsLevel() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
             t = this.getVideoParticipantCount();

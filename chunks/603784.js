@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(909746),
     C = n(501801),
     N = n(981631),
-    I = n(388032),
-    E = n(404211);
+    E = n(388032),
+    I = n(404211);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,7 +72,7 @@ class P extends i.PureComponent {
         let { user: e, onContextMenu: t } = this.props;
         return (0, r.jsxs)("span", {
             onContextMenu: t,
-            className: E.userHook,
+            className: I.userHook,
             children: [
                 (0, r.jsx)(d.Text, {
                     variant: "text-md/normal",
@@ -81,7 +81,7 @@ class P extends i.PureComponent {
                 "0" !== e.discriminator &&
                     (0, r.jsxs)(d.Text, {
                         variant: "text-xs/normal",
-                        className: E.discrim,
+                        className: I.discrim,
                         children: ["#", e.discriminator],
                     }),
             ],
@@ -115,19 +115,19 @@ let w = i.forwardRef((e, t) => {
                 e.some((e) => !(0, C.xO)(l, e))
             );
         })(),
-        U = E.headerDefault;
-    h ? (U = E.headerExpanded) : G && (U = E.headerClickable);
+        U = I.headerDefault;
+    h ? (U = I.headerExpanded) : G && (U = I.headerClickable);
     let B = l.timestampStart.calendar(),
         F = l.timestampEnd.calendar();
     n =
         B === F
             ? (0, r.jsx)(d.Text, {
-                  className: E.timestamp,
+                  className: I.timestamp,
                   variant: "text-sm/normal",
                   children: B,
               })
             : (0, r.jsxs)(d.Text, {
-                  className: E.timestamp,
+                  className: I.timestamp,
                   variant: "text-sm/normal",
                   children: [B, "\u2014", F],
               });
@@ -137,7 +137,7 @@ let w = i.forwardRef((e, t) => {
         children: (e) =>
             (0, r.jsxs)("div", {
                 ref: t,
-                className: a()(E.auditLog, o),
+                className: a()(I.auditLog, o),
                 children: [
                     (0, r.jsxs)(
                         d.P3F,
@@ -178,7 +178,7 @@ let w = i.forwardRef((e, t) => {
                                                             onClick: (t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
-                                                            className: E.avatar,
+                                                            className: I.avatar,
                                                             src:
                                                                 l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
                                                                 l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
@@ -200,7 +200,7 @@ let w = i.forwardRef((e, t) => {
                                             if (null != e) {
                                                 let t = (0, c.wj)(k) ? e.icon.darkSVG : e.icon.lightSVG;
                                                 return (0, r.jsx)(d.qEK, {
-                                                    className: E.avatar,
+                                                    className: I.avatar,
                                                     src: t,
                                                     "aria-hidden": !0,
                                                     size: d.EFr.SIZE_40,
@@ -210,10 +210,10 @@ let w = i.forwardRef((e, t) => {
                                         return null;
                                     })(),
                                     (0, r.jsxs)("div", {
-                                        className: E.timeWrap,
+                                        className: I.timeWrap,
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: E.title,
+                                                className: I.title,
                                                 children: (function () {
                                                     let e,
                                                         { user: t, target: n, options: i } = l;
@@ -221,8 +221,8 @@ let w = i.forwardRef((e, t) => {
                                                     let a = y.N5(l);
                                                     return null != a
                                                         ? (0, r.jsx)("div", {
-                                                              className: E.overflowEllipsis,
-                                                              children: I.intl.format(a, {
+                                                              className: I.overflowEllipsis,
+                                                              children: E.intl.format(a, {
                                                                   user: t,
                                                                   target: e,
                                                                   userHook: (e, t) => {
@@ -241,9 +241,9 @@ let w = i.forwardRef((e, t) => {
                                                                           return null !=
                                                                               (n = null == e ? void 0 : e.name)
                                                                               ? n
-                                                                              : I.intl.string(I.t["n+olu7"]);
+                                                                              : E.intl.string(E.t["n+olu7"]);
                                                                       }
-                                                                      return I.intl.string(I.t["30mdIy"]);
+                                                                      return E.intl.string(E.t["30mdIy"]);
                                                                   },
                                                                   targetHook: (e, t) =>
                                                                       l.targetType === N.KFR.USER &&
@@ -289,8 +289,8 @@ let w = i.forwardRef((e, t) => {
                                     }),
                                     G
                                         ? (0, r.jsx)(j.Z, {
-                                              className: E.expand,
-                                              foreground: E.expandForeground,
+                                              className: I.expand,
+                                              foreground: I.expandForeground,
                                               expanded: h,
                                               "aria-hidden": !0,
                                           })
@@ -299,7 +299,7 @@ let w = i.forwardRef((e, t) => {
                             },
                         ),
                     ),
-                    h ? (0, r.jsx)("div", { className: E.divider }) : null,
+                    h ? (0, r.jsx)("div", { className: I.divider }) : null,
                     h && null != w
                         ? (0, r.jsx)(C.tP, {
                               log: l,

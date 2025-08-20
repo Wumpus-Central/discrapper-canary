@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155);
+n.d(t, { Z: () => k }), n(388685), n(35282), n(415506), n(539854), n(993155);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -35,8 +35,8 @@ let g = "33kozedd0zs6fbauka98psnc7zwom2s",
     T = null,
     S = 0,
     A = null,
-    N = new Set(),
-    C = {};
+    C = new Set(),
+    N = {};
 function R(e) {
     var t;
     return null == (t = v.exec(e)) ? void 0 : t[1];
@@ -54,13 +54,13 @@ function P(e, t, n) {
 }
 async function w(e, t) {
     var n;
-    let r = C[e];
+    let r = N[e];
     if (null != r) return r;
     let {
             body: { data: i },
         } = await P("/games", { id: e }, t),
         a = null == (n = i[0]) ? void 0 : n.name;
-    return (C[e] = a), a;
+    return (N[e] = a), a;
 }
 class D {
     start() {
@@ -123,7 +123,7 @@ class D {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((A = null), e.revoked || N.has(e.id))) return null;
+        if (((A = null), e.revoked || C.has(e.id))) return null;
         try {
             var n;
             let {
@@ -157,7 +157,7 @@ class D {
                 return c.Z.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return 403 === n.status && N.add(e.id), null;
+            return 403 === n.status && C.add(e.id), null;
         }
     }
     _check() {
@@ -192,25 +192,25 @@ class D {
         m(this, "_nextCheck", void 0), m(this, "_started", void 0), (this._started = !1);
     }
 }
-let L = new D();
-function x() {
-    p.Z.enabled ? L.start() : L.stop();
+let x = new D();
+function L() {
+    p.Z.enabled ? x.start() : x.stop();
 }
-function M(e) {
+function j(e) {
     var t;
     if (a()(e.stream, T)) return !1;
     T = null != (t = e.stream) ? t : null;
 }
-class k extends (r = o.ZP.Store) {
+class M extends (r = o.ZP.Store) {
     initialize() {
-        x(), this.waitFor(_.Z), this.syncWith([p.Z], x);
+        L(), this.waitFor(_.Z), this.syncWith([p.Z], L);
     }
     getStream() {
         return T;
     }
 }
-m(k, "displayName", "ExternalStreamingStore");
-let j = new k(l.Z, {
-    STREAMING_UPDATE: M,
-    USER_CONNECTIONS_UPDATE: () => L._check(),
+m(M, "displayName", "ExternalStreamingStore");
+let k = new M(l.Z, {
+    STREAMING_UPDATE: j,
+    USER_CONNECTIONS_UPDATE: () => x._check(),
 });

@@ -29,6 +29,9 @@ class c {
     get premiumType() {
         return this._userProfile.premiumType;
     }
+    get widgets() {
+        return this._userProfile.widgets;
+    }
     get primaryColor() {
         var e, t;
         return null != (t = null == (e = this.themeColors) ? void 0 : e[0]) ? t : this.accentColor;

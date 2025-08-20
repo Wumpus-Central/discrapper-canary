@@ -141,8 +141,8 @@ function O(e) {
             [s, n, o],
         ),
         {
-            isVisible: N,
-            isRendered: C,
+            isVisible: C,
+            isRendered: N,
             triggerProps: R,
             handleExitComplete: P,
         } = (0, u.l)(h({ targetElementRef: I.targetElementRef }, v)),
@@ -155,8 +155,8 @@ function O(e) {
                 triggerRef: I.triggerRef,
                 targetElementRef: I.targetElementRef,
                 tooltipId: S,
-                isVisible: N,
-                isRendered: C,
+                isVisible: C,
+                isRendered: N,
                 content: A,
                 position: d,
                 align: p,
@@ -166,7 +166,7 @@ function O(e) {
                 onAnimationRest: c,
                 handleExitComplete: P,
             }),
-            [R, I.triggerRef, I.targetElementRef, S, N, C, A, d, p, m, b, O, c, P],
+            [R, I.triggerRef, I.targetElementRef, S, C, N, A, d, p, m, b, O, c, P],
         );
     return (0, r.jsxs)(y.Provider, {
         value: w,

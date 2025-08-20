@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+n.d(t, { Z: () => x }), n(415506), n(388685);
 var r = n(274616),
     i = n(710845),
     a = n(893988),
@@ -71,7 +71,7 @@ let y = new i.Z("Games"),
     T = 250,
     S = 120000,
     A = 3600000;
-function N() {
+function C() {
     return null != I
         ? Promise.resolve(I)
         : (0, f.isDesktop)()
@@ -83,7 +83,7 @@ function N() {
             })
           : Promise.reject(Error("not desktop client"));
 }
-function C(e) {
+function N(e) {
     let t = {
             id: e.id,
             name: e.name,
@@ -114,7 +114,7 @@ async function P(e) {
         throw Error("No remaining launchable queries");
     let t = Date.now();
     t > v && ((v = t + A), (O = {}));
-    let n = await N();
+    let n = await C();
     for (let t of e) {
         let e = O[t.id];
         if (null != e) return e;
@@ -140,16 +140,16 @@ function D(e) {
         })
     );
 }
-let L = {
+let x = {
     waitSubscribed: (e, t) => new Promise((n, r) => w(() => o.Z.isSubscribed(e, t), n, r)),
     waitConnected(e) {
         return new Promise(w.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        P(C(e))
+        P(N(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => P(C(e)).then(D),
+    launch: (e) => P(N(e)).then(D),
     launchDispatchApplication(e, t, n, i, o) {
         let {
             launchOptions: l,
@@ -187,7 +187,7 @@ let L = {
     },
     removeShortcuts: (e) =>
         (0, f.isWindows)()
-            ? N().then((t) => {
+            ? C().then((t) => {
                   var n, r;
                   return null != (r = null == (n = t.removeShortcuts) ? void 0 : n.call(t, e)) && r;
               })
@@ -196,7 +196,7 @@ let L = {
         if (null == i || !(0, f.isWindows)()) return Promise.resolve(!1);
         let a = "discord:///library/".concat(r, "/launch"),
             o = "".concat(i, "\\icon.ico");
-        return N().then((r) => {
+        return C().then((r) => {
             var i, s;
             return null != (s = null == (i = r.createShortcuts) ? void 0 : i.call(r, e, t, n, a, o)) && s;
         });
@@ -207,12 +207,12 @@ let L = {
             .catch(() => !1),
     launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : P(R(e)).then(D)),
     isProtocolRegistered: (e) =>
-        N().then((t) => {
+        C().then((t) => {
             var n, r;
             return null != (r = null == (n = t.isProtocolSchemeRegistered) ? void 0 : n.call(t, e)) && r;
         }),
     setRecentGames(e) {
-        N()
+        C()
             .then((t) => {
                 var n;
                 return null == (n = t.setRecentGames) ? void 0 : n.call(t, e);

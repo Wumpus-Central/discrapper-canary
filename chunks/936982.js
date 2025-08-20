@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m });
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
-    l = n(457330),
-    o = n(497321),
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(457330),
+    l = n(497321),
     c = n(410030),
-    d = n(246946),
-    u = n(388032);
-let m = () => {
-    let e = (0, s.e7)([d.Z], () => d.Z.hidePersonalInformation),
+    u = n(246946),
+    d = n(388032);
+let f = () => {
+    let e = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, c.ZP)();
-    return (r.useEffect(() => {
-        l.Z.fetch();
+    return (i.useEffect(() => {
+        s.Z.fetch();
     }, []),
     e)
-        ? (0, i.jsx)(o.Z, {})
-        : (0, i.jsx)(a.hjN, {
-              tag: a.RB0.H1,
-              title: u.intl.string(u.t["Ig/XFR"]),
-              children: (0, i.jsxs)(a.ubH, {
+        ? (0, r.jsx)(l.Z, {})
+        : (0, r.jsx)(o.hjN, {
+              tag: o.RB0.H1,
+              title: d.intl.string(d.t["Ig/XFR"]),
+              children: (0, r.jsxs)(o.ubH, {
                   theme: t,
                   children: [
-                      (0, i.jsx)(a.oxh, {
+                      (0, r.jsx)(o.oxh, {
                           darkSrc: n(703152),
                           lightSrc: n(548617),
                           width: 230,
                           height: 220,
                       }),
-                      (0, i.jsx)(a.OZU, {
-                          note: u.intl.string(u.t.WenGZ2),
-                          children: u.intl.string(u.t["aoLS8/"]),
+                      (0, r.jsx)(o.OZU, {
+                          note: d.intl.string(d.t.WenGZ2),
+                          children: d.intl.string(d.t["aoLS8/"]),
                       }),
                   ],
               }),

@@ -1,8 +1,8 @@
 n.d(t, {
     N5: () => o,
     c4: () => i,
-    lc: () => a,
-    mJ: () => l,
+    lc: () => s,
+    mJ: () => a,
 });
 var r = n(570140);
 function i(e) {
@@ -11,7 +11,7 @@ function i(e) {
         id: e,
     });
 }
-function l(e) {
+function a(e) {
     r.Z.dispatch({
         type: "CATEGORY_EXPAND",
         id: e,
@@ -23,7 +23,7 @@ function o(e) {
         guildId: e,
     });
 }
-function a(e) {
+function s(e) {
     r.Z.dispatch({
         type: "CATEGORY_EXPAND_ALL",
         guildId: e,

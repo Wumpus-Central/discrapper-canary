@@ -331,8 +331,8 @@ e.exports = function (e) {
             contains: [S],
         };
     S.contains.push(A);
-    let N = [T, I, e.C_BLOCK_COMMENT_MODE, p, h, O],
-        C = {
+    let C = [T, I, e.C_BLOCK_COMMENT_MODE, p, h, O],
+        N = {
             begin: t.concat(/#\[\s*\\?/, t.either(i, a)),
             beginScope: "meta",
             end: /]/,
@@ -349,9 +349,9 @@ e.exports = function (e) {
                         literal: m,
                         keyword: ["new", "array"],
                     },
-                    contains: ["self", ...N],
+                    contains: ["self", ...C],
                 },
-                ...N,
+                ...C,
                 {
                     scope: "meta",
                     variants: [{ match: i }, { match: a }],
@@ -362,7 +362,7 @@ e.exports = function (e) {
         case_insensitive: !1,
         keywords: b,
         contains: [
-            C,
+            N,
             e.HASH_COMMENT_MODE,
             e.COMMENT("//", "$"),
             e.COMMENT("/\\*", "\\*/", {
@@ -425,7 +425,7 @@ e.exports = function (e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         keywords: b,
-                        contains: ["self", C, o, I, e.C_BLOCK_COMMENT_MODE, p, h],
+                        contains: ["self", N, o, I, e.C_BLOCK_COMMENT_MODE, p, h],
                     },
                 ],
             },

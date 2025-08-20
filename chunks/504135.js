@@ -78,33 +78,33 @@ function b(e) {
             isFocused: T,
             menuItemProps: S,
             action: A,
-            onClose: N,
-            onFocus: C,
+            onClose: C,
+            onFocus: N,
             className: R,
             focusedClassName: P,
             subMenuIconClassName: w,
             dontCloseOnActionIfHoldingShiftKey: D,
-            dontCloseOnAction: L,
-            iconProps: x,
-            sparkle: M,
+            dontCloseOnAction: x,
+            iconProps: L,
+            sparkle: j,
         } = e,
-        { onSelect: k, onInteraction: j } = i.useContext(c.p),
+        { onSelect: M, onInteraction: k } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
-                (e.shiftKey && D) || L || N(),
+                if ((null == k || k({ type: c.U.DEFAULT }), null == A)) return !1;
+                (e.shiftKey && D) || x || C(),
                     e.persist(),
-                    null == k || k(),
+                    null == M || M(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
             },
-            [A, N, k, D, L, j],
+            [A, C, M, D, x, k],
         );
     return (
         i.useEffect(() => {
-            T && ((0, u.F)(U), null == C || C());
-        }, [T, C]),
+            T && ((0, u.F)(U), null == N || N());
+        }, [T, N]),
         (0, r.jsxs)(
             s.P,
             E(
@@ -129,8 +129,8 @@ function b(e) {
                                 className: o()(p.iconContainerLeft, { [p.iconContainerLarge]: "lg" === g }),
                                 children: (0, r.jsx)(
                                     h,
-                                    E(m({ color: "currentColor" }, x), {
-                                        className: o()(p.icon, null == x ? void 0 : x.className),
+                                    E(m({ color: "currentColor" }, L), {
+                                        className: o()(p.icon, null == L ? void 0 : L.className),
                                     }),
                                 ),
                             }),
@@ -159,8 +159,8 @@ function b(e) {
                                   className: p.iconContainer,
                                   children: (0, r.jsx)(
                                       a,
-                                      E(m({ color: "currentColor" }, x), {
-                                          className: o()(p.icon, null == x ? void 0 : x.className),
+                                      E(m({ color: "currentColor" }, L), {
+                                          className: o()(p.icon, null == L ? void 0 : L.className),
                                       }),
                                   ),
                               }),
@@ -173,7 +173,7 @@ function b(e) {
                                         color: "currentColor",
                                         className: o()(p.caret, w),
                                     }),
-                                    M && (0, r.jsx)(f.K1N, { className: p.sparkles }),
+                                    j && (0, r.jsx)(f.K1N, { className: p.sparkles }),
                                 ],
                             }),
                     ],

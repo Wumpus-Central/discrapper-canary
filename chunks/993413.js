@@ -51,8 +51,8 @@ let b = i.forwardRef(function (e, t) {
             borderType: T,
             hasBackground: S = !1,
             forcedDivider: A = !1,
-            showPremiumIcon: N = !1,
-            showViewFullProfileButton: C = !1,
+            showPremiumIcon: C = !1,
+            showViewFullProfileButton: N = !1,
         } = e,
         R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         P = () => {
@@ -82,9 +82,9 @@ let b = i.forwardRef(function (e, t) {
                     id: a,
                     children: [
                         n,
-                        N && (0, r.jsx)(_.Z, {}),
+                        C && (0, r.jsx)(_.Z, {}),
                         i,
-                        C &&
+                        N &&
                             null != R &&
                             (0, r.jsx)(l.zx, {
                                 look: l.zx.Looks.LINK,

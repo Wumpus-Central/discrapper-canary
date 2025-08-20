@@ -1,51 +1,51 @@
 A.d(t, {
-    A: () => c,
-    default: () => d,
+    A: () => d,
+    default: () => c,
 }),
     A(388685);
 var n,
     r = A(951288),
-    a = A(647438),
-    l = A(755721),
-    i = A(481060),
-    o = A(388032),
+    l = A(647438),
+    a = A(755721),
+    o = A(481060),
+    i = A(388032),
     s = A(86054),
-    c = (((n = {}).DANGER = "danger"), (n.WARNING = "warning"), n);
-function d(e) {
+    d = (((n = {}).DANGER = "danger"), (n.WARNING = "warning"), n);
+function c(e) {
     let {
             transitionState: t,
             onClose: A,
             title: n,
-            body: c,
-            cta: d,
+            body: d,
+            cta: c,
             closeLabel: u,
-            onConfirm: g,
-            iconVariant: f = "warning",
+            onConfirm: f,
+            iconVariant: g = "warning",
         } = e,
-        [p, h] = a.useState(!1),
-        m = async () => {
-            h(!0);
+        [p, m] = l.useState(!1),
+        h = async () => {
+            m(!0);
             try {
-                await g(), A();
+                await f(), A();
             } finally {
-                h(!1);
+                m(!1);
             }
         },
-        v = null != n ? n : o.intl.string(o.t.D94rwc);
-    return (0, r.jsxs)(i.Y0X, {
+        b = null != n ? n : i.intl.string(i.t.D94rwc);
+    return (0, r.jsxs)(o.Y0X, {
         className: s.__invalid_container,
-        size: i.CgR.DYNAMIC,
+        size: o.CgR.DYNAMIC,
         transitionState: t,
-        "aria-label": v,
+        "aria-label": b,
         parentComponent: "WarningModal",
         children: [
-            (0, r.jsxs)(i.hzk, {
+            (0, r.jsxs)(o.hzk, {
                 className: s.content,
                 children: [
                     (0, r.jsxs)("div", {
                         className: s.header,
                         children: [
-                            (0, r.jsx)(i.Mgn, {
+                            (0, r.jsx)(o.Mgn, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 20,
@@ -57,44 +57,44 @@ function d(e) {
                                         case "warning":
                                             return s.warningIcon;
                                     }
-                                })(f),
+                                })(g),
                             }),
-                            (0, r.jsx)(i.LZC, {
+                            (0, r.jsx)(o.LZC, {
                                 size: 8,
                                 horizontal: !0,
                             }),
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: v,
+                                children: b,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(i.LZC, { size: 12 }),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(o.LZC, { size: 12 }),
+                    (0, r.jsx)(o.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         className: s.__invalid_body,
-                        children: c,
+                        children: d,
                     }),
                 ],
             }),
-            (0, r.jsxs)(i.mzw, {
+            (0, r.jsxs)(o.mzw, {
                 children: [
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(o.zxk, {
                         variant: "primary",
-                        text: d,
-                        onClick: m,
+                        text: c,
+                        onClick: h,
                         loading: p,
                     }),
-                    (0, r.jsx)(i.LZC, {
+                    (0, r.jsx)(o.LZC, {
                         size: 12,
                         horizontal: !0,
                     }),
                     null != u &&
-                        (0, r.jsx)(l.zx, {
-                            color: l.zx.Colors.PRIMARY,
-                            look: l.zx.Looks.OUTLINED,
+                        (0, r.jsx)(a.zx, {
+                            color: a.zx.Colors.PRIMARY,
+                            look: a.zx.Looks.OUTLINED,
                             onClick: A,
                             children: u,
                         }),

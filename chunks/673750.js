@@ -1,7 +1,7 @@
 n.d(t, {
-    $V: () => N,
+    $V: () => C,
     Bz: () => R,
-    ZP: () => L,
+    ZP: () => x,
     hc: () => P,
 }),
     n(539854),
@@ -98,7 +98,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var N = (function (e) {
+var C = (function (e) {
     return (
         (e[(e.SEND = 0)] = "SEND"),
         (e[(e.EDIT = 1)] = "EDIT"),
@@ -107,9 +107,9 @@ var N = (function (e) {
         e
     );
 })({});
-let C = (e) => 0 === e.type || 3 === e.type,
+let N = (e) => 0 === e.type || 3 === e.type,
     R = (e) => 1 === e.type,
-    P = (e) => (C(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
+    P = (e) => (N(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
     w = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
 class D extends m.Z {
     isFull() {
@@ -354,4 +354,4 @@ class D extends m.Z {
             });
     }
 }
-let L = new D();
+let x = new D();

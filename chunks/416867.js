@@ -1,78 +1,78 @@
-n.d(t, { B: () => d });
-var i = n(951288);
+n.d(t, { B: () => _ });
+var r = n(951288);
 n(647438);
-var r = n(755721),
-    s = n(481060),
-    l = n(313201),
-    o = n(192635),
-    a = n(388032),
+var i = n(755721),
+    a = n(481060),
+    o = n(313201),
+    s = n(192635),
+    l = n(388032),
     c = n(818235);
-function u(e) {
-    let { transitionState: t, Icon: n, title: u, body: d, onClose: h } = e,
-        p = (0, l.Dt)();
-    return (0, i.jsxs)(s.Y0X, {
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e) {
+    let { transitionState: t, Icon: n, title: u, body: d, onClose: f } = e,
+        _ = (0, o.Dt)();
+    return (0, r.jsxs)(a.Y0X, {
         className: c.container,
         transitionState: t,
-        "aria-labelledby": p,
+        "aria-labelledby": _,
         parentComponent: "ActionCompletedSuccessModal",
         children: [
-            (0, i.jsxs)(s.hzk, {
+            (0, r.jsxs)(a.hzk, {
                 children: [
-                    (0, i.jsx)(o.Z, { Icon: n }),
-                    (0, i.jsx)(s.LZC, { size: 24 }),
-                    (0, i.jsx)(s.X6q, {
-                        id: p,
+                    (0, r.jsx)(s.Z, { Icon: n }),
+                    (0, r.jsx)(a.LZC, { size: 24 }),
+                    (0, r.jsx)(a.X6q, {
+                        id: _,
                         className: c.__invalid_title,
                         variant: "heading-xl/semibold",
                         children: u,
                     }),
-                    (0, i.jsx)(s.LZC, { size: 8 }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.LZC, { size: 8 }),
+                    (0, r.jsx)(a.Text, {
                         className: c.body,
                         variant: "text-sm/normal",
                         children: d,
                     }),
                 ],
             }),
-            (0, i.jsx)(s.LZC, { size: 24 }),
-            (0, i.jsx)(r.zx, {
-                size: r.zx.Sizes.MEDIUM,
+            (0, r.jsx)(a.LZC, { size: 24 }),
+            (0, r.jsx)(i.zx, {
+                size: i.zx.Sizes.MEDIUM,
                 grow: !1,
-                onClick: h,
-                children: a.intl.string(a.t["NX+WJC"]),
+                onClick: f,
+                children: l.intl.string(l.t["NX+WJC"]),
             }),
         ],
     });
 }
-function d(e) {
-    (0, s.h7j)((t) =>
-        (0, i.jsx)(
-            u,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, t, e),
-        ),
-    );
+function _(e) {
+    (0, a.h7j)((t) => (0, r.jsx)(f, d({}, t, e)));
 }

@@ -1,10 +1,10 @@
-n.d(t, { EmojiStudioModal: () => o });
+n.d(t, { EmojiStudioModal: () => s });
 var r = n(951288);
 n(647438);
 var l = n(481060),
-    a = n(375727),
-    i = n(867248);
-function s(e) {
+    i = n(375727),
+    a = n(867248);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,21 +29,21 @@ function s(e) {
     }
     return e;
 }
-let o = (e) => {
+let s = (e) => {
     let { transitionState: t, guildId: n } = e,
-        o = "userImage" in e ? e.userImage : void 0,
+        s = "userImage" in e ? e.userImage : void 0,
         u = "emoji" in e ? e.emoji : void 0,
-        c = s({ guildId: n }, null != u ? { emoji: u } : null != o ? { userImage: o } : {});
+        c = o({ guildId: n }, null != u ? { emoji: u } : null != s ? { userImage: s } : {});
     return (0, r.jsx)(l.Y0X, {
         transitionState: t,
         size: l.CgR.DYNAMIC,
         fullscreenOnMobile: !1,
-        className: i.modalRoot,
+        className: a.modalRoot,
         parentComponent: "Modal",
         children: (0, r.jsx)(l.hzk, {
             scrollbarType: "none",
-            className: i.modalContent,
-            children: (0, r.jsx)(a.I, s({}, c)),
+            className: a.modalContent,
+            children: (0, r.jsx)(i.I, o({}, c)),
         }),
     });
 };

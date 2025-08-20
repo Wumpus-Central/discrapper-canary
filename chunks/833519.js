@@ -16,8 +16,8 @@ var r = n(951288),
     m = n(710845),
     E = n(965048),
     g = n(590293),
-    S = n(863908),
-    v = n(871118),
+    v = n(863908),
+    S = n(871118),
     h = n(517525),
     b = n(352978),
     O = n(590076),
@@ -39,8 +39,8 @@ var r = n(951288),
     L = n(981631),
     F = n(354459),
     k = n(65154),
-    U = n(388032),
-    V = n(7504);
+    V = n(388032),
+    U = n(7504);
 let H = new m.Z("StreamTile");
 function W(e) {
     let { participant: t, selected: n, focused: l, idle: i, width: a, premiumIndicator: u } = e,
@@ -53,7 +53,7 @@ function W(e) {
                 ? null
                 : (0, r.jsx)(h.Z, {
                       size: p.ZP.Sizes.SMALL,
-                      className: V.liveIndicator,
+                      className: U.liveIndicator,
                       participant: t,
                       showQuality: !c && !i,
                       isUpsellEnabled: !1,
@@ -85,7 +85,7 @@ function Y(e) {
         ee = (0, o.e7)([w.Z], () => w.Z.isFocused()),
         et = (null == Q ? void 0 : Q.ownerId) === G,
         en = et && !ee && !m,
-        er = null != Q ? (0, S.Z)(Q, q, q.id === G, en) : null,
+        er = null != Q ? (0, v.Z)(Q, q, q.id === G, en) : null,
         el = D < 195;
     (0, d.ZP)(() => {
         !$ &&
@@ -134,12 +134,12 @@ function Y(e) {
         });
     if (!(null != Q && !n && null != z && I.Z.supports(k.AN.VIDEO)))
         return (0, r.jsxs)("div", {
-            className: a()(V.content, V.streamPreview, { [V.small]: el }),
+            className: a()(U.content, U.streamPreview, { [U.small]: el }),
             children: [
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(S.Z, {
                     noImage: !0,
                     noText: !0,
-                    className: a()(V.absoluteFill, { [V.streamPreviewOpacity]: null == Q }),
+                    className: a()(U.absoluteFill, { [U.streamPreviewOpacity]: null == Q }),
                     stream: t.stream,
                 }),
                 n
@@ -151,13 +151,13 @@ function Y(e) {
                                   children: (0, r.jsx)(u.Text, {
                                       variant: el ? "text-sm/semibold" : "text-md/semibold",
                                       color: "none",
-                                      children: D < 175 ? U.intl.string(U.t["I6JG4+"]) : U.intl.string(U.t["7Xq/nZ"]),
+                                      children: D < 175 ? V.intl.string(V.t["I6JG4+"]) : V.intl.string(V.t["7Xq/nZ"]),
                                   }),
                               }),
                               $
                                   ? (0, r.jsx)(P.a, {
-                                        className: V.addCTA,
-                                        tooltip: U.intl.string(U.t.wCrzur),
+                                        className: U.addCTA,
+                                        tooltip: V.intl.string(V.t.wCrzur),
                                         onClick: (e) => {
                                             e.stopPropagation(), (0, c.rn)(K, { forceMultiple: !0 });
                                         },
@@ -165,7 +165,7 @@ function Y(e) {
                                         children: (0, r.jsx)(u.OgY, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: V.addStreamIcon,
+                                            className: U.addStreamIcon,
                                         }),
                                     })
                                   : null,
@@ -190,8 +190,8 @@ function Y(e) {
                     b.Z,
                     {
                         onResize: i,
-                        wrapperClassName: a()(V.videoWrapper, W),
-                        className: V.content,
+                        wrapperClassName: a()(U.videoWrapper, W),
+                        className: U.content,
                         streamId: J,
                         videoComponent: z,
                         fit: p,

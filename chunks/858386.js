@@ -71,7 +71,7 @@ class E extends o.Z {
         u.Z.wasLoginAttemptedInSession(e.id) && t
             ? (0, i.ZDy)(
                   async () => {
-                      let { default: e } = await n.e("48707").then(n.bind(n, 194530));
+                      let { default: e } = await Promise.resolve().then(n.bind(n, 194530));
                       return function (t) {
                           let n = () => {
                                   t.onClose(), a.Z.logout("login_required_account_manager", d.Z5c.LOGIN);

@@ -25,25 +25,25 @@ function _(e, t) {
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ("" === e || u.Z.isFetchingProfile(e, v)) return Promise.resolve();
     let A = u.Z.getUserProfile(e),
-        N = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
+        C = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
     if (
         ((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 ||
             (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) &&
-        !N
+        !C
     )
         return Promise.resolve();
-    let C = u.Z.getGuildMemberProfile(e, v),
+    let N = u.Z.getGuildMemberProfile(e, v),
         R = u.Z.getMutualGuilds(e),
         P = u.Z.getMutualFriends(e),
         w = u.Z.getMutualFriendsCount(e),
         D = null == P && b,
-        L = null == w && E,
-        x = (null == R && g) || D || L,
-        M = null == v ? null == A : null == C,
-        k = !M && (N || x);
-    if (!M && !k) return Promise.resolve();
+        x = null == w && E,
+        L = (null == R && g) || D || x,
+        j = null == v ? null == A : null == N,
+        M = !j && (C || L);
+    if (!j && !M) return Promise.resolve();
     (0, s.t)(), null != t && (0, a.vM)(t);
-    let j = {
+    let k = {
         type: m,
         withMutualGuilds: g,
         withMutualFriends: b,
@@ -61,7 +61,7 @@ function _(e, t) {
                 ? void 0
                 : p.id,
     };
-    if (y) return r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve();
-    let U = (0, i.In)(e, j, d.Z);
-    return k && !O ? Promise.resolve() : U;
+    if (y) return r.Z.wait(() => (0, i.In)(e, k, d.Z)), Promise.resolve();
+    let U = (0, i.In)(e, k, d.Z);
+    return M && !O ? Promise.resolve() : U;
 }

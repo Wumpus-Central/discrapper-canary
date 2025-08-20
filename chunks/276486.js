@@ -1,50 +1,50 @@
 n.d(t, {
-    l: () => u,
-    v: () => d,
+    l: () => d,
+    v: () => u,
 });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(144114),
-    o = n(489813),
-    s = n(815660),
-    a = n(388032),
+var l = n(481060),
+    i = n(144114),
+    s = n(489813),
+    a = n(815660),
+    o = n(388032),
     c = n(624463);
-function u() {
-    return (0, r.jsx)(o.PU, {
+function d() {
+    return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
-        icon: i.AtH,
-        text: a.intl.string(a.t.woMjLS),
-        footnote: a.intl.string(a.t["jMh+TU"]),
+        icon: l.AtH,
+        text: o.intl.string(o.t.woMjLS),
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: !1,
-        children: (0, r.jsx)(i.DY3, {
-            text: a.intl.string(a.t.mGlP39),
-            children: (0, r.jsx)(i.zxk, {
+        children: (0, r.jsx)(l.DY3, {
+            text: o.intl.string(o.t.mGlP39),
+            children: (0, r.jsx)(l.zxk, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: a.intl.string(a.t["13ofGh"]),
+                text: o.intl.string(o.t["13ofGh"]),
             }),
         }),
     });
 }
-function d(e) {
+function u(e) {
     let { isUserVerified: t } = e,
-        u = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
-    return (0, r.jsx)(o.PU, {
+        d = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
+    return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
-        icon: i.AtH,
-        text: u,
-        footnote: a.intl.string(a.t["jMh+TU"]),
+        icon: l.AtH,
+        text: d,
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(i.zxk, {
+        children: (0, r.jsx)(l.zxk, {
             variant: "primary",
             size: "sm",
-            text: a.intl.string(a.t["13ofGh"]),
+            text: o.intl.string(o.t["13ofGh"]),
             onClick: () => {
-                (0, i.ZDy)(
+                (0, l.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("76540"), n.e("32103")]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
@@ -72,10 +72,10 @@ function d(e) {
                                             });
                                     }
                                     return e;
-                                })({ reason: l.L.GUILD_PHONE_REQUIRED }, t),
+                                })({ reason: i.L.GUILD_PHONE_REQUIRED }, t),
                             );
                     },
-                    { modalKey: s.M },
+                    { modalKey: a.M },
                 );
             },
         }),

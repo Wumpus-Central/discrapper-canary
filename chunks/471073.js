@@ -1,74 +1,84 @@
-let l, i, r, u, a;
+let r, i, a, o, s;
 n.d(t, {
-    Z: () => _,
-    i: () => g,
+    Z: () => A,
+    i: () => E,
 });
-var o,
-    c,
-    d,
-    s = n(512722),
-    E = n.n(s),
-    p = n(442837),
-    I = n(570140),
-    T = n(904245),
-    f = n(911969),
-    m = n(603721),
-    S = n(70956),
-    g =
-        (((o = {})[(o.IN_FLIGHT = 0)] = "IN_FLIGHT"),
-        (o[(o.ERRORED = 1)] = "ERRORED"),
-        (o[(o.SUCCEEDED = 2)] = "SUCCEEDED"),
-        o);
-class C extends (d = p.ZP.Store) {
-    getModalState(e) {
-        return e !== l ? null : i;
+var l,
+    c = n(512722),
+    u = n.n(c),
+    d = n(442837),
+    f = n(570140),
+    _ = n(904245),
+    p = n(911969),
+    h = n(603721),
+    m = n(70956);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var E = (function (e) {
+    return (
+        (e[(e.IN_FLIGHT = 0)] = "IN_FLIGHT"), (e[(e.ERRORED = 1)] = "ERRORED"), (e[(e.SUCCEEDED = 2)] = "SUCCEEDED"), e
+    );
+})({});
+function b() {
+    return (r = null), (i = null), (a = null), (o = null), (s = null), !0;
+}
+function y(e) {
+    let { messageId: t, nonce: n, data: l } = e;
+    switch (l.interactionType) {
+        case p.B8.APPLICATION_COMMAND:
+            return (a = t), (o = l.channelId), (s = n), !1;
+        case p.B8.MODAL_SUBMIT:
+            return (
+                u()(null == r || 1 === i || 2 === i, "cannot submit multiple modals at once"),
+                (r = n),
+                (i = 0),
+                setTimeout(() => {
+                    r === n && 0 === i && (0, h.yr)(n);
+                }, 10 * m.Z.Millis.SECOND),
+                !0
+            );
+        default:
+            return !1;
     }
 }
-(c = "displayName") in C
-    ? Object.defineProperty(C, c, {
-          value: "InteractionModalStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (C[c] = "InteractionModalStore");
-let _ = new C(I.Z, {
-    LOGOUT: function () {
-        return (l = null), (i = null), (r = null), (u = null), (a = null), !0;
-    },
-    INTERACTION_MODAL_CREATE: function (e) {
-        let { nonce: t } = e;
-        return t === a && (T.Z.deleteMessage(u, r, !0), (r = null), (u = null), (a = null)), !1;
-    },
-    INTERACTION_IFRAME_MODAL_CREATE: function (e) {
-        let { nonce: t } = e;
-        return t === a && (T.Z.deleteMessage(u, r, !0), (r = null), (u = null), (a = null)), !1;
-    },
-    INTERACTION_QUEUE: function (e) {
-        let { messageId: t, nonce: n, data: o } = e;
-        switch (o.interactionType) {
-            case f.B8.APPLICATION_COMMAND:
-                return (r = t), (u = o.channelId), (a = n), !1;
-            case f.B8.MODAL_SUBMIT:
-                return (
-                    E()(null == l || 1 === i || 2 === i, "cannot submit multiple modals at once"),
-                    (l = n),
-                    (i = 0),
-                    setTimeout(() => {
-                        l === n && 0 === i && (0, m.yr)(n);
-                    }, 10 * S.Z.Millis.SECOND),
-                    !0
-                );
-            default:
-                return !1;
-        }
-    },
-    INTERACTION_SUCCESS: function (e) {
-        let { nonce: t } = e;
-        return null != t && t === l && ((i = 2), !0);
-    },
-    INTERACTION_FAILURE: function (e) {
-        let { nonce: t } = e;
-        return null != t && t === l && ((i = 1), !0);
-    },
+function O(e) {
+    let { nonce: t } = e;
+    return t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
+}
+function v(e) {
+    let { nonce: t } = e;
+    return t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
+}
+function I(e) {
+    let { nonce: t } = e;
+    return null != t && t === r && ((i = 2), !0);
+}
+function T(e) {
+    let { nonce: t } = e;
+    return null != t && t === r && ((i = 1), !0);
+}
+class S extends (l = d.ZP.Store) {
+    getModalState(e) {
+        return e !== r ? null : i;
+    }
+}
+g(S, "displayName", "InteractionModalStore");
+let A = new S(f.Z, {
+    LOGOUT: b,
+    INTERACTION_MODAL_CREATE: O,
+    INTERACTION_IFRAME_MODAL_CREATE: v,
+    INTERACTION_QUEUE: y,
+    INTERACTION_SUCCESS: I,
+    INTERACTION_FAILURE: T,
 });

@@ -1,47 +1,47 @@
 n.d(t, { M: () => d });
 var r = n(951288),
-    a = n(442837),
-    i = n(678135),
-    o = n(643879),
-    l = n(25990),
-    c = n(74538),
-    s = n(755419),
+    i = n(442837),
+    l = n(678135),
+    a = n(643879),
+    o = n(25990),
+    s = n(74538),
+    c = n(755419),
     u = n(526666);
 let d = (e) => {
     var t, n;
     let { user: d } = e,
-        p = c.ZP.canUsePremiumProfileCustomization(d),
-        m = (0, a.cj)([l.Z], () => l.Z.getAllPending()),
-        { pendingAvatar: g } = m,
-        f = (function (e, t) {
+        m = s.ZP.canUsePremiumProfileCustomization(d),
+        f = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
+        { pendingAvatar: p } = f,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                a = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        a = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return a;
-        })(m, ["pendingAvatar"]),
-        _ = (0, o.SD)({
+            return i;
+        })(f, ["pendingAvatar"]),
+        b = (0, a.SD)({
             userId: d.id,
-            image: g,
+            image: p,
         });
     return (0, r.jsx)("div", {
         className: u.container,
         children: (0, r.jsx)(
-            i.Z,
+            l.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -66,13 +66,13 @@ let d = (e) => {
                         });
                 }
                 return e;
-            })({}, f)),
+            })({}, v)),
             (n = n =
                 {
-                    pendingAvatar: _,
+                    pendingAvatar: b,
                     user: d,
-                    pendingBadges: [(0, s.X)()],
-                    canUsePremiumCustomization: p,
+                    pendingBadges: [(0, c.X)()],
+                    canUsePremiumCustomization: m,
                     disabledInputs: !0,
                     hideViewFullProfileButton: !0,
                 }),

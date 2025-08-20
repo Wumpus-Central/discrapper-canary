@@ -1,77 +1,77 @@
 n.d(t, { default: () => p }), n(388685);
-var s = n(951288),
+var r = n(951288),
     i = n(647438),
-    r = n(442837),
-    l = n(279837),
-    o = n(479531),
-    a = n(144114),
+    a = n(442837),
+    o = n(279837),
+    s = n(479531),
+    l = n(144114),
     c = n(145454),
-    h = n(23434),
-    u = n(594174),
-    d = n(1964),
-    E = n(388032);
+    u = n(23434),
+    d = n(594174),
+    f = n(1964),
+    _ = n(388032);
 let p = i.forwardRef(function (e, t) {
-    let { onAddedPhone: n, onClose: p, transitionState: R, reason: m } = e,
-        I = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
-        C = (0, r.e7)([h.Z], () => h.Z.getAction()),
-        [f, g] = i.useState(null),
-        [y, _] = i.useState(null),
-        [P, b] = i.useState(null),
-        [x, j] = i.useState(!1),
-        v = i.useCallback(
+    let { onAddedPhone: n, onClose: p, transitionState: h, reason: m } = e,
+        g = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        E = (0, a.e7)([u.Z], () => u.Z.getAction()),
+        [b, y] = i.useState(null),
+        [O, v] = i.useState(null),
+        [I, T] = i.useState(null),
+        [S, A] = i.useState(!1),
+        C = i.useCallback(
             async (e) => {
-                j(!0);
+                A(!0);
                 try {
-                    d.Z.isPhoneReverification(I, C)
-                        ? await a.Z.beginReverifyPhone(e, m)
-                        : await a.Z.beginAddPhone(e, m),
-                        b(null),
-                        g(e);
+                    f.Z.isPhoneReverification(g, E)
+                        ? await l.Z.beginReverifyPhone(e, m)
+                        : await l.Z.beginAddPhone(e, m),
+                        T(null),
+                        y(e);
                 } catch (e) {
-                    b(new o.Z(e));
+                    T(new s.Z(e));
                 }
-                j(!1);
+                A(!1);
             },
-            [I, m, C],
+            [g, m, E],
         ),
         N = i.useCallback(
             async (e) => {
-                if (null != f && null != I) {
-                    j(!0);
+                if (null != b && null != g) {
+                    A(!0);
                     try {
-                        let { token: t } = await a.Z.verifyPhone(f, e);
-                        b(null), _(t);
+                        let { token: t } = await l.Z.verifyPhone(b, e);
+                        T(null), v(t);
                     } catch (e) {
-                        b(new o.Z(e));
+                        T(new s.Z(e));
                     }
-                    j(!1);
+                    A(!1);
                 }
             },
-            [I, f],
+            [g, b],
         ),
-        O = i.useCallback(
+        R = i.useCallback(
             async (e) => {
-                null != y &&
-                    (d.Z.isPhoneReverification(I, C) ? await a.Z.reverifyPhone(y, e, m) : await a.Z.addPhone(y, e, m),
+                null != O &&
+                    (f.Z.isPhoneReverification(g, E) ? await l.Z.reverifyPhone(O, e, m) : await l.Z.addPhone(O, e, m),
                     null == n || n(),
                     p());
             },
-            [n, p, y, m, I, C],
+            [n, p, O, m, g, E],
         );
-    return null != y
-        ? (0, s.jsx)(l.Z, {
+    return null != O
+        ? (0, r.jsx)(o.Z, {
               onClose: p,
-              transitionState: R,
-              title: E.intl.string(E.t.ZtCDc3),
-              handleSubmit: O,
+              transitionState: h,
+              title: _.intl.string(_.t.ZtCDc3),
+              handleSubmit: R,
           })
-        : (0, s.jsx)(c.Z, {
+        : (0, r.jsx)(c.Z, {
               onClose: p,
-              transitionState: R,
-              error: null == P ? void 0 : P.getAnyErrorMessage(),
-              working: x,
-              validPhone: null != f,
-              onAddPhone: v,
+              transitionState: h,
+              error: null == I ? void 0 : I.getAnyErrorMessage(),
+              working: S,
+              validPhone: null != b,
+              onAddPhone: C,
               onVerifyPhone: N,
           });
 });

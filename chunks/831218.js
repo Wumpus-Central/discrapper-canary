@@ -17,14 +17,14 @@ var r,
     O = n(367907),
     _ = n(906732),
     y = n(453542),
-    v = n(702321),
-    j = n(46148),
+    j = n(702321),
+    v = n(46148),
     C = n(82295),
-    E = n(313201),
-    x = n(860144),
+    x = n(313201),
+    E = n(860144),
     S = n(214852),
-    P = n(518311),
-    I = n(355298),
+    I = n(518311),
+    P = n(355298),
     N = n(869404),
     w = n(333984),
     Z = n(984802),
@@ -32,8 +32,8 @@ var r,
     A = n(158776),
     R = n(55589),
     D = n(981631),
-    L = n(388032),
-    M = n(777126);
+    M = n(388032),
+    L = n(777126);
 function k(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ let B = l.memo(function () {
         width: "184",
         height: "428",
         viewBox: "0 0 184 428",
-        className: M.empty,
+        className: L.empty,
         children: [
             (0, i.jsx)("rect", {
                 x: 40,
@@ -313,7 +313,7 @@ class V extends (r = l.Component) {
                                 {
                                     fade: !0,
                                     innerRole: o,
-                                    innerAriaLabel: L.intl.string(L.t.YUU0RE),
+                                    innerAriaLabel: M.intl.string(M.t.YUU0RE),
                                     innerTag: "ul",
                                     ref: (e) => {
                                         var t;
@@ -323,7 +323,7 @@ class V extends (r = l.Component) {
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
                                     onScroll: this.handleScroll,
-                                    className: M.scroller,
+                                    className: L.scroller,
                                     sectionHeight: this.getSectionHeight,
                                     paddingTop: t,
                                     paddingBottom: 8,
@@ -362,7 +362,7 @@ class V extends (r = l.Component) {
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
                     a = o > n.length ? n.slice(0, o + 1) : n,
                     s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, v.Z)(e)),
+                    c = n.some((e) => (0, j.Z)(e)),
                     u = {
                         num_users_visible: a.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e))
@@ -399,7 +399,7 @@ class V extends (r = l.Component) {
                 return null == s
                     ? null
                     : (0, i.jsx)(
-                          j.W,
+                          v.W,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -435,28 +435,28 @@ class V extends (r = l.Component) {
                     ? (0, i.jsxs)(
                           C.Z,
                           {
-                              className: a()(M.privateChannelsHeaderContainer, { [M.tall]: "side" === r }),
+                              className: a()(L.privateChannelsHeaderContainer, { [L.tall]: "side" === r }),
                               children: [
                                   (0, i.jsx)("span", {
-                                      className: M.headerText,
-                                      children: L.intl.string(L.t.YUU0RE),
+                                      className: L.headerText,
+                                      children: M.intl.string(M.t.YUU0RE),
                                   }),
                                   null == r &&
-                                      (0, i.jsx)(P.Z, {
+                                      (0, i.jsx)(I.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
-                                          tooltip: L.intl.string(L.t["6Urw1t"]),
+                                          tooltip: M.intl.string(M.t["6Urw1t"]),
                                           tooltipPosition: "top",
                                           popoutAlign: "left",
-                                          className: M.privateChannelRecipientsInviteButtonIconContainer,
-                                          iconClassName: M.privateChannelRecipientsInviteButtonIcon,
+                                          className: L.privateChannelRecipientsInviteButtonIconContainer,
+                                          iconClassName: L.privateChannelRecipientsInviteButtonIcon,
                                           icon: h.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
-                                      (0, i.jsx)(P.l, {
+                                      (0, i.jsx)(I.l, {
                                           popoutAlign: "left",
                                           icon: h.kL_,
-                                          text: L.intl.string(L.t["6Urw1t"]),
+                                          text: M.intl.string(M.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
                                       }),
@@ -492,21 +492,21 @@ let F = (e) => {
         f = l.Children.count(o),
         g = T.Z.getMutablePrivateChannels(),
         O = (0, N.k1)(g),
-        y = (0, p.Wu)([R.Z, I.Z, w.Z], () => {
+        y = (0, p.Wu)([R.Z, P.Z, w.Z], () => {
             let e = R.Z.getPrivateChannelIds();
-            return (0, N.tU)(e, [I.Z, w.Z]);
+            return (0, N.tU)(e, [P.Z, w.Z]);
         }, []);
-    (0, S.z)(x.R);
-    let { analyticsLocations: v } = (0, _.ZP)(b.Z.CONTACTS_LIST),
-        j = (0, Z.Ll)(),
-        { keyboardModeEnabled: C, version: P } = (0, p.cj)([m.Z, T.Z], () => ({
+    (0, S.z)(E.R);
+    let { analyticsLocations: j } = (0, _.ZP)(b.Z.CONTACTS_LIST),
+        v = (0, Z.Ll)(),
+        { keyboardModeEnabled: C, version: I } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
         })),
         A = l.useRef(null),
         D = null != s ? s : A,
-        L = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 let t = D.current,
                     n = document.querySelector(e);
@@ -526,7 +526,7 @@ let F = (e) => {
             },
             [D],
         ),
-        M = l.useCallback(
+        L = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = D.current;
@@ -548,17 +548,17 @@ let F = (e) => {
                 }),
             [D],
         ),
-        B = (0, E.Dt)(),
+        B = (0, x.Dt)(),
         F = (0, d.ZP)({
             id: "private-channels-".concat(B),
             isEnabled: C,
-            scrollToStart: M,
+            scrollToStart: L,
             scrollToEnd: k,
             defaultFocused: (f + +!!a).toString(),
-            setFocus: L,
+            setFocus: M,
         });
     return (0, i.jsx)(_.Gt, {
-        value: v,
+        value: j,
         children: (0, i.jsx)(u.bG, {
             navigator: F,
             children: (0, i.jsx)(
@@ -568,8 +568,8 @@ let F = (e) => {
                     channels: O,
                     privateChannelIds: y,
                     listRef: D,
-                    theme: null != j ? j : r,
-                    version: P,
+                    theme: null != v ? v : r,
+                    version: I,
                     createDMCTAButtonVariant: c,
                 }),
             ),

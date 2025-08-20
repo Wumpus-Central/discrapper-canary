@@ -23,8 +23,8 @@ var i = n(442837),
     y = n(411667),
     C = n(903773),
     N = n(822531),
-    I = n(909656),
-    E = n(210591),
+    E = n(909656),
+    I = n(210591),
     S = n(927731),
     T = n(798680),
     P = n(509026),
@@ -90,7 +90,7 @@ function L(e) {
                 ],
             },
         ];
-    return (0, r.jsx)(E.Z, { children: u });
+    return (0, r.jsx)(I.Z, { children: u });
 }
 function k(e) {
     let { application: t } = e,
@@ -144,7 +144,7 @@ function G(e) {
         { currentTab: g, setCurrentTab: j } = (0, T.dw)(),
         v = (0, x.f)(),
         C = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        E = (0, O.Z)(n.id),
+        I = (0, O.Z)(n.id),
         Z = null != n && (0, p.eM)(n, C),
         M = () => {
             let e = h.Z.getEveryoneRole(n);
@@ -162,7 +162,7 @@ function G(e) {
     if (!v) return (0, r.jsx)(l.$jN, {});
     switch (g) {
         case T.ue.BASIC_INFO:
-            t = (0, r.jsx)(I.Z, { guild: n });
+            t = (0, r.jsx)(E.Z, { guild: n });
             break;
         case T.ue.TIERS:
             t = (0, r.jsx)(S.Z, { guildId: n.id });
@@ -238,9 +238,9 @@ function G(e) {
                                         children: (e) => {
                                             let { onMouseEnter: t, onMouseLeave: n } = e;
                                             return (0, r.jsx)(l.zxk, {
-                                                disabled: E,
-                                                onMouseEnter: E ? t : void 0,
-                                                onMouseLeave: E ? n : void 0,
+                                                disabled: I,
+                                                onMouseEnter: I ? t : void 0,
+                                                onMouseLeave: I ? n : void 0,
                                                 onClick: M,
                                                 text: D.intl.string(D.t.vM81yc),
                                                 size: "sm",

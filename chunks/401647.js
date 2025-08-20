@@ -1,5 +1,5 @@
-var n = r(361788);
-t.exports = function (t) {
-    var e = t.getSelection();
-    return e.isCollapsed() ? null : n(t.getCurrentContent(), e);
+var r = n(361788);
+e.exports = function (e) {
+    var t = e.getSelection();
+    return t.isCollapsed() ? null : r(e.getCurrentContent(), t);
 };

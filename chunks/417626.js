@@ -1,24 +1,28 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r,
-    i,
-    l = n(442837),
-    o = n(570140);
-let a = !1;
-class s extends (i = l.ZP.Store) {
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = !1;
+function l(e) {
+    s = !0;
+}
+class c extends (r = i.ZP.Store) {
     get blockedByProxy() {
-        return a;
+        return s;
     }
 }
-(r = "displayName") in s
-    ? Object.defineProperty(s, r, {
-          value: "ProxyBlockStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (s[r] = "ProxyBlockStore");
-let c = new s(o.Z, {
-    PROXY_BLOCKED_REQUEST: function (e) {
-        a = !0;
-    },
-});
+o(c, "displayName", "ProxyBlockStore");
+let u = new c(a.Z, { PROXY_BLOCKED_REQUEST: l });

@@ -1,13 +1,13 @@
 n.d(t, {
     EO: () => T,
     Fc: () => I,
-    Ft: () => N,
+    Ft: () => C,
     W5: () => A,
     ZP: () => R,
     _T: () => E,
     oY: () => g,
     u5: () => O,
-    vP: () => C,
+    vP: () => N,
 }),
     n(415506);
 var r = n(442837),
@@ -157,12 +157,12 @@ function A(e, t) {
         r = "auto" !== n.identifiable || i.Z.hidePersonalInformation;
     return S(e, n, r);
 }
-function N(e) {
+function C(e) {
     return (0, r.e7)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function C() {
+function N() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
@@ -178,9 +178,9 @@ let R = {
             (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation),
         );
     },
-    getUserIsStaff: C,
+    getUserIsStaff: N,
     getFormattedName: y,
     getGlobalName: b,
     humanizeStatus: O,
-    useDirectMessageRecipient: N,
+    useDirectMessageRecipient: C,
 };

@@ -1,58 +1,58 @@
-t.d(n, { Z: () => h });
-var i = t(951288);
+t.d(n, { Z: () => _ });
+var r = t(951288);
 t(647438);
-var r = t(780384),
+var i = t(780384),
     l = t(481060),
     s = t(410030),
     a = t(518950),
     o = t(51144),
     C = t(105759),
     d = t(898969),
-    c = t(703614),
-    u = t(268685),
-    p = t(388032),
+    p = t(703614),
+    c = t(268685),
+    u = t(388032),
     x = t(908780);
-let h = () => {
+let _ = () => {
     let e = (0, C.Z)(),
         { avatarSrc: n, eventHandlers: t } = (0, a.Z)({
             userId: null == e ? void 0 : e.id,
-            size: u.EF.SIZE_32,
+            size: c.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        h = (0, s.Fg)(),
-        j = (0, r.ap)(h),
-        f = o.ZP.getName(e),
-        m = j ? d.Z : c.Z;
+        _ = (0, s.Fg)(),
+        f = (0, i.ap)(_),
+        h = o.ZP.getName(e),
+        j = f ? d.Z : p.Z;
     return null == e
         ? null
-        : (0, i.jsxs)("div", {
+        : (0, r.jsxs)("div", {
               className: x.attributionBannerContainer,
               children: [
-                  (0, i.jsx)("div", {
+                  (0, r.jsx)("div", {
                       className: x.avatarContainer,
-                      children: (0, i.jsx)(
+                      children: (0, r.jsx)(
                           l.qEK,
                           (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
-                                      i = Object.keys(t);
+                                      r = Object.keys(t);
                                   "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
+                                      (r = r.concat(
                                           Object.getOwnPropertySymbols(t).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           }),
                                       )),
-                                      i.forEach(function (n) {
-                                          var i;
-                                          (i = t[n]),
+                                      r.forEach(function (n) {
+                                          var r;
+                                          (r = t[n]),
                                               n in e
                                                   ? Object.defineProperty(e, n, {
-                                                        value: i,
+                                                        value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (e[n] = i);
+                                                  : (e[n] = r);
                                       });
                               }
                               return e;
@@ -60,18 +60,18 @@ let h = () => {
                               {
                                   src: n,
                                   "aria-label": e.username,
-                                  size: u.EF.SIZE_32,
+                                  size: c.EF.SIZE_32,
                               },
                               t,
                           ),
                       ),
                   }),
-                  (0, i.jsx)(l.Text, {
+                  (0, r.jsx)(l.Text, {
                       variant: "text-xs/bold",
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f }),
+                      children: u.intl.format(u.t.oxhCOj, { userName: h }),
                   }),
-                  (0, i.jsx)(m, { className: x.bannerIcon }),
+                  (0, r.jsx)(j, { className: x.bannerIcon }),
               ],
           });
 };

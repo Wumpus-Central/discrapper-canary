@@ -1,6 +1,19 @@
-r.d(t, { S: () => l }), r(388685);
-var n = r(647438);
-class l extends n.PureComponent {
+n.d(t, { S: () => a }), n(388685);
+var r = n(647438);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a extends r.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }
@@ -11,16 +24,6 @@ class l extends n.PureComponent {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        super(...e),
-            (function (e, t, r) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: r,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = r);
-            })(this, "state", { error: null });
+        super(...e), i(this, "state", { error: null });
     }
 }

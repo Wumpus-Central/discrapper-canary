@@ -1,11 +1,12 @@
 n.d(t, {
-    P: () => o,
+    P: () => i,
     u: () => a,
 });
-var r,
-    s = n(818083),
-    o = (((r = {})[(r.V1 = 0)] = "V1"), (r[(r.V2 = 1)] = "V2"), r);
-let a = (0, s.B)({
+var r = n(818083),
+    i = (function (e) {
+        return (e[(e.V1 = 0)] = "V1"), (e[(e.V2 = 1)] = "V2"), e;
+    })({});
+let a = (0, r.B)({
     id: "2024-05_quest_bar",
     kind: "user",
     label: "Quest Bar",

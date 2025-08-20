@@ -22,7 +22,7 @@ var r = n(951288),
     y = n(981631),
     C = n(388032),
     N = n(912231);
-function I(e) {
+function E(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
         l = i.useCallback(
@@ -53,7 +53,7 @@ function I(e) {
             });
     }
 }
-function E(e) {
+function I(e) {
     let { guildId: t } = e,
         { nsfwLevel: n, ownerConfiguredContentLevel: s } = (0, l.cj)([d.Z], () => {
             var e, n;
@@ -95,7 +95,7 @@ function S(e) {
     }) || n
         ? null
         : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)("div", { className: N.divider }), (0, r.jsx)(E, { guildId: t })],
+              children: [(0, r.jsx)("div", { className: N.divider }), (0, r.jsx)(I, { guildId: t })],
           });
 }
 function T() {
@@ -126,7 +126,7 @@ function T() {
                 guild: e,
             }),
             (0, r.jsx)("div", { className: N.divider }),
-            (0, r.jsx)("div", { children: (0, r.jsx)(I, { pendingState: t }) }),
+            (0, r.jsx)("div", { children: (0, r.jsx)(E, { pendingState: t }) }),
             null != e && (0, r.jsx)(S, { guildId: e.id }),
         ],
     });

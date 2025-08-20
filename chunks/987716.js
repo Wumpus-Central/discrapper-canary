@@ -96,25 +96,25 @@ let S = (e) => {
             setSelectedGiftStyle: T,
             emojiConfetti: S,
             soundEffect: A,
-            setEmojiConfetti: N,
-            setSoundEffect: C,
+            setEmojiConfetti: C,
+            setSoundEffect: N,
         } = (0, l.wD)(),
         [R, P] = i.useState(!1),
         w = i.useRef(null),
         D = (0, s.arW)({ orientation: "horizontal" }),
-        { ref: L } = D,
-        x = I(D, ["ref"]),
-        M = (0, u.MY)(b, t),
-        k = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        j = M !== u.xr.DEFAULT,
+        { ref: x } = D,
+        L = I(D, ["ref"]),
+        j = (0, u.MY)(b, t),
+        M = j === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        k = j !== u.xr.DEFAULT,
         U = (0, _.m)(),
         G = (0, f.ZP)({ location: "GiftAnimationOptions" }),
         B = (e) => {
-            null != C && C(null == e ? void 0 : e);
+            null != N && N(null == e ? void 0 : e);
         };
     return (0, r.jsxs)("div", {
         children: [
-            j &&
+            k &&
                 (0, r.jsxs)("div", {
                     className: o()(E.giftMainAnimation, n),
                     children: [
@@ -127,7 +127,7 @@ let S = (e) => {
                                   className: E.animation,
                               })
                             : (0, r.jsx)(s.$jN, { className: E.spinner }),
-                        k &&
+                        M &&
                             (0, r.jsxs)("div", {
                                 className: o()(E.soundEmojiContainer, G && E.refresh),
                                 children: [
@@ -136,7 +136,7 @@ let S = (e) => {
                                         onSelect: B,
                                     }),
                                     (0, r.jsx)(h.Z, {
-                                        setEmojiConfetti: N,
+                                        setEmojiConfetti: C,
                                         emojiConfetti: null == S ? void 0 : S,
                                     }),
                                 ],
@@ -155,9 +155,9 @@ let S = (e) => {
                             },
                             className: o()(E.giftBoxOptionContainer, a),
                             "aria-label": g.intl.string(g.t.v54NrK),
-                            ref: L,
+                            ref: x,
                         },
-                        x,
+                        L,
                     ),
                     {
                         children:

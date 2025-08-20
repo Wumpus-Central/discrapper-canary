@@ -1,57 +1,57 @@
-n.d(t, { Z: () => E });
-var s = n(392711),
-    i = n.n(s),
-    r = n(981631),
-    l = n(388032);
-let { CAPTCHA: o, EMAIL: a, PHONE: c, REVERIFY_EMAIL: h, REVERIFY_PHONE: u } = r.PUi,
-    d = {
-        [r.c2C.REQUIRE_VERIFIED_EMAIL]: [a],
-        [r.c2C.REQUIRE_VERIFIED_PHONE]: [c],
-        [r.c2C.REQUIRE_REVERIFIED_EMAIL]: [h],
-        [r.c2C.REQUIRE_REVERIFIED_PHONE]: [u],
-        [r.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [a, c],
-        [r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [c, h],
-        [r.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [a, u],
-        [r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [h, u],
-        [r.c2C.REQUIRE_CAPTCHA]: [o],
-        [r.c2C.AGREEMENTS]: [],
-        [r.c2C.REQUIRE_SAFETY_FLOWS]: [],
+n.d(t, { Z: () => _ });
+var r = n(392711),
+    i = n.n(r),
+    a = n(981631),
+    o = n(388032);
+let { CAPTCHA: s, EMAIL: l, PHONE: c, REVERIFY_EMAIL: u, REVERIFY_PHONE: d } = a.PUi,
+    f = {
+        [a.c2C.REQUIRE_VERIFIED_EMAIL]: [l],
+        [a.c2C.REQUIRE_VERIFIED_PHONE]: [c],
+        [a.c2C.REQUIRE_REVERIFIED_EMAIL]: [u],
+        [a.c2C.REQUIRE_REVERIFIED_PHONE]: [d],
+        [a.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [l, c],
+        [a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [c, u],
+        [a.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [l, d],
+        [a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [u, d],
+        [a.c2C.REQUIRE_CAPTCHA]: [s],
+        [a.c2C.AGREEMENTS]: [],
+        [a.c2C.REQUIRE_SAFETY_FLOWS]: [],
     },
-    E = {
+    _ = {
         isPhoneReverification: (e, t) =>
             void 0 !== e &&
             e.isPhoneVerified() &&
-            (t === r.c2C.REQUIRE_REVERIFIED_PHONE ||
-                t === r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-                t === r.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
+            (t === a.c2C.REQUIRE_REVERIFIED_PHONE ||
+                t === a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+                t === a.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
         isEmailReverification: (e) =>
-            e === r.c2C.REQUIRE_REVERIFIED_EMAIL ||
-            e === r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-            e === r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
+            e === a.c2C.REQUIRE_REVERIFIED_EMAIL ||
+            e === a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+            e === a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
         isFullScreenVerification(e) {
             return (
-                e === r.c2C.REQUIRE_CAPTCHA ||
-                e === r.c2C.REQUIRE_VERIFIED_EMAIL ||
-                e === r.c2C.REQUIRE_VERIFIED_PHONE ||
-                e === r.c2C.REQUIRE_REVERIFIED_PHONE ||
-                e === r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-                e === r.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+                e === a.c2C.REQUIRE_CAPTCHA ||
+                e === a.c2C.REQUIRE_VERIFIED_EMAIL ||
+                e === a.c2C.REQUIRE_VERIFIED_PHONE ||
+                e === a.c2C.REQUIRE_REVERIFIED_PHONE ||
+                e === a.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+                e === a.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
                 this.isEmailReverification(e)
             );
         },
-        getVerificationTypes: (e) => (null == e || "symbol" == typeof e ? [] : d[e]),
+        getVerificationTypes: (e) => (null == e || "symbol" == typeof e ? [] : f[e]),
         getButtonTitle(e) {
             switch (e) {
-                case r.PUi.EMAIL:
-                    return l.intl.string(l.t["1MPz29"]);
-                case r.PUi.PHONE:
-                    return l.intl.string(l.t.mjJecn);
-                case r.PUi.REVERIFY_EMAIL:
-                    return l.intl.string(l.t.nmdPFR);
-                case r.PUi.REVERIFY_PHONE:
-                    return l.intl.string(l.t.of2129);
+                case a.PUi.EMAIL:
+                    return o.intl.string(o.t["1MPz29"]);
+                case a.PUi.PHONE:
+                    return o.intl.string(o.t.mjJecn);
+                case a.PUi.REVERIFY_EMAIL:
+                    return o.intl.string(o.t.nmdPFR);
+                case a.PUi.REVERIFY_PHONE:
+                    return o.intl.string(o.t.of2129);
                 default:
-                    return l.intl.string(l.t["oF6+W1"]);
+                    return o.intl.string(o.t["oF6+W1"]);
             }
         },
         areVerificationTypesEqual: (e, t) => i().isEqual(e, t),

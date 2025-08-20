@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(856651),
     C = n(388032),
     N = n(144563),
-    I = n(21321);
-function E(e) {
+    E = n(21321);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -196,7 +196,7 @@ function w(e) {
                     (function (e, t, n, i, l) {
                         function a(n, r) {
                             let i = [];
-                            for (let t of e) i.push(E({}, t));
+                            for (let t of e) i.push(I({}, t));
                             if (null == n) {
                                 let t = e[r];
                                 null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value
@@ -253,7 +253,7 @@ function w(e) {
                                               }),
                                         e
                                     );
-                                })(E({}, t[0].configuration), {
+                                })(I({}, t[0].configuration), {
                                     connectionMetadataField: void 0,
                                     operator: void 0,
                                     value: void 0,
@@ -289,10 +289,10 @@ function w(e) {
         style: { scrollPaddingTop: g },
         onScroll: Z,
         children: (0, r.jsxs)("div", {
-            className: I.contentWidth,
+            className: E.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
+                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !R }),
                     ref: w,
                     children: (0, r.jsx)(v.Z, {
                         guild: t,

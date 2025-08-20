@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -149,11 +149,11 @@ function A(e) {
     let { messageId: t } = e;
     return E(t, (e) => e.set("reactions", []));
 }
-function N(e) {
+function C(e) {
     let { messageId: t, emoji: n } = e;
     return E(t, (e) => e.removeReactionsForEmoji(n));
 }
-function C(e) {
+function N(e) {
     e.ids.forEach((e) => {
         g(e).handleSearchIndexing();
     });
@@ -224,10 +224,10 @@ class D extends (r = i.ZP.Store) {
     }
 }
 d(D, "displayName", "SearchMessageStore");
-let L = new D(a.Z, {
+let x = new D(a.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
-    SEARCH_MESSAGES_INDEXING: C,
+    SEARCH_MESSAGES_INDEXING: N,
     SEARCH_MESSAGES_FAILURE: R,
     SEARCH_MESSAGES_CLEAR: P,
     SEARCH_MESSAGES_CLEAR_ALL: w,
@@ -236,6 +236,6 @@ let L = new D(a.Z, {
     MESSAGE_REACTION_ADD_MANY: S,
     MESSAGE_REACTION_REMOVE: T,
     MESSAGE_REACTION_REMOVE_ALL: A,
-    MESSAGE_REACTION_REMOVE_EMOJI: N,
+    MESSAGE_REACTION_REMOVE_EMOJI: C,
     CONNECTION_OPEN: y,
 });

@@ -1,35 +1,37 @@
-n.d(t, { Y: () => a }), n(388685);
-var i = n(647438),
-    r = n(442837),
-    s = n(709706);
-function a() {
-    let e = (0, r.e7)([s.Z], () => s.Z.getLastReportedLagTimestamp()),
-        [t, n] = i.useState(!1),
-        [a, l] = i.useState(!1),
-        o = i.useRef(null);
+n.d(t, { Y: () => l }), n(388685);
+var r = n(647438),
+    i = n(442837),
+    a = n(709706);
+let o = 3000,
+    s = 4000;
+function l() {
+    let e = (0, i.e7)([a.Z], () => a.Z.getLastReportedLagTimestamp()),
+        [t, n] = r.useState(!1),
+        [l, c] = r.useState(!1),
+        u = r.useRef(null);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let t = null != e;
             n(t);
-            let i = t ? setTimeout(() => n(!1), 3000) : null;
+            let r = t ? setTimeout(() => n(!1), o) : null;
             return () => {
-                clearTimeout(i), n(!1);
+                clearTimeout(r), n(!1);
             };
         }, [e]),
-        i.useEffect(() => {
-            let t = null != e && null == o.current;
-            l(t);
+        r.useEffect(() => {
+            let t = null != e && null == u.current;
+            c(t);
             let n = null;
             return (
-                t && ((o.current = Date.now()), (n = setTimeout(() => l(!1), 4000))),
+                t && ((u.current = Date.now()), (n = setTimeout(() => c(!1), s))),
                 () => {
-                    clearTimeout(n), l(!1);
+                    clearTimeout(n), c(!1);
                 }
             );
         }, [e]),
         {
             showSilentLagWarning: t,
-            showLagTooltip: a,
+            showLagTooltip: l,
         }
     );
 }

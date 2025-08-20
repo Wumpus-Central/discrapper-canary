@@ -232,13 +232,13 @@
                 "function" == typeof e.confirmCardPayment
             );
         },
-        N = "[object Object]",
-        C = function e(t, n) {
+        C = "[object Object]",
+        N = function e(t, n) {
             if (!T(t) || !T(n)) return t === n;
             var r = Array.isArray(t);
             if (r !== Array.isArray(n)) return !1;
-            var i = Object.prototype.toString.call(t) === N;
-            if (i !== (Object.prototype.toString.call(n) === N)) return !1;
+            var i = Object.prototype.toString.call(t) === C;
+            if (i !== (Object.prototype.toString.call(n) === C)) return !1;
             if (!i && !r) return t === n;
             var a = Object.keys(t),
                 o = Object.keys(n);
@@ -257,7 +257,7 @@
         R = function (e, t, n) {
             return T(e)
                 ? Object.keys(e).reduce(function (i, o) {
-                      var s = !T(t) || !C(e[o], t[o]);
+                      var s = !T(t) || !N(e[o], t[o]);
                       return n.includes(o)
                           ? (s &&
                                 console.warn(
@@ -294,7 +294,7 @@
                       stripe: n,
                   };
         },
-        L = function (e) {
+        x = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -308,9 +308,9 @@
                     url: "https://stripe.com/docs/stripe-js/react",
                 }));
         },
-        x = t.createContext(null);
-    x.displayName = "ElementsContext";
-    var M = function (e, t) {
+        L = t.createContext(null);
+    L.displayName = "ElementsContext";
+    var j = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find Elements context; You need to wrap the part of your app that ".concat(
@@ -320,7 +320,7 @@
                 );
             return e;
         },
-        k = function (e) {
+        M = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -391,31 +391,31 @@
                 ),
                 t.useEffect(
                     function () {
-                        L(s.stripe);
+                        x(s.stripe);
                     },
                     [s.stripe],
                 ),
-                t.createElement(x.Provider, { value: s }, i)
+                t.createElement(L.Provider, { value: s }, i)
             );
         };
-    k.propTypes = {
+    M.propTypes = {
         stripe: O.any,
         options: O.object,
     };
-    var j = function (e) {
-            return M(t.useContext(x), e);
+    var k = function (e) {
+            return j(t.useContext(L), e);
         },
         U = function () {
-            return j("calls useElements()").elements;
+            return k("calls useElements()").elements;
         },
         G = function (e) {
-            return (0, e.children)(j("mounts <ElementsConsumer>"));
+            return (0, e.children)(k("mounts <ElementsConsumer>"));
         };
     G.propTypes = { children: O.func.isRequired };
     var B = ["on", "session"],
-        V = t.createContext(null);
-    V.displayName = "CheckoutSdkContext";
-    var F = function (e, t) {
+        Z = t.createContext(null);
+    Z.displayName = "CheckoutSdkContext";
+    var V = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
@@ -425,8 +425,8 @@
                 );
             return e;
         },
-        Z = t.createContext(null);
-    Z.displayName = "CheckoutContext";
+        F = t.createContext(null);
+    F.displayName = "CheckoutContext";
     var H = function (e, t) {
             if (!e) return null;
             e.on, e.session;
@@ -518,7 +518,7 @@
                             t,
                             n = null == m || null == (e = m.elementsOptions) ? void 0 : e.appearance,
                             i = null == r || null == (t = r.elementsOptions) ? void 0 : t.appearance,
-                            a = !C(i, n),
+                            a = !N(i, n),
                             o = !g && d.checkoutSdk;
                         i && (a || o) && d.checkoutSdk.changeAppearance(i);
                     }
@@ -527,7 +527,7 @@
             ),
                 t.useEffect(
                     function () {
-                        L(d.stripe);
+                        x(d.stripe);
                     },
                     [d.stripe],
                 );
@@ -538,7 +538,7 @@
                 [d.checkoutSdk, s],
             );
             return d.checkoutSdk
-                ? t.createElement(V.Provider, { value: d }, t.createElement(Z.Provider, { value: E }, i))
+                ? t.createElement(Z.Provider, { value: d }, t.createElement(F.Provider, { value: E }, i))
                 : null;
         };
     W.propTypes = {
@@ -549,11 +549,11 @@
         }).isRequired,
     };
     var K = function (e) {
-            return F(t.useContext(V), e);
+            return V(t.useContext(Z), e);
         },
         z = function (e) {
-            var n = t.useContext(V),
-                r = t.useContext(x);
+            var n = t.useContext(Z),
+                r = t.useContext(L);
             if (n && r)
                 throw Error(
                     "You cannot wrap the part of your app that ".concat(
@@ -561,11 +561,11 @@
                         " in both <CheckoutProvider> and <Elements> providers.",
                     ),
                 );
-            return n ? F(n, e) : M(r, e);
+            return n ? V(n, e) : j(r, e);
         },
         q = function () {
             K("calls useCheckout()");
-            var e = t.useContext(Z);
+            var e = t.useContext(F);
             if (!e)
                 throw Error(
                     "Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.",
@@ -598,13 +598,13 @@
                         T = n.onShippingAddressChange,
                         S = n.onShippingRateChange,
                         A = z("mounts <".concat(r, ">")),
-                        N = "elements" in A ? A.elements : null,
-                        C = "checkoutSdk" in A ? A.checkoutSdk : null,
+                        C = "elements" in A ? A.elements : null,
+                        N = "checkoutSdk" in A ? A.checkoutSdk : null,
                         P = l(t.useState(null), 2),
                         w = P[0],
                         D = P[1],
-                        L = t.useRef(null),
-                        x = t.useRef(null);
+                        x = t.useRef(null),
+                        L = t.useRef(null);
                     v(w, "blur", d),
                         v(w, "focus", f),
                         v(w, "escape", h),
@@ -627,19 +627,19 @@
                         v(w, "ready", i),
                         t.useLayoutEffect(
                             function () {
-                                if (null === L.current && null !== x.current && (N || C)) {
+                                if (null === x.current && null !== L.current && (C || N)) {
                                     var t = null;
-                                    if (C)
+                                    if (N)
                                         switch (e) {
                                             case "payment":
-                                                t = C.createPaymentElement(u);
+                                                t = N.createPaymentElement(u);
                                                 break;
                                             case "address":
                                                 if ("mode" in u) {
                                                     var n = u.mode,
                                                         i = s(u, X);
-                                                    if ("shipping" === n) t = C.createShippingAddressElement(i);
-                                                    else if ("billing" === n) t = C.createBillingAddressElement(i);
+                                                    if ("shipping" === n) t = N.createShippingAddressElement(i);
+                                                    else if ("billing" === n) t = N.createBillingAddressElement(i);
                                                     else
                                                         throw Error(
                                                             "Invalid options.mode. mode must be 'billing' or 'shipping'.",
@@ -650,10 +650,10 @@
                                                     );
                                                 break;
                                             case "expressCheckout":
-                                                t = C.createExpressCheckoutElement(u);
+                                                t = N.createExpressCheckoutElement(u);
                                                 break;
                                             case "currencySelector":
-                                                t = C.createCurrencySelectorElement();
+                                                t = N.createCurrencySelectorElement();
                                                 break;
                                             default:
                                                 throw Error(
@@ -663,35 +663,35 @@
                                                     ),
                                                 );
                                         }
-                                    else N && (t = N.create(e, u));
-                                    (L.current = t), D(t), t && t.mount(x.current);
+                                    else C && (t = C.create(e, u));
+                                    (x.current = t), D(t), t && t.mount(L.current);
                                 }
                             },
-                            [N, C, u],
+                            [C, N, u],
                         );
-                    var M = I(u);
+                    var j = I(u);
                     return (
                         t.useEffect(
                             function () {
-                                if (L.current) {
-                                    var e = R(u, M, ["paymentRequest"]);
-                                    e && "update" in L.current && L.current.update(e);
+                                if (x.current) {
+                                    var e = R(u, j, ["paymentRequest"]);
+                                    e && "update" in x.current && x.current.update(e);
                                 }
                             },
-                            [u, M],
+                            [u, j],
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
-                                if (L.current && "function" == typeof L.current.destroy)
+                                if (x.current && "function" == typeof x.current.destroy)
                                     try {
-                                        L.current.destroy(), (L.current = null);
+                                        x.current.destroy(), (x.current = null);
                                     } catch (e) {}
                             };
                         }, []),
                         t.createElement("div", {
                             id: a,
                             className: o,
-                            ref: x,
+                            ref: L,
                         })
                     );
                 },
@@ -789,7 +789,7 @@
                 ),
                 t.useEffect(
                     function () {
-                        L(s);
+                        x(s);
                     },
                     [s],
                 );
@@ -912,10 +912,10 @@
         eT = J("shippingAddress", $),
         eS = J("paymentMethodMessaging", $),
         eA = J("affirmMessage", $),
-        eN = J("afterpayClearpayMessage", $);
+        eC = J("afterpayClearpayMessage", $);
     (e.AddressElement = eI),
         (e.AffirmMessageElement = eA),
-        (e.AfterpayClearpayMessageElement = eN),
+        (e.AfterpayClearpayMessageElement = eC),
         (e.AuBankAccountElement = el),
         (e.CardCvcElement = ef),
         (e.CardElement = ec),
@@ -923,7 +923,7 @@
         (e.CardNumberElement = eu),
         (e.CheckoutProvider = W),
         (e.CurrencySelectorElement = ey),
-        (e.Elements = k),
+        (e.Elements = M),
         (e.ElementsConsumer = G),
         (e.EmbeddedCheckout = eo),
         (e.EmbeddedCheckoutProvider = er),

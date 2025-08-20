@@ -1,15 +1,28 @@
 n.d(t, {
-    $G: () => d,
+    $G: () => _,
     OR: () => p,
-    aL: () => u,
+    aL: () => f,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
+    a = n.n(i),
     o = n(345898),
-    a = n(812331);
-function s(e) {
+    s = n(812331);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -20,63 +33,61 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = 660,
-    d = (e) =>
+let f = 660,
+    _ = (e) =>
         (0, r.jsx)(
             o.Z,
-            c(s({}, e), {
-                className: l()(e.className, {
-                    [a.embedVertical]: !e.isHorizontal,
-                    [a.embedHorizontal]: e.isHorizontal,
+            d(c({}, e), {
+                className: a()(e.className, {
+                    [s.embedVertical]: !e.isHorizontal,
+                    [s.embedHorizontal]: e.isHorizontal,
                 }),
             }),
         ),
     p = (e) => {
-        let { isHorizontal: t } = e;
-        return (0, r.jsx)(
-            d,
-            c(s({}, e), {
-                media: () =>
-                    (0, r.jsx)("div", {
-                        className: a.loadingDescription,
-                        children: (0, r.jsx)("div", {
-                            className: l()(a.loadingBackgroundWrapper, { [a.loadingBackgroundWrapperHorizontal]: t }),
-                            children: (0, r.jsx)("div", { className: a.loadingBackground }),
-                        }),
+        let { isHorizontal: t } = e,
+            n = () => (0, r.jsx)("div", { className: a()(s.loadingImage, { [s.loadingImageHorizontal]: t }) }),
+            i = () =>
+                (0, r.jsx)("div", {
+                    className: s.loadingDescription,
+                    children: (0, r.jsx)("div", {
+                        className: a()(s.loadingBackgroundWrapper, { [s.loadingBackgroundWrapperHorizontal]: t }),
+                        children: (0, r.jsx)("div", { className: s.loadingBackground }),
                     }),
-                title: () => (0, r.jsx)("div", { className: l()(a.loadingImage, { [a.loadingImageHorizontal]: t }) }),
+                });
+        return (0, r.jsx)(
+            _,
+            d(c({}, e), {
+                media: i,
+                title: n,
             }),
         );
     };

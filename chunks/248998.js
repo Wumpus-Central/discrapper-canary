@@ -1,60 +1,61 @@
-n.d(t, { Z: () => p }), n(953529);
-var i = n(951288);
+n.d(t, { Z: () => _ }), n(953529);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(913527),
-    l = n.n(a),
-    o = n(481060),
+var i = n(120356),
+    a = n.n(i),
+    o = n(913527),
+    s = n.n(o),
+    l = n(481060),
     c = n(55935),
-    d = n(955204),
-    u = n(674680),
-    m = n(655219);
-function p(e) {
+    u = n(955204),
+    d = n(674680),
+    f = n(655219);
+function _(e) {
     let { achievementId: t, dateUnlocked: n } = e,
-        r = (0, d.oX)(t);
-    if (null == r) return null;
-    let a = null != n,
-        { name: p, description: g, hideDescriptionUntilUnlock: h, onAction: f } = r,
-        b = h && !a,
-        x = a ? "header-primary" : "text-muted",
-        _ = a ? "header-secondary" : "text-muted",
-        j = l()(n),
-        E = null != f && a,
-        C = E ? o.P3F : "div";
-    return (0, i.jsxs)(C, {
-        className: s()(m.container, E && m.actionable),
-        onClick: () => {
-            E && f();
+        i = (0, u.oX)(t);
+    if (null == i) return null;
+    let o = null != n,
+        { name: _, description: p, hideDescriptionUntilUnlock: h, onAction: m } = i,
+        g = h && !o,
+        E = o ? "header-primary" : "text-muted",
+        b = o ? "header-secondary" : "text-muted",
+        y = s()(n),
+        O = null != m && o,
+        v = () => {
+            O && m();
         },
+        I = O ? l.P3F : "div";
+    return (0, r.jsxs)(I, {
+        className: a()(f.container, O && f.actionable),
+        onClick: v,
         children: [
-            (0, i.jsx)("div", {
-                className: m.iconContainer,
-                children: (0, i.jsx)(u.Z, {
+            (0, r.jsx)("div", {
+                className: f.iconContainer,
+                children: (0, r.jsx)(d.Z, {
                     achievementId: t,
-                    size: u.Z.Sizes.SIZE_40,
-                    unlocked: a,
+                    size: d.Z.Sizes.SIZE_40,
+                    unlocked: o,
                 }),
             }),
-            (0, i.jsxs)("div", {
-                className: m.nameContainer,
+            (0, r.jsxs)("div", {
+                className: f.nameContainer,
                 children: [
                     null != n &&
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-xxs/semibold",
                             color: "text-muted",
-                            className: m.unlocked,
-                            children: (0, c.Y4)(j),
+                            className: f.unlocked,
+                            children: (0, c.Y4)(y),
                         }),
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
-                        color: x,
-                        children: p(),
+                        color: E,
+                        children: _(),
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-xs/normal",
-                        color: _,
-                        children: b ? "?????" : g(),
+                        color: b,
+                        children: g ? "?????" : p(),
                     }),
                 ],
             }),

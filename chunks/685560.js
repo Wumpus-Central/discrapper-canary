@@ -25,11 +25,11 @@ var n = a(951288),
     x = a(645041),
     h = a(713081),
     p = a(675478),
-    b = a(581883),
-    v = a(899667),
+    v = a(581883),
+    b = a(899667),
     f = a(430824),
-    g = a(914010),
-    j = a(981631),
+    j = a(914010),
+    g = a(981631),
     _ = a(617659);
 let y = [
         o.z.GUILD_POWERUP_PERKS_COACHMARK,
@@ -46,12 +46,12 @@ let y = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     N = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    T = [
+    O = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function O(e) {
+function E(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -67,11 +67,11 @@ function O(e) {
             return "ADOPT_CLAN_IDENTITY_NOTICE";
     }
 }
-async function E(e, t, a) {
+async function T(e, t, a) {
     await Promise.all(
         t.map((e) =>
             s.tn.patch({
-                url: j.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
+                url: g.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
                 body: a ? {} : { ends_at: l()().add(1, "day") },
                 rejectWithError: !0,
             }),
@@ -82,29 +82,29 @@ async function E(e, t, a) {
 }
 async function S(e) {
     await s.tn.post({
-        url: j.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
+        url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
         rejectWithError: !0,
     });
 }
 function P() {
     var e;
-    let t = (0, i.e7)([g.Z], () => g.Z.getGuildId()),
+    let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
         a = (0, i.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        r = (0, i.Wu)([b.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
+        r = (0, i.Wu)([v.Z], () => [...C, ...N].filter((e) => null != t && (0, x.OY)(e, t))),
         l =
             null !=
-            (e = (0, i.e7)([b.Z], () => {
+            (e = (0, i.e7)([v.Z], () => {
                 var e;
-                return null == (e = b.Z.settings.userContent) ? void 0 : e.dismissedContents;
+                return null == (e = v.Z.settings.userContent) ? void 0 : e.dismissedContents;
             }))
                 ? e
                 : new Uint8Array(),
-        s = (0, i.Wu)([v.Z], () => {
+        s = (0, i.Wu)([b.Z], () => {
             var e;
-            return null != t && null != (e = v.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
+            return null != t && null != (e = b.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
         });
     if (null != t)
         return (0, n.jsxs)(c.zJl, {
@@ -162,14 +162,14 @@ function P() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        E(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        T(t, s.slice(Math.floor(s.length / 2)), !1);
                                     },
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        E(t, s, !0);
+                                        T(t, s, !0);
                                     },
                                 }),
                             ],
@@ -219,7 +219,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: O(e),
+                                        children: E(e),
                                     }),
                                 },
                                 e,
@@ -247,7 +247,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: O(e),
+                                        children: E(e),
                                     }),
                                 },
                                 e,
@@ -263,7 +263,7 @@ function P() {
                             className: _.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        T.map((e) =>
+                        O.map((e) =>
                             (0, n.jsx)(
                                 u.u,
                                 {

@@ -1,83 +1,86 @@
-n.d(t, { Z: () => b });
-var i = n(951288);
+n.d(t, { Z: () => E });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(468194),
-    l = n(399606),
-    o = n(481060),
+var i = n(120356),
+    a = n.n(i),
+    o = n(468194),
+    s = n(399606),
+    l = n(481060),
     c = n(372769),
-    d = n(601964),
-    u = n(914788),
-    m = n(981631),
-    p = n(345909),
-    g = n(388032),
+    u = n(601964),
+    d = n(914788),
+    f = n(981631),
+    _ = n(345909),
+    p = n(388032),
     h = n(987588);
-let f = [18, 18, 16, 16, 14, 12, 10],
-    b = (e) => {
-        let { guildId: t } = e,
-            n = (0, l.e7)([u.Z], () => u.Z.getGuild(t));
-        if (void 0 === n) return null;
-        let r = n.features.has(m.oNc.VERIFIED) || n.features.has(m.oNc.PARTNERED),
-            { name: b } = n,
-            x = (0, d.EB)(n, 40, !0),
-            _ = null,
-            j = f[f.length - 1];
-        if (null == n.icon && null != b) {
-            var E;
-            j = null != (E = f[(_ = (0, a.Zg)(b)).length - 1]) ? E : f[f.length - 1];
-        }
-        return (0, i.jsxs)("div", {
+let m = [18, 18, 16, 16, 14, 12, 10];
+function g(e) {
+    var t;
+    return null != (t = m[e.length - 1]) ? t : m[m.length - 1];
+}
+let E = (e) => {
+    let { guildId: t } = e,
+        n = (0, s.e7)([d.Z], () => d.Z.getGuild(t));
+    if (void 0 === n) return null;
+    let i = n.features.has(f.oNc.VERIFIED) || n.features.has(f.oNc.PARTNERED),
+        { name: E } = n,
+        b = (0, u.EB)(n, 40, !0),
+        y = null,
+        O = m[m.length - 1];
+    return (
+        null == n.icon && null != E && (O = g((y = (0, o.Zg)(E)))),
+        (0, r.jsxs)("div", {
             className: h.container,
             children: [
-                (0, i.jsxs)("div", {
-                    style: { fontSize: j },
+                (0, r.jsxs)("div", {
+                    style: { fontSize: O },
                     children: [
-                        null != _
-                            ? (0, i.jsx)("div", {
-                                  className: s()(h.childWrapper, h.acronym),
+                        null != y
+                            ? (0, r.jsx)("div", {
+                                  className: a()(h.childWrapper, h.acronym),
                                   "aria-hidden": !0,
-                                  children: _,
+                                  children: y,
                               })
                             : null,
-                        null != x
-                            ? (0, i.jsx)(o.qEK, {
-                                  src: x,
-                                  size: o.EFr.SIZE_40,
+                        null != b
+                            ? (0, r.jsx)(l.qEK, {
+                                  src: b,
+                                  size: l.EFr.SIZE_40,
                                   "aria-hidden": !0,
                               })
                             : null,
                     ],
                 }),
-                (0, i.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     className: h.descriptors,
                     children: [
-                        (0, i.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             className: h.header,
                             children: [
-                                r
-                                    ? (0, i.jsx)(c.Z, {
+                                i
+                                    ? (0, r.jsx)(c.Z, {
                                           guild: n,
                                           tooltipPosition: "bottom",
-                                          tooltipColor: o.ua7.Colors.PRIMARY,
+                                          tooltipColor: l.ua7.Colors.PRIMARY,
                                           className: h.guildBadge,
                                       })
                                     : null,
-                                (0, i.jsx)(o.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: "text-md/semibold",
-                                    children: b,
+                                    children: E,
                                 }),
                             ],
                         }),
                         void 0 !== n.approximateMemberCount
-                            ? (0, i.jsx)(o.Text, {
+                            ? (0, r.jsx)(l.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-muted",
-                                  children: g.intl.format(p.default["5JmNgo"], { members: n.approximateMemberCount }),
+                                  children: p.intl.format(_.default["5JmNgo"], { members: n.approximateMemberCount }),
                               })
                             : null,
                     ],
                 }),
             ],
-        });
-    };
+        })
+    );
+};

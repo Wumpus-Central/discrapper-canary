@@ -1,11 +1,11 @@
-n.d(t, { Z: () => j });
-var r = n(951288),
-    l = n(647438),
+n.d(t, { Z: () => h });
+var l = n(951288),
+    r = n(647438),
     a = n(120356),
     i = n.n(a),
     o = n(399606),
-    s = n(481060),
-    c = n(547972),
+    c = n(481060),
+    s = n(547972),
     u = n(556296),
     d = n(13140),
     p = n(435064),
@@ -13,26 +13,26 @@ var r = n(951288),
     f = n(332325),
     b = n(388032),
     g = n(641719);
-function j(e) {
+function h(e) {
     let { isEmptyBecauseQuery: t, closePopout: n } = e,
         a = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
-        j = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
+        h = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
         y = t ? g.noSearchResultsImage : g.noClipsImage,
-        h = l.useCallback(() => {
-            n(), (0, c.Z)(f.Z.CLIPS);
+        x = r.useCallback(() => {
+            n(), (0, s.Z)(f.Z.CLIPS);
         }, [n]),
-        x = (() => {
-            if (!j) return b.intl.format(b.t["3iveam"], { onClick: h });
+        j = (() => {
+            if (!h) return b.intl.format(b.t["3iveam"], { onClick: x });
             if (t) return b.intl.string(b.t["xrEs6+"]);
-            if (null == a) return b.intl.format(b.t.jpKk7e, { onClick: h });
+            if (null == a) return b.intl.format(b.t.jpKk7e, { onClick: x });
             {
                 let e = d.BB(a.shortcut, !0);
                 return b.intl.format(b.t["xY/8Ky"], {
                     keybind: e,
                     keybindHook: () =>
-                        (0, r.jsx)("span", {
+                        (0, l.jsx)("span", {
                             className: g.keybindHintKeys,
-                            children: (0, r.jsx)(s.M2$, {
+                            children: (0, l.jsx)(c.M2$, {
                                 className: g.keybindShortcut,
                                 shortcut: e,
                             }),
@@ -40,16 +40,16 @@ function j(e) {
                 });
             }
         })();
-    return (0, r.jsx)("div", {
+    return (0, l.jsx)("div", {
         className: g.container,
-        children: (0, r.jsxs)("div", {
+        children: (0, l.jsxs)("div", {
             className: g.content,
             children: [
-                (0, r.jsx)("div", { className: y }),
-                (0, r.jsx)(s.Text, {
+                (0, l.jsx)("div", { className: y }),
+                (0, l.jsx)(c.Text, {
                     variant: "text-md/medium",
                     className: i()(g.noClipsText, { [g.noSearchResultsText]: t }),
-                    children: x,
+                    children: j,
                 }),
             ],
         }),

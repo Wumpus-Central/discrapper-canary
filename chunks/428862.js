@@ -286,9 +286,9 @@ function C(e) {
 }
 let N = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
-        return null !== r ? r : n ? (0, l.jsx)(I, { transform: t }) : (0, l.jsx)(E, { subscriptionsRequired: i });
+        return null !== r ? r : n ? (0, l.jsx)(E, { transform: t }) : (0, l.jsx)(I, { subscriptionsRequired: i });
     },
-    I = (e) => {
+    E = (e) => {
         let { transform: t } = e;
         return (0, l.jsx)(c.animated.div, {
             style: { transform: t },
@@ -296,7 +296,7 @@ let N = (e) => {
             children: x.intl.string(x.t.dNGM0t),
         });
     },
-    E = (e) => {
+    I = (e) => {
         let { subscriptionsRequired: t } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [

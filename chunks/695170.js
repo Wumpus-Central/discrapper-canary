@@ -7,7 +7,7 @@ n.d(t, {
     L1: () => v,
     Od: () => T,
     VQ: () => s,
-    ZY: () => N,
+    ZY: () => C,
     d9: () => O,
     fv: () => h,
     gE: () => S,
@@ -122,7 +122,7 @@ var r = n(686942),
     A = function (e, t) {
         return e.toLocaleString("sv-SE", { timeZone: t }).replace(" ", "T") + "Z";
     },
-    N = function (e, t) {
+    C = function (e, t) {
         var n = new Date(A(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
             r = new Date(A(e, null != t ? t : "UTC")).getTime() - n.getTime();
         return new Date(e.getTime() - r);

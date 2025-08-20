@@ -48,29 +48,29 @@ let y = (e) => {
     let { type: t, guildId: r, closePopout: _ } = e,
         y = (0, u.Dt)(),
         {
-            notClaimed: v,
-            notEmailVerified: j,
+            notClaimed: j,
+            notEmailVerified: v,
             notPhoneVerified: C,
-            newAccount: E,
-            newMember: x,
+            newAccount: x,
+            newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
-        P = null,
-        I = null;
+        I = null,
+        P = null;
     return (0 === t &&
-        (v
-            ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
+        (j
+            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
             : C
-              ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
-              : j
-                ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
-                : x
-                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))
-                  : E &&
-                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))),
-    null == S || null == P)
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              : v
+                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                : E
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))
+                  : x &&
+                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))),
+    null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
@@ -92,20 +92,20 @@ let y = (e) => {
                           (0, i.jsx)(a.Text, {
                               color: "header-secondary",
                               variant: "text-sm/normal",
-                              children: P,
+                              children: I,
                           }),
                           (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
-                                  null != I
+                                  null != P
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(a.zxk, {
                                                 variant: "primary",
-                                                text: I,
+                                                text: P,
                                                 onClick: () => {
-                                                    v
+                                                    j
                                                         ? c.j()
                                                         : C
                                                           ? (0, a.ZDy)(
@@ -121,7 +121,7 @@ let y = (e) => {
                                                                 },
                                                                 { modalKey: g.M },
                                                             )
-                                                          : j &&
+                                                          : v &&
                                                             (s.Z.verifyResend(),
                                                             (0, a.h7j)((e) => {
                                                                 var t, n, r;
@@ -176,7 +176,7 @@ let y = (e) => {
                                             }),
                                         })
                                       : null,
-                                  v || C || j
+                                  j || C || v
                                       ? (0, i.jsx)(o.zx, {
                                             onClick: _,
                                             look: o.zx.Looks.BLANK,

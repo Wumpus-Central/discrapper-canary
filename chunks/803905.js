@@ -1,33 +1,33 @@
 n.d(t, {
     $0: () => R,
-    AN: () => k,
+    AN: () => M,
     Ct: () => A,
-    DU: () => V,
+    DU: () => Z,
     EQ: () => B,
     Ej: () => T,
     ME: () => m,
     O1: () => v,
     O8: () => w,
     Pl: () => I,
-    Uw: () => L,
-    ZE: () => M,
+    Uw: () => x,
+    ZE: () => j,
     _G: () => O,
     _O: () => S,
     _y: () => g,
-    do: () => j,
+    do: () => k,
     g7: () => P,
     g_: () => p,
     hs: () => b,
-    j4: () => C,
+    j4: () => N,
     ks: () => H,
     lX: () => y,
     m_: () => h,
     qH: () => D,
     tj: () => E,
-    uw: () => N,
+    uw: () => C,
     wN: () => G,
     zZ: () => U,
-    zm: () => x,
+    zm: () => L,
 }),
     n(49124);
 var r = n(848246),
@@ -49,7 +49,7 @@ function f(e, t) {
         let n = d[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = F[n];
+        let r = V[n];
         if (null == r)
             return (
                 u.warn(
@@ -86,25 +86,25 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     T = new _(r.q.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
     S = new _("collectibles"),
     A = new _("appIcons"),
-    N = new _(r.q.CLIENT_THEMES),
-    C = new _("boostDiscount"),
+    C = new _(r.q.CLIENT_THEMES),
+    N = new _("boostDiscount"),
     R = new _("freeBoosts"),
     P = new _(r.q.STREAM_MID_QUALITY),
     w = new _(r.q.STREAM_HIGH_QUALITY),
     D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    L = new _("fancyVoiceChannelReactions"),
-    x = new _("installPremiumApplications"),
-    M = new _("redeemPremiumPerks"),
-    k = new _(r.q.VIDEO_FILTER_ASSETS);
+    x = new _("fancyVoiceChannelReactions"),
+    L = new _("installPremiumApplications"),
+    j = new _("redeemPremiumPerks"),
+    M = new _(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let j = new _(r.q.INCREASED_GUILD_LIMIT),
+let k = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _("increasedVideoUploadQuality"),
     B = new _("uploadLargeFiles"),
-    V = new _(r.q.CHAT_WALLPAPERS),
-    F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
+    Z = new _(r.q.CHAT_WALLPAPERS),
+    V = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, M, G, B, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, N, P, x, G, B, A]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
             p,
             h,
@@ -116,16 +116,16 @@ let j = new _(r.q.INCREASED_GUILD_LIMIT),
             v,
             I,
             T,
-            N,
             C,
+            N,
             R,
             P,
             w,
-            L,
             x,
+            L,
+            j,
             M,
             k,
-            j,
             U,
             G,
             B,
@@ -133,10 +133,10 @@ let j = new _(r.q.INCREASED_GUILD_LIMIT),
             S,
             D,
             b,
-            V,
+            Z,
         ]),
     }),
-    Z = [C, R];
+    F = [N, R];
 function H(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && F.includes(e))) && e.getFeatureValue(t);
 }

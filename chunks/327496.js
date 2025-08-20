@@ -120,7 +120,7 @@ let y = (e) => {
         ]);
     let A = (0, s.k6)();
     null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
-    let N = i.useCallback(
+    let C = i.useCallback(
             (e) => {
                 if (null == v);
                 else if ("string" == typeof v) A.push(v);
@@ -132,11 +132,11 @@ let y = (e) => {
             },
             [A, v, I],
         ),
-        C = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
+        N = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
         p(f({}, S), {
-            onClick: N,
+            onClick: C,
             className: o()(y, u.wrapper, { [u.selected]: T }),
             style: p(f({}, O), { fontSize: n }),
             focusProps: { enabled: !1 },
@@ -154,8 +154,8 @@ let y = (e) => {
                           className: u.icon,
                           src: _,
                           alt: " ",
-                          width: C,
-                          height: C,
+                          width: N,
+                          height: N,
                           "aria-hidden": !0,
                       })
                     : null,

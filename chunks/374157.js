@@ -203,11 +203,11 @@ function* _(e) {
         T = null != (i = null == (n = y.path) ? void 0 : n[0]) ? i : O.length - 1,
         S = m ? T : I,
         A = m ? I : T,
-        N = S;
+        C = S;
     for (;;) {
-        let t = O[N],
-            n = null != (u = N === I ? (null == (o = b.path) ? void 0 : o[1]) : null) ? u : 0,
-            r = null != (d = N === T ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
+        let t = O[C],
+            n = null != (u = C === I ? (null == (o = b.path) ? void 0 : o[1]) : null) ? u : 0,
+            r = null != (d = C === T ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
             i = m ? r : n,
             p = m ? n : r,
             h = i;
@@ -215,7 +215,7 @@ function* _(e) {
             let n,
                 r,
                 i = t.children[h],
-                o = [N, h];
+                o = [C, h];
             if (
                 ((n =
                     a.C0.equals(o, b.path) || a.C0.isAncestor(o, b.path)
@@ -253,7 +253,7 @@ function* _(e) {
             if (h === p) break;
             h += v;
         }
-        if (N === A) break;
-        N += v;
+        if (C === A) break;
+        C += v;
     }
 }

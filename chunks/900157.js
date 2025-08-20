@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(592125),
     x = n(703558),
     v = n(430824),
-    j = n(979651),
-    O = n(664342),
+    O = n(979651),
+    j = n(664342),
     E = n(124368),
     S = n(981631),
     P = n(388032),
@@ -74,7 +74,7 @@ function N(e) {
         w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
     var M = A;
-    let k = (0, o.e7)([j.Z], () => null != M && !a().isEmpty(j.Z.getVoiceStatesForChannel(M.id)));
+    let k = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
     i.useEffect(() => {
         k &&
             null != M &&
@@ -96,7 +96,7 @@ function N(e) {
         null == A || null == w)
     )
         return null;
-    let L = (0, r.jsx)(O.Z, {
+    let L = (0, r.jsx)(j.Z, {
         channel: A,
         baseChannelId: l,
     });

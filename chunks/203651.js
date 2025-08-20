@@ -370,8 +370,8 @@ function A(e, t) {
             t.send(void 0 === n ? null : n);
     }),
     (E.agent = () => new m());
-for (var N = 0, C = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; N < C.length; N++) {
-    let e = C[N];
+for (var C = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; C < N.length; C++) {
+    let e = N[C];
     m.prototype[e.toLowerCase()] = function (t, n) {
         let r = new E.Request(e, t);
         return this._setDefaults(r), n && r.end(n), r;

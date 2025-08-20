@@ -24,14 +24,14 @@ function f(e) {
         };
     let S = null == p ? void 0 : p.getPreviewThemeColors(h),
         A = null != (t = null == S ? void 0 : S[0]) ? t : (0, r._i)(I),
-        N = null != (n = null == S ? void 0 : S[1]) ? n : (0, r._i)(T),
-        C = y || E ? b : null != (f = (0, u.V3)(A)) ? f : b;
+        C = null != (n = null == S ? void 0 : S[1]) ? n : (0, r._i)(T),
+        N = y || E ? b : null != (f = (0, u.V3)(A)) ? f : b;
     return (
-        C === d.BRd.DARK && (0, a.wj)(b) ? (C = b) : C === d.BRd.DARK && (0, a.ap)(b) && (C = d.BRd.DARKER),
+        N === d.BRd.DARK && (0, a.wj)(b) ? (N = b) : N === d.BRd.DARK && (0, a.ap)(b) && (N = d.BRd.DARKER),
         {
-            theme: C,
+            theme: N,
             primaryColor: A,
-            secondaryColor: N,
+            secondaryColor: C,
         }
     );
 }

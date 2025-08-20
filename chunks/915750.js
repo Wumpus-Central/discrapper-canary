@@ -1,5 +1,5 @@
 n.d(t, {
-    B5: () => M,
+    B5: () => j,
     PI: () => w,
     WD: () => U,
     aM: () => G,
@@ -46,7 +46,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,15 +62,15 @@ function N(e) {
     }
     return e;
 }
-let C = 100,
+let N = 100,
     R = 60,
     P = 1,
     w = 0.5,
     D = new Set();
-function L(e, t) {
+function x(e, t) {
     return "".concat(e, "_").concat(t);
 }
-class x {
+class L {
     getId() {
         return this.id;
     }
@@ -149,8 +149,8 @@ class x {
                 : null;
         return (
             null !== d && (u.selected_guild_banner_url = d),
-            u.guilds.length > C && ((u.guilds = u.guilds.slice(0, C)), (u.truncated = !0)),
-            u.channels.length > C && ((u.channels = u.channels.slice(0, C)), (u.truncated = !0)),
+            u.guilds.length > N && ((u.guilds = u.guilds.slice(0, N)), (u.truncated = !0)),
+            u.channels.length > N && ((u.channels = u.channels.slice(0, N)), (u.truncated = !0)),
             { brand_safety_context: JSON.stringify(u) }
         );
     }
@@ -193,7 +193,7 @@ class x {
                     let t = !1,
                         n = (0, y.Zp)(this.questContent);
                     if (null != n) {
-                        let r = L(e.id, n);
+                        let r = x(e.id, n);
                         (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
@@ -202,7 +202,7 @@ class x {
                             questId: e.id,
                             event: S.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
-                            properties: N(
+                            properties: C(
                                 {
                                     min_view_time_seconds: this.minViewTimeSeconds,
                                     min_viewport_percentage: this.minViewportPercentage,
@@ -236,7 +236,7 @@ class x {
                             (0, b.dA)({
                                 questId: t.id,
                                 event: S.rMx.QUEST_CONTENT_VIEW_TIME,
-                                properties: N(
+                                properties: C(
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
@@ -252,7 +252,7 @@ class x {
                     (p.lastBeatTime = Date.now());
             }),
             A(this, "commonProperties", (e) =>
-                N(
+                C(
                     {
                         impression_id: this.id,
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
@@ -265,7 +265,7 @@ class x {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new x({
+                    new L({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -295,7 +295,7 @@ class x {
                             (0, b.dA)({
                                 questId: e.id,
                                 event: S.rMx.QUEST_CONTENT_LOADED,
-                                properties: N(
+                                properties: C(
                                     { triggered_by_status_change: this.triggeredByStatusChange },
                                     this.commonProperties(e),
                                 ),
@@ -331,7 +331,7 @@ class x {
             (this.sourceQuestContent = f);
     }
 }
-let M = (e, t) => {
+let j = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -340,14 +340,14 @@ let M = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    k = (e) => {
+    M = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    j = i.createContext(void 0);
+    k = i.createContext(void 0);
 function U() {
-    let e = i.useContext(j);
+    let e = i.useContext(k);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -356,7 +356,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = k(e.questOrQuests),
+        d = M(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -369,7 +369,7 @@ function B(e) {
                 o = ((n || c) && !r) || d;
             (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((f.current = new x({
+                    ((f.current = new L({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -396,7 +396,7 @@ function B(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(j.Provider, {
+        (0, r.jsx)(k.Provider, {
             value: f,
             children: e.children(o, f),
         })

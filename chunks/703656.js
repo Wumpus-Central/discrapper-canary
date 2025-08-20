@@ -1,9 +1,9 @@
 let r, i, a;
 n.d(t, {
     At: () => T,
-    DB: () => C,
+    DB: () => N,
     DR: () => S,
-    Wf: () => N,
+    Wf: () => C,
     XU: () => y,
     dL: () => v,
     eH: () => P,
@@ -135,7 +135,7 @@ function A(e) {
     }
     return !e.startsWith(u.Z5c.HANDOFF);
 }
-function N(e) {
+function C(e) {
     if (null == e) {
         var t;
         e = null != (t = r.location.pathname) ? t : "";
@@ -157,7 +157,7 @@ function N(e) {
     else if (e.startsWith(u.Z5c.ACCOUNT_REVERT(""))) return u.Usc.ACCOUNT_REVERT;
     return e;
 }
-function C() {
+function N() {
     return h;
 }
 function R() {

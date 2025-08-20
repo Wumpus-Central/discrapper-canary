@@ -25,19 +25,19 @@ function v(e) {
         T = (0, p.W)(t),
         S = (0, u.ZP)(t, !0),
         A = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
-        N = i.useMemo(
+        C = i.useMemo(
             () => (null == A || "" === A ? null : _.Z.parseVoiceChannelStatus(A, !0, { channelId: t.id })),
             [A, t.id],
         );
     i.useEffect(() => {
-        null != N &&
+        null != C &&
             h.default.track(E.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: I,
             });
-    }, [N, t.id, t.guild_id, I]);
-    let C = (e) => {
+    }, [C, t.id, t.guild_id, I]);
+    let N = (e) => {
         e.stopPropagation(),
             n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
             v === b.l.POPOUT && (null == a || a()),
@@ -49,10 +49,10 @@ function v(e) {
     return S && T
         ? (0, r.jsxs)(l.P3F, {
               className: O.clickable,
-              onClick: C,
+              onClick: N,
               children: [
                   (0, r.jsx)(g.Z, {
-                      text: null != N ? N : y.intl.string(y.t.Mgpxi4),
+                      text: null != C ? C : y.intl.string(y.t.Mgpxi4),
                       variant: "text-xs/normal",
                       color: "text-secondary",
                       className: O.text,
@@ -60,14 +60,14 @@ function v(e) {
                   (0, r.jsx)(l.vdY, {
                       color: "currentColor",
                       size: "xxs",
-                      className: o()(O.pencilIcon, null != N ? O.hidden : void 0),
+                      className: o()(O.pencilIcon, null != C ? O.hidden : void 0),
                       "aria-label": y.intl.string(y.t.bt75u7),
                   }),
               ],
           })
-        : null != N
+        : null != C
           ? (0, r.jsx)(g.Z, {
-                text: N,
+                text: C,
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 className: O.text,

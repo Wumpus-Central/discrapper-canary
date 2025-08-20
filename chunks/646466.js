@@ -1,4 +1,4 @@
-a.d(t, { O: () => T }), a(388685);
+a.d(t, { O: () => O }), a(388685);
 var n = a(951288),
     r = a(647438),
     l = a(481060),
@@ -48,11 +48,11 @@ let h = [
         label: "[none selected]",
         value: null,
     },
-    b = {
+    v = {
         label: "[preview all]",
         value: null,
     },
-    v = () => {
+    b = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
@@ -80,7 +80,7 @@ let h = [
                   },
               );
     },
-    g = () => {
+    j = () => {
         let e = (0, i.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: a } = (0, o.N9)(),
             s = r.useMemo(
@@ -122,12 +122,12 @@ let h = [
             ],
         });
     },
-    j = () => {
+    g = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
             { avatarDecorationAssets: a } = (0, o.xq)(),
             i = r.useMemo(
                 () => [
-                    b,
+                    v,
                     ...a.map((e) => ({
                         label: e.name,
                         value: e.name,
@@ -424,14 +424,14 @@ let h = [
                         (0, n.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: v,
+                            onClick: b,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),
                     ],
                 }),
-                (0, n.jsx)(g, {}),
                 (0, n.jsx)(j, {}),
+                (0, n.jsx)(g, {}),
                 (0, n.jsx)(_, {
                     clearAssets: s,
                     clearIgnoredFiles: u,
@@ -443,7 +443,7 @@ let h = [
             ],
         });
     },
-    T = () => {
+    O = () => {
         let [e, t] = r.useState("preview");
         return (0, n.jsxs)("div", {
             className: m.container,

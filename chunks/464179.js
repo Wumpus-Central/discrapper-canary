@@ -163,13 +163,13 @@ let O = "US",
         label: e.name,
     })).filter((e) => "KP" !== e.value && "SY" !== e.value),
     A = (0, u.hQ)(),
-    N = (0, u.hQ)(),
     C = (0, u.hQ)(),
+    N = (0, u.hQ)(),
     R = (0, u.hQ)(),
     P = (0, u.hQ)(),
     w = (0, u.hQ)(),
     D = (0, u.hQ)();
-var L = (function (e) {
+var x = (function (e) {
         return (
             (e.MODAL_US = "modalUS"),
             (e.MODAL_INTL = "modalInternational"),
@@ -183,15 +183,15 @@ var L = (function (e) {
             (e.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile"),
             e
         );
-    })(L || {}),
-    x = (function (e) {
+    })(x || {}),
+    L = (function (e) {
         return (e.EDIT = "edit"), (e.CREATE = "create"), e;
-    })(x || {});
-let M = {
+    })(L || {});
+let j = {
         [O]: l.G,
         [v]: o.X,
     },
-    k = (e) => ({
+    M = (e) => ({
         name: "name",
         id: A,
         title: () => _.intl.string(_.t.vyuULS),
@@ -210,9 +210,9 @@ let M = {
                 : p.width60,
         renderInput: (e) => (0, i.jsx)(c.oil, m({}, e)),
     }),
-    j = (e) => ({
+    k = (e) => ({
         name: "country",
-        id: N,
+        id: C,
         title: () => _.intl.string(_.t.eDdrAA),
         autoComplete: "country",
         getClassNameForLayout: (e) => {
@@ -245,7 +245,7 @@ let M = {
     }),
     U = (e) => ({
         name: "line1",
-        id: C,
+        id: N,
         title: () => _.intl.string(_.t.x0beVV),
         autoComplete: "address-line1",
         placeholder: () => _.intl.string(_.t["ynII//"]),
@@ -307,7 +307,7 @@ let M = {
         },
         renderInput: (e) => (0, i.jsx)(c.oil, m({}, e)),
     }),
-    V = (e) => {
+    Z = (e) => {
         let t, n;
         switch (e) {
             case O:
@@ -345,7 +345,7 @@ let M = {
             renderInput: (e) => (0, i.jsx)(c.oil, m({}, e)),
         };
     },
-    F = (e) => {
+    V = (e) => {
         let t;
         switch (e) {
             case O:
@@ -380,7 +380,7 @@ let M = {
                 }
             },
             renderInput(t) {
-                let n = M[e],
+                let n = j[e],
                     r =
                         null == t.value ||
                         "" === t.value ||
@@ -407,17 +407,17 @@ let M = {
             },
         };
     },
-    Z = {
-        modalUS: [[j], [U], [G], [B], [F, V]],
-        modalInternational: [[j], [U], [G], [B], [F], [V]],
-        modalUSWithName: [[j], [k], [U], [G], [B], [F, V]],
-        modalInternationalWithName: [[j], [k], [U], [G], [B], [F], [V]],
-        settingsUS: [[k], [U, G], [B, F, V], [j]],
-        settingsUSMobile: [[k], [U], [G], [B], [F], [V], [j]],
-        settingsInternational: [[k], [U, G], [B], [F, V], [j]],
-        settingsInternationalMobile: [[k], [U], [G], [B], [F], [V], [j]],
-        settingsInternationalWithoutName: [[U, G], [B], [F, V], [j]],
-        settingsInternationalWithoutNameMobile: [[U], [G], [B], [F], [V], [j]],
+    F = {
+        modalUS: [[k], [U], [G], [B], [V, Z]],
+        modalInternational: [[k], [U], [G], [B], [V], [Z]],
+        modalUSWithName: [[k], [M], [U], [G], [B], [V, Z]],
+        modalInternationalWithName: [[k], [M], [U], [G], [B], [V], [Z]],
+        settingsUS: [[M], [U, G], [B, V, Z], [k]],
+        settingsUSMobile: [[M], [U], [G], [B], [V], [Z], [k]],
+        settingsInternational: [[M], [U, G], [B], [V, Z], [k]],
+        settingsInternationalMobile: [[M], [U], [G], [B], [V], [Z], [k]],
+        settingsInternationalWithoutName: [[U, G], [B], [V, Z], [k]],
+        settingsInternationalWithoutNameMobile: [[U], [G], [B], [V], [Z], [k]],
     };
 class H extends (r = a.PureComponent) {
     componentDidMount() {
@@ -469,7 +469,7 @@ class H extends (r = a.PureComponent) {
     render() {
         let { errors: e, values: t } = this.state,
             { layout: n, mode: r, className: a, error: o } = this.props,
-            s = Z[n];
+            s = F[n];
         if (null == s) throw Error("Provide a proper layout property.");
         let l = t.country,
             c = s
@@ -520,8 +520,8 @@ class H extends (r = a.PureComponent) {
             });
     }
 }
-h(H, "Layouts", L),
-    h(H, "Modes", x),
+h(H, "Layouts", x),
+    h(H, "Modes", L),
     h(H, "defaultProps", {
         name: "",
         country: "",

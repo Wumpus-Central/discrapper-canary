@@ -115,7 +115,7 @@ let a = new (n(147567))(),
         l("caret", (e = T(e, t))),
         l("tildes", (e = v(e, t))),
         l("xrange", (e = A(e, t))),
-        l("stars", (e = C(e, t))),
+        l("stars", (e = N(e, t))),
         e
     ),
     O = (e) => !e || "x" === e.toLowerCase() || "*" === e,
@@ -192,10 +192,10 @@ let a = new (n(147567))(),
         l("replaceXRanges", e, t),
         e
             .split(/\s+/)
-            .map((e) => N(e, t))
+            .map((e) => C(e, t))
             .join(" ")
     ),
-    N = (e, t) => {
+    C = (e, t) => {
         e = e.trim();
         let n = t.loose ? u[d.XRANGELOOSE] : u[d.XRANGE];
         return e.replace(n, (n, r, i, a, o, s) => {
@@ -225,7 +225,7 @@ let a = new (n(147567))(),
             );
         });
     },
-    C = (e, t) => (l("replaceStars", e, t), e.trim().replace(u[d.STAR], "")),
+    N = (e, t) => (l("replaceStars", e, t), e.trim().replace(u[d.STAR], "")),
     R = (e, t) => (l("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], "")),
     P = (e) => (t, n, r, i, a, o, s, l, c, u, d, f) => (
         (n = O(r)

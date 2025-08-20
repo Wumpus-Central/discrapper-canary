@@ -105,7 +105,7 @@ function A(e, t, n, r) {
             throw Error("Unexpected position: ".concat(e));
     }
 }
-function N(e, t, n) {
+function C(e, t, n) {
     return {
         top: e.top - n,
         left: e.left - t,
@@ -115,7 +115,7 @@ function N(e, t, n) {
         height: e.height,
     };
 }
-function C(e) {
+function N(e) {
     switch (e) {
         case "top":
             return "bottom";
@@ -258,7 +258,7 @@ class D extends (r = a.Component) {
         let { spacing: i = 0 } = this.props,
             a = P(this.props),
             o = n.getBoundingClientRect(),
-            s = N(a, o.left, o.top);
+            s = C(a, o.left, o.top);
         switch (e) {
             case "top":
                 return this.getHorizontalAlignmentStyle(s, t, n, { bottom: n.offsetHeight - s.top + i });
@@ -298,7 +298,7 @@ class D extends (r = a.Component) {
             u = null,
             d = 0;
         if (t && s < 0) {
-            let t = C(e),
+            let t = N(e),
                 i = this.calculatePositionStyle(t, n, r);
             (u = i.style), (d = i.nudge);
             let a = A(t, u, n, r);
@@ -324,7 +324,7 @@ class D extends (r = a.Component) {
                     i !== t
                 ) {
                     let e = this.calculatePositionStyle(i, n, r, a),
-                        t = A(C(a), e.style, n, r);
+                        t = A(N(a), e.style, n, r);
                     t > l && ((o = b({ position: a }, e)), (l = t));
                 }
             }

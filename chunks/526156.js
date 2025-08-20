@@ -1,45 +1,50 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => u });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(230711),
-    o = n(528084),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(230711),
+    l = n(528084),
     c = n(9352);
-let d = (e) => {
+let u = (e) => {
     var t;
     let {
             tabs: n,
-            settingsSection: r,
-            parentSetting: d,
-            panelClassName: u,
-            defaultTabIndex: m,
-            onTabChange: p,
-            orientation: g = "horizontal",
+            settingsSection: i,
+            parentSetting: u,
+            panelClassName: d,
+            defaultTabIndex: f,
+            onTabChange: _,
+            orientation: p = "horizontal",
         } = e,
-        { viewableTabs: h, filteredTab: f } = (0, o.a)(n, d),
-        b = null != m ? n[m] : null,
-        x = null != (t = null != b ? b : f) ? t : h[0];
-    return (0, i.jsxs)("div", {
-        className: s()(c.tabbedSettingsContainer, { [c.vertical]: "vertical" === g }),
+        { viewableTabs: h, filteredTab: m } = (0, l.a)(n, u),
+        g = null != f ? n[f] : null,
+        E = null != (t = null != g ? g : m) ? t : h[0],
+        b = (e) => {
+            let t = e.component;
+            return "function" == typeof t ? (0, r.jsx)(t, {}) : t;
+        },
+        y = (e) => {
+            s.Z.setSection(i, e), null == _ || _(e);
+        };
+    return (0, r.jsxs)("div", {
+        className: a()(c.tabbedSettingsContainer, { [c.vertical]: "vertical" === p }),
         children: [
-            (0, i.jsx)(a.njP, {
-                className: s()(c.tabBar, { [c.vertical]: "vertical" === g }),
-                selectedItem: x.setting,
-                onItemSelect: (e) => {
-                    l.Z.setSection(r, e), null == p || p(e);
-                },
-                orientation: g,
-                type: "vertical" === g ? "side" : "top",
+            (0, r.jsx)(o.njP, {
+                className: a()(c.tabBar, { [c.vertical]: "vertical" === p }),
+                selectedItem: E.setting,
+                onItemSelect: y,
+                orientation: p,
+                type: "vertical" === p ? "side" : "top",
                 look: "brand",
                 children: h.map((e) =>
-                    (0, i.jsx)(
-                        a.njP.Item,
+                    (0, r.jsx)(
+                        o.njP.Item,
                         {
-                            className: s()(c.tab, {
-                                [c.vertical]: "vertical" === g,
-                                [c.selected]: e.setting === x.setting,
+                            className: a()(c.tab, {
+                                [c.vertical]: "vertical" === p,
+                                [c.selected]: e.setting === E.setting,
                             }),
                             id: e.setting,
                             "aria-label": e.title,
@@ -49,14 +54,11 @@ let d = (e) => {
                     ),
                 ),
             }),
-            (0, i.jsx)(a.njP.Panel, {
-                id: x.setting,
-                "aria-labelledby": x.title,
-                className: s()(c.tabBarPanel, u, { [c.vertical]: "vertical" === g }),
-                children: ((e) => {
-                    let t = e.component;
-                    return "function" == typeof t ? (0, i.jsx)(t, {}) : t;
-                })(x),
+            (0, r.jsx)(o.njP.Panel, {
+                id: E.setting,
+                "aria-labelledby": E.title,
+                className: a()(c.tabBarPanel, d, { [c.vertical]: "vertical" === p }),
+                children: b(E),
             }),
         ],
     });

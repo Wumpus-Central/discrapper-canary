@@ -29,31 +29,31 @@ function O(e) {
             footer: T,
             isGift: S = !1,
             giftMessage: A = E.intl.string(E.t.DrgnS0),
-            hideBreadcrumbs: N = !1,
-            isLoading: C = !1,
+            hideBreadcrumbs: C = !1,
+            isLoading: N = !1,
             purchaseError: R,
             purchaseErrorBlockRef: P,
             planError: w,
             onScroll: D,
-            scrollerClassName: L,
-            hasCurrencies: x = !1,
+            scrollerClassName: x,
+            hasCurrencies: L = !1,
         } = e,
-        M = null;
-    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
-    let k = null != M ? M.message : "";
-    null != M &&
-        M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && x && (k += " ".concat(E.intl.string(E.t.iWvwQU))),
-        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)),
-        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
-    let { stripe: j } = (0, _.JL)();
-    C = C || null == j;
+        j = null;
+    null != v && null == (0, p.ly)(v) ? (j = v) : null != R ? (j = R) : null != w && (j = w);
+    let M = null != j ? j.message : "";
+    null != j &&
+        j instanceof d.HF &&
+        (j.code === f.SM.CARD_DECLINED && L && (M += " ".concat(E.intl.string(E.t.iWvwQU))),
+        j.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)),
+        j.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, _.JL)();
+    N = N || null == k;
     let U = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = U.current;
         return (
-            null != j || e.isStarted()
-                ? null != j && e.stop()
+            null != k || e.isStarted()
+                ? null != k && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
                       (0, h.q2)(e);
@@ -62,11 +62,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [j]);
+    }, [k]);
     let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
-        stripe: j,
+        stripe: k,
         children: [
             I,
             (0, r.jsxs)("div", {
@@ -81,7 +81,7 @@ function O(e) {
                               children: A,
                           })
                         : null,
-                    N
+                    C
                         ? null
                         : (0, r.jsx)("div", {
                               className: b.breadcrumbsWrapper,
@@ -98,16 +98,16 @@ function O(e) {
                     (0, r.jsxs)("div", {
                         className: b.bodyWrapper,
                         children: [
-                            null == M
+                            null == j
                                 ? null
                                 : (0, r.jsx)("div", {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: P,
-                                          children: k,
+                                          children: M,
                                       }),
                                   }),
-                            C
+                            N
                                 ? (0, r.jsx)(c.$jN, { className: b.loadingBlock })
                                 : (0, r.jsx)(c.qBt, {
                                       className: b.sequencer,
@@ -120,7 +120,7 @@ function O(e) {
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: D,
-                                          className: s()(b.scroller, L),
+                                          className: s()(b.scroller, x),
                                           children: o,
                                       }),
                                   }),

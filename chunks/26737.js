@@ -2,17 +2,17 @@ n.d(t, { Z: () => o });
 var i = n(951288);
 n(647438);
 var l = n(481060),
-    r = n(358085),
-    s = n(998502),
+    s = n(358085),
+    r = n(998502),
     a = n(388032);
 function o(e, t) {
-    return r.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
+    return s.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
         ? (0, i.jsx)(l.sNh, {
               id: "copy",
               label: a.intl.string(a.t.OpuAlJ),
-              hint: (0, r.isMac)() ? "\u2318C" : "Ctrl+C",
+              hint: (0, s.isMac)() ? "\u2318C" : "Ctrl+C",
               action: () => {
-                  s.ZP.copy(e), null == t || t.focus();
+                  r.ZP.copy(e), null == t || t.focus();
               },
           })
         : null;

@@ -1,6 +1,6 @@
 n.d(t, {
     JO: () => v,
-    ZP: () => N,
+    ZP: () => C,
     iz: () => T,
 });
 var r = n(951288),
@@ -148,18 +148,18 @@ let y = 24,
                 tooltipColor: T,
                 tooltipPosition: S = "bottom",
                 tooltipAlign: A,
-                tooltipDisabled: N,
-                tooltipSpacing: C,
+                tooltipDisabled: C,
+                tooltipSpacing: N,
                 hideOnClick: R = !0,
                 role: P,
                 "aria-label": w,
                 "aria-hidden": D,
-                "aria-checked": L,
-                "aria-expanded": x,
-                "aria-haspopup": M,
-                "data-jump-section": k,
+                "aria-checked": x,
+                "aria-expanded": L,
+                "aria-haspopup": j,
+                "data-jump-section": M,
             } = e,
-            j = null != g ? { secondaryColorClass: g } : {},
+            k = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
                 h(
@@ -173,7 +173,7 @@ let y = 24,
                         colorClass: null != m ? m : void 0,
                         color: null != p ? p : "currentColor",
                     },
-                    j,
+                    k,
                 ),
             ),
             G = w;
@@ -185,8 +185,8 @@ let y = 24,
                 position: S,
                 align: A,
                 hideOnClick: R,
-                shouldShow: !N,
-                spacing: C,
+                shouldShow: !C,
+                spacing: N,
                 children: (e) => {
                     let { onMouseEnter: g, onMouseLeave: y, onFocus: I, onBlur: T } = e;
                     return null == O
@@ -211,7 +211,7 @@ let y = 24,
                                           onFocus: I,
                                           onBlur: T,
                                       },
-                                      j,
+                                      k,
                                   ),
                               ),
                           })
@@ -233,11 +233,11 @@ let y = 24,
                               role: P,
                               "aria-label": G,
                               "aria-hidden": D,
-                              "aria-checked": L,
-                              "aria-haspopup": M,
-                              "aria-expanded": x,
+                              "aria-checked": x,
+                              "aria-haspopup": j,
+                              "aria-expanded": L,
                               tabIndex: l || null == O ? -1 : 0,
-                              "data-jump-section": k,
+                              "data-jump-section": M,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
@@ -359,4 +359,4 @@ let A = (e) => {
     });
 };
 (A.Icon = v), (A.ChannelIcon = I), (A.Title = O), (A.Divider = T), (A.Caret = S);
-let N = A;
+let C = A;

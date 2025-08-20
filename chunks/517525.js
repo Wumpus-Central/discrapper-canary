@@ -13,8 +13,8 @@ var r = n(951288),
     m = n(906732),
     E = n(194082),
     g = n(484459),
-    S = n(594174),
-    v = n(626135),
+    v = n(594174),
+    S = n(626135),
     h = n(74538),
     b = n(557457),
     O = n(475674),
@@ -112,7 +112,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let D = t || i,
             { location: M } = (0, p.O)(),
-            L = (0, s.e7)([S.default], () => S.default.getCurrentUser()),
+            L = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
             F = u && !h.ZP.isPremium(L, _.p9.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, L),
             k = l.useCallback(() => {
                 F &&
@@ -126,7 +126,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             (l.useEffect(() => {
                 !P &&
                     D &&
-                    (v.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                    (S.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: _.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: i,
@@ -137,7 +137,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             null == R)
         )
             return null;
-        let U = (0, r.jsx)(f.ua7, {
+        let V = (0, r.jsx)(f.ua7, {
             text: T ? Z.intl.string(Z.t.q8TiVl) : D ? Z.intl.string(Z.t.IHgpEh) : Z.intl.string(Z.t.vLb0VV),
             position: "bottom",
             color: f.ua7.Colors.GREY,
@@ -171,7 +171,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 ),
         });
         return (0, r.jsx)(f.IGR, {
-            text: U,
+            text: V,
             className: a()(C, j.qualityIndicatorBadge, { [j.qualityIndicatorBadgePremium]: D && x }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: E.eE[d],
@@ -181,26 +181,26 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let { participant: t, showQuality: n, isUpsellEnabled: i = !0, size: u, className: s, premiumIndicator: c } = e,
             [d, p] = l.useState(!1),
             m = (0, b.W3)(t),
-            { reducedMotion: S } = l.useContext(f.Sfi),
-            v = n && null != m;
+            { reducedMotion: v } = l.useContext(f.Sfi),
+            S = n && null != m;
         l.useEffect(() => {
             (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
         let h = (0, f.Yzy)(
-                v,
+                S,
                 {
                     enter: {
-                        from: S.enabled ? x : A,
-                        to: S.enabled ? R : C,
+                        from: v.enabled ? x : A,
+                        to: v.enabled ? R : C,
                     },
-                    leave: S.enabled ? x : A,
+                    leave: v.enabled ? x : A,
                     config: D,
                 },
                 "animate-always",
             ),
             O = (0, f.q_F)(
                 {
-                    to: v ? T : N,
+                    to: S ? T : N,
                     config: D,
                 },
                 "animate-always",
@@ -235,7 +235,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                             children: (0, r.jsx)(E.ZP, {
                                 look: E.jZ.RED,
                                 size: u,
-                                shape: v ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND,
+                                shape: S ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND,
                             }),
                         }),
                     ],

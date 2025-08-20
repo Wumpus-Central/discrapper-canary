@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(833858),
     x = n(866071),
     v = n(223135),
-    j = n(625938),
-    O = n(981631),
+    O = n(625938),
+    j = n(981631),
     E = n(388032),
     S = n(84709);
 let P = (e) => {
@@ -32,7 +32,7 @@ let P = (e) => {
         N = (0, o.e7)([p.default], () => p.default.getId()),
         A = (0, o.e7)([g.default], () => g.default.getUser(l)),
         w = (0, o.e7)([m.Z], () => m.Z.getChannelId() === P.id),
-        R = (0, o.e7)([f.Z], () => f.Z.can(O.Plq.CONNECT, P)),
+        R = (0, o.e7)([f.Z], () => f.Z.can(j.Plq.CONNECT, P)),
         M = (null == t ? void 0 : t.emoji) == null || (0, x.K)(t.emoji, P),
         k = (0, o.e7)([h.ZP], () => (null != P.guild_id && null != A ? h.ZP.getMember(P.guild_id, l) : null)),
         D = i.useMemo(() => (null != A ? (0, d.SG)(void 0, k, A, { size: 40 }) : void 0), [k, A]);
@@ -45,7 +45,7 @@ let P = (e) => {
             I &&
             null != A &&
             N !== l &&
-            b.default.track(O.rMx.VIEW_HANG_STATUS, {
+            b.default.track(j.rMx.VIEW_HANG_STATUS, {
                 source: "HangStatusPopout",
                 guild_id: P.guild_id,
                 channel_id: P.id,
@@ -55,7 +55,7 @@ let P = (e) => {
         ? N === l
             ? (0, r.jsx)("div", {
                   className: a()(S.popoutWrapper, { [S.mounted]: I }),
-                  children: (0, r.jsx)(j.v, {
+                  children: (0, r.jsx)(O.v, {
                       currentStatus: t,
                       channel: P,
                   }),
@@ -115,7 +115,7 @@ let P = (e) => {
                                       !w &&
                                           R &&
                                           (u.default.selectVoiceChannel(P.id),
-                                          b.default.track(O.rMx.HANG_STATUS_CTA_CLICKED, {
+                                          b.default.track(j.rMx.HANG_STATUS_CTA_CLICKED, {
                                               source: "HangStatusPopout",
                                               guild_id: P.guild_id,
                                               channel_id: P.id,
@@ -129,7 +129,7 @@ let P = (e) => {
                                   text: E.intl.string(E.t.xcVcFR),
                                   onClick: () => {
                                       let e = t.state;
-                                      e === O.tNA.CUSTOM
+                                      e === j.tNA.CUSTOM
                                           ? (0, c.ZDy)(async () => {
                                                 let { default: e } = await n.e("1631").then(n.bind(n, 333541));
                                                 return (n) => {
@@ -195,7 +195,7 @@ let P = (e) => {
                                                 };
                                             })
                                           : (0, y.Zx)(e, !0),
-                                          b.default.track(O.rMx.SWIPE_HANG_STATUS, {
+                                          b.default.track(j.rMx.SWIPE_HANG_STATUS, {
                                               guild_id: P.guild_id,
                                               channel_id: P.id,
                                               media_session_id: m.Z.getMediaSessionId(),

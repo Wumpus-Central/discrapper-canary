@@ -105,8 +105,8 @@ let A = function (e) {
         v = i.useRef(null),
         [I, T] = i.useState(!1),
         A = (0, d.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
-        N = (0, d.d)(l.Z.colors.BG_BRAND).spring(),
-        { state: C, opacity: R } = (0, f.q_F)(
+        C = (0, d.d)(l.Z.colors.BG_BRAND).spring(),
+        { state: N, opacity: R } = (0, f.q_F)(
             {
                 config: E,
                 opacity: p ? 0.5 : 1,
@@ -140,8 +140,8 @@ let A = function (e) {
                 onMouseLeave: () => T(!1),
                 style: {
                     opacity: R,
-                    backgroundColor: C.to({
-                        output: [A, N],
+                    backgroundColor: N.to({
+                        output: [A, C],
                     }),
                 },
                 children: [
@@ -150,7 +150,7 @@ let A = function (e) {
                         viewBox: "0 0 28 20",
                         preserveAspectRatio: "xMinYMid meet",
                         style: {
-                            left: C.to({
+                            left: N.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [-4, 1, 8, 12],
                             }),
@@ -159,25 +159,25 @@ let A = function (e) {
                         children: [
                             (0, r.jsx)(s.animated.rect, {
                                 fill: "white",
-                                x: C.to({
+                                x: N.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4],
                                 }),
-                                y: C.to({
+                                y: N.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0],
                                 }),
-                                height: C.to({
+                                height: N.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20],
                                 }),
-                                width: C.to({
+                                width: N.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20],
                                 }),
                                 rx: "10",
                             }),
-                            S(C, A, N, O.enabled),
+                            S(N, A, C, O.enabled),
                         ],
                     }),
                     (0, r.jsx)("input", {

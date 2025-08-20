@@ -3,11 +3,11 @@ var r = n(951288);
 n(647438);
 var i = n(3570),
     l = n(685311),
-    a = n(186901);
+    s = n(186901);
 let o = function (e) {
     let { match: t, location: n } = e,
         o = async (e, t) => {
-            await (0, i.s)(a.jE.PICK_GUILD_SETTINGS, {
+            await (0, i.s)(s.jE.PICK_GUILD_SETTINGS, {
                 section: e.params.section,
                 subsection: e.params.subsection,
                 search: t.search,

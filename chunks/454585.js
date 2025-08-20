@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(25209),
@@ -95,7 +95,7 @@ let h = {
         "subtext",
     ),
     A = { text: s.Z.RULES.text },
-    N = {
+    C = {
         combineAndInjectMentionRule: p,
         createReactRules: o.Z,
         defaultReactRuleOptions: h,

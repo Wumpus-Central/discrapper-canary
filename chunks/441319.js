@@ -1,5 +1,5 @@
 n.d(t, {
-    M9: () => C,
+    M9: () => N,
     aW: () => D,
     wu: () => w,
 }),
@@ -28,8 +28,8 @@ var r = n(997945),
     T = n(405571),
     S = n(730886),
     A = n(473974),
-    N = n(563856);
-let C = 60;
+    C = n(563856);
+let N = 60;
 function R() {
     return {
         id: r.aH.DEFAULT,
@@ -96,7 +96,7 @@ function P() {
         },
         {
             id: r.Ru.Y2K,
-            iconSource: N,
+            iconSource: C,
             isPremium: !0,
             name: i.intl.string(i.t["s+KoXF"]),
         },

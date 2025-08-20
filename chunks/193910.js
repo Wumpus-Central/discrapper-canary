@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(585483),
     x = n(403182),
     v = n(127654),
-    j = n(752305),
-    O = n(951211),
+    O = n(752305),
+    j = n(951211),
     E = n(981631),
     S = n(921944),
     P = n(489887),
@@ -72,7 +72,7 @@ function A(e) {
         (0, b.R6)(t, void 0, "Plus Button");
     }
     function B() {
-        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, j.JM)("/"));
+        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, O.JM)("/"));
     }
     function F() {
         M();
@@ -201,7 +201,7 @@ function A(e) {
                     ],
                 });
                 switch (e.type) {
-                    case O.r.UPLOAD_A_FILE:
+                    case j.r.UPLOAD_A_FILE:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -211,7 +211,7 @@ function A(e) {
                             },
                             "upload-file",
                         );
-                    case O.r.UPLOAD_TEXT_AS_FILE:
+                    case j.r.UPLOAD_TEXT_AS_FILE:
                         if ("" === w) return null;
                         return (0, r.jsx)(
                             s.sNh,
@@ -222,7 +222,7 @@ function A(e) {
                             },
                             "upload-text-as-file",
                         );
-                    case O.r.CLIPS:
+                    case j.r.CLIPS:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -232,7 +232,7 @@ function A(e) {
                             },
                             "clips",
                         );
-                    case O.r.POLL:
+                    case j.r.POLL:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -242,7 +242,7 @@ function A(e) {
                             },
                             "poll",
                         );
-                    case O.r.INVITE_TO_PLAY_GAME:
+                    case j.r.INVITE_TO_PLAY_GAME:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -263,7 +263,7 @@ function A(e) {
                             },
                             "play",
                         );
-                    case O.r.INVITE_TO_LISTEN:
+                    case j.r.INVITE_TO_LISTEN:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -284,7 +284,7 @@ function A(e) {
                             },
                             "listen",
                         );
-                    case O.r.INVITE_TO_WATCH:
+                    case j.r.INVITE_TO_WATCH:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -305,7 +305,7 @@ function A(e) {
                             },
                             "watch",
                         );
-                    case O.r.CREATE_THREAD:
+                    case j.r.CREATE_THREAD:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -315,7 +315,7 @@ function A(e) {
                             },
                             "THREAD",
                         );
-                    case O.r.SLASH_COMMAND:
+                    case j.r.SLASH_COMMAND:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -325,7 +325,7 @@ function A(e) {
                             },
                             "SLASH_COMMAND",
                         );
-                    case O.r.ACTIVITY:
+                    case j.r.ACTIVITY:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -336,7 +336,7 @@ function A(e) {
                             },
                             "activity",
                         );
-                    case O.r.SCHEDULED_MESSAGE:
+                    case j.r.SCHEDULED_MESSAGE:
                         return (0, r.jsx)(
                             s.sNh,
                             {

@@ -26,8 +26,8 @@ let v = 3;
 function I(e) {
     let { user: t, guild: n, channel: I, onAction: T, onClose: S } = e,
         { themeType: A } = (0, m.z)(),
-        N = (0, p.Z)(I),
-        C = (0, s.ZP)(I),
+        C = (0, p.Z)(I),
+        N = (0, s.ZP)(I),
         { canViewChannel: R, canConnect: P } = (0, i.cj)([_.Z], () => ({
             canViewChannel: _.Z.can(E.Plq.VIEW_CHANNEL, I),
             canConnect: I.isPrivate() || _.Z.can(E.Plq.CONNECT, I),
@@ -54,7 +54,7 @@ function I(e) {
                     variant: "text-xs/normal",
                     color: "text-secondary",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: C }),
+                    children: (0, r.jsx)(l.Z, { children: N }),
                 });
             let e = (e) => {
                 e.stopPropagation(),
@@ -70,11 +70,11 @@ function I(e) {
                     variant: "text-xs/normal",
                     color: "text-secondary",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: C }),
+                    children: (0, r.jsx)(l.Z, { children: N }),
                 }),
             });
         },
-        L = A !== b.l.MODAL && A !== b.l.MODAL_V2 && A !== b.l.SIDEBAR;
+        x = A !== b.l.MODAL && A !== b.l.MODAL_V2 && A !== b.l.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: O.voiceChannelDivider }),
@@ -99,7 +99,7 @@ function I(e) {
                         ],
                     }),
                     (0, r.jsx)(c.Z, {
-                        users: N,
+                        users: C,
                         guildId: n.id,
                         channelId: I.id,
                         maxUsers: v,
@@ -110,7 +110,7 @@ function I(e) {
                             e.stopPropagation(), null == T || T({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                         },
                         onUserClick: (e) => e.stopPropagation(),
-                        disableUserPopout: !!L || ((e) => e === t.id),
+                        disableUserPopout: !!x || ((e) => e === t.id),
                         "aria-label": y.intl.string(y.t.jNqDh4),
                     }),
                 ],

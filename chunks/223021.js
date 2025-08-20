@@ -1,11 +1,12 @@
-n.d(t, { Z: () => i }), n(35282);
+n.d(t, { Z: () => s }), n(35282);
 var r = n(724913);
-let l = {
+let i = {
         LATIN12: r.latin12CompactTimeStamp,
         LATIN24: r.latin24CompactTimeStamp,
         ASIAN: r.asianCompactTimeStamp,
     },
+    a = 5,
     o = /(AM|PM)$/;
-function i(e) {
-    return null != e.match(o) ? l.LATIN24 : e.length <= 5 ? l.LATIN12 : l.ASIAN;
+function s(e) {
+    return null != e.match(o) ? i.LATIN24 : e.length <= a ? i.LATIN12 : i.ASIAN;
 }

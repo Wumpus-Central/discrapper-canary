@@ -1,4 +1,4 @@
-n.d(t, { Dd: () => L });
+n.d(t, { Dd: () => x });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -24,8 +24,8 @@ var i = n(442837),
     T = n(409813),
     S = n(27034),
     A = n(981631),
-    N = n(474936),
-    C = n(388032),
+    C = n(474936),
+    N = n(388032),
     R = n(359739),
     P = n(611344);
 function w(e, t, n) {
@@ -57,15 +57,15 @@ function D(e) {
     }
     return e;
 }
-let L = {
+let x = {
     key: T.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(M, D({}, e)),
+    renderStep: (e) => (0, r.jsx)(j, D({}, e)),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => C.intl.string(C.t["W685+f"]),
+        useBreadcrumbLabel: () => N.intl.string(N.t["W685+f"]),
     },
 };
-function x(e) {
+function L(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, I.JL)(),
         c = l ? T.h8.REVIEW : T.h8.ADD_PAYMENT_STEPS;
@@ -75,13 +75,13 @@ function x(e) {
                 onClick: () => t(c),
                 disabled: o,
                 loading: s,
-                text: C.intl.string(C.t.XiOHRU),
+                text: N.intl.string(N.t.XiOHRU),
             }),
             i ? (0, r.jsx)(m.Z, { onClick: n }) : null,
         ],
     });
 }
-function M(e) {
+function j(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: s = "",
@@ -90,26 +90,26 @@ function M(e) {
             setGiftRecipientError: T,
             validatingGiftRecipient: w,
             giftRecipient: D,
-            recommendedGiftSkuIds: L,
-            giftingOrigin: M,
-            setValidatingGiftRecipient: j,
+            recommendedGiftSkuIds: x,
+            giftingOrigin: j,
+            setValidatingGiftRecipient: k,
         } = (0, v.wD)(),
         {
             selectedSkuId: U,
             setSelectedSkuId: G,
             selectedSkuPricePreview: B,
-            paymentSourceId: V,
-            skuPricePreviewsById: F,
+            paymentSourceId: Z,
+            skuPricePreviewsById: V,
         } = (0, I.JL)(),
-        Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
+        F = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment(
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
             { autoTrackExposure: !1 },
         ),
-        W = H && M === N.Wt.DM_CHANNEL,
-        K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
+        W = H && j === C.Wt.DM_CHANNEL,
+        K = Y === _.u.POPULAR ? N.intl.string(N.t.Kwgrrq) : N.intl.string(N.t.r1huYW),
         z = async (e, t) => {
-            j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t["4kgVqa"])), j(!1);
+            k(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(N.intl.string(N.t["4kgVqa"])), k(!1);
         };
     (0, o.ZP)(() => {
         null != U &&
@@ -120,11 +120,11 @@ function M(e) {
             y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
         },
         X = (e) => {
-            let t = F[e],
+            let t = V[e],
                 n = null;
             if (null != t) {
                 var i;
-                n = null != V && null != (i = t[V]) ? i : t[b.c];
+                n = null != Z && null != (i = t[Z]) ? i : t[b.c];
             }
             if (null == n) return;
             let a = (0, O.T4)(n.amount, n.currency);
@@ -142,7 +142,7 @@ function M(e) {
         },
         Q = () =>
             (0, r.jsx)(p.Z, {
-                sectionTitle: C.intl.string(C.t.B3miEx),
+                sectionTitle: N.intl.string(N.t.B3miEx),
                 onTextChange: (e) => (null == l ? void 0 : l(e)),
                 pendingText: s,
                 currentText: s,
@@ -161,8 +161,8 @@ function M(e) {
                               className: R.selectGiftTitle,
                               children: K.toLocaleUpperCase(),
                           }),
-                          L.map((e) => X(e)),
-                          (0, r.jsx)(k, { handleClose: n }),
+                          x.map((e) => X(e)),
+                          (0, r.jsx)(M, { handleClose: n }),
                       ],
                   })
                 : (0, r.jsx)("div", {
@@ -216,10 +216,10 @@ function M(e) {
                 children: (0, r.jsx)(a.mzw, {
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
-                    children: (0, r.jsx)(x, {
+                    children: (0, r.jsx)(L, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != m || null == D || D.id === (null == Z ? void 0 : Z.id) || s.length > N.$n,
+                        disabled: null != m || null == D || D.id === (null == F ? void 0 : F.id) || s.length > C.$n,
                         loading: w,
                     }),
                 }),
@@ -227,7 +227,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function M(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {
@@ -262,12 +262,12 @@ function k(e) {
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",
                                     variant: "text-md/semibold",
-                                    children: C.intl.string(C.t["1+Co8P"]),
+                                    children: N.intl.string(N.t["1+Co8P"]),
                                 }),
                                 (0, r.jsx)(a.X6q, {
                                     color: "header-secondary",
                                     variant: "heading-sm/medium",
-                                    children: C.intl.string(C.t.nYn52N),
+                                    children: N.intl.string(N.t.nYn52N),
                                 }),
                             ],
                         }),

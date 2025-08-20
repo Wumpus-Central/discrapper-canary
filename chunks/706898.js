@@ -132,7 +132,7 @@ let S = o.forwardRef(function (e, t) {
 function A(e) {
     return "".concat(e.replace(/\s+/g, "-").toLowerCase(), "-tab");
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return;
     let n = {};
     return (
@@ -142,12 +142,12 @@ function N(e, t) {
         n
     );
 }
-class C extends (r = o.Component) {
+class N extends (r = o.Component) {
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: a } = this.state;
         if (null != e) {
-            if ("side" === r) return (null != t && n === t) || a ? N(e, "Selected") : i ? N(e, "Hover") : N(e);
+            if ("side" === r) return (null != t && n === t) || a ? C(e, "Selected") : i ? C(e, "Hover") : C(e);
             if ("top" === r)
                 if (n === t)
                     return {
@@ -249,7 +249,7 @@ class C extends (r = o.Component) {
             });
     }
 }
-m(C, "defaultProps", {
+m(N, "defaultProps", {
     disabled: !1,
     look: "grey",
     disableItemStyles: !1,
@@ -325,4 +325,4 @@ class R extends (i = o.Component) {
             });
     }
 }
-m(R, "Header", I), m(R, "Item", C), m(R, "Separator", T), m(R, "Panel", S);
+m(R, "Header", I), m(R, "Item", N), m(R, "Separator", T), m(R, "Panel", S);

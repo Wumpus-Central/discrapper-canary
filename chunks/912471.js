@@ -56,20 +56,20 @@ function I(e) {
 let T = 25,
     S = 15 * h.Z.Millis.MINUTE,
     A = h.Z.Millis.SECOND,
-    N = "LAST_CLIENT_HEARTBEAT_SESSION",
-    C = "user",
+    C = "LAST_CLIENT_HEARTBEAT_SESSION",
+    N = "user",
     R = new c.Z("SessionHeartbeatScheduler"),
     P = null,
     w = null,
     D = 0,
-    L = 0,
-    x = { state: "uninitialized" },
-    M = _.Z.getState(),
-    k = (0, E.H)(),
-    j = d.default.getToken();
+    x = 0,
+    L = { state: "uninitialized" },
+    j = _.Z.getState(),
+    M = (0, E.H)(),
+    k = d.default.getToken();
 function U() {
     if (null != P) return;
-    let e = 0 === L ? 0 : S - (performance.now() - L);
+    let e = 0 === x ? 0 : S - (performance.now() - x);
     m.Z.addBreadcrumb({
         message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(
             e / 1000,
@@ -79,11 +79,11 @@ function U() {
         (P = {
             type: "timeout",
             id: setTimeout(() => {
-                F(),
+                V(),
                     (P = {
                         type: "interval",
                         id: setInterval(() => {
-                            F();
+                            V();
                         }, S),
                     });
             }, e),
@@ -106,12 +106,12 @@ function G() {
 function B() {
     G() &&
         (m.Z.addBreadcrumb({
-            category: C,
+            category: N,
             message: "Stopping Analytics Heartbeat",
         }),
         (0, l.Z)());
 }
-function V() {
+function Z() {
     var e;
     let t = null != (e = f.Z.getIdleSince()) ? e : 0;
     return {
@@ -122,7 +122,7 @@ function V() {
         is_system_locked: f.Z.getSystemLocked(),
     };
 }
-async function F() {
+async function V() {
     let e = Date.now(),
         t = await eo(),
         n = Date.now();
@@ -131,7 +131,7 @@ async function F() {
             Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")),
         );
     m.Z.addBreadcrumb({
-        category: C,
+        category: N,
         message: "Tracking Heartbeat",
         data: { initialized: t.createdAtTimestamp },
     });
@@ -141,12 +141,12 @@ async function F() {
             client_heartbeat_version: T,
         },
         (0, g.O)(),
-        V(),
+        Z(),
     );
-    p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (L = performance.now()), (0, l.Z)();
+    p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (x = performance.now()), (0, l.Z)();
 }
-function Z() {
-    if (!(null != j && (0, y.y)()) || performance.now() - L <= S) return;
+function F() {
+    if (!(null != k && (0, y.y)()) || performance.now() - x <= S) return;
     let e = { client_heartbeat_version: T };
     p.default.track(O.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
 }
@@ -154,9 +154,9 @@ function H() {}
 function Y() {
     let e = [];
     return (
-        null != j &&
-            (k && e.push("foregrounded"),
-            M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push("rtc_connected")),
+        null != k &&
+            (M && e.push("foregrounded"),
+            j !== O.hes.DISCONNECTED && j !== O.hes.RTC_DISCONNECTED && e.push("rtc_connected")),
         {
             active: e.length > 0,
             ver: T,
@@ -174,7 +174,7 @@ function z() {
     null == w &&
         (w = {
             id: setInterval(() => {
-                Z();
+                F();
             }, S),
             type: "interval",
         });
@@ -183,7 +183,7 @@ function q(e) {
     let t = performance.now();
     if (!(t - D < A))
         try {
-            o.K.set(N, e), (D = t);
+            o.K.set(C, e), (D = t);
         } catch (e) {
             m.Z.captureException(e);
         }
@@ -199,13 +199,13 @@ function X(e) {
           : e;
 }
 function Q() {
-    o.K.remove(N),
-        (x = {
+    o.K.remove(C),
+        (L = {
             state: "loaded",
             session: null,
         }),
         B(),
-        (L = 0);
+        (x = 0);
 }
 function J() {
     var e;
@@ -220,21 +220,21 @@ async function $() {
 }
 function ee() {
     let e = d.default.getToken();
-    j !== e && ((j = e), Q()), K();
+    k !== e && ((k = e), Q()), K();
 }
 function et() {
-    (M = _.Z.getState()), K();
+    (j = _.Z.getState()), K();
 }
 function en(e) {
     let { focused: t } = e;
-    (k = t), K();
+    (M = t), K();
 }
 function er(e) {
     let { state: t } = e;
-    (k = t === O.$7l.ACTIVE), K();
+    (M = t === O.$7l.ACTIVE), K();
 }
 function ei() {
-    (M = _.Z.getState()), (k = (0, E.H)()), ee();
+    (j = _.Z.getState()), (M = (0, E.H)()), ee();
 }
 function ea() {
     m.Z.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
@@ -251,9 +251,9 @@ async function eo() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = null,
-        a = "loaded" === x.state ? (null == (e = x.session) ? void 0 : e.uuid) : null;
+        a = "loaded" === L.state ? (null == (e = L.session) ? void 0 : e.uuid) : null;
     try {
-        n = "uninitialized" === x.state ? X(await o.K.getAfterRefresh(N)) : x.session;
+        n = "uninitialized" === L.state ? X(await o.K.getAfterRefresh(C)) : L.session;
     } catch (e) {
         m.Z.captureException(e);
     }
@@ -272,7 +272,7 @@ async function eo() {
                   (n.lastUsedTimestamp = e),
                   q(n))
                 : null != n && (0, b.qK)(n) && (n = null),
-            (x = {
+            (L = {
                 state: "loaded",
                 session: n,
             }),
@@ -285,6 +285,6 @@ async function eo() {
     })();
 }
 function es() {
-    let e = "uninitialized" === x.state ? X(o.K.get(N)) : x.session;
+    let e = "uninitialized" === L.state ? X(o.K.get(C)) : L.session;
     return null == e || (0, b.qK)(e) ? null : e;
 }

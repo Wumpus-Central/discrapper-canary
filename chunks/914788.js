@@ -1,292 +1,299 @@
-n.d(e, { Z: () => X }), n(388685), n(539854), n(35282);
-var i,
-    r,
-    l,
-    a,
-    o = n(133080),
-    d = n(750041),
-    s = n(594174),
-    u = n(411198),
-    E = n(709054),
-    c = n(260722),
-    _ = n(546791),
-    T = n(292352);
-function f(t, e, n) {
+n.d(t, { Z: () => Q }), n(388685), n(539854), n(35282);
+var r = n(133080),
+    i = n(750041),
+    a = n(594174),
+    o = n(411198),
+    s = n(709054),
+    l = n(260722),
+    c = n(546791),
+    u = n(292352);
+function d(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function S(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            i = Object.keys(n);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (e) {
-                f(t, e, n[e]);
+            r.forEach(function (t) {
+                d(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-function I(t, e) {
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
     );
 }
-let C = null,
-    p = null,
+let h = null,
+    m = null,
     g = {},
-    y = b(),
-    A = O(),
-    N = null,
-    L =
-        (null == (r = window) || null == (i = r.location) ? void 0 : i.pathname) === T.ix.FAMILY_CENTER_MY_FAMILY
-            ? T.dG.REQUESTS
-            : (null == (a = window) || null == (l = a.location) ? void 0 : l.pathname) === T.ix.FAMILY_CENTER_SETTINGS
-              ? T.dG.SETTINGS
-              : T.dG.ACTIVITY,
-    h = !1,
-    R = !1,
-    M = null,
-    U = null,
-    D = {};
-function b() {
+    E = N(),
+    b = R(),
+    y = null,
+    O = C(),
+    v = !1,
+    I = !1,
+    T = null,
+    S = null,
+    A = {};
+function C() {
+    var e, t, n, r;
+    return (null == (t = window) || null == (e = t.location) ? void 0 : e.pathname) === u.ix.FAMILY_CENTER_MY_FAMILY
+        ? u.dG.REQUESTS
+        : (null == (r = window) || null == (n = r.location) ? void 0 : n.pathname) === u.ix.FAMILY_CENTER_SETTINGS
+          ? u.dG.SETTINGS
+          : u.dG.ACTIVITY;
+}
+function N() {
     return {
-        [T.MY.USER_ADD]: {},
-        [T.MY.GUILD_ADD]: {},
-        [T.MY.USER_INTERACTION]: {},
-        [T.MY.GUILD_INTERACTION]: {},
-        [T.MY.USER_CALLED]: {},
-        [T.MY.TOTAL_VOICE_MINUTES]: {},
-        [T.MY.PURCHASES]: {},
+        [u.MY.USER_ADD]: {},
+        [u.MY.GUILD_ADD]: {},
+        [u.MY.USER_INTERACTION]: {},
+        [u.MY.GUILD_INTERACTION]: {},
+        [u.MY.USER_CALLED]: {},
+        [u.MY.TOTAL_VOICE_MINUTES]: {},
+        [u.MY.PURCHASES]: {},
     };
 }
-function O() {
+function R() {
     return {
-        [T.MY.USER_ADD]: 0,
-        [T.MY.GUILD_ADD]: 0,
-        [T.MY.USER_INTERACTION]: 0,
-        [T.MY.GUILD_INTERACTION]: 0,
-        [T.MY.USER_CALLED]: 0,
-        [T.MY.TOTAL_VOICE_MINUTES]: 0,
-        [T.MY.PURCHASES]: 0,
+        [u.MY.USER_ADD]: 0,
+        [u.MY.GUILD_ADD]: 0,
+        [u.MY.USER_INTERACTION]: 0,
+        [u.MY.GUILD_INTERACTION]: 0,
+        [u.MY.USER_CALLED]: 0,
+        [u.MY.TOTAL_VOICE_MINUTES]: 0,
+        [u.MY.PURCHASES]: 0,
     };
 }
-function Y() {
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+function P() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return (
         arguments.length > 1 && arguments[1],
-        (g = t.length > 0 ? t.reduce((t, e) => I(S({}, t), { [e.user_id]: e }), {}) : {})
+        (g = e.length > 0 ? e.reduce((e, t) => p(f({}, e), { [t.user_id]: t }), {}) : {})
     );
 }
-function m(t) {
-    void 0 !== t && (A = t);
+function w(e) {
+    void 0 !== e && (b = e);
 }
-function v(t, e) {
-    let n = e ? y : b();
-    return (y = t.reduce((t, e) => {
-        let i = e.display_type;
-        return void 0 !== n[i] && void 0 === n[i][e.event_id] && (t[i][e.event_id] = e), t;
+function D(e, t) {
+    let n = t ? E : N();
+    return (E = e.reduce((e, t) => {
+        let r = t.display_type;
+        return void 0 !== n[r] && void 0 === n[r][t.event_id] && (e[r][t.event_id] = t), e;
     }, n));
 }
-function F(t) {
-    D = t.reduce((t, e) => {
+function x(e) {
+    A = e.reduce((e, t) => {
         var n;
-        return I(S({}, t), {
-            [e.id]: I(S({}, (0, u.Jh)(e)), {
-                approximateMemberCount: null != (n = e.approximate_member_count) ? n : 0,
+        return p(f({}, e), {
+            [t.id]: p(f({}, (0, o.Jh)(t)), {
+                approximateMemberCount: null != (n = t.approximate_member_count) ? n : 0,
             }),
         });
-    }, D);
+    }, A);
 }
-function w() {
-    R = !0;
+function L() {
+    I = !0;
 }
-function P(t) {
-    let { linkedUsers: e, familyCenterTeenActivity: n } = t,
-        { actions: i, guilds: r, totals: l, teenId: a, rangeStartId: o } = n;
-    (C = a), (p = o), v(i), m(l), F(r), Y(e), (R = !1), (M = E.default.fromTimestamp(Date.now())), (h = !0);
+function j(e) {
+    let { linkedUsers: t, familyCenterTeenActivity: n } = e,
+        { actions: r, guilds: i, totals: a, teenId: o, rangeStartId: l } = n;
+    (h = o), (m = l), D(r), w(a), x(i), P(t), (I = !1), (T = s.default.fromTimestamp(Date.now())), (v = !0);
 }
-function H(t) {
-    let { linkedUsers: e } = t;
-    Y(e);
+function M(e) {
+    let { linkedUsers: t } = e;
+    P(t);
 }
-function j(t) {
-    let { linkedUsers: e } = t;
-    Y(e);
+function k(e) {
+    let { linkedUsers: t } = e;
+    P(t);
 }
-function k(t) {
-    let { familyCenterTeenActivity: e } = t;
-    if (void 0 === e) return;
-    let { actions: n, totals: i, guilds: r, teenId: l, rangeStartId: a } = e;
-    (C = l), (p = a), v(n), m(i), F(r), (R = !1), (M = E.default.fromTimestamp(Date.now()));
+function U(e) {
+    let { familyCenterTeenActivity: t } = e;
+    if (void 0 === t) return;
+    let { actions: n, totals: r, guilds: i, teenId: a, rangeStartId: o } = t;
+    (h = a), (m = o), D(n), w(r), x(i), (I = !1), (T = s.default.fromTimestamp(Date.now()));
 }
-function V(t) {
-    let { familyCenterTeenActivity: e } = t,
-        { actions: n, guilds: i } = e;
-    v(n, !0), F(i);
+function G(e) {
+    let { familyCenterTeenActivity: t } = e,
+        { actions: n, guilds: r } = t;
+    D(n, !0), x(r);
 }
-function G(t) {
-    let { linkedUsers: e } = t;
-    Y(e);
+function B(e) {
+    let { linkedUsers: t } = e;
+    P(t);
 }
-function Q(t) {
-    let { linkedUsers: e } = t;
-    Y(e, !0);
+function Z(e) {
+    let { linkedUsers: t } = e;
+    P(t, !0);
 }
-function Z(t) {
-    let { linkCode: e } = t;
-    N = e;
+function V(e) {
+    let { linkCode: t } = e;
+    y = t;
 }
-function W(t) {
-    let { tab: e } = t;
-    L = e;
+function F(e) {
+    let { tab: t } = e;
+    O = t;
 }
-function x(t) {
-    let { user: e } = t;
-    if (void 0 === e.linked_users) return;
-    let n = s.default.getUsers();
-    e.linked_users.some((t) => {
-        let { user_id: e } = t;
-        return void 0 === n[e];
-    }) && e.linked_users.length > Object.keys(g).length
-        ? c.ZP.fetchLinkedUsers()
-        : Y(e.linked_users);
+function H(e) {
+    let { user: t } = e;
+    if (void 0 === t.linked_users) return;
+    let n = a.default.getUsers();
+    t.linked_users.some((e) => {
+        let { user_id: t } = e;
+        return void 0 === n[t];
+    }) && t.linked_users.length > Object.keys(g).length
+        ? l.ZP.fetchLinkedUsers()
+        : P(t.linked_users);
 }
-function K(t) {
-    var e;
-    let { countryCode: n } = t;
-    null != n && (U = null != (e = (0, o.Zz)(n)) ? e : null);
+function Y(e) {
+    var t;
+    let { countryCode: n } = e;
+    null != n && (S = null != (t = (0, r.Zz)(n)) ? t : null);
 }
-function z() {
-    (C = null), (p = null), (g = {}), (y = b()), (A = O()), (D = {}), (R = !1), (M = null);
+function W() {
+    let e = [];
+    return (
+        Object.entries(E).forEach((t) => {
+            let [n, r] = t;
+            e.push(...Object.values(r));
+        }),
+        e
+    );
 }
-class B extends d.Z {
+function K() {
+    return Object.entries(b).map((e) => {
+        let [t, n] = e;
+        return "".concat(t, ":").concat(n);
+    });
+}
+function z(e) {
+    b = e.reduce((e, t) => {
+        let [n, r] = t.split(":"),
+            i = (0, c.jV)(n);
+        return void 0 === i ? e : p(f({}, e), { [i]: parseInt(r, 10) });
+    }, R());
+}
+function q() {
+    (h = null), (m = null), (g = {}), (E = N()), (b = R()), (A = {}), (I = !1), (T = null);
+}
+class X extends i.Z {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
     loadCache() {
-        let t = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
-        null != t &&
-            (Y(t.linkedUsers),
-            F(t.guilds),
-            v(t.teenActivity),
-            (A = t.teenActivityTotals.reduce((t, e) => {
-                let [n, i] = e.split(":"),
-                    r = (0, _.jV)(n);
-                return void 0 === r ? t : I(S({}, t), { [r]: parseInt(i, 10) });
-            }, O())));
+        let e = this.readSnapshot(X.LATEST_SNAPSHOT_VERSION);
+        null != e && (P(e.linkedUsers), x(e.guilds), D(e.teenActivity), z(e.teenActivityTotals));
     }
     takeSnapshot() {
         return {
-            version: B.LATEST_SNAPSHOT_VERSION,
+            version: X.LATEST_SNAPSHOT_VERSION,
             data: {
                 linkedUsers: Object.values(g),
-                teenActivityTotals: Object.entries(A).map((t) => {
-                    let [e, n] = t;
-                    return "".concat(e, ":").concat(n);
-                }),
-                teenActivity: (function () {
-                    let t = [];
-                    return (
-                        Object.entries(y).forEach((e) => {
-                            let [n, i] = e;
-                            t.push(...Object.values(i));
-                        }),
-                        t
-                    );
-                })(),
-                guilds: Object.values(D),
+                teenActivityTotals: K(),
+                teenActivity: W(),
+                guilds: Object.values(A),
             },
         };
     }
     getSelectedTeenId() {
-        return C;
+        return h;
     }
     getLinkedUsers() {
         return g;
     }
-    getLinkTimestamp(t) {
-        var e;
-        let n = g[t];
-        return null == n ? null : null != (e = n.updated_at) ? e : n.created_at;
+    getLinkTimestamp(e) {
+        var t;
+        let n = g[e];
+        return null == n ? null : null != (t = n.updated_at) ? t : n.created_at;
     }
     getRangeStartTimestamp() {
-        return null == p ? null : E.default.extractTimestamp(p);
+        return null == m ? null : s.default.extractTimestamp(m);
     }
-    getActionsForDisplayType(t) {
-        return Object.values(y[t]);
+    getActionsForDisplayType(e) {
+        return Object.values(E[e]);
     }
-    getTotalForDisplayType(t) {
-        return A[t];
+    getTotalForDisplayType(e) {
+        return b[e];
     }
     getLinkCode() {
-        return N;
+        return y;
     }
-    getGuild(t) {
-        return D[t];
+    getGuild(e) {
+        return A[e];
     }
     getSelectedTab() {
-        return L;
+        return O;
     }
     getStartId() {
-        return p;
+        return m;
     }
     getIsInitialized() {
-        return h;
+        return v;
     }
     getUserCountry() {
-        return U;
+        return S;
     }
     isLoading() {
-        return R;
+        return I;
     }
     canRefetch() {
-        return null === M || E.default.age(M) > T.Of;
+        return null === T || s.default.age(T) > u.Of;
     }
     constructor() {
         super({
-            CURRENT_USER_UPDATE: x,
+            CURRENT_USER_UPDATE: H,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            FAMILY_CENTER_INITIAL_LOAD: P,
-            FAMILY_CENTER_FETCH_START: w,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: H,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: k,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: V,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: j,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: G,
-            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Q,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: W,
-            SET_LOCATION_METADATA: K,
-            LOGOUT: z,
+            FAMILY_CENTER_INITIAL_LOAD: j,
+            FAMILY_CENTER_FETCH_START: L,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: M,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: U,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: G,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: k,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: B,
+            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: V,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: F,
+            SET_LOCATION_METADATA: Y,
+            LOGOUT: q,
         });
     }
 }
-f(B, "displayName", "FamilyCenterStore"), f(B, "LATEST_SNAPSHOT_VERSION", 3);
-let X = new B();
+d(X, "displayName", "FamilyCenterStore"), d(X, "LATEST_SNAPSHOT_VERSION", 3);
+let Q = new X();

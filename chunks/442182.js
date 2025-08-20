@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(420966),
     C = n(566476),
     N = n(203377),
-    I = n(981631),
-    E = n(388032),
+    E = n(981631),
+    I = n(388032),
     S = n(472039),
     T = n(21321);
 function P(e) {
@@ -79,10 +79,10 @@ async function R(e, t, n) {
             (0, r.jsx)(
                 o.Modal,
                 w(P({}, t), {
-                    title: E.intl.string(E.t.R0RpRU),
+                    title: I.intl.string(I.t.R0RpRU),
                     actions: [
                         {
-                            text: E.intl.string(E.t.BddRzc),
+                            text: I.intl.string(I.t.BddRzc),
                             variant: "primary",
                             onClick: t.onClose,
                         },
@@ -109,19 +109,19 @@ function Z(e) {
                 (0, r.jsx)(
                     o.Modal,
                     w(P({}, e), {
-                        title: E.intl.string(E.t["7sFNfX"]),
-                        subtitle: E.intl.format(E.t.scORUl, {
+                        title: I.intl.string(I.t["7sFNfX"]),
+                        subtitle: I.intl.format(I.t.scORUl, {
                             username: t.name,
                             roleName: null == n ? void 0 : n.name,
                         }),
                         actions: [
                             {
-                                text: E.intl.string(E.t["ETE/oK"]),
+                                text: I.intl.string(I.t["ETE/oK"]),
                                 variant: "secondary",
                                 onClick: e.onClose,
                             },
                             {
-                                text: E.intl.string(E.t.N86XcH),
+                                text: I.intl.string(I.t.N86XcH),
                                 variant: "critical-primary",
                                 onClick: () => {
                                     R(t, l, s), e.onClose();
@@ -132,7 +132,7 @@ function Z(e) {
                             className: S.removeTip,
                             color: "text-muted",
                             variant: "text-md/normal",
-                            children: E.intl.string(E.t.jxIxJC),
+                            children: I.intl.string(I.t.jxIxJC),
                         }),
                     }),
                 ),
@@ -186,7 +186,7 @@ function Z(e) {
                                 (0, r.jsx)("div", {
                                     className: S.removeButtonContainer,
                                     children: (0, r.jsx)(c.ua7, {
-                                        text: u ? E.intl.string(E.t.wkrQaG) : E.intl.string(E.t["7sFNfX"]),
+                                        text: u ? I.intl.string(I.t.wkrQaG) : I.intl.string(I.t["7sFNfX"]),
                                         position: "top",
                                         children: (e) =>
                                             (0, r.jsx)(
@@ -224,7 +224,7 @@ function D(e) {
                     className: S.emptyRowText,
                     variant: "text-sm/semibold",
                     color: "text-muted",
-                    children: E.intl.format(E.t.P9pZOT, {
+                    children: I.intl.format(I.t.P9pZOT, {
                         addMembersHook: function (e, i) {
                             return n
                                 ? null
@@ -304,15 +304,15 @@ function L(e) {
                 query: t,
                 onChange: n,
                 onClear: () => n(""),
-                placeholder: E.intl.string(E.t.pYHobG),
-                "aria-label": E.intl.string(E.t.pYHobG),
+                placeholder: I.intl.string(I.t.pYHobG),
+                "aria-label": I.intl.string(I.t.pYHobG),
             }),
             (0, r.jsx)(c.zxk, {
                 onClick: l,
                 variant: "primary",
                 size: "sm",
                 disabled: i,
-                text: E.intl.string(E.t.cHszXl),
+                text: I.intl.string(I.t.cHszXl),
             }),
         ],
     });
@@ -330,7 +330,7 @@ function k(e) {
                 return null != (n = null == (e = x.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > v.length,
         R = () => {
-            b.default.track(I.rMx.OPEN_MODAL, {
+            b.default.track(E.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
                 location_section: "Members",
@@ -374,7 +374,7 @@ function k(e) {
                                 ? (0, r.jsx)(c.Wn, {
                                       className: S.searchWarning,
                                       messageType: c.QYI.INFO,
-                                      children: E.intl.string(E.t.RQxHZ2),
+                                      children: I.intl.string(I.t.RQxHZ2),
                                   })
                                 : null,
                         ],

@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => v,
-        default: () => eL,
-        mergeUser: () => C,
+        default: () => ex,
+        mergeUser: () => N,
         transformUser: () => A,
         users: () => y,
     }),
@@ -106,10 +106,10 @@ function A(e) {
     let b = e.display_name_styles;
     return void 0 !== b && ((e.displayNameStyles = (0, l.bN)(b)), delete e.display_name_styles), e;
 }
-function N(e) {
+function C(e) {
     return e.id !== h.default.getId();
 }
-function C(e) {
+function N(e) {
     let t,
         n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = y[e.id],
@@ -142,47 +142,47 @@ function P(e, t) {
 function w(e, t) {
     var n, r, i, a, o, s;
     if (
-        (null != e.author && "SENDING" !== e.state && N(e.author) && C(e.author, t),
+        (null != e.author && "SENDING" !== e.state && C(e.author) && N(e.author, t),
         null == (n = e.mentions) ||
             n.forEach((e) => {
-                N(e) && C(e, t);
+                C(e) && N(e, t);
             }),
         (null == (r = e.interaction) ? void 0 : r.user) != null &&
-            N(null == (i = e.interaction) ? void 0 : i.user) &&
-            C(e.interaction.user, t),
+            C(null == (i = e.interaction) ? void 0 : i.user) &&
+            N(e.interaction.user, t),
         null == (a = e.attachments) ||
             a.forEach((e) => {
                 var n;
                 null == (n = e.clip_participants) ||
                     n.forEach((e) => {
-                        N(e) && C(e, t);
+                        C(e) && N(e, t);
                     });
             }),
         (null == (o = e.resolved) ? void 0 : o.users) != null)
     )
         for (let n in e.resolved.users) {
             let r = e.resolved.users[n];
-            N(r) && C(r, t);
+            C(r) && N(r, t);
         }
     (null == (s = e.interaction_metadata) ? void 0 : s.user) != null &&
-        N(e.interaction_metadata.user) &&
-        C(e.interaction_metadata.user, t),
+        C(e.interaction_metadata.user) &&
+        N(e.interaction_metadata.user, t),
         null != e.message_snapshots &&
             e.message_snapshots.forEach((e) => {
                 var n, r, i, a;
                 (null == (r = e.moderator_report) || null == (n = r.reported_member) ? void 0 : n.user) != null &&
-                    C(e.moderator_report.reported_member.user, t),
+                    N(e.moderator_report.reported_member.user, t),
                     (null == (a = e.moderator_report) || null == (i = a.reporting_member) ? void 0 : i.user) != null &&
-                        C(e.moderator_report.reporting_member.user, t);
+                        N(e.moderator_report.reporting_member.user, t);
             });
 }
 function D(e) {
     let { user: t, users: r, guilds: i } = e;
     delete t.premium,
         delete t.banner_color,
-        C(t),
+        N(t),
         r.forEach((e) => {
-            C(e);
+            N(e);
         }),
         n
             .e("831")
@@ -205,7 +205,7 @@ function D(e) {
                 avatar: "c1f86b313385cb97985f1b118851c28c",
             }));
 }
-function L(e) {
+function x(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
@@ -217,39 +217,39 @@ function L(e) {
                 var t;
                 null == (t = e.rawRecipients) ||
                     t.forEach((e) => {
-                        C(e);
+                        N(e);
                     });
             });
 }
-function x(e) {
+function L(e) {
     return !("incomplete" in e);
 }
+function j(e) {
+    if (null != e.users) for (let t of e.users) (t.id in y && L(t)) || (y[t.id] = new f.Z(t));
+}
 function M(e) {
-    if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
+    let { user: t } = e;
+    if (!C(t)) return !1;
+    N(t);
 }
 function k(e) {
-    let { user: t } = e;
-    if (!N(t)) return !1;
-    C(t);
-}
-function j(e) {
     let { userProfile: t } = e;
-    if (!N(t.user)) return !1;
-    C(t.user);
+    if (!C(t.user)) return !1;
+    N(t.user);
 }
 function U(e) {
     let { user: t } = e;
-    C(t);
+    N(t);
 }
 function G(e) {
     let { user: t } = e;
-    C(t);
+    N(t);
 }
 function B(e) {
     let { messages: t } = e;
     return t.forEach((e) => w(e, !0)), !1;
 }
-function V(e) {
+function Z(e) {
     let { pins: t } = e;
     return (
         t.forEach((e) => {
@@ -259,11 +259,11 @@ function V(e) {
         !1
     );
 }
-function F(e) {
+function V(e) {
     let { mostRecentMessages: t } = e;
     return null == t || t.forEach((e) => w(e, !1)), !1;
 }
-function Z(e) {
+function F(e) {
     let { data: t } = e;
     return (
         t.forEach((e) => {
@@ -276,7 +276,7 @@ function Z(e) {
                 n.forEach((e) => {
                     if (e.type === g.d4z.DM || e.type === g.d4z.GROUP_DM) {
                         var t;
-                        null == (t = e.recipients) || t.forEach((e) => C(e)), null != e.recipient && C(e.recipient);
+                        null == (t = e.recipients) || t.forEach((e) => N(e)), null != e.recipient && N(e.recipient);
                     }
                 });
         }),
@@ -285,13 +285,13 @@ function Z(e) {
 }
 function H(e) {
     let { firstMessages: t, owners: n } = e;
-    null != t && t.forEach((e) => w(e, !0)), null != n && n.forEach((e) => C(e.user, !0));
+    null != t && t.forEach((e) => w(e, !0)), null != n && n.forEach((e) => N(e.user, !0));
 }
 function Y(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
-        null != t && w(t, !0), null != n && w(n, !0), null != r && null != r.user && C(r.user, !0);
+        null != t && w(t, !0), null != n && w(n, !0), null != r && null != r.user && N(r.user, !0);
     });
 }
 function W(e) {
@@ -306,7 +306,7 @@ function K(e) {
     t.forEach((e) => {
         let { user: t, member: r } = e;
         if (null == t) return;
-        C(t);
+        N(t);
         let i = null == r ? void 0 : r.avatar;
         null != i && I(t.id, n, i);
     });
@@ -314,12 +314,12 @@ function K(e) {
 function z(e) {
     let { items: t } = e;
     t.forEach((e) => {
-        null != e.other_user && C(e.other_user);
+        null != e.other_user && N(e.other_user);
     });
 }
 function q(e) {
     let { item: t } = e;
-    null != t.other_user && C(t.other_user);
+    null != t.other_user && N(t.other_user);
 }
 function X(e) {
     let { message: t } = e;
@@ -336,11 +336,11 @@ function Q(e) {
     let {
         channel: { rawRecipients: t },
     } = e;
-    return null != t && t.forEach((e) => C(e)), !1;
+    return null != t && t.forEach((e) => N(e)), !1;
 }
 function J(e) {
     let { channels: t } = e;
-    for (let { rawRecipients: e } of t) null != e && e.forEach((e) => C(e));
+    for (let { rawRecipients: e } of t) null != e && e.forEach((e) => N(e));
     return !1;
 }
 let $ = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
@@ -363,20 +363,20 @@ function ee(e) {
 }
 function et(e) {
     let { bans: t } = e;
-    t.forEach((e) => C(e.user));
+    t.forEach((e) => N(e.user));
 }
 function en(e) {
     let { bans: t } = e;
-    t.forEach((e) => C(e.user));
+    t.forEach((e) => N(e.user));
 }
 function er(e) {
-    return C(e.user);
+    return N(e.user);
 }
 function ei(e) {
-    return !!e.isMember && C(e.user);
+    return !!e.isMember && N(e.user);
 }
 function ea(e) {
-    let t = C(e.user);
+    let t = N(e.user);
     return I(e.user.id, e.guildId, e.avatar) || t;
 }
 function eo(e) {
@@ -396,20 +396,20 @@ function es(e) {
     for (let e of t)
         n =
             e.members.reduce((t, n) => {
-                let r = C(n.user);
+                let r = N(n.user);
                 return I(n.user.id, e.guildId, n.avatar) || r || t;
             }, !1) || n;
     return n;
 }
 function el(e) {
     let t = !1;
-    for (let n of e.members) C(n.user) && (t = !0), I(n.user.id, e.guildId, n.avatar) && (t = !0);
+    for (let n of e.members) N(n.user) && (t = !0), I(n.user.id, e.guildId, n.avatar) && (t = !0);
     return t;
 }
 function ec(e) {
     var t;
     let n = !1;
-    for (let r of null != (t = e.users) ? t : []) Object.hasOwn(y, r.id) || (n = C(r) || n);
+    for (let r of null != (t = e.users) ? t : []) Object.hasOwn(y, r.id) || (n = N(r) || n);
     return n;
 }
 function eu(e) {
@@ -417,7 +417,7 @@ function eu(e) {
         n = !1;
     return (
         t.forEach((e) => {
-            null != e.member && C(e.member.user) && (n = !0), null != e.presence && C(e.presence.user) && (n = !0);
+            null != e.member && N(e.member.user) && (n = !0), null != e.presence && N(e.presence.user) && (n = !0);
         }),
         n
     );
@@ -428,7 +428,7 @@ function ed(e) {
     return (
         null == t ||
             t.forEach((e) => {
-                null != e.member && C(e.member.user) && (n = !0), null != e.presence && C(e.presence.user) && (n = !0);
+                null != e.member && N(e.member.user) && (n = !0), null != e.presence && N(e.presence.user) && (n = !0);
             }),
         n
     );
@@ -441,7 +441,7 @@ function ef(e) {
             avatar: s,
         } = e;
         n !== h.default.getId() &&
-            C({
+            N({
                 id: n,
                 username: r,
                 avatar: i,
@@ -452,21 +452,21 @@ function ef(e) {
     });
 }
 function e_(e) {
-    return C(e.relationship.user);
+    return N(e.relationship.user);
 }
 function ep(e) {
-    return C(e.gameRelationship.user);
+    return N(e.gameRelationship.user);
 }
 function eh(e) {
     let { relationships: t } = e;
-    return t.reduce((e, t) => C(t.user) || e, !1);
+    return t.reduce((e, t) => N(t.user) || e, !1);
 }
 function em(e) {
-    return C(e.suggestion.suggested_user);
+    return N(e.suggestion.suggested_user);
 }
 function eg(e) {
     let { suggestions: t } = e;
-    return t.reduce((e, t) => C(t.suggested_user) || e, !1);
+    return t.reduce((e, t) => N(t.suggested_user) || e, !1);
 }
 function eE(e) {
     let { users: t } = e;
@@ -476,51 +476,51 @@ function eE(e) {
 }
 function eb(e) {
     let { giftCode: t } = e;
-    return null != t.user && C(t.user);
+    return null != t.user && N(t.user);
 }
 function ey(e) {
     let { appliedBoosts: t } = e;
     t.forEach((e) => {
         let { user: t } = e;
-        null != t && C(t);
+        null != t && N(t);
     });
 }
 function eO(e) {
     let { request: t } = e,
         { user: n, actioned_by_user: r } = t,
         i = !1;
-    return null != n && (i = i || C(n)), null != r && (i = i || C(r)), i;
+    return null != n && (i = i || N(n)), null != r && (i = i || N(r)), i;
 }
 function ev(e) {
     let { users: t, familyCenterTeenActivity: n } = e,
         { users: r } = n;
-    return [...t, ...r].reduce((e, t) => C(t) || e, !1);
+    return [...t, ...r].reduce((e, t) => N(t) || e, !1);
 }
 function eI(e) {
     let { users: t } = e;
-    return t.reduce((e, t) => C(t) || e, !1);
+    return t.reduce((e, t) => N(t) || e, !1);
 }
 function eT(e) {
     let { users: t } = e;
-    return t.reduce((e, t) => C(t) || e, !1);
+    return t.reduce((e, t) => N(t) || e, !1);
 }
 function eS(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return;
     let { users: n } = t;
-    return n.reduce((e, t) => C(t) || e, !1);
+    return n.reduce((e, t) => N(t) || e, !1);
 }
 function eA(e) {
     let { familyCenterTeenActivity: t } = e,
         { users: n } = t;
-    return n.reduce((e, t) => C(t) || e, !1);
-}
-function eN(e) {
-    let { members: t } = e,
-        n = h.default.getId();
-    return t.reduce((e, t) => (t.member.user.id === n ? e : C(t.member.user) || e), !1);
+    return n.reduce((e, t) => N(t) || e, !1);
 }
 function eC(e) {
+    let { members: t } = e,
+        n = h.default.getId();
+    return t.reduce((e, t) => (t.member.user.id === n ? e : N(t.member.user) || e), !1);
+}
+function eN(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
         null != e.message && w(e.message, !0);
@@ -528,7 +528,7 @@ function eC(e) {
 }
 function eR(e) {
     let { participants: t } = e;
-    return t.reduce((e, t) => ((0, a.Z)(t) && C(t.member.user)) || e, !1);
+    return t.reduce((e, t) => ((0, a.Z)(t) && N(t.member.user)) || e, !1);
 }
 function eP(e) {
     let {} = e,
@@ -558,11 +558,11 @@ class eD extends m.Z {
     handleLoadCache(e) {
         let t = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) y[e.id] = new f.Z(e);
-        if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
+        if (null != e.users) for (let t of e.users) (t.id in y && L(t)) || (y[t.id] = new f.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
                 var n;
-                null == (n = e.rawRecipients) || n.forEach((e) => C(e, !1));
+                null == (n = e.rawRecipients) || n.forEach((e) => N(e, !1));
             }
     }
     getUserStoreVersion() {
@@ -602,21 +602,21 @@ class eD extends m.Z {
     constructor() {
         super({
             CONNECTION_OPEN: D,
-            CONNECTION_OPEN_SUPPLEMENTAL: L,
+            CONNECTION_OPEN_SUPPLEMENTAL: x,
             UPDATE_CLIENT_PREMIUM_TYPE: G,
-            OVERLAY_INITIALIZE: M,
+            OVERLAY_INITIALIZE: j,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: k,
-            USER_PROFILE_FETCH_SUCCESS: j,
+            USER_UPDATE: M,
+            USER_PROFILE_FETCH_SUCCESS: k,
             CURRENT_USER_UPDATE: U,
             PRESENCE_UPDATES: ee,
-            SEARCH_MESSAGES_SUCCESS: Z,
-            MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Z,
+            SEARCH_MESSAGES_SUCCESS: F,
+            MOD_VIEW_SEARCH_MESSAGES_SUCCESS: F,
             LOAD_MESSAGES_SUCCESS: B,
             LOAD_MESSAGES_AROUND_SUCCESS: B,
             LOAD_RECENT_MENTIONS_SUCCESS: B,
-            LOAD_PINNED_MESSAGES_SUCCESS: V,
-            THREAD_LIST_SYNC: F,
+            LOAD_PINNED_MESSAGES_SUCCESS: Z,
+            THREAD_LIST_SYNC: V,
             MESSAGE_CREATE: X,
             MESSAGE_UPDATE: X,
             GUILD_SETTINGS_LOADED_BANS: et,
@@ -659,8 +659,8 @@ class eD extends m.Z {
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eS,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eT,
-            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN,
-            LOAD_ICYMI_HYDRATED: eC,
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eC,
+            LOAD_ICYMI_HYDRATED: eN,
             EMBEDDED_ACTIVITY_UPDATE_V2: eR,
             INITIATE_AGE_VERIFICATION: eP,
             CLOSE_AGE_VERIFICATION_MODAL: ew,
@@ -668,4 +668,4 @@ class eD extends m.Z {
     }
 }
 b(eD, "displayName", "UserStore"), b(eD, "LATEST_SNAPSHOT_VERSION", 1);
-let eL = new eD();
+let ex = new eD();

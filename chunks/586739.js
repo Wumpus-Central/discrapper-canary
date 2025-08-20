@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
-var i = n(544891),
-    r = n(981631);
-let s = {
+n.d(t, { Z: () => a });
+var r = n(544891),
+    i = n(981631);
+let a = {
     fetchTeams() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return i.tn.get({
-            url: r.ANM.TEAMS,
+        return r.tn.get({
+            url: i.ANM.TEAMS,
             query: { include_payout_account_status: e },
             rejectWithError: !1,
         });

@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(267642),
     C = n(624138),
     N = n(981631),
-    I = n(388032),
-    E = n(744834);
+    E = n(388032),
+    I = n(744834);
 function S(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ class R extends i.Component {
             });
         return (0, r.jsx)(b.Z, {
             currentTier: l,
-            className: i > 0 ? E.progressWithSubscriptions : E.progress,
+            className: i > 0 ? I.progressWithSubscriptions : I.progress,
             progress: i,
             tiers: [a, ...s],
             initialAnimationDelay: 500,
@@ -113,17 +113,17 @@ class R extends i.Component {
     }
     renderTierNone() {
         return (0, r.jsxs)("div", {
-            className: E.tierDefaultUnlocked,
+            className: I.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
                 (0, r.jsx)(u.R94, {
                     type: u.R94.Types.LABEL_BOLD,
-                    children: I.intl.string(I.t["76OoX1"]),
+                    children: E.intl.string(E.t["76OoX1"]),
                 }),
                 (0, r.jsx)(u.R94, {
                     type: u.R94.Types.DESCRIPTION,
-                    className: E.tierDefaultUnlockedDescription,
-                    children: I.intl.string(I.t.DaYNQU),
+                    className: I.tierDefaultUnlockedDescription,
+                    children: E.intl.string(E.t.DaYNQU),
                 }),
             ],
         });
@@ -132,7 +132,7 @@ class R extends i.Component {
         let { subscribers: e, uniqueSubscriberCount: t, guildId: n } = this.props;
         return (0, r.jsxs)("div", {
             ref: this.defaultTierRef,
-            className: E.subscribers,
+            className: I.subscribers,
             children: [
                 (0, r.jsx)(x.Z, {
                     guildId: null != n ? n : void 0,
@@ -142,8 +142,8 @@ class R extends i.Component {
                     max: 5,
                 }),
                 (0, r.jsx)("div", {
-                    className: E.subscriberCount,
-                    children: I.intl.format(I.t["0r7snZ"], { count: t }),
+                    className: I.subscriberCount,
+                    children: E.intl.format(E.t["0r7snZ"], { count: t }),
                 }),
             ],
         });
@@ -156,11 +156,11 @@ class R extends i.Component {
               ? null
               : (0, r.jsx)("div", {
                     children: (0, r.jsxs)("div", {
-                        className: E.content,
+                        className: I.content,
                         children: [
                             this.renderProgressBar(l),
                             (0, r.jsxs)("div", {
-                                className: E.tiers,
+                                className: I.tiers,
                                 children: [
                                     0 === i ? this.renderTierNone() : this.renderSubscribers(),
                                     l.map((r, i, l) =>
@@ -227,7 +227,7 @@ class R extends i.Component {
                                       P(T({}, n), {
                                           tabIndex: -1,
                                           src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                          className: a()(E.avatar, t, null != t ? E.subscriberMask : null),
+                                          className: a()(I.avatar, t, null != t ? I.subscriberMask : null),
                                           size: u.EFr.SIZE_32,
                                       }),
                                   ),
@@ -237,21 +237,21 @@ class R extends i.Component {
             }),
             S(this, "renderSubscribersPopout", () =>
                 (0, r.jsx)(u.Ttm, {
-                    className: E.subscribersPopout,
+                    className: I.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
                         (0, r.jsxs)(
                             "div",
                             {
-                                className: E.subscribersPopoutUser,
+                                className: I.subscribersPopoutUser,
                                 children: [
                                     (0, r.jsx)(u.qEK, {
                                         src: e.user.getAvatarURL(this.props.guildId, 32),
                                         "aria-label": e.user.username,
                                         size: u.EFr.SIZE_32,
-                                        className: E.avatar,
+                                        className: I.avatar,
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: E.subscribersPopoutUsername,
+                                        className: I.subscribersPopoutUsername,
                                         children: (0, r.jsx)(g.Z, {
                                             user: e.user,
                                             nick: e.nick,
@@ -275,7 +275,7 @@ class R extends i.Component {
                         children: (t) =>
                             (0, r.jsx)(
                                 "div",
-                                P(T({ className: E.moreSubscribers }, t), {
+                                P(T({ className: I.moreSubscribers }, t), {
                                     ref: this.subscribersPopoutTargetRef,
                                     children: e,
                                 }),

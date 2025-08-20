@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => C });
 var r,
     i = n(348327),
     a = n.n(i),
@@ -44,8 +44,8 @@ function v() {
         T = (null == O || null == (e = O.party) ? void 0 : e.id) === I ? O : null,
         S = _.Z.getMutableParticipants(y.id, p.pV.SPEAKER),
         A = S.filter((e) => e.type === p.Ui.STREAM).length,
-        N = S.length - A,
-        C = _.Z.getParticipantCount(s) - A,
+        C = S.length - A,
+        N = _.Z.getParticipantCount(s) - A,
         R = (null == T || null == (t = T.party) ? void 0 : t.size) != null ? T.party.size[1] : 0;
     return {
         application_id: E.gD,
@@ -60,7 +60,7 @@ function v() {
         },
         party: {
             id: I,
-            size: [N, Math.max(C, R)],
+            size: [C, Math.max(N, R)],
         },
     };
 }
@@ -89,7 +89,7 @@ class A extends (r = o.ZP.Store) {
     }
 }
 y(A, "displayName", "StageChannelSelfRichPresenceStore");
-let N = new A(s.Z, {
+let C = new A(s.Z, {
     CONNECTION_OPEN: I,
     STAGE_INSTANCE_CREATE: I,
     STAGE_INSTANCE_UPDATE: I,

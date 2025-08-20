@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(762578),
     x = n(981631),
     v = n(658805),
-    j = n(388032),
-    O = n(405143);
+    O = n(388032),
+    j = n(405143);
 function E(e) {
     let { activity: t, channel: n, userId: l } = e,
         a = (0, h.IX)(t.application_id).data,
@@ -46,10 +46,10 @@ function E(e) {
     if (t.type === x.IIU.PLAYING) {
         let e = null == a ? void 0 : a.getIconURL(46);
         return (0, r.jsxs)("div", {
-            className: O.activityRow,
+            className: j.activityRow,
             children: [
                 (0, r.jsxs)("div", {
-                    className: O.activityRowContent,
+                    className: j.activityRowContent,
                     children: [
                         p || null == e
                             ? (0, r.jsx)(s.IMN, {
@@ -83,10 +83,10 @@ function E(e) {
                     fullWidth: !0,
                     size: "sm",
                     text: u
-                        ? j.intl.string(v.default["8HU1Mz"])
+                        ? O.intl.string(v.default["8HU1Mz"])
                         : y
-                          ? j.intl.string(v.default.qRXatr)
-                          : j.intl.string(v.default.DKHheX),
+                          ? O.intl.string(v.default.qRXatr)
+                          : O.intl.string(v.default.DKHheX),
                     onClick: C,
                 }),
             ],
@@ -101,7 +101,7 @@ function S(e) {
         b = (0, m.Z)(n, null != c ? c : null),
         _ = (0, C.Z)(n.id),
         v = null == c || !_,
-        j = i.useMemo(
+        O = i.useMemo(
             () =>
                 l.uniqBy(
                     d.filter((e) => e.type === x.IIU.PLAYING),
@@ -122,10 +122,10 @@ function S(e) {
         : (0, r.jsx)(f.Z.Provider, {
               value: n.guild_id,
               children: (0, r.jsxs)("div", {
-                  className: O.root,
+                  className: j.root,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: O.userHeader,
+                          className: j.userHeader,
                           children: [
                               (0, r.jsx)(u.Z, {
                                   user: c,
@@ -139,8 +139,8 @@ function S(e) {
                           ],
                       }),
                       (0, r.jsx)("div", {
-                          className: O.activityList,
-                          children: j.map((e) =>
+                          className: j.activityList,
+                          children: O.map((e) =>
                               (0, r.jsx)(
                                   E,
                                   {

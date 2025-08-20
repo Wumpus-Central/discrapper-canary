@@ -35,8 +35,8 @@ function O(e, t, n, r) {
             light: i()(I).set("hsl.s", 1).set("hsl.l", u),
             dark: i()(v).set("hsl.s", 1).set("hsl.l", c),
         },
-        N = 100 - n,
-        C = "\n      --custom-theme-background: "
+        C = 100 - n,
+        N = "\n      --custom-theme-background: "
             .concat(
                 T,
                 ";\n      ",
@@ -47,11 +47,11 @@ function O(e, t, n, r) {
                 "--custom-background-gradient-opacity-mix-amount",
                 ": ",
             )
-            .concat(((d + f * N) / 100).toFixed(2), ";\n      ", "--custom-theme-border-color-amount", ": 5%;\n      "),
+            .concat(((d + f * C) / 100).toFixed(2), ";\n      ", "--custom-theme-border-color-amount", ": 5%;\n      "),
         R = S
             ? "\n      "
                   .concat(s.Yk.THEME_BASE_MIX_AMOUNT, ": ")
-                  .concat(_ + p * N, "%;\n      ")
+                  .concat(_ + p * C, "%;\n      ")
                   .concat(s.Yk.THEME_TEXT_MIX_AMOUNT, ": ")
                   .concat(g, "%;\n    ")
             : "\n      "
@@ -67,7 +67,7 @@ function O(e, t, n, r) {
             .concat(s.Yk.DARK_THEME_TEXT_COLOR, ": ")
             .concat(
                 i()(v)
-                    .set("hsl.l", ((100 - b * N) / 100).toFixed(2))
+                    .set("hsl.l", ((100 - b * C) / 100).toFixed(2))
                     .css(),
                 ";\n    ",
             ),
@@ -79,13 +79,13 @@ function O(e, t, n, r) {
             .concat(s.Yk.LIGHT_THEME_TEXT_COLOR, ": ")
             .concat(
                 i()(I)
-                    .set("hsl.l", ((y * N) / 100).toFixed(2))
+                    .set("hsl.l", ((y * C) / 100).toFixed(2))
                     .css(),
                 ";\n    ",
             );
     return "."
         .concat(l, " {\n      ")
-        .concat(C, "\n      ")
+        .concat(N, "\n      ")
         .concat(R, "\n      ")
         .concat(P, "\n      ")
         .concat(w, "\n      }");

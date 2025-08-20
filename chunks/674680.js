@@ -1,15 +1,28 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(780384),
-    l = n(481060),
+    a = n(481060),
     o = n(410030),
-    a = n(44315),
-    s = n(889901),
+    s = n(44315),
+    l = n(889901),
     c = n(955204),
     u = n(231338),
     d = n(395786);
-function p(e) {
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -20,21 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-let f = {
+let p = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330,
@@ -43,71 +47,74 @@ let f = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330,
-    };
-function g(e) {
+    },
+    m = 0.8,
+    g = 0.4,
+    E = 1;
+function b(e) {
     var t;
-    let { achievementId: n, unlocked: u, size: g = l.EFr.SIZE_40 } = e,
-        m = (0, o.ZP)(),
-        b = (0, c.oX)(n);
-    if (null == b) return null;
-    let O = (0, l.UCu)(g),
-        { name: _, rarity: y } = b,
-        { color: v } = (0, c.F7)(y),
-        j = (0, i.wj)(m) ? f : h,
-        C = (O.size - O.offset - 2 * O.stroke) * 0.8,
-        E = O.size - O.stroke,
-        x = {
-            width: 0.4 * C,
-            height: 0.4 * C,
+    let { achievementId: n, unlocked: u, size: f = a.EFr.SIZE_40 } = e,
+        b = (0, o.ZP)(),
+        y = (0, c.oX)(n);
+    if (null == y) return null;
+    let O = (0, a.UCu)(f),
+        { name: v, rarity: I } = y,
+        { color: T } = (0, c.F7)(I),
+        S = (0, i.wj)(b) ? p : h,
+        A = (O.size - O.offset - 2 * O.stroke) * m,
+        C = O.size - O.stroke,
+        N = {
+            width: A * g,
+            height: A * g,
         },
-        S = {
-            width: x.width + 1,
-            height: x.height + 1,
-            right: O.stroke + 1,
-            bottom: O.stroke + 1,
+        R = {
+            width: N.width + E,
+            height: N.height + E,
+            right: O.stroke + E,
+            bottom: O.stroke + E,
             padding: 0,
         };
     return (0, r.jsxs)("div", {
         className: d.container,
         style: {
-            width: E,
-            height: E,
+            width: C,
+            height: C,
             padding: O.stroke,
         },
-        "aria-label": "".concat(null != (t = _()) ? t : ""),
+        "aria-label": "".concat(null != (t = v()) ? t : ""),
         children: [
             (0, r.jsx)("div", {
                 className: d.trophyIconContainer,
-                children: (0, r.jsx)(l.rm8, {
+                children: (0, r.jsx)(a.rm8, {
                     size: "custom",
-                    color: u ? v : (0, a.Lq)(j.trophy),
-                    width: C,
-                    height: C,
+                    color: u ? T : (0, s.Lq)(S.trophy),
+                    width: A,
+                    height: A,
                 }),
             }),
             !u &&
                 (0, r.jsx)("div", {
                     className: d.lockContainer,
-                    style: S,
+                    style: R,
                     children: (0, r.jsx)(
-                        l.mBM,
-                        p(
+                        a.mBM,
+                        _(
                             {
                                 size: "custom",
-                                color: (0, a.Lq)(j.locked),
+                                color: (0, s.Lq)(S.locked),
                             },
-                            x,
+                            N,
                         ),
                     ),
                 }),
             u &&
-                y === c.EP.LEGENDARY &&
+                I === c.EP.LEGENDARY &&
                 (0, r.jsx)("div", {
                     className: d.lockContainer,
-                    style: S,
-                    children: (0, r.jsx)(s.Z, p({ className: d.confettiIcon }, x)),
+                    style: R,
+                    children: (0, r.jsx)(l.Z, _({ className: d.confettiIcon }, N)),
                 }),
         ],
     });
 }
-g.Sizes = l.EFr;
+b.Sizes = a.EFr;

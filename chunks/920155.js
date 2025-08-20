@@ -80,7 +80,7 @@ function I(e) {
             gradientColor: S,
             caretConfig: A,
         } = e,
-        [N, C] = i.useState(p),
+        [C, N] = i.useState(p),
         R = (0, l.e7)([f.Z], () => f.Z.getLayers()),
         P = null != (t = R[R.length - 1]) ? t : "base",
         w = i.useMemo(() => {
@@ -91,12 +91,12 @@ function I(e) {
             );
         }, [a, P]);
     i.useEffect(() => {
-        C(w && p);
+        N(w && p);
     }, [w, p]);
     let D = () => {
-            C(!1);
+            N(!1);
         },
-        L = (e) => {
+        x = (e) => {
             switch (e) {
                 case "top":
                     return "bottom";
@@ -109,13 +109,13 @@ function I(e) {
                     return "left";
             }
         },
-        x = (0, _.i)({
+        L = (0, _.i)({
             shouldShow: p,
-            caretPosition: (null == A ? void 0 : A.position) != null ? A.position : L(E),
+            caretPosition: (null == A ? void 0 : A.position) != null ? A.position : x(E),
             onExitComplete: D,
         }),
-        M = (e) =>
-            x((t, i) => {
+        j = (e) =>
+            L((t, i) => {
                 if (!i) return null;
                 let l = (0, r.jsx)(
                     u.V,
@@ -143,7 +143,7 @@ function I(e) {
             });
     return (0, r.jsx)(c.H, {
         targetElementRef: a,
-        shouldShow: N,
+        shouldShow: C,
         onRequestClose: m,
         position: E,
         align: I,
@@ -155,7 +155,7 @@ function I(e) {
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         closeOnClickOutside: !1,
-        renderPopout: M,
+        renderPopout: j,
         children: v,
     });
 }

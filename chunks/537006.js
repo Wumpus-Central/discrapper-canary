@@ -23,13 +23,13 @@ var r = n(951288),
     T = n(981631),
     S = n(921944),
     A = n(474936),
-    N = n(671955),
-    C = n(388032),
+    C = n(671955),
+    N = n(388032),
     R = n(131151);
 function P(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
-        "aria-label": C.intl.string(C.t.WAI6xs),
+        "aria-label": N.intl.string(N.t.WAI6xs),
         onClick: t,
         className: R.upsellCloseIconWrapper,
         children: (0, r.jsx)(u.Dio, {
@@ -55,7 +55,7 @@ function w(e) {
                           size: "sm",
                           variant: "secondary",
                           icon: u.SrA,
-                          text: C.intl.string(C.t["0Q61kJ"]),
+                          text: N.intl.string(N.t["0Q61kJ"]),
                           onClick: () => {
                               (0, E.uL)(T.Z5c.APPLICATION_STORE), null == i || i();
                           },
@@ -64,7 +64,7 @@ function w(e) {
                           onClick: () => {
                               s({ action: I.yM.GET_PREMIUM }), null == i || i();
                           },
-                          textOptions: { textOverride: C.intl.string(C.t.x6rkDg) },
+                          textOptions: { textOverride: N.intl.string(N.t.x6rkDg) },
                           subscriptionTier: A.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: T.jXE.USER_PROFILE },
                           className: R.matchManaColors,
@@ -81,7 +81,7 @@ function w(e) {
                     action: I.yM.VISIT_SHOP,
                     fullWidth: !0,
                     icon: u.EOn,
-                    text: C.intl.string(C.t.b2d0Nz),
+                    text: N.intl.string(N.t.b2d0Nz),
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
@@ -101,7 +101,7 @@ function D(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, _.Dt)(),
         { themeType: d } = (0, O.z)(),
-        f = d === N.l.MODAL,
+        f = d === C.l.MODAL,
         g = (0, h.Nj)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
         E = (0, s.e7)([b.Z], () => b.Z.getGuildId());
     if (
@@ -120,7 +120,7 @@ function D(e) {
     let y = (0, r.jsx)(u.X6q, {
             variant: "text-sm/normal",
             id: c,
-            children: C.intl.string(C.t.EIYbj4),
+            children: N.intl.string(N.t.EIYbj4),
         }),
         v = (0, r.jsx)(P, {
             onClose: () => {

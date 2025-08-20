@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854), n(388685);
+n.d(t, { Z: () => M }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -95,11 +95,11 @@ function A(e) {
     if (l.default.getId() !== n.id) return !1;
     (h[t] = void 0), t === p && y(t);
 }
-function N() {
+function C() {
     if (null == p) return !1;
     y(p);
 }
-function C(e) {
+function N(e) {
     let { guildId: t } = e;
     (h[t] = void 0), t === p && y(t);
 }
@@ -124,23 +124,23 @@ function D(e) {
     if (((p = null != t ? t : null), null == t || null != h[t])) return !1;
     y(t);
 }
-function L() {
+function x() {
     y(f.I_8);
 }
-function x(e) {
+function L(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
-class M extends (r = i.ZP.Store) {
+class j extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
+        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], x);
     }
     getCategories(e) {
-        return null != e ? x(e) : E;
+        return null != e ? L(e) : E;
     }
 }
-_(M, "displayName", "GuildCategoryStore");
-let k = new M(a.Z, {
+_(j, "displayName", "GuildCategoryStore");
+let M = new j(a.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,
@@ -152,12 +152,12 @@ let k = new M(a.Z, {
     CHANNEL_DELETE: T,
     CHANNEL_UPDATES: S,
     GUILD_MEMBER_UPDATE: A,
-    CURRENT_USER_UPDATE: N,
-    GUILD_ROLE_CREATE: C,
-    GUILD_ROLE_UPDATE: C,
-    GUILD_ROLE_DELETE: C,
-    IMPERSONATE_UPDATE: C,
-    IMPERSONATE_STOP: C,
+    CURRENT_USER_UPDATE: C,
+    GUILD_ROLE_CREATE: N,
+    GUILD_ROLE_UPDATE: N,
+    GUILD_ROLE_DELETE: N,
+    IMPERSONATE_UPDATE: N,
+    IMPERSONATE_STOP: N,
     VOICE_CHANNEL_SELECT: P,
     VOICE_STATE_UPDATES: w,
 });

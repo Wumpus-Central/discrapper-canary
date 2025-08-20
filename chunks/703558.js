@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => M,
+    Z: () => j,
     d: () => E,
 }),
     n(388685),
@@ -130,11 +130,11 @@ function A() {
     let t = O(e);
     for (let e in t) null == d.Z.getChannel(e) && delete t[e];
 }
-function N() {
+function C() {
     let e = u.default.getId();
     return e in b || (b[e] = {}), A(), !1;
 }
-function C() {
+function N() {
     return A(), !1;
 }
 function R(e) {
@@ -177,16 +177,16 @@ function w(e) {
 function D(e) {
     e.userId in b && delete b[e.userId];
 }
-function L() {
+function x() {
     for (let [e, t] of c.default.entries(b))
         for (let [n, r] of c.default.entries(t)) {
             let t = r[0];
             null != t && ("" === t.draft || "" === t.draft.trim()) && S(n, 0, e);
         }
 }
-class x extends (r = o.ZP.PersistedStore) {
+class L extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        (b = null != e ? e : {}), L(), this.waitFor(u.default, d.Z, f.Z);
+        (b = null != e ? e : {}), x(), this.waitFor(u.default, d.Z, f.Z);
     }
     getState() {
         return b;
@@ -240,9 +240,9 @@ class x extends (r = o.ZP.PersistedStore) {
         return null == n ? null : n[1];
     }
 }
-_(x, "displayName", "DraftStore"),
-    _(x, "persistKey", "DraftStore"),
-    _(x, "migrations", [
+_(L, "displayName", "DraftStore"),
+    _(L, "persistKey", "DraftStore"),
+    _(L, "migrations", [
         (e) => {
             if (null == e) return {};
             for (let t in e) "timestamp" in e[t] && (e[t] = { 0: e[t] });
@@ -257,11 +257,11 @@ _(x, "displayName", "DraftStore"),
             return n;
         },
     ]);
-let M = new x(s.Z, {
-    CONNECTION_OPEN: N,
+let j = new L(s.Z, {
+    CONNECTION_OPEN: C,
     LOGOUT: w,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: D,
-    GUILD_DELETE: C,
+    GUILD_DELETE: N,
     CHANNEL_DELETE: R,
     THREAD_DELETE: R,
     THREAD_CREATE: P,

@@ -50,27 +50,27 @@ function u(e) {
             [n, d, h, _, I],
         ),
         A = (0, o.D)(p || E, y, S),
-        N = A.state,
-        C = A.styles,
+        C = A.state,
+        N = A.styles,
         R = A.forceUpdate,
         P = A.update,
         w = r.useMemo(
             function () {
                 return {
                     ref: O,
-                    style: C.popper,
-                    placement: N ? N.placement : n,
-                    hasPopperEscaped: N && N.modifiersData.hide ? N.modifiersData.hide.hasPopperEscaped : null,
-                    isReferenceHidden: N && N.modifiersData.hide ? N.modifiersData.hide.isReferenceHidden : null,
+                    style: N.popper,
+                    placement: C ? C.placement : n,
+                    hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
+                    isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
-                        style: C.arrow,
+                        style: N.arrow,
                         ref: T,
                     },
                     forceUpdate: R || s,
                     update: P || l,
                 };
             },
-            [O, T, n, N, C, P, R],
+            [O, T, n, C, N, P, R],
         );
     return (0, a.$p)(g)(w);
 }

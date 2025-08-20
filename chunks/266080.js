@@ -1,42 +1,42 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
-    a = n(647438),
-    i = n(481060),
-    o = n(367907),
-    l = n(434404),
+    i = n(647438),
+    l = n(481060),
+    a = n(367907),
+    o = n(434404),
     s = n(138201),
     c = n(430824),
     d = n(981631),
     u = n(388032);
-let _ = (e) => {
+let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [_, m] = a.useState(!1),
+        [m, _] = i.useState(!1),
         p = c.Z.getGuild(t),
-        g = null != p;
-    a.useEffect(() => {
-        m(!g);
-    }, [g]);
-    let f = a.useCallback(() => {
-        m(!0),
-            o.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+        f = null != p;
+    i.useEffect(() => {
+        _(!f);
+    }, [f]);
+    let g = i.useCallback(() => {
+        _(!0),
+            a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n,
             }),
-            l.Z.leaveGuild(t);
+            o.Z.leaveGuild(t);
     }, [t, n]);
     return null == p
         ? null
         : (0, r.jsx)(s.JZ, {
               title: u.intl.string(u.t.cU96io),
               description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == p ? void 0 : p.name }),
-              buttonText: _ ? u.intl.string(u.t["9Ak99v"]) : u.intl.string(u.t.F3qExs),
-              buttonDisabled: _,
+              buttonText: m ? u.intl.string(u.t["9Ak99v"]) : u.intl.string(u.t.F3qExs),
+              buttonDisabled: m,
               buttonVariant: "critical-primary",
               onButtonPress: () => {
-                  (0, i.h7j)((e) => {
+                  (0, l.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          i.ConfirmModal,
+                          l.ConfirmModal,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -66,13 +66,13 @@ let _ = (e) => {
                                   header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: p.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t["ETE/oK"]),
-                                  onConfirm: f,
+                                  onConfirm: g,
                               },
                               e,
                           )),
                           (n = n =
                               {
-                                  children: (0, r.jsx)(i.Text, {
+                                  children: (0, r.jsx)(l.Text, {
                                       variant: "text-md/normal",
                                       children: u.intl.format(u.t.ZEXC0t, { name: p.name }),
                                   }),

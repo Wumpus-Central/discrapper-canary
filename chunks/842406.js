@@ -117,10 +117,10 @@ var S = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function A(e) {
     return "[object SharedArrayBuffer]" === u(e);
 }
-function N(e) {
+function C(e) {
     return void 0 !== S && (void 0 === A.working && (A.working = A(new S())), A.working ? A(e) : e instanceof S);
 }
-function C(e) {
+function N(e) {
     return m(e, d);
 }
 function R(e) {
@@ -135,7 +135,7 @@ function w(e) {
 function D(e) {
     return c && m(e, h);
 }
-(t.isSharedArrayBuffer = N),
+(t.isSharedArrayBuffer = C),
     (t.isAsyncFunction = function (e) {
         return "[object AsyncFunction]" === u(e);
     }),
@@ -151,16 +151,16 @@ function D(e) {
     (t.isWebAssemblyCompiledModule = function (e) {
         return "[object WebAssembly.Module]" === u(e);
     }),
-    (t.isNumberObject = C),
+    (t.isNumberObject = N),
     (t.isStringObject = R),
     (t.isBooleanObject = P),
     (t.isBigIntObject = w),
     (t.isSymbolObject = D),
     (t.isBoxedPrimitive = function (e) {
-        return C(e) || R(e) || P(e) || w(e) || D(e);
+        return N(e) || R(e) || P(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
-        return "undefined" != typeof Uint8Array && (v(e) || N(e));
+        return "undefined" != typeof Uint8Array && (v(e) || C(e));
     }),
     ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(function (e) {
         Object.defineProperty(t, e, {

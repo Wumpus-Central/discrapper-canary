@@ -264,7 +264,7 @@ function A(e) {
             }),
     });
 }
-function N(e) {
+function C(e) {
     return (0, r.jsx)(l.ua7, {
         text: p.intl.string(p.t["0PQYk5"]),
         children: (t) =>
@@ -283,7 +283,7 @@ function N(e) {
             ),
     });
 }
-function C(e) {
+function N(e) {
     var t;
     let {
             url: n,
@@ -301,13 +301,13 @@ function C(e) {
         y = null != (t = null == b ? void 0 : b.length) ? t : 0,
         O = c ? 100 : 6,
         v = 0 === g,
-        C = "";
-    v && c && y > O ? (C = "\n...") : v || (C = "..."),
-        "" !== C &&
+        N = "";
+    v && c && y > O ? (N = "\n...") : v || (N = "..."),
+        "" !== N &&
             (v
-                ? (C += " " + p.intl.formatToPlainString(p.t.DQnFp6, { lines: y - O }))
-                : (C += " " + p.intl.formatToPlainString(p.t["1+gGcH"], { formattedBytes: (0, _.IC)(g) })));
-    let R = (null == b ? void 0 : b.slice(0, O).join("\n")) + C,
+                ? (N += " " + p.intl.formatToPlainString(p.t.DQnFp6, { lines: y - O }))
+                : (N += " " + p.intl.formatToPlainString(p.t["1+gGcH"], { formattedBytes: (0, _.IC)(g) })));
+    let R = (null == b ? void 0 : b.slice(0, O).join("\n")) + N,
         P = (0, u.yx)(R),
         w = c || O < y;
     return (0, r.jsxs)("div", {
@@ -337,7 +337,7 @@ function C(e) {
                                       isWholeFile: v,
                                       numLines: y,
                                   }),
-                                  (0, r.jsx)(N, {
+                                  (0, r.jsx)(C, {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
@@ -425,7 +425,7 @@ let P = i.memo(
                   onContextMenu: d,
                   className: l,
               })
-            : (0, r.jsx)(C, {
+            : (0, r.jsx)(N, {
                   url: t,
                   fileName: n,
                   fileSize: a,

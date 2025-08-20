@@ -1,162 +1,189 @@
-r.d(t, {
-    i: () => w,
-    y: () => z,
+n.d(t, {
+    i: () => x,
+    y: () => j,
 });
-var n = r(951288),
-    s = r(647438),
-    o = r(120356),
-    l = r.n(o),
-    a = r(755721),
-    c = r(481060),
-    i = r(100527),
-    u = r(335131),
-    d = r(617136),
-    f = r(915750),
-    p = r(509212),
-    x = r(113434),
-    j = r(497505),
-    g = r(373370),
-    h = r(110560),
-    C = r(667105),
-    b = r(46140),
-    m = r(215023),
-    y = r(388032),
-    O = r(165016);
-function S(e) {
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(755721),
+    l = n(481060),
+    c = n(100527),
+    u = n(335131),
+    d = n(617136),
+    f = n(915750),
+    _ = n(509212),
+    p = n(113434),
+    h = n(497505),
+    m = n(373370),
+    g = n(110560),
+    E = n(667105),
+    b = n(46140),
+    y = n(215023),
+    O = n(388032),
+    v = n(165016);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
+            r.forEach(function (t) {
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e) {
-    let { quest: t, sourceQuestContent: r, taskDetails: s } = e;
-    return (0, n.jsx)(a.zx, {
-        className: O.cta,
-        color: a.zx.Colors.BRAND,
-        fullWidth: !0,
-        onClick: () => {
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : S(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function C(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = N(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function N(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function R(e) {
+    let { quest: t, sourceQuestContent: n, taskDetails: i } = e,
+        a = () => {
             var e;
-            let n = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
-            (0, h.openVideoQuestModal)({
+            let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
+            (0, g.openVideoQuestModal)({
                 quest: t,
-                questContent: j.jn.QUEST_BAR_V2,
-                sourceQuestContent: r,
-                sourceQuestContentCTA: n,
+                questContent: h.jn.QUEST_BAR_V2,
+                sourceQuestContent: n,
+                sourceQuestContentCTA: r,
             });
-        },
-        size: a.zx.Sizes.SMALL,
-        children: (0, p.F9)(s),
+        };
+    return (0, r.jsx)(s.zx, {
+        className: v.cta,
+        color: s.zx.Colors.BRAND,
+        fullWidth: !0,
+        onClick: a,
+        size: s.zx.Sizes.SMALL,
+        children: (0, _.F9)(i),
     });
 }
-let v = (e) => {
-        let { quest: t, sourceQuestContent: r } = e,
-            s = (0, f.aM)();
-        return (0, n.jsx)(a.zx, {
-            className: O.cta,
-            size: a.zx.Sizes.SMALL,
+let P = (e) => {
+        let { quest: t, sourceQuestContent: n } = e,
+            i = (0, f.aM)();
+        return (0, r.jsx)(s.zx, {
+            className: v.cta,
+            size: s.zx.Sizes.SMALL,
             onClick: () =>
-                (0, p.nc)(t, {
-                    content: j.jn.QUEST_BAR_V2,
+                (0, _.nc)(t, {
+                    content: h.jn.QUEST_BAR_V2,
                     ctaContent: d.jZ.OPEN_GAME_LINK,
-                    impressionId: s,
-                    sourceQuestContent: r,
+                    impressionId: i,
+                    sourceQuestContent: n,
                 }),
-            children: (0, p.pO)(t) ? y.intl.string(y.t.hvVgAQ) : y.intl.string(y.t.lwQdjI),
+            children: (0, _.pO)(t) ? O.intl.string(O.t.hvVgAQ) : O.intl.string(O.t.lwQdjI),
         });
     },
-    N = (e) => {
+    w = (e) => {
         var t;
-        let { quest: r, sourceQuestContent: s } = e,
-            o = null == (t = (0, f.WD)()) ? void 0 : t.getId();
-        return (0, n.jsx)(a.zx, {
+        let { quest: n, sourceQuestContent: i } = e,
+            a = null == (t = (0, f.WD)()) ? void 0 : t.getId();
+        return (0, r.jsx)(s.zx, {
             fullWidth: !0,
-            className: O.cta,
+            className: v.cta,
             onClick: () =>
-                (0, p.gI)(
-                    { quest: r },
+                (0, _.gI)(
+                    { quest: n },
                     {
-                        content: j.jn.QUEST_BAR_V2,
+                        content: h.jn.QUEST_BAR_V2,
                         ctaContent: d.jZ.CONNECT_CONSOLE,
-                        impressionId: o,
-                        sourceQuestContent: s,
+                        impressionId: a,
+                        sourceQuestContent: i,
                     },
                 ),
-            size: a.zx.Sizes.SMALL,
-            children: y.intl.string(y.t.csptqa),
+            size: s.zx.Sizes.SMALL,
+            children: O.intl.string(O.t.csptqa),
         });
     },
-    E = (e) => {
+    D = (e) => {
         let { quest: t } = e,
-            r = (0, p.Vl)(t),
-            s = t.config.features.includes(b.S7.START_QUEST_CTA),
-            o = (0, g.CR)({ quest: t }),
-            { launchInGameActivity: l } = (0, x.zB)(t);
-        return r && s
-            ? (0, n.jsx)(a.zx, {
-                  className: O.cta,
-                  color: a.zx.Colors.BRAND,
+            n = (0, _.Vl)(t),
+            i = t.config.features.includes(b.S7.START_QUEST_CTA),
+            a = (0, m.CR)({ quest: t }),
+            { launchInGameActivity: o } = (0, p.zB)(t);
+        return n && i
+            ? (0, r.jsx)(s.zx, {
+                  className: v.cta,
+                  color: s.zx.Colors.BRAND,
                   fullWidth: !0,
-                  onClick: l,
-                  size: a.zx.Sizes.SMALL,
-                  children: o,
+                  onClick: o,
+                  size: s.zx.Sizes.SMALL,
+                  children: a,
               })
             : null;
     },
-    w = (e) => {
+    x = (e) => {
         var t,
-            r,
-            o,
             {
-                quest: d,
-                useReducedMotion: f,
-                isExpanded: x,
-                className: g,
-                ctaLabel: h,
-                onClick: b,
-                questContent: k = j.jn.QUEST_BAR_V2,
-                sourceQuestContent: v,
-                shouldShowRewardsCTAWhenCollapsed: N = !1,
+                quest: n,
+                useReducedMotion: a,
+                isExpanded: d,
+                className: f,
+                ctaLabel: p,
+                onClick: m,
+                questContent: g = h.jn.QUEST_BAR_V2,
+                sourceQuestContent: b,
+                shouldShowRewardsCTAWhenCollapsed: I = !1,
             } = e,
-            E = (function (e, t) {
-                if (null == e) return {};
-                var r,
-                    n,
-                    s = (function (e, t) {
-                        if (null == e) return {};
-                        var r,
-                            n,
-                            s = {},
-                            o = Object.keys(e);
-                        for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
-                        return s;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < o.length; n++)
-                        (r = o[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
-                }
-                return s;
-            })(e, [
+            S = C(e, [
                 "quest",
                 "useReducedMotion",
                 "isExpanded",
@@ -167,115 +194,104 @@ let v = (e) => {
                 "sourceQuestContent",
                 "shouldShowRewardsCTAWhenCollapsed",
             ]);
-        let w = (0, C.hf)({
-                quest: d,
-                questContent: k,
-                sourceQuestContent: v,
+        let N = (0, E.hf)({
+                quest: n,
+                questContent: g,
+                sourceQuestContent: b,
             }),
-            A = s.useCallback(
+            R = i.useCallback(
                 (e) => {
                     var t;
-                    null == b || b(e),
-                        (0, p.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
+                    null == m || m(e),
+                        (0, _.xN)(n.config) && (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, u.mK)({
                                   openInLayer: !1,
-                                  tab: m.AW.ORBS,
+                                  tab: y.AW.ORBS,
                                   analyticsLocations: [],
-                                  analyticsSource: i.Z.QUEST_HOME_PAGE,
+                                  analyticsSource: c.Z.QUEST_HOME_PAGE,
                               })
-                            : w();
+                            : N();
                 },
-                [b, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, w],
+                [m, n.config, null == (t = n.userStatus) ? void 0 : t.claimedAt, N],
             );
-        return (0, n.jsx)(
-            c.gtL,
-            ((t = S(
-                {
-                    fullWidth: !0,
-                    size: a.zx.Sizes.SMALL,
-                    onClick: A,
-                    pauseAnimation: f || (!x && !N),
-                    className: l()(O.cta, g),
-                    buttonShineClassName: O.shine,
-                },
-                E,
-            )),
-            (r = r = { children: null != h ? h : y.intl.string(y.t.cfY4PD) }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                : (function (e, t) {
-                      var r = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
-                      }
-                      return r;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                  }),
-            t),
+        return (0, r.jsx)(
+            l.gtL,
+            A(
+                T(
+                    {
+                        fullWidth: !0,
+                        size: s.zx.Sizes.SMALL,
+                        onClick: R,
+                        pauseAnimation: a || (!d && !I),
+                        className: o()(v.cta, f),
+                        buttonShineClassName: v.shine,
+                    },
+                    S,
+                ),
+                { children: null != p ? p : O.intl.string(O.t.cfY4PD) },
+            ),
         );
     },
-    A = (e) => {
+    L = (e) => {
         var t;
         let {
-                quest: r,
-                sourceQuestContent: s,
-                useReducedMotion: o,
-                isExpanded: l,
-                awaitingConsoleConnections: a,
-                hasMadeProgress: c,
-                isProgressing: i,
+                quest: n,
+                sourceQuestContent: i,
+                useReducedMotion: a,
+                isExpanded: o,
+                awaitingConsoleConnections: s,
+                hasMadeProgress: l,
+                isProgressing: c,
                 activeScreen: u,
                 taskDetails: d,
                 shouldShowRewardsCTAWhenCollapsed: f,
             } = e,
-            x = (null == (t = r.userStatus) ? void 0 : t.completedAt) != null,
-            g = (0, p.q8)(r),
-            h = (0, p.Vl)(r);
-        if (x)
-            return (0, n.jsx)(w, {
-                quest: r,
-                sourceQuestContent: s,
-                useReducedMotion: o,
-                isExpanded: l,
+            p = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+            m = (0, _.q8)(n),
+            g = (0, _.Vl)(n);
+        if (p)
+            return (0, r.jsx)(x, {
+                quest: n,
+                sourceQuestContent: i,
+                useReducedMotion: a,
+                isExpanded: o,
                 shouldShowRewardsCTAWhenCollapsed: f,
             });
-        if (g)
-            return (0, n.jsx)(k, {
-                quest: r,
-                sourceQuestContent: s,
+        if (m)
+            return (0, r.jsx)(R, {
+                quest: n,
+                sourceQuestContent: i,
                 taskDetails: d,
             });
-        if (h) return (0, n.jsx)(E, { quest: r });
-        if (u === j.LI.CONSOLE && a)
-            return (0, n.jsx)(N, {
-                quest: r,
-                sourceQuestContent: s,
+        if (g) return (0, r.jsx)(D, { quest: n });
+        if (u === h.LI.CONSOLE && s)
+            return (0, r.jsx)(w, {
+                quest: n,
+                sourceQuestContent: i,
             });
-        if (u !== j.LI.SELECT && !c && !i)
-            return (0, n.jsx)(v, {
-                quest: r,
-                sourceQuestContent: s,
+        if (u !== h.LI.SELECT && !l && !c)
+            return (0, r.jsx)(P, {
+                quest: n,
+                sourceQuestContent: i,
             });
         return null;
     };
-function z(e) {
-    return (0, n.jsxs)("div", {
-        className: O.ctaButtons,
+function j(e) {
+    return (0, r.jsxs)("div", {
+        className: v.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, n.jsx)(a.zx, {
-                    className: O.backButton,
-                    innerClassName: O.backButtonInner,
+                (0, r.jsx)(s.zx, {
+                    className: v.backButton,
+                    innerClassName: v.backButtonInner,
                     look: "blank",
                     grow: !1,
                     fullWidth: !1,
                     size: "none",
                     onClick: e.onBack,
-                    children: (0, n.jsx)(c.V7D, { className: O.backIcon }),
+                    children: (0, r.jsx)(l.V7D, { className: v.backIcon }),
                 }),
-            (0, n.jsx)(A, S({}, e)),
+            (0, r.jsx)(L, T({}, e)),
         ],
     });
 }

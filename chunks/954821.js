@@ -1,154 +1,153 @@
-n.d(t, { h: () => j }), n(388685), n(953529);
-var i = n(951288),
-    r = n(647438),
-    s = n(913527),
-    a = n.n(s),
-    l = n(755721),
-    o = n(481060),
+n.d(t, { h: () => S }), n(388685), n(953529);
+var r = n(951288),
+    i = n(647438),
+    a = n(913527),
+    o = n.n(a),
+    s = n(755721),
+    l = n(481060),
     c = n(355467),
-    d = n(100527),
-    u = n(906732),
-    m = n(313201),
-    p = n(73346),
-    g = n(584825),
+    u = n(100527),
+    d = n(906732),
+    f = n(313201),
+    _ = n(73346),
+    p = n(584825),
     h = n(305342),
-    f = n(293810),
-    b = n(388032),
-    x = n(640749);
-let _ = (e) => {
-        var t;
-        let { transitionState: n, groupListing: s, guildId: _, listing: j, subscription: E, onClose: C } = e,
-            O = (0, m.Dt)(),
-            v = (0, g.YB)(_),
-            S =
-                (null == v || null == (t = v.cover_image_asset) ? void 0 : t.application_id) != null
-                    ? (0, p._W)(v.cover_image_asset.application_id, v.cover_image_asset, 440)
-                    : void 0,
-            { analyticsLocations: T } = (0, u.ZP)(d.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            {
-                cancelSubscription: N,
-                error: I,
-                submitting: y,
-            } = ((e) => {
-                let [t, n] = r.useState(!1),
-                    [i, s] = r.useState(null);
-                return {
-                    cancelSubscription: async (t) => {
-                        try {
-                            return n(!0), await c.EO(t, e), !0;
-                        } catch (e) {
-                            s(e);
-                        } finally {
-                            n(!1);
-                        }
-                    },
-                    error: i,
-                    submitting: t,
-                };
-            })(T),
-            A = async () => {
-                (await N(E.id)) && C();
-            },
-            P = j.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.CHANNEL),
-            R = j.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.INTANGIBLE),
-            D = a()(E.currentPeriodEnd).format("MMMM Do, YYYY"),
-            Z = b.intl.formatToPlainString(b.t.KsMRPz, {
-                numChannels: P.length,
-                numAdditionalBenefits: R.length,
-                subscriptionEndDate: D,
+    m = n(293810),
+    g = n(388032),
+    E = n(640749);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
             });
-        return (0, i.jsxs)(o.Y0X, {
+    }
+    return e;
+}
+let O = 440,
+    v = "MMMM Do, YYYY",
+    I = (e) => {
+        let [t, n] = i.useState(!1),
+            [r, a] = i.useState(null);
+        return {
+            cancelSubscription: async (t) => {
+                try {
+                    return n(!0), await c.EO(t, e), !0;
+                } catch (e) {
+                    a(e);
+                } finally {
+                    n(!1);
+                }
+            },
+            error: r,
+            submitting: t,
+        };
+    },
+    T = (e) => {
+        var t;
+        let { transitionState: n, groupListing: i, guildId: a, listing: c, subscription: b, onClose: y } = e,
+            T = (0, f.Dt)(),
+            S = (0, p.YB)(a),
+            A =
+                (null == S || null == (t = S.cover_image_asset) ? void 0 : t.application_id) != null
+                    ? (0, _._W)(S.cover_image_asset.application_id, S.cover_image_asset, O)
+                    : void 0,
+            { analyticsLocations: C } = (0, d.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: N, error: R, submitting: P } = I(C),
+            w = async () => {
+                (await N(b.id)) && y();
+            },
+            D = c.role_benefits.benefits.filter((e) => e.ref_type === m.Qs.CHANNEL),
+            x = c.role_benefits.benefits.filter((e) => e.ref_type === m.Qs.INTANGIBLE),
+            L = o()(b.currentPeriodEnd).format(v),
+            j = g.intl.formatToPlainString(g.t.KsMRPz, {
+                numChannels: D.length,
+                numAdditionalBenefits: x.length,
+                subscriptionEndDate: L,
+            });
+        return (0, r.jsxs)(l.Y0X, {
             transitionState: n,
-            className: x.__invalid_modal,
-            "aria-labelledby": O,
+            className: E.__invalid_modal,
+            "aria-labelledby": T,
             parentComponent: "CancelSubscriptionModal",
             children: [
-                (0, i.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     children: [
-                        (0, i.jsx)("img", {
-                            src: S,
+                        (0, r.jsx)("img", {
+                            src: A,
                             alt: "",
-                            className: x.headerImage,
+                            className: E.headerImage,
                         }),
-                        (0, i.jsx)(o.olH, {
+                        (0, r.jsx)(l.olH, {
                             withCircleBackground: !0,
-                            className: x.closeButton,
-                            onClick: C,
+                            className: E.closeButton,
+                            onClick: y,
                         }),
                     ],
                 }),
-                null != I ? (0, i.jsx)(o.kzN, { children: I.message }) : null,
-                (0, i.jsxs)(o.hzk, {
-                    className: x.content,
+                null != R ? (0, r.jsx)(l.kzN, { children: R.message }) : null,
+                (0, r.jsxs)(l.hzk, {
+                    className: E.content,
                     children: [
-                        (0, i.jsx)(o.X6q, {
-                            id: O,
+                        (0, r.jsx)(l.X6q, {
+                            id: T,
                             variant: "text-md/medium",
-                            className: x.title,
-                            children: b.intl.string(b.t.O6l5tL),
+                            className: E.title,
+                            children: g.intl.string(g.t.O6l5tL),
                         }),
-                        (0, i.jsx)(o.Text, {
-                            className: x.description,
+                        (0, r.jsx)(l.Text, {
+                            className: E.description,
                             variant: "text-sm/normal",
-                            children: Z,
+                            children: j,
                         }),
-                        (0, i.jsx)(h.c, {
-                            listingId: j.id,
-                            guildId: s.guild_id,
-                            className: x.benefits,
+                        (0, r.jsx)(h.c, {
+                            listingId: c.id,
+                            guildId: i.guild_id,
+                            className: E.benefits,
                         }),
                     ],
                 }),
-                (0, i.jsxs)(o.mzw, {
-                    className: x.footer,
+                (0, r.jsxs)(l.mzw, {
+                    className: E.footer,
                     children: [
-                        (0, i.jsx)(o.zxk, {
+                        (0, r.jsx)(l.zxk, {
                             variant: "critical-primary",
-                            text: b.intl.string(b.t.F6lUDA),
-                            onClick: A,
-                            loading: y,
+                            text: g.intl.string(g.t.F6lUDA),
+                            onClick: w,
+                            loading: P,
                         }),
-                        (0, i.jsx)(l.zx, {
-                            look: l.zx.Looks.LINK,
-                            color: l.zx.Colors.WHITE,
-                            className: x.goBackButton,
-                            onClick: C,
-                            children: b.intl.string(b.t.EP6EPT),
+                        (0, r.jsx)(s.zx, {
+                            look: s.zx.Looks.LINK,
+                            color: s.zx.Colors.WHITE,
+                            className: E.goBackButton,
+                            onClick: y,
+                            children: g.intl.string(g.t.EP6EPT),
                         }),
                     ],
                 }),
             ],
         });
     },
-    j = (e) => {
-        (0, o.h7j)((t) =>
-            (0, i.jsx)(
-                _,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = i);
-                            });
-                    }
-                    return e;
-                })({}, t, e),
-            ),
-        );
+    S = (e) => {
+        (0, l.h7j)((t) => (0, r.jsx)(T, y({}, t, e)));
     };

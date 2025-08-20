@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -23,34 +23,34 @@ var r = n(951288),
 let T = 200,
     S = 32,
     A = 30;
-function N(e) {
-    let { sourceType: t, children: n, user: N, targetElementRef: C } = e,
+function C(e) {
+    let { sourceType: t, children: n, user: C, targetElementRef: N } = e,
         { themeType: R } = (0, m.z)(),
         P = (0, h.T)({ location: "UserProfilePopoutInteractionCoachmark" }),
         w = (0, a.e7)([p.default], () => {
             var e;
-            return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === N.id;
+            return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === C.id;
         }),
         D = (0, a.e7)([_.Z], () =>
-            _.Z.findActivity(N.id, (e) => {
+            _.Z.findActivity(C.id, (e) => {
                 let { type: t } = e;
                 return t === E.IIU.CUSTOM_STATUS;
             }),
         ),
-        L = () =>
+        x = () =>
             !w &&
             R === b.l.POPOUT &&
             (t === g.n_.AVATAR ? P && null == D : t === g.n_.STATUS ? P : t === g.n_.ACTIVITY && !P),
-        [x, M] = i.useState(!1);
-    (0, c.Z)(() => M(!0), L() ? T : null);
+        [L, j] = i.useState(!1);
+    (0, c.Z)(() => j(!0), x() ? T : null);
     let {
-            asset: k,
-            assetClassName: j,
+            asset: M,
+            assetClassName: k,
             className: U,
             content: G,
             header: B,
-            spacing: V,
-            dismissibleContentType: F,
+            spacing: Z,
+            dismissibleContentType: V,
         } = P
             ? {
                   asset: I,
@@ -70,15 +70,15 @@ function N(e) {
                   spacing: S,
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY,
               },
-        Z = (0, u.Nj)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        H = x && !Z ? [F] : [],
+        F = (0, u.Nj)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        H = L && !F ? [V] : [],
         [Y, W] = (0, d.US)(H);
     return (0, r.jsx)(l.yRy, {
-        targetElementRef: C,
+        targetElementRef: N,
         align: "center",
         position: t === g.n_.AVATAR ? "left" : "right",
         shouldShow: null != Y,
-        spacing: V,
+        spacing: Z,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(l.VqE, {
@@ -89,8 +89,8 @@ function N(e) {
                     className: U,
                     asset: (0, r.jsx)("img", {
                         alt: "",
-                        src: k,
-                        className: j,
+                        src: M,
+                        className: k,
                     }),
                     buttonCTA: y.intl.string(y.t["+IrDzM"]),
                     buttonLayout: f._F.STACKED,

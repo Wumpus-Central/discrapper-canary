@@ -1,22 +1,22 @@
-var n = r(401169),
-    i = r(733359).strlen;
-t.exports = function (t, e) {
-    var r = [];
+var r = n(401169),
+    i = n(733359).strlen;
+e.exports = function (e, t) {
+    var n = [];
     return (
-        t.findEntityRanges(
-            function (t) {
-                return !!t.getEntity();
+        e.findEntityRanges(
+            function (e) {
+                return !!e.getEntity();
             },
-            function (o, a) {
-                var u = t.getText(),
-                    s = t.getEntityAt(o);
-                r.push({
-                    offset: i(u.slice(0, o)),
-                    length: i(u.slice(o, a)),
-                    key: Number(e[n.stringify(s)]),
+            function (a, o) {
+                var s = e.getText(),
+                    l = e.getEntityAt(a);
+                n.push({
+                    offset: i(s.slice(0, a)),
+                    length: i(s.slice(a, o)),
+                    key: Number(t[r.stringify(l)]),
                 });
             },
         ),
-        r
+        n
     );
 };

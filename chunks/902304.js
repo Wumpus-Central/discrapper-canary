@@ -35,8 +35,8 @@ function T(e, t, n) {
 }
 let S = new c.Z("GameConsoleManager"),
     A = 3000,
-    N = 60000,
-    C = 180000;
+    C = 60000,
+    N = 180000;
 async function R(e) {
     let t = f.Z.getChannelId();
     i()(null == t, "Syncing to remote while in voice!"),
@@ -118,7 +118,7 @@ class w extends l.Z {
                     null == e && this.maybeConnect(Object.values(_.Z.getSessions()));
             }),
             T(this, "handleWaitForRemoteSession", () => {
-                this.awaitRemoteTimeout.start(N, () => {
+                this.awaitRemoteTimeout.start(C, () => {
                     (0, m.s6)(),
                         o.Z.show({
                             title: I.intl.string(I.t.wGMxr6),
@@ -153,7 +153,7 @@ class w extends l.Z {
                         reconnectPlatformType: s.isAccountLinkError ? a.type : void 0,
                     }),
                     O.e8.has(i.code) && this.awaitRemoteTimeout.isStarted()
-                        ? this.awaitRemoteTimeout.start(C, () => (0, m.s6)(), !0)
+                        ? this.awaitRemoteTimeout.start(N, () => (0, m.s6)(), !0)
                         : "failed" === r && (0, m.s6)();
             }),
             T(this, "handleRemoteSessionDisconnect", () => {

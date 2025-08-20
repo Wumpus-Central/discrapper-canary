@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(981631),
     _ = n(675999),
     y = n(388032),
-    v = n(816827);
-let j = {
+    j = n(816827);
+let v = {
     origin: {
         x: -16,
         y: 0,
@@ -64,14 +64,14 @@ function C(e) {
             );
     });
 }
-function E(e) {
+function x(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, l.Wu)([h.Z], () => h.Z.getGuildsArray()),
-        E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        x = i.useMemo(() => a.some((e) => (0, f.eM)(e, E)), [a, E]),
+        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        E = i.useMemo(() => a.some((e) => (0, f.eM)(e, x)), [a, x]),
         S = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
-        { analyticsLocations: P } = (0, s.ZP)(),
-        I = (0, r.jsx)(b.Z, {
+        { analyticsLocations: I } = (0, s.ZP)(),
+        P = (0, r.jsx)(b.Z, {
             showPill: !1,
             id: "create-join-button",
             onClick: () => {
@@ -82,7 +82,7 @@ function E(e) {
                               page: O.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: O.jXE.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: P,
+                          analyticsLocations: I,
                       })
                     : c.Z.openCreateGuildModal({ location: "Guild List" });
             },
@@ -92,15 +92,15 @@ function E(e) {
             icon: o.oFk,
         });
     return t
-        ? I
+        ? P
         : (0, r.jsx)("div", {
-              className: v.tutorialContainer,
+              className: j.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
-                  tutorialId: x ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: j,
+                  tutorialId: E ? "create-more-servers" : "create-first-server",
+                  inlineSpecs: v,
                   position: "right",
                   children: [
-                      I,
+                      P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
                               name: y.intl.string(y.t["45xjMz"]),

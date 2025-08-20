@@ -79,13 +79,13 @@ function v(e) {
             className: T,
             disabledInputs: S,
             isTryItOutFlow: A,
-            onUpsellClick: N,
+            onUpsellClick: C,
         } = e,
-        C = i.useRef(null),
+        N = i.useRef(null),
         { analyticsLocations: R, newestAnalyticsLocation: P } = (0, c.ZP)(),
         w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
         D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
-        L = (0, r.jsx)(O, {
+        x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
             imageClassName: o()(T, { [m.overlay]: !S }),
@@ -98,11 +98,11 @@ function v(e) {
     return S
         ? (0, r.jsx)("div", {
               className: m.avatar,
-              children: L,
+              children: x,
           })
         : D
           ? (0, r.jsx)(l.yRy, {
-                targetElementRef: C,
+                targetElementRef: N,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(_.Z, {
@@ -128,10 +128,10 @@ function v(e) {
                     (0, r.jsxs)(
                         l.P3F,
                         y(E({}, e), {
-                            innerRef: C,
+                            innerRef: N,
                             className: o()(m.avatar, m.clickable),
                             children: [
-                                L,
+                                x,
                                 (0, r.jsx)(l.vdY, {
                                     size: "custom",
                                     className: m.overlayIcon,
@@ -144,10 +144,10 @@ function v(e) {
                     ),
             })
           : (0, r.jsxs)(l.P3F, {
-                onClick: N,
+                onClick: C,
                 className: o()(m.avatar, m.clickable),
                 children: [
-                    L,
+                    x,
                     (0, r.jsx)(l.SrA, {
                         size: "custom",
                         className: m.overlayIcon,

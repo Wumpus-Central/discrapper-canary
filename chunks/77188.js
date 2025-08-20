@@ -51,7 +51,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -63,12 +63,12 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,7 +86,7 @@ function R(e) {
                     focus: T.nO,
                 }),
                 P(
-                    C(A({}, e), {
+                    N(A({}, e), {
                         editor: r,
                         windowContext: t,
                         previewMarkdown: n,
@@ -124,8 +124,8 @@ function P(e) {
             previewMarkdown: T,
             forTests: S,
             onChangeStart: A,
-            onChangeEnd: N,
-            updateState: C,
+            onChangeEnd: C,
+            updateState: N,
         } = e,
         R = a,
         { onChange: P } = R;
@@ -149,10 +149,10 @@ function P(e) {
         (R = (0, m.Z)(R)),
         (R = (0, p.Z)(R)),
         (R = (0, O.Z)(R)),
-        (R = (0, I.Z)(R, A, N)),
+        (R = (0, I.Z)(R, A, C)),
         (R = (0, h.Z)(R, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return C(R, "undo", {
+            return N(R, "undo", {
                 value: t,
                 selection: n,
             });

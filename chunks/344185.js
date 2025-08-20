@@ -110,7 +110,7 @@ function S(e) {
     var t, n;
     let { channel: r } = e;
     if (!l.AW.has(r.type)) return !1;
-    if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return N(r);
+    if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return C(r);
     {
         let e = null != (n = h[r.guild_id]) ? n : {};
         h[r.guild_id] = p(f({}, e), { [r.parent_id]: p(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
@@ -121,14 +121,14 @@ function A(e) {
     for (let e in (null == r && m.add(t), (h[t] = f({}, h[t])), h[t])) h[t][e] = f({}, h[t][e]);
     n.forEach((e) => y(t, e));
 }
-function N(e) {
+function C(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in h) || !(n in h[t]) || !(r in h[t][n])) return !1;
     (h[t] = p(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], a().isEmpty(h[t][n]) && delete h[t][n];
 }
-function C(e) {
+function N(e) {
     let { channel: t } = e;
-    return N(t);
+    return C(t);
 }
 function R(e) {
     let { channel: t } = e;
@@ -172,6 +172,6 @@ let D = new w(s.Z, {
     THREAD_CREATE: S,
     THREAD_UPDATE: S,
     THREAD_LIST_SYNC: A,
-    THREAD_DELETE: C,
+    THREAD_DELETE: N,
     CHANNEL_DELETE: R,
 });

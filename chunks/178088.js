@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(675478),
     _ = n(581883),
     y = n(585483),
-    v = n(153209),
-    j = n(903672),
+    j = n(153209),
+    v = n(903672),
     C = n(791914),
-    E = n(711165),
-    x = n(946443),
+    x = n(711165),
+    E = n(946443),
     S = n(264233),
-    P = n(981631),
-    I = n(388032),
+    I = n(981631),
+    P = n(388032),
     N = n(253107);
 function w(e) {
     let {
@@ -38,8 +38,8 @@ function w(e) {
             spacing: R,
             dialogClassName: D,
         } = e,
-        { analyticsLocations: L } = (0, p.ZP)(d.Z.NOTIFICATION_CENTER),
-        [M, k] = i.useState(!1),
+        { analyticsLocations: M } = (0, p.ZP)(d.Z.NOTIFICATION_CENTER),
+        [L, k] = i.useState(!1),
         [U, G] = [
             (0, s.e7)([_.Z], () => {
                 var e, t;
@@ -76,12 +76,12 @@ function w(e) {
             };
         })(U),
         F = i.useCallback(() => {
-            k(!1), M && (null == n || n());
-        }, [n, M]),
+            k(!1), L && (null == n || n());
+        }, [n, L]),
         H = i.useCallback(() => {
-            k(!M), M ? null == n || n() : null == t || t();
-        }, [n, t, M]);
-    i.useEffect(() => (y.S.subscribe(P.CkL.TOGGLE_INBOX, H), () => void y.S.unsubscribe(P.CkL.TOGGLE_INBOX, H)), [H]);
+            k(!L), L ? null == n || n() : null == t || t();
+        }, [n, t, L]);
+    i.useEffect(() => (y.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void y.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
     let { enabled: z, inInbox: W } = h.Z.useExperiment({ location: "RecentsPopout" }),
         K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && z && W,
         { enabled: Y } = f.Z.useExperiment({ location: "RecentsPopout" });
@@ -96,18 +96,18 @@ function w(e) {
         ),
         X = (0, b.Us)({ location: "ForYou" });
     return (0, r.jsx)(p.Gt, {
-        value: L,
+        value: M,
         children: (0, r.jsx)(u.yRy, {
             targetElementRef: A,
             animation: u.yRy.Animation.NONE,
             position: Z,
             align: T,
             autoInvert: !1,
-            shouldShow: M,
+            shouldShow: L,
             onRequestClose: F,
             renderPopout: function () {
                 return (0, r.jsx)(u.VqE, {
-                    "aria-label": I.intl.string(I.t.GSmTKC),
+                    "aria-label": P.intl.string(P.t.GSmTKC),
                     className: D,
                     children: (0, r.jsx)("div", {
                         className: o()(N.container, { [N.widerInbox]: X }),
@@ -120,18 +120,18 @@ function w(e) {
                             }),
                             children:
                                 U === c.X.FOR_YOU
-                                    ? (0, r.jsx)(v.ZP, {})
+                                    ? (0, r.jsx)(j.ZP, {})
                                     : U === c.X.MENTIONS
-                                      ? (0, r.jsx)(j.Z, { onJump: q })
+                                      ? (0, r.jsx)(v.Z, { onJump: q })
                                       : Y && U === c.X.GAME_INVITES
                                         ? (0, r.jsx)(S.Z, {})
                                         : z && W && U === c.X.BOOKMARKS
                                           ? (0, r.jsx)(m.K, { closePopout: F })
                                           : U === c.X.SCHEDULED
-                                            ? (0, r.jsx)(E._, {})
+                                            ? (0, r.jsx)(x._, {})
                                             : (0, r.jsx)(a.SV, {
-                                                  fallback: (0, r.jsx)(x.h6, {}),
-                                                  children: (0, r.jsx)(x.ZP, {
+                                                  fallback: (0, r.jsx)(E.h6, {}),
+                                                  children: (0, r.jsx)(E.ZP, {
                                                       onJump: q,
                                                       showTutorial: B,
                                                       setSeenTutorial: V,

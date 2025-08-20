@@ -1,25 +1,25 @@
-n.d(t, { Z: () => l }), n(388685);
-var i = n(647438),
-    r = n(597688),
-    s = n(884697),
-    a = n(223143);
-let l = function (e) {
+n.d(t, { Z: () => s }), n(388685);
+var r = n(647438),
+    i = n(597688),
+    a = n(884697),
+    o = n(223143);
+let s = function (e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [n, l] = i.useState(),
-        { categories: o, purchases: c } = (0, a.ZP)();
+        [n, s] = r.useState(),
+        { categories: l, purchases: c } = (0, o.ZP)();
     return (
-        i.useEffect(() => {
-            (null == n || 0 === n.size) && l(o);
-        }, [o, n]),
-        i.useMemo(() => {
+        r.useEffect(() => {
+            (null == n || 0 === n.size) && s(l);
+        }, [l, n]),
+        r.useMemo(() => {
             if (null != e) return e;
             if (null == n || !t) return;
-            let i = (0, s.iC)(c, n).filter((e) => {
+            let r = (0, a.iC)(c, n).filter((e) => {
                 let { skuId: t } = e,
-                    n = r.Z.getProduct(t);
-                return (0, s.G1)(n);
+                    n = i.Z.getProduct(t);
+                return (0, a.G1)(n);
             });
-            return i[Math.floor(Math.random() * i.length)];
+            return r[Math.floor(Math.random() * r.length)];
         }, [n, e, c, t])
     );
 };

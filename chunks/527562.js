@@ -33,7 +33,7 @@ function b(e) {
         i.useEffect(() => {
             null == a || a(null == S ? void 0 : S.current);
         }, [S, a]);
-    let N = i.useMemo(
+    let C = i.useMemo(
         () =>
             I === f.a.NOT_FETCHED || I === f.a.FETCHING
                 ? (0, r.jsx)("div", {
@@ -68,6 +68,6 @@ function b(e) {
     return (0, r.jsx)(l.VqE, {
         ref: S,
         "aria-label": null == O ? void 0 : O.name,
-        children: N,
+        children: C,
     });
 }

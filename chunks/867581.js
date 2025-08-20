@@ -1,7 +1,7 @@
-let r, i;
-n.d(t, { Z: () => h }), n(388685), n(781311), n(35282);
+let r, o;
+n.d(t, { Z: () => w }), n(388685), n(781311), n(35282);
 var l = n(951288),
-    o = n(647438),
+    i = n(647438),
     a = n(120356),
     s = n.n(a),
     c = n(755721),
@@ -14,21 +14,21 @@ var l = n(951288),
     I = n(782605),
     N = n(981631),
     T = n(388032),
-    E = n(604509),
+    b = n(604509),
     S = n(216019),
     O = n(286359);
-let C = "hTKzmak",
-    b = (0, p.hQ)(),
-    g =
+let E = "hTKzmak",
+    C = (0, p.hQ)(),
+    x =
         ((r = window.GLOBAL_ENV.INVITE_HOST),
-        (i = ""),
-        null == r && ((r = location.host), (i = N.Z5c.INVITE(""))),
-        "".concat(location.protocol, "//").concat(r).concat(i, "/")),
-    L = [C, "".concat(g).concat(C), "".concat(g).concat("wumpus-friends")],
-    D = (e) => {
+        (o = ""),
+        null == r && ((r = location.host), (o = N.Z5c.INVITE(""))),
+        "".concat(location.protocol, "//").concat(r).concat(o, "/")),
+    h = [E, "".concat(x).concat(E), "".concat(x).concat("wumpus-friends")],
+    g = (e) => {
         let { onClick: t } = e;
         return (0, l.jsxs)(u.P3F, {
-            className: E.rowContainer,
+            className: b.rowContainer,
             onClick: () => {
                 t(), (0, f.uL)(N.Z5c.GUILD_DISCOVERY);
             },
@@ -36,45 +36,45 @@ let C = "hTKzmak",
                 (0, l.jsx)("img", {
                     width: 40,
                     height: 40,
-                    className: E.rowIcon,
+                    className: b.rowIcon,
                     alt: "",
                     src: O,
                 }),
                 (0, l.jsxs)("div", {
                     children: [
                         (0, l.jsx)(u.X6q, {
-                            className: E.rowText,
+                            className: b.rowText,
                             variant: "heading-md/semibold",
                             children: T.intl.string(T.t.DwDxDQ),
                         }),
                         (0, l.jsx)(u.Text, {
-                            className: E.rowText,
+                            className: b.rowText,
                             variant: "text-xs/normal",
                             children: T.intl.string(T.t["5RL4CA"]),
                         }),
                     ],
                 }),
                 (0, l.jsx)("img", {
-                    className: E.rowArrow,
+                    className: b.rowArrow,
                     alt: "",
                     src: S,
                 }),
             ],
         });
     };
-function h(e) {
+function w(e) {
     let { onBack: t, onClose: n, isSlideReady: r } = e,
-        [i, a] = o.useState(""),
-        [p, f] = o.useState(!1),
-        [N, S] = o.useState(null),
-        O = o.useRef(null);
-    o.useEffect(() => {
+        [o, a] = i.useState(""),
+        [p, f] = i.useState(!1),
+        [N, S] = i.useState(null),
+        O = i.useRef(null);
+    i.useEffect(() => {
         var e;
         r && (null == (e = O.current) || e.focus());
     }, [r]);
-    let h = (e) => {
+    let w = (e) => {
         e.preventDefault();
-        let t = i.trim();
+        let t = o.trim();
         if ("" === t) return void S(T.intl.string(T.t.IRq5am));
         S(null), f(!0);
         let r = t.split("/"),
@@ -109,12 +109,12 @@ function h(e) {
     return (0, l.jsxs)("div", {
         children: [
             (0, l.jsxs)(u.xBx, {
-                className: E.header,
+                className: b.header,
                 direction: m.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
                     (0, l.jsx)(u.X6q, {
-                        className: E.title,
+                        className: b.title,
                         variant: "heading-xl/semibold",
                         children: T.intl.string(T.t.riOUtL),
                     }),
@@ -124,46 +124,46 @@ function h(e) {
                         children: T.intl.string(T.t["7jub2t"]),
                     }),
                     (0, l.jsx)(u.olH, {
-                        className: E.closeButton,
+                        className: b.closeButton,
                         onClick: n,
                     }),
                 ],
             }),
             (0, l.jsxs)(u.hzk, {
-                className: E.__invalid_content,
+                className: b.__invalid_content,
                 children: [
                     (0, l.jsx)("form", {
-                        onSubmit: h,
-                        className: E.inputForm,
+                        onSubmit: w,
+                        className: b.inputForm,
                         children: (0, l.jsxs)(u.xJW, {
                             children: [
                                 (0, l.jsx)(u.vwX, {
-                                    id: b,
+                                    id: C,
                                     error: N,
-                                    className: s()(E.formTitle, { [E.error]: null != N }),
+                                    className: s()(b.formTitle, { [b.error]: null != N }),
                                     required: !0,
                                     children: T.intl.string(T.t.qreV29),
                                 }),
                                 (0, l.jsx)(u.oil, {
-                                    value: i,
+                                    value: o,
                                     onChange: a,
-                                    placeholder: "".concat(g).concat(C),
+                                    placeholder: "".concat(x).concat(E),
                                     inputRef: O,
                                     required: !0,
-                                    "aria-labelledby": b,
+                                    "aria-labelledby": C,
                                 }),
                             ],
                         }),
                     }),
                     (0, l.jsx)(u.xJW, {
                         title: T.intl.string(T.t.Bnq46O),
-                        titleClassName: E.formTitle,
-                        className: E.examplesForm,
-                        children: L.map((e) =>
+                        titleClassName: b.formTitle,
+                        className: b.examplesForm,
+                        children: h.map((e) =>
                             (0, l.jsx)(
                                 u.P3F,
                                 {
-                                    className: E.sampleLink,
+                                    className: b.sampleLink,
                                     onClick: () => a(e),
                                     children: e,
                                 },
@@ -171,17 +171,17 @@ function h(e) {
                             ),
                         ),
                     }),
-                    (0, l.jsx)(D, { onClick: n }),
+                    (0, l.jsx)(g, { onClick: n }),
                 ],
             }),
             (0, l.jsxs)(u.mzw, {
-                className: E.footer,
+                className: b.footer,
                 children: [
                     (0, l.jsx)(u.zxk, {
                         variant: "primary",
                         text: T.intl.string(T.t["Ts/9AQ"]),
                         loading: p,
-                        onClick: h,
+                        onClick: w,
                     }),
                     (0, l.jsx)(c.zx, {
                         color: c.zx.Colors.PRIMARY,

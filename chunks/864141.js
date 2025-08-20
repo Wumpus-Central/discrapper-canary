@@ -24,7 +24,7 @@ var i = n(120356),
     T = n(671955),
     S = n(388032),
     A = n(704543);
-function N(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function N(e, t, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -77,30 +77,30 @@ function P(e, t) {
     );
 }
 function w(e) {
-    let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
+    let { user: t, currentUser: n, voiceChannel: i, className: C, onClose: R } = e,
         { themeType: w } = (0, m.z)(),
         { analyticsLocations: D } = (0, c.ZP)(l.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        L = (0, p.Z)({
+        x = (0, p.Z)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: i.id,
             user: t,
             analyticsLocations: D,
         }),
-        x = (0, h.Z)({
+        L = (0, h.Z)({
             userId: t.id,
-            onAction: L,
+            onAction: x,
         }),
-        M = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        k = (0, _.Z)(i),
-        j = (0, u.ZP)(i),
+        j = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
+        M = (0, _.Z)(i),
+        k = (0, u.ZP)(i),
         { channelStatusEnabled: U } = (0, f.D)({ location: "UserProfileVoiceActivityCard" }),
         G = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t["+DsWbW"]) : S.intl.string(S.t.xOVEjY);
             return (0, r.jsx)(s.ua7, {
                 text: e,
-                children: (e) => (0, r.jsx)(s.d3s, P(C({}, e), { size: "xxs" })),
+                children: (e) => (0, r.jsx)(s.d3s, P(N({}, e), { size: "xxs" })),
             });
         },
         B = () =>
@@ -108,11 +108,11 @@ function w(e) {
                 className: A.actions,
                 children: (0, r.jsx)(v.Z, {
                     channel: i,
-                    onAction: L,
+                    onAction: x,
                     onClose: R,
                 }),
             }),
-        V =
+        Z =
             i.isDM() || i.isGroupDM()
                 ? S.intl.string(S.t["9FaEzs"])
                 : i.isGuildStageVoice()
@@ -121,14 +121,14 @@ function w(e) {
     return (0, r.jsx)(c.Gt, {
         value: D,
         children: (0, r.jsxs)(g.Z, {
-            ref: x,
-            className: a()(A.card, N),
-            onAction: L,
+            ref: L,
+            className: a()(A.card, C),
+            onAction: x,
             onClose: R,
-            "aria-label": "".concat(V, ", ").concat(j),
+            "aria-label": "".concat(Z, ", ").concat(k),
             children: [
                 (0, r.jsx)(E.Z, {
-                    text: V,
+                    text: Z,
                     tags: G(),
                     contextMenu: (0, r.jsx)(I.Z, {
                         display: "voice",
@@ -142,7 +142,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: k,
+                                users: M,
                                 channel: i,
                             }),
                             (0, r.jsxs)("div", {
@@ -150,15 +150,15 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         channel: i,
-                                        guild: M,
-                                        onAction: L,
+                                        guild: j,
+                                        onAction: x,
                                         onClose: R,
                                     }),
                                     U &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(O.Z, {
                                             voiceChannel: i,
-                                            onAction: L,
+                                            onAction: x,
                                             onClose: R,
                                         }),
                                     w === T.l.MODAL_V2 && B(),

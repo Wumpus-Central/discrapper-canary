@@ -81,9 +81,9 @@ function T(e) {
         } = e,
         S = (0, s.vjg)(s.Skl.ONLINE),
         A = (0, u.ZP)(t),
-        N = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: C } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
-        R = !C && T,
+        C = t.isDM() || t.isGroupDM(),
+        { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
+        R = !N && T,
         { analyticsLocations: P } = (0, l.ZP)(),
         w = i.useCallback(() => {
             (0, p.A)({
@@ -93,7 +93,7 @@ function T(e) {
             });
         }, [P, t.id]),
         D = () =>
-            y || N
+            y || C
                 ? (0, r.jsx)(_.Z, {
                       size: "custom",
                       color: S,
@@ -116,10 +116,10 @@ function T(e) {
                               }),
                           ),
                   }),
-        L = () =>
-            C
+        x = () =>
+            N
                 ? A
-                : N
+                : C
                   ? E.intl.string(E.t["9FaEzs"])
                   : t.isGuildStageVoice()
                     ? E.intl.string(E.t.QygGCA)
@@ -133,7 +133,7 @@ function T(e) {
                     className: a,
                     canTruncate: v,
                     hideTooltip: y,
-                    children: [L(), R && null != A && " (".concat(A, ")")],
+                    children: [x(), R && null != A && " (".concat(A, ")")],
                 }),
         ],
     });

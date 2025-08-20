@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
 var i = n(352736),
-    l = n(739566),
+    a = n(739566),
     o = n(834129),
-    a = n(388032);
-function s(e) {
-    let { message: t, usernameHook: s, compact: c } = e,
-        u = (0, l.ZP)(t),
-        d = s(u),
-        p = i.Z.getSystemMessageUserJoin(t.id),
-        m = a.intl.format(p, {
+    s = n(388032);
+function l(e) {
+    let { message: t, usernameHook: l, compact: c } = e,
+        u = (0, a.ZP)(t),
+        d = l(u),
+        f = i.Z.getSystemMessageUserJoin(t.id),
+        _ = s.intl.format(f, {
             username: u.nick,
             usernameHook: d,
         });
@@ -18,6 +18,6 @@ function s(e) {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: c,
-        children: m,
+        children: _,
     });
 }

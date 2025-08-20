@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(35282);
+n.d(t, { Z: () => x }), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(262210),
     S = n(666984),
     A = n(670451),
-    N = n(671955),
-    C = n(704543);
+    C = n(671955),
+    N = n(704543);
 function R(e, t, n) {
     return (
         t in e
@@ -77,32 +77,32 @@ function D(e, t) {
         e
     );
 }
-function L(e) {
+function x(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: w } = e,
-        L = (0, p.Dt)(),
         x = (0, p.Dt)(),
-        { themeType: M } = (0, b.z)(),
-        k = (0, _.Z)({
+        L = (0, p.Dt)(),
+        { themeType: j } = (0, b.z)(),
+        M = (0, _.Z)({
             activity: a,
             user: t,
         }),
-        j = (0, E.Z)(a),
-        U = null != j.text && "" !== j.text,
+        k = (0, E.Z)(a),
+        U = null != k.text && "" !== k.text,
         { largeImage: G } = (0, d.FO)(a),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        V = (0, m.Z)({
+        Z = (0, m.Z)({
             display: "live",
             user: t,
             activity: a,
-            entry: k,
+            entry: M,
             analyticsLocations: B,
         }),
-        F = (0, g.Z)({
+        V = (0, g.Z)({
             userId: t.id,
-            onAction: V,
+            onAction: Z,
         });
     if (!(0, l.Z)(a)) return null;
-    let Z = () => {
+    let F = () => {
             var e, n;
             let l = null != (n = null == (e = a.state) ? void 0 : e.split(";")) ? n : [];
             return 0 === l.length
@@ -120,10 +120,10 @@ function L(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(C.clickableText, C.inline),
+                                            className: o()(N.clickableText, N.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
-                                                    V({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                    Z({ action: "OPEN_SPOTIFY_ARTIST" }),
                                                     (0, h.d$)(a, t.id, n);
                                             },
                                             children: e,
@@ -151,49 +151,49 @@ function L(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: C.actions,
+                      className: N.actions,
                       children: (0, r.jsx)(S.Z, {
                           user: t,
                           activity: a,
-                          onAction: V,
+                          onAction: Z,
                       }),
                   });
     return (0, r.jsx)(u.Gt, {
         value: B,
         children: (0, r.jsxs)(O.Z, {
-            ref: F,
-            className: o()(C.card, R),
-            onAction: V,
+            ref: V,
+            className: o()(N.card, R),
+            onAction: Z,
             onClose: w,
-            "aria-labelledby": U ? "".concat(x, " ").concat(L) : L,
+            "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(P({ textId: x }, j), {
+                    D(P({ textId: L }, k), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
                             activity: a,
-                            entry: k,
+                            entry: M,
                             onClose: w,
                         }),
                     }),
                 ),
                 (0, r.jsx)("div", {
-                    className: C.body,
+                    className: N.body,
                     children: (0, r.jsxs)("div", {
-                        className: C.content,
+                        className: N.content,
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: G,
-                                size: M === N.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
-                                className: C.clickableImage,
+                                size: j === C.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                className: N.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), V({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.Z5)(a, t.id);
+                                    e.stopPropagation(), Z({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.Z5)(a, t.id);
                                 },
                             }),
                             (0, r.jsxs)("div", {
-                                className: C.details,
+                                className: N.details,
                                 children: [
                                     (0, r.jsxs)("div", {
                                         children: [
@@ -201,27 +201,27 @@ function L(e) {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    V({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.aG)(a);
+                                                    Z({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.aG)(a);
                                                 },
-                                                id: L,
+                                                id: x,
                                             }),
-                                            Z(),
+                                            F(),
                                         ],
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         activity: a,
-                                        className: C.badges,
+                                        className: N.badges,
                                     }),
                                     H(),
-                                    M === N.l.MODAL_V2 && Y(),
+                                    j === C.l.MODAL_V2 && Y(),
                                 ],
                             }),
-                            M === N.l.MODAL && Y(),
+                            j === C.l.MODAL && Y(),
                         ],
                     }),
                 }),
-                M !== N.l.MODAL && M !== N.l.MODAL_V2 && Y(),
+                j !== C.l.MODAL && j !== C.l.MODAL_V2 && Y(),
             ],
         }),
     });

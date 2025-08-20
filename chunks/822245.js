@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854);
+n.d(t, { Z: () => C }), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -130,7 +130,7 @@ class A extends (r = o.ZP.PersistedStore) {
     }
 }
 p(A, "displayName", "ApplicationFrecencyStore"), p(A, "persistKey", "ApplicationFrecency");
-let N = new A(s.Z, {
+let C = new A(s.Z, {
     APPLICATION_COMMAND_USED: v,
     EMBEDDED_ACTIVITY_OPEN: I,
     USER_SETTINGS_PROTO_UPDATE: O,

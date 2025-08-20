@@ -1,19 +1,19 @@
-n.d(t, { Z: () => g });
-var i = n(951288);
+n.d(t, { Z: () => p });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(803948),
-    l = n(755721),
-    o = n(481060),
+var i = n(120356),
+    a = n.n(i),
+    o = n(803948),
+    s = n(755721),
+    l = n(481060),
     c = n(410030),
-    d = n(736519),
-    u = n(784238),
-    m = n(981631),
-    p = n(679865);
-let g = function (e) {
-    let { isVisible: t, subscriptionTier: n, isApplicationHome: r, isEligibleForBogoPromotion: g } = e,
-        h = (0, o.q_F)({
+    u = n(736519),
+    d = n(784238),
+    f = n(981631),
+    _ = n(679865);
+let p = function (e) {
+    let { isVisible: t, subscriptionTier: n, isApplicationHome: i, isEligibleForBogoPromotion: p } = e,
+        h = (0, l.q_F)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
@@ -21,30 +21,30 @@ let g = function (e) {
                 friction: 12,
             },
         }),
-        f = { section: m.jXE.MARKETING_FLOATING_CTA },
-        b = (0, c.ZP)(),
-        x = (0, o.wjy)(b);
-    return (0, i.jsx)(a.animated.div, {
-        className: s()(p.wrapper, {
-            [p.fullscreenWrapper]: r,
-            [p.invisible]: !t,
+        m = { section: f.jXE.MARKETING_FLOATING_CTA },
+        g = (0, c.ZP)(),
+        E = (0, l.wjy)(g);
+    return (0, r.jsx)(o.animated.div, {
+        className: a()(_.wrapper, {
+            [_.fullscreenWrapper]: i,
+            [_.invisible]: !t,
         }),
         style: h,
-        children: (0, i.jsxs)("div", {
-            className: r ? p.innerWrapperApplicationHome : p.innerWrapper,
+        children: (0, r.jsxs)("div", {
+            className: i ? _.innerWrapperApplicationHome : _.innerWrapper,
             children: [
-                (0, i.jsx)(u.Z, {
-                    color: x ? l.Tt.BRAND_INVERTED : void 0,
-                    className: s()(p.button, { [p.subButton]: x }),
+                (0, r.jsx)(d.Z, {
+                    color: E ? s.Tt.BRAND_INVERTED : void 0,
+                    className: a()(_.button, { [_.subButton]: E }),
                     subscriptionTier: n,
-                    premiumModalAnalyticsLocation: f,
+                    premiumModalAnalyticsLocation: m,
                     isPersistentCTA: !0,
-                    hasActivePromotion: g,
-                    shinyButtonClassName: x ? void 0 : p.tier2Gradient,
+                    hasActivePromotion: p,
+                    shinyButtonClassName: E ? void 0 : _.tier2Gradient,
                 }),
-                (0, i.jsx)(d.Z, {
-                    className: p.button,
-                    premiumModalAnalyticsLocation: f,
+                (0, r.jsx)(u.Z, {
+                    className: _.button,
+                    premiumModalAnalyticsLocation: m,
                 }),
             ],
         }),

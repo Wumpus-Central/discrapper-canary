@@ -1,50 +1,102 @@
 n.d(t, {
-    Y7: () => c,
-    oc: () => u,
-    pR: () => d,
+    Y7: () => _,
+    oc: () => h,
+    pR: () => p,
 });
-var i = n(990547),
-    r = n(283693),
-    s = n(570140),
-    a = n(573261),
-    l = n(930441),
-    o = n(981631);
-async function c() {
+var r = n(990547),
+    i = n(283693),
+    a = n(570140),
+    o = n(573261),
+    s = n(930441),
+    l = n(981631);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+async function _() {
     try {
-        let e = await a.Z.get({
-            url: o.ANM.EMAIL_SETTINGS,
+        let e = await o.Z.get({
+            url: l.ANM.EMAIL_SETTINGS,
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+                event: r.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                 properties: (e) => {
                     var t;
                     let n = null == e || null == (t = e.body) ? void 0 : t.initialized;
-                    return (0, r.iG)({ initialized: n });
+                    return (0, i.iG)({ initialized: n });
                 },
             },
             rejectWithError: !0,
         });
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: "EMAIL_SETTINGS_FETCH_SUCCESS",
                 settings: e.body,
             }),
             e.body
         );
     } catch (e) {
-        s.Z.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
+        a.Z.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
     }
 }
-async function d(e, t) {
-    s.Z.dispatch({
+async function p(e, t) {
+    a.Z.dispatch({
         type: "EMAIL_SETTINGS_UPDATE",
         updates: { [e]: t },
     });
     try {
-        let n = await a.Z.patch({
-            url: o.ANM.EMAIL_SETTINGS,
+        let n = await o.Z.patch({
+            url: l.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: { [e]: t } } },
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: r.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: e,
                     value: t,
@@ -52,69 +104,26 @@ async function d(e, t) {
             },
             rejectWithError: !0,
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
             settings: n.body,
         });
     } catch (e) {
-        s.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+        a.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }
-async function u() {
-    let e = l.M0.reduce((e, t) => {
-        var n, i;
-        return (
-            (n = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, e)),
-            (i = i = { [t]: !1 }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, i);
-                      }
-                      return n;
-                  })(Object(i)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                  }),
-            n
-        );
-    }, {});
-    s.Z.dispatch({
+async function h() {
+    let e = s.M0.reduce((e, t) => f(u({}, e), { [t]: !1 }), {});
+    a.Z.dispatch({
         type: "EMAIL_SETTINGS_UPDATE",
         updates: e,
     });
     try {
-        let t = await a.Z.patch({
-            url: o.ANM.EMAIL_SETTINGS,
+        let t = await o.Z.patch({
+            url: l.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: e } },
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: r.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: "marketing",
                     value: !1,
@@ -122,11 +131,11 @@ async function u() {
             },
             rejectWithError: !0,
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
             settings: t.body,
         });
     } catch (e) {
-        s.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+        a.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }

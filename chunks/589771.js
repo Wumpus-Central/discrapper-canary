@@ -8,9 +8,9 @@ var i = n(951288),
     c = n(563132),
     u = n(456251);
 function d(e) {
-    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: f } = e,
+    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: p } = e,
         {
-            blockedPayments: p,
+            blockedPayments: f,
             setStep: b,
             hasFetchedSubscriptions: h,
             hasFetchedSubscriptionPlans: g,
@@ -18,8 +18,8 @@ function d(e) {
             selectedSkuId: v,
             setSelectedSkuId: j,
             setSelectedPlanId: y,
-            priceOptions: C,
-            setSubscriptionMetadataRequest: O,
+            priceOptions: O,
+            setSubscriptionMetadataRequest: C,
         } = (0, c.JL)(),
         { isGift: S } = (0, s.wD)(),
         [P, N] = r.useState(!h || !g || x);
@@ -27,16 +27,16 @@ function d(e) {
         N(!h || !g || x);
     }, [x, g, h]),
     r.useEffect(() => {
-        null != d && O({ guild_id: d });
-    }, [d, O]),
+        null != d && C({ guild_id: d });
+    }, [d, C]),
     r.useEffect(() => {
         y(n);
         let e = null != n ? a.Z.get(n) : null;
         P ||
-            p ||
+            f ||
             (m((t) => {
                 var n, i;
-                let r = null != e ? (0, o.aS)(e.id, !1, S, C) : void 0;
+                let r = null != e ? (0, o.aS)(e.id, !1, S, O) : void 0;
                 return (
                     (n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -68,7 +68,7 @@ function d(e) {
                             subscription_plan_id: null == e ? void 0 : e.id,
                             price: null == r ? void 0 : r.amount,
                             regular_price: null == e ? void 0 : e.price,
-                            currency: C.currency,
+                            currency: O.currency,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -86,10 +86,10 @@ function d(e) {
                 );
             }),
             null != e && (j(null == e ? void 0 : e.skuId), b(t)));
-    }, [p, n, S, P, C, v, m, y, j, b, t]),
+    }, [f, n, S, P, O, v, m, y, j, b, t]),
     P)
         ? (0, i.jsx)(u.Z, {})
-        : p
-          ? (0, i.jsx)(l.Vq, { onClose: f })
+        : f
+          ? (0, i.jsx)(l.Vq, { onClose: p })
           : null;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(314940);
+n.d(t, { Z: () => N }), n(314940);
 var r = n(951288);
 n(647438);
 var i = n(278074),
@@ -110,7 +110,7 @@ function A(e) {
         ],
     });
 }
-function N(e) {
+function C(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)("div", {
         className: E.nameplateContainer,
@@ -123,7 +123,7 @@ function N(e) {
         }),
     });
 }
-function C(e) {
+function N(e) {
     let { sku: t } = e,
         { selectedGiftStyle: n } = (0, m.wD)(),
         { product: o } = (0, c.T)(null == t ? void 0 : t.id),
@@ -131,7 +131,7 @@ function C(e) {
         l = (0, i.EQ)(s)
             .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
             .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(A, { id: e.id }))
-            .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(N, { nameplate: e }))
+            .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(C, { nameplate: e }))
             .otherwise(() => null);
     return null != n && null == l
         ? (0, r.jsx)("div", {

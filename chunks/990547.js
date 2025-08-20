@@ -14,9 +14,9 @@ n.r(t),
         analyticsTrackingStoreMaker: () => b.l,
         encodeProperties: () => E.Z,
         extendSuperProperties: () => z,
-        getCampaignParams: () => L,
+        getCampaignParams: () => x,
         getDevice: () => U,
-        getOS: () => j,
+        getOS: () => k,
         getSuperProperties: () => X,
         getSuperPropertiesBase64: () => Q,
         isThrottled: () => K,
@@ -98,8 +98,8 @@ function S(e, t) {
     );
 }
 let A = "deviceProperties",
-    N = "referralProperties",
-    C = {},
+    C = "referralProperties",
+    N = {},
     R = {},
     P = window.DiscordNative;
 if (null != P) {
@@ -155,7 +155,7 @@ function D(e, t) {
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function L(e) {
+function x(e) {
     let t = {};
     return (
         w.forEach((n) => {
@@ -165,7 +165,7 @@ function L(e) {
         t
     );
 }
-function x() {
+function L() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
         ? "google"
@@ -177,10 +177,10 @@ function x() {
               ? "duckduckgo"
               : null;
 }
-function M() {
+function j() {
     let e = {},
         t = document.referrer,
-        n = x(),
+        n = L(),
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
@@ -189,7 +189,7 @@ function M() {
     }
     return e;
 }
-function k() {
+function M() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
@@ -209,7 +209,7 @@ function k() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function j() {
+function k() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -236,15 +236,15 @@ function G() {
 function B() {
     let e = {};
     return (
-        (e.os = j()),
-        (e.browser = k()),
+        (e.os = k()),
+        (e.browser = M()),
         (e.device = U()),
         (e.system_locale = (0, _.qf)()),
         (e.has_client_mods = (0, f.e)()),
         e
     );
 }
-function V() {
+function Z() {
     var e, t;
     return S(
         I(
@@ -260,21 +260,21 @@ function V() {
         },
     );
 }
-function F() {
+function V() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M()));
+    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, x(window.location.href), j()));
 }
-function Z(e, t) {
+function F(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
 }
 function H() {
     let e = p.K.get(A);
     null == e && ((e = B()), p.K.set(A, e));
-    let t = p.K.get(N);
-    null == t && ((t = F()), p.K.set(N, t));
-    let n = h.x.get(N);
-    return null == n && ((n = Z(F(), "_current")), h.x.set(N, n)), I({}, e, V(), t, n);
+    let t = p.K.get(C);
+    null == t && ((t = V()), p.K.set(C, t));
+    let n = h.x.get(C);
+    return null == n && ((n = F(V(), "_current")), h.x.set(C, n)), I({}, e, Z(), t, n);
 }
 function Y() {
     try {
@@ -287,7 +287,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("433934", 10);
+    let i = parseInt("434426", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (
@@ -299,7 +299,7 @@ function W() {
     );
 }
 function K(e) {
-    return null != C[e] && C[e] > Date.now();
+    return null != N[e] && N[e] > Date.now();
 }
 if (null == r)
     try {
@@ -333,7 +333,7 @@ let q = (e) => {
                     if (s()(e, o)) return Promise.resolve();
                     R[t] = o;
                 }
-                C[t] = Date.now() + l.throttlePeriod;
+                N[t] = Date.now() + l.throttlePeriod;
             } else if ("throttlePercent" in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else c()(!1, "Unsupported analytics event config: ".concat(l));

@@ -1,73 +1,74 @@
-n.d(t, { Z: () => x }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(704215),
-    a = n(481060),
-    l = n(809206),
-    o = n(906732),
+n.d(t, { Z: () => E }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(704215),
+    o = n(481060),
+    s = n(809206),
+    l = n(906732),
     c = n(243778),
-    d = n(18438),
-    u = n(158947),
-    m = n(318110),
-    p = n(150039),
-    g = n(993413),
+    u = n(18438),
+    d = n(158947),
+    f = n(318110),
+    _ = n(150039),
+    p = n(993413),
     h = n(921944),
-    f = n(388032),
-    b = n(526265);
-function x(e) {
-    let { user: t, guild: n, titleIcon: x } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
-        j = null != n,
+    m = n(388032),
+    g = n(526265);
+function E(e) {
+    let { user: t, guild: n, titleIcon: E } = e,
+        { analyticsLocations: b } = (0, l.ZP)(),
+        y = null != n,
         {
-            userNameplate: E,
-            guildNameplate: C,
-            pendingNameplate: O,
-            pendingErrors: v,
-        } = (0, p.Zx)(t, null == n ? void 0 : n.id),
-        S = j
-            ? [s.z.NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE]
-            : [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
-        [T, N] = (0, c.US)(S),
-        I = T === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        y = T === s.z.NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        A = r.useCallback(() => {
+            userNameplate: O,
+            guildNameplate: v,
+            pendingNameplate: I,
+            pendingErrors: T,
+        } = (0, _.Zx)(t, null == n ? void 0 : n.id),
+        S = void 0 === I ? (y ? v : O) != null : null != I,
+        A = y
+            ? [a.z.NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE]
+            : [a.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
+        [C, N] = (0, c.US)(A),
+        R = C === a.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        P = C === a.z.NAMEPLATE_GUILD_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        w = i.useCallback(() => {
             N(h.L.TAKE_ACTION),
-                (0, m.f)({
-                    analyticsLocations: _,
+                (0, f.f)({
+                    analyticsLocations: b,
                     guildId: null == n ? void 0 : n.id,
                 });
-        }, [_, N, null == n ? void 0 : n.id]),
-        P = r.useCallback(() => {
-            (null == n ? void 0 : n.id) != null ? (0, d.RH)(null) : (0, l.Rx)(null);
+        }, [b, N, null == n ? void 0 : n.id]),
+        D = i.useCallback(() => {
+            (null == n ? void 0 : n.id) != null ? (0, u.RH)(null) : (0, s.Rx)(null);
         }, [null == n ? void 0 : n.id]);
-    return (0, i.jsx)(g.Z, {
-        title: f.intl.string(f.t.x5CoXV),
-        titleIcon: I || y ? (0, i.jsx)(u.Z, { className: b.newBadge }) : x,
-        errors: v,
-        showBorder: y,
-        hasBackground: y,
+    return (0, r.jsx)(p.Z, {
+        title: m.intl.string(m.t.x5CoXV),
+        titleIcon: R || P ? (0, r.jsx)(d.Z, { className: g.newBadge }) : E,
+        errors: T,
+        showBorder: P,
+        hasBackground: P,
         description:
-            y &&
-            (0, i.jsx)(a.Text, {
+            P &&
+            (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "text-secondary",
-                children: f.intl.string(f.t.ca69xs),
+                children: m.intl.string(m.t.ca69xs),
             }),
-        children: (0, i.jsxs)("div", {
-            className: b.section,
+        children: (0, r.jsxs)("div", {
+            className: g.section,
             children: [
-                (0, i.jsx)(a.zxk, {
+                (0, r.jsx)(o.zxk, {
                     variant: "primary",
                     size: "sm",
-                    text: f.intl.string(f.t.BwdeMz),
-                    onClick: A,
+                    text: m.intl.string(m.t.BwdeMz),
+                    onClick: w,
                 }),
-                (void 0 === O ? (j ? C : E) != null : null != O) &&
-                    (0, i.jsx)(a.zxk, {
+                S &&
+                    (0, r.jsx)(o.zxk, {
                         variant: "secondary",
                         size: "sm",
-                        text: j ? f.intl.string(f.t.CHf9iI) : f.intl.string(f.t["9zwziY"]),
-                        onClick: P,
+                        text: y ? m.intl.string(m.t.CHf9iI) : m.intl.string(m.t["9zwziY"]),
+                        onClick: D,
                     }),
             ],
         }),

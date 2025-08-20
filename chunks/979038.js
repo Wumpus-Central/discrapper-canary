@@ -24,16 +24,16 @@ var i = n(620662),
     T = n(585253),
     S = n(715547),
     A = n(994102),
-    N = n(981631),
-    C = n(671955),
+    C = n(981631),
+    N = n(671955),
     R = n(723701);
 function P(e) {
     let { user: t, activity: n, onAction: P, onClose: w, application: D } = e,
-        { themeType: L } = (0, m.z)(),
-        x = (0, c.q)(D, "UserProfileActivityButtons"),
-        M = (0, u.L)(null != n ? n : void 0, void 0),
-        { showPlayButton: k } = d.m.useConfig({ location: "UserProfileActivityButtons" });
-    if (k && null != D && (0, f.bP)(D))
+        { themeType: x } = (0, m.z)(),
+        L = (0, c.q)(D, "UserProfileActivityButtons"),
+        j = (0, u.L)(null != n ? n : void 0, void 0),
+        { showPlayButton: M } = d.m.useConfig({ location: "UserProfileActivityButtons" });
+    if (M && null != D && (0, f.bP)(D))
         return (0, r.jsx)(v.Z, {
             user: t,
             application: D,
@@ -42,13 +42,13 @@ function P(e) {
         });
     if ((0, s.Z)(n))
         return (0, r.jsx)(O.Z, {
-            platformType: N.ABu.XBOX,
+            platformType: C.ABu.XBOX,
             icon: () => (0, r.jsx)(h.Z, {}),
             onAction: P,
         });
     if ((0, o.Z)(n))
         return (0, r.jsx)(O.Z, {
-            platformType: N.ABu.PLAYSTATION,
+            platformType: C.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(p.Z, {}),
             onAction: P,
         });
@@ -57,14 +57,14 @@ function P(e) {
             activity: n,
             onAction: P,
         });
-    let j = L === C.l.MODAL || L === C.l.MODAL_V2;
-    if (!M && x && null != D && !j)
+    let k = x === N.l.MODAL || x === N.l.MODAL_V2;
+    if (!j && L && null != D && !k)
         return (0, r.jsx)(A.Z, {
             application: D,
             onAction: P,
             onClose: w,
         });
-    let U = (0, i.Z)(n, N.xjy.JOIN) || (0, a.Z)(n),
+    let U = (0, i.Z)(n, C.xjy.JOIN) || (0, a.Z)(n),
         G = (null == n ? void 0 : n.application_id) != null;
     return U && G
         ? (0, r.jsxs)("div", {
@@ -89,7 +89,7 @@ function P(e) {
                 onAction: P,
                 onClose: w,
             })
-          : (null == n ? void 0 : n.type) === N.IIU.HANG_STATUS
+          : (null == n ? void 0 : n.type) === C.IIU.HANG_STATUS
             ? (0, r.jsx)(E.Z, {
                   user: t,
                   activity: n,
@@ -107,7 +107,7 @@ function P(e) {
                       activity: n,
                       onAction: P,
                   })
-                : (0, i.Z)(n, N.xjy.INSTANCE)
+                : (0, i.Z)(n, C.xjy.INSTANCE)
                   ? (0, r.jsx)(y.Z, {
                         user: t,
                         activity: n,

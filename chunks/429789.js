@@ -1,71 +1,71 @@
-n.d(t, { Z: () => f });
-var i = n(951288);
+n.d(t, { Z: () => m });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(442837),
-    l = n(481060),
-    o = n(846027),
+var i = n(120356),
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    l = n(846027),
     c = n(313201),
-    d = n(921801),
-    u = n(131951),
-    m = n(726985),
-    p = n(388032),
-    g = n(197571);
+    u = n(921801),
+    d = n(131951),
+    f = n(726985),
+    _ = n(388032),
+    p = n(197571);
 let h = (0, c.hQ)();
-function f(e) {
+function m(e) {
     let { refreshStyles: t } = e,
         {
             attenuation: n,
-            attenuateWhileSpeakingSelf: r,
+            attenuateWhileSpeakingSelf: i,
             attenuateWhileSpeakingOthers: c,
-        } = (0, a.cj)([u.Z], () => ({
-            attenuation: u.Z.getAttenuation(),
-            attenuateWhileSpeakingSelf: u.Z.getAttenuateWhileSpeakingSelf(),
-            attenuateWhileSpeakingOthers: u.Z.getAttenuateWhileSpeakingOthers(),
+        } = (0, o.cj)([d.Z], () => ({
+            attenuation: d.Z.getAttenuation(),
+            attenuateWhileSpeakingSelf: d.Z.getAttenuateWhileSpeakingSelf(),
+            attenuateWhileSpeakingOthers: d.Z.getAttenuateWhileSpeakingOthers(),
         })),
-        f = (0, i.jsxs)(i.Fragment, {
+        m = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(l.vwX, {
+                (0, r.jsx)(s.vwX, {
                     id: h,
-                    tag: l.RB0.H5,
-                    className: g.marginBottom8,
-                    children: p.intl.string(p.t.oSdBvb),
+                    tag: s.RB0.H5,
+                    className: p.marginBottom8,
+                    children: _.intl.string(_.t.oSdBvb),
                 }),
-                (0, i.jsx)(l.iRW, {
+                (0, r.jsx)(s.iRW, {
                     initialValue: n,
                     onValueChange: (e) => {
-                        o.Z.setAttenuation(e, r, c);
+                        l.Z.setAttenuation(e, i, c);
                     },
                     "aria-labelledby": h,
                 }),
-                (0, i.jsx)(l.R94, {
-                    className: s()({ [g.marginBottom20]: !t }),
-                    type: l.R94.Types.DESCRIPTION,
-                    children: p.intl.string(p.t["0A/8Rk"]),
+                (0, r.jsx)(s.R94, {
+                    className: a()({ [p.marginBottom20]: !t }),
+                    type: s.R94.Types.DESCRIPTION,
+                    children: _.intl.string(_.t["0A/8Rk"]),
                 }),
-                !t && (0, i.jsx)(l.$i$, { className: g.marginBottom20 }),
-                (0, i.jsx)(l.j7V, {
-                    value: r,
-                    onChange: (e) => o.Z.setAttenuation(n, e, c),
+                !t && (0, r.jsx)(s.$i$, { className: p.marginBottom20 }),
+                (0, r.jsx)(s.j7V, {
+                    value: i,
+                    onChange: (e) => l.Z.setAttenuation(n, e, c),
                     hideBorder: t,
-                    children: p.intl.string(p.t["9dHxRU"]),
+                    children: _.intl.string(_.t["9dHxRU"]),
                 }),
-                (0, i.jsx)(l.j7V, {
+                (0, r.jsx)(s.j7V, {
                     value: c,
-                    onChange: (e) => o.Z.setAttenuation(n, r, e),
+                    onChange: (e) => l.Z.setAttenuation(n, i, e),
                     hideBorder: t,
-                    children: p.intl.string(p.t.SMt0Gh),
+                    children: _.intl.string(_.t.SMt0Gh),
                 }),
             ],
         });
-    return (0, i.jsx)(d.F, {
-        setting: m.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
+    return (0, r.jsx)(u.F, {
+        setting: f.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
         children: t
-            ? f
-            : (0, i.jsx)(l.hjN, {
-                  className: g.marginBottom20,
-                  children: f,
+            ? m
+            : (0, r.jsx)(s.hjN, {
+                  className: p.marginBottom20,
+                  children: m,
               }),
     });
 }

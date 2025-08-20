@@ -1,161 +1,162 @@
-n.d(e, { Z: () => j }), n(388685), n(953529);
-var s = n(951288),
+n.d(t, { Z: () => g }), n(388685), n(953529);
+var r = n(951288),
     i = n(647438),
     a = n(392711),
-    r = n(442837),
-    l = n(692547),
-    c = n(481060),
-    o = n(594174),
-    d = n(531441),
-    u = n(451284),
-    m = n(959562),
-    h = n(800530),
-    x = n(388032),
-    g = n(498714);
-function j() {
-    let t = (0, u.P)(),
-        e = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        [n, j] = i.useState(36),
-        p = i.useRef({
-            [d.Sn.ALL_GOOD]: null,
-            [d.Sn.LIMITED]: null,
-            [d.Sn.VERY_LIMITED]: null,
-            [d.Sn.AT_RISK]: null,
-            [d.Sn.SUSPENDED]: null,
+    o = n(442837),
+    s = n(692547),
+    l = n(481060),
+    c = n(594174),
+    u = n(531441),
+    d = n(451284),
+    f = n(959562),
+    _ = n(800530),
+    p = n(388032),
+    h = n(498714);
+let m = 36;
+function g() {
+    let e = (0, d.P)(),
+        t = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        [n, g] = i.useState(m),
+        E = i.useRef({
+            [u.Sn.ALL_GOOD]: null,
+            [u.Sn.LIMITED]: null,
+            [u.Sn.VERY_LIMITED]: null,
+            [u.Sn.AT_RISK]: null,
+            [u.Sn.SUSPENDED]: null,
         }),
-        f = i.useCallback(() => {
-            j(
+        b = i.useCallback(() => {
+            g(
                 Math.max(
                     Math.max(
-                        ...Object.values(p.current).map((t) => {
-                            var e;
-                            return null != (e = null == t ? void 0 : t.getBoundingClientRect().height) ? e : 36;
+                        ...Object.values(E.current).map((e) => {
+                            var t;
+                            return null != (t = null == e ? void 0 : e.getBoundingClientRect().height) ? t : m;
                         }),
                     ),
-                    36,
+                    m,
                 ),
             );
         }, []);
     i.useEffect(() => {
-        f();
-        let t = (0, a.debounce)(f, 100);
-        window.addEventListener("resize", t);
-    }, [f]);
-    let v = {
-            [d.Sn.ALL_GOOD]: {
-                title: x.t.uaKrRk,
-                description: x.intl.format(x.t.pEdBDw, {
-                    termsOfService: h.sQ.TOS_LINK,
-                    communityGuidelines: h.sQ.COMMUNITY_GUIDELINES,
+        b();
+        let e = (0, a.debounce)(b, 100);
+        window.addEventListener("resize", e);
+    }, [b]);
+    let y = {
+            [u.Sn.ALL_GOOD]: {
+                title: p.t.uaKrRk,
+                description: p.intl.format(p.t.pEdBDw, {
+                    termsOfService: _.sQ.TOS_LINK,
+                    communityGuidelines: _.sQ.COMMUNITY_GUIDELINES,
                 }),
-                status: x.t["/Idfam"],
-                Icon: c.owK,
-                color: l.Z.colors.STATUS_POSITIVE,
+                status: p.t["/Idfam"],
+                Icon: l.owK,
+                color: s.Z.colors.STATUS_POSITIVE,
             },
-            [d.Sn.LIMITED]: {
-                title: x.t.epkcmZ,
-                description: x.intl.string(x.t["774jub"]),
-                status: x.t.umleq6,
-                Icon: c.Mgn,
-                color: l.Z.colors.STATUS_WARNING,
+            [u.Sn.LIMITED]: {
+                title: p.t.epkcmZ,
+                description: p.intl.string(p.t["774jub"]),
+                status: p.t.umleq6,
+                Icon: l.Mgn,
+                color: s.Z.colors.STATUS_WARNING,
             },
-            [d.Sn.VERY_LIMITED]: {
-                title: x.t.crzE2d,
-                description: x.intl.string(x.t["T/Ufh4"]),
-                status: x.t.WBtMHR,
-                Icon: c.Mgn,
-                color: l.Z.unsafe_rawColors.ORANGE_345,
+            [u.Sn.VERY_LIMITED]: {
+                title: p.t.crzE2d,
+                description: p.intl.string(p.t["T/Ufh4"]),
+                status: p.t.WBtMHR,
+                Icon: l.Mgn,
+                color: s.Z.unsafe_rawColors.ORANGE_345,
             },
-            [d.Sn.AT_RISK]: {
-                title: x.t.XRNVzM,
-                description: x.intl.string(x.t["hbH+9f"]),
-                status: x.t["7f+4Li"],
-                Icon: c.Mgn,
-                color: l.Z.colors.STATUS_DANGER,
+            [u.Sn.AT_RISK]: {
+                title: p.t.XRNVzM,
+                description: p.intl.string(p.t["hbH+9f"]),
+                status: p.t["7f+4Li"],
+                Icon: l.Mgn,
+                color: s.Z.colors.STATUS_DANGER,
             },
-            [d.Sn.SUSPENDED]: {
-                title: x.t.MExFk5,
-                description: x.intl.string(x.t["2liUvr"]),
-                status: x.t["0OONGB"],
-                Icon: c.k$p,
-                color: l.Z.colors.ICON_MUTED,
+            [u.Sn.SUSPENDED]: {
+                title: p.t.MExFk5,
+                description: p.intl.string(p.t["2liUvr"]),
+                status: p.t["0OONGB"],
+                Icon: l.k$p,
+                color: s.Z.colors.ICON_MUTED,
             },
         },
-        { title: N, description: S, color: b, Icon: E } = v[t.state],
-        T = Object.keys(v).length;
-    return (0, s.jsxs)(c.Zbd, {
-        className: g.container,
+        { title: O, description: v, color: I, Icon: T } = y[e.state],
+        S = Object.keys(y).length;
+    return (0, r.jsxs)(l.Zbd, {
+        className: h.container,
         outline: !1,
         children: [
-            (0, s.jsx)("div", {
-                className: g.profile,
-                children: (0, s.jsx)(m.Z, {
-                    user: e,
-                    size: c.EFr.SIZE_80,
+            (0, r.jsx)("div", {
+                className: h.profile,
+                children: (0, r.jsx)(f.Z, {
+                    user: t,
+                    size: l.EFr.SIZE_80,
                 }),
             }),
-            (0, s.jsxs)("div", {
-                className: g.status,
+            (0, r.jsxs)("div", {
+                className: h.status,
                 children: [
-                    (0, s.jsxs)("div", {
-                        className: g.title,
+                    (0, r.jsxs)("div", {
+                        className: h.title,
                         children: [
-                            (0, s.jsx)(c.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: x.intl.format(N, {
-                                    hook: (t) =>
-                                        (0, s.jsx)(c.Text, {
-                                            style: { color: b.css },
+                                children: p.intl.format(O, {
+                                    hook: (e) =>
+                                        (0, r.jsx)(l.Text, {
+                                            style: { color: I.css },
                                             variant: "heading-lg/bold",
                                             tag: "span",
-                                            children: t,
+                                            children: e,
                                         }),
                                 }),
                             }),
-                            (0, s.jsx)(c.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: "text-default",
                                 variant: "text-sm/normal",
-                                children: S,
+                                children: v,
                             }),
                         ],
                     }),
-                    (0, s.jsxs)("div", {
-                        className: g.health,
+                    (0, r.jsxs)("div", {
+                        className: h.health,
                         style: { height: n },
                         children: [
-                            (0, s.jsx)("div", { className: g.line }),
-                            Object.entries(v).map((e, n) => {
-                                let [i, a] = e,
-                                    r = parseInt(i) === t.state;
-                                return (0, s.jsxs)(
+                            (0, r.jsx)("div", { className: h.line }),
+                            Object.entries(y).map((t, n) => {
+                                let [i, a] = t,
+                                    o = parseInt(i) === e.state;
+                                return (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: g.statusOption,
-                                        ref: (t) => {
-                                            p.current[parseInt(i)] = t;
+                                        className: h.statusOption,
+                                        ref: (e) => {
+                                            E.current[parseInt(i)] = e;
                                         },
                                         children: [
-                                            r
-                                                ? (0, s.jsx)(E, {
-                                                      className: g.marker,
+                                            o
+                                                ? (0, r.jsx)(T, {
+                                                      className: h.marker,
                                                       color: a.color,
                                                   })
-                                                : (0, s.jsx)("div", {
-                                                      className: g.marker,
+                                                : (0, r.jsx)("div", {
+                                                      className: h.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === T - 1 ? -6 : 0,
+                                                          marginRight: n === S - 1 ? -6 : 0,
                                                       },
-                                                      children: (0, s.jsx)("div", { className: g.empty }),
+                                                      children: (0, r.jsx)("div", { className: h.empty }),
                                                   }),
-                                            x.intl.format(a.status, {
-                                                hook: (t) =>
-                                                    (0, s.jsx)(c.Text, {
+                                            p.intl.format(a.status, {
+                                                hook: (e) =>
+                                                    (0, r.jsx)(l.Text, {
                                                         color: "text-default",
                                                         variant: "text-sm/normal",
-                                                        className: g.statusLabel,
-                                                        children: t,
+                                                        className: h.statusLabel,
+                                                        children: e,
                                                     }),
                                             }),
                                         ],

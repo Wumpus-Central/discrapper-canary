@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -26,7 +26,7 @@ function _(e) {
     );
 }
 let y = (0, f.oH)((e, t, n) => ["null", ...t, ...e, b, h.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
-    v = i.forwardRef(function (e, t) {
+    j = i.forwardRef(function (e, t) {
         var n, i;
         let d = (0, l.Wu)([u.ZP, c.Z, s.default], () =>
                 y(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),

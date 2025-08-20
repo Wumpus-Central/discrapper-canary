@@ -1,26 +1,26 @@
 n.d(t, {
-    AH: () => M,
+    AH: () => j,
     Ag: () => Y,
     CS: () => P,
-    EW: () => Z,
+    EW: () => F,
     OR: () => H,
-    QB: () => k,
-    T0: () => F,
+    QB: () => M,
+    T0: () => V,
     Wf: () => B,
     cT: () => q,
-    eT: () => V,
+    eT: () => Z,
     gU: () => Q,
     gl: () => U,
     is: () => w,
     it: () => D,
     lL: () => X,
     lx: () => K,
-    m0: () => x,
+    m0: () => L,
     nE: () => G,
-    pf: () => j,
+    pf: () => k,
     qm: () => W,
     w: () => z,
-    xw: () => L,
+    xw: () => x,
 }),
     n(415506);
 var r = n(990547),
@@ -74,7 +74,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,12 +86,12 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -156,7 +156,7 @@ async function D() {
         rejectWithError: !1,
     });
 }
-async function L() {
+async function x() {
     if (!g.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" }),
             h.Z.recordQuestRequestAttempt(I.ANM.QUESTS_CURRENT_QUESTS, "fetch_quests");
@@ -191,7 +191,7 @@ async function L() {
         }
     }
 }
-async function x(e) {
+async function L(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var s;
@@ -228,7 +228,7 @@ async function x(e) {
         });
     }
 }
-async function M(e, t) {
+async function j(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, _._3)({
@@ -264,7 +264,7 @@ async function M(e, t) {
         }
     }
 }
-async function k(e, t, n) {
+async function M(e, t, n) {
     if (!g.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: "QUESTS_CLAIM_REWARD_BEGIN",
@@ -306,7 +306,7 @@ async function k(e, t, n) {
         }
     }
 }
-async function j(e) {
+async function k(e) {
     if (!g.Z.isFetchingRewardCode(e)) {
         a.Z.dispatch({
             type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -388,7 +388,7 @@ async function B(e) {
         });
     }
 }
-async function V(e) {
+async function Z(e) {
     try {
         let t = await i.tn.del({
             url: I.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -407,7 +407,7 @@ async function V(e) {
         });
     }
 }
-async function F(e) {
+async function V(e) {
     try {
         a.Z.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
         let t = await i.tn.del({
@@ -427,7 +427,7 @@ async function F(e) {
         });
     }
 }
-function Z(e) {
+function F(e) {
     a.Z.dispatch({
         type: "QUESTS_DELIVERY_OVERRIDE",
         questId: e,
@@ -519,7 +519,7 @@ async function z(e, t) {
         e === E.Ok.DESKTOP_ACCOUNT_PANEL_AREA && p.Z.startTracking(v.id),
             d.default.track(
                 I.rMx.QUEST_DECISION_RECEIVED,
-                C(A({}, (0, c.Z)()), {
+                N(A({}, (0, c.Z)()), {
                     quest_id: v.id,
                     caller_source: t,
                 }),
@@ -528,7 +528,7 @@ async function z(e, t) {
         h.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1 }),
             d.default.track(
                 I.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
-                C(A({}, (0, c.Z)()), {
+                N(A({}, (0, c.Z)()), {
                     reason: null != (b = null == n ? void 0 : n.message) ? b : null,
                     api_error: new o.Z(n).getAnyErrorMessage(),
                     caller_source: t,

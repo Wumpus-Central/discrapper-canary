@@ -39,11 +39,11 @@ let _ = {
                 T = I ? ("y" === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
                 S = O / 2 - v / 2,
                 A = g[b],
-                N = T - E[m] - g[y],
-                C = T / 2 - E[m] / 2 + S,
-                R = (0, l.u)(A, C, N),
+                C = T - E[m] - g[y],
+                N = T / 2 - E[m] / 2 + S,
+                R = (0, l.u)(A, N, C),
                 P = h;
-            n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - C), t);
+            n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - N), t);
         }
     },
     effect: function (e) {

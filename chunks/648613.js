@@ -97,15 +97,15 @@ function v(e) {
             giftMessage: T,
             confirmationFooter: S,
             paymentModalBanner: A,
-            isGift: N,
-            children: C,
+            isGift: C,
+            children: N,
         } = e,
         R = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         P = (0, i.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
         { analyticsLocations: w } = (0, s.ZP)(),
         D = (0, _.N)(),
-        L = !N && null != D && null != m && p.nG[D.trial_id].skus.includes(m);
-    return C({
+        x = !C && null != D && null != m && p.nG[D.trial_id].skus.includes(m);
+    return N({
         onClick: (e) => {
             var i;
             if ((e.preventDefault(), null == R))
@@ -137,11 +137,11 @@ function v(e) {
                         return (0, r.jsx)(e, b(g({}, i), { onClose: n }));
                     };
                 });
-            let s = L ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
+            let s = x ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
                 d = h.Qqv.BUY;
-            null != s ? (d = h.Qqv.TRIAL) : N && (d = h.Qqv.GIFT),
+            null != s ? (d = h.Qqv.TRIAL) : C && (d = h.Qqv.GIFT),
                 (0, c.Z)({
-                    isGift: N,
+                    isGift: C,
                     initialPlanId: null,
                     subscriptionTier: m,
                     analyticsLocations: w,

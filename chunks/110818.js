@@ -1,8 +1,8 @@
 n.d(t, {
-    Db: () => N,
+    Db: () => C,
     HC: () => O,
     NQ: () => E,
-    fe: () => x,
+    fe: () => L,
 }),
     n(388685);
 var r,
@@ -282,19 +282,19 @@ let S = Object.freeze({
         },
     }),
     A = 1.2;
-class N extends (a = l.PureComponent) {
+class C extends (a = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
-            case N.Scenes.IDLE_ENTRY:
-                return N.Scenes.IDLE_LOOP;
-            case N.Scenes.BOOST_START:
-                return N.Scenes.BOOST_LOOP;
-            case N.Scenes.BOOST_END:
-                return N.Scenes.VICTORY;
-            case N.Scenes.VICTORY:
-                return N.Scenes.IDLE_ENTRY;
-            case N.Scenes.ERROR:
-                return N.Scenes.IDLE_LOOP;
+            case C.Scenes.IDLE_ENTRY:
+                return C.Scenes.IDLE_LOOP;
+            case C.Scenes.BOOST_START:
+                return C.Scenes.BOOST_LOOP;
+            case C.Scenes.BOOST_END:
+                return C.Scenes.VICTORY;
+            case C.Scenes.VICTORY:
+                return C.Scenes.IDLE_ENTRY;
+            case C.Scenes.ERROR:
+                return C.Scenes.IDLE_LOOP;
             default:
                 return e;
         }
@@ -439,10 +439,10 @@ class N extends (a = l.PureComponent) {
             });
     }
 }
-h(N, "Scenes", v);
-var C = (function (e) {
+h(C, "Scenes", v);
+var N = (function (e) {
     return (e.ENTRY = "entry"), (e.IDLE = "idle"), (e.STARS = "stars"), (e.ERROR = "error"), (e.SUCCESS = "success"), e;
-})(C || {});
+})(N || {});
 let R = {
         entry: {
             BEG: 0,
@@ -520,7 +520,7 @@ let R = {
         EASING_MIDDLE: f.Z.Easing.bezier(0.3, 0.01, 0, 0.99),
         EASING_END: f.Z.Easing.bezier(0, -0.01, 0.99, 0),
     });
-function L(e) {
+function x(e) {
     let { animate: t } = e,
         [n, r] = l.useState(0),
         i = (0, _.bYB)(
@@ -590,7 +590,7 @@ function L(e) {
         }),
     });
 }
-class x extends (o = l.PureComponent) {
+class L extends (o = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case "entry":
@@ -632,9 +632,9 @@ class x extends (o = l.PureComponent) {
                     pauseWhileUnfocused: a,
                     pause: n,
                 }),
-                (0, s.jsx)(L, { animate: !n && "stars" === t }),
+                (0, s.jsx)(x, { animate: !n && "stars" === t }),
             ],
         });
     }
 }
-h(x, "Scenes", C);
+h(L, "Scenes", N);

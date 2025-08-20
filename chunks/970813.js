@@ -1,20 +1,20 @@
-n.d(t, { Z: () => o });
-var i = n(951288);
+n.d(t, { Z: () => l });
+var r = n(951288);
 n(647438);
-var r = n(722932),
-    s = n(824690),
-    a = n(674343),
-    l = n(388032);
-function o(e) {
+var i = n(722932),
+    a = n(824690),
+    o = n(674343),
+    s = n(388032);
+function l(e) {
     let { refreshStyles: t = !1 } = e,
-        { volume: n, onVolumeChange: o } = (0, s.Z)();
-    return (0, r.X0)({ location: "UserSettingsSoundmojiVolume" })
-        ? (0, i.jsx)(a.Z, {
-              title: l.intl.string(l.t.w9Hq8P),
-              description: l.intl.string(l.t.INenzc),
-              label: l.intl.string(l.t["2JbvKy"]),
+        { volume: n, onVolumeChange: l } = (0, a.Z)();
+    return (0, i.X0)({ location: "UserSettingsSoundmojiVolume" })
+        ? (0, r.jsx)(o.Z, {
+              title: s.intl.string(s.t.w9Hq8P),
+              description: s.intl.string(s.t.INenzc),
+              label: s.intl.string(s.t["2JbvKy"]),
               volume: n,
-              onVolumeChange: o,
+              onVolumeChange: l,
               refreshStyles: t,
           })
         : null;

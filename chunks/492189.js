@@ -22,23 +22,23 @@ var r = n(98405),
     T = n(568033),
     S = n(769827),
     A = n(264750).f,
-    N = n(522169),
-    C = n(920029).forEach,
+    C = n(522169),
+    N = n(920029).forEach,
     R = n(108015),
     P = n(573078),
     w = n(117895),
     D = n(840991),
-    L = n(335024),
-    x = n(199838),
-    M = n(176682),
-    k = x.get,
-    j = x.set,
-    U = x.enforce,
+    x = n(335024),
+    L = n(199838),
+    j = n(176682),
+    M = L.get,
+    k = L.set,
+    U = L.enforce,
     G = w.f,
     B = D.f,
-    V = i.RangeError,
-    F = c.ArrayBuffer,
-    Z = F.prototype,
+    Z = i.RangeError,
+    V = c.ArrayBuffer,
+    F = V.prototype,
     H = c.DataView,
     Y = l.NATIVE_ARRAY_BUFFER_VIEWS,
     W = l.TYPED_ARRAY_TAG,
@@ -51,13 +51,13 @@ var r = n(98405),
         P(e, t, {
             configurable: !0,
             get: function () {
-                return k(this)[t];
+                return M(this)[t];
             },
         });
     },
     $ = function (e) {
         var t;
-        return T(Z, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
+        return T(F, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
     },
     ee = function (e, t) {
         return q(e) && !v(t) && t in e && _(+t) && t >= 0;
@@ -100,11 +100,11 @@ o
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = k(e);
+                  var n = M(e);
                   return n.view[c](t * o + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = k(e);
+                  var i = M(e);
                   i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
@@ -123,7 +123,7 @@ o
                 ((E = t(function (e, t, n, r) {
                     return (
                         u(e, b),
-                        M(
+                        j(
                             (function () {
                                 return O(t)
                                     ? $(t)
@@ -133,8 +133,8 @@ o
                                               ? new _(t, m(n, o))
                                               : new _(t)
                                         : q(t)
-                                          ? L(E, t)
-                                          : a(N, E, t)
+                                          ? x(E, t)
+                                          : a(C, E, t)
                                     : new _(h(t));
                             })(),
                             e,
@@ -143,7 +143,7 @@ o
                     );
                 })),
                 S && S(E, K),
-                C(A(_), function (e) {
+                N(A(_), function (e) {
                     e in E || f(E, e, _[e]);
                 }),
                 (E.prototype = b))
@@ -159,14 +159,14 @@ o
                             (i = t), (d = m(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % o || (s = f - d) < 0) throw new V(Q);
-                            } else if ((s = p(r) * o) + d > f) throw new V(Q);
+                                if (f % o || (s = f - d) < 0) throw new Z(Q);
+                            } else if ((s = p(r) * o) + d > f) throw new Z(Q);
                             l = s / o;
-                        } else if (q(t)) return L(E, t);
-                        else return a(N, E, t);
-                    else i = new F((s = (l = h(t)) * o));
+                        } else if (q(t)) return x(E, t);
+                        else return a(C, E, t);
+                    else i = new V((s = (l = h(t)) * o));
                     for (
-                        j(e, {
+                        k(e, {
                             buffer: i,
                             byteOffset: d,
                             byteLength: s,

@@ -1,10 +1,10 @@
 n.d(t, {
     Iu: () => G,
-    Jw: () => j,
+    Jw: () => k,
     _r: () => B,
-    cX: () => F,
+    cX: () => V,
     lv: () => U,
-    v: () => x,
+    v: () => L,
 });
 var r = n(392711),
     i = n.n(r),
@@ -30,22 +30,22 @@ var r = n(392711),
     T = n(980084),
     S = n(24688),
     A = n(200997),
-    N = n(633302),
-    C = n(134432),
+    C = n(633302),
+    N = n(134432),
     R = n(594174),
     P = n(768581),
     w = n(176354),
     D = n(353368),
-    L = n(388032);
-let x = {
+    x = n(388032);
+let L = {
         start: 10,
         end: 15,
     },
-    M = [a],
-    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
-    j = {
-        [D.q.BASIC]: M,
-        [D.q.PREMIUM]: k,
+    j = [a],
+    M = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    k = {
+        [D.q.BASIC]: j,
+        [D.q.PREMIUM]: M,
     },
     U = i().memoize(
         (e) =>
@@ -54,7 +54,7 @@ let x = {
                 (n.src = e),
                     (n.crossOrigin = "Anonymous"),
                     (n.onload = () => {
-                        let r = D.v * (0, C.x_)();
+                        let r = D.v * (0, N.x_)();
                         if (n.width === r && n.height === r) t(e);
                         else {
                             var i;
@@ -68,7 +68,7 @@ let x = {
             }),
     ),
     G = (e, t) => {
-        let n = j[e];
+        let n = k[e];
         if (null != t && e === D.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
@@ -85,11 +85,11 @@ function B(e) {
             size: t,
         });
     }
-    let r = N.ZP.convertSurrogateToName(e.name, !1),
-        i = N.ZP.getByName(r);
+    let r = C.ZP.convertSurrogateToName(e.name, !1),
+        i = C.ZP.getByName(r);
     return null != i ? w.ZP.getURL(i.surrogates) : "";
 }
-function V(e, t) {
+function Z(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -99,26 +99,26 @@ function V(e, t) {
         .uniq()
         .value();
 }
-function F(e) {
+function V(e) {
     var t, n, r, i, a, o;
     if (e.length < 1) return "";
-    let s = V(e, "userId"),
-        l = V(e, "emojiName"),
+    let s = Z(e, "userId"),
+        l = Z(e, "emojiName"),
         c = l.length < 2 ? (null != (t = null == l ? void 0 : l[0]) ? t : "") : l.join(", ");
     return s.length < 1
         ? ""
         : 1 === s.length
-          ? L.intl.formatToPlainString(L.t.yZYxzM, {
+          ? x.intl.formatToPlainString(x.t.yZYxzM, {
                 firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c,
             })
           : 2 === s.length
-            ? L.intl.formatToPlainString(L.t["8rmtbW"], {
+            ? x.intl.formatToPlainString(x.t["8rmtbW"], {
                   firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
                   secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c,
               })
-            : L.intl.formatToPlainString(L.t["/okjv7"], {
+            : x.intl.formatToPlainString(x.t["/okjv7"], {
                   firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
                   secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,

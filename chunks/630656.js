@@ -1,3 +1,4 @@
 n.d(t, { j: () => r });
-var i,
-    r = (((i = {}).HOME = "HOME"), (i.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), i);
+var r = (function (e) {
+    return (e.HOME = "HOME"), (e.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), e;
+})({});

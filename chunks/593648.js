@@ -1,50 +1,50 @@
-n.d(t, { Z: () => eo }), n(539854), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+n.d(t, { Z: () => eu }), n(539854), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n.n(s),
     c = n(442837),
-    d = n(524437),
-    u = n(481060),
-    m = n(668781),
-    p = n(292556),
-    g = n(87051),
+    u = n(524437),
+    d = n(481060),
+    f = n(668781),
+    _ = n(292556),
+    p = n(87051),
     h = n(419363),
-    f = n(761781),
-    b = n(818083),
-    x = n(688465),
-    _ = n(890022),
-    j = n(688907),
-    E = n(487419),
-    C = n(197344),
-    O = n(476756),
-    v = n(734934),
+    m = n(761781),
+    g = n(818083),
+    E = n(688465),
+    b = n(890022),
+    y = n(688907),
+    O = n(487419),
+    v = n(197344),
+    I = n(476756),
+    T = n(734934),
     S = n(223683),
-    T = n(312400),
-    N = n(115345),
-    I = n(392888),
-    y = n(106371),
-    A = n(995774),
-    P = n(921801),
-    R = n(460181),
-    D = n(462354),
-    Z = n(210176),
-    w = n(292959),
-    k = n(9156),
-    L = n(912101),
-    B = n(358085),
-    M = n(709054),
-    U = n(45640),
-    V = n(695346),
-    G = n(675478),
+    A = n(312400),
+    C = n(115345),
+    N = n(392888),
+    R = n(106371),
+    P = n(995774),
+    w = n(921801),
+    D = n(460181),
+    x = n(462354),
+    L = n(210176),
+    j = n(292959),
+    M = n(9156),
+    k = n(912101),
+    U = n(358085),
+    G = n(709054),
+    B = n(45640),
+    Z = n(695346),
+    V = n(675478),
     F = n(33656),
     H = n(726985),
-    z = n(981631),
+    Y = n(981631),
     W = n(468788),
-    Y = n(388032),
-    K = n(728495),
+    K = n(388032),
+    z = n(728495),
     q = n(197571);
 function X(e, t, n) {
     return (
@@ -59,63 +59,74 @@ function X(e, t, n) {
         e
     );
 }
-function J(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 X(e, t, n[t]);
             });
     }
     return e;
 }
-function Q(e, t) {
+function J(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function $(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : J(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function $(e) {
-    let { label: t, enabled: n, disabled: r, onPreview: s, onChange: a, tooltip: l } = e;
-    return (0, i.jsx)(u.j7V, {
-        className: K.soundRow,
+function ee(e) {
+    k.Z.requestPermission((t) => {
+        let n = t ? Y.$Ab.ENABLED : Y.$Ab.BLOCKED;
+        _.default.setPermissionsState(n, e);
+    });
+}
+function et(e) {
+    let { label: t, enabled: n, disabled: i, onPreview: a, onChange: o, tooltip: s } = e;
+    return (0, r.jsx)(d.j7V, {
+        className: z.soundRow,
         value: n,
-        onChange: a,
-        disabled: r,
-        tooltipNote: l,
-        children: (0, i.jsxs)("div", {
-            className: K.notificationSound,
+        onChange: o,
+        disabled: i,
+        tooltipNote: s,
+        children: (0, r.jsxs)("div", {
+            className: z.notificationSound,
             children: [
-                (0, i.jsx)("div", {
-                    className: K.soundName,
+                (0, r.jsx)("div", {
+                    className: z.soundName,
                     children: t,
                 }),
-                (0, i.jsx)(u.P3F, {
-                    className: K.soundIcon,
-                    onClick: s,
-                    "aria-label": Y.intl.string(Y.t.Kd4uxM),
-                    children: (0, i.jsx)(u.gj8, {
+                (0, r.jsx)(d.P3F, {
+                    className: z.soundIcon,
+                    onClick: a,
+                    "aria-label": K.intl.string(K.t.Kd4uxM),
+                    children: (0, r.jsx)(d.gj8, {
                         size: "xs",
                         color: "currentColor",
-                        className: K.icon,
+                        className: z.icon,
                         "aria-hidden": !0,
                     }),
                 }),
@@ -123,178 +134,178 @@ function $(e) {
         }),
     });
 }
-function ee(e) {
-    let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
-        l = r.useRef(null),
-        o = (0, v.p)(),
-        c = r.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = (0, R.GN)(e));
+function en(e) {
+    let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: a } = e,
+        s = i.useRef(null),
+        l = (0, T.p)(),
+        c = i.useCallback((e, t) => {
+            t.stopPropagation(), t.preventDefault(), null != s.current && s.current.stop(), (s.current = (0, D.GN)(e));
         }, []),
-        d = r.useCallback(
+        u = i.useCallback(
             (e, n) => {
-                let i = t.filter((t) => t !== e);
-                n || i.push(e), p.default.setDisabledSounds(i);
+                let r = t.filter((t) => t !== e);
+                n || r.push(e), _.default.setDisabledSounds(r);
             },
             [t],
         );
-    r.useEffect(() => () => {
+    i.useEffect(() => () => {
         var e;
-        null == (e = l.current) || e.stop();
+        null == (e = s.current) || e.stop();
     });
-    let m = [
+    let f = [
             {
-                label: Y.intl.string(Y.t.pz71xM),
+                label: K.intl.string(K.t.pz71xM),
                 sound: "message1",
-                focusModeDisabled: o,
+                focusModeDisabled: l,
             },
             {
-                label: Y.intl.string(Y.t.hK51Ym),
+                label: K.intl.string(K.t.hK51Ym),
                 sound: "deafen",
             },
             {
-                label: Y.intl.string(Y.t.XiejaG),
+                label: K.intl.string(K.t.XiejaG),
                 sound: "undeafen",
             },
             {
-                label: Y.intl.string(Y.t["w4m94+"]),
+                label: K.intl.string(K.t["w4m94+"]),
                 sound: "mute",
             },
             {
-                label: Y.intl.string(Y.t.YqAjX1),
+                label: K.intl.string(K.t.YqAjX1),
                 sound: "unmute",
             },
             {
-                label: Y.intl.string(Y.t.JoTq8v),
+                label: K.intl.string(K.t.JoTq8v),
                 sound: "camera_on",
             },
             {
-                label: Y.intl.string(Y.t["8P6tQ0"]),
+                label: K.intl.string(K.t["8P6tQ0"]),
                 sound: "camera_off",
             },
             {
-                label: Y.intl.string(Y.t["juL9/P"]),
+                label: K.intl.string(K.t["juL9/P"]),
                 sound: "disconnect",
             },
             {
-                label: Y.intl.string(Y.t.x98vQk),
+                label: K.intl.string(K.t.x98vQk),
                 sound: "ptt_start",
             },
             {
-                label: Y.intl.string(Y.t["1HjRqK"]),
+                label: K.intl.string(K.t["1HjRqK"]),
                 sound: "ptt_stop",
             },
             {
-                label: Y.intl.string(Y.t["9JB1Cg"]),
+                label: K.intl.string(K.t["9JB1Cg"]),
                 sound: "user_join",
             },
             {
-                label: Y.intl.string(Y.t.KUBBNj),
+                label: K.intl.string(K.t.KUBBNj),
                 sound: "user_leave",
             },
             {
-                label: Y.intl.string(Y.t.EZjqUV),
+                label: K.intl.string(K.t.EZjqUV),
                 sound: "user_moved",
             },
             {
-                label: Y.intl.string(Y.t.LnNlQk),
+                label: K.intl.string(K.t.LnNlQk),
                 sound: "call_calling",
             },
             {
-                label: Y.intl.string(Y.t.XBrJT0),
+                label: K.intl.string(K.t.XBrJT0),
                 sound: "call_ringing",
             },
             {
-                label: Y.intl.string(Y.t["Nd8P5+"]),
+                label: K.intl.string(K.t["Nd8P5+"]),
                 sound: "stream_started",
             },
             {
-                label: Y.intl.string(Y.t["9bYj+P"]),
+                label: K.intl.string(K.t["9bYj+P"]),
                 sound: "stream_ended",
             },
             {
-                label: Y.intl.string(Y.t.KccUIy),
+                label: K.intl.string(K.t.KccUIy),
                 sound: "stream_user_joined",
             },
             {
-                label: Y.intl.string(Y.t.dsjkiI),
+                label: K.intl.string(K.t.dsjkiI),
                 sound: "stream_user_left",
             },
             {
-                label: Y.intl.string(Y.t.nFOcf3),
+                label: K.intl.string(K.t.nFOcf3),
                 sound: "activity_launch",
             },
             {
-                label: Y.intl.string(Y.t["a6lw/v"]),
+                label: K.intl.string(K.t["a6lw/v"]),
                 sound: "activity_end",
             },
             {
-                label: Y.intl.string(Y.t.KaFxra),
+                label: K.intl.string(K.t.KaFxra),
                 sound: "activity_user_join",
             },
             {
-                label: Y.intl.string(Y.t.S14z9v),
+                label: K.intl.string(K.t.S14z9v),
                 sound: "activity_user_left",
             },
             {
-                label: Y.intl.string(Y.t.CP3DCw),
+                label: K.intl.string(K.t.CP3DCw),
                 sound: "reconnect",
             },
         ],
-        g = null != C.Z.useHolidaySoundpack();
-    return (0, i.jsx)(P.F, {
+        p = null != v.Z.useHolidaySoundpack();
+    return (0, r.jsx)(w.F, {
         setting: H.s6.NOTIFICATIONS_SOUNDS,
-        children: (0, i.jsxs)(u.hjN, {
+        children: (0, r.jsxs)(d.hjN, {
             children: [
-                g
-                    ? (0, i.jsxs)(i.Fragment, {
+                p
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(u.vwX, {
+                              (0, r.jsx)(d.vwX, {
                                   className: q.marginBottom20,
-                                  children: Y.intl.string(Y.t.fgSHf3),
+                                  children: K.intl.string(K.t.fgSHf3),
                               }),
-                              (0, i.jsx)(O.Z, {}),
+                              (0, r.jsx)(I.Z, {}),
                           ],
                       })
                     : null,
-                (0, i.jsx)(u.vwX, {
-                    className: a()(q.marginBottom20, q.marginTop20),
-                    children: Y.intl.string(Y.t.MKWyKS),
+                (0, r.jsx)(d.vwX, {
+                    className: o()(q.marginBottom20, q.marginTop20),
+                    children: K.intl.string(K.t.MKWyKS),
                 }),
-                (0, i.jsx)(u.j7V, {
-                    note: Y.intl.string(Y.t["7oXUio"]),
-                    value: s,
-                    onChange: p.default.setNotifyMessagesInSelectedChannel,
-                    children: Y.intl.string(Y.t.lF5GGR),
+                (0, r.jsx)(d.j7V, {
+                    note: K.intl.string(K.t["7oXUio"]),
+                    value: a,
+                    onChange: _.default.setNotifyMessagesInSelectedChannel,
+                    children: K.intl.string(K.t.lF5GGR),
                 }),
-                (0, i.jsx)(u.j7V, {
-                    note: Y.intl.string(Y.t["+B0XLC"]),
+                (0, r.jsx)(d.j7V, {
+                    note: K.intl.string(K.t["+B0XLC"]),
                     value: n,
-                    onChange: p.default.toggleDisableAllSounds,
-                    children: Y.intl.string(Y.t["2ZhCOT"]),
+                    onChange: _.default.toggleDisableAllSounds,
+                    children: K.intl.string(K.t["2ZhCOT"]),
                 }),
-                m.map((e) => {
-                    let { label: r, sound: s, focusModeDisabled: a } = e;
-                    return (0, i.jsx)(
-                        $,
+                f.map((e) => {
+                    let { label: i, sound: a, focusModeDisabled: o } = e;
+                    return (0, r.jsx)(
+                        et,
                         {
-                            label: r,
-                            disabled: n || !0 === a,
-                            tooltip: a ? Y.intl.string(Y.t.cIRG0t) : void 0,
-                            onChange: (e) => d(s, e),
-                            onPreview: (e) => c(s, e),
-                            enabled: !n && !t.includes(s) && !0 !== a,
+                            label: i,
+                            disabled: n || !0 === o,
+                            tooltip: o ? K.intl.string(K.t.cIRG0t) : void 0,
+                            onChange: (e) => u(a, e),
+                            onPreview: (e) => c(a, e),
+                            enabled: !n && !t.includes(a) && !0 !== o,
                         },
-                        s,
+                        a,
                     );
                 }),
             ],
         }),
     });
 }
-function et() {
-    let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
-        [t, n] = r.useState(null),
-        s = M.default.keys(e).map((t) => {
+function er() {
+    let e = (0, c.e7)([O.Z], () => O.Z.getGuildAlertSettings()),
+        [t, n] = i.useState(null),
+        a = G.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -303,243 +314,238 @@ function et() {
         });
     return 0 === Object.keys(e).length
         ? null
-        : (0, i.jsxs)(P.F, {
+        : (0, r.jsxs)(w.F, {
               setting: H.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: [
-                  (0, i.jsx)(u.X6q, {
+                  (0, r.jsx)(d.X6q, {
                       variant: "heading-lg/semibold",
                       className: q.marginBottom20,
-                      children: Y.intl.string(Y.t.D9yVAA),
+                      children: K.intl.string(K.t.D9yVAA),
                   }),
-                  (0, i.jsx)(u.R94, {
-                      type: u.geA.DESCRIPTION,
+                  (0, r.jsx)(d.R94, {
+                      type: d.geA.DESCRIPTION,
                       className: q.marginBottom20,
-                      children: Y.intl.string(Y.t["0PhAOD"]),
+                      children: K.intl.string(K.t["0PhAOD"]),
                   }),
-                  (0, i.jsxs)(u.xJW, {
-                      title: Y.intl.string(Y.t.Q0PsXV),
+                  (0, r.jsxs)(d.xJW, {
+                      title: K.intl.string(K.t.Q0PsXV),
                       children: [
-                          (0, i.jsx)(u.q4e, {
+                          (0, r.jsx)(d.q4e, {
                               className: null != t ? q.marginBottom20 : q.marginBottom40,
                               value: t,
                               onChange: (e) => {
                                   n(e);
                               },
-                              options: s,
+                              options: a,
                           }),
                           null != t
-                              ? (0, i.jsxs)("div", {
+                              ? (0, r.jsxs)("div", {
                                     className: q.marginTop20,
                                     children: [
-                                        (0, i.jsxs)(P.F, {
+                                        (0, r.jsxs)(w.F, {
                                             setting: H.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
-                                                (0, i.jsx)(u.j7V, {
+                                                (0, r.jsx)(d.j7V, {
                                                     className: q.marginBottom20,
-                                                    note: Y.intl.string(Y.t["z8Td4+"]),
+                                                    note: K.intl.string(K.t["z8Td4+"]),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
-                                                        (0, G.PS)(
+                                                        (0, V.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                             },
-                                                            G.fy.INFREQUENT_USER_ACTION,
+                                                            V.fy.INFREQUENT_USER_ACTION,
                                                         );
                                                     },
                                                     hideBorder: !0,
-                                                    children: Y.intl.string(Y.t.u6dc5O),
+                                                    children: K.intl.string(K.t.u6dc5O),
                                                 }),
-                                                (0, i.jsx)(u.$i$, { className: a()(q.marginTop20, q.marginBottom40) }),
+                                                (0, r.jsx)(d.$i$, { className: o()(q.marginTop20, q.marginBottom40) }),
                                             ],
                                         }),
-                                        (0, i.jsxs)(P.F, {
+                                        (0, r.jsxs)(w.F, {
                                             setting: H.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
-                                                (0, i.jsx)(u.j7V, {
+                                                (0, r.jsx)(d.j7V, {
                                                     className: q.marginBottom20,
-                                                    note: Y.intl.string(Y.t.PyxXs7),
+                                                    note: K.intl.string(K.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
-                                                        (0, G.PS)(
+                                                        (0, V.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                             },
-                                                            G.fy.INFREQUENT_USER_ACTION,
+                                                            V.fy.INFREQUENT_USER_ACTION,
                                                         );
                                                     },
                                                     hideBorder: !0,
-                                                    children: Y.intl.string(Y.t.P8MG6u),
+                                                    children: K.intl.string(K.t.P8MG6u),
                                                 }),
-                                                (0, i.jsx)(u.$i$, { className: a()(q.marginTop20, q.marginBottom40) }),
+                                                (0, r.jsx)(d.$i$, { className: o()(q.marginTop20, q.marginBottom40) }),
                                             ],
                                         }),
                                     ],
                                 })
                               : null,
-                          null != t ? null : (0, i.jsx)(u.$i$, { className: a()(q.marginTop20, q.marginBottom40) }),
+                          null != t ? null : (0, r.jsx)(d.$i$, { className: o()(q.marginTop20, q.marginBottom40) }),
                       ],
                   }),
               ],
           });
 }
-class en extends r.PureComponent {
+class ei extends i.PureComponent {
     handleDesktopChange(e) {
-        let t = e ? z.qrD.ALL : z.qrD.NEVER;
-        if (t !== z.qrD.NEVER)
-            L.Z.requestPermission((e) => {
-                let t = e ? z.$Ab.ENABLED : z.$Ab.BLOCKED;
-                p.default.setPermissionsState(t, "UserSettingsModal");
-            });
-        else p.default.setDesktopType(t);
+        let t = e ? Y.qrD.ALL : Y.qrD.NEVER;
+        t !== Y.qrD.NEVER ? ee("UserSettingsModal") : _.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e.value;
-        p.default.setTTSType(t);
+        _.default.setTTSType(t);
     }
     render() {
         let {
                 desktopType: e,
                 afkTimeout: t,
                 disableUnreadBadge: n,
-                taskbarFlash: r,
-                disabledSounds: s,
-                disableAllSounds: l,
+                taskbarFlash: i,
+                disabledSounds: a,
+                disableAllSounds: s,
                 notifyMessagesInSelectedChannel: c,
-                focusMode: d,
+                focusMode: u,
             } = this.props,
-            m = B.isPlatformEmbedded && (0, B.isWindows)(),
-            p = U.Z.getCurrentConfig({ location: "Messages" }).enabled,
-            g = o()
-                .range(p || 0 === t ? 0 : 1, 11)
+            f = U.isPlatformEmbedded && (0, U.isWindows)(),
+            _ = B.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            p = l()
+                .range(_, 11)
                 .map((e) => ({
                     value: 60 * e,
                     label:
-                        0 === e ? Y.intl.string(Y.t["0QN7cX"]) : Y.intl.formatToPlainString(Y.t.iXLF9f, { minutes: e }),
+                        0 === e ? K.intl.string(K.t["0QN7cX"]) : K.intl.formatToPlainString(K.t.iXLF9f, { minutes: e }),
                 }));
-        return (0, i.jsxs)(u.hjN, {
-            tag: u.RB0.H1,
-            title: Y.intl.string(Y.t.HcoRu7),
+        return (0, r.jsxs)(d.hjN, {
+            tag: d.RB0.H1,
+            title: K.intl.string(K.t.HcoRu7),
             children: [
-                (0, i.jsx)(P.F, {
+                (0, r.jsx)(w.F, {
                     setting: H.s6.NOTIFICATIONS_ENABLE_DESKTOP,
-                    children: (0, i.jsx)(u.j7V, {
+                    children: (0, r.jsx)(d.j7V, {
                         className: q.marginBottom20,
-                        value: e !== z.qrD.NEVER && !d,
+                        value: e !== Y.qrD.NEVER && !u,
                         onChange: this.handleDesktopChange,
-                        note: Y.intl.string(Y.t.wF9ih4),
-                        disabled: d,
-                        tooltipNote: d ? Y.intl.string(Y.t.cIRG0t) : void 0,
-                        children: Y.intl.string(Y.t["/0WClp"]),
+                        note: K.intl.string(K.t.wF9ih4),
+                        disabled: u,
+                        tooltipNote: u ? K.intl.string(K.t.cIRG0t) : void 0,
+                        children: K.intl.string(K.t["/0WClp"]),
                     }),
                 }),
-                (0, i.jsx)(er, {}),
-                (0, i.jsx)(P.F, {
+                (0, r.jsx)(eo, {}),
+                (0, r.jsx)(w.F, {
                     setting: H.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
-                    children: (0, i.jsx)(u.j7V, {
-                        className: m ? q.marginBottom20 : q.marginBottom40,
+                    children: (0, r.jsx)(d.j7V, {
+                        className: f ? q.marginBottom20 : q.marginBottom40,
                         value: !n,
-                        note: Y.intl.string(Y.t["9K4qwc"]),
+                        note: K.intl.string(K.t["9K4qwc"]),
                         onChange: this.handleToggleShowUnreadBadge,
-                        children: Y.intl.string(Y.t.VH8AIC),
+                        children: K.intl.string(K.t.VH8AIC),
                     }),
                 }),
-                (0, i.jsx)(P.F, {
+                (0, r.jsx)(w.F, {
                     setting: H.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
-                    children: (0, i.jsx)(u.j7V, {
+                    children: (0, r.jsx)(d.j7V, {
                         className: q.marginBottom40,
-                        value: r,
-                        note: Y.intl.string(Y.t["bd4j4+"]),
+                        value: i,
+                        note: K.intl.string(K.t["bd4j4+"]),
                         onChange: this.handleToggleShowFlash,
-                        children: Y.intl.string(Y.t.xSmFQE),
+                        children: K.intl.string(K.t.xSmFQE),
                     }),
                 }),
-                (0, i.jsx)(es, {}),
-                (0, i.jsx)(eu, {}),
-                (0, i.jsx)(ed, {}),
-                (0, i.jsx)(ec, {}),
-                (0, i.jsx)(P.F, {
+                (0, r.jsx)(es, {}),
+                (0, r.jsx)(e_, {}),
+                (0, r.jsx)(ef, {}),
+                (0, r.jsx)(ed, {}),
+                (0, r.jsx)(w.F, {
                     setting: H.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
-                    children: (0, i.jsxs)(u.xJW, {
-                        title: Y.intl.string(Y.t.TTvjd3),
+                    children: (0, r.jsxs)(d.xJW, {
+                        title: K.intl.string(K.t.TTvjd3),
                         children: [
-                            (0, i.jsx)(u.q4e, {
+                            (0, r.jsx)(d.q4e, {
                                 value: t,
-                                onChange: V.CM.updateSetting,
-                                options: g,
+                                onChange: Z.CM.updateSetting,
+                                options: p,
                             }),
-                            (0, i.jsx)(u.R94, {
-                                type: u.geA.DESCRIPTION,
+                            (0, r.jsx)(d.R94, {
+                                type: d.geA.DESCRIPTION,
                                 className: q.marginTop8,
-                                children: Y.intl.string(Y.t.Xytv9P),
+                                children: K.intl.string(K.t.Xytv9P),
                             }),
-                            (0, i.jsx)(u.$i$, { className: a()(q.marginTop40, q.marginBottom40) }),
+                            (0, r.jsx)(d.$i$, { className: o()(q.marginTop40, q.marginBottom40) }),
                         ],
                     }),
                 }),
                 this.renderTTS(),
-                (0, i.jsx)(et, {}),
-                (0, i.jsx)(u.xJW, {
-                    children: (0, i.jsx)(ee, {
-                        disabledSounds: s,
-                        disableAllSounds: l,
+                (0, r.jsx)(er, {}),
+                (0, r.jsx)(d.xJW, {
+                    children: (0, r.jsx)(en, {
+                        disabledSounds: a,
+                        disableAllSounds: s,
                         notifyMessagesInSelectedChannel: c,
                     }),
                 }),
-                (0, i.jsx)(F.Z, {}),
+                (0, r.jsx)(F.Z, {}),
             ],
         });
     }
     constructor(...e) {
         super(...e),
             X(this, "handleToggleShowUnreadBadge", () => {
-                p.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+                _.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
             X(this, "handleToggleShowFlash", () => {
-                p.default.setTaskbarFlash(!this.props.taskbarFlash);
+                _.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
             X(this, "renderTTS", () => {
                 if (!h.Zh) return null;
                 let e = [
                     {
-                        name: Y.intl.string(Y.t.B1AGeH),
-                        value: z.PrB.ALL_CHANNELS,
+                        name: K.intl.string(K.t.B1AGeH),
+                        value: Y.PrB.ALL_CHANNELS,
                     },
                     {
-                        name: Y.intl.string(Y.t.uM2rNj),
-                        value: z.PrB.SELECTED_CHANNEL,
+                        name: K.intl.string(K.t.uM2rNj),
+                        value: Y.PrB.SELECTED_CHANNEL,
                     },
                     {
-                        name: Y.intl.string(Y.t.DYO5Oj),
-                        value: z.PrB.NEVER,
+                        name: K.intl.string(K.t.DYO5Oj),
+                        value: Y.PrB.NEVER,
                     },
                 ];
-                return (0, i.jsxs)(P.F, {
+                return (0, r.jsxs)(w.F, {
                     setting: H.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
-                        (0, i.jsxs)(u.xJW, {
-                            title: Y.intl.string(Y.t.VIm5MD),
+                        (0, r.jsxs)(d.xJW, {
+                            title: K.intl.string(K.t.VIm5MD),
                             children: [
-                                (0, i.jsx)(u.R94, {
-                                    type: u.geA.DESCRIPTION,
+                                (0, r.jsx)(d.R94, {
+                                    type: d.geA.DESCRIPTION,
                                     className: q.marginBottom8,
-                                    children: Y.intl.string(Y.t["+4dnAw"]),
+                                    children: K.intl.string(K.t["+4dnAw"]),
                                 }),
-                                (0, i.jsx)(u.FXm, {
+                                (0, r.jsx)(d.FXm, {
                                     options: e,
                                     onChange: this.handleTTSChange,
                                     value: this.props.ttsType,
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(u.$i$, { className: a()(q.marginTop40, q.marginBottom40) }),
+                        (0, r.jsx)(d.$i$, { className: o()(q.marginTop40, q.marginBottom40) }),
                     ],
                 });
             });
     }
 }
-let ei = (0, b.B)({
+let ea = (0, g.B)({
     kind: "user",
     id: "2024-01_mention_on_all_messages",
     label: "Mention on all messages",
@@ -552,17 +558,17 @@ let ei = (0, b.B)({
         },
     ],
 });
-function er() {
-    let e = ei.useExperiment({ location: "settings" }, { autoTrackExposure: !1 }).enabled,
-        t = (0, c.e7)([k.ZP], () => k.ZP.mentionOnAllMessages);
+function eo() {
+    let e = ea.useExperiment({ location: "settings" }, { autoTrackExposure: !1 }).enabled,
+        t = (0, c.e7)([M.ZP], () => M.ZP.mentionOnAllMessages);
     return e
-        ? (0, i.jsx)(P.F, {
+        ? (0, r.jsx)(w.F, {
               setting: H.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
-              children: (0, i.jsx)(u.j7V, {
+              children: (0, r.jsx)(d.j7V, {
                   className: q.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      g.Z.setAccountFlag(W.c.MENTION_ON_ALL_MESSAGES, e);
+                      p.Z.setAccountFlag(W.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: "Mention on all messages?",
@@ -571,76 +577,76 @@ function er() {
         : null;
 }
 function es() {
-    let e = T.xT.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = T.fs.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }),
-        n = (0, c.e7)([k.ZP], () => k.ZP.useNewNotifications),
-        [s, l] = r.useState(!1);
+    let e = A.xT.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = A.fs.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }),
+        n = (0, c.e7)([M.ZP], () => M.ZP.useNewNotifications),
+        [a, s] = i.useState(!1);
     return e && (n || t)
-        ? (0, i.jsxs)(i.Fragment, {
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
                   n
-                      ? (0, i.jsx)(P.F, {
+                      ? (0, r.jsx)(w.F, {
                             setting: H.s6.NOTIFICATIONS_UNREAD_SETTINGS,
-                            children: (0, i.jsx)(u.j7V, {
+                            children: (0, r.jsx)(d.j7V, {
                                 className: q.marginBottom40,
                                 value: n,
-                                disabled: s || !n,
-                                note: Y.intl.string(Y.t.frbLrK),
-                                onChange: () => ea(l),
-                                children: Y.intl.string(Y.t.z21l8P),
+                                disabled: a || !n,
+                                note: K.intl.string(K.t.frbLrK),
+                                onChange: () => el(s),
+                                children: K.intl.string(K.t.z21l8P),
                             }),
                         })
                       : t
-                        ? (0, i.jsx)(P.F, {
+                        ? (0, r.jsx)(w.F, {
                               setting: H.s6.NOTIFICATIONS_UNREAD_SETTINGS,
-                              children: (0, i.jsx)(u.j7V, {
+                              children: (0, r.jsx)(d.j7V, {
                                   className: q.marginBottom40,
                                   value: n,
-                                  disabled: s || n,
+                                  disabled: a || n,
                                   note: "Turns on the new notification system",
                                   onChange: (e) => {
-                                      g.Z.setAccountFlag(W.c.USE_NEW_NOTIFICATIONS, e);
+                                      p.Z.setAccountFlag(W.c.USE_NEW_NOTIFICATIONS, e);
                                   },
-                                  children: Y.intl.string(Y.t.z21l8P),
+                                  children: K.intl.string(K.t.z21l8P),
                               }),
                           })
                         : null,
-                  (0, i.jsxs)(P.F, {
+                  (0, r.jsxs)(w.F, {
                       setting: H.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
-                          (0, i.jsx)(u.xJW, {
+                          (0, r.jsx)(d.xJW, {
                               title: "New Notification Settings (Advanced, Staff Only)",
-                              children: (0, i.jsxs)("div", {
+                              children: (0, r.jsxs)("div", {
                                   style: {
                                       display: "flex",
                                       gap: 16,
                                   },
                                   children: [
-                                      (0, i.jsx)(P.F, {
+                                      (0, r.jsx)(w.F, {
                                           setting: H.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
-                                          children: (0, i.jsx)(u.zxk, {
+                                          children: (0, r.jsx)(d.zxk, {
                                               variant: "primary",
                                               text: "Restore most recent snapshot",
                                               onClick: S.KP,
                                           }),
                                       }),
-                                      (0, i.jsx)(P.F, {
+                                      (0, r.jsx)(w.F, {
                                           setting: H.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
-                                          children: (0, i.jsx)(u.zxk, {
+                                          children: (0, r.jsx)(d.zxk, {
                                               variant: "primary",
                                               text: "Launch Migration",
                                               onClick: () => {
-                                                  (0, I.R)(!0);
+                                                  (0, N.R)(!0);
                                               },
                                           }),
                                       }),
-                                      (0, i.jsx)(P.F, {
+                                      (0, r.jsx)(w.F, {
                                           setting: H.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
-                                          children: (0, i.jsx)(u.j7V, {
+                                          children: (0, r.jsx)(d.j7V, {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  g.Z.setAccountFlag(W.c.USE_NEW_NOTIFICATIONS, e);
+                                                  p.Z.setAccountFlag(W.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: "Toggle new system on/off",
                                           }),
@@ -648,150 +654,153 @@ function es() {
                                   ],
                               }),
                           }),
-                          (0, i.jsx)(u.$i$, { className: a()(q.marginTop40, q.marginBottom40) }),
+                          (0, r.jsx)(d.$i$, { className: o()(q.marginTop40, q.marginBottom40) }),
                       ],
                   }),
               ],
           })
         : null;
 }
-async function ea(e) {
+async function el(e) {
     e(!0);
     let t = await (0, S.Tn)();
     0 === t.length
-        ? await (0, N.oL)()
-        : m.Z.show({
-              title: Y.intl.string(Y.t["cY+Ooa"]),
-              body: Y.intl.format(Y.t["7zTJJS"], { date: new Date(t[t.length - 1].recorded_at) }),
-              cancelText: Y.intl.string(Y.t["ETE/oK"]),
-              confirmText: Y.intl.string(Y.t.Rm96T0),
-              onConfirm: N.oL,
+        ? await (0, C.oL)()
+        : f.Z.show({
+              title: K.intl.string(K.t["cY+Ooa"]),
+              body: K.intl.format(K.t["7zTJJS"], { date: new Date(t[t.length - 1].recorded_at) }),
+              cancelText: K.intl.string(K.t["ETE/oK"]),
+              confirmText: K.intl.string(K.t.Rm96T0),
+              onConfirm: C.oL,
           }),
         e(!1);
 }
-function el(e) {
-    let t = (0, v.p)();
-    return (0, i.jsx)(en, Q(J({}, e), { focusMode: t }));
+function ec(e) {
+    let t = (0, T.p)();
+    return (0, r.jsx)(ei, $(Q({}, e), { focusMode: t }));
 }
-function eo() {
-    let e = (0, c.cj)([w.Z], () => ({
-        disableUnreadBadge: w.Z.getDisableUnreadBadge(),
-        taskbarFlash: w.Z.taskbarFlash,
-        disabledSounds: w.Z.getDisabledSounds(),
-        disableAllSounds: w.Z.getDisableAllSounds(),
-        desktopType: w.Z.getDesktopType(),
-        ttsType: w.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: w.Z.getNotifyMessagesInSelectedChannel(),
+function eu() {
+    let e = (0, c.cj)([j.Z], () => ({
+        disableUnreadBadge: j.Z.getDisableUnreadBadge(),
+        taskbarFlash: j.Z.taskbarFlash,
+        disabledSounds: j.Z.getDisabledSounds(),
+        disableAllSounds: j.Z.getDisableAllSounds(),
+        desktopType: j.Z.getDesktopType(),
+        ttsType: j.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: j.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, i.jsx)(el, Q(J({}, e), { afkTimeout: V.CM.useSetting() }));
+    return (0, r.jsx)(ec, $(Q({}, e), { afkTimeout: Z.CM.useSetting() }));
 }
-function ec() {
-    let e = (0, _._x)("notification_settings"),
-        t = (0, j.BH)(),
-        n = (0, j.nC)(),
-        r = (0, c.e7)([f.Z], () => f.Z.currentUserApplicationIds.size > 0);
+function ed() {
+    let e = (0, b._x)("notification_settings"),
+        t = (0, y.BH)(),
+        n = (0, y.nC)(),
+        i = (0, c.e7)([m.Z], () => m.Z.currentUserApplicationIds.size > 0);
     if (!e) return null;
-    let s = [
-        {
-            name: Y.intl.string(Y.t.PCRbS0),
-            value: d.Tv.ACTIVITY_NOTIFICATIONS_ENABLED,
+    let a = [
+            {
+                name: K.intl.string(K.t.PCRbS0),
+                value: u.Tv.ACTIVITY_NOTIFICATIONS_ENABLED,
+            },
+            {
+                name: K.intl.string(K.t.UBa6pa),
+                value: u.Tv.ONLY_GAMES_PLAYED,
+                disabled: !i,
+                desc: i ? null : K.intl.string(K.t.XIH6xM),
+            },
+            {
+                name: K.intl.string(K.t.TCxJ8v),
+                value: u.Tv.ACTIVITY_NOTIFICATIONS_DISABLED,
+            },
+        ],
+        o = (e) => {
+            Z.YT.updateSetting(e.value);
         },
-        {
-            name: Y.intl.string(Y.t.UBa6pa),
-            value: d.Tv.ONLY_GAMES_PLAYED,
-            disabled: !r,
-            desc: r ? null : Y.intl.string(Y.t.XIH6xM),
-        },
-        {
-            name: Y.intl.string(Y.t.TCxJ8v),
-            value: d.Tv.ACTIVITY_NOTIFICATIONS_DISABLED,
-        },
-    ];
-    return (0, i.jsxs)(P.F, {
+        s = () => {
+            Z.Qq.updateSetting(!n);
+        };
+    return (0, r.jsxs)(w.F, {
         setting: H.s6.NOTIFICATIONS_GAME_ACTIVITY,
         children: [
-            (0, i.jsxs)(u.xJW, {
-                title: Y.intl.string(Y.t.omtoJy),
+            (0, r.jsxs)(d.xJW, {
+                title: K.intl.string(K.t.omtoJy),
                 className: q.marginBottom20,
                 children: [
-                    (0, i.jsx)(u.R94, {
-                        type: u.geA.DESCRIPTION,
+                    (0, r.jsx)(d.R94, {
+                        type: d.geA.DESCRIPTION,
                         className: q.marginBottom8,
-                        children: Y.intl.string(Y.t.ncS4CA),
+                        children: K.intl.string(K.t.ncS4CA),
                     }),
-                    (0, i.jsx)(u.FXm, {
-                        options: s,
-                        onChange: (e) => {
-                            V.YT.updateSetting(e.value);
-                        },
+                    (0, r.jsx)(d.FXm, {
+                        options: a,
+                        onChange: o,
                         value: t,
                     }),
                 ],
             }),
-            (0, i.jsx)(u.j7V, {
-                onChange: () => {
-                    V.Qq.updateSetting(!n);
-                },
+            (0, r.jsx)(d.j7V, {
+                onChange: s,
                 value: n,
-                children: Y.intl.string(Y.t.SZue3N),
+                children: K.intl.string(K.t.SZue3N),
             }),
         ],
     });
 }
-function ed() {
-    let e = V.fz.useSetting(),
+function ef() {
+    let e = Z.fz.useSetting(),
         t = [
             {
-                name: Y.intl.string(Y.t["9x/Rtb"]),
-                value: d.Ns.NOTIFICATIONS_ENABLED,
+                name: K.intl.string(K.t["9x/Rtb"]),
+                value: u.Ns.NOTIFICATIONS_ENABLED,
             },
             {
-                name: Y.intl.string(Y.t.fJAbQU),
-                value: d.Ns.ONLY_DMS,
+                name: K.intl.string(K.t.fJAbQU),
+                value: u.Ns.ONLY_DMS,
             },
             {
-                name: Y.intl.string(Y.t["xu+UDQ"]),
-                value: d.Ns.NOTIFICATIONS_DISABLED,
+                name: K.intl.string(K.t["xu+UDQ"]),
+                value: u.Ns.NOTIFICATIONS_DISABLED,
             },
-        ];
-    return y.Z.getCurrentConfig({ location: "webSettings" }).enableInAppNotifications
-        ? (0, i.jsxs)(P.F, {
+        ],
+        n = (t) => {
+            (0, P.MR)(t.value, e);
+        };
+    return R.Z.getCurrentConfig({ location: "webSettings" }).enableInAppNotifications
+        ? (0, r.jsxs)(w.F, {
               setting: H.s6.NOTIFICATIONS_REACTIONS,
               children: [
-                  (0, i.jsxs)(u.xJW, {
-                      title: Y.intl.string(Y.t.Rq0NFh),
+                  (0, r.jsxs)(d.xJW, {
+                      title: K.intl.string(K.t.Rq0NFh),
                       children: [
-                          (0, i.jsx)(u.R94, {
-                              type: u.geA.DESCRIPTION,
+                          (0, r.jsx)(d.R94, {
+                              type: d.geA.DESCRIPTION,
                               className: q.marginBottom8,
-                              children: Y.intl.string(Y.t.oWF6eX),
+                              children: K.intl.string(K.t.oWF6eX),
                           }),
-                          (0, i.jsx)(u.FXm, {
+                          (0, r.jsx)(d.FXm, {
                               options: t,
-                              onChange: (t) => {
-                                  (0, A.MR)(t.value, e);
-                              },
+                              onChange: n,
                               value: e,
                           }),
                       ],
                   }),
-                  (0, i.jsx)(u.$i$, { className: a()(q.marginTop40, q.marginBottom40) }),
+                  (0, r.jsx)(d.$i$, { className: o()(q.marginTop40, q.marginBottom40) }),
               ],
           })
         : null;
 }
-function eu() {
-    let e = V.d8.useSetting();
-    return (0, D.Az)("webSettings").enabled
-        ? (0, i.jsx)(P.F, {
+function e_() {
+    let e = Z.d8.useSetting();
+    return (0, x.Az)("webSettings").enabled
+        ? (0, r.jsx)(w.F, {
               setting: H.s6.NOTIFICATIONS_VOICE_ACTIVITY,
-              children: (0, i.jsx)(u.j7V, {
+              children: (0, r.jsx)(d.j7V, {
                   value: e,
-                  onChange: Z.I,
-                  note: Y.intl.string(Y.t.rngMNz),
-                  children: (0, i.jsxs)(u.vwX, {
-                      className: K.titleWithBeta,
-                      children: [Y.intl.string(Y.t.wtk08f), (0, i.jsx)(x.Z, {})],
+                  onChange: L.I,
+                  note: K.intl.string(K.t.rngMNz),
+                  children: (0, r.jsxs)(d.vwX, {
+                      className: z.titleWithBeta,
+                      children: [K.intl.string(K.t.wtk08f), (0, r.jsx)(E.Z, {})],
                   }),
               }),
           })

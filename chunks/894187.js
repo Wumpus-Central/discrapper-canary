@@ -1,3 +1,3 @@
-t.exports = function (t) {
-    return t && t.ownerDocument && t.ownerDocument.defaultView ? t.ownerDocument.defaultView : window;
+e.exports = function (e) {
+    return e && e.ownerDocument && e.ownerDocument.defaultView ? e.ownerDocument.defaultView : window;
 };

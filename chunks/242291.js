@@ -1,13 +1,13 @@
 n.d(t, {
     C0: () => R,
     GN: () => P,
-    M2: () => L,
-    Nq: () => C,
-    SZ: () => k,
-    aC: () => M,
+    M2: () => x,
+    Nq: () => N,
+    SZ: () => M,
+    aC: () => j,
     lF: () => G,
     pI: () => A,
-    sR: () => x,
+    sR: () => L,
     tt: () => U,
 }),
     n(539854);
@@ -39,7 +39,7 @@ function A() {
     let t = s.kU.getSetting();
     return null != (e = null == t ? void 0 : t.volume) ? e : 100;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (null == t ? void 0 : t.guild_id) == null ||
         _.Z.can(T.Plq.USE_EXTERNAL_SOUNDS, t) ||
@@ -47,11 +47,11 @@ function N(e, t) {
         e.guildId === (null == t ? void 0 : t.guild_id)
     );
 }
-function C(e, t, n) {
+function N(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (
         (m.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === I.X8) &&
-        N(t, n) &&
+        C(t, n) &&
         (!r || t.available)
     );
 }
@@ -71,7 +71,7 @@ function D() {
         (e) => null != e.joinSound,
     );
 }
-async function L(e) {
+async function x(e) {
     let t = p.default.getCurrentUser(),
         n = (0, o.Z)(),
         r = (0, v.k9)(e);
@@ -80,11 +80,11 @@ async function L(e) {
     let i = r.guildId === I.hY ? I.X8 : r.guildId,
         a = b.Z.getSound(i, r.soundId);
     if (null != a) {
-        if (!N(a, n) || !C(t, a, n, !0) || !R(n)) return null;
+        if (!C(a, n) || !N(t, a, n, !0) || !R(n)) return null;
         w(a, n.id);
     }
 }
-function x(e) {
+function L(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
         a = [];
@@ -95,12 +95,12 @@ function x(e) {
     }
     return a;
 }
-function M(e, t) {
+function j(e, t) {
     (0, l.PS)(
         e,
         (n) => {
             (n.joinSound = void 0),
-                j({
+                k({
                     guildId: e,
                     changeType: y.MW.REMOVED,
                     soundType: y.jy.ENTRY,
@@ -110,7 +110,7 @@ function M(e, t) {
         l.fy.INFREQUENT_USER_ACTION,
     );
 }
-function k(e, t, n) {
+function M(e, t, n) {
     (0, l.PS)(
         e,
         (r) => {
@@ -121,7 +121,7 @@ function k(e, t, n) {
                 soundId: t.soundId,
                 guildId: i ? I.hY : t.guildId,
             }),
-                j({
+                k({
                     guildId: e,
                     changeType: o,
                     soundSource: a,
@@ -132,7 +132,7 @@ function k(e, t, n) {
         l.fy.INFREQUENT_USER_ACTION,
     );
 }
-function j(e) {
+function k(e) {
     let { guildId: t, changeType: n, soundType: r, soundSource: i, location: a } = e;
     h.default.track(T.rMx.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
         location_stack: a,

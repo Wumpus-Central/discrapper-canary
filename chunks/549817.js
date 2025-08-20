@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(472816), n(794429), n(415506), n(388685), n(997841);
+n.d(t, { Z: () => x }), n(472816), n(794429), n(415506), n(388685), n(997841);
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -23,7 +23,7 @@ var r = n(392711),
     T = n(981631),
     S = n(372897),
     A = n(490897);
-function N(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -149,7 +149,7 @@ function D(e, t, n) {
             removedRoleIds: n,
         });
 }
-let L = {
+let x = {
     selectOption(e, t, n, r) {
         let a = O.Z.getOnboardingPrompt(t);
         if (null == a) return;
@@ -173,13 +173,13 @@ let L = {
             o = O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : [],
             [c, f] = (0, v.Ee)(e, t, o),
             b = [...a, ...o],
-            N = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            R = (0, I.v)(e, new Set(b), N, !0).length,
+            C = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
+            R = (0, I.v)(e, new Set(b), C, !0).length,
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(
                 T.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                P(C({}, (0, l.hH)(e)), {
+                P(N({}, (0, l.hH)(e)), {
                     step: t.length - 1,
                     options_selected: null == n ? 0 : r.filter((e) => D.includes(e.id)).length,
                     skipped: D.length > 0,
@@ -199,8 +199,8 @@ let L = {
             (0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i));
             let t = h.default.getCurrentUser();
             if (null != t) {
-                var L, x;
-                let n = null != (x = null == (L = p.ZP.getMember(e, t.id)) ? void 0 : L.flags) ? x : 0;
+                var x, L;
+                let n = null != (L = null == (x = p.ZP.getMember(e, t.id)) ? void 0 : x.flags) ? L : 0;
                 (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, S.q.COMPLETED_ONBOARDING, !0) } });
             }
         }

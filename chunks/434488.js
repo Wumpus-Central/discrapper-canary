@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(416345),
     x = n(626135),
     v = n(607187),
-    j = n(981631),
-    O = n(388032),
+    O = n(981631),
+    j = n(388032),
     E = n(348130),
     S = n(359165);
 function P(e) {
@@ -104,7 +104,7 @@ function T(e) {
             className: E.root,
             children: [
                 (0, r.jsx)(c.ua7, {
-                    text: O.intl.string(O.t.qJvTKS),
+                    text: j.intl.string(j.t.qJvTKS),
                     children: (e) => {
                         var { onClick: i } = e,
                             l = (function (e, t) {
@@ -162,7 +162,7 @@ function T(e) {
                     },
                 }),
                 (0, r.jsx)(c.f6W, {
-                    theme: j.BRd.DARK,
+                    theme: O.BRd.DARK,
                     children: (e) =>
                         (0, r.jsx)(c.P3F, {
                             onClick: i,
@@ -182,7 +182,7 @@ function T(e) {
 function N(e) {
     let { channel: t, guild: l, inPopout: o } = e;
     i.useEffect(() => {
-        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        x.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
@@ -200,7 +200,7 @@ function N(e) {
                         I(P({}, n), {
                             guild: l,
                             channel: t,
-                            source: j.t4x.ACTIVITY_ENTRY_POINT_TILE,
+                            source: O.t4x.ACTIVITY_ENTRY_POINT_TILE,
                         }),
                     );
             },
@@ -226,7 +226,7 @@ function N(e) {
         value: s,
         children: (0, r.jsx)(c.f6W, {
             disableAdaptiveTheme: !0,
-            theme: j.BRd.MIDNIGHT,
+            theme: O.BRd.MIDNIGHT,
             children: (e) =>
                 (0, r.jsxs)(v.Z, {
                     className: a()(E.root, E.singleUserRoot, e),
@@ -243,13 +243,13 @@ function N(e) {
                                 (0, r.jsx)(c.zxk, {
                                     variant: "secondary",
                                     icon: Z,
-                                    text: p ? O.intl.string(O.t["EE+P0N"]) : O.intl.string(O.t["6Qgren"]),
+                                    text: p ? j.intl.string(j.t["EE+P0N"]) : j.intl.string(j.t["6Qgren"]),
                                     onClick: b,
                                 }),
                                 (0, r.jsx)(c.zxk, {
                                     variant: "secondary",
                                     icon: C,
-                                    text: O.intl.string(O.t.qnFavb),
+                                    text: j.intl.string(j.t.qnFavb),
                                     onClick: y,
                                 }),
                             ],
@@ -262,7 +262,7 @@ function N(e) {
 function A(e) {
     let { channel: t, guild: n, handleClose: l, width: s, userParticipantCount: d } = e;
     (0, u.ZP)(() => {
-        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        x.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: d,
         });
@@ -285,7 +285,7 @@ function A(e) {
                     ? (0, r.jsx)(c.Text, {
                           className: E.heading,
                           variant: s > 550 ? "text-md/semibold" : "text-sm/semibold",
-                          children: O.intl.string(O.t["7BKMcH"]),
+                          children: j.intl.string(j.t["7BKMcH"]),
                       })
                     : null,
                 (0, r.jsx)("div", {
@@ -307,7 +307,7 @@ function A(e) {
                 (0, r.jsxs)(c.P3F, {
                     className: E.checkboxContainer,
                     onClick: function () {
-                        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        x.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: d,
@@ -318,14 +318,14 @@ function A(e) {
                         (0, r.jsx)(C.Z, {}),
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
-                            children: O.intl.string(O.t["5E9SBw"]),
+                            children: j.intl.string(j.t["5E9SBw"]),
                         }),
                     ],
                 }),
                 (0, r.jsx)(c.P3F, {
                     className: E.closeButtonContainer,
                     onClick: function () {
-                        x.default.track(j.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        x.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: d,

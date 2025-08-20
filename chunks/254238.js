@@ -1,5 +1,5 @@
 n.d(t, {
-    LO: () => C,
+    LO: () => N,
     On: () => S,
     Vv: () => I,
     _: () => T,
@@ -71,7 +71,7 @@ async function O() {
         (null == e ? void 0 : e.commandId) != null &&
         (null == e ? void 0 : e.deviceId) != null &&
         n.push(w(e.type, e.deviceId, e.commandId)),
-        null != t && n.push(N(t));
+        null != t && n.push(C(t));
     try {
         await Promise.all(n);
     } catch (e) {
@@ -142,13 +142,13 @@ async function A() {
     }
     return e;
 }
-function N(e) {
+function C(e) {
     return a.tn.del({
         url: m.ANM.CONNECT_REQUEST(e),
         rejectWithError: !1,
     });
 }
-async function C(e) {
+async function N(e) {
     let t;
     o.Z.dispatch({
         type: "GAME_CONSOLE_FETCH_DEVICES_START",

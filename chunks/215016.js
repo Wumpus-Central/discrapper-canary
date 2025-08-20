@@ -1,6 +1,6 @@
 n.d(t, {
-    PY: () => V,
-    ZP: () => F,
+    PY: () => Z,
+    ZP: () => V,
     iR: () => G,
 }),
     n(388685);
@@ -55,8 +55,8 @@ function A(e) {
     }
     return e;
 }
-let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
-    C = 220,
+let C = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
+    N = 220,
     R = 1220,
     P = Array.from({ length: 16 }).map((e, t) => ({
         id: "".concat(t),
@@ -70,7 +70,7 @@ function D(e, t) {
     let n = P[t];
     return null == n ? 0 : n.height;
 }
-function L(e, t, n, i) {
+function x(e, t, n, i) {
     if (!(e > 0))
         return null == P[t]
             ? null
@@ -83,26 +83,26 @@ function L(e, t, n, i) {
                   i,
               );
 }
-function x(e, t) {
+function L(e, t) {
     var n, r;
     return e > 0 ? "" : null != (r = null == (n = P[t]) ? void 0 : n.id) ? r : "";
 }
-function M(e) {
+function j(e) {
     return e === u.EO.VIDEO;
 }
-function k(e) {
+function M(e) {
     return (
         ((0, E._M)(e) || (0, E.MO)(e)) &&
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
-function j(e) {
+function k(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
 function U(e) {
     let t = y.Z.toURLSafe(e),
-        n = null != t && j(t);
-    return null != t && (k(t) || n)
+        n = null != t && k(t);
+    return null != t && (M(t) || n)
         ? (n && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
         : e;
 }
@@ -166,7 +166,7 @@ class G extends i.PureComponent {
             "data-focused": a,
             onClick: this.handleClick,
             style: A({ backgroundColor: s ? void 0 : o }, i),
-            children: [M(n) ? null : this.renderGIF(), null != t ? t(e) : null],
+            children: [j(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
     constructor(e) {
@@ -184,10 +184,10 @@ class G extends i.PureComponent {
             });
         let { format: t, color: n, imagePool: r } = this.props;
         (this.state = {
-            color: null == n ? l().sample(N) : n,
+            color: null == n ? l().sample(C) : n,
             loaded: !1,
         }),
-            M(t) ||
+            j(t) ||
                 ((this._image = r.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
                 (this._image.src = e.src));
@@ -213,7 +213,7 @@ class B extends i.PureComponent {
             });
     }
     getSectionHeight(e) {
-        return 1 === e ? C : 0;
+        return 1 === e ? N : 0;
     }
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -407,9 +407,9 @@ class B extends i.PureComponent {
                               sections: [P.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: x,
+                              getItemKey: L,
                               getItemHeight: D,
-                              renderItem: L,
+                              renderItem: x,
                               chunkSize: 128,
                           },
                           s,
@@ -444,7 +444,7 @@ class B extends i.PureComponent {
             });
     }
 }
-function V() {
+function Z() {
     let { renderWindow: e } = i.useContext(g.ZP),
         t = e.document,
         [n] = i.useState(
@@ -483,7 +483,7 @@ function V() {
         videoPool: r,
     };
 }
-let F = function (e) {
-    let t = V();
+let V = function (e) {
+    let t = Z();
     return (0, r.jsx)(B, A({}, e, t));
 };

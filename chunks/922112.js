@@ -59,9 +59,9 @@ let x = function (e) {
     let { guildId: t, resourceChannel: l, index: x, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
         { title: O, channelId: y, description: C } = l,
         N = d.Z.getChannel(y),
-        I = null;
-    (null != N && (0, c.k3)(N)) || (I = p.intl.string(p.t.kTdL8f));
-    let E = null == C || 0 === C.length,
+        E = null;
+    (null != N && (0, c.k3)(N)) || (E = p.intl.string(p.t.kTdL8f));
+    let I = null == C || 0 === C.length,
         S = u.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon,
@@ -123,7 +123,7 @@ let x = function (e) {
                       className: a()(h.resourceChannel, {
                           [h.dropIndicatorBefore]: null != P && x < P,
                           [h.dropIndicatorAfter]: null != P && x > P,
-                          [h.resourceChannelError]: null != I,
+                          [h.resourceChannelError]: null != E,
                       }),
                       ref: (e) => {
                           T(w(e));
@@ -160,7 +160,7 @@ let x = function (e) {
                                       color: "header-primary",
                                       children: O,
                                   }),
-                                  !E &&
+                                  !I &&
                                       (0, r.jsx)(s.Text, {
                                           className: h.resourceChannelDescription,
                                           variant: "text-xs/medium",
@@ -186,11 +186,11 @@ let x = function (e) {
                           }),
                       ],
                   }),
-                  null != I &&
+                  null != E &&
                       (0, r.jsx)(s.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: I,
+                          children: E,
                       }),
               ],
           });

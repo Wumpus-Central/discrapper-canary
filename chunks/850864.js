@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -37,7 +37,7 @@ function N(e) {
             ],
             [],
         ),
-        I = (0, l.e7)([o.Z], () => o.Z.theme);
+        E = (0, l.e7)([o.Z], () => o.Z.theme);
     i.useEffect(
         () => () => {
             let e = m.Z.getSettings();
@@ -45,7 +45,7 @@ function N(e) {
         },
         [n, t.id],
     );
-    let E = i.useMemo(() => ((0, a.ap)(I) ? ("existing" === c ? O : C) : "existing" === c ? _ : y), [c, I]);
+    let I = i.useMemo(() => ((0, a.ap)(E) ? ("existing" === c ? O : C) : "existing" === c ? _ : y), [c, E]);
     return (0, r.jsxs)("div", {
         className: v.page,
         children: [
@@ -154,7 +154,7 @@ function N(e) {
                     }),
                     (0, r.jsx)("img", {
                         className: v.previewImage,
-                        src: E,
+                        src: I,
                         alt: j.intl.string(j.t.ST4UOz),
                     }),
                     (0, r.jsx)(s.sY7, {
@@ -168,7 +168,7 @@ function N(e) {
         ],
     });
 }
-function I(e) {
+function E(e) {
     let { saveOnClose: t } = e,
         n = (0, l.e7)([d.Z, c.Z], () => {
             let e = d.Z.getGuildId();

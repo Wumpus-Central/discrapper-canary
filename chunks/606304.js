@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(997841);
+n.d(t, { Z: () => C }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
@@ -158,7 +158,7 @@ class A extends (r = i.ZP.Store) {
     }
 }
 _(A, "displayName", "SpeakingStore");
-let N = new A(a.Z, {
+let C = new A(a.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
     SPEAKING: T,

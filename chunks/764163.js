@@ -1,6 +1,6 @@
 n.d(t, {
-    DI: () => E,
-    x3: () => I,
+    DI: () => I,
+    x3: () => E,
 }),
     n(388685),
     n(953529),
@@ -114,9 +114,9 @@ function C(e) {
                       },
             [n, m],
         ),
-        I = "";
+        E = "";
     return (
-        null != m ? (I = ":".concat(m.name, ":")) : null != n.name && (I = f.ZP.convertSurrogateToName(n.name)),
+        null != m ? (E = ":".concat(m.name, ":")) : null != n.name && (E = f.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(d.yRy, {
             targetElementRef: o,
             animation: d.yRy.Animation.NONE,
@@ -145,7 +145,7 @@ function C(e) {
                                 (0, r.jsx)(c.Is, {
                                     inputClassName: _.emojiText,
                                     placeholder: v.intl.string(v.t.qJPLNT),
-                                    value: I,
+                                    value: E,
                                     "aria-labelledby": l,
                                     readOnly: !0,
                                 }),
@@ -178,7 +178,7 @@ function N(e) {
             name: null == l ? void 0 : l.emoji_name,
         })),
         N = u && "" !== j && (null != O.id || null != O.name);
-    function I(e) {
+    function E(e) {
         e.preventDefault(),
             N &&
                 (g({
@@ -188,7 +188,7 @@ function N(e) {
                 }),
                 f());
     }
-    let E = [
+    let I = [
         {
             text: v.intl.string(v.t["ETE/oK"]),
             variant: "secondary",
@@ -197,7 +197,7 @@ function N(e) {
     ];
     return (
         null != p &&
-            E.push({
+            I.push({
                 text: v.intl.string(v.t.oyYWHB),
                 variant: "critical-secondary",
                 onClick: () => {
@@ -205,19 +205,19 @@ function N(e) {
                 },
                 icon: d.XHJ,
             }),
-        E.push({
+        I.push({
             text: null == l ? v.intl.string(v.t.OYkgVl) : v.intl.string(v.t.R3BPHx),
             variant: "primary",
-            onClick: I,
+            onClick: E,
             disabled: !N,
         }),
         (0, r.jsx)("form", {
-            onSubmit: I,
+            onSubmit: E,
             children: (0, r.jsx)(o.Modal, {
                 transitionState: h,
                 onClose: f,
                 title: v.intl.string(v.t["2qf9EB"]),
-                actions: E,
+                actions: I,
                 children: (0, r.jsxs)(d.Kqy, {
                     gap: "md",
                     children: [
@@ -250,7 +250,7 @@ function N(e) {
         })
     );
 }
-function I(e) {
+function E(e) {
     let { guildId: t, omitChannelIds: n, initialData: l, onSave: s, onDelete: o, transitionState: c, onClose: u } = e,
         [g, p] = i.useState(null == l ? void 0 : l.ref_id),
         h = (0, m.Dt)(),
@@ -291,7 +291,7 @@ function I(e) {
         onDelete: o,
     });
 }
-function E(e) {
+function I(e) {
     var t;
     let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: u, guildId: g } = e,
         [p, h] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ""),

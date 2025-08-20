@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(388905),
+    s = n(388905),
     o = n(646956);
-function s(e) {
+function a(e) {
     var t,
         n,
-        { children: i, className: s } = e,
+        { children: i, className: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -32,7 +32,7 @@ function s(e) {
         })(e, ["children", "className"]);
     let u = i();
     return (0, r.jsx)(
-        a.ZP,
+        s.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function s(e) {
         })({}, c)),
         (n = n =
             {
-                className: l()(s, o.container),
+                className: l()(a, o.container),
                 contentClassName: o.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(

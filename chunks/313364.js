@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(472596),
     C = n(598948),
     N = n(428936),
-    I = n(41586),
-    E = n(918192),
+    E = n(41586),
+    I = n(918192),
     S = n(981631),
     T = n(388032),
     P = n(490745),
@@ -102,7 +102,7 @@ function R(e) {
                                                         ? (0, r.jsxs)("div", {
                                                               className: P.mainTableContainer,
                                                               children: [
-                                                                  (0, r.jsx)(I.Z, {
+                                                                  (0, r.jsx)(E.Z, {
                                                                       guild: n,
                                                                       ref: M,
                                                                   }),
@@ -123,7 +123,7 @@ function R(e) {
                                                                   className: P.noResultsContainer,
                                                                   children: [
                                                                       (0, r.jsx)("div", {
-                                                                          children: (0, r.jsx)(E.Z, {}),
+                                                                          children: (0, r.jsx)(I.Z, {}),
                                                                       }),
                                                                       (0, r.jsx)(o.Text, {
                                                                           variant: "text-md/normal",

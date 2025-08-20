@@ -1,10 +1,62 @@
-n.d(t, { O: () => r }), n(388685), n(467055);
-var i = n(647438);
-let r = function (e) {
+n.d(t, { O: () => l }), n(388685), n(467055);
+var r = n(647438);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function o(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function s(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : o(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let l = function (e) {
     let { scrollOffset: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollOffset: 60 },
-        n = (0, i.useCallback)(
+        n = (0, r.useCallback)(
             (e) => {
-                let n = o.current[e];
+                let n = u.current[e];
                 null != n &&
                     ((n.style.scrollMarginTop = "".concat(t, "px")),
                     n.scrollIntoView({
@@ -14,91 +66,47 @@ let r = function (e) {
             },
             [t],
         ),
-        [r, s] = (0, i.useState)(Object.fromEntries(e.map((e) => [e, !1]))),
-        [a, l] = (0, i.useState)(e[0]);
-    (0, i.useEffect)(() => {
-        let e = Object.keys(r).filter((e) => r[e]);
-        e.length > 0 && l(e[0]);
-    }, [r]);
-    let o = (0, i.useRef)({});
+        [i, o] = (0, r.useState)(Object.fromEntries(e.map((e) => [e, !1]))),
+        [l, c] = (0, r.useState)(e[0]);
+    (0, r.useEffect)(() => {
+        let e = Object.keys(i).filter((e) => i[e]);
+        e.length > 0 && c(e[0]);
+    }, [i]);
+    let u = (0, r.useRef)({});
     return (
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             let e = new IntersectionObserver((e) => {
                 e.forEach((e) => {
-                    s((t) => {
-                        var n, i;
-                        return (
-                            (n = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: i,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = i);
-                                        });
-                                }
-                                return e;
-                            })({}, t)),
-                            (i = i = { [e.target.id]: e.isIntersecting }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var i = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, i);
-                                      }
-                                      return n;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                  }),
-                            n
-                        );
-                    });
+                    o((t) => s(a({}, t), { [e.target.id]: e.isIntersecting }));
                 });
             });
             return (
-                Object.values(o.current).forEach((t) => {
+                Object.values(u.current).forEach((t) => {
                     null != t && e.observe(t);
                 }),
                 () => e.disconnect()
             );
         }, []),
         {
-            navBarSections: (0, i.useMemo)(
-                () =>
-                    e.reduce(
-                        (e, t, i) => (
-                            (e[t] = {
-                                id: t,
-                                ref: (e) => {
-                                    (o.current[t] = e), null != e && (e.id = t);
-                                },
-                                scrollToSection: () => n(t),
-                                order: i,
-                            }),
-                            e
-                        ),
-                        {},
+            navBarSections: (0, r.useMemo)(() => {
+                let t = {};
+                return e.reduce(
+                    (e, t, r) => (
+                        (e[t] = {
+                            id: t,
+                            ref: (e) => {
+                                (u.current[t] = e), null != e && (e.id = t);
+                            },
+                            scrollToSection: () => n(t),
+                            order: r,
+                        }),
+                        e
                     ),
-                [e, n],
-            ),
-            activeSectionId: a,
-            setActiveSectionId: l,
+                    t,
+                );
+            }, [e, n]),
+            activeSectionId: l,
+            setActiveSectionId: c,
         }
     );
 };

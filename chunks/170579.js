@@ -63,16 +63,16 @@ let y = (e) => {
                 showTrialBadge: S = !1,
                 showDiscountBadge: A = !1,
             } = e,
-            N = I === m.p9.TIER_2;
+            C = I === m.p9.TIER_2;
         n = I === m.p9.TIER_0 ? c.Z : I === m.p9.TIER_1 ? u.Z : l.Z;
-        let C = (0, p.Ng)(),
-            R = null == C || null == (t = C.discount) ? void 0 : t.amount;
+        let N = (0, p.Ng)(),
+            R = null == N || null == (t = N.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
             "aria-hidden": !0,
             className: a()(
                 {
-                    [E.headerBackground]: !N,
-                    [E.tier2HeaderBackground]: N,
+                    [E.headerBackground]: !C,
+                    [E.tier2HeaderBackground]: C,
                 },
                 T,
             ),
@@ -86,7 +86,7 @@ let y = (e) => {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !N }) }),
+                                (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !C }) }),
                                 (S || A) &&
                                     (0, r.jsx)(y, {
                                         isTier0: I === m.p9.TIER_0,

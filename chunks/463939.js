@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => I });
 var r,
     i,
     l = n(951288),
@@ -159,7 +159,7 @@ let N = (0, b.i$)({
         },
         getAmount: (e) => e.amount,
     }),
-    I = (0, x.rM)(
+    E = (0, x.rM)(
         [
             (0, x.Fd)({
                 key: "PERIOD",
@@ -225,7 +225,7 @@ let N = (0, b.i$)({
         ],
         { expandableToggleColumnKey: "DROPDOWN" },
     );
-function E(e) {
+function I(e) {
     let { ListingIdLabel: t, payoutsByPeriod: n } = e,
         { cellProps: r, data: i } = (0, x.GN)(n, {
             generateExpandedRows: (e) =>
@@ -240,7 +240,7 @@ function E(e) {
         }),
         s = a.useMemo(() => O({ ListingIdLabel: t }, r), [r, t]);
     return (0, l.jsx)(b.ZP, {
-        columns: I,
+        columns: E,
         data: i,
         cellProps: s,
     });

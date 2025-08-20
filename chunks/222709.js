@@ -1,26 +1,26 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
+    a = n(442837),
     o = n(481060),
-    a = n(528963),
-    s = n(143740),
+    s = n(528963),
+    l = n(143740),
     c = n(212342),
     u = n(388032),
     d = n(785188);
-let p = (e) => {
+let f = (e) => {
     let { channelId: t, messageId: n } = e,
-        p = (0, l.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
-        m = i.useCallback(() => {
-            a.Z.dismissPublishBump(n), (0, s.Z)(t, n);
+        f = (0, a.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
+        _ = i.useCallback(() => {
+            s.Z.dismissPublishBump(n), (0, l.Z)(t, n);
         }, [t, n]),
-        f = i.useCallback(() => {
-            a.Z.dismissPublishBump(n);
+        p = i.useCallback(() => {
+            s.Z.dismissPublishBump(n);
         }, [n]),
-        g = i.useCallback(() => {
-            a.Z.permanentlyHidePublishBump(t);
+        h = i.useCallback(() => {
+            s.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return p
+    return f
         ? (0, r.jsxs)("div", {
               className: d.container,
               children: [
@@ -42,12 +42,12 @@ let p = (e) => {
                               className: d.publish,
                               variant: "text-sm/normal",
                               children: (0, r.jsx)(o.P3F, {
-                                  onClick: m,
+                                  onClick: _,
                                   children: u.intl.string(u.t["MFGE5+"]),
                               }),
                           }),
                           (0, r.jsx)(o.P3F, {
-                              onClick: f,
+                              onClick: p,
                               children: (0, r.jsx)(o.k$p, {
                                   size: "xs",
                                   color: "currentColor",
@@ -61,7 +61,7 @@ let p = (e) => {
                       className: d.hidePermanently,
                       variant: "text-sm/normal",
                       children: (0, r.jsx)(o.P3F, {
-                          onClick: g,
+                          onClick: h,
                           children: u.intl.string(u.t.efSkDg),
                       }),
                   }),

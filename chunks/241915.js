@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => C,
+    Z: () => N,
     _: () => A,
 }),
     n(388685);
@@ -360,7 +360,7 @@ h(A, "defaultProps", {
     hidden: !1,
     roundCorners: !0,
 });
-let N = (e) => {
+let C = (e) => {
         let {
                 selectedPIPWindow: t,
                 pipWindows: n,
@@ -377,8 +377,8 @@ let N = (e) => {
                 className: I,
                 getDockedRectPositionY: T,
             } = e,
-            [S, N] = a.useState(!1),
-            C = a.useMemo(
+            [S, C] = a.useState(!1),
+            N = a.useMemo(
                 () =>
                     null == t
                         ? null
@@ -391,10 +391,10 @@ let N = (e) => {
                 [n, t, r, h],
             ),
             R = a.useCallback(() => {
-                N(!0);
+                C(!0);
             }, []),
             P = a.useCallback(() => {
-                N(!1);
+                C(!1);
             }, []),
             w = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
             D = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
@@ -423,9 +423,9 @@ let N = (e) => {
                           edgeOffsetRight: b,
                           roundCorners: E,
                           resizeConfig: w || D ? void 0 : v,
-                          children: C,
+                          children: N,
                       }),
                   }),
               });
     },
-    C = a.memo(N);
+    N = a.memo(C);

@@ -41,7 +41,7 @@ function S(e) {
         a = l.default.getId(),
         o = d.Z.getEnabled();
     if (null != t) {
-        if (o && (0, f.Z)(t.name)) return N(t.name, r, n);
+        if (o && (0, f.Z)(t.name)) return C(t.name, r, n);
         r === a &&
             ((O = [...O, t.name].slice(-1 * E)),
             i().isEqual(O, g) ? (I.play(), y.stop(), (O = []), (0, u.ME)(!o)) : y.start(p, () => (O = [])));
@@ -55,7 +55,7 @@ function A(e) {
     })),
         v[i].delay();
 }
-function N(e, t, n) {
+function C(e, t, n) {
     var r;
     let i = b(t, n);
     if (null != d.Z.getWaitingHighFive(n, t)) return;
@@ -76,7 +76,7 @@ function N(e, t, n) {
         (v[t] = r), r.delay();
     }
 }
-class C extends o.Z {
+class N extends o.Z {
     _terminate() {
         Object.values(v).forEach((e) => e.cancel()), (v = {});
     }
@@ -88,4 +88,4 @@ class C extends o.Z {
             });
     }
 }
-let R = new C();
+let R = new N();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -115,7 +115,7 @@ class A extends (r = i.ZP.Store) {
     }
 }
 d(A, "displayName", "LurkingStore");
-let N = new A(a.Z, {
+let C = new A(a.Z, {
     CONNECTION_OPEN: S,
     GUILD_JOIN: b,
     GUILD_STOP_LURKING: I,

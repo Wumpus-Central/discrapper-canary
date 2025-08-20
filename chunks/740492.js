@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => C });
+n.d(t, { ZP: () => N });
 var r,
     i = n(392711),
     a = n.n(i),
@@ -68,7 +68,7 @@ function A() {
     let t = o.ZP.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;
     return null != (e = null == t ? void 0 : t.darkSidebar) && e;
 }
-class N extends (r = o.ZP.DeviceSettingsStore) {
+class C extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         var t;
         (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : A();
@@ -187,9 +187,9 @@ class N extends (r = o.ZP.DeviceSettingsStore) {
         return null != (e = y.listDensity) ? e : _.fx.COZY;
     }
 }
-p(N, "displayName", "UnsyncedUserSettingsStore"),
-    p(N, "persistKey", "UnsyncedUserSettingsStore"),
-    p(N, "migrations", [
+p(C, "displayName", "UnsyncedUserSettingsStore"),
+    p(C, "persistKey", "UnsyncedUserSettingsStore"),
+    p(C, "migrations", [
         () => {
             let e = s.K.get("UserSettingsStore");
             return (
@@ -219,7 +219,7 @@ p(N, "displayName", "UnsyncedUserSettingsStore"),
             delete e.disableVisualRefresh;
         },
     ]);
-let C = new N(l.Z, {
+let N = new C(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: O,
     LOGOUT: v,
     LOGIN_SUCCESS: I,

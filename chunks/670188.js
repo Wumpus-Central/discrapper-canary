@@ -114,8 +114,8 @@ function O(e) {
             onRequestOpen: T,
             onRequestClose: S,
             onClosePopout: A,
-            shouldShow: N,
-            shouldPreload: C = !0,
+            shouldShow: C,
+            shouldPreload: N = !0,
         } = e,
         R = m(e, [
             "children",
@@ -181,8 +181,8 @@ function O(e) {
             _(
                 {
                     popoutKey: u.Tg,
-                    shouldShow: N,
-                    preload: C ? w : void 0,
+                    shouldShow: C,
+                    preload: N ? w : void 0,
                     renderPopout: D,
                     onRequestOpen: T,
                     onRequestClose: S,

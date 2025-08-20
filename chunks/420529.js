@@ -1,16 +1,16 @@
 e.d(n, { Z: () => U });
 var i = e(951288);
 e(647438);
-var l = e(399606),
-    d = e(481060),
+var d = e(399606),
+    l = e(481060),
     r = e(231757),
     a = e(397639),
     _ = e(19780),
     s = e(979651),
     p = e(951206),
     u = e(446226),
-    o = e(937393),
-    I = e(721351),
+    I = e(937393),
+    o = e(721351),
     c = e(981631),
     E = e(388032);
 function T(t) {
@@ -57,32 +57,32 @@ function g(t, n) {
     );
 }
 function U(t) {
-    let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
+    let n = (0, d.e7)([_.Z], () => _.Z.getChannelId() === t.id),
         U = (0, u.Z)(),
         L = (null == U ? void 0 : U.channelId) === t.id,
         y = (0, a.V)(t) && !t.isPrivate(),
         D = (0, a.Z)(t),
-        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && D) || y,
-        O = (0, o.Z)();
+        m = (!(0, d.e7)([s.Z], () => s.Z.isInChannel(t.id)) && D) || y,
+        O = (0, I.Z)();
     return L || 0 !== O.length
         ? L
-            ? (0, i.jsx)(d.sNh, {
+            ? (0, i.jsx)(l.sNh, {
                   label: E.intl.string(E.t.PlwgdX),
                   id: "handoff",
                   action: () => {
                       (0, p.F)(U);
                   },
-                  icon: (0, I.Z)(void 0),
+                  icon: (0, o.Z)(void 0),
                   disabled: m,
               })
-            : O.map((l) => {
+            : O.map((d) => {
                   var a, _;
                   return (0, i.jsx)(
-                      d.sNh,
+                      l.sNh,
                       {
-                          id: "transfer-".concat(l.type, "-").concat(l.id),
+                          id: "transfer-".concat(d.type, "-").concat(d.id),
                           label:
-                              ((a = l.type),
+                              ((a = d.type),
                               (_ = n),
                               a === c.ABu.XBOX
                                   ? _
@@ -105,29 +105,29 @@ function U(t) {
                                           location: "Console Transfer Item",
                                       });
                                   n.type === c.ABu.XBOX
-                                      ? (0, d.ZDy)(async () => {
+                                      ? (0, l.ZDy)(async () => {
                                             let { default: n } = await Promise.all([e.e("20193"), e.e("522")]).then(
                                                 e.bind(e, 200623),
                                             );
                                             return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
                                         })
                                       : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&
-                                        (0, d.ZDy)(async () => {
-                                            let { default: l } = await e.e("638").then(e.bind(e, 543974));
+                                        (0, l.ZDy)(async () => {
+                                            let { default: d } = await e.e("638").then(e.bind(e, 543974));
                                             return (e) =>
                                                 (0, i.jsx)(
-                                                    l,
+                                                    d,
                                                     g(T({}, e), {
                                                         platform: n.type,
                                                         channel: t,
                                                     }),
                                                 );
                                         });
-                              })(l),
-                          icon: (0, I.Z)(l.type),
+                              })(d),
+                          icon: (0, o.Z)(d.type),
                           disabled: m,
                       },
-                      l.id,
+                      d.id,
                   );
               })
         : null;

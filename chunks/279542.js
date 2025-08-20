@@ -27,8 +27,8 @@ var r = n(951288),
     y = n(403170),
     C = n(193544),
     N = n(981631),
-    I = n(388032),
-    E = n(759071);
+    E = n(388032),
+    I = n(759071);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,7 +81,7 @@ function P(e) {
                 try {
                     await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(I.intl.string(I.t["46Rs3t"]), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
             },
             [t],
@@ -94,25 +94,25 @@ function P(e) {
         }, [t]),
         s = i.useMemo(() => a.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, a]);
     return (0, r.jsxs)("div", {
-        className: E.setupContainer,
+        className: I.setupContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: E.switchItemTextContent,
+                className: I.switchItemTextContent,
                 children: [
                     (0, r.jsx)(c.Text, {
                         color: "header-primary",
                         variant: "text-md/semibold",
-                        children: I.intl.string(I.t.DpRdYG),
+                        children: E.intl.string(E.t.DpRdYG),
                     }),
                     (0, r.jsx)(c.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: I.intl.format(I.t.iuRk2t, {}),
+                        children: E.intl.format(E.t.iuRk2t, {}),
                     }),
                 ],
             }),
             (0, r.jsx)(C.Z, {
-                changeTitle: I.intl.string(I.t.TxESJC),
+                changeTitle: E.intl.string(E.t.TxESJC),
                 value: null == s ? void 0 : s.value,
                 options: a,
                 disabled: !n,
@@ -131,7 +131,7 @@ function w(e) {
                     await v.Z.saveGuild(t.id, { explicitContentFilter: n }),
                         v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(I.intl.string(I.t["46Rs3t"]), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
             },
             [t.id],
@@ -145,29 +145,29 @@ function w(e) {
         m = i.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            l && (0, r.jsx)(c.$i$, { className: E.divider }),
+            l && (0, r.jsx)(c.$i$, { className: I.divider }),
             (0, r.jsxs)("div", {
-                className: a()(E.setupContainer, n),
+                className: a()(I.setupContainer, n),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: E.switchItemTextContent,
+                        className: I.switchItemTextContent,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 color: "header-primary",
                                 variant: "text-md/semibold",
-                                children: I.intl.string(I.t.bPgfJy),
+                                children: E.intl.string(E.t.bPgfJy),
                             }),
                             (0, r.jsx)(c.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: I.intl.format(I.t.BI4ukJ, {
+                                children: E.intl.format(E.t.BI4ukJ, {
                                     helpdeskArticle: x.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
                     }),
                     (0, r.jsx)(C.Z, {
-                        changeTitle: I.intl.string(I.t["eBd+Ul"]),
+                        changeTitle: E.intl.string(E.t["eBd+Ul"]),
                         value: null == m ? void 0 : m.value,
                         options: u,
                         disabled: !s,
@@ -205,29 +205,29 @@ function Z(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: E.setupContainer,
+                      className: I.setupContainer,
                       children: [
                           (0, r.jsx)(c.j7V, {
                               value: s,
                               onChange: u,
-                              className: E.switchItem,
+                              className: I.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, r.jsxs)("div", {
-                                  className: E.switchItemTextContent,
+                                  className: I.switchItemTextContent,
                                   children: [
                                       (0, r.jsxs)(c.Text, {
                                           color: "header-primary",
                                           variant: "text-md/semibold",
                                           children: [
-                                              I.intl.string(I.t.jDarm5),
-                                              (0, r.jsx)(m.Z, { className: E.betaTag }),
+                                              E.intl.string(E.t.jDarm5),
+                                              (0, r.jsx)(m.Z, { className: I.betaTag }),
                                           ],
                                       }),
                                       (0, r.jsx)(c.Text, {
                                           color: "header-secondary",
                                           variant: "text-sm/normal",
-                                          children: I.intl.string(I.t["/ee7yM"]),
+                                          children: E.intl.string(E.t["/ee7yM"]),
                                       }),
                                   ],
                               }),
@@ -235,11 +235,11 @@ function Z(e) {
                           (0, r.jsx)(c.Wn, {
                               messageType: c.QYI.INFO,
                               textVariant: "text-xs/normal",
-                              children: I.intl.string(I.t.JxO639),
+                              children: E.intl.string(E.t.JxO639),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(c.$i$, { className: E.divider }),
+                  (0, r.jsx)(c.$i$, { className: I.divider }),
               ],
           });
 }
@@ -273,28 +273,28 @@ function D(e) {
     return l
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.$i$, { className: E.divider }),
+                  (0, r.jsx)(c.$i$, { className: I.divider }),
                   (0, r.jsxs)("div", {
-                      className: E.setupContainer,
+                      className: I.setupContainer,
                       children: [
                           (0, r.jsx)(c.j7V, {
                               value: g,
                               onChange: f,
-                              className: E.switchItem,
+                              className: I.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, r.jsxs)("div", {
-                                  className: E.switchItemTextContent,
+                                  className: I.switchItemTextContent,
                                   children: [
                                       (0, r.jsx)(c.Text, {
                                           color: "header-primary",
                                           variant: "text-md/semibold",
-                                          children: I.intl.string(I.t.lbBfER),
+                                          children: E.intl.string(E.t.lbBfER),
                                       }),
                                       (0, r.jsx)(c.Text, {
                                           color: "header-secondary",
                                           variant: "text-sm/normal",
-                                          children: I.intl.string(I.t.REr5AA),
+                                          children: E.intl.string(E.t.REr5AA),
                                       }),
                                   ],
                               }),
@@ -303,7 +303,7 @@ function D(e) {
                               (0, r.jsx)(c.Wn, {
                                   messageType: c.QYI.INFO,
                                   textVariant: "text-xs/normal",
-                                  children: I.intl.format(I.t.Xz1O0d, {
+                                  children: E.intl.format(E.t.Xz1O0d, {
                                       onClick: function () {
                                           d.Z.open(N.oAB.ACCOUNT);
                                       },
@@ -323,9 +323,9 @@ function A() {
         : n
           ? (0, r.jsx)(u.Z, {})
           : (0, r.jsxs)(c.hjN, {
-                title: I.intl.string(I.t["suhY+f"]),
+                title: E.intl.string(E.t["suhY+f"]),
                 tag: c.RB0.H1,
-                titleClassName: E.headerContainer,
+                titleClassName: I.headerContainer,
                 children: [
                     (0, r.jsx)(y.z, { guild: e }),
                     (0, r.jsx)(Z, { guild: e }),
@@ -335,9 +335,9 @@ function A() {
                         mfaLevel: t,
                     }),
                     (0, r.jsx)(w, { guild: e }),
-                    (0, r.jsx)(c.$i$, { className: E.divider }),
+                    (0, r.jsx)(c.$i$, { className: I.divider }),
                     (0, r.jsx)("div", {
-                        className: E.setupContainer,
+                        className: I.setupContainer,
                         children: (0, r.jsx)(O.w, { guild: e }),
                     }),
                 ],

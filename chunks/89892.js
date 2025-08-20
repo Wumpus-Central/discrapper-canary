@@ -571,8 +571,8 @@ class y {
             T = null != (s = e.hasMoreBefore) && s,
             S = null != (l = e.hasMoreAfter) && l,
             A = null != (u = e.avoidInitialScroll) && u,
-            N = null != (d = e.cached) && d,
-            C = i()(y)
+            C = null != (d = e.cached) && d,
+            N = i()(y)
                 .reverse()
                 .map(
                     a.Z.getCurrentConfig({ location: "2ecb25_2" }, { autoTrackExposure: !1 }).enabled
@@ -581,12 +581,12 @@ class y {
                 )
                 .value(),
             R = null;
-        if ((O || v) && null == I && this.ready) R = this.merge(C, O, !0);
+        if ((O || v) && null == I && this.ready) R = this.merge(N, O, !0);
         else {
             let e = this._array.filter((e) => e.state === f.yb.SENDING),
                 t = this._array.filter((e) => e.state === f.yb.SEND_FAILED),
                 n = e.length > 0 || t.length > 0;
-            (R = this.reset(C)),
+            (R = this.reset(N)),
                 !n || O || v || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null
                     ? h.info(
                           "loadComplete: resetting state for channelId="
@@ -602,7 +602,7 @@ class y {
                           (h.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)),
                           (R = R.merge(e))));
         }
-        let P = !N && R.cached && !A;
+        let P = !C && R.cached && !A;
         return R.mutate({
             ready: !0,
             loadingMore: !1,
@@ -616,7 +616,7 @@ class y {
             jumpReturnTargetId: null != (b = null == I ? void 0 : I.returnMessageId) ? b : null,
             hasMoreBefore: null == I && v ? R.hasMoreBefore : T,
             hasMoreAfter: null == I && O ? R.hasMoreAfter : S,
-            cached: N,
+            cached: C,
             hasFetched: e.hasFetched,
             error: !1,
             initialScrollSequenceId: P ? R.initialScrollSequenceId + 1 : R.initialScrollSequenceId,

@@ -205,7 +205,7 @@ let m = (e) => {
                 n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
             }
     },
-    N = async (e, t) => {
+    C = async (e, t) => {
         let n = e.createReader();
         for (let r of await new Promise((e) => n.readEntries(e)))
             if (r.isDirectory) {
@@ -213,14 +213,14 @@ let m = (e) => {
                 await A(e, "profile_effects", t);
             } else r.isFile && r.name !== p && t.ignoredFilenames.push(y(e.name, r.name));
     },
-    C = async (e, t) => {
+    N = async (e, t) => {
         let n = e.createReader();
         for (let e of await new Promise((e) => n.readEntries(e)))
             if (e.isDirectory) {
                 let n = e;
                 if ("collection" === n.name) await A(n, "collection", t);
                 else if ("avatar_decorations" === n.name) await A(n, "avatar_decorations", t);
-                else if ("profile_effects" === n.name) await N(n, t);
+                else if ("profile_effects" === n.name) await C(n, t);
                 else {
                     let e = await I(n);
                     t.ignoredFilenames.push(...e.map((e) => y(n.name, e.name)));
@@ -241,8 +241,8 @@ let m = (e) => {
                 "collection" === r || "avatar_decorations" === r
                     ? await A(e, r, t)
                     : "profile_effects" === r
-                      ? await N(e, t)
-                      : await C(e, t);
+                      ? await C(e, t)
+                      : await N(e, t);
             } else if (n.isFile) {
                 let e = n;
                 S("", await new Promise((t) => e.file(t)), null, t);

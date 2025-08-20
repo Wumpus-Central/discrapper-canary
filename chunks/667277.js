@@ -100,41 +100,41 @@ function S(e, t, n, g) {
         v = (0, p.j)(),
         S = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
     if (!S.match) throw RangeError("locale must contain match property");
-    var N = (0, u.Z)(
+    var C = (0, u.Z)(
         null !=
             (w =
                 null !=
                 (D =
                     null !=
-                    (L =
-                        null != (x = null == g ? void 0 : g.firstWeekContainsDate)
-                            ? x
-                            : null == g || null == (M = g.locale) || null == (k = M.options)
+                    (x =
+                        null != (L = null == g ? void 0 : g.firstWeekContainsDate)
+                            ? L
+                            : null == g || null == (j = g.locale) || null == (M = j.options)
                               ? void 0
-                              : k.firstWeekContainsDate)
-                        ? L
+                              : M.firstWeekContainsDate)
+                        ? x
                         : v.firstWeekContainsDate)
                     ? D
-                    : null == (j = v.locale) || null == (U = j.options)
+                    : null == (k = v.locale) || null == (U = k.options)
                       ? void 0
                       : U.firstWeekContainsDate)
             ? w
             : 1,
     );
-    if (!(N >= 1 && N <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-    var C = (0, u.Z)(
+    if (!(C >= 1 && C <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    var N = (0, u.Z)(
         null !=
             (G =
                 null !=
                 (B =
                     null !=
-                    (V =
-                        null != (F = null == g ? void 0 : g.weekStartsOn)
-                            ? F
-                            : null == g || null == (Z = g.locale) || null == (H = Z.options)
+                    (Z =
+                        null != (V = null == g ? void 0 : g.weekStartsOn)
+                            ? V
+                            : null == g || null == (F = g.locale) || null == (H = F.options)
                               ? void 0
                               : H.weekStartsOn)
-                        ? V
+                        ? Z
                         : v.weekStartsOn)
                     ? B
                     : null == (Y = v.locale) || null == (W = Y.options)
@@ -143,7 +143,7 @@ function S(e, t, n, g) {
             ? G
             : 0,
     );
-    if (!(C >= 0 && C <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    if (!(N >= 0 && N <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
     if ("" === O)
         if ("" === E) return (0, a.default)(n);
         else return new Date(NaN);
@@ -151,24 +151,24 @@ function S(e, t, n, g) {
         P,
         w,
         D,
-        L,
         x,
+        L,
+        j,
         M,
         k,
-        j,
         U,
         G,
         B,
+        Z,
         V,
         F,
-        Z,
         H,
         Y,
         W,
         K,
         z = {
-            firstWeekContainsDate: N,
-            weekStartsOn: C,
+            firstWeekContainsDate: C,
+            weekStartsOn: N,
             locale: S,
         },
         q = [new f.GT()],

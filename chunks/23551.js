@@ -1,54 +1,51 @@
 n.d(t, { Z: () => h });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(780384),
-    l = n(481060),
-    o = n(410030),
+var i = n(120356),
+    a = n.n(i),
+    o = n(780384),
+    s = n(481060),
+    l = n(410030),
     c = n(726542),
-    d = n(122021),
-    u = n(231757),
-    m = n(626135),
-    p = n(981631),
-    g = n(391475);
+    u = n(122021),
+    d = n(231757),
+    f = n(626135),
+    _ = n(981631),
+    p = n(391475);
 let h = (e) => {
-    let { disabled: t = !1, type: n, className: r, innerClassName: h, onConnect: f } = e,
-        b = (0, o.ZP)(),
-        x = c.Z.get((0, d.rR)(n));
-    return (0, i.jsx)(l.ua7, {
-        text: x.name,
+    let { disabled: t = !1, type: n, className: i, innerClassName: h, onConnect: m } = e,
+        g = (0, l.ZP)();
+    function E(e) {
+        let t = c.Z.get(e);
+        (0, d.Z)({
+            platformType: t.type,
+            location: "Friends List",
+        }),
+            f.default.track(_.rMx.ACCOUNT_LINK_STEP, {
+                previous_step: "desktop connections",
+                current_step: "desktop oauth",
+                platform_type: t.type,
+            });
+    }
+    let b = c.Z.get((0, u.rR)(n));
+    return (0, r.jsx)(s.ua7, {
+        text: b.name,
         children: (e) => {
-            let { onMouseEnter: o, onMouseLeave: d } = e;
-            return (0, i.jsx)("div", {
-                className: s()(g.wrapper, r),
-                children: (0, i.jsx)(l.tEY, {
-                    children: (0, i.jsx)("button", {
-                        onMouseEnter: o,
-                        onMouseLeave: d,
-                        className: s()(g.inner, h),
+            let { onMouseEnter: l, onMouseLeave: c } = e;
+            return (0, r.jsx)("div", {
+                className: a()(p.wrapper, i),
+                children: (0, r.jsx)(s.tEY, {
+                    children: (0, r.jsx)("button", {
+                        onMouseEnter: l,
+                        onMouseLeave: c,
+                        className: a()(p.inner, h),
                         type: "button",
                         disabled: t,
                         style: {
-                            backgroundImage: "url('".concat((0, a.wj)(b) ? x.icon.darkSVG : x.icon.lightSVG, "')"),
+                            backgroundImage: "url('".concat((0, o.wj)(g) ? b.icon.darkSVG : b.icon.lightSVG, "')"),
                         },
-                        onClick:
-                            null != f
-                                ? f
-                                : () =>
-                                      (function (e) {
-                                          let t = c.Z.get(e);
-                                          (0, u.Z)({
-                                              platformType: t.type,
-                                              location: "Friends List",
-                                          }),
-                                              m.default.track(p.rMx.ACCOUNT_LINK_STEP, {
-                                                  previous_step: "desktop connections",
-                                                  current_step: "desktop oauth",
-                                                  platform_type: t.type,
-                                              });
-                                      })(n),
-                        "aria-label": x.name,
+                        onClick: null != m ? m : () => E(n),
+                        "aria-label": b.name,
                     }),
                 }),
             });

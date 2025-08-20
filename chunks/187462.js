@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(558706),
-    s = n(170216);
-class l extends s.L {
+    i = n(170216);
+class a extends i.L {
     create(e) {
-        let { id: t, searchType: n, searchQuery: s } = e;
+        let { id: t, searchType: n, searchQuery: i } = e;
         this.cancel(t);
-        let l = new r.Yn(t, n, s);
-        return this.set(t, l), l;
+        let a = new r.Yn(t, n, i);
+        return this.set(t, a), a;
     }
 }
-let a = new l();
+let o = new a();

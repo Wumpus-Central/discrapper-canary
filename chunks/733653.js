@@ -1,21 +1,21 @@
-t.d(n, { r: () => m });
+t.d(n, { r: () => f });
 var r = t(951288),
     l = t(647438),
     c = t(481060),
-    i = t(239091),
-    o = t(794295),
-    a = t(782568),
+    a = t(239091),
+    i = t(794295),
+    o = t(782568),
     s = t(364640),
     u = t(124072),
     d = t(198620),
     h = t(823379),
-    f = t(312539),
-    j = t(861537);
-function m(e) {
+    j = t(312539),
+    m = t(861537);
+function f(e) {
     let { type: n, value: t, children: l } = e;
     switch (n) {
         case "normal":
-            return (0, r.jsx)(o.Z, {
+            return (0, r.jsx)(i.Z, {
                 title: t.title,
                 href: t.url,
                 children: (0, r.jsx)("span", { children: l }),
@@ -25,24 +25,24 @@ function m(e) {
                 case "channel":
                 case "message":
                     let {
-                            value: { guild_id: c, channel_id: i },
+                            value: { guild_id: c, channel_id: a },
                         } = t,
-                        a = "message_id" in t.value ? t.value.message_id : void 0;
-                    return (0, r.jsx)(f.d, {
-                        channelId: i,
+                        o = "message_id" in t.value ? t.value.message_id : void 0;
+                    return (0, r.jsx)(j.d, {
+                        channelId: a,
                         guildId: c,
-                        messageId: a,
+                        messageId: o,
                     });
                 case "attachment":
                     let {
-                        value: { domain: s, ephemeral: u, channel_id: d, attachment_id: j, name: m },
+                        value: { domain: s, ephemeral: u, channel_id: d, attachment_id: m, name: f },
                     } = t;
                     return (0, r.jsx)(p, {
                         domain: s,
                         ephemeral: u,
                         channelId: d,
-                        attachmentId: j,
-                        name: m,
+                        attachmentId: m,
+                        name: f,
                     });
                 default:
                     (0, h.vE)(t);
@@ -53,20 +53,20 @@ function m(e) {
     }
 }
 function p(e) {
-    let { domain: n, ephemeral: o, channelId: h, attachmentId: f, name: m } = e,
+    let { domain: n, ephemeral: i, channelId: h, attachmentId: j, name: f } = e,
         p = "https://"
             .concat(n, "/")
-            .concat(o ? "ephemeral-attachments" : "attachments", "/")
+            .concat(i ? "ephemeral-attachments" : "attachments", "/")
             .concat(h, "/")
-            .concat(f, "/")
-            .concat(m),
-        g = l.useCallback(async () => {
+            .concat(j, "/")
+            .concat(f),
+        x = l.useCallback(async () => {
             let e = await (0, d.B_)(p);
-            s.Z.trackLinkClicked(e), (0, a.Z)(e);
+            s.Z.trackLinkClicked(e), (0, o.Z)(e);
         }, [p]),
         v = l.useCallback(
             (e) => {
-                (0, i.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await t.e("98466").then(t.bind(t, 151578));
                     return (n) => {
                         var t, l;
@@ -100,7 +100,7 @@ function p(e) {
                             (l = l =
                                 {
                                     attachmentUrl: p,
-                                    attachmentName: m,
+                                    attachmentName: f,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
@@ -119,21 +119,21 @@ function p(e) {
                     };
                 });
             },
-            [m, p],
+            [f, p],
         );
     return (0, r.jsxs)(u.Z, {
         role: "link",
         href: p,
-        onClick: g,
+        onClick: x,
         onContextMenu: v,
         className: "attachmentLink",
         children: [
             (0, r.jsx)(c.Ujz, {
                 size: "xs",
-                className: j.icon,
+                className: m.icon,
                 color: "currentColor",
             }),
-            m,
+            f,
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(921944),
     S = n(388032),
     A = n(30989),
-    N = n(564355);
-function C(e, t, n) {
+    C = n(564355);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -78,7 +78,7 @@ function w(e, t) {
 }
 function D(e) {
     return (0, r.jsx)(v.Z, {
-        className: N.button,
+        className: C.button,
         "aria-label": S.intl.string(S.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
@@ -94,7 +94,7 @@ function D(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         a = () => {
             var t;
@@ -105,7 +105,7 @@ function L(e) {
         w(
             R(
                 {
-                    className: N.button,
+                    className: C.button,
                     "aria-label": S.intl.string(S.t.Z1RnTk),
                     isActive: !1,
                     noHover: !0,
@@ -140,27 +140,27 @@ function L(e) {
         ),
     );
 }
-let x = E.Z.Millis.DAYS_30;
-function M(e) {
+let L = E.Z.Millis.DAYS_30;
+function j(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
         { analyticsLocations: E } = (0, u.ZP)(c.Z.GIFT_BUTTON),
         [v, S] = i.useState(!1),
-        N = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        C = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        R = null != C ? b.default.age(C.id) : 0,
+        C = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        N = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        M = null != n.firstTimeNotice && !s && N && R >= x,
-        [k, j] = (0, f.XR)(
-            M ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
+        j = null != n.firstTimeNotice && !s && C && R >= L,
+        [M, k] = (0, f.XR)(
+            j ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != k,
+        U = null != M,
         G = v || U,
         B = (0, y.Ft)(l),
-        V = (0, p.IH)();
+        Z = (0, p.IH)();
     if (s) return null;
-    let F = () => {
+    let V = () => {
             (0, _.Z)({
                 isGift: !0,
                 giftRecipient: null == B ? void 0 : B,
@@ -174,21 +174,21 @@ function M(e) {
                 },
             });
         },
-        Z = () => {
-            S(!1), j(T.L.TAKE_ACTION), F();
+        F = () => {
+            S(!1), k(T.L.TAKE_ACTION), V();
         },
         H =
             void 0 !== P
                 ? (0, r.jsx)(D, {
                       config: P,
                       hovered: G,
-                      onClick: Z,
+                      onClick: F,
                   })
-                : void 0 !== w && V
-                  ? (0, r.jsx)(L, {
+                : void 0 !== w && Z
+                  ? (0, r.jsx)(x, {
                         config: w,
                         hovered: G,
-                        onClick: Z,
+                        onClick: F,
                     })
                   : (0, r.jsx)(O.Z, {
                         disabled: s,
@@ -206,12 +206,12 @@ function M(e) {
             void 0 !== n.firstTimeNotice && U
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => S(!1),
-                      onCheckItOutClick: F,
-                      markAsDismissed: j,
+                      onCheckItOutClick: V,
+                      markAsDismissed: k,
                       config: n.firstTimeNotice,
                       children: H,
                   })
                 : H,
     });
 }
-let k = i.memo(M);
+let M = i.memo(j);

@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(378844),
     _ = n(359110),
     y = n(922482),
-    v = n(431328),
-    j = n(501655),
+    j = n(431328),
+    v = n(501655),
     C = n(427679),
-    E = n(368442),
-    x = n(201469),
+    x = n(368442),
+    E = n(201469),
     S = n(680089),
-    P = n(592125),
-    I = n(430824),
+    I = n(592125),
+    P = n(430824),
     N = n(607744),
     w = n(496675),
     Z = n(306680),
@@ -32,8 +32,8 @@ var r = n(951288),
     A = n(979651),
     R = n(934415),
     D = n(98597),
-    L = n(648501),
-    M = n(473403),
+    M = n(648501),
+    L = n(473403),
     k = n(207055),
     U = n(981631),
     G = n(647086),
@@ -95,7 +95,7 @@ class K extends D.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, R.rY)(e, A.Z, I.Z);
+        return (0, R.rY)(e, A.Z, P.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -139,8 +139,8 @@ class K extends D.ZP {
                 mentionCount: _,
                 isFavoriteSuggestion: y,
             } = this.props,
-            { shouldShowGuildVerificationPopout: v } = this.state,
-            j = this.getVoiceStatesCount(),
+            { shouldShowGuildVerificationPopout: j } = this.state,
+            v = this.getVoiceStatesCount(),
             C = (0, r.jsxs)("li", {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
@@ -151,7 +151,7 @@ class K extends D.ZP {
                         renderPopout: this.renderPopout,
                         spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
-                        shouldShow: v,
+                        shouldShow: j,
                         children: () =>
                             (0, r.jsx)(s.ua7, {
                                 text: this.getTooltipText(),
@@ -182,7 +182,7 @@ class K extends D.ZP {
                                             return i;
                                         })(l, ["onClick", "onContextMenu"]);
                                     return (0, r.jsxs)(
-                                        M.ZP,
+                                        L.ZP,
                                         W(
                                             z(
                                                 {
@@ -209,7 +209,7 @@ class K extends D.ZP {
                                                         channel: e,
                                                         unread: b,
                                                         mentionCount: _,
-                                                        userCount: j,
+                                                        userCount: v,
                                                         isSubscriptionGated: g,
                                                         needSubscriptionToAccess: m,
                                                     }),
@@ -257,7 +257,7 @@ class K extends D.ZP {
             }),
             H(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = I.Z.getGuild(t.getGuildId());
+                    i = P.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -332,8 +332,8 @@ function q(e) {
             mentionCount: Z.ZP.getMentionCount(n.id),
         })),
         u = (0, a.e7)([T.ZP], () => T.ZP.resolveUnreadSetting(n)),
-        d = (0, a.cj)([P.Z, N.Z, w.Z], () => {
-            let e = P.Z.getChannel(n.parent_id),
+        d = (0, a.cj)([I.Z, N.Z, w.Z], () => {
+            let e = I.Z.getChannel(n.parent_id),
                 r = N.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: null != t && w.Z.can(U.Plq.MANAGE_CHANNELS, n),
@@ -348,13 +348,13 @@ function q(e) {
             };
         }),
         p = (0, a.e7)([S.Z], () => S.Z.isCollapsed(n.parent_id)),
-        f = (0, x.ZP)(n.id),
+        f = (0, E.ZP)(n.id),
         h = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, v.Rk)(n.id, j.pV.AUDIENCE),
+        g = (0, j.Rk)(n.id, v.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: O } = (0, b.Z)(n.id),
         _ = (0, a.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
-        y = (0, E.xJ)(n.id),
-        I = (0, L.Z)({
+        y = (0, x.xJ)(n.id),
+        P = (0, M.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: o,
@@ -363,7 +363,7 @@ function q(e) {
             needSubscriptionToAccess: O,
             enableConnectedUserLimit: y || (n.userLimit > 0 && n.userLimit < U.xGv),
         }),
-        A = e.connected && null == I;
+        A = e.connected && null == P;
     return (0, r.jsx)(
         Y,
         W(
@@ -383,7 +383,7 @@ function q(e) {
             {
                 isFavoriteSuggestion: l && !_,
                 forceShowButtons: A,
-                channelInfo: I,
+                channelInfo: P,
                 resolvedUnreadSetting: u,
             },
         ),

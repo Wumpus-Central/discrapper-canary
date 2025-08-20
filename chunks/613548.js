@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(651183),
     x = n(853476),
     v = n(390322),
-    j = n(616286),
-    O = n(975146),
+    O = n(616286),
+    j = n(975146),
     E = n(597998),
     S = n(606304),
     P = n(358221),
@@ -204,7 +204,7 @@ function k(e) {
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                O.Z,
+                                j.Z,
                                 R(w({}, e), {
                                     buttonRef: l,
                                     isActive: n,
@@ -222,7 +222,7 @@ function k(e) {
         L &&
             F.push(
                 (0, r.jsx)(
-                    O.Z,
+                    j.Z,
                     {
                         className: a()(A.button, { [A.lastButton]: n }),
                         onClick: () => d.Z.toggleParticipantsList(t.id, !N),
@@ -233,7 +233,7 @@ function k(e) {
         k &&
             F.push(
                 (0, r.jsx)(
-                    j.T,
+                    O.T,
                     {
                         channelId: t.id,
                         className: a()(A.button, { [A.lastButton]: N }),

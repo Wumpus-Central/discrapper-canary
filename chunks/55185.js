@@ -21,7 +21,7 @@ var r,
     O = n(388032),
     _ = n(87587),
     y = n(354810);
-async function v(e) {
+async function j(e) {
     await d.hW.updateAsync(
         "status",
         (t) => {
@@ -30,7 +30,7 @@ async function v(e) {
         d.fy.INFREQUENT_USER_ACTION,
     );
 }
-function j(e) {
+function v(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -40,7 +40,7 @@ function j(e) {
             size: "sm",
             text: O.intl.string(b.default.Poezn5),
             onClick: () => {
-                t(), v(c.Skl.ONLINE);
+                t(), j(c.Skl.ONLINE);
             },
             fullWidth: !0,
         }),
@@ -84,14 +84,14 @@ function C(e) {
             }),
             (0, i.jsx)(c.rsf, {
                 onChange: (e) => {
-                    u.G6.updateSetting(e), n && v(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
+                    u.G6.updateSetting(e), n && j(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
                 },
                 checked: t,
             }),
         ],
     });
 }
-function E(e) {
+function x(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     (0, c.Tbt)(r);
@@ -138,10 +138,10 @@ function E(e) {
         ],
     });
 }
-function x(e) {
+function E(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -165,7 +165,7 @@ function x(e) {
 }
 function S(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -176,14 +176,14 @@ function S(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(j, { closePopout: t }),
+            (0, i.jsx)(v, { closePopout: t }),
         ],
     });
 }
-function P(e) {
+function I(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -205,11 +205,11 @@ function P(e) {
         ],
     });
 }
-function I(e) {
+function P(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, h.D)("popout");
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(C, {
                 showCurrentGame: n,
@@ -229,7 +229,7 @@ function I(e) {
 }
 function N(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: "heading-sm/semibold",
@@ -244,7 +244,7 @@ function N(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(j, { closePopout: t }),
+            (0, i.jsx)(v, { closePopout: t }),
         ],
     });
 }
@@ -252,7 +252,7 @@ function w(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, h.D)("popout");
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(C, {
                 showCurrentGame: n,
@@ -289,13 +289,13 @@ function T(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(x, { closePopout: n });
+            return (0, i.jsx)(E, { closePopout: n });
         case 1:
             return (0, i.jsx)(S, { closePopout: n });
         case 2:
-            return (0, i.jsx)(P, { closePopout: n });
-        case 3:
             return (0, i.jsx)(I, { closePopout: n });
+        case 3:
+            return (0, i.jsx)(P, { closePopout: n });
         case 4:
             return (0, i.jsx)(N, { closePopout: n });
         case 5:

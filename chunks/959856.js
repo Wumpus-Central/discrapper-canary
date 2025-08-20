@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(457542), n(415506), n(388685), n(600040);
+n.d(t, { Z: () => N }), n(457542), n(415506), n(388685), n(600040);
 var r = n(512722),
     i = n.n(r),
     a = n(264344),
@@ -35,8 +35,8 @@ function A(e, t, n) {
         e
     );
 }
-let N = new u.Yd("MediaEngineWebRTC");
-class C extends s.Z {
+let C = new u.Yd("MediaEngineWebRTC");
+class N extends s.Z {
     destroy() {
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)),
             this.eachConnection((e) => e.destroy()),
@@ -52,7 +52,7 @@ class C extends s.Z {
             !__OVERLAY__ &&
             (S.fi && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(266370), !0)
-                : (N.info("WebRTC is not supported on", o().name, o().version), !1))
+                : (C.info("WebRTC is not supported on", o().name, o().version), !1))
         );
     }
     supported() {
@@ -333,14 +333,14 @@ class C extends s.Z {
                                   (this.dave = t),
                                       (this.transientKeys = (0, y.Yk)()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      N.info(
+                                      C.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
                                       e();
                               })
                               .catch((e) => {
-                                  (this.maxSupportedProtocolVersion = 0), N.error("Failed to initialize DAVE", e), t(e);
+                                  (this.maxSupportedProtocolVersion = 0), C.error("Failed to initialize DAVE", e), t(e);
                               });
                       })
                     : ((this.maxSupportedProtocolVersion = 0),

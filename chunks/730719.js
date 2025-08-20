@@ -1,34 +1,34 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(388032),
-    o = n(107461);
-let l = (e) => {
+var i = n(481060),
+    l = n(388032),
+    a = n(107461);
+let o = (e) => {
     let { errorMessage: t, onClose: n } = e;
     return null == t || "" === t
         ? null
         : (0, r.jsxs)("div", {
-              className: o.errorContainer,
+              className: a.errorContainer,
               children: [
-                  (0, r.jsx)(a.Mgn, {
+                  (0, r.jsx)(i.Mgn, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
-                      className: o.errorIcon,
+                      className: a.errorIcon,
                   }),
-                  (0, r.jsx)(a.Text, {
-                      className: o.errorText,
+                  (0, r.jsx)(i.Text, {
+                      className: a.errorText,
                       variant: "text-sm/normal",
                       children: t,
                   }),
-                  (0, r.jsx)(a.P3F, {
+                  (0, r.jsx)(i.P3F, {
                       onClick: () => {
                           n();
                       },
-                      "aria-label": i.intl.string(i.t.WAI6xs),
-                      className: o.closeIcon,
+                      "aria-label": l.intl.string(l.t.WAI6xs),
+                      className: a.closeIcon,
                   }),
               ],
           });

@@ -17,25 +17,25 @@ function h(e) {
         [v, _] = i.useState(f),
         [O, y] = i.useState(!1),
         [C, N] = i.useState(!1),
-        I = i.useRef(null);
+        E = i.useRef(null);
     i.useEffect(() => {
         _(f);
     }, [f]),
         i.useEffect(
             () => () => {
-                clearTimeout(I.current);
+                clearTimeout(E.current);
             },
             [],
         );
-    let E = b.find((e) => e.value === v);
+    let I = b.find((e) => e.value === v);
     return (0, r.jsx)(u.Z, {
-        title: O ? h : null != (t = null == E ? void 0 : E.title) ? t : h,
+        title: O ? h : null != (t = null == I ? void 0 : I.title) ? t : h,
         description: O
-            ? "(".concat(null != (n = null == E ? void 0 : E.title) ? n : g.intl.string(g.t.PoWNfX), ")")
-            : null != (l = null == E ? void 0 : E.description)
+            ? "(".concat(null != (n = null == I ? void 0 : I.title) ? n : g.intl.string(g.t.PoWNfX), ")")
+            : null != (l = null == I ? void 0 : I.description)
               ? l
               : "",
-        highlightColor: O ? d.q.NONE : null == E ? void 0 : E.highlightColor,
+        highlightColor: O ? d.q.NONE : null == I ? void 0 : I.highlightColor,
         action: (0, r.jsx)(s.zx, {
             look: s.zx.Looks.LINK,
             size: s.zx.Sizes.MIN,
@@ -63,7 +63,7 @@ function h(e) {
                             (N(!0),
                             null == j || j(e),
                             _(e.value),
-                            (I.current = setTimeout(() => {
+                            (E.current = setTimeout(() => {
                                 N(!1), y(!1);
                             }, 1000)));
                     },

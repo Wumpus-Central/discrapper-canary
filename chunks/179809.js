@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(276952),
     _ = n(199540),
     y = n(40153),
-    v = n(252686),
-    j = n(682662),
+    j = n(252686),
+    v = n(682662),
     C = n(662146),
-    E = n(981631),
-    x = n(388032),
+    x = n(981631),
+    E = n(388032),
     S = n(106663),
-    P = n(534175);
-let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    I = n(534175);
+let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(p.Kqy),
     w = i.memo(function (e) {
         let {
@@ -40,8 +40,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 draggable: A = !1,
                 sorting: R = !1,
                 onDragStart: D,
-                onDragEnd: L,
-                onExpandCollapse: M,
+                onDragEnd: M,
+                onExpandCollapse: L,
                 onContextMenu: k,
                 renderChildNode: U,
                 folderButtonSize: G,
@@ -67,7 +67,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == M || M(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -76,11 +76,11 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && M();
+                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && L();
                 },
-                [M, s],
+                [L, s],
             ),
-            er = null != z && "" !== z ? z : null != T && "" !== T ? T : x.intl.string(x.t.xV9hVl),
+            er = null != z && "" !== z ? z : null != T && "" !== T ? T : E.intl.string(E.t.xV9hVl),
             ei = (0, c.Ie)("".concat(H)),
             el = "folder-items-".concat(H),
             eo = (function (e) {
@@ -93,17 +93,17 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
-                config: { duration: I },
+                config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(j.H, {
+            ec = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(O.Z, {
                         disabled: $ || s,
                         hovered: K,
                         selected: l,
                         unread: Z,
-                        className: P.pill,
+                        className: I.pill,
                     }),
                     (0, r.jsx)(C.Z, {
                         text: er,
@@ -118,11 +118,11 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 : void 0,
                             className: o()(S.folderHeader, {
                                 [S.folderHeaderSmall]: "icon" === G || J,
-                                [P.wobble]: !$ && q && !s,
+                                [I.wobble]: !$ && q && !s,
                             }),
                             "data-dnd-name": er,
                             children: $
-                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(j.Z, { isFolder: !0 })
                                 : (0, r.jsx)(_.Z, {
                                       folderNode: t,
                                       expanded: s,
@@ -132,7 +132,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       isMentionLowImportance: w,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: M,
+                                      onClick: L,
                                       onContextMenu: k,
                                       onHoverChange: Y,
                                       onKeyDown: en,
@@ -152,8 +152,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null,
                 ],
             }),
-            eu = null != t.color ? t.color : E.Wyy,
-            ed = eu === E.Wyy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : x.Wyy,
+            ed = eu === x.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)("div", {
             ref: es,
             className: o()(S.folderGroup, {

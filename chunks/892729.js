@@ -1,32 +1,33 @@
 n.d(t, { Z: () => d });
-var i = n(647438),
-    r = n(442837),
-    s = n(355467),
-    a = n(78839),
-    l = n(261744),
-    o = n(293810);
+var r = n(647438),
+    i = n(442837),
+    a = n(355467),
+    o = n(78839),
+    s = n(261744),
+    l = n(293810);
 let c = [];
+function u(e) {
+    var t;
+    let { ensureFresh: n, hasFetched: r, hasRoleSubscriptions: i } = e,
+        a = o.Z.getActiveGuildSubscriptions();
+    return (
+        ((null != (t = null == a ? void 0 : a.length) ? t : 0) === 0 && !!i) ||
+        (!!n && !r) ||
+        (!r && !o.Z.hasFetchedSubscriptions())
+    );
+}
 function d() {
     let { ensureFresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = (0, l.Z)() === o.PY.SUBSCRIBED,
-        n = (0, r.e7)([a.Z], () => a.Z.getActiveGuildSubscriptions()),
-        d = i.useRef(!1);
+        t = (0, s.Z)() === l.PY.SUBSCRIBED,
+        n = (0, i.e7)([o.Z], () => o.Z.getActiveGuildSubscriptions()),
+        d = r.useRef(!1);
     return (
-        i.useEffect(() => {
-            (function (e) {
-                var t;
-                let { ensureFresh: n, hasFetched: i, hasRoleSubscriptions: r } = e,
-                    s = a.Z.getActiveGuildSubscriptions();
-                return (
-                    ((null != (t = null == s ? void 0 : s.length) ? t : 0) === 0 && !!r) ||
-                    (!!n && !i) ||
-                    (!i && !a.Z.hasFetchedSubscriptions())
-                );
-            })({
+        r.useEffect(() => {
+            u({
                 ensureFresh: e,
                 hasRoleSubscriptions: t,
                 hasFetched: d.current,
-            }) && ((d.current = !0), s.jg());
+            }) && ((d.current = !0), a.jg());
         }, [e, t]),
         null != n ? n : c
     );

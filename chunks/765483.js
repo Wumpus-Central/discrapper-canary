@@ -1,24 +1,24 @@
-n.d(t, { Z: () => f });
-var i = n(951288);
-n(647438);
-var r = n(442837),
-    l = n(481060),
-    a = n(660189),
-    o = n(501517),
-    s = n(982168),
-    d = n(388032),
-    u = n(764295),
-    c = n(474440);
+t.d(n, { Z: () => f });
+var i = t(951288);
+t(647438);
+var r = t(442837),
+    l = t(481060),
+    a = t(660189),
+    o = t(501517),
+    s = t(982168),
+    c = t(388032),
+    u = t(764295),
+    d = t(474440);
 function f(e) {
-    let t = e.isArchivedThread(),
-        n = (0, s.P0)(e),
+    let n = e.isArchivedThread(),
+        t = (0, s.P0)(e),
         { firstMessage: f } = (0, r.e7)([a.Z], () => a.Z.getMessage(e.id), [e.id]);
-    return !n || t || null == f
+    return !t || n || null == f
         ? null
         : (0, i.jsx)(l.sNh, {
               id: "resolve-report",
-              label: d.intl.string(u.default["8yIKen"]),
+              label: c.intl.string(u.default["8yIKen"]),
               action: () => o.Z.resolveFlag(e.id),
-              className: c.menuItem,
+              className: d.menuItem,
           });
 }

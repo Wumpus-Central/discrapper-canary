@@ -160,7 +160,7 @@ function O(e) {
         T = null != t,
         S = (0, f.MW)(n),
         A = h ? (S ? b : y) : E,
-        N =
+        C =
             null != n &&
             (0, r.jsx)("div", {
                 className: o()(p.headerGraphic, { [p.headerGraphicAnimated]: S }),
@@ -169,7 +169,7 @@ function O(e) {
                     children: (0, r.jsx)(d.z, m({}, n)),
                 }),
             }),
-        C = (0, r.jsx)(s.X6, {
+        N = (0, r.jsx)(s.X6, {
             className: p.headerTitle,
             id: I,
             variant: null != l ? l : "heading-lg/semibold",
@@ -182,7 +182,7 @@ function O(e) {
             color: "text-secondary",
             children: c,
         }),
-        P = null != n ? N : C,
+        P = null != n ? C : N,
         w = (0, r.jsx)("header", {
             className: o()(p.section, p.header, { [p.headerCentered]: h }),
             children: (0, r.jsxs)(s.Kq, {
@@ -201,7 +201,7 @@ function O(e) {
                         }),
                     }),
                     (0, r.jsx)(v, { badge: i }),
-                    null != n && null != a && C,
+                    null != n && null != a && N,
                     null != c && R,
                 ],
             }),

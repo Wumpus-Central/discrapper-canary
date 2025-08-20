@@ -32,23 +32,23 @@ var r = n(951288),
     T = n(468026),
     S = n(317381),
     A = n(513202),
-    N = n(367907),
-    C = n(162685),
+    C = n(367907),
+    N = n(162685),
     R = n(979200),
     P = n(870822),
     w = n(589414),
     D = n(600164),
-    L = n(240991),
-    x = n(713938),
-    M = n(973616),
-    k = n(881998),
-    j = n(592125),
+    x = n(240991),
+    L = n(713938),
+    j = n(973616),
+    M = n(881998),
+    k = n(592125),
     U = n(944486),
     G = n(246946),
     B = n(9156),
-    V = n(768581),
-    F = n(630388),
-    Z = n(49012),
+    Z = n(768581),
+    V = n(630388),
+    F = n(49012),
     H = n(621600),
     Y = n(709054),
     W = n(706454),
@@ -177,14 +177,14 @@ let ec = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url &&
-                    (0, Z.q)({
+                    (0, F.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0,
                     });
             },
             a = () => {
                 null != t.privacy_policy_url &&
-                    (0, Z.q)({
+                    (0, F.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0,
                     });
@@ -253,8 +253,8 @@ let ec = (e) => {
                 id: g,
             } = e,
             b = a.id,
-            I = i.useMemo(() => M.ZP.createFromServer(a), [a]),
-            T = (0, F.yE)(I.flags, $.udG.EMBEDDED),
+            I = i.useMemo(() => j.ZP.createFromServer(a), [a]),
+            T = (0, V.yE)(I.flags, $.udG.EMBEDDED),
             S = (0, _.e7)([q.Z], () => {
                 var e, t, n, r;
                 return null == (r = q.Z.settings.applications) ||
@@ -264,26 +264,26 @@ let ec = (e) => {
                     ? void 0
                     : e.allowMobilePush;
             }, [b]),
-            A = C.w.useExperiment({ location: "oauth2_authorize" }),
+            A = N.w.useExperiment({ location: "oauth2_authorize" }),
             P = a.bot,
-            k = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
+            M = (0, _.e7)([k.Z], () => k.Z.getDMFromUserId(null == P ? void 0 : P.id)),
             { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, _.cj)([B.ZP], () =>
-                null == k
+                null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1,
                       }
                     : {
-                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, k),
-                          dmChannelMuted: B.ZP.isChannelMuted(null, k),
+                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: B.ZP.isChannelMuted(null, M),
                       },
             ),
-            [Z, W] = i.useState(!1),
+            [F, W] = i.useState(!1),
             [K, Q] = i.useState(!1),
             ea = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, x.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk));
+                    e.push(...(0, L.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: en.appDetailsSection,
@@ -368,7 +368,7 @@ let ec = (e) => {
                         className: er.markup,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: (0, L.parseBioReact)(a.description),
+                        children: (0, x.parseBioReact)(a.description),
                     });
             }, [a.description]),
             ef = () => {
@@ -377,7 +377,7 @@ let ec = (e) => {
                 return e || t
                     ? (0, r.jsx)(E.zF9, {
                           className: en.appDetailsSection,
-                          isExpanded: Z,
+                          isExpanded: F,
                           collapsibleContent: (0, r.jsxs)("div", {
                               className: en.appDetailsContent,
                               children: [
@@ -385,7 +385,7 @@ let ec = (e) => {
                                   t &&
                                       (0, r.jsx)(ed, {
                                           application: a,
-                                          isVisible: Z,
+                                          isVisible: F,
                                       }),
                               ],
                           }),
@@ -394,7 +394,7 @@ let ec = (e) => {
                               return (0, r.jsxs)(m.P, {
                                   className: en.appDetailsSectionHeader,
                                   onClick: (e) => {
-                                      W(!Z), t(e);
+                                      W(!F), t(e);
                                   },
                                   children: [
                                       (0, r.jsx)(E.X6q, {
@@ -402,7 +402,7 @@ let ec = (e) => {
                                           color: "header-primary",
                                           children: et.intl.string(et.t.fcYgiY),
                                       }),
-                                      Z
+                                      F
                                           ? (0, r.jsx)(E.CJ0, {
                                                 size: "md",
                                                 color: E.TVs.colors.INTERACTIVE_NORMAL,
@@ -418,7 +418,7 @@ let ec = (e) => {
                     : null;
             },
             e_ = () => {
-                let e = V.ZP.getApplicationIconURL({
+                let e = Z.ZP.getApplicationIconURL({
                         id: a.id,
                         icon: a.icon,
                     }),
@@ -473,7 +473,7 @@ let ec = (e) => {
                     },
                     z.fy.INFREQUENT_USER_ACTION,
                 ),
-                    N.ZP.trackWithMetadata($.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+                    C.ZP.trackWithMetadata($.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: ee.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
                         label: e ? H.ZB.Unmuted : H.ZB.Muted,
@@ -481,7 +481,7 @@ let ec = (e) => {
             },
             eh = i.useCallback(async () => {
                 u()(null != P, "dm channel mute setting requires having a bot user");
-                let e = k;
+                let e = M;
                 null == e && (e = await y.Z.ensurePrivateChannel(P.id)),
                     G
                         ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, H.ZB.Unmuted)
@@ -499,7 +499,7 @@ let ec = (e) => {
                                       ),
                                   );
                           });
-            }, [k, P, G, a.id]),
+            }, [M, P, G, a.id]),
             em = () =>
                 A.enabled
                     ? (0, r.jsxs)("div", {
@@ -599,13 +599,13 @@ let ec = (e) => {
     e_ = (0, d.U)(() => ({ searchQuery: "" })),
     ep = () => {
         let e = (0, _.e7)([G.Z], () => G.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, _.cj)([k.Z], () => ({
-                fetchState: k.Z.getFetchState(),
-                appAuthTokens: k.Z.getNewestTokensForNonChildrenApplications(),
+            { fetchState: t, appAuthTokens: n } = (0, _.cj)([M.Z], () => ({
+                fetchState: M.Z.getFetchState(),
+                appAuthTokens: M.Z.getNewestTokensForNonChildrenApplications(),
             })),
             a = (0, _.e7)([W.default], () => W.default.locale),
             o = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
-            s = (0, _.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),
+            s = (0, _.e7)([k.Z, U.Z], () => k.Z.getChannel(U.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         i.useEffect(() => {
             b.Z.fetch();
@@ -663,7 +663,7 @@ let ec = (e) => {
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
             O = () =>
-                null == n || null == y || t !== k.M.FETCHED
+                null == n || null == y || t !== M.M.FETCHED
                     ? (0, r.jsx)(E.$jN, {
                           className: ei.marginTop20,
                           type: E.$jN.Type.SPINNING_CIRCLE,

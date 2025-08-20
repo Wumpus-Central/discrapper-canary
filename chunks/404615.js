@@ -1,37 +1,37 @@
-n.d(t, { _: () => o });
-var i = n(442837),
-    r = n(607070),
-    s = n(391110),
-    a = n(424373);
-let l = {
+n.d(t, { _: () => l });
+var r = n(442837),
+    i = n(607070),
+    a = n(391110),
+    o = n(424373);
+let s = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: a.cardDescription,
+            className: o.cardDescription,
         },
         descriptionCta: { onlyShowOnHover: !0 },
     },
-    o = (e) => {
-        let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+    l = (e) => {
+        let t = !(0, r.e7)([i.Z], () => i.Z.useReducedMotion),
             n = {
-                [s.zW.DEFAULT]: l,
-                [s.zW.REWARD]: {
+                [a.zW.DEFAULT]: s,
+                [a.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: "text-sm/semibold",
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: a.cardDescriptionTenureReward,
+                        className: o.cardDescriptionTenureReward,
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: a.descriptionCTATenureReward,
+                        className: o.descriptionCTATenureReward,
                     },
-                    cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover },
+                    cardContainer: { className: t ? o.nitroGradientBorderHover : void 0 },
                 },
-                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } },
+                [a.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: o.nitroGradientBorderHover } },
             };
-        return null != e ? n[e] : n[s.zW.DEFAULT];
+        return null != e ? n[e] : n[a.zW.DEFAULT];
     };

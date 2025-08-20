@@ -3,8 +3,8 @@ var n = r(951288),
     l = r(647438),
     i = r(120356),
     a = r.n(i),
-    o = r(481060),
-    c = r(810568),
+    c = r(481060),
+    o = r(810568),
     s = r(168524),
     u = r(388032),
     d = r(932366);
@@ -51,36 +51,36 @@ function g(e, t) {
         e
     );
 }
-function p(e) {
+function b(e) {
     let { imageSrc: t, gameName: r } = e,
         [i, a] = l.useState(!1),
-        c = null != r ? r : u.intl.string(u.t.GIWFlJ);
+        o = null != r ? r : u.intl.string(u.t.GIWFlJ);
     return i || null == t
         ? (0, n.jsx)("div", {
               role: "img",
-              "aria-label": c,
+              "aria-label": o,
               className: d.fallback,
-              children: (0, n.jsx)(o.Text, {
+              children: (0, n.jsx)(c.Text, {
                   variant: "text-xxs/medium",
                   lineClamp: 3,
                   "aria-hidden": !0,
-                  children: c,
+                  children: o,
               }),
           })
         : (0, n.jsx)("img", {
               src: t,
-              alt: c,
+              alt: o,
               className: d.gameCoverImage,
               onError: () => a(!0),
               onLoad: () => a(!1),
           });
 }
-function b(e) {
-    let { imageSrc: t, gameName: r, applicationId: l, userId: i, className: b, hideTooltip: O = !1 } = e,
+function p(e) {
+    let { imageSrc: t, gameName: r, applicationId: l, userId: i, className: p, hideTooltip: O = !1 } = e,
         m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
-            source: c.m1.UserProfile,
+            source: o.m1.UserProfile,
             sourceUserId: i,
             trackEntryPointImpression: !0,
         }),
@@ -89,7 +89,7 @@ function b(e) {
         v = (e) =>
             O
                 ? e()
-                : (0, n.jsx)(o.ua7, {
+                : (0, n.jsx)(c.ua7, {
                       text: j,
                       children: (t) => e(t),
                   });
@@ -98,8 +98,8 @@ function b(e) {
             ? (e) =>
                   (0, n.jsx)(
                       "div",
-                      g(f({ className: b }, e), {
-                          children: (0, n.jsx)(p, {
+                      g(f({ className: p }, e), {
+                          children: (0, n.jsx)(b, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -107,12 +107,12 @@ function b(e) {
                   )
             : (e) =>
                   (0, n.jsx)(
-                      o.P3F,
+                      c.P3F,
                       g(f({}, e), {
                           onClick: m,
                           "aria-label": y,
-                          className: a()(d.clickable, b),
-                          children: (0, n.jsx)(p, {
+                          className: a()(d.clickable, p),
+                          children: (0, n.jsx)(b, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -121,8 +121,8 @@ function b(e) {
     );
 }
 function O(e) {
-    var { applicationId: t, userId: r, className: l, disableInteraction: i = !1, hideTooltip: o } = e,
-        c = (function (e, t) {
+    var { applicationId: t, userId: r, className: l, disableInteraction: i = !1, hideTooltip: c } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -147,18 +147,18 @@ function O(e) {
     return i
         ? (0, n.jsx)("div", {
               className: s,
-              children: (0, n.jsx)(p, f({}, c)),
+              children: (0, n.jsx)(b, f({}, o)),
           })
         : (0, n.jsx)(
-              b,
+              p,
               f(
                   {
                       className: s,
                       applicationId: t,
                       userId: r,
-                      hideTooltip: o,
+                      hideTooltip: c,
                   },
-                  c,
+                  o,
               ),
           );
 }

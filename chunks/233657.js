@@ -66,8 +66,8 @@ function O(e) {
             }),
             [t.id],
         ),
-        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function j() {
+        j = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function v() {
         await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("22347"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
@@ -75,7 +75,7 @@ function O(e) {
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let C = (0, c.ZP)(t.id),
-        E = C.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSk, { number: C.length }) : h.intl.string(h.t.tlopTE);
+        x = C.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSk, { number: C.length }) : h.intl.string(h.t.tlopTE);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
@@ -84,18 +84,18 @@ function O(e) {
                 color: "currentColor",
                 className: e,
             }),
-        text: E,
+        text: x,
         selected: O,
-        onClick: j,
+        onClick: v,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
                 let { default: e } = await n.e("95307").then(n.bind(n, 867757));
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: _ && !v,
+        showUnread: _ && !j,
         trailing:
-            !v && y > 0
+            !j && y > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,

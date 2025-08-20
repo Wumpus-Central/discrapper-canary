@@ -1,17 +1,82 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    a = n(974674),
-    s = n(438784),
+    a = n(120356),
+    o = n.n(a),
+    s = n(974674),
+    l = n(438784),
     c = n(481060),
     u = n(686546),
     d = n(3682),
-    p = n(647718);
-let m = {},
-    f = 1 / 4;
-function g(e) {
+    f = n(647718);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let g = {};
+function E(e, t, n) {
+    let r = c.ny6[e],
+        i = r.size / (d.z3 + d.o),
+        a = i * d.z3,
+        o = i * d.o,
+        l = o + a / 2,
+        u = {
+            statusCoords: (0, s.Vq)(r, c.Skl.ONLINE, !1, t),
+            frontAvatarSizePx: a,
+            backAvatarSizePx: i,
+            frontAvatarOffsetPx: o,
+            frontAvatarCenter: l,
+        };
+    return (g[n] = u), u;
+}
+let b = 1 / 4;
+function y(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)("div", {
         style: {
@@ -23,15 +88,15 @@ function g(e) {
             height: t,
             width: t * d.jR,
         },
-        children: (0, r.jsx)(s.b, {
-            className: p.dots,
-            dotRadius: t * f,
+        children: (0, r.jsx)(l.b, {
+            className: f.dots,
+            dotRadius: t * b,
         }),
     });
 }
-function _(e) {
+function O(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
-        l = (0, c.vjg)(c.Skl.ONLINE);
+        a = (0, c.vjg)(c.Skl.ONLINE);
     return t
         ? (0, r.jsx)("div", {
               style: {
@@ -39,9 +104,9 @@ function _(e) {
                   top: n.y,
                   left: n.x,
               },
-              children: (0, r.jsx)(g, {
+              children: (0, r.jsx)(y, {
                   height: n.height,
-                  fillColor: l,
+                  fillColor: a,
               }),
           })
         : null != i
@@ -56,186 +121,129 @@ function _(e) {
             })
           : null;
 }
-function h(e) {
+function v(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)("img", {
-        className: p.circularImage,
+        className: f.circularImage,
         src: t,
         alt: "",
         width: n,
         height: n,
     });
 }
-let b = {
-        [c.EFr.SIZE_16]: {
-            default: u.QS.DIAGONAL_FACEPILE_16,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_16,
-        },
-        [c.EFr.SIZE_20]: {
-            default: u.QS.DIAGONAL_FACEPILE_20,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_20,
-        },
-        [c.EFr.SIZE_24]: {
-            default: u.QS.DIAGONAL_FACEPILE_24,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_24,
-        },
-        [c.EFr.SIZE_32]: {
-            default: u.QS.DIAGONAL_FACEPILE_32,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_32,
-        },
-        [c.EFr.SIZE_40]: {
-            default: u.QS.DIAGONAL_FACEPILE_32,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_32,
-        },
-        [c.EFr.SIZE_48]: {
-            default: u.QS.DIAGONAL_FACEPILE_40,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_40,
-        },
-        [c.EFr.SIZE_56]: {
-            default: u.QS.DIAGONAL_FACEPILE_56,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_56,
-        },
-        [c.EFr.SIZE_80]: {
-            default: u.QS.DIAGONAL_FACEPILE_80,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_80,
-        },
-        [c.EFr.SIZE_96]: {
-            default: u.QS.DIAGONAL_FACEPILE_96,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_96,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_96,
-        },
-        [c.EFr.SIZE_120]: {
-            default: u.QS.DIAGONAL_FACEPILE_120,
-            typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
-            status: u.QS.DIAGONAL_FACEPILE_STATUS_120,
-        },
+let I = {
+    [c.EFr.SIZE_16]: {
+        default: u.QS.DIAGONAL_FACEPILE_16,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_16,
     },
-    E = function (e) {
-        var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: C } = e,
-            v = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                }
-                return i;
-            })(e, ["backSrc", "frontSrc", "size", "isTyping", "status", "style", "className"]);
-        let { size: O } = c.ny6[s],
+    [c.EFr.SIZE_20]: {
+        default: u.QS.DIAGONAL_FACEPILE_20,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_20,
+    },
+    [c.EFr.SIZE_24]: {
+        default: u.QS.DIAGONAL_FACEPILE_24,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_24,
+    },
+    [c.EFr.SIZE_32]: {
+        default: u.QS.DIAGONAL_FACEPILE_32,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_32,
+    },
+    [c.EFr.SIZE_40]: {
+        default: u.QS.DIAGONAL_FACEPILE_32,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_32,
+    },
+    [c.EFr.SIZE_48]: {
+        default: u.QS.DIAGONAL_FACEPILE_40,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_40,
+    },
+    [c.EFr.SIZE_56]: {
+        default: u.QS.DIAGONAL_FACEPILE_56,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_56,
+    },
+    [c.EFr.SIZE_80]: {
+        default: u.QS.DIAGONAL_FACEPILE_80,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_80,
+    },
+    [c.EFr.SIZE_96]: {
+        default: u.QS.DIAGONAL_FACEPILE_96,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_96,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_96,
+    },
+    [c.EFr.SIZE_120]: {
+        default: u.QS.DIAGONAL_FACEPILE_120,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_120,
+    },
+};
+function T(e, t, n) {
+    return t ? I[n].typing : e ? I[n].status : I[n].default;
+}
+let S = function (e) {
+    var { backSrc: t, frontSrc: n, size: a, isTyping: s, status: l, style: d, className: _ } = e,
+        m = h(e, ["backSrc", "frontSrc", "size", "isTyping", "status", "style", "className"]);
+    let { size: b } = c.ny6[a],
+        {
+            statusCoords: y,
+            frontAvatarOffsetPx: I,
+            frontAvatarSizePx: S,
+            backAvatarSizePx: A,
+        } = i.useMemo(() => {
+            var e;
+            let t = "".concat(b, "-").concat(s);
+            return null != (e = g[t]) ? e : E(a, s, t);
+        }, [b, s, a]),
+        C = T(null != l, s, a);
+    return (0, r.jsxs)("div", {
+        style: p(
             {
-                statusCoords: y,
-                frontAvatarOffsetPx: x,
-                frontAvatarSizePx: j,
-                backAvatarSizePx: I,
-            } = i.useMemo(() => {
-                var e;
-                let t = "".concat(O, "-").concat(f);
-                return null != (e = m[t])
-                    ? e
-                    : (function (e, t, n) {
-                          let r = c.ny6[e],
-                              i = r.size / (d.z3 + d.o),
-                              l = i * d.z3,
-                              o = i * d.o,
-                              s = {
-                                  statusCoords: (0, a.Vq)(r, c.Skl.ONLINE, !1, t),
-                                  frontAvatarSizePx: l,
-                                  backAvatarSizePx: i,
-                                  frontAvatarOffsetPx: o,
-                                  frontAvatarCenter: o + l / 2,
-                              };
-                          return (m[n] = s), s;
-                      })(s, f, t);
-            }, [O, f, s]),
-            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
-        return (0, r.jsxs)("div", {
-            style: (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
-                {
-                    width: O,
-                    height: O,
-                },
-                E,
-            ),
-            "aria-label": v["aria-label"],
-            "aria-hidden": v["aria-hidden"],
-            className: o()(p.container, C),
-            children: [
-                (0, r.jsxs)(u.ZP, {
-                    mask: S,
-                    height: O,
-                    width: O,
-                    children: [
-                        (0, r.jsx)("img", {
+                width: b,
+                height: b,
+            },
+            d,
+        ),
+        "aria-label": m["aria-label"],
+        "aria-hidden": m["aria-hidden"],
+        className: o()(f.container, _),
+        children: [
+            (0, r.jsxs)(u.ZP, {
+                mask: C,
+                height: b,
+                width: b,
+                children: [
+                    (0, r.jsx)("img", {
+                        src: t,
+                        alt: "",
+                        width: A,
+                        height: A,
+                    }),
+                    (0, r.jsx)("div", {
+                        style: {
+                            position: "absolute",
+                            top: I,
+                            left: I,
+                        },
+                        children: (0, r.jsx)(v, {
                             src: n,
-                            alt: "",
-                            width: I,
-                            height: I,
+                            size: S,
+                            isTyping: s,
+                            status: l,
                         }),
-                        (0, r.jsx)("div", {
-                            style: {
-                                position: "absolute",
-                                top: x,
-                                left: x,
-                            },
-                            children: (0, r.jsx)(h, {
-                                src: l,
-                                size: j,
-                                isTyping: f,
-                                status: g,
-                            }),
-                        }),
-                    ],
-                }),
-                (0, r.jsx)(_, {
-                    statusCoords: y,
-                    status: g,
-                    isTyping: f,
-                }),
-            ],
-        });
-    };
+                    }),
+                ],
+            }),
+            (0, r.jsx)(O, {
+                statusCoords: y,
+                status: l,
+                isTyping: s,
+            }),
+        ],
+    });
+};

@@ -1,8 +1,10 @@
-n.d(t, { h: () => i });
-var r,
-    i =
-        (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (r[(r.PENDING = 1)] = "PENDING"),
-        (r[(r.ACCEPTED = 2)] = "ACCEPTED"),
-        (r[(r.REJECTED = 3)] = "REJECTED"),
-        r);
+n.d(t, { h: () => r });
+var r = (function (e) {
+    return (
+        (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (e[(e.PENDING = 1)] = "PENDING"),
+        (e[(e.ACCEPTED = 2)] = "ACCEPTED"),
+        (e[(e.REJECTED = 3)] = "REJECTED"),
+        e
+    );
+})({});

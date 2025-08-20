@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(607070),
+    a = n(607070),
     o = n(21054);
-function a(e) {
-    let { guildId: t, user: n, className: a } = e,
-        s = (0, i.e7)([l.Z], () => !l.Z.useReducedMotion),
-        c = n.getAvatarURL(t, 56, s),
+function s(e) {
+    let { guildId: t, user: n, className: s } = e,
+        l = (0, i.e7)([a.Z], () => !a.Z.useReducedMotion),
+        c = n.getAvatarURL(t, 56, l),
         u = (0, r.jsx)("foreignObject", {
             x: "30",
             y: "68",
@@ -21,7 +21,7 @@ function a(e) {
             }),
         });
     return (0, r.jsx)("div", {
-        className: a,
+        className: s,
         children: (0, r.jsxs)("svg", {
             width: "128",
             height: "200",

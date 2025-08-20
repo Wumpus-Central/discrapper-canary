@@ -32,10 +32,10 @@ var n = a(951288),
     x = a(72897),
     h = a(131951),
     p = a(246992),
-    b = a(65154),
-    v = a(653301),
+    v = a(65154),
+    b = a(653301),
     f = a(451429);
-function g(e) {
+function j(e) {
     let { recording: t } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -66,10 +66,10 @@ function g(e) {
         ],
     });
 }
-function j(e) {
+function g(e) {
     let { recording: t, playing: a, onPlay: r, onStop: l } = e;
     return (0, n.jsx)(c.zF9, {
-        collapsibleContent: (0, n.jsx)(g, { recording: t }),
+        collapsibleContent: (0, n.jsx)(j, { recording: t }),
         children: (e) => {
             let { onClick: s } = e;
             return (0, n.jsxs)(c.P3F, {
@@ -109,20 +109,20 @@ function j(e) {
     });
 }
 function _() {
-    let { name: e } = (0, x.p6)(b.h7.AUDIO_INPUT),
+    let { name: e } = (0, x.p6)(v.h7.AUDIO_INPUT),
         [t, a] = r.useState(!1),
         [l, i] = r.useState([]),
-        g = (0, s.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
+        j = (0, s.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
         [_, y] = r.useState(null),
         C = r.useRef(null),
         N = r.useRef(null),
-        [T, O] = r.useState(0.5),
+        [O, E] = r.useState(0.5),
         {
-            krispModels: E,
+            krispModels: T,
             krispModelOverride: S,
             inputMode: P,
-            echoCancellation: I,
-            autoThreshold: w,
+            echoCancellation: w,
+            autoThreshold: I,
             vadUseKrisp: k,
             vadKrispActivationThreshold: R,
             noiseCancellation: Z,
@@ -144,21 +144,21 @@ function _() {
             noiseCancellationSupported: h.Z.isNoiseCancellationSupported(),
             noiseCancellationEnableStats: h.Z.getKrispEnableStats(),
         })),
-        U = Z ? "KRISP" : A ? "STANDARD" : "NONE",
+        z = Z ? "KRISP" : A ? "STANDARD" : "NONE",
         F = (0, u.N)(),
         B = r.useCallback(() => {
             var e;
             null == (e = C.current) || e.stop(), (C.current = null), y(null);
         }, []);
-    function z() {
+    function U() {
         h.Z.getMediaEngine().stopRecordingRawSamples();
     }
     function G(e) {
-        if ((t && z(), B(), null == F)) return;
+        if ((t && U(), B(), null == F)) return;
         let a = F.createBufferSource();
         (a.buffer = e.audioBuffer),
             (N.current = F.createGain()),
-            (N.current.gain.value = T),
+            (N.current.gain.value = O),
             a.connect(N.current),
             N.current.connect(F.destination),
             (a.loop = !0),
@@ -188,7 +188,7 @@ function _() {
         (0, n.jsx)(c.zJl, {
             className: f.panel,
             children: (0, n.jsxs)("div", {
-                className: v.innerPanel,
+                className: b.innerPanel,
                 children: [
                     (0, n.jsx)(c.Text, {
                         variant: "text-lg/bold",
@@ -198,7 +198,7 @@ function _() {
                         title: "Input Device",
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(m.j, {
-                            deviceType: b.h7.AUDIO_INPUT,
+                            deviceType: v.h7.AUDIO_INPUT,
                             location: "DevToolsKrispTester",
                         }),
                     }),
@@ -206,7 +206,7 @@ function _() {
                         title: "Noise Cancellation",
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.q4e, {
-                            value: U,
+                            value: z,
                             onChange: (e) => {
                                 d.Z.setNoiseCancellation("KRISP" === e), d.Z.setNoiseSuppression("STANDARD" === e);
                             },
@@ -214,14 +214,14 @@ function _() {
                             popoutLayerContext: p.O$,
                         }),
                     }),
-                    "KRISP" === U &&
+                    "KRISP" === z &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(c.hjN, {
                                     title: "Krisp Suppression Level",
                                     tag: c.RB0.H3,
                                     children: (0, n.jsx)(c.iRW, {
-                                        initialValue: g,
+                                        initialValue: j,
                                         onValueChange: d.Z.setKrispSuppressionLevel,
                                         minValue: 0,
                                         maxValue: 100,
@@ -236,7 +236,7 @@ function _() {
                                             d.Z.setKrispModelOverride("");
                                         },
                                         isSelected: (e) => e === S,
-                                        options: E.map((e) => ({
+                                        options: T.map((e) => ({
                                             label: e,
                                             value: e,
                                         })),
@@ -258,7 +258,7 @@ function _() {
                                 }),
                             ],
                         }),
-                    P === b.pM.VOICE_ACTIVITY &&
+                    P === v.pM.VOICE_ACTIVITY &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(c.hjN, {
@@ -266,12 +266,12 @@ function _() {
                                     tag: c.RB0.H3,
                                     children: (0, n.jsx)(c.j7V, {
                                         hideBorder: !0,
-                                        value: w,
-                                        onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
+                                        value: I,
+                                        onChange: (e) => d.Z.setMode(v.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                         children: "Auto Threshold",
                                     }),
                                 }),
-                                w &&
+                                I &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(c.hjN, {
@@ -281,7 +281,7 @@ function _() {
                                                     hideBorder: !0,
                                                     value: k,
                                                     onChange: (e) =>
-                                                        d.Z.setMode(b.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
+                                                        d.Z.setMode(v.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                                     children: "Use Krisp VAD",
                                                 }),
                                             }),
@@ -292,7 +292,7 @@ function _() {
                                                     children: (0, n.jsx)(c.iRW, {
                                                         initialValue: R,
                                                         onValueChange: (e) =>
-                                                            d.Z.setMode(b.pM.VOICE_ACTIVITY, {
+                                                            d.Z.setMode(v.pM.VOICE_ACTIVITY, {
                                                                 vadKrispActivationThreshold: e,
                                                             }),
                                                         minValue: 0,
@@ -307,7 +307,7 @@ function _() {
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.j7V, {
                             hideBorder: !0,
-                            value: I,
+                            value: w,
                             onChange: (e) => d.Z.setEchoCancellation(e),
                             children: "Echo Cancellation",
                         }),
@@ -318,7 +318,7 @@ function _() {
                         children: (0, n.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? z
+                                ? U
                                 : function () {
                                       B(),
                                           a(!0),
@@ -341,9 +341,9 @@ function _() {
                                                       inputName: e,
                                                       audioBuffer: l,
                                                       createdAt: Date.now(),
-                                                      suppression: U,
-                                                      echoCancellation: I,
-                                                      krispSuppressionLevel: g,
+                                                      suppression: z,
+                                                      echoCancellation: w,
+                                                      krispSuppressionLevel: j,
                                                   },
                                               ]);
                                           });
@@ -355,9 +355,9 @@ function _() {
                         title: "Volume",
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: T,
+                            initialValue: O,
                             asValueChanges: function (e) {
-                                null != N.current && ((N.current.gain.value = e), O(e));
+                                null != N.current && ((N.current.gain.value = e), E(e));
                             },
                             minValue: 0,
                             maxValue: 1,
@@ -368,7 +368,7 @@ function _() {
                         tag: c.RB0.H3,
                         children: l.map((e, t) =>
                             (0, n.jsx)(
-                                j,
+                                g,
                                 {
                                     recording: e,
                                     playing: e === _,

@@ -30,8 +30,8 @@ var r = n(951288),
     C = n(998698),
     x = n(326133),
     v = n(507366),
-    j = n(570220),
-    O = n(951394),
+    O = n(570220),
+    j = n(951394),
     E = n(805680),
     S = n(374794),
     P = n(884858),
@@ -129,7 +129,7 @@ let en = i.memo(
         let {
                 textValue: p,
                 richValue: g,
-                className: O,
+                className: j,
                 id: S,
                 required: P,
                 disabled: I,
@@ -154,8 +154,8 @@ let en = i.memo(
                 autoCompletePosition: eC,
                 children: ex,
                 disableThemedBackground: ev = !1,
-                emojiPickerCloseOnModalOuterClick: ej,
-                parentModalKey: eO,
+                emojiPickerCloseOnModalOuterClick: eO,
+                parentModalKey: ej,
             } = e,
             eE = v.Z.useField("channelDrafts")[D.id],
             eS = null != (l = null == eE ? void 0 : eE.title) ? l : "",
@@ -371,14 +371,14 @@ let en = i.memo(
                         : e.id;
                 null != t && f.Z.remove(D.id, t, A.d.ChannelMessage), (0, v.c)(D.id, { heroFile: null });
             }, [D.id, eP, G.drafts.type]);
-        return (0, r.jsx)(j.f6, {
+        return (0, r.jsx)(O.f6, {
             value: eY,
             children: (0, r.jsxs)(_.Gt, {
                 value: eT,
                 children: [
                     (0, r.jsxs)("div", {
                         ref: eN,
-                        className: a()(O, Q.channelTextArea),
+                        className: a()(j, Q.channelTextArea),
                         onMouseDown: tt,
                         children: [
                             (0, r.jsx)("div", {
@@ -602,8 +602,8 @@ let en = i.memo(
                               onSelectEmoji: tn,
                               onSelectSticker: ti,
                               channel: D,
-                              closeOnModalOuterClick: ej,
-                              parentModalKey: eO,
+                              closeOnModalOuterClick: eO,
+                              parentModalKey: ej,
                               position: "top",
                               align: "right",
                               positionLayerClassName: Q.expressionPickerPositionLayer,
@@ -679,7 +679,7 @@ function ei(e) {
                       className: X.heroImage,
                   }),
                   o
-                      ? (0, r.jsx)(O.ZP, {
+                      ? (0, r.jsx)(j.ZP, {
                             className: X.heroOverlay,
                             children: (0, r.jsx)(G.Z, {
                                 tooltip: K.intl.string(K.t.VjC219),

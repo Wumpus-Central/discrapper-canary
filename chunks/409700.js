@@ -1,6 +1,6 @@
 n.d(t, {
-    Dp: () => N,
-    Hh: () => C,
+    Dp: () => C,
+    Hh: () => N,
     ZP: () => R,
     hq: () => S,
 }),
@@ -133,7 +133,7 @@ function A(e) {
               ],
           });
 }
-function N(e) {
+function C(e) {
     let { sound: t } = e;
     return (0, r.jsxs)("div", {
         className: o()(b.infoContainer, b.infoTooltip),
@@ -168,7 +168,7 @@ function N(e) {
         ],
     });
 }
-function C(e) {
+function N(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: o, setTooltipShowing: s, clickableClassName: l } = e,
         [u, d] = i.useState(!1),
         [f, _] = i.useState(String(Date.now())),
@@ -231,7 +231,7 @@ function R(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(N, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(S, {}),
                 tooltipText: E.intl.string(E.t["19lt29"]),
@@ -242,7 +242,7 @@ function R(e) {
                     className: y.secondaryIcon,
                 }),
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(N, {
                 setTooltipShowing: i,
                 renderPopout: (e) =>
                     (0, r.jsx)(

@@ -64,9 +64,9 @@ function _(e) {
             totalResults: _,
             isIndexing: x,
             isSearching: v,
-            documentsIndexed: j,
+            documentsIndexed: O,
         } = e,
-        O = (0, d.UX)({ location: "SearchHeader" }),
+        j = (0, d.UX)({ location: "SearchHeader" }),
         E = (0, p.xd)({
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",
@@ -74,13 +74,13 @@ function _(e) {
         S = (0, h.I)(t),
         { totalFilters: P } = (0, c.hE)(S),
         I = i.useMemo(() => {
-            if (t.type === f.aib.DMS && O) {
+            if (t.type === f.aib.DMS && j) {
                 var e, n;
                 let t = null != (n = null == (e = (0, u.$G)(S).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? m.intl.format(m.t.A2dqWF, { filterCount: t }) : m.intl.string(m.t.tc619f);
             }
             return null;
-        }, [O, t.type, S]),
+        }, [j, t.type, S]),
         Z = i.useMemo(
             () => [
                 {
@@ -116,7 +116,7 @@ function _(e) {
                     subtitle: I,
                     isIndexing: x,
                     isSearching: v,
-                    documentsIndexed: j,
+                    documentsIndexed: O,
                 }),
             }),
             E
@@ -171,8 +171,8 @@ function C(e) {
     return l
         ? (0, r.jsx)(v, { documentsIndexed: a })
         : i
-          ? (0, r.jsx)(j, {})
-          : (0, r.jsx)(O, {
+          ? (0, r.jsx)(O, {})
+          : (0, r.jsx)(j, {
                 totalResults: t,
                 subtitle: n,
             });
@@ -211,7 +211,7 @@ function v(e) {
             ),
     });
 }
-function j() {
+function O() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.Text, {
@@ -223,7 +223,7 @@ function j() {
         ],
     });
 }
-function O(e) {
+function j(e) {
     let { totalResults: t, subtitle: n } = e,
         l = i.useMemo(() => t.toLocaleString(), [t]),
         a = (0, r.jsx)(o.Text, {

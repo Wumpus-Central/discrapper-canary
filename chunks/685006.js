@@ -22,13 +22,13 @@ var r = n(951288),
     C = n(981631),
     x = n(314734),
     v = n(409575);
-let j = (0, o.U)(() => ({ visible: !1 })),
-    O = (e) => {
+let O = (0, o.U)(() => ({ visible: !1 })),
+    j = (e) => {
         (0, s.j)(() => {
-            j.setState({ visible: e });
+            O.setState({ visible: e });
         });
     },
-    E = j;
+    E = O;
 function S(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: a, application: o, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
@@ -45,13 +45,13 @@ function S(e) {
                       source: g._b.TEXT,
                   }));
         }, [c, f]),
-        j = null != x && x.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
-        E = !a && null != o && !0 === j;
+        O = null != x && x.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
+        E = !a && null != o && !0 === O;
     return (i.useEffect(
         () => (
-            O(E),
+            j(E),
             () => {
-                O(!1);
+                j(!1);
             }
         ),
         [E],
@@ -92,7 +92,7 @@ function P(e) {
             application: n,
             showAppLauncherPopup: u,
         }),
-        j = (0, f.J)({
+        O = (0, f.J)({
             context: t,
             application: n,
             isEmbeddedApp: m,
@@ -103,13 +103,13 @@ function P(e) {
             setIsExecutingLaunchInteraction: y,
             analyticsLocations: C,
         }),
-        O = h ? "critical-primary" : "primary";
+        j = h ? "critical-primary" : "primary";
     return (0, r.jsx)("div", {
         className: a()(v.entryPointAppCommandButtonContainer, x.Id),
         children: (0, r.jsx)(c.zxk, {
-            variant: O,
+            variant: j,
             loading: d,
-            onClick: j,
+            onClick: O,
             fullWidth: !0,
             buttonRef: o,
             text: p,

@@ -1,152 +1,152 @@
-n.d(t, { Z: () => V });
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
-    l = n(846027),
-    o = n(230711),
+n.d(t, { Z: () => Z });
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(846027),
+    l = n(230711),
     c = n(921801),
-    d = n(131951),
-    u = n(663389),
-    m = n(63063),
-    p = n(680924),
-    g = n(58765),
+    u = n(131951),
+    d = n(663389),
+    f = n(63063),
+    _ = n(680924),
+    p = n(58765),
     h = n(429789),
-    f = n(726763),
-    b = n(208113),
-    x = n(894939),
-    _ = n(710808),
-    j = n(625205),
-    E = n(325808),
-    C = n(823087),
-    O = n(232388),
-    v = n(546997),
+    m = n(726763),
+    g = n(208113),
+    E = n(894939),
+    b = n(710808),
+    y = n(625205),
+    O = n(325808),
+    v = n(823087),
+    I = n(232388),
+    T = n(546997),
     S = n(186934),
-    T = n(716210),
-    N = n(520384),
-    I = n(459674),
-    y = n(167540),
-    A = n(267006),
-    P = n(803567),
-    R = n(269876),
-    D = n(976758),
-    Z = n(526761),
-    w = n(726985),
-    k = n(981631),
-    L = n(65154),
-    B = n(388032),
-    M = n(197571);
-let U = "".concat(
-    m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+    A = n(716210),
+    C = n(520384),
+    N = n(459674),
+    R = n(167540),
+    P = n(267006),
+    w = n(803567),
+    D = n(269876),
+    x = n(976758),
+    L = n(526761),
+    j = n(726985),
+    M = n(981631),
+    k = n(65154),
+    U = n(388032),
+    G = n(197571);
+let B = "".concat(
+    f.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING),
     "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
 );
-function V() {
-    let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
-        t = (0, s.e7)([u.Z], () => u.Z.getSubsection()),
-        n = r.useRef(null),
-        m = r.useRef(null);
-    r.useEffect(() => {
-        var e, i;
-        t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()),
-            t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());
-    }, [n, m, t]);
-    let k = (0, g.Z)();
-    return (0, i.jsxs)(a.hjN, {
-        tag: a.RB0.H1,
-        title: B.intl.string(B.t.NiTd0d),
+function Z() {
+    let { inputMode: e } = (0, a.cj)([u.Z], () => ({ inputMode: u.Z.getMode() })),
+        t = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
+        n = i.useRef(null),
+        f = i.useRef(null);
+    i.useEffect(() => {
+        var e, r;
+        t === L.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), l.Z.clearSubsection()),
+            t === L.gP && (null == f || null == (r = f.current) || r.scrollIntoView(), l.Z.clearSubsection());
+    }, [n, f, t]);
+    let M = (0, p.Z)();
+    return (0, r.jsxs)(o.hjN, {
+        tag: o.RB0.H1,
+        title: U.intl.string(U.t.NiTd0d),
         children: [
-            (0, i.jsxs)(c.F, {
-                setting: w.s6.VOICE_AND_VIDEO_VOICE,
+            (0, r.jsxs)(c.F, {
+                setting: j.s6.VOICE_AND_VIDEO_VOICE,
                 children: [
-                    (0, i.jsx)(c.F, {
-                        setting: w.s6.VOICE_AND_VIDEO_DEVICES,
-                        children: (0, i.jsx)(j.Z, {}),
+                    (0, r.jsx)(c.F, {
+                        setting: j.s6.VOICE_AND_VIDEO_DEVICES,
+                        children: (0, r.jsx)(y.Z, {}),
                     }),
-                    (0, i.jsx)(c.F, {
-                        setting: w.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                        children: (0, i.jsx)(D.Z, {}),
+                    (0, r.jsx)(c.F, {
+                        setting: j.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                        children: (0, r.jsx)(x.Z, {}),
                     }),
-                    (0, i.jsxs)(c.F, {
-                        setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
+                    (0, r.jsxs)(c.F, {
+                        setting: j.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(C.Z, {}),
-                            (0, i.jsx)(a.R94, {
-                                className: M.marginBottom20,
-                                type: a.R94.Types.DESCRIPTION,
-                                children: B.intl.format(B.t["V+B3FB"], { guideURL: U }),
+                            (0, r.jsx)(v.Z, {}),
+                            (0, r.jsx)(o.R94, {
+                                className: G.marginBottom20,
+                                type: o.R94.Types.DESCRIPTION,
+                                children: U.intl.format(U.t["V+B3FB"], { guideURL: B }),
                             }),
-                            (0, i.jsx)(a.$i$, { className: M.marginBottom20 }),
+                            (0, r.jsx)(o.$i$, { className: G.marginBottom20 }),
                         ],
                     }),
-                    (0, i.jsx)(c.F, {
-                        setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(E.Z, {}),
+                    (0, r.jsx)(c.F, {
+                        setting: j.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                        children: (0, r.jsx)(O.Z, {}),
                     }),
-                    (0, i.jsx)(c.F, {
-                        setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                        children: e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {}),
+                    (0, r.jsx)(c.F, {
+                        setting: j.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                        children: e === k.pM.VOICE_ACTIVITY && (0, r.jsx)(D.Z, {}),
                     }),
-                    (0, i.jsx)(a.$i$, { className: M.marginBottom40 }),
+                    (0, r.jsx)(o.$i$, { className: G.marginBottom40 }),
                 ],
             }),
-            (0, i.jsx)(c.F, {
-                setting: w.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, i.jsx)("div", {
+            (0, r.jsx)(c.F, {
+                setting: j.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: (0, r.jsx)("div", {
                     style: { scrollMarginTop: "48px" },
                     ref: n,
                 }),
             }),
-            (0, i.jsx)(c.F, {
-                setting: w.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(x.Z, {}),
+            (0, r.jsx)(c.F, {
+                setting: j.s6.VOICE_AND_VIDEO_SOUNDS,
+                children: (0, r.jsx)(E.Z, {}),
             }),
-            (0, i.jsxs)(c.F, {
-                setting: w.s6.VOICE_AND_VIDEO_VIDEO,
+            (0, r.jsxs)(c.F, {
+                setting: j.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         style: { scrollMarginTop: "48px" },
-                        ref: m,
+                        ref: f,
                     }),
-                    (0, i.jsx)(y.Z, {}),
+                    (0, r.jsx)(R.Z, {}),
                 ],
             }),
-            (0, i.jsx)(c.F, {
-                setting: w.s6.VOICE_AND_VIDEO_ADVANCED,
-                children: (0, i.jsxs)(a.y5t, {
-                    component: (0, i.jsx)(a.vwX, {
-                        tag: a.RB0.H1,
-                        className: M.marginBottom20,
-                        children: B.intl.string(B.t["8/udY2"]),
+            (0, r.jsx)(c.F, {
+                setting: j.s6.VOICE_AND_VIDEO_ADVANCED,
+                children: (0, r.jsxs)(o.y5t, {
+                    component: (0, r.jsx)(o.vwX, {
+                        tag: o.RB0.H1,
+                        className: G.marginBottom20,
+                        children: U.intl.string(U.t["8/udY2"]),
                     }),
                     children: [
-                        (0, i.jsx)(f.Z, {}),
-                        (0, i.jsx)(A.Z, {}),
-                        (0, i.jsx)(c.F, {
-                            setting: w.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(P.Z, {}),
+                        (0, r.jsx)(m.Z, {}),
+                        (0, r.jsx)(P.Z, {}),
+                        (0, r.jsx)(c.F, {
+                            setting: j.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                            children: (0, r.jsx)(w.Z, {}),
                         }),
-                        (0, i.jsx)(N.Z, {}),
-                        (0, i.jsx)(O.Z, {}),
-                        (0, i.jsx)(h.Z, {}),
-                        k && (0, i.jsx)(S.Z, {}),
-                        (0, i.jsx)(b.Z, {}),
-                        (0, i.jsx)(v.Z, {}),
-                        (0, i.jsx)(T.Z, {}),
-                        (0, i.jsx)(I.Z, { refreshStyles: !0 }),
-                        (0, i.jsx)(a.$i$, { className: M.marginBottom40 }),
-                        (0, i.jsx)(c.F, {
-                            setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(_.Z, {}),
+                        (0, r.jsx)(C.Z, {}),
+                        (0, r.jsx)(I.Z, {}),
+                        (0, r.jsx)(h.Z, {}),
+                        M && (0, r.jsx)(S.Z, {}),
+                        (0, r.jsx)(g.Z, {}),
+                        (0, r.jsx)(T.Z, {}),
+                        (0, r.jsx)(A.Z, {}),
+                        (0, r.jsx)(N.Z, { refreshStyles: !0 }),
+                        (0, r.jsx)(o.$i$, { className: G.marginBottom40 }),
+                        (0, r.jsx)(c.F, {
+                            setting: j.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                            children: (0, r.jsx)(b.Z, {}),
                         }),
-                        (0, i.jsx)(c.F, {
-                            setting: w.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
-                            children: (0, i.jsx)(a.xJW, {
-                                children: (0, i.jsx)(a.zxk, {
+                        (0, r.jsx)(c.F, {
+                            setting: j.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+                            children: (0, r.jsx)(o.xJW, {
+                                children: (0, r.jsx)(o.zxk, {
                                     variant: "critical-secondary",
                                     size: "sm",
-                                    text: B.intl.string(B.t["/RXu6+"]),
+                                    text: U.intl.string(U.t["/RXu6+"]),
                                     onClick: () => {
-                                        (0, p.Z)(B.intl.string(B.t["/RXu6+"]), B.intl.string(B.t.sQ42iY), l.Z.reset);
+                                        (0, _.Z)(U.intl.string(U.t["/RXu6+"]), U.intl.string(U.t.sQ42iY), s.Z.reset);
                                     },
                                 }),
                             }),

@@ -1,25 +1,25 @@
 n.d(t, {
-    M9: () => l,
-    Zh: () => r,
-    e6: () => s,
-    iq: () => a,
+    M9: () => s,
+    Zh: () => i,
+    e6: () => a,
+    iq: () => o,
 }),
     n(704826),
     n(35282);
-var i = n(441729);
-let r = null != window.speechSynthesis;
-function s(e, t) {
+var r = n(441729);
+let i = null != window.speechSynthesis;
+function a(e, t) {
     let n = e.replace(/(https?:\/\/[^\s]+)/g, (e) => {
         let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
         return null != t ? t[1] : "";
     });
     null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(" "))));
-    let r = new SpeechSynthesisUtterance(n);
-    return (r.rate = i.Z.speechRate), r;
+    let i = new SpeechSynthesisUtterance(n);
+    return (i.rate = r.Z.speechRate), i;
 }
-function a(e, t) {
-    r && ((e.voice = t), speechSynthesis.speak(e));
+function o(e, t) {
+    i && ((e.voice = t), speechSynthesis.speak(e));
 }
-function l() {
-    r && speechSynthesis.cancel();
+function s() {
+    i && speechSynthesis.cancel();
 }

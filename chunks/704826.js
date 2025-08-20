@@ -24,16 +24,16 @@ var r = n(636881),
     A = function (e) {
         return void 0 === e ? e : String(e);
     },
-    N = (function () {
+    C = (function () {
         return "$0" === "a".replace(/./, "$0");
     })(),
-    C = (function () {
+    N = (function () {
         return !!/./[b] && "" === /./[b]("a", "$0");
     })();
 o(
     "replace",
     function (e, t, n) {
-        var a = C ? "$" : "$0";
+        var a = N ? "$" : "$0";
         return [
             function (e, n) {
                 var r = p(this),
@@ -54,21 +54,21 @@ o(
                 for (var b = []; null !== (D = E(o, s)) && (I(b, D), m); ) {
                     "" === _(D[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
                 }
-                for (var N = "", C = 0, R = 0; R < b.length; R++) {
+                for (var C = "", N = 0, R = 0; R < b.length; R++) {
                     for (
-                        var P, w, D = b[R], L = _(D[0]), x = y(O(d(D.index), s.length), 0), M = [], k = 1;
-                        k < D.length;
-                        k++
+                        var P, w, D = b[R], x = _(D[0]), L = y(O(d(D.index), s.length), 0), j = [], M = 1;
+                        M < D.length;
+                        M++
                     )
-                        I(M, A(D[k]));
-                    var j = D.groups;
+                        I(j, A(D[M]));
+                    var k = D.groups;
                     if (p) {
-                        var U = v([L], M, x, s);
-                        void 0 !== j && I(U, j), (w = _(r(i, void 0, U)));
-                    } else w = g(L, s, x, M, j, i);
-                    x >= C && ((N += S(s, C, x) + w), (C = x + L.length));
+                        var U = v([x], j, L, s);
+                        void 0 !== k && I(U, k), (w = _(r(i, void 0, U)));
+                    } else w = g(x, s, L, j, k, i);
+                    L >= N && ((C += S(s, N, L) + w), (N = L + x.length));
                 }
-                return N + S(s, C);
+                return C + S(s, N);
             },
         ];
     },
@@ -82,6 +82,6 @@ o(
             "7" !== "".replace(e, "$<a>")
         );
     }) ||
-        !N ||
-        C,
+        !C ||
+        N,
 );

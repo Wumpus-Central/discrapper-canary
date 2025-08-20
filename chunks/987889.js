@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(981631),
     _ = n(388032),
     y = n(361584);
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ let C = {
     [b.ln.ANNOUNCEMENT]: [b.r0.SETTINGS],
     [b.ln.MESSAGE]: [b.r0.SETTINGS],
 };
-function E(e) {
+function x(e) {
     let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
         [c, u] = (0, i.useState)(!1),
         d = (0, h.fJ)();
@@ -80,7 +80,7 @@ function E(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                j(v({}, e), {
+                v(j({}, e), {
                     className: y.action,
                     onClick: (e) => {
                         (0, h.Qz)({
@@ -99,7 +99,7 @@ function E(e) {
             ),
     });
 }
-function x(e) {
+function E(e) {
     let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c, actionType: u } = e,
         d = (0, h.fJ)(),
         [p, f] = (0, i.useState)(!1),
@@ -136,7 +136,7 @@ function x(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         o.P3F,
-                        j(v({}, t), {
+                        v(j({}, t), {
                             innerRef: O,
                             className: y.action,
                             onClick: (e) => {
@@ -151,7 +151,7 @@ function x(e) {
                             },
                             children: (0, r.jsx)(
                                 a,
-                                j(v({}, e), {
+                                v(j({}, e), {
                                     message: n,
                                     "aria-label": l,
                                     className: y.actionIcon,
@@ -192,8 +192,8 @@ let S = {
         label: _.intl.string(_.t["9p3D9v"]),
         Icon: (e) =>
             null != p.Z.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(o.plf, v({}, e))
-                : (0, r.jsx)(o.gt9, v({}, e)),
+                ? (0, r.jsx)(o.plf, j({}, e))
+                : (0, r.jsx)(o.gt9, j({}, e)),
         interactionType: h.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
@@ -204,7 +204,7 @@ let S = {
                 });
             return (0, r.jsxs)(
                 o.v2r,
-                j(v({}, n), {
+                v(j({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": _.intl.string(_.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -251,7 +251,7 @@ let S = {
             return t.isThread()
                 ? (0, r.jsx)(
                       f.Z,
-                      j(v({}, n), {
+                      v(j({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: _.intl.string(_.t["1NBjqa"]),
@@ -259,7 +259,7 @@ let S = {
                   )
                 : (0, r.jsx)(
                       c.Z,
-                      j(v({}, n), {
+                      v(j({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: _.intl.string(_.t.Xm41aW),
@@ -268,7 +268,7 @@ let S = {
         },
     },
 };
-function P(e) {
+function I(e) {
     let { message: t, channel: n, isUnread: l } = e,
         a = ((e, t) => {
             let n = (0, g.ux)();
@@ -289,8 +289,8 @@ function P(e) {
             switch (i.type) {
                 case "standard":
                     return (0, r.jsx)(
-                        E,
-                        j(v({}, i), {
+                        x,
+                        v(j({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -298,8 +298,8 @@ function P(e) {
                     );
                 case "menu":
                     return (0, r.jsx)(
-                        x,
-                        j(v({}, i), {
+                        E,
+                        v(j({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

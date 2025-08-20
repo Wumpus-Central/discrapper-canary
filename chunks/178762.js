@@ -1,7 +1,7 @@
 n.d(t, {
     Ir: () => z,
     J: () => K,
-    YN: () => F,
+    YN: () => V,
     ZP: () => X,
     iZ: () => H,
 }),
@@ -30,16 +30,16 @@ var r = n(951288),
     T = n(227172),
     S = n(551228),
     A = n(678869),
-    N = n(278399),
-    C = n(886217),
+    C = n(278399),
+    N = n(886217),
     R = n(555672),
     P = n(644548),
     w = n(335326),
     D = n(268010),
-    L = n(797342),
-    x = n(206583),
-    M = n(921944);
-function k(e, t, n) {
+    x = n(797342),
+    L = n(206583),
+    j = n(921944);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function B(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = V(e, t);
+        i = Z(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -103,7 +103,7 @@ function B(e, t) {
     }
     return i;
 }
-function V(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,29 +112,29 @@ function V(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let F = 72,
-    Z = 2000;
+let V = 72,
+    F = 2000;
 function H(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? F : 0;
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? V : 0;
 }
 let Y = (e) => {
         var { entry: t } = e,
             n = B(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(I.Z, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(I.Z, G(k({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(w.Z, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(w.Z, G(k({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(R.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(R.ZP, G(k({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(N.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(C.ZP, G(k({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(S.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, G(k({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(O.Z, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(O.Z, G(k({}, n), { entry: t }));
             case l.s.LEADERBOARD:
-                return (0, r.jsx)(g.Z, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(g.Z, G(k({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -144,7 +144,7 @@ let Y = (e) => {
             n = B(e, ["closePopout"]);
         return (0, r.jsx)(
             K,
-            j(
+            k(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -155,7 +155,7 @@ let Y = (e) => {
                     },
                     closePopout: t,
                     onVoiceChannelPreview: (e) => {
-                        n.trackRankingItemInteraction(x.xP.VOICE_CHANNEL_PREVIEWED, {
+                        n.trackRankingItemInteraction(L.xP.VOICE_CHANNEL_PREVIEWED, {
                             destinationChannelId: e.id,
                             destinationGuildId: e.guild_id,
                         });
@@ -171,17 +171,17 @@ let Y = (e) => {
             i = B(e, ["entry"]);
         switch (n.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(T.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(T.Z, G(k({}, i), { entry: n }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(D.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(D.Z, G(k({}, i), { entry: n }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(P.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(P.Z, G(k({}, i), { entry: n }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(C.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(N.Z, G(k({}, i), { entry: n }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(A.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(A.Z, G(k({}, i), { entry: n }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(v.ZP, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(v.ZP, G(k({}, i), { entry: n }));
             case l.s.LEADERBOARD:
                 return (null == (t = i.channel) ? void 0 : t.guild_id) != null
                     ? (0, r.jsx)(m.Z, {
@@ -204,7 +204,7 @@ let Y = (e) => {
             [E, O] = i.useState("default"),
             v = (0, s.JA)("".concat(a)),
             I = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: T, appName: S } = (0, L.n)(m.entry),
+            { isRich: T, appName: S } = (0, x.n)(m.entry),
             A = i.useMemo(
                 () => ({
                     entry: m.entry,
@@ -215,14 +215,14 @@ let Y = (e) => {
                 }),
                 [S, m.channel.guild_id, m.channel.id, m.entry, m.requestId, T],
             ),
-            N = i.useRef(!1),
-            [C, R] = i.useState(!1),
+            C = i.useRef(!1),
+            [N, R] = i.useState(!1),
             [P, w] = i.useState(!1),
             D = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && D && w(!0);
-        }, [C, D]);
-        let k = i.useCallback(
+            N && D && w(!0);
+        }, [N, D]);
+        let M = i.useCallback(
                 (e) => {
                     I &&
                         (0, f.jW)(e, async () => {
@@ -239,20 +239,20 @@ let Y = (e) => {
             U = i.useCallback(() => {
                 O(String(Date.now()));
             }, []),
-            V = i.useCallback(
+            Z = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, y.L)(e, j({}, A, t));
+                    (0, y.L)(e, k({}, A, t));
                 },
                 [A],
             ),
-            F = i.useMemo(
+            V = i.useMemo(
                 () =>
                     o().throttle(
                         (e) => {
-                            (0, y.L)(x.xP.CARD_POPOUT_OPEN, e);
+                            (0, y.L)(L.xP.CARD_POPOUT_OPEN, e);
                         },
-                        Z,
+                        F,
                         {
                             leading: !0,
                             trailing: !1,
@@ -261,9 +261,9 @@ let Y = (e) => {
                 [],
             ),
             H = () => {
-                (N.current = !1),
+                (C.current = !1),
                     setTimeout(() => {
-                        N.current || (R(!1), w(D));
+                        C.current || (R(!1), w(D));
                     }, 100);
             };
         return (0, r.jsx)("div", {
@@ -271,10 +271,10 @@ let Y = (e) => {
             onMouseEnter: () => {
                 m.entry.content_type !== l.s.LEADERBOARD ||
                     (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) ||
-                    (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
-                    (N.current = !0),
+                    (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: j.L.SECONDARY }),
+                    (C.current = !0),
                     setTimeout(() => {
-                        N.current && R(!0), F(A);
+                        C.current && R(!0), V(A);
                     }, 100);
             },
             onMouseLeave: H,
@@ -286,11 +286,11 @@ let Y = (e) => {
                         value: H,
                         children: (0, r.jsx)(
                             W,
-                            j(
+                            k(
                                 {
                                     closePopout: t,
                                     updatePopoutPosition: U,
-                                    trackRankingItemInteraction: V,
+                                    trackRankingItemInteraction: Z,
                                 },
                                 m,
                             ),
@@ -298,9 +298,9 @@ let Y = (e) => {
                     });
                 },
                 position: "left",
-                shouldShow: C,
+                shouldShow: N,
                 positionKey: E,
-                onRequestOpen: () => F(A),
+                onRequestOpen: () => V(A),
                 onRequestClose: () => {
                     P && H();
                 },
@@ -309,7 +309,7 @@ let Y = (e) => {
                     let { isShown: n } = t;
                     return (0, r.jsx)(
                         d.P3F,
-                        G(j({}, e, v), {
+                        G(k({}, e, v), {
                             innerRef: g,
                             focusProps: {
                                 offset: {
@@ -320,14 +320,14 @@ let Y = (e) => {
                                 },
                             },
                             onClick: () => {
-                                C || R(!0);
+                                N || R(!0);
                             },
-                            onContextMenu: k,
+                            onContextMenu: M,
                             children: (0, r.jsx)(
                                 Y,
-                                G(j({}, m), {
+                                G(k({}, m), {
                                     selected: n,
-                                    hovered: N.current,
+                                    hovered: C.current,
                                 }),
                             ),
                         }),

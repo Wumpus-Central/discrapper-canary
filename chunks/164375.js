@@ -1,124 +1,124 @@
-n.d(e, { default: () => S }), n(388685), n(290780);
+n.d(t, { default: () => g }), n(388685), n(290780);
 var i = n(951288),
-    r = n(647438),
-    s = n(481060),
+    s = n(647438),
+    r = n(481060),
     a = n(493683),
     l = n(785232),
     o = n(592125),
-    u = n(626135),
+    d = n(626135),
     c = n(799352),
-    _ = n(343544),
-    d = n(14251),
-    A = n(110223),
-    E = n(981631),
-    I = n(388032),
-    f = n(405842);
-function S(t) {
-    let { channelId: e, blockedUserIds: n, ignoredUserIds: S = [], transitionState: g, onClose: L } = t;
+    u = n(343544),
+    _ = n(14251),
+    m = n(110223),
+    f = n(981631),
+    x = n(388032),
+    h = n(405842);
+function g(e) {
+    let { channelId: t, blockedUserIds: n, ignoredUserIds: g = [], transitionState: E, onClose: N } = e;
     return (
-        r.useEffect(() => {
-            u.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-                channel_id: e,
-                warning_medium: A.WR.MODAL,
+        s.useEffect(() => {
+            d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+                channel_id: t,
+                warning_medium: m.WR.MODAL,
                 blocked_user_ids: n,
-                ignored_user_ids: S,
+                ignored_user_ids: g,
             });
-        }, [e, n, S]),
-        (0, i.jsx)(_.Z, {
-            headerText: I.intl.string(I.t["mwJJ+f"]),
-            descriptionText: ((t, e) => {
-                let n = t > 0,
-                    i = e > 0;
+        }, [t, n, g]),
+        (0, i.jsx)(u.Z, {
+            headerText: x.intl.string(x.t["mwJJ+f"]),
+            descriptionText: ((e, t) => {
+                let n = e > 0,
+                    i = t > 0;
                 return n && i
-                    ? I.intl.string(I.t["0dP7Fh"])
+                    ? x.intl.string(x.t["0dP7Fh"])
                     : n
-                      ? I.intl.formatToPlainString(I.t.OpIG9f, { n: t })
+                      ? x.intl.formatToPlainString(x.t.OpIG9f, { n: e })
                       : i
-                        ? I.intl.formatToPlainString(I.t["D+V4jI"], { n: e })
+                        ? x.intl.formatToPlainString(x.t["D+V4jI"], { n: t })
                         : null;
-            })(n.length, S.length),
-            infoRows: ((t) => {
-                let { channelId: e, blockedUserIds: n, ignoredUserIds: r } = t,
-                    a = o.Z.getChannel(e),
-                    u = n.length > 0,
-                    c = r.length > 0,
-                    _ = [
+            })(n.length, g.length),
+            infoRows: ((e) => {
+                let { channelId: t, blockedUserIds: n, ignoredUserIds: s } = e,
+                    a = o.Z.getChannel(t),
+                    d = n.length > 0,
+                    c = s.length > 0,
+                    u = [
                         {
                             icon: (0, i.jsx)("div", {
-                                className: f.icon,
-                                children: (0, i.jsx)(s.owK, {}),
+                                className: h.icon,
+                                children: (0, i.jsx)(r.owK, {}),
                             }),
-                            text: I.intl.string(I.t["RIMw5+"]),
-                            className: f.row,
+                            text: x.intl.string(x.t["RIMw5+"]),
+                            className: h.row,
                         },
                         {
                             icon: (0, i.jsx)("div", {
-                                className: f.icon,
-                                children: (0, i.jsx)(s.d3s, {}),
+                                className: h.icon,
+                                children: (0, i.jsx)(r.d3s, {}),
                             }),
-                            text: I.intl.string(I.t.bejNWF),
-                            className: f.row,
+                            text: x.intl.string(x.t.bejNWF),
+                            className: h.row,
                         },
                     ];
-                if (u && c) {
-                    let t = [...n, ...r],
-                        o = t.slice(0, 2);
-                    _.unshift({
+                if (d && c) {
+                    let e = [...n, ...s],
+                        o = e.slice(0, 2);
+                    u.unshift({
                         icon: (0, i.jsx)("div", {
-                            className: f.icon,
+                            className: h.icon,
                             children: (0, i.jsx)(l.Z, {
                                 recipients: o,
-                                size: s.EFr.SIZE_32,
+                                size: r.EFr.SIZE_32,
                             }),
                         }),
-                        text: (0, d.a)(o, t.length, null == a ? void 0 : a.guild_id, e),
-                        className: f.row,
+                        text: (0, _.a)(o, e.length, null == a ? void 0 : a.guild_id, t),
+                        className: h.row,
                     });
                 } else {
-                    let t = u ? [...n].slice(0, 2) : [...r].slice(0, 2),
-                        s = u ? n.length : r.length;
-                    _.unshift({
+                    let e = d ? [...n].slice(0, 2) : [...s].slice(0, 2),
+                        r = d ? n.length : s.length;
+                    u.unshift({
                         icon: (0, i.jsx)("div", {
-                            className: f.icon,
-                            children: (0, d.r)(t, null == a ? void 0 : a.guild_id),
+                            className: h.icon,
+                            children: (0, _.r)(e, null == a ? void 0 : a.guild_id),
                         }),
-                        text: (0, d.a)(t, s, null == a ? void 0 : a.guild_id, e),
-                        className: f.row,
+                        text: (0, _.a)(e, r, null == a ? void 0 : a.guild_id, t),
+                        className: h.row,
                     });
                 }
-                return _;
+                return u;
             })({
-                channelId: e,
+                channelId: t,
                 blockedUserIds: n,
-                ignoredUserIds: S,
+                ignoredUserIds: g,
             }),
             onDismissAndStay: () => {
-                L(),
-                    (0, c.O)(e),
-                    u.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: A.q.CLICK_TO_STAY,
-                        channel_id: e,
-                        warning_medium: A.WR.MODAL,
+                N(),
+                    (0, c.O)(t),
+                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: m.q.CLICK_TO_STAY,
+                        channel_id: t,
+                        warning_medium: m.WR.MODAL,
                         blocked_user_ids: n,
-                        ignored_user_ids: S,
+                        ignored_user_ids: g,
                     });
             },
             onDismissAndLeave: () => {
-                L(),
-                    (0, c.O)(e),
-                    a.Z.closePrivateChannel(e, !0, !0),
-                    u.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: A.q.CLICK_TO_LEAVE,
-                        channel_id: e,
-                        warning_medium: A.WR.MODAL,
+                N(),
+                    (0, c.O)(t),
+                    a.Z.closePrivateChannel(t, !0, !0),
+                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: m.q.CLICK_TO_LEAVE,
+                        channel_id: t,
+                        warning_medium: m.WR.MODAL,
                         blocked_user_ids: n,
-                        ignored_user_ids: S,
+                        ignored_user_ids: g,
                     });
             },
-            leaveButtonText: I.intl.string(I.t["Hi1/aW"]),
-            stayButtonText: I.intl.string(I.t.SW3lpK),
-            transitionState: g,
-            onClose: L,
+            leaveButtonText: x.intl.string(x.t["Hi1/aW"]),
+            stayButtonText: x.intl.string(x.t.SW3lpK),
+            transitionState: E,
+            onClose: N,
         })
     );
 }

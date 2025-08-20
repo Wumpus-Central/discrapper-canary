@@ -8,19 +8,19 @@ var r = {
     "./special-template/update-badge.svg": "623904",
     "./store.jpg": "926213",
 };
-function l(e) {
-    return n(o(e));
+function i(e) {
+    return n(a(e));
 }
-function o(e) {
+function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
     return r[e];
 }
-(l.keys = function () {
+(i.keys = function () {
     return Object.keys(r);
 }),
-    (l.resolve = o),
-    (e.exports = l),
-    (l.id = 595173);
+    (i.resolve = a),
+    (e.exports = i),
+    (i.id = 595173);

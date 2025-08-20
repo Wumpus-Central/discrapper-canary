@@ -23,10 +23,10 @@ let m = i.memo(function (e) {
         [v, _] = i.useState(!1),
         { ref: O, height: y = 0 } = (0, c.ZP)(),
         { ref: C, height: N = 0 } = (0, c.ZP)(),
-        [I, E] = i.useState(g),
+        [E, I] = i.useState(g),
         S = (0, o.q_F)(
             {
-                height: I ? N + y : y,
+                height: E ? N + y : y,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -78,7 +78,7 @@ let m = i.memo(function (e) {
         );
     return (
         i.useLayoutEffect(() => {
-            _(!1), E(g);
+            _(!1), I(g);
         }, [g]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {

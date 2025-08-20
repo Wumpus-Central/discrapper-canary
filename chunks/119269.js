@@ -1,96 +1,99 @@
 n.d(t, {
-    Qo: () => f,
-    ZP: () => x,
+    Qo: () => h,
+    ZP: () => g,
 });
-var i,
-    r = n(951288),
-    s = n(647438),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
-    l = n.n(a),
-    o = n(442837),
-    c = n(481060),
-    d = n(607070),
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
+    c = n(607070),
     u = n(821982),
-    m = n(967538),
-    p = n(885302),
-    g = n(914677),
-    h = n(86852),
-    f =
-        (((i = {})[(i.NITRO_GEM = 0)] = "NITRO_GEM"),
-        (i[(i.NITRO_LOGO = 1)] = "NITRO_LOGO"),
-        (i[(i.AVATAR_DECO = 2)] = "AVATAR_DECO"),
-        i);
-let b = (e) => {
+    d = n(967538),
+    f = n(885302),
+    _ = n(914677),
+    p = n(86852),
+    h = (function (e) {
+        return (
+            (e[(e.NITRO_GEM = 0)] = "NITRO_GEM"),
+            (e[(e.NITRO_LOGO = 1)] = "NITRO_LOGO"),
+            (e[(e.AVATAR_DECO = 2)] = "AVATAR_DECO"),
+            e
+        );
+    })({});
+let m = (e) => {
         let { avatarDecoAssetId: t, avatarDecoAssetDescription: n } = e,
-            i = s.useMemo(() => (0, u.Z)(t, c.EFr.SIZE_120, !1), [t]);
+            a = i.useMemo(() => (0, u.Z)(t, l.EFr.SIZE_120, !1), [t]);
         return (0, r.jsx)("div", {
-            className: h.avatarDecoContainer,
+            className: p.avatarDecoContainer,
             children: (0, r.jsx)("div", {
-                className: h.avatarDeco,
+                className: p.avatarDeco,
                 children: (0, r.jsx)("img", {
-                    className: h.avatarDecoImage,
+                    className: p.avatarDecoImage,
                     alt: n,
-                    src: i,
+                    src: a,
                 }),
             }),
         });
     },
-    x = (e) => {
+    g = (e) => {
         let {
                 showAnimations: t = !0,
                 iconClassName: n,
                 staticPercentage: i,
-                innerCircleClassName: s,
-                progressCircleStrokeSize: a,
-                backgroundCircleSize: c,
-                percentage: u,
-                initialPercentage: f,
-                progressCircleVariation: x = 0,
-                avatarDecoAssetId: _,
-                avatarDecoAssetDescription: j,
-                ellipseOpacity: E,
-                customAnimationClassName: C,
-                circleColor: O,
-                circleStroke: v,
+                innerCircleClassName: a,
+                progressCircleStrokeSize: l,
+                backgroundCircleSize: u,
+                percentage: h,
+                initialPercentage: g,
+                progressCircleVariation: E = 0,
+                avatarDecoAssetId: b,
+                avatarDecoAssetDescription: y,
+                ellipseOpacity: O,
+                customAnimationClassName: v,
+                circleColor: I,
+                circleStroke: T,
             } = e,
-            S = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-            T = t && !S;
+            S = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            A = t && !S,
+            C = () => {
+                switch (E) {
+                    case 0:
+                        return (0, r.jsx)(d.Z, {
+                            className: A ? p.nitroGemAnimation : void 0,
+                            backgroundColor: o()(p.gemBackgroundFill, a),
+                            backgroundCircleSize: u,
+                        });
+                    case 1:
+                        return (0, r.jsx)(f.Z, {
+                            circleColor: I,
+                            ellipseOpacity: O,
+                        });
+                    case 2:
+                        if (null != b)
+                            return (0, r.jsx)(m, {
+                                avatarDecoAssetId: b,
+                                avatarDecoAssetDescription: y,
+                            });
+                        return null;
+                    default:
+                        return null;
+                }
+            };
         return (0, r.jsx)("div", {
-            className: l()(h.progressCircle, n),
-            children: (0, r.jsx)(g.Z, {
-                animationClassName: l()(h.activeProgressCircle, {
-                    [h.activeProgressCircleAnimation]: T,
-                    [null != C ? C : ""]: T,
+            className: o()(p.progressCircle, n),
+            children: (0, r.jsx)(_.Z, {
+                animationClassName: o()(p.activeProgressCircle, {
+                    [p.activeProgressCircleAnimation]: A,
+                    [null != v ? v : ""]: A,
                 }),
-                progressCircleStroke: v,
-                progressCircleStrokeSize: a,
-                percentage: null != i ? i : u,
-                initialPercentage: null != i ? i : f,
-                progressCircleVariation: x,
-                children: (() => {
-                    switch (x) {
-                        case 0:
-                            return (0, r.jsx)(m.Z, {
-                                className: T ? h.nitroGemAnimation : void 0,
-                                backgroundColor: l()(h.gemBackgroundFill, s),
-                                backgroundCircleSize: c,
-                            });
-                        case 1:
-                            return (0, r.jsx)(p.Z, {
-                                circleColor: O,
-                                ellipseOpacity: E,
-                            });
-                        case 2:
-                            if (null != _)
-                                return (0, r.jsx)(b, {
-                                    avatarDecoAssetId: _,
-                                    avatarDecoAssetDescription: j,
-                                });
-                            return null;
-                        default:
-                            return null;
-                    }
-                })(),
+                progressCircleStroke: T,
+                progressCircleStrokeSize: l,
+                percentage: null != i ? i : h,
+                initialPercentage: null != i ? i : g,
+                progressCircleVariation: E,
+                children: C(),
             }),
         });
     };

@@ -1,4 +1,4 @@
-n.d(t, { w: () => E }), n(388685), n(781311), n(953529);
+n.d(t, { w: () => I }), n(388685), n(781311), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -63,21 +63,21 @@ function N(e, t) {
         e
     );
 }
-function I(e) {
+function E(e) {
     var t;
     let {
             pendingState: l,
             dirtyState: f,
             originalGuild: x,
-            settingsGuild: I,
-            settingsMetadata: E,
+            settingsGuild: E,
+            settingsMetadata: I,
             settingsProfile: S,
         } = e,
-        T = I.id,
+        T = E.id,
         [P, w] = i.useState(!1),
         [R, Z] = i.useState(null),
-        D = I.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        A = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
+        D = E.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        A = null != (t = (0, g.A)({ guildId: E.id })) ? t : 0,
         L = i.useCallback(() => {
             Z(null), h.Z.init(T, _.pNK.ACCESS);
         }, [T]),
@@ -133,7 +133,7 @@ function I(e) {
         B = i.useCallback(
             (e) => {
                 if (
-                    (l.isAgeRestricted !== (I.ownerConfiguredContentLevel === _.V_K.AGE_RESTRICTED) &&
+                    (l.isAgeRestricted !== (E.ownerConfiguredContentLevel === _.V_K.AGE_RESTRICTED) &&
                         k(async () => {
                             let e = l.isAgeRestricted ? _.V_K.AGE_RESTRICTED : _.V_K.DEFAULT;
                             await M({ ownerConfiguredContentLevel: e });
@@ -143,8 +143,8 @@ function I(e) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => "" !== e);
                     k(async () => {
-                        if (I.features.has(_.oNc.DISCOVERABLE)) {
-                            let e = new Set(I.features);
+                        if (E.features.has(_.oNc.DISCOVERABLE)) {
+                            let e = new Set(E.features);
                             e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
                         }
                         f.verificationDirty && (await U(t, r, e));
@@ -153,30 +153,30 @@ function I(e) {
                     let { pendingVerificationFields: t } = l;
                     if (null == t) return;
                     k(async () => {
-                        if (I.features.has(_.oNc.DISCOVERABLE)) {
-                            let e = new Set(I.features);
+                        if (E.features.has(_.oNc.DISCOVERABLE)) {
+                            let e = new Set(E.features);
                             e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
                         }
                         f.verificationDirty && (await G([...t], !0, e)),
-                            f.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility }));
+                            f.profileDirty && null != S && (await (0, p.pV)(E.id, { visibility: S.visibility }));
                     });
                 } else if (l.joinType === j.A.DISCOVERABLE) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => "" !== e);
                     k(async () => {
                         if ((f.verificationDirty && (await U(t, r, e)), f.guildDirty)) {
-                            (0, b.UA)(I, x);
-                            let e = new Set(I.features);
+                            (0, b.UA)(E, x);
+                            let e = new Set(E.features);
                             e.add(_.oNc.DISCOVERABLE),
                                 e.delete(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
                                 await M({
                                     features: e,
-                                    discoverySplash: I.discoverySplash,
-                                    description: I.description,
-                                    preferredLocale: I.preferredLocale,
+                                    discoverySplash: E.discoverySplash,
+                                    description: E.description,
+                                    preferredLocale: E.preferredLocale,
                                 });
                             try {
-                                await (0, c.Vv)(C({ guildId: I.id }, E));
+                                await (0, c.Vv)(C({ guildId: E.id }, I));
                             } catch (e) {
                                 throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
                             }
@@ -184,7 +184,7 @@ function I(e) {
                     });
                 }
             },
-            [l, k, I, f, M, U, S, G, x, E],
+            [l, k, E, f, M, U, S, G, x, I],
         ),
         F = i.useCallback(() => {
             var e;
@@ -232,7 +232,7 @@ function I(e) {
             );
         }, [D, B, l, T, A]),
         H = l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED,
-        z = null != I.description && E.primaryCategoryId !== O.o3 && E.keywords.length > 0;
+        z = null != E.description && I.primaryCategoryId !== O.o3 && I.keywords.length > 0;
     return (0, r.jsx)(s.Z, {
         message: H ? y.intl.string(y.t.V2G2Ym) : void 0,
         onSaveText: H ? y.intl.string(y.t["qjtt/v"]) : void 0,
@@ -243,7 +243,7 @@ function I(e) {
         disabled: H && !z,
     });
 }
-function E() {
+function I() {
     let { pendingState: e, dirtyState: t } = (0, l.cj)([x.Z], () => ({
             pendingState: x.Z.pendingState,
             dirtyState: x.Z.dirtyState,
@@ -269,7 +269,7 @@ function E() {
                 message: y.intl.string(y.t.TEXwRk),
                 onReset: () => h.Z.init(n.id, _.pNK.ACCESS),
             })
-          : (0, r.jsx)(I, {
+          : (0, r.jsx)(E, {
                 pendingState: e,
                 dirtyState: t,
                 originalGuild: a,

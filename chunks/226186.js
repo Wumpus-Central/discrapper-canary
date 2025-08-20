@@ -1,8 +1,8 @@
 n.d(t, {
     Z: () => r,
-    u: () => a,
+    u: () => s,
 });
-let s = (0, n(818083).B)({
+let a = (0, n(818083).B)({
     kind: "user",
     id: "2024-10_email_change_reasoning_buttons_free_text_response",
     label: "Email Change Reasoning Buttons Free Text Response",
@@ -15,7 +15,7 @@ let s = (0, n(818083).B)({
         },
     ],
 });
-function a(e) {
-    return !!s.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+function s(e) {
+    return !!a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
 }
-let r = s;
+let r = a;

@@ -1,8 +1,8 @@
 t.d(n, {
     Tx: () => l,
     d8: () => c,
-    nY: () => o,
-    v6: () => i,
+    nY: () => i,
+    v6: () => a,
 });
 var r = t(951288);
 function l(e) {
@@ -13,11 +13,11 @@ function c(e) {
     let { children: n } = e;
     return (0, r.jsx)("strong", { children: n });
 }
-function i(e) {
+function a(e) {
     let { children: n } = e;
     return (0, r.jsx)("u", { children: n });
 }
-function o(e) {
+function i(e) {
     let { children: n } = e;
     return (0, r.jsx)("s", { children: n });
 }

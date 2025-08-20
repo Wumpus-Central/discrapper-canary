@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => I,
+    h6: () => P,
 }),
     n(388685);
 var r = n(951288),
@@ -22,17 +22,17 @@ var r = n(951288),
     O = n(358085),
     _ = n(143316),
     y = n(240126),
-    v = n(147522),
-    j = n(809780),
+    j = n(147522),
+    v = n(809780),
     C = n(981631),
-    E = n(388032),
-    x = n(915087);
+    x = n(388032),
+    E = n(915087);
 function S(e) {
-    var t, n, l, a, _, S, I;
+    var t, n, l, a, _, S, P;
     let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, j.ZP)(A),
-        { loadState: L, channels: M } = R,
+        [R, D] = (0, v.ZP)(A),
+        { loadState: M, channels: L } = R,
         { maybeLoadMore: k } = D,
         U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
@@ -102,14 +102,14 @@ function S(e) {
             ),
         );
     let G = (0, g.Z)("unreads", A);
-    if (0 === M.length) {
+    if (0 === L.length) {
         return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
-            header: E.intl.string(E.t["6XMM+P"]),
+            header: x.intl.string(x.t["6XMM+P"]),
             tip:
-                (null == (I = s().os) ? void 0 : I.family) === "OS X"
-                    ? E.intl.string(E.t.w9uDOT)
-                    : E.intl.string(E.t.BiUJCw),
+                (null == (P = s().os) ? void 0 : P.family) === "OS X"
+                    ? x.intl.string(x.t.w9uDOT)
+                    : x.intl.string(x.t.BiUJCw),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: L === j.jd.Done ? void 0 : k,
-                            className: o()(x.scroller, "group-spacing-".concat(U)),
+                            onScroll: M === v.jd.Done ? void 0 : k,
+                            className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
-                                w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
-                                (0, v.Z)(M, D, N),
-                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: x.spinner }),
+                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
+                                (0, j.Z)(L, D, N),
+                                M === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -206,13 +206,13 @@ function S(e) {
         }),
     });
 }
-function P(e) {
+function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
-        className: x.tutorial,
+        className: E.tutorial,
         children: [
             (0, r.jsx)("div", {
-                className: x.tutorialIcon,
+                className: E.tutorialIcon,
                 children: (0, r.jsx)(d.xx7, {
                     size: "md",
                     color: "currentColor",
@@ -221,22 +221,22 @@ function P(e) {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(d.X6q, {
-                        className: x.__invalid_tutorialHeader,
+                        className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: E.intl.string(E.t.vZPktL),
+                        children: x.intl.string(x.t.vZPktL),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: E.intl.string(E.t.vWkIIC),
+                        children: x.intl.string(x.t.vWkIIC),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: x.tutorialButton,
+                        className: E.tutorialButton,
                         children: (0, r.jsx)(d.zxk, {
                             variant: "primary",
                             size: "sm",
-                            text: E.intl.string(E.t["+IrDzM"]),
+                            text: x.intl.string(x.t["+IrDzM"]),
                             onClick: t,
                         }),
                     }),
@@ -245,12 +245,12 @@ function P(e) {
         ],
     });
 }
-function I() {
+function P() {
     return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: E.intl.string(E.t["KG/ynZ"]),
-        tip: E.intl.string(E.t.cvcKzc),
+        header: x.intl.string(x.t["KG/ynZ"]),
+        tip: x.intl.string(x.t.cvcKzc),
     });
 }
 let N = () =>

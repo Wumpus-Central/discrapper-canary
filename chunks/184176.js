@@ -1,38 +1,38 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(767714),
-    a = n(382791),
-    l = n(981631),
-    o = n(388032),
+var i = n(481060),
+    a = n(767714),
+    o = n(382791),
+    s = n(981631),
+    l = n(388032),
     c = n(838344),
-    d = n(309389);
-let u = () => {
-    let e = { section: l.jXE.REVERSE_TRIAL_BANNER };
-    return (0, i.jsxs)("div", {
+    u = n(309389);
+let d = () => {
+    let e = { section: s.jXE.REVERSE_TRIAL_BANNER };
+    return (0, r.jsxs)("div", {
         className: c.banner,
         children: [
-            (0, i.jsx)(a.mn, {
-                text: o.intl.string(o.t.qYKftb),
+            (0, r.jsx)(o.mn, {
+                text: l.intl.string(l.t.qYKftb),
                 className: c.pill,
             }),
-            (0, i.jsx)("img", {
-                src: d,
+            (0, r.jsx)("img", {
+                src: u,
                 width: 64,
                 height: 64,
                 alt: "",
                 className: c.bannerArt,
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: c.bodyContainer,
-                children: (0, i.jsx)(r.Text, {
+                children: (0, r.jsx)(i.Text, {
                     color: "text-secondary",
                     variant: "text-sm/normal",
-                    children: o.intl.format(o.t.uu1WAQ, { weeks: 1 }),
+                    children: l.intl.format(l.t.uu1WAQ, { weeks: 1 }),
                 }),
             }),
-            (0, i.jsx)(s.Z, {
+            (0, r.jsx)(a.Z, {
                 premiumModalAnalyticsLocation: e,
                 showGradient: !0,
                 className: c.promoNitroButton,

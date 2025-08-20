@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Jc: () => k,
-    dx: () => M,
+    Jc: () => M,
+    dx: () => j,
     tE: () => G,
 });
 var i,
@@ -365,9 +365,9 @@ class A {
         return t;
     }
 }
-let N = new A();
-"u" > typeof window && N.setContainer(document.body);
-let C = a.createContext(N);
+let C = new A();
+"u" > typeof window && C.setContainer(document.body);
+let N = a.createContext(C);
 var R = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
@@ -388,42 +388,42 @@ var R = function (e, t, n, r) {
 let P = !1,
     w,
     D = {};
-function L() {
+function x() {
     if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
     null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()),
-        (w = requestAnimationFrame(L));
+        (w = requestAnimationFrame(x));
 }
-let x = !1,
-    M = {
+let L = !1,
+    j = {
         get ringsEnabled() {
-            return x;
+            return L;
         },
         setRingsEnabled(e) {
-            (x = e), null == r || r.invalidate();
+            (L = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (P = !0), (w = requestAnimationFrame(L));
+            (P = !0), (w = requestAnimationFrame(x));
         },
         disableAnimationTracking() {
             (P = !1), null != w && cancelAnimationFrame(w);
         },
     };
-function k(e) {
+function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
         a.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        (0, o.jsxs)(C.Provider, {
+        (0, o.jsxs)(N.Provider, {
             value: i.current,
-            children: [n, (0, o.jsx)(j, {})],
+            children: [n, (0, o.jsx)(k, {})],
         })
     );
 }
-function j() {
-    let e = a.useContext(C),
+function k() {
+    let e = a.useContext(N),
         [, t] = a.useState({});
     return (
         a.useEffect(
@@ -435,7 +435,7 @@ function j() {
             ),
             [e],
         ),
-        M.ringsEnabled && e.visible
+        j.ringsEnabled && e.visible
             ? (0, o.jsx)("div", {
                   className: d("focus-rings-ring", e.className),
                   style: e.getStyle(),
@@ -472,7 +472,7 @@ function G(e) {
             );
     let p = a.useRef(!1),
         [h, m] = a.useState(!1),
-        g = a.useContext(C),
+        g = a.useContext(N),
         E = a.Children.only(_),
         { onBlur: b, onFocus: y, ...O } = E.props,
         v = a.useMemo(

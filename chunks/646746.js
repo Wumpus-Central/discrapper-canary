@@ -1,160 +1,160 @@
-n.d(t, { O: () => b });
+n.d(t, { O: () => v });
 var l = n(951288),
     r = n(647438),
-    i = n(120356),
-    a = n.n(i),
-    s = n(392711),
+    a = n(120356),
+    s = n.n(a),
+    i = n(392711),
     o = n(481060),
-    c = n(686546),
-    u = n(627050),
+    u = n(686546),
+    c = n(627050),
     d = n(124347),
-    f = n(499376),
-    h = n(937889),
-    _ = n(930282),
+    h = n(499376),
+    f = n(937889),
+    m = n(930282),
     g = n(695346),
-    m = n(318616),
-    p = n(388032),
-    E = n(698755);
-function b(e) {
-    let { message: t, forwardOptions: n, channel: i } = e,
-        b = g.jU.useSetting(),
+    p = n(318616),
+    b = n(388032),
+    _ = n(698755);
+function v(e) {
+    let { message: t, forwardOptions: n, channel: a } = e,
+        v = g.jU.useSetting(),
         {
-            attachments: y,
-            embeds: I,
-            hasContent: S,
-            contentMessage: A,
-        } = (0, m.c)({
+            attachments: x,
+            embeds: y,
+            hasContent: w,
+            contentMessage: j,
+        } = (0, p.c)({
             message: t,
-            channel: i,
+            channel: a,
             forwardOptions: n,
         }),
-        O = u.d.useExperiment({ location: "forward_preview" }).enabled,
-        v = r.useMemo(
+        O = c.d.useExperiment({ location: "forward_preview" }).enabled,
+        P = r.useMemo(
             () =>
-                S
-                    ? (0, h.ZP)(t, {
+                w
+                    ? (0, f.ZP)(t, {
                           formatInline: !0,
                           allowLinks: !0,
                           allowHeading: !0,
                           allowList: !0,
                           allowGameMentions: O,
                           hideSimpleEmbedContent: !1,
-                          contentMessage: A,
+                          contentMessage: j,
                       }).content
                     : null,
-            [A, S, t, O],
+            [j, w, t, O],
         ),
-        C = y.length,
-        x = null,
-        P = null,
-        N = null;
-    if (C > 0 || I.length > 0) {
-        var T, L, j, Z;
-        let e = (0, s.countBy)(y, (e) => (0, f.aw)(e, !0)),
-            t = null != (j = e.IMAGE) ? j : 0,
-            n = null != (Z = e.VIDEO) ? Z : 0;
+        S = x.length,
+        E = null,
+        C = null,
+        Z = null;
+    if (S > 0 || y.length > 0) {
+        var N, L, M, T;
+        let e = (0, i.countBy)(x, (e) => (0, h.aw)(e, !0)),
+            t = null != (M = e.IMAGE) ? M : 0,
+            n = null != (T = e.VIDEO) ? T : 0;
         t > 0 && n > 0
-            ? ((x = p.intl.formatToPlainString(p.t.Lr0Toq, {
+            ? ((E = b.intl.formatToPlainString(b.t.Lr0Toq, {
                   image_count: t,
                   video_count: n,
               })),
-              (P = o.Ka2))
+              (C = o.Ka2))
             : n > 0
-              ? ((x = p.intl.formatToPlainString(p.t.SJ6pPT, { count: n })), (P = o.g8d))
+              ? ((E = b.intl.formatToPlainString(b.t.SJ6pPT, { count: n })), (C = o.g8d))
               : t > 0
-                ? ((x = p.intl.formatToPlainString(p.t.h4pFfX, { count: t })), (P = 1 === t ? o.XBm : o.Ka2))
-                : ((x = p.intl.formatToPlainString(p.t["89ihS0"], { count: C })), (P = o.Ujz)),
-            n > 0 && C === n
-                ? (N = (0, l.jsxs)("div", {
-                      className: a()(E.attachmentPreview, E.attachmentPreviewVideo),
+                ? ((E = b.intl.formatToPlainString(b.t.h4pFfX, { count: t })), (C = 1 === t ? o.XBm : o.Ka2))
+                : ((E = b.intl.formatToPlainString(b.t["89ihS0"], { count: S })), (C = o.Ujz)),
+            n > 0 && S === n
+                ? (Z = (0, l.jsxs)("div", {
+                      className: s()(_.attachmentPreview, _.attachmentPreviewVideo),
                       children: [
                           (0, l.jsx)(d.ZP, {
-                              className: E.thumbnail,
-                              src: y[0].proxy_url,
+                              className: _.thumbnail,
+                              src: x[0].proxy_url,
                               width: 56,
                               height: 56,
                           }),
                           (0, l.jsx)(o.g8d, {
-                              className: E.playIcon,
+                              className: _.playIcon,
                               size: "md",
                               color: "white",
                           }),
                       ],
                   }))
-                : C > 0
-                  ? (N = (0, l.jsx)("div", {
-                        className: E.attachmentPreview,
+                : S > 0
+                  ? (Z = (0, l.jsx)("div", {
+                        className: _.attachmentPreview,
                         children: (0, l.jsx)(d.ZP, {
-                            src: y[0].proxy_url,
+                            src: x[0].proxy_url,
                             width: 56,
                             height: 56,
                         }),
                     }))
-                  : (null == (L = I[0]) || null == (T = L.thumbnail) ? void 0 : T.proxyURL) != null &&
-                    (N = (0, l.jsx)("div", {
-                        className: E.attachmentPreview,
+                  : (null == (L = y[0]) || null == (N = L.thumbnail) ? void 0 : N.proxyURL) != null &&
+                    (Z = (0, l.jsx)("div", {
+                        className: _.attachmentPreview,
                         children: (0, l.jsx)(d.ZP, {
-                            src: I[0].thumbnail.proxyURL,
+                            src: y[0].thumbnail.proxyURL,
                             width: 56,
                             height: 56,
                         }),
                     }));
     }
     return (
-        C > 1 &&
-            null != N &&
-            (N = (0, l.jsxs)("div", {
-                className: E.attachmentPreviewOverflow,
+        S > 1 &&
+            null != Z &&
+            (Z = (0, l.jsxs)("div", {
+                className: _.attachmentPreviewOverflow,
                 children: [
-                    (0, l.jsx)(c.ZP, {
-                        mask: c.ZP.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                    (0, l.jsx)(u.ZP, {
+                        mask: u.ZP.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: N,
+                        children: Z,
                     }),
                     (0, l.jsxs)(o.Text, {
-                        className: E.overflowCount,
+                        className: _.overflowCount,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: ["+", C - 1],
+                        children: ["+", S - 1],
                     }),
                 ],
             })),
         (0, l.jsxs)("div", {
-            className: E.forwardPreview,
+            className: _.forwardPreview,
             children: [
-                (0, l.jsx)("div", { className: E.quote }),
+                (0, l.jsx)("div", { className: _.quote }),
                 (0, l.jsxs)("div", {
-                    className: E.contentWrapper,
+                    className: _.contentWrapper,
                     children: [
-                        S &&
-                            (0, l.jsx)(_.ZP, {
-                                className: a()(E.forwardPreviewMessage, C > 0 && E.hasAttachments),
+                        w &&
+                            (0, l.jsx)(m.ZP, {
+                                className: s()(_.forwardPreviewMessage, S > 0 && _.hasAttachments),
                                 message: t,
-                                content: v,
-                                compact: b,
+                                content: P,
+                                compact: v,
                             }),
-                        C > 0 &&
+                        S > 0 &&
                             (0, l.jsxs)("div", {
-                                className: E.attachmentRow,
+                                className: _.attachmentRow,
                                 children: [
-                                    null != P &&
-                                        (0, l.jsx)(P, {
+                                    null != C &&
+                                        (0, l.jsx)(C, {
                                             size: "custom",
-                                            width: S ? 18 : 20,
+                                            width: w ? 18 : 20,
                                             color: o.TVs.colors.TEXT_LOW_CONTRAST,
                                         }),
-                                    null != x &&
+                                    null != E &&
                                         (0, l.jsx)(o.Text, {
-                                            variant: S ? "text-sm/medium" : "text-md/medium",
+                                            variant: w ? "text-sm/medium" : "text-md/medium",
                                             color: "text-low-contrast",
-                                            children: x,
+                                            children: E,
                                         }),
                                 ],
                             }),
                     ],
                 }),
-                N,
+                Z,
             ],
         })
     );

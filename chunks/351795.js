@@ -1,59 +1,59 @@
-var n = r(243727),
-    i = r(89103),
-    o = r(581079);
-function a(t, e, r, a, u, s, c) {
-    var l = r.getStartOffset(),
-        f = r.getEndOffset(),
-        p = t.__get(u).getMutability(),
-        h = c ? l : f;
-    if ("MUTABLE" === p) return r;
-    var d = i(e, u).filter(function (t) {
-        return h <= t.end && h >= t.start;
+var r = n(243727),
+    i = n(89103),
+    a = n(581079);
+function o(e, t, n, o, s, l, c) {
+    var u = n.getStartOffset(),
+        d = n.getEndOffset(),
+        f = e.__get(s).getMutability(),
+        _ = c ? u : d;
+    if ("MUTABLE" === f) return n;
+    var p = i(t, s).filter(function (e) {
+        return _ <= e.end && _ >= e.start;
     });
-    1 != d.length && o(!1);
-    var g = d[0];
-    if ("IMMUTABLE" === p)
-        return r.merge({
-            anchorOffset: g.start,
-            focusOffset: g.end,
+    1 != p.length && a(!1);
+    var h = p[0];
+    if ("IMMUTABLE" === f)
+        return n.merge({
+            anchorOffset: h.start,
+            focusOffset: h.end,
             isBackward: !1,
         });
-    s || (c ? (f = g.end) : (l = g.start));
-    var y = n.getRemovalRange(l, f, e.getText().slice(g.start, g.end), g.start, a);
-    return r.merge({
-        anchorOffset: y.start,
-        focusOffset: y.end,
+    l || (c ? (d = h.end) : (u = h.start));
+    var m = r.getRemovalRange(u, d, t.getText().slice(h.start, h.end), h.start, o);
+    return n.merge({
+        anchorOffset: m.start,
+        focusOffset: m.end,
         isBackward: !1,
     });
 }
-t.exports = function (t, e, r, n, i) {
-    var o = n.getStartOffset(),
-        u = n.getEndOffset(),
-        s = e.getEntityAt(o),
-        c = r.getEntityAt(u - 1);
-    if (!s && !c) return n;
-    var l = n;
-    if (s && s === c) l = a(t, e, l, i, s, !0, !0);
-    else if (s && c) {
-        var f = a(t, e, l, i, s, !1, !0),
-            p = a(t, r, l, i, c, !1, !1);
-        l = l.merge({
-            anchorOffset: f.getAnchorOffset(),
-            focusOffset: p.getFocusOffset(),
+e.exports = function (e, t, n, r, i) {
+    var a = r.getStartOffset(),
+        s = r.getEndOffset(),
+        l = t.getEntityAt(a),
+        c = n.getEntityAt(s - 1);
+    if (!l && !c) return r;
+    var u = r;
+    if (l && l === c) u = o(e, t, u, i, l, !0, !0);
+    else if (l && c) {
+        var d = o(e, t, u, i, l, !1, !0),
+            f = o(e, n, u, i, c, !1, !1);
+        u = u.merge({
+            anchorOffset: d.getAnchorOffset(),
+            focusOffset: f.getFocusOffset(),
             isBackward: !1,
         });
-    } else if (s) {
-        var h = a(t, e, l, i, s, !1, !0);
-        l = l.merge({
-            anchorOffset: h.getStartOffset(),
+    } else if (l) {
+        var _ = o(e, t, u, i, l, !1, !0);
+        u = u.merge({
+            anchorOffset: _.getStartOffset(),
             isBackward: !1,
         });
     } else if (c) {
-        var d = a(t, r, l, i, c, !1, !1);
-        l = l.merge({
-            focusOffset: d.getEndOffset(),
+        var p = o(e, n, u, i, c, !1, !1);
+        u = u.merge({
+            focusOffset: p.getEndOffset(),
             isBackward: !1,
         });
     }
-    return l;
+    return u;
 };

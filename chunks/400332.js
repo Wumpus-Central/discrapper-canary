@@ -1,9 +1,9 @@
-n.d(t, { U: () => a });
-var i = n(819640),
-    r = n(585483),
-    s = n(981631);
-let a = {
+n.d(t, { U: () => o });
+var r = n(819640),
+    i = n(585483),
+    a = n(981631);
+let o = {
     binds: ["mod+s"],
     comboKeysBindGlobal: !0,
-    action: () => !(i.Z.getLayers().length > 0) && (r.S.dispatchToLastSubscribed(s.CkL.TOGGLE_STICKER_PICKER), !1),
+    action: () => !(r.Z.getLayers().length > 0) && (i.S.dispatchToLastSubscribed(a.CkL.TOGGLE_STICKER_PICKER), !1),
 };

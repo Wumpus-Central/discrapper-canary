@@ -1,106 +1,119 @@
-n.d(t, { Z: () => o }), n(415506);
+n.d(t, { Z: () => p }), n(415506);
 var r = n(558706),
-    s = n(170216),
-    l = n(723642),
-    a = n(981631);
-class i extends s.L {
+    i = n(170216),
+    a = n(723642),
+    o = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+class _ extends i.L {
     createRequestPayload(e) {
-        let { searchQuery: t, searchTabs: n, getLimit: r, pagination: s, trackExactTotalHits: a } = e,
-            { include_nsfw: i, channel_id: o } = t,
-            c = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    s = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            s = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
-                        return s;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-                }
-                return s;
-            })(t, ["include_nsfw", "channel_id"]),
-            u = {
-                include_nsfw: i,
-                channel_ids: o,
+        let { searchQuery: t, searchTabs: n, getLimit: r, pagination: i, trackExactTotalHits: o } = e,
+            { include_nsfw: s, channel_id: c } = t,
+            f = d(t, ["include_nsfw", "channel_id"]),
+            _ = {
+                include_nsfw: s,
+                channel_ids: c,
                 tabs: {},
-                track_exact_total_hits: a,
+                track_exact_total_hits: o,
             };
         return (
             n.forEach((e) => {
-                var t, n;
-                let a = r(e),
-                    i = l.yY[e],
-                    o = null != i ? l.SO[i] : {};
-                u.tabs[e] =
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, l.E2, o, c, s)),
-                    (n = n = { limit: a }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t);
+                let t = r(e),
+                    n = a.yY[e],
+                    o = null != n ? a.SO[n] : {};
+                _.tabs[e] = u(l({}, a.E2, o, f, i), { limit: t });
             }),
-            u
+            _
         );
     }
     createWithPayload(e) {
-        let { searchContext: t, searchQuery: n, searchTabs: s, getLimit: l, pagination: i, trackExactTotalHits: o } = e,
+        let { searchContext: t, searchQuery: n, searchTabs: i, getLimit: a, pagination: s, trackExactTotalHits: l } = e,
             c = this.createRequestPayload({
                 searchQuery: n,
-                searchTabs: s,
-                getLimit: l,
-                pagination: i,
-                trackExactTotalHits: o,
+                searchTabs: i,
+                getLimit: a,
+                pagination: s,
+                trackExactTotalHits: l,
             });
         switch (t.type) {
-            case a.aib.GUILD:
-            case a.aib.GUILD_CHANNEL:
-            case a.aib.THREAD:
+            case o.aib.GUILD:
+            case o.aib.GUILD_CHANNEL:
+            case o.aib.THREAD:
                 return new r.tJ(t.guildId, t.type, n, c);
-            case a.aib.CHANNEL:
+            case o.aib.CHANNEL:
                 return new r.tJ(t.channelId, t.type, n, c);
-            case a.aib.DMS:
+            case o.aib.DMS:
                 return new r.tJ(t.type, t.type, n, c);
             default:
                 throw Error("[SearchFetchManager] Unsupported search context type: ".concat(t.type));
@@ -111,21 +124,21 @@ class i extends s.L {
             id: t,
             searchContext: n,
             searchQuery: r,
-            searchTabs: s,
-            getLimit: l,
-            pagination: a,
-            trackExactTotalHits: i,
+            searchTabs: i,
+            getLimit: a,
+            pagination: o,
+            trackExactTotalHits: s,
         } = e;
         this.cancel(t);
-        let o = this.createWithPayload({
+        let l = this.createWithPayload({
             searchContext: n,
             searchQuery: r,
-            searchTabs: s,
-            getLimit: l,
-            pagination: a,
-            trackExactTotalHits: i,
+            searchTabs: i,
+            getLimit: a,
+            pagination: o,
+            trackExactTotalHits: s,
         });
-        return this.set(t, o), o;
+        return this.set(t, l), l;
     }
 }
-let o = new i();
+let p = new _();

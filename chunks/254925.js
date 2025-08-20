@@ -22,13 +22,13 @@ var r = n(951288),
     y = n(742409),
     C = n(981631),
     N = n(921944),
-    I = n(131085),
-    E = n(899926),
+    E = n(131085),
+    I = n(899926),
     S = n(388032),
     T = n(616397);
 let P = function () {
     var e, t, n, P;
-    (0, S.useSyncMessages)(E.messagesLoader);
+    (0, S.useSyncMessages)(I.messagesLoader);
     let w = (0, a.e7)([b.Z], () => b.Z.getGuild()),
         R = (0, a.e7)([b.Z], () => b.Z.getGuildProfile()),
         { fetchGuildProfile: Z, fetchStatus: D } = (0, m.u)(null == w ? void 0 : w.id);
@@ -49,9 +49,9 @@ let P = function () {
     let A = l.Y.VISIBLE.has(R.visibility),
         L = (0, g.up)(w),
         k = !L || (null == R ? void 0 : R.tag) == null,
-        M = null != (e = R.badge) ? e : I.QV["0"],
-        G = null != (t = R.badgeColorPrimary) ? t : I.Ek["0"].primary,
-        U = null != (n = R.badgeColorSecondary) ? n : I.Ek["0"].secondary,
+        M = null != (e = R.badge) ? e : E.QV["0"],
+        G = null != (t = R.badgeColorPrimary) ? t : E.Ek["0"].primary,
+        U = null != (n = R.badgeColorSecondary) ? n : E.Ek["0"].secondary,
         B = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(v.Z, {
@@ -82,7 +82,7 @@ let P = function () {
             (0, r.jsx)(o.X6q, {
                 className: T.title,
                 variant: "heading-lg/semibold",
-                children: S.intl.string(E.default.mf2OwM),
+                children: S.intl.string(I.default.mf2OwM),
             }),
             (0, r.jsxs)("div", {
                 className: T.container,
@@ -96,7 +96,7 @@ let P = function () {
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
-                                        children: S.intl.format(E.default["655Un5"], {
+                                        children: S.intl.format(I.default["655Un5"], {
                                             onClickServerProfile: () => {
                                                 f.Z.setSection(C.pNK.PROFILE);
                                             },
@@ -110,7 +110,7 @@ let P = function () {
                                             className: T.privateProfileWarning,
                                             children: (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/medium",
-                                                children: S.intl.format(E.default.CRbkIy, {
+                                                children: S.intl.format(I.default.CRbkIy, {
                                                     onClickEditSetting: () =>
                                                         f.Z.setSection(C.pNK.PROFILE, C.KsC.PROFILE_VISIBILITY),
                                                 }),
@@ -127,7 +127,7 @@ let P = function () {
                                               children: (0, r.jsx)(o.Text, {
                                                   variant: "text-md/semibold",
                                                   color: "header-primary",
-                                                  children: S.intl.string(E.default["1zams7"]),
+                                                  children: S.intl.string(I.default["1zams7"]),
                                               }),
                                           }),
                                           (0, r.jsx)(o.rsf, {

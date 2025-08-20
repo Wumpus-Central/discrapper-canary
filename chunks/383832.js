@@ -1,88 +1,95 @@
 n.d(t, {
-    Z: () => o,
-    y: () => c,
+    Z: () => d,
+    y: () => f,
 });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(570140),
-    a = n(71509);
+var i = n(481060),
+    a = n(570140),
+    o = n(71509);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function o() {
-    (0, r.ZDy)(
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d() {
+    (0, i.ZDy)(
         async () => {
             let { default: e } = await n.e("55944").then(n.bind(n, 266653));
-            return (t) => (0, i.jsx)(e, l({}, t));
+            return (t) => (0, r.jsx)(e, l({}, t));
         },
         {
             onCloseCallback: () => {
-                s.Z.dispatch({
+                a.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: a.Ui,
+            modalKey: o.Ui,
         },
     );
 }
-function c() {
-    (0, r.ZDy)(
+function f() {
+    (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e("52030"), n.e("25761"), n.e("83560")]).then(n.bind(n, 153069));
-            return (t) => {
-                var n, r;
-                return (0, i.jsx)(
-                    e,
-                    ((n = l({}, t)),
-                    (r = r = { onBackPressed: o }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    n),
-                );
-            };
+            return (t) => (0, r.jsx)(e, u(l({}, t), { onBackPressed: d }));
         },
         {
             onCloseCallback: () => {
-                s.Z.dispatch({
+                a.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: a._5,
+            modalKey: o._5,
         },
     );
 }

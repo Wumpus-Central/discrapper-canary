@@ -1,25 +1,29 @@
-n.d(t, { F: () => i }), n(413496), n(433524), n(35282);
-let r = (function (e) {
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+n.d(t, { F: () => a }), n(413496), n(433524), n(35282);
+let i = (function e(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+            i.forEach(function (t) {
+                r(e, t, n[t]);
             });
     }
     return e;
@@ -46,11 +50,11 @@ let r = (function (e) {
     },
     { "|": " " },
 );
-function i(e) {
+function a(e) {
     let t = "";
     for (let n = 0; n < e.length; n++) {
-        let i = e[n];
-        null != r[i] ? (t += r[i]) : RegExp("[\\p{Pd}\\p{Pc}\\p{Po}]", "gu").test(i) ? (t += " ") : (t += i);
+        let r = e[n];
+        null != i[r] ? (t += i[r]) : RegExp("[\\p{Pd}\\p{Pc}\\p{Po}]", "gu").test(r) ? (t += " ") : (t += r);
     }
     return t.toLowerCase();
 }

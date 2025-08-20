@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(415506), n(49124), n(642613), n(35282), n(539854);
 var r = n(595182),
     i = n.n(r),
     a = n(117806),
@@ -71,8 +71,8 @@ function A(e, t) {
         e
     );
 }
-let N = 50,
-    C = 0.9,
+let C = 50,
+    N = 0.9,
     R = 0.1,
     P = 0;
 function w(e) {
@@ -81,13 +81,13 @@ function w(e) {
 function D(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
-class L extends _.Z {
+class x extends _.Z {
     static create(e, t, n) {
-        let r = new L(e, t, !0);
+        let r = new x(e, t, !0);
         return r.initialize(n), r;
     }
     static createReplay(e, t) {
-        let n = new L(e, "0", !0),
+        let n = new x(e, "0", !0),
             r = (0, b.zS)();
         n.initializeStreamParameters([
             {
@@ -1213,7 +1213,7 @@ class L extends _.Z {
                         var n, r, a, o;
                         let s = this.videoStreamParameters.find((e) => e.ssrc === t);
                         if (void 0 !== s && (null != (n = s.quality) ? n : 0) < 100 && "video" === s.type) {
-                            let n = Math.floor(e.bitrate * C);
+                            let n = Math.floor(e.bitrate * N);
                             n = i()(n, null != (r = s.minBitrate) ? r : 0, null != (a = s.maxBitrate) ? a : n);
                             let l = null != (o = s.targetBitrate) ? o : 0;
                             (Math.abs(n - l) / ((n + l) / 2) > R || void 0 === s.targetBitrate) &&
@@ -1346,7 +1346,7 @@ class L extends _.Z {
                                         : e;
                             if (
                                 this.noiseCancellation &&
-                                t > N &&
+                                t > C &&
                                 null != o.noiseCancellerProcessTime &&
                                 null != s.noiseCancellerProcessTime
                             ) {
@@ -1358,7 +1358,7 @@ class L extends _.Z {
                             this.inputMode === v.pM.VOICE_ACTIVITY &&
                                 this.vadAutoThreshold &&
                                 this.vadUseKrisp &&
-                                e > N &&
+                                e > C &&
                                 null != o.voiceActivityDetectorProcessTime &&
                                 null != s.voiceActivityDetectorProcessTime &&
                                 (o.voiceActivityDetectorProcessTime - s.voiceActivityDetectorProcessTime) / e > 4 &&

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685), n(35282), n(415506);
+n.d(t, { Z: () => Z }), n(388685), n(35282), n(415506);
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -23,17 +23,17 @@ var r = n(664751),
     T = n(630388),
     S = n(877481),
     A = n(358085),
-    N = n(573261),
-    C = n(278323),
+    C = n(573261),
+    N = n(278323),
     R = n(58642),
     P = n(254854),
     w = n(981631),
     D = n(701488),
-    L = n(388032);
-let x = 3,
-    M = 20,
-    k = new f.Z("GamesActionCreators");
-function j(e) {
+    x = n(388032);
+let L = 3,
+    j = 20,
+    M = new f.Z("GamesActionCreators");
+function k(e) {
     let {
         applicationId: t,
         secret: n,
@@ -177,7 +177,7 @@ async function B(e) {
                   });
               })
               .catch((e) => {
-                  P.Z.show(w.kVF.LAUNCH_GAME_FAILURE, L.intl.string(L.t.YZEBdn)),
+                  P.Z.show(w.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdn)),
                       l.Z.dispatch({
                           type: "GAME_LAUNCH_FAIL",
                           applicationId: t,
@@ -191,7 +191,7 @@ async function B(e) {
           }),
           Promise.reject(f));
 }
-let V = {
+let Z = {
     addGame(e, t) {
         l.Z.dispatch({
             type: "RUNNING_GAME_ADD_OVERRIDE",
@@ -239,7 +239,7 @@ let V = {
                 new Promise((n, r) => {
                     if (null == t) return void r(Error("Game utils module not loaded"));
                     t.identifyGame(e, (t, i) =>
-                        (k.log("Identified game: ", {
+                        (M.log("Identified game: ", {
                             status: t,
                             name: i.name,
                             iconHash: i.iconHash,
@@ -288,7 +288,7 @@ let V = {
                 });
             }
         };
-        for (; n.length > 0; ) r(n.splice(0, M));
+        for (; n.length > 0; ) r(n.splice(0, j));
     },
     getDetectableGames() {
         if (!y.Z.canFetchDetectableGames()) return;
@@ -298,7 +298,7 @@ let V = {
             t = y.Z.detectableGamesEtag;
         l.Z.wait(() => {
             l.Z.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                N.Z.get({
+                C.Z.get({
                     url: e,
                     headers: { "If-None-Match": t },
                     retries: 1,
@@ -342,7 +342,7 @@ let V = {
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: s } = e,
             c = (0, d.F)(s);
-        k.log("Reporting unverified game: ", {
+        M.log("Reporting unverified game: ", {
             name: t,
             executableName: s,
             iconHash: n,
@@ -362,7 +362,7 @@ let V = {
                             distributor_application: U(i, a),
                             executable: c,
                             publisher: r,
-                            report_version: x,
+                            report_version: L,
                         },
                         retries: 1,
                         oldFormErrors: !0,
@@ -412,6 +412,7 @@ let V = {
             source: c,
             locationObject: u,
             analyticsLocations: d,
+            remotePartyId: f,
         } = e;
         if (__OVERLAY__)
             return (
@@ -428,20 +429,22 @@ let V = {
         l.Z.dispatch({
             type: "ACTIVITY_JOIN_LOADING",
             applicationId: r,
+            remotePartyId: f,
         });
         try {
-            let e = await C.Z.getJoinSecret(t, n, r, i, a);
+            let e = await N.Z.getJoinSecret(t, n, r, i, a);
             return (
-                j({
-                    applicationId: r,
-                    secret: e,
-                    channelId: i,
-                    intent: o,
-                    embedded: s,
-                    source: c,
-                    locationObject: u,
-                    analyticsLocations: d,
-                }),
+                null == f &&
+                    k({
+                        applicationId: r,
+                        secret: e,
+                        channelId: i,
+                        intent: o,
+                        embedded: s,
+                        source: c,
+                        locationObject: u,
+                        analyticsLocations: d,
+                    }),
                 !0
             );
         } catch (e) {
@@ -454,5 +457,5 @@ let V = {
             );
         }
     },
-    joinWithSecret: j,
+    joinWithSecret: k,
 };

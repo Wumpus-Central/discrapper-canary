@@ -35,57 +35,57 @@ function I(e, t, n) {
 let T = !1,
     S = v.Skl.ONLINE,
     A = v.Skl.UNKNOWN,
-    N = 0,
-    C = [],
+    C = 0,
+    N = [],
     R = !1,
     P = !0,
     w = Object.freeze([]),
     D = Object.freeze([]),
-    L = [];
-function x(e) {
+    x = [];
+function L(e) {
     return (0, h.OT)(e, E.Z);
 }
-function M(e) {
+function j(e) {
     let t = m.Z.getGameByName(e);
-    return null != t ? x(t.id) : f.G6.getSetting();
+    return null != t ? L(t.id) : f.G6.getSetting();
 }
-function k(e) {
+function M(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
         case v.IIU.LISTENING:
             if ((0, u.Z)(e)) return d.Z.shouldShowActivity();
-            if (null != e.application_id) return x(e.application_id);
+            if (null != e.application_id) return L(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? x(e.application_id) : M(e.name);
+            return null != e.application_id ? L(e.application_id) : j(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
-            return null == e.application_id || x(e.application_id);
+            return null == e.application_id || L(e.application_id);
     }
 }
-function j() {
+function k() {
     (P = !0), (A = S), U();
 }
 function U() {
     var e;
-    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
+    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
         S = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
-    S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
+    S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
-    a()(C, n) || ((C = n), (t = !0));
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
+    a()(N, n) || ((N = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
     D !== i && (D = i),
         t &&
-            (L = s()([...C, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+            (x = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                 .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                 .value());
 }
@@ -95,21 +95,21 @@ function G(e) {
 function B() {
     return (T = !1), U();
 }
+function Z() {
+    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, x);
+}
 function V() {
-    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, L);
+    Z();
 }
-function F() {
-    V();
-}
-class Z extends (r = l.ZP.Store) {
+class F extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
     }
     getLocalPresence() {
         return {
             status: S,
-            since: N,
-            activities: C,
+            since: C,
+            activities: N,
             afk: R,
         };
     }
@@ -118,14 +118,14 @@ class Z extends (r = l.ZP.Store) {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? L : C;
+        return e ? x : N;
     }
     getHiddenActivities() {
         return D;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? L[0] : C[0];
+        return e ? x[0] : N[0];
     }
     getApplicationActivity(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -136,12 +136,12 @@ class Z extends (r = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-I(Z, "displayName", "SelfPresenceStore");
-let H = new Z(c.Z, {
+I(F, "displayName", "SelfPresenceStore");
+let H = new F(c.Z, {
     START_SESSION: U,
-    CONNECTION_OPEN: F,
-    CONNECTION_OPEN_SUPPLEMENTAL: V,
-    OVERLAY_INITIALIZE: V,
+    CONNECTION_OPEN: V,
+    CONNECTION_OPEN_SUPPLEMENTAL: Z,
+    OVERLAY_INITIALIZE: Z,
     CONNECTION_CLOSED: U,
     IDLE: U,
     AFK: U,
@@ -156,7 +156,7 @@ let H = new Z(c.Z, {
     RPC_APP_DISCONNECTED: U,
     LIBRARY_FETCH_SUCCESS: U,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
-    LOGOUT: j,
+    LOGOUT: k,
     FORCE_INVISIBLE: G,
     WINDOW_FOCUS: B,
 });

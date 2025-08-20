@@ -69,7 +69,7 @@ if (n(738146)() || n(247131)()) {
                 T = f("Set.prototype.iterator", !0);
         var S = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
             A = f("Set.prototype.@@iterator", !0) || f("Set.prototype._es6-shim iterator_", !0),
-            N = function (e) {
+            C = function (e) {
                 if (b(e)) {
                     if (I) return a(I(e));
                     if (S) return S(e);
@@ -98,7 +98,7 @@ if (n(738146)() || n(247131)()) {
                 }
             };
         e.exports = function (e) {
-            return N(e) || E(e);
+            return C(e) || E(e);
         };
     } else
         e.exports = function (e) {

@@ -1,13 +1,13 @@
 n.d(t, {
-    $H: () => Z,
+    $H: () => F,
     AB: () => B,
     JS: () => U,
     ZP: () => W,
-    hH: () => k,
+    hH: () => M,
     kO: () => H,
     oG: () => Y,
     v_: () => G,
-    yw: () => F,
+    yw: () => V,
 });
 var r = n(392711),
     i = n.n(r),
@@ -33,13 +33,13 @@ var r = n(392711),
     T = n(9156),
     S = n(594174),
     A = n(979651),
-    N = n(626135),
-    C = n(70956),
+    C = n(626135),
+    N = n(70956),
     R = n(700785),
     P = n(546416),
     w = n(981631),
     D = n(176505);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,17 +63,17 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e) {
+function j(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
-function k(e) {
+function M(e) {
     var t;
     if (null == e) return null;
     let n = m.Z.getGuild(e);
@@ -96,10 +96,10 @@ function k(e) {
         guild_member_perms: String(null != (t = E.Z.getGuildPermissions(n)) ? t : R.Hn),
         guild_is_vip: n.features.has(w.oNc.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: M(c),
+        num_voice_channels_active: j(c),
     };
 }
-function j(e, t) {
+function k(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1,
@@ -137,7 +137,7 @@ function B(e) {
     if (null == t) return null;
     let n = g.Z.isVideoEnabled(),
         r = y.Z.getMediaSessionId();
-    return x(
+    return L(
         {
             channel_id: t.id,
             channel_type: t.type,
@@ -148,7 +148,7 @@ function B(e) {
         (0, P.V)(),
     );
 }
-function V(e, t) {
+function Z(e, t) {
     var n, r;
     return null == e
         ? null != t
@@ -160,18 +160,18 @@ function V(e, t) {
             ? r
             : null;
 }
-function F(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (N.default.isThrottled(e)) return;
+    if (C.default.isThrottled(e)) return;
     let r = !("location" in t) || t.location !== w.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         i = "guild_id" in t ? t.guild_id : r ? I.Z.getGuildId() : null,
         a = "channel_id" in t ? t.channel_id : r ? v.Z.getChannelId(i) : null,
         o = d.Z.getChannel(a),
-        s = x({}, t, k(V(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : G(o));
-    N.default.track(e, s, { flush: n });
+        s = L({}, t, M(Z(o, i)), null != i && null != a && (0, D.AB)(a) ? k(i, a) : G(o));
+    C.default.track(e, s, { flush: n });
 }
-function Z(e) {
+function F(e) {
     if ((0, D.AB)(e)) return { channel_static_route: e };
     let t = d.Z.getChannel(e);
     if (null == t) return { channel_id: e };
@@ -187,7 +187,7 @@ function Z(e) {
             is_app_dm: n,
         };
     }
-    let r = O.ZP.getSnapshot(e, 10 * C.Z.Millis.SECOND);
+    let r = O.ZP.getSnapshot(e, 10 * N.Z.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: r.unread,
@@ -237,6 +237,6 @@ function Y(e, t) {
     );
 }
 let W = {
-    trackWithMetadata: F,
+    trackWithMetadata: V,
     getVoiceStateMetadata: H,
 };

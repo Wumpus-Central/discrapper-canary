@@ -1,9 +1,9 @@
 n.d(t, {
-    $y: () => x,
+    $y: () => L,
     Cr: () => y,
     Ev: () => s,
     Fu: () => m,
-    GM: () => L,
+    GM: () => x,
     Gu: () => w,
     In: () => p,
     JT: () => h,
@@ -15,7 +15,7 @@ n.d(t, {
     Si: () => g,
     Ws: () => v,
     Zc: () => _,
-    cE: () => N,
+    cE: () => C,
     cc: () => a,
     d: () => o,
     eB: () => E,
@@ -87,10 +87,10 @@ var O = (function (e) {
     })({});
 let S = new Set([c, u, d, f]),
     A = new Set([u, d, f]);
-var N = (function (e) {
+var C = (function (e) {
     return (e[(e.FOCUSED = 0)] = "FOCUSED"), (e[(e.PIP = 1)] = "PIP"), (e[(e.GRID = 2)] = "GRID"), e;
 })({});
-let C = {
+let N = {
         label_type: r.ww.NONE,
         release_phase: "",
         label_from: null,
@@ -105,9 +105,9 @@ let C = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [r.C3.WEB],
         client_platform_config: {
-            [r.C3.WEB]: C,
-            [r.C3.IOS]: C,
-            [r.C3.ANDROID]: C,
+            [r.C3.WEB]: N,
+            [r.C3.IOS]: N,
+            [r.C3.ANDROID]: N,
         },
         has_csp_exception: !1,
         displays_advertisements: !1,
@@ -115,7 +115,7 @@ let C = {
     P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
     w = [...P, i.d4z.GUILD_VOICE],
     D = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var L = (function (e) {
+var x = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});
-let x = 21600000;
+let L = 21600000;

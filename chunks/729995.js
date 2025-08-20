@@ -160,11 +160,11 @@ function N(e) {
     return n
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(I, {
+                  (0, r.jsx)(E, {
                       guildId: t,
                       handlePreview: h,
                   }),
-                  (0, r.jsx)(E, {}),
+                  (0, r.jsx)(I, {}),
                   (0, r.jsxs)("div", {
                       className: O.content,
                       children: [
@@ -194,7 +194,7 @@ function N(e) {
               ],
           });
 }
-function I(e) {
+function E(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -238,7 +238,7 @@ function I(e) {
         ],
     });
 }
-function E() {
+function I() {
     let e = "\u2022 ";
     return (0, r.jsxs)("div", {
         className: O.notice,

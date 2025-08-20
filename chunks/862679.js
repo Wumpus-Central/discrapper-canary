@@ -24,19 +24,19 @@ let p = function (e) {
             children: x,
             useReducedMotion: v = !1,
         } = e,
-        j = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
-    if (l.tq && j) return null;
+        O = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
+    if (l.tq && O) return null;
     if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(x) });
-    let O = null;
+    let j = null;
     return (
         null != b
-            ? (O = (0, r.jsx)("img", {
+            ? (j = (0, r.jsx)("img", {
                   alt: "",
                   src: b,
                   className: d.image,
               }))
             : null != y &&
-              (O = (0, r.jsx)(s.Fmz, {
+              (j = (0, r.jsx)(s.Fmz, {
                   importData: y,
                   shouldAnimate: !v,
                   className: d.animation,
@@ -47,7 +47,7 @@ let p = function (e) {
                 (0, r.jsxs)("div", {
                     className: d.content,
                     children: [
-                        O,
+                        j,
                         (0, r.jsxs)("div", {
                             className: d.text,
                             children: [

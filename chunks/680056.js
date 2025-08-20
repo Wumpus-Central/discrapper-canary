@@ -1,29 +1,29 @@
 n.d(t, { Z: () => o });
-var r = n(647438),
-    l = n(906732),
+var l = n(647438),
+    r = n(906732),
     a = n(407316),
     i = n(937784);
 let o = (e) => {
     let { channelId: t, setExporting: n } = e,
-        { analyticsLocations: o } = (0, l.ZP)();
+        { analyticsLocations: o } = (0, r.ZP)();
     return {
-        onShareClick: r.useCallback(
+        onShareClick: l.useCallback(
             async (e) => {
-                let { clip: r, cropData: l, applicationAudioEnabled: s, voiceAudioEnabled: c, onShareComplete: u } = e;
-                n(r.id);
+                let { clip: l, cropData: r, applicationAudioEnabled: c, voiceAudioEnabled: s, onShareComplete: u } = e;
+                n(l.id);
                 try {
-                    var d, p, m, f, b, g, j, y, h, x;
+                    var d, p, m, f, b, g, h, y, x, j;
                     let e = (0, a.W)(t);
-                    await (0, i.e)(r, {
+                    await (0, i.e)(l, {
                         channelId: e ? t : void 0,
                         analyticsLocations: o,
                         editMetadata: {
                             start:
                                 null !=
                                 (g =
-                                    null != (b = null == l ? void 0 : l.start)
+                                    null != (b = null == r ? void 0 : r.start)
                                         ? b
-                                        : null == (d = r.editMetadata)
+                                        : null == (d = l.editMetadata)
                                           ? void 0
                                           : d.start)
                                     ? g
@@ -31,19 +31,19 @@ let o = (e) => {
                             end:
                                 null !=
                                 (y =
-                                    null != (j = null == l ? void 0 : l.end)
-                                        ? j
-                                        : null == (p = r.editMetadata)
+                                    null != (h = null == r ? void 0 : r.end)
+                                        ? h
+                                        : null == (p = l.editMetadata)
                                           ? void 0
                                           : p.end)
                                     ? y
-                                    : r.length / 1000,
+                                    : l.length / 1000,
                             applicationAudio:
                                 null ==
-                                    (h = null != s ? s : null == (m = r.editMetadata) ? void 0 : m.applicationAudio) ||
-                                h,
+                                    (x = null != c ? c : null == (m = l.editMetadata) ? void 0 : m.applicationAudio) ||
+                                x,
                             voiceAudio:
-                                null == (x = null != c ? c : null == (f = r.editMetadata) ? void 0 : f.voiceAudio) || x,
+                                null == (j = null != s ? s : null == (f = l.editMetadata) ? void 0 : f.voiceAudio) || j,
                         },
                     });
                 } catch (e) {

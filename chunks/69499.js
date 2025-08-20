@@ -1,20 +1,20 @@
 n.d(t, {
-    E: () => I,
+    E: () => b,
     Z: () => O,
 }),
     n(388685),
     n(642613);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(481060),
-    o = n(239091),
-    c = n(585237),
-    s = n(812206),
+    a = n(442837),
+    o = n(481060),
+    s = n(239091),
+    l = n(585237),
+    c = n(812206),
     u = n(55563),
     d = n(73346),
-    _ = n(388032);
-function E(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,91 +27,104 @@ function E(e, t, n) {
         e
     );
 }
-let I = {
-    DropdownSizes: c.Z.DropdownSizes,
-    Sizes: c.Z.Sizes,
-    Colors: c.Z.Colors,
-    Looks: c.Z.Looks,
-};
-class T extends i.PureComponent {
-    render() {
-        var e, t;
-        let n = this.props,
-            { skus: i, children: l, applicationId: a, primarySKU: o, onSKUSelect: s } = n,
-            u = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                }
-                return i;
-            })(n, ["skus", "children", "applicationId", "primarySKU", "onSKUSelect"]);
-        return (0, r.jsx)(
-            c.Z,
-            ((e = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            E(e, t, n[t]);
-                        });
-                }
-                return e;
-            })(
-                {
-                    onClick: this.handleClick,
-                    onDropdownClick: i.length > 0 ? this.handleContextMenu : null,
-                    onContextMenu: i.length > 0 ? this.handleContextMenu : void 0,
-                },
-                u,
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
             )),
-            (t = t = { children: l }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(t)).forEach(function (n) {
-                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                  }),
-            e),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let b = {
+    DropdownSizes: l.Z.DropdownSizes,
+    Sizes: l.Z.Sizes,
+    Colors: l.Z.Colors,
+    Looks: l.Z.Looks,
+};
+class y extends i.PureComponent {
+    render() {
+        let e = this.props,
+            { skus: t, children: n, applicationId: i, primarySKU: a, onSKUSelect: o } = e,
+            s = g(e, ["skus", "children", "applicationId", "primarySKU", "onSKUSelect"]);
+        return (0, r.jsx)(
+            l.Z,
+            m(
+                p(
+                    {
+                        onClick: this.handleClick,
+                        onDropdownClick: t.length > 0 ? this.handleContextMenu : null,
+                        onContextMenu: t.length > 0 ? this.handleContextMenu : void 0,
+                    },
+                    s,
+                ),
+                { children: n },
+            ),
         );
     }
     constructor(...e) {
         super(...e),
-            E(this, "renderContextMenu", () => {
+            _(this, "renderContextMenu", () => {
                 let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
-                return (0, r.jsx)(a.v2r, {
+                return (0, r.jsx)(o.v2r, {
                     onSelect: n,
                     navId: "test-skus",
-                    "aria-label": _.intl.string(_.t.ogxXGh),
-                    onClose: o.Zy,
+                    "aria-label": f.intl.string(f.t.ogxXGh),
+                    onClose: s.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(
-                            a.sNh,
+                            o.sNh,
                             {
                                 id: "".concat(e.id),
                                 label: e.name,
@@ -124,23 +137,23 @@ class T extends i.PureComponent {
                     ),
                 });
             }),
-            E(this, "handleContextMenu", (e) => {
-                e.stopPropagation(), o.vq(e, this.renderContextMenu);
+            _(this, "handleContextMenu", (e) => {
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             }),
-            E(this, "handleClick", () => {
+            _(this, "handleClick", () => {
                 let { onSKUSelect: e, primarySKU: t } = this.props;
                 null != t && (null == e || e(t));
             });
     }
 }
-let O = l.ZP.connectStores([u.Z, s.Z], (e) => {
+let O = a.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
-        r = (0, d.uF)(n, s.Z, u.Z);
+        r = (0, d.uF)(n, c.Z, u.Z);
     return {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) =>
             null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1,
         ),
         primarySKU: r,
     };
-})(T);
+})(y);

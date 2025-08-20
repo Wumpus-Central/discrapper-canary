@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(754700),
     i = n(147913),
     a = n(317381),
@@ -39,7 +39,7 @@ function S(e) {
 function A(e, t) {
     return null != t && e.config.application.id === l.eB && (0, c.le)(t);
 }
-class N extends i.Z {
+class C extends i.Z {
     syncHeartbeats(e, t) {
         for (let n of ("VOICE_STATE_UPDATES" !== t &&
             "PASSIVE_UPDATE_V2" !== t &&
@@ -238,4 +238,4 @@ class N extends i.Z {
             });
     }
 }
-let C = new N();
+let N = new C();

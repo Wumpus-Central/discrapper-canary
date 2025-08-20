@@ -34,10 +34,10 @@ function j(e) {
             errorDetails: m.Z.errorDetails,
             fetched: m.Z.fetchedVanityURL,
         })),
-        I = null == t ? void 0 : t.id;
+        E = null == t ? void 0 : t.id;
     return (i.useEffect(() => {
-        null == I || N || (0, u.U5)(I);
-    }, [N, I]),
+        null == E || N || (0, u.U5)(E);
+    }, [N, E]),
     null == t)
         ? null
         : v

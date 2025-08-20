@@ -2,8 +2,8 @@ n.d(t, {
     FD: () => h,
     I5: () => O,
     Mn: () => b,
-    NI: () => C,
-    OU: () => x,
+    NI: () => N,
+    OU: () => L,
     P6: () => D,
     Rx: () => S,
     S2: () => E,
@@ -14,8 +14,8 @@ n.d(t, {
     b9: () => R,
     cV: () => T,
     e1: () => I,
-    iR: () => L,
-    s4: () => N,
+    iR: () => x,
+    s4: () => C,
     si: () => P,
     ss: () => g,
     xn: () => A,
@@ -242,13 +242,13 @@ function A(e) {
         profileEffectId: e,
     });
 }
-function N(e) {
+function C(e) {
     o.Z.dispatch({
         type: "USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID",
         primaryGuildId: e,
     });
 }
-function C(e) {
+function N(e) {
     o.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES",
         displayNameStyles: e,
@@ -266,9 +266,9 @@ function w() {
 function D() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
-function L() {
+function x() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function x() {
+function L() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

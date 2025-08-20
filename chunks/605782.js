@@ -2,7 +2,7 @@ n.d(t, { Z: () => d }), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(843611),
-    a = n(215569);
+    s = n(215569);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,7 +28,7 @@ function o(e) {
     }
     return e;
 }
-function s(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,26 +72,26 @@ class u extends i.Component {
             { children: t, location: n, history: u, staticContext: d, match: h } = e,
             p = c(e, ["children", "location", "history", "staticContext", "match"]),
             m = null,
-            f = null;
+            g = null;
         return (
             i.Children.forEach(t, (e) => {
                 if (null == m && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: a } = t,
+                        { component: r, render: s } = t,
                         h = c(t, ["component", "render"]),
                         p = h.path || h.from;
-                    null != (m = null != p ? (0, l.LX)(n.pathname, s(o({}, h), { path: p })) : null) &&
-                        ((h = s(o({}, h), {
+                    null != (m = null != p ? (0, l.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
+                        ((h = a(o({}, h), {
                             key: p,
                             location: n,
                             match: m,
                             history: u,
                             staticContext: d,
                         })),
-                        null != r ? (f = i.createElement(r, h)) : null != a && (f = a(h)));
+                        null != r ? (g = i.createElement(r, h)) : null != s && (g = s(h)));
                 }
             }),
-            (0, r.jsx)(a.W, s(o({}, p), { children: f }))
+            (0, r.jsx)(s.W, a(o({}, p), { children: g }))
         );
     }
 }

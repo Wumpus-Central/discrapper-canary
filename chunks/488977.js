@@ -141,9 +141,8 @@ function L(e) {
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("74891"),
                                                         n.e("77803"),
-                                                        n.e("19517"),
+                                                        n.e("62199"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, l.jsx)(e, {

@@ -76,45 +76,45 @@ let _ = 300000,
         ignored: void 0,
         blockedOrIgnored: void 0,
     };
-function N() {
+function C() {
     (A.friends = void 0), (A.blocked = void 0), (A.ignored = void 0), (A.blockedOrIgnored = void 0);
 }
-let C = new Map();
+let N = new Map();
 function R(e, t) {
     let n = p.get(e);
     if (n === t) return;
     if (null != n) {
         var r;
-        null == (r = C.get(n)) || r.delete(e);
+        null == (r = N.get(n)) || r.delete(e);
     }
     p.set(e, t);
-    let i = C.get(t);
-    null != i ? i.add(e) : C.set(t, new Set([e])), N();
+    let i = N.get(t);
+    null != i ? i.add(e) : N.set(t, new Set([e])), C();
 }
 function P(e) {
     var t;
     let n = p.get(e);
-    null != n && (p.delete(e), null == (t = C.get(n)) || t.delete(e), N());
+    null != n && (p.delete(e), null == (t = N.get(n)) || t.delete(e), C());
 }
 function w() {
     var e, t;
     (T = g.size),
         (S = b.size),
         (I = Math.max(
-            (null != (t = null == (e = C.get(l.OGo.PENDING_INCOMING)) ? void 0 : e.size) ? t : 0) - T - S,
+            (null != (t = null == (e = N.get(l.OGo.PENDING_INCOMING)) ? void 0 : e.size) ? t : 0) - T - S,
             0,
         )),
         O++;
 }
 function D(e) {
     p.clear(),
-        C.clear(),
+        N.clear(),
         (h = {}),
         (m = {}),
         E.clear(),
         g.clear(),
         b.clear(),
-        N(),
+        C(),
         (y = {}),
         (v = {}),
         e.relationships.forEach((e) => {
@@ -127,11 +127,11 @@ function D(e) {
         }),
         w();
 }
-function L(e) {
-    for (let [t, n] of (p.clear(), C.clear(), e.relationships)) R(t, n);
+function x(e) {
+    for (let [t, n] of (p.clear(), N.clear(), e.relationships)) R(t, n);
     w();
 }
-function x(e) {
+function L(e) {
     let t = p.get(e.relationship.id);
     R(e.relationship.id, e.relationship.type),
         null != e.relationship.nickname && (h = f(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
@@ -153,7 +153,7 @@ function x(e) {
                 user: e.relationship.user,
             });
 }
-function M(e) {
+function j(e) {
     P(e.relationship.id),
         null != h[e.relationship.id] && ((h = u({}, h)), delete h[e.relationship.id]),
         null != m[e.relationship.id] && ((m = u({}, m)), delete m[e.relationship.id]),
@@ -163,7 +163,7 @@ function M(e) {
         g.delete(e.relationship.id),
         w();
 }
-function k(e) {
+function M(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
         null == t.since ? delete m[t.id] : (m[t.id] = t.since),
@@ -176,7 +176,7 @@ function k(e) {
             : (E.delete(t.id), b.delete(t.id)),
         w();
 }
-function j(e) {
+function k(e) {
     for (let e of p.keys()) p.get(e) === l.OGo.PENDING_INCOMING && (P(e), g.delete(e), b.delete(e), delete v[e]);
     w();
 }
@@ -237,11 +237,11 @@ class G extends (r = i.ZP.Store) {
     }
     getOutgoingCount() {
         var e, t;
-        return null != (t = null == (e = C.get(l.OGo.PENDING_OUTGOING)) ? void 0 : e.size) ? t : 0;
+        return null != (t = null == (e = N.get(l.OGo.PENDING_OUTGOING)) ? void 0 : e.size) ? t : 0;
     }
     getFriendCount() {
         var e, t;
-        return null != (t = null == (e = C.get(l.OGo.FRIEND)) ? void 0 : e.size) ? t : 0;
+        return null != (t = null == (e = N.get(l.OGo.FRIEND)) ? void 0 : e.size) ? t : 0;
     }
     getRelationshipCount() {
         return p.size;
@@ -271,14 +271,14 @@ class G extends (r = i.ZP.Store) {
     getFriendIDs() {
         if (null == A.friends) {
             var e;
-            A.friends = Array.from(null != (e = C.get(l.OGo.FRIEND)) ? e : []);
+            A.friends = Array.from(null != (e = N.get(l.OGo.FRIEND)) ? e : []);
         }
         return A.friends;
     }
     getBlockedIDs() {
         if (null == A.blocked) {
             var e;
-            A.blocked = Array.from(null != (e = C.get(l.OGo.BLOCKED)) ? e : []);
+            A.blocked = Array.from(null != (e = N.get(l.OGo.BLOCKED)) ? e : []);
         }
         return A.blocked;
     }
@@ -288,7 +288,7 @@ class G extends (r = i.ZP.Store) {
     getBlockedOrIgnoredIDs() {
         if (null == A.blockedOrIgnored) {
             let e = new Set(E),
-                t = C.get(l.OGo.BLOCKED);
+                t = N.get(l.OGo.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
             A.blockedOrIgnored = Array.from(e.values());
         }
@@ -304,10 +304,10 @@ class G extends (r = i.ZP.Store) {
 c(G, "displayName", "RelationshipStore");
 let B = new G(a.Z, {
     CONNECTION_OPEN: D,
-    OVERLAY_INITIALIZE: L,
-    RELATIONSHIP_ADD: x,
-    RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: k,
-    RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
+    OVERLAY_INITIALIZE: x,
+    RELATIONSHIP_ADD: L,
+    RELATIONSHIP_REMOVE: j,
+    RELATIONSHIP_UPDATE: M,
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: k,
     UPDATE_STRANGER_STATUS: U,
 });

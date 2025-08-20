@@ -2,26 +2,26 @@ n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(525654),
-    a = n.n(l),
+    s = n.n(l),
     o = n(442837),
-    s = n(893776),
+    a = n(893776),
     c = n(493773),
     u = n(129293),
     d = n(388905),
     h = n(703656),
     p = n(108427),
     m = n(981631),
-    f = n(388032),
-    g = n(197571);
+    g = n(388032),
+    f = n(197571);
 function _(e) {
     let { location: t, transitionTo: l = h.uL } = e,
         [o, _] = i.useState("submitting");
     function x() {
-        return "Android" === a().os.family || "iOS" === a().os.family
+        return "Android" === s().os.family || "iOS" === s().os.family
             ? null
             : (0, r.jsx)(d.zx, {
                   onClick: () => l(m.Z5c.LOGIN, { source: "authorizeIPAdress" }),
-                  children: f.intl.string(f.t.dKhVQE),
+                  children: g.intl.string(g.t.dKhVQE),
               });
     }
     return ((0, c.ZP)(() => {
@@ -30,7 +30,7 @@ function _(e) {
         if (null == e) return void _("failed");
         (async () => {
             try {
-                await s.Z.authorizeIPAddress(e), _("succeeded");
+                await a.Z.authorizeIPAddress(e), _("succeeded");
             } catch (e) {
                 _("failed");
             }
@@ -42,15 +42,15 @@ function _(e) {
                   (0, r.jsx)("img", {
                       alt: "",
                       src: n(262467),
-                      className: g.marginBottom20,
+                      className: f.marginBottom20,
                   }),
                   (0, r.jsx)(d.Dx, {
-                      className: g.marginBottom8,
-                      children: f.intl.string(f.t["f/54a2"]),
+                      className: f.marginBottom8,
+                      children: g.intl.string(g.t["f/54a2"]),
                   }),
                   (0, r.jsx)(d.DK, {
-                      className: g.marginBottom40,
-                      children: f.intl.string(f.t.i3ehMj),
+                      className: f.marginBottom40,
+                      children: g.intl.string(g.t.i3ehMj),
                   }),
                   x(),
               ],
@@ -61,21 +61,21 @@ function _(e) {
                     (0, r.jsx)("img", {
                         alt: "",
                         src: n(640356),
-                        className: g.marginBottom20,
+                        className: f.marginBottom20,
                     }),
                     (0, r.jsx)(d.Dx, {
-                        className: g.marginBottom8,
-                        children: f.intl.string(f.t.iG0SlJ),
+                        className: f.marginBottom8,
+                        children: g.intl.string(g.t.iG0SlJ),
                     }),
                     (0, r.jsx)(d.DK, {
-                        className: g.marginBottom40,
-                        children: f.intl.string(f.t["Elv+qq"]),
+                        className: f.marginBottom40,
+                        children: g.intl.string(g.t["Elv+qq"]),
                     }),
                     x(),
                 ],
             })
           : (0, r.jsxs)(d.ZP, {
-                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: f.intl.string(f.t["9exy+f"]) })],
+                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: g.intl.string(g.t["9exy+f"]) })],
             });
 }
 o.ZP.initialize();

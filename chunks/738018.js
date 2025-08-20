@@ -49,7 +49,7 @@ function A(e) {
         [b.dCx.FILTER_AUTHOR_TYPE, n],
     ]);
 }
-function N(e) {
+function C(e) {
     let t = [b.dCx.FILTER_HAS];
     return (
         d.Z.hidePersonalInformation || (t.push(b.dCx.FILTER_FROM), t.push(b.dCx.FILTER_MENTIONS)),
@@ -57,7 +57,7 @@ function N(e) {
         t
     );
 }
-function C(e) {
+function N(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: s } = e,
         l = (0, m.Tm)(t),
         c = I[l];
@@ -103,7 +103,7 @@ function P(e, t) {
     let { query: c, mode: u, tokens: d, cursorScope: f } = a,
         { autocompletes: _ } = a;
     (_ = G(e, u, d)),
-        (v[r] = C({
+        (v[r] = N({
             searchContext: e,
             query: c,
             mode: u,
@@ -133,7 +133,7 @@ function D(e) {
     let { searchContext: t } = e;
     (O = t), H(t);
 }
-function L(e) {
+function x(e) {
     var t;
     let n,
         { searchContext: r, tokens: i, cursorScope: a } = e;
@@ -164,7 +164,7 @@ function L(e) {
         } else u.context.clearQuery(), (n = G(r, s, i));
     }
     return (
-        (v[l] = C({
+        (v[l] = N({
             searchContext: r,
             query: o,
             mode: s,
@@ -175,7 +175,7 @@ function L(e) {
         d
     );
 }
-function x(e) {
+function L(e) {
     var t, n, r;
     let i,
         { filter: a, token: o, searchContext: s, maxResults: l = T, tokens: c } = e;
@@ -229,7 +229,7 @@ function x(e) {
               results: i,
           };
 }
-function M(e, t) {
+function j(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim(),
         r = A(t),
         i = (0, E.nB)(n).filter((e) => null != e.token && !0 === r.get(e.token));
@@ -238,15 +238,15 @@ function M(e, t) {
         results: i,
     };
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = (null != e ? e.getFullMatch() : "").trim(),
         i = [];
     return (
         null != r &&
             "" !== r &&
-            (N(t).forEach((r) => {
+            (C(t).forEach((r) => {
                 if (null == r) return;
-                let a = x({
+                let a = L({
                     filter: r,
                     token: e,
                     searchContext: t,
@@ -255,12 +255,12 @@ function k(e, t, n) {
                 });
                 null != a && i.push(a);
             }),
-            i.push(j(e, t))),
-        5 > (0, m.BU)(i) && i.push(M(e, t)),
+            i.push(k(e, t))),
+        5 > (0, m.BU)(i) && i.push(j(e, t)),
         i
     );
 }
-function j(e, t) {
+function k(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim();
     if (null != n && "" !== n) {
         var r, i, a, o, s, l, c, u, d;
@@ -328,7 +328,7 @@ function G(e, t, n) {
     return (
         t.type === b.Sap.FILTER
             ? r.push(
-                  x({
+                  L({
                       filter: t.filter,
                       token: t.token,
                       searchContext: e,
@@ -337,19 +337,19 @@ function G(e, t, n) {
                   }),
               )
             : t.type === b.Sap.FILTER_ALL
-              ? (r = k(t.token, e, n))
-              : t.type === b.Sap.EMPTY && (r.push(M(t.token, e)), r.push(U(e))),
+              ? (r = M(t.token, e, n))
+              : t.type === b.Sap.EMPTY && (r.push(j(t.token, e)), r.push(U(e))),
         r
     );
 }
 function B() {
     (0, m.WU)();
 }
-function V(e) {
+function Z(e) {
     let t = v[e];
     if (null == t) return;
     let { searchContext: n, query: r, mode: i, tokens: a, cursorScope: o, autocompletes: s } = t;
-    v[e] = C({
+    v[e] = N({
         searchContext: n,
         query: r,
         mode: i,
@@ -358,18 +358,18 @@ function V(e) {
         autocompletes: s.map((e) => ((null == e ? void 0 : e.group) === b.rtL.HISTORY ? null : e)),
     });
 }
-function F(e) {
+function V(e) {
     let { id: t } = e;
-    V(t);
+    Z(t);
 }
-function Z() {
-    Object.keys(v).forEach(V);
+function F() {
+    Object.keys(v).forEach(Z);
 }
 function H(e) {
     let t = (0, m.Tm)(e);
     if (null == v[t]) return !1;
     let { query: n, mode: r, tokens: i, cursorScope: a } = v[t];
-    v[t] = C({
+    v[t] = N({
         searchContext: e,
         query: n,
         mode: r,
@@ -400,7 +400,7 @@ class K extends (r = i.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = v[(0, m.Tm)(e)]) ? t : C({ searchContext: e });
+        return null != (t = v[(0, m.Tm)(e)]) ? t : N({ searchContext: e });
     }
     getSelectedSearchContext() {
         return O;
@@ -408,14 +408,14 @@ class K extends (r = i.ZP.Store) {
 }
 y(K, "displayName", "SearchAutocompleteStore");
 let z = new K(a.Z, {
-        SEARCH_AUTOCOMPLETE_QUERY_UPDATE: L,
+        SEARCH_AUTOCOMPLETE_QUERY_UPDATE: x,
         SEARCH_EDITOR_STATE_CLEAR: R,
         CHANNEL_CREATE: B,
         CHANNEL_DELETE: B,
         STREAMER_MODE_UPDATE: Y,
         SEARCH_SCREEN_OPEN: D,
         CHANNEL_SELECT: W,
-        LOGOUT: Z,
-        SEARCH_HISTORY_WEB_CLEAR_ITEMS: F,
+        LOGOUT: F,
+        SEARCH_HISTORY_WEB_CLEAR_ITEMS: V,
     }),
     q = z;

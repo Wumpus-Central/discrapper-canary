@@ -126,17 +126,17 @@ async function S(e) {
 function A() {
     T();
 }
-function N() {
+function C() {
     I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
 }
-class C extends a.Z {
+class N extends a.Z {
     fetchLeaderboard(e) {
         return S(e);
     }
     constructor(...e) {
         super(...e),
             _(this, "actions", {
-                POST_CONNECTION_OPEN: N,
+                POST_CONNECTION_OPEN: C,
                 CONNECTION_CLOSED: A,
                 WINDOW_FOCUS: A,
                 IDLE: A,
@@ -144,4 +144,4 @@ class C extends a.Z {
             });
     }
 }
-let R = new C();
+let R = new N();

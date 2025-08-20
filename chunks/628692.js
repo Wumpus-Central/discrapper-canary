@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => R,
-    ku: () => N,
+    ku: () => C,
 });
 var r = n(951288),
     i = n(647438),
@@ -90,7 +90,7 @@ function A(e) {
         ],
     });
 }
-function N(e) {
+function C(e) {
     let { soundId: t } = e,
         n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
         i = (0, d.V2)({ location: "SoundboardMentionInline" }),
@@ -98,7 +98,7 @@ function N(e) {
     return i
         ? null == n
             ? (0, r.jsx)(A, {})
-            : (0, r.jsx)(C, {
+            : (0, r.jsx)(N, {
                   className: O.inlineTextArea,
                   isPlaying: a,
                   playSound: o,
@@ -106,7 +106,7 @@ function N(e) {
               })
         : null;
 }
-function C(e) {
+function N(e) {
     let { className: t, sound: n, playSound: i, isPlaying: a } = e,
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         d = y.intl.formatToPlainString(y.t.tuMUJy, {
@@ -140,7 +140,7 @@ let R = function (e) {
             return null != (e = (0, f.Z)(t, n, a, o)) ? e : y;
         }, [t, n, a, o, y]),
         T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
-        N = (0, u.X0)({ location: "SoundboardMention" }),
+        C = (0, u.X0)({ location: "SoundboardMention" }),
         R = i.useRef(null),
         { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
         D = i.useCallback(async () => {
@@ -149,7 +149,7 @@ let R = function (e) {
                 null == (e = R.current) || e.addAnimation();
             }
         }, [w]);
-    return N
+    return C
         ? null == v
             ? (0, r.jsx)(A, { playSound: D })
             : c && !d
@@ -182,7 +182,7 @@ let R = function (e) {
                         (0, r.jsx)(
                             "span",
                             S(I({}, e), {
-                                children: (0, r.jsx)(C, {
+                                children: (0, r.jsx)(N, {
                                     sound: v,
                                     playSound: D,
                                     isPlaying: P,

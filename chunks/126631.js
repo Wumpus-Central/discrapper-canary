@@ -1,63 +1,72 @@
-n.d(t, { Z: () => x }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(541716),
-    l = n(752305),
-    o = n(893718),
+n.d(t, { Z: () => E }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(541716),
+    s = n(752305),
+    l = n(893718),
     c = n(313201),
-    d = n(131704),
-    u = n(993413),
-    m = n(981631),
-    p = n(388032),
-    g = n(100077);
+    u = n(131704),
+    d = n(993413),
+    f = n(981631),
+    _ = n(388032),
+    p = n(100077);
 let h = (0, c.hQ)(),
-    f = (0, d.kt)({
+    m = (0, u.kt)({
         id: "1",
-        type: m.d4z.DM,
+        type: f.d4z.DM,
     }),
-    b = (0, c.hQ)();
-function x(e) {
+    g = (0, c.hQ)();
+function E(e) {
     let {
             sectionTitle: t,
             errors: n,
             onBioChange: c,
-            pendingBio: d,
-            placeholder: x,
-            currentBio: _,
-            disabled: j = !1,
+            pendingBio: u,
+            placeholder: E,
+            currentBio: b,
+            disabled: y = !1,
         } = e,
-        [E, C] = r.useState(null != d ? d : _),
-        [O, v] = r.useState((0, l.JM)(E)),
-        S = r.useRef(!1);
+        [O, v] = i.useState(null != u ? u : b),
+        [I, T] = i.useState((0, s.JM)(O)),
+        S = i.useRef(!1);
+    function A(e, t, n) {
+        t !== O && (v(t), T(n), c(t));
+    }
+    function C() {
+        return new Promise((e) => {
+            e({
+                shouldClear: !1,
+                shouldRefocus: !0,
+            });
+        });
+    }
     return (
-        r.useEffect(() => {
-            if (void 0 === d) {
-                let e = (0, l.JM)(_);
-                C(_), v(e);
+        i.useEffect(() => {
+            if (void 0 === u) {
+                let e = (0, s.JM)(b);
+                v(b), T(e);
             }
-        }, [d, _]),
-        (0, i.jsxs)(u.Z, {
+        }, [u, b]),
+        (0, r.jsxs)(d.Z, {
             title: t,
             titleId: h,
-            description: p.intl.string(p.t.Bbw6AQ),
+            description: _.intl.string(_.t.Bbw6AQ),
             errors: n,
-            disabled: j,
+            disabled: y,
             children: [
-                (0, i.jsx)(o.ZP, {
-                    "aria-describedby": b,
+                (0, r.jsx)(l.ZP, {
+                    "aria-describedby": g,
                     "aria-labelledby": h,
-                    className: g.bioTextAreaContainer,
-                    innerClassName: g.bioTextArea,
-                    maxCharacterCount: m.tPV,
-                    onChange: function (e, t, n) {
-                        t !== E && (C(t), v(n), c(t));
-                    },
-                    placeholder: x,
-                    channel: f,
-                    textValue: E,
-                    richValue: O,
-                    type: a.Ie.PROFILE_BIO_INPUT,
+                    className: p.bioTextAreaContainer,
+                    innerClassName: p.bioTextArea,
+                    maxCharacterCount: f.tPV,
+                    onChange: A,
+                    placeholder: E,
+                    channel: m,
+                    textValue: O,
+                    richValue: I,
+                    type: o.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         S.current = !1;
                     },
@@ -65,18 +74,11 @@ function x(e) {
                         S.current = !0;
                     },
                     focused: S.current,
-                    onSubmit: function () {
-                        return new Promise((e) => {
-                            e({
-                                shouldClear: !1,
-                                shouldRefocus: !0,
-                            });
-                        });
-                    },
+                    onSubmit: C,
                 }),
-                (0, i.jsx)(s.nn4, {
-                    id: b,
-                    children: p.intl.format(p.t["+DFxLS"], { maxLength: m.tPV }),
+                (0, r.jsx)(a.nn4, {
+                    id: g,
+                    children: _.intl.format(_.t["+DFxLS"], { maxLength: f.tPV }),
                 }),
             ],
         })

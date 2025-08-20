@@ -1,52 +1,52 @@
-n.d(t, { Z: () => p });
-var i = n(951288);
+n.d(t, { Z: () => _ });
+var r = n(951288);
 n(647438);
-var r = n(873546),
-    s = n(755721),
-    a = n(481060),
-    l = n(270237),
-    o = n(584825),
+var i = n(873546),
+    a = n(755721),
+    o = n(481060),
+    s = n(270237),
+    l = n(584825),
     c = n(892729),
-    d = n(949914),
-    u = n(388032),
-    m = n(343447);
-let p = (e) => {
+    u = n(949914),
+    d = n(388032),
+    f = n(343447);
+let _ = (e) => {
     let { onGoBack: t } = e,
         n = (0, c.Z)(),
-        { loading: p } = (0, o.sp)(n);
-    return ((0, l.Z)(r.tq ? "role-subscriptions-user-setting" : void 0), p)
-        ? (0, i.jsx)(a.$jN, {})
+        { loading: _ } = (0, l.sp)(n);
+    return ((0, s.Z)(i.tq ? "role-subscriptions-user-setting" : void 0), _)
+        ? (0, r.jsx)(o.$jN, {})
         : 0 === n.length
           ? null
-          : (0, i.jsxs)("div", {
-                className: m.__invalid_container,
+          : (0, r.jsxs)("div", {
+                className: f.__invalid_container,
                 children: [
-                    (0, i.jsxs)(s.zx, {
-                        look: s.zx.Looks.BLANK,
-                        innerClassName: m.backButtonContents,
+                    (0, r.jsxs)(a.zx, {
+                        look: a.zx.Looks.BLANK,
+                        innerClassName: f.backButtonContents,
                         onClick: t,
                         children: [
-                            (0, i.jsx)(a.ZSh, {
+                            (0, r.jsx)(o.ZSh, {
                                 size: "md",
                                 color: "currentColor",
-                                className: m.arrowIcon,
+                                className: f.arrowIcon,
                             }),
-                            u.intl.string(u.t.hqyhKS),
+                            d.intl.string(d.t.hqyhKS),
                         ],
                     }),
-                    (0, i.jsx)(a.LZC, { size: 10 }),
-                    (0, i.jsx)(a.vwX, {
+                    (0, r.jsx)(o.LZC, { size: 10 }),
+                    (0, r.jsx)(o.vwX, {
                         tag: "h1",
-                        children: u.intl.string(u.t["KzCF//"]),
+                        children: d.intl.string(d.t["KzCF//"]),
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        className: m.pageDescription,
-                        children: u.intl.string(u.t["Y+ucR0"]),
+                        className: f.pageDescription,
+                        children: d.intl.string(d.t["Y+ucR0"]),
                     }),
-                    (0, i.jsx)("div", {
-                        className: m.subscriptionsContainer,
-                        children: n.map((e) => (0, i.jsx)(d.Z, { subscription: e }, e.id)),
+                    (0, r.jsx)("div", {
+                        className: f.subscriptionsContainer,
+                        children: n.map((e) => (0, r.jsx)(u.Z, { subscription: e }, e.id)),
                     }),
                 ],
             });

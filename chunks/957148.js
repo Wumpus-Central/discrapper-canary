@@ -1,73 +1,97 @@
-n.d(t, { l: () => o }), n(388685);
-var i = n(951288),
-    r = n(481060),
-    s = n(692114);
-let a = 5 * n(70956).Z.Millis.DAY,
-    l = new s.Z("overlay_survey_timestamps");
-function o(e, t) {
-    (function () {
-        let e = Date.now(),
-            t = Array.from(l.values()).reduce((e, t) => Math.max(e, t), 0);
-        return null != t && e - t < a;
-    })() ||
-        Array.from(l.values()).filter((e) => {
+n.d(t, { l: () => g }), n(388685);
+var r = n(951288),
+    i = n(481060),
+    a = n(692114);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = 5 * n(70956).Z.Millis.DAY,
+    d = 3,
+    f = new a.Z("overlay_survey_timestamps");
+function _() {
+    return Array.from(f.values()).reduce((e, t) => Math.max(e, t), 0);
+}
+function p() {
+    let e = Date.now(),
+        t = _();
+    return null != t && e - t < u;
+}
+function h() {
+    return (
+        Array.from(f.values()).filter((e) => {
             let t = new Date(e);
             return t.getMonth() === new Date().getMonth() && t.getFullYear() === new Date().getFullYear();
-        }).length >= 3 ||
-        (0, r.ZDy)(async () => {
-            let { default: r } = await n.e("20114").then(n.bind(n, 536920)),
-                s = Date.now();
+        }).length >= d
+    );
+}
+function m() {
+    let e = Date.now();
+    f.add(e);
+}
+function g(e, t) {
+    p() ||
+        h() ||
+        (0, i.ZDy)(async () => {
+            let { default: i } = await n.e("20114").then(n.bind(n, 536920));
             return (
-                l.add(s),
-                (n) => {
-                    var s, a;
-                    return (0, i.jsx)(
-                        r,
-                        ((s = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = i);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (a = a =
-                            {
-                                clientSettingType: e,
-                                gameId: t,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
-                              }),
-                        s),
-                    );
-                }
+                m(),
+                (n) =>
+                    (0, r.jsx)(
+                        i,
+                        c(s({}, n), {
+                            clientSettingType: e,
+                            gameId: t,
+                        }),
+                    )
             );
         });
 }

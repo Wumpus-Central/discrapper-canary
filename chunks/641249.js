@@ -65,10 +65,10 @@ function j() {
         y = () => O(p.ue.EMOJIS),
         C = (0, i.e7)([a.Z], () => a.Z.getGuild(t)),
         N = null != C ? (0, d.Z)(C) : void 0;
-    function I(e) {
+    function E(e) {
         null == j ? v(new Set(e)) : v(new Set([...j, ...e]));
     }
-    function E(e) {
+    function I(e) {
         let t = new Set(j);
         t.delete(e), v(t);
     }
@@ -92,7 +92,7 @@ function j() {
                 guildId: t,
                 onRemoveEmoji: function (e) {
                     e.roles.filter((e) => e !== (null == _ ? void 0 : _.id)).length > 0
-                        ? E(e.id)
+                        ? I(e.id)
                         : (0, l.ZDy)(async () => {
                               let { default: t } = await n.e("59128").then(n.bind(n, 28564));
                               return (n) =>
@@ -100,7 +100,7 @@ function j() {
                                       t,
                                       x(b({}, n), {
                                           onConfirmDelete: () => {
-                                              E(e.id), n.onClose();
+                                              I(e.id), n.onClose();
                                           },
                                       }),
                                   );
@@ -118,7 +118,7 @@ function j() {
                                 x(b({}, n), {
                                     guildId: t,
                                     initialTierEmojiIds: j,
-                                    onSubmit: I,
+                                    onSubmit: E,
                                     transitionToManageEmoji: () => {
                                         y(), n.onClose();
                                     },

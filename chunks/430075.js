@@ -1,76 +1,76 @@
-n.r(t), n.d(t, { default: () => L });
-var i = n(951288);
-n(647438);
-var r = n(442837),
-    a = n(481060),
-    s = n(703656),
-    o = n(314897),
-    _ = n(236289),
-    E = n(518560),
-    l = n(800530),
-    c = n(981631),
-    I = n(388032),
-    u = n(532223);
-function d() {
-    return (0, i.jsxs)(a.qXd, {
-        color: a.DM8.DANGER,
-        className: u.nagbar,
+t.r(e), t.d(e, { default: () => _ });
+var s = t(951288);
+t(647438);
+var a = t(442837),
+    r = t(481060),
+    i = t(703656),
+    l = t(314897),
+    c = t(236289),
+    o = t(518560),
+    d = t(800530),
+    u = t(981631),
+    g = t(388032),
+    h = t(532223);
+function p() {
+    return (0, s.jsxs)(r.qXd, {
+        color: r.DM8.DANGER,
+        className: h.nagbar,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, s.jsx)(r.Text, {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: I.intl.string(I.t["MG+Bzc"]),
+                children: g.intl.string(g.t["MG+Bzc"]),
             }),
-            (0, i.jsx)(a.u3T, {
-                href: l.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                children: (0, i.jsx)(a.Text, {
+            (0, s.jsx)(r.u3T, {
+                href: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
+                children: (0, s.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "always-white",
-                    children: I.intl.string(I.t["9JceHB"]),
+                    children: g.intl.string(g.t["9JceHB"]),
                 }),
             }),
         ],
     });
 }
-function S(e) {
-    let {} = e,
-        t = (0, r.e7)([_.Z], () => _.Z.getAgeCheckStatus());
-    return t === l.oE.NONE
+function x(n) {
+    let {} = n,
+        e = (0, a.e7)([c.Z], () => c.Z.getAgeCheckStatus());
+    return e === d.oE.NONE
         ? null
-        : t === l.oE.SUCCESS
-          ? (0, i.jsx)(a.Wn, {
-                messageType: a.QYI.POSITIVE,
-                children: I.intl.format(I.t.maZDLy, { login: "/login" }),
+        : e === d.oE.SUCCESS
+          ? (0, s.jsx)(r.Wn, {
+                messageType: r.QYI.POSITIVE,
+                children: g.intl.format(g.t.maZDLy, { login: "/login" }),
             })
-          : t === l.oE.ERROR
-            ? (0, i.jsx)(a.Wn, {
-                  messageType: a.QYI.ERROR,
-                  children: I.intl.string(I.t["4sILBQ"]),
+          : e === d.oE.ERROR
+            ? (0, s.jsx)(r.Wn, {
+                  messageType: r.QYI.ERROR,
+                  children: g.intl.string(g.t["4sILBQ"]),
               })
-            : t === l.oE.FAILURE
-              ? (0, i.jsx)(a.Wn, {
-                    messageType: a.QYI.ERROR,
-                    children: I.intl.string(I.t["40R63t"]),
+            : e === d.oE.FAILURE
+              ? (0, s.jsx)(r.Wn, {
+                    messageType: r.QYI.ERROR,
+                    children: g.intl.string(g.t["40R63t"]),
                 })
-              : (0, i.jsx)(a.Wn, {
-                    messageType: a.QYI.INFO,
-                    children: I.intl.string(I.t["nhhy/f"]),
+              : (0, s.jsx)(r.Wn, {
+                    messageType: r.QYI.INFO,
+                    children: g.intl.string(g.t["nhhy/f"]),
                 });
 }
-function N() {
-    return (0, i.jsxs)("div", {
-        className: u.pageContainer,
-        children: [(0, i.jsx)(S, {}), (0, i.jsx)(E.Z, {})],
+function E() {
+    return (0, s.jsxs)("div", {
+        className: h.pageContainer,
+        children: [(0, s.jsx)(x, {}), (0, s.jsx)(o.Z, {})],
     });
 }
-function L() {
+function _() {
     return (
-        null == (0, r.e7)([o.default], () => o.default.getSuspendedUserToken()) &&
-            (0, s.uL)(c.Z5c.LOGIN, { source: "suspended_user_safety_hub_page" }),
-        (0, i.jsxs)("div", {
-            className: u.container,
-            children: [(0, i.jsx)(d, {}), (0, i.jsx)(N, {})],
+        null == (0, a.e7)([l.default], () => l.default.getSuspendedUserToken()) &&
+            (0, i.uL)(u.Z5c.LOGIN, { source: "suspended_user_safety_hub_page" }),
+        (0, s.jsxs)("div", {
+            className: h.container,
+            children: [(0, s.jsx)(p, {}), (0, s.jsx)(E, {})],
         })
     );
 }

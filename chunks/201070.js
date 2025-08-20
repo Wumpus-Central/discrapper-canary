@@ -91,7 +91,7 @@ function S(e) {
     };
 }
 let A = (0, o.U)((e) => ({}));
-function N(e, t) {
+function C(e, t) {
     let n = A.getState()[e];
     return (
         null == n && (n = S(1)),
@@ -102,12 +102,12 @@ function N(e, t) {
         n
     );
 }
-function C(e) {
+function N(e) {
     return A.getState()[e];
 }
 function R(e) {
-    let t = C(e);
-    return null == t && N(e, (t = S(1))), t;
+    let t = N(e);
+    return null == t && C(e, (t = S(1))), t;
 }
 function P(e) {
     (0, s.j)(() => {
@@ -118,12 +118,12 @@ function P(e) {
     });
 }
 function w(e, t, n, r, i) {
-    let a = C(e);
+    let a = N(e);
     if ((null == a ? void 0 : a.requestState) === 2) {
         var o;
         null == (o = a.abortController) || o.abort();
     }
-    return N(e, {
+    return C(e, {
         requestState: 2,
         abortController: new AbortController(),
         lastUpdated: Date.now(),
@@ -134,40 +134,40 @@ function w(e, t, n, r, i) {
     });
 }
 function D(e) {
-    null != C(e) &&
-        N(e, {
+    null != N(e) &&
+        C(e, {
             requestState: 0,
             abortController: null,
             lastUpdated: Date.now(),
         });
 }
-async function L(e) {
+async function x(e) {
     await (0, l._v)(200),
-        null != C(e) &&
-            N(e, {
+        null != N(e) &&
+            C(e, {
                 requestState: 3,
                 abortController: null,
                 lastUpdated: Date.now(),
             });
 }
-function x(e) {
-    N(e, {
+function L(e) {
+    C(e, {
         requestState: 4,
         abortController: null,
         lastUpdated: Date.now(),
     });
 }
-function M(e) {
+function j(e) {
     P(T(e));
 }
-function k(e) {
+function M(e) {
     return null != e && e.length > 1;
 }
-function j(e) {
+function k(e) {
     let t = {},
         n = {},
         { query: r } = e;
-    if (k(r)) {
+    if (M(r)) {
         let [e, n] = (0, p.C)(r);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
@@ -233,7 +233,7 @@ function B(e) {
         nextPageChunkNumber: G(i, t),
     };
 }
-function V(e, t) {
+function Z(e, t) {
     var n;
     let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: a } = B(t),
         { previousPagination: o } = R(T(e)),
@@ -255,9 +255,9 @@ function V(e, t) {
             return 1;
     }
 }
-function F(e, t, n) {
+function V(e, t, n) {
     var r, i, a, o, s, l;
-    let c = V(e, n),
+    let c = Z(e, n),
         u = g.Z.getElasticSearchPaginationByGuildId(e),
         f = (0, _.t3)(n);
     switch (c) {
@@ -291,7 +291,7 @@ function F(e, t, n) {
             (0, d.vE)(c);
     }
 }
-function Z(e, t) {
+function F(e, t) {
     let n = R(e);
     return i()(n.query, t);
 }
@@ -301,10 +301,10 @@ async function H(e) {
         o = g.Z.getPaginationStateByGuildId(e),
         s = T(e),
         l = R(s),
-        [c, u] = F(e, l, o),
-        d = U(j(i), u),
+        [c, u] = V(e, l, o),
+        d = U(k(i), u),
         f = null != (t = i.selectedSort) ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
-    if (Z(s, d) && (0, a.isEqual)(c, l.cursor)) return;
+    if (F(s, d) && (0, a.isEqual)(c, l.cursor)) return;
     let _ = w(s, d, c, o, f);
     try {
         if (
@@ -323,7 +323,7 @@ async function H(e) {
         D(s);
         return;
     }
-    await L(s);
+    await x(s);
 }
 function Y(e) {
     return A((t) => {
@@ -340,11 +340,11 @@ function W(e) {
 class K extends c.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return M(t), H(t);
+        return j(t), H(t);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        return M(t.id);
+        return j(t.id);
     }
     handleSearchStateUpdate(e) {
         let { guildId: t } = e;
@@ -356,11 +356,11 @@ class K extends c.Z {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return L(T(t));
+        return x(T(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        return x(T(t));
+        return L(T(t));
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;

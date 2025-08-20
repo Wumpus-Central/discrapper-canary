@@ -24,8 +24,8 @@ function m(e) {
             disabled: C = !1,
             inlineUsername: x = !0,
             onClick: v,
-            onMouseEnter: j,
-            "aria-setsize": O,
+            onMouseEnter: O,
+            "aria-setsize": j,
             "aria-posinset": E,
         } = e,
         S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
@@ -64,7 +64,7 @@ function m(e) {
                     null != v && v(i.id);
                 },
                 onMouseEnter: () => {
-                    null != j && j(m);
+                    null != O && O(m);
                 },
             },
             P,
@@ -74,7 +74,7 @@ function m(e) {
                 role: "option",
                 "aria-selected": _,
                 "aria-disabled": C,
-                "aria-setsize": O,
+                "aria-setsize": j,
                 "aria-posinset": E,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,

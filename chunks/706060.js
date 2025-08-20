@@ -1,72 +1,72 @@
-n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
-var i = n(951288),
-    r = n(647438),
-    s = n(772848),
-    a = n(481060),
-    l = n(259580),
-    o = n(991346),
+n.d(t, { Z: () => f }), n(388685), n(642613), n(539854);
+var r = n(951288),
+    i = n(647438),
+    a = n(772848),
+    o = n(481060),
+    s = n(259580),
+    l = n(991346),
     c = n(321523);
-function d(e) {
+function u(e) {
     let { setting: t, hasChildren: n } = e;
-    return (0, i.jsx)(a.Text, {
+    return (0, r.jsx)(o.Text, {
         variant: n ? "text-md/bold" : "text-md/normal",
         children: t,
     });
 }
-function u(e) {
-    let { setting: t, children: n, depth: o } = e,
-        [m, p] = r.useState(1 === o),
-        g = r.useCallback(() => {
-            p(!m);
-        }, [m, p]);
+function d(e) {
+    let { setting: t, children: n, depth: l } = e,
+        [f, _] = i.useState(1 === l),
+        p = i.useCallback(() => {
+            _(!f);
+        }, [f, _]);
     if (0 === n.length)
-        return (0, i.jsx)(
+        return (0, r.jsx)(
             "div",
             {
-                style: { marginLeft: 8 * o },
+                style: { marginLeft: 8 * l },
                 className: c.settingNode,
-                children: (0, i.jsx)(d, {
+                children: (0, r.jsx)(u, {
                     setting: t,
                     hasChildren: !1,
                 }),
             },
-            (0, s.Z)(),
+            (0, a.Z)(),
         );
-    let h = m
-        ? (0, i.jsx)("div", {
+    let h = f
+        ? (0, r.jsx)("div", {
               className: c.settingNodeChildren,
               children: n
                   .sort((e, t) => e.setting.localeCompare(t.setting))
                   .sort((e, t) => e.children.length - t.children.length)
                   .map((e) =>
-                      (0, i.jsx)(
-                          u,
+                      (0, r.jsx)(
+                          d,
                           {
                               setting: e.setting,
                               children: e.children,
-                              depth: o + 1,
+                              depth: l + 1,
                           },
-                          (0, s.Z)(),
+                          (0, a.Z)(),
                       ),
                   ),
           })
         : null;
-    return (0, i.jsxs)(
+    return (0, r.jsxs)(
         "div",
         {
-            style: { marginLeft: 8 * o },
+            style: { marginLeft: 8 * l },
             className: c.settingNode,
             children: [
-                (0, i.jsxs)(a.P3F, {
+                (0, r.jsxs)(o.P3F, {
                     className: c.headerBar,
-                    onClick: g,
+                    onClick: p,
                     children: [
-                        (0, i.jsx)(d, {
+                        (0, r.jsx)(u, {
                             setting: t,
                             hasChildren: n.length > 0,
                         }),
-                        (0, i.jsx)(l.Z, {
-                            direction: m ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
+                        (0, r.jsx)(s.Z, {
+                            direction: f ? s.Z.Directions.DOWN : s.Z.Directions.RIGHT,
                             className: c.headerCaret,
                         }),
                     ],
@@ -74,11 +74,11 @@ function u(e) {
                 h,
             ],
         },
-        (0, s.Z)(),
+        (0, a.Z)(),
     );
 }
-function m() {
-    let e = (0, o.Pt)(),
+function f() {
+    let e = (0, l.Pt)(),
         t = [],
         n = Object.keys(e)
             .filter((t) => {
@@ -98,9 +98,9 @@ function m() {
             children: [],
         });
     });
-    let r = [...t];
-    for (; r.length > 0; ) {
-        let e = r.shift();
+    let i = [...t];
+    for (; i.length > 0; ) {
+        let e = i.shift();
         if (null == e) continue;
         let t = n
             .filter((t) => t.parent === e.setting)
@@ -108,28 +108,28 @@ function m() {
                 setting: e.setting,
                 children: [],
             }));
-        (e.children = t), r.push(...t);
+        (e.children = t), i.push(...t);
     }
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: c.root,
         children: [
-            (0, i.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: "heading-lg/bold",
                 children: "Settings Tree",
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: c.tree,
                 children: t
                     .sort((e, t) => e.setting.localeCompare(t.setting))
                     .map((e) =>
-                        (0, i.jsx)(
-                            u,
+                        (0, r.jsx)(
+                            d,
                             {
                                 setting: e.setting,
                                 children: e.children,
                                 depth: 1,
                             },
-                            (0, s.Z)(),
+                            (0, a.Z)(),
                         ),
                     ),
             }),

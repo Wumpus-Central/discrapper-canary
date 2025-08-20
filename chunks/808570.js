@@ -1,10 +1,11 @@
-var n = r(656566);
-t.exports = function t(e, r) {
-    if (!e || !r) return !1;
-    if (e === r) return !0;
-    if (n(e)) return !1;
-    if (n(r)) return t(e, r.parentNode);
-    if ("contains" in e) return e.contains(r);
-    else if (e.compareDocumentPosition) return !!(16 & e.compareDocumentPosition(r));
+var r = n(656566);
+function i(e, t) {
+    if (!e || !t) return !1;
+    if (e === t) return !0;
+    if (r(e)) return !1;
+    if (r(t)) return i(e, t.parentNode);
+    if ("contains" in e) return e.contains(t);
+    else if (e.compareDocumentPosition) return !!(16 & e.compareDocumentPosition(t));
     else return !1;
-};
+}
+e.exports = i;

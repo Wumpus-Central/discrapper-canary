@@ -68,12 +68,12 @@ let O = i.memo(function (e) {
             selectedVoiceChannelId: O,
             optInEnabled: _,
         } = e,
-        { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
-        j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
+        { hasDivider: y, canHaveVoiceSummary: j } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
+        v = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
         C = (0, a.DM)(m),
-        E = (0, l.Wu)([s.ZP], () => {
-            if (null == j || !j.isCollapsed || !v) return [];
-            let e = j.getChannelRecords(),
+        x = (0, l.Wu)([s.ZP], () => {
+            if (null == v || !v.isCollapsed || !j) return [];
+            let e = v.getChannelRecords(),
                 t = [];
             for (let n of e) {
                 if (!n.isGuildVocal()) continue;
@@ -81,16 +81,16 @@ let O = i.memo(function (e) {
                 (!C || e) && t.push(n);
             }
             return t;
-        }, [j, v, m, C]),
-        x = i.useMemo(
+        }, [v, j, m, C]),
+        E = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: E,
+                    channels: x,
                     selectedChannelId: b,
                     selectedVoiceChannelId: O,
                     voiceStates: f,
                 }),
-            [E, b, O, f],
+            [x, b, O, f],
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {
@@ -98,14 +98,14 @@ let O = i.memo(function (e) {
             guildChannelsVersion: p,
         });
     let S = y ? (0, r.jsx)("div", { className: h.sectionDivider }) : null;
-    return v && 0 !== x.length
+    return j && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
                       className: h.voiceUserSummary,
                       children: (0, r.jsx)(o.ZP, {
                           renderIcon: !0,
-                          users: x,
+                          users: E,
                           max: 8,
                           showUserPopout: !0,
                           guildId: m,

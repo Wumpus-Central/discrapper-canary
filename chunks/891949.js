@@ -23,8 +23,8 @@ function d(e) {
                 ...e,
             ];
         }, [t.artwork, t.screenshots]),
-        f = m.length > 2;
-    function p(e) {
+        p = m.length > 2;
+    function f(e) {
         if (null == d.current) return;
         let t = d.current.getScrollerState().scrollLeft;
         d.current.scrollTo({
@@ -43,7 +43,7 @@ function d(e) {
                       children: o.intl.string(o.t["bNdK5+"]),
                   }),
                   (0, r.jsxs)("div", {
-                      className: f ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
+                      className: p ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
                       children: [
                           (0, r.jsx)(l.xVE, {
                               ref: d,
@@ -77,14 +77,14 @@ function d(e) {
                                   ),
                               ),
                           }),
-                          f &&
+                          p &&
                               (0, r.jsxs)("div", {
                                   className: u.mediaOverlay,
                                   children: [
                                       (0, r.jsx)("div", { className: u.gradientLeft }),
                                       (0, r.jsx)(l.P3F, {
                                           className: u.arrowClickable,
-                                          onClick: () => p(-1),
+                                          onClick: () => f(-1),
                                           children: (0, r.jsx)(l.whL, {
                                               className: u.arrow,
                                               color: "currentColor",
@@ -93,7 +93,7 @@ function d(e) {
                                       (0, r.jsx)("div", { className: u.gradientRight }),
                                       (0, r.jsx)(l.P3F, {
                                           className: u.arrowClickable,
-                                          onClick: () => p(1),
+                                          onClick: () => f(1),
                                           children: (0, r.jsx)(l.ZSh, {
                                               className: u.arrow,
                                               color: "currentColor",

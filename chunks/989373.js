@@ -1,83 +1,83 @@
-n.r(t), n.d(t, { default: () => P }), n(415506), n(388685);
+n.r(t), n.d(t, { default: () => x }), n(415506), n(388685);
 var r = n(951288),
-    i = n(647438),
+    a = n(647438),
     o = n(442837),
-    l = n(13245),
-    a = n(493773),
+    i = n(13245),
+    l = n(493773),
     c = n(710845),
     u = n(522474),
-    s = n(238246),
-    d = n(355863),
-    f = n(944486),
-    _ = n(808506),
+    d = n(238246),
+    s = n(355863),
+    _ = n(944486),
+    f = n(808506),
     p = n(358085);
 n(606206);
-var b = n(998502),
-    h = n(145597);
+var h = n(998502),
+    m = n(145597);
 n(371467);
 var v = n(41534),
-    m = n(837268),
+    b = n(837268),
     g = n(554370),
-    y = n(371651),
-    I = n(610394),
-    O = n(757744),
-    E = n(981631);
-let S = new c.Z("AppOverlay");
-async function C(e, t) {
+    I = n(371651),
+    y = n(610394),
+    C = n(757744),
+    w = n(981631);
+let E = new c.Z("AppOverlay");
+async function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (p.isPlatformEmbedded) {
         try {
-            await b.ZP.isAlwaysOnTop(t);
+            await h.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            S.error("Window does not exist while trying to show inactive", e), (0, v.D1)(e, m.gl.OutOfProcess);
+            E.error("Window does not exist while trying to show inactive", e), (0, v.D1)(e, b.gl.OutOfProcess);
         }
         for (let o = 0; o < r; o++)
             try {
-                if (!(await b.ZP.waitForIPCReady(n, e))) throw Error("IPC not ready");
-                b.ZP.showInactive(t);
+                if (!(await h.ZP.waitForIPCReady(n, e))) throw Error("IPC not ready");
+                h.ZP.showInactive(t);
                 return;
             } catch (e) {
-                var i;
-                if ((null == (i = e.message) ? void 0 : i.includes("IPC")) && o < r - 1) {
+                var a;
+                if ((null == (a = e.message) ? void 0 : a.includes("IPC")) && o < r - 1) {
                     let t = (n / 2) * Math.pow(2, o + 1);
-                    S.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
+                    E.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
                         await new Promise((e) => setTimeout(e, t));
-                } else throw ((0, v.D1)(e, m.gl.OutOfProcess), e);
+                } else throw ((0, v.D1)(e, b.gl.OutOfProcess), e);
             }
     }
 }
-let P = i.memo(function (e) {
+let x = a.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         c = (function (e, t) {
             let n = (0, o.e7)([u.Z], () => u.Z.getWindow(e)),
-                r = i.useRef(null),
-                c = i.useRef(null),
-                s = i.useRef(null),
-                b = (0, o.e7)([_.default], () => {
-                    let e = _.default.getFocusedPID();
-                    return !p.isPlatformEmbedded || (null != e && e !== h.UNSET_PID);
+                r = a.useRef(null),
+                c = a.useRef(null),
+                d = a.useRef(null),
+                h = (0, o.e7)([f.default], () => {
+                    let e = f.default.getFocusedPID();
+                    return !p.isPlatformEmbedded || (null != e && e !== m.UNSET_PID);
                 }),
-                [v, g] = i.useState(b),
-                [O, S] = i.useState(!1),
-                P = i.useCallback(() => {
-                    let e = (0, h.getPID)(),
-                        n = null != f.Z.getVoiceChannelId();
-                    l.Z.track(E.rMx.OVERLAY_INITIALIZED, {
+                [v, g] = a.useState(h),
+                [C, E] = a.useState(!1),
+                x = a.useCallback(() => {
+                    let e = (0, m.getPID)(),
+                        n = null != _.Z.getVoiceChannelId();
+                    i.Z.track(w.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: I.ZP.isPinned(E.Odu.TEXT),
-                        overlay_render_method: m.gl[y.default.getOverlayMethod(e)],
-                        unpinned_widget_types: d.Z.getAllUnpinnedPinnedWidgets(t),
+                        text_widget_connected: y.ZP.isPinned(w.Odu.TEXT),
+                        overlay_render_method: b.gl[I.default.getOverlayMethod(e)],
+                        unpinned_widget_types: s.Z.getAllUnpinnedPinnedWidgets(t),
                     }),
-                        l.Z.successfullyShown(e);
+                        i.Z.successfullyShown(e);
                 }, [t]);
-            (0, a.Ng)(() => {
+            (0, l.Ng)(() => {
                 let e = (e) => {
                     let t = null != n ? n : window;
-                    e.data === I.Il &&
+                    e.data === y.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(I.A8, "*");
+                                window.parent.postMessage(y.A8, "*");
                             });
                         });
                 };
@@ -88,44 +88,44 @@ let P = i.memo(function (e) {
                     }
                 );
             });
-            let A = i.useCallback(
+            let O = a.useCallback(
                 (e, t) => {
                     null == r.current &&
-                        ((s.current = () => {
+                        ((d.current = () => {
                             null != r.current && e.cancelAnimationFrame(r.current),
                                 null != c.current && e.clearTimeout(c.current);
                         }),
                         (r.current = e.requestAnimationFrame(async () => {
                             try {
-                                await C(e, t);
+                                await S(e, t);
                             } catch (e) {
-                                l.Z.setOverlayCrashed((0, h.getPID)(), e);
+                                i.Z.setOverlayCrashed((0, m.getPID)(), e);
                                 return;
                             }
                             c.current = e.setTimeout(() => {
-                                g(!0), S(!0), P(), (s.current = null);
+                                g(!0), E(!0), x(), (d.current = null);
                             }, 100);
                         })));
                 },
-                [P],
+                [x],
             );
             return (
-                i.useEffect(() => {
-                    (!v || null == n) && b && b && null != n && A(n, e);
-                }, [A, v, b, e, n]),
-                (0, a.Ng)(() => {
-                    v && null != n && A(n, e);
+                a.useEffect(() => {
+                    (!v || null == n) && h && h && null != n && O(n, e);
+                }, [O, v, h, e, n]),
+                (0, l.Ng)(() => {
+                    v && null != n && O(n, e);
                 }),
-                (0, a.zq)(() => {
-                    null != s.current && s.current();
+                (0, l.zq)(() => {
+                    null != d.current && d.current();
                 }),
-                O
+                C
             );
-        })(n, O.$S),
-        b = (0, h.getPID)(),
-        v = (0, o.e7)([_.default], () => _.default.isInputLocked(b), [b]);
+        })(n, C.$S),
+        h = (0, m.getPID)(),
+        v = (0, o.e7)([f.default], () => f.default.isInputLocked(h), [h]);
     return c
-        ? (0, r.jsx)(s.Z, {
+        ? (0, r.jsx)(d.Z, {
               withTitleBar: t,
               windowKey: n,
               title: "Discord Overlay",

@@ -1,9 +1,11 @@
 n.d(t, { h: () => r });
-var i,
-    r =
-        (((i = {}).HOME = "home"),
-        (i.WHATS_NEW = "whatsNew"),
-        (i.BEST_OF_NITRO = "bestOfNitro"),
-        (i.PLANS = "plans"),
-        (i.COMPARE = "compare"),
-        i);
+var r = (function (e) {
+    return (
+        (e.HOME = "home"),
+        (e.WHATS_NEW = "whatsNew"),
+        (e.BEST_OF_NITRO = "bestOfNitro"),
+        (e.PLANS = "plans"),
+        (e.COMPARE = "compare"),
+        e
+    );
+})({});

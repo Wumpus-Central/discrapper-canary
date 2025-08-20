@@ -1,79 +1,80 @@
-n.d(t, { Z: () => _ });
-var i = n(951288),
-    r = n(647438),
-    s = n(755721),
-    a = n(481060),
-    l = n(410030),
-    o = n(100527),
+n.d(t, { Z: () => y });
+var r = n(951288),
+    i = n(647438),
+    a = n(755721),
+    o = n(481060),
+    s = n(410030),
+    l = n(100527),
     c = n(906732),
-    d = n(767714),
-    u = n(626135),
-    m = n(74538),
-    p = n(981631),
-    g = n(474936),
+    u = n(767714),
+    d = n(626135),
+    f = n(74538),
+    _ = n(981631),
+    p = n(474936),
     h = n(388032),
-    f = n(467842),
-    b = n(699623),
-    x = n(820350);
-function _(e) {
-    let { user: t, showOverlay: n, children: _ } = e,
-        j = (0, l.ZP)(),
-        { analyticsLocations: E } = (0, c.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
-    return (r.useEffect(() => {
+    m = n(467842),
+    g = n(699623),
+    E = n(820350);
+function b(e) {
+    switch (e) {
+        case _.BRd.DARK:
+            return g;
+        case _.BRd.LIGHT:
+            return E;
+    }
+}
+function y(e) {
+    let { user: t, showOverlay: n, children: g } = e,
+        E = (0, s.ZP)(),
+        { analyticsLocations: y } = (0, c.ZP)(l.Z.PREMIUM_UPSELL_OVERLAY);
+    return (i.useEffect(() => {
         n &&
-            u.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: E,
-                type: g.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE,
+            d.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
+                location_stack: y,
+                type: p.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE,
             });
-    }, [n, E]),
+    }, [n, y]),
     n)
-        ? (0, i.jsxs)("div", {
-              className: f.upsellOverlayContainer,
+        ? (0, r.jsxs)("div", {
+              className: m.upsellOverlayContainer,
               children: [
-                  (0, i.jsx)("div", { children: _ }),
-                  (0, i.jsxs)("div", {
-                      className: f.upsellOverlay,
+                  (0, r.jsx)("div", { children: g }),
+                  (0, r.jsxs)("div", {
+                      className: m.upsellOverlay,
                       children: [
-                          (0, i.jsx)("img", {
-                              className: f.upsellImage,
+                          (0, r.jsx)("img", {
+                              className: m.upsellImage,
                               alt: h.intl.string(h.t.LHFZQ0),
-                              src: (function (e) {
-                                  switch (e) {
-                                      case p.BRd.DARK:
-                                          return b;
-                                      case p.BRd.LIGHT:
-                                          return x;
-                                  }
-                              })(j),
+                              src: b(E),
                           }),
-                          (0, i.jsxs)("div", {
-                              className: f.upsellTextContainer,
+                          (0, r.jsxs)("div", {
+                              className: m.upsellTextContainer,
                               children: [
-                                  (0, i.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: "text-lg/semibold",
                                       color: "always-white",
                                       children: h.intl.string(h.t.dMaDFR),
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "always-white",
                                       children: h.intl.string(h.t.F7sgFB),
                                   }),
                               ],
                           }),
-                          (0, i.jsx)(d.Z, {
-                              size: s.zx.Sizes.LARGE,
-                              color: s.zx.Colors.GREEN,
+                          (0, r.jsx)(u.Z, {
+                              size: a.zx.Sizes.LARGE,
+                              color: a.zx.Colors.GREEN,
                               textOptions: {
-                                  textOverride: m.ZP.isPremium(t)
+                                  textOverride: f.ZP.isPremium(t)
                                       ? h.intl.string(h.t.AfRWIy)
                                       : h.intl.string(h.t.nkdUys),
                               },
-                              subscriptionTier: g.Si.TIER_2,
+                              subscriptionTier: p.Si.TIER_2,
                           }),
                       ],
                   }),
               ],
           })
-        : _;
+        : g;
 }

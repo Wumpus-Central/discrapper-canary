@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var r,
     i = n(512722),
     a = n.n(i),
@@ -98,11 +98,11 @@ function S() {
 function A(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
 }
-function N(e) {
+function C(e) {
     let { userSettingsProto: t } = e;
     (E.proto = (0, p.ac)(t)), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
 }
-function C(e) {
+function N(e) {
     let {
         settings: { proto: t, type: n },
         partial: r,
@@ -225,14 +225,14 @@ class D extends (r = l.ZP.PersistedStore) {
     }
 }
 m(D, "displayName", "UserSettingsProtoStore"), m(D, "persistKey", "UserSettingsProtoStore-Cache");
-let L = new D(f.Z, {
+let x = new D(f.Z, {
     CACHE_LOADED: P,
-    USER_SETTINGS_PROTO_UPDATE: C,
-    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
+    USER_SETTINGS_PROTO_UPDATE: N,
+    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: N,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: R,
     CONNECTION_OPEN: v,
     CONNECTION_CLOSED: I,
     CONNECTION_RESUMED: I,
-    OVERLAY_INITIALIZE: N,
+    OVERLAY_INITIALIZE: C,
     LOGOUT: T,
 });

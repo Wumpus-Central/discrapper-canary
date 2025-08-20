@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => N,
+    K: () => C,
     Z: () => P,
 }),
     n(413496),
@@ -58,8 +58,8 @@ function A(e) {
     }
     return e;
 }
-let N = { results: { entries: [] } };
-function C() {
+let C = { results: { entries: [] } };
+function N() {
     (0, a.ZD)(async () => {
         let { default: e } = await n.e("87549").then(n.bind(n, 913962));
         return (t) => (0, r.jsx)(e, A({}, t));
@@ -74,7 +74,7 @@ let P = {
     matches: (e, t, n, r, i) =>
         i.commands !== y.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (r || i.commands !== y.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
-        if (0 === n.length && r.commands !== y.L8.OLD_BUILT_INS) return N;
+        if (0 === n.length && r.commands !== y.L8.OLD_BUILT_INS) return C;
         if (r.commands === y.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([o.yU.CHAT], !1, !1),
                 i = RegExp("^".concat(E.Z.escape(n)), "i"),
@@ -89,7 +89,7 @@ let P = {
                 ),
                 s = l.Tm[v.bi.BUILT_IN];
             return 0 === a.length
-                ? N
+                ? C
                 : {
                       results: {
                           entries: a.map((e) => ({
@@ -116,7 +116,7 @@ let P = {
                     allowFetch: i,
                 },
             );
-        if (null == s) return N;
+        if (null == s) return C;
         let f = s;
         if (a.hasSpaceTerminator) {
             let e = a.text.trim(),
@@ -124,7 +124,7 @@ let P = {
             f = f.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
         return 0 === f.length
-            ? N
+            ? C
             : {
                   results: {
                       entries: f.slice(0, y.AQ).map((e) => ({
@@ -175,7 +175,7 @@ let P = {
                       look: i.zx.Looks.LINK,
                       color: i.zx.Colors.BRAND,
                       size: i.zx.Sizes.MIN,
-                      onClick: C,
+                      onClick: N,
                       children: I.intl.string(I.t["8a0P09"]),
                   })
                 : null,

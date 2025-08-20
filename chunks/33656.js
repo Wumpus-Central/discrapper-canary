@@ -1,100 +1,101 @@
-n.d(t, { Z: () => j });
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    o = n(755721),
+n.d(t, { Z: () => y });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(755721),
     c = n(481060),
-    d = n(921801),
-    u = n(663389),
-    m = n(960412),
-    p = n(151662),
-    g = n(930441),
+    u = n(921801),
+    d = n(663389),
+    f = n(960412),
+    _ = n(151662),
+    p = n(930441),
     h = n(726985),
-    f = n(388032),
-    b = n(882238),
-    x = n(197571);
-function _(e) {
-    let { label: t, onChange: n, enabled: r, subLabel: s } = e;
-    return (0, i.jsx)(c.j7V, {
-        value: !!r,
+    m = n(388032),
+    g = n(882238),
+    E = n(197571);
+function b(e) {
+    let { label: t, onChange: n, enabled: i, subLabel: a } = e;
+    return (0, r.jsx)(c.j7V, {
+        value: !!i,
         onChange: n,
-        note: s,
+        note: a,
         children: t,
     });
 }
-function j() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getSubsection()),
-        t = r.useRef(null),
-        { categories: n, initialized: s } = (0, l.cj)([p.Z], () => p.Z.getEmailSettings());
-    r.useEffect(() => {
-        if (null == s) (0, m.Y7)();
-        else if (e === g.vG.toUpperCase()) {
+function y() {
+    let e = (0, s.e7)([d.Z], () => d.Z.getSubsection()),
+        t = i.useRef(null),
+        { categories: n, initialized: a } = (0, s.cj)([_.Z], () => _.Z.getEmailSettings());
+    i.useEffect(() => {
+        if (null == a) (0, f.Y7)();
+        else if (e === p.vG.toUpperCase()) {
             var n;
             null == t || null == (n = t.current) || n.scrollIntoView(!0);
         }
-    }, [s, t, e]);
-    let j = g.M0.reduce((e, t) => e || !!n[t], !1),
-        E = {
-            [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS,
-        };
-    return s
-        ? (0, i.jsxs)(d.F, {
+    }, [a, t, e]);
+    let y = p.M0.reduce((e, t) => e || !!n[t], !1);
+    function O(e, t) {
+        (0, f.pR)(e, t);
+    }
+    let v = {
+        [p.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+        [p.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+        [p.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+        [p.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
+        [p.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS,
+    };
+    return a
+        ? (0, r.jsxs)(u.F, {
               setting: h.s6.NOTIFICATIONS_EMAILS,
               children: [
-                  (0, i.jsx)("div", { ref: t }),
-                  (0, i.jsxs)(c.hjN, {
-                      className: x.marginTop40,
+                  (0, r.jsx)("div", { ref: t }),
+                  (0, r.jsxs)(c.hjN, {
+                      className: E.marginTop40,
                       tag: c.RB0.H1,
-                      title: f.intl.string(f.t.TPchzM),
+                      title: m.intl.string(m.t.TPchzM),
                       children: [
-                          g.Od.map((e) => {
-                              let { category: t, label: r, subLabel: s } = e,
-                                  a = E[t],
-                                  l = (0, i.jsx)(
-                                      _,
+                          p.Od.map((e) => {
+                              let { category: t, label: i, subLabel: a } = e,
+                                  o = v[t],
+                                  s = (0, r.jsx)(
+                                      b,
                                       {
-                                          label: r(),
-                                          subLabel: s(),
+                                          label: i(),
+                                          subLabel: a(),
                                           enabled: n[t],
-                                          onChange: (e) => {
-                                              (0, m.pR)(t, e);
-                                          },
+                                          onChange: (e) => O(t, e),
                                       },
-                                      r(),
+                                      i(),
                                   );
-                              return null != a
-                                  ? (0, i.jsx)(
-                                        d.F,
+                              return null != o
+                                  ? (0, r.jsx)(
+                                        u.F,
                                         {
-                                            setting: a,
-                                            children: l,
+                                            setting: o,
+                                            children: s,
                                         },
-                                        r(),
+                                        i(),
                                     )
-                                  : l;
+                                  : s;
                           }),
-                          (0, i.jsxs)(d.F, {
+                          (0, r.jsxs)(u.F, {
                               setting: h.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
-                                  (0, i.jsx)(o.zx, {
-                                      className: b.marketingUnsubscribeButton,
-                                      disabled: !j,
-                                      look: o.iL.LINK,
-                                      color: o.Tt.LINK,
-                                      onClick: m.oc,
-                                      children: f.intl.string(f.t.Ra9Pws),
+                                  (0, r.jsx)(l.zx, {
+                                      className: g.marketingUnsubscribeButton,
+                                      disabled: !y,
+                                      look: l.iL.LINK,
+                                      color: l.Tt.LINK,
+                                      onClick: f.oc,
+                                      children: m.intl.string(m.t.Ra9Pws),
                                   }),
-                                  (0, i.jsx)(c.R94, {
+                                  (0, r.jsx)(c.R94, {
                                       type: c.geA.DESCRIPTION,
-                                      children: f.intl.string(f.t.iYjQ8f),
+                                      children: m.intl.string(m.t.iYjQ8f),
                                   }),
-                                  (0, i.jsx)(c.$i$, { className: a()(x.marginTop40, x.marginBottom40) }),
+                                  (0, r.jsx)(c.$i$, { className: o()(E.marginTop40, E.marginBottom40) }),
                               ],
                           }),
                       ],

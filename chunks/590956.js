@@ -159,7 +159,7 @@ let I = (e) => {
             } = e,
             [O, I] = i.useState(String(Date.now())),
             [T, A] = i.useState(!1),
-            [N, C] = i.useState(!1),
+            [C, N] = i.useState(!1),
             R = i.useRef(null),
             P = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -190,7 +190,7 @@ let I = (e) => {
                         ),
                         {
                             position: a,
-                            shouldShow: !N,
+                            shouldShow: !C,
                             onTooltipShow: () => {
                                 A(!0),
                                     u &&
@@ -213,7 +213,7 @@ let I = (e) => {
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
+                                                  A(!1), N(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
@@ -231,7 +231,7 @@ let I = (e) => {
                     ),
                 );
         if (!u) return D();
-        let L = (e) =>
+        let x = (e) =>
             (0, r.jsx)(
                 _.vk,
                 v(y({}, e), {
@@ -244,12 +244,12 @@ let I = (e) => {
             animation: l.yRy.Animation.FADE,
             align: "center",
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), N(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: "right",
-            renderPopout: L,
+            renderPopout: x,
             positionKey: O,
             targetElementRef: R,
             children: D,

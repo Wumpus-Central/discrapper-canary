@@ -1,8 +1,8 @@
 a.d(t, {
-    _Y: () => O,
+    _Y: () => E,
     aB: () => N,
-    th: () => T,
-    ub: () => E,
+    th: () => O,
+    ub: () => T,
 }),
     a(388685),
     a(457542);
@@ -19,11 +19,11 @@ var n = a(647438),
     x = a(695346),
     h = a(675478),
     p = a(25990),
-    b = a(594174),
-    v = a(74538),
+    v = a(594174),
+    b = a(74538),
     f = a(981631),
-    g = a(469115),
-    j = a(959517);
+    j = a(469115),
+    g = a(959517);
 let _ = [f.BRd.DARK, f.BRd.LIGHT, f.BRd.DARKER, f.BRd.MIDNIGHT],
     y = [r.Pi.COMPACT, r.Pi.COZY, r.Pi.DEFAULT];
 function C(e) {
@@ -31,8 +31,8 @@ function C(e) {
 }
 async function N() {
     let e = (function () {
-            let e = b.default.getCurrentUser();
-            return v.ZP.canUseClientThemes(e) ? Object.keys(g.qt).map((e) => Number(e)) : [];
+            let e = v.default.getCurrentUser();
+            return b.ZP.canUseClientThemes(e) ? Object.keys(j.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
@@ -42,7 +42,7 @@ async function N() {
                 r = C(n);
             if (null != r) {
                 var a;
-                let e = g.qt[r];
+                let e = j.qt[r];
                 t = null != (a = null == e ? void 0 : e.theme) ? a : f.BRd.DARK;
             } else t = C([f.BRd.DARK, f.BRd.DARKER, f.BRd.MIDNIGHT]);
             await i.ZI(
@@ -66,7 +66,7 @@ async function N() {
         }
     } catch (e) {}
 }
-async function T() {
+async function O() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         a = (0, d.jT)(e),
@@ -87,33 +87,33 @@ async function T() {
             await (0, l.Mn)(i).finally(l.si);
         } catch (e) {}
 }
-function O() {
+function E() {
     try {
         let e = C(f.yqN.FONT_SIZES);
         (0, s.oL)(e);
-        let t = C(j.fP);
+        let t = C(g.fP);
         (0, s.ZZ)(t);
         let a = C(y);
         x.YC.updateSetting(a);
     } catch (e) {}
 }
-function E() {
+function T() {
     n.useEffect(() => {
         var e, t, a, n, r;
-        let v = b.default.getCurrentUser(),
+        let b = v.default.getCurrentUser(),
             f = x.L1.getSetting(),
-            g = c.Z.purchases,
-            j = (0, d.Ad)(g),
-            _ = (0, d.jT)(g),
+            j = c.Z.purchases,
+            g = (0, d.Ad)(j),
+            _ = (0, d.jT)(j),
             y = m.Z.theme,
             C = f.backgroundGradientPresetId,
-            N = null == v || null == (e = v.avatarDecoration) ? void 0 : e.skuId,
-            T = null == v || null == (a = v.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
-            O = null != N && null != (n = j.find((e) => e.skuId === N)) ? n : null,
-            E = null != T && null != (r = _.find((e) => e.skuId === T)) ? r : null,
+            N = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
+            O = null == b || null == (a = b.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
+            E = null != N && null != (n = g.find((e) => e.skuId === N)) ? n : null,
+            T = null != O && null != (r = _.find((e) => e.skuId === O)) ? r : null,
             S = o.Z.fontSize,
             P = o.Z.messageGroupSpacing,
-            I = x.YC.getSetting();
+            w = x.YC.getSetting();
         return () => {
             try {
                 i.ZI(
@@ -124,11 +124,11 @@ function E() {
                     },
                     h.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, l.cV)(O),
-                    (0, l.Rx)(E);
+                    (0, l.cV)(E),
+                    (0, l.Rx)(T);
                 let e = p.Z.getAllPending(),
                     t = (0, u.ED)(e);
-                (0, l.Mn)(t).finally(l.si), (0, s.oL)(S), (0, s.ZZ)(P), x.YC.updateSetting(I);
+                (0, l.Mn)(t).finally(l.si), (0, s.oL)(S), (0, s.ZZ)(P), x.YC.updateSetting(w);
             } catch (e) {}
         };
     }, []);

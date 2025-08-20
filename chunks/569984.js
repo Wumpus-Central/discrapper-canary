@@ -1,17 +1,17 @@
 let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I;
-n.d(t, { Z: () => ek }), n(388685);
+n.d(t, { Z: () => eM }), n(388685);
 var T,
     S = n(392711),
     A = n(754700),
-    N = n(887003),
-    C = n(442837),
+    C = n(887003),
+    N = n(442837),
     R = n(570140),
     P = n(509212),
     w = n(497505),
     D = n(184299),
-    L = n(5881),
-    x = n(46140);
-function M(e, t, n) {
+    x = n(5881),
+    L = n(46140);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +35,12 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,8 +65,8 @@ function U(e, t) {
 }
 let G = new Map(),
     B = null,
-    V = 1000;
-function F() {
+    Z = 1000;
+function V() {
     (r = !1),
         (i = !1),
         (a = !1),
@@ -91,7 +91,7 @@ function F() {
         eD(),
         (I = null);
 }
-function Z(e, t) {
+function F(e, t) {
     var n, r, i, a;
     if (null != t.userStatus)
         for (let o of Object.values(null != (r = null == (n = t.userStatus) ? void 0 : n.progress) ? r : {}))
@@ -104,8 +104,8 @@ function Z(e, t) {
 function H(e, t) {
     let n = (o = new Map(o)).get(e);
     if (null != n) {
-        let r = k({}, n, t);
-        Z(e, t), o.set(e, r);
+        let r = M({}, n, t);
+        F(e, t), o.set(e, r);
     }
 }
 function Y(e, t) {
@@ -116,13 +116,13 @@ function W(e, t) {
     Y(e, t);
     let n = o.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && H(e, { userStatus: U(k({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && H(e, { userStatus: U(M({}, r), { claimedAt: t.claimedAt }) });
 }
 function K(e) {
     var t;
     let { entitlements: n } = e,
         r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
-    return (null == r ? void 0 : r.tag) !== N.w.REWARD_CODE ? null : r.rewardCode;
+    return (null == r ? void 0 : r.tag) !== C.w.REWARD_CODE ? null : r.rewardCode;
 }
 function z(e, t) {
     let n = new Map(g);
@@ -134,7 +134,7 @@ function z(e, t) {
         let n = K({ entitlements: t });
         null != n && Y(e, n),
             H(e, {
-                userStatus: U(k({}, i), {
+                userStatus: U(M({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null,
                 }),
@@ -145,7 +145,7 @@ function q(e) {
     null != E.get(e) && (E = new Map(E)).delete(e);
 }
 function X() {
-    eD(), F();
+    eD(), V();
 }
 function Q() {
     r = !0;
@@ -158,7 +158,7 @@ function J(e) {
         o.set(e.id, e),
             a.set(e.id, (0, P.zi)(e)),
             e.targetedContent.includes(w.jn.QUEST_BAR) &&
-                (0, L.T)({ location: x.dr.QUESTS_STORE }).log(
+                (0, x.T)({ location: L.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
     for (let e of ((v = a), (s = new Map()), n)) s.set(e.id, e);
@@ -268,7 +268,7 @@ function eO(e) {
 }
 function ev(e) {
     let { user_status: t } = e,
-        n = (0, L.T)({ location: x.dr.QUESTS_STORE });
+        n = (0, x.T)({ location: L.dr.QUESTS_STORE });
     n.log("Received user status update for ".concat(t.quest_id), t);
     let r = (0, P.U3)(t);
     H(t.quest_id, { userStatus: r });
@@ -306,11 +306,11 @@ function eA(e) {
         a = null != (t = G.get(n)) ? t : new Map();
     a.set(r, i), G.set(n, a);
 }
-function eN(e) {
+function eC(e) {
     let { questId: t } = e;
     G.has(t) && G.delete(t), D.ZP.getState().resetQuest(t);
 }
-function eC(e) {
+function eN(e) {
     let { quest: t, placement: n, adDecisionData: r, adContext: a, metadataRaw: o } = e;
     (u = Date.now()),
         (i = !1),
@@ -333,24 +333,24 @@ function eP() {
     o.forEach((n, r) => {
         !0 !== t.get(r) && ((0, P.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((v = t), eM.emitChange());
+        e && ((v = t), ej.emitChange());
 }
 function ew() {
     null === B &&
         (eP(),
         (B = setInterval(() => {
             eP();
-        }, V)));
+        }, Z)));
 }
 function eD() {
     null !== B && (clearInterval(B), (B = null));
 }
-function eL(e) {
+function ex(e) {
     let { quest_enrollment_blocked_until: t } = e;
     I = null != t ? new Date(t) : null;
 }
-F();
-class ex extends (T = C.ZP.Store) {
+V();
+class eL extends (T = N.ZP.Store) {
     get quests() {
         return o;
     }
@@ -427,8 +427,8 @@ class ex extends (T = C.ZP.Store) {
         return null != (t = v.get(e)) && t;
     }
 }
-M(ex, "displayName", "QuestsStore");
-let eM = new ex(R.Z, {
+j(eL, "displayName", "QuestsStore");
+let ej = new eL(R.Z, {
         LOGOUT: X,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: Q,
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: J,
@@ -437,7 +437,7 @@ let eM = new ex(R.Z, {
         QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: en,
         QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: er,
         QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: ee,
-        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eC,
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eN,
         QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eR,
         QUESTS_SEND_HEARTBEAT_SUCCESS: ei,
         QUESTS_SEND_HEARTBEAT_FAILURE: ea,
@@ -460,7 +460,7 @@ let eM = new ex(R.Z, {
         QUESTS_DELIVERY_OVERRIDE: eT,
         QUESTS_SELECT_TASK_PLATFORM: eS,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eA,
-        QUESTS_RESET_OPTIMISTIC_PROGRESS: eN,
-        QUESTS_USER_COMPLETION_UPDATE: eL,
+        QUESTS_RESET_OPTIMISTIC_PROGRESS: eC,
+        QUESTS_USER_COMPLETION_UPDATE: ex,
     }),
-    ek = eM;
+    eM = ej;

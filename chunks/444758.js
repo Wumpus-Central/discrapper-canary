@@ -85,7 +85,7 @@ function A(e) {
         }),
     };
 }
-function N(e, t) {
+function C(e, t) {
     let n,
         r = D((0, m.aF)(e.name, 32));
     return {
@@ -103,7 +103,7 @@ function N(e, t) {
         iconType: e.iconType,
     };
 }
-function C(e, t) {
+function N(e, t) {
     let n = {
         type: "channel",
         content: [D(e.roleSubscriptionGated ? e.name : y.intl.string(y.t["/YzI6+"]))],
@@ -183,11 +183,11 @@ function D(e) {
         content: e,
     };
 }
-function L(e) {
+function x(e) {
     return null != e ? w(e) : D("#".concat(y.intl.string(y.t.J90oLS)));
 }
-function x() {
-    return N(
+function L() {
+    return C(
         {
             name: y.intl.string(y.t.zLZPmp).toLowerCase(),
             type: b.d4z.UNKNOWN,
@@ -196,7 +196,7 @@ function x() {
         "italics",
     );
 }
-function M(e, t, n, r, i) {
+function j(e, t, n, r, i) {
     let a = u.Z.getGuild(e),
         o = (null == a ? void 0 : a.id) === r;
     return {
@@ -206,12 +206,12 @@ function M(e, t, n, r, i) {
         messageId: n,
         originalLink: i,
         inContent: null == a || o ? null : [A(a)],
-        content: [x()],
+        content: [L()],
     };
 }
-function k(e, t, n, r) {
+function M(e, t, n, r) {
     let i = A(e),
-        a = N(t),
+        a = C(t),
         o = R(t.isForumPost);
     if (n && r) {
         if (t.isForumPost) {
@@ -220,7 +220,7 @@ function k(e, t, n, r) {
                 var s;
                 return {
                     inContent: [
-                        N({
+                        C({
                             name: e.name,
                             type: e.type,
                             iconType: null != (s = (0, h.wl)(e)) ? s : "forum",
@@ -252,8 +252,8 @@ function k(e, t, n, r) {
                   content: [a],
               };
 }
-function j(e, t, n, r) {
-    if (!e.canViewChannel) return C(e, t);
+function k(e, t, n, r) {
+    if (!e.canViewChannel) return N(e, t);
     if (!e.isMentionable) return D("#".concat(e.name));
     let i = {
             type: "channelMention",
@@ -267,12 +267,12 @@ function j(e, t, n, r) {
         if (e.isDm)
             return T(v({}, i), {
                 guildId: b.ME,
-                inContent: [N(e)],
+                inContent: [C(e)],
                 content: [R(!1)],
             });
-        else return L(r);
+        else return x(r);
     let o = e.guildId === n;
-    return v({}, i, k(a, e, o, null != t));
+    return v({}, i, M(a, e, o, null != t));
 }
 let U = {
         order: E.ZP.order,
@@ -286,7 +286,7 @@ let U = {
                     id: r,
                 };
             let i = P(r, n.mentionChannels);
-            return null == i ? M(null, r, null, S(n.channelId)) : j(i, null, S(n.channelId));
+            return null == i ? j(null, r, null, S(n.channelId)) : k(i, null, S(n.channelId));
         },
     },
     G = {
@@ -305,7 +305,7 @@ let U = {
                     o = e[3];
                 if (null == a) return w(r);
                 let s = P(a, null);
-                return null == s ? M(i, a, o, S(n.channelId), r) : j(s, o, S(n.channelId), r);
+                return null == s ? j(i, a, o, S(n.channelId), r) : k(s, o, S(n.channelId), r);
             },
         },
         mediaPostLink: {
@@ -320,9 +320,9 @@ let U = {
                     s = e[4];
                 if (null == a || null == o) return w(r);
                 let l = P(o, null);
-                if (null != l) return j(l, s, S(n.channelId), r);
+                if (null != l) return k(l, s, S(n.channelId), r);
                 let c = P(a, null);
-                return null != c ? j(c, s, S(n.channelId), r) : M(i, a, s, S(n.channelId), r);
+                return null != c ? k(c, s, S(n.channelId), r) : j(i, a, s, S(n.channelId), r);
             },
         },
     };

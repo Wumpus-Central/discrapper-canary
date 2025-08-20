@@ -91,13 +91,13 @@ function A(e) {
         children: e,
     });
 }
-function N(e) {
+function C(e) {
     return (0, i.jsx)("div", {
         className: s()(p.moreUsers, p.moreUsersDimmed),
         children: e,
     });
 }
-function C() {
+function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.SIZE_24;
     switch (e) {
         case b.SIZE_16:
@@ -167,7 +167,7 @@ class P extends (r = a.PureComponent) {
     renderMoreUsers(e) {
         let { max: t, count: n, hideMoreUsers: r, renderMoreUsers: o, users: s, dimEmptyUsers: l } = this.props,
             c = Math.min(e, s.length),
-            u = l ? N : o;
+            u = l ? C : o;
         if (!r) {
             if (null != n) {
                 if (n >= t) return (0, i.jsx)(a.Fragment, { children: u("".concat(t, "+"), t) }, "more-users");
@@ -203,7 +203,7 @@ class P extends (r = a.PureComponent) {
             { popoutUserId: l } = this.state;
         if (null == l)
             return (0, i.jsxs)("div", {
-                className: s()(e, p.container, C(t)),
+                className: s()(e, p.container, N(t)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
         let c = n.find((e) => e instanceof d.Z && e.id === l),
@@ -223,7 +223,7 @@ class P extends (r = a.PureComponent) {
                     E(
                         m(
                             {
-                                className: s()(e, p.container, C(t)),
+                                className: s()(e, p.container, N(t)),
                                 ref: this._ref,
                             },
                             n,

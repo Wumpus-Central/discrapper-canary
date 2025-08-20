@@ -71,11 +71,11 @@ function A(e, t) {
         e
     );
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = N(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +83,7 @@ function N(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,16 +99,16 @@ let R = (e) => {
             guild: a,
             buttonText: I,
             targetBoostedGuildTier: S,
-            onClose: C = () => {},
+            onClose: N = () => {},
             closeLayer: R = () => {},
             pauseAnimation: P = !1,
             applicationId: w,
             handleSubscribeModalClose: D,
-            withHighlight: L = !1,
-            icon: x,
-            intent: M,
+            withHighlight: x = !1,
+            icon: L,
+            intent: j,
         } = e,
-        k = N(e, [
+        M = C(e, [
             "analyticsLocation",
             "analyticsSourceLocation",
             "guild",
@@ -123,41 +123,41 @@ let R = (e) => {
             "icon",
             "intent",
         ]),
-        { analyticsLocations: j } = (0, f.ZP)(),
+        { analyticsLocations: k } = (0, f.ZP)(),
         U = (0, d.bp)() === b.IlC.POPOUT,
         [G, B] = i.useState(!1),
-        { fractionalState: V } = (0, _.Z)(),
-        F = (0, s.e7)([h.Z], () => h.Z.hasFetched);
+        { fractionalState: Z } = (0, _.Z)(),
+        V = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
-        F || (0, u.X8)();
-    }, [F]);
-    let Z = (0, g.vx)(h.Z.boostSlots),
+        V || (0, u.X8)();
+    }, [V]);
+    let F = (0, g.vx)(h.Z.boostSlots),
         H = null != S ? Math.max((0, g.KK)(a, S), 1) : 1,
-        Y = (0, g.aq)({ fractionalState: V }),
+        Y = (0, g.aq)({ fractionalState: Z }),
         W = async () => {
             B(!0),
                 await (0, E.u)({
-                    analyticsLocations: j,
+                    analyticsLocations: k,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: H,
-                    onClose: C,
+                    onClose: N,
                     closeLayer: R,
                     inPopout: U,
                     applicationId: w,
                     handleSubscribeModalClose: D,
-                    intent: M,
+                    intent: j,
                 }),
                 B(!1);
         },
         K = m.Z.getPremiumTypeSubscription(),
         z = (0, r.jsxs)("div", {
             className: v.button,
-            children: [x, null != I ? I : O.intl.string(O.t.gKmQ1N)],
+            children: [L, null != I ? I : O.intl.string(O.t.gKmQ1N)],
         }),
         q = !1;
-    return ((q = null !== K && !(Z.length > 0) && (null == K ? void 0 : K.isPausedOrPausePending) && V === y.a$.NONE) &&
+    return ((q = null !== K && !(F.length > 0) && (null == K ? void 0 : K.isPausedOrPausePending) && Z === y.a$.NONE) &&
         ((z = (0, r.jsxs)("div", {
             className: v.button,
             children: [
@@ -169,7 +169,7 @@ let R = (e) => {
                 z,
             ],
         })),
-        (k.disabled = !0)),
+        (M.disabled = !0)),
     null != Y)
         ? (0, r.jsx)(p.Z, {
               text: Y,
@@ -184,7 +184,7 @@ let R = (e) => {
                                   size: l.zx.Sizes.SMALL,
                                   pauseAnimation: P,
                               }),
-                              k,
+                              M,
                           ),
                           { children: z },
                       ),
@@ -192,8 +192,8 @@ let R = (e) => {
           })
         : (0, r.jsx)(
               c.gtL,
-              A(T({ size: l.zx.Sizes.SMALL }, k), {
-                  className: o()(k.className, { [v.buttonHighlighted]: L }),
+              A(T({ size: l.zx.Sizes.SMALL }, M), {
+                  className: o()(M.className, { [v.buttonHighlighted]: x }),
                   submitting: G,
                   onClick: W,
                   pauseAnimation: P,

@@ -1,70 +1,72 @@
-function n(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
+function r(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                i(t, e, r[e]);
+            r.forEach(function (t) {
+                i(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-function i(t, e, r) {
+function i(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = r),
-        t
+            : (e[t] = n),
+        e
     );
 }
-var o,
-    a = r(76466),
-    u = r(988231),
-    s = r(470427),
-    c = r(901607),
-    l = r(928460),
-    f = r(946572),
-    p = r(606166),
-    h = r(656367),
-    d = r(439000),
-    g = r(740336),
-    y = r(65183),
-    v = y.List,
-    m = y.Map,
-    _ = y.OrderedSet,
-    b = r(332477),
-    S = r(205558),
-    w = r(246974),
-    x = r(997962),
-    k = g("draft_tree_data_support"),
+var a,
+    o = n(76466),
+    s = n(988231),
+    l = n(470427),
+    c = n(901607),
+    u = n(928460),
+    d = n(946572),
+    f = n(606166),
+    _ = n(656367),
+    p = n(439000),
+    h = n(740336),
+    m = n(65183),
+    g = m.List,
+    E = m.Map,
+    b = m.OrderedSet,
+    y = n(332477),
+    O = n(205558),
+    v = n(246974),
+    I = n(997962),
+    T = h("draft_tree_data_support"),
+    S = "&nbsp;",
+    A = " ",
     C = RegExp("\r", "g"),
-    E = RegExp("\n", "g"),
-    D = RegExp("^\n", "g"),
-    O = RegExp("&nbsp;", "g"),
-    K = RegExp("&#13;?", "g"),
-    T = RegExp("&#8203;?", "g"),
-    M = ["bold", "bolder", "500", "600", "700", "800", "900"],
-    A = ["light", "lighter", "normal", "100", "200", "300", "400"],
-    I = ["className", "href", "rel", "target", "title"],
-    B = ["alt", "className", "height", "src", "width"],
-    L =
-        (i((o = {}), p("public/DraftStyleDefault/depth0"), 0),
-        i(o, p("public/DraftStyleDefault/depth1"), 1),
-        i(o, p("public/DraftStyleDefault/depth2"), 2),
-        i(o, p("public/DraftStyleDefault/depth3"), 3),
-        i(o, p("public/DraftStyleDefault/depth4"), 4),
-        o),
-    R = m({
+    N = RegExp("\n", "g"),
+    R = RegExp("^\n", "g"),
+    P = RegExp(S, "g"),
+    w = RegExp("&#13;?", "g"),
+    D = RegExp("&#8203;?", "g"),
+    x = ["bold", "bolder", "500", "600", "700", "800", "900"],
+    L = ["light", "lighter", "normal", "100", "200", "300", "400"],
+    j = ["className", "href", "rel", "target", "title"],
+    M = ["alt", "className", "height", "src", "width"],
+    k =
+        (i((a = {}), f("public/DraftStyleDefault/depth0"), 0),
+        i(a, f("public/DraftStyleDefault/depth1"), 1),
+        i(a, f("public/DraftStyleDefault/depth2"), 2),
+        i(a, f("public/DraftStyleDefault/depth3"), 3),
+        i(a, f("public/DraftStyleDefault/depth4"), 4),
+        a),
+    U = E({
         b: "BOLD",
         code: "CODE",
         del: "STRIKETHROUGH",
@@ -76,47 +78,58 @@ var o,
         u: "UNDERLINE",
         mark: "HIGHLIGHT",
     }),
-    N = function (t) {
-        var e = {};
+    G = function (e) {
+        var t = {};
         return (
-            t.mapKeys(function (t, r) {
-                var n = [r.element];
-                void 0 !== r.aliasedElements && n.push.apply(n, r.aliasedElements),
-                    n.forEach(function (r) {
-                        void 0 === e[r] ? (e[r] = t) : "string" == typeof e[r] ? (e[r] = [e[r], t]) : e[r].push(t);
+            e.mapKeys(function (e, n) {
+                var r = [n.element];
+                void 0 !== n.aliasedElements && r.push.apply(r, n.aliasedElements),
+                    r.forEach(function (n) {
+                        void 0 === t[n] ? (t[n] = e) : "string" == typeof t[n] ? (t[n] = [t[n], e]) : t[n].push(e);
                     });
             }),
-            m(e)
+            E(t)
         );
     },
-    F = function (t) {
-        var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+    B = function (e) {
+        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return (
-            Object.keys(L).some(function (r) {
-                t.classList.contains(r) && (e = L[r]);
+            Object.keys(k).some(function (n) {
+                e.classList.contains(n) && (t = k[n]);
             }),
-            e
+            t
         );
     },
-    z = function (t, e) {
-        if (!w(t)) return e;
-        var r = t.style.fontWeight,
-            n = t.style.fontStyle,
-            i = t.style.textDecoration;
-        return e.withMutations(function (t) {
-            M.indexOf(r) >= 0 ? t.add("BOLD") : A.indexOf(r) >= 0 && t.remove("BOLD"),
-                "italic" === n ? t.add("ITALIC") : "normal" === n && t.remove("ITALIC"),
-                "underline" === i && t.add("UNDERLINE"),
-                "line-through" === i && t.add("STRIKETHROUGH"),
-                "none" === i && (t.remove("UNDERLINE"), t.remove("STRIKETHROUGH"));
+    Z = function (e) {
+        if (!y(e)) return !1;
+        var t = e;
+        return !!(t.href && ("http:" === t.protocol || "https:" === t.protocol || "mailto:" === t.protocol));
+    },
+    V = function (e) {
+        if (!I(e)) return !1;
+        var t = e;
+        return !!(t.attributes.getNamedItem("src") && t.attributes.getNamedItem("src").value);
+    },
+    F = function (e, t) {
+        if (!v(e)) return t;
+        var n = e,
+            r = n.style.fontWeight,
+            i = n.style.fontStyle,
+            a = n.style.textDecoration;
+        return t.withMutations(function (e) {
+            x.indexOf(r) >= 0 ? e.add("BOLD") : L.indexOf(r) >= 0 && e.remove("BOLD"),
+                "italic" === i ? e.add("ITALIC") : "normal" === i && e.remove("ITALIC"),
+                "underline" === a && e.add("UNDERLINE"),
+                "line-through" === a && e.add("STRIKETHROUGH"),
+                "none" === a && (e.remove("UNDERLINE"), e.remove("STRIKETHROUGH"));
         });
     },
-    P = function (t) {
-        return "ul" === t || "ol" === t;
+    H = function (e) {
+        return "ul" === e || "ol" === e;
     },
-    j = (function () {
-        function t(t, e) {
-            i(this, "characterList", v()),
+    Y = (function () {
+        function e(e, t) {
+            i(this, "characterList", g()),
                 i(this, "currentBlockType", "unstyled"),
                 i(this, "currentDepth", 0),
                 i(this, "currentEntity", null),
@@ -124,267 +137,267 @@ var o,
                 i(this, "wrapper", null),
                 i(this, "blockConfigs", []),
                 i(this, "contentBlocks", []),
-                i(this, "entityMap", l),
+                i(this, "entityMap", u),
                 i(this, "blockTypeMap", void 0),
                 i(this, "disambiguate", void 0),
                 this.clear(),
-                (this.blockTypeMap = t),
-                (this.disambiguate = e);
+                (this.blockTypeMap = e),
+                (this.disambiguate = t);
         }
-        var e = t.prototype;
+        var t = e.prototype;
         return (
-            (e.clear = function () {
-                (this.characterList = v()),
+            (t.clear = function () {
+                (this.characterList = g()),
                     (this.blockConfigs = []),
                     (this.currentBlockType = "unstyled"),
                     (this.currentDepth = 0),
                     (this.currentEntity = null),
                     (this.currentText = ""),
-                    (this.entityMap = l),
+                    (this.entityMap = u),
                     (this.wrapper = null),
                     (this.contentBlocks = []);
             }),
-            (e.addDOMNode = function (t) {
-                var e;
+            (t.addDOMNode = function (e) {
+                var t;
                 return (
                     (this.contentBlocks = []),
                     (this.currentDepth = 0),
-                    (e = this.blockConfigs).push.apply(e, this._toBlockConfigs([t], _())),
+                    (t = this.blockConfigs).push.apply(t, this._toBlockConfigs([e], b())),
                     this._trimCurrentText(),
                     "" !== this.currentText && this.blockConfigs.push(this._makeBlockConfig()),
                     this
                 );
             }),
-            (e.getContentBlocks = function () {
+            (t.getContentBlocks = function () {
                 return (
                     0 === this.contentBlocks.length &&
-                        (k ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
+                        (T ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
                     {
                         contentBlocks: this.contentBlocks,
                         entityMap: this.entityMap,
                     }
                 );
             }),
-            (e._makeBlockConfig = function () {
-                var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    e = n(
+            (t._makeBlockConfig = function () {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                    t = r(
                         {
-                            key: t.key || h(),
+                            key: e.key || _(),
                             type: this.currentBlockType,
                             text: this.currentText,
                             characterList: this.characterList,
                             depth: this.currentDepth,
                             parent: null,
-                            children: v(),
+                            children: g(),
                             prevSibling: null,
                             nextSibling: null,
                             childConfigs: [],
                         },
-                        t,
+                        e,
                     );
-                return (this.characterList = v()), (this.currentBlockType = "unstyled"), (this.currentText = ""), e;
+                return (this.characterList = g()), (this.currentBlockType = "unstyled"), (this.currentText = ""), t;
             }),
-            (e._toBlockConfigs = function (t, e) {
-                for (var r = [], n = 0; n < t.length; n++) {
-                    var i = t[n],
-                        o = i.nodeName.toLowerCase();
-                    if ("body" === o || P(o)) {
-                        this._trimCurrentText(), "" !== this.currentText && r.push(this._makeBlockConfig());
-                        var a = this.currentDepth,
-                            u = this.wrapper;
-                        P(o) && ((this.wrapper = o), P(u) && this.currentDepth++),
-                            r.push.apply(r, this._toBlockConfigs(Array.from(i.childNodes), e)),
-                            (this.currentDepth = a),
-                            (this.wrapper = u);
+            (t._toBlockConfigs = function (e, t) {
+                for (var n = [], r = 0; r < e.length; r++) {
+                    var i = e[r],
+                        a = i.nodeName.toLowerCase();
+                    if ("body" === a || H(a)) {
+                        this._trimCurrentText(), "" !== this.currentText && n.push(this._makeBlockConfig());
+                        var o = this.currentDepth,
+                            s = this.wrapper;
+                        H(a) && ((this.wrapper = a), H(s) && this.currentDepth++),
+                            n.push.apply(n, this._toBlockConfigs(Array.from(i.childNodes), t)),
+                            (this.currentDepth = o),
+                            (this.wrapper = s);
                         continue;
                     }
-                    var s = this.blockTypeMap.get(o);
-                    if (void 0 !== s) {
-                        this._trimCurrentText(), "" !== this.currentText && r.push(this._makeBlockConfig());
+                    var l = this.blockTypeMap.get(a);
+                    if (void 0 !== l) {
+                        this._trimCurrentText(), "" !== this.currentText && n.push(this._makeBlockConfig());
                         var c = this.currentDepth,
-                            l = this.wrapper;
-                        (this.wrapper = "pre" === o ? "pre" : this.wrapper),
-                            "string" != typeof s && (s = this.disambiguate(o, this.wrapper) || s[0] || "unstyled"),
-                            !k &&
-                                w(i) &&
-                                ("unordered-list-item" === s || "ordered-list-item" === s) &&
-                                (this.currentDepth = F(i, this.currentDepth));
-                        var f = h(),
-                            p = this._toBlockConfigs(Array.from(i.childNodes), e);
+                            u = this.wrapper;
+                        if (
+                            ((this.wrapper = "pre" === a ? "pre" : this.wrapper),
+                            "string" != typeof l && (l = this.disambiguate(a, this.wrapper) || l[0] || "unstyled"),
+                            !T && v(i) && ("unordered-list-item" === l || "ordered-list-item" === l))
+                        ) {
+                            var d = i;
+                            this.currentDepth = B(d, this.currentDepth);
+                        }
+                        var f = _(),
+                            p = this._toBlockConfigs(Array.from(i.childNodes), t);
                         this._trimCurrentText(),
-                            r.push(
+                            n.push(
                                 this._makeBlockConfig({
                                     key: f,
                                     childConfigs: p,
-                                    type: s,
+                                    type: l,
                                 }),
                             ),
                             (this.currentDepth = c),
-                            (this.wrapper = l);
+                            (this.wrapper = u);
                         continue;
                     }
-                    if ("#text" === o) {
-                        this._addTextNode(i, e);
+                    if ("#text" === a) {
+                        this._addTextNode(i, t);
                         continue;
                     }
-                    if ("br" === o) {
-                        this._addBreakNode(i, e);
+                    if ("br" === a) {
+                        this._addBreakNode(i, t);
                         continue;
                     }
-                    if (x(i) && i.attributes.getNamedItem("src") && i.attributes.getNamedItem("src").value) {
-                        this._addImgNode(i, e);
+                    if (V(i)) {
+                        this._addImgNode(i, t);
                         continue;
                     }
-                    if (
-                        b(i) &&
-                        i.href &&
-                        ("http:" === i.protocol || "https:" === i.protocol || "mailto:" === i.protocol)
-                    ) {
-                        this._addAnchorNode(i, r, e);
+                    if (Z(i)) {
+                        this._addAnchorNode(i, n, t);
                         continue;
                     }
-                    var d = e;
-                    R.has(o) && (d = d.add(R.get(o))),
-                        (d = z(i, d)),
-                        r.push.apply(r, this._toBlockConfigs(Array.from(i.childNodes), d));
+                    var h = t;
+                    U.has(a) && (h = h.add(U.get(a))),
+                        (h = F(i, h)),
+                        n.push.apply(n, this._toBlockConfigs(Array.from(i.childNodes), h));
                 }
-                return r;
+                return n;
             }),
-            (e._appendText = function (t, e) {
-                this.currentText += t;
-                var r,
-                    n = a.create({
-                        style: e,
+            (t._appendText = function (e, t) {
+                this.currentText += e;
+                var n,
+                    r = o.create({
+                        style: t,
                         entity: this.currentEntity,
                     });
-                this.characterList = (r = this.characterList).push.apply(r, Array(t.length).fill(n));
+                this.characterList = (n = this.characterList).push.apply(n, Array(e.length).fill(r));
             }),
-            (e._trimCurrentText = function () {
-                var t = this.currentText.length,
-                    e = t - this.currentText.trimLeft().length,
-                    r = this.currentText.trimRight().length,
-                    n = this.characterList.findEntry(function (t) {
-                        return null !== t.getEntity();
+            (t._trimCurrentText = function () {
+                var e = this.currentText.length,
+                    t = e - this.currentText.trimLeft().length,
+                    n = this.currentText.trimRight().length,
+                    r = this.characterList.findEntry(function (e) {
+                        return null !== e.getEntity();
                     });
-                (e = void 0 !== n ? Math.min(e, n[0]) : e) >
-                (r =
+                (t = void 0 !== r ? Math.min(t, r[0]) : t) >
+                (n =
                     void 0 !==
-                    (n = this.characterList.reverse().findEntry(function (t) {
-                        return null !== t.getEntity();
+                    (r = this.characterList.reverse().findEntry(function (e) {
+                        return null !== e.getEntity();
                     }))
-                        ? Math.max(r, t - n[0])
-                        : r)
-                    ? ((this.currentText = ""), (this.characterList = v()))
-                    : ((this.currentText = this.currentText.slice(e, r)),
-                      (this.characterList = this.characterList.slice(e, r)));
+                        ? Math.max(n, e - r[0])
+                        : n)
+                    ? ((this.currentText = ""), (this.characterList = g()))
+                    : ((this.currentText = this.currentText.slice(t, n)),
+                      (this.characterList = this.characterList.slice(t, n)));
             }),
-            (e._addTextNode = function (t, e) {
-                var r = t.textContent;
-                "" === r.trim() && "pre" !== this.wrapper && (r = " "),
-                    "pre" !== this.wrapper && (r = (r = r.replace(D, "")).replace(E, " ")),
-                    this._appendText(r, e);
+            (t._addTextNode = function (e, t) {
+                var n = e.textContent;
+                "" === n.trim() && "pre" !== this.wrapper && (n = " "),
+                    "pre" !== this.wrapper && (n = (n = n.replace(R, "")).replace(N, A)),
+                    this._appendText(n, t);
             }),
-            (e._addBreakNode = function (t, e) {
-                S(t) && this._appendText("\n", e);
+            (t._addBreakNode = function (e, t) {
+                O(e) && this._appendText("\n", t);
             }),
-            (e._addImgNode = function (t, e) {
-                if (x(t)) {
-                    var r = {};
-                    B.forEach(function (e) {
-                        var n = t.getAttribute(e);
-                        n && (r[e] = n);
+            (t._addImgNode = function (e, t) {
+                if (I(e)) {
+                    var n = e,
+                        r = {};
+                    M.forEach(function (e) {
+                        var t = n.getAttribute(e);
+                        t && (r[e] = t);
                     }),
                         (this.currentEntity = this.entityMap.__create("IMAGE", "IMMUTABLE", r)),
-                        g("draftjs_fix_paste_for_img")
-                            ? "presentation" !== t.getAttribute("role") && this._appendText("\uD83D\uDCF7", e)
-                            : this._appendText("\uD83D\uDCF7", e),
+                        h("draftjs_fix_paste_for_img")
+                            ? "presentation" !== n.getAttribute("role") && this._appendText("\uD83D\uDCF7", t)
+                            : this._appendText("\uD83D\uDCF7", t),
                         (this.currentEntity = null);
                 }
             }),
-            (e._addAnchorNode = function (t, e, r) {
-                if (b(t)) {
-                    var n = {};
-                    I.forEach(function (e) {
-                        var r = t.getAttribute(e);
-                        r && (n[e] = r);
+            (t._addAnchorNode = function (e, t, n) {
+                if (y(e)) {
+                    var r = e,
+                        i = {};
+                    j.forEach(function (e) {
+                        var t = r.getAttribute(e);
+                        t && (i[e] = t);
                     }),
-                        (n.url = new f(t.href).toString()),
-                        (this.currentEntity = this.entityMap.__create("LINK", "MUTABLE", n || {})),
-                        e.push.apply(e, this._toBlockConfigs(Array.from(t.childNodes), r)),
+                        (i.url = new d(r.href).toString()),
+                        (this.currentEntity = this.entityMap.__create("LINK", "MUTABLE", i || {})),
+                        t.push.apply(t, this._toBlockConfigs(Array.from(e.childNodes), n)),
                         (this.currentEntity = null);
                 }
             }),
-            (e._toContentBlocks = function (t) {
+            (t._toContentBlocks = function (e) {
                 for (
-                    var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        r = t.length - 1,
+                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        n = e.length - 1,
                         i = 0;
-                    i <= r;
+                    i <= n;
                     i++
                 ) {
-                    var o = t[i];
-                    (o.parent = e),
-                        (o.prevSibling = i > 0 ? t[i - 1].key : null),
-                        (o.nextSibling = i < r ? t[i + 1].key : null),
-                        (o.children = v(
-                            o.childConfigs.map(function (t) {
-                                return t.key;
+                    var a = e[i];
+                    (a.parent = t),
+                        (a.prevSibling = i > 0 ? e[i - 1].key : null),
+                        (a.nextSibling = i < n ? e[i + 1].key : null),
+                        (a.children = g(
+                            a.childConfigs.map(function (e) {
+                                return e.key;
                             }),
                         )),
-                        this.contentBlocks.push(new s(n({}, o))),
-                        this._toContentBlocks(o.childConfigs, o.key);
+                        this.contentBlocks.push(new l(r({}, a))),
+                        this._toContentBlocks(a.childConfigs, a.key);
                 }
             }),
-            (e._hoistContainersInBlockConfigs = function (t) {
-                var e = this;
-                return v(t).flatMap(function (t) {
-                    return "unstyled" !== t.type || "" !== t.text
-                        ? [t]
-                        : e._hoistContainersInBlockConfigs(t.childConfigs);
+            (t._hoistContainersInBlockConfigs = function (e) {
+                var t = this;
+                return g(e).flatMap(function (e) {
+                    return "unstyled" !== e.type || "" !== e.text
+                        ? [e]
+                        : t._hoistContainersInBlockConfigs(e.childConfigs);
                 });
             }),
-            (e._toFlatContentBlocks = function (t) {
-                var e = this;
-                this._hoistContainersInBlockConfigs(t).forEach(function (t) {
-                    var r = e._extractTextFromBlockConfigs(t.childConfigs),
-                        i = r.text,
-                        o = r.characterList;
-                    e.contentBlocks.push(
-                        new u(
-                            n({}, t, {
-                                text: t.text + i,
-                                characterList: t.characterList.concat(o),
+            (t._toFlatContentBlocks = function (e) {
+                var t = this;
+                this._hoistContainersInBlockConfigs(e).forEach(function (e) {
+                    var n = t._extractTextFromBlockConfigs(e.childConfigs),
+                        i = n.text,
+                        a = n.characterList;
+                    t.contentBlocks.push(
+                        new s(
+                            r({}, e, {
+                                text: e.text + i,
+                                characterList: e.characterList.concat(a),
                             }),
                         ),
                     );
                 });
             }),
-            (e._extractTextFromBlockConfigs = function (t) {
-                for (var e = t.length - 1, r = "", n = v(), i = 0; i <= e; i++) {
-                    var o = t[i];
-                    (r += o.text),
-                        (n = n.concat(o.characterList)),
-                        "" !== r && "unstyled" !== o.type && ((r += "\n"), (n = n.push(n.last())));
-                    var a = this._extractTextFromBlockConfigs(o.childConfigs);
-                    (r += a.text), (n = n.concat(a.characterList));
+            (t._extractTextFromBlockConfigs = function (e) {
+                for (var t = e.length - 1, n = "", r = g(), i = 0; i <= t; i++) {
+                    var a = e[i];
+                    (n += a.text),
+                        (r = r.concat(a.characterList)),
+                        "" !== n && "unstyled" !== a.type && ((n += "\n"), (r = r.push(r.last())));
+                    var o = this._extractTextFromBlockConfigs(a.childConfigs);
+                    (n += o.text), (r = r.concat(o.characterList));
                 }
                 return {
-                    text: r,
-                    characterList: n,
+                    text: n,
+                    characterList: r,
                 };
             }),
-            t
+            e
         );
     })();
-t.exports = function (t) {
-    var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d,
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        n = e((t = t.trim().replace(C, "").replace(O, " ").replace(K, "").replace(T, "")));
-    return n
-        ? new j(N(r), function (t, e) {
-              return "li" === t ? ("ol" === e ? "ordered-list-item" : "unordered-list-item") : null;
+e.exports = function (e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
+        r = t((e = e.trim().replace(C, "").replace(P, A).replace(w, "").replace(D, "")));
+    return r
+        ? new Y(G(n), function (e, t) {
+              return "li" === e ? ("ol" === t ? "ordered-list-item" : "unordered-list-item") : null;
           })
-              .addDOMNode(n)
+              .addDOMNode(r)
               .getContentBlocks()
         : null;
 };

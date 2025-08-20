@@ -1,60 +1,64 @@
-r.d(t, { f: () => l }), r(388685);
-var n = r(647438),
-    a = r(751648),
-    i = r(388032);
-function l() {
-    let [e, t] = (0, n.useState)(""),
-        [r, l] = (0, n.useState)([]),
-        [o, s] = (0, n.useState)(null),
-        [c, u] = (0, n.useState)(!1);
+n.d(t, { f: () => o }), n(388685);
+var r = n(647438),
+    i = n(751648),
+    a = n(388032);
+function o() {
+    let [e, t] = (0, r.useState)(""),
+        [n, o] = (0, r.useState)([]),
+        [s, l] = (0, r.useState)(null),
+        [c, u] = (0, r.useState)(!1);
+    function d(e, t, n) {
+        let r = () => {
+                u(!0), l(null);
+            },
+            a = (e) => {
+                o(e), u(!1), null == n || n(e);
+            },
+            s = (e) => {
+                l(e), u(!1);
+            };
+        return (0, i.df)({
+            skuId: e,
+            loadId: t,
+            onRedeemStart: r,
+            onRedeemSucceed: a,
+            onRedeemFail: s,
+        });
+    }
     return (
-        (0, n.useEffect)(() => {
-            if (null != o)
+        (0, r.useEffect)(() => {
+            if (null != s)
                 return void t(
-                    i.intl.format(i.t["7gHWra"], {
+                    a.intl.format(a.t["7gHWra"], {
                         amount: "1 orb",
-                        errorMessage: o.message,
+                        errorMessage: s.message,
                     }),
                 );
-            if (null != r && r.length > 0) {
-                let e = r.map((e) => {
+            if (null != n && n.length > 0) {
+                let e = n.map((e) => {
                     var t;
                     return null == (t = e.sku) ? void 0 : t.name;
                 });
                 t(
-                    i.intl.format(i.t.JxNFam, {
+                    a.intl.format(a.t.JxNFam, {
                         amountDescription: "1 orb",
                         redeemedItemDescription: ""
                             .concat(1 === e.length ? "SKU" : "SKUs", ": ")
                             .concat(e.join(", "), ". Entitlement ")
-                            .concat(1 === r.length ? "ID" : "IDs", ": ")
-                            .concat(r.map((e) => e.id).join(", ")),
+                            .concat(1 === n.length ? "ID" : "IDs", ": ")
+                            .concat(n.map((e) => e.id).join(", ")),
                     }),
                 );
                 return;
             }
             t("");
-        }, [r, o]),
+        }, [n, s]),
         {
-            entitlements: r,
-            error: o,
+            entitlements: n,
+            error: s,
             isSubmitting: c,
             responseMessage: e,
-            redeemVirtualCurrency: function (e, t, r) {
-                return (0, a.df)({
-                    skuId: e,
-                    loadId: t,
-                    onRedeemStart: () => {
-                        u(!0), s(null);
-                    },
-                    onRedeemSucceed: (e) => {
-                        l(e), u(!1), null == r || r(e);
-                    },
-                    onRedeemFail: (e) => {
-                        s(e), u(!1);
-                    },
-                });
-            },
+            redeemVirtualCurrency: d,
         }
     );
 }

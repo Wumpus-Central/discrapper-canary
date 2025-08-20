@@ -41,23 +41,23 @@ var r = n(990547),
     T = n(375824),
     S = n(510839),
     A = n(591472),
-    N = n(957730),
-    C = n(48854),
+    C = n(957730),
+    N = n(48854),
     R = n(835873),
     P = n(973616),
     w = n(314897),
     D = n(592125),
-    L = n(430824),
-    x = n(496675),
-    M = n(594174),
-    k = n(979651),
-    j = n(626135),
+    x = n(430824),
+    L = n(496675),
+    j = n(594174),
+    M = n(979651),
+    k = n(626135),
     U = n(630388),
     G = n(823379),
     B = n(573261),
-    V = n(595519),
-    F = n(317381),
-    Z = n(729200),
+    Z = n(595519),
+    V = n(317381),
+    F = n(729200),
     H = n(882347),
     Y = n(16609),
     W = n(224189),
@@ -102,7 +102,7 @@ function ea(e) {
     return e;
 }
 function eo(e) {
-    let t = F.ZP.getSelfEmbeddedActivityForLocation(e);
+    let t = V.ZP.getSelfEmbeddedActivityForLocation(e);
     null != t &&
         ed({
             location: t.location,
@@ -132,14 +132,14 @@ async function es(e) {
         O = D.Z.getChannel(r),
         v = null != (t = null == O ? void 0 : O.getGuildId()) ? t : void 0;
     if (null == v && !(null != (n = null == O ? void 0 : O.isPrivate()) && n)) return !1;
-    let N = (0, C.r)();
+    let C = (0, N.r)();
     try {
         let e = A.Z.getConnectedFrame();
         if (
             (null != e && (0, S.xT)({ applicationId: e.applicationId }),
             s.Z.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-                nonce: N,
+                nonce: C,
                 applicationId: a,
                 channelId: null != r ? r : null,
                 componentId: d,
@@ -152,7 +152,7 @@ async function es(e) {
                     referrerId: g,
                 },
             }),
-            (0, Z.g)())
+            (0, F.g)())
         ) {
             let e = await eI(a, null != r ? r : void 0);
             s.Z.dispatch({
@@ -162,7 +162,7 @@ async function es(e) {
                 proxyTicket: e,
             });
         }
-        let t = M.default.getCurrentUser();
+        let t = j.default.getCurrentUser();
         if (
             (null != t &&
                 (0, X.Z)({
@@ -183,7 +183,7 @@ async function es(e) {
             if (null == r || !el(a, O)) throw new I.Z(I.Z.Reasons.INVALID_CHANNEL);
             let e = await ec({
                 applicationId: a,
-                nonce: N,
+                nonce: C,
                 channelId: r,
                 guildId: v,
                 commandOrigin: f,
@@ -207,7 +207,7 @@ async function es(e) {
         }
         s.Z.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
-            nonce: N,
+            nonce: C,
             applicationId: a,
             channelId: null != r ? r : null,
         });
@@ -216,7 +216,7 @@ async function es(e) {
         return (
             s.Z.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: N,
+                nonce: C,
                 applicationId: a,
                 channelId: null != r ? r : null,
                 guildId: null != v ? v : null,
@@ -233,7 +233,7 @@ function el(e, t) {
     let n = (null == t ? void 0 : t.type) === $.d4z.GUILD_VOICE,
         r = E.Z.getApplication(e),
         i = null != r && (0, U.yE)(r.flags, $.udG.EMBEDDED),
-        a = (0, V.l5)(t);
+        a = (0, Z.l5)(t);
     return (n && i) || a;
 }
 async function ec(e) {
@@ -281,7 +281,7 @@ async function ec(e) {
             };
     }
     let y = D.Z.getChannel(r),
-        O = null != i ? L.Z.getGuild(i) : null;
+        O = null != i ? x.Z.getGuild(i) : null;
     if (null == y)
         return {
             result: "failure",
@@ -290,10 +290,10 @@ async function ec(e) {
     if (f) {
         let e,
             n = E.Z.getApplication(t),
-            r = F.ZP.getCurrentEmbeddedActivity();
+            r = V.ZP.getCurrentEmbeddedActivity();
         (null == r ? void 0 : r.applicationId) != null &&
             (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
-        let i = M.default.getCurrentUser();
+        let i = j.default.getCurrentUser();
         if (
             null != i &&
             !(await (0, H.p)({
@@ -331,7 +331,7 @@ async function ec(e) {
                     },
                     onFailure: (e, n, a, o) => {
                         null == l || l(),
-                            j.default.track($.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
+                            k.default.track($.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: r,
                                 guild_id: i,
                                 application_id: t,
@@ -366,7 +366,7 @@ async function eu(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
         c = w.default.getSessionId(),
-        u = M.default.getCurrentUser(),
+        u = j.default.getCurrentUser(),
         d = n;
     if (null == d)
         return {
@@ -393,9 +393,9 @@ async function eu(e) {
     let p = (0, K.e4)({
         channelId: i,
         ChannelStore: D.Z,
-        GuildStore: L.Z,
-        PermissionStore: x.Z,
-        VoiceStateStore: k.Z,
+        GuildStore: x.Z,
+        PermissionStore: L.Z,
+        VoiceStateStore: M.Z,
     });
     if (p !== K.jy.CAN_LAUNCH) {
         let e = 4;
@@ -415,7 +415,7 @@ async function eu(e) {
             }
         );
     }
-    let h = F.ZP.getCurrentEmbeddedActivity();
+    let h = V.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == h ? void 0 : h.applicationId) != null &&
             (t = E.Z.getApplication(null == h ? void 0 : h.applicationId)),
@@ -449,7 +449,7 @@ async function eu(e) {
                     result: "failure",
                     reason: 8,
                 };
-        } else if (!(0, V.WS)(_) || !n)
+        } else if (!(0, Z.WS)(_) || !n)
             return {
                 result: "failure",
                 reason: 9,
@@ -490,7 +490,7 @@ async function eu(e) {
 }
 function ed(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
-        i = F.ZP.getSelfEmbeddedActivityForLocation(t);
+        i = V.ZP.getSelfEmbeddedActivityForLocation(t);
     s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_CLOSE",
         applicationId: n,
@@ -502,8 +502,8 @@ function ed(e) {
     if (null != a) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
-            t = null == (o = M.default.getCurrentUser()) ? void 0 : o.id,
-            r = F.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
+            t = null == (o = j.default.getCurrentUser()) ? void 0 : o.id,
+            r = V.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
         e ===
             (0, y.gN)({
@@ -569,10 +569,10 @@ let ep = (e, t, n) => {
 async function eh(e) {
     var t, n, i, a;
     let { guildId: o, force: l = !1 } = e,
-        c = F.ZP.getShelfActivities(o),
+        c = V.ZP.getShelfActivities(o),
         u = c.map((e) => E.Z.getApplication(e.application_id)).filter(G.lm);
-    if (!l && !F.ZP.shouldFetchShelf(o)) {
-        if (null == (t = F.ZP.getShelfFetchStatus(o)) ? void 0 : t.isFetching) {
+    if (!l && !V.ZP.shouldFetchShelf(o)) {
+        if (null == (t = V.ZP.getShelfFetchStatus(o)) ? void 0 : t.isFetching) {
             let e,
                 t,
                 n = new Promise((t) => {
@@ -667,7 +667,7 @@ async function eg(e) {
         let t,
             n = D.Z.getChannel(e);
         if (null == n) throw Error("Private channel not found");
-        null != a && (t = N.ZP.parse(n, a).content), f.Z.sendInvite(e, o.code, i, null, t);
+        null != a && (t = C.ZP.parse(n, a).content), f.Z.sendInvite(e, o.code, i, null, t);
     });
 }
 function eE() {

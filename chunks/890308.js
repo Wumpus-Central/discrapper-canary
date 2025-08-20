@@ -33,14 +33,14 @@
             for (var n = e.length, r = []; n--; ) r[n] = t(e[n]);
             return r;
         }
-        function N(e, t) {
+        function C(e, t) {
             var n = e.split("@"),
                 r = "";
             return (
                 n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + A((e = e.replace(y, ".")).split("."), t).join(".")
             );
         }
-        function C(e) {
+        function N(e) {
             for (var t, n, r = [], i = 0, a = e.length; i < a; )
                 (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a
                     ? (64512 & (n = e.charCodeAt(i++))) == 56320
@@ -69,7 +69,7 @@
             for (e = n ? I(e / p) : e >> 1, e += I(e / t); e > (v * f) >> 1; r += u) e = I(e / v);
             return I(r + ((v + 1) * e) / (e + _));
         }
-        function L(e) {
+        function x(e) {
             var t,
                 n,
                 r,
@@ -105,7 +105,7 @@
             }
             return R(E);
         }
-        function x(e) {
+        function L(e) {
             var t,
                 n,
                 r,
@@ -122,7 +122,7 @@
                 O,
                 v,
                 A = [];
-            for (o = 0, b = (e = C(e)).length, t = m, n = 0, a = h; o < b; ++o) (E = e[o]) < 128 && A.push(T(E));
+            for (o = 0, b = (e = N(e)).length, t = m, n = 0, a = h; o < b; ++o) (E = e[o]) < 128 && A.push(T(E));
             for (r = i = A.length, i && A.push(g); r < b; ) {
                 for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
                 for (s - t > I((c - n) / (y = r + 1)) && S("overflow"), n += (s - t) * y, t = s, o = 0; o < b; ++o)
@@ -135,27 +135,27 @@
             }
             return A.join("");
         }
-        function M(e) {
-            return N(e, function (e) {
-                return E.test(e) ? L(e.slice(4).toLowerCase()) : e;
+        function j(e) {
+            return C(e, function (e) {
+                return E.test(e) ? x(e.slice(4).toLowerCase()) : e;
             });
         }
-        function k(e) {
-            return N(e, function (e) {
-                return b.test(e) ? "xn--" + x(e) : e;
+        function M(e) {
+            return C(e, function (e) {
+                return b.test(e) ? "xn--" + L(e) : e;
             });
         }
         if (
             ((s = {
                 version: "1.4.1",
                 ucs2: {
-                    decode: C,
+                    decode: N,
                     encode: R,
                 },
-                decode: L,
-                encode: x,
-                toASCII: k,
-                toUnicode: M,
+                decode: x,
+                encode: L,
+                toASCII: M,
+                toUnicode: j,
             }),
             "function" == typeof define && "object" == typeof define.amd && define.amd)
         )

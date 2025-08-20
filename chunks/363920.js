@@ -317,17 +317,17 @@ var S = Symbol.for("AnimatedComponent"),
                         : l,
             },
             u = function (e) {
-                var t = N(e) || "Anonymous";
+                var t = C(e) || "Anonymous";
                 return ((e = i.is.str(e) ? I(e, c) : e[S] || (e[S] = I(e, c))).displayName = "Animated(" + t + ")"), e;
             };
         return (
             i.each(e, function (e, t) {
-                i.is.str(t) || (t = N(e)), (u[t] = u(e));
+                i.is.str(t) || (t = C(e)), (u[t] = u(e));
             }),
             { animated: u }
         );
     },
-    N = function (e) {
+    C = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
 (t.Animated = m),

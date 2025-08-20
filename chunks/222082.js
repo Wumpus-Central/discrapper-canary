@@ -1,5 +1,5 @@
 t.d(n, {
-    HY: () => i,
+    HY: () => a,
     nv: () => c,
     xv: () => l,
 });
@@ -14,7 +14,7 @@ function c(e) {
         children: [l, t < n.length - 1 ? (0, r.jsx)("br", {}) : null],
     });
 }
-function i() {
+function a() {
     return (0, r.jsx)("p", {});
 }
 t(647438);

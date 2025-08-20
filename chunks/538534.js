@@ -1,8 +1,8 @@
 n.d(t, {
-    Ee: () => C,
+    Ee: () => N,
     Fj: () => I,
     ar: () => A,
-    xU: () => N,
+    xU: () => C,
 }),
     n(388685);
 var r,
@@ -357,7 +357,7 @@ function A() {
         "aria-disabled": t,
     };
 }
-function N(e) {
+function C(e) {
     let { isSelected: t, label: n } = e;
     return {
         role: "radio",
@@ -366,7 +366,7 @@ function N(e) {
         "aria-checked": t,
     };
 }
-function C(e) {
+function N(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
@@ -384,18 +384,18 @@ function C(e) {
             withTransparentBackground: I,
         } = e,
         T = (0, d.Gc)(),
-        N = A({
+        C = A({
             labelledBy: null != E ? E : T.titleId,
             orientation: O,
             isDisabled: _,
         }),
-        { ref: C } = N,
-        R = y(N, ["ref"]),
+        { ref: N } = C,
+        R = y(C, ["ref"]),
         P = m.some((e) => e.value === l);
     return (0, i.jsx)(
         "div",
         b(g({}, R), {
-            ref: C,
+            ref: N,
             className: s()(h.container, o),
             children: m.map((e) =>
                 (0, i.jsx)(
@@ -426,4 +426,4 @@ m(S, "defaultProps", {
     withTransparentBackground: !1,
     radioPosition: "left",
 }),
-    (C.Sizes = v);
+    (N.Sizes = v);

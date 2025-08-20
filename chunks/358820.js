@@ -1,9 +1,9 @@
 n.d(t, {
     fz: () => P,
-    ge: () => M,
-    r5: () => k,
+    ge: () => j,
+    r5: () => M,
     rk: () => w,
-    wV: () => x,
+    wV: () => L,
 }),
     n(388685),
     n(415506),
@@ -80,14 +80,14 @@ function T(e, t) {
 }
 let S = new l.Z("VoiceFilterActionCreators"),
     A = 1000,
-    N = (0, r.debounce)(
+    C = (0, r.debounce)(
         () => {
             s.Z.dispatch({ type: "VOICE_FILTER_LAGGING" });
         },
         A,
         { leading: !0 },
     ),
-    C = !1,
+    N = !1,
     R = new Map();
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -145,7 +145,7 @@ function P(e) {
 }
 async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await k();
+    await M();
     let n = performance.now();
     try {
         let r = p.ZP.getVoiceFilters();
@@ -191,7 +191,7 @@ async function D(e) {
     if (null == o) throw Error("Voice filters catalog signature is missing");
     return await e.setCatalog(r, o), a;
 }
-async function L(e) {
+async function x(e) {
     if (!p.ZP.canCheckVoiceFilterFilesExist()) return;
     let t = Object.keys(e.models).map((e) => ({
             id: e,
@@ -203,14 +203,14 @@ async function L(e) {
     let i = t.map((e) => e.fileName);
     return (0, o.dZ)(i) && (await (0, E.A)(i)), r;
 }
-async function x() {
+async function L() {
     if (!m.Z.isNativeModuleLoaded()) return void S.info("Voice Filter catalog refresh ignored, module not loaded.");
-    if (!C)
+    if (!N)
         try {
-            C = !0;
+            N = !0;
             let e = p.ZP.getVoiceFilters(),
                 t = await D(e),
-                n = null == m.Z.getCatalogLastFetchTime() ? await L(t) : void 0;
+                n = null == m.Z.getCatalogLastFetchTime() ? await x(t) : void 0;
             await s.Z.dispatch({
                 type: "VOICE_FILTER_CATALOG_FETCH_SUCCESS",
                 catalog: t,
@@ -225,13 +225,13 @@ async function x() {
                 _.Z.captureException(e),
                 await s.Z.dispatch({ type: "VOICE_FILTER_CATALOG_FETCH_FAILED" });
         } finally {
-            C = !1;
+            N = !1;
         }
 }
-function M() {
+function j() {
     s.Z.dispatch({ type: "VOICE_FILTER_DOWNLOAD_CANCELED" });
 }
-async function k() {
+async function M() {
     if (!(m.Z.isNativeModuleLoaded() || m.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, f.isWindows)() && !(0, f.isMac)())
             return void s.Z.dispatch({
@@ -246,7 +246,7 @@ async function k() {
                 await p.ZP.ensureModule("discord_voice_filters");
             let t = p.ZP.getVoiceFilters();
             await t.setupResources(),
-                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(N)),
+                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(C)),
                 void 0 !== t.setVoiceFilterReadyCallback &&
                     (await t.setVoiceFilterReadyCallback((e) => {
                         s.Z.dispatch({
@@ -258,7 +258,7 @@ async function k() {
                     type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
                     state: g.O.LOADED,
                 }),
-                await x();
+                await L();
             let n = c.Z.getMostRecentlyRequestedVoiceFilter();
             if (null != n) {
                 var e;

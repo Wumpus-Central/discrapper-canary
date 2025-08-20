@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => S,
-    H: () => N,
+    H: () => C,
 }),
     n(953529),
     n(388685),
@@ -77,7 +77,7 @@ function T(e, t) {
 }
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     A = new Set(["Spacebar", " ", "Enter"]);
-class N extends (r = a.Component) {
+class C extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -316,11 +316,11 @@ class N extends (r = a.Component) {
             });
     }
 }
-O(N, "defaultProps", {
+O(C, "defaultProps", {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(b.x, {}),
     closeOnClickOutside: !0,
 }),
-    O(N, "contextType", h.ZP);
+    O(C, "contextType", h.ZP);

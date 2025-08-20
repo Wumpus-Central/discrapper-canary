@@ -26,7 +26,7 @@ let I = "#ffffff",
     A = (e, t) => {
         (0, b.isMac)() && !t.altKey ? y.ZP.fullscreen(e) : y.ZP.maximize(e);
     },
-    N = (e) => {
+    C = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: o } = e,
             l = (0, r.jsx)(s.P3F, {
                 className: v.winButtonClose,
@@ -68,7 +68,7 @@ let I = "#ffffff",
                 }),
         });
     },
-    C = (e) => {
+    N = (e) => {
         let { focused: t, windowKey: n, frame: i, themeOverride: o, hasOpenLayer: l, children: u } = e;
         return (0, r.jsx)(s.f6W, {
             theme: o,
@@ -126,13 +126,13 @@ function R(e) {
     if (f) return null;
     switch (n) {
         case b.PlatformTypes.WINDOWS:
-            return (0, r.jsx)(N, {
+            return (0, r.jsx)(C, {
                 windowKey: i,
                 themeOverride: s,
                 hasOpenLayer: _,
             });
         case b.PlatformTypes.OSX:
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(N, {
                 focused: t,
                 windowKey: i,
                 frame: a,

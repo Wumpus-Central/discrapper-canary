@@ -1,12 +1,12 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(937615),
-    o = n(884697),
-    l = n(200615),
-    c = n(981631),
-    s = n(388032),
+var i = n(481060),
+    l = n(937615),
+    a = n(884697),
+    o = n(200615),
+    s = n(981631),
+    c = n(388032),
     u = n(58174);
 function d() {
     return (d =
@@ -19,21 +19,21 @@ function d() {
             return e;
         }).apply(this, arguments);
 }
-function p(e) {
+function m(e) {
     let { product: t } = e,
-        n = (0, o.ql)(t, c.tuJ.PREMIUM_TIER_2);
+        n = (0, a.ql)(t, s.tuJ.PREMIUM_TIER_2);
     if (null == n) return null;
-    let p = (0, i.qr)(n.amount, n.currency);
+    let m = (0, l.qr)(n.amount, n.currency);
     return (0, r.jsxs)("div", {
         className: u.container,
         children: [
-            (0, r.jsx)(a.ua7, {
-                text: s.intl.string(s.t.MPFyJy),
-                "aria-label": s.intl.string(s.t.X3Ekj4),
+            (0, r.jsx)(i.ua7, {
+                text: c.intl.string(c.t.MPFyJy),
+                "aria-label": c.intl.string(c.t.X3Ekj4),
                 children: (e) => {
                     var t,
                         n,
-                        i = d(
+                        l = d(
                             {},
                             (function (e) {
                                 if (null == e) throw TypeError("Cannot destructure " + e);
@@ -41,7 +41,7 @@ function p(e) {
                             })(e),
                         );
                     return (0, r.jsx)(
-                        a.SrA,
+                        i.SrA,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function p(e) {
                                 size: "md",
                                 color: "currentColor",
                             },
-                            i,
+                            l,
                         )),
                         (n = n = { className: u.nitroIcon }),
                         Object.getOwnPropertyDescriptors
@@ -90,11 +90,11 @@ function p(e) {
                     );
                 },
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-xs/medium",
-                children: s.intl.format(s.t.Sv8iiY, {
-                    price: p,
-                    subscribeNowHook: (e) => (0, r.jsx)(l.F, { text: e }),
+                children: c.intl.format(c.t.Sv8iiY, {
+                    price: m,
+                    subscribeNowHook: (e) => (0, r.jsx)(o.F, { text: e }),
                 }),
             }),
         ],

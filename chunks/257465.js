@@ -91,21 +91,21 @@ function O(e) {
             onClose: T,
             contentOutsideContainer: S,
             trackingProps: A,
-            children: N,
+            children: C,
         } = e,
-        C = i.useId(),
+        N = i.useId(),
         R = i.useMemo(
             () => ({
-                id: C,
-                headingId: "heading-".concat(C),
+                id: N,
+                headingId: "heading-".concat(N),
                 onClose: T,
             }),
-            [C, T],
+            [N, T],
         ),
         P = 0 === n || 1 === n,
         { reducedMotion: w } = i.useContext(d.S),
         D = P || w.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
-        L = (0, u.q)(
+        x = (0, u.q)(
             {
                 opacity: +!!P,
                 transform: D,
@@ -121,7 +121,7 @@ function O(e) {
             b(
                 g(
                     {
-                        id: C,
+                        id: N,
                         role: v,
                         "aria-label": I,
                         "aria-labelledby": null != I ? void 0 : R.headingId,
@@ -140,8 +140,8 @@ function O(e) {
                                 (0, r.jsx)(s.animated.div, {
                                     "data-mana-component": "modal",
                                     className: o()(h.container, h["size-".concat(m)], h["padding-size-".concat(E)]),
-                                    style: L,
-                                    children: N,
+                                    style: x,
+                                    children: C,
                                 }),
                             ],
                         }),

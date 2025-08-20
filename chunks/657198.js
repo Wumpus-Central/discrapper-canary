@@ -116,8 +116,8 @@ let I = (e) => {
             };
         }, [n, a.optionName]),
         A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
-        N = a.children[a.children.length - 1],
-        C = null != N && h.LC.isText(N) && N.text.endsWith("\n"),
+        C = a.children[a.children.length - 1],
+        N = null != C && h.LC.isText(C) && C.text.endsWith("\n"),
         R = o()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: v && y,
             [g.erroredPill]: (!v || !y) && S,
@@ -143,7 +143,7 @@ let I = (e) => {
                       className: g.optionPillValue,
                       children: [
                           E,
-                          C
+                          N
                               ? (0, r.jsx)("span", {
                                     className: g.newLine,
                                     contentEditable: !1,

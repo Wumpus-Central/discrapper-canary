@@ -1,6 +1,6 @@
 n.d(t, {
     X$: () => i,
-    _f: () => l,
+    _f: () => a,
 }),
     n(906732);
 let r = (0, n(818083).B)({
@@ -45,6 +45,6 @@ let r = (0, n(818083).B)({
 function i() {
     return r.useExperiment({ location: "canSeeRemixBadge" }, { autoTrackExposure: !0 }).canSeeRemixBadge;
 }
-function l() {
+function a() {
     return !!r.useExperiment({ location: "isRemixANitroPerkHook" }, { autoTrackExposure: !0 }).isNitroPerk;
 }

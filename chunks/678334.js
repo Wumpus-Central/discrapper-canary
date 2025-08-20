@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,29 +23,29 @@ var r = n(951288),
     T = n(563132),
     S = n(632580),
     A = n(919778),
-    N = n(877820),
-    C = n(435020),
+    C = n(877820),
+    N = n(435020),
     R = n(612853),
     P = n(981631),
     w = n(388032),
     D = n(62868),
-    L = n(133529);
-function x(e) {
+    x = n(133529);
+function L(e) {
     let {
             premiumSubscription: t,
             setPurchaseState: n,
             onBack: a,
             onNext: s,
-            legalTermsNodeRef: x,
-            flashLegalTerms: M,
-            invoiceError: k,
-            planError: j,
+            legalTermsNodeRef: L,
+            flashLegalTerms: j,
+            invoiceError: M,
+            planError: k,
             onPurchaseError: U,
             baseAnalyticsData: G,
             flowStartTime: B,
-            trialId: V,
-            planGroup: F,
-            analyticsLocation: Z,
+            trialId: Z,
+            planGroup: V,
+            analyticsLocation: F,
             purchaseTokenAuthState: H,
             openInvoiceId: Y,
             metadata: W,
@@ -93,26 +93,26 @@ function x(e) {
             (eO.emoji_name = (null == eh ? void 0 : eh.id) == null ? (null == eh ? void 0 : eh.surrogates) : void 0),
             (eO.sound_id = null == em ? void 0 : em.soundId));
     let ev = null == Q ? void 0 : Q.id,
-        eI = (0, A.sE)(V, J.paymentSourceId, ev),
+        eI = (0, A.sE)(Z, J.paymentSourceId, ev),
         { analyticsLocations: eT } = (0, d.ZP)(),
-        eS = (0, C.m)(er, en),
-        [eA, eN] = i.useState(eI),
-        [eC, eR] = i.useState(!1),
+        eS = (0, N.m)(er, en),
+        [eA, eC] = i.useState(eI),
+        [eN, eR] = i.useState(!1),
         { hasEntitlements: eP } = (0, E.H)(ev, ef),
         ew = (0, v.Ap)(J.paymentSourceId),
         eD = eP || eI,
-        eL = (0, m.U)(),
-        ex = (0, c.e7)([N.Z], () => N.Z.currentOrderId),
-        eM = null,
-        ek = null;
+        ex = (0, m.U)(),
+        eL = (0, c.e7)([C.Z], () => C.Z.currentOrderId),
+        ej = null,
+        eM = null;
     if (et === P.GZQ.ONE_TIME) {
-        var ej;
+        var ek;
         l()(null != ei, "SKU must be selected for one-time purchases"),
-            (eM = null != (ej = ea[ei]) ? ej : null),
-            l()(null != eM, "SKU must exist and be fetched.");
+            (ej = null != (ek = ea[ei]) ? ek : null),
+            l()(null != ej, "SKU must exist and be fetched.");
         let e = eo[ei],
             t = null != en ? en : y.c;
-        ek = null != e ? e[t] : null;
+        eM = null != e ? e[t] : null;
     }
     let eU = (0, _.I)(et === P.GZQ.ONE_TIME ? f.Z.getProduct(ei) : void 0),
         eG = null !== eU,
@@ -120,36 +120,36 @@ function x(e) {
             await (0, S.H)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: $,
-                setIsSubmitting: eN,
+                setIsSubmitting: eC,
                 setPurchaseError: ee,
-                hasRedirectURL: eC,
+                hasRedirectURL: eN,
                 setHasRedirectURL: eR,
                 isGift: ef,
                 baseAnalyticsData: G,
-                analyticsLocation: Z,
+                analyticsLocation: F,
                 analyticsLocations: eT,
                 flowStartTime: B,
                 subscriptionPlan: Q,
-                planGroup: F,
-                trialId: V,
+                planGroup: V,
+                trialId: Z,
                 priceOptions: J,
                 paymentSource: eS,
-                isPrepaidPaymentPastDue: eL,
+                isPrepaidPaymentPastDue: ex,
                 openInvoiceId: Y,
                 premiumSubscription: t,
                 onNext: s,
                 metadata: W,
-                sku: eM,
-                skuPricePreview: ek,
+                sku: ej,
+                skuPricePreview: eM,
                 purchaseType: et,
                 referralCode: es,
                 loadId: el.loadId,
                 giftInfoOptions: eO,
                 invoicePreview: ec,
-                orderId: ex,
+                orderId: eL,
             });
         },
-        eV = {
+        eZ = {
             baseAnalyticsData: G,
             flowStartTime: B,
             makePurchase: eB,
@@ -160,16 +160,16 @@ function x(e) {
             purchaseTokenAuthState: H,
             setPurchaseState: n,
         },
-        eF = i.useRef(eV);
+        eV = i.useRef(eZ);
     i.useEffect(() => {
-        eF.current = eV;
+        eV.current = eZ;
     }),
         i.useEffect(() => {
-            let { makePurchase: e } = eF.current;
+            let { makePurchase: e } = eV.current;
             eI && !ef && null == t && e();
         }, [eI, ef, t]);
-    let eZ = null != Y || (et === P.GZQ.ONE_TIME && !ef),
-        eH = K && !eZ;
+    let eF = null != Y || (et === P.GZQ.ONE_TIME && !ef),
+        eH = K && !eF;
     return eI
         ? null
         : (0, r.jsxs)(u.mzw, {
@@ -179,20 +179,20 @@ function x(e) {
               children: [
                   eG &&
                       (0, r.jsx)("img", {
-                          src: L.Z,
+                          src: x.Z,
                           alt: "",
                           className: D.discountFooterBackground,
                       }),
                   (0, r.jsx)(b.Z, {
-                      legalTermsNodeRef: x,
-                      invoiceError: k,
-                      planError: j,
+                      legalTermsNodeRef: L,
+                      invoiceError: M,
+                      planError: k,
                       disablePurchase: z,
-                      flashLegalTerms: M,
+                      flashLegalTerms: j,
                       isSubmitting: eA,
                       premiumSubscription: t,
                       isGift: ef,
-                      planGroup: F,
+                      planGroup: V,
                       isPrepaid: ew,
                       isTrial: q,
                       makePurchase: eB,

@@ -1,6 +1,6 @@
-n.d(e, { Z: () => l });
-var i = n(399606),
-    r = n(314897);
-function l() {
-    return (0, i.e7)([r.default], () => r.default.isAuthenticated());
+n.d(t, { Z: () => a });
+var r = n(399606),
+    i = n(314897);
+function a() {
+    return (0, r.e7)([i.default], () => i.default.isAuthenticated());
 }

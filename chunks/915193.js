@@ -1,16 +1,16 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => b });
 var r = t(951288);
 t(647438);
 var i = t(442837),
     l = t(692547),
     o = t(481060),
-    a = t(493683),
-    c = t(129861),
-    s = t(700582),
-    u = t(594174),
-    d = t(388032),
+    s = t(493683),
+    a = t(129861),
+    c = t(700582),
+    d = t(594174),
+    u = t(388032),
     f = t(452438);
-function h(e) {
+function m(e) {
     let { color: n, className: t } = e;
     return (0, r.jsx)("svg", {
         className: t,
@@ -43,20 +43,20 @@ function h(e) {
         }),
     });
 }
-function p(e, n) {
-    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+function b(e, n) {
+    let t = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
         : (0, r.jsx)(o.sNh, {
               id: "make-dm-owner",
               color: "danger",
-              label: d.intl.string(d.t["6t3CyM"]),
+              label: u.intl.string(u.t["6t3CyM"]),
               action: () => {
                   (0, o.h7j)((i) => {
-                      var u, p;
+                      var d, b;
                       return (0, r.jsxs)(
                           o.ConfirmModal,
-                          ((u = (function (e) {
+                          ((d = (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
                                       r = Object.keys(t);
@@ -83,30 +83,30 @@ function p(e, n) {
                           })(
                               {
                                   bodyClassName: f.confirmModal,
-                                  header: d.intl.string(d.t.WZoUsr),
-                                  confirmText: d.intl.string(d.t["cY+Ooa"]),
-                                  cancelText: d.intl.string(d.t["ETE/oK"]),
-                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id),
+                                  header: u.intl.string(u.t.WZoUsr),
+                                  confirmText: u.intl.string(u.t["cY+Ooa"]),
+                                  cancelText: u.intl.string(u.t["ETE/oK"]),
+                                  onConfirm: () => s.Z.setDMOwner(n.id, e.id),
                               },
                               i,
                           )),
-                          (p = p =
+                          (b = b =
                               {
                                   children: [
-                                      (0, r.jsx)(h, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, r.jsx)(m, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, r.jsxs)("div", {
                                           className: f.fromToWrapper,
                                           children: [
                                               (0, r.jsx)("div", {
                                                   className: f.from,
-                                                  children: (0, r.jsx)(s.Z, {
+                                                  children: (0, r.jsx)(c.Z, {
                                                       user: t,
                                                       size: o.EFr.SIZE_80,
                                                   }),
                                               }),
                                               (0, r.jsx)("div", {
                                                   className: f.to,
-                                                  children: (0, r.jsx)(s.Z, {
+                                                  children: (0, r.jsx)(c.Z, {
                                                       user: e,
                                                       size: o.EFr.SIZE_80,
                                                   }),
@@ -115,10 +115,10 @@ function p(e, n) {
                                       }),
                                       (0, r.jsx)(o.Text, {
                                           variant: "text-md/normal",
-                                          children: d.intl.format(d.t.gsBb3N, {
+                                          children: u.intl.format(u.t.gsBb3N, {
                                               usernameHook: (n, t) =>
                                                   (0, r.jsx)(
-                                                      c.Z,
+                                                      a.Z,
                                                       {
                                                           usernameIcon: (0, r.jsx)(o.qEK, {
                                                               className: f.avatarIcon,
@@ -138,7 +138,7 @@ function p(e, n) {
                                   ],
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(p))
+                              ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(b))
                               : (function (e, n) {
                                     var t = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -146,10 +146,10 @@ function p(e, n) {
                                         t.push.apply(t, r);
                                     }
                                     return t;
-                                })(Object(p)).forEach(function (e) {
-                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(p, e));
+                                })(Object(b)).forEach(function (e) {
+                                    Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(b, e));
                                 }),
-                          u),
+                          d),
                       );
                   });
               },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(997841);
+n.d(t, { Z: () => j }), n(388685), n(997841);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -91,7 +91,7 @@ function O(e) {
         !0 === t.muted
             ? ((g = new Set(g)).add(e),
               m.setTimer(e, t.muteConfig, () => {
-                  (h[e].muted = !1), (g = new Set(g)).delete(e), x.emitChange();
+                  (h[e].muted = !1), (g = new Set(g)).delete(e), L.emitChange();
               }) && ((h[e].muted = !1), (g = new Set(g)).delete(e)))
             : (g = new Set(g)).delete(e);
 }
@@ -122,7 +122,7 @@ function A(e) {
     let { channel: t } = e;
     y(t);
 }
-function N(e) {
+function C(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
@@ -138,7 +138,7 @@ function N(e) {
                 O(e.id);
         });
 }
-function C(e) {
+function N(e) {
     let { guildId: t, data: n } = e;
     null != t &&
         n.forEach((e) => {
@@ -211,7 +211,7 @@ function D(e) {
         r
     );
 }
-class L extends (r = o.ZP.Store) {
+class x extends (r = o.ZP.Store) {
     hasJoined(e) {
         return e in h;
     }
@@ -237,21 +237,21 @@ class L extends (r = o.ZP.Store) {
         return g.has(e);
     }
 }
-d(L, "displayName", "JoinedThreadsStore");
-let x = new L(s.Z, {
+d(x, "displayName", "JoinedThreadsStore");
+let L = new x(s.Z, {
         CONNECTION_OPEN: v,
         OVERLAY_INITIALIZE: I,
         GUILD_CREATE: T,
         GUILD_DELETE: S,
         THREAD_CREATE: A,
-        THREAD_LIST_SYNC: N,
-        SEARCH_MESSAGES_SUCCESS: C,
-        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: C,
-        LOAD_THREADS_SUCCESS: N,
-        LOAD_ARCHIVED_THREADS_SUCCESS: N,
+        THREAD_LIST_SYNC: C,
+        SEARCH_MESSAGES_SUCCESS: N,
+        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
+        LOAD_THREADS_SUCCESS: C,
+        LOAD_ARCHIVED_THREADS_SUCCESS: C,
         THREAD_DELETE: R,
         THREAD_MEMBER_UPDATE: P,
         THREAD_MEMBER_LOCAL_UPDATE: w,
         THREAD_MEMBERS_UPDATE: D,
     }),
-    M = x;
+    j = L;

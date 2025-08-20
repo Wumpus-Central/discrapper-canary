@@ -48,10 +48,10 @@ function S(e) {
 function A(e) {
     a = new _.Z(e.user);
 }
-function N() {
+function C() {
     v();
 }
-class C extends (o = l.ZP.Store) {
+class N extends (o = l.ZP.Store) {
     initialize() {
         !1 !== c.K.get(E) && (b = h.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL);
     }
@@ -65,15 +65,15 @@ class C extends (o = l.ZP.Store) {
         return i;
     }
 }
-g(C, "displayName", "BrowserHandoffStore");
-let R = new C(d.Z, {
+g(N, "displayName", "BrowserHandoffStore");
+let R = new N(d.Z, {
     RPC_SERVER_READY: I,
     BROWSER_HANDOFF_BEGIN: T,
     BROWSER_HANDOFF_FROM_APP: S,
     BROWSER_HANDOFF_UNAVAILABLE: v,
     BROWSER_HANDOFF_SET_USER: A,
-    LOGIN: N,
-    LOGIN_SUCCESS: N,
-    LOGOUT: N,
-    REGISTER: N,
+    LOGIN: C,
+    LOGIN_SUCCESS: C,
+    LOGOUT: C,
+    REGISTER: C,
 });

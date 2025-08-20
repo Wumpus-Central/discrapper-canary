@@ -1,5 +1,5 @@
 n.d(t, {
-    NK: () => N,
+    NK: () => C,
     R6: () => S,
     ok: () => T,
     vN: () => A,
@@ -80,7 +80,7 @@ function A(e, t) {
             baseChannelId: t,
         });
 }
-function N(e) {
+function C(e) {
     s.Z.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e,

@@ -37,9 +37,9 @@ function g(e) {
         }),
         T = (0, _.j)(E),
         { primaryColor: S, secondaryColor: A } = (0, c.Z)("".concat(T, "?forColors")),
-        N = (0, s.e7)([u.default], () => u.default.getUser(null == y ? void 0 : y.user_id));
-    if (null == N) return null;
-    let C = d.ZP.getName(g, void 0, N);
+        C = (0, s.e7)([u.default], () => u.default.getUser(null == y ? void 0 : y.user_id));
+    if (null == C) return null;
+    let N = d.ZP.getName(g, void 0, C);
     return (0, r.jsxs)("div", {
         className: a()(h.container, b),
         style: { backgroundImage: "linear-gradient(90deg, ".concat(A, " 0%, ").concat(S, " 100%)") },
@@ -50,7 +50,7 @@ function g(e) {
                 children: m(E.settings.interval_type),
             }),
             (0, r.jsx)(l.qEK, {
-                src: N.getAvatarURL(g, 16),
+                src: C.getAvatarURL(g, 16),
                 size: l.EFr.SIZE_16,
                 "aria-label": "avatar",
             }),
@@ -65,7 +65,7 @@ function g(e) {
                         className: h.username,
                         variant: "text-xs/semibold",
                         color: "header-primary",
-                        children: C,
+                        children: N,
                     }),
                     (0, r.jsx)(l.Text, {
                         className: h.statsText,

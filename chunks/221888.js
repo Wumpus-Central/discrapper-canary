@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+n.d(t, { Z: () => x }), n(415506), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-let C = 150;
+let N = 150;
 function R(e, t) {
     switch (e) {
         case y.fO.ACTIVITY:
@@ -155,7 +155,7 @@ function w(e) {
     });
 }
 let D = [];
-function L(e) {
+function x(e) {
     let {
             channelId: t,
             guildId: a,
@@ -167,9 +167,9 @@ function L(e) {
         } = e,
         A = i.useRef(null),
         R = (0, p.Z)(),
-        [L, x] = i.useState(!1),
-        M = i.useRef(new u.sW(C, () => x(!1))),
-        k = (0, c.Wu)([m.Z, g.default], () => {
+        [x, L] = i.useState(!1),
+        j = i.useRef(new u.sW(N, () => L(!1))),
+        M = (0, c.Wu)([m.Z, g.default], () => {
             if (s.type === y.fO.STREAM) {
                 let e = m.Z.getViewerIds(s.id);
                 return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
@@ -181,44 +181,41 @@ function L(e) {
                 : D;
         }, [s]);
     i.useEffect(() => {
-        R && (M.current.cancel(), x(!1));
+        R && (j.current.cancel(), L(!1));
     }, [R]);
-    let j = i.useCallback(() => {
-            M.current.cancel(), x(!0);
+    let k = i.useCallback(() => {
+            j.current.cancel(), L(!0);
         }, []),
         U = i.useCallback(() => {
-            M.current.delay();
+            j.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
-                j(),
+                k(),
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([
-                                n.e("70274"),
-                                n.e("79695"),
-                                n.e("69220"),
-                                n.e("92522"),
-                            ]).then(n.bind(n, 881351));
-                            return (n) => (0, r.jsx)(e, N(S({}, n), { user: t }));
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                                n.bind(n, 881351),
+                            );
+                            return (n) => (0, r.jsx)(e, C(S({}, n), { user: t }));
                         },
                         { onClose: U },
                     );
             },
-            [U, j],
+            [U, k],
         );
-    if (0 === k.length) return null;
+    if (0 === M.length) return null;
     if (b)
         return (0, r.jsx)(w, {
             maxVisibleUsers: T,
-            users: k,
+            users: M,
             guildId: a,
             channelId: t,
             className: h,
             participantType: s.type,
         });
-    let B = l()(k)
+    let B = l()(M)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
@@ -234,19 +231,19 @@ function L(e) {
         )
         .value();
     return (
-        k.length > T &&
+        M.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 "div",
                 {
                     className: I.overflow,
-                    children: ["+", k.length - T + 1],
+                    children: ["+", M.length - T + 1],
                 },
                 "overflow",
             )),
         (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)("div", {
-                onMouseEnter: j,
+                onMouseEnter: k,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
                     targetElementRef: A,
@@ -256,10 +253,10 @@ function L(e) {
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: k,
+                            users: M,
                             disableInteraction: v,
                         }),
-                    shouldShow: L && !R,
+                    shouldShow: x && !R,
                     position: "top",
                     children: () =>
                         (0, r.jsx)("div", {

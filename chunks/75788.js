@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m }), n(388685);
-var s = n(951288),
-    a = n(647438),
+n.d(t, { Z: () => x }), n(388685);
+var a = n(951288),
+    s = n(647438),
     r = n(442837),
     i = n(481060),
     l = n(479531),
     o = n(393869),
     c = n(25990),
     d = n(388032),
-    x = n(780187);
-function m(e) {
+    m = n(780187);
+function x(e) {
     var t;
-    let { isSlideReady: n, error: m, setEmailToken: u, setError: _, onNext: E, onClose: N } = e,
-        [h, A] = a.useState(!1),
-        [p, C] = a.useState(""),
-        [j, f] = a.useState(!1),
-        S = (0, r.e7)([c.Z], () => c.Z.getErrors()),
-        g = a.useRef(null);
-    a.useEffect(() => {
+    let { isSlideReady: n, error: x, setEmailToken: u, setError: _, onNext: E, onClose: N } = e,
+        [h, p] = s.useState(!1),
+        [A, C] = s.useState(""),
+        [j, f] = s.useState(!1),
+        g = (0, r.e7)([c.Z], () => c.Z.getErrors()),
+        S = s.useRef(null);
+    s.useEffect(() => {
         if (n) {
             var e;
-            null == (e = g.current) || e.focus();
+            null == (e = S.current) || e.focus();
         }
     }, [n]);
     let v = async (e) => {
-            e.preventDefault(), _(null), A(!0);
+            e.preventDefault(), _(null), p(!0);
             try {
-                let { token: e } = await (0, o.w)(p);
+                let { token: e } = await (0, o.w)(A);
                 u(e), E();
             } catch (e) {
                 _(new l.Z(e).getAnyErrorMessage());
             } finally {
-                A(!1);
+                p(!1);
             }
         },
         O = async () => {
@@ -47,51 +47,51 @@ function m(e) {
                 }
             }
         };
-    return (0, s.jsxs)("form", {
+    return (0, a.jsxs)("form", {
         onSubmit: v,
         children: [
-            (0, s.jsxs)(i.xBx, {
+            (0, a.jsxs)(i.xBx, {
                 separator: !1,
-                className: x.header,
+                className: m.header,
                 children: [
-                    (0, s.jsx)(i.X6q, {
-                        className: x.title,
+                    (0, a.jsx)(i.X6q, {
+                        className: m.title,
                         variant: "heading-xl/extrabold",
                         children: d.intl.string(d.t.jMGc4O),
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, a.jsx)(i.Text, {
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        className: x.subtitle,
+                        className: m.subtitle,
                         children: d.intl.string(d.t.SZJow8),
                     }),
-                    (0, s.jsx)(i.olH, {
+                    (0, a.jsx)(i.olH, {
                         onClick: N,
-                        className: x.modalCloseButton,
+                        className: m.modalCloseButton,
                     }),
                 ],
             }),
-            (0, s.jsxs)(i.hzk, {
-                className: x.content,
+            (0, a.jsxs)(i.hzk, {
+                className: m.content,
                 children: [
-                    (0, s.jsx)(i.xJW, {
+                    (0, a.jsx)(i.xJW, {
                         title: d.intl.string(d.t["8mZX6O"]),
-                        error: null != m ? m : null == S || null == (t = S.email_token) ? void 0 : t[0],
-                        children: (0, s.jsx)(i.oil, {
-                            value: p,
+                        error: null != x ? x : null == g || null == (t = g.email_token) ? void 0 : t[0],
+                        children: (0, a.jsx)(i.oil, {
+                            value: A,
                             onChange: C,
-                            inputRef: g,
+                            inputRef: S,
                         }),
                     }),
-                    (0, s.jsx)(i.Text, {
-                        className: x.help,
+                    (0, a.jsx)(i.Text, {
+                        className: m.help,
                         variant: "text-sm/normal",
                         children: d.intl.format(d.t.P0sak5, { onResend: O }),
                     }),
                 ],
             }),
-            (0, s.jsx)(i.mzw, {
-                children: (0, s.jsx)(i.zxk, {
+            (0, a.jsx)(i.mzw, {
+                children: (0, a.jsx)(i.zxk, {
                     variant: "primary",
                     text: d.intl.string(d.t.PDTjLC),
                     type: "submit",

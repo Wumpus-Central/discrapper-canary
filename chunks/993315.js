@@ -1,19 +1,19 @@
 n.d(t, { Z: () => c });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(230711),
-    s = n(838436),
-    a = n(726985),
-    l = n(981631),
-    o = n(388032);
+var i = n(230711),
+    a = n(838436),
+    o = n(726985),
+    s = n(981631),
+    l = n(388032);
 function c() {
-    return (0, i.jsx)(s.U, {
-        setting: a.s6.PRIVACY_DATA_BASIC_SERVICE_V2,
-        children: (0, i.jsx)(s.H, {
-            header: o.intl.string(o.t.D60Gfn),
-            description: o.intl.format(o.t.R5N31N, {
+    return (0, r.jsx)(a.U, {
+        setting: o.s6.PRIVACY_DATA_BASIC_SERVICE_V2,
+        children: (0, r.jsx)(a.H, {
+            header: l.intl.string(l.t.D60Gfn),
+            description: l.intl.format(l.t.R5N31N, {
                 onClick: () => {
-                    r.Z.setSection(l.oAB.ACCOUNT);
+                    i.Z.setSection(s.oAB.ACCOUNT);
                 },
             }),
         }),

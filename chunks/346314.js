@@ -111,9 +111,9 @@ function O(e) {
             I(!1);
         }, []),
         A = "username" === t,
-        N = "dot" === t,
-        C = null != c && null != c.primaryColor && null != c.secondaryColor,
-        R = A && C,
+        C = "dot" === t,
+        N = null != c && null != c.primaryColor && null != c.secondaryColor,
+        R = A && N,
         {
             gradientStyle: P,
             gradientClassname: w,
@@ -123,22 +123,22 @@ function O(e) {
             roleStyle: "username",
             animateGradient: E || v || (null == O ? void 0 : O.animate),
         }),
-        L = (0, f.EJ)(n),
-        x = {
+        x = (0, f.EJ)(n),
+        L = {
             className: o()(p.name, g, y, {
                 [p.username]: A,
                 [w]: R,
             }),
-            children: L,
+            children: x,
         },
-        M = {
+        j = {
             className: o()(p.nameGlow, D, y),
             children: n,
         },
-        k = N
+        M = C
             ? (0, r.jsx)(_.F, {
                   color: a,
-                  colors: C ? c : null,
+                  colors: N ? c : null,
                   name: l,
                   className: "left" === d ? p.roleDotLeft : p.roleDotRight,
                   hoverOverride: E || v || (null == O ? void 0 : O.animate),
@@ -149,10 +149,10 @@ function O(e) {
         onMouseEnter: T,
         onMouseLeave: S,
         children: [
-            "left" === d && k,
+            "left" === d && M,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
-                style: m({ color: A && !C && null != a ? a : void 0 }, R ? P : {}),
+                style: m({ color: A && !N && null != a ? a : void 0 }, R ? P : {}),
                 children: [
                     null != b
                         ? (0, r.jsx)(
@@ -163,10 +163,10 @@ function O(e) {
                                       color: "currentColor",
                                       variant: b,
                                   },
-                                  x,
+                                  L,
                               ),
                           )
-                        : (0, r.jsx)("span", m({}, x)),
+                        : (0, r.jsx)("span", m({}, L)),
                     R &&
                         (null != b
                             ? (0, r.jsx)(
@@ -178,13 +178,13 @@ function O(e) {
                                           "aria-hidden": !0,
                                           variant: b,
                                       },
-                                      M,
+                                      j,
                                   ),
                               )
-                            : (0, r.jsx)("span", m({ "aria-hidden": !0 }, M))),
+                            : (0, r.jsx)("span", m({ "aria-hidden": !0 }, j))),
                 ],
             }),
-            "right" === d && k,
+            "right" === d && M,
         ],
     });
 }

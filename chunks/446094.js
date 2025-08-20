@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o }), n(388685);
-var i = n(647438),
-    r = n(300284),
-    s = n(321114),
-    l = n(526761);
-function o(e, t) {
-    let [n, o] = i.useState(!1),
-        a = i.useCallback(async () => {
-            o(!0), await (0, s.c)(e, !0), o(!1), null == t || t();
+n.d(t, { Z: () => s }), n(388685);
+var r = n(647438),
+    i = n(300284),
+    a = n(321114),
+    o = n(526761);
+function s(e, t) {
+    let [n, s] = r.useState(!1),
+        l = r.useCallback(async () => {
+            s(!0), await (0, a.c)(e, !0), s(!1), null == t || t();
         }, [e, t]),
-        c = (0, r.Z)({ scrollPosition: l.Y_.GUILD_TAG });
+        c = (0, i.Z)({ scrollPosition: o.Y_.GUILD_TAG });
     return {
         isAdopting: n,
-        onAdoptTag: a,
-        onEditProfile: i.useCallback(() => {
+        onAdoptTag: l,
+        onEditProfile: r.useCallback(() => {
             null == t || t(), c();
         }, [c, t]),
     };

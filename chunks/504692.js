@@ -1,17 +1,18 @@
 n.d(t, {
     S$: () => a,
-    ZP: () => l,
+    ZP: () => o,
 });
-var i,
-    r = n(818083),
-    s = n(987338),
-    a = (((i = {}).Control = "CONTROL"), (i.Expressive = "EXPRESSIVE"), (i.Primary = "PRIMARY"), i);
-let l = (0, r.B)({
+var r = n(818083),
+    i = n(987338),
+    a = (function (e) {
+        return (e.Control = "CONTROL"), (e.Expressive = "EXPRESSIVE"), (e.Primary = "PRIMARY"), e;
+    })({});
+let o = (0, r.B)({
     kind: "user",
     id: "2025-08_referral_program_banner",
     label: "Referral Program Banner Experiment",
     defaultConfig: { cohort: "CONTROL" },
-    commonTriggerPoint: s.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,

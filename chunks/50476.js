@@ -1,15 +1,15 @@
 n.d(t, { Z: () => c });
 var r = n(951288),
-    s = n(755721),
-    o = n(481060),
-    a = n(388032),
-    i = n(437587);
+    i = n(755721),
+    a = n(481060),
+    o = n(388032),
+    s = n(437587);
 function l(e) {
     let { onClick: t, children: n } = e;
-    return (0, r.jsx)(s.zx, {
+    return (0, r.jsx)(i.zx, {
         onClick: t,
-        className: i.button,
-        innerClassName: i.buttonInner,
+        className: s.button,
+        innerClassName: s.buttonInner,
         look: "blank",
         children: n,
     });
@@ -17,15 +17,15 @@ function l(e) {
 let c = function (e) {
     let { onDesktop: t, onConsole: n } = e;
     return (0, r.jsxs)("div", {
-        className: i.buttons,
+        className: s.buttons,
         children: [
             (0, r.jsxs)(l, {
                 onClick: t,
-                children: [a.intl.string(a.t.QXc019), (0, r.jsx)(o.pzj, { size: "sm" })],
+                children: [o.intl.string(o.t.QXc019), (0, r.jsx)(a.pzj, { size: "sm" })],
             }),
             (0, r.jsxs)(l, {
                 onClick: n,
-                children: [a.intl.string(a.t["8lAfuL"]), (0, r.jsx)(o.iWm, { size: "sm" })],
+                children: [o.intl.string(o.t["8lAfuL"]), (0, r.jsx)(a.iWm, { size: "sm" })],
             }),
         ],
     });

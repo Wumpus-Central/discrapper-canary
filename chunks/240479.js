@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(457542), n(953529);
+n.d(t, { Z: () => C }), n(388685), n(457542), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(831209),
@@ -51,34 +51,34 @@ function A(e) {
             })
           : null;
 }
-function N(e) {
+function C(e) {
     let { sound: t, channel: n, closePopout: l, refreshPosition: u } = e,
         E = t.guildId === I.X8,
         O = (0, s.e7)([g.Z], () => g.Z.getGuild(t.guildId)),
         v = !E && null != O,
-        [N, C] = i.useState(),
+        [C, N] = i.useState(),
         R = (0, b.V2)({ location: "SoundmojiGuildInfo" }),
-        P = E || v || null != N || !R,
+        P = E || v || null != C || !R,
         [w, D] = i.useState(!P);
     i.useEffect(() => {
         P ||
             (D(!0),
             (0, p.xU)(t.soundId, t.guildId)
                 .then((e) => {
-                    C(e);
+                    N(e);
                 })
                 .finally(() => {
                     D(!1), u();
                 }));
     }, [u, P, t.guildId, t.soundId]);
-    let { buttonType: L, description: x } = (0, y.Z)(t, n, v, N),
-        M = L === y.y.JOIN_GUILD,
-        k = !E && w,
-        j = i.useMemo(
-            () => (v ? d.JO.createFromGuildRecord(O) : null != N ? d.JO.createFromDiscoverableGuild(N) : void 0),
-            [O, v, N],
+    let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
+        j = x === y.y.JOIN_GUILD,
+        M = !E && w,
+        k = i.useMemo(
+            () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
+            [O, v, C],
         );
-    return k
+    return M
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)("div", {
               className: S.infoContainer,
@@ -97,11 +97,11 @@ function N(e) {
                                   }),
                                   (0, r.jsx)(o.xv, {
                                       variant: "text-sm/normal",
-                                      children: x,
+                                      children: L,
                                   }),
                               ],
                           }),
-                          null != j &&
+                          null != k &&
                               (0, r.jsxs)("div", {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
@@ -114,14 +114,14 @@ function N(e) {
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: j,
+                                              expressionSourceGuild: k,
                                               hasJoinedExpressionSourceGuild: v,
-                                              isDisplayingJoinGuildButtonInPopout: M,
+                                              isDisplayingJoinGuildButtonInPopout: j,
                                           }),
                                       }),
                                       (0, r.jsx)(A, {
-                                          buttonType: L,
-                                          discoverableGuildId: null == N ? void 0 : N.id,
+                                          buttonType: x,
+                                          discoverableGuildId: null == C ? void 0 : C.id,
                                           closePopout: l,
                                       }),
                                   ],

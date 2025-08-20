@@ -1,154 +1,162 @@
-n.d(t, { Z: () => _ }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(772848),
-    o = n(866442),
+n.d(t, { Z: () => I }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(772848),
+    l = n(866442),
     c = n(692547),
-    d = n(481060),
-    u = n(699682),
-    m = n(44315),
-    p = n(654904),
-    g = n(981631),
+    u = n(481060),
+    d = n(699682),
+    f = n(44315),
+    _ = n(654904),
+    p = n(981631),
     h = n(388032),
-    f = n(707892);
-function b(e) {
+    m = n(707892);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
+function O(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = v(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function v(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function I(e) {
     let {
             onChange: t,
             onClose: n,
-            color: s,
-            suggestedColors: _,
-            disabled: j,
-            label: E,
-            colorPickerMiddle: C,
-            colorPickerFooter: O,
-            showEyeDropper: v,
+            color: a,
+            suggestedColors: g,
+            disabled: b,
+            label: v,
+            colorPickerMiddle: I,
+            colorPickerFooter: T,
+            showEyeDropper: S,
         } = e,
-        S = r.useRef(null),
-        T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
+        A = i.useRef(null),
+        C = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
-        I = (0, p.DP)(s),
-        y = (0, o.Rf)(s),
-        A = y === T ? N : y,
-        P = (0, m.Lq)(I ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
-        R = (0, u.Z)(C),
-        D = (0, u.Z)(O),
-        [Z, w] = r.useState((0, l.Z)());
+        R = (0, _.DP)(a),
+        P = (0, l.Rf)(a),
+        w = P === C ? N : P,
+        D = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
+        x = (0, d.Z)(I),
+        L = (0, d.Z)(T),
+        [j, M] = i.useState((0, s.Z)());
     return (
-        r.useEffect(() => {
-            (R !== C || D !== O) && w((0, l.Z)());
-        }, [O, C, D, R]),
-        (0, i.jsx)(d.yRy, {
-            targetElementRef: S,
-            positionKey: Z,
+        i.useEffect(() => {
+            (x !== I || L !== T) && M((0, s.Z)());
+        }, [T, I, L, x]),
+        (0, r.jsx)(u.yRy, {
+            targetElementRef: A,
+            positionKey: j,
             renderPopout: (e) =>
-                (0, i.jsx)(
-                    d.Z$W,
-                    x(b({}, e), {
-                        value: s,
+                (0, r.jsx)(
+                    u.Z$W,
+                    y(E({}, e), {
+                        value: a,
                         onChange: t,
-                        suggestedColors: _,
-                        middle: C,
-                        footer: O,
-                        showEyeDropper: v,
+                        suggestedColors: g,
+                        middle: I,
+                        footer: T,
+                        showEyeDropper: S,
                     }),
                 ),
             onRequestClose: n,
             children: (e) => {
                 var { onClick: t } = e,
-                    n = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            i,
-                            r = (function (e, t) {
-                                if (null == e) return {};
-                                var n,
-                                    i,
-                                    r = {},
-                                    s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                                return r;
-                            })(e, t);
-                        if (Object.getOwnPropertySymbols) {
-                            var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++)
-                                (n = s[i]),
-                                    !(t.indexOf(n) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                        (r[n] = e[n]);
-                        }
-                        return r;
-                    })(e, ["onClick"]);
-                return (0, i.jsxs)("div", {
-                    ref: S,
-                    className: a()(f.colorSwatch, { [f.disabled]: j }),
+                    n = O(e, ["onClick"]);
+                return (0, r.jsxs)("div", {
+                    ref: A,
+                    className: o()(m.colorSwatch, { [m.disabled]: b }),
                     children: [
-                        (0, i.jsx)(
-                            d.P3F,
-                            x(b({}, n), {
-                                tabIndex: j ? -1 : 0,
-                                onClick: j ? g.dG4 : t,
+                        (0, r.jsx)(
+                            u.P3F,
+                            y(E({}, n), {
+                                tabIndex: b ? -1 : 0,
+                                onClick: b ? p.dG4 : t,
                                 style: {
-                                    backgroundColor: y,
-                                    borderColor: A,
+                                    backgroundColor: P,
+                                    borderColor: w,
                                 },
-                                className: f.swatch,
+                                className: m.swatch,
                                 "aria-label": h.intl.string(h.t.Qp04hI),
-                                focusProps: { ringTarget: S },
-                                children: (0, i.jsx)(d.vdY, {
+                                focusProps: { ringTarget: A },
+                                children: (0, r.jsx)(u.vdY, {
                                     size: "custom",
-                                    className: f.editPencilIcon,
+                                    className: m.editPencilIcon,
                                     width: 14,
                                     height: 14,
-                                    color: P,
+                                    color: D,
                                 }),
                             }),
                         ),
-                        E,
+                        v,
                     ],
                 });
             },

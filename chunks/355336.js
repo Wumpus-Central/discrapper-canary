@@ -113,27 +113,27 @@ function m(e, t) {
             ]);
         let T = i.useRef(null),
             S = i.useRef(null),
-            [A, N] = i.useState(!1),
-            { scrollerRef: C, getScrollerState: R } = (0, l.Ke)(),
-            P = (0, l.t2)(C);
+            [A, C] = i.useState(!1),
+            { scrollerRef: N, getScrollerState: R } = (0, l.Ke)(),
+            P = (0, l.t2)(N);
         i.useImperativeHandle(
             u,
             () =>
                 d(
                     {
-                        getScrollerNode: () => C.current,
+                        getScrollerNode: () => N.current,
                         isScrolling: () => null != T.current,
                         getScrollerState: R,
                     },
-                    (0, l.Ue)(C, R, P),
+                    (0, l.Ue)(N, R, P),
                 ),
-            [C, R, P],
+            [N, R, P],
         );
         let w = i.useCallback(
             (e) => {
-                null == T.current ? N(!0) : clearTimeout(T.current),
+                null == T.current ? C(!0) : clearTimeout(T.current),
                     (T.current = setTimeout(() => {
-                        (T.current = null), N(!1);
+                        (T.current = null), C(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -142,7 +142,7 @@ function m(e, t) {
         return (
             i.useEffect(() => () => clearTimeout(T.current), []),
             (0, l.zn)({
-                ref: C,
+                ref: N,
                 key: "container",
                 onUpdate: m,
                 resizeObserver: a,
@@ -160,7 +160,7 @@ function m(e, t) {
                 _(
                     d(
                         {
-                            ref: C,
+                            ref: N,
                             className: o()(h, {
                                 [c.fade]: y,
                                 [c.customTheme]: O,

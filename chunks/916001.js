@@ -1,39 +1,39 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
 var i = n(866442),
-    l = n(481060),
+    a = n(481060),
     o = n(388032),
-    a = n(229928);
-function s(e) {
-    let { locked: t, role: n, textVariant: s = "text-xs/medium" } = e,
-        c = (0, l.dQu)(l.TVs.colors.INTERACTIVE_NORMAL).hex();
+    s = n(229928);
+function l(e) {
+    let { locked: t, role: n, textVariant: l = "text-xs/medium" } = e,
+        c = (0, a.dQu)(a.TVs.colors.INTERACTIVE_NORMAL).hex();
     return (0, r.jsx)("div", {
-        className: a.roleTagContainer,
+        className: s.roleTagContainer,
         children: (0, r.jsxs)("div", {
-            className: a.roleTag,
+            className: s.roleTag,
             children: [
                 (0, r.jsx)("div", {
-                    className: a.roleColor,
+                    className: s.roleColor,
                     style: { backgroundColor: (0, i.Rf)(n.color) },
                 }),
-                (0, r.jsx)(l.LZC, {
+                (0, r.jsx)(a.LZC, {
                     size: 8,
                     horizontal: !0,
                 }),
-                (0, r.jsxs)(l.Text, {
-                    variant: s,
+                (0, r.jsxs)(a.Text, {
+                    variant: l,
                     color: "text-default",
-                    children: [(0, r.jsx)(l.nn4, { children: o.intl.string(o.t.RnyseH) }), n.name],
+                    children: [(0, r.jsx)(a.nn4, { children: o.intl.string(o.t.RnyseH) }), n.name],
                 }),
                 !0 === t &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(l.LZC, {
+                            (0, r.jsx)(a.LZC, {
                                 size: 8,
                                 horizontal: !0,
                             }),
-                            (0, r.jsx)(l.mBM, {
+                            (0, r.jsx)(a.mBM, {
                                 size: "md",
                                 color: c,
                             }),

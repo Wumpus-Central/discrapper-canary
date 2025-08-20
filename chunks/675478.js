@@ -1,17 +1,17 @@
 n.d(t, {
-    BU: () => L,
-    Cd: () => j,
+    BU: () => x,
+    Cd: () => k,
     DZ: () => P,
     PS: () => D,
-    T6: () => N,
+    T6: () => C,
     Z1: () => B,
     aj: () => w,
-    bE: () => F,
+    bE: () => V,
     fy: () => y.fy,
     hW: () => R,
     m9: () => U,
-    nm: () => x,
-    sr: () => V,
+    nm: () => L,
+    sr: () => Z,
     w9: () => G,
 }),
     n(415506),
@@ -79,7 +79,7 @@ function I(e) {
 let T = 5000,
     S = "UserSettingsProtoLastWriteTimes",
     A = Date.now();
-function N() {}
+function C() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
     A = Date.now();
 }),
@@ -93,7 +93,7 @@ u.Z.subscribe("CONNECTION_OPEN", () => {
         document.addEventListener("keydown", () => {
             A = 0;
         }));
-class C {
+class N {
     getEditInfo() {
         return E.Z.getFullState()[this.type];
     }
@@ -337,8 +337,8 @@ class C {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let R = new C(l.o8, y.yP.PRELOADED_USER_SETTINGS),
-    P = new C(s.ji, y.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let R = new N(l.o8, y.yP.PRELOADED_USER_SETTINGS),
+    P = new N(s.ji, y.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     w = {
         [y.yP.PRELOADED_USER_SETTINGS]: R,
         [y.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P,
@@ -346,12 +346,12 @@ let R = new C(l.o8, y.yP.PRELOADED_USER_SETTINGS),
 function D(e, t, n) {
     return R.updateAsync("guilds", (n) => (0, b.u0)(n, e, t), n);
 }
-function L(e, t, n, r) {
+function x(e, t, n, r) {
     return D(e, (e) => (0, b.uL)(e, t, n), r);
 }
-function x(e) {
+function L(e) {
     return (
-        M(e),
+        j(e),
         R.updateAsync(
             "userContent",
             (t) => {
@@ -362,16 +362,16 @@ function x(e) {
         )
     );
 }
-function M(e) {
+function j(e) {
     !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) &&
-        (k(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+        (M(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
 }
-function k(e) {
+function M(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function j(e, t) {
+async function k(e, t) {
     return await R.updateAsync(
         "userContent",
         (n) => {
@@ -400,13 +400,13 @@ function G(e) {
     );
 }
 function B(e) {
-    return j(e, {
+    return k(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",
     });
 }
-function V() {
+function Z() {
     return R.updateAsync(
         "userContent",
         (e) => {
@@ -415,7 +415,7 @@ function V() {
         y.fy.INFREQUENT_USER_ACTION,
     );
 }
-function F() {
+function V() {
     return R.updateAsync(
         "userContent",
         (e) => {

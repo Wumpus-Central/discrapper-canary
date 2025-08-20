@@ -1,187 +1,221 @@
-n.d(t, { Z: () => O }), n(388685), n(49124);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
+n.d(t, {
+    ZP: () => w,
+    fD: () => R,
+}),
+    n(388685),
+    n(49124);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(433517),
+    s = n(481060),
     l = n(401430),
-    o = n(100527),
-    c = n(415439),
+    c = n(100527),
+    u = n(415439),
     d = n(956097),
-    u = n(921801),
-    m = n(695103),
-    p = n(998502),
-    g = n(740492),
-    h = n(695346),
-    f = n(494620),
+    f = n(947851),
+    _ = n(921801),
+    p = n(695103),
+    h = n(998502),
+    m = n(740492),
+    g = n(695346),
+    E = n(494620),
     b = n(399970),
-    x = n(726985),
-    _ = n(981631),
-    j = n(388032),
-    E = n(692278);
-function C(e) {
+    y = n(726985),
+    O = n(981631),
+    v = n(388032),
+    I = n(692278);
+function T(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function O() {
-    let [e] = r.useState(() => p.ZP.getEnableHardwareAcceleration()),
-        t = h.bm.useSetting(),
-        n = h.Sb.useSetting(),
-        O = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
-        v = (0, s.e7)([g.ZP], () => g.ZP.showPlayAgain),
-        S = r.useCallback((e) => {
-            h.bm.updateSetting(!e);
+function A(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function C(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : A(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let N = "AppHardwareAcceleration";
+function R() {
+    if ((0, f.Y)("DesktopNativeUtils")) {
+        let e = o.K.get(N);
+        if ("boolean" == typeof e) return e;
+    }
+    return h.ZP.getEnableHardwareAcceleration();
+}
+function P(e) {
+    (0, f.Y)("DesktopNativeUtils")
+        ? (o.K.set(N, e), h.ZP.setEnableHardwareAcceleration(!0))
+        : h.ZP.setEnableHardwareAcceleration(e);
+}
+function w() {
+    let [e] = i.useState(() => R()),
+        t = g.bm.useSetting(),
+        n = g.Sb.useSetting(),
+        o = (0, a.e7)([p.Z], () => p.Z.testModeApplicationId),
+        f = (0, a.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        h = i.useCallback((e) => {
+            g.bm.updateSetting(!e);
         }, []),
-        T = r.useCallback((e) => {
-            e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, C({}, e))) : l.mc();
+        T = i.useCallback((e) => {
+            e ? (0, s.h7j)((e) => (0, r.jsx)(b.Z, S({}, e))) : l.mc();
         }, []),
-        N = r.useCallback((e) => {
-            (0, c.BV)(e, o.Z.USER_SETTINGS);
+        A = i.useCallback((e) => {
+            (0, u.BV)(e, c.Z.USER_SETTINGS);
         }, []),
-        I = r.useCallback((e) => {
-            (0, a.h7j)((t) => {
-                var n, r;
-                let s = e ? j.intl.format(j.t.LYXRxM, {}) : j.intl.format(j.t.uDP3Ky, {});
-                return (0, i.jsx)(
-                    a.ConfirmModal,
-                    ((n = C(
+        N = i.useCallback((e) => {
+            (0, s.h7j)((t) => {
+                let n = e ? v.intl.format(v.t.LYXRxM, {}) : v.intl.format(v.t.uDP3Ky, {});
+                return (0, r.jsx)(
+                    s.ConfirmModal,
+                    C(
+                        S(
+                            {
+                                header: v.intl.string(v.t.aqpAvr),
+                                confirmText: v.intl.string(v.t.vT7ckp),
+                                cancelText: v.intl.string(v.t["ETE/oK"]),
+                                onConfirm: () => P(e),
+                            },
+                            t,
+                        ),
                         {
-                            header: j.intl.string(j.t.aqpAvr),
-                            confirmText: j.intl.string(j.t.vT7ckp),
-                            cancelText: j.intl.string(j.t["ETE/oK"]),
-                            onConfirm: () => p.ZP.setEnableHardwareAcceleration(e),
-                        },
-                        t,
-                    )),
-                    (r = r =
-                        {
-                            children: (0, i.jsx)(a.Text, {
+                            children: (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                children: s,
+                                children: n,
                             }),
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    n),
+                        },
+                    ),
                 );
             });
         }, []),
         {
-            warpEnabled: y,
-            warpConnecting: A,
-            warpLog: P,
-        } = (0, s.cj)([d.Z], () => ({
+            warpEnabled: w,
+            warpConnecting: D,
+            warpLog: x,
+        } = (0, a.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
             warpConnecting: d.Z.connecting,
             warpLog: d.Z.log,
         })),
-        R = r.useCallback((e) => {
+        L = i.useCallback((e) => {
             e ? d.Z.connect() : d.Z.disconnect();
         }, []);
-    return (0, i.jsxs)(a.hjN, {
-        tag: a.RB0.H1,
-        title: j.intl.string(j.t["8/udY2"]),
+    return (0, r.jsxs)(s.hjN, {
+        tag: s.RB0.H1,
+        title: v.intl.string(v.t["8/udY2"]),
         children: [
-            (0, i.jsx)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
-                children: (0, i.jsx)(a.j7V, {
+            (0, r.jsx)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                children: (0, r.jsx)(s.j7V, {
                     value: n,
-                    onChange: h.Sb.updateSetting,
-                    note: j.intl.format(j.t["CY6q/f"], { apiDocsUrl: _.EYA.API_DOCS }),
-                    children: j.intl.string(j.t.ObIb1d),
+                    onChange: g.Sb.updateSetting,
+                    note: v.intl.format(v.t["CY6q/f"], { apiDocsUrl: O.EYA.API_DOCS }),
+                    children: v.intl.string(v.t.ObIb1d),
                 }),
             }),
-            (0, i.jsx)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
-                children: (0, i.jsx)(a.j7V, {
-                    className: e ? "" : E.formSwitchExtension,
+            (0, r.jsx)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                children: (0, r.jsx)(s.j7V, {
+                    className: e ? "" : I.formSwitchExtension,
                     value: e,
-                    onChange: I,
-                    note: j.intl.string(j.t.Afc7l5),
+                    onChange: N,
+                    note: v.intl.string(v.t.Afc7l5),
                     hideBorder: !e,
-                    children: j.intl.string(j.t["eOC/Fx"]),
+                    children: v.intl.string(v.t["eOC/Fx"]),
                 }),
             }),
             !e &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(f.Z, {
-                            look: f.z.WARNING,
-                            children: j.intl.string(j.t.j7S6IS),
+                        (0, r.jsx)(E.Z, {
+                            look: E.z.WARNING,
+                            children: v.intl.string(v.t.j7S6IS),
                         }),
-                        (0, i.jsx)(a.$i$, { className: E.infoBoxDivider }),
+                        (0, r.jsx)(s.$i$, { className: I.infoBoxDivider }),
                     ],
                 }),
-            (0, i.jsx)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
-                children: (0, i.jsx)(a.j7V, {
+            (0, r.jsx)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                children: (0, r.jsx)(s.j7V, {
                     value: !t,
-                    onChange: S,
-                    note: j.intl.string(j.t["8mYp39"]),
-                    children: j.intl.string(j.t.fi3UQE),
+                    onChange: h,
+                    note: v.intl.string(v.t["8mYp39"]),
+                    children: v.intl.string(v.t.fi3UQE),
                 }),
             }),
-            (0, i.jsx)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
-                children: (0, i.jsx)(a.j7V, {
-                    value: null != O,
-                    note: j.intl.string(j.t["52hMnJ"]),
+            (0, r.jsx)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                children: (0, r.jsx)(s.j7V, {
+                    value: null != o,
+                    note: v.intl.string(v.t["52hMnJ"]),
                     onChange: T,
-                    children: j.intl.string(j.t.erOqlp),
+                    children: v.intl.string(v.t.erOqlp),
                 }),
             }),
-            (0, i.jsx)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
-                children: (0, i.jsx)(a.j7V, {
-                    value: v,
-                    note: j.intl.string(j.t["B/qU4O"]),
-                    onChange: N,
-                    children: j.intl.string(j.t.qDZryM),
+            (0, r.jsx)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                children: (0, r.jsx)(s.j7V, {
+                    value: f,
+                    note: v.intl.string(v.t["B/qU4O"]),
+                    onChange: A,
+                    children: v.intl.string(v.t.qDZryM),
                 }),
             }),
-            (0, i.jsxs)(u.F, {
-                setting: x.s6.SETTINGS_ADVANCED_CF_WARP,
+            (0, r.jsxs)(_.F, {
+                setting: y.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
-                    (0, i.jsx)(a.j7V, {
-                        value: y,
+                    (0, r.jsx)(s.j7V, {
+                        value: w,
                         note: "Enable WARP Proxy Connection",
-                        onChange: R,
+                        onChange: L,
                         children: "Enable WARP",
                     }),
-                    A ? (0, i.jsx)(a.$jN, {}) : null,
-                    (0, i.jsx)(a.Text, {
+                    D ? (0, r.jsx)(s.$jN, {}) : null,
+                    (0, r.jsx)(s.Text, {
                         variant: "code",
-                        children: P.map((e, t) => (0, i.jsx)("div", { children: JSON.stringify(e) }, t)),
+                        children: x.map((e, t) => (0, r.jsx)("div", { children: JSON.stringify(e) }, t)),
                     }),
                 ],
             }),

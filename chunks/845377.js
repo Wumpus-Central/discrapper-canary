@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(953529), n(388685);
+n.d(t, { Z: () => I }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -126,7 +126,7 @@ let N = (e) => {
         })
     );
 };
-function I(e, t) {
+function E(e, t) {
     return o()(
         null == e
             ? void 0
@@ -142,9 +142,9 @@ function I(e, t) {
               }),
     );
 }
-let E = (e) => {
+let I = (e) => {
     let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, E] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
+        [m, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
         { nsfwProperties: S } = null != m ? m : {},
         T = null == t ? void 0 : t.features.has(v.oNc.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
@@ -170,9 +170,9 @@ let E = (e) => {
                       });
             },
             [t.id, P],
-            I,
+            E,
         );
-    if (E || null == m)
+    if (I || null == m)
         return (0, r.jsxs)("div", {
             className: a()(O.container, O.loaderContainer, s),
             children: [

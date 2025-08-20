@@ -1,36 +1,90 @@
-n.d(t, { Z: () => f }), n(290780);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(481060),
-    l = n(565138),
-    o = n(430824),
+n.d(t, { Z: () => y }), n(290780);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(565138),
+    l = n(430824),
     c = n(771845),
-    d = n(823379),
-    u = n(997950),
-    m = n(816108),
-    p = n(388032),
-    g = n(790604);
-let h = {
-    label: () => p.intl.string(p.t["32u1Dw"]),
-    value: u.Th,
+    u = n(823379),
+    d = n(997950),
+    f = n(816108),
+    _ = n(388032),
+    p = n(790604);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let b = {
+    label: () => _.intl.string(_.t["32u1Dw"]),
+    value: d.Th,
 };
-function f() {
-    let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
-        n = (0, s.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
-        p = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
-        { hideGuildOptions: f, hideGlobalOption: b } = (0, m.b)(),
-        x = n[0];
-    r.useEffect(() => {
-        (b && f) || (e === u.Th && e !== x && b && t(x), e !== u.Th && f && t(u.Th));
-    }, [e, t, b, f, x]);
-    let _ = r.useMemo(() => {
-            var e, t;
-            let i = f
+function y() {
+    let { selectedGuildId: e, setSelectedGuildId: t } = (0, d.xu)(),
+        n = (0, a.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+        _ = (0, a.e7)([l.Z], () => l.Z.getGuilds()),
+        { hideGuildOptions: h, hideGlobalOption: g } = (0, f.b)(),
+        y = n[0];
+    i.useEffect(() => {
+        (g && h) || (e === d.Th && e !== y && g && t(y), e !== d.Th && h && t(d.Th));
+    }, [e, t, g, h, y]);
+    let O = (e) => {
+            t(e);
+        },
+        v = i.useMemo(() => {
+            let e = h
                 ? []
                 : n
                       .map((e) => {
-                          let t = p[e];
+                          let t = _[e];
                           return null == t
                               ? null
                               : {
@@ -38,82 +92,36 @@ function f() {
                                     value: t.id,
                                 };
                       })
-                      .filter(d.lm);
-            return (
-                b ||
-                    i.unshift(
-                        ((e = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = i);
-                                    });
-                            }
-                            return e;
-                        })({}, h)),
-                        (t = t = { label: h.label() }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(t)).forEach(function (n) {
-                                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                              }),
-                        e),
-                    ),
-                i
-            );
-        }, [f, n, b, p]),
-        j = r.useCallback(
+                      .filter(u.lm);
+            return g || e.unshift(E(m({}, b), { label: b.label() })), e;
+        }, [h, n, g, _]),
+        I = i.useCallback(
             (e) => {
-                let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
+                let t = (null == e ? void 0 : e.label) === b.label() && (null == e ? void 0 : e.value) === b.value;
                 return null == e || "" === e.value || t
-                    ? (0, i.jsx)("div", {
-                          className: g.clydeIconContainer,
-                          children: (0, i.jsx)(a.gw7, {
+                    ? (0, r.jsx)("div", {
+                          className: p.clydeIconContainer,
+                          children: (0, r.jsx)(o.gw7, {
                               size: "sm",
                               color: "white",
                               "aria-hidden": !0,
-                              className: g.guildSelectOptionIcon,
+                              className: p.guildSelectOptionIcon,
                           }),
                       })
-                    : (0, i.jsx)(l.Z, {
-                          className: g.guildSelectOptionIcon,
-                          guild: p[e.value],
-                          size: l.Z.Sizes.SMALLER,
+                    : (0, r.jsx)(s.Z, {
+                          className: p.guildSelectOptionIcon,
+                          guild: _[e.value],
+                          size: s.Z.Sizes.SMALLER,
                           active: !0,
                       });
             },
-            [p],
+            [_],
         );
-    return (0, i.jsx)(a.VcW, {
-        wrapperClassName: g.searchableSelect,
-        onChange: (e) => {
-            t(e);
-        },
+    return (0, r.jsx)(o.VcW, {
+        wrapperClassName: p.searchableSelect,
+        onChange: O,
         value: e,
-        options: _,
-        renderOptionPrefix: j,
+        options: v,
+        renderOptionPrefix: I,
     });
 }

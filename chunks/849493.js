@@ -1,27 +1,27 @@
-s.r(t), s.d(t, { default: () => o });
-var i = s(951288);
-s(647438);
-var r = s(481060),
-    l = s(915312);
-function o() {
+d.r(i), d.d(i, { default: () => r });
+var e = d(951288);
+d(647438);
+var l = d(481060),
+    n = d(915312);
+function r() {
     return (
-        (0, l.bN)(document.body),
-        (0, i.jsx)(r.nn4, {
-            children: (0, i.jsx)("svg", {
+        (0, n.bN)(document.body),
+        (0, e.jsx)(l.nn4, {
+            children: (0, e.jsx)("svg", {
                 "aria-hidden": !0,
-                children: (0, i.jsxs)("filter", {
+                children: (0, e.jsxs)("filter", {
                     id: "violation-overlay",
                     x: "0",
                     y: "0",
                     width: "100%",
                     height: "100%",
                     children: [
-                        (0, i.jsx)("feFlood", {
+                        (0, e.jsx)("feFlood", {
                             floodColor: "#ff0000",
                             floodOpacity: "0.3",
                             result: "floodFill",
                         }),
-                        (0, i.jsx)("feBlend", {
+                        (0, e.jsx)("feBlend", {
                             in: "SourceGraphic",
                             in2: "floodFill",
                             mode: "overlay",
@@ -32,4 +32,4 @@ function o() {
         })
     );
 }
-s(915032);
+d(915032);

@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(920888),
     x = n(287151),
     v = n(501517),
-    j = n(982168),
-    O = n(216572),
+    O = n(982168),
+    j = n(216572),
     E = n(5101),
     S = n(817608),
     P = n(569471),
@@ -83,7 +83,7 @@ function H(e, t) {
 function G(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        a = (0, j.P0)(t),
+        a = (0, O.P0)(t),
         [o, u] = i.useState(!1),
         d = () => {
             u(!0),
@@ -119,7 +119,7 @@ function G(e) {
 }
 function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
-        { ref: v, width: j } = (0, p.ZP)(),
+        { ref: v, width: O } = (0, p.ZP)(),
         [E, D] = i.useState(3),
         [V, z] = i.useState(!n),
         [W, q] = (0, h.Z)(!1, 2000),
@@ -133,7 +133,7 @@ function V(e) {
             isGuest: ee,
             isPendingMember: et,
         } = (0, b.Z)(Y),
-        en = (0, O.nw)(Y),
+        en = (0, j.nw)(Y),
         er = (0, o.e7)([Z.Z], () => Z.Z.getChannel(s)),
         ei = (0, A.Bs)(er),
         el = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -162,8 +162,8 @@ function V(e) {
     let [eo, es] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (D(Math.floor((j - 280) / 58)), es(!1));
-        }, [j]),
+            null != O && (D(Math.floor((O - 280) / 58)), es(!1));
+        }, [O]),
         null == Y || null == K)
     )
         return null;

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => m });
-var i = n(951288),
-    r = n(647438),
-    s = n(100527),
-    a = n(906732),
-    l = n(123274),
-    o = n(279804),
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(100527),
+    o = n(906732),
+    s = n(123274),
+    l = n(279804),
     c = n(388032),
-    d = n(998268);
-let u = r.forwardRef((e, t) => {
-    let { analyticsLocations: n } = (0, a.ZP)(s.Z.PREMIUM_MARKETING_FOOTER_CTA);
-    return (0, i.jsx)(a.Gt, {
+    u = n(998268);
+let d = i.forwardRef((e, t) => {
+    let { analyticsLocations: n } = (0, o.ZP)(a.Z.PREMIUM_MARKETING_FOOTER_CTA);
+    return (0, r.jsx)(o.Gt, {
         value: n,
-        children: (0, i.jsx)("div", {
+        children: (0, r.jsx)("div", {
             ref: t,
-            className: d.container,
-            children: (0, i.jsxs)("div", {
-                className: d.contentContainer,
+            className: u.container,
+            children: (0, r.jsxs)("div", {
+                className: u.contentContainer,
                 children: [
-                    (0, i.jsx)(o.Z, {}),
-                    (0, i.jsx)(l.Z, {
+                    (0, r.jsx)(l.Z, {}),
+                    (0, r.jsx)(s.Z, {
                         responsive: !1,
                         children: c.intl.string(c.t.lEw32t),
                     }),
@@ -27,5 +27,5 @@ let u = r.forwardRef((e, t) => {
         }),
     });
 });
-u.displayName = "PremiumMarketingFooter";
-let m = u;
+d.displayName = "PremiumMarketingFooter";
+let f = d;

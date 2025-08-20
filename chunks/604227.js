@@ -1,169 +1,184 @@
-n.d(t, { Z: () => h }), n(388685), n(704826), n(35282), n(539854);
-var i = n(951288);
+n.d(t, { Z: () => y }), n(388685), n(704826), n(35282), n(539854);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(525654),
-    l = n.n(a),
-    o = n(481060),
+var i = n(120356),
+    a = n.n(i),
+    o = n(525654),
+    s = n.n(o),
+    l = n(481060),
     c = n(579806),
-    d = n(304761),
-    u = n(320161),
-    m = n(998502),
-    p = n(388032),
-    g = n(447160);
-function h() {
-    var e, t, n, r, a;
-    let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = "433934",
-        b = "a72e879ebbb05227fd3c96bcabf14ae605160d6c".substring(0, 7),
-        x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
-        _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
-        j = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
-        E = null == (a = d.C.getCurrentBuildOverride().overrides) ? void 0 : a.discord_web,
-        C = (function () {
-            var e;
-            let t = null === l() || void 0 === l() || null == (e = l().os) ? void 0 : e.toString();
-            if (null == t || null == c.Z) return null;
-            let n = c.Z.os.release,
-                [i, r, s] = m.ZP.parsedOSRelease;
-            return (
-                t.includes("Windows 10") && void 0 !== s && s >= 22000 && (t = t.replace("Windows 10", "Windows 11")),
-                t.includes("OS X 10.15.7") && void 0 !== i && i >= 20 && (t = "macOS ".concat(i >= 25 ? i + 1 : i - 9)),
-                "".concat(t, " (").concat(n, ")")
-            );
-        })(),
-        O = [h, f, "(".concat(b, ")")];
+    u = n(304761),
+    d = n(320161),
+    f = n(998502),
+    _ = n(388032),
+    p = n(447160);
+function h(e, t, n) {
     return (
-        null != x &&
-            (O.push("Host ".concat(x)), null != j && O.push(j.toLowerCase()), null != _ && O.push("(".concat(_, ")"))),
-        O.push("Build Override: ".concat(null != E ? E.id : "N/A")),
-        null != C && O.push(C),
-        (0, i.jsx)(u.Z, {
-            copyValue: O.join(" "),
-            text: p.intl.string(p.t["9Al4QU"]),
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b() {
+    var e;
+    let t = null === s() || void 0 === s() || null == (e = s().os) ? void 0 : e.toString();
+    if (null == t || null == c.Z) return null;
+    let n = c.Z.os.release,
+        [r, i, a] = f.ZP.parsedOSRelease;
+    if (
+        (t.includes("Windows 10") && void 0 !== a && a >= 22000 && (t = t.replace("Windows 10", "Windows 11")),
+        t.includes("OS X 10.15.7") && void 0 !== r && r >= 20)
+    ) {
+        let e = r >= 25 ? r + 1 : r - 9;
+        t = "macOS ".concat(e);
+    }
+    return "".concat(t, " (").concat(n, ")");
+}
+function y() {
+    var e, t, n, i, o;
+    let s = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        f = "434426",
+        h = "2475960039a7c6d956f0274dd4955fbd92ec4ebf".substring(0, 7),
+        g = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
+        y = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
+        O = null === c.Z || void 0 === c.Z || null == (n = (i = c.Z.remoteApp).getAppArch) ? void 0 : n.call(i),
+        v = null == (o = u.C.getCurrentBuildOverride().overrides) ? void 0 : o.discord_web,
+        I = b(),
+        T = [s, f, "(".concat(h, ")")];
+    return (
+        null != g &&
+            (T.push("Host ".concat(g)), null != O && T.push(O.toLowerCase()), null != y && T.push("(".concat(y, ")"))),
+        T.push("Build Override: ".concat(null != v ? v.id : "N/A")),
+        null != I && T.push(I),
+        (0, r.jsx)(d.Z, {
+            copyValue: T.join(" "),
+            text: _.intl.string(_.t["9Al4QU"]),
             "aria-label": !1,
-            children: (e) => {
-                var t, n;
-                return (0, i.jsx)(
-                    o.P3F,
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: i,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = i);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (n = n =
-                        {
-                            "aria-label": p.intl.string(p.t["9Al4QU"]),
-                            className: g.clickable,
-                            children: (0, i.jsxs)("div", {
-                                className: g.info,
-                                "data-mtctest-ignore": "true",
-                                children: [
-                                    (0, i.jsxs)(o.Text, {
+            children: (e) =>
+                (0, r.jsx)(
+                    l.P3F,
+                    E(m({}, e), {
+                        "aria-label": _.intl.string(_.t["9Al4QU"]),
+                        className: p.clickable,
+                        children: (0, r.jsxs)("div", {
+                            className: p.info,
+                            "data-mtctest-ignore": "true",
+                            children: [
+                                (0, r.jsxs)(l.Text, {
+                                    tag: "span",
+                                    className: p.line,
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
+                                    children: [
+                                        s,
+                                        " ",
+                                        f,
+                                        " ",
+                                        (0, r.jsxs)("span", {
+                                            className: p.versionHash,
+                                            children: ["(", h, ")"],
+                                        }),
+                                    ],
+                                }),
+                                " ",
+                                null != v &&
+                                    (0, r.jsx)(l.Text, {
                                         tag: "span",
-                                        className: g.line,
+                                        className: p.line,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: [
-                                            h,
-                                            " ",
-                                            f,
-                                            " ",
-                                            (0, i.jsxs)("span", {
-                                                className: g.versionHash,
-                                                children: ["(", b, ")"],
-                                            }),
-                                        ],
-                                    }),
-                                    " ",
-                                    null != E &&
-                                        (0, i.jsx)(o.Text, {
-                                            tag: "span",
-                                            className: g.line,
-                                            variant: "text-xs/normal",
-                                            color: "text-muted",
-                                            children: (0, i.jsxs)("span", {
-                                                className: g.versionHash,
-                                                children: ["Build Override: ", E.id],
-                                            }),
+                                        children: (0, r.jsxs)("span", {
+                                            className: p.versionHash,
+                                            children: ["Build Override: ", v.id],
                                         }),
-                                    null != x
-                                        ? (0, i.jsxs)(i.Fragment, {
-                                              children: [
-                                                  (0, i.jsxs)(o.Text, {
-                                                      tag: "span",
-                                                      className: g.line,
-                                                      variant: "text-xs/normal",
-                                                      color: "text-muted",
-                                                      children: [
-                                                          "Host ",
-                                                          x,
-                                                          " ",
-                                                          null != j
-                                                              ? (0, i.jsxs)("span", {
-                                                                    className: g.appArch,
-                                                                    children: [j.toLowerCase(), " "],
-                                                                })
-                                                              : null,
-                                                          null != _
-                                                              ? (0, i.jsxs)("span", {
-                                                                    children: ["(", _, ")"],
-                                                                })
-                                                              : null,
-                                                      ],
-                                                  }),
-                                                  " ",
-                                              ],
-                                          })
-                                        : null,
-                                    null != C
-                                        ? (0, i.jsx)(o.Text, {
-                                              tag: "span",
-                                              className: s()(g.line, g.os),
-                                              variant: "text-xs/normal",
-                                              color: "text-muted",
-                                              children: C,
-                                          })
-                                        : null,
-                                ],
-                            }),
+                                    }),
+                                null != g
+                                    ? (0, r.jsxs)(r.Fragment, {
+                                          children: [
+                                              (0, r.jsxs)(l.Text, {
+                                                  tag: "span",
+                                                  className: p.line,
+                                                  variant: "text-xs/normal",
+                                                  color: "text-muted",
+                                                  children: [
+                                                      "Host ",
+                                                      g,
+                                                      " ",
+                                                      null != O
+                                                          ? (0, r.jsxs)("span", {
+                                                                className: p.appArch,
+                                                                children: [O.toLowerCase(), " "],
+                                                            })
+                                                          : null,
+                                                      null != y
+                                                          ? (0, r.jsxs)("span", {
+                                                                children: ["(", y, ")"],
+                                                            })
+                                                          : null,
+                                                  ],
+                                              }),
+                                              " ",
+                                          ],
+                                      })
+                                    : null,
+                                null != I
+                                    ? (0, r.jsx)(l.Text, {
+                                          tag: "span",
+                                          className: a()(p.line, p.os),
+                                          variant: "text-xs/normal",
+                                          color: "text-muted",
+                                          children: I,
+                                      })
+                                    : null,
+                            ],
                         }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                );
-            },
+                    }),
+                ),
         })
     );
 }

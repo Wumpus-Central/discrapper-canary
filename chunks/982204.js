@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => R,
-    E: () => C,
+    E: () => N,
 }),
     n(953529);
 var r = n(951288);
@@ -65,7 +65,7 @@ let y = (e, t) =>
                 fallbackLabel: null,
             });
     },
-    N = (e) => {
+    C = (e) => {
         let { discount: t } = e,
             n = (0, c.e7)([p.default], () => p.default.locale),
             i = null != t && null != t.percentage_amount ? (0, h.T3)(n, -((t.percentage_amount / 100) * 1)) : null;
@@ -78,7 +78,7 @@ let y = (e, t) =>
             }),
         });
     },
-    C = (e) => {
+    N = (e) => {
         let { sku: t, value: n } = e,
             i = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
             a = y(t, i);
@@ -129,7 +129,7 @@ function R(e) {
             null != f &&
                 (0, r.jsxs)(v, {
                     children: [
-                        "THREE_COLUMN" === a && (0, r.jsx)(I, { children: (0, r.jsx)(N, { discount: f }) }),
+                        "THREE_COLUMN" === a && (0, r.jsx)(I, { children: (0, r.jsx)(C, { discount: f }) }),
                         (0, r.jsx)(T, {
                             className: b.invoiceDiscountText,
                             children: f.description,

@@ -1,16 +1,18 @@
-n.d(t, { G: () => d });
+n.d(t, { G: () => f });
 var r = n(442837),
     i = n(704215),
-    l = n(243778),
+    a = n(243778),
     o = n(999382),
-    a = n(667105),
-    s = n(819640),
+    s = n(667105),
+    l = n(819640),
     c = n(562511),
     u = n(46140);
-function d(e) {
+let d = 180000;
+function f(e) {
     let t = (0, c.A2)(e),
         n = (0, r.e7)([o.Z], () => o.Z.isOpen()),
-        d = (0, r.e7)([s.Z], () => s.Z.hasLayers()),
-        p = (0, a.Ws)({ location: u.dr.QUESTS_BAR });
-    return (0, l.bf)(t && !n && !d && p ? i.z.GUILD_TAG_AVAILABLE_COACHMARK : null, { cooldownDurationMs: 180000 });
+        f = (0, r.e7)([l.Z], () => l.Z.hasLayers()),
+        _ = (0, s.Ws)({ location: u.dr.QUESTS_BAR }),
+        p = t && !n && !f && _;
+    return (0, a.bf)(p ? i.z.GUILD_TAG_AVAILABLE_COACHMARK : null, { cooldownDurationMs: d });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -22,10 +22,10 @@ var r = n(951288),
     y = n(266665),
     C = n(203377),
     N = n(981631),
-    I = n(760150);
-function E(e) {
+    E = n(760150);
+function I(e) {
     let t,
-        { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: S } = e,
+        { editRoleId: n, setEditRoleId: l, selectedSection: I, setSelectedSection: S } = e,
         T = (0, s.e7)([f.Z], () => f.Z.guild, []);
     a()(null != T, "guildId cannot be null here");
     let { role: P, permissionSearchQuery: w } = (0, s.cj)(
@@ -55,7 +55,7 @@ function E(e) {
         i.useEffect(() => {
             var e, t;
             let { role: n, editRoleId: r } = k.current,
-                i = (0, x.UT)(E),
+                i = (0, x.UT)(I),
                 l = null != (t = null == (e = h.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(
                 N.rMx.ROLE_PAGE_VIEWED,
@@ -96,14 +96,14 @@ function E(e) {
                     (0, c.hH)(T.id),
                 ),
             );
-        }, [E, T.id, null == P ? void 0 : P.id]),
+        }, [I, T.id, null == P ? void 0 : P.id]),
         i.useEffect(() => {
             (null == P ? void 0 : P.id) != null && (0, u.sE)(T.id, P.id);
         }, [T.id, null == P ? void 0 : P.id]),
         null == P)
     )
         return null;
-    switch (E) {
+    switch (I) {
         case C.ZI.DISPLAY:
             t = (0, r.jsx)(v.ZP, {
                 guild: T,
@@ -140,10 +140,10 @@ function E(e) {
             });
             break;
         default:
-            (0, p.vE)(E);
+            (0, p.vE)(I);
     }
     return (0, r.jsxs)(o.hjN, {
-        className: I.page,
+        className: E.page,
         children: [
             (0, r.jsx)(y.Z, {
                 guild: T,
@@ -152,7 +152,7 @@ function E(e) {
                 setSelectedSection: S,
             }),
             (0, r.jsx)("div", {
-                className: I.contentContainer,
+                className: E.contentContainer,
                 ref: D,
                 children: (0, r.jsx)(o.JcV, {
                     containerRef: D,

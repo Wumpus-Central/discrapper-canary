@@ -37,7 +37,7 @@ let d = {
                     T = (0, i.Z)(I),
                     S = T === I,
                     A = h || (S || !O ? [(0, r.Z)(I)] : u(I)),
-                    N = [I].concat(A).reduce(function (e, n) {
+                    C = [I].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, s.Z)(t, {
@@ -51,48 +51,48 @@ let d = {
                                 : n,
                         );
                     }, []),
-                    C = t.rects.reference,
+                    N = t.rects.reference,
                     R = t.rects.popper,
                     P = new Map(),
                     w = !0,
-                    D = N[0],
-                    L = 0;
-                L < N.length;
-                L++
+                    D = C[0],
+                    x = 0;
+                x < C.length;
+                x++
             ) {
-                var x = N[L],
-                    M = (0, i.Z)(x),
-                    k = (0, c.Z)(x) === l.BL,
-                    j = [l.we, l.I].indexOf(M) >= 0,
-                    U = j ? "width" : "height",
+                var L = C[x],
+                    j = (0, i.Z)(L),
+                    M = (0, c.Z)(L) === l.BL,
+                    k = [l.we, l.I].indexOf(j) >= 0,
+                    U = k ? "width" : "height",
                     G = (0, o.Z)(t, {
-                        placement: x,
+                        placement: L,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: b,
                         padding: m,
                     }),
-                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
-                C[U] > R[U] && (B = (0, r.Z)(B));
-                var V = (0, r.Z)(B),
-                    F = [];
+                    B = k ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
+                N[U] > R[U] && (B = (0, r.Z)(B));
+                var Z = (0, r.Z)(B),
+                    V = [];
                 if (
-                    (f && F.push(G[M] <= 0),
-                    p && F.push(G[B] <= 0, G[V] <= 0),
-                    F.every(function (e) {
+                    (f && V.push(G[j] <= 0),
+                    p && V.push(G[B] <= 0, G[Z] <= 0),
+                    V.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (D = x), (w = !1);
+                    (D = L), (w = !1);
                     break;
                 }
-                P.set(x, F);
+                P.set(L, V);
             }
             if (w)
                 for (
-                    var Z = O ? 3 : 1,
+                    var F = O ? 3 : 1,
                         H = function (e) {
-                            var t = N.find(function (t) {
+                            var t = C.find(function (t) {
                                 var n = P.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
@@ -101,7 +101,7 @@ let d = {
                             });
                             if (t) return (D = t), "break";
                         },
-                        Y = Z;
+                        Y = F;
                     Y > 0 && "break" !== H(Y);
                     Y--
                 );

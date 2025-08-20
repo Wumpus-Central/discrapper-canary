@@ -1,37 +1,39 @@
-i.d(e, { Z: () => s });
-var n = i(951288);
-i(647438);
-var r = i(481060),
-    E = i(388032);
-let l = (t, e) =>
-        (0, n.jsxs)(
-            r.Text,
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var i = n(481060),
+    a = n(388032);
+let o = (e, t) => {
+        let n = {
+            display: "flex",
+            gap: "4px",
+            margin: "8px 0 4px 0",
+            alignItems: "center",
+        };
+        return (0, r.jsxs)(
+            i.Text,
             {
                 color: "text-danger",
-                style: {
-                    display: "flex",
-                    gap: "4px",
-                    margin: "8px 0 4px 0",
-                    alignItems: "center",
-                },
+                style: n,
                 variant: "text-sm/normal",
                 children: [
-                    (0, n.jsx)(r.Mgn, {
+                    (0, r.jsx)(i.Mgn, {
                         size: "custom",
                         color: "currentColor",
                         width: 14,
                         height: 14,
                     }),
-                    t,
+                    e,
                 ],
             },
-            e,
-        ),
+            t,
+        );
+    },
     s = {
-        getTextInVoiceSendMessageChannelPermissionText: function (t) {
-            return t ? E.intl.format(E.t.Q1rwpq, { warningHook: l }) : E.intl.string(E.t.WQ6zpa);
+        getTextInVoiceSendMessageChannelPermissionText: function (e) {
+            return e ? a.intl.format(a.t.Q1rwpq, { warningHook: o }) : a.intl.string(a.t.WQ6zpa);
         },
-        getTextInVoiceReadMessageHistoryChannelPermissionText: function (t) {
-            return t ? E.intl.format(E.t.Rx4pbG, { warningHook: l }) : E.intl.string(E.t.cuMfHx);
+        getTextInVoiceReadMessageHistoryChannelPermissionText: function (e) {
+            return e ? a.intl.format(a.t.Rx4pbG, { warningHook: o }) : a.intl.string(a.t.cuMfHx);
         },
     };

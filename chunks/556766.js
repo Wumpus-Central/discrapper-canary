@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => N });
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -81,7 +81,7 @@ function A() {
         ? "call_ringing"
         : o().sample(["call_ringing_beat", "call_ringing_snow_halation"]);
 }
-function N() {
+function C() {
     let e = (0, l.Wu)([g.Z, h.Z, u.ZP], () =>
             g.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
@@ -136,4 +136,4 @@ function N() {
         })((e, t) => (0, r.jsx)(d.Z, I(O({}, t), { animatedStyle: e })))
     );
 }
-let C = i.memo(N);
+let N = i.memo(C);

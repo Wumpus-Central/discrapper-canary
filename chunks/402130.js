@@ -61,15 +61,15 @@ function y(e) {
         null == y || null == _ || !C)
     )
         return null;
-    let j = "user-profile-sidebar-heading-".concat(y.id),
-        O = c.ZP.getName(null, t.id, y);
+    let O = "user-profile-sidebar-heading-".concat(y.id),
+        j = c.ZP.getName(null, t.id, y);
     return (0, r.jsx)("aside", {
-        "aria-labelledby": j,
+        "aria-labelledby": O,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
-                    id: j,
-                    children: g.intl.format(g.t.KRe1Fh, { name: O }),
+                    id: O,
+                    children: g.intl.format(g.t.KRe1Fh, { name: j }),
                 }),
             }),
             children: x

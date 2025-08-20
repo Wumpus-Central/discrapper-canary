@@ -1,218 +1,216 @@
-n.d(t, { Z: () => v }), n(997841), n(388685);
+n.d(t, { Z: () => I }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(533800),
+    a = n(533800),
     o = n(481060),
-    a = n(447543),
-    s = n(100527),
+    s = n(447543),
+    l = n(100527),
     c = n(906732),
     u = n(857395),
     d = n(358555),
-    p = n(955415),
-    m = n(131704),
-    f = n(630388),
-    g = n(411198),
-    _ = n(277707),
-    h = n(358595),
-    b = n(981631),
-    E = n(388032),
-    C = n(105341);
+    f = n(955415),
+    _ = n(131704),
+    p = n(630388),
+    h = n(411198),
+    m = n(277707),
+    g = n(358595),
+    E = n(981631),
+    b = n(388032),
+    y = n(105341);
+function O(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function v(e) {
-    var t, v, O;
-    let y,
-        x,
-        j,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function I(e) {
+    var t, O, I;
+    let T,
+        S,
+        A,
         {
-            onTransitionToInviteChannel: I,
-            onAcceptInstantInvite: S,
-            guild: T,
+            onTransitionToInviteChannel: C,
+            onAcceptInstantInvite: N,
+            guild: R,
             invite: P,
-            message: N,
-            currentUserId: A,
+            message: w,
+            currentUserId: D,
         } = e,
-        w = A === N.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: D } = P,
-        L = P.state === b.r2o.ACCEPTING,
-        M = null != Z ? (0, m.jD)(Z) : null,
-        k = null != T,
-        U = null != M,
-        F = null != M && M.isGuildVocal(),
-        B = null != M && M.isGuildStageVoice(),
-        G = (0, f.yE)(null != (t = P.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (v = null == T ? void 0 : T.features.has(b.oNc.HUB)) && v,
-        V = null == T ? void 0 : T.id,
-        { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
-        [W, Y] = i.useState(!1),
-        K = i.useCallback(() => Y(!1), []),
+        x = D === w.author.id,
+        { channel: L, approximate_member_count: j, approximate_presence_count: M } = P,
+        k = P.state === E.r2o.ACCEPTING,
+        U = null != L ? (0, _.jD)(L) : null,
+        G = null != R,
+        B = null != U,
+        Z = null != U && U.isGuildVocal(),
+        V = null != U && U.isGuildStageVoice(),
+        F = (0, p.yE)(null != (t = P.flags) ? t : 0, a.$.IS_GUEST_INVITE),
+        H = null != (O = null == R ? void 0 : R.features.has(E.oNc.HUB)) && O,
+        Y = null == R ? void 0 : R.id,
+        { analyticsLocations: W } = (0, c.ZP)(l.Z.INVITE_EMBED),
+        [K, z] = i.useState(!1),
+        q = i.useCallback(() => z(!1), []),
         X = i.useRef(null),
-        q = i.useCallback(() => {
-            Y(!0), (0, a.CB)(V, "show profile", z);
-        }, [V, z]),
+        Q = i.useCallback(() => {
+            z(!0), (0, s.CB)(Y, "show profile", W);
+        }, [Y, W]),
         J = i.useCallback(() => {
             let e = "noop";
-            k ? (I(), (e = "transition")) : (S(), (e = "accept")),
-                (0, a.r$)(
+            G ? (C(), (e = "transition")) : (N(), (e = "accept")),
+                (0, s.r$)(
                     {
                         invite: P,
                         action: e,
-                        inviter_id: N.author.id,
-                        invite_message_id: N.id,
+                        inviter_id: w.author.id,
+                        invite_message_id: w.id,
                     },
-                    z,
+                    W,
                 );
-        }, [P, N, z, k, I, S]);
-    if (null == T) {
-        if (null == P.guild) return (0, r.jsx)(h.Z, {});
-        (T = g.Qs(P.guild)).premiumTier = null != (O = P.guild.premium_tier) ? O : b.Eu4.NONE;
+        }, [P, w, W, G, C, N]);
+    if (null == R) {
+        if (null == P.guild) return (0, r.jsx)(g.Z, {});
+        (R = h.Qs(P.guild)).premiumTier = null != (I = P.guild.premium_tier) ? I : E.Eu4.NONE;
     }
-    let Q = (0, _.e)({
-        isVoiceChannel: F,
-        isOwnInvite: w,
-        isGuest: G,
+    let $ = (0, m.e)({
+        isVoiceChannel: Z,
+        isOwnInvite: x,
+        isGuest: F,
         isHubGuild: H,
-        isStage: B,
+        isStage: V,
         isStream: !1,
     });
     return (
-        (x = (0, r.jsxs)("span", {
-            className: C.infoTitle,
+        (S = (0, r.jsxs)("span", {
+            className: y.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
-                    guildId: T.id,
-                    name: T.name,
-                    shouldShow: W,
-                    onRequestClose: K,
+                    guildId: R.id,
+                    name: R.name,
+                    shouldShow: K,
+                    onRequestClose: q,
                     targetElementRef: X,
                     children: () =>
-                        (0, r.jsx)(p.Z.GuildName, {
-                            guild: T,
+                        (0, r.jsx)(f.Z.GuildName, {
+                            guild: R,
                             ref: X,
                         }),
                 }),
                 (0, r.jsx)("span", {
-                    className: C.infoBadge,
+                    className: y.infoBadge,
                     children: (0, r.jsx)(d.Z, {
-                        guild: T,
+                        guild: R,
                         isBannerVisible: !1,
                         disableBoostClick: !0,
                     }),
                 }),
             ],
         })),
-        G &&
-            (j = (0, r.jsx)(o.DY3, {
-                className: C.tooltipContainer,
-                text: E.intl.string(E.t["/FeTKy"]),
+        F &&
+            (A = (0, r.jsx)(o.DY3, {
+                className: y.tooltipContainer,
+                text: b.intl.string(b.t["/FeTKy"]),
                 children: (0, r.jsx)(o.d3s, {
                     size: "md",
                     color: "currentColor",
-                    className: C.infoIcon,
+                    className: y.infoIcon,
                 }),
             })),
-        F
-            ? ((x = (0, r.jsx)(p.Z.Channel, { channel: M })),
-              (y = (0, r.jsxs)("span", {
-                  className: C.infoTitle,
+        Z
+            ? ((S = (0, r.jsx)(f.Z.Channel, { channel: U })),
+              (T = (0, r.jsxs)("span", {
+                  className: y.infoTitle,
                   children: [
-                      E.intl.format(E.t["2wimj4"], { guildName: T.name }),
+                      b.intl.format(b.t["2wimj4"], { guildName: R.name }),
                       (0, r.jsx)("span", {
-                          className: C.infoBadge,
+                          className: y.infoBadge,
                           children: (0, r.jsx)(d.Z, {
-                              guild: T,
+                              guild: R,
                               isBannerVisible: !1,
                           }),
                       }),
                   ],
               })))
-            : (null != R && R >= 5) || (null != D && D > 0)
-              ? (y = (0, r.jsx)(p.Z.Data, {
-                    members: R,
-                    membersOnline: D,
+            : (null != j && j >= 5) || (null != M && M > 0)
+              ? (T = (0, r.jsx)(f.Z.Data, {
+                    members: j,
+                    membersOnline: M,
                 }))
-              : U &&
-                (y = (0, r.jsx)(p.Z.Channel, {
-                    channel: M,
-                    guild: T,
+              : B &&
+                (T = (0, r.jsx)(f.Z.Channel, {
+                    channel: U,
+                    guild: R,
                 })),
-        (0, r.jsxs)(p.Z, {
+        (0, r.jsxs)(f.Z, {
             children: [
-                (0, r.jsx)(p.Z.GuildSplash, { guild: T }),
-                (0, r.jsx)(p.Z.Header, {
-                    text: Q,
-                    extra: j,
+                (0, r.jsx)(f.Z.GuildSplash, { guild: R }),
+                (0, r.jsx)(f.Z.Header, {
+                    text: $,
+                    extra: A,
                 }),
-                (0, r.jsxs)(p.Z.Body, {
+                (0, r.jsxs)(f.Z.Body, {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: C.headerLine,
+                            className: y.headerLine,
                             children: [
-                                (0, r.jsx)(p.Z.Icon, { guild: T }),
-                                (0, r.jsx)(p.Z.Info, {
-                                    title: x,
-                                    onClick: q,
-                                    children: y,
+                                (0, r.jsx)(f.Z.Icon, { guild: R }),
+                                (0, r.jsx)(f.Z.Info, {
+                                    title: S,
+                                    onClick: Q,
+                                    children: T,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(p.Z.Button, {
+                        (0, r.jsx)(f.Z.Button, {
                             onClick: J,
-                            submitting: L,
-                            color: p.Z.Button.Colors.GREEN,
-                            children: F
-                                ? B
-                                    ? E.intl.string(E.t["7vb2cX"])
-                                    : E.intl.string(E.t.gpqgam)
-                                : k
-                                  ? E.intl.string(E.t.cEnaW1)
-                                  : E.intl.string(E.t.XpeFYm),
+                            submitting: k,
+                            color: f.Z.Button.Colors.GREEN,
+                            children: Z
+                                ? V
+                                    ? b.intl.string(b.t["7vb2cX"])
+                                    : b.intl.string(b.t.gpqgam)
+                                : G
+                                  ? b.intl.string(b.t.cEnaW1)
+                                  : b.intl.string(b.t.XpeFYm),
                         }),
                     ],
                 }),
-                T.features.has(b.oNc.HUB) &&
+                R.features.has(E.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: C.separator }),
+                            (0, r.jsx)("div", { className: y.separator }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: E.intl.format(E.t["/o1IfH"], {
+                                children: b.intl.format(b.t["/o1IfH"], {
                                     onClick: () =>
                                         (0, o.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e("95468"), n.e("70799")]).then(
                                                 n.bind(n, 650233),
                                             );
-                                            return (t) =>
-                                                (0, r.jsx)(
-                                                    e,
-                                                    (function (e) {
-                                                        for (var t = 1; t < arguments.length; t++) {
-                                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                                r = Object.keys(n);
-                                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                                (r = r.concat(
-                                                                    Object.getOwnPropertySymbols(n).filter(
-                                                                        function (e) {
-                                                                            return Object.getOwnPropertyDescriptor(n, e)
-                                                                                .enumerable;
-                                                                        },
-                                                                    ),
-                                                                )),
-                                                                r.forEach(function (t) {
-                                                                    var r;
-                                                                    (r = n[t]),
-                                                                        t in e
-                                                                            ? Object.defineProperty(e, t, {
-                                                                                  value: r,
-                                                                                  enumerable: !0,
-                                                                                  configurable: !0,
-                                                                                  writable: !0,
-                                                                              })
-                                                                            : (e[t] = r);
-                                                                });
-                                                        }
-                                                        return e;
-                                                    })({}, t),
-                                                );
+                                            return (t) => (0, r.jsx)(e, v({}, t));
                                         }),
                                 }),
                             }),

@@ -2,9 +2,9 @@ n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
+    s = n.n(l),
     o = n(536285),
-    s = n(857458),
+    a = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
@@ -17,16 +17,16 @@ let p = function (e) {
             m(1);
         }),
             o.default.once("disconnected", () => {
-                (0, u.uL)((0, s.M)());
+                (0, u.uL)((0, a.M)());
             }),
             o.default.connect();
     }, []),
         i.useEffect(() => {
             if (0 !== p) return;
-            let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
+            let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
             return () => clearTimeout(e);
         }, [p]);
-    let f = i.useCallback(
+    let g = i.useCallback(
         async (e, t) => {
             try {
                 m(2), await l(e, t), m(3);
@@ -48,14 +48,14 @@ let p = function (e) {
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
-                        onClick: () => f(t, n),
+                        onClick: () => g(t, n),
                         children: d.intl.string(d.t.UQvCf3),
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: a()(h.marginTop8, h.marginCenterHorz),
+                        className: s()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, u.uL)((0, s.M)()),
+                        onClick: () => (0, u.uL)((0, a.M)()),
                         children: d.intl.string(d.t["2ixEBg"]),
                     }),
                 ],

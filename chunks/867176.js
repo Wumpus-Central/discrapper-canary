@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => R,
-    b: () => C,
+    b: () => N,
 }),
     n(388685);
 var r = n(951288),
@@ -94,11 +94,11 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = (e) => {
+let C = (e) => {
     let { size: t, stroke: n } = (0, u.UCu)(e);
     return t / 2 + n;
 };
-function C(e) {
+function N(e) {
     var t;
     let {
             user: n,
@@ -110,39 +110,39 @@ function C(e) {
             avatarSize: T,
             avatarOffsetX: S,
             avatarOffsetY: A,
-            bannerWidth: C,
+            bannerWidth: N,
             bannerHeight: R,
             themePadding: P,
             pendingAccentColor: w,
             animateOnHover: D = !1,
         } = e,
-        L = (0, _.Dt)(),
-        [x, M] = i.useState(!1),
-        k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        j = h.QK.getSetting(),
+        x = (0, _.Dt)(),
+        [L, j] = i.useState(!1),
+        M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        k = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: O,
-            size: C,
-            canAnimate: D || !j ? x : k,
+            size: N,
+            canAnimate: D || !k ? L : M,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        V = n.getAvatarURL(b, (0, u.pxk)(T)),
-        F = (0, s._i)((0, d.ZP)(V, B, !1)),
-        Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : F).hex,
-        H = N(T),
+        Z = n.getAvatarURL(b, (0, u.pxk)(T)),
+        V = (0, s._i)((0, d.ZP)(Z, B, !1)),
+        F = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
+        H = C(T),
         Y = H + S - P,
         W = R - A - P;
     return (0, r.jsxs)("svg", {
         className: y.mask,
-        viewBox: "0 0 ".concat(C, " ").concat(R),
+        viewBox: "0 0 ".concat(N, " ").concat(R),
         style: {
-            minWidth: C,
+            minWidth: N,
             minHeight: R,
         },
         children: [
             (0, r.jsxs)("mask", {
-                id: L,
+                id: x,
                 children: [
                     (0, r.jsx)("rect", {
                         fill: "white",
@@ -165,20 +165,20 @@ function C(e) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(L, ")"),
+                mask: "url(#".concat(x, ")"),
                 children: [
                     v,
                     (0, r.jsx)("div", {
                         className: o()(y.banner, I),
-                        onMouseMove: () => M(!0),
-                        onMouseLeave: () => M(!1),
+                        onMouseMove: () => j(!0),
+                        onMouseLeave: () => j(!1),
                         style: {
                             height: R,
                             minHeight: R,
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
-                            backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : Z,
+                            backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : F,
                         },
-                        children: !j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
+                        children: !k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
                     }),
                 ],
             }),
@@ -191,7 +191,7 @@ function R(e) {
     let o = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(
-        C,
+        N,
         T(v({}, a, o), {
             displayProfile: n,
             themePadding: s ? o.themePadding : 0,

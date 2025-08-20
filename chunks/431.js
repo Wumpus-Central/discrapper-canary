@@ -116,8 +116,8 @@ function A() {
         (b.userOffersLastFetchedAtDate = void 0),
         (b.isFetching = !1);
 }
-let N = () => !0;
-function C() {
+let C = () => !0;
+function N() {
     return (
         null != d.Z.getPremiumTypeSubscription() &&
         (null != b.userDiscountOffers[f.dT]
@@ -148,8 +148,8 @@ class w extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (b = null != e ? e : E),
             this.waitFor(l.default),
-            this.syncWith([l.default], N),
-            this.syncWith([d.Z], C),
+            this.syncWith([l.default], C),
+            this.syncWith([d.Z], N),
             this.syncWith([o.Z], P);
     }
     getUserTrialOffer(e) {

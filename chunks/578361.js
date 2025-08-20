@@ -1,15 +1,14 @@
 n.d(t, {
-    Z: () => f,
-    n: () => p,
+    Z: () => h,
+    n: () => f,
 });
-var i,
-    r = n(951288),
-    s = n(647438),
+var r = n(951288),
+    i = n(647438),
     a = n(120356),
-    l = n.n(a),
-    o = n(748780),
-    c = n(215569),
-    d = n(278397);
+    o = n.n(a),
+    s = n(748780),
+    l = n(215569),
+    c = n(278397);
 function u(e, t, n) {
     return (
         t in e
@@ -23,41 +22,43 @@ function u(e, t, n) {
         e
     );
 }
-function m(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 u(e, t, n[t]);
             });
     }
     return e;
 }
-var p = (((i = {})[(i.RIGHT = -1)] = "RIGHT"), (i[(i.LEFT = 1)] = "LEFT"), i);
-let g = {
+var f = (function (e) {
+    return (e[(e.RIGHT = -1)] = "RIGHT"), (e[(e.LEFT = 1)] = "LEFT"), e;
+})({});
+let _ = {
     friction: 7,
     tension: 40,
     clamp: !0,
 };
-class h extends s.PureComponent {
+class p extends i.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
-            o.Z.spring(this._animated, m({ toValue: 0 }, this.props.springSettings)).start(e);
+            s.Z.spring(this._animated, d({ toValue: 0 }, this.props.springSettings)).start(e);
     }
     componentDidAppear() {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        o.Z.spring(this._animated, m({ toValue: this.props.direction }, this.props.springSettings)).start(e);
+        s.Z.spring(this._animated, d({ toValue: this.props.direction }, this.props.springSettings)).start(e);
     }
     getStyle() {
-        let e = o.Z.accelerate({
+        let e = s.Z.accelerate({
             transform: [
                 {
                     translateX: this._animated.interpolate({
@@ -77,27 +78,27 @@ class h extends s.PureComponent {
         );
     }
     render() {
-        return (0, r.jsx)(o.Z.div, {
+        return (0, r.jsx)(s.Z.div, {
             style: this.getStyle(),
-            className: d.item,
+            className: c.item,
             children: this.props.children,
         });
     }
     constructor(e) {
-        super(e), u(this, "_animated", void 0), (this._animated = new o.Z.Value(-1 * e.direction));
+        super(e), u(this, "_animated", void 0), (this._animated = new s.Z.Value(-1 * e.direction));
     }
 }
-let f = (e) => {
-    let { children: t, step: n, direction: i, className: s, springSettings: a = g, fadeInOut: o = !1 } = e;
-    return (0, r.jsx)(c.W, {
+let h = (e) => {
+    let { children: t, step: n, direction: i, className: a, springSettings: s = _, fadeInOut: u = !1 } = e;
+    return (0, r.jsx)(l.W, {
         component: "div",
-        className: l()(d.animator, s),
+        className: o()(c.animator, a),
         children: (0, r.jsx)(
-            h,
+            p,
             {
                 direction: i,
-                springSettings: a,
-                fadeInOut: o,
+                springSettings: s,
+                fadeInOut: u,
                 children: t,
             },
             n,

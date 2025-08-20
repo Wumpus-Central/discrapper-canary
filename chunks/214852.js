@@ -1,10 +1,10 @@
-n.d(t, { z: () => a }), n(388685);
-var i = n(647438),
-    r = n(442837),
-    s = n(353926);
-function a(e) {
-    let [t, n] = (0, r.Wu)([s.Z], () => [s.Z.getAllUserExperimentDescriptors(), s.Z.getGuildExperiments()]);
-    i.useEffect(() => {
+n.d(t, { z: () => o }), n(388685);
+var r = n(647438),
+    i = n(442837),
+    a = n(353926);
+function o(e) {
+    let [t, n] = (0, i.Wu)([a.Z], () => [a.Z.getAllUserExperimentDescriptors(), a.Z.getGuildExperiments()]);
+    r.useEffect(() => {
         e.trigger();
     }, [e, t, n]);
 }

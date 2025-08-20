@@ -1,4 +1,4 @@
-a.d(t, { g: () => g }), a(388685), a(35282);
+a.d(t, { g: () => j }), a(388685), a(35282);
 var n = a(647438),
     r = a(281598);
 function l(e) {
@@ -102,13 +102,13 @@ let s = new Set([
         for (let e of await new Promise((e) => n.readEntries(e))) e.isDirectory && t.includes(e.name) && a.add(e.name);
         return t.filter((e) => !a.has(e));
     },
-    b = (e) => {
+    v = (e) => {
         let { names: t, addError: a } = e,
             n = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
             r = t.filter((e) => !n.test(e));
         r.length > 0 && a("File names must be in lowercase snake case", r);
     },
-    v = (e, t, a, n) => {
+    b = (e, t, a, n) => {
         let r = t.size,
             l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
             i = "".concat(t.name, " - ").concat(l);
@@ -124,9 +124,9 @@ let s = new Set([
     },
     f = (e, t, a, n) => {
         let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || b(r, e, a, n);
     },
-    g = () => {
+    j = () => {
         let [e, t] = n.useState(!1),
             [a, c] = n.useState({}),
             [d, u] = n.useState({}),
@@ -150,7 +150,7 @@ let s = new Set([
                     });
                 });
             }, []),
-            g = n.useCallback(() => {
+            j = n.useCallback(() => {
                 t(!1), u({}), c({});
             }, []);
         return {
@@ -173,9 +173,9 @@ let s = new Set([
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
                                         l = null != t ? h[t] : null;
-                                    null != l && v(l, e, a, n);
+                                    null != l && b(l, e, a, n);
                                 }
-                                b({
+                                v({
                                     names: t.collectionFiles.map((e) => e.name),
                                     addError: a,
                                 });
@@ -193,14 +193,14 @@ let s = new Set([
                             }),
                             ((e) => {
                                 let { files: t, addError: a, addWarning: n } = e;
-                                b({
+                                v({
                                     names: Object.keys(t.profileEffectFilesMap),
                                     addError: a,
                                 }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, l] = e,
                                             i = l.map((e) => e.name);
-                                        b({
+                                        v({
                                             names: i.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
@@ -229,7 +229,7 @@ let s = new Set([
                             }),
                             ((e) => {
                                 let { files: t, addError: a, addWarning: n } = e;
-                                b({
+                                v({
                                     names: t.avatarDecorationFiles.map((e) => e.name),
                                     addError: a,
                                 }),
@@ -253,6 +253,6 @@ let s = new Set([
                 },
                 [m, x],
             ),
-            reset: g,
+            reset: j,
         };
     };

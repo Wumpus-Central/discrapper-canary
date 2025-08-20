@@ -23,10 +23,10 @@ var r = n(951288),
 function C(e) {
     var t, n;
     let { guildId: C, setPreventNavigation: N = () => {} } = e,
-        { editingRule: I, setEditingRule: E } = (0, f.V)(),
+        { editingRule: E, setEditingRule: I } = (0, f.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : C) ? n : _.lds,
-        w = null != I,
+        w = null != E,
         [R] = (0, g.RD)(P),
         { rulesByTriggerType: Z } = (0, g.pH)(P),
         D = {
@@ -42,7 +42,7 @@ function C(e) {
         ),
         L = {
             isInEditMode: w,
-            setEditingRule: E,
+            setEditingRule: I,
         },
         k = i.useRef(L);
     i.useEffect(() => {
@@ -75,10 +75,10 @@ function C(e) {
         G = i.useMemo(() => {
             var e, t;
             return M(
-                null != (e = null == I ? void 0 : I.id) ? e : null,
-                null != (t = null == I ? void 0 : I.triggerType) ? t : null,
+                null != (e = null == E ? void 0 : E.id) ? e : null,
+                null != (t = null == E ? void 0 : E.triggerType) ? t : null,
             );
-        }, [M, I]);
+        }, [M, E]);
     i.useEffect(() => {
         N(w, (0, j.af)(G));
     }, [N, w, G]);

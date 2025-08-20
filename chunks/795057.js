@@ -1,36 +1,36 @@
 n.d(t, {
-    ZP: () => d,
+    ZP: () => u,
     y3: () => c,
 });
 var r = n(951288);
 n(647438);
-var s = n(120356),
-    o = n.n(s),
-    a = n(481060);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060);
 n(509212), n(373370), n(566078), n(388032);
-var i = n(879615);
+var s = n(879615);
 function l(e) {
-    let { children: t, isComplete: n, hasNextStep: s } = e;
+    let { children: t, isComplete: n, hasNextStep: i } = e;
     return (0, r.jsxs)("li", {
-        className: o()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: s }),
+        className: a()(s.stepWrapper, { [s.stepWrapperComplete]: n }, { [s.stepWrapperWithNextStep]: i }),
         children: [
             (0, r.jsxs)("div", {
-                className: i.stepIndicator,
+                className: s.stepIndicator,
                 children: [
                     (0, r.jsx)("div", {
-                        className: i.stepIconWrapper,
+                        className: s.stepIconWrapper,
                         children:
                             n &&
-                            (0, r.jsx)(a.sV5, {
-                                className: i.stepIcon,
-                                color: a.TVs.colors.WHITE,
+                            (0, r.jsx)(o.sV5, {
+                                className: s.stepIcon,
+                                color: o.TVs.colors.WHITE,
                             }),
                     }),
-                    s && (0, r.jsx)("div", { className: i.stepConnector }),
+                    i && (0, r.jsx)("div", { className: s.stepConnector }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: i.stepContent,
+                className: s.stepContent,
                 children: t,
             }),
         ],
@@ -38,35 +38,35 @@ function l(e) {
 }
 function c(e) {
     let { children: t } = e;
-    return (0, r.jsx)(a.Text, {
+    return (0, r.jsx)(o.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
         children: t,
     });
 }
-let d = function (e) {
-    let { children: t, heading: n, steps: s } = e;
+let u = function (e) {
+    let { children: t, heading: n, steps: i } = e;
     return (0, r.jsxs)("div", {
-        className: i.wrapper,
+        className: s.wrapper,
         children: [
             (0, r.jsx)("div", {
-                className: i.headingWrapper,
-                children: (0, r.jsx)(a.X6q, {
-                    className: i.heading,
+                className: s.headingWrapper,
+                children: (0, r.jsx)(o.X6q, {
+                    className: s.heading,
                     color: "header-primary",
                     variant: "text-xs/semibold",
                     children: n,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: i.stepsWrapper,
+                className: s.stepsWrapper,
                 children: (0, r.jsx)("ul", {
-                    children: s.map((e, t) =>
+                    children: i.map((e, t) =>
                         (0, r.jsx)(
                             l,
                             {
                                 isComplete: e.isComplete,
-                                hasNextStep: t < s.length - 1,
+                                hasNextStep: t < i.length - 1,
                                 children: e.renderContent(),
                             },
                             t,

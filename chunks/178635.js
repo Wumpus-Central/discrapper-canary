@@ -158,7 +158,7 @@ function T(e) {
     let i = null != (t = f.Z.getFeedbackConfig(e)) ? t : I[e],
         a = [A, S],
         { doGroupEligibilityCheck: o } = (0, h.T)({ location: "FeedbackManager" });
-    o ? a.push(C) : a.push((e) => N(e, e));
+    o ? a.push(N) : a.push((e) => C(e, e));
     let s = null != (n = i.eligibilityChecks) ? n : [];
     return a.every((e) => e(i)) && s.every((e) => e(i));
 }
@@ -183,7 +183,7 @@ function S(e) {
 function A(e) {
     return Math.random() < e.chance;
 }
-function N(e, t) {
+function C(e, t) {
     let { persistToBackend: n } = (0, _.O)({ location: "FeedbackManager/".concat(e.feedbackType) });
     if (n) {
         var a, o, s;
@@ -206,12 +206,12 @@ function N(e, t) {
     }
     return !0;
 }
-function C(e) {
+function N(e) {
     for (let t of Object.values(I).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
-        if (!N(e, t)) return !1;
+        if (!C(e, t)) return !1;
     return !0;
 }
 function R(e) {

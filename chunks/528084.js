@@ -1,28 +1,28 @@
-n.d(t, { a: () => l });
-var i = n(442837),
-    r = n(663389),
-    s = n(996733),
-    a = n(991346);
-function l(e, t) {
-    let n = (0, a.Gj)(t),
-        l = (0, s.Z7)(),
-        o = (0, i.e7)([r.Z], () => r.Z.getSubsection()),
+n.d(t, { a: () => s });
+var r = n(442837),
+    i = n(663389),
+    a = n(996733),
+    o = n(991346);
+function s(e, t) {
+    let n = (0, o.Gj)(t),
+        s = (0, a.Z7)(),
+        l = (0, r.e7)([i.Z], () => i.Z.getSubsection()),
         c = e.filter((e) => null == e.predicate || e.predicate());
     if (null != n && n.size > 0) {
         let e = c.filter((e) => n.has(e.setting));
         c = e.length > 0 ? e : c;
     }
-    if (null != l && l.length > 0 && null == o) {
-        let e = c.find((e) => e.title.toLowerCase() === l.toLowerCase());
+    if (null != s && s.length > 0 && null == l) {
+        let e = c.find((e) => e.title.toLowerCase() === s.toLowerCase());
         if (null != e)
             return {
                 viewableTabs: c,
                 filteredTab: e,
             };
     }
-    let d = c.find((e) => null != e && e.setting === o);
+    let u = c.find((e) => null != e && e.setting === l);
     return {
         viewableTabs: c,
-        filteredTab: d,
+        filteredTab: u,
     };
 }

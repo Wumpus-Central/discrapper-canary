@@ -101,30 +101,30 @@ function v(e) {
             onStepChange: T,
             onRequestClose: S,
             popoverRef: A,
-            shouldShow: N,
+            shouldShow: C,
         } = e,
-        C = y(e, ["steps", "caretConfig", "size", "onStepChange", "onRequestClose", "popoverRef", "shouldShow"]);
+        N = y(e, ["steps", "caretConfig", "size", "onStepChange", "onRequestClose", "popoverRef", "shouldShow"]);
     let [R, P] = i.useState(0);
     i.useEffect(() => {
-        N && P(0);
-    }, [N]),
+        C && P(0);
+    }, [C]),
         i.useEffect(() => {
             null == T || T(R);
         }, [R, T]);
     let w = O[R],
         D = R + 1 === O.length,
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             var e;
             null == w || null == (e = w.onCta) || e.call(w), D ? null == S || S() : P((e) => e + 1);
         }, [w, D, S]),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null == S || S();
         }, [S]),
-        M = i.useCallback(() => {
+        j = i.useCallback(() => {
             null == S || S();
         }, [S]);
-    if (!N || null == w) return null;
-    let k = g(
+    if (!C || null == w) return null;
+    let M = g(
         {
             text:
                 null != (a = null == (t = w.action) ? void 0 : t.text)
@@ -133,21 +133,21 @@ function v(e) {
                       ? p.intl.string(p.t.i4jeWV)
                       : p.intl.string(p.t.PDTjLC),
             variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : "primary",
-            onClick: L,
+            onClick: x,
         },
         w.action,
     );
     return (0, r.jsx)(
         u.m,
-        b(g({}, C), {
-            shouldShow: N,
-            onRequestClose: x,
+        b(g({}, N), {
+            shouldShow: C,
+            onRequestClose: L,
             gradientColor: w.gradientColor,
             children: (0, r.jsxs)("div", {
                 ref: A,
                 children: [
                     (0, r.jsx)(f.u, {
-                        onClick: M,
+                        onClick: j,
                         variant: null != w.gradientColor ? "color-mix" : void 0,
                     }),
                     null != w.graphic &&
@@ -180,7 +180,7 @@ function v(e) {
                                         totalSteps: O.length,
                                     }),
                                 }),
-                                (0, r.jsx)(l.z, g({ size: "sm" }, k)),
+                                (0, r.jsx)(l.z, g({ size: "sm" }, M)),
                             ],
                         }),
                     }),

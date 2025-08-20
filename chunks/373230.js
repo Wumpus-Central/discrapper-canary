@@ -1,8 +1,8 @@
 n.d(t, {
-    T: () => r,
-    c: () => i,
+    T: () => i,
+    c: () => r,
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-01_recent_avatars",
     label: "Recent Avatars",
@@ -20,8 +20,8 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r;
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }

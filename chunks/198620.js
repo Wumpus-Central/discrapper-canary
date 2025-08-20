@@ -2,7 +2,7 @@ n.d(t, {
     B_: () => R,
     MO: () => b,
     _M: () => y,
-    k5: () => N,
+    k5: () => C,
     q5: () => O,
 }),
     n(35282),
@@ -75,10 +75,10 @@ function A(e) {
     var t;
     return S(e.image) || (null == (t = e.images) ? void 0 : t.some(S)) || S(e.video);
 }
-function N(e) {
+function C(e) {
     return e.attachments.some(T) || e.embeds.some(A);
 }
-async function C(e) {
+async function N(e) {
     let t = await o.tn.post({
         url: c.ANM.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] },
@@ -89,6 +89,6 @@ async function C(e) {
 async function R(e) {
     let t = l.Z.toURLSafe(e);
     if (null == t || !I(t)) return e;
-    let n = await C(e);
+    let n = await N(e);
     return null != n ? n : e;
 }

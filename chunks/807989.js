@@ -39,9 +39,9 @@ function b(e) {
         } catch (e) {
             n = null;
         }
-    let N = c.w.useExperiment({ location: "oauth2_authorize" });
+    let C = c.w.useExperiment({ location: "oauth2_authorize" });
     return (0, r.jsxs)("div", {
-        className: a()(g.applicationDetails, { [g.noPadding]: N.enabled }),
+        className: a()(g.applicationDetails, { [g.noPadding]: C.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {

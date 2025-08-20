@@ -1,19 +1,19 @@
-n.d(t, { Z: () => c });
-var r = n(951288);
-n(647438);
-var i = n(481060),
-    l = n(346479),
-    a = n(665906),
-    o = n(981631),
-    s = n(388032);
-function c(e) {
-    var t, n;
-    if (!(0, a.Xb)(e) || e.type !== o.d4z.PRIVATE_THREAD) return null;
-    let c = null == (n = null == (t = e.threadMetadata) ? void 0 : t.invitable) || n;
-    return (0, r.jsx)(i.S89, {
+i.d(n, { Z: () => s });
+var e = i(951288);
+i(647438);
+var l = i(481060),
+    r = i(346479),
+    a = i(665906),
+    d = i(981631),
+    o = i(388032);
+function s(t) {
+    var n, i;
+    if (!(0, a.Xb)(t) || t.type !== d.d4z.PRIVATE_THREAD) return null;
+    let s = null == (i = null == (n = t.threadMetadata) ? void 0 : n.invitable) || i;
+    return (0, e.jsx)(l.S89, {
         id: "toggle-thread-invitable",
-        label: s.intl.string(s.t.s2rpNT),
-        checked: c,
-        action: () => l.Z.setInvitable(e, !c),
+        label: o.intl.string(o.t.s2rpNT),
+        checked: s,
+        action: () => r.Z.setInvitable(t, !s),
     });
 }

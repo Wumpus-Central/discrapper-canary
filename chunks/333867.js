@@ -98,8 +98,8 @@ function T(e) {
             onClose: T,
             onComplete: S,
             analyticsLocations: A,
-            analyticsObject: N,
-            giftRecipient: C,
+            analyticsObject: C,
+            giftRecipient: N,
             variantsReturnStyle: R,
         } = e,
         P = !1,
@@ -107,9 +107,9 @@ function T(e) {
         D = (e) => {
             t = e;
         },
-        L = h ? v : O,
-        x = u.default.getCurrentUser();
-    if (!(null == x ? void 0 : x.verified))
+        x = h ? v : O,
+        L = u.default.getCurrentUser();
+    if (!(null == L ? void 0 : L.verified))
         return void (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
             return (t) => {
@@ -141,7 +141,7 @@ function T(e) {
                         giftMessage: g,
                         giftingOrigin: y,
                         analyticsLocations: A,
-                        giftRecipient: C,
+                        giftRecipient: N,
                         onClose: (e) => {
                             t(), null == T || T(e);
                         },
@@ -154,13 +154,13 @@ function T(e) {
                 );
             },
             {
-                modalKey: L,
+                modalKey: x,
                 onCloseCallback: () => {
                     P ||
                         d.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {
                             load_id: w,
                             payment_type: p.Zuq[p.GZQ.ONE_TIME],
-                            location: N,
+                            location: C,
                             is_gift: h,
                             sku_id: f,
                             location_stack: A,
@@ -171,7 +171,7 @@ function T(e) {
                         P && (0, c.qg)({ variantsReturnStyle: R });
                 },
                 onCloseRequest: () => {
-                    null != t && I.has(t) && (0, a.Mr3)(L);
+                    null != t && I.has(t) && (0, a.Mr3)(x);
                 },
             },
         );

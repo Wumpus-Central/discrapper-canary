@@ -25,8 +25,8 @@ function y(e) {
                 }, []),
             ];
         })(),
-        j = i.useRef(null),
-        O = null == y.getGuildId() ? 70 : 50,
+        O = i.useRef(null),
+        j = null == y.getGuildId() ? 70 : 50,
         E = (0, o.e7)([d.Z], () => d.Z.pipWidth(f.cL.CAMERA_PREVIEW)),
         S = _.length,
         P = E * S + 8 * (S - 1),
@@ -39,7 +39,7 @@ function y(e) {
         );
     i.useLayoutEffect(() => {
         var e;
-        null == (e = j.current) || e.ensureIsInPosition();
+        null == (e = O.current) || e.ensureIsInPosition();
     }, [_.length]);
     let Z = i.useCallback(
             (e) => {
@@ -60,12 +60,12 @@ function y(e) {
             position: x,
             id: 0,
             width: P,
-            ref: j,
+            ref: O,
             onMove: T,
             onResize: Z,
             maxX: t,
             maxY: l,
-            edgeOffsetTop: O,
+            edgeOffsetTop: j,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,

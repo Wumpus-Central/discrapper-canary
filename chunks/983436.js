@@ -1,51 +1,51 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
-    l = n(287734),
+    a = n(287734),
     o = n(475468),
-    a = n(358555),
-    s = n(955415),
+    s = n(358555),
+    l = n(955415),
     c = n(944486),
     u = n(914010),
     d = n(626135),
-    p = n(981631),
-    m = n(388032),
-    f = n(105341);
-function g(e) {
-    let { guild: t, channel: n, message: g } = e,
-        _ = u.Z.getGuildId(),
-        h = c.Z.getChannelId(_),
-        b = i.useCallback(() => {
+    f = n(981631),
+    _ = n(388032),
+    p = n(105341);
+function h(e) {
+    let { guild: t, channel: n, message: h } = e,
+        m = u.Z.getGuildId(),
+        g = c.Z.getChannelId(m),
+        E = i.useCallback(() => {
             var e;
-            d.default.track(p.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null == (e = g.author) ? void 0 : e.id,
+            d.default.track(f.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+                author_id: null == (e = h.author) ? void 0 : e.id,
                 link_guild_id: t.id,
                 link_channel_id: n.id,
                 link_channel_type: n.type,
-                guild_id: _,
-                channel_id: h,
+                guild_id: m,
+                channel_id: g,
             }),
                 (0, o.K)(t.id, n.id),
-                l.default.selectVoiceChannel(n.id);
-        }, [g, t, n, _, h]),
-        E = (0, r.jsx)(s.Z.Channel, { channel: n });
-    return (0, r.jsx)(s.Z, {
-        children: (0, r.jsxs)(s.Z.Body, {
+                a.default.selectVoiceChannel(n.id);
+        }, [h, t, n, m, g]),
+        b = (0, r.jsx)(l.Z.Channel, { channel: n });
+    return (0, r.jsx)(l.Z, {
+        children: (0, r.jsxs)(l.Z.Body, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.headerLine,
+                    className: p.headerLine,
                     children: [
-                        (0, r.jsx)(s.Z.Icon, { guild: t }),
-                        (0, r.jsx)(s.Z.Info, {
-                            title: E,
-                            onClick: b,
+                        (0, r.jsx)(l.Z.Icon, { guild: t }),
+                        (0, r.jsx)(l.Z.Info, {
+                            title: b,
+                            onClick: E,
                             children: (0, r.jsxs)("span", {
-                                className: f.infoTitle,
+                                className: p.infoTitle,
                                 children: [
-                                    m.intl.format(m.t["2wimj4"], { guildName: t.name }),
+                                    _.intl.format(_.t["2wimj4"], { guildName: t.name }),
                                     (0, r.jsx)("span", {
-                                        className: f.infoBadge,
-                                        children: (0, r.jsx)(a.Z, {
+                                        className: p.infoBadge,
+                                        children: (0, r.jsx)(s.Z, {
                                             guild: t,
                                             isBannerVisible: !1,
                                         }),
@@ -55,10 +55,10 @@ function g(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.Z.Button, {
-                    onClick: b,
-                    color: s.Z.Button.Colors.GREEN,
-                    children: n.isGuildStageVoice() ? m.intl.string(m.t["7vb2cX"]) : m.intl.string(m.t["96ANUF"]),
+                (0, r.jsx)(l.Z.Button, {
+                    onClick: E,
+                    color: l.Z.Button.Colors.GREEN,
+                    children: n.isGuildStageVoice() ? _.intl.string(_.t["7vb2cX"]) : _.intl.string(_.t["96ANUF"]),
                 }),
             ],
         }),

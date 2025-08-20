@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(39604),
     _ = n(981631),
     y = n(388032),
-    v = n(611372);
-function j(e) {
+    j = n(611372);
+function v(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e("21960").then(n.bind(n, 999466));
         return (t) =>
@@ -65,31 +65,31 @@ let C = (e) => {
                     dismissibleContent: o.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                     shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
-                    artClassName: v.clipsEducationArt,
+                    artClassName: j.clipsEducationArt,
                     position: "top",
                     header: (0, r.jsx)("div", {
-                        className: v.header,
+                        className: j.header,
                         children: y.intl.format(y.t["o+srEx"], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)("span", {
-                                    className: v.keybindHintKeys,
+                                    className: j.keybindHintKeys,
                                     children: (0, r.jsx)(a.M2$, {
-                                        className: v.keybindShortcut,
+                                        className: j.keybindShortcut,
                                         shortcut: t,
                                     }),
                                 }),
                         }),
                     }),
-                    headerClassName: v.clipsEducationHeader,
+                    headerClassName: j.clipsEducationHeader,
                     body: (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "always-white",
-                        className: v.bodyText,
+                        className: j.bodyText,
                         children: y.intl.format(y.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, r.jsx)("div", {
-                                    className: v.keyCombo,
+                                    className: j.keyCombo,
                                     children: t,
                                 }),
                             keybind: t,
@@ -103,7 +103,7 @@ let C = (e) => {
             children: () => n,
         });
     },
-    E = () => {
+    x = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
             n = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
@@ -112,23 +112,23 @@ let C = (e) => {
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
             })),
-            v = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
-        if (!(o && s) || null == v || n) return null;
-        let E = g.BB(v.shortcut, !0);
+            j = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
+        if (!(o && s) || null == j || n) return null;
+        let x = g.BB(j.shortcut, !0);
         return (0, r.jsx)(C, {
-            keybindString: E,
+            keybindString: x,
             targetElementRef: e,
             children: (0, r.jsx)(p.Z, {
                 ref: e,
                 disabled: d,
                 tooltipText:
-                    null != v
-                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
+                    null != j
+                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == j ? void 0 : j.shortcut, !0) })
                         : y.intl.string(y.t.s52pjo),
                 onClick: () => {
                     (0, O.C1)(), (0, u.v)(t, u.d.CLIP);
                 },
-                onContextMenu: j,
+                onContextMenu: v,
                 icon: a.AlX,
             }),
         });

@@ -1,18 +1,18 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(951288),
-    a = n(647438),
-    i = n(481060),
-    o = n(100993),
-    l = n(197571);
+    i = n(647438),
+    l = n(481060),
+    a = n(100993),
+    o = n(197571);
 let s = (e) => {
         let { element: t, onChange: n, initialOption: s } = e,
-            [c, d] = a.useState("");
-        a.useEffect(() => {
+            [c, d] = i.useState("");
+        i.useEffect(() => {
             d(null != s ? s : "");
         }, [s]);
         let u = t.name,
-            { title: _, options: m } = t.data,
-            p = a.useCallback(
+            { title: m, options: _ } = t.data,
+            p = i.useCallback(
                 (e) => {
                     null != e && (d(e), n(e));
                 },
@@ -21,27 +21,27 @@ let s = (e) => {
         return (0, r.jsxs)(
             "div",
             {
-                className: l.marginBottom8,
+                className: o.marginBottom8,
                 children: [
-                    null != _ &&
+                    null != m &&
                         (0, r.jsx)("div", {
-                            className: l.marginBottom8,
-                            children: (0, r.jsxs)(i.Text, {
+                            className: o.marginBottom8,
+                            children: (0, r.jsxs)(l.Text, {
                                 variant: "text-sm/bold",
                                 children: [
-                                    _,
+                                    m,
                                     t.should_submit_data &&
                                         (0, r.jsx)("span", {
-                                            className: o.required,
+                                            className: a.required,
                                             children: "*",
                                         }),
                                 ],
                             }),
                         }),
-                    (0, r.jsx)(i.q4e, {
+                    (0, r.jsx)(l.q4e, {
                         value: c,
                         onChange: p,
-                        options: m,
+                        options: _,
                     }),
                 ],
             },
@@ -49,19 +49,19 @@ let s = (e) => {
         );
     },
     c = (e) => {
-        let { elements: t, onChange: n, state: a } = e,
-            i = t.map((e) => {
-                var t, i;
-                let o = e.name;
+        let { elements: t, onChange: n, state: i } = e,
+            l = t.map((e) => {
+                var t, l;
+                let a = e.name;
                 return (0, r.jsx)(
                     s,
                     {
                         element: e,
-                        initialOption: null != (i = null == a || null == (t = a[o]) ? void 0 : t.value) ? i : void 0,
-                        onChange: (e) => n(o, e),
+                        initialOption: null != (l = null == i || null == (t = i[a]) ? void 0 : t.value) ? l : void 0,
+                        onChange: (e) => n(a, e),
                     },
-                    o,
+                    a,
                 );
             });
-        return (0, r.jsx)("div", { children: i });
+        return (0, r.jsx)("div", { children: l });
     };

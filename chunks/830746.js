@@ -1,69 +1,69 @@
-n.d(t, { Z: () => j });
-var i = n(951288);
+n.d(t, { Z: () => y });
+var r = n(951288);
 n(647438);
-var r = n(399606),
-    s = n(481060),
-    a = n(594174),
-    l = n(277537),
-    o = n(785681),
+var i = n(399606),
+    a = n(481060),
+    o = n(594174),
+    s = n(277537),
+    l = n(785681),
     c = n(780985),
-    d = n(631885),
-    u = n(552045),
-    m = n(87792),
-    p = n(302289),
-    g = n(946690),
+    u = n(631885),
+    d = n(552045),
+    f = n(87792),
+    _ = n(302289),
+    p = n(946690),
     h = n(369954),
-    f = n(292352),
-    b = n(345909),
-    x = n(388032),
-    _ = n(862964);
-let j = () => {
-    let e = (0, d.mq)(f.ne.ACTIVE),
+    m = n(292352),
+    g = n(345909),
+    E = n(388032),
+    b = n(862964);
+let y = () => {
+    let e = (0, u.mq)(m.ne.ACTIVE),
         t = e.length > 0,
-        n = (0, l.PO)("family_center_activity_page"),
-        j = (0, c.c)(),
-        E = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        C = (0, o.o)(x.intl.string(b.default["5RZ8Tk"]), x.intl.string(b.default.bmhCnJ)),
-        O = (0, o.o)(x.intl.string(b.default.XKnFFh), x.intl.string(b.default["68zfxM"])),
-        v = (0, o.o)(x.intl.string(b.default["Rm/6a2"]), x.intl.string(b.default["1xPTwM"]));
-    return void 0 === E
+        n = (0, s.PO)("family_center_activity_page"),
+        y = (0, c.c)(),
+        O = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        v = (0, l.o)(E.intl.string(g.default["5RZ8Tk"]), E.intl.string(g.default.bmhCnJ)),
+        I = (0, l.o)(E.intl.string(g.default.XKnFFh), E.intl.string(g.default["68zfxM"])),
+        T = (0, l.o)(E.intl.string(g.default["Rm/6a2"]), E.intl.string(g.default["1xPTwM"]));
+    return void 0 === O
         ? null
-        : (0, i.jsxs)("div", {
-              className: _.container,
+        : (0, r.jsxs)("div", {
+              className: b.container,
               children: [
                   n && t
                       ? null
-                      : (0, i.jsxs)(i.Fragment, {
+                      : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)("div", {
-                                    className: _.banner,
-                                    children: (0, i.jsx)(u.Z, {}),
+                                (0, r.jsx)("div", {
+                                    className: b.banner,
+                                    children: (0, r.jsx)(d.Z, {}),
                                 }),
-                                (0, i.jsxs)("div", {
-                                    className: _.featureCards,
+                                (0, r.jsxs)("div", {
+                                    className: b.featureCards,
                                     children: [
-                                        (0, i.jsx)(g.Z, {
-                                            icon: s.eQA,
-                                            header: x.intl.string(b.default["001l3t"]),
-                                            description: C,
-                                        }),
-                                        (0, i.jsx)(g.Z, {
-                                            icon: s.tEF,
-                                            header: x.intl.string(b.default.yipAeH),
-                                            description: O,
-                                        }),
-                                        (0, i.jsx)(g.Z, {
-                                            icon: s.IkH,
-                                            header: x.intl.string(b.default.hhOuMT),
+                                        (0, r.jsx)(p.Z, {
+                                            icon: a.eQA,
+                                            header: E.intl.string(g.default["001l3t"]),
                                             description: v,
+                                        }),
+                                        (0, r.jsx)(p.Z, {
+                                            icon: a.tEF,
+                                            header: E.intl.string(g.default.yipAeH),
+                                            description: I,
+                                        }),
+                                        (0, r.jsx)(p.Z, {
+                                            icon: a.IkH,
+                                            header: E.intl.string(g.default.hhOuMT),
+                                            description: T,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                  t ? null : (0, i.jsx)(p.Z, {}),
-                  void 0 !== j && e.length > 0 ? (0, i.jsx)(m.Z, { user: j }) : null,
-                  (0, i.jsx)(h.J, {}),
+                  t ? null : (0, r.jsx)(_.Z, {}),
+                  void 0 !== y && e.length > 0 ? (0, r.jsx)(f.Z, { user: y }) : null,
+                  (0, r.jsx)(h.J, {}),
               ],
           });
 };

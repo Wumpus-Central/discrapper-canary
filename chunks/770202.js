@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(981631),
     _ = n(490897),
     y = n(55940);
-function v(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function j(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -51,7 +51,7 @@ function C(e, t) {
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
     s.Z.preload(n, t.id);
 }
-class E extends m.ZP {
+class x extends m.ZP {
     render() {
         let {
                 channel: e,
@@ -81,7 +81,7 @@ class E extends m.ZP {
     }
     constructor(...e) {
         super(...e),
-            v(this, "handleContextMenu", (e) => {
+            j(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
                     i = h.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -107,14 +107,14 @@ class E extends m.ZP {
                                               }),
                                         e
                                     );
-                                })(j({}, n), {
+                                })(v({}, n), {
                                     channel: t,
                                     guild: i,
                                 }),
                             );
                     });
             }),
-            v(this, "handleClick", (e) => {
+            j(this, "handleClick", (e) => {
                 !(function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
@@ -131,7 +131,7 @@ class E extends m.ZP {
             });
     }
 }
-let x = (0, u.B)(E),
+let E = (0, u.B)(x),
     S = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
             l = (0, a.cj)([f.Z, g.Z], () => {
@@ -142,5 +142,5 @@ let x = (0, u.B)(E),
                         !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n),
                 };
             });
-        return (0, r.jsx)(x, j({}, l, e));
+        return (0, r.jsx)(E, v({}, l, e));
     });

@@ -1,115 +1,115 @@
-n.d(t, { Z: () => A }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    o = n(704215),
+n.d(t, { Z: () => P }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(704215),
     c = n(481060),
-    d = n(503089),
-    u = n(243778),
-    m = n(254901),
-    p = n(18438),
-    g = n(778825),
+    u = n(503089),
+    d = n(243778),
+    f = n(254901),
+    _ = n(18438),
+    p = n(778825),
     h = n(851894),
-    f = n(484459),
-    b = n(216045),
-    x = n(839469),
-    _ = n(25990),
-    j = n(594174),
-    E = n(585483),
-    C = n(16703),
-    O = n(785145),
-    v = n(981631),
+    m = n(484459),
+    g = n(216045),
+    E = n(839469),
+    b = n(25990),
+    y = n(594174),
+    O = n(585483),
+    v = n(16703),
+    I = n(785145),
+    T = n(981631),
     S = n(921944),
-    T = n(526761),
-    N = n(726985),
-    I = n(388032),
-    y = n(455734);
-function A() {
-    m.Z.useExperiment({ location: "profile_customization_auto" });
-    let e = (0, l.e7)([g.Z], () => g.Z.getGuild()),
-        t = (0, C.Z)(),
-        n = (0, l.e7)([g.Z, _.Z], () => g.Z.showNotice() || _.Z.showNotice()),
-        s = null != e ? e : t,
-        A = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
-        { subsection: P, setSubsection: R } = (0, O.Z)(),
-        { hasSearchResults: D, searchResults: Z } = (0, x.E)();
-    r.useEffect(() => {
-        null != A &&
-            (0, f.Z)(A.id, A.getAvatarURL(null == s ? void 0 : s.id, 80), { guildId: null == s ? void 0 : s.id });
-    }, [null == s ? void 0 : s.id, A]);
-    let w = [o.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE],
-        [k, L] = (0, u.US)(w),
-        B = k === o.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE;
-    function M(t) {
-        if (P !== t) {
+    A = n(526761),
+    C = n(726985),
+    N = n(388032),
+    R = n(455734);
+function P() {
+    f.Z.useExperiment({ location: "profile_customization_auto" });
+    let e = (0, s.e7)([p.Z], () => p.Z.getGuild()),
+        t = (0, v.Z)(),
+        n = (0, s.e7)([p.Z, b.Z], () => p.Z.showNotice() || b.Z.showNotice()),
+        a = null != e ? e : t,
+        P = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
+        { subsection: w, setSubsection: D } = (0, I.Z)(),
+        { hasSearchResults: x, searchResults: L } = (0, E.E)();
+    i.useEffect(() => {
+        null != P &&
+            (0, m.Z)(P.id, P.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
+    }, [null == a ? void 0 : a.id, P]);
+    let j = [l.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE],
+        [M, k] = (0, d.US)(j),
+        U = M === l.z.NAMEPLATE_GUILD_SETTINGS_TAB_NEW_BADGE;
+    function G(t) {
+        if (w !== t) {
             if (n) {
-                E.S.dispatch(v.CkL.SHAKE_APP, {
+                O.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 300,
-                    intensity: d.$x,
+                    intensity: u.$x,
                 }),
-                    E.S.dispatch(v.CkL.EMPHASIZE_NOTICE);
+                    O.S.dispatch(T.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === T.NB.GUILD && null == e && null != s && (0, p.Fq)(s), R(t);
+            t === A.NB.GUILD && null == e && null != a && (0, _.Fq)(a), D(t);
         }
     }
-    r.useEffect(() => {
-        P === T.NB.GUILD && L(S.L.TAKE_ACTION);
-    }, [P, L]);
-    let U = !0,
-        V = !0;
+    i.useEffect(() => {
+        w === A.NB.GUILD && k(S.L.TAKE_ACTION);
+    }, [w, k]);
+    let B = !0,
+        Z = !0;
     return (
-        D &&
-            1 === Z.length &&
-            (Z.includes(N.s6.PROFILE_SERVER_PROFILES)
-                ? (M(T.NB.GUILD), (V = !1))
-                : Z.includes(N.s6.PROFILE_USER_PROFILE) && (M(T.NB.USER_PROFILE), (U = !1))),
-        (0, i.jsxs)(c.y5t, {
-            component: (0, i.jsx)(c.X6q, {
+        x &&
+            1 === L.length &&
+            (L.includes(C.s6.PROFILE_SERVER_PROFILES)
+                ? (G(A.NB.GUILD), (Z = !1))
+                : L.includes(C.s6.PROFILE_USER_PROFILE) && (G(A.NB.USER_PROFILE), (B = !1))),
+        (0, r.jsxs)(c.y5t, {
+            component: (0, r.jsx)(c.X6q, {
                 variant: "heading-lg/semibold",
-                children: I.intl.string(I.t["vi7f+v"]),
+                children: N.intl.string(N.t["vi7f+v"]),
             }),
             children: [
-                (0, i.jsxs)(c.njP, {
-                    className: y.tabBar,
+                (0, r.jsxs)(c.njP, {
+                    className: R.tabBar,
                     type: "top",
                     look: "brand",
-                    selectedItem: P,
-                    onItemSelect: M,
+                    selectedItem: w,
+                    onItemSelect: G,
                     children: [
-                        V
-                            ? (0, i.jsx)(
+                        Z
+                            ? (0, r.jsx)(
                                   c.njP.Item,
                                   {
-                                      className: y.tabBarItem,
-                                      id: T.NB.USER_PROFILE,
-                                      children: I.intl.string(I.t["2p07FR"]),
+                                      className: R.tabBarItem,
+                                      id: A.NB.USER_PROFILE,
+                                      children: N.intl.string(N.t["2p07FR"]),
                                   },
-                                  T.NB.USER_PROFILE,
+                                  A.NB.USER_PROFILE,
                               )
                             : null,
-                        U
-                            ? (0, i.jsxs)(
+                        B
+                            ? (0, r.jsxs)(
                                   c.njP.Item,
                                   {
-                                      className: a()(y.tabBarItem, y.guildTabBarItem),
-                                      "aria-label": I.intl.string(I.t.kPHroa),
-                                      id: T.NB.GUILD,
+                                      className: o()(R.tabBarItem, R.guildTabBarItem),
+                                      "aria-label": N.intl.string(N.t.kPHroa),
+                                      id: A.NB.GUILD,
                                       children: [
-                                          I.intl.string(I.t.kPHroa),
-                                          B &&
-                                              P !== T.NB.GUILD &&
-                                              (0, i.jsx)(c.IGR, { text: I.intl.string(I.t.y2b7CA) }),
+                                          N.intl.string(N.t.kPHroa),
+                                          U &&
+                                              w !== A.NB.GUILD &&
+                                              (0, r.jsx)(c.IGR, { text: N.intl.string(N.t.y2b7CA) }),
                                       ],
                                   },
-                                  T.NB.GUILD,
+                                  A.NB.GUILD,
                               )
                             : null,
                     ],
                 }),
-                P === T.NB.GUILD ? (0, i.jsx)(h.Z, { selectedGuild: s }) : (0, i.jsx)(b.Z, {}),
+                w === A.NB.GUILD ? (0, r.jsx)(h.Z, { selectedGuild: a }) : (0, r.jsx)(g.Z, {}),
             ],
         })
     );

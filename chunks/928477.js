@@ -1,11 +1,11 @@
 n.d(t, {
-    JA: () => j,
+    JA: () => k,
     Jw: () => D,
-    Od: () => k,
+    Od: () => M,
     Wj: () => G,
     gK: () => U,
-    oD: () => x,
-    vH: () => L,
+    oD: () => L,
+    vH: () => x,
 }),
     n(35282),
     n(704826),
@@ -35,8 +35,8 @@ var r = n(647438),
     T = n(861990),
     S = n(968437),
     A = n(665906),
-    N = n(456077),
-    C = n(124368),
+    C = n(456077),
+    N = n(124368),
     R = n(981631),
     P = n(959517),
     w = n(388032),
@@ -48,27 +48,27 @@ var r = n(647438),
             e
         );
     })({});
-function L(e) {
+function x(e) {
     let t = (0, A.NE)(e);
     return (0, A.Xu)(e) ? (t ? 2 : 3) : 1;
 }
-function x(e, t) {
+function L(e, t) {
     var n;
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
-function M(e, t) {
+function j(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
-function k(e, t) {
+function M(e, t) {
     var n, r, i, a, o, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : "",
         d = null != (s = null == c || null == (a = c.poll) || null == (i = a.question) ? void 0 : i.text) ? s : "";
-    if ("" !== u) return M(u, 40);
+    if ("" !== u) return j(u, 40);
     {
-        if ("" !== d) return M(d, 80);
+        if ("" !== d) return j(d, 80);
         let t = p.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : "", e.id, !0),
-            n = (0, N.Z)(t.split("\n")[0], !0);
+            n = (0, C.Z)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
         let r = [];
         for (;;) {
@@ -85,10 +85,10 @@ function k(e, t) {
             if (t.length > 40) break;
             i = t;
         }
-        return M(i, 40);
+        return j(i, 40);
     }
 }
-function j(e) {
+function k(e) {
     let {
         parentChannel: t,
         parentMessageId: n,
@@ -103,15 +103,15 @@ function j(e) {
         async (e, r, _) => {
             var p;
             let h = null == n,
-                m = x(a, o),
+                m = L(a, o),
                 b = null != (p = a.name) ? p : "";
             if ("" === b && d) {
-                let e = k(t, n);
+                let e = M(t, n);
                 b = "" !== e ? e : w.intl.string(w.t["7Xm5QE"]);
             }
             let y = (0, S.WD)(t),
                 O = g.Z.getChannel(I.default.castMessageIdAsChannelId(n)),
-                v = await V(t, [], void 0, () => {
+                v = await Z(t, [], void 0, () => {
                     let e = null != n ? R.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : R.ANM.CHANNEL_THREADS(t.id);
                     return i.tn.post({
                         url: e,
@@ -139,7 +139,7 @@ function j(e) {
     );
 }
 function U(e, t, n, r, a) {
-    return V(e, [], void 0, () =>
+    return Z(e, [], void 0, () =>
         i.tn.post({
             url: R.ANM.CHANNEL_THREADS(e.id),
             body: {
@@ -189,7 +189,7 @@ function G(e) {
                         i)
                     );
                 }
-            let A = await V(t, o, p, () =>
+            let A = await Z(t, o, p, () =>
                 i.tn.post({
                     url: O,
                     body: I,
@@ -217,7 +217,7 @@ function B(e, t, n, r, i) {
     else if (null != n && n.length > 0) return l.Z.sendStickers(e.id, n, t, { location: P.dy.THREAD_CREATION });
     else return l.Z.sendMessage(e.id, p.ZP.parse(e, t), void 0, { location: P.dy.THREAD_CREATION });
 }
-async function V(e, t, n, r) {
+async function Z(e, t, n, r) {
     let i,
         s = e.isForumLikeChannel();
     try {
@@ -262,8 +262,8 @@ async function V(e, t, n, r) {
                 title: s ? w.intl.string(w.t.vWNFk5) : w.intl.string(w.t["1KEdvL"]),
                 body: w.intl.string(w.t["Whhv4+"]),
             });
-        else if (C.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
-        else if (C.RN.has(null == (E = r.body) ? void 0 : E.code)) {
+        else if (N.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
+        else if (N.RN.has(null == (E = r.body) ? void 0 : E.code)) {
             if (null != n)
                 if ((null == (v = r.body) ? void 0 : v.code) === R.evJ.EXPLICIT_CONTENT) {
                     let t = (0, h.r)();

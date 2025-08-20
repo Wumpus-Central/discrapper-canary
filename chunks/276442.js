@@ -80,60 +80,60 @@ function y(e) {
             paymentSources: T,
             paymentSourceId: S,
             setPaymentSourceId: A,
-            purchaseError: N,
-            setPurchaseError: C,
+            purchaseError: C,
+            setPurchaseError: N,
             purchaseErrorBlockRef: R,
             paymentAuthenticationState: P,
             selectedSkuId: w,
             activeSubscription: D,
-            previousStepRef: L,
-            setPurchaseState: x,
-            paymentElementsEnabled: M,
+            previousStepRef: x,
+            setPurchaseState: L,
+            paymentElementsEnabled: j,
         } = (0, d.JL)(),
-        { isGift: k } = (0, u.wD)(),
-        j = b(g({}, (0, s.fL)()), {
+        { isGift: M } = (0, u.wD)(),
+        k = b(g({}, (0, s.fL)()), {
             paymentSources: T,
             paymentSourceId: S,
             setPaymentSourceId: A,
-            purchaseError: N,
-            setPurchaseError: C,
+            purchaseError: C,
+            setPurchaseError: N,
             purchaseErrorBlockRef: R,
             paymentAuthenticationState: P,
             selectedSkuId: w,
-            isGift: k,
+            isGift: M,
         }),
         U = (0, o.N)(m),
-        G = !k && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
+        G = !M && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
         B = () => {
             c(Object.values(T).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, {
                 trackedFromStep: f.h8.PAYMENT_TYPE,
             });
         },
-        V = null != E ? E : B;
+        Z = null != E ? E : B;
     i()(I, "Step should be set here");
-    let F = (0, a.Z)(() => Date.now(), [I]),
-        Z = (0, a.Z)(
+    let V = (0, a.Z)(() => Date.now(), [I]),
+        F = (0, a.Z)(
             () =>
-                null != y && null == L.current
-                    ? M && y === f.h8.CREDIT_CARD_INFORMATION
+                null != y && null == x.current
+                    ? j && y === f.h8.CREDIT_CARD_INFORMATION
                         ? f.h8.PAYMENT_ELEMENT
                         : y
                     : f.h8.PAYMENT_TYPE,
-            [y, L.current, M],
+            [y, x.current, j],
         );
     return (0, s.vP)({
-        paymentModalArgs: j,
-        initialStep: Z,
+        paymentModalArgs: k,
+        initialStep: F,
         prependSteps: [f.h8.PROMOTION_INFO],
         appendSteps: [f.h8.REVIEW, f.h8.CONFIRM],
         breadcrumpSteps: r,
         currentBreadcrumpStep: I,
         usePaymentModalStep: !0,
         analyticsData: t,
-        onReturn: V,
+        onReturn: Z,
         onComplete: (e) => {
             f.Nj.has(e)
-                ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
+                ? (L(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
                 : c(f.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -144,13 +144,13 @@ function y(e) {
                 b(g({}, t), {
                     from_step: n,
                     to_step: r,
-                    step_duration_ms: i - F,
+                    step_duration_ms: i - V,
                     flow_duration_ms: i - v.startTime,
                 }),
             );
         },
         isEligibleForTrial: G,
-        allowDesktopRedirectPurchase: O(w, k, D),
+        allowDesktopRedirectPurchase: O(w, M, D),
         continueSessionToInitialStep: y,
     });
 }

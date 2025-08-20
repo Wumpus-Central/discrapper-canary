@@ -1,59 +1,60 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(772848),
-    a = n(442837),
-    o = n(570140),
-    s = n(607070),
+    a = n(772848),
+    o = n(442837),
+    s = n(570140),
+    l = n(607070),
     c = n(367907),
     u = n(37091),
     d = n(721264),
-    p = n(963838),
-    f = n(39127),
-    m = n(981631),
-    g = n(57495);
-function v(e) {
-    let { channelId: t, guildId: n, userId: v, containerDimensions: _ } = e,
-        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [h, y] = i.useState([]),
-        O = h.length < 50;
+    f = n(963838),
+    _ = n(39127),
+    p = n(981631),
+    h = n(57495);
+let m = 50;
+function g(e) {
+    let { channelId: t, guildId: n, userId: g, containerDimensions: E } = e,
+        b = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        [y, O] = i.useState([]),
+        v = y.length < m;
     i.useEffect(() => {
         function e(e) {
             var r;
-            let { channelId: i, userId: a, emoji: o, animationType: s, animationId: f } = e;
+            let { channelId: i, userId: o, emoji: s, animationType: l, animationId: _ } = e;
             if (
-                (null != v && v !== a) ||
-                (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ""))
+                (null != g && g !== o) ||
+                (u.Z.getEnabled() && (0, d.Z)(null != (r = null == s ? void 0 : s.name) ? r : ""))
             )
                 return;
-            let g = null != o && null != s && null != f;
-            if (i === t && !b && O && g) {
-                let e = (0, p._r)(o),
-                    r = null != o.id && !o.animated,
+            let h = null != s && null != l && null != _;
+            if (i === t && !b && v && h) {
+                let e = (0, f._r)(s),
+                    r = null != s.id && !s.animated,
                     i = {
-                        id: (0, l.Z)(),
-                        animationType: s,
-                        animationId: f,
+                        id: (0, a.Z)(),
+                        animationType: l,
+                        animationId: _,
                         shouldResize: r,
                         url: e,
-                        userId: a,
+                        userId: o,
                     };
-                y((e) => [...e, i]),
-                    c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                O((e) => [...e, i]),
+                    c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n,
                     });
             }
         }
         return (
-            o.Z.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
+            s.Z.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
             () => {
-                o.Z.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
+                s.Z.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, v, b, O]);
-    let j = i.useCallback((e) => {
-        y((t) => {
+    }, [t, n, g, b, v]);
+    let I = i.useCallback((e) => {
+        O((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
             return n.splice(r, 1), n;
@@ -62,17 +63,17 @@ function v(e) {
     return b
         ? null
         : (0, r.jsx)("div", {
-              className: g.effectsWrapper,
-              style: { width: _.width },
+              className: h.effectsWrapper,
+              style: { width: E.width },
               children: (0, r.jsx)("div", {
-                  className: g.effects,
-                  children: h.map((e) =>
+                  className: h.effects,
+                  children: y.map((e) =>
                       (0, r.jsx)(
-                          f.Z,
+                          _.Z,
                           {
-                              containerDimensions: _,
+                              containerDimensions: E,
                               effect: e,
-                              onComplete: j,
+                              onComplete: I,
                           },
                           e.id,
                       ),

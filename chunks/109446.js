@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(709054),
     _ = n(981631),
     y = n(124368),
-    v = n(388032),
-    j = n(531198);
+    j = n(388032),
+    v = n(531198);
 function C(e) {
     let { channel: t } = e,
         l = (0, a.Wu)([d.Z, g.ZP, h.Z], () => {
@@ -42,21 +42,21 @@ function C(e) {
             (0, p.q)();
         }, []),
         (0, r.jsxs)("div", {
-            className: j.popout,
+            className: v.popout,
             children: [
                 (0, r.jsx)(s.Text, {
-                    className: j.title,
+                    className: v.title,
                     variant: "text-xs/bold",
                     color: "header-secondary",
-                    children: t.isForumLikeChannel() ? v.intl.string(v.t.ioVdOz) : v.intl.string(v.t.VNYs2t),
+                    children: t.isForumLikeChannel() ? j.intl.string(j.t.ioVdOz) : j.intl.string(j.t.VNYs2t),
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(E, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(x, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
-                    className: j.more,
+                    className: v.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -96,47 +96,47 @@ function C(e) {
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: v.intl.string(v.t["4qdZ9/"]),
+                        children: j.intl.string(j.t["4qdZ9/"]),
                     }),
                 }),
             ],
         })
     );
 }
-function E(e) {
+function x(e) {
     let { thread: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, p.Ok)(t);
     return (0, r.jsxs)(s.P3F, {
-        className: j.row,
+        className: v.row,
         onClick: (e) => {
             (0, f.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, y.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, r.jsx)("img", {
-                      className: j.avatar,
+                      className: v.avatar,
                       src: b.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: "",
                   })
                 : (0, r.jsx)(c.Z, {
-                      className: j.avatar,
+                      className: v.avatar,
                       user: n,
                       size: s.EFr.SIZE_16,
                   }),
             (0, r.jsx)(s.Text, {
-                className: j.name,
+                className: v.name,
                 variant: "text-sm/normal",
                 color: "none",
                 children: t.name,
             }),
             (0, r.jsxs)(s.Text, {
-                className: j.timestamp,
+                className: v.timestamp,
                 variant: "text-sm/normal",
                 color: "none",
                 children: [
                     (0, r.jsx)("span", {
-                        className: j.bullet,
+                        className: v.bullet,
                         children: "\u2022",
                     }),
                     (0, p.Ye)(i),

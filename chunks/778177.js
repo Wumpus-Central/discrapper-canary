@@ -1,42 +1,42 @@
-n.d(t, { ZP: () => J }), n(781311), n(35282), n(388685);
+n.d(t, { ZP: () => ei }), n(781311), n(35282), n(388685);
 var r = n(951288),
-    s = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    i = n(392711),
-    o = n.n(i),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n.n(s),
     c = n(913527),
     u = n.n(c),
     d = n(608787),
-    h = n(442837),
-    p = n(704215),
-    f = n(481060),
-    _ = n(542051),
-    g = n(349033),
-    S = n(44315),
-    m = n(243778),
-    y = n(592125),
-    b = n(271383),
-    E = n(699516),
-    x = n(944486),
-    C = n(246946),
-    O = n(594174),
-    v = n(585483),
-    R = n(63063),
-    j = n(51144),
-    P = n(748610),
-    T = n(738018),
-    I = n(607802),
-    A = n(532428),
-    N = n(611004),
-    Z = n(579612),
-    w = n(817190),
-    k = n(315322),
+    f = n(442837),
+    _ = n(704215),
+    p = n(481060),
+    h = n(542051),
+    m = n(349033),
+    g = n(44315),
+    E = n(243778),
+    b = n(592125),
+    y = n(271383),
+    O = n(699516),
+    v = n(944486),
+    I = n(246946),
+    T = n(594174),
+    S = n(585483),
+    A = n(63063),
+    C = n(51144),
+    N = n(748610),
+    R = n(738018),
+    P = n(607802),
+    w = n(532428),
+    D = n(611004),
+    x = n(579612),
+    L = n(817190),
+    j = n(315322),
     M = n(723642),
-    D = n(981631),
-    L = n(388032),
-    F = n(495824);
-function H(e, t, n) {
+    k = n(981631),
+    U = n(388032),
+    G = n(495824);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function H(e, t, n) {
         e
     );
 }
-function U(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,353 +60,359 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                H(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
 }
-function B(e, t) {
+function V(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function W(e, t) {
+function H(e, t) {
     if (null == e) return {};
     var n,
         r,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                s = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
-            return s;
-        })(e, t);
+        i = Y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++)
-            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return s;
+    return i;
 }
-let Q = u()("2015-05-15").local(),
-    G = (0, d.Un)({
+function Y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let W = u()("2015-05-15").local(),
+    K = (0, d.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
         webpackId: 547800,
-    }),
-    q = (e, t, n) => {
-        var s, l, a;
-        let { user: i, text: o } = n;
-        if (null == i) return (0, r.jsx)("strong", { children: o });
-        let c = O.default.getUser(i.id),
-            u = (0, I.AH)(e),
-            d = (0, I.s5)(e),
-            h = y.Z.getChannel(u),
-            p = (null == h ? void 0 : h.isPrivate()) ? E.Z.getNickname(i.id) : null,
-            f = null != (l = null != (s = b.ZP.getNick(d, i.id)) ? s : p) ? l : j.ZP.getName(i),
-            _ =
-                null != (a = null == c ? void 0 : c.getAvatarURL(d, 20))
-                    ? a
-                    : i.getAvatarURL(null == h ? void 0 : h.guild_id, 20);
+    });
+function z(e) {
+    let t = !0,
+        n = e.trim();
+    return (
+        l()(w.ZP).forOwn((e) => {
+            "" !== e.key && null != e.key && n === e.key && (t = !1);
+        }),
+        t
+    );
+}
+let q = (e, t, n) => {
+        var i, a, o;
+        let { user: s, text: l } = n;
+        if (null == s) return (0, r.jsx)("strong", { children: l });
+        let c = T.default.getUser(s.id),
+            u = (0, P.AH)(e),
+            d = (0, P.s5)(e),
+            f = b.Z.getChannel(u),
+            _ = (null == f ? void 0 : f.isPrivate()) ? O.Z.getNickname(s.id) : null,
+            p = null != (a = null != (i = y.ZP.getNick(d, s.id)) ? i : _) ? a : C.ZP.getName(s),
+            h =
+                null != (o = null == c ? void 0 : c.getAvatarURL(d, 20))
+                    ? o
+                    : s.getAvatarURL(null == f ? void 0 : f.guild_id, 20);
         return [
             (0, r.jsx)(
                 "img",
                 {
                     alt: "",
-                    className: F.displayAvatar,
-                    src: _,
+                    className: G.displayAvatar,
+                    src: h,
                 },
-                "avatar-".concat(t, "-").concat(i.id),
+                "avatar-".concat(t, "-").concat(s.id),
             ),
             (0, r.jsx)(
                 "span",
                 {
-                    className: F.displayedNick,
-                    children: f,
+                    className: G.displayedNick,
+                    children: p,
                 },
-                "display-nick-".concat(t, "-").concat(i.id),
+                "display-nick-".concat(t, "-").concat(s.id),
             ),
             (0, r.jsx)(
                 "span",
                 {
-                    className: F.displayUsername,
-                    children: j.ZP.getUserTag(i, {
-                        identifiable: C.Z.enabled && C.Z.hidePersonalInformation ? "never" : "always",
+                    className: G.displayUsername,
+                    children: C.ZP.getUserTag(s, {
+                        identifiable: I.Z.enabled && I.Z.hidePersonalInformation ? "never" : "always",
                     }),
                 },
-                "display-username-".concat(t, "-").concat(i.id),
+                "display-username-".concat(t, "-").concat(s.id),
             ),
         ];
     },
-    z = (e, t, n) => {
-        let { channel: s, text: l } = n;
-        return null == s
-            ? (0, r.jsx)("strong", { children: l })
+    X = (e, t, n) => {
+        let { channel: i, text: a } = n;
+        return null == i
+            ? (0, r.jsx)("strong", { children: a })
             : (0, r.jsxs)("div", {
-                  className: F.resultChannel,
+                  className: G.resultChannel,
                   children: [
-                      (0, r.jsx)(Z.MC, { channel: s }),
-                      (0, r.jsx)(Z.GQ, { channel: s }),
-                      (0, r.jsx)(Z.P, { channel: s }),
+                      (0, r.jsx)(x.MC, { channel: i }),
+                      (0, r.jsx)(x.GQ, { channel: i }),
+                      (0, r.jsx)(x.P, { channel: i }),
                   ],
               });
     },
-    K = (e) => {
+    Q = (e) => {
         let t,
             n,
             {
-                id: s,
-                searchContext: l,
-                result: i,
-                group: o,
+                id: i,
+                searchContext: a,
+                result: s,
+                group: l,
                 className: c,
                 role: u,
                 tabIndex: d,
-                "aria-selected": h,
-                onSelect: p,
-                onFocus: _,
-                showFilter: g,
-                renderResult: S,
+                "aria-selected": f,
+                onSelect: _,
+                onFocus: h,
+                showFilter: m,
+                renderResult: g,
             } = e;
-        if (g) {
-            var m, y;
+        if (m) {
+            var E, b;
             t = (0, r.jsx)("span", {
-                className: F.filter,
-                children: null != (y = null == (m = A.ZP[o]) ? void 0 : m.key) ? y : "addme:",
+                className: G.filter,
+                children: null != (b = null == (E = w.ZP[l]) ? void 0 : E.key) ? b : "addme:",
             });
         }
         return (
-            (n = null != S ? S(l, o, i) : (0, r.jsx)("strong", { children: i.text })),
-            (0, r.jsxs)(f.P3F, {
+            (n = null != g ? g(a, l, s) : (0, r.jsx)("strong", { children: s.text })),
+            (0, r.jsxs)(p.P3F, {
                 tag: "li",
-                className: a()(F.option, c),
-                onClick: p,
-                onFocus: _,
-                id: s,
+                className: o()(G.option, c),
+                onClick: _,
+                onFocus: h,
+                id: i,
                 role: u,
                 tabIndex: d,
-                "aria-selected": h,
+                "aria-selected": f,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: F.content,
+                        className: G.content,
                         children: [t, n],
                     }),
-                    (0, r.jsx)(f.qJs, {
+                    (0, r.jsx)(p.qJs, {
                         size: "sm",
                         color: "currentColor",
-                        className: F.plusIcon,
+                        className: G.plusIcon,
                     }),
                 ],
             })
         );
     },
-    Y = (e) =>
+    J = (e) =>
         (0, r.jsx)(
-            K,
-            B(U({}, e), {
-                className: F.user,
+            Q,
+            F(Z({}, e), {
+                className: G.user,
                 renderResult: q,
             }),
         ),
-    X = {
-        [D.dCx.FILTER_FROM]: {
-            titleText: () => L.intl.string(L.t.catERE),
-            component: Y,
-        },
-        [D.dCx.FILTER_MENTIONS]: {
-            titleText: () => L.intl.string(L.t.l3K4Bw),
-            component: Y,
-        },
-        [D.dCx.FILTER_HAS]: { titleText: () => L.intl.string(L.t.IC7gHB) },
-        [D.dCx.FILTER_FILE_TYPE]: { titleText: () => L.intl.string(L.t.SXIfV1) },
-        [D.dCx.FILTER_IN]: {
-            titleText: () => L.intl.string(L.t.vHyCgo),
-            component: (e) => (0, r.jsx)(K, B(U({}, e), { renderResult: z })),
-        },
-        [D.rtL.DATES]: { titleText: () => L.intl.string(L.t.UiL5e3) },
-        [D.rtL.HISTORY]: {
-            titleText: () => L.intl.string(L.t.tSZd5e),
-            groupTip(e) {
-                let { searchContext: t } = e;
-                return (0, r.jsx)(f.ua7, {
-                    text: L.intl.string(L.t.dwAvX1),
-                    position: "left",
-                    children: (e) => {
-                        let { onMouseEnter: n, onMouseLeave: s } = e;
-                        return (0, r.jsx)(f.P3F, {
-                            onClick: () => P.Z.clearWebSearchHistory(t),
-                            onMouseEnter: n,
-                            onMouseLeave: s,
-                            className: F.searchClearHistory,
-                            title: L.intl.string(L.t.dwAvX1),
-                            "aria-label": L.intl.string(L.t.dwAvX1),
-                            children: (0, r.jsx)(f.XHJ, {
-                                size: "md",
-                                color: "currentColor",
-                            }),
-                        });
-                    },
-                });
-            },
-            component: function (e) {
-                var {
-                        onSelect: t,
-                        onFocus: n,
-                        result: l,
-                        showFilter: i,
-                        searchContext: o,
-                        renderResult: c,
-                        group: u,
-                    } = e,
-                    d = W(e, ["onSelect", "onFocus", "result", "showFilter", "searchContext", "renderResult", "group"]);
-                let h = "",
-                    p = s
-                        .useMemo(() => {
-                            var e;
-                            return (
-                                (e = l.text),
-                                (0, I.kG)(e).map((e, t, n) =>
-                                    (0, I.Fr)(e, n[t + 1]) ? e : new g.WU(e.getFullMatch(), g.Xe),
-                                )
-                            );
-                        }, [l.text])
-                        .map((e) => {
-                            let t = e.getFullMatch();
-                            if ("" === t.trim()) return null;
-                            let n = D.TNx.test(e.type),
-                                s = D.KA4.test(e.type);
-                            return (
-                                (h += t),
-                                (0, r.jsx)(
-                                    "span",
-                                    {
-                                        className: a()(F.searchHistoryRow, {
-                                            [F.filter]: n,
-                                            [F.answer]: s,
-                                            [F.nonText]: !n && !s,
-                                        }),
-                                        children: t,
-                                    },
-                                    e.type + t,
-                                )
-                            );
-                        });
-                return (0, r.jsxs)(
-                    f.P3F,
-                    B(
-                        U(
-                            {
-                                className: F.option,
-                                onClick: t,
-                                onFocus: n,
-                            },
-                            d,
-                        ),
+    $ = (e) => (0, r.jsx)(Q, F(Z({}, e), { renderResult: X }));
+function ee(e) {
+    return (0, P.kG)(e).map((e, t, n) => ((0, P.Fr)(e, n[t + 1]) ? e : new m.WU(e.getFullMatch(), m.Xe)));
+}
+function et(e) {
+    var { onSelect: t, onFocus: n, result: a, showFilter: s, searchContext: l, renderResult: c, group: u } = e,
+        d = H(e, ["onSelect", "onFocus", "result", "showFilter", "searchContext", "renderResult", "group"]);
+    let f = "",
+        _ = i
+            .useMemo(() => ee(a.text), [a.text])
+            .map((e) => {
+                let t = e.getFullMatch();
+                if ("" === t.trim()) return null;
+                let n = k.TNx.test(e.type),
+                    i = k.KA4.test(e.type),
+                    a = !n && !i;
+                return (
+                    (f += t),
+                    (0, r.jsx)(
+                        "span",
                         {
-                            "aria-label": L.intl.formatToPlainString(L.t.WoiGra, { suggestion: h }),
-                            children: [
-                                p,
-                                (0, r.jsx)(f.qJs, {
-                                    size: "sm",
+                            className: o()(G.searchHistoryRow, {
+                                [G.filter]: n,
+                                [G.answer]: i,
+                                [G.nonText]: a,
+                            }),
+                            children: t,
+                        },
+                        e.type + t,
+                    )
+                );
+            });
+    return (0, r.jsxs)(
+        p.P3F,
+        F(
+            Z(
+                {
+                    className: G.option,
+                    onClick: t,
+                    onFocus: n,
+                },
+                d,
+            ),
+            {
+                "aria-label": U.intl.formatToPlainString(U.t.WoiGra, { suggestion: f }),
+                children: [
+                    _,
+                    (0, r.jsx)(p.qJs, {
+                        size: "sm",
+                        color: "currentColor",
+                        className: G.plusIcon,
+                    }),
+                ],
+            },
+        ),
+    );
+}
+let en = {
+    [k.dCx.FILTER_FROM]: {
+        titleText: () => U.intl.string(U.t.catERE),
+        component: J,
+    },
+    [k.dCx.FILTER_MENTIONS]: {
+        titleText: () => U.intl.string(U.t.l3K4Bw),
+        component: J,
+    },
+    [k.dCx.FILTER_HAS]: { titleText: () => U.intl.string(U.t.IC7gHB) },
+    [k.dCx.FILTER_FILE_TYPE]: { titleText: () => U.intl.string(U.t.SXIfV1) },
+    [k.dCx.FILTER_IN]: {
+        titleText: () => U.intl.string(U.t.vHyCgo),
+        component: $,
+    },
+    [k.rtL.DATES]: { titleText: () => U.intl.string(U.t.UiL5e3) },
+    [k.rtL.HISTORY]: {
+        titleText: () => U.intl.string(U.t.tSZd5e),
+        groupTip(e) {
+            let { searchContext: t } = e;
+            return (0, r.jsx)(p.ua7, {
+                text: U.intl.string(U.t.dwAvX1),
+                position: "left",
+                children: (e) => {
+                    let { onMouseEnter: n, onMouseLeave: i } = e;
+                    return (0, r.jsx)(p.P3F, {
+                        onClick: () => N.Z.clearWebSearchHistory(t),
+                        onMouseEnter: n,
+                        onMouseLeave: i,
+                        className: G.searchClearHistory,
+                        title: U.intl.string(U.t.dwAvX1),
+                        "aria-label": U.intl.string(U.t.dwAvX1),
+                        children: (0, r.jsx)(p.XHJ, {
+                            size: "md",
+                            color: "currentColor",
+                        }),
+                    });
+                },
+            });
+        },
+        component: et,
+    },
+    [k.rtL.SEARCH_OPTIONS]: {
+        titleText: () => U.intl.string(U.t["8Zkyw8"]),
+        groupTip: () =>
+            (0, r.jsx)(p.ua7, {
+                text: U.intl.string(U.t.hvVgAQ),
+                position: "left",
+                children: (e) =>
+                    (0, r.jsx)(
+                        "div",
+                        F(Z({ className: G.searchLearnMore }, e), {
+                            children: (0, r.jsx)(p.eee, {
+                                href: A.Z.getArticleURL(k.BhN.USING_SEARCH),
+                                title: U.intl.string(U.t.hvVgAQ),
+                                children: (0, r.jsx)(p.idN, {
+                                    size: "md",
                                     color: "currentColor",
-                                    className: F.plusIcon,
-                                }),
-                            ],
-                        },
-                    ),
-                );
-            },
-        },
-        [D.rtL.SEARCH_OPTIONS]: {
-            titleText: () => L.intl.string(L.t["8Zkyw8"]),
-            groupTip: () =>
-                (0, r.jsx)(f.ua7, {
-                    text: L.intl.string(L.t.hvVgAQ),
-                    position: "left",
-                    children: (e) =>
-                        (0, r.jsx)(
-                            "div",
-                            B(U({ className: F.searchLearnMore }, e), {
-                                children: (0, r.jsx)(f.eee, {
-                                    href: R.Z.getArticleURL(D.BhN.USING_SEARCH),
-                                    title: L.intl.string(L.t.hvVgAQ),
-                                    children: (0, r.jsx)(f.idN, {
-                                        size: "md",
-                                        color: "currentColor",
-                                    }),
                                 }),
                             }),
-                        ),
-                }),
-            component: function (e) {
-                var t,
-                    { result: n, onSelect: s, onFocus: l, showFilter: i, searchContext: o } = e,
-                    c = W(e, ["result", "onSelect", "onFocus", "showFilter", "searchContext"]);
-                let u = n.token === D.dCx.FILTER_AUTHOR_TYPE ? [p.z.SEARCH_AUTHOR_TYPE_FILTER_NEW_BADGE] : [],
-                    [d, h] = (0, m.US)(u),
-                    _ = d === p.z.SEARCH_AUTHOR_TYPE_FILTER_NEW_BADGE,
-                    g = (0, S.Sl)(D.Ilk.BRAND_500).hex,
-                    y = (0, I.Ko)(null != (t = n.token) ? t : "");
-                return (0, r.jsxs)(
-                    f.P3F,
-                    B(
-                        U(
-                            {
-                                className: a()(F.option, F.searchOption),
-                                onClick: s,
-                                onFocus: l,
-                            },
-                            c,
-                        ),
-                        {
-                            children: [
-                                (0, r.jsx)("span", {
-                                    className: F.filter,
-                                    children: n.text,
-                                }),
-                                (0, r.jsx)("span", {
-                                    className: a()({ [F.answer]: y }),
-                                    children: y,
-                                }),
-                                _
-                                    ? (0, r.jsx)(f.IGR, {
-                                          text: L.intl.string(L.t.y2b7CA),
-                                          color: g,
-                                      })
-                                    : (0, r.jsx)(f.qJs, {
-                                          size: "sm",
-                                          color: "currentColor",
-                                          className: F.plusIcon,
-                                      }),
-                            ],
-                        },
+                        }),
                     ),
-                );
-            },
+            }),
+        component: function (e) {
+            var t,
+                { result: n, onSelect: i, onFocus: a, showFilter: s, searchContext: l } = e,
+                c = H(e, ["result", "onSelect", "onFocus", "showFilter", "searchContext"]);
+            let u = n.token === k.dCx.FILTER_AUTHOR_TYPE ? [_.z.SEARCH_AUTHOR_TYPE_FILTER_NEW_BADGE] : [],
+                [d, f] = (0, E.US)(u),
+                h = d === _.z.SEARCH_AUTHOR_TYPE_FILTER_NEW_BADGE,
+                m = (0, g.Sl)(k.Ilk.BRAND_500).hex,
+                b = (0, P.Ko)(null != (t = n.token) ? t : "");
+            return (0, r.jsxs)(
+                p.P3F,
+                F(
+                    Z(
+                        {
+                            className: o()(G.option, G.searchOption),
+                            onClick: i,
+                            onFocus: a,
+                        },
+                        c,
+                    ),
+                    {
+                        children: [
+                            (0, r.jsx)("span", {
+                                className: G.filter,
+                                children: n.text,
+                            }),
+                            (0, r.jsx)("span", {
+                                className: o()({ [G.answer]: b }),
+                                children: b,
+                            }),
+                            h
+                                ? (0, r.jsx)(p.IGR, {
+                                      text: U.intl.string(U.t.y2b7CA),
+                                      color: m,
+                                  })
+                                : (0, r.jsx)(p.qJs, {
+                                      size: "sm",
+                                      color: "currentColor",
+                                      className: G.plusIcon,
+                                  }),
+                        ],
+                    },
+                ),
+            );
         },
-    };
-class V extends s.PureComponent {
+    },
+};
+class er extends i.PureComponent {
     componentDidUpdate(e, t) {
         let { resultsState: n, totalResults: r } = this.props,
-            { mode: s } = n,
-            { resultsState: l } = e;
-        null != s.filter && null == l.mode.filter && r > 0
+            { mode: i } = n,
+            { resultsState: a } = e;
+        null != i.filter && null == a.mode.filter && r > 0
             ? this.setSelectedIndex(0)
-            : s.type === D.Sap.FILTER_ALL && l.mode.type !== s.type
+            : i.type === k.Sap.FILTER_ALL && a.mode.type !== i.type
               ? this.setSelectedIndex(-1)
               : this.keepCurrentOptionSelected(e, t);
     }
@@ -415,11 +421,11 @@ class V extends s.PureComponent {
     }
     render() {
         let { selectedIndex: e } = this.state,
-            { className: t, navId: n, resultsState: s, totalResults: l, searchContext: a, channel: i } = this.props;
-        return (0, r.jsx)(_.Z, {
+            { className: t, navId: n, resultsState: i, totalResults: a, searchContext: o, channel: s } = this.props;
+        return (0, r.jsx)(h.Z, {
             className: t,
-            numResults: l,
-            query: s.query,
+            numResults: a,
+            query: i.query,
             navId: n,
             hideQuery: !this.shouldShowSearchQuery(),
             focusedIndex: e,
@@ -429,196 +435,187 @@ class V extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: a.type === D.aib.FAVORITES && (0, I.X$)(),
+            searchFavorites: o.type === k.aib.FAVORITES && (0, P.X$)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
-            channel: i,
+            channel: s,
             onSelectSearchInSelectedChannel: () =>
                 this.handleSearchInChannel({ searchAutocompleteSelectAction: M.ZW.CLICK }),
-            showDMQueryText: a.type === D.aib.DMS && (0, I.R6)(a),
+            showDMQueryText: o.type === k.aib.DMS && (0, P.R6)(o),
         });
     }
     constructor(...e) {
         var t;
         super(...e),
             (t = this),
-            H(this, "state", {
-                dateHint: (0, A.Pr)(),
+            B(this, "state", {
+                dateHint: (0, w.Pr)(),
                 selectedIndex: -1,
             }),
-            H(this, "handleDateChange", (e) => {
-                let t = (0, I.Tm)(this.props.searchContext);
-                (0, k.bh)({
+            B(this, "handleDateChange", (e) => {
+                let t = (0, P.Tm)(this.props.searchContext);
+                (0, j.bh)({
                     searchContext: this.props.searchContext,
-                    searchQuery: w.Z.getSearchResultsQuery(t),
-                    searchQueryString: N.Z.getSearchInputText(this.props.searchContext),
+                    searchQuery: L.Z.getSearchResultsQuery(t),
+                    searchQueryString: D.Z.getSearchInputText(this.props.searchContext),
                     searchTokenType: this.props.resultsState.mode.filter,
-                    searchAutocompleteGroup: D.rtL.DATES,
+                    searchAutocompleteGroup: k.rtL.DATES,
                     searchAutocompleteMode: this.props.resultsState.mode,
                     isSearchFilterPrefix: !1,
                     isSearchFilterAnswer: !0,
                     isSearchFilterComplete: !1,
                     searchAutocompleteSelectAction: M.ZW.CLICK,
                 }),
-                    this.setSearchQuery(e.format(D.b2L) + " ", !0);
+                    this.setSearchQuery(e.format(k.b2L) + " ", !0);
             }),
-            H(this, "keepCurrentOptionSelected", (e, t) => {
+            B(this, "keepCurrentOptionSelected", (e, t) => {
                 let { selectedIndex: n } = this.state,
-                    { resultsState: r, totalResults: s } = this.props,
-                    { mode: l, autocompletes: a } = r,
-                    { resultsState: i } = e;
-                if (l.type !== i.mode.type) this.setSelectedIndex(-1);
-                else if (t.selectedIndex >= 0 && (t.selectedIndex === n || i.autocompletes.length !== a.length)) {
-                    let e = (0, I.i3)(i.autocompletes, i.mode)[t.selectedIndex],
-                        n = (0, I.i3)(a, l).findIndex((t) => {
+                    { resultsState: r, totalResults: i } = this.props,
+                    { mode: a, autocompletes: o } = r,
+                    { resultsState: s } = e;
+                if (a.type !== s.mode.type) this.setSelectedIndex(-1);
+                else if (t.selectedIndex >= 0 && (t.selectedIndex === n || s.autocompletes.length !== o.length)) {
+                    let e = (0, P.i3)(s.autocompletes, s.mode)[t.selectedIndex],
+                        n = (0, P.i3)(o, a).findIndex((t) => {
                             let { resultText: n } = t;
                             return n === (null == e ? void 0 : e.resultText);
                         });
-                    -1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= s && this.setSelectedIndex(s - 1);
+                    -1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= i && this.setSelectedIndex(i - 1);
                 }
             }),
-            H(this, "focusNextOption", () => {
+            B(this, "focusNextOption", () => {
                 this.focusOtherOption(1);
             }),
-            H(this, "focusPreviousOption", () => {
+            B(this, "focusPreviousOption", () => {
                 this.focusOtherOption(-1);
             }),
-            H(this, "focusOtherOption", (e) => {
+            B(this, "focusOtherOption", (e) => {
                 let { selectedIndex: t } = this.state,
                     { resultsState: n } = this.props;
-                (0, I.Fz)(n.mode.filter) || this.focusOption(t + e);
+                (0, P.Fz)(n.mode.filter) || this.focusOption(t + e);
             }),
-            H(this, "focusOption", (e) => {
+            B(this, "focusOption", (e) => {
                 let t = e,
                     { autocompletes: n } = this.props.resultsState,
                     r = this.shouldShowSearchQuery(),
-                    s = this.shouldShowSearchInSelectedChannel();
-                t < -1 || (!r && !s && t < 0)
-                    ? (t = (0, I.BU)(n) - 1)
-                    : (r || s) && t >= (0, I.BU)(n)
+                    i = this.shouldShowSearchInSelectedChannel();
+                t < -1 || (!r && !i && t < 0)
+                    ? (t = (0, P.BU)(n) - 1)
+                    : (r || i) && t >= (0, P.BU)(n)
                       ? (t = -1)
-                      : !r && t >= (0, I.BU)(n) && (t = 0),
+                      : !r && t >= (0, P.BU)(n) && (t = 0),
                     this.setSelectedIndex(t);
             }),
-            H(this, "selectOption", (e) => {
+            B(this, "selectOption", (e) => {
                 let { selectedIndex: t, searchAutocompleteSelectAction: n } = e,
                     r = t;
                 if ((null == r && (r = this.state.selectedIndex), r < 0)) return !1;
-                let { autocompletes: s, mode: l } = this.props.resultsState;
-                if ((0, I.Fz)(l.filter)) return;
-                let a = (0, I.i3)(s, l);
-                if (r >= a.length) return !1;
-                let i = a[r],
-                    c = a.length;
-                if (i.group === D.rtL.HISTORY) {
-                    let e = s.find((e) => (null == e ? void 0 : e.group) === D.rtL.HISTORY);
+                let { autocompletes: i, mode: a } = this.props.resultsState;
+                if ((0, P.Fz)(a.filter)) return;
+                let o = (0, P.i3)(i, a);
+                if (r >= o.length) return !1;
+                let s = o[r],
+                    l = o.length;
+                if (s.group === k.rtL.HISTORY) {
+                    let e = i.find((e) => (null == e ? void 0 : e.group) === k.rtL.HISTORY);
                     if (null != e) {
-                        let t = r - (c - e.results.length);
-                        (0, k.$z)({
+                        let t = r - (l - e.results.length);
+                        (0, j.$z)({
                             searchContext: this.props.searchContext,
                             searchHistoryIndex: t,
                             searchHistoryTotalResults: e.results.length,
                         });
                     }
                 } else {
-                    var u, d;
+                    var c, u;
                     let e = this.props.resultsState.mode.type,
                         t = this.props.resultsState.mode.filter,
-                        { token: s, group: l } = i.result,
-                        a = (0, A._m)(i.group) ? i.group : null != l && (0, A._m)(l) ? l : null,
-                        o = null != (u = null != s ? s : t) ? u : a,
-                        h = i.result.channel,
-                        p = o === D.dCx.FILTER_IN && null != h && h.id === x.Z.getChannelId(),
-                        f = (0, I.Tm)(this.props.searchContext);
-                    (0, k.bh)({
+                        { token: i, group: a } = s.result,
+                        o = (0, w._m)(s.group) ? s.group : null != a && (0, w._m)(a) ? a : null,
+                        d = null != (c = null != i ? i : t) ? c : o,
+                        f = s.result.channel,
+                        _ = d === k.dCx.FILTER_IN && null != f && f.id === v.Z.getChannelId(),
+                        p = (0, P.Tm)(this.props.searchContext);
+                    (0, j.bh)({
                         searchContext: this.props.searchContext,
-                        searchQuery: w.Z.getSearchResultsQuery(f),
-                        searchQueryString: N.Z.getSearchInputText(this.props.searchContext),
-                        searchTokenType: o,
-                        searchAutocompleteGroup: null != (d = i.group) ? d : l,
+                        searchQuery: L.Z.getSearchResultsQuery(p),
+                        searchQueryString: D.Z.getSearchInputText(this.props.searchContext),
+                        searchTokenType: d,
+                        searchAutocompleteGroup: null != (u = s.group) ? u : a,
                         searchAutocompleteMode: this.props.resultsState.mode,
                         searchAutocompleteResultIndex: r,
-                        searchAutocompleteTotalResults: c,
-                        isSearchFilterPrefix: e === D.Sap.EMPTY,
-                        isSearchFilterAnswer: e === D.Sap.FILTER,
-                        isSearchFilterComplete: e === D.Sap.FILTER_ALL,
-                        isInFilterForSelectedChannel: p,
+                        searchAutocompleteTotalResults: l,
+                        isSearchFilterPrefix: e === k.Sap.EMPTY,
+                        isSearchFilterAnswer: e === k.Sap.FILTER,
+                        isSearchFilterComplete: e === k.Sap.FILTER_ALL,
+                        isInFilterForSelectedChannel: _,
                         searchAutocompleteSelectAction: n,
                     });
                 }
-                let h = (function (e) {
-                    let t = !0,
-                        n = e.trim();
-                    return (
-                        o()(A.ZP).forOwn((e) => {
-                            "" !== e.key && null != e.key && n === e.key && (t = !1);
-                        }),
-                        t
-                    );
-                })(i.resultText);
-                return this.setSearchQuery(i.resultText, h), !0;
+                let d = z(s.resultText);
+                return this.setSearchQuery(s.resultText, d), !0;
             }),
-            H(this, "setSearchQuery", function (e) {
+            B(this, "setSearchQuery", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    { mode: r, cursorScope: s } = t.props.resultsState,
-                    l = 0;
+                    { mode: r, cursorScope: i } = t.props.resultsState,
+                    a = 0;
                 null != r.token
-                    ? (l = r.token.start)
-                    : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
-                let a = null != r.token ? r.token.end : l;
-                v.S.dispatch(D.CkL.SET_SEARCH_QUERY, {
+                    ? (a = r.token.start)
+                    : (null == i ? void 0 : i.currentToken) != null && (a = i.currentToken.end);
+                let o = null != r.token ? r.token.end : a;
+                S.S.dispatch(k.CkL.SET_SEARCH_QUERY, {
                     query: e,
-                    anchor: l,
-                    focus: a,
+                    anchor: a,
+                    focus: o,
                     performSearch: n,
                     replace: !1,
                 }),
                     t.setSelectedIndex(-1);
             }),
-            H(this, "shouldShowSearchQuery", () => {
+            B(this, "shouldShowSearchQuery", () => {
                 let { mode: e } = this.props.resultsState;
-                return e.type !== D.Sap.FILTER && e.type !== D.Sap.EMPTY && !(0, I.Fz)(e.filter);
+                return e.type !== k.Sap.FILTER && e.type !== k.Sap.EMPTY && !(0, P.Fz)(e.filter);
             }),
-            H(this, "shouldShowSearchInSelectedChannel", () => {
+            B(this, "shouldShowSearchInSelectedChannel", () => {
                 let {
                     searchContext: e,
                     resultsState: { mode: t },
                 } = this.props;
-                return e.type === D.aib.DMS && (0, I.R6)(e) && t.type === D.Sap.EMPTY && !(0, I.Fz)(t.filter);
+                return e.type === k.aib.DMS && (0, P.R6)(e) && t.type === k.Sap.EMPTY && !(0, P.Fz)(t.filter);
             }),
-            H(this, "handleSearchInChannel", (e) => {
+            B(this, "handleSearchInChannel", (e) => {
                 var t;
                 let { searchAutocompleteSelectAction: n } = e,
-                    { channel: r, searchContext: s } = this.props;
+                    { channel: r, searchContext: i } = this.props;
                 if (!this.shouldShowSearchInSelectedChannel() || null == r) return !1;
-                (0, k.tA)({
-                    searchContext: s,
+                (0, j.tA)({
+                    searchContext: i,
                     searchAutocompleteSelectAction: n,
                 });
-                let l = D.dCx.FILTER_IN,
-                    a = A.ZP[l],
-                    i = (0, I.X3)(r),
-                    o = "".concat(null != (t = null == a ? void 0 : a.key) ? t : l.toString(), " ").concat(i);
-                return this.setSearchQuery(o, !0), !0;
+                let a = k.dCx.FILTER_IN,
+                    o = w.ZP[a],
+                    s = (0, P.X3)(r),
+                    l = "".concat(null != (t = null == o ? void 0 : o.key) ? t : a.toString(), " ").concat(s);
+                return this.setSearchQuery(l, !0), !0;
             }),
-            H(this, "renderDatePicker", () =>
+            B(this, "renderDatePicker", () =>
                 (0, r.jsxs)("div", {
-                    className: F.datePicker,
+                    className: G.datePicker,
                     children: [
-                        (0, r.jsx)(G, {
+                        (0, r.jsx)(K, {
                             onSelect: this.handleDateChange,
                             maxDate: u()().local(),
-                            minDate: Q,
+                            minDate: W,
                         }),
                         (0, r.jsxs)("div", {
-                            className: F.datePickerHint,
+                            className: G.datePickerHint,
                             children: [
                                 (0, r.jsxs)("span", {
-                                    className: F.hint,
-                                    children: [L.intl.string(L.t.fmtCi4), "\xA0"],
+                                    className: G.hint,
+                                    children: [U.intl.string(U.t.fmtCi4), "\xA0"],
                                 }),
-                                (0, r.jsx)(f.P3F, {
+                                (0, r.jsx)(p.P3F, {
                                     tag: "span",
-                                    className: F.hintValue,
+                                    className: G.hintValue,
                                     onClick: this.handleHintClick,
                                     children: this.state.dateHint,
                                 }),
@@ -627,96 +624,96 @@ class V extends s.PureComponent {
                     ],
                 }),
             ),
-            H(this, "handleHintClick", () => {
+            B(this, "handleHintClick", () => {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
-            H(this, "performSearch", (e) => {
-                v.S.dispatch(D.CkL.PERFORM_SEARCH, null != e ? e : {});
+            B(this, "performSearch", (e) => {
+                S.S.dispatch(k.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
-            H(this, "renderAutocompletes", () => {
+            B(this, "renderAutocompletes", () => {
                 let { selectedIndex: e } = this.state,
                     { navId: t, searchContext: n } = this.props,
-                    { autocompletes: s, mode: l } = this.props.resultsState;
-                if ((0, I.Fz)(l.filter)) return this.renderDatePicker();
-                let a = -1;
-                return s.map((s) => {
-                    var i, o, c;
+                    { autocompletes: i, mode: a } = this.props.resultsState;
+                if ((0, P.Fz)(a.filter)) return this.renderDatePicker();
+                let o = -1;
+                return i.map((i) => {
+                    var s, l, c;
                     let u, d;
-                    if (null == s || 0 === s.results.length) return null;
-                    let h = null != (i = X[s.group]) ? i : {};
-                    null != h.titleText &&
-                        ((d = "".concat(s.group, "-header")),
+                    if (null == i || 0 === i.results.length) return null;
+                    let f = null != (s = en[i.group]) ? s : {};
+                    null != f.titleText &&
+                        ((d = "".concat(i.group, "-header")),
                         (u = (0, r.jsx)("div", {
                             id: d,
-                            className: F.header,
-                            children: h.titleText(),
+                            className: G.header,
+                            children: f.titleText(),
                         })));
-                    let p = null != (o = h.groupTip) ? o : null,
-                        f = null != p ? (0, r.jsx)(p, { searchContext: n }) : null,
-                        g = null != (c = h.component) ? c : K,
-                        S = l.type === D.Sap.FILTER_ALL;
+                    let _ = null != (l = f.groupTip) ? l : null,
+                        p = null != _ ? (0, r.jsx)(_, { searchContext: n }) : null,
+                        m = null != (c = f.component) ? c : Q,
+                        g = a.type === k.Sap.FILTER_ALL;
                     return (0, r.jsxs)(
                         "ul",
                         {
                             role: "group",
                             "aria-labelledby": d,
-                            className: F.resultsGroup,
+                            className: G.resultsGroup,
                             children: [
                                 u,
-                                f,
-                                s.results.map((l) => {
-                                    var i, o;
-                                    if (null == l || null == s) return null;
-                                    let c = e === (a += 1);
+                                p,
+                                i.results.map((a) => {
+                                    var s, l;
+                                    if (null == a || null == i) return null;
+                                    let c = e === (o += 1);
                                     return (0, r.jsx)(
-                                        g,
-                                        U(
+                                        m,
+                                        Z(
                                             {
                                                 searchContext: n,
-                                                group: null != (i = l.group) ? i : s.group,
-                                                result: l,
-                                                showFilter: S,
+                                                group: null != (s = a.group) ? s : i.group,
+                                                result: a,
+                                                showFilter: g,
                                                 onSelect: this.selectOption.bind(null, {
-                                                    selectedIndex: a,
+                                                    selectedIndex: o,
                                                     searchAutocompleteSelectAction: M.ZW.CLICK,
                                                 }),
-                                                onFocus: this.focusOption.bind(null, a),
+                                                onFocus: this.focusOption.bind(null, o),
                                             },
-                                            (0, _.M)(t, a, c),
+                                            (0, h.M)(t, o, c),
                                         ),
                                         ""
-                                            .concat(s.group, "-")
-                                            .concat(l.text, "-")
-                                            .concat(null != (o = l.key) ? o : ""),
+                                            .concat(i.group, "-")
+                                            .concat(a.text, "-")
+                                            .concat(null != (l = a.key) ? l : ""),
                                     );
                                 }),
                             ],
                         },
-                        s.group,
+                        i.group,
                     );
                 });
             });
     }
 }
-let J = s.forwardRef((e, t) => {
-    let { className: n, searchContext: s, navId: l, onSelectedIndexChanged: a } = e,
-        i = (0, h.e7)([x.Z, y.Z], () => {
-            let e = x.Z.getChannelId();
-            return y.Z.getChannel(e);
+let ei = i.forwardRef((e, t) => {
+    let { className: n, searchContext: i, navId: a, onSelectedIndexChanged: o } = e,
+        s = (0, f.e7)([v.Z, b.Z], () => {
+            let e = v.Z.getChannelId();
+            return b.Z.getChannel(e);
         }),
-        [o, c] = (0, h.Wu)([T.Z], () => {
-            let e = T.Z.getState(s),
-                t = (0, I.BU)(e.autocompletes);
+        [l, c] = (0, f.Wu)([R.Z], () => {
+            let e = R.Z.getState(i),
+                t = (0, P.BU)(e.autocompletes);
             return [e, t];
         });
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(er, {
         ref: t,
         className: n,
-        navId: l,
-        onSelectedIndexChanged: a,
-        searchContext: s,
-        resultsState: o,
+        navId: a,
+        onSelectedIndexChanged: o,
+        searchContext: i,
+        resultsState: l,
         totalResults: c,
-        channel: i,
+        channel: s,
     });
 });

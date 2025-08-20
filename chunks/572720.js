@@ -1,9 +1,9 @@
 n.d(t, { l: () => a });
-var r = n(647438),
-    l = n(579806);
+var l = n(647438),
+    r = n(579806);
 function a(e) {
-    return (0, r.useMemo)(
-        () => (null == l.Z.clips.getClipProtocolURLFromPath ? null : l.Z.clips.getClipProtocolURLFromPath(e.filepath)),
+    return (0, l.useMemo)(
+        () => (null == r.Z.clips.getClipProtocolURLFromPath ? null : r.Z.clips.getClipProtocolURLFromPath(e.filepath)),
         [e.filepath],
     );
 }

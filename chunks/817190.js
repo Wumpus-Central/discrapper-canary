@@ -1,13 +1,26 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r,
-    s,
-    l = n(442837),
+    i = n(442837),
     a = n(570140);
-let i = new Map();
-function o(e) {
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = 0.05,
+    l = new Map();
+function c(e) {
     var t;
     let n =
-        null != (t = i.get(e))
+        null != (t = l.get(e))
             ? t
             : {
                   editorState: null,
@@ -17,66 +30,65 @@ function o(e) {
                   searchResultsQuery: null,
                   searchResultsOffset: null,
               };
-    return i.set(e, n), n;
+    return l.set(e, n), n;
 }
-function c(e, t) {
-    let n = i.get(e);
+function u(e, t) {
+    let n = l.get(e);
     return null == n ? null : t(n);
 }
-class u extends (r = l.ZP.Store) {
+function d(e) {
+    let { id: t, editorState: n } = e;
+    c(t).editorState = n;
+}
+function f(e) {
+    let { id: t } = e;
+    c(t);
+}
+function _(e) {
+    let { id: t } = e;
+    return l.delete(t);
+}
+function p(e) {
+    let { id: t, showBlocked: n } = e;
+    c(t).showBlockedResults = n;
+}
+function h(e) {
+    let { id: t } = e;
+    c(t).showNoResultsAlt = Math.random() < s;
+}
+function m(e) {
+    let { id: t, queryString: n, query: r, offset: i } = e,
+        a = c(t);
+    (a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0);
+}
+class g extends (r = i.ZP.Store) {
     getEditorState(e) {
-        return c(e, (e) => e.editorState);
+        return u(e, (e) => e.editorState);
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null != (t = c(e, (e) => e.showBlockedResults)) && t;
+        return null != (t = u(e, (e) => e.showBlockedResults)) && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null != (t = c(e, (e) => e.showNoResultsAlt)) && t;
+        return null != (t = u(e, (e) => e.showNoResultsAlt)) && t;
     }
     getSearchResultsQueryString(e) {
-        return c(e, (e) => e.searchResultsQueryString);
+        return u(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return c(e, (e) => e.searchResultsQuery);
+        return u(e, (e) => e.searchResultsQuery);
     }
     getSearchResultsOffset(e) {
-        return c(e, (e) => e.searchResultsOffset);
+        return u(e, (e) => e.searchResultsOffset);
     }
 }
-(s = "displayName") in u
-    ? Object.defineProperty(u, s, {
-          value: "SearchQueryStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (u[s] = "SearchQueryStore");
-let d = new u(a.Z, {
-    SEARCH_RESULTS_QUERY_UPDATE: function (e) {
-        let { id: t, queryString: n, query: r, offset: s } = e,
-            l = o(t);
-        (l.searchResultsQueryString = n), (l.searchResultsQuery = r), (l.searchResultsOffset = null != s ? s : 0);
-    },
-    SEARCH_EDITOR_STATE_CLEAR: function (e) {
-        let { id: t } = e;
-        return i.delete(t);
-    },
-    SEARCH_ENSURE_SEARCH_STATE: function (e) {
-        let { id: t } = e;
-        o(t);
-    },
-    SEARCH_EDITOR_STATE_CHANGE: function (e) {
-        let { id: t, editorState: n } = e;
-        o(t).editorState = n;
-    },
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
-        let { id: t, showBlocked: n } = e;
-        o(t).showBlockedResults = n;
-    },
-    SEARCH_SET_SHOW_NO_RESULTS_ALT: function (e) {
-        let { id: t } = e;
-        o(t).showNoResultsAlt = 0.05 > Math.random();
-    },
+o(g, "displayName", "SearchQueryStore");
+let E = new g(a.Z, {
+    SEARCH_RESULTS_QUERY_UPDATE: m,
+    SEARCH_EDITOR_STATE_CLEAR: _,
+    SEARCH_ENSURE_SEARCH_STATE: f,
+    SEARCH_EDITOR_STATE_CHANGE: d,
+    SEARCH_SET_SHOW_BLOCKED_RESULTS: p,
+    SEARCH_SET_SHOW_NO_RESULTS_ALT: h,
 });

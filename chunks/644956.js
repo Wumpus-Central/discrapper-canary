@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F });
+n.d(t, { Z: () => V });
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -23,15 +23,15 @@ var r = n(951288),
     T = n(670188),
     S = n(601964),
     A = n(592125),
-    N = n(271383),
-    C = n(485386),
+    C = n(271383),
+    N = n(485386),
     R = n(430824),
     P = n(594174),
     w = n(51144),
     D = n(388032),
-    L = n(430864),
-    x = n(329072);
-function M(e, t, n) {
+    x = n(430864),
+    L = n(329072);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +55,12 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -121,7 +121,7 @@ function B(e) {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
                           f.Z,
-                          k(
+                          M(
                               {
                                   ref: c,
                                   selected: o,
@@ -137,19 +137,16 @@ function B(e) {
                                   onContextMenu: (e) => {
                                       (0, d.jW)(e, async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("14006"),
-                                              n.e("70274"),
                                               n.e("79695"),
-                                              n.e("80417"),
                                               n.e("98783"),
                                               n.e("8982"),
                                               n.e("7717"),
-                                              n.e("20180"),
+                                              n.e("26070"),
                                           ]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  U(k({}, t), {
+                                                  U(M({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -168,7 +165,7 @@ function B(e) {
               t.userId,
           );
 }
-function V(e) {
+function Z(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         d = i.useRef(null);
     (0, _.ZP)(() => {
@@ -184,8 +181,8 @@ function V(e) {
             let e = R.Z.getGuild(a);
             return null == e ? null : (0, S.lV)(e);
         }, [a]),
-        h = (0, l.Wu)([N.ZP, P.default], () => {
-            let e = N.ZP.getMembers(a),
+        h = (0, l.Wu)([C.ZP, P.default], () => {
+            let e = C.ZP.getMembers(a),
                 t = null == n || n === p ? e : e.filter((e) => e.roles.includes(n));
             return o()(t)
                 .filter((e) => null != P.default.getUser(e.userId))
@@ -195,9 +192,9 @@ function V(e) {
                 })
                 .value();
         }, [a, n, p]),
-        m = (0, l.e7)([C.Z], () => {
+        m = (0, l.e7)([N.Z], () => {
             let e = null != n ? n : p;
-            return null == e ? null : C.Z.getRole(a, e);
+            return null == e ? null : N.Z.getRole(a, e);
         }, [a, n, p]),
         E = null == n ? null : null == f ? void 0 : f[n],
         y = i.useMemo(
@@ -231,19 +228,19 @@ function V(e) {
         children: (0, r.jsx)(
             "div",
             U(
-                k(
+                M(
                     {
-                        className: L.rolePopout,
+                        className: x.rolePopout,
                         ref: d,
                     },
                     t,
                 ),
                 {
                     children: (0, r.jsxs)(u.Ttm, {
-                        className: L.roleScroller,
+                        className: x.roleScroller,
                         children: [
                             (0, r.jsx)(g.Z, {
-                                className: L.roleHeader,
+                                className: x.roleHeader,
                                 "aria-label": D.intl.formatToPlainString(D.t.UaqbkZ, {
                                     title: m.name,
                                     count: y.length,
@@ -257,7 +254,7 @@ function V(e) {
                             null == E || E <= y.length
                                 ? null
                                 : (0, r.jsx)(g.Z, {
-                                      className: L.roleHeader,
+                                      className: x.roleHeader,
                                       children: D.intl.formatToPlainString(D.t["9oMmZG"], { count: E - y.length }),
                                   }),
                         ],
@@ -267,25 +264,25 @@ function V(e) {
         ),
     });
 }
-function F(e) {
+function V(e) {
     let { roleId: t, channelId: n, roleName: a, guildId: o, children: c, inlinePreview: d = !1 } = e,
         { analyticsLocations: f } = (0, m.ZP)(h.Z.ROLE_MENTION),
         _ = (0, l.e7)([p.Z], () => p.Z.roleStyle),
-        g = (0, l.e7)([C.Z], () => (null == o || null == t ? null : C.Z.getRole(o, t))),
+        g = (0, l.e7)([N.Z], () => (null == o || null == t ? null : N.Z.getRole(o, t))),
         E = (0, I.yH)(o, g),
         b = !d && null != g && !(0, v.Gr)(g),
         T = b && "dot" === _,
         S = b && "username" === _,
         A = E && null != g ? g.colorStrings : null,
-        N = i.useRef(null),
+        C = i.useRef(null),
         R = (e) =>
             (0, r.jsxs)(
                 O.Z,
                 U(
-                    k(
+                    M(
                         {
-                            ref: N,
-                            className: L.roleMention,
+                            ref: C,
+                            className: x.roleMention,
                             color: S ? g.color : null,
                             roleColors: S ? A : null,
                         },
@@ -298,7 +295,7 @@ function F(e) {
                                 (0, r.jsx)(u.FhE, {
                                     color: (0, s.Rf)(g.color),
                                     colors: A,
-                                    className: x.roleDot,
+                                    className: L.roleDot,
                                     background: !1,
                                     tooltip: !1,
                                 }),
@@ -316,12 +313,12 @@ function F(e) {
         : (0, r.jsx)(m.Gt, {
               value: f,
               children: (0, r.jsx)(u.yRy, {
-                  targetElementRef: N,
+                  targetElementRef: C,
                   preload: async () => {
                       null != t && (await (0, y.H)(o, t));
                   },
                   renderPopout: (e) =>
-                      (0, r.jsx)(V, {
+                      (0, r.jsx)(Z, {
                           guildId: o,
                           channelId: n,
                           roleId: t,

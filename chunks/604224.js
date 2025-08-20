@@ -1,61 +1,61 @@
-n.d(t, { Z: () => j });
-var i = n(951288);
+n.d(t, { Z: () => y });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(100527),
-    a = n(906732),
-    l = n(663389),
-    o = n(10298),
+var i = n(442837),
+    a = n(100527),
+    o = n(906732),
+    s = n(663389),
+    l = n(10298),
     c = n(526156),
-    d = n(406613),
-    u = n(314394),
-    m = n(625528),
-    p = n(674116),
-    g = n(754367),
+    u = n(406613),
+    d = n(314394),
+    f = n(625528),
+    _ = n(674116),
+    p = n(754367),
     h = n(661950),
-    f = n(526761),
-    b = n(726985),
-    x = n(981631),
-    _ = n(388032);
-function j() {
-    let { analyticsLocations: e } = (0, a.ZP)([s.Z.USER_SETTINGS_VOICE_AND_VIDEO]),
-        t = (0, r.e7)([l.Z], () => l.Z.getSubsection()),
-        { showRefreshedSettings: n } = (0, d.F)({ location: "UserSettingsVoiceAndVideo" });
-    if (!n) return (0, i.jsx)(p.Z, {});
-    let j = [
+    m = n(526761),
+    g = n(726985),
+    E = n(981631),
+    b = n(388032);
+function y() {
+    let { analyticsLocations: e } = (0, o.ZP)([a.Z.USER_SETTINGS_VOICE_AND_VIDEO]),
+        t = (0, i.e7)([s.Z], () => s.Z.getSubsection()),
+        { showRefreshedSettings: n } = (0, u.F)({ location: "UserSettingsVoiceAndVideo" });
+    if (!n) return (0, r.jsx)(_.Z, {});
+    let y = [
             {
-                title: _.intl.string(_.t.K3lovL),
+                title: b.intl.string(b.t.K3lovL),
                 component: h.Z,
-                setting: b.s6.VOICE_AND_VIDEO_VOICE_TAB,
+                setting: g.s6.VOICE_AND_VIDEO_VOICE_TAB,
             },
             {
-                title: _.intl.string(_.t.FlNoSU),
-                component: m.Z,
-                setting: b.s6.VOICE_AND_VIDEO_VIDEO_TAB,
-                subsection: f.gP,
+                title: b.intl.string(b.t.FlNoSU),
+                component: f.Z,
+                setting: g.s6.VOICE_AND_VIDEO_VIDEO_TAB,
+                subsection: m.gP,
             },
             {
-                title: _.intl.string(_.t.ABjMWF),
-                component: u.Z,
-                setting: b.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
-                subsection: f.GA,
+                title: b.intl.string(b.t.ABjMWF),
+                component: d.Z,
+                setting: g.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
+                subsection: m.GA,
             },
             {
-                title: _.intl.string(_.t.OFpL3d),
-                component: g.Z,
-                setting: b.s6.VOICE_AND_VIDEO_DEBUG_TAB,
+                title: b.intl.string(b.t.OFpL3d),
+                component: p.Z,
+                setting: g.s6.VOICE_AND_VIDEO_DEBUG_TAB,
             },
         ],
-        E = j.findIndex((e) => null != e.subsection && e.subsection === t);
-    return (0, i.jsx)(a.Gt, {
+        O = y.findIndex((e) => null != e.subsection && e.subsection === t);
+    return (0, r.jsx)(o.Gt, {
         value: e,
-        children: (0, i.jsx)(o.N, {
-            header: _.intl.string(_.t.B1fFpa),
-            children: (0, i.jsx)(c.Z, {
-                parentSetting: b.s6.VOICE_AND_VIDEO,
-                settingsSection: x.oAB.VOICE,
-                tabs: j,
-                defaultTabIndex: E > -1 ? E : void 0,
+        children: (0, r.jsx)(l.N, {
+            header: b.intl.string(b.t.B1fFpa),
+            children: (0, r.jsx)(c.Z, {
+                parentSetting: g.s6.VOICE_AND_VIDEO,
+                settingsSection: E.oAB.VOICE,
+                tabs: y,
+                defaultTabIndex: O > -1 ? O : void 0,
             }),
         }),
     });

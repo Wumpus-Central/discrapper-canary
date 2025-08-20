@@ -1,5 +1,5 @@
-r.d(t, { u: () => n });
-let n = {
+n.d(t, { u: () => r });
+let r = {
     allowList: !0,
     allowHeading: !0,
     allowLinks: !0,

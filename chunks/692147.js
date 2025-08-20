@@ -1,60 +1,62 @@
-n.d(t, { Z: () => p });
-var i = n(951288),
-    l = n(647438),
-    r = n(392711),
+n.d(t, { Z: () => h });
+var r = n(951288),
+    i = n(647438),
+    a = n(392711),
     o = n(399606),
-    a = n(351780),
-    s = n(576125),
+    s = n(351780),
+    l = n(576125),
     c = n(465858),
     u = n(112843),
     d = n(524484);
-function h(e) {
-    let { reactionRef: t, count: n } = e,
-        i = l.useRef(n),
-        s = (0, o.e7)([a.Z], () => a.Z.getState()),
-        d = (0, u.Z)(),
-        h = (0, c.Z)(t);
+function f(e, t, n) {
     return (
-        l.useEffect(() => {
-            if (n > i.current && null != h) {
-                let e = (0, r.clamp)(n, s.confettiCount / 2, 2 * s.confettiCount);
-                d.fire(h.x, h.y, { count: e });
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e) {
+    let { reactionRef: t, count: n } = e,
+        r = i.useRef(n),
+        l = (0, o.e7)([s.Z], () => s.Z.getState()),
+        d = (0, u.Z)(),
+        f = (0, c.Z)(t);
+    return (
+        i.useEffect(() => {
+            if (n > r.current && null != f) {
+                let e = (0, a.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
+                d.fire(f.x, f.y, { count: e });
             }
-            i.current = n;
-        }, [n, h, d, s.confettiCount]),
+            r.current = n;
+        }, [n, f, d, l.confettiCount]),
         null
     );
 }
-function p(e) {
-    return (0, i.jsx)(s.Z, {
+function h(e) {
+    return (0, r.jsx)(l.Z, {
         confettiLocation: d.Hn.REACTION,
-        children: (0, i.jsx)(
-            h,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, e),
-        ),
+        children: (0, r.jsx)(p, _({}, e)),
     });
 }

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
-var i = n(951288);
+n.d(t, { Z: () => s });
+var r = n(951288);
 n(647438);
-var r = n(603963),
-    s = n(894939),
-    a = n(726985);
-function l() {
-    return (0, i.jsx)(r.Z, {
-        webSetting: a.s6.VOICE_AND_VIDEO_SOUNDS,
-        children: (0, i.jsx)(s.Z, { refreshStyles: !0 }),
+var i = n(603963),
+    a = n(894939),
+    o = n(726985);
+function s() {
+    return (0, r.jsx)(i.Z, {
+        webSetting: o.s6.VOICE_AND_VIDEO_SOUNDS,
+        children: (0, r.jsx)(a.Z, { refreshStyles: !0 }),
     });
 }

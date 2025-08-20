@@ -29,18 +29,18 @@ function p(e) {
             hideBioSection: S,
             shouldOpenBadgeTooltip: A,
         } = e,
-        N = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
-        C = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        C = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
+        N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         R = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
         P = null != y ? y : null == p ? void 0 : p.pronouns,
         w = (0, d.Ly)({
             pendingNickname: g,
             pendingGlobalName: E,
             user: n,
-            guildMember: N,
+            guildMember: C,
         }),
         D = () => {
-            if (null != N && null !== m && (null != N.avatar || null != m))
+            if (null != C && null !== m && (null != C.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: n,
                     nickname: w,
@@ -71,7 +71,7 @@ function p(e) {
                 (0, r.jsx)(s.Z, {
                     user: n,
                     bio: R,
-                    hidePersonalInformation: C,
+                    hidePersonalInformation: N,
                     viewFullBioDisabled: !0,
                 }),
         ],

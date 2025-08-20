@@ -26,8 +26,8 @@ var r = n(526167),
     T = n(241372),
     S = n(538387),
     A = n(213921),
-    N = n(34721),
-    C = n(410693),
+    C = n(34721),
+    N = n(410693),
     R = n(235731);
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -35,7 +35,7 @@ function P() {
 }
 let w = {
     DEFAULT_AVATARS: [o, s, l, c, u, d],
-    DEFAULT_PROVISIONAL_AVATARS: [I, T, S, A, N, C],
+    DEFAULT_PROVISIONAL_AVATARS: [I, T, S, A, C, N],
     DEFAULT_GROUP_DM_AVATARS: [f, _, p, h, m, g, E, b],
     BOT_AVATARS: {
         clyde: a,

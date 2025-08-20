@@ -7,10 +7,10 @@ function l(e) {
     let { type: n, children: t, value: l, items: c } = e;
     switch (n) {
         case "ordered":
-            let i = (l + c.length - 1).toString().length;
+            let a = (l + c.length - 1).toString().length;
             return (0, r.jsx)("ol", {
                 start: l,
-                style: { "--totalCharacters": i },
+                style: { "--totalCharacters": a },
                 children: t,
             });
         case "unordered":

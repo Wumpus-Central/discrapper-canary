@@ -1,21 +1,21 @@
-n.d(t, { Z: () => o });
-var i = n(951288);
+n.d(t, { Z: () => l });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(774078),
-    a = n(55935),
-    l = n(388032);
-let o = function (e) {
+var i = n(481060),
+    a = n(774078),
+    o = n(55935),
+    s = n(388032);
+let l = function (e) {
     let { className: t, cooldown: n } = e,
-        o = (0, s.Z)(n);
-    return (0, i.jsx)(r.Text, {
+        l = (0, a.Z)(n);
+    return (0, r.jsx)(i.Text, {
         className: t,
         variant: "text-sm/medium",
         color: "text-muted",
-        children: (0, a.QX)(o, {
-            days: l.t.WUTPDQ,
-            hours: l.t.c1qodX,
-            minutes: l.t["2+A3dn"],
+        children: (0, o.QX)(l, {
+            days: s.t.WUTPDQ,
+            hours: s.t.c1qodX,
+            minutes: s.t["2+A3dn"],
         }),
     });
 };

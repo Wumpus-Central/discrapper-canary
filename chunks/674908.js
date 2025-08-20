@@ -21,9 +21,9 @@ var r = n(951288),
     _ = n(20437),
     w = n(356659),
     C = n(710111),
-    P = n(388032),
-    k = n(612683),
-    O = n(413135).Buffer;
+    k = n(388032),
+    O = n(612683),
+    P = n(413135).Buffer;
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ function E(e) {
                 }),
             );
             (0, u.ZDy)(async () => {
-                let { default: l } = await Promise.all([n.e("56035"), n.e("78356")]).then(n.bind(n, 758961)),
+                let { default: l } = await n.e("56035").then(n.bind(n, 758961)),
                     i = (null == a ? void 0 : a.guild_id) != null ? f.Z.getGuild(a.guild_id) : null,
                     o = null != i && (0, m.Gw)(i, v.Z, h.default).canCreateExpressions,
                     s = null == E || "" === E ? (0, w.yl)(g.default.extractTimestamp(t.id)) : E,
@@ -130,7 +130,7 @@ function E(e) {
                     }),
                 ),
                 n = await e.arrayBuffer();
-            await d.Z.fileManager.saveWithDialog(O.from(n), (0, w.EF)(t.id));
+            await d.Z.fileManager.saveWithDialog(P.from(n), (0, w.EF)(t.id));
         } catch (e) {
         } finally {
             M(null);
@@ -156,14 +156,14 @@ function E(e) {
             });
     }
     return (0, r.jsxs)("div", {
-        className: k.clipForm,
+        className: O.clipForm,
         children: [
             (0, r.jsxs)("div", {
-                className: i()(k.clipFormSection, k.editSection),
+                className: i()(O.clipFormSection, O.editSection),
                 children: [
                     (0, r.jsx)(u.xJW, {
-                        className: k.clipFormItem,
-                        title: P.intl.string(P.t.SJKc5u),
+                        className: O.clipFormItem,
+                        title: k.intl.string(k.t.SJKc5u),
                         children: (0, r.jsx)(u.oil, {
                             onChange: (e) => {
                                 "" === e ? R(void 0) : R(e);
@@ -171,46 +171,46 @@ function E(e) {
                             value: E,
                             minLength: w.XH,
                             maxLength: w.MG,
-                            placeholder: P.intl.string(P.t.Cyxddn),
+                            placeholder: k.intl.string(k.t.Cyxddn),
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: k.clipFormSwitches,
+                        className: O.clipFormSwitches,
                         children: [
                             (0, r.jsx)(u.j7V, {
                                 onChange: Z,
                                 value: A,
                                 hideBorder: !0,
-                                children: P.intl.string(P.t.GnQui4),
+                                children: k.intl.string(k.t.GnQui4),
                             }),
                             (0, r.jsx)(u.j7V, {
                                 onChange: I,
                                 value: D,
                                 hideBorder: !0,
-                                children: P.intl.string(P.t["5mVOCQ"]),
+                                children: k.intl.string(k.t["5mVOCQ"]),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: i()(k.clipFormSection, k.metadataSection),
+                className: i()(O.clipFormSection, O.metadataSection),
                 children: [
                     (0, r.jsx)(j.Z, { clip: t }),
                     (0, r.jsx)(y.Z, {
-                        className: k.userList,
+                        className: O.userList,
                         clip: t,
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: k.clipFormFooter,
+                className: O.clipFormFooter,
                 children: [
                     (0, r.jsx)(s.zx, {
                         submitting: "share" === B,
                         disabled: null != B && "share" !== B,
                         color: s.zx.Colors.BRAND,
-                        wrapperClassName: k.clipFormFooterButton,
+                        wrapperClassName: O.clipFormFooterButton,
                         onClick: () =>
                             z({
                                 clip: N(S({}, t), { name: E }),
@@ -221,21 +221,21 @@ function E(e) {
                                     o.Mr(w.Ut), o.Mr(w.Qr);
                                 },
                             }),
-                        children: P.intl.string(P.t.I8lglZ),
+                        children: k.intl.string(k.t.I8lglZ),
                     }),
                     (0, r.jsx)(s.zx, {
                         size: s.zx.Sizes.ICON,
-                        className: k.clipFormFooterButton,
+                        className: O.clipFormFooterButton,
                         disabled: null != B,
-                        wrapperClassName: i()(k.clipFormFooterButton, { [k.submittingWrapperFix]: null != B }),
+                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != B }),
                         color: s.zx.Colors.PRIMARY,
                         onClick: L,
-                        children: P.intl.string(P.t.K344S0),
+                        children: k.intl.string(k.t.K344S0),
                     }),
                     (0, r.jsx)(s.zx, {
-                        "aria-label": P.intl.string(P.t.PdRCRk),
+                        "aria-label": k.intl.string(k.t.PdRCRk),
                         size: s.zx.Sizes.ICON,
-                        wrapperClassName: i()(k.clipFormFooterButton, { [k.submittingWrapperFix]: null != B }),
+                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != B }),
                         submitting: "export" === B,
                         disabled: null != B && "export" !== B,
                         color: s.zx.Colors.PRIMARY,

@@ -78,8 +78,8 @@ function O(e) {
         {
             progressBarFillWidthFactor: S,
             isProgressBarAnimationComplete: A,
-            setShouldFireConfetti: N,
-            shouldFireConfetti: C,
+            setShouldFireConfetti: C,
+            shouldFireConfetti: N,
             tierMarkerAnimationPosition: R,
         } = y({
             fillFactor: I,
@@ -132,7 +132,7 @@ function O(e) {
                             guild: t,
                             isProgressBarAnimationComplete: A,
                             setConfettiCount: E,
-                            setShouldFireConfetti: N,
+                            setShouldFireConfetti: C,
                             tier: e,
                             tierMarkerAnimationPosition: R,
                             totalAvailableBoostsCount: T,
@@ -144,7 +144,7 @@ function O(e) {
                 (0, r.jsx)(u.Z, {
                     confettiCount: g,
                     confettiTriggerRef: O,
-                    isFiring: C,
+                    isFiring: N,
                 }),
             ],
         })

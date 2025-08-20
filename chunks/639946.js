@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(471445),
-    a = n(742593),
+    s = n(742593),
     o = n(83908);
-function s(e) {
+function a(e) {
     let { channel: t } = e,
         n = (0, l.Th)(t.type);
     return (0, r.jsxs)("div", {
@@ -33,18 +33,18 @@ function c(e) {
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
-            (0, r.jsx)(a.HZ, {
+            (0, r.jsx)(s.HZ, {
                 className: o.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n,
             }),
-            (0, r.jsx)(a.Rf, {
+            (0, r.jsx)(s.Rf, {
                 name: n.name,
                 description: n.description,
                 guildId: n.guild_id,
             }),
-            null != t && n.channel_id === t.id ? (0, r.jsx)(s, { channel: t }) : null,
+            null != t && n.channel_id === t.id ? (0, r.jsx)(a, { channel: t }) : null,
         ],
     });
 }

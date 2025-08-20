@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(981631),
     S = n(388032),
     A = n(144867),
-    N = n(769860);
-function C(e, t) {
+    C = n(769860);
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,17 +67,17 @@ function w(e) {
             title: R,
             type: w,
             guildBoostProps: D,
-            analyticsSource: L,
-            analyticsLocation: x,
-            body: M,
-            context: k,
-            glowUp: j,
+            analyticsSource: x,
+            analyticsLocation: L,
+            body: j,
+            context: M,
+            glowUp: k,
             modalClassName: U,
             modalContentClassName: G,
             artContainerClassName: B,
-            artClassName: V,
-            headerClassName: F,
-            bodyClassName: Z,
+            artClassName: Z,
+            headerClassName: V,
+            bodyClassName: F,
             transitionState: H,
             onClose: Y,
             onSubscribeClick: W,
@@ -103,7 +103,7 @@ function w(e) {
             smallText: ef = !1,
             footerClassName: e_,
         } = e,
-        ep = C(e, [
+        ep = N(e, [
             "title",
             "type",
             "guildBoostProps",
@@ -152,9 +152,9 @@ function w(e) {
             !eh,
         { analyticsLocations: eb } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         ey = {
-            analyticsLocation: x,
+            analyticsLocation: L,
             analyticsLocations: eb,
-            analyticsSource: L,
+            analyticsSource: x,
             guildBoostProps: D,
             type: w,
         },
@@ -196,7 +196,7 @@ function w(e) {
     let eS = () => {
             if (eh)
                 return (0, r.jsx)(p.Z, {
-                    analyticsLocation: x,
+                    analyticsLocation: L,
                     guild: D.guild,
                     onClose: Y,
                 });
@@ -212,7 +212,7 @@ function w(e) {
             return (0, r.jsx)(y.Z, {
                 className: es,
                 showGradient: ea || eo,
-                premiumModalAnalyticsLocation: x,
+                premiumModalAnalyticsLocation: L,
                 subscriptionTier: et,
                 size: l.zx.Sizes.SMALL,
                 color: ea || eo ? l.zx.Colors.CUSTOM : l.zx.Colors.GREEN,
@@ -224,15 +224,15 @@ function w(e) {
             });
         },
         eA = ee ? o()(A.artContainer, A.artContainerBoxShadow, B) : o()(A.artContainer, B),
-        eN = null;
+        eC = null;
     return (
         null != ep.artURL
-            ? (eN = (0, r.jsx)("img", {
-                  className: o()(V, A.art),
+            ? (eC = (0, r.jsx)("img", {
+                  className: o()(Z, A.art),
                   alt: "",
                   src: ep.artURL,
               }))
-            : null != ep.artElement && (eN = ep.artElement),
+            : null != ep.artElement && (eC = ep.artElement),
         (0, r.jsxs)(c.Y0X, {
             "data-migration-pending": !0,
             className: o()(A.root, !eE && U),
@@ -240,16 +240,16 @@ function w(e) {
             transitionState: H,
             parentComponent: "PremiumUpsellModal",
             children: [
-                null != eN &&
+                null != eC &&
                     (0, r.jsxs)("div", {
                         className: eA,
                         children: [
-                            eN,
+                            eC,
                             J
                                 ? (0, r.jsx)("img", {
                                       className: A.sparkleBadge,
                                       alt: "",
-                                      src: N,
+                                      src: C,
                                   })
                                 : null,
                         ],
@@ -269,11 +269,11 @@ function w(e) {
                                         ? a
                                         : I.Si.TIER_2,
                                 headingText: R,
-                                context: k,
-                                analyticsLocationObject: x,
+                                context: M,
+                                analyticsLocationObject: L,
                                 discountOffer: eg,
                                 trialOffer: em,
-                                children: j,
+                                children: k,
                             })
                           : (0, r.jsxs)("div", {
                                 className: A.contentContainer,
@@ -283,7 +283,7 @@ function w(e) {
                                         className: A.bodyContent,
                                         children: [
                                             (0, r.jsxs)(c.X6q, {
-                                                className: o()(A.header, { [A.enhancedHeader]: ea }, F),
+                                                className: o()(A.header, { [A.enhancedHeader]: ea }, V),
                                                 variant: "heading-xl/bold",
                                                 children: [R, $ ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null],
                                             }),
@@ -291,8 +291,8 @@ function w(e) {
                                             ec,
                                             (0, r.jsx)(c.Text, {
                                                 variant: ef ? "text-sm/normal" : "text-md/normal",
-                                                className: o()(Z, A.subHeader),
-                                                children: M,
+                                                className: o()(F, A.subHeader),
+                                                children: j,
                                             }),
                                         ],
                                     }),

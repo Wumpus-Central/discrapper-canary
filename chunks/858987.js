@@ -119,44 +119,44 @@ function T(e) {
             planGroup: T,
             isPrepaid: S,
             isTrial: A,
-            makePurchase: N,
-            needsPaymentSource: C,
+            makePurchase: C,
+            needsPaymentSource: N,
             inReverseTrial: R,
             onNext: P,
             onPaymentSourceAdd: w,
         } = e,
         {
             application: D,
-            selectedPlan: L,
-            hasAcceptedTerms: x,
-            purchaseType: M,
-            paymentSourceId: k,
-            activeSubscription: j,
+            selectedPlan: x,
+            hasAcceptedTerms: L,
+            purchaseType: j,
+            paymentSourceId: M,
+            activeSubscription: k,
             devShelfFetchState: U,
             hasPaymentSources: G,
         } = (0, c.JL)(),
         { enabled: B } = _.Z.useConfig({ location: "SubscriptionReviewButton" }),
-        V = v({
-            purchaseType: M,
-            plan: L,
+        Z = v({
+            purchaseType: j,
+            plan: x,
             premiumSubscription: E,
             isGift: y,
             planGroup: T,
             isPrepaidPaymentSource: S,
             inReverseTrial: R,
-            paymentSourceId: k,
+            paymentSourceId: M,
             hasPaymentSources: G,
         }),
-        { analyticsLocations: F } = (0, l.ZP)();
+        { analyticsLocations: V } = (0, l.ZP)();
     if (null != i || null != a || d) {
         let e = y && B ? "expressive" : "active";
         return (0, r.jsx)(o.zxk, {
             variant: e,
-            text: V,
+            text: Z,
             disabled: !0,
         });
     }
-    if (C && G)
+    if (N && G)
         return (0, r.jsx)(o.ua7, {
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
@@ -166,7 +166,7 @@ function T(e) {
                         b(
                             {
                                 variant: "primary",
-                                text: V,
+                                text: Z,
                             },
                             e,
                         ),
@@ -178,7 +178,7 @@ function T(e) {
                     ),
                 ),
         });
-    if (C && !G)
+    if (N && !G)
         return (0, r.jsx)(o.ua7, {
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
@@ -188,7 +188,7 @@ function T(e) {
                         b(
                             {
                                 variant: "active",
-                                text: V,
+                                text: Z,
                             },
                             e,
                         ),
@@ -210,7 +210,7 @@ function T(e) {
                         b(
                             {
                                 variant: "active",
-                                text: V,
+                                text: Z,
                             },
                             e,
                         ),
@@ -225,14 +225,14 @@ function T(e) {
     if (A)
         return (0, r.jsx)(o.zxk, {
             variant: "expressive",
-            "data-testid": x ? "purchase" : "submitButton",
-            text: V,
-            onClick: x ? N : () => I(n, f),
+            "data-testid": L ? "purchase" : "submitButton",
+            text: Z,
+            onClick: L ? C : () => I(n, f),
             loading: m,
             iconPosition: "start",
             icon: () => (0, r.jsx)(o.SrA, { color: "currentColor" }),
         });
-    else if (!x)
+    else if (!L)
         return (0, r.jsx)(o.ua7, {
             text: g.intl.string(g.t.XdvBLS),
             children: (e) =>
@@ -242,7 +242,7 @@ function T(e) {
                         b(
                             {
                                 variant: "active",
-                                text: V,
+                                text: Z,
                             },
                             e,
                         ),
@@ -254,29 +254,29 @@ function T(e) {
                     ),
                 ),
         });
-    else if (R && null != j && null != k)
+    else if (R && null != k && null != M)
         return (0, r.jsx)(p.Z, {
-            activeSubscription: j,
+            activeSubscription: k,
             onNext: P,
             isSubmitting: m,
-            paymentSourceId: k,
-            buttonLabel: V,
-            analyticsLocations: F,
+            paymentSourceId: M,
+            buttonLabel: Z,
+            analyticsLocations: V,
         });
     else if (y && B)
         return (0, r.jsx)(o.zxk, {
             variant: "expressive",
-            text: V,
+            text: Z,
             "data-testid": "purchase",
-            onClick: N,
+            onClick: C,
             loading: m,
         });
     else
         return (0, r.jsx)(o.zxk, {
             variant: "active",
-            text: V,
+            text: Z,
             "data-testid": "purchase",
-            onClick: N,
+            onClick: C,
             loading: m,
         });
 }

@@ -75,14 +75,14 @@ let y = function (e) {
             postalCode: "",
         }),
         [T, S] = i.useState({}),
-        [A, N] = i.useState({}),
-        { setFocusLockDisabled: C } = i.useContext(s.M);
+        [A, C] = i.useState({}),
+        { setFocusLockDisabled: N } = i.useContext(s.M);
     i.useEffect(() => () => {
-        void 0 !== C && C(!1);
+        void 0 !== N && N(!1);
     });
     let R = i.useCallback(() => {
-        void 0 !== C && C(!0);
-    }, [C]);
+        void 0 !== N && N(!0);
+    }, [N]);
     function P(e, t) {
         !!y[e] !== t && O((n) => b(g({}, n), { [e]: t }));
     }
@@ -95,13 +95,13 @@ let y = function (e) {
         [T, v],
     );
     function D() {
-        N(w());
+        C(w());
     }
     i.useEffect(() => {
         let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(w(!0)).length;
         a.current({ name: v.name }, !!e);
     }, [y, v, w]);
-    let L = [
+    let x = [
         {
             fields: [
                 {
@@ -163,7 +163,7 @@ let y = function (e) {
             ],
         },
     ];
-    function x(e, t) {
+    function L(e, t) {
         if ("name" !== t && "country" !== t && "postalCode" !== t) return;
         let n = g({}, v),
             r = g({}, T),
@@ -173,9 +173,9 @@ let y = function (e) {
             r[t] && "" === e ? "name" === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t],
             I(n),
             S(r),
-            N(i);
+            C(i);
     }
-    function M() {
+    function j() {
         var e;
         return (null == (e = u.default.getCurrentUser()) ? void 0 : e.nsfwAllowed)
             ? (0, r.jsxs)("div", {
@@ -205,13 +205,13 @@ let y = function (e) {
     }
     return (0, r.jsxs)("div", {
         children: [
-            M(),
+            j(),
             (0, r.jsx)(d.Z, {
-                form: L,
+                form: x,
                 errors: A,
                 formError: n,
                 values: v,
-                onFieldChange: x,
+                onFieldChange: L,
                 onFieldBlur: D,
             }),
         ],

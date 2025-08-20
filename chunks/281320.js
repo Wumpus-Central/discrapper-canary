@@ -1,52 +1,63 @@
 n.d(t, {
-    M: () => u,
-    Z: () => p,
+    M: () => c,
+    Z: () => h,
 }),
     n(388685);
 var r,
-    i,
-    l,
-    o = n(442837),
+    i = n(442837),
     a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let s = new Map(),
-    c = new Map();
-var u =
-    (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-    (i[(i.FETCHING = 1)] = "FETCHING"),
-    (i[(i.FETCHED = 2)] = "FETCHED"),
-    i);
-class d extends (r = o.ZP.Store) {
+    l = new Map();
+var c = (function (e) {
+    return (
+        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.FETCHED = 2)] = "FETCHED"),
+        e
+    );
+})({});
+function u() {
+    s.clear(), l.clear();
+}
+function d(e) {
+    let { guildId: t, priceTierType: n } = e;
+    l.has(t) || l.set(t, new Map()), l.get(t).set(n, 1);
+}
+function f(e) {
+    let { guildId: t, priceTierType: n, priceTiers: r } = e;
+    l.has(t) || l.set(t, new Map()), l.get(t).set(n, 2), s.has(t) || s.set(t, new Map()), s.get(t).set(n, r);
+}
+function _(e) {
+    let { guildId: t, priceTierType: n } = e;
+    l.has(t) || l.set(t, new Map()), l.get(t).set(n, 2);
+}
+class p extends (r = i.ZP.Store) {
     getPriceTiersFetchStateForGuildAndType(e, t) {
         var n, r;
-        return null != (r = null == (n = c.get(e)) ? void 0 : n.get(t)) ? r : 0;
+        return null != (r = null == (n = l.get(e)) ? void 0 : n.get(t)) ? r : 0;
     }
     getPriceTiersForGuildAndType(e, t) {
         var n;
         return null == (n = s.get(e)) ? void 0 : n.get(t);
     }
 }
-(l = "displayName") in d
-    ? Object.defineProperty(d, l, {
-          value: "CreatorMonetizationStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[l] = "CreatorMonetizationStore");
-let p = new d(a.Z, {
-    CONNECTION_OPEN: function () {
-        s.clear(), c.clear();
-    },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        c.has(t) || c.set(t, new Map()), c.get(t).set(n, 1);
-    },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function (e) {
-        let { guildId: t, priceTierType: n, priceTiers: r } = e;
-        c.has(t) || c.set(t, new Map()), c.get(t).set(n, 2), s.has(t) || s.set(t, new Map()), s.get(t).set(n, r);
-    },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        c.has(t) || c.set(t, new Map()), c.get(t).set(n, 2);
-    },
+o(p, "displayName", "CreatorMonetizationStore");
+let h = new p(a.Z, {
+    CONNECTION_OPEN: u,
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH: d,
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: f,
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: _,
 });

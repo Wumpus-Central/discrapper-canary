@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => M,
     wU: () => D,
 }),
     n(388685);
@@ -122,14 +122,14 @@ let A = new a.h(
             return "".concat(n, "-").concat(r, "-").concat(t);
         },
     ),
-    N = (e) => {
+    C = (e) => {
         let { userId: t, channelId: n } = e;
         return "".concat(t, "-").concat(n);
     };
-function C(e) {
+function N(e) {
     var t, n, r, i, a, s;
     let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        c = T.get(N(e)),
+        c = T.get(C(e)),
         u = E(m({}, c, e), {
             value: null != (n = null != (t = e.value) ? t : null == c ? void 0 : c.value) ? n : 0,
             multiplier: Math.min(
@@ -138,25 +138,25 @@ function C(e) {
             ),
             decayInterval: null != (a = null == c ? void 0 : c.decayInterval) ? a : new o.Xp(),
         });
-    T.set(N(e), u),
+    T.set(C(e), u),
         l &&
             (null == (s = u.decayInterval) ||
                 s.start(v, () => {
-                    let e = T.get(N(u));
+                    let e = T.get(C(u));
                     if (null != e) {
                         let n = u.multiplier !== e.multiplier && u.value !== e.value;
                         if (e.value <= 0 || n) {
                             var t;
                             null == (t = e.decayInterval) || t.stop(),
                                 e.value <= 0 &&
-                                    (C(
+                                    (N(
                                         E(m({}, e), {
                                             value: 0,
                                             multiplier: 1,
                                         }),
                                     ),
-                                    M.emitChange());
-                        } else C(E(m({}, e), { value: e.value - 1 })), M.emitChange();
+                                    j.emitChange());
+                        } else N(E(m({}, e), { value: e.value - 1 })), j.emitChange();
                     }
                 }));
 }
@@ -167,7 +167,7 @@ function P(e) {
     var { type: t } = e,
         n = b(e, ["type"]);
     if (!d.Z.isEnabled()) return !1;
-    C(n);
+    N(n);
 }
 function w(e) {
     let { comboMessage: t } = e;
@@ -177,7 +177,7 @@ function w(e) {
 function D(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-function L(e) {
+function x(e) {
     var t, n;
     let {
         channelId: r,
@@ -187,7 +187,7 @@ function L(e) {
     let s = l.default.getId();
     if (!D(null == a ? void 0 : a.id, s, o, I)) return !1;
     let c = T.get(
-        N({
+        C({
             userId: null != (t = null == a ? void 0 : a.id) ? t : "???",
             channelId: r,
         }),
@@ -209,13 +209,13 @@ function L(e) {
     }
     return !1;
 }
-class x extends (r = i.ZP.Store) {
+class L extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default, c.Z);
     }
     getComboScore(e, t) {
         let n = T.get(
-            N({
+            C({
                 userId: e,
                 channelId: t,
             }),
@@ -224,7 +224,7 @@ class x extends (r = i.ZP.Store) {
     }
     getUserCombo(e, t) {
         return T.get(
-            N({
+            C({
                 userId: e,
                 channelId: t,
             }),
@@ -248,10 +248,10 @@ class x extends (r = i.ZP.Store) {
         return null != i ? (0, f.KH)(i, r) * n : 0;
     }
 }
-h(x, "displayName", "PoggermodeStore");
-let M = new x(s.Z, {
+h(L, "displayName", "PoggermodeStore");
+let j = new L(s.Z, {
         POGGERMODE_UPDATE_COMBO: P,
         POGGERMODE_UPDATE_MESSAGE_COMBO: w,
-        MESSAGE_CREATE: L,
+        MESSAGE_CREATE: x,
     }),
-    k = M;
+    M = j;

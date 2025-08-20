@@ -1,20 +1,20 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => O,
     s: () => b,
 }),
     n(388685);
-var i,
-    r = n(951288),
-    s = n(647438),
-    a = n(512722),
-    l = n.n(a),
-    o = n(442837),
+var r,
+    i = n(951288),
+    a = n(647438),
+    o = n(512722),
+    s = n.n(o),
+    l = n(442837),
     c = n(755721),
-    d = n(481060),
-    u = n(893776),
-    m = n(468026),
-    p = n(594174),
-    g = n(388032);
+    u = n(481060),
+    d = n(893776),
+    f = n(468026),
+    _ = n(594174),
+    p = n(388032);
 function h(e, t, n) {
     return (
         t in e
@@ -28,70 +28,80 @@ function h(e, t, n) {
         e
     );
 }
-function f(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 h(e, t, n[t]);
             });
     }
     return e;
 }
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
 function b(e) {
-    return u.Z.verifyResend()
+    return d.Z.verifyResend()
         .then(() => {
-            (0, d.h7j)((t) => {
-                var n, i;
-                return (0, r.jsx)(
-                    d.ConfirmModal,
-                    ((n = f(
+            (0, u.h7j)((t) =>
+                (0, i.jsx)(
+                    u.ConfirmModal,
+                    E(
+                        m(
+                            {
+                                header: p.intl.string(p.t.LykQYm),
+                                confirmText: p.intl.string(p.t.BddRzc),
+                                confirmButtonColor: c.zx.Colors.BRAND,
+                            },
+                            t,
+                        ),
                         {
-                            header: g.intl.string(g.t.LykQYm),
-                            confirmText: g.intl.string(g.t.BddRzc),
-                            confirmButtonColor: c.zx.Colors.BRAND,
-                        },
-                        t,
-                    )),
-                    (i = i =
-                        {
-                            children: (0, r.jsx)(d.Text, {
+                            children: (0, i.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: g.intl.format(g.t.azKEPz, { email: e.email }),
+                                children: p.intl.format(p.t.azKEPz, { email: e.email }),
                             }),
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    n),
-                );
-            });
+                        },
+                    ),
+                ),
+            );
         })
         .catch((e) => {
             let { body: t } = e,
-                n = g.intl.string(g.t.XcrQNz);
+                n = p.intl.string(p.t.XcrQNz);
             null != t && t.email && (n = t.email),
-                (0, d.h7j)((e) =>
-                    (0, r.jsx)(
-                        m.default,
-                        f(
+                (0, u.h7j)((e) =>
+                    (0, i.jsx)(
+                        f.default,
+                        m(
                             {
-                                title: g.intl.string(g.t.VbTh0N),
+                                title: p.intl.string(p.t.VbTh0N),
                                 body: n,
                             },
                             e,
@@ -100,16 +110,16 @@ function b(e) {
                 );
         });
 }
-class x extends (i = s.Component) {
+class y extends (r = a.Component) {
     render() {
         let { color: e, look: t, size: n } = this.props;
-        return (0, r.jsx)(c.zx, {
+        return (0, i.jsx)(c.zx, {
             look: t,
             size: n,
             color: e,
             disabled: this.state.isSendingVerificationEmail,
             onClick: this.handleResendVerification,
-            children: g.intl.string(g.t.lm1UKi),
+            children: p.intl.string(p.t.lm1UKi),
         });
     }
     constructor(...e) {
@@ -124,11 +134,11 @@ class x extends (i = s.Component) {
             });
     }
 }
-h(x, "defaultProps", {
+h(y, "defaultProps", {
     size: c.zx.Sizes.MEDIUM,
     color: c.zx.Colors.BRAND,
 });
-let _ = o.ZP.connectStores([p.default], () => {
-    let e = p.default.getCurrentUser();
-    return l()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), { currentUser: e };
-})(x);
+let O = l.ZP.connectStores([_.default], () => {
+    let e = _.default.getCurrentUser();
+    return s()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), { currentUser: e };
+})(y);

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => m });
-var i,
-    r = n(951288),
-    s = n(647438),
-    a = n(120356),
-    l = n.n(a),
-    o = n(600164),
+n.d(t, { Z: () => p });
+var r,
+    i = n(951288),
+    a = n(647438),
+    o = n(120356),
+    s = n.n(o),
+    l = n(600164),
     c = n(803925);
-function d(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,36 +19,37 @@ function d(e, t, n) {
         e
     );
 }
-class u extends (i = s.PureComponent) {
+let d = (e) => {
+        let { children: t, className: n, splashArtURL: r } = e;
+        return (0, i.jsxs)(l.Z, {
+            className: s()(c.header, n),
+            align: l.Z.Align.CENTER,
+            children: [
+                (0, i.jsx)("div", {
+                    className: c.splashArt,
+                    style: null != r ? { backgroundImage: "url(".concat(r, ")") } : void 0,
+                }),
+                t,
+            ],
+        });
+    },
+    f = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)("div", {
+            className: s()(c.body, n),
+            children: t,
+        });
+    };
+class _ extends (r = a.PureComponent) {
     render() {
-        let { children: e, className: t, onMouseEnter: n, onMouseLeave: i } = this.props;
-        return (0, r.jsx)("div", {
-            className: l()(c.card, t),
+        let { children: e, className: t, onMouseEnter: n, onMouseLeave: r } = this.props;
+        return (0, i.jsx)("div", {
+            className: s()(c.card, t),
             onMouseEnter: n,
-            onMouseLeave: i,
+            onMouseLeave: r,
             children: e,
         });
     }
 }
-d(u, "Header", (e) => {
-    let { children: t, className: n, splashArtURL: i } = e;
-    return (0, r.jsxs)(o.Z, {
-        className: l()(c.header, n),
-        align: o.Z.Align.CENTER,
-        children: [
-            (0, r.jsx)("div", {
-                className: c.splashArt,
-                style: null != i ? { backgroundImage: "url(".concat(i, ")") } : void 0,
-            }),
-            t,
-        ],
-    });
-}),
-    d(u, "Body", (e) => {
-        let { children: t, className: n } = e;
-        return (0, r.jsx)("div", {
-            className: l()(c.body, n),
-            children: t,
-        });
-    });
-let m = u;
+u(_, "Header", d), u(_, "Body", f);
+let p = _;

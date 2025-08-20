@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(415506), n(642613);
+n.d(t, { Z: () => f }), n(415506), n(642613);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(226788),
     d = n(803351);
 let m = [a.p.OFFICIAL, a.p.TWITTER, a.p.YOUTUBE];
-function f(e) {
+function p(e) {
     let { website: t, trackClick: n } = e,
         {
             action: i,
@@ -126,7 +126,7 @@ function f(e) {
         },
     });
 }
-let p = function (e) {
+let f = function (e) {
     let { detectedGame: t, trackClick: n } = e;
     if (null == t.websites) return null;
     let i = t.websites
@@ -149,7 +149,7 @@ let p = function (e) {
                       className: l()(u.row, u.gapMd),
                       children: i.map((e) =>
                           (0, r.jsx)(
-                              f,
+                              p,
                               {
                                   website: e,
                                   trackClick: n,

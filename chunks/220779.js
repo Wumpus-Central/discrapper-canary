@@ -93,15 +93,15 @@ function T(e) {
             b(""), T((0, u.JM)(""));
         },
         A = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        N = i.useRef(null),
-        C = () => {
-            if (null == N.current) return "top";
-            let e = N.current.getBoundingClientRect(),
+        C = i.useRef(null),
+        N = () => {
+            if (null == C.current) return "top";
+            let e = C.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? "bottom" : "top";
         };
     return (0, r.jsx)(d.ZP, {
-        ref: N,
+        ref: C,
         placeholder: t,
         editorClassName: m,
         className: o()(E.replyInput, m),
@@ -135,7 +135,7 @@ function T(e) {
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
-        autoCompletePosition: C(),
+        autoCompletePosition: N(),
         renderAttachButton: l,
     });
 }

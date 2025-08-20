@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(895924),
     x = n(471518),
     v = n(425986),
-    j = n(216780),
-    O = n(390322),
+    O = n(216780),
+    j = n(390322),
     E = n(857192),
     S = n(626135),
     P = n(456100),
@@ -79,7 +79,7 @@ function D(e) {
         ? null
         : (null != g.id &&
               null != g.image_hash &&
-              (n = (0, j.$_)({
+              (n = (0, O.$_)({
                   itemId: g.id,
                   hash: g.image_hash,
                   containerWidth: 584,
@@ -113,13 +113,13 @@ let L = i.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: y } = e,
         x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        { id: v, guild_id: j } = l;
+        { id: v, guild_id: O } = l;
     i.useEffect(() => {
         S.default.track(A.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: v,
-            guild_id: j,
+            guild_id: O,
         });
-    }, [v, j]),
+    }, [v, O]),
         i.useEffect(() => {
             o || s();
         }, [s, o]);
@@ -160,7 +160,7 @@ let L = i.forwardRef(function (e, t) {
         V = F ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: M,
-        children: (0, r.jsx)(O.Z, {
+        children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
                 "aria-labelledby": k,

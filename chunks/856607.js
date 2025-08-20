@@ -1,41 +1,42 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(37234),
-    a = n(703656),
-    l = n(981631),
-    o = n(388032),
+var i = n(481060),
+    a = n(37234),
+    o = n(703656),
+    s = n(981631),
+    l = n(388032),
     c = n(433155),
-    d = n(322221);
-function u() {
-    return (0, i.jsxs)("div", {
+    u = n(322221);
+function d() {
+    let e = () => {
+        (0, o.uL)(s.Z5c.GUILD_DISCOVERY), a.xf();
+    };
+    return (0, r.jsxs)("div", {
         className: c.emptyState,
         children: [
-            (0, i.jsx)("img", {
-                src: d,
+            (0, r.jsx)("img", {
+                src: u,
                 alt: "",
                 className: c.image,
             }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 className: c.topSpacing,
                 variant: "heading-lg/extrabold",
-                children: o.intl.string(o.t.Z1OZCQ),
+                children: l.intl.string(l.t.Z1OZCQ),
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 className: c.topSpacing,
                 variant: "text-md/normal",
-                children: o.intl.string(o.t.ZSt4Tk),
+                children: l.intl.string(l.t.ZSt4Tk),
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.topSpacing,
-                children: (0, i.jsx)(r.zxk, {
+                children: (0, r.jsx)(i.zxk, {
                     variant: "primary",
-                    text: o.intl.string(o.t.jQ3pqq),
-                    onClick: () => {
-                        (0, a.uL)(l.Z5c.GUILD_DISCOVERY), s.xf();
-                    },
+                    text: l.intl.string(l.t.jQ3pqq),
+                    onClick: e,
                 }),
             }),
         ],

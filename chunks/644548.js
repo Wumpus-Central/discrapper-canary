@@ -38,27 +38,27 @@ let y = (e, t, n, r) => {
         let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: v } = (0, l.rv)({ entry: n }),
             { user: I, details: T, appName: S } = (0, g.n)(n),
-            { primaryColor: A, secondaryColor: N } = (0, d.Z)(null == v ? void 0 : v.src),
-            C = (0, c.yA)(n),
+            { primaryColor: A, secondaryColor: C } = (0, d.Z)(null == v ? void 0 : v.src),
+            N = (0, c.yA)(n),
             R = (0, c.Nq)(n),
             P = i.useCallback(
                 (e) => {
-                    if (null != t && null != I && null != C && null != R && (0, _.qy)(R))
+                    if (null != t && null != I && null != N && null != R && (0, _.qy)(R))
                         return (0, u.SO)({
                             entry: n,
                             applicationImageSrc: null == v ? void 0 : v.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                             description: y(n, t, I, R),
                             timestamp: E.intl.formatToPlainString(E.t.YL7UEx, {
-                                hours: Math.round(C / o.Z.Seconds.HOUR),
+                                hours: Math.round(N / o.Z.Seconds.HOUR),
                             }),
-                            colors: [A, N],
+                            colors: [A, C],
                             channelId: e,
                         });
                 },
-                [null == v ? void 0 : v.src, t, C, n, A, R, N, I],
+                [null == v ? void 0 : v.src, t, N, n, A, R, C, I],
             );
-        if (null == I || null == C || null == R || !(0, _.qy)(R)) return null;
+        if (null == I || null == N || null == R || !(0, _.qy)(R)) return null;
         let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
         return (0, r.jsxs)(h.yR, {
             children: [

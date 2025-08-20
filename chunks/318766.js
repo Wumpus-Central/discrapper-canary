@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => P,
-    u: () => N,
+    u: () => C,
 }),
     n(388685);
 var r = n(951288),
@@ -75,11 +75,11 @@ function I(e, t) {
 let T = 20,
     S = 18,
     A = 77,
-    N = {
+    C = {
         tension: 800,
         friction: 24,
     },
-    C = () => {
+    N = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)("div", {
             className: b.premiumTooltipContainer,
@@ -118,29 +118,29 @@ let P = function (e) {
             ref: P,
         } = e,
         [w, D] = i.useState(!1),
-        [L, x] = i.useState(50),
-        M = w || y,
-        k = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
-        j = R(L),
+        [x, L] = i.useState(50),
+        j = w || y,
+        M = (0, h.l)(b, "emojiButton", j ? "Hovered" : "Normal"),
+        k = R(x),
         U = i.useCallback(() => {
-            if (M) return;
+            if (j) return;
             let e = Math.floor(Math.random() * A);
-            D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
-        }, [M, D, x]),
+            D(!0), L(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
+        }, [j, D, L]),
         G = i.useCallback(() => {
             D(!1);
         }, [D]),
         B = i.useCallback(() => (0, _.x)(g.qR.EmojiButtonFocused), []),
-        V = (0, p.B4)(),
-        [F, Z] = (0, f.US)(V ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        H = F === c.z.TRIAL_NUX_EMOJI_BUTTON,
+        Z = (0, p.B4)(),
+        [V, F] = (0, f.US)(Z ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        H = V === c.z.TRIAL_NUX_EMOJI_BUTTON,
         Y = !y && H,
         W = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         K = i.useRef(null),
         z = null != P ? P : K;
     return (0, r.jsx)(u.ua7, {
         targetElementRef: z,
-        text: () => (0, r.jsx)(C, {}),
+        text: () => (0, r.jsx)(N, {}),
         "aria-label": E.intl.formatToMarkdownString(E.t["/7R4q6"], {}),
         position: "top",
         shouldShow: Y,
@@ -150,7 +150,7 @@ let P = function (e) {
             (0, r.jsx)(u.P3F, {
                 innerRef: z,
                 tabIndex: t,
-                className: o()(k, n),
+                className: o()(M, n),
                 onMouseEnter: () => {
                     var t;
                     U(), null == (t = e.onMouseEnter) || t.call(e);
@@ -158,7 +158,7 @@ let P = function (e) {
                 onMouseOver: U,
                 onMouseLeave: () => {
                     var t;
-                    G(), null == (t = e.onMouseLeave) || t.call(e), H && Z(m.L.USER_DISMISS);
+                    G(), null == (t = e.onMouseLeave) || t.call(e), H && F(m.L.USER_DISMISS);
                 },
                 onFocus: B,
                 onClick: (t) => {
@@ -175,24 +175,24 @@ let P = function (e) {
                     null != a
                         ? a()
                         : (0, r.jsx)(u.AMe, {
-                              config: N,
-                              to: { value: +!!M },
+                              config: C,
+                              to: { value: +!!j },
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
                                       className: b.spriteContainer,
-                                      style: I(O({}, j), {
+                                      style: I(O({}, k), {
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                                       }),
                                       children: [
                                           (0, r.jsx)("div", {
-                                              className: o()(b.sprite, b.spriteColored, M ? b.active : b.inactive),
+                                              className: o()(b.sprite, b.spriteColored, j ? b.active : b.inactive),
                                           }),
                                           (0, r.jsx)("div", {
                                               className: o()(
                                                   b.sprite,
                                                   H ? b.spritePremiumColored : b.spriteGreyscale,
-                                                  M ? b.inactive : b.active,
+                                                  j ? b.inactive : b.active,
                                                   { [b.reducedMotion]: W },
                                               ),
                                           }),

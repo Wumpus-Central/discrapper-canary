@@ -22,23 +22,23 @@ var r = n(127849),
     T = n(25124),
     S = n(199838),
     A = s.PROPER,
-    N = s.CONFIGURABLE,
-    C = "ArrayBuffer",
+    C = s.CONFIGURABLE,
+    N = "ArrayBuffer",
     R = "DataView",
     P = "prototype",
     w = "Wrong length",
     D = "Wrong index",
-    L = S.getterFor(C),
-    x = S.getterFor(R),
-    M = S.set,
-    k = r[C],
-    j = k,
-    U = j && j[P],
+    x = S.getterFor(N),
+    L = S.getterFor(R),
+    j = S.set,
+    M = r[N],
+    k = M,
+    U = k && k[P],
     G = r[R],
     B = G && G[P],
-    V = Object.prototype,
-    F = r.Array,
-    Z = r.RangeError,
+    Z = Object.prototype,
+    V = r.Array,
+    F = r.RangeError,
     H = i(y),
     Y = i([].reverse),
     W = g.pack,
@@ -70,42 +70,42 @@ var r = n(127849),
         });
     },
     et = function (e, t, n, r) {
-        var i = x(e),
+        var i = L(e),
             a = h(n),
             o = !!r;
-        if (a + t > i.byteLength) throw new Z(D);
+        if (a + t > i.byteLength) throw new F(D);
         var s = i.bytes,
             l = a + i.byteOffset,
             c = O(s, l, l + t);
         return o ? c : Y(c);
     },
     en = function (e, t, n, r, i, a) {
-        var o = x(e),
+        var o = L(e),
             s = h(n),
             l = r(+i),
             c = !!a;
-        if (s + t > o.byteLength) throw new Z(D);
+        if (s + t > o.byteLength) throw new F(D);
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
-    var er = A && k.name !== C;
+    var er = A && M.name !== N;
     !d(function () {
-        k(1);
+        M(1);
     }) ||
     !d(function () {
-        new k(-1);
+        new M(-1);
     }) ||
     d(function () {
-        return new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !N);
+        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !C);
     })
-        ? (((j = function (e) {
-              return f(this, U), v(new k(h(e)), this, j);
+        ? (((k = function (e) {
+              return f(this, U), v(new M(h(e)), this, k);
           })[P] = U),
-          (U.constructor = j),
-          I(j, k))
-        : er && N && l(k, "name", C),
-        b && E(B) !== V && b(B, V);
-    var ei = new G(new j(2)),
+          (U.constructor = k),
+          I(k, M))
+        : er && C && l(M, "name", N),
+        b && E(B) !== Z && b(B, Z);
+    var ei = new G(new k(2)),
         ea = i(B.setInt8);
     ei.setInt8(0, 2147483648),
         ei.setInt8(1, 2147483649),
@@ -123,24 +123,24 @@ if (o) {
                 { unsafe: !0 },
             );
 } else
-    (U = (j = function (e) {
+    (U = (k = function (e) {
         f(this, U);
         var t = h(e);
-        M(this, {
-            type: C,
-            bytes: H(F(t), 0),
+        j(this, {
+            type: N,
+            bytes: H(V(t), 0),
             byteLength: t,
         }),
             a || ((this.byteLength = t), (this.detached = !1));
     })[P]),
         (B = (G = function (e, t, n) {
             f(this, B), f(e, U);
-            var r = L(e),
+            var r = x(e),
                 i = r.byteLength,
                 o = _(t);
-            if (o < 0 || o > i) throw new Z("Wrong offset");
-            if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new Z(w);
-            M(this, {
+            if (o < 0 || o > i) throw new F("Wrong offset");
+            if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new F(w);
+            j(this, {
                 type: R,
                 buffer: e,
                 byteLength: n,
@@ -149,7 +149,7 @@ if (o) {
             }),
                 a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o));
         })[P]),
-        a && (ee(j, "byteLength", L), ee(G, "buffer", x), ee(G, "byteLength", x), ee(G, "byteOffset", x)),
+        a && (ee(k, "byteLength", x), ee(G, "buffer", L), ee(G, "byteLength", L), ee(G, "byteOffset", L)),
         u(B, {
             getInt8: function (e) {
                 return (et(this, 1, e)[0] << 24) >> 24;
@@ -202,9 +202,9 @@ if (o) {
                 en(this, 8, e, $, t, arguments.length > 2 && arguments[2]);
             },
         });
-T(j, C),
+T(k, N),
     T(G, R),
     (e.exports = {
-        ArrayBuffer: j,
+        ArrayBuffer: k,
         DataView: G,
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,21 +9,21 @@ var r = n(951288),
     u = n(481060),
     d = n(885006),
     m = n(810568),
-    f = n(221370),
-    p = n(388032),
+    p = n(221370),
+    f = n(388032),
     g = n(226788),
     x = n(802318);
-function h(e) {
+function j(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [l, h] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [v, j] = i.useState(!0),
-        [O, y] = i.useState(!1),
-        b = i.useRef(null),
-        { width: I, height: E } = (0, d.Z)();
+        [l, j] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [h, v] = i.useState(!0),
+        [O, b] = i.useState(!1),
+        y = i.useRef(null),
+        { width: I, height: P } = (0, d.Z)();
     return (i.useEffect(() => {
-        let e = b.current;
-        null != e && y(e.scrollHeight - e.clientHeight > 1 || !v);
-    }, [b, I, E, v]),
+        let e = y.current;
+        null != e && b(e.scrollHeight - e.clientHeight > 1 || !h);
+    }, [y, I, P, h]),
     null == t.summary)
         ? null
         : (0, r.jsxs)("div", {
@@ -41,14 +41,14 @@ function h(e) {
                                   variant: "text-xs/medium",
                                   color: "header-secondary",
                                   children: l
-                                      ? p.intl.format(p.t.aZ2iIi, { onShowOriginal: () => h(!1) })
-                                      : p.intl.format(p.t["/2ylFx"], { onShowTranslated: () => h(!0) }),
+                                      ? f.intl.format(f.t.aZ2iIi, { onShowOriginal: () => j(!1) })
+                                      : f.intl.format(f.t["/2ylFx"], { onShowTranslated: () => j(!0) }),
                               }),
                           ],
                       }),
                   (0, r.jsx)(o.xv, {
-                      ref: b,
-                      lineClamp: v ? 8 : void 0,
+                      ref: y,
+                      lineClamp: h ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: l ? t.summaryLocalized : t.summary,
                   }),
@@ -56,14 +56,14 @@ function h(e) {
                       (0, r.jsx)(u.P3F, {
                           className: g.clickable,
                           onClick: () => {
-                              n(v ? m.as.ShowMore : m.as.ShowLess), j(!v);
+                              n(h ? m.as.ShowMore : m.as.ShowLess), v(!h);
                           },
                           children: (0, r.jsx)(o.xv, {
                               variant: "text-sm/semibold",
-                              children: v ? p.intl.string(p.t.lBeKY2) : p.intl.string(p.t["6MwJo6"]),
+                              children: h ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo6"]),
                           }),
                       }),
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(p.Z, {
                       className: x.platforms,
                       detectedGame: t,
                   }),

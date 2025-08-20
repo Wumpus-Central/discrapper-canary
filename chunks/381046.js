@@ -55,54 +55,54 @@ var r = n(260674),
     },
     h = {},
     m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, O, v, I, T, S) {
-        for (var A, N = t, C = S, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
-            var w = C.get(t);
+        for (var A, C = t, N = S, R = 0, P = !1; void 0 !== (N = N.get(h)) && !P; ) {
+            var w = N.get(t);
             if (((R += 1), void 0 !== w))
                 if (w === R) throw RangeError("Cyclic object value");
                 else P = !0;
-            void 0 === C.get(h) && (R = 0);
+            void 0 === N.get(h) && (R = 0);
         }
         if (
             ("function" == typeof g
-                ? (N = g(n, N))
-                : N instanceof Date
-                  ? (N = y(N))
+                ? (C = g(n, C))
+                : C instanceof Date
+                  ? (C = y(C))
                   : "comma" === a &&
-                    l(N) &&
-                    (N = i.maybeMap(N, function (e) {
+                    l(C) &&
+                    (C = i.maybeMap(C, function (e) {
                         return e instanceof Date ? y(e) : e;
                     })),
-            null === N)
+            null === C)
         ) {
             if (c) return m && !I ? m(n, _.encoder, T, "key", O) : n;
-            N = "";
+            C = "";
         }
-        if (p(N) || i.isBuffer(N))
+        if (p(C) || i.isBuffer(C))
             return m
-                ? [v(I ? n : m(n, _.encoder, T, "key", O)) + "=" + v(m(N, _.encoder, T, "value", O))]
-                : [v(n) + "=" + v(String(N))];
+                ? [v(I ? n : m(n, _.encoder, T, "key", O)) + "=" + v(m(C, _.encoder, T, "value", O))]
+                : [v(n) + "=" + v(String(C))];
         var D = [];
-        if (void 0 === N) return D;
-        if ("comma" === a && l(N))
-            I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(",") || null : void 0 }]);
+        if (void 0 === C) return D;
+        if ("comma" === a && l(C))
+            I && m && (C = i.maybeMap(C, m)), (A = [{ value: C.length > 0 ? C.join(",") || null : void 0 }]);
         else if (l(g)) A = g;
         else {
-            var L = Object.keys(N);
-            A = E ? L.sort(E) : L;
+            var x = Object.keys(C);
+            A = E ? x.sort(E) : x;
         }
-        var x = f ? String(n).replace(/\./g, "%2E") : String(n),
-            M = o && l(N) && 1 === N.length ? x + "[]" : x;
-        if (s && l(N) && 0 === N.length) return M + "[]";
-        for (var k = 0; k < A.length; ++k) {
-            var j = A[k],
-                U = "object" == typeof j && j && void 0 !== j.value ? j.value : N[j];
+        var L = f ? String(n).replace(/\./g, "%2E") : String(n),
+            j = o && l(C) && 1 === C.length ? L + "[]" : L;
+        if (s && l(C) && 0 === C.length) return j + "[]";
+        for (var M = 0; M < A.length; ++M) {
+            var k = A[M],
+                U = "object" == typeof k && k && void 0 !== k.value ? k.value : C[k];
             if (!d || null !== U) {
-                var G = b && f ? String(j).replace(/\./g, "%2E") : String(j),
-                    B = l(N) ? ("function" == typeof a ? a(M, G) : M) : M + (b ? "." + G : "[" + G + "]");
+                var G = b && f ? String(k).replace(/\./g, "%2E") : String(k),
+                    B = l(C) ? ("function" == typeof a ? a(j, G) : j) : j + (b ? "." + G : "[" + G + "]");
                 S.set(t, R);
-                var V = r();
-                V.set(h, S),
-                    u(D, e(U, B, a, o, s, c, d, f, "comma" === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, V));
+                var Z = r();
+                Z.set(h, S),
+                    u(D, e(U, B, a, o, s, c, d, f, "comma" === a && I && l(C) ? null : m, g, E, b, y, O, v, I, T, Z));
             }
         }
         return D;

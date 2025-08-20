@@ -1,49 +1,49 @@
 n.d(t, { Z: () => _ });
-var s = n(951288);
+var a = n(951288);
 n(647438);
-var a = n(755721),
+var s = n(755721),
     r = n(481060),
     i = n(488889),
     l = n(226186),
     o = n(626135),
     c = n(981631),
     d = n(308569),
-    x = n(388032),
-    m = n(583073),
+    m = n(388032),
+    x = n(583073),
     u = n(780187);
 function _(e) {
     let { onNext: t, onClose: n, reason: _, onReasonChange: E, freeTextResponse: N, setFreeTextResponse: h } = e,
-        A = d.zf.map((e) => ({
+        p = d.zf.map((e) => ({
             value: e,
             name: (0, i.S)(e),
         })),
-        p = (0, l.u)("change_email_collect_reasons_slide");
-    return (0, s.jsxs)("form", {
+        A = (0, l.u)("change_email_collect_reasons_slide");
+    return (0, a.jsxs)("form", {
         onSubmit: t,
         children: [
-            (0, s.jsxs)(r.xBx, {
+            (0, a.jsxs)(r.xBx, {
                 separator: !1,
                 className: u.header,
                 children: [
-                    (0, s.jsx)(r.X6q, {
+                    (0, a.jsx)(r.X6q, {
                         variant: "heading-xl/extrabold",
-                        children: x.intl.string(x.t["41NIIi"]),
+                        children: m.intl.string(m.t["41NIIi"]),
                     }),
-                    (0, s.jsx)(r.olH, {
+                    (0, a.jsx)(r.olH, {
                         onClick: n,
                         className: u.modalCloseButton,
                     }),
                 ],
             }),
-            (0, s.jsxs)(r.hzk, {
-                className: m.content,
+            (0, a.jsxs)(r.hzk, {
+                className: x.content,
                 children: [
-                    (0, s.jsx)(r.FXm, {
+                    (0, a.jsx)(r.FXm, {
                         radioPosition: "right",
-                        radioItemClassName: m.radioItem,
+                        radioItemClassName: x.radioItem,
                         size: r.FXm.Sizes.NOT_SET,
                         value: _,
-                        options: A,
+                        options: p,
                         onChange: (e) => {
                             let { value: t } = e;
                             o.default.track(c.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, {
@@ -55,33 +55,33 @@ function _(e) {
                                     l.Z.trackExposure({ location: "change_email_collect_reasons_slide" });
                         },
                     }),
-                    p &&
+                    A &&
                         _ === d.pw.SOMETHING_ELSE &&
-                        (0, s.jsx)(r.xJW, {
-                            children: (0, s.jsx)(a.iS, {
+                        (0, a.jsx)(r.xJW, {
+                            children: (0, a.jsx)(s.iS, {
                                 value: N,
                                 maxLength: d.mF,
                                 onChange: h,
-                                className: m.textArea,
-                                placeholder: x.intl.string(x.t.Q8Rk7O),
+                                className: x.textArea,
+                                placeholder: m.intl.string(m.t.Q8Rk7O),
                             }),
                         }),
                 ],
             }),
-            (0, s.jsx)(r.mzw, {
+            (0, a.jsx)(r.mzw, {
                 className: u.modalFooter,
-                children: (0, s.jsxs)(r.hE2, {
+                children: (0, a.jsxs)(r.hE2, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, s.jsx)(r.zxk, {
+                        (0, a.jsx)(r.zxk, {
                             variant: "primary",
-                            text: x.intl.string(x.t["3PatS0"]),
+                            text: m.intl.string(m.t["3PatS0"]),
                             disabled: null == _,
                             onClick: t,
                         }),
-                        (0, s.jsx)(r.zxk, {
+                        (0, a.jsx)(r.zxk, {
                             variant: "secondary",
-                            text: x.intl.string(x.t["ETE/oK"]),
+                            text: m.intl.string(m.t["ETE/oK"]),
                             onClick: n,
                         }),
                     ],

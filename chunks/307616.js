@@ -138,7 +138,7 @@ class S extends i.PureComponent {
 function A() {
     return (0, m.Vn)((0, f.bp)());
 }
-function N(e) {
+function C(e) {
     let t = [],
         n = !1;
     for (let i = e.length - 1; i >= 0; i--) {
@@ -150,11 +150,11 @@ function N(e) {
     }
     return t;
 }
-let C = [];
+let N = [];
 function R() {
     let e = A(),
-        t = (0, m.s9)((t) => (void 0 !== t[e] ? t[e] : C)),
-        n = i.useMemo(() => N(t), [t]),
+        t = (0, m.s9)((t) => (void 0 !== t[e] ? t[e] : N)),
+        n = i.useMemo(() => C(t), [t]),
         a = i.useRef(void 0);
     i.useLayoutEffect(() => {
         a.current = t[t.length - 1];

@@ -17,8 +17,8 @@ var r = n(951288),
     m = n(16609),
     E = n(527805),
     g = n(716600),
-    S = n(778569),
-    v = n(563218),
+    v = n(778569),
+    S = n(563218),
     h = n(318891),
     b = n(884338),
     O = n(719296),
@@ -70,9 +70,9 @@ function M(e) {
 }
 function L(e) {
     var t, n;
-    let { participants: i, application: m, channel: g, width: S } = e,
-        v = S > 400 ? 2 : +(S > 300),
-        [h] = S > 400 ? [s.EFr.SIZE_56, 56] : S > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
+    let { participants: i, application: m, channel: g, width: v } = e,
+        S = v > 400 ? 2 : +(v > 300),
+        [h] = v > 400 ? [s.EFr.SIZE_56, 56] : v > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
         b = (0, o.Wu)([C.default, P.default], () =>
             Array.from(i)
                 .map((e) => ((0, p.J)(e, P.default) ? null : C.default.getUser(e.userId)))
@@ -119,8 +119,8 @@ function L(e) {
             }),
             (0, r.jsx)(s.Text, {
                 className: a()(T.subheader, {
-                    [T.small]: 0 === v,
-                    [T.medium]: 1 === v,
+                    [T.small]: 0 === S,
+                    [T.medium]: 1 === S,
                 }),
                 variant: "text-sm/normal",
                 children:
@@ -133,8 +133,8 @@ function L(e) {
             }),
             (0, r.jsx)(s.Text, {
                 className: a()(T.header, {
-                    [T.small]: 0 === v,
-                    [T.medium]: 1 === v,
+                    [T.small]: 0 === S,
+                    [T.medium]: 1 === S,
                 }),
                 variant: "text-sm/normal",
                 children: m.name,
@@ -164,7 +164,7 @@ function L(e) {
                                   case 0:
                                       return u.zx.Sizes.SMALL;
                               }
-                          })(v),
+                          })(S),
                           className: T.button,
                           look: u.iL.FILLED,
                           color: u.zx.Colors.WHITE,
@@ -182,7 +182,7 @@ function F(e) {
         d = (0, g.Z)(),
         f = null != d && (0, m.p)(d.location) === u.id && d.applicationId === c,
         [p] = (0, I.Z)([c]),
-        { url: E } = (0, S.Z)({
+        { url: E } = (0, v.Z)({
             applicationId: c,
             names: D,
             size: 1024,
@@ -210,7 +210,7 @@ function F(e) {
                 children: [
                     b &&
                         null != d &&
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(S.Z, {
                             className: T.iframe,
                             embedId: (0, O.Z)(d.location.id, c),
                         }),

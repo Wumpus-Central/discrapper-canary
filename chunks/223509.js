@@ -22,23 +22,23 @@ var r,
     T = 1,
     S = 2,
     A = 3,
-    N = 4,
-    C = 5,
+    C = 4,
+    N = 5,
     R = 6,
     P = 7,
     w = 8,
     D = 9,
-    L = 10,
-    x = 11,
-    M = 12,
-    k = 13,
-    j = 14,
+    x = 10,
+    L = 11,
+    j = 12,
+    M = 13,
+    k = 14,
     U = 15,
     G = 16,
     B = 17,
-    V = 18,
-    F = 19,
-    Z = 20,
+    Z = 18,
+    V = 19,
+    F = 20,
     H = 21,
     Y = 22,
     W = 23,
@@ -190,9 +190,9 @@ function ep(e, t) {
         eT,
         eS = 0,
         eA = new a.Buf8(4),
-        eN = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+        eC = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
     if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return b;
-    (n = e.state).mode === M && (n.mode = k),
+    (n = e.state).mode === j && (n.mode = M),
         (en = e.next_out),
         (i = e.output),
         (ea = e.avail_out),
@@ -208,7 +208,7 @@ function ep(e, t) {
         switch (n.mode) {
             case T:
                 if (0 === n.wrap) {
-                    n.mode = k;
+                    n.mode = M;
                     break;
                 }
                 for (; es < 16; ) {
@@ -240,7 +240,7 @@ function ep(e, t) {
                     (e.msg = "invalid window size"), (n.mode = $);
                     break;
                 }
-                (n.dmax = 1 << eO), (e.adler = n.check = 1), (n.mode = 512 & eo ? L : M), (eo = 0), (es = 0);
+                (n.dmax = 1 << eO), (e.adler = n.check = 1), (n.mode = 512 & eo ? x : j), (eo = 0), (es = 0);
                 break;
             case S:
                 for (; es < 16; ) {
@@ -274,8 +274,8 @@ function ep(e, t) {
                         (n.check = s(n.check, eA, 4, 0))),
                     (eo = 0),
                     (es = 0),
-                    (n.mode = N);
-            case N:
+                    (n.mode = C);
+            case C:
                 for (; es < 16; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
@@ -284,8 +284,8 @@ function ep(e, t) {
                     512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))),
                     (eo = 0),
                     (es = 0),
-                    (n.mode = C);
-            case C:
+                    (n.mode = N);
+            case N:
                 if (1024 & n.flags) {
                     for (; es < 16; ) {
                         if (0 === er) break i;
@@ -352,15 +352,15 @@ function ep(e, t) {
                 }
                 n.head && ((n.head.hcrc = (n.flags >> 9) & 1), (n.head.done = !0)),
                     (e.adler = n.check = 0),
-                    (n.mode = M);
+                    (n.mode = j);
                 break;
-            case L:
+            case x:
                 for (; es < 32; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
                 }
-                (e.adler = n.check = ei(eo)), (eo = 0), (es = 0), (n.mode = x);
-            case x:
+                (e.adler = n.check = ei(eo)), (eo = 0), (es = 0), (n.mode = L);
+            case L:
                 if (0 === n.havedict)
                     return (
                         (e.next_out = en),
@@ -371,10 +371,10 @@ function ep(e, t) {
                         (n.bits = es),
                         E
                     );
-                (e.adler = n.check = 1), (n.mode = M);
-            case M:
+                (e.adler = n.check = 1), (n.mode = j);
+            case j:
                 if (t === p || t === h) break i;
-            case k:
+            case M:
                 if (n.last) {
                     (eo >>>= 7 & es), (es -= 7 & es), (n.mode = X);
                     break;
@@ -385,10 +385,10 @@ function ep(e, t) {
                 }
                 switch (((n.last = 1 & eo), (es -= 1), 3 & (eo >>>= 1))) {
                     case 0:
-                        n.mode = j;
+                        n.mode = k;
                         break;
                     case 1:
-                        if ((ef(n), (n.mode = Z), t === h)) {
+                        if ((ef(n), (n.mode = F), t === h)) {
                             (eo >>>= 2), (es -= 2);
                             break i;
                         }
@@ -401,7 +401,7 @@ function ep(e, t) {
                 }
                 (eo >>>= 2), (es -= 2);
                 break;
-            case j:
+            case k:
                 for (eo >>>= 7 & es, es -= 7 & es; es < 32; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
@@ -419,7 +419,7 @@ function ep(e, t) {
                     a.arraySet(i, r, et, eu, en), (er -= eu), (et += eu), (ea -= eu), (en += eu), (n.length -= eu);
                     break;
                 }
-                n.mode = M;
+                n.mode = j;
                 break;
             case B:
                 for (; es < 14; ) {
@@ -439,16 +439,16 @@ function ep(e, t) {
                     (e.msg = "too many length or distance symbols"), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = V);
-            case V:
+                (n.have = 0), (n.mode = Z);
+            case Z:
                 for (; n.have < n.ncode; ) {
                     for (; es < 3; ) {
                         if (0 === er) break i;
                         er--, (eo += r[et++] << es), (es += 8);
                     }
-                    (n.lens[eN[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
+                    (n.lens[eC[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
                 }
-                for (; n.have < 19; ) n.lens[eN[n.have++]] = 0;
+                for (; n.have < 19; ) n.lens[eC[n.have++]] = 0;
                 if (
                     ((n.lencode = n.lendyn),
                     (n.lenbits = 7),
@@ -460,8 +460,8 @@ function ep(e, t) {
                     (e.msg = "invalid code lengths set"), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = F);
-            case F:
+                (n.have = 0), (n.mode = V);
+            case V:
                 for (; n.have < n.nlen + n.ndist; ) {
                     for (
                         ;
@@ -531,8 +531,8 @@ function ep(e, t) {
                     (e.msg = "invalid distances set"), (n.mode = $);
                     break;
                 }
-                if (((n.mode = Z), t === h)) break i;
-            case Z:
+                if (((n.mode = F), t === h)) break i;
+            case F:
                 n.mode = H;
             case H:
                 if (er >= 6 && ea >= 258) {
@@ -551,7 +551,7 @@ function ep(e, t) {
                         (er = e.avail_in),
                         (eo = n.hold),
                         (es = n.bits),
-                        n.mode === M && (n.back = -1);
+                        n.mode === j && (n.back = -1);
                     break;
                 }
                 for (
@@ -582,7 +582,7 @@ function ep(e, t) {
                     break;
                 }
                 if (32 & em) {
-                    (n.back = -1), (n.mode = M);
+                    (n.back = -1), (n.mode = j);
                     break;
                 }
                 if (64 & em) {
@@ -722,7 +722,7 @@ function ep(e, t) {
           n.wrap &&
               ec &&
               (e.adler = n.check = n.flags ? s(n.check, i, ec, e.next_out - ec) : o(n.check, i, ec, e.next_out - ec)),
-          (e.data_type = n.bits + 64 * !!n.last + 128 * (n.mode === M) + 256 * (n.mode === Z || n.mode === U)),
+          (e.data_type = n.bits + 64 * !!n.last + 128 * (n.mode === j) + 256 * (n.mode === F || n.mode === U)),
           ((0 === el && 0 === ec) || t === _) && ev === m && (ev = v),
           ev);
 }
@@ -739,8 +739,8 @@ function eg(e, t) {
     var n,
         r,
         i = t.length;
-    return e && e.state && (0 === (n = e.state).wrap || n.mode === x)
-        ? n.mode === x && (r = o((r = 1), t, i, 0)) !== n.check
+    return e && e.state && (0 === (n = e.state).wrap || n.mode === L)
+        ? n.mode === L && (r = o((r = 1), t, i, 0)) !== n.check
             ? y
             : e_(e, t, i, i)
               ? ((n.mode = ee), O)

@@ -1,18 +1,19 @@
-n.d(t, { E: () => s }), n(388685);
-var i = n(647438),
-    r = n(434650);
-let s = function () {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        [t, n] = (0, i.useState)(1),
-        s = (0, i.useMemo)(() => ({ threshold: Array.from({ length: 101 }, (e, t) => t / 100) }), []);
-    return {
-        visibilityPercentageRef: (0, r.S)(
-            (e) => {
-                n(e.intersectionRatio);
-            },
-            s,
-            e,
-        ),
-        visibilityPercentage: t,
+n.d(t, { E: () => o }), n(388685);
+var r = n(647438),
+    i = n(434650);
+let a = 100,
+    o = function () {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+            [t, n] = (0, r.useState)(1),
+            o = (0, r.useMemo)(() => ({ threshold: Array.from({ length: a + 1 }, (e, t) => t / a) }), []);
+        return {
+            visibilityPercentageRef: (0, i.S)(
+                (e) => {
+                    n(e.intersectionRatio);
+                },
+                o,
+                e,
+            ),
+            visibilityPercentage: t,
+        };
     };
-};

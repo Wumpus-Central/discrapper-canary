@@ -1,4 +1,4 @@
-n.d(t, { W: () => E }), n(388685);
+n.d(t, { W: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(921944),
     _ = n(474936),
     y = n(388032),
-    v = n(865696),
-    j = n(777091);
+    j = n(865696),
+    v = n(777091);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,24 +44,24 @@ function C(e) {
     }
     return e;
 }
-let E = i.memo(function (e) {
+let x = i.memo(function (e) {
     let t = e.channel.id,
         n = e.selected,
-        E = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-        x = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-        { canAccessPicker: S, entryPoint: P } = (0, h.m)({
+        x = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        E = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
+        { canAccessPicker: S, entryPoint: I } = (0, h.m)({
             location: "ChatWallpaperDMListCoachmark",
             channelId: t,
         }),
-        I = P === f.FN.CONTEXT_MENU,
-        [N, w] = (0, u.US)(E && I && n && S && !x ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+        P = I === f.FN.CONTEXT_MENU,
+        [N, w] = (0, u.US)(x && P && n && S && !E ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
         Z = (0, d.m)(_.p9.TIER_2),
         T = (0, g.Z)(t),
         A = N === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
         R = (0, i.useRef)(null),
         D = (0, i.useRef)(null),
-        L = (0, i.useRef)(null),
-        [M, k] = (0, i.useState)(m.U.TOP);
+        M = (0, i.useRef)(null),
+        [L, k] = (0, i.useState)(m.U.TOP);
     if (
         ((0, i.useLayoutEffect)(() => {
             if (null === R.current) return;
@@ -69,7 +69,7 @@ let E = i.memo(function (e) {
                 var e, t, n;
                 let r = null == (e = R.current) ? void 0 : e.getBoundingClientRect();
                 if (null == r) return;
-                let i = null != (n = null == (t = L.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
+                let i = null != (n = null == (t = M.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
                 window.innerHeight - r.bottom < i ? k(m.U.BOTTOM) : k(m.U.TOP);
             };
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
@@ -99,23 +99,23 @@ let E = i.memo(function (e) {
         ref: R,
         children: (0, r.jsx)(a.yRy, {
             targetElementRef: D,
-            align: M,
+            align: L,
             position: "right",
             shouldShow: A,
             onRequestClose: U,
             renderPopout: () =>
                 (0, r.jsx)(m.Z, {
-                    ref: L,
+                    ref: M,
                     onClose: U,
                     buttonText: y.intl.string(y.t["+IrDzM"]),
                     header: B,
                     art: (0, r.jsx)("img", {
-                        src: j.Z,
+                        src: v.Z,
                         alt: "",
-                        className: v.chatWallpaperDMListCoachmarkArt,
+                        className: j.chatWallpaperDMListCoachmarkArt,
                     }),
                     body: V,
-                    align: M,
+                    align: L,
                 }),
             children: (t) => {
                 var n, i;

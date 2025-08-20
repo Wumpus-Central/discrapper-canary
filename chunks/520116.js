@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(55935),
     _ = n(655354),
     y = n(809780),
-    v = n(981631),
-    j = n(388032),
+    j = n(981631),
+    v = n(388032),
     C = n(557047);
-let E = {
+let x = {
     left: 4,
     right: -12,
 };
-function x(e) {
+function E(e) {
     var t, n, l;
     let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
         g = (0, a.JA)(null != (t = s.id) ? t : ""),
@@ -38,7 +38,7 @@ function x(e) {
             [o.id],
         );
     return (0, r.jsx)(c.tEY, {
-        offset: E,
+        offset: x,
         children: (0, r.jsxs)(
             "div",
             ((n = (function (e) {
@@ -114,17 +114,17 @@ function S(e) {
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
         { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         _ = g.jU.useSetting(),
-        E = (0, p.P1)(l),
+        x = (0, p.P1)(l),
         S = !1,
-        P = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
-        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
+        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
+        P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(j.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
             t = null,
             n = i.messages.slice(0, y.hC);
         n.forEach((n) => {
-            if (!P && (null == e || !e.isSame(n.timestamp, "day"))) {
+            if (!I && (null == e || !e.isSame(n.timestamp, "day"))) {
                 let t = (0, O.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
@@ -143,13 +143,13 @@ function S(e) {
                 (S = S || (0, p.DQ)(n)),
                 N.push(
                     (0, r.jsx)(
-                        x,
+                        E,
                         {
                             channel: l,
                             message: n,
                             compact: _,
                             isGroupStart: i,
-                            treatSpam: !I && h && (0, p.DQ)(n) && E,
+                            treatSpam: !P && h && (0, p.DQ)(n) && x,
                             gotoChannel: a,
                         },
                         n.id,
@@ -164,7 +164,7 @@ function S(e) {
                             color: s.zx.Colors.LINK,
                             look: s.zx.Looks.LINK,
                             onClick: (e) => a(e, n[n.length - 1].id),
-                            children: [j.intl.string(j.t["9OB9ho"]), " \u203A"],
+                            children: [v.intl.string(v.t["9OB9ho"]), " \u203A"],
                         },
                         "view-all",
                     ),
@@ -172,7 +172,7 @@ function S(e) {
             0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        S && E && u.Z.trackExposure({ location: "20e3b0_2" }),
+        S && x && u.Z.trackExposure({ location: "20e3b0_2" }),
         (0, r.jsx)("div", {
             className: C.messages,
             children: N,

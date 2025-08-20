@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -71,9 +71,9 @@ function A(e, t) {
         e
     );
 }
-function N(e) {
-    let { summary: t, channel: f, members: b, guildId: I, unread: S, onClick: N } = e,
-        [C, R] = i.useState(!1),
+function C(e) {
+    let { summary: t, channel: f, members: b, guildId: I, unread: S, onClick: C } = e,
+        [N, R] = i.useState(!1),
         P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
         w = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
         D = (e, n) => {
@@ -84,9 +84,9 @@ function N(e) {
                     rating: n,
                 });
         },
-        L = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
-        x = (e) => {
-            L &&
+        x = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
+        L = (e) => {
+            x &&
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e("12891").then(n.bind(n, 519620));
                     return (n) => (0, r.jsx)(e, A(T({}, n), { summary: t }));
@@ -94,13 +94,13 @@ function N(e) {
         };
     return (0, r.jsxs)(o.P3F, {
         className: v.container,
-        onClick: N,
-        onContextMenu: x,
+        onClick: C,
+        onContextMenu: L,
         onMouseEnter: () => R(!0),
         onMouseLeave: () => R(!1),
         children: [
             (0, r.jsx)(c.Z, {
-                hovered: C,
+                hovered: N,
                 unread: S,
                 className: v.unreadPill,
             }),
@@ -155,7 +155,7 @@ function N(e) {
                     ],
                 }),
             }),
-            C &&
+            N &&
                 !w &&
                 (0, r.jsxs)("div", {
                     className: v.feedbackContainer,
@@ -193,7 +193,7 @@ function N(e) {
         ],
     });
 }
-function C(e) {
+function N(e) {
     let { summaries: t, summariesMembers: n, channel: o, selectTopic: s, setOpen: l } = e,
         c = (0, a.e7)([f.ZP], () => f.ZP.getOldestUnreadMessageId(o.id)),
         u = i.useCallback(
@@ -209,7 +209,7 @@ function C(e) {
                   var i;
                   let a = null != (i = n[t]) ? i : [];
                   return (0, r.jsx)(
-                      N,
+                      C,
                       {
                           summary: e,
                           channel: o,

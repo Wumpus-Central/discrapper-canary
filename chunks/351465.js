@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
+    a = n.n(i),
     o = n(388032),
-    a = n(600750);
-let s = (e) => {
+    s = n(600750);
+let l = (e) => {
     let { className: t } = e;
     return (0, r.jsx)("div", {
-        className: l()(a.tag, t),
+        className: a()(s.tag, t),
         children: (0, r.jsx)("span", {
-            className: a.text,
+            className: s.text,
             children: o.intl.string(o.t["8IfYqa"]),
         }),
     });

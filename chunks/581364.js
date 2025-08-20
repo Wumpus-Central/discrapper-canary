@@ -1,19 +1,19 @@
 n.d(t, {
     $z: () => R,
-    BH: () => N,
+    BH: () => C,
     BO: () => w,
-    D7: () => x,
-    Dd: () => C,
+    D7: () => L,
+    Dd: () => N,
     Ft: () => D,
     TK: () => B,
-    X0: () => k,
-    XA: () => j,
+    X0: () => M,
+    XA: () => k,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
     qJ: () => U,
     t0: () => G,
-    tI: () => M,
+    tI: () => j,
 }),
     n(388685),
     n(953529),
@@ -258,10 +258,10 @@ function A(e, t) {
         ),
     );
 }
-function N(e) {
+function C(e) {
     return m.Xyh.test(e.trim());
 }
-function C(e, t, n, r) {
+function N(e, t, n, r) {
     let i = [];
     return (
         l()(e).forEach((e) => {
@@ -301,13 +301,13 @@ function D(e) {
     if (n.ownerId === r.userId || t.can(g.Pl.ADMINISTRATOR, n)) return !0;
     let s = n.id;
     if (null != a) {
-        let e = L(r, s, a);
+        let e = x(r, s, a);
         if ("boolean" == typeof e) return e;
     }
-    let l = L(r, s, i);
+    let l = x(r, s, i);
     return ("boolean" != typeof l || !!l) && (null == o || (!c.fS(o, w) && t.can(o, n)));
 }
-function L(e, t, n) {
+function x(e, t, n) {
     let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
@@ -319,7 +319,7 @@ function L(e, t, n) {
     let a = n[(0, f.rE)(t, p.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
-function x(e) {
+function L(e) {
     switch (e) {
         case p.bB.CHAT:
         case p.bB.APPLICATION_LAUNCHER:
@@ -341,13 +341,13 @@ function x(e) {
             return _.d.SlashCommand;
     }
 }
-function M(e) {
+function j(e) {
     if (null != e)
         if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function k(e, t) {
+function M(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,
@@ -358,7 +358,7 @@ function k(e, t) {
         isUserApp: null != t && t,
     };
 }
-function j(e) {
+function k(e) {
     let t = e.id,
         n = e.options,
         r = null == n ? void 0 : n.find((e) => e.type === u.jw.SUB_COMMAND_GROUP);

@@ -1,5 +1,18 @@
-n.d(t, { L: () => r }), n(388685);
-class r {
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+n.d(t, { L: () => i }), n(388685);
+class i {
     cleanUp(e) {
         this.cancel(e), this.delete(e);
     }
@@ -17,15 +30,6 @@ class r {
         this.searchFetchers.set(e, t);
     }
     constructor() {
-        !(function (e, t, n) {
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (e[t] = n);
-        })(this, "searchFetchers", new Map());
+        r(this, "searchFetchers", new Map());
     }
 }

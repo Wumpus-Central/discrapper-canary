@@ -1,25 +1,25 @@
-r.d(t, { Z: () => a });
-var n = r(951288);
-r(647438);
-var l = r(739754),
-    i = r(970184),
-    o = r(520525);
-function a(e) {
-    let { components: t, renderComponents: r } = e,
-        { message: a } = (0, i.CJ)();
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var i = n(739754),
+    a = n(970184),
+    o = n(520525);
+function s(e) {
+    let { components: t, renderComponents: n } = e,
+        { message: s } = (0, a.CJ)();
     return null == t || 0 === t.length
         ? null
-        : (0, n.jsxs)("div", {
+        : (0, r.jsxs)("div", {
               className: o.container,
               children: [
-                  (0, n.jsx)("div", {
+                  (0, r.jsx)("div", {
                       className: o.children,
-                      children: r(t),
+                      children: n(t),
                   }),
-                  null != a
-                      ? (0, n.jsx)(l.ZP, {
+                  null != s
+                      ? (0, r.jsx)(i.ZP, {
                             className: o.error,
-                            message: a,
+                            message: s,
                             component: e,
                         })
                       : null,

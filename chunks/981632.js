@@ -47,7 +47,7 @@ function u(e) {
             let { applyAnimation: e, idleAnimationState: t } = A.current;
             b && (E(null == t), y(!1), e());
         }, [b]);
-    let N = () => {
+    let C = () => {
         null != f && (h(f), E(!0));
     };
     if (!c.Cj.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
@@ -56,7 +56,7 @@ function u(e) {
         shouldAnimate: !_ && u,
         className: n,
         versionKey: O,
-        onComplete: null != f ? N : void 0,
+        onComplete: null != f ? C : void 0,
         loop: g,
     });
 }

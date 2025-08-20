@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(944543),
     x = n(410575),
     v = n(393238),
-    j = n(110924),
-    O = n(40851),
+    O = n(110924),
+    j = n(40851),
     E = n(636449),
     S = n(115130),
     P = n(317381),
@@ -73,8 +73,8 @@ var r = n(951288),
     eC = n(228488),
     ex = n(358221),
     ev = n(414910),
-    ej = n(887012),
-    eO = n(909820),
+    eO = n(887012),
+    ej = n(909820),
     eE = n(493010),
     eS = n(742603),
     eP = n(71127),
@@ -528,7 +528,7 @@ class eV extends i.PureComponent {
                                                 n.e("98783"),
                                                 n.e("57789"),
                                                 n.e("56826"),
-                                                n.e("36658"),
+                                                n.e("92595"),
                                             ]).then(n.bind(n, 131404));
                                             return (n) =>
                                                 (0, r.jsx)(
@@ -837,7 +837,7 @@ class eV extends i.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: i } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && i)
                     ? null
-                    : (0, r.jsx)(eO.ZP, {
+                    : (0, r.jsx)(ej.ZP, {
                           children: (0, r.jsx)(X.Z, {
                               className: eL.chatToasts,
                               channelId: n.id,
@@ -895,7 +895,7 @@ let ez = function (e) {
         { width: o = 0, ref: s } = (0, v.ZP)(),
         { width: c = 0, height: p = 0, ref: f } = (0, v.ZP)(),
         { ref: m } = (0, v.ZP)(),
-        g = (0, O.bp)(),
+        g = (0, j.bp)(),
         b = (0, D.Z)(),
         y = (0, u.e7)([ep.Z], () => {
             var e;
@@ -955,7 +955,7 @@ let ez = function (e) {
         en = null != (t = null == z ? void 0 : z.id) ? t : null,
         er = (0, I.Z)(en, n.id),
         ei = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
-        eh = (0, j.Z)(ei);
+        eh = (0, O.Z)(ei);
     i.useEffect(() => {
         ei === S.O.ERROR &&
             eh !== S.O.ERROR &&
@@ -976,7 +976,7 @@ let ez = function (e) {
             }
         );
     }, [y, N]);
-    let em = (0, ej.Z)(n, !0),
+    let em = (0, eO.Z)(n, !0),
         { hasParticipantsPanel: eg } = (0, eZ.Z)({ location: "ChannelCall" }),
         eb = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ey } = (0, A.ZP)(T.Z.CHANNEL_CALL),
@@ -987,7 +987,7 @@ let ez = function (e) {
         value: ey,
         children: (0, r.jsx)(x.Z, {
             page: ek.ZY5.CHANNEL_CALL,
-            children: (0, r.jsx)(eO.B2, {
+            children: (0, r.jsx)(ej.B2, {
                 children: (0, r.jsxs)(eN._A, {
                     children: [
                         (0, r.jsx)(eV, {
@@ -1035,7 +1035,7 @@ let ez = function (e) {
                             theme: eE,
                         }),
                         !n.isPrivate() && (0, r.jsx)(eN.YR, {}),
-                        (0, r.jsx)(eO.H_, {}),
+                        (0, r.jsx)(ej.H_, {}),
                     ],
                 }),
             }),

@@ -128,14 +128,14 @@ function A(e) {
         r
     );
 }
-function N(e) {
+function C(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
     return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((R.pendingUsages = []), !0);
 }
-function C() {
+function N() {
     var e;
     let t = null == (e = c.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
@@ -149,7 +149,7 @@ class P extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(_.Z, f.Z),
             null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (R = e)),
-            this.syncWith([c.Z], C);
+            this.syncWith([c.Z], N);
     }
     getState() {
         return R;
@@ -182,5 +182,5 @@ m(P, "displayName", "FrecencyStore"), m(P, "persistKey", "FrecencyStore");
 let w = new P(s.Z, {
     CHANNEL_SELECT: A,
     VOICE_CHANNEL_SELECT: A,
-    USER_SETTINGS_PROTO_UPDATE: N,
+    USER_SETTINGS_PROTO_UPDATE: C,
 });

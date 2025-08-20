@@ -3,14 +3,14 @@ var n = r(951288),
     l = r(647438),
     i = r(442837),
     a = r(481060),
-    o = r(239091),
-    c = r(726521),
+    c = r(239091),
+    o = r(726521),
     s = r(314897),
     u = r(86419),
     d = r(872269),
     f = r(228168),
     g = r(388032);
-function p(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function b(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function O(e) {
                     return (r) =>
                         (0, n.jsx)(
                             e,
-                            b(p({}, r), {
+                            p(b({}, r), {
                                 userId: s.default.getId(),
                                 widget: t,
                             }),
@@ -77,7 +77,7 @@ function O(e) {
             );
         },
         y = () => {
-            (0, c.G1)(O, t);
+            (0, o.G1)(O, t);
         },
         v = (0, i.e7)([s.default], () => s.default.getId() === O);
     return (0, n.jsx)(a.yRy, {
@@ -90,7 +90,7 @@ function O(e) {
             return (0, n.jsx)(a.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, o.Zy)(), t();
+                    (0, c.Zy)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": g.intl.string(g.t.xpSHSk),
@@ -116,7 +116,7 @@ function O(e) {
         children: (e) =>
             (0, n.jsx)(
                 a.hU,
-                b(p({}, e), {
+                p(b({}, e), {
                     buttonRef: m,
                     icon: a.xhG,
                     variant: "secondary",

@@ -1,55 +1,55 @@
-r.r(t), r.d(t, { ItemDetailsModal: () => y }), r(953529), r(781311);
-var n = r(951288);
-r(647438);
-var l = r(752843),
-    i = r(442837),
-    o = r(481060),
-    a = r(55563),
-    c = r(551428),
-    s = r(73346),
-    u = r(591759),
-    d = r(110742),
-    p = r(886253),
-    f = r(680005),
-    b = r(938337),
-    m = r(981631),
-    O = r(388032);
-function y(e) {
-    var t, r, y, j;
-    let { onClose: g, transitionState: h, skuId: v, appId: P, onHeaderTitleClick: x } = e,
-        S = (0, i.e7)([c.Z], () => c.Z.getForSKU(v), [v]),
-        w = (0, i.e7)([a.Z], () => a.Z.get(v), [v]),
-        C = (0, d.M)(v);
-    if (null == w) return null;
-    let E = null != (r = w.name) ? r : "",
-        N = null != (y = null == S || null == (t = S.description) ? void 0 : t.trim()) ? y : void 0,
-        I =
-            (null == S ? void 0 : S.headerBackground) != null &&
-            null != (j = u.Z.toURLSafe((0, s._W)(P, S.headerBackground, 256)))
-                ? j
+n.r(t), n.d(t, { ItemDetailsModal: () => g }), n(953529), n(781311);
+var r = n(951288);
+n(647438);
+var i = n(752843),
+    a = n(442837),
+    o = n(481060),
+    s = n(55563),
+    l = n(551428),
+    c = n(73346),
+    u = n(591759),
+    d = n(110742),
+    f = n(886253),
+    _ = n(680005),
+    p = n(938337),
+    h = n(981631),
+    m = n(388032);
+function g(e) {
+    var t, n, g, E;
+    let { onClose: b, transitionState: y, skuId: O, appId: v, onHeaderTitleClick: I } = e,
+        T = (0, a.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
+        S = (0, a.e7)([s.Z], () => s.Z.get(O), [O]),
+        A = (0, d.M)(O);
+    if (null == S) return null;
+    let C = null != (n = S.name) ? n : "",
+        N = null != (g = null == T || null == (t = T.description) ? void 0 : t.trim()) ? g : void 0,
+        R =
+            (null == T ? void 0 : T.headerBackground) != null &&
+            null != (E = u.Z.toURLSafe((0, c._W)(v, T.headerBackground, 256)))
+                ? E
                 : void 0,
-        T = w.type === m.epS.DURABLE && C,
-        Z = w.type === m.epS.DURABLE ? (T ? O.intl.string(O.t.bm82mp) : O.intl.string(O.t["6gprwc"])) : void 0,
-        { price: k } = w;
-    return null == k
+        P = S.type === h.epS.DURABLE && A,
+        w = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mp) : m.intl.string(m.t["6gprwc"])) : void 0,
+        { price: D } = S;
+    return null == D
         ? null
-        : (0, n.jsx)(p.A, {
-              appId: P,
-              skuId: w.id,
-              transitionState: h,
-              onHeaderTitleClick: null != x ? x : g,
-              onClose: g,
-              footer: (0, n.jsx)(f.YG, {
-                  appId: P,
-                  sku: w,
+        : (0, r.jsx)(f.A, {
+              appId: v,
+              skuId: S.id,
+              transitionState: y,
+              onHeaderTitleClick: null != I ? I : b,
+              onClose: b,
+              footer: (0, r.jsx)(_.YG, {
+                  appId: v,
+                  sku: S,
               }),
-              children: (0, n.jsx)(b.i, {
-                  appId: P,
-                  skuId: w.id,
-                  title: E,
+              children: (0, r.jsx)(p.i, {
+                  appId: v,
+                  skuId: S.id,
+                  title: C,
                   description: N,
-                  imgSrc: I,
-                  tag: null != Z ? (0, n.jsx)(l.V, { text: Z }) : void 0,
+                  imgSrc: R,
+                  tag: null != w ? (0, r.jsx)(i.V, { text: w }) : void 0,
                   FallbackIcon: o.Prq,
               }),
           });

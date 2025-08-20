@@ -1,104 +1,110 @@
-function n(t) {
-    if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t;
+function r(e) {
+    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return e;
 }
-function i(t, e, r) {
+function i(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+}
+function a(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = r),
-        t
+            : (e[t] = n),
+        e
     );
 }
-var o = r(647438),
-    a = r(169774),
-    u = r(581079),
-    s = r(465135),
-    c = a.isBrowser("IE <= 11");
-t.exports = (function (t) {
-    function e(e) {
-        var r;
+var o = n(647438),
+    s = n(169774),
+    l = n(581079),
+    c = n(465135),
+    u = s.isBrowser("IE <= 11");
+function d(e) {
+    return u ? "\n" === e.textContent : "BR" === e.tagName;
+}
+var f = function (e) {
+        return u
+            ? o.createElement(
+                  "span",
+                  {
+                      key: "A",
+                      "data-text": "true",
+                      ref: e,
+                  },
+                  "\n",
+              )
+            : o.createElement("br", {
+                  key: "A",
+                  "data-text": "true",
+                  ref: e,
+              });
+    },
+    _ = function (e) {
+        return u
+            ? o.createElement(
+                  "span",
+                  {
+                      key: "B",
+                      "data-text": "true",
+                      ref: e,
+                  },
+                  "\n",
+              )
+            : o.createElement("br", {
+                  key: "B",
+                  "data-text": "true",
+                  ref: e,
+              });
+    };
+e.exports = (function (e) {
+    function t(t) {
+        var n;
         return (
-            i(n((r = t.call(this, e) || this)), "_forceFlag", void 0), i(n(r), "_node", void 0), (r._forceFlag = !1), r
+            a(r((n = e.call(this, t) || this)), "_forceFlag", void 0), a(r(n), "_node", void 0), (n._forceFlag = !1), n
         );
     }
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-    var r = e.prototype;
+    i(t, e);
+    var n = t.prototype;
     return (
-        (r.shouldComponentUpdate = function (t) {
-            var e = this._node,
-                r = "" === t.children;
-            return (s(e) || u(!1), r)
-                ? c
-                    ? "\n" !== e.textContent
-                    : "BR" !== e.tagName
-                : e.textContent !== t.children;
+        (n.shouldComponentUpdate = function (e) {
+            var t = this._node,
+                n = "" === e.children;
+            c(t) || l(!1);
+            var r = t;
+            return n ? !d(r) : r.textContent !== e.children;
         }),
-        (r.componentDidMount = function () {
+        (n.componentDidMount = function () {
             this._forceFlag = !this._forceFlag;
         }),
-        (r.componentDidUpdate = function () {
+        (n.componentDidUpdate = function () {
             this._forceFlag = !this._forceFlag;
         }),
-        (r.render = function () {
-            var t,
-                e,
-                r = this;
+        (n.render = function () {
+            var e = this;
             return "" === this.props.children
                 ? this._forceFlag
-                    ? ((t = function (t) {
-                          return (r._node = t);
-                      }),
-                      c
-                          ? o.createElement(
-                                "span",
-                                {
-                                    key: "A",
-                                    "data-text": "true",
-                                    ref: t,
-                                },
-                                "\n",
-                            )
-                          : o.createElement("br", {
-                                key: "A",
-                                "data-text": "true",
-                                ref: t,
-                            }))
-                    : ((e = function (t) {
-                          return (r._node = t);
-                      }),
-                      c
-                          ? o.createElement(
-                                "span",
-                                {
-                                    key: "B",
-                                    "data-text": "true",
-                                    ref: e,
-                                },
-                                "\n",
-                            )
-                          : o.createElement("br", {
-                                key: "B",
-                                "data-text": "true",
-                                ref: e,
-                            }))
+                    ? f(function (t) {
+                          return (e._node = t);
+                      })
+                    : _(function (t) {
+                          return (e._node = t);
+                      })
                 : o.createElement(
                       "span",
                       {
                           key: this._forceFlag ? "A" : "B",
                           "data-text": "true",
                           ref: function (t) {
-                              return (r._node = t);
+                              return (e._node = t);
                           },
                       },
                       this.props.children,
                   );
         }),
-        e
+        t
     );
 })(o.Component);

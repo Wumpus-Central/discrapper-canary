@@ -39,7 +39,7 @@ var r = n(98405),
                 a(h, null, n)
             );
     },
-    N = function (e, t, n) {
+    C = function (e, t, n) {
         var r = g(n, t - 1),
             i = g(n, t + 1);
         return (m(v, e) && !m(I, i)) || (m(I, e) && !m(v, r)) ? "\\u" + y(E(e, 0), 16) : e;
@@ -56,7 +56,7 @@ h &&
             stringify: function (e, t, n) {
                 var r = d(arguments),
                     i = a(T ? A : h, null, r);
-                return S && "string" == typeof i ? b(i, O, N) : i;
+                return S && "string" == typeof i ? b(i, O, C) : i;
             },
         },
     );

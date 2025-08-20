@@ -2,8 +2,8 @@ n.d(t, {
     A2: () => I,
     BU: () => T,
     Pz: () => y,
-    Qf: () => C,
-    ZC: () => N,
+    Qf: () => N,
+    ZC: () => C,
     a0: () => S,
     t8: () => v,
     tq: () => A,
@@ -108,9 +108,9 @@ function A() {
     let e = S();
     return null != e && !(0, o.UJ)(i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: b });
 }
-function N(e) {
+function C(e) {
     return !(0, _.isIOS)() || !e.hasFlag(m.TD.IS_BLOCKED_IOS);
 }
-function C(e, t) {
+function N(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }

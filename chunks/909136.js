@@ -1,29 +1,29 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => u });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(680018),
-    l = n(123274),
-    o = n(388032),
+var i = n(120356),
+    a = n.n(i),
+    o = n(680018),
+    s = n(123274),
+    l = n(388032),
     c = n(460103);
-let d = (e) => {
+let u = (e) => {
     let { className: t, onBackClick: n } = e;
-    return (0, i.jsxs)("div", {
-        className: s()(c.container, t),
+    return (0, r.jsxs)("div", {
+        className: a()(c.container, t),
         "data-testid": "all-perks-hero-header",
         children: [
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: c.backButtonContainer,
-                children: (0, i.jsx)(a.z, {
+                children: (0, r.jsx)(o.z, {
                     onClick: n,
-                    text: o.intl.string(o.t["13/7kZ"]),
+                    text: l.intl.string(l.t["13/7kZ"]),
                     variant: "overlay-secondary",
                 }),
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: c.headerContainer,
-                children: (0, i.jsx)(l.Z, { children: o.intl.string(o.t.hqjDX1) }),
+                children: (0, r.jsx)(s.Z, { children: l.intl.string(l.t.hqjDX1) }),
             }),
         ],
     });

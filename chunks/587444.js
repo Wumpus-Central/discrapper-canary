@@ -1,30 +1,30 @@
 n.d(t, {
-    Z: () => g,
-    u: () => f,
+    Z: () => f,
+    u: () => g,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(692547),
+    s = n(692547),
     o = n(481060),
-    s = n(388905),
+    a = n(388905),
     c = n(600164),
     u = n(981631),
     d = n(388032),
     h = n(736688),
     p = n(149715),
     m = n(197571);
-function f(e) {
+function g(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.Ee, { src: n(689411) }),
-            (0, r.jsx)(s.Dx, {
+            (0, r.jsx)(a.Ee, { src: n(689411) }),
+            (0, r.jsx)(a.Dx, {
                 className: l()(m.marginTop20, m.marginBottom8, p.flexCenter),
                 children: d.intl.string(d.t.eL5z0t),
             }),
-            (0, r.jsx)(s.DK, {
+            (0, r.jsx)(a.DK, {
                 className: m.marginBottom40,
                 children: d.intl.string(d.t["poAv6+"]),
             }),
@@ -52,10 +52,10 @@ function f(e) {
                                 tag: "strong",
                                 className: h.buttonTitle,
                                 variant: "text-md/normal",
-                                style: { color: a.Z.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: s.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
-                            (0, r.jsx)(s.zx, {
+                            (0, r.jsx)(a.zx, {
                                 className: h.button,
                                 onClick: u,
                                 children: i,
@@ -67,11 +67,11 @@ function f(e) {
         ],
     });
 }
-function g(e) {
+function f(e) {
     let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: l } = e;
-    return (0, r.jsx)(s.ZP, {
+    return (0, r.jsx)(a.ZP, {
         theme: i,
-        children: (0, r.jsx)(f, {
+        children: (0, r.jsx)(g, {
             text: t,
             buttonCta: n,
             onClick: l,

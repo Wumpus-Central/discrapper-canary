@@ -1,41 +1,41 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var s = n(453217),
-    o = n(578080),
-    a = n(443648);
-let i = function (e) {
+var i = n(453217),
+    a = n(578080),
+    o = n(443648);
+let s = function (e) {
     let {
         collapsedHeight: t,
         expandedContentRef: n,
-        expansionSpring: i,
+        expansionSpring: s,
         isExpanded: l,
         isExpansionAnimationComplete: c,
-        onCtxMenuOpened: d,
-        onCtxMenuClosed: u,
-        onCtxMenuSelection: p,
-        quest: m,
-        useReducedMotion: f,
+        onCtxMenuOpened: u,
+        onCtxMenuClosed: d,
+        onCtxMenuSelection: f,
+        quest: _,
+        useReducedMotion: p,
     } = e;
-    return (0, r.jsx)(o.Z, {
-        expansionSpring: i,
-        className: a.content,
+    return (0, r.jsx)(a.Z, {
+        expansionSpring: s,
+        className: o.content,
         collapsedHeight: t,
-        onCtxMenuOpen: d,
-        onCtxMenuClose: u,
-        onCtxMenuSelect: p,
+        onCtxMenuOpen: u,
+        onCtxMenuClose: d,
+        onCtxMenuSelect: f,
         isExpanded: l,
         isExpansionAnimationComplete: c,
-        quest: m,
-        useReducedMotion: f,
+        quest: _,
+        useReducedMotion: p,
         ref: n,
-        children: (0, r.jsx)(s.Z, {
-            className: a.content,
-            expansionSpring: i,
+        children: (0, r.jsx)(i.Z, {
+            className: o.content,
+            expansionSpring: s,
             isExpanded: l,
             isExpansionAnimationComplete: c,
-            quest: m,
-            useReducedMotion: f,
+            quest: _,
+            useReducedMotion: p,
         }),
     });
 };

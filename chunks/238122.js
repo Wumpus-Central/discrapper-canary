@@ -1,22 +1,22 @@
-n.d(t, { Z: () => _ }), n(388685), n(413496), n(433524), n(35282);
+n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
 var r = n(951288),
-    a = n(647438),
-    i = n(481060),
-    o = n(454585),
-    l = n(273744),
+    i = n(647438),
+    l = n(481060),
+    a = n(454585),
+    o = n(273744),
     s = n(388032),
     c = n(124252),
     d = n(197571);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
-                onChange: b,
-                initialText: h,
-                isRequired: x,
+                data: { title: u, subtitle: m, placeholder: _, rows: p, character_limit: f, pattern: g },
+                onChange: x,
+                initialText: b,
+                isRequired: h,
             } = e,
-            v = a.useRef(
-                o.Z.reactParserFor(
+            v = i.useRef(
+                a.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -41,8 +41,8 @@ let u = (e) => {
                                 });
                         }
                         return e;
-                    })({}, o.Z.defaultRules)),
-                    (n = n = { link: l.s }),
+                    })({}, a.Z.defaultRules)),
+                    (n = n = { link: o.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -58,30 +58,30 @@ let u = (e) => {
                     t),
                 ),
             ),
-            [j, y] = a.useState(""),
-            [C, O] = a.useState(null);
-        a.useEffect(() => {
+            [j, y] = i.useState(""),
+            [O, C] = i.useState(null);
+        i.useEffect(() => {
             var e;
-            y(null != (e = null == h ? void 0 : h.value) ? e : "");
-        }, [h]);
-        let I = a.useCallback(
+            y(null != (e = null == b ? void 0 : b.value) ? e : "");
+        }, [b]);
+        let Z = i.useCallback(
             (e) => {
-                let t = null != f ? new RegExp(f) : null;
+                let t = null != g ? new RegExp(g) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (O(null),
+                      (C(null),
                       y(e),
-                      b({
+                      x({
                           value: e,
                           isValid: !0,
                       }))
-                    : (O(s.intl.string(s.t["24xrGR"])),
-                      b({
+                    : (C(s.intl.string(s.t["24xrGR"])),
+                      x({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [b, f],
+            [x, g],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -89,11 +89,11 @@ let u = (e) => {
                 null != u &&
                     (0, r.jsx)("div", {
                         className: d.marginBottom8,
-                        children: (0, r.jsxs)(i.Text, {
+                        children: (0, r.jsxs)(l.Text, {
                             variant: "text-sm/bold",
                             children: [
                                 u,
-                                x &&
+                                h &&
                                     (0, r.jsx)("span", {
                                         className: c.required,
                                         children: "*",
@@ -101,40 +101,40 @@ let u = (e) => {
                             ],
                         }),
                     }),
-                (0, r.jsx)(i.Kx8, {
-                    maxLength: g,
-                    onChange: I,
+                (0, r.jsx)(l.Kx8, {
+                    maxLength: f,
+                    onChange: Z,
                     value: j,
-                    error: C,
+                    error: O,
                     rows: p,
-                    placeholder: m,
+                    placeholder: _,
                     autoFocus: !0,
                 }),
-                null != _ &&
+                null != m &&
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(i.Text, {
+                        children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: v.current(_),
+                            children: v.current(m),
                         }),
                     }),
             ],
         });
     },
-    _ = (e) => {
-        let { elements: t, onChange: n, state: a } = e,
-            i = t.map((e) => {
+    m = (e) => {
+        let { elements: t, onChange: n, state: i } = e,
+            l = t.map((e) => {
                 var t;
-                let i = e.name;
+                let l = e.name;
                 return (0, r.jsx)(
                     u,
                     {
                         data: e.data,
-                        onChange: (e) => n(i, e.value, e.isValid),
-                        initialText: null != (t = null == a ? void 0 : a[i]) ? t : void 0,
+                        onChange: (e) => n(l, e.value, e.isValid),
+                        initialText: null != (t = null == i ? void 0 : i[l]) ? t : void 0,
                         isRequired: e.should_submit_data,
                     },
-                    i,
+                    l,
                 );
             });
-        return (0, r.jsx)("div", { children: i });
+        return (0, r.jsx)("div", { children: l });
     };

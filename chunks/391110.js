@@ -1,21 +1,26 @@
 n.d(t, {
-    MQ: () => o,
-    gM: () => a,
-    zW: () => l,
+    MQ: () => a,
+    gM: () => r,
+    zW: () => i,
 });
-var i,
-    r,
-    s,
-    a =
-        (((i = {}).PERKS_DISCOVERABILITY = "perks_discoverability"),
-        (i.WHATS_NEW = "whats_new"),
-        (i.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row"),
-        (i.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row"),
-        (i.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row"),
-        i),
-    l =
-        (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
-        (r[(r.REWARD = 1)] = "REWARD"),
-        (r[(r.NITRO_GRADIENT_HOVER_BORDER = 2)] = "NITRO_GRADIENT_HOVER_BORDER"),
-        r),
-    o = (((s = {}).SEE_ALL = "See All Nitro Perks"), (s.MARKETING = "Marketing"), (s.HOME = "Home"), s);
+var r = (function (e) {
+        return (
+            (e.PERKS_DISCOVERABILITY = "perks_discoverability"),
+            (e.WHATS_NEW = "whats_new"),
+            (e.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row"),
+            (e.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row"),
+            (e.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row"),
+            e
+        );
+    })({}),
+    i = (function (e) {
+        return (
+            (e[(e.DEFAULT = 0)] = "DEFAULT"),
+            (e[(e.REWARD = 1)] = "REWARD"),
+            (e[(e.NITRO_GRADIENT_HOVER_BORDER = 2)] = "NITRO_GRADIENT_HOVER_BORDER"),
+            e
+        );
+    })({}),
+    a = (function (e) {
+        return (e.SEE_ALL = "See All Nitro Perks"), (e.MARKETING = "Marketing"), (e.HOME = "Home"), e;
+    })({});

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => u });
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
+    a = n(442837),
     o = n(481060),
-    a = n(468706),
-    s = n(774863),
+    s = n(468706),
+    l = n(774863),
     c = n(388032);
 function u(e) {
     let { messageId: t, channelId: n } = e,
-        u = (0, l.e7)([s.Z], () => s.Z.canSubmitFpReport(t)),
+        u = (0, a.e7)([l.Z], () => l.Z.canSubmitFpReport(t)),
         d = i.useCallback(() => {
-            (0, a.e)(n, t);
+            (0, s.e)(n, t);
         }, [n, t]);
     return (0, r.jsx)(o.zxk, {
         variant: "secondary",

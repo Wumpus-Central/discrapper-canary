@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => L,
+    Z: () => x,
     r: () => D,
 }),
     n(388685),
@@ -72,7 +72,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function N(e, t) {
         e
     );
 }
-let C = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
+let N = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function R(e) {
     let { alt: t, spoiler: n, renderContent: a, size: o } = e,
         [s, l] = i.useState(!1);
@@ -137,7 +137,7 @@ function P(e) {
         }),
         p = s === O.q.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === C.includes(t.type)) return;
+        if (null == t || !1 === N.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
@@ -283,7 +283,7 @@ function D(e) {
                 }),
             });
 }
-function L(e) {
+function x(e) {
     let {
             channelId: t,
             draftType: n,
@@ -296,7 +296,7 @@ function L(e) {
             clip: T,
         } = e,
         A = null != T,
-        C = (h = A ? O.q.CLIP : h) === O.q.SMALL,
+        N = (h = A ? O.q.CLIP : h) === O.q.SMALL,
         R = (0, s.e7)([g.Z], () => {
             var e;
             return null == (e = g.Z.getChannel(t)) ? void 0 : e.guild_id;
@@ -306,7 +306,7 @@ function L(e) {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
                         u.default,
-                        N(S({}, e), {
+                        C(S({}, e), {
                             draftType: n,
                             upload: a,
                             channelId: t,
@@ -327,43 +327,43 @@ function L(e) {
             children: [
                 m
                     ? (0, r.jsx)(y.Z, {
-                          className: o()({ [I.action]: C }),
+                          className: o()({ [I.action]: N }),
                           tooltip: A ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzM),
                           onClick: () => c.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.kZF, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: o()({ [I.actionBarIcon]: C }),
+                                    className: o()({ [I.actionBarIcon]: N }),
                                 })
                               : (0, r.jsx)(l.tEF, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: o()({ [I.actionBarIcon]: C }),
+                                    className: o()({ [I.actionBarIcon]: N }),
                                 }),
                       })
                     : null,
                 m && !A
                     ? (0, r.jsx)(y.Z, {
-                          className: o()({ [I.action]: C }),
+                          className: o()({ [I.action]: N }),
                           tooltip: v.intl.string(v.t.Y8ujqq),
                           onClick: P,
                           children: (0, r.jsx)(l.vdY, {
                               size: "xs",
                               color: "currentColor",
-                              className: o()({ [I.actionBarIcon]: C }),
+                              className: o()({ [I.actionBarIcon]: N }),
                           }),
                       })
                     : null,
                 (0, r.jsx)(y.Z, {
-                    className: o()({ [I.action]: C }),
+                    className: o()({ [I.action]: N }),
                     tooltip: A ? v.intl.string(v.t.MskAXV) : v.intl.string(v.t.vN7REx),
                     onClick: () => c.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.XHJ, {
                         size: "md",
                         color: "currentColor",
-                        className: o()({ [I.actionBarIcon]: C }),
+                        className: o()({ [I.actionBarIcon]: N }),
                     }),
                 }),
             ],
@@ -374,7 +374,7 @@ function L(e) {
         handleEditModal: P,
         keyboardModeEnabled: d,
         size: h,
-        className: o()({ [I.attachmentItemSmall]: C }),
+        className: o()({ [I.attachmentItemSmall]: N }),
         children: [
             (0, r.jsx)(D, {
                 upload: a,

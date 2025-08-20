@@ -17,12 +17,12 @@ var r = n(951288),
 let O = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
     _ = (e) => {
         let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: _, isGuildBarScrolling: y } = e,
-            { enabled: v } = (0, u.WX)({ location: "orbs_discovery_onboarding_coachmark" }),
+            { enabled: j } = (0, u.WX)({ location: "orbs_discovery_onboarding_coachmark" }),
             {
-                shouldShow: j,
+                shouldShow: v,
                 questId: C,
-                onClose: E,
-                onCtaClick: x,
+                onClose: x,
+                onCtaClick: E,
                 onDiscoveryButtonClick: S,
             } = ((e) => {
                 let { isVirtualCurrencyEnabled: t, onShowCoachmarkHandler: n } = e,
@@ -69,30 +69,30 @@ let O = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
                           onDiscoveryButtonClick: f.dG4,
                       };
             })({
-                isVirtualCurrencyEnabled: v,
+                isVirtualCurrencyEnabled: j,
                 onShowCoachmarkHandler: (0, d.O5)({
                     targetElementRef: t,
                     scrollToBottom: n,
                 }),
             }),
-            P = i.useMemo(
+            I = i.useMemo(
                 () => ({
-                    onCtaClick: x,
-                    onClose: E,
+                    onCtaClick: E,
+                    onClose: x,
                     titleText: b.intl.string(b.t.KnWRQU),
                     descriptionText: b.intl.format(b.t["xYx+WV"], { quantity: 200 }),
                     ctaText: b.intl.string(b.t.v4HbPz),
                 }),
-                [x, E],
+                [E, x],
             );
         return (0, r.jsx)(d.G6, {
             errorBoundarySource: "ORBS_DISCOVERY_ONBOARDING_COACHMARK",
             targetElementRef: t,
             targetQuestId: C,
             renderDiscoveryButton: _,
-            showingCoachmark: j,
+            showingCoachmark: v,
             isGuildBarScrolling: y,
             onDiscoveryButtonClick: S,
-            innerCoachmarkProps: P,
+            innerCoachmarkProps: I,
         });
     };

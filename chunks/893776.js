@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Z: () => w,
-    c: () => C,
+    c: () => N,
 }),
     n(415506),
     n(358797),
@@ -77,8 +77,8 @@ function T(e, t) {
 }
 let S = new d.Z("AuthenticationActionCreators"),
     A = 5000,
-    N = null;
-var C = (function (e) {
+    C = null;
+var N = (function (e) {
     return (e.MFA = "MFA"), (e.SUCCESS = "SUCCESS"), e;
 })({});
 function R(e) {
@@ -563,8 +563,8 @@ let w = {
         });
     },
     getLocationMetadata: () =>
-        null != N
-            ? N
+        null != C
+            ? C
             : (clearTimeout(r),
               (r = setTimeout(() => {
                   l.Z.dispatch({
@@ -572,7 +572,7 @@ let w = {
                       consentRequired: !0,
                   });
               }, A)),
-              (N = o.tn
+              (C = o.tn
                   .get({
                       url: b.ANM.AUTH_LOCATION_METADATA,
                       retries: 2,
@@ -598,7 +598,7 @@ let w = {
                                           ? o
                                           : void 0,
                               }),
-                              (N = null),
+                              (C = null),
                               (null == e || null == (n = e.body) ? void 0 : n.promotional_email_opt_in) != null)
                           ) {
                               let t = e.body.promotional_email_opt_in;
@@ -615,7 +615,7 @@ let w = {
                                   type: "SET_CONSENT_REQUIRED",
                                   consentRequired: !0,
                               }),
-                              (N = null);
+                              (C = null);
                       },
                   ))),
     closeSuspendedUser() {

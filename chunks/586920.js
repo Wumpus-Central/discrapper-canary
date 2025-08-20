@@ -1,71 +1,71 @@
-n.d(t, { i: () => f }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(667202),
-    l = n(607070),
-    o = n(530618),
+n.d(t, { i: () => m }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(667202),
+    s = n(607070),
+    l = n(530618),
     c = n(10508),
-    d = n(594135),
-    u = n(474936),
-    m = n(388032),
-    p = n(950728),
-    g = n(997892),
+    u = n(594135),
+    d = n(474936),
+    f = n(388032),
+    _ = n(950728),
+    p = n(997892),
     h = n(234286);
-let f = () => {
+let m = () => {
     let {
             transitionState: e,
             onClose: t,
             premiumType: n,
-            confettiCanvas: f,
-            churnUserDiscountOffer: b,
-            discountedPrice: x,
-        } = (0, d.a)(),
-        _ = (0, r.useRef)(null),
-        [j, E] = (0, r.useState)(!1),
-        C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+            confettiCanvas: m,
+            churnUserDiscountOffer: g,
+            discountedPrice: E,
+        } = (0, u.a)(),
+        b = (0, i.useRef)(null),
+        [y, O] = (0, i.useState)(!1),
+        v = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     if (
-        ((0, r.useEffect)(() => {
-            null !== _.current && null !== x && E(!0);
-        }, [_, x]),
-        null === b)
+        ((0, i.useEffect)(() => {
+            null !== b.current && null !== E && O(!0);
+        }, [b, E]),
+        null === g)
     )
         return null;
-    let O = n === u.p9.TIER_2,
-        v = [
+    let I = n === d.p9.TIER_2,
+        T = [
             {
-                text: m.intl.string(m.t["/r8g/v"]),
+                text: f.intl.string(f.t["/r8g/v"]),
                 onClick: () => t(),
                 variant: "primary",
                 fullWidth: !0,
             },
         ];
-    return (0, i.jsxs)("div", {
-        ref: _,
+    return (0, r.jsxs)("div", {
+        ref: b,
         children: [
-            (0, i.jsx)(a.I, {
+            (0, r.jsx)(o.I, {
                 graphic: {
                     type: "image",
-                    src: O ? h : g,
+                    src: I ? h : p,
                 },
-                gradientColor: O ? "nitro-pink" : "nitro-green",
+                gradientColor: I ? "nitro-pink" : "nitro-green",
                 transitionState: e,
-                title: m.intl.string(m.t.PZSyRk),
-                actions: v,
+                title: f.intl.string(f.t.PZSyRk),
+                actions: T,
                 onClose: async () => t(),
-                children: (0, i.jsx)("div", {
-                    className: p.offerDetailContainer,
-                    children: (0, i.jsx)(c.o, {
+                children: (0, r.jsx)("div", {
+                    className: _.offerDetailContainer,
+                    children: (0, r.jsx)(c.o, {
                         offerState: c.w.APPLIED,
-                        userDiscountOffer: b,
+                        userDiscountOffer: g,
                     }),
                 }),
             }),
-            !C &&
-                j &&
-                (0, i.jsx)(o.Z, {
-                    confettiTarget: _.current,
-                    confettiCanvas: f,
+            !v &&
+                y &&
+                (0, r.jsx)(l.Z, {
+                    confettiTarget: b.current,
+                    confettiCanvas: m,
                     confettiVelocityMultiplier: 0.75,
                 }),
         ],

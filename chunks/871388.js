@@ -1,17 +1,17 @@
-A.d(t, { B: () => i });
+A.d(t, { B: () => o });
 var n = A(951288);
 A(647438);
 var r = A(481060),
-    a = A(120651),
-    l = A(388032);
-function i(e, t, A) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    (0, a.Z)({
+    l = A(120651),
+    a = A(388032);
+function o(e, t, A) {
+    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    (0, l.Z)({
         title: e,
         body:
             "string" == typeof t
                 ? t
-                : l.intl.format(
+                : a.intl.format(
                       t,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
@@ -47,10 +47,10 @@ function i(e, t, A) {
                                       children: e,
                                   }),
                           },
-                          i,
+                          o,
                       ),
                   ),
-        cta: l.intl.string(l.t["NX+WJC"]),
+        cta: a.intl.string(a.t["NX+WJC"]),
         onConfirm: () => {},
         iconVariant: A,
     });

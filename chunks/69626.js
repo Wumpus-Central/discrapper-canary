@@ -65,7 +65,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function N(e, t) {
         e
     );
 }
-function C(e, t, n, i, a) {
+function N(e, t, n, i, a) {
     if (null == e) return;
     let d = () => {
         let r = p.Z.getChannel(e);
@@ -119,7 +119,7 @@ function C(e, t, n, i, a) {
         ? (0, s.h7j)((t) =>
               (0, r.jsx)(
                   s.ConfirmModal,
-                  N(
+                  C(
                       S(
                           {
                               header: v.intl.string(v.t.pe26Cg),
@@ -177,7 +177,7 @@ function R(e) {
                     null != l &&
                         null != n.commandName &&
                         null != n.commandKey &&
-                        C(l.id, n.commandName, n.commandKey, u.Vh.MENTION);
+                        N(l.id, n.commandName, n.commandKey, u.Vh.MENTION);
             },
             [l, n.commandKey, n.commandName],
         );
@@ -199,7 +199,7 @@ function P(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
         d = (0, a.e7)([g.Z], () => g.Z.getChannelId()),
         f = (e) => {
-            null == e || e.stopPropagation(), C(d, n, t, u.Vh.POPULAR_COMMANDS, l), null == c || c(t);
+            null == e || e.stopPropagation(), N(d, n, t, u.Vh.POPULAR_COMMANDS, l), null == c || c(t);
         };
     return (0, r.jsx)(s.ua7, {
         text: i,

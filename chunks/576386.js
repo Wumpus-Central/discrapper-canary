@@ -1,37 +1,37 @@
-r.d(t, { Z: () => f }), r(388685);
+r.d(t, { Z: () => b }), r(388685);
 var n = r(951288),
-    a = r(647438),
-    i = r(120356),
-    l = r.n(i),
+    i = r(647438),
+    a = r(120356),
+    l = r.n(a),
     o = r(442837),
     s = r(481060),
     c = r(22267),
     u = r(377171),
     d = r(594174),
     p = r(388032),
-    b = r(24391);
-let h = (e) => {
+    v = r(24391);
+let f = (e) => {
         var t;
-        let { nameplate: r, isPurchased: i = !1, isSelected: h = !1, onClick: f } = e,
-            v = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-            [m, _] = (0, a.useState)(!1);
-        return null == v
+        let { nameplate: r, isPurchased: a = !1, isSelected: f = !1, onClick: b } = e,
+            m = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+            [g, h] = (0, i.useState)(!1);
+        return null == m
             ? null
             : (0, n.jsxs)(s.P3F, {
                   "aria-label": null != (t = r.label) ? t : p.intl.string(p.t.x5CoXV),
-                  className: b.nameplateItem,
-                  onClick: f,
-                  onMouseEnter: () => _(!0),
-                  onMouseLeave: () => _(!1),
+                  className: v.nameplateItem,
+                  onClick: b,
+                  onMouseEnter: () => h(!0),
+                  onMouseLeave: () => h(!1),
                   children: [
                       (0, n.jsx)(c.Z, {
                           nameplate: r,
-                          user: v,
+                          user: m,
                           showPlaceholderUser: !0,
-                          isHighlighted: m,
+                          isHighlighted: g,
                       }),
-                      (0, n.jsx)("div", { className: l()(b.nameplateItemOverlay, { [b.selected]: h }) }),
-                      !i &&
+                      (0, n.jsx)("div", { className: l()(v.nameplateItemOverlay, { [v.selected]: f }) }),
+                      !a &&
                           (0, n.jsx)(s.G2e, {
                               icon: () =>
                                   (0, n.jsx)(s.mBM, {
@@ -39,26 +39,26 @@ let h = (e) => {
                                       color: "currentColor",
                                   }),
                               color: u.Z.BACKGROUND_ACCENT,
-                              className: b.iconBadge,
+                              className: v.iconBadge,
                           }),
                   ],
               });
     },
-    f = (e) => {
-        let { selected: t, onSelect: r, onOpenShop: a, available: i, purchased: c, isPerGuild: u } = e;
+    b = (e) => {
+        let { selected: t, onSelect: r, onOpenShop: i, available: a, purchased: c, isPerGuild: u } = e;
         return null == (0, o.e7)([d.default], () => d.default.getCurrentUser())
             ? null
             : (0, n.jsxs)(s.u2D, {
-                  className: b.inventory,
+                  className: v.inventory,
                   children: [
                       (0, n.jsxs)("div", {
                           children: [
                               (0, n.jsx)(s.vwX, { children: p.intl.string(p.t["WfGV5+"]) }),
                               (0, n.jsxs)("div", {
-                                  className: b.inventoryControls,
+                                  className: v.inventoryControls,
                                   children: [
                                       (0, n.jsxs)(s.P3F, {
-                                          className: l()(b.inventoryControlsButton, { [b.selected]: null == t }),
+                                          className: l()(v.inventoryControlsButton, { [v.selected]: null == t }),
                                           onClick: () => r(null),
                                           children: [
                                               (0, n.jsx)(s.t6m, {
@@ -72,8 +72,8 @@ let h = (e) => {
                                           ],
                                       }),
                                       (0, n.jsxs)(s.P3F, {
-                                          className: b.inventoryControlsButton,
-                                          onClick: a,
+                                          className: v.inventoryControlsButton,
+                                          onClick: i,
                                           children: [
                                               (0, n.jsx)(s.EOn, {
                                                   size: "md",
@@ -89,10 +89,10 @@ let h = (e) => {
                               }),
                               0 !== c.length
                                   ? (0, n.jsx)("div", {
-                                        className: b.list,
+                                        className: v.list,
                                         children: c.map((e) =>
                                             (0, n.jsx)(
-                                                h,
+                                                f,
                                                 {
                                                     nameplate: e,
                                                     isPurchased: !0,
@@ -106,15 +106,15 @@ let h = (e) => {
                                   : null,
                           ],
                       }),
-                      0 !== i.length
+                      0 !== a.length
                           ? (0, n.jsxs)("div", {
                                 children: [
                                     (0, n.jsx)(s.vwX, { children: p.intl.string(p.t["1vbbeX"]) }),
                                     (0, n.jsx)("div", {
-                                        className: b.list,
-                                        children: i.map((e) =>
+                                        className: v.list,
+                                        children: a.map((e) =>
                                             (0, n.jsx)(
-                                                h,
+                                                f,
                                                 {
                                                     nameplate: e,
                                                     isSelected: (null == t ? void 0 : t.id) === e.id,

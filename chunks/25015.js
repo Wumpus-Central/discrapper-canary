@@ -1,87 +1,87 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
-    l = n(647438),
-    o = n(627050),
-    i = n(905405),
-    a = n(626135),
-    s = n(750030),
+    i = n(647438),
+    a = n(627050),
+    o = n(905405),
+    s = n(626135),
+    l = n(750030),
     c = n(937889),
     u = n(761910),
     d = n(488968),
-    p = n(479398),
-    m = n(981631),
-    g = n(388032),
-    f = n(491068);
-let b = l.lazy(() => Promise.all([n.e("51889"), n.e("85831")]).then(n.bind(n, 120314)));
-function h(e, t) {
+    f = n(479398),
+    _ = n(981631),
+    p = n(388032),
+    h = n(491068);
+let m = i.lazy(() => Promise.all([n.e("51889"), n.e("85831")]).then(n.bind(n, 120314)));
+function g(e, t) {
     let {
-            hideSimpleEmbedContent: h,
-            formatInline: O = !1,
-            noStyleAndInteraction: y = !1,
-            isInteracting: v = !1,
-            allowHeading: j = !1,
-            allowList: P = !1,
-            allowLinks: x = !1,
-            allowDevLinks: w = !1,
-            previewLinkTarget: C = !1,
-            viewingChannelId: N,
+            hideSimpleEmbedContent: g,
+            formatInline: E = !1,
+            noStyleAndInteraction: b = !1,
+            isInteracting: y = !1,
+            allowHeading: O = !1,
+            allowList: v = !1,
+            allowLinks: I = !1,
+            allowDevLinks: T = !1,
+            previewLinkTarget: S = !1,
+            viewingChannelId: A,
         } = t,
-        S = (0, i.p)(),
-        E = o.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        Z = (0, p.o)({ location: "useMessageRenderedContent" }),
-        [R, T] = l.useState(!1),
-        I = l.useCallback((e) => {
-            e && T(!0);
+        C = (0, o.p)(),
+        N = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        R = (0, f.o)({ location: "useMessageRenderedContent" }),
+        [P, w] = i.useState(!1),
+        D = i.useCallback((e) => {
+            e && w(!0);
         }, []);
     return (
-        l.useEffect(() => {
-            T(!1);
+        i.useEffect(() => {
+            w(!1);
         }, [e.content]),
-        l.useMemo(() => {
+        i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
             if (e.isUnsupported)
                 return {
-                    content: g.intl.string(g.t.sWi5ER),
+                    content: p.intl.string(p.t.sWi5ER),
                     hasSpoilerEmbeds: !1,
                 };
-            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(m.iLy.LOADING)) return (0, u.Z)(e);
-            if (e.type === m.uaV.CHANGELOG) {
+            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(_.iLy.LOADING)) return (0, u.Z)(e);
+            if (e.type === _.uaV.CHANGELOG) {
                 let { renderChangelogMessageMarkup: t } = n(55406);
-                return t(e, f, {
+                return t(e, h, {
                     track: (e, t) => {
-                        a.default.track(e, t);
+                        s.default.track(e, t);
                     },
                 });
             }
-            return Z.enabled
+            return R.enabled
                 ? {
-                      content: (0, r.jsx)(l.Suspense, {
+                      content: (0, r.jsx)(i.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: N,
-                                  guildId: (0, s.k)(e),
-                                  setHasSpoilerEmbeds: I,
+                                  viewingChannelId: A,
+                                  guildId: (0, l.k)(e),
+                                  setHasSpoilerEmbeds: D,
                               },
-                              children: (0, r.jsx)(b, { content: e.content }),
+                              children: (0, r.jsx)(m, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: R,
+                      hasSpoilerEmbeds: P,
                   }
                 : (0, c.ZP)(e, {
-                      hideSimpleEmbedContent: h,
-                      formatInline: O,
-                      noStyleAndInteraction: y,
-                      isInteracting: v,
-                      allowHeading: j,
-                      allowList: P,
-                      allowLinks: x,
-                      allowDevLinks: w,
-                      previewLinkTarget: C,
-                      shouldFilterKeywords: S,
-                      viewingChannelId: N,
-                      allowGameMentions: E,
+                      hideSimpleEmbedContent: g,
+                      formatInline: E,
+                      noStyleAndInteraction: b,
+                      isInteracting: y,
+                      allowHeading: O,
+                      allowList: v,
+                      allowLinks: I,
+                      allowDevLinks: T,
+                      previewLinkTarget: S,
+                      shouldFilterKeywords: C,
+                      viewingChannelId: A,
+                      allowGameMentions: N,
                   });
         }, [
             e.content,
@@ -90,20 +90,20 @@ function h(e, t) {
             e.interaction,
             e.state,
             e.type,
-            h,
-            O,
-            y,
-            v,
-            j,
-            P,
-            x,
-            C,
-            S,
-            w,
-            N,
-            Z.enabled,
+            g,
             E,
-            R,
+            b,
+            y,
+            O,
+            v,
+            I,
+            S,
+            C,
+            T,
+            A,
+            R.enabled,
+            N,
+            P,
         ])
     );
 }

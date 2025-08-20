@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => M }), n(388685);
+n.d(t, { ZP: () => j }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -80,11 +80,11 @@ function A(e) {
     for (let e of t) delete E[e.id];
     return t.length > 0;
 }
-function N(e) {
+function C(e) {
     let { channels: t } = e;
     for (let e of t) delete E[e.id];
 }
-function C(e) {
+function N(e) {
     let { guildId: t } = e;
     A(t);
 }
@@ -108,14 +108,14 @@ function w(e) {
 function D() {
     E = {};
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     for (let e in E) {
         let n = l.Z.getBasicChannel(e);
         (null == n || n.guild_id === t.id) && delete E[e];
     }
 }
-class x extends (r = o.ZP.Store) {
+class L extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.ZP, l.Z, d.Z, f.default, _.Z, u.Z);
     }
@@ -141,15 +141,15 @@ class x extends (r = o.ZP.Store) {
         return I(e, t, r);
     }
 }
-g(x, "displayName", "StageChannelRoleStore");
-let M = new x(s.Z, {
-    CHANNEL_UPDATES: N,
+g(L, "displayName", "StageChannelRoleStore");
+let j = new L(s.Z, {
+    CHANNEL_UPDATES: C,
     CONNECTION_OPEN: D,
     GUILD_MEMBER_REMOVE: R,
     GUILD_MEMBER_UPDATE: R,
-    GUILD_ROLE_UPDATE: C,
+    GUILD_ROLE_UPDATE: N,
     PASSIVE_UPDATE_V2: w,
     VOICE_STATE_UPDATES: P,
-    GUILD_CREATE: L,
-    GUILD_DELETE: L,
+    GUILD_CREATE: x,
+    GUILD_DELETE: x,
 });

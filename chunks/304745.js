@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(579185),
     x = n(301076),
     v = n(127379),
-    j = n(981631),
-    O = n(921944),
+    O = n(981631),
+    j = n(921944),
     E = n(388032);
 function S(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: S, setWhichPopoutIsOpen: P } = e,
@@ -41,7 +41,7 @@ function S(e) {
             },
             [R],
         ),
-        B = (0, c.bp)() === j.IlC.POPOUT,
+        B = (0, c.bp)() === O.IlC.POPOUT,
         { parentAnalyticsLocation: F, newestAnalyticsLocation: H } = (0, g.ZP)(),
         G = i.useCallback(() => {
             (0, y.v)(F, y.d.ACTIVITY),
@@ -69,7 +69,7 @@ function S(e) {
             let { visibleContent: i, markAsDismissed: l } = e,
                 s = i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !A;
             return (
-                z.current && !s && l(O.L.AUTO_DISMISS),
+                z.current && !s && l(j.L.AUTO_DISMISS),
                 z.current !== s && (z.current = s),
                 (0, r.jsx)(o.yRy, {
                     targetElementRef: W,
@@ -95,7 +95,7 @@ function S(e) {
                                   onMouseEnter: R,
                                   onMouseLeave: M,
                                   isHovered: A,
-                                  onClick: () => l(O.L.UNKNOWN),
+                                  onClick: () => l(j.L.UNKNOWN),
                               })
                             : (0, r.jsx)(r.Fragment, {});
                     },
@@ -164,9 +164,9 @@ function S(e) {
                                                                             i ===
                                                                                 a.z
                                                                                     .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) &&
-                                                                            l(O.L.TAKE_ACTION),
+                                                                            l(j.L.TAKE_ACTION),
                                                                         t === a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
-                                                                            n(O.L.TAKE_ACTION);
+                                                                            n(j.L.TAKE_ACTION);
                                                                 },
                                                                 onMouseEnter: U,
                                                                 onMouseLeave: M,

@@ -37,10 +37,10 @@ let m = i.forwardRef(function (e, t) {
                 },
                 [n],
             ),
-            N = i.useCallback(() => {
+            C = i.useCallback(() => {
                 (0, d.ql)("");
             }, []),
-            C = (e) => {
+            N = (e) => {
                 switch (e.keyCode) {
                     case _.yXg.ARROW_LEFT:
                     case _.yXg.ARROW_RIGHT:
@@ -62,8 +62,8 @@ let m = i.forwardRef(function (e, t) {
                 query: I,
                 ref: v,
                 placeholder: null != S ? S : O,
-                onClear: N,
-                onKeyDown: C,
+                onClear: C,
+                onKeyDown: N,
                 onFocus: E,
                 onChange: A,
                 className: o()(y, { [h.searchBarFullRow]: m }),

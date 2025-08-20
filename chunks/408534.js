@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => j });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -20,12 +20,12 @@ var i = n(442837),
     C = n(354459),
     x = n(981631),
     v = n(388032),
-    j = n(895634);
-function O(e) {
-    let { onClose: t, onSelect: n, channel: O, remoteMode: E, onInteraction: S } = e,
+    O = n(895634);
+function j(e) {
+    let { onClose: t, onSelect: n, channel: j, remoteMode: E, onInteraction: S } = e,
         P = (0, a.bp)(),
-        { id: I, type: Z } = O,
-        T = (0, i.e7)([u.Z], () => u.Z.getGuild(O.guild_id), [O.guild_id]),
+        { id: I, type: Z } = j,
+        T = (0, i.e7)([u.Z], () => u.Z.getGuild(j.guild_id), [j.guild_id]),
         N = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(I)),
         A = (null == N ? void 0 : N.type) === C.fO.STREAM ? N.stream : null,
         w = (0, i.e7)([o.Z], () =>
@@ -33,7 +33,7 @@ function O(e) {
         ),
         R = (0, h.Z)(I),
         M = (0, y.Z)(I),
-        k = (0, m.Z)(O, T, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
+        k = (0, m.Z)(j, T, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
         D = (0, p.Z)(I),
         L = (0, _.Z)(),
         U = (0, c.$A)(I),
@@ -41,9 +41,9 @@ function O(e) {
         F = (0, b.Z)(A, P),
         H = (0, g.Z)(w, I),
         G = (0, f.Z)(),
-        V = (0, s.Z)(O);
+        V = (0, s.Z)(j);
     return (0, r.jsxs)(l.v2r, {
-        className: j.menu,
+        className: O.menu,
         onClose: t,
         onSelect: n,
         onInteraction: S,

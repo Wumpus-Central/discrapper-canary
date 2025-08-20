@@ -4,7 +4,7 @@ n.d(t, {
     cG: () => G,
     ly: () => B,
     oL: () => X,
-    vo: () => Z,
+    vo: () => F,
 }),
     n(388685),
     n(997841),
@@ -33,14 +33,14 @@ var r = n(647438),
     T = n(709054),
     S = n(223683),
     A = n(630114),
-    N = n(506712),
-    C = n(468788),
+    C = n(506712),
+    N = n(468788),
     R = n(789662),
     P = n(981631),
     w = n(490897),
     D = n(526761),
-    L = n(388032);
-function x(e, t, n) {
+    x = n(388032);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,12 +64,12 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,12 +81,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ function U(e, t) {
     let l = (0, o.Wu)([g.Z], () => g.Z.getGuildsArray()),
         c = r.useCallback(() => {
             let r = {};
-            for (let i of l) r[i.id] = V(i, n, e, t, a[i.id]);
+            for (let i of l) r[i.id] = Z(i, n, e, t, a[i.id]);
             return r;
         }, [l, n, e, t, a]),
         [u, d] = r.useState(() => c());
@@ -108,16 +108,16 @@ function U(e, t) {
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => j(M({}, n), { [e]: t }));
+                s((n) => k(j({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
-            getDebug: () => F(Object.values(u), t),
+            getDebug: () => V(Object.values(u), t),
         }
     );
 }
 function G(e, t) {
     return g.Z.getGuildsArray().some((n) => {
-        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(n, R.nf, e, t, !1) : (0, N.A)(n, e);
+        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, C.q)(n, R.nf, e, t, !1) : (0, C.A)(n, e);
         return r === R.AR.UseGreyDot;
     });
 }
@@ -137,9 +137,9 @@ function B() {
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length,
         });
 }
-function V(e, t, n, r, i) {
+function Z(e, t, n, r, i) {
     var a;
-    let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(e, t, n, r, !0) : (0, N.A)(e, n),
+    let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
         c = null != (a = n.filter((t) => t.guild_id === e.id)[0]) ? a : {},
         u = (0, A.Z)(e, null != i ? i : o, c, r, t);
     return {
@@ -153,7 +153,7 @@ function V(e, t, n, r, i) {
         muted: b.ZP.isMuted(e.id) && !b.ZP.isTemporarilyMuted(e.id),
     };
 }
-function F(e, t) {
+function V(e, t) {
     let n = t.reduce((e, t) => {
             var n;
             return e + Number(null != (n = t.num_year_opens) ? n : 0);
@@ -197,7 +197,7 @@ function F(e, t) {
         .concat(r, "\n\n")
         .concat(s.join("\n\n"));
 }
-function Z(e) {
+function F(e) {
     let [t, n] = r.useState(!1),
         [i, a] = r.useState(!1),
         o = r.useCallback(
@@ -247,8 +247,8 @@ async function H(e, t) {
     } catch (e) {
         I.Z.captureException(e),
             c.Z.show({
-                title: L.intl.string(L.t.j2d6Ki),
-                body: L.intl.string(L.t.mCjLAQ),
+                title: x.intl.string(x.t.j2d6Ki),
+                body: x.intl.string(x.t.mCjLAQ),
                 onConfirm: t,
             });
     }
@@ -273,7 +273,7 @@ function Y(e) {
     return () => {
         y.default.track(
             P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            j(M({}, n), {
+            k(j({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
                     .filter((e) => e.mode === R.AR.UseGreyDot)
@@ -293,7 +293,7 @@ function Y(e) {
     };
 }
 async function W(e) {
-    await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0));
+    await K(() => z()), await K(() => u.Z.setAccountFlag(N.c.USE_NEW_NOTIFICATIONS, !0));
     let t = await K(() => f.Z.saveUserGuildSettingsBulk(e));
     l.Z.dispatch({
         type: "USER_GUILD_SETTINGS_FULL_UPDATE",
@@ -351,8 +351,8 @@ async function X() {
             }),
         ),
             await (0, S.xx)(e.id),
-            await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
-    } else await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
+            await u.Z.setAccountFlag(N.c.USE_NEW_NOTIFICATIONS, !1);
+    } else await u.Z.setAccountFlag(N.c.USE_NEW_NOTIFICATIONS, !1);
 }
 function Q(e) {
     var t, n, r;

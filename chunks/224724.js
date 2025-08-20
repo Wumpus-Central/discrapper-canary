@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(442837),
@@ -94,7 +94,7 @@ class A extends a.ZP.Store {
         return _;
     }
 }
-let N = new A(o.Z, {
+let C = new A(o.Z, {
     WIDGET_PENDING_SET: g,
     WIDGET_PENDING_SAVE_START: v,
     WIDGET_PENDING_SAVE_SUCCESS: I,

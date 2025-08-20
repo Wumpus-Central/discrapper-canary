@@ -1,93 +1,94 @@
-t.d(l, {
-    ZP: () => b,
+n.d(t, {
+    ZP: () => E,
     pn: () => g,
 });
-var r,
-    n = t(951288),
-    i = t(647438),
-    s = t(591759),
-    a = t(781452);
-function o(e) {
-    for (var l = 1; l < arguments.length; l++) {
-        var t = null != arguments[l] ? arguments[l] : {},
-            r = Object.keys(t);
+var r = n(951288),
+    i = n(647438),
+    a = n(591759),
+    o = n(781452);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (l) {
-                var r;
-                (r = t[l]),
-                    l in e
-                        ? Object.defineProperty(e, l, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[l] = r);
+            r.forEach(function (t) {
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, l) {
+function c(e, t) {
     if (null == e) return {};
-    var t,
+    var n,
         r,
-        n = (function (e, l) {
-            if (null == e) return {};
-            var t,
-                r,
-                n = {},
-                i = Object.keys(e);
-            for (r = 0; r < i.length; r++) (t = i[r]), l.indexOf(t) >= 0 || (n[t] = e[t]);
-            return n;
-        })(e, l);
+        i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++)
-            (t = i[r]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return n;
+    return i;
 }
-let u = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-function h(e, l) {
-    let t = s.Z.toURLSafe(null != e ? e : "");
-    if (null === t) return "";
-    if (null == l) return t.toString();
-    for (let e in l) {
-        let r = l[e];
-        null != r && t.searchParams.set(e, r);
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let d = "https://www.tiktok.com",
+    f = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
+function _(e, t) {
+    let n = a.Z.toURLSafe(null != e ? e : "");
+    if (null === n) return "";
+    if (null == t) return n.toString();
+    for (let e in t) {
+        let r = t[e];
+        null != r && n.searchParams.set(e, r);
     }
-    return t.toString();
+    return n.toString();
 }
-function c(e) {
-    var { src: l, autoMute: t } = e,
-        r = d(e, ["src", "autoMute"]);
-    let s = i.useRef(null),
-        a = i.useCallback(
+function p(e) {
+    var { src: t, autoMute: n } = e,
+        a = c(e, ["src", "autoMute"]);
+    let o = i.useRef(null),
+        s = i.useCallback(
             (e) => {
-                if (
-                    e.data["x-tiktok-player"] &&
-                    "https://www.tiktok.com" === e.origin &&
-                    "onPlayerReady" === e.data.type
-                ) {
-                    var l, r, n, i;
-                    t &&
-                        (null == (i = s.current) ||
-                            null == (n = i.contentWindow) ||
-                            n.postMessage(
+                if (e.data["x-tiktok-player"] && e.origin === d && "onPlayerReady" === e.data.type) {
+                    var t, r, i, a;
+                    n &&
+                        (null == (a = o.current) ||
+                            null == (i = a.contentWindow) ||
+                            i.postMessage(
                                 {
                                     type: "mute",
                                     "x-tiktok-player": !0,
                                 },
                                 e.origin,
                             )),
-                        null == (r = s.current) ||
-                            null == (l = r.contentWindow) ||
-                            l.postMessage(
+                        null == (r = o.current) ||
+                            null == (t = r.contentWindow) ||
+                            t.postMessage(
                                 {
                                     type: "play",
                                     "x-tiktok-player": !0,
@@ -96,58 +97,62 @@ function c(e) {
                             );
                 }
             },
-            [t],
+            [n],
         );
-    i.useEffect(() => (window.addEventListener("message", a), () => window.removeEventListener("message", a)), [a]);
-    let u = h(l, { utm_source: "discord.gg" });
-    return (0, n.jsx)(
-        p,
-        o(
+    i.useEffect(() => (window.addEventListener("message", s), () => window.removeEventListener("message", s)), [s]);
+    let u = _(t, { utm_source: "discord.gg" });
+    return (0, r.jsx)(
+        m,
+        l(
             {
                 src: u,
-                ref: s,
+                ref: o,
             },
-            r,
+            a,
         ),
     );
 }
-function m(e) {
-    var { src: l, autoMute: t } = e,
-        r = d(e, ["src", "autoMute"]);
-    let i = h(l, {
+function h(e) {
+    var { src: t, autoMute: n } = e,
+        i = c(e, ["src", "autoMute"]);
+    let a = _(t, {
         autoplay: "1",
         auto_play: "1",
-        mute: t ? "1" : void 0,
+        mute: n ? "1" : void 0,
     });
-    return (0, n.jsx)(p, o({ src: i }, r));
+    return (0, r.jsx)(m, l({ src: a }, i));
 }
-let p = i.forwardRef(function (e, l) {
-    var { allowFullScreen: t } = e,
-        r = d(e, ["allowFullScreen"]);
-    return (0, n.jsx)(
+let m = i.forwardRef(function (e, t) {
+    var { allowFullScreen: n } = e,
+        i = c(e, ["allowFullScreen"]);
+    let a = n ? "".concat(f, " allow-fullscreen") : f,
+        s = n ? "autoplay; fullscreen" : "autoplay";
+    return (0, r.jsx)(
         "iframe",
-        o(
+        l(
             {
-                ref: l,
-                className: a.embedIframe,
-                allow: t ? "autoplay; fullscreen" : "autoplay",
+                ref: t,
+                className: o.embedIframe,
+                allow: s,
                 frameBorder: 0,
                 scrolling: "no",
-                sandbox: t ? "".concat(u, " allow-fullscreen") : u,
-                allowFullScreen: t,
+                sandbox: a,
+                allowFullScreen: n,
             },
-            r,
+            i,
         ),
     );
 });
-var g = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
-function b(e) {
+var g = (function (e) {
+    return (e.YOUTUBE = "YouTube"), (e.TIKTOK = "TikTok"), e;
+})({});
+function E(e) {
     switch (e.provider) {
         case "YouTube":
-            return (0, n.jsx)(m, o({}, e));
+            return (0, r.jsx)(h, l({}, e));
         case "TikTok":
-            return (0, n.jsx)(c, o({}, e));
+            return (0, r.jsx)(p, l({}, e));
         default:
-            return (0, n.jsx)(p, o({}, e));
+            return (0, r.jsx)(m, l({}, e));
     }
 }

@@ -1,21 +1,21 @@
 n.d(t, {
-    M: () => m,
-    Z: () => b,
+    M: () => b,
+    Z: () => O,
 }),
     n(415506),
     n(781311),
     n(388685);
 var r,
-    s = n(951288),
-    l = n(647438),
-    a = n(120356),
-    i = n.n(a),
-    o = n(481060),
+    i = n(951288),
+    a = n(647438),
+    o = n(120356),
+    s = n.n(o),
+    l = n(481060),
     c = n(607802),
     u = n(579612),
     d = n(388032),
-    h = n(575209);
-function p(e, t, n) {
+    f = n(575209);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function p(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,24 +39,29 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,53 +70,53 @@ function _(e, t) {
 let g = (e) => {
     let { query: t, searchFavorites: n, showDMQueryText: r } = e,
         {
-            filterCount: a,
-            queryContent: i,
+            filterCount: o,
+            queryContent: s,
             isQueryEmpty: u,
-        } = l.useMemo(() => {
+        } = a.useMemo(() => {
             var e, n, r;
-            let s = (0, c.kG)(t),
-                l = (0, c.$G)(s),
-                a = null != (n = (0, c.UP)(l)) ? n : "";
+            let i = (0, c.kG)(t),
+                a = (0, c.$G)(i),
+                o = null != (n = (0, c.UP)(a)) ? n : "";
             return {
-                filterCount: null != (r = null == (e = l.channel_id) ? void 0 : e.length) ? r : 0,
-                isQueryEmpty: 0 === a.length,
-                queryContent: a,
+                filterCount: null != (r = null == (e = a.channel_id) ? void 0 : e.length) ? r : 0,
+                isQueryEmpty: 0 === o.length,
+                queryContent: o,
             };
         }, [t]);
     return n
-        ? (0, s.jsx)("div", {
-              className: h.queryText,
+        ? (0, i.jsx)("div", {
+              className: f.queryText,
               children: d.intl.string(d.t["6RVtLC"]),
           })
         : r
-          ? a > 0
-              ? (0, s.jsx)(o.Text, {
+          ? o > 0
+              ? (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
                     color: "text-secondary",
-                    className: h.searchDMQueryText,
+                    className: f.searchDMQueryText,
                     children: u
-                        ? d.intl.format(d.t.iV2ftr, { filterCount: a })
+                        ? d.intl.format(d.t.iV2ftr, { filterCount: o })
                         : d.intl.format(d.t["5CTmUl"], {
-                              filterCount: a,
-                              value: i,
+                              filterCount: o,
+                              value: s,
                           }),
                 })
-              : (0, s.jsx)(o.Text, {
+              : (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
                     color: "text-secondary",
-                    className: h.searchDMQueryText,
-                    children: u ? d.intl.string(d.t.w39VdH) : d.intl.format(d.t["9gKPv7"], { value: i }),
+                    className: f.searchDMQueryText,
+                    children: u ? d.intl.string(d.t.w39VdH) : d.intl.format(d.t["9gKPv7"], { value: s }),
                 })
-          : (0, s.jsx)("div", {
-                className: h.queryText,
+          : (0, i.jsx)("div", {
+                className: f.queryText,
                 children: d.intl.format(d.t.ub226e, { value: t }),
             });
 };
-function S(e) {
+function E(e) {
     e.stopPropagation(), e.preventDefault();
 }
-function m(e, t, n) {
+function b(e, t, n) {
     return {
         id: "".concat(e, "-").concat(t),
         role: "option",
@@ -119,64 +124,64 @@ function m(e, t, n) {
         "aria-selected": n,
     };
 }
-class y extends (r = l.PureComponent) {
+class y extends (r = a.PureComponent) {
     renderQuery(e) {
         let {
             query: t,
             navId: n,
             focusedIndex: r,
-            onSelectQuery: l,
-            onSelectSearchEverywhere: a,
+            onSelectQuery: a,
+            onSelectSearchEverywhere: o,
             onHighlightQuery: c,
             hideQuery: u,
-            searchFavorites: p,
-            showDMQueryText: S,
+            searchFavorites: _,
+            showDMQueryText: h,
         } = this.props;
         if (e || u) return null;
-        let y = -1 === r;
-        return (0, s.jsxs)(s.Fragment, {
+        let E = -1 === r;
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsxs)(
-                    o.P3F,
-                    _(f({ className: i()(h.queryContainer, { [h.focused]: y }) }, m(n, -1, y)), {
+                (0, i.jsxs)(
+                    l.P3F,
+                    m(p({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
                         onMouseEnter: c,
-                        onClick: l,
+                        onClick: a,
                         children: [
-                            (0, s.jsx)(g, {
+                            (0, i.jsx)(g, {
                                 query: t,
-                                searchFavorites: p,
-                                showDMQueryText: S,
+                                searchFavorites: _,
+                                showDMQueryText: h,
                             }),
-                            (0, s.jsx)("div", {
-                                className: h.queryShortcut,
+                            (0, i.jsx)("div", {
+                                className: f.queryShortcut,
                                 "aria-hidden": !0,
-                                children: (0, s.jsx)(o.M2$, {
+                                children: (0, i.jsx)(l.M2$, {
                                     shortcut: "return",
                                     dim: !0,
-                                    className: h.keyCombo,
+                                    className: f.keyCombo,
                                 }),
                             }),
                         ],
                     }),
                 ),
-                p &&
-                    (0, s.jsxs)(
-                        o.P3F,
-                        _(f({ className: i()(h.queryContainer, { [h.focused]: y }) }, m(n, -1, y)), {
+                _ &&
+                    (0, i.jsxs)(
+                        l.P3F,
+                        m(p({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
                             onMouseEnter: c,
-                            onClick: a,
+                            onClick: o,
                             children: [
-                                (0, s.jsx)("div", {
-                                    className: h.queryText,
+                                (0, i.jsx)("div", {
+                                    className: f.queryText,
                                     children: d.intl.string(d.t.FtSUxc),
                                 }),
-                                (0, s.jsx)("div", {
-                                    className: h.queryShortcut,
+                                (0, i.jsx)("div", {
+                                    className: f.queryShortcut,
                                     "aria-hidden": !0,
-                                    children: (0, s.jsx)(o.M2$, {
+                                    children: (0, i.jsx)(l.M2$, {
                                         shortcut: "shift+return",
                                         dim: !0,
-                                        className: h.keyCombo,
+                                        className: f.keyCombo,
                                     }),
                                 }),
                             ],
@@ -190,64 +195,65 @@ class y extends (r = l.PureComponent) {
             numResults: t,
             renderNoResults: n,
             renderInitialState: r,
-            renderResult: s,
-            renderCustomResults: l,
+            renderResult: i,
+            renderCustomResults: a,
         } = this.props;
         if (e) return r();
         if (0 === t) return n();
-        if (null != s) return Array.from({ length: t }).map((e, t) => s(t));
-        if (null != l) return l();
+        if (null != i) return Array.from({ length: t }).map((e, t) => i(t));
+        if (null != a) return a();
         throw Error("SearchResultsPopout.renderResults: Flow should never allow this...");
     }
     render() {
         let { query: e, focusedIndex: t, navId: n, className: r } = this.props,
-            l = "" === e.trim();
-        return (0, s.jsxs)("div", {
-            className: i()(h.container, r),
-            onMouseDown: S,
+            a = "" === e.trim();
+        return (0, i.jsxs)("div", {
+            className: s()(f.container, r),
+            onMouseDown: E,
             role: "listbox",
             id: n,
             tabIndex: -1,
             "aria-activedescendant": "".concat(n, "-").concat(t),
-            children: [this.renderQuery(l), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(l)],
+            children: [this.renderQuery(a), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(a)],
         });
     }
     constructor(...e) {
         super(...e),
-            p(this, "renderSearchInSelectedChannelAutocomplete", () => {
+            _(this, "renderSearchInSelectedChannelAutocomplete", () => {
                 let {
                     navId: e,
                     channel: t,
                     showSearchInSelectedChannel: n,
                     focusedIndex: r,
-                    onSelectSearchInSelectedChannel: l,
+                    onSelectSearchInSelectedChannel: a,
                 } = this.props;
                 if (!n || null == t) return null;
-                let a = (0, c.X3)(t),
-                    i = (0, s.jsx)(u.ZP, {
+                let o = -1 === r,
+                    s = (0, c.X3)(t),
+                    _ = (0, i.jsx)(u.ZP, {
                         channel: t,
-                        text: d.intl.formatToPlainString(d.t.LDpotL, { guildName: a }),
-                        channelContainerClassName: h.channelContainer,
-                        textContainerClassName: h.searchResultNameContainer,
+                        text: d.intl.formatToPlainString(d.t.LDpotL, { guildName: s }),
+                        channelContainerClassName: f.channelContainer,
+                        textContainerClassName: f.searchResultNameContainer,
                     });
-                return (0, s.jsx)(
-                    o.P3F,
-                    _(f({}, m(e, -1, -1 === r)), {
-                        className: h.inChannelOptionContainer,
-                        onClick: l,
-                        children: (0, s.jsx)(o.Text, {
+                return (0, i.jsx)(
+                    l.P3F,
+                    m(p({}, b(e, -1, o)), {
+                        className: f.inChannelOptionContainer,
+                        onClick: a,
+                        children: (0, i.jsx)(l.Text, {
                             variant: "text-md/normal",
                             color: "interactive-normal",
-                            className: h.inChannelOption,
-                            children: d.intl.format(d.t.LDpotL, { guildName: i }),
+                            className: f.inChannelOption,
+                            children: d.intl.format(d.t.LDpotL, { guildName: _ }),
                         }),
                     }),
                 );
             });
     }
 }
-p(y, "defaultProps", {
+_(y, "defaultProps", {
     renderInitialState: () => null,
     hideQuery: !1,
 });
-let b = y;
+let O = y;

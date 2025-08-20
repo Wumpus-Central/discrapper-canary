@@ -25,7 +25,7 @@ function o(e) {
             participant: x,
             width: v,
         } = e,
-        j = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -65,7 +65,7 @@ function o(e) {
             "participant",
             "width",
         ]);
-    let O = l.Z.getVideoComponent();
+    let j = l.Z.getVideoComponent();
     return (0, r.jsx)("div", {
         style: { width: v },
         className: a.spaceBetweenTiles,
@@ -116,10 +116,10 @@ function o(e) {
                             participant: x,
                             paused: _,
                             pulseSpeakingIndicator: C,
-                            videoComponent: O,
+                            videoComponent: j,
                             width: v,
                         },
-                        j,
+                        O,
                     ),
                 ),
                 d,

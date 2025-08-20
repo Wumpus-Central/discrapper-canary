@@ -194,14 +194,14 @@ function N(e) {
         ],
     });
 }
-function I(e) {
+function E(e) {
     return (0, m.r5)(e, m.vT.ALPHA)
         ? (0, r.jsx)(o.Z, { className: j.alphaBetaTag })
         : (0, m.r5)(e, m.vT.BETA)
           ? (0, r.jsx)(c.Z, { className: j.alphaBetaTag })
           : null;
 }
-function E(e) {
+function I(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: s } = e,
         o = (0, p.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, g.w)(),
@@ -215,7 +215,7 @@ function E(e) {
                 null != n && (h(n), b(n.enabled));
             }
         }, 300),
-        E = (e) => {
+        I = (e) => {
             y(e), s(e);
         };
     if (null == o) return null;
@@ -241,7 +241,7 @@ function E(e) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: j.ruleTextHeader,
-                                children: [S, I(t.triggerType)],
+                                children: [S, E(t.triggerType)],
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: j.ruleSubtextHeader,
@@ -279,7 +279,7 @@ function E(e) {
                                 (0, r.jsx)(
                                     a.P3F,
                                     _(v({}, e), {
-                                        onClick: E,
+                                        onClick: I,
                                         className: j.menuIconButton,
                                         children: (0, r.jsx)(a.Huf, {
                                             size: "md",
@@ -318,7 +318,7 @@ function S(e) {
                         color: "header-primary",
                         children: (0, r.jsxs)("div", {
                             className: j.ruleTextHeader,
-                            children: [s, I(t)],
+                            children: [s, E(t)],
                         }),
                     }),
                     (0, r.jsx)(a.Text, {
@@ -373,7 +373,7 @@ function T(e) {
                       onChangeRule: u,
                       onContextMenu: m,
                   })
-                : (0, r.jsx)(E, {
+                : (0, r.jsx)(I, {
                       rule: t,
                       isDefaultRule: o,
                       onContextMenu: m,

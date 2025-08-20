@@ -24,8 +24,8 @@ let y = (0, l.Z)((e) => {
         onSelectParticipant: C,
         onContextMenuParticipant: x,
         onFullscreenParticipant: v,
-        channel: j,
-        hasConnectPermission: O,
+        channel: O,
+        hasConnectPermission: j,
         className: E,
         inCall: S,
         showParticipants: P = !0,
@@ -44,17 +44,17 @@ let y = (0, l.Z)((e) => {
         () => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))),
         [n, y],
     );
-    return (null == w ? void 0 : w.channelId) === j.id
+    return (null == w ? void 0 : w.channelId) === O.id
         ? (0, r.jsx)(d.Z, { height: Z })
-        : (null == j ? void 0 : j.isGuildVocal()) && !S
+        : (null == O ? void 0 : O.isGuildVocal()) && !S
           ? (0, r.jsx)(u.Z, {
-                channel: j,
+                channel: O,
                 participants: t,
-                hasConnectPermission: O,
+                hasConnectPermission: j,
             })
           : N === m.WtW.VOICE
             ? (0, r.jsx)(o.Z, {
-                  guildId: j.guild_id,
+                  guildId: O.guild_id,
                   width: I,
                   className: b.voiceCallWrapper,
                   participants: t,
@@ -62,13 +62,13 @@ let y = (0, l.Z)((e) => {
               })
             : ((n = S ? n : t), null == l)
               ? 0 === n.length
-                  ? (0, r.jsx)(f.Z, { channelId: j.id })
+                  ? (0, r.jsx)(f.Z, { channelId: O.id })
                   : (0, r.jsx)(s.Z, {
                         className: b.videoGridWrapper,
                         justify: s.Z.Justify.CENTER,
                         align: s.Z.Align.CENTER,
                         children: (0, r.jsx)(p.Z, {
-                            channel: j,
+                            channel: O,
                             className: b.videoGrid,
                             participants: M,
                             totalNumberOfParticipants: t.length,
@@ -92,7 +92,7 @@ let y = (0, l.Z)((e) => {
                     width: I,
                     layout: _,
                     inCall: S,
-                    channel: j,
+                    channel: O,
                     showParticipants: P,
                 });
 });

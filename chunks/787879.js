@@ -23,8 +23,8 @@ var r,
     T = n(370774),
     S = n(810457),
     A = n(982183),
-    N = n(981631),
-    C = n(124368);
+    C = n(981631),
+    N = n(124368);
 function R(e, t, n) {
     return (
         t in e
@@ -41,22 +41,22 @@ function R(e, t, n) {
 let P = {},
     w = null,
     D = [],
-    L = new S.Z(),
-    x = !1,
+    x = new S.Z(),
+    L = !1,
+    j = !1,
     M = !1,
     k = !1,
-    j = !1,
     U = v.default.fromTimestamp(Date.now()),
     G = !0,
     B = null,
-    V = null,
-    F = !0;
-function Z() {
+    Z = null,
+    V = !0;
+function F() {
     let e = b.ZP.getFlattenedGuildIds().flatMap((e) => m.ZP.getSelectableChannelIds(e)),
         t = u.Z.getAllActiveJoinedThreads(),
         n = (e) =>
-            !!N.TPd.GUILD_TEXTUAL.has(e.type) &&
-            ((0, _.Q5)(e.type) ? (0, f.J)(e) === C.iN.ALL_MESSAGES && !d.Z.isMuted(e.id) : y.ZP.allowAllMessages(e)),
+            !!C.TPd.GUILD_TEXTUAL.has(e.type) &&
+            ((0, _.Q5)(e.type) ? (0, f.J)(e) === N.iN.ALL_MESSAGES && !d.Z.isMuted(e.id) : y.ZP.allowAllMessages(e)),
         r = [];
     for (let t of e) {
         let e = h.Z.getBasicChannel(t);
@@ -98,7 +98,7 @@ function H(e) {
         r = g.Z.getMessages(e);
     if (r.hasPresent() && 0 !== r.length)
         return (
-            L.addChannelMessages({
+            x.addChannelMessages({
                 channel: n,
                 channelMessages: r,
                 userId: null == (t = O.default.getCurrentUser()) ? void 0 : t.id,
@@ -121,7 +121,7 @@ function Y() {
     U = "0";
 }
 function W() {
-    let { notifyingChannelIds: e, staleChannelIds: t } = Z();
+    let { notifyingChannelIds: e, staleChannelIds: t } = F();
     (w = e), (D = t), a()(null != w, "notifyingChannelIds should not be null");
     let n = w.filter((e) => null == P[e]),
         r = Object.keys(P).filter((e) => !(null == w ? void 0 : w.includes(e)));
@@ -143,20 +143,20 @@ function W() {
                         null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : P[e].mostRecentMessageId);
             }
         }
-    L.updateChannelIds(w), Y();
+    x.updateChannelIds(w), Y();
 }
 function K() {
     (P = {}),
         (w = null),
         (D = []),
-        (L = new S.Z()),
-        (x = !1),
+        (x = new S.Z()),
+        (L = !1),
+        (j = !1),
         (M = !1),
-        (k = !1),
         (U = v.default.fromTimestamp(Date.now())),
         (G = !0),
-        (j = !1),
-        (V = null),
+        (k = !1),
+        (Z = null),
         (B = null);
 }
 function z() {
@@ -169,7 +169,7 @@ function z() {
             Y());
     }
     let r = null != (n = c.ZP.getSettingsFilteredMentions()) ? n : [];
-    L.addMessages(
+    x.addMessages(
         r.map((e) => {
             var t;
             return {
@@ -209,7 +209,7 @@ function J(e) {
         W();
     }
     if (!o && l && !(0, c.ln)(s)) return !1;
-    L.addMessage({
+    x.addMessage({
         id: a.id,
         channelId: a.channel_id,
         guildId: null == (r = h.Z.getBasicChannel(a.channel_id)) ? void 0 : r.guild_id,
@@ -230,7 +230,7 @@ function ee(e) {
     if (0 === t.length) return !1;
     let n = c.ZP.getSettingsFilteredMentions();
     if (null == n || 0 === n.length) return !1;
-    L.addMessages(
+    x.addMessages(
         n.map((e) => {
             var t;
             return {
@@ -245,18 +245,18 @@ function ee(e) {
 }
 function et(e) {
     let { id: t } = e;
-    return L.deleteMessages([t]);
+    return x.deleteMessages([t]);
 }
 function en(e) {
     let { ids: t } = e;
-    return L.deleteMessages(t);
+    return x.deleteMessages(t);
 }
 function er() {
-    x = !0;
+    L = !0;
 }
 function ei(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (x = !1), t ? (j = !0) : (null != n && (G = n), (k = !0)), (V = null != r ? r : null);
+    (L = !1), t ? (k = !0) : (null != n && (G = n), (M = !0)), (Z = null != r ? r : null);
 }
 function ea(e) {
     var t;
@@ -271,14 +271,14 @@ function ea(e) {
                 ? void 0
                 : t.notificationCenterVariant) &&
         null != w &&
-        !x &&
-        !M &&
-        (!n || !j) &&
+        !L &&
+        !j &&
+        (!n || !k) &&
         G
     );
 }
 function eo() {
-    (x = !1), (V = null), (M = !0);
+    (L = !1), (Z = null), (j = !0);
 }
 function es(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
@@ -302,7 +302,7 @@ function el(e) {
     ) && (B = null);
 }
 function ec() {
-    M = !1;
+    j = !1;
 }
 function eu() {
     B = null;
@@ -325,23 +325,23 @@ function e_(e) {
     if (null == a) return !1;
     if (null == r ? void 0 : r.some((e) => e.userId === a)) {
         let e = h.Z.getBasicChannel(n);
-        return !(null == e || d.Z.isMuted(n)) && (0, f.J)(e) !== C.iN.NO_MESSAGES && void q();
+        return !(null == e || d.Z.isMuted(n)) && (0, f.J)(e) !== N.iN.NO_MESSAGES && void q();
     }
     return null != i && !!i.includes(a) && void q();
 }
 function ep(e) {
     let { channel: t } = e;
-    if (!L.getMessages().some((e) => e.channelId === t.id)) return !1;
+    if (!x.getMessages().some((e) => e.channelId === t.id)) return !1;
     q();
 }
 function eh(e) {
     let { guild: t } = e;
-    if (!L.getMessages().some((e) => e.guildId === t.id)) return !1;
+    if (!x.getMessages().some((e) => e.guildId === t.id)) return !1;
     q();
 }
 function em(e) {
     let { navOnClick: t } = e;
-    F = null == t || t;
+    V = null == t || t;
 }
 class eg extends (r = o.ZP.Store) {
     initialize() {
@@ -352,7 +352,7 @@ class eg extends (r = o.ZP.Store) {
         return ea({ preload: t });
     }
     getInboxMessages() {
-        return L.getMessages();
+        return x.getMessages();
     }
     getNotifyingChannelIds() {
         return w;
@@ -367,25 +367,25 @@ class eg extends (r = o.ZP.Store) {
         return G;
     }
     get isLoading() {
-        return x;
+        return L;
     }
     get hasLoadedEver() {
-        return k;
+        return M;
     }
     get hasPreloaded() {
-        return j;
+        return k;
     }
     get isLoadingComplete() {
-        return !x && !G;
+        return !L && !G;
     }
     get selectedItemInfo() {
         return B;
     }
     get currentRequestAnalyticsPayload() {
-        return V;
+        return Z;
     }
     getDevOverrides() {
-        return { navOnClick: F };
+        return { navOnClick: V };
     }
 }
 R(eg, "displayName", "NotificationsInboxStore");

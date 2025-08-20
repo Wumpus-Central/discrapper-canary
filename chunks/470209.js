@@ -1,16 +1,16 @@
-A.d(t, { Z: () => m });
+A.d(t, { Z: () => h });
 var n = A(951288),
     r = A(647438),
-    a = A(512722),
-    l = A.n(a),
-    i = A(866442),
-    o = A(755721),
+    l = A(512722),
+    a = A.n(l),
+    o = A(866442),
+    i = A(755721),
     s = A(481060),
-    c = A(313201),
-    d = A(981631),
+    d = A(313201),
+    c = A(981631),
     u = A(388032),
-    g = A(744422);
-function f(e) {
+    f = A(744422);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(A);
@@ -53,59 +53,59 @@ function p(e, t) {
         e
     );
 }
-let h = (0, c.hQ)();
-function m(e) {
+let m = (0, d.hQ)();
+function h(e) {
     let { newRoleParams: t, setNewRoleParams: A } = e,
-        a = r.useRef(null),
-        { name: c, color: m } = t,
-        v = (e) => A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { color: e })));
+        l = r.useRef(null),
+        { name: d, color: h } = t,
+        b = (e) => A((t) => (a()(null != t, "newRoleParams should be defined"), p(g({}, t), { color: e })));
     return (0, n.jsxs)("div", {
-        className: g.roleInputContainer,
+        className: f.roleInputContainer,
         children: [
-            (0, n.jsx)(o.Is, {
+            (0, n.jsx)(i.Is, {
                 autoFocus: !0,
-                value: c,
+                value: d,
                 onChange: (e) =>
-                    A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { name: e }))),
-                id: h,
+                    A((t) => (a()(null != t, "newRoleParams should be defined"), p(g({}, t), { name: e }))),
+                id: m,
                 placeholder: u.intl.string(u.t.oNauur),
-                maxLength: d.VKK,
-                inputClassName: g.input,
+                maxLength: c.VKK,
+                inputClassName: f.input,
             }),
             (0, n.jsxs)("div", {
-                className: g.roleColorContainer,
+                className: f.roleColorContainer,
                 children: [
-                    (0, n.jsx)(s.nn4, { children: u.intl.format(u.t["Vlq/pK"], { color: (0, i.Rf)(m) }) }),
+                    (0, n.jsx)(s.nn4, { children: u.intl.format(u.t["Vlq/pK"], { color: (0, o.Rf)(h) }) }),
                     (0, n.jsx)("div", {
-                        className: g.roleColorPreview,
-                        style: { backgroundColor: (0, i.Rf)(m) },
+                        className: f.roleColorPreview,
+                        style: { backgroundColor: (0, o.Rf)(h) },
                     }),
                     (0, n.jsx)(s.LZC, {
                         size: 8,
                         horizontal: !0,
                     }),
                     (0, n.jsx)(s.yRy, {
-                        targetElementRef: a,
+                        targetElementRef: l,
                         renderPopout: (e) =>
                             (0, n.jsx)(
                                 s.Z$W,
-                                p(f({}, e), {
-                                    value: m,
-                                    onChange: v,
+                                p(g({}, e), {
+                                    value: h,
+                                    onChange: b,
                                 }),
                             ),
                         children: (e) =>
                             (0, n.jsx)(
                                 s.P3F,
-                                p(f({}, e), {
-                                    innerRef: a,
+                                p(g({}, e), {
+                                    innerRef: l,
                                     tag: "span",
                                     "aria-label": u.intl.string(u.t.QLgdlZ),
-                                    className: g.dropperIconContainer,
+                                    className: f.dropperIconContainer,
                                     children: (0, n.jsx)(s.ilE, {
                                         size: "xs",
                                         color: "currentColor",
-                                        className: g.dropperIcon,
+                                        className: f.dropperIcon,
                                     }),
                                 }),
                             ),

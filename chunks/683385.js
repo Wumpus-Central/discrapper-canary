@@ -25,13 +25,13 @@ e.exports = function (e, t, n) {
         T = !!(n && n.AS_ENTRIES),
         S = !!(n && n.IS_RECORD),
         A = !!(n && n.IS_ITERATOR),
-        N = !!(n && n.INTERRUPTED),
-        C = r(t, I),
+        C = !!(n && n.INTERRUPTED),
+        N = r(t, I),
         R = function (e) {
             return m && f(m, "normal", e), new p(!0, e);
         },
         P = function (e) {
-            return T ? (a(e), N ? C(e[0], e[1], R) : C(e[0], e[1])) : N ? C(e, R) : C(e);
+            return T ? (a(e), C ? N(e[0], e[1], R) : N(e[0], e[1])) : C ? N(e, R) : N(e);
         };
     if (S) m = e.iterator;
     else if (A) m = e;

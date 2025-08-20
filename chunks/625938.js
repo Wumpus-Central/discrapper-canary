@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(866071),
     x = n(223135),
     v = n(981631),
-    j = n(921944),
-    O = n(231338),
+    O = n(921944),
+    j = n(231338),
     E = n(388032),
     S = n(805787);
 function P(e) {
@@ -94,7 +94,7 @@ let I = (e) => {
             () => (
                 Z || M.push(u.z.HANG_STATUS_NEW_BADGE),
                 () => {
-                    Z && (null == k || k(j.L.PRIMARY));
+                    Z && (null == k || k(O.L.PRIMARY));
                 }
             ),
             [Z, M, k],
@@ -121,7 +121,7 @@ let I = (e) => {
                 w({
                     type: v.IIU.HANG_STATUS,
                     name: "Hang Status",
-                    state: O.tN.CUSTOM,
+                    state: j.tN.CUSTOM,
                     details: e.status,
                     emoji: e.emoji,
                 });

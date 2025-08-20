@@ -1,36 +1,37 @@
-n.d(t, { Z: () => m });
-var i = n(951288);
+n.d(t, { Z: () => f });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(481060),
-    a = n(993413),
-    l = n(496675),
-    o = n(52597),
+var i = n(442837),
+    a = n(481060),
+    o = n(993413),
+    s = n(496675),
+    l = n(52597),
     c = n(981631),
-    d = n(388032),
-    u = n(473385);
-function m(e) {
-    let { errors: t, pendingNick: n, currentNick: m, username: p, guild: g } = e,
-        h = null != n ? n : m,
-        f = (0, r.e7)([l.Z], () => l.Z.can(c.Plq.CHANGE_NICKNAME, g) || l.Z.can(c.Plq.MANAGE_NICKNAMES, g));
-    return (0, i.jsxs)(a.Z, {
-        title: d.intl.string(d.t.me1lRk),
+    u = n(388032),
+    d = n(473385);
+function f(e) {
+    let { errors: t, pendingNick: n, currentNick: f, username: _, guild: p } = e,
+        h = null != n ? n : f,
+        m = (0, i.e7)([s.Z], () => s.Z.can(c.Plq.CHANGE_NICKNAME, p) || s.Z.can(c.Plq.MANAGE_NICKNAMES, p));
+    function g(e) {
+        (0, l.wi)(e, f);
+    }
+    return (0, r.jsxs)(o.Z, {
+        title: u.intl.string(u.t.me1lRk),
         errors: t,
         children: [
-            (0, i.jsx)(s.oil, {
+            (0, r.jsx)(a.oil, {
                 value: null != h ? h : "",
-                placeholder: p,
+                placeholder: _,
                 maxLength: c.l$U,
-                onChange: function (e) {
-                    (0, o.wi)(e, m);
-                },
-                disabled: !f,
+                onChange: g,
+                disabled: !m,
             }),
-            !f &&
-                (0, i.jsx)(s.R94, {
-                    className: u.nicknameDisabled,
-                    type: s.R94.Types.DESCRIPTION,
-                    children: d.intl.string(d.t.gzjxQk),
+            !m &&
+                (0, r.jsx)(a.R94, {
+                    className: d.nicknameDisabled,
+                    type: a.R94.Types.DESCRIPTION,
+                    children: u.intl.string(u.t.gzjxQk),
                 }),
         ],
     });

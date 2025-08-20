@@ -1,28 +1,54 @@
-n.d(t, { h: () => u });
+n.d(t, { h: () => f });
 var r = n(358085),
     i = n(150248),
-    l = n(691731),
+    a = n(691731),
     o = n(984211);
 n(620662);
-var a = n(120021),
-    s = n(994339),
-    c = n(233487);
-function u(e) {
+var s = n(120021),
+    l = n(742889),
+    c = n(994339),
+    u = n(233487),
+    d = n(981631);
+function f(e) {
+    var t;
     let {
-        presenceActivity: t,
-        currentUserPresenceActivity: n,
-        currentUserId: u,
-        message: d,
-        application: p,
+        presenceActivity: n,
+        currentUserPresenceActivity: f,
+        currentUserId: _,
+        message: p,
+        application: h,
         isEmbeddedApplication: m,
-        isFrameApplication: f,
-        isGameLaunchable: g,
+        isFrameApplication: g,
+        isGameLaunchable: E,
     } = e;
-    if (d.author.id === u || !(0, s.Z)(t, d, p.id)) return !1;
-    let _ = (0, o._)(t);
-    return (
-        !(!(0, a.n)(_) || (0, c.y)(_) || (0, l.g)(n, t) || (0, i.H)(d)) &&
-        ((!!m && !!f) || (!!r.isPlatformEmbedded && !!g))
-    );
+    if (p.author.id === _ || !(0, c.Z)(n, p, h.id))
+        return {
+            canJoin: !1,
+            isRemoteJoin: !1,
+        };
+    let b = (0, o._)(n);
+    return !(0, s.n)(b) || (0, u.y)(b) || (0, a.g)(f, n) || (0, i.H)(p)
+        ? {
+              canJoin: !1,
+              isRemoteJoin: !1,
+          }
+        : m && g
+          ? {
+                canJoin: !0,
+                isRemoteJoin: !1,
+            }
+          : (null == (t = p.activity) ? void 0 : t.type) === d.mFx.JOIN && null != n && (0, l.K)(n)
+            ? {
+                  canJoin: !0,
+                  isRemoteJoin: !0,
+              }
+            : r.isPlatformEmbedded && E
+              ? {
+                    canJoin: !0,
+                    isRemoteJoin: !1,
+                }
+              : {
+                    canJoin: !1,
+                    isRemoteJoin: !1,
+                };
 }
-n(981631);

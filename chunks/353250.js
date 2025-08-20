@@ -1,15 +1,15 @@
 n.r(t),
     n.d(t, {
         CaptchaCancelError: () => c,
-        CaptchaError: () => a,
-        emitCaptchaDistributionMetric: () => s,
+        CaptchaError: () => s,
+        emitCaptchaDistributionMetric: () => a,
         extractCaptchaPropsFromResponse: () => o,
     }),
     n(415506);
 var r,
     i = n(644947),
     l = n(234888),
-    a = (((r = {}).CANCEL = "cancel"), (r.ERROR = "error"), (r.EXPIRED = "expired"), r);
+    s = (((r = {}).CANCEL = "cancel"), (r.ERROR = "error"), (r.EXPIRED = "expired"), r);
 function o(e) {
     var t;
     return {
@@ -24,7 +24,7 @@ function o(e) {
         },
     };
 }
-function s(e) {
+function a(e) {
     (0, i._8)() && setTimeout(() => (0, i.Zq)(), l.i), (0, i.s$)(e);
 }
 class c extends Error {

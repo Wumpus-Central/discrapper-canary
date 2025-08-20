@@ -1,42 +1,43 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
+    a = n(481060),
     o = n(43267),
-    a = n(93687),
-    s = n(785232);
-let c = i.memo(function (e) {
+    s = n(93687),
+    l = n(785232);
+function c(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = u(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function d(e) {
     var {
             channel: t,
             size: n,
             facepileSizeOverride: i,
-            experimentLocation: c,
-            isTyping: u,
-            status: d,
-            className: p,
-            animated: m = !1,
+            experimentLocation: u,
+            isTyping: d,
+            status: f,
+            className: _,
+            animated: p = !1,
         } = e,
-        f = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
-            return i;
-        })(e, [
+        h = c(e, [
             "channel",
             "size",
             "facepileSizeOverride",
@@ -46,22 +47,23 @@ let c = i.memo(function (e) {
             "className",
             "animated",
         ]);
-    let { isFacepileEnabled: g } = a.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && g && null == t.icon
-        ? (0, r.jsx)(s.Z, {
-              "aria-label": f["aria-label"],
-              "aria-hidden": f["aria-hidden"],
-              className: p,
+    let { isFacepileEnabled: m } = s.Z.useExperiment({ location: u }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && m && null == t.icon
+        ? (0, r.jsx)(l.Z, {
+              "aria-label": h["aria-label"],
+              "aria-hidden": h["aria-hidden"],
+              className: _,
               recipients: t.recipients,
               size: null != i ? i : n,
-              isTyping: u,
-              status: d,
+              isTyping: d,
+              status: f,
           })
-        : (0, r.jsx)(l.qEK, {
-              "aria-hidden": f["aria-hidden"],
-              "aria-label": f["aria-label"],
-              className: p,
+        : (0, r.jsx)(a.qEK, {
+              "aria-hidden": h["aria-hidden"],
+              "aria-label": h["aria-label"],
+              className: _,
               size: n,
-              src: (0, o.x)(t, 80, m),
+              src: (0, o.x)(t, 80, p),
           });
-});
+}
+let f = i.memo(d);

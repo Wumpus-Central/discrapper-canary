@@ -1,66 +1,67 @@
 n.d(t, { Z: () => p });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(793030),
-    l = n(302221),
-    o = n(553896),
+var i = n(120356),
+    a = n.n(i),
+    o = n(793030),
+    s = n(302221),
+    l = n(553896),
     c = n(848572),
-    d = n(787528),
-    u = n(388032),
-    m = n(726185);
-let p = () => {
-    var e;
-    let t = (0, c.Rw)(),
-        n = null != (e = (0, c.GG)()) ? e : new Date(),
-        r = (0, d.u)(null == t ? void 0 : t.id);
-    if (null == t || null == r) return null;
-    let { id: p, nameUnformatted: g, tenureReqNumMonths: h, hasWideArt: f } = t,
-        b = u.intl.string(g),
-        x = (0, o.q)(p, h),
-        _ = { "--custom-badge-glow-color": (0, l.rj)(t.glowColor, 0.5) };
-    return (0, i.jsxs)("div", {
-        className: m.container,
-        style: _,
-        children: [
-            (0, i.jsx)("div", {}),
-            " ",
-            (0, i.jsx)("img", {
-                src: r,
-                alt: b,
-                className: s()(m.badgeImage, {
-                    [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
-                    [m.wide]: f,
+    u = n(787528),
+    d = n(388032),
+    f = n(726185);
+let _ = (e, t) =>
+        (null == e ? void 0 : e.status) === c.Vq.EARNED
+            ? d.intl.format(d.t.Hu4jfn, { date: null != t ? t : new Date() })
+            : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
+              ? d.intl.format(d.t.E85flp, {
+                    date: null != t ? t : new Date(),
+                    days: e.daysLeft,
+                })
+              : null,
+    p = () => {
+        var e;
+        let t = (0, c.Rw)(),
+            n = null != (e = (0, c.GG)()) ? e : new Date(),
+            i = (0, u.u)(null == t ? void 0 : t.id);
+        if (null == t || null == i) return null;
+        let { id: p, nameUnformatted: h, tenureReqNumMonths: m, hasWideArt: g } = t,
+            E = d.intl.string(h),
+            b = (0, l.q)(p, m),
+            y = { "--custom-badge-glow-color": (0, s.rj)(t.glowColor, 0.5) };
+        return (0, r.jsxs)("div", {
+            className: f.container,
+            style: y,
+            children: [
+                (0, r.jsx)("div", {}),
+                " ",
+                (0, r.jsx)("img", {
+                    src: i,
+                    alt: E,
+                    className: a()(f.badgeImage, {
+                        [f.upcomingBadge]: t.status === c.Vq.UPCOMING,
+                        [f.wide]: g,
+                    }),
                 }),
-            }),
-            (0, i.jsxs)("div", {
-                className: m.textColumn,
-                children: [
-                    (0, i.jsx)(a.xv, {
-                        variant: "text-lg/semibold",
-                        className: m.badgeText,
-                        children: b,
-                    }),
-                    (0, i.jsx)(a.xv, {
-                        variant: "text-md/normal",
-                        className: m.badgeText,
-                        children: x,
-                    }),
-                    (0, i.jsx)(a.xv, {
-                        variant: "text-xs/normal",
-                        children:
-                            (null == t ? void 0 : t.status) === c.Vq.EARNED
-                                ? u.intl.format(u.t.Hu4jfn, { date: null != n ? n : new Date() })
-                                : (null == t ? void 0 : t.status) === c.Vq.UPCOMING
-                                  ? u.intl.format(u.t.E85flp, {
-                                        date: null != n ? n : new Date(),
-                                        days: t.daysLeft,
-                                    })
-                                  : null,
-                    }),
-                ],
-            }),
-        ],
-    });
-};
+                (0, r.jsxs)("div", {
+                    className: f.textColumn,
+                    children: [
+                        (0, r.jsx)(o.xv, {
+                            variant: "text-lg/semibold",
+                            className: f.badgeText,
+                            children: E,
+                        }),
+                        (0, r.jsx)(o.xv, {
+                            variant: "text-md/normal",
+                            className: f.badgeText,
+                            children: b,
+                        }),
+                        (0, r.jsx)(o.xv, {
+                            variant: "text-xs/normal",
+                            children: _(t, n),
+                        }),
+                    ],
+                }),
+            ],
+        });
+    };

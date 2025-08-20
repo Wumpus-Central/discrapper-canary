@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(51144),
     C = n(987707),
     N = n(999382),
-    I = n(909746),
-    E = n(501801),
+    E = n(909746),
+    I = n(501801),
     S = n(603784),
     T = n(981631),
     P = n(388032),
@@ -416,7 +416,7 @@ class U extends i.PureComponent {
                         selectedColor: d.lo1.Colors.BRAND,
                         children: [
                             (0, r.jsx)(d.lo1.Icon, {
-                                children: (0, r.jsx)(E.mp, {
+                                children: (0, r.jsx)(I.mp, {
                                     themeOverride: s ? T.BRd.DARK : null,
                                     actionType: l,
                                     targetType: a,
@@ -493,7 +493,7 @@ class U extends i.PureComponent {
                 var e, t;
                 let { actionFilter: n, hide: i, userIdFilter: l, moderators: s } = this.props;
                 if (i) return null;
-                let o = I.Iv(),
+                let o = E.Iv(),
                     c =
                         null !=
                         (e = o.find((e) => {
@@ -647,7 +647,7 @@ let B = c.ZP.connectStores([C.Z, N.Z, j.Z, h.Z, v.Z, _.default], () => {
         showLoadMore: C.Z.groupedFetchCount > 2,
         hasError: C.Z.hasError,
         hasOlderLogs: C.Z.hasOlderLogs,
-        logs: null != n && null != t ? I._$(n, t) : [],
+        logs: null != n && null != t ? E._$(n, t) : [],
         actionFilter: C.Z.actionFilter,
         userIdFilter: C.Z.userIdFilter,
         theme: h.Z.theme,

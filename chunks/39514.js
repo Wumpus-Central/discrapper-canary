@@ -2,30 +2,30 @@ n.d(t, { Z: () => P }), n(35282), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
+    s = n.n(l),
     o = n(442837),
-    s = n(570140),
+    a = n(570140),
     c = n(893776),
     u = n(533307),
     d = n(978085),
     h = n(232567),
     p = n(388905),
     m = n(362762),
-    f = n(108427),
-    g = n(314897),
+    g = n(108427),
+    f = n(314897),
     _ = n(896797),
     x = n(82142),
-    b = n(283595),
+    E = n(283595),
     v = n(55563),
-    E = n(669079),
-    j = n(63063),
+    j = n(669079),
+    b = n(63063),
     I = n(51144),
-    y = n(481153),
-    O = n(781428),
-    N = n(423527),
+    O = n(481153),
+    N = n(781428),
+    y = n(423527),
     S = n(981631),
     C = n(388032),
-    T = n(197571);
+    Z = n(197571);
 function A(e, t, n) {
     return (
         t in e
@@ -40,15 +40,15 @@ function A(e, t, n) {
     );
 }
 o.ZP.initialize();
-class Z extends i.PureComponent {
+class T extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, f.e)("gift_code");
+        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, g.e)("gift_code");
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            s.Z.wait(() => {
+            a.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -97,20 +97,20 @@ class Z extends i.PureComponent {
             children: [
                 (0, r.jsx)(p.Ee, {
                     src: n(167969),
-                    className: T.marginBottom8,
+                    className: Z.marginBottom8,
                 }),
                 (0, r.jsx)(p.Dx, {
-                    className: a()(T.marginTop8, T.marginBottom8),
+                    className: s()(Z.marginTop8, Z.marginBottom8),
                     children: C.intl.string(C.t.KPowgo),
                 }),
                 (0, r.jsx)(p.DK, { children: C.intl.string(C.t.j8734e) }),
                 (0, r.jsx)(p.zx, {
-                    className: a()(T.marginTop40, T.marginBottom8),
+                    className: s()(Z.marginTop40, Z.marginBottom8),
                     onClick: () => t(e),
                     children: C.intl.string(C.t.fIv16O),
                 }),
                 (0, r.jsx)(p.zx, {
-                    onClick: () => window.open(j.Z.getArticleURL(S.BhN.GIFTING), "_blank"),
+                    onClick: () => window.open(b.Z.getArticleURL(S.BhN.GIFTING), "_blank"),
                     look: p.zx.Looks.LINK,
                     color: p.zx.Colors.LINK,
                     children: C.intl.string(C.t["/CjuXF"]),
@@ -122,12 +122,12 @@ class Z extends i.PureComponent {
         return (0, r.jsxs)(p.ZP, {
             children: [
                 (0, r.jsx)(p.Dx, {
-                    className: T.marginBottom8,
+                    className: Z.marginBottom8,
                     children: C.intl.string(C.t.csrAMD),
                 }),
                 (0, r.jsx)(p.DK, { children: C.intl.string(C.t["m1+IBg"]) }),
                 (0, r.jsx)(p.zx, {
-                    className: T.marginTop40,
+                    className: Z.marginTop40,
                     onClick: () => this.setState({ continueOnWeb: !0 }),
                     children: C.intl.string(C.t["qsI+EB"]),
                 }),
@@ -140,16 +140,16 @@ class Z extends i.PureComponent {
             children: [
                 (0, r.jsx)(p.Ee, {
                     src: n(892235),
-                    className: T.marginBottom8,
+                    className: Z.marginBottom8,
                 }),
                 (0, r.jsx)(p.Dx, { children: C.intl.format(C.t.ivLUf3, { username: e.username }) }),
                 (0, r.jsx)(p.DK, {
-                    className: T.marginTop20,
+                    className: Z.marginTop20,
                     children: C.intl.string(C.t["8Su18/"]),
                 }),
                 (0, r.jsx)(p.zx, {
                     disabled: t,
-                    className: T.marginTop40,
+                    className: Z.marginTop40,
                     onClick: this.handleResendVerification,
                     children: t ? C.intl.string(C.t.CMa9Rk) : C.intl.string(C.t.lm1UKi),
                 }),
@@ -157,7 +157,7 @@ class Z extends i.PureComponent {
                     look: p.zx.Looks.LINK,
                     color: p.zx.Colors.LINK,
                     onClick: this.refreshUser,
-                    className: T.marginTop8,
+                    className: Z.marginTop8,
                     children: C.intl.string(C.t.Po9eBQ),
                 }),
             ],
@@ -167,20 +167,20 @@ class Z extends i.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(y.Z, { giftCode: e }),
+                (0, r.jsx)(O.Z, { giftCode: e }),
                 (0, r.jsx)(p.zx, {
                     disabled: null != n,
-                    className: T.marginTop40,
+                    className: Z.marginTop40,
                     onClick: this.handleAccept,
                     children: C.intl.string(C.t.n6I6k5),
                 }),
                 null != n
                     ? (0, r.jsx)(p.DK, {
-                          className: T.marginTop20,
+                          className: Z.marginTop20,
                           children: n,
                       })
                     : (0, r.jsx)(p.i_, {
-                          className: T.marginTop20,
+                          className: Z.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
                               userTag: I.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout,
@@ -196,14 +196,14 @@ class Z extends i.PureComponent {
                 authenticated: n,
                 giftCode: i,
                 isResolved: l,
-                isAccepting: a,
+                isAccepting: s,
                 transitionTo: o,
-                location: s,
+                location: a,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
         if (e === S.kEZ.OPEN && !u) return this.renderAppOpened();
         if (e === S.kEZ.OPENING) return this.renderSpinner(C.intl.string(C.t["Z+hCVV"]));
-        if (a) return this.renderSpinner(C.intl.string(C.t.bhJseH));
+        if (s) return this.renderSpinner(C.intl.string(C.t.bhJseH));
         if (null == i) return l ? this.renderExpiredInvite() : this.renderSpinner(C.intl.string(C.t.b3lf1d));
         if (l) {
             if (n) {
@@ -215,17 +215,17 @@ class Z extends i.PureComponent {
                       : this.renderAuthenticated(i, e);
             }
             return "login" === this.getMode()
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(N.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: o,
-                      location: s,
+                      location: a,
                   })
-                : (0, r.jsx)(N.Z, {
+                : (0, r.jsx)(y.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: o,
-                      location: s,
+                      location: a,
                   });
         }
         return null;
@@ -277,7 +277,7 @@ class Z extends i.PureComponent {
             });
     }
 }
-let P = o.ZP.connectStores([x.Z, b.Z, g.default, v.Z, _.Z, m.Z], (e) => {
+let P = o.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, m.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
         r = null != n ? v.Z.get(n.skuId) : null;
@@ -286,13 +286,13 @@ let P = o.ZP.connectStores([x.Z, b.Z, g.default, v.Z, _.Z, m.Z], (e) => {
         sku: r,
         libraryApplication:
             null != r && (null == n ? void 0 : n.entitlementBranches) != null
-                ? E.z2(n.entitlementBranches, r, b.Z)
+                ? j.z2(n.entitlementBranches, r, E.Z)
                 : null,
-        authenticated: g.default.isAuthenticated(),
+        authenticated: f.default.isAuthenticated(),
         defaultRoute: _.Z.defaultRoute,
         isResolved: x.Z.getIsResolved(t),
         isAccepting: x.Z.getIsAccepting(t),
-        libraryApplicationsFetched: b.Z.fetched,
+        libraryApplicationsFetched: E.Z.fetched,
         nativeAppState: m.Z.getState(t),
     };
-})(Z);
+})(T);

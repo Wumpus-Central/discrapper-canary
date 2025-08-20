@@ -4,17 +4,17 @@ n.d(t, {
     CA: () => D,
     F8: () => $,
     JM: () => w,
-    NZ: () => M,
+    NZ: () => j,
     ZP: () => et,
-    aN: () => x,
+    aN: () => L,
     ay: () => Q,
     ff: () => E,
-    gT: () => N,
+    gT: () => C,
     ov: () => P,
     pK: () => b,
     pU: () => en,
     rI: () => K,
-    tp: () => k,
+    tp: () => M,
     xR: () => X,
 }),
     n(35282),
@@ -131,7 +131,7 @@ function A(e) {
         t + "?".concat(o.stringify(m))
     );
 }
-function N(e) {
+function C(e) {
     let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
         a = O ? "webp" : "png",
         o = O ? "webp" : "gif",
@@ -143,7 +143,7 @@ function N(e) {
               "?".concat(u).concat(c)
         : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, s);
 }
-function C(e, t) {
+function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = n ? y : b;
     if (null == e && null == t) return r[0];
@@ -178,7 +178,7 @@ function P(e) {
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.IXf,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : O;
-    return null != (t = R(e, n, r, i, a)) ? t : C(e.id, e.discriminator, e.isProvisional);
+    return null != (t = R(e, n, r, i, a)) ? t : N(e.id, e.discriminator, e.isProvisional);
 }
 function w(e) {
     let t,
@@ -204,12 +204,12 @@ function D(e) {
               canAnimate: i,
           });
 }
-function L(e, t) {
+function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = D(e, n);
     return null != r ? ee(r) : t.getAvatarSource(e.guildId, n);
 }
-function x(e) {
+function L(e) {
     let t,
         { id: n, banner: r, canAnimate: i, size: a } = e;
     if (null == r) return;
@@ -222,7 +222,7 @@ function x(e) {
     let u = { size: (0, l.oO)(a * (0, l.x_)()) };
     return "webp" === c && i && X(r) && (u.animated = !0), (t += "?".concat(o.stringify(u)));
 }
-function M(e) {
+function j(e) {
     let { avatarDecoration: t, size: n, canAnimate: r = !1 } = e;
     if (null == t || (0, s.fO)(t)) return;
     let i = t.asset;
@@ -238,7 +238,7 @@ function M(e) {
         u.toString()
     );
 }
-function k(e) {
+function M(e) {
     let t,
         { id: n, guildId: r, banner: i, canAnimate: a, size: s } = e;
     if (null == i || null == r) return;
@@ -249,7 +249,7 @@ function k(e) {
     let _ = { size: (0, l.oO)(s * (0, l.x_)()) };
     return "webp" === u && a && X(i) && (_.animated = !0), (t += "?".concat(o.stringify(_)));
 }
-function j(e) {
+function k(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -262,7 +262,7 @@ function j(e) {
     );
 }
 function U(e) {
-    return ee(j(e));
+    return ee(k(e));
 }
 function G(e) {
     let t,
@@ -296,7 +296,7 @@ function B(e) {
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_HOME_HEADER(n, r)) + "?size=".concat(i)
     );
 }
-function V(e) {
+function Z(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -309,10 +309,10 @@ function V(e) {
         "?size=".concat(i)
     );
 }
-function F(e) {
-    return ee(V(e));
+function V(e) {
+    return ee(Z(e));
 }
-function Z(e) {
+function F(e) {
     let { id: t, icon: n, size: r, canAnimate: i = !1, lossless: a = !1 } = e;
     return A({
         endpoint: f.ANM.GUILD_ICON,
@@ -435,23 +435,23 @@ function ee(e) {
 }
 let et = {
     getUserAvatarURL: P,
-    getDefaultAvatarURL: C,
+    getDefaultAvatarURL: N,
     getGuildMemberAvatarURL: D,
     getGuildMemberAvatarURLSimple: w,
-    getGuildMemberAvatarSource: L,
-    getGuildMemberBannerURL: k,
-    getUserBannerURL: x,
-    getAvatarDecorationURL: M,
+    getGuildMemberAvatarSource: x,
+    getGuildMemberBannerURL: M,
+    getUserBannerURL: L,
+    getAvatarDecorationURL: j,
     hasAnimatedGuildIcon: function e(e) {
         return X(null == e ? void 0 : e.icon);
     },
     isAnimatedIconHash: X,
     getUserAvatarSource: (e, t, n) => ee(P(e, t, n)),
-    getGuildIconURL: Z,
-    getGuildSplashURL: j,
+    getGuildIconURL: F,
+    getGuildSplashURL: k,
     getGuildSplashSource: U,
-    getGuildDiscoverySplashURL: V,
-    getGuildDiscoverySplashSource: F,
+    getGuildDiscoverySplashURL: Z,
+    getGuildDiscoverySplashSource: V,
     getGuildBannerURL: G,
     getGuildHomeHeaderURL: B,
     getResourceChannelIconURL: function e(e) {
@@ -484,12 +484,12 @@ let et = {
     },
     getGuildTemplateIconURL: H,
     getChannelIconURL: q,
-    getEmojiURL: N,
+    getEmojiURL: C,
     getApplicationIconURL: Y,
     getGameAssetURL: W,
     getVideoFilterAssetURL: K,
     getGameAssetSource: (e) => ee(W(e)),
-    getGuildIconSource: (e) => ee(Z(e)),
+    getGuildIconSource: (e) => ee(F(e)),
     getGuildTemplateIconSource: (e) => ee(H(e)),
     getGuildBannerSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

@@ -1,53 +1,79 @@
-n.d(t, { Z: () => b });
-var i = n(951288);
+n.d(t, { Z: () => g });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(481060),
-    a = n(230711),
-    l = n(574755),
-    o = n(663389),
+var i = n(442837),
+    a = n(481060),
+    o = n(230711),
+    s = n(574755),
+    l = n(663389),
     c = n(309739),
-    d = n(293389),
-    u = n(327885),
-    m = n(326528),
-    p = n(332325),
-    g = n(981631),
+    u = n(293389),
+    d = n(327885),
+    f = n(326528),
+    _ = n(332325),
+    p = n(981631),
     h = n(388032),
-    f = n(830260);
-function b() {
-    let e = (0, m.b)(),
-        t = (0, r.e7)([o.Z], () => o.Z.getSubsection()),
-        n = null != t && e.some((e) => e.id === t) ? t : e[0].id;
-    return (0, i.jsxs)(i.Fragment, {
+    m = n(830260);
+function g() {
+    let e = (0, f.b)(),
+        t = (0, i.e7)([l.Z], () => l.Z.getSubsection()),
+        n = null != t && e.some((e) => e.id === t) ? t : e[0].id,
+        g = (e) => {
+            o.Z.setSection(p.oAB.GAMES, e);
+        },
+        E = () => {
+            switch (n) {
+                case _.Z.CLIPS:
+                    return (0, r.jsx)(s.Z, {
+                        className: m.body,
+                        showHeader: !1,
+                    });
+                case _.Z.OVERLAY:
+                    return (0, r.jsx)(d.Z, {
+                        className: m.body,
+                        showHeader: !1,
+                    });
+                case _.Z.ACTIVITY_PRIVACY:
+                    return (0, r.jsx)(c.Z, {
+                        className: m.body,
+                        showHeader: !1,
+                    });
+                case _.Z.MY_GAMES:
+                default:
+                    return (0, r.jsx)(u.Z, {
+                        className: m.body,
+                        showHeader: !1,
+                    });
+            }
+        };
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(s.X6q, {
-                className: f.heading,
+            (0, r.jsx)(a.X6q, {
+                className: m.heading,
                 variant: "heading-xl/semibold",
                 children: h.intl.string(h.t.URyqtL),
             }),
-            (0, i.jsx)(s.njP, {
-                className: f.tabBar,
+            (0, r.jsx)(a.njP, {
+                className: m.tabBar,
                 selectedItem: n,
-                onItemSelect: (e) => {
-                    a.Z.setSection(g.oAB.GAMES, e);
-                },
+                onItemSelect: g,
                 orientation: "horizontal",
                 type: "top",
                 look: "brand",
                 children: e.map((e) =>
-                    (0, i.jsxs)(
-                        s.njP.Item,
+                    (0, r.jsxs)(
+                        a.njP.Item,
                         {
-                            className: f.tab,
+                            className: m.tab,
                             id: e.id,
                             "aria-label": e.title,
                             children: [
-                                (0, i.jsx)(e.icon, {
-                                    className: f.tabIcon,
+                                (0, r.jsx)(e.icon, {
+                                    className: m.tabIcon,
                                     color: "currentColor",
                                 }),
-                                (0, i.jsx)("div", {
-                                    className: f.iconTitle,
+                                (0, r.jsx)("div", {
+                                    className: m.iconTitle,
                                     children: e.title,
                                 }),
                             ],
@@ -56,31 +82,7 @@ function b() {
                     ),
                 ),
             }),
-            (() => {
-                switch (n) {
-                    case p.Z.CLIPS:
-                        return (0, i.jsx)(l.Z, {
-                            className: f.body,
-                            showHeader: !1,
-                        });
-                    case p.Z.OVERLAY:
-                        return (0, i.jsx)(u.Z, {
-                            className: f.body,
-                            showHeader: !1,
-                        });
-                    case p.Z.ACTIVITY_PRIVACY:
-                        return (0, i.jsx)(c.Z, {
-                            className: f.body,
-                            showHeader: !1,
-                        });
-                    case p.Z.MY_GAMES:
-                    default:
-                        return (0, i.jsx)(d.Z, {
-                            className: f.body,
-                            showHeader: !1,
-                        });
-                }
-            })(),
+            E(),
         ],
     });
 }

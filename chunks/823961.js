@@ -55,10 +55,10 @@ let u = new Map(),
     A = (e) => {
         m = e.previousGoLiveSettings;
     },
-    N = (e) => {
+    C = (e) => {
         p.delete(e.skuId);
     },
-    C = (e) => {
+    N = (e) => {
         let { emoji: t, boundingRect: n } = e;
         r = {
             emoji: t,
@@ -112,7 +112,7 @@ let w = new P(o.Z, {
     CONSUMABLES_ENTITLEMENT_FETCH_FAILED: T,
     CONSUMABLES_ENTITLEMENT_FETCH_STARTED: S,
     SET_PREVIOUS_GO_LIVE_SETTINGS: A,
-    CLEAR_CONSUMED_ENTITLEMENT: N,
-    POTIONS_TRIGGER_MESSAGE_CONFETTI: C,
+    CLEAR_CONSUMED_ENTITLEMENT: C,
+    POTIONS_TRIGGER_MESSAGE_CONFETTI: N,
     POTIONS_SET_CONFETTI_MODE: R,
 });

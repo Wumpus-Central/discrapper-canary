@@ -1,11 +1,11 @@
-t.exports = function (t) {
-    return t.Window && t instanceof t.Window
+e.exports = function (e) {
+    return e.Window && e instanceof e.Window
         ? {
-              x: t.pageXOffset || t.document.documentElement.scrollLeft,
-              y: t.pageYOffset || t.document.documentElement.scrollTop,
+              x: e.pageXOffset || e.document.documentElement.scrollLeft,
+              y: e.pageYOffset || e.document.documentElement.scrollTop,
           }
         : {
-              x: t.scrollLeft,
-              y: t.scrollTop,
+              x: e.scrollLeft,
+              y: e.scrollTop,
           };
 };

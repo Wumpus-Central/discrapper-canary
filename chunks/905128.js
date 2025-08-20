@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(467055);
+n.d(t, { Z: () => C }), n(388685), n(467055);
 var r,
     i = n(442837),
     a = n(570140),
@@ -193,7 +193,7 @@ c(A, "displayName", "GuildPowerupsStore"),
                           }),
                   ),
     ]);
-let N = new A(a.Z, {
+let C = new A(a.Z, {
     LOGOUT: S,
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: y,
     GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: O,

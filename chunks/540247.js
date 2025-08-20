@@ -1,4 +1,4 @@
-r.d(t, { P: () => a }),
+r.d(t, { P: () => c }),
     r(410992),
     r(227481),
     r(730884),
@@ -15,15 +15,15 @@ var n = r(647438),
     l = r(442837),
     u = r(974167),
     i = r(651941);
-function a(e) {
+function c(e) {
     let { userId: t, keyToOmit: r } = e,
-        a = n.useMemo(() => {
+        c = n.useMemo(() => {
             if (null == r) return null;
             let e = new Uint8Array(r);
             return (0, u.MK)(e);
         }, [r]);
     return (0, l.e7)([i.Z], () => {
         let e = i.Z.getUserVerifiedKeys(t);
-        return null == e ? 0 : Object.keys(e).filter((e) => e !== a).length;
-    }, [a, t]);
+        return null == e ? 0 : Object.keys(e).filter((e) => e !== c).length;
+    }, [c, t]);
 }

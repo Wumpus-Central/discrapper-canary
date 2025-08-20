@@ -77,10 +77,10 @@ var I = !1,
     T = -1,
     S = 5,
     A = -1;
-function N() {
+function C() {
     return !(t.unstable_now() - A < S);
 }
-function C() {
+function N() {
     if (I) {
         var e = t.unstable_now();
         A = e;
@@ -91,7 +91,7 @@ function C() {
                 var a = p;
                 try {
                     a: {
-                        for (O(e), _ = r(u); null !== _ && !(_.expirationTime > e && N()); ) {
+                        for (O(e), _ = r(u); null !== _ && !(_.expirationTime > e && C()); ) {
                             var s = _.callback;
                             if ("function" == typeof s) {
                                 (_.callback = null), (p = _.priorityLevel);
@@ -122,18 +122,18 @@ function C() {
 }
 if ("function" == typeof y)
     o = function () {
-        y(C);
+        y(N);
     };
 else if ("undefined" != typeof MessageChannel) {
     var R = new MessageChannel(),
         P = R.port2;
-    (R.port1.onmessage = C),
+    (R.port1.onmessage = N),
         (o = function () {
             P.postMessage(null);
         });
 } else
     o = function () {
-        E(C, 0);
+        E(N, 0);
     };
 function w() {
     I || ((I = !0), o());
@@ -245,7 +245,7 @@ function D(e, n) {
             e
         );
     }),
-    (t.unstable_shouldYield = N),
+    (t.unstable_shouldYield = C),
     (t.unstable_wrapCallback = function (e) {
         var t = p;
         return function () {

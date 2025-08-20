@@ -43,7 +43,7 @@ function v(e) {
         A = S
             ? b.intl.string(b.t["GoLM9/"])
             : b.intl.formatToPlainString(b.t["h0u/Hh"], { serverName: null == T ? void 0 : T.name }),
-        N = S ? b.intl.string(b.t.PjZ7DQ) : b.intl.string(b.t.p8FG1N);
+        C = S ? b.intl.string(b.t.PjZ7DQ) : b.intl.string(b.t.p8FG1N);
     return (0, r.jsxs)("div", {
         className: y.container,
         children: [
@@ -85,7 +85,7 @@ function v(e) {
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(m.Z, {
                         onClick: I,
-                        children: N,
+                        children: C,
                     }),
                 ],
             }),

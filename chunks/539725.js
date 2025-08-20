@@ -1,32 +1,32 @@
-r.d(t, { default: () => o });
-var n = r(951288);
-r(647438);
-var l = r(435935),
-    i = r(481060),
-    s = r(115849),
-    a = r(388032),
-    u = r(255597);
-function o(e) {
-    let { transitionState: t, onClose: r } = e;
-    return (0, n.jsxs)(i.Y0X, {
-        size: i.CgR.SMALL,
+n.d(t, { default: () => c });
+var r = n(951288);
+n(647438);
+var i = n(435935),
+    s = n(481060),
+    a = n(115849),
+    u = n(388032),
+    l = n(255597);
+function c(e) {
+    let { transitionState: t, onClose: n } = e;
+    return (0, r.jsxs)(s.Y0X, {
+        size: s.CgR.SMALL,
         transitionState: t,
         parentComponent: "AddFriendModal",
         children: [
-            (0, n.jsxs)(i.xBx, {
-                justify: l.k.Justify.BETWEEN,
+            (0, r.jsxs)(s.xBx, {
+                justify: i.k.Justify.BETWEEN,
                 children: [
-                    (0, n.jsx)(i.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-lg/semibold",
-                        children: a.intl.string(a.t.w5uwoK),
+                        children: u.intl.string(u.t.w5uwoK),
                     }),
-                    (0, n.jsx)(i.olH, { onClick: r }),
+                    (0, r.jsx)(s.olH, { onClick: n }),
                 ],
             }),
-            (0, n.jsx)(i.hzk, {
-                children: (0, n.jsx)("div", {
-                    className: u.content,
-                    children: (0, n.jsx)(s.Z, { placeholder: a.intl.string(a.t.IEpCBQ) }),
+            (0, r.jsx)(s.hzk, {
+                children: (0, r.jsx)("div", {
+                    className: l.content,
+                    children: (0, r.jsx)(a.Z, { placeholder: u.intl.string(u.t.IEpCBQ) }),
                 }),
             }),
         ],

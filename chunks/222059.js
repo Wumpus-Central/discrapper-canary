@@ -17,14 +17,14 @@ var r = n(951288),
     O = n(431),
     _ = n(774343),
     y = n(417363),
-    v = n(941128),
-    j = n(780570),
+    j = n(941128),
+    v = n(780570),
     C = n(278464),
-    E = n(276952),
-    x = n(682662),
+    x = n(276952),
+    E = n(682662),
     S = n(662146),
-    P = n(674552),
-    I = n(981631),
+    I = n(674552),
+    P = n(981631),
     N = n(474936),
     w = n(871465),
     Z = n(388032),
@@ -45,17 +45,17 @@ function R(e) {
     var t, n;
     let { selected: o, user: p, badge: f, link: m, showProgressBadge: b } = e,
         [O, _] = i.useState(!1),
-        [y, v] = i.useState(!1),
-        [j, C] = i.useState(null),
+        [y, j] = i.useState(!1),
+        [v, C] = i.useState(null),
         [N, R] = i.useState(0),
         D = (0, l.Ie)("home"),
-        L = (0, d.oq)().activePanel === d.wh.APP_ICON,
-        M = () => {
-            C(null), R(0), clearTimeout(j);
+        M = (0, d.oq)().activePanel === d.wh.APP_ICON,
+        L = () => {
+            C(null), R(0), clearTimeout(v);
         };
     if (null == p) return null;
     let k = Z.intl.string(Z.t.YUU0RE);
-    y && (k = a.K.get(I.wli) ? Z.intl.string(Z.t.nkq1l5) : Z.intl.string(Z.t.Be8Q5O));
+    y && (k = a.K.get(P.wli) ? Z.intl.string(Z.t.nkq1l5) : Z.intl.string(Z.t.Be8Q5O));
     let U = null;
     !o &&
         b &&
@@ -63,10 +63,10 @@ function R(e) {
             className: T.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let G = o || O || L,
+    let G = o || O || M,
         B = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: f > 0 ? (0, P.Ne)(f) : null,
+            lowerBadge: f > 0 ? (0, I.Ne)(f) : null,
             upperBadge: U,
             lowerBadgeSize: { width: (0, s.OVM)(f) },
             children: (0, r.jsx)(
@@ -102,16 +102,16 @@ function R(e) {
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != j && clearTimeout(j), C(setTimeout(M, 500)), R(N + 1), 15 === N)
+                                (null != v && clearTimeout(v), C(setTimeout(L, 500)), R(N + 1), 15 === N)
                             ) {
-                                M();
-                                let e = !a.K.get(I.wli);
-                                a.K.set(I.wli, e),
+                                L();
+                                let e = !a.K.get(P.wli);
+                                a.K.set(P.wli, e),
                                     e && a.K.set(w.O5, !0),
                                     e ? (0, h.GN)("discodo") : (0, h.GN)("user_leave"),
-                                    v(!0),
+                                    j(!0),
                                     setTimeout(() => {
-                                        v(!1);
+                                        j(!1);
                                     }, 1000);
                             }
                         },
@@ -128,9 +128,9 @@ function R(e) {
                             pathname: m,
                             state: {
                                 analyticsSource: {
-                                    page: I.ZY5.GUILD_CHANNEL,
-                                    section: I.jXE.NAVIGATION,
-                                    object: I.qAy.BUTTON_HOME,
+                                    page: P.ZY5.GUILD_CHANNEL,
+                                    section: P.jXE.NAVIGATION,
+                                    object: P.qAy.BUTTON_HOME,
                                 },
                             },
                         },
@@ -157,9 +157,9 @@ function R(e) {
             inlineSpecs: A,
             tutorialId: "friends-list",
             position: "right",
-            children: (0, r.jsxs)(x.H, {
+            children: (0, r.jsxs)(E.H, {
                 children: [
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(x.Z, {
                         selected: o,
                         hovered: O,
                         className: T.pill,
@@ -178,10 +178,10 @@ function R(e) {
 }
 function D() {
     let e = (0, C.n)(),
-        t = (0, o.e7)([v.Z, y.Z], () => {
-            let e = (0, c.E)(v.Z.activeItems, y.Z),
-                { total: t, progress: n } = j.lK(e),
-                r = j.xI(n, t);
+        t = (0, o.e7)([j.Z, y.Z], () => {
+            let e = (0, c.E)(j.Z.activeItems, y.Z),
+                { total: t, progress: n } = v.lK(e),
+                r = v.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),
@@ -195,15 +195,15 @@ function D() {
         d = (0, p.q)(),
         h = n + s + d,
         g = h === s && s > 0 && n + d === 0,
-        E = _.Z.getHomeLink();
+        x = _.Z.getHomeLink();
     return (
-        g && (E = I.Z5c.APPLICATION_STORE),
+        g && (x = P.Z5c.APPLICATION_STORE),
         (0, r.jsx)(R, {
             selected: e,
             user: u,
-            selectedChannelId: m.Z.getChannelId(I.ME),
+            selectedChannelId: m.Z.getChannelId(P.ME),
             badge: h,
-            link: E,
+            link: x,
             showProgressBadge: t,
         })
     );

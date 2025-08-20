@@ -1,24 +1,24 @@
-n.d(t, { Z: () => p });
-var i = n(951288),
-    r = n(604849),
-    s = n(278828),
-    a = n(63063),
-    l = n(838436),
-    o = n(51331),
+n.d(t, { Z: () => _ });
+var r = n(951288),
+    i = n(604849),
+    a = n(278828),
+    o = n(63063),
+    s = n(838436),
+    l = n(51331),
     c = n(526761),
-    d = n(726985),
-    u = n(981631),
-    m = n(388032);
-function p() {
-    let e = (0, r.c)();
-    return (0, i.jsx)(l.U, {
-        setting: d.s6.PRIVACY_SAFETY_ALERTS_V2,
+    u = n(726985),
+    d = n(981631),
+    f = n(388032);
+function _() {
+    let e = (0, i.c)();
+    return (0, r.jsx)(s.U, {
+        setting: u.s6.PRIVACY_SAFETY_ALERTS_V2,
         scrollPosition: c.FY.DM_SAFETY_ALERTS_V2,
-        children: (0, i.jsx)(o.Z, {
+        children: (0, r.jsx)(l.Z, {
             value: e,
-            onChange: s.Q,
-            title: m.intl.string(m.t.qFsx5u),
-            note: m.intl.format(m.t.lunaRk, { learnMoreLink: a.Z.getArticleURL(u.BhN.SAFETY_ALERTS) }),
+            onChange: a.Q,
+            title: f.intl.string(f.t.qFsx5u),
+            note: f.intl.format(f.t.lunaRk, { learnMoreLink: o.Z.getArticleURL(d.BhN.SAFETY_ALERTS) }),
         }),
     });
 }

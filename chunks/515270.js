@@ -1,7 +1,7 @@
 n.d(t, {
-    L6: () => C,
+    L6: () => N,
     ZP: () => h,
-    iF: () => N,
+    iF: () => C,
 }),
     n(388685),
     n(539854),
@@ -192,7 +192,7 @@ function A(e) {
     }
     return i;
 }
-function N(e, t) {
+function C(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -213,8 +213,8 @@ function N(e, t) {
     }
     return n % 2 != 0;
 }
-function C(e) {
+function N(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return N(e, t);
+    return C(e, t);
 }

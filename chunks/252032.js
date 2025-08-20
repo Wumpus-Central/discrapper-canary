@@ -19,7 +19,7 @@ var r = n(951288),
     C = n(981631),
     x = n(224837),
     v = n(360514);
-function j(e) {
+function O(e) {
     let { value: t, channel: n } = e;
     return (0, b.v)({
         type: c.Ie.EDIT,
@@ -29,15 +29,15 @@ function j(e) {
         respectCooldown: !1,
     });
 }
-function O(e) {
+function j(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
         b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
         y = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-        O = null != b && b.features.has(C.oNc.NEWS),
-        S = y && O,
+        j = null != b && b.features.has(C.oNc.NEWS),
+        S = y && j,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -146,7 +146,7 @@ function O(e) {
               onChange: a.Z.updateEditMessage,
               onConfirmDelete: o.Z.confirmDelete,
               saveMessage: N,
-              validateEdit: j,
+              validateEdit: O,
               children: A,
           })
         : null;
@@ -202,7 +202,7 @@ function E(e) {
 function S(e, t, n) {
     let { message: i, channel: l, compact: a } = e;
     return n
-        ? (0, r.jsx)(O, {
+        ? (0, r.jsx)(j, {
               channel: l,
               message: i,
           })

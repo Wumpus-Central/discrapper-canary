@@ -1,51 +1,51 @@
-t.d(n, { default: () => R }), t(388685);
-var r = t(951288),
-    a = t(647438),
-    o = t(120356),
-    c = t.n(o),
-    s = t(803948),
-    i = t(442837),
-    l = t(755721),
-    d = t(481060),
-    u = t(110924),
-    b = t(410030),
-    f = t(607070),
-    p = t(100527),
-    m = t(335131),
-    g = t(70097),
-    _ = t(507808),
-    h = t(43747),
-    x = t(511050),
-    y = t(82856),
-    O = t(960919),
-    j = t(272008),
-    C = t(497505),
-    v = t(46140),
-    S = t(981631),
-    N = t(215023),
-    B = t(388032),
-    Z = t(378658),
-    E = t(557256),
-    I = t(582425),
-    P = t(345554),
-    T = t(88490),
-    w = t(466674);
-function L() {
-    let e = (0, i.e7)([f.Z], () => f.Z.useReducedMotion),
-        [n, t] = a.useState(!e),
-        [o, l] = a.useState(!1),
-        u = a.useRef(null),
-        p = (0, b.ZP)(),
-        m = (0, d.apv)(p),
-        _ = m ? P.Z : I.Z,
-        h = m ? w.Z : T.Z;
-    a.useEffect(() => {
-        if (!n && !e) {
-            var t;
-            null == (t = u.current) || t.play();
+n.d(t, { default: () => k }), n(388685);
+var r = n(951288),
+    c = n(647438),
+    s = n(120356),
+    a = n.n(s),
+    o = n(803948),
+    i = n(442837),
+    l = n(755721),
+    d = n(481060),
+    u = n(110924),
+    f = n(410030),
+    b = n(607070),
+    m = n(100527),
+    p = n(335131),
+    h = n(70097),
+    O = n(507808),
+    j = n(43747),
+    y = n(511050),
+    x = n(82856),
+    g = n(960919),
+    v = n(272008),
+    _ = n(497505),
+    C = n(46140),
+    S = n(981631),
+    N = n(215023),
+    w = n(388032),
+    P = n(378658),
+    B = n(557256),
+    T = n(582425),
+    A = n(345554),
+    E = n(88490),
+    I = n(466674);
+function R() {
+    let e = (0, i.e7)([b.Z], () => b.Z.useReducedMotion),
+        [t, n] = c.useState(!e),
+        [s, l] = c.useState(!1),
+        u = c.useRef(null),
+        m = (0, f.ZP)(),
+        p = (0, d.apv)(m),
+        O = p ? A.Z : T.Z,
+        j = p ? I.Z : E.Z;
+    c.useEffect(() => {
+        if (!t && !e) {
+            var n;
+            null == (n = u.current) || n.play();
         }
-    }, [n, e]);
-    let x = (0, d.q_F)({
+    }, [t, e]);
+    let y = (0, d.q_F)({
         from: { y: 50 },
         to: { y: 0 },
         config: {
@@ -53,267 +53,267 @@ function L() {
             friction: 26,
         },
     });
-    return (0, r.jsxs)(s.animated.div, {
-        className: Z.videoLayers,
-        style: x,
+    return (0, r.jsxs)(o.animated.div, {
+        className: P.videoLayers,
+        style: y,
         children: [
-            !o && (0, r.jsx)("div", { className: Z.videoPlaceholder }),
-            (0, r.jsx)(g.Z, {
+            !s && (0, r.jsx)("div", { className: P.videoPlaceholder }),
+            (0, r.jsx)(h.Z, {
                 ref: u,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: c()(Z.videoAsset, { [Z.hidden]: n }),
+                className: a()(P.videoAsset, { [P.hidden]: t }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
-                    src: h,
+                    src: j,
                     type: "video/webm",
                 }),
             }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(h.Z, {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: c()(Z.videoAsset, { [Z.hidden]: !n }),
+                className: a()(P.videoAsset, { [P.hidden]: !t }),
                 controls: !1,
                 onLoadedData: () => l(!0),
                 onEnded: () => {
-                    t(!1);
+                    n(!1);
                 },
                 children: (0, r.jsx)("source", {
-                    src: _,
+                    src: O,
                     type: "video/webm",
                 }),
             }),
         ],
     });
 }
-function A(e) {
-    let { transitionState: n, balance: t, onSubmit: a, onClose: o, state: c } = e;
+function Z(e) {
+    let { transitionState: t, balance: n, onSubmit: c, onClose: s, state: a } = e;
     return (0, r.jsxs)(d.Y0X, {
         "data-migration-pending": !0,
-        transitionState: n,
+        transitionState: t,
         size: d.CgR.DYNAMIC,
-        className: Z.modal,
+        className: P.modal,
         parentComponent: "QuestsOrbsRewardModal",
         children: [
             (0, r.jsx)("div", {
-                className: Z.header,
+                className: P.header,
                 children: (0, r.jsx)(d.olH, {
                     "data-migration-pending": !0,
-                    className: Z.closeBtn,
-                    onClick: o,
+                    className: P.closeBtn,
+                    onClick: s,
                 }),
             }),
-            "loading" === c
+            "loading" === a
                 ? (0, r.jsx)("div", {
-                      className: Z.spinnerContainer,
+                      className: P.spinnerContainer,
                       children: (0, r.jsx)(d.$jN, { type: d.RAz.SPINNING_CIRCLE }),
                   })
-                : "success" === c
+                : "success" === a
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(L, {}),
+                            (0, r.jsx)(R, {}),
                             (0, r.jsx)(d.X6q, {
                                 variant: "heading-lg/medium",
-                                className: Z.title,
-                                children: B.intl.format(B.t["8l9H0t"], {
+                                className: P.title,
+                                children: w.intl.format(w.t["8l9H0t"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
-                                            className: Z.orbsBalance,
+                                            className: P.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(O.Z, {
+                                                (0, r.jsx)(g.Z, {
                                                     shouldUseThemeColor: !0,
-                                                    className: Z.orbsBalanceIcon,
+                                                    className: P.orbsBalanceIcon,
                                                 }),
-                                                t,
+                                                n,
                                             ],
                                         }),
                                 }),
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                className: Z.subtext,
-                                children: B.intl.string(B.t.EDUOIC),
+                                className: P.subtext,
+                                children: w.intl.string(w.t.EDUOIC),
                             }),
                             (0, r.jsx)(l.zx, {
-                                className: Z.ctaBtn,
-                                onClick: a,
-                                children: B.intl.string(B.t.WYchdX),
+                                className: P.ctaBtn,
+                                onClick: c,
+                                children: w.intl.string(w.t.WYchdX),
                             }),
                             (0, r.jsx)(l.zx, {
                                 look: l.iL.LINK,
                                 color: l.Tt.CUSTOM,
-                                className: Z.orbsTermsButton,
+                                className: P.orbsTermsButton,
                                 onClick: () => window.open(S.EYA.PAID_TERMS_ORBS),
-                                children: B.intl.string(B.t["7kTAgI"]),
+                                children: w.intl.string(w.t["7kTAgI"]),
                             }),
                         ],
                     })
                   : (0, r.jsxs)("div", {
-                        className: Z.errorContainer,
+                        className: P.errorContainer,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                className: Z.errorImage,
-                                src: E,
+                                className: P.errorImage,
+                                src: B,
                             }),
                             (0, r.jsxs)("div", {
-                                className: Z.errorContentContainer,
+                                className: P.errorContentContainer,
                                 children: [
                                     (0, r.jsx)(d.X6q, {
                                         variant: "heading-xl/medium",
-                                        className: Z.errorHeader,
-                                        children: B.intl.string(B.t.tWYWJy),
+                                        className: P.errorHeader,
+                                        children: w.intl.string(w.t.tWYWJy),
                                     }),
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: B.intl.string(B.t.JNQRU1),
+                                        children: w.intl.string(w.t.JNQRU1),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(l.zx, {
-                                className: Z.ctaBtn,
-                                onClick: o,
-                                children: B.intl.string(B.t.cpT0Cg),
+                                className: P.ctaBtn,
+                                onClick: s,
+                                children: w.intl.string(w.t.cpT0Cg),
                             }),
                         ],
                     }),
         ],
     });
 }
-function R(e) {
-    var n,
-        t,
-        { quest: o, onClose: c } = e,
-        s = (function (e, n) {
+function k(e) {
+    var t,
+        n,
+        { quest: s, onClose: a } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var t,
+            var n,
                 r,
-                a = (function (e, n) {
+                c = (function (e, t) {
                     if (null == e) return {};
-                    var t,
+                    var n,
                         r,
-                        a = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (a[t] = e[t]);
-                    return a;
-                })(e, n);
+                        c = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
+                    return c;
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (t = o[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
             }
-            return a;
+            return c;
         })(e, ["quest", "onClose"]);
-    let { balance: i } = (0, h.A)(),
-        l = (function (e, n, t) {
-            let [r, o] = a.useState("loading"),
-                [c, s] = a.useState(!1),
-                { balance: i } = (0, h.A)(),
+    let { balance: i } = (0, j.A)(),
+        l = (function (e, t, n) {
+            let [r, s] = c.useState("loading"),
+                [a, o] = c.useState(!1),
+                { balance: i } = (0, j.A)(),
                 l = (0, u.Z)(i),
-                [d, b] = a.useState(!1);
-            return (a.useEffect(() => {
+                [d, f] = c.useState(!1);
+            return (c.useEffect(() => {
                 let e = null;
                 return (
                     "success" === r &&
-                        n &&
+                        t &&
                         (e = setTimeout(() => {
-                            b(!0);
+                            f(!0);
                         }, 1000)),
                     () => {
                         null != e && clearTimeout(e);
                     }
                 );
-            }, [r, n]),
-            a.useEffect(() => {
-                !c && null != i && null != l && i > l && s(!0);
-            }, [i, l, c]),
-            a.useEffect(() => {
-                (0, j.QB)(e, C.y$.CROSS_PLATFORM, t)
+            }, [r, t]),
+            c.useEffect(() => {
+                !a && null != i && null != l && i > l && o(!0);
+            }, [i, l, a]),
+            c.useEffect(() => {
+                (0, v.QB)(e, _.y$.CROSS_PLATFORM, n)
                     .then((e) => {
-                        if ((null == e ? void 0 : e.claimedAt) != null) return void o("success");
-                        o("error");
+                        if ((null == e ? void 0 : e.claimedAt) != null) return void s("success");
+                        s("error");
                     })
                     .catch(() => {
-                        o("error");
+                        s("error");
                     });
-            }, [e, t]),
+            }, [e, n]),
             "error" === r)
                 ? r
-                : "success" === r && (c || d)
+                : "success" === r && (a || d)
                   ? "success"
                   : "loading";
-        })(o.id, o.preview, s.location),
-        { openIntroToOrbsClaimedCoachmark: d } = (0, x.Z)({ location: "QuestsOrbsRewardModal" }),
-        b = a.useCallback(() => {
-            c(),
-                (0, _.Y)({
+        })(s.id, s.preview, o.location),
+        { openIntroToOrbsClaimedCoachmark: d } = (0, y.Z)({ location: "QuestsOrbsRewardModal" }),
+        f = c.useCallback(() => {
+            a(),
+                (0, O.Y)({
                     pageType: S.ZY5.GLOBAL_DISCOVERY_QUESTS,
                     sectionType: S.jXE.ORBS_REWARD_MODAL,
                     ctaObject: S.qAy.CTA_TO_ORBS_SHOP,
                 }),
-                (0, m.mK)({
+                (0, p.mK)({
                     openInLayer: !1,
                     tab: N.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: o.id === v.V6 ? p.Z.INTRO_TO_ORBS_QUEST : p.Z.QUEST_HOME_PAGE,
+                    analyticsSource: s.id === C.V6 ? m.Z.INTRO_TO_ORBS_QUEST : m.Z.QUEST_HOME_PAGE,
                 }),
                 d({ delayMS: 300 });
-        }, [c, d, o.id]);
+        }, [a, d, s.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.o, {}),
+            (0, r.jsx)(x.o, {}),
             (0, r.jsx)(
-                A,
-                ((n = (function (e) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var t = null != arguments[n] ? arguments[n] : {},
-                            r = Object.keys(t);
+                Z,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (n) {
+                            r.forEach(function (t) {
                                 var r;
-                                (r = t[n]),
-                                    n in e
-                                        ? Object.defineProperty(e, n, {
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = r);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
-                })({}, s)),
-                (t = t =
+                })({}, o)),
+                (n = n =
                     {
                         balance: i,
-                        onClose: c,
-                        onSubmit: b,
+                        onClose: a,
+                        onSubmit: f,
                         state: l,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, n) {
-                          var t = Object.keys(e);
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
                               var r = Object.getOwnPropertySymbols(e);
-                              t.push.apply(t, r);
+                              n.push.apply(n, r);
                           }
-                          return t;
-                      })(Object(t)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                n),
+                t),
             ),
         ],
     });

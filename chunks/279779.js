@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }),
+n.d(t, { Z: () => C }),
     n(997841),
     n(539854),
     n(190126),
@@ -363,4 +363,4 @@ class A extends o.Z {
             });
     }
 }
-let N = new A();
+let C = new A();

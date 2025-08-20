@@ -3,7 +3,7 @@ n.d(t, {
     FO: () => S,
     G1: () => R,
     I6: () => I,
-    J7: () => N,
+    J7: () => C,
     JM: () => T,
     Jw: () => m,
     WL: () => y,
@@ -15,7 +15,7 @@ n.d(t, {
     sq: () => p,
     tV: () => w,
     uu: () => P,
-    wk: () => C,
+    wk: () => N,
     zd: () => O,
 });
 var r = n(367907),
@@ -256,7 +256,7 @@ function A(e, t) {
             },
         );
 }
-async function N(e, t, n) {
+async function C(e, t, n) {
     try {
         await (0, c.ox)(
             {
@@ -270,7 +270,7 @@ async function N(e, t, n) {
         null == n || n();
     }
 }
-function C(e, t) {
+function N(e, t) {
     D(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id,

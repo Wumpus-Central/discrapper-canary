@@ -50,11 +50,11 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = N(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -62,7 +62,7 @@ function N(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -73,8 +73,8 @@ function C(e, t) {
 }
 function R(e) {
     var { user: t, closePopout: n } = e,
-        S = N(e, ["user", "closePopout"]);
-    let C = i.useRef(null),
+        S = C(e, ["user", "closePopout"]);
+    let N = i.useRef(null),
         R = (0, a.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
@@ -82,7 +82,7 @@ function R(e) {
         P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
         w = (0, s.Z)(P),
         D = t.id,
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             if (null != R)
                 if (w) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
@@ -97,14 +97,14 @@ function R(e) {
                         m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
                 } else (0, b.L)(A({ applicationId: R.id }, R));
         }, [R, w, D, null == P ? void 0 : P.guild_id, n]),
-        x = w ? T.intl.string(T.t["Cia+Aw"]) : T.intl.string(T.t.NgXl3N);
+        L = w ? T.intl.string(T.t["Cia+Aw"]) : T.intl.string(T.t.NgXl3N);
     if (null == R || !(0, d.Eb)(R)) return null;
-    let { customInstallUrl: M } = R,
-        k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
-        j = w ? void 0 : k;
+    let { customInstallUrl: j } = R,
+        M = null == j || E.Z.isDiscordUrl(j) ? o.qJs : o.Gr1,
+        k = w ? void 0 : M;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
-              targetElementRef: C,
+              targetElementRef: N,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(o.v2r, {
@@ -123,17 +123,17 @@ function R(e) {
               },
               children: (e) => {
                   var { onClick: t } = e,
-                      n = N(e, ["onClick"]);
+                      n = C(e, ["onClick"]);
                   return (0, r.jsx)(
                       v.tG,
                       A(
                           {
-                              ref: C,
+                              ref: N,
                               action: "PRESS_ADD_APP",
-                              text: x,
-                              icon: j,
+                              text: L,
+                              icon: k,
                               onContextMenu: t,
-                              onClick: L,
+                              onClick: x,
                           },
                           n,
                           S,
@@ -146,9 +146,9 @@ function R(e) {
               A(
                   {
                       action: "PRESS_ADD_APP",
-                      text: x,
-                      icon: j,
-                      onClick: L,
+                      text: L,
+                      icon: k,
+                      onClick: x,
                   },
                   S,
               ),

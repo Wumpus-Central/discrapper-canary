@@ -132,7 +132,7 @@ async function A(e, t) {
     });
     for (let { url: e, external_asset_path: t } of r) b[e] = t;
 }
-function N(e, t) {
+function C(e, t) {
     let n = 0;
     if (
         e.filter((e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")))
@@ -146,7 +146,7 @@ function N(e, t) {
         }
     return n === e.length;
 }
-function C(e, t, n, r) {
+function N(e, t, n, r) {
     let i = !1;
     for (let a = 0; a < e.length; a++) {
         let o = e[a];
@@ -173,7 +173,7 @@ async function R(e, t) {
         i = t.filter(
             (e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")),
         );
-    if ((i.length > 0 && (await A(e, i)), N(t, r)))
+    if ((i.length > 0 && (await A(e, i)), C(t, r)))
         return (
             o.Z.dispatch({
                 type: "APPLICATION_ASSETS_FETCH_SUCCESS",
@@ -187,7 +187,7 @@ async function R(e, t) {
         applicationId: e,
         assets: a,
     }),
-    C(t, r, a, n))
+    N(t, r, a, n))
         ? O(e).then(() => R(e, t, n - 1))
         : (o.Z.dispatch({
               type: "APPLICATION_ASSETS_FETCH_SUCCESS",

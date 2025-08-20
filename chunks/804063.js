@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(668781),
     i = n(699516),
-    l = n(493892),
+    a = n(493892),
     o = n(388032);
-function a(e) {
+function s(e) {
     let t = null;
     return (
         i.Z.isBlockedForMessage(e)
@@ -16,7 +16,7 @@ function a(e) {
                     title: o.t.XyWoKS,
                     body: o.t["8t8doK"],
                 })
-              : (0, l.DQ)(e) &&
+              : (0, a.DQ)(e) &&
                 (t = {
                     title: o.t["6vJKFh"],
                     body: o.t.zKNgPD,

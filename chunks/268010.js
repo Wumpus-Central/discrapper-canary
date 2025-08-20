@@ -39,28 +39,28 @@ let I = (e, t, n) => {
     S = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
-            { largeImage: N } = (0, f.rv)({ entry: n }),
-            { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
+            { largeImage: C } = (0, f.rv)({ entry: n }),
+            { primaryColor: N, secondaryColor: R } = (0, m.Z)(null == C ? void 0 : C.src),
             P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(O.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
-            L = i.useCallback(
+            x = i.useCallback(
                 (e) => {
-                    if (null != A && (null == N ? void 0 : N.src) != null)
+                    if (null != A && (null == C ? void 0 : C.src) != null)
                         return (0, p.B)({
                             entry: n,
-                            mediaImageSrc: null == N ? void 0 : N.src,
+                            mediaImageSrc: null == C ? void 0 : C.src,
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: I(n, t, A),
                             timestamp: (0, _.yh)(n, P),
                             episodeDescription: D,
-                            colors: [C, R],
+                            colors: [N, R],
                             channelId: e,
                         });
                 },
-                [t, n, D, P, null == N ? void 0 : N.src, C, R, A],
+                [t, n, D, P, null == C ? void 0 : C.src, N, R, A],
             ),
-            x = () => {
+            L = () => {
                 if (null == n.extra.url) return;
                 let e = d.Z.safeParseWithQuery(n.extra.url);
                 null != e &&
@@ -90,8 +90,8 @@ let I = (e, t, n) => {
                               location: E.Gt.POPOUT,
                               children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                           }),
-                          onClickTitle: x,
-                          onClickThumbnail: x,
+                          onClickTitle: L,
+                          onClickThumbnail: L,
                       }),
                       (0, r.jsx)(b.St, {
                           children: (0, r.jsx)(b.WT, {
@@ -99,7 +99,7 @@ let I = (e, t, n) => {
                               onVoiceChannelPreview: S,
                               user: A,
                               channel: t,
-                              generateReactionImage: L,
+                              generateReactionImage: x,
                               reactionImageAltText: T(n, A),
                               entry: n,
                           }),

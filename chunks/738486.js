@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
-var i = n(951288);
+n.d(t, { Z: () => a });
+var r = n(951288);
 n(647438);
-var r = n(111957);
-function s(e) {
+var i = n(111957);
+function a(e) {
     let { children: t } = e;
-    return (0, i.jsx)("div", {
-        className: r.categorySubGroup,
+    return (0, r.jsx)("div", {
+        className: i.categorySubGroup,
         children: t,
     });
 }

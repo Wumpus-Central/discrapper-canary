@@ -146,10 +146,10 @@ let _ = new y(l.Z, {
         h[b] = u(c({}, h[b]), { [_.guildId]: c({}, C, _) });
         let x = null != (i = null == C ? void 0 : C.primaryCategoryId) ? i : o.AR.UNCATEGORIZED,
             v = null != (l = _.primaryCategoryId) ? l : o.AR.UNCATEGORIZED,
-            j = Object.assign({}, null == (n = m[b]) ? void 0 : n[x]);
-        null != C && x !== v && delete j[_.guildId],
+            O = Object.assign({}, null == (n = m[b]) ? void 0 : n[x]);
+        null != C && x !== v && delete O[_.guildId],
             (m[b] = u(c({}, m[b]), {
-                [x]: j,
+                [x]: O,
                 [v]: u(c({}, null == (r = m[b]) ? void 0 : r[v]), { [_.guildId]: c({}, C, _) }),
             })),
             v !== x &&

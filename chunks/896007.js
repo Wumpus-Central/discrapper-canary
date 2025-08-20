@@ -80,71 +80,71 @@ function h(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
-        I = [];
-    I.push({
+        E = [];
+    E.push({
         section: g,
         label: "" !== c.name ? c.name : u.intl.string(u.t["154/bG"]),
     }),
-        I.push(m(d.pNK.PROFILE, N)),
-        I.push(m(d.pNK.TAG, N)),
-        I.push(m(d.pNK.ENGAGEMENT, N)),
-        I.push(m(d.pNK.BOOST_PERKS, N)),
+        E.push(m(d.pNK.PROFILE, N)),
+        E.push(m(d.pNK.TAG, N)),
+        E.push(m(d.pNK.ENGAGEMENT, N)),
+        E.push(m(d.pNK.BOOST_PERKS, N)),
         y &&
-            (I.push({ section: p }),
-            I.push({
+            (E.push({ section: p }),
+            E.push({
                 section: g,
                 label: u.intl.string(u.t.m6lkGx),
             }),
-            I.push(m(d.pNK.EMOJI, N)),
-            I.push(m(d.pNK.STICKERS, N)),
-            I.push(m(d.pNK.SOUNDBOARD, N))),
+            E.push(m(d.pNK.EMOJI, N)),
+            E.push(m(d.pNK.STICKERS, N)),
+            E.push(m(d.pNK.SOUNDBOARD, N))),
         (h || b || j || O) &&
-            (I.push({ section: p }),
-            I.push({
+            (E.push({ section: p }),
+            E.push({
                 section: g,
                 label: u.intl.string(u.t.bMAKMD),
             }),
-            I.push(m(d.pNK.MEMBERS, N)),
-            I.push(m(d.pNK.ROLES, N)),
-            I.push(m(d.pNK.INVITES, N)),
-            I.push(m(d.pNK.ACCESS, N))),
-        I.push({ section: p }),
-        I.push({
+            E.push(m(d.pNK.MEMBERS, N)),
+            E.push(m(d.pNK.ROLES, N)),
+            E.push(m(d.pNK.INVITES, N)),
+            E.push(m(d.pNK.ACCESS, N))),
+        E.push({ section: p }),
+        E.push({
             section: g,
             label: u.intl.string(u.t.wF3KJy),
         }),
-        I.push(m(d.pNK.INTEGRATIONS, N)),
-        I.push(m(d.pNK.APP_DIRECTORY, N));
-    let E = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
-    (h || f || x || E) &&
-        (I.push({ section: p }),
-        I.push({
+        E.push(m(d.pNK.INTEGRATIONS, N)),
+        E.push(m(d.pNK.APP_DIRECTORY, N));
+    let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
+    (h || f || x || I) &&
+        (E.push({ section: p }),
+        E.push({
             section: g,
             label: u.intl.string(u.t["5tbTdX"]),
         }),
-        I.push(m(d.pNK.SAFETY, N)),
-        I.push(m(d.pNK.MODERATION, N)),
-        I.push(m(d.pNK.AUDIT_LOG, N)),
-        I.push(m(d.pNK.BANS, N)),
-        I.push(m(d.pNK.GUILD_AUTOMOD, N)));
+        E.push(m(d.pNK.SAFETY, N)),
+        E.push(m(d.pNK.MODERATION, N)),
+        E.push(m(d.pNK.AUDIT_LOG, N)),
+        E.push(m(d.pNK.BANS, N)),
+        E.push(m(d.pNK.GUILD_AUTOMOD, N)));
     let S = c.features.has(d.oNc.COMMUNITY) && v,
         T = C();
     return (
         (h || S || T) &&
-            (I.push({ section: p }),
-            I.push(m(d.pNK.COMMUNITY, N)),
-            I.push(m(d.pNK.ONBOARDING, N)),
-            I.push(m(d.pNK.ANALYTICS, N)),
-            I.push(m(d.pNK.COMMUNITY_WELCOME, N)),
-            I.push(m(d.pNK.DISCOVERY_LANDING_PAGE, N)),
-            I.push(m(d.pNK.ROLE_SUBSCRIPTIONS, N)),
-            I.push(m(d.pNK.GUILD_PRODUCTS, N)),
-            I.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
-        I.push({ section: p }),
-        I.push(m(d.pNK.GUILD_PREMIUM, N)),
-        I.push(m(d.pNK.GUILD_TEMPLATES, N)),
-        I.push(m(d.pNK.DELETE, N)),
-        I.filter(o.lm)
+            (E.push({ section: p }),
+            E.push(m(d.pNK.COMMUNITY, N)),
+            E.push(m(d.pNK.ONBOARDING, N)),
+            E.push(m(d.pNK.ANALYTICS, N)),
+            E.push(m(d.pNK.COMMUNITY_WELCOME, N)),
+            E.push(m(d.pNK.DISCOVERY_LANDING_PAGE, N)),
+            E.push(m(d.pNK.ROLE_SUBSCRIPTIONS, N)),
+            E.push(m(d.pNK.GUILD_PRODUCTS, N)),
+            E.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
+        E.push({ section: p }),
+        E.push(m(d.pNK.GUILD_PREMIUM, N)),
+        E.push(m(d.pNK.GUILD_TEMPLATES, N)),
+        E.push(m(d.pNK.DELETE, N)),
+        E.filter(o.lm)
     );
 }
 let f = { generateSections: h };

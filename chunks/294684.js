@@ -23,23 +23,23 @@ var r = n(98405),
     T = n(382698),
     S = n(713411),
     A = n(530575),
-    N = n(533610),
-    C = n(800054),
+    C = n(533610),
+    N = n(800054),
     R = n(682564),
     P = n(338045),
     w = n(751736),
     D = n(992914),
-    L = w("iterator"),
-    x = "URLSearchParams",
-    M = x + "Iterator",
-    k = m.set,
-    j = m.getterFor(x),
-    U = m.getterFor(M),
+    x = w("iterator"),
+    L = "URLSearchParams",
+    j = L + "Iterator",
+    M = m.set,
+    k = m.getterFor(L),
+    U = m.getterFor(j),
     G = a("fetch"),
     B = a("Request"),
-    V = a("Headers"),
-    F = B && B.prototype,
-    Z = V && V.prototype,
+    Z = a("Headers"),
+    V = B && B.prototype,
+    F = Z && Z.prototype,
     H = i.TypeError,
     Y = i.encodeURIComponent,
     W = String.fromCharCode,
@@ -141,14 +141,14 @@ var r = n(98405),
     },
     eh = h(
         function (e, t) {
-            k(this, {
-                type: M,
-                target: j(e).entries,
+            M(this, {
+                type: j,
+                target: k(e).entries,
                 index: 0,
                 kind: t,
             });
         },
-        x,
+        L,
         function () {
             var e = U(this),
                 t = e.target,
@@ -174,7 +174,7 @@ var r = n(98405),
                     : this.parseQuery("string" == typeof e ? ("?" === q(e, 0) ? en(e, 1) : e) : T(e)));
     };
 em.prototype = {
-    type: x,
+    type: L,
     bindURL: function (e) {
         (this.url = e), this.update();
     },
@@ -187,10 +187,10 @@ em.prototype = {
             o,
             l,
             c = this.entries,
-            u = C(e);
+            u = N(e);
         if (u)
-            for (n = (t = N(e, u)).next; !(r = s(n, t)).done; ) {
-                if ((o = s((a = (i = N(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
+            for (n = (t = C(e, u)).next; !(r = s(n, t)).done; ) {
+                if ((o = s((a = (i = C(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
                     throw new H("Expected sequence with length 2");
                 Q(c, {
                     key: T(o.value),
@@ -228,7 +228,7 @@ em.prototype = {
 var eg = function () {
         g(this, eE);
         var e = arguments.length > 0 ? arguments[0] : void 0,
-            t = k(this, new em(e));
+            t = M(this, new em(e));
         c || (this.size = t.entries.length);
     },
     eE = eg.prototype;
@@ -237,7 +237,7 @@ if (
         eE,
         {
             append: function (e, t) {
-                var n = j(this);
+                var n = k(this);
                 P(arguments.length, 2),
                     Q(n.entries, {
                         key: T(e),
@@ -248,7 +248,7 @@ if (
             },
             delete: function (e) {
                 for (
-                    var t = j(this),
+                    var t = k(this),
                         n = P(arguments.length, 1),
                         r = t.entries,
                         i = T(e),
@@ -265,20 +265,20 @@ if (
                 c || (this.size = r.length), t.updateURL();
             },
             get: function (e) {
-                var t = j(this).entries;
+                var t = k(this).entries;
                 P(arguments.length, 1);
                 for (var n = T(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
-                var t = j(this).entries;
+                var t = k(this).entries;
                 P(arguments.length, 1);
                 for (var n = T(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
                 return r;
             },
             has: function (e) {
                 for (
-                    var t = j(this).entries,
+                    var t = k(this).entries,
                         n = P(arguments.length, 1),
                         r = T(e),
                         i = n < 2 ? void 0 : arguments[1],
@@ -293,7 +293,7 @@ if (
             },
             set: function (e, t) {
                 var n,
-                    r = j(this);
+                    r = k(this);
                 P(arguments.length, 1);
                 for (var i = r.entries, a = !1, o = T(e), s = T(t), l = 0; l < i.length; l++)
                     (n = i[l]).key === o && (a ? ee(i, l--, 1) : ((a = !0), (n.value = s)));
@@ -306,7 +306,7 @@ if (
                     r.updateURL();
             },
             sort: function () {
-                var e = j(this);
+                var e = k(this);
                 D(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
@@ -314,7 +314,7 @@ if (
             },
             forEach: function (e) {
                 for (
-                    var t, n = j(this).entries, r = y(e, arguments.length > 1 ? arguments[1] : void 0), i = 0;
+                    var t, n = k(this).entries, r = y(e, arguments.length > 1 ? arguments[1] : void 0), i = 0;
                     i < n.length;
                 )
                     r((t = n[i++]).value, t.key, this);
@@ -331,24 +331,24 @@ if (
         },
         { enumerable: !0 },
     ),
-    d(eE, L, eE.entries, { name: "entries" }),
+    d(eE, x, eE.entries, { name: "entries" }),
     d(
         eE,
         "toString",
         function () {
-            return j(this).serialize();
+            return k(this).serialize();
         },
         { enumerable: !0 },
     ),
     c &&
         f(eE, "size", {
             get: function () {
-                return j(this).entries.length;
+                return k(this).entries.length;
             },
             configurable: !0,
             enumerable: !0,
         }),
-    p(eg, x),
+    p(eg, L),
     r(
         {
             global: !0,
@@ -357,17 +357,17 @@ if (
         },
         { URLSearchParams: eg },
     ),
-    !u && E(V))
+    !u && E(Z))
 ) {
-    var eb = l(Z.has),
-        ey = l(Z.set),
+    var eb = l(F.has),
+        ey = l(F.set),
         eO = function (e) {
             if (I(e)) {
                 var t,
                     n = e.body;
-                if (O(n) === x)
+                if (O(n) === L)
                     return (
-                        eb((t = e.headers ? new V(e.headers) : new V()), "content-type") ||
+                        eb((t = e.headers ? new Z(e.headers) : new Z()), "content-type") ||
                             ey(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"),
                         S(e, {
                             body: A(0, T(n)),
@@ -395,10 +395,10 @@ if (
         E(B))
     ) {
         var ev = function (e) {
-            return g(this, F), new B(e, arguments.length > 1 ? eO(arguments[1]) : {});
+            return g(this, V), new B(e, arguments.length > 1 ? eO(arguments[1]) : {});
         };
-        (F.constructor = ev),
-            (ev.prototype = F),
+        (V.constructor = ev),
+            (ev.prototype = V),
             r(
                 {
                     global: !0,
@@ -412,5 +412,5 @@ if (
 }
 e.exports = {
     URLSearchParams: eg,
-    getState: j,
+    getState: k,
 };

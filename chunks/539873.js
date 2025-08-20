@@ -97,8 +97,8 @@ function T(e) {
             orientation: "horizontal",
             labelledBy: S,
         }),
-        { ref: N } = A,
-        C = v(A, ["ref"]),
+        { ref: C } = A,
+        N = v(A, ["ref"]),
         R = (e) => {
             s.Z.dispatch({
                 type: "APP_ICON_UPDATED",
@@ -109,8 +109,8 @@ function T(e) {
         ref: T,
         children: (0, r.jsx)(
             "div",
-            O(b({}, C), {
-                ref: N,
+            O(b({}, N), {
+                ref: C,
                 className: m.__invalid_container,
                 children: (0, r.jsxs)("div", {
                     className: t,

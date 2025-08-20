@@ -177,6 +177,7 @@ function T(e) {
                                 nameplateData: void 0 === G.pendingNameplate ? t.nameplate : void 0,
                                 pendingGlobalName: G.pendingGlobalName,
                                 pendingDisplayNameStyles: F.displayNameStyles,
+                                isHighlighted: !0,
                                 className: k.nameplate,
                             }),
                         ],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(415506), n(388685);
+n.d(t, { Z: () => Z }), n(415506), n(388685);
 var r,
     i = n(442837),
     a = n(759174),
@@ -97,11 +97,11 @@ function S() {
 function A() {
     (m = !0), h.clear(), y.clear(), b.clear();
 }
-function N(e) {
+function C(e) {
     let { savedMessages: t } = e;
     for (let e of ((m = !1), h.clear(), y.clear(), b.clear(), t)) I(e);
 }
-function C(e) {
+function N(e) {
     let { savedMessage: t } = e;
     I(t);
 }
@@ -135,7 +135,7 @@ function D(e) {
             channelId: n,
         });
 }
-function L(e) {
+function x(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
     let n = v({
@@ -147,23 +147,23 @@ function L(e) {
     let i = d({}, r);
     (i.message = (0, s.wi)(r.message, t)), h.set(n, i);
 }
-function x() {
+function L() {
     if (0 === b.size || m) return !1;
     m = !0;
 }
-function M(e) {
+function j(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
-function k(e) {
+function M(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
     let n = !1;
     for (let e of t) O(e.id) && ((m = !0), (n = !0));
     return n;
 }
-function j(e) {
+function k(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
@@ -232,24 +232,24 @@ class B extends (r = i.ZP.Store) {
     }
 }
 u(B, "displayName", "SavedMessagesStore");
-let V = new B(o.Z, {
+let Z = new B(o.Z, {
     POST_CONNECTION_OPEN: S,
     LOGOUT: A,
-    SAVED_MESSAGES_UPDATE: N,
-    SAVED_MESSAGE_CREATE: C,
+    SAVED_MESSAGES_UPDATE: C,
+    SAVED_MESSAGE_CREATE: N,
     SAVED_MESSAGE_DELETE: R,
     MESSAGE_DELETE: w,
     MESSAGE_DELETE_BULK: D,
-    MESSAGE_UPDATE: L,
-    GUILD_CREATE: x,
-    GUILD_UPDATE: x,
-    GUILD_DELETE: x,
-    CHANNEL_CREATE: M,
-    CHANNEL_UPDATES: k,
-    CHANNEL_DELETE: j,
+    MESSAGE_UPDATE: x,
+    GUILD_CREATE: L,
+    GUILD_UPDATE: L,
+    GUILD_DELETE: L,
+    CHANNEL_CREATE: j,
+    CHANNEL_UPDATES: M,
+    CHANNEL_DELETE: k,
     GUILD_MEMBER_UPDATE: U,
-    GUILD_ROLE_CREATE: x,
-    GUILD_ROLE_UPDATE: x,
-    GUILD_ROLE_DELETE: x,
+    GUILD_ROLE_CREATE: L,
+    GUILD_ROLE_UPDATE: L,
+    GUILD_ROLE_DELETE: L,
     MESSAGE_REMINDER_DUE: G,
 });

@@ -1,18 +1,18 @@
-r.d(t, { Z: () => E });
+r.d(t, { Z: () => P });
 var n = r(951288);
 r(647438);
 var l = r(481060),
     i = r(810568),
     a = r(168524),
-    o = r(594174),
-    c = r(5192),
+    c = r(594174),
+    o = r(5192),
     s = r(971082),
     u = r(817053),
     d = r(879877),
     f = r(533815),
     g = r(853072),
-    p = r(388032),
-    b = r(958461),
+    b = r(388032),
+    p = r(958461),
     O = r(932366),
     m = r(776385);
 function j(e) {
@@ -59,8 +59,8 @@ function y(e, t) {
     );
 }
 function v(e) {
-    var { applicationId: t, userId: r, gameName: o } = e,
-        c = (function (e, t) {
+    var { applicationId: t, userId: r, gameName: c } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -89,14 +89,14 @@ function v(e) {
         trackEntryPointImpression: !0,
     });
     return null == s
-        ? (0, n.jsx)(l.X6q, y(j({}, c), { children: o }))
+        ? (0, n.jsx)(l.X6q, y(j({}, o), { children: c }))
         : (0, n.jsx)(
               l.X6q,
-              y(j({}, c), {
+              y(j({}, o), {
                   children: (0, n.jsx)(l.P3F, {
                       onClick: s,
                       className: m.clickableText,
-                      children: o,
+                      children: c,
                   }),
               }),
           );
@@ -110,7 +110,7 @@ function x(e) {
                 color: l.TVs.colors.ICON_TERTIARY,
                 className: m.icon,
             }),
-            (0, n.jsx)(l.nn4, { children: p.intl.format(p.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
+            (0, n.jsx)(l.nn4, { children: b.intl.format(b.t.TM0XDQ, { name: o.ZP.getName(i, a, r) }) }),
             (0, n.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
@@ -124,7 +124,7 @@ function h(e) {
         a = (0, g.Z)(t);
     return a.length > 0
         ? (0, n.jsx)(s.Z, {
-              label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: a.length }),
+              label: b.intl.formatToPlainString(b.t.ujhJdH, { numFriends: a.length }),
               className: i,
               users: a,
               guildId: r,
@@ -132,14 +132,14 @@ function h(e) {
           })
         : null;
 }
-function E(e) {
-    let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: g = !1 } = e,
-        { gameName: E = p.intl.string(p.t.GIWFlJ), imageSrc: P, applicationId: w, comment: _, tags: S } = a,
-        I = {
+function P(e) {
+    let { user: t, guildId: r, channelId: i, game: a, widgetType: o, loading: s = !1, disableInteraction: g = !1 } = e,
+        { gameName: P = b.intl.string(b.t.GIWFlJ), imageSrc: E, applicationId: w, comment: I, tags: S } = a,
+        _ = {
             variant: "heading-sm/semibold",
             color: "text-default",
         },
-        T = o.default.getCurrentUser(),
+        T = c.default.getCurrentUser(),
         N = (null == T ? void 0 : T.id) === t.id;
     return s
         ? (0, n.jsxs)("div", {
@@ -149,10 +149,10 @@ function E(e) {
                   (0, n.jsx)("div", {
                       className: m.details,
                       children: (0, n.jsxs)("div", {
-                          className: b.placeholderText,
+                          className: p.placeholderText,
                           children: [
-                              (0, n.jsx)("div", { className: b.placeholderBar }),
-                              (0, n.jsx)("div", { className: b.placeholderBar }),
+                              (0, n.jsx)("div", { className: p.placeholderBar }),
+                              (0, n.jsx)("div", { className: p.placeholderBar }),
                           ],
                       }),
                   }),
@@ -162,8 +162,8 @@ function E(e) {
               className: m.card,
               children: [
                   (0, n.jsx)(u.Z, {
-                      imageSrc: P,
-                      gameName: E,
+                      imageSrc: E,
+                      gameName: P,
                       applicationId: w,
                       userId: t.id,
                       disableInteraction: g,
@@ -173,21 +173,21 @@ function E(e) {
                       className: m.details,
                       children: [
                           g
-                              ? (0, n.jsx)(l.X6q, y(j({}, I), { children: E }))
+                              ? (0, n.jsx)(l.X6q, y(j({}, _), { children: P }))
                               : (0, n.jsx)(
                                     v,
                                     j(
                                         {
                                             applicationId: w,
                                             userId: t.id,
-                                            gameName: E,
+                                            gameName: P,
                                         },
-                                        I,
+                                        _,
                                     ),
                                 ),
-                          null != _ &&
+                          null != I &&
                               (0, n.jsx)(x, {
-                                  text: _,
+                                  text: I,
                                   user: t,
                                   guildId: r,
                                   channelId: i,
@@ -195,8 +195,9 @@ function E(e) {
                           (0, n.jsx)(d.Z, {
                               tags: S,
                               isCurrentUser: N,
-                              widgetType: c,
+                              widgetType: o,
                               applicationId: w,
+                              disableInteraction: g,
                           }),
                           !g &&
                               (0, n.jsx)(h, {
@@ -211,7 +212,7 @@ function E(e) {
                       N &&
                       (0, n.jsx)(f.Z, {
                           game: a,
-                          widgetType: c,
+                          widgetType: o,
                           className: m.removeGameButton,
                       }),
               ],

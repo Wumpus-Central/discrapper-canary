@@ -64,9 +64,9 @@ function h(e) {
             trailing: O,
             background: _,
             showUnread: y = !1,
-            ref: v,
+            ref: j,
         } = e,
-        j = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -99,18 +99,18 @@ function h(e) {
             "ref",
         ]);
     let C = (0, o.JA)(n),
-        E = null != (t = (0, a.qg)(m)) ? t : "";
+        x = null != (t = (0, a.qg)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: v,
+        ref: j,
         children: (0, r.jsxs)(
             s.kL8,
-            f(p({}, j), {
+            f(p({}, v), {
                 buttonProps: f(p({}, C), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": E,
+                "aria-label": x,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -119,8 +119,8 @@ function h(e) {
                     },
                 },
                 onContextMenu:
-                    null != j.onContextMenu
-                        ? j.onContextMenu
+                    null != v.onContextMenu
+                        ? v.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },

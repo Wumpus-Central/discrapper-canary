@@ -1,24 +1,24 @@
-A.d(t, { Z: () => q }), A(388685);
+A.d(t, { Z: () => v }), A(388685);
 var n = A(951288),
     r = A(647438),
-    a = A(120356),
-    l = A.n(a),
-    i = A(772848),
-    o = A(481060),
+    l = A(120356),
+    a = A.n(l),
+    o = A(772848),
+    i = A(481060),
     s = A(752305),
-    c = A(893718),
-    d = A(131704),
+    d = A(893718),
+    c = A(131704),
     u = A(703558),
-    g = A(981631),
-    f = A(388032),
+    f = A(981631),
+    g = A(388032),
     p = A(231319),
-    h = A(8542);
-let m = (0, i.Z)(),
-    v = (0, d.kt)({
+    m = A(8542);
+let h = (0, o.Z)(),
+    b = (0, c.kt)({
         id: "1",
-        type: g.d4z.DM,
+        type: f.d4z.DM,
     });
-function b() {
+function q() {
     return new Promise((e) => {
         e({
             shouldClear: !1,
@@ -28,43 +28,43 @@ function b() {
 }
 function C(e) {
     var t;
-    let { hasError: A, maxLength: r, text: a } = e;
+    let { hasError: A, maxLength: r, text: l } = e;
     return (0, n.jsxs)("div", {
-        className: l()(h.maxLength, { [h.errorOverflow]: A }),
+        className: a()(m.maxLength, { [m.errorOverflow]: A }),
         "aria-hidden": "true",
-        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != r && "/ ".concat(r)],
+        children: [null != (t = null == l ? void 0 : l.length) ? t : 0, " ", null != r && "/ ".concat(r)],
     });
 }
-function q(e) {
+function v(e) {
     var t;
     let {
             "aria-labelledby": A,
-            className: a,
-            id: i,
-            autoFocus: d,
-            maxLength: g,
-            onChange: h,
-            onSubmit: q,
-            showCharacterCount: x = !1,
-            placeholder: j,
+            className: l,
+            id: o,
+            autoFocus: c,
+            maxLength: f,
+            onChange: m,
+            onSubmit: v,
+            showCharacterCount: j = !1,
+            placeholder: x,
             required: U,
-            value: O,
-            enableThemedBackground: V = !1,
+            value: V,
+            enableThemedBackground: O = !1,
             parentModalKey: P,
         } = e,
-        y = (0, o.Gc0)(),
-        [N, I] = r.useState(() => (0, s.JM)(O)),
-        F = r.useRef(!0 === d),
-        T = null != A ? A : null == y ? void 0 : y.titleId,
-        K = null != (t = null == y ? void 0 : y.errorId) ? t : m,
-        Z = r.useMemo(
+        I = (0, i.Gc0)(),
+        [N, F] = r.useState(() => (0, s.JM)(V)),
+        y = r.useRef(!0 === c),
+        K = null != A ? A : null == I ? void 0 : I.titleId,
+        T = null != (t = null == I ? void 0 : I.errorId) ? t : h,
+        X = r.useMemo(
             () => ({
                 analyticsName: "simple",
                 autocomplete: {
                     alwaysUseLayer: !0,
                     small: !0,
                 },
-                disableAutoFocus: !0 !== d,
+                disableAutoFocus: !0 !== c,
                 drafts: { type: u.d.ChannelMessage },
                 emojis: { button: !0 },
                 permissions: { requireSendMessages: !1 },
@@ -73,45 +73,45 @@ function q(e) {
                     disableEnterToSubmit: !0,
                 },
             }),
-            [d],
+            [c],
         );
-    return (0, n.jsxs)(c.ZP, {
-        "aria-describedby": K,
-        "aria-labelledby": T,
-        innerClassName: l()(a, p.textArea),
-        id: i,
-        maxCharacterCount: g,
+    return (0, n.jsxs)(d.ZP, {
+        "aria-describedby": T,
+        "aria-labelledby": K,
+        innerClassName: a()(l, p.textArea),
+        id: o,
+        maxCharacterCount: f,
         onChange: function (e, t, A) {
-            h(t), I(A);
+            m(t), F(A);
         },
-        placeholder: j,
+        placeholder: x,
         required: U,
-        channel: v,
-        textValue: O,
+        channel: b,
+        textValue: V,
         richValue: N,
-        type: Z,
+        type: X,
         onBlur: () => {
-            F.current = !1;
+            y.current = !1;
         },
         onFocus: () => {
-            F.current = !0;
+            y.current = !0;
         },
-        focused: F.current,
-        onSubmit: null != q ? q : b,
-        disableThemedBackground: !V,
+        focused: y.current,
+        onSubmit: null != v ? v : q,
+        disableThemedBackground: !O,
         parentModalKey: P,
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
-            !0 === x &&
+            !0 === j &&
                 (0, n.jsx)(C, {
-                    hasError: null != y.error || (null != g && O.length > g),
-                    text: O,
-                    maxLength: g,
+                    hasError: null != I.error || (null != f && V.length > f),
+                    text: V,
+                    maxLength: f,
                 }),
-            null != g &&
-                (0, n.jsx)(o.nn4, {
-                    id: m,
-                    children: f.intl.format(f.t["+DFxLS"], { maxLength: g }),
+            null != f &&
+                (0, n.jsx)(i.nn4, {
+                    id: h,
+                    children: g.intl.format(g.t["+DFxLS"], { maxLength: f }),
                 }),
         ],
     });

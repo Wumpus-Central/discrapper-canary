@@ -1,23 +1,23 @@
 n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(565138),
-    o = n(430824),
-    l = n(388032),
+var i = n(481060),
+    l = n(565138),
+    a = n(430824),
+    o = n(388032),
     s = n(633570);
 let c = (e) => {
     let { stageInstance: t } = e,
-        n = o.Z.getGuild(t.guild_id);
+        n = a.Z.getGuild(t.guild_id);
     return null == n
         ? null
         : (0, r.jsxs)("div", {
               className: s.container,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(i.X6q, {
                       className: s.header,
                       variant: "heading-sm/semibold",
-                      children: l.intl.string(l.t["InbJ8/"]),
+                      children: o.intl.string(o.t["InbJ8/"]),
                   }),
                   (0, r.jsxs)("div", {
                       className: s.guildContainer,
@@ -25,19 +25,19 @@ let c = (e) => {
                           (0, r.jsxs)("div", {
                               className: s.guildInfo,
                               children: [
-                                  (0, r.jsx)(i.Z, {
+                                  (0, r.jsx)(l.Z, {
                                       guild: n,
-                                      size: i.Z.Sizes.MINI,
+                                      size: l.Z.Sizes.MINI,
                                       className: s.guildIcon,
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       color: "header-secondary",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(i.Text, {
                               variant: "text-md/semibold",
                               color: "header-primary",
                               children: t.topic,

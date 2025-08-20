@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(539854);
+n.d(t, { Z: () => N }), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(873546),
@@ -37,35 +37,35 @@ function S(e) {
 }
 function A(e) {
     var t, n, i, f, _, p, y;
-    let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
-        L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        x = N(C.id, O, P),
-        { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
-            activeCommand: c.Z.getActiveCommand(C.id),
-            activeCommandOption: c.Z.getActiveOption(C.id),
+    let { type: O, disabled: A, channel: N, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
+        x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        L = C(N.id, O, P),
+        { activeCommand: j, activeCommandOption: M } = (0, o.cj)([c.Z], () => ({
+            activeCommand: c.Z.getActiveCommand(N.id),
+            activeCommandOption: c.Z.getActiveOption(N.id),
         })),
-        { paymentsBlocked: j } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: k } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         U = [],
-        G = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
-        B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
-        V = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
+        G = !N.isDM() || void 0 === N.recipients || N.recipients.length > 1,
+        B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(N.recipients[0]))),
+        Z = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
-            null == M &&
-            !j &&
+            null == j &&
+            !k &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
                 (0, r.jsx)(
                     S,
                     {
                         disabled: A,
-                        channel: C,
+                        channel: N,
                     },
                     "gift",
                 ),
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
-            null == M &&
+            null == j &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -77,21 +77,21 @@ function A(e) {
                     "gif",
                 ),
             ),
-        V &&
-            null == M &&
+        Z &&
+            null == j &&
             U.push(
                 (0, r.jsx)(
                     b.Z,
                     {
                         disabled: A,
-                        channel: C,
+                        channel: N,
                     },
                     "confetti",
                 ),
             ),
-        !V &&
+        !Z &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
-            null == M &&
+            null == j &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -104,7 +104,7 @@ function A(e) {
                 ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
+        (null == j || (null != M && M.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,
@@ -117,13 +117,13 @@ function A(e) {
         ),
     null != D && U.push(D),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
-        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || L) &&
+        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || x) &&
         U.push(
             (0, r.jsx)(
                 v.Z,
                 {
                     onClick: R,
-                    disabled: A || x,
+                    disabled: A || L,
                 },
                 "submit",
             ),
@@ -135,11 +135,11 @@ function A(e) {
               children: U,
           });
 }
-function N(e, t, n) {
+function C(e, t, n) {
     return (0, o.e7)([_.Z, p.Z], () => {
         let r = _.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === p.Z.getUploads(e, t.drafts.type).length && n && !i;
     });
 }
-let C = i.memo(A);
+let N = i.memo(A);

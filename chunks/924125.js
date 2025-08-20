@@ -1,8 +1,8 @@
-t.exports = function (t) {
-    if (void 0 === (t = t || ("undefined" != typeof document ? document : void 0))) return null;
+e.exports = function (e) {
+    if (void 0 === (e = e || ("undefined" != typeof document ? document : void 0))) return null;
     try {
-        return t.activeElement || t.body;
-    } catch (e) {
-        return t.body;
+        return e.activeElement || e.body;
+    } catch (t) {
+        return e.body;
     }
 };

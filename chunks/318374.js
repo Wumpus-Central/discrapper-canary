@@ -99,27 +99,27 @@ function v(e) {
             overflowCountColor: T = "interactive-normal",
             overflowCountClassName: S,
             hideOverflowCount: A = !1,
-            disableUsernameTooltip: N = !1,
-            disableUserPopout: C = !1,
+            disableUsernameTooltip: C = !1,
+            disableUserPopout: N = !1,
             onClickOverflow: R,
             onFocusOverflow: P,
             onUserClick: w,
             onUserPopoutRequestClose: D,
-            "aria-label": L,
-            "aria-labelledby": x,
-            "aria-hidden": M,
+            "aria-label": x,
+            "aria-labelledby": L,
+            "aria-hidden": j,
         } = e,
-        [k, j] = i.useState(!1),
+        [M, k] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
         B = t.length - a,
-        V = B + 1,
-        F = B > 0 && !A && !M,
-        Z = () =>
+        Z = B + 1,
+        V = B > 0 && !A && !j,
+        F = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
-                "aria-label": L,
-                "aria-labelledby": x,
+                "aria-label": x,
+                "aria-labelledby": L,
                 children: (0, r.jsx)(c.Ttm, {
                     className: h.scroller,
                     children: t.map((e) =>
@@ -130,21 +130,18 @@ function v(e) {
                                 guildId: s,
                                 channelId: m,
                                 nick: f.ZP.getNickname(s, m, e),
-                                disablePopout: "function" == typeof C ? C(e.id) : C,
+                                disablePopout: "function" == typeof N ? N(e.id) : N,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
-                                    j(!1), null == D || D();
+                                    k(!1), null == D || D();
                                 },
                                 onContextMenu: (t) =>
                                     (0, u.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([
-                                                n.e("70274"),
-                                                n.e("79695"),
-                                                n.e("69220"),
-                                                n.e("92522"),
-                                            ]).then(n.bind(n, 881351));
+                                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                                                n.bind(n, 881351),
+                                            );
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
@@ -155,7 +152,7 @@ function v(e) {
                                                     }),
                                                 );
                                         },
-                                        { onClose: () => j(!1) },
+                                        { onClose: () => k(!1) },
                                     ),
                             },
                             e.id,
@@ -164,14 +161,14 @@ function v(e) {
                 }),
             }),
         H = () => {
-            let e = F ? a - 1 : Math.min(t.length, a),
+            let e = V ? a - 1 : Math.min(t.length, a),
                 n = e - 1,
                 i = l()(t)
                     .take(e)
                     .map((e, t) => {
                         let i = f.ZP.getNickname(s, m, e),
                             a = null != i ? i : _.ZP.getName(e),
-                            l = t === n && !F,
+                            l = t === n && !V,
                             u = o()(h.avatar, U, l && h.isLast),
                             d = (0, r.jsx)(c.qEK, {
                                 src: e.getAvatarURL(s, 24),
@@ -182,7 +179,7 @@ function v(e) {
                             "li",
                             {
                                 className: u,
-                                children: N
+                                children: C
                                     ? (0, r.jsx)("span", {
                                           role: "img",
                                           "aria-label": a,
@@ -212,16 +209,16 @@ function v(e) {
             });
         },
         Y = () => {
-            if (!F) return null;
+            if (!V) return null;
             let e = null != I ? I : O(v);
             return (0, r.jsx)(
                 c.yRy,
                 {
                     targetElementRef: G,
-                    renderPopout: Z,
-                    shouldShow: k,
+                    renderPopout: F,
+                    shouldShow: M,
                     position: "bottom",
-                    onRequestClose: () => j(!1),
+                    onRequestClose: () => k(!1),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
@@ -230,13 +227,13 @@ function v(e) {
                                 className: o()(h.overflow, U, S),
                                 onFocus: P,
                                 onClick: (e) => {
-                                    null == R || R(e), j(!0);
+                                    null == R || R(e), k(!0);
                                 },
-                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: V }),
+                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: e,
                                     color: T,
-                                    children: V > 99 ? ">99" : "+".concat(V),
+                                    children: Z > 99 ? ">99" : "+".concat(Z),
                                 }),
                             }),
                         ),
@@ -248,10 +245,10 @@ function v(e) {
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-label": L,
-              "aria-labelledby": x,
+              "aria-label": x,
+              "aria-labelledby": L,
               className: o()(E, h.avatars),
-              "aria-hidden": M,
+              "aria-hidden": j,
               children: [H(), Y()],
           });
 }

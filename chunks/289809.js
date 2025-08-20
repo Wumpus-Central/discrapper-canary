@@ -1,31 +1,31 @@
 n.d(t, { Z: () => s });
 var r = n(951288),
-    a = n(647438),
-    i = n(481060),
-    o = n(454585),
-    l = n(196209);
+    i = n(647438),
+    l = n(481060),
+    a = n(454585),
+    o = n(196209);
 function s(e) {
     let {
             element: {
                 data: { header: t, body: n, is_localized: s },
             },
         } = e,
-        c = a.useRef(o.Z.reactParserFor(o.Z.defaultRules));
+        c = i.useRef(a.Z.reactParserFor(a.Z.defaultRules));
     return s && (null != t || null != n)
         ? (0, r.jsxs)("div", {
-              className: l.container,
+              className: o.container,
               children: [
                   null != t &&
-                      (0, r.jsx)(i.X6q, {
+                      (0, r.jsx)(l.X6q, {
                           variant: "heading-sm/semibold",
                           color: "header-secondary",
-                          className: l.header,
+                          className: o.header,
                           children: t,
                       }),
                   null != n &&
-                      (0, r.jsx)(i.Text, {
+                      (0, r.jsx)(l.Text, {
                           variant: "text-sm/normal",
-                          className: l.bodyText,
+                          className: o.bodyText,
                           children: c.current(n),
                       }),
               ],

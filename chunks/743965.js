@@ -1,17 +1,17 @@
-t.d(n, { d: () => f }), t(388685);
+t.d(n, { d: () => j }), t(388685);
 var r = t(951288),
     l = t(647438),
     c = t(120356),
-    i = t.n(c),
-    o = t(481060),
-    a = t(663993),
+    a = t.n(c),
+    i = t(481060),
+    o = t(663993),
     s = t(572004),
     u = t(430864),
     d = t(154257);
 function h(e) {
     let { text: n } = e,
         [t, c] = l.useState(!1);
-    return (0, r.jsx)(o.P3F, {
+    return (0, r.jsx)(i.P3F, {
         onClick: () => {
             (0, s.JG)(
                 n,
@@ -20,21 +20,21 @@ function h(e) {
             );
         },
         children: t
-            ? (0, r.jsx)(o.dz2, {
+            ? (0, r.jsx)(i.dz2, {
                   size: "xs",
                   color: "currentColor",
               })
-            : (0, r.jsx)(o.TIy, {
+            : (0, r.jsx)(i.TIy, {
                   size: "xs",
                   color: "currentColor",
               }),
     });
 }
-function f(e) {
+function j(e) {
     let { language: n, content: l } = e,
         c = () =>
             (0, r.jsx)("code", {
-                className: i()(d.scrollbarGhostHairline, "hljs"),
+                className: a()(d.scrollbarGhostHairline, "hljs"),
                 children: l,
             });
     return (0, r.jsx)("pre", {
@@ -47,7 +47,7 @@ function f(e) {
                           children: (0, r.jsx)(h, { text: l }),
                       })
                     : null,
-                (0, r.jsx)(a.GI, {
+                (0, r.jsx)(o.GI, {
                     createPromise: () => Promise.resolve().then(t.bind(t, 364964)),
                     webpackId: 364964,
                     renderFallback: c,
@@ -58,7 +58,7 @@ function f(e) {
                             return null == t
                                 ? c()
                                 : (0, r.jsx)("code", {
-                                      className: i()(d.scrollbarGhostHairline, "hljs", t.language),
+                                      className: a()(d.scrollbarGhostHairline, "hljs", t.language),
                                       dangerouslySetInnerHTML: { __html: t.value },
                                   });
                         }

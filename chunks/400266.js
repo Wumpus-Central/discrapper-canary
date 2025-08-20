@@ -1,48 +1,52 @@
-t.d(l, { Z: () => u }), t(704826), t(35282);
-var r = t(951288);
-t(647438);
-var n = t(120356),
-    i = t.n(n),
-    s = t(729594),
-    a = t(785992),
-    o = t(616922),
-    d = t(781452);
+n.d(t, { Z: () => d }), n(704826), n(35282);
+var r = n(951288);
+n(647438);
+var i = n(120356),
+    a = n.n(i),
+    o = n(729594),
+    s = n(785992),
+    l = n(616922),
+    c = n(781452);
 function u(e) {
+    let t = /intl-[^/]+\//;
+    return e.replace(t, "");
+}
+function d(e) {
     let {
-        className: l,
-        embed: { url: t },
+        className: t,
+        embed: { url: n },
     } = e;
-    if (null == t) return null;
-    let n = null,
-        u = null;
+    if (null == n) return null;
+    let i = null,
+        d = null;
     try {
-        let e = s.parse(t.replace(/intl-[^/]+\//, ""), !0);
-        (n = e.host), (u = e.pathname);
+        let e = o.parse(u(n), !0);
+        (i = e.host), (d = e.pathname);
     } catch (e) {
         return null;
     }
-    if (!(0, a.E)(n) || null == u) return null;
-    let h = u.split("/"),
-        c = null != h[1] ? h[1].toLowerCase() : null,
-        m = null != h[3] ? h[3].toLowerCase() : null,
-        p = h[4];
+    if (!(0, s.E)(i) || null == d) return null;
+    let f = d.split("/"),
+        _ = null != f[1] ? f[1].toLowerCase() : null,
+        p = null != f[3] ? f[3].toLowerCase() : null,
+        h = f[4];
     if (
-        !["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != c ? c : "") ||
-        ("user" === c && "playlist" !== m)
+        !["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != _ ? _ : "") ||
+        ("user" === _ && "playlist" !== p)
     )
         return null;
-    "user" === c && "playlist" === m && null != p && (u = "/playlist/".concat(p));
-    let g = 352;
+    "user" === _ && "playlist" === p && null != h && (d = "/playlist/".concat(h));
+    let m = 352;
     return (
-        "track" === c ? (g = 80) : ("episode" === c || "show" === c) && (g = 232),
+        "track" === _ ? (m = 80) : ("episode" === _ || "show" === _) && (m = 232),
         (0, r.jsx)("iframe", {
-            className: i()(d.embedSpotify, l),
-            src: o.C7.EMBED(u),
+            className: a()(c.embedSpotify, t),
+            src: l.C7.EMBED(d),
             style: {
                 maxWidth: 400,
                 minWidth: 300,
                 width: "100%",
-                height: g,
+                height: m,
             },
             frameBorder: 0,
             sandbox:

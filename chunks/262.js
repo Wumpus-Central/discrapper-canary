@@ -1,122 +1,133 @@
-n.d(t, { Z: () => d }), n(35282);
+n.d(t, { Z: () => g }), n(35282);
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
+    a = n(481060),
     o = n(857395),
-    a = n(739566),
-    s = n(834129),
+    s = n(739566),
+    l = n(834129),
     c = n(388032);
-function u(e) {
-    let { children: t, messageReference: n, guildName: a } = e,
-        s = i.useRef(null);
-    if (null == n) return (0, r.jsx)(l.eee, { children: t });
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function m(e) {
+    let { children: t, messageReference: n, guildName: s } = e,
+        l = i.useRef(null);
+    if (null == n) return (0, r.jsx)(a.eee, { children: t });
     let { guild_id: c } = n;
     return null == c
-        ? (0, r.jsx)(l.eee, { children: t })
+        ? (0, r.jsx)(a.eee, { children: t })
         : (0, r.jsx)(o.Z, {
               guildId: c,
-              name: a,
-              targetElementRef: s,
+              name: s,
+              targetElementRef: l,
               children: (e) => {
-                  var n, i;
-                  let { "aria-controls": o, "aria-expanded": a } = e,
-                      c = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                              r,
-                              i = (function (e, t) {
-                                  if (null == e) return {};
-                                  var n,
-                                      r,
-                                      i = {},
-                                      l = Object.keys(e);
-                                  for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                  return i;
-                              })(e, t);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              for (r = 0; r < l.length; r++)
-                                  (n = l[r]),
-                                      !(t.indexOf(n) >= 0) &&
-                                          Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                          (i[n] = e[n]);
-                          }
-                          return i;
-                      })(e, ["aria-controls", "aria-expanded"]);
+                  let { "aria-controls": n, "aria-expanded": i } = e,
+                      o = p(e, ["aria-controls", "aria-expanded"]);
                   return (0, r.jsx)(
-                      l.eee,
-                      ((n = (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var n = null != arguments[t] ? arguments[t] : {},
-                                  r = Object.keys(n);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
-                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      }),
-                                  )),
-                                  r.forEach(function (t) {
-                                      var r;
-                                      (r = n[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: r,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = r);
-                                  });
-                          }
-                          return e;
-                      })({}, c)),
-                      (i = i =
-                          {
-                              ref: s,
-                              children: t,
-                          }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                          : (function (e, t) {
-                                var n = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, r);
-                                }
-                                return n;
-                            })(Object(i)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                            }),
-                      n),
+                      a.eee,
+                      _(d({}, o), {
+                          ref: l,
+                          children: t,
+                      }),
                   );
               },
           });
 }
-function d(e) {
-    let { usernameHook: t, message: i, compact: l } = e,
-        { content: o, timestamp: d, messageReference: p } = i,
-        m = (0, a.ZP)(i),
-        f = t(m),
-        g = (null != o ? o : "").split(" ").slice(0, -1).join(" "),
-        _ = c.intl.format(c.t["47CZc3"], {
-            username: m.nick,
-            usernameHook: f,
+function g(e) {
+    let { usernameHook: t, message: i, compact: a } = e,
+        { content: o, timestamp: u, messageReference: d } = i,
+        f = (0, s.ZP)(i),
+        _ = t(f),
+        p = (null != o ? o : "").split(" ").slice(0, -1).join(" "),
+        h = c.intl.format(c.t["47CZc3"], {
+            username: f.nick,
+            usernameHook: _,
             webhookName: o,
             webhookNameHook: (e, t) =>
                 (0, r.jsx)(
-                    u,
+                    m,
                     {
-                        messageReference: p,
-                        guildName: g,
+                        messageReference: d,
+                        guildName: p,
                         children: e,
                     },
                     t,
                 ),
         });
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(l.Z, {
         icon: n(570111),
-        timestamp: d,
-        compact: l,
-        children: _,
+        timestamp: u,
+        compact: a,
+        children: h,
     });
 }

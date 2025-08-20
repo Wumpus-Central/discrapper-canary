@@ -52,9 +52,9 @@ function v(e) {
             onClose: T,
         } = e,
         { resetInteraction: S, setInteractionToast: A } = (0, f.Xo)(),
-        { theme: N } = (0, p.z)(),
-        C = (0, a.e7)([l.Z], () => l.Z.theme),
-        R = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
+        { theme: C } = (0, p.z)(),
+        N = (0, a.e7)([l.Z], () => l.Z.theme),
+        R = (0, o.wj)(N) ? !(0, o.wj)(C) : (0, o.wj)(C),
         P = i.useRef(null);
     i.useEffect(() => {
         null == v || v(null == P ? void 0 : P.current);

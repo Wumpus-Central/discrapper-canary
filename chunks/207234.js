@@ -1,40 +1,37 @@
 n.d(t, {
     M: () => p,
-    a: () => m,
+    a: () => _,
 });
-var i = n(392711),
-    r = n.n(i),
-    s = n(475468),
-    a = n(821020),
-    l = n(592125),
-    o = n(819640),
+var r = n(392711),
+    i = n.n(r),
+    a = n(475468),
+    o = n(821020),
+    s = n(592125),
+    l = n(819640),
     c = n(944486),
-    d = n(585483),
-    u = n(981631);
-let m = {
+    u = n(585483),
+    d = n(981631);
+let f = () => {
+        let { notificationCenterVariant: e } = (0, o.Ag)({ location: "TOGGLE_INBOX" });
+        if ("sidebar" !== e) return;
+        let t = c.Z.getChannelId(),
+            n = s.Z.getChannel(t);
+        return window.location.pathname.startsWith(d.Z5c.CHANNEL(d.STv)) && null != n
+            ? (0, a.K)(n.guild_id, t)
+            : (0, a.z)(d.Z5c.CHANNEL(d.STv, null != t ? t : void 0));
+    },
+    _ = {
         binds: ["mod+i"],
         comboKeysBindGlobal: !0,
-        action: () =>
-            !(o.Z.getLayers().length > 0) &&
-            ((() => {
-                let { notificationCenterVariant: e } = (0, a.Ag)({ location: "TOGGLE_INBOX" });
-                if ("sidebar" !== e) return;
-                let t = c.Z.getChannelId(),
-                    n = l.Z.getChannel(t);
-                return window.location.pathname.startsWith(u.Z5c.CHANNEL(u.STv)) && null != n
-                    ? (0, s.K)(n.guild_id, t)
-                    : (0, s.z)(u.Z5c.CHANNEL(u.STv, null != t ? t : void 0));
-            })(),
-            d.S.dispatch(u.CkL.TOGGLE_INBOX),
-            !1),
+        action: () => !(l.Z.getLayers().length > 0) && (f(), u.S.dispatch(d.CkL.TOGGLE_INBOX), !1),
     },
     p = {
         binds: ["mod+shift+e"],
         comboKeysBindGlobal: !0,
-        action: r().debounce(
+        action: i().debounce(
             () => {
-                if (d.S.hasSubscribers(u.CkL.MARK_TOP_INBOX_CHANNEL_READ))
-                    return d.S.dispatch(u.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                if (u.S.hasSubscribers(d.CkL.MARK_TOP_INBOX_CHANNEL_READ))
+                    return u.S.dispatch(d.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
             },
             100,
             { leading: !0 },

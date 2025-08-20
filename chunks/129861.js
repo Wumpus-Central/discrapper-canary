@@ -172,10 +172,10 @@ let T = (e) => {
             v = c ? null : I(t),
             S = t.isVerifiedBot(),
             A = p.ZP.getName(t),
-            N = i ? y : null != n ? n : A,
-            C = t.hasUniqueUsername() || l;
-        if (C || N !== y) {
-            let e = N === y && C && i ? p.ZP.getUserTag(t, { forcePomelo: l }) : N,
+            C = i ? y : null != n ? n : A,
+            N = t.hasUniqueUsername() || l;
+        if (N || C !== y) {
+            let e = C === y && N && i ? p.ZP.getUserTag(t, { forcePomelo: l }) : C,
                 n = a && e !== "@".concat(y) ? p.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 T,
@@ -186,7 +186,7 @@ let T = (e) => {
                         botType: v,
                         botVerified: S,
                         showStreamerModeTooltip: g && p.ZP.isNameConcealed(e),
-                        displayNameStyles: N !== y ? t.displayNameStyles : null,
+                        displayNameStyles: C !== y ? t.displayNameStyles : null,
                         displayNameStylesType: h,
                     },
                     m,
@@ -197,10 +197,10 @@ let T = (e) => {
             f.Z,
             E(
                 {
-                    name: N,
+                    name: C,
                     botType: v,
                     botVerified: S,
-                    discriminator: b || N !== y ? null : null != s ? s : t.discriminator,
+                    discriminator: b || C !== y ? null : null != s ? s : t.discriminator,
                 },
                 m,
             ),

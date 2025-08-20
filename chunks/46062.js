@@ -1,5 +1,5 @@
-n.d(t, { T: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { T: () => r });
+let r = (0, n(818083).B)({
     id: "2025-07_ostrich",
     label: "Ostrich",
     kind: "user",

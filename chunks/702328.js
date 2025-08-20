@@ -1,232 +1,232 @@
 n.d(t, { Z: () => H }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    o = n(622535),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(622535),
     c = n(780384),
-    d = n(481060),
-    u = n(410030),
-    m = n(607070),
-    p = n(100527),
-    g = n(906732),
+    u = n(481060),
+    d = n(410030),
+    f = n(607070),
+    _ = n(100527),
+    p = n(906732),
     h = n(433811),
-    f = n(214852),
-    b = n(78839),
-    x = n(626135),
-    _ = n(74538),
-    j = n(367074),
-    E = n(47280),
-    C = n(8647),
-    O = n(744129),
-    v = n(823188),
+    m = n(214852),
+    g = n(78839),
+    E = n(626135),
+    b = n(74538),
+    y = n(367074),
+    O = n(47280),
+    v = n(8647),
+    I = n(744129),
+    T = n(823188),
     S = n(611116),
-    T = n(306066),
-    N = n(349803),
-    I = n(8231),
-    y = n(864879),
-    A = n(238649),
-    P = n(47840),
-    R = n(975978),
-    D = n(836332),
-    Z = n(903250),
-    w = n(954003),
-    k = n(664134),
-    L = n(457227),
-    B = n(474936),
-    M = n(981631),
-    U = n(231338),
-    V = n(379039),
-    G = n(810392),
+    A = n(306066),
+    C = n(349803),
+    N = n(8231),
+    R = n(864879),
+    P = n(238649),
+    w = n(47840),
+    D = n(975978),
+    x = n(836332),
+    L = n(903250),
+    j = n(954003),
+    M = n(664134),
+    k = n(457227),
+    U = n(474936),
+    G = n(981631),
+    B = n(231338),
+    Z = n(379039),
+    V = n(810392),
     F = n(107283);
 let H = () => {
-    (0, f.z)(h.X);
-    let e = r.useRef(null),
-        t = r.useRef(null),
-        n = r.useRef(null),
-        s = r.useRef(null),
-        H = r.useRef(null),
-        z = r.useRef(null),
-        W = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
-        Y = (0, u.ZP)(),
-        K = (0, c.wj)(Y),
-        [q, X] = r.useState(!1),
-        [J, Q] = r.useState(!1),
-        [$, ee] = r.useState(!1),
-        [et, en] = r.useState(!1),
-        [ei, er] = r.useState(!1),
-        es = (0, l.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-        ea = null != es ? (0, _.Af)(es) : null,
-        el = null != ea ? _.ZP.getSkuIdForPlan(ea.planId) : null,
-        eo = null !== el && el !== B.Si.TIER_2 ? B.Si.TIER_2 : null,
-        ec = (0, j.Vi)(),
-        ed = null != ec && ec,
-        { analyticsLocations: eu } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
-        em = (0, E.ZP)({ location: "PremiumMarketing" }),
-        ep = !q && !$ && (em || !J);
-    r.useEffect(() => {
-        er(!0);
+    (0, m.z)(h.X);
+    let e = i.useRef(null),
+        t = i.useRef(null),
+        n = i.useRef(null),
+        a = i.useRef(null),
+        H = i.useRef(null),
+        Y = i.useRef(null),
+        W = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
+        K = (0, d.ZP)(),
+        z = (0, c.wj)(K),
+        [q, X] = i.useState(!1),
+        [Q, J] = i.useState(!1),
+        [$, ee] = i.useState(!1),
+        [et, en] = i.useState(!1),
+        [er, ei] = i.useState(!1),
+        ea = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
+        eo = null != ea ? (0, b.Af)(ea) : null,
+        es = null != eo ? b.ZP.getSkuIdForPlan(eo.planId) : null,
+        el = null !== es && es !== U.Si.TIER_2 ? U.Si.TIER_2 : null,
+        ec = (0, y.Vi)(),
+        eu = null != ec && ec,
+        { analyticsLocations: ed } = (0, p.ZP)(_.Z.PREMIUM_MARKETING),
+        ef = (0, O.ZP)({ location: "PremiumMarketing" }),
+        e_ = !q && !$ && (ef || !Q);
+    i.useEffect(() => {
+        ei(!0);
     }, []);
-    let eg = [k.h.HOME, k.h.WHATS_NEW, k.h.BEST_OF_NITRO, k.h.PLANS, k.h.COMPARE],
-        { navBarSections: eh, activeSectionId: ef } = (0, w.O)(eg),
-        { home: eb, whatsNew: ex, bestOfNitro: e_, plans: ej, compare: eE } = eh,
-        eC = em ? V : G,
-        eO = (0, i.jsxs)("div", {
-            className: a()(eC.container, eC.responsiveContainer, {
-                [eC.containerBackground]: em || K,
-                [V.fadeInFromTop]: !W && em,
+    let ep = [M.h.HOME, M.h.WHATS_NEW, M.h.BEST_OF_NITRO, M.h.PLANS, M.h.COMPARE],
+        { navBarSections: eh, activeSectionId: em } = (0, j.O)(ep),
+        { home: eg, whatsNew: eE, bestOfNitro: eb, plans: ey, compare: eO } = eh,
+        ev = ef ? Z : V,
+        eI = (0, r.jsxs)("div", {
+            className: o()(ev.container, ev.responsiveContainer, {
+                [ev.containerBackground]: ef || z,
+                [Z.fadeInFromTop]: !W && ef,
             }),
             "data-cy": "tier-0-marketing-page",
             children: [
-                em &&
-                    (0, i.jsxs)(i.Fragment, {
+                ef &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)(T.Z, { className: V.topOfPageGradient }),
-                            (0, i.jsx)(L.Z, {
+                            (0, r.jsx)(A.Z, { className: Z.topOfPageGradient }),
+                            (0, r.jsx)(k.Z, {
                                 navBarSections: eh,
-                                activeSectionId: ef,
+                                activeSectionId: em,
                             }),
                         ],
                     }),
-                !em &&
-                    (0, i.jsxs)(i.Fragment, {
+                !ef &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)("div", { className: G.heroHeaderSideGradient }),
-                            (0, i.jsx)("img", {
+                            (0, r.jsx)("div", { className: V.heroHeaderSideGradient }),
+                            (0, r.jsx)("img", {
                                 src: F,
-                                className: G.heroHeaderBackgroundStars,
+                                className: V.heroHeaderBackgroundStars,
                                 alt: "",
                             }),
                         ],
                     }),
-                (0, i.jsxs)("div", {
-                    className: eC.sectionsContainer,
+                (0, r.jsxs)("div", {
+                    className: ev.sectionsContainer,
                     children: [
-                        (0, i.jsx)("div", {
-                            className: eC.heroHeadingContainer,
-                            ref: eb.ref,
-                            children: (0, i.jsx)(o.$, {
-                                innerRef: s,
+                        (0, r.jsx)("div", {
+                            className: ev.heroHeadingContainer,
+                            ref: eg.ref,
+                            children: (0, r.jsx)(l.$, {
+                                innerRef: a,
                                 onChange: (e) => X(e),
                                 threshold: 0,
                                 active: !0,
-                                children: em
-                                    ? (0, i.jsx)(A.Z, {
-                                          ref: s,
-                                          subscriptionTier: eo,
+                                children: ef
+                                    ? (0, r.jsx)(P.Z, {
+                                          ref: a,
+                                          subscriptionTier: el,
                                           isEligibleForBogoPromotion: ec,
                                       })
-                                    : (0, i.jsx)(Z.Z, {
-                                          ref: s,
-                                          subscriptionTier: eo,
-                                          isDarkMode: K,
+                                    : (0, r.jsx)(L.Z, {
+                                          ref: a,
+                                          subscriptionTier: el,
+                                          isDarkMode: z,
                                           isEligibleForBogoPromotion: ec,
                                           videoRef: t,
                                       }),
                             }),
                         }),
                         ec &&
-                            (0, i.jsx)("div", {
-                                className: eC.promoBannerContainer,
-                                children: (0, i.jsx)(C.Z, { variant: C.C.APPLICATION_NITRO_HOME }),
+                            (0, r.jsx)("div", {
+                                className: ev.promoBannerContainer,
+                                children: (0, r.jsx)(v.Z, { variant: v.C.APPLICATION_NITRO_HOME }),
                             }),
-                        (0, i.jsx)("div", {
-                            className: eC.whatsNewSectionContainer,
-                            ref: ex.ref,
-                            children: (0, i.jsx)(S.g, {
-                                shouldLoadVideo: ei,
+                        (0, r.jsx)("div", {
+                            className: ev.whatsNewSectionContainer,
+                            ref: eE.ref,
+                            children: (0, r.jsx)(S.g, {
+                                shouldLoadVideo: er,
                                 isReducedMotion: W,
-                                enablePremiumBrandRefreshDesign: em,
+                                enablePremiumBrandRefreshDesign: ef,
                             }),
                         }),
-                        (0, i.jsx)("div", {
-                            className: eC.bestOfNitroSectionContainer,
-                            ref: e_.ref,
-                            children: (0, i.jsx)(S.G_, {
-                                shouldLoadVideo: ei,
+                        (0, r.jsx)("div", {
+                            className: ev.bestOfNitroSectionContainer,
+                            ref: eb.ref,
+                            children: (0, r.jsx)(S.G_, {
+                                shouldLoadVideo: er,
                                 isReducedMotion: W,
-                                enablePremiumBrandRefreshDesign: em,
+                                enablePremiumBrandRefreshDesign: ef,
                             }),
                         }),
-                        (0, i.jsx)("div", {
-                            className: eC.premiumTierCardsContainer,
-                            ref: ej.ref,
-                            children: (0, i.jsx)(o.$, {
+                        (0, r.jsx)("div", {
+                            className: ev.premiumTierCardsContainer,
+                            ref: ey.ref,
+                            children: (0, r.jsx)(l.$, {
                                 innerRef: n,
                                 onChange: (e) => ee(e),
                                 threshold: 0.1,
                                 active: !0,
-                                children: em
-                                    ? (0, i.jsx)(O.rz, { innerRef: n })
-                                    : (0, i.jsx)(v.Ub, {
+                                children: ef
+                                    ? (0, r.jsx)(I.rz, { innerRef: n })
+                                    : (0, r.jsx)(T.Ub, {
                                           innerRef: n,
-                                          hasActiveTier2PremiumPromotion: ed,
+                                          hasActiveTier2PremiumPromotion: eu,
                                       }),
                             }),
                         }),
-                        (0, i.jsx)("div", {
-                            className: eC.planComparisonTableContainer,
-                            ref: eE.ref,
-                            children: em ? (0, i.jsx)(R.Z, {}) : (0, i.jsx)(I.Z, {}),
+                        (0, r.jsx)("div", {
+                            className: ev.planComparisonTableContainer,
+                            ref: eO.ref,
+                            children: ef ? (0, r.jsx)(D.Z, {}) : (0, r.jsx)(N.Z, {}),
                         }),
                     ],
                 }),
-                !em &&
-                    (0, i.jsx)(N.Z, {
-                        isVisible: ep && ei,
-                        subscriptionTier: eo,
+                !ef &&
+                    (0, r.jsx)(C.Z, {
+                        isVisible: e_ && er,
+                        subscriptionTier: el,
                         isApplicationHome: !0,
                         isEligibleForBogoPromotion: ec,
                     }),
-                (0, i.jsx)(o.$, {
+                (0, r.jsx)(l.$, {
                     innerRef: H,
                     onChange: (e) => {
                         e &&
                             !et &&
-                            (x.default.track(M.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }),
+                            (E.default.track(G.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ed }),
                             en(!0));
                     },
-                    children: (0, i.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                         ref: H,
-                        className: eC.bottomOfPageVisibilitySensor,
+                        className: ev.bottomOfPageVisibilitySensor,
                     }),
                 }),
-                (0, i.jsx)(o.$, {
-                    innerRef: z,
+                (0, r.jsx)(l.$, {
+                    innerRef: Y,
                     onChange: (e) => {
-                        Q(e);
+                        J(e);
                     },
-                    children: em
-                        ? (0, i.jsx)(y.Z, { ref: z })
-                        : (0, i.jsx)(D.Z, {
-                              ref: z,
-                              isFooterVisible: J,
-                              isDarkMode: K,
+                    children: ef
+                        ? (0, r.jsx)(R.Z, { ref: Y })
+                        : (0, r.jsx)(x.Z, {
+                              ref: Y,
+                              isFooterVisible: Q,
+                              isDarkMode: z,
                               isReducedMotion: W,
-                              subscriptionTier: eo,
+                              subscriptionTier: el,
                           }),
                 }),
-                em &&
-                    (0, i.jsxs)(i.Fragment, {
+                ef &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)(P.Z, {
-                                isVisible: ep && ei,
-                                subscriptionTier: eo,
+                            (0, r.jsx)(w.Z, {
+                                isVisible: e_ && er,
+                                subscriptionTier: el,
                                 isEligibleForBogoPromotion: ec,
                             }),
-                            (0, i.jsx)(T.Z, { className: V.bottomOfPageGradient }),
+                            (0, r.jsx)(A.Z, { className: Z.bottomOfPageGradient }),
                         ],
                     }),
             ],
         });
-    return (0, i.jsx)(d.f6W, {
-        theme: em ? U.BR.DARKER : Y,
+    return (0, r.jsx)(u.f6W, {
+        theme: ef ? B.BR.DARKER : K,
         children: (t) =>
-            (0, i.jsx)(d.yWw, {
-                className: a()(eC.scroller, t),
+            (0, r.jsx)(u.yWw, {
+                className: o()(ev.scroller, t),
                 ref: e,
-                children: eO,
+                children: eI,
             }),
     });
 };

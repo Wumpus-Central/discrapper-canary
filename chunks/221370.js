@@ -33,8 +33,8 @@ function m(e) {
     }
     return e;
 }
-let f = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
-function p(e) {
+let p = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
+function f(e) {
     var { platform: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -96,7 +96,7 @@ function g(e) {
                     children: (t) => {
                         var n, i;
                         return (0, r.jsx)(
-                            p,
+                            f,
                             ((n = m({}, t)),
                             (i = i = { platform: e }),
                             Object.getOwnPropertyDescriptors
@@ -127,7 +127,7 @@ function x(e) {
                 n = [...e];
             return (
                 !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && n.push(s.z.DESKTOP),
-                n.filter((e) => f.includes(e))
+                n.filter((e) => p.includes(e))
             );
         }, [t.platforms]);
     return 0 === l.length

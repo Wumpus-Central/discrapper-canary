@@ -1,187 +1,201 @@
-n.d(t, { Z: () => j }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(692547),
-    l = n(481060),
-    o = n(596454),
+n.d(t, { Z: () => T }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(692547),
+    s = n(481060),
+    l = n(596454),
     c = n(594174),
-    d = n(74538),
-    u = n(242291),
-    m = n(830253),
-    p = n(792165),
-    g = n(603074),
+    u = n(74538),
+    d = n(242291),
+    f = n(830253),
+    _ = n(792165),
+    p = n(603074),
     h = n(294206),
-    f = n(388032),
-    b = n(298879);
-function x(e) {
-    let { onSelect: t } = e,
-        [n, a] = r.useState(!1),
-        o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        u = d.ZP.canUseCustomCallSounds(o),
-        m = r.useRef(null);
-    function x(e) {
-        u && (a(!1), null == t || t(e));
+    m = n(388032),
+    g = n(298879);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
     }
-    return (0, i.jsx)(l.yRy, {
-        targetElementRef: m,
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
+    let { onSelect: t } = e,
+        [n, o] = i.useState(!1),
+        l = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        d = u.ZP.canUseCustomCallSounds(l),
+        f = i.useRef(null);
+    function E(e) {
+        d && (o(!1), null == t || t(e));
+    }
+    return (0, r.jsx)(s.yRy, {
+        targetElementRef: f,
         shouldShow: n,
         position: "left",
-        onRequestClose: () => a(!1),
+        onRequestClose: () => o(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(l.VqE, {
-                children: (0, i.jsx)(g.Z, {
+            return (0, r.jsx)(s.VqE, {
+                children: (0, r.jsx)(p.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: x,
-                    gridNotice: u ? null : (0, i.jsx)(p.o, {}),
+                    onSelect: E,
+                    gridNotice: d ? null : (0, r.jsx)(_.o, {}),
                     analyticsSource: "call sounds edit setting",
                 }),
             });
         },
-        children: (e) => {
-            var t, r;
-            return (0, i.jsx)(
+        children: (e) =>
+            (0, r.jsx)(
                 h.hU,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = i);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (r = r =
-                    {
-                        ref: m,
-                        onClick: () => {
-                            a(!n);
-                        },
-                        text: f.intl.string(f.t.uOe0Aw),
-                        children: (0, i.jsx)(l.vdY, {
-                            size: "md",
-                            color: "currentColor",
-                            className: b.secondaryIcon,
-                        }),
+                O(b({}, e), {
+                    ref: f,
+                    onClick: () => {
+                        o(!n);
+                    },
+                    text: m.intl.string(m.t.uOe0Aw),
+                    children: (0, r.jsx)(s.vdY, {
+                        size: "md",
+                        color: "currentColor",
+                        className: g.secondaryIcon,
                     }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                      }),
-                t),
-            );
-        },
+                }),
+            ),
     });
 }
-function _(e) {
+function I(e) {
     let { sound: t } = e,
-        { previewSound: n } = (0, m.Z)(t, null),
-        r =
-            0 === (0, u.pI)()
-                ? f.intl.string(f.t.OASXjo)
-                : f.intl.formatToPlainString(f.t["/8fYOz"], {
+        { previewSound: n } = (0, f.Z)(t, null),
+        i =
+            0 === (0, d.pI)()
+                ? m.intl.string(m.t.OASXjo)
+                : m.intl.formatToPlainString(m.t["/8fYOz"], {
                       emojiName: t.emojiName,
                       soundName: t.name,
                   });
-    return (0, i.jsx)(h.hU, {
+    return (0, r.jsx)(h.hU, {
         onClick: n,
-        text: r,
-        children: (0, i.jsx)(l.gj8, {
+        text: i,
+        children: (0, r.jsx)(s.gj8, {
             size: "md",
             color: "currentColor",
-            className: b.secondaryIconActive,
+            className: g.secondaryIconActive,
         }),
     });
 }
-function j(e) {
-    let { sound: t, isGlobal: n, onSelect: r } = e,
-        s = null != t,
+function T(e) {
+    let { sound: t, isGlobal: n, onSelect: i } = e,
+        a = null != t,
         c = null == t ? void 0 : t.emojiId,
-        d = null == t ? void 0 : t.emojiName,
-        u = s && (null != d || null != c);
-    return (0, i.jsxs)("div", {
-        className: b.soundButtonSettingContainer,
+        u = null == t ? void 0 : t.emojiName,
+        d = a && (null != u || null != c),
+        f = (e) =>
+            (0, r.jsx)(s.Text, {
+                variant: "text-xs/medium",
+                color: "header-secondary",
+                tag: "span",
+                children: e,
+            });
+    function _() {
+        return null == t
+            ? m.intl.string(m.t.PoWNfX)
+            : n
+              ? m.intl.format(m.t.B6HU6O, {
+                    soundName: t.name,
+                    subtextHook: f,
+                })
+              : t.name;
+    }
+    return (0, r.jsxs)("div", {
+        className: g.soundButtonSettingContainer,
         children: [
-            (0, i.jsxs)("div", {
-                className: b.container,
+            (0, r.jsxs)("div", {
+                className: g.container,
                 children: [
-                    u &&
-                        (0, i.jsx)(o.Z, {
+                    d &&
+                        (0, r.jsx)(l.Z, {
                             emojiId: c,
-                            emojiName: d,
-                            className: b.emoji,
+                            emojiName: u,
+                            className: g.emoji,
                         }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "header-primary",
-                        className: b.soundText,
-                        children:
-                            null == t
-                                ? f.intl.string(f.t.PoWNfX)
-                                : n
-                                  ? f.intl.format(f.t.B6HU6O, {
-                                        soundName: t.name,
-                                        subtextHook: (e) =>
-                                            (0, i.jsx)(l.Text, {
-                                                variant: "text-xs/medium",
-                                                color: "header-secondary",
-                                                tag: "span",
-                                                children: e,
-                                            }),
-                                    })
-                                  : t.name,
+                        className: g.soundText,
+                        children: _(),
                     }),
-                    s
-                        ? (0, i.jsx)(_, { sound: t })
-                        : (0, i.jsx)(l.gj8, {
+                    a
+                        ? (0, r.jsx)(I, { sound: t })
+                        : (0, r.jsx)(s.gj8, {
                               size: "md",
                               color: "currentColor",
-                              className: b.secondaryIconDisabled,
+                              className: g.secondaryIconDisabled,
                           }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: b.container,
+            (0, r.jsxs)("div", {
+                className: g.container,
                 children: [
-                    (0, i.jsx)(x, { onSelect: r }),
-                    s &&
+                    (0, r.jsx)(v, { onSelect: i }),
+                    a &&
                         !n &&
-                        (0, i.jsx)(h.hU, {
-                            onClick: () => r(null),
-                            text: f.intl.string(f.t.jmtcGB),
-                            children: (0, i.jsx)(l.XHJ, {
+                        (0, r.jsx)(h.hU, {
+                            onClick: () => i(null),
+                            text: m.intl.string(m.t.jmtcGB),
+                            children: (0, r.jsx)(s.XHJ, {
                                 size: "md",
-                                color: a.Z.unsafe_rawColors.RED_400.css,
-                                className: b.secondaryIcon,
+                                color: o.Z.unsafe_rawColors.RED_400.css,
+                                className: g.secondaryIcon,
                             }),
                         }),
                 ],

@@ -1,16 +1,16 @@
-r.d(t, { Z: () => s }), r(388685);
-var a = r(647438);
-let s = function (e, t) {
-    let [r, s] = a.useState(e);
+n.d(t, { Z: () => i }), n(388685);
+var r = n(647438);
+let i = function (e, t) {
+    let [n, i] = r.useState(e);
     return (
-        a.useEffect(() => {
-            let r = setTimeout(() => {
-                s(e);
+        r.useEffect(() => {
+            let n = setTimeout(() => {
+                i(e);
             }, t);
             return () => {
-                clearTimeout(r);
+                clearTimeout(n);
             };
         }, [e, t]),
-        r
+        n
     );
 };

@@ -1,23 +1,23 @@
-n.d(t, { Z: () => a });
-var r = n(806729),
-    o = n(146078),
-    i = n(228168),
-    l = n(388032);
-function a(e) {
-    let { mutualGuilds: t } = (0, r.Z)(e),
-        n = null == t ? void 0 : t.length;
+t.d(n, { Z: () => c });
+var r = t(806729),
+    o = t(146078),
+    l = t(228168),
+    i = t(388032);
+function c(e) {
+    let { mutualGuilds: n } = (0, r.Z)(e),
+        t = null == n ? void 0 : n.length;
     return [
         {
-            section: i.oh.BOT_INFO,
-            text: l.intl.string(l.t.jGoPJS),
+            section: l.oh.BOT_INFO,
+            text: i.intl.string(i.t.jGoPJS),
         },
         {
-            section: i.oh.MUTUAL_GUILDS,
-            text: (0, o.Z)(n),
+            section: l.oh.MUTUAL_GUILDS,
+            text: (0, o.Z)(t),
         },
         {
-            section: i.oh.BOT_DATA_ACCESS,
-            text: l.intl.string(l.t.WstFb2),
+            section: l.oh.BOT_DATA_ACCESS,
+            text: i.intl.string(i.t.WstFb2),
         },
     ];
 }

@@ -1,25 +1,25 @@
-n.d(t, { E: () => o }), n(388685), n(35282), n(781311);
-var i = n(647438),
-    r = n(170401),
-    s = n(996733),
-    a = n(991346),
-    l = n(726985);
-function o() {
-    let e = (0, s.Z7)(),
-        t = (0, a.Pt)(),
-        n = i.useRef(new r.Z((0, a.ji)(t))),
-        [o, c] = i.useState(!1),
-        [d, u] = i.useState(l.QF),
-        m = i.useCallback(async (e) => {
-            u(await n.current.search(e.trim())), c(!0);
+n.d(t, { E: () => l }), n(388685), n(35282), n(781311);
+var r = n(647438),
+    i = n(170401),
+    a = n(996733),
+    o = n(991346),
+    s = n(726985);
+function l() {
+    let e = (0, a.Z7)(),
+        t = (0, o.Pt)(),
+        n = r.useRef(new i.Z((0, o.ji)(t))),
+        [l, c] = r.useState(!1),
+        [u, d] = r.useState(s.QF),
+        f = r.useCallback(async (e) => {
+            d(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
-        i.useEffect(() => {
-            "" === e || e.length < 2 ? (u(l.QF), c(!1)) : m(e);
-        }, [e, m]),
+        r.useEffect(() => {
+            "" === e || e.length < 2 ? (d(s.QF), c(!1)) : f(e);
+        }, [e, f]),
         {
-            hasSearchResults: o,
-            searchResults: d,
+            hasSearchResults: l,
+            searchResults: u,
         }
     );
 }

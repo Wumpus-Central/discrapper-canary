@@ -4,7 +4,7 @@ n.d(t, {
     dg: () => v,
     dp: () => g,
     f3: () => b,
-    iL: () => N,
+    iL: () => C,
     nA: () => I,
     qF: () => m,
     uV: () => y,
@@ -126,7 +126,7 @@ function A() {
     let e = l.default.getCurrentUser();
     return null != e && e.isStaff() ? h : p;
 }
-function N(e) {
+function C(e) {
     let { guildId: t, onClick: n } = e,
         r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
         i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });

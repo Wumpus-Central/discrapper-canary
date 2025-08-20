@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(671955),
     x = n(388032),
     v = n(491010),
-    j = n(268293);
-function O(e) {
+    O = n(268293);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,7 +76,7 @@ function E(e) {
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: j,
+                                src: O,
                                 className: v.preview,
                                 "aria-hidden": !0,
                             }),
@@ -107,7 +107,7 @@ function E(e) {
                                                 onClick: () => {
                                                     E(),
                                                         (0, f.pQ)(
-                                                            O(
+                                                            j(
                                                                 {
                                                                     action: I
                                                                         ? "VIEW_BLOCKED_PROFILE"
@@ -124,7 +124,7 @@ function E(e) {
                                                 onClick: () => {
                                                     E(),
                                                         (0, f.pQ)(
-                                                            O(
+                                                            j(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                     analyticsLocations: Z,

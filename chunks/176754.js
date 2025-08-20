@@ -1,104 +1,107 @@
 n.d(t, {
-    SR: () => d,
-    ZP: () => h,
-    b5: () => u,
-    eo: () => g,
-    js: () => p,
-    vi: () => m,
+    SR: () => l,
+    ZP: () => _,
+    b5: () => c,
+    eo: () => f,
+    js: () => d,
+    vi: () => u,
 }),
     n(388685);
-var i,
-    r,
-    s = n(951288),
-    a = n(647438),
-    l = n(803948),
+var r = n(951288),
+    i = n(647438),
+    a = n(803948),
     o = n(481060),
-    c = n(745735);
-let d = 3000,
-    u = 4000,
-    m = 6000;
-var p = (((i = {}).SINE = "sine"), (i.COSINE = "cosine"), i),
-    g = (((r = {}).UP = "up"), (r.DOWN = "down"), r);
-let h = (e) => {
+    s = n(745735);
+let l = 3000,
+    c = 4000,
+    u = 6000;
+var d = (function (e) {
+        return (e.SINE = "sine"), (e.COSINE = "cosine"), e;
+    })({}),
+    f = (function (e) {
+        return (e.UP = "up"), (e.DOWN = "down"), e;
+    })({});
+let _ = (e) => {
     var t, n;
     let {
-            blurAnimationData: i,
-            scaleAnimationData: r,
-            yAxisAnimationData: d,
-            parallaxAnimationData: u,
-            animateXAxisWiggle: m = !1,
-            isMotionReduced: p = !1,
-            children: g,
+            blurAnimationData: l,
+            scaleAnimationData: c,
+            yAxisAnimationData: u,
+            parallaxAnimationData: d,
+            animateXAxisWiggle: f = !1,
+            isMotionReduced: _ = !1,
+            children: p,
         } = e,
         h = (0, o.q_F)(
-            null != d
+            null != u
                 ? {
                       from: { y: 0 },
                       to: { y: 1 },
-                      config: { duration: d.duration },
+                      config: { duration: u.duration },
                       loop: !0,
                   }
                 : { y: 0 },
         ),
-        f = (null == d ? void 0 : d.path) === "sine" ? Math.sin : Math.cos,
-        [b, x] = (0, a.useState)(1),
-        _ = (0, o.q_F)(
-            null != r
+        m = (null == u ? void 0 : u.path) === "sine" ? Math.sin : Math.cos,
+        [g, E] = (0, i.useState)(1),
+        b = (0, o.q_F)(
+            null != c
                 ? {
-                      from: { scale: b > 0 ? r.startScale : r.endScale },
-                      to: { scale: b > 0 ? r.endScale : r.startScale },
-                      config: { duration: r.duration },
-                      onRest: () => x((e) => -1 * e),
+                      from: { scale: g > 0 ? c.startScale : c.endScale },
+                      to: { scale: g > 0 ? c.endScale : c.startScale },
+                      config: { duration: c.duration },
+                      onRest: () => E((e) => -1 * e),
                   }
                 : { scale: 1 },
         ),
-        [j, E] = (0, a.useState)(1),
-        C = (0, o.q_F)(
-            null != i
+        [y, O] = (0, i.useState)(1),
+        v = (0, o.q_F)(
+            null != l
                 ? {
-                      from: { blur: j > 0 ? i.startBlurRadius : i.endBlurRadius },
-                      to: { blur: j > 0 ? i.endBlurRadius : i.startBlurRadius },
-                      config: { duration: i.duration },
-                      onRest: () => E((e) => -1 * e),
+                      from: { blur: y > 0 ? l.startBlurRadius : l.endBlurRadius },
+                      to: { blur: y > 0 ? l.endBlurRadius : l.startBlurRadius },
+                      config: { duration: l.duration },
+                      onRest: () => O((e) => -1 * e),
                   }
                 : { blur: 0 },
         ),
-        O = (0, a.useMemo)(() => Math.round(750 + (200 * Math.random() - 100)), []),
-        [v, S] = (0, a.useState)(0),
-        [T, N] = (0, a.useState)(1),
-        I = (0, o.q_F)({
-            xOffset: v,
+        I = (0, i.useMemo)(() => Math.round(750 + (200 * Math.random() - 100)), []),
+        T = 5,
+        [S, A] = (0, i.useState)(0),
+        [C, N] = (0, i.useState)(1),
+        R = (0, o.q_F)({
+            xOffset: S,
             config: {
                 tension: 10,
                 friction: 10,
-                duration: O,
+                duration: I,
             },
         });
-    return ((0, c.Z)(() => {
-        S(T * (0.5 * Math.random() * 5 + 2.5)), N((e) => -1 * e);
-    }, O),
-    p)
-        ? g
-        : (0, s.jsx)(l.animated.div, {
+    return ((0, s.Z)(() => {
+        A(C * (0.5 * Math.random() * T + T / 2)), N((e) => -1 * e);
+    }, I),
+    _)
+        ? p
+        : (0, r.jsx)(a.animated.div, {
               style: {
                   transform:
                       null == (t = h.y)
                           ? void 0
                           : t.to((e) => {
-                                if (null == d) return "translateY(0px)";
-                                let t = f(e * Math.PI * 2) * d.range,
+                                if (null == u) return "translateY(0px)";
+                                let t = m(e * Math.PI * 2) * u.range,
                                     n = 0;
-                                if (null != u) {
-                                    let e = u.range * (1 - u.containerVisibilityPercentage);
-                                    n = "up" === u.pathDirection ? -e : e;
+                                if (null != d) {
+                                    let e = d.range * (1 - d.containerVisibilityPercentage);
+                                    n = "up" === d.pathDirection ? -e : e;
                                 }
                                 return "translateY(".concat(t + n, "px)");
                             }),
-                  translateX: m ? I.xOffset.to((e) => "".concat(e, "px")) : 0,
-                  scale: _.scale,
-                  filter: null == (n = C.blur) ? void 0 : n.to((e) => "blur(".concat(e, "px)")),
-                  opacity: null != u && u.changeOpacity ? u.containerVisibilityPercentage : 1,
+                  translateX: f ? R.xOffset.to((e) => "".concat(e, "px")) : 0,
+                  scale: b.scale,
+                  filter: null == (n = v.blur) ? void 0 : n.to((e) => "blur(".concat(e, "px)")),
+                  opacity: null != d && d.changeOpacity ? d.containerVisibilityPercentage : 1,
               },
-              children: g,
+              children: p,
           });
 };

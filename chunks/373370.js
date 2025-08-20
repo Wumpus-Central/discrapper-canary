@@ -1,6 +1,6 @@
 n.d(t, {
     CR: () => w,
-    DD: () => C,
+    DD: () => N,
 }),
     n(953529);
 var r = n(647438),
@@ -260,11 +260,11 @@ function A(e) {
               collectibleRewardDuration: c,
           });
 }
-function N(e) {
+function C(e) {
     var t;
     return A(g(h({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
 }
-function C(e) {
+function N(e) {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         o = (0, l.uA)({
             quest: t,
@@ -273,7 +273,7 @@ function C(e) {
         }),
         s = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         c = (0, l.Jf)(t);
-    return N(
+    return C(
         g(h({}, e), {
             connectedConsoleLinkOnClick: o,
             currentUser: s,

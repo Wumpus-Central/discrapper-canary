@@ -12,10 +12,10 @@ var n = a(951288),
     x = a(621060),
     h = a(451429),
     p = a(104444);
-function b(e, t) {
+function v(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function v(e) {
+function b(e) {
     let { store: t, dataGetter: a } = e,
         [l, i] = r.useState(a(t));
     return (
@@ -45,7 +45,7 @@ let f = [
             },
         },
     ],
-    g = [
+    j = [
         {
             id: "local",
             name: "Local Variables",
@@ -61,7 +61,7 @@ let f = [
                               " method.",
                           ],
                       })
-                    : (0, n.jsx)(v, {
+                    : (0, n.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,16 +73,16 @@ let f = [
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, n.jsx)(v, {
+                return (0, n.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e,
                 });
             },
         },
     ];
-function j(e) {
+function g(e) {
     let { store: t, initialHeight: a } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
     return (0, n.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -115,7 +115,7 @@ function _() {
                             key: e._dispatchToken,
                             store: e,
                         }))
-                        .sort(b),
+                        .sort(v),
                 [l],
             )
             .filter((e) =>
@@ -149,7 +149,7 @@ function _() {
                 onClickRow: (e) => u(e.key),
             }),
             null != x &&
-                (0, n.jsx)(j, {
+                (0, n.jsx)(g, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

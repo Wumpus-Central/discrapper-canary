@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,8 +101,8 @@ function w(e) {
         w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: D,
-            commandOptions: L,
-            commandOptionStates: x,
+            commandOptions: x,
+            commandOptionStates: L,
         } = (0, c.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
@@ -118,23 +118,23 @@ function w(e) {
                 commandOptionStates: n,
             };
         }),
-        M = i.useMemo(() => {
+        j = i.useMemo(() => {
             var e;
             return null !=
                 (e =
-                    null == L
+                    null == x
                         ? void 0
-                        : L.filter((e) => {
+                        : x.filter((e) => {
                               var t;
                               return (
                                   e.type === f.jw.ATTACHMENT &&
-                                  (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue)
+                                  (null == L || null == (t = L[e.name]) ? void 0 : t.hasValue)
                               );
                           }))
                 ? e
                 : [];
-        }, [L, x]),
-        [k, j] = i.useState([]);
+        }, [x, L]),
+        [M, k] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -153,8 +153,8 @@ function w(e) {
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: k,
-            uploadOptions: M,
+            previousUploadOptions: M,
+            uploadOptions: j,
         },
         B = i.useRef(G);
     i.useEffect(() => {
@@ -170,24 +170,24 @@ function w(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    j(i);
+                    k(i);
             }
-        }, [t, M.length, n]);
-    let V = w.filter((e) => e.filename !== a);
-    return (!D && 0 === V.length) || (D && 0 === M.length)
+        }, [t, j.length, n]);
+    let Z = w.filter((e) => e.filename !== a);
+    return (!D && 0 === Z.length) || (D && 0 === j.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
-                          a = C(e, ["ref"]);
+                          a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          N(S({ ref: i }, a), {
+                          C(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
-                                  ? M.map((e) =>
+                                  ? j.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
                                             {
@@ -198,7 +198,7 @@ function w(e) {
                                             e.name,
                                         ),
                                     )
-                                  : V.map((e) =>
+                                  : Z.map((e) =>
                                         (0, r.jsx)(
                                             y.Z,
                                             {
@@ -229,4 +229,4 @@ function D(e) {
           })
         : null;
 }
-let L = i.memo(D);
+let x = i.memo(D);

@@ -24,8 +24,8 @@ var a = n(442837),
     T = n(594174),
     S = n(979651),
     A = n(509545),
-    N = n(78839),
-    C = n(936101),
+    C = n(78839),
+    N = n(936101),
     R = n(868158),
     P = n(483012),
     w = n(955132);
@@ -42,7 +42,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,22 +70,22 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -93,7 +93,7 @@ function k(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -120,7 +120,7 @@ let U = new d.Z("ConnectionStore"),
                     null == i
                         ? void 0
                         : i.merge(
-                              M(L({}, r), {
+                              j(x({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate,
                               }),
@@ -155,7 +155,7 @@ let U = new d.Z("ConnectionStore"),
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    V = new P.Z(
+    Z = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -169,7 +169,7 @@ let U = new d.Z("ConnectionStore"),
         ),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    F = new P.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -183,23 +183,23 @@ let U = new d.Z("ConnectionStore"),
         ),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    Z = {};
+    F = {};
 function H(e, t) {
     for (let n of e)
-        Z[n] = {
+        F[n] = {
             preload: () => null,
             dispatch: t,
         };
 }
 function Y(e, t, n) {
     for (let r of e)
-        Z[r] = {
+        F[r] = {
             preload: t,
             dispatch: n,
         };
 }
 function W(e) {
-    return Z[e];
+    return F[e];
 }
 function K(e) {
     let t = [];
@@ -316,7 +316,7 @@ function J(e) {
         clientStatus: o,
         processedAtTimestamp: s,
     } = e;
-    F.add({
+    V.add({
         guildId: t,
         user: n,
         status: r,
@@ -716,7 +716,7 @@ Y(
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = k(e, ["newly_created"]);
+                r = M(e, ["newly_created"]);
             z({
                 type: t,
                 isNewlyCreated: n,
@@ -866,7 +866,7 @@ Y(
     }),
     H(["GUILD_MEMBERS_CHUNK"], (e) => {
         a.ZP.Emitter.batched(() => {
-            V.add({
+            Z.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found,
@@ -1048,7 +1048,7 @@ Y(
         });
     }),
     H(["USER_NOTE_UPDATE"], (e) => {
-        z(L({ type: "USER_NOTE_UPDATE" }, e));
+        z(x({ type: "USER_NOTE_UPDATE" }, e));
     }),
     H(["RELATIONSHIP_ADD"], (e) => {
         z({
@@ -1284,7 +1284,7 @@ Y(
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) =>
-                M(L({}, e), {
+                j(x({}, e), {
                     emoji: {
                         id: e.answer_id,
                         name: "",
@@ -1338,13 +1338,13 @@ Y(
     H(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         z({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: b.Z.createFromServer(e, N.Z.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: b.Z.createFromServer(e, C.Z.getSubscriptionById(e.subscription_id)),
         });
     }),
     H(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
         z({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: b.Z.createFromServer(e, N.Z.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: b.Z.createFromServer(e, C.Z.getSubscriptionById(e.subscription_id)),
         });
     }),
     H(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
@@ -1365,7 +1365,7 @@ Y(
         });
     }),
     H(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, C.L)().then((t) => {
+        (0, N.L)().then((t) => {
             let n = e.purchase_token_hash;
             n === t &&
                 z({
@@ -1839,7 +1839,7 @@ Y(
         });
     }),
     H(["DELETED_ENTITY_IDS"], (e) => {
-        z(L({ type: "DELETED_ENTITY_IDS" }, e));
+        z(x({ type: "DELETED_ENTITY_IDS" }, e));
     }),
     Y(
         ["CHANNEL_SYNC"],
@@ -1962,7 +1962,7 @@ Y(
         });
     }),
     H(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        z(L({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
+        z(x({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
     }),
     H(["PREMIUM_MARKETING_PREVIEW"], (e) => {
         z({

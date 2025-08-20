@@ -1,42 +1,44 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => f });
+var r = n(951288);
 n(647438);
-var r = n(803948),
-    s = n(481060),
-    a = n(117791),
-    l = n(638212),
-    o = n(981631),
+var i = n(803948),
+    a = n(481060),
+    o = n(117791),
+    s = n(638212),
+    l = n(981631),
     c = n(957833);
-let d = function (e) {
-    let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: d } = e,
-        u = (0, s.q_F)({
-            transform: t ? "translateY(-100%)" : "translateY(0%)",
-            opacity: +!!t,
-            config: {
-                tension: 120,
-                friction: 12,
-            },
-        }),
-        m = { section: o.jXE.MARKETING_FLOATING_CTA };
-    return (0, i.jsx)(r.animated.div, {
-        className: c.wrapper,
-        style: u,
-        "data-mtctest-ignore": "true",
-        children: (0, i.jsxs)("div", {
-            className: c.buttonContainer,
-            children: [
-                (0, i.jsx)(l.Z, {
-                    size: "md",
-                    subscriptionTier: n,
-                    hasActivePromotion: !!d,
-                    isPersistentCTA: !0,
-                    premiumModalAnalyticsLocation: m,
-                }),
-                (0, i.jsx)(a.Z, {
-                    variant: "secondary",
-                    size: "md",
-                }),
-            ],
-        }),
-    });
-};
+let u = 120,
+    d = 12,
+    f = function (e) {
+        let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: f } = e,
+            _ = (0, a.q_F)({
+                transform: t ? "translateY(-100%)" : "translateY(0%)",
+                opacity: +!!t,
+                config: {
+                    tension: u,
+                    friction: d,
+                },
+            }),
+            p = { section: l.jXE.MARKETING_FLOATING_CTA };
+        return (0, r.jsx)(i.animated.div, {
+            className: c.wrapper,
+            style: _,
+            "data-mtctest-ignore": "true",
+            children: (0, r.jsxs)("div", {
+                className: c.buttonContainer,
+                children: [
+                    (0, r.jsx)(s.Z, {
+                        size: "md",
+                        subscriptionTier: n,
+                        hasActivePromotion: !!f,
+                        isPersistentCTA: !0,
+                        premiumModalAnalyticsLocation: p,
+                    }),
+                    (0, r.jsx)(o.Z, {
+                        variant: "secondary",
+                        size: "md",
+                    }),
+                ],
+            }),
+        });
+    };

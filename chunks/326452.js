@@ -127,7 +127,7 @@ class b extends (r = a.PureComponent) {
                 "inputProps",
                 "aria-label",
             ]),
-            N = (0, i.jsx)(u.B, {
+            C = (0, i.jsx)(u.B, {
                 size: E,
                 hasContent: t.length > 0,
                 onClear: r,
@@ -188,7 +188,7 @@ class b extends (r = a.PureComponent) {
                                               ref: this.inputRef,
                                           }),
                                       ),
-                                      N,
+                                      C,
                                   ],
                               }),
                           },

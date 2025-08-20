@@ -1,8 +1,8 @@
-n.d(t, { u: () => s });
-var i = n(585483),
-    r = n(981631);
-let s = {
+n.d(t, { u: () => a });
+var r = n(585483),
+    i = n(981631);
+let a = {
     binds: ["mod+p"],
     comboKeysBindGlobal: !0,
-    action: () => (i.S.dispatch(r.CkL.TOGGLE_CHANNEL_PINS), !1),
+    action: () => (r.S.dispatch(i.CkL.TOGGLE_CHANNEL_PINS), !1),
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854);
+n.d(t, { Z: () => I }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -78,12 +78,9 @@ function y(e) {
               className: a()(v.categoryRow, { [v.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("90508"),
-                          n.e("68294"),
-                          n.e("8965"),
-                          n.e("34204"),
-                      ]).then(n.bind(n, 139035));
+                      let { default: e } = await Promise.all([n.e("90508"), n.e("68294"), n.e("8965")]).then(
+                          n.bind(n, 139035),
+                      );
                       return (n) =>
                           (0, r.jsx)(
                               e,
@@ -144,16 +141,16 @@ let C = i.memo(function () {
             "separator-".concat(t),
         );
     }),
-    I = i.memo(function (e) {
+    E = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
                 isFirstChannel: p,
                 isLastChannel: y,
-                tooltipDirection: I = "right",
+                tooltipDirection: E = "right",
             } = e,
-            E = (0, f.Mf)(t.id, i.id),
+            I = (0, f.Mf)(t.id, i.id),
             S = (0, f.t4)(t.id, i.id),
             T = (0, f.EH)(t.id, i.id),
             P = (0, f.lL)(l.id, i.id),
@@ -188,9 +185,9 @@ let C = i.memo(function () {
                               n.e("42743"),
                               n.e("68294"),
                               n.e("18320"),
-                              n.e("67096"),
+                              n.e("15105"),
                               n.e("83331"),
-                              n.e("29929"),
+                              n.e("76168"),
                           ]).then(n.bind(n, 213202));
                           return (n) =>
                               (0, r.jsx)(
@@ -203,34 +200,26 @@ let C = i.memo(function () {
                       })
                     : (0, c.jW)(e, async () => {
                           let { default: e } = await Promise.all([
-                              n.e("14006"),
-                              n.e("91584"),
                               n.e("5410"),
                               n.e("79695"),
-                              n.e("80417"),
                               n.e("90508"),
-                              n.e("96750"),
-                              n.e("54157"),
-                              n.e("64838"),
-                              n.e("48091"),
                               n.e("42743"),
                               n.e("7590"),
-                              n.e("7171"),
                               n.e("68294"),
-                              n.e("15114"),
-                              n.e("38342"),
+                              n.e("99534"),
+                              n.e("76676"),
                               n.e("35755"),
                               n.e("24255"),
                               n.e("37220"),
                               n.e("46653"),
                               n.e("91315"),
                               n.e("18320"),
-                              n.e("67096"),
+                              n.e("15105"),
                               n.e("1268"),
-                              n.e("36499"),
+                              n.e("5665"),
                               n.e("93077"),
-                              n.e("47218"),
-                              n.e("91526"),
+                              n.e("55196"),
+                              n.e("14350"),
                           ]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, r.jsx)(
@@ -247,7 +236,7 @@ let C = i.memo(function () {
                 (0, r.jsx)(o.ua7, {
                     text: null != T ? T : P,
                     delay: 500,
-                    position: I,
+                    position: E,
                     children: (e) =>
                         (0, r.jsxs)(
                             o.P3F,
@@ -305,8 +294,8 @@ let C = i.memo(function () {
                                             className: v.channelActions,
                                             children: (0, u.s)(t.guild_id, t.id)
                                                 ? (0, r.jsx)(o.XZJ, {
-                                                      "aria-checked": E,
-                                                      value: E,
+                                                      "aria-checked": I,
+                                                      value: I,
                                                       type: o.XZJ.Types.INVERTED,
                                                       disabled: S,
                                                       color: R
@@ -332,7 +321,7 @@ let C = i.memo(function () {
             ],
         });
     });
-function E(e) {
+function I(e) {
     let { categories: t, guild: n, className: l, hasSidebar: a } = e,
         s = i.useCallback(
             (e) => {
@@ -355,7 +344,7 @@ function E(e) {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          I,
+                          E,
                           {
                               category: l.channel,
                               channel: s.channel,

@@ -85,20 +85,20 @@ function A(e) {
             nick: g,
             colorString: I,
             colorStrings: A,
-            colorRoleName: N,
-            authorId: C,
+            colorRoleName: C,
+            authorId: N,
             displayNameStyles: R,
         } = (0, d.ZP)(a),
-        P = (0, f.X7)(m, C, A),
+        P = (0, f.X7)(m, N, A),
         w = (0, u.j)({ displayNameStyles: R }),
         D = T(i, a),
-        L = (0, h.NE)(i, a),
-        x = n.showThreadPromptOnReply && D >= v && L,
-        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function k(e) {
+        x = (0, h.NE)(i, a),
+        L = n.showThreadPromptOnReply && D >= v && x,
+        j = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function M(e) {
         e.stopPropagation(), (0, _.qx)(i.id, !s);
     }
-    function j(e) {
+    function k(e) {
         e.stopPropagation(), (0, _.A6)(i.id);
     }
     return (0, r.jsx)("div", {
@@ -110,7 +110,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: M,
+                            onClick: j,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -132,7 +132,7 @@ function A(e) {
                                                 name: g,
                                                 colorString: I,
                                                 colorStrings: P,
-                                                roleName: N,
+                                                roleName: C,
                                                 displayNameStylesFont: w,
                                             },
                                             t,
@@ -153,7 +153,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: "switch",
                                                         "aria-checked": s,
-                                                        onClick: k,
+                                                        onClick: M,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
@@ -183,12 +183,12 @@ function A(e) {
                                             }),
                                         ],
                                     }),
-                                (0, r.jsx)(E.B, { onClick: j }),
+                                (0, r.jsx)(E.B, { onClick: k }),
                             ],
                         }),
                     ],
                 }),
-                x &&
+                L &&
                     (0, r.jsx)(S, {
                         channel: i,
                         message: a,

@@ -17,49 +17,49 @@ var r = n(106351),
     O = n(699516),
     _ = n(944486),
     y = n(9156),
-    v = n(979651),
-    j = n(709054),
+    j = n(979651),
+    v = n(709054),
     C = n(209114),
-    E = n(981631);
-function x(e, t) {
+    x = n(981631);
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : b.Z;
-    return null != e && e.type !== r.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(E.S7T.VIEW_CHANNEL, e);
+    return null != e && e.type !== r.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(x.S7T.VIEW_CHANNEL, e);
 }
 function S(e) {
     var t;
     let n = (0, i.e7)([y.ZP], () => y.ZP.isMuted(e)),
         r = C.Z.useConfig({ location: "useGuildMediaState" }).enabled,
-        E = n && !r,
+        x = n && !r,
         S = (0, c.k5)(e),
-        P = (0, i.Wu)([o.ZP, O.Z], () =>
+        I = (0, i.Wu)([o.ZP, O.Z], () =>
             o.ZP.getEmbeddedActivitiesForGuild(e).filter(
                 (e) => !(0, s.BA)([...e.userIds], O.Z.getBlockedOrIgnoredIDs()),
             ),
         ),
-        I = (0, a.p)(null == (t = P[0]) ? void 0 : t.location),
-        N = (0, l.NX)(I),
+        P = (0, a.p)(null == (t = I[0]) ? void 0 : t.location),
+        N = (0, l.NX)(P),
         {
             guildHasVoice: w,
             guildHasVideo: Z,
             selectedVoiceChannelHasVideo: T,
-        } = (0, i.cj)([_.Z, v.Z, m.Z, b.Z, g.Z], () => {
+        } = (0, i.cj)([_.Z, j.Z, m.Z, b.Z, g.Z], () => {
             var t;
             let n = _.Z.getVoiceChannelId(),
                 r = null == (t = m.Z.getGuild(e)) ? void 0 : t.afkChannelId,
-                i = v.Z.getUsersWithVideo(e),
-                l = (0, s.DX)(v.Z.getVoiceStates(e));
+                i = j.Z.getUsersWithVideo(e),
+                l = (0, s.DX)(j.Z.getVoiceStates(e));
             return {
                 guildHasVoice: (() => {
-                    if (E) return !1;
-                    for (let e in l) if (x(g.Z.getBasicChannel(l[e].channelId), null != r ? r : void 0, b.Z)) return !0;
+                    if (x) return !1;
+                    for (let e in l) if (E(g.Z.getBasicChannel(l[e].channelId), null != r ? r : void 0, b.Z)) return !0;
                     return !1;
                 })(),
                 guildHasVideo: (() => {
-                    if (E) return !1;
+                    if (x) return !1;
                     for (let t of i) {
                         var e;
                         if (
-                            x(
+                            E(
                                 g.Z.getBasicChannel(null == (e = l[t]) ? void 0 : e.channelId),
                                 null != r ? r : void 0,
                                 b.Z,
@@ -69,9 +69,9 @@ function S(e) {
                     }
                     return !1;
                 })(),
-                selectedVoiceChannelHasVideo: null != n && v.Z.hasVideo(n),
+                selectedVoiceChannelHasVideo: null != n && j.Z.hasVideo(n),
             };
-        }, [e, E]),
+        }, [e, x]),
         A = h.default.getId();
     return (0, i.cj)([_.Z, g.Z, o.ZP, d.Z, f.Z, b.Z], () => {
         var t, n, r;
@@ -82,47 +82,47 @@ function S(e) {
             m = !1,
             O = !1,
             y = !1,
-            v = !1;
-        if (!l && E)
+            j = !1;
+        if (!l && x)
             return {
                 audio: c,
                 video: O,
                 screenshare: y,
                 liveStage: m,
                 activeEvent: h,
-                activity: v,
+                activity: j,
                 isCurrentUserConnected: !1,
             };
-        let C = j.default.keys(d.Z.getStageInstancesByGuild(e)).some((e) => {
+        let C = v.default.keys(d.Z.getStageInstancesByGuild(e)).some((e) => {
                 let t = g.Z.getChannel(e);
                 return null != t && b.Z.can(u.gl, t);
             }),
-            x = l && null != (r = null == (n = g.Z.getChannel(i)) ? void 0 : n.isGuildStageVoice()) && r,
-            I = !!l && null != f.Z.getActiveStreamForUser(A, e),
+            E = l && null != (r = null == (n = g.Z.getChannel(i)) ? void 0 : n.isGuildStageVoice()) && r,
+            P = !!l && null != f.Z.getActiveStreamForUser(A, e),
             R = (0, s.aK)(f.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
             D = l && T,
-            L = (() => {
-                if (N) return P.length > 0;
-                for (let e of P) {
+            M = (() => {
+                if (N) return I.length > 0;
+                for (let e of I) {
                     let t = g.Z.getChannel((0, a.p)(e.location));
                     if (null != t && (0, p.vd)(t.type)) return !0;
                 }
                 return !1;
             })(),
-            M = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+            L = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
         return (
             l
-                ? ((c = !0), (h = (null == S ? void 0 : S.channel_id) === i), (m = x), (O = D), (y = I), (v = M))
-                : ((c = w), (h = null != S), (m = C), (O = Z), (y = R), (v = L)),
+                ? ((c = !0), (h = (null == S ? void 0 : S.channel_id) === i), (m = E), (O = D), (y = P), (j = L))
+                : ((c = w), (h = null != S), (m = C), (O = Z), (y = R), (j = M)),
             {
                 audio: c,
                 video: O,
                 screenshare: y,
                 liveStage: m,
                 activeEvent: h,
-                activity: v,
-                isCurrentUserConnected: l || x,
+                activity: j,
+                isCurrentUserConnected: l || E,
             }
         );
-    }, [e, E, T, A, N, P, S, w, Z]);
+    }, [e, x, T, A, N, I, S, w, Z]);
 }

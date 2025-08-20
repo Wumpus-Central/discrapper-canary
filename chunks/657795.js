@@ -25,15 +25,15 @@ function S(e) {
     var t, n, a;
     let { className: S, onClose: A } = e;
     (0, h.fP)();
-    let { analyticsLocations: N } = (0, u.ZP)(c.Z.EMPTY_STATE),
-        C = (0, s.Wu)([m.Z], () => b.Wt.map((e) => m.Z.getStickerById(e)));
+    let { analyticsLocations: C } = (0, u.ZP)(c.Z.EMPTY_STATE),
+        N = (0, s.Wu)([m.Z], () => b.Wt.map((e) => m.Z.getStickerById(e)));
     i.useEffect(() => {
         p.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
             type: O.cd.EMPTY_STICKER_PICKER_UPSELL,
             source: { section: y.jXE.EMPTY_STICKER_PICKER_UPSELL },
-            location_stack: N,
+            location_stack: C,
         });
-    }, [N]);
+    }, [C]);
     let R = (0, f.N)(),
         P = (0, d.Ng)(),
         w = null != R || null != P,
@@ -68,7 +68,7 @@ function S(e) {
                           }),
                           (0, r.jsx)("div", {
                               className: I.stickersRow,
-                              children: C.filter((e) => null != e).map((e) =>
+                              children: N.filter((e) => null != e).map((e) =>
                                   (0, r.jsx)(
                                       g.Z,
                                       {

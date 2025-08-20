@@ -1,28 +1,28 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(630759),
-    s = n(921157),
-    a = n(76793),
-    l = n(838436),
-    o = n(726985),
+var i = n(630759),
+    a = n(921157),
+    o = n(76793),
+    s = n(838436),
+    l = n(726985),
     c = n(388032),
-    d = n(766817);
-function u() {
-    let e = (0, s.s)();
-    return (0, i.jsxs)(l.U, {
-        setting: o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
+    u = n(766817);
+function d() {
+    let e = (0, a.s)();
+    return (0, r.jsxs)(s.U, {
+        setting: l.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
-            (0, i.jsx)(l.H, {
+            (0, r.jsx)(s.H, {
                 header: c.intl.string(c.t["5b3FND"]),
-                description: c.intl.format(c.t.jrTSWV, { helpArticle: (0, r.pL)() }),
+                description: c.intl.format(c.t.jrTSWV, { helpArticle: (0, i.pL)() }),
             }),
             e.map((e) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     "div",
                     {
-                        className: d.item,
-                        children: (0, i.jsx)(a.q, { userId: e }),
+                        className: u.item,
+                        children: (0, r.jsx)(o.q, { userId: e }),
                     },
                     e,
                 ),

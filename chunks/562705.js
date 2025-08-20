@@ -1,76 +1,79 @@
-n.d(t, { Z: () => j });
-var i = n(951288),
-    r = n(647438),
-    s = n(442837),
-    a = n(704215),
-    l = n(264418),
-    o = n(243778),
+n.d(t, { Z: () => O });
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(704215),
+    s = n(264418),
+    l = n(243778),
     c = n(7093),
-    d = n(819640),
-    u = n(585483),
-    m = n(553896),
-    p = n(101966),
-    g = n(804413),
+    u = n(819640),
+    d = n(585483),
+    f = n(553896),
+    _ = n(101966),
+    p = n(804413),
     h = n(787528),
-    f = n(474936),
-    b = n(981631),
-    x = n(921944),
-    _ = n(388032);
-function j(e) {
+    m = n(474936),
+    g = n(981631),
+    E = n(921944),
+    b = n(388032);
+let y = 1209600000;
+function O(e) {
     let { groupName: t, targetElementRef: n } = e,
-        r = (0, g.Z)(),
-        l = (0, p.Z)({ location: "TenureLevelUpPopover" }),
-        u = (0, c.Z)((e) => e.isOpen),
-        m = (0, s.e7)([d.Z], () => d.Z.getLayers().includes(b.S9g.USER_SETTINGS));
-    return !l || null == r || u || m
+        i = (0, p.Z)(),
+        s = (0, _.Z)({ location: "TenureLevelUpPopover" }),
+        d = (0, c.Z)((e) => e.isOpen),
+        f = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(g.S9g.USER_SETTINGS));
+    return !s || null == i || d || f
         ? null
-        : (0, i.jsx)(o.Nq, {
-              contentType: a.z.NITRO_TENURE_BADGE_LEVEL_UP,
-              timeRecurringConfig: { cooldownDurationMs: 1209600000 },
+        : (0, r.jsx)(l.Nq, {
+              contentType: o.z.NITRO_TENURE_BADGE_LEVEL_UP,
+              timeRecurringConfig: { cooldownDurationMs: y },
               groupName: t,
               children: (e) => {
-                  let { visibleContent: t, markAsDismissed: s } = e;
-                  return (0, i.jsx)(E, {
-                      recentlyLeveledTenureBadge: r,
-                      markAsDismissed: s,
+                  let { visibleContent: t, markAsDismissed: a } = e;
+                  return (0, r.jsx)(v, {
+                      recentlyLeveledTenureBadge: i,
+                      markAsDismissed: a,
                       targetElementRef: n,
-                      shouldShow: t === a.z.NITRO_TENURE_BADGE_LEVEL_UP,
+                      shouldShow: t === o.z.NITRO_TENURE_BADGE_LEVEL_UP,
                   });
               },
           });
 }
-function E(e) {
+function v(e) {
     var t;
-    let { recentlyLeveledTenureBadge: n, markAsDismissed: s, targetElementRef: a, shouldShow: o } = e,
-        d = f.Qh.indexOf(n),
-        p = (0, h.J)(f.Qh[d > 0 ? d - 1 : d], { ambient: !0 }),
-        g = (0, r.useCallback)(() => {
-            s(x.L.TAKE_ACTION),
+    let { recentlyLeveledTenureBadge: n, markAsDismissed: a, targetElementRef: o, shouldShow: l } = e,
+        u = m.Qh.indexOf(n),
+        _ = u > 0 ? u - 1 : u,
+        p = (0, h.J)(m.Qh[_], { ambient: !0 }),
+        y = (0, i.useCallback)(() => {
+            a(E.L.TAKE_ACTION),
                 c.Z.setState({ shouldRenderTenureLevelUp: !0 }),
-                u.S.dispatch(b.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
-        }, [s]),
-        j = (0, r.useCallback)(() => {
-            s(x.L.USER_DISMISS);
-        }, [s]),
-        E = f.vK[n],
-        C = _.intl.formatToPlainString(_.t.ewkaVV, {
-            timeMilestone: null == (t = (0, m.q)(E.id, E.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
+                d.S.dispatch(g.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+        }, [a]),
+        O = (0, i.useCallback)(() => {
+            a(E.L.USER_DISMISS);
+        }, [a]),
+        v = m.vK[n],
+        I = b.intl.formatToPlainString(b.t.ewkaVV, {
+            timeMilestone: null == (t = (0, f.q)(v.id, v.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),
-        O = [
-            {
-                text: _.intl.string(_.t.RzWDqa),
-                variant: "primary",
-                onClick: g,
-            },
-        ];
-    return (0, i.jsx)(l.J, {
-        targetElementRef: a,
-        onRequestClose: j,
-        shouldShow: o,
-        caretConfig: {
+        T = {
             position: "bottom",
             align: "center",
         },
+        S = [
+            {
+                text: b.intl.string(b.t.RzWDqa),
+                variant: "primary",
+                onClick: y,
+            },
+        ];
+    return (0, r.jsx)(s.J, {
+        targetElementRef: o,
+        onRequestClose: O,
+        shouldShow: l,
+        caretConfig: T,
         graphic:
             null != p
                 ? {
@@ -80,8 +83,8 @@ function E(e) {
                   }
                 : void 0,
         size: "lg",
-        title: _.intl.string(_.t.VoDxsb),
-        body: C,
-        actions: O,
+        title: b.intl.string(b.t.VoDxsb),
+        body: I,
+        actions: S,
     });
 }

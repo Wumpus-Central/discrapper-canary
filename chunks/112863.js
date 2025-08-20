@@ -1,42 +1,43 @@
-n.d(t, { Z: () => u });
-var i = n(951288);
+n.d(t, { Z: () => d });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(37234),
-    a = n(703656),
-    l = n(981631),
-    o = n(388032),
+var i = n(481060),
+    a = n(37234),
+    o = n(703656),
+    s = n(981631),
+    l = n(388032),
     c = n(776575),
-    d = n(286359);
-function u() {
-    return (0, i.jsxs)("div", {
+    u = n(286359);
+function d() {
+    let e = () => {
+        (0, o.uL)(s.Z5c.GUILD_DISCOVERY), (0, a.xf)();
+    };
+    return (0, r.jsxs)("div", {
         className: c.wrapper,
         children: [
-            (0, i.jsx)("img", {
+            (0, r.jsx)("img", {
                 className: c.icon,
                 alt: "",
-                src: d,
+                src: u,
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: c.info,
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-lg/bold",
-                        children: o.intl.string(o.t.ZHNSYW),
+                        children: l.intl.string(l.t.ZHNSYW),
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        children: o.intl.string(o.t.kCj5pq),
+                        children: l.intl.string(l.t.kCj5pq),
                     }),
                 ],
             }),
-            (0, i.jsx)(r.zxk, {
+            (0, r.jsx)(i.zxk, {
                 variant: "secondary",
-                text: o.intl.string(o.t.JFlifn),
-                onClick: () => {
-                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), (0, s.xf)();
-                },
+                text: l.intl.string(l.t.JFlifn),
+                onClick: e,
             }),
         ],
     });

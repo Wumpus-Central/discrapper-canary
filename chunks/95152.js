@@ -71,7 +71,7 @@ function T(e, t) {
 }
 let S = 104,
     A = 16;
-function N(e) {
+function C(e) {
     var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
@@ -127,13 +127,13 @@ function N(e) {
         },
     });
 }
-class C extends i.Component {
+class N extends i.Component {
     render() {
         var e;
         return this.props.upload.item.platform !== d.ow.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, r.jsx)(N, { file: this.props.upload.item.file })
+              ? (0, r.jsx)(C, { file: this.props.upload.item.file })
               : (0, r.jsx)("div", {
                     className: o()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
                 });
@@ -174,7 +174,7 @@ class R extends i.Component {
                         (0, r.jsxs)("div", {
                             className: o()(y.file, { [y.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(C, { upload: e }),
+                                (0, r.jsx)(N, { upload: e }),
                                 (0, r.jsxs)("div", {
                                     className: y.description,
                                     children: [

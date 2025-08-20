@@ -1,17 +1,17 @@
-function e(t) {
+function t(e) {
     return function () {
-        return t;
+        return e;
     };
 }
-var r = function () {};
-(r.thatReturns = e),
-    (r.thatReturnsFalse = e(!1)),
-    (r.thatReturnsTrue = e(!0)),
-    (r.thatReturnsNull = e(null)),
-    (r.thatReturnsThis = function () {
+var n = function () {};
+(n.thatReturns = t),
+    (n.thatReturnsFalse = t(!1)),
+    (n.thatReturnsTrue = t(!0)),
+    (n.thatReturnsNull = t(null)),
+    (n.thatReturnsThis = function () {
         return this;
     }),
-    (r.thatReturnsArgument = function (t) {
-        return t;
+    (n.thatReturnsArgument = function (e) {
+        return e;
     }),
-    (t.exports = r);
+    (e.exports = n);

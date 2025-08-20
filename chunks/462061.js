@@ -16,8 +16,8 @@ var r = n(951288),
     m = n(965048),
     E = n(266910),
     g = n(352978),
-    S = n(928518),
-    v = n(518950),
+    v = n(928518),
+    S = n(518950),
     h = n(470956),
     b = n(314897),
     O = n(271383),
@@ -106,21 +106,21 @@ function D(e) {
             noVideoRender: L = !1,
             pulseSpeakingIndicator: F = !1,
             inOverlayPopout: k = !1,
-            paused: U = !1,
+            paused: V = !1,
         } = e,
-        V = y.Z.getVideoComponent(),
+        U = y.Z.getVideoComponent(),
         H = (0, o.e7)([b.default], () => b.default.getId()),
         { user: W, streamId: Y, speaking: z } = t,
         G = W.id === H,
         B = (0, j.ZP)(t),
         K = (0, o.e7)([_.Z], () => _.Z.isFocused()),
-        q = (0, o.e7)([S.Z], () => S.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
+        q = (0, o.e7)([v.Z], () => v.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
         J = (0, o.e7)([y.Z], () => null != W.id && y.Z.isLocalVideoDisabled(W.id, (0, f.Z)(t.type)), [W.id, t.type]),
         X = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, W.id)),
         Q = Z.ZP.getName(n.getGuildId(), n.id, W) + (X ? " ".concat(C.intl.string(C.t["pFO/Pj"])) : ""),
         $ = z && (q || K),
         ee = u < 124 ? N : R,
-        { avatarSrc: et, avatarDecorationSrc: en } = (0, v.Z)({
+        { avatarSrc: et, avatarDecorationSrc: en } = (0, S.Z)({
             userId: W.id,
             guildId: n.guild_id,
             size: ee,
@@ -142,7 +142,7 @@ function D(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !B && (null == t ? void 0 : t.id) === n.id && s.Z.selectParticipant(e.id, null);
     }, [B]),
-    i && !J && !L && B && !h && null != V && y.Z.supports(A.AN.VIDEO))
+    i && !J && !L && B && !h && null != U && y.Z.supports(A.AN.VIDEO))
         ? null != el && null == ei
             ? (0, r.jsx)(I.Z, {
                   avError: el,
@@ -158,10 +158,10 @@ function D(e) {
                       className: x.content,
                       mirror: G,
                       streamId: Y,
-                      videoComponent: V,
+                      videoComponent: U,
                       fit: w,
                       videoSpinnerContext: W.id === H ? c.m.SELF_VIDEO : c.m.REMOTE_VIDEO,
-                      paused: U,
+                      paused: V,
                       userId: W.id,
                   },
                   Y,

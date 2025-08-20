@@ -1,70 +1,71 @@
-n.d(t, { Z: () => f }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    o = n(981631),
+n.d(t, { Z: () => g }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(981631),
     c = n(388032),
-    d = n(379249),
-    u = n(197571);
-let m = 0,
+    u = n(379249),
+    d = n(197571);
+let f = 0,
+    _ = () => "notification-position-selector-".concat(f++),
     p = (e) => {
         switch (e) {
-            case o._vf.TOP_LEFT:
+            case l._vf.TOP_LEFT:
                 return c.intl.string(c.t.xlchpa);
-            case o._vf.TOP_RIGHT:
+            case l._vf.TOP_RIGHT:
                 return c.intl.string(c.t["4uHRHB"]);
-            case o._vf.BOTTOM_LEFT:
+            case l._vf.BOTTOM_LEFT:
                 return c.intl.string(c.t.ovWFnJ);
-            case o._vf.BOTTOM_RIGHT:
+            case l._vf.BOTTOM_RIGHT:
                 return c.intl.string(c.t["M/9V7+"]);
             default:
                 return c.intl.string(c.t.AlY4ZW);
         }
     },
-    g = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function h(e) {
+    h = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
+function m(e) {
     let { position: t, onChange: n } = e,
-        [s] = r.useState(() => "notification-position-selector-".concat(m++)),
-        h =
-            t === o._vf.DISABLED
+        [a] = i.useState(() => _()),
+        f =
+            t === l._vf.DISABLED
                 ? c.intl.string(c.t.R6LxVV)
                 : c.intl.formatToPlainString(c.t.XXHDMz, { position: p(t) });
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         children: [
-            (0, i.jsx)(l.tEY, {
+            (0, r.jsx)(s.tEY, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)("div", {
-                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: g.map((e) =>
-                        (0, i.jsxs)(
+                children: (0, r.jsx)("div", {
+                    className: o()(u.wrapper, { [u.disabledSelected]: t === l._vf.DISABLED }),
+                    children: h.map((e) =>
+                        (0, r.jsxs)(
                             "label",
                             {
-                                className: a()({
-                                    [d.selected]: e === t,
-                                    [d.disabled]: e === o._vf.DISABLED,
-                                    [d.topRight]: e === o._vf.TOP_RIGHT,
-                                    [d.topLeft]: e === o._vf.TOP_LEFT,
-                                    [d.bottomRight]: e === o._vf.BOTTOM_RIGHT,
-                                    [d.bottomLeft]: e === o._vf.BOTTOM_LEFT,
+                                className: o()({
+                                    [u.selected]: e === t,
+                                    [u.disabled]: e === l._vf.DISABLED,
+                                    [u.topRight]: e === l._vf.TOP_RIGHT,
+                                    [u.topLeft]: e === l._vf.TOP_LEFT,
+                                    [u.bottomRight]: e === l._vf.BOTTOM_RIGHT,
+                                    [u.bottomLeft]: e === l._vf.BOTTOM_LEFT,
                                 }),
                                 children: [
                                     p(e),
-                                    e === o._vf.DISABLED
-                                        ? (0, i.jsx)(l.t6m, {
+                                    e === l._vf.DISABLED
+                                        ? (0, r.jsx)(s.t6m, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: d.disabledIcon,
+                                              className: u.disabledIcon,
                                           })
                                         : null,
-                                    (0, i.jsx)("input", {
+                                    (0, r.jsx)("input", {
                                         type: "radio",
-                                        name: s,
+                                        name: a,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: d.hiddenInput,
+                                        className: u.hiddenInput,
                                     }),
                                 ],
                             },
@@ -73,13 +74,13 @@ function h(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
-                className: u.marginTop8,
-                children: h,
+            (0, r.jsx)(s.R94, {
+                type: s.geA.DESCRIPTION,
+                className: d.marginTop8,
+                children: f,
             }),
         ],
     });
 }
-h.Positions = o._vf;
-let f = h;
+m.Positions = l._vf;
+let g = m;

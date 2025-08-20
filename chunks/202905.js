@@ -45,17 +45,17 @@ function _(e) {
         y = (0, s.e7)([d.Z], () => d.Z.get(O)),
         { fetchGuildProfile: C } = (0, u.u)(O),
         N = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
-        I = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        E = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
         null != O && C();
     }, [O, C]);
-    let E = i.useMemo(() => (null == n || null == _ ? v : _), [n, _]),
+    let I = i.useMemo(() => (null == n || null == _ ? v : _), [n, _]),
         S = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
-                (I
+                (E
                     ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
                     : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
-        }, [null == n ? void 0 : n.id, I]),
+        }, [null == n ? void 0 : n.id, E]),
         T = i.useCallback(() => {
             g.Z.setSection(b.pNK.PROFILE);
         }, []);
@@ -95,7 +95,7 @@ function _(e) {
                         children: [
                             (0, r.jsx)(c.j7V, {
                                 onChange: S,
-                                value: I,
+                                value: E,
                                 hideBorder: !0,
                                 disabled: N,
                                 children: x.intl.string(x.t["N/0239"]),
@@ -131,7 +131,7 @@ function _(e) {
                                 (0, r.jsx)("div", { className: j.gradient }),
                                 (0, r.jsx)(m.ZP, {
                                     className: j.preview,
-                                    profile: E,
+                                    profile: I,
                                     CTAOverride: (0, r.jsx)(o.zx, {
                                         className: j.previewButton,
                                         size: o.zx.Sizes.SMALL,

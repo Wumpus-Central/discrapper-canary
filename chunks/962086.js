@@ -3,8 +3,8 @@ n.d(t, {
     aq: () => R,
     iD: () => v,
     mL: () => T,
-    og: () => C,
-    zS: () => N,
+    og: () => N,
+    zS: () => C,
 }),
     n(388685);
 var r = n(570140),
@@ -127,10 +127,10 @@ function A(e, t) {
         if (null == t) return !1;
         if (r.some((e) => !t.roles.includes(e))) return !0;
         let i = [...s.ZP.getSelectableChannelIds(e), ...s.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-        return i.length > 0 && N(e, i, []), !1;
+        return i.length > 0 && C(e, i, []), !1;
     });
 }
-function N(e, t, n) {
+function C(e, t, n) {
     let r = new Set(f.ZP.getOptedInChannels(e));
     t.forEach((e) => r.add(e)),
         n.forEach((e) => r.delete(e)),
@@ -139,7 +139,7 @@ function N(e, t, n) {
             optInChannels: r,
         });
 }
-function C(e, t) {
+function N(e, t) {
     A(e, t);
     let n = {};
     for (let r of c.Z.getManyRoles(e, t)) n[r.id] = r;

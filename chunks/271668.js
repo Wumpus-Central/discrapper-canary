@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,32 +23,32 @@ var r = n(951288),
     T = n(56801),
     S = n(342687),
     A = n(826298),
-    N = n(689079),
-    C = n(981631),
+    C = n(689079),
+    N = n(981631),
     R = n(388032),
     P = n(57507),
     w = n(239840);
 let D = 512,
-    L = 7,
-    x = 56,
-    M = 16,
-    k = 32,
-    j = 20,
+    x = 7,
+    L = 56,
+    j = 16,
+    M = 32,
+    k = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
-        (0, d.yw)(C.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, d.yw)(N.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
-    V = i.forwardRef(function (e, t) {
+    Z = i.forwardRef(function (e, t) {
         let { channel: n, canOnlyUseTextCommands: a } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
-            [V, Z] = i.useState(0),
+            [Z, F] = i.useState(0),
             H = i.useRef(null),
             [Y, W] = i.useState(!1),
             K = m.Xn.useStore((e) => e.activeCategoryIndex);
         i.useEffect(() => {
-            (0, d.yw)(C.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
+            (0, d.yw)(N.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
         }, []);
         let {
                 sectionDescriptors: z,
@@ -70,8 +70,8 @@ let D = 512,
                     applicationCommands: !a,
                 },
                 options: {
-                    placeholderCount: L,
-                    limit: N.tn,
+                    placeholderCount: x,
+                    limit: C.tn,
                     includeFrecency: !0,
                 },
                 allowFetch: !0,
@@ -87,11 +87,11 @@ let D = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: j,
+                scrollOffset: k,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (M + j) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -101,11 +101,11 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
+        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? j : 0), [q.length, Q]),
             eo = X.map((e) => e.data.length);
         i.useEffect(() => {
-            null != H.current && Y && null != V && H.current.scrollRowIntoView(V);
-        }, [Y, V]),
+            null != H.current && Y && null != Z && H.current.scrollRowIntoView(Z);
+        }, [Y, Z]),
             i.useLayoutEffect(() => {
                 if (null != $) {
                     var e;
@@ -114,7 +114,7 @@ let D = 512,
             }, [J, $]);
         let es = i.useCallback(
                 (e) => {
-                    if (e.id === $ || e.id === N.bi.FRECENCY) {
+                    if (e.id === $ || e.id === C.bi.FRECENCY) {
                         var t;
                         et(null), null == (t = H.current) || t.scrollToSectionTop(0);
                     } else et(e.id);
@@ -137,13 +137,13 @@ let D = 512,
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == V) return !e && (Z(0), !0);
-                    if (null == V) return !1;
+                    if (null == Z) return !e && (F(0), !0);
+                    if (null == Z) return !1;
                     let t = 0,
                         n = 0;
                     for (let e of X)
-                        if (((t = n), V < (n += e.data.length))) {
-                            let n = e.data[V - t],
+                        if (((t = n), Z < (n += e.data.length))) {
+                            let n = e.data[Z - t],
                                 r = z.find((e) => e.id === n.applicationId);
                             el(n, r, (0, I.tI)(e.section));
                             break;
@@ -152,13 +152,13 @@ let D = 512,
                 },
                 onMoveSelection: (e) => {
                     if (0 === J.length) return !0;
-                    let t = Q ? L : 0,
+                    let t = Q ? x : 0,
                         n = J.length + t,
-                        r = null == V ? 0 : V + e;
-                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), W(!0), !0;
+                        r = null == Z ? 0 : Z + e;
+                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), F(r), W(!0), !0;
                 },
             }),
-            [J.length, X, Q, z, el, V],
+            [J.length, X, Q, z, el, Z],
         );
         let ec = i.useCallback(
                 (e) => {
@@ -218,7 +218,7 @@ let D = 512,
                         s = "".concat(a.section.id, ":").concat(null != (i = null == o ? void 0 : o.id) ? i : e);
                     if (
                         null == o ||
-                        (a.section.id !== o.applicationId && a.section.id !== N.bi.FRECENCY) ||
+                        (a.section.id !== o.applicationId && a.section.id !== C.bi.FRECENCY) ||
                         o.inputType === v.iw.PLACEHOLDER
                     )
                         return (0, r.jsx)(S.Z, {}, s);
@@ -230,22 +230,22 @@ let D = 512,
                             command: o,
                             channel: n,
                             className: P.itemWrapper,
-                            selected: V === e,
+                            selected: Z === e,
                             showImage: a.section.id !== o.applicationId,
                             section: l,
                             onClick: () => el(o, l, (0, I.tI)(a.section)),
                             onHover: () => {
-                                Z(null), W(!1);
+                                F(null), W(!1);
                             },
                         },
                         s,
                     );
                 },
-                [n, X, el, z, V],
+                [n, X, el, z, Z],
             ),
             ef = (0, h.Dt)();
         return (
-            (0, _.KR)(ef, !0, (0, f.DJ)(V)),
+            (0, _.KR)(ef, !0, (0, f.DJ)(Z)),
             i.useEffect(
                 () => () => {
                     (0, _.sJ)();
@@ -256,7 +256,7 @@ let D = 512,
                 id: ef,
                 className: P.outerWrapper,
                 innerClassName: P.wrapper,
-                onMouseDown: F,
+                onMouseDown: V,
                 children: [
                     (0, r.jsx)(T.Z, {
                         className: P.rail,
@@ -277,8 +277,8 @@ let D = 512,
                         renderSectionHeader: ec,
                         rowCount: q.length,
                         rowCountBySection: eo,
-                        rowHeight: x,
-                        sectionHeaderHeight: k,
+                        rowHeight: L,
+                        sectionHeaderHeight: M,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,
@@ -287,6 +287,6 @@ let D = 512,
             })
         );
     });
-function F(e) {
+function V(e) {
     e.preventDefault();
 }

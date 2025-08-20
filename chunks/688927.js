@@ -1,87 +1,98 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(951288),
-    s = n(120356),
-    o = n.n(s),
-    a = n(481060),
-    i = n(113434),
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(113434),
     l = n(497505),
     c = n(670638),
-    d = n(388032),
-    u = n(319889);
-function p(e) {
-    let { quest: t, onCtxMenuOpen: n, onCtxMenuClose: s, onCtxMenuSelect: p } = e,
-        m = (0, i.B6)(t.config.expiresAt);
+    u = n(388032),
+    d = n(319889);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
+    let { quest: t, onCtxMenuOpen: n, onCtxMenuClose: i, onCtxMenuSelect: f } = e,
+        p = (0, s.B6)(t.config.expiresAt);
     return (0, r.jsxs)("div", {
-        className: u.questAcceptedHeader,
+        className: d.questAcceptedHeader,
         children: [
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-xxs/medium",
-                className: o()(u.flex, u.headerText),
-                children: d.intl.format(d.t["pX+fmp"], { expirationDate: m }),
+                className: a()(d.flex, d.headerText),
+                children: u.intl.format(u.t["pX+fmp"], { expirationDate: p }),
             }),
             (0, r.jsx)(c.r, {
                 onOpen: n,
-                onClose: s,
-                onSelect: p,
+                onClose: i,
+                onSelect: f,
                 questContent: l.jn.QUEST_BAR_V2,
                 quest: t,
                 shouldShowDisclosure: !1,
                 showShareLink: !0,
                 sourceQuestContent: l.jn.QUEST_BAR_V2,
-                children: (e) => {
-                    var t, n;
-                    return (0, r.jsx)(
-                        a.P3F,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (n = n =
-                            {
-                                className: u.submenuWrapper,
-                                "aria-label": d.intl.string(d.t.DEoVWV),
-                                children: (0, r.jsx)(a.xhG, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: o()(u.submenuIcon, u.interactiveNormal),
-                                }),
+                children: (e) =>
+                    (0, r.jsx)(
+                        o.P3F,
+                        h(_({}, e), {
+                            className: d.submenuWrapper,
+                            "aria-label": u.intl.string(u.t.DEoVWV),
+                            children: (0, r.jsx)(o.xhG, {
+                                size: "md",
+                                color: "currentColor",
+                                className: a()(d.submenuIcon, d.interactiveNormal),
                             }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t),
-                    );
-                },
+                        }),
+                    ),
             }),
         ],
     });

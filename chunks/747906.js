@@ -1,8 +1,60 @@
-n.d(t, { P: () => o });
+n.d(t, { P: () => d });
 var r = n(951288),
     i = n(647438),
-    l = n(709014);
-let a = {
+    a = n(709014);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = {
         mute: {
             name: "mute",
             start: 0,
@@ -39,84 +91,46 @@ let a = {
             duration: 40,
         },
     },
-    o = (e) => {
+    d = (e) => {
         let t = i.useRef(null),
             o = i.useRef(e);
         o.current = e;
-        let s = i.useMemo(
+        let l = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e],
             ),
-            c = i.useCallback(() => {
+            d = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = "mute" === e ? "hover_unmuted" : "hover_muted";
                 t.current.play(n);
             }, [e]),
-            u = i.useCallback(() => {
+            f = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = "mute" === e ? "hover_unmuted" : "hover_muted";
                 t.current.stopIfPlaying(n);
             }, [e]),
-            d = i.useCallback((e) => {
-                var i, s;
-                return (0, r.jsx)(
-                    l.L,
-                    ((i = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (s = s =
-                        {
+            _ = i.useCallback(
+                (e) =>
+                    (0, r.jsx)(
+                        a.L,
+                        c(s({}, e), {
                             src: () => n.e("30261").then(n.t.bind(n, 414787, 19)),
                             ref: t,
                             initialAnimation: o.current,
-                            markers: a,
+                            markers: u,
                         }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                          }),
-                    i),
-                );
-            }, []);
+                    ),
+                [],
+            );
         return {
             events: {
-                onClick: s,
-                onMouseEnter: c,
-                onMouseLeave: u,
+                onClick: l,
+                onMouseEnter: d,
+                onMouseLeave: f,
             },
-            play: s,
+            play: l,
             getDuration: i.useCallback(() => {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
@@ -125,6 +139,6 @@ let a = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: d,
+            Component: _,
         };
     };

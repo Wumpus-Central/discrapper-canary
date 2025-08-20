@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r,
     i = n(951288),
-    l = n(647438),
+    a = n(647438),
     o = n(846519);
-function a(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,46 @@ function a(e, t, n) {
         e
     );
 }
-class s extends (r = l.Component) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class d extends (r = a.Component) {
     static getDerivedStateFromProps(e) {
         return e.disable ? { hovered: !1 } : null;
     }
@@ -32,8 +71,8 @@ class s extends (r = l.Component) {
         let { props: n } = this,
             r = (e, t) => !e.disable && !(t.hovered && e.pauseOnHover),
             i = r(n, this.state),
-            l = r(e, t);
-        (i && !l) || e.interval !== n.interval ? this.startTimer() : !i && l && this.stopTimer();
+            a = r(e, t);
+        (i && !a) || e.interval !== n.interval ? this.startTimer() : !i && a && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -46,9 +85,8 @@ class s extends (r = l.Component) {
         this.timer.stop();
     }
     render() {
-        var e, t;
-        let { children: n, className: r, disable: l } = this.props,
-            o = l
+        let { children: e, className: t, disable: n } = this.props,
+            r = n
                 ? null
                 : {
                       onMouseEnter: this.handlePause,
@@ -58,56 +96,26 @@ class s extends (r = l.Component) {
                   };
         return (0, i.jsx)(
             "div",
-            ((e = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            a(e, t, n[t]);
-                        });
-                }
-                return e;
-            })({}, o)),
-            (t = t =
-                {
-                    className: r,
-                    children: n,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(t)).forEach(function (n) {
-                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                  }),
-            e),
+            u(l({}, r), {
+                className: t,
+                children: e,
+            }),
         );
     }
     constructor(...e) {
         super(...e),
-            a(this, "timer", new o.Xp()),
-            a(this, "state", { hovered: !1 }),
-            a(this, "handlePause", () => {
+            s(this, "timer", new o.Xp()),
+            s(this, "state", { hovered: !1 }),
+            s(this, "handlePause", () => {
                 this.state.hovered || this.setState({ hovered: !0 });
             }),
-            a(this, "handleResume", () => {
+            s(this, "handleResume", () => {
                 this.setState({ hovered: !1 });
             });
     }
 }
-a(s, "defaultProps", {
+s(d, "defaultProps", {
     disable: !1,
     pauseOnHover: !1,
 });
-let c = s;
+let f = d;

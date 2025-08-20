@@ -1,6 +1,6 @@
-n.d(e, { Z: () => m }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(e, { Z: () => O }), n(388685);
+var i = n(951288),
+    r = n(647438),
     s = n(481060),
     a = n(442837),
     o = n(194359),
@@ -8,94 +8,94 @@ var r = n(951288),
     l = n(726521),
     d = n(485664),
     u = n(681678),
-    E = n(699516),
-    _ = n(473092),
+    x = n(699516),
+    p = n(473092),
     h = n(991981),
-    p = n(850165),
+    m = n(850165),
     g = n(134612),
-    x = n(388032),
+    _ = n(388032),
     f = n(394968),
-    N = n(149355);
-function m(t) {
-    let { senderId: e, channelId: n, hasReported: m, onReport: T, trackAnalyticsEvent: b } = t,
-        A = (0, a.e7)([E.Z], () => E.Z.isBlocked(e)),
-        [C, O] = i.useState(A),
-        v = (0, d.o)(),
-        I = (0, d.Q)(),
-        [S, j] = i.useState(!1),
-        y = (0, h.q)(n),
-        M = i.useMemo(() => (v ? 0 : I ? 2 : 1), [v, I]),
-        R = async () => {
-            null != y &&
-                (j(!0),
+    b = n(149355);
+function O(t) {
+    let { senderId: e, channelId: n, hasReported: O, onReport: v, trackAnalyticsEvent: j } = t,
+        T = (0, a.e7)([x.Z], () => x.Z.isBlocked(e)),
+        [E, y] = r.useState(T),
+        S = (0, d.o)(),
+        A = (0, d.Q)(),
+        [N, C] = r.useState(!1),
+        k = (0, h.q)(n),
+        I = r.useMemo(() => (S ? 0 : A ? 2 : 1), [S, A]),
+        M = async () => {
+            null != k &&
+                (C(!0),
                 await (0, l.J7)(
-                    y,
+                    k,
                     () => {
-                        u.Z.showReportSuccessToast(e, n), T();
+                        u.Z.showReportSuccessToast(e, n), v();
                     },
                     () => {
                         u.Z.showFailedToast();
                     },
                 ),
-                j(!1),
-                b(_.NM.USER_TAKEOVER_MODAL_REPORT));
+                C(!1),
+                j(p.NM.USER_TAKEOVER_MODAL_REPORT));
         },
-        w = i.useMemo(() => {
-            switch (M) {
+        R = r.useMemo(() => {
+            switch (I) {
                 case 0:
-                    return x.intl.string(x.t.sZf6c3);
+                    return _.intl.string(_.t.sZf6c3);
                 case 2:
-                    return x.intl.string(x.t.HQ2nKi);
+                    return _.intl.string(_.t.HQ2nKi);
                 default:
-                    return x.intl.string(x.t["65XQam"]);
+                    return _.intl.string(_.t["65XQam"]);
             }
-        }, [M]);
-    return (0, r.jsx)(p.Z, {
-        heroImageSrc: N,
-        heroImageAlt: x.intl.string(x.t.RVyYCA),
-        header: x.intl.string(x.t["mWO+ys"]),
-        description: x.intl.string(x.t.S0XtKC),
-        children: (0, r.jsxs)("div", {
+        }, [I]);
+    return (0, i.jsx)(m.Z, {
+        heroImageSrc: b,
+        heroImageAlt: _.intl.string(_.t.RVyYCA),
+        header: _.intl.string(_.t["mWO+ys"]),
+        description: _.intl.string(_.t.S0XtKC),
+        children: (0, i.jsxs)("div", {
             className: f.buttonContainer,
             children: [
-                (0, r.jsx)(s.zxk, {
-                    text: C ? x.intl.string(x.t.XyHpKC) : x.intl.string(x.t.l4EmaW),
+                (0, i.jsx)(s.zxk, {
+                    text: E ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
                     variant: "primary",
                     fullWidth: !0,
                     icon: s.k$p,
                     onClick: () => {
-                        C
-                            ? (O(!1),
+                        E
+                            ? (y(!1),
                               o.Z.unblockUser(e, { location: g.DL }),
-                              b(_.NM.USER_TAKEOVER_MODAL_UNBLOCK),
+                              j(p.NM.USER_TAKEOVER_MODAL_UNBLOCK),
                               u.Z.showUnblockSuccessToast(e, n))
-                            : (O(!0),
-                              b(_.NM.USER_TAKEOVER_MODAL_BLOCK),
+                            : (y(!0),
+                              j(p.NM.USER_TAKEOVER_MODAL_BLOCK),
                               o.Z.blockUser(e, { location: g.DL }).then(() => {
                                   u.Z.showBlockSuccessToast(e, n);
                               }));
                     },
                 }),
-                (0, r.jsx)(s.zxk, {
-                    text: m ? x.intl.string(x.t.QvwOJy) : x.intl.string(x.t["7fHyEx"]),
+                (0, i.jsx)(s.zxk, {
+                    text: O ? _.intl.string(_.t.QvwOJy) : _.intl.string(_.t["7fHyEx"]),
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.U65,
-                    onClick: R,
-                    loading: S,
-                    disabled: m,
+                    onClick: M,
+                    loading: N,
+                    disabled: O,
                 }),
-                (0, r.jsx)(s.zxk, {
-                    text: w,
+                (0, i.jsx)(s.zxk, {
+                    text: R,
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.kBi,
                     onClick: () => {
-                        0 === M
-                            ? ((0, c.Z)(g.EI), b(_.NM.USER_TAKEOVER_MODAL_CTL))
-                            : 2 === M
-                              ? ((0, c.Z)(g.$l), b(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
-                              : ((0, c.Z)(g.n4), b(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+                        0 === I
+                            ? ((0, c.Z)(g.EI), j(p.NM.USER_TAKEOVER_MODAL_CTL))
+                            : 2 === I
+                              ? ((0, c.Z)(g.$l), j(p.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
+                              : ((0, c.Z)(g.n4), j(p.NM.USER_TAKEOVER_MODAL_NO_FILTR));
                     },
                 }),
             ],

@@ -21,8 +21,8 @@ function g(e) {
         T = (0, a.e7)([p.Z], () => (null != I ? p.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
         S = !0,
         A = !0,
-        N = (0, c.LD)(b, A),
-        C = (0, c.PL)(S, A),
+        C = (0, c.LD)(b, A),
+        N = (0, c.PL)(S, A),
         R = (0, a.e7)([f.Z], () => null != f.Z.getNewestTokenForApplication(v)),
         { isUserApp: P, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;
@@ -31,8 +31,8 @@ function g(e) {
                     isGuildApp: !1,
                     isUserApp: !1,
                 };
-            let i = Object.values(null != (n = null == (e = N.result) ? void 0 : e.sections) ? n : {}),
-                a = Object.values(null != (r = null == (t = C.result) ? void 0 : t.sections) ? r : {});
+            let i = Object.values(null != (n = null == (e = C.result) ? void 0 : e.sections) ? n : {}),
+                a = Object.values(null != (r = null == (t = N.result) ? void 0 : t.sections) ? r : {});
             return {
                 isGuildApp: i.some((e) => {
                     var t;
@@ -43,7 +43,7 @@ function g(e) {
                     return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 }),
             };
-        }, [N, C, v]);
+        }, [C, N, v]);
     i.useEffect(() => {
         n(360606);
     }, []);
@@ -51,7 +51,7 @@ function g(e) {
             (null == I ? void 0 : I.id) != null &&
                 (u.Z.open(I.id, h.pNK.INTEGRATIONS), s.Z.setSection(h.b4C.APPLICATION, v), null == O || O());
         }, [v, null == I ? void 0 : I.id, O]),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             l.Z.open(h.oAB.AUTHORIZED_APPS);
             let e = "";
             null != E ? (e = E.name) : null != g && (e = g.username),
@@ -59,11 +59,11 @@ function g(e) {
                 null == O || O();
         }, [E, O, g]);
     if (y === h.IlC.POPOUT) return null;
-    let x = [];
+    let L = [];
     return (
         w &&
             T &&
-            x.push(
+            L.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
@@ -76,17 +76,17 @@ function g(e) {
             ),
         P &&
             R &&
-            x.push(
+            L.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
                         id: "manage-authorized-app",
                         label: m.intl.string(m.t.V8ruv7),
-                        action: L,
+                        action: x,
                     },
                     "manage-authorized-app",
                 ),
             ),
-        x
+        L
     );
 }

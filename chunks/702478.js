@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-let I = function (e, t, n) {
+let E = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = null;
         return (
@@ -61,7 +61,7 @@ let I = function (e, t, n) {
             }
         );
     },
-    E = function (e) {
+    I = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return t || e === _.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, r.jsx)(c.kzN, {
@@ -154,7 +154,7 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.i0Nora),
                                           tooltipText: y.intl.string(y.t.KiRbLC),
                                       },
-                                      I(a.visitors, a.visitorsChange, l),
+                                      E(a.visitors, a.visitorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
@@ -164,12 +164,12 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.DDAHdX),
                                           tooltipText: y.intl.string(y.t.HxWUkZ),
                                       },
-                                      I(a.communicators, a.communicatorsChange, l),
+                                      E(a.communicators, a.communicatorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  N({ title: y.intl.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, l)),
+                                  N({ title: y.intl.string(y.t.hYeOqK) }, E(a.newMembers, a.newMembersChange, l)),
                               ),
                               (0, r.jsx)(
                                   u.Z,
@@ -178,7 +178,7 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.jj7OPz),
                                           tooltipText: y.intl.string(y.t.MQCsl5),
                                       },
-                                      I(a.pctRetained, a.pctRetainedChange, l, !0),
+                                      E(a.pctRetained, a.pctRetainedChange, l, !0),
                                   ),
                               ),
                           ],
@@ -193,7 +193,7 @@ let I = function (e, t, n) {
                     type: c.geA.DESCRIPTION,
                     children: y.intl.format(y.t.NIZ60d, {}),
                 }),
-                E(o, T),
+                I(o, T),
                 (0, r.jsxs)("div", {
                     className: C.developerPortalCtaWrapper,
                     children: [

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => I });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -88,7 +88,7 @@ let y = {
                 }),
             ],
         }),
-    I = (e) => {
+    E = (e) => {
         let t,
             n,
             i,
@@ -122,7 +122,7 @@ let y = {
                   },
               }));
     },
-    E = () => {
+    I = () => {
         let e = (0, i.e7)([x.Z], () => x.Z.getGuild()),
             t = (0, i.e7)([g.Z], () => {
                 var t;
@@ -140,7 +140,7 @@ let y = {
                     l
                         ? (0, r.jsxs)("div", {
                               children: [
-                                  (0, r.jsx)(I, {
+                                  (0, r.jsx)(E, {
                                       guild: e,
                                       guildStickers: t,
                                   }),

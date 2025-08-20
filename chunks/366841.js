@@ -52,19 +52,19 @@ function T() {
         O = (0, l.VXO)(E.Xd),
         T = i.useMemo(() => [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
         [S, A] = (0, _.US)(T),
-        N = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
-        C = (0, a.e7)([h.default], () => h.default.getId());
+        C = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
+        N = (0, a.e7)([h.default], () => h.default.getId());
     i.useLayoutEffect(() => {
-        null != C && g.default.age(C) < m.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
+        null != N && g.default.age(N) < m.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = "desktop_refresh_theme_migration_key",
             t = "true" === s.K.get(e);
-        !N ||
+        !C ||
             t ||
             p.Z.theme !== y.BR.DARK ||
             null != d.Z.gradientPreset ||
             t ||
             (s.K.set(e, "true"), (0, u.ZI)({ theme: y.BR.DARKER }));
-    }, [N, C]),
+    }, [C, N]),
         i.useLayoutEffect(() => {
             function e() {
                 t(!0);
@@ -91,11 +91,11 @@ function T() {
         );
     }, [A]);
     i.useEffect(() => {
-        if (N && !O && e) {
+        if (C && !O && e) {
             let e = setTimeout(() => {
                 R();
             }, I);
             return () => clearTimeout(e);
         }
-    }, [e, O, N, R]);
+    }, [e, O, C, R]);
 }

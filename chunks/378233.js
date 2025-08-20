@@ -1,16 +1,16 @@
 n.d(t, {
-    B0: () => C,
+    B0: () => N,
     Hc: () => w,
     J8: () => D,
-    Q6: () => N,
-    V9: () => M,
+    Q6: () => C,
+    V9: () => j,
     WD: () => P,
     Zt: () => I,
     Zv: () => S,
     _V: () => A,
-    cv: () => x,
+    cv: () => L,
     gM: () => U,
-    jl: () => L,
+    jl: () => x,
     z: () => R,
 }),
     n(413496),
@@ -74,7 +74,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
     },
     A = (e) => (null == e ? null : "".concat(e.name, ".").concat(T(e.format_type))),
-    N = function (e) {
+    C = function (e) {
         let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let i = e.format_type;
@@ -96,7 +96,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
         return "".concat(location.protocol).concat(p).concat(o);
     },
-    C = (e) => null != e.match("development" !== m ? O : v),
+    N = (e) => null != e.match("development" !== m ? O : v),
     R = (e) => ({
         type: d.Ih.PACK,
         id: e.id,
@@ -120,20 +120,20 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
     },
     D = (e) => e.type === d.n0.GUILD,
-    L = (e) => e.type === d.n0.STANDARD,
-    x = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    M = (e) => {
+    x = (e) => e.type === d.n0.STANDARD,
+    L = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
+    j = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    k = [];
-function j() {
+    M = [];
+function k() {
     var e, t;
     return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
         ? t
-        : k;
+        : M;
 }
 function U(e) {
-    return j().includes(e);
+    return k().includes(e);
 }

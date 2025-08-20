@@ -1,19 +1,19 @@
-var n = r(169774),
-    i = r(88408),
-    o = n.isPlatform("Mac OS X"),
-    a = {
-        isCtrlKeyCommand: function (t) {
-            return !!t.ctrlKey && !t.altKey;
+var r = n(169774),
+    i = n(88408),
+    a = r.isPlatform("Mac OS X"),
+    o = {
+        isCtrlKeyCommand: function (e) {
+            return !!e.ctrlKey && !e.altKey;
         },
-        isOptionKeyCommand: function (t) {
-            return o && t.altKey;
+        isOptionKeyCommand: function (e) {
+            return a && e.altKey;
         },
         usesMacOSHeuristics: function () {
-            return o;
+            return a;
         },
-        hasCommandModifier: function (t) {
-            return o ? !!t.metaKey && !t.altKey : a.isCtrlKeyCommand(t);
+        hasCommandModifier: function (e) {
+            return a ? !!e.metaKey && !e.altKey : o.isCtrlKeyCommand(e);
         },
         isSoftNewlineEvent: i,
     };
-t.exports = a;
+e.exports = o;

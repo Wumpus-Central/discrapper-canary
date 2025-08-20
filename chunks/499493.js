@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,43 +9,43 @@ var r = n(951288),
     u = n(944486),
     d = n(594174),
     m = n(5192),
-    f = n(178762),
-    p = n(91140),
+    p = n(178762),
+    f = n(91140),
     g = n(297781),
     x = n(388032),
-    h = n(192025),
-    v = n(226788);
-let j = (e) => {
+    j = n(192025),
+    h = n(226788);
+let v = (e) => {
     let {
             entry: t,
             onClose: n,
             onReaction: l,
-            onRequestOpen: j,
+            onRequestOpen: v,
             disableActivityProfileLinks: O,
-            customCTA: y,
-            popoutClassname: b,
+            customCTA: b,
+            popoutClassname: y,
             popoutPosition: I = "right",
         } = e,
-        E = i.useRef(null),
+        P = i.useRef(null),
         w = (0, s.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        P = (0, s.e7)([d.default], () => d.default.getUser(t.author_id)),
+        E = (0, s.e7)([d.default], () => d.default.getUser(t.author_id)),
         { nick: N, avatar: S } = i.useMemo(() => {
-            let e = null == P ? void 0 : P.getAvatarURL(null == w ? void 0 : w.guild_id, 48, !1);
+            let e = null == E ? void 0 : E.getAvatarURL(null == w ? void 0 : w.guild_id, 48, !1);
             return {
-                nick: m.ZP.getName(null == w ? void 0 : w.guild_id, null == w ? void 0 : w.id, P),
+                nick: m.ZP.getName(null == w ? void 0 : w.guild_id, null == w ? void 0 : w.id, E),
                 avatar: e,
             };
-        }, [P, w]);
-    return null == P
+        }, [E, w]);
+    return null == E
         ? null
         : (0, r.jsx)(o.yRy, {
-              targetElementRef: E,
+              targetElementRef: P,
               position: I,
               renderPopout: (e) => {
                   let { closePopout: i, updatePosition: a } = e;
                   return (0, r.jsx)("div", {
-                      className: b,
-                      children: (0, r.jsx)(f.J, {
+                      className: y,
+                      children: (0, r.jsx)(p.J, {
                           entry: t,
                           closePopout: i,
                           updatePopoutPosition: a,
@@ -60,7 +60,7 @@ let j = (e) => {
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == j || j();
+                  null == v || v();
               },
               children: (e) => {
                   var n, i;
@@ -90,10 +90,10 @@ let j = (e) => {
                                   });
                           }
                           return e;
-                      })({ innerRef: E }, e)),
+                      })({ innerRef: P }, e)),
                       (i = i =
                           {
-                              className: h.profileEntryCard,
+                              className: j.profileEntryCard,
                               children: (0, r.jsx)(o.tEY, {
                                   offset: {
                                       top: 4,
@@ -104,14 +104,14 @@ let j = (e) => {
                                   children: (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)("img", {
-                                              className: h.avatar,
+                                              className: j.avatar,
                                               src: S,
                                               alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: N }),
                                           }),
                                           (0, r.jsx)("div", {
-                                              className: h.playerInfo,
+                                              className: j.playerInfo,
                                               children: (0, r.jsxs)("div", {
-                                                  className: a()(v.column, v.gapXs),
+                                                  className: a()(h.column, h.gapXs),
                                                   children: [
                                                       (0, r.jsx)(o.Text, {
                                                           variant: "text-md/medium",
@@ -121,15 +121,15 @@ let j = (e) => {
                                                       }),
                                                       (0, r.jsx)(g.Gk, {
                                                           location: g.Gt.APP_LAUNCHER,
-                                                          children: p.W.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                                                          children: f.W.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
                                                       }),
                                                   ],
                                               }),
                                           }),
-                                          null != y
-                                              ? y
+                                          null != b
+                                              ? b
                                               : (0, r.jsx)("div", {
-                                                    className: h.reactions,
+                                                    className: j.reactions,
                                                     children: (0, r.jsx)(o.n$P, { size: "sm" }),
                                                 }),
                                       ],

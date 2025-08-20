@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => N,
+    C: () => C,
     default: () => S,
 }),
     n(388685);
@@ -77,7 +77,7 @@ function S(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, O] = i.useState(0),
-        [S, N] = (0, l.q_F)(() => ({
+        [S, C] = (0, l.q_F)(() => ({
             from: { width: "0%" },
             config: { duration: I },
         })),
@@ -87,18 +87,18 @@ function S(e) {
                 null != p &&
                     d.default.track(
                         h.rMx.QUEST_SURVEY_SUBMITTED,
-                        v(y({}, C(p, n)), {
+                        v(y({}, N(p, n)), {
                             choice: e.text,
                             choice_id: e.key,
                         }),
                     );
         },
         P = async (e) => {
-            1 === e && (await N({ width: "100%" }), o());
+            1 === e && (await C({ width: "100%" }), o());
         };
     return (
         (0, c.ZP)(() => {
-            null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, C(p, n));
+            null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, N(p, n));
         }),
         null == p && o(),
         (0, r.jsx)(l.Y0X, {
@@ -219,7 +219,7 @@ function A(e) {
         ],
     });
 }
-function N(e) {
+function C(e) {
     let t = !1;
     (0, l.ZDy)(
         async () => {
@@ -237,12 +237,12 @@ function N(e) {
         {
             onCloseCallback: () => {
                 let n = p.Z.getQuest(e.questId);
-                null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, v(y({}, C(n, e.survey)), { submitted: t }));
+                null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, v(y({}, N(n, e.survey)), { submitted: t }));
             },
         },
     );
 }
-function C(e, t) {
+function N(e, t) {
     return {
         quest_id: e.id,
         quest_status: (0, f.uk)(e),

@@ -1,67 +1,67 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => Z });
+        t.r(n), t.d(n, { default: () => k });
         var l = t(951288),
             c = t(647438),
-            i = t(823282),
-            o = t(595697),
-            a = t(481060),
+            a = t(823282),
+            i = t(595697),
+            o = t(481060),
             s = t(460562),
             u = t(960048),
             d = t(222082),
             h = t(63681),
-            f = t(743965),
-            j = t(12781),
-            m = t(980426),
+            j = t(743965),
+            m = t(12781),
+            f = t(980426),
             p = t(659700),
-            g = t(733653),
+            x = t(733653),
             v = t(249597),
-            b = t(312539),
-            x = t(325980),
+            g = t(312539),
+            b = t(325980),
             y = t(472433),
-            O = t(701214),
-            w = t(388032),
-            I = t(584410),
-            P = e([j, y, i]);
-        [j, y, i] = P.then ? (await P)() : P;
+            I = t(701214),
+            O = t(388032),
+            w = t(584410),
+            Z = e([m, y, a]);
+        [m, y, a] = Z.then ? (await Z)() : Z;
         let C = {
             text: d.xv,
             paragraph: d.nv,
             empty: d.HY,
-            emoji: j.d,
-            link: g.r,
+            emoji: m.d,
+            link: x.r,
             list: v.a,
             listItem: v.H,
             code: h.E,
-            code_block: f.d,
-            quote: x.p,
-            bold: m.d8,
-            italic: m.Tx,
-            underline: m.v6,
-            strikethrough: m.nY,
-            mention: b.p,
+            code_block: j.d,
+            quote: b.p,
+            bold: f.d8,
+            italic: f.Tx,
+            underline: f.v6,
+            strikethrough: f.nY,
+            mention: g.p,
             heading: p.X,
             small: p.x,
             spoiler: y.o,
-            timestamp: O.E,
+            timestamp: I.E,
         };
-        function Z(e) {
+        function k(e) {
             let { content: n } = e;
-            return (0, l.jsx)(o.SV, {
+            return (0, l.jsx)(i.SV, {
                 fallbackRender: (e) => {
                     let { error: t } = e;
-                    return (0, l.jsx)(k, {
+                    return (0, l.jsx)(P, {
                         content: n,
                         error: t,
                     });
                 },
-                children: (0, l.jsx)(i.ZP, {
+                children: (0, l.jsx)(a.ZP, {
                     content: n,
                     renderers: C,
                 }),
             });
         }
-        function k(e) {
+        function P(e) {
             let { content: n, error: t } = e;
             return (
                 c.useEffect(() => {
@@ -70,16 +70,16 @@ t.a(e, async function (e, r) {
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)("span", { children: n }),
-                        (0, l.jsxs)(a.Text, {
+                        (0, l.jsxs)(o.Text, {
                             variant: "text-md/normal",
                             color: "text-danger",
-                            className: I.errorMessage,
+                            className: w.errorMessage,
                             children: [
                                 (0, l.jsx)(s.Z, {
                                     width: 16,
                                     height: 16,
                                 }),
-                                w.intl.string(w.t.dpFK4O),
+                                O.intl.string(O.t.dpFK4O),
                             ],
                         }),
                     ],

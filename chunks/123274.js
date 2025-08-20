@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
-var i = n(951288),
-    r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(399731);
-let o = (e) => {
-    let { className: t, color: n = "header-primary", responsive: r = !0, children: o } = e;
-    return (0, i.jsx)(a.X6q, {
-        className: s()(l.header, t, r && l.responsive),
+n.d(t, { Z: () => l });
+var r = n(951288),
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(399731);
+let l = (e) => {
+    let { className: t, color: n = "header-primary", responsive: i = !0, children: l } = e;
+    return (0, r.jsx)(o.X6q, {
+        className: a()(s.header, t, i && s.responsive),
         variant: "display-md",
         color: n,
-        children: o,
+        children: l,
     });
 };

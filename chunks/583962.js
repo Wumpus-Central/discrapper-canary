@@ -1,6 +1,6 @@
 n.d(t, {
     PD: () => A,
-    ZP: () => L,
+    ZP: () => M,
     aR: () => R,
 }),
     n(388685);
@@ -22,14 +22,14 @@ var r = n(951288),
     O = n(496675),
     _ = n(259580),
     y = n(267642),
-    v = n(624138),
-    j = n(667815),
+    j = n(624138),
+    v = n(667815),
     C = n(531572),
-    E = n(18857),
-    x = n(981631),
+    x = n(18857),
+    E = n(981631),
     S = n(921944),
-    P = n(388032),
-    I = n(989308),
+    I = n(388032),
+    P = n(989308),
     N = n(210418);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -74,47 +74,47 @@ function Z(e, t) {
         e
     );
 }
-let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let T = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = 57,
     R = 57 + T,
     D = {
         tension: 180,
         friction: 80,
     },
-    L = i.memo((e) => {
+    M = i.memo((e) => {
         let { guild: t, tooltipTypes: l, withMargin: d } = e,
-            v = (0, y.Jh)(t.id),
+            j = (0, y.Jh)(t.id),
             T = (0, b.Z)(t.id),
-            A = (0, y.FZ)(v),
+            A = (0, y.FZ)(j),
             R = null == A,
-            L = null != A ? A : v,
-            M = (0, c.e7)([C.Z], () => {
+            M = null != A ? A : j,
+            L = (0, c.e7)([C.Z], () => {
                 var e;
                 return null != (e = C.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([O.Z], () => O.Z.can(x.Plq.MANAGE_GUILD, t));
+            k = (0, c.e7)([O.Z], () => O.Z.can(E.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== T && (0, j.v)(t.id, T);
-        }, [t.id, M, T]);
-        let U = R ? "100%" : "".concat(Math.min(100, (T / x.oCV[L]) * 100), "%"),
+            L !== T && (0, v.v)(t.id, T);
+        }, [t.id, L, T]);
+        let U = R ? "100%" : "".concat(Math.min(100, (T / E.oCV[M]) * 100), "%"),
             { current: G } = i.useRef(U),
             [B] = (0, p.q_F)(
                 () => ({
-                    from: { width: M === T ? G : "0%" },
+                    from: { width: L === T ? G : "0%" },
                     to: { width: U },
                     config: D,
                 }),
                 "respect-motion-settings",
-                [M, T, G, U],
+                [L, T, G, U],
             ),
-            V = t.premiumTier < L && M >= x.oCV[L],
-            F = (0, E.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
-            H = P.intl.formatToPlainString(P.t["2oNfMT"], { levelName: (0, y.e9)(L) }),
-            z = P.intl.format(P.t.dhKnYm, {
+            V = t.premiumTier < M && L >= E.oCV[M],
+            F = (0, x.Z)(t, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+            H = I.intl.formatToPlainString(I.t["2oNfMT"], { levelName: (0, y.e9)(M) }),
+            z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: T,
-                numTotal: x.oCV[L],
+                numTotal: E.oCV[M],
             });
-        R && ((H = (0, y.e9)(L)), (z = P.intl.format(P.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase());
+        R && ((H = (0, y.e9)(M)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase());
         let W = (0, s.JA)("boosts-".concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
@@ -195,7 +195,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     }),
                                     R
                                         ? (0, r.jsx)("span", {
-                                              "aria-label": P.intl.string(P.t["7iL1q6"]),
+                                              "aria-label": I.intl.string(I.t["7iL1q6"]),
                                               role: "img",
                                               className: N.tadaIcon,
                                               children: "\uD83C\uDF89",
@@ -209,10 +209,10 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         return (0, r.jsx)("li", {
             children: (0, r.jsx)(p.ua7, {
                 text: V
-                    ? P.intl.formatToPlainString(I.default["9CtPjo"], { perk: (0, y.nW)(L) })
+                    ? I.intl.formatToPlainString(P.default["9CtPjo"], { perk: (0, y.nW)(M) })
                     : R
-                      ? P.intl.string(P.t["Y+V9go"])
-                      : P.intl.formatToPlainString(P.t.UyDKl5, { levelName: (0, y.nW)(L) }),
+                      ? I.intl.string(I.t["Y+V9go"])
+                      : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, y.nW)(M) }),
                 position: "top",
                 delay: 200,
                 hideOnClick: !0,

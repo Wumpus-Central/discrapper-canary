@@ -1,51 +1,51 @@
 n.d(t, { Z: () => h });
-var a = n(951288),
-    r = n(647438),
-    i = n(120356),
-    o = n.n(i),
-    l = n(442837),
-    c = n(481060),
-    s = n(700582),
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
+    c = n(700582),
     u = n(372900),
     d = n(318713),
     p = n(123145),
-    m = n(592125),
-    g = n(73249),
-    y = n(369171),
-    f = n(545093),
+    f = n(592125),
+    y = n(73249),
+    m = n(369171),
+    O = n(545093),
     b = n(388032),
-    O = n(774846);
-let _ = r.memo(function (e) {
+    g = n(774846);
+let E = i.memo(function (e) {
     let { message: t } = e,
-        n = (0, l.e7)([m.Z], () => m.Z.getChannel(t.channel_id));
+        n = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channel_id));
     return null == n
         ? null
-        : (0, a.jsx)(y.ZP, {
+        : (0, r.jsx)(m.ZP, {
               children: (e) =>
-                  (0, a.jsxs)(u.Z.Provider, {
+                  (0, r.jsxs)(u.Z.Provider, {
                       value: n.guild_id,
                       children: [
-                          (0, a.jsx)(s.Z, {
+                          (0, r.jsx)(c.Z, {
                               user: t.author,
-                              size: c.EFr.SIZE_40,
-                              className: o()(O.authorAvatar, e),
+                              size: s.EFr.SIZE_40,
+                              className: o()(g.authorAvatar, e),
                           }),
-                          (0, a.jsxs)("div", {
-                              className: o()(O.author, e),
+                          (0, r.jsxs)("div", {
+                              className: o()(g.author, e),
                               children: [
-                                  (0, a.jsx)(c.Rny, {
-                                      children: (0, a.jsx)("div", {
-                                          className: O.authorNameWrapper,
-                                          children: (0, a.jsx)(p.Z, {
-                                              className: O.authorName,
+                                  (0, r.jsx)(s.Rny, {
+                                      children: (0, r.jsx)("div", {
+                                          className: g.authorNameWrapper,
+                                          children: (0, r.jsx)(p.Z, {
+                                              className: g.authorName,
                                               message: t,
                                               channel: n,
                                           }),
                                       }),
                                   }),
-                                  (0, a.jsx)(d.Z, {
+                                  (0, r.jsx)(d.Z, {
                                       timestamp: t.timestamp,
-                                      className: O.timestamp,
+                                      className: g.timestamp,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -56,24 +56,24 @@ let _ = r.memo(function (e) {
 });
 function h(e) {
     var t;
-    let { item: n, hideMediaOptions: r, onClose: i } = e,
-        l = null == (t = n.sourceMetadata) ? void 0 : t.message;
-    return (0, a.jsxs)("div", {
-        className: O.topBar,
+    let { item: n, hideMediaOptions: i, onClose: l } = e,
+        a = null == (t = n.sourceMetadata) ? void 0 : t.message;
+    return (0, r.jsxs)("div", {
+        className: g.topBar,
         children: [
-            null != l && (0, a.jsx)(_, { message: l }),
-            (0, a.jsx)(g.Z, {
+            null != a && (0, r.jsx)(E, { message: a }),
+            (0, r.jsx)(y.Z, {
                 item: n,
-                hideMediaOptions: r,
+                hideMediaOptions: i,
             }),
-            (0, a.jsx)(y.ZP, {
-                mode: y.lx.PINNED,
+            (0, r.jsx)(m.ZP, {
+                mode: m.lx.PINNED,
                 children: (e) =>
-                    (0, a.jsx)(f.Z, {
-                        onClick: i,
-                        icon: c.Dio,
+                    (0, r.jsx)(O.Z, {
+                        onClick: l,
+                        icon: s.Dio,
                         tooltip: b.intl.string(b.t.cpT0Cg),
-                        className: o()(O.closeButton, e),
+                        className: o()(g.closeButton, e),
                     }),
             }),
         ],

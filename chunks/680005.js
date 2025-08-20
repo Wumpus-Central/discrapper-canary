@@ -1,178 +1,186 @@
-n.d(e, {
-    YG: () => _,
-    pV: () => g,
-    rf: () => b,
+n.d(t, {
+    YG: () => S,
+    pV: () => T,
+    rf: () => v,
 });
-var i,
-    r = n(951288);
+var r = n(951288);
 n(647438);
-var l = n(860911),
-    o = n(481060),
-    a = n(100527),
-    u = n(906732),
-    s = n(349167),
+var i = n(860911),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
+    l = n(349167),
     c = n(929011),
-    d = n(703656),
-    p = n(626135),
+    u = n(703656),
+    d = n(626135),
     f = n(937615),
-    S = n(110742),
-    O = n(981631),
-    I = n(388032),
-    b =
-        (((i = {})[(i.AVAILABLE = 0)] = "AVAILABLE"),
-        (i[(i.LOADING = 1)] = "LOADING"),
-        (i[(i.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
-        (i[(i.SUBSCRIBED = 3)] = "SUBSCRIBED"),
-        (i[(i.UNAVAILABLE = 4)] = "UNAVAILABLE"),
-        i);
-function g(t) {
-    let { appId: e, onClick: n, onHasClicked: i, skuId: l, subscriptionPlan: o, icon: a, state: u = 0 } = t,
-        s = null != o ? (0, f.xg)(o) : null,
-        c = 1 === u;
-    return 0 === u || c
-        ? (0, r.jsx)(y, {
-              appId: e,
-              skuId: l,
-              onClick: (t) => {
-                  n(t), null == i || i();
-              },
-              loading: c,
-              icon: a,
-              text: null != s ? I.intl.formatToPlainString(I.t.i4T8v7, { rate: s }) : I.intl.string(I.t.uuzaAA),
-          })
-        : (0, r.jsx)(P, {
-              text: (function (t, e) {
-                  switch (t) {
-                      case 2:
-                          return I.intl.formatToPlainString(I.t.k1ew5O, { rate: e });
-                      case 3:
-                          return I.intl.formatToPlainString(I.t["Hs3Y+P"], { rate: e });
-                      case 4:
-                          return I.intl.string(I.t.DLAKbm);
-                  }
-              })(u, null != s ? s : ""),
-          });
-}
-function _(t) {
-    let { appId: e, onClick: n, onHasClicked: i, sku: l, icon: o } = t,
-        { analyticsLocations: s } = (0, u.ZP)(a.Z.APP_STOREFRONT),
-        d = (0, S.M)(l.id),
-        p = l.type === O.epS.DURABLE && d,
-        { price: b } = l;
-    return null == b
-        ? null
-        : p
-          ? (0, r.jsx)(P, { text: I.intl.string(I.t["6cfuDg"]) })
-          : (0, r.jsx)(y, {
-                appId: e,
-                skuId: l.id,
-                onClick: (t) => {
-                    (null != n
-                        ? n
-                        : () => {
-                              (0, c.r)({
-                                  appId: e,
-                                  skuId: l.id,
-                                  analyticsLocations: s,
-                              });
-                          })(t),
-                        null == i || i();
-                },
-                text: I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(b.amount, b.currency) }),
-                icon: o,
-            });
-}
-function y(t) {
-    var e,
-        n,
-        { appId: i, skuId: a, onClick: u } = t,
-        c = (function (t, e) {
-            if (null == t) return {};
-            var n,
-                i,
-                r = (function (t, e) {
-                    if (null == t) return {};
-                    var n,
-                        i,
-                        r = {},
-                        l = Object.keys(t);
-                    for (i = 0; i < l.length; i++) (n = l[i]), e.indexOf(n) >= 0 || (r[n] = t[n]);
-                    return r;
-                })(t, e);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(t);
-                for (i = 0; i < l.length; i++)
-                    (n = l[i]),
-                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
-            }
-            return r;
-        })(t, ["appId", "skuId", "onClick"]);
-    let f = (0, s.Z)();
-    return (0, r.jsx)(
-        o.zxk,
-        ((e = (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var n = null != arguments[e] ? arguments[e] : {},
-                    i = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                        }),
-                    )),
-                    i.forEach(function (e) {
-                        var i;
-                        (i = n[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (t[e] = i);
-                    });
-            }
-            return t;
-        })({}, c)),
-        (n = n =
-            {
-                onClick: (t) => {
-                    if (
-                        (p.default.track(O.rMx.STOREFRONT_PURCHASE_CLICKED, {
-                            application_id: i,
-                            sku_id: a,
-                        }),
-                        !f)
-                    ) {
-                        t.preventDefault(), t.stopPropagation();
-                        let e = O.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(i, a),
-                            n = (0, l.Ui)(e, !1);
-                        (0, d.uL)(n);
-                        return;
-                    }
-                    null == u || u(t);
-                },
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-              }),
-        e),
+    _ = n(110742),
+    p = n(981631),
+    h = n(388032);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
     );
 }
-function P(t) {
-    let { text: e } = t;
-    return (0, r.jsx)(o.zxk, {
-        text: e,
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = O(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function O(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+var v = (function (e) {
+    return (
+        (e[(e.AVAILABLE = 0)] = "AVAILABLE"),
+        (e[(e.LOADING = 1)] = "LOADING"),
+        (e[(e.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
+        (e[(e.SUBSCRIBED = 3)] = "SUBSCRIBED"),
+        (e[(e.UNAVAILABLE = 4)] = "UNAVAILABLE"),
+        e
+    );
+})({});
+function I(e, t) {
+    switch (e) {
+        case 2:
+            return h.intl.formatToPlainString(h.t.k1ew5O, { rate: t });
+        case 3:
+            return h.intl.formatToPlainString(h.t["Hs3Y+P"], { rate: t });
+        case 4:
+            return h.intl.string(h.t.DLAKbm);
+    }
+}
+function T(e) {
+    let { appId: t, onClick: n, onHasClicked: i, skuId: a, subscriptionPlan: o, icon: s, state: l = 0 } = e,
+        c = (e) => {
+            n(e), null == i || i();
+        },
+        u = null != o ? (0, f.xg)(o) : null,
+        d = 1 === l;
+    return 0 === l || d
+        ? (0, r.jsx)(A, {
+              appId: t,
+              skuId: a,
+              onClick: c,
+              loading: d,
+              icon: s,
+              text: null != u ? h.intl.formatToPlainString(h.t.i4T8v7, { rate: u }) : h.intl.string(h.t.uuzaAA),
+          })
+        : (0, r.jsx)(C, { text: I(l, null != u ? u : "") });
+}
+function S(e) {
+    let { appId: t, onClick: n, onHasClicked: i, sku: a, icon: l } = e,
+        { analyticsLocations: u } = (0, s.ZP)(o.Z.APP_STOREFRONT),
+        d = () => {
+            (0, c.r)({
+                appId: t,
+                skuId: a.id,
+                analyticsLocations: u,
+            });
+        },
+        m = (0, _.M)(a.id),
+        g = a.type === p.epS.DURABLE && m,
+        { price: E } = a;
+    if (null == E) return null;
+    let b = (e) => {
+        (null != n ? n : d)(e), null == i || i();
+    };
+    return g
+        ? (0, r.jsx)(C, { text: h.intl.string(h.t["6cfuDg"]) })
+        : (0, r.jsx)(A, {
+              appId: t,
+              skuId: a.id,
+              onClick: b,
+              text: h.intl.format(h.t.Xp5WTk, { price: (0, f.T4)(E.amount, E.currency) }),
+              icon: l,
+          });
+}
+function A(e) {
+    var { appId: t, skuId: n, onClick: o } = e,
+        s = y(e, ["appId", "skuId", "onClick"]);
+    let c = (0, l.Z)(),
+        f = (e) => {
+            if (
+                (d.default.track(p.rMx.STOREFRONT_PURCHASE_CLICKED, {
+                    application_id: t,
+                    sku_id: n,
+                }),
+                !c)
+            ) {
+                e.preventDefault(), e.stopPropagation();
+                let r = p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n),
+                    a = (0, i.Ui)(r, !1);
+                (0, u.uL)(a);
+                return;
+            }
+            null == o || o(e);
+        };
+    return (0, r.jsx)(a.zxk, b(g({}, s), { onClick: f }));
+}
+function C(e) {
+    let { text: t } = e;
+    return (0, r.jsx)(a.zxk, {
+        text: t,
         disabled: !0,
         variant: "primary",
     });

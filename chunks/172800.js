@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    N = n(999642);
-function C(e, t, n) {
+    C = n(999642);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,23 +97,23 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = (e) => {
+let L = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: a,
-            onSelect: C,
+            onSelect: N,
             onSelectSoundmoji: P,
-            onInspect: L,
-            surrogateCodePoint: x,
-            getEmojiItemProps: M,
-            getEmojiRowProps: k,
-            isScrolling: j,
+            onInspect: x,
+            surrogateCodePoint: L,
+            getEmojiItemProps: j,
+            getEmojiRowProps: M,
+            isScrolling: k,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
             allowAnimatedEmoji: B,
-            showEmojiFavoriteTooltip: V,
-            channelGuildId: F,
-            category: Z,
+            showEmojiFavoriteTooltip: Z,
+            channelGuildId: V,
+            category: F,
             selectedItemClassName: H,
             channelId: Y,
             messageId: W,
@@ -165,12 +165,12 @@ let x = (e) => {
                             shouldShowRoundHighlight: f,
                         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: p } = e,
-                        h = null != (n = M(p, G)) ? n : {},
+                        h = null != (n = j(p, G)) ? n : {},
                         { ref: m, tabIndex: g, onFocus: E } = h,
                         b = D(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            j.current || U.current || L(e);
+                            k.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -179,12 +179,12 @@ let x = (e) => {
                             children: (0, r.jsx)("button", {
                                 "aria-label": d,
                                 ref: m,
-                                className: o()(N.emojiItem, {
-                                    [N.emojiItemLarge]: e_,
-                                    [N.emojiItemMedium]: ep,
-                                    [N.emojiItemSelected]: y && !f,
+                                className: o()(C.emojiItem, {
+                                    [C.emojiItemLarge]: e_,
+                                    [C.emojiItemMedium]: ep,
+                                    [C.emojiItemSelected]: y && !f,
                                     [null != H ? H : ""]: y,
-                                    [N.showPulse]: eu === t,
+                                    [C.showPulse]: eu === t,
                                 }),
                                 onFocus: null != E ? E : O,
                                 onMouseOver: O,
@@ -203,9 +203,9 @@ let x = (e) => {
                         a = el.rowIndex === t && el.columnIndex === i,
                         o = (t) => {
                             t.stopPropagation(),
-                                j.current ||
+                                k.current ||
                                     U.current ||
-                                    (C(e, {
+                                    (N(e, {
                                         isFinalSelection: !0,
                                         toggleFavorite: !1,
                                     }),
@@ -235,7 +235,7 @@ let x = (e) => {
                     return n({
                         handleSelect: o,
                         icon: (0, r.jsx)("img", {
-                            className: N.icon,
+                            className: C.icon,
                             src: l,
                             alt: "",
                         }),
@@ -247,9 +247,9 @@ let x = (e) => {
                     if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
-                            j.current ||
+                            k.current ||
                                 U.current ||
-                                (C(e, {
+                                (N(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1,
                                 }),
@@ -260,8 +260,8 @@ let x = (e) => {
                         icon: (0, r.jsx)(l.oFk, {
                             size: "md",
                             color: "currentColor",
-                            className: N.icon,
-                            colorClass: N.icon,
+                            className: C.icon,
+                            colorClass: C.icon,
                         }),
                         ariaLabel: A.intl.string(A.t["Z/r7IS"]),
                         shouldShowRoundHighlight: !1,
@@ -278,20 +278,20 @@ let x = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: o,
-                            isScrolling: j,
+                            isScrolling: k,
                             isUsingKeyboardNavigation: U,
-                            surrogateCodePoint: x,
+                            surrogateCodePoint: L,
                             allowAnimatedEmoji: B,
                             selectedItemClassName: H,
-                            onSelect: C,
-                            onInspect: L,
-                            channelGuildId: F,
-                            getEmojiItemProps: M,
+                            onSelect: N,
+                            onInspect: x,
+                            channelGuildId: V,
+                            getEmojiItemProps: j,
                             isMediumSize: ep,
                             isLargeSize: e_,
                             pulseItemKey: eu,
                             setPulseItemKey: ed,
-                            showEmojiFavoriteTooltip: V,
+                            showEmojiFavoriteTooltip: Z,
                             messageId: W,
                             isBurstReaction: K,
                             rowPosition: null == ef || null == (a = ef.current) ? void 0 : a.getBoundingClientRect(),
@@ -307,25 +307,25 @@ let x = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                w(R({}, k(G)), {
-                    className: o()(N.emojiListRow, {
-                        [N.emojiListRowLargeSize]: e_,
-                        [N.emojiListRowMediumSize]: ep,
+                w(R({}, M(G)), {
+                    className: o()(C.emojiListRow, {
+                        [C.emojiListRowLargeSize]: e_,
+                        [C.emojiListRowMediumSize]: ep,
                     }),
                     ref: ef,
                     children: e.map(eh),
                 }),
             );
-    if (Z === T.UX.SOUNDMOJI)
+    if (F === T.UX.SOUNDMOJI)
         return (0, r.jsx)("ul", {
-            className: N.emojiListRow,
+            className: C.emojiListRow,
             ref: ef,
             children: (0, r.jsx)(g.Z, {
                 channelId: Y,
                 onSelectSoundmoji: P,
             }),
         });
-    if (Z !== T.En.TOP_GUILD_EMOJI) return em(t);
+    if (F !== T.En.TOP_GUILD_EMOJI) return em(t);
     let eg = t.filter((e) => {
             if (X && e.type === v.ld.CREATE_EMOJI) return !0;
             let t = e;
@@ -347,30 +347,30 @@ let x = (e) => {
     return 0 === eE.length
         ? em(t)
         : (0, r.jsxs)("div", {
-              className: N.topEmojiSectionContainer,
+              className: C.topEmojiSectionContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: o()(N.topEmojiContainer, { [N.noEmojis]: 0 === eg.length }),
+                      className: o()(C.topEmojiContainer, { [C.noEmojis]: 0 === eg.length }),
                       children: em(eg),
                   }),
                   (0, r.jsxs)("div", {
-                      className: N.newlyAddedHighlightContainer,
+                      className: C.newlyAddedHighlightContainer,
                       children: [
                           (0, r.jsx)("div", {
-                              className: o()(N.newlyAddedHighlight, {
-                                  [N.oneItem]: 1 === eE.length,
-                                  [N.alignRight]: eg.length > 0,
+                              className: o()(C.newlyAddedHighlight, {
+                                  [C.oneItem]: 1 === eE.length,
+                                  [C.alignRight]: eg.length > 0,
                               }),
                               children: em(eE),
                           }),
                           (0, r.jsxs)("div", {
-                              className: o()(N.newlyAddedBadge, {
-                                  [N.newlyAddedBadgeLarge]: e_,
-                                  [N.newlyAddedBadgeMedium]: ep,
-                                  [N.alignRight]: eg.length > 0,
+                              className: o()(C.newlyAddedBadge, {
+                                  [C.newlyAddedBadgeLarge]: e_,
+                                  [C.newlyAddedBadgeMedium]: ep,
+                                  [C.alignRight]: eg.length > 0,
                               }),
                               children: [
-                                  (0, r.jsx)(b.Z, { foreground: N.newlyAddedBadgeStar }),
+                                  (0, r.jsx)(b.Z, { foreground: C.newlyAddedBadgeStar }),
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-xs/semibold",
                                       color: "always-white",

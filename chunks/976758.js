@@ -1,49 +1,49 @@
 n.d(t, { Z: () => h });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(481060),
-    a = n(846027),
-    l = n(906732),
-    o = n(313201),
+var i = n(442837),
+    a = n(481060),
+    o = n(846027),
+    s = n(906732),
+    l = n(313201),
     c = n(131951),
-    d = n(36703),
-    u = n(388032),
-    m = n(505433);
-let p = (0, o.hQ)(),
-    g = (0, o.hQ)();
+    u = n(36703),
+    d = n(388032),
+    f = n(505433);
+let _ = (0, l.hQ)(),
+    p = (0, l.hQ)();
 function h() {
-    let { analyticsLocations: e } = (0, l.ZP)(),
-        { inputVolume: t, outputVolume: n } = (0, r.cj)([c.Z], () => ({
+    let { analyticsLocations: e } = (0, s.ZP)(),
+        { inputVolume: t, outputVolume: n } = (0, i.cj)([c.Z], () => ({
             inputVolume: c.Z.getInputVolume(),
             outputVolume: c.Z.getOutputVolume(),
         }));
-    return (0, i.jsxs)("div", {
-        className: m.volumes,
+    return (0, r.jsxs)("div", {
+        className: f.volumes,
         children: [
-            (0, i.jsx)("div", {
-                className: m.column,
-                children: (0, i.jsx)(s.xJW, {
-                    title: u.intl.string(u.t.OX2Bnp),
-                    titleId: p,
-                    children: (0, i.jsx)(s.iRW, {
-                        initialValue: (0, d.P)(t),
-                        asValueChanges: (t) => a.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        "aria-labelledby": p,
+            (0, r.jsx)("div", {
+                className: f.column,
+                children: (0, r.jsx)(a.xJW, {
+                    title: d.intl.string(d.t.OX2Bnp),
+                    titleId: _,
+                    children: (0, r.jsx)(a.iRW, {
+                        initialValue: (0, u.P)(t),
+                        asValueChanges: (t) => o.Z.setInputVolume((0, u.A)(t), { analyticsLocations: e }),
+                        "aria-labelledby": _,
                     }),
                 }),
             }),
-            (0, i.jsx)("div", {
-                className: m.column,
-                children: (0, i.jsx)(s.xJW, {
-                    title: u.intl.string(u.t.eATD2N),
-                    titleId: g,
-                    children: (0, i.jsx)(s.iRW, {
-                        initialValue: (0, d.P)(n),
+            (0, r.jsx)("div", {
+                className: f.column,
+                children: (0, r.jsx)(a.xJW, {
+                    title: d.intl.string(d.t.eATD2N),
+                    titleId: p,
+                    children: (0, r.jsx)(a.iRW, {
+                        initialValue: (0, u.P)(n),
                         maxValue: 200,
                         onValueRender: (e) => "".concat(e.toFixed(0), "%"),
-                        asValueChanges: (t) => a.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        "aria-labelledby": g,
+                        asValueChanges: (t) => o.Z.setOutputVolume((0, u.A)(t), { analyticsLocations: e }),
+                        "aria-labelledby": p,
                     }),
                 }),
             }),

@@ -1,31 +1,32 @@
-n.d(t, { Z: () => d }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(259580),
-    a = n(528027),
+    a = n(259580),
+    o = n(528027),
     s = n(686807),
-    o = n(113318),
+    l = n(113318),
     c = n(490944);
-function d(e) {
-    let { benefit: t, guildId: n, onClick: d } = e,
-        u = (0, o.Z)(n, t.ref_id),
-        m = (0, r.jsx)(a.Z, {
+function u(e) {
+    let { benefit: t, guildId: n, onClick: u } = e,
+        d = (0, l.Z)(n, t.ref_id),
+        f = () => {
+            null == d || d.navigateToChannel(), u();
+        },
+        _ = (0, r.jsx)(o.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name,
         });
     return (0, r.jsxs)(i.P3F, {
         className: c.container,
-        onClick: () => {
-            null == u || u.navigateToChannel(), d();
-        },
-        "aria-label": null == u ? void 0 : u.ariaLabel,
+        onClick: f,
+        "aria-label": null == d ? void 0 : d.ariaLabel,
         role: "link",
         children: [
             (0, r.jsx)("div", {
                 className: c.emojiContainer,
-                children: m,
+                children: _,
             }),
             (0, r.jsxs)("div", {
                 className: c.infoContainer,
@@ -43,8 +44,8 @@ function d(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(l.Z, {
-                direction: l.Z.Directions.RIGHT,
+            (0, r.jsx)(a.Z, {
+                direction: a.Z.Directions.RIGHT,
                 className: c.caret,
             }),
         ],

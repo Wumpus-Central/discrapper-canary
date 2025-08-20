@@ -102,9 +102,9 @@ function b(e) {
             allowOverflow: T,
             disableTooltipPointerEvents: S,
             clickableOnMobile: A,
-            hideOnClick: N,
+            hideOnClick: C,
         } = e,
-        C = m(e, [
+        N = m(e, [
             "children",
             "text",
             "position",
@@ -130,12 +130,12 @@ function b(e) {
         {
             isVisible: w,
             isRendered: D,
-            triggerProps: L,
-            handleExitComplete: x,
-        } = (0, c.l)(_({ targetElementRef: R.targetElementRef }, C)),
-        M = i.useMemo(
+            triggerProps: x,
+            handleExitComplete: L,
+        } = (0, c.l)(_({ targetElementRef: R.targetElementRef }, N)),
+        j = i.useMemo(
             () => ({
-                triggerHandlers: L,
+                triggerHandlers: x,
                 triggerRef: R.triggerRef,
                 targetElementRef: R.targetElementRef,
                 tooltipId: P,
@@ -148,12 +148,12 @@ function b(e) {
                 caretConfig: p,
                 layerContext: l,
                 onAnimationRest: u,
-                handleExitComplete: x,
+                handleExitComplete: L,
             }),
-            [L, R.triggerRef, R.targetElementRef, P, w, D, n, a, o, s, p, l, u, x],
+            [x, R.triggerRef, R.targetElementRef, P, w, D, n, a, o, s, p, l, u, L],
         );
     return (0, r.jsxs)(E.Provider, {
-        value: M,
+        value: j,
         children: [t, (0, r.jsx)(v, {})],
     });
 }

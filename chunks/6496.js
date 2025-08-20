@@ -1,11 +1,11 @@
 n.d(t, {
     RR: () => A,
     WW: () => T,
-    bE: () => C,
-    n4: () => M,
-    q8: () => N,
+    bE: () => N,
+    n4: () => j,
+    q8: () => C,
     t$: () => S,
-    xl: () => x,
+    xl: () => L,
 }),
     n(415506),
     n(388685),
@@ -95,7 +95,7 @@ function S(e) {
 function A(e) {
     return d.Z.getUploads(e, c.d.FirstThreadMessage).length;
 }
-function N(e) {
+function C(e) {
     var t, n;
     let r = l.Z.getChannel(e);
     if (null == r) return [];
@@ -106,7 +106,7 @@ function N(e) {
         s = new Set(a.map((e) => e.id));
     return Array.from(o).filter((e) => s.has(e));
 }
-function C(e, t) {
+function N(e, t) {
     return Object.keys(i.Z.getThreadsForParent(e, t)).length;
 }
 function R(e) {
@@ -131,7 +131,7 @@ function D(e) {
     let o = new Set(a.map((e) => e.id));
     return null != (n = null == (t = r.appliedTags) ? void 0 : t.filter((e) => o.has(e))) ? n : [];
 }
-function L(e) {
+function x(e) {
     let t = R(e);
     return null == t
         ? []
@@ -140,7 +140,7 @@ function L(e) {
               return null != (t = e.content_type) ? t : "unknown";
           });
 }
-function x(e) {
+function L(e) {
     var t, n, r, i;
     let { channelId: a, sessionId: o } = e,
         s = l.Z.getChannel(a);
@@ -164,7 +164,7 @@ function x(e) {
           }
         : null;
 }
-function M(e) {
+function j(e) {
     var t, n, r, i, c, u, d;
     let { channelId: _, sessionId: p } = e,
         m = l.Z.getChannel(_);
@@ -174,7 +174,7 @@ function M(e) {
         ? I(
               O(
                   {},
-                  x({
+                  L({
                       channelId: g.id,
                       sessionId: p,
                   }),
@@ -196,7 +196,7 @@ function M(e) {
                   forum_post_is_new: null == (i = h.Z.getReadStateSnapshotAnalytics(m.id)) ? void 0 : i.isNew,
                   forum_post_is_unread: null == (c = h.Z.getReadStateSnapshotAnalytics(m.id)) ? void 0 : c.hasUnreads,
                   forum_post_is_following: a.Z.hasJoined(m.id),
-                  forum_post_attachment_mimetypes: L(m.id),
+                  forum_post_attachment_mimetypes: x(m.id),
               },
           )
         : null;

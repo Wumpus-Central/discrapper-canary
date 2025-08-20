@@ -81,11 +81,11 @@ function v(e) {
         T = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
         S = i.useRef(null),
         A = (0, _.Z)(S, g, null == I ? window : I),
-        N = O(b({}, E), {
+        C = O(b({}, E), {
             frame_id: T,
             platform: h.S4.DESKTOP,
         }),
-        [C, R] = i.useState(!1),
+        [N, R] = i.useState(!1),
         P = u.Z.theme,
         w = b({}, a);
     function D(e) {
@@ -93,7 +93,7 @@ function v(e) {
         null == o || o(e.target),
             (S.current = e.target),
             A(!0),
-            null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : "");
+            null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
     }
     return (
         P === m.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
@@ -118,7 +118,7 @@ function v(e) {
                 }
             );
         }, []),
-        C && (w.pointerEvents = "none"),
+        N && (w.pointerEvents = "none"),
         null != t
             ? (0, r.jsx)("iframe", {
                   style: w,
@@ -127,7 +127,7 @@ function v(e) {
                   onLoad: D,
                   sandbox: (0, p.Z)({ allowPopups: y }),
                   className: n,
-                  src: "".concat(t, "?").concat(new URLSearchParams(N)),
+                  src: "".concat(t, "?").concat(new URLSearchParams(C)),
               })
             : null
     );

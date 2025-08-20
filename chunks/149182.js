@@ -14,7 +14,7 @@
     }
     function d(e, t, n, r) {
         var i = Object.create((t && t.prototype instanceof E ? t : E).prototype);
-        return (i._invoke = N(e, n, new w(r || []))), i;
+        return (i._invoke = C(e, n, new w(r || []))), i;
     }
     function f(e, t, n) {
         try {
@@ -90,18 +90,18 @@
         }
         this._invoke = r;
     }
-    function N(e, t, n) {
+    function C(e, t, n) {
         var r = _;
         return function (i, a) {
             if (r === h) throw Error("Generator is already running");
             if (r === m) {
                 if ("throw" === i) throw a;
-                return L();
+                return x();
             }
             for (n.method = i, n.arg = a; ; ) {
                 var o = n.delegate;
                 if (o) {
-                    var s = C(o, n);
+                    var s = N(o, n);
                     if (s) {
                         if (s === g) continue;
                         return s;
@@ -125,11 +125,11 @@
             }
         };
     }
-    function C(e, t) {
+    function N(e, t) {
         var r = e.iterator[t.method];
         if (n === r) {
             if (((t.delegate = null), "throw" === t.method)) {
-                if (e.iterator.return && ((t.method = "return"), (t.arg = n), C(e, t), "throw" === t.method)) return g;
+                if (e.iterator.return && ((t.method = "return"), (t.arg = n), N(e, t), "throw" === t.method)) return g;
                 (t.method = "throw"), (t.arg = TypeError("The iterator does not provide a 'throw' method"));
             }
             return g;
@@ -172,9 +172,9 @@
                 return (a.next = a);
             }
         }
-        return { next: L };
+        return { next: x };
     }
-    function L() {
+    function x() {
         return {
             value: n,
             done: !0,

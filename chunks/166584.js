@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854), n(642613);
+n.d(t, { Z: () => j }), n(388685), n(539854), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(772848),
@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function N(e, t) {
         e
     );
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,12 +96,12 @@ function R(e, t) {
 let P = 4,
     w = 268,
     D = 2,
-    L = (e) => {
+    x = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
         return t > 0 ? t + P : 0;
     };
-function x(e) {
+function L(e) {
     let {
             user: t,
             currentUser: n,
@@ -117,19 +117,19 @@ function x(e) {
         A = (e, t) => {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
-        [R, x] = i.useState(d),
-        [M, k] = i.useState(w),
-        [j, U] = i.useState(!1),
+        [R, L] = i.useState(d),
+        [j, M] = i.useState(w),
+        [k, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
-        V = i.useRef(0);
+        Z = i.useRef(0);
     i.useLayoutEffect(() => {
-        V.current = 0;
+        Z.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
-            if (j) return;
-            let e = L(G.current),
-                t = L(B.current),
+            if (k) return;
+            let e = x(G.current),
+                t = x(B.current),
                 n = [],
                 r = w - e - t;
             for (let e = 0; e < D; e++) {
@@ -138,7 +138,7 @@ function x(e) {
                     let i = d[r],
                         a = T.current[i.id];
                     if (null == a) {
-                        0 === V.current && n.push(i);
+                        0 === Z.current && n.push(i);
                         continue;
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
@@ -146,11 +146,11 @@ function x(e) {
                     (e += o + P), n.push(i);
                 }
             }
-            x(n.length === R.length ? R : n), k(r), V.current++;
-        }, [d, R, j]);
-    let F = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
-        Z = (0, o.ZP)({
-            id: F,
+            L(n.length === R.length ? R : n), M(r), Z.current++;
+        }, [d, R, k]);
+    let V = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
+        F = (0, o.ZP)({
+            id: V,
             isEnabled: !0,
             scrollToStart: O.Cyb,
             scrollToEnd: O.Cyb,
@@ -158,14 +158,14 @@ function x(e) {
         }),
         H = d.length,
         Y = 0 === H ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
-        W = (j ? d : R).map((e, i) => {
+        W = (k ? d : R).map((e, i) => {
             var a;
             return (0, r.jsx)(
                 b.Z,
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== R.length - 1 ? w : M },
+                    style: { maxWidth: k || i !== R.length - 1 ? w : j },
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => E(e),
@@ -185,14 +185,14 @@ function x(e) {
             U(!1), K({ action: "COLLAPSE_ROLES" });
         }, [K]);
     return (0, r.jsx)(s.bG, {
-        navigator: Z,
+        navigator: F,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = C(e, ["ref"]);
+                    n = N(e, ["ref"]);
                 return (0, r.jsxs)(
                     "div",
-                    N(
+                    C(
                         S(
                             {
                                 className: I.root,
@@ -205,7 +205,7 @@ function x(e) {
                             children: [
                                 W,
                                 R.length < d.length
-                                    ? j
+                                    ? k
                                         ? (0, r.jsx)(c.DY3, {
                                               text: v.intl.string(v.t.XnXtCg),
                                               children: (0, r.jsx)(c.P3F, {
@@ -249,7 +249,7 @@ function x(e) {
         }),
     });
 }
-function M(e) {
+function j(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, g.KZ)(),
         s = (0, l.e7)([f.ZP], () => f.ZP.getMember(a.id, t.id)),
@@ -278,7 +278,7 @@ function M(e) {
         ),
         T = y && null != s;
     return 0 !== h.length || T
-        ? (0, r.jsx)(x, {
+        ? (0, r.jsx)(L, {
               user: t,
               currentUser: n,
               guild: a,

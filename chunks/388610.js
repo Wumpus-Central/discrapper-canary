@@ -66,13 +66,13 @@ function A(e, t) {
         e
     );
 }
-let N = v.QZA.CLOSED,
-    C = {},
+let C = v.QZA.CLOSED,
+    N = {},
     R = {},
     P = !1,
     w = !1,
     D = null,
-    L = [
+    x = [
         "name",
         "type",
         "topic_",
@@ -96,7 +96,7 @@ let N = v.QZA.CLOSED,
         "iconEmoji",
         "themeColor",
     ];
-function x(e) {
+function L(e) {
     if (null == a || a.id !== e) return !1;
     if (a === o) {
         let t = O.Z.getChannel(e);
@@ -111,10 +111,10 @@ function x(e) {
     }
     return !0;
 }
-function M(e) {
+function j(e) {
     let t = O.Z.getChannel(e.channelId);
-    if (null == t) return j();
-    (N = v.QZA.OPEN),
+    if (null == t) return k();
+    (C = v.QZA.OPEN),
         (o = a = t),
         (D = "location" in e && null != e.location ? e.location : null),
         (i = "subsection" in e ? e.subsection : null),
@@ -123,8 +123,8 @@ function M(e) {
         (l = o.getGuildId());
     let n = o.isModeratorReportChannel() ? v.CoT.PERMISSIONS : v.CoT.OVERVIEW;
     return (
-        (C = {}),
-        k({
+        (N = {}),
+        M({
             type: "CHANNEL_SETTINGS_SET_SECTION",
             section: null != r ? r : n,
             subsection: i,
@@ -132,7 +132,7 @@ function M(e) {
         !0
     );
 }
-function k(e) {
+function M(e) {
     (r = e.section),
         (i = e.subsection),
         null != o &&
@@ -155,30 +155,30 @@ function k(e) {
                     () => (P = !1),
                 ));
 }
-function j() {
-    (w = !1), (N = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
+function k() {
+    (w = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function U() {
-    (N = v.QZA.SUBMITTING), (C = {});
+    (C = v.QZA.SUBMITTING), (N = {});
 }
 function G() {
-    (a = o), (N = v.QZA.OPEN);
+    (a = o), (C = v.QZA.OPEN);
 }
 function B(e) {
     var t;
-    (N = v.QZA.OPEN),
-        (C = Object.keys(null != (t = e.errors) ? t : {}).reduce((t, n) => {
+    (C = v.QZA.OPEN),
+        (N = Object.keys(null != (t = e.errors) ? t : {}).reduce((t, n) => {
             let r = e.errors[n];
             return (0, u.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
         }, {}));
 }
-let V = d().debounce(() => {
+let Z = d().debounce(() => {
     if (null == o || null == a) return !1;
     let e = o.toJS(),
         t = a.toJS();
-    L.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
+    x.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
 }, 500);
-function F(e) {
+function V(e) {
     let {
         name: t,
         channelType: n,
@@ -228,9 +228,9 @@ function F(e) {
         null != O && (o = o.set("defaultForumLayout", O)),
         void 0 !== I && (o = o.set("iconEmoji", I)),
         null != S && (o = o.set("themeColor", S)),
-        V();
+        Z();
 }
-function Z(e) {
+function F(e) {
     return new E.Z({
         code: e.code,
         temporary: e.temporary,
@@ -248,17 +248,17 @@ function Z(e) {
 function H(e) {
     (R = {}),
         e.invites.forEach((e) => {
-            R[e.code] = Z(e);
+            R[e.code] = F(e);
         });
 }
 function Y(e) {
     (R = T({}, R)), delete R[e.code];
 }
 function W(e) {
-    R = A(T({}, R), { [e.invite.code]: Z(e.invite) });
+    R = A(T({}, R), { [e.invite.code]: F(e.invite) });
 }
 function K(e) {
-    return !!x(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
+    return !!L(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
 }
 function z(e) {
     let { channels: t } = e;
@@ -276,7 +276,7 @@ function X(e) {
         channel: { id: t },
     } = e;
     if (null == o || o.id !== t) return !1;
-    N = v.QZA.CLOSED;
+    C = v.QZA.CLOSED;
 }
 function Q(e) {
     let { overwriteId: t } = e;
@@ -308,15 +308,15 @@ class J extends (c = p.ZP.Store) {
         return o;
     }
     getFormState() {
-        return N;
+        return C;
     }
     getCategory() {
         return s;
     }
     getProps() {
         return {
-            submitting: N === v.QZA.SUBMITTING,
-            errors: C,
+            submitting: C === v.QZA.SUBMITTING,
+            errors: N,
             channel: o,
             section: r,
             subsection: i,
@@ -329,16 +329,16 @@ class J extends (c = p.ZP.Store) {
 }
 I(J, "displayName", "ChannelSettingsStore");
 let $ = new J(m.Z, {
-        CHANNEL_SETTINGS_INIT: M,
+        CHANNEL_SETTINGS_INIT: j,
         CHANNEL_SETTINGS_SUBMIT: U,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: G,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: B,
-        CHANNEL_SETTINGS_CLOSE: j,
+        CHANNEL_SETTINGS_CLOSE: k,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: Q,
-        CHANNEL_SETTINGS_UPDATE: F,
-        CHANNEL_SETTINGS_SET_SECTION: k,
+        CHANNEL_SETTINGS_UPDATE: V,
+        CHANNEL_SETTINGS_SET_SECTION: M,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,
         CHANNEL_DELETE: X,

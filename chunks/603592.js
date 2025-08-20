@@ -20,20 +20,20 @@ let f = i.forwardRef(function (e, t) {
             tooltip: O,
             upperBadge: _,
             lowerBadge: y,
-            lowerBadgeSize: v,
-            showPill: j = !0,
+            lowerBadgeSize: j,
+            showPill: v = !0,
             className: C,
-            "aria-label": E,
-            children: x,
+            "aria-label": x,
+            children: E,
             onMouseEnter: S,
-            onMouseLeave: P,
-            onMouseDown: I,
+            onMouseLeave: I,
+            onMouseDown: P,
         } = e,
         N = (0, a.Ie)(f),
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
         children: [
-            j
+            v
                 ? (0, r.jsx)("div", {
                       className: p.pill,
                       children: (0, r.jsx)(c.Z, {
@@ -49,7 +49,7 @@ let f = i.forwardRef(function (e, t) {
                     selected: !0,
                     upperBadge: _,
                     lowerBadge: y,
-                    lowerBadgeSize: v,
+                    lowerBadgeSize: j,
                     children: (0, r.jsx)(
                         s.P3F,
                         ((n = (function (e) {
@@ -83,12 +83,12 @@ let f = i.forwardRef(function (e, t) {
                                     null == S || S(), Z(!0);
                                 },
                                 onMouseLeave: () => {
-                                    null == P || P(), Z(!1);
+                                    null == I || I(), Z(!1);
                                 },
-                                onMouseDown: I,
+                                onMouseDown: P,
                                 className: o()(p.circleIconButton, C, { [p.selected]: b || w }),
                                 onClick: h,
-                                "aria-label": "string" == typeof O && null == E ? O : E,
+                                "aria-label": "string" == typeof O && null == x ? O : x,
                                 "aria-selected": b,
                                 onContextMenu: g,
                                 focusProps: { enabled: !1 },
@@ -120,7 +120,7 @@ let f = i.forwardRef(function (e, t) {
                     ),
                 }),
             }),
-            x,
+            E,
         ],
     });
 });

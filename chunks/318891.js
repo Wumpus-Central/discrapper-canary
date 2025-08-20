@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     RI: () => I,
-    ZP: () => C,
+    ZP: () => N,
     jy: () => T,
 });
 var i = n(570140),
@@ -56,7 +56,7 @@ function A() {
         ? I()
         : T();
 }
-class N extends o.Z {
+class C extends o.Z {
     _initialize() {
         f.Z.addChangeListener(S),
             _.Z.addChangeListener(S),
@@ -76,4 +76,4 @@ class N extends o.Z {
             c.Z.removeChangeListener(A);
     }
 }
-let C = new N();
+let N = new C();

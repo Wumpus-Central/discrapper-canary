@@ -2,17 +2,17 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(893776),
-    a = n(129293),
+    s = n(129293),
     o = n(388905),
-    s = n(108427),
+    a = n(108427),
     c = n(388032),
     u = n(197571);
 function d(e) {
     let { location: t } = e,
         [d, h] = i.useState("submitting");
     return (i.useEffect(() => {
-        (0, s.e)("authorize_payment");
-        let e = (0, a.Z)(t);
+        (0, a.e)("authorize_payment");
+        let e = (0, s.Z)(t);
         if (null == e) return void h("failed");
         (async () => {
             try {

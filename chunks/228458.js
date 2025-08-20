@@ -1,3 +1,4 @@
-n.d(t, { I: () => l });
-var r,
-    l = (((r = {}).CONTEXTUAL_IMAGE = "contextual_image"), r);
+n.d(t, { I: () => r });
+var r = (function (e) {
+    return (e.CONTEXTUAL_IMAGE = "contextual_image"), e;
+})({});

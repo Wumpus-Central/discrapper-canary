@@ -33,8 +33,8 @@ function _(e) {
                 embedChannelId: n,
             };
         }),
-        I = i.useMemo(() => (0, b.S)(t), [t]),
-        E = i.useMemo(() => (0, b.a)(t), [t]),
+        E = i.useMemo(() => (0, b.S)(t), [t]),
+        I = i.useMemo(() => (0, b.a)(t), [t]),
         [S, T] = i.useState(!1),
         P = null != c && l.Y.VISIBLE.has(c.visibility),
         w = !O && !P && !C;
@@ -99,7 +99,7 @@ function _(e) {
                                             className: v.column,
                                             children: [
                                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.VECJcH) }),
-                                                (0, r.jsx)(d.Z, { value: I }),
+                                                (0, r.jsx)(d.Z, { value: E }),
                                             ],
                                         }),
                                     ],
@@ -112,7 +112,7 @@ function _(e) {
                                             className: v.column,
                                             children: [
                                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.XVGbn5) }),
-                                                (0, r.jsx)(d.Z, { value: E }),
+                                                (0, r.jsx)(d.Z, { value: I }),
                                                 (0, r.jsx)(a.xv, {
                                                     variant: "text-sm/medium",
                                                     color: "text-secondary",

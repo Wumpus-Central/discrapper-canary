@@ -18,8 +18,8 @@ function d(e) {
         x = null;
     return (
         h.forEach((e) => {
-            var i, v, j;
-            let O, E;
+            var i, v, O;
+            let j, E;
             if (null != g && g.length > 0) {
                 let t = a.default.extractTimestamp(e.id);
                 for (let e = 0; (i = e < (null == g ? void 0 : g.length)), i; e++) {
@@ -62,25 +62,25 @@ function d(e) {
                 ([I, P] =
                     ((E = v = P),
                     null == v || v.type !== T
-                        ? ((O = {
+                        ? ((j = {
                               type: T,
                               content: [],
                               key: e.id,
                           }),
-                          y.push(O))
-                        : (E = (O = v).content[O.content.length - 1]),
-                    [O, E])),
+                          y.push(j))
+                        : (E = (j = v).content[j.content.length - 1]),
+                    [j, E])),
             f === e.id && null != C)
                 ? (null != P && P.type === u.ys_.DIVIDER
                       ? (P.unreadId = e.id)
                       : null !== I
-                        ? ((j = I),
+                        ? ((O = I),
                           e.isFirstMessageInForumPost(p) ||
-                              j.content.push({
+                              O.content.push({
                                   type: u.ys_.DIVIDER,
                                   unreadId: e.id,
                               }),
-                          (j.hasUnread = !0))
+                          (O.hasUnread = !0))
                         : e.isFirstMessageInForumPost(p) ||
                           y.push({
                               type: u.ys_.DIVIDER,

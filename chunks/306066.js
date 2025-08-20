@@ -1,46 +1,46 @@
-n.d(t, { Z: () => f });
-var i = n(951288);
+n.d(t, { Z: () => m });
+var r = n(951288);
 n(647438);
-var r = n(399606),
-    s = n(481060),
-    a = n(410030),
-    l = n(607070),
-    o = n(70097),
+var i = n(399606),
+    a = n(481060),
+    o = n(410030),
+    s = n(607070),
+    l = n(70097),
     c = n(526167),
-    d = n(651323),
-    u = n(130154),
-    m = n(278712),
-    p = n(768741),
-    g = n(857998),
+    u = n(651323),
+    d = n(130154),
+    f = n(278712),
+    _ = n(768741),
+    p = n(857998),
     h = n(193371);
-let f = (e) => {
+let m = (e) => {
     let t,
         { className: n } = e,
-        f = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-        b = (0, c.rO)(),
-        x = (0, s.apv)((0, a.ZP)());
-    if (f) {
-        let e = x ? h.Z : m.Z;
-        return (0, i.jsx)("div", {
+        m = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        g = (0, c.rO)(),
+        E = (0, a.apv)((0, o.ZP)());
+    if (m) {
+        let e = E ? h.Z : f.Z;
+        return (0, r.jsx)("div", {
             className: n,
-            children: (0, i.jsx)("img", {
+            children: (0, r.jsx)("img", {
                 src: e,
                 alt: "",
             }),
         });
     }
     return (
-        (t = b ? (x ? p.Z : d.Z) : x ? g.Z : u.Z),
-        (0, i.jsx)("div", {
+        (t = g ? (E ? _.Z : u.Z) : E ? p.Z : d.Z),
+        (0, r.jsx)("div", {
             className: n,
-            children: (0, i.jsx)(
-                o.Z,
+            children: (0, r.jsx)(
+                l.Z,
                 {
                     muted: !0,
                     autoPlay: !0,
                     playsInline: !0,
                     loop: !0,
-                    children: (0, i.jsx)("source", { src: t }),
+                    children: (0, r.jsx)("source", { src: t }),
                 },
                 t,
             ),

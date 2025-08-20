@@ -1,21 +1,21 @@
 r.d(t, {
     C: () => S,
-    Z: () => P,
+    Z: () => E,
 }),
     r(388685);
 var n = r(951288),
     l = r(647438),
     i = r(296009),
     a = r(442837),
-    o = r(481060),
-    c = r(355467),
+    c = r(481060),
+    o = r(355467),
     s = r(981312),
     u = r(314897),
     d = r(351402),
     f = r(206599),
     g = r(747101),
-    p = r(517157),
-    b = r(985748),
+    b = r(517157),
+    p = r(985748),
     O = r(566007),
     m = r(173951),
     j = r(455731),
@@ -23,7 +23,7 @@ var n = r(951288),
     v = r(795990),
     x = r(388032),
     h = r(830202);
-function E(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -48,7 +48,7 @@ function E(e) {
     }
     return e;
 }
-function P(e) {
+function E(e) {
     var { widget: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
@@ -73,13 +73,13 @@ function P(e) {
         })(e, ["widget"]);
     switch (t.type) {
         case i.l.FAVORITE_GAMES:
-            return (0, n.jsx)(O.Z, E({ widget: t }, r));
+            return (0, n.jsx)(O.Z, P({ widget: t }, r));
         case i.l.CURRENT_GAMES:
-            return (0, n.jsx)(b.Z, E({ widget: t }, r));
+            return (0, n.jsx)(p.Z, P({ widget: t }, r));
         case i.l.WANT_TO_PLAY_GAMES:
-            return (0, n.jsx)(j.Z, E({ widget: t }, r));
+            return (0, n.jsx)(j.Z, P({ widget: t }, r));
         case i.l.PLAYED_GAMES:
-            return (0, n.jsx)(m.Z, E({ widget: t }, r));
+            return (0, n.jsx)(m.Z, P({ widget: t }, r));
         default:
             return null;
     }
@@ -88,8 +88,8 @@ function w() {
     return (0, n.jsxs)("div", {
         className: h.ukTeenDisclaimer,
         children: [
-            (0, n.jsx)(o.d3s, { size: "xs" }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.d3s, { size: "xs" }),
+            (0, n.jsx)(c.Text, {
                 "aria-label": x.intl.string(x.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -98,30 +98,30 @@ function w() {
         ],
     });
 }
-function _(e) {
+function I(e) {
     let { user: t, guildId: r, channelId: i } = e,
-        o = (0, p.Z)(t.id),
-        { widgets: b, isGameFetching: O } = (0, g.Z)(o),
+        c = (0, b.Z)(t.id),
+        { widgets: p, isGameFetching: O } = (0, g.Z)(c),
         m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
                 r = (0, s.U)();
             return (
                 l.useEffect(() => {
-                    null == e && null == t && r && (0, c.GE)();
+                    null == e && null == t && r && (0, o.GE)();
                 }, [e, t, r]),
                 "GB" === e && r
             );
         })(),
-        x = 0 === b.length && m;
-    return ((0, f.J)(m, b), x)
+        x = 0 === p.length && m;
+    return ((0, f.J)(m, p), x)
         ? (0, n.jsx)(v.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   j && (0, n.jsx)(w, {}),
-                  b.map((e) =>
+                  p.map((e) =>
                       (0, n.jsx)(
-                          P,
+                          E,
                           {
                               widget: e,
                               user: t,
@@ -137,9 +137,9 @@ function _(e) {
           });
 }
 function S(e) {
-    return (0, n.jsx)(o.Ttm, {
+    return (0, n.jsx)(c.Ttm, {
         className: h.scroller,
         fade: !0,
-        children: (0, n.jsx)(_, E({}, e)),
+        children: (0, n.jsx)(I, P({}, e)),
     });
 }

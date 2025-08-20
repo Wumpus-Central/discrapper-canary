@@ -1,20 +1,20 @@
 n.d(t, {
-    QH: () => s,
-    Z7: () => l,
-    yN: () => r,
+    QH: () => a,
+    Z7: () => o,
+    yN: () => i,
 }),
     n(781311);
-let i = (0, n(972959).H)(() => ({
+let r = (0, n(972959).H)(() => ({
     query: "",
     isActive: !1,
     selected: null,
 }));
-function r(e) {
-    i.setState({ query: e });
+function i(e) {
+    r.setState({ query: e });
 }
-function s(e) {
-    i.setState({ isActive: e });
+function a(e) {
+    r.setState({ isActive: e });
 }
-function l() {
-    return i.useField("query");
+function o() {
+    return r.useField("query");
 }

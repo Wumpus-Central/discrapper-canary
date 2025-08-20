@@ -1,3 +1,4 @@
-n.d(e, { e: () => i });
-var s = n(709054);
-let i = (t) => 86400000 > Math.abs(s.default.extractTimestamp(t.id) - new Date().getTime());
+n.d(t, { e: () => a });
+var r = n(709054);
+let i = 86400000,
+    a = (e) => Math.abs(r.default.extractTimestamp(e.id) - new Date().getTime()) < i;

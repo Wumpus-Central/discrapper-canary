@@ -28,20 +28,20 @@ async function p(e) {
             intent: S,
         } = e,
         A = I ? i.u1M : i.z1l,
-        N = l.Z.getPremiumTypeSubscription();
-    if (null != N && N.isPurchasedExternally && null != N.paymentGateway) {
+        C = l.Z.getPremiumTypeSubscription();
+    if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
         null != g && g(),
             a.Z.show({
-                title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[N.paymentGateway] }),
+                title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[C.paymentGateway] }),
                 body: f.intl.format(f.t.NY03WF, {
-                    paymentGatewayName: d.Vzj[N.paymentGateway],
-                    subscriptionManagementLink: (0, u.JE)(N.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                    paymentGatewayName: d.Vzj[C.paymentGateway],
+                    subscriptionManagementLink: (0, u.JE)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
     }
     Promise.all([(0, o.tZ)(), (0, s.Y2)()]);
-    let C = () => {
+    let N = () => {
         c.default.track(d.rMx.MODAL_DISMISSED, {
             type: d.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
             location: p,
@@ -49,13 +49,7 @@ async function p(e) {
     };
     await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([
-                n.e("8016"),
-                n.e("22646"),
-                n.e("88876"),
-                n.e("24920"),
-                n.e("66546"),
-            ]).then(n.bind(n, 343649));
+            let { default: e } = await Promise.all([n.e("24920"), n.e("26539")]).then(n.bind(n, 343649));
             return (n) => {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {
@@ -79,7 +73,7 @@ async function p(e) {
         },
         {
             modalKey: _,
-            onCloseCallback: C,
+            onCloseCallback: N,
             onCloseRequest: () => {
                 (0, i.Mr3)(_), null == E || E(!1);
             },

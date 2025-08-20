@@ -49,10 +49,10 @@ let A = {
                 (null == l ? void 0 : l.type) === d.tI.VIEW_CHANNEL
                     ? l.channelId
                     : null;
-        if (!1 === N(i) || !1 === N(c)) return !1;
+        if (!1 === C(i) || !1 === C(c)) return !1;
         if (null != i && (null == l ? void 0 : l.type) === d.tI.CREATE_THREAD) return u.Z.closeChannelSidebar(i), !1;
-        let f = C(i),
-            _ = C(c);
+        let f = N(i),
+            _ = N(c);
         return (
             null == i || f || _ || null == l
                 ? null != i && !f && s.Z.getChatOpen(i)
@@ -63,14 +63,14 @@ let A = {
         );
     },
 };
-function N(e) {
+function C(e) {
     if (null != e) {
         if (g.Z.isEditingAny(e)) return i.Z.endEditMessage(e), !1;
         if (null != c.Z.getPendingReply(e)) return (0, l.A6)(e), !1;
         if (null != f.Z.getStickerPreview(e, m.d.ChannelMessage)) return (0, _.qB)(e, m.d.ChannelMessage), !1;
     }
 }
-function C(e) {
+function N(e) {
     if (null == e) return !1;
     let t = !1;
     return (

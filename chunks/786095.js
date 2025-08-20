@@ -65,11 +65,11 @@ function S(e, t) {
         { createNewEditingRule: _ } = (0, d.V)(),
         [Z, T] = i.useState(!1),
         [w, I] = (0, s.I2)(t),
-        { rulesByTriggerType: A, updateRule: N } = (0, s.pH)(t),
+        { rulesByTriggerType: N, updateRule: A } = (0, s.pH)(t),
         x = i.useMemo(() => {
             var e;
-            return null != (e = A[j]) ? e : [];
-        }, [A]),
+            return null != (e = N[j]) ? e : [];
+        }, [N]),
         D = 0 === x.length,
         M = n > x.length && !D;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
@@ -106,7 +106,7 @@ function S(e, t) {
                 }),
             });
             await E(i, x),
-                N(i),
+                A(i),
                 null != P
                     ? (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.wH6L0t), l.ToastType.FAILURE))
                     : (0, l.showToast)((0, l.createToast)(y.intl.string(y.t["0rdYm5"]), l.ToastType.SUCCESS));

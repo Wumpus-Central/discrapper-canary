@@ -1,57 +1,57 @@
-n.d(t, { t: () => m });
-var i = n(951288),
-    r = n(647438),
-    s = n(755721),
-    a = n(481060),
-    l = n(243778),
-    o = n(921944),
+n.d(t, { t: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(755721),
+    o = n(481060),
+    s = n(243778),
+    l = n(921944),
     c = n(388032),
-    d = n(375369);
-let u = (e) => {
+    u = n(375369);
+let d = (e) => {
         let { markAsDismissed: t } = e;
         return (
-            r.useEffect(() => t(o.L.UNKNOWN), [t]),
-            (0, i.jsx)(a.IGR, {
-                className: d.newBadge,
+            i.useEffect(() => t(l.L.UNKNOWN), [t]),
+            (0, r.jsx)(o.IGR, {
+                className: u.newBadge,
                 text: c.intl.string(c.t.y2b7CA),
             })
         );
     },
-    m = (e) => {
-        let { title: t, body: n, img: r, newIndicatorDismissibleContent: o, onClick: m } = e;
-        return (0, i.jsxs)("div", {
-            className: d.container,
+    f = (e) => {
+        let { title: t, body: n, img: i, newIndicatorDismissibleContent: l, onClick: f } = e;
+        return (0, r.jsxs)("div", {
+            className: u.container,
             children: [
-                r,
-                (0, i.jsxs)("div", {
-                    className: d.textContainer,
+                i,
+                (0, r.jsxs)("div", {
+                    className: u.textContainer,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: d.headerText,
+                        (0, r.jsxs)("div", {
+                            className: u.headerText,
                             children: [
-                                (0, i.jsx)(l.ZP, {
-                                    contentTypes: [o],
+                                (0, r.jsx)(s.ZP, {
+                                    contentTypes: [l],
                                     children: (e) => {
                                         let { visibleContent: t, markAsDismissed: n } = e;
-                                        return t === o ? (0, i.jsx)(u, { markAsDismissed: n }) : null;
+                                        return t === l ? (0, r.jsx)(d, { markAsDismissed: n }) : null;
                                     },
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-md/semibold",
                                     children: t,
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             children: n,
                         }),
                     ],
                 }),
-                (0, i.jsx)(s.zx, {
-                    size: s.Ph.MEDIUM,
-                    onClick: m,
-                    className: d.reconnectButton,
+                (0, r.jsx)(a.zx, {
+                    size: a.Ph.MEDIUM,
+                    onClick: f,
+                    className: u.reconnectButton,
                     children: c.intl.string(c.t.vD60Pj),
                 }),
             ],

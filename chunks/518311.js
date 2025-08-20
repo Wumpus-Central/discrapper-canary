@@ -28,8 +28,8 @@ var r,
     C = n(708690),
     x = n(194359),
     v = n(425493),
-    j = n(794433),
-    O = n(493773),
+    O = n(794433),
+    j = n(493773),
     E = n(40851),
     S = n(100527),
     P = n(367907),
@@ -356,13 +356,13 @@ class eg extends (r = l.PureComponent) {
             (0, i.jsxs)("div", {
                 className: el.searchBar,
                 children: [
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(O.Z, {
                         ref: this.searchBarRef,
                         className: el.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === a.size ? ei.intl.string(ei.t.Wxnb6u) : "",
                         disabled: this.isPartyFull(),
-                        size: j.Z.Sizes.MEDIUM,
+                        size: O.Z.Sizes.MEDIUM,
                         maxHeight: this.props.inBornThisNamedExperiment ? 110 : void 0,
                         query: t,
                         selectedRow: l,
@@ -942,7 +942,7 @@ function e_(e) {
             ),
             [r, h, c],
         ),
-        (0, O.ZP)(() => {
+        (0, j.ZP)(() => {
             (0, D._)();
         }),
         {
@@ -984,8 +984,8 @@ function eC(e) {
             renderPopout: C,
             toggleVisible: x,
             popoutOpen: v,
-            setPopoutOpen: j,
-            inBornThisNamedExperiment: O,
+            setPopoutOpen: O,
+            inBornThisNamedExperiment: j,
         } = e_({
             initialPopoutOpen: null != r && r.isGroupDM() && 0 === r.recipients.length,
             channel: r,
@@ -995,7 +995,7 @@ function eC(e) {
         E = (0, p.e7)([q.default], () => q.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return (null != (t = null == E ? void 0 : E.bot) && t) || (null != (n = null == E ? void 0 : E.isProvisional) && n)
         ? null
-        : O
+        : j
           ? (0, i.jsx)(et.ZP.Icon, {
                 ref: b,
                 onClick: _,
@@ -1013,7 +1013,7 @@ function eC(e) {
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: h,
-                onRequestClose: () => j(!1),
+                onRequestClose: () => O(!1),
                 animation: f.yRy.Animation.NONE,
                 ignoreModalClicks: !0,
                 clickTrap: !0,
@@ -1098,17 +1098,17 @@ function ex(e) {
           });
 }
 function ev(e) {
-    let t = ej(e);
+    let t = eO(e);
     return new Set(
         (0, s.chain)(B.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, U.bc)(e.type))
-            .filter((e) => ej(e.recipients) === t)
+            .filter((e) => eO(e.recipients) === t)
             .map((e) => e.id)
             .value(),
     );
 }
-function ej(e) {
+function eO(e) {
     return JSON.stringify(e.sort());
 }
 eo(eg, "contextType", E.ZP);

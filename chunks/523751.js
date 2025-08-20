@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function N(e) {
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,7 +68,7 @@ function R(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -146,7 +146,7 @@ let D = {
     },
     [y.Q.NONE]: {},
 };
-function L(e) {
+function x(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
         className: S.tooltipPremiumFooterContainer,
@@ -177,7 +177,7 @@ function L(e) {
         ],
     });
 }
-function x(e) {
+function L(e) {
     let { badgeType: t, guildTraits: n } = e,
         { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, v.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
@@ -206,11 +206,11 @@ function x(e) {
                         : null,
                 ],
             }),
-            n.premium ? (0, r.jsx)(L, { guildTraits: n }) : null,
+            n.premium ? (0, r.jsx)(x, { guildTraits: n }) : null,
         ],
     });
 }
-function M(e) {
+function j(e) {
     let t, n;
     var a,
         {
@@ -223,7 +223,7 @@ function M(e) {
             badgeStrokeColor: v,
             badgeColor: T,
             disableBoostClick: A,
-            "aria-label": C = !1,
+            "aria-label": N = !1,
         } = e;
     let w =
             null !=
@@ -241,14 +241,14 @@ function M(e) {
             ]).size)
                 ? a
                 : 18,
-        L = (0, s.e7)([m.default, h.ZP], () => {
+        x = (0, s.e7)([m.default, h.ZP], () => {
             let e = m.default.getCurrentUser();
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
-        M = (0, s.e7)([p.Z], () => p.Z.theme),
-        k = (0, O.XX)(o),
-        j = (0, y.i)(k),
-        U = i.useMemo(() => k.premium && L && !A, [A, k.premium, L]),
+        j = (0, s.e7)([p.Z], () => p.Z.theme),
+        M = (0, O.XX)(o),
+        k = (0, y.i)(M),
+        U = i.useMemo(() => M.premium && x && !A, [A, M.premium, x]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -264,30 +264,30 @@ function M(e) {
             },
             [U, o.id],
         );
-    if (j === y.Q.NONE) return null;
+    if (k === y.Q.NONE) return null;
     let {
         IconComponent: B,
-        backgroundDarkColor: V,
-        backgroundLightColor: F,
-        foregroundDarkColor: Z,
+        backgroundDarkColor: Z,
+        backgroundLightColor: V,
+        foregroundDarkColor: F,
         foregroundLightColor: H,
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = D[j];
+    } = D[k];
     if (null == B) return null;
-    k.premium && ((t = W), (n = Y));
-    let z = (0, c.wj)(M) ? Z : H,
-        q = (0, c.wj)(M) ? V : F;
+    M.premium && ((t = W), (n = Y));
+    let z = (0, c.wj)(j) ? F : H,
+        q = (0, c.wj)(j) ? Z : V;
     (t = null != t ? t : z), (n = null != n ? n : q);
     let X = Math.floor(0.75 * w) - (null != K ? K : 0);
     return (0, r.jsx)(u.ua7, {
         color: l,
         position: d,
-        "aria-label": C,
-        text: (0, r.jsx)(x, {
-            badgeType: j,
-            guildTraits: k,
+        "aria-label": N,
+        text: (0, r.jsx)(L, {
+            badgeType: k,
+            guildTraits: M,
         }),
         tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>
@@ -296,7 +296,7 @@ function M(e) {
                 tabIndex: U ? 0 : -1,
                 children: (0, r.jsx)(
                     _.Z,
-                    R(N({}, e), {
+                    R(C({}, e), {
                         className: g,
                         flowerStarClassName: E,
                         allowFullSizedIcon: !0,

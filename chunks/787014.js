@@ -111,14 +111,14 @@ async function h(e, t) {
             autoArchiveDuration: T,
             locked: S,
             invitable: A,
-            availableTags: N,
-            defaultSortOrder: C,
+            availableTags: C,
+            defaultSortOrder: N,
             defaultForumLayout: R,
             defaultTagSetting: P,
             iconEmoji: w,
             themeColor: D,
         } = t,
-        L = s.Z.getChannel(e);
+        x = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await o.Z.unarchiveThreadIfNecessary(e),
@@ -154,16 +154,16 @@ async function h(e, t) {
                               ? null
                               : void 0,
                     available_tags:
-                        null == N
+                        null == C
                             ? void 0
-                            : N.map((e) => ({
+                            : C.map((e) => ({
                                   id: e.id,
                                   name: e.name,
                                   emoji_id: e.emojiId,
                                   emoji_name: e.emojiName,
                                   moderated: e.moderated,
                               })),
-                    default_sort_order: C,
+                    default_sort_order: N,
                     default_forum_layout: R,
                     default_tag_setting: P,
                     icon_emoji:
@@ -186,8 +186,8 @@ async function h(e, t) {
                         type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
                         channelId: e,
                     });
-                    let n = null == L ? void 0 : L.getGuildId();
-                    return null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
+                    let n = null == x ? void 0 : x.getGuildId();
+                    return null == n || (null == x ? void 0 : x.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({

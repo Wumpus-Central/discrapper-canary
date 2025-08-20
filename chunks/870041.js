@@ -1,17 +1,18 @@
 n.d(t, {
-    ZP: () => a,
-    xI: () => o,
+    ZP: () => o,
+    xI: () => a,
 });
-var r,
-    i = n(818083),
-    l = n(987338),
-    o = (((r = {}).Control = "CONTROL"), (r.Interactive = "INTERACTIVE"), (r.Static = "STATIC"), r);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(987338),
+    a = (function (e) {
+        return (e.Control = "CONTROL"), (e.Interactive = "INTERACTIVE"), (e.Static = "STATIC"), e;
+    })({});
+let o = (0, r.B)({
     kind: "user",
     id: "2025-08_referral_program_popover",
     label: "Referral Program Popover Experiment",
     defaultConfig: { cohort: "CONTROL" },
-    commonTriggerPoint: l.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,

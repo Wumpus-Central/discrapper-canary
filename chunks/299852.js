@@ -1,21 +1,21 @@
-n.d(t, { Z: () => E }), n(35282), n(388685);
+n.d(t, { Z: () => j }), n(35282), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(593473),
+    s = n(593473),
     o = n(442837),
-    s = n(544891),
+    a = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
     p = n(598077),
     m = n(896797),
-    f = n(981631),
-    g = n(930441),
+    g = n(981631),
+    f = n(930441),
     _ = n(388032),
     x = n(197571);
-function b(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,10 +32,10 @@ o.ZP.initialize();
 class v extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
-            t = (0, a.parse)(this.props.location.search);
-        s.tn
+            t = (0, s.parse)(this.props.location.search);
+        a.tn
             .post({
-                url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -88,7 +88,7 @@ class v extends (r = l.PureComponent) {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => r(f.Z5c.SETTINGS("notifications", g.vG)),
+                    onClick: () => r(g.Z5c.SETTINGS("notifications", f.vG)),
                     children: _.intl.string(_.t.YYTira),
                 }),
             ],
@@ -98,7 +98,7 @@ class v extends (r = l.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: r } = this.state;
         if (null != r) {
-            let e = g.Od.find((e) => e.category === r);
+            let e = f.Od.find((e) => e.category === r);
             if (null != e) return this.renderCategorySuccess(r, e.label());
         }
         return (0, i.jsxs)(d.ZP, {
@@ -148,7 +148,7 @@ class v extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, "state", {
+            E(this, "state", {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -156,5 +156,5 @@ class v extends (r = l.PureComponent) {
             });
     }
 }
-b(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let E = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);
+E(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
+let j = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);

@@ -2,28 +2,28 @@ n.d(t, { Z: () => c }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(955415),
+    a = n(955415),
     o = n(314897),
-    a = n(782605),
-    s = n(388032);
+    s = n(782605),
+    l = n(388032);
 function c(e) {
     var t, n;
     let { author: c, inviteError: u } = e,
         d =
             (0, i.e7)([o.default], () => o.default.getId()) === c.id
-                ? s.intl.string(s.t.C89OLC)
-                : s.intl.string(s.t["YVub5+"]),
-        p = (0, a.l)(null == u ? void 0 : u.code);
-    return (0, r.jsxs)(l.Z, {
+                ? l.intl.string(l.t.C89OLC)
+                : l.intl.string(l.t["YVub5+"]),
+        f = (0, s.l)(null == u ? void 0 : u.code);
+    return (0, r.jsxs)(a.Z, {
         children: [
-            (0, r.jsx)(l.Z.Header, { text: d }),
-            (0, r.jsxs)(l.Z.Body, {
+            (0, r.jsx)(a.Z.Header, { text: d }),
+            (0, r.jsxs)(a.Z.Body, {
                 children: [
-                    (0, r.jsx)(l.Z.Icon, { expired: !0 }),
-                    (0, r.jsx)(l.Z.Info, {
+                    (0, r.jsx)(a.Z.Icon, { expired: !0 }),
+                    (0, r.jsx)(a.Z.Info, {
                         expired: !0,
-                        title: null != (t = null == p ? void 0 : p.title) ? t : s.intl.string(s.t["Jhx/ub"]),
-                        children: null != (n = null == p ? void 0 : p.description) ? n : null == u ? void 0 : u.message,
+                        title: null != (t = null == f ? void 0 : f.title) ? t : l.intl.string(l.t["Jhx/ub"]),
+                        children: null != (n = null == f ? void 0 : f.description) ? n : null == u ? void 0 : u.message,
                     }),
                 ],
             }),

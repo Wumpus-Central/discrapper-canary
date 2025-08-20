@@ -1,64 +1,64 @@
-n.d(t, { Z: () => b });
-var i = n(951288);
+n.d(t, { Z: () => g });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(755721),
-    l = n(481060),
-    o = n(906732),
+var i = n(120356),
+    a = n.n(i),
+    o = n(755721),
+    s = n(481060),
+    l = n(906732),
     c = n(47280),
-    d = n(736519),
-    u = n(117791),
-    m = n(388032),
-    p = n(602062),
-    g = n(867038),
+    u = n(736519),
+    d = n(117791),
+    f = n(388032),
+    _ = n(602062),
+    p = n(867038),
     h = n(568147),
-    f = n(373425);
-let b = (e) => {
-    let { className: t, location: n, analyticsLocation: r } = e,
-        b = (0, c.ZP)({ location: "GiftNitro" }),
-        { analyticsLocations: x } = (0, o.ZP)(n),
-        _ = b ? g : p;
-    return (0, i.jsx)(o.Gt, {
-        value: x,
-        children: (0, i.jsxs)("div", {
-            className: s()(_.container, t),
+    m = n(373425);
+let g = (e) => {
+    let { className: t, location: n, analyticsLocation: i } = e,
+        g = (0, c.ZP)({ location: "GiftNitro" }),
+        { analyticsLocations: E } = (0, l.ZP)(n),
+        b = g ? p : _;
+    return (0, r.jsx)(l.Gt, {
+        value: E,
+        children: (0, r.jsxs)("div", {
+            className: a()(b.container, t),
             children: [
-                (0, i.jsxs)("div", {
-                    className: _.textContainer,
+                (0, r.jsxs)("div", {
+                    className: b.textContainer,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "heading-lg/extrabold",
-                            className: _.heading,
-                            children: m.intl.string(m.t.Ve9Ge3),
+                            className: b.heading,
+                            children: f.intl.string(f.t.Ve9Ge3),
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            children: m.intl.string(m.t.yQ06u7),
+                            children: f.intl.string(f.t.yQ06u7),
                         }),
-                        b
-                            ? (0, i.jsx)("div", {
-                                  className: g.giftButtonContainer,
-                                  children: (0, i.jsx)(u.Z, {
-                                      buttonTextOverride: m.intl.string(m.t.Ve9Ge3),
-                                      premiumModalAnalyticsLocation: r,
+                        g
+                            ? (0, r.jsx)("div", {
+                                  className: p.giftButtonContainer,
+                                  children: (0, r.jsx)(d.Z, {
+                                      buttonTextOverride: f.intl.string(f.t.Ve9Ge3),
+                                      premiumModalAnalyticsLocation: i,
                                       variant: "secondary",
                                   }),
                               })
-                            : (0, i.jsx)(d.Z, {
-                                  className: p.giftCardButton,
+                            : (0, r.jsx)(u.Z, {
+                                  className: _.giftCardButton,
                                   textOptions: {
-                                      textOverride: m.intl.string(m.t.Ve9Ge3),
-                                      textClassName: p.giftButtonCTA,
+                                      textOverride: f.intl.string(f.t.Ve9Ge3),
+                                      textClassName: _.giftButtonCTA,
                                   },
-                                  color: a.zx.Colors.CUSTOM,
-                                  premiumModalAnalyticsLocation: r,
+                                  color: o.zx.Colors.CUSTOM,
+                                  premiumModalAnalyticsLocation: i,
                               }),
                     ],
                 }),
-                (0, i.jsx)("img", {
-                    src: b ? f.Z : h,
-                    className: _.bannerImage,
+                (0, r.jsx)("img", {
+                    src: g ? m.Z : h,
+                    className: b.bannerImage,
                     alt: "gift nitro banner",
                 }),
             ],

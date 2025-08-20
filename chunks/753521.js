@@ -1,169 +1,201 @@
-n.d(t, { default: () => g }), n(388685);
+n.d(t, { default: () => f }), n(388685);
 var i = n(951288),
-    r = n(647438),
-    s = n(481060),
-    a = n(626135),
-    l = n(115345),
-    c = n(57927),
-    o = n(273236),
-    d = n(931839),
-    m = n(905987),
-    u = n(789662),
-    x = n(981631),
-    h = n(388032),
-    j = n(920178);
-function g(e) {
-    let { onClose: t, transitionState: n, dismissable: c, guildPain: g, myUsage: f } = e,
-        [v, _] = r.useState(d.O.Intro),
-        { submitted: p, submitting: N, saveSettings: y } = (0, l.vo)(t),
-        { guildPlans: O, overrideGuild: C, getDebug: w } = (0, l.F6)(g, f),
-        T = r.useRef(null);
-    return (
-        r.useEffect(() => {
-            a.default.track(x.rMx.OPEN_MODAL, { type: "notification_migration_modal" });
-        }, []),
-        (0, i.jsxs)(s.Y0X, {
-            className: j.__invalid_modal,
-            transitionState: n,
-            "aria-label": h.intl.string(h.t.HcoRu7),
-            size: s.CgR.DYNAMIC,
-            parentComponent: "NotificationMigrationModal",
+    s = n(647438),
+    r = n(257465),
+    a = n(369585),
+    l = n(103866),
+    c = n(481060),
+    d = n(626135),
+    o = n(115345),
+    m = n(57927),
+    x = n(273236),
+    h = n(931839),
+    u = n(905987),
+    j = n(789662),
+    g = n(981631),
+    _ = n(388032),
+    b = n(920178);
+function f(e) {
+    let { onClose: t, transitionState: n, dismissable: m, guildPain: f, myUsage: p } = e,
+        [N, C] = s.useState(h.O.Intro),
+        { submitted: y, submitting: T, saveSettings: w } = (0, o.vo)(t),
+        { guildPlans: O, overrideGuild: I, getDebug: k } = (0, o.F6)(f, p),
+        M = s.useRef(null);
+    s.useEffect(() => {
+        d.default.track(g.rMx.OPEN_MODAL, { type: "notification_migration_modal" });
+    }, []);
+    let P = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(d.Z, {
-                    selectedTab: v,
-                    onClick: _,
-                    submitted: p,
-                }),
-                v === d.O.Intro
-                    ? (0, i.jsx)(o.Z, { ref: T })
-                    : v === d.O.Customize
-                      ? (0, i.jsx)(b, {
-                            guildPlans: O,
-                            overrideGuild: C,
-                            getDebug: w,
-                        })
-                      : (0, i.jsx)(m.Z, {
-                            count: Object.values(O).filter((e) => {
-                                var t;
-                                return (null != (t = e.overrideMode) ? t : e.mode) === u.AR.UseGreyDot;
-                            }).length,
-                        }),
-                (0, i.jsxs)(s.mzw, {
-                    className: j.buttons,
-                    children: [
-                        (0, i.jsxs)("div", {
-                            className: j.__invalid_left,
-                            children: [
-                                c || (v !== d.O.Tips && v !== d.O.Customize)
-                                    ? null
-                                    : (0, i.jsx)(s.eee, {
-                                          className: j.dismiss,
-                                          href: "https://dis.gd/better-muting",
-                                          children: (0, i.jsx)(s.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "interactive-normal",
-                                              children: h.intl.string(h.t.hvVgAQ),
-                                          }),
-                                      }),
-                                c && v === d.O.Intro
-                                    ? (0, i.jsx)(s.P3F, {
-                                          className: j.dismiss,
-                                          onClick: t,
-                                          children: (0, i.jsx)(s.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "interactive-normal",
-                                              children: h.intl.string(h.t.WAI6xs),
-                                          }),
-                                      })
-                                    : null,
-                                c && v === d.O.Customize
-                                    ? (0, i.jsx)(s.P3F, {
-                                          className: j.dismiss,
-                                          onClick: t,
-                                          children: (0, i.jsx)(s.Text, {
-                                              variant: "text-sm/semibold",
-                                              color: "interactive-normal",
-                                              children: h.intl.string(h.t["ETE/oK"]),
-                                          }),
-                                      })
-                                    : null,
-                            ],
-                        }),
-                        (0, i.jsxs)("div", {
-                            className: j.right,
-                            children: [
-                                v === d.O.Customize
-                                    ? (0, i.jsx)(s.Text, {
-                                          className: j.warning,
-                                          variant: "text-xs/medium",
-                                          color: "text-muted",
-                                          children: h.intl.string(h.t.nlpqxM),
-                                      })
-                                    : null,
-                                v !== d.O.Customize || p
-                                    ? null
-                                    : (0, i.jsx)(s.zxk, {
-                                          icon: s.whL,
-                                          onClick: () => _(d.O.Intro),
-                                          variant: "secondary",
-                                          text: h.intl.string(h.t["13/7kZ"]),
-                                      }),
-                                v === d.O.Intro
-                                    ? (0, i.jsx)(s.zxk, {
-                                          icon: s.ZSh,
-                                          iconPosition: "end",
-                                          onClick: () => {
-                                              var e;
-                                              (null == (e = T.current) ? void 0 : e.maybeChangeToAfterTab()) &&
-                                                  _(d.O.Customize);
-                                          },
-                                          text: h.intl.string(h.t.uw9zIy),
-                                      })
-                                    : v === d.O.Customize
-                                      ? (0, i.jsx)(s.zxk, {
-                                            icon: s.dz2,
-                                            iconPosition: "end",
-                                            onClick: () => {
-                                                _(d.O.Tips), y(O);
-                                            },
-                                            text: h.intl.string(h.t["1Qm829"]),
-                                        })
-                                      : (0, i.jsx)(s.zxk, {
-                                            variant: "primary",
-                                            text: h.intl.string(h.t.cpT0Cg),
-                                            loading: N,
-                                            onClick: t,
-                                        }),
-                            ],
-                        }),
-                    ],
-                }),
+                m || (N !== h.O.Tips && N !== h.O.Customize)
+                    ? null
+                    : (0, i.jsx)(c.eee, {
+                          className: b.dismiss,
+                          href: "https://dis.gd/better-muting",
+                          children: (0, i.jsx)(c.Text, {
+                              variant: "text-sm/semibold",
+                              color: "interactive-normal",
+                              children: _.intl.string(_.t.hvVgAQ),
+                          }),
+                      }),
+                m && N === h.O.Intro
+                    ? (0, i.jsx)(c.P3F, {
+                          className: b.dismiss,
+                          onClick: t,
+                          children: (0, i.jsx)(c.Text, {
+                              variant: "text-sm/semibold",
+                              color: "interactive-normal",
+                              children: _.intl.string(_.t.WAI6xs),
+                          }),
+                      })
+                    : null,
+                m && N === h.O.Customize
+                    ? (0, i.jsx)(c.P3F, {
+                          className: b.dismiss,
+                          onClick: t,
+                          children: (0, i.jsx)(c.Text, {
+                              variant: "text-sm/semibold",
+                              color: "interactive-normal",
+                              children: _.intl.string(_.t["ETE/oK"]),
+                          }),
+                      })
+                    : null,
             ],
-        })
-    );
-}
-function b(e) {
-    let { guildPlans: t, overrideGuild: n } = e;
-    return (0, i.jsxs)(s.Ttm, {
-        className: j.content,
+        }),
+        z = (function (e) {
+            let {
+                tab: t,
+                submitted: n,
+                setTab: i,
+                saveSettings: s,
+                guildPlans: r,
+                maybeChangeToAfterTabRef: a,
+                onClose: l,
+                submitting: d,
+            } = e;
+            return t === h.O.Intro
+                ? [
+                      {
+                          icon: c.ZSh,
+                          iconPosition: "end",
+                          text: _.intl.string(_.t.uw9zIy),
+                          onClick: () => {
+                              var e;
+                              (null == (e = a.current) ? void 0 : e.maybeChangeToAfterTab()) && i(h.O.Customize);
+                          },
+                      },
+                  ]
+                : t === h.O.Customize
+                  ? [
+                        ...(n
+                            ? []
+                            : [
+                                  {
+                                      icon: c.whL,
+                                      variant: "secondary",
+                                      text: _.intl.string(_.t["13/7kZ"]),
+                                      onClick: () => i(h.O.Intro),
+                                  },
+                              ]),
+                        {
+                            icon: c.dz2,
+                            iconPosition: "end",
+                            text: _.intl.string(_.t["1Qm829"]),
+                            onClick: () => {
+                                i(h.O.Tips), s(r);
+                            },
+                        },
+                    ]
+                  : [
+                        {
+                            variant: "primary",
+                            text: _.intl.string(_.t.cpT0Cg),
+                            loading: d,
+                            onClick: l,
+                        },
+                    ];
+        })({
+            tab: N,
+            setTab: C,
+            submitted: y,
+            submitting: T,
+            onClose: t,
+            saveSettings: w,
+            guildPlans: O,
+            maybeChangeToAfterTabRef: M,
+        });
+    return (0, i.jsxs)(r.I, {
+        transitionState: n,
+        onClose: t,
+        size: "xl",
         children: [
-            (0, i.jsxs)("div", {
-                className: j.header,
+            (0, i.jsxs)(l.f, {
                 children: [
-                    (0, i.jsx)(s.X6q, {
-                        variant: "heading-xl/bold",
-                        color: "header-primary",
-                        children: h.intl.string(h.t["zBC2+f"]),
+                    (0, i.jsx)(h.Z, {
+                        selectedTab: N,
+                        onClick: C,
+                        submitted: y,
                     }),
-                    (0, i.jsx)(s.Text, {
-                        className: j.__invalid_subtitle,
-                        variant: "text-md/medium",
-                        color: "header-secondary",
-                        children: h.intl.string(h.t["zE9e//"]),
+                    (0, i.jsxs)(c.Kqy, {
+                        style: {
+                            margin: "auto",
+                            width: "fit-content",
+                        },
+                        children: [
+                            N === h.O.Intro
+                                ? (0, i.jsx)(x.Z, { ref: M })
+                                : N === h.O.Customize
+                                  ? (0, i.jsx)(v, {
+                                        guildPlans: O,
+                                        overrideGuild: I,
+                                        getDebug: k,
+                                    })
+                                  : (0, i.jsx)(u.Z, {
+                                        count: Object.values(O).filter((e) => {
+                                            var t;
+                                            return (null != (t = e.overrideMode) ? t : e.mode) === j.AR.UseGreyDot;
+                                        }).length,
+                                    }),
+                            N === h.O.Customize
+                                ? (0, i.jsx)(c.Text, {
+                                      className: b.warning,
+                                      variant: "text-xs/medium",
+                                      color: "text-muted",
+                                      children: _.intl.string(_.t.nlpqxM),
+                                  })
+                                : null,
+                        ],
                     }),
                 ],
             }),
-            (0, i.jsx)(c.Z, {
+            (0, i.jsx)(a.G, {
+                leading: P,
+                actions: z,
+            }),
+        ],
+    });
+}
+function v(e) {
+    let { guildPlans: t, overrideGuild: n } = e;
+    return (0, i.jsxs)(c.Ttm, {
+        className: b.content,
+        children: [
+            (0, i.jsxs)("div", {
+                className: b.header,
+                children: [
+                    (0, i.jsx)(c.X6q, {
+                        variant: "heading-xl/bold",
+                        color: "header-primary",
+                        children: _.intl.string(_.t["zBC2+f"]),
+                    }),
+                    (0, i.jsx)(c.Text, {
+                        className: b.__invalid_subtitle,
+                        variant: "text-md/medium",
+                        color: "header-secondary",
+                        children: _.intl.string(_.t["zE9e//"]),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(m.Z, {
                 guildPlans: t,
                 overrideGuild: n,
             }),

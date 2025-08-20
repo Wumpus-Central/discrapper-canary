@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,15 +23,15 @@ var r = n(951288),
     T = n(737604),
     S = n(539873),
     A = n(981631),
-    N = n(921944),
-    C = n(474936),
+    C = n(921944),
+    N = n(474936),
     R = n(388032),
     P = n(164161);
 let w = () => {
         var e, t, n;
         let i = (0, s.e7)([y.default], () => v.ZP.isPremium(y.default.getCurrentUser())),
             a = (0, g.N)(),
-            o = (null == a || null == (e = a.subscription_trial) ? void 0 : e.sku_id) === C.Si.TIER_2;
+            o = (null == a || null == (e = a.subscription_trial) ? void 0 : e.sku_id) === N.Si.TIER_2;
         return (0, r.jsx)(E.Z, {
             size: c.zx.Sizes.MEDIUM,
             textOptions: {
@@ -44,13 +44,13 @@ let w = () => {
                         })
                       : R.intl.string(R.t.mr4K7O),
             },
-            subscriptionTier: C.Si.TIER_2,
+            subscriptionTier: N.Si.TIER_2,
         });
     },
     D = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(N.L.DISMISS), (0, m.Ll)(), (0, I.O)();
+                null == t || t(C.L.DISMISS), (0, m.Ll)(), (0, I.O)();
             };
         return (0, r.jsxs)("div", {
             className: P.editorHeader,
@@ -77,11 +77,11 @@ let w = () => {
             ],
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([T.Z], () => T.Z.isUpsellPreview),
             a = () => {
-                null == n || n(N.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open();
+                null == n || n(C.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open();
             };
         return (0, r.jsxs)("div", {
             className: P.editorFooter,
@@ -96,7 +96,7 @@ let w = () => {
             ],
         });
     };
-function x(e) {
+function L(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
         { analyticsLocations: a } = (0, h.ZP)(p.Z.APP_ICON_EDITOR),
         l = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
@@ -108,7 +108,7 @@ function x(e) {
     i.useEffect(() => {
         c &&
             O.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: C.cd.APP_ICON_UPSELL,
+                type: N.cd.APP_ICON_UPSELL,
                 location_stack: a,
             });
     }, [c, a]);
@@ -134,7 +134,7 @@ function x(e) {
                                   isEditor: !0,
                               }),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, r.jsx)(x, {
                               markAsDismissed: n,
                               isCoachmark: t,
                           }),

@@ -1,7 +1,7 @@
 n.d(t, {
     Ai: () => v,
     PW: () => I,
-    Tu: () => N,
+    Tu: () => C,
     am: () => O,
     hP: () => y,
     hY: () => T,
@@ -213,7 +213,7 @@ function A() {
             });
         });
 }
-function N(e, t) {
+function C(e, t) {
     a.Z.dispatch({
         type: "SPOTIFY_SET_ACTIVE_DEVICE",
         accountId: e,

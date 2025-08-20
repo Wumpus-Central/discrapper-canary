@@ -78,8 +78,8 @@ let T = (e) => {
             analyticsLocation: S,
             containerContext: A,
         } = e,
-        N = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? "light" : "dark",
-        C = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(N, ".png"),
+        C = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? "light" : "dark",
+        N = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(C, ".png"),
         R = (0, c.Iu)((e) => e.searchQuery),
         { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
     t =
@@ -94,17 +94,17 @@ let T = (e) => {
                   : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let w = null != v ? v.emoji : void 0,
         D = null != w && w.animated,
-        L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
-        x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
-        M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
+        x = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
+        L = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
+        j = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
-            M || o.MH();
-        }, [M]),
+            j || o.MH();
+        }, [j]),
         (0, r.jsx)(d.Z, {
             containerContext: A,
             image: {
-                url: C,
+                url: N,
                 width: 220,
                 height: 132,
             },
@@ -115,8 +115,8 @@ let T = (e) => {
             onClose: n,
             upsellViewedTrackingData: {
                 type: t,
-                is_external: L,
-                location: I(O({}, S), { object: x }),
+                is_external: x,
+                location: I(O({}, S), { object: L }),
                 location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.p9.TIER_2)),
                 has_search_query: null != R && "" !== R,

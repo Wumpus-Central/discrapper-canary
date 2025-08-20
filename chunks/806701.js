@@ -1,11 +1,11 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
+    s = n(481060),
     o = n(388905),
-    s = n(661824),
+    a = n(661824),
     c = n(720196),
     u = n(981631),
     d = n(388032),
@@ -15,14 +15,14 @@ function m(e) {
     let { children: t } = e;
     return (0, r.jsx)("li", {
         className: h.listItem,
-        children: (0, r.jsx)(a.Text, {
+        children: (0, r.jsx)(s.Text, {
             variant: "text-sm/medium",
             color: "text-default",
             children: t,
         }),
     });
 }
-function f(e) {
+function g(e) {
     let { setSlide: t, transitionTo: i } = e;
     return (0, r.jsxs)("div", {
         children: [
@@ -34,25 +34,25 @@ function f(e) {
                 className: p.marginBottom8,
                 children: d.intl.string(d.t["8UcxIy"]),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 children: d.intl.string(d.t.O37hMj),
             }),
             (0, r.jsxs)(o.gO, {
                 className: l()(p.marginBottom20, p.marginTop20),
                 children: [
-                    (0, r.jsx)(a.Text, { variant: "text-sm/normal" }),
+                    (0, r.jsx)(s.Text, { variant: "text-sm/normal" }),
                     (0, r.jsxs)("ul", {
                         className: h.listContainer,
                         children: [
                             (0, r.jsx)(m, { children: d.intl.string(d.t.Gj1Zr6) }),
-                            (0, r.jsx)(s.Z, {}),
+                            (0, r.jsx)(a.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t["8C6t3N"]) }),
-                            (0, r.jsx)(s.Z, {}),
+                            (0, r.jsx)(a.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.mToZMD) }),
-                            (0, r.jsx)(s.Z, {}),
+                            (0, r.jsx)(a.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.TPEvkZ) }),
-                            (0, r.jsx)(s.Z, {}),
+                            (0, r.jsx)(a.Z, {}),
                             (0, r.jsx)(m, { children: d.intl.string(d.t.H8Y1Li) }),
                         ],
                     }),

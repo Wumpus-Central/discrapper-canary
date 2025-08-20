@@ -56,6 +56,15 @@ class _ extends (r = o.ZP.Store) {
             return t;
         });
     }
+    getRemoteApplicationActivity(e) {
+        var t;
+        if (null == e) return null;
+        let n = l.default.getSessionId(),
+            r = a().find(d, (e) => e.active && e.sessionId !== n);
+        if (null == r) return null;
+        let i = r.activities.find((t) => t.application_id === e);
+        return null != i ? i : null == (t = r.hiddenActivities) ? void 0 : t.find((t) => t.application_id === e);
+    }
 }
 c(_, "displayName", "SessionsStore");
 let p = new _(s.Z, {

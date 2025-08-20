@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(100527),
     x = n(367907),
     v = n(906732),
-    j = n(493324),
-    O = n(611064),
+    O = n(493324),
+    j = n(611064),
     E = n(677432),
     S = n(178762),
     P = n(868671),
@@ -144,8 +144,8 @@ let et = q.ZP.getEnableHardwareAcceleration(),
                 guildId: C,
                 isTyping: x,
                 isMobileOnline: v,
-                premiumSince: j,
-                nameplate: O,
+                premiumSince: O,
+                nameplate: j,
             } = e,
             E = ee(e, [
                 "colorString",
@@ -168,7 +168,7 @@ let et = q.ZP.getEnableHardwareAcceleration(),
             ]),
             S = i.useRef(null),
             [P, I] = i.useState(!1),
-            Z = null != j ? new Date(j) : null,
+            Z = null != O ? new Date(O) : null,
             T = i.useCallback(
                 (e) => {
                     (0, m.jW)(e, async () => {
@@ -260,7 +260,7 @@ let et = q.ZP.getEnableHardwareAcceleration(),
                             onClickPremiumGuildIcon: w,
                             selected: P,
                             itemProps: E,
-                            nameplate: O,
+                            nameplate: j,
                             onClick: (e) => {
                                 e.shiftKey ? null == A || A() : I((e) => !e);
                             },
@@ -350,7 +350,7 @@ class eo extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, j.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, O.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -456,7 +456,7 @@ class eo extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, $(J({}, a), { key: "section-".concat(t) }));
+                if ((0, j.R)(a)) return (0, i.createElement)(j.Z, $(J({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -565,7 +565,7 @@ class eo extends i.Component {
             ),
             Q(this, "getContentFeedGroup", () => {
                 let e = this.props.groups[P.T];
-                if ((0, O.R)(e)) return e;
+                if ((0, j.R)(e)) return e;
             }),
             Q(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
             Q(this, "getRowHeightComputer", () => {
@@ -685,7 +685,7 @@ function es(e) {
             },
             [42],
         ),
-        j = i.useCallback(
+        O = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -694,7 +694,7 @@ function es(e) {
                 }),
             [],
         ),
-        O = i.useCallback(
+        j = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -711,8 +711,8 @@ function es(e) {
             id: "members-".concat(t.id),
             setFocus: x,
             isEnabled: o,
-            scrollToStart: j,
-            scrollToEnd: O,
+            scrollToStart: O,
+            scrollToEnd: j,
         });
     return (0, r.jsx)(v.Gt, {
         value: l,

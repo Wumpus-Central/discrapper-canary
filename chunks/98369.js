@@ -26,15 +26,15 @@ var r,
     m = n(651941),
     E = n(981631);
 let g = new Map(),
-    S = new Map(),
-    v = !1,
+    v = new Map(),
+    S = !1,
     h = null;
 function b() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
             r = !0 === g.get(n),
-            l = S.get(t) !== r;
-        return S.set(t, r), !!l || e;
+            l = v.get(t) !== r;
+        return v.set(t, r), !!l || e;
     }, !1);
 }
 function O() {
@@ -47,8 +47,8 @@ function O() {
             r = !1;
             break;
         }
-    let l = r !== v;
-    return (v = r), l;
+    let l = r !== S;
+    return (S = r), l;
 }
 function y(e) {
     let { userId: t } = e;
@@ -68,17 +68,17 @@ function y(e) {
     return n || r || l;
 }
 function _() {
-    g.clear(), S.clear(), (v = !1);
+    g.clear(), v.clear(), (S = !1);
 }
 class Z extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, m.Z, c.Z, d.Z);
     }
     isCallVerified() {
-        return v;
+        return S;
     }
     isStreamVerified(e) {
-        return S.get(e);
+        return v.get(e);
     }
     isUserVerified(e) {
         return g.get(e);
@@ -105,7 +105,7 @@ let j = new Z(o.Z, {
         switch (r) {
             case a.Yn.STREAM:
                 if (null == t) return !1;
-                return S.delete(t), O();
+                return v.delete(t), O();
             case a.Yn.DEFAULT:
                 _();
         }

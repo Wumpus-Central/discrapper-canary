@@ -1,95 +1,95 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
-    l = n(658722),
-    o = n.n(l),
-    a = n(149765),
-    s = n(442837),
+    a = n(658722),
+    o = n.n(a),
+    s = n(149765),
+    l = n(442837),
     c = n(481060),
     u = n(601964),
     d = n(345162),
-    p = n(271383),
-    m = n(485386),
-    f = n(430824),
-    g = n(594174),
-    _ = n(700785),
-    h = n(709054),
-    b = n(962086),
-    E = n(160404),
-    C = n(225675),
-    v = n(981631),
-    O = n(388032),
-    y = n(124650);
-function x(e) {
+    f = n(271383),
+    _ = n(485386),
+    p = n(430824),
+    h = n(594174),
+    m = n(700785),
+    g = n(709054),
+    E = n(962086),
+    b = n(160404),
+    y = n(225675),
+    O = n(981631),
+    v = n(388032),
+    I = n(124650);
+function T(e) {
     var t;
     return (0, r.jsx)("span", {
         style: { color: null != (t = e.colorString) ? t : "currentColor" },
         children: e.name,
     });
 }
-function j(e) {
+function S(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        l = (0, s.e7)([f.Z], () => f.Z.getGuild(t)),
-        j = (0, s.e7)([m.Z], () => m.Z.getRolesSnapshot(t)),
-        I = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(t)),
-        { impersonateType: S, viewingRoles: T } = (0, s.cj)([E.Z], () => ({
-            impersonateType: E.Z.getImpersonateType(t),
-            viewingRoles: E.Z.getViewingRoles(t),
+        n = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        a = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
+        S = (0, l.e7)([_.Z], () => _.Z.getRolesSnapshot(t)),
+        A = (0, l.e7)([_.Z], () => _.Z.getSortedRoles(t)),
+        { impersonateType: C, viewingRoles: N } = (0, l.cj)([b.Z], () => ({
+            impersonateType: b.Z.getImpersonateType(t),
+            viewingRoles: b.Z.getViewingRoles(t),
         })),
-        P = S === C.z.SERVER_SHOP,
-        N = (0, s.e7)([p.ZP], () => (null != n ? p.ZP.getTrueMember(t, n.id) : null)),
-        [A, w] = (0, c.A7R)(null == T ? [] : h.default.keys(T)),
-        Z = i.useRef(l);
+        R = C === y.z.SERVER_SHOP,
+        P = (0, l.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        [w, D] = (0, c.A7R)(null == N ? [] : g.default.keys(N)),
+        x = i.useRef(a);
     i.useEffect(() => {
         let e = {},
-            t = Z.current;
-        if (null != t && null != S) {
-            for (let t of A) {
-                let n = j[t];
+            t = x.current;
+        if (null != t && null != C) {
+            for (let t of w) {
+                let n = S[t];
                 null != n && (e[t] = n);
             }
-            (0, b.Zm)(t.id, {
-                type: S,
+            (0, E.Zm)(t.id, {
+                type: C,
                 roles: e,
             });
         }
-    }, [A, S, j]);
-    let R = null != l && null != n && null != N ? I.find((e) => N.roles.includes(e.id)) : void 0,
-        D = i.useMemo(
+    }, [w, C, S]);
+    let L = null != a && null != n && null != P ? A.find((e) => P.roles.includes(e.id)) : void 0,
+        j = i.useMemo(
             () =>
-                null != l && null != n
-                    ? I.filter((e) => !(0, d.fI)(e))
+                null != a && null != n
+                    ? A.filter((e) => !(0, d.fI)(e))
                           .filter((e) => {
                               var t;
-                              return !P || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
+                              return !R || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == R ? void 0 : R.id) === e.id || _.r6(l, n.id, R, e))
+                          .filter((e) => (null == L ? void 0 : L.id) === e.id || m.r6(a, n.id, L, e))
                     : [],
-            [l, n, P, R, I],
+            [a, n, R, L, A],
         );
-    if (null == n || null == l || null == N) return null;
-    let L = {};
-    return (N.roles.forEach((e) => {
-        let t = j[e];
-        null != t && (L[t.id] = t);
+    if (null == n || null == a || null == P) return null;
+    let M = {};
+    return (P.roles.forEach((e) => {
+        let t = S[e];
+        null != t && (M[t.id] = t);
     }),
-    a.e$(
-        _.I0({
-            forceRoles: L,
-            context: l,
+    s.e$(
+        m.I0({
+            forceRoles: M,
+            context: a,
         }),
-        a.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES),
-    ) || (0, u.eM)(l, n))
+        s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),
+    ) || (0, u.eM)(a, n))
         ? (0, r.jsx)("div", {
-              className: y.container,
+              className: I.container,
               children: (0, r.jsx)(c.hQY, {
-                  placeholder: O.intl.string(O.t.Sojqsr),
-                  value: A,
-                  onChange: w,
+                  placeholder: v.intl.string(v.t.Sojqsr),
+                  value: w,
+                  onChange: D,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = D.reduce(
+                      let t = j.reduce(
                               (t, n) => (
                                   o()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(
@@ -98,7 +98,7 @@ function j(e) {
                                               {
                                                   value: n.id,
                                                   children: [
-                                                      (0, r.jsx)(c.lo1.Label, { children: x(n) }),
+                                                      (0, r.jsx)(c.lo1.Label, { children: T(n) }),
                                                       (0, r.jsx)(c.lo1.Checkbox, {}),
                                                   ],
                                               },
@@ -109,7 +109,7 @@ function j(e) {
                               ),
                               [],
                           ),
-                          n = j[(0, u.lV)(l)];
+                          n = S[(0, u.lV)(a)];
                       return (
                           null != n &&
                               t.push(
@@ -119,7 +119,7 @@ function j(e) {
                                           value: n.id,
                                           disabled: !0,
                                           children: [
-                                              (0, r.jsx)(c.lo1.Label, { children: x(n) }),
+                                              (0, r.jsx)(c.lo1.Label, { children: T(n) }),
                                               (0, r.jsx)(c.lo1.Checkbox, { checked: !0 }),
                                           ],
                                       },
@@ -133,6 +133,6 @@ function j(e) {
           })
         : (0, r.jsx)(c.Text, {
               variant: "text-md/medium",
-              children: O.intl.string(O.t.MNSTbW),
+              children: v.intl.string(v.t.MNSTbW),
           });
 }

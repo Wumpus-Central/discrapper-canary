@@ -32,10 +32,10 @@ function b(e) {
         T = (0, a.e7)([u.Z], () => u.Z.getState().soundshareEnabled),
         S = d.Z.supports(g.AN.DESKTOP_CAPTURE_APPLICATIONS),
         A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
-        N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
-        C = (0, p.Z)(t, v),
+        C = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
+        N = (0, p.Z)(t, v),
         R = (0, _.Z)(t, v, m.Vq),
-        P = null != I && A && (!I.startsWith("screen") || N),
+        P = null != I && A && (!I.startsWith("screen") || C),
         w = (0, a.e7)([d.Z], () => d.Z.getUseSystemScreensharePicker() && (0, f.isLinux)()),
         D = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith("prepicked:"))
@@ -44,7 +44,7 @@ function b(e) {
                   })
                 : n();
         }, [I, n]),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = u.Z.getState(),
                 r = {
                     qualityOptions: {
@@ -74,22 +74,22 @@ function b(e) {
             icon: o.hGI,
             action: n,
         });
-    let x = f.isPlatformEmbedded
+    let L = f.isPlatformEmbedded
             ? (0, r.jsx)(o.sNh, {
                   id: "stream-settings",
                   label: E.intl.string(E.t.ytAD9f),
-                  children: C,
+                  children: N,
               })
             : null,
-        M = P
+        j = P
             ? (0, r.jsx)(o.S89, {
                   id: "stream-settings-audio-enable",
                   label: O ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
                   checked: T,
-                  action: L,
+                  action: x,
               })
             : null,
-        k =
+        M =
             !S || y || w
                 ? null
                 : (0, r.jsx)(o.sNh, {
@@ -98,7 +98,7 @@ function b(e) {
                       icon: o.hGI,
                       action: D,
                   }),
-        j = (0, r.jsx)(o.sNh, {
+        k = (0, r.jsx)(o.sNh, {
             id: "stop-streaming",
             label: E.intl.string(E.t.S5anIS),
             icon: o.g5r,
@@ -106,9 +106,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [j, k, x, M],
+              children: [k, M, L, j],
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [x, b ? R : null, M, k, j],
+              children: [L, b ? R : null, j, M, k],
           });
 }

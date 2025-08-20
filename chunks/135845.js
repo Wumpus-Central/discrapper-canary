@@ -1,116 +1,116 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
-    l = n(512722),
-    o = n.n(l),
-    a = n(442837),
-    s = n(447543),
+    a = n(512722),
+    o = n.n(a),
+    s = n(442837),
+    l = n(447543),
     c = n(100527),
     u = n(906732),
     d = n(955415),
-    p = n(131704),
-    m = n(199902),
-    f = n(914010),
-    g = n(411198),
-    _ = n(51144),
-    h = n(358595),
-    b = n(981631),
-    E = n(245335),
-    C = n(388032),
-    v = n(105341);
-function O(e) {
+    f = n(131704),
+    _ = n(199902),
+    p = n(914010),
+    h = n(411198),
+    m = n(51144),
+    g = n(358595),
+    E = n(981631),
+    b = n(245335),
+    y = n(388032),
+    O = n(105341);
+function v(e) {
     let t,
         n,
-        l,
+        a,
         {
-            invite: O,
-            currentUserId: y,
-            guild: x,
-            message: j,
-            onTransitionToInviteChannel: I,
-            onAcceptInstantInvite: S,
+            invite: v,
+            currentUserId: I,
+            guild: T,
+            message: S,
+            onTransitionToInviteChannel: A,
+            onAcceptInstantInvite: C,
         } = e,
-        T = null == x ? void 0 : x.id,
-        P = (0, a.e7)([f.Z], () => f.Z.getGuildId()),
-        N = (0, a.e7)(
-            [m.Z],
-            () => (null != O && null != O.target_user ? m.Z.getActiveStreamForUser(O.target_user.id, T) : null),
-            [O, T],
+        N = null == T ? void 0 : T.id,
+        R = (0, s.e7)([p.Z], () => p.Z.getGuildId()),
+        P = (0, s.e7)(
+            [_.Z],
+            () => (null != v && null != v.target_user ? _.Z.getActiveStreamForUser(v.target_user.id, N) : null),
+            [v, N],
         ),
-        A = (0, a.e7)(
-            [m.Z],
-            () => (null != O && null != O.target_user ? m.Z.getStreamForUser(O.target_user.id, T) : null),
-            [O, T],
+        w = (0, s.e7)(
+            [_.Z],
+            () => (null != v && null != v.target_user ? _.Z.getStreamForUser(v.target_user.id, N) : null),
+            [v, N],
         ),
-        { analyticsLocations: w } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        Z = null != O && O.target_type === E.Iq.STREAM && null != O.target_user && null != N,
-        R =
-            null != O &&
-            null != A &&
-            null != O.channel &&
-            null != O.guild &&
-            A.channelId === O.channel.id &&
-            A.guildId === O.guild.id;
-    o()(null != O, "Invite cannot be null");
-    let { target_type: D, target_user: L } = O;
-    o()(D === E.Iq.STREAM && null != L, "invalid streaming invite");
-    let M = y === L.id,
-        k = O.state === b.r2o.ACCEPTING,
-        U = i.useCallback(() => {
+        { analyticsLocations: D } = (0, u.ZP)(c.Z.INVITE_EMBED),
+        x = null != v && v.target_type === b.Iq.STREAM && null != v.target_user && null != P,
+        L =
+            null != v &&
+            null != w &&
+            null != v.channel &&
+            null != v.guild &&
+            w.channelId === v.channel.id &&
+            w.guildId === v.guild.id;
+    o()(null != v, "Invite cannot be null");
+    let { target_type: j, target_user: M } = v;
+    o()(j === b.Iq.STREAM && null != M, "invalid streaming invite");
+    let k = I === M.id,
+        U = v.state === E.r2o.ACCEPTING,
+        G = i.useCallback(() => {
             let e = "noop";
-            Z ? (I(), (e = "transition")) : (S(), (e = "accept")),
-                (0, s.r$)(
+            x ? (A(), (e = "transition")) : (C(), (e = "accept")),
+                (0, l.r$)(
                     {
-                        invite: O,
+                        invite: v,
                         action: e,
-                        inviter_id: j.author.id,
-                        invite_message_id: j.id,
+                        inviter_id: S.author.id,
+                        invite_message_id: S.id,
                     },
-                    w,
+                    D,
                 );
-        }, [O, j, w, Z, I, S]),
-        F = null != x;
-    if (null == x) {
-        if (null == O.guild) return (0, r.jsx)(h.Z, {});
-        x = (0, g.Qs)(O.guild);
+        }, [v, S, D, x, A, C]),
+        B = null != T;
+    if (null == T) {
+        if (null == v.guild) return (0, r.jsx)(g.Z, {});
+        T = (0, h.Qs)(v.guild);
     }
-    let B = null != O.channel ? (0, p.jD)(O.channel) : null,
-        G = _.ZP.getName(L);
-    F && !R
-        ? (l = M ? C.intl.string(C.t.oBLoZG) : C.intl.formatToPlainString(C.t["0QJmAw"], { name: G }))
-        : ((t = C.intl.string(C.t["I6JG4+"])),
+    let Z = null != v.channel ? (0, f.jD)(v.channel) : null,
+        V = m.ZP.getName(M);
+    B && !L
+        ? (a = k ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t["0QJmAw"], { name: V }))
+        : ((t = y.intl.string(y.t["I6JG4+"])),
           (n = d.Z.Button.Colors.GREEN),
-          Z && ((t = C.intl.string(C.t["Q1W99/"])), (n = d.Z.Button.Colors.PRIMARY)),
-          (l = M ? C.intl.string(C.t["4hyaHh"]) : C.intl.formatToPlainString(C.t.QmlLEh, { name: G })));
-    let H =
-        P === x.id && null != B
-            ? (0, r.jsx)(d.Z.Channel, { channel: B })
-            : C.intl.formatToPlainString(C.t.u0vaDA, { guildName: x.name });
+          x && ((t = y.intl.string(y.t["Q1W99/"])), (n = d.Z.Button.Colors.PRIMARY)),
+          (a = k ? y.intl.string(y.t["4hyaHh"]) : y.intl.formatToPlainString(y.t.QmlLEh, { name: V })));
+    let F =
+        R === T.id && null != Z
+            ? (0, r.jsx)(d.Z.Channel, { channel: Z })
+            : y.intl.formatToPlainString(y.t.u0vaDA, { guildName: T.name });
     return (0, r.jsxs)(d.Z, {
         children: [
-            (0, r.jsx)(d.Z.Header, { text: C.intl.string(C.t["wS+5WV"]) }),
+            (0, r.jsx)(d.Z.Header, { text: y.intl.string(y.t["wS+5WV"]) }),
             (0, r.jsxs)(d.Z.Body, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.headerLine,
+                        className: O.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
-                                guild: x,
-                                onClick: F && R ? U : void 0,
+                                guild: T,
+                                onClick: B && L ? G : void 0,
                             }),
                             (0, r.jsx)(d.Z.Info, {
-                                title: l,
-                                onClick: F && R ? U : void 0,
-                                children: H,
+                                title: a,
+                                onClick: B && L ? G : void 0,
+                                children: F,
                             }),
                         ],
                     }),
-                    R
+                    L
                         ? (0, r.jsx)(d.Z.Button, {
-                              disabled: F && !R,
-                              onClick: U,
-                              submitting: k,
-                              isDisabled: Z && R,
+                              disabled: B && !L,
+                              onClick: G,
+                              submitting: U,
+                              isDisabled: x && L,
                               color: n,
                               children: t,
                           })

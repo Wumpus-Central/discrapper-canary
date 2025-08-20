@@ -99,7 +99,7 @@ let A = {
         LARGER: "Larger",
         XLARGE: "XLarge",
     },
-    N = {
+    C = {
         [A.SMOL]: 16,
         [A.MINI]: 20,
         [A.SMALLER]: 24,
@@ -109,7 +109,7 @@ let A = {
         [A.LARGER]: 64,
         [A.XLARGE]: 100,
     },
-    C = {
+    N = {
         [A.SMOL]: [10, 10, 8, 6, 6, 4],
         [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
         [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -160,7 +160,7 @@ class R extends a.PureComponent {
                 animate: v,
                 tabIndex: S,
                 iconSrc: A,
-                "aria-hidden": N,
+                "aria-hidden": C,
                 lossless: R,
                 iconSize: P,
             } = n,
@@ -184,11 +184,11 @@ class R extends a.PureComponent {
                 "lossless",
                 "iconSize",
             ]),
-            D = C[c],
-            L = null != m ? d.P3F : "div",
-            x = (0, h.gM)(r);
+            D = N[c],
+            x = null != m ? d.P3F : "div",
+            L = (0, h.gM)(r);
         return (0, i.jsxs)(
-            L,
+            x,
             I(
                 O(
                     {
@@ -197,10 +197,10 @@ class R extends a.PureComponent {
                             [b.iconInactive]: !l,
                             [b.noIcon]: null == r.icon,
                         }),
-                        "aria-hidden": N,
+                        "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? O({ fontSize: (null != (t = D[x.length]) ? t : D[D.length - 1]) * f }, u)
+                                ? O({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * f }, u)
                                 : u,
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S,
@@ -246,8 +246,8 @@ let P = c.ZP.connectStores([m.Z], (e) => {
         null == r &&
             (r =
                 t instanceof _.JO
-                    ? t.getIconURL(null != o ? o : N[a], n && m.Z.isFocused())
-                    : (0, h.EB)(t, null != o ? o : N[a], n && m.Z.isFocused(), s)),
+                    ? t.getIconURL(null != o ? o : C[a], n && m.Z.isFocused())
+                    : (0, h.EB)(t, null != o ? o : C[a], n && m.Z.isFocused(), s)),
         { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) }
     );
 })((0, f.N)((e) => (0, i.jsx)(R, O({}, e))));

@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(575258),
     C = n(276687),
     N = n(594174),
-    I = n(585483),
-    E = n(823379),
+    E = n(585483),
+    I = n(823379),
     S = n(434404),
     T = n(360606),
     P = n(946724),
@@ -504,7 +504,7 @@ let ev = {
                                 confirmText: ef.intl.string(ef.t.l3hWPz),
                                 cancelText: ef.intl.string(ef.t["ETE/oK"]),
                                 onConfirm: () => {
-                                    I.S.subscribeOnce(ep.CkL.LAYER_POP_COMPLETE, () => {
+                                    E.S.subscribeOnce(ep.CkL.LAYER_POP_COMPLETE, () => {
                                         S.Z.deleteGuild(t.guild.id, i);
                                     }),
                                         (0, s.xf)();
@@ -577,7 +577,7 @@ let ev = {
             case ep.pNK.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION:
                 return null;
             default:
-                (0, E.vE)(e);
+                (0, I.vE)(e);
         }
     },
 };

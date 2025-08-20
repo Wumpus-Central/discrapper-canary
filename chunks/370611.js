@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(169080),
     S = n(986398),
     A = n(463031),
-    N = n(206583),
-    C = n(388032),
+    C = n(206583),
+    N = n(388032),
     R = n(527847);
 function P(e, t, n) {
     return (
@@ -67,7 +67,7 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,10 +78,10 @@ function L(e, t) {
         e
     );
 }
-let x = 10,
-    M = 15,
-    k = "leaderboard.png";
-function j(e) {
+let L = 10,
+    j = 15,
+    M = "leaderboard.png";
+function k(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
         f = (0, a.e7)([d.default], () => d.default.getId()),
         _ = (0, a.e7)([u.default], () => u.default.locale),
@@ -111,10 +111,10 @@ function j(e) {
         { primaryColor: v } = (0, l.Z)(g),
         I = i.useMemo(() => {
             let e = (0, p.oo)(v),
-                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: M });
+                t = x(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: j });
             return (0, p.ZJ)(t.h, t.s, t.l);
         }, [v]),
-        S = i.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= x, [m, f]);
+        S = i.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= L, [m, f]);
     if (
         (i.useEffect(() => {
             T.M.forEach((e) => (0, c.po)(e));
@@ -122,7 +122,7 @@ function j(e) {
         0 === t.users.length)
     )
         return (0, r.jsx)(U, { leaderboard: t });
-    let { sort_by_statistic_id: A, sort_desc: N } = t.guild_settings,
+    let { sort_by_statistic_id: A, sort_desc: C } = t.guild_settings,
         P = t.settings.statistics[A];
     return (0, r.jsxs)("div", {
         className: R.container,
@@ -148,14 +148,14 @@ function j(e) {
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xxs/medium",
                                       className: R.headerPlayer,
-                                      children: C.intl.string(C.t["6ii1+/"]),
+                                      children: N.intl.string(N.t["6ii1+/"]),
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xxs/medium",
                                       className: R.headerValue,
                                       children: (0, E.s)({
                                           statisticId: A,
-                                          sortDesc: N,
+                                          sortDesc: C,
                                           aggregationType: null == P ? void 0 : P.aggregation_type,
                                       }),
                                   }),
@@ -167,7 +167,7 @@ function j(e) {
                                   m.map((e) =>
                                       (0, i.createElement)(
                                           G,
-                                          L(w({}, e), {
+                                          x(w({}, e), {
                                               key: e.userId,
                                               guildId: t.guild_id,
                                               locale: _,
@@ -196,7 +196,7 @@ function U(e) {
                     tag: "span",
                     variant: "text-lg/normal",
                     className: R.emptyTitle,
-                    children: C.intl.string(C.t.BfRGk5),
+                    children: N.intl.string(N.t.BfRGk5),
                 }),
                 (0, r.jsx)(S.Z, {
                     className: R.emptyWinnerImage,
@@ -225,11 +225,11 @@ function G(e) {
             let e = f.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
         }),
-        { generatingImage: x, generateImage: M } = (0, s.d)({
+        { generatingImage: L, generateImage: j } = (0, s.d)({
             renderComponent: (e) =>
                 (0, r.jsx)(
                     T.Z,
-                    L(w({}, e), {
+                    x(w({}, e), {
                         userId: t,
                         leaderboard: p,
                         guildId: c,
@@ -237,10 +237,10 @@ function G(e) {
                 ),
             imageOptions: { pixelRatio: 4 },
         }),
-        j = async () => {
+        k = async () => {
             try {
-                let e = await M();
-                await g.ZP.copyImageBlob(e, k), P("copied"), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
+                let e = await j();
+                await g.ZP.copyImageBlob(e, M), P("copied"), null == E || E(C.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
                 P("error");
             }
@@ -256,7 +256,7 @@ function G(e) {
                                   size: "xs",
                                   color: o.TVs.colors.STATUS_POSITIVE,
                               }),
-                              C.intl.string(C.t.ZO0ku7),
+                              N.intl.string(N.t.ZO0ku7),
                           ],
                       })
                     : "error" === v
@@ -266,10 +266,10 @@ function G(e) {
                                     size: "xs",
                                     color: o.TVs.colors.STATUS_DANGER,
                                 }),
-                                C.intl.string(C.t.j2d6Ki),
+                                N.intl.string(N.t.j2d6Ki),
                             ],
                         })
-                      : (0, r.jsx)(r.Fragment, { children: C.intl.string(C.t.mikfoa) }),
+                      : (0, r.jsx)(r.Fragment, { children: N.intl.string(N.t.mikfoa) }),
         });
     return (0, r.jsxs)("div", {
         className: R.userRow,
@@ -319,7 +319,7 @@ function G(e) {
                               ],
                           })
                         : null,
-                    O ? (0, r.jsx)(V, { rankChange: u - n }) : null,
+                    O ? (0, r.jsx)(Z, { rankChange: u - n }) : null,
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -335,16 +335,16 @@ function G(e) {
                         (0, r.jsx)(o.ua7, {
                             text: U,
                             "aria-label": !1,
-                            shouldShow: !x,
+                            shouldShow: !L,
                             onTooltipHide: () => P("default"),
                             children: (e) =>
                                 (0, r.jsx)(
                                     o.P3F,
-                                    L(w({}, e), {
-                                        onClick: x ? void 0 : j,
-                                        "aria-busy": x,
+                                    x(w({}, e), {
+                                        onClick: L ? void 0 : k,
+                                        "aria-busy": L,
                                         className: R.copyLinkContainer,
-                                        children: x
+                                        children: L
                                             ? (0, r.jsx)(o.$jN, {
                                                   type: o.$jN.Type.SPINNING_CIRCLE_SIMPLE,
                                                   className: R.copySpinner,
@@ -374,7 +374,7 @@ function B(e) {
         children: [
             (0, r.jsx)(o.Text, {
                 variant: "text-xs/normal",
-                children: C.intl.string(C.t.BfRGk5),
+                children: N.intl.string(N.t.BfRGk5),
             }),
             (0, r.jsx)(S.Z, {
                 className: R.joinLeaderboardCTAWinnerImage,
@@ -383,7 +383,7 @@ function B(e) {
         ],
     });
 }
-function V(e) {
+function Z(e) {
     let { rankChange: t } = e;
     return (0, r.jsxs)("div", {
         className: R.rankChangeBadge,

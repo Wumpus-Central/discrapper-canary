@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(781311);
+n.d(t, { Z: () => C }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -58,7 +58,7 @@ let T = (0, f.kt)({
                 (0, _.vE)(e);
         }
     };
-function N(e) {
+function C(e) {
     let {
             user: t,
             guildId: n,
@@ -67,15 +67,15 @@ function N(e) {
             sourceDetails: f,
             setPopoutRef: _,
             modalKey: E,
-            onAction: N,
-            onClose: C,
+            onAction: C,
+            onClose: N,
             entry: R,
         } = e,
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
-        [L, x] = i.useState(""),
-        [M, k] = i.useState((0, u.JM)(L)),
-        j = i.useRef(!1),
+        [x, L] = i.useState(""),
+        [j, M] = i.useState((0, u.JM)(x)),
+        k = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
@@ -89,10 +89,10 @@ function N(e) {
     let B = async (e) => {
             if (null == e) return;
             s === y.n_.AVATAR
-                ? N({ action: "SEND_REPLY_AVATAR" })
+                ? C({ action: "SEND_REPLY_AVATAR" })
                 : s === y.n_.STATUS
-                  ? N({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : N({ action: "SEND_REPLY_ACTIVITY" });
+                  ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
+                  : C({ action: "SEND_REPLY_ACTIVITY" });
             let n = S({
                 input: e,
                 username: h.ZP.getName(t),
@@ -112,7 +112,7 @@ function N(e) {
             } catch (e) {}
             w(y.P.REPLY);
         },
-        V = {
+        Z = {
             [I.status]: s === y.n_.STATUS,
             [I.avatar]: s === y.n_.AVATAR,
             [I.activity]: s === y.n_.ACTIVITY,
@@ -121,7 +121,7 @@ function N(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
+            className: o()(I.container, Z, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -131,14 +131,14 @@ function N(e) {
                 type: c.Ie.USER_PROFILE_REPLY,
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: T,
-                textValue: L,
-                richValue: M,
+                textValue: x,
+                richValue: j,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== x && (L(t), M(n));
                 },
-                focused: j.current,
+                focused: k.current,
                 onFocus: () => {
-                    j.current = !0;
+                    k.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -152,7 +152,7 @@ function N(e) {
                         return (
                             await B(n),
                             P(),
-                            null == C || C(),
+                            null == N || N(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -18,24 +18,24 @@ var i = n(120356),
     O = n(565138),
     _ = n(199902),
     y = n(592125),
-    v = n(430824),
-    j = n(158776),
+    j = n(430824),
+    v = n(158776),
     C = n(306680),
-    E = n(594174),
-    x = n(388032),
+    x = n(594174),
+    E = n(388032),
     S = n(888097);
-let P = {
+let I = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4,
 };
-function I(e) {
+function P(e) {
     var t, n;
     let { channel: i, children: l, gotoChannel: a, mentionCount: c, channelState: u, toggleCollapsed: d } = e,
         p = (0, o.JA)("recents-header-".concat(i.id, "-").concat((0, b.Dt)()));
     return (0, r.jsx)(s.tEY, {
-        offset: P,
+        offset: I,
         children: (0, r.jsxs)(
             "div",
             ((t = (function (e) {
@@ -116,7 +116,7 @@ function N(e) {
 }
 function w(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([E.default], () => (t.isDM() ? E.default.getUser(t.getRecipientId()) : null)),
+        i = (0, a.e7)([x.default], () => (t.isDM() ? x.default.getUser(t.getRecipientId()) : null)),
         l = null == i ? (0, f.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(s.P3F, {
         onClick: n,
@@ -131,7 +131,7 @@ function w(e) {
 }
 function Z(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id));
+        i = (0, a.e7)([j.Z], () => j.Z.getGuild(t.guild_id));
     return null == i
         ? null
         : (0, r.jsx)(O.Z, {
@@ -146,7 +146,7 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
-        o = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        o = (0, a.e7)([j.Z], () => j.Z.getGuild(t.guild_id)),
         c = (0, a.e7)([y.Z], () => y.Z.getChannel(t.parent_id)),
         u = (0, a.e7)([C.ZP], () => C.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
@@ -158,7 +158,7 @@ function T(e) {
                     : o.name
                 : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(c.name),
         b = t.isMultiUserDM()
-            ? x.intl.formatToPlainString(x.t.CxSA5O, { members: t.recipients.length + 1 })
+            ? E.intl.formatToPlainString(E.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, r.jsx)(A, { channel: t })
               : (0, r.jsx)(s.P3F, {
@@ -217,12 +217,12 @@ function A(e) {
             status: i,
             activities: l,
             applicationStream: o,
-        } = (0, a.cj)([E.default, j.Z, _.Z], () => {
-            let e = E.default.getUser(t.getRecipientId());
+        } = (0, a.cj)([x.default, v.Z, _.Z], () => {
+            let e = x.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? j.Z.getStatus(e.id) : null,
-                activities: null != e ? j.Z.getActivities(e.id) : null,
+                status: null != e ? v.Z.getStatus(e.id) : null,
+                activities: null != e ? v.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? _.Z.getAnyStreamForUser(e.id) : null,
             };
         }),

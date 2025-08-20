@@ -107,9 +107,9 @@ function S(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: l, onContextMenu: u } = e,
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
-        C = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
+        N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
-        P = N(R, g, b, n.contentType, n.originalContentType),
+        P = C(R, g, b, n.contentType, n.originalContentType),
         w = null != d && 0 !== d && null != _ && 0 !== _;
     if ("VIDEO" === I && w && null != b) {
         var D;
@@ -118,7 +118,7 @@ function S(e) {
         let t = null != (D = n.renderLinkComponent) ? D : c.iT;
         return (0, r.jsx)(
             s.Z,
-            y(E({}, C), {
+            y(E({}, N), {
                 src: P,
                 width: d,
                 height: _,
@@ -144,7 +144,7 @@ function S(e) {
             (t = w
                 ? (0, r.jsx)(
                       o.ZP,
-                      y(E({}, C), {
+                      y(E({}, N), {
                           src: P,
                           width: d,
                           height: _,
@@ -173,7 +173,7 @@ function S(e) {
     );
 }
 let A = i.memo(S);
-function N(e, t, n, r, i) {
+function C(e, t, n, r, i) {
     return e && _.Z.isDiscordAssetUrl(t, r, i)
         ? (0, l.s$)(t, r, i)
         : (0, u.q)({

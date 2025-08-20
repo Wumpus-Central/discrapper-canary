@@ -1,121 +1,151 @@
-n.d(t, { Z: () => el }), n(704826), n(35282), n(388685), n(361932), n(187205);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(392711),
-    o = n(971809),
+n.d(t, { Z: () => ed }), n(704826), n(35282), n(388685), n(361932), n(187205);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n(971809),
     c = n(442837),
-    d = n(836459),
-    u = n(680018),
-    m = n(374415),
-    p = n(861066),
-    g = n(780842),
+    u = n(836459),
+    d = n(680018),
+    f = n(374415),
+    _ = n(861066),
+    p = n(780842),
     h = n(179538),
-    f = n(279570),
-    b = n(257465),
-    x = n(667202),
-    _ = n(82659),
-    j = n(369585),
-    E = n(103866),
-    C = n(213734),
-    O = n(37148),
-    v = n(907862),
+    m = n(279570),
+    g = n(257465),
+    E = n(667202),
+    b = n(82659),
+    y = n(369585),
+    O = n(103866),
+    v = n(213734),
+    I = n(37148),
+    T = n(907862),
     S = n(466590),
-    T = n(681715),
-    N = n(481060),
-    I = n(240872),
-    y = n(514361),
-    A = n(705262),
-    P = n(377089),
-    R = n(581612),
-    D = n(580747),
-    Z = n(594174),
-    w = n(526156),
-    k = n(799071),
-    L = n(554042),
-    B = n(706705),
-    M = n(726985),
-    U = n(981631),
-    V = n(231338),
-    G = n(726927),
+    A = n(681715),
+    C = n(481060),
+    N = n(240872),
+    R = n(514361),
+    P = n(705262),
+    w = n(377089),
+    D = n(581612),
+    x = n(580747),
+    L = n(594174),
+    j = n(526156),
+    M = n(799071),
+    k = n(554042),
+    U = n(706705),
+    G = n(726985),
+    B = n(981631),
+    Z = n(231338),
+    V = n(726927),
     F = n(177475),
     H = n(518797),
-    z = n(691739),
+    Y = n(691739),
     W = n(453707),
-    Y = n(315416),
-    K = n(715720);
-function q(e) {
+    K = n(315416),
+    z = n(715720);
+function q(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                q(e, t, n[t]);
             });
     }
     return e;
 }
-function X(e, t) {
+function Q(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function J(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : Q(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function J() {
-    return (0, i.jsxs)("div", {
-        className: G.root,
+function $(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = ee(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function ee(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function et() {
+    return (0, r.jsxs)("div", {
+        className: V.root,
         children: [
-            (0, i.jsx)(Q, {}),
-            (0, i.jsx)(ec, {}),
-            (0, i.jsx)(eb, {}),
-            (0, i.jsx)(ex, {}),
-            (0, i.jsx)(ef, {}),
-            (0, i.jsx)(eg, {}),
-            (0, i.jsx)(eh, {}),
-            (0, i.jsx)(ep, {}),
-            (0, i.jsx)(em, {}),
-            (0, i.jsx)(eN, {}),
-            (0, i.jsx)(eI, {}),
-            (0, i.jsx)($, {}),
-            (0, i.jsx)(eA, {}),
+            (0, r.jsx)(en, {}),
+            (0, r.jsx)(e_, {}),
+            (0, r.jsx)(eO, {}),
+            (0, r.jsx)(ev, {}),
+            (0, r.jsx)(ey, {}),
+            (0, r.jsx)(eE, {}),
+            (0, r.jsx)(eb, {}),
+            (0, r.jsx)(eg, {}),
+            (0, r.jsx)(em, {}),
+            (0, r.jsx)(ew, {}),
+            (0, r.jsx)(eD, {}),
+            (0, r.jsx)(er, {}),
+            (0, r.jsx)(eL, {}),
         ],
     });
 }
-function Q() {
-    let e = (0, D.Z)("highlight_mana_components");
-    return (0, i.jsx)(N.hjN, {
+function en() {
+    let e = (0, x.Z)("highlight_mana_components");
+    return (0, r.jsx)(C.hjN, {
         title: "Design System Controls",
-        children: (0, i.jsx)(N.xJW, {
-            children: (0, i.jsx)(N.j7V, {
+        children: (0, r.jsx)(C.xJW, {
+            children: (0, r.jsx)(C.j7V, {
                 value: e,
-                onChange: (e) => (0, R.Z)("highlight_mana_components", e),
+                onChange: (e) => (0, D.Z)("highlight_mana_components", e),
                 note: "Highlights all mana components marked with data-mana-component",
                 hideBorder: !0,
                 children: "Highlight Mana Components",
@@ -123,23 +153,23 @@ function Q() {
         }),
     });
 }
-function $() {
-    let e = Object.keys(N.DM8);
-    return (0, i.jsxs)("div", {
-        className: G.section,
+function er() {
+    let e = Object.keys(C.DM8);
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Notice",
             }),
-            (0, i.jsx)(N.Kqy, {
+            (0, r.jsx)(C.Kqy, {
                 gap: 16,
                 children: e.map((e) =>
-                    (0, i.jsx)(
-                        N.qXd,
+                    (0, r.jsx)(
+                        C.qXd,
                         {
-                            color: N.DM8[e],
-                            children: (0, i.jsxs)("code", {
+                            color: C.DM8[e],
+                            children: (0, r.jsxs)("code", {
                                 children: ["NoticeColors.", e],
                             }),
                         },
@@ -150,7 +180,7 @@ function $() {
         ],
     });
 }
-let ee = [
+let ei = [
         "neutral",
         "blue_new",
         "blurple",
@@ -162,7 +192,7 @@ let ee = [
         "pink",
         "purple",
     ],
-    et = [
+    ea = [
         "background-surface-highest",
         "background-surface-higher",
         "background-surface-high",
@@ -170,7 +200,7 @@ let ee = [
         "background-base-lower",
         "background-base-lowest",
     ],
-    en = [
+    eo = [
         "background-gradient-lowest",
         "background-gradient-lower",
         "background-gradient-low",
@@ -178,9 +208,9 @@ let ee = [
         "background-gradient-higher",
         "background-gradient-highest",
     ],
-    ei = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
-    er = ["critical", "warning", "positive", "info"],
-    es = [
+    es = ["", "background-mod-subtle", "background-mod-normal", "background-mod-strong"],
+    el = ["critical", "warning", "positive", "info"],
+    ec = [
         "text-default",
         "text-primary",
         "text-secondary",
@@ -191,54 +221,54 @@ let ee = [
         "text-feedback-info",
         "premium-nitro-pink-text",
     ];
-function ea() {
-    let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
-    return (0, i.jsxs)("div", {
+function eu() {
+    let e = null !== (0, c.e7)([R.Z], () => R.Z.gradientPreset);
+    return (0, r.jsxs)("div", {
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
-                className: G.heading,
+                className: V.heading,
                 children: "Background Colors",
             }),
-            et.map((e) =>
-                (0, i.jsxs)(
+            ea.map((e) =>
+                (0, r.jsxs)(
                     "div",
                     {
-                        className: G.palette,
+                        className: V.palette,
                         style: {
                             backgroundColor: "var(--".concat(e, ")"),
                             padding: 24,
                         },
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: e,
                             }),
-                            (0, i.jsx)("div", {
+                            (0, r.jsx)("div", {
                                 style: {
                                     display: "grid",
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: ei.map((e) =>
-                                    (0, i.jsxs)(
+                                children: es.map((e) =>
+                                    (0, r.jsxs)(
                                         "div",
                                         {
-                                            className: G.color,
+                                            className: V.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--".concat(e, ")"),
                                             },
                                             children: [
-                                                (0, i.jsx)(N.Text, {
+                                                (0, r.jsx)(C.Text, {
                                                     variant: "text-xs/semibold",
                                                     color: "header-secondary",
                                                     children: e,
                                                 }),
-                                                (0, i.jsx)("hr", { className: G.sectionDivider }),
-                                                es.map((e) =>
-                                                    (0, i.jsx)(
-                                                        N.Text,
+                                                (0, r.jsx)("hr", { className: V.sectionDivider }),
+                                                ec.map((e) =>
+                                                    (0, r.jsx)(
+                                                        C.Text,
                                                         {
                                                             variant: "text-xs/medium",
                                                             style: { color: "var(--".concat(e, ")") },
@@ -253,36 +283,36 @@ function ea() {
                                     ),
                                 ),
                             }),
-                            (0, i.jsx)("hr", { className: G.sectionDivider }),
-                            (0, i.jsx)("div", {
+                            (0, r.jsx)("hr", { className: V.sectionDivider }),
+                            (0, r.jsx)("div", {
                                 style: {
                                     display: "grid",
                                     gap: 8,
                                     gridTemplateColumns: "repeat(3, 1fr)",
                                 },
-                                children: er.map((e) => {
+                                children: el.map((e) => {
                                     let t = "var(--text-feedback-".concat(e, ")");
-                                    return (0, i.jsxs)(
+                                    return (0, r.jsxs)(
                                         "div",
                                         {
-                                            className: G.color,
+                                            className: V.color,
                                             style: {
                                                 padding: 16,
                                                 background: "var(--background-feedback-".concat(e, ")"),
                                             },
                                             children: [
-                                                (0, i.jsx)(N.Text, {
+                                                (0, r.jsx)(C.Text, {
                                                     variant: "text-xs/semibold",
                                                     color: "header-secondary",
                                                 }),
-                                                (0, i.jsxs)(N.Kqy, {
+                                                (0, r.jsxs)(C.Kqy, {
                                                     children: [
-                                                        (0, i.jsxs)(N.Text, {
+                                                        (0, r.jsxs)(C.Text, {
                                                             variant: "text-xs/semibold",
                                                             style: { color: t },
                                                             children: ["background-feedback-", e],
                                                         }),
-                                                        (0, i.jsx)(N.Text, {
+                                                        (0, r.jsx)(C.Text, {
                                                             variant: "text-xs/normal",
                                                             style: { color: t },
                                                             children:
@@ -301,31 +331,31 @@ function ea() {
                     e,
                 ),
             ),
-            null !== e &&
-                (0, i.jsxs)(i.Fragment, {
+            e &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(N.X6q, {
+                        (0, r.jsx)(C.X6q, {
                             variant: "heading-xl/semibold",
-                            className: G.heading,
+                            className: V.heading,
                             children: "Gradient Background Colors",
                         }),
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                             className: "custom-theme-background",
                             style: {
                                 display: "grid",
                                 gridTemplateColumns: "repeat(6, 1fr)",
                                 transform: "translateZ(0)",
                             },
-                            children: en.map((e) =>
-                                (0, i.jsx)(
+                            children: eo.map((e) =>
+                                (0, r.jsx)(
                                     "div",
                                     {
-                                        className: G.palette,
+                                        className: V.palette,
                                         style: {
                                             background: "var(--".concat(e, ")"),
                                             height: 400,
                                         },
-                                        children: (0, i.jsx)(N.Text, {
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-xs/medium",
                                             children: e,
                                         }),
@@ -336,37 +366,37 @@ function ea() {
                         }),
                     ],
                 }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
-                className: G.heading,
+                className: V.heading,
                 children: "Scales",
             }),
-            ee.map((e) =>
-                (0, i.jsxs)(
+            ei.map((e) =>
+                (0, r.jsxs)(
                     "div",
                     {
-                        className: G.palette,
+                        className: V.palette,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-lg/semibold",
                                 children: e,
                             }),
-                            (0, i.jsx)("div", {
-                                className: G.colors,
+                            (0, r.jsx)("div", {
+                                className: V.colors,
                                 children: Array.from({ length: 100 }, (t, n) =>
-                                    (0, i.jsx)(
+                                    (0, r.jsx)(
                                         "div",
                                         {
-                                            className: G.color,
+                                            className: V.color,
                                             style: {
                                                 background: "var(--"
                                                     .concat(e.replace("_", "-"), "-")
                                                     .concat(n + 1, ")"),
                                             },
-                                            children: (0, i.jsx)(N.f6W, {
+                                            children: (0, r.jsx)(C.f6W, {
                                                 theme: n < 50 ? "light" : "dark",
                                                 children: (t) =>
-                                                    (0, i.jsxs)(N.Text, {
+                                                    (0, r.jsxs)(C.Text, {
                                                         className: t,
                                                         variant: "text-xs/medium",
                                                         children: [e, ".", n + 1],
@@ -385,102 +415,82 @@ function ea() {
         ],
     });
 }
-function el() {
-    return (0, i.jsxs)(i.Fragment, {
+function ed() {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(w.Z, {
-                parentSetting: M.s6.DESIGN_SYSTEMS,
-                settingsSection: U.oAB.DESIGN_SYSTEMS,
+            (0, r.jsx)(j.Z, {
+                parentSetting: G.s6.DESIGN_SYSTEMS,
+                settingsSection: B.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: "Components",
-                        component: () => (0, i.jsx)(J, {}),
-                        setting: M.s6.DESIGN_SYSTEMS_COMPONENTS,
+                        component: () => (0, r.jsx)(et, {}),
+                        setting: G.s6.DESIGN_SYSTEMS_COMPONENTS,
                     },
                     {
                         title: "Colors",
-                        component: () => (0, i.jsx)(ea, {}),
-                        setting: M.s6.DESIGN_SYSTEMS_COLORS,
+                        component: () => (0, r.jsx)(eu, {}),
+                        setting: G.s6.DESIGN_SYSTEMS_COLORS,
                     },
                     {
                         title: "Animations",
-                        component: () => (0, i.jsx)(B.Z, {}),
-                        setting: M.s6.ANIMATION_TESTING,
+                        component: () => (0, r.jsx)(U.Z, {}),
+                        setting: G.s6.ANIMATION_TESTING,
                     },
                     {
                         title: "Text Playground",
-                        component: () => (0, i.jsx)(L.Z, {}),
-                        setting: M.s6.TEXT_PLAYGROUND,
+                        component: () => (0, r.jsx)(k.Z, {}),
+                        setting: G.s6.TEXT_PLAYGROUND,
                     },
                     {
                         title: "Text Componnts",
-                        component: () => (0, i.jsx)(k.Z, {}),
-                        setting: M.s6.TEXT_COMPONENTS,
+                        component: () => (0, r.jsx)(M.Z, {}),
+                        setting: G.s6.TEXT_COMPONENTS,
                     },
                 ],
             }),
-            (0, i.jsx)("div", {
-                className: G.themes,
-                children: (0, i.jsx)(A.ZP, {
-                    type: A.yH.SETTINGS,
-                    children: (0, i.jsx)(A.ZP.Basic, { className: G.themeSelectionGroup }),
+            (0, r.jsx)("div", {
+                className: V.themes,
+                children: (0, r.jsx)(P.ZP, {
+                    type: P.yH.SETTINGS,
+                    children: (0, r.jsx)(P.ZP.Basic, { className: V.themeSelectionGroup }),
                 }),
             }),
         ],
     });
 }
-function eo(e) {
+function ef(e) {
     var { component: t, showLoadingAnimation: n } = e,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++)
-                    (n = s[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-            }
-            return r;
-        })(e, ["component", "showLoadingAnimation"]);
-    let [a, l] = r.useState(!1),
-        o = r.useRef(-1);
+        a = $(e, ["component", "showLoadingAnimation"]);
+    let [o, s] = i.useState(!1),
+        l = i.useRef(-1);
     return (
-        r.useEffect(
+        i.useEffect(
             () => (
-                a &&
+                o &&
                     n &&
-                    (o.current = setTimeout(() => {
-                        l(!1);
+                    (l.current = setTimeout(() => {
+                        s(!1);
                     }, 3000)),
                 () => {
-                    o.current >= 0 && clearTimeout(o.current);
+                    l.current >= 0 && clearTimeout(l.current);
                 }
             ),
-            [a, n],
+            [o, n],
         ),
-        (0, i.jsx)(
+        (0, r.jsx)(
             t,
-            X(q({}, s), {
-                loading: n ? a : void 0,
-                onClick: () => l(!a),
+            J(X({}, a), {
+                loading: n ? o : void 0,
+                onClick: () => s(!o),
             }),
         )
     );
 }
-function ec() {
-    let [e, t] = r.useState("md"),
-        [n, s] = r.useState("start"),
-        [a, o] = r.useState(!0),
+function e_() {
+    let [e, t] = i.useState("md"),
+        [n, a] = i.useState("start"),
+        [o, l] = i.useState(!0),
         c = [
             "primary",
             "secondary",
@@ -490,32 +500,32 @@ function ec() {
             "overlay-primary",
             "overlay-secondary",
         ],
-        d = [...c, "expressive"].map((t) =>
-            (0, i.jsxs)(i.Fragment, {
+        u = [...c, "expressive"].map((t) =>
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(
-                        eo,
+                    (0, r.jsx)(
+                        ef,
                         {
-                            component: u.z,
+                            component: d.z,
                             variant: t,
-                            text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
+                            text: "".concat((0, s.capitalize)(t), " ").concat(e.toUpperCase()),
                             size: e,
-                            icon: "none" !== n ? N.gw7 : void 0,
+                            icon: "none" !== n ? C.gw7 : void 0,
                             iconPosition: n,
-                            showLoadingAnimation: a,
+                            showLoadingAnimation: o,
                         },
                         t + e,
                     ),
-                    (0, i.jsx)(
-                        eo,
+                    (0, r.jsx)(
+                        ef,
                         {
-                            component: u.z,
+                            component: d.z,
                             variant: t,
-                            text: "".concat((0, l.capitalize)(t), " ").concat(e.toUpperCase()),
+                            text: "".concat((0, s.capitalize)(t), " ").concat(e.toUpperCase()),
                             size: e,
-                            icon: "none" !== n ? N.gw7 : void 0,
+                            icon: "none" !== n ? C.gw7 : void 0,
                             iconPosition: n,
-                            showLoadingAnimation: a,
+                            showLoadingAnimation: o,
                             disabled: !0,
                         },
                         t + e + "disabled",
@@ -523,25 +533,25 @@ function ec() {
                 ],
             }),
         ),
-        g = [...c, "icon-only"].map((t) =>
-            (0, i.jsx)(
-                eo,
+        p = [...c, "icon-only"].map((t) =>
+            (0, r.jsx)(
+                ef,
                 {
-                    component: p.h,
+                    component: _.h,
                     variant: t,
-                    icon: N.gw7,
+                    icon: C.gw7,
                     size: e,
                     "aria-label": "".concat(t, " ").concat(e),
-                    showLoadingAnimation: a,
+                    showLoadingAnimation: o,
                 },
                 t + e,
             ),
         ),
-        f = ["primary", "secondary", "always-white", "critical"].map((e) =>
-            (0, i.jsx)(
-                r.Fragment,
+        m = ["primary", "secondary", "always-white", "critical"].map((e) =>
+            (0, r.jsx)(
+                i.Fragment,
                 {
-                    children: (0, i.jsx)(h.A, {
+                    children: (0, r.jsx)(h.A, {
                         variant: e,
                         text: "Text button",
                     }),
@@ -549,19 +559,19 @@ function ec() {
                 e,
             ),
         );
-    return (0, i.jsxs)("div", {
-        className: G.section,
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Buttons",
             }),
-            (0, i.jsxs)(eu, {
+            (0, r.jsxs)(eh, {
                 title: "Button Options",
                 children: [
-                    (0, i.jsx)(N.xJW, {
+                    (0, r.jsx)(C.xJW, {
                         title: "Button size",
-                        children: (0, i.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.FXm, {
                             onChange: (e) => {
                                 let { value: n } = e;
                                 return t(n);
@@ -579,12 +589,12 @@ function ec() {
                             value: e,
                         }),
                     }),
-                    (0, i.jsx)(N.xJW, {
+                    (0, r.jsx)(C.xJW, {
                         title: "Icon position",
-                        children: (0, i.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
-                                return s(t);
+                                return a(t);
                             },
                             options: [
                                 {
@@ -603,12 +613,12 @@ function ec() {
                             value: n,
                         }),
                     }),
-                    (0, i.jsx)(N.xJW, {
+                    (0, r.jsx)(C.xJW, {
                         title: "Loading animation",
-                        children: (0, i.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
-                                return o("on" === t);
+                                return l("on" === t);
                             },
                             options: [
                                 {
@@ -620,180 +630,180 @@ function ec() {
                                     name: "On",
                                 },
                             ],
-                            value: a ? "on" : "off",
+                            value: o ? "on" : "off",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "grid",
                     gridTemplateColumns: "repeat(2, 1fr)",
                     gap: 16,
                 },
-                children: [f, d, g],
+                children: [m, u, p],
             }),
-            (0, i.jsxs)(N.Kqy, {
+            (0, r.jsxs)(C.Kqy, {
                 gap: 16,
                 padding: { top: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Button Groups",
                     }),
-                    (0, i.jsx)(N.Text, {
+                    (0, r.jsx)(C.Text, {
                         variant: "text-lg/medium",
                         children: "Horizontal",
                     }),
-                    (0, i.jsxs)(N.Kqy, {
+                    (0, r.jsxs)(C.Kqy, {
                         gap: 16,
                         direction: "horizontal",
                         children: [
-                            (0, i.jsxs)(N.Kqy, {
+                            (0, r.jsxs)(C.Kqy, {
                                 gap: 16,
                                 children: [
-                                    (0, i.jsxs)(m.h, {
+                                    (0, r.jsxs)(f.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(eo, {
-                                                component: u.z,
+                                            (0, r.jsx)(ef, {
+                                                component: d.z,
                                                 variant: "secondary",
                                                 text: "Cancel",
-                                                showLoadingAnimation: a,
+                                                showLoadingAnimation: o,
                                             }),
-                                            (0, i.jsx)(eo, {
-                                                component: u.z,
+                                            (0, r.jsx)(ef, {
+                                                component: d.z,
                                                 variant: "primary",
                                                 text: "Submit",
-                                                showLoadingAnimation: a,
+                                                showLoadingAnimation: o,
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsxs)(m.h, {
+                                    (0, r.jsxs)(f.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(eo, {
-                                                component: u.z,
+                                            (0, r.jsx)(ef, {
+                                                component: d.z,
                                                 variant: "primary",
                                                 text: "Submit",
-                                                showLoadingAnimation: a,
+                                                showLoadingAnimation: o,
                                             }),
-                                            (0, i.jsx)(eo, {
-                                                component: p.h,
+                                            (0, r.jsx)(ef, {
+                                                component: _.h,
                                                 variant: "secondary",
-                                                icon: N.gw7,
+                                                icon: C.gw7,
                                                 "aria-label": "Clyde",
-                                                showLoadingAnimation: a,
+                                                showLoadingAnimation: o,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(N.Kqy, {
+                            (0, r.jsx)(C.Kqy, {
                                 gap: 16,
-                                children: (0, i.jsxs)(m.h, {
+                                children: (0, r.jsxs)(f.h, {
                                     size: e,
                                     fullWidth: !0,
                                     children: [
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "secondary",
                                             text: "Cancel",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "primary",
                                             text: "Submit",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
                                     ],
                                 }),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(N.Text, {
+                    (0, r.jsx)(C.Text, {
                         variant: "text-lg/medium",
                         children: "Vertical",
                     }),
-                    (0, i.jsxs)(N.Kqy, {
+                    (0, r.jsxs)(C.Kqy, {
                         gap: 16,
                         direction: "horizontal",
                         children: [
-                            (0, i.jsx)(N.Kqy, {
+                            (0, r.jsx)(C.Kqy, {
                                 gap: 16,
-                                children: (0, i.jsxs)(m.h, {
+                                children: (0, r.jsxs)(f.h, {
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "secondary",
                                             text: "Cancel",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "primary",
                                             text: "Submit",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(N.Kqy, {
+                            (0, r.jsx)(C.Kqy, {
                                 gap: 16,
-                                children: (0, i.jsxs)(m.h, {
+                                children: (0, r.jsxs)(f.h, {
                                     fullWidth: !0,
                                     direction: "vertical",
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "secondary",
                                             text: "Cancel",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
-                                        (0, i.jsx)(eo, {
-                                            component: u.z,
+                                        (0, r.jsx)(ef, {
+                                            component: d.z,
                                             variant: "primary",
                                             text: "Submit",
-                                            showLoadingAnimation: a,
+                                            showLoadingAnimation: o,
                                         }),
                                     ],
                                 }),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(ed, { buttonSize: e }),
+                    (0, r.jsx)(ep, { buttonSize: e }),
                 ],
             }),
         ],
     });
 }
-function ed(e) {
+function ep(e) {
     let { buttonSize: t } = e,
-        [n, s] = r.useState(!1);
-    return (0, i.jsxs)(N.Kqy, {
+        [n, a] = i.useState(!1);
+    return (0, r.jsxs)(C.Kqy, {
         gap: 16,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "PlayButton",
             }),
-            (0, i.jsx)(N.Kqy, {
+            (0, r.jsx)(C.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 children: ["dark", "mid", "light"].map((e) =>
-                    (0, i.jsx)(
+                    (0, r.jsx)(
                         "div",
                         {
-                            className: G.video,
+                            className: V.video,
                             "data-luminance": e,
-                            children: (0, i.jsx)(g.J, {
+                            children: (0, r.jsx)(p.J, {
                                 size: t,
                                 playing: n,
-                                onClick: () => s(!n),
+                                onClick: () => a(!n),
                             }),
                         },
                         e,
@@ -803,127 +813,127 @@ function ed(e) {
         ],
     });
 }
-function eu(e) {
+function eh(e) {
     let { children: t, title: n } = e,
-        [s, l] = r.useState(!1);
-    return (0, i.jsxs)(N.Kqy, {
+        [a, s] = i.useState(!1);
+    return (0, r.jsxs)(C.Kqy, {
         direction: "vertical",
         gap: 0,
         padding: 16,
-        className: G.floatingControls,
+        className: V.floatingControls,
         children: [
-            (0, i.jsxs)(N.Kqy, {
+            (0, r.jsxs)(C.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 justify: "space-between",
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: n,
                     }),
-                    (0, i.jsx)(f.Q, {
-                        icon: s ? N.hic : N.sXD,
-                        onClick: () => l(!s),
-                        pressed: s,
+                    (0, r.jsx)(m.Q, {
+                        icon: a ? C.hic : C.sXD,
+                        onClick: () => s(!a),
+                        pressed: a,
                         "aria-label": "Show controls",
                     }),
                 ],
             }),
-            (0, i.jsx)(N.Kqy, {
+            (0, r.jsx)(C.Kqy, {
                 gap: 16,
-                className: a()(G.floatingControlsContent, { [G.floatingControlsContentHidden]: !s }),
+                className: o()(V.floatingControlsContent, { [V.floatingControlsContentHidden]: !a }),
                 children: t,
             }),
         ],
     });
 }
 function em() {
-    let [e, t] = r.useState("1");
-    return (0, i.jsxs)("div", {
-        className: G.section,
+    let [e, t] = i.useState("1");
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "TabBar",
             }),
-            (0, i.jsxs)(N.njP, {
+            (0, r.jsxs)(C.njP, {
                 type: "top",
                 look: "brand",
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: G.tabBar,
+                className: V.tabBar,
                 children: [
-                    (0, i.jsx)(N.njP.Item, {
+                    (0, r.jsx)(C.njP.Item, {
                         id: "1",
                         children: "Tab 1",
                     }),
-                    (0, i.jsx)(N.njP.Item, {
+                    (0, r.jsx)(C.njP.Item, {
                         id: "2",
                         children: "Tab 2",
                     }),
-                    (0, i.jsx)(N.njP.Item, {
+                    (0, r.jsx)(C.njP.Item, {
                         id: "3",
                         children: "Tab 3",
                     }),
                 ],
             }),
-            (0, i.jsxs)(N.Text, {
+            (0, r.jsxs)(C.Text, {
                 variant: "text-md/medium",
                 children: ["Selected tab: ", e],
             }),
         ],
     });
 }
-function ep() {
-    let [e, t] = r.useState(1),
-        [n, s] = r.useState(!1),
-        [a, l] = r.useState(5),
-        [o, c] = r.useState(!1),
-        d = r.useRef(null);
-    return (0, i.jsxs)("div", {
-        className: G.section,
+function eg() {
+    let [e, t] = i.useState(1),
+        [n, a] = i.useState(!1),
+        [o, s] = i.useState(5),
+        [l, c] = i.useState(!1),
+        u = i.useRef(null);
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Context Menus",
             }),
-            (0, i.jsx)("span", {
-                children: (0, i.jsx)(N.yRy, {
-                    targetElementRef: d,
-                    shouldShow: o,
+            (0, r.jsx)("span", {
+                children: (0, r.jsx)(C.yRy, {
+                    targetElementRef: u,
+                    shouldShow: l,
                     renderPopout: () =>
-                        (0, i.jsxs)(N.v2r, {
+                        (0, r.jsxs)(C.v2r, {
                             navId: "demo",
                             "aria-label": "Demo Actions",
                             onClose: () => null,
                             onSelect: () => null,
                             children: [
-                                (0, i.jsxs)(N.kSQ, {
+                                (0, r.jsxs)(C.kSQ, {
                                     label: "Basic items",
                                     children: [
-                                        (0, i.jsx)(N.sNh, {
+                                        (0, r.jsx)(C.sNh, {
                                             id: "first",
                                             label: "An option",
                                         }),
-                                        (0, i.jsx)(N.sNh, {
+                                        (0, r.jsx)(C.sNh, {
                                             id: "second",
                                             label: "An option with an icon",
-                                            icon: N.kBi,
+                                            icon: C.kBi,
                                         }),
-                                        (0, i.jsxs)(N.sNh, {
+                                        (0, r.jsxs)(C.sNh, {
                                             id: "item-with-submenu",
                                             label: "Item with submenu",
                                             children: [
-                                                (0, i.jsx)(N.sNh, {
+                                                (0, r.jsx)(C.sNh, {
                                                     id: "subitem-1",
                                                     label: "Subitem 1",
                                                 }),
-                                                (0, i.jsx)(N.sNh, {
+                                                (0, r.jsx)(C.sNh, {
                                                     id: "subitem-2",
                                                     label: "Subitem 2",
                                                 }),
-                                                (0, i.jsx)(N.sNh, {
+                                                (0, r.jsx)(C.sNh, {
                                                     id: "subitem-3",
                                                     label: "Subitem 3",
                                                 }),
@@ -931,77 +941,77 @@ function ep() {
                                         }),
                                     ],
                                 }),
-                                (0, i.jsxs)(N.kSQ, {
+                                (0, r.jsxs)(C.kSQ, {
                                     label: "Inputs",
                                     children: [
-                                        (0, i.jsx)(N.S89, {
+                                        (0, r.jsx)(C.S89, {
                                             id: "checkable",
                                             label: "Checkbox",
                                             checked: n,
-                                            action: () => s(!n),
+                                            action: () => a(!n),
                                         }),
-                                        (0, i.jsx)(N.k5B, {
+                                        (0, r.jsx)(C.k5B, {
                                             id: "radio-one",
                                             group: "a-group",
                                             label: "Radio 1",
                                             action: () => t(1),
                                             checked: 1 === e,
                                         }),
-                                        (0, i.jsx)(N.k5B, {
+                                        (0, r.jsx)(C.k5B, {
                                             id: "radio-two",
                                             group: "a-group",
                                             label: "Radio 2",
                                             action: () => t(2),
                                             checked: 2 === e,
                                         }),
-                                        (0, i.jsx)(N.k5B, {
+                                        (0, r.jsx)(C.k5B, {
                                             id: "radio-three",
                                             group: "a-group",
                                             label: "Radio 3",
                                             action: () => t(3),
                                             checked: 3 === e,
                                         }),
-                                        (0, i.jsx)(N.II_, {
+                                        (0, r.jsx)(C.II_, {
                                             id: "slider",
                                             label: "Slider",
                                             control: (e, t) =>
-                                                (0, i.jsx)(N._wy, {
+                                                (0, r.jsx)(C._wy, {
                                                     ref: t,
-                                                    value: a,
+                                                    value: o,
                                                     minValue: 0,
                                                     maxValue: 100,
-                                                    onChange: (e) => l(e),
+                                                    onChange: (e) => s(e),
                                                     "aria-label": "Slider",
                                                 }),
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(N.Clw, {}),
-                                (0, i.jsx)(N.sNh, {
+                                (0, r.jsx)(C.Clw, {}),
+                                (0, r.jsx)(C.sNh, {
                                     id: "danger",
                                     label: "A destructive option",
                                     color: "danger",
-                                    icon: N.XHJ,
+                                    icon: C.XHJ,
                                 }),
                             ],
                         }),
                     children: () =>
-                        (0, i.jsx)(N.zxk, {
+                        (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Toggle context menu",
-                            buttonRef: d,
-                            onClick: () => c(!o),
+                            buttonRef: u,
+                            onClick: () => c(!l),
                         }),
                 }),
             }),
         ],
     });
 }
-function eg() {
-    let [e, t] = r.useState(N.FGA.PRIMARY),
-        n = r.useMemo(
+function eE() {
+    let [e, t] = i.useState(C.FGA.PRIMARY),
+        n = i.useMemo(
             () =>
-                Object.entries(N.FGA).map((e) => {
+                Object.entries(C.FGA).map((e) => {
                     let [t, n] = e;
                     return {
                         label: t,
@@ -1010,40 +1020,40 @@ function eg() {
                 }),
             [],
         );
-    return (0, i.jsxs)("div", {
-        className: G.section,
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Tooltips",
             }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-lg/semibold",
                 children: "Legacy Tooltips",
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Color",
-                children: (0, i.jsx)(N.q4e, {
+                children: (0, r.jsx)(C.q4e, {
                     value: e,
                     onChange: t,
                     options: n,
                 }),
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
                     flexWrap: "wrap",
                 },
                 children: [
-                    (0, i.jsx)(N.ua7, {
+                    (0, r.jsx)(C.ua7, {
                         color: e,
                         text: "Here's top aligned tooltip text!",
                         position: "top",
                         children: (e) =>
-                            (0, i.jsx)(
-                                N.zxk,
-                                q(
+                            (0, r.jsx)(
+                                C.zxk,
+                                X(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the top",
@@ -1052,14 +1062,14 @@ function eg() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(N.ua7, {
+                    (0, r.jsx)(C.ua7, {
                         color: e,
                         text: "Here's right aligned tooltip text!",
                         position: "left",
                         children: (e) =>
-                            (0, i.jsx)(
-                                N.zxk,
-                                q(
+                            (0, r.jsx)(
+                                C.zxk,
+                                X(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the left",
@@ -1068,14 +1078,14 @@ function eg() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(N.ua7, {
+                    (0, r.jsx)(C.ua7, {
                         color: e,
                         text: "Here's bottom aligned tooltip text!",
                         position: "bottom",
                         children: (e) =>
-                            (0, i.jsx)(
-                                N.zxk,
-                                q(
+                            (0, r.jsx)(
+                                C.zxk,
+                                X(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the bottom",
@@ -1084,14 +1094,14 @@ function eg() {
                                 ),
                             ),
                     }),
-                    (0, i.jsx)(N.ua7, {
+                    (0, r.jsx)(C.ua7, {
                         color: e,
                         text: "Here's right aligned tooltip text!",
                         position: "right",
                         children: (e) =>
-                            (0, i.jsx)(
-                                N.zxk,
-                                q(
+                            (0, r.jsx)(
+                                C.zxk,
+                                X(
                                     {
                                         variant: "primary",
                                         text: "Tooltip on the right",
@@ -1102,66 +1112,66 @@ function eg() {
                     }),
                 ],
             }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-lg/semibold",
                 style: { marginTop: 32 },
                 children: "New Mana Tooltips",
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
                     flexWrap: "wrap",
                 },
                 children: [
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "New Mana Tooltip with animations!",
                         position: "top",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Mana Tooltip (Top)",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Left positioned animated tooltip",
                         position: "left",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Mana Tooltip (Left)",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Bottom positioned animated tooltip",
                         position: "bottom",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Mana Tooltip (Bottom)",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Right positioned animated tooltip",
                         position: "right",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Mana Tooltip (Right)",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod non proident amo.",
                         position: "right",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Three lines",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-lg/semibold",
                 style: { marginTop: 32 },
                 children: "Tooltip Caret API Examples",
             }),
-            (0, i.jsx)(N.Text, {
+            (0, r.jsx)(C.Text, {
                 variant: "text-md/medium",
                 style: {
                     marginTop: 16,
@@ -1169,7 +1179,7 @@ function eg() {
                 },
                 children: "Vertical Positions",
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
@@ -1177,68 +1187,68 @@ function eg() {
                     marginBottom: 16,
                 },
                 children: [
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Top with start",
                         position: "top",
                         caretConfig: { align: "start" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Top - Start",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Top with center",
                         position: "top",
                         caretConfig: { align: "center" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Top - Center",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Top with end",
                         position: "top",
                         caretConfig: { align: "end" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Top - End",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Bottom with start",
                         position: "bottom",
                         caretConfig: { align: "start" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Bottom - Start",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Bottom with center",
                         position: "bottom",
                         caretConfig: { align: "center" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Bottom - Center",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Bottom with end",
                         position: "bottom",
                         caretConfig: { align: "end" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Bottom - End",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(N.Text, {
+            (0, r.jsx)(C.Text, {
                 variant: "text-md/medium",
                 style: { marginBottom: 8 },
                 children: "Horizontal Positions",
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
@@ -1246,118 +1256,118 @@ function eg() {
                     marginBottom: 16,
                 },
                 children: [
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Left with center",
                         position: "left",
                         caretConfig: { align: "center" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Left - Center",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Right with center",
                         position: "right",
                         caretConfig: { align: "center" },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Right - Center",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(N.Text, {
+            (0, r.jsx)(C.Text, {
                 variant: "text-md/medium",
                 style: { marginBottom: 8 },
                 children: "Custom Offset",
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
                     flexWrap: "wrap",
                 },
-                children: (0, i.jsx)(T.u, {
+                children: (0, r.jsx)(A.u, {
                     text: "Bottom with custom",
                     position: "bottom",
                     caretConfig: {
                         align: "custom",
                         customOffset: 30,
                     },
-                    children: (0, i.jsx)(N.zxk, {
+                    children: (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Custom Offset",
                     }),
                 }),
             }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-lg/semibold",
                 style: { marginTop: 32 },
                 children: "Tooltip Delays",
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
                     flexWrap: "wrap",
                 },
                 children: [
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "No delay (immediate)",
                         delay: 0,
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "No Delay",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Short delay (500ms)",
                         delay: 500,
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Short Delay",
                         }),
                     }),
-                    (0, i.jsx)(T.u, {
+                    (0, r.jsx)(A.u, {
                         text: "Long delay (1000ms)",
                         delay: 1000,
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Long Delay",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-lg/semibold",
                 style: { marginTop: 32 },
                 children: "Rich Tooltips",
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: {
                     display: "flex",
                     gap: 8,
                     flexWrap: "wrap",
                 },
                 children: [
-                    (0, i.jsx)(T.i_, {
+                    (0, r.jsx)(A.i_, {
                         title: "Title goes here",
                         body: "Body copy goes in this section. Meow.",
                         position: "top",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Rich Tooltip (No Graphic)",
                         }),
                     }),
-                    (0, i.jsx)(T.i_, {
+                    (0, r.jsx)(A.i_, {
                         title: "With Graphic Asset",
                         body: "This tooltip includes a graphic element on the left side",
-                        asset: (0, i.jsx)("img", {
+                        asset: (0, r.jsx)("img", {
                             src: H.Z,
                             alt: "Graphic slot 48px",
                         }),
                         position: "top",
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "With Asset",
                         }),
@@ -1367,83 +1377,83 @@ function eg() {
         ],
     });
 }
-function eh() {
-    let [e, t] = r.useState(!1),
-        [n, s] = r.useState(!1),
-        [a, l] = r.useState(!1),
-        [o, c] = r.useState(!1),
-        [d, u] = r.useState(!1),
-        [m, p] = r.useState(!1),
-        [g, h] = r.useState(!1),
-        [f, b] = r.useState(!1),
-        [x, _] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        [C, O] = r.useState(!1),
-        [T, I] = r.useState(!1),
-        [y, A] = r.useState(!1),
-        [P, R] = r.useState(!1),
-        [D, Z] = r.useState(!1),
-        [w, k] = r.useState(!1),
-        [L, B] = r.useState(!1),
-        [M, U] = r.useState(!1),
-        [V, F] = r.useState(!1),
-        [H, z] = r.useState(!1),
-        [q, X] = r.useState(!1),
-        J = r.useRef(null),
-        Q = r.useRef(null),
-        $ = r.useRef(null),
-        ee = r.useRef(null),
-        et = r.useRef(null),
-        en = r.useRef(null),
-        ei = r.useRef(null),
-        er = r.useRef(null),
-        es = r.useRef(null),
-        ea = r.useRef(null),
-        el = r.useRef(null),
-        eo = r.useRef(null),
-        ec = r.useRef(null),
-        ed = r.useRef(null),
-        eu = r.useRef(null),
-        em = r.useRef(null),
-        ep = r.useRef(null),
-        eg = r.useRef(null),
-        eh = r.useRef(null),
-        ef = r.useRef(null),
-        eb = r.useRef(null),
-        ex = r.useCallback(() => {
+function eb() {
+    let [e, t] = i.useState(!1),
+        [n, a] = i.useState(!1),
+        [o, s] = i.useState(!1),
+        [l, c] = i.useState(!1),
+        [u, d] = i.useState(!1),
+        [f, _] = i.useState(!1),
+        [p, h] = i.useState(!1),
+        [m, g] = i.useState(!1),
+        [E, b] = i.useState(!1),
+        [y, O] = i.useState(!1),
+        [v, I] = i.useState(!1),
+        [A, N] = i.useState(!1),
+        [R, P] = i.useState(!1),
+        [w, D] = i.useState(!1),
+        [x, L] = i.useState(!1),
+        [j, M] = i.useState(!1),
+        [k, U] = i.useState(!1),
+        [G, B] = i.useState(!1),
+        [Z, F] = i.useState(!1),
+        [H, Y] = i.useState(!1),
+        [q, X] = i.useState(!1),
+        Q = i.useRef(null),
+        J = i.useRef(null),
+        $ = i.useRef(null),
+        ee = i.useRef(null),
+        et = i.useRef(null),
+        en = i.useRef(null),
+        er = i.useRef(null),
+        ei = i.useRef(null),
+        ea = i.useRef(null),
+        eo = i.useRef(null),
+        es = i.useRef(null),
+        el = i.useRef(null),
+        ec = i.useRef(null),
+        eu = i.useRef(null),
+        ed = i.useRef(null),
+        ef = i.useRef(null),
+        e_ = i.useRef(null),
+        ep = i.useRef(null),
+        eh = i.useRef(null),
+        em = i.useRef(null),
+        eg = i.useRef(null),
+        eE = i.useCallback(() => {
             t(!1),
+                a(!1),
                 s(!1),
-                l(!1),
                 c(!1),
-                u(!1),
-                p(!1),
-                h(!1),
-                b(!1),
+                d(!1),
                 _(!1),
-                E(!1),
+                h(!1),
+                g(!1),
+                b(!1),
                 O(!1),
                 I(!1),
-                A(!1),
-                R(!1),
-                Z(!1),
-                k(!1),
-                B(!1),
+                N(!1),
+                P(!1),
+                D(!1),
+                L(!1),
+                M(!1),
                 U(!1),
+                B(!1),
                 F(!1),
-                z(!1),
+                Y(!1),
                 X(!1);
         }, []);
-    return (0, i.jsxs)("div", {
-        className: G.section,
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Popovers",
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: J,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: Q,
                 shouldShow: e,
-                onRequestClose: ex,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1453,20 +1463,20 @@ function eh() {
                 size: "sm",
                 graphic: {
                     type: "image",
-                    src: Y.Z,
+                    src: K.Z,
                 },
                 badge: "new",
                 actions: [
                     {
                         text: "Button",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: Q,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: J,
                 shouldShow: n,
-                onRequestClose: ex,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1481,14 +1491,14 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: $,
-                shouldShow: a,
-                onRequestClose: ex,
+                shouldShow: o,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1498,14 +1508,14 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ee,
-                shouldShow: o,
-                onRequestClose: ex,
+                shouldShow: l,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1520,7 +1530,7 @@ function eh() {
                 actions: [
                     {
                         text: "Button",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
                 textLink: {
@@ -1529,10 +1539,10 @@ function eh() {
                     external: !0,
                 },
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: et,
-                shouldShow: d,
-                onRequestClose: ex,
+                shouldShow: u,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1547,20 +1557,20 @@ function eh() {
                 actions: [
                     {
                         text: "Primary",
-                        onClick: ex,
+                        onClick: eE,
                         variant: "primary",
                     },
                     {
                         text: "Secondary",
-                        onClick: ex,
+                        onClick: eE,
                         variant: "secondary",
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: en,
-                shouldShow: m,
-                onRequestClose: ex,
+                shouldShow: f,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1573,10 +1583,10 @@ function eh() {
                 },
                 badge: "new",
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: ei,
-                shouldShow: g,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: er,
+                shouldShow: p,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "top",
                     align: "end",
@@ -1591,14 +1601,14 @@ function eh() {
                 actions: [
                     {
                         text: "Got it",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: er,
-                shouldShow: f,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: ei,
+                shouldShow: m,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "left",
                     align: "start",
@@ -1613,14 +1623,14 @@ function eh() {
                 actions: [
                     {
                         text: "Close",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: es,
-                shouldShow: x,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: ea,
+                shouldShow: E,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "custom",
@@ -1636,14 +1646,14 @@ function eh() {
                 actions: [
                     {
                         text: "Amazing!",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: ea,
-                shouldShow: j,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: eo,
+                shouldShow: y,
+                onRequestClose: eE,
                 position: "right",
                 caretConfig: {
                     position: "left",
@@ -1659,14 +1669,14 @@ function eh() {
                 actions: [
                     {
                         text: "Perfect!",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: el,
-                shouldShow: C,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: es,
+                shouldShow: v,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1682,14 +1692,14 @@ function eh() {
                 actions: [
                     {
                         text: "Looks Great!",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: eo,
-                shouldShow: T,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: el,
+                shouldShow: A,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1705,14 +1715,14 @@ function eh() {
                 actions: [
                     {
                         text: "Nice!",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ec,
-                shouldShow: y,
-                onRequestClose: ex,
+                shouldShow: R,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1732,14 +1742,14 @@ function eh() {
                 actions: [
                     {
                         text: "Get Nitro",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.J2, {
-                targetElementRef: ed,
-                shouldShow: P,
-                onRequestClose: ex,
+            (0, r.jsx)(T.J2, {
+                targetElementRef: eu,
+                shouldShow: w,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1748,21 +1758,21 @@ function eh() {
                 body: "Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.",
                 graphic: {
                     type: "image",
-                    src: K.Z,
+                    src: z.Z,
                 },
                 badge: "new",
                 gradientColor: "purple",
                 actions: [
                     {
                         text: "Try it now",
-                        onClick: ex,
+                        onClick: eE,
                     },
                 ],
             }),
-            (0, i.jsx)(v.Mb, {
-                targetElementRef: eu,
-                shouldShow: D,
-                onRequestClose: ex,
+            (0, r.jsx)(T.Mb, {
+                targetElementRef: ed,
+                shouldShow: x,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1773,13 +1783,13 @@ function eh() {
                 badge: "new",
                 action: {
                     text: "Learn More",
-                    onClick: ex,
+                    onClick: eE,
                 },
             }),
-            (0, i.jsx)(v.Mb, {
-                targetElementRef: em,
-                shouldShow: w,
-                onRequestClose: ex,
+            (0, r.jsx)(T.Mb, {
+                targetElementRef: ef,
+                shouldShow: j,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1791,13 +1801,13 @@ function eh() {
                 badge: "new",
                 action: {
                     text: "Learn More",
-                    onClick: ex,
+                    onClick: eE,
                 },
             }),
-            (0, i.jsx)(v.Mb, {
-                targetElementRef: ep,
-                shouldShow: L,
-                onRequestClose: ex,
+            (0, r.jsx)(T.Mb, {
+                targetElementRef: e_,
+                shouldShow: k,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1808,13 +1818,13 @@ function eh() {
                 badge: "new",
                 action: {
                     text: "Learn More",
-                    onClick: ex,
+                    onClick: eE,
                 },
             }),
-            (0, i.jsx)(S.e, {
-                targetElementRef: eg,
-                shouldShow: M,
-                onRequestClose: ex,
+            (0, r.jsx)(S.e, {
+                targetElementRef: ep,
+                shouldShow: G,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1836,7 +1846,7 @@ function eh() {
                         body: "Complete quests to earn Orbs and unlock exclusive rewards.",
                         graphic: {
                             type: "image",
-                            src: K.Z,
+                            src: z.Z,
                         },
                         action: { text: "Next" },
                         gradientColor: "blue",
@@ -1859,10 +1869,10 @@ function eh() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, i.jsx)(v.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: eh,
-                shouldShow: V,
-                onRequestClose: ex,
+                shouldShow: Z,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1871,22 +1881,22 @@ function eh() {
                 body: "Enhanced voice quality with our latest filtering technology. Try the expressive button!",
                 graphic: {
                     type: "image",
-                    src: K.Z,
+                    src: z.Z,
                 },
                 badge: "new",
                 gradientColor: "nitro-pink",
                 actions: [
                     {
                         text: "Subscribe to Nitro",
-                        onClick: ex,
+                        onClick: eE,
                         variant: "expressive",
                     },
                 ],
             }),
-            (0, i.jsx)(S.e, {
-                targetElementRef: ef,
+            (0, r.jsx)(S.e, {
+                targetElementRef: em,
                 shouldShow: H,
-                onRequestClose: ex,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1908,7 +1918,7 @@ function eh() {
                         body: "Learn how to make the most of your Discord experience.",
                         graphic: {
                             type: "image",
-                            src: K.Z,
+                            src: z.Z,
                         },
                         action: { text: "Almost There" },
                         gradientColor: "blue",
@@ -1934,10 +1944,10 @@ function eh() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, i.jsx)(v.Mb, {
-                targetElementRef: eb,
+            (0, r.jsx)(T.Mb, {
+                targetElementRef: eg,
                 shouldShow: q,
-                onRequestClose: ex,
+                onRequestClose: eE,
                 caretConfig: {
                     position: "bottom",
                     align: "center",
@@ -1948,18 +1958,18 @@ function eh() {
                 badge: "new",
                 action: {
                     text: "Experience More",
-                    onClick: ex,
+                    onClick: eE,
                     variant: "expressive",
                 },
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Size Examples",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -1967,26 +1977,26 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Small Content",
-                                buttonRef: J,
-                                onClick: () => {
-                                    ex(), t(!0);
-                                },
-                            }),
-                            (0, i.jsx)(N.zxk, {
-                                variant: "primary",
-                                text: "Medium Content",
                                 buttonRef: Q,
                                 onClick: () => {
-                                    ex(), s(!0);
+                                    eE(), t(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
+                                variant: "primary",
+                                text: "Medium Content",
+                                buttonRef: J,
+                                onClick: () => {
+                                    eE(), a(!0);
+                                },
+                            }),
+                            (0, r.jsx)(C.zxk, {
                                 buttonRef: $,
                                 onClick: () => {
-                                    ex(), l(!0);
+                                    eE(), s(!0);
                                 },
                                 text: "No Asset",
                             }),
@@ -1994,14 +2004,14 @@ function eh() {
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Actions Examples",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -2009,26 +2019,26 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "External Link",
                                 buttonRef: ee,
                                 onClick: () => {
-                                    ex(), c(!0);
+                                    eE(), c(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Two Actions",
                                 buttonRef: et,
                                 onClick: () => {
-                                    ex(), u(!0);
+                                    eE(), d(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 buttonRef: en,
                                 onClick: () => {
-                                    ex(), p(!0);
+                                    eE(), _(!0);
                                 },
                                 text: "No Actions",
                             }),
@@ -2036,14 +2046,14 @@ function eh() {
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Caret API Examples",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -2051,50 +2061,50 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Custom Caret API",
-                                buttonRef: ei,
-                                onClick: () => {
-                                    ex(), h(!0);
-                                },
-                            }),
-                            (0, i.jsx)(N.zxk, {
-                                variant: "primary",
-                                text: "Left Side Caret",
                                 buttonRef: er,
                                 onClick: () => {
-                                    ex(), b(!0);
+                                    eE(), h(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
+                                variant: "primary",
+                                text: "Left Side Caret",
+                                buttonRef: ei,
+                                onClick: () => {
+                                    eE(), g(!0);
+                                },
+                            }),
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Custom Offset",
-                                buttonRef: es,
-                                onClick: () => {
-                                    ex(), _(!0);
-                                },
-                            }),
-                            (0, i.jsx)(N.zxk, {
-                                variant: "primary",
-                                text: "Left Center",
                                 buttonRef: ea,
                                 onClick: () => {
-                                    ex(), E(!0);
+                                    eE(), b(!0);
+                                },
+                            }),
+                            (0, r.jsx)(C.zxk, {
+                                variant: "primary",
+                                text: "Left Center",
+                                buttonRef: eo,
+                                onClick: () => {
+                                    eE(), O(!0);
                                 },
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Gradient Examples",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -2102,42 +2112,42 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Purple Gradient",
-                                buttonRef: el,
+                                buttonRef: es,
                                 onClick: () => {
-                                    ex(), O(!0);
+                                    eE(), I(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Blue Gradient",
-                                buttonRef: eo,
+                                buttonRef: el,
                                 onClick: () => {
-                                    ex(), I(!0);
+                                    eE(), N(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Nitro Pink Gradient",
                                 buttonRef: ec,
                                 onClick: () => {
-                                    ex(), A(!0);
+                                    eE(), P(!0);
                                 },
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "With Asset",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -2145,75 +2155,75 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Voice Filters",
-                                buttonRef: ed,
-                                onClick: () => {
-                                    ex(), R(!0);
-                                },
-                            }),
-                            (0, i.jsx)(N.zxk, {
-                                variant: "primary",
-                                text: "Video Media Viewer",
                                 buttonRef: eu,
                                 onClick: () => {
-                                    ex(), Z(!0);
+                                    eE(), D(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
+                                variant: "primary",
+                                text: "Video Media Viewer",
+                                buttonRef: ed,
+                                onClick: () => {
+                                    eE(), L(!0);
+                                },
+                            }),
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Video with Different Preview",
-                                buttonRef: em,
+                                buttonRef: ef,
                                 onClick: () => {
-                                    ex(), k(!0);
+                                    eE(), M(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "With image",
-                                buttonRef: ep,
+                                buttonRef: e_,
                                 onClick: () => {
-                                    ex(), B(!0);
+                                    eE(), U(!0);
                                 },
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Multi-Step",
                     }),
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
                             flexWrap: "wrap",
                             marginTop: 8,
                         },
-                        children: (0, i.jsx)(N.zxk, {
+                        children: (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Multi-Step",
-                            buttonRef: eg,
+                            buttonRef: ep,
                             onClick: () => {
-                                ex(), U(!0);
+                                eE(), B(!0);
                             },
                         }),
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 style: { marginTop: 16 },
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Expressive",
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         style: {
                             display: "flex",
                             gap: 16,
@@ -2221,28 +2231,28 @@ function eh() {
                             marginTop: 8,
                         },
                         children: [
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Expressive Popover",
                                 buttonRef: eh,
                                 onClick: () => {
-                                    ex(), F(!0);
+                                    eE(), F(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Expressive Multi-Step",
-                                buttonRef: ef,
+                                buttonRef: em,
                                 onClick: () => {
-                                    ex(), z(!0);
+                                    eE(), Y(!0);
                                 },
                             }),
-                            (0, i.jsx)(N.zxk, {
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Expressive Video",
-                                buttonRef: eb,
+                                buttonRef: eg,
                                 onClick: () => {
-                                    ex(), X(!0);
+                                    eE(), X(!0);
                                 },
                             }),
                         ],
@@ -2252,83 +2262,83 @@ function eh() {
         ],
     });
 }
-function ef() {
-    let [e, t] = r.useState(!1),
-        [n, s] = r.useState(!1),
-        [a, l] = r.useState("auto");
-    return (0, i.jsxs)(i.Fragment, {
+function ey() {
+    let [e, t] = i.useState(!1),
+        [n, a] = i.useState(!1),
+        [o, s] = i.useState("auto");
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Checkboxes",
                     }),
-                    (0, i.jsx)(N.XZJ, {
+                    (0, r.jsx)(C.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        children: (0, i.jsx)(N.Text, {
+                        children: (0, r.jsx)(C.Text, {
                             variant: "text-md/medium",
                             children: "Checkbox input",
                         }),
                     }),
-                    (0, i.jsx)(N.XZJ, {
+                    (0, r.jsx)(C.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
                         disabled: !0,
-                        children: (0, i.jsx)(N.Text, {
+                        children: (0, r.jsx)(C.Text, {
                             variant: "text-md/medium",
                             children: "Disabled checkbox",
                         }),
                     }),
-                    (0, i.jsx)(N.XZJ, {
+                    (0, r.jsx)(C.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
                         readOnly: !0,
-                        children: (0, i.jsx)(N.Text, {
+                        children: (0, r.jsx)(C.Text, {
                             variant: "text-md/medium",
                             children: "Read-only checkbox",
                         }),
                     }),
-                    (0, i.jsx)(N.XZJ, {
+                    (0, r.jsx)(C.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        type: N.XZJ.Types.ROW,
-                        children: (0, i.jsx)(N.Text, {
+                        type: C.XZJ.Types.ROW,
+                        children: (0, r.jsx)(C.Text, {
                             variant: "text-md/medium",
                             children: "Checkbox row",
                         }),
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Switches",
                     }),
-                    (0, i.jsx)(N.j7V, {
+                    (0, r.jsx)(C.j7V, {
                         hideBorder: !0,
                         value: n,
-                        onChange: (e) => s(e),
+                        onChange: (e) => a(e),
                         children: "FormSwitch with a label",
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Radio Buttons",
                     }),
-                    (0, i.jsx)(N.xJW, {
-                        children: (0, i.jsx)(N.FXm, {
+                    (0, r.jsx)(C.xJW, {
+                        children: (0, r.jsx)(C.FXm, {
                             onChange: (e) => {
                                 let { value: t } = e;
-                                return l(t);
+                                return s(t);
                             },
                             options: [
                                 {
@@ -2344,26 +2354,26 @@ function ef() {
                                     name: "1080p",
                                 },
                             ],
-                            value: a,
+                            value: o,
                         }),
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Slider",
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "Standard slider",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2372,14 +2382,14 @@ function ef() {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "Sticky markers",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2388,14 +2398,14 @@ function ef() {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "Non-uniform markers",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2404,14 +2414,14 @@ function ef() {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "Non-uniform equidistant markers",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -2420,28 +2430,28 @@ function ef() {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "No markers",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: G.slider,
+                    (0, r.jsxs)("div", {
+                        className: V.slider,
                         children: [
-                            (0, i.jsx)(N.Text, {
+                            (0, r.jsx)(C.Text, {
                                 variant: "text-md/medium",
                                 children: "Mini slider",
                             }),
-                            (0, i.jsx)(N.iRW, {
+                            (0, r.jsx)(C.iRW, {
                                 mini: !0,
                                 minValue: 0,
                                 maxValue: 100,
@@ -2454,63 +2464,63 @@ function ef() {
         ],
     });
 }
-function eb() {
-    let [e, t] = r.useState(null),
-        [n, s] = r.useState(null),
-        [a, l] = r.useState([]),
-        [c, d] = r.useState([]),
-        [u, m] = r.useState([]);
-    return (0, i.jsxs)("div", {
-        className: G.section,
+function eO() {
+    let [e, t] = i.useState(null),
+        [n, a] = i.useState(null),
+        [o, s] = i.useState([]),
+        [c, u] = i.useState([]),
+        [d, f] = i.useState([]);
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "SearchableSelect",
             }),
-            (0, i.jsx)(N.VcW, {
+            (0, r.jsx)(C.VcW, {
                 placeholder: "Single select",
                 value: e,
                 onChange: (e) => t(e),
-                options: o.G,
+                options: l.G,
             }),
-            (0, i.jsx)(N.VcW, {
+            (0, r.jsx)(C.VcW, {
                 placeholder: "Single select (clearable)",
                 clearable: !0,
                 value: n,
-                onChange: (e) => s(e),
-                options: o.G,
+                onChange: (e) => a(e),
+                options: l.G,
             }),
-            (0, i.jsx)(N.VcW, {
+            (0, r.jsx)(C.VcW, {
                 placeholder: "Multi select",
                 multi: !0,
-                value: a,
-                onChange: (e) => l(e),
-                options: o.G,
+                value: o,
+                onChange: (e) => s(e),
+                options: l.G,
             }),
-            (0, i.jsx)(N.VcW, {
+            (0, r.jsx)(C.VcW, {
                 placeholder: "Multi select (clearable)",
                 multi: !0,
                 clearable: !0,
-                value: u,
-                onChange: (e) => m(e),
-                options: o.G,
+                value: d,
+                onChange: (e) => f(e),
+                options: l.G,
             }),
-            (0, i.jsx)(N.VcW, {
+            (0, r.jsx)(C.VcW, {
                 placeholder: "Multi select (custom pills)",
                 multi: !0,
                 value: c,
-                onChange: (e) => d(e),
-                options: o.G,
+                onChange: (e) => u(e),
+                options: l.G,
                 hidePills: !0,
-                customPillContainerClassName: G.customPillContainer,
+                customPillContainerClassName: V.customPillContainer,
                 renderCustomPill: (e) =>
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         style: {
                             padding: 8,
                             border: "1px solid var(--bg-brand)",
                             borderRadius: 8,
                         },
-                        children: (0, i.jsx)(N.Text, {
+                        children: (0, r.jsx)(C.Text, {
                             variant: "text-md/bold",
                             children: e.label,
                         }),
@@ -2519,105 +2529,105 @@ function eb() {
         ],
     });
 }
-function ex() {
-    let [e, t] = r.useState(""),
-        [n, s] = r.useState(""),
-        [a, l] = r.useState(""),
-        o = (0, P.U)("UserSettingsDesignSystems");
-    return (0, i.jsxs)("div", {
-        className: G.section,
+function ev() {
+    let [e, t] = i.useState(""),
+        [n, a] = i.useState(""),
+        [o, s] = i.useState(""),
+        l = (0, w.U)("UserSettingsDesignSystems");
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "TextInput",
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Search",
-                children: (0, i.jsxs)(N.Kqy, {
+                children: (0, r.jsxs)(C.Kqy, {
                     gap: 8,
                     children: [
-                        (0, i.jsx)(N.E1j, {
+                        (0, r.jsx)(C.E1j, {
                             placeholder: "Search...",
-                            onChange: (e) => l(e),
-                            query: a,
-                            onClear: () => l(""),
+                            onChange: (e) => s(e),
+                            query: o,
+                            onClear: () => s(""),
                         }),
-                        (0, i.jsx)(N.E1j, {
+                        (0, r.jsx)(C.E1j, {
                             size: "sm",
                             placeholder: "Search...",
-                            onChange: (e) => l(e),
-                            query: a,
-                            onClear: () => l(""),
+                            onChange: (e) => s(e),
+                            query: o,
+                            onClear: () => s(""),
                         }),
                     ],
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Disabled",
                 disabled: !0,
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     placeholder: "Disabled",
                     disabled: !0,
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Error",
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     required: !0,
                     error: "This must have a value",
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Error",
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     defaultValue: "Not a valid value",
                     error: "This has an error.",
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "minLength",
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     minLength: 6,
                     value: e,
                     onChange: t,
                     placeholder: "Enter at least 6 characters",
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Read only",
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     value: "Read-only, not-editable field",
                     editable: !1,
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Input with a label",
-                children: (0, i.jsx)(N.oil, {
+                children: (0, r.jsx)(C.oil, {
                     placeholder: "Real placeholder",
                     value: e,
                     onChange: t,
                 }),
             }),
-            o &&
-                (0, i.jsx)(N.xJW, {
+            l &&
+                (0, r.jsx)(C.xJW, {
                     title: "Leading and Trailing",
-                    children: (0, i.jsxs)(N.Kqy, {
+                    children: (0, r.jsxs)(C.Kqy, {
                         gap: 16,
                         children: [
-                            (0, i.jsx)(N.Wn, {
-                                messageType: N.QYI.WARNING,
+                            (0, r.jsx)(C.Wn, {
+                                messageType: C.QYI.WARNING,
                                 children: "Leading and trailing accessories are not yet supported in the public API.",
                             }),
-                            (0, i.jsxs)(N.Kqy, {
+                            (0, r.jsxs)(C.Kqy, {
                                 children: [
-                                    (0, i.jsx)(N.oil, {
-                                        leading: N.qJs,
+                                    (0, r.jsx)(C.oil, {
+                                        leading: C.qJs,
                                         placeholder: "Create Channel",
                                         value: e,
                                         onChange: t,
                                     }),
-                                    (0, i.jsx)(N.oil, {
-                                        trailing: N.lOy,
+                                    (0, r.jsx)(C.oil, {
+                                        trailing: C.lOy,
                                         placeholder: "Send Message",
                                         value: e,
                                         onChange: t,
@@ -2627,47 +2637,47 @@ function ex() {
                         ],
                     }),
                 }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Text area",
-                children: (0, i.jsx)(N.Kx8, {
+                children: (0, r.jsx)(C.Kx8, {
                     placeholder: "Text area placeholder",
                     showCharacterCount: !0,
                     value: n,
-                    onChange: s,
+                    onChange: a,
                 }),
             }),
         ],
     });
 }
-function e_(e) {
+function eI(e) {
     let { transitionState: t } = e,
-        [n, s] = r.useState(!1),
-        [a, l] = r.useState(N.CgR.SMALL),
-        [o, c] = r.useState(!1),
-        d = n ? G.modalOutlines : "";
-    return (0, i.jsxs)(N.Y0X, {
+        [n, a] = i.useState(!1),
+        [o, s] = i.useState(C.CgR.SMALL),
+        [l, c] = i.useState(!1),
+        u = n ? V.modalOutlines : "";
+    return (0, r.jsxs)(C.Y0X, {
         transitionState: t,
-        size: a,
+        size: o,
         parentComponent: "UserSettingsDesignSystem",
         children: [
-            (0, i.jsx)(N.xBx, {
-                className: d,
-                children: (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.xBx, {
+                className: u,
+                children: (0, r.jsx)(C.X6q, {
                     variant: "heading-xl/semibold",
                     children: "Modal",
                 }),
             }),
-            (0, i.jsx)(N.hzk, {
-                className: d,
-                children: (0, i.jsxs)(N.Kqy, {
+            (0, r.jsx)(C.hzk, {
+                className: u,
+                children: (0, r.jsxs)(C.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(N.xJW, {
+                        (0, r.jsx)(C.xJW, {
                             title: "Modal Size",
-                            children: (0, i.jsx)(N.q4e, {
-                                value: a,
-                                onChange: l,
-                                options: Object.entries(N.CgR).map((e) => {
+                            children: (0, r.jsx)(C.q4e, {
+                                value: o,
+                                onChange: s,
+                                options: Object.entries(C.CgR).map((e) => {
                                     let [t, n] = e;
                                     return {
                                         label: t,
@@ -2676,23 +2686,23 @@ function e_(e) {
                                 }),
                             }),
                         }),
-                        (0, i.jsx)(N.hjN, {
+                        (0, r.jsx)(C.hjN, {
                             title: "Options",
-                            children: (0, i.jsxs)(N.Kqy, {
+                            children: (0, r.jsxs)(C.Kqy, {
                                 gap: 16,
                                 children: [
-                                    (0, i.jsx)(N.XZJ, {
+                                    (0, r.jsx)(C.XZJ, {
                                         value: n,
-                                        onChange: (e, t) => s(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                        onChange: (e, t) => a(t),
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Section Outlines",
                                         }),
                                     }),
-                                    (0, i.jsx)(N.XZJ, {
-                                        value: o,
+                                    (0, r.jsx)(C.XZJ, {
+                                        value: l,
                                         onChange: (e, t) => c(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Show secondary action in footer",
                                         }),
@@ -2703,19 +2713,19 @@ function e_(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(N.mzw, {
-                className: d,
-                children: (0, i.jsxs)(N.Kqy, {
+            (0, r.jsx)(C.mzw, {
+                className: u,
+                children: (0, r.jsxs)(C.Kqy, {
                     direction: "horizontal",
                     justify: "end",
                     gap: 8,
                     children: [
-                        o &&
-                            (0, i.jsx)(N.zxk, {
+                        l &&
+                            (0, r.jsx)(C.zxk, {
                                 variant: "secondary",
                                 text: "Secondary Action",
                             }),
-                        (0, i.jsx)(N.zxk, {
+                        (0, r.jsx)(C.zxk, {
                             variant: "primary",
                             text: "Close",
                         }),
@@ -2725,35 +2735,39 @@ function e_(e) {
         ],
     });
 }
-function ej(e) {
-    let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
-        [a, l] = r.useState("replace"),
-        o = s < 3;
-    return (0, i.jsxs)(N.Y0X, {
+function eT(e) {
+    let { transitionState: t, onClose: n, modalCount: a = 1 } = e,
+        [o, s] = i.useState("replace"),
+        l = () => {
+            let e = a + 1;
+            (0, C.h7j)((t) => (0, r.jsx)(eT, J(X({}, t), { modalCount: e })), { stackingBehavior: o });
+        },
+        c = a < 3;
+    return (0, r.jsxs)(C.Y0X, {
         transitionState: t,
-        size: 1 === s ? N.CgR.LARGE : 2 === s ? N.CgR.MEDIUM : N.CgR.SMALL,
+        size: 1 === a ? C.CgR.LARGE : 2 === a ? C.CgR.MEDIUM : C.CgR.SMALL,
         parentComponent: "UserSettingsDesignSystem",
         children: [
-            (0, i.jsx)(N.xBx, {
-                children: (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.xBx, {
+                children: (0, r.jsx)(C.X6q, {
                     variant: "heading-xl/semibold",
                     children: "Modal Stacking Demo",
                 }),
             }),
-            (0, i.jsx)(N.hzk, {
-                children: (0, i.jsxs)(N.Kqy, {
+            (0, r.jsx)(C.hzk, {
+                children: (0, r.jsxs)(C.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsxs)(N.Text, {
+                        (0, r.jsxs)(C.Text, {
                             variant: "text-md/medium",
-                            children: ["This is modal level ", s, "."],
+                            children: ["This is modal level ", a, "."],
                         }),
-                        o &&
-                            (0, i.jsx)(N.xJW, {
+                        c &&
+                            (0, r.jsx)(C.xJW, {
                                 title: "Stacking Behavior",
-                                children: (0, i.jsx)(N.q4e, {
-                                    value: a,
-                                    onChange: l,
+                                children: (0, r.jsx)(C.q4e, {
+                                    value: o,
+                                    onChange: s,
                                     options: [
                                         {
                                             label: "Replace (default)",
@@ -2770,30 +2784,30 @@ function ej(e) {
                                     ],
                                 }),
                             }),
-                        (0, i.jsxs)(N.Kqy, {
+                        (0, r.jsxs)(C.Kqy, {
                             gap: 8,
                             children: [
-                                (0, i.jsxs)(N.Text, {
+                                (0, r.jsxs)(C.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
-                                        (0, i.jsx)("strong", { children: "Replace One:" }),
+                                        (0, r.jsx)("strong", { children: "Replace One:" }),
                                         " The modal directly below is hidden (default behavior)",
                                     ],
                                 }),
-                                (0, i.jsxs)(N.Text, {
+                                (0, r.jsxs)(C.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
-                                        (0, i.jsx)("strong", { children: "Replace All:" }),
+                                        (0, r.jsx)("strong", { children: "Replace All:" }),
                                         " All modals below are hidden",
                                     ],
                                 }),
-                                (0, i.jsxs)(N.Text, {
+                                (0, r.jsxs)(C.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: [
-                                        (0, i.jsx)("strong", { children: "Stack:" }),
+                                        (0, r.jsx)("strong", { children: "Stack:" }),
                                         " The modal directly below remains visible",
                                     ],
                                 }),
@@ -2802,27 +2816,22 @@ function ej(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(N.mzw, {
-                children: (0, i.jsxs)(N.Kqy, {
+            (0, r.jsx)(C.mzw, {
+                children: (0, r.jsxs)(C.Kqy, {
                     direction: "horizontal",
                     justify: "end",
                     gap: 8,
                     children: [
-                        (0, i.jsx)(N.zxk, {
+                        (0, r.jsx)(C.zxk, {
                             variant: "secondary",
                             text: "Close",
                             onClick: n,
                         }),
-                        o &&
-                            (0, i.jsx)(N.zxk, {
+                        c &&
+                            (0, r.jsx)(C.zxk, {
                                 variant: "primary",
                                 text: "Open Next Modal",
-                                onClick: () => {
-                                    let e = s + 1;
-                                    (0, N.h7j)((t) => (0, i.jsx)(ej, X(q({}, t), { modalCount: e })), {
-                                        stackingBehavior: a,
-                                    });
-                                },
+                                onClick: l,
                             }),
                     ],
                 }),
@@ -2830,46 +2839,46 @@ function ej(e) {
         ],
     });
 }
-function eE(e) {
+function eS(e) {
     let { transitionState: t, onClose: n } = e;
-    function r(e) {
+    function i(e) {
         let { children: t } = e;
-        return (0, i.jsx)("div", {
-            className: G.modalOutlines,
+        return (0, r.jsx)("div", {
+            className: V.modalOutlines,
             style: { padding: "24px" },
             children: t,
         });
     }
-    return (0, i.jsxs)(b.I, {
+    return (0, r.jsxs)(g.I, {
         transitionState: t,
         onClose: n,
         children: [
-            (0, i.jsx)("div", {
-                className: G.modalOutlines,
-                children: (0, i.jsx)(O.x, {
+            (0, r.jsx)("div", {
+                className: V.modalOutlines,
+                children: (0, r.jsx)(I.x, {
                     title: "Demo Modal",
                     subtitle: "The ModalHeader can have leading and trailing items on either side of the text",
-                    leading: (0, i.jsx)(r, {}),
-                    trailing: (0, i.jsx)(r, {}),
+                    leading: (0, r.jsx)(i, {}),
+                    trailing: (0, r.jsx)(i, {}),
                 }),
             }),
-            (0, i.jsx)("div", {
-                className: G.modalOutlines,
-                children: (0, i.jsx)(E.f, {
-                    controls: (0, i.jsx)(r, { children: "This ModalBody renders any controls here" }),
-                    children: (0, i.jsx)(r, {
+            (0, r.jsx)("div", {
+                className: V.modalOutlines,
+                children: (0, r.jsx)(O.f, {
+                    controls: (0, r.jsx)(i, { children: "This ModalBody renders any controls here" }),
+                    children: (0, r.jsx)(i, {
                         children: "This is the main ModalBody. This area scrolls if there is enough content",
                     }),
                 }),
             }),
-            (0, i.jsx)("div", {
-                className: G.modalOutlines,
-                children: (0, i.jsx)(C.m, { children: (0, i.jsx)(r, { children: "This is the ModalFooter" }) }),
+            (0, r.jsx)("div", {
+                className: V.modalOutlines,
+                children: (0, r.jsx)(v.m, { children: (0, r.jsx)(i, { children: "This is the ModalFooter" }) }),
             }),
-            (0, i.jsx)("div", {
-                className: G.modalOutlines,
-                children: (0, i.jsx)(j.G, {
-                    leading: (0, i.jsx)(r, { children: "ModalActionBar leading" }),
+            (0, r.jsx)("div", {
+                className: V.modalOutlines,
+                children: (0, r.jsx)(y.G, {
+                    leading: (0, r.jsx)(i, { children: "ModalActionBar leading" }),
                     actions: [
                         {
                             variant: "secondary",
@@ -2887,42 +2896,42 @@ function eE(e) {
         ],
     });
 }
-function eC(e) {
+function eA(e) {
     let { transitionState: t, onClose: n } = e,
-        [s, a] = r.useState("md"),
-        [l, o] = r.useState("Demo Modal"),
-        [c, d] = r.useState("Header body copy"),
-        [u, m] = r.useState(!1),
-        [p, g] = r.useState(!1),
-        [h, f] = r.useState(!1),
-        [x, _] = r.useState(!1),
-        [v, S] = r.useState(!1);
-    return (0, i.jsxs)(b.I, {
+        [a, o] = i.useState("md"),
+        [s, l] = i.useState("Demo Modal"),
+        [c, u] = i.useState("Header body copy"),
+        [d, f] = i.useState(!1),
+        [_, p] = i.useState(!1),
+        [h, m] = i.useState(!1),
+        [E, b] = i.useState(!1),
+        [T, S] = i.useState(!1);
+    return (0, r.jsxs)(g.I, {
         transitionState: t,
         onClose: n,
-        size: s,
+        size: a,
         children: [
-            (0, i.jsx)(O.x, {
-                title: l,
+            (0, r.jsx)(I.x, {
+                title: s,
                 subtitle: c,
-                alignCenter: u,
+                alignCenter: d,
             }),
-            (0, i.jsx)(E.f, {
-                controls: p
-                    ? (0, i.jsx)(N.E1j, {
+            (0, r.jsx)(O.f, {
+                controls: _
+                    ? (0, r.jsx)(C.E1j, {
                           placeholder: "Search",
                           onChange: () => null,
                           query: "",
                       })
                     : void 0,
-                children: (0, i.jsxs)(N.Kqy, {
+                children: (0, r.jsxs)(C.Kqy, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(N.xJW, {
+                        (0, r.jsx)(C.xJW, {
                             title: "Modal Size",
-                            children: (0, i.jsx)(N.q4e, {
-                                value: s,
-                                onChange: a,
+                            children: (0, r.jsx)(C.q4e, {
+                                value: a,
+                                onChange: o,
                                 options: [
                                     {
                                         label: "Small",
@@ -2943,61 +2952,61 @@ function eC(e) {
                                 ],
                             }),
                         }),
-                        (0, i.jsx)(N.xJW, {
+                        (0, r.jsx)(C.xJW, {
                             title: "Header Title",
-                            children: (0, i.jsx)(N.oil, {
-                                onChange: o,
-                                defaultValue: l,
+                            children: (0, r.jsx)(C.oil, {
+                                onChange: l,
+                                defaultValue: s,
                             }),
                         }),
-                        (0, i.jsx)(N.xJW, {
+                        (0, r.jsx)(C.xJW, {
                             title: "Header body",
-                            children: (0, i.jsx)(N.oil, {
-                                onChange: d,
+                            children: (0, r.jsx)(C.oil, {
+                                onChange: u,
                                 defaultValue: c,
                             }),
                         }),
-                        (0, i.jsx)(N.xJW, {
+                        (0, r.jsx)(C.xJW, {
                             title: "Optional Content",
-                            children: (0, i.jsxs)(N.Kqy, {
+                            children: (0, r.jsxs)(C.Kqy, {
                                 gap: 12,
                                 children: [
-                                    (0, i.jsx)(N.XZJ, {
-                                        value: u,
-                                        onChange: (e, t) => m(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                    (0, r.jsx)(C.XZJ, {
+                                        value: d,
+                                        onChange: (e, t) => f(t),
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Header Align Center",
                                         }),
                                     }),
-                                    (0, i.jsx)(N.XZJ, {
-                                        value: p,
-                                        onChange: (e, t) => g(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                    (0, r.jsx)(C.XZJ, {
+                                        value: _,
+                                        onChange: (e, t) => p(t),
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Search Input",
                                         }),
                                     }),
-                                    (0, i.jsx)(N.XZJ, {
+                                    (0, r.jsx)(C.XZJ, {
                                         value: h,
-                                        onChange: (e, t) => f(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                        onChange: (e, t) => m(t),
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Preview Content",
                                         }),
                                     }),
-                                    (0, i.jsx)(N.XZJ, {
-                                        value: x,
-                                        onChange: (e, t) => _(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                    (0, r.jsx)(C.XZJ, {
+                                        value: E,
+                                        onChange: (e, t) => b(t),
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Show Action Bar Leading Input",
                                         }),
                                     }),
-                                    (0, i.jsx)(N.XZJ, {
-                                        value: v,
+                                    (0, r.jsx)(C.XZJ, {
+                                        value: T,
                                         onChange: (e, t) => S(t),
-                                        children: (0, i.jsx)(N.Text, {
+                                        children: (0, r.jsx)(C.Text, {
                                             variant: "text-md/medium",
                                             children: "Full Width Actions",
                                         }),
@@ -3009,27 +3018,27 @@ function eC(e) {
                 }),
             }),
             h &&
-                (0, i.jsxs)(C.m, {
+                (0, r.jsxs)(v.m, {
                     children: [
-                        (0, i.jsx)(N.X6q, {
+                        (0, r.jsx)(C.X6q, {
                             variant: "heading-lg/semibold",
                             children: "Celebration Station",
                         }),
-                        (0, i.jsx)(N.Text, {
+                        (0, r.jsx)(C.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: "32 Members \u25CF 19 Online",
                         }),
                     ],
                 }),
-            (0, i.jsx)(j.G, {
-                leading: x
-                    ? (0, i.jsx)(j.B, {
+            (0, r.jsx)(y.G, {
+                leading: E
+                    ? (0, r.jsx)(y.B, {
                           value: !1,
                           onChange: () => {},
                       })
                     : void 0,
-                actionsFullWidth: v,
+                actionsFullWidth: T,
                 actions: [
                     {
                         variant: "secondary",
@@ -3046,40 +3055,40 @@ function eC(e) {
         ],
     });
 }
-function eO(e) {
+function eC(e) {
     let { transitionState: t, onClose: n } = e;
-    function s(e) {
+    function a(e) {
         let { text: t } = e,
-            [n, s] = r.useState(!1);
-        return (0, i.jsx)("div", {
+            [n, a] = i.useState(!1);
+        return (0, r.jsx)("div", {
             style: { padding: "8px 0" },
-            children: (0, i.jsx)(N.XZJ, {
+            children: (0, r.jsx)(C.XZJ, {
                 value: n,
-                onChange: (e, t) => s(t),
-                children: (0, i.jsx)(N.Text, {
+                onChange: (e, t) => a(t),
+                children: (0, r.jsx)(C.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
             }),
         });
     }
-    return (0, i.jsxs)(_.Modal, {
+    return (0, r.jsxs)(b.Modal, {
         transitionState: t,
         onClose: n,
         size: "md",
         title: "Invite to server",
-        input: (0, i.jsx)(N.E1j, {
+        input: (0, r.jsx)(C.E1j, {
             placeholder: "Search",
             onChange: () => null,
             query: "",
         }),
-        preview: (0, i.jsxs)(i.Fragment, {
+        preview: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(N.X6q, {
+                (0, r.jsx)(C.X6q, {
                     variant: "heading-lg/semibold",
                     children: "Celebration Station",
                 }),
-                (0, i.jsx)(N.Text, {
+                (0, r.jsx)(C.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: "32 Members \u25CF 19 Online",
@@ -3095,34 +3104,34 @@ function eO(e) {
             {
                 variant: "primary",
                 text: "Send Invite",
-                icon: N.kBi,
+                icon: C.kBi,
                 iconPosition: "end",
                 onClick: n,
             },
         ],
         children: [
-            (0, i.jsx)(s, { text: "John Doe" }),
-            (0, i.jsx)(s, { text: "Mark" }),
-            (0, i.jsx)(s, { text: "KawaiiHermit" }),
-            (0, i.jsx)(s, { text: "YurBruhGio" }),
-            (0, i.jsx)(s, { text: "John Doe" }),
-            (0, i.jsx)(s, { text: "Mark" }),
-            (0, i.jsx)(s, { text: "KawaiiHermit" }),
-            (0, i.jsx)(s, { text: "YurBruhGio" }),
-            (0, i.jsx)(s, { text: "John Doe" }),
-            (0, i.jsx)(s, { text: "Mark" }),
-            (0, i.jsx)(s, { text: "KawaiiHermit" }),
-            (0, i.jsx)(s, { text: "YurBruhGio" }),
-            (0, i.jsx)(s, { text: "John Doe" }),
-            (0, i.jsx)(s, { text: "Mark" }),
-            (0, i.jsx)(s, { text: "KawaiiHermit" }),
-            (0, i.jsx)(s, { text: "YurBruhGio" }),
+            (0, r.jsx)(a, { text: "John Doe" }),
+            (0, r.jsx)(a, { text: "Mark" }),
+            (0, r.jsx)(a, { text: "KawaiiHermit" }),
+            (0, r.jsx)(a, { text: "YurBruhGio" }),
+            (0, r.jsx)(a, { text: "John Doe" }),
+            (0, r.jsx)(a, { text: "Mark" }),
+            (0, r.jsx)(a, { text: "KawaiiHermit" }),
+            (0, r.jsx)(a, { text: "YurBruhGio" }),
+            (0, r.jsx)(a, { text: "John Doe" }),
+            (0, r.jsx)(a, { text: "Mark" }),
+            (0, r.jsx)(a, { text: "KawaiiHermit" }),
+            (0, r.jsx)(a, { text: "YurBruhGio" }),
+            (0, r.jsx)(a, { text: "John Doe" }),
+            (0, r.jsx)(a, { text: "Mark" }),
+            (0, r.jsx)(a, { text: "KawaiiHermit" }),
+            (0, r.jsx)(a, { text: "YurBruhGio" }),
         ],
     });
 }
-function ev(e) {
+function eN(e) {
     let { transitionState: t, onClose: n } = e;
-    return (0, i.jsx)(_.Modal, {
+    return (0, r.jsx)(b.Modal, {
         transitionState: t,
         onClose: n,
         title: "Alert Modal",
@@ -3141,101 +3150,102 @@ function ev(e) {
         ],
     });
 }
-function eS(e) {
-    let { transitionState: t, onClose: s } = e,
-        [a, l] = r.useState(0),
-        [o, c] = r.useState(!1),
-        u = r.useMemo(
+function eR(e) {
+    let { transitionState: t, onClose: a } = e,
+        [o, s] = i.useState(0),
+        [l, c] = i.useState(!1),
+        d = [
+            {
+                label: "Image",
+                value: 0,
+            },
+            {
+                label: "Lottie",
+                value: 1,
+            },
+            {
+                label: "Rive",
+                value: 2,
+            },
+            {
+                label: "Looping Video",
+                value: 3,
+            },
+            {
+                label: "Dynamic Content",
+                value: 4,
+            },
+        ],
+        f = i.useMemo(
             () =>
-                0 === a
+                0 === o
                     ? {
                           type: "image",
                           src: F,
                       }
-                    : 1 === a
+                    : 1 === o
                       ? {
                             type: "lottie",
                             lottie: () => n.e("94792").then(n.t.bind(n, 972951, 19)),
                             aspectRatio: "6/4",
                         }
-                      : 2 === a
+                      : 2 === o
                         ? {
                               type: "rive",
-                              rive: d.PerfTestRive,
+                              rive: u.PerfTestRive,
                           }
-                        : 3 === a
+                        : 3 === o
                           ? {
                                 type: "video",
-                                src: z.Z,
+                                src: Y.Z,
                                 fallbackImageSrc: F,
                                 loop: !0,
                                 loopAt: 2.5,
                             }
-                          : 4 === a
+                          : 4 === o
                             ? {
                                   type: "dynamic",
-                                  component: N.AX$.DEMO,
+                                  component: C.AX$.DEMO,
                                   props: { text: "Dynamic Content" },
                               }
                             : void 0,
-            [a],
+            [o],
         );
-    return (0, i.jsxs)(x.I, {
+    return (0, r.jsxs)(E.I, {
         transitionState: t,
-        onClose: s,
+        onClose: a,
         gradientColor: "nitro-pink",
-        graphic: u,
-        badge: o ? "beta" : void 0,
+        graphic: f,
+        badge: l ? "beta" : void 0,
         title: "Expressive Modal",
         subtitle: "This is an expressive modal with a header image",
         actions: [
             {
                 variant: "secondary",
                 text: "Cancel",
-                onClick: s,
+                onClick: a,
             },
             {
                 variant: "primary",
                 text: "Submit",
-                onClick: s,
+                onClick: a,
             },
         ],
         children: [
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 title: "Graphic Type",
-                children: (0, i.jsx)(N.q4e, {
-                    value: a,
-                    onChange: l,
-                    options: [
-                        {
-                            label: "Image",
-                            value: 0,
-                        },
-                        {
-                            label: "Lottie",
-                            value: 1,
-                        },
-                        {
-                            label: "Rive",
-                            value: 2,
-                        },
-                        {
-                            label: "Looping Video",
-                            value: 3,
-                        },
-                        {
-                            label: "Dynamic Content",
-                            value: 4,
-                        },
-                    ],
+                children: (0, r.jsx)(C.q4e, {
+                    value: o,
+                    onChange: s,
+                    options: d,
                 }),
             }),
-            (0, i.jsx)(N.xJW, {
+            (0, r.jsx)(C.xJW, {
                 style: { paddingTop: "16px" },
-                children: (0, i.jsx)(N.XZJ, {
-                    value: o,
+                children: (0, r.jsx)(C.XZJ, {
+                    value: l,
                     onChange: (e, t) => c(t),
-                    children: (0, i.jsx)(N.Text, {
+                    children: (0, r.jsx)(C.Text, {
                         variant: "text-md/medium",
                         children: "Show beta badge",
                     }),
@@ -3244,46 +3254,45 @@ function eS(e) {
         ],
     });
 }
-function eT(e) {
-    let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
-        [a, l] = r.useState("replace"),
-        o = s < 3;
-    return (0, i.jsx)(_.Modal, {
+function eP(e) {
+    let { transitionState: t, onClose: n, modalCount: a = 1 } = e,
+        [o, s] = i.useState("replace"),
+        l = () => {
+            let e = a + 1;
+            (0, C.h7j)((t) => (0, r.jsx)(eP, J(X({}, t), { modalCount: e })), { stackingBehavior: o });
+        },
+        c = a < 3;
+    return (0, r.jsx)(b.Modal, {
         transitionState: t,
         onClose: n,
-        size: 1 === s ? "md" : "sm",
+        size: 1 === a ? "md" : "sm",
         title: "Mana Modal Stacking Demo",
-        subtitle: "This is modal level ".concat(s, "."),
+        subtitle: "This is modal level ".concat(a, "."),
         actions: [
             {
                 variant: "secondary",
                 text: "Close",
                 onClick: n,
             },
-            ...(o
+            ...(c
                 ? [
                       {
                           variant: "primary",
                           text: "Open Next Modal",
-                          onClick: () => {
-                              let e = s + 1;
-                              (0, N.h7j)((t) => (0, i.jsx)(eT, X(q({}, t), { modalCount: e })), {
-                                  stackingBehavior: a,
-                              });
-                          },
+                          onClick: l,
                       },
                   ]
                 : []),
         ],
-        children: (0, i.jsxs)(N.Kqy, {
+        children: (0, r.jsxs)(C.Kqy, {
             gap: 16,
             children: [
-                o &&
-                    (0, i.jsx)(N.xJW, {
+                c &&
+                    (0, r.jsx)(C.xJW, {
                         title: "Stacking Behavior",
-                        children: (0, i.jsx)(N.q4e, {
-                            value: a,
-                            onChange: l,
+                        children: (0, r.jsx)(C.q4e, {
+                            value: o,
+                            onChange: s,
                             options: [
                                 {
                                     label: "Replace (default)",
@@ -3300,30 +3309,30 @@ function eT(e) {
                             ],
                         }),
                     }),
-                (0, i.jsxs)(N.Kqy, {
+                (0, r.jsxs)(C.Kqy, {
                     gap: 8,
                     children: [
-                        (0, i.jsxs)(N.Text, {
+                        (0, r.jsxs)(C.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
-                                (0, i.jsx)("strong", { children: "Replace One:" }),
+                                (0, r.jsx)("strong", { children: "Replace One:" }),
                                 " The modal directly below is hidden (default behavior)",
                             ],
                         }),
-                        (0, i.jsxs)(N.Text, {
+                        (0, r.jsxs)(C.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
-                                (0, i.jsx)("strong", { children: "Replace All:" }),
+                                (0, r.jsx)("strong", { children: "Replace All:" }),
                                 " All modals below are hidden",
                             ],
                         }),
-                        (0, i.jsxs)(N.Text, {
+                        (0, r.jsxs)(C.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: [
-                                (0, i.jsx)("strong", { children: "Stack:" }),
+                                (0, r.jsx)("strong", { children: "Stack:" }),
                                 " The modal directly below remains visible",
                             ],
                         }),
@@ -3333,132 +3342,142 @@ function eT(e) {
         }),
     });
 }
-function eN() {
-    return (0, i.jsxs)(i.Fragment, {
+function ew() {
+    let e = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eI, X({}, e)));
+        },
+        t = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eT, X({}, e)));
+        },
+        n = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eS, X({}, e)));
+        },
+        i = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eA, X({}, e)));
+        },
+        a = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eC, X({}, e)));
+        },
+        o = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eN, X({}, e)));
+        },
+        s = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eR, X({}, e)));
+        },
+        l = () => {
+            (0, C.h7j)((e) => (0, r.jsx)(eP, X({}, e)));
+        },
+        c = () => {
+            N.Z.show({
+                title: "Alert",
+                body: "This is an alert",
+                confirmText: "Confirm Text",
+                cancelText: "Cancel Text",
+            });
+        };
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Modals (Void)",
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open modal",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(e_, q({}, e)));
-                        },
+                        onClick: e,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Show Alert",
-                        onClick: () => {
-                            I.Z.show({
-                                title: "Alert",
-                                body: "This is an alert",
-                                confirmText: "Confirm Text",
-                                cancelText: "Cancel Text",
-                            });
-                        },
+                        onClick: c,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open modal stacking demo",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(ej, q({}, e)));
-                        },
+                        onClick: t,
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: G.section,
+            (0, r.jsxs)("div", {
+                className: V.section,
                 children: [
-                    (0, i.jsx)(N.X6q, {
+                    (0, r.jsx)(C.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Modals (Mana)",
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open modal section visualizer",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(eE, q({}, e)));
-                        },
+                        onClick: n,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open demo modal",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(eC, q({}, e)));
-                        },
+                        onClick: i,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open sample invite modal",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(eO, q({}, e)));
-                        },
+                        onClick: a,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open sample alert modal",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(ev, q({}, e)));
-                        },
+                        onClick: o,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open expressive modal",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(eS, q({}, e)));
-                        },
+                        onClick: s,
                     }),
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "primary",
                         text: "Open Mana modal stacking demo",
-                        onClick: () => {
-                            (0, N.h7j)((e) => (0, i.jsx)(eT, q({}, e)));
-                        },
+                        onClick: l,
                     }),
                 ],
             }),
         ],
     });
 }
-function eI() {
-    return (0, i.jsxs)("div", {
-        className: G.section,
+function eD() {
+    let e = [
+        "SIZE_16",
+        "SIZE_20",
+        "SIZE_24",
+        "SIZE_32",
+        "SIZE_40",
+        "SIZE_44",
+        "SIZE_48",
+        "SIZE_80",
+        "SIZE_96",
+        "SIZE_120",
+    ];
+    return (0, r.jsxs)("div", {
+        className: V.section,
         children: [
-            (0, i.jsx)(N.X6q, {
+            (0, r.jsx)(C.X6q, {
                 variant: "heading-xl/semibold",
                 children: "User Avatars",
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 style: {
                     display: "flex",
                     justifyContent: "space-between",
                 },
-                children: [
-                    "SIZE_16",
-                    "SIZE_20",
-                    "SIZE_24",
-                    "SIZE_32",
-                    "SIZE_40",
-                    "SIZE_44",
-                    "SIZE_48",
-                    "SIZE_80",
-                    "SIZE_96",
-                    "SIZE_120",
-                ].map((e) => (0, i.jsx)(ey, { size: e }, e)),
+                children: e.map((e) => (0, r.jsx)(ex, { size: e }, e)),
             }),
         ],
     });
 }
-function ey(e) {
+function ex(e) {
     let { size: t } = e,
-        { user: n } = (0, c.cj)([Z.default], () => ({ user: Z.default.getCurrentUser() })),
-        r = Number(t.split("_")[1]);
-    return (0, i.jsxs)("div", {
+        { user: n } = (0, c.cj)([L.default], () => ({ user: L.default.getCurrentUser() })),
+        i = Number(t.split("_")[1]);
+    return (0, r.jsxs)("div", {
         style: {
             display: "flex",
             flexDirection: "column",
@@ -3466,33 +3485,33 @@ function ey(e) {
             gap: 8,
         },
         children: [
-            (0, i.jsxs)(N.X6q, {
+            (0, r.jsxs)(C.X6q, {
                 variant: "heading-sm/semibold",
                 style: { textAlign: "center" },
-                children: [r, "px"],
+                children: [i, "px"],
             }),
-            (0, i.jsx)(N.qEK, {
-                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+            (0, r.jsx)(C.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, i),
                 size: t,
                 "aria-label": null == n ? void 0 : n.username,
-                status: V.Sk.ONLINE,
+                status: Z.Sk.ONLINE,
             }),
-            (0, i.jsx)(N.qEK, {
-                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+            (0, r.jsx)(C.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, i),
                 size: t,
                 "aria-label": null == n ? void 0 : n.username,
-                status: V.Sk.ONLINE,
+                status: Z.Sk.ONLINE,
                 isTyping: !0,
             }),
-            (0, i.jsx)(N.qEK, {
-                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+            (0, r.jsx)(C.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, i),
                 size: t,
                 "aria-label": null == n ? void 0 : n.username,
-                status: V.Sk.ONLINE,
+                status: Z.Sk.ONLINE,
                 isMobile: !0,
             }),
-            (0, i.jsx)(N.qEK, {
-                src: null == n ? void 0 : n.getAvatarURL(void 0, r),
+            (0, r.jsx)(C.qEK, {
+                src: null == n ? void 0 : n.getAvatarURL(void 0, i),
                 size: t,
                 "aria-label": null == n ? void 0 : n.username,
                 isSpeaking: !0,
@@ -3500,49 +3519,49 @@ function ey(e) {
         ],
     });
 }
-function eA() {
-    let e = (0, c.e7)([y.Z], () => y.Z.gradientPreset);
-    return (0, i.jsx)(N.f6W, {
-        theme: V.BR.DARKER,
+function eL() {
+    let e = (0, c.e7)([R.Z], () => R.Z.gradientPreset);
+    return (0, r.jsx)(C.f6W, {
+        theme: Z.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
-            (0, i.jsxs)("div", {
-                className: a()(t, G.section),
+            (0, r.jsxs)("div", {
+                className: o()(t, V.section),
                 children: [
-                    (0, i.jsx)(N.zxk, {
+                    (0, r.jsx)(C.zxk, {
                         variant: "secondary",
                         text: "Button",
                         fullWidth: !0,
                     }),
-                    (0, i.jsx)(N.f6W, {
-                        theme: V.BR.LIGHT,
+                    (0, r.jsx)(C.f6W, {
+                        theme: Z.BR.LIGHT,
                         children: (t) =>
-                            (0, i.jsxs)("div", {
-                                className: a()(t, G.section),
+                            (0, r.jsxs)("div", {
+                                className: o()(t, V.section),
                                 children: [
-                                    (0, i.jsx)(N.zxk, {
+                                    (0, r.jsx)(C.zxk, {
                                         variant: "secondary",
                                         text: "Button",
                                         fullWidth: !0,
                                     }),
-                                    (0, i.jsx)(N.f6W, {
-                                        theme: V.BR.DARKER,
+                                    (0, r.jsx)(C.f6W, {
+                                        theme: Z.BR.DARKER,
                                         children: (e) =>
-                                            (0, i.jsx)("div", {
-                                                className: a()(e, G.section),
-                                                children: (0, i.jsx)(N.zxk, {
+                                            (0, r.jsx)("div", {
+                                                className: o()(e, V.section),
+                                                children: (0, r.jsx)(C.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",
                                                     fullWidth: !0,
                                                 }),
                                             }),
                                     }),
-                                    (0, i.jsx)(N.f6W, {
+                                    (0, r.jsx)(C.f6W, {
                                         gradient: e,
                                         children: (e) =>
-                                            (0, i.jsx)("div", {
-                                                className: a()(e, G.section),
-                                                children: (0, i.jsx)(N.zxk, {
+                                            (0, r.jsx)("div", {
+                                                className: o()(e, V.section),
+                                                children: (0, r.jsx)(C.zxk, {
                                                     variant: "secondary",
                                                     text: "Button",
                                                     fullWidth: !0,

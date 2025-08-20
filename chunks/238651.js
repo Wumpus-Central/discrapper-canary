@@ -1,8 +1,8 @@
 n.d(t, {
-    Ji: () => L,
+    Ji: () => x,
     O_: () => w,
     qA: () => c,
-    uR: () => x,
+    uR: () => L,
 });
 var r = n(647438),
     i = n(772848);
@@ -491,7 +491,7 @@ function A(e) {
         }
     })(f(f({}, e), { valueType: "number" }));
 }
-function N(e) {
+function C(e) {
     return (function (e) {
         switch (e.type) {
             case "static":
@@ -539,7 +539,7 @@ function N(e) {
         }
     })(f(f({}, e), { valueType: "Vector2" }));
 }
-function C(e) {
+function N(e) {
     return (function (e) {
         switch (e.type) {
             case "static":
@@ -632,13 +632,13 @@ function R(e, t, n, r, i) {
         })(null != r ? r : c, i, n);
     return new s({
         id: e,
-        position: N(a.position),
-        velocity: N(a.velocity),
-        rotation: C(a.rotation),
-        dragCoefficient: N(a.dragCoefficient),
-        size: N(a.size),
+        position: C(a.position),
+        velocity: C(a.velocity),
+        rotation: N(a.rotation),
+        dragCoefficient: C(a.dragCoefficient),
+        size: C(a.size),
         opacity: A(a.opacity),
-        airResistanceArea: N(a.airResistanceArea),
+        airResistanceArea: C(a.airResistanceArea),
         spriteX: d * n.spriteWidth + 2 * d,
         spriteY: u * n.spriteHeight + 2 * u,
         spriteWidth: n.spriteWidth,
@@ -723,8 +723,8 @@ var w = r.forwardRef(function (e, t) {
             T = O.removeReadyListener,
             S = O.setIsReady,
             A = r.useRef(new Map()),
-            N = r.useRef(null),
-            C = r.useRef(0),
+            C = r.useRef(null),
+            N = r.useRef(0),
             w = r.useRef(0),
             D = r.useCallback(
                 function () {
@@ -741,10 +741,10 @@ var w = r.forwardRef(function (e, t) {
                                 }),
                                 null == p || p(t),
                                 A.current.size > 0
-                                    ? (N.current = m(D))
-                                    : (t.clearRect(0, 0, e.width, e.height), (N.current = null));
+                                    ? (C.current = m(D))
+                                    : (t.clearRect(0, 0, e.width, e.height), (C.current = null));
                             var n = Date.now();
-                            0 !== C.current && (w.current = 1000 / (n - C.current)), (C.current = n);
+                            0 !== N.current && (w.current = 1000 / (n - N.current)), (N.current = n);
                         }
                     }
                 },
@@ -752,52 +752,52 @@ var w = r.forwardRef(function (e, t) {
             );
         r.useEffect(
             function () {
-                null != N.current && (E(N.current), (N.current = m(D)));
+                null != C.current && (E(C.current), (C.current = m(D)));
             },
             [E, D, m],
         );
-        var L = r.useCallback(
+        var x = r.useCallback(
                 function (e, t) {
                     A.current.set(e.id, {
                         confetti: e,
                         spriteCanvas: t,
                     }),
-                        null == N.current && D();
+                        null == C.current && D();
                 },
                 [D],
             ),
-            x = r.useCallback(
+            L = r.useCallback(
                 function (e, t, n, r, a) {
                     var o,
                         s = R(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
-                    return L(s, t), s;
+                    return x(s, t), s;
                 },
-                [L],
+                [x],
             ),
-            M = r.useCallback(function (e) {
+            j = r.useCallback(function (e) {
                 A.current.delete(e);
             }, []),
-            k = r.useCallback(function () {
+            M = r.useCallback(function () {
                 return A.current.clear();
             }, []),
-            j = r.useCallback(function () {
+            k = r.useCallback(function () {
                 return y.current;
             }, []);
         r.useImperativeHandle(
             t,
             function () {
                 return {
-                    createConfetti: x,
-                    addConfetti: L,
-                    deleteConfetti: M,
-                    clearConfetti: k,
-                    getCanvas: j,
+                    createConfetti: L,
+                    addConfetti: x,
+                    deleteConfetti: j,
+                    clearConfetti: M,
+                    getCanvas: k,
                     addReadyListener: I,
                     removeReadyListener: T,
                     isReady: v,
                 };
             },
-            [x, L, M, k, j, I, T, v],
+            [L, x, j, M, k, I, T, v],
         );
         var U = r.useCallback(
                 function (e, t) {
@@ -863,13 +863,13 @@ var w = r.forwardRef(function (e, t) {
                 },
                 [U, c],
             ),
-            V = r.useCallback(
+            Z = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: u });
                 },
                 [U, u],
             ),
-            F = r.useCallback(
+            V = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: d });
                 },
@@ -884,17 +884,17 @@ var w = r.forwardRef(function (e, t) {
                     return (
                         e("click", G, l),
                         e("mousedown", B, c),
-                        e("mousemove", V, u),
-                        e("mouseup", F, d),
+                        e("mousemove", Z, u),
+                        e("mouseup", V, d),
                         function () {
                             window.removeEventListener("click", G),
                                 window.removeEventListener("mousedown", B),
-                                window.removeEventListener("mousemove", V),
-                                window.removeEventListener("mouseup", V);
+                                window.removeEventListener("mousemove", Z),
+                                window.removeEventListener("mouseup", Z);
                         }
                     );
                 },
-                [G, B, V, F, l, c, u, d],
+                [G, B, Z, V, l, c, u, d],
             ),
             r.useEffect(
                 function () {
@@ -935,7 +935,7 @@ var w = r.forwardRef(function (e, t) {
         height: 0,
         left: "-100%",
     },
-    L = r.forwardRef(function (e, t) {
+    x = r.forwardRef(function (e, t) {
         var n = e.className,
             i = e.visible,
             a = void 0 !== i && i,
@@ -1081,7 +1081,7 @@ var w = r.forwardRef(function (e, t) {
             })
         );
     });
-function x(e, t) {
+function L(e, t) {
     var n,
         i,
         a = r.useState(null != (n = null == t ? void 0 : t.isReady) && n),

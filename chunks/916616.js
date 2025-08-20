@@ -106,11 +106,11 @@ let A = i.forwardRef((e, t) => {
             minWidth: P = 0,
             minHeight: w = 0,
             mediaLayoutType: D,
-            limitResponsiveWidth: L = !0,
-            accessory: x,
-            zoomable: M = !0,
-            original: k,
-            children: j = (e) => {
+            limitResponsiveWidth: x = !0,
+            accessory: L,
+            zoomable: j = !0,
+            original: M,
+            children: k = (e) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)("img", {
                     className: null != a ? a : void 0,
@@ -122,9 +122,9 @@ let A = i.forwardRef((e, t) => {
             renderAccessory: U,
             onClick: G,
             tabIndex: B,
-            dataSafeSrc: V,
-            useFullWidth: F = !1,
-            srcIsAnimated: Z,
+            dataSafeSrc: Z,
+            useFullWidth: V = !1,
+            srcIsAnimated: F,
         } = e,
         H = T(e, [
             "className",
@@ -166,7 +166,7 @@ let A = i.forwardRef((e, t) => {
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== p.zo9.ERROR
-        ? (n = j({
+        ? (n = k({
               src: f,
               size: K,
               alt: b,
@@ -174,7 +174,7 @@ let A = i.forwardRef((e, t) => {
               mediaLayoutType: D,
           }))
         : c !== p.zo9.LOADING &&
-          (n = (0, r.jsx)(N, {
+          (n = (0, r.jsx)(C, {
               size: K,
               mediaLayoutType: D,
               alt: b,
@@ -189,7 +189,7 @@ let A = i.forwardRef((e, t) => {
         }));
     let q = null != U ? U() : null;
     return (
-        (q = null != q ? q : x),
+        (q = null != q ? q : L),
         (0, r.jsx)(l.tEY, {
             ringTarget: Y,
             focusTarget: W,
@@ -203,28 +203,28 @@ let A = i.forwardRef((e, t) => {
                                 "imageWrapper",
                                 g.imageWrapper,
                                 {
-                                    [g.imageZoom]: M,
+                                    [g.imageZoom]: j,
                                     [g.imageWrapperBackground]: c !== p.zo9.READY,
                                     [g.clickable]: null != G,
                                 },
                                 a,
                             ),
-                            style: C(K, L, F, D),
+                            style: N(K, x, V, D),
                         },
                         H,
                     ),
                     {
                         children: [
-                            null != k &&
+                            null != M &&
                                 (0, r.jsx)("a", {
                                     tabIndex: -1,
                                     onClick: G,
                                     "aria-hidden": !0,
                                     className: g.originalLink,
-                                    href: k,
+                                    href: M,
                                     ref: Y,
                                     "data-role": "img",
-                                    "data-safe-src": null != V ? V : f,
+                                    "data-safe-src": null != Z ? Z : f,
                                 }),
                             null != G
                                 ? (0, r.jsx)(l.P3F, {
@@ -251,7 +251,7 @@ let A = i.forwardRef((e, t) => {
         })
     );
 });
-function N(e) {
+function C(e) {
     let { size: t, mediaLayoutType: n, alt: i } = e,
         a = (0, c.ZP)();
     return (0, r.jsx)("div", {
@@ -264,7 +264,7 @@ function N(e) {
         }),
     });
 }
-function C(e, t, n, r) {
+function N(e, t, n, r) {
     return r === h.hV.MOSAIC
         ? {
               display: "block",

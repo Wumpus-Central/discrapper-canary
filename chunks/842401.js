@@ -1,39 +1,39 @@
 n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(99690),
-    o = n(388032),
-    l = n(430147);
+var i = n(481060),
+    l = n(99690),
+    a = n(388032),
+    o = n(430147);
 let s = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)("div", {
-        className: l.container,
+        className: o.container,
         children: [
-            (0, r.jsx)(a.X6q, {
-                className: l.header,
+            (0, r.jsx)(i.X6q, {
+                className: o.header,
                 variant: "heading-sm/semibold",
-                children: o.intl.string(o.t["Rsth7+"]),
+                children: a.intl.string(a.t["Rsth7+"]),
             }),
             (0, r.jsx)("div", {
-                className: l.userContainer,
+                className: o.userContainer,
                 children: (0, r.jsxs)("div", {
-                    className: l.userInfo,
+                    className: o.userInfo,
                     children: [
-                        (0, r.jsx)(i.Z, {
-                            className: l.userIcon,
+                        (0, r.jsx)(l.Z, {
+                            className: o.userIcon,
                             user: t,
-                            size: a.EFr.SIZE_40,
+                            size: i.EFr.SIZE_40,
                         }),
                         (0, r.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
-                                    (0, r.jsx)(a.Text, {
+                                    (0, r.jsx)(i.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         children: t.globalName,
                                     }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(i.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
                                     children: t.username,

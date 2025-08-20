@@ -1,15 +1,15 @@
-r.d(t, { N: () => o });
-var n = r(544891),
-    l = r(570140),
-    a = r(981631);
-async function o(e) {
-    let t = await n.tn.get({
+t.d(n, { N: () => s });
+var r = t(544891),
+    i = t(570140),
+    a = t(981631);
+async function s(e) {
+    let n = await r.tn.get({
         url: a.ANM.STORE_EULA(e),
         oldFormErrors: !0,
         rejectWithError: !1,
     });
-    l.Z.dispatch({
+    i.Z.dispatch({
         type: "EULA_FETCH_SUCCESS",
-        eula: t.body,
+        eula: n.body,
     });
 }

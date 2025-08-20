@@ -1,7 +1,7 @@
 n.d(t, {
     Yr: () => R,
     ZP: () => w,
-    gN: () => C,
+    gN: () => N,
     sI: () => P,
 }),
     n(35282),
@@ -79,8 +79,8 @@ function A(e, t) {
         e
     );
 }
-let N = "__EMBEDDED_ACTIVITIES__";
-function C(e) {
+let C = "__EMBEDDED_ACTIVITIES__";
+function N(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? "activity-".concat(t, "-").concat(n) : "activity-".concat(t);
 }
@@ -150,14 +150,14 @@ class w {
         return null != (t = this.participantByIndex.get(e)) ? t : null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(N);
+        return this.updateParticipant(C);
     }
     hasEmbeddedActivity() {
         return this.size("ACTIVITY") > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === N ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === C ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (null == t ||
@@ -237,7 +237,7 @@ class w {
             var n, r, i;
             return {
                 type: y.fO.ACTIVITY,
-                id: C({
+                id: N({
                     applicationId: e.applicationId,
                     instanceId: e.compositeInstanceId,
                 }),
@@ -258,8 +258,8 @@ class w {
             I = [],
             S = h.default.getUser(e);
         if (null == S) return I;
-        let N = g.Z.getVoiceStateForChannel(this.channelId, e),
-            C = g.Z.getVoicePlatformForChannel(this.channelId, e),
+        let C = g.Z.getVoiceStateForChannel(this.channelId, e),
+            N = g.Z.getVoicePlatformForChannel(this.channelId, e),
             R = f.Z.getChannel(this.channelId),
             P = null == R ? void 0 : R.getGuildId(),
             w =
@@ -267,12 +267,12 @@ class w {
                     (r =
                         (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) ||
                         this.guildRingingUsers.has(e)) && r;
-        (null != N || w) &&
+        (null != C || w) &&
             ((b = A(T({ type: y.fO.USER }, m.Z.getUserStreamData(e, P)), {
                 user: S,
                 id: S.id,
-                voiceState: N,
-                voicePlatform: C,
+                voiceState: C,
+                voicePlatform: N,
                 speaking: (0, a.O)({
                     userId: e,
                     checkIsMuted: !0,
@@ -300,7 +300,7 @@ class w {
             (O = A(T({}, m.Z.getUserStreamData(e, P, v.Yn.STREAM), i), {
                 type: r ? y.fO.HIDDEN_STREAM : y.fO.STREAM,
                 id: t,
-                userVideo: null != (d = null == N ? void 0 : N.selfVideo) && d,
+                userVideo: null != (d = null == C ? void 0 : C.selfVideo) && d,
                 user: S,
                 userNick: E.ZP.getName(P, this.channelId, S),
                 stream: D,

@@ -12,11 +12,11 @@ var n = a(951288),
     x = a(411149),
     h = a(151480),
     p = a(461762),
-    b = a(680783),
-    v = a(605236),
+    v = a(680783),
+    b = a(605236),
     f = a(675478),
-    g = a(944486),
-    j = a(388032),
+    j = a(944486),
+    g = a(388032),
     _ = a(715639);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -64,16 +64,16 @@ function C(e, t) {
 function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(T, {}), (0, n.jsx)(O, {})],
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})],
     });
 }
-function T() {
+function O() {
     var e, t;
-    let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
-        l = (0, b.Z)(a),
+    let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
+        l = (0, v.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, p.Z)(s),
-        v = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { opacity: e });
             },
@@ -81,7 +81,7 @@ function T() {
         ),
         f = r.useCallback(
             (e) => {
-                E(null == l ? void 0 : l.wallpaperId, e.target.value);
+                T(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
@@ -91,15 +91,15 @@ function T() {
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        T = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         k = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
@@ -160,7 +160,7 @@ function T() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: v,
+                                onValueChange: b,
                             },
                             "opacity-".concat(Z),
                         ),
@@ -195,12 +195,12 @@ function T() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: O,
+                                    onClick: E,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -236,12 +236,12 @@ function T() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -300,18 +300,18 @@ function T() {
                                     {
                                         type: "color",
                                         value: d.link_color,
-                                        onChange: T,
+                                        onChange: O,
                                     },
                                     "linkColor-".concat(d.link_color),
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: "currentColor",
-                                    tooltip: j.intl.string(j.t.N86XcH),
+                                    tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: w,
+                                    onClick: I,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -326,11 +326,11 @@ function T() {
         ],
     });
 }
-function O() {
+function E() {
     let e = r.useCallback(() => {
             (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, v.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, b.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
         a = null != t ? new Date(t) : null;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -360,7 +360,7 @@ function O() {
         ],
     });
 }
-let E = (0, s.debounce)(function (e, t) {
+let T = (0, s.debounce)(function (e, t) {
         null != e && (0, h.i)(e, { primary_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {

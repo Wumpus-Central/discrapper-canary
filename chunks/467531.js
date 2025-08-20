@@ -1,27 +1,28 @@
 n.d(t, {
     B: () => o,
-    W: () => a,
+    W: () => s,
 });
 var r = n(544891),
     i = n(881052),
-    l = n(981631);
+    a = n(981631);
 async function o(e) {
     let { channelId: t, messageId: n, answerIds: o } = e;
     try {
+        let e = { answer_ids: o };
         await r.tn.put({
-            url: l.ANM.POLL_ANSWERS(t, n),
-            body: { answer_ids: o },
+            url: a.ANM.POLL_ANSWERS(t, n),
+            body: e,
             rejectWithError: !1,
         });
     } catch (e) {
         throw new i.Hx(e);
     }
 }
-async function a(e) {
+async function s(e) {
     let { channelId: t, messageId: n } = e;
     try {
         await r.tn.post({
-            url: l.ANM.POLL_EXPIRE(t, n),
+            url: a.ANM.POLL_EXPIRE(t, n),
             rejectWithError: !1,
         });
     } catch (e) {

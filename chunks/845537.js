@@ -1,12 +1,12 @@
 n.d(t, {
     EK: () => G,
-    Io: () => k,
+    Io: () => M,
     N1: () => B,
-    NY: () => j,
-    Ox: () => L,
-    Vq: () => M,
+    NY: () => k,
+    Ox: () => x,
+    Vq: () => j,
     Wf: () => U,
-    cB: () => x,
+    cB: () => L,
     dy: () => w,
     wP: () => D,
 });
@@ -36,7 +36,7 @@ var h = n(592125),
     T = n(388032),
     S = n(399289),
     A = n(430864);
-function N(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function N(e, t, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -97,7 +97,7 @@ function w(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.Z,
-                C(
+                N(
                     {
                         src: t.src,
                         emojiName: t.name,
@@ -118,7 +118,7 @@ function D(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.Z,
-                C(
+                N(
                     {
                         emojiId: t.emojiId,
                         emojiName: t.name,
@@ -129,11 +129,11 @@ function D(e) {
             ),
     });
 }
-function L(e) {
+function x(e) {
     let { text: t } = e;
     return (0, r.jsx)(f.Z, { children: t });
 }
-function x(e) {
+function L(e) {
     let { id: t, guildId: n, channelId: o } = e,
         l = (0, i.e7)([b.default], () => b.default.getUser(t)),
         c = (0, i.e7)([E.Z], () => E.Z.hidePersonalInformation),
@@ -164,12 +164,12 @@ function x(e) {
             delay: 750,
             position: "top",
             "aria-label": I.ZP.getUserTag(l, { decoration: "never" }),
-            children: (e) => (0, r.jsx)(a.P3F, P(C({ tag: "span" }, e), { children: d })),
+            children: (e) => (0, r.jsx)(a.P3F, P(N({ tag: "span" }, e), { children: d })),
         });
     }
     return d;
 }
-function M(e) {
+function j(e) {
     let { id: t, guildId: n } = e,
         o = (0, i.e7)([g.Z], () => (null != n ? g.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
@@ -197,7 +197,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function M(e) {
     let { id: t } = e,
         n = (0, i.e7)([h.Z], () => h.Z.getChannel(t)),
         a = T.intl.string(T.t.zLZPmp).toLowerCase(),
@@ -216,7 +216,7 @@ function k(e) {
           })
         : (0, r.jsx)("span", { children: "#" + a });
 }
-function j(e) {
+function k(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, d.l)(t),
         o = (0, d.W)(t, n, i);

@@ -1,12 +1,12 @@
 n.d(t, {
     Cg: () => w,
-    Y0: () => x,
+    Y0: () => L,
     YA: () => B,
-    fM: () => L,
-    hz: () => j,
+    fM: () => x,
+    hz: () => k,
     mz: () => U,
     ol: () => G,
-    xB: () => M,
+    xB: () => j,
 });
 var r = n(951288),
     i = n(647438),
@@ -59,7 +59,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -112,10 +112,10 @@ let D = Object.freeze({
     large: T.large,
     dynamic: null,
 });
-var L = (function (e) {
+var x = (function (e) {
     return (e.DEFAULT = "default"), (e.SUBTLE = "subtle"), e;
 })({});
-function x(e) {
+function L(e) {
     var t,
         {
             transitionState: n,
@@ -128,7 +128,7 @@ function x(e) {
             onAnimationEnd: y = v.dG,
             returnRef: I,
             animation: S = "default",
-            parentComponent: N,
+            parentComponent: C,
         } = e,
         P = R(e, [
             "transitionState",
@@ -147,13 +147,13 @@ function x(e) {
     i.useContext(b.Z)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
-        properties: { variant: N },
+        properties: { variant: C },
     });
-    let { reducedMotion: L } = i.useContext(f.S),
-        x = (0, d.q)(
+    let { reducedMotion: x } = i.useContext(f.S),
+        L = (0, d.q)(
             {
                 opacity: +!!w,
-                transform: w || L.enabled || "subtle" === S ? "scale(1)" : "scale(0.7)",
+                transform: w || x.enabled || "subtle" === S ? "scale(1)" : "scale(0.7)",
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -163,30 +163,30 @@ function x(e) {
             },
             "animate-always",
         ),
-        M = i.useRef(null),
-        k = null != P["aria-label"],
-        j = null != P["aria-labelledby"],
+        j = i.useRef(null),
+        M = null != P["aria-label"],
+        k = null != P["aria-labelledby"],
         U = i.useId(),
         G = null != (t = P["aria-labelledby"]) ? t : U,
         B = i.useMemo(
             () => ({
                 headerId: G,
-                headerIdIsManaged: j,
+                headerIdIsManaged: k,
             }),
-            [G, j],
+            [G, k],
         );
     return (0, r.jsx)(O.zM.Provider, {
         value: B,
         children: (0, r.jsx)(
             p.V,
-            C(
+            N(
                 A(
                     {
                         className: T.focusLock,
                         role: _,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        "aria-labelledby": k ? void 0 : B.headerId,
+                        "aria-labelledby": M ? void 0 : B.headerId,
                     },
                     P,
                 ),
@@ -196,10 +196,10 @@ function x(e) {
                             [T.fullscreenOnMobile]: g,
                             [T.rootWithShadow]: !E,
                         }),
-                        ref: M,
-                        style: x,
+                        ref: j,
+                        style: L,
                         children: (0, r.jsx)(h.J, {
-                            containerRef: M,
+                            containerRef: j,
                             children: a,
                         }),
                     }),
@@ -208,7 +208,7 @@ function x(e) {
         ),
     });
 }
-function M(e) {
+function j(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(O.zM);
     return (0, r.jsx)(y.Z, {
@@ -223,7 +223,7 @@ function M(e) {
         children: e.children,
     });
 }
-function k(e) {
+function M(e) {
     switch (null != e ? e : "thin") {
         case "auto":
             return g.yW;
@@ -233,13 +233,13 @@ function k(e) {
             return g.h2;
     }
 }
-function j(e) {
+function k(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = R(e, ["className", "children", "scrollerRef", "scrollbarType"]),
-        l = k(a);
+        l = M(a);
     return (0, r.jsx)(
         l,
-        C(
+        N(
             A(
                 {
                     className: o()(T.content, t),

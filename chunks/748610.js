@@ -1,126 +1,138 @@
-n.d(t, { Z: () => h }), n(388685), n(415506);
+n.d(t, { Z: () => g }), n(388685), n(415506);
 var r = n(392711),
-    s = n.n(r),
-    l = n(570140),
-    a = n(952537),
-    i = n(607802),
-    o = n(187462),
+    i = n.n(r),
+    a = n(570140),
+    o = n(952537),
+    s = n(607802),
+    l = n(187462),
     c = n(532496),
     u = n(981631);
-function d(e) {
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e) {
+    if (!Array.isArray(e.pinned)) return;
+    let t = e.pinned.some((e) => !0 === e);
+    e.pinned = t;
+}
+function p(e) {
     return e === u.I_8 ? null : e;
 }
-let h = {
+function h() {
+    return !1;
+}
+function m() {
+    return !0;
+}
+let g = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
                 searchTabs: n,
                 searchQueryString: r,
-                pagination: o,
-                trackExactTotalHits: h,
-                getId: p,
-                getLimit: f,
-                onFetchStart: _,
-                onFetchSuccess: g,
-                searchMode: S = u.QIO.NEWEST,
+                pagination: l,
+                trackExactTotalHits: d,
+                getId: h,
+                getLimit: m,
+                onFetchStart: g,
+                onFetchSuccess: E,
+                searchMode: b = u.QIO.NEWEST,
             } = e,
-            m = (0, i.kG)(r),
-            y = (0, i.$G)(m);
-        !(function (e) {
-            if (!Array.isArray(e.pinned)) return;
-            let t = e.pinned.some((e) => !0 === e);
-            e.pinned = t;
-        })(y);
-        let b = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })({}, y, (0, i.zH)(S)),
-            E = (0, i.s5)(t);
-        null != E && (0, i.jW)(b, E);
-        let x = c.Z.create({
-            id: (0, i.Tm)(t),
+            y = (0, s.kG)(r),
+            O = (0, s.$G)(y);
+        _(O);
+        let v = f({}, O, (0, s.zH)(b)),
+            I = (0, s.s5)(t);
+        null != I && (0, s.jW)(v, I);
+        let T = c.Z.create({
+            id: (0, s.Tm)(t),
             searchContext: t,
-            searchQuery: b,
+            searchQuery: v,
             searchTabs: n,
-            getLimit: f,
-            pagination: o,
-            trackExactTotalHits: h,
+            getLimit: m,
+            pagination: l,
+            trackExactTotalHits: d,
         });
-        null == _ ||
-            _({
+        null == g ||
+            g({
                 searchContext: t,
                 searchQueryString: r,
-                searchQuery: b,
+                searchQuery: v,
             });
-        let C = n.map((e) => p(e));
+        let S = n.map((e) => h(e));
         return (
-            l.Z.dispatch({
+            a.Z.dispatch({
                 type: "SEARCH_MESSAGES_START",
-                ids: C,
+                ids: S,
             }),
-            x.fetch(
+            T.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: d(E),
+                        guildId: p(I),
                         data: r.map((e) => {
-                            var t, r, l;
-                            let [i, o] = e,
-                                c = p(i),
-                                u = o.cursor;
+                            var t, r, a;
+                            let [s, l] = e,
+                                c = h(s),
+                                u = l.cursor;
                             return {
                                 id: c,
                                 analyticsId: n.analytics_id,
-                                totalResults: o.total_results,
-                                cursor: null != u && s().isEmpty(u) ? null : u,
-                                messages: o.messages,
-                                channels: null != (t = o.channels) ? t : [],
-                                threads: null != (r = o.threads) ? r : [],
-                                members: (null != (l = o.members) ? l : []).map((e) => (0, a.Z)(e)),
+                                totalResults: l.total_results,
+                                cursor: null != u && i().isEmpty(u) ? null : u,
+                                messages: l.messages,
+                                channels: null != (t = l.channels) ? t : [],
+                                threads: null != (r = l.threads) ? r : [],
+                                members: (null != (a = l.members) ? a : []).map((e) => (0, o.Z)(e)),
                                 doingHistoricalIndex: n.doing_deep_historical_index,
                                 documentsIndexed: n.documents_indexed,
                             };
                         }),
                     }),
-                        null == g ||
-                            g({
+                        null == E ||
+                            E({
                                 searchContext: t,
                                 tabEntries: r,
                             });
                 },
                 () => {
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_INDEXING",
-                        ids: C,
+                        ids: S,
                     });
                 },
                 (e) => {
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_FAILURE",
-                        ids: C,
+                        ids: S,
                         error: e,
                     });
                 },
@@ -130,24 +142,24 @@ let h = {
     },
     fetchMessages: function (e) {
         let { searchContext: t, query: n, searchEverywhere: r } = e,
-            s = (0, i.s5)(t);
-        null != s && (0, i.jW)(n, s), r && (n.search_everywhere = !0);
-        let c = (0, i.Tm)(t),
-            u = o.Z.create({
+            i = (0, s.s5)(t);
+        null != i && (0, s.jW)(n, i), r && (n.search_everywhere = !0);
+        let c = (0, s.Tm)(t),
+            u = l.Z.create({
                 id: c,
                 searchType: t.type,
                 searchQuery: n,
             });
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: "SEARCH_MESSAGES_START",
             ids: [c],
         }),
             u.fetch(
                 (e) => {
                     var t, n, r;
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: d(s),
+                        guildId: p(i),
                         data: [
                             {
                                 id: c,
@@ -155,7 +167,7 @@ let h = {
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
                                 threads: null != (t = e.body.threads) ? t : [],
-                                members: (null != (n = e.body.members) ? n : []).map((e) => (0, a.Z)(e)),
+                                members: (null != (n = e.body.members) ? n : []).map((e) => (0, o.Z)(e)),
                                 doingHistoricalIndex: e.body.doing_deep_historical_index,
                                 documentsIndexed: e.body.documents_indexed,
                                 channels: null != (r = e.body.channels) ? r : [],
@@ -165,13 +177,13 @@ let h = {
                     });
                 },
                 () => {
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_INDEXING",
                         ids: [c],
                     });
                 },
                 (e) => {
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: "SEARCH_MESSAGES_FAILURE",
                         ids: [c],
                         error: e,
@@ -180,109 +192,129 @@ let h = {
             );
     },
     clearSearchRecentMessages: function () {
-        l.Z.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+        a.Z.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
     },
     clearAllSearchMesssages: function () {
-        l.Z.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+        a.Z.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
     },
     clearSearchMessages: function (e) {
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: "SEARCH_MESSAGES_CLEAR",
             id: e,
         });
     },
     addNativeSearchHistoryItem: function (e, t) {
-        1;
+        if (!h() || (e.type !== u.aib.DMS && e.type !== u.aib.GUILD)) return;
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
+            type: "SEARCH_HISTORY_NATIVE_ADD_ITEM",
+            id: n,
+            item: t,
+        });
     },
     removeNativeSearchHistoryItem: function (e, t) {
-        1;
+        if (!h()) return;
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
+            type: "SEARCH_HISTORY_NATIVE_REMOVE_ITEM",
+            id: n,
+            item: t,
+        });
     },
     clearNativeSearchHistory: function (e) {
-        1;
+        if (!h()) return;
+        let t = (0, s.Tm)(e);
+        a.Z.dispatch({
+            type: "SEARCH_HISTORY_NATIVE_CLEAR_ITEMS",
+            id: t,
+        });
     },
     addWebSearchHistoryItem: function (e, t) {
-        let n = (0, i.Tm)(e);
-        l.Z.dispatch({
+        if (!m()) return;
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_HISTORY_WEB_ADD_ITEM",
             id: n,
             query: t,
         });
     },
     removeWebSearchHistoryItem: function (e, t) {
-        let n = (0, i.Tm)(e);
-        l.Z.dispatch({
+        if (!m()) return;
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_HISTORY_WEB_REMOVE_ITEM",
             id: n,
             query: t,
         });
     },
     clearWebSearchHistory: function (e) {
-        let t = (0, i.Tm)(e);
-        l.Z.dispatch({
+        if (!m()) return;
+        let t = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS",
             id: t,
         });
     },
     openSearchScreen: function (e) {
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: "SEARCH_SCREEN_OPEN",
             searchContext: e,
-            id: (0, i.Tm)(e),
+            id: (0, s.Tm)(e),
         });
     },
     setShowBlockedResults: function (e, t) {
-        let n = (0, i.Tm)(e);
-        l.Z.dispatch({
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
             id: n,
             showBlocked: t,
         });
     },
     setShowNoResultsAlt: function (e) {
-        let t = (0, i.Tm)(e);
-        l.Z.dispatch({
+        let t = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_SET_SHOW_NO_RESULTS_ALT",
             id: t,
         });
     },
     updateSearchResultsQuery: function (e, t, n, r) {
-        let s = (0, i.Tm)(e);
-        l.Z.dispatch({
+        let i = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_RESULTS_QUERY_UPDATE",
-            id: s,
+            id: i,
             queryString: t,
             query: n,
             offset: r,
         });
     },
     ensureSearchState: function (e) {
-        let t = (0, i.Tm)(e);
-        l.Z.wait(() =>
-            l.Z.dispatch({
+        let t = (0, s.Tm)(e);
+        a.Z.wait(() =>
+            a.Z.dispatch({
                 type: "SEARCH_ENSURE_SEARCH_STATE",
                 id: t,
             }),
         );
     },
     setSearchState: function (e, t) {
-        let n = (0, i.Tm)(e);
-        l.Z.dispatch({
+        let n = (0, s.Tm)(e);
+        a.Z.dispatch({
             type: "SEARCH_EDITOR_STATE_CHANGE",
             id: n,
             editorState: t,
         });
     },
     clearSearchState: function (e) {
-        let t = (0, i.Tm)(e);
-        l.Z.wait(() =>
-            l.Z.dispatch({
+        let t = (0, s.Tm)(e);
+        a.Z.wait(() =>
+            a.Z.dispatch({
                 type: "SEARCH_EDITOR_STATE_CLEAR",
                 id: t,
             }),
         );
     },
     updateAutocompleteQuery: function (e, t, n) {
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
             searchContext: e,
             tokens: t,

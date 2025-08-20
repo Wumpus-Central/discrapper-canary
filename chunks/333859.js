@@ -1,74 +1,78 @@
-n.d(t, { c: () => C });
-var i = n(951288);
+n.d(t, { c: () => I });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    s = n(755721),
-    a = n(481060),
-    l = n(37234),
-    o = n(493773),
+var i = n(442837),
+    a = n(755721),
+    o = n(481060),
+    s = n(37234),
+    l = n(493773),
     c = n(100527),
-    d = n(906732),
-    u = n(737604),
-    m = n(539873),
-    p = n(803038),
-    g = n(550385),
+    u = n(906732),
+    d = n(737604),
+    f = n(539873),
+    _ = n(803038),
+    p = n(550385),
     h = n(638212),
-    f = n(767714),
-    b = n(626135),
-    x = n(981631),
-    _ = n(474936),
-    j = n(388032),
-    E = n(980676);
-let C = () => {
-    let { analyticsLocations: e } = (0, d.ZP)(c.Z.USER_SETTINGS),
-        t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview);
-    (0, o.ZP)(() => {
-        t &&
-            b.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: _.cd.APP_ICON_UPSELL,
-                location_stack: e,
-            });
-    });
-    let { v2EditorEnabled: n } = p.Mc.useExperiment({ location: "UserSettingsAppearanceInAppIcon" });
-    return (0, i.jsxs)("div", {
-        className: E.selectionGroup,
-        children: [
-            (0, i.jsx)(m.Z, {
-                disabled: t,
-                renderCTAButtons: () => {
-                    let e = n ? E.tryItOutButtonsV2 : E.tryItOutButtons;
-                    return (0, i.jsxs)("div", {
-                        className: e,
-                        children: [
-                            (0, i.jsx)(s.zx, {
-                                size: s.zx.Sizes.MEDIUM,
-                                color: t ? s.zx.Colors.PRIMARY : s.zx.Colors.BRAND,
-                                onClick: () => void ((0, g.XO)(g.wh.APP_ICON), (0, l.xf)()),
-                                children: j.intl.string(j.t["hb/wEx"]),
-                            }),
-                            t
-                                ? n
-                                    ? (0, i.jsx)(h.Z, {
-                                          subscriptionTier: _.Si.TIER_2,
-                                          defaultTextOverride: j.intl.string(j.t.mr4K7O),
-                                          premiumModalAnalyticsLocation: {
-                                              object: x.qAy.BUTTON_CTA,
-                                              objectType: x.Qqv.BUY,
-                                          },
-                                          fullWidth: !0,
-                                      })
-                                    : (0, i.jsx)(f.Z, {
-                                          className: E.tryItOutButton,
-                                          showGradient: !1,
-                                          subscriptionTier: _.Si.TIER_2,
-                                          textOptions: { textOverride: j.intl.string(j.t.mr4K7O) },
-                                      })
-                                : null,
-                        ],
-                    });
-                },
-            }),
-            (0, i.jsx)(a.$i$, { className: E.divider }),
-        ],
-    });
-};
+    m = n(767714),
+    g = n(626135),
+    E = n(981631),
+    b = n(474936),
+    y = n(388032),
+    O = n(980676);
+let v = () => {
+        (0, p.XO)(p.wh.APP_ICON), (0, s.xf)();
+    },
+    I = () => {
+        let { analyticsLocations: e } = (0, u.ZP)(c.Z.USER_SETTINGS),
+            t = (0, i.e7)([d.Z], () => d.Z.isUpsellPreview);
+        (0, l.ZP)(() => {
+            t &&
+                g.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: b.cd.APP_ICON_UPSELL,
+                    location_stack: e,
+                });
+        });
+        let { v2EditorEnabled: n } = _.Mc.useExperiment({ location: "UserSettingsAppearanceInAppIcon" }),
+            s = () => {
+                let e = n ? O.tryItOutButtonsV2 : O.tryItOutButtons;
+                return (0, r.jsxs)("div", {
+                    className: e,
+                    children: [
+                        (0, r.jsx)(a.zx, {
+                            size: a.zx.Sizes.MEDIUM,
+                            color: t ? a.zx.Colors.PRIMARY : a.zx.Colors.BRAND,
+                            onClick: () => v(),
+                            children: y.intl.string(y.t["hb/wEx"]),
+                        }),
+                        t
+                            ? n
+                                ? (0, r.jsx)(h.Z, {
+                                      subscriptionTier: b.Si.TIER_2,
+                                      defaultTextOverride: y.intl.string(y.t.mr4K7O),
+                                      premiumModalAnalyticsLocation: {
+                                          object: E.qAy.BUTTON_CTA,
+                                          objectType: E.Qqv.BUY,
+                                      },
+                                      fullWidth: !0,
+                                  })
+                                : (0, r.jsx)(m.Z, {
+                                      className: O.tryItOutButton,
+                                      showGradient: !1,
+                                      subscriptionTier: b.Si.TIER_2,
+                                      textOptions: { textOverride: y.intl.string(y.t.mr4K7O) },
+                                  })
+                            : null,
+                    ],
+                });
+            };
+        return (0, r.jsxs)("div", {
+            className: O.selectionGroup,
+            children: [
+                (0, r.jsx)(f.Z, {
+                    disabled: t,
+                    renderCTAButtons: s,
+                }),
+                (0, r.jsx)(o.$i$, { className: O.divider }),
+            ],
+        });
+    };

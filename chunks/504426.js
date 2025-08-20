@@ -1,142 +1,145 @@
-var n = r(179361),
-    i = r(76466),
-    o = r(988231),
-    a = r(470427),
-    u = r(928460),
-    s = r(80556),
-    c = r(656367),
-    l = r(740336),
-    f = r(65183),
-    p = r(817690),
-    h = f.List,
-    d = f.Record,
-    g = f.Repeat;
-t.exports = (function (t) {
-    function e() {
-        return t.apply(this, arguments) || this;
-    }
+function r(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-    var r = e.prototype;
+}
+var i = n(179361),
+    a = n(76466),
+    o = n(988231),
+    s = n(470427),
+    l = n(928460),
+    c = n(80556),
+    u = n(656367),
+    d = n(740336),
+    f = n(65183),
+    _ = n(817690),
+    p = f.List,
+    h = f.Record,
+    m = f.Repeat;
+e.exports = (function (e) {
+    function t() {
+        return e.apply(this, arguments) || this;
+    }
+    r(t, e);
+    var n = t.prototype;
     return (
-        (r.getEntityMap = function () {
-            return u;
+        (n.getEntityMap = function () {
+            return l;
         }),
-        (r.getBlockMap = function () {
+        (n.getBlockMap = function () {
             return this.get("blockMap");
         }),
-        (r.getSelectionBefore = function () {
+        (n.getSelectionBefore = function () {
             return this.get("selectionBefore");
         }),
-        (r.getSelectionAfter = function () {
+        (n.getSelectionAfter = function () {
             return this.get("selectionAfter");
         }),
-        (r.getBlockForKey = function (t) {
-            return this.getBlockMap().get(t);
+        (n.getBlockForKey = function (e) {
+            return this.getBlockMap().get(e);
         }),
-        (r.getKeyBefore = function (t) {
+        (n.getKeyBefore = function (e) {
             return this.getBlockMap()
                 .reverse()
                 .keySeq()
-                .skipUntil(function (e) {
-                    return e === t;
+                .skipUntil(function (t) {
+                    return t === e;
                 })
                 .skip(1)
                 .first();
         }),
-        (r.getKeyAfter = function (t) {
+        (n.getKeyAfter = function (e) {
             return this.getBlockMap()
                 .keySeq()
-                .skipUntil(function (e) {
-                    return e === t;
+                .skipUntil(function (t) {
+                    return t === e;
                 })
                 .skip(1)
                 .first();
         }),
-        (r.getBlockAfter = function (t) {
+        (n.getBlockAfter = function (e) {
             return this.getBlockMap()
-                .skipUntil(function (e, r) {
-                    return r === t;
+                .skipUntil(function (t, n) {
+                    return n === e;
                 })
                 .skip(1)
                 .first();
         }),
-        (r.getBlockBefore = function (t) {
+        (n.getBlockBefore = function (e) {
             return this.getBlockMap()
                 .reverse()
-                .skipUntil(function (e, r) {
-                    return r === t;
+                .skipUntil(function (t, n) {
+                    return n === e;
                 })
                 .skip(1)
                 .first();
         }),
-        (r.getBlocksAsArray = function () {
+        (n.getBlocksAsArray = function () {
             return this.getBlockMap().toArray();
         }),
-        (r.getFirstBlock = function () {
+        (n.getFirstBlock = function () {
             return this.getBlockMap().first();
         }),
-        (r.getLastBlock = function () {
+        (n.getLastBlock = function () {
             return this.getBlockMap().last();
         }),
-        (r.getPlainText = function (t) {
+        (n.getPlainText = function (e) {
             return this.getBlockMap()
-                .map(function (t) {
-                    return t ? t.getText() : "";
+                .map(function (e) {
+                    return e ? e.getText() : "";
                 })
-                .join(t || "\n");
+                .join(e || "\n");
         }),
-        (r.getLastCreatedEntityKey = function () {
-            return u.__getLastCreatedEntityKey();
+        (n.getLastCreatedEntityKey = function () {
+            return l.__getLastCreatedEntityKey();
         }),
-        (r.hasText = function () {
-            var t = this.getBlockMap();
-            return t.size > 1 || escape(t.first().getText()).replace(/%u200B/g, "").length > 0;
+        (n.hasText = function () {
+            var e = this.getBlockMap();
+            return e.size > 1 || escape(e.first().getText()).replace(/%u200B/g, "").length > 0;
         }),
-        (r.createEntity = function (t, e, r) {
-            return u.__create(t, e, r), this;
+        (n.createEntity = function (e, t, n) {
+            return l.__create(e, t, n), this;
         }),
-        (r.mergeEntityData = function (t, e) {
-            return u.__mergeData(t, e), this;
+        (n.mergeEntityData = function (e, t) {
+            return l.__mergeData(e, t), this;
         }),
-        (r.replaceEntityData = function (t, e) {
-            return u.__replaceData(t, e), this;
+        (n.replaceEntityData = function (e, t) {
+            return l.__replaceData(e, t), this;
         }),
-        (r.addEntity = function (t) {
-            return u.__add(t), this;
+        (n.addEntity = function (e) {
+            return l.__add(e), this;
         }),
-        (r.getEntity = function (t) {
-            return u.__get(t);
+        (n.getEntity = function (e) {
+            return l.__get(e);
         }),
-        (e.createFromBlockArray = function (t, r) {
-            var i = Array.isArray(t) ? t : t.contentBlocks,
-                o = n.createFromArray(i),
-                a = o.isEmpty() ? new s() : s.createEmpty(o.first().getKey());
-            return new e({
-                blockMap: o,
-                entityMap: r || u,
-                selectionBefore: a,
-                selectionAfter: a,
+        (t.createFromBlockArray = function (e, n) {
+            var r = Array.isArray(e) ? e : e.contentBlocks,
+                a = i.createFromArray(r),
+                o = a.isEmpty() ? new c() : c.createEmpty(a.first().getKey());
+            return new t({
+                blockMap: a,
+                entityMap: n || l,
+                selectionBefore: o,
+                selectionAfter: o,
             });
         }),
-        (e.createFromText = function (t) {
-            var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : /\r\n?|\n/g,
-                n = t.split(r).map(function (t) {
+        (t.createFromText = function (e) {
+            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : /\r\n?|\n/g,
+                r = e.split(n).map(function (e) {
                     return (
-                        (t = p(t)),
-                        new (l("draft_tree_data_support") ? a : o)({
-                            key: c(),
-                            text: t,
+                        (e = _(e)),
+                        new (d("draft_tree_data_support") ? s : o)({
+                            key: u(),
+                            text: e,
                             type: "unstyled",
-                            characterList: h(g(i.EMPTY, t.length)),
+                            characterList: p(m(a.EMPTY, e.length)),
                         })
                     );
                 });
-            return e.createFromBlockArray(n);
+            return t.createFromBlockArray(r);
         }),
-        e
+        t
     );
 })(
-    d({
+    h({
         entityMap: null,
         blockMap: null,
         selectionBefore: null,

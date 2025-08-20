@@ -116,8 +116,8 @@ function E(e) {
         } = (0, a.Xo)(),
         S = [u.l.MODAL, u.l.MODAL_V2].includes(_) ? (0, o.z)(t.id, n) : void 0,
         A = O === b.sourceType && y === c.P.REACT,
-        N = O === b.sourceType && y === c.P.REPLY,
-        C = (A || N) && I === b.sourceId;
+        C = O === b.sourceType && y === c.P.REPLY,
+        N = (A || C) && I === b.sourceId;
     return (0, r.jsx)(
         i.yRy,
         p(
@@ -146,7 +146,7 @@ function E(e) {
                     onRequestClose: () => {
                         v(), null == m || m();
                     },
-                    shouldShow: C,
+                    shouldShow: N,
                 },
                 g({
                     interactionType: y,

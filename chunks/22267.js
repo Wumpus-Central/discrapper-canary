@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => N });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,45 +23,45 @@ var r = n(951288),
     T = n(198921),
     S = n(460400),
     A = n(943549);
-let N = {
+let C = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
         default: c.EFr.SIZE_32,
     },
-    C = (e) => {
+    N = (e) => {
         let {
                 user: t,
                 guildId: n,
                 nameplate: a,
-                nameplateData: C,
+                nameplateData: N,
                 className: R,
                 innerClassName: P,
                 isHighlighted: w,
                 showStatus: D,
-                showPlaceholderUser: L,
-                pendingGlobalName: x,
-                pendingDisplayNameStyles: M,
-                nameplatePreviewSize: k = "default",
-                isPurchased: j = !1,
+                showPlaceholderUser: x,
+                pendingGlobalName: L,
+                pendingDisplayNameStyles: j,
+                nameplatePreviewSize: M = "default",
+                isPurchased: k = !1,
             } = e,
             U = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
-            G = null != a ? (0, v.EU)(a) : C,
+            G = null != a ? (0, v.EU)(a) : N,
             B = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            V = U ? "#706F74" : "#aaaab2",
-            F = i.useRef(null),
-            Z = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
+            Z = U ? "#706F74" : "#aaaab2",
+            V = i.useRef(null),
+            F = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
             H =
                 null != t
                     ? (0, E.Ly)({
                           pendingNickname: void 0,
-                          pendingGlobalName: x,
+                          pendingGlobalName: L,
                           user: t,
-                          guildMember: Z,
+                          guildMember: F,
                       })
                     : void 0,
-            Y = N[k],
+            Y = C[M],
             W = (0, f.Y)({ location: "NameplatePreview" }),
-            K = void 0 !== M ? M : null == t ? void 0 : t.displayNameStyles;
+            K = void 0 !== j ? j : null == t ? void 0 : t.displayNameStyles;
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": I.intl.string(I.t.SZeUdX),
@@ -71,9 +71,9 @@ let N = {
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(R, T.nameplatePreview, {
-                    [T.nameplatePurchased]: j && !w,
-                    [T.large]: "large" === k,
-                    [T.xlarge]: "xlarge" === k,
+                    [T.nameplatePurchased]: k && !w,
+                    [T.large]: "large" === M,
+                    [T.xlarge]: "xlarge" === M,
                 }),
                 children: [
                     null != G &&
@@ -83,7 +83,7 @@ let N = {
                                 nameplate: G,
                                 hovered: w,
                                 placement: m.i.PREVIEW,
-                                content: L ? void 0 : F,
+                                content: x ? void 0 : V,
                             },
                             null == a ? void 0 : a.id,
                         ),
@@ -92,9 +92,9 @@ let N = {
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(T.avatarContainer, !L && T.avatarVisible),
+                                      className: o()(T.avatarContainer, !x && T.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
-                                          ref: F,
+                                          ref: V,
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: n,
@@ -111,6 +111,7 @@ let N = {
                                               userName: H,
                                               displayNameStyles: K,
                                               effectDisplayType: _.F.ANIMATED,
+                                              loop: !0,
                                           }),
                                           innerClassName: P,
                                           withDisplayNameStyles: W && null != K,
@@ -118,14 +119,14 @@ let N = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(T.avatarContainer, L && T.avatarVisible),
+                                className: o()(T.avatarContainer, x && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: U ? S : A,
                                         size: Y,
                                         "aria-hidden": !0,
                                         status: c.Skl.ONLINE,
-                                        statusColor: V,
+                                        statusColor: Z,
                                         className: T.avatar,
                                     }),
                                     (0, r.jsx)("div", { className: T.placeholderUsername }),

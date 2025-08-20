@@ -1,7 +1,7 @@
-r.d(t, { Z: () => h });
+r.d(t, { Z: () => f });
 var n = r(951288),
-    a = r(120356),
-    i = r.n(a),
+    i = r(120356),
+    a = r.n(i),
     l = r(442837),
     o = r(481060),
     s = r(597688),
@@ -9,18 +9,18 @@ var n = r(951288),
     u = r(22267),
     d = r(25990),
     p = r(388032),
-    b = r(763740);
-let h = (e) => {
-    let { user: t, guildId: r, selectedNameplate: a, purchased: h } = e,
-        f = (0, l.e7)([s.Z], () => s.Z.getProduct(null == a ? void 0 : a.skuId)),
-        v = (0, l.e7)([d.Z], () => d.Z.getPendingGlobalName());
+    v = r(763740);
+let f = (e) => {
+    let { user: t, guildId: r, selectedNameplate: i, purchased: f } = e,
+        b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == i ? void 0 : i.skuId)),
+        m = (0, l.e7)([d.Z], () => d.Z.getPendingGlobalName());
     return (0, n.jsxs)("div", {
-        className: i()(b.previewBorder, { [b.upsell]: !h && null != a }),
+        className: a()(v.previewBorder, { [v.upsell]: !f && null != i }),
         children: [
             (0, n.jsx)("div", {
-                className: b.previewBox,
+                className: v.previewBox,
                 children: (0, n.jsxs)("div", {
-                    className: b.previewContents,
+                    className: v.previewContents,
                     children: [
                         (0, n.jsx)(c.d, {
                             width: 124,
@@ -33,8 +33,8 @@ let h = (e) => {
                         (0, n.jsx)(u.Z, {
                             user: t,
                             guildId: r,
-                            nameplate: a,
-                            pendingGlobalName: v,
+                            nameplate: i,
+                            pendingGlobalName: m,
                             isHighlighted: !0,
                         }),
                         (0, n.jsx)(c.d, {
@@ -48,15 +48,15 @@ let h = (e) => {
                     ],
                 }),
             }),
-            null != a
+            null != i
                 ? (0, n.jsxs)("div", {
-                      className: b.previewDescription,
+                      className: v.previewDescription,
                       children: [
                           (0, n.jsx)(o.Text, {
                               variant: "text-sm/semibold",
-                              children: null == f ? void 0 : f.name,
+                              children: null == b ? void 0 : b.name,
                           }),
-                          h
+                          f
                               ? null
                               : (0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",

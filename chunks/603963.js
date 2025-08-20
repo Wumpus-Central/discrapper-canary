@@ -1,39 +1,39 @@
-n.d(t, { Z: () => l }), n(953529);
-var i = n(951288);
+n.d(t, { Z: () => s }), n(953529);
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(921801),
-    a = n(198840);
-function l(e) {
-    let { children: t, title: n, description: l, webSetting: o } = e;
-    return (0, i.jsx)(s.F, {
-        setting: o,
-        children: (0, i.jsxs)("div", {
-            className: a.category,
+var i = n(481060),
+    a = n(921801),
+    o = n(198840);
+function s(e) {
+    let { children: t, title: n, description: s, webSetting: l } = e;
+    return (0, r.jsx)(a.F, {
+        setting: l,
+        children: (0, r.jsxs)("div", {
+            className: o.category,
             children: [
-                (null != n || null != l) &&
-                    (0, i.jsxs)("div", {
-                        className: a.categoryHeader,
+                (null != n || null != s) &&
+                    (0, r.jsxs)("div", {
+                        className: o.categoryHeader,
                         children: [
                             null != n &&
-                                (0, i.jsx)(r.X6q, {
+                                (0, r.jsx)(i.X6q, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
                                     children: n,
                                 }),
-                            null != l &&
-                                (0, i.jsx)(r.Text, {
+                            null != s &&
+                                (0, r.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: l,
+                                    children: s,
                                 }),
                         ],
                     }),
-                (0, i.jsx)("div", {
-                    className: a.categoryContent,
+                (0, r.jsx)("div", {
+                    className: o.categoryContent,
                     children: t,
                 }),
-                (0, i.jsx)(r.$i$, { className: a.categoryDivider }),
+                (0, r.jsx)(i.$i$, { className: o.categoryDivider }),
             ],
         }),
     });

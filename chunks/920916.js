@@ -28,17 +28,17 @@ var r = n(951288),
     T = n(594174),
     S = n(960048),
     A = n(509212),
-    N = n(272008),
-    C = n(113434),
+    C = n(272008),
+    N = n(113434),
     R = n(497505),
     P = n(475595),
     w = n(566078),
     D = n(968435),
-    L = n(114732),
-    x = n(46140),
-    M = n(981631),
-    k = n(675654),
-    j = n(474936),
+    x = n(114732),
+    L = n(46140),
+    j = n(981631),
+    M = n(675654),
+    k = n(474936),
     U = n(388032),
     G = n(824210);
 function B(e, t, n) {
@@ -54,7 +54,7 @@ function B(e, t, n) {
         e
     );
 }
-function V(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function V(e) {
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,12 +82,12 @@ function F(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ function H() {
     return (0, d.Mn)(t).finally(d.si);
 }
 function Y() {
-    f.Z.open(M.oAB.PREMIUM, null, {});
+    f.Z.open(j.oAB.PREMIUM, null, {});
 }
 function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
@@ -133,21 +133,21 @@ function K(e) {
         v = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
         S = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
-        [A, C] = i.useState(!0 === m || S ? "claimed" : "loading");
+        [A, N] = i.useState(!0 === m || S ? "claimed" : "loading");
     i.useEffect(() => {
         S ||
             !0 === m ||
-            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
-                .then(() => C("claimed"))
-                .catch(() => C("error"));
+            (0, C.QB)(l.id, R.y$.CROSS_PLATFORM, d)
+                .then(() => N("claimed"))
+                .catch(() => N("error"));
     }, [l, d, S, m]);
     let P = () => {
-            C("applying"), h().finally(a);
+            N("applying"), h().finally(a);
         },
         w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== "",
         D = null == p && !0 !== m,
-        x = null == I || D || w || "loading" === A,
-        M = !v && !S && "claimed" === A;
+        L = null == I || D || w || "loading" === A,
+        j = !v && !S && "claimed" === A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -161,13 +161,13 @@ function K(e) {
                     "data-migration-pending": !0,
                     transitionState: n,
                     size: u.CgR.DYNAMIC,
-                    className: o()(G.rootContainer, { [G.rootContainerLoading]: x }),
+                    className: o()(G.rootContainer, { [G.rootContainerLoading]: L }),
                     hideShadow: !0,
                     parentComponent: "QuestsRewardCollectibleModal",
                     children:
                         "error" === A
-                            ? (0, r.jsx)(L.Z, { onClose: a })
-                            : x
+                            ? (0, r.jsx)(x.Z, { onClose: a })
+                            : L
                               ? (0, r.jsx)("div", {
                                     className: G.loadingIndicatorWrapper,
                                     children: (0, r.jsx)(u.$jN, { type: u.$jN.Type.SPINNING_CIRCLE }),
@@ -182,12 +182,12 @@ function K(e) {
                                 }),
                 }),
             }),
-            M &&
+            j &&
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
-                    sprites: k.CA,
-                    colors: k.Br,
+                    sprites: M.CA,
+                    colors: M.Br,
                 }),
         ],
     });
@@ -217,8 +217,8 @@ function q(e) {
         l = (0, P.fh)(t, P.eC.REWARD).url,
         c = (0, A.f$)(t.config),
         { fractionalState: d } = (0, m.Z)(),
-        f = d === j.a$.FP_ONLY,
-        _ = (0, C.Qy)(t.config),
+        f = d === k.a$.FP_ONLY,
+        _ = (0, N.Qy)(t.config),
         p = c && !f;
     return (0, r.jsxs)("div", {
         className: G.claimedRootContainer,
@@ -279,7 +279,7 @@ function q(e) {
                             loading: a,
                             onClick: s,
                         }),
-                        (0, A.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
+                        (0, A.zK)(t, L.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         p &&
                             (0, r.jsx)(y.p, {
                                 className: G.upsell,
@@ -288,7 +288,7 @@ function q(e) {
                                         Y(), o();
                                     },
                                 }),
-                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL },
+                                buttonAnalyticsObject: { section: j.jXE.PERMADECOS_MARKETING_UPSELL },
                             }),
                     ],
                 }),
@@ -328,7 +328,7 @@ function Q(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                Z(V({}, n), {
+                F(Z({}, n), {
                     quest: e,
                     location: t,
                     preview: i,

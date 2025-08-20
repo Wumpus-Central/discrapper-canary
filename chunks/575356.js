@@ -1,41 +1,51 @@
-let i;
-n.d(t, { Z: () => d });
-var r,
-    s,
+let r;
+n.d(t, { Z: () => h });
+var i,
     a = n(442837),
-    l = n(570140);
-let o = !1;
-class c extends (s = a.ZP.Store) {
+    o = n(570140);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = !1;
+function c() {
+    r = void 0;
+}
+function u(e) {
+    let { harvestType: t } = e;
+    (l = !1), (r = t);
+}
+function d() {
+    l = !0;
+}
+function f() {
+    l = !1;
+}
+function _() {
+    (l = !1), (r = null);
+}
+class p extends (i = a.ZP.Store) {
     get harvestType() {
-        return i;
+        return r;
     }
     get requestingHarvest() {
-        return o;
+        return l;
     }
 }
-(r = "displayName") in c
-    ? Object.defineProperty(c, r, {
-          value: "DataHarvestStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (c[r] = "DataHarvestStore");
-let d = new c(l.Z, {
-    CONNECTION_OPEN: function () {
-        i = void 0;
-    },
-    UPDATE_DATA_HARVEST_TYPE: function (e) {
-        let { harvestType: t } = e;
-        (o = !1), (i = t);
-    },
-    LOAD_DATA_HARVEST_TYPE_START: function () {
-        o = !0;
-    },
-    LOAD_DATA_HARVEST_TYPE_FAILURE: function () {
-        o = !1;
-    },
-    LOGOUT: function () {
-        (o = !1), (i = null);
-    },
+s(p, "displayName", "DataHarvestStore");
+let h = new p(o.Z, {
+    CONNECTION_OPEN: c,
+    UPDATE_DATA_HARVEST_TYPE: u,
+    LOAD_DATA_HARVEST_TYPE_START: d,
+    LOAD_DATA_HARVEST_TYPE_FAILURE: f,
+    LOGOUT: _,
 });

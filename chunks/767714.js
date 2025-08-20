@@ -99,8 +99,8 @@ let y = function (e) {
             disableShine: T,
             applicationId: S,
             shinyButtonClassName: A,
-            showGradient: N = !1,
-            confirmationFooter: C,
+            showGradient: C = !1,
+            confirmationFooter: N,
             paymentModalBanner: R,
             color: P,
             iconColor: w = "currentColor",
@@ -125,27 +125,27 @@ let y = function (e) {
             "color",
             "iconColor",
         ]);
-    let L = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        x = (0, d.Z)({
+    let x = (0, o.e7)([c.Z], () => c.Z.isFocused()),
+        L = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == m ? void 0 : m.textOverride,
             defaultTextOverride: null == m ? void 0 : m.subscribeText,
         }),
-        M = {
+        j = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: y,
             onSubscribeModalClose: O,
             premiumModalAnalyticsLocation: v,
             applicationId: S,
-            confirmationFooter: C,
+            confirmationFooter: N,
             paymentModalBanner: R,
         };
-    function k(e) {
+    function M(e) {
         let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            g(h({}, M), {
+            g(h({}, j), {
                 children: (o) => {
                     let { onClick: c } = o;
                     return (0, r.jsxs)(
@@ -154,7 +154,7 @@ let y = function (e) {
                             h(
                                 {
                                     "data-migration-pending": !0,
-                                    disabled: x.disabled,
+                                    disabled: L.disabled,
                                     onClick: c,
                                     innerClassName: _.premiumSubscribeButton,
                                     color: n,
@@ -162,8 +162,8 @@ let y = function (e) {
                                     className: A,
                                     wrapperClassName: a()(
                                         {
-                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
-                                            [_.tier1Gradient]: N && t === f.Si.TIER_1,
+                                            [_.tier2Gradient]: C && t === f.Si.TIER_2,
+                                            [_.tier1Gradient]: C && t === f.Si.TIER_1,
                                         },
                                         p,
                                     ),
@@ -173,7 +173,7 @@ let y = function (e) {
                                             : n === s.Tt.BRAND_INVERTED
                                               ? _.brandShine
                                               : void 0,
-                                    pauseAnimation: !L || T,
+                                    pauseAnimation: !x || T,
                                 },
                                 D,
                                 e,
@@ -188,7 +188,7 @@ let y = function (e) {
                                         }),
                                     (0, r.jsx)("span", {
                                         className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: x.buttonText,
+                                        children: L.buttonText,
                                     }),
                                 ],
                             },
@@ -198,10 +198,10 @@ let y = function (e) {
             }),
         );
     }
-    return null != x.buttonTooltipText
+    return null != L.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
-              text: x.buttonTooltipText,
-              children: k,
+              text: L.buttonTooltipText,
+              children: M,
           })
-        : k();
+        : M();
 };

@@ -1,113 +1,118 @@
-n.d(t, { Z: () => d });
-var i = n(951288);
+n.d(t, { Z: () => p });
+var r = n(951288);
 n(647438);
-var r = n(680018),
-    s = n(481060),
-    a = n(736519),
-    l = n(648613);
-function o(e) {
+var i = n(680018),
+    a = n(481060),
+    o = n(736519),
+    s = n(648613);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+            r.forEach(function (t) {
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let d = (e) => {
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let p = (e) => {
     var {
             subscriptionTier: t,
             premiumModalAnalyticsLocation: n,
-            giftMessage: d,
+            giftMessage: l,
             onClick: u,
-            buttonTextOverride: m,
+            buttonTextOverride: _,
         } = e,
-        p = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++)
-                    (n = s[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-            }
-            return r;
-        })(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick", "buttonTextOverride"]);
-    return (0, i.jsx)(
-        l.Z,
-        c(
-            o(
-                { isGift: !0 },
-                {
-                    subscriptionTier: t,
-                    premiumModalAnalyticsLocation: n,
-                    giftMessage: d,
-                    onClick: u,
-                },
-            ),
-            {
-                children: (e) => {
-                    let { onClick: n } = e,
-                        l = null != m ? m : (0, a.L)(t);
-                    return (0, i.jsx)(
-                        r.z,
+        p = f(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick", "buttonTextOverride"]);
+    let h = {
+        subscriptionTier: t,
+        premiumModalAnalyticsLocation: n,
+        giftMessage: l,
+        onClick: u,
+    };
+    return (0, r.jsx)(
+        s.Z,
+        d(c({ isGift: !0 }, h), {
+            children: (e) => {
+                let { onClick: n } = e,
+                    s = null != _ ? _ : (0, o.L)(t);
+                return (0, r.jsx)(
+                    i.z,
+                    d(
                         c(
-                            o(
-                                {
-                                    onClick: n,
-                                    icon: s.OgN,
-                                },
-                                p,
-                            ),
-                            { text: l },
+                            {
+                                onClick: n,
+                                icon: a.OgN,
+                            },
+                            p,
                         ),
-                    );
-                },
+                        { text: s },
+                    ),
+                );
             },
-        ),
+        }),
     );
 };

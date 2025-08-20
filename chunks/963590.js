@@ -1,16 +1,16 @@
 n.d(t, {
-    E: () => a,
-    Z: () => l,
+    E: () => o,
+    Z: () => s,
 });
-var i = n(818083),
-    r = n(875527),
-    s = n(987338);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(875527),
+    a = n(987338);
+let o = (0, r.B)({
     kind: "user",
     id: "2025-06_voice_filters_ea",
     label: "Voice Filters EA",
     defaultConfig: { enabled: null },
-    commonTriggerPoint: s.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -24,12 +24,12 @@ let a = (0, i.B)({
         },
     ],
 });
-function l(e) {
+function s(e) {
     let { location: t } = e,
-        { enabled: n } = a.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-        i = (0, r.Hu)({
+        { enabled: n } = o.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+        r = (0, i.Hu)({
             location: "VoiceFiltersEarlyAccess",
             autoTrackExposure: !0,
         });
-    return n && i;
+    return n && r;
 }

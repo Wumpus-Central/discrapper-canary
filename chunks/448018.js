@@ -1,14 +1,17 @@
-n.d(t, { v: () => p });
+n.d(t, { v: () => g });
 var r = n(497505),
-    s = n(988303),
-    o = n(941348),
-    a = n(658590),
-    i = n(647365),
+    i = n(988303),
+    a = n(941348),
+    o = n(658590),
+    s = n(647365),
     l = n(743294);
-let c = {
-        component: i.Z,
-        getCollapsedHeight: () => 40,
-        getPreEnrollmentExpandedHeight: () => 240,
+let c = 40,
+    u = 240,
+    d = 8,
+    f = {
+        component: s.Z,
+        getCollapsedHeight: () => c,
+        getPreEnrollmentExpandedHeight: () => u,
         getPostEnrollmentBackgroundImage: (e) =>
             "linear-gradient(90deg, ".concat(e.config.colors.primary, ", ").concat(e.config.colors.secondary, ")"),
         getPreEnrollmentBackgroundColor: (e) => void 0,
@@ -17,36 +20,38 @@ let c = {
             return (null == (t = e.userStatus) ? void 0 : t.completedAt) == null;
         },
         shouldExpandOnQuestComplete: (e) => !0,
-        getVerticalPadding: () => 8,
+        getVerticalPadding: () => d,
     },
-    d = l.Li,
-    u = {
-        component: o.Z,
+    _ = 66,
+    p = 270,
+    h = l.Li,
+    m = {
+        component: a.Z,
         getCollapsedHeight: (e) => {
             var t;
-            return (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null ? 66 : 40;
+            return (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null ? _ : c;
         },
-        getPreEnrollmentExpandedHeight: () => 270,
+        getPreEnrollmentExpandedHeight: () => p,
         getPostEnrollmentBackgroundImage: () => "linear-gradient(90deg, ".concat(l.aY, ", ").concat(l.v6, ")"),
         getPreEnrollmentBackgroundColor: (e) => "var(--home-background)",
         canCollapseOnBlur: (e) => !0,
         shouldExpandOnQuestComplete: (e) => !1,
-        getVerticalPadding: () => d,
+        getVerticalPadding: () => h,
     },
-    p = (e, t, n) => {
-        var o;
-        let i = (null == (o = e.userStatus) ? void 0 : o.enrolledAt) != null,
-            l = (!i && t === s.P.V2) || (i && n === s.P.V2) || (0, a.a)(e),
-            d = l ? u : c;
+    g = (e, t, n) => {
+        var a;
+        let s = (null == (a = e.userStatus) ? void 0 : a.enrolledAt) != null,
+            l = (!s && t === i.P.V2) || (s && n === i.P.V2) || (0, o.a)(e),
+            c = l ? m : f;
         return {
-            component: d.component,
-            collapsedHeight: d.getCollapsedHeight(e),
-            preEnrollmentExpandedHeight: d.getPreEnrollmentExpandedHeight(e),
-            postEnrollmentBackgroundImage: d.getPostEnrollmentBackgroundImage(e),
-            preEnrollmentBackgroundColor: d.getPreEnrollmentBackgroundColor(e),
-            canCollapseOnBlur: d.canCollapseOnBlur(e),
-            shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
-            paddingVertical: d.getVerticalPadding(),
+            component: c.component,
+            collapsedHeight: c.getCollapsedHeight(e),
+            preEnrollmentExpandedHeight: c.getPreEnrollmentExpandedHeight(e),
+            postEnrollmentBackgroundImage: c.getPostEnrollmentBackgroundImage(e),
+            preEnrollmentBackgroundColor: c.getPreEnrollmentBackgroundColor(e),
+            canCollapseOnBlur: c.canCollapseOnBlur(e),
+            shouldExpandOnQuestComplete: c.shouldExpandOnQuestComplete(e),
+            paddingVertical: c.getVerticalPadding(),
             trackingCtx: { content: l ? r.jn.QUEST_BAR_V2 : r.jn.QUEST_BAR },
         };
     };

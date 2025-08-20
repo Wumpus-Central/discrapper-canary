@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(893718),
     x = n(303628),
     v = n(313201),
-    j = n(967128),
-    O = n(665149),
+    O = n(967128),
+    j = n(665149),
     E = n(294218),
     S = n(913663),
     P = n(268350),
@@ -121,19 +121,19 @@ function X(e) {
                 });
             (0, B.NK)(t);
         }, [t]);
-    return (0, r.jsxs)(O.ZP, {
-        toolbar: (0, r.jsx)(O.ZP.Icon, {
+    return (0, r.jsxs)(j.ZP, {
+        toolbar: (0, r.jsx)(j.ZP.Icon, {
             icon: c.Dio,
             tooltip: V.intl.string(V.t.cpT0Cg),
             onClick: n,
         }),
         children: [
-            (0, r.jsx)(O.ZP.Icon, {
+            (0, r.jsx)(j.ZP.Icon, {
                 icon: c.or_,
                 disabled: !0,
                 "aria-label": V.intl.string(V.t["7Xm5QE"]),
             }),
-            (0, r.jsx)(O.ZP.Title, { children: V.intl.string(V.t["4WNcpq"]) }),
+            (0, r.jsx)(j.ZP.Title, { children: V.intl.string(V.t["4WNcpq"]) }),
         ],
     });
 }
@@ -215,7 +215,7 @@ function Q(e) {
         {
             isGeneratingAI: x,
             enableAIFeatures: v,
-            renderAiGenerateButton: O,
+            renderAiGenerateButton: j,
         } = (0, F.U)({
             parentChannel: t,
             parentMessageId: n,
@@ -352,7 +352,7 @@ function Q(e) {
                         children: (0, r.jsxs)("div", {
                             className: z.scrollerInner,
                             children: [
-                                (0, r.jsxs)(j.ZP, {
+                                (0, r.jsxs)(O.ZP, {
                                     channelId: "create-thread-null",
                                     children: [
                                         (0, r.jsx)("div", {
@@ -368,7 +368,7 @@ function Q(e) {
                                             disabled: N,
                                             isGeneratingAI: x,
                                             enableAIFeatures: v,
-                                            renderAiGenerateButton: O,
+                                            renderAiGenerateButton: j,
                                         }),
                                         t.type === G.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(J, {

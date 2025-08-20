@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => C });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -90,14 +90,14 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = i.forwardRef(function (e, t) {
+let C = i.forwardRef(function (e, t) {
     var a, O, I;
     let A,
-        { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
-        x = (0, s.JA)(R.id),
-        { tabIndex: M } = x,
-        k = S(x, ["tabIndex"]),
-        j = (0, g.p9)({
+        { canRemove: C, className: N, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: x } = e,
+        L = (0, s.JA)(R.id),
+        { tabIndex: j } = L,
+        M = S(L, ["tabIndex"]),
+        k = (0, g.p9)({
             roleId: R.id,
             size: 16,
             guildId: w,
@@ -120,45 +120,45 @@ let N = i.forwardRef(function (e, t) {
             },
             [R.id],
         ),
-        V = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (O = R.colorString) ? O : V,
-        Z = null != (I = (0, l.wK)(F, 0.6)) ? I : void 0,
+        Z = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        V = null != (O = R.colorString) ? O : Z,
+        F = null != (I = (0, l.wK)(V, 0.6)) ? I : void 0,
         H = u.Z.unsafe_rawColors.WHITE_500.css,
-        Y = (0, l._i)(F);
+        Y = (0, l._i)(V);
     null != Y && 0.3 > (0, l.Bd)(Y) && (H = u.Z.unsafe_rawColors.PRIMARY_630.css);
     let W = (0, E._f)(w, R, R.colorStrings);
     A = G
         ? (0, r.jsx)(p.Z, {
               className: y.roleFlowerStar,
-              iconClassName: N ? y.roleVerifiedIcon : void 0,
-              color: F,
+              iconClassName: C ? y.roleVerifiedIcon : void 0,
+              color: V,
               size: 14,
           })
         : "dot" === U
           ? (0, r.jsx)(d.FhE, {
                 className: y.roleDot,
-                color: F,
+                color: V,
                 background: !1,
                 colors: W,
                 tooltip: !1,
             })
           : (0, r.jsx)(d.xko, {
-                color: F,
+                color: V,
                 colors: W,
                 className: y.roleCircle,
             });
     let K = i.useMemo(() => {
             var t;
-            return v({ borderColor: D ? void 0 : Z }, null != (t = e.style) ? t : {});
-        }, [Z, D, e.style]),
+            return v({ borderColor: D ? void 0 : F }, null != (t = e.style) ? t : {});
+        }, [F, D, e.style]),
         z = () =>
-            N
+            C
                 ? (0, r.jsx)(d.DY3, {
                       text: b.intl.string(b.t.u3RVsL),
                       children: (0, r.jsxs)(d.P3F, {
                           className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
-                          tabIndex: M,
+                          tabIndex: j,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           "aria-hidden": !1,
                           "aria-label": b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
@@ -188,19 +188,19 @@ let N = i.forwardRef(function (e, t) {
                 v(
                     {
                         ref: t,
-                        className: o()(y.role, C),
+                        className: o()(y.role, N),
                         style: K,
                         onContextMenu: B,
-                        onMouseDown: L,
+                        onMouseDown: x,
                         "aria-label": R.name,
-                        tabIndex: M,
+                        tabIndex: j,
                     },
-                    k,
+                    M,
                 ),
                 {
                     children: [
                         z(),
-                        null != j ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
+                        null != k ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, k), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: y.roleName,

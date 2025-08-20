@@ -1,5 +1,5 @@
 n.d(t, {
-    Qk: () => N,
+    Qk: () => C,
     WG: () => P,
     ZP: () => w,
 }),
@@ -28,7 +28,7 @@ var r = n(951288),
     T = n(981631),
     S = n(388032),
     A = n(810348);
-function N(e) {
+function C(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: o, height: s } = (0, b.p)(i, {
             width: n,
@@ -45,7 +45,7 @@ function N(e) {
         options: a,
     });
 }
-function C(e, t) {
+function N(e, t) {
     return ((e % t) + t) % t;
 }
 function R(e) {
@@ -79,7 +79,7 @@ function R(e) {
 function P(e, t) {
     if ("IMAGE" === e.type) {
         if (!(0, m._H)(e)) return void (0, f.po)(e.url);
-        N({
+        C({
             src: (0, p.q)({
                 proxyURL: e.proxyUrl,
                 url: e.url,
@@ -101,12 +101,12 @@ function w(e) {
         } = e,
         [f, _] = i.useState(a),
         p = i.useRef(a),
-        { zoomed: m, setZoomed: N } = (0, E.Y)(),
+        { zoomed: m, setZoomed: C } = (0, E.Y)(),
         P = i.useCallback(
             (e) => {
-                _((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1);
+                _((e = N(e, t.length))), (p.current = e), null == n || n(e), C(!1);
             },
-            [n, t, N],
+            [n, t, C],
         );
     i.useEffect(() => {
         let e = () => P(p.current + 1),
@@ -118,7 +118,7 @@ function w(e) {
                 h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [P, N]);
+    }, [P, C]);
     let w = t[f],
         D = (0, d.g4)(
             {
@@ -127,17 +127,17 @@ function w(e) {
             },
             l,
         ),
-        L = u
+        x = u
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
-        x = t.length > 1;
+        L = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.ZP, {
                 children: (e) =>
-                    x
+                    L
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(v.Z, {
@@ -173,11 +173,11 @@ function w(e) {
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
-                                onContextMenu: L,
+                                onContextMenu: x,
                             }),
                     }),
             }),
-            x &&
+            L &&
                 (0, r.jsx)(y.ZP, {
                     children: (e) =>
                         (0, r.jsx)(O.Z, {

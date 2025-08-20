@@ -1,157 +1,168 @@
-n.d(t, { Z: () => b }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(392711),
-    a = n(846519),
-    l = n(481060),
-    o = n(626135),
+n.d(t, { Z: () => I }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(392711),
+    o = n(846519),
+    s = n(481060),
+    l = n(626135),
     c = n(572004),
-    d = n(70956),
-    u = n(981631),
-    m = n(388032);
-let p = d.Z.Millis.SECOND,
-    g = 2 * p,
-    h = d.Z.Millis.HALF_SECOND,
-    f = [
-        () => m.intl.string(m.t.MSaeTU),
-        () => m.intl.string(m.t.UmrCw8),
-        () => m.intl.string(m.t.gKE0Ji),
-        () => m.intl.string(m.t["4DSKbm"]),
-        () => m.intl.string(m.t["+8ENdX"]),
-        () => m.intl.string(m.t.GlWHv7),
-        () => m.intl.string(m.t.hIzxU1),
-        () => m.intl.string(m.t["26uMPD"]),
-        () => m.intl.string(m.t.uFs7R0),
-        () => m.intl.string(m.t.bLXdcX),
-        () => m.intl.string(m.t.gPg9fX),
+    u = n(70956),
+    d = n(981631),
+    f = n(388032);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let b = u.Z.Millis.SECOND,
+    y = 2 * b,
+    O = u.Z.Millis.HALF_SECOND,
+    v = [
+        () => f.intl.string(f.t.MSaeTU),
+        () => f.intl.string(f.t.UmrCw8),
+        () => f.intl.string(f.t.gKE0Ji),
+        () => f.intl.string(f.t["4DSKbm"]),
+        () => f.intl.string(f.t["+8ENdX"]),
+        () => f.intl.string(f.t.GlWHv7),
+        () => f.intl.string(f.t.hIzxU1),
+        () => f.intl.string(f.t["26uMPD"]),
+        () => f.intl.string(f.t.uFs7R0),
+        () => f.intl.string(f.t.bLXdcX),
+        () => f.intl.string(f.t.gPg9fX),
     ];
-function b(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, "aria-label": b, delay: x = h } = e,
-        [_, j] = r.useState(0),
-        [E, C] = r.useState(!1),
-        [O, v] = r.useState(!1),
-        [S] = r.useState(() => new a.V7()),
-        [T] = r.useState(() => new a.V7());
+function I(e) {
+    let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": _, delay: h = O } = e,
+        [E, I] = i.useState(0),
+        [T, S] = i.useState(!1),
+        [A, C] = i.useState(!1),
+        [N] = i.useState(() => new o.V7()),
+        [R] = i.useState(() => new o.V7());
     if (
-        (r.useEffect(
+        (i.useEffect(
             () => () => {
-                S.stop(), T.stop();
+                N.stop(), R.stop();
             },
-            [S, T],
+            [N, R],
         ),
         !c.wS)
     )
-        return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let N = _ >= f.length - 1,
-        I = N ? l.FGA.RED : l.FGA.GREEN,
-        y = E ? I : l.FGA.PRIMARY;
-    return (0, i.jsx)(l.ua7, {
-        text: (() => {
+        return (0, r.jsx)(r.Fragment, { children: u({}) });
+    let P = E >= v.length - 1,
+        w = P ? s.FGA.RED : s.FGA.GREEN,
+        D = T ? w : s.FGA.PRIMARY,
+        x = () => {
             var e;
-            if (!E) return t;
-            let n = (0, s.clamp)(_ - 1, 0, f.length - 1),
-                r = null != (e = f[n]) ? e : f[0];
-            return (0, i.jsx)(l.UkV, {
-                isShaking: N,
-                children: r(),
+            if (!T) return t;
+            let n = (0, a.clamp)(E - 1, 0, v.length - 1),
+                i = null != (e = v[n]) ? e : v[0];
+            return (0, r.jsx)(s.UkV, {
+                isShaking: P,
+                children: i(),
             });
-        })(),
-        delay: x,
-        "aria-label": b,
-        color: y,
-        forceOpen: O,
-        onAnimationRest: (e, t) => {
-            !O && E && t.phase === u.UkZ.LEAVE && C(!1);
         },
+        L = (e, t) => {
+            !A && T && t.phase === d.UkZ.LEAVE && S(!1);
+        },
+        j = () => {
+            null == f || f(),
+                (0, c.JG)(n),
+                l.default.track(d.rMx.TEXT_COPIED),
+                A || I(E + 1),
+                C(!0),
+                S(!0),
+                N.start(b, () => C(!1)),
+                R.start(y, () => I(0));
+        };
+    return (0, r.jsx)(s.ua7, {
+        text: x(),
+        delay: h,
+        "aria-label": _,
+        color: D,
+        forceOpen: A,
+        onAnimationRest: L,
         children: (e) => {
-            var t,
-                i,
-                { onClick: r, onMouseEnter: s } = e;
-            return d(
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = i);
-                            });
-                    }
-                    return e;
-                })(
-                    {},
-                    (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            i,
-                            r = (function (e, t) {
-                                if (null == e) return {};
-                                var n,
-                                    i,
-                                    r = {},
-                                    s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                                return r;
-                            })(e, t);
-                        if (Object.getOwnPropertySymbols) {
-                            var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++)
-                                (n = s[i]),
-                                    !(t.indexOf(n) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                        (r[n] = e[n]);
+            var { onClick: t, onMouseEnter: n } = e;
+            return u(
+                m(p({}, g(e, ["onClick", "onMouseEnter"])), {
+                    onClick: () => {
+                        null == t || t(), j();
+                    },
+                    onMouseEnter: () => {
+                        if (!T) {
+                            null == n || n();
+                            return;
                         }
-                        return r;
-                    })(e, ["onClick", "onMouseEnter"]),
-                )),
-                (i = i =
-                    {
-                        onClick: () => {
-                            null == r || r(),
-                                null == m || m(),
-                                (0, c.JG)(n),
-                                o.default.track(u.rMx.TEXT_COPIED),
-                                O || j(_ + 1),
-                                v(!0),
-                                C(!0),
-                                S.start(p, () => v(!1)),
-                                T.start(g, () => j(0));
-                        },
-                        onMouseEnter: () => {
-                            if (!E) {
-                                null == s || s();
-                                return;
-                            }
-                            S.stop(), v(!1);
-                        },
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                t),
+                        N.stop(), C(!1);
+                    },
+                }),
             );
         },
     });

@@ -1,102 +1,100 @@
-n.d(t, { Z: () => x });
-var i = n(951288),
-    r = n(647438),
-    s = n(772848),
-    a = n(780384),
-    l = n(481060),
-    o = n(37234),
+n.d(t, { Z: () => O });
+var r = n(951288),
+    i = n(647438),
+    a = n(772848),
+    o = n(780384),
+    s = n(481060),
+    l = n(37234),
     c = n(410030),
-    d = n(626135),
-    u = n(617136),
-    m = n(497505),
-    p = n(110560),
-    g = n(981631),
+    u = n(626135),
+    d = n(617136),
+    f = n(497505),
+    _ = n(110560),
+    p = n(981631),
     h = n(388032),
-    f = n(154115),
-    b = n(66094);
-function x() {
-    let e = (0, a.wj)((0, c.ZP)()),
-        t = r.useMemo(
-            () => ({
-                backgroundImage: "url(".concat(
-                    "https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png",
-                    ")",
-                ),
-            }),
-            [],
-        ),
-        n = r.useCallback(() => {
-            (0, o.xf)(),
-                (0, p.navigateToQuestHome)({ fromContent: m.jn.QUEST_HOME_MOVE_CALLOUT }),
-                d.default.track(
-                    g.rMx.QUEST_CONTENT_CLICKED,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: i,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = i);
-                                });
-                        }
-                        return e;
-                    })(
+    m = n(154115),
+    g = n(66094);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let y = "https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png";
+function O() {
+    let e = (0, o.wj)((0, c.ZP)()),
+        t = i.useMemo(() => ({ backgroundImage: "url(".concat(y, ")") }), []),
+        n = i.useCallback(() => {
+            (0, l.xf)(),
+                (0, _.navigateToQuestHome)({ fromContent: f.jn.QUEST_HOME_MOVE_CALLOUT }),
+                u.default.track(
+                    p.rMx.QUEST_CONTENT_CLICKED,
+                    b(
                         {
-                            cta_name: u.jZ.VIEW_QUESTS,
-                            click_id: (0, s.Z)(),
+                            cta_name: d.jZ.VIEW_QUESTS,
+                            click_id: (0, a.Z)(),
                             is_targeted: !1,
                         },
-                        (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT),
+                        (0, d.mH)(f.jn.QUEST_HOME_MOVE_CALLOUT),
                     ),
                 );
         }, []);
-    return (0, i.jsx)("div", {
-        className: f.container,
+    return (0, r.jsx)("div", {
+        className: m.container,
         style: t,
-        children: (0, i.jsxs)(l.Kqy, {
-            className: f.textContainer,
+        children: (0, r.jsxs)(s.Kqy, {
+            className: m.textContainer,
             justify: "space-between",
             children: [
-                (0, i.jsxs)(l.Kqy, {
+                (0, r.jsxs)(s.Kqy, {
                     gap: 4,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: f.headerContainer,
+                        (0, r.jsxs)("div", {
+                            className: m.headerContainer,
                             children: [
-                                (0, i.jsx)("img", {
+                                (0, r.jsx)("img", {
                                     alt: "",
-                                    src: b,
-                                    className: f.icon,
+                                    src: g,
+                                    className: m.icon,
                                 }),
-                                (0, i.jsx)(l.X6q, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
                                     children: h.intl.string(h.t.z8YP2N),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
                             color: "text-secondary",
                             children: h.intl.string(h.t.IqmRZ2),
                         }),
                     ],
                 }),
-                (0, i.jsx)(l.zxk, {
+                (0, r.jsx)(s.zxk, {
                     variant: e ? "primary" : "overlay-primary",
                     text: h.intl.string(h.t.GURBQk),
                     onClick: n,

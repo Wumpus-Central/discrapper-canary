@@ -1,10 +1,10 @@
-n.d(t, { Z: () => p }), n(388685);
-var i,
-    r = n(442837),
-    s = n(570140),
-    l = n(709054),
-    o = n(592125);
-function a(e, t, n) {
+n.d(t, { Z: () => h }), n(388685);
+var r,
+    i = n(442837),
+    a = n(570140),
+    o = n(709054),
+    s = n(592125);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,49 +17,50 @@ function a(e, t, n) {
         e
     );
 }
-let c = {},
-    u = c;
-function d() {
-    l.default.keys(u).forEach((e) => {
-        null == o.Z.getChannel(e) && delete u[e];
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let u = {},
+    d = u;
+function f(e) {
+    let { channelId: t } = e;
+    d[t] ? delete d[t] : (d[t] = !0), (d = c({}, d));
+}
+function _() {
+    o.default.keys(d).forEach((e) => {
+        null == s.Z.getChannel(e) && delete d[e];
     });
 }
-class h extends (i = r.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.Z), (u = null != e ? e : c);
+        this.waitFor(s.Z), (d = null != e ? e : u);
     }
     getState() {
-        return u;
+        return d;
     }
     getCollapsed() {
-        return u;
+        return d;
     }
     isCollapsed(e) {
-        return u[e] || !1;
+        return d[e] || !1;
     }
 }
-a(h, "displayName", "CollapsedVoiceChannelStore"), a(h, "persistKey", "collapsedChannels");
-let p = new h(s.Z, {
-    CONNECTION_OPEN: d,
-    OVERLAY_INITIALIZE: d,
-    CHANNEL_COLLAPSE: function (e) {
-        let { channelId: t } = e;
-        u[t] ? delete u[t] : (u[t] = !0),
-            (u = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            a(e, t, n[t]);
-                        });
-                }
-                return e;
-            })({}, u));
-    },
+l(p, "displayName", "CollapsedVoiceChannelStore"), l(p, "persistKey", "collapsedChannels");
+let h = new p(a.Z, {
+    CONNECTION_OPEN: _,
+    OVERLAY_INITIALIZE: _,
+    CHANNEL_COLLAPSE: f,
 });

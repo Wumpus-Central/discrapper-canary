@@ -1,7 +1,7 @@
-n.d(t, { Q: () => a });
-var i = n(818083),
-    r = n(984134);
-let s = (0, i.B)({
+n.d(t, { Q: () => o });
+var r = n(818083),
+    i = n(984134);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-06_jump_to_voice_settings",
     label: "Jump to Voice Settings",
@@ -14,10 +14,10 @@ let s = (0, i.B)({
         },
     ],
 });
-function a(e) {
+function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { isInHoldout: n } = r.Y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return s.getCurrentConfig(
+        { isInHoldout: n } = i.Y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return a.getCurrentConfig(
         { location: e },
         {
             disable: n,

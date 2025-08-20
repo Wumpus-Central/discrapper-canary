@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(524329),
     C = n(575258),
     N = n(592125),
-    I = n(4912),
-    E = n(626135),
+    E = n(4912),
+    I = n(626135),
     S = n(700785),
     T = n(434404),
     P = n(92160),
@@ -82,7 +82,7 @@ let k = "WELCOME_CHANNEL",
             O = i.useRef(null),
             y = (0, u.e7)([N.Z], () => N.Z.getChannel(o.channel_id)),
             C = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            E = null != y && S.Uu(w.Plq.VIEW_CHANNEL, y),
+            I = null != y && S.Uu(w.Plq.VIEW_CHANNEL, y),
             T = null != (t = (0, x.KS)(y)) ? t : m.VL1,
             P = (0, b.ZP)(y, !1),
             M = () => {
@@ -132,7 +132,7 @@ let k = "WELCOME_CHANNEL",
                 ),
                 [G, U],
             ),
-            (l = E
+            (l = I
                 ? null != C || null != o.emoji_name
                     ? (0, r.jsx)(p.Z, {
                           emojiId: null == C ? void 0 : C.id,
@@ -144,7 +144,7 @@ let k = "WELCOME_CHANNEL",
                           color: "currentColor",
                           className: D.channelIcon,
                       })
-                : (0, r.jsx)(I.Z, {
+                : (0, r.jsx)(E.Z, {
                       width: 24,
                       height: 24,
                       className: D.warningIcon,
@@ -180,7 +180,7 @@ let k = "WELCOME_CHANNEL",
                                 children: o.description,
                             }),
                             (0, r.jsxs)(m.Text, {
-                                className: E ? void 0 : D.channelWarning,
+                                className: I ? void 0 : D.channelWarning,
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
                                 children: [
@@ -189,7 +189,7 @@ let k = "WELCOME_CHANNEL",
                                         size: "xxs",
                                         color: "currentColor",
                                     }),
-                                    (0, r.jsx)("span", { children: E ? P : Z.intl.string(Z.t.zFuCsL) }),
+                                    (0, r.jsx)("span", { children: I ? P : Z.intl.string(Z.t.zFuCsL) }),
                                 ],
                             }),
                         ],
@@ -239,7 +239,7 @@ let k = "WELCOME_CHANNEL",
                             N.forEach((t) => {
                                 e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0);
                             }),
-                            E.default.track(w.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+                            I.default.track(w.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                                 guild_id: null == t ? void 0 : t.id,
                                 options: e,
                                 options_channel_ids: n,
@@ -266,7 +266,7 @@ let k = "WELCOME_CHANNEL",
                           children: (0, r.jsxs)(m.Text, {
                               variant: "text-md/normal",
                               children: [
-                                  (0, r.jsx)(I.Z, { className: D.noticeIcon }),
+                                  (0, r.jsx)(E.Z, { className: D.noticeIcon }),
                                   Z.intl.format(Z.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(O.Z, {

@@ -1,29 +1,29 @@
-n.d(t, { Z: () => p });
-var i = n(951288);
+n.d(t, { Z: () => _ });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    s = n(846027),
-    a = n(921801),
-    l = n(603963),
-    o = n(738486),
+var i = n(481060),
+    a = n(846027),
+    o = n(921801),
+    s = n(603963),
+    l = n(738486),
     c = n(680924),
-    d = n(710808),
-    u = n(726985),
-    m = n(388032);
-function p() {
-    return (0, i.jsxs)(l.Z, {
-        webSetting: u.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+    u = n(710808),
+    d = n(726985),
+    f = n(388032);
+function _() {
+    return (0, r.jsxs)(s.Z, {
+        webSetting: d.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
         children: [
-            (0, i.jsx)(o.Z, { children: (0, i.jsx)(d.Z, { refreshStyles: !0 }) }),
-            (0, i.jsx)(a.F, {
-                setting: u.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
-                children: (0, i.jsx)(r.xJW, {
-                    children: (0, i.jsx)(r.zxk, {
+            (0, r.jsx)(l.Z, { children: (0, r.jsx)(u.Z, { refreshStyles: !0 }) }),
+            (0, r.jsx)(o.F, {
+                setting: d.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+                children: (0, r.jsx)(i.xJW, {
+                    children: (0, r.jsx)(i.zxk, {
                         variant: "critical-secondary",
                         size: "sm",
-                        text: m.intl.string(m.t["4iKQ//"]),
+                        text: f.intl.string(f.t["4iKQ//"]),
                         onClick: () => {
-                            (0, c.Z)(m.intl.string(m.t["4iKQ//"]), m.intl.string(m.t.sQ42iY), s.Z.reset);
+                            (0, c.Z)(f.intl.string(f.t["4iKQ//"]), f.intl.string(f.t.sQ42iY), a.Z.reset);
                         },
                     }),
                 }),

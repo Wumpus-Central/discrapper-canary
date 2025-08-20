@@ -1,15 +1,15 @@
-n.d(t, { Z: () => l });
-var i = n(951288);
+n.d(t, { Z: () => s });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(368379);
-function l(e) {
-    let { children: t, tag: n, className: r } = e;
+var i = n(120356),
+    a = n.n(i),
+    o = n(368379);
+function s(e) {
+    let { children: t, tag: n, className: i } = e;
     return (
         (n = null != n ? n : "h3"),
-        (0, i.jsx)(n, {
-            className: s()(a.title, r),
+        (0, r.jsx)(n, {
+            className: a()(o.title, i),
             children: t,
         })
     );

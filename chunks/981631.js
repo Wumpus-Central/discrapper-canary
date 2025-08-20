@@ -1,7 +1,7 @@
 n.d(t, {
     $7l: () => b.$7,
     $92: () => e4,
-    $Ab: () => M,
+    $Ab: () => j,
     $R1: () => E.$R,
     $VG: () => E.$V,
     $Y6: () => tO,
@@ -9,10 +9,10 @@ n.d(t, {
     A2N: () => rP,
     ABu: () => t1,
     ADE: () => nb,
-    AEg: () => nN,
+    AEg: () => nC,
     ANM: () => eR,
-    AQB: () => eM,
-    AeJ: () => nV,
+    AQB: () => ej,
+    AeJ: () => nZ,
     Ai1: () => E.Ai,
     AlD: () => E.Al,
     AzA: () => rA,
@@ -32,9 +32,9 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => ej,
-    DZw: () => eL,
-    E07: () => tN,
+    DJj: () => ek,
+    DZw: () => ex,
+    E07: () => tC,
     EKQ: () => E.EK,
     EOG: () => n2,
     ETv: () => E.ET,
@@ -43,7 +43,7 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rj,
+    FQ1: () => rk,
     Fc: () => ta,
     FoC: () => J,
     FsG: () => b.Fs,
@@ -68,15 +68,15 @@ n.d(t, {
     Ilk: () => E.Il,
     IyS: () => rG,
     J0y: () => Q,
-    J6R: () => eV,
+    J6R: () => eZ,
     JjL: () => E.Jj,
     JkL: () => tI,
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rk,
+    K3D: () => rM,
     KA4: () => tw,
-    KFR: () => nx,
+    KFR: () => nL,
     KJ3: () => rD,
     KsC: () => R,
     L4X: () => eY,
@@ -114,18 +114,18 @@ n.d(t, {
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => k,
+    PrB: () => M,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
     QCD: () => n0,
-    QIO: () => tx,
+    QIO: () => tL,
     QKv: () => Y,
     QL: () => E.QL,
     QR$: () => rh,
     QZA: () => I,
     Qa3: () => E.Q,
-    Qqv: () => tF,
+    Qqv: () => tV,
     R5N: () => nO,
     R7I: () => tv,
     REU: () => ry,
@@ -133,15 +133,15 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nk,
+    Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
     SRg: () => nS,
     STv: () => ey,
-    SaU: () => tZ,
+    SaU: () => tF,
     Sap: () => na,
-    Sbl: () => tk,
+    Sbl: () => tM,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
@@ -156,13 +156,13 @@ n.d(t, {
     ULH: () => D,
     Ucd: () => rz,
     Uk1: () => E.Uk,
-    UkZ: () => rV,
+    UkZ: () => rZ,
     Usc: () => K,
     Uvt: () => l.U,
     V$x: () => c.V,
     V6Z: () => E.V6,
     V7H: () => tl,
-    VD2: () => nZ,
+    VD2: () => nF,
     VKK: () => eW,
     V_K: () => tQ,
     VqG: () => E.Vq,
@@ -180,7 +180,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => ek,
+    Z8P: () => eM,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
@@ -188,21 +188,21 @@ n.d(t, {
     Zuq: () => E.Zu,
     _1z: () => ea,
     _8R: () => rW,
-    _s_: () => N,
+    _s_: () => C,
     _vf: () => eo,
     a5g: () => tX,
     aIL: () => eT,
     aIt: () => rd,
     aO5: () => E.aO,
     aZC: () => t0,
-    aib: () => tL,
+    aib: () => tx,
     ane: () => nU,
     apO: () => ra,
     b2L: () => no,
-    b4C: () => rZ,
+    b4C: () => rF,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nj,
+    c2C: () => nk,
     d4z: () => o.d,
     dAT: () => tq,
     dCx: () => nr,
@@ -216,12 +216,12 @@ n.d(t, {
     eHb: () => nJ,
     eRX: () => nn,
     eWB: () => ts,
-    ecB: () => nL,
+    ecB: () => nx,
     eez: () => th,
-    en1: () => eF,
+    en1: () => eV,
     epS: () => rf,
     epw: () => to,
-    evJ: () => tM,
+    evJ: () => tj,
     f07: () => rr,
     fK7: () => E.fK,
     fMv: () => b.fM,
@@ -234,8 +234,8 @@ n.d(t, {
     hBH: () => s.h,
     hCA: () => rK,
     hUK: () => nm,
-    hVg: () => nC,
-    hes: () => Z,
+    hVg: () => nN,
+    hes: () => F,
     hiG: () => r2,
     i$l: () => E.i$,
     iC$: () => rv,
@@ -247,7 +247,7 @@ n.d(t, {
     j3N: () => eG,
     j8d: () => E.j8,
     jXE: () => tB,
-    jm8: () => rx,
+    jm8: () => rL,
     jsM: () => rg,
     jwA: () => nD,
     kEZ: () => B,
@@ -258,7 +258,7 @@ n.d(t, {
     kod: () => eI,
     l$U: () => ez,
     l4R: () => u.l,
-    l9w: () => rL,
+    l9w: () => rx,
     lTL: () => E.lT,
     ldS: () => E.ld,
     lds: () => ev,
@@ -270,29 +270,29 @@ n.d(t, {
     o3l: () => nu,
     oAB: () => tH,
     oCV: () => nc,
-    oNc: () => V,
+    oNc: () => Z,
     o_z: () => eO,
     p3w: () => tE,
     p6O: () => t5,
     pAY: () => tg,
-    pJs: () => L,
+    pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => j,
-    pNK: () => C,
+    pM4: () => k,
+    pNK: () => N,
     pTL: () => rq,
     pjP: () => n8,
     pmI: () => t9,
-    q5t: () => tj,
+    q5t: () => tk,
     q9n: () => nY,
-    qAy: () => tV,
+    qAy: () => tZ,
     qWG: () => rH,
     qXD: () => rO,
     qc2: () => rc,
     qhL: () => ti,
-    qrD: () => x,
+    qrD: () => L,
     r2o: () => G,
     rMx: () => ny,
-    rnv: () => tC,
+    rnv: () => tN,
     rsA: () => nP,
     rtL: () => ni,
     rxP: () => E.rx,
@@ -300,10 +300,10 @@ n.d(t, {
     sFg: () => eu,
     sHY: () => rs,
     scU: () => tT,
-    si2: () => rM,
+    si2: () => rj,
     t4x: () => tK,
-    tG9: () => eZ,
-    tHP: () => ex,
+    tG9: () => eF,
+    tHP: () => eL,
     tNA: () => E.tN,
     tPV: () => eq,
     tPk: () => E.tP,
@@ -323,28 +323,28 @@ n.d(t, {
     vxO: () => ri,
     w2V: () => rR,
     wC$: () => ee,
-    wI2: () => rC,
+    wI2: () => rN,
     wZ8: () => eh,
     wli: () => rB,
     x0X: () => nQ,
-    x8Z: () => rN,
+    x8Z: () => rC,
     xAR: () => rY,
     xGv: () => tf,
     xPJ: () => $,
     xW$: () => nv,
     xjy: () => ew,
-    xmn: () => F,
+    xmn: () => V,
     xr4: () => E.xr,
-    yXg: () => nF,
+    yXg: () => nV,
     yXt: () => E.yX,
     yYS: () => E.yY,
     yb: () => z,
-    ylB: () => rF,
+    ylB: () => rV,
     yqN: () => nE,
     ys_: () => e5,
     z7k: () => tS,
     zMe: () => E.zM,
-    zUn: () => nM,
+    zUn: () => nj,
     zYc: () => rT,
     zo9: () => r0,
 }),
@@ -514,7 +514,7 @@ var v = (function (e) {
     A = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    N = (function (e) {
+    C = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -527,7 +527,7 @@ var v = (function (e) {
             e
         );
     })({}),
-    C = (function (e) {
+    N = (function (e) {
         return (
             (e.LANDING = "LANDING"),
             (e.OVERVIEW = "OVERVIEW"),
@@ -650,7 +650,7 @@ var v = (function (e) {
             e
         );
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (
             (e.ADD_FRIEND = "ADD_FRIEND"),
             (e.ALL = "ALL"),
@@ -662,16 +662,16 @@ var v = (function (e) {
             e
         );
     })({}),
-    x = (function (e) {
+    L = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
-    M = (function (e) {
+    j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    j = (function (e) {
+    k = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -761,7 +761,7 @@ var v = (function (e) {
     B = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
-    V = (function (e) {
+    Z = (function (e) {
         return (
             (e.INVITE_SPLASH = "INVITE_SPLASH"),
             (e.VIP_REGIONS = "VIP_REGIONS"),
@@ -850,7 +850,7 @@ var v = (function (e) {
             e
         );
     })({});
-let F = Object.freeze({
+let V = Object.freeze({
     SUPPRESS_JOIN_NOTIFICATIONS: 1,
     SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2,
     SUPPRESS_GUILD_REMINDER_NOTIFICATIONS: 4,
@@ -860,7 +860,7 @@ let F = Object.freeze({
     SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128,
     SUPPRESS_UGC_ADDED_NOTIFICATIONS: 256,
 });
-var Z = (function (e) {
+var F = (function (e) {
         return (
             (e.DISCONNECTED = "DISCONNECTED"),
             (e.AWAITING_ENDPOINT = "AWAITING_ENDPOINT"),
@@ -1102,7 +1102,7 @@ let eE = "@me",
     eT = "0",
     eS = "null",
     eA = "1096190356233670716",
-    eN = Object.freeze({
+    eC = Object.freeze({
         USER: (e) => "/users/".concat(e),
         USER_RELATIONSHIPS: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eE;
@@ -1943,7 +1943,7 @@ let eE = "@me",
         APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
         GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
     }),
-    eC = Object.freeze({
+    eN = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => "/app/invite-with-guild-onboarding/".concat(e),
@@ -2093,8 +2093,8 @@ let eE = "@me",
         ACCOUNT_REVERT: (e) => "/wasntme/".concat(e),
         POWERUP_STORE: (e) => "/channels/".concat(e, "/boosts"),
     }),
-    eR = (0, f.Ft)(eN),
-    eP = (0, f.Ft)(eC, [":", "?", "@"]);
+    eR = (0, f.Ft)(eC),
+    eP = (0, f.Ft)(eN, [":", "?", "@"]);
 var ew = (function (e) {
         return (
             (e[(e.INSTANCE = 1)] = "INSTANCE"),
@@ -2105,6 +2105,7 @@ var ew = (function (e) {
             (e[(e.PARTY_PRIVACY_VOICE_CHANNEL = 128)] = "PARTY_PRIVACY_VOICE_CHANNEL"),
             (e[(e.EMBEDDED = 256)] = "EMBEDDED"),
             (e[(e.CONTEXTLESS = 512)] = "CONTEXTLESS"),
+            (e[(e.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN = 1024)] = "SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN"),
             e
         );
     })({}),
@@ -2117,17 +2118,17 @@ var ew = (function (e) {
             e
         );
     })({});
-let eL = 100,
-    ex = 200,
+let ex = 100,
+    eL = 200,
+    ej = 50,
     eM = 50,
-    ek = 50,
-    ej = 25,
+    ek = 25,
     eU = 200,
     eG = 100,
     eB = 250,
-    eV = 2000,
-    eF = 4000,
-    eZ = 250,
+    eZ = 2000,
+    eV = 4000,
+    eF = 250,
     eH = 100,
     eY = 1000,
     eW = 100,
@@ -2279,18 +2280,18 @@ let tn = 128,
         SAFETY_CENTER: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safetycenter"),
         VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
-    tN = Object.freeze({
+    tC = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => "/developers/servers/".concat(e),
         DEVELOPER_PORTAL_TEAMS: "/developers/teams",
         DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => "/developers/teams/".concat(e, "/payout-settings"),
     }),
-    tC = 10,
+    tN = 10,
     tR = 25,
     tP = /^FILTER_/,
     tw = /^ANSWER_/,
     tD = 32;
-var tL = (function (e) {
+var tx = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2313,10 +2314,10 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tx = (function (e) {
+    tL = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
-    tM = (function (e) {
+    tj = (function (e) {
         return (
             (e[(e.UNKNOWN_ACCOUNT = 10001)] = "UNKNOWN_ACCOUNT"),
             (e[(e.UNKNOWN_APPLICATION = 10002)] = "UNKNOWN_APPLICATION"),
@@ -2508,7 +2509,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2591,7 +2592,7 @@ var tL = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tk = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -3075,7 +3076,7 @@ var tB = (function (e) {
             e
         );
     })({}),
-    tV = (function (e) {
+    tZ = (function (e) {
         return (
             (e.TOOLTIP = "Tooltip"),
             (e.CARD = "Card"),
@@ -3226,7 +3227,7 @@ var tB = (function (e) {
             e
         );
     })({}),
-    tF = (function (e) {
+    tV = (function (e) {
         return (
             (e.GIFT = "gift"),
             (e.BUY = "buy"),
@@ -3252,7 +3253,7 @@ var tB = (function (e) {
             e
         );
     })({});
-let tZ = {
+let tF = {
         page: "Direct",
         object: "Web URL",
     },
@@ -5283,12 +5284,12 @@ let nS = Object.freeze({
         },
     }),
     nA = 86400000;
-var nN = (function (e) {
+var nC = (function (e) {
         return (
             (e.NORMAL = "normal"), (e.MINIMUM = "minimum"), (e.NO_CHAT = "no-chat"), (e.FULL_SCREEN = "full-screen"), e
         );
     })({}),
-    nC = (function (e) {
+    nN = (function (e) {
         return (
             (e.THEATRE = "theatre"),
             (e.FULL_SCREEN = "full-screen"),
@@ -5398,10 +5399,10 @@ var nw = (function (e) {
     nD = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nL = (function (e) {
+    nx = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    nx = (function (e) {
+    nL = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5432,7 +5433,7 @@ var nw = (function (e) {
             e
         );
     })({}),
-    nM = (function (e) {
+    nj = (function (e) {
         return (
             (e.NAME = "name"),
             (e.DESCRIPTION = "description"),
@@ -5573,8 +5574,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nk = 50;
-var nj = (function (e) {
+let nM = 50;
+var nk = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5605,7 +5606,7 @@ var nj = (function (e) {
         );
     })({});
 let nB = 512;
-var nV = (function (e) {
+var nZ = (function (e) {
         return (
             (e[(e.PRIMARY = 0)] = "PRIMARY"),
             (e[(e.SECONDARY = 2)] = "SECONDARY"),
@@ -5615,7 +5616,7 @@ var nV = (function (e) {
             e
         );
     })({}),
-    nF = (function (e) {
+    nV = (function (e) {
         return (
             (e[(e.BACKSPACE = 8)] = "BACKSPACE"),
             (e[(e.TAB = 9)] = "TAB"),
@@ -5654,7 +5655,7 @@ var nV = (function (e) {
             e
         );
     })({}),
-    nZ = (function (e) {
+    nF = (function (e) {
         return (
             (e.TOP_LEFT = "top-left"),
             (e.TOP_RIGHT = "top-right"),
@@ -6492,7 +6493,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rN = (function (e) {
+    rC = (function (e) {
         return (
             (e.APPLICATION_LIBRARY_BADGE = "application_library_badge_18_11_02"),
             (e.SERVER_DISCOVERY_BADGE = "server_discovery_badge_19_02_11"),
@@ -6500,7 +6501,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rC = (function (e) {
+    rN = (function (e) {
         return (
             (e.TRENDING_GIFS = "Trending"),
             (e.FAVORITES = "Favorites"),
@@ -6527,10 +6528,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rL = (function (e) {
+    rx = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rx = (function (e) {
+    rL = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6541,7 +6542,7 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rM = (function (e) {
+    rj = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6550,10 +6551,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rj = (function (e) {
+    rk = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {
@@ -6581,13 +6582,13 @@ var rD = (function (e) {
         );
     })({});
 let rB = "discodoEasterEgg";
-var rV = (function (e) {
+var rZ = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rF = (function (e) {
+    rV = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rZ = (function (e) {
+    rF = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),

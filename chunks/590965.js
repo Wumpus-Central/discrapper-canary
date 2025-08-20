@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => P }), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -44,12 +44,12 @@ function y(e) {
     }
     return e;
 }
-let v = b.IlC.APP,
-    j = !1,
+let j = b.IlC.APP,
+    v = !1,
     C = !1,
-    E = [];
-function x() {
-    j = !0;
+    x = [];
+function E() {
+    v = !0;
 }
 class S extends (i = l.ZP.Store) {
     initialize() {
@@ -57,22 +57,22 @@ class S extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(j && E.length > 0 && v === e);
+        return !!(v && x.length > 0 && j === e);
     }
     getProps() {
         return {
-            invite: E.length > 0 ? E[0][0] : null,
+            invite: x.length > 0 ? x[0][0] : null,
             error: null != r && "" !== r ? r : null,
             submitting: C,
         };
     }
 }
 _(S, "displayName", "InviteModalStore");
-let P = new S(o.Z, {
-    OVERLAY_INITIALIZE: x,
-    CONNECTION_OPEN: x,
+let I = new S(o.Z, {
+    OVERLAY_INITIALIZE: E,
+    CONNECTION_OPEN: E,
     CONNECTION_CLOSED: function () {
-        j = !1;
+        v = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
         let t = e.invite;
@@ -99,13 +99,13 @@ let P = new S(o.Z, {
             }
         }
         if (
-            E.some((e) => {
+            x.some((e) => {
                 let [n] = e;
                 return n.code === t.code;
             })
         )
             return !1;
-        (v = e.context), (C = !1);
+        (j = e.context), (C = !1);
         let n = (function (e) {
             let {
                     approximate_member_count: t,
@@ -138,11 +138,11 @@ let P = new S(o.Z, {
                 p
             );
         })(t);
-        E.push([n, e.resolve]);
+        x.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (C = !1), E.length > 0)) {
-            let [, e] = E.shift();
+        if (((r = null), (C = !1), x.length > 0)) {
+            let [, e] = x.shift();
             null != e && e();
         }
     },

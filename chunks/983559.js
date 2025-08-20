@@ -19,8 +19,8 @@ var r = n(951288),
     C = n(451834),
     x = n(502762),
     v = n(952124),
-    j = n(544989),
-    O = n(481932),
+    O = n(544989),
+    j = n(481932),
     E = n(664794),
     S = n(4517),
     P = n(277117),
@@ -108,9 +108,9 @@ function w(e) {
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
-                                (0, r.jsxs)(j.Z, {
+                                (0, r.jsxs)(O.Z, {
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(j.Z, {
                                             user: t,
                                             themeType: Z.l.SIDEBAR,
                                             shouldShowTooltip: null === F.interactionType,

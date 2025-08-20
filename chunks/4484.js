@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,27 +23,27 @@ var r = n(951288),
     T = n(464581),
     S = n(732659),
     A = n(86724),
-    N = n(847302),
-    C = n(657198),
+    C = n(847302),
+    N = n(657198),
     R = n(321127),
     P = n(645174),
     w = n(981631),
     D = n(867641);
-let L = i.forwardRef(function (e, t) {
+let x = i.forwardRef(function (e, t) {
     let {
             value: n,
             type: a,
-            channel: L,
-            className: x,
-            id: M,
-            disabled: k,
-            submitting: j,
+            channel: x,
+            className: L,
+            id: j,
+            disabled: M,
+            submitting: k,
             placeholder: U,
             required: G,
             textAreaPaddingClassName: B,
-            onChange: V,
-            onPaste: F,
-            onResize: Z,
+            onChange: Z,
+            onPaste: V,
+            onResize: F,
             onFocus: H,
             onBlur: Y,
             onKeyDown: W,
@@ -74,7 +74,7 @@ let L = i.forwardRef(function (e, t) {
         em = i.useRef(null),
         eg = i.useRef(!0),
         eE = i.useRef(!0),
-        eb = k || j,
+        eb = M || k,
         ey = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -85,11 +85,11 @@ let L = i.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== o) {
                     if (((e.children = i), "parent" === t && !e.previewMarkdown && e.chatInputType === _.Ie.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, N.KH)(e, L.guild_id, L.id);
+                            (e.previewMarkdown = !0), (0, C.KH)(e, x.guild_id, x.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, N.KH)(e, L.guild_id, L.id), (a = void 0);
+                        (0, C.KH)(e, x.guild_id, x.id), (a = void 0);
                     }
                     "undo" !== t && void 0 !== i && i !== o && h.T.insertEntry(e, "other", !1, o, s), (l = !0);
                 }
@@ -109,9 +109,9 @@ let L = i.forwardRef(function (e, t) {
                 let d = p.cr(e);
                 if (
                     (null != d &&
-                        d[0].command.id !== (null == (r = c.Z.getActiveCommand(L.id)) ? void 0 : r.id) &&
+                        d[0].command.id !== (null == (r = c.Z.getActiveCommand(x.id)) ? void 0 : r.id) &&
                         h.T.withMergedEntry(e, () => {
-                            (0, A.L)(e, L.id, null, !0);
+                            (0, A.L)(e, x.id, null, !0);
                         }),
                     l)
                 )
@@ -123,7 +123,7 @@ let L = i.forwardRef(function (e, t) {
                         }
                     else e.onChange();
             },
-            [L.id, L.guild_id, er],
+            [x.id, x.guild_id, er],
         ),
         eO = i.useCallback(() => {
             eg.current = !1;
@@ -132,7 +132,7 @@ let L = i.forwardRef(function (e, t) {
             eg.current = !0;
         }, []),
         eI = (0, O.Z)({
-            channel: L,
+            channel: x,
             chatInputType: a,
             canUseCommands: et,
             canOnlyUseTextCommands: en,
@@ -142,18 +142,18 @@ let L = i.forwardRef(function (e, t) {
         }),
         eT = i.useCallback(
             (e, t) => {
-                let n = p.tM(eI, e, L.id),
-                    r = p.lk(e, L.guild_id, L.id, n, t);
+                let n = p.tM(eI, e, x.id),
+                    r = p.lk(e, x.guild_id, x.id, n, t);
                 return {
                     values: n,
                     results: r,
                 };
             },
-            [L.guild_id, L.id, eI],
+            [x.guild_id, x.id, eI],
         ),
         eS = i.useCallback(() => {
             let e,
-                t = et ? c.Z.getActiveCommand(L.id) : null;
+                t = et ? c.Z.getActiveCommand(x.id) : null;
             if (null != t && null != t.options) {
                 let i = eT(t, !1);
                 e = i.values;
@@ -192,11 +192,11 @@ let L = i.forwardRef(function (e, t) {
                     t,
                     e,
                 );
-        }, [L.id, eI, X, eT, et]);
-    (0, v.Z)(t, eI, L, eS), (0, S.Z)(eI, eh, Z);
-    let { handleKeyDown: eA, handleKeyUp: eN } = (0, I.Z)({
+        }, [x.id, eI, X, eT, et]);
+    (0, v.Z)(t, eI, x, eS), (0, S.Z)(eI, eh, F);
+    let { handleKeyDown: eA, handleKeyUp: eC } = (0, I.Z)({
             editor: eI,
-            channel: L,
+            channel: x,
             disableEnterToSubmit: ei,
             onKeyDown: W,
             onKeyUp: K,
@@ -207,7 +207,7 @@ let L = i.forwardRef(function (e, t) {
             hideAutocomplete: J,
             moveSelection: $,
         }),
-        { handlePaste: eC, handleGlobalPaste: eR } = (0, T.Z)(eI, eb, F),
+        { handlePaste: eN, handleGlobalPaste: eR } = (0, T.Z)(eI, eb, V),
         eP = i.useCallback(
             (e) => {
                 null == Q || Q();
@@ -217,10 +217,10 @@ let L = i.forwardRef(function (e, t) {
         ew = i.useCallback(
             (e) => {
                 e !== em.current
-                    ? eE.current && (null == V || V(null, (0, g.sk)(e, { mode: "raw" }), e))
+                    ? eE.current && (null == Z || Z(null, (0, g.sk)(e, { mode: "raw" }), e))
                     : eE.current && Q();
             },
-            [Q, V],
+            [Q, Z],
         );
     i.useLayoutEffect(() => {
         eg.current && ((em.current = n), ey(eI, "parent", { value: n }));
@@ -228,20 +228,20 @@ let L = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             let e = () => {
                 var e;
-                let t = null != (e = c.Z.getActiveCommand(L.id)) ? e : null;
+                let t = null != (e = c.Z.getActiveCommand(x.id)) ? e : null;
                 null !== t && null != t.options && eT(t, !0);
             };
             return u.Z.addChangeListener(e), () => u.Z.removeChangeListener(e);
-        }, [L, eI, eT]);
+        }, [x, eI, eT]);
     let eD = i.useCallback((e, t) => (0, y.Z)(e, t), []),
-        eL = i.useCallback(
+        ex = i.useCallback(
             (e) => {
-                let t = (0, C.Z)(eI, e, L.id);
+                let t = (0, N.Z)(eI, e, x.id);
                 return null == t && (t = (0, P.Z)(eI, e)), t;
             },
-            [L.id, eI],
+            [x.id, eI],
         ),
-        ex = i.useCallback((e) => (0, R.Z)(e), []);
+        eL = i.useCallback((e) => (0, R.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.d9, {
@@ -250,28 +250,28 @@ let L = i.forwardRef(function (e, t) {
             }),
             (0, r.jsx)("div", {
                 ref: eh,
-                className: o()(x, D.slateContainer),
+                className: o()(L, D.slateContainer),
                 children: (0, r.jsx)(m.Z, {
-                    id: M,
+                    id: j,
                     editor: eI,
-                    channelId: L.id,
-                    guildId: L.guild_id,
+                    channelId: x.id,
+                    guildId: x.guild_id,
                     className: o()(D.slateTextArea, B),
                     placeholder: U,
                     readOnly: eb,
                     spellCheck: ee,
                     autoFocus: !er,
-                    canFocus: !k,
+                    canFocus: !M,
                     onChange: ew,
                     onFocus: H,
                     onBlur: Y,
                     onClick: eP,
-                    onPaste: eC,
+                    onPaste: eN,
                     onKeyDown: eA,
-                    onKeyUp: eN,
+                    onKeyUp: eC,
                     decorateExtra: eD,
-                    renderExtraElement: eL,
-                    renderExtraLeaf: ex,
+                    renderExtraElement: ex,
+                    renderExtraLeaf: eL,
                     "aria-owns": eo,
                     "aria-haspopup": el,
                     "aria-expanded": es,

@@ -1,5 +1,5 @@
 n.d(t, {
-    NZ: () => ej,
+    NZ: () => eO,
     ZP: () => eI,
     r: () => ev,
 }),
@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(596040),
     x = n(100527),
     v = n(906732),
-    j = n(358221),
-    O = n(659580),
+    O = n(358221),
+    j = n(659580),
     E = n(793865),
     S = n(575175),
     P = n(522651),
@@ -133,7 +133,7 @@ function ev(e, t) {
     let n = () => h.Z.setVideoEnabled(e);
     (0, P.v)(x.Z.VOICE_CONTROL_TRAY, P.d.CAMERA, e), e ? (0, ef.Z)(n, t) : n();
 }
-function ej(e) {
+function eO(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: a, hasPermission: o, disabled: s } = e,
         { parentAnalyticsLocation: c, analyticsLocations: h } = (0, v.ZP)(),
         f = (0, y.bp)(),
@@ -146,8 +146,8 @@ function ej(e) {
             if ((null == l || l(), !a)) return (0, ep.Z)();
             (0, eh.Z)(C, t.id, h);
         }, [C, t.id, a, l, h]),
-        j = (0, L.B4)(),
-        [O, E] = i.useState(!1),
+        O = (0, L.B4)(),
+        [j, E] = i.useState(!1),
         S = () => {
             if (((0, P.v)(c, P.d.STREAM, !0), a)) return void x();
             (0, ep.Z)();
@@ -158,7 +158,7 @@ function ej(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (() => {
-                if (j && 0 === m.length)
+                if (O && 0 === m.length)
                     return (0, r.jsx)(Z.ZP, {
                         contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                         bypassAutoDismiss: !0,
@@ -254,7 +254,7 @@ function ej(e) {
                                             : null,
                                         popoutOpen: t,
                                         shouldShowTooltip: !t,
-                                        renderNUXHighlight: O,
+                                        renderNUXHighlight: j,
                                         buttonRef: b,
                                         onClick: null != g ? I : S,
                                     }),
@@ -267,7 +267,7 @@ function ej(e) {
         ],
     });
 }
-function eO(e) {
+function ej(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: i, setWhichPopoutIsOpen: l } = e,
         a = t.getGuildId();
     return (0, C.Z)(a, t.id)
@@ -285,7 +285,7 @@ function eO(e) {
 let eE = i.memo(function (e) {
     let { currentUser: t, onDisconnectCall: n, channel: l, connectedEmbeddedActivity: a } = e,
         { parentAnalyticsLocation: o } = (0, v.ZP)(),
-        s = (0, u.e7)([j.Z], () => j.Z.getSelectedParticipant(l.id)),
+        s = (0, u.e7)([O.Z], () => O.Z.getSelectedParticipant(l.id)),
         { reducedMotion: d } = i.useContext(p.Sfi),
         [h, f] = i.useState(!1),
         b = null == s ? void 0 : s.id,
@@ -298,7 +298,7 @@ let eE = i.memo(function (e) {
             }),
         ),
         x = (0, M.qY)(l.id),
-        O = i.useRef(null),
+        j = i.useRef(null),
         E = i.useCallback(
             () =>
                 (null == s ? void 0 : s.type) === eg.fO.ACTIVITY &&
@@ -337,7 +337,7 @@ let eE = i.memo(function (e) {
         else for (let e of C) (0, g.g)((0, A.V9)(e));
     }, [C, y]);
     return (0, r.jsx)(p.yRy, {
-        targetElementRef: O,
+        targetElementRef: j,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(eu.Z, {
@@ -358,7 +358,7 @@ let eE = i.memo(function (e) {
                 { isShown: d } = i;
             return (0, r.jsx)(c.animated.div, {
                 style: Z,
-                ref: O,
+                ref: j,
                 children: ((e, i) => {
                     let c = {
                         isTrayButton: !1,
@@ -476,7 +476,7 @@ let eI = function (e) {
             let e = er.default.getCurrentUser();
             return s()(null != e, "CenterControlTray: currentUser cannot be undefined"), e;
         }),
-        { cameraUnavailable: C, enabled: j } = (0, ei.Z)(),
+        { cameraUnavailable: C, enabled: O } = (0, ei.Z)(),
         P = (0, ea.Z)(n),
         { suppress: I, selfMute: Z, mute: A } = (0, eo.Z)(n),
         { canGoLive: R } = (0, u.cj)([et.Z], () => ({ canGoLive: (0, w.Z)(et.Z) })),
@@ -501,7 +501,7 @@ let eI = function (e) {
             ? (e) => {
                   (0, f.jW)(e, () =>
                       Promise.resolve(() =>
-                          (0, r.jsx)(O.default, {
+                          (0, r.jsx)(j.default, {
                               onClose: f.Zy,
                               renderInputDevices: !0,
                               renderOutputDevices: !0,
@@ -590,7 +590,7 @@ let eI = function (e) {
                                                       ref: ee,
                                                       centerButton: !0,
                                                       hasPermission: P,
-                                                      enabled: j,
+                                                      enabled: O,
                                                       cameraUnavailable: C,
                                                       onChange: ev,
                                                       onCameraUnavailable: ed.Z,
@@ -607,7 +607,7 @@ let eI = function (e) {
                                   className: ey.buttonSection,
                                   children: [
                                       !L &&
-                                          (0, r.jsx)(ej, {
+                                          (0, r.jsx)(eO, {
                                               channel: n,
                                               currentUser: y,
                                               exitFullScreen: c,
@@ -615,7 +615,7 @@ let eI = function (e) {
                                               hasPermission: P,
                                           }),
                                       !L &&
-                                          (0, r.jsx)(eO, {
+                                          (0, r.jsx)(ej, {
                                               channel: n,
                                               idle: null == (t = null == d ? void 0 : d.idle) || t,
                                               whichPopoutIsOpen: m,

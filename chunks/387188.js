@@ -1,234 +1,244 @@
 n.d(t, {
-    Zh: () => O,
-    e: () => v,
-    iq: () => b,
+    Zh: () => A,
+    e: () => C,
+    iq: () => N,
 }),
     n(388685);
-var s = n(951288),
-    a = n(647438),
-    r = n(120356),
-    l = n.n(r),
-    i = n(657707),
-    o = n(481060),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(657707),
+    l = n(481060),
     c = n(596454),
     u = n(739566),
-    m = n(590956),
-    d = n(834129),
-    p = n(222677),
-    g = n(768581),
+    d = n(590956),
+    f = n(834129),
+    _ = n(222677),
+    p = n(768581),
     h = n(585483),
-    j = n(139688),
-    x = n(981631),
-    f = n(388032),
-    C = n(871320);
+    m = n(139688),
+    g = n(981631),
+    E = n(388032),
+    b = n(871320);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                y(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function I(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = S(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function S(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function A(e) {
     let { message: t, rendered: n } = e;
-    return null == (0, j.xE)(t.content)
-        ? f.intl.format(f.t.k6Jc9f, {
+    return null == (0, m.xE)(t.content)
+        ? E.intl.format(E.t.k6Jc9f, {
               username: null,
               usernameHook: () => null,
           })
-        : f.intl.format(f.t.IihHBw, {
+        : E.intl.format(E.t.IihHBw, {
               emojiPreview: n,
               emojiName: null,
               username: null,
               usernameHook: () => null,
           });
 }
-function v(e) {
+function C(e) {
     let { message: t, className: n } = e,
-        [r, i] = a.useState(!1),
+        [a, s] = i.useState(!1),
         u = t.getChannelId(),
-        m = (0, j.xE)(t.content),
-        d = a.useCallback(() => {
-            null != m &&
-                (0, p.rU)(
+        d = (0, m.xE)(t.content),
+        f = i.useCallback(() => {
+            null != d &&
+                (0, _.rU)(
                     u,
                     t.id,
                     {
-                        id: m.id,
-                        name: m.name,
+                        id: d.id,
+                        name: d.name,
                     },
-                    p.TW.MESSAGE,
+                    _.TW.MESSAGE,
                 );
-        }, [u, m, t.id]);
-    return null == m
+        }, [u, d, t.id]);
+    return null == d
         ? null
-        : (0, s.jsx)(o.ua7, {
+        : (0, r.jsx)(l.ua7, {
               "aria-label": !1,
-              text: (0, s.jsx)(c.Z, {
-                  emojiName: m.name,
+              text: (0, r.jsx)(c.Z, {
+                  emojiName: d.name,
                   size: "jumbo",
-                  emojiId: m.id,
-                  animated: m.animated,
+                  emojiId: d.id,
+                  animated: d.animated,
                   isInteracting: !0,
                   channelId: u,
                   messageId: t.id,
               }),
               children: (e) => {
-                  var a,
-                      p,
-                      { onMouseEnter: g, onMouseLeave: h } = e,
-                      j = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                              s,
-                              a = (function (e, t) {
-                                  if (null == e) return {};
-                                  var n,
-                                      s,
-                                      a = {},
-                                      r = Object.keys(e);
-                                  for (s = 0; s < r.length; s++) (n = r[s]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                                  return a;
-                              })(e, t);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              for (s = 0; s < r.length; s++)
-                                  (n = r[s]),
-                                      !(t.indexOf(n) >= 0) &&
-                                          Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                          (a[n] = e[n]);
-                          }
-                          return a;
-                      })(e, ["onMouseEnter", "onMouseLeave"]);
-                  return (0, s.jsx)(
-                      o.P3F,
-                      ((a = (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var n = null != arguments[t] ? arguments[t] : {},
-                                  s = Object.keys(n);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (s = s.concat(
-                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      }),
-                                  )),
-                                  s.forEach(function (t) {
-                                      var s;
-                                      (s = n[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: s,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = s);
-                                  });
-                          }
-                          return e;
-                      })({}, j)),
-                      (p = p =
-                          {
-                              className: l()(n, C.ctaReactionButton),
-                              onClick: d,
-                              onMouseEnter: () => {
-                                  i(!0), null == g || g();
-                              },
-                              onMouseLeave: () => {
-                                  i(!1), null == h || h();
-                              },
-                              children: (0, s.jsx)(o.Text, {
-                                  variant: "text-sm/semibold",
-                                  color: "text-secondary",
-                                  className: C.ctaText,
-                                  children: f.intl.format(f.t.z5Rnl5, {
-                                      renderedEmoji: (0, s.jsx)(c.Z, {
-                                          emojiName: m.name,
-                                          size: "default",
-                                          emojiId: m.id,
-                                          animated: m.animated,
-                                          isInteracting: r,
-                                          channelId: u,
-                                          messageId: t.id,
-                                          className: C.ctaEmoji,
-                                      }),
+                  var { onMouseEnter: i, onMouseLeave: _ } = e,
+                      p = T(e, ["onMouseEnter", "onMouseLeave"]);
+                  return (0, r.jsx)(
+                      l.P3F,
+                      I(O({}, p), {
+                          className: o()(n, b.ctaReactionButton),
+                          onClick: f,
+                          onMouseEnter: () => {
+                              s(!0), null == i || i();
+                          },
+                          onMouseLeave: () => {
+                              s(!1), null == _ || _();
+                          },
+                          children: (0, r.jsx)(l.Text, {
+                              variant: "text-sm/semibold",
+                              color: "text-secondary",
+                              className: b.ctaText,
+                              children: E.intl.format(E.t.z5Rnl5, {
+                                  renderedEmoji: (0, r.jsx)(c.Z, {
+                                      emojiName: d.name,
+                                      size: "default",
+                                      emojiId: d.id,
+                                      animated: d.animated,
+                                      isInteracting: a,
+                                      channelId: u,
+                                      messageId: t.id,
+                                      className: b.ctaEmoji,
                                   }),
                               }),
                           }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(p))
-                          : (function (e, t) {
-                                var n = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var s = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, s);
-                                }
-                                return n;
-                            })(Object(p)).forEach(function (e) {
-                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(p, e));
-                            }),
-                      a),
+                      }),
                   );
               },
           });
 }
-function b(e) {
+function N(e) {
     var t;
-    let { message: n, compact: r, usernameHook: l } = e,
+    let { message: n, compact: a, usernameHook: o } = e,
         c = n.content,
-        [p, O] = a.useState(!1),
-        v = (0, u.ZP)(n),
-        b = l(v),
-        y = (0, j.xE)(c),
-        P = a.useCallback(() => {
-            null != y &&
-                h.S.dispatchToLastSubscribed(x.CkL.INSERT_TEXT, {
-                    plainText: ":".concat(y.name, ":"),
+        [_, y] = i.useState(!1),
+        O = (0, u.ZP)(n),
+        v = o(O),
+        I = (0, m.xE)(c),
+        T = i.useCallback(() => {
+            null != I &&
+                h.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
+                    plainText: ":".concat(I.name, ":"),
                     rawText: c,
                     addSpace: !0,
                 });
-        }, [y, c]),
-        N = a.useMemo(() => {
+        }, [I, c]),
+        S = i.useMemo(() => {
             var e;
-            return null == y
+            return null == I
                 ? null
                 : {
-                      src: g.ZP.getEmojiURL({
-                          id: y.id,
-                          animated: y.animated,
+                      src: p.ZP.getEmojiURL({
+                          id: I.id,
+                          animated: I.animated,
                           size: 48,
                       }),
-                      emojiId: y.id,
-                      name: ":".concat(null != (e = y.originalName) ? e : y.name, ":"),
-                      animated: y.animated,
+                      emojiId: I.id,
+                      name: ":".concat(null != (e = I.originalName) ? e : I.name, ":"),
+                      animated: I.animated,
                   };
-        }, [y]);
-    return (0, s.jsx)(d.Z, {
-        iconNode: (0, s.jsx)(i.EO4, {
+        }, [I]);
+    return (0, r.jsx)(f.Z, {
+        iconNode: (0, r.jsx)(s.EO4, {
             size: "refresh_sm",
             color: "currentColor",
         }),
-        iconContainerClassName: C.iconContainer,
+        iconContainerClassName: b.iconContainer,
         timestamp: n.timestamp,
-        compact: r,
-        contentClassName: C.content,
-        children: (0, s.jsx)("span", {
+        compact: a,
+        contentClassName: b.content,
+        children: (0, r.jsx)("span", {
             children:
-                null == y || null == N
-                    ? f.intl.format(f.t.k6Jc9f, {
-                          username: v.nick,
-                          usernameHook: b,
+                null == I || null == S
+                    ? E.intl.format(E.t.k6Jc9f, {
+                          username: O.nick,
+                          usernameHook: v,
                       })
-                    : f.intl.format(f.t.IihHBw, {
-                          username: v.nick,
-                          usernameHook: b,
-                          emojiPreview: (0, s.jsx)(m.Y, {
-                              node: N,
-                              isInteracting: p,
+                    : E.intl.format(E.t.IihHBw, {
+                          username: O.nick,
+                          usernameHook: v,
+                          emojiPreview: (0, r.jsx)(d.Y, {
+                              node: S,
+                              isInteracting: _,
                           }),
-                          emojiName: (0, s.jsx)(o.P3F, {
-                              className: C.clickableEmoji,
+                          emojiName: (0, r.jsx)(l.P3F, {
+                              className: b.clickableEmoji,
                               tag: "span",
-                              onClick: P,
-                              onMouseEnter: () => O(!0),
-                              onMouseLeave: () => O(!1),
-                              children: (0, s.jsx)(o.Text, {
+                              onClick: T,
+                              onMouseEnter: () => y(!0),
+                              onMouseLeave: () => y(!1),
+                              children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-md/medium",
                                   color: "text-primary",
-                                  children: ":".concat(null != (t = y.originalName) ? t : y.name, ":"),
+                                  children: ":".concat(null != (t = I.originalName) ? t : I.name, ":"),
                               }),
                           }),
                       }),

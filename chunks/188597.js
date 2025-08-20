@@ -1,10 +1,10 @@
 n.d(t, {
-    $s: () => C,
+    $s: () => N,
     A0: () => R,
     Sg: () => S,
     ow: () => y,
     rQ: () => A,
-    t$: () => N,
+    t$: () => C,
     tM: () => v,
 }),
     n(388685);
@@ -163,7 +163,7 @@ var A = (function (e) {
         e
     );
 })({});
-let N = (e, t) => {
+let C = (e, t) => {
     let n = null == t ? void 0 : t.state,
         r = e.state === m.yb.SENT && y(e.id) < Date.now(),
         i = e.state === m.yb.SEND_FAILED && O(e.id) < Date.now(),
@@ -176,7 +176,7 @@ let N = (e, t) => {
     if (s && e.state === m.yb.SEND_FAILED) return 2;
     else if (null != e.interaction && e.hasFlag(m.iLy.EPHEMERAL)) return 4;
 };
-function C(e) {
+function N(e) {
     let t = e.options;
     for (
         ;

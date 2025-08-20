@@ -22,19 +22,19 @@ var r = n(951288),
     y = n(63063),
     C = n(999382),
     N = n(981631),
-    I = n(388032),
-    E = n(424359);
+    E = n(388032),
+    I = n(424359);
 function S(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
         { days: i, hours: l } = (0, u.Z)(t);
     return n <= 0
         ? null
         : 0 === i && 0 === l
-          ? I.intl.format(I.t.kF0HER, {
+          ? E.intl.format(E.t.kF0HER, {
                 tierName: r,
                 numPremiumSubscriptions: n,
             })
-          : I.intl.format(I.t.neDJho, {
+          : E.intl.format(E.t.neDJho, {
                 days: i,
                 hours: l,
                 tierName: r,
@@ -51,8 +51,8 @@ function T(e) {
         messageType: a.QYI.WARNING,
         children: [
             (0, r.jsx)("div", {
-                className: E.guildBoostingGracePeriodTitle,
-                children: I.intl.format(I.t.LG7vvr, {}),
+                className: I.guildBoostingGracePeriodTitle,
+                children: E.intl.format(E.t.LG7vvr, {}),
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
@@ -92,7 +92,7 @@ function w() {
                 children: [
                     (0, r.jsx)(a.vwX, {
                         tag: a.RB0.H1,
-                        children: I.intl.string(I.t.nLovSU),
+                        children: E.intl.string(E.t.nLovSU),
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(T, {
@@ -102,8 +102,8 @@ function w() {
                         : null,
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
-                        className: E.titleBlurb,
-                        children: I.intl.format(I.t.hLOkp6, {
+                        className: I.titleBlurb,
+                        children: E.intl.format(E.t.hLOkp6, {
                             helpdeskArticle: y.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
                         }),
                     }),
@@ -120,7 +120,7 @@ function w() {
                 tiers: (0, O.cP)(null != e && e.features.has(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
                 renderTier: P,
             }),
-            (0, r.jsx)("div", { className: E.divider }),
+            (0, r.jsx)("div", { className: I.divider }),
             n ? (0, r.jsx)(h.Z, {}) : null,
             n
                 ? (0, r.jsx)(p.Z, {

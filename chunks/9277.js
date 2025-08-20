@@ -82,24 +82,24 @@ function I(e, t) {
             );
         }),
         [T, S, A] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
-        N = i.useRef(0),
-        C = i.useCallback(() => {
+        C = i.useRef(0),
+        N = i.useCallback(() => {
             O(!0),
-                clearTimeout(N.current),
-                (N.current = setTimeout(() => {
-                    O(!1), (N.current = 0);
+                clearTimeout(C.current),
+                (C.current = setTimeout(() => {
+                    O(!1), (C.current = 0);
                 }, 2000));
         }, []);
     (0, _.yp)({
         event: h.CkL.FAVORITE_GIF,
-        handler: C,
+        handler: N,
     });
     let R = i.useCallback(() => {
             (0, d.RO)(m.X1.GIF, a);
         }, [a]),
         { Component: P, events: w, play: D } = (0, c.V)();
     if (n) return null;
-    let L = T === m.X1.GIF && S === a;
+    let x = T === m.X1.GIF && S === a;
     return (0, r.jsx)(u.ua7, {
         text: I ? g.intl.string(g.t.mE2e8P) : null,
         forceOpen: !0,
@@ -122,10 +122,10 @@ function I(e, t) {
                             onClick: () => {
                                 R(), D();
                             },
-                            isActive: L,
+                            isActive: x,
                             pulse: b,
                             "aria-label": g.intl.string(g.t.PtVpk5),
-                            "aria-expanded": L,
+                            "aria-expanded": x,
                             "aria-haspopup": "dialog",
                             "aria-controls": A,
                             children: (0, r.jsx)(P, {

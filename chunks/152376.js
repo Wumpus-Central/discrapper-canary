@@ -1,7 +1,7 @@
 n.d(t, {
     C1: () => A,
-    Mo: () => N,
-    QG: () => C,
+    Mo: () => C,
+    QG: () => N,
     XQ: () => I,
     _U: () => w,
     dM: () => R,
@@ -161,7 +161,7 @@ async function S(e, t) {
         });
 }
 let A = (0, r.debounce)((e, t) => S(e, t), 1000);
-function N(e, t) {
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (null == e) return;
@@ -203,7 +203,7 @@ function N(e, t) {
                 }),
             );
 }
-function C(e, t, n) {
+function N(e, t, n) {
     if (c.Z.isFullServerPreview(e)) return void (0, l.aq)(e, { optInEnabled: t });
     let r = _.ZP.getGuildFlags(e);
     o.Z.updateGuildNotificationSettings(e, { flags: (0, h.mB)(r, E.vc.OPT_IN_CHANNELS_ON, t) }, m.UE.optedIn(t)),

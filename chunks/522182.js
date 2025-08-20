@@ -1,58 +1,58 @@
-n.d(t, { Z: () => s });
-var r = n(951288);
-n(647438);
-var o = n(481060),
-    i = n(906732),
-    l = n(335131),
-    a = n(475413),
-    c = n(388032);
+t.d(n, { Z: () => s });
+var r = t(951288);
+t(647438);
+var o = t(481060),
+    l = t(906732),
+    i = t(335131),
+    c = t(475413),
+    a = t(388032);
 function s(e) {
-    var { onClose: t } = e,
-        n = (function (e, t) {
+    var { onClose: n } = e,
+        t = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 r,
-                o = (function (e, t) {
+                o = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (t = l[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (t = l[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
         })(e, ["onClose"]);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, l.ZP)();
     return (0, r.jsx)(
-        a.ef,
+        c.ef,
         (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
+                    r.forEach(function (n) {
                         var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (r = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[n] = r);
                     });
             }
             return e;
@@ -60,18 +60,18 @@ function s(e) {
             {
                 action: "VISIT_SHOP",
                 icon: o.EOn,
-                tooltipText: c.intl.string(c.t.b2d0Nz),
+                tooltipText: a.intl.string(a.t.b2d0Nz),
                 themeColor: "secondary",
                 onClick: () => {
-                    (0, l.mK)({
+                    (0, i.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
                         analyticsSource: d,
                     }),
-                        null == t || t();
+                        null == n || n();
                 },
             },
-            n,
+            t,
         ),
     );
 }

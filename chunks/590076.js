@@ -17,8 +17,8 @@ function m(e) {
     a()(null != E, "user cannot be null"), (0, f.Z)(m, E, i, n);
     let {
         handleClick: g,
-        handleMouseDown: S,
-        handleMouseEnter: v,
+        handleMouseDown: v,
+        handleMouseEnter: S,
         handleMouseMove: h,
         handleMouseUp: b,
     } = (0, d.Z)({
@@ -33,8 +33,8 @@ function m(e) {
         children: (0, r.jsx)("canvas", {
             ref: m,
             onClick: g,
-            onMouseDown: S,
-            onMouseEnter: v,
+            onMouseDown: v,
+            onMouseEnter: S,
             onMouseMove: h,
             onMouseUp: b,
             className: p.sharedCanvas,

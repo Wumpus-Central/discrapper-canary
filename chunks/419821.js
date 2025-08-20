@@ -1,91 +1,102 @@
-n.d(t, { u: () => f });
-var i = n(951288),
-    r = n(647438),
-    s = n(512722),
-    a = n.n(s),
-    l = n(399606),
-    o = n(481060),
+n.d(t, { u: () => y });
+var r = n(951288),
+    i = n(647438),
+    a = n(512722),
+    o = n.n(a),
+    s = n(399606),
+    l = n(481060),
     c = n(594174),
-    d = n(933970),
-    u = n(340453),
-    m = n(292352),
-    p = n(345909),
-    g = n(388032),
+    u = n(933970),
+    d = n(340453),
+    f = n(292352),
+    _ = n(345909),
+    p = n(388032),
     h = n(823074);
-function f(e) {
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
     let { user: t } = e,
-        s = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        f = r.useCallback(() => {
-            a()(void 0 !== s, "User must be logged in to accept a link request"),
-                (0, o.ZDy)(async () => {
+        a = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        m = i.useCallback(() => {
+            o()(void 0 !== a, "User must be logged in to accept a link request"),
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("50872").then(n.bind(n, 442673));
-                    return (n) => {
-                        var r, a;
-                        return (0, i.jsx)(
+                    return (n) =>
+                        (0, r.jsx)(
                             e,
-                            ((r = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: i,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = i);
-                                        });
-                                }
-                                return e;
-                            })({}, n)),
-                            (a = a =
-                                {
-                                    currentUser: s,
-                                    otherUser: t,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var i = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, i);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            r),
+                            b(g({}, n), {
+                                currentUser: a,
+                                otherUser: t,
+                            }),
                         );
-                    };
                 });
-        }, [s, t]);
-    return (0, i.jsxs)("div", {
+        }, [a, t]);
+    return (0, r.jsxs)("div", {
         className: h.container,
         children: [
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: h.details,
-                children: (0, i.jsx)(u.Z, {
+                children: (0, r.jsx)(d.Z, {
                     otherUser: t,
-                    status: m.ne.ACTIVE,
+                    status: f.ne.ACTIVE,
                 }),
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: h.actions,
-                children: (0, i.jsx)(d.Z, {
-                    icon: o.Dio,
-                    tooltip: g.intl.string(p.default.l20ZZm),
-                    onClick: f,
+                children: (0, r.jsx)(u.Z, {
+                    icon: l.Dio,
+                    tooltip: p.intl.string(_.default.l20ZZm),
+                    onClick: m,
                 }),
             }),
         ],

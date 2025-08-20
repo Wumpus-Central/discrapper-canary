@@ -1,5 +1,5 @@
-n.d(e, { A: () => E });
-let i = (0, n(818083).B)({
+n.d(t, { A: () => i });
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2024-02_safety_hub_guild_violation_in_app_appeals",
     label: "Safety Hub Guild Violation In App Appeals",
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function E(t) {
-    return !!i.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+function i(e) {
+    return !!r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

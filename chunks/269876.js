@@ -1,131 +1,131 @@
-n.d(t, { Z: () => C }), n(388685);
-var i = n(951288),
-    r = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    o = n(46973),
+n.d(t, { Z: () => v }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(46973),
     c = n(846519),
-    d = n(692547),
-    u = n(481060),
-    m = n(846027),
-    p = n(313201),
-    g = n(131951),
+    u = n(692547),
+    d = n(481060),
+    f = n(846027),
+    _ = n(313201),
+    p = n(131951),
     h = n(65154),
-    f = n(388032),
-    b = n(192294),
-    x = n(89079),
-    _ = n(149715),
-    j = n(197571);
-let E = (0, p.hQ)();
-function C() {
-    let [e, t] = r.useState(-100),
-        [n, s] = r.useState(!1),
-        { threshold: C, autoThreshold: O } = (0, l.cj)([g.Z], () => ({
-            threshold: g.Z.getModeOptions().threshold,
-            autoThreshold: g.Z.getModeOptions().autoThreshold,
+    m = n(388032),
+    g = n(192294),
+    E = n(89079),
+    b = n(149715),
+    y = n(197571);
+let O = (0, _.hQ)();
+function v() {
+    let [e, t] = i.useState(-100),
+        [n, a] = i.useState(!1),
+        { threshold: v, autoThreshold: I } = (0, s.cj)([p.Z], () => ({
+            threshold: p.Z.getModeOptions().threshold,
+            autoThreshold: p.Z.getModeOptions().autoThreshold,
         })),
         {
-            inputMode: v,
+            inputMode: T,
             automaticVADSupported: S,
-            isEnabled: T,
-        } = (0, l.cj)([g.Z], () => ({
-            inputMode: g.Z.getMode(),
-            automaticVADSupported: g.Z.supports(h.AN.AUTOMATIC_VAD),
-            isEnabled: g.Z.isEnabled(),
+            isEnabled: A,
+        } = (0, s.cj)([p.Z], () => ({
+            inputMode: p.Z.getMode(),
+            automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
+            isEnabled: p.Z.isEnabled(),
         }));
-    function N(e, n) {
-        t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
+    function C(e, n) {
+        t(e), a((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
-    function I(e, t) {
-        m.Z.setMode(v, {
+    function N(e, t) {
+        f.Z.setMode(T, {
             threshold: e,
             autoThreshold: t,
         });
     }
-    r.useEffect(() => {
+    i.useEffect(() => {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                g.Z.getMediaEngine().on(o.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().on(l.aB.VoiceActivity, C), e.stop();
             }),
             () => {
-                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, C), e.stop();
             }
         );
     }, []);
-    let y = (0, i.jsx)("section", {
-        className: a()(b.inputSensitivityToggle, b.manual),
-        children: (0, i.jsx)(u.iRW, {
-            initialValue: C + 100,
+    let R = (0, r.jsx)("section", {
+        className: o()(g.inputSensitivityToggle, g.manual),
+        children: (0, r.jsx)(d.iRW, {
+            initialValue: v + 100,
             onValueRender: (e) => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-            onValueChange: (e) => I(-((100 - e) * 1), O),
-            barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
-            fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            "aria-labelledby": E,
-            children: (0, i.jsxs)("div", {
-                className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, x.bar),
+            onValueChange: (e) => N(-((100 - e) * 1), I),
+            barStyles: { background: u.Z.unsafe_rawColors.GREEN_360.css },
+            fillStyles: { background: u.Z.unsafe_rawColors.YELLOW_300.css },
+            "aria-labelledby": O,
+            children: (0, r.jsxs)("div", {
+                className: o()(g.sliderBar, g.microphone, g.inputSensitivityBar, E.bar),
                 children: [
-                    (0, i.jsx)("div", {
-                        className: a()(b.fill, b.inputSensitivityBarFill),
+                    (0, r.jsx)("div", {
+                        className: o()(g.fill, g.inputSensitivityBarFill),
                         style: { width: e + 100 + "%" },
                     }),
-                    (0, i.jsx)("div", { className: "grow" }),
+                    (0, r.jsx)("div", { className: "grow" }),
                 ],
             }),
         }),
     });
     return (
-        O &&
-            (y = (0, i.jsxs)("section", {
-                className: b.inputSensitivityToggle,
+        I &&
+            (R = (0, r.jsxs)("section", {
+                className: g.inputSensitivityToggle,
                 children: [
-                    (0, i.jsx)("div", {
-                        className: b.inputSensitivitySlider,
-                        children: (0, i.jsx)("div", {
-                            className: a()(b.inputSensitivityBar, b.sliderBar, { [b.speaking]: n }),
+                    (0, r.jsx)("div", {
+                        className: g.inputSensitivitySlider,
+                        children: (0, r.jsx)("div", {
+                            className: o()(g.inputSensitivityBar, g.sliderBar, { [g.speaking]: n }),
                         }),
                     }),
-                    (0, i.jsx)(u.R94, {
-                        type: u.R94.Types.DESCRIPTION,
-                        className: j.marginBottom8,
-                        children: f.intl.string(f.t.W3K5Ii),
+                    (0, r.jsx)(d.R94, {
+                        type: d.R94.Types.DESCRIPTION,
+                        className: y.marginBottom8,
+                        children: m.intl.string(m.t.W3K5Ii),
                     }),
                 ],
             })),
-        (0, i.jsxs)(u.xJW, {
-            title: f.intl.string(f.t["sqUm+v"]),
-            titleId: E,
-            className: b.sensitivity,
+        (0, r.jsxs)(d.xJW, {
+            title: m.intl.string(m.t["sqUm+v"]),
+            titleId: O,
+            className: g.sensitivity,
             children: [
                 S &&
-                    (0, i.jsx)(p.FG, {
+                    (0, r.jsx)(_.FG, {
                         children: (e) =>
-                            (0, i.jsxs)("div", {
-                                className: a()(_.horizontal, j.marginBottom4),
+                            (0, r.jsxs)("div", {
+                                className: o()(b.horizontal, y.marginBottom4),
                                 children: [
-                                    (0, i.jsx)(u.vwX, {
-                                        tag: u.RB0.H3,
-                                        className: j.marginReset,
-                                        children: (0, i.jsx)("label", {
+                                    (0, r.jsx)(d.vwX, {
+                                        tag: d.RB0.H3,
+                                        className: y.marginReset,
+                                        children: (0, r.jsx)("label", {
                                             htmlFor: e,
-                                            children: f.intl.string(f.t.I1Zuq6),
+                                            children: m.intl.string(m.t.I1Zuq6),
                                         }),
                                     }),
-                                    (0, i.jsx)(u.rsf, {
+                                    (0, r.jsx)(d.rsf, {
                                         id: e,
-                                        checked: O,
-                                        onChange: (e) => I(C, e),
+                                        checked: I,
+                                        onChange: (e) => N(v, e),
                                     }),
                                 ],
                             }),
                     }),
-                y,
-                !T &&
-                    (0, i.jsx)(u.R94, {
-                        type: u.R94.Types.DESCRIPTION,
-                        className: a()(b.inputDisabledWarning, j.marginBottom8),
-                        children: f.intl.format(f.t["O13I+P"], { onEnableClick: () => m.Z.enable(!0) }),
+                R,
+                !A &&
+                    (0, r.jsx)(d.R94, {
+                        type: d.R94.Types.DESCRIPTION,
+                        className: o()(g.inputDisabledWarning, y.marginBottom8),
+                        children: m.intl.format(m.t["O13I+P"], { onEnableClick: () => f.Z.enable(!0) }),
                     }),
             ],
         })
