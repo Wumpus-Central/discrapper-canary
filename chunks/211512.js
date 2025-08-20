@@ -1,8 +1,8 @@
 n.d(t, { I: () => a });
 var i = n(951288),
     l = n(540863),
-    o = n(534542),
-    r = n(481060),
+    r = n(534542),
+    o = n(481060),
     s = n(188639);
 function a(e) {
     let { node: t } = e,
@@ -11,7 +11,7 @@ function a(e) {
         v = null == u ? void 0 : u(),
         m = n(),
         b = null == c ? void 0 : c(),
-        p = null == d ? void 0 : d();
+        x = null == d ? void 0 : d();
     return (0, i.jsx)(l.x, {
         title: g,
         className: s.settingButtonContainer,
@@ -19,15 +19,15 @@ function a(e) {
             className: s.settingButtonContent,
             children: [
                 null != v &&
-                    (0, i.jsx)(o.R, {
-                        type: o.g.DESCRIPTION,
+                    (0, i.jsx)(r.R, {
+                        type: r.g.DESCRIPTION,
                         children: v,
                     }),
-                (0, i.jsx)(r.zxk, {
+                (0, i.jsx)(o.zxk, {
                     onClick: f,
                     text: m,
                     variant: b,
-                    disabled: p,
+                    disabled: x,
                 }),
             ],
         }),

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => o });
 var i = n(509613),
     l = n(67287),
-    o = n(426442);
-let r = (0, i.so)({
-    getLayout: () => [o.Z, l.Z],
+    r = n(426442);
+let o = (0, i.so)({
+    getLayout: () => [r.Z, l.Z],
 });

@@ -1,8 +1,8 @@
 n.d(t, { I: () => u });
 var i = n(951288),
     l = n(120356),
-    o = n.n(l),
-    r = n(657707),
+    r = n.n(l),
+    o = n(657707),
     s = n(206403),
     a = n(481446);
 function u(e) {
@@ -12,12 +12,12 @@ function u(e) {
             (0, i.jsx)(s.x, {
                 title: t,
                 description: l ? void 0 : n,
-                secondaryTrailingElement: (0, i.jsx)(r.sXD, { className: o()(a.icon, { [a.iconClosed]: !l }) }),
+                secondaryTrailingElement: (0, i.jsx)(o.sXD, { className: r()(a.icon, { [a.iconClosed]: !l }) }),
                 onClick: () => u(!l),
                 compact: c,
             }),
             (0, i.jsx)("div", {
-                className: o()({ [a.hidden]: !l }),
+                className: r()({ [a.hidden]: !l }),
                 children: d,
             }),
         ],

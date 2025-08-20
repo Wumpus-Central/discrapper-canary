@@ -1,1 +1,5 @@
-e.exports = { panel: "panel__6131a" };
+e.exports = {
+    panel: "panel__6131a",
+    scroller: "scroller__6131a",
+    notice: "notice__6131a",
+};

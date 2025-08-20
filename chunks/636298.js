@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var i = n(951288),
     l = n(647438),
-    o = n(120356),
-    r = n.n(o),
+    r = n(120356),
+    o = n.n(r),
     s = n(873546),
     a = n(755721),
     u = n(481060),
@@ -50,23 +50,20 @@ function v(e) {
 }
 let m = l.memo(function (e) {
     let { onClose: t, setShowNavigationMobile: n, setting: l } = e,
-        o = null == l ? void 0 : l.useTitle(),
+        r = null == l ? void 0 : l.useTitle(),
         { showNavigationMobile: a } = (0, c.t)();
     return (0, i.jsxs)("div", {
-        className: r()(f.content, {
+        className: o()(f.content, {
             [f.mobile]: s.tq,
             [f.mobileNavigationOpen]: a,
         }),
         children: [
             (0, i.jsx)(v, {
-                title: o,
+                title: r,
                 onClose: t,
                 setShowNavigationMobile: n,
             }),
-            (0, i.jsx)(u.w0Z, {
-                className: f.contentScroller,
-                children: null != l && (0, i.jsx)(d.Z, { node: l }),
-            }),
+            null != l && (0, i.jsx)(d.Z, { node: l }),
         ],
     });
 });

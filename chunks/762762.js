@@ -1,39 +1,39 @@
-r.d(t, { Z: () => c });
-var n = r(647438),
-    o = r(442837),
-    i = r(388032),
-    l = r(905128),
-    u = r(973772),
-    s = r(535396),
-    a = r(989308);
-function c(e, t, r) {
-    let c = (0, o.e7)([l.Z], () => l.Z.getStateForGuild(e)),
-        p = (0, u.ZP)(e, t);
-    return n.useMemo(() => {
-        var e, n;
-        if (null == c || p.type === s.A3.LEVEL_ACTIVATED)
+n.d(t, { Z: () => u });
+var r = n(647438),
+    o = n(442837),
+    i = n(388032),
+    a = n(905128),
+    s = n(973772),
+    c = n(535396),
+    l = n(989308);
+function u(e, t, n) {
+    let u = (0, o.e7)([a.Z], () => a.Z.getStateForGuild(e)),
+        d = (0, s.ZP)(e, t);
+    return r.useMemo(() => {
+        var e, r;
+        if (null == u || d.type === c.A3.LEVEL_ACTIVATED)
             return {
                 disabled: !0,
                 reason: void 0,
             };
-        let { allPowerups: o, unlockedPowerups: l } = c,
-            u = r
+        let { allPowerups: o, unlockedPowerups: a } = u,
+            s = n
                 ? null ==
-                  (e = Object.values(l).find((e) => {
-                      var r;
-                      return (null == (r = e.sku) ? void 0 : r.dependent_sku_id) === t.skuId;
+                  (e = Object.values(a).find((e) => {
+                      var n;
+                      return (null == (n = e.sku) ? void 0 : n.dependent_sku_id) === t.skuId;
                   }))
                     ? void 0
                     : e.sku_id
-                : t.dependencies.find((e) => null == l[e]);
+                : t.dependencies.find((e) => null == a[e]);
         return {
-            disabled: null != u,
+            disabled: null != s,
             reason:
-                null != u && null != o[u]
-                    ? i.intl.formatToPlainString(r ? a.default.vCEBiY : a.default["1B8AZm"], {
-                          perk: null == (n = o[u]) ? void 0 : n.title,
+                null != s && null != o[s]
+                    ? i.intl.formatToPlainString(n ? l.default.vCEBiY : l.default["1B8AZm"], {
+                          perk: null == (r = o[s]) ? void 0 : r.title,
                       })
                     : void 0,
         };
-    }, [c, t.skuId, t.dependencies, r, p.type]);
+    }, [u, t.skuId, t.dependencies, n, d.type]);
 }

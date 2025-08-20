@@ -1,16 +1,16 @@
 n.d(t, { Z: () => a });
 var i = n(657707),
     l = n(509613),
-    o = n(906467),
-    r = n(287490);
+    r = n(906467),
+    o = n(287490);
 let s = (0, l.x1)("ExperimentsPane", {
         useTitle: () => "Experiments",
         getLayout: () => [],
-        render: r.Z,
+        render: o.Z,
     }),
     a = (0, l.wf)("Experiments", {
         icon: i.uOV,
         useTitle: () => "Experiments",
-        usePredicate: () => o.Z.isDeveloper,
+        usePredicate: () => r.Z.isDeveloper,
         getLayout: () => [s],
     });

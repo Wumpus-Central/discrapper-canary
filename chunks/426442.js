@@ -1,8 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var i = n(509613),
     l = n(621339),
-    o = n(92959),
-    r = n(985230);
-let s = (0, i.vB)("General", {
-    getLayout: () => [l.Z, o.Z, r.ZP],
+    r = n(92959),
+    o = n(708827),
+    s = n(985230);
+let a = (0, i.vB)("General", {
+    getLayout: () => [o.Z, l.Z, r.Z, s.ZP],
 });

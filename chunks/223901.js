@@ -1,27 +1,26 @@
-s.d(e, { default: () => d });
-var n = s(951288),
-    r = s(647438),
-    t = s(481060),
-    o = s(91159),
-    i = s(593130),
-    l = s(388032),
-    c = s(225079);
-function d(a) {
-    let { channel: e, onClose: s, transitionState: d } = a;
+n.d(e, { default: () => u });
+var t = n(951288),
+    r = n(647438),
+    a = n(257465),
+    i = n(91159),
+    o = n(593130),
+    c = n(388032),
+    l = n(225079);
+function u(s) {
+    let { channel: e, onClose: n, transitionState: u } = s;
     return (
         r.useEffect(() => {
-            (0, o.U4)();
+            (0, i.U4)();
         }, []),
-        (0, n.jsx)(t.Y0X, {
-            className: c.modal,
-            transitionState: d,
-            "aria-label": l.intl.string(l.t.B2panJ),
-            size: t.CgR.DYNAMIC,
-            parentComponent: "ThreadBrowserModal",
-            children: (0, n.jsx)(i.Z, {
-                className: c.browser,
+        (0, t.jsx)(a.I, {
+            transitionState: u,
+            "aria-label": c.intl.string(c.t.B2panJ),
+            size: "lg",
+            onClose: n,
+            children: (0, t.jsx)(o.Z, {
+                className: l.browser,
                 channel: e,
-                onClose: s,
+                onClose: n,
             }),
         })
     );

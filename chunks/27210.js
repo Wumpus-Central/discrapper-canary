@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => j }), n(415506), n(539854), n(388685);
 var i = n(951288),
     l = n(647438),
-    o = n(442837),
-    r = n(481060),
+    r = n(442837),
+    o = n(481060),
     s = n(292556),
     a = n(734934),
     u = n(509613),
@@ -18,11 +18,11 @@ function m(e) {
             if (null == e) throw Error("useSoundPlayback must be used within a SoundPlaybackProvider");
             return e;
         })();
-    return (0, i.jsx)(r.P3F, {
+    return (0, i.jsx)(o.P3F, {
         className: g.soundIcon,
         onClick: (e) => n(t, e),
         "aria-label": f.intl.string(f.t.Kd4uxM),
-        children: (0, i.jsx)(r.gj8, {
+        children: (0, i.jsx)(o.gj8, {
             size: "xs",
             color: "currentColor",
             className: g.icon,
@@ -140,7 +140,7 @@ let b = [
             },
             useValue: () => {
                 var t;
-                let n = (0, o.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
+                let n = (0, r.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
                     i = null == (t = e.useDisabled) ? void 0 : t.call(e);
                 return !n && !i;
             },
@@ -151,21 +151,21 @@ let b = [
             useDisabled: () => {
                 var t;
                 let n = null == (t = e.useDisabled) ? void 0 : t.call(e),
-                    i = (0, o.e7)([d.Z], () => d.Z.getDisableAllSounds());
+                    i = (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds());
                 return n || i;
             },
             useTooltip: e.useTooltip,
         }),
     })),
-    p = (0, u.qs)("SelectedChannelNotifications", {
+    x = (0, u.qs)("SelectedChannelNotifications", {
         useTitle: () => f.intl.string(f.t.TzjwV1),
-        useValue: () => (0, o.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
+        useValue: () => (0, r.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (e) => s.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    x = (0, u.qs)("DisableAllNotificationSounds", {
+    p = (0, u.qs)("DisableAllNotificationSounds", {
         useTitle: () => f.intl.string(f.t["2ZhCOT"]),
         useSubtitle: () => f.intl.string(f.t["+B0XLC"]),
-        useValue: () => (0, o.e7)([d.Z], () => d.Z.getDisableAllSounds()),
+        useValue: () => (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds()),
         setValue: (e) => s.default.toggleDisableAllSounds(e),
     }),
     j = (0, u.$l)("NotificationSoundsSettingList", {
@@ -177,7 +177,7 @@ let b = [
         ContextProvider: function (e) {
             let { children: t } = e,
                 n = l.useRef(null),
-                o = l.useCallback((e, t) => {
+                r = l.useCallback((e, t) => {
                     t.stopPropagation(),
                         t.preventDefault(),
                         null != n.current && n.current.stop(),
@@ -190,11 +190,11 @@ let b = [
                 },
                 [],
             );
-            let r = l.useMemo(() => ({ handlePreviewSound: o }), [o]);
+            let o = l.useMemo(() => ({ handlePreviewSound: r }), [r]);
             return (0, i.jsx)(v.Provider, {
-                value: r,
+                value: o,
                 children: t,
             });
         },
-        getLayout: () => [b[0].node, p, b[1].node, x, ...b.slice(2).map((e) => e.node)],
+        getLayout: () => [b[0].node, x, b[1].node, p, ...b.slice(2).map((e) => e.node)],
     });

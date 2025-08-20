@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => l,
-    L: () => o,
+    L: () => r,
 }),
     n(647438);
 var i,
@@ -23,6 +23,6 @@ var i,
         (i[(i.NAVIGATOR = 15)] = "NAVIGATOR"),
         (i[(i.CUSTOM = 16)] = "CUSTOM"),
         i);
-function o(e) {
+function r(e) {
     return "layout" in e;
 }

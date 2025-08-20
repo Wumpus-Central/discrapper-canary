@@ -1,8 +1,8 @@
 n.d(t, { P: () => d });
 var i = n(951288),
     l = n(120356),
-    o = n.n(l),
-    r = n(873546),
+    r = n.n(l),
+    o = n(873546),
     s = n(481060),
     a = n(59662),
     u = n(829210),
@@ -11,8 +11,8 @@ function d(e) {
     let { root: t, header: n, footer: l } = e,
         { showNavigationMobile: u } = (0, a.t)();
     return (0, i.jsxs)("div", {
-        className: o()(c.sidebar, {
-            [c.mobile]: r.tq,
+        className: r()(c.sidebar, {
+            [c.mobile]: o.tq,
             [c.mobileNavigationOpen]: u,
         }),
         children: [

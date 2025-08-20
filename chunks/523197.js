@@ -1,8 +1,8 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => o });
 var i = n(509613),
     l = n(27210),
-    o = n(388032);
-let r = (0, i.k4)("NotificationSounds", {
-    useTitle: () => o.intl.string(o.t.LweOY2),
+    r = n(388032);
+let o = (0, i.k4)("NotificationSounds", {
+    useTitle: () => r.intl.string(r.t.LweOY2),
     getLayout: () => [l.ZP],
 });
