@@ -517,6 +517,7 @@ function eg(e) {
             displayNameStyles: null == f ? void 0 : f.displayNameStyles,
             effectDisplayType: $ || s || em ? D.F.ANIMATED : D.F.PLAIN,
             loop: $,
+            boldFontOpacity: 0.9,
         }),
         e1 = eN
             ? (0, r.jsxs)(r.Fragment, {

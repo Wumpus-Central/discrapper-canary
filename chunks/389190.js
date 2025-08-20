@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(388032),
     p = t(878449);
 function b(e) {
-    let { user: n, guildId: t, channelId: b, onClose: x } = e,
-        { mutualFriends: g } = (0, s.Z)(n),
+    let { user: n, guildId: t, channelId: b, onClose: g } = e,
+        { mutualFriends: x } = (0, s.Z)(n),
         { analyticsLocations: h } = (0, c.ZP)(),
         { context: j, trackUserProfileAction: v } = (0, a.KZ)(),
         _ = (0, i.Z)();
@@ -25,12 +25,12 @@ function b(e) {
             className: p.listScroller,
             fade: !0,
             children:
-                null == g
+                null == x
                     ? (0, r.jsx)("div", {
                           className: p.empty,
                           children: (0, r.jsx)(l.$jN, {}),
                       })
-                    : 0 === g.length
+                    : 0 === x.length
                       ? (0, r.jsxs)("div", {
                             className: p.empty,
                             children: [
@@ -41,7 +41,7 @@ function b(e) {
                                 }),
                             ],
                         })
-                      : g.map((e) => {
+                      : x.map((e) => {
                             let { key: n, user: o, status: l } = e;
                             return (0, r.jsx)(
                                 f.Z,
@@ -52,7 +52,7 @@ function b(e) {
                                     channelId: b,
                                     onSelect: () => {
                                         var e, n, t;
-                                        null == x || x(),
+                                        null == g || g(),
                                             v({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = o.id),
                                             (0, u.openUserProfileModal)(

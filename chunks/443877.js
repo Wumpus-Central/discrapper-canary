@@ -6,16 +6,16 @@ var n = i(442837),
     l = i(665906),
     a = i(271383),
     d = i(607744),
-    u = i(496675),
-    c = i(432376),
+    c = i(496675),
+    u = i(432376),
     h = i(981631);
 function p(t) {
     var e, i;
     let p = null == t ? void 0 : t.guild_id,
         g = (0, n.e7)([d.Z], () => null == p || d.Z.canChatInGuild(p), [p]),
-        f = (0, n.e7)([o.Z], () => null != p && o.Z.isLurking(p), [p]),
-        m = (0, n.e7)([a.ZP], () => null != p && a.ZP.isCurrentUserGuest(p), [p]),
-        v = (0, n.e7)([u.Z], () => g && u.Z.can(h.Plq.ADD_REACTIONS, t), [g, t]),
+        m = (0, n.e7)([o.Z], () => null != p && o.Z.isLurking(p), [p]),
+        f = (0, n.e7)([a.ZP], () => null != p && a.ZP.isCurrentUserGuest(p), [p]),
+        v = (0, n.e7)([c.Z], () => g && c.Z.can(h.Plq.ADD_REACTIONS, t), [g, t]),
         O = (0, r.ux)(p),
         [, b] = (0, s.AB)(p),
         y = (0, l.$R)(t);
@@ -54,13 +54,13 @@ function p(t) {
               return t;
           })(
               {},
-              (0, c.Z)({
+              (0, u.Z)({
                   channel: t,
                   canChat: g,
                   renderReactions: !0,
                   canAddNewReactions: v,
-                  isLurking: f,
-                  isGuest: m,
+                  isLurking: m,
+                  isGuest: f,
                   communicationDisabled: b,
                   isActiveChannelOrUnarchivableThread: y,
                   isAutomodQuarantined: O,
@@ -68,8 +68,8 @@ function p(t) {
           )),
           (i = i =
               {
-                  isLurking: f,
-                  isGuest: m,
+                  isLurking: m,
+                  isGuest: f,
                   isPendingMember: !1,
               }),
           Object.getOwnPropertyDescriptors

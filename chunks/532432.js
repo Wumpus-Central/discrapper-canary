@@ -1,93 +1,70 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(704215),
-    l = n(755721),
-    c = n(481060),
-    u = n(906732),
-    d = n(243778),
-    f = n(373230),
-    _ = n(654904),
-    p = n(993413),
-    h = n(921944),
-    m = n(486324),
-    g = n(485696),
-    E = n(388032),
-    b = n(801292);
-let y = [
+    s = n(755721),
+    l = n(481060),
+    c = n(906732),
+    u = n(654904),
+    d = n(993413),
+    f = n(486324),
+    _ = n(388032),
+    p = n(801292);
+let h = [
     {
         name: "gif",
         extensions: ["gif"],
     },
 ];
-function O(e) {
+function m(e) {
     let {
             showRemoveAvatarButton: t,
             errors: n,
             onAvatarChange: a,
-            sectionTitle: O,
-            changeAvatarButtonText: v,
-            guildId: I,
-            className: T,
-            disabled: S = !1,
-            isTryItOutFlow: A = !1,
-            forcedDivider: C,
-            withHighlight: N = !1,
+            sectionTitle: m,
+            changeAvatarButtonText: g,
+            guildId: E,
+            className: b,
+            disabled: y = !1,
+            isTryItOutFlow: O = !1,
+            forcedDivider: v,
+            withHighlight: I = !1,
         } = e,
-        { newestAnalyticsLocation: R } = (0, u.ZP)(),
-        P = N ? c.gtL : l.zx,
-        w = (0, f.T)({ location: "AvatarSection" }),
-        D = [];
-    w && D.push(s.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
-    let [x, L] = (0, d.US)(D),
-        j = x === s.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        M = i.useCallback(() => {
-            L(h.L.TAKE_ACTION),
-                (0, _.$r)({
-                    uploadType: m.pC.AVATAR,
-                    analyticsSource: R,
-                    filters: A ? y : void 0,
-                    guildId: I,
-                    isTryItOutFlow: A,
-                });
-        }, [I, R, A, L]);
-    return (0, r.jsx)(p.Z, {
-        className: T,
-        title: O,
-        titleIcon: j
-            ? (0, r.jsx)(c.IGR, {
-                  text: E.intl.string(E.t.y2b7CA),
-                  className: b.newBadge,
-              })
-            : void 0,
-        description: w
-            ? E.intl.format(E.t.U4tZfX, {
-                  recentAvatarsLimit: g.iZ,
-                  onClick: M,
-              })
-            : void 0,
+        { newestAnalyticsLocation: T } = (0, c.ZP)(),
+        S = I ? l.gtL : s.zx,
+        A = i.useCallback(() => {
+            (0, u.$r)({
+                uploadType: f.pC.AVATAR,
+                analyticsSource: T,
+                filters: O ? h : void 0,
+                guildId: E,
+                isTryItOutFlow: O,
+            });
+        }, [E, T, O]);
+    return (0, r.jsx)(d.Z, {
+        className: b,
+        title: m,
         errors: n,
-        disabled: S,
-        forcedDivider: C,
+        disabled: y,
+        forcedDivider: v,
         children: (0, r.jsxs)("div", {
-            className: b.buttonsContainer,
+            className: p.buttonsContainer,
             children: [
-                (0, r.jsx)(P, {
-                    className: o()({ [b.buttonHighlighted]: N }),
-                    size: l.zx.Sizes.SMALL,
-                    onClick: M,
-                    children: null != v ? v : E.intl.string(E.t["4OynCA"]),
+                (0, r.jsx)(S, {
+                    className: o()({ [p.buttonHighlighted]: I }),
+                    size: s.zx.Sizes.SMALL,
+                    onClick: A,
+                    children: null != g ? g : _.intl.string(_.t["4OynCA"]),
                 }),
                 t &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: b.removeButton,
-                        children: (0, r.jsx)(c.zxk, {
+                        className: p.removeButton,
+                        children: (0, r.jsx)(l.zxk, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != I ? E.intl.string(E.t.TDjKDg) : E.intl.string(E.t.twB3f3),
+                            text: null != E ? _.intl.string(_.t.TDjKDg) : _.intl.string(_.t.twB3f3),
                             onClick: () => a(null),
                         }),
                     }),

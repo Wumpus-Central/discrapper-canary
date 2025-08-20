@@ -203,8 +203,12 @@ function F(e) {
                 top: r,
             }));
     }
-    let y = (0, E.Z)(d),
-        v = window.open(b.Z5c.POPOUT_WINDOW, t, y);
+    let y = (0, E.Z)(d);
+    A.info("Opening popout window", {
+        key: t,
+        encodedFeatures: y,
+    });
+    let v = window.open(b.Z5c.POPOUT_WINDOW, t, y);
     try {
         v.windowKey = t;
     } catch (e) {

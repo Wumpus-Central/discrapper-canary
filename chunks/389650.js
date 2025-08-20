@@ -422,7 +422,6 @@ class H extends i.PureComponent {
                           })
                         : (0, r.jsx)(f.Wn, {
                               messageType: f.QYI.INFO,
-                              textVariant: "text-lg/medium",
                               className: L.browserNotice,
                               children: x.intl.format(x.t.mPi3Fx, { downloadLink: w.EYA.DOWNLOAD }),
                           }),

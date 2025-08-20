@@ -34,8 +34,8 @@ function d(e) {
 }
 function f(e) {
     let { disabled: t, widgetType: r, widget: f } = e,
-        [b] = (0, a.ynZ)(),
-        g = l.useRef(null),
+        [g] = (0, a.ynZ)(),
+        b = l.useRef(null),
         p = l.useMemo(() => new Set(f.games.map((e) => e.applicationId)), [f.games]),
         O = l.useCallback(
             (e) => {
@@ -72,7 +72,7 @@ function f(e) {
             [m, j],
         );
     return (0, n.jsx)(a.yRy, {
-        targetElementRef: g,
+        targetElementRef: b,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
@@ -81,7 +81,7 @@ function f(e) {
                 className: u.gameSearchCombobox,
                 placeholder: s.intl.string(s.t["5h0QOD"]),
                 autoFocus: !0,
-                value: b,
+                value: g,
                 onChange: (e) => {
                     O(e), t();
                 },
@@ -111,7 +111,7 @@ function f(e) {
         },
         children: (e) =>
             (0, n.jsx)("div", {
-                ref: g,
+                ref: b,
                 children: (0, n.jsx)(
                     a.zxk,
                     d(

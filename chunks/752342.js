@@ -13,8 +13,8 @@ var o = t(481060),
     m = t(648052),
     p = t(867176),
     b = t(681837),
-    x = t(502762),
-    g = t(530),
+    g = t(502762),
+    x = t(530),
     h = t(871604),
     j = t(952124),
     v = t(53558),
@@ -81,7 +81,7 @@ function E(e) {
                             children: N.intl.format(N.t.KRe1Fh, { name: Y }),
                         }),
                     }),
-                    children: (0, r.jsxs)(x.Z, {
+                    children: (0, r.jsxs)(g.Z, {
                         user: n,
                         displayProfile: F,
                         themeType: A.l.MODAL,
@@ -147,7 +147,7 @@ function E(e) {
                             (0, r.jsxs)("div", {
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(g.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         className: C.username,
                                         user: n,
                                         nickname: Y,

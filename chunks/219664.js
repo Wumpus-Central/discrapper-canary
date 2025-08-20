@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(433355),
     y = n(592125),
     w = n(496675),
-    O = n(699516),
-    T = n(456269),
+    T = n(699516),
+    O = n(456269),
     S = n(109590),
     P = n(368844),
     N = n(73315),
@@ -123,8 +123,8 @@ function V(e) {
         b = i.useRef(null),
         j = (0, o.e7)([C.ZP], () => C.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id),
         { firstMessage: v, loaded: _ } = (0, S.cl)(n),
-        { messageCountText: y } = (0, T.nP)(n),
-        { isNew: w, hasUnreads: O } = (0, T.J$)(n),
+        { messageCountText: y } = (0, O.nP)(n),
+        { isNew: w, hasUnreads: T } = (0, O.J$)(n),
         P = i.useRef(null),
         { handleLeftClick: N, handleRightClick: R } = (0, A.Z)({
             facepileRef: P,
@@ -134,7 +134,7 @@ function V(e) {
     i.useEffect(() => {
         null == x || x(b.current, p);
     }, [x, p]);
-    let Z = (0, T.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
+    let Z = (0, O.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
         F = (0, I.NN)(n),
         B = (0, k.nX)({
             id: t,
@@ -223,7 +223,7 @@ function V(e) {
                         children: (0, r.jsx)(d.X6q, {
                             variant: "heading-md/extrabold",
                             className: z.title,
-                            color: O ? "header-primary" : "text-muted",
+                            color: T ? "header-primary" : "text-muted",
                             style: { width: "".concat(h.width - 2 * E.I8, "px") },
                             children: F,
                         }),
@@ -257,9 +257,9 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
-        { isBlocked: s, isIgnored: c } = (0, o.cj)([O.Z], () => ({
-            isBlocked: null != n && O.Z.isBlockedForMessage(n),
-            isIgnored: null != n && O.Z.isIgnoredForMessage(n),
+        { isBlocked: s, isIgnored: c } = (0, o.cj)([T.Z], () => ({
+            isBlocked: null != n && T.Z.isBlockedForMessage(n),
+            isIgnored: null != n && T.Z.isIgnoredForMessage(n),
         }));
     return s
         ? (0, r.jsx)($, {
@@ -284,12 +284,12 @@ function G(e) {
 function q(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getChannel(t.parent_id)),
-        { firstMedia: c } = (0, T.mX)({
+        { firstMedia: c } = (0, O.mX)({
             firstMessage: n,
             formatInline: !1,
             noStyleAndInteraction: !1,
         }),
-        { hasUnreads: d } = (0, T.J$)(t),
+        { hasUnreads: d } = (0, O.J$)(t),
         u = (0, o.e7)([w.Z], () => w.Z.can(F.Plq.MANAGE_MESSAGES, t)),
         m = _.QK.useSetting(),
         h = _.cC.useSetting(),
@@ -554,7 +554,7 @@ function Q(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: a, containerWidth: s, hasUnreads: o } = e,
         c = _.jU.useSetting(),
         [u, m] = (0, E.rI)(s - 2 * E.LT),
-        { content: h } = (0, T.mX)({
+        { content: h } = (0, O.mX)({
             firstMessage: n,
             formatInline: !1,
             noStyleAndInteraction: !0,

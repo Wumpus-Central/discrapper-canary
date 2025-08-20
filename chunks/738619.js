@@ -1,7 +1,7 @@
 i.d(e, {
     ZP: () => R,
     d7: () => U,
-    iD: () => M,
+    iD: () => D,
 }),
     i(539854),
     i(388685);
@@ -12,13 +12,13 @@ var n = i(951288),
     l = i(392711),
     a = i.n(l),
     d = i(442837),
-    u = i(692547),
-    c = i(481060),
+    c = i(692547),
+    u = i(481060),
     h = i(980568),
     p = i(560768),
     g = i(812206),
-    f = i(405701),
-    m = i(843693),
+    m = i(405701),
+    f = i(843693),
     v = i(246642),
     O = i(624030),
     b = i(314897),
@@ -63,7 +63,7 @@ function A(t) {
     return t;
 }
 let N = [];
-class F extends r.PureComponent {
+class M extends r.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -110,7 +110,7 @@ class F extends r.PureComponent {
             });
     }
 }
-function D(t) {
+function F(t) {
     let {
             activityInviteEducationActivity: e,
             isFocused: i,
@@ -118,12 +118,12 @@ function D(t) {
             className: l,
             channel: a,
             isThreadCreation: d,
-            renderDots: u,
+            renderDots: c,
             poggermodeEnabled: h,
             isComboing: p,
             isInTextChannel: g,
         } = t,
-        { rateLimitPerUser: m } = a,
+        { rateLimitPerUser: f } = a,
         O = r.useRef(null),
         b = r.useRef(null),
         [y, S] = r.useState(!1);
@@ -149,10 +149,10 @@ function D(t) {
                 );
             }
         }, [g]),
-        0 === s.length && !(m > 0) && !p)
+        0 === s.length && !(f > 0) && !p)
     )
         return null != e
-            ? (0, n.jsx)(F, {
+            ? (0, n.jsx)(M, {
                   activity: e,
                   isFocused: i,
               })
@@ -190,8 +190,8 @@ function D(t) {
                 ref: O,
                 children: [
                     s.length > 0 &&
-                        !1 !== u &&
-                        (0, n.jsx)(c.bbz, {
+                        !1 !== c &&
+                        (0, n.jsx)(u.bbz, {
                             className: x.ellipsis,
                             dotRadius: 3.5,
                             themed: !0,
@@ -214,7 +214,7 @@ function D(t) {
                     }),
                 ],
             }),
-            (0, n.jsx)(f.Z, {
+            (0, n.jsx)(m.Z, {
                 channel: a,
                 isThreadCreation: d,
             }),
@@ -222,7 +222,7 @@ function D(t) {
         ],
     });
 }
-function M(t) {
+function D(t) {
     let e = (0, d.e7)([E.Z], () => E.Z.getTypingUsers(t.id)),
         i = (0, d.e7)([T.default], () => T.default.getCurrentUser());
     return a()(e)
@@ -263,14 +263,14 @@ function R(t) {
             }
             return r;
         })(t, ["channel", "isThreadCreation"]);
-    let l = (0, d.e7)([m.ZP, b.default], () => m.ZP.getUserCombo(b.default.getId(), r.id)),
-        a = M(r),
+    let l = (0, d.e7)([f.ZP, b.default], () => f.ZP.getUserCombo(b.default.getId(), r.id)),
+        a = D(r),
         h =
             ((e = A({}, o)),
             (i = i =
                 {
-                    baseTextColor: (0, c.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
-                    activeTextColor: (0, c.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
+                    baseTextColor: (0, u.dQu)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
+                    activeTextColor: (0, u.dQu)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
                     activityInviteEducationActivity: U(r),
                     typingUsers: s ? [] : a,
                     isFocused: (0, d.e7)([w.Z], () => w.Z.isFocused()),
@@ -292,5 +292,5 @@ function R(t) {
                       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                   }),
             e);
-    return (0, n.jsx)(D, A({}, h));
+    return (0, n.jsx)(F, A({}, h));
 }

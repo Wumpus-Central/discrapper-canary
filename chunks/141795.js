@@ -369,7 +369,7 @@ class U extends I.ZP {
         }
     }
     async upload() {
-        var e, t, n, r;
+        var e, t, n, r, i;
         if ("COMPLETED" === this.status) return;
         if (
             (this.setStatus("STARTED"),
@@ -378,34 +378,36 @@ class U extends I.ZP {
             "CANCELED" === this.status)
         )
             return void this.handleComplete(this.id);
-        this.item.platform === I.ow.WEB && (await this.maybeConvertToWebP());
-        let i = await x.getUploadPayload(this),
-            a = (0, T.F)(this.item.target),
-            s = (0, d.G)({ location: "CloudUpload.upload" });
-        if (null == i.filename || "" === i.filename) {
-            D.error("File does not have a filename.", JSON.stringify(i)), this.handleError(C.evJ.INVALID_FILE_ASSET);
+        this.item.platform === I.ow.WEB &&
+            (null == (e = this.item.compressionMetadata) ? void 0 : e.convertedMimeType) !== "image/webp" &&
+            (await this.maybeConvertToWebP());
+        let a = await x.getUploadPayload(this),
+            s = (0, T.F)(this.item.target),
+            c = (0, d.G)({ location: "CloudUpload.upload" });
+        if (null == a.filename || "" === a.filename) {
+            D.error("File does not have a filename.", JSON.stringify(a)), this.handleError(C.evJ.INVALID_FILE_ASSET);
             return;
         }
-        if (s.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
+        if (c.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
             try {
                 let e = await (0, u.M)(this.item.file);
                 e > 0 && (this.currentSize = e);
             } catch (e) {
                 D.warn("Failed to detect file size, proceeding with original", {
-                    filename: i.filename,
+                    filename: a.filename,
                     error: e instanceof Error ? e.message : String(e),
                 });
             }
         if (0 === this.currentSize) return void this.handleError(C.evJ.INVALID_FILE_ASSET);
-        if ((null != (e = this.currentSize) ? e : 0) > a.getMaxFileSize(this.channelId))
+        if ((null != (t = this.currentSize) ? t : 0) > s.getMaxFileSize(this.channelId))
             return void this.handleError(C.evJ.ENTITY_TOO_LARGE);
         if (l.ZP.get("upload_fail_50") && 0.5 > Math.random())
             return void setTimeout(() => {
                 this.handleError(500);
             }, 1000);
-        let c = f.Z.getCurrentConfig({ location: "CloudUpload" }, { autoTrackExposure: !0 }),
-            _ = null;
-        c.enabled;
+        let _ = f.Z.getCurrentConfig({ location: "CloudUpload" }, { autoTrackExposure: !0 }),
+            p = null;
+        _.enabled;
         try {
             D.log("Requesting upload url for ".concat(this.id));
             let e = await this.trackTime(
@@ -415,8 +417,8 @@ class U extends I.ZP {
                         w(
                             R(
                                 {
-                                    url: a.getCreateAttachmentURL(this.channelId),
-                                    body: { files: [i] },
+                                    url: s.getCreateAttachmentURL(this.channelId),
+                                    body: { files: [a] },
                                 },
                                 this.createAttachmentUrlRetryOpts(),
                             ),
@@ -426,35 +428,35 @@ class U extends I.ZP {
             );
             this.setResponseUrl(e.body.attachments[0].upload_url),
                 this.setUploadedFilename(e.body.attachments[0].upload_filename);
-        } catch (r) {
-            let e = null != (n = null == r || null == (t = r.body) ? void 0 : t.code) ? n : r.status;
+        } catch (t) {
+            let e = null != (r = null == t || null == (n = t.body) ? void 0 : n.code) ? r : t.status;
             e !== C.evJ.ENTITY_TOO_LARGE &&
                 (D.error(
                     "Requesting upload url failed with code "
-                        .concat(null != e ? e : JSON.stringify(r.body), " for ")
+                        .concat(null != e ? e : JSON.stringify(t.body), " for ")
                         .concat(this.id),
                 ),
-                O.Z.captureException(r)),
+                O.Z.captureException(t)),
                 this.handleError(e);
             return;
         }
-        if (null != _) {
-            let e = await _;
+        if (null != p) {
+            let e = await p;
             null != e && (this.contentHash = e);
         }
         try {
             let e = await this.trackTime("uploadTimeMs", async () => await this.uploadFileToCloud());
-            if (c.enabled && null != e) {
+            if (_.enabled && null != e) {
                 let t = !1,
                     n = this.getEtagFromResponse(e);
                 if (
                     (null != n && ((this.etag = n), (t = n === this.contentHash)),
                     (this.uploadAnalytics.validUploadHash = t),
-                    !t && c.enforced)
+                    !t && _.enforced)
                 ) {
                     let e = "File "
                         .concat(
-                            null != (r = this.filename) ? r : this.id,
+                            null != (i = this.filename) ? i : this.id,
                             " received incorrect checksum after upload: got ",
                         )
                         .concat(this.etag, ", expected ")
@@ -568,37 +570,37 @@ class U extends I.ZP {
         return (this.item = R({}, this.item, l)), (this.reactNativeFilePrepped = !0), this;
     }
     async maybeConvertToWebP() {
+        var e, t;
+        let n;
         if (!(0, c.U)({ location: "CloudUpload.maybeConvertToWebP" }).enabled) return;
         if (null == this.item.file) return void D.warn("webp conversion skipped for ".concat(this.id, ": no file"));
         if (this._aborted) return;
-        let e = performance.now();
+        let r = performance.now();
         try {
-            let e = await (0, A.LF)([this.item.file]);
-            if (this._aborted) return;
-            if (e.length > 0 && e[0].success) {
-                let t = e[0];
-                (this.item.file = (0, A.ub)(t)),
+            if (((n = await (0, A.lG)(this.item.file)), this._aborted)) return;
+            if (n.success)
+                (this.item.file = (0, A.ub)(n)),
                     (this.currentSize = this.item.file.size),
                     (this.uploadAnalytics.convertedMimeType = "image/webp"),
-                    null != t.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = t.hashTimeMs),
+                    null != n.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = n.hashTimeMs),
                     D.log(
                         "webp conversion worked for "
                             .concat(this.id, ": ")
-                            .concat(t.sizeBefore, " -> ")
-                            .concat(t.sizeAfter, " bytes (")
-                            .concat(t.compressionRatio.toFixed(2), "x)"),
+                            .concat(n.sizeBefore, " -> ")
+                            .concat(n.sizeAfter, " bytes (")
+                            .concat(n.compressionRatio.toFixed(2), "x)"),
                     );
-            } else {
-                var t, n;
-                let r = null != (n = null == (t = e[0]) ? void 0 : t.reason) ? n : "unknown";
-                (this.uploadAnalytics.conversionFailureReason = r),
-                    D.log("webp conversion skipped for ".concat(this.id, ": ").concat(r));
+            else {
+                let t = null != (e = n.reason) ? e : "unknown";
+                (this.uploadAnalytics.conversionFailureReason = t),
+                    D.log("webp conversion skipped for ".concat(this.id, ": ").concat(t));
             }
         } catch (e) {
             (this.uploadAnalytics.conversionFailureReason = "unknown_error"),
                 D.warn("webp conversion failed for ".concat(this.id, ":"), e);
         }
-        this.uploadAnalytics.timing.compressTimeMs = Math.round(performance.now() - e);
+        this.uploadAnalytics.timing.compressTimeMs =
+            null != (t = null == n ? void 0 : n.compressTimeMs) ? t : Math.round(performance.now() - r);
     }
     handleError(e) {
         this.setStatus("ERROR"), (this.error = e), this.trackUploadFinished("ERROR");
@@ -765,6 +767,14 @@ class U extends I.ZP {
             (this._abortController = new AbortController()),
             null != this.origin &&
                 (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : I.BS[this.origin]),
+            e.platform === I.ow.WEB &&
+                null != e.compressionMetadata &&
+                ((this.preCompressionSize = e.compressionMetadata.preCompressionSize),
+                (this.uploadAnalytics.timing.compressTimeMs = e.compressionMetadata.compressTimeMs),
+                (this.uploadAnalytics.convertedMimeType = e.compressionMetadata.convertedMimeType),
+                (this.uploadAnalytics.conversionFailureReason = e.compressionMetadata.conversionFailureReason),
+                (this.uploadAnalytics.timing.hashTimeMs = e.compressionMetadata.hashTimeMs),
+                (this.mimeType = e.compressionMetadata.originalContentType)),
             (this._uploadHttpClient = new S.LD()),
             (this._libdiscoreEnabled = !1);
     }

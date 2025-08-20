@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g });
+r.d(t, { Z: () => b });
 var n = r(951288);
 r(647438);
 var l = r(481060),
@@ -51,7 +51,7 @@ function f(e, t) {
         e
     );
 }
-function b(e) {
+function g(e) {
     var { gameName: t, onClick: r, loading: i = !0 } = e,
         o = (function (e, t) {
             if (null == e) return {};
@@ -74,12 +74,12 @@ function b(e) {
             }
             return l;
         })(e, ["gameName", "onClick", "loading"]);
-    let b = null != t ? t : c.intl.string(c.t.GIWFlJ),
-        g = c.intl.formatToPlainString(c.t["3mb1s7"], { game: b });
+    let g = null != t ? t : c.intl.string(c.t.GIWFlJ),
+        b = c.intl.formatToPlainString(c.t["3mb1s7"], { game: g });
     return i
         ? (0, n.jsx)("div", { className: s.loadingCover })
         : (0, n.jsx)(l.ua7, {
-              text: g,
+              text: b,
               children: (e) =>
                   (0, n.jsxs)(
                       l.P3F,
@@ -109,12 +109,12 @@ function b(e) {
                   ),
           });
 }
-function g(e) {
+function b(e) {
     let { userId: t, games: r, isGameFetching: a, isSuggestedGamesLoading: s, onDismiss: d, onClick: f } = e,
-        g = (0, i.Dt)();
+        b = (0, i.Dt)();
     return (0, n.jsxs)("aside", {
         className: u.container,
-        "aria-labelledby": g,
+        "aria-labelledby": b,
         children: [
             (0, n.jsxs)("div", {
                 className: u.header,
@@ -129,7 +129,7 @@ function g(e) {
                         }),
                     }),
                     (0, n.jsx)(l.X6q, {
-                        id: g,
+                        id: b,
                         variant: "text-xs/medium",
                         color: "text-secondary",
                         children: c.intl.string(c.t.zMUr6e),
@@ -140,7 +140,7 @@ function g(e) {
                 games: r,
                 renderGame: (e) => {
                     let { applicationId: r, gameName: l, imageSrc: i } = e;
-                    return (0, n.jsx)(b, {
+                    return (0, n.jsx)(g, {
                         onClick: () => f(r, l, i),
                         userId: t,
                         loading: s || a(r),

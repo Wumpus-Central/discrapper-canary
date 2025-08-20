@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(369566),
     p = t(29899),
     b = t(151545),
-    x = t(744802),
-    g = t(493043),
+    g = t(744802),
+    x = t(493043),
     h = t(864141),
     j = t(264481),
     v = t(693408),
@@ -97,7 +97,7 @@ function P(e) {
                                   }),
                               null != B &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(g.Z, {
+                                      children: (0, r.jsx)(x.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: n,
                                           currentUser: t,
@@ -158,7 +158,7 @@ function P(e) {
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(x.Z, {
+                                      children: (0, r.jsx)(g.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: n,
                                           currentUser: t,

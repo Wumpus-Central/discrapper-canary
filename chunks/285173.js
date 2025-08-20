@@ -1,22 +1,22 @@
-t.d(e, { Z: () => s });
+t.d(e, { Z: () => a });
 var n = t(951288),
     r = t(647438),
     l = t(481060),
     i = t(412899),
-    a = t(231338);
-function s(A) {
+    s = t(231338);
+function a(A) {
     var e;
-    let { guildId: t, role: s, className: o, canRemove: g = !1, onRemove: c = a.dG } = A,
+    let { guildId: t, role: a, className: o, canRemove: g = !1, onRemove: c = s.dG } = A,
         f = (0, l.dQu)(l.TVs.unsafe_rawColors.PRIMARY_300).hex(),
-        v = null != (e = null == s ? void 0 : s.colorString) ? e : f,
-        u = r.useMemo(() => ({ backgroundColor: "".concat(v, "27") }), [v]);
-    return null == s
+        v = null != (e = null == a ? void 0 : a.colorString) ? e : f,
+        h = r.useMemo(() => ({ backgroundColor: "".concat(v, "27") }), [v]);
+    return null == a
         ? null
         : (0, n.jsx)(l.P3F, {
               children: (0, n.jsx)(i.UB, {
                   className: o,
-                  style: u,
-                  role: s,
+                  style: h,
+                  role: a,
                   guildId: t,
                   canRemove: g,
                   onRemove: c,

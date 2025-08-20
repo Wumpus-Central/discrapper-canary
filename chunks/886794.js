@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(687158),
     p = t(899007),
     b = t(648052),
-    x = t(867176),
-    g = t(280885),
+    g = t(867176),
+    x = t(280885),
     h = t(900927),
     j = t(678738),
     v = t(502762),
@@ -88,7 +88,7 @@ function E(e) {
                                 (0, r.jsx)(I.Z, { children: (0, r.jsx)(y.Z, { user: n }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             user: n,
                                             displayProfile: k,
                                             themeType: Z.l.MODAL,
@@ -146,7 +146,7 @@ function E(e) {
                                                     fade: !0,
                                                     className: N.scroller,
                                                     children: [
-                                                        (0, r.jsx)(g.Z, {
+                                                        (0, r.jsx)(x.Z, {
                                                             userId: n.id,
                                                             userBio: null == k ? void 0 : k.bio,
                                                             setLineClamp: !1,

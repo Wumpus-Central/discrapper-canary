@@ -1,2 +1,2 @@
-a.d(n, { _: () => i });
-let i = "Guild Welcome Screen";
+i.d(n, { _: () => a });
+let a = "Guild Welcome Screen";

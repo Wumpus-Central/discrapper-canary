@@ -1,9 +1,9 @@
 t.d(e, {
     B2: () => C,
     Ov: () => E,
-    Qn: () => h,
+    Qn: () => u,
     _o: () => d,
-    pd: () => u,
+    pd: () => h,
 }),
     t(388685),
     t(415506),
@@ -12,15 +12,15 @@ var n = t(149765),
     r = t(399606),
     l = t(601964),
     i = t(345162),
-    a = t(271383),
-    s = t(485386),
+    s = t(271383),
+    a = t(485386),
     o = t(430824),
     g = t(594174),
     c = t(700785),
     f = t(981631),
     v = t(135899);
-let u = Object.keys(f.Plq),
-    h = Array.from(
+let h = Object.keys(f.Plq),
+    u = Array.from(
         new Set([
             ...v.$X,
             ...f.yYS,
@@ -41,7 +41,7 @@ let u = Object.keys(f.Plq),
             f.Plq.MANAGE_WEBHOOKS,
         ]),
     ).map((A) => {
-        let e = u.find((e) => f.Plq[e] === A);
+        let e = h.find((e) => f.Plq[e] === A);
         if (null == e) throw Error("Permission ".concat(A, " not found in Permissions"));
         return e;
     }),
@@ -51,25 +51,25 @@ function E(A, e) {
 }
 function C(A, e, t) {
     let v = (0, r.e7)([o.Z], () => o.Z.getGuild(e), [e]);
-    return (0, r.e7)([a.ZP, g.default, s.Z], () => {
+    return (0, r.e7)([s.ZP, g.default, a.Z], () => {
         let r = {},
-            o = a.ZP.getMember(e, A),
-            u = g.default.getUser(A);
-        if (null == v || null == o || null == u) return r;
-        let h = s.Z.getEveryoneRole(v),
+            o = s.ZP.getMember(e, A),
+            h = g.default.getUser(A);
+        if (null == v || null == o || null == h) return r;
+        let u = a.Z.getEveryoneRole(v),
             d = c.uB({
-                user: u,
+                user: h,
                 context: v,
             });
         for (let A of t) {
             let e = f.Plq[A];
             if (n.e$(d, e)) {
                 for (let t of ((r[A] = []), o.roles)) {
-                    let n = s.Z.getRole(v.id, t);
+                    let n = a.Z.getRole(v.id, t);
                     null != n && ((0, i.Fs)(n, f.Plq.ADMINISTRATOR) || (0, i._N)(n, e)) && r[A].push(n.id);
                 }
-                ((0, i.Fs)(h, f.Plq.ADMINISTRATOR) || (0, i._N)(h, e)) && r[A].push(h.id),
-                    (0, l.eM)(v, u) && r[A].push(u.id);
+                ((0, i.Fs)(u, f.Plq.ADMINISTRATOR) || (0, i._N)(u, e)) && r[A].push(u.id),
+                    (0, l.eM)(v, h) && r[A].push(h.id);
             }
         }
         return r;

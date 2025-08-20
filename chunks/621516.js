@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(388032),
     y = n(220179),
     w = n(906739),
-    O = n(965358),
-    T = n(420196),
+    T = n(965358),
+    O = n(420196),
     S = n(433075);
 function P(e) {
     let { handleHide: t } = e;
@@ -302,12 +302,12 @@ let I = (e) => {
                                                       className: y.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)("img", {
-                                                              src: I ? T : S,
+                                                              src: I ? O : S,
                                                               alt: "",
                                                               className: y.previewEmbedImage,
                                                           }),
                                                           (0, r.jsx)("img", {
-                                                              src: I ? w : O,
+                                                              src: I ? w : T,
                                                               alt: "",
                                                               className: y.previewEmbedImage,
                                                           }),

@@ -12,13 +12,13 @@ var n = i(481060),
     l = i(531643),
     a = i(141795),
     d = i(476326),
-    u = i(125186),
-    c = i(367907),
+    c = i(125186),
+    u = i(367907),
     h = i(358221),
     p = i(893601),
     g = i(58873),
-    f = i(117530),
-    m = i(594174),
+    m = i(117530),
+    f = i(594174),
     v = i(626135),
     O = i(403182),
     b = i(74538),
@@ -53,22 +53,22 @@ function I(t) {
     return t;
 }
 function Z(t, e) {
-    let i = m.default.getCurrentUser(),
+    let i = f.default.getCurrentUser(),
         n = t.getGuildId(),
         r = O.dg(n),
         s = [],
         o = 0,
         a = 0,
         d = 0,
-        u = [];
+        c = [];
     for (let t of e)
         (d += 1),
             (o += t.size),
             s.push(t.size),
             t.size > a && (a = t.size),
-            null != t.type ? u.push(t.type) : u.push("unknown");
+            null != t.type ? c.push(t.type) : c.push("unknown");
     if (a > r) {
-        (0, c.yw)(S.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
+        (0, u.yw)(S.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: t.id,
             guild_id: n,
             user_individual_file_size_limit: r,
@@ -76,7 +76,7 @@ function Z(t, e) {
             pre_compression_aggregate_file_size: o,
             num_attachments: d,
             error_type: E.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
-            attachment_mimetypes: u,
+            attachment_mimetypes: c,
         }),
             (0, l.openUploadError)({
                 title: w.intl.string(w.t["/tGlcn"]),
@@ -93,48 +93,63 @@ function Z(t, e) {
 }
 async function P(t, e, i) {
     let { currentGuildId: r } = i,
-        s = (0, p.U)({ location: "UploadPrompt.maybeCompressOversizedFiles" });
-    if ("clipboard" !== e || !s.compressOversizedClipboard || !(0, y.Bf)(t, r)) return t;
-    let o = O.dg(r),
-        l = (t) => 0.5 * t.size <= o;
-    if (t.some((t) => t.size > o && !l(t))) return t;
-    let a = t.filter((t) => t.size > o && l(t));
-    if (0 === a.length) return t;
-    (0, n.showToast)((0, n.createToast)(w.intl.string(w.t.jfKTen), n.ToastType.MESSAGE));
-    let d = await (0, u.LF)(a),
-        c = new Map();
-    return (
-        a.forEach((t, e) => {
-            let i = d[e];
-            i.success && c.set(t, (0, u.ub)(i));
-        }),
-        t.map((t) => c.get(t) || t)
-    );
+        s = (0, p.U)({ location: "UploadPrompt.maybeCompressOversizedFiles" }),
+        o = (t) => ({
+            file: t,
+            compressionMetadata: {
+                originalContentType: t.type,
+                compressTimeMs: 0,
+                preCompressionSize: t.size,
+            },
+        });
+    if ("clipboard" !== e || !s.compressOversizedClipboard || !(0, y.Bf)(t, r)) return t.map(o);
+    let l = O.dg(r),
+        a = (t) => 0.5 * t.size <= l;
+    return t.some((t) => t.size > l && !a(t)) || 0 === t.filter((t) => t.size > l && a(t)).length
+        ? t.map(o)
+        : ((0, n.showToast)((0, n.createToast)(w.intl.string(w.t.jfKTen), n.ToastType.MESSAGE)),
+          await Promise.all(
+              t.map(async (t) => {
+                  let e = await (0, c.lG)(t);
+                  return {
+                      file: e.success ? (0, c.ub)(e) : t,
+                      compressionMetadata: {
+                          originalContentType: t.type,
+                          compressTimeMs: e.compressTimeMs,
+                          preCompressionSize: t.size,
+                          convertedMimeType: e.success ? "image/webp" : void 0,
+                          conversionFailureReason: e.success ? void 0 : e.reason,
+                          hashTimeMs: e.hashTimeMs,
+                      },
+                  };
+              }),
+          ));
 }
 async function C(t, e, i) {
     let {
         filesMetadata: n,
-        requireConfirm: u = !0,
-        showLargeMessageDialog: c = !1,
+        requireConfirm: c = !0,
+        showLargeMessageDialog: u = !1,
         isThumbnail: p = !1,
-        origin: m,
+        origin: f,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (t.length < 1) return;
     if (null != n && n.length !== t.length) throw Error("Unexpected mismatch between files and file metadata");
     let O = e.getGuildId(),
-        b = Array.from(t).map((t) => t.type),
-        T = await P(Array.from(t), m, {
+        b = await P(Array.from(t), f, {
             channel: e,
             currentGuildId: O,
-        });
-    if ((0, y.Bf)(T, O)) return void Z(e, T);
-    if (f.Z.getUploadCount(e.id, i) + T.length > S.dN1) {
+        }),
+        T = b.map((t) => t.file),
+        C = b.map((t) => t.compressionMetadata);
+    if ((0, y.Bf)(T, O)) return void Z(e, Array.from(t));
+    if (m.Z.getUploadCount(e.id, i) + T.length > S.dN1) {
         (0, l.openUploadError)({
             title: w.intl.string(w.t.wOr6hI),
             help: w.intl.formatToPlainString(w.t["qqyp/f"], { limit: S.dN1 }),
         }),
             v.default.track(S.rMx.UPLOAD_FILE_LIMIT_ERROR, {
-                existing_count: f.Z.getUploadCount(e.id, i),
+                existing_count: m.Z.getUploadCount(e.id, i),
                 new_count: T.length,
             });
         return;
@@ -143,37 +158,39 @@ async function C(t, e, i) {
         ((e.type !== S.d4z.GUILD_VOICE && e.type !== S.d4z.GUILD_STAGE_VOICE) ||
             h.Z.getChatOpen(e.id) ||
             r.Z.updateChatOpen(e.id, !0),
-        u)
+        c)
     ) {
-        let t = T.map((t, e) =>
-            I(
+        let t = T.map((t, e) => {
+            let i = C[e];
+            return I(
                 {
                     file: t,
                     platform: d.ow.WEB,
                     isThumbnail: p,
-                    origin: m,
-                    originalContentType: b[e],
+                    origin: f,
+                    compressionMetadata: i,
                 },
                 null == n ? void 0 : n[e],
-            ),
-        );
+            );
+        });
         o.Z.addFiles({
             files: t,
             channelId: e.id,
-            showLargeMessageDialog: c,
+            showLargeMessageDialog: u,
             draftType: i,
         });
     } else {
         let t = T.map((t, i) => {
-            let r = null != n ? n[i] : {};
+            let r = null != n ? n[i] : {},
+                s = C[i];
             return new a.nH(
                 I(
                     {
                         file: t,
                         platform: d.ow.WEB,
                         isThumbnail: p,
-                        origin: m,
-                        originalContentType: b[i],
+                        origin: f,
+                        compressionMetadata: s,
                     },
                     r,
                 ),

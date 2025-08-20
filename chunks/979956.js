@@ -1,7 +1,7 @@
 i.d(e, {
     BK: () => a,
     Bf: () => d,
-    KZ: () => u,
+    KZ: () => c,
 }),
     i(539854);
 var n = i(476326),
@@ -20,6 +20,6 @@ function a(t, e) {
 function d(t, e) {
     return r.nA(t, e) || r.vY(t);
 }
-function u(t) {
+function c(t) {
     return t.reduce((t, e) => (e.item.platform === n.ow.WEB && t.push(e.item.file), t), []);
 }

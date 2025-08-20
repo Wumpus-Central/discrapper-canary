@@ -3,15 +3,15 @@ var n = t(951288),
     r = t(647438),
     l = t(120356),
     i = t.n(l),
-    a = t(913527),
-    s = t.n(a),
+    s = t(913527),
+    a = t.n(s),
     o = t(399606),
     g = t(481060),
     c = t(480137),
     f = t(906732),
     v = t(376923),
-    u = t(472596),
-    h = t(987707),
+    h = t(472596),
+    u = t(987707),
     d = t(909746),
     E = t(501801),
     C = t(884902),
@@ -23,30 +23,30 @@ var n = t(951288),
     I = t(388032),
     H = t(87437),
     b = t(938556),
-    O = t(87819);
-function Q(A) {
+    Q = t(87819);
+function O(A) {
     var e, t;
-    let { log: l, member: a, guild: c } = A,
-        { analyticsLocations: h } = (0, f.ZP)(),
+    let { log: l, member: s, guild: c } = A,
+        { analyticsLocations: u } = (0, f.ZP)(),
         w = d.nm(l),
         M = d.QM(l),
-        O = null == (e = d.V$(p.zUn.REASON, l)) ? void 0 : e.newValue,
-        Q = d.J5(l),
+        Q = null == (e = d.V$(p.zUn.REASON, l)) ? void 0 : e.newValue,
+        O = d.J5(l),
         P = (0, v.LJ)(l.id),
-        j = (0, o.e7)([B.ZP], () => (null != l.userId ? B.ZP.getMember(a.guildId, l.userId) : null), [
-            a.guildId,
+        V = (0, o.e7)([B.ZP], () => (null != l.userId ? B.ZP.getMember(s.guildId, l.userId) : null), [
+            s.guildId,
             l.userId,
         ]),
-        V = (0, C.X7)(
-            null == j ? void 0 : j.guildId,
-            null == j ? void 0 : j.userId,
-            null != (t = null == j ? void 0 : j.colorStrings) ? t : null,
+        j = (0, C.X7)(
+            null == V ? void 0 : V.guildId,
+            null == V ? void 0 : V.userId,
+            null != (t = null == V ? void 0 : V.colorStrings) ? t : null,
         ),
         m = r.useCallback(
             (A) => (e) => {
-                e.preventDefault(), e.stopPropagation(), null != A && (0, u.RE)(A, h);
+                e.preventDefault(), e.stopPropagation(), null != A && (0, h.RE)(A, u);
             },
-            [h],
+            [u],
         ),
         T = r.useCallback(
             () =>
@@ -60,7 +60,7 @@ function Q(A) {
                               return (0, n.jsx)(g.P3F, {
                                   tag: "span",
                                   className: H.username,
-                                  onClick: m(j),
+                                  onClick: m(V),
                                   onMouseEnter: t,
                                   onMouseLeave: r,
                                   children: (0, n.jsxs)(g.Text, {
@@ -69,16 +69,16 @@ function Q(A) {
                                       children: [
                                           "@",
                                           (0, n.jsx)(g.PUh, {
-                                              name: D.ZP.getName(a.guildId, null, l.user),
-                                              colorString: null != (e = null == j ? void 0 : j.colorString) ? e : null,
-                                              colorStrings: V,
+                                              name: D.ZP.getName(s.guildId, null, l.user),
+                                              colorString: null != (e = null == V ? void 0 : V.colorString) ? e : null,
+                                              colorStrings: j,
                                           }),
                                       ],
                                   }),
                               });
                           },
                       }),
-            [m, l.user, a.guildId, j, V],
+            [m, l.user, s.guildId, V, j],
         )();
     return (0, n.jsxs)("div", {
         className: i()(b.modInfoItem, H.auditLogItem),
@@ -99,7 +99,7 @@ function Q(A) {
                                 (0, n.jsxs)(g.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: ["(", "string" == typeof M ? M : s()(M).fromNow(), ")"],
+                                    children: ["(", "string" == typeof M ? M : a()(M).fromNow(), ")"],
                                 }),
                         ],
                     }),
@@ -113,28 +113,11 @@ function Q(A) {
                     }),
                 ],
             }),
-            null != O &&
+            null != Q &&
                 (0, n.jsx)("div", {
                     className: H.auditLogSecondaryContainer,
                     children: (0, n.jsxs)("div", {
                         className: H.auditLogReason,
-                        children: [
-                            T,
-                            (0, n.jsx)(g.Text, {
-                                variant: "text-sm/normal",
-                                color: "text-muted",
-                                tag: "span",
-                                children: O,
-                            }),
-                        ],
-                    }),
-                }),
-            null == O &&
-                null != Q &&
-                (0, n.jsx)("div", {
-                    className: H.auditLogSecondaryContainer,
-                    children: (0, n.jsxs)("div", {
-                        className: H.auditLogSecondary,
                         children: [
                             T,
                             (0, n.jsx)(g.Text, {
@@ -146,8 +129,25 @@ function Q(A) {
                         ],
                     }),
                 }),
-            null == O &&
-                null == Q &&
+            null == Q &&
+                null != O &&
+                (0, n.jsx)("div", {
+                    className: H.auditLogSecondaryContainer,
+                    children: (0, n.jsxs)("div", {
+                        className: H.auditLogSecondary,
+                        children: [
+                            T,
+                            (0, n.jsx)(g.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                tag: "span",
+                                children: O,
+                            }),
+                        ],
+                    }),
+                }),
+            null == Q &&
+                null == O &&
                 (0, n.jsx)("div", {
                     className: H.auditLogSecondaryContainer,
                     children: (0, n.jsx)("div", {
@@ -171,8 +171,8 @@ function Q(A) {
 function P(A) {
     let { member: e } = A,
         t = (0, o.e7)([w.Z], () => w.Z.getGuild(e.guildId), [e.guildId]),
-        l = (0, o.e7)([h.Z], () => {
-            let A = h.Z.logs;
+        l = (0, o.e7)([u.Z], () => {
+            let A = u.Z.logs;
             return null == A || null == t ? [] : d._$(A, t);
         }, [t]);
     return (r.useEffect(() => {
@@ -184,13 +184,13 @@ function P(A) {
         ? null
         : (0, n.jsx)(g.xJW, {
               title: I.intl.string(I.t.flCxLi),
-              titleClassName: O.infoTitle,
+              titleClassName: Q.infoTitle,
               children:
                   l.length > 0
                       ? (0, n.jsx)(M.WM, {
                             children: l.map((A) =>
                                 (0, n.jsx)(
-                                    Q,
+                                    O,
                                     {
                                         log: A,
                                         member: e,

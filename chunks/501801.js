@@ -1,7 +1,7 @@
 t.d(e, {
-    mp: () => V,
+    mp: () => j,
     tP: () => m,
-    xO: () => O,
+    xO: () => Q,
 }),
     t(539854),
     t(953529);
@@ -9,15 +9,15 @@ var n = t(951288),
     r = t(647438),
     l = t(120356),
     i = t.n(l),
-    a = t(392711),
-    s = t.n(a),
+    s = t(392711),
+    a = t.n(s),
     o = t(913527),
     g = t.n(o),
     c = t(866442),
     f = t(481060),
     v = t(596454),
-    u = t(835473),
-    h = t(479099),
+    h = t(835473),
+    u = t(479099),
     d = t(592125),
     E = t(485386),
     C = t(594174),
@@ -29,18 +29,18 @@ var n = t(951288),
     I = t(981631),
     H = t(388032),
     b = t(404211);
-function O(A, e) {
+function Q(A, e) {
     let t = p.vc[A.targetType];
     return null != t && !0 === t[e.key];
 }
-let Q = {
+let O = {
     [I.vB8.CREATE]: b.typeCreate,
     [I.vB8.UPDATE]: b.typeUpdate,
     [I.vB8.DELETE]: b.typeDelete,
 };
 function P(A) {
     let { applicationId: e } = A,
-        t = (0, u.q)(e);
+        t = (0, h.q)(e);
     return null == t
         ? null
         : (0, n.jsx)(f.Text, {
@@ -48,7 +48,7 @@ function P(A) {
               children: t.name,
           });
 }
-function j(A, e) {
+function V(A, e) {
     return (0, n.jsx)(
         "div",
         {
@@ -58,13 +58,13 @@ function j(A, e) {
         A,
     );
 }
-class V extends r.PureComponent {
+class j extends r.PureComponent {
     render() {
         let { actionType: A, targetType: e, action: t, themeOverride: r } = this.props,
             l = null != r ? b["themeOverride".concat((0, D.De)(r))] : null,
-            a = i()(
+            s = i()(
                 b.icon,
-                Q[A],
+                O[A],
                 t === I.rsA.MESSAGE_DELETE
                     ? b.targetMessage
                     : t === I.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
@@ -101,20 +101,20 @@ class V extends r.PureComponent {
                         }[e],
                 l,
             );
-        return (0, n.jsx)("div", { className: a });
+        return (0, n.jsx)("div", { className: s });
     }
 }
 function m(A) {
-    let { log: e, guild: t, onContentClick: l, className: a } = A,
+    let { log: e, guild: t, onContentClick: l, className: s } = A,
         o = r.useCallback(
             (A) => {
                 if (null == e.changes) return null;
                 let o = 0,
-                    u = s()
+                    h = a()
                         .flatten(
                             e.changes.map((l) => {
-                                if (O(e, l)) return null;
-                                let { oldValue: i, newValue: a } = (() => {
+                                if (Q(e, l)) return null;
+                                let { oldValue: i, newValue: s } = (() => {
                                         if (
                                             (e.action === I.rsA.CHANNEL_UPDATE || e.action === I.rsA.CHANNEL_CREATE) &&
                                             l.key === I.zUn.TYPE
@@ -144,7 +144,7 @@ function m(A) {
                                               }
                                             : l;
                                     })(),
-                                    u = (() => {
+                                    h = (() => {
                                         if (e.action === I.rsA.MEMBER_ROLE_UPDATE)
                                             return (function (A) {
                                                 let { newValue: e } = A;
@@ -235,20 +235,20 @@ function m(A) {
                                                                 : void 0;
                                                         return null == n ? null : "@".concat(n);
                                                     },
-                                                    a = (A) => {
+                                                    s = (A) => {
                                                         var e;
                                                         let t = null == (e = d.Z.getChannel(A)) ? void 0 : e.name;
                                                         return null == t ? null : "#".concat(t);
                                                     },
-                                                    o = s().keyBy(null != l ? l : [], "id"),
-                                                    g = s().keyBy(null != r ? r : [], "id"),
-                                                    c = s()
+                                                    o = a().keyBy(null != l ? l : [], "id"),
+                                                    g = a().keyBy(null != r ? r : [], "id"),
+                                                    c = a()
                                                         .difference(Object.keys(g), Object.keys(o))
                                                         .map((A) => g[A]),
-                                                    v = s()
+                                                    v = a()
                                                         .difference(Object.keys(o), Object.keys(g))
                                                         .map((A) => o[A]),
-                                                    u = s().intersection(Object.keys(g), Object.keys(o));
+                                                    h = a().intersection(Object.keys(g), Object.keys(o));
                                                 return (0, n.jsxs)(
                                                     "ul",
                                                     {
@@ -259,10 +259,10 @@ function m(A) {
                                                                         role_ids: t,
                                                                         channel_ids: r,
                                                                         title: l,
-                                                                        id: s,
+                                                                        id: a,
                                                                     } = A,
                                                                     o = (null != t ? t : []).map(i).filter(w.lm),
-                                                                    g = (null != r ? r : []).map(a).filter(w.lm);
+                                                                    g = (null != r ? r : []).map(s).filter(w.lm);
                                                                 return (0, n.jsxs)(
                                                                     "li",
                                                                     {
@@ -271,7 +271,7 @@ function m(A) {
                                                                                 className:
                                                                                     b.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, n.jsx)(V, {
+                                                                                    (0, n.jsx)(j, {
                                                                                         actionType: I.vB8.CREATE,
                                                                                         targetType: e.targetType,
                                                                                         action: e.action,
@@ -312,7 +312,7 @@ function m(A) {
                                                                             }),
                                                                         ],
                                                                     },
-                                                                    s,
+                                                                    a,
                                                                 );
                                                             }),
                                                             v.map((A) =>
@@ -322,7 +322,7 @@ function m(A) {
                                                                         children: (0, n.jsxs)("div", {
                                                                             className: b.onboardingChangeLogItemTitle,
                                                                             children: [
-                                                                                (0, n.jsx)(V, {
+                                                                                (0, n.jsx)(j, {
                                                                                     actionType: I.vB8.DELETE,
                                                                                     targetType: e.targetType,
                                                                                     action: e.action,
@@ -340,24 +340,24 @@ function m(A) {
                                                                     A.id,
                                                                 ),
                                                             ),
-                                                            u.map((A) =>
+                                                            h.map((A) =>
                                                                 ((A, t) => {
                                                                     let { title: r, id: l } = t,
                                                                         o = A.role_ids.map(i).filter(w.lm),
-                                                                        g = A.channel_ids.map(a).filter(w.lm),
+                                                                        g = A.channel_ids.map(s).filter(w.lm),
                                                                         c = t.role_ids.map(i).filter(w.lm),
-                                                                        v = t.channel_ids.map(a).filter(w.lm),
-                                                                        u = s().difference(c, o),
-                                                                        h = s().difference(o, c),
-                                                                        d = s().difference(v, g),
-                                                                        E = s().difference(g, v),
+                                                                        v = t.channel_ids.map(s).filter(w.lm),
+                                                                        h = a().difference(c, o),
+                                                                        u = a().difference(o, c),
+                                                                        d = a().difference(v, g),
+                                                                        E = a().difference(g, v),
                                                                         C = [];
-                                                                    return (s().isEqual(A.title, t.title) ||
+                                                                    return (a().isEqual(A.title, t.title) ||
                                                                         C.push("title"),
-                                                                    s().isEqual(A.description, t.description) ||
+                                                                    a().isEqual(A.description, t.description) ||
                                                                         C.push("description"),
-                                                                    0 === u.length &&
-                                                                        0 === h.length &&
+                                                                    0 === h.length &&
+                                                                        0 === u.length &&
                                                                         0 === d.length &&
                                                                         0 === E.length &&
                                                                         0 === C.length)
@@ -370,7 +370,7 @@ function m(A) {
                                                                                           className:
                                                                                               b.onboardingChangeLogItemTitle,
                                                                                           children: [
-                                                                                              (0, n.jsx)(V, {
+                                                                                              (0, n.jsx)(j, {
                                                                                                   actionType:
                                                                                                       I.vB8.UPDATE,
                                                                                                   targetType:
@@ -392,7 +392,7 @@ function m(A) {
                                                                                           className:
                                                                                               b.onboardingChangeLogItemChanges,
                                                                                           children: [
-                                                                                              u.length > 0 &&
+                                                                                              h.length > 0 &&
                                                                                                   (0, n.jsx)(f.Text, {
                                                                                                       variant:
                                                                                                           "text-md/normal",
@@ -402,13 +402,13 @@ function m(A) {
                                                                                                                   "R+km+f"
                                                                                                               ],
                                                                                                               {
-                                                                                                                  roles: u.join(
+                                                                                                                  roles: h.join(
                                                                                                                       ", ",
                                                                                                                   ),
                                                                                                               },
                                                                                                           ),
                                                                                                   }),
-                                                                                              h.length > 0 &&
+                                                                                              u.length > 0 &&
                                                                                                   (0, n.jsx)(f.Text, {
                                                                                                       variant:
                                                                                                           "text-md/normal",
@@ -417,7 +417,7 @@ function m(A) {
                                                                                                               H.t
                                                                                                                   .xIVRoa,
                                                                                                               {
-                                                                                                                  roles: h.join(
+                                                                                                                  roles: u.join(
                                                                                                                       ", ",
                                                                                                                   ),
                                                                                                               },
@@ -501,12 +501,12 @@ function m(A) {
                                         )
                                             return (function (A, e) {
                                                 let { oldValue: t, newValue: r, key: l } = A,
-                                                    { targetType: i, action: a } = e;
+                                                    { targetType: i, action: s } = e;
                                                 switch (l) {
                                                     case I.zUn.WELCOME_MESSAGE:
                                                         return ((A, e) => {
-                                                            var t, r, l, i, a;
-                                                            let s = C.default.getUser(
+                                                            var t, r, l, i, s;
+                                                            let a = C.default.getUser(
                                                                     null == e || null == (t = e.author_ids)
                                                                         ? void 0
                                                                         : t[0],
@@ -515,7 +515,7 @@ function m(A) {
                                                                     null == (r = A.author_ids) ? void 0 : r[0],
                                                                 ),
                                                                 g =
-                                                                    (null == s ? void 0 : s.id) !==
+                                                                    (null == a ? void 0 : a.id) !==
                                                                     (null == o ? void 0 : o.id)
                                                                         ? (0, n.jsx)("li", {
                                                                               children: (0, n.jsx)("div", {
@@ -529,9 +529,9 @@ function m(A) {
                                                                                               oldUser:
                                                                                                   null !=
                                                                                                   (l =
-                                                                                                      null == s
+                                                                                                      null == a
                                                                                                           ? void 0
-                                                                                                          : s.username)
+                                                                                                          : a.username)
                                                                                                       ? l
                                                                                                       : H.intl.string(
                                                                                                             H.t.PoWNfX,
@@ -565,11 +565,11 @@ function m(A) {
                                                                                           {
                                                                                               oldMessage:
                                                                                                   null !=
-                                                                                                  (a =
+                                                                                                  (s =
                                                                                                       null == e
                                                                                                           ? void 0
                                                                                                           : e.message)
-                                                                                                      ? a
+                                                                                                      ? s
                                                                                                       : H.intl.string(
                                                                                                             H.t.PoWNfX,
                                                                                                         ),
@@ -588,8 +588,8 @@ function m(A) {
                                                         return ((A, e) => {
                                                             let t = A.map((A) => A.channel_id),
                                                                 r = e.map((A) => A.channel_id),
-                                                                l = s().difference(r, t),
-                                                                o = s().difference(t, r),
+                                                                l = a().difference(r, t),
+                                                                o = a().difference(t, r),
                                                                 g = e.filter((A) => l.includes(A.channel_id)),
                                                                 c = A.filter((A) => o.includes(A.channel_id));
                                                             return (0, n.jsxs)("ul", {
@@ -602,10 +602,10 @@ function m(A) {
                                                                                     className:
                                                                                         b.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, n.jsx)(V, {
+                                                                                        (0, n.jsx)(j, {
                                                                                             actionType: I.vB8.CREATE,
                                                                                             targetType: i,
-                                                                                            action: a,
+                                                                                            action: s,
                                                                                         }),
                                                                                         (0, n.jsx)(f.Text, {
                                                                                             variant: "text-md/normal",
@@ -628,10 +628,10 @@ function m(A) {
                                                                                     className:
                                                                                         b.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, n.jsx)(V, {
+                                                                                        (0, n.jsx)(j, {
                                                                                             actionType: I.vB8.DELETE,
                                                                                             targetType: i,
-                                                                                            action: a,
+                                                                                            action: s,
                                                                                         }),
                                                                                         (0, n.jsx)(f.Text, {
                                                                                             variant: "text-md/normal",
@@ -653,8 +653,8 @@ function m(A) {
                                                         return ((A, e) => {
                                                             let t = A.map((A) => A.channel_id),
                                                                 r = e.map((A) => A.channel_id),
-                                                                l = s().difference(r, t),
-                                                                o = s().difference(t, r),
+                                                                l = a().difference(r, t),
+                                                                o = a().difference(t, r),
                                                                 g = e.filter((A) => l.includes(A.channel_id)),
                                                                 c = A.filter((A) => o.includes(A.channel_id));
                                                             return (0, n.jsxs)("ul", {
@@ -667,10 +667,10 @@ function m(A) {
                                                                                     className:
                                                                                         b.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, n.jsx)(V, {
+                                                                                        (0, n.jsx)(j, {
                                                                                             actionType: I.vB8.CREATE,
                                                                                             targetType: i,
-                                                                                            action: a,
+                                                                                            action: s,
                                                                                         }),
                                                                                         (0, n.jsx)(f.Text, {
                                                                                             variant: "text-md/normal",
@@ -693,10 +693,10 @@ function m(A) {
                                                                                     className:
                                                                                         b.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, n.jsx)(V, {
+                                                                                        (0, n.jsx)(j, {
                                                                                             actionType: I.vB8.DELETE,
                                                                                             targetType: i,
-                                                                                            action: a,
+                                                                                            action: s,
                                                                                         }),
                                                                                         (0, n.jsx)(f.Text, {
                                                                                             variant: "text-md/normal",
@@ -726,22 +726,22 @@ function m(A) {
                                     let {
                                         changeItem: l,
                                         subChanges: i,
-                                        changeNumber: a,
-                                        log: s,
+                                        changeNumber: s,
+                                        log: a,
                                         oldValue: o,
                                         newValue: g,
-                                        change: u,
+                                        change: h,
                                     } = A;
-                                    if (null == l) return console.warn("No change string for", u), null;
+                                    if (null == l) return console.warn("No change string for", h), null;
                                     let d = H.intl.format(l, {
                                         oldValue: o,
                                         newValue: g,
                                         count: Array.isArray(g) ? g.length : null,
                                         subtarget:
-                                            null != (t = null != (e = s.options.subtarget) ? e : u.subtarget)
+                                            null != (t = null != (e = a.options.subtarget) ? e : h.subtarget)
                                                 ? t
                                                 : null,
-                                        newColorHook: (A, e) => j(e, u.newValue),
+                                        newColorHook: (A, e) => V(e, h.newValue),
                                         newColorsHook: (A, e) => {
                                             let { primary_color: t, secondary_color: l, tertiary_color: i } = g;
                                             return (0, n.jsx)(
@@ -758,7 +758,7 @@ function m(A) {
                                                                             .concat(t > 0 ? ", " : "")
                                                                             .concat((0, c.Rf)(A).toUpperCase(), " "),
                                                                     }),
-                                                                    j(e, (0, c.Rf)(A)),
+                                                                    V(e, (0, c.Rf)(A)),
                                                                 ],
                                                             },
                                                             t,
@@ -768,22 +768,22 @@ function m(A) {
                                                 e,
                                             );
                                         },
-                                        oldColorHook: (A, e) => j(e, u.oldValue),
+                                        oldColorHook: (A, e) => V(e, h.oldValue),
                                         oldTagHook: (A, e) =>
                                             (0, n.jsx)(
-                                                h.Z,
+                                                u.Z,
                                                 {
                                                     tag: o,
-                                                    size: h.Z.Sizes.SMALL,
+                                                    size: u.Z.Sizes.SMALL,
                                                 },
                                                 e,
                                             ),
                                         newTagHook: (A, e) =>
                                             (0, n.jsx)(
-                                                h.Z,
+                                                u.Z,
                                                 {
                                                     tag: g,
-                                                    size: h.Z.Sizes.SMALL,
+                                                    size: u.Z.Sizes.SMALL,
                                                 },
                                                 e,
                                             ),
@@ -828,9 +828,9 @@ function m(A) {
                                                                   default:
                                                                       return "text-feedback-warning";
                                                               }
-                                                          })(s.actionType),
+                                                          })(a.actionType),
                                                           children: [
-                                                              a < 10 ? "0".concat(a) : a,
+                                                              s < 10 ? "0".concat(s) : s,
                                                               (0, n.jsx)("span", {
                                                                   className: b.dash,
                                                                   children: "\u2014",
@@ -849,15 +849,15 @@ function m(A) {
                                                       }),
                                                   ],
                                               },
-                                              a,
+                                              s,
                                           );
                                 })({
                                     changeItem: "function" == typeof D ? D(l) : D,
-                                    subChanges: u,
+                                    subChanges: h,
                                     changeNumber: ++o,
                                     log: e,
                                     oldValue: i,
-                                    newValue: a,
+                                    newValue: s,
                                     change: l,
                                 });
                             }),
@@ -865,11 +865,11 @@ function m(A) {
                         .filter(w.lm);
                 return (0, n.jsx)(f.P3F, {
                     onClick: l,
-                    className: i()(b.changeDetails, a),
-                    children: u,
+                    className: i()(b.changeDetails, s),
+                    children: h,
                 });
             },
-            [e, t, l, a],
+            [e, t, l, s],
         );
     return r.useMemo(() => {
         switch (e.targetType) {

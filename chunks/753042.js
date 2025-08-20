@@ -3,15 +3,15 @@ var n = t(951288),
     r = t(647438),
     l = t(399606),
     i = t(481060),
-    a = t(388905),
-    s = t(527379),
+    s = t(388905),
+    a = t(527379),
     o = t(376923),
     g = t(16829),
     c = t(430824),
     f = t(944486),
     v = t(189432),
-    u = t(776767),
-    h = t(981631),
+    h = t(776767),
+    u = t(981631),
     d = t(388032),
     E = t(87819);
 function C(A) {
@@ -22,20 +22,20 @@ function C(A) {
         w = (0, o.LD)(e.userId),
         D = (0, o.wi)(e.userId, e.guildId);
     return (r.useEffect(() => {
-        (0, s.zO)(e.guildId);
+        (0, a.zO)(e.guildId);
     }, [e.guildId]),
     null == t)
         ? null
         : (0, n.jsx)(i.xJW, {
               title: d.intl.string(d.t["ldCE/v"]),
               titleClassName: E.infoTitle,
-              children: (0, n.jsxs)(u.WM, {
+              children: (0, n.jsxs)(h.WM, {
                   children: [
-                      (0, n.jsx)(u._2, {
+                      (0, n.jsx)(h._2, {
                           icon: (0, n.jsx)(i.lZ8, {
                               size: "custom",
-                              width: u.Mn,
-                              height: u.Mn,
+                              width: h.Mn,
+                              height: h.Mn,
                           }),
                           name: (0, n.jsx)(i.Text, {
                               variant: "text-sm/medium",
@@ -45,23 +45,23 @@ function C(A) {
                           description: C
                               ? (0, n.jsx)(i.sV5, {
                                     size: "custom",
-                                    width: u.Mn,
-                                    height: u.Mn,
+                                    width: h.Mn,
+                                    height: h.Mn,
                                     color: i.TVs.colors.STATUS_POSITIVE,
                                 })
                               : (0, n.jsx)(i.CTb, {
                                     size: "custom",
-                                    width: u.Mn,
-                                    height: u.Mn,
+                                    width: h.Mn,
+                                    height: h.Mn,
                                     color: i.TVs.colors.STATUS_DANGER,
                                 }),
                       }),
                       B !== o.qc.NO_GATE &&
-                          (0, n.jsx)(u._2, {
+                          (0, n.jsx)(h._2, {
                               icon: (0, n.jsx)(i.snC, {
                                   size: "custom",
-                                  width: u.Mn,
-                                  height: u.Mn,
+                                  width: h.Mn,
+                                  height: h.Mn,
                               }),
                               name: (0, n.jsx)(i.Text, {
                                   variant: "text-sm/medium",
@@ -72,23 +72,23 @@ function C(A) {
                                   B === o.qc.AGREED
                                       ? (0, n.jsx)(i.sV5, {
                                             size: "custom",
-                                            width: u.Mn,
-                                            height: u.Mn,
+                                            width: h.Mn,
+                                            height: h.Mn,
                                             color: i.TVs.colors.STATUS_POSITIVE,
                                         })
                                       : (0, n.jsx)(i.CTb, {
                                             size: "custom",
-                                            width: u.Mn,
-                                            height: u.Mn,
+                                            width: h.Mn,
+                                            height: h.Mn,
                                             color: i.TVs.colors.STATUS_DANGER,
                                         }),
                           }),
-                      (0, n.jsx)(u._2, {
+                      (0, n.jsx)(h._2, {
                           icon: (0, n.jsx)(i.gw7, {
                               size: "custom",
                               color: "currentColor",
-                              width: u.Mn,
-                              height: u.Mn,
+                              width: h.Mn,
+                              height: h.Mn,
                           }),
                           name: (0, n.jsx)(i.Text, {
                               variant: "text-sm/medium",
@@ -101,10 +101,10 @@ function C(A) {
                               children: w,
                           }),
                       }),
-                      (0, n.jsx)(u._2, {
-                          icon: (0, n.jsx)(a.Vj, {
+                      (0, n.jsx)(h._2, {
+                          icon: (0, n.jsx)(s.Vj, {
                               guild: t,
-                              size: a.Vj.Sizes.SMOL,
+                              size: s.Vj.Sizes.SMOL,
                               animate: !1,
                               className: E.guildIcon,
                           }),
@@ -119,11 +119,11 @@ function C(A) {
                               children: D,
                           }),
                       }),
-                      (0, n.jsx)(u._2, {
+                      (0, n.jsx)(h._2, {
                           icon: (0, n.jsx)(i.ejJ, {
                               size: "custom",
-                              width: u.Mn,
-                              height: u.Mn,
+                              width: h.Mn,
+                              height: h.Mn,
                           }),
                           name: (0, n.jsx)(i.Text, {
                               variant: "text-sm/medium",
@@ -139,7 +139,7 @@ function C(A) {
                                   showJoinMethodContextAsFooter: !0,
                                   onClickInviter: (A) => {
                                       let t = f.Z.getChannelId();
-                                      (0, v.r)(e.guildId, A.id, null != t ? t : h.lds);
+                                      (0, v.r)(e.guildId, A.id, null != t ? t : u.lds);
                                   },
                               }),
                           }),

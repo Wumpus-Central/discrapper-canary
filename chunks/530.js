@@ -60,6 +60,7 @@ function g(e) {
                                       shouldWrap: !0,
                                       loop: !0,
                                       inProfile: !0,
+                                      shouldUnderlineOnHover: null != T,
                                   }),
                               })
                             : (0, r.jsx)(o.Text, {

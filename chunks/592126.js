@@ -1,17 +1,17 @@
-t.d(n, { Z: () => o });
-var i = t(442837),
-    r = t(241155),
-    l = t(430824);
-function o(e, n) {
-    return (0, i.cj)([l.Z, r.Z], () => {
-        let t = l.Z.getGuild(e),
-            i = null != t;
+n.d(t, { Z: () => a });
+var i = n(442837),
+    l = n(241155),
+    r = n(430824);
+function a(e, t) {
+    return (0, i.cj)([r.Z, l.Z], () => {
+        let n = r.Z.getGuild(e),
+            i = null != n;
         return (
-            null == t && null != n && (t = r.Z.getCachedGuildByEventId(n)),
+            null == n && null != t && (n = l.Z.getCachedGuildByEventId(t)),
             {
                 isMember: i,
-                guild: t,
+                guild: n,
             }
         );
-    }, [e, n]);
+    }, [e, t]);
 }

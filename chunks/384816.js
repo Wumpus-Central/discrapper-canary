@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(250822),
     p = t(771362),
     b = t(280885),
-    x = t(819602),
-    g = t(78806),
+    g = t(819602),
+    x = t(78806),
     h = t(900927),
     j = t(678738),
     v = t(179828),
@@ -61,7 +61,7 @@ function O(e) {
             N.length > 0 &&
                 (0, r.jsx)(j.Z, {
                     heading: y.intl.string(y.t["Uv/eT0"]),
-                    children: (0, r.jsx)(g.Z, { applicationIds: N }),
+                    children: (0, r.jsx)(x.Z, { applicationIds: N }),
                 }),
             (0, r.jsx)(j.Z, {
                 heading: y.intl.string(y.t.a6XYDw),
@@ -75,7 +75,7 @@ function O(e) {
                 (0, r.jsx)(j.Z, {
                     heading: y.intl.string(y.t["3fe7U1"]),
                     scrollIntoView: P === _.Tb.CONNECTIONS,
-                    children: (0, r.jsx)(x.ZP, {
+                    children: (0, r.jsx)(g.ZP, {
                         connectedAccounts: S,
                         className: I.connections,
                         userId: n.id,
@@ -87,7 +87,7 @@ function O(e) {
                     heading: y.intl.string(y.t.PHjkRE),
                     children: w.map((e) =>
                         (0, r.jsx)(
-                            x.tH,
+                            g.tH,
                             {
                                 className: I.appsConnections,
                                 applicationRoleConnection: e,

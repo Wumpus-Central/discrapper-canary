@@ -257,29 +257,42 @@ let W = Object.freeze({
             ((v === w.XV.length - 2 && "EDITOR" === o) || b === c.Us.EASTER_EGG) && O(!0);
         }, [v, o, b]);
         let D = (e, t) => {
-                if (a.v2EditorEnabled && "SETTINGS" === o) (0, m.XO)(m.wh.CLIENT_THEMES), (0, d.xf)();
-                else if (
+                if (
                     ((0, A.zO)(e.id),
                     z({
                         isPersisted: !E,
                         analyticsLocations: g,
                         themeName: c.Us[e.id],
                     }),
-                    (0, f.ZI)(
-                        {
-                            backgroundGradientPresetId: e.id,
-                            theme: e.theme,
-                            useSystemTheme: E ? L.KW.OFF : void 0,
-                        },
-                        s,
-                    ),
+                    E && a.v2EditorEnabled && "SETTINGS" === o
+                        ? x(e)
+                        : (0, f.ZI)(
+                              {
+                                  backgroundGradientPresetId: e.id,
+                                  theme: e.theme,
+                                  useSystemTheme: E ? L.KW.OFF : void 0,
+                              },
+                              s,
+                          ),
                     null != t)
                 ) {
                     if ((y && O(!1), t <= v || 0 === t)) return void I(0);
                     I((e) => e + 1);
                 }
             },
-            x = () => {
+            x = async (e) => {
+                await (0, f.ZI)(
+                    {
+                        backgroundGradientPresetId: e.id,
+                        theme: e.theme,
+                        useSystemTheme: E ? L.KW.OFF : void 0,
+                    },
+                    j.fy.SLOW_USER_ACTION,
+                ),
+                    (0, m.XO)(m.wh.CLIENT_THEMES),
+                    (0, d.xf)();
+            },
+            M = () => {
                 if (!y) return null;
                 let e = w.qt[c.Us.EASTER_EGG];
                 if (null == e) return null;
@@ -333,7 +346,7 @@ let W = Object.freeze({
                         e.id,
                     ),
                 ),
-                x(),
+                M(),
             ],
         });
     },

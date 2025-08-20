@@ -1,5 +1,5 @@
 t.d(e, {
-    q: () => a,
+    q: () => s,
     z: () => i,
 });
 var n = t(951288);
@@ -31,7 +31,7 @@ function l(A) {
     return A;
 }
 function i(A) {
-    let { guildId: e, userId: i, anaylticsLocations: a, modReportId: s } = A;
+    let { guildId: e, userId: i, anaylticsLocations: s, modReportId: a } = A;
     (0, r.ZDy)(async () => {
         let { default: A } = await t.e("72920").then(t.bind(t, 109730));
         return (t) =>
@@ -41,16 +41,16 @@ function i(A) {
                     {
                         guildId: e,
                         userId: i,
-                        anaylticsLocations: a,
-                        modReportId: s,
+                        anaylticsLocations: s,
+                        modReportId: a,
                     },
                     t,
                 ),
             );
     });
 }
-function a(A) {
-    let { guildId: e, userId: i, anaylticsLocations: a } = A;
+function s(A) {
+    let { guildId: e, userId: i, anaylticsLocations: s } = A;
     (0, r.ZDy)(async () => {
         let { default: A } = await t.e("76233").then(t.bind(t, 171494));
         return (t) =>
@@ -60,7 +60,7 @@ function a(A) {
                     {
                         guildId: e,
                         userId: i,
-                        anaylticsLocations: a,
+                        anaylticsLocations: s,
                     },
                     t,
                 ),

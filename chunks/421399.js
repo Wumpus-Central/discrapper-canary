@@ -195,6 +195,7 @@ function Z(e) {
                       displayNameStyles: es,
                       effectDisplayType: (null == em ? void 0 : em.animate) ? m.F.ANIMATED : m.F.PLAIN,
                       loop: !0,
+                      shouldUnderlineOnHover: null != H,
                   })
                 : eI,
             "data-text": en + er,

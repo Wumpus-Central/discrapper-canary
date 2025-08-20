@@ -1,23 +1,23 @@
-t.d(e, { S: () => s });
+t.d(e, { S: () => a });
 var n = t(951288);
 t(647438);
 var r = t(172751),
     l = t(510918),
     i = t(131085),
-    a = t(215486);
-function s(A) {
+    s = t(215486);
+function a(A) {
     let e = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
     return (0, n.jsx)("div", {
-        className: a.badgeContainer,
+        className: s.badgeContainer,
         children: (0, n.jsx)(r.m0, {
             guildId: A.guildId,
-            textClassName: a.tagText,
+            textClassName: s.tagText,
             guildTag: e,
             guildBadge:
                 "string" == typeof A.badge
                     ? A.badge
                     : (0, n.jsx)(l.v, {
-                          className: a.badgePreview,
+                          className: s.badgePreview,
                           badge: A.badge,
                           width: i.Gg.SIZE_12,
                           height: i.Gg.SIZE_12,

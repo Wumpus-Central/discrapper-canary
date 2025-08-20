@@ -2,8 +2,7 @@ e.exports = {
     headerGuildName: "headerGuildName__949ab",
     headerGuildBadge: "headerGuildBadge__949ab",
     flowerStar: "flowerStar__949ab",
-    main: "main__949ab",
-    close: "close__949ab",
+    modalContent: "modalContent__949ab",
     guildIcon: "guildIcon__949ab",
     header: "header__949ab",
     guildDescription: "guildDescription__949ab",
@@ -16,6 +15,4 @@ e.exports = {
     optionEmoji: "optionEmoji__949ab",
     channelTitleIcon: "channelTitleIcon__949ab",
     channelDescription: "channelDescription__949ab",
-    skip: "skip__949ab",
-    skipColor: "skipColor__949ab",
 };

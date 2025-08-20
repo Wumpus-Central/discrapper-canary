@@ -67,21 +67,25 @@ function _(e) {
             documentsIndexed: O,
         } = e,
         j = (0, d.UX)({ location: "SearchHeader" }),
-        E = (0, p.xd)({
+        E = (0, p.nP)({
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",
         }),
-        S = (0, h.I)(t),
-        { totalFilters: P } = (0, c.hE)(S),
-        I = i.useMemo(() => {
+        S = (0, p.KS)({
+            isXDMSearch: t.type === f.aib.DMS,
+            location: "SearchHeader",
+        }),
+        P = (0, h.I)(t),
+        { totalFilters: I } = (0, c.hE)(P),
+        Z = i.useMemo(() => {
             if (t.type === f.aib.DMS && j) {
                 var e, n;
-                let t = null != (n = null == (e = (0, u.$G)(S).channel_id) ? void 0 : e.length) ? n : 0;
+                let t = null != (n = null == (e = (0, u.$G)(P).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? m.intl.format(m.t.A2dqWF, { filterCount: t }) : m.intl.string(m.t.tc619f);
             }
             return null;
-        }, [j, t.type, S]),
-        Z = i.useMemo(
+        }, [j, t.type, P]),
+        T = i.useMemo(
             () => [
                 {
                     label: m.intl.string(m.t.CbaapK),
@@ -98,33 +102,33 @@ function _(e) {
             ],
             [],
         ),
-        T = i.useCallback(() => {
+        N = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("37979").then(n.bind(n, 238088));
                 return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
             });
         }, [t]),
-        N = i.useMemo(() => (P > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: P }) : m.intl.string(m.t.UdhTtr)), [P]);
+        A = i.useMemo(() => (I > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: I }) : m.intl.string(m.t.UdhTtr)), [I]);
     return (0, r.jsxs)("header", {
-        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != I }),
+        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != Z }),
         children: [
             (0, r.jsx)("div", {
                 className: g.totalResults,
                 role: "status",
                 children: (0, r.jsx)(C, {
                     totalResults: _,
-                    subtitle: I,
+                    subtitle: Z,
                     isIndexing: x,
                     isSearching: v,
                     documentsIndexed: O,
                 }),
             }),
-            E
+            E || S
                 ? (0, r.jsxs)("div", {
                       className: g.searchModeAndFiltersContainer,
                       children: [
                           (0, r.jsx)(o.q4e, {
-                              options: Z,
+                              options: T,
                               value: l,
                               onChange: s,
                               look: o.qQH.CUSTOM,
@@ -133,8 +137,8 @@ function _(e) {
                           }),
                           (0, r.jsx)(o.zxk, {
                               variant: "secondary",
-                              onClick: T,
-                              text: N,
+                              onClick: N,
+                              text: A,
                               icon: o.gXV,
                               size: "sm",
                           }),

@@ -6,17 +6,17 @@ var n = i(951288),
     l = i(442837),
     a = i(481060),
     d = i(11769),
-    u = i(338390),
-    c = i(496675),
+    c = i(338390),
+    u = i(496675),
     h = i(300429),
     p = i(585483),
     g = i(70956),
-    f = i(981631),
-    m = i(388032),
+    m = i(981631),
+    f = i(388032),
     v = i(799567);
 function O(t) {
     let e,
-        { isEnabled: i, rateLimitPerUser: s, isBypassSlowmode: l, slowmodeCooldownGuess: c } = t,
+        { isEnabled: i, rateLimitPerUser: s, isBypassSlowmode: l, slowmodeCooldownGuess: u } = t,
         [h, O] = r.useState(!1);
     r.useEffect(() => {
         function t() {
@@ -26,18 +26,18 @@ function O(t) {
                 }, 1000);
         }
         return (
-            p.S.subscribe(f.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t),
+            p.S.subscribe(m.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t),
             () => {
-                p.S.unsubscribe(f.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t);
+                p.S.unsubscribe(m.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t);
             }
         );
     }, []);
-    let b = (0, u.Z)("SlowmodeIndicator");
+    let b = (0, c.Z)("SlowmodeIndicator");
     if (!i) return null;
     let y = (0, d.k)(s);
-    if (!l && c > 0) {
-        let t = o().duration(c);
-        if (c > g.Z.Millis.HOUR) {
+    if (!l && u > 0) {
+        let t = o().duration(u);
+        if (u > g.Z.Millis.HOUR) {
             let i = "".concat(t.minutes()).padStart(2, "0"),
                 n = "".concat(t.seconds()).padStart(2, "0");
             e = "".concat(t.hours(), ":").concat(i, ":").concat(n);
@@ -45,7 +45,7 @@ function O(t) {
             let i = "".concat(t.seconds()).padStart(2, "0");
             e = "".concat(t.minutes(), ":").concat(i);
         }
-    } else e = l ? (b ? m.intl.string(m.t["8+NidX"]) : m.intl.string(m.t.SSzXvb)) : m.intl.string(m.t.Icu3bW);
+    } else e = l ? (b ? f.intl.string(f.t["8+NidX"]) : f.intl.string(f.t.SSzXvb)) : f.intl.string(f.t.Icu3bW);
     let S = b
         ? (0, n.jsxs)(a.Text, {
               className: v.cooldownText,
@@ -127,10 +127,10 @@ function O(t) {
 function b(t) {
     let { channel: e, isThreadCreation: i = !1 } = t,
         r = (0, l.e7)([h.Z], () => h.Z.getSlowmodeCooldownGuess(e.id, i ? h.S.CreateThread : h.S.SendMessage)),
-        s = (0, l.e7)([c.Z], () =>
+        s = (0, l.e7)([u.Z], () =>
             i
-                ? c.Z.can(f.Plq.MANAGE_THREADS, e)
-                : c.Z.can(f.Plq.MANAGE_CHANNELS, e) || c.Z.can(f.Plq.MANAGE_MESSAGES, e),
+                ? u.Z.can(m.Plq.MANAGE_THREADS, e)
+                : u.Z.can(m.Plq.MANAGE_CHANNELS, e) || u.Z.can(m.Plq.MANAGE_MESSAGES, e),
         ),
         { rateLimitPerUser: o } = e;
     return (0, n.jsx)(O, {

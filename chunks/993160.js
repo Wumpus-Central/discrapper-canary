@@ -13,13 +13,13 @@ var o = t(755721),
     m = t(562831),
     p = t(981631);
 function b(e) {
-    let { user: n, currentUser: t, guildId: b, channelId: x, displayProfile: g, relationshipType: h, onClose: j } = e,
+    let { user: n, currentUser: t, guildId: b, channelId: g, displayProfile: x, relationshipType: h, onClose: j } = e,
         { newestAnalyticsLocation: v } = (0, i.ZP)(),
         _ = (0, c.Z)({
             user: n,
             guildId: b,
-            channelId: x,
-            displayProfile: g,
+            channelId: g,
+            displayProfile: x,
             onClose: j,
         }),
         {

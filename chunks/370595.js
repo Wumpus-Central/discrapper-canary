@@ -4,17 +4,17 @@ t(647438);
 var r = t(481060),
     l = t(50493),
     i = t(388032),
-    a = t(220512),
-    s = t(87819);
+    s = t(220512),
+    a = t(87819);
 function o(A) {
     let { onNavigate: e, backPanel: t = l.k.INFO } = A;
     return (0, n.jsxs)("div", {
-        className: s.header,
+        className: a.header,
         children: [
             (0, n.jsx)("div", {
-                className: s.headerTitle,
+                className: a.headerTitle,
                 children: (0, n.jsxs)(r.P3F, {
-                    className: a.backButton,
+                    className: s.backButton,
                     onClick: () => (null == e ? void 0 : e(t)),
                     children: [
                         (0, n.jsx)(r.whL, {
@@ -31,8 +31,8 @@ function o(A) {
             }),
             (0, n.jsx)(r.M2$, {
                 shortcut: "esc",
-                keyClassName: a.keyComboInner,
-                className: a.keyComboContainer,
+                keyClassName: s.keyComboInner,
+                className: s.keyComboContainer,
             }),
         ],
     });

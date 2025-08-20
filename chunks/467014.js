@@ -1,32 +1,32 @@
-t.d(e, { Z: () => u });
+t.d(e, { Z: () => h });
 var n = t(951288),
     r = t(647438),
     l = t(442837),
     i = t(481060),
-    a = t(433355),
-    s = t(189432),
+    s = t(433355),
+    a = t(189432),
     o = t(356778),
     g = t(776767),
     c = t(50493),
     f = t(388032),
     v = t(87819);
-function u(A) {
+function h(A) {
     let { userId: e, guildId: t } = A,
-        u = (0, l.e7)([a.ZP], () => a.ZP.getGuildSidebarState(t), [t]),
-        { messagesCount: h, linksCount: d, mediaCount: E } = (0, o.P2)(e, t),
-        C = new Intl.NumberFormat(f.intl.currentLocale).format(h),
+        h = (0, l.e7)([s.ZP], () => s.ZP.getGuildSidebarState(t), [t]),
+        { messagesCount: u, linksCount: d, mediaCount: E } = (0, o.P2)(e, t),
+        C = new Intl.NumberFormat(f.intl.currentLocale).format(u),
         B = new Intl.NumberFormat(f.intl.currentLocale).format(d),
         w = new Intl.NumberFormat(f.intl.currentLocale).format(E),
         D = r.useCallback(
             async (A) => {
-                if (null == u) return;
+                if (null == h) return;
                 let n = (0, o.Ow)(e, A, { include_nsfw: !0 });
-                await (0, s.r)(t, e, u.baseChannelId, {
+                await (0, a.r)(t, e, h.baseChannelId, {
                     modViewPanel: c.k.MESSAGE_HISTORY,
                     additionalSearchQuery: n,
                 });
             },
-            [t, u, e],
+            [t, h, e],
         );
     return (0, n.jsx)(i.xJW, {
         title: f.intl.string(f.t.vCn2Tk),
@@ -46,7 +46,7 @@ function u(A) {
                         children: f.intl.string(f.t.OIgYlZ),
                     }),
                     description:
-                        h === o.II
+                        u === o.II
                             ? (0, n.jsx)(i.$jN, {
                                   type: i.RAz.SPINNING_CIRCLE,
                                   className: v.loadingSpinner,
@@ -56,7 +56,7 @@ function u(A) {
                                   color: "interactive-normal",
                                   children: C,
                               }),
-                    onNavigate: h > 0 ? () => D(o.mw.MESSAGES) : void 0,
+                    onNavigate: u > 0 ? () => D(o.mw.MESSAGES) : void 0,
                 }),
                 (0, n.jsx)(g._2, {
                     icon: (0, n.jsx)(i.xPt, {

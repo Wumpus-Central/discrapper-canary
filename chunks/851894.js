@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G });
+n.d(t, { Z: () => B });
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -27,8 +27,9 @@ var r = n(951288),
     N = n(594496),
     R = n(856768),
     P = n(981631),
-    w = n(388032);
-function D(e, t, n) {
+    w = n(388032),
+    D = n(813709);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +42,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,22 +70,22 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = U(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -92,7 +93,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function U(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,45 +102,45 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function U(e) {
+function G(e) {
     (0, l.ZDy)(async () => {
         let { default: t } = await n.e("84509").then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, x({ source: j(x({}, e), { page: P.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, L({ source: M(L({}, e), { page: P.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
-function G(e) {
+function B(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, _.ZP)(d.Z.USER_SETTINGS_GUILD_PROFILE),
         a = (0, s.e7)([v.default], () => {
             let e = v.default.getCurrentUser();
             return o()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        D = (0, s.e7)([y.Z], () => !y.Z.isFetchingProfile(a.id, null == t ? void 0 : t.id)),
-        L = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        k = (0, s.cj)([A.Z], () => j(x({}, A.Z.getAllPending()), { source: A.Z.getSource() })),
-        { source: G, pendingAvatar: B, pendingNameplate: Z } = k,
-        V = M(k, ["source", "pendingAvatar", "pendingNameplate"]),
-        F = (0, b.SD)({
+        x = (0, s.e7)([y.Z], () => !y.Z.isFetchingProfile(a.id, null == t ? void 0 : t.id)),
+        j = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        U = (0, s.cj)([A.Z], () => M(L({}, A.Z.getAllPending()), { source: A.Z.getSource() })),
+        { source: B, pendingAvatar: Z, pendingNameplate: V } = U,
+        F = k(U, ["source", "pendingAvatar", "pendingNameplate"]),
+        H = (0, b.SD)({
             userId: a.id,
-            image: B,
+            image: Z,
         }),
-        H = (0, m.K)({
+        Y = (0, m.K)({
             user: a,
             guildId: null == t ? void 0 : t.id,
         });
     i.useEffect(() => () => c.Z.wait(S.W3), []),
         i.useEffect(() => {
-            null != G &&
+            null != B &&
                 f.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
                     settings_type: "guild",
                     destination_pane: P.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                    source: G,
+                    source: B,
                 });
-        }, [G]);
-    let { enabled: Y } = h.Z.useConfig({ location: "GuildIdentitySettingsPage" });
-    return L
+        }, [B]);
+    let { enabled: W } = h.Z.useConfig({ location: "GuildIdentitySettingsPage" });
+    return j
         ? (0, r.jsx)(u.Z, {})
-        : D
+        : x
           ? (0, r.jsxs)(_.Gt, {
                 value: n,
                 children: [
@@ -159,29 +160,33 @@ function G(e) {
                                       },
                                   }),
                                   (0, r.jsx)(g.Z, {
-                                      profilePreviewTitle: w.intl.formatToPlainString(w.t.Tc0slJ, {
-                                          guildName: null == t ? void 0 : t.name,
+                                      profilePreviewTitle: (0, r.jsx)(l.X6q, {
+                                          variant: "heading-md/medium",
+                                          className: D.profilePreviewTitle,
+                                          children: w.intl.formatToPlainString(w.t.Tc0slJ, {
+                                              guildName: null == t ? void 0 : t.name,
+                                          }),
                                       }),
                                       profilePreview: (0, r.jsx)(
                                           E.Z,
-                                          j(x({}, V), {
-                                              pendingAvatar: F,
+                                          M(L({}, F), {
+                                              pendingAvatar: H,
                                               user: a,
                                               guild: t,
                                               canUsePremiumCustomization: T.ZP.canUsePremiumProfileCustomization(a),
-                                              onUpsellClick: U,
+                                              onUpsellClick: G,
                                           }),
                                       ),
-                                      nameplatePreview: Y
+                                      nameplatePreview: W
                                           ? (0, r.jsx)(p.Z, {
                                                 user: a,
                                                 guildId: null == t ? void 0 : t.id,
-                                                nameplate: Z,
-                                                nameplateData: null == Z ? H : void 0,
+                                                nameplate: V,
+                                                nameplateData: null == V ? Y : void 0,
                                                 isHighlighted: !0,
                                             })
                                           : null,
-                                      children: (0, r.jsx)(N.Z, { nameplateEnabled: Y }),
+                                      children: (0, r.jsx)(N.Z, { nameplateEnabled: W }),
                                   }),
                               ],
                           })

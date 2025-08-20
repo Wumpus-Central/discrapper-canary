@@ -7,15 +7,15 @@ var n,
     r = t(951288),
     l = t(647438),
     i = t(120356),
-    a = t.n(i),
-    s = t(91192),
+    s = t.n(i),
+    a = t(91192),
     o = t(442837),
     g = t(481060),
     c = t(239091),
     f = t(596454),
     v = t(607070),
-    u = t(339085),
-    h = t(695346),
+    h = t(339085),
+    u = t(695346),
     d = t(572004),
     E = t(388032),
     C = t(716754);
@@ -65,12 +65,12 @@ function w(A, e) {
 var D = (((n = D || {})[(n.SMALL = 0)] = "SMALL"), (n[(n.MEDIUM = 1)] = "MEDIUM"), n);
 function M(A) {
     let { tag: e, size: n = 1, disabled: i, className: D, onClick: M, onRemove: p, selected: I, ariaLabel: H } = A,
-        { name: b, emojiId: O, emojiName: Q } = e,
+        { name: b, emojiId: Q, emojiName: O } = e,
         P = null != p,
-        [j, V] = l.useState(!1),
-        m = (0, o.e7)([u.ZP], () => (null != O ? u.ZP.getUsableCustomEmojiById(O) : null)),
+        [V, j] = l.useState(!1),
+        m = (0, o.e7)([h.ZP], () => (null != Q ? h.ZP.getUsableCustomEmojiById(Q) : null)),
         T = P || null != M,
-        y = (!P || !j) && (null != O || null != Q),
+        y = (!P || !V) && (null != Q || null != O),
         L = 0 === n,
         x = l.useRef(null),
         N = (0, o.e7)([v.Z], () => v.Z.keyboardModeEnabled),
@@ -78,14 +78,14 @@ function M(A) {
             children: [
                 y
                     ? (0, r.jsx)(f.Z, {
-                          className: a()(C.emoji, { [C.small]: L }),
-                          emojiId: O,
-                          emojiName: Q,
+                          className: s()(C.emoji, { [C.small]: L }),
+                          emojiId: Q,
+                          emojiName: O,
                           animated: !!(null == m ? void 0 : m.animated),
                           size: "reaction",
                       })
                     : null,
-                j &&
+                V &&
                     P &&
                     (0, r.jsx)("div", {
                         className: C.closeCircle,
@@ -105,7 +105,7 @@ function M(A) {
         }),
         S = {
             key: e.id,
-            className: a()(
+            className: s()(
                 C.pill,
                 {
                     [C.disabled]: i,
@@ -121,7 +121,7 @@ function M(A) {
             },
             onContextMenu: (A) =>
                 ((A) => {
-                    let n = h.Sb.getSetting();
+                    let n = u.Sb.getSetting();
                     d.wS &&
                         n &&
                         (0, c.jW)(A, async () => {
@@ -129,10 +129,10 @@ function M(A) {
                             return (t) => (0, r.jsx)(A, w(B({}, t), { tag: e }));
                         });
                 })(A),
-            onMouseEnter: () => P && V(!0),
-            onMouseLeave: () => P && V(!1),
+            onMouseEnter: () => P && j(!0),
+            onMouseLeave: () => P && j(!1),
         },
-        R = (0, s.JA)("forum-tag-".concat(e.id));
+        R = (0, a.JA)("forum-tag-".concat(e.id));
     return T
         ? (0, r.jsx)(
               g.P3F,
@@ -174,7 +174,7 @@ function p(A) {
             (0, r.jsx)(
                 "div",
                 w(B({}, A), {
-                    className: a()(C.pill, { [C.small]: l }),
+                    className: s()(C.pill, { [C.small]: l }),
                     children: (0, r.jsxs)(g.Text, {
                         variant: l ? "text-xs/semibold" : "text-sm/semibold",
                         children: ["+", t],

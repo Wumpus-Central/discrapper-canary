@@ -4,8 +4,8 @@ t(647438);
 var r = t(331595),
     l = t(84502);
 let i = ["#705224", "#F6A830"],
-    a = ["#FFE880"],
-    s = [0.05, 0.4],
+    s = ["#FFE880"],
+    a = [0.05, 0.4],
     o = [
         {
             base: 5,
@@ -26,7 +26,7 @@ let i = ["#705224", "#F6A830"],
     f = (A) => {
         var e,
             t,
-            { width: f = 24, height: v = 24, primaryTintColor: u, secondaryTintColor: h } = A,
+            { width: f = 24, height: v = 24, primaryTintColor: h, secondaryTintColor: u } = A,
             d = (function (A, e) {
                 if (null == A) return {};
                 var t,
@@ -50,11 +50,11 @@ let i = ["#705224", "#F6A830"],
             })(A, ["width", "height", "primaryTintColor", "secondaryTintColor"]);
         let { primaryColorsTransformed: E, secondaryColorsTransformed: C } = (0, l.s)({
             primaryBaseColors: i,
-            primaryTintColor: u,
-            primaryTintLuminances: s,
+            primaryTintColor: h,
+            primaryTintLuminances: a,
             primaryLuminanceWeights: o,
-            secondaryBaseColors: a,
-            secondaryTintColor: h,
+            secondaryBaseColors: s,
+            secondaryTintColor: u,
             secondaryTintLuminances: g,
             secondaryLuminanceWeights: c,
         });

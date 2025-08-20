@@ -1,10 +1,10 @@
-t.d(e, { S: () => u });
+t.d(e, { S: () => h });
 var n = t(951288),
     r = t(647438),
     l = t(772848),
     i = t(331595),
-    a = t(84502);
-let s = ["#be0351", "#ff2c52", "#f0f0f0"],
+    s = t(84502);
+let a = ["#be0351", "#ff2c52", "#f0f0f0"],
     o = ["#ffb84b", "#ffe361", "#f0f0f0"],
     g = [0.3, 0.4, 1],
     c = [
@@ -36,10 +36,10 @@ let s = ["#be0351", "#ff2c52", "#f0f0f0"],
             tint: 1,
         },
     ],
-    u = (A) => {
+    h = (A) => {
         var e,
             t,
-            { width: u = 24, height: h = 24, primaryTintColor: d, secondaryTintColor: E } = A,
+            { width: h = 24, height: u = 24, primaryTintColor: d, secondaryTintColor: E } = A,
             C = (function (A, e) {
                 if (null == A) return {};
                 var t,
@@ -62,8 +62,8 @@ let s = ["#be0351", "#ff2c52", "#f0f0f0"],
                 return r;
             })(A, ["width", "height", "primaryTintColor", "secondaryTintColor"]);
         let B = r.useMemo(() => "badge-force-gradient-".concat((0, l.Z)()), []),
-            { primaryColorsTransformed: w, secondaryColorsTransformed: D } = (0, a.s)({
-                primaryBaseColors: s,
+            { primaryColorsTransformed: w, secondaryColorsTransformed: D } = (0, s.s)({
+                primaryBaseColors: a,
                 primaryTintColor: d,
                 primaryTintLuminances: g,
                 primaryLuminanceWeights: c,
@@ -101,8 +101,8 @@ let s = ["#be0351", "#ff2c52", "#f0f0f0"],
             })({}, (0, i.Z)(C))),
             (t = t =
                 {
-                    width: u,
-                    height: h,
+                    width: h,
+                    height: u,
                     viewBox: "0 0 16 16",
                     fill: "none",
                     xmlns: "http://www.w3.org/2000/svg",

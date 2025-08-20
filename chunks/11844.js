@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
+    a = n(179538),
     o = n(481060),
     s = n(906732),
     l = n(975298),
@@ -108,29 +108,31 @@ let b = function () {
                 children: _.intl.format(_.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != y,
-                            i = (0, r.jsx)(
-                                a.zx,
-                                {
-                                    className: p.cta,
-                                    disabled: n,
-                                    color: a.zx.Colors.LINK,
-                                    look: a.zx.Looks.LINK,
-                                    onClick: n ? void 0 : b,
-                                    children: e,
-                                },
-                                t,
-                            );
+                            i = (0, o.qgQ)(e),
+                            s = (0, r.jsx)("div", {
+                                className: p.cta,
+                                children: (0, r.jsx)(
+                                    a.A,
+                                    {
+                                        variant: "primary",
+                                        onClick: n ? void 0 : b,
+                                        text: i,
+                                        disabled: n,
+                                    },
+                                    t,
+                                ),
+                            });
                         return n
                             ? (0, r.jsx)(
                                   c.Z,
                                   {
                                       text: y,
                                       "aria-label": y.toString(),
-                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: i })),
+                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: s })),
                                   },
                                   t,
                               )
-                            : i;
+                            : s;
                     },
                 }),
             }),

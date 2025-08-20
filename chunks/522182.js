@@ -1,12 +1,15 @@
-t.d(n, { Z: () => s });
+t.d(n, { Z: () => f });
 var r = t(951288);
 t(647438);
-var o = t(481060),
-    l = t(906732),
-    i = t(335131),
-    c = t(475413),
-    a = t(388032);
-function s(e) {
+var o = t(442837),
+    l = t(481060),
+    i = t(906732),
+    c = t(335131),
+    a = t(592183),
+    s = t(224724),
+    d = t(475413),
+    u = t(388032);
+function f(e) {
     var { onClose: n } = e,
         t = (function (e, n) {
             if (null == e) return {};
@@ -29,9 +32,10 @@ function s(e) {
             }
             return o;
         })(e, ["onClose"]);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, l.ZP)();
+    let { analyticsLocations: f, newestAnalyticsLocation: m } = (0, i.ZP)(),
+        p = (0, o.e7)([s.Z], () => s.Z.hasSaveablePendingChanges());
     return (0, r.jsx)(
-        c.ef,
+        d.ef,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -59,14 +63,15 @@ function s(e) {
         })(
             {
                 action: "VISIT_SHOP",
-                icon: o.EOn,
-                tooltipText: a.intl.string(a.t.b2d0Nz),
+                icon: l.EOn,
+                tooltipText: u.intl.string(u.t.b2d0Nz),
                 themeColor: "secondary",
                 onClick: () => {
-                    (0, i.mK)({
-                        analyticsLocations: s,
+                    if (p) return void a.Z.notifyPendingWidgets();
+                    (0, c.mK)({
+                        analyticsLocations: f,
                         openInLayer: !1,
-                        analyticsSource: d,
+                        analyticsSource: m,
                     }),
                         null == n || n();
                 },

@@ -34,16 +34,16 @@ let b = i.memo(function (e) {
     i.useLayoutEffect(() => {
         setTimeout(a, 350);
     }, [j, a]);
-    let [w, O] = i.useState(!j),
-        T = (0, c.q_F)({
+    let [w, T] = i.useState(!j),
+        O = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
-            onRest: () => O(!j),
+            onRest: () => T(!j),
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
-              style: T,
+              style: O,
               className: w ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)("div", {
                   className: x.container,

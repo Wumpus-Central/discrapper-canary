@@ -9,8 +9,8 @@ var n = r(951288),
     u = r(314897),
     d = r(86419),
     f = r(840367),
-    b = r(272289),
-    g = r(415734);
+    g = r(272289),
+    b = r(415734);
 function p(e) {
     let { userId: t, widget: r, children: i, disableInteraction: p, className: O } = e,
         [m, j] = l.useState(!1),
@@ -21,7 +21,7 @@ function p(e) {
             j(!0);
         }, []);
     return (0, n.jsxs)("section", {
-        className: a()(g.container, O),
+        className: a()(b.container, O),
         "aria-labelledby": y,
         children: [
             (0, n.jsx)(f.Z, {
@@ -37,7 +37,7 @@ function p(e) {
                         !x &&
                         !p &&
                         !m &&
-                        (0, n.jsx)(b.Z, {
+                        (0, n.jsx)(g.Z, {
                             userId: t,
                             widgetType: r.type,
                             onDismiss: h,

@@ -1,5 +1,5 @@
 t.d(e, {
-    Mn: () => s,
+    Mn: () => a,
     WM: () => g,
     _2: () => o,
 }),
@@ -9,41 +9,41 @@ t(647438);
 var r = t(120356),
     l = t.n(r),
     i = t(481060),
-    a = t(938556);
-let s = 16;
+    s = t(938556);
+let a = 16;
 function o(A) {
     let { description: e, name: t, icon: r, onNavigate: o, className: g, missingNavIcon: c } = A;
     return (0, n.jsxs)(i.P3F, {
         onClick: o,
-        className: l()(a.modInfoItem, null != o && a.modInfoAction, g),
+        className: l()(s.modInfoItem, null != o && s.modInfoAction, g),
         children: [
             null != r &&
                 (0, n.jsx)("div", {
-                    className: a.modInfoItemIcon,
+                    className: s.modInfoItemIcon,
                     children: r,
                 }),
             null != t &&
                 (0, n.jsx)("div", {
-                    className: a.modInfoItemName,
+                    className: s.modInfoItemName,
                     children: t,
                 }),
             (0, n.jsx)("div", {
-                className: a.modInfoItemDescription,
+                className: s.modInfoItemDescription,
                 children: e,
             }),
             null != o &&
                 (0, n.jsx)("div", {
-                    className: a.modInfoItemActionIcon,
+                    className: s.modInfoItemActionIcon,
                     children: (0, n.jsx)(i.LJT, {
                         size: "custom",
-                        width: s,
-                        height: s,
+                        width: a,
+                        height: a,
                     }),
                 }),
             null == o &&
                 null != c &&
                 (0, n.jsx)("div", {
-                    className: a.modInfoItemActionIcon,
+                    className: s.modInfoItemActionIcon,
                     children: c,
                 }),
         ],
@@ -52,7 +52,7 @@ function o(A) {
 function g(A) {
     let { children: e } = A;
     return (0, n.jsx)("div", {
-        className: a.modInfoItemContainer,
+        className: s.modInfoItemContainer,
         children: e,
     });
 }

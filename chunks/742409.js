@@ -1,30 +1,30 @@
 t.d(e, {
     Z: () => d,
-    l: () => h,
+    l: () => u,
 });
 var n = t(951288);
 t(647438);
 var r = t(120356),
     l = t.n(r),
     i = t(481060),
-    a = t(957537),
-    s = t(737770),
+    s = t(957537),
+    a = t(737770),
     o = t(839008),
     g = t(685184),
     c = t(369509),
     f = t(899926),
     v = t(388032),
-    u = t(215486);
-function h(A) {
+    h = t(215486);
+function u(A) {
     return (0, n.jsxs)("div", {
-        className: l()(u.messageContainer, A.className),
+        className: l()(h.messageContainer, A.className),
         children: [
             (0, n.jsx)("div", {
-                className: u.avatarContainer,
+                className: h.avatarContainer,
                 children:
                     "string" == typeof A.avatar
                         ? (0, n.jsx)("img", {
-                              className: u.avatar,
+                              className: h.avatar,
                               src: A.avatar,
                               alt: "".concat(A.username, " avatar"),
                               width: 40,
@@ -33,10 +33,10 @@ function h(A) {
                         : A.avatar,
             }),
             (0, n.jsxs)("div", {
-                className: u.contentContainer,
+                className: h.contentContainer,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: u.usernameContainer,
+                        className: h.usernameContainer,
                         children: [
                             "string" == typeof A.username
                                 ? (0, n.jsx)(i.Text, {
@@ -49,7 +49,7 @@ function h(A) {
                                 : A.username,
                             void 0 !== A.decorations &&
                                 (0, n.jsx)("div", {
-                                    className: u.decorationsContainer,
+                                    className: h.decorationsContainer,
                                     children: A.decorations,
                                 }),
                         ],
@@ -89,23 +89,23 @@ let d = function (A) {
             return r;
         })(A, ["className"]);
     return (0, n.jsxs)("div", {
-        className: l()(u.container, e),
+        className: l()(h.container, e),
         children: [
-            (0, n.jsx)(h, {
-                className: u.unfocusedMessage,
-                avatar: a.Z,
+            (0, n.jsx)(u, {
+                className: h.unfocusedMessage,
+                avatar: s.Z,
                 username: "Roka",
                 usernameStyle: { color: "var(--brand-400)" },
                 message: v.intl.string(f.default.bpghV1),
             }),
-            (0, n.jsx)(h, {
-                className: u.unfocusedMessage,
-                avatar: s.Z,
+            (0, n.jsx)(u, {
+                className: h.unfocusedMessage,
+                avatar: a.Z,
                 username: "hongo",
                 usernameStyle: { color: "var(--green-230)" },
                 message: v.intl.string(f.default["rnpv7+"]),
             }),
-            (0, n.jsx)(h, {
+            (0, n.jsx)(u, {
                 avatar: o.Z,
                 username: "Lily",
                 usernameStyle: { color: "var(--orange-300)" },
@@ -139,15 +139,15 @@ let d = function (A) {
                     })({}, t),
                 ),
             }),
-            (0, n.jsx)(h, {
-                className: u.unfocusedMessage,
+            (0, n.jsx)(u, {
+                className: h.unfocusedMessage,
                 avatar: g.Z,
                 username: "sharon",
                 usernameStyle: { color: "var(--brand-400)" },
                 message: v.intl.string(f.default.GlWVJC),
             }),
-            (0, n.jsx)(h, {
-                className: u.unfocusedMessage,
+            (0, n.jsx)(u, {
+                className: h.unfocusedMessage,
                 avatar: o.Z,
                 username: "Lily",
                 usernameStyle: { color: "var(--orange-300)" },

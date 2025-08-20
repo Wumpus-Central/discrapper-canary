@@ -1,23 +1,23 @@
 t.d(e, {
     RE: () => f,
-    RN: () => u,
+    RN: () => h,
     po: () => d,
     vN: () => v,
     xb: () => E,
-    zq: () => h,
+    zq: () => u,
 });
 var n,
     r = t(647438),
     l = t(399606),
     i = t(906732),
-    a = t(892001),
-    s = t(485386),
+    s = t(892001),
+    a = t(485386),
     o = t(430824),
     g = t(594174),
     c = t(91047);
 let f = (A, e) => {
     let { guildId: t, userId: n, colorRoleId: r } = A;
-    (0, a.openUserProfileModal)({
+    (0, s.openUserProfileModal)({
         userId: n,
         guildId: t,
         sourceAnalyticsLocations: e,
@@ -43,7 +43,7 @@ function v(A, e, t, n) {
         [A, l, n, t, e],
     );
 }
-function u(A, e, t) {
+function h(A, e, t) {
     let { analyticsLocations: n } = (0, i.ZP)();
     return r.useCallback(
         (r) => {
@@ -62,14 +62,14 @@ function u(A, e, t) {
         [A, t, n, e],
     );
 }
-function h(A) {
-    return (0, l.e7)([o.Z, s.Z], () => {
+function u(A) {
+    return (0, l.e7)([o.Z, a.Z], () => {
         var e;
         if (null == A) return null;
         let t = o.Z.getGuild(A.guildId);
         return null == t || null == A.highestRoleId
             ? null
-            : null != (e = s.Z.getRole(t.id, A.highestRoleId))
+            : null != (e = a.Z.getRole(t.id, A.highestRoleId))
               ? e
               : null;
     }, [A]);

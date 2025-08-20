@@ -1,17 +1,17 @@
-t.d(n, { Z: () => s });
-var a = t(512722),
-    l = t.n(a),
-    i = t(442837),
-    r = t(339085),
-    o = t(633302);
-function s(e) {
-    let { emojiId: n, emojiName: t } = e,
-        a = (0, i.e7)([r.ZP], () => (null != n ? r.ZP.getCustomEmojiById(n) : null));
-    if (null != a || null != t)
-        if (null == n)
+l.d(t, { Z: () => o });
+var n = l(512722),
+    i = l.n(n),
+    s = l(442837),
+    r = l(339085),
+    a = l(633302);
+function o(e) {
+    let { emojiId: t, emojiName: l } = e,
+        n = (0, s.e7)([r.ZP], () => (null != t ? r.ZP.getCustomEmojiById(t) : null));
+    if (null != n || null != l)
+        if (null == t)
             return (
-                l()(null != t, "emojiName must be defined if emojiId is not defined"),
-                o.ZP.convertSurrogateToName(t, !1)
+                i()(null != l, "emojiName must be defined if emojiId is not defined"),
+                a.ZP.convertSurrogateToName(l, !1)
             );
-        else return null == a ? void 0 : a.name;
+        else return null == n ? void 0 : n.name;
 }

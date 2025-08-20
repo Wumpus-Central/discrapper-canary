@@ -14,14 +14,14 @@ function i(A) {
             primaryTintLuminances: n,
             primaryLuminanceWeights: r,
             secondaryBaseColors: i,
-            secondaryTintColor: a,
-            secondaryTintLuminances: s,
+            secondaryTintColor: s,
+            secondaryTintLuminances: a,
             secondaryLuminanceWeights: o,
         } = A,
         g = null != t ? l(n, t, r) : e,
         c = [];
     return (
-        null != i && null != s && null != o && (c = null != a ? l(s, a, o) : i),
+        null != i && null != a && null != o && (c = null != s ? l(a, s, o) : i),
         {
             primaryColorsTransformed: g,
             secondaryColorsTransformed: c,

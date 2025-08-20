@@ -18,8 +18,8 @@ var o = t(120356),
     m = t(275759),
     p = t(888496),
     b = t(753194),
-    x = t(749681),
-    g = t(258971),
+    g = t(749681),
+    x = t(258971),
     h = t(598077),
     j = t(671533),
     v = t(49012),
@@ -76,9 +76,9 @@ function N(e) {
     var n, t;
     let o,
         s,
-        x,
+        g,
         {
-            connectedAccount: g,
+            connectedAccount: x,
             theme: h,
             locale: _,
             userId: O,
@@ -87,12 +87,12 @@ function N(e) {
             showInvisibleIcon: E,
         } = e;
     null == C && (C = !0);
-    let S = null != (t = g.metadata) ? t : {},
+    let S = null != (t = x.metadata) ? t : {},
         w = C ? (0, m.FI)(S[I.PC.CREATED_AT], _) : null,
         B = (0, a.dQu)(i.Z.unsafe_rawColors.TWITTER).hex(),
         D = P.intl.string(P.t["6H6h1t"]);
     if (C)
-        switch (g.type) {
+        switch (x.type) {
             case y.ABu.REDDIT:
                 o = (0, p.oP)(S);
                 break;
@@ -113,24 +113,24 @@ function N(e) {
             case y.ABu.TIKTOK:
                 o = (0, p.hf)(S);
         }
-    let L = d.Z.get((0, f.rR)(g.type)),
-        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, g);
+    let L = d.Z.get((0, f.rR)(x.type)),
+        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, x);
     null != E && E
-        ? (x = (0, r.jsx)(a.kZF, {
+        ? (g = (0, r.jsx)(a.kZF, {
               size: "md",
               color: "currentColor",
               className: l()(Z.__invalid_connectedAccountOpenIconContainer, Z.connectedAccountHideIcon),
           }))
         : null != R &&
-          (x = (0, r.jsx)(a.eee, {
+          (g = (0, r.jsx)(a.eee, {
               href: R,
               "aria-label":
                   (null == L ? void 0 : L.name) != null
-                      ? "".concat(L.name, ", ").concat(g.name, ", ").concat(P.intl.string(P.t.q5jLJC))
-                      : "".concat(g.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
+                      ? "".concat(L.name, ", ").concat(x.name, ", ").concat(P.intl.string(P.t.q5jLJC))
+                      : "".concat(x.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
               onClick: (e) => {
                   var n;
-                  (n = g.type),
+                  (n = x.type),
                       (0, u.yw)(y.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: n,
                           other_user_id: O,
@@ -150,7 +150,7 @@ function N(e) {
           }));
     let U = (0, a.dQu)(i.Z.colors.INTERACTIVE_MUTED).hex(),
         M = (0, a.dQu)(i.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        k = g.verified
+        k = x.verified
             ? (0, r.jsx)(b.Z, {
                   className: Z.connectedAccountVerifiedIcon,
                   color: null != s ? s : U,
@@ -198,7 +198,7 @@ function N(e) {
                                         children: [
                                             (0, r.jsx)(a.ua7, {
                                                 overflowOnly: !0,
-                                                text: g.name,
+                                                text: x.name,
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         a.Text,
@@ -206,14 +206,14 @@ function N(e) {
                                                             variant: "text-sm/medium",
                                                             color: "interactive-active",
                                                             className: Z.connectedAccountNameText,
-                                                            children: g.name,
+                                                            children: x.name,
                                                         }),
                                                     ),
                                             }),
                                             k,
                                         ],
                                     }),
-                                    x,
+                                    g,
                                 ],
                             }),
                             null != w
@@ -241,11 +241,11 @@ function C(e) {
         d = (0, p.rm)(n, void 0, o),
         u = () => {
             null == i || i(),
-                (0, x.transitionToGlobalDiscovery)({
+                (0, g.transitionToGlobalDiscovery)({
                     tab: O.GlobalDiscoveryTab.APPS,
                     applicationId: n.application.id,
                     newSessionState: {
-                        entrypoint: { name: g.xF.APPLICATION_DIRECTORY_URL },
+                        entrypoint: { name: x.xF.APPLICATION_DIRECTORY_URL },
                         guildId: c,
                     },
                 });

@@ -6,21 +6,21 @@ var r = n(512722),
     s = n(830496);
 let l = {
     getUploadPayload: function (e) {
-        var t, n;
-        let r = e.item,
-            a = r.file;
+        var t, n, r;
+        let a = e.item,
+            l = a.file;
         return (
-            i()(null != a, "file data must not be empty"),
+            i()(null != l, "file data must not be empty"),
             {
-                filename: a.name,
-                file_size: a.size,
+                filename: l.name,
+                file_size: l.size,
                 id: o().uniqueId(),
                 is_clip: null != e.clip,
                 title: null == (t = e.clip) ? void 0 : t.name,
                 application_id: null == (n = e.clip) ? void 0 : n.applicationId,
                 clip_created_at: null != e.clip ? (0, s.U)(e.clip.id) : void 0,
                 clip_participant_ids: null != e.clip ? (0, s.Z)(e.clip.users) : void 0,
-                original_content_type: r.originalContentType,
+                original_content_type: null == (r = a.compressionMetadata) ? void 0 : r.originalContentType,
             }
         );
     },

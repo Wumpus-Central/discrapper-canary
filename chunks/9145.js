@@ -174,7 +174,7 @@ function G(e) {
                     : l;
             }, [s, e, n, t]);
         })(et, en, G),
-        eb = (0, M.y)({ location: "Activity Panel" });
+        eb = (0, M.y)();
     if (null == W) return null;
     let ey = [];
     null != ep &&

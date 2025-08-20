@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(474366),
     y = n(345162),
     w = n(485386),
-    O = n(430824),
-    T = n(186523),
+    T = n(430824),
+    O = n(186523),
     S = n(585483),
     P = n(70956),
     N = n(709054),
@@ -178,7 +178,7 @@ let J = (e) => {
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: ee } = (0, M.H)(x.id),
-            et = (0, h.e7)([O.Z], () => O.Z.getGuild(x.getGuildId())),
+            et = (0, h.e7)([T.Z], () => T.Z.getGuild(x.getGuildId())),
             en = (0, Z.r_)(x),
             { transitions: er, setVisible: ei } = (() => {
                 let [e, t] = i.useState(!0);
@@ -529,7 +529,7 @@ let J = (e) => {
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
-                                                                                              icon: (0, g.GSL)(T.Z),
+                                                                                              icon: (0, g.GSL)(O.Z),
                                                                                               style: q,
                                                                                               className: l()(
                                                                                                   B.stepStatus,

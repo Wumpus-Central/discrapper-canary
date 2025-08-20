@@ -4,15 +4,15 @@ t(647438);
 var r = t(397110),
     l = t(79312),
     i = t(25960),
-    a = t(706484),
-    s = t(819837),
+    s = t(706484),
+    a = t(819837),
     o = t(165440),
     g = t(21822),
     c = t(285916),
     f = t(168646),
     v = t(470831),
-    u = t(96824),
-    h = t(187485),
+    h = t(96824),
+    u = t(187485),
     d = t(713897),
     E = t(886512),
     C = t(560701),
@@ -24,11 +24,11 @@ var r = t(397110),
     I = t(117243),
     H = t(997109),
     b = t(606650),
-    O = t(117257),
-    Q = t(214067),
+    Q = t(117257),
+    O = t(214067),
     P = t(803193),
-    j = t(900689),
-    V = t(498103),
+    V = t(900689),
+    j = t(498103),
     m = t(586131),
     T = t(931512),
     y = t(350136),
@@ -84,7 +84,7 @@ let N = (A) => {
     switch (e) {
         case L.x_.SWORD:
             return (0, n.jsx)(
-                j.V,
+                V.V,
                 x(
                     {
                         primaryTintColor: t,
@@ -99,7 +99,7 @@ let N = (A) => {
             return (0, n.jsx)(H.D, x({ primaryTintColor: t }, Z));
         case L.x_.TOADSTOOL:
             return (0, n.jsx)(
-                V.T,
+                j.T,
                 x(
                     {
                         primaryTintColor: t,
@@ -131,7 +131,7 @@ let N = (A) => {
             );
         case L.x_.CROSSHAIRS:
             return (0, n.jsx)(
-                a.Q,
+                s.Q,
                 x(
                     {
                         primaryTintColor: t,
@@ -153,7 +153,7 @@ let N = (A) => {
             );
         case L.x_.FORCE:
             return (0, n.jsx)(
-                u.S,
+                h.S,
                 x(
                     {
                         primaryTintColor: t,
@@ -208,7 +208,7 @@ let N = (A) => {
             );
         case L.x_.SNOW:
             return (0, n.jsx)(
-                O.X,
+                Q.X,
                 x(
                     {
                         primaryTintColor: t,
@@ -219,7 +219,7 @@ let N = (A) => {
             );
         case L.x_.SOUND:
             return (0, n.jsx)(
-                Q.H,
+                O.H,
                 x(
                     {
                         primaryTintColor: t,
@@ -265,7 +265,7 @@ let N = (A) => {
             );
         case L.x_.FROG:
             return (0, n.jsx)(
-                h.L,
+                u.L,
                 x(
                     {
                         primaryTintColor: t,
@@ -282,7 +282,7 @@ let N = (A) => {
             return (0, n.jsx)(o.T, x({ primaryTintColor: t }, Z));
         case L.x_.CROWN:
             return (0, n.jsx)(
-                s.O,
+                a.O,
                 x(
                     {
                         primaryTintColor: t,

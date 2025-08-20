@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -209,7 +209,7 @@ let y = {
             ],
         });
     };
-function O(e) {
+function T(e) {
     let t,
         { guild: n } = e,
         [a, o] = (0, d.R)("report-to-mod-education-dismissed", !1),

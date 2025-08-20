@@ -1,10 +1,10 @@
-t.d(e, { n: () => s });
+t.d(e, { n: () => a });
 var n = t(835913),
     r = t(570140),
     l = t(675478),
     i = t(626135),
-    a = t(981631);
-async function s(A, e) {
+    s = t(981631);
+async function a(A, e) {
     await (0, l.PS)(
         A,
         (A) => ((A.guildRecentsDismissedAt = n.E.fromDate(new Date())), !0),
@@ -15,5 +15,5 @@ async function s(A, e) {
             guildId: A,
             channelIds: e,
         }),
-        i.default.track(a.rMx.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+        i.default.track(s.rMx.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
 }

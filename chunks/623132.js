@@ -10,8 +10,8 @@ var l = r(481060),
     u = r(817053),
     d = r(879877),
     f = r(533815),
-    b = r(853072),
-    g = r(388032),
+    g = r(853072),
+    b = r(388032),
     p = r(958461),
     O = r(932366),
     m = r(776385);
@@ -110,7 +110,7 @@ function x(e) {
                 color: l.TVs.colors.ICON_TERTIARY,
                 className: m.icon,
             }),
-            (0, n.jsx)(l.nn4, { children: g.intl.format(g.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
+            (0, n.jsx)(l.nn4, { children: b.intl.format(b.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
             (0, n.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
@@ -121,10 +121,10 @@ function x(e) {
 }
 function h(e) {
     let { applicationId: t, guildId: r, channelId: l, className: i } = e,
-        a = (0, b.Z)(t);
+        a = (0, g.Z)(t);
     return a.length > 0
         ? (0, n.jsx)(s.Z, {
-              label: g.intl.formatToPlainString(g.t.ujhJdH, { numFriends: a.length }),
+              label: b.intl.formatToPlainString(b.t.ujhJdH, { numFriends: a.length }),
               className: i,
               users: a,
               guildId: r,
@@ -133,10 +133,10 @@ function h(e) {
         : null;
 }
 function P(e) {
-    let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: b = !1 } = e,
-        { gameName: P = g.intl.string(g.t.GIWFlJ), imageSrc: E, applicationId: w, comment: S, tags: I } = a,
+    let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: g = !1 } = e,
+        { gameName: P = b.intl.string(b.t.GIWFlJ), imageSrc: E, applicationId: w, comment: S, tags: I } = a,
         _ = {
-            variant: "heading-sm/semibold",
+            variant: "heading-sm/medium",
             color: "text-default",
         },
         T = o.default.getCurrentUser(),
@@ -166,13 +166,13 @@ function P(e) {
                       gameName: P,
                       applicationId: w,
                       userId: t.id,
-                      disableInteraction: b,
+                      disableInteraction: g,
                       hideTooltip: !0,
                   }),
                   (0, n.jsxs)("div", {
                       className: m.details,
                       children: [
-                          b
+                          g
                               ? (0, n.jsx)(l.X6q, y(j({}, _), { children: P }))
                               : (0, n.jsx)(
                                     v,
@@ -197,9 +197,9 @@ function P(e) {
                               isCurrentUser: N,
                               widgetType: c,
                               applicationId: w,
-                              disableInteraction: b,
+                              disableInteraction: g,
                           }),
-                          !b &&
+                          !g &&
                               (0, n.jsx)(h, {
                                   className: m.socialProof,
                                   applicationId: w,
@@ -208,7 +208,7 @@ function P(e) {
                               }),
                       ],
                   }),
-                  !b &&
+                  !g &&
                       N &&
                       (0, n.jsx)(f.Z, {
                           game: a,

@@ -1,11 +1,8 @@
-n.d(t, { y: () => o });
+n.d(t, { y: () => a });
 var r = n(358085),
     i = n(998502),
-    l = n(293162),
-    a = n(981631);
-function o(e) {
-    let { location: t } = e,
-        n = l.Z.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled,
-        o = r.isPlatformEmbedded && i.ZP.supportsFeature(a.eRX.POPOUT_WINDOWS);
-    return n && (!r.isPlatformEmbedded || o);
+    l = n(981631);
+function a() {
+    let e = r.isPlatformEmbedded && i.ZP.supportsFeature(l.eRX.POPOUT_WINDOWS);
+    return !r.isPlatformEmbedded || e;
 }

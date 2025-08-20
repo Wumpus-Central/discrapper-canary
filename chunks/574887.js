@@ -13,8 +13,8 @@ var o = t(120356),
     m = t(768762),
     p = t(706454),
     b = t(49012),
-    x = t(981631),
-    g = t(856651),
+    g = t(981631),
+    x = t(856651),
     h = t(388032),
     j = t(20163);
 function v(e) {
@@ -64,7 +64,7 @@ function y(e) {
     var n;
     let { account: t, locale: o, userId: l } = e,
         i = null != (n = t.metadata) ? n : {},
-        p = (0, u.FI)(i[g.PC.CREATED_AT], o),
+        p = (0, u.FI)(i[x.PC.CREATED_AT], o),
         y = a.Z.get((0, d.rR)(t.type));
     return (0, r.jsxs)("li", {
         className: j.connection,
@@ -118,14 +118,14 @@ function y(e) {
                                                         .concat(h.intl.string(h.t.q5jLJC))
                                                   : "".concat(t.name, ", ").concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
-                                              (0, s.yw)(x.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              (0, s.yw)(g.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: t.type,
                                                   other_user_id: l,
                                               }),
                                                   (0, b.q)(
                                                       {
                                                           href: n,
-                                                          trusted: (null == y ? void 0 : y.type) !== x.ABu.DOMAIN,
+                                                          trusted: (null == y ? void 0 : y.type) !== g.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -164,17 +164,17 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: j.metadata,
                         children:
-                            t.type === x.ABu.REDDIT
+                            t.type === g.ABu.REDDIT
                                 ? (0, f.oP)(i)
-                                : t.type === x.ABu.STEAM
+                                : t.type === g.ABu.STEAM
                                   ? (0, f.Dq)(i)
-                                  : t.type === x.ABu.BLUESKY || t.type === x.ABu.MASTODON || t.type === x.ABu.TWITTER
+                                  : t.type === g.ABu.BLUESKY || t.type === g.ABu.MASTODON || t.type === g.ABu.TWITTER
                                     ? (0, f.rJ)(i)
-                                    : t.type === x.ABu.PAYPAL
+                                    : t.type === g.ABu.PAYPAL
                                       ? (0, f.li)(i)
-                                      : t.type === x.ABu.EBAY
+                                      : t.type === g.ABu.EBAY
                                         ? (0, f.ul)(i)
-                                        : t.type === x.ABu.TIKTOK
+                                        : t.type === g.ABu.TIKTOK
                                           ? (0, f.hf)(i)
                                           : null,
                     }),

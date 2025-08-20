@@ -19,7 +19,7 @@ var i = n(120356),
     p = n(51144),
     h = n(495824);
 function m(e) {
-    let { channel: t } = e;
+    let { channel: t, className: n } = e;
     if (t.isDM()) {
         let e = t.getRecipientId(),
             n = _.default.getUser(e);
@@ -40,8 +40,13 @@ function m(e) {
             size: o.EFr.SIZE_20,
             experimentLocation: "search_popout",
         });
-    let n = (0, l.KS)(t);
-    return null == n ? null : (0, r.jsx)(n, { className: h.searchResultChannelIcon });
+    let i = (0, l.KS)(t);
+    return null == i
+        ? null
+        : (0, r.jsx)(i, {
+              className: n,
+              color: "currentColor",
+          });
 }
 function g(e) {
     let { channel: t } = e;

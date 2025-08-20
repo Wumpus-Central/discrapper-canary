@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(243778),
     y = n(71619),
     w = n(898188),
-    O = n(41776),
-    T = n(256413),
+    T = n(41776),
+    O = n(256413),
     S = n(292853),
     P = n(869382),
     N = n(982168),
@@ -155,7 +155,7 @@ function ey(e) {
     return "forum-grid-header-section-".concat(e);
 }
 let ew = (e, t, n) => (0 === e ? 0 : (0, ec.KW)(n));
-function eO(e) {
+function eT(e) {
     let { itemRole: t, coords: n, section: i } = e;
     return (0, r.jsx)(
         "div",
@@ -176,12 +176,12 @@ function eO(e) {
         "section-divider",
     );
 }
-function eT(e) {
+function eO(e) {
     let { section: t, coords: n, key: i, isShowingSearchResult: a, hasActiveThreads: l } = e;
     return () =>
         2 === t && !a && l
             ? (0, r.jsx)(
-                  eO,
+                  eT,
                   {
                       section: t,
                       coords: null == n ? void 0 : ej(eb({}, n), { position: "absolute" }),
@@ -244,9 +244,9 @@ function eN(e) {
                     tagSetting: i,
                     shouldAutomaticallyAck: !0,
                 }),
-                l = (0, g.e7)([Z.Z, O.Z], () => {
+                l = (0, g.e7)([Z.Z, T.Z], () => {
                     let t = Z.Z.hasLoaded(e.guild_id),
-                        n = O.Z.isLurking(e.guild_id);
+                        n = T.Z.isLurking(e.guild_id);
                     return !t && !n;
                 }),
                 { threadIds: s, canLoadMore: o, loadMore: c, loading: d } = (0, k.qQ)(e, t, n, i),
@@ -269,7 +269,7 @@ function eN(e) {
         })(t),
         H = m.length > 0,
         U = H || f.length > 0,
-        V = (0, T.Z)(t),
+        V = (0, O.Z)(t),
         { tagFilter: G, tagSetting: X } = (0, K.H)(t.id);
     (0, J.ku)(t, G, X, u);
     let et = (0, J.jR)(t),
@@ -326,7 +326,7 @@ function eN(e) {
         eo = A === h.X.GRID,
         { searchQuery: ed } = (0, J.XZ)({ channelId: t.id }),
         e_ = null != x && null != ed && ed.length > 0,
-        eO = i.useRef(null),
+        eT = i.useRef(null),
         { containerRef: eN, containerWidth: eM } = (0, eu.Z)();
     i.useEffect(
         () => () => {
@@ -335,9 +335,9 @@ function eN(e) {
         [t.id],
     ),
         i.useEffect(() => {
-            if (null == eO.current && null != t.id) {
+            if (null == eT.current && null != t.id) {
                 let e = F.ZP.getSidebarState(t.id);
-                null != e && e.type === M.tI.VIEW_THREAD && (eO.current = e.channelId);
+                null != e && e.type === M.tI.VIEW_THREAD && (eT.current = e.channelId);
             }
         }, [t.id]);
     let { columns: ek } = i.useMemo(() => (eo ? eC.getRenderOptions(eM) : ec.eU), [eo, eM]),
@@ -393,9 +393,9 @@ function eN(e) {
                         section: eg.jXE.FORUM_CHANNEL_POST,
                     },
                 }),
-                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((eO.current = e.id), (0, L.ok)(e));
+                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((eT.current = e.id), (0, L.ok)(e));
             },
-            [t.guild_id, t.id, eO],
+            [t.guild_id, t.id, eT],
         ),
         [eG, eq] = i.useState(a + s - 24),
         eW = i.useCallback(
@@ -491,7 +491,7 @@ function eN(e) {
                 ),
                 b = i.useCallback(
                     (e) =>
-                        eT({
+                        eO({
                             section: e.section,
                             isShowingSearchResult: h,
                             hasActiveThreads: n,
@@ -637,7 +637,7 @@ function eN(e) {
                         s(
                             e,
                             t,
-                            eT({
+                            eO({
                                 section: e,
                                 coords: t,
                                 key: n,
@@ -714,7 +714,7 @@ function eN(e) {
             canSearchForumPosts: et,
             canViewArchivedPosts: en,
             observePostVisibilityAnalytics: es,
-            focusedThreadId: eO,
+            focusedThreadId: eT,
             headerHeight: eG,
         });
     !(function (e) {
@@ -753,7 +753,7 @@ function eN(e) {
         isGridLayout: eo,
         threadIdsBySection: eU,
         parentId: t.id,
-        focusedThreadId: eO,
+        focusedThreadId: eT,
     });
     let te = i.useCallback(() => {
             var e, n;
@@ -940,7 +940,7 @@ function eM() {
 }
 function eZ(e) {
     var t, n, a;
-    let { channel: s, isEmpty: b, isSearchLoading: _, numResults: O, children: T, coords: S, onHeightChange: P } = e,
+    let { channel: s, isEmpty: b, isSearchLoading: _, numResults: T, children: O, coords: S, onHeightChange: P } = e,
         {
             name: E,
             formOpen: R,
@@ -1000,15 +1000,15 @@ function eZ(e) {
     let eC = (0, g.e7)([U.Z], () => U.Z.getUploads(s.id, z.d.FirstThreadMessage)),
         ey = (0, J.ql)(s),
         ew = i.useRef(null),
-        eO = i.useRef(null),
-        [eT, eS] = i.useState(0),
+        eT = i.useRef(null),
+        [eO, eS] = i.useState(0),
         { width: eP } = (0, g.e7)([V.Z], () => V.Z.windowSize()),
         eN = null == (n = ew.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
         eI = i.useRef(null),
         eE = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        let t = eO.current,
+        let t = eT.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0];
         if (null != ew.current && null != n && null != n.children) {
             let { left: e, top: t } = ew.current.getBoundingClientRect(),
@@ -1021,7 +1021,7 @@ function eZ(e) {
             eS(r);
         }
     }, [s.availableTags, eP, eN, D]);
-    let eR = E.length > 0 && !R && (_ || null != O),
+    let eR = E.length > 0 && !R && (_ || null != T),
         eZ =
             !__OVERLAY__ &&
             !Z &&
@@ -1108,7 +1108,7 @@ function eZ(e) {
                                 parentChannel: s,
                                 onChange: e_,
                                 isSearchLoading: _,
-                                numResults: O,
+                                numResults: T,
                                 canCreatePost: eu,
                                 inputRef: eH,
                             }),
@@ -1127,10 +1127,10 @@ function eZ(e) {
                                                     color: "text-default",
                                                     children: _
                                                         ? ex.intl.string(ex.t["/9i3qq"])
-                                                        : 0 === O
+                                                        : 0 === T
                                                           ? ex.intl.string(ex.t.DbgHxs)
                                                           : ex.intl.formatToPlainString(ex.t["tBz/8f"], {
-                                                                numPosts: O,
+                                                                numPosts: T,
                                                                 query: E,
                                                             }),
                                                 }),
@@ -1214,7 +1214,7 @@ function eZ(e) {
                                               (0, r.jsx)("div", { className: ep.divider }),
                                               (0, r.jsx)("div", {
                                                   className: ep.tagList,
-                                                  ref: eO,
+                                                  ref: eT,
                                                   children: (0, r.jsx)(d.bG, {
                                                       navigator: eA,
                                                       children: (0, r.jsx)(d.SJ, {
@@ -1300,7 +1300,7 @@ function eZ(e) {
                                                               className: l()(ep.tagsButton, {
                                                                   [ep.tagsButtonWithCount]: D.size > 0,
                                                               }),
-                                                              style: { left: eT },
+                                                              style: { left: eO },
                                                               innerClassName: ep.tagsButtonInner,
                                                               "aria-label":
                                                                   D.size > 0
@@ -1365,7 +1365,7 @@ function eZ(e) {
                                     : null,
                             ],
                         }),
-                        T,
+                        O,
                         Q &&
                             !em &&
                             !ec &&

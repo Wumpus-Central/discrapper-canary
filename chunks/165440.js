@@ -4,8 +4,8 @@ t(647438);
 var r = t(331595),
     l = t(84502);
 let i = ["#4282D8", "#00BBFF"],
-    a = [0.15, 0.42],
-    s = [
+    s = [0.15, 0.42],
+    a = [
         {
             base: 7,
             tint: 1,
@@ -43,8 +43,8 @@ let i = ["#4282D8", "#00BBFF"],
         let { primaryColorsTransformed: v } = (0, l.s)({
             primaryBaseColors: i,
             primaryTintColor: c,
-            primaryTintLuminances: a,
-            primaryLuminanceWeights: s,
+            primaryTintLuminances: s,
+            primaryLuminanceWeights: a,
         });
         return (0, n.jsxs)(
             "svg",

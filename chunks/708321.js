@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => E,
-    o: () => g,
+    Z: () => g,
+    o: () => m,
 }),
     n(388685);
 var r = n(951288),
@@ -8,16 +8,15 @@ var r = n(951288),
     a = n(481060),
     o = n(447543),
     s = n(66511),
-    l = n(300284),
+    l = n(226746),
     c = n(703656),
     u = n(769654),
     d = n(900849),
     f = n(330705),
     _ = n(993860),
     p = n(981631),
-    h = n(526761),
-    m = n(388032);
-function g(e) {
+    h = n(388032);
+function m(e) {
     let {
             guildId: t,
             ctaType: n,
@@ -25,46 +24,46 @@ function g(e) {
             onGoToGuild: s,
             onAcceptInvite: u,
             onStartApplication: f,
-            onComplete: g,
+            onComplete: m,
         } = e,
-        [E, b] = i.useState(!1),
-        y = (0, l.Z)({ scrollPosition: h.Y_.GUILD_TAG }),
-        O = i.useCallback(() => {
+        [g, E] = i.useState(!1),
+        b = (0, l.Z)(t),
+        y = i.useCallback(() => {
             (0, c.uL)(p.Z5c.GUILD_MEMBER_VERIFICATION(t));
         }, [t]),
-        v = i.useCallback(async () => {
+        O = i.useCallback(async () => {
             await (0, d.Ub)(t, { object: p.qAy.GUILD_PROFILE });
         }, [t]),
-        { text: I, onClick: T } = i.useMemo(() => {
+        { text: v, onClick: I } = i.useMemo(() => {
             switch (n) {
                 case _.sE.IS_MEMBER:
                     return {
-                        text: m.intl.string(m.t.IRoQXl),
+                        text: h.intl.string(h.t.IRoQXl),
                         onClick: s,
                     };
                 case _.sE.ADOPT_TAG:
                     return {
-                        text: m.intl.string(m.t.cQDYRk),
-                        onClick: y,
+                        text: h.intl.string(h.t.cQDYRk),
+                        onClick: b,
                     };
                 case _.sE.HAS_APPLICATION:
                     return {
-                        text: m.intl.string(m.t["4yfIDg"]),
-                        onClick: O,
+                        text: h.intl.string(h.t["4yfIDg"]),
+                        onClick: y,
                     };
                 case _.sE.APPLY_TO_JOIN:
                     return {
-                        text: m.intl.string(m.t["7XdMW1"]),
+                        text: h.intl.string(h.t["7XdMW1"]),
                         onClick: f,
                     };
                 case _.sE.LURK_DISCOVERABLE:
                     return {
-                        text: m.intl.string(m.t.VJlc0d),
-                        onClick: v,
+                        text: h.intl.string(h.t.VJlc0d),
+                        onClick: O,
                     };
                 case _.sE.JOIN_VIA_INVITE:
                     return {
-                        text: m.intl.string(m.t.VJlc0d),
+                        text: h.intl.string(h.t.VJlc0d),
                         onClick: u,
                     };
                 default:
@@ -73,31 +72,31 @@ function g(e) {
                         onClick: null,
                     };
             }
-        }, [n, O, v, u, s, f, y]),
-        S = i.useCallback(
+        }, [n, y, O, u, s, f, b]),
+        T = i.useCallback(
             async (e) => {
-                e.stopPropagation(), b(!0);
+                e.stopPropagation(), E(!0);
                 try {
-                    await (null == T ? void 0 : T());
+                    await (null == I ? void 0 : I());
                 } catch (e) {
                 } finally {
-                    null == g || g(), b(!1);
+                    null == m || m(), E(!1);
                 }
             },
-            [T, g],
+            [I, m],
         );
-    return null == I
+    return null == v
         ? null
         : (0, r.jsx)(a.zxk, {
               variant: "active",
               size: "sm",
-              text: I,
+              text: v,
               fullWidth: !0,
-              loading: E || o,
-              onClick: S,
+              loading: g || o,
+              onClick: T,
           });
 }
-function E(e) {
+function g(e) {
     let { profile: t, onComplete: n } = e,
         { guildId: a, validInviteKey: l, ctaType: c } = (0, _.ZP)(t),
         d = i.useCallback(() => (0, u.X)(a), [a]),
@@ -115,7 +114,7 @@ function E(e) {
         }, [p, a, t.visibility, l]);
     return null == c
         ? null
-        : (0, r.jsx)(g, {
+        : (0, r.jsx)(m, {
               guildId: a,
               ctaType: c,
               onGoToGuild: d,

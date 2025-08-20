@@ -3,7 +3,7 @@ var n = t(392711),
     r = t.n(n),
     l = t(619864),
     i = t(193995);
-let a = new Set([
+let s = new Set([
     "a",
     "an",
     "and",
@@ -38,14 +38,14 @@ let a = new Set([
     "will",
     "with",
 ]);
-function s(A) {
+function a(A) {
     return A.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
 function o(A) {
     return A.toLowerCase();
 }
 function g(A) {
-    return a.has(A);
+    return s.has(A);
 }
 function c(A) {
     return 0 === A.length;
@@ -53,7 +53,7 @@ function c(A) {
 function f(A) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         t = A.length >= l.zV && A.length <= l.y_ && e,
-        n = new Set(r()(A.split(/\W+/)).map(s).reject(c).map(o).reject(g).map(i.a).value());
+        n = new Set(r()(A.split(/\W+/)).map(a).reject(c).map(o).reject(g).map(i.a).value());
     return (A) =>
         (function A(e, t, n) {
             if (Array.isArray(e)) e.forEach((e) => A(e, t, n));
@@ -64,7 +64,7 @@ function f(A) {
                 e.content.split(/(\W+)/g).forEach((e) => {
                     !(function (A, e) {
                         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (c((A = o(s(A)))) || g(A)) return !1;
+                        if (c((A = o(a(A)))) || g(A)) return !1;
                         let n = (0, i.a)(A);
                         if (t) {
                             for (let A of e.values()) if (n.includes(A)) return !0;

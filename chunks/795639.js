@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(983200),
     y = n(127654),
     w = n(809639),
-    O = n(388032),
-    T = n(272210);
+    T = n(388032),
+    O = n(272210);
 let S = [
         {
             name: "Media Post Thumbnail",
@@ -48,12 +48,12 @@ function N(e) {
                         !0 === e.isVideo
                             ? (0, r.jsx)(j.Z, {
                                   src: e.src,
-                                  className: T.thumbnail,
+                                  className: O.thumbnail,
                                   "aria-hidden": !0,
                               })
                             : (0, r.jsx)("img", {
                                   src: e.src,
-                                  className: T.thumbnail,
+                                  className: O.thumbnail,
                                   "aria-hidden": !0,
                                   alt: null != (n = null == e ? void 0 : e.alt) ? n : "",
                               }),
@@ -163,14 +163,14 @@ let I = (e) => {
         },
         Z = (0, r.jsx)(v.Z, {
             color: u.Tt.CUSTOM,
-            className: T.uploadFileInputContainer,
-            innerClassName: T.uploadThumbnailContainer,
+            className: O.uploadFileInputContainer,
+            innerClassName: O.uploadThumbnailContainer,
             onChange: R,
             multiple: !1,
             "aria-hidden": !0,
             filters: S,
             "aria-describedby": P,
-            "aria-label": I ? O.intl.string(O.t.MxJI3d) : O.intl.string(O.t.CbiofX),
+            "aria-label": I ? T.intl.string(T.t.MxJI3d) : T.intl.string(T.t.CbiofX),
             children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -180,20 +180,20 @@ let I = (e) => {
                               containerHeight: E.height,
                           }),
                           (0, r.jsxs)("div", {
-                              className: l()(T.changeThumbnailLabelContainer, {
-                                  [T.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
+                              className: l()(O.changeThumbnailLabelContainer, {
+                                  [O.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
                               }),
                               children: [
                                   (0, r.jsx)(m.Text, {
                                       variant: "text-xs/medium",
                                       color: "header-secondary",
-                                      children: O.intl.string(O.t.MxJI3d),
+                                      children: T.intl.string(T.t.MxJI3d),
                                   }),
                                   null == C &&
                                       (0, r.jsx)(m.vdY, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: T.editIcon,
+                                          className: O.editIcon,
                                       }),
                               ],
                           }),
@@ -206,18 +206,18 @@ let I = (e) => {
                               width: 39,
                               height: 39,
                               color: "currentColor",
-                              className: T.uploadIcon,
+                              className: O.uploadIcon,
                           }),
                           (0, r.jsx)(m.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: O.intl.string(O.t.CbiofX),
+                              children: T.intl.string(T.t.CbiofX),
                           }),
                       ],
                   }),
         });
     return (0, r.jsx)("div", {
-        className: T.thumbnailContainer,
+        className: O.thumbnailContainer,
         style: E,
         children:
             null != C
@@ -225,8 +225,8 @@ let I = (e) => {
                       actions: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(x.Z, {
-                                  className: T.action,
-                                  tooltip: O.intl.string(O.t.Y8ujqq),
+                                  className: O.action,
+                                  tooltip: T.intl.string(T.t.Y8ujqq),
                                   onClick: M,
                                   children: (0, r.jsx)(m.vdY, {
                                       size: "xs",
@@ -234,8 +234,8 @@ let I = (e) => {
                                   }),
                               }),
                               (0, r.jsx)(x.Z, {
-                                  className: T.action,
-                                  tooltip: O.intl.string(O.t.vN7REx),
+                                  className: O.action,
+                                  tooltip: T.intl.string(T.t.vN7REx),
                                   onClick: () => h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {
@@ -251,7 +251,7 @@ let I = (e) => {
                       handleEditModal: M,
                       keyboardModeEnabled: b,
                       size: p.q.SMALL,
-                      className: T.attachmentListItem,
+                      className: O.attachmentListItem,
                       children: Z,
                   })
                 : Z,

@@ -11,7 +11,7 @@ var n = r(951288),
 function f(e) {
     let { widget: t, userId: r, className: i } = e,
         f = l.useRef(null),
-        b = () => {
+        g = () => {
             (0, s.G1)(r, t);
         };
     return (0, n.jsx)(o.yRy, {
@@ -32,7 +32,7 @@ function f(e) {
                     children: (0, n.jsx)(o.sNh, {
                         id: "flag-widget",
                         label: u.intl.string(u.t.D4GvHB),
-                        action: b,
+                        action: g,
                         color: "danger",
                         icon: o.U65,
                     }),

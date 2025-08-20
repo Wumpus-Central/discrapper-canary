@@ -18,14 +18,14 @@ var r = t(951288),
     m = t(981631),
     p = t(388032),
     b = t(839468);
-let x = [
+let g = [
         () => p.intl.string(p.t.madJdH),
         () => p.intl.string(p.t.NYmfoK),
         () => p.intl.string(p.t.R2PaCg),
         () => p.intl.string(p.t.laSR8v),
         () => p.intl.string(p.t.DnsJEx),
     ],
-    g = [
+    x = [
         () => p.intl.string(p.t.nFSbeH),
         () => p.intl.string(p.t.gTcxOz),
         () => p.intl.string(p.t["8T0wYm"]),
@@ -93,7 +93,7 @@ function _() {
     let e = p.intl.string(p.t.RnD2yc),
         [n] = o.useState(() => {
             var e;
-            return (null != (e = (0, l.sample)(x)) ? e : x[0])();
+            return (null != (e = (0, l.sample)(g)) ? e : g[0])();
         });
     return (0, r.jsx)(v, {
         heading: e,
@@ -104,7 +104,7 @@ function y() {
     let e = p.intl.string(p.t.bFgqYG),
         [n] = o.useState(() => {
             var e;
-            return (null != (e = (0, l.sample)(g)) ? e : g[0])();
+            return (null != (e = (0, l.sample)(x)) ? e : x[0])();
         });
     return (0, r.jsx)(v, {
         heading: e,
@@ -115,22 +115,22 @@ function I(e) {
     let { user: n, guildId: t, channelId: a, onClose: s } = e,
         d = u.ZP.getName(t, a, n),
         m = p.intl.formatToPlainString(p.t.sjSitL, { name: d }),
-        [x] = o.useState(() => {
+        [g] = o.useState(() => {
             var e;
             return (null != (e = (0, l.sample)(h)) ? e : h[0])(d);
         }),
-        g = o.useCallback(() => {
+        x = o.useCallback(() => {
             c.Z.openPrivateChannel({ recipientIds: n.id }), null == s || s();
         }, [n.id, s]);
     return (0, r.jsx)(v, {
         heading: m,
-        bodyText: x,
+        bodyText: g,
         children: (0, r.jsx)("div", {
             className: b.buttonRow,
             children: (0, r.jsx)(f.tG, {
                 icon: i.kBi,
                 text: p.intl.string(p.t["g33r/P"]),
-                onClick: g,
+                onClick: x,
                 themeColor: "secondary",
             }),
         }),

@@ -1,4 +1,4 @@
-i.d(e, { Z: () => u });
+i.d(e, { Z: () => c });
 var n = i(951288);
 i(647438);
 var r = i(481060),
@@ -7,12 +7,12 @@ var r = i(481060),
     l = i(989830),
     a = i(388032),
     d = i(617296);
-function u(t) {
+function c(t) {
     let { channelId: e } = t,
         i = (0, l.Z)(e);
     if (!(null != i && (i.value > 0 || (null == i ? void 0 : i.multiplier) > 1))) return null;
-    let { multiplier: u } = i,
-        { color: c } = (0, o.yz)(u);
+    let { multiplier: c } = i,
+        { color: u } = (0, o.yz)(c);
     return (0, n.jsxs)("div", {
         className: d.container,
         children: [
@@ -21,7 +21,7 @@ function u(t) {
                 children: a.intl.string(a.t.Jr2519),
             }),
             (0, n.jsx)(r.Exd, {
-                foregroundColor: (0, s.Lq)(c),
+                foregroundColor: (0, s.Lq)(u),
                 className: d.progress,
                 size: r.Exd.Sizes.LARGE,
                 percent: 100 * (0, o.nc)(i),

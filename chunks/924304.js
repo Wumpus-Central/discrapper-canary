@@ -6,5 +6,4 @@ e.exports = {
     platformSelectorPrimaryLabel: "platformSelectorPrimaryLabel__960ef",
     platformSelectorPrimary: "platformSelectorPrimary__960ef",
     platformSelectorSecondary: "platformSelectorSecondary__960ef",
-    videoQuestPlayIcon: "videoQuestPlayIcon__960ef",
 };

@@ -175,7 +175,10 @@ let q = (e, t, n) => {
             : (0, r.jsxs)("div", {
                   className: G.resultChannel,
                   children: [
-                      (0, r.jsx)(x.MC, { channel: i }),
+                      (0, r.jsx)(x.MC, {
+                          channel: i,
+                          className: G.searchResultChannelIcon,
+                      }),
                       (0, r.jsx)(x.GQ, { channel: i }),
                       (0, r.jsx)(x.P, { channel: i }),
                   ],

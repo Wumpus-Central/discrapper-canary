@@ -14,7 +14,7 @@ function s(e) {
     return o(e).split("/").slice(-2).join("/");
 }
 function l(e) {
-    var t, n, a;
+    var t, n, a, o, l;
     if (null == e)
         return {
             gameName: void 0,
@@ -24,14 +24,14 @@ function l(e) {
             sku: void 0,
             gameMetadata: void 0,
         };
-    let o = i.Z.getGameByName(e.name),
-        l = "exePath" in e ? e.exePath : e.exe;
+    let c = i.Z.getGameByName(e.name),
+        u = "exePath" in e ? e.exePath : e.exe;
     return {
         gameName: null != (t = e.name) ? t : void 0,
-        gameId: null == o ? void 0 : o.id,
-        exe: null != l ? s(l) : void 0,
-        distributor: null != (n = e.distributor) ? n : void 0,
-        sku: null != (a = e.sku) ? a : void 0,
+        gameId: null != (a = null != (n = null == c ? void 0 : c.id) ? n : e.id) ? a : void 0,
+        exe: null != u ? s(u) : void 0,
+        distributor: null != (o = e.distributor) ? o : void 0,
+        sku: null != (l = e.sku) ? l : void 0,
         gameMetadata: null != e ? (0, r.sD)(e) : void 0,
     };
 }
