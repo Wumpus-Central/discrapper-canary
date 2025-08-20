@@ -89645,7 +89645,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -89799,7 +89799,8 @@ h2.title_feb59c {
 }
 
 .textarea__5f04d {
-    height: 180px
+    height: 180px;
+    width: 100%
 }
 
 @media (max-width:485px) and (max-height:450px) {
