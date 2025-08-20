@@ -1,16 +1,17 @@
-n.d(t, { o: () => I });
+n.d(t, { o: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(84735),
     l = n(15127),
-    c = n(481060),
-    u = n(557818),
-    d = n(897037),
-    f = n(388032),
-    _ = n(430490);
-function p(e, t, n) {
+    c = n(753450),
+    u = n(481060),
+    d = n(557818),
+    f = n(897037),
+    _ = n(388032),
+    p = n(430490);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +35,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +52,22 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +75,7 @@ function E(e, t) {
     }
     return i;
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,7 +84,7 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function y(e, t) {
+function O(e, t) {
     let n = i.useContext(l.q3);
     return (
         i.useEffect(() => {
@@ -100,20 +101,20 @@ function y(e, t) {
         n
     );
 }
-function O(e) {
+function v(e) {
     let { accessory: t, inputSize: n, disabled: i } = e;
     if ("string" == typeof t)
-        return (0, r.jsx)(c.Text, {
+        return (0, r.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "input-placeholder-text",
-            className: _.leadingText,
+            className: p.leadingText,
             children: t,
         });
     let a = "md" === n ? "sm" : "xs";
     if ("icon" in t) {
         let { icon: e, onClick: n, "aria-label": o } = t;
-        return (0, r.jsx)(c.P3F, {
-            className: _.iconButton,
+        return (0, r.jsx)(u.P3F, {
+            className: p.iconButton,
             onClick: n,
             "aria-label": o,
             "aria-disabled": i,
@@ -125,42 +126,47 @@ function O(e) {
     }
     if ("button" in t)
         return (0, r.jsx)("div", {
-            className: _.icon,
+            className: p.icon,
             children: t.button,
         });
+    if ("type" in t && "tags" === t.type) {
+        let { type: e } = t,
+            n = b(t, ["type"]);
+        return (0, r.jsx)(c.Q, E(m({}, n), { layout: "inline" }));
+    }
     let o = t;
     return (0, r.jsx)("div", {
-        className: _.icon,
+        className: p.icon,
         children: (0, r.jsx)(o, {
             size: a,
-            color: c.TVs.colors.ICON_PRIMARY,
+            color: u.TVs.colors.ICON_PRIMARY,
         }),
     });
 }
-function v(e) {
+function I(e) {
     let { inputSize: t, onClick: n } = e,
         i = "md" === t ? "xs" : "xxs";
-    return (0, r.jsx)(c.P3F, {
-        className: _.clearButton,
+    return (0, r.jsx)(u.P3F, {
+        className: p.clearButton,
         onClick: n,
-        "aria-label": f.intl.string(f.t.VkKicX),
-        children: (0, r.jsx)(c.k$p, {
+        "aria-label": _.intl.string(_.t.VkKicX),
+        children: (0, r.jsx)(u.k$p, {
             size: i,
             color: "currentColor",
         }),
     });
 }
-function I(e) {
+function T(e) {
     var t, n;
     let {
             disabled: a = !1,
             editable: l,
             inputRef: c,
-            focusProps: f,
-            name: p = "",
-            type: m = "text",
-            placeholder: b = "",
-            maxLength: I,
+            focusProps: u,
+            name: _ = "",
+            type: h = "text",
+            placeholder: g = "",
+            maxLength: y,
             value: T,
             defaultValue: S,
             minLength: A,
@@ -176,7 +182,7 @@ function I(e) {
             showCharacterCount: M = !1,
             successMessage: k,
         } = e,
-        U = E(e, [
+        U = b(e, [
             "disabled",
             "editable",
             "inputRef",
@@ -200,87 +206,103 @@ function I(e) {
             "showCharacterCount",
             "successMessage",
         ]),
-        G = y(T, S),
-        B = (0, d.m)({
+        G = O(T, S),
+        B = (0, f.m)({
             validateOn: w,
             error: C,
             value: T,
             minLength: A,
-            maxLength: I,
+            maxLength: y,
             defaultDirty: N,
         }),
         { setShouldValidate: Z } = B,
-        V = (e) => {
-            var t, n;
-            let r = e.currentTarget.value;
-            null == (t = U.onChange) || t.call(U, r, p), Z(!0), null == (n = G.setHasValue) || n.call(G, "" !== r);
-        },
+        V = "object" == typeof R && "type" in R && "tags" === R.type,
         F = (e) => {
             var t, n;
-            null == (t = U.onFocus) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !0);
+            let r = e.currentTarget.value;
+            null == (t = U.onChange) || t.call(U, r, _), Z(!0), null == (n = G.setHasValue) || n.call(G, "" !== r);
         },
         H = (e) => {
             var t, n;
-            null == (t = U.onBlur) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !1);
+            null == (t = U.onFocus) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !0);
         },
         Y = (e) => {
+            var t, n;
+            null == (t = U.onBlur) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !1);
+        },
+        W = (e) => {
+            var t, n, r;
+            if (V && "Backspace" === e.key && "" === T) {
+                let t = null != (n = null == R ? void 0 : R.items) ? n : [];
+                if (t.length > 0) {
+                    let n = t[t.length - 1];
+                    e.preventDefault(),
+                        e.stopPropagation(),
+                        null == R || null == (r = R.onRemove) || r.call(R, new Set([n.id]));
+                }
+            }
+            null == U || null == (t = U.onKeyDown) || t.call(U, e);
+        },
+        K = (e) => {
             if (null != U.onClear) U.onClear(e);
             else {
                 var t;
-                null == (t = U.onChange) || t.call(U, "", p);
+                null == (t = U.onChange) || t.call(U, "", _);
             }
         },
-        W = i.useRef(null),
-        K = U.readOnly;
-    null == K && !1 === l && (K = !0);
-    let z = null;
-    ("boolean" == typeof L ? L && null != T && "" !== T && !K : L.show)
-        ? (z = (0, r.jsx)(v, {
+        z = i.useRef(null),
+        q = U.readOnly;
+    null == q && !1 === l && (q = !0);
+    let X = null;
+    ("boolean" == typeof L ? L && null != T && "" !== T && !q : L.show)
+        ? (X = (0, r.jsx)(I, {
               inputSize: D,
-              onClick: Y,
+              onClick: K,
           }))
         : null != P &&
-          (z = (0, r.jsx)(O, {
+          (X = (0, r.jsx)(v, {
               accessory: P,
               inputSize: D,
           }));
-    let q = null;
+    let Q = null;
     return (
         null != R &&
-            (q = (0, r.jsx)(O, {
+            (Q = (0, r.jsx)(v, {
                 accessory: R,
                 inputSize: D,
             })),
-        (0, r.jsxs)(u.J, {
+        (0, r.jsxs)(d.J, {
+            ref: z,
             disabled: a,
             validation: B,
             fullWidth: x,
-            readOnly: K,
+            readOnly: q,
             helperText: j,
             successMessage: k,
             characterCount: M ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
-            characterCountMaxLength: I,
-            className: o()(_.container, _[D], {
-                [_.leading]: null != q,
-                [_.trailing]: null != z,
+            characterCountMaxLength: y,
+            className: o()(p.container, p[D], {
+                [p.leading]: null != Q,
+                [p.trailing]: null != X,
+                [p.tags]: V,
             }),
             children: [
-                q,
+                Q,
                 (0, r.jsx)(
                     s.t,
-                    g(h({ ringTarget: W }, f), {
+                    E(m({ ringTarget: z }, u), {
                         children: (0, r.jsx)(
                             "input",
-                            g(
-                                h(
+                            E(
+                                m(
                                     {
-                                        name: p,
-                                        className: _.input,
+                                        name: _,
+                                        className: p.input,
                                         disabled: a,
-                                        readOnly: K,
-                                        type: m,
-                                        placeholder: b,
-                                        maxLength: I,
+                                        readOnly: q,
+                                        type: h,
+                                        placeholder: g,
+                                        maxLength: y,
                                         minLength: A,
                                         value: T,
                                         defaultValue: S,
@@ -289,16 +311,17 @@ function I(e) {
                                 ),
                                 {
                                     "aria-labelledby": null != (n = U["aria-labelledby"]) ? n : G.titleId,
-                                    onChange: V,
-                                    onBlur: H,
-                                    onFocus: F,
+                                    onChange: F,
+                                    onBlur: Y,
+                                    onFocus: H,
+                                    onKeyDown: W,
                                     ref: c,
                                 },
                             ),
                         ),
                     }),
                 ),
-                z,
+                X,
             ],
         })
     );

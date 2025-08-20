@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => z }), n(388685);
 var o,
     s = n(392711),
     l = n(442837),
@@ -60,9 +60,15 @@ let m = new Map(),
         (O = m), (v = g), (A = y), (N = !1), (R = new Set()), (r = t), (a = Date.now());
     },
     G = (e) => {
-        if (0 === e.categories.length) (O = m), (v = g);
-        else if (!(0, s.isEqual)([...O.values()], e.categories) && !e.noOp) {
-            let t = new Map(e.categories.map((e) => [e.skuId, e])),
+        Z(e.categories, e.noOp);
+    },
+    B = (e) => {
+        Z(e.categories.categories, e.noOp);
+    },
+    Z = (e, t) => {
+        if (0 === e.length) (O = m), (v = g);
+        else if (!(0, s.isEqual)([...O.values()], e) && !t) {
+            let t = new Map(e.map((e) => [e.skuId, e])),
                 n = new Date();
             O.forEach((e, r) => {
                 !t.has(r) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(r, e);
@@ -71,15 +77,15 @@ let m = new Map(),
                 (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
                 (T = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
-        Z(e.categories, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        F(e, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
-    B = (e) => {
+    V = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
         (S = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))),
             (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
-    Z = (e, t) => {
+    F = (e, t) => {
         if (0 === e.length) {
             A = y;
             return;
@@ -96,7 +102,7 @@ let m = new Map(),
                 A = y;
         }
     },
-    V = () => {
+    H = () => {
         (O = m),
             (v = g),
             (A = y),
@@ -108,7 +114,7 @@ let m = new Map(),
             (D = {}),
             (x = 0);
     },
-    F = () => {
+    Y = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig(
             { location: "CollectiblesCategoryStore handleExperimentChange" },
@@ -116,12 +122,12 @@ let m = new Map(),
         );
         e !== C && (i = void 0), (C = e);
     },
-    H = (e) => {
+    W = (e) => {
         x = e.skipNumCategories;
     };
-class Y extends (o = l.ZP.Store) {
+class K extends (o = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], V), this.syncWith([u.Z], F);
+        this.syncWith([f.default], H), this.syncWith([u.Z], Y);
     }
     get isFetchingCategories() {
         return N;
@@ -182,15 +188,16 @@ class Y extends (o = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-h(Y, "displayName", "CollectiblesCategoryStore");
-let W = new Y(c.Z, {
+h(K, "displayName", "CollectiblesCategoryStore");
+let z = new K(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: k,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
+    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: B,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
     COLLECTIBLES_PRODUCT_FETCH: L,
     COLLECTIBLES_PRODUCT_FETCH_SUCCESS: M,
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: j,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: B,
-    COLLECTIBLES_SKIP_NUM_CATEGORIES: H,
-    LOGOUT: V,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: V,
+    COLLECTIBLES_SKIP_NUM_CATEGORIES: W,
+    LOGOUT: H,
 });

@@ -1,1 +1,1 @@
-e.exports = u(128971)("toUpperCase");
+u.exports = f(128971)("toUpperCase");

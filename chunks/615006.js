@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r,
     i = n(442837),
     a = n(570140);
@@ -18,35 +18,41 @@ function o(e, t, n) {
 let s = [],
     l = s,
     c = (e) => {
-        let t = e.shopHome.userDiscounts;
-        l = null != t && t.length > 0 ? t : s;
+        d(e.shopHome.userDiscounts);
     },
     u = (e) => {
+        d(e.categories.userDiscounts);
+    },
+    d = (e) => {
+        l = null != e && e.length > 0 ? e : s;
+    },
+    f = (e) => {
         let t = e.appliedUserDiscounts;
         if (null != t && t.length > 0) {
             let e = l.filter((e) => !t.some((t) => t.discount.id === e.discountId));
             e.length !== l.length && (l = e);
         }
     },
-    d = (e) => {
+    _ = (e) => {
         let t = e.discountIds;
         if (t.length > 0) {
             let e = l.filter((e) => !t.includes(e.discountId));
             e.length !== l.length && (l = e);
         }
     },
-    f = () => {
+    p = () => {
         l = s;
     };
-class _ extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     getUserDiscounts() {
         return l;
     }
 }
-o(_, "displayName", "CollectiblesUserDiscountStore");
-let p = new _(a.Z, {
+o(h, "displayName", "CollectiblesUserDiscountStore");
+let m = new h(a.Z, {
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: c,
-    SKU_PURCHASE_SUCCESS: u,
-    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: d,
-    LOGOUT: f,
+    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: u,
+    SKU_PURCHASE_SUCCESS: f,
+    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: _,
+    LOGOUT: p,
 });

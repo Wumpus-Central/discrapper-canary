@@ -1,47 +1,39 @@
-a.d(t, { Z: () => p }), a(388685), a(35282);
-var n = a(951288);
-a(647438);
-var r = a(805203),
-    l = a(692547),
-    i = a(410030),
-    s = a(95398),
-    o = a(981631),
-    c = a(451429);
-let d = {
-    base00: l.Z.colors.BACKGROUND_BASE_LOWER.css,
-    base03: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
-    base07: l.Z.colors.TEXT_DEFAULT.css,
-    base08: l.Z.colors.TEXT_MUTED.css,
-    base09: l.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
-    base0B: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
-    base0D: l.Z.colors.TEXT_BRAND.css,
-};
-function u(e) {
-    let t = {};
-    for (let [a, n] of Object.entries(e)) t[a] = n;
-    return t;
+n.d(t, { i: () => a });
+var r = n(647438);
+let i = 1000;
+function a(e) {
+    let { keyboardDelegate: t, selectionManager: n, onTypeSelect: a } = e,
+        s = (0, r.useRef)({
+            search: "",
+            timeout: void 0,
+        }).current,
+        l = (e) => {
+            let r = o(e.key);
+            if (
+                r &&
+                !e.ctrlKey &&
+                !e.metaKey &&
+                e.currentTarget.contains(e.target) &&
+                (0 !== s.search.length || " " !== r)
+            ) {
+                if (
+                    (" " === r &&
+                        s.search.trim().length > 0 &&
+                        (e.preventDefault(), "continuePropagation" in e || e.stopPropagation()),
+                    (s.search += r),
+                    null != t.getKeyForSearch)
+                ) {
+                    let e = t.getKeyForSearch(s.search, n.focusedKey);
+                    null == e && (e = t.getKeyForSearch(s.search)), null != e && (n.setFocusedKey(e), a && a(e));
+                }
+                clearTimeout(s.timeout),
+                    (s.timeout = setTimeout(() => {
+                        s.search = "";
+                    }, i));
+            }
+        };
+    return { typeSelectProps: { onKeyDownCapture: t.getKeyForSearch ? l : void 0 } };
 }
-let m = u(d),
-    x = u(d);
-function h(e) {
-    return o.Jn9.test(e)
-        ? (0, n.jsx)(s.ZP, {
-              type: s.ZP.Types.TEXT,
-              children: () => e,
-          })
-        : e;
-}
-function p(e) {
-    let { data: t } = e,
-        a = (0, i.ZP)();
-    return (0, n.jsx)("div", {
-        className: c.inspectorWrapper,
-        children: (0, n.jsx)(r.L, {
-            data: t,
-            theme: "light" === a ? x : m,
-            invertTheme: !1,
-            valueRenderer: h,
-            shouldExpandNode: () => !0,
-        }),
-    });
+function o(e) {
+    return 1 !== e.length && /^[A-Z]/i.test(e) ? "" : e;
 }

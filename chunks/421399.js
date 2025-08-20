@@ -156,47 +156,47 @@ function Z(e) {
         eh = (0, R.Z)(a),
         em = i.useContext(c.d),
         eg = ep && (0, O.S2)(n),
-        eE = ec && eg;
+        eE = ec && eg,
+        eb = (null == h ? void 0 : h.isPrivate()) && null != es;
     i.useEffect(() => {
-        if (null == Q || !eE || null == em) return;
+        if (null == Q || (!eE && !eb) || null == em) return;
         let { setAnimate: e } = em;
         return (
             C.S.subscribeKeyed(P.LPv.ANIMATE_CHAT_AVATAR, "".concat(Q, ":").concat(a.author.id), e),
             () => void C.S.unsubscribeKeyed(P.LPv.ANIMATE_CHAT_AVATAR, "".concat(Q, ":").concat(a.author.id), e)
         );
-    }, [a.author.id, Q, eE, em]);
-    let { gradientStyle: eb, gradientClassname: ey } = (0, d.Icv)({
+    }, [a.author.id, Q, eE, eb, em]);
+    let { gradientStyle: ey, gradientClassname: eO } = (0, d.Icv)({
             colorStrings: ea,
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: null == em ? void 0 : em.animate,
         }),
-        eO = () => {
+        ev = () => {
             if (ec) {
                 if (eE && null != ea) {
                     var e;
-                    return M(L({}, eb), {
+                    return M(L({}, ey), {
                         textDecorationColor: null != (e = null == ea ? void 0 : ea.primaryColor) ? e : void 0,
                     });
                 }
                 return null != ei ? { color: ei } : void 0;
             }
         },
-        ev = (0, u.EJ)(en + er),
-        eI = (null == h ? void 0 : h.isPrivate()) && null != es,
+        eI = (0, u.EJ)(en + er),
         eT = {
-            className: o()([D.username, eE && ey, ef]),
-            style: eO(),
+            className: o()([D.username, eE && eO, ef]),
+            style: ev(),
             onClick: H,
             onContextMenu: Y,
-            children: eI
+            children: eb
                 ? (0, r.jsx)(g.Z, {
-                      userName: ev,
+                      userName: eI,
                       displayNameStyles: es,
-                      effectDisplayType: m.F.PLAIN,
+                      effectDisplayType: (null == em ? void 0 : em.animate) ? m.F.ANIMATED : m.F.PLAIN,
                       loop: !0,
                   })
-                : ev,
+                : eI,
             "data-text": en + er,
         },
         eS = i.useMemo(

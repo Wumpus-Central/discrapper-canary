@@ -1,65 +1,15 @@
-n.d(t, {
-    $Z: () => s,
-    Ao: () => l,
-    Cp: () => o,
-    Cz: () => u,
-    bA: () => i,
-    d7: () => c,
-    k3: () => d,
-    xv: () => a,
-});
-var r = n(570140);
-function i(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_OPEN",
-        id: e,
-        component: t,
-        props: n,
-    });
-}
-function a(e) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_CLOSE",
-        id: e,
-    });
-}
-function o(e) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_HIDE",
-        id: e,
-    });
-}
-function s(e) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_SHOW",
-        id: e,
-    });
-}
-function l(e, t) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_MOVE",
-        id: e,
-        position: t,
-    });
-}
-function c(e, t) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_RESIZE",
-        width: e,
-        pipType: t,
-    });
-}
-function u(e, t) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_UPDATE_RECT",
-        id: e,
-        rect: t,
-    });
-}
-function d(e) {
-    r.Z.dispatch({
-        type: "PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW",
-        id: e,
-    });
-}
+n.d(t, { Z: () => r });
+var r = {};
+r = {
+    deselectedItem: (e) => `${e.item} non s\xe9lectionn\xe9.`,
+    longPressToSelect: `Appuyez de mani\xe8re prolong\xe9e pour passer en mode de s\xe9lection.`,
+    select: `S\xe9lectionner`,
+    selectedAll: `Tous les \xe9l\xe9ments s\xe9lectionn\xe9s.`,
+    selectedCount: (e, t) =>
+        `${t.plural(e.count, {
+            "=0": `Aucun \xe9l\xe9ment s\xe9lectionn\xe9`,
+            one: () => `${t.number(e.count)} \xe9l\xe9ment s\xe9lectionn\xe9`,
+            other: () => `${t.number(e.count)} \xe9l\xe9ments s\xe9lectionn\xe9s`,
+        })}.`,
+    selectedItem: (e) => `${e.item} s\xe9lectionn\xe9.`,
+};
