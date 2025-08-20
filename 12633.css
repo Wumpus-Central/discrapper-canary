@@ -23844,8 +23844,7 @@ svg.radioIcon_c1e9c4 {
 
 .cherryBomb__89a31 {
     font-family: Cherry Bomb One, gg sans, Arial, sans-serif;
-    letter-spacing: .04em;
-    opacity: .85
+    letter-spacing: .04em
 }
 
 .cherryBomb__89a31.safari__89a31 {
@@ -23854,8 +23853,7 @@ svg.radioIcon_c1e9c4 {
 
 .chicle__89a31 {
     font-family: Chicle, gg sans, Arial, sans-serif;
-    letter-spacing: .05em;
-    opacity: .85
+    letter-spacing: .05em
 }
 
 .museoModerno__89a31 {
@@ -23891,6 +23889,7 @@ svg.radioIcon_c1e9c4 {
     display: inline-flex;
     max-width: 100%;
     min-width: 0;
+    opacity: var(--custom-display-name-styles-font-opacity, 1);
     perspective: 1px;
     position: relative;
     text-indent: 0;
@@ -89813,7 +89812,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
