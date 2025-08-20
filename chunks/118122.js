@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(981631),
     _ = n(675999),
     y = n(388032),
-    j = n(816827);
-let v = {
+    v = n(816827);
+let j = {
     origin: {
         x: -16,
         y: 0,
@@ -94,10 +94,10 @@ function x(e) {
     return t
         ? P
         : (0, r.jsx)("div", {
-              className: j.tutorialContainer,
+              className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
                   tutorialId: E ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: v,
+                  inlineSpecs: j,
                   position: "right",
                   children: [
                       P,

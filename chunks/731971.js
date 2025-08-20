@@ -9,8 +9,8 @@ n.d(t, {
     oE: () => f,
     pB: () => p,
     y: () => _,
-    yS: () => j,
-    yr: () => v,
+    yS: () => v,
+    yr: () => j,
 }),
     n(781311);
 var r = n(879690),
@@ -163,8 +163,8 @@ let d = (0, r.U)((e) => ({
     O = () => d.getState().dmsAllowed,
     _ = () => d.getState().nickname,
     y = () => d.getState().showActivity,
-    j = () => d.getState().mutedServer,
-    v = () => {
+    v = () => d.getState().mutedServer,
+    j = () => {
         var e, t;
         let { nickname: n } = d();
         if (null != n && "" !== n.trim()) return n;

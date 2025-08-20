@@ -14,28 +14,28 @@ var r = n(951288),
     m = n(242291),
     g = n(792165),
     b = n(603074),
-    y = n(294629),
-    _ = n(131951),
+    _ = n(294629),
+    y = n(131951),
     C = n(390322),
     x = n(871499),
     v = n(127379),
     O = n(388032);
 function j(e) {
     let { channel: t, themeable: j, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
-        { parentAnalyticsLocation: P } = (0, u.ZP)(),
+        { parentAnalyticsLocation: I } = (0, u.ZP)(),
         {
-            Component: I,
+            Component: P,
             play: Z,
             events: { onMouseEnter: T, onMouseLeave: N },
         } = (0, o.j)(),
         A = t.getGuildId(),
-        { mute: w, suppress: R } = (0, y.Z)(t),
-        M = (0, l.e7)([_.Z], () => _.Z.isDeaf()),
-        k = w || R || M,
-        D = (0, m.sR)({ isSoundboardButtonDisabled: k }),
-        [L, U] = (0, h.cv)(D),
+        { mute: w, suppress: R } = (0, _.Z)(t),
+        M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
+        D = w || R || M,
+        L = (0, m.sR)({ isSoundboardButtonDisabled: D }),
+        [k, U] = (0, h.cv)(L),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: F, setIsHovered: H, onMouseEnter: G, onMouseLeave: V } = (0, f.Z)(200, 300);
+        { isHovered: G, setIsHovered: F, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -75,7 +75,7 @@ function j(e) {
                             },
                             t,
                         )),
-                        (i = i = { onInteraction: (0, p.u)("SoundboardContextMenu", P) }),
+                        (i = i = { onInteraction: (0, p.u)("SoundboardContextMenu", I) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,37 +94,37 @@ function j(e) {
             });
     }
     function W() {
-        (0, d.v)(P, d.d.SOUNDBOARD),
+        (0, d.v)(I, d.d.SOUNDBOARD),
             E === v.D.SOUNDBOARD
                 ? (null == S || S(void 0), V())
-                : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD));
+                : (null != E ? (Z(), H()) : Z(), null == S || S(v.D.SOUNDBOARD));
     }
-    let q = i.useRef(null);
+    let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
-        targetElementRef: q,
-        shouldShow: (F && (E === v.D.SOUNDBOARD || null == E)) || E === v.D.SOUNDBOARD,
+        targetElementRef: Y,
+        shouldShow: (G && (E === v.D.SOUNDBOARD || null == E)) || E === v.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            H(!1), null == S || S(void 0);
+            F(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return k
+            return D
                 ? null
                 : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)("div", {
-                          onMouseEnter: G,
+                          onMouseEnter: H,
                           onMouseLeave: V,
                           children: (0, r.jsx)(b.Z, {
                               guildId: A,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  L === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U,
@@ -136,7 +136,7 @@ function j(e) {
         },
         children: () =>
             (0, r.jsx)(x.d, {
-                ref: q,
+                ref: Y,
                 isTrayButton: !0,
                 themeable: j,
                 label: w
@@ -146,18 +146,18 @@ function j(e) {
                       : M
                         ? O.intl.string(O.t.X1lQlp)
                         : void 0,
-                iconComponent: I,
-                disabled: k,
+                iconComponent: P,
+                disabled: D,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    G(), T();
+                    H(), T();
                 },
                 onMouseLeave: () => {
                     null == E && (V(), N());
                 },
-                isActive: F || E === v.D.SOUNDBOARD,
-                color: F || E === v.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: G || E === v.D.SOUNDBOARD,
+                color: G || E === v.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

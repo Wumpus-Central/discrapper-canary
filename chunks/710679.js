@@ -1,156 +1,153 @@
-t.d(n, { Z: () => P }), t(953529);
-var i = t(951288);
+t.d(n, { Z: () => Z }), t(953529);
+var r = t(951288);
 t(647438);
-var r = t(442837),
-    l = t(724912),
-    o = t(41776),
+var i = t(442837),
+    l = t(41776),
     c = t(501655),
     a = t(427679),
-    s = t(592125),
+    o = t(592125),
+    s = t(430824),
     u = t(496675),
     d = t(19780),
     g = t(594174),
     p = t(15274),
-    f = t(924301),
-    h = t(951539),
+    h = t(924301),
+    m = t(951539),
     v = t(146768),
-    m = t(592126),
     j = t(236373),
-    b = t(230900),
-    y = t(954313),
+    f = t(230900),
+    b = t(954313),
     x = t(405613),
     O = t(460838),
-    Z = t(462179),
+    y = t(462179),
     C = t(981631);
-function P(e) {
-    var n, t, P;
-    let { guildEvent: E, guildId: k, truncate: N, onActionTaken: w, className: I, isNew: S } = e,
+function Z(e) {
+    var n, t, Z;
+    let { guildEvent: k, truncate: N, onActionTaken: P, className: E, isNew: w } = e,
         {
-            id: T,
-            guild_id: _,
+            id: I,
+            guild_id: S,
             channel_id: D,
-            creator_id: G,
+            creator_id: T,
             name: L,
-            description: R,
-            entity_type: H,
+            description: _,
+            entity_type: G,
             image: M,
-            recurrence_rule: U,
-        } = E,
-        z = (0, y.DK)(E),
-        A = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(T, z), [T, z]),
-        J = (0, r.e7)([o.Z], () => o.Z.isLurking(_), [_]),
-        B = (0, r.e7)([a.Z], () => a.Z.getStageInstanceByChannel(D), [D]),
-        X = (0, r.e7)([s.Z], () => s.Z.getChannel(D), [D]),
-        W = (0, r.e7)([g.default], () => g.default.getUser(G), [G]),
-        { speakers: V } = (0, v.Z)({
+            recurrence_rule: R,
+        } = k,
+        z = (0, b.DK)(k),
+        A = (0, i.e7)([h.ZP], () => h.ZP.isInterestedInEventRecurrence(I, z), [I, z]),
+        U = (0, i.e7)([l.Z], () => l.Z.isLurking(S), [S]),
+        J = (0, i.e7)([a.Z], () => a.Z.getStageInstanceByChannel(D), [D]),
+        B = (0, i.e7)([s.Z], () => s.Z.getGuild(S), [S]),
+        q = (0, i.e7)([o.Z], () => o.Z.getChannel(D), [D]),
+        K = (0, i.e7)([g.default], () => g.default.getUser(T), [T]),
+        { speakers: W } = (0, v.Z)({
             id: D,
             data: {
                 guild: null,
-                instance: B,
+                instance: J,
                 speakers: [],
                 participantCount: 0,
             },
             context: {
-                guildId: _,
-                instance: B,
+                guildId: S,
+                instance: J,
             },
         }),
-        q = (0, r.e7)([d.Z], () => d.Z.getChannelId()),
-        K = (0, f.xt)(E),
-        Q = q === D && null != q && K,
-        F = V.filter((e) => e.type === c.Ui.VOICE),
-        Y = F.length,
-        $ = (0, r.e7)([u.Z], () => u.Z.can(C.Plq.CONNECT, X), [X]),
-        ee = (0, h.ZP)(E),
-        { isMember: en, guild: et } = (0, m.Z)(_, T),
-        ei = (0, Z.Z)({
-            guild: et,
-            channel: X,
-            guildScheduledEvent: E,
-            isActive: K,
+        X = (0, i.e7)([d.Z], () => d.Z.getChannelId()),
+        F = (0, h.xt)(k),
+        H = X === D && null != X && F,
+        V = W.filter((e) => e.type === c.Ui.VOICE),
+        Q = V.length,
+        Y = (0, i.e7)([u.Z], () => u.Z.can(C.Plq.CONNECT, q), [q]),
+        $ = (0, m.ZP)(k),
+        ee = null != B,
+        en = (0, y.Z)({
+            guild: B,
+            channel: q,
+            guildScheduledEvent: k,
+            isActive: F,
             recurrenceId: z,
-            onActionTaken: w,
+            onActionTaken: P,
         }),
-        er = (0, l.Z)(k),
-        el = J
+        et = U
             ? void 0
             : (e) =>
                   (0, p.bO)({
-                      eventId: T,
-                      parentGuildId: k,
+                      eventId: I,
                       recurrenceId: e,
                   });
-    return (0, i.jsx)(
+    return (0, r.jsx)(
         O.Z,
         ((t = (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
-                    i = Object.keys(t);
+                    r = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    i.forEach(function (n) {
-                        var i;
-                        (i = t[n]),
+                    r.forEach(function (n) {
+                        var r;
+                        (r = t[n]),
                             n in e
                                 ? Object.defineProperty(e, n, {
-                                      value: i,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[n] = i);
+                                : (e[n] = r);
                     });
             }
             return e;
         })(
             {
-                guild: et,
-                channel: X,
-                creator: W,
+                guild: B,
+                channel: q,
+                creator: K,
                 name: L,
-                entityType: H,
-                description: null != R ? R : void 0,
-                location: null != (n = (0, b.cS)(E)) ? n : void 0,
-                imageSource: null != M ? (0, x.Z)(E) : void 0,
+                entityType: G,
+                description: null != _ ? _ : void 0,
+                location: null != (n = (0, f.cS)(k)) ? n : void 0,
+                imageSource: null != M ? (0, x.Z)(k) : void 0,
                 imageLocation: O.Q.THUMBNAIL,
-                isActive: K,
-                isUserLurking: J,
-                isJoined: Q,
-                isMember: en,
-                isHub: er,
-                speakers: F,
-                canConnect: $,
-                speakerCount: Y,
+                isActive: F,
+                isUserLurking: U,
+                isJoined: H,
+                isMember: ee,
+                speakers: V,
+                canConnect: Y,
+                speakerCount: Q,
                 rsvped: A,
-                canInvite: ee,
+                canInvite: $,
             },
-            ei,
+            en,
         )),
-        (P = P =
+        (Z = Z =
             {
-                className: I,
-                onClick: el,
+                className: E,
+                onClick: et,
                 truncate: N,
-                isNew: S,
-                guildEvent: E,
-                recurrenceRule: (0, j.KV)(U),
+                isNew: w,
+                guildEvent: k,
+                recurrenceRule: (0, j.KV)(R),
                 recurrenceId: z,
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(P))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(Z))
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, r);
                   }
                   return t;
-              })(Object(P)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(P, e));
+              })(Object(Z)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(Z, e));
               }),
         t),
     );

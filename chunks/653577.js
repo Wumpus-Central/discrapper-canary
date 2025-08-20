@@ -22,12 +22,12 @@ function O(e) {
             subtitle: O,
             onClick: _,
             enableHangStatus: y,
-            allowChannelTopic: j,
+            allowChannelTopic: v,
         } = e,
-        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        C = null != v && v.length > 0,
+        j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        C = null != j && j.length > 0,
         x = (0, c.ZP)(t, !0),
-        E = (!y || !!j) && x,
+        E = (!y || !!v) && x,
         S = null != O && O.length > 0;
     if (
         (i.useEffect(() => {
@@ -48,7 +48,7 @@ function O(e) {
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
               }),
           })
         : n && E && (!S || l)

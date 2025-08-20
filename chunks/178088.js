@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(675478),
     _ = n(581883),
     y = n(585483),
-    j = n(153209),
-    v = n(903672),
+    v = n(153209),
+    j = n(903672),
     C = n(791914),
     x = n(711165),
     E = n(946443),
@@ -120,9 +120,9 @@ function w(e) {
                             }),
                             children:
                                 U === c.X.FOR_YOU
-                                    ? (0, r.jsx)(j.ZP, {})
+                                    ? (0, r.jsx)(v.ZP, {})
                                     : U === c.X.MENTIONS
-                                      ? (0, r.jsx)(v.Z, { onJump: q })
+                                      ? (0, r.jsx)(j.Z, { onJump: q })
                                       : Y && U === c.X.GAME_INVITES
                                         ? (0, r.jsx)(S.Z, {})
                                         : z && W && U === c.X.BOOKMARKS

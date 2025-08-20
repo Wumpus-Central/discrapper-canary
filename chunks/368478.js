@@ -1,5 +1,5 @@
 n.d(t, {
-    J: () => y,
+    J: () => _,
     Z: () => b,
 }),
     n(388685),
@@ -21,11 +21,11 @@ var r = n(647438),
 function b(e) {
     let { context: t, primaryEntryPointCommand: n, application: a, showAppLauncherPopup: s = !1 } = e,
         [p, b] = r.useState(!1),
-        y = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),
-        _ = s ? g.t.cpT0Cg : g.t["0hKkS0"],
+        _ = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),
+        y = s ? g.t.cpT0Cg : g.t["0hKkS0"],
         C = r.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : g.intl.string(g.t["3xjX0d"])), [n]),
         x = void 0 !== a.flags && (0, f.yE)(a.flags, m.udG.EMBEDDED),
-        v = null != y && y.applicationId === a.id && (0, o.p)(y.location) === t.channel.id,
+        v = null != _ && _.applicationId === a.id && (0, o.p)(_.location) === t.channel.id,
         { analyticsLocations: O } = (0, u.ZP)(c.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         j = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
     return {
@@ -41,16 +41,16 @@ function b(e) {
                     : null != C
                       ? C
                       : g.intl.string(g.t.zKX8Nj)
-                : g.intl.string(_),
+                : g.intl.string(y),
         hasActiveMatchingEmbeddedActivity: v,
         isEmbeddedApp: x,
-        currentEmbeddedActivity: y,
+        currentEmbeddedActivity: _,
         channelRecipientUserId: j,
         setIsExecutingLaunchInteraction: b,
         analyticsLocations: O,
     };
 }
-function y(e) {
+function _(e) {
     let {
             context: t,
             application: n,

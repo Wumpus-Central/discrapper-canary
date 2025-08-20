@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(601964),
     g = n(594174),
     b = n(63063),
-    y = n(981631),
-    _ = n(723359),
+    _ = n(981631),
+    y = n(723359),
     C = n(388032),
     x = n(118177);
 function v(e) {
@@ -26,7 +26,7 @@ function v(e) {
         }),
         a = (0, h.Kt)(),
         { verifyAgreementButtonText: c, verifyGateDescription: v } = (0, h.a1)(
-            (0, m.Y2)(t) ? _.L0.NSFW_SERVER : _.L0.NSFW_CHANNEL,
+            (0, m.Y2)(t) ? y.L0.NSFW_SERVER : y.L0.NSFW_CHANNEL,
         ),
         O = i.useCallback(() => {
             null != t && u.Z.nsfwReturnToSafety(t.id);
@@ -38,7 +38,7 @@ function v(e) {
             d.Z.showAgeVerificationGetStartedModal(p.cU.NSFW_GUILD);
         }, []),
         S = (0, m.Y2)(t),
-        P = C.intl.string(S ? C.t.xi46lp : C.t.ZmwvDQ);
+        I = C.intl.string(S ? C.t.xi46lp : C.t.ZmwvDQ);
     return a
         ? (0, r.jsx)(f.Z, {
               guildId: null == t ? void 0 : t.id,
@@ -46,7 +46,7 @@ function v(e) {
               modalType: p.it.NSFW_CHANNEL_AGE_VERIFY,
               onAgree: E,
               onDisagree: O,
-              title: P,
+              title: I,
               description: v,
               agreement: c,
               agreementButtonColor: s.zx.Colors.BRAND,
@@ -62,7 +62,7 @@ function v(e) {
                 onDisagree: O,
                 title: C.intl.string(S ? C.t["H0SG/v"] : C.t.NEabBQ),
                 description: C.intl.format(S ? C.t["6++3cX"] : C.t["2kHZen"], {
-                    helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING),
+                    helpURL: b.Z.getArticleURL(_.BhN.NSFW_AGE_GATING),
                 }),
                 agreement: null,
                 disagreement: C.intl.string(C.t["/g10LC"]),
@@ -74,7 +74,7 @@ function v(e) {
                 modalType: p.it.NSFW_CHANNEL_VERIFIED,
                 onAgree: j,
                 onDisagree: O,
-                title: P,
+                title: I,
                 description: C.intl.string(S ? C.t.ZtuRtr : C.t.E4Cd5O),
                 agreement: C.intl.string(C.t.wVq7ur),
                 disagreement: C.intl.string(C.t["/g10LC"]),

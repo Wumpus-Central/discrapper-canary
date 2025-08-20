@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(415506), n(388685);
+n.d(t, { Z: () => j }), n(415506), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-class j extends o.Z {
+class v extends o.Z {
     _initialize() {
         __OVERLAY__
             ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
@@ -173,4 +173,4 @@ class j extends o.Z {
             });
     }
 }
-let v = new j();
+let j = new v();

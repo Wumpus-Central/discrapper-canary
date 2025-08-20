@@ -145,6 +145,17 @@ let w = (e, t) =>
                     values: (null == n ? void 0 : n.type) === t.type ? n.values : null,
                 };
             }
+            case c.re.USER_SELECT:
+            case c.re.ROLE_SELECT:
+            case c.re.MENTIONABLE_SELECT:
+            case c.re.CHANNEL_SELECT: {
+                let n = I.Z.getInteractionComponentState(e, t.id);
+                return {
+                    type: t.type,
+                    custom_id: t.customId,
+                    values: (null == n ? void 0 : n.type) === t.type ? n.selectedOptions.map((e) => e.value) : null,
+                };
+            }
             case c.re.LABEL:
                 return {
                     type: t.type,

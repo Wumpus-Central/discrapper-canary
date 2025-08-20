@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(357156),
     g = n(546247),
     b = n(496675),
-    y = n(146085),
-    _ = n(979339),
+    _ = n(146085),
+    y = n(979339),
     C = n(643632),
     x = n(388032),
     v = n(196979);
@@ -40,7 +40,7 @@ function O(e) {
 }
 function j(e) {
     let { channel: t } = e,
-        { participants: n, usersInSummary: i } = (0, _.Z)(t.id);
+        { participants: n, usersInSummary: i } = (0, y.Z)(t.id);
     return (0, r.jsxs)("div", {
         className: v.audienceSummary,
         children: [
@@ -74,16 +74,16 @@ function j(e) {
 }
 function E(e) {
     let { channel: t, onContinueClick: n } = e,
-        l = (0, o.e7)([b.Z], () => b.Z.can(y.yP, t), [t]),
+        l = (0, o.e7)([b.Z], () => b.Z.can(_.yP, t), [t]),
         s = t.guild_id,
         { canCreateGuildEvent: u } = (0, m.XJ)(t),
         d = (0, C.Z)(t.id),
-        _ = i.useRef(null);
+        y = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: v.container,
-        ref: _,
+        ref: y,
         children: [
-            (0, r.jsx)(g.Z, { eventTargetRef: _ }),
+            (0, r.jsx)(g.Z, { eventTargetRef: y }),
             (0, r.jsxs)("div", {
                 className: v.content,
                 children: [

@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(981631),
     _ = n(388032),
     y = n(361584);
-function j(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function v(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function x(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                v(j({}, e), {
+                j(v({}, e), {
                     className: y.action,
                     onClick: (e) => {
                         (0, h.Qz)({
@@ -136,7 +136,7 @@ function E(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         o.P3F,
-                        v(j({}, t), {
+                        j(v({}, t), {
                             innerRef: O,
                             className: y.action,
                             onClick: (e) => {
@@ -151,7 +151,7 @@ function E(e) {
                             },
                             children: (0, r.jsx)(
                                 a,
-                                v(j({}, e), {
+                                j(v({}, e), {
                                     message: n,
                                     "aria-label": l,
                                     className: y.actionIcon,
@@ -192,8 +192,8 @@ let S = {
         label: _.intl.string(_.t["9p3D9v"]),
         Icon: (e) =>
             null != p.Z.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(o.plf, j({}, e))
-                : (0, r.jsx)(o.gt9, j({}, e)),
+                ? (0, r.jsx)(o.plf, v({}, e))
+                : (0, r.jsx)(o.gt9, v({}, e)),
         interactionType: h.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
@@ -204,7 +204,7 @@ let S = {
                 });
             return (0, r.jsxs)(
                 o.v2r,
-                v(j({}, n), {
+                j(v({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": _.intl.string(_.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -251,7 +251,7 @@ let S = {
             return t.isThread()
                 ? (0, r.jsx)(
                       f.Z,
-                      v(j({}, n), {
+                      j(v({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: _.intl.string(_.t["1NBjqa"]),
@@ -259,7 +259,7 @@ let S = {
                   )
                 : (0, r.jsx)(
                       c.Z,
-                      v(j({}, n), {
+                      j(v({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: _.intl.string(_.t.Xm41aW),
@@ -290,7 +290,7 @@ function I(e) {
                 case "standard":
                     return (0, r.jsx)(
                         x,
-                        v(j({}, i), {
+                        j(v({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -299,7 +299,7 @@ function I(e) {
                 case "menu":
                     return (0, r.jsx)(
                         E,
-                        v(j({}, i), {
+                        j(v({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

@@ -82,8 +82,8 @@ function b(e) {
             folderGroupId: O,
             folderButtonContent: _,
             onClick: y,
-            onContextMenu: j,
-            onHoverChange: v,
+            onContextMenu: v,
+            onHoverChange: j,
             onKeyDown: C,
             treeItemProps: { onFocus: x },
             "aria-setsize": E,
@@ -112,11 +112,11 @@ function b(e) {
         })(e.treeItemProps, ["onFocus"]),
         [P, N] = i.useState(!1),
         w = i.useCallback(() => {
-            a || N(!0), null == v || v(!0);
-        }, [a, v]),
+            a || N(!0), null == j || j(!0);
+        }, [a, j]),
         Z = i.useCallback(() => {
-            a || N(!1), null == v || v(!1);
-        }, [a, v]),
+            a || N(!1), null == j || j(!1);
+        }, [a, j]),
         T = o || null == u ? null : (0, p.Or)(u),
         A = !o && d > 0 ? (0, p.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(s.tEY, {
@@ -150,7 +150,7 @@ function b(e) {
                 {
                     className: h.folderButton,
                     onClick: y,
-                    onContextMenu: j,
+                    onContextMenu: v,
                     onMouseEnter: w,
                     onMouseLeave: Z,
                     onKeyDown: C,

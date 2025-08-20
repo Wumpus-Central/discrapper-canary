@@ -14,7 +14,7 @@ let f = (e) => {
     let { className: t, channel: n, user: f, application: m, oauth2Token: g } = e,
         b = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
     if (!f.bot || null == m) return null;
-    function y() {
+    function _() {
         o.Z.delete(g.id);
         let e = b.get(m.id);
         null != e &&
@@ -75,7 +75,7 @@ let f = (e) => {
                         channel_id: n.id,
                         channel_type: n.type,
                     });
-            })(m, y, n),
+            })(m, _, n),
         children: h.intl.string(h.t["5S3sQE"]),
     });
 };

@@ -21,7 +21,7 @@ function c(e) {
             disabled: g = !1,
             submitting: b = !1,
         } = e,
-        y = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -83,7 +83,7 @@ function c(e) {
                                 });
                         }
                         return e;
-                    })({}, y)),
+                    })({}, _)),
                     (n = n =
                         {
                             submitting: b,

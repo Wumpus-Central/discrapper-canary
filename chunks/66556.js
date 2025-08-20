@@ -19,10 +19,10 @@ function m(e) {
             let e = u.default.getCurrentUser();
             return null == e || ((0, o.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
         }, [t]),
-        y = i.useCallback(() => {
+        _ = i.useCallback(() => {
             m(!1);
         }, []),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             n || (0, d.U4)("Popout"), m(!n);
         }, [n]);
     return (0, r.jsx)(a.yRy, {
@@ -32,13 +32,13 @@ function m(e) {
         align: "right",
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: y,
+        onRequestClose: _,
         renderPopout: function () {
             return (0, r.jsx)(a.VqE, {
                 children: (0, r.jsx)(p.Z, {
                     className: f.browser,
                     channel: t,
-                    onClose: y,
+                    onClose: _,
                 }),
             });
         },
@@ -77,7 +77,7 @@ function m(e) {
                     {
                         ref: g,
                         className: f.icon,
-                        onClick: _,
+                        onClick: y,
                         icon: a.or_,
                         "aria-label": h.intl.string(h.t.B2panJ),
                         tooltip: l ? null : h.intl.string(h.t.B2panJ),

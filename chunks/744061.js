@@ -13,7 +13,7 @@ var r = n(951288),
     f = n(150599),
     m = n(430864);
 function g(e) {
-    let { onClose: t, onConfirm: g, onCancel: b, channel: y, analyticsType: _, popoutText: C, animation: x } = e;
+    let { onClose: t, onConfirm: g, onCancel: b, channel: _, analyticsType: y, popoutText: C, animation: x } = e;
     i.useEffect(() => {
         d.default.track(
             p.rMx.OPEN_POPOUT,
@@ -41,9 +41,9 @@ function g(e) {
                         });
                 }
                 return e;
-            })({ type: _ }, (0, c.v_)(y)),
+            })({ type: y }, (0, c.v_)(_)),
         );
-    }, [_, y]);
+    }, [y, _]);
     let v = i.useCallback(() => {
             null == g || g(), t();
         }, [g, t]),

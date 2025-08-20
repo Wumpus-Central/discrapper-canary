@@ -18,8 +18,8 @@ var r = n(951288),
     m = n(933557),
     g = n(592125),
     b = n(626135),
-    y = n(140106),
-    _ = n(981631),
+    _ = n(140106),
+    y = n(981631),
     C = n(388032),
     x = n(358993);
 function v(e) {
@@ -85,7 +85,7 @@ function j(e) {
             (0, r.jsxs)(c.P3F, {
                 className: a()(x.iconContainer, { [x.petite]: s }),
                 "aria-label": C.intl.string(C.t["0qPSMT"]),
-                onClick: () => (0, y.ND)(i, g),
+                onClick: () => (0, _.ND)(i, g),
                 children: [
                     null != m
                         ? (0, r.jsx)("img", {
@@ -136,9 +136,9 @@ let E = function (e) {
             location: E,
         } = e,
         S = (0, o.e7)([g.Z], () => g.Z.getChannel(t)),
-        P = null == S ? void 0 : S.name,
-        I = (0, m.cO)(S),
-        [Z, T] = i.useState(null != P ? P : ""),
+        I = null == S ? void 0 : S.name,
+        P = (0, m.cO)(S),
+        [Z, T] = i.useState(null != I ? I : ""),
         [N, A] = i.useState(void 0),
         w = void 0 !== N,
         { analyticsLocations: R } = (0, h.ZP)(E, p.Z.GROUP_DM_EDIT_MODAL),
@@ -147,17 +147,17 @@ let E = function (e) {
             channel_type: null == S ? void 0 : S.type,
             location: E,
             location_stack: R,
-            old_name_set: "" !== P,
+            old_name_set: "" !== I,
             old_icon_set: (null == S ? void 0 : S.icon) != null,
         };
     return (i.useEffect(() => {
-        a(Z !== P || w);
-    }, [Z, P, w, a]),
+        a(Z !== I || w);
+    }, [Z, I, w, a]),
     (0, d.ZP)(
         () => (
-            b.default.track(_.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "opened" })),
+            b.default.track(y.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "opened" })),
             () => {
-                b.default.track(_.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "dismissed" }));
+                b.default.track(y.rMx.GDM_EDIT_INTERACTED, O(v({}, M), { action: "dismissed" }));
             }
         ),
     ),
@@ -168,11 +168,11 @@ let E = function (e) {
               children: (0, r.jsx)("form", {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = Z !== P,
+                      let r = Z !== I,
                           i = void 0 !== N;
                       if (
                           (b.default.track(
-                              _.rMx.GDM_EDIT_INTERACTED,
+                              y.rMx.GDM_EDIT_INTERACTED,
                               O(v({}, M), {
                                   action: "saved",
                                   new_name_set: "" !== Z,
@@ -184,7 +184,7 @@ let E = function (e) {
                           r || i)
                       ) {
                           let e = {};
-                          r && (e.name = Z), i && (e.icon = N), u.Z.updateChannel(t, e, E).catch(y.g6);
+                          r && (e.name = Z), i && (e.icon = N), u.Z.updateChannel(t, e, E).catch(_.g6);
                       }
                       n();
                   },
@@ -200,7 +200,7 @@ let E = function (e) {
                               text: C.intl.string(C.t.R3BPHx),
                               variant: "primary",
                               type: "submit",
-                              disabled: Z === P && !w,
+                              disabled: Z === I && !w,
                           },
                       ],
                       onClose: () => Promise.resolve(f()),
@@ -217,7 +217,7 @@ let E = function (e) {
                               }),
                               (0, r.jsx)(c.oil, {
                                   "aria-label": C.intl.string(C.t.GEGW3N),
-                                  placeholder: null != I ? I : "",
+                                  placeholder: null != P ? P : "",
                                   value: Z,
                                   onChange: T,
                                   autoFocus: !0,

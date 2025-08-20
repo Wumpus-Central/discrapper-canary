@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(703656),
     _ = n(769654),
     y = n(601964),
-    j = n(271383),
-    v = n(771845),
+    v = n(271383),
+    j = n(771845),
     C = n(727258),
     x = n(276952),
     E = n(249792),
@@ -148,7 +148,7 @@ let k = i.memo(function (e) {
                 }
             ),
             end() {
-                null == V || V(), (0, g.V1)(v.ZP.getCompatibleGuildFolders());
+                null == V || V(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -157,9 +157,9 @@ let k = i.memo(function (e) {
         em = !ee && eh,
         [eb, eO] = i.useState(!1),
         [e_, ey] = i.useState(!1),
-        [ej] = i.useState(() => new d.sW(70, () => ey(!0)));
-    i.useEffect(() => () => ej.cancel(), [ej]);
-    let ev = i.useCallback(() => {
+        [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
+    i.useEffect(() => () => ev.cancel(), [ev]);
+    let ej = i.useCallback(() => {
             if (null != F) return void (0, O.uL)(F, { state: M });
             (0, _.X)(eo, { state: M });
         }, [eo, F]),
@@ -168,7 +168,7 @@ let k = i.memo(function (e) {
             let e = (0, b.V)(H.id);
             null != e && f.Z.preload(H.id, e);
         }, [F, H, q, et]),
-        ex = (0, u.e7)([j.ZP], () => j.ZP.isCurrentUserGuest(eo)),
+        ex = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
             (e) => {
                 null == H || ex || J(e, H);
@@ -186,10 +186,10 @@ let k = i.memo(function (e) {
         ),
         eI = i.useCallback(
             (e) => {
-                if (e) return void ej.delay();
-                ej.cancel(), ey(!1);
+                if (e) return void ev.delay();
+                ev.cancel(), ey(!1);
             },
-            [ej],
+            [ev],
         ),
         eP = i.useCallback(
             (e) => {
@@ -222,7 +222,7 @@ let k = i.memo(function (e) {
                                       mentions: X,
                                   }),
                                   name: H.name,
-                                  onClick: ev,
+                                  onClick: ej,
                                   onMouseEnter: function () {
                                       ee || eg(!0);
                                   },

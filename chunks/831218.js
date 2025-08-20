@@ -17,8 +17,8 @@ var r,
     O = n(367907),
     _ = n(906732),
     y = n(453542),
-    j = n(702321),
-    v = n(46148),
+    v = n(702321),
+    j = n(46148),
     C = n(82295),
     x = n(313201),
     E = n(860144),
@@ -362,7 +362,7 @@ class V extends (r = l.Component) {
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
                     a = o > n.length ? n.slice(0, o + 1) : n,
                     s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, j.Z)(e)),
+                    c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e))
@@ -399,7 +399,7 @@ class V extends (r = l.Component) {
                 return null == s
                     ? null
                     : (0, i.jsx)(
-                          v.W,
+                          j.W,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -497,8 +497,8 @@ let F = (e) => {
             return (0, N.tU)(e, [P.Z, w.Z]);
         }, []);
     (0, S.z)(E.R);
-    let { analyticsLocations: j } = (0, _.ZP)(b.Z.CONTACTS_LIST),
-        v = (0, Z.Ll)(),
+    let { analyticsLocations: v } = (0, _.ZP)(b.Z.CONTACTS_LIST),
+        j = (0, Z.Ll)(),
         { keyboardModeEnabled: C, version: I } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
@@ -558,7 +558,7 @@ let F = (e) => {
             setFocus: M,
         });
     return (0, i.jsx)(_.Gt, {
-        value: j,
+        value: v,
         children: (0, i.jsx)(u.bG, {
             navigator: F,
             children: (0, i.jsx)(
@@ -568,7 +568,7 @@ let F = (e) => {
                     channels: O,
                     privateChannelIds: y,
                     listRef: D,
-                    theme: null != v ? v : r,
+                    theme: null != j ? j : r,
                     version: I,
                     createDMCTAButtonVariant: c,
                 }),

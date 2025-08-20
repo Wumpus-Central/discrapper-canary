@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(709054),
     _ = n(821020),
     y = n(804932),
-    j = n(389160),
-    v = n(787879),
+    v = n(389160),
+    j = n(787879),
     C = n(370774),
     x = n(334426),
     E = n(862149),
@@ -112,20 +112,20 @@ function D(e) {
             isLoading: G,
             isLoadingComplete: B,
             hasLoadedEver: V,
-        } = (0, u.cj)([v.Z], () => ({
-            isLoading: v.Z.isLoading,
-            isLoadingComplete: v.Z.isLoadingComplete,
-            hasLoadedEver: v.Z.hasLoadedEver,
+        } = (0, u.cj)([j.Z], () => ({
+            isLoading: j.Z.isLoading,
+            isLoadingComplete: j.Z.isLoadingComplete,
+            hasLoadedEver: j.Z.hasLoadedEver,
         })),
         F = !V && G,
-        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, j.Z)(),
+        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
         W = (function () {
-            let e = (0, u.Wu)([v.Z], () => {
+            let e = (0, u.Wu)([j.Z], () => {
                 var e;
-                return null != (e = v.Z.getNotifyingChannelIds()) ? e : [];
+                return null != (e = j.Z.getNotifyingChannelIds()) ? e : [];
             });
-            return (0, u.e7)([v.Z, m.ZP], () => {
-                let t = v.Z.getChannelInfoMap();
+            return (0, u.e7)([j.Z, m.ZP], () => {
+                let t = j.Z.getChannelInfoMap();
                 for (let r of e) {
                     var n;
                     let e = t[r];
@@ -252,7 +252,7 @@ function D(e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             r = i.useRef(!1),
             l = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: o } = (0, j.Z)();
+            { setOpenStateFromUnreads: o } = (0, v.Z)();
         i.useEffect(() => {
             t || r.current || (o(l), (r.current = !0));
         }, [o, l, t]);

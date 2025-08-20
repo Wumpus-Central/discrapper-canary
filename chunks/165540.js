@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(663924),
     g = n(533379),
     b = n(562129),
-    y = n(266454),
-    _ = n(291407),
+    _ = n(266454),
+    y = n(291407),
     C = n(685006),
     x = n(61356),
     v = n(314734),
@@ -26,7 +26,7 @@ let S = i.forwardRef(function (e, t) {
         var n, l;
         let { type: d, animateRef: m } = e,
             g = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup() && h.Z.activeViewType() === d),
-            { Component: _, events: C, play: x } = (0, b.Z)("ChannelAppLauncherButton");
+            { Component: y, events: C, play: x } = (0, b.Z)("ChannelAppLauncherButton");
         i.useImperativeHandle(
             m,
             () => ({
@@ -39,12 +39,12 @@ let S = i.forwardRef(function (e, t) {
         let S = i.useCallback(() => {
                 g
                     ? p.yT(f.ti.DISMISSED)
-                    : ((0, y.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }),
+                    : ((0, _.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }),
                       p.__(f._b.TEXT, d),
                       u.ux()),
                     x();
             }, [g, d, x]),
-            P = (0, r.jsx)(_, {
+            I = (0, r.jsx)(y, {
                 size: "refresh_sm",
                 color: "currentColor",
             });
@@ -99,7 +99,7 @@ let S = i.forwardRef(function (e, t) {
                     },
                     C,
                 )),
-                (l = l = { children: P }),
+                (l = l = { children: I }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -116,7 +116,7 @@ let S = i.forwardRef(function (e, t) {
             ),
         });
     }),
-    P = i.memo(function (e) {
+    I = i.memo(function (e) {
         let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
             s = i.useRef(null),
             c = (0, g.R)({
@@ -131,7 +131,7 @@ let S = i.forwardRef(function (e, t) {
             ? (0, r.jsxs)("div", {
                   className: E.channelAppLauncher,
                   children: [
-                      (0, r.jsx)(_.Z, {
+                      (0, r.jsx)(y.Z, {
                           channel: t,
                           animationContainerClassName: E.entrypointAnimation,
                           glowClassName: E.animationGlow,

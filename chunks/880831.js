@@ -18,8 +18,8 @@ var r = n(951288),
     m = n(905405),
     g = n(937889),
     b = n(739566),
-    y = n(267128),
-    _ = n(378233),
+    _ = n(267128),
+    y = n(378233),
     C = n(419922),
     x = n(375954),
     v = n(699516),
@@ -27,8 +27,8 @@ var r = n(951288),
     j = n(70956),
     E = n(823379),
     S = n(981631),
-    P = n(217702),
-    I = n(89019);
+    I = n(217702),
+    P = n(89019);
 let Z = 10 * j.Z.Millis.SECOND;
 function T(e) {
     var t;
@@ -69,19 +69,19 @@ function T(e) {
             renderedContent: N,
             trailingIcon: A,
             leadingIcon: w,
-        } = (0, y.f)(n, Z, l, o, I.messageContent, {
-            trailingIconClass: I.messageContentTrailingIcon,
-            leadingIconClass: I.messageContentLeadingIcon,
-            iconSize: P.WW,
+        } = (0, _.f)(n, Z, l, o, P.messageContent, {
+            trailingIconClass: P.messageContentTrailingIcon,
+            leadingIconClass: P.messageContentLeadingIcon,
+            iconSize: I.WW,
         }),
-        R = (0, _.cv)(n),
+        R = (0, y.cv)(n),
         M =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
                           C.Z,
                           {
-                              className: I.sticker,
+                              className: P.sticker,
                               size: 128,
                               sticker: e,
                               isInteracting: x,
@@ -91,7 +91,7 @@ function T(e) {
                   )
                 : null;
     return (0, r.jsxs)(u.P3F, {
-        className: I.toast,
+        className: P.toast,
         onMouseEnter: () => {
             j(!0);
         },
@@ -101,7 +101,7 @@ function T(e) {
         onClick: S,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(I.messageContentWrapper, { [I.mentioned]: n.mentioned }),
+                className: a()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
                 children: [
                     null != M ? null : w,
                     null != (t = null != N ? N : M) ? t : (0, r.jsx)("span", { children: T }),
@@ -118,7 +118,7 @@ function T(e) {
                               avatar: s.guildMemberAvatar,
                           })
                         : n.author.getAvatarURL(d, 32),
-                className: I.avatar,
+                className: P.avatar,
             }),
         ],
     });
@@ -182,12 +182,12 @@ function N(e) {
         }),
         m = i.useRef({}),
         [g, b] = i.useState({}),
-        y = i.useCallback((e, t) => {
+        _ = i.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        _ = i.useRef(g);
+        y = i.useRef(g);
     i.useLayoutEffect(() => {
-        _.current = g;
+        y.current = g;
     }),
         i.useLayoutEffect(() => {
             let e = {},
@@ -197,7 +197,7 @@ function N(e) {
                 let i = null != (n = m.current[r.id]) ? n : 0;
                 (e[r.id] = t), (t += i + 8);
             }
-            (0, o.isEqual)(e, _.current) || b(e);
+            (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
     let C = f.map((e) => ({
             message: e,
@@ -240,8 +240,8 @@ function N(e) {
                 },
                 children: v((e, t) =>
                     (0, r.jsx)(s.animated.div, {
-                        ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
-                        className: I.toastWrapper,
+                        ref: (e) => _(t.message.id, null != e ? e.offsetHeight : null),
+                        className: P.toastWrapper,
                         style: e,
                         children: (0, r.jsx)(T, { message: t.message }),
                     }),

@@ -21,8 +21,8 @@ var r = n(951288),
     O = n(649739),
     _ = n(37091),
     y = n(6572),
-    j = n(352978),
-    v = n(936847),
+    v = n(352978),
+    j = n(936847),
     C = n(512384),
     x = n(210975),
     E = n(763296),
@@ -120,13 +120,13 @@ let et = [Y.fO.ACTIVITY],
                 focused: eg = !1,
                 blocked: em = !1,
                 ignored: eb = !1,
-                fit: eO = j.L.CONTAIN,
+                fit: eO = v.L.CONTAIN,
                 paused: e_ = !1,
                 pulseSpeakingIndicator: ey = !1,
-                forceIdle: ej = !1,
-                inOverlayPopout: ev = !1,
+                forceIdle: ev = !1,
+                inOverlayPopout: ej = !1,
             } = e,
-            eC = i.useContext(I.h9) || ej,
+            eC = i.useContext(I.h9) || ev,
             [ex, eE] = i.useState(!1),
             eS = S.Sb.useSetting(),
             eI = (0, a.e7)([Z.default], () => Z.default.isStreamInfoOverlayEnabled),
@@ -254,7 +254,7 @@ let et = [Y.fO.ACTIVITY],
                     paused: e_,
                     inPopout: ec,
                     focused: eg,
-                    inOverlayPopout: ev,
+                    inOverlayPopout: ej,
                 })),
                     (e6 = (0, r.jsx)(F._, {
                         participant: b,
@@ -280,7 +280,7 @@ let et = [Y.fO.ACTIVITY],
                     ignored: eb,
                     noVideoRender: eh || eL,
                     pulseSpeakingIndicator: ey,
-                    inOverlayPopout: ev,
+                    inOverlayPopout: ej,
                 })),
                     (e6 = (0, r.jsx)(H.T, {
                         participant: b,
@@ -308,7 +308,7 @@ let et = [Y.fO.ACTIVITY],
                     paused: e_,
                     inPopout: ec,
                     focused: eg,
-                    inOverlayPopout: ev,
+                    inOverlayPopout: ej,
                 });
         }
         let e7 = i.useRef(null),
@@ -460,7 +460,7 @@ let et = [Y.fO.ACTIVITY],
                                 currentUserId: ew,
                                 participant: b,
                             }),
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(j.Z, {
                             isFiring: ex,
                             callTileRef: e7.current,
                         }),
@@ -561,8 +561,8 @@ let el = i.memo((e) => {
             participantDisplayNameStyles: O,
             platform: _,
             secureFramesVerified: y,
-            onContextMenu: j,
-            muted: v,
+            onContextMenu: v,
+            muted: j,
             deafened: C,
             localMuted: x,
             serverMuted: E,
@@ -592,7 +592,7 @@ let el = i.memo((e) => {
             serverMuted: E,
             serverDeafened: S,
             deafened: C,
-            muted: v,
+            muted: j,
         });
     return (0, r.jsxs)("div", {
         className: o()(J.overlayContainer, { [J.compact]: R }),
@@ -698,7 +698,7 @@ let el = i.memo((e) => {
                                 children: [
                                     (0, r.jsx)(ei, {
                                         onClick: (e) => {
-                                            e.stopPropagation(), L(!0), j(e, !0, Y.A5.THREE_DOT);
+                                            e.stopPropagation(), L(!0), v(e, !0, Y.A5.THREE_DOT);
                                         },
                                         tooltipText: Q.intl.string(Q.t["+1H47u"]),
                                         icon: u.xhG,
@@ -721,5 +721,5 @@ let el = i.memo((e) => {
     });
 });
 el.displayName = "CallTileOverlay";
-let eo = j.L,
+let eo = v.L,
     ea = en;

@@ -11,14 +11,13 @@ var r = n(951288),
     f = n(981631),
     _ = n(111566);
 function p(e) {
-    var t;
-    let { channelTypes: n } = e,
-        p = (0, c.CJ)(),
-        h = null == p || null == (t = p.message) ? void 0 : t.getChannelId(),
-        m = s.Z.getChannel(h),
-        g = l.Z.getGuild(null == m ? void 0 : m.getGuildId()),
-        E = (e) => (0, u.af)(e, h, n),
-        b = (e, t) => {
+    let { channelTypes: t } = e,
+        n = (0, c.CJ)(),
+        p = null == n ? void 0 : n.channelId,
+        h = s.Z.getChannel(p),
+        m = l.Z.getGuild(null == h ? void 0 : h.getGuildId()),
+        g = (e) => (0, u.af)(e, p, t),
+        E = (e, t) => {
             let n = s.Z.getChannel(null == e ? void 0 : e.value);
             if (null == n) return null;
             let i = n.type === f.d4z.GUILD_CATEGORY ? a.ROc : (0, o.KS)(n);
@@ -31,17 +30,17 @@ function p(e) {
                   })
                 : null;
         },
-        y = (e) =>
+        b = (e) =>
             (0, r.jsx)("span", {
                 className: _.label,
                 children: e.label,
             }),
-        O = i.useMemo(() => (0, u.tx)(e.defaultValues, null == g ? void 0 : g.id, n), [e.defaultValues, g, n]);
+        y = i.useMemo(() => (0, u.tx)(e.defaultValues, null == m ? void 0 : m.id, t), [e.defaultValues, m, t]);
     return (0, r.jsx)(d.ZP, {
         selectActionComponent: e,
-        queryOptions: E,
-        renderIcon: b,
-        renderOptionLabel: y,
-        defaultValues: O,
+        queryOptions: g,
+        renderIcon: E,
+        renderOptionLabel: b,
+        defaultValues: y,
     });
 }

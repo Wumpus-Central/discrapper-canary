@@ -18,8 +18,8 @@ var i = n(120356),
     O = n(938475),
     _ = n(823379),
     y = n(709054),
-    j = n(853856),
-    v = n(981631),
+    v = n(853856),
+    j = n(981631),
     C = n(388032),
     x = n(132789),
     E = n(78480);
@@ -42,15 +42,15 @@ function S(e, t) {
           });
 }
 function I() {
-    let e = (0, s.Wu)([j.Z, m.Z], () =>
+    let e = (0, s.Wu)([v.Z, m.Z], () =>
             y.default
-                .keys(j.Z.getFavoriteChannels())
+                .keys(v.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
                 .filter(_.lm),
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === v.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === v.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
             [O.ZP],
             () =>

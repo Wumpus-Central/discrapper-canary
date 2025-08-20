@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(326272),
     _ = n(804705),
     y = n(822857),
-    j = n(518121),
-    v = n(931928),
+    v = n(518121),
+    j = n(931928),
     C = n(981631),
     x = n(921944),
     E = n(49898),
@@ -46,7 +46,7 @@ let P = "orbs_discovery_reheat_coachmark",
                 }),
                 [c, s],
             );
-        return (0, r.jsx)(j.G6, {
+        return (0, r.jsx)(v.G6, {
             errorBoundarySource: "ORBS_DISCOVERY_REHEAT_COACHMARK",
             targetElementRef: t,
             targetQuestId: a,
@@ -63,8 +63,8 @@ let P = "orbs_discovery_reheat_coachmark",
             T = ((e) => {
                 let { onShowCoachmarkHandler: t, isVirtualCurrencyEnabled: n } = e,
                     r = (0, _.F)({ location: P }),
-                    [y, j] = i.useState(!1),
-                    v = ((e) => {
+                    [y, v] = i.useState(!1),
+                    j = ((e) => {
                         let { isIntroQuestUnclaimed: t } = (0, o.cj)([p.Z], () => {
                                 let e = 0 !== p.Z.lastFetchedCurrentQuests && !p.Z.isFetchingCurrentQuests,
                                     t = p.Z.getQuest(S.V6);
@@ -79,7 +79,7 @@ let P = "orbs_discovery_reheat_coachmark",
                     })({ location: P }),
                     I = (0, o.e7)([h.Z], () => h.Z.hasLayers()),
                     N = (0, s.s9z)(s.JQI),
-                    w = n && v && !r && !(N || I),
+                    w = n && j && !r && !(N || I),
                     [Z, T] = (0, c.US)(w ? [a.z.VIRTUAL_CURRENCY_DISCOVERY_REHEAT_COACHMARK] : []),
                     A = Z === a.z.VIRTUAL_CURRENCY_DISCOVERY_REHEAT_COACHMARK,
                     R = i.useCallback(() => {
@@ -105,7 +105,7 @@ let P = "orbs_discovery_reheat_coachmark",
                     }, [T]);
                 return (
                     i.useEffect(() => {
-                        n && A && !y && (j(!0), t());
+                        n && A && !y && (v(!0), t());
                     }, [A, t, n, y]),
                     {
                         shouldShow: A,
@@ -117,7 +117,7 @@ let P = "orbs_discovery_reheat_coachmark",
                 );
             })({
                 isVirtualCurrencyEnabled: Z,
-                onShowCoachmarkHandler: (0, j.O5)({
+                onShowCoachmarkHandler: (0, v.O5)({
                     targetElementRef: t,
                     scrollToBottom: n,
                 }),
@@ -181,7 +181,7 @@ let P = "orbs_discovery_reheat_coachmark",
                       R,
                   ),
               )
-            : (0, r.jsx)(v.u, {
+            : (0, r.jsx)(j.u, {
                   targetElementRef: t,
                   scrollToBottom: n,
                   renderDiscoveryButton: I,

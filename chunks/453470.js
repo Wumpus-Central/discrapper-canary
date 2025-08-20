@@ -14,18 +14,18 @@ var r = n(951288),
     m = n(177342),
     g = n(621600),
     b = n(276060),
-    y = n(870991),
-    _ = n(981631),
+    _ = n(870991),
+    y = n(981631),
     C = n(134612),
     x = n(388032);
 function v(e) {
     let { channelId: t, warningId: v, senderId: O } = e,
-        j = (0, y.E4)(),
+        j = (0, _.E4)(),
         E = i.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
         S = (0, b.t)({ location: C.zr }),
-        P = (e) => {
+        I = (e) => {
             o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(O, t),
                 (0, f.qc)({
@@ -39,7 +39,7 @@ function v(e) {
         };
     return (i.useEffect(() => {
         S &&
-            ((0, f.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
+            ((0, f.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: v,
                 senderId: O,
@@ -92,7 +92,7 @@ function v(e) {
                                                   description: x.intl.string(x.t.w2ve0t),
                                                   buttonText: x.intl.string(x.t.ftIK2N),
                                                   onButtonPress: () => {
-                                                      P(f.NM.USER_MODAL_MUTE), l();
+                                                      I(f.NM.USER_MODAL_MUTE), l();
                                                   },
                                               },
                                               "likely-ato-mute",
@@ -110,7 +110,7 @@ function v(e) {
                                           children: (0, r.jsx)(a.X6q, {
                                               variant: "heading-sm/medium",
                                               color: "text-link",
-                                              children: x.intl.format(x.t.UkH129, { learnMoreLink: y.D8 }),
+                                              children: x.intl.format(x.t.UkH129, { learnMoreLink: _.D8 }),
                                           }),
                                       }),
                                   });
@@ -127,7 +127,7 @@ function v(e) {
                   },
                   {
                       text: x.intl.string(x.t.ftIK2N),
-                      onClick: () => P(f.NM.USER_BANNER_MUTE),
+                      onClick: () => I(f.NM.USER_BANNER_MUTE),
                   },
               ],
           })

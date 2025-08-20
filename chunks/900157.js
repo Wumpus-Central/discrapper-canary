@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(287746),
     g = n(541716),
     b = n(665149),
-    y = n(910611),
-    _ = n(359110),
+    _ = n(910611),
+    y = n(359110),
     C = n(592125),
     x = n(703558),
     v = n(430824),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(664342),
     E = n(124368),
     S = n(981631),
-    P = n(388032),
-    I = n(952899);
+    I = n(388032),
+    P = n(952899);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,21 +74,21 @@ function N(e) {
         w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
     var M = A;
-    let k = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
+    let D = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
     i.useEffect(() => {
-        k &&
+        D &&
             null != M &&
             (s.Z.dispatch({
                 type: "SIDEBAR_CLOSE",
                 baseChannelId: M.parent_id,
             }),
-            (0, _.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
-    }, [k, M]);
-    let D = i.useRef(!1);
+            (0, y.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
+    }, [D, M]);
+    let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == A || D.current) return;
-            D.current = !0;
+            if (null == A || L.current) return;
+            L.current = !0;
             let e = (0, p.K)(C.Z.getChannel(A.id), !0);
             (0, d.yw)(S.rMx.CHANNEL_OPENED, T(Z({}, e, (0, d.$H)(A.id)), { channel_view: N })),
                 (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
@@ -96,7 +96,7 @@ function N(e) {
         null == A || null == w)
     )
         return null;
-    let L = (0, r.jsx)(j.Z, {
+    let k = (0, r.jsx)(j.Z, {
         channel: A,
         baseChannelId: l,
     });
@@ -107,9 +107,9 @@ function N(e) {
                 draftType: x.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
-                toolbar: L,
-                "aria-label": P.intl.string(P.t.Pwe8tL),
-                children: (0, y.ud)({
+                toolbar: k,
+                "aria-label": I.intl.string(I.t.Pwe8tL),
+                children: (0, _.ud)({
                     channel: A,
                     channelName: R,
                     guild: w,
@@ -121,12 +121,12 @@ function N(e) {
                         });
                     },
                     handleClick: function () {
-                        null != A && (0, _.Kh)(A.id);
+                        null != A && (0, y.Kh)(A.id);
                     },
                 }),
             }),
             (0, r.jsx)("div", {
-                className: I.chat,
+                className: P.chat,
                 children: (0, r.jsx)(
                     m.Z,
                     {

@@ -24,8 +24,8 @@ var r,
     O = n(853856),
     _ = n(181945),
     y = n(220444),
-    j = n(601070),
-    v = n(344185),
+    v = n(601070),
+    j = n(344185),
     C = n(569471),
     x = n(723170),
     E = n(675478),
@@ -136,7 +136,7 @@ class Y extends o.EventEmitter {
                 hasLoadedAnything: !0,
             });
         if ("forum" === e.type) {
-            let t = v.Z.hasLoaded(e.guildId);
+            let t = j.Z.hasLoaded(e.guildId);
             return H(F({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0,
@@ -349,7 +349,7 @@ class Y extends o.EventEmitter {
                     if ("forum" !== e.type) return e;
                     {
                         if (!e.hasLoadedAnything) return e;
-                        let t = v.Z.hasLoaded(e.guildId);
+                        let t = j.Z.hasLoaded(e.guildId);
                         return H(F({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0,
@@ -404,7 +404,7 @@ function X() {
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let r = N.ZP.getSelectableChannelIds(n),
-                        i = j.Z.getActiveJoinedUnreadThreadsForGuild(n);
+                        i = v.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     r.forEach((r) => {
                         var l;
                         Q(e, t, n, r);
@@ -553,8 +553,8 @@ function ee(e) {
         ),
         l.useEffect(
             () => (
-                v.Z.addChangeListener(t.handleActiveThreadsStoreChange),
-                () => v.Z.removeChangeListener(t.handleActiveThreadsStoreChange)
+                j.Z.addChangeListener(t.handleActiveThreadsStoreChange),
+                () => j.Z.removeChangeListener(t.handleActiveThreadsStoreChange)
             ),
             [t],
         ),

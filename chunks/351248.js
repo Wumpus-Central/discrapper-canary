@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(354459),
     g = n(907894),
     b = n(149715),
-    y = n(162130);
-function _(e, t, n) {
+    _ = n(162130);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -117,8 +117,8 @@ class x extends i.PureComponent {
         let { theme: e, children: t, className: n } = this.props,
             i = (0, u.wj)(e),
             l = a()(g.sprite, {
-                [y.crossWhite]: i,
-                [y.crossGrey]: !i,
+                [_.crossWhite]: i,
+                [_.crossGrey]: !i,
             });
         return (0, r.jsxs)(o.Z.div, {
             className: a()(g.transition, n),
@@ -140,17 +140,17 @@ class x extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "scaleAnimation", new o.Z.Value(0)),
-            _(this, "spriteAnimation", new o.Z.Value(0)),
-            _(this, "spriteOpacity", new o.Z.Value(0)),
-            _(this, "widthAnimation", new o.Z.Value(0));
+            y(this, "scaleAnimation", new o.Z.Value(0)),
+            y(this, "spriteAnimation", new o.Z.Value(0)),
+            y(this, "spriteOpacity", new o.Z.Value(0)),
+            y(this, "widthAnimation", new o.Z.Value(0));
     }
 }
 function v(e) {
     var t;
     let { participants: n, onContextMenu: i, className: l, onClick: o, width: u, guildId: b } = e,
-        y = (0, p.ZP)(),
-        _ = ((t = n.length), ((0, d.pxk)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
+        _ = (0, p.ZP)(),
+        y = ((t = n.length), ((0, d.pxk)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
         C = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         v = n.map((e) => {
             var t, n;
@@ -160,14 +160,14 @@ function v(e) {
                 x,
                 {
                     className: g.participant,
-                    width: (0, d.pxk)(_),
-                    theme: y,
+                    width: (0, d.pxk)(y),
+                    theme: _,
                     children: (0, r.jsx)(
                         f.Z,
                         {
                             userId: l.id,
-                            src: l.getAvatarURL(b, (0, d.pxk)(_), s && C),
-                            size: _,
+                            src: l.getAvatarURL(b, (0, d.pxk)(y), s && C),
+                            size: y,
                             muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
                             deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,
                             speaking: s,

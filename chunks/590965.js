@@ -44,12 +44,12 @@ function y(e) {
     }
     return e;
 }
-let j = b.IlC.APP,
-    v = !1,
+let v = b.IlC.APP,
+    j = !1,
     C = !1,
     x = [];
 function E() {
-    v = !0;
+    j = !0;
 }
 class S extends (i = l.ZP.Store) {
     initialize() {
@@ -57,7 +57,7 @@ class S extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(v && x.length > 0 && j === e);
+        return !!(j && x.length > 0 && v === e);
     }
     getProps() {
         return {
@@ -72,7 +72,7 @@ let I = new S(o.Z, {
     OVERLAY_INITIALIZE: E,
     CONNECTION_OPEN: E,
     CONNECTION_CLOSED: function () {
-        v = !1;
+        j = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
         let t = e.invite;
@@ -105,7 +105,7 @@ let I = new S(o.Z, {
             })
         )
             return !1;
-        (j = e.context), (C = !1);
+        (v = e.context), (C = !1);
         let n = (function (e) {
             let {
                     approximate_member_count: t,

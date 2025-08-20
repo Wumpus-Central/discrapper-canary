@@ -1,117 +1,117 @@
-e.d(n, { Z: () => g }), e(388685);
-var l = e(951288);
-e(647438);
-var i = e(442837),
-    r = e(481060),
-    o = e(357156),
-    a = e(924301),
-    c = e(482241),
-    s = e(894017),
-    u = e(79874),
-    d = e(388032);
+n.d(e, { Z: () => g }), n(388685);
+var l = n(951288);
+n(647438);
+var r = n(442837),
+    i = n(481060),
+    o = n(357156),
+    u = n(924301),
+    c = n(482241),
+    a = n(894017),
+    s = n(79874),
+    d = n(388032);
 function g(t) {
-    let { guildEventId: n, recurrenceId: e, guild: g, channel: v } = t,
-        b = null != e,
-        { canManageGuildEvent: f } = (0, o.XJ)(null != v ? v : g),
-        [p, j] = (0, i.Wu)([a.ZP], () => [a.ZP.isActive(n), a.ZP.getGuildScheduledEvent(n)]),
-        h = (0, s.Z)(e, null == j ? void 0 : j.id),
-        y = null != j && f(j),
-        Z = (null == j ? void 0 : j.recurrence_rule) != null && !b,
-        m = (0, u.zI)(n, e);
-    if (!y || (p && !Z && !b) || (b && !b) || null == j || null == m) return null;
-    let { startTime: O } = m;
-    if (p && b) {
-        var P;
-        if (null == O) return null;
-        let t = new Date(null != (P = null == h ? void 0 : h.scheduled_start_time) ? P : O);
+    let { guildEventId: e, recurrenceId: n, guild: g, channel: f } = t,
+        b = null != n,
+        { canManageGuildEvent: v } = (0, o.XJ)(null != f ? f : g),
+        [E, p] = (0, r.Wu)([u.ZP], () => [u.ZP.isActive(e), u.ZP.getGuildScheduledEvent(e)]),
+        Z = (0, a.Z)(n, null == p ? void 0 : p.id),
+        y = null != p && v(p),
+        O = (null == p ? void 0 : p.recurrence_rule) != null && !b,
+        h = (0, s.zI)(e, n);
+    if (!y || (E && !O && !b) || (b && !b) || null == p || null == h) return null;
+    let { startTime: P } = h;
+    if (E && b) {
+        var m;
+        if (null == P) return null;
+        let t = new Date(null != (m = null == Z ? void 0 : Z.scheduled_start_time) ? m : P);
         if (new Date() > t) return null;
     }
-    let w = (t) => {
-        (0, r.h7j)((i) => {
-            var o, a;
+    let j = (t) => {
+        (0, i.h7j)((r) => {
+            var o, u;
             return (0, l.jsxs)(
-                r.ConfirmModal,
+                i.ConfirmModal,
                 ((o = (function (t) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var e = null != arguments[n] ? arguments[n] : {},
-                            l = Object.keys(e);
+                    for (var e = 1; e < arguments.length; e++) {
+                        var n = null != arguments[e] ? arguments[e] : {},
+                            l = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
-                                Object.getOwnPropertySymbols(e).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
+                                Object.getOwnPropertySymbols(n).filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                 }),
                             )),
-                            l.forEach(function (n) {
+                            l.forEach(function (e) {
                                 var l;
-                                (l = e[n]),
-                                    n in t
-                                        ? Object.defineProperty(t, n, {
+                                (l = n[e]),
+                                    e in t
+                                        ? Object.defineProperty(t, e, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (t[n] = l);
+                                        : (t[e] = l);
                             });
                     }
                     return t;
-                })({}, i)),
-                (a = a =
+                })({}, r)),
+                (u = u =
                     {
                         header: d.intl.string(d.t.R5bpio),
-                        confirmText: Z || t ? d.intl.string(d.t["8ZsNv7"]) : d.intl.string(d.t.B9sJLS),
+                        confirmText: O || t ? d.intl.string(d.t["8ZsNv7"]) : d.intl.string(d.t.B9sJLS),
                         cancelText: d.intl.string(d.t.oEAioK),
                         onConfirm: () =>
-                            b && !t ? c.Z.deleteRecurrence(g.id, n, e, h) : c.Z.deleteGuildEvent(n, g.id),
+                            b && !t ? c.Z.deleteRecurrence(g.id, e, n, Z) : c.Z.deleteGuildEvent(e, g.id),
                         children: [
-                            (0, l.jsx)(r.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: "text-md/normal",
                                 children: d.intl.string(d.t.v2GWNT),
                             }),
                             (0, l.jsx)("br", {}),
-                            (Z || t) &&
-                                (0, l.jsx)(r.Text, {
+                            (O || t) &&
+                                (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     children: d.intl.format(d.t.ZcpcyM, {}),
                                 }),
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
-                    : (function (t, n) {
-                          var e = Object.keys(t);
+                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
+                    : (function (t, e) {
+                          var n = Object.keys(t);
                           if (Object.getOwnPropertySymbols) {
                               var l = Object.getOwnPropertySymbols(t);
-                              e.push.apply(e, l);
+                              n.push.apply(n, l);
                           }
-                          return e;
-                      })(Object(a)).forEach(function (t) {
-                          Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(a, t));
+                          return n;
+                      })(Object(u)).forEach(function (t) {
+                          Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(u, t));
                       }),
                 o),
             );
         });
     };
-    return (0, l.jsx)(r.sNh, {
+    return (0, l.jsx)(i.sNh, {
         id: d.intl.string(d.t.B9sJLS),
         label: d.intl.string(d.t.B9sJLS),
-        action: b ? void 0 : () => w(),
+        action: b ? void 0 : () => j(),
         color: "danger",
         children:
             b &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(r.sNh, {
+                    (0, l.jsx)(i.sNh, {
                         id: d.intl.string(d.t.tqCll5),
                         label: d.intl.string(d.t.tqCll5),
-                        action: () => w(),
-                        disabled: null == h ? void 0 : h.is_canceled,
+                        action: () => j(),
+                        disabled: null == Z ? void 0 : Z.is_canceled,
                         color: "danger",
                     }),
-                    (0, l.jsx)(r.sNh, {
+                    (0, l.jsx)(i.sNh, {
                         id: d.intl.string(d.t.wr33ra),
                         label: d.intl.string(d.t.wr33ra),
-                        action: () => w(!0),
+                        action: () => j(!0),
                         color: "danger",
                     }),
                 ],

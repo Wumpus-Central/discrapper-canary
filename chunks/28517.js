@@ -1,6 +1,7 @@
 e.exports = {
     container: "container__81a06",
     select: "select__81a06",
+    inModal: "inModal__81a06",
     iconContainer: "iconContainer__81a06",
     badges: "badges__81a06",
     soloInput: "soloInput__81a06",

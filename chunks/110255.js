@@ -12,8 +12,8 @@ var i = n(442837),
     p = n(430824);
 function h(e) {
     let { channel: t, closePopout: n, onSelect: h, navId: f, label: m, location: g, includeGuildMute: b } = e,
-        y = (0, o.c)(t),
-        _ = (0, s.EQ)(t),
+        _ = (0, o.c)(t),
+        y = (0, s.EQ)(t),
         C = (0, i.e7)([p.Z], () => p.Z.getGuild(t.guild_id)),
         x = (0, c.Z)(C),
         v = (0, u.Mn)("ChannelNotificationSettingsPopoutMenu") && d.$N.has(t.type);
@@ -25,7 +25,7 @@ function h(e) {
         children: [
             (0, r.jsx)(l.kSQ, { children: (0, a.ZP)(t, g) }),
             b ? (0, r.jsx)(l.kSQ, { children: x }) : null,
-            v ? _ : (0, r.jsx)(l.kSQ, { children: y }),
+            v ? y : (0, r.jsx)(l.kSQ, { children: _ }),
         ],
     });
 }

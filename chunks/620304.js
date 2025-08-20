@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(538445),
     _ = n(639777),
     y = n(495804),
-    j = n(441536),
-    v = n(921944),
+    v = n(441536),
+    j = n(921944),
     C = n(989308),
     x = n(388032),
     E = n(931942);
@@ -70,7 +70,7 @@ function P(e) {
         N = (0, y.Z)(t, "GuildPowerupsProgressBar"),
         w = (0, _.Z)(t.id),
         Z = i.useCallback(() => {
-            (0, j.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+            (0, v.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
         T = (0, c.e7)([m.Z], () => {
             var e;
@@ -192,7 +192,7 @@ function P(e) {
               align: "top",
               shouldShow: !0,
               closeOnScroll: !0,
-              onRequestClose: () => U(v.L.INDIRECT_ACTION),
+              onRequestClose: () => U(j.L.INDIRECT_ACTION),
               animation: d.yRy.Animation.TRANSLATE,
               children: (e) =>
                   (0, r.jsx)("div", {

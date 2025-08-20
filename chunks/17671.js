@@ -1,112 +1,98 @@
-t.d(n, { default: () => T });
-var i = t(951288),
-    r = t(647438),
+t.d(n, { default: () => w });
+var r = t(951288),
+    i = t(647438),
     l = t(392711),
-    o = t.n(l),
-    c = t(442837),
-    a = t(481060),
+    c = t.n(l),
+    a = t(442837),
+    o = t(481060),
     s = t(45114),
     u = t(493773),
     d = t(313201),
-    g = t(597),
-    p = t(147754),
-    f = t(984933),
-    h = t(720202),
-    v = t(430824),
-    m = t(306680),
-    j = t(626135),
-    b = t(823379);
+    g = t(720202),
+    p = t(430824),
+    h = t(306680),
+    m = t(626135),
+    v = t(823379);
 t(981888);
-var y = t(709054),
-    x = t(897285),
-    O = t(518756),
-    Z = t(554747),
-    C = t(710679),
-    P = t(74562),
-    E = t(576749),
-    k = t(765305),
-    N = t(981631),
-    w = t(490897),
-    I = t(388032),
-    S = t(520698);
-function T(e) {
-    let { transitionState: n, onClose: l, guildId: T } = e,
-        _ = (0, d.Dt)(),
-        D = (0, c.e7)([v.Z], () => v.Z.getGuild(T)),
-        G = (0, O.Z)(null == D ? void 0 : D.id),
-        L = (0, Z.ZP)(T),
-        R = r.useRef(m.ZP.ackMessageId(T, w.W.GUILD_EVENT)),
-        H = (0, E.Z)();
+var j = t(709054),
+    f = t(897285),
+    b = t(518756),
+    x = t(554747),
+    O = t(710679),
+    y = t(74562),
+    C = t(576749),
+    Z = t(765305),
+    k = t(981631),
+    N = t(490897),
+    P = t(388032),
+    E = t(520698);
+function w(e) {
+    let { transitionState: n, onClose: l, guildId: w } = e,
+        I = (0, d.Dt)(),
+        S = (0, a.e7)([p.Z], () => p.Z.getGuild(w)),
+        D = (0, b.Z)(null == S ? void 0 : S.id),
+        T = (0, x.ZP)(w),
+        L = i.useRef(h.ZP.ackMessageId(w, N.W.GUILD_EVENT)),
+        _ = (0, C.Z)();
     return (
-        r.useEffect(() => {
-            L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T);
-        }, [L, T]),
-        r.useEffect(() => {
-            let e = v.Z.getGuild(T);
-            if (!(null == e ? void 0 : e.features.has(N.oNc.HUB))) return;
-            let { showHubEventsList: n } = p.Z.getCurrentConfig({
-                guildId: T,
-                location: "d3755f_1",
-            });
-            if (!n) return;
-            let t = f.ZP.getDefaultChannel(T);
-            null != t && g.c(t.id);
-        }, [T]),
+        i.useEffect(() => {
+            T.forEach((e) => f.Z.getGuildEventUserCounts(w, e.id, [])), f.Z.getGuildEventsForCurrentUser(w);
+        }, [T, w]),
         (0, u.ZP)(() => {
-            j.default.track(N.rMx.OPEN_MODAL, {
-                type: k.zw,
-                guild_id: T,
-                guild_events_count: L.length,
+            m.default.track(k.rMx.OPEN_MODAL, {
+                type: Z.zw,
+                guild_id: w,
+                guild_events_count: T.length,
             });
         }),
-        r.useEffect(() => {
-            o()(L)
+        i.useEffect(() => {
+            c()(T)
                 .map((e) => e.creator_id)
-                .filter(b.lm)
+                .filter(v.lm)
                 .uniq()
                 .forEach((e) => {
-                    h.Z.requestMember(T, e);
+                    g.Z.requestMember(w, e);
                 });
-        }, [T, L]),
-        r.useEffect(() => {
-            null != T && (0, s.Ju)(T, w.W.GUILD_EVENT);
-        }, [T]),
-        (0, i.jsxs)(a.Y0X, {
-            size: a.CgR.MEDIUM,
+        }, [w, T]),
+        i.useEffect(() => {
+            null != w && (0, s.Ju)(w, N.W.GUILD_EVENT);
+        }, [w]),
+        (0, r.jsxs)(o.Y0X, {
+            size: o.CgR.MEDIUM,
             transitionState: n,
-            "aria-labelledby": _,
+            "aria-labelledby": I,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
-                (0, i.jsxs)(a.xBx, {
-                    className: S.header,
+                (0, r.jsxs)(o.xBx, {
+                    className: E.header,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(a.Que, {
+                        (0, r.jsx)(o.Que, {
                             size: "md",
                             color: "currentColor",
-                            className: S.icon,
+                            className: E.icon,
                         }),
-                        (0, i.jsx)(a.X6q, {
-                            id: _,
+                        (0, r.jsx)(o.X6q, {
+                            id: I,
                             variant: "heading-md/semibold",
                             children:
-                                L.length > 0
-                                    ? I.intl.formatToPlainString(I.t.IBdqSk, { number: L.length })
-                                    : I.intl.string(I.t.tlopTE),
+                                T.length > 0
+                                    ? P.intl.formatToPlainString(P.t.IBdqSk, { number: T.length })
+                                    : P.intl.string(P.t.tlopTE),
                         }),
-                        G &&
-                            (0, i.jsxs)(i.Fragment, {
+                        D &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", {
-                                        className: S.divider,
+                                    (0, r.jsx)("div", {
+                                        className: E.divider,
                                         children: "|",
                                     }),
-                                    (0, i.jsx)(a.zxk, {
+                                    (0, r.jsx)(o.zxk, {
                                         variant: "primary",
                                         size: "sm",
                                         onClick: () => {
-                                            (0, a.ZDy)(async () => {
+                                            (0, o.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     t.e("36599"),
                                                     t.e("60962"),
@@ -116,15 +102,15 @@ function T(e) {
                                                     t.e("72946"),
                                                 ]).then(t.bind(t, 779250));
                                                 return (n) => {
-                                                    var t, r;
-                                                    return (0, i.jsx)(
+                                                    var t, i;
+                                                    return (0, r.jsx)(
                                                         e,
                                                         ((t = (function (e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},
-                                                                    i = Object.keys(t);
+                                                                    r = Object.keys(t);
                                                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                                                    (i = i.concat(
+                                                                    (r = r.concat(
                                                                         Object.getOwnPropertySymbols(t).filter(
                                                                             function (e) {
                                                                                 return Object.getOwnPropertyDescriptor(
@@ -134,81 +120,80 @@ function T(e) {
                                                                             },
                                                                         ),
                                                                     )),
-                                                                    i.forEach(function (n) {
-                                                                        var i;
-                                                                        (i = t[n]),
+                                                                    r.forEach(function (n) {
+                                                                        var r;
+                                                                        (r = t[n]),
                                                                             n in e
                                                                                 ? Object.defineProperty(e, n, {
-                                                                                      value: i,
+                                                                                      value: r,
                                                                                       enumerable: !0,
                                                                                       configurable: !0,
                                                                                       writable: !0,
                                                                                   })
-                                                                                : (e[n] = i);
+                                                                                : (e[n] = r);
                                                                     });
                                                             }
                                                             return e;
                                                         })({}, n)),
-                                                        (r = r = { guildId: T }),
+                                                        (i = i = { guildId: w }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(
                                                                   t,
-                                                                  Object.getOwnPropertyDescriptors(r),
+                                                                  Object.getOwnPropertyDescriptors(i),
                                                               )
                                                             : (function (e, n) {
                                                                   var t = Object.keys(e);
                                                                   if (Object.getOwnPropertySymbols) {
-                                                                      var i = Object.getOwnPropertySymbols(e);
-                                                                      t.push.apply(t, i);
+                                                                      var r = Object.getOwnPropertySymbols(e);
+                                                                      t.push.apply(t, r);
                                                                   }
                                                                   return t;
-                                                              })(Object(r)).forEach(function (e) {
+                                                              })(Object(i)).forEach(function (e) {
                                                                   Object.defineProperty(
                                                                       t,
                                                                       e,
-                                                                      Object.getOwnPropertyDescriptor(r, e),
+                                                                      Object.getOwnPropertyDescriptor(i, e),
                                                                   );
                                                               }),
                                                         t),
                                                     );
                                                 };
-                                            }, H);
+                                            }, _);
                                         },
-                                        text: I.intl.string(I.t["60lJ0N"]),
+                                        text: P.intl.string(P.t["60lJ0N"]),
                                     }),
                                 ],
                             }),
-                        (0, i.jsx)(a.P3F, {
+                        (0, r.jsx)(o.P3F, {
                             onClick: l,
-                            className: S.iconButton,
-                            "aria-label": I.intl.string(I.t.cpT0Cg),
-                            children: (0, i.jsx)(a.Dio, {
+                            className: E.iconButton,
+                            "aria-label": P.intl.string(P.t.cpT0Cg),
+                            children: (0, r.jsx)(o.Dio, {
                                 size: "md",
                                 color: "currentColor",
-                                className: S.icon,
+                                className: E.icon,
                             }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(a.hzk, {
-                    className: S.content,
+                (0, r.jsx)(o.hzk, {
+                    className: E.content,
                     "data-migration-pending": !0,
                     children:
-                        L.length > 0
-                            ? L.map((e) =>
-                                  (0, i.jsx)(
-                                      C.Z,
+                        T.length > 0
+                            ? T.map((e) =>
+                                  (0, r.jsx)(
+                                      O.Z,
                                       {
                                           guildEvent: e,
-                                          guildId: T,
                                           onActionTaken: l,
-                                          isNew: null != R.current && y.default.compare(e.id, R.current) > 0,
+                                          isNew: null != L.current && j.default.compare(e.id, L.current) > 0,
                                       },
                                       e.id,
                                   ),
                               )
-                            : (0, i.jsx)(P.Z, {
-                                  guildId: T,
+                            : (0, r.jsx)(y.Z, {
+                                  guildId: w,
                                   onClose: l,
                               }),
                 }),

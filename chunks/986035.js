@@ -19,18 +19,18 @@ let p = function (e) {
         imageClassName: m,
         agreementButtonColor: g = o.zx.Colors.RED,
         modalType: b,
-        channelId: y,
-        guildId: _,
+        channelId: _,
+        guildId: y,
     } = e;
     i.useEffect(() => {
-        (0, c.YT)(b, y, _);
-    }, [b, y, _]);
+        (0, c.YT)(b, _, y);
+    }, [b, _, y]);
     let C = i.useCallback(() => {
-            (0, c.qd)(c.iP.NSFW_CHANNEL_DISAGREE_CTA, b, y, _), null == f || f();
-        }, [f, b, y, _]),
+            (0, c.qd)(c.iP.NSFW_CHANNEL_DISAGREE_CTA, b, _, y), null == f || f();
+        }, [f, b, _, y]),
         x = i.useCallback(() => {
-            (0, c.qd)(c.iP.NSFW_CHANNEL_AGREE_CTA, b, y, _), null == h || h();
-        }, [h, b, y, _]);
+            (0, c.qd)(c.iP.NSFW_CHANNEL_AGREE_CTA, b, _, y), null == h || h();
+        }, [h, b, _, y]);
     return (0, r.jsxs)(s.Kqy, {
         className: u.gatedContent,
         justify: "center",

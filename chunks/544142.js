@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(271383),
     g = n(594174),
     b = n(51144),
-    y = n(967128),
-    _ = n(981631),
+    _ = n(967128),
+    y = n(981631),
     C = n(388032),
     x = n(149623);
 function v(e) {
@@ -63,13 +63,13 @@ function O(e, t) {
 }
 function j(e) {
     var t, l, p;
-    let { userId: y, channel: _ } = e,
+    let { userId: _, channel: y } = e,
         C = i.useRef(null),
         { analyticsLocations: j } = (0, d.ZP)(u.Z.USERNAME),
-        E = (0, o.e7)([g.default], () => g.default.getUser(y)),
-        S = (0, o.e7)([m.ZP], () => (null != y ? m.ZP.getMember(_.guild_id, y) : null)),
-        P = (0, h.X7)(_.guild_id, null != y ? y : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
-    function I(e) {
+        E = (0, o.e7)([g.default], () => g.default.getUser(_)),
+        S = (0, o.e7)([m.ZP], () => (null != _ ? m.ZP.getMember(y.guild_id, _) : null)),
+        I = (0, h.X7)(y.guild_id, null != _ ? _ : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
+    function P(e) {
         if (null == E) return null;
         (0, c.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e("79695"), n.e("70675")]).then(n.bind(n, 654663));
@@ -78,8 +78,8 @@ function j(e) {
                     e,
                     O(v({}, t), {
                         user: E,
-                        guildId: _.guild_id,
-                        channel: _,
+                        guildId: y.guild_id,
+                        channel: y,
                     }),
                 );
         });
@@ -96,8 +96,8 @@ function j(e) {
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: C,
                   user: E,
-                  guildId: _.guild_id,
-                  channelId: _.id,
+                  guildId: y.guild_id,
+                  channelId: y.id,
                   roleId: null == S ? void 0 : S.colorRoleId,
                   clickTrap: !0,
                   children: (e) =>
@@ -107,11 +107,11 @@ function j(e) {
                               innerRef: C,
                               tag: "span",
                               className: x.threadCreatorName,
-                              onContextMenu: I,
+                              onContextMenu: P,
                               children: (0, r.jsx)(s.PUh, {
                                   name: Z,
                                   colorString: null != T ? T : null,
-                                  colorStrings: P,
+                                  colorStrings: I,
                               }),
                           }),
                       ),
@@ -143,7 +143,7 @@ function E(e) {
                           }),
                       }),
                   }),
-                  t.type === _.d4z.PRIVATE_THREAD
+                  t.type === y.d4z.PRIVATE_THREAD
                       ? (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "header-secondary",
@@ -157,14 +157,14 @@ function S(e) {
     var t;
     let { channel: n } = e,
         i = null != (t = (0, p.KS)(n)) ? t : s.or_;
-    return (0, r.jsxs)(y.ZP, {
+    return (0, r.jsxs)(_.ZP, {
         channelId: n.id,
         children: [
             (0, r.jsx)("div", {
                 className: x.iconWrapper,
                 children: (0, r.jsx)(i, { className: x.icon }),
             }),
-            (0, r.jsx)(y.Ot, { children: n.name }),
+            (0, r.jsx)(_.Ot, { children: n.name }),
             (0, r.jsx)(E, { channel: n }),
         ],
     });

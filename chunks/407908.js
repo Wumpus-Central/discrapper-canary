@@ -16,8 +16,8 @@ var r = n(951288),
 function b(e) {
     var t, n;
     let { channel: b } = e,
-        y = i.useContext(p.AnalyticsContext),
-        _ = (0, a.Aq)(),
+        _ = i.useContext(p.AnalyticsContext),
+        y = (0, a.Aq)(),
         C = m.intl.string(g.default["Beo/7u"]),
         { firstMessage: x } = (0, s.cl)(b),
         v = null == x || null == (t = x.messageSnapshots) ? void 0 : t[0],
@@ -29,9 +29,9 @@ function b(e) {
                       (0, o.i)(),
                       (0, c.r)(b.guild_id, O, b.id, {
                           modViewPanel: f.k.INFO,
-                          sourceLocation: null != location ? location : y.location,
+                          sourceLocation: null != location ? location : _.location,
                       }),
-                      _.dispatch(h.CkL.POPOUT_CLOSE);
+                      y.dispatch(h.CkL.POPOUT_CLOSE);
               },
               tooltip: C,
               icon: l.HI3,

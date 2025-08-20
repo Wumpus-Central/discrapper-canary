@@ -1,6 +1,6 @@
-n.d(t, { Z: () => p }), n(953529), n(35282);
-var r = n(951288),
-    l = n(647438),
+n.d(t, { Z: () => f }), n(953529), n(35282);
+var l = n(951288),
+    r = n(647438),
     i = n(442837),
     a = n(481060),
     s = n(471445),
@@ -13,35 +13,35 @@ var r = n(951288),
     g = n(405613),
     v = n(460838),
     h = n(388032),
-    f = n(492718);
-function p(e) {
+    p = n(492718);
+function f(e) {
     var t, n;
-    let { guildId: p, guildEvent: j, guildEventId: y, error: b } = e,
-        E = l.useMemo(() => (0, x.Gb)(j, p), [j, p]),
-        { channel_id: O, name: N, image: C, description: T } = E,
-        S = (0, i.e7)([c.Z], () => c.Z.getChannel(O), [O]),
-        I = (0, i.e7)([u.Z], () => u.Z.getGuild(p), [p]),
-        Z = (0, m.cS)(E),
+    let { guildId: f, guildEvent: j, guildEventId: y, error: b } = e,
+        E = r.useMemo(() => (0, x.Gb)(j, f), [j, f]),
+        { channel_id: N, name: O, image: C, description: S } = E,
+        T = (0, i.e7)([c.Z], () => c.Z.getChannel(N), [N]),
+        Z = (0, i.e7)([u.Z], () => u.Z.getGuild(f), [f]),
+        I = (0, m.cS)(E),
         P = (0, i.e7)(
             [d.default],
             () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()),
             [j.creatorId],
         ),
-        w = (0, i.e7)([o.Z], () => o.Z.isLurking(p), [p]),
-        D = (0, s.KS)(S, I);
-    return (0, r.jsxs)("div", {
-        className: f.content,
+        w = (0, i.e7)([o.Z], () => o.Z.isLurking(f), [f]),
+        D = (0, s.KS)(T, Z);
+    return (0, l.jsxs)("div", {
+        className: p.content,
         children: [
-            (0, r.jsx)(v.Z, {
-                className: f.previewCard,
-                guild: I,
-                channel: S,
-                location: null != Z ? Z : void 0,
+            (0, l.jsx)(v.Z, {
+                className: p.previewCard,
+                guild: Z,
+                channel: T,
+                location: null != I ? I : void 0,
                 creator: P,
-                name: N,
-                description: T,
+                name: O,
+                description: S,
                 imageSource:
-                    ((n = (0, x.Gb)(j, p, y)),
+                    ((n = (0, x.Gb)(j, f, y)),
                     null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
@@ -51,53 +51,53 @@ function p(e) {
                 guildEvent: E,
                 eventPreview: E,
             }),
-            (0, r.jsxs)("div", {
-                className: f.textContainer,
+            (0, l.jsxs)("div", {
+                className: p.textContainer,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, l.jsx)(a.X6q, {
                         variant: "heading-xl/semibold",
                         children: h.intl.string(h.t.yBsFEx),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, l.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        className: f.subheader,
+                        className: p.subheader,
                         children:
                             null != location
                                 ? h.intl.string(h.t.KDPFi4)
                                 : h.intl.format(h.t.f55NX1, {
-                                      channelName: null != (t = null == S ? void 0 : S.name) ? t : "",
+                                      channelName: null != (t = null == T ? void 0 : T.name) ? t : "",
                                       channelHook: () => {
                                           var e;
-                                          return (0, r.jsxs)("div", {
-                                              className: f.channelName,
+                                          return (0, l.jsxs)("div", {
+                                              className: p.channelName,
                                               children: [
                                                   null != D
-                                                      ? (0, r.jsx)(D, {
+                                                      ? (0, l.jsx)(D, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,
                                                             height: 20,
-                                                            className: f.icon,
+                                                            className: p.icon,
                                                         })
-                                                      : (0, r.jsx)(a._tJ, {
+                                                      : (0, l.jsx)(a._tJ, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             height: 18,
                                                             width: 18,
-                                                            className: f.locationIcon,
+                                                            className: p.locationIcon,
                                                         }),
-                                                  null != (e = null == S ? void 0 : S.name) ? e : Z,
+                                                  null != (e = null == T ? void 0 : T.name) ? e : I,
                                               ],
                                           });
                                       },
                                   }),
                     }),
                     null != b &&
-                        (0, r.jsx)(a.Text, {
+                        (0, l.jsx)(a.Text, {
                             color: "text-danger",
                             variant: "text-xs/normal",
-                            className: f.subheader,
+                            className: p.subheader,
                             children: b.getAnyErrorMessage(),
                         }),
                 ],

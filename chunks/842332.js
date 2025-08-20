@@ -26,7 +26,7 @@ function p(e) {
         [h, f] = i.useState(!1),
         [m, g] = i.useState(!1),
         { enableAIFeatures: b } = o.C.useExperiment({ location: "CreateThreadSidebar" }),
-        y = i.useCallback(async () => {
+        _ = i.useCallback(async () => {
             if (b) {
                 f(!0);
                 try {
@@ -49,9 +49,9 @@ function p(e) {
         g(!1), f(!1), t.id === c.parentChannelId && n !== c.parentMessageId && l({ name: "" });
     }, [n, l, t.id, c.parentChannelId, c.parentMessageId]),
         i.useEffect(() => {
-            (null == c.name || "" === c.name.trim()) && !m && b && null != n && (g(!0), y());
-        }, [t.id, n, l, c.name, m, b, y]);
-    let _ = i.useCallback(
+            (null == c.name || "" === c.name.trim()) && !m && b && null != n && (g(!0), _());
+        }, [t.id, n, l, c.name, m, b, _]);
+    let y = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return b
@@ -92,7 +92,7 @@ function p(e) {
                                       variant: "secondary",
                                       size: "sm",
                                       "aria-label": u.intl.string(u.t.ZF2oBg),
-                                      onClick: y,
+                                      onClick: _,
                                       disabled: e || h || (null == n && p.textValue.trim().length < 10),
                                       loading: h,
                                       type: "button",
@@ -115,12 +115,12 @@ function p(e) {
                   })
                 : null;
         },
-        [b, h, n, p.textValue, y],
+        [b, h, n, p.textValue, _],
     );
     return {
         isGeneratingAI: h,
-        generateAIName: y,
+        generateAIName: _,
         enableAIFeatures: b,
-        renderAiGenerateButton: _,
+        renderAiGenerateButton: y,
     };
 }

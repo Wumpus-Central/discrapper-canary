@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(112724),
@@ -14,13 +14,13 @@ var r = n(951288),
     m = n(981631),
     g = n(354459),
     b = n(394024);
-let y = (0, l.Z)((e) => {
+let _ = (0, l.Z)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: l,
-        participantsVersion: y,
-        layout: _,
+        participantsVersion: _,
+        layout: y,
         onSelectParticipant: C,
         onContextMenuParticipant: x,
         onFullscreenParticipant: v,
@@ -28,8 +28,8 @@ let y = (0, l.Z)((e) => {
         hasConnectPermission: j,
         className: E,
         inCall: S,
-        showParticipants: P = !0,
-        width: I,
+        showParticipants: I = !0,
+        width: P,
         height: Z,
         idle: T,
         mode: N,
@@ -39,10 +39,10 @@ let y = (0, l.Z)((e) => {
     } = e;
     i.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
-    }, [I, Z, R.width, R.height]);
+    }, [P, Z, R.width, R.height]);
     let M = i.useMemo(
         () => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))),
-        [n, y],
+        [n, _],
     );
     return (null == w ? void 0 : w.channelId) === O.id
         ? (0, r.jsx)(d.Z, { height: Z })
@@ -55,7 +55,7 @@ let y = (0, l.Z)((e) => {
           : N === m.WtW.VOICE
             ? (0, r.jsx)(o.Z, {
                   guildId: O.guild_id,
-                  width: I,
+                  width: P,
                   className: b.voiceCallWrapper,
                   participants: t,
                   onContextMenu: x,
@@ -89,10 +89,10 @@ let y = (0, l.Z)((e) => {
                     className: E,
                     idle: T,
                     height: Z,
-                    width: I,
-                    layout: _,
+                    width: P,
+                    layout: y,
                     inCall: S,
                     channel: O,
-                    showParticipants: P,
+                    showParticipants: I,
                 });
 });

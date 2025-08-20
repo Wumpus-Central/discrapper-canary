@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(431),
     _ = n(774343),
     y = n(417363),
-    j = n(941128),
-    v = n(780570),
+    v = n(941128),
+    j = n(780570),
     C = n(278464),
     x = n(276952),
     E = n(682662),
@@ -45,13 +45,13 @@ function R(e) {
     var t, n;
     let { selected: o, user: p, badge: f, link: m, showProgressBadge: b } = e,
         [O, _] = i.useState(!1),
-        [y, j] = i.useState(!1),
-        [v, C] = i.useState(null),
+        [y, v] = i.useState(!1),
+        [j, C] = i.useState(null),
         [N, R] = i.useState(0),
         D = (0, l.Ie)("home"),
         M = (0, d.oq)().activePanel === d.wh.APP_ICON,
         L = () => {
-            C(null), R(0), clearTimeout(v);
+            C(null), R(0), clearTimeout(j);
         };
     if (null == p) return null;
     let k = Z.intl.string(Z.t.YUU0RE);
@@ -102,16 +102,16 @@ function R(e) {
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != v && clearTimeout(v), C(setTimeout(L, 500)), R(N + 1), 15 === N)
+                                (null != j && clearTimeout(j), C(setTimeout(L, 500)), R(N + 1), 15 === N)
                             ) {
                                 L();
                                 let e = !a.K.get(P.wli);
                                 a.K.set(P.wli, e),
                                     e && a.K.set(w.O5, !0),
                                     e ? (0, h.GN)("discodo") : (0, h.GN)("user_leave"),
-                                    j(!0),
+                                    v(!0),
                                     setTimeout(() => {
-                                        j(!1);
+                                        v(!1);
                                     }, 1000);
                             }
                         },
@@ -178,10 +178,10 @@ function R(e) {
 }
 function D() {
     let e = (0, C.n)(),
-        t = (0, o.e7)([j.Z, y.Z], () => {
-            let e = (0, c.E)(j.Z.activeItems, y.Z),
-                { total: t, progress: n } = v.lK(e),
-                r = v.xI(n, t);
+        t = (0, o.e7)([v.Z, y.Z], () => {
+            let e = (0, c.E)(v.Z.activeItems, y.Z),
+                { total: t, progress: n } = j.lK(e),
+                r = j.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),

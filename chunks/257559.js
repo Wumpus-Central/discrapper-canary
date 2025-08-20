@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(699516),
     _ = n(594174),
     y = n(630388),
-    j = n(970257),
-    v = n(981631),
+    v = n(970257),
+    j = n(981631),
     C = n(388032),
     x = n(764295),
     E = n(477425);
@@ -97,13 +97,13 @@ class N extends i.PureComponent {
                 }
                 return i;
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(s.flags, v.iLy.CROSSPOSTED);
+            g = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(s.flags, j.iLy.CROSSPOSTED);
         u &&
             (e = (0, r.jsx)(f.Z, {
                 className: E.spacingTop,
                 children: C.intl.format(C.t.IxY7Ex, {}),
             })),
-            (0, j.vc)(s) &&
+            (0, v.vc)(s) &&
                 (t = (0, r.jsx)(c.j7V, {
                     value: n,
                     onChange: this.handleToggleReport,

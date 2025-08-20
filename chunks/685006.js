@@ -17,8 +17,8 @@ var r = n(951288),
     m = n(499254),
     g = n(827498),
     b = n(213459),
-    y = n(541716),
-    _ = n(61356),
+    _ = n(541716),
+    y = n(61356),
     C = n(981631),
     x = n(314734),
     v = n(409575);
@@ -33,12 +33,12 @@ function S(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: a, application: o, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
         c = null == o ? void 0 : o.id,
-        f = (0, _.Z)({ type: l }),
+        f = (0, y.Z)({ type: l }),
         { sectionCommands: x } = (0, b.If)(t, null != c ? c : ""),
         v = i.useCallback(() => {
             f
                 ? m.yT(g.ti.DISMISSED)
-                : (m.__(g._b.TEXT, y.Ie.NORMAL, { applicationId: c }),
+                : (m.__(g._b.TEXT, _.Ie.NORMAL, { applicationId: c }),
                   (0, p.yw)(C.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                       application_id: c,
                       location: d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
@@ -57,7 +57,7 @@ function S(e) {
         [E],
     ),
     E)
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(I, {
               context: t,
               application: o,
               primaryEntryPointCommand: s,
@@ -67,7 +67,7 @@ function S(e) {
           })
         : null;
 }
-function P(e) {
+function I(e) {
     let {
             context: t,
             application: n,
@@ -76,7 +76,7 @@ function P(e) {
             entryPointCommandButtonRef: o,
             type: s,
         } = e,
-        u = (0, _.Z)({ type: s }),
+        u = (0, y.Z)({ type: s }),
         {
             isExecutingLaunchInteraction: d,
             buttonText: p,
@@ -84,7 +84,7 @@ function P(e) {
             isEmbeddedApp: m,
             currentEmbeddedActivity: g,
             channelRecipientUserId: b,
-            setIsExecutingLaunchInteraction: y,
+            setIsExecutingLaunchInteraction: _,
             analyticsLocations: C,
         } = (0, f.Z)({
             context: t,
@@ -100,7 +100,7 @@ function P(e) {
             currentEmbeddedActivity: g,
             onOpenButtonPress: l,
             channelRecipientUserId: b,
-            setIsExecutingLaunchInteraction: y,
+            setIsExecutingLaunchInteraction: _,
             analyticsLocations: C,
         }),
         j = h ? "critical-primary" : "primary";

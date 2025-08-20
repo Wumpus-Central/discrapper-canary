@@ -270,7 +270,7 @@ class Z extends l.Z {
                 ),
                 e === P.hes.RTC_CONNECTED)
             ) {
-                var r, i, o, l, c, u;
+                var r, i, o, l, c, u, d;
                 null == (r = this._connection) ||
                     r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, o, s, l, c, u, d, f, h, m, g) => {
                         let E = this.getMediaSessionId(),
@@ -416,7 +416,22 @@ class Z extends l.Z {
                             }
                         }),
                     null == (u = this._connection) ||
-                        u.on(a.Sh.Destroy, () => {
+                        u.on(a.Sh.FirstFrame, () => {
+                            if (this._firstFrameDelivered) return;
+                            this._firstFrameDelivered = !0;
+                            let e = this.getStreamAnalyticsProperties();
+                            I.default.track(P.rMx.RECEIVER_FIRST_FRAME_DELIVERED, {
+                                guild_id: e.guild_id,
+                                channel_id: e.channel_id,
+                                rtc_connection_id: e.rtc_connection_id,
+                                media_session_id: e.media_session_id,
+                                parent_media_session_id: e.parent_media_session_id,
+                                num_viewers: this.analyticsContext.numViewers,
+                                time_connected_to_first_frame_delivered: this.getDuration(),
+                            });
+                        }),
+                    null == (d = this._connection) ||
+                        d.on(a.Sh.Destroy, () => {
                             this.errorTimer.stop();
                         });
             }
@@ -638,6 +653,7 @@ class Z extends l.Z {
             D(this, "updateVideoStreamId", void 0),
             D(this, "bandwidthSamples", []),
             D(this, "goliveCurrentMaxResolution", void 0),
+            D(this, "_firstFrameDelivered", !1),
             D(this, "soundshareFailuresReported", {}),
             D(this, "errorTimer", new o.V7()),
             (this.streamContext = d),

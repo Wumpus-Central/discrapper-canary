@@ -19,8 +19,8 @@ var r = n(951288),
     m = n(372769),
     g = n(134432),
     b = n(769654),
-    y = n(430824),
-    _ = n(768581),
+    _ = n(430824),
+    y = n(768581),
     C = n(411198),
     x = n(683818),
     v = n(16853),
@@ -28,7 +28,7 @@ var r = n(951288),
     j = n(388032),
     E = n(777261),
     S = n(883760);
-function P(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function P(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -128,12 +128,12 @@ function N(e) {
                                   l = Z(e, ["onClick"]);
                               return (0, r.jsx)(
                                   h.zx,
-                                  I(P({}, l), {
+                                  P(I({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, c.ZDy)(async () => {
                                                   let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, I(P({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
                                               });
                                       },
                                       "aria-label": j.intl.string(j.t.XnuOvL),
@@ -164,7 +164,7 @@ function N(e) {
                                     l = Z(e, ["onClick"]);
                                 return (0, r.jsx)(
                                     h.zx,
-                                    I(P({}, n, l), {
+                                    P(I({}, n, l), {
                                         ref: s,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
@@ -189,7 +189,7 @@ let A = (e) => {
     var t;
     let { entry: l } = e,
         [a, h] = i.useState(!1),
-        x = null != (0, o.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        x = null != (0, o.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
         v = async () => {
             h(!0);
             try {
@@ -198,14 +198,14 @@ let A = (e) => {
                 h(!1);
             }
         },
-        S = _.ZP.getGuildSplashURL({
+        S = y.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, g.x_)(),
         }),
         Z =
             null !=
-            (t = _.ZP.getGuildIconURL({
+            (t = y.ZP.getGuildIconURL({
                 id: l.guildId,
                 icon: l.icon,
                 size: 40,
@@ -220,7 +220,7 @@ let A = (e) => {
             onContextMenu: (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, I(P({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, P(I({}, t), { entry: l }));
                 });
             },
             children: [

@@ -15,13 +15,13 @@ var r = n(647438),
 let g = [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER];
 function b(e) {
     var t, n, b;
-    let { context: y } = e,
-        _ = y.channel,
+    let { context: _ } = e,
+        y = _.channel,
         C = r.useMemo(() => {
-            if (!0 !== _.isDM()) return null;
-            let e = f.default.getUser(_.getRecipientId());
+            if (!0 !== y.isDM()) return null;
+            let e = f.default.getUser(y.getRecipientId());
             return void 0 === e || !0 !== e.bot ? null : e;
-        }, [_]),
+        }, [y]),
         x = (0, i.e7)([d.Z], () => {
             var e;
             return d.Z.isFetchingProfile(null != (e = null == C ? void 0 : C.id) ? e : m.lds);
@@ -52,7 +52,7 @@ function b(e) {
         }, [null == C ? void 0 : C.id]);
     let S = (0, s.v1)(
             {
-                channel: _,
+                channel: y,
                 type: "channel",
             },
             { commandTypes: g },
@@ -62,8 +62,8 @@ function b(e) {
                 allowApplicationState: !0,
             },
         ),
-        P = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
-        I = S.commands.filter((e) => "0" !== e.id && !e.id.startsWith("-")),
+        I = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
+        P = S.commands.filter((e) => "0" !== e.id && !e.id.startsWith("-")),
         Z = S.loading,
         T =
             null ==
@@ -76,16 +76,16 @@ function b(e) {
         N = r.useMemo(() => (null != T ? h.ZP.createFromServer(T) : void 0), [T]),
         A = (0, u.q)(null == N ? E : void 0),
         w = null != (n = null != N ? N : A) ? n : void 0,
-        R = null == w || (Z && 0 === I.length);
+        R = null == w || (Z && 0 === P.length);
     return {
         application: w,
         isInitialLoading: R,
         isAppDM: null != (b = null == C ? void 0 : C.bot) && b,
-        primaryEntryPointCommand: P,
+        primaryEntryPointCommand: I,
         isProfileFetching: x,
         wasProfileFetching: null != v ? v : null,
         applicationId: E,
-        channelId: _.id,
-        commands: I,
+        channelId: y.id,
+        commands: P,
     };
 }

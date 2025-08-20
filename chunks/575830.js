@@ -1,22 +1,22 @@
-e.d(n, { Z: () => s }), e(388685);
-var i = e(647438),
-    l = e(442837),
-    d = e(485386),
-    r = e(637565),
-    a = e(14263);
-function s(t, n) {
-    let e = (0, l.e7)([d.Z], () => (null != t ? d.Z.getRolesSnapshot(t.id) : void 0)),
-        s = (0, a.Z)(null == t ? void 0 : t.id);
-    return i.useMemo(() => {
-        let i = null != t && null != e ? (0, r.T)(t, e, n) : [],
-            l = 0;
-        for (let t of i) {
-            let n = t.id;
-            if (null != n) {
-                let t = null == s ? void 0 : s[n];
-                null != t && (l += t);
+n.d(t, { Z: () => o }), n(388685);
+var l = n(647438),
+    i = n(442837),
+    r = n(485386),
+    u = n(637565),
+    a = n(14263);
+function o(e, t) {
+    let n = (0, i.e7)([r.Z], () => (null != e ? r.Z.getRolesSnapshot(e.id) : void 0)),
+        o = (0, a.Z)(null == e ? void 0 : e.id);
+    return l.useMemo(() => {
+        let l = null != e && null != n ? (0, u.T)(e, n, t) : [],
+            i = 0;
+        for (let e of l) {
+            let t = e.id;
+            if (null != t) {
+                let e = null == o ? void 0 : o[t];
+                null != e && (i += e);
             }
         }
-        return l;
-    }, [s, t, n, e]);
+        return i;
+    }, [o, e, t, n]);
 }

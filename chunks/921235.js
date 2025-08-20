@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(594174),
     g = n(626135),
     b = n(51144),
-    y = n(901461),
-    _ = n(981631),
+    _ = n(901461),
+    y = n(981631),
     C = n(388032),
     x = n(315146);
 let v = "749054660769218631";
@@ -31,16 +31,16 @@ function O(e) {
             () =>
                 !!a()(f.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== h.default.getId() && e.state === _.yb.SENT && !(0, y.Z)(e)),
+                    .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, _.Z)(e)),
         ),
         E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         S = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
-        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
-        I = i.useCallback(async () => {
+        I = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
+        P = i.useCallback(async () => {
             if (null == l || "" === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, v),
-                        g.default.track(_.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(y.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: "Wave",
@@ -67,10 +67,10 @@ function O(e) {
                   (0, r.jsxs)(s.P3F, {
                       className: null != l && "" !== l ? x.compactButtonDisabled : x.compactButton,
                       "aria-label": C.intl.string(C.t.pJObYG),
-                      onClick: I,
+                      onClick: P,
                       children: [
                           (0, r.jsx)(p.Z, {
-                              sticker: P,
+                              sticker: I,
                               size: 24,
                           }),
                           (0, r.jsx)(s.Text, {
@@ -87,7 +87,7 @@ function O(e) {
               className: x.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
-                      sticker: P,
+                      sticker: I,
                       size: 160,
                       className: x.stickerExpanded,
                   }),
@@ -95,7 +95,7 @@ function O(e) {
                       fullWidth: !0,
                       variant: "primary",
                       size: "md",
-                      onClick: I,
+                      onClick: P,
                       disabled: !!l,
                       text: Z,
                   }),

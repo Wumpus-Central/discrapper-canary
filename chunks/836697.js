@@ -139,10 +139,10 @@ function _(e) {
 function y(e) {
     let { onActivate: t } = e,
         [n, y] = i.useState(!1),
-        j = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        v = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         C = (0, h.Z)(),
-        x = (0, a.Z)(j),
+        x = (0, a.Z)(v),
         E = i.useMemo(() => {
             let e = (0, f.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -154,12 +154,12 @@ function y(e) {
             return e;
         }, [C, n]);
     i.useEffect(() => {
-        n && !v && s.Z.fetchRequestToJoinGuilds();
-    }, [n, v]);
-    let S = null != j && C.includes(j);
+        n && !j && s.Z.fetchRequestToJoinGuilds();
+    }, [n, j]);
+    let S = null != v && C.includes(v);
     return (i.useEffect(() => {
-        !n && S && x !== j && y(!0);
-    }, [n, S, x, j]),
+        !n && S && x !== v && y(!0);
+    }, [n, S, x, v]),
     0 === C.length)
         ? null
         : (0, r.jsx)(_, {

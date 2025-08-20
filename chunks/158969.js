@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(530472),
     g = n(453687),
     b = n(930282),
-    y = n(318713),
-    _ = n(981631),
+    _ = n(318713),
+    y = n(981631),
     C = n(388032),
     x = n(177119),
     v = n(724913),
@@ -56,7 +56,7 @@ let j = i.memo(function (e) {
                             tag: "span",
                             className: x.learnMore,
                             children: C.intl.format(C.t.Nd3Gh4, {
-                                helpUrl: f.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                helpUrl: f.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
                     }),
@@ -66,33 +66,33 @@ let j = i.memo(function (e) {
     }),
     E = i.memo(function (e) {
         var t, n;
-        let { className: l, compact: o, message: u, children: f, content: m, onUpdate: _ } = e,
+        let { className: l, compact: o, message: u, children: f, content: m, onUpdate: y } = e,
             E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
             S = i.useRef(!1),
-            P = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
-            I = i.useCallback(() => {
-                (null == P ? void 0 : P.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
-            }, [u, P]);
+            I = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
+            P = i.useCallback(() => {
+                (null == I ? void 0 : I.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
+            }, [u, I]);
         return (
             i.useLayoutEffect(() => {
-                S.current ? null != _ && _() : (S.current = !0);
-            }, [_, u.content, m, E, f]),
+                S.current ? null != y && y() : (S.current = !0);
+            }, [y, u.content, m, E, f]),
             (0, r.jsxs)("div", {
                 id: (0, g.ut)(u),
                 className: a()(l, O.markup, {
                     [v.messageContent]: !0,
                     [v.markupRtl]: "rtl" === s()(u.content),
-                    [x.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
-                    [x.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit),
+                    [x.blockedEdit]: null == I ? void 0 : I.isBlockedEdit,
+                    [x.blockedSend]: !(null == I ? void 0 : I.isBlockedEdit),
                 }),
                 children: [
                     null != f ? f : (0, b.L5)(u, m),
-                    (null == P ? void 0 : P.isBlockedEdit) &&
+                    (null == I ? void 0 : I.isBlockedEdit) &&
                         null != u.timestamp &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 " ",
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(_.Z, {
                                     timestamp: u.timestamp,
                                     isEdited: !0,
                                     isInline: !1,
@@ -104,10 +104,10 @@ let j = i.memo(function (e) {
                             ],
                         }),
                     (0, r.jsx)(j, {
-                        notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : C.intl.string(C.t.zQ69pq),
+                        notice: null != (n = null == I ? void 0 : I.errorMessage) ? n : C.intl.string(C.t.zQ69pq),
                         message: u,
                         compact: o,
-                        onDismiss: I,
+                        onDismiss: P,
                     }),
                 ],
             })

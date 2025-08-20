@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(221292),
     g = n(687158),
     b = n(892001),
-    y = n(899007),
-    _ = n(648052),
+    _ = n(899007),
+    y = n(648052),
     C = n(867176),
     x = n(280885),
     v = n(900927),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(502762),
     E = n(530),
     S = n(679332),
-    P = n(544989),
-    I = n(671955),
+    I = n(544989),
+    P = n(671955),
     Z = n(388032),
     T = n(231688),
     N = n(892273);
@@ -58,32 +58,32 @@ function w(e) {
         w = __OVERLAY__ || !(0, d.Z)(t.id),
         R = (0, g.ZP)(t.id),
         M = (0, s.ZP)(),
-        k = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        L = (0, f.ZB)({
+        D = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        k = (0, f.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
             channelId: n.id,
         }),
         U = i.useRef(null),
         B = (0, o.Z)(U),
-        F = (e) => {
+        G = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0,
                     },
-                    L,
+                    k,
                     e,
                 ),
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
-            openedAt: k.current,
+            value: k,
+            openedAt: D.current,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
@@ -91,27 +91,27 @@ function w(e) {
                 ref: U,
                 user: t,
                 displayProfile: R,
-                themeType: I.l.SIDEBAR,
+                themeType: P.l.SIDEBAR,
                 themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(P.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
+                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
                                     (0, r.jsx)(C.Z, {
                                         user: t,
                                         displayProfile: R,
-                                        themeType: I.l.SIDEBAR,
+                                        themeType: P.l.SIDEBAR,
                                         animateOnHover: !B,
                                     }),
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         user: t,
                                         displayProfile: R,
                                         channelId: n.id,
-                                        themeType: I.l.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : F,
+                                        themeType: P.l.SIDEBAR,
+                                        onOpenProfile: w ? void 0 : G,
                                     }),
                                 ],
                             }),
@@ -122,10 +122,10 @@ function w(e) {
                                         user: t,
                                         nickname: h.ZP.getName(null, n.id, t),
                                         pronouns: null == R ? void 0 : R.pronouns,
-                                        onOpenProfile: w ? void 0 : F,
-                                        tags: (0, r.jsx)(_.Z, {
+                                        onOpenProfile: w ? void 0 : G,
+                                        tags: (0, r.jsx)(y.Z, {
                                             displayProfile: R,
-                                            themeType: I.l.SIDEBAR,
+                                            themeType: P.l.SIDEBAR,
                                         }),
                                     }),
                                     (0, r.jsxs)(j.Z.Overlay, {
@@ -157,14 +157,14 @@ function w(e) {
                             className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
-                                    F(),
+                                    G(),
                                         (0, m.pQ)(
                                             A(
                                                 {
                                                     action: "PRESS_VIEW_PROFILE",
-                                                    analyticsLocations: D,
+                                                    analyticsLocations: L,
                                                 },
-                                                L,
+                                                k,
                                             ),
                                         );
                                 },

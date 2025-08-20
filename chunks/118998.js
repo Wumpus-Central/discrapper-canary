@@ -1,5 +1,5 @@
-n.d(t, { H: () => i });
-let i = (e) => {
-    let { guildId: t, guildEventId: n } = e;
-    return "https://discord.com/events/".concat(t, "/").concat(n);
+n.d(e, { H: () => l });
+let l = (t) => {
+    let { guildId: e, guildEventId: n } = t;
+    return "https://discord.com/events/".concat(e, "/").concat(n);
 };

@@ -17,10 +17,10 @@ function g(e) {
     let { channelId: t } = e,
         g = (0, i.e7)([s.Z], () => s.Z.getChannel(t), [t]),
         b = (0, d.sz)(t),
-        y = null != (0, d.qY)(t),
-        { canManageGuildEvent: _ } = (0, o.XJ)(g),
+        _ = null != (0, d.qY)(t),
+        { canManageGuildEvent: y } = (0, o.XJ)(g),
         C = (0, i.cj)([u.ZP], () => b.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, p.DK)(t))), e), {}));
-    return b.length < 1 || y
+    return b.length < 1 || _
         ? null
         : (0, r.jsx)(r.Fragment, {
               children: b.map((e) =>
@@ -34,18 +34,16 @@ function g(e) {
                               width: 20,
                           }),
                           color: l.Z.unsafe_rawColors.GREEN_360.css,
-                          title: f.intl.formatToPlainString(_(e) ? f.t["1vGXqK"] : f.t.xMJylZ, { eventName: e.name }),
+                          title: f.intl.formatToPlainString(y(e) ? f.t["1vGXqK"] : f.t.xMJylZ, { eventName: e.name }),
                           description: f.intl.formatToPlainString(f.t.PTebCQ, {
                               startTime: (0, p.ub)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              _(e)
+                              y(e)
                                   ? (0, a.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([
-                                            n.e("22347"),
-                                            n.e("84722"),
-                                            n.e("28883"),
-                                        ]).then(n.bind(n, 296864));
+                                        let { default: t } = await Promise.all([n.e("84722"), n.e("51885")]).then(
+                                            n.bind(n, 296864),
+                                        );
                                         return (n) => {
                                             var i, l;
                                             return (0, r.jsx)(
@@ -97,10 +95,7 @@ function g(e) {
                                             );
                                         };
                                     })
-                                  : (0, c.bO)({
-                                        eventId: e.id,
-                                        parentGuildId: e.guild_id,
-                                    });
+                                  : (0, c.bO)({ eventId: e.id });
                           },
                           userCount: C[e.id],
                           className: m.eventPrompt,

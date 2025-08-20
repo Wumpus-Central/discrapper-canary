@@ -17,8 +17,8 @@ var r,
     O = n(306680),
     _ = n(944486),
     y = n(594174),
-    j = n(451478),
-    v = n(276952),
+    v = n(451478),
+    j = n(276952),
     C = n(682662),
     x = n(662146),
     E = n(674552),
@@ -93,7 +93,7 @@ class R extends (r = l.PureComponent) {
         e(),
             t
                 .update({
-                    immediate: !j.Z.isFocused(),
+                    immediate: !v.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
@@ -119,7 +119,7 @@ class R extends (r = l.PureComponent) {
         this.setState({ animating: !0 }, () =>
             t
                 .update({
-                    immediate: !j.Z.isFocused(),
+                    immediate: !v.Z.isFocused(),
                     height: 0,
                     opacity: 0,
                     scale: 0,
@@ -199,7 +199,7 @@ class R extends (r = l.PureComponent) {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(C.H, {
                 children: [
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(j.Z, {
                         hovered: !m && h,
                         selected: !m && n,
                         unread: !m && d,
@@ -290,11 +290,11 @@ let D = l.forwardRef(function (e, t) {
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, s.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: j } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
-        v = o === n,
+        { isFacepileEnabled: v } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
+        j = o === n,
         C = !1,
         x = !1;
-    v && ((C = u === S.WtW.VOICE), (x = u === S.WtW.VIDEO));
+    j && ((C = u === S.WtW.VOICE), (x = u === S.WtW.VIDEO));
     let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
@@ -307,8 +307,8 @@ let D = l.forwardRef(function (e, t) {
             audio: C,
             video: x,
             stream: p,
-            isCurrentUserInThisDMCall: v,
-            isGDMFacepileEnabled: j,
+            isCurrentUserInThisDMCall: j,
+            isGDMFacepileEnabled: v,
             size: E,
             treeItemProps: l,
         }),

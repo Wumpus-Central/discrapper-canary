@@ -23,8 +23,8 @@ var r = n(951288),
     O = n(905128),
     _ = n(326660),
     y = n(901005),
-    j = n(158638),
-    v = n(10765),
+    v = n(158638),
+    j = n(10765),
     C = n(317169),
     x = n(19394),
     E = n(385902),
@@ -78,7 +78,7 @@ function N(e) {
                 o = n === a.z.GUILD_POWERUP_PERKS_COACHMARK,
                 { available: s } = (0, C.Z)(e),
                 c = (function (e, t) {
-                    let n = (0, j.qI)(e, "GuildPowerupsChannelRow"),
+                    let n = (0, v.qI)(e, "GuildPowerupsChannelRow"),
                         r = (0, y.i)(e, "GuildPowerupsChannelRow");
                     return i.useMemo(() => {
                         if (
@@ -142,7 +142,7 @@ function N(e) {
                                               let i = t.allPowerups[r];
                                               return null == i ||
                                                   n < i.cost ||
-                                                  (0, v.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  (0, j.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
                                                   ? null
                                                   : i;
                                           }),

@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(243778),
     g = n(618857),
     b = n(488131),
-    y = n(375954),
-    _ = n(626135),
+    _ = n(375954),
+    y = n(626135),
     C = n(585483),
     x = n(403182),
     v = n(127654),
@@ -23,12 +23,12 @@ var r = n(951288),
     j = n(951211),
     E = n(981631),
     S = n(921944),
-    P = n(489887),
-    I = n(388032),
+    I = n(489887),
+    P = n(388032),
     Z = n(749723);
 let T = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function N() {
-    let e = (0, a.e7)([y.Z], () => y.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, a.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, f.cv)(t);
@@ -46,7 +46,7 @@ function N() {
                 let { visibleContent: t } = e;
                 return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(s.IGR, {
-                          text: I.intl.string(I.t.y2b7CA),
+                          text: P.intl.string(P.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND,
                       })
                     : null;
@@ -60,24 +60,24 @@ function A(e) {
             options: a,
             onFileUpload: f,
             onClose: m,
-            onSelect: y,
+            onSelect: _,
             draftType: A,
             editorTextContent: w,
             setValue: R,
             openClips: M,
         } = e,
-        { analyticsLocations: k, newestAnalyticsLocation: D } = (0, d.ZP)(),
-        L = (0, g.Dt)({ channel: t });
+        { analyticsLocations: D, newestAnalyticsLocation: L } = (0, d.ZP)(),
+        k = (0, g.Dt)({ channel: t });
     function U() {
         (0, b.R6)(t, void 0, "Plus Button");
     }
     function B() {
-        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, O.JM)("/"));
+        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, O.JM)("/"));
     }
-    function F() {
+    function G() {
         M();
     }
-    function H() {
+    function F() {
         (0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -128,11 +128,11 @@ function A(e) {
                         );
                     };
                 },
-                { modalKey: P.$z },
+                { modalKey: I.$z },
             );
     }
-    function G() {
-        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function H() {
+        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
@@ -146,7 +146,7 @@ function A(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: D,
+                analyticsLocation: L,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -166,17 +166,17 @@ function A(e) {
     }
     return (
         i.useEffect(() => {
-            _.default.track(E.rMx.OPEN_POPOUT, {
+            y.default.track(E.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(s.v2r, {
-            onSelect: y,
+            onSelect: _,
             navId: "channel-attach",
             onClose: m,
-            "aria-label": I.intl.string(I.t.Xm41aW),
+            "aria-label": P.intl.string(P.t.Xm41aW),
             className: Z.menu,
             children: a.map(function (e) {
                 var n;
@@ -228,7 +228,7 @@ function A(e) {
                             {
                                 id: "clips",
                                 label: i,
-                                action: F,
+                                action: G,
                             },
                             "clips",
                         );
@@ -238,7 +238,7 @@ function A(e) {
                             {
                                 id: "poll",
                                 label: i,
-                                action: H,
+                                action: F,
                             },
                             "poll",
                         );
@@ -256,7 +256,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: D[D.length - 1],
                                         })
                                     );
                                 },
@@ -277,7 +277,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: D[D.length - 1],
                                         })
                                     );
                                 },
@@ -298,7 +298,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: D[D.length - 1],
                                         })
                                     );
                                 },
@@ -331,7 +331,7 @@ function A(e) {
                             {
                                 id: "activity",
                                 label: i,
-                                action: G,
+                                action: H,
                                 hint: (0, r.jsx)(N, {}),
                             },
                             "activity",
@@ -343,7 +343,7 @@ function A(e) {
                                 id: "scheduled_message",
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: L,
+                                children: k,
                             },
                             "scheduled_message",
                         );

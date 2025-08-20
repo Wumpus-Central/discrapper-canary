@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(493773),
     _ = n(209613),
     y = n(100527),
-    j = n(906732),
-    v = n(358221),
+    v = n(906732),
+    j = n(358221),
     C = n(706590),
     x = n(940777),
     E = n(113544),
@@ -295,7 +295,7 @@ function eu(e) {
         }),
         d = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         f = i.useMemo(() => (n ? [] : d), [d, n]),
-        b = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext()),
+        b = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
         [_, C] = i.useState(!1),
         x = i.useCallback(() => C(!0), []),
         E = i.useCallback(() => C(!1), []),
@@ -362,7 +362,7 @@ function eu(e) {
         ),
         [er],
     );
-    let { analyticsLocations: eu } = (0, j.ZP)(y.Z.GUILDS_LIST),
+    let { analyticsLocations: eu } = (0, v.ZP)(y.Z.GUILDS_LIST),
         { pathname: ed } = (0, c.TH)(),
         ep = eo(ed);
     (0, O.Ng)(() => {
@@ -459,7 +459,7 @@ function eu(e) {
         }),
         { entrypoint: eO } = (0, I.pN)({ location: "GuildsBar" }),
         e_ = eO === I.u3.SERVER_RAIL_BOTTOM;
-    return (0, r.jsx)(j.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: eu,
         children: (0, r.jsx)(m.f6W, {
             theme: a,

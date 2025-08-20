@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(216789),
     _ = n(695346),
     y = n(592125),
-    j = n(731290),
-    v = n(944486),
+    v = n(731290),
+    j = n(944486),
     C = n(455199),
     x = n(655354),
     E = n(324081),
@@ -48,7 +48,7 @@ function Z(e, t, n) {
 }
 function T(e) {
     let { onJump: t } = e,
-        n = (0, a.e7)([y.Z, v.Z], () => y.Z.getChannel(v.Z.getChannelId())),
+        n = (0, a.e7)([y.Z, j.Z], () => y.Z.getChannel(j.Z.getChannelId())),
         {
             messages: l,
             hasMore: s,
@@ -65,13 +65,13 @@ function T(e) {
             everyoneFilter: C.ZP.everyoneFilter,
         })),
         _ = (0, O.Us)({ location: "RecentMentions" }),
-        j = (0, p.Z)(h),
+        v = (0, p.Z)(h),
         x = (0, p.Z)(g),
         E = (0, p.Z)(b);
     i.useEffect(() => {
         if (!C.ZP.hasLoadedEver) return void Z(n, !0);
-        ((null != j && h !== j) || (null != x && g !== x) || (null != E && b !== E)) && Z(n, !0);
-    }, [j, h, x, g, E, b, n, !0]),
+        ((null != v && h !== v) || (null != x && g !== x) || (null != E && b !== E)) && Z(n, !0);
+    }, [v, h, x, g, E, b, n, !0]),
         (0, d.ZP)(() => {
             (null == l ? void 0 : l.some(m.k5)) && (c.Z.clearMentions(), Z(n, !0));
         }),
@@ -125,7 +125,7 @@ function R(e) {
     if (null == t) return null;
     let o = y.Z.getChannel(t.channel_id);
     if (null == o || ((0, g.aC)(o) && l && (0, f.sf)())) return null;
-    let a = j.Z.didAgree(o.getGuildId()),
+    let a = v.Z.didAgree(o.getGuildId()),
         u = !!(0, g.aC)(o) && !a;
     return (0, r.jsxs)("div", {
         className: N.container,

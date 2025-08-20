@@ -68,12 +68,12 @@ let O = i.memo(function (e) {
             selectedVoiceChannelId: O,
             optInEnabled: _,
         } = e,
-        { hasDivider: y, canHaveVoiceSummary: j } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
-        v = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
+        { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
+        j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
         C = (0, a.DM)(m),
         x = (0, l.Wu)([s.ZP], () => {
-            if (null == v || !v.isCollapsed || !j) return [];
-            let e = v.getChannelRecords(),
+            if (null == j || !j.isCollapsed || !v) return [];
+            let e = j.getChannelRecords(),
                 t = [];
             for (let n of e) {
                 if (!n.isGuildVocal()) continue;
@@ -81,7 +81,7 @@ let O = i.memo(function (e) {
                 (!C || e) && t.push(n);
             }
             return t;
-        }, [v, j, m, C]),
+        }, [j, v, m, C]),
         E = i.useMemo(
             () =>
                 (0, c.c4)({
@@ -98,7 +98,7 @@ let O = i.memo(function (e) {
             guildChannelsVersion: p,
         });
     let S = y ? (0, r.jsx)("div", { className: h.sectionDivider }) : null;
-    return j && 0 !== E.length
+    return v && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {

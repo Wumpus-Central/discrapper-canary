@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(475179),
     g = n(239091),
     b = n(287734),
-    y = n(872810),
-    _ = n(153867),
+    _ = n(872810),
+    y = n(153867),
     C = n(944543),
     x = n(410575),
     v = n(393238),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(40851),
     E = n(636449),
     S = n(115130),
-    P = n(317381),
-    I = n(596040),
+    I = n(317381),
+    P = n(596040),
     Z = n(617552),
     T = n(100527),
     N = n(367907),
@@ -32,19 +32,19 @@ var r = n(951288),
     w = n(213609),
     R = n(600164),
     M = n(211644),
-    k = n(258609),
-    D = n(446226),
-    L = n(569545),
+    D = n(258609),
+    L = n(446226),
+    k = n(569545),
     U = n(102172),
     B = n(788983),
-    F = n(928518),
-    H = n(703656),
-    G = n(880395),
+    G = n(928518),
+    F = n(703656),
+    H = n(880395),
     V = n(740492),
     z = n(793319),
     W = n(3861),
-    q = n(493754),
-    Y = n(937995),
+    Y = n(493754),
+    q = n(937995),
     K = n(618158),
     X = n(880831),
     Q = n(73563),
@@ -68,8 +68,8 @@ var r = n(951288),
     em = n(626135),
     eg = n(934415),
     eb = n(585483),
-    ey = n(358085),
-    e_ = n(998502),
+    e_ = n(358085),
+    ey = n(998502),
     eC = n(228488),
     ex = n(358221),
     ev = n(414910),
@@ -77,8 +77,8 @@ var r = n(951288),
     ej = n(909820),
     eE = n(493010),
     eS = n(742603),
-    eP = n(71127),
-    eI = n(221888),
+    eI = n(71127),
+    eP = n(221888),
     eZ = n(185935),
     eT = n(900211),
     eN = n(18759),
@@ -86,9 +86,9 @@ var r = n(951288),
     ew = n(795318),
     eR = n(878752),
     eM = n(354459),
-    ek = n(981631),
-    eD = n(388032),
-    eL = n(598411);
+    eD = n(981631),
+    eL = n(388032),
+    ek = n(598411);
 function eU(e, t, n) {
     return (
         t in e
@@ -118,7 +118,7 @@ function eB(e) {
     }
     return e;
 }
-function eF(e, t) {
+function eG(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -136,16 +136,16 @@ function eF(e, t) {
         e
     );
 }
-let eH = {
-        [ek.AEg.NORMAL]: eL.normal,
-        [ek.AEg.MINIMUM]: eL.minimum,
-        [ek.AEg.NO_CHAT]: eL.noChat,
-        [ek.AEg.FULL_SCREEN]: eL.fullScreen,
+let eF = {
+        [eD.AEg.NORMAL]: ek.normal,
+        [eD.AEg.MINIMUM]: ek.minimum,
+        [eD.AEg.NO_CHAT]: ek.noChat,
+        [eD.AEg.FULL_SCREEN]: ek.fullScreen,
     },
-    eG = {
-        [ek.IlC.POPOUT]: eL.popout,
-        [ek.IlC.APP]: null,
-        [ek.IlC.OVERLAY]: null,
+    eH = {
+        [eD.IlC.POPOUT]: ek.popout,
+        [eD.IlC.APP]: null,
+        [eD.IlC.OVERLAY]: null,
     };
 class eV extends i.PureComponent {
     getRootNode() {
@@ -158,22 +158,22 @@ class eV extends i.PureComponent {
         let { channel: e, layout: t } = this.props;
         this.currentDocument.addEventListener(eC.NO, this.handleFullScreenChange),
             em.default.track(
-                ek.rMx.VIDEO_LAYOUT_TOGGLED,
+                eD.rMx.VIDEO_LAYOUT_TOGGLED,
                 eB({ video_layout: this.inPopout ? "popout" : t }, (0, N.AB)(e.id)),
             );
     }
     componentWillUnmount() {
         this._videoBackgroundTooltipTimeout.stop(),
             this.currentDocument.removeEventListener(eC.NO, this.handleFullScreenChange),
-            (this.inPopout && (0, ey.isMac)()) || this.maybeLeaveFullScreen();
+            (this.inPopout && (0, e_.isMac)()) || this.maybeLeaveFullScreen();
     }
     componentDidUpdate(e) {
         let { participantsOpen: t, inCall: n, mode: r, layout: i } = this.props,
             l = this.getRootNode();
         if (
             (null != l &&
-                e.mode === ek.WtW.VIDEO &&
-                r === ek.WtW.VOICE &&
+                e.mode === eD.WtW.VIDEO &&
+                r === eD.WtW.VOICE &&
                 (0, eC.rB)(l, this.currentDocument) &&
                 (0, eC.Pr)(l, this.currentDocument),
             e.participantsOpen !== t || i !== e.layout)
@@ -184,10 +184,10 @@ class eV extends i.PureComponent {
         e.inCall && !n && this.inPopout && f.Z.wait(() => this.handleClosePopout());
     }
     get nativePopoutSupported() {
-        return ey.isPlatformEmbedded && e_.ZP.supportsFeature(ek.eRX.POPOUT_WINDOWS);
+        return e_.isPlatformEmbedded && ey.ZP.supportsFeature(eD.eRX.POPOUT_WINDOWS);
     }
     get popoutSupported() {
-        return !ey.isPlatformEmbedded || this.nativePopoutSupported;
+        return !e_.isPlatformEmbedded || this.nativePopoutSupported;
     }
     get popoutOpen() {
         let { popoutWindow: e } = this.props;
@@ -199,19 +199,19 @@ class eV extends i.PureComponent {
     }
     get screenMessage() {
         return this.popoutOpen && !this.inPopout && this.props.inCall
-            ? { mainText: eD.intl.string(eD.t.J5bXZW) }
+            ? { mainText: eL.intl.string(eL.t.J5bXZW) }
             : null;
     }
     get inPopout() {
-        return this.props.appContext === ek.IlC.POPOUT;
+        return this.props.appContext === eD.IlC.POPOUT;
     }
     get viewProperties() {
         let { layout: e, mode: t, channel: n, inCall: r } = this.props,
-            i = t === ek.WtW.VIDEO && r && !(this.popoutOpen && !this.inPopout),
-            l = t === ek.WtW.VIDEO && r && this.popoutSupported,
-            a = t !== ek.WtW.VOICE && n.isPrivate() && !this.inPopout && r,
-            o = n.type === ek.d4z.GUILD_VOICE,
-            s = e === ek.AEg.MINIMUM || e === ek.AEg.NORMAL,
+            i = t === eD.WtW.VIDEO && r && !(this.popoutOpen && !this.inPopout),
+            l = t === eD.WtW.VIDEO && r && this.popoutSupported,
+            a = t !== eD.WtW.VOICE && n.isPrivate() && !this.inPopout && r,
+            o = n.type === eD.d4z.GUILD_VOICE,
+            s = e === eD.AEg.MINIMUM || e === eD.AEg.NORMAL,
             c = this.inPopout && this.nativePopoutSupported,
             u = {
                 renderHeader: !0,
@@ -225,20 +225,20 @@ class eV extends i.PureComponent {
                 canStayOnTop: c,
             };
         if (!r)
-            return eF(eB({}, u), {
+            return eG(eB({}, u), {
                 canFullscreen: i,
                 useTheme: !0,
             });
         switch (e) {
-            case ek.AEg.FULL_SCREEN:
-                return eF(eB({}, u), { canPopout: !this.inPopout && this.popoutOpen && u.canPopout });
-            case ek.AEg.MINIMUM:
-                return eF(eB({}, u), {
+            case eD.AEg.FULL_SCREEN:
+                return eG(eB({}, u), { canPopout: !this.inPopout && this.popoutOpen && u.canPopout });
+            case eD.AEg.MINIMUM:
+                return eG(eB({}, u), {
                     canPopout: !1,
                     useTheme: !0,
                 });
-            case ek.AEg.NO_CHAT:
-            case ek.AEg.NORMAL:
+            case eD.AEg.NO_CHAT:
+            case eD.AEg.NORMAL:
                 return eB({}, u);
         }
     }
@@ -260,17 +260,17 @@ class eV extends i.PureComponent {
                 forceShowControls: m,
                 awaitingRemoteSessionInfo: g,
                 currentChannelActivities: b,
-                callContainerDimensions: y,
+                callContainerDimensions: _,
             } = this.props,
-            _ = f === ek.AEg.MINIMUM,
-            C = _ || f === ek.AEg.NORMAL,
-            x = i && a === ek.WtW.VIDEO,
+            y = f === eD.AEg.MINIMUM,
+            C = y || f === eD.AEg.NORMAL,
+            x = i && a === eD.WtW.VIDEO,
             v = (null != (t = null == b ? void 0 : b.length) ? t : 0) > 0 && p.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, r.jsx)(
                 Q.Z,
-                eF(
+                eG(
                     eB(
                         {
                             renderHeader: this.renderHeader,
@@ -284,8 +284,8 @@ class eV extends i.PureComponent {
                     ),
                     {
                         screenMessage: this.screenMessage,
-                        disableGradients: !i || _,
-                        idle: !m && i && !_ && e.idle,
+                        disableGradients: !i || y,
+                        idle: !m && i && !y && e.idle,
                         children:
                             i && this.popoutOpen && !this.inPopout
                                 ? null
@@ -307,7 +307,7 @@ class eV extends i.PureComponent {
                                       showParticipants: s && (!C || v),
                                       popoutWindow: this.inPopout ? o : null,
                                       awaitingRemoteSessionInfo: g,
-                                      callContainerDimensions: y,
+                                      callContainerDimensions: _,
                                   }),
                     },
                 ),
@@ -328,14 +328,14 @@ class eV extends i.PureComponent {
                 participantsListOpen: d,
             } = this.props,
             { resizedHeight: p } = this.state,
-            f = i === ek.WtW.VIDEO,
-            m = e !== ek.AEg.NO_CHAT && e !== ek.AEg.FULL_SCREEN && null != c,
-            g = ek.BRd.MIDNIGHT;
+            f = i === eD.WtW.VIDEO,
+            m = e !== eD.AEg.NO_CHAT && e !== eD.AEg.FULL_SCREEN && null != c,
+            g = eD.BRd.MIDNIGHT;
         return (0, r.jsxs)("div", {
-            className: a()(eL.wrapper, eH[e], eG[o], {
-                [eL.poppedOut]: this.popoutOpen && !this.inPopout && e !== ek.AEg.NO_CHAT && t.isPrivate(),
-                [eL.video]: f,
-                [eL.sidebarOpen]: l || d,
+            className: a()(ek.wrapper, eF[e], eH[o], {
+                [ek.poppedOut]: this.popoutOpen && !this.inPopout && e !== eD.AEg.NO_CHAT && t.isPrivate(),
+                [ek.video]: f,
+                [ek.sidebarOpen]: l || d,
             }),
             ref: (e) => {
                 (this._wrapperRef.current = e), (this.props.wrapperRef.current = e);
@@ -353,11 +353,11 @@ class eV extends i.PureComponent {
                     theme: g,
                     children: (t) =>
                         (0, r.jsx)("div", {
-                            className: a()(eL.callContainer, l || e !== ek.AEg.FULL_SCREEN ? void 0 : eL.fullScreen, t),
+                            className: a()(ek.callContainer, l || e !== eD.AEg.FULL_SCREEN ? void 0 : ek.fullScreen, t),
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, r.jsx)(Y.ZP, {
+                            children: (0, r.jsx)(q.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e),
                             }),
@@ -372,7 +372,7 @@ class eV extends i.PureComponent {
                         onResizeEnd: this.props.updateStoredCallHeaderHeight,
                     }),
                 (0, r.jsx)("div", {
-                    className: eL.channelChatWrapper,
+                    className: ek.channelChatWrapper,
                     ref: (e) => {
                         (this._channelChatRef.current = e), (this.props.channelChatRef.current = e);
                     },
@@ -387,7 +387,7 @@ class eV extends i.PureComponent {
                                         maxWidth: s,
                                     }),
                                 d &&
-                                    (0, r.jsx)(eP.Z, {
+                                    (0, r.jsx)(eI.Z, {
                                         channel: t,
                                         maxWidth: s,
                                     }),
@@ -399,7 +399,7 @@ class eV extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eU(this, "_prevLayout", ek.AEg.MINIMUM),
+            eU(this, "_prevLayout", eD.AEg.MINIMUM),
             eU(this, "_wrapperRef", i.createRef()),
             eU(this, "_callContainerRef", i.createRef()),
             eU(this, "_channelChatRef", i.createRef()),
@@ -411,35 +411,35 @@ class eV extends i.PureComponent {
                 let e = this.getRootNode();
                 null != e &&
                     ((0, eC.rB)(e, this.currentDocument) ||
-                        this.props.layout !== ek.AEg.FULL_SCREEN ||
+                        this.props.layout !== eD.AEg.FULL_SCREEN ||
                         this.handleFullScreen());
             }),
             eU(this, "handleFullScreen", () => {
                 let e = this.getRootNode();
                 null != e &&
-                    (this.props.layout !== ek.AEg.FULL_SCREEN
+                    (this.props.layout !== eD.AEg.FULL_SCREEN
                         ? ((this._prevLayout = this.props.layout),
-                          this.handleChangeLayout(ek.AEg.FULL_SCREEN),
+                          this.handleChangeLayout(eD.AEg.FULL_SCREEN),
                           (0, eC.Dj)(e))
                         : this.maybeLeaveFullScreen());
             }),
             eU(this, "maybeLeaveFullScreen", () => {
                 let e = this.getRootNode();
                 null != e &&
-                    this.props.layout === ek.AEg.FULL_SCREEN &&
+                    this.props.layout === eD.AEg.FULL_SCREEN &&
                     (this.handleChangeLayout(this._prevLayout), (0, eC.Pr)(e, this.currentDocument));
             }),
             eU(this, "handleToggleLayout", () => {
-                this.handleChangeLayout(this.props.layout === ek.AEg.NORMAL ? ek.AEg.NO_CHAT : ek.AEg.NORMAL);
+                this.handleChangeLayout(this.props.layout === eD.AEg.NORMAL ? eD.AEg.NO_CHAT : eD.AEg.NORMAL);
             }),
             eU(this, "handleChangeLayout", (e) => {
                 let { channel: t, appContext: n, layout: r } = this.props;
                 r !== e &&
                     (m.Z.updateLayout(t.id, e, n),
-                    e === ek.AEg.FULL_SCREEN && t.isPrivate() && eb.S.dispatch(ek.CkL.TEXTAREA_BLUR));
+                    e === eD.AEg.FULL_SCREEN && t.isPrivate() && eb.S.dispatch(eD.CkL.TEXTAREA_BLUR));
             }),
             eU(this, "handleDisconnect", () => {
-                this.props.layout === ek.AEg.FULL_SCREEN && this.handleFullScreen();
+                this.props.layout === eD.AEg.FULL_SCREEN && this.handleFullScreen();
             }),
             eU(this, "trackCallTileContextMenuImpression", (e, t) => {
                 (0, w.h)({
@@ -485,7 +485,7 @@ class eV extends i.PureComponent {
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            eF(eB({}, n), {
+                                            eG(eB({}, n), {
                                                 stream: e.stream,
                                                 exitFullscreen: this.maybeLeaveFullScreen,
                                                 appContext: u,
@@ -507,7 +507,7 @@ class eV extends i.PureComponent {
                         let h = eh.default.getUser(e.id);
                         if (null != h) {
                             if (i)
-                                return (0, G.D)(t, h, c, p, (e, t) =>
+                                return (0, H.D)(t, h, c, p, (e, t) =>
                                     (0, ew.o)({
                                         menuItemProps: t,
                                         menuName: e,
@@ -518,7 +518,7 @@ class eV extends i.PureComponent {
                                     }),
                                 );
                             switch (c.type) {
-                                case ek.d4z.DM:
+                                case eD.d4z.DM:
                                     return (0, g.jW)(
                                         t,
                                         async () => {
@@ -533,7 +533,7 @@ class eV extends i.PureComponent {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
-                                                    eF(eB({}, n), {
+                                                    eG(eB({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
                                                         user: h,
@@ -549,7 +549,7 @@ class eV extends i.PureComponent {
                                         },
                                         p,
                                     );
-                                case ek.d4z.GROUP_DM:
+                                case eD.d4z.GROUP_DM:
                                     return (0, g.jW)(
                                         t,
                                         async () => {
@@ -561,10 +561,10 @@ class eV extends i.PureComponent {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
-                                                    eF(eB({}, n), {
+                                                    eG(eB({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
-                                                        showChatItems: d === ek.AEg.MINIMUM || d === ek.AEg.NORMAL,
+                                                        showChatItems: d === eD.AEg.MINIMUM || d === eD.AEg.NORMAL,
                                                         user: h,
                                                         channel: c,
                                                         showModalItems: !0,
@@ -578,9 +578,9 @@ class eV extends i.PureComponent {
                                         },
                                         p,
                                     );
-                                case ek.d4z.GUILD_VOICE:
-                                case ek.d4z.PUBLIC_THREAD:
-                                case ek.d4z.PRIVATE_THREAD:
+                                case eD.d4z.GUILD_VOICE:
+                                case eD.d4z.PUBLIC_THREAD:
+                                case eD.d4z.PRIVATE_THREAD:
                                     let l = c.getGuildId();
                                     return (
                                         s()(null != l, "GuildID null for guild voice channel"),
@@ -597,7 +597,7 @@ class eV extends i.PureComponent {
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         t,
-                                                        eF(eB({}, n), {
+                                                        eG(eB({}, n), {
                                                             showMediaItems: !0,
                                                             showChannelCallItems: !0,
                                                             showChatItems: !1,
@@ -626,12 +626,12 @@ class eV extends i.PureComponent {
             eU(this, "handleSelectParticipant", (e, t) => {
                 let { channel: n, selectedParticipant: r, allActiveStreams: i, inCall: l, mode: a } = this.props;
                 (0, eM._5)(e) &&
-                    (0, U.p9)(n, ef.Z, ec.Z, eu.Z, k.Z)[0] &&
+                    (0, U.p9)(n, ef.Z, ec.Z, eu.Z, D.Z)[0] &&
                     (b.default.selectVoiceChannel(n.id),
-                    0 === i.filter((t) => (0, L.V9)(t) === e.id && t.state !== ek.jm8.ENDED).length &&
-                        (0, y.rn)((0, L.my)(e.id), { forceMultiple: t.shiftKey })),
+                    0 === i.filter((t) => (0, k.V9)(t) === e.id && t.state !== eD.jm8.ENDED).length &&
+                        (0, _.rn)((0, k.my)(e.id), { forceMultiple: t.shiftKey })),
                     l &&
-                        a === ek.WtW.VIDEO &&
+                        a === eD.WtW.VIDEO &&
                         ((null == r ? void 0 : r.id) === e.id
                             ? m.Z.selectParticipant(n.id, null)
                             : m.Z.selectParticipant(n.id, e.id));
@@ -640,19 +640,19 @@ class eV extends i.PureComponent {
                 let { channel: e, connectedEmbeddedActivity: t } = this.props,
                     n = () => {
                         let t = e.getGuildId();
-                        null != t && (0, H.uL)((0, eg.LY)(t)), B.hP(e);
+                        null != t && (0, F.uL)((0, eg.LY)(t)), B.hP(e);
                     };
                 null == t || (0, E.R)() ? n() : (0, Z.Z)({ onConfirm: n });
             }),
             eU(this, "handleStayOnTop", (e) => {
-                (0, eA.v)(T.Z.VOICE_CONTROL_TRAY, eA.d.STAY_ON_TOP, e), B.hY(ek.KJ3.CHANNEL_CALL_POPOUT, e);
+                (0, eA.v)(T.Z.VOICE_CONTROL_TRAY, eA.d.STAY_ON_TOP, e), B.hY(eD.KJ3.CHANNEL_CALL_POPOUT, e);
             }),
             eU(this, "handleClosePopout", () => {
-                B.xv(ek.KJ3.CHANNEL_CALL_POPOUT);
+                B.xv(eD.KJ3.CHANNEL_CALL_POPOUT);
             }),
             eU(this, "handleFullscreenParticipant", (e, t) => {
                 let { layout: n, selectedParticipant: r } = this.props,
-                    i = n === ek.AEg.FULL_SCREEN;
+                    i = n === eD.AEg.FULL_SCREEN;
                 ((!i && (null == r ? void 0 : r.id) !== e.id) || (i && (null == r ? void 0 : r.id) === e.id)) &&
                     this.handleSelectParticipant(e, t),
                     this.handleFullScreen();
@@ -662,7 +662,7 @@ class eV extends i.PureComponent {
                     { call: t, channel: n, layout: i } = this.props;
                 return (
                     this.inPopout ||
-                        i === ek.AEg.FULL_SCREEN ||
+                        i === eD.AEg.FULL_SCREEN ||
                         null == t ||
                         n.isManaged() ||
                         (e = (0, r.jsx)(C.Z, { call: t })),
@@ -674,7 +674,7 @@ class eV extends i.PureComponent {
             }),
             eU(this, "renderBottomCenter", () => {
                 let { channel: e, inCall: t, layout: n } = this.props;
-                return t || n === ek.AEg.MINIMUM || n === ek.AEg.NORMAL
+                return t || n === eD.AEg.MINIMUM || n === eD.AEg.NORMAL
                     ? (0, r.jsx)(z.ZP, {
                           exitFullScreen: this.maybeLeaveFullScreen,
                           channel: e,
@@ -696,56 +696,56 @@ class eV extends i.PureComponent {
                     participants: u,
                 } = this.props;
                 if (!c) return null;
-                let d = e === ek.AEg.NO_CHAT ? J.Z.Directions.UP : J.Z.Directions.DOWN,
-                    p = [ek.AEg.FULL_SCREEN, ek.AEg.NO_CHAT].includes(e),
+                let d = e === eD.AEg.NO_CHAT ? J.Z.Directions.UP : J.Z.Directions.DOWN,
+                    p = [eD.AEg.FULL_SCREEN, eD.AEg.NO_CHAT].includes(e),
                     f = u.some((e) => e.type === eM.fO.STREAM),
                     m =
-                        e === ek.AEg.FULL_SCREEN
+                        e === eD.AEg.FULL_SCREEN
                             ? () => {
-                                  (this._prevLayout = ek.AEg.NORMAL), this.handleFullScreen();
+                                  (this._prevLayout = eD.AEg.NORMAL), this.handleFullScreen();
                               }
                             : this.handleToggleLayout,
                     { canChangeLayout: g, canInvite: b } = this.viewProperties,
-                    y = l
-                        ? (0, r.jsx)(q.Z, {
+                    _ = l
+                        ? (0, r.jsx)(Y.Z, {
                               channel: n,
-                              stream: (null == o ? void 0 : o.type) === eM.fO.STREAM ? (0, L.my)(o.id) : void 0,
+                              stream: (null == o ? void 0 : o.type) === eM.fO.STREAM ? (0, k.my)(o.id) : void 0,
                               applicationId:
                                   (null == o ? void 0 : o.type) === eM.fO.ACTIVITY ? o.applicationId : void 0,
                               appContext: i,
-                              className: eL.leftTrayIcon,
+                              className: ek.leftTrayIcon,
                               exitFullScreen: this.maybeLeaveFullScreen,
                               analyticsLocation:
-                                  n.type === ek.d4z.GUILD_VOICE ? ek.ZY5.GUILD_CHANNEL : ek.ZY5.DM_CHANNEL,
+                                  n.type === eD.d4z.GUILD_VOICE ? eD.ZY5.GUILD_CHANNEL : eD.ZY5.DM_CHANNEL,
                           })
                         : (0, r.jsx)(ee.Z, {
                               channel: n,
-                              stream: (null == o ? void 0 : o.type) === eM.fO.STREAM ? (0, L.my)(o.id) : void 0,
-                              className: eL.leftTrayIcon,
+                              stream: (null == o ? void 0 : o.type) === eM.fO.STREAM ? (0, k.my)(o.id) : void 0,
+                              className: ek.leftTrayIcon,
                               exitFullScreen: this.maybeLeaveFullScreen,
                               analyticsLocation:
-                                  n.type === ek.d4z.GUILD_VOICE ? ek.ZY5.GUILD_CHANNEL : ek.ZY5.DM_CHANNEL,
+                                  n.type === eD.d4z.GUILD_VOICE ? eD.ZY5.GUILD_CHANNEL : eD.ZY5.DM_CHANNEL,
                           });
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        b && !s ? y : null,
+                        b && !s ? _ : null,
                         g
                             ? (0, r.jsxs)(R.Z, {
-                                  className: eL.iconWrapper,
+                                  className: ek.iconWrapper,
                                   align: R.Z.Align.CENTER,
                                   grow: 0,
                                   children: [
                                       (0, r.jsx)(J.Z, {
-                                          label: p ? eD.intl.string(eD.t.kkKapK) : eD.intl.string(eD.t["5MstTk"]),
+                                          label: p ? eL.intl.string(eL.t.kkKapK) : eL.intl.string(eL.t["5MstTk"]),
                                           direction: d,
-                                          className: eL.leftTrayIcon,
+                                          className: ek.leftTrayIcon,
                                           onClick: () => {
                                               (0, eA.v)(T.Z.VOICE_CONTROL_TRAY, eA.d.CHAT, p), m();
                                           },
                                       }),
                                       p && t > 0
                                           ? (0, r.jsx)(h.mAB, {
-                                                className: eL.badge,
+                                                className: ek.badge,
                                                 count: t,
                                             })
                                           : null,
@@ -757,13 +757,13 @@ class eV extends i.PureComponent {
                         s
                             ? null
                             : (0, r.jsx)(K.Z, {
-                                  children: (0, r.jsx)(eI.Z, {
-                                      className: a()(eL.leftTrayIcon, eL.viewersButton),
+                                  children: (0, r.jsx)(eP.Z, {
+                                      className: a()(ek.leftTrayIcon, ek.viewersButton),
                                       participant: o,
                                       maxVisibleUsers: 4,
                                       guildId: n.getGuildId(),
                                       channelId: n.id,
-                                      disableInteraction: this.inPopout || e === ek.AEg.FULL_SCREEN,
+                                      disableInteraction: this.inPopout || e === eD.AEg.FULL_SCREEN,
                                   }),
                               }),
                         s &&
@@ -789,14 +789,14 @@ class eV extends i.PureComponent {
                                   context: (0, ev.Z)(i.type),
                                   userId: i.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
-                                  sliderClassName: eL.volumeSlider,
-                                  className: eL.rightTrayIcon,
+                                  sliderClassName: ek.volumeSlider,
+                                  className: ek.rightTrayIcon,
                                   location: T.Z.VOICE_CONTROL_TRAY,
                               })
                             : null,
                         a
                             ? (0, r.jsx)(en.Z, {
-                                  className: eL.rightTrayIcon,
+                                  className: ek.rightTrayIcon,
                                   popoutWindowAlwaysOnTop: t,
                                   onToggleStayOnTop: this.handleStayOnTop,
                               })
@@ -805,7 +805,7 @@ class eV extends i.PureComponent {
                             ? (0, r.jsx)(et.Z, {
                                   themeable: s,
                                   popoutOpen: this.popoutOpen,
-                                  className: eL.rightTrayIcon,
+                                  className: ek.rightTrayIcon,
                                   onOpenPopout: () => {
                                       (0, eA.v)(T.Z.VOICE_CONTROL_TRAY, eA.d.POPOUT, !0), this.handleOpenPopout();
                                   },
@@ -819,12 +819,12 @@ class eV extends i.PureComponent {
                                   themeable: s,
                                   node: this.getRootNode(),
                                   guestWindow: e,
-                                  className: eL.rightTrayIcon,
+                                  className: ek.rightTrayIcon,
                                   onClick: () => {
                                       (0, eA.v)(
                                           T.Z.VOICE_CONTROL_TRAY,
                                           eA.d.FULL_SCREEN,
-                                          this.props.layout !== ek.AEg.FULL_SCREEN,
+                                          this.props.layout !== eD.AEg.FULL_SCREEN,
                                       ),
                                           this.handleFullScreen();
                                   },
@@ -839,7 +839,7 @@ class eV extends i.PureComponent {
                     ? null
                     : (0, r.jsx)(ej.ZP, {
                           children: (0, r.jsx)(X.Z, {
-                              className: eL.chatToasts,
+                              className: ek.chatToasts,
                               channelId: n.id,
                           }),
                       });
@@ -869,7 +869,7 @@ class eV extends i.PureComponent {
                 return (0, r.jsxs)(K.Z, {
                     children: [
                         (0, r.jsx)("div", {
-                            className: eL.headerWrapper,
+                            className: ek.headerWrapper,
                             children: c
                                 ? null == n
                                     ? void 0
@@ -896,8 +896,8 @@ let ez = function (e) {
         { width: c = 0, height: p = 0, ref: f } = (0, v.ZP)(),
         { ref: m } = (0, v.ZP)(),
         g = (0, j.bp)(),
-        b = (0, D.Z)(),
-        y = (0, u.e7)([ep.Z], () => {
+        b = (0, L.Z)(),
+        _ = (0, u.e7)([ep.Z], () => {
             var e;
             return (null != (e = null == b ? void 0 : b.channelId) ? e : ep.Z.getVoiceChannelId()) === n.id;
         }),
@@ -908,20 +908,20 @@ let ez = function (e) {
             mode: N,
             layout: w,
             participantsOpen: R,
-            participantsListOpen: L,
+            participantsListOpen: k,
             chatOpen: U,
             selectedParticipant: B,
         } = (0, u.cj)([ex.Z], () => {
-            let e = g === ek.IlC.POPOUT,
+            let e = g === eD.IlC.POPOUT,
                 t = ex.Z.getMode(n.id);
-            e && (t = ek.WtW.VIDEO);
-            let r = t === ek.WtW.VIDEO ? ex.Z.getLayout(n.id, g) : ek.AEg.MINIMUM;
+            e && (t = eD.WtW.VIDEO);
+            let r = t === eD.WtW.VIDEO ? ex.Z.getLayout(n.id, g) : eD.AEg.MINIMUM;
             return (
-                e && r !== ek.AEg.FULL_SCREEN && (r = ek.AEg.NO_CHAT),
+                e && r !== eD.AEg.FULL_SCREEN && (r = eD.AEg.NO_CHAT),
                 {
                     mode: t,
                     layout: r,
-                    selectedParticipant: t !== ek.WtW.VOICE ? ex.Z.getSelectedParticipant(n.id) : null,
+                    selectedParticipant: t !== eD.WtW.VOICE ? ex.Z.getSelectedParticipant(n.id) : null,
                     participants: ex.Z.getParticipants(n.id),
                     filteredParticipants: ex.Z.getFilteredParticipants(n.id),
                     participantsOpen: ex.Z.getParticipantsOpen(n.id),
@@ -931,62 +931,62 @@ let ez = function (e) {
                 }
             );
         }, [g, n.id]),
-        H = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
-        { selectedStream: G } = (0, u.cj)(
+        F = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
+        { selectedStream: H } = (0, u.cj)(
             [el.Z],
             () => ({ selectedStream: null != B ? el.Z.getActiveStreamForStreamKey(B.id) : null }),
             [B],
         ),
         z = (0, u.e7)([ec.Z], () => ec.Z.getGuild(n.getGuildId())),
         W = (0, u.e7)([es.Z], () => es.Z.getCall(n.id), [n.id]),
-        q = (0, u.e7)([ed.ZP], () => ed.ZP.getMentionCount(n.id), [n.id]),
-        Y = (0, u.e7)([ea.default], () => ea.default.getId()),
-        { popoutWindow: K, popoutWindowAlwaysOnTop: X } = (0, u.cj)([F.Z], () => ({
-            popoutWindow: F.Z.getWindow(ek.KJ3.CHANNEL_CALL_POPOUT),
-            popoutWindowAlwaysOnTop: F.Z.getIsAlwaysOnTop(ek.KJ3.CHANNEL_CALL_POPOUT),
+        Y = (0, u.e7)([ed.ZP], () => ed.ZP.getMentionCount(n.id), [n.id]),
+        q = (0, u.e7)([ea.default], () => ea.default.getId()),
+        { popoutWindow: K, popoutWindowAlwaysOnTop: X } = (0, u.cj)([G.Z], () => ({
+            popoutWindow: G.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
+            popoutWindowAlwaysOnTop: G.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
         })),
-        Q = (0, u.e7)([eu.Z], () => eu.Z.can(ek.Plq.CONNECT, n)),
+        Q = (0, u.e7)([eu.Z], () => eu.Z.can(eD.Plq.CONNECT, n)),
         J = (0, u.e7)([eo.Z], () => eo.Z.getToastsEnabled(n.id)),
-        $ = (0, u.e7)([k.Z], () => k.Z.getAwaitingRemoteSessionInfo()),
+        $ = (0, u.e7)([D.Z], () => D.Z.getAwaitingRemoteSessionInfo()),
         ee = (0, u.e7)([V.ZP], () => V.ZP.callHeaderHeight),
         et = i.useCallback((e) => {
-            _.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
+            y.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         en = null != (t = null == z ? void 0 : z.id) ? t : null,
-        er = (0, I.Z)(en, n.id),
+        er = (0, P.Z)(en, n.id),
         ei = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
         eh = (0, O.Z)(ei);
     i.useEffect(() => {
         ei === S.O.ERROR &&
             eh !== S.O.ERROR &&
-            (0, h.showToast)((0, h.createToast)(eD.intl.string(eD.t.AlJyIy), h.ToastType.FAILURE));
+            (0, h.showToast)((0, h.createToast)(eL.intl.string(eL.t.AlJyIy), h.ToastType.FAILURE));
     }, [ei, eh]);
-    let ef = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ef = (0, u.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     i.useEffect(() => {
         let e = !1,
             t = null;
         return (
             (async () => {
-                y &&
-                    N === ek.WtW.VIDEO &&
-                    ((t = await e_.ZP.blockDisplaySleep()), e && null != t && e_.ZP.unblockDisplaySleep(t));
+                _ &&
+                    N === eD.WtW.VIDEO &&
+                    ((t = await ey.ZP.blockDisplaySleep()), e && null != t && ey.ZP.unblockDisplaySleep(t));
             })(),
             () => {
-                null != t ? e_.ZP.unblockDisplaySleep(t) : (e = !0);
+                null != t ? ey.ZP.unblockDisplaySleep(t) : (e = !0);
             }
         );
-    }, [y, N]);
+    }, [_, N]);
     let em = (0, eO.Z)(n, !0),
         { hasParticipantsPanel: eg } = (0, eZ.Z)({ location: "ChannelCall" }),
         eb = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: ey } = (0, A.ZP)(T.Z.CHANNEL_CALL),
+        { analyticsLocations: e_ } = (0, A.ZP)(T.Z.CHANNEL_CALL),
         eC = o - eM.oo,
-        ev = P.ZP.getEmbeddedActivitiesForChannel(n.id),
+        ev = I.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eE } = (0, h.TCT)();
     return (0, r.jsx)(A.Gt, {
-        value: ey,
+        value: e_,
         children: (0, r.jsx)(x.Z, {
-            page: ek.ZY5.CHANNEL_CALL,
+            page: eD.ZY5.CHANNEL_CALL,
             children: (0, r.jsx)(ej.B2, {
                 children: (0, r.jsxs)(eN._A, {
                     children: [
@@ -995,16 +995,16 @@ let ez = function (e) {
                             guild: z,
                             hasConnectPermission: Q,
                             participantsOpen: R,
-                            participantsListOpen: L && eg,
+                            participantsListOpen: k && eg,
                             renderExternalHeader: l,
                             appContext: g,
                             call: W,
                             popoutWindow: K,
                             popoutWindowAlwaysOnTop: X,
-                            mentionCount: q,
-                            selectedStream: G,
+                            mentionCount: Y,
+                            selectedStream: H,
                             mode: N,
-                            inCall: y,
+                            inCall: _,
                             participants: C,
                             filteredParticipants: E,
                             participantsVersion: Z,
@@ -1012,9 +1012,9 @@ let ez = function (e) {
                             chatOpen: U,
                             maxSidebarWidth: eC,
                             shouldUseVoiceEffectsActionBar: em,
-                            currentUserId: Y,
+                            currentUserId: q,
                             selectedParticipant: B,
-                            allActiveStreams: H,
+                            allActiveStreams: F,
                             useNewInviteButton: er,
                             connectedEmbeddedActivity: null != ef ? ef : void 0,
                             showChatToasts: J,

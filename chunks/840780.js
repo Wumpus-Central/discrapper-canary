@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(566620),
     _ = n(317381),
     y = n(889441),
-    j = n(736409),
-    v = n(835473),
+    v = n(736409),
+    j = n(835473),
     C = n(413523),
     x = n(933557),
     E = n(194082),
@@ -205,7 +205,7 @@ class ec extends i.PureComponent {
                         game: t,
                         size: N.Z.Sizes.SMALL,
                     }),
-                    (0, r.jsx)(j.j, {
+                    (0, r.jsx)(v.j, {
                         isForceShowSharingPopout: a,
                         setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
@@ -305,12 +305,12 @@ let eu = (0, g.Z)(function (e) {
         f = (0, c.e7)([V.Z], () => V.Z.getChannel(p)),
         h = (0, c.e7)([H.Z], () => H.Z.getGuild(null == f ? void 0 : f.guild_id)),
         [g, O] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
-        j = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         C = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         E = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
             null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0,
         ),
-        [I] = (0, v.Z)([
+        [I] = (0, j.Z)([
             null !=
             (l =
                 null != O && null != O.id
@@ -345,7 +345,7 @@ let eu = (0, g.Z)(function (e) {
                 userId: s,
                 runningGame: null != N ? N : u,
                 application: I,
-                useReducedMotion: j,
+                useReducedMotion: v,
                 isStreaming: U,
                 channel: f,
                 canStream: E,

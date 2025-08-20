@@ -16,10 +16,10 @@ var r = n(951288),
 function b(e) {
     let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: f, spacing: b = 0 } = e,
         { isOpen: _, setIsOpen: y } = (0, p.Z)(),
-        j = i.useCallback(() => {
+        v = i.useCallback(() => {
             y(!1);
         }, [y]),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             y(!_);
         }, [_, y]);
     (0, c.ZP)(() => {
@@ -29,8 +29,8 @@ function b(e) {
         return s.Z.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => s.Z.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         i.useEffect(
-            () => (u.S.subscribe(h.CkL.TOGGLE_INBOX, v), () => void u.S.unsubscribe(h.CkL.TOGGLE_INBOX, v)),
-            [v],
+            () => (u.S.subscribe(h.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(h.CkL.TOGGLE_INBOX, j)),
+            [j],
         );
     let { entrypoint: C } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(a.yRy, {
@@ -40,7 +40,7 @@ function b(e) {
         animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
         animationPosition: C === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
         position: n,
-        onRequestClose: j,
+        onRequestClose: v,
         spacing: b,
         renderPopout: () =>
             (0, r.jsx)(a.VqE, {
@@ -53,7 +53,7 @@ function b(e) {
             }),
         children: (e, n) => {
             let { isShown: r } = n;
-            return t(v, r, e);
+            return t(j, r, e);
         },
     });
 }

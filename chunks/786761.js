@@ -176,6 +176,7 @@ function P(e) {
                   roleSubscriptionData: e.role_subscription_data,
                   purchaseNotification: e.purchase_notification,
                   poll: null == e.poll ? void 0 : (0, l.Z)(e.poll),
+                  sharedClientTheme: e.shared_client_theme,
                   potions: e.potions,
                   giftInfo: null == G ? void 0 : G,
                   giftingPrompt: B,

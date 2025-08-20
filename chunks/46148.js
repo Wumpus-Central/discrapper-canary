@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(921944),
     _ = n(474936),
     y = n(388032),
-    j = n(865696),
-    v = n(777091);
+    v = n(865696),
+    j = n(777091);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,9 +110,9 @@ let x = i.memo(function (e) {
                     buttonText: y.intl.string(y.t["+IrDzM"]),
                     header: B,
                     art: (0, r.jsx)("img", {
-                        src: v.Z,
+                        src: j.Z,
                         alt: "",
-                        className: j.chatWallpaperDMListCoachmarkArt,
+                        className: v.chatWallpaperDMListCoachmarkArt,
                     }),
                     body: V,
                     align: L,

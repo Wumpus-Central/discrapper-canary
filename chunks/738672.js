@@ -18,7 +18,7 @@ function d(e) {
         } = e,
         m = i.useContext(c.h9),
         [g, b] = i.useState(""),
-        [y, _] = i.useState(!1),
+        [_, y] = i.useState(!1),
         C = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
         x = i.useRef(null),
         v = i.useRef(0);
@@ -30,7 +30,7 @@ function d(e) {
             if (!f) {
                 var e, t;
                 b(String(v.current)),
-                    _(
+                    y(
                         void 0 !== C &&
                             C < (null != (t = null == (e = x.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
                     ),
@@ -56,7 +56,7 @@ function d(e) {
                           onBlur: j,
                           onMouseLeave: j,
                           children: p({
-                              hidden: y || m || n,
+                              hidden: _ || m || n,
                               onDismiss: d,
                           }),
                       }),

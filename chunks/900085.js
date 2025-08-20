@@ -17,8 +17,8 @@ var r,
     O = n(313201),
     _ = n(991346),
     y = n(592125),
-    j = n(888369),
-    v = n(430824),
+    v = n(888369),
+    j = n(430824),
     C = n(306680),
     x = n(944486),
     E = n(938475),
@@ -99,7 +99,7 @@ let G = () =>
     });
 class B extends (r = l.Component) {
     render() {
-        let e = v.Z.getGuild(this.props.channel.guild_id);
+        let e = j.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             Z.$W,
             U(k({}, this.props), {
@@ -127,9 +127,9 @@ let V = s.ZP.connectStores([C.ZP, y.Z], (e) => {
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(B),
-    H = s.ZP.connectStores([j.default], (e) => {
+    H = s.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
-        return { unread: j.default.hasUnread(t.id) };
+        return { unread: v.default.hasUnread(t.id) };
     })(Z.ic),
     z = s.ZP.connectStores([C.ZP], (e) => {
         let { channel: t } = e;
@@ -336,7 +336,7 @@ class Y extends l.PureComponent {
                     case h.h8.TEXT_CHANNEL:
                     case h.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = v.Z.getGuild(r.getGuildId());
+                            l = j.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case R.d4z.GUILD_TEXT:

@@ -29,7 +29,7 @@ let O = i.memo(function (e) {
     let { guild: O } = e,
         _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(O.id), [O.id]),
         y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(O.id)),
-        j = i.useMemo(() => {
+        v = i.useMemo(() => {
             if (null == _ || null == y) return 0;
             let e = 0;
             return (
@@ -39,7 +39,7 @@ let O = i.memo(function (e) {
                 e
             );
         }, [y, _]),
-        v = null == _ ? 0 : _.length,
+        j = null == _ ? 0 : _.length,
         C = (0, l.JA)("progress-bar-".concat(O.id));
     return (0, r.jsxs)("li", {
         children: [
@@ -95,8 +95,8 @@ let O = i.memo(function (e) {
                                                 className: m.rightText,
                                                 children: g.intl.format(g.t.eqZ1lZ, {
                                                     numberHook: b,
-                                                    total: v.toString(),
-                                                    completed: j.toString(),
+                                                    total: j.toString(),
+                                                    completed: v.toString(),
                                                 }),
                                             }),
                                             (0, r.jsx)(p.Z, {
@@ -112,7 +112,7 @@ let O = i.memo(function (e) {
                             (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
                                 foregroundGradientColor: [(0, s.Lq)(f.Ilk.GREEN_300), (0, s.Lq)(f.Ilk.GREEN_230)],
-                                percent: (j / v) * 100 + 3,
+                                percent: (v / j) * 100 + 3,
                                 animate: !0,
                             }),
                         ],

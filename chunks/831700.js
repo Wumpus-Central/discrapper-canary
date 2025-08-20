@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(933557),
     _ = n(557135),
     y = n(873696),
-    j = n(446226),
-    v = n(305325),
+    v = n(446226),
+    j = n(305325),
     C = n(281956),
     x = n(66999),
     E = n(554747),
@@ -169,8 +169,8 @@ class ee extends B.ZP {
                 canReorderChannel: O,
                 canMoveMembers: _,
                 showTutorial: y,
-                hasActiveEvent: j,
-                embeddedApps: v,
+                hasActiveEvent: v,
+                embeddedApps: j,
                 isSubscriptionGated: C,
                 isFavoriteSuggestion: x,
                 withGuildIcon: E,
@@ -229,8 +229,8 @@ class ee extends B.ZP {
                                                     {
                                                         ref: this.channelItemRef,
                                                         className: X.iconVisibility,
-                                                        iconClassName: o()({ [X.iconLive]: j }),
-                                                        hasActiveEvent: j,
+                                                        iconClassName: o()({ [X.iconLive]: v }),
+                                                        hasActiveEvent: v,
                                                         channel: e,
                                                         selected: !x && t,
                                                         connected: n,
@@ -252,12 +252,12 @@ class ee extends B.ZP {
                                                             unread: i,
                                                             mentionCount: a,
                                                             userCount: w,
-                                                            embeddedActivitiesCount: v.length,
+                                                            embeddedActivitiesCount: j.length,
                                                             isSubscriptionGated: C,
                                                         }),
                                                         "aria-describedby": (0, b.Z)({
                                                             channel: e,
-                                                            embeddedApps: v,
+                                                            embeddedApps: j,
                                                         }),
                                                         withGuildIcon: E,
                                                     },
@@ -386,7 +386,7 @@ class ee extends B.ZP {
             Q(this, "handleClick", () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, C.n)(t) && (0, v.hk)(t), this.handleVoiceConnect();
+                null != t && (0, C.n)(t) && (0, j.hk)(t), this.handleVoiceConnect();
             }),
             Q(this, "handleVoiceStatusClick", (e) => {
                 let { connected: t, channel: n } = this.props;
@@ -482,9 +482,9 @@ function en(e) {
         m = (0, O.ZP)(n),
         b = (0, E.qY)(n.id),
         { isSubscriptionGated: _, needSubscriptionToAccess: y } = (0, x.Z)(n.id),
-        v = (0, j.Z)(),
+        j = (0, v.Z)(),
         C = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
-        S = e.connected || (null == v ? void 0 : v.channelId) === n.id,
+        S = e.connected || (null == j ? void 0 : j.channelId) === n.id,
         { enableHangStatus: P, allowChannelTopic: w } = I.n.useExperiment(
             {
                 guildId: n.guild_id,

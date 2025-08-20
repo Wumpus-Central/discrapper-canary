@@ -19,7 +19,7 @@ var r,
     m = n(981631),
     g = n(388032),
     b = n(206659);
-function y(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function y(e, t, n) {
         e
     );
 }
-function _(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -140,8 +140,8 @@ class O extends o.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, "state", { confirmed: !1 }),
-            y(this, "handleDismiss", () => {
+            _(this, "state", { confirmed: !1 }),
+            _(this, "handleDismiss", () => {
                 let { onClickComplete: e } = this.props;
                 this.setState({ confirmed: !0 }, () => (null == e ? void 0 : e()));
             });
@@ -199,7 +199,7 @@ class j extends (r = o.PureComponent) {
             m = "top" === f.position || "bottom" === f.position ? "center" : "top";
         return (0, a.jsx)(
             p.yRy,
-            C(_({ targetElementRef: h }, f), {
+            C(y({ targetElementRef: h }, f), {
                 align: m,
                 spacing: null != u ? u : 0,
                 renderPopout: this.renderPopoutContent,
@@ -210,14 +210,14 @@ class j extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            y(this, "onClickComplete", (e) => {
+            _(this, "onClickComplete", (e) => {
                 e(), this.props.onComplete();
             }),
-            y(this, "onClickSkipAll", (e) => {
+            _(this, "onClickSkipAll", (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
                 e(), t(), h.default.track(m.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
-            y(this, "renderPopoutContent", (e) => {
+            _(this, "renderPopoutContent", (e) => {
                 let { closePopout: t, position: n } = e,
                     { forceTheme: r, isLongText: i, arrowAlignment: l, renderMedia: o } = this.props,
                     s = null != o;
@@ -226,7 +226,7 @@ class j extends (r = o.PureComponent) {
                     children: (e) =>
                         (0, a.jsx)(
                             O,
-                            C(_({}, this.props), {
+                            C(y({}, this.props), {
                                 className: c()(
                                     {
                                         [b.bottom]: "bottom" === n,
@@ -251,4 +251,4 @@ class j extends (r = o.PureComponent) {
             });
     }
 }
-y(j, "TextAlignments", x), y(j, "defaultProps", { textAlign: "left" });
+_(j, "TextAlignments", x), _(j, "defaultProps", { textAlign: "left" });

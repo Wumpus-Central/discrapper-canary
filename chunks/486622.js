@@ -15,13 +15,13 @@ var r = n(647438),
     g = n(981631);
 function b(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: i, onError: b } = e,
-        y = (0, f.Z)(),
-        [_, C] = r.useState(!1),
+        _ = (0, f.Z)(),
+        [y, C] = r.useState(!1),
         [x, v] = r.useState(!1),
         [O, j] = r.useState(!1),
         [E, S] = r.useState(!1),
-        [P, I] = r.useState(!1),
-        Z = _ || x || O,
+        [I, P] = r.useState(!1),
+        Z = y || x || O,
         T = r.useCallback(
             async (e) => {
                 if (!Z) {
@@ -43,7 +43,7 @@ function b(e) {
                 if (!Z) {
                     v(!0);
                     try {
-                        await (0, p.gN)(e), I(!0), null == i || i();
+                        await (0, p.gN)(e), P(!0), null == i || i();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == b || b(e);
@@ -61,7 +61,7 @@ function b(e) {
                 let t = l()(e, m.t$);
                 try {
                     for (let e of t) await (0, p.r_)(e);
-                    I(!0), null == i || i();
+                    P(!0), null == i || i();
                 } catch (t) {
                     let e = new a.Hx(t);
                     null == b || b(e);
@@ -151,14 +151,14 @@ function b(e) {
             [T],
         );
     return {
-        acceptMessageRequest: y ? w : T,
+        acceptMessageRequest: _ ? w : T,
         rejectMessageRequest: N,
         rejectAll: A,
         markAsNotSpam: R,
-        isAcceptLoading: _,
+        isAcceptLoading: y,
         isRejectLoading: x,
         isUserProfileLoading: O,
         isOptimisticAccepted: E,
-        isOptimisticRejected: P,
+        isOptimisticRejected: I,
     };
 }

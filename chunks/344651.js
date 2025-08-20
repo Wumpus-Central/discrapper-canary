@@ -1606,6 +1606,7 @@ Y(
             title: e.title,
             components: (0, f.uZ)(e.components),
             nonce: e.nonce,
+            resolved: e.resolved,
         });
     }),
     H(["INTERACTION_IFRAME_MODAL_CREATE"], (e) => {

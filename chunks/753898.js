@@ -15,8 +15,8 @@ var i = n(442837),
     m = n(518311),
     g = n(518950),
     b = n(967128),
-    y = n(388032),
-    _ = n(963392);
+    _ = n(388032),
+    y = n(963392);
 function C(e) {
     var t, n, C;
     let { channel: x, children: v, user: O } = e,
@@ -24,8 +24,8 @@ function C(e) {
         E = null != (t = (0, d.ZP)(x)) ? t : "",
         {
             avatarDecorationSrc: S,
-            eventHandlers: P,
-            isAnimating: I,
+            eventHandlers: I,
+            isAnimating: P,
         } = (0, g.Z)({
             userId: null == O ? void 0 : O.id,
             size: o.EFr.SIZE_80,
@@ -57,12 +57,12 @@ function C(e) {
                     });
             }
             return e;
-        })({ channelId: x.id }, P)),
+        })({ channelId: x.id }, I)),
         (C = C =
             {
                 children: [
                     (() => {
-                        let e = !j && I;
+                        let e = !j && P;
                         return x.isMultiUserDM()
                             ? (0, r.jsx)(h.v, {
                                   channel: x,
@@ -87,18 +87,18 @@ function C(e) {
                     (0, r.jsx)(b.jz, { children: v }),
                     x.isMultiUserDM() &&
                         (0, r.jsxs)(a.h, {
-                            className: _.buttonContainer,
+                            className: y.buttonContainer,
                             children: [
                                 (0, r.jsx)(m.l, {
                                     channel: x,
-                                    text: y.intl.string(y.t["6Qgren"]),
+                                    text: _.intl.string(_.t["6Qgren"]),
                                     icon: o.ejJ,
                                 }),
                                 (0, r.jsx)(l.z, {
                                     icon: o.vdY,
                                     variant: "secondary",
-                                    text: y.intl.string(y.t["5Q9+/P"]),
-                                    "aria-label": y.intl.string(y.t["5Q9+/P"]),
+                                    text: _.intl.string(_.t["5Q9+/P"]),
+                                    "aria-label": _.intl.string(_.t["5Q9+/P"]),
                                     onClick: () => (0, f.B)(x.id, c.Z.EMPTY_GROUP_DM),
                                 }),
                             ],

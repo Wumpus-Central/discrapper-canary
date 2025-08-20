@@ -18,8 +18,8 @@ var i = n(442837),
     O = n(714794),
     _ = n(355363),
     y = n(687352),
-    j = n(876548),
-    v = n(25601),
+    v = n(876548),
+    j = n(25601),
     C = n(981631),
     x = n(490897),
     E = n(388032),
@@ -58,7 +58,7 @@ function I(e) {
             return null != (t = null == (e = p.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(C.oNc.COMMUNITY)) && t;
         });
     if ((0, O.Z)(L))
-        return (0, r.jsx)(v.Z, {
+        return (0, r.jsx)(j.Z, {
             mentionsCount: L,
             isMentionLowImportance: k,
         });
@@ -83,7 +83,7 @@ function I(e) {
         });
     let K = null != (t = null == N ? void 0 : N.length) ? t : 0;
     return null != w && w && F
-        ? (0, r.jsx)(j.Z, {
+        ? (0, r.jsx)(v.Z, {
               userCount: K,
               video: B || V,
               channel: n,

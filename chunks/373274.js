@@ -23,8 +23,8 @@ var r,
     O = n(906732),
     _ = n(313201),
     y = n(362658),
-    j = n(583962),
-    v = n(915885),
+    v = n(583962),
+    j = n(915885),
     C = n(258871),
     x = n(216306),
     E = n(398758),
@@ -508,8 +508,8 @@ class eb extends (r = l.PureComponent) {
                         ? 0
                         : e.getRow(t) === ea.z.GUILD_PREMIUM_PROGRESS_BAR
                           ? e.getRows().length > 1
-                              ? j.aR
-                              : j.PD
+                              ? v.aR
+                              : v.PD
                           : s;
                 }
                 if (n.isPlaceholderRow(e, t)) return 0;
@@ -630,7 +630,7 @@ class eb extends (r = l.PureComponent) {
                                           ea.z.GUILD_PREMIUM_PROGRESS_BAR,
                                       )
                                     : (0, i.jsx)(
-                                          j.ZP,
+                                          v.ZP,
                                           {
                                               guild: r,
                                               tooltipTypes: o,
@@ -698,7 +698,7 @@ class eb extends (r = l.PureComponent) {
                             );
                         case ea.z.GUILD_MOD_DASH_MEMBER_SAFETY:
                             return (0, i.jsx)(
-                                v.Z,
+                                j.Z,
                                 {
                                     guild: r,
                                     selected: a === eu.oC.MEMBER_SAFETY,
@@ -906,7 +906,7 @@ let eO = (e) => {
         h = (0, u.e7)([L.Z], () => L.Z.getGuildId()),
         _ = (0, E.DM)(t),
         y = l.useRef(null),
-        j = l.useCallback((e, t) => {
+        v = l.useCallback((e, t) => {
             let n = y.current;
             if (null != n)
                 if (ec.Xyh.test(t) || (0, eu.AB)(t))
@@ -921,7 +921,7 @@ let eO = (e) => {
                     null == (r = document.querySelector(e)) || r.focus();
                 }
         }, []),
-        v = l.useCallback(
+        j = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = y.current;
@@ -943,8 +943,8 @@ let eO = (e) => {
             id: "channels",
             defaultFocused: null != r ? r : void 0,
             isEnabled: a,
-            setFocus: j,
-            scrollToStart: v,
+            setFocus: v,
+            scrollToStart: j,
             scrollToEnd: C,
         }),
         P = x.setFocus;

@@ -21,8 +21,8 @@ var r,
     O = n(9156),
     _ = n(938475),
     y = n(823379),
-    j = n(734307),
-    v = n(981631),
+    v = n(734307),
+    j = n(981631),
     C =
         (((i = {}).HIDDEN = "hidden"),
         (i.UNREAD = "unread"),
@@ -67,7 +67,7 @@ function w(e) {
 }
 function Z(e) {
     var t, n, r;
-    let { guildChannels: i } = j.Z.getGuildWithoutChangingGuildActionRows(e),
+    let { guildChannels: i } = v.Z.getGuildWithoutChangingGuildActionRows(e),
         l = i.getChannels(null != (t = I[e]) ? t : []);
     if (null == l || 0 === l.length) return !1;
     let o = null,
@@ -91,13 +91,13 @@ function Z(e) {
             break;
     }
     let y = 0,
-        v = !1,
+        j = !1,
         C = 0,
         E = !1;
     if (p || d)
         for (let e = b.length - 1; e >= 0; e--) {
             let t = b[e];
-            (P(t.id) || a().some(t.threadIds, P)) && (null == s && (s = t.id), (v = !0)),
+            (P(t.id) || a().some(t.threadIds, P)) && (null == s && (s = t.id), (j = !0)),
                 (N(t.id) || a().some(t.threadIds, N)) &&
                     (null == o && (o = t.id),
                     (y += m.ZP.getMentionCount(t.id)),
@@ -142,7 +142,7 @@ function Z(e) {
                   targetChannelId: o,
               })
             : p &&
-              v &&
+              j &&
               (T = {
                   mode: "unread",
                   mentionCount: 0,
@@ -162,28 +162,28 @@ let T = a().throttle(Z, 200);
 function A(e) {
     let { guildId: t } = e,
         n = g.Z.getGuild(t);
-    return null != n && !!n.features.has(v.oNc.COMMUNITY) && T(t);
+    return null != n && !!n.features.has(j.oNc.COMMUNITY) && T(t);
 }
 function R(e) {
     let { id: t } = e,
         n = h.Z.getChannel(t);
     if (null == n) return !1;
     let r = g.Z.getGuild(n.guild_id);
-    return null != r && !!r.features.has(v.oNc.COMMUNITY) && T(n.guild_id);
+    return null != r && !!r.features.has(j.oNc.COMMUNITY) && T(n.guild_id);
 }
 function D(e) {
     let { channel: t } = e,
         n = h.Z.getChannel(t.id);
     if (null == n) return !1;
     let r = g.Z.getGuild(t.guild_id);
-    return null != r && !!r.features.has(v.oNc.COMMUNITY) && T(n.guild_id);
+    return null != r && !!r.features.has(j.oNc.COMMUNITY) && T(n.guild_id);
 }
 function M(e) {
     let { channelId: t } = e,
         n = h.Z.getChannel(t);
     if (null == n) return !1;
     let r = g.Z.getGuild(n.guild_id);
-    return null != r && !!r.features.has(v.oNc.COMMUNITY) && b.Z.getGuildId() === n.guild_id && T(n.guild_id);
+    return null != r && !!r.features.has(j.oNc.COMMUNITY) && b.Z.getGuildId() === n.guild_id && T(n.guild_id);
 }
 function L(e) {
     let { guildId: t } = e;
@@ -191,7 +191,7 @@ function L(e) {
 }
 class k extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(j.Z, m.ZP, O.ZP, f.Z, _.ZP, b.Z, g.Z);
+        this.waitFor(v.Z, m.ZP, O.ZP, f.Z, _.ZP, b.Z, g.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -211,7 +211,7 @@ let U = new k(c.Z, {
         let { guildId: t, channelIds: n } = e,
             r = g.Z.getGuild(t);
         return (
-            null != r && !!r.features.has(v.oNc.COMMUNITY) && null != n && !a().isEqual(I[t], n) && ((I[t] = n), Z(t))
+            null != r && !!r.features.has(j.oNc.COMMUNITY) && null != n && !a().isEqual(I[t], n) && ((I[t] = n), Z(t))
         );
     },
     BULK_ACK: function (e) {
@@ -228,7 +228,7 @@ let U = new k(c.Z, {
                 .uniq()
                 .forEach((e) => {
                     let t = g.Z.getGuild(e);
-                    null != t && t.features.has(v.oNc.COMMUNITY) && T(e) && (n = !0);
+                    null != t && t.features.has(j.oNc.COMMUNITY) && T(e) && (n = !0);
                 }),
             n
         );
@@ -242,7 +242,7 @@ let U = new k(c.Z, {
     MESSAGE_DELETE: M,
     PASSIVE_UPDATE_V2: function (e) {
         let t = g.Z.getGuild(e.guildId);
-        return !!(e.channels.length > 0 && null != t && t.features.has(v.oNc.COMMUNITY)) && T(e.guildId);
+        return !!(e.channels.length > 0 && null != t && t.features.has(j.oNc.COMMUNITY)) && T(e.guildId);
     },
     RESORT_THREADS: M,
     THREAD_CREATE: D,

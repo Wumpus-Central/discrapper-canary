@@ -14,16 +14,16 @@ var r = n(951288),
     m = n(594174),
     g = n(585483),
     b = n(127654),
-    y = n(205822),
-    _ = n(731994),
+    _ = n(205822),
+    y = n(731994),
     C = n(981631),
     x = n(388032);
 let v = function (e) {
     let { className: t, style: n, channel: v, draftType: O } = e,
         [j, E] = i.useState(!0),
         S = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
-        P = (0, l.e7)([h.Z], () => null != v && h.Z.can(C.Plq.ATTACH_FILES, v), [v]),
-        I = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(v.id)),
+        I = (0, l.e7)([h.Z], () => null != v && h.Z.can(C.Plq.ATTACH_FILES, v), [v]),
+        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(v.id)),
         Z = v.getGuildId(),
         T = O === c.d.FirstThreadMessage,
         N = (0, l.e7)([m.default], () => {
@@ -35,8 +35,8 @@ let v = function (e) {
             () =>
                 !S &&
                 ((v.isPrivate() && !v.isManaged()) ||
-                    (null != Z && (!(0, a.aC)(v) || A) && P && d.Z.canChatInGuild(Z))),
-            [P, A, v, Z, S],
+                    (null != Z && (!(0, a.aC)(v) || A) && I && d.Z.canChatInGuild(Z))),
+            [I, A, v, Z, S],
         ),
         R = T
             ? C.TPd.GUILD_THREADS_ONLY.has(v.type)
@@ -45,16 +45,16 @@ let v = function (e) {
             : j
               ? x.intl.format(x.t.dYP2FR, { destination: (0, s.F6)(v, m.default, f.Z, !0) })
               : x.intl.string(x.t.h76ulJ);
-    return I || !w
+    return P || !w
         ? null
-        : (0, r.jsx)(y.Z, {
+        : (0, r.jsx)(_.Z, {
               className: t,
               style: n,
               title: R,
               description: T ? x.intl.string(x.t.lpgkzs) : x.intl.string(x.t.usQh4O),
-              icons: _.J6,
+              icons: y.J6,
               onDrop: (e) => {
-                  if (I) return !1;
+                  if (P) return !1;
                   w &&
                       null != v &&
                       ((0, b.d5)(e, v, O, {
@@ -66,7 +66,7 @@ let v = function (e) {
               },
               onDragClear: () => E(!0),
               onDragOver: (e) => {
-                  if (I) return !1;
+                  if (P) return !1;
                   T || e.shiftKey !== j || E(!e.shiftKey);
               },
           });

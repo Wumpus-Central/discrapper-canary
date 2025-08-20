@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
 var i = n(399606),
@@ -18,10 +18,10 @@ var i = n(399606),
     O = n(264233),
     _ = n(388032),
     y = n(407067);
-function j(e) {
+function v(e) {
     let { tab: t, setTab: n, badgeState: h, closePopout: m } = e,
         { enabled: b, inInbox: O } = d.Z.useExperiment({ location: "RecentsPopout" }),
-        j = (0, f.Us)({ location: "RecentsHeader" }),
+        v = (0, f.Us)({ location: "RecentsHeader" }),
         { enabled: C } = u.Z.useExperiment({ location: "RecentsHeader" }),
         x = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         E = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
@@ -47,7 +47,7 @@ function j(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": _.intl.string(_.t["8k+6QU"]),
-                        children: [(0, r.jsx)(v, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
+                        children: [(0, r.jsx)(j, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
                     }),
                 ],
             }),
@@ -112,7 +112,7 @@ function j(e) {
                                           : _.intl.formatToPlainString(_.t.I4fryM, { count: E }),
                               })
                             : null,
-                        j
+                        v
                             ? (0, r.jsx)(o.njP.Item, {
                                   "aria-label": "scheduled",
                                   id: l.X.SCHEDULED,
@@ -126,7 +126,7 @@ function j(e) {
         ],
     });
 }
-function v(e) {
+function j(e) {
     let { tab: t } = e;
     return t === l.X.FOR_YOU
         ? (0, r.jsx)(h.Gp, {})

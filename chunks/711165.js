@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(618857),
     _ = n(695346),
     y = n(23750),
-    j = n(592125),
-    v = n(594174),
+    v = n(592125),
+    j = n(594174),
     C = n(823379),
     x = n(324081),
     E = n(240126),
@@ -148,7 +148,7 @@ function T(e) {
             () =>
                 t.reduce((e, t) => {
                     var n, r;
-                    let i = j.Z.getChannel(t.scheduledMessage.channelId);
+                    let i = v.Z.getChannel(t.scheduledMessage.channelId);
                     return (
                         null == i ||
                             (e[i.id] = {
@@ -201,7 +201,7 @@ let A = i.memo(function (e) {
         a = new y.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
-            author: v.default.getUser(t.userId),
+            author: j.default.getUser(t.userId),
             timestamp: s()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId,
         }),

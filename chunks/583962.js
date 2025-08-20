@@ -22,8 +22,8 @@ var r = n(951288),
     O = n(496675),
     _ = n(259580),
     y = n(267642),
-    j = n(624138),
-    v = n(667815),
+    v = n(624138),
+    j = n(667815),
     C = n(531572),
     x = n(18857),
     E = n(981631),
@@ -74,7 +74,7 @@ function Z(e, t) {
         e
     );
 }
-let T = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = 57,
     R = 57 + T,
     D = {
@@ -83,18 +83,18 @@ let T = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     M = i.memo((e) => {
         let { guild: t, tooltipTypes: l, withMargin: d } = e,
-            j = (0, y.Jh)(t.id),
+            v = (0, y.Jh)(t.id),
             T = (0, b.Z)(t.id),
-            A = (0, y.FZ)(j),
+            A = (0, y.FZ)(v),
             R = null == A,
-            M = null != A ? A : j,
+            M = null != A ? A : v,
             L = (0, c.e7)([C.Z], () => {
                 var e;
                 return null != (e = C.Z.getCountForGuild(t.id)) ? e : 0;
             }),
             k = (0, c.e7)([O.Z], () => O.Z.can(E.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            L !== T && (0, v.v)(t.id, T);
+            L !== T && (0, j.v)(t.id, T);
         }, [t.id, L, T]);
         let U = R ? "100%" : "".concat(Math.min(100, (T / E.oCV[M]) * 100), "%"),
             { current: G } = i.useRef(U),

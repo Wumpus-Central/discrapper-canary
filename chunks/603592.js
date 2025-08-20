@@ -20,8 +20,8 @@ let f = i.forwardRef(function (e, t) {
             tooltip: O,
             upperBadge: _,
             lowerBadge: y,
-            lowerBadgeSize: j,
-            showPill: v = !0,
+            lowerBadgeSize: v,
+            showPill: j = !0,
             className: C,
             "aria-label": x,
             children: E,
@@ -33,7 +33,7 @@ let f = i.forwardRef(function (e, t) {
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
         children: [
-            v
+            j
                 ? (0, r.jsx)("div", {
                       className: p.pill,
                       children: (0, r.jsx)(c.Z, {
@@ -49,7 +49,7 @@ let f = i.forwardRef(function (e, t) {
                     selected: !0,
                     upperBadge: _,
                     lowerBadge: y,
-                    lowerBadgeSize: j,
+                    lowerBadgeSize: v,
                     children: (0, r.jsx)(
                         s.P3F,
                         ((n = (function (e) {

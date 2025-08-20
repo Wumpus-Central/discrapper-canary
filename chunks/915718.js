@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => D }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(243778),
     g = n(590293),
     b = n(970731),
-    y = n(560688),
-    _ = n(173507),
+    _ = n(560688),
+    y = n(173507),
     C = n(523746),
     x = n(819640),
     v = n(131951),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(594174),
     E = n(979651),
     S = n(585483),
-    P = n(63063),
-    I = n(665149),
+    I = n(63063),
+    P = n(665149),
     Z = n(981631),
     T = n(921944),
     N = n(65154),
@@ -78,7 +78,7 @@ class M extends i.PureComponent {
                         : ((t = this.handleStartVideoCall),
                           (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.oCqlGB)))
                   : ((h = !0), (t = this.handleBrowserNotSupported), (p = A.intl.string(A.t.UVpg3d))),
-            (0, r.jsx)(I.ZP.Icon, {
+            (0, r.jsx)(P.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
                 disabled: h || l,
@@ -117,7 +117,7 @@ class M extends i.PureComponent {
                       : f
                         ? A.intl.string(A.t.S0W8Z2)
                         : A.intl.string(A.t.focH1t));
-        let y = (0, r.jsx)(I.ZP.Icon, {
+        let _ = (0, r.jsx)(P.ZP.Icon, {
             ref: this.iconRef,
             icon: o.Csw,
             onClick: this.handleVoiceClick,
@@ -152,7 +152,7 @@ class M extends i.PureComponent {
                                               children: A.intl.string(A.t.xAW71d),
                                           }),
                                           (0, r.jsx)(o.eee, {
-                                              href: P.Z.getArticleURL(Z.BhN.ACTIVITIES),
+                                              href: I.Z.getArticleURL(Z.BhN.ACTIVITIES),
                                               children: A.intl.string(A.t.hvVgAQ),
                                           }),
                                       ],
@@ -164,9 +164,9 @@ class M extends i.PureComponent {
                                   className: w.tooltip,
                               });
                           },
-                          children: () => y,
+                          children: () => _,
                       })
-                    : y;
+                    : _;
             },
         });
     }
@@ -182,7 +182,7 @@ class M extends i.PureComponent {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
                     l = r ? n.getRecipientId() : null,
                     a = () => s.Z.call(n.id, t, !r && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), l);
-                t ? (0, _.Z)(a, i) : a();
+                t ? (0, y.Z)(a, i) : a();
             }),
             R(this, "handleJoinCall", (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
@@ -199,14 +199,14 @@ class M extends i.PureComponent {
             R(this, "handleJoinVideoCall", () => {
                 let { appContext: e } = this.props,
                     t = () => this.handleJoinCall(!0);
-                (0, _.Z)(t, e);
+                (0, y.Z)(t, e);
             }),
             R(this, "handleBrowserNotSupported", () => {
-                (0, y.Z)();
+                (0, _.Z)();
             });
     }
 }
-function k(e) {
+function D(e) {
     var t;
     let { channel: n } = e,
         o = (0, g.Z)(),
@@ -217,17 +217,17 @@ function k(e) {
             callActive: C.Z.isCallActive(n.id),
             callUnavailable: C.Z.isCallUnavailable(n.id),
         })),
-        y = n.getRecipientId(),
-        { notFriend: _, isBlocked: v } = (0, l.cj)([O.Z], () => ({
-            notFriend: n.type === Z.d4z.DM && null != y && !O.Z.isFriend(y),
-            isBlocked: n.type === Z.d4z.DM && null != y && O.Z.isBlocked(y),
+        _ = n.getRecipientId(),
+        { notFriend: y, isBlocked: v } = (0, l.cj)([O.Z], () => ({
+            notFriend: n.type === Z.d4z.DM && null != _ && !O.Z.isFriend(_),
+            isBlocked: n.type === Z.d4z.DM && null != _ && O.Z.isBlocked(_),
         })),
-        S = (0, l.e7)([j.default], () => j.default.getUser(y)),
-        P = (0, u.bp)(),
-        I = [],
+        S = (0, l.e7)([j.default], () => j.default.getUser(_)),
+        I = (0, u.bp)(),
+        P = [],
         T = (0, p.Z)(n.id),
         N = (0, l.e7)([x.Z], () => x.Z.hasLayers());
-    T && !N && I.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
+    T && !N && P.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [A, w] = i.useState(!1);
     return (i.useEffect(() => {
         let e = setTimeout(() => {
@@ -244,12 +244,12 @@ function k(e) {
               callActive: m,
               isProvisional: null != (t = null == S ? void 0 : S.isProvisional) && t,
               callUnavailable: b,
-              notFriend: _,
+              notFriend: y,
               isBlocked: v,
-              appContext: P,
+              appContext: I,
               canShowTooltip: A,
               canShowActivityGdmTooltip: T,
-              dismissibleContentTypes: I,
+              dismissibleContentTypes: P,
               useReducedMotion: f,
           });
 }

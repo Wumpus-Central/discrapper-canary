@@ -1,6 +1,6 @@
 n.d(t, {
-    q: () => _,
-    s: () => y,
+    q: () => y,
+    s: () => _,
 });
 var r = n(951288),
     i = n(647438),
@@ -58,7 +58,7 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
+function _(e) {
     let { channel: t, narrow: n } = e,
         l = (0, p.tc)(t);
     return (
@@ -99,7 +99,7 @@ function y(e) {
         })
     );
 }
-function _(e) {
+function y(e) {
     let { channel: t, narrow: n } = e,
         l = (0, p.Xb)(t);
     return (

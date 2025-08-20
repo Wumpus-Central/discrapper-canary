@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(512722),
@@ -15,7 +15,7 @@ var i = n(512722),
     m = n(871499),
     g = n(981631),
     b = n(388032);
-function y(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,11 +40,11 @@ function y(e) {
     }
     return e;
 }
-function _(e) {
+function y(e) {
     var {
             applicationId: t,
             stream: i,
-            channel: _,
+            channel: y,
             exitFullScreen: C,
             appContext: x,
             analyticsLocation: v,
@@ -52,8 +52,8 @@ function _(e) {
             shouldPrioritizeGroupPlusIcon: j = !1,
             isRichPresenceInvite: E = !1,
             iconClassName: S,
-            look: P,
-            size: I,
+            look: I,
+            size: P,
             buttonText: Z,
             color: T,
         } = e,
@@ -95,32 +95,32 @@ function _(e) {
         ]);
     let A = (0, c.bp)(),
         { parentAnalyticsLocation: w } = (0, u.ZP)(),
-        R = null == _ ? void 0 : _.getGuildId(),
+        R = null == y ? void 0 : y.getGuildId(),
         M = (0, a.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
-        k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        D = null == t || j ? o.ejJ : o.gQj,
-        L = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
-    return null != k && E
+        D = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
+        L = null == t || j ? o.ejJ : o.gQj,
+        k = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
+    return null != D && E
         ? (0, r.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(k, !1, A);
+                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(D, !1, A);
               },
-              iconComponent: D,
-              label: L,
+              iconComponent: L,
+              label: k,
               iconClassName: S,
-              look: P,
-              size: I,
+              look: I,
+              size: P,
               buttonText: Z,
               color: null != T ? T : void 0,
           })
-        : null != M && null != _ && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, _)
+        : null != M && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, r.jsx)(
                 m.Z,
-                y(
+                _(
                     {
                         onClick: () => {
                             l()(null != M, "guild cannot be null"),
-                                l()(null != _, "channel cannot be null"),
+                                l()(null != y, "channel cannot be null"),
                                 null != w && (0, d.v)(w, d.d.INVITE),
                                 (function (e) {
                                     let {
@@ -144,7 +144,7 @@ function _(e) {
                                                     var o, s;
                                                     return (0, r.jsx)(
                                                         e,
-                                                        ((o = y({}, n)),
+                                                        ((o = _({}, n)),
                                                         (s = s =
                                                             {
                                                                 guild: t,
@@ -187,7 +187,7 @@ function _(e) {
                                         );
                                 })({
                                     guild: M,
-                                    channel: _,
+                                    channel: y,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,
                                     appContext: null != x ? x : A,
@@ -196,11 +196,11 @@ function _(e) {
                                     guildScheduledEvent: O,
                                 });
                         },
-                        iconComponent: D,
-                        label: L,
+                        iconComponent: L,
+                        label: k,
                         iconClassName: S,
-                        look: P,
-                        size: I,
+                        look: I,
+                        size: P,
                         color: T,
                         buttonText: Z,
                     },

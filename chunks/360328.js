@@ -14,7 +14,7 @@ function p(e, t, p, h) {
         b = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(d.intl.string(d.t.R0RpRU), a.ToastType.FAILURE));
         }, []),
-        y = i.useCallback(async () => {
+        _ = i.useCallback(async () => {
             if (!f && null != e && null != t && null != p) {
                 if (null != g) return void o.default.selectPrivateChannel(g.id);
                 if (!f) {
@@ -59,6 +59,6 @@ function p(e, t, p, h) {
                 });
         },
         submitting: f,
-        handleOpenInterview: y,
+        handleOpenInterview: _,
     };
 }

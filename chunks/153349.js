@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(665149),
     g = n(884902),
     b = n(670188),
-    y = n(271383),
-    _ = n(496675),
+    _ = n(271383),
+    y = n(496675),
     C = n(158776),
     x = n(471253),
     v = n(431328),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(590415),
     E = n(614173),
     S = n(618896),
-    P = n(231338),
-    I = n(388032),
+    I = n(231338),
+    P = n(388032),
     Z = n(112848);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -73,7 +73,7 @@ let A = i.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, r.jsx)(m.ZP.Icon, {
                 icon: u.Dio,
-                tooltip: I.intl.string(I.t.cpT0Cg),
+                tooltip: P.intl.string(P.t.cpT0Cg),
                 onClick: t,
             });
         return (0, r.jsxs)(m.ZP, {
@@ -83,9 +83,9 @@ let A = i.memo(function (e) {
                 (0, r.jsx)(m.ZP.Icon, {
                     icon: u.V9,
                     disabled: !0,
-                    "aria-label": I.intl.string(I.t.TYZgzc),
+                    "aria-label": P.intl.string(P.t.TYZgzc),
                 }),
-                (0, r.jsx)(m.ZP.Title, { children: I.intl.string(I.t.TYZgzc) }),
+                (0, r.jsx)(m.ZP.Title, { children: P.intl.string(P.t.TYZgzc) }),
             ],
         });
     }),
@@ -93,19 +93,19 @@ let A = i.memo(function (e) {
         var t;
         let { channel: l, participant: a, tempDisableOnInit: o = !1 } = e,
             m = i.useRef(null),
-            [_, v] = i.useState(o);
+            [y, v] = i.useState(o);
         (0, h.ZP)(() => {
-            if (!_) return;
+            if (!y) return;
             let e = setTimeout(() => v(!1), 1000);
             return () => clearTimeout(e);
         });
         let E = l.getGuildId();
         s()(null != E, "Channel cannot be guildless");
-        let { isMobile: S, status: P } = (0, c.cj)([C.Z], () => ({
+        let { isMobile: S, status: I } = (0, c.cj)([C.Z], () => ({
                 isMobile: C.Z.isMobileOnline(a.user.id),
                 status: C.Z.getStatus(a.user.id, E),
             })),
-            A = (0, c.e7)([y.ZP], () => y.ZP.getMember(E, a.user.id)),
+            A = (0, c.e7)([_.ZP], () => _.ZP.getMember(E, a.user.id)),
             w = (0, g.X7)(
                 l.guild_id,
                 null == A ? void 0 : A.userId,
@@ -114,13 +114,13 @@ let A = i.memo(function (e) {
             R = i.useMemo(() => ({ [E]: [a.user.id] }), [E, a.user.id]);
         (0, f.$)(R);
         let M = a.rtsState === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function k() {
+        function D() {
             (0, x.DT)(l, a.user.id, !1);
         }
-        function D() {
+        function L() {
             (0, x.DT)(l, a.user.id, !0);
         }
-        let L = (e) => {
+        let k = (e) => {
             (0, d.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -161,7 +161,7 @@ let A = i.memo(function (e) {
                                     {
                                         innerRef: m,
                                         className: Z.participantMemberContainer,
-                                        onContextMenu: L,
+                                        onContextMenu: k,
                                     },
                                     e,
                                 ),
@@ -172,7 +172,7 @@ let A = i.memo(function (e) {
                                             className: Z.participantAvatar,
                                             user: a.user,
                                             isMobile: S,
-                                            status: P,
+                                            status: I,
                                         }),
                                         (0, r.jsxs)("div", {
                                             className: Z.participantTextContainer,
@@ -201,30 +201,30 @@ let A = i.memo(function (e) {
                     className: Z.buttonContainer,
                     children: [
                         (0, r.jsx)(u.ua7, {
-                            text: M ? I.intl.string(I.t.h9rsTU) : I.intl.string(I.t.f0T7hI),
+                            text: M ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
                             children: (e) =>
                                 (0, r.jsx)(
                                     "div",
                                     N(T({}, e), {
                                         children: (0, r.jsx)(u.hU, {
-                                            onClick: k,
-                                            disabled: M || _,
+                                            onClick: D,
+                                            disabled: M || y,
                                             icon: u.Lrb,
                                             variant: "secondary",
-                                            "aria-label": M ? I.intl.string(I.t.h9rsTU) : I.intl.string(I.t.f0T7hI),
+                                            "aria-label": M ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
                                         }),
                                     }),
                                 ),
                         }),
                         (0, r.jsx)(u.ua7, {
-                            text: I.intl.string(I.t.moABMz),
+                            text: P.intl.string(P.t.moABMz),
                             children: (e) =>
                                 (0, r.jsx)(
                                     "div",
                                     N(T({}, e), {
                                         children: (0, r.jsx)(u.hU, {
-                                            "aria-label": I.intl.string(I.t.moABMz),
-                                            onClick: D,
+                                            "aria-label": P.intl.string(P.t.moABMz),
+                                            onClick: L,
                                             icon: u.Dio,
                                             variant: "secondary",
                                         }),
@@ -243,7 +243,7 @@ let A = i.memo(function (e) {
             className: Z.toggle,
             onChange: i,
             value: n,
-            children: I.intl.string(I.t.GYCh0d),
+            children: P.intl.string(P.t.GYCh0d),
         });
     }),
     M = i.memo(function () {
@@ -255,22 +255,22 @@ let A = i.memo(function (e) {
                     className: Z.emptyStateTitle,
                     variant: "text-lg/semibold",
                     color: "header-primary",
-                    children: I.intl.string(I.t["7R24mZ"]),
+                    children: P.intl.string(P.t["7R24mZ"]),
                 }),
                 (0, r.jsx)(u.Text, {
                     className: Z.emptyStateBody,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: I.intl.string(I.t.Rpr2s7),
+                    children: P.intl.string(P.t.Rpr2s7),
                 }),
             ],
         });
     });
-function k(e) {
+function D(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, v.Fd)(t.id),
         o = [
-            +!!(0, c.e7)([_.Z], () => _.Z.can(P.Pl.MANAGE_CHANNELS, t) || _.Z.can(P.Pl.MANAGE_ROLES, t)),
+            +!!(0, c.e7)([y.Z], () => y.Z.can(I.Pl.MANAGE_CHANNELS, t) || y.Z.can(I.Pl.MANAGE_ROLES, t)),
             Math.max(1, l.length),
         ];
     return (0, r.jsxs)("div", {
@@ -328,8 +328,8 @@ function k(e) {
                                   color: "header-secondary",
                                   children:
                                       l.length > 0
-                                          ? I.intl.formatToPlainString(I.t["5z7q5e"], { numHands: l.length })
-                                          : I.intl.string(I.t.TYZgzc),
+                                          ? P.intl.formatToPlainString(P.t["5z7q5e"], { numHands: l.length })
+                                          : P.intl.string(P.t.TYZgzc),
                               },
                               "participants-section",
                           )

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,12 +56,12 @@ function y(e, t) {
         e
     );
 }
-function _(e) {
+function y(e) {
     let {
             searchContext: t,
             searchMode: l,
             onSearchModeChange: s,
-            totalResults: _,
+            totalResults: y,
             isIndexing: x,
             isSearching: v,
             documentsIndexed: O,
@@ -75,16 +75,16 @@ function _(e) {
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",
         }),
-        P = (0, h.I)(t),
-        { totalFilters: I } = (0, c.hE)(P),
+        I = (0, h.I)(t),
+        { totalFilters: P } = (0, c.hE)(I),
         Z = i.useMemo(() => {
             if (t.type === f.aib.DMS && j) {
                 var e, n;
-                let t = null != (n = null == (e = (0, u.$G)(P).channel_id) ? void 0 : e.length) ? n : 0;
+                let t = null != (n = null == (e = (0, u.$G)(I).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? m.intl.format(m.t.A2dqWF, { filterCount: t }) : m.intl.string(m.t.tc619f);
             }
             return null;
-        }, [j, t.type, P]),
+        }, [j, t.type, I]),
         T = i.useMemo(
             () => [
                 {
@@ -105,10 +105,10 @@ function _(e) {
         N = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("37979").then(n.bind(n, 238088));
-                return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
+                return (n) => (0, r.jsx)(e, _(b({}, n), { searchContext: t }));
             });
         }, [t]),
-        A = i.useMemo(() => (I > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: I }) : m.intl.string(m.t.UdhTtr)), [I]);
+        A = i.useMemo(() => (P > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: P }) : m.intl.string(m.t.UdhTtr)), [P]);
     return (0, r.jsxs)("header", {
         className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != Z }),
         children: [
@@ -116,7 +116,7 @@ function _(e) {
                 className: g.totalResults,
                 role: "status",
                 children: (0, r.jsx)(C, {
-                    totalResults: _,
+                    totalResults: y,
                     subtitle: Z,
                     isIndexing: x,
                     isSearching: v,
@@ -198,7 +198,7 @@ function v(e) {
         children: (e) =>
             (0, r.jsxs)(
                 "div",
-                y(b({ className: g.totalResultsWrapper }, e), {
+                _(b({ className: g.totalResultsWrapper }, e), {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",

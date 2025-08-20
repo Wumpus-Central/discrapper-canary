@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(131704),
     _ = n(944486),
     y = n(626135),
-    j = n(870569),
-    v = n(981631),
+    v = n(870569),
+    j = n(981631),
     C = n(388032),
     x = n(258628);
 function E(e, t, n) {
@@ -29,7 +29,7 @@ function E(e, t, n) {
         null != e &&
         (null != n
             ? n.applicationId === e.id
-            : null != t && t.application_id === e.id && t.type === v.IIU.PLAYING && (0, u.Z)(t, v.xjy.JOIN))
+            : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN))
     );
 }
 let S = i.memo(function (e) {
@@ -59,7 +59,7 @@ let S = i.memo(function (e) {
         V = i.useCallback(() => {
             o()(null != D, "Received null activity"),
                 (0, f.v)(G, f.d.INVITE),
-                y.default.track(v.rMx.OPEN_MODAL, {
+                y.default.track(j.rMx.OPEN_MODAL, {
                     type: "Send Join Invite",
                     application_id: D.application_id,
                     location: L.location,
@@ -123,7 +123,7 @@ let S = i.memo(function (e) {
                                 sourcePID: null == A ? void 0 : A.pid,
                                 selectSource: !!U && null != _.Z.getVoiceChannelId(),
                                 guildId: t,
-                                analyticsLocation: v.Sbl.ACTIVITY_PANEL,
+                                analyticsLocation: j.Sbl.ACTIVITY_PANEL,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -172,7 +172,7 @@ let S = i.memo(function (e) {
                                     : C.intl.string(C.t.n3feND))),
                   (0, r.jsx)("div", {
                       className: x.panelButtonContainer,
-                      children: (0, r.jsx)(j.Z, {
+                      children: (0, r.jsx)(v.Z, {
                           tooltipText: S,
                           disabled: t,
                           onClick: l,
@@ -182,7 +182,7 @@ let S = i.memo(function (e) {
                 : null,
         K =
             B && null == R
-                ? (0, r.jsx)(j.Z, {
+                ? (0, r.jsx)(v.Z, {
                       tooltipText: C.intl.string(C.t["hC/Ze3"]),
                       onClick: V,
                       icon: a.ejJ,
@@ -191,7 +191,7 @@ let S = i.memo(function (e) {
         Y =
             null == R
                 ? null
-                : (0, r.jsx)(j.Z, {
+                : (0, r.jsx)(v.Z, {
                       tooltipText: C.intl.string(C.t["R/FK4O"]),
                       onClick: F(R.applicationId, R.location),
                       icon: a.PBZ,

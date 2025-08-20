@@ -14,18 +14,18 @@ var r = n(951288),
     m = n(388032);
 function g(e) {
     let { channel: t, user: g, guild: b } = e,
-        y = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
-        _ = null != g && null == y,
-        [C, x] = i.useState(_),
+        _ = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
+        y = null != g && null == _,
+        [C, x] = i.useState(y),
         v = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
     if (
         ((0, c.ZP)(() => {
-            _ && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => x(!1));
+            y && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => x(!1));
         }),
         !v)
     )
         return null;
-    let O = !0 === y ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
+    let O = !0 === _ ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
         j = "ban-user-".concat(null == g ? void 0 : g.id);
     return (0, r.jsx)(
         h.Z,
@@ -88,7 +88,7 @@ function g(e) {
                         };
                     });
             },
-            disabled: !0 === y || C,
+            disabled: !0 === _ || C,
             submitting: C,
             color: a.zx.Colors.RED,
         },

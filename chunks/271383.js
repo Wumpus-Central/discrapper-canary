@@ -1,7 +1,7 @@
 n.d(t, {
     O5: () => K,
     V6: () => W,
-    ZP: () => ej,
+    ZP: () => ek,
 }),
     n(35282),
     n(388685),
@@ -588,53 +588,40 @@ function eC(e) {
         collectibles: a.collectibles,
     });
 }
-function eN(e) {
-    var t;
-    let { message: n, guildId: r } = e;
-    (null == (t = n.resolved) ? void 0 : t.members) != null &&
-        null != r &&
-        ev({
-            id: r,
-            members: Object.entries(n.resolved.members)
-                .map((e) => {
-                    var t, r;
-                    let [i, a] = e,
-                        o = null == (r = n.resolved) || null == (t = r.users) ? void 0 : t[i];
-                    if (null != o) return N(A({}, a), { user: o });
-                })
-                .filter((e) => null != e),
-        });
+function eN(e, t) {
+    if ((null == e ? void 0 : e.members) == null || null == t) return !1;
+    ev({
+        id: t,
+        members: Object.entries(e.members)
+            .map((t) => {
+                var n;
+                let [r, i] = t,
+                    a = null == e || null == (n = e.users) ? void 0 : n[r];
+                if (null != a) return N(A({}, i), { user: a });
+            })
+            .filter((e) => null != e),
+    });
 }
 function eR(e) {
-    var t;
-    if ((null == (t = e.resolved) ? void 0 : t.members) == null) return;
-    let n = O.Z.getChannel(e.channel_id);
-    null == n ||
-        n.isPrivate() ||
-        ev({
-            id: n.guild_id,
-            members: Object.entries(e.resolved.members)
-                .map((t) => {
-                    var n, r;
-                    let [i, a] = t,
-                        o = null == (r = e.resolved) || null == (n = r.users) ? void 0 : n[i];
-                    if (null != o) return N(A({}, a), { user: o });
-                })
-                .filter((e) => null != e),
-        });
+    let { message: t, guildId: n } = e;
+    return eN(t.resolved, n);
 }
 function eP(e) {
-    let { messages: t } = e;
-    t.forEach((e) => eR(e));
+    let t = O.Z.getChannel(e.channel_id);
+    eN(e.resolved, null == t ? void 0 : t.guild_id);
 }
 function ew(e) {
+    let { messages: t } = e;
+    t.forEach((e) => eP(e));
+}
+function eD(e) {
     let { pins: t } = e;
     t.forEach((e) => {
         let { message: t } = e;
-        return eR(t);
+        return eP(t);
     });
 }
-function eD(e) {
+function ex(e) {
     let { data: t } = e,
         n = [];
     t.forEach((e) => {
@@ -645,14 +632,18 @@ function eD(e) {
             });
         });
     }),
-        eP({ messages: n });
+        ew({ messages: n });
 }
-function ex(e) {
+function eL(e) {
     let { location: t, participants: n } = e,
         r = (0, c.j)(t);
     return null != r && eO(r, n);
 }
-class eL extends (r = o.ZP.Store) {
+function ej(e) {
+    let t = O.Z.getChannel(e.channelId);
+    return eN(e.resolved, null == t ? void 0 : t.guild_id);
+}
+class eM extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(I.Z, v.Z, y.default, h.Z);
     }
@@ -765,8 +756,8 @@ class eL extends (r = o.ZP.Store) {
         return k;
     }
 }
-S(eL, "displayName", "GuildMemberStore");
-let ej = new eL(s.Z, {
+S(eM, "displayName", "GuildMemberStore");
+let ek = new eM(s.Z, {
     CONNECTION_OPEN: X,
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
     OVERLAY_INITIALIZE: $,
@@ -794,14 +785,15 @@ let ej = new eL(s.Z, {
     PASSIVE_UPDATE_V2: ec,
     CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: eA,
     LOCAL_MESSAGES_LOADED: er,
-    MESSAGE_CREATE: eN,
-    MESSAGE_UPDATE: eN,
-    LOAD_MESSAGES_SUCCESS: eP,
-    LOAD_MESSAGES_AROUND_SUCCESS: eP,
-    LOAD_RECENT_MENTIONS_SUCCESS: eP,
-    LOAD_PINNED_MESSAGES_SUCCESS: ew,
-    SEARCH_MESSAGES_SUCCESS: eD,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: eD,
+    MESSAGE_CREATE: eR,
+    MESSAGE_UPDATE: eR,
+    LOAD_MESSAGES_SUCCESS: ew,
+    LOAD_MESSAGES_AROUND_SUCCESS: ew,
+    LOAD_RECENT_MENTIONS_SUCCESS: ew,
+    LOAD_PINNED_MESSAGES_SUCCESS: eD,
+    SEARCH_MESSAGES_SUCCESS: ex,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: ex,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: em,
-    EMBEDDED_ACTIVITY_UPDATE_V2: ex,
+    EMBEDDED_ACTIVITY_UPDATE_V2: eL,
+    INTERACTION_MODAL_CREATE: ej,
 });

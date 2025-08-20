@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,13 +56,13 @@ function y(e, t) {
         e
     );
 }
-let _ = function (e) {
+let y = function (e) {
     let { channel: t } = e,
         n = (0, l.e7)([u.Z, p.default], () => {
             let e = p.default.getCurrentUser();
             return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
         }, [t]),
-        [_, C] = i.useState(!1),
+        [y, C] = i.useState(!1),
         x = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         v = (0, s.Aq)(),
         O = i.useRef(null),
@@ -84,7 +84,7 @@ let _ = function (e) {
         ),
         (0, r.jsx)(a.yRy, {
             targetElementRef: O,
-            shouldShow: _,
+            shouldShow: y,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
             align: "right",
@@ -94,7 +94,7 @@ let _ = function (e) {
             renderPopout: function (e) {
                 return (0, r.jsx)(
                     o.Z,
-                    y(b({}, e), {
+                    _(b({}, e), {
                         onJump: E,
                         channel: t,
                     }),
@@ -105,7 +105,7 @@ let _ = function (e) {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
                     f.JO,
-                    y(b({}, e), {
+                    _(b({}, e), {
                         ref: O,
                         onClick: j,
                         tooltip: i ? null : g.intl.string(g.t["mp1N//"]),

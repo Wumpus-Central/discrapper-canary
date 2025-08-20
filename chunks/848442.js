@@ -18,8 +18,8 @@ var i = n(120356),
     O = n(703656),
     _ = n(984933),
     y = n(430824),
-    j = n(626135),
-    v = n(434479),
+    v = n(626135),
+    j = n(434479),
     C = n(981631),
     x = n(176505),
     E = n(629481),
@@ -75,7 +75,7 @@ function w(e) {
         x = (null == g ? void 0 : g.features.has(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         w = "false" === s.K.get(E.tM, "false"),
         Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, r.jsx)(v.m, {
+    return (0, r.jsx)(j.m, {
         id: "shop-".concat(t),
         className: l()(I.previewChannelRow, {
             [I.selected]: n,
@@ -112,7 +112,7 @@ function w(e) {
                             if (
                                 (e.stopPropagation(),
                                 (0, b.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                j.default.track(
+                                v.default.track(
                                     C.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                     N(P({}, (0, p.hH)(t)), { action_taken: E.mz.DISMISS_CHANNEL_ROW }),
                                 ),
@@ -144,7 +144,7 @@ function Z(e) {
               selected: i,
               handleClick: o,
           })
-        : (0, r.jsx)(v.m, {
+        : (0, r.jsx)(j.m, {
               id: "shop-".concat(t.id),
               renderIcon: (e) =>
                   (0, r.jsx)(m.Z, {

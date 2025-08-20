@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(607070),
     _ = n(460181),
     y = n(585483),
-    j = n(264549),
-    v = n(981631),
+    v = n(264549),
+    j = n(981631),
     C = n(388032),
     x = n(870525);
 function E(e, t, n) {
@@ -42,13 +42,13 @@ let S = {
 };
 function I(e) {
     switch (e.keyCode) {
-        case v.yXg.ARROW_UP:
+        case j.yXg.ARROW_UP:
             return "UP";
-        case v.yXg.ARROW_DOWN:
+        case j.yXg.ARROW_DOWN:
             return "DOWN";
-        case v.yXg.ARROW_LEFT:
+        case j.yXg.ARROW_LEFT:
             return "LEFT";
-        case v.yXg.ARROW_RIGHT:
+        case j.yXg.ARROW_RIGHT:
             return "RIGHT";
         default:
             return null;
@@ -140,14 +140,14 @@ function w() {
 class Z extends i.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []),
-            y.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            y.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            y.S.subscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            y.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.addEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.addEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        y.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            y.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        y.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            y.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.removeEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.removeEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
@@ -278,11 +278,11 @@ class Z extends i.PureComponent {
                 if (
                     (this.lastInputedKeys.push(e.keyCode),
                     (this.lastInputedKeys = this.lastInputedKeys.slice(-5)),
-                    this.lastInputedKeys[0] === v.yXg.H &&
-                        this.lastInputedKeys[1] === v.yXg.H &&
-                        this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT &&
-                        this.lastInputedKeys[3] === v.yXg.N &&
-                        this.lastInputedKeys[4] === v.yXg.K &&
+                    this.lastInputedKeys[0] === j.yXg.H &&
+                        this.lastInputedKeys[1] === j.yXg.H &&
+                        this.lastInputedKeys[2] === j.yXg.ARROW_RIGHT &&
+                        this.lastInputedKeys[3] === j.yXg.N &&
+                        this.lastInputedKeys[4] === j.yXg.K &&
                         this.props.activateRagingDemon(),
                     this.props.keyboardModeEnabled)
                 )
@@ -342,7 +342,7 @@ function A(e) {
                     component: "div",
                     children: l
                         ? (0, r.jsx)(
-                              j.Z,
+                              v.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);

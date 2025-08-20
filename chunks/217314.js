@@ -18,8 +18,8 @@ function m(e) {
         m = (0, i.e7)([u.default], () => u.default.getUser(t)),
         g = (0, i.e7)([s.Z], () => s.Z.getStatus(t)),
         b = (0, i.e7)([s.Z], () => s.Z.isMobileOnline(t)),
-        y = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
-        _ = d.ZP.useUserTag(m),
+        _ = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
+        y = d.ZP.useUserTag(m),
         C = (0, a.j)({ displayNameStyles: null == m ? void 0 : m.displayNameStyles }),
         x = (0, o.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
@@ -45,10 +45,10 @@ function m(e) {
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.DY3, {
-                            text: _,
+                            text: y,
                             position: "bottom",
                             className: C,
-                            children: null != y ? y : d.ZP.getName(m),
+                            children: null != _ ? _ : d.ZP.getName(m),
                         }),
                         x &&
                             (0, r.jsx)(l.ua7, {

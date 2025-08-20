@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(607070),
     g = n(100527),
     b = n(906732),
-    y = n(541716),
-    _ = n(752305),
+    _ = n(541716),
+    y = n(752305),
     C = n(893718),
     x = n(303628),
     v = n(313201),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(665149),
     E = n(294218),
     S = n(913663),
-    P = n(268350),
-    I = n(695346),
+    I = n(268350),
+    P = n(695346),
     Z = n(592125),
     T = n(703558),
     N = n(375954),
@@ -32,18 +32,18 @@ var r = n(951288),
     w = n(117530),
     R = n(459273),
     M = n(838440),
-    k = n(127654),
-    D = n(241309),
-    L = n(928477),
+    D = n(127654),
+    L = n(241309),
+    k = n(928477),
     U = n(456077),
     B = n(488131),
-    F = n(842332),
-    H = n(602034),
-    G = n(981631),
+    G = n(842332),
+    F = n(602034),
+    H = n(981631),
     V = n(388032),
     z = n(757212),
     W = n(149623);
-function q(e) {
+function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ function q(e) {
     }
     return e;
 }
-let Y = y.Ie.THREAD_CREATION;
+let q = _.Ie.THREAD_CREATION;
 function K(e) {
     let { parentChannelId: t, parentMessageId: n, location: i } = e,
         l = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t)),
@@ -159,10 +159,10 @@ function Q(e) {
                 a = i.useCallback(
                     (n) => {
                         var r, i;
-                        l((e) => q({}, e, n)),
+                        l((e) => Y({}, e, n)),
                             u.Z.changeThreadSettings(
                                 e.id,
-                                ((r = q({}, n)),
+                                ((r = Y({}, n)),
                                 (i = i = { parentMessageId: t }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -187,14 +187,14 @@ function Q(e) {
                 updateThreadSettings: a,
             };
         })(t, n),
-        { textAreaState: b, setTextAreaState: y } = (function (e, t) {
-            let [n, r] = i.useState((0, _.H2)());
+        { textAreaState: b, setTextAreaState: _ } = (function (e, t) {
+            let [n, r] = i.useState((0, y.H2)());
             return (
                 i.useEffect(() => {
                     function n(n) {
                         var i;
                         let l = T.Z.getDraft(e.id, T.d.FirstThreadMessage);
-                        (0 === l.length || !0 === n) && r((0, _.eK)(l)),
+                        (0 === l.length || !0 === n) && r((0, y.eK)(l)),
                             t(null != (i = T.Z.getThreadSettings(e.id)) ? i : {});
                     }
                     return (
@@ -211,12 +211,12 @@ function Q(e) {
                 }
             );
         })(t, f),
-        C = (0, L.vH)(t),
+        C = (0, k.vH)(t),
         {
             isGeneratingAI: x,
             enableAIFeatures: v,
             renderAiGenerateButton: j,
-        } = (0, F.U)({
+        } = (0, G.U)({
             parentChannel: t,
             parentMessageId: n,
             updateThreadSettings: g,
@@ -225,7 +225,7 @@ function Q(e) {
         }),
         {
             nameError: E,
-            messageError: I,
+            messageError: P,
             submit: Z,
             submitting: N,
         } = (function (e) {
@@ -241,7 +241,7 @@ function Q(e) {
                 [c, u] = i.useState(null),
                 [d, p] = i.useState(null),
                 [h, f] = i.useState(!1),
-                m = (0, H.Z)({
+                m = (0, F.Z)({
                     parentChannel: t,
                     parentMessageId: n,
                     threadSettings: r,
@@ -266,14 +266,14 @@ function Q(e) {
                             (e = e.trim()),
                             (null == i || 0 === i.length) &&
                                 (i =
-                                    null == (o = S.Z.getStickerPreview(t.id, Y.drafts.type))
+                                    null == (o = S.Z.getStickerPreview(t.id, q.drafts.type))
                                         ? void 0
                                         : o.map((e) => e.id)),
                             (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, T.d.FirstThreadMessage));
                         let g = null != (c = r.name) ? c : "",
                             b = (s || null == n) && 0 === g.length,
-                            y = "" === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((u(b ? (0, D.V_)() : null), p(y ? (0, D.T4)() : null), b || y))
+                            _ = "" === e && (null == i || 0 === i.length) && 0 === l.length;
+                        if ((u(b ? (0, L.V_)() : null), p(_ ? (0, L.T4)() : null), b || _))
                             return (
                                 f(!1),
                                 {
@@ -286,7 +286,7 @@ function Q(e) {
                                 content: e,
                                 stickers: i,
                                 uploads: l,
-                                type: Y,
+                                type: q,
                                 channel: t,
                             });
                             if (!n)
@@ -302,8 +302,8 @@ function Q(e) {
                             await m(e, i, l);
                         } catch (e) {
                             return (
-                                (null == (d = e.body) ? void 0 : d.code) === G.evJ.AUTOMOD_TITLE_BLOCKED &&
-                                    u((0, D.Gx)(e.body, t)),
+                                (null == (d = e.body) ? void 0 : d.code) === H.evJ.AUTOMOD_TITLE_BLOCKED &&
+                                    u((0, L.Gx)(e.body, t)),
                                 f(!1),
                                 {
                                     shouldClear: !1,
@@ -312,7 +312,7 @@ function Q(e) {
                             );
                         }
                         return (
-                            (0, P.qB)(t.id, Y.drafts.type),
+                            (0, I.qB)(t.id, q.drafts.type),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -333,7 +333,7 @@ function Q(e) {
             location: l,
             enableAIFeatures: v,
         }),
-        A = (0, L.oD)(p, C) ? c.qtY : c.or_;
+        A = (0, k.oD)(p, C) ? c.qtY : c.or_;
     return (0, r.jsx)("div", {
         className: z.chat,
         onMouseDown: d,
@@ -370,7 +370,7 @@ function Q(e) {
                                             enableAIFeatures: v,
                                             renderAiGenerateButton: j,
                                         }),
-                                        t.type === G.d4z.GUILD_TEXT
+                                        t.type === H.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(J, {
                                                   startedFromMessage: null != n,
                                                   threadSettings: p,
@@ -393,9 +393,9 @@ function Q(e) {
                             (0, r.jsx)(ee, {
                                 parentChannel: t,
                                 textAreaState: b,
-                                setTextAreaState: y,
+                                setTextAreaState: _,
                                 submit: Z,
-                                error: I,
+                                error: P,
                             }),
                             (0, r.jsx)(h.ZP, {
                                 channel: t,
@@ -412,7 +412,7 @@ function Q(e) {
 }
 function J(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: i, privateThreadMode: l } = e,
-        a = (0, L.oD)(n, l),
+        a = (0, k.oD)(n, l),
         o = (0, r.jsx)("div", {
             className: z.privateThreadFormTitle,
             children: (0, r.jsx)("span", {
@@ -423,7 +423,7 @@ function J(e) {
         s = (0, r.jsx)(c.XZJ, {
             className: z.checkbox,
             type: c.XZJ.Types.INVERTED,
-            disabled: l === L.Jw.PrivateOnly,
+            disabled: l === k.Jw.PrivateOnly,
             value: a,
             onChange: (e, t) => i({ isPrivate: t }),
             children: (0, r.jsx)(c.Text, {
@@ -432,7 +432,7 @@ function J(e) {
                 children: V.intl.string(V.t.TRPp3t),
             }),
         });
-    return t || l === L.Jw.Disabled
+    return t || l === k.Jw.Disabled
         ? null
         : (0, r.jsxs)(c.hjN, {
               title: o,
@@ -464,15 +464,15 @@ function $(e) {
             renderAiGenerateButton: m,
         } = e,
         g = null != (t = l.name) ? t : "",
-        b = (0, D.Op)(u, { content: g }),
-        y = (0, L.Od)(n, i),
-        _ = null != i && !f,
+        b = (0, L.Op)(u, { content: g }),
+        _ = (0, k.Od)(n, i),
+        y = null != i && !f,
         C = (0, v.Dt)(),
-        x = f ? V.intl.string(V.t["Nb2/RE"]) : "" !== y ? y : V.intl.string(V.t["Nb2/RE"]);
+        x = f ? V.intl.string(V.t["Nb2/RE"]) : "" !== _ ? _ : V.intl.string(V.t["Nb2/RE"]);
     return (0, r.jsx)(c.hjN, {
         tag: "label",
         htmlFor: C,
-        title: V.intl.string(_ ? V.t.JPvIiI : V.t.j3XWjI),
+        title: V.intl.string(y ? V.t.JPvIiI : V.t.j3XWjI),
         className: z.formSection,
         children: (0, r.jsxs)("div", {
             className: z.threadNameContainer,
@@ -481,7 +481,7 @@ function $(e) {
                     value: g,
                     id: C,
                     placeholder: x,
-                    maxLength: G.HN8,
+                    maxLength: H.HN8,
                     onChange: (e) => {
                         o({ name: (0, U.Z)(e, !1) }), "" !== e ? d.Z.startTyping(n.id) : d.Z.stopTyping(n.id);
                     },
@@ -518,7 +518,7 @@ function ee(e) {
             },
             [t.id, l],
         ),
-        y = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: r } = e;
                 return s(t, r, n);
@@ -526,28 +526,28 @@ function ee(e) {
             [s],
         );
     (0, R.yp)({
-        event: G.CkL.TEXTAREA_FOCUS,
+        event: H.CkL.TEXTAREA_FOCUS,
         handler: m,
     }),
         (0, R.yp)({
-            event: G.CkL.TEXTAREA_BLUR,
+            event: H.CkL.TEXTAREA_BLUR,
             handler: g,
         });
-    let _ = (0, o.e7)([A.Z], () => A.Z.can(G.Plq.ATTACH_FILES, t)),
-        v = (0, D.Op)(p, { content: n.textValue });
+    let y = (0, o.e7)([A.Z], () => A.Z.can(H.Plq.ATTACH_FILES, t)),
+        v = (0, L.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(x.Z, {
                 channelId: t.id,
-                type: Y,
-                canAttachFiles: _,
+                type: q,
+                canAttachFiles: y,
             }),
             (0, r.jsx)("div", {
                 className: z.starterMessageError,
                 children: (0, r.jsx)(c.pdY, { error: v }),
             }),
             (0, r.jsx)(C.ZP, {
-                type: Y,
+                type: q,
                 channel: t,
                 placeholder: V.intl.string(V.t.taZfIC),
                 textValue: n.textValue,
@@ -558,8 +558,8 @@ function ee(e) {
                 onFocus: m,
                 onBlur: g,
                 onChange: b,
-                onSubmit: y,
-                promptToUpload: k.d5,
+                onSubmit: _,
+                promptToUpload: D.d5,
             }),
         ],
     });
@@ -567,7 +567,7 @@ function ee(e) {
 function et(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         i = (0, o.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
-        l = I.jU.useSetting();
+        l = P.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {
               className: z.messagePreview,

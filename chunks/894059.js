@@ -19,10 +19,9 @@ function a(e) {
                       let { default: t } = await Promise.all([
                           r.e("36599"),
                           r.e("60962"),
-                          r.e("22347"),
                           r.e("82758"),
                           r.e("61"),
-                          r.e("49084"),
+                          r.e("7082"),
                       ]).then(r.bind(r, 779250));
                       return (r) => {
                           var i, l;

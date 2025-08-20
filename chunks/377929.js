@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(933793),
     g = n(13736),
     b = n(732393),
-    y = n(137591),
-    _ = n(299206),
+    _ = n(137591),
+    y = n(299206),
     C = n(665149),
     x = n(695346),
     v = n(979651),
@@ -64,7 +64,7 @@ function S(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         a = i.useRef(null);
@@ -81,7 +81,7 @@ function P(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(I, S(E({}, e), { channel: t }));
+            return (0, r.jsx)(P, S(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -99,22 +99,22 @@ function P(e) {
         },
     });
 }
-function I(e) {
+function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
         C = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
         S = (0, g.Z)(t),
-        P = (0, _.Z)({
+        I = (0, y.Z)({
             id: t.id,
             label: j.intl.string(j.t.DQ797u),
         }),
-        I = (0, u.Z)(t),
+        P = (0, u.Z)(t),
         Z = (0, d.Z)(t),
         T = (0, p.Z)(t, "Toolbar Overflow"),
         N = (0, m.Z)(t),
         A = (0, h.Z)(t),
-        w = (0, y.Z)(t),
+        w = (0, _.Z)(t),
         R = x.vF.useSetting(),
         M = (0, o.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(s.v2r, {
@@ -146,7 +146,7 @@ function I(e) {
                 children: [w, l, C, Z],
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [I, P],
+                children: [P, I],
             }),
         ],
     });

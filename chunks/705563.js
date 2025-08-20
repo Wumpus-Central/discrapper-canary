@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -15,16 +15,16 @@ var i = n(442837),
     m = n(981631),
     g = n(388032),
     b = n(482722);
-function y(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
-        _ = d.default.cast(t),
+function _(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
+        y = d.default.cast(t),
         {
             joinRequest: C,
             isModmin: x,
             guildId: v,
             maxMembers: O,
         } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(_),
+            let e = p.Z.getRequest(y),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -37,8 +37,8 @@ function y(e) {
         E = null != O && (null != j ? j : 0) >= O,
         {
             approveRequest: S,
-            rejectRequest: P,
-            submitting: I,
+            rejectRequest: I,
+            submitting: P,
         } = (0, f.s)(
             null == C ? void 0 : C.guildId,
             null == C ? void 0 : C.userId,
@@ -89,7 +89,7 @@ function y(e) {
                               )),
                               (n = n =
                                   {
-                                      loading: I,
+                                      loading: P,
                                       onClick: S,
                                       disabled: E,
                                   }),
@@ -113,8 +113,8 @@ function y(e) {
                       variant: "critical-primary",
                       size: "sm",
                       text: g.intl.string(g.t.hDtbs7),
-                      onClick: P,
-                      disabled: I || C.applicationStatus !== h.wB.SUBMITTED,
+                      onClick: I,
+                      disabled: P || C.applicationStatus !== h.wB.SUBMITTED,
                   }),
                   n &&
                       (0, r.jsx)(l.zxk, {
@@ -128,7 +128,7 @@ function y(e) {
                           size: "sm",
                           text: g.intl.string(g.t.iXAna2),
                       }),
-                  y && (0, r.jsx)(a.ZP.Divider, {}),
+                  _ && (0, r.jsx)(a.ZP.Divider, {}),
               ],
           })
         : null;

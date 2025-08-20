@@ -16,12 +16,12 @@ function h(e) {
         g = (0, l.e7)([o.default], () => (null != m ? o.default.getUser(m) : null)),
         b = (0, l.e7)([a.Z], () => a.Z.getGuild(t.guild_id));
     (0, s.Cv)(n);
-    let y = (0, c.Z)({
+    let _ = (0, c.Z)({
             channel: t,
             user: g,
             guild: b,
         }),
-        _ = (0, d.Z)({
+        y = (0, d.Z)({
             channel: t,
             user: g,
             guild: b,
@@ -33,8 +33,8 @@ function h(e) {
                 user: g,
                 guild: b,
             }),
-            y,
             _,
+            y,
             (0, p.Z)({
                 channel: t,
                 user: g,

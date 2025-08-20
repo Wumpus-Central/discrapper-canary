@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(35282), n(388685), n(358797);
+n.d(t, { Z: () => _ }), n(35282), n(388685), n(358797);
 var r,
     i = n(442837),
     l = n(570140),
@@ -68,7 +68,7 @@ class b extends (r = i.ZP.Store) {
     }
 }
 o(b, "displayName", "UploadStore");
-let y = new b(l.Z, {
+let _ = new b(l.Z, {
     CONNECTION_OPEN: function () {
         f = {};
     },

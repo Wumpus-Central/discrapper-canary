@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(81897),
@@ -15,10 +15,10 @@ var i = n(81897),
     m = n(502762),
     g = n(686625),
     b = n(388032),
-    y = n(439178);
-function _(e) {
+    _ = n(439178);
+function y(e) {
     let { user: t, channelId: n } = e,
-        { analyticsLocations: _ } = (0, l.ZP)(),
+        { analyticsLocations: y } = (0, l.ZP)(),
         { context: C } = (0, s.KZ)(),
         x = (0, i.Z)(),
         { mutualFriendsCount: v, mutualFriends: O, mutualGuilds: j } = (0, c.Z)(t),
@@ -26,13 +26,13 @@ function _(e) {
         S = null != j && j.length > 0;
     return E || S
         ? (0, r.jsxs)(m.Z.Overlay, {
-              className: y.overlay,
+              className: _.overlay,
               children: [
                   S &&
                       (0, r.jsx)(g.Z, {
                           section: "MUTUAL_GUILDS",
                           header: b.intl.string(b.t["4lTDZm"]),
-                          listClassName: y.list,
+                          listClassName: _.list,
                           items: j.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
@@ -47,12 +47,12 @@ function _(e) {
                               );
                           }),
                       }),
-                  S && E && (0, r.jsx)(p.Z, { className: y.divider }),
+                  S && E && (0, r.jsx)(p.Z, { className: _.divider }),
                   E &&
                       (0, r.jsx)(g.Z, {
                           section: "MUTUAL_FRIENDS",
                           header: b.intl.string(b.t["0mTJ3t"]),
-                          listClassName: y.list,
+                          listClassName: _.list,
                           onExpand: () => (0, u.Z)(t.id, x),
                           items:
                               null == O
@@ -60,7 +60,7 @@ function _(e) {
                                         (0, r.jsxs)(
                                             "div",
                                             {
-                                                className: y.loadingMutualFriend,
+                                                className: _.loadingMutualFriend,
                                                 children: [
                                                     (0, r.jsx)(a.ZT, {
                                                         width: 40,
@@ -119,7 +119,7 @@ function _(e) {
                                                         (t = t =
                                                             {
                                                                 userId: i.id,
-                                                                sourceAnalyticsLocations: _,
+                                                                sourceAnalyticsLocations: y,
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(

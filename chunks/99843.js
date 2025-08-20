@@ -1,4 +1,4 @@
-n.d(t, { j: () => _ });
+n.d(t, { j: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-let y = (e) => {
+let _ = (e) => {
         let { channel: t } = e;
         return (0, d.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.ua7, {
@@ -72,7 +72,7 @@ let y = (e) => {
               })
             : null;
     },
-    _ = i.memo(function (e) {
+    y = i.memo(function (e) {
         let { channel: t } = e,
             i = t.id,
             d = (0, s.ZP)(t);
@@ -82,8 +82,8 @@ let y = (e) => {
                     text: f.intl.string(f.t["5Q9+/P"]),
                     position: "bottom",
                     children: (e) => {
-                        var { onMouseEnter: s, onClick: y } = e,
-                            _ = (function (e, t) {
+                        var { onMouseEnter: s, onClick: _ } = e,
+                            y = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
@@ -108,10 +108,10 @@ let y = (e) => {
                             })(e, ["onMouseEnter", "onClick"]);
                         return (0, r.jsxs)(
                             l.P3F,
-                            b(g({}, _), {
+                            b(g({}, y), {
                                 className: m.hoverableContainer,
                                 onClick: () => {
-                                    null == y || y(), (0, u.B)(i, o.Z.HEADER_BAR);
+                                    null == _ || _(), (0, u.B)(i, o.Z.HEADER_BAR);
                                 },
                                 onContextMenu: (e) =>
                                     (0, a.jW)(
@@ -166,7 +166,7 @@ let y = (e) => {
                         );
                     },
                 }),
-                (0, r.jsx)(y, { channel: t }),
+                (0, r.jsx)(_, { channel: t }),
             ],
         });
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -38,11 +38,11 @@ function b(e) {
     }
     return e;
 }
-function y(e) {
+function _(e) {
     let { channel: t } = e,
         [n] = t.recipients,
-        y = (0, l.e7)([s.default], () => s.default.getUser(n)),
-        _ = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
+        _ = (0, l.e7)([s.default], () => s.default.getUser(n)),
+        y = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         C = (0, d.Z)(),
         [x, v] = (0, u.Z)(n);
     if (
@@ -50,19 +50,19 @@ function y(e) {
             (0, o.t)();
         }, []),
         i.useEffect(() => {
-            (0, p.Z)(null != y ? y : n, {
+            (0, p.Z)(null != _ ? _ : n, {
                 type: "sidebar",
-                withMutualFriendsCount: (null == y ? void 0 : y.bot) !== !0,
+                withMutualFriendsCount: (null == _ ? void 0 : _.bot) !== !0,
                 withMutualFriends: !1,
                 withMutualGuilds: !0,
                 channelId: t.id,
             });
-        }, [y, n, t.id]),
-        null == y || null == _ || !C)
+        }, [_, n, t.id]),
+        null == _ || null == y || !C)
     )
         return null;
-    let O = "user-profile-sidebar-heading-".concat(y.id),
-        j = c.ZP.getName(null, t.id, y);
+    let O = "user-profile-sidebar-heading-".concat(_.id),
+        j = c.ZP.getName(null, t.id, _);
     return (0, r.jsx)("aside", {
         "aria-labelledby": O,
         children: (0, r.jsx)(a.y5t, {
@@ -77,20 +77,20 @@ function y(e) {
                       f.Z,
                       b(
                           {
-                              user: y,
-                              currentUser: _,
+                              user: _,
+                              currentUser: y,
                               onHide: v,
                           },
                           e,
                       ),
                   )
-                : y.isNonUserBot()
+                : _.isNonUserBot()
                   ? (0, r.jsx)(
                         h.Z,
                         b(
                             {
-                                user: y,
-                                currentUser: _,
+                                user: _,
+                                currentUser: y,
                             },
                             e,
                         ),
@@ -99,8 +99,8 @@ function y(e) {
                         m.Z,
                         b(
                             {
-                                user: y,
-                                currentUser: _,
+                                user: _,
+                                currentUser: y,
                             },
                             e,
                         ),

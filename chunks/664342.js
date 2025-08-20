@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(612856),
     g = n(137591),
     b = n(299206),
-    y = n(727429),
-    _ = n(665149),
+    _ = n(727429),
+    y = n(665149),
     C = n(359110),
     x = n(585483),
     v = n(407908),
@@ -23,7 +23,7 @@ var r = n(951288),
     j = n(488131),
     E = n(981631),
     S = n(388032);
-function P(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function P(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,13 +83,13 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(T, I(P({}, e), { channel: t }));
+            return (0, r.jsx)(T, P(I({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                _.ZP.Icon,
-                I(P({}, e), {
+                y.ZP.Icon,
+                P(I({}, e), {
                     ref: o,
                     onClick: s,
                     tooltip: n ? null : c,
@@ -103,13 +103,13 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
-        y = (0, c.Z)(t, "Sidebar Overflow"),
-        _ = (0, d.Z)(t),
+        _ = (0, c.Z)(t, "Sidebar Overflow"),
+        y = (0, d.Z)(t),
         v = (0, f.Z)(t),
         O = (0, m.Z)(t),
         j = (0, a.Z)(t),
-        P = (0, u.Z)(t),
-        I = (0, h.Z)(t.id),
+        I = (0, u.Z)(t),
+        P = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
         T = (0, s.Z)(t),
         N = (0, o.Z)(t),
@@ -129,7 +129,7 @@ function T(e) {
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    y,
+                    _,
                     (0, r.jsx)(l.sNh, {
                         id: "open",
                         label: S.intl.string(S.t.IxVmZm),
@@ -141,7 +141,7 @@ function T(e) {
                 children: [v, O],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z, _, I],
+                children: [Z, y, P],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -167,7 +167,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, j, P, T],
+                children: [w, j, I, T],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [N, A],
@@ -182,10 +182,10 @@ function N(e) {
             t.isForumPost() ? null : (0, r.jsx)(O.Z, { channel: t }),
             t.isModeratorReportChannel() ? (0, r.jsx)(v.Z, { channel: t }) : null,
             (0, r.jsx)(Z, { channel: t }),
-            (0, r.jsx)(_.ZP.Icon, {
+            (0, r.jsx)(y.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, j.vN)((0, y.e)(t), null != n ? n : t.parent_id),
+                onClick: () => (0, j.vN)((0, _.e)(t), null != n ? n : t.parent_id),
             }),
         ],
     });

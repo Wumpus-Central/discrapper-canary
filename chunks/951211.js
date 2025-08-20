@@ -36,8 +36,8 @@ function h(e) {
             activities: m,
             newClipsCount: g,
             canPostPolls: b,
-            canLaunchActivities: y,
-            appContext: _,
+            canLaunchActivities: _,
+            appContext: y,
             canSendScheduledMessages: C,
         } = e,
         x = [];
@@ -55,7 +55,7 @@ function h(e) {
             })),
         h &&
             t &&
-            _ !== u.IlC.POPOUT &&
+            y !== u.IlC.POPOUT &&
             x.push({
                 type: "CLIPS",
                 icon: i.AlX,
@@ -82,7 +82,7 @@ function h(e) {
                 icon: i.jje,
                 display: d.intl.string(d.t.Bbvp6O),
             }),
-        y &&
+        _ &&
             x.push({
                 type: "ACTIVITY",
                 icon: i.nG3,

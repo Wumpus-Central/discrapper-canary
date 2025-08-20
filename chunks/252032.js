@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(585483),
     g = n(630388),
     b = n(838440),
-    y = n(930282),
-    _ = n(955384),
+    _ = n(930282),
+    y = n(955384),
     C = n(981631),
     x = n(224837),
     v = n(360514);
@@ -35,12 +35,12 @@ function j(e) {
         { id: u } = n,
         m = t.getGuildId(),
         b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        y = t.type === C.d4z.GUILD_ANNOUNCEMENT,
+        _ = t.type === C.d4z.GUILD_ANNOUNCEMENT,
         j = null != b && b.features.has(C.oNc.NEWS),
-        S = y && j,
+        S = _ && j,
         {
-            editingMessage: P,
-            editingTextValue: I,
+            editingMessage: I,
+            editingTextValue: P,
             editingRichValue: Z,
         } = (0, l.cj)(
             [p.Z],
@@ -56,7 +56,7 @@ function j(e) {
             (e, r, i) => {
                 let { content: l } = i,
                     c = f.Z.can(C.Plq.MANAGE_MESSAGES, t),
-                    u = null != P && null != P.author ? P.author.id : null,
+                    u = null != I && null != I.author ? I.author.id : null,
                     d = S && (u === T || c),
                     p = {
                         content: l,
@@ -75,13 +75,13 @@ function j(e) {
                         (p.components = t);
                 }
                 return (
-                    d && null != P && (0, g.yE)(P.flags, C.iLy.CROSSPOSTED)
+                    d && null != I && (0, g.yE)(I.flags, C.iLy.CROSSPOSTED)
                         ? o.Z.confirmEdit(e, r, p)
                         : a.Z.editMessage(e, r, p),
                     Promise.resolve()
                 );
             },
-            [P, S, T, t, n],
+            [I, S, T, t, n],
         ),
         A = i.useCallback(
             (e) => {
@@ -135,12 +135,12 @@ function j(e) {
             },
             [u],
         );
-    return null != I && null != Z
-        ? (0, r.jsx)(_.Z, {
+    return null != P && null != Z
+        ? (0, r.jsx)(y.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: I,
+              textValue: P,
               richValue: Z,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
@@ -206,7 +206,7 @@ function S(e, t, n) {
               channel: l,
               message: i,
           })
-        : (0, r.jsx)(y.ZP, {
+        : (0, r.jsx)(_.ZP, {
               message: i,
               content: t,
               compact: null != a && a,

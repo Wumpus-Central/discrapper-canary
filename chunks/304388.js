@@ -74,18 +74,18 @@ let p = i.forwardRef(function (e, t) {
             isPopoutBlocked: m,
             onPopoutOpen: g,
             onPopoutClose: b,
-            onRequestClose: y,
+            onRequestClose: _,
         } = e,
-        [_, C] = i.useState(!1),
+        [y, C] = i.useState(!1),
         { isHovered: x, setIsHovered: v, onMouseEnter: O, onMouseLeave: j, cancelTimers: E } = (0, o.Z)(200, 300);
     function S(e) {
-        "focus" === e.type || _ || O();
+        "focus" === e.type || y || O();
     }
-    function P() {
-        _ || j();
+    function I() {
+        y || j();
     }
-    function I(e) {
-        E(), C(!_), _ ? null == b || b() : null == g || g(), (!x || _) && e();
+    function P(e) {
+        E(), C(!y), y ? null == b || b() : null == g || g(), (!x || y) && e();
     }
     i.useImperativeHandle(
         t,
@@ -96,7 +96,7 @@ let p = i.forwardRef(function (e, t) {
         }),
         [v, C],
     );
-    let Z = (x && !m) || _;
+    let Z = (x && !m) || y;
     return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         animation: a.yRy.Animation.FADE,
@@ -106,7 +106,7 @@ let p = i.forwardRef(function (e, t) {
         align: f,
         spacing: 16,
         onRequestClose: () => {
-            if ((null == y ? void 0 : y()) === l.F) return l.F;
+            if ((null == _ ? void 0 : _()) === l.F) return l.F;
             v(!1), C(!1), null == b || b();
         },
         renderPopout: (e) =>
@@ -117,7 +117,7 @@ let p = i.forwardRef(function (e, t) {
                         isHovered: Z,
                         onFocus: () => C(!0),
                         onMouseEnter: O,
-                        onMouseLeave: P,
+                        onMouseLeave: I,
                         renderPopout: n,
                     },
                     e,
@@ -127,14 +127,14 @@ let p = i.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, r.jsx)(r.Fragment, {
                 children: h({
-                    onClick: (e) => I(() => t(e)),
+                    onClick: (e) => P(() => t(e)),
                     onKeyDown: (e) => {
-                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && I(() => n(e));
+                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && P(() => n(e));
                     },
                     className: c.actionBarButton,
                     onMouseEnter: S,
-                    onMouseLeave: P,
-                    isActive: _,
+                    onMouseLeave: I,
+                    isActive: y,
                 }),
             });
         },

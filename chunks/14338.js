@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function y(e, t) {
         e
     );
 }
-function _(e) {
+function y(e) {
     let { channel: t, speaker: l, className: f } = e,
-        _ = i.useRef(null),
+        y = i.useRef(null),
         { newestAnalyticsLocation: C } = (0, d.ZP)(),
         x = (0, u.bp)(),
         { reducedMotion: v } = i.useContext(o.Sfi),
@@ -78,7 +78,7 @@ function _(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            y(b({}, n), {
+                            _(b({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
@@ -93,21 +93,21 @@ function _(e) {
             );
         };
     return (0, r.jsx)(h.Z, {
-        targetElementRef: _,
+        targetElementRef: y,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(o.ua7, {
-                targetElementRef: _,
+                targetElementRef: y,
                 text: l.userNick,
                 position: "bottom",
                 children: (n) =>
                     (0, r.jsx)(
                         o.P3F,
-                        y(b({}, n, e), {
-                            innerRef: _,
+                        _(b({}, n, e), {
+                            innerRef: y,
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
@@ -133,7 +133,7 @@ function C(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                _,
+                y,
                 {
                     channel: n,
                     speaker: e,

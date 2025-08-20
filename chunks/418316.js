@@ -20,7 +20,7 @@ function h(e) {
         : f.intl.format(l, { username: t });
 }
 function g(e) {
-    var t, n, r, g, m, b, O, _, y, j, v, C, x, E, S;
+    var t, n, r, g, m, b, O, _, y, v, j, C, x, E, S;
     let { item: I, renderApplication: P } = e,
         N = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : p.lds,
         w = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -36,7 +36,7 @@ function g(e) {
                 count: R,
             });
         case d.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let D = null != (v = null == (j = I.local_id) ? void 0 : j.split("_").pop()) ? v : "unknown";
+            let D = null != (j = null == (v = I.local_id) ? void 0 : v.split("_").pop()) ? j : "unknown";
             return "Update to build ".concat(D, " available!");
         case d.DY.FRIEND_SUGGESTION_CREATED:
             return a.Z.getRelationshipType(N), p.OGo.PENDING_OUTGOING, null != (C = I.body) ? C : "";

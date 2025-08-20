@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(39604),
     _ = n(981631),
     y = n(388032),
-    j = n(611372);
-function v(e) {
+    v = n(611372);
+function j(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e("21960").then(n.bind(n, 999466));
         return (t) =>
@@ -65,31 +65,31 @@ let C = (e) => {
                     dismissibleContent: o.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                     shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
-                    artClassName: j.clipsEducationArt,
+                    artClassName: v.clipsEducationArt,
                     position: "top",
                     header: (0, r.jsx)("div", {
-                        className: j.header,
+                        className: v.header,
                         children: y.intl.format(y.t["o+srEx"], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)("span", {
-                                    className: j.keybindHintKeys,
+                                    className: v.keybindHintKeys,
                                     children: (0, r.jsx)(a.M2$, {
-                                        className: j.keybindShortcut,
+                                        className: v.keybindShortcut,
                                         shortcut: t,
                                     }),
                                 }),
                         }),
                     }),
-                    headerClassName: j.clipsEducationHeader,
+                    headerClassName: v.clipsEducationHeader,
                     body: (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "always-white",
-                        className: j.bodyText,
+                        className: v.bodyText,
                         children: y.intl.format(y.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, r.jsx)("div", {
-                                    className: j.keyCombo,
+                                    className: v.keyCombo,
                                     children: t,
                                 }),
                             keybind: t,
@@ -112,9 +112,9 @@ let C = (e) => {
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
             })),
-            j = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
-        if (!(o && s) || null == j || n) return null;
-        let x = g.BB(j.shortcut, !0);
+            v = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
+        if (!(o && s) || null == v || n) return null;
+        let x = g.BB(v.shortcut, !0);
         return (0, r.jsx)(C, {
             keybindString: x,
             targetElementRef: e,
@@ -122,13 +122,13 @@ let C = (e) => {
                 ref: e,
                 disabled: d,
                 tooltipText:
-                    null != j
-                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == j ? void 0 : j.shortcut, !0) })
+                    null != v
+                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
                         : y.intl.string(y.t.s52pjo),
                 onClick: () => {
                     (0, O.C1)(), (0, u.v)(t, u.d.CLIP);
                 },
-                onContextMenu: v,
+                onContextMenu: j,
                 icon: a.AlX,
             }),
         });

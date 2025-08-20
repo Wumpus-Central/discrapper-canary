@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(699516),
     g = n(352736),
     b = n(937889),
-    y = n(739566),
-    _ = n(267128),
+    _ = n(739566),
+    y = n(267128),
     C = n(507418),
     x = n(348238),
     v = n(981631),
@@ -68,8 +68,8 @@ let S = i.memo(function (e) {
     let {
             baseMessage: n,
             referencedMessage: S,
-            channel: P,
-            compact: I = !1,
+            channel: I,
+            compact: P = !1,
             referencedUsernameProfile: Z,
             referencedAvatarProfile: T,
             setPopout: N,
@@ -77,10 +77,10 @@ let S = i.memo(function (e) {
             showReplySpine: w,
         } = e,
         R = S.state === f.Y.LOADED ? S.message : void 0,
-        M = (0, y.Uj)(R),
-        k = (0, u.p)(),
-        D = s.d.useExperiment({ location: "repliedMessage" }).enabled,
-        L = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        M = (0, _.Uj)(R),
+        D = (0, u.p)(),
+        L = s.d.useExperiment({ location: "repliedMessage" }).enabled,
+        k = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         U = i.useMemo(() => {
             if (null == R) return null;
             let e = (0, o.Z)(R);
@@ -95,7 +95,7 @@ let S = i.memo(function (e) {
                 return (0, a.Rp)(
                     (0, c.PA)({
                         username: null != M ? M.nick : e.author.username,
-                        guildId: null == P ? void 0 : P.guild_id,
+                        guildId: null == I ? void 0 : I.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData,
                     }),
                 );
@@ -126,26 +126,26 @@ let S = i.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: k,
+                        shouldFilterKeywords: D,
                     },
-                    n = e.isFirstMessageInForumPost(P)
+                    n = e.isFirstMessageInForumPost(I)
                         ? E(j({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
-                              allowGameMentions: D,
+                              allowGameMentions: L,
                           })
                         : E(j({}, t), {
                               formatInline: !0,
-                              allowHeading: L,
-                              allowList: L,
-                              allowGameMentions: D,
+                              allowHeading: k,
+                              allowList: k,
+                              allowGameMentions: L,
                           });
                 return (0, b.ZP)(e, n).content;
             }
             return null;
-        }, [R, M, P, L, k, D]),
-        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: F } = (0, l.cj)(
+        }, [R, M, I, k, D, L]),
+        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: G } = (0, l.cj)(
             [m.Z],
             () => ({
                 isReplyAuthorBlocked: null != R && m.Z.isBlockedForMessage(R),
@@ -153,9 +153,9 @@ let S = i.memo(function (e) {
             }),
             [R],
         ),
-        H = (0, x.wq)(null == R ? void 0 : R.author.id, P.id),
-        G = (0, x.$3)(n, R),
-        V = (0, x.Wl)(R, P, Z, N),
+        F = (0, x.wq)(null == R ? void 0 : R.author.id, I.id),
+        H = (0, x.$3)(n, R),
+        V = (0, x.Wl)(R, I, Z, N),
         z = (0, x.rY)(T, N),
         W = i.useCallback(() => {
             N({
@@ -163,30 +163,30 @@ let S = i.memo(function (e) {
                 referencedAvatarProfile: !1,
             });
         }, [N]),
-        q = (0, y.Uj)(n);
-    return (0, r.jsx)(_.Z, {
+        Y = (0, _.Uj)(n);
+    return (0, r.jsx)(y.Z, {
         repliedAuthor: M,
         baseMessage: n,
-        channel: P,
-        baseAuthor: q,
+        channel: I,
+        baseAuthor: Y,
         referencedMessage: S,
         content: U,
-        compact: I,
+        compact: P,
         isReplyAuthorBlocked: B,
-        isReplyAuthorIgnored: F,
+        isReplyAuthorIgnored: G,
         showAvatarPopout: T,
         showUsernamePopout: Z,
         renderPopout: C.Z,
         onClickAvatar: z,
         onClickUsername: V,
-        onClickReply: G,
-        onContextMenu: H,
+        onClickReply: H,
+        onContextMenu: F,
         onPopoutRequestClose: W,
         isReplySpineClickable: A,
         showReplySpine: w,
     });
 });
-function P(e) {
+function I(e) {
     let {
         message: t,
         channel: n,

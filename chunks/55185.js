@@ -21,7 +21,7 @@ var r,
     O = n(388032),
     _ = n(87587),
     y = n(354810);
-async function j(e) {
+async function v(e) {
     await d.hW.updateAsync(
         "status",
         (t) => {
@@ -30,7 +30,7 @@ async function j(e) {
         d.fy.INFREQUENT_USER_ACTION,
     );
 }
-function v(e) {
+function j(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -40,7 +40,7 @@ function v(e) {
             size: "sm",
             text: O.intl.string(b.default.Poezn5),
             onClick: () => {
-                t(), j(c.Skl.ONLINE);
+                t(), v(c.Skl.ONLINE);
             },
             fullWidth: !0,
         }),
@@ -84,7 +84,7 @@ function C(e) {
             }),
             (0, i.jsx)(c.rsf, {
                 onChange: (e) => {
-                    u.G6.updateSetting(e), n && j(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
+                    u.G6.updateSetting(e), n && v(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
                 },
                 checked: t,
             }),
@@ -176,7 +176,7 @@ function S(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }
@@ -244,7 +244,7 @@ function N(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }

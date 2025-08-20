@@ -760,48 +760,47 @@ function e4() {
                 eT();
         }),
             eM(),
-            u &&
-                L.ZP.setGameDetectionCallback((e, t) => {
-                    if (e.length === t.length)
-                        for (let [i, a] of e.entries()) {
-                            var n, r;
-                            let e = t[i],
-                                o = A.Z.getGameByName(a.name),
-                                s = A.Z.getGameByName(e.name);
-                            R.default.track(U.rMx.GAME_DETECTION_COMPARISON, {
-                                game_platform: U.M7m.DESKTOP,
-                                detection_method: "process_observer",
-                                game_v1: a.name,
-                                orig_game_name_v1: a.origGameName,
-                                game_id_v1: null == o ? void 0 : o.id,
-                                distributor_v1: a.distributor,
-                                verified_v1: (0, M.vp)(
-                                    a.exePath,
-                                    null != (n = null == o ? void 0 : o.executables) ? n : [],
-                                ),
-                                is_launcher_v1: a.isLauncher,
-                                game_detection_enabled_v1: eP(a),
-                                executable_path_v1: (0, M.N6)(a.exePath),
-                                distributor_game_id_v1: a.sku,
-                                hidden_by_distributor_v1: a.hidden,
-                                game_metadata_v1: (0, T.sD)(a),
-                                game_v2: e.name,
-                                orig_game_name_v2: e.origGameName,
-                                game_id_v2: null == s ? void 0 : s.id,
-                                distributor_v2: e.distributor,
-                                verified_v2: (0, M.vp)(
-                                    e.exePath,
-                                    null != (r = null == s ? void 0 : s.executables) ? r : [],
-                                ),
-                                is_launcher_v2: e.isLauncher,
-                                game_detection_enabled_v2: eP(e),
-                                executable_path_v2: (0, M.N6)(e.exePath),
-                                distributor_game_id_v2: e.sku,
-                                hidden_by_distributor_v2: e.hidden,
-                                game_metadata_v2: (0, T.sD)(e),
-                            });
-                        }
-                });
+            L.ZP.setGameDetectionCallback((e, t) => {
+                if (e.length === t.length)
+                    for (let [i, a] of e.entries()) {
+                        var n, r;
+                        let e = t[i],
+                            o = A.Z.getGameByName(a.name),
+                            s = A.Z.getGameByName(e.name);
+                        R.default.track(U.rMx.GAME_DETECTION_COMPARISON, {
+                            game_platform: U.M7m.DESKTOP,
+                            detection_method: u ? "process_observer_v2" : "process_observer_v1",
+                            game_v1: a.name,
+                            orig_game_name_v1: a.origGameName,
+                            game_id_v1: null == o ? void 0 : o.id,
+                            distributor_v1: a.distributor,
+                            verified_v1: (0, M.vp)(
+                                a.exePath,
+                                null != (n = null == o ? void 0 : o.executables) ? n : [],
+                            ),
+                            is_launcher_v1: a.isLauncher,
+                            game_detection_enabled_v1: eP(a),
+                            executable_path_v1: (0, M.N6)(a.exePath),
+                            distributor_game_id_v1: a.sku,
+                            hidden_by_distributor_v1: a.hidden,
+                            game_metadata_v1: (0, T.sD)(a),
+                            game_v2: e.name,
+                            orig_game_name_v2: e.origGameName,
+                            game_id_v2: null == s ? void 0 : s.id,
+                            distributor_v2: e.distributor,
+                            verified_v2: (0, M.vp)(
+                                e.exePath,
+                                null != (r = null == s ? void 0 : s.executables) ? r : [],
+                            ),
+                            is_launcher_v2: e.isLauncher,
+                            game_detection_enabled_v2: eP(e),
+                            executable_path_v2: (0, M.N6)(e.exePath),
+                            distributor_game_id_v2: e.sku,
+                            hidden_by_distributor_v2: e.hidden,
+                            game_metadata_v2: (0, T.sD)(e),
+                        });
+                    }
+            });
     });
 class e8 extends (i = c.ZP.Store) {
     initialize() {

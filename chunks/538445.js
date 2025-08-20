@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(5192),
     _ = n(944888),
     y = n(234368),
-    j = n(981631),
-    v = n(921944),
+    v = n(981631),
+    j = n(921944),
     C = n(989308),
     x = n(388032),
     E = n(49777),
@@ -32,7 +32,7 @@ function N(e) {
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         Z = i.useCallback(() => {
             (0, f.u)({
-                analyticsLocation: { section: j.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
+                analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: w,
                 guild: t,
@@ -86,7 +86,7 @@ function N(e) {
                 (0, r.jsx)(c.olH, {
                     className: E.close,
                     innerClassName: E.innerClose,
-                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS)),
+                    onClick: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
                 }),
             ],
         }),

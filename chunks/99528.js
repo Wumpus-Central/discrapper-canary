@@ -1,20 +1,20 @@
-e.d(n, { Z: () => s });
-var l = e(951288);
-e(647438);
-var i = e(442837),
-    r = e(481060),
-    o = e(726521),
-    a = e(924301),
-    c = e(388032);
-function s(t) {
-    let n = (0, i.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(t), [t]);
-    return null == t || null == n
+n.d(e, { Z: () => a });
+var l = n(951288);
+n(647438);
+var r = n(442837),
+    i = n(481060),
+    o = n(726521),
+    u = n(924301),
+    c = n(388032);
+function a(t) {
+    let e = (0, r.e7)([u.ZP], () => u.ZP.getGuildScheduledEvent(t), [t]);
+    return null == t || null == e
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, l.jsx)(i.sNh, {
               id: "report-event",
               label: c.intl.string(c.t.IBA5wc),
-              action: () => (0, o.d$)(n),
-              icon: r.U65,
+              action: () => (0, o.d$)(e),
+              icon: i.U65,
               color: "danger",
           });
 }

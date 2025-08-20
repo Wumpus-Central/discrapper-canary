@@ -1,13 +1,13 @@
-e.d(n, { Z: () => a });
-var i = e(442837),
-    d = e(314897),
-    l = e(979651),
-    r = e(258609);
-function a() {
-    return (0, i.e7)([d.default, l.Z, r.Z], () => {
-        var t;
-        let n = d.default.getId(),
-            e = r.Z.getRemoteSessionId();
-        return null != (t = l.Z.getVoiceStateForSession(n, e)) ? t : void 0;
+n.d(t, { Z: () => c });
+var r = n(442837),
+    l = n(314897),
+    i = n(979651),
+    u = n(258609);
+function c() {
+    return (0, r.e7)([l.default, i.Z, u.Z], () => {
+        var e;
+        let t = l.default.getId(),
+            n = u.Z.getRemoteSessionId();
+        return null != (e = i.Z.getVoiceStateForSession(t, n)) ? e : void 0;
     }, []);
 }

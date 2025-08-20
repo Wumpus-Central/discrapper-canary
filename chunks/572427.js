@@ -1,39 +1,39 @@
-e.d(n, { Z: () => s });
-var l = e(951288);
-e(647438);
-var i = e(481060),
-    r = e(572004),
-    o = e(592126),
-    a = e(981631),
-    c = e(388032);
-function s(t, n, e) {
-    let s = null != e,
-        { isMember: u } = (0, o.Z)(n, t);
-    if (!u) return null;
+n.d(e, { Z: () => s });
+var l = n(951288);
+n(647438);
+var r = n(442837),
+    i = n(481060),
+    o = n(430824),
+    u = n(572004),
+    c = n(981631),
+    a = n(388032);
+function s(t, e, n) {
+    let s = null != n;
+    if (null == (0, r.e7)([o.Z], () => o.Z.getGuild(e), [e])) return null;
     function d() {
         let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            o = ""
+            r = ""
                 .concat(location.protocol, "//")
                 .concat(location.host)
-                .concat(a.Z5c.GUILD_EVENT_DETAILS(n, t, l ? null : e));
-        (0, r.JG)(o, () => (0, i.showToast)((0, i.createToast)(c.intl.string(c.t["L/PwZW"]), i.ToastType.SUCCESS)));
+                .concat(c.Z5c.GUILD_EVENT_DETAILS(e, t, l ? null : n));
+        (0, u.JG)(r, () => (0, i.showToast)((0, i.createToast)(a.intl.string(a.t["L/PwZW"]), i.ToastType.SUCCESS)));
     }
     return (0, l.jsx)(i.sNh, {
-        id: c.intl.string(c.t["9o+VKy"]),
-        label: c.intl.string(c.t["9o+VKy"]),
+        id: a.intl.string(a.t["9o+VKy"]),
+        label: a.intl.string(a.t["9o+VKy"]),
         action: s ? void 0 : () => d(!0),
         children:
             s &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(i.sNh, {
-                        id: c.intl.string(c.t.QLtDqK),
-                        label: c.intl.string(c.t.QLtDqK),
+                        id: a.intl.string(a.t.QLtDqK),
+                        label: a.intl.string(a.t.QLtDqK),
                         action: () => d(!1),
                     }),
                     (0, l.jsx)(i.sNh, {
-                        id: c.intl.string(c.t.AYnhBw),
-                        label: c.intl.string(c.t.AYnhBw),
+                        id: a.intl.string(a.t.AYnhBw),
+                        label: a.intl.string(a.t.AYnhBw),
                         action: () => d(!0),
                     }),
                 ],

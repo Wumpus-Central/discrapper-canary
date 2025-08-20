@@ -14,17 +14,17 @@ var r,
     m = n(388032),
     g = n(748788);
 let b = ["embedded_cover"],
-    y = {
+    _ = {
         tension: 800,
         friction: 24,
     };
-var _ =
-    (((r = _ || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+var y =
+    (((r = y || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (r[(r.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     r);
 function C(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: _ = 0, animatedDivClass: C, commandOrigin: x } = e,
+    let { context: n, activityItem: r, onClick: a, aspectRatio: y = 0, animatedDivClass: C, commandOrigin: x } = e,
         {
             onActivityItemSelected: v,
             imageBackground: O,
@@ -40,13 +40,13 @@ function C(e) {
             assetNames: b,
             commandOrigin: x,
         }),
-        [S, P] = l.useState(!1),
-        I = l.useCallback(() => {
-            P(!0);
-        }, [P]),
+        [S, I] = l.useState(!1),
+        P = l.useCallback(() => {
+            I(!0);
+        }, [I]),
         Z = l.useCallback(() => {
-            P(!1);
-        }, [P]),
+            I(!1);
+        }, [I]),
         T = l.useMemo(
             () =>
                 (0, i.jsx)("div", {
@@ -91,13 +91,13 @@ function C(e) {
         }, [j]);
     return (0, i.jsx)(c.P3F, {
         onClick: v,
-        onFocus: I,
+        onFocus: P,
         onBlur: Z,
-        onMouseEnter: I,
+        onMouseEnter: P,
         onMouseLeave: Z,
         className: g.activityItemButtonInnerClass,
         children: (0, i.jsx)(c.AMe, {
-            config: y,
+            config: _,
             from: { value: 0 },
             to: { value: +!!S },
             children: (e) => {
@@ -107,8 +107,8 @@ function C(e) {
                     children: (e) =>
                         (0, i.jsxs)(s.animated.div, {
                             className: o()(e, g.activityItem, C, {
-                                [g.activityItem_13_11]: 0 === _,
-                                [g.activityItem_16_9]: 1 === _,
+                                [g.activityItem_13_11]: 0 === y,
+                                [g.activityItem_16_9]: 1 === y,
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
@@ -129,4 +129,4 @@ function C(e) {
         }),
     });
 }
-C.AspectRatio = _;
+C.AspectRatio = y;

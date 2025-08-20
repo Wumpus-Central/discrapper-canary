@@ -1,4 +1,4 @@
-n.d(t, { j: () => j }), n(388685);
+n.d(t, { j: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -17,9 +17,9 @@ var r = n(951288),
     O = n(981631),
     _ = n(921944),
     y = n(46140);
-let j = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: j } = e,
-        [v, C] = (0, i.useState)(!1),
+let v = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
+        [j, C] = (0, i.useState)(!1),
         x = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)("SharingPrivacyPopout"),
@@ -40,14 +40,14 @@ let j = (e) => {
     return ((0, i.useEffect)(() => {
         n && g.default.track(O.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]),
-    null != x || v)
+    null != x || j)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          (0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), j(!1), C(!1);
+                          (0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), v(!1), C(!1);
                       };
                       return (0, r.jsx)(a.yRy, {
                           targetElementRef: E,

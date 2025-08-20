@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(276952),
     _ = n(199540),
     y = n(40153),
-    j = n(252686),
-    v = n(682662),
+    v = n(252686),
+    j = n(682662),
     C = n(662146),
     x = n(981631),
     E = n(388032),
@@ -96,7 +96,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(v.H, {
+            ec = (0, r.jsxs)(j.H, {
                 children: [
                     (0, r.jsx)(O.Z, {
                         disabled: $ || s,
@@ -122,7 +122,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             "data-dnd-name": er,
                             children: $
-                                ? (0, r.jsx)(j.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
                                 : (0, r.jsx)(_.Z, {
                                       folderNode: t,
                                       expanded: s,

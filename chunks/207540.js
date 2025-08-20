@@ -1,157 +1,157 @@
-e.d(n, { default: () => G }), e(388685);
-var i = e(951288),
-    l = e(647438),
-    d = e(442837),
-    r = e(82659),
-    a = e(481060),
-    s = e(933557),
-    _ = e(156699),
-    E = e(734893),
-    o = e(693196),
-    u = e(66999),
-    p = e(575830),
-    I = e(554747),
-    T = e(434404),
-    g = e(144140),
-    U = e(314897),
-    m = e(430824),
-    c = e(496675),
-    C = e(981631),
-    D = e(388032);
-let G = (t) => {
-    let { channel: n, onClose: e, onConfirm: G, transitionState: L } = t,
-        y = (0, s.ZP)(n, !0),
-        S = n.id,
-        O = n.isForumPost(),
-        A = (0, d.e7)([m.Z], () => m.Z.getGuild(n.getGuildId())),
-        f = (0, I.u1)(S),
-        { isSubscriptionGated: z } = (0, u.Z)(n.id),
-        v = (0, p.Z)(A, n),
-        [N, h] = l.useState(),
-        R = (0, d.e7)([U.default], () => n.isOwner(U.default.getId()), [n]),
-        H = (0, d.e7)([c.Z], () => c.Z.can(n.isThread() ? C.Plq.MANAGE_THREADS : C.Plq.MANAGE_CHANNELS, n), [n]),
-        B = (0, d.e7)([g.Z], () => {
-            var t;
-            return null != (t = g.Z.getCount(n.id)) ? t : 0;
-        }, [n.id]),
-        M = O && (H || (R && B < 1)),
-        b = f.length > 0 && (n.type === C.d4z.GUILD_VOICE || n.type === C.d4z.GUILD_STAGE_VOICE);
+n.d(t, { default: () => v }), n(388685);
+var l = n(951288),
+    i = n(647438),
+    r = n(442837),
+    u = n(82659),
+    a = n(481060),
+    o = n(933557),
+    s = n(156699),
+    c = n(734893),
+    d = n(693196),
+    E = n(66999),
+    f = n(575830),
+    N = n(554747),
+    g = n(434404),
+    _ = n(144140),
+    m = n(314897),
+    Z = n(430824),
+    O = n(496675),
+    p = n(981631),
+    h = n(388032);
+let v = (e) => {
+    let { channel: t, onClose: n, onConfirm: v, transitionState: C } = e,
+        P = (0, o.ZP)(t, !0),
+        S = t.id,
+        I = t.isForumPost(),
+        T = (0, r.e7)([Z.Z], () => Z.Z.getGuild(t.getGuildId())),
+        D = (0, N.u1)(S),
+        { isSubscriptionGated: y } = (0, E.Z)(t.id),
+        b = (0, f.Z)(T, t),
+        [w, G] = i.useState(),
+        A = (0, r.e7)([m.default], () => t.isOwner(m.default.getId()), [t]),
+        U = (0, r.e7)([O.Z], () => O.Z.can(t.isThread() ? p.Plq.MANAGE_THREADS : p.Plq.MANAGE_CHANNELS, t), [t]),
+        j = (0, r.e7)([_.Z], () => {
+            var e;
+            return null != (e = _.Z.getCount(t.id)) ? e : 0;
+        }, [t.id]),
+        L = I && (U || (A && j < 1)),
+        V = D.length > 0 && (t.type === p.d4z.GUILD_VOICE || t.type === p.d4z.GUILD_STAGE_VOICE);
     if (
-        (l.useEffect(() => {
+        (i.useEffect(() => {
             (async () => {
-                if (!(await (0, _.C)(n.getGuildId(), S))) return h(E.j.DEFAULT);
-                let t = await (0, o.T)(n.getGuildId(), S);
-                if (null != t) return h(t);
+                if (!(await (0, s.C)(t.getGuildId(), S))) return G(c.j.DEFAULT);
+                let e = await (0, d.T)(t.getGuildId(), S);
+                if (null != e) return G(e);
             })();
-        }, [n, S]),
-        l.useEffect(() => {
-            null != A &&
-                A.features.has(C.oNc.COMMUNITY) &&
-                (A.rulesChannelId === S ? h(E.j.RULES) : A.publicUpdatesChannelId === S && h(E.j.UPDATES));
-        }, [A, S]),
-        null == A)
+        }, [t, S]),
+        i.useEffect(() => {
+            null != T &&
+                T.features.has(p.oNc.COMMUNITY) &&
+                (T.rulesChannelId === S ? G(c.j.RULES) : T.publicUpdatesChannelId === S && G(c.j.UPDATES));
+        }, [T, S]),
+        null == T)
     )
         return null;
-    if (null != N) {
-        let t,
-            n = async () => {
-                await T.Z.open(A.id, C.pNK.ONBOARDING), await e();
+    if (null != w) {
+        let e,
+            t = async () => {
+                await g.Z.open(T.id, p.pNK.ONBOARDING), await n();
             },
-            l = async () => {
-                await T.Z.open(A.id, C.pNK.COMMUNITY), await e();
+            i = async () => {
+                await g.Z.open(T.id, p.pNK.COMMUNITY), await n();
             };
-        switch (N) {
-            case E.j.DEFAULT:
-                t = D.intl.format(D.t.iWlB6u, { onClick: n });
+        switch (w) {
+            case c.j.DEFAULT:
+                e = h.intl.format(h.t.iWlB6u, { onClick: t });
                 break;
-            case E.j.TODO:
-                t = D.intl.format(D.t["/rjozM"], { onClick: n });
+            case c.j.TODO:
+                e = h.intl.format(h.t["/rjozM"], { onClick: t });
                 break;
-            case E.j.RESOURCE:
-                t = D.intl.format(D.t.Nf5pt7, { onClick: n });
+            case c.j.RESOURCE:
+                e = h.intl.format(h.t.Nf5pt7, { onClick: t });
                 break;
-            case E.j.RULES:
-                t = D.intl.format(D.t["kB1f+/"], {
-                    reason: D.intl.string(D.t.yjrZPj),
-                    onClick: l,
+            case c.j.RULES:
+                e = h.intl.format(h.t["kB1f+/"], {
+                    reason: h.intl.string(h.t.yjrZPj),
+                    onClick: i,
                 });
                 break;
-            case E.j.UPDATES:
-                t = D.intl.format(D.t["kB1f+/"], {
-                    reason: D.intl.string(D.t["1B1/ND"]),
-                    onClick: l,
+            case c.j.UPDATES:
+                e = h.intl.format(h.t["kB1f+/"], {
+                    reason: h.intl.string(h.t["1B1/ND"]),
+                    onClick: i,
                 });
         }
-        return (0, i.jsx)(r.Modal, {
-            title: D.intl.string(D.t["TY/V+P"]),
-            onClose: e,
-            subtitle: t,
-            transitionState: L,
+        return (0, l.jsx)(u.Modal, {
+            title: h.intl.string(h.t["TY/V+P"]),
+            onClose: n,
+            subtitle: e,
+            transitionState: C,
             actions: [
                 {
-                    text: D.intl.string(D.t.BddRzc),
-                    onClick: e,
+                    text: h.intl.string(h.t.BddRzc),
+                    onClick: n,
                     variant: "primary",
                 },
             ],
         });
     }
-    let { deleteText: P, deleteBody: Z } =
-        n.type === C.d4z.GUILD_CATEGORY
+    let { deleteText: M, deleteBody: k } =
+        t.type === p.d4z.GUILD_CATEGORY
             ? {
-                  deleteText: D.intl.string(D.t.ifbXnJ),
-                  deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: y }),
+                  deleteText: h.intl.string(h.t.ifbXnJ),
+                  deleteBody: h.intl.format(h.t.a6Gz9P, { channelName: P }),
               }
-            : n.isForumPost()
+            : t.isForumPost()
               ? {
-                    deleteText: M ? D.intl.string(D.t.nEOg1N) : D.intl.string(D.t.xwMqDw),
+                    deleteText: L ? h.intl.string(h.t.nEOg1N) : h.intl.string(h.t.xwMqDw),
                     deleteBody:
-                        M && R && !H
-                            ? D.intl.format(D.t["6/pY29"], { postName: y })
-                            : M
-                              ? D.intl.format(D.t.su3voK, { postName: y })
-                              : D.intl.string(D.t.RUHcys),
+                        L && A && !U
+                            ? h.intl.format(h.t["6/pY29"], { postName: P })
+                            : L
+                              ? h.intl.format(h.t.su3voK, { postName: P })
+                              : h.intl.string(h.t.RUHcys),
                 }
-              : n.isThread()
+              : t.isThread()
                 ? {
-                      deleteText: D.intl.string(D.t.H7vTe3),
-                      deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: y }),
+                      deleteText: h.intl.string(h.t.H7vTe3),
+                      deleteBody: h.intl.format(h.t.a6Gz9P, { channelName: P }),
                   }
-                : z && v > 0
+                : y && b > 0
                   ? {
-                        deleteText: D.intl.string(D.t["8D8Rsb"]),
-                        deleteBody: D.intl.format(D.t["+qkiT0"], {
-                            channelName: y,
-                            numGuildRoleSubscriptionMembers: v,
+                        deleteText: h.intl.string(h.t["8D8Rsb"]),
+                        deleteBody: h.intl.format(h.t["+qkiT0"], {
+                            channelName: P,
+                            numGuildRoleSubscriptionMembers: b,
                         }),
                     }
                   : {
-                        deleteText: D.intl.string(D.t["8D8Rsb"]),
-                        deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: y }),
+                        deleteText: h.intl.string(h.t["8D8Rsb"]),
+                        deleteBody: h.intl.format(h.t.a6Gz9P, { channelName: P }),
                     };
-    return (0, i.jsx)(r.Modal, {
+    return (0, l.jsx)(u.Modal, {
         size: "sm",
-        onClose: e,
-        transitionState: L,
-        title: P,
-        subtitle: Z,
+        onClose: n,
+        transitionState: C,
+        title: M,
+        subtitle: k,
         actions: [
             {
-                text: D.intl.string(D.t["ETE/oK"]),
-                onClick: e,
+                text: h.intl.string(h.t["ETE/oK"]),
+                onClick: n,
                 variant: "secondary",
             },
             {
-                text: P,
-                onClick: G,
+                text: M,
+                onClick: v,
                 variant: "critical-primary",
             },
         ],
-        children: b
-            ? (0, i.jsx)(a.Text, {
+        children: V
+            ? (0, l.jsx)(a.Text, {
                   variant: "text-md/normal",
                   color: "header-secondary",
-                  children: D.intl.format(D.t.Ze005O, { count: f.length }),
+                  children: h.intl.format(h.t.Ze005O, { count: D.length }),
               })
             : null,
     });

@@ -16,8 +16,8 @@ var i = n(100527),
 function g(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(i.Z.VOICE_CONTROL_TRAY),
-        y = (0, o.Z)(),
-        { isSharedCanvasEnabled: _ } = c.Z.useExperiment({
+        _ = (0, o.Z)(),
+        { isSharedCanvasEnabled: y } = c.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: "b7309a_1",
         }),
@@ -26,9 +26,9 @@ function g(e) {
             { autoTrackExposure: !1 },
         ),
         x = (0, a.Z)(u.Z);
-    if (null == t || null != y) return null;
+    if (null == t || null != _) return null;
     let v = C && x,
-        O = _ && n;
+        O = y && n;
     return (0, r.jsxs)(l.Gt, {
         value: b,
         children: [

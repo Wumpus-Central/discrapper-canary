@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(185413),
     g = n(42311),
     b = n(626786),
-    y = n(434404),
-    _ = n(454585),
+    _ = n(434404),
+    y = n(454585),
     C = n(345162),
     x = n(485386),
     v = n(430824),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(594174),
     E = n(700785),
     S = n(51144),
-    P = n(396769),
-    I = n(967128),
+    I = n(396769),
+    P = n(967128),
     Z = n(318374),
     T = n(981631),
     N = n(388032),
@@ -36,14 +36,14 @@ function R(e) {
         o = (0, f.ZP)(t, !0),
         R = t.guild_id,
         M = (0, u.e7)([x.Z], () => (null != R ? x.Z.getSortedRoles(R) : void 0)),
-        k = (0, u.e7)([j.default, v.Z], () => {
+        D = (0, u.e7)([j.default, v.Z], () => {
             var e;
             return j.default.getUser(null == (e = v.Z.getGuild(R)) ? void 0 : e.ownerId);
         }),
-        D = i.useMemo(() => (null != M ? M.filter((e) => !(0, C.fI)(e)) : []), [M]),
-        L = i.useMemo(
+        L = i.useMemo(() => (null != M ? M.filter((e) => !(0, C.fI)(e)) : []), [M]),
+        k = i.useMemo(
             () =>
-                s()(D)
+                s()(L)
                     .filter((e) => {
                         if (null == R) return !1;
                         let n = E.I0({
@@ -53,11 +53,11 @@ function R(e) {
                         return c.Db(n, c.$e(T.Plq.ADMINISTRATOR, T.Plq.VIEW_CHANNEL));
                     })
                     .value(),
-            [t, R, D],
+            [t, R, L],
         ),
         U = (0, u.Wu)([j.default], () => {
             let e = {};
-            for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
+            for (let n of (null != D && (e[D.id] = D), Object.values(t.permissionOverwrites))) {
                 if (n.type !== h.BN.MEMBER || null != e[n.id]) continue;
                 let t = j.default.getUser(n.id);
                 null != t && (e[t.id] = t);
@@ -75,29 +75,29 @@ function R(e) {
                     return r || l;
                 })
                 .value();
-        }, [t, k]),
+        }, [t, D]),
         B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
-        F = i.useCallback(() => l(!1), []);
-    return (0, r.jsxs)(I.ZP, {
+        G = i.useCallback(() => l(!1), []);
+    return (0, r.jsxs)(P.ZP, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(I.Kq, {
+            (0, r.jsx)(P.Kq, {
                 locked: !0,
                 channelType: t.type,
             }),
-            (0, r.jsx)(I.Ot, { children: N.intl.format(N.t.I3R7Vl, { channelName: o }) }),
-            (0, r.jsx)(I.jz, {
+            (0, r.jsx)(P.Ot, { children: N.intl.format(N.t.I3R7Vl, { channelName: o }) }),
+            (0, r.jsx)(P.jz, {
                 className: w.markup,
                 children: N.intl.format(N.t.QuwqjI, {
                     channelName: o,
-                    topicHook: () => _.Z.parseTopic(t.topic, !0, { channelId: t.id }),
+                    topicHook: () => y.Z.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
             }),
             B
                 ? (0, r.jsxs)("div", {
                       className: A.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(I.Z, {
                               label: N.intl.string(N.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(d.BFJ, {
@@ -105,7 +105,7 @@ function R(e) {
                                   color: "currentColor",
                               }),
                           }),
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(I.Z, {
                               label: N.intl.string(N.t["3gUsJS"]),
                               onClick: function () {
                                   p.ZP.open(t.id);
@@ -122,7 +122,7 @@ function R(e) {
                 className: A.members,
                 children: [
                     (function () {
-                        if (1 !== U.length || L.length > 0)
+                        if (1 !== U.length || k.length > 0)
                             return (0, r.jsx)(Z.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
@@ -155,7 +155,7 @@ function R(e) {
                             ],
                         });
                     })(),
-                    L.map((e, n) => {
+                    k.map((e, n) => {
                         var i, l;
                         let o = null != (l = e.colorString) ? l : T.Pbq,
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
@@ -163,13 +163,13 @@ function R(e) {
                             ? (0, r.jsx)(
                                   g.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       disabled: !B,
                                       verified: s,
                                       onClick: () => {
-                                          y.Z.open(t.guild_id, T.pNK.MEMBERS), y.Z.selectRole(e.id);
+                                          _.Z.open(t.guild_id, T.pNK.MEMBERS), _.Z.selectRole(e.id);
                                       },
                                   },
                                   e.id,
@@ -177,7 +177,7 @@ function R(e) {
                             : (0, r.jsx)(
                                   b.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       verified: s,
@@ -220,7 +220,7 @@ function R(e) {
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (F(), e.onClose()),
+                                      onClose: () => (G(), e.onClose()),
                                       channelId: t.id,
                                   }),
                               Object.getOwnPropertyDescriptors

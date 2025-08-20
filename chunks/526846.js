@@ -1,4 +1,4 @@
-n.d(t, { m: () => L }), n(997841), n(953529);
+n.d(t, { m: () => k }), n(997841), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(100527),
     g = n(906732),
     b = n(783097),
-    y = n(226026),
-    _ = n(397698),
+    _ = n(226026),
+    y = n(397698),
     C = n(895924),
     x = n(471518),
     v = n(425986),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(390322),
     E = n(857192),
     S = n(626135),
-    P = n(456100),
-    I = n(566620),
+    I = n(456100),
+    P = n(566620),
     Z = n(127255),
     T = n(5200),
     N = n(558317),
@@ -32,8 +32,8 @@ var r = n(951288),
     w = n(388032),
     R = n(201512);
 let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = "vc-activities-".concat((0, o.Z)());
-function D(e) {
+    D = "vc-activities-".concat((0, o.Z)());
+function L(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -67,7 +67,7 @@ function D(e) {
             let e = null == h ? void 0 : h.application_directory_collection_items[0];
             return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
         }, [null == h ? void 0 : h.application_directory_collection_items]),
-        { trackItemImpressionRef: C } = (0, y.Z)({
+        { trackItemImpressionRef: C } = (0, _.Z)({
             applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : "",
             applicationFlags: null == g ? void 0 : g.application.flags,
             sectionName: "app_launcher_in_voice_banner",
@@ -89,7 +89,7 @@ function D(e) {
               innerRef: C,
               onClick: () => {
                   o(),
-                      (0, _.Z)({
+                      (0, y.Z)({
                           context: {
                               type: "channel",
                               channel: l,
@@ -109,9 +109,9 @@ function D(e) {
               ],
           }));
 }
-let L = i.forwardRef(function (e, t) {
+let k = i.forwardRef(function (e, t) {
     var n;
-    let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: y } = e,
+    let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
         x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { id: v, guild_id: O } = l;
     i.useEffect(() => {
@@ -124,16 +124,16 @@ let L = i.forwardRef(function (e, t) {
             o || s();
         }, [s, o]);
     let E = (0, h.bp)(),
-        { analyticsLocations: M, newestAnalyticsLocation: L } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: M, newestAnalyticsLocation: k } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
         U = E === A.IlC.POPOUT,
         B = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => I.ux(), 1000);
+        let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: F } = P.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        H = i.useCallback(() => {
-            (0, _.Z)({
+    let { enabled: G } = I.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
+        F = i.useCallback(() => {
+            (0, y.Z)({
                 context:
                     null != l
                         ? {
@@ -142,12 +142,12 @@ let L = i.forwardRef(function (e, t) {
                           }
                         : { type: "contextless" },
                 openInPopout: U,
-                analyticsLocation: L,
+                analyticsLocation: k,
             }),
                 u(),
                 b();
-        }, [l, L, b, u, U]),
-        G = i.useCallback(
+        }, [l, k, b, u, U]),
+        H = i.useCallback(
             (e) => {
                 c(),
                     S.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -157,27 +157,27 @@ let L = i.forwardRef(function (e, t) {
             },
             [c, l],
         ),
-        V = F ? p.iWm : p.nG3;
+        V = G ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: M,
         children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                "aria-labelledby": k,
-                className: y,
+                "aria-labelledby": D,
+                className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: k,
+                                id: D,
                                 children: w.intl.string(w.t["2lnYtL"]),
                             }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
                         className: R.container,
-                        onMouseEnter: G,
+                        onMouseEnter: H,
                         onMouseLeave: u,
                         children: [
                             (0, r.jsxs)("div", {
@@ -199,7 +199,7 @@ let L = i.forwardRef(function (e, t) {
                                     }),
                                     (0, r.jsxs)(p.P3F, {
                                         className: R.titleRight,
-                                        onClick: H,
+                                        onClick: F,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: "eyebrow",
@@ -216,7 +216,7 @@ let L = i.forwardRef(function (e, t) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(D, {
+                            (0, r.jsx)(L, {
                                 openInPopout: U,
                                 channel: l,
                                 onClick: () => {

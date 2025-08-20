@@ -36,7 +36,7 @@ function O(e) {
         { now: _ } = (0, s.tS)(),
         y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, _)), [b, _]);
     if (null == b) return null;
-    let j = [...(O ? [g.intl.string(h.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
+    let v = [...(O ? [g.intl.string(h.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -45,7 +45,7 @@ function O(e) {
             variant: "text-xs/medium",
             color: "text-feedback-positive",
             lineClamp: 1,
-            children: j.join(" \xB7 "),
+            children: v.join(" \xB7 "),
         }),
     });
 }

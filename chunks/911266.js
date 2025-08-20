@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,17 +14,17 @@ var r = n(951288),
     m = n(111810),
     g = n(287941),
     b = n(235894),
-    y = n(874341);
-let _ = (e) => {
+    _ = n(874341);
+let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
-        _ = i.useRef((0, o.random)(-6, 24)).current,
+        y = i.useRef((0, o.random)(-6, 24)).current,
         C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
         O = i.useRef(null),
         j = i.useRef(null),
         [E, S] = i.useState(!1),
-        P = i.useMemo(() => !n && !C && !x, [C, n, x]);
+        I = i.useMemo(() => !n && !C && !x, [C, n, x]);
     if (
         (i.useEffect(() => {
             n || S(!1), n && C && S(!0);
@@ -68,14 +68,14 @@ let _ = (e) => {
         !(0, m.p7)("Message Confetti Peak") || !(0, b.Uw)(t))
     )
         return null;
-    let I = (0, b.Eq)(t);
-    if (null == I) return null;
+    let P = (0, b.Eq)(t);
+    if (null == P) return null;
     if (l)
         return (0, r.jsx)("span", {
-            className: y.hidden,
+            className: _.hidden,
             "aria-hidden": "true",
         });
-    let Z = I.emoji[0],
+    let Z = P.emoji[0],
         T =
             null == Z.id
                 ? p.ZP.getURL(Z.name)
@@ -87,25 +87,25 @@ let _ = (e) => {
                   });
     return (0, r.jsxs)("div", {
         ref: j,
-        className: y.emojiWrapper,
-        style: { right: "".concat(256 + _, "px") },
+        className: _.emojiWrapper,
+        style: { right: "".concat(256 + y, "px") },
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.left, P && y.shy, C && y.confettiMode]),
+                className: a()([_.emoji, _.left, I && _.shy, C && _.confettiMode]),
                 width: 28,
             }),
             (0, r.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.right, P && y.shy, C && y.confettiMode]),
+                className: a()([_.emoji, _.right, I && _.shy, C && _.confettiMode]),
                 width: 26,
             }),
             (0, r.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.center, P && y.shy, C && y.confettiMode]),
+                className: a()([_.emoji, _.center, I && _.shy, C && _.confettiMode]),
                 width: 32,
             }),
         ],

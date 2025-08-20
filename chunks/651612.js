@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => y }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -14,10 +14,10 @@ var r = n(951288),
     m = n(918559),
     g = n(981631),
     b = n(388032),
-    y = n(332139);
-function _(e) {
+    _ = n(332139);
+function y(e) {
     var { channelId: t, className: n } = e,
-        _ = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -69,14 +69,14 @@ function _(e) {
         handler: E,
     });
     let S = x ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
-        P = [S];
-    j > 0 && P.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: j })),
-        O > 0 && P.push(b.intl.string(b.t.x5zAGR));
-    let I = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+        I = [S];
+    j > 0 && I.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: j })),
+        O > 0 && I.push(b.intl.string(b.t.x5zAGR));
+    let P = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         Z = j > 0 ? j : O,
         T = Z > 0;
     return (0, r.jsxs)("div", {
-        className: y.wrapper,
+        className: _.wrapper,
         children: [
             (0, r.jsx)(
                 c.d,
@@ -110,20 +110,20 @@ function _(e) {
                         buttonRef: C,
                         onClick: v,
                         label: S,
-                        "aria-label": P.join(", "),
+                        "aria-label": I.join(", "),
                         tooltipPosition: "top",
-                        iconComponent: I === m.MI.NO_CHAT ? o.sXD : o.hic,
+                        iconComponent: P === m.MI.NO_CHAT ? o.sXD : o.hic,
                         themeable: !0,
                         className: n,
                     },
-                    _,
+                    y,
                 ),
             ),
             T
                 ? (0, r.jsx)(s.Z, {
                       hasMentions: j > 0,
                       truncatedCount: Z > 99 ? "99+" : Z,
-                      className: y.badge,
+                      className: _.badge,
                   })
                 : null,
         ],

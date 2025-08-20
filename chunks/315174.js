@@ -21,8 +21,8 @@ var r = n(951288),
     O = n(768581),
     _ = n(598056),
     y = n(358555),
-    j = n(981631),
-    v = n(647086),
+    v = n(981631),
+    j = n(647086),
     C = n(388032),
     x = n(869786);
 function E(e) {
@@ -103,7 +103,7 @@ function I(e) {
 function P(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: s } = n.springs,
-        c = t.features.has(j.oNc.DISCOVERABLE),
+        c = t.features.has(v.oNc.DISCOVERABLE),
         d = (0, r.jsx)("div", {
             className: x.communityInfo,
             children:
@@ -188,7 +188,7 @@ function T(e) {
                 guild: i,
                 isBannerVisible: n,
             }),
-            i.id === v._ && (0, r.jsx)(N, {}),
+            i.id === j._ && (0, r.jsx)(N, {}),
             (0, r.jsx)(Z, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
@@ -212,7 +212,7 @@ function T(e) {
         ],
     });
 }
-let A = [v._, j.STv];
+let A = [j._, v.STv];
 function R(e) {
     let { bannerVisible: t, guild: l, onClick: o, onContextMenu: a, children: s } = e,
         d = i.useRef(null),
@@ -244,7 +244,7 @@ function R(e) {
                               e,
                               S(E({}, t), {
                                   guild: l,
-                                  source: j.t4x.GUILD_HEADER,
+                                  source: v.t4x.GUILD_HEADER,
                               }),
                           );
                   })
@@ -291,7 +291,7 @@ function R(e) {
                                                 guild: l,
                                                 isBannerVisible: t,
                                             }),
-                                            l.id === v._ && (0, r.jsx)(N, {}),
+                                            l.id === j._ && (0, r.jsx)(N, {}),
                                             (0, r.jsx)(Z, { guild: l }),
                                         ],
                                     }),
@@ -324,7 +324,7 @@ function R(e) {
                             }),
                         ),
                 }),
-            l.id === j.STv && (0, r.jsx)(h.p, {}),
+            l.id === v.STv && (0, r.jsx)(h.p, {}),
         ],
     });
 }
@@ -340,7 +340,7 @@ let D = i.memo(function (e) {
             disableBannerAnimation: g,
             "aria-expanded": b,
             "aria-controls": y,
-            guild: v,
+            guild: j,
             guildBanner: C,
             animationOverlayHeight: N,
             children: w,
@@ -348,9 +348,9 @@ let D = i.memo(function (e) {
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        L = v.features.has(j.oNc.ANIMATED_BANNER),
-        k = (0, d.Z)(v),
-        U = !k && (0, _.Z)(v),
+        L = j.features.has(v.oNc.ANIMATED_BANNER),
+        k = (0, d.Z)(j),
+        U = !k && (0, _.Z)(j),
         G = !k && A,
         B = (0, O.xR)(C) && L && !g,
         [V, F] = i.useState(!1),
@@ -381,7 +381,7 @@ let D = i.memo(function (e) {
         { entrypoints: X } = (0, p._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
-            guild: v,
+            guild: j,
             onClick: c,
             onContextMenu: f,
             ariaControls: y,
@@ -389,7 +389,7 @@ let D = i.memo(function (e) {
             guildHeaderRef: W,
         };
     return (0, r.jsx)(u.f6W, {
-        theme: n ? j.BRd.DARK : void 0,
+        theme: n ? v.BRd.DARK : void 0,
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -422,7 +422,7 @@ let D = i.memo(function (e) {
                                     }),
                                     U &&
                                         (0, r.jsx)(P, {
-                                            guild: v,
+                                            guild: j,
                                             controller: l,
                                             hasBanner: null != C,
                                             hasSubheader: null != D && D,
@@ -431,7 +431,7 @@ let D = i.memo(function (e) {
                             }),
                             null != C
                                 ? (0, r.jsx)(I, {
-                                      guild: v,
+                                      guild: j,
                                       controller: l,
                                       guildBanner: C,
                                       animate: V,

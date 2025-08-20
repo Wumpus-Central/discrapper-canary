@@ -2,6 +2,7 @@ n.d(t, {
     e3: () => l,
     gj: () => O,
     yf: () => v,
+    yz: () => I,
 }),
     n(539854),
     n(388685);
@@ -115,3 +116,8 @@ function v(e, t) {
         .concat(r, ";\n      ")
         .concat(c, "\n    }");
 }
+let I = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        n = e.slice();
+    return 1 === e.length && n.push(e[0]), "linear-gradient(".concat(t, "deg, ").concat(n.join(", "), ")");
+};

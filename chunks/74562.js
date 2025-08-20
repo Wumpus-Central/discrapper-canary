@@ -1,68 +1,56 @@
-t.d(n, { Z: () => f });
-var i = t(951288);
+t.d(n, { Z: () => p });
+var r = t(951288);
 t(647438);
-var r = t(442837),
+var i = t(442837),
     l = t(481060),
-    o = t(434404),
-    c = t(147754),
+    c = t(434404),
     a = t(939863),
-    s = t(430824),
-    u = t(496675),
-    d = t(981631),
-    g = t(388032),
-    p = t(776873);
-function f(e) {
+    o = t(430824),
+    s = t(496675),
+    u = t(981631),
+    d = t(388032),
+    g = t(776873);
+function p(e) {
     let { guildId: n, onClose: t } = e,
-        { showHubEventsList: f } = c.Z.useExperiment(
-            {
-                guildId: n,
-                location: "6597ca_1",
-            },
-            { autoTrackExposure: !1 },
-        ),
-        h = (0, r.e7)([s.Z, u.Z], () => {
-            let e = s.Z.getGuild(n);
-            return u.Z.can(d.Plq.MANAGE_ROLES, e);
-        }, [n]),
-        v = (0, r.e7)([s.Z], () => {
-            let e = s.Z.getGuild(n);
-            return f && (null == e ? void 0 : e.features.has(d.oNc.HUB));
-        }, [n, f]);
-    return (0, i.jsxs)("div", {
-        className: p.container,
+        p = (0, i.e7)([o.Z, s.Z], () => {
+            let e = o.Z.getGuild(n);
+            return s.Z.can(u.Plq.MANAGE_ROLES, e);
+        }, [n]);
+    return (0, r.jsxs)("div", {
+        className: g.container,
         children: [
-            (0, i.jsx)(a.Z, {
-                children: (0, i.jsx)("div", {
-                    className: p.circle,
-                    children: (0, i.jsx)(l.Que, {
+            (0, r.jsx)(a.Z, {
+                children: (0, r.jsx)("div", {
+                    className: g.circle,
+                    children: (0, r.jsx)(l.Que, {
                         size: "custom",
                         color: "currentColor",
                         height: 40,
                         width: 40,
-                        className: p.icon,
+                        className: g.icon,
                     }),
                 }),
             }),
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(l.X6q, {
                 color: "header-primary",
                 variant: "heading-xl/semibold",
-                className: p.title,
-                children: v ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t["WgZ+3N"]),
+                className: g.title,
+                children: d.intl.string(d.t["WgZ+3N"]),
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(l.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: p.subtitle,
-                children: v ? g.intl.string(g.t["6hktHB"]) : g.intl.string(g.t["v/S/PD"]),
+                className: g.subtitle,
+                children: d.intl.string(d.t["v/S/PD"]),
             }),
-            h &&
-                (0, i.jsx)(l.Text, {
+            p &&
+                (0, r.jsx)(l.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
-                    className: p.roleTip,
-                    children: g.intl.format(g.t["K+DH2t"], {
+                    className: g.roleTip,
+                    children: d.intl.format(d.t["K+DH2t"], {
                         onClick: () => {
-                            o.Z.open(n, d.pNK.ROLES), t();
+                            c.Z.open(n, u.pNK.ROLES), t();
                         },
                     }),
                 }),

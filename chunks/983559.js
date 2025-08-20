@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(687158),
     g = n(510659),
     b = n(892001),
-    y = n(113557),
-    _ = n(867176),
+    _ = n(113557),
+    y = n(867176),
     C = n(451834),
     x = n(502762),
     v = n(952124),
@@ -23,8 +23,8 @@ var r = n(951288),
     j = n(481932),
     E = n(664794),
     S = n(4517),
-    P = n(277117),
-    I = n(52639),
+    I = n(277117),
+    P = n(52639),
     Z = n(671955),
     T = n(388032),
     N = n(231688);
@@ -58,42 +58,42 @@ function w(e) {
         T = __OVERLAY__,
         w = (0, m.ZP)(t.id),
         M = (0, c.ZP)(),
-        k = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
-        L = (0, h.ZB)({
+        D = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        k = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
             channelId: f.id,
         }),
         U = i.useRef(null),
         B = (0, s.Z)(U),
-        F = (0, g.$m)(),
-        H = (0, o.q_F)({
-            opacity: +(null != F.interactionType),
+        G = (0, g.$m)(),
+        F = (0, o.q_F)({
+            opacity: +(null != G.interactionType),
             config: { duration: 150 },
         }),
-        G = (e) => {
+        H = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0,
                     },
-                    L,
+                    k,
                     e,
                 ),
             );
         };
     return (0, r.jsx)(d.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(h.Mt, {
-            value: L,
-            openedAt: k.current,
+            value: k,
+            openedAt: D.current,
             fetchStartedAt: null == w ? void 0 : w.fetchStartedAt,
             fetchEndedAt: null == w ? void 0 : w.fetchEndedAt,
             isLoaded: null == w ? void 0 : w.isLoaded,
             children: (0, r.jsx)(g.NJ, {
-                value: F,
+                value: G,
                 children: (0, r.jsxs)(x.Z, {
                     ref: U,
                     user: t,
@@ -101,9 +101,9 @@ function w(e) {
                     themeType: Z.l.SIDEBAR,
                     themeOverride: M,
                     children: [
-                        null != F.interactionType &&
+                        null != G.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: H,
+                                style: F,
                                 className: N.backdrop,
                             }),
                         (0, r.jsxs)(a.u2, {
@@ -113,7 +113,7 @@ function w(e) {
                                         (0, r.jsx)(j.Z, {
                                             user: t,
                                             themeType: Z.l.SIDEBAR,
-                                            shouldShowTooltip: null === F.interactionType,
+                                            shouldShowTooltip: null === G.interactionType,
                                         }),
                                         t.bot
                                             ? (0, r.jsx)(v.Z, { user: t })
@@ -126,7 +126,7 @@ function w(e) {
                                 (0, r.jsxs)("div", {
                                     className: N.header,
                                     children: [
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             user: t,
                                             displayProfile: w,
                                             themeType: Z.l.SIDEBAR,
@@ -137,13 +137,13 @@ function w(e) {
                                             userId: t.id,
                                             className: N.toast,
                                         }),
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(_.Z, {
                                             location: "UserProfileSidebar",
                                             user: t,
                                             displayProfile: w,
                                             channelId: f.id,
                                             themeType: Z.l.SIDEBAR,
-                                            onOpenProfile: T ? void 0 : G,
+                                            onOpenProfile: T ? void 0 : H,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             location: "UserProfileSidebar",
@@ -154,15 +154,15 @@ function w(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(I.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: w,
                                     channel: f,
-                                    isHovering: null == F.interactionType && B,
-                                    onOpenProfile: T ? void 0 : G,
+                                    isHovering: null == G.interactionType && B,
+                                    onOpenProfile: T ? void 0 : H,
                                 }),
-                                (0, r.jsx)(I.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: t,
                                     channelId: f.id,
                                 }),
@@ -170,9 +170,9 @@ function w(e) {
                         }),
                         !T &&
                             (0, r.jsx)(R, {
-                                handleOpenProfile: G,
-                                analyticsLocations: D,
-                                context: L,
+                                handleOpenProfile: H,
+                                analyticsLocations: L,
+                                context: k,
                             }),
                         (null == w ? void 0 : w.profileEffectId) != null &&
                             (0, r.jsx)(p.Z, {

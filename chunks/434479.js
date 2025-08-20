@@ -64,9 +64,9 @@ function h(e) {
             trailing: O,
             background: _,
             showUnread: y = !1,
-            ref: j,
+            ref: v,
         } = e,
-        v = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -101,10 +101,10 @@ function h(e) {
     let C = (0, o.JA)(n),
         x = null != (t = (0, a.qg)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: j,
+        ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            f(p({}, v), {
+            f(p({}, j), {
                 buttonProps: f(p({}, C), {
                     id: n,
                     role: "button",
@@ -119,8 +119,8 @@ function h(e) {
                     },
                 },
                 onContextMenu:
-                    null != v.onContextMenu
-                        ? v.onContextMenu
+                    null != j.onContextMenu
+                        ? j.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },

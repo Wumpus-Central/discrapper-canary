@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(981631),
     _ = n(490897),
     y = n(55940);
-function j(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function j(e, t, n) {
         e
     );
 }
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -81,7 +81,7 @@ class x extends m.ZP {
     }
     constructor(...e) {
         super(...e),
-            j(this, "handleContextMenu", (e) => {
+            v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
                     i = h.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -107,14 +107,14 @@ class x extends m.ZP {
                                               }),
                                         e
                                     );
-                                })(v({}, n), {
+                                })(j({}, n), {
                                     channel: t,
                                     guild: i,
                                 }),
                             );
                     });
             }),
-            j(this, "handleClick", (e) => {
+            v(this, "handleClick", (e) => {
                 !(function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
@@ -142,5 +142,5 @@ let E = (0, u.B)(x),
                         !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n),
                 };
             });
-        return (0, r.jsx)(E, v({}, l, e));
+        return (0, r.jsx)(E, j({}, l, e));
     });

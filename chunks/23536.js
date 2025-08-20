@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(784620), n(973216);
+n.d(t, { Z: () => _ }), n(784620), n(973216);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,9 +14,9 @@ var r = n(951288),
     m = n(257559),
     g = n(388032);
 let b = [];
-function y(e) {
-    let { channel: t, onJump: y } = e,
-        { items: _, state: C } = (0, l.cj)([p.Z], () => {
+function _(e) {
+    let { channel: t, onJump: _ } = e,
+        { items: y, state: C } = (0, l.cj)([p.Z], () => {
             var e, n;
             let r = p.Z.getPins(t.id);
             return {
@@ -24,7 +24,7 @@ function y(e) {
                 state: null != (n = null == r ? void 0 : r.state) ? n : p.M.LOADING,
             };
         }),
-        x = i.useMemo(() => _.map((e) => e.message), [_]),
+        x = i.useMemo(() => y.map((e) => e.message), [y]),
         v = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
         v && s.Z.ackPins(t.id);
@@ -37,8 +37,8 @@ function y(e) {
         }, [t.id]),
         j = i.useCallback(() => {
             var e;
-            s.Z.fetchPins(t.id, { before: null == (e = _.at(-1)) ? void 0 : e.pinnedAt });
-        }, [t.id, _]),
+            s.Z.fetchPins(t.id, { before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt });
+        }, [t.id, y]),
         E = (0, l.e7)([d.Z], () => (0, a.ap)(d.Z.theme));
     return (0, r.jsx)(o.VqE, {
         "aria-label": g.intl.string(g.t["mp1N//"]),
@@ -50,7 +50,7 @@ function y(e) {
             hasMore: C === p.M.LOADED_HAS_MORE,
             analyticsName: "Channel Pins",
             renderEmptyState: function () {
-                if (_.length > 0) return;
+                if (y.length > 0) return;
                 let e = g.intl.string(t.isPrivate() ? g.t.rhqcbG : g.t.fmyaWF),
                     i = E ? n(306059) : n(281485);
                 return (0, r.jsx)(
@@ -70,7 +70,7 @@ function y(e) {
             onCloseMessage: function (e, n) {
                 null != e && (n.shiftKey ? s.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e));
             },
-            onJump: y,
+            onJump: _,
             loadMore: j,
             getProTip: function () {
                 return t.isPrivate() ? g.intl.string(g.t["3dLGAg"]) : g.intl.string(g.t.KTbRcn);

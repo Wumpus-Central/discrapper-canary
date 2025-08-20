@@ -24,8 +24,8 @@ var r = n(951288),
     O = n(937860),
     _ = n(921944),
     y = n(557766),
-    j = n(447489),
-    v = n(484885);
+    v = n(447489),
+    j = n(484885);
 let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panels-height"), 56) + 8,
     x = {
         discover: o.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
@@ -66,8 +66,8 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
     S = (e) => {
         let { customIconSrcs: t } = e,
             n = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-            i = void 0 !== t ? t.animated : v.Z,
-            o = void 0 !== t ? t.static : j.Z;
+            i = void 0 !== t ? t.animated : j.Z,
+            o = void 0 !== t ? t.static : v.Z;
         return n || null == i
             ? (0, r.jsx)("img", {
                   src: o,
@@ -80,11 +80,11 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panel
                   className: y.orbAsset,
                   children: [
                       (0, r.jsx)("source", {
-                          src: v.Z,
+                          src: j.Z,
                           type: "video/webm",
                       }),
                       (0, r.jsx)("img", {
-                          src: j.Z,
+                          src: v.Z,
                           className: y.orbAsset,
                           alt: "Orb",
                       }),
@@ -144,8 +144,8 @@ function P(e) {
         } = e,
         [g, m] = i.useState("bottom" === u),
         [O, _] = i.useState(!0),
-        [y, j] = i.useState(String(Date.now())),
-        v = (0, c.Z)(),
+        [y, v] = i.useState(String(Date.now())),
+        j = (0, c.Z)(),
         C = i.useCallback(
             (e) => {
                 let n = t(e);
@@ -177,10 +177,10 @@ function P(e) {
                     }),
                 null != r)
             ) {
-                if ((C(r), i && j(String(Date.now())), d)) return;
+                if ((C(r), i && v(String(Date.now())), d)) return;
                 let e = r.top < window.innerHeight / 2;
                 if (e === g) return;
-                m(e), j(String(Date.now()));
+                m(e), v(String(Date.now()));
             }
         },
         [g, C, p, d],
@@ -192,7 +192,7 @@ function P(e) {
         targetElementRef: a,
     });
     let I = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
-        P = O && !v,
+        P = O && !j,
         N = i.Children.map(l, (e) => i.cloneElement(e, { align: I }));
     return (0, r.jsx)(s.yRy, {
         autoInvert: !1,

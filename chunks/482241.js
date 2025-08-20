@@ -27,31 +27,30 @@ let h = {
     joinVoiceEvent(e, t) {
         a.default.selectVoiceChannel(t), (0, o.uL)(p.Z5c.CHANNEL(e, t));
     },
-    saveEvent(e, t, n, i) {
-        let a = _.pg.has(t.entityType) ? t.channelId : null,
-            o = _._U.has(t.entityType) ? t.entityMetadata : null,
-            s = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
-            l = {
+    saveEvent(e, t, n) {
+        let i = _.pg.has(t.entityType) ? t.channelId : null,
+            a = _._U.has(t.entityType) ? t.entityMetadata : null,
+            o = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
+            s = {
                 name: t.name,
                 description: t.description,
-                image: s,
+                image: o,
                 privacy_level: t.privacyLevel,
                 scheduled_start_time: t.scheduledStartTime,
                 scheduled_end_time: t.scheduledEndTime,
                 entity_type: t.entityType,
-                channel_id: a,
-                entity_metadata: o,
-                broadcast_to_directory_channels: i.broadcastToDirectoryChannels,
+                channel_id: i,
+                entity_metadata: a,
                 recurrence_rule: (0, d.J1)(t.recurrenceRule),
             };
         return r.tn.patch({
             url: p.ANM.GUILD_EVENT(n, e),
-            body: l,
+            body: s,
             rejectWithError: !1,
         });
     },
-    createGuildEvent(e, t, n) {
-        let i = {
+    createGuildEvent(e, t) {
+        let n = {
             name: e.name,
             description: e.description,
             image: e.image,
@@ -61,12 +60,11 @@ let h = {
             entity_type: e.entityType,
             channel_id: e.channelId,
             entity_metadata: e.entityMetadata,
-            broadcast_to_directory_channels: n.broadcastToDirectoryChannels,
             recurrence_rule: (0, d.J1)(e.recurrenceRule),
         };
         return r.tn.post({
             url: p.ANM.GUILD_EVENTS_FOR_GUILD(t),
-            body: i,
+            body: n,
             rejectWithError: !1,
         });
     },

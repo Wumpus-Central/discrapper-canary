@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => O,
     KT: () => b,
-    ZP: () => j,
+    ZP: () => v,
     _C: () => _,
 }),
     n(388685),
@@ -95,11 +95,11 @@ function _(e, t) {
             var t, n;
             return null != (n = null == (t = f.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        j = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        v = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
+        v = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        j = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
         C = i.useMemo(
             () =>
-                null != t && t.type === h.Us.LEVEL && null != v
+                null != t && t.type === h.Us.LEVEL && null != j
                     ? (function (e, t) {
                           let n = h.T1[e.skuId];
                           return null == n
@@ -114,12 +114,12 @@ function _(e, t) {
                                         return t.allPowerups[n];
                                     })
                                     .filter(d.lm);
-                      })(t, v)
+                      })(t, j)
                     : [],
-            [t, v],
+            [t, j],
         ),
         x = null == C ? void 0 : C.reduce((e, t) => e + t.cost, 0),
-        E = Math.max((null != (p = null == j ? void 0 : j.premiumSubscriberCount) ? p : 0) - _ + x, 0);
+        E = Math.max((null != (p = null == v ? void 0 : v.premiumSubscriberCount) ? p : 0) - _ + x, 0);
     return {
         onActivate: i.useCallback(
             function (e) {
@@ -127,7 +127,7 @@ function _(e, t) {
                 let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 e.stopPropagation();
                 let { shouldCloseAllModals: a = !0 } = l;
-                if (null != j && null != t)
+                if (null != v && null != t)
                     return E < t.cost
                         ? void (0, s.u)({
                               analyticsLocation: {
@@ -136,7 +136,7 @@ function _(e, t) {
                               },
                               numberOfBoostsToAdd: t.cost - E,
                               analyticsLocations: b,
-                              guild: j,
+                              guild: v,
                               intent: t.type === h.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () => {
                                   var e;
@@ -154,7 +154,7 @@ function _(e, t) {
                                                             e,
                                                             m(
                                                                 {
-                                                                    guildId: j.id,
+                                                                    guildId: v.id,
                                                                     powerup: t,
                                                                 },
                                                                 n,
@@ -177,7 +177,7 @@ function _(e, t) {
                                                 e,
                                                 m(
                                                     {
-                                                        guildId: j.id,
+                                                        guildId: v.id,
                                                         powerup: t,
                                                     },
                                                     n,
@@ -186,7 +186,7 @@ function _(e, t) {
                                     });
                             });
             },
-            [O, t, E, b, j],
+            [O, t, E, b, v],
         ),
     };
 }
@@ -217,7 +217,7 @@ function y(e, t) {
         ),
     };
 }
-function j(e, t) {
+function v(e, t) {
     let { isLoading: l, error: a, onToggle: s } = y(e, t),
         { onActivate: c } = _(e, t),
         u = i.useCallback((e) => (e.stopPropagation(), s(!1)), [s]);

@@ -1,133 +1,133 @@
-e.d(n, { Z: () => U });
-var i = e(951288);
-e(647438);
-var d = e(399606),
-    l = e(481060),
-    r = e(231757),
-    a = e(397639),
-    _ = e(19780),
-    s = e(979651),
-    p = e(951206),
-    u = e(446226),
-    I = e(937393),
-    o = e(721351),
-    c = e(981631),
-    E = e(388032);
-function T(t) {
-    for (var n = 1; n < arguments.length; n++) {
-        var e = null != arguments[n] ? arguments[n] : {},
-            i = Object.keys(e);
+n.d(t, { Z: () => O });
+var r = n(951288);
+n(647438);
+var l = n(399606),
+    i = n(481060),
+    u = n(231757),
+    c = n(397639),
+    o = n(19780),
+    a = n(979651),
+    s = n(951206),
+    d = n(446226),
+    f = n(937393),
+    E = n(721351),
+    Z = n(981631),
+    g = n(388032);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(e).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (n) {
-                var i;
-                (i = e[n]),
-                    n in t
-                        ? Object.defineProperty(t, n, {
-                              value: i,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (t[n] = i);
+                        : (e[t] = r);
             });
     }
-    return t;
+    return e;
 }
-function g(t, n) {
+function p(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (t, n) {
-                  var e = Object.keys(t);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      e.push.apply(e, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return e;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
     );
 }
-function U(t) {
-    let n = (0, d.e7)([_.Z], () => _.Z.getChannelId() === t.id),
-        U = (0, u.Z)(),
-        L = (null == U ? void 0 : U.channelId) === t.id,
-        y = (0, a.V)(t) && !t.isPrivate(),
-        D = (0, a.Z)(t),
-        m = (!(0, d.e7)([s.Z], () => s.Z.isInChannel(t.id)) && D) || y,
-        O = (0, I.Z)();
-    return L || 0 !== O.length
-        ? L
-            ? (0, i.jsx)(l.sNh, {
-                  label: E.intl.string(E.t.PlwgdX),
+function O(e) {
+    let t = (0, l.e7)([o.Z], () => o.Z.getChannelId() === e.id),
+        O = (0, d.Z)(),
+        b = (null == O ? void 0 : O.channelId) === e.id,
+        y = (0, c.V)(e) && !e.isPrivate(),
+        P = (0, c.Z)(e),
+        _ = (!(0, l.e7)([a.Z], () => a.Z.isInChannel(e.id)) && P) || y,
+        v = (0, f.Z)();
+    return b || 0 !== v.length
+        ? b
+            ? (0, r.jsx)(i.sNh, {
+                  label: g.intl.string(g.t.PlwgdX),
                   id: "handoff",
                   action: () => {
-                      (0, p.F)(U);
+                      (0, s.F)(O);
                   },
-                  icon: (0, o.Z)(void 0),
-                  disabled: m,
+                  icon: (0, E.Z)(void 0),
+                  disabled: _,
               })
-            : O.map((d) => {
-                  var a, _;
-                  return (0, i.jsx)(
-                      l.sNh,
+            : v.map((l) => {
+                  var c, o;
+                  return (0, r.jsx)(
+                      i.sNh,
                       {
-                          id: "transfer-".concat(d.type, "-").concat(d.id),
+                          id: "transfer-".concat(l.type, "-").concat(l.id),
                           label:
-                              ((a = d.type),
-                              (_ = n),
-                              a === c.ABu.XBOX
-                                  ? _
-                                      ? E.intl.string(E.t["qVE/VF"])
-                                      : E.intl.string(E.t.E8euSk)
-                                  : a === c.ABu.PLAYSTATION
-                                    ? _
-                                        ? E.intl.string(E.t.vzfxmZ)
-                                        : E.intl.string(E.t.QxEYDg)
-                                    : a === c.ABu.PLAYSTATION_STAGING
-                                      ? _
-                                          ? E.intl.string(E.t.BDiXtb)
-                                          : E.intl.string(E.t["bhdB9/"])
+                              ((c = l.type),
+                              (o = t),
+                              c === Z.ABu.XBOX
+                                  ? o
+                                      ? g.intl.string(g.t["qVE/VF"])
+                                      : g.intl.string(g.t.E8euSk)
+                                  : c === Z.ABu.PLAYSTATION
+                                    ? o
+                                        ? g.intl.string(g.t.vzfxmZ)
+                                        : g.intl.string(g.t.QxEYDg)
+                                    : c === Z.ABu.PLAYSTATION_STAGING
+                                      ? o
+                                          ? g.intl.string(g.t.BDiXtb)
+                                          : g.intl.string(g.t["bhdB9/"])
                                       : void 0),
                           action: () =>
-                              ((n) => {
-                                  if (!n.twoWayLink || n.revoked)
-                                      return void (0, r.Z)({
-                                          platformType: n.type,
+                              ((t) => {
+                                  if (!t.twoWayLink || t.revoked)
+                                      return void (0, u.Z)({
+                                          platformType: t.type,
                                           location: "Console Transfer Item",
                                       });
-                                  n.type === c.ABu.XBOX
-                                      ? (0, l.ZDy)(async () => {
-                                            let { default: n } = await Promise.all([e.e("20193"), e.e("522")]).then(
-                                                e.bind(e, 200623),
+                                  t.type === Z.ABu.XBOX
+                                      ? (0, i.ZDy)(async () => {
+                                            let { default: t } = await Promise.all([n.e("20193"), n.e("522")]).then(
+                                                n.bind(n, 200623),
                                             );
-                                            return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
+                                            return (n) => (0, r.jsx)(t, p(N({}, n), { channel: e }));
                                         })
-                                      : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&
-                                        (0, l.ZDy)(async () => {
-                                            let { default: d } = await e.e("638").then(e.bind(e, 543974));
-                                            return (e) =>
-                                                (0, i.jsx)(
-                                                    d,
-                                                    g(T({}, e), {
-                                                        platform: n.type,
-                                                        channel: t,
+                                      : (t.type === Z.ABu.PLAYSTATION || t.type === Z.ABu.PLAYSTATION_STAGING) &&
+                                        (0, i.ZDy)(async () => {
+                                            let { default: l } = await n.e("638").then(n.bind(n, 543974));
+                                            return (n) =>
+                                                (0, r.jsx)(
+                                                    l,
+                                                    p(N({}, n), {
+                                                        platform: t.type,
+                                                        channel: e,
                                                     }),
                                                 );
                                         });
-                              })(d),
-                          icon: (0, o.Z)(d.type),
-                          disabled: m,
+                              })(l),
+                          icon: (0, E.Z)(l.type),
+                          disabled: _,
                       },
-                      d.id,
+                      l.id,
                   );
               })
         : null;

@@ -48,17 +48,17 @@ function m(e) {
             }),
         ];
     }, [i, b]);
-    let { entriesWithLeaderboard: y, hasLeaderboardEntry: _ } = (0, a.Z)({
+    let { entriesWithLeaderboard: _, hasLeaderboardEntry: y } = (0, a.Z)({
         entries: i,
         channelId: e,
     });
     return (
-        (i = y),
+        (i = _),
         {
             requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(h.YN.GLOBAL_FEED)),
             entries: i,
             impressionCappedEntryIds: g,
-            hasLeaderboardEntry: _,
+            hasLeaderboardEntry: y,
         }
     );
 }

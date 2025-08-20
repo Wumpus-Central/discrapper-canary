@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(938475),
     _ = n(714794),
     y = n(876548),
-    j = n(25601),
-    v = n(207055),
+    v = n(25601),
+    j = n(207055),
     C = n(981631),
     x = n(124368),
     E = n(388032),
@@ -267,7 +267,7 @@ let T = i.memo(function (e) {
                                                       })
                                                     : null,
                                                 (0, _.Z)(L)
-                                                    ? (0, r.jsx)(j.Z, {
+                                                    ? (0, r.jsx)(v.Z, {
                                                           mentionsCount: L,
                                                           isMentionLowImportance: k,
                                                       })
@@ -281,7 +281,7 @@ let T = i.memo(function (e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(j.Z, {
                 channel: t,
                 collapsed: !P,
                 collapsedMax: 6,

@@ -18,8 +18,8 @@ var f = n(377171),
     O = n(430824),
     _ = n(375954),
     y = n(306680),
-    j = n(709054),
-    v = n(821020),
+    v = n(709054),
+    j = n(821020),
     C = n(948154),
     x = n(804932),
     E = n(725739),
@@ -134,7 +134,7 @@ function G(e) {
                         null != r &&
                             null != i &&
                             l &&
-                            j.default.compare(i, r) >= 0 &&
+                            v.default.compare(i, r) >= 0 &&
                             d.In(
                                 e,
                                 {
@@ -172,9 +172,9 @@ function G(e) {
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = (0, v.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+        let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = null == (e = S.Z.getDevOverrides().navOnClick) || e;
-        if (t !== v.jP.SIDEBAR || !1 === n) return;
+        if (t !== j.jP.SIDEBAR || !1 === n) return;
         let { message: r, isUnread: i } = (function (e, t) {
             var n, r, i;
             let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
@@ -200,7 +200,7 @@ function G(e) {
                   }
                 : {
                       message: {
-                          id: j.default.atNextMillisecond(u),
+                          id: v.default.atNextMillisecond(u),
                           channel_id: c,
                       },
                       isUnread: null != (i = y.ZP.hasUnread(c)) && i,
@@ -219,9 +219,9 @@ function G(e) {
         (0, p.zq)(() => {
             u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === v.v8.DROPDOWN && f !== A.V5.ALL,
+        $ = Q === j.v8.DROPDOWN && f !== A.V5.ALL,
         ee = (0, A.H_)(f);
     return (0, r.jsx)("nav", {
         className: o()(M.container, { [M.panelSpacing]: l }),
@@ -242,7 +242,7 @@ function G(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === v.v8.DROPDOWN && !J && (0, r.jsx)(Z.p, {}),
+                            children: Q === j.v8.DROPDOWN && !J && (0, r.jsx)(Z.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -287,7 +287,7 @@ function V(e, t, n) {
                 : e.filter((e) => {
                       let { id: r } = e;
                       return (
-                          !(j.default.age(r) > A.ib || (null != n && 0 >= j.default.compare(r, n))) && t === A.V5.ALL
+                          !(v.default.age(r) > A.ib || (null != n && 0 >= v.default.compare(r, n))) && t === A.V5.ALL
                       );
                   }),
         [e, t, n],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(19780),
     g = n(594174),
     b = n(626135),
-    y = n(906605),
-    _ = n(574176),
+    _ = n(906605),
+    y = n(574176),
     C = n(833858),
     x = n(866071),
     v = n(223135),
@@ -23,41 +23,41 @@ var r = n(951288),
     j = n(981631),
     E = n(388032),
     S = n(84709);
-let P = (e) => {
-    let { hangStatusActivity: t, userId: l, channel: P, previewIsOpen: I, targetElementRef: Z } = e,
-        { enableHangStatus: T } = _.n.useExperiment({
-            guildId: P.guild_id,
+let I = (e) => {
+    let { hangStatusActivity: t, userId: l, channel: I, previewIsOpen: P, targetElementRef: Z } = e,
+        { enableHangStatus: T } = y.n.useExperiment({
+            guildId: I.guild_id,
             location: "HangStatusPopout",
         }),
         N = (0, o.e7)([p.default], () => p.default.getId()),
         A = (0, o.e7)([g.default], () => g.default.getUser(l)),
-        w = (0, o.e7)([m.Z], () => m.Z.getChannelId() === P.id),
-        R = (0, o.e7)([f.Z], () => f.Z.can(j.Plq.CONNECT, P)),
-        M = (null == t ? void 0 : t.emoji) == null || (0, x.K)(t.emoji, P),
-        k = (0, o.e7)([h.ZP], () => (null != P.guild_id && null != A ? h.ZP.getMember(P.guild_id, l) : null)),
-        D = i.useMemo(() => (null != A ? (0, d.SG)(void 0, k, A, { size: 40 }) : void 0), [k, A]);
+        w = (0, o.e7)([m.Z], () => m.Z.getChannelId() === I.id),
+        R = (0, o.e7)([f.Z], () => f.Z.can(j.Plq.CONNECT, I)),
+        M = (null == t ? void 0 : t.emoji) == null || (0, x.K)(t.emoji, I),
+        D = (0, o.e7)([h.ZP], () => (null != I.guild_id && null != A ? h.ZP.getMember(I.guild_id, l) : null)),
+        L = i.useMemo(() => (null != A ? (0, d.SG)(void 0, D, A, { size: 40 }) : void 0), [D, A]);
     return (i.useEffect(() => {
-        (0, y.UP)();
+        (0, _.UP)();
     }, []),
     i.useEffect(() => {
         T &&
             null != t &&
-            I &&
+            P &&
             null != A &&
             N !== l &&
             b.default.track(j.rMx.VIEW_HANG_STATUS, {
                 source: "HangStatusPopout",
-                guild_id: P.guild_id,
-                channel_id: P.id,
+                guild_id: I.guild_id,
+                channel_id: I.id,
             });
-    }, [T, t, I, A, N, l, P]),
+    }, [T, t, P, A, N, l, I]),
     T && null != A)
         ? N === l
             ? (0, r.jsx)("div", {
-                  className: a()(S.popoutWrapper, { [S.mounted]: I }),
+                  className: a()(S.popoutWrapper, { [S.mounted]: P }),
                   children: (0, r.jsx)(O.v, {
                       currentStatus: t,
-                      channel: P,
+                      channel: I,
                   }),
               })
             : null == t
@@ -97,7 +97,7 @@ let P = (e) => {
                                                 (0, r.jsx)(c.qEK, {
                                                     className: S.avatar,
                                                     size: c.EFr.SIZE_40,
-                                                    src: D,
+                                                    src: L,
                                                     "aria-hidden": !0,
                                                 }),
                                                 (0, r.jsx)("div", { className: S.outline }),
@@ -114,11 +114,11 @@ let P = (e) => {
                                   onClick: () => {
                                       !w &&
                                           R &&
-                                          (u.default.selectVoiceChannel(P.id),
+                                          (u.default.selectVoiceChannel(I.id),
                                           b.default.track(j.rMx.HANG_STATUS_CTA_CLICKED, {
                                               source: "HangStatusPopout",
-                                              guild_id: P.guild_id,
-                                              channel_id: P.id,
+                                              guild_id: I.guild_id,
+                                              channel_id: I.id,
                                           }));
                                   },
                               })
@@ -194,10 +194,10 @@ let P = (e) => {
                                                     );
                                                 };
                                             })
-                                          : (0, y.Zx)(e, !0),
+                                          : (0, _.Zx)(e, !0),
                                           b.default.track(j.rMx.SWIPE_HANG_STATUS, {
-                                              guild_id: P.guild_id,
-                                              channel_id: P.id,
+                                              guild_id: I.guild_id,
+                                              channel_id: I.id,
                                               media_session_id: m.Z.getMediaSessionId(),
                                           });
                                   },

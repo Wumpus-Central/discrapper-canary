@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => y,
+    Z: () => _,
     y: () => g,
 }),
     n(388685);
@@ -40,10 +40,10 @@ function b(e) {
         className: m.resizeHandle,
     });
 }
-function y(e) {
+function _(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: r, children: a, floatingLayer: p } = e,
         g = l.useRef(null),
-        y = (function (e) {
+        _ = (function (e) {
             switch (e) {
                 case 0:
                     return "postSidebarWidth";
@@ -59,12 +59,12 @@ function y(e) {
                     return "callParticipantsSidebarWidth";
             }
         })(t),
-        [_, C] = l.useState(h.ZP[y]),
+        [y, C] = l.useState(h.ZP[_]),
         x = l.useCallback(
             (e) => {
-                d.ZP.updatedUnsyncedSettings({ [y]: e });
+                d.ZP.updatedUnsyncedSettings({ [_]: e });
             },
-            [y],
+            [_],
         ),
         v = 5 === t ? f.at : f.Co,
         O = (0, f.WL)({
@@ -72,16 +72,16 @@ function y(e) {
             minWidth: v,
         }),
         j = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        E = (0, s.clamp)(_, v, n),
+        E = (0, s.clamp)(y, v, n),
         S = O ? E : E + j;
     l.useEffect(() => {
         null == r || r(E, O);
     }, [E, r, O]);
-    let P = null != p ? p : l.Fragment;
+    let I = null != p ? p : l.Fragment;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !O && (0, i.jsx)("div", { style: { minWidth: S } }),
-            (0, i.jsx)(P, {
+            (0, i.jsx)(I, {
                 children: (0, i.jsxs)("div", {
                     className: o()(m.chatLayerWrapper, { [m.hidden]: !1 }),
                     children: [

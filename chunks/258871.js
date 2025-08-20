@@ -1,18 +1,16 @@
-n.d(t, { Z: () => _ });
-var r = n(951288),
-    i = n(647438),
-    l = n(442837),
-    o = n(481060),
-    a = n(554747),
-    s = n(434479),
-    c = n(593364),
-    u = n(703656),
-    d = n(944486),
-    p = n(147754),
-    f = n(688438),
-    h = n(981631),
-    g = n(388032);
-function m(e) {
+n.d(t, { Z: () => m });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    l = n(481060),
+    o = n(434479),
+    a = n(593364),
+    s = n(703656),
+    c = n(944486),
+    u = n(688438),
+    d = n(981631),
+    p = n(388032);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +35,7 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,54 +53,34 @@ function b(e, t) {
         e
     );
 }
-let O = [
-        {
-            key: "EVENTS",
-            renderIcon: (e) =>
-                (0, r.jsx)(o.Que, {
-                    size: "md",
-                    color: "currentColor",
-                    className: e,
-                }),
-            getName: (e) => {
-                let { numEvents: t } = e;
-                return t > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: t }) : g.intl.string(g.t.tlopTE);
-            },
-            handler: (e) =>
-                (0, o.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("22347"), n.e("56236"), n.e("25688")]).then(
-                        n.bind(n, 17671),
-                    );
-                    return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
-                }),
-        },
+let g = [
         {
             key: "JOIN_SERVERS",
             renderIcon: (e) =>
-                (0, r.jsx)(o.Jmo, {
+                (0, r.jsx)(l.Jmo, {
                     size: "md",
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => g.intl.string(g.t.K50GHR),
-            handler: (e, t) => (0, u.XU)(e.id, t.id),
+            getName: () => p.intl.string(p.t.K50GHR),
+            handler: (e, t) => (0, s.XU)(e.id, t.id),
         },
         {
             key: "ADD_SERVERS",
             renderIcon: (e) =>
-                (0, r.jsx)(o.qJs, {
+                (0, r.jsx)(l.qJs, {
                     size: "md",
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => g.intl.string(g.t.emRpdX),
+            getName: () => p.intl.string(p.t.emRpdX),
             handler: (e, t) =>
-                (0, o.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: i } = await n.e("79764").then(n.bind(n, 533202));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            b(m({}, n), {
+                            h(f({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
                                 directoryChannelId: t.id,
@@ -112,58 +90,42 @@ let O = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, r.jsx)(o.ejJ, { className: e }),
-            getName: () => g.intl.string(g.t.MJQOuL),
+            renderIcon: (e) => (0, r.jsx)(l.ejJ, { className: e }),
+            getName: () => p.intl.string(p.t.MJQOuL),
             handler: (e, t) =>
-                (0, o.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: i } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            b(m({}, n), {
+                            h(f({}, n), {
                                 guild: e,
                                 channel: t,
-                                source: h.t4x.HUB_SIDEBAR,
+                                source: d.t4x.HUB_SIDEBAR,
                             }),
                         );
                 }),
         },
     ],
-    _ = (e) => {
+    m = (e) => {
         let { guild: t, channel: n } = e,
-            o = (0, a.ZP)(t.id);
-        i.useEffect(() => {
-            p.Z.trackExposure({
-                guildId: t.id,
-                location: "543af8_1",
-            });
-        }, [t.id]);
-        let { showHubEventsList: u } = p.Z.useExperiment(
-                {
-                    guildId: t.id,
-                    location: "543af8_2",
-                },
-                { autoTrackExposure: !1 },
-            ),
-            h = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
-            g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
-            m = (0, f.t)(n);
+            l = (0, i.e7)([c.Z], () => null != n && c.Z.getChannelId() === n.id),
+            s = (0, u.t)(n);
         return (0, r.jsx)(r.Fragment, {
-            children: O.map((e) => {
-                let { key: i, getName: l, handler: o, renderIcon: a } = e;
-                if (!u && "EVENTS" === i) return null;
-                let d = "".concat(i, "-").concat(t.id);
+            children: g.map((e) => {
+                let { key: i, getName: c, handler: u, renderIcon: d } = e,
+                    p = "".concat(i, "-").concat(t.id);
                 return (0, r.jsx)(
-                    s.m,
+                    o.m,
                     {
-                        id: d,
-                        renderIcon: a,
-                        text: l(g),
-                        selected: h && "JOIN_SERVERS" === i,
-                        onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === i && m > 0 ? (0, c.N)(m) : null,
+                        id: p,
+                        renderIcon: d,
+                        text: c(),
+                        selected: l && "JOIN_SERVERS" === i,
+                        onClick: null != n ? () => u(t, n) : void 0,
+                        trailing: "JOIN_SERVERS" === i && s > 0 ? (0, a.N)(s) : null,
                     },
-                    d,
+                    p,
                 );
             }),
         });

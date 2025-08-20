@@ -14,7 +14,7 @@ var r,
     m = n(981631),
     g = n(490897),
     b = n(526761);
-function y(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function y(e, t, n) {
         e
     );
 }
-let _ = [
+let y = [
         {
             timeSinceJoin: +d.Z.Millis.HOUR,
             sends: 1,
@@ -49,26 +49,26 @@ let _ = [
             viewTime: 30 * d.Z.Millis.MINUTE,
         },
     ],
-    C = 5 * _[_.length - 1].viewTime,
+    C = 5 * y[y.length - 1].viewTime,
     x = d.Z.Millis.WEEK,
     v = { channels: {} },
     O = new Set(),
     j = null,
     E = 0,
     S = 0;
-function P() {
+function I() {
     if (null == j || !T(j)) return !1;
     let e = Z(j);
     if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > C) return !1;
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
 }
-function I() {
+function P() {
     return (
         0 !== S && (clearInterval(S), (S = 0)),
         u.ZP.useNewNotifications &&
             (S = setInterval(() => {
-                P() && w.emitChange();
+                I() && w.emitChange();
             }, 15 * d.Z.Millis.SECOND)),
         !1
     );
@@ -111,7 +111,7 @@ function N(e, t) {
 }
 class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (v.channels = e.channels), this.syncWith([u.ZP], I), this.waitFor(u.ZP, c.Z, o.Z);
+        null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, o.Z);
     }
     getState() {
         return v;
@@ -133,7 +133,7 @@ class A extends (r = i.ZP.PersistedStore) {
                     i = Math.min(h.default.age(e.id), Date.now() - r.getTime()),
                     l = v.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - x) return !1;
-                for (let e of _)
+                for (let e of y)
                     if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
@@ -141,14 +141,14 @@ class A extends (r = i.ZP.PersistedStore) {
         );
     }
 }
-y(A, "displayName", "UnreadSettingNoticeStore2"), y(A, "persistKey", "UnreadSettingNoticeStore2");
+_(A, "displayName", "UnreadSettingNoticeStore2"), _(A, "persistKey", "UnreadSettingNoticeStore2");
 let w = new A(l.Z, {
         CHANNEL_SELECT: function () {
-            let e = P();
+            let e = I();
             return (j = c.Z.getChannelId()), (E = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (j = c.Z.getChannelId()), (E = Date.now()), I();
+            (j = c.Z.getChannelId()), (E = Date.now()), P();
             let e = Date.now() - x;
             h.default.forEach(v.channels, (t, n) => {
                 let { lastActionTime: r } = t;

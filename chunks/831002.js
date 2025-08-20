@@ -1,6 +1,6 @@
 n.d(t, {
-    $A: () => y,
-    j8: () => _,
+    $A: () => _,
+    j8: () => y,
 });
 var r = n(951288);
 n(647438);
@@ -20,7 +20,7 @@ var c = n(218035),
     g = n(427679);
 n(354459);
 var b = n(388032);
-function y(e) {
+function _(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]),
         n = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t)),
         i = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(e), [e]),
@@ -40,7 +40,7 @@ function y(e) {
               })
         : null;
 }
-function _(e) {
+function y(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]);
     l()(null != t, "useNotificationSettingsItem: channel cannot be undefined");
     let n = (0, d.Mn)("StageChannelCallOverflowMenu"),

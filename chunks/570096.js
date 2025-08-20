@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(981631),
     g = n(921944),
     b = n(388032),
-    y = n(942889);
-let _ = (e) => {
+    _ = n(942889);
+let y = (e) => {
     let { user: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {
-        className: y.assetContainer,
+        className: _.assetContainer,
         children: [
             (0, r.jsx)(f.Z, {
                 user: t,
@@ -26,7 +26,7 @@ let _ = (e) => {
                 avatarSize: s.EFr.SIZE_56,
             }),
             (0, r.jsx)(s.P3F, {
-                className: y.closeIcon,
+                className: _.closeIcon,
                 onClick: () => {
                     n(g.L.USER_DISMISS);
                 },
@@ -41,7 +41,7 @@ let _ = (e) => {
 function C(e) {
     let { children: t } = e,
         n = [a.z.LEADERBOARD_NUX_COACHMARK],
-        [f, y] = (0, u.US)(n, void 0),
+        [f, _] = (0, u.US)(n, void 0),
         C = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         x = i.useRef(null);
     return f !== a.z.LEADERBOARD_NUX_COACHMARK || null == C
@@ -52,7 +52,7 @@ function C(e) {
                   ((e) => {
                       let { user: t, markAsDismissed: n } = e;
                       return (0, r.jsx)(d.ZP, {
-                          asset: (0, r.jsx)(_, {
+                          asset: (0, r.jsx)(y, {
                               user: t,
                               markAsDismissed: n,
                           }),
@@ -72,7 +72,7 @@ function C(e) {
                       });
                   })({
                       user: C,
-                      markAsDismissed: y,
+                      markAsDismissed: _,
                   }),
               position: "left",
               animation: s.yRy.Animation.TRANSLATE,

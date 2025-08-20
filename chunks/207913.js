@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(739566),
     _ = n(930282),
     y = n(318713),
-    j = n(47930),
-    v = n(123145),
+    v = n(47930),
+    j = n(123145),
     C = n(25015),
     x = n(178480),
     E = n(518950),
@@ -93,7 +93,7 @@ function F(e) {
             animateOnHover: !0,
         }),
         S = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == b,
-        P = (0, j.x)({
+        P = (0, v.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -103,7 +103,7 @@ function F(e) {
         Z = (0, r.jsx)("div", {
             className: G.usernameTagContainer,
             inert: !0,
-            children: (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(j.Z, {
                 channel: n,
                 message: t,
                 hideGuildTag: !0,
@@ -326,14 +326,14 @@ function W(e) {
                             ? (O = u.SlE)
                             : h && (O = u.gj8);
                 let y = !0,
-                    j = null;
+                    v = null;
                 if (e)
-                    if (c) j = U.intl.string(U.t["9ddYKi"]);
+                    if (c) v = U.intl.string(U.t["9ddYKi"]);
                     else if (p) {
-                        var v;
-                        (y = !1), (j = null == (v = t.poll) ? void 0 : v.question.text);
+                        var j;
+                        (y = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
                     } else
-                        j = f
+                        v = f
                             ? U.intl.string(U.t.sad2PD)
                             : i
                               ? U.intl.string(U.t.p0oZm5)
@@ -350,7 +350,7 @@ function W(e) {
                                         : U.intl.string(U.t.sDqZHB);
                 else
                     (y = !1),
-                        (j = (0, r.jsx)(_.ZP, {
+                        (v = (0, r.jsx)(_.ZP, {
                             content: a,
                             message: t,
                             compact: !1,
@@ -361,16 +361,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (j = (0, r.jsx)("div", {
+                        (v = (0, r.jsx)("div", {
                             className: o()(G.message, {
                                 [G.unread]: n,
                                 [G.selected]: l,
                                 [G.descriptionMessage]: y,
                             }),
-                            children: j,
+                            children: v,
                         })),
                     {
-                        previewContent: j,
+                        previewContent: v,
                         Icon: O,
                     }
                 );
