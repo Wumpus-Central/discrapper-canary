@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(t, {
     C: () => m,
     Z: () => d,
 }),
-    n(388685);
-var r,
-    i = n(951288),
-    l = n(647438),
-    a = n(120356),
-    s = n.n(a),
-    o = n(793030),
-    c = n(388032),
-    u = n(451697),
-    d = (((r = {})[(r.SMALL = 0)] = "SMALL"), (r[(r.LARGE = 1)] = "LARGE"), r);
+    r(388685);
+var n,
+    i = r(951288),
+    l = r(647438),
+    a = r(120356),
+    s = r.n(a),
+    o = r(793030),
+    c = r(388032),
+    u = r(451697),
+    d = (((n = {})[(n.SMALL = 0)] = "SMALL"), (n[(n.LARGE = 1)] = "LARGE"), n);
 function m(e) {
     var t;
-    let { game: n, application: r, size: a, className: d } = e,
+    let { game: r, application: n, size: a, className: d } = e,
         [m, p] = l.useState(!1),
-        f = null != (t = null == r ? void 0 : r.name) ? t : n.name,
-        g = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
-    return null == n.coverImageUrl || m
+        f = null != (t = null == n ? void 0 : n.name) ? t : r.name,
+        g = null != r.firstReleaseDate ? new Date(r.firstReleaseDate) : null;
+    return null == r.coverImageUrl || m
         ? (0, i.jsxs)("div", {
               className: s()(u.fallback, d),
               children: [
@@ -39,7 +39,7 @@ function m(e) {
           })
         : (0, i.jsx)("img", {
               className: d,
-              src: n.coverImageUrl,
+              src: r.coverImageUrl,
               alt: c.intl.formatToPlainString(c.t["3ev90d"], { game: f }),
               onError: () => {
                   p(!0);

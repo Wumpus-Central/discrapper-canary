@@ -3,8 +3,8 @@ var n = r(951288),
     l = r(647438),
     i = r(120356),
     a = r.n(i),
-    c = r(481060),
-    o = r(810568),
+    o = r(481060),
+    c = r(810568),
     s = r(168524),
     u = r(388032),
     d = r(932366);
@@ -33,7 +33,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,25 +51,25 @@ function g(e, t) {
         e
     );
 }
-function b(e) {
+function g(e) {
     let { imageSrc: t, gameName: r } = e,
         [i, a] = l.useState(!1),
-        o = null != r ? r : u.intl.string(u.t.GIWFlJ);
+        c = null != r ? r : u.intl.string(u.t.GIWFlJ);
     return i || null == t
         ? (0, n.jsx)("div", {
               role: "img",
-              "aria-label": o,
+              "aria-label": c,
               className: d.fallback,
-              children: (0, n.jsx)(c.Text, {
+              children: (0, n.jsx)(o.Text, {
                   variant: "text-xxs/medium",
                   lineClamp: 3,
                   "aria-hidden": !0,
-                  children: o,
+                  children: c,
               }),
           })
         : (0, n.jsx)("img", {
               src: t,
-              alt: o,
+              alt: c,
               className: d.gameCoverImage,
               onError: () => a(!0),
               onLoad: () => a(!1),
@@ -80,7 +80,7 @@ function p(e) {
         m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
-            source: o.m1.UserProfile,
+            source: c.m1.UserProfile,
             sourceUserId: i,
             trackEntryPointImpression: !0,
         }),
@@ -89,7 +89,7 @@ function p(e) {
         v = (e) =>
             O
                 ? e()
-                : (0, n.jsx)(c.ua7, {
+                : (0, n.jsx)(o.ua7, {
                       text: j,
                       children: (t) => e(t),
                   });
@@ -98,8 +98,8 @@ function p(e) {
             ? (e) =>
                   (0, n.jsx)(
                       "div",
-                      g(f({ className: p }, e), {
-                          children: (0, n.jsx)(b, {
+                      b(f({ className: p }, e), {
+                          children: (0, n.jsx)(g, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -107,12 +107,12 @@ function p(e) {
                   )
             : (e) =>
                   (0, n.jsx)(
-                      c.P3F,
-                      g(f({}, e), {
+                      o.P3F,
+                      b(f({}, e), {
                           onClick: m,
                           "aria-label": y,
                           className: a()(d.clickable, p),
-                          children: (0, n.jsx)(b, {
+                          children: (0, n.jsx)(g, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -121,8 +121,8 @@ function p(e) {
     );
 }
 function O(e) {
-    var { applicationId: t, userId: r, className: l, disableInteraction: i = !1, hideTooltip: c } = e,
-        o = (function (e, t) {
+    var { applicationId: t, userId: r, className: l, disableInteraction: i = !1, hideTooltip: o } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -147,7 +147,7 @@ function O(e) {
     return i
         ? (0, n.jsx)("div", {
               className: s,
-              children: (0, n.jsx)(b, f({}, o)),
+              children: (0, n.jsx)(g, f({}, c)),
           })
         : (0, n.jsx)(
               p,
@@ -156,9 +156,9 @@ function O(e) {
                       className: s,
                       applicationId: t,
                       userId: r,
-                      hideTooltip: c,
+                      hideTooltip: o,
                   },
-                  o,
+                  c,
               ),
           );
 }

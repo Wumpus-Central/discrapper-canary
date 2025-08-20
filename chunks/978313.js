@@ -1,70 +1,70 @@
-n.d(t, { Z: () => j }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    s = n(657707),
-    o = n(793030),
-    c = n(692547),
-    u = n(481060),
-    d = n(885006),
-    m = n(810568),
-    p = n(221370),
-    f = n(388032),
-    g = n(226788),
-    x = n(802318);
-function j(e) {
-    let { detectedGame: t, trackAction: n } = e,
-        [l, j] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [h, v] = i.useState(!0),
+r.d(t, { Z: () => x }), r(388685);
+var n = r(951288),
+    i = r(647438),
+    l = r(120356),
+    a = r.n(l),
+    s = r(657707),
+    o = r(793030),
+    c = r(692547),
+    u = r(481060),
+    d = r(885006),
+    m = r(810568),
+    p = r(221370),
+    f = r(388032),
+    g = r(226788),
+    j = r(802318);
+function x(e) {
+    let { detectedGame: t, trackAction: r } = e,
+        [l, x] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [v, h] = i.useState(!0),
         [O, b] = i.useState(!1),
         y = i.useRef(null),
-        { width: I, height: P } = (0, d.Z)();
+        { width: P, height: w } = (0, d.Z)();
     return (i.useEffect(() => {
         let e = y.current;
-        null != e && b(e.scrollHeight - e.clientHeight > 1 || !h);
-    }, [y, I, P, h]),
+        null != e && b(e.scrollHeight - e.clientHeight > 1 || !v);
+    }, [y, P, w, v]),
     null == t.summary)
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               className: a()(g.column, g.gapMd),
               children: [
                   null != t.summaryLocalized &&
-                      (0, r.jsxs)("div", {
+                      (0, n.jsxs)("div", {
                           className: a()(g.row, g.gapSm),
                           children: [
-                              (0, r.jsx)(s.SxY, {
+                              (0, n.jsx)(s.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: "xs",
                               }),
-                              (0, r.jsx)(o.xv, {
+                              (0, n.jsx)(o.xv, {
                                   variant: "text-xs/medium",
                                   color: "header-secondary",
                                   children: l
-                                      ? f.intl.format(f.t.aZ2iIi, { onShowOriginal: () => j(!1) })
-                                      : f.intl.format(f.t["/2ylFx"], { onShowTranslated: () => j(!0) }),
+                                      ? f.intl.format(f.t.aZ2iIi, { onShowOriginal: () => x(!1) })
+                                      : f.intl.format(f.t["/2ylFx"], { onShowTranslated: () => x(!0) }),
                               }),
                           ],
                       }),
-                  (0, r.jsx)(o.xv, {
+                  (0, n.jsx)(o.xv, {
                       ref: y,
-                      lineClamp: h ? 8 : void 0,
+                      lineClamp: v ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: l ? t.summaryLocalized : t.summary,
                   }),
                   O &&
-                      (0, r.jsx)(u.P3F, {
+                      (0, n.jsx)(u.P3F, {
                           className: g.clickable,
                           onClick: () => {
-                              n(h ? m.as.ShowMore : m.as.ShowLess), v(!h);
+                              r(v ? m.as.ShowMore : m.as.ShowLess), h(!v);
                           },
-                          children: (0, r.jsx)(o.xv, {
+                          children: (0, n.jsx)(o.xv, {
                               variant: "text-sm/semibold",
-                              children: h ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo6"]),
+                              children: v ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo6"]),
                           }),
                       }),
-                  (0, r.jsx)(p.Z, {
-                      className: x.platforms,
+                  (0, n.jsx)(p.Z, {
+                      className: j.platforms,
                       detectedGame: t,
                   }),
               ],

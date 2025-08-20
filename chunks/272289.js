@@ -3,8 +3,8 @@ var n = r(951288),
     l = r(647438),
     i = r(399606),
     a = r(224724),
-    c = r(86419),
-    o = r(206599),
+    o = r(86419),
+    c = r(206599),
     s = r(977416);
 function u(e) {
     var { widgetType: t } = e,
@@ -29,12 +29,12 @@ function u(e) {
             }
             return l;
         })(e, ["widgetType"]);
-    let { games: u, isGameFetching: d, onAddGame: f } = (0, o.K)(t),
-        [g] = (0, i.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
-        b = l.useCallback(
+    let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
+        [b] = (0, i.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
+        g = l.useCallback(
             (e, r, n) => {
                 f(e),
-                    (0, c.ES)(t, {
+                    (0, o.ES)(t, {
                         applicationId: e,
                         gameName: r,
                         imageSrc: n,
@@ -72,8 +72,8 @@ function u(e) {
             {
                 games: u,
                 isGameFetching: d,
-                isSuggestedGamesLoading: g,
-                onClick: b,
+                isSuggestedGamesLoading: b,
+                onClick: g,
             },
             r,
         ),

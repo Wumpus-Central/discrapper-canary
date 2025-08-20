@@ -1,34 +1,34 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    s = n(758713),
-    o = n(657707),
-    c = n(481060),
-    u = n(388032),
-    d = n(226788);
+r.d(t, { Z: () => j }), r(388685), r(539854);
+var n = r(951288),
+    i = r(647438),
+    l = r(120356),
+    a = r.n(l),
+    s = r(758713),
+    o = r(657707),
+    c = r(481060),
+    u = r(388032),
+    d = r(226788);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
@@ -36,47 +36,47 @@ function m(e) {
 let p = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
 function f(e) {
     var { platform: t } = e,
-        n = (function (e, t) {
+        r = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["platform"]);
     switch (t) {
         case s.z.DESKTOP:
-            return (0, r.jsx)(o.pzj, m({ size: "xs" }, n));
+            return (0, n.jsx)(o.pzj, m({ size: "xs" }, r));
         case s.z.XBOX:
-            return (0, r.jsx)(o.Mko, m({ size: "xs" }, n));
+            return (0, n.jsx)(o.Mko, m({ size: "xs" }, r));
         case s.z.PLAYSTATION:
-            return (0, r.jsx)(o.Tsp, m({ size: "xs" }, n));
+            return (0, n.jsx)(o.Tsp, m({ size: "xs" }, r));
         case s.z.NINTENDO:
-            return (0, r.jsx)(o.aPH, m({ size: "xs" }, n));
+            return (0, n.jsx)(o.aPH, m({ size: "xs" }, r));
         default:
             return null;
     }
 }
 function g(e) {
     let { platforms: t } = e;
-    return (0, r.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: a()(d.row, d.gapSm),
         style: { alignItems: "center" },
         children: t.map((e) =>
-            (0, r.jsx)(
+            (0, n.jsx)(
                 c.ua7,
                 {
                     text: (function (e) {
@@ -94,24 +94,24 @@ function g(e) {
                         }
                     })(e),
                     children: (t) => {
-                        var n, i;
-                        return (0, r.jsx)(
+                        var r, i;
+                        return (0, n.jsx)(
                             f,
-                            ((n = m({}, t)),
+                            ((r = m({}, t)),
                             (i = i = { platform: e }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
-                                      var n = Object.keys(e);
+                                      var r = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, n);
                                       }
-                                      return n;
+                                      return r;
                                   })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                                   }),
-                            n),
+                            r),
                         );
                     },
                 },
@@ -120,20 +120,20 @@ function g(e) {
         ),
     });
 }
-function x(e) {
-    let { detectedGame: t, className: n } = e,
+function j(e) {
+    let { detectedGame: t, className: r } = e,
         l = i.useMemo(() => {
             let e = new Set(t.platforms),
-                n = [...e];
+                r = [...e];
             return (
-                !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && n.push(s.z.DESKTOP),
-                n.filter((e) => p.includes(e))
+                !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && r.push(s.z.DESKTOP),
+                r.filter((e) => p.includes(e))
             );
         }, [t.platforms]);
     return 0 === l.length
         ? null
-        : (0, r.jsx)("div", {
-              className: a()(d.column, d.gapLg, n),
-              children: l.length > 0 && (0, r.jsx)(g, { platforms: l }),
+        : (0, n.jsx)("div", {
+              className: a()(d.column, d.gapLg, r),
+              children: l.length > 0 && (0, n.jsx)(g, { platforms: l }),
           });
 }

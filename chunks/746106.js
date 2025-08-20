@@ -98,7 +98,6 @@ function S(e) {
             alwaysShowLinkDecorations: U,
             hardwareAccelerationEnabled: S,
             highContrastMode: Z && B,
-            isPopoutWindow: a,
             rootClassName: o()(Q, {
                 "confetti-mode": G,
                 "refresh-fast-follow-avatars": Y && !q,

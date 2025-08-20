@@ -1,11 +1,11 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => g });
 var n = r(951288);
 r(647438);
 var l = r(481060),
     i = r(313201),
     a = r(817053),
-    c = r(890814),
-    o = r(388032),
+    o = r(890814),
+    c = r(388032),
     s = r(932366),
     u = r(845859);
 function d(e) {
@@ -51,9 +51,9 @@ function f(e, t) {
         e
     );
 }
-function g(e) {
+function b(e) {
     var { gameName: t, onClick: r, loading: i = !0 } = e,
-        c = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -74,12 +74,12 @@ function g(e) {
             }
             return l;
         })(e, ["gameName", "onClick", "loading"]);
-    let g = null != t ? t : o.intl.string(o.t.GIWFlJ),
-        b = o.intl.formatToPlainString(o.t["3mb1s7"], { game: g });
+    let b = null != t ? t : c.intl.string(c.t.GIWFlJ),
+        g = c.intl.formatToPlainString(c.t["3mb1s7"], { game: b });
     return i
         ? (0, n.jsx)("div", { className: s.loadingCover })
         : (0, n.jsx)(l.ua7, {
-              text: b,
+              text: g,
               children: (e) =>
                   (0, n.jsxs)(
                       l.P3F,
@@ -94,7 +94,7 @@ function g(e) {
                                               className: u.cover,
                                               gameName: t,
                                           },
-                                          c,
+                                          o,
                                       ),
                                       { disableInteraction: !0 },
                                   ),
@@ -109,19 +109,19 @@ function g(e) {
                   ),
           });
 }
-function b(e) {
+function g(e) {
     let { userId: t, games: r, isGameFetching: a, isSuggestedGamesLoading: s, onDismiss: d, onClick: f } = e,
-        b = (0, i.Dt)();
+        g = (0, i.Dt)();
     return (0, n.jsxs)("aside", {
         className: u.container,
-        "aria-labelledby": b,
+        "aria-labelledby": g,
         children: [
             (0, n.jsxs)("div", {
                 className: u.header,
                 children: [
                     (0, n.jsx)(l.P3F, {
                         className: u.dismissButton,
-                        "aria-label": o.intl.string(o.t["pUR+3t"]),
+                        "aria-label": c.intl.string(c.t["pUR+3t"]),
                         onClick: d,
                         children: (0, n.jsx)(l.Dio, {
                             size: "sm",
@@ -129,18 +129,18 @@ function b(e) {
                         }),
                     }),
                     (0, n.jsx)(l.X6q, {
-                        id: b,
+                        id: g,
                         variant: "text-xs/medium",
                         color: "text-secondary",
-                        children: o.intl.string(o.t.zMUr6e),
+                        children: c.intl.string(c.t.zMUr6e),
                     }),
                 ],
             }),
-            (0, n.jsx)(c.Z, {
+            (0, n.jsx)(o.Z, {
                 games: r,
                 renderGame: (e) => {
                     let { applicationId: r, gameName: l, imageSrc: i } = e;
-                    return (0, n.jsx)(g, {
+                    return (0, n.jsx)(b, {
                         onClick: () => f(r, l, i),
                         userId: t,
                         loading: s || a(r),

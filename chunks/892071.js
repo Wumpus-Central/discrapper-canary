@@ -1,6 +1,6 @@
 n.d(t, {
-    cE: () => m,
-    vP: () => h,
+    cE: () => p,
+    vP: () => _,
 }),
     n(415506);
 var r = n(951288),
@@ -11,104 +11,85 @@ var r = n(951288),
     l = n(481060),
     c = n(597952),
     u = n(377089),
-    d = n(580747),
-    f = n(819439),
-    _ = n(998502);
-let p = i.createContext({
+    d = n(580747);
+let f = i.createContext({
     lang: "",
     style: "",
     className: "",
 });
-function h() {
-    let e = i.useContext(p);
+function _() {
+    let e = i.useContext(f);
     if (void 0 === e) throw Error("useRootElementContext must be used within a RootElementContextProvider");
     return e;
 }
-function m(e) {
+function p(e) {
     let {
             rootClassName: t,
             lang: n,
             theme: a,
-            density: h,
-            focused: m,
-            fontScale: g,
-            fontScaleClass: E,
-            mouseMode: b,
-            keyboardModeEnabled: y,
-            saturation: O,
-            desaturateUserColors: v,
-            useForcedColors: I,
-            systemForcedColors: T,
-            useReducedMotion: S,
-            alwaysShowLinkDecorations: A,
-            hardwareAccelerationEnabled: C,
-            highContrastMode: N,
-            isPopoutWindow: R,
-            children: P,
+            density: _,
+            focused: p,
+            fontScale: h,
+            fontScaleClass: m,
+            mouseMode: g,
+            keyboardModeEnabled: E,
+            saturation: b,
+            desaturateUserColors: y,
+            useForcedColors: O,
+            systemForcedColors: v,
+            useReducedMotion: I,
+            alwaysShowLinkDecorations: T,
+            hardwareAccelerationEnabled: S,
+            highContrastMode: A,
+            children: C,
         } = e,
-        w = window.CSS.supports("selector(::-webkit-scrollbar)"),
-        D = "font-size: ".concat(g, "%; --saturation-factor: ").concat(O, ";"),
-        x = (0, d.Z)("highlight_mana_buttons"),
-        L = (0, d.Z)("highlight_mana_components"),
-        j = (0, d.Z)("highlight_void_toggleables"),
-        M = (0, d.Z)("highlight_void_buttons"),
-        k = o()(
+        N = window.CSS.supports("selector(::-webkit-scrollbar)"),
+        R = "font-size: ".concat(h, "%; --saturation-factor: ").concat(b, ";"),
+        P = (0, d.Z)("highlight_mana_buttons"),
+        w = (0, d.Z)("highlight_mana_components"),
+        D = (0, d.Z)("highlight_void_toggleables"),
+        x = (0, d.Z)("highlight_void_buttons"),
+        L = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
-            "density-".concat(h),
-            E,
+            "density-".concat(_),
+            m,
             {
-                "low-saturation": O <= l.AEw,
-                "keyboard-mode": y,
-                "decorate-links": A,
-                "no-webkit-scrollbar": !w,
-                "has-webkit-scrollbar": w,
-                "mouse-mode": b,
-                "reduce-motion": S,
-                "full-motion": !S,
+                "low-saturation": b <= l.AEw,
+                "keyboard-mode": E,
+                "decorate-links": T,
+                "no-webkit-scrollbar": !N,
+                "has-webkit-scrollbar": N,
+                "mouse-mode": g,
+                "reduce-motion": I,
+                "full-motion": !I,
                 "is-mobile": s.tq,
-                "app-focused": m,
-                "desaturate-user-colors": v,
-                "disable-forced-colors": !I && "active" === T,
-                "enable-forced-colors": I,
+                "app-focused": p,
+                "desaturate-user-colors": y,
+                "disable-forced-colors": !O && "active" === v,
+                "enable-forced-colors": O,
                 "visual-refresh": !0,
-                "hardware-acceleration-disabled": !C,
+                "hardware-acceleration-disabled": !S,
                 "visual-refresh-chat-input": !1,
                 "mana-text-inputs": (0, u.U)("RootElementContextProvider"),
-                "highlight-mana-buttons": x,
-                "highlight-mana-components": L,
-                "highlight-void-toggleables": j,
-                "highlight-void-buttons": M,
-                "high-contrast-mode": N,
+                "highlight-mana-buttons": P,
+                "highlight-mana-components": w,
+                "highlight-void-toggleables": D,
+                "highlight-void-buttons": x,
+                "high-contrast-mode": A,
             },
             t,
         ),
-        U = i.useMemo(
+        j = i.useMemo(
             () => ({
                 lang: n,
-                style: D,
-                className: k,
+                style: R,
+                className: L,
             }),
-            [n, D, k],
-        ),
-        G = (0, f.$)({ location: "RootElementContextProvider" });
-    return (
-        i.useLayoutEffect(() => {
-            if (R) return;
-            let e = G
-                ? {
-                      x: 10,
-                      y: 16,
-                  }
-                : {
-                      x: 10,
-                      y: 10,
-                  };
-            _.ZP.setTrafficLightPosition(e);
-        }, [R, G]),
-        (0, r.jsx)(p.Provider, {
-            value: U,
-            children: P,
-        })
-    );
+            [n, R, L],
+        );
+    return (0, r.jsx)(f.Provider, {
+        value: j,
+        children: C,
+    });
 }

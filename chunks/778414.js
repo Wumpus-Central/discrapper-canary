@@ -1,5 +1,5 @@
 r.d(t, {
-    C: () => S,
+    C: () => I,
     Z: () => E,
 }),
     r(388685);
@@ -7,14 +7,14 @@ var n = r(951288),
     l = r(647438),
     i = r(296009),
     a = r(442837),
-    c = r(481060),
-    o = r(355467),
+    o = r(481060),
+    c = r(355467),
     s = r(981312),
     u = r(314897),
     d = r(351402),
     f = r(206599),
-    g = r(747101),
-    b = r(517157),
+    b = r(747101),
+    g = r(517157),
     p = r(985748),
     O = r(566007),
     m = r(173951),
@@ -88,8 +88,8 @@ function w() {
     return (0, n.jsxs)("div", {
         className: h.ukTeenDisclaimer,
         children: [
-            (0, n.jsx)(c.d3s, { size: "xs" }),
-            (0, n.jsx)(c.Text, {
+            (0, n.jsx)(o.d3s, { size: "xs" }),
+            (0, n.jsx)(o.Text, {
                 "aria-label": x.intl.string(x.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -98,17 +98,17 @@ function w() {
         ],
     });
 }
-function I(e) {
+function S(e) {
     let { user: t, guildId: r, channelId: i } = e,
-        c = (0, b.Z)(t.id),
-        { widgets: p, isGameFetching: O } = (0, g.Z)(c),
+        o = (0, g.Z)(t.id),
+        { widgets: p, isGameFetching: O } = (0, b.Z)(o),
         m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
                 r = (0, s.U)();
             return (
                 l.useEffect(() => {
-                    null == e && null == t && r && (0, o.GE)();
+                    null == e && null == t && r && (0, c.GE)();
                 }, [e, t, r]),
                 "GB" === e && r
             );
@@ -136,10 +136,10 @@ function I(e) {
               ],
           });
 }
-function S(e) {
-    return (0, n.jsx)(c.Ttm, {
+function I(e) {
+    return (0, n.jsx)(o.Ttm, {
         className: h.scroller,
         fade: !0,
-        children: (0, n.jsx)(I, P({}, e)),
+        children: (0, n.jsx)(S, P({}, e)),
     });
 }

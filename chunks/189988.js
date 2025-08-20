@@ -1,14 +1,14 @@
-r.d(t, { Z: () => o });
+r.d(t, { Z: () => c });
 var n = r(951288);
 r(647438);
 var l = r(624238),
     i = r(481060),
     a = r(388032),
-    c = r(673176);
-function o(e) {
+    o = r(673176);
+function c(e) {
     let { widgetType: t } = e;
     return (0, n.jsx)("div", {
-        className: c.container,
+        className: o.container,
         children: (0, n.jsx)(i.Text, {
             variant: "text-xs/normal",
             color: "text-secondary",

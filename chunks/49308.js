@@ -1,4 +1,4 @@
-n.d(t, { x: () => I });
+n.d(t, { x: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -15,8 +15,9 @@ var r = n(951288),
     m = n(179118),
     g = n(27034),
     E = n(698708),
-    b = n(215023);
-function y(e, t, n) {
+    b = n(215023),
+    y = n(388032);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +30,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +41,12 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e) {
+function I(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         {
             skusById: a,
@@ -54,30 +55,36 @@ function v(e) {
             paymentError: d,
             purchaseError: f,
             purchasePreviewError: p,
+            appliedUserDiscounts: m,
         } = (0, h.JL)(),
-        m = (0, s.e7)([c.Z], () => c.Z.getProduct(l)),
-        y = i.useRef(!1);
+        O = (0, s.e7)([c.Z], () => c.Z.getProduct(l)),
+        v = i.useRef(!1);
     o()(null != l, "Expected selectedSkuId"), o()(null != u, "Expected application");
-    let O = a[l];
-    o()(null != O, "Expected sku");
-    let v = null != d || null != f || null != p;
+    let I = a[l];
+    o()(null != I, "Expected sku");
+    let T = null != d || null != f || null != p,
+        S =
+            m.length > 0
+                ? y.intl.formatToPlainString(y.t.VuV3TU, { discountOfferAmount: m[0].discount.amount })
+                : void 0;
     return (i.useEffect(() => {
-        null == m ||
-            v ||
-            y.current ||
-            ((y.current = !0),
+        null == O ||
+            T ||
+            v.current ||
+            ((v.current = !0),
             (0, _.Z)({
-                product: m,
+                product: O,
+                overrideTitle: S,
                 analyticsLocations: n,
                 onCloseCallback: t,
                 purchaseType: b.o8.FIAT,
             }));
-    }, [m, n, t, v]),
-    v)
+    }, [O, n, t, T, S]),
+    T)
         ? (0, r.jsx)(g.C3, { children: (0, r.jsx)(E.Z, {}) })
         : null;
 }
-function I(e) {
+function T(e) {
     let {
             isGift: t,
             giftCode: n,
@@ -89,8 +96,8 @@ function I(e) {
         } = (0, p.wD)(),
         b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         y = i.useRef(null),
-        { selectedSkuId: I } = (0, h.JL)(),
-        T = (0, s.e7)([c.Z], () => c.Z.getProduct(I)),
+        { selectedSkuId: O } = (0, h.JL)(),
+        T = (0, s.e7)([c.Z], () => c.Z.getProduct(O)),
         { confettiColors: S } = (0, u.Z)(null == T ? void 0 : T.styles);
     return t
         ? (0, r.jsxs)("div", {
@@ -115,5 +122,5 @@ function I(e) {
                       }),
               ],
           })
-        : (0, r.jsx)(v, O({}, e));
+        : (0, r.jsx)(I, v({}, e));
 }

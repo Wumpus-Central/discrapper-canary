@@ -3,37 +3,37 @@ var n = r(951288),
     l = r(647438),
     i = r(296009),
     a = r(481060),
-    c = r(210753),
-    o = r(804919),
+    o = r(210753),
+    c = r(804919),
     s = r(86419),
     u = r(872269),
     d = r(228168),
     f = r(247397),
-    g = r(388032),
-    b = r(958461);
+    b = r(388032),
+    g = r(958461);
 function p(e) {
     let { widgetType: t } = e,
-        r = t === i.l.FAVORITE_GAMES ? o.LM.BALDURS_GATE_3 : o.LM.CYBERPUNK_2077,
-        { coverImageUrl: l, localizedName: a } = (0, c.$)(r);
+        r = t === i.l.FAVORITE_GAMES ? c.LM.BALDURS_GATE_3 : c.LM.CYBERPUNK_2077,
+        { coverImageUrl: l, localizedName: a } = (0, o.$)(r);
     return (0, n.jsxs)("div", {
-        className: b.placeholderDetailCard,
+        className: g.placeholderDetailCard,
         children: [
             (0, n.jsx)("div", {
-                className: b.placeholderCover,
+                className: g.placeholderCover,
                 children:
                     null != l && "" !== l
                         ? (0, n.jsx)("img", {
                               src: l,
                               alt: null != a ? a : "",
-                              className: b.placeholderGameImage,
+                              className: g.placeholderGameImage,
                           })
-                        : (0, n.jsx)("div", { className: b.placeholderGameFallback }),
+                        : (0, n.jsx)("div", { className: g.placeholderGameFallback }),
             }),
             (0, n.jsxs)("div", {
-                className: b.placeholderText,
+                className: g.placeholderText,
                 children: [
-                    (0, n.jsx)("div", { className: b.placeholderBar }),
-                    (0, n.jsx)("div", { className: b.placeholderBar }),
+                    (0, n.jsx)("div", { className: g.placeholderBar }),
+                    (0, n.jsx)("div", { className: g.placeholderBar }),
                 ],
             }),
         ],
@@ -43,26 +43,26 @@ function O(e) {
     let { widgetType: t } = e,
         r =
             t === i.l.WANT_TO_PLAY_GAMES
-                ? [o.LM.ROBLOX, o.LM.VALORANT, o.LM.LEAGUE_OF_LEGENDS]
-                : [o.LM.ZENLESS_ZONE_ZERO, o.LM.ELDEN_RING, o.LM.RED_DEAD_REDEMPTION_2];
+                ? [c.LM.ROBLOX, c.LM.VALORANT, c.LM.LEAGUE_OF_LEGENDS]
+                : [c.LM.ZENLESS_ZONE_ZERO, c.LM.ELDEN_RING, c.LM.RED_DEAD_REDEMPTION_2];
     return (0, n.jsx)("div", {
-        className: b.placeholderCoverGrid,
+        className: g.placeholderCoverGrid,
         children: r.map((e, t) => (0, n.jsx)(m, { applicationId: e }, t)),
     });
 }
 function m(e) {
     let { applicationId: t } = e,
-        { coverImageUrl: r, localizedName: l } = (0, c.$)(t);
+        { coverImageUrl: r, localizedName: l } = (0, o.$)(t);
     return (0, n.jsx)("div", {
-        className: b.placeholderCoverItem,
+        className: g.placeholderCoverItem,
         children:
             null != r && "" !== r
                 ? (0, n.jsx)("img", {
                       src: r,
                       alt: null != l ? l : "",
-                      className: b.placeholderGameImage,
+                      className: g.placeholderGameImage,
                   })
-                : (0, n.jsx)("div", { className: b.placeholderGameFallback }),
+                : (0, n.jsx)("div", { className: g.placeholderGameFallback }),
     });
 }
 function j(e) {
@@ -71,9 +71,9 @@ function j(e) {
             (0, s.qH)(t), (0, u.L$)(d.qb.WIDGET_ADDED);
         }, [t]);
     return (0, n.jsxs)(a.P3F, {
-        className: b.widgetPromptContainer,
+        className: g.widgetPromptContainer,
         onClick: r,
-        "aria-label": "Add widget: ".concat(g.intl.string(f.NP[t])),
+        "aria-label": "Add widget: ".concat(b.intl.string(f.NP[t])),
         children: [
             (() => {
                 switch (t) {
@@ -88,10 +88,10 @@ function j(e) {
                 }
             })(),
             (0, n.jsxs)("div", {
-                className: b.widgetPromptOverlay,
+                className: g.widgetPromptOverlay,
                 children: [
                     (0, n.jsx)("div", {
-                        className: b.addButton,
+                        className: g.addButton,
                         children: (0, n.jsx)(a.oFk, {
                             size: "md",
                             color: "currentColor",
@@ -100,7 +100,7 @@ function j(e) {
                     (0, n.jsx)(a.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: g.intl.string(f.NP[t]),
+                        children: b.intl.string(f.NP[t]),
                     }),
                 ],
             }),
@@ -109,26 +109,26 @@ function j(e) {
 }
 function y() {
     return (0, n.jsxs)("div", {
-        className: b.empty,
+        className: g.empty,
         children: [
             (0, n.jsxs)("div", {
-                className: b.textContainer,
+                className: g.textContainer,
                 children: [
                     (0, n.jsx)(a.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: g.intl.string(g.t.oqalCw),
+                        children: b.intl.string(b.t.oqalCw),
                     }),
                     (0, n.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: g.intl.string(g.t.O9SQ1d),
+                        children: b.intl.string(b.t.O9SQ1d),
                     }),
                 ],
             }),
             (0, n.jsx)("ul", {
-                className: b.widgetGrid,
-                "aria-label": g.intl.string(g.t["+EIBSE"]),
+                className: g.widgetGrid,
+                "aria-label": b.intl.string(b.t["+EIBSE"]),
                 children: f.rR.map((e) => (0, n.jsx)("li", { children: (0, n.jsx)(j, { widgetType: e }) }, e)),
             }),
         ],

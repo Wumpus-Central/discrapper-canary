@@ -4,8 +4,8 @@ r(647438);
 var l = r(120356),
     i = r.n(l),
     a = r(481060),
-    c = r(313201),
-    o = r(318374),
+    o = r(313201),
+    c = r(318374),
     s = r(245583);
 function u(e) {
     var { label: t, visuallyHideLabel: r = !1, className: l, size: u = a.EFr.SIZE_16, maxUsers: d = 4 } = e,
@@ -30,12 +30,12 @@ function u(e) {
             }
             return l;
         })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
-    let g = (0, c.Dt)();
+    let b = (0, o.Dt)();
     return (0, n.jsxs)("div", {
         className: i()(l, s.container),
         children: [
             (0, n.jsx)(
-                o.Z,
+                c.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function u(e) {
                     return e;
                 })(
                     {
-                        "aria-labelledby": g,
+                        "aria-labelledby": b,
                         overflowCountClassName: s.overflowButton,
                         size: u,
                         maxUsers: d,
@@ -72,13 +72,13 @@ function u(e) {
             ),
             r
                 ? (0, n.jsx)(a.nn4, {
-                      id: g,
+                      id: b,
                       children: t,
                   })
                 : (0, n.jsx)(a.Text, {
                       variant: "text-xs/normal",
                       color: "text-secondary",
-                      id: g,
+                      id: b,
                       children: t,
                   }),
         ],

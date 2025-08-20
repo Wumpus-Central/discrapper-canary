@@ -4,14 +4,14 @@ r(647438);
 var l = r(481060),
     i = r(810568),
     a = r(168524),
-    c = r(594174),
-    o = r(5192),
+    o = r(594174),
+    c = r(5192),
     s = r(971082),
     u = r(817053),
     d = r(879877),
     f = r(533815),
-    g = r(853072),
-    b = r(388032),
+    b = r(853072),
+    g = r(388032),
     p = r(958461),
     O = r(932366),
     m = r(776385);
@@ -59,8 +59,8 @@ function y(e, t) {
     );
 }
 function v(e) {
-    var { applicationId: t, userId: r, gameName: c } = e,
-        o = (function (e, t) {
+    var { applicationId: t, userId: r, gameName: o } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -89,14 +89,14 @@ function v(e) {
         trackEntryPointImpression: !0,
     });
     return null == s
-        ? (0, n.jsx)(l.X6q, y(j({}, o), { children: c }))
+        ? (0, n.jsx)(l.X6q, y(j({}, c), { children: o }))
         : (0, n.jsx)(
               l.X6q,
-              y(j({}, o), {
+              y(j({}, c), {
                   children: (0, n.jsx)(l.P3F, {
                       onClick: s,
                       className: m.clickableText,
-                      children: c,
+                      children: o,
                   }),
               }),
           );
@@ -110,7 +110,7 @@ function x(e) {
                 color: l.TVs.colors.ICON_TERTIARY,
                 className: m.icon,
             }),
-            (0, n.jsx)(l.nn4, { children: b.intl.format(b.t.TM0XDQ, { name: o.ZP.getName(i, a, r) }) }),
+            (0, n.jsx)(l.nn4, { children: g.intl.format(g.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
             (0, n.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
@@ -121,10 +121,10 @@ function x(e) {
 }
 function h(e) {
     let { applicationId: t, guildId: r, channelId: l, className: i } = e,
-        a = (0, g.Z)(t);
+        a = (0, b.Z)(t);
     return a.length > 0
         ? (0, n.jsx)(s.Z, {
-              label: b.intl.formatToPlainString(b.t.ujhJdH, { numFriends: a.length }),
+              label: g.intl.formatToPlainString(g.t.ujhJdH, { numFriends: a.length }),
               className: i,
               users: a,
               guildId: r,
@@ -133,13 +133,13 @@ function h(e) {
         : null;
 }
 function P(e) {
-    let { user: t, guildId: r, channelId: i, game: a, widgetType: o, loading: s = !1, disableInteraction: g = !1 } = e,
-        { gameName: P = b.intl.string(b.t.GIWFlJ), imageSrc: E, applicationId: w, comment: I, tags: S } = a,
+    let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: b = !1 } = e,
+        { gameName: P = g.intl.string(g.t.GIWFlJ), imageSrc: E, applicationId: w, comment: S, tags: I } = a,
         _ = {
             variant: "heading-sm/semibold",
             color: "text-default",
         },
-        T = c.default.getCurrentUser(),
+        T = o.default.getCurrentUser(),
         N = (null == T ? void 0 : T.id) === t.id;
     return s
         ? (0, n.jsxs)("div", {
@@ -166,13 +166,13 @@ function P(e) {
                       gameName: P,
                       applicationId: w,
                       userId: t.id,
-                      disableInteraction: g,
+                      disableInteraction: b,
                       hideTooltip: !0,
                   }),
                   (0, n.jsxs)("div", {
                       className: m.details,
                       children: [
-                          g
+                          b
                               ? (0, n.jsx)(l.X6q, y(j({}, _), { children: P }))
                               : (0, n.jsx)(
                                     v,
@@ -185,21 +185,21 @@ function P(e) {
                                         _,
                                     ),
                                 ),
-                          null != I &&
+                          null != S &&
                               (0, n.jsx)(x, {
-                                  text: I,
+                                  text: S,
                                   user: t,
                                   guildId: r,
                                   channelId: i,
                               }),
                           (0, n.jsx)(d.Z, {
-                              tags: S,
+                              tags: I,
                               isCurrentUser: N,
-                              widgetType: o,
+                              widgetType: c,
                               applicationId: w,
-                              disableInteraction: g,
+                              disableInteraction: b,
                           }),
-                          !g &&
+                          !b &&
                               (0, n.jsx)(h, {
                                   className: m.socialProof,
                                   applicationId: w,
@@ -208,11 +208,11 @@ function P(e) {
                               }),
                       ],
                   }),
-                  !g &&
+                  !b &&
                       N &&
                       (0, n.jsx)(f.Z, {
                           game: a,
-                          widgetType: o,
+                          widgetType: c,
                           className: m.removeGameButton,
                       }),
               ],

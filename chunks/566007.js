@@ -1,11 +1,11 @@
-r.d(t, { Z: () => c });
+r.d(t, { Z: () => o });
 var n = r(951288);
 r(647438);
 var l = r(750312),
     i = r(189988),
     a = r(623132);
-function c(e) {
-    var { user: t, widget: r, isGameFetching: c, containerClassName: o, disableInteraction: s } = e,
+function o(e) {
+    var { user: t, widget: r, isGameFetching: o, containerClassName: c, disableInteraction: s } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -31,7 +31,7 @@ function c(e) {
     return (0, n.jsx)(l.Z, {
         userId: t.id,
         widget: r,
-        className: o,
+        className: c,
         disableInteraction: s,
         children:
             null != d
@@ -66,7 +66,7 @@ function c(e) {
                               user: t,
                               game: d,
                               widgetType: r.type,
-                              loading: c(d.applicationId),
+                              loading: o(d.applicationId),
                               disableInteraction: s,
                           },
                           u,

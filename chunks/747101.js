@@ -8,7 +8,7 @@ var n = r(647438),
     l = r(442837),
     i = r(224706),
     a = r(669764);
-function c(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -33,7 +33,7 @@ function c(e) {
     }
     return e;
 }
-function o(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -97,12 +97,12 @@ function u(e) {
                 e.map((e) => {
                     let r = e.games.map((e) => {
                         let r = t[e.applicationId];
-                        return o(c({}, e), {
+                        return c(o({}, e), {
                             gameName: null == r ? void 0 : r.name,
                             imageSrc: null == r ? void 0 : r.coverImageUrl,
                         });
                     });
-                    return o(c({}, e), { games: r });
+                    return c(o({}, e), { games: r });
                 }),
             [e, t],
         ),

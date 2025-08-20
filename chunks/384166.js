@@ -19,7 +19,8 @@ function g() {
             var e;
             return null != (e = d.Z.getSaveablePendingWidgets()) ? e : [];
         }),
-        a = (0, s.e7)([d.Z], () => d.Z.hasSaveablePendingChanges());
+        a = (0, s.e7)([d.Z], () => d.Z.hasSaveablePendingChanges()),
+        g = (0, s.e7)([d.Z], () => d.Z.isSubmitting);
     i.useEffect(() => {
         let e = null;
         function n() {
@@ -32,7 +33,7 @@ function g() {
             }
         );
     }, []);
-    let g = i.useCallback(async () => {
+    let E = i.useCallback(async () => {
             if (a)
                 try {
                     await u.Z.savePendingWidgets(n);
@@ -40,7 +41,7 @@ function g() {
                     (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
                 }
         }, [a, n]),
-        E = i.useCallback(() => {
+        b = i.useCallback(() => {
             u.Z.clearPendingWidgets();
         }, []);
     return a
@@ -65,13 +66,15 @@ function g() {
                                   size: "sm",
                                   variant: "secondary",
                                   text: h.intl.string(h.t.yBZMsb),
-                                  onClick: E,
+                                  onClick: b,
                               }),
                               (0, r.jsx)(l.zxk, {
                                   size: "sm",
                                   variant: "primary",
                                   text: h.intl.string(h.t.R3BPHx),
-                                  onClick: g,
+                                  onClick: E,
+                                  loading: g,
+                                  disabled: g,
                               }),
                           ],
                       }),

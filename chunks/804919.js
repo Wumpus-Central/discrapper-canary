@@ -1,6 +1,6 @@
 r.d(t, {
     LM: () => a,
-    oD: () => c,
+    oD: () => o,
 });
 var n = r(379405),
     l = r(296009),
@@ -24,7 +24,7 @@ let a = {
     ELDEN_RING: "1402418436809953330",
 };
 Object.values(a);
-let c = () => [
+let o = () => [
     {
         id: "0",
         type: l.l.FAVORITE_GAMES,

@@ -4,16 +4,16 @@ r(647438);
 var l = r(120356),
     i = r.n(l),
     a = r(481060),
-    c = r(86419),
-    o = r(388032),
+    o = r(86419),
+    c = r(388032),
     s = r(51708);
 function u(e) {
     let { game: t, widgetType: r, iconSize: l = "refresh_sm", className: u } = e,
         d = () => {
-            (0, c.$b)(r, t.applicationId);
+            (0, o.$b)(r, t.applicationId);
         };
     return (0, n.jsx)(a.ua7, {
-        text: o.intl.string(o.t.HUvyDQ),
+        text: c.intl.string(c.t.HUvyDQ),
         children: (e) => {
             var t, r;
             return (0, n.jsx)(
@@ -46,7 +46,7 @@ function u(e) {
                 (r = r =
                     {
                         onClick: d,
-                        "aria-label": o.intl.string(o.t.HUvyDQ),
+                        "aria-label": c.intl.string(c.t.HUvyDQ),
                         className: i()(u, s.clickable),
                         children: (0, n.jsx)(a.XHJ, {
                             size: l,

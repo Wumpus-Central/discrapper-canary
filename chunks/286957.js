@@ -1,14 +1,14 @@
 r.d(t, {
-    XV: () => c,
+    XV: () => o,
     aE: () => u,
     kd: () => s,
-    zK: () => o,
+    zK: () => c,
 });
 var n,
     l = r(379405),
     i = r(481060),
     a = r(388032);
-let c = {
+let o = {
         [l._.BETTER_THAN_YOU]: {
             getText: () => a.intl.string(a.t.jbIRBA),
             icon: i.jrt,
@@ -86,8 +86,8 @@ let c = {
             icon: i.iFz,
         },
     },
-    o = (e) => {
-        let t = c[e];
+    c = (e) => {
+        let t = o[e];
         return null != t ? t : null;
     };
 var s = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);

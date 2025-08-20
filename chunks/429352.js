@@ -1,8 +1,8 @@
 r.d(a, { default: () => j });
 var t = r(951288),
     i = r(647438),
-    o = r(120356),
-    n = r.n(o),
+    n = r(120356),
+    o = r.n(n),
     c = r(392711),
     l = r.n(c),
     g = r(442837),
@@ -49,11 +49,11 @@ let h = (e) => {
     return (0, t.jsx)(_.ua7, {
         text: a.name,
         children: (e) => {
-            var i, o;
+            var i, n;
             return (0, t.jsx)(
                 _.P3F,
                 ((i = y({}, e)),
-                (o = o =
+                (n = n =
                     {
                         className: v.gameClickable,
                         onClick: () => {
@@ -80,7 +80,7 @@ let h = (e) => {
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(n))
                     : (function (e, a) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -88,8 +88,8 @@ let h = (e) => {
                               r.push.apply(r, t);
                           }
                           return r;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 i),
             );
@@ -97,7 +97,7 @@ let h = (e) => {
     });
 };
 function j(e) {
-    let { applications: a, onClose: r, transitionState: o } = e;
+    let { applications: a, onClose: r, transitionState: n } = e;
     (0, d.Z)(a),
         i.useEffect(() => {
             a.length > 1 && m.Z.getDetectableGamesSupplemental(a);
@@ -114,9 +114,9 @@ function j(e) {
     return c && !_
         ? (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)("div", { className: n()(v.loadingHeading, v.sectionHeader) }),
+                  (0, t.jsx)("div", { className: o()(v.loadingHeading, v.sectionHeader) }),
                   (0, t.jsx)("div", {
-                      className: n()(v.row, v.gapLg),
+                      className: o()(v.row, v.gapLg),
                       children: l()
                           .range(0, a.length)
                           .map((e) => (0, t.jsx)("div", { className: v.loadingArtwork }, e)),
@@ -127,7 +127,7 @@ function j(e) {
           ? null
           : (0, t.jsx)(s.Modal, {
                 title: I.intl.string(I.t["D+DkEB"]),
-                transitionState: o,
+                transitionState: n,
                 onClose: r,
                 actions: [],
                 children: (0, t.jsx)("div", {

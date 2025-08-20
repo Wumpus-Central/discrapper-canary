@@ -3,8 +3,8 @@ var n = r(951288),
     l = r(647438),
     i = r(481060),
     a = r(785717),
-    c = r(86419),
-    o = r(286957),
+    o = r(86419),
+    c = r(286957),
     s = r(388032),
     u = r(44258);
 let d = l.memo(function (e) {
@@ -14,13 +14,13 @@ let d = l.memo(function (e) {
         "aria-label": s.intl.string(s.t.r6EJOj),
         onClose: a,
         onSelect: () => {},
-        children: Object.entries(o.aE).map((e) => {
-            let [a, c] = e,
+        children: Object.entries(c.aE).map((e) => {
+            let [a, o] = e,
                 u = ((e, a) => {
-                    let c = [];
+                    let o = [];
                     return (
-                        a.type === o.kd.RADIO &&
-                            c.push(
+                        a.type === c.kd.RADIO &&
+                            o.push(
                                 (0, n.jsx)(
                                     i.k5B,
                                     {
@@ -34,10 +34,10 @@ let d = l.memo(function (e) {
                                 ),
                             ),
                         a.tags.forEach((l) => {
-                            let s = o.XV[l];
+                            let s = c.XV[l];
                             null != s &&
-                                (a.type === o.kd.RADIO
-                                    ? c.push(
+                                (a.type === c.kd.RADIO
+                                    ? o.push(
                                           (0, n.jsx)(
                                               i.k5B,
                                               {
@@ -50,7 +50,7 @@ let d = l.memo(function (e) {
                                               l,
                                           ),
                                       )
-                                    : c.push(
+                                    : o.push(
                                           (0, n.jsx)(
                                               i.S89,
                                               {
@@ -63,13 +63,13 @@ let d = l.memo(function (e) {
                                           ),
                                       ));
                         }),
-                        c
+                        o
                     );
-                })(a, c);
+                })(a, o);
             return (0, n.jsx)(
                 i.kSQ,
                 {
-                    label: c.getLabel(),
+                    label: o.getLabel(),
                     children: u,
                 },
                 a,
@@ -78,8 +78,8 @@ let d = l.memo(function (e) {
     });
 });
 function f(e) {
-    let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
-        b = (0, l.useRef)(null),
+    let { tags: t, widgetType: r, applicationId: f, ref: b } = e,
+        g = (0, l.useRef)(null),
         { trackUserProfileAction: p } = (0, a.KZ)(),
         O = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         m = (0, l.useCallback)(
@@ -87,7 +87,7 @@ function f(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = new Set(O);
                 if (t) {
-                    let t = Object.values(o.aE).find((t) => t.tags.includes(e));
+                    let t = Object.values(c.aE).find((t) => t.tags.includes(e));
                     null != t &&
                         (t.tags.forEach((e) => {
                             n.delete(e);
@@ -98,7 +98,7 @@ function f(e) {
                     n.has(e)
                         ? (n.delete(e), p({ action: "REMOVE_GAME_TAGS" }))
                         : (n.add(e), p({ action: "ADD_GAME_TAGS" }));
-                (0, c.n$)(r, f, Array.from(n));
+                (0, o.n$)(r, f, Array.from(n));
             },
             [O, p, r, f],
         ),
@@ -109,12 +109,12 @@ function f(e) {
                     t.delete(e);
                 }),
                     p({ action: "REMOVE_GAME_TAGS" }),
-                    (0, c.n$)(r, f, Array.from(t));
+                    (0, o.n$)(r, f, Array.from(t));
             },
             [O, p, r, f],
         );
     return (0, n.jsx)(i.yRy, {
-        targetElementRef: b,
+        targetElementRef: g,
         position: "right",
         align: "top",
         renderPopout: (e) => {
@@ -130,9 +130,9 @@ function f(e) {
             var t, r;
             return (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((b.current = e), (g.current = e)),
+                    null != e && ((g.current = e), (b.current = e)),
                     () => {
-                        (b.current = null), (g.current = null);
+                        (g.current = null), (b.current = null);
                     }
                 ),
                 children: (0, n.jsx)(

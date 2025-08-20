@@ -3,7 +3,7 @@ var n = r(392711),
     l = r(879690),
     i = r(296009),
     a = r(570911);
-function c(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -28,7 +28,7 @@ function c(e) {
     }
     return e;
 }
-function o(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,9 +81,9 @@ let s = (0, n.sampleSize)(a.J6, a.J6.length),
             if (-1 === i) return;
             let a = [...l];
             a.splice(i, 1);
-            let c = t().getNext(1, r),
-                o = t().peekNext(7, r);
-            t()._setGameIds(r, [...a, ...c]), t()._setPeekedGameIds(r, [...o, ...c]);
+            let o = t().getNext(1, r),
+                c = t().peekNext(7, r);
+            t()._setGameIds(r, [...a, ...o]), t()._setPeekedGameIds(r, [...c, ...o]);
         },
         bumpMultiple: (e, r) => {
             var n;
@@ -97,12 +97,12 @@ let s = (0, n.sampleSize)(a.J6, a.J6.length),
             t()._setStack(r, n), t()._setPeekedGameIds(r, t().peekNext(7, r));
         },
         _setGameIds: (t, r) => {
-            e((e) => ({ gameIds: o(c({}, e.gameIds), { [t]: r }) }));
+            e((e) => ({ gameIds: c(o({}, e.gameIds), { [t]: r }) }));
         },
         _setStack: (t, r) => {
             t === i.l.WANT_TO_PLAY_GAMES ? e({ wishlistStack: r }) : e({ stack: r });
         },
         _setPeekedGameIds: (t, r) => {
-            e((e) => ({ peekedGameIds: o(c({}, e.peekedGameIds), { [t]: r }) }));
+            e((e) => ({ peekedGameIds: c(o({}, e.peekedGameIds), { [t]: r }) }));
         },
     }));

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => f }), n(415506), n(642613);
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    l = n.n(i),
-    a = n(643872),
-    s = n(481060),
-    o = n(810568),
-    c = n(388032),
-    u = n(226788),
-    d = n(803351);
+r.d(t, { Z: () => f }), r(415506), r(642613);
+var n = r(951288);
+r(647438);
+var i = r(120356),
+    l = r.n(i),
+    a = r(643872),
+    s = r(481060),
+    o = r(810568),
+    c = r(388032),
+    u = r(226788),
+    d = r(803351);
 let m = [a.p.OFFICIAL, a.p.TWITTER, a.p.YOUTUBE];
 function p(e) {
-    let { website: t, trackClick: n } = e,
+    let { website: t, trackClick: r } = e,
         {
             action: i,
             icon: l,
@@ -20,27 +20,27 @@ function p(e) {
             switch (e.category) {
                 case a.p.OFFICIAL:
                     return {
-                        icon: (0, r.jsx)(s.enf, { colorClass: d.linkIcon }),
+                        icon: (0, n.jsx)(s.enf, { colorClass: d.linkIcon }),
                         action: o.as.WebsiteLink,
                         title: c.intl.string(c.t.fOUKvr),
                     };
                 case a.p.TWITTER:
                     return {
-                        icon: (0, r.jsx)(s.TAi, { colorClass: d.linkIcon }),
+                        icon: (0, n.jsx)(s.TAi, { colorClass: d.linkIcon }),
                         action: o.as.XLink,
                         title: c.intl.string(c.t["INic4+"]),
                     };
                 case a.p.YOUTUBE:
                     return {
                         action: o.as.YouTubeLink,
-                        icon: (0, r.jsx)(s.$5w, { colorClass: d.linkIcon }),
+                        icon: (0, n.jsx)(s.$5w, { colorClass: d.linkIcon }),
                         title: c.intl.string(c.t.lNmxbG),
                     };
                 default:
                     throw Error("Unknown IGDB website category");
             }
         })(t);
-    return (0, r.jsx)(s.ua7, {
+    return (0, n.jsx)(s.ua7, {
         text: t.url,
         tooltipClassName: d.tooltip,
         tooltipContentClassName: d.tooltipContent,
@@ -50,50 +50,50 @@ function p(e) {
                 { onClick: c } = e,
                 m = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         i = (function (e, t) {
                             if (null == e) return {};
-                            var n,
-                                r,
+                            var r,
+                                n,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++)
-                            (n = l[r]),
-                                !(t.indexOf(n) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                    (i[n] = e[n]);
+                        for (n = 0; n < l.length; n++)
+                            (r = l[n]),
+                                !(t.indexOf(r) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                    (i[r] = e[r]);
                     }
                     return i;
                 })(e, ["onClick"]);
-            return (0, r.jsx)(
+            return (0, n.jsx)(
                 s.eee,
                 ((a = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
@@ -104,7 +104,7 @@ function p(e) {
                         title: u,
                         href: t.url,
                         onClick: () => {
-                            n(i), null == c || c();
+                            r(i), null == c || c();
                         },
                         target: "_blank",
                         children: l,
@@ -112,12 +112,12 @@ function p(e) {
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
                     : (function (e, t) {
-                          var n = Object.keys(e);
+                          var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var n = Object.getOwnPropertySymbols(e);
+                              r.push.apply(r, n);
                           }
-                          return n;
+                          return r;
                       })(Object(o)).forEach(function (e) {
                           Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
                       }),
@@ -127,7 +127,7 @@ function p(e) {
     });
 }
 let f = function (e) {
-    let { detectedGame: t, trackClick: n } = e;
+    let { detectedGame: t, trackClick: r } = e;
     if (null == t.websites) return null;
     let i = t.websites
         .filter((e) => {
@@ -137,22 +137,22 @@ let f = function (e) {
         .sort((e, t) => e.category - t.category);
     return 0 === i.length
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               children: [
-                  (0, r.jsx)(s.X6q, {
+                  (0, n.jsx)(s.X6q, {
                       className: u.sectionHeader,
                       variant: "text-xs/semibold",
                       color: "header-secondary",
                       children: c.intl.string(c.t.Oj3o19),
                   }),
-                  (0, r.jsx)("div", {
+                  (0, n.jsx)("div", {
                       className: l()(u.row, u.gapMd),
                       children: i.map((e) =>
-                          (0, r.jsx)(
+                          (0, n.jsx)(
                               p,
                               {
                                   website: e,
-                                  trackClick: n,
+                                  trackClick: r,
                               },
                               e.url,
                           ),

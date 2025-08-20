@@ -40,7 +40,7 @@ function b(e) {
         D = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith("prepicked:"))
                 ? d.Z.getMediaEngine().eachConnection((e) => {
-                      e.context === g.Yn.STREAM && e.presentDesktopSourcePicker();
+                      e.context === g.Yn.STREAM && e.presentDesktopSourcePicker("window");
                   })
                 : n();
         }, [I, n]),

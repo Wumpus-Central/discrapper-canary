@@ -110,6 +110,10 @@ let f = {
                 }),
             );
     },
+    AutomodUserProfileQuarantineAlert: async () => {
+        let { default: e } = await a.e("40390").then(a.bind(a, 251871));
+        return (t) => (0, n.jsx)(e, b(v({}, t), { guildId: "123" }));
+    },
 };
 function j() {
     let e = r.useMemo(

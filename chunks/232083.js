@@ -5,7 +5,7 @@ var l = r(623132),
     i = r(112794);
 function a(e) {
     var { games: t, widgetType: r, isGameFetching: a } = e,
-        c = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -64,7 +64,7 @@ function a(e) {
                                 widgetType: r,
                                 loading: a(e.applicationId),
                             },
-                            c,
+                            o,
                         ),
                     ),
                 },
