@@ -545,7 +545,7 @@ function q(e) {
         children: (0, r.jsx)("div", {
             ref: p,
             children: (0, r.jsx)(b.Z, {
-                className: o()(k.icon, n),
+                className: o()(k.icon, k.gameIcon, n),
                 game: t,
                 size: b.Z.Sizes.XSMALL,
                 onMouseEnter: h,

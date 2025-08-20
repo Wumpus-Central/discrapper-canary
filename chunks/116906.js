@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(29899),
     p = t(678738),
     b = t(151545),
-    g = t(744802),
-    x = t(493043),
+    x = t(744802),
+    g = t(493043),
     h = t(864141),
     j = t(228168),
     v = t(981631),
@@ -24,8 +24,8 @@ var o = t(442837),
 function O(e) {
     let { user: n, currentUser: t, displayProfile: O, guildId: P, subsection: Z, onClose: T } = e,
         { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalActivity" }),
-        C = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: N, recent: E, stream: S } = (0, f.Z)(n.id),
+        N = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { live: C, recent: E, stream: S } = (0, f.Z)(n.id),
         { voiceChannel: w, voiceActivity: B } = (0, m.Z)({
             userId: n.id,
             guildId: P,
@@ -36,7 +36,7 @@ function O(e) {
             let e = L ? s.Z.getStatus() : a.Z.getStatus(n.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        U = N.length > 0 || null != S,
+        U = C.length > 0 || null != S,
         M = A && null == S && null == B && null != w,
         k = !R && (U || M),
         G = E.length > 0;
@@ -51,7 +51,7 @@ function O(e) {
                             children: (0, r.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
-                                    !C &&
+                                    !N &&
                                         M &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(h.Z, {
@@ -63,7 +63,7 @@ function O(e) {
                                         }),
                                     null != S &&
                                         (0, r.jsx)("li", {
-                                            children: (0, r.jsx)(x.Z, {
+                                            children: (0, r.jsx)(g.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: n,
                                                 currentUser: t,
@@ -72,7 +72,7 @@ function O(e) {
                                                 profileGuildId: null == O ? void 0 : O.guildId,
                                             }),
                                         }),
-                                    N.map((e, o) =>
+                                    C.map((e, o) =>
                                         (0, r.jsx)(
                                             "li",
                                             {
@@ -114,7 +114,7 @@ function O(e) {
                                     (0, r.jsx)(
                                         "li",
                                         {
-                                            children: (0, r.jsx)(g.Z, {
+                                            children: (0, r.jsx)(x.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: n,
                                                 currentUser: t,

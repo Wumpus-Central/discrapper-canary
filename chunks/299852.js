@@ -1,21 +1,21 @@
-n.d(t, { Z: () => j }), n(35282), n(388685);
+n.d(t, { Z: () => b }), n(35282), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    s = n(593473),
-    o = n(442837),
+    o = n(593473),
+    s = n(442837),
     a = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
-    p = n(598077),
-    m = n(896797),
+    f = n(598077),
+    p = n(896797),
     g = n(981631),
-    f = n(930441),
+    m = n(930441),
     _ = n(388032),
     x = n(197571);
-function E(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,11 +28,11 @@ function E(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
-class v extends (r = l.PureComponent) {
+s.ZP.initialize();
+class E extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
-            t = (0, s.parse)(this.props.location.search);
+            t = (0, o.parse)(this.props.location.search);
         a.tn
             .post({
                 url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
@@ -50,7 +50,7 @@ class v extends (r = l.PureComponent) {
                     let {
                             body: { user: n },
                         } = e,
-                        r = new p.Z(n);
+                        r = new f.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -88,7 +88,7 @@ class v extends (r = l.PureComponent) {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => r(g.Z5c.SETTINGS("notifications", f.vG)),
+                    onClick: () => r(g.Z5c.SETTINGS("notifications", m.vG)),
                     children: _.intl.string(_.t.YYTira),
                 }),
             ],
@@ -98,7 +98,7 @@ class v extends (r = l.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: r } = this.state;
         if (null != r) {
-            let e = f.Od.find((e) => e.category === r);
+            let e = m.Od.find((e) => e.category === r);
             if (null != e) return this.renderCategorySuccess(r, e.label());
         }
         return (0, i.jsxs)(d.ZP, {
@@ -148,7 +148,7 @@ class v extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, "state", {
+            v(this, "state", {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -156,5 +156,5 @@ class v extends (r = l.PureComponent) {
             });
     }
 }
-E(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let j = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);
+v(E, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
+let b = s.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(E);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(951288),
     l = n(647438),
     i = n(803948),
@@ -37,7 +37,7 @@ function E(e) {
     return e;
 }
 let g = { visibility: "hidden" },
-    v = {
+    b = {
         precision: 0.0001,
         duration: 300,
     },
@@ -47,15 +47,15 @@ let g = { visibility: "hidden" },
         precision: 0.0001,
         bounce: 0,
     },
-    h = { duration: 1000 };
-function b(e) {
+    v = { duration: 1000 };
+function h(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: b } = l.useContext(o.Sf),
+        { reducedMotion: h } = l.useContext(o.Sf),
         O = (0, l.useRef)(null),
         y = d.n.getState().clipsButtonRef,
         _ = (0, f.V9)(t),
-        Z = (0, a.e7)([s.Z], () => s.Z.getActiveAnimation()),
-        j = (0, a.Wu)([s.Z], () => s.Z.getStreamClipAnimations(_)),
+        j = (0, a.e7)([s.Z], () => s.Z.getActiveAnimation()),
+        Z = (0, a.Wu)([s.Z], () => s.Z.getStreamClipAnimations(_)),
         I = (0, l.useRef)(void 0);
     l.useEffect(
         () => () => {
@@ -65,7 +65,7 @@ function b(e) {
     );
     let w = (e) => {
             let t = null == y ? void 0 : y.getBoundingClientRect();
-            if (((I.current = t), e.timestamp !== Z || null == t || n)) return g;
+            if (((I.current = t), e.timestamp !== j || null == t || n)) return g;
             let { top: r, left: l } = t;
             return {
                 top: r + 36,
@@ -76,19 +76,19 @@ function b(e) {
         },
         P = (0, l.useRef)(null),
         A = (0, u.Yzy)(
-            j,
+            Z,
             {
                 keys: (e) => e.timestamp,
                 ref: P,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: v,
+                config: b,
             },
             "animate-always",
         ),
         C = (0, l.useRef)(null),
-        x = (0, u.Yzy)(
-            j,
+        R = (0, u.Yzy)(
+            Z,
             {
                 ref: C,
                 keys: (e) => e.timestamp,
@@ -99,7 +99,7 @@ function b(e) {
                             visibility: "hidden",
                             opacity: 1,
                         },
-                        b.enabled
+                        h.enabled
                             ? w(e)
                             : (() => {
                                   var e;
@@ -125,7 +125,7 @@ function b(e) {
                 ],
                 leave: E(
                     { opacity: 0 },
-                    !b.enabled &&
+                    !h.enabled &&
                         E(
                             {
                                 height: 0,
@@ -140,10 +140,10 @@ function b(e) {
                             })(),
                         ),
                 ),
-                config: b.enabled ? h : S,
+                config: h.enabled ? v : S,
                 onRest: (e, t) => {
                     null != t.item &&
-                        null != j.find((e) => e.timestamp === t.item.timestamp) &&
+                        null != Z.find((e) => e.timestamp === t.item.timestamp) &&
                         (0, c.Gh)(_, t.item.timestamp);
                 },
             },
@@ -168,7 +168,7 @@ function b(e) {
                 (0, r.jsx)(p.ZP, {
                     children: (0, r.jsx)("div", {
                         className: m.hidden,
-                        children: x(
+                        children: R(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(i.animated.img, {

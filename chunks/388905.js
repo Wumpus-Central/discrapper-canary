@@ -87,9 +87,9 @@ function O(e, t) {
 let v = s.qEK;
 null == v && (v = () => null);
 let I = (e) => {
-        let { className: t, id: n, children: i } = e;
+        let { className: t, id: n, children: i, variant: o = "heading-xl/semibold" } = e;
         return (0, r.jsx)(s.X6q, {
-            variant: "heading-xl/semibold",
+            variant: o,
             color: "header-primary",
             className: a()(g.title, t),
             id: n,

@@ -22,13 +22,13 @@ var n = a(951288),
     C = a(550532),
     N = a(71585),
     O = a(146282),
-    E = a(780106),
-    T = a(650613),
+    T = a(780106),
+    E = a(650613),
     S = a(789086),
     P = a(206583),
     w = a(680027),
     I = a(451429);
-let k = [
+let R = [
     {
         key: "type",
         cellClassName: i()(w.cell, w.cellType),
@@ -58,11 +58,11 @@ let k = [
         cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(R, { type: t });
+            return (0, n.jsx)(k, { type: t });
         },
     },
 ];
-function R(e) {
+function k(e) {
     var t, a;
     let { type: r } = e,
         l = (0, u.e7)([O.Z], () => O.Z.getFilters()),
@@ -102,17 +102,17 @@ function Z() {
             var e;
             return (null == (e = O.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [R, Z] = r.useState(""),
+        [k, Z] = r.useState(""),
         D = (0, u.e7)([_.Z, p.Z], () => {
             var e, t, a;
-            return parseInt(R) > 0
-                ? R
-                : null != (a = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
+            return parseInt(k) > 0
+                ? k
+                : null != (a = null == (e = _.Z.getGameByName(k)) ? void 0 : e.id)
                   ? a
-                  : null == (t = p.Z.getApplicationByName(R))
+                  : null == (t = p.Z.getApplicationByName(k))
                     ? void 0
                     : t.id;
-        }, [R]),
+        }, [k]),
         L = (0, g.Z)({
             applicationId: D,
             location: "DevToolsContentInventory",
@@ -139,7 +139,7 @@ function Z() {
                         (0, n.jsx)(x.vwX, { children: "Inventory" }),
                         s.length > 0 &&
                             (0, n.jsx)(f.Z, {
-                                columns: k,
+                                columns: R,
                                 data: s,
                             }),
                         (0, n.jsx)(x.LZC, { size: 8 }),
@@ -200,7 +200,7 @@ function Z() {
                     ],
                 }),
                 !1,
-                (0, n.jsx)(T.Z, {}),
+                (0, n.jsx)(E.Z, {}),
                 (0, n.jsxs)(x.hjN, {
                     children: [
                         (0, n.jsx)(x.vwX, { children: "Game Profile" }),
@@ -209,11 +209,11 @@ function Z() {
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (R === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
+                                    (k === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
                             },
                             error:
-                                R.length > 0 && null == L
-                                    ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
+                                k.length > 0 && null == L
+                                    ? "No game profile for ".concat(null != D ? D : k + " - try by id", ".")
                                     : void 0,
                             successMessage: null != L ? "Game profile found" : void 0,
                         }),
@@ -236,7 +236,7 @@ function Z() {
                             children: "Force show game:",
                         }),
                         (0, n.jsx)(x.PhF, {
-                            options: E.h.map((e) => ({
+                            options: T.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),

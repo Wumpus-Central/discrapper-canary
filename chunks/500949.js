@@ -49,14 +49,14 @@ var n,
     C = a(981613),
     N = a(762399),
     O = a(232112),
-    E = a(53796),
-    T = a(723757),
+    T = a(53796),
+    E = a(723757),
     S = a(375924),
     P = a(596136),
     w = a(341901),
     I = a(856308),
-    k = a(665352),
-    R = a(394900),
+    R = a(665352),
+    k = a(394900),
     Z = a(661105),
     A = a(525169),
     D = a(433517),
@@ -126,15 +126,15 @@ let B = {
         OKLCH: C.Z,
         OKLab: N.Z,
         P3: O.Z,
-        ProPhoto: E.Z,
-        REC_2020: T.Z,
+        ProPhoto: T.Z,
+        REC_2020: E.Z,
         REC_2100_HLG: S.Z,
         REC_2100_PQ: P.Z,
         XYZ_D50: w.Z,
         XYZ_D65: I.Z,
     },
     U = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
-Object.values(B).forEach((e) => k.Z.register(e));
+Object.values(B).forEach((e) => R.Z.register(e));
 let { SemanticColors: G } = L.V,
     V = G,
     H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
@@ -182,7 +182,7 @@ function Y(e) {
     return F(z({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, R.Z)((0, Z.Z)(e, i.Z), { format: "hex" });
+    return (0, k.Z)((0, Z.Z)(e, i.Z), { format: "hex" });
 }
 var q = (((n = {}).TOKENS = "Tokens"), (n.PALETTES = "Palettes"), n);
 function $() {

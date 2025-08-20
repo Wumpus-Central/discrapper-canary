@@ -116,15 +116,15 @@ function _() {
         [_, y] = r.useState(null),
         C = r.useRef(null),
         N = r.useRef(null),
-        [O, E] = r.useState(0.5),
+        [O, T] = r.useState(0.5),
         {
-            krispModels: T,
+            krispModels: E,
             krispModelOverride: S,
             inputMode: P,
             echoCancellation: w,
             autoThreshold: I,
-            vadUseKrisp: k,
-            vadKrispActivationThreshold: R,
+            vadUseKrisp: R,
+            vadKrispActivationThreshold: k,
             noiseCancellation: Z,
             noiseSuppression: A,
             noiseSuppressionSupported: D,
@@ -236,7 +236,7 @@ function _() {
                                             d.Z.setKrispModelOverride("");
                                         },
                                         isSelected: (e) => e === S,
-                                        options: T.map((e) => ({
+                                        options: E.map((e) => ({
                                             label: e,
                                             value: e,
                                         })),
@@ -279,18 +279,18 @@ function _() {
                                                 tag: c.RB0.H3,
                                                 children: (0, n.jsx)(c.j7V, {
                                                     hideBorder: !0,
-                                                    value: k,
+                                                    value: R,
                                                     onChange: (e) =>
                                                         d.Z.setMode(v.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                                     children: "Use Krisp VAD",
                                                 }),
                                             }),
-                                            k &&
+                                            R &&
                                                 (0, n.jsx)(c.hjN, {
                                                     title: "Krisp VAD Activation Threshold",
                                                     tag: c.RB0.H3,
                                                     children: (0, n.jsx)(c.iRW, {
-                                                        initialValue: R,
+                                                        initialValue: k,
                                                         onValueChange: (e) =>
                                                             d.Z.setMode(v.pM.VOICE_ACTIVITY, {
                                                                 vadKrispActivationThreshold: e,
@@ -357,7 +357,7 @@ function _() {
                         children: (0, n.jsx)(c.iRW, {
                             initialValue: O,
                             asValueChanges: function (e) {
-                                null != N.current && ((N.current.gain.value = e), E(e));
+                                null != N.current && ((N.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1,

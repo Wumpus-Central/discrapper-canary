@@ -118,7 +118,8 @@ function f(e) {
                         {
                             variant: "secondary",
                             size: "sm",
-                            text: s.intl.string(s.t.uqw8wM),
+                            icon: a.qJs,
+                            text: s.intl.string(s.t.SgTOtb),
                             disabled: t,
                         },
                         e,

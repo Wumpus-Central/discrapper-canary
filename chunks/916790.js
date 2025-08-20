@@ -22,8 +22,8 @@ var n = a(951288),
     C = a(621060),
     N = a(981631),
     O = a(687278),
-    E = a(451429);
-function T(e) {
+    T = a(451429);
+function E(e) {
     return parseFloat(e.toFixed(3));
 }
 let S = [
@@ -40,7 +40,7 @@ let S = [
         cellClassName: O.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return "".concat(T(t.time), " ms");
+            return "".concat(E(t.time), " ms");
         },
     },
 ];
@@ -85,7 +85,7 @@ let w = [
                             }),
                             (0, n.jsxs)(g.Z9, {
                                 name: "Total Time",
-                                children: [T(a.totalTime), " ms"],
+                                children: [E(a.totalTime), " ms"],
                             }),
                         ],
                     }),
@@ -125,11 +125,11 @@ function I(e) {
                                   return (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           (0, n.jsx)("div", {
-                                              className: i()(O.errorToolbar, E.toolbar),
+                                              className: i()(O.errorToolbar, T.toolbar),
                                               children: (0, n.jsx)("div", {
-                                                  className: E.toolbarGroup,
+                                                  className: T.toolbarGroup,
                                                   children: (0, n.jsx)(d.zx, {
-                                                      className: E.toolbarButton,
+                                                      className: T.toolbarButton,
                                                       size: d.zx.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: "Log to Console",
@@ -156,15 +156,15 @@ function I(e) {
         children: [
             (0, n.jsx)(s, {}),
             (0, n.jsxs)(x.ZP, {
-                className: i()(E.headerBar, O.subPanelHeaderBar),
+                className: i()(T.headerBar, O.subPanelHeaderBar),
                 children: [
                     (0, n.jsx)(x.ZP.Icon, {
                         icon: u.xVZ,
                         tooltip: t.name,
                     }),
                     (0, n.jsx)(x.ZP.Title, {
-                        wrapperClassName: i()(E.headerTitle, E.dispatcherHeader),
-                        className: E.headerTitleText,
+                        wrapperClassName: i()(T.headerTitle, T.dispatcherHeader),
+                        className: T.headerTitleText,
                         children: t.name,
                     }),
                     (0, n.jsx)(x.ZP.Icon, {
@@ -195,7 +195,7 @@ function I(e) {
         ],
     });
 }
-let k = [
+let R = [
         {
             key: "action",
             cellClassName: O.actionColumn,
@@ -211,7 +211,7 @@ let k = [
             cellClassName: O.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return "".concat(T(t.totalTime), " ms");
+                return "".concat(E(t.totalTime), " ms");
             },
         },
         {
@@ -223,7 +223,7 @@ let k = [
             },
         },
     ],
-    R = {
+    k = {
         searchType: h.S.REGEX,
         searchStringGenerator: (e) => {
             let { actionLog: t } = e;
@@ -271,7 +271,7 @@ function Z() {
         g = r.useCallback((e) => {
             h(e);
         }, []);
-    (0, p.BO)(t, v ? c : o, g, R);
+    (0, p.BO)(t, v ? c : o, g, k);
     let _ = r.useCallback(
             (e) => {
                 d(o), b(e);
@@ -282,7 +282,7 @@ function Z() {
         N = r.useMemo(() => (C ? x : v ? c : o), [o, x, C, v, c]);
     return (0, n.jsxs)("div", {
         ref: e,
-        className: i()(E.panel, O.panel),
+        className: i()(T.panel, O.panel),
         children: [
             (0, n.jsxs)("div", {
                 className: O.toolbar,
@@ -306,7 +306,7 @@ function Z() {
                 ],
             }),
             (0, n.jsx)(y.Z, {
-                columns: k,
+                columns: R,
                 data: N,
                 selectedRowKey: null == f ? void 0 : f.id.toString(),
                 onClickRow: (e) => j(e.actionLog),

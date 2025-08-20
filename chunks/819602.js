@@ -1,7 +1,7 @@
 t.d(n, {
-    E3: () => C,
+    E3: () => N,
     ZP: () => E,
-    tH: () => N,
+    tH: () => C,
 }),
     t(539854);
 var r = t(951288);
@@ -18,8 +18,8 @@ var o = t(120356),
     m = t(275759),
     p = t(888496),
     b = t(753194),
-    g = t(749681),
-    x = t(258971),
+    x = t(749681),
+    g = t(258971),
     h = t(598077),
     j = t(671533),
     v = t(49012),
@@ -72,27 +72,27 @@ function A(e, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     var n, t;
     let o,
         s,
-        g,
+        x,
         {
-            connectedAccount: x,
+            connectedAccount: g,
             theme: h,
             locale: _,
             userId: O,
-            className: C,
-            showMetadata: N,
+            className: N,
+            showMetadata: C,
             showInvisibleIcon: E,
         } = e;
-    null == N && (N = !0);
-    let S = null != (t = x.metadata) ? t : {},
-        w = N ? (0, m.FI)(S[I.PC.CREATED_AT], _) : null,
+    null == C && (C = !0);
+    let S = null != (t = g.metadata) ? t : {},
+        w = C ? (0, m.FI)(S[I.PC.CREATED_AT], _) : null,
         B = (0, a.dQu)(i.Z.unsafe_rawColors.TWITTER).hex(),
         D = P.intl.string(P.t["6H6h1t"]);
-    if (N)
-        switch (x.type) {
+    if (C)
+        switch (g.type) {
             case y.ABu.REDDIT:
                 o = (0, p.oP)(S);
                 break;
@@ -113,24 +113,24 @@ function C(e) {
             case y.ABu.TIKTOK:
                 o = (0, p.hf)(S);
         }
-    let L = d.Z.get((0, f.rR)(x.type)),
-        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, x);
+    let L = d.Z.get((0, f.rR)(g.type)),
+        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, g);
     null != E && E
-        ? (g = (0, r.jsx)(a.kZF, {
+        ? (x = (0, r.jsx)(a.kZF, {
               size: "md",
               color: "currentColor",
               className: l()(Z.__invalid_connectedAccountOpenIconContainer, Z.connectedAccountHideIcon),
           }))
         : null != R &&
-          (g = (0, r.jsx)(a.eee, {
+          (x = (0, r.jsx)(a.eee, {
               href: R,
               "aria-label":
                   (null == L ? void 0 : L.name) != null
-                      ? "".concat(L.name, ", ").concat(x.name, ", ").concat(P.intl.string(P.t.q5jLJC))
-                      : "".concat(x.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
+                      ? "".concat(L.name, ", ").concat(g.name, ", ").concat(P.intl.string(P.t.q5jLJC))
+                      : "".concat(g.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
               onClick: (e) => {
                   var n;
-                  (n = x.type),
+                  (n = g.type),
                       (0, u.yw)(y.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: n,
                           other_user_id: O,
@@ -150,7 +150,7 @@ function C(e) {
           }));
     let U = (0, a.dQu)(i.Z.colors.INTERACTIVE_MUTED).hex(),
         M = (0, a.dQu)(i.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        k = x.verified
+        k = g.verified
             ? (0, r.jsx)(b.Z, {
                   className: Z.connectedAccountVerifiedIcon,
                   color: null != s ? s : U,
@@ -163,7 +163,7 @@ function C(e) {
         className: l()(
             Z.connectedAccountContainer,
             (null != o && o.length > 0) || null != w ? Z.connectedAccountContainerWithMetadata : null,
-            C,
+            N,
         ),
         children: [
             (0, r.jsxs)("div", {
@@ -198,7 +198,7 @@ function C(e) {
                                         children: [
                                             (0, r.jsx)(a.ua7, {
                                                 overflowOnly: !0,
-                                                text: x.name,
+                                                text: g.name,
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         a.Text,
@@ -206,14 +206,14 @@ function C(e) {
                                                             variant: "text-sm/medium",
                                                             color: "interactive-active",
                                                             className: Z.connectedAccountNameText,
-                                                            children: x.name,
+                                                            children: g.name,
                                                         }),
                                                     ),
                                             }),
                                             k,
                                         ],
                                     }),
-                                    g,
+                                    x,
                                 ],
                             }),
                             null != w
@@ -236,16 +236,16 @@ function C(e) {
         ],
     });
 }
-function N(e) {
+function C(e) {
     let { applicationRoleConnection: n, className: t, locale: o, onApplicationClicked: i, selectedGuildId: c } = e,
         d = (0, p.rm)(n, void 0, o),
         u = () => {
             null == i || i(),
-                (0, g.transitionToGlobalDiscovery)({
+                (0, x.transitionToGlobalDiscovery)({
                     tab: O.GlobalDiscoveryTab.APPS,
                     applicationId: n.application.id,
                     newSessionState: {
-                        entrypoint: { name: x.xF.APPLICATION_DIRECTORY_URL },
+                        entrypoint: { name: g.xF.APPLICATION_DIRECTORY_URL },
                         guildId: c,
                     },
                 });
@@ -331,7 +331,7 @@ function E(e) {
     if (null == n || 0 === n.length) return null;
     let a = n.map((e) =>
             (0, r.jsx)(
-                C,
+                N,
                 {
                     connectedAccount: e,
                     theme: c,

@@ -24,13 +24,13 @@ let p = [],
                 userId: e,
             });
     },
-    v = [],
+    b = [],
     S = 10 * c.Z.Millis.SECOND,
-    h = (0, a.debounce)(() => {
+    v = (0, a.debounce)(() => {
         let e = (0, d.cX)(E);
         u.uv.announce(e, "polite"), (E = []);
     }, 500);
-class b extends (l = o.ZP.Store) {
+class h extends (l = o.ZP.Store) {
     get recentlyUsedEmojis() {
         return p;
     }
@@ -44,15 +44,15 @@ class b extends (l = o.ZP.Store) {
         return m[e];
     }
 }
-(i = "displayName") in b
-    ? Object.defineProperty(b, i, {
+(i = "displayName") in h
+    ? Object.defineProperty(h, i, {
           value: "VoiceChannelEffectsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (b[i] = "VoiceChannelEffectsStore");
-let O = new b(s.Z, {
+    : (h[i] = "VoiceChannelEffectsStore");
+let O = new h(s.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
         let { userId: t } = e;
         null != m[t] && delete m[t];
@@ -77,12 +77,12 @@ let O = new b(s.Z, {
                     userId: n,
                 },
             ]),
-            h());
+            v());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
         let e = new Date();
-        if ((v = [e, ...v].slice(0, 20)).length >= 20) {
-            let t = v[v.length - 1],
+        if ((b = [e, ...b].slice(0, 20)).length >= 20) {
+            let t = b[b.length - 1],
                 n = e.getTime() - t.getTime();
             n < S && (r = new Date(e.getTime() + S - n));
         }

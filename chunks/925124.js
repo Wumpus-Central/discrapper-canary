@@ -65,7 +65,7 @@ let y = async () => {
             };
         }
     },
-    E = async () => {
+    T = async () => {
         try {
             await s.tn.del({
                 url: f.ANM.USER_OFFERS,
@@ -76,7 +76,7 @@ let y = async () => {
             await m.Z.forceReset(), await (0, d.Tf)();
         }
     },
-    T = async (e) => {
+    E = async (e) => {
         await s.tn.post({
             url: f.ANM.CREATE_REVERSE_TRIAL,
             body: { ends_at: e },
@@ -88,8 +88,8 @@ function S(e) {
     let { offer: m, offerOptions: p, forceRefetch: v } = e,
         [b, _] = r.useState(!1),
         [y, C] = r.useState(!1),
-        [O, E] = r.useState(!1),
-        [T, S] = r.useState(!1);
+        [O, T] = r.useState(!1),
+        [E, S] = r.useState(!1);
     r.useEffect(() => {
         O && S(!0);
         let e = setTimeout(() => {
@@ -99,14 +99,14 @@ function S(e) {
             clearTimeout(e);
         };
     }, [O]);
-    let { id: P, expires_at: w, redeemed_at: I, trial_id: k, subscription_trial: R, referrer: Z } = m,
+    let { id: P, expires_at: w, redeemed_at: I, trial_id: R, subscription_trial: k, referrer: Z } = m,
         A =
             null !=
             (a =
                 null ==
                 (t = p.find((e) => {
                     let { value: t } = e;
-                    return t === k;
+                    return t === R;
                 }))
                     ? void 0
                     : t.label)
@@ -115,12 +115,12 @@ function S(e) {
     null != Z && (A = "".concat(A, " from @").concat(Z.username));
     let D = null != w,
         L = null != w && new Date(w).getTime() < Date.now(),
-        M = (null == R ? void 0 : R.sku_id) === j.Si.TIER_0,
+        M = (null == k ? void 0 : k.sku_id) === j.Si.TIER_0,
         z = async () => {
-            E(!0), D ? await F({ expiresAt: null }) : await (0, d.ab)(m), v(), E(!1);
+            T(!0), D ? await F({ expiresAt: null }) : await (0, d.ab)(m), v(), T(!1);
         },
         F = async (e) => {
-            E(!0);
+            T(!0);
             try {
                 await s.tn.patch({
                     url: f.ANM.UPDATE_USER_OFFER(P, "trial"),
@@ -156,7 +156,7 @@ function S(e) {
                     rejectWithError: !0,
                 });
             } finally {
-                v(), E(!1);
+                v(), T(!1);
             }
         };
     r.useEffect(() => {
@@ -219,13 +219,13 @@ function S(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, x.JG)(k, () => C(!0));
+                        (0, x.JG)(R, () => C(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "always-white",
-                            children: ["Trial: ", k],
+                            children: ["Trial: ", R],
                         }),
                         y
                             ? (0, n.jsx)(c.dz2, {
@@ -249,8 +249,8 @@ function S(e) {
                             "Trial Length:",
                             " ",
                             (0, h.if)({
-                                intervalType: null != (l = null == R ? void 0 : R.interval) ? l : j.rV.MONTH,
-                                intervalCount: null != (o = null == R ? void 0 : R.interval_count) ? o : 1,
+                                intervalType: null != (l = null == k ? void 0 : k.interval) ? l : j.rV.MONTH,
+                                intervalCount: null != (o = null == k ? void 0 : k.interval_count) ? o : 1,
                                 capitalize: !1,
                             }),
                         ],
@@ -314,7 +314,7 @@ function S(e) {
                 }),
                 (0, n.jsx)(c.P3F, {
                     onClick: async () => {
-                        E(!0), await N(P, "trial"), v(), E(!1);
+                        T(!0), await N(P, "trial"), v(), T(!1);
                     },
                     children: (0, n.jsx)(c.XHJ, {
                         size: "md",
@@ -323,7 +323,7 @@ function S(e) {
                     }),
                 }),
                 (0, n.jsx)("div", {
-                    className: i()(g.loadingContainer, { [g.isLoading]: O || T }),
+                    className: i()(g.loadingContainer, { [g.isLoading]: O || E }),
                     children: (0, n.jsx)(c.$jN, {}),
                 }),
             ],
@@ -346,14 +346,14 @@ function P(e) {
             clearTimeout(e);
         };
     }, [b]);
-    let { id: C, expires_at: O, applied_at: E, discount_id: T, discount: S } = l,
+    let { id: C, expires_at: O, applied_at: T, discount_id: E, discount: S } = l,
         P =
             null !=
             (a =
                 null ==
                 (t = o.find((e) => {
                     let { value: t } = e;
-                    return t === T;
+                    return t === E;
                 }))
                     ? void 0
                     : t.label)
@@ -361,10 +361,10 @@ function P(e) {
                 : "Unknown",
         w = null != O,
         I = null != O && new Date(O).getTime() < Date.now(),
-        k = async () => {
-            j(!0), w ? await R({ expiresAt: null }) : await (0, d.ab)(void 0, l), u(), j(!1);
+        R = async () => {
+            j(!0), w ? await k({ expiresAt: null }) : await (0, d.ab)(void 0, l), u(), j(!1);
         },
-        R = async (e) => {
+        k = async (e) => {
             let { expiresAt: t } = e;
             j(!0);
             try {
@@ -449,13 +449,13 @@ function P(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, x.JG)(T, () => v(!0));
+                        (0, x.JG)(E, () => v(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "text-default",
-                            children: ["Discount: ", T],
+                            children: ["Discount: ", E],
                         }),
                         p
                             ? (0, n.jsx)(c.dz2, {
@@ -489,7 +489,7 @@ function P(e) {
                         (0, n.jsx)("input", {
                             type: "date",
                             value: null != O ? O.substring(0, 10) : "",
-                            onChange: (e) => R({ expiresAt: e.target.value }),
+                            onChange: (e) => k({ expiresAt: e.target.value }),
                         }),
                     ],
                 }),
@@ -497,7 +497,7 @@ function P(e) {
                     className: g.badgeContainer,
                     children: [
                         (0, n.jsx)(c.P3F, {
-                            onClick: k,
+                            onClick: R,
                             className: i()(g.badge, g.clickable, {
                                 [g.acked]: w,
                                 [g.expired]: I,
@@ -508,7 +508,7 @@ function P(e) {
                                 children: Z,
                             }),
                         }),
-                        null != E &&
+                        null != T &&
                             (0, n.jsx)("div", {
                                 className: i()(g.badge, g.redeemed),
                                 children: (0, n.jsx)(c.Text, {
@@ -534,7 +534,7 @@ function w() {
         [x, h] = r.useState(),
         [j, N] = r.useState([]),
         [w, I] = r.useState([]),
-        [k, R] = r.useState(!0),
+        [R, k] = r.useState(!0),
         [Z, A] = r.useState(10080),
         [D, L] = r.useState([]),
         { entitlements: M, deleteFractionalPremium: z, refreshEntitlementList: F } = (0, b.m)();
@@ -545,7 +545,7 @@ function w() {
             L(M.filter((e) => e.sourceType === f.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date()));
         }, [M]),
         r.useEffect(() => {
-            (0 === e.length || 0 === a.length || k) &&
+            (0 === e.length || 0 === a.length || R) &&
                 y().then((e) => {
                     let a = Object.keys(e.trial).map((t) => ({
                             label: t,
@@ -557,29 +557,29 @@ function w() {
                         }));
                     t(a), l(n), null == i && s(a[0].value), null == x && h(n[0].value);
                 });
-        }, [e, a, i, x, k]),
+        }, [e, a, i, x, R]),
         r.useEffect(() => {
-            k &&
-                (R(!1),
+            R &&
+                (k(!1),
                 m.Z.forceReset(),
                 (0, d.Tf)(),
                 O().then((e) => {
                     N(e.trial.sort((e, t) => e.id.localeCompare(t.id))),
                         I(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
-        }, [k]);
+        }, [R]);
     let B = async () => {
-            null != i && (await C(i, "trial"), R(!0));
+            null != i && (await C(i, "trial"), k(!0));
         },
         U = async () => {
-            null != x && (await C(x, "discount"), R(!0));
+            null != x && (await C(x, "discount"), k(!0));
         },
         G = async () => {
-            await E(), R(!0);
+            await T(), k(!0);
         },
         V = async () => {
             let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
-            await T(e), F();
+            await E(e), F();
         };
     return (0, n.jsx)(c.zJl, {
         className: _.panel,
@@ -618,7 +618,7 @@ function w() {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Refresh DevTools",
-                                    onClick: () => R(!0),
+                                    onClick: () => k(!0),
                                 }),
                             ],
                         }),
@@ -694,7 +694,7 @@ function w() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => R(!0),
+                                        forceRefetch: () => k(!0),
                                     },
                                     t.id,
                                 ),
@@ -715,7 +715,7 @@ function w() {
                                     {
                                         offer: e,
                                         offerOptions: a,
-                                        forceRefetch: () => R(!0),
+                                        forceRefetch: () => k(!0),
                                     },
                                     e.id,
                                 ),

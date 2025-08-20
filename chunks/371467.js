@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eO }), n(539854), n(388685), n(642613), n(290780);
+n.d(t, { Z: () => eb }), n(539854), n(388685), n(642613), n(290780);
 var i,
     r = n(512722),
     o = n.n(r),
@@ -9,43 +9,44 @@ var i,
     u = n(435064),
     d = n(786761),
     p = n(864060),
-    f = n(695346),
-    h = n(163612),
-    m = n(314897),
-    g = n(592125),
-    y = n(375954),
-    O = n(292959),
-    b = n(649974),
-    v = n(158776),
-    E = n(699516),
-    _ = n(944486),
-    x = n(885110),
-    S = n(246946),
-    I = n(594174),
-    j = n(979651),
-    C = n(974180),
-    N = n(70956),
-    w = n(129724),
-    Z = n(145597),
-    P = n(486016),
-    T = n(32300),
-    A = n(371651),
-    k = n(624864),
-    D = n(610394),
-    R = n(340101),
-    L = n(388627),
-    M = n(996050),
-    z = n(609626),
-    U = n(421824),
-    V = n(303286),
-    W = n(955978),
-    F = n(333727),
-    G = n(672199),
-    B = n(585708),
-    H = n(588909),
-    Y = n(981631),
-    Q = n(388032);
-function K(e, t, n) {
+    f = n(763624),
+    h = n(695346),
+    m = n(163612),
+    g = n(314897),
+    y = n(592125),
+    O = n(375954),
+    b = n(292959),
+    v = n(649974),
+    E = n(158776),
+    _ = n(699516),
+    x = n(944486),
+    S = n(885110),
+    I = n(246946),
+    j = n(594174),
+    C = n(979651),
+    N = n(974180),
+    w = n(70956),
+    Z = n(129724),
+    P = n(145597),
+    T = n(486016),
+    A = n(32300),
+    k = n(371651),
+    D = n(624864),
+    R = n(610394),
+    L = n(340101),
+    M = n(388627),
+    z = n(996050),
+    U = n(609626),
+    V = n(421824),
+    W = n(303286),
+    F = n(955978),
+    G = n(333727),
+    B = n(672199),
+    H = n(585708),
+    Y = n(588909),
+    Q = n(981631),
+    K = n(388032);
+function X(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +59,7 @@ function K(e, t, n) {
         e
     );
 }
-function X(e) {
+function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,12 +70,12 @@ function X(e) {
                 }),
             )),
             i.forEach(function (t) {
-                K(e, t, n[t]);
+                X(e, t, n[t]);
             });
     }
     return e;
 }
-function J(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,64 +93,64 @@ function J(e, t) {
         e
     );
 }
-let q = 5 * N.Z.Millis.SECOND,
-    $ = 8 * N.Z.Millis.SECOND,
-    ee = 30 * N.Z.Millis.SECOND,
-    et = 30 * N.Z.Millis.SECOND,
-    en = Object.freeze({
+let $ = 5 * w.Z.Millis.SECOND,
+    ee = 8 * w.Z.Millis.SECOND,
+    et = 30 * w.Z.Millis.SECOND,
+    en = 30 * w.Z.Millis.SECOND,
+    ei = Object.freeze({
         timestamp: 0,
-        priority: R.Tu.NORMAL,
-        duration: q,
+        priority: L.Tu.NORMAL,
+        duration: $,
         expirationExternallyManaged: !1,
-        type: R.kL.GENERIC,
+        type: L.kL.GENERIC,
     }),
-    ei = [],
-    er = !1,
-    eo = [],
-    el = {};
-function ea(e, t, n) {
-    null == el[e] && (el[e] = {}), (el[e][t] = n);
+    er = [],
+    eo = !1,
+    el = [],
+    ea = {};
+function es(e, t, n) {
+    null == ea[e] && (ea[e] = {}), (ea[e][t] = n);
 }
-let es = 30 * N.Z.Millis.MINUTE,
-    ec = 2 * N.Z.Millis.MINUTE;
-function eu() {
-    if (er && null == ei.find((e) => e.status === Y._1z.FOCUSED))
-        for (let e of ((er = !1), (ei = [...ei, ...eo]), (eo = []), ei.length > 40 && (ei.length = 40), ei))
+let ec = 30 * w.Z.Millis.MINUTE,
+    eu = 2 * w.Z.Millis.MINUTE;
+function ed() {
+    if (eo && null == er.find((e) => e.status === Q._1z.FOCUSED))
+        for (let e of ((eo = !1), (er = [...er, ...el]), (el = []), er.length > 40 && (er.length = 40), er))
             e.timer.start();
 }
-function ed() {
+function ep() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3;
-    ei.filter((e) => e.type === R.kL.TEXT && e.status === Y._1z.TIMED_OUT)
+    er.filter((e) => e.type === L.kL.TEXT && e.status === Q._1z.TIMED_OUT)
         .sort((e, t) => t.timestamp - e.timestamp)
         .forEach((t, n) => {
-            (n >= e || t.timestamp < Date.now() - ee) && ep(t.id, Y._1z.DISMISSED);
+            (n >= e || t.timestamp < Date.now() - et) && ef(t.id, Q._1z.DISMISSED);
         });
 }
-function ep(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y._1z.DISMISSED;
+function ef(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Q._1z.DISMISSED;
     if (null == e) return !1;
-    let n = ei.findIndex((t) => t.id === e);
+    let n = er.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
-    let i = ei[n];
-    if ((i.timer.stop(), (ei = [...ei]), t === Y._1z.FOCUSED)) {
-        let [e] = ei.splice(n, 1);
-        (e = J(X({}, e), { status: t })), ei.unshift(e), (er = !0);
+    let i = er[n];
+    if ((i.timer.stop(), (er = [...er]), t === Q._1z.FOCUSED)) {
+        let [e] = er.splice(n, 1);
+        (e = q(J({}, e), { status: t })), er.unshift(e), (eo = !0);
         return;
     }
-    t === Y._1z.DISMISSED ? ei.splice(n, 1) : (ei[n] = J(X({}, i), { status: t })), eu();
+    t === Q._1z.DISMISSED ? er.splice(n, 1) : (er[n] = q(J({}, i), { status: t })), ed();
 }
-function ef(e) {
-    let t = ei.find((t) => t.type === R.kL.INCOMING_CALL && t.channelId === e);
+function eh(e) {
+    let t = er.find((t) => t.type === L.kL.INCOMING_CALL && t.channelId === e);
     return null != t ? t.id : null;
 }
-function eh(e, t) {
-    let n = X(J(X({}, en), { timestamp: Date.now() }), t),
+function em(e, t) {
+    let n = J(q(J({}, ei), { timestamp: Date.now() }), t),
         i = (0, l.Z)(),
         r = !1,
-        o = X(
+        o = J(
             {
                 id: i,
-                status: Y._1z.ACTIVE,
+                status: Q._1z.ACTIVE,
                 timer: (function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -157,15 +158,15 @@ function eh(e, t) {
                     return {
                         start() {
                             let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t,
-                                o = r ? Y._1z.TIMED_OUT : Y._1z.DISMISSED;
-                            -1 === i && (i = setTimeout(() => c.Z.updateNotificationStatus(e, o), null != n ? n : q));
+                                o = r ? Q._1z.TIMED_OUT : Q._1z.DISMISSED;
+                            -1 === i && (i = setTimeout(() => c.Z.updateNotificationStatus(e, o), null != n ? n : $));
                         },
                         stop() {
                             clearTimeout(i), (i = -1);
                         },
                     };
                 })(i, n.expirationExternallyManaged, n.duration),
-                props: J(X({}, e), {
+                props: q(J({}, e), {
                     onNotificationShow: () => {
                         var t;
                         r || ((r = !0), null == (t = e.onNotificationShow) || t.call(e, i));
@@ -174,25 +175,25 @@ function eh(e, t) {
             },
             n,
         ),
-        a = er ? eo : [...ei],
+        a = eo ? el : [...er],
         s = a.findIndex((e) => e.priority <= n.priority);
     if ((-1 === s ? a.push(o) : a.splice(s, 0, o), a.length > 40)) {
         let e = a.pop();
-        er || e.timer.stop();
+        eo || e.timer.stop();
     }
-    return er || ((ei = a), o.timer.start()), i;
+    return eo || ((er = a), o.timer.start()), i;
 }
-function em() {
+function eg() {
     if (
-        !(0, T.Yo)("OverlayNotificationStore") ||
-        k.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)
+        !(0, A.Yo)("OverlayNotificationStore") ||
+        D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.NOW_PLAYING)
     )
         return !1;
-    let e = b.Z.usersPlaying,
+    let e = v.Z.usersPlaying,
         t = new Set(),
         n = (function () {
             let e = [];
-            for (let t in el) e.push(...Object.keys(el[t]).map((e) => e));
+            for (let t in ea) e.push(...Object.keys(ea[t]).map((e) => e));
             return e;
         })(),
         i = !1;
@@ -201,55 +202,55 @@ function em() {
             i ||
             (function (e, t) {
                 var n, i;
-                if (!E.Z.isFriend(e)) return !1;
+                if (!_.Z.isFriend(e)) return !1;
                 let r = t.gameId;
                 if (null == r) return !1;
-                let o = null == (n = b.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
+                let o = null == (n = v.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
                 if (
                     null == o ||
-                    o.type !== Y.IIU.PLAYING ||
+                    o.type !== Q.IIU.PLAYING ||
                     !(function (e) {
                         var t;
                         let n =
                             (null == (t = e.timestamps) ? void 0 : t.start) != null ? e.timestamps.start : e.created_at;
-                        return null != n && Date.now() - n < ec;
+                        return null != n && Date.now() - n < eu;
                     })(o)
                 )
                     return !1;
-                let l = _.Z.getVoiceChannelId(),
-                    a = null == (i = j.Z.getDiscoverableVoiceStateForUser(e)) ? void 0 : i.channelId;
+                let l = x.Z.getVoiceChannelId(),
+                    a = null == (i = C.Z.getDiscoverableVoiceStateForUser(e)) ? void 0 : i.channelId;
                 if (null != l && null != a && l === a) return !1;
-                let s = (0, L.pL)();
+                let s = (0, M.pL)();
                 if (null == s || s.id !== r) return !1;
                 if (
                     !(function (e, t) {
                         var n, i;
                         let r =
-                            null === (n = null == (i = el[e]) ? void 0 : i[t]) || void 0 === n
+                            null === (n = null == (i = ea[e]) ? void 0 : i[t]) || void 0 === n
                                 ? void 0
                                 : n.lastSentTimestamp;
-                        return null == r || Date.now() - r > es;
+                        return null == r || Date.now() - r > ec;
                     })(r, e)
                 )
                     return (
-                        ea(r, e, {
+                        es(r, e, {
                             userId: e,
                             gameId: r,
                             lastSentTimestamp: Date.now(),
                         }),
                         !1
                     );
-                let c = (0, W.Z)(e, r, o);
+                let c = (0, F.Z)(e, r, o);
                 return (
                     null != c &&
-                        (ea(r, e, {
+                        (es(r, e, {
                             userId: e,
                             gameId: r,
                             lastSentTimestamp: Date.now(),
                         }),
-                        eh(c, {
-                            type: R.kL.GENERIC,
-                            priority: R.Tu.NORMAL,
+                        em(c, {
+                            type: L.kL.GENERIC,
+                            priority: L.Tu.NORMAL,
                         })),
                     !0
                 );
@@ -257,149 +258,153 @@ function em() {
             t.add(n);
     let r = new Set();
     for (let e of n) t.has(e) || r.add(e);
-    let o = D.ZP.isOverlayV3EnabledForPID((0, Z.getPID)()) || null != D.ZP.getFocusedPID();
+    let o = R.ZP.isOverlayV3EnabledForPID((0, P.getPID)()) || null != R.ZP.getFocusedPID();
     for (let e of r)
         if (
             !(function (e) {
-                let t = v.Z.getActivities(e);
+                let t = E.Z.getActivities(e);
                 if (0 === t.length) return !1;
-                let n = (0, L.pL)();
+                let n = (0, M.pL)();
                 return null != n && null != t.find((e) => e.application_id === n.id);
             })(e) &&
             !o
         ) {
-            for (let t in el) {
-                let n = el[t][e];
+            for (let t in ea) {
+                let n = ea[t][e];
                 null != n && (n.lastSentTimestamp = null);
             }
             i = !0;
         }
     return i;
 }
-function eg(e) {
+function ey(e) {
     let { channelId: t, ringing: n } = e,
-        i = ef(t);
-    if (!n.includes(m.default.getId())) return ep(i);
+        i = eh(t);
+    if (!n.includes(g.default.getId())) return ef(i);
     if (null != i) return !1;
-    let r = g.Z.getChannel(t);
+    let r = y.Z.getChannel(t);
     if (
         null == r ||
         !r.isRingable() ||
         ("GUILD_RING_START" === e.type &&
-            !h.Z.getCurrentConfig({
+            !m.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: "OverlayV3StartRinging",
             }).enabled) ||
-        x.Z.getStatus() === Y.Skl.DND ||
-        f.QZ.getSetting()
+        S.Z.getStatus() === Q.Skl.DND ||
+        h.QZ.getSetting()
     )
         return !1;
-    let o = ei.find((e) => e.type === R.kL.TEXT && e.channelId === t && e.messageType === Y.uaV.CALL);
-    null != o && ep(o.id),
-        eh((0, V.Z)(r), {
-            priority: R.Tu.HIGH,
+    let o = er.find((e) => e.type === L.kL.TEXT && e.channelId === t && e.messageType === Q.uaV.CALL);
+    null != o && ef(o.id),
+        em((0, W.Z)(r), {
+            priority: L.Tu.HIGH,
             expirationExternallyManaged: !0,
-            type: R.kL.INCOMING_CALL,
+            type: L.kL.INCOMING_CALL,
             channelId: r.id,
         });
 }
-class ey extends (i = a.ZP.Store) {
+class eO extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, I.default, b.Z, k.Z), this.syncWith([b.Z], em);
+        this.waitFor(y.Z, j.default, v.Z, D.Z), this.syncWith([v.Z], eg);
     }
     getNotifications() {
-        return ei;
+        return er;
     }
 }
-K(ey, "displayName", "OverlayNotificationsStore");
-let eO = new ey(s.Z, {
+X(eO, "displayName", "OverlayNotificationsStore");
+let eb = new eO(s.Z, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
         let { notificationId: t, status: n } = e;
-        ep(t, n);
+        ef(t, n);
     },
     OVERLAY_MOUNTED: function (e) {
         var t;
         let { nudges: n } = e;
-        ed(0);
-        let i = null != (t = D.ZP.getFocusedPID()) ? t : Z.UNSET_PID;
-        if (A.default.hasChangedRenderMode(i)) return;
-        let r = (0, H.Z)((0, L.pL)(), n);
+        ep(0);
+        let i = null != (t = R.ZP.getFocusedPID()) ? t : P.UNSET_PID;
+        if (k.default.hasChangedRenderMode(i)) return;
+        let r = (0, Y.Z)((0, M.pL)(), n);
         null != r &&
-            eh(r, {
-                priority: R.Tu.URGENT,
-                type: R.kL.NUDGE,
-                duration: $,
+            em(r, {
+                priority: L.Tu.URGENT,
+                type: L.kL.NUDGE,
+                duration: ee,
             });
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t } = e;
         if (t) {
-            for (let e of ei) e.status === Y._1z.FOCUSED && ep(e.id, Y._1z.ACTIVE);
+            for (let e of er) e.status === Q._1z.FOCUSED && ef(e.id, Q._1z.ACTIVE);
             return !0;
         }
-        for (let e of (ed(), ei))
-            e.type === R.kL.NUDGE
-                ? ep(e.id, Y._1z.DISMISSED)
-                : e.status !== Y._1z.ACTIVE ||
+        for (let e of (ep(), er))
+            e.type === L.kL.NUDGE
+                ? ef(e.id, Q._1z.DISMISSED)
+                : e.status !== Q._1z.ACTIVE ||
                   e.expirationExternallyManaged ||
                   (e.timer.stop(), e.timer.start(e.expirationExternallyManaged));
-        if (ei.length > 0) {
+        if (er.length > 0) {
             var n;
-            return ep(
-                null == (n = ei.filter((e) => e.type === R.kL.TEXT).sort((e, t) => t.timestamp - e.timestamp)[0])
+            return ef(
+                null == (n = er.filter((e) => e.type === L.kL.TEXT).sort((e, t) => t.timestamp - e.timestamp)[0])
                     ? void 0
                     : n.id,
-                Y._1z.FOCUSED,
+                Q._1z.FOCUSED,
             );
         }
     },
     MESSAGE_CREATE: function (e) {
         var t, n, i;
         let { channelId: r, message: l } = e,
-            a = g.Z.getChannel(r),
-            s = I.default.getUser(null == (t = l.author) ? void 0 : t.id);
+            a = y.Z.getChannel(r),
+            s = j.default.getUser(null == (t = l.author) ? void 0 : t.id);
         if (null == a || null == s) return !1;
         if (
-            [Y.mFx.JOIN, Y.mFx.JOIN_REQUEST, Y.mFx.STREAM_REQUEST].includes(null == (n = l.activity) ? void 0 : n.type)
+            [Q.mFx.JOIN, Q.mFx.JOIN_REQUEST, Q.mFx.STREAM_REQUEST].includes(null == (n = l.activity) ? void 0 : n.type)
         ) {
             if (!(0, p.eF)(l, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 var i;
                 let r, l;
-                if ((o()(null != t.activity, "received null message activity"), n.id === m.default.getId())) return !1;
-                let a = (0, L.pL)(),
+                if ((o()(null != t.activity, "received null message activity"), n.id === g.default.getId())) return !1;
+                let a = (0, M.pL)(),
                     s = null != (i = null == a ? void 0 : a.altId) ? i : null == a ? void 0 : a.id;
                 if (null == a || null == s) return !1;
                 switch (t.activity.type) {
-                    case Y.mFx.JOIN:
+                    case Q.mFx.JOIN:
                         if (
-                            null == (r = v.Z.getApplicationActivity(n.id, s)) ||
+                            null == (r = E.Z.getApplicationActivity(n.id, s)) ||
                             null == r.party ||
                             r.party.id !== t.activity.party_id
                         )
                             return !1;
-                        l = (0, M.Z)(e, t, n, a, r);
+                        l = (0, z.Z)(e, t, n, a, r);
                         break;
-                    case Y.mFx.JOIN_REQUEST:
+                    case Q.mFx.JOIN_REQUEST:
                         if (
-                            null == (r = x.Z.getApplicationActivity(s)) ||
+                            null == (r = S.Z.getApplicationActivity(s)) ||
                             null == r.party ||
                             r.party.id !== t.activity.party_id
                         )
                             return !1;
-                        l = (0, F.Z)(e, n, a, r);
-                        break;
-                    case Y.mFx.STREAM_REQUEST:
-                        if (null == (r = x.Z.getApplicationActivity(s)) || r.application_id !== s) return !1;
                         l = (0, G.Z)(e, n, a, r);
+                        break;
+                    case Q.mFx.STREAM_REQUEST:
+                        let { enableRequestToStreamOverlayNotification: c } = f.A.getCurrentConfig({
+                            guildId: e.guild_id,
+                            location: "showActivityNotification",
+                        });
+                        if (!c || null == (r = S.Z.getApplicationActivity(s)) || r.application_id !== s) return !1;
+                        l = (0, B.Z)(e, n, a, r);
                 }
                 return (
                     null != l &&
-                    (eh(l, {
-                        priority: R.Tu.URGENT,
+                    (em(l, {
+                        priority: L.Tu.URGENT,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
-                        duration: et,
+                        duration: en,
                     }),
                     !0)
                 );
@@ -407,78 +412,78 @@ let eO = new ey(s.Z, {
             if (!1 !== e) return e;
         }
         if (
-            k.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) ||
-            S.Z.disableNotifications ||
+            D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.TEXT_CHAT) ||
+            I.Z.disableNotifications ||
             !(0, p.eF)(l, r)
         )
             return !1;
-        let c = !O.Z.isSoundDisabled(C.Ay),
-            u = null != (i = y.Z.getMessage(r, l.id)) ? i : (0, d.e5)(l);
-        eh((0, B.Z)(a, u, s, c), {
-            type: R.kL.TEXT,
+        let c = !b.Z.isSoundDisabled(N.Ay),
+            u = null != (i = O.Z.getMessage(r, l.id)) ? i : (0, d.e5)(l);
+        em((0, H.Z)(a, u, s, c), {
+            type: L.kL.TEXT,
             channelId: a.id,
             expirationExternallyManaged: !0,
             messageType: l.type,
         }),
-            ed();
+            ep();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         return (
             null != t &&
             (function (e) {
-                let t = ei.length,
-                    n = (ei = ei.filter((t) => t.type !== R.kL.TEXT || t.channelId !== e)).length !== t;
-                return n && eu(), n;
+                let t = er.length,
+                    n = (er = er.filter((t) => t.type !== L.kL.TEXT || t.channelId !== e)).length !== t;
+                return n && ed(), n;
             })(t)
         );
     },
     MESSAGE_ACK: function () {},
-    CALL_CREATE: eg,
-    CALL_UPDATE: eg,
+    CALL_CREATE: ey,
+    CALL_UPDATE: ey,
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        ep(ef(t));
+        ef(eh(t));
     },
-    GUILD_RING_START: eg,
+    GUILD_RING_START: ey,
     GUILD_RING_STOP: function (e) {
         let { channelId: t, guildId: n, ringing: i } = e;
         if (
-            !h.Z.getCurrentConfig({
+            !m.Z.getCurrentConfig({
                 guildId: n,
                 location: "OverlayV3StopRinging",
             }).enabled
         )
             return !1;
-        i.includes(m.default.getId()) && ep(ef(t));
+        i.includes(g.default.getId()) && ef(eh(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: r } = e,
-            o = (0, L.pL)();
+            o = (0, M.pL)();
         return (
             null != o &&
             (null == o ? void 0 : o.id) != null &&
             (o.id === r || o.altId === r) &&
-            (n === Y.mFx.JOIN && (t = (0, z.Z)(i, o)),
+            (n === Q.mFx.JOIN && (t = (0, U.Z)(i, o)),
             null != t &&
-                void eh(t, {
-                    priority: R.Tu.URGENT,
-                    type: R.kL.GENERIC,
+                void em(t, {
+                    priority: L.Tu.URGENT,
+                    type: L.kL.GENERIC,
                 }))
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        eh((0, U.f)(Q.intl.string(Q.t.NBMK9v)));
+        em((0, V.f)(K.intl.string(K.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eh((0, U.f)(Q.intl.format(Q.t.KLhk6u, { duration: (0, w.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
+        em((0, V.f)(K.intl.format(K.t.KLhk6u, { duration: (0, Z.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        eh((0, U.f)(Q.intl.string(Q.t["1ZbZur"])));
+        em((0, V.f)(K.intl.string(K.t["1ZbZur"])));
     },
     STREAM_START: function (e) {
-        let t = (0, U.y)();
-        null != t && eh(t);
+        let t = (0, V.y)();
+        null != t && em(t);
     },
 });

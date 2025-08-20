@@ -1,23 +1,23 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(990547),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     a = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    p = n(726521),
-    m = n(185625),
+    f = n(726521),
+    p = n(185625),
     g = n(314897),
-    f = n(63063),
+    m = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(884110),
-    v = n(197571);
-function j(e) {
+    v = n(884110),
+    E = n(197571);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function b(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,35 +60,35 @@ function b(e, t) {
         e
     );
 }
-s.ZP.initialize();
+o.ZP.initialize();
 let I = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj,
     },
-    O = (e) => {
+    N = (e) => {
         let { title: t, menuType: i } = e,
-            s = (e) => {
+            o = (e) => {
                 let t = async () => {
-                        await (0, m.yL)(i, e);
+                        await (0, p.yL)(i, e);
                     },
-                    s = async (t) => await (0, m.RV)(i, e, t),
+                    o = async (t) => await (0, p.RV)(i, e, t),
                     a = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
-                            ? (0, p.eE)(t)
+                            ? (0, f.eE)(t)
                             : i === h.BM.USER
-                              ? (0, p.JM)(t)
-                              : i === h.BM.GUILD && (0, p.FO)(t);
+                              ? (0, f.JM)(t)
+                              : i === h.BM.GUILD && (0, f.FO)(t);
                     };
                 t(),
-                    (0, o.ZDy)(async () => {
+                    (0, s.ZDy)(async () => {
                         let { default: e } = await n.e("94566").then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(j({}, n), {
-                                    onFormSubmit: s,
+                                j(b({}, n), {
+                                    onFormSubmit: o,
                                     onResend: t,
                                     onSuccess: a,
                                     headerText: x.intl.string(x.t.H3Q7U1),
@@ -98,40 +98,40 @@ let I = {
                             );
                     });
             };
-        return (0, r.jsxs)(o.P3F, {
-            className: E.reportButton,
+        return (0, r.jsxs)(s.P3F, {
+            className: v.reportButton,
             onClick: () =>
-                void (0, o.ZDy)(async () => {
+                void (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            b(j({}, t), {
-                                onSuccess: s,
+                            j(b({}, t), {
+                                onSuccess: o,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
                             }),
                         );
                 }),
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(o.LJT, {
+                (0, r.jsx)(s.LJT, {
                     size: "sm",
                     color: "currentColor",
                 }),
             ],
         });
     },
-    N = () => {
+    O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, s.e7)([g.default], () => g.default.isAuthenticated()),
-            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            j = () => {
-                (0, m.Jj)()
+            h = (0, o.e7)([g.default], () => g.default.isAuthenticated()),
+            f = (0, o.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            b = () => {
+                (0, p.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
@@ -148,38 +148,38 @@ let I = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => j())
+                          .then(() => b())
                           .catch(() => t(!1)))
-                    : j();
+                    : b();
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                    f || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
                 })();
-            }, [p]),
-            e || !p
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
+            }, [f]),
+            e || !f
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(s.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {
                       children: [
                           (0, r.jsx)(u.Dx, {
-                              className: v.marginBottom8,
+                              className: E.marginBottom8,
                               children: x.intl.string(x.t.Z11w19),
                           }),
                           (0, r.jsx)(u.DK, {
-                              className: v.marginBottom8,
+                              className: E.marginBottom8,
                               children: x.intl.format(x.t["532l+v"], {
-                                  supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
+                                  supportURL: m.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: E.container,
+                              className: v.container,
                               children: n.map((e) =>
                                   null == I[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            O,
+                                            N,
                                             {
                                                 title: x.intl.string(I[e]),
                                                 menuType: e,

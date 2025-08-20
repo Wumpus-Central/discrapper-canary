@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => b });
 var r = n(951288),
     l = n(647438),
     i = n(442837),
@@ -17,15 +17,15 @@ let g = (e, t) => {
         (0, o.Cz)(e, t);
     });
 };
-function v(e) {
+function b(e) {
     let t,
         { embedId: n, className: a, style: o } = e,
-        v = (0, i.e7)([u.Z], () => u.Z.getWindow(E.KJ3.CHANNEL_CALL_POPOUT)),
+        b = (0, i.e7)([u.Z], () => u.Z.getWindow(E.KJ3.CHANNEL_CALL_POPOUT)),
         S = (0, p.Z)(),
-        h = (0, i.e7)([c.ZP], () => c.ZP.getActivityPanelMode());
-    if (null == S || (0, f.Z)((0, d.p)(S.location)) || h !== m.Ez.PANEL) {
-        var b;
-        t = null != (b = null == v ? void 0 : v.window) ? b : window;
+        v = (0, i.e7)([c.ZP], () => c.ZP.getActivityPanelMode());
+    if (null == S || (0, f.Z)((0, d.p)(S.location)) || v !== m.Ez.PANEL) {
+        var h;
+        t = null != (h = null == b ? void 0 : b.window) ? h : window;
     } else t = window;
     let O = l.useRef(null),
         y = l.useMemo(() => {

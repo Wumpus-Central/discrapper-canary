@@ -17,22 +17,22 @@ var r = n(951288),
     m = n(16609),
     E = n(527805),
     g = n(716600),
-    v = n(778569),
+    b = n(778569),
     S = n(563218),
-    h = n(318891),
-    b = n(884338),
+    v = n(318891),
+    h = n(884338),
     O = n(719296),
     y = n(958185),
     _ = n(100527),
-    Z = n(906732),
-    j = n(890280),
+    j = n(906732),
+    Z = n(890280),
     I = n(835473),
     w = n(522474),
     P = n(314897),
     A = n(819640),
     C = n(594174),
-    x = n(823379),
-    R = n(5192),
+    R = n(823379),
+    x = n(5192),
     N = n(388032),
     T = n(798242);
 let D = ["embedded_background"];
@@ -40,14 +40,14 @@ function M(e) {
     let { avatarSize: t, guildId: n, channelId: l, users: i } = e,
         a = null != t ? t : s.EFr.SIZE_32,
         o = (0, s.pxk)(a);
-    return (0, r.jsx)(b.ZP, {
+    return (0, r.jsx)(h.ZP, {
         size: o,
         guildId: n,
         users: i,
         max: 4,
         renderUser: (e) => {
-            if (null == e || e === b.ag) return null;
-            let t = R.ZP.getName(n, l, e);
+            if (null == e || e === h.ag) return null;
+            let t = x.ZP.getName(n, l, e);
             return (0, r.jsx)(
                 s.DY3,
                 {
@@ -70,13 +70,13 @@ function M(e) {
 }
 function L(e) {
     var t, n;
-    let { participants: i, application: m, channel: g, width: v } = e,
-        S = v > 400 ? 2 : +(v > 300),
-        [h] = v > 400 ? [s.EFr.SIZE_56, 56] : v > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
-        b = (0, o.Wu)([C.default, P.default], () =>
+    let { participants: i, application: m, channel: g, width: b } = e,
+        S = b > 400 ? 2 : +(b > 300),
+        [v] = b > 400 ? [s.EFr.SIZE_56, 56] : b > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
+        h = (0, o.Wu)([C.default, P.default], () =>
             Array.from(i)
                 .map((e) => ((0, p.J)(e, P.default) ? null : C.default.getUser(e.userId)))
-                .filter(x.lm),
+                .filter(R.lm),
         ),
         O = (0, o.e7)([d.ZP], () => {
             var e;
@@ -84,9 +84,9 @@ function L(e) {
                 ? e
                 : d.ZP.getEmbeddedActivitiesForStartingChannel(g.id).find((e) => e.applicationId === m.id);
         }),
-        { analyticsLocations: y } = (0, Z.ZP)(),
+        { analyticsLocations: y } = (0, j.ZP)(),
         _ = (0, c.O)(),
-        I = R.ZP.getName(g.getGuildId(), g.id, null == b ? void 0 : b[0]),
+        I = x.ZP.getName(g.getGuildId(), g.id, null == h ? void 0 : h[0]),
         w =
             (0, E.s5)({
                 userId: null == (t = C.default.getCurrentUser()) ? void 0 : t.id,
@@ -103,7 +103,7 @@ function L(e) {
             }),
             [g],
         ),
-        { submitting: k } = (0, j.Z)({
+        { submitting: V } = (0, Z.Z)({
             applicationId: L,
             context: F,
             launchingComponentId: D,
@@ -112,10 +112,10 @@ function L(e) {
         className: T.splash,
         children: [
             (0, r.jsx)(M, {
-                avatarSize: h,
+                avatarSize: v,
                 guildId: A,
                 channelId: g.id,
-                users: b,
+                users: h,
             }),
             (0, r.jsx)(s.Text, {
                 className: a()(T.subheader, {
@@ -124,10 +124,10 @@ function L(e) {
                 }),
                 variant: "text-sm/normal",
                 children:
-                    b.length > 1
+                    h.length > 1
                         ? N.intl.formatToPlainString(N.t.cpe6CA, {
                               username: I,
-                              count: b.length - 1,
+                              count: h.length - 1,
                           })
                         : N.intl.formatToPlainString(N.t["7Uuia2"], { username: I }),
             }),
@@ -154,7 +154,7 @@ function L(e) {
                                           componentId: D,
                                       });
                           },
-                          submitting: k,
+                          submitting: V,
                           size: (function (e) {
                               switch (e) {
                                   case 2:
@@ -177,18 +177,18 @@ function L(e) {
 }
 function F(e) {
     let { participant: t, width: n, selected: i, interactible: a, channel: u } = e,
-        { analyticsLocations: s } = (0, Z.ZP)(_.Z.ACTIVITY_TILE),
+        { analyticsLocations: s } = (0, j.ZP)(_.Z.ACTIVITY_TILE),
         { applicationId: c } = t,
         d = (0, g.Z)(),
         f = null != d && (0, m.p)(d.location) === u.id && d.applicationId === c,
         [p] = (0, I.Z)([c]),
-        { url: E } = (0, v.Z)({
+        { url: E } = (0, b.Z)({
             applicationId: c,
             names: D,
             size: 1024,
         }),
-        b = !i && f,
-        j = !f,
+        h = !i && f,
+        Z = !f,
         P = !f && !i,
         C = (0, o.e7)([A.Z, w.Z], () =>
             (0, y.Z)({
@@ -198,23 +198,23 @@ function F(e) {
         );
     return (
         l.useEffect(() => {
-            if (b && null != d && !C) {
+            if (h && null != d && !C) {
                 let e = (0, O.Z)(d.location.id, d.applicationId);
-                (0, h.jy)(e);
+                (0, v.jy)(e);
             }
-        }, [b, d, C]),
-        (0, r.jsx)(Z.Gt, {
+        }, [h, d, C]),
+        (0, r.jsx)(j.Gt, {
             value: s,
             children: (0, r.jsxs)("div", {
                 className: T.container,
                 children: [
-                    b &&
+                    h &&
                         null != d &&
                         (0, r.jsx)(S.Z, {
                             className: T.iframe,
                             embedId: (0, O.Z)(d.location.id, c),
                         }),
-                    j && null != p && null != E && "" !== E
+                    Z && null != p && null != E && "" !== E
                         ? (0, r.jsx)("img", {
                               className: T.splashImage,
                               alt: p.name,
@@ -229,7 +229,7 @@ function F(e) {
                             participants: t.participants,
                             application: p,
                         }),
-                    a || j ? null : (0, r.jsx)("div", { className: T.clickShield }),
+                    a || Z ? null : (0, r.jsx)("div", { className: T.clickShield }),
                 ],
             }),
         })

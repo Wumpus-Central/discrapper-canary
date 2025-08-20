@@ -3,22 +3,22 @@ var r = n(951288);
 n(647438);
 var i = n(990547),
     l = n(481060),
-    s = n(213609),
-    o = n(388905),
+    o = n(213609),
+    s = n(388905),
     a = n(760213),
     c = n(388032),
     u = n(307847);
 function d(e) {
     let { onDismiss: t } = e;
     return (
-        (0, s.Z)({
+        (0, o.Z)({
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
-        (0, r.jsxs)(o.ZP, {
+        (0, r.jsxs)(s.ZP, {
             className: u.chooseAccountAuthBox,
             children: [
-                (0, r.jsx)(o.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
+                (0, r.jsx)(s.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
                 (0, r.jsx)(l.Text, {
                     className: u.chooseAccountHelpText,
                     variant: "text-md/normal",

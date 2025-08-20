@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -6,50 +6,49 @@ var r = n(951288),
     o = n(399606),
     s = n(481060),
     c = n(278323),
-    u = n(99690),
-    d = n(740265),
-    p = n(213609),
-    h = n(728345),
-    f = n(372900),
-    m = n(809244),
-    g = n(158776),
-    b = n(19780),
-    y = n(594174),
-    _ = n(877912),
-    C = n(762578),
-    x = n(981631),
-    v = n(658805),
-    O = n(388032),
-    j = n(405143);
-function E(e) {
-    let { activity: t, channel: n, userId: l } = e,
-        a = (0, h.IX)(t.application_id).data,
-        u = (0, _.Z)(l),
-        [p, f] = i.useState(!1),
-        [m, g] = i.useState(!1),
-        y = (0, o.e7)([b.Z], () => b.Z.getChannelId() !== n.id);
-    async function C() {
-        g(!0);
+    u = n(213609),
+    d = n(728345),
+    p = n(372900),
+    h = n(77498),
+    f = n(158776),
+    m = n(19780),
+    g = n(594174),
+    b = n(607361),
+    y = n(981631),
+    _ = n(658805),
+    C = n(388032),
+    x = n(405143);
+function v(e) {
+    let t,
+        { activity: n, channel: l, userId: a } = e,
+        u = (0, d.IX)(n.application_id).data,
+        [p, h] = i.useState(!1),
+        [f, g] = i.useState(0),
+        b = (0, o.e7)([m.Z], () => m.Z.getChannelId() !== l.id);
+    async function v() {
+        g(1);
         try {
             await c.Z.sendActivityInvite({
-                type: x.mFx.STREAM_REQUEST,
-                channelId: n.id,
-                activity: t,
-                content: "<@".concat(l, ">"),
+                type: y.mFx.STREAM_REQUEST,
+                channelId: l.id,
+                activity: n,
+                content: "<@".concat(a, ">"),
                 location: "request to stream hover",
-                targetUserId: l,
+                targetUserId: a,
             });
-        } finally {
-            g(!1);
+        } catch (e) {
+            g(0);
+            return;
         }
+        g(2);
     }
-    if (t.type === x.IIU.PLAYING) {
-        let e = null == a ? void 0 : a.getIconURL(46);
+    if ((b && (t = C.intl.string(_.default.qRXatr)), n.type === y.IIU.PLAYING)) {
+        let e = null == u ? void 0 : u.getIconURL(46);
         return (0, r.jsxs)("div", {
-            className: j.activityRow,
+            className: x.activityRow,
             children: [
                 (0, r.jsxs)("div", {
-                    className: j.activityRowContent,
+                    className: x.activityRowContent,
                     children: [
                         p || null == e
                             ? (0, r.jsx)(s.IMN, {
@@ -59,100 +58,90 @@ function E(e) {
                               })
                             : (0, r.jsx)("img", {
                                   src: e,
-                                  alt: t.name,
-                                  onError: () => f(!0),
+                                  alt: n.name,
+                                  onError: () => h(!0),
                               }),
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-tertiary",
-                                    children: (0, d.Z)(t),
+                                    children: C.intl.string(C.t.BMTj29),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-md/medium",
-                                    children: t.name,
+                                    children: n.name,
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, r.jsx)(s.zxk, {
-                    loading: m,
-                    disabled: u || y,
+                    loading: 1 === f,
+                    disabled: b || 2 === f,
                     fullWidth: !0,
                     size: "sm",
-                    text: u
-                        ? O.intl.string(v.default["8HU1Mz"])
-                        : y
-                          ? O.intl.string(v.default.qRXatr)
-                          : O.intl.string(v.default.DKHheX),
-                    onClick: C,
+                    text: 2 === f ? C.intl.string(_.default["8HU1Mz"]) : C.intl.string(_.default.DKHheX),
+                    onClick: v,
                 }),
+                null != t &&
+                    (0, r.jsx)(s.Text, {
+                        className: x.disabledReason,
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        children: t,
+                    }),
             ],
         });
     }
 }
-function S(e) {
+function O(e) {
     let { userId: t, channel: n } = e,
-        c = (0, o.e7)([y.default], () => y.default.getUser(t)),
-        d = (0, o.e7)([g.Z], () => g.Z.getActivities(t, n.getGuildId())),
-        h = (0, o.e7)([g.Z], () => g.Z.getStatus(t, n.getGuildId())),
-        b = (0, m.Z)(n, null != c ? c : null),
-        _ = (0, C.Z)(n.id),
-        v = null == c || !_,
-        O = i.useMemo(
+        s = (0, o.e7)([g.default], () => g.default.getUser(t)),
+        c = (0, o.e7)([f.Z], () => f.Z.getActivities(t, n.getGuildId())),
+        d = (0, b.Z)(t, n.id),
+        m = null == s || !d,
+        _ = i.useMemo(
             () =>
-                l.uniqBy(
-                    d.filter((e) => e.type === x.IIU.PLAYING),
-                    (e) => e.application_id,
+                l.uniqWith(
+                    c.filter((e) => e.type === y.IIU.PLAYING),
+                    (e, t) => {
+                        if (e.application_id === t.application_id) return !0;
+                        let n = h.Z.getGameByName(e.name),
+                            r = h.Z.getGameByName(t.name);
+                        return (null != n && n === r) || e.name === t.name;
+                    },
                 ),
-            [d],
+            [c],
         );
-    return ((0, p.Z)(
+    return ((0, u.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
             properties: {},
         },
-        { disableTrack: v },
+        { disableTrack: m },
     ),
-    v)
+    m)
         ? null
-        : (0, r.jsx)(f.Z.Provider, {
+        : (0, r.jsx)(p.Z.Provider, {
               value: n.guild_id,
-              children: (0, r.jsxs)("div", {
-                  className: j.root,
-                  children: [
-                      (0, r.jsxs)("div", {
-                          className: j.userHeader,
-                          children: [
-                              (0, r.jsx)(u.Z, {
-                                  user: c,
-                                  status: h,
-                                  size: s.EFr.SIZE_24,
-                              }),
-                              (0, r.jsx)(s.Text, {
-                                  variant: "text-md/medium",
-                                  children: b,
-                              }),
-                          ],
-                      }),
-                      (0, r.jsx)("div", {
-                          className: j.activityList,
-                          children: O.map((e) =>
-                              (0, r.jsx)(
-                                  E,
-                                  {
-                                      activity: e,
-                                      channel: n,
-                                      userId: t,
-                                  },
-                                  "".concat(e.session_id, "-").concat(e.application_id, "-").concat(e.name),
-                              ),
+              children: (0, r.jsx)("div", {
+                  className: x.root,
+                  children: (0, r.jsx)("div", {
+                      className: x.activityList,
+                      children: _.map((e) =>
+                          (0, r.jsx)(
+                              v,
+                              {
+                                  activity: e,
+                                  channel: n,
+                                  userId: t,
+                              },
+                              "".concat(e.session_id, "-").concat(e.application_id, "-").concat(e.name),
                           ),
-                      }),
-                  ],
+                      ),
+                  }),
               }),
           });
 }

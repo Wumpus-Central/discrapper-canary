@@ -1,4 +1,4 @@
-a.d(t, { Z: () => T }), a(388685), a(35282);
+a.d(t, { Z: () => E }), a(388685), a(35282);
 var n = a(951288),
     r = a(647438),
     l = a(120356),
@@ -85,7 +85,7 @@ function O() {
         ],
     });
 }
-function E() {
+function T() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -96,7 +96,7 @@ function E() {
         onClick: e,
     });
 }
-function T() {
+function E() {
     let e = (0, o.e7)([g.ZP], () => g.ZP.allByCategory(g.zU.MESSAGING), [], o.pF).map((e) => {
         let [t, a, { label: r }] = e;
         return (0, n.jsx)(
@@ -118,7 +118,7 @@ function T() {
             (0, n.jsx)("div", { className: C.divider }),
             (0, n.jsx)(O, {}),
             (0, n.jsx)("div", { className: C.divider }),
-            (0, n.jsx)(E, {}),
+            (0, n.jsx)(T, {}),
         ],
     });
 }

@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(687158),
     p = t(899007),
     b = t(648052),
-    g = t(867176),
-    x = t(280885),
+    x = t(867176),
+    g = t(280885),
     h = t(900927),
     j = t(678738),
     v = t(502762),
@@ -25,8 +25,8 @@ var r = t(951288),
     Z = t(671955),
     T = t(388032),
     A = t(673517),
-    C = t(54966),
-    N = t(602727);
+    N = t(54966),
+    C = t(602727);
 function E(e) {
     let {
             user: n,
@@ -55,7 +55,7 @@ function E(e) {
             roleId: w,
         }),
         W = o.useRef(null),
-        H = (0, i.Z)(W);
+        z = (0, i.Z)(W);
     return (0, r.jsx)(a.Gt, {
         value: F,
         children: (0, r.jsx)(f.Mt, {
@@ -88,7 +88,7 @@ function E(e) {
                                 (0, r.jsx)(I.Z, { children: (0, r.jsx)(y.Z, { user: n }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(g.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             user: n,
                                             displayProfile: k,
                                             themeType: Z.l.MODAL,
@@ -121,17 +121,17 @@ function E(e) {
                                             }),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: N.container,
+                                            className: C.container,
                                             children: [
                                                 (0, r.jsx)(l.njP, {
-                                                    className: N.tabBar,
+                                                    className: C.tabBar,
                                                     type: "top",
                                                     selectedItem: O.oh.BOT_INFO,
                                                     onItemSelect: P.dG4,
                                                     children: (0, r.jsx)(
                                                         l.njP.Item,
                                                         {
-                                                            className: N.tabBarItem,
+                                                            className: C.tabBarItem,
                                                             id: O.oh.BOT_INFO,
                                                             "aria-label": T.intl.string(T.t.jGoPJS),
                                                             children: (0, r.jsx)(l.Text, {
@@ -144,9 +144,9 @@ function E(e) {
                                                 }),
                                                 (0, r.jsxs)(l.zJl, {
                                                     fade: !0,
-                                                    className: C.scroller,
+                                                    className: N.scroller,
                                                     children: [
-                                                        (0, r.jsx)(x.Z, {
+                                                        (0, r.jsx)(g.Z, {
                                                             userId: n.id,
                                                             userBio: null == k ? void 0 : k.bio,
                                                             setLineClamp: !1,
@@ -171,7 +171,7 @@ function E(e) {
                     (null == k ? void 0 : k.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == k ? void 0 : k.profileEffectId,
-                            isHovering: H,
+                            isHovering: z,
                         }),
                 ],
             }),

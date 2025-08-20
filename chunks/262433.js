@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => E,
-    Z: () => v,
+    Z: () => b,
 }),
     n(539854);
 var r = n(392711),
@@ -34,24 +34,24 @@ function g(e, t) {
     var n;
     l()(null != (n = E.getState().particles[e.id]) ? n : {}).forEach(t);
 }
-function v(e) {
+function b(e) {
     var t, n, r;
     let {
         emojiHose: a,
-        context: v,
+        context: b,
         canvasWidth: S,
-        canvasHeight: h,
-        fallbackColor: b,
+        canvasHeight: v,
+        fallbackColor: h,
         outlineColorDark: O,
         outlineColorLight: y,
         streamerId: _,
-        deadDrawables: Z,
+        deadDrawables: j,
     } = e;
-    v.save();
-    let j = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
+    b.save();
+    let Z = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
         I = (0, d.np)(a.x, S),
-        w = (0, d.np)(a.y, h),
-        { outlineColor: P } = (0, d.bg)(a.userId, O, y, b);
+        w = (0, d.np)(a.y, v),
+        { outlineColor: P } = (0, d.bg)(a.userId, O, y, h);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
@@ -96,8 +96,8 @@ function v(e) {
                     });
                 });
         })(a, I, w),
-        (0, f.I)(v, I, w, P, p.q2),
-        (0, f.T)(v, I, w, a.userId),
+        (0, f.I)(b, I, w, P, p.q2),
+        (0, f.T)(b, I, w, a.userId),
         g(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -105,11 +105,11 @@ function v(e) {
                     l = n.x - (r / 2) * window.devicePixelRatio,
                     i = n.y - 1.2 * r * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, r / 2 + l, r / 2 + i, r, r);
-            })(v, j, e),
+            })(b, Z, e),
         ),
         a.lastUpdatedAt + p.FO < Date.now() && (0, u.ZZ)(_, a),
         a.state !== c.f.STOP ||
             Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 ||
-            Z.push(a),
-        v.restore();
+            j.push(a),
+        b.restore();
 }

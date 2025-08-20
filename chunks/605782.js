@@ -1,97 +1,97 @@
-n.d(t, { Z: () => d }), n(35282);
-var r = n(951288),
-    i = n(647438),
-    l = n(843611),
-    s = n(215569);
+r.d(t, { Z: () => d }), r(35282);
+var n = r(951288),
+    i = r(647438),
+    l = r(843611),
+    s = r(215569);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function a(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
-function c(e, t) {
+function a(e, t) {
     if (null == e) return {};
-    var n,
-        r,
+    var r,
+        n,
         i = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++)
-            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        for (n = 0; n < l.length; n++)
+            (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
 class u extends i.Component {
     render() {
         let e = this.props,
-            { children: t, location: n, history: u, staticContext: d, match: h } = e,
-            p = c(e, ["children", "location", "history", "staticContext", "match"]),
-            m = null,
-            g = null;
+            { children: t, location: r, history: u, staticContext: d, match: h } = e,
+            f = a(e, ["children", "location", "history", "staticContext", "match"]),
+            p = null,
+            x = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == m && i.isValidElement(e)) {
+                if (null == p && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: s } = t,
-                        h = c(t, ["component", "render"]),
-                        p = h.path || h.from;
-                    null != (m = null != p ? (0, l.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
-                        ((h = a(o({}, h), {
-                            key: p,
-                            location: n,
-                            match: m,
+                        { component: n, render: s } = t,
+                        h = a(t, ["component", "render"]),
+                        f = h.path || h.from;
+                    null != (p = null != f ? (0, l.LX)(r.pathname, c(o({}, h), { path: f })) : null) &&
+                        ((h = c(o({}, h), {
+                            key: f,
+                            location: r,
+                            match: p,
                             history: u,
                             staticContext: d,
                         })),
-                        null != r ? (g = i.createElement(r, h)) : null != s && (g = s(h)));
+                        null != n ? (x = i.createElement(n, h)) : null != s && (x = s(h)));
                 }
             }),
-            (0, r.jsx)(s.W, a(o({}, p), { children: g }))
+            (0, n.jsx)(s.W, c(o({}, f), { children: x }))
         );
     }
 }

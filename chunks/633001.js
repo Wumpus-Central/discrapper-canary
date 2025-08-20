@@ -22,14 +22,14 @@ var n = a(951288),
     C = a(610394),
     N = a(886118),
     O = a(301801),
-    E = a(352527),
-    T = a(355863),
+    T = a(352527),
+    E = a(355863),
     S = a(449224),
     P = a(808506),
     w = a(572004),
     I = a(55935),
-    k = a(70956),
-    R = a(136015),
+    R = a(70956),
+    k = a(136015),
     Z = a(145597),
     A = a(246992),
     D = a(257785),
@@ -101,7 +101,7 @@ let K = {
                             height: 100,
                         },
                     },
-                    T.Z.getWidgetDefaultSettings(F.Odu.CLICK_ZONE_DEBUG),
+                    E.Z.getWidgetDefaultSettings(F.Odu.CLICK_ZONE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
@@ -122,7 +122,7 @@ let K = {
                             height: "auto",
                         },
                     },
-                    T.Z.getWidgetDefaultSettings(F.Odu.PERFORMANCE_DEBUG),
+                    E.Z.getWidgetDefaultSettings(F.Odu.PERFORMANCE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
@@ -384,7 +384,7 @@ let J = r.memo(function (e) {
     });
 function $(e) {
     let t,
-        a = ((t = Object.values((0, d.Wu)([T.Z], () => T.Z.getWidgetsForLayout(B.$S)))), t.find((t) => t.type === e));
+        a = ((t = Object.values((0, d.Wu)([E.Z], () => E.Z.getWidgetsForLayout(B.$S)))), t.find((t) => t.type === e));
     return [
         a,
         () => {
@@ -579,7 +579,7 @@ let ea = r.memo(function (e) {
                                 H({}, e),
                             ),
                         );
-                    }, +k.Z.Millis.SECOND)),
+                    }, +R.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 [],
@@ -643,7 +643,7 @@ let ea = r.memo(function (e) {
         let a = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             r = (0, Z.getPID)(),
             l = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
-            [i, s] = (0, d.Wu)([E.Z], () => [E.Z.enabled, E.Z.keepOpen]),
+            [i, s] = (0, d.Wu)([T.Z], () => [T.Z.enabled, T.Z.keepOpen]),
             o = (0, d.e7)([P.default], () => P.default.getFocusedPID()),
             c = (0, d.e7)([P.default], () => P.default.isFocusedPidOutOfProcess());
         return (0, n.jsxs)("div", {
@@ -1215,7 +1215,7 @@ let ex = ["__webpack_require__", "fn"],
         throttleMs: 100,
     };
 function eb() {
-    let [e, t] = (0, d.e7)([C.ZP], () => C.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], R.Q),
+    let [e, t] = (0, d.e7)([C.ZP], () => C.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], k.Q),
         { ref: a, height: l } = (0, v.ZP)(),
         s = (0, d.e7)([C.ZP], () => C.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [o, c] = r.useState(s),
@@ -1237,11 +1237,11 @@ function eb() {
         [j, g] = r.useState(f),
         [_, y] = r.useState(null),
         N = r.useMemo(() => e.find((e) => e.key === _), [e, _]),
-        E = r.useCallback((e) => {
+        T = r.useCallback((e) => {
             g(e);
         }, []),
-        { renderSelectedTab: T } = (0, z.ZP)({ tabs: ep }, []);
-    (0, O.BO)(p, f, E, ev, [e]);
+        { renderSelectedTab: E } = (0, z.ZP)({ tabs: ep }, []);
+    (0, O.BO)(p, f, T, ev, [e]);
     let S = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
@@ -1255,7 +1255,7 @@ function eb() {
         };
     }, []);
     let [P, I] = r.useState(!1),
-        k = r.useRef(null),
+        R = r.useRef(null),
         Z = r.useCallback(() => {
             (0, w.JG)(JSON.stringify(e)), I(!0);
         }, [e]);
@@ -1263,11 +1263,11 @@ function eb() {
         r.useEffect(() => {
             if (P)
                 return (
-                    (k.current = setTimeout(() => {
+                    (R.current = setTimeout(() => {
                         I(!1);
                     }, 4000)),
                     () => {
-                        null != k.current && clearTimeout(k.current);
+                        null != R.current && clearTimeout(R.current);
                     }
                 );
         }, [P]),
@@ -1362,7 +1362,7 @@ function eb() {
                         className: i()(G.panelGroup, G.subPanel),
                         minHeight: 100,
                         initialHeight: null != l ? l / 3 : 300,
-                        children: T({
+                        children: E({
                             breadcrumb: N,
                             onClose: () => y(null),
                         }),

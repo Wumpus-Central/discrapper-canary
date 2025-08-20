@@ -1,32 +1,32 @@
-n.r(t), n.d(t, { default: () => d });
-var r = n(951288);
-n(647438);
-var o = n(765717),
-    i = n(384666),
-    l = n(69580),
-    c = n(397394),
-    s = n(449934),
-    a = n(721751),
-    u = n(981631);
+o.r(t), o.d(t, { default: () => d });
+var n = o(951288);
+o(647438);
+var s = o(765717),
+    a = o(384666),
+    r = o(69580),
+    i = o(397394),
+    l = o(449934),
+    c = o(721751),
+    u = o(981631);
 function d() {
-    return (0, r.jsxs)(a.Z, {
-        splash: (0, s.gK)(),
+    return (0, n.jsxs)(c.Z, {
+        splash: (0, l.gK)(),
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, n.jsx)(s.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZED,
-                component: c.Xg,
+                component: i.Xg,
             }),
-            (0, r.jsx)(o.Z, {
+            (0, n.jsx)(s.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZE,
-                component: l.OAuth2AuthorizePage,
+                component: r.OAuth2AuthorizePage,
             }),
-            (0, r.jsx)(o.Z, {
+            (0, n.jsx)(s.Z, {
                 path: u.Z5c.OAUTH2_ERROR,
-                component: c.j3,
+                component: i.j3,
             }),
-            (0, r.jsx)(o.Z, {
+            (0, n.jsx)(s.Z, {
                 path: [u.Z5c.OAUTH2_WHITELIST_ACCEPT, "/oauth2/whitelist/accept"],
-                component: i.Z,
+                component: a.Z,
             }),
         ],
     });

@@ -1,80 +1,84 @@
 n.d(t, {
-    D: () => y,
-    O4: () => v,
-    Tj: () => T,
-    YH: () => E,
-    bl: () => b,
-    j4: () => O,
-    ux: () => I,
+    D: () => I,
+    ES: () => N,
+    O4: () => S,
+    Tj: () => C,
+    YH: () => O,
+    bl: () => v,
+    j4: () => T,
+    ux: () => A,
 });
 var r = n(995638),
     i = n(843611),
     a = n(442837),
     o = n(230711),
-    s = n(455199),
-    l = n(2818),
-    c = n(768943),
-    u = n(175006),
-    d = n(592125),
-    f = n(430824);
+    s = n(81643),
+    l = n(974814),
+    c = n(622822),
+    u = n(455199),
+    d = n(2818),
+    f = n(768943),
+    _ = n(175006),
+    p = n(592125),
+    h = n(430824);
 n(375954);
-var _ = n(306680);
+var m = n(306680);
 n(594174), n(70956);
-var p = n(709054),
-    h = n(787879),
-    m = n(982183),
-    g = n(981631);
-function E(e) {
-    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = _.ZP, GuildStore_: a = f.Z } = e;
+var g = n(709054),
+    E = n(787879),
+    b = n(982183),
+    y = n(981631);
+function O(e) {
+    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = m.ZP, GuildStore_: a = h.Z } = e;
     if (!i.hasUnread(n)) return !1;
     let o = a.getGuild(r);
     if (null == o || null == o.joinedAt) return !1;
     let s = i.ackMessageId(n);
     if (null == s) {
         let e = a.getGuild(r);
-        null != e && null != e.joinedAt && (s = p.default.fromTimestamp(e.joinedAt.getTime()));
+        null != e && null != e.joinedAt && (s = g.default.fromTimestamp(e.joinedAt.getTime()));
     }
-    return p.default.compare(t, s) > 0;
+    return g.default.compare(t, s) > 0;
 }
-function b(e) {
+function v(e) {
     let { id: t } = e,
-        n = (0, r.default)(new Date(), p.default.extractTimestamp(t));
-    return 0 === n ? m.KZ.TODAY : 1 === n ? m.KZ.YESTERDAY : m.KZ.OLDER;
+        n = (0, r.default)(new Date(), g.default.extractTimestamp(t));
+    return 0 === n ? b.KZ.TODAY : 1 === n ? b.KZ.YESTERDAY : b.KZ.OLDER;
 }
-function y() {
+function I() {
     let { pathname: e } = (0, i.TH)();
-    return e.startsWith(g.Z5c.CHANNEL(g.STv));
+    return e.startsWith(y.Z5c.CHANNEL(y.STv));
 }
-function O(e) {
-    o.Z.open(g.oAB.NOTIFICATIONS, void 0, { analyticsLocations: e });
+function T(e) {
+    o.Z.open(y.oAB.NOTIFICATIONS, void 0, { analyticsLocations: e });
 }
-function v() {
-    let e = (0, a.Wu)([h.Z], () => {
+function S() {
+    let e = (0, a.Wu)([E.Z], () => {
             var e;
-            return null != (e = h.Z.getNotifyingChannelIds()) ? e : [];
+            return null != (e = E.Z.getNotifyingChannelIds()) ? e : [];
         }),
-        t = (0, a.Wu)([_.ZP], () => e.filter((e) => _.ZP.hasUnread(e)), [e]),
-        n = (0, a.Wu)([s.ZP], () => {
+        t = (0, a.Wu)([m.ZP], () => e.filter((e) => m.ZP.hasUnread(e)), [e]),
+        n = (0, a.Wu)([u.ZP], () => {
             var e;
-            return null != (e = s.ZP.getSettingsFilteredMentions()) ? e : [];
+            return null != (e = u.ZP.getSettingsFilteredMentions()) ? e : [];
         });
     return {
-        unreadRecentMentionsCount: (0, a.e7)([_.ZP, d.Z, f.Z], () => {
+        unreadRecentMentionsCount: (0, a.e7)([m.ZP, p.Z, h.Z], () => {
             var e, t;
             return null !=
                 (t =
                     null == n ||
                     null ==
                         (e = n.filter((e) => {
-                            let t = d.Z.getBasicChannel(e.channel_id);
+                            let t = p.Z.getBasicChannel(e.channel_id);
                             return (
                                 null != t &&
-                                E({
+                                O({
                                     messageId: e.id,
                                     channelId: e.channel_id,
                                     guildId: t.guild_id,
-                                    ReadStateStore_: _.ZP,
-                                    GuildStore_: f.Z,
+                                    ReadStateStore_: m.ZP,
+                                    GuildStore_: h.Z,
                                 })
                             );
                         }))
@@ -86,11 +90,18 @@ function v() {
         unreadChannelIds: t,
     };
 }
-function I() {
-    let { enabled: e, inInbox: t } = l.Z.useExperiment({ location: "NotificationsInboxUtils" }),
-        n = (0, a.e7)([c.Z], () => c.Z.getSavedMessageCount());
-    return e && t && (n > 0 || (0, u.Z)());
+function A() {
+    let { enabled: e, inInbox: t } = d.Z.useExperiment({ location: "NotificationsInboxUtils" }),
+        n = (0, a.e7)([f.Z], () => f.Z.getSavedMessageCount());
+    return e && t && (n > 0 || (0, _.Z)());
 }
-function T(e, t) {
-    return null != t && e.channelId === t.channelId && p.default.compare(e.id, t.messageId) >= 0;
+function C(e, t) {
+    return null != t && e.channelId === t.channelId && g.default.compare(e.id, t.messageId) >= 0;
+}
+function N(e) {
+    if ((0, l.H1)({ location: "NotificationsInboxStore" }) && (0, s.sf)()) {
+        let t = "nsfw" in e ? e : p.Z.getChannel(e.id);
+        return null != t && (0, c.aC)(t);
+    }
+    return !1;
 }

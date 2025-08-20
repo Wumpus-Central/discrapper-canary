@@ -23,13 +23,10 @@ function l(e, t) {
             return o.intl.string(o.t.Ckxb6u);
     }
 }
-function c(e, t, n, r, a) {
-    return e.author.id === r
-        ? o.intl.formatToPlainString(s.default["7pndSk"], { applicationName: t.name })
-        : o.intl.formatToPlainString(a ? s.default["o/An3t"] : s.default.s7bMT0, {
-              username: (0, i.oY)(n.guild_id, n.id, e.author),
-              applicationName: t.name,
-          });
+function c(e, t, n) {
+    return e.author.id === n
+        ? o.intl.string(s.default["8B3U5O"])
+        : o.intl.formatToPlainString(s.default["d/qbCw"], { username: (0, i.oY)(t.guild_id, t.id, e.author) });
 }
 function u(e, t, n, i, a) {
     if (e.author.id === i) {
@@ -68,7 +65,7 @@ function d(e, t, n, r) {
         case a.mFx.JOIN:
             return o.intl.string(o.t.x1UXGR);
         case a.mFx.STREAM_REQUEST:
-            return c(e, t, n, r, !0);
+            return c(e, n, r);
         case a.mFx.JOIN_REQUEST:
         default:
             return u(e, t, n, r, !0);

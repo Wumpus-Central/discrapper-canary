@@ -1,5 +1,5 @@
-a.d(t, { J: () => r });
-let n = (0, a(818083).B)({
+n.d(t, { J: () => i });
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-07_user_profile_holdout_h2",
     label: "User Profile Holdout H2 Experiment",
@@ -12,8 +12,8 @@ let n = (0, a(818083).B)({
         },
     ],
 });
-function r(e) {
-    let { location: t, autoTrackExposure: a = !0 } = e,
-        { isInHoldout: r } = n.useExperiment({ location: t }, { autoTrackExposure: a });
-    return r;
+function i(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { isInHoldout: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }

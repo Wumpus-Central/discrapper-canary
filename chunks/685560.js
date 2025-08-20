@@ -51,7 +51,7 @@ let y = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function E(e) {
+function T(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -67,7 +67,7 @@ function E(e) {
             return "ADOPT_CLAN_IDENTITY_NOTICE";
     }
 }
-async function T(e, t, a) {
+async function E(e, t, a) {
     await Promise.all(
         t.map((e) =>
             s.tn.patch({
@@ -162,14 +162,14 @@ function P() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        T(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        E(t, s.slice(Math.floor(s.length / 2)), !1);
                                     },
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        T(t, s, !0);
+                                        E(t, s, !0);
                                     },
                                 }),
                             ],
@@ -219,7 +219,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: E(e),
+                                        children: T(e),
                                     }),
                                 },
                                 e,
@@ -247,7 +247,7 @@ function P() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: E(e),
+                                        children: T(e),
                                     }),
                                 },
                                 e,

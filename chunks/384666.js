@@ -1,43 +1,43 @@
-n.d(t, { Z: () => d }), n(388685), n(35282);
-var r = n(951288),
-    o = n(647438),
-    i = n(593473),
-    l = n(843611),
-    c = n(489863),
-    s = n(787025),
-    a = n(397394),
-    u = n(388032);
+o.d(t, { Z: () => d }), o(388685), o(35282);
+var n = o(951288),
+    s = o(647438),
+    a = o(593473),
+    r = o(843611),
+    i = o(489863),
+    l = o(787025),
+    c = o(397394),
+    u = o(388032);
 function d() {
     let e,
-        t = (0, l.TH)(),
-        [n, d] = o.useState(!1),
-        [h, p] = o.useState(!1);
+        t = (0, r.TH)(),
+        [o, d] = s.useState(!1),
+        [p, _] = s.useState(!1);
     return (
-        o.useEffect(() => {
+        s.useEffect(() => {
             !(async function () {
-                let e = (0, i.parse)(t.search);
+                let e = (0, a.parse)(t.search);
                 try {
-                    var n;
-                    await (0, c.g)(null != (n = e.token) ? n : ""), d(!0);
+                    var o;
+                    await (0, i.g)(null != (o = e.token) ? o : ""), d(!0);
                 } catch (e) {
-                    p(!0);
+                    _(!0);
                 }
             })();
         }, [t.search]),
-        (e = n
-            ? (0, r.jsx)(a.c7, {
+        (e = o
+            ? (0, n.jsx)(c.c7, {
                   message: u.intl.string(u.t.Tqu3OT),
                   showsCloseWindowText: !0,
               })
-            : h
-              ? (0, r.jsx)(a.Lk, {
+            : p
+              ? (0, n.jsx)(c.Lk, {
                     message: u.intl.string(u.t.J8LsCg),
                     showsCloseWindowText: !0,
                 })
-              : (0, r.jsx)(a.ZP, {
+              : (0, n.jsx)(c.ZP, {
                     message: u.intl.string(u.t.BAcf6e),
                     spinner: !0,
                 })),
-        (0, r.jsx)(s.G, { children: e })
+        (0, n.jsx)(l.G, { children: e })
     );
 }

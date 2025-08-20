@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }),
+n.d(t, { Z: () => Z }),
     n(388685),
     n(410992),
     n(227481),
@@ -26,15 +26,15 @@ var r,
     m = n(651941),
     E = n(981631);
 let g = new Map(),
-    v = new Map(),
+    b = new Map(),
     S = !1,
-    h = null;
-function b() {
+    v = null;
+function h() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
             r = !0 === g.get(n),
-            l = v.get(t) !== r;
-        return v.set(t, r), !!l || e;
+            l = b.get(t) !== r;
+        return b.set(t, r), !!l || e;
     }, !1);
 }
 function O() {
@@ -63,14 +63,14 @@ function y(e) {
                 a = i !== g.get(e);
             return g.set(e, i), a;
         })(t),
-        r = b(),
+        r = h(),
         l = O();
     return n || r || l;
 }
 function _() {
-    g.clear(), v.clear(), (S = !1);
+    g.clear(), b.clear(), (S = !1);
 }
-class Z extends (r = i.ZP.Store) {
+class j extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, m.Z, c.Z, d.Z);
     }
@@ -78,26 +78,26 @@ class Z extends (r = i.ZP.Store) {
         return S;
     }
     isStreamVerified(e) {
-        return v.get(e);
+        return b.get(e);
     }
     isUserVerified(e) {
         return g.get(e);
     }
 }
-(l = "displayName") in Z
-    ? Object.defineProperty(Z, l, {
+(l = "displayName") in j
+    ? Object.defineProperty(j, l, {
           value: "SecureFramesVerifiedStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (Z[l] = "SecureFramesVerifiedStore");
-let j = new Z(o.Z, {
+    : (j[l] = "SecureFramesVerifiedStore");
+let Z = new j(o.Z, {
     CONNECTION_OPEN: _,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (t === h) return !1;
-        (h = t), _();
+        if (t === v) return !1;
+        (v = t), _();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: r } = e;
@@ -105,7 +105,7 @@ let j = new Z(o.Z, {
         switch (r) {
             case a.Yn.STREAM:
                 if (null == t) return !1;
-                return v.delete(t), O();
+                return b.delete(t), O();
             case a.Yn.DEFAULT:
                 _();
         }
@@ -114,7 +114,7 @@ let j = new Z(o.Z, {
         let { userIds: t } = e,
             n = s.default.getId(),
             r = t.reduce((e, t) => (n === t ? e : !!y({ userId: t }) || e), !1),
-            l = b(),
+            l = h(),
             i = O();
         return r || l || i;
     },

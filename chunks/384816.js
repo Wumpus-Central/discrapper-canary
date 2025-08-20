@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(250822),
     p = t(771362),
     b = t(280885),
-    g = t(819602),
-    x = t(78806),
+    x = t(819602),
+    g = t(78806),
     h = t(900927),
     j = t(678738),
     v = t(179828),
@@ -25,8 +25,8 @@ function O(e) {
     let { user: n, currentUser: t, displayProfile: O, subsection: P, onClose: Z } = e,
         { trackUserProfileAction: T } = (0, f.KZ)(),
         A = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        C = (0, c.Y)({ userId: n.id }),
-        N = (0, o.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        N = (0, c.Y)({ userId: n.id }),
+        C = (0, o.e7)([u.Z], () => u.Z.hidePersonalInformation),
         E = (0, o.e7)([s.default], () => s.default.locale),
         S = (0, p.Z)(n.id),
         w = (0, m.Z)(n.id);
@@ -36,7 +36,7 @@ function O(e) {
         children: [
             (null == O ? void 0 : O.bio) != null &&
                 (null == O ? void 0 : O.bio) !== "" &&
-                !N &&
+                !C &&
                 (0, r.jsx)(b.Z, {
                     userBio: O.bio,
                     setLineClamp: !1,
@@ -58,10 +58,10 @@ function O(e) {
                     headingColor: "header-secondary",
                     children: (0, r.jsx)(a.n, { userId: n.id }),
                 }),
-            C.length > 0 &&
+            N.length > 0 &&
                 (0, r.jsx)(j.Z, {
                     heading: y.intl.string(y.t["Uv/eT0"]),
-                    children: (0, r.jsx)(x.Z, { applicationIds: C }),
+                    children: (0, r.jsx)(g.Z, { applicationIds: N }),
                 }),
             (0, r.jsx)(j.Z, {
                 heading: y.intl.string(y.t.a6XYDw),
@@ -75,7 +75,7 @@ function O(e) {
                 (0, r.jsx)(j.Z, {
                     heading: y.intl.string(y.t["3fe7U1"]),
                     scrollIntoView: P === _.Tb.CONNECTIONS,
-                    children: (0, r.jsx)(g.ZP, {
+                    children: (0, r.jsx)(x.ZP, {
                         connectedAccounts: S,
                         className: I.connections,
                         userId: n.id,
@@ -87,7 +87,7 @@ function O(e) {
                     heading: y.intl.string(y.t.PHjkRE),
                     children: w.map((e) =>
                         (0, r.jsx)(
-                            g.tH,
+                            x.tH,
                             {
                                 className: I.appsConnections,
                                 applicationRoleConnection: e,

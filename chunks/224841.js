@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388905),
-    s = n(63063),
-    o = n(981631),
+    o = n(63063),
+    s = n(981631),
     a = n(388032),
     c = n(820796);
 let u = () =>
@@ -23,7 +23,7 @@ let u = () =>
                 (0, r.jsx)(i.zxk, {
                     icon: i.Gr1,
                     text: a.intl.string(a.t.hvVgAQ),
-                    onClick: () => window.open(s.Z.getArticleURL(o.BhN.AGE_GATE), "_blank"),
+                    onClick: () => window.open(o.Z.getArticleURL(s.BhN.AGE_GATE), "_blank"),
                     iconPosition: "end",
                 }),
             ],

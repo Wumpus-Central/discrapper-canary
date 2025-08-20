@@ -3,14 +3,14 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(686546),
-    s = n(565138),
-    o = n(411198),
+    o = n(565138),
+    s = n(411198),
     a = n(388032),
     c = n(407749);
 let u = (e) => {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
-    let u = o.Qs(t),
+    let u = s.Qs(t),
         { name: d, description: h } = u;
     return (0, r.jsxs)("div", {
         children: [
@@ -27,9 +27,9 @@ let u = (e) => {
                         mask: l.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, r.jsx)(s.Z, {
+                        children: (0, r.jsx)(o.Z, {
                             guild: u,
-                            size: s.Z.Sizes.MEDIUM,
+                            size: o.Z.Sizes.MEDIUM,
                             active: !0,
                         }),
                     }),

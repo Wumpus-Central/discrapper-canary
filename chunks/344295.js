@@ -2,26 +2,26 @@ n.d(t, { Z: () => W }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    o = n(533800),
+    o = n.n(l),
+    s = n(533800),
     a = n(756647),
     c = n(442837),
     u = n(298444),
     d = n(447543),
     h = n(881052),
-    p = n(899370),
-    m = n(267394),
+    f = n(899370),
+    p = n(267394),
     g = n(388905),
-    f = n(639946),
+    m = n(639946),
     _ = n(792766),
     x = n(362762),
-    E = n(978684),
-    v = n(264229),
-    j = n(929809),
-    b = n(703656),
+    v = n(978684),
+    E = n(264229),
+    b = n(929809),
+    j = n(703656),
     I = n(108427),
-    O = n(314897),
-    N = n(896797),
+    N = n(314897),
+    O = n(896797),
     y = n(701190),
     S = n(626135),
     C = n(630388),
@@ -56,7 +56,7 @@ let G = "Accept Invite Page",
     V = "login";
 async function K(e) {
     let { invite: t } = await d.ZP.resolveInvite(e, G);
-    null != t && (0, m.A)(t);
+    null != t && (0, p.A)(t);
 }
 class H extends i.PureComponent {
     componentDidMount() {
@@ -67,8 +67,8 @@ class H extends i.PureComponent {
         }
         if (!t && e) {
             let e = this.getInviteKey(),
-                { baseCode: t } = (0, v.fU)(e);
-            (0, b.dL)(L.Z5c.INVITE_LOGIN(t));
+                { baseCode: t } = (0, E.fU)(e);
+            (0, j.dL)(L.Z5c.INVITE_LOGIN(t));
         }
     }
     componentDidUpdate(e) {
@@ -77,7 +77,7 @@ class H extends i.PureComponent {
         if (l !== this.getInviteKey(e)) K(l);
         else if (t.state === L.r2o.APP_NOT_OPENED) this.handleContinue();
         else if (this.getMode() === V && r !== e.authenticated && r) {
-            let e = O.default.getFingerprint();
+            let e = N.default.getFingerprint();
             if (null != e) {
                 let t = (0, a.s)(e);
                 this.track(L.rMx.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
@@ -95,13 +95,13 @@ class H extends i.PureComponent {
         ) {
             let { channel: e } = t;
             if (null != e)
-                if (((0, j.c)(k.M5.INVITE_UNCLAIMED), null != t.guild)) {
-                    var s, c, u;
-                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, o.$.IS_APPLICATION_BYPASS),
+                if (((0, b.c)(k.M5.INVITE_UNCLAIMED), null != t.guild)) {
+                    var o, c, u;
+                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, s.$.IS_APPLICATION_BYPASS),
                         n =
-                            (null == (s = t.guild.features)
+                            (null == (o = t.guild.features)
                                 ? void 0
-                                : s.includes(L.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
+                                : o.includes(L.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
                             (null == (c = t.guild.features)
                                 ? void 0
                                 : c.includes(L.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL));
@@ -124,8 +124,8 @@ class H extends i.PureComponent {
     track(e, t, n) {
         let { invite: r } = this.props,
             i = this.getInviteKey(),
-            l = (0, v.jX)(i),
-            s = t
+            l = (0, E.jX)(i),
+            o = t
                 ? {
                       guild_id: null != r.guild ? r.guild.id : null,
                       channel_id: null != r.channel ? r.channel.id : null,
@@ -150,7 +150,7 @@ class H extends i.PureComponent {
                         });
                 }
                 return e;
-            })({}, s, n),
+            })({}, o, n),
         );
     }
     renderSpinner(e) {
@@ -167,7 +167,7 @@ class H extends i.PureComponent {
                     className: F.marginBottom8,
                 }),
                 (0, r.jsx)(g.Dx, {
-                    className: s()(F.marginTop8, F.marginBottom8),
+                    className: o()(F.marginTop8, F.marginBottom8),
                     children: B.intl.string(B.t.kux01N),
                 }),
                 (0, r.jsx)(g.DK, { children: e ? B.intl.string(B.t["5AkWAQ"]) : B.intl.string(B.t["+qUJAg"]) }),
@@ -218,7 +218,7 @@ class H extends i.PureComponent {
     renderAuthenticatedHeader() {
         let { invite: e } = this.props;
         return null != e.guild_scheduled_event
-            ? (0, r.jsx)(f.r, {
+            ? (0, r.jsx)(m.r, {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
@@ -272,9 +272,9 @@ class H extends i.PureComponent {
             case L.r2o.APP_OPENING:
                 return this.renderSpinner(B.intl.string(B.t["Z+hCVV"]));
             case L.r2o.RESOLVED:
-                var s;
-                if (n && (0, C.yE)(null != (s = e.flags) ? s : 0, o.$.IS_GUEST_INVITE))
-                    return d.ZP.openApp(e.code), u.x.set(E.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
+                var o;
+                if (n && (0, C.yE)(null != (o = e.flags) ? o : 0, s.$.IS_GUEST_INVITE))
+                    return d.ZP.openApp(e.code), u.x.set(v.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
                 if (n || !M.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === V)
                     return (0, r.jsx)(R.Z, {
@@ -325,7 +325,7 @@ class H extends i.PureComponent {
                     context: this.getAcceptInviteContext(G),
                     skipOnboarding: !0,
                     callback: (t) => {
-                        (0, m.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
+                        (0, p.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
                     },
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
@@ -364,14 +364,14 @@ class H extends i.PureComponent {
             });
     }
 }
-let W = c.ZP.connectStores([y.Z, N.Z, O.default, x.Z, p.Z], (e) => {
+let W = c.ZP.connectStores([y.Z, O.Z, N.default, x.Z, f.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
         invite: null != (t = y.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
-        authenticated: O.default.isAuthenticated(),
-        defaultRoute: N.Z.defaultRoute,
-        isUnderage: p.Z.isUnderageAnonymous(),
+        authenticated: N.default.isAuthenticated(),
+        defaultRoute: O.Z.defaultRoute,
+        isUnderage: f.Z.isUnderageAnonymous(),
     };
 })(H);

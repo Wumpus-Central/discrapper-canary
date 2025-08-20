@@ -55,7 +55,7 @@ function F() {
     let e = b.ZP.getFlattenedGuildIds().flatMap((e) => m.ZP.getSelectableChannelIds(e)),
         t = u.Z.getAllActiveJoinedThreads(),
         n = (e) =>
-            !!C.TPd.GUILD_TEXTUAL.has(e.type) &&
+            !(!C.TPd.GUILD_TEXTUAL.has(e.type) || (0, T.ES)(e)) &&
             ((0, _.Q5)(e.type) ? (0, f.J)(e) === N.iN.ALL_MESSAGES && !d.Z.isMuted(e.id) : y.ZP.allowAllMessages(e)),
         r = [];
     for (let t of e) {
@@ -201,8 +201,9 @@ function J(e) {
         (null == (t = a.author) ? void 0 : t.id) === (null == (n = O.default.getCurrentUser()) ? void 0 : n.id)
     )
         return !1;
-    let o = w.includes(i),
-        s = Q(a),
+    let o = w.includes(i);
+    if ((0, T.ES)({ id: i })) return !1;
+    let s = Q(a),
         l = s.mentioned;
     if (!o && !l) {
         if (!D.includes(i)) return !1;

@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(313201),
     p = t(368326),
     b = t(429467),
-    g = t(320582),
-    x = t(246016),
+    x = t(320582),
+    g = t(246016),
     h = t(680295),
     j = t(189156),
     v = t(699516),
@@ -25,8 +25,8 @@ var r = t(951288),
     Z = t(221292),
     T = t(687158),
     A = t(771362),
-    C = t(510659),
-    N = t(113557),
+    N = t(510659),
+    C = t(113557),
     E = t(648052),
     S = t(867176),
     w = t(280885),
@@ -42,9 +42,9 @@ var r = t(951288),
     F = t(4517),
     Y = t(179828),
     W = t(993160),
-    H = t(574887),
-    z = t(693408),
-    K = t(661462),
+    z = t(574887),
+    K = t(693408),
+    H = t(661462),
     J = t(76076),
     X = t(872269),
     q = t(768111),
@@ -70,10 +70,10 @@ function er(e) {
             openedAt: em,
             onClose: ep,
             showGuildProfile: eb = !0,
-            sourceAnalyticsLocations: eg = [],
-            disableActionsForPreview: ex = !1,
+            sourceAnalyticsLocations: ex = [],
+            disableActionsForPreview: eg = !1,
         } = e,
-        { analyticsLocations: eh } = (0, f.ZP)([...eg, u.Z.USER_PROFILE_MODAL_V2]),
+        { analyticsLocations: eh } = (0, f.ZP)([...ex, u.Z.USER_PROFILE_MODAL_V2]),
         ej = (0, P.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
@@ -87,7 +87,7 @@ function er(e) {
         ev = o.useRef(null),
         e_ = (0, s.Z)(ev),
         [ey, eI] = o.useState(!1),
-        eO = (0, C.$m)(),
+        eO = (0, N.$m)(),
         eP = (0, c.q_F)({
             opacity: +(null != eO.interactionType),
             config: { duration: 150 },
@@ -96,7 +96,7 @@ function er(e) {
     (0, d.$)(eZ);
     let eT = (0, T.ZP)(t.id, eb ? eo : void 0),
         eA = I.ZP.useName(null == eT ? void 0 : eT.guildId, el, t),
-        { relationshipType: eC, originApplicationId: eN } = (0, i.cj)([v.Z], () => ({
+        { relationshipType: eN, originApplicationId: eC } = (0, i.cj)([v.Z], () => ({
             relationshipType: v.Z.getRelationshipType(t.id),
             originApplicationId: v.Z.getOriginApplicationId(t.id),
         })),
@@ -114,8 +114,8 @@ function er(e) {
             user: t,
             currentUser: er,
         }),
-        eL = (0, x.Y)({ userId: t.id }),
-        eR = (0, g.vh)(t.id),
+        eL = (0, g.Y)({ userId: t.id }),
+        eR = (0, x.vh)(t.id),
         eU = (0, A.Z)(t.id),
         eM = (0, m.Dt)(),
         ek = en.intl.format(en.t.KRe1Fh, { name: eA });
@@ -142,7 +142,7 @@ function er(e) {
                 fetchStartedAt: null == eT ? void 0 : eT.fetchStartedAt,
                 fetchEndedAt: null == eT ? void 0 : eT.fetchEndedAt,
                 isLoaded: null == eT ? void 0 : eT.isLoaded,
-                children: (0, r.jsx)(C.NJ, {
+                children: (0, r.jsx)(N.NJ, {
                     value: eO,
                     children: (0, r.jsx)(c.UkV, {
                         isShaking: ey,
@@ -155,7 +155,7 @@ function er(e) {
                             "aria-labelledby": eM,
                             parentComponent: "UserProfileModalV2",
                             children: [
-                                ex
+                                eg
                                     ? (0, r.jsxs)("div", {
                                           className: et.previewBar,
                                           children: [
@@ -192,7 +192,7 @@ function er(e) {
                                       }),
                                 (0, r.jsx)(c.y5t, {
                                     children: (0, r.jsxs)(G.Z, {
-                                        className: ex ? et.disabled : void 0,
+                                        className: eg ? et.disabled : void 0,
                                         user: t,
                                         displayProfile: eT,
                                         themeType: ee.l.MODAL_V2,
@@ -228,7 +228,7 @@ function er(e) {
                                                                 onClose: ep,
                                                                 className: et.interactionToast,
                                                             }),
-                                                            (0, r.jsx)(N.Z, {
+                                                            (0, r.jsx)(C.Z, {
                                                                 location: "UserProfileModalV2",
                                                                 user: t,
                                                                 displayProfile: eT,
@@ -244,7 +244,7 @@ function er(e) {
                                                                 themeType: ee.l.MODAL_V2,
                                                                 hasEntered: eu === c.Dvm.ENTERED,
                                                                 prompt: ew && t.id === er.id ? eB : null,
-                                                                disableToolbar: ex,
+                                                                disableToolbar: eg,
                                                             }),
                                                         ],
                                                     }),
@@ -272,12 +272,12 @@ function er(e) {
                                                                     onClose: ep,
                                                                 }),
                                                             }),
-                                                            eC === $.OGo.PENDING_INCOMING &&
+                                                            eN === $.OGo.PENDING_INCOMING &&
                                                                 (0, r.jsx)(G.Z.Overlay, {
                                                                     className: et.profileOverlay,
                                                                     children: (0, r.jsx)(R.Z, {
                                                                         user: t,
-                                                                        applicationId: eN,
+                                                                        applicationId: eC,
                                                                         guildId:
                                                                             null !=
                                                                             (n = null == eT ? void 0 : eT.guildId)
@@ -313,7 +313,7 @@ function er(e) {
                                                             t.isProvisional &&
                                                                 (0, r.jsx)(G.Z.Overlay, {
                                                                     className: et.profileOverlay,
-                                                                    children: (0, r.jsx)(z.Z, {
+                                                                    children: (0, r.jsx)(K.Z, {
                                                                         heading: en.intl.string(en.t.Iyka0d),
                                                                         headingVariant: "text-md/semibold",
                                                                         headingIcon: (0, r.jsx)(c.Mgn, {
@@ -344,7 +344,7 @@ function er(e) {
                                                                     guildId: eo,
                                                                     channelId: el,
                                                                     displayProfile: eT,
-                                                                    relationshipType: eC,
+                                                                    relationshipType: eN,
                                                                     onClose: ep,
                                                                 }),
                                                             }),
@@ -356,11 +356,11 @@ function er(e) {
                                                                     setLineClamp: !1,
                                                                 }),
                                                             eL.length > 0 &&
-                                                                (0, r.jsx)(z.Z, {
+                                                                (0, r.jsx)(K.Z, {
                                                                     heading: en.intl.string(en.t["Uv/eT0"]),
                                                                     children: (0, r.jsx)(L.Z, { applicationIds: eL }),
                                                                 }),
-                                                            (0, r.jsx)(z.Z, {
+                                                            (0, r.jsx)(K.Z, {
                                                                 heading: en.intl.string(en.t.a6XYDw),
                                                                 children: (0, r.jsx)(M.Z, {
                                                                     userId: t.id,
@@ -379,16 +379,16 @@ function er(e) {
                                                                     scrollIntoView: ed === Q.Tb.ROLES,
                                                                 }),
                                                             eU.length > 0 &&
-                                                                (0, r.jsx)(z.Z, {
+                                                                (0, r.jsx)(K.Z, {
                                                                     heading: en.intl.string(en.t["3fe7U1"]),
                                                                     scrollIntoView: ed === Q.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(H.Z, {
+                                                                    children: (0, r.jsx)(z.Z, {
                                                                         connections: eU,
                                                                         userId: t.id,
                                                                         className: et.profileAppConnections,
                                                                     }),
                                                                 }),
-                                                            (0, r.jsx)(z.Z, {
+                                                            (0, r.jsx)(K.Z, {
                                                                 heading: en.intl.string(en.t["mQKv+v"]),
                                                                 scrollIntoView: ed === Q.Tb.NOTE,
                                                                 children: (0, r.jsx)(a.Z, {
@@ -454,7 +454,7 @@ function er(e) {
                                                         }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(K.Z, {
+                                            (0, r.jsx)(H.Z, {
                                                 user: t,
                                                 currentUser: er,
                                                 displayProfile: eT,

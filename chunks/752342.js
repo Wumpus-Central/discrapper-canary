@@ -13,8 +13,8 @@ var o = t(481060),
     m = t(648052),
     p = t(867176),
     b = t(681837),
-    g = t(502762),
-    x = t(530),
+    x = t(502762),
+    g = t(530),
     h = t(871604),
     j = t(952124),
     v = t(53558),
@@ -26,8 +26,8 @@ var o = t(481060),
     Z = t(228168),
     T = t(981631),
     A = t(671955),
-    C = t(388032),
-    N = t(673517);
+    N = t(388032),
+    C = t(673517);
 function E(e) {
     let {
             user: n,
@@ -48,8 +48,8 @@ function E(e) {
         F = (0, u.ZP)(n.id, V),
         Y = s.ZP.getName(V, S, n),
         W = (0, a.Dt)(),
-        { analyticsLocations: H } = (0, c.ZP)([...G, i.Z.USER_PROFILE_MODAL]),
-        z = (0, d.ZB)({
+        { analyticsLocations: z } = (0, c.ZP)([...G, i.Z.USER_PROFILE_MODAL]),
+        K = (0, d.ZB)({
             layout: "MODAL",
             userId: n.id,
             sourceSessionId: D,
@@ -58,11 +58,11 @@ function E(e) {
             messageId: w,
             roleId: B,
         }),
-        K = (0, P.Z)(n);
+        H = (0, P.Z)(n);
     return (0, r.jsx)(c.Gt, {
-        value: H,
+        value: z,
         children: (0, r.jsx)(d.Mt, {
-            value: z,
+            value: K,
             openedAt: M,
             fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
             fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
@@ -70,7 +70,7 @@ function E(e) {
             children: (0, r.jsx)(o.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: U,
-                className: N.root,
+                className: C.root,
                 hideShadow: !0,
                 "aria-labelledby": W,
                 parentComponent: "BotUserProfileModal",
@@ -78,10 +78,10 @@ function E(e) {
                     component: (0, r.jsx)(o.nn4, {
                         children: (0, r.jsx)(o.H, {
                             id: W,
-                            children: C.intl.format(C.t.KRe1Fh, { name: Y }),
+                            children: N.intl.format(N.t.KRe1Fh, { name: Y }),
                         }),
                     }),
-                    children: (0, r.jsxs)(g.Z, {
+                    children: (0, r.jsxs)(x.Z, {
                         user: n,
                         displayProfile: F,
                         themeType: A.l.MODAL,
@@ -101,7 +101,7 @@ function E(e) {
                                         themeType: A.l.MODAL,
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: N.headerInner,
+                                        className: C.headerInner,
                                         children: [
                                             (0, r.jsx)(f.Z, {
                                                 user: n,
@@ -119,19 +119,19 @@ function E(e) {
                                                 disableToolbar: !0,
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: N.headerButtons,
+                                                className: C.headerButtons,
                                                 children: [
                                                     (0, r.jsx)(y.Z, {
                                                         type: "text",
                                                         userId: n.id,
                                                         onClose: l.Z.popAll,
-                                                        className: N.messageTextButton,
+                                                        className: C.messageTextButton,
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         type: "icon",
                                                         userId: n.id,
                                                         onClose: l.Z.popAll,
-                                                        tooltipContainerClassName: N.messageIconButton,
+                                                        tooltipContainerClassName: C.messageIconButton,
                                                     }),
                                                     (0, r.jsx)(v.Z, {
                                                         user: n,
@@ -145,10 +145,10 @@ function E(e) {
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.body,
+                                className: C.body,
                                 children: [
-                                    (0, r.jsx)(x.Z, {
-                                        className: N.username,
+                                    (0, r.jsx)(g.Z, {
+                                        className: C.username,
                                         user: n,
                                         nickname: Y,
                                         pronouns: null == F ? void 0 : F.pronouns,
@@ -168,7 +168,7 @@ function E(e) {
                                         currentUser: t,
                                         displayProfile: F,
                                         guildId: V,
-                                        items: K,
+                                        items: H,
                                         initialSection: null != L ? L : Z.oh.BOT_INFO,
                                         initialSubsection: R,
                                         onClose: k,

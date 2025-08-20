@@ -1,6 +1,6 @@
 a.d(t, {
-    Z: () => T,
-    q: () => E,
+    Z: () => E,
+    q: () => T,
 }),
     a(804061),
     a(704826),
@@ -95,7 +95,7 @@ function N(e) {
 function O(e) {
     return e.replaceAll(/_|-/g, ".").toLowerCase();
 }
-function E(e, t) {
+function T(e, t) {
     let a = new Blob([t], { type: "application/json" }),
         n = URL.createObjectURL(a),
         r = document.createElement("a"),
@@ -110,10 +110,10 @@ function E(e, t) {
             URL.revokeObjectURL(n);
     });
 }
-function T() {
+function E() {
     let e = (0, h.Fg)(),
         [t, a, l, s, d, u] = (0, j.zn)(),
-        { semanticColorOverrides: f, rawColorOverrides: C, tab: O, scales: T } = t,
+        { semanticColorOverrides: f, rawColorOverrides: C, tab: O, scales: E } = t,
         P = r.useMemo(() => {
             let t = Object.entries(f).map((t) => {
                     let [a, n] = t,
@@ -158,7 +158,7 @@ function T() {
                         "--".concat(l, ": hsl(var(--").concat(l, "-hsl)) !important;"),
                     ];
                 }),
-                n = T.reduce((e, t) => {
+                n = E.reduce((e, t) => {
                     let { name: a } = t,
                         n = (0, j.XM)(t),
                         r = (0, j.W6)(n, a);
@@ -177,7 +177,7 @@ function T() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(a.join("\n"), "\n      }\n    ");
-        }, [C, T, f, e]);
+        }, [C, E, f, e]);
     return (0, n.jsxs)("div", {
         className: g.panel,
         children: [
@@ -267,7 +267,7 @@ function T() {
                                 color: m.zx.Colors.TRANSPARENT,
                                 look: m.zx.Looks.BLANK,
                                 onClick: () => {
-                                    E("color-overrides", JSON.stringify(_({}, t), null, 2));
+                                    T("color-overrides", JSON.stringify(_({}, t), null, 2));
                                 },
                                 children: (0, n.jsx)(x._8t, {}),
                             }),

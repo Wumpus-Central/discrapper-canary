@@ -1,7 +1,7 @@
-a.d(t, { k: () => i });
-var n = a(818083),
-    r = a(438379);
-let l = (0, n.B)({
+n.d(t, { k: () => o });
+var r = n(818083),
+    i = n(438379);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-07_user_profile_game_widgets",
     label: "User Profile Game Widgets",
@@ -14,18 +14,18 @@ let l = (0, n.B)({
         },
     ],
 });
-function i(e) {
-    let { location: t, autoTrackExposure: a = !0 } = e,
-        n = (0, r.J)({
+function o(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.J)({
             location: t,
-            autoTrackExposure: a,
+            autoTrackExposure: n,
         }),
-        { enabled: i } = l.useExperiment(
+        { enabled: o } = a.useExperiment(
             { location: t },
             {
-                autoTrackExposure: a,
-                disable: n,
+                autoTrackExposure: n,
+                disable: r,
             },
         );
-    return i;
+    return o;
 }

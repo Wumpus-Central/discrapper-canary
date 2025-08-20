@@ -1,78 +1,84 @@
-let r;
-n.d(t, { Z: () => O }), n(388685), n(35282);
-var i = n(951288),
-    l = n(647438),
-    s = n(873546),
-    o = n(442837),
-    a = n(481060),
-    c = n(980591),
-    u = n(605782),
-    d = n(133853),
-    h = n(568154),
-    p = n(353926),
-    m = n(703656),
-    g = n(981631),
-    f = n(816282);
-let _ = n(575703),
-    x = n(2984),
-    E = [
-        g.Z5c.LOGIN,
-        g.Z5c.LOGIN_HANDOFF,
-        g.Z5c.REGISTER,
-        g.Z5c.INVITE(""),
-        g.Z5c.GIFT_CODE(""),
-        g.Z5c.GUILD_TEMPLATE_LOGIN(""),
-        g.Z5c.GUILD_TEMPLATE(""),
-        g.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-        g.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-        g.Z5c.BILLING_PREMIUM_SUBSCRIBE,
-        g.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
-        g.Z5c.BILLING_PAYMENTS,
-        g.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
-        g.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
-        g.Z5c.VERIFY,
-        g.Z5c.VERIFY_HUB_EMAIL,
-        g.Z5c.REJECT_IP,
-        g.Z5c.REJECT_MFA,
-        g.Z5c.AUTHORIZE_IP,
-        g.Z5c.AUTHORIZE_PAYMENT,
-        g.Z5c.RESET,
-        g.Z5c.HANDOFF,
-        g.Z5c.REPORT,
-        g.Z5c.REPORT_SECOND_LOOK,
-        g.Z5c.ACCOUNT_REVERT(""),
+let n;
+r.d(t, { Z: () => B }), r(388685), r(35282);
+var i = r(951288),
+    l = r(647438),
+    s = r(843611),
+    o = r(873546),
+    c = r(442837),
+    a = r(481060),
+    u = r(980591),
+    d = r(605782),
+    h = r(133853),
+    f = r(568154),
+    p = r(353926),
+    x = r(703656),
+    g = r(546247),
+    j = r(981631),
+    m = r(816282);
+let E = r(575703),
+    I = r(2984),
+    O = [
+        j.Z5c.LOGIN,
+        j.Z5c.LOGIN_HANDOFF,
+        j.Z5c.REGISTER,
+        j.Z5c.INVITE(""),
+        j.Z5c.GIFT_CODE(""),
+        j.Z5c.GUILD_TEMPLATE_LOGIN(""),
+        j.Z5c.GUILD_TEMPLATE(""),
+        j.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
+        j.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+        j.Z5c.BILLING_PREMIUM_SUBSCRIBE,
+        j.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
+        j.Z5c.BILLING_PAYMENTS,
+        j.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
+        j.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
+        j.Z5c.VERIFY,
+        j.Z5c.VERIFY_HUB_EMAIL,
+        j.Z5c.REJECT_IP,
+        j.Z5c.REJECT_MFA,
+        j.Z5c.AUTHORIZE_IP,
+        j.Z5c.AUTHORIZE_PAYMENT,
+        j.Z5c.RESET,
+        j.Z5c.HANDOFF,
+        j.Z5c.REPORT,
+        j.Z5c.REPORT_SECOND_LOOK,
+        j.Z5c.ACCOUNT_REVERT(""),
     ];
-function v(e) {
-    return E.some((t) => e.startsWith(t));
-}
-let j = (e) => ((r = e), e);
 function b(e) {
-    let { children: t } = e;
-    switch (
-        (function () {
+    return O.some((t) => e.startsWith(t));
+}
+let _ = (e) => ((n = e), e),
+    Z = [j.Z5c.VERIFY, j.Z5c.VERIFY_HUB_EMAIL];
+function w(e) {
+    let { children: t } = e,
+        r = (function () {
             let [e, t] = l.useState(!1),
-                [n, i] = l.useState(!0),
-                s = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, c.Z)(() => {}, 300), void 0 !== r)
-                ? r
-                : !n && s
-                  ? (e || t(!0), j("default"))
-                  : n
-                    ? j("default")
+                [r, i] = l.useState(!0),
+                s = (0, c.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+            return ((0, u.Z)(() => {}, 300), void 0 !== n)
+                ? n
+                : !r && s
+                  ? (e || t(!0), _("default"))
+                  : r
+                    ? _("default")
                     : "loading";
-        })()
-    ) {
+        })(),
+        o = (0, s.TH)(),
+        a = Z.includes(o.pathname);
+    switch (r) {
         case "default":
             return (0, i.jsxs)(i.Fragment, {
                 children: [
+                    a
+                        ? (0, i.jsx)(g.Z, {})
+                        : (0, i.jsx)("img", {
+                              className: m.artwork,
+                              src: E,
+                              alt: "",
+                          }),
                     (0, i.jsx)("img", {
-                        className: f.artwork,
-                        src: _,
-                        alt: "",
-                    }),
-                    (0, i.jsx)("img", {
-                        className: f.logoWithText,
-                        src: x,
+                        className: m.logoWithText,
+                        src: I,
                         alt: "",
                     }),
                     t,
@@ -83,7 +89,7 @@ function b(e) {
             return null;
     }
 }
-class I extends l.Component {
+class y extends l.Component {
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
     }
@@ -91,50 +97,50 @@ class I extends l.Component {
         window.removeEventListener("resize", this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (v(e)) (0, m.uL)(e, t);
+        if (b(e)) (0, x.uL)(e, t);
         else {
-            let n = null != t && null != t.search ? t.search : null;
-            window.location = null == n ? e : "".concat(e, "?").concat(n);
+            let r = null != t && null != t.search ? t.search : null;
+            window.location = null == r ? e : "".concat(e, "?").concat(r);
         }
     }
     mobileReplaceWith(e) {
-        v(e) ? (0, m.dL)(e) : (window.location = e);
+        b(e) ? (0, x.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
-            t = (0, i.jsx)(u.Z, {
+            t = (0, i.jsx)(d.Z, {
                 component: l.Fragment,
                 children: l.Children.map(this.props.children, (e) =>
                     l.cloneElement(e, {
-                        transitionTo: m.uL,
-                        replaceWith: m.dL,
+                        transitionTo: x.uL,
+                        replaceWith: x.dL,
                     }),
                 ),
             });
         return (0, i.jsx)("div", {
-            className: f.characterBackground,
+            className: m.characterBackground,
             children: (0, i.jsx)(a.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(d.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       show: !0,
-                                      className: f.logo,
+                                      className: m.logo,
                                   }),
-                                  (0, i.jsx)(h.h, {
+                                  (0, i.jsx)(f.h, {
                                       splash: e,
                                       children: t,
                                   }),
                               ],
                           })
-                        : (0, i.jsx)(b, { children: t }),
+                        : (0, i.jsx)(w, { children: t }),
             }),
         });
     }
     renderMobile() {
-        return (0, i.jsx)(u.Z, {
+        return (0, i.jsx)(d.Z, {
             component: l.Fragment,
             children: l.Children.map(this.props.children, (e) =>
                 l.cloneElement(e, {
@@ -147,23 +153,23 @@ class I extends l.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes("GameLauncher");
-        return e || s.tq || s.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         super(e),
-            (function (e, t, n) {
+            (function (e, t, r) {
                 t in e
                     ? Object.defineProperty(e, t, {
-                          value: n,
+                          value: r,
                           enumerable: !0,
                           configurable: !0,
                           writable: !0,
                       })
-                    : (e[t] = n);
+                    : (e[t] = r);
             })(this, "handleResize", () => {
                 this.setState({ isMobileWidth: window.innerWidth <= 485 });
             }),
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let O = I;
+let B = y;

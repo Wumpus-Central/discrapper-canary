@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(384816),
     p = t(389190),
     b = t(428927),
-    g = t(228168),
-    x = t(388032),
+    x = t(228168),
+    g = t(388032),
     h = t(878449),
     j = t(602727);
 function v(e) {
@@ -27,7 +27,7 @@ function v(e) {
         channelId: a,
         onClose: s,
     } = e;
-    return n === g.oh.ACTIVITY
+    return n === x.oh.ACTIVITY
         ? (0, r.jsx)(f.Z, {
               user: o,
               currentUser: l,
@@ -35,21 +35,21 @@ function v(e) {
               guildId: c,
               onClose: s,
           })
-        : n === g.oh.MUTUAL_FRIENDS
+        : n === x.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(p.Z, {
                 user: o,
                 guildId: c,
                 channelId: a,
                 onClose: s,
             })
-          : n === g.oh.MUTUAL_GUILDS
+          : n === x.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(b.Z, {
                   user: o,
                   onClose: s,
               })
-            : n === g.oh.BOT_DATA_ACCESS
+            : n === x.oh.BOT_DATA_ACCESS
               ? (0, r.jsx)(d.Z, { user: o })
-              : n === g.oh.BOT_INFO
+              : n === x.oh.BOT_INFO
                 ? (0, r.jsx)(u.Z, {
                       user: o,
                       currentUser: l,
@@ -74,7 +74,7 @@ function _(e) {
             displayProfile: m,
             guildId: p,
             items: b,
-            initialSection: _ = g.oh.USER_INFO,
+            initialSection: _ = x.oh.USER_INFO,
             initialSubsection: y,
             onClose: I,
         } = e,
@@ -104,7 +104,7 @@ function _(e) {
                 subsection: void 0,
             });
     }, [b, Z]);
-    let C = o.useCallback(
+    let N = o.useCallback(
         (e) => {
             O({
                 action: "PRESS_SECTION",
@@ -126,7 +126,7 @@ function _(e) {
                       (0, r.jsx)("div", { className: h.emptyIconStreamerMode }),
                       (0, r.jsx)("div", {
                           className: h.emptyText,
-                          children: x.intl.string(x.t.Br1ls7),
+                          children: g.intl.string(g.t.Br1ls7),
                       }),
                   ],
               }),
@@ -138,7 +138,7 @@ function _(e) {
                       className: j.tabBar,
                       type: "top",
                       selectedItem: Z,
-                      onItemSelect: C,
+                      onItemSelect: N,
                       children: b.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, r.jsx)(

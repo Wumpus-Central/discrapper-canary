@@ -83,37 +83,29 @@ function g(e) {
               children: (e) =>
                   (0, n.jsxs)(
                       l.P3F,
-                      f(
-                          d(
-                              {
-                                  className: u.addButton,
-                                  onClick: r,
-                              },
-                              e,
-                          ),
-                          {
-                              children: [
-                                  (0, n.jsx)(
-                                      a.Z,
-                                      f(
-                                          d(
-                                              {
-                                                  className: u.cover,
-                                                  gameName: t,
-                                              },
-                                              c,
-                                          ),
-                                          { disableInteraction: !0 },
+                      f(d({ className: u.addButton }, e), {
+                          onClick: r,
+                          children: [
+                              (0, n.jsx)(
+                                  a.Z,
+                                  f(
+                                      d(
+                                          {
+                                              className: u.cover,
+                                              gameName: t,
+                                          },
+                                          c,
                                       ),
+                                      { disableInteraction: !0 },
                                   ),
-                                  (0, n.jsx)(l.svS, {
-                                      size: "md",
-                                      className: u.addIcon,
-                                      color: l.TVs.colors.WHITE,
-                                  }),
-                              ],
-                          },
-                      ),
+                              ),
+                              (0, n.jsx)(l.svS, {
+                                  size: "md",
+                                  className: u.addIcon,
+                                  color: l.TVs.colors.WHITE,
+                              }),
+                          ],
+                      }),
                   ),
           });
 }
