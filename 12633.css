@@ -23913,12 +23913,10 @@ svg.radioIcon_c1e9c4 {
     white-space: var(--custom-display-name-styles-wrap)
 }
 
-.underlineOnHover_dfb989 {
-    text-decoration: none
-}
-
 .underlineOnHover_dfb989:not(.pop_dfb989):hover {
-    text-decoration: underline
+    text-decoration: underline;
+    -webkit-text-decoration-color: var(--custom-display-name-styles-main-color);
+    text-decoration-color: var(--custom-display-name-styles-main-color)
 }
 
 .glowContainer_dfb989 {
@@ -24022,28 +24020,30 @@ svg.radioIcon_c1e9c4 {
 }
 
 .showEffect_dfb989.container_dfb989 .pop_dfb989 {
+    --custom-pop-stroke-width: calc(1.2px + 0.04em);
+    --custom-pop-bottom-translate_3d: 0.08em;
     color: var(--white-500);
     paint-order: stroke fill;
     position: relative;
     -webkit-text-stroke-color: var(--custom-display-name-styles-dark-2-color);
-    margin-bottom: calc(-1.2px - .12em);
-    padding-bottom: calc(1.2px + .12em)
+    margin-bottom: calc(var(--custom-pop-stroke-width)*-1 - var(--custom-pop-bottom-translate_3d));
+    padding-bottom: calc(var(--custom-pop-stroke-width) + var(--custom-pop-bottom-translate_3d))
 }
 
 .showEffect_dfb989.container_dfb989 .pop_dfb989,
 .showEffect_dfb989.container_dfb989 .pop_dfb989:before {
-    -webkit-text-stroke-width: calc(1.2px + .04em);
-    margin-left: calc(-1.2px - .04em);
-    padding-left: calc(1.2px + .04em)
+    -webkit-text-stroke-width: var(--custom-pop-stroke-width);
+    margin-left: calc(var(--custom-pop-stroke-width)*-1);
+    padding-left: var(--custom-pop-stroke-width)
 }
 
 .showEffect_dfb989.container_dfb989 .pop_dfb989:before {
-    bottom: calc(-.12em - 1.2px);
+    bottom: calc(var(--custom-pop-bottom-translate_3d)*-1 - var(--custom-pop-stroke-width));
     color: var(--custom-display-name-styles-main-color);
     content: attr(data-username-with-effects);
     position: absolute;
     top: 0;
-    width: calc(100% - 1.2px - .04em);
+    width: calc(100% - var(--custom-pop-stroke-width));
     z-index: -1;
     -webkit-text-stroke-color: transparent;
     background: linear-gradient(to bottom left, var(--custom-display-name-styles-light-1-color) 0, var(--custom-display-name-styles-light-1-color) 6%, var(--custom-display-name-styles-main-color) 20%, var(--custom-display-name-styles-main-color) 50%, var(--custom-display-name-styles-light-1-color) 56%, var(--custom-display-name-styles-main-color) 70%, var(--custom-display-name-styles-main-color) 100%);
@@ -24051,7 +24051,7 @@ svg.radioIcon_c1e9c4 {
     -webkit-background-clip: text;
     background-position: 100% 0;
     background-size: 200% 200%;
-    transform: translate3d(0, .08em, 0);
+    transform: translate3d(0, var(--custom-pop-bottom-translate_3d), 0);
     -webkit-text-fill-color: transparent;
     overflow: hidden;
     text-decoration: none;
@@ -24061,8 +24061,9 @@ svg.radioIcon_c1e9c4 {
 
 .showEffect_dfb989.container_dfb989 .pop_dfb989.underlineOnHover_dfb989:hover:before {
     text-decoration: underline;
-    -webkit-text-decoration-color: var(--custom-display-name-styles-dark-2-color);
-    text-decoration-color: var(--custom-display-name-styles-dark-2-color)
+    -webkit-text-decoration-color: var(--custom-display-name-styles-main-color);
+    text-decoration-color: var(--custom-display-name-styles-main-color);
+    text-underline-offset: calc(var(--custom-pop-bottom-translate_3d))
 }
 
 .animated_dfb989.loop_dfb989.loop_dfb989>*,
