@@ -1,4 +1,4 @@
-i.d(e, { Z: () => c });
+i.d(t, { Z: () => c });
 var n = i(951288);
 i(647438);
 var r = i(481060),
@@ -7,9 +7,9 @@ var r = i(481060),
     l = i(989830),
     a = i(388032),
     d = i(617296);
-function c(t) {
-    let { channelId: e } = t,
-        i = (0, l.Z)(e);
+function c(e) {
+    let { channelId: t } = e,
+        i = (0, l.Z)(t);
     if (!(null != i && (i.value > 0 || (null == i ? void 0 : i.multiplier) > 1))) return null;
     let { multiplier: c } = i,
         { color: u } = (0, o.yz)(c);

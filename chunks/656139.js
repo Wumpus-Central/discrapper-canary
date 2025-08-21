@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => w,
-    default: () => D,
+    K: () => P,
+    default: () => w,
 }),
     n(388685);
 var r = n(951288),
@@ -18,105 +18,117 @@ var r = n(951288),
     h = n(100527),
     m = n(906732),
     g = n(626135),
-    E = n(51144),
-    b = n(281494),
-    y = n(276444),
-    O = n(687555),
+    E = n(63063),
+    b = n(51144),
+    y = n(281494),
+    O = n(276444),
     v = n(955839),
-    I = n(553874),
-    T = n(28061),
-    S = n(382271),
-    A = n(981631),
-    C = n(388032),
-    N = n(476034);
-let R = (e) => {
+    I = n(28061),
+    T = n(382271),
+    S = n(981631),
+    A = n(388032),
+    C = n(476034);
+let N = (e) => {
         let { onClose: t, onShare: n } = e,
-            a = (0, s.e7)([y.Z], () => y.Z.getReferralsRemaining()),
-            [d, h] = i.useState(new Map()),
-            [m, g] = i.useState(""),
-            b = (0, _.Z)(m, 400),
+            a = (0, s.e7)([O.Z], () => O.Z.getReferralsRemaining()),
+            d = (0, s.e7)([O.Z], () => O.Z.getHasEligibleFriends()),
+            [h, m] = i.useState(new Map()),
+            [g, y] = i.useState(""),
+            T = (0, _.Z)(g, 400),
             {
-                eligibleUsers: S,
-                fetchUsers: A,
-                hasError: R,
-                isFetching: P,
-                resendUsers: w,
+                eligibleUsers: N,
+                fetchUsers: R,
+                hasError: P,
+                isFetching: w,
+                resendUsers: D,
             } = (0, v.q)({
-                searchQuery: b,
-                selectedUsers: d,
+                searchQuery: T,
+                selectedUsers: h,
             }),
-            [D, x] = i.useState(!1),
-            L = (0, p.O)((e) => {
-                e && !P && A();
+            [x, L] = i.useState(!1),
+            j = (0, p.O)((e) => {
+                e && !w && R();
             }),
-            j = S.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
-            M = () =>
+            M = N.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
+            k = () =>
                 (0, r.jsx)(f.Z, {
-                    className: N.searchbar,
+                    className: C.searchbar,
                     size: f.Z.Sizes.MEDIUM,
-                    tags: [...d.values()].map((e) => E.ZP.getName(e)),
-                    placeholder: 0 === d.size ? C.intl.string(C.t.Kd5RaG) : "",
-                    query: m,
+                    tags: [...h.values()].map((e) => b.ZP.getName(e)),
+                    placeholder: 0 === h.size ? A.intl.string(A.t.Kd5RaG) : "",
+                    query: g,
                     onRemoveTag: (e) => {
-                        h((t) => {
+                        m((t) => {
                             let n = [...t.values()][e],
                                 r = new Map(t);
                             return r.delete(n.id), r;
                         });
                     },
-                    onQueryChange: g,
-                    onClear: () => g(""),
+                    onQueryChange: y,
+                    onClear: () => y(""),
                 }),
-            k = (e) => {
+            U = (e) => {
                 let i,
                     { eligibleRecipients: a } = e,
-                    s = b.length > 0 && 0 === a.size;
+                    s = T.length > 0 && 0 === a.size;
                 return (
                     (i =
                         !0 === s
-                            ? C.intl.string(C.t.wpSqAQ)
-                            : d.size <= 1
-                              ? C.intl.string(C.t.ItpQxs)
-                              : C.intl.format(C.t.iW2str, { nTrials: d.size })),
+                            ? A.intl.string(A.t.wpSqAQ)
+                            : h.size <= 1
+                              ? A.intl.string(A.t.ItpQxs)
+                              : A.intl.format(A.t.iW2str, { nTrials: h.size })),
                     (0, r.jsx)("div", {
-                        className: o()(N.footer, N.footerSeparator),
+                        className: o()(C.footer, C.footerSeparator),
                         children: (0, r.jsx)(u.zxk, {
                             variant: "primary",
-                            disabled: (0 === d.size && !s) || D,
+                            disabled: (0 === h.size && !s) || x,
                             text: i,
                             size: "md",
                             fullWidth: !0,
                             onClick: async () => {
                                 if (s) return void t();
-                                x(!0), await n([...d.values()]), x(!1);
+                                L(!0), await n([...h.values()]), L(!1);
                             },
                         }),
                     })
                 );
             },
-            U = (e) => {
+            G = (e) => {
                 let { eligibleRecipients: t } = e;
-                return !0 == (b.length > 0 && 0 === t.size)
-                    ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(O.ih, {}), (0, r.jsx)(O.d, {})],
+                return !0 == (T.length > 0 && 0 === t.size)
+                    ? (0, r.jsxs)("div", {
+                          className: C.emptySearchResultsContainer,
+                          children: [
+                              (0, r.jsx)(u.X6q, {
+                                  variant: "heading-md/semibold",
+                                  color: "header-primary",
+                                  children: A.intl.string(A.t["8+ywHB"]),
+                              }),
+                              (0, r.jsx)(u.Text, {
+                                  variant: "text-md/medium",
+                                  color: "text-secondary",
+                                  children: A.intl.string(A.t.CgQmY2),
+                              }),
+                          ],
                       })
                     : (0, r.jsxs)(u.u2D, {
-                          className: N.list,
+                          className: C.list,
                           children: [
                               Array.from(t.values()).map((e) =>
                                   (0, r.jsx)(
-                                      T.Z,
+                                      I.Z,
                                       {
                                           disabled:
                                               null !== a &&
                                               0 !== a &&
-                                              [...d.values()].filter((e) => !w.has(e.id)).length >= a &&
-                                              !d.has(e.id) &&
-                                              !w.has(e.id),
-                                          checked: d.has(e.id),
+                                              [...h.values()].filter((e) => !D.has(e.id)).length >= a &&
+                                              !h.has(e.id) &&
+                                              !D.has(e.id),
+                                          checked: h.has(e.id),
                                           user: e,
                                           onChange: (e, t) => {
-                                              h((n) => {
+                                              m((n) => {
                                                   let r = new Map(n);
                                                   return t ? r.set(e.id, e) : r.delete(e.id), r;
                                               });
@@ -125,30 +137,48 @@ let R = (e) => {
                                       e.id,
                                   ),
                               ),
-                              P && (0, r.jsx)(u.$jN, {}),
-                              (0, r.jsx)("div", { ref: L }),
+                              w && (0, r.jsx)(u.$jN, {}),
+                              (0, r.jsx)("div", { ref: j }),
                           ],
                       });
             };
         return null === a
             ? (0, r.jsx)(u.$jN, {})
-            : R
-              ? (0, r.jsx)(I.P, { onClose: t })
-              : (0, r.jsx)(c.Modal, {
-                    size: "md",
+            : P
+              ? (0, r.jsx)(c.Modal, {
                     transitionState: l.D.ENTERED,
-                    title: C.intl.string(C.t["2dVCLi"]),
-                    subtitle: C.intl.string(C.t.DXgoi4),
+                    size: "sm",
+                    title: A.intl.string(A.t.lcuio6),
+                    subtitle: A.intl.string(A.t["x09+CA"]),
                     onClose: t,
-                    input: M(),
                     actions: [],
-                    actionBarInput: k({ eligibleRecipients: j }),
-                    children: U({ eligibleRecipients: j }),
-                });
+                })
+              : !1 === d
+                ? (0, r.jsx)(c.Modal, {
+                      transitionState: l.D.ENTERED,
+                      size: "sm",
+                      title: A.intl.string(A.t["2YigPj"]),
+                      subtitle: A.intl.format(A.t.OOCbz8, {
+                          helpdeskArticle: E.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM),
+                      }),
+                      onClose: t,
+                      actions: [],
+                  })
+                : (0, r.jsx)(c.Modal, {
+                      size: "md",
+                      transitionState: l.D.ENTERED,
+                      title: A.intl.string(A.t["2dVCLi"]),
+                      subtitle: A.intl.string(A.t.DXgoi4),
+                      onClose: t,
+                      input: k(),
+                      actions: [],
+                      actionBarInput: U({ eligibleRecipients: M }),
+                      children: G({ eligibleRecipients: M }),
+                  });
     },
-    P = (e) => {
+    R = (e) => {
         let { onClose: t, onShare: n } = e,
-            a = (0, s.e7)([y.Z], () => y.Z.getRecipientStatus()),
+            a = (0, s.e7)([O.Z], () => O.Z.getRecipientStatus()),
             [f, _] = i.useState(new Map()),
             [p, h] = i.useState(new Map()),
             [m, g] = i.useState(!1);
@@ -165,9 +195,9 @@ let R = (e) => {
         let E = () => {
             let e;
             return (
-                (e = p.size <= 1 ? C.intl.string(C.t.ItpQxs) : C.intl.format(C.t.iW2str, { nTrials: p.size })),
+                (e = p.size <= 1 ? A.intl.string(A.t.ItpQxs) : A.intl.format(A.t.iW2str, { nTrials: p.size })),
                 (0, r.jsx)("div", {
-                    className: o()(N.footer, N.footerSeparator),
+                    className: o()(C.footer, C.footerSeparator),
                     children: (0, r.jsx)(u.zxk, {
                         variant: "primary",
                         disabled: 0 === p.size || m,
@@ -184,19 +214,19 @@ let R = (e) => {
         return (0, r.jsx)(c.Modal, {
             size: "md",
             transitionState: l.D.ENTERED,
-            title: C.intl.string(C.t.rKmy8P),
-            subtitle: C.intl.string(C.t.VDlF6u),
+            title: A.intl.string(A.t.rKmy8P),
+            subtitle: A.intl.string(A.t.VDlF6u),
             onClose: t,
             actions: [],
             actionBarInput: E(),
             children: (0, r.jsx)(u.u2D, {
-                className: N.list,
+                className: C.list,
                 children: Array.from(f.values()).map((e) =>
                     (0, r.jsx)(
-                        T.Z,
+                        I.Z,
                         {
                             checked: p.has(e.id),
-                            disabled: e.referralStatus === b.Fe.REDEEMED,
+                            disabled: e.referralStatus === y.Fe.REDEEMED,
                             user: e,
                             onChange: (e, t) => {
                                 h((n) => {
@@ -211,7 +241,7 @@ let R = (e) => {
             }),
         });
     };
-var w = (function (e) {
+var P = (function (e) {
     return (
         (e[(e.SELECT_FRIENDS = 1)] = "SELECT_FRIENDS"),
         (e[(e.CONFIRMATION = 2)] = "CONFIRMATION"),
@@ -219,15 +249,15 @@ var w = (function (e) {
         e
     );
 })({});
-let D = (e) => {
+let w = (e) => {
     let { onClose: t, startingScreen: n = 1 } = e,
-        a = (0, s.e7)([y.Z], () => y.Z.getReferralsRemaining()),
+        a = (0, s.e7)([O.Z], () => O.Z.getReferralsRemaining()),
         [o, l] = i.useState(n),
         [c, d] = i.useState([]),
         { analyticsLocations: f } = (0, m.ZP)([h.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]),
         _ = async (e) => {
-            g.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: f });
-            let t = await (0, b.jy)(Object.values(e).map((e) => e.id));
+            g.default.track(S.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: f });
+            let t = await (0, y.jy)(Object.values(e).map((e) => e.id));
             d(
                 e.map((e) => ({
                     recipient: e,
@@ -239,19 +269,19 @@ let D = (e) => {
     if (null === a) return (0, r.jsx)(u.$jN, {});
     if (2 === o) {
         let e = 3 === n;
-        return (0, r.jsx)(S.m, {
+        return (0, r.jsx)(T.m, {
             isReminderConfirmation: e,
             results: c,
             onClose: t,
         });
     }
     return 1 === o
-        ? (0, r.jsx)(R, {
+        ? (0, r.jsx)(N, {
               onClose: t,
               onShare: _,
           })
         : 3 === o
-          ? (0, r.jsx)(P, {
+          ? (0, r.jsx)(R, {
                 onClose: t,
                 onShare: _,
             })

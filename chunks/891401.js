@@ -64,7 +64,7 @@ function C(e, t) {
 function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(T, {})],
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})],
     });
 }
 function O() {
@@ -81,7 +81,7 @@ function O() {
         ),
         f = r.useCallback(
             (e) => {
-                E(null == l ? void 0 : l.wallpaperId, e.target.value);
+                T(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
@@ -97,16 +97,16 @@ function O() {
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        R = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s],
         ),
-        k = r.useCallback(() => {
+        R = r.useCallback(() => {
             null != s && (0, h.i)(s, null);
         }, [s]),
         Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -200,7 +200,7 @@ function O() {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: T,
+                                    onClick: E,
                                     className: _.removeButton,
                                 }),
                             ],
@@ -271,7 +271,7 @@ function O() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: R,
+                                onValueChange: k,
                             },
                             "tokenMixAmount-".concat(A),
                         ),
@@ -318,7 +318,7 @@ function O() {
                         }),
                         (0, n.jsx)(u.zx, {
                             className: _.resetButton,
-                            onClick: k,
+                            onClick: R,
                             children: "Reset",
                         }),
                     ],
@@ -326,7 +326,7 @@ function O() {
         ],
     });
 }
-function T() {
+function E() {
     let e = r.useCallback(() => {
             (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
@@ -360,7 +360,7 @@ function T() {
         ],
     });
 }
-let E = (0, s.debounce)(function (e, t) {
+let T = (0, s.debounce)(function (e, t) {
         null != e && (0, h.i)(e, { primary_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {

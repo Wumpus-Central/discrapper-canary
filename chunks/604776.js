@@ -101,8 +101,8 @@ function _() {
             refreshEntitlementList: C,
             grantFractionalPremium: N,
             deleteFractionalPremium: O,
-            triggerNextEntitlementFulfillment: T,
-            entitlements: E,
+            triggerNextEntitlementFulfillment: E,
+            entitlements: T,
             loading: S,
         } = (0, x.m)();
     return (
@@ -110,9 +110,9 @@ function _() {
             C();
         }, [C]),
         r.useEffect(() => {
-            f(E.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION)),
-                y(E.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt));
-        }, [E]),
+            f(T.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === h.qc2.FRACTIONAL_REDEMPTION)),
+                y(T.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt));
+        }, [T]),
         (0, n.jsx)(c.zJl, {
             className: b.panel,
             children: (0, n.jsxs)("div", {
@@ -204,7 +204,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.PRIMARY,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => T(),
+                                                onClick: () => E(),
                                                 children: "Run fulfillment",
                                             }),
                                             (0, n.jsx)(o.zx, {

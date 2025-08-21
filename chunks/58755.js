@@ -150,7 +150,7 @@ function g(e) {
             steps: N = 26,
         } = t,
         O = (0, x.XM)(t),
-        T = (0, x.W6)(O, c);
+        E = (0, x.W6)(O, c);
     return (0, n.jsxs)(d.hjN, {
         className: h.paletteSettings,
         children: [
@@ -327,7 +327,7 @@ function g(e) {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
                                     m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                    h = T[r];
+                                    h = E[r];
                                 return (0, n.jsxs)(
                                     "div",
                                     {

@@ -22,23 +22,23 @@ var n = a(951288),
     C = a(610394),
     N = a(886118),
     O = a(301801),
-    T = a(352527),
-    E = a(355863),
+    E = a(352527),
+    T = a(355863),
     S = a(449224),
     P = a(808506),
     w = a(572004),
     I = a(55935),
-    R = a(70956),
-    k = a(136015),
+    k = a(70956),
+    R = a(136015),
     Z = a(145597),
     A = a(246992),
     D = a(257785),
     L = a(484036),
     M = a(681619),
-    z = a(621060),
-    F = a(981631),
-    B = a(757744),
-    U = a(388032),
+    F = a(621060),
+    U = a(981631),
+    z = a(757744),
+    B = a(388032),
     G = a(454741),
     V = a(451429);
 function H(e) {
@@ -85,11 +85,11 @@ function W(e, t) {
     );
 }
 let K = {
-        [F.Odu.CLICK_ZONE_DEBUG]: (e) =>
+        [U.Odu.CLICK_ZONE_DEBUG]: (e) =>
             W(
                 H(
                     {
-                        type: F.Odu.CLICK_ZONE_DEBUG,
+                        type: U.Odu.CLICK_ZONE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -101,15 +101,15 @@ let K = {
                             height: 100,
                         },
                     },
-                    E.Z.getWidgetDefaultSettings(F.Odu.CLICK_ZONE_DEBUG),
+                    T.Z.getWidgetDefaultSettings(U.Odu.CLICK_ZONE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
-        [F.Odu.PERFORMANCE_DEBUG]: (e) =>
+        [U.Odu.PERFORMANCE_DEBUG]: (e) =>
             W(
                 H(
                     {
-                        type: F.Odu.PERFORMANCE_DEBUG,
+                        type: U.Odu.PERFORMANCE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -122,7 +122,7 @@ let K = {
                             height: "auto",
                         },
                     },
-                    E.Z.getWidgetDefaultSettings(F.Odu.PERFORMANCE_DEBUG),
+                    T.Z.getWidgetDefaultSettings(U.Odu.PERFORMANCE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
@@ -152,7 +152,7 @@ function Y(e) {
                 (0, w.JG)(t, () => l(!0));
             },
             className: G.copyId,
-            children: ["Application Id: ", t, " ", a ? U.intl.string(U.t["t5VZ8/"]) : null],
+            children: ["Application Id: ", t, " ", a ? B.intl.string(B.t["t5VZ8/"]) : null],
         })
     );
 }
@@ -384,7 +384,7 @@ let J = r.memo(function (e) {
     });
 function $(e) {
     let t,
-        a = ((t = Object.values((0, d.Wu)([E.Z], () => E.Z.getWidgetsForLayout(B.$S)))), t.find((t) => t.type === e));
+        a = ((t = Object.values((0, d.Wu)([T.Z], () => T.Z.getWidgetsForLayout(z.$S)))), t.find((t) => t.type === e));
     return [
         a,
         () => {
@@ -392,7 +392,7 @@ function $(e) {
             else {
                 let t = K[e];
                 if (null == t) return;
-                let a = t(B.$S);
+                let a = t(z.$S);
                 (0, x.A4)(a);
             }
         },
@@ -579,7 +579,7 @@ let ea = r.memo(function (e) {
                                 H({}, e),
                             ),
                         );
-                    }, +R.Z.Millis.SECOND)),
+                    }, +k.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 [],
@@ -643,7 +643,7 @@ let ea = r.memo(function (e) {
         let a = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             r = (0, Z.getPID)(),
             l = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
-            [i, s] = (0, d.Wu)([T.Z], () => [T.Z.enabled, T.Z.keepOpen]),
+            [i, s] = (0, d.Wu)([E.Z], () => [E.Z.enabled, E.Z.keepOpen]),
             o = (0, d.e7)([P.default], () => P.default.getFocusedPID()),
             c = (0, d.e7)([P.default], () => P.default.isFocusedPidOutOfProcess());
         return (0, n.jsxs)("div", {
@@ -694,8 +694,8 @@ let ea = r.memo(function (e) {
         });
     }),
     el = r.memo(function () {
-        let [e, t] = $(F.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = $(F.Odu.PERFORMANCE_DEBUG),
+        let [e, t] = $(U.Odu.CLICK_ZONE_DEBUG),
+            [a, r] = $(U.Odu.PERFORMANCE_DEBUG),
             l = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ClickZones)),
             i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
             s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.DisabledGPUBoost)),
@@ -1077,7 +1077,7 @@ let ex = ["__webpack_require__", "fn"],
         {
             id: "details",
             name: "Details",
-            group: z.v0.NONE,
+            group: F.v0.NONE,
             render: (e) => {
                 var t, a;
                 let { breadcrumb: r, onClose: l } = e,
@@ -1215,7 +1215,7 @@ let ex = ["__webpack_require__", "fn"],
         throttleMs: 100,
     };
 function eb() {
-    let [e, t] = (0, d.e7)([C.ZP], () => C.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], k.Q),
+    let [e, t] = (0, d.e7)([C.ZP], () => C.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], R.Q),
         { ref: a, height: l } = (0, v.ZP)(),
         s = (0, d.e7)([C.ZP], () => C.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [o, c] = r.useState(s),
@@ -1237,11 +1237,11 @@ function eb() {
         [j, g] = r.useState(f),
         [_, y] = r.useState(null),
         N = r.useMemo(() => e.find((e) => e.key === _), [e, _]),
-        T = r.useCallback((e) => {
+        E = r.useCallback((e) => {
             g(e);
         }, []),
-        { renderSelectedTab: E } = (0, z.ZP)({ tabs: ep }, []);
-    (0, O.BO)(p, f, T, ev, [e]);
+        { renderSelectedTab: T } = (0, F.ZP)({ tabs: ep }, []);
+    (0, O.BO)(p, f, E, ev, [e]);
     let S = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
@@ -1255,7 +1255,7 @@ function eb() {
         };
     }, []);
     let [P, I] = r.useState(!1),
-        R = r.useRef(null),
+        k = r.useRef(null),
         Z = r.useCallback(() => {
             (0, w.JG)(JSON.stringify(e)), I(!0);
         }, [e]);
@@ -1263,11 +1263,11 @@ function eb() {
         r.useEffect(() => {
             if (P)
                 return (
-                    (R.current = setTimeout(() => {
+                    (k.current = setTimeout(() => {
                         I(!1);
                     }, 4000)),
                     () => {
-                        null != R.current && clearTimeout(R.current);
+                        null != k.current && clearTimeout(k.current);
                     }
                 );
         }, [P]),
@@ -1362,7 +1362,7 @@ function eb() {
                         className: i()(G.panelGroup, G.subPanel),
                         minHeight: 100,
                         initialHeight: null != l ? l / 3 : 300,
-                        children: E({
+                        children: T({
                             breadcrumb: N,
                             onClose: () => y(null),
                         }),

@@ -7,8 +7,8 @@ var i = n(120356),
     s = n(51144),
     l = n(606837);
 let c = (e) => {
-    let { user: t, fill: n } = e,
-        i = "\xA0(@".concat(s.ZP.getUserTag(t, { decoration: "never" }), ")");
+    let { user: t, fill: n, hideUserTag: i } = e,
+        c = "\xA0(@".concat(s.ZP.getUserTag(t, { decoration: "never" }), ")");
     return (0, r.jsxs)(o.Text, {
         className: a()([{ [l.fill]: n }]),
         variant: "text-md/medium",
@@ -17,10 +17,12 @@ let c = (e) => {
                 className: l.username,
                 children: s.ZP.getName(t),
             }),
-            (0, r.jsx)("span", {
-                className: l.discriminator,
-                children: i,
-            }),
+            i
+                ? null
+                : (0, r.jsx)("span", {
+                      className: l.discriminator,
+                      children: c,
+                  }),
         ],
     });
 };

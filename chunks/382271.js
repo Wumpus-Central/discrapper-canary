@@ -1,4 +1,4 @@
-n.d(t, { m: () => P });
+n.d(t, { m: () => R });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -17,12 +17,11 @@ var r = n(951288),
     E = n(51144),
     b = n(281494),
     y = n(276444),
-    O = n(263885),
-    v = n(981631),
-    I = n(388032),
-    T = n(734501),
-    S = n(690813);
-function A(e, t, n) {
+    O = n(981631),
+    v = n(388032),
+    I = n(734501),
+    T = n(690813);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +34,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,15 +45,15 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-let N = (e, t) => {
+let C = (e, t) => {
         h.Z.hasLayers() && (0, _.xf)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
     },
-    R = (e) => {
+    N = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
             { avatarSrc: a, eventHandlers: s } = (0, p.Z)({
                 userId: null == t ? void 0 : t.id,
@@ -63,13 +62,13 @@ let N = (e, t) => {
             l = E.ZP.getName(t),
             c = n === b.Fz.FAIL;
         return (0, r.jsxs)("div", {
-            className: T.trialRecipientRow,
+            className: I.trialRecipientRow,
             children: [
                 (0, r.jsx)(
                     d.qEK,
-                    C(
+                    A(
                         {
-                            imageClassName: o()({ [T.erroredAvatar]: c }),
+                            imageClassName: o()({ [I.erroredAvatar]: c }),
                             src: a,
                             "aria-label": l,
                             size: d.EFr.SIZE_32,
@@ -81,45 +80,45 @@ let N = (e, t) => {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(d.Text, {
-                                  className: T.errorDisplayName,
+                                  className: I.errorDisplayName,
                                   variant: "text-md/medium",
                                   color: "text-primary",
                                   children: l,
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-md/medium",
-                                  className: T.userName,
+                                  className: I.userName,
                                   color: "text-primary",
-                                  children: I.intl.format(I.t.RO3T4O, { userName: l }),
+                                  children: v.intl.format(v.t.RO3T4O, { userName: l }),
                               }),
                           ],
                       })
                     : (0, r.jsx)(d.Text, {
                           variant: "text-md/medium",
-                          className: T.trialRecipientRowDisplayName,
+                          className: I.trialRecipientRowDisplayName,
                           color: "text-primary",
                           children: l,
                       }),
                 (0, r.jsx)(d.zxk, {
                     variant: "secondary",
                     size: "sm",
-                    text: I.intl.string(I.t["E+yYpq"]),
+                    text: v.intl.string(v.t["E+yYpq"]),
                     icon: d.kBi,
-                    onClick: () => N(t.id, i),
+                    onClick: () => C(t.id, i),
                 }),
             ],
         });
     },
-    P = (e) => {
+    R = (e) => {
         let { results: t, onClose: n, isReminderConfirmation: a } = e,
             o = (0, s.e7)([y.Z], () => y.Z.getReferralsRemaining());
-        m.default.track(v.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        m.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
         let { reducedMotion: f } = i.useContext(u.Sf);
         if (null === o) return (0, r.jsx)(d.$jN, {});
         let _ = () =>
                 f.enabled
                     ? {
-                          src: S.Z,
+                          src: T.Z,
                           type: "image",
                       }
                     : {
@@ -129,26 +128,23 @@ let N = (e, t) => {
             p = () => {
                 let e = t.filter((e) => e.status === b.Fz.SUCCESS).length;
                 return 0 === e
-                    ? I.intl.string(I.t["7VBEub"])
+                    ? v.intl.string(v.t["7VBEub"])
                     : !0 === a
-                      ? I.intl.string(I.t.GP5lbm)
+                      ? v.intl.string(v.t.GP5lbm)
                       : o > 0
-                        ? I.intl.formatToPlainString(I.t.iWtOfH, { numReferrals: e })
-                        : I.intl.string(I.t.tKCltb);
+                        ? v.intl.formatToPlainString(v.t.iWtOfH, { numReferrals: e })
+                        : v.intl.string(v.t.tKCltb);
             },
             h = () =>
                 !0 === a
-                    ? I.intl.format(I.t["4gJJfH"], { helpdeskArticle: g.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM) })
-                    : I.intl.format(I.t.CZaMHh, {
-                          days: O.p,
-                          helpdeskArticle: g.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
-                      }),
+                    ? v.intl.format(v.t["4gJJfH"], { helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) })
+                    : v.intl.format(v.t.AwGSWl, { helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) }),
             E = () =>
                 (0, r.jsx)("div", {
-                    className: T.trialRecipientContainer,
+                    className: I.trialRecipientContainer,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            R,
+                            N,
                             {
                                 recipient: e.recipient,
                                 status: e.status,

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var a = n(481060),
     i = n(282971);
-function l(e) {
+function s(e) {
     let { children: t, label: n } = e;
     return (0, r.jsxs)("li", {
         children: [

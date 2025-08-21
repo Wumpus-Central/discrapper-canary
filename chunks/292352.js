@@ -65,13 +65,22 @@ var g = (function (e) {
         );
     })({}),
     b = (function (e) {
-        return (e.ACTIVITY = "ACTIVITY"), (e.REQUESTS = "REQUESTS"), (e.SETTINGS = "SETTINGS"), e;
+        return (
+            (e.ACTIVITY = "ACTIVITY"),
+            (e.REQUESTS = "REQUESTS"),
+            (e.SETTINGS = "SETTINGS"),
+            (e.CONTENT_AND_SOCIAL = "CONTENT_AND_SOCIAL"),
+            (e.DATA_AND_PRIVACY = "DATA_AND_PRIVACY"),
+            e
+        );
     })({}),
     y = (function (e) {
         return (
             (e[(e.ACTIVITY = 0)] = "ACTIVITY"),
             (e[(e.REQUESTS = 1)] = "REQUESTS"),
             (e[(e.SETTINGS = 2)] = "SETTINGS"),
+            (e[(e.CONTENT_AND_SOCIAL = 3)] = "CONTENT_AND_SOCIAL"),
+            (e[(e.DATA_AND_PRIVACY = 4)] = "DATA_AND_PRIVACY"),
             e
         );
     })({}),

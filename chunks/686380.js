@@ -151,7 +151,40 @@ class U extends i.Component {
     }
     renderRefreshedDMEmbed(e) {
         let { emphasis: t } = e,
-            n = (0, r.jsxs)(r.Fragment, {
+            n = () => {
+                let e = g.default.getUser(this.trialOffer.user_id),
+                    n = null != e ? e.username : M,
+                    r = g.default.getUser(this.trialOffer.referrer_id),
+                    i = null != r ? r.username : M;
+                if (this.isSender)
+                    if (this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at)
+                        return {
+                            headerText: P.intl.formatToPlainString(P.t.qABVhI, { recipient: n }),
+                            bodyText: P.intl.formatToPlainString(P.t.u7hyDw, {
+                                helpdeskArticle: O.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM),
+                            }),
+                        };
+                    else
+                        return {
+                            headerText: P.intl.string(P.t.LAGZfn),
+                            bodyText: P.intl.formatToPlainString(P.t["0gnFLC"], { recipient: n }),
+                        };
+                return this.offerExpired
+                    ? {
+                          headerText: P.intl.string(P.t.nYvpUl),
+                          bodyText: P.intl.formatToPlainString(P.t.wJdBER, { sender: i }),
+                      }
+                    : "SOCIAL" === t
+                      ? {
+                            headerText: P.intl.string(P.t.HtTvXF),
+                            bodyText: P.intl.formatToPlainString(P.t.wOQByM, { sender: i }),
+                        }
+                      : {
+                            headerText: P.intl.string(P.t.VkcLSk),
+                            bodyText: P.intl.string(P.t.JXMz5O),
+                        };
+            },
+            i = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(A.Z, {
                         subscriptionTier: N.Si.TIER_2,
@@ -166,15 +199,15 @@ class U extends i.Component {
                     }),
                 ],
             }),
-            i = (0, r.jsx)(d.zxk, {
+            a = (0, r.jsx)(d.zxk, {
                 variant: "primary",
                 disabled: !1,
                 size: "md",
                 onClick: () => k({ analyticsLocations: [] }),
                 text: P.intl.string(P.t.Lm2nFR),
             }),
-            a = this.isSender ? i : n,
-            o =
+            o = this.isSender ? a : i,
+            s =
                 "SOCIAL" === t
                     ? (0, r.jsx)(d.Eep, {
                           src: x.Z,
@@ -187,7 +220,8 @@ class U extends i.Component {
                           height: 137,
                           width: 144,
                           className: w.imgDMEmbedXP,
-                      });
+                      }),
+            { headerText: l, bodyText: c } = n();
         return (0, r.jsxs)(h.Z, {
             className: w.systemMessageContainerDMEmbedXP,
             iconNode: (0, r.jsx)(d.SrA, {
@@ -205,7 +239,7 @@ class U extends i.Component {
                 (0, r.jsxs)("div", {
                     className: w.containerDMEmbedXP,
                     children: [
-                        o,
+                        s,
                         (0, r.jsxs)("div", {
                             className: w.contentDMEmbedXP,
                             children: [
@@ -215,18 +249,18 @@ class U extends i.Component {
                                         (0, r.jsx)(d.X6q, {
                                             variant: "heading-md/semibold",
                                             color: "header-primary",
-                                            children: this.getTitleText(),
+                                            children: l,
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
-                                            children: this.getBodyText(),
+                                            children: c,
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
                                     className: w.buttonContainerDMEmbedXP,
-                                    children: a,
+                                    children: o,
                                 }),
                             ],
                         }),

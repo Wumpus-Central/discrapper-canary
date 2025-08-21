@@ -419,6 +419,9 @@ class E extends o.C {
                 case 5:
                     a.type = e.int32();
                     break;
+                case 6:
+                    a.configuration = l.Gm.internalBinaryRead(e, e.uint32(), n, a.configuration);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -437,7 +440,9 @@ class E extends o.C {
             0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation);
         for (let i = 0; i < e.buckets.length; i++)
             O.internalBinaryWrite(e.buckets[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
-        0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type);
+        0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type),
+            e.configuration &&
+                l.Gm.internalBinaryWrite(e.configuration, t.tag(6, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -473,6 +478,12 @@ class E extends o.C {
                 name: "type",
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", p],
+            },
+            {
+                no: 6,
+                name: "configuration",
+                kind: "message",
+                T: () => l.Gm,
             },
         ]);
     }

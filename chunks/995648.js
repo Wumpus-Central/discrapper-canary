@@ -1,47 +1,47 @@
-r.d(t, { Z: () => c });
-var n = r(951288);
+r.d(n, { Z: () => o });
+var t = r(951288);
 r(647438);
-var i = r(120356),
-    a = r.n(i),
-    o = r(481060),
+var s = r(120356),
+    i = r.n(s),
+    a = r(481060),
     l = r(422559),
-    s = r(347044);
-function c(e) {
+    c = r(347044);
+function o(e) {
     let {
-        grantedPermissions: t,
+        grantedPermissions: n,
         disabledPermissions: r,
-        grantedPermissionsHeader: i,
-        disabledPermissionsHeader: c,
-        className: d,
+        grantedPermissionsHeader: s,
+        disabledPermissionsHeader: o,
+        className: u,
     } = e;
-    return (0, n.jsxs)("div", {
-        className: a()(s.list, d),
+    return (0, t.jsxs)("div", {
+        className: i()(c.list, u),
         children: [
-            null != t && t.length > 0
-                ? (0, n.jsxs)(n.Fragment, {
+            null != n && n.length > 0
+                ? (0, t.jsxs)(t.Fragment, {
                       children: [
-                          null != i
-                              ? (0, n.jsx)(o.X6q, {
+                          null != s
+                              ? (0, t.jsx)(a.X6q, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
-                                    className: s.header,
-                                    children: i,
+                                    className: c.header,
+                                    children: s,
                                 })
                               : null,
-                          (0, n.jsx)("div", {
-                              className: s.container,
-                              children: t.map((e) =>
-                                  (0, n.jsxs)(
+                          (0, t.jsx)("div", {
+                              className: c.container,
+                              children: n.map((e) =>
+                                  (0, t.jsxs)(
                                       "div",
                                       {
-                                          className: s.permission,
+                                          className: c.permission,
                                           children: [
-                                              (0, n.jsx)(o.dz2, {
+                                              (0, t.jsx)(a.dz2, {
                                                   size: "xs",
                                                   color: "currentColor",
-                                                  className: s.check,
+                                                  className: c.check,
                                               }),
-                                              (0, n.jsx)(o.Text, {
+                                              (0, t.jsx)(a.Text, {
                                                   variant: "text-sm/normal",
                                                   children: (0, l.wt)(e),
                                               }),
@@ -55,30 +55,30 @@ function c(e) {
                   })
                 : null,
             null != r && r.length > 0
-                ? (0, n.jsxs)(n.Fragment, {
+                ? (0, t.jsxs)(t.Fragment, {
                       children: [
-                          null != c
-                              ? (0, n.jsx)(o.X6q, {
+                          null != o
+                              ? (0, t.jsx)(a.X6q, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
-                                    className: s.header,
-                                    children: c,
+                                    className: c.header,
+                                    children: o,
                                 })
                               : null,
-                          (0, n.jsx)("div", {
-                              className: s.container,
+                          (0, t.jsx)("div", {
+                              className: c.container,
                               children: r.map((e) =>
-                                  (0, n.jsxs)(
+                                  (0, t.jsxs)(
                                       "div",
                                       {
-                                          className: s.permission,
+                                          className: c.permission,
                                           children: [
-                                              (0, n.jsx)(o.Dio, {
+                                              (0, t.jsx)(a.Dio, {
                                                   size: "xs",
                                                   color: "currentColor",
-                                                  className: s.cross,
+                                                  className: c.cross,
                                               }),
-                                              (0, n.jsx)(o.Text, {
+                                              (0, t.jsx)(a.Text, {
                                                   variant: "text-sm/normal",
                                                   children: (0, l.wt)(e),
                                               }),

@@ -69,7 +69,7 @@ function N() {
         [a, l] = r.useState("511651880837840896"),
         [x, j] = r.useState([]),
         [N, O] = r.useState(!1),
-        T = r.useCallback(async () => {
+        E = r.useCallback(async () => {
             try {
                 O(!0), await (0, u.jg)(), await (0, m.In)(t.id), j(await y());
             } finally {
@@ -77,23 +77,23 @@ function N() {
             }
         }, [t]);
     r.useEffect(() => {
-        T();
-    }, [T]);
-    let E = r.useMemo(() => x.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [x]),
+        E();
+    }, [E]);
+    let T = r.useMemo(() => x.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [x]),
         S = async () => {
             await o.tn.post({
                 url: "/debug/subscription",
                 body: { plan_id: a },
                 rejectWithError: !1,
             }),
-                await T();
+                await E();
         },
         P = async () => {
             await o.tn.del({
                 url: "/debug/subscription",
                 rejectWithError: !1,
             }),
-                await T();
+                await E();
         };
     return (0, n.jsx)(d.zJl, {
         className: _.panel,
@@ -112,7 +112,7 @@ function N() {
                             disabled: N,
                             look: c.zx.Looks.BLANK,
                             size: c.zx.Sizes.ICON,
-                            onClick: T,
+                            onClick: E,
                             children: (0, n.jsx)("span", {
                                 title: "Refresh",
                                 children: (0, n.jsx)(d.DuK, {
@@ -148,7 +148,7 @@ function N() {
                 null != e &&
                     (0, n.jsx)(b.Z, {
                         subscription: e,
-                        onUpdated: T,
+                        onUpdated: E,
                     }),
                 (0, n.jsx)(d.X6q, {
                     variant: "heading-lg/semibold",
@@ -164,7 +164,7 @@ function N() {
                         onClick: P,
                     }),
                 }),
-                E.length > 0 &&
+                T.length > 0 &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsx)(d.X6q, {
@@ -172,12 +172,12 @@ function N() {
                                 className: _.header,
                                 children: "Previous Subscriptions",
                             }),
-                            E.map((e) =>
+                            T.map((e) =>
                                 (0, n.jsx)(
                                     b.Z,
                                     {
                                         subscription: e,
-                                        onUpdated: T,
+                                        onUpdated: E,
                                     },
                                     e.id,
                                 ),

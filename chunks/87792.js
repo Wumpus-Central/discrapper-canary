@@ -1,4 +1,8 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, {
+    I: () => G,
+    Z: () => V,
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -202,21 +206,24 @@ let U = () => {
               });
     },
     G = (e) => {
-        let { userId: t, subText: n, avatarSize: i = l.EFr.SIZE_40 } = e,
-            a = (0, E.I)(t);
-        return void 0 === a
+        let { userId: t, subText: n, avatarSize: i = l.EFr.SIZE_40, hideUserTag: a = !1 } = e,
+            o = (0, E.I)(t);
+        return void 0 === o
             ? null
             : (0, r.jsxs)("div", {
                   className: w.accountRow,
                   children: [
                       (0, r.jsx)(T.r, {
-                          user: a,
+                          user: o,
                           avatarSize: i,
                       }),
                       (0, r.jsxs)("div", {
                           className: w.headerText,
                           children: [
-                              (0, r.jsx)(S.Z, { user: a }),
+                              (0, r.jsx)(S.Z, {
+                                  user: o,
+                                  hideUserTag: a,
+                              }),
                               void 0 !== n
                                   ? (0, r.jsx)(l.Text, {
                                         variant: "text-sm/medium",

@@ -419,7 +419,7 @@ function $(e) {
                   children: [
                       (0, r.jsx)(y.Z, {
                           subscriptionTier: x.Si.TIER_2,
-                          buttonTextOverride: j.intl.string(j.t.pj0XBA),
+                          defaultTextOverride: j.intl.string(j.t.pj0XBA),
                           premiumModalAnalyticsLocation: {
                               page: w.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
                               section: w.jXE.CUSTOM_THEMES_FOOTER,

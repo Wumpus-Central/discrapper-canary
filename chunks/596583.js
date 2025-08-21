@@ -1,124 +1,124 @@
-i.d(t, { Z: () => S }), i(388685);
-var r = i(951288);
-i(647438);
-var C = i(120356),
-    s = i.n(C),
-    a = i(512722),
-    l = i.n(a),
-    n = i(442837),
-    o = i(780384),
-    d = i(481060),
-    p = i(493683),
-    x = i(37234),
-    c = i(410030),
-    f = i(518950),
-    h = i(819640),
-    _ = i(63063),
-    u = i(51144),
-    j = i(281494),
-    L = i(276444),
-    m = i(792451),
-    y = i(814667),
-    g = i(263885),
-    F = i(981631),
-    w = i(388032),
-    U = i(436931);
-let O = (e) => {
-        let { user: t, trialCreationResult: i, onClose: C } = e,
-            { avatarSrc: a, eventHandlers: l } = (0, f.Z)({
+r.d(t, { Z: () => N }), r(388685);
+var a = r(951288);
+r(647438);
+var i = r(120356),
+    s = r.n(i),
+    n = r(512722),
+    l = r.n(n),
+    o = r(442837),
+    C = r(780384),
+    d = r(481060),
+    c = r(493683),
+    x = r(37234),
+    p = r(410030),
+    h = r(518950),
+    f = r(819640),
+    u = r(63063),
+    m = r(51144),
+    j = r(281494),
+    _ = r(276444),
+    g = r(792451),
+    L = r(814667),
+    y = r(263885),
+    v = r(981631),
+    S = r(388032),
+    b = r(436931);
+let w = (e) => {
+        let { user: t, trialCreationResult: r, onClose: i } = e,
+            { avatarSrc: n, eventHandlers: l } = (0, h.Z)({
                 userId: null == t ? void 0 : t.id,
                 size: d.EFr.SIZE_56,
             }),
-            n = u.ZP.getName(t),
-            o = t.username !== n && i === j.Fz.SUCCESS,
-            c = i === j.Fz.FAIL;
-        return (0, r.jsxs)("div", {
-            className: U.referredUserRowContainer,
+            o = m.ZP.getName(t),
+            C = t.username !== o && r === j.Fz.SUCCESS,
+            p = r === j.Fz.FAIL;
+        return (0, a.jsxs)("div", {
+            className: b.referredUserRowContainer,
             children: [
-                (0, r.jsx)(
+                (0, a.jsx)(
                     d.qEK,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var i = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(i);
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                a = Object.keys(r);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(i).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(i, e).enumerable;
+                                (a = a.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = i[t]),
+                                a.forEach(function (t) {
+                                    var a;
+                                    (a = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: a,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = a);
                                 });
                         }
                         return e;
                     })(
                         {
-                            imageClassName: s()({ [U.erroredAvatar]: c }),
-                            src: a,
-                            "aria-label": n,
+                            imageClassName: s()({ [b.erroredAvatar]: p }),
+                            src: n,
+                            "aria-label": o,
                             size: d.EFr.SIZE_56,
                         },
                         l,
                     ),
                 ),
-                (0, r.jsxs)("div", {
-                    className: U.referredUserRowBody,
+                (0, a.jsxs)("div", {
+                    className: b.referredUserRowBody,
                     children: [
-                        c
-                            ? (0, r.jsxs)(r.Fragment, {
+                        p
+                            ? (0, a.jsxs)(a.Fragment, {
                                   children: [
-                                      (0, r.jsx)(d.Text, {
-                                          className: U.errorDisplayName,
+                                      (0, a.jsx)(d.Text, {
+                                          className: b.errorDisplayName,
                                           variant: "text-md/medium",
-                                          children: n,
+                                          children: o,
                                       }),
-                                      (0, r.jsx)(d.Text, {
+                                      (0, a.jsx)(d.Text, {
                                           variant: "text-md/medium",
-                                          className: U.userName,
-                                          children: w.intl.format(w.t.RO3T4O, { userName: n }),
+                                          className: b.userName,
+                                          children: S.intl.format(S.t.RO3T4O, { userName: o }),
                                       }),
                                   ],
                               })
-                            : (0, r.jsx)(d.ua7, {
-                                  text: w.intl.string(w.t.xkVQPD),
+                            : (0, a.jsx)(d.ua7, {
+                                  text: S.intl.string(S.t.xkVQPD),
                                   position: "right",
                                   children: (e) => {
-                                      let { onMouseEnter: i, onMouseLeave: s } = e;
-                                      return (0, r.jsx)(d.P3F, {
+                                      let { onMouseEnter: r, onMouseLeave: s } = e;
+                                      return (0, a.jsx)(d.P3F, {
                                           onClick: () => {
                                               var e;
                                               return (
                                                   (e = t.id),
-                                                  void (h.Z.hasLayers() && (0, x.xf)(),
-                                                  p.Z.openPrivateChannel({ recipientIds: e }),
-                                                  C())
+                                                  void (f.Z.hasLayers() && (0, x.xf)(),
+                                                  c.Z.openPrivateChannel({ recipientIds: e }),
+                                                  i())
                                               );
                                           },
-                                          className: U.displayNameClickableContainer,
-                                          onMouseEnter: i,
+                                          className: b.displayNameClickableContainer,
+                                          onMouseEnter: r,
                                           onMouseLeave: s,
-                                          children: (0, r.jsx)(d.Text, {
+                                          children: (0, a.jsx)(d.Text, {
                                               variant: "text-md/medium",
-                                              className: U.displayName,
-                                              children: n,
+                                              className: b.displayName,
+                                              children: o,
                                           }),
                                       });
                                   },
                               }),
-                        o &&
-                            (0, r.jsx)(d.Text, {
+                        C &&
+                            (0, a.jsx)(d.Text, {
                                 variant: "text-md/medium",
-                                className: U.userName,
+                                className: b.userName,
                                 children: t.username,
                             }),
                     ],
@@ -126,55 +126,55 @@ let O = (e) => {
             ],
         });
     },
-    S = (e) => {
-        let { selectedUsers: t, trialCreationResult: i, onClose: C } = e,
+    N = (e) => {
+        let { selectedUsers: t, trialCreationResult: r, onClose: i } = e,
             s = [...t].map((e) =>
-                (0, r.jsx)(
-                    O,
+                (0, a.jsx)(
+                    w,
                     {
                         user: e,
-                        trialCreationResult: i.get(e.id),
-                        onClose: C,
+                        trialCreationResult: r.get(e.id),
+                        onClose: i,
                     },
                     e.id,
                 ),
             ),
-            a = (0, n.e7)([L.Z], () => L.Z.getReferralsRemaining());
-        l()(null !== a, "Referrals remaining should not be null");
-        let p = (0, c.Fg)(),
-            x = (0, o.ap)(p) ? y.Z : m.Z,
-            f = w.intl.string(w.t.Pcb7KC),
-            h = [...i.values()].filter((e) => e === j.Fz.SUCCESS).length;
+            n = (0, o.e7)([_.Z], () => _.Z.getReferralsRemaining());
+        l()(null !== n, "Referrals remaining should not be null");
+        let c = (0, p.Fg)(),
+            x = (0, C.ap)(c) ? L.Z : g.Z,
+            h = S.intl.string(S.t.Pcb7KC),
+            f = [...r.values()].filter((e) => e === j.Fz.SUCCESS).length;
         return (
-            a > 0 && (f = w.intl.formatToPlainString(w.t.iWtOfH, { numReferrals: h })),
-            0 === h && (f = w.intl.string(w.t["7VBEub"])),
-            (0, r.jsxs)("div", {
-                className: U.confrimationContainer,
+            n > 0 && (h = S.intl.formatToPlainString(S.t.iWtOfH, { numReferrals: f })),
+            0 === f && (h = S.intl.string(S.t["7VBEub"])),
+            (0, a.jsxs)("div", {
+                className: b.confrimationContainer,
                 children: [
-                    (0, r.jsx)(d.P3F, {
-                        onClick: C,
-                        className: U.closeButtonContainer,
-                        children: (0, r.jsx)(d.Dio, {
+                    (0, a.jsx)(d.P3F, {
+                        onClick: i,
+                        className: b.closeButtonContainer,
+                        children: (0, a.jsx)(d.Dio, {
                             size: "custom",
                             width: 20,
                             height: 20,
                         }),
                     }),
-                    (0, r.jsx)(x, { className: U.headerIcon }),
-                    (0, r.jsx)(d.X6q, {
+                    (0, a.jsx)(x, { className: b.headerIcon }),
+                    (0, a.jsx)(d.X6q, {
                         variant: "heading-lg/bold",
-                        className: U.heading,
-                        children: f,
+                        className: b.heading,
+                        children: h,
                     }),
-                    (0, r.jsx)("div", {
-                        className: U.confirmedUserContainer,
+                    (0, a.jsx)("div", {
+                        className: b.confirmedUserContainer,
                         children: s,
                     }),
-                    (0, r.jsx)(d.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: "text-md/medium",
-                        children: w.intl.format(w.t.CZaMHh, {
-                            days: g.p,
-                            helpdeskArticle: _.Z.getArticleURL(F.BhN.REFERRAL_PROGRAM),
+                        children: S.intl.format(S.t.CZaMHh, {
+                            days: y.p,
+                            helpdeskArticle: u.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
                         }),
                     }),
                 ],
