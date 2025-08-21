@@ -1953,6 +1953,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     color: var(--info-danger-foreground)
 }
 
+.actionContainer__35859 {
+    margin-bottom: auto;
+    margin-top: auto
+}
+
 .stack_dbd263 {
     display: flex;
     width: 100%
@@ -86744,24 +86749,26 @@ span.clanTag__07f91.isOverlay__07f91 {
     gap: 2px
 }
 
+.groupContainer__9d98d,
 .mainCollapseableContainer__9d98d {
     background-color: var(--background-base-lower)
 }
 
 .groupContainer__9d98d {
+    border-radius: var(--radius-sm);
     flex: 1;
     overflow: hidden;
     transition: background-color .1s ease-in-out
 }
 
-.groupContainer__9d98d,
-.standaloneContainer__9d98d {
-    background-color: var(--background-base-lower);
-    border-radius: var(--radius-sm)
+.groupWarning__9d98d {
+    cursor: default
 }
 
 .standaloneContainer__9d98d {
-    border: 1px solid var(--background-mod-faint)
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-mod-faint);
+    border-radius: var(--radius-sm)
 }
 
 .groupCollapsedContainer__9d98d {
@@ -87028,6 +87035,11 @@ span.clanTag__07f91.isOverlay__07f91 {
     height: 1px;
     margin: 16px 0;
     width: 100%
+}
+
+.systemServiceWarning__9d98d {
+    flex-shrink: 1;
+    margin: 4px 16px 16px
 }
 
 .container__37c99 {
