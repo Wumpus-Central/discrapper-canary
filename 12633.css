@@ -59491,6 +59491,10 @@ h3.improved__1689b:after {
     margin-top: var(--space-24)
 }
 
+.newBadge__17510 {
+    margin-left: 4px
+}
+
 .sectionsContainer_def11f {
     flex: 1
 }
@@ -89899,7 +89903,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
