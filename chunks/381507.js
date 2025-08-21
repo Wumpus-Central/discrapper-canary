@@ -1,28 +1,28 @@
-t.d(n, { Z: () => _ });
-var r = t(951288);
-t(647438);
-var i = t(780384),
-    l = t(481060),
-    s = t(410030),
-    a = t(518950),
-    o = t(51144),
-    C = t(105759),
-    d = t(898969),
-    p = t(703614),
-    c = t(268685),
-    u = t(388032),
-    x = t(908780);
-let _ = () => {
+n.d(t, { Z: () => f });
+var r = n(951288);
+n(647438);
+var i = n(780384),
+    l = n(481060),
+    a = n(410030),
+    s = n(518950),
+    o = n(51144),
+    C = n(105759),
+    d = n(898969),
+    c = n(703614),
+    p = n(268685),
+    u = n(388032),
+    x = n(908780);
+let f = () => {
     let e = (0, C.Z)(),
-        { avatarSrc: n, eventHandlers: t } = (0, a.Z)({
+        { avatarSrc: t, eventHandlers: n } = (0, s.Z)({
             userId: null == e ? void 0 : e.id,
-            size: c.EF.SIZE_32,
+            size: p.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        _ = (0, s.Fg)(),
-        f = (0, i.ap)(_),
-        h = o.ZP.getName(e),
-        j = f ? d.Z : p.Z;
+        f = (0, a.Fg)(),
+        h = (0, i.ap)(f),
+        _ = o.ZP.getName(e),
+        j = h ? d.Z : c.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
@@ -33,43 +33,43 @@ let _ = () => {
                       children: (0, r.jsx)(
                           l.qEK,
                           (function (e) {
-                              for (var n = 1; n < arguments.length; n++) {
-                                  var t = null != arguments[n] ? arguments[n] : {},
-                                      r = Object.keys(t);
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
                                   "function" == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
-                                          Object.getOwnPropertySymbols(t).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                           }),
                                       )),
-                                      r.forEach(function (n) {
+                                      r.forEach(function (t) {
                                           var r;
-                                          (r = t[n]),
-                                              n in e
-                                                  ? Object.defineProperty(e, n, {
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
                                                         value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (e[n] = r);
+                                                  : (e[t] = r);
                                       });
                               }
                               return e;
                           })(
                               {
-                                  src: n,
+                                  src: t,
                                   "aria-label": e.username,
-                                  size: c.EF.SIZE_32,
+                                  size: p.EF.SIZE_32,
                               },
-                              t,
+                              n,
                           ),
                       ),
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-xs/bold",
                       className: x.bannerHeader,
-                      children: u.intl.format(u.t.oxhCOj, { userName: h }),
+                      children: u.intl.format(u.t.oxhCOj, { userName: _ }),
                   }),
                   (0, r.jsx)(j, { className: x.bannerIcon }),
               ],

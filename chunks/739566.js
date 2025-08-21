@@ -21,29 +21,28 @@ function _(e, t) {
     return i()(null != n, "Result cannot be null because the message is not null"), null != t ? t : n;
 }
 function p(e) {
-    var t, n;
-    let r = (0, a.e7)([o.Z], () => (null == e ? null : o.Z.getChannel(e.channel_id))),
-        i = null == e || null == (t = e.author) ? void 0 : t.id,
-        _ = null == r ? void 0 : r.guild_id,
-        p = (0, a.e7)([s.ZP], () => (null == _ || null == i ? null : s.ZP.getMember(_, i))),
-        h = (0, a.e7)([d.default], () => d.default.getUser(i), [i]),
-        m = f.ZP.useName((null == e ? void 0 : e.author.bot) ? (null == e ? void 0 : e.author) : h),
-        g = (0, a.e7)([c.Z], () => c.Z.getGuild(_), [_]),
-        E = null == p ? void 0 : p.colorRoleId,
-        y = (0, a.e7)([l.Z], () => (null != _ && null != E ? l.Z.getRole(_, E) : void 0), [_, E]),
-        O = (0, a.e7)([u.Z], () => (null != i && (null == r ? void 0 : r.isPrivate()) ? u.Z.getNickname(i) : null));
+    var t;
+    let n = (0, a.e7)([o.Z], () => (null == e ? null : o.Z.getChannel(e.channel_id))),
+        r = null == e || null == (t = e.author) ? void 0 : t.id,
+        i = null == n ? void 0 : n.guild_id,
+        _ = (0, a.e7)([s.ZP], () => (null == i || null == r ? null : s.ZP.getMember(i, r))),
+        p = (0, a.e7)([d.default], () => d.default.getUser(r), [r]),
+        h = f.ZP.useName((null == e ? void 0 : e.author.bot) ? (null == e ? void 0 : e.author) : p),
+        m = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
+        g = null == _ ? void 0 : _.colorRoleId,
+        E = (0, a.e7)([l.Z], () => (null != i && null != g ? l.Z.getRole(i, g) : void 0), [i, g]),
+        y = (0, a.e7)([u.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null));
     return null == e
         ? null
         : b({
               user: e.author,
-              channel: r,
-              guild: g,
-              memberColorRole: y,
-              userName: m,
-              member: p,
-              friendNickname: O,
-              displayNameStyles:
-                  null != (n = null == h ? void 0 : h.displayNameStyles) ? n : e.author.displayNameStyles,
+              channel: n,
+              guild: m,
+              memberColorRole: E,
+              userName: h,
+              member: _,
+              friendNickname: y,
+              displayNameStyles: null != p ? p.displayNameStyles : e.author.displayNameStyles,
           });
 }
 function h(e) {

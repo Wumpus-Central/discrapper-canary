@@ -31,8 +31,8 @@ var n = i(951288),
     Z = i(823379),
     C = i(5192),
     P = i(981631),
-    j = i(388032),
-    x = i(458182);
+    x = i(388032),
+    j = i(458182);
 function _(e, t, i) {
     return (
         t in e
@@ -88,11 +88,11 @@ class M extends r.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, n.jsxs)("div", {
-            className: o()(x.activityInviteEducation, { [x.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: o()(j.activityInviteEducation, { [j.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, n.jsx)("div", { className: x.activityInviteEducationArrow }),
+                (0, n.jsx)("div", { className: j.activityInviteEducationArrow }),
                 (0, n.jsx)("span", {
-                    children: j.intl.format(j.t["i/MoCg"], {
+                    children: x.intl.format(x.t["i/MoCg"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -160,50 +160,50 @@ function F(e) {
     let [E, T, I] = s,
         w = "";
     1 === s.length
-        ? (w = j.intl.format(j.t.lJ9sZW, { a: E }))
+        ? (w = x.intl.format(x.t.lJ9sZW, { a: E }))
         : 2 === s.length
-          ? (w = j.intl.format(j.t.rB0CUV, {
+          ? (w = x.intl.format(x.t.rB0CUV, {
                 a: E,
                 b: T,
             }))
           : 3 === s.length
-            ? (w = j.intl.format(j.t.StKTho, {
+            ? (w = x.intl.format(x.t.StKTho, {
                   a: E,
                   b: T,
                   c: I,
               }))
-            : s.length > 3 && (w = j.intl.format(j.t.Q8lUnJ, {}));
-    let Z = S && s.length > 0 && s.length <= 3 ? j.intl.format(j.t["qD/0qa"], {}) : w;
+            : s.length > 3 && (w = x.intl.format(x.t.Q8lUnJ, {}));
+    let Z = S && s.length > 0 && s.length <= 3 ? x.intl.format(x.t["qD/0qa"], {}) : w;
     return (0, n.jsxs)("div", {
         className: o()(
-            x.typing,
+            j.typing,
             {
                 "stop-animation": !i,
-                [x.isComboing]: h && p,
-                [x.inTextChannel]: g,
+                [j.isComboing]: h && p,
+                [j.inTextChannel]: g,
             },
             l,
         ),
         children: [
             (0, n.jsxs)("div", {
-                className: x.typingDots,
+                className: j.typingDots,
                 ref: O,
                 children: [
                     s.length > 0 &&
                         !1 !== c &&
                         (0, n.jsx)(u.bbz, {
-                            className: x.ellipsis,
+                            className: j.ellipsis,
                             dotRadius: 3.5,
                             themed: !0,
                         }),
                     (0, n.jsx)("span", {
-                        className: x.text,
+                        className: j.text,
                         "aria-live": "polite",
                         "aria-atomic": !0,
                         children: Z,
                     }),
                     (0, n.jsx)("span", {
-                        className: x.text,
+                        className: j.text,
                         style: {
                             position: "absolute",
                             visibility: "hidden",

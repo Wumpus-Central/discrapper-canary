@@ -83,7 +83,7 @@ function P(e) {
             (null == T ? void 0 : T.skuId) ===
             (void 0 === E ? (null == k ? void 0 : k.skuId) : null == E ? void 0 : E.skuId),
         [Z, R] = (0, i.useState)(() => null != T && O.some((e) => e.id === T.id)),
-        M = (0, i.useCallback)(
+        L = (0, i.useCallback)(
             (e) => {
                 P(),
                     (0, u.mK)({
@@ -122,7 +122,7 @@ function P(e) {
                         onSelect: (e, t) => {
                             D(e), R(null != t && t);
                         },
-                        onOpenShop: M,
+                        onOpenShop: L,
                         available: m,
                         purchased: O,
                         isPerGuild: null != x,
@@ -150,7 +150,7 @@ function P(e) {
                           })
                         : (0, n.jsx)(l.zxk, {
                               variant: "primary",
-                              onClick: () => M(null == T ? void 0 : T.skuId),
+                              onClick: () => L(null == T ? void 0 : T.skuId),
                               text: y.intl.string(y.t.fYfGgI),
                           }),
                     (0, n.jsx)(l.zxk, {

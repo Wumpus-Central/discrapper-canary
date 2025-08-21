@@ -17,9 +17,9 @@ var i = n(951288),
     S = n(706454),
     y = n(626135),
     I = n(930153),
-    f = n(74538),
-    N = n(937615),
-    g = n(981631),
+    g = n(74538),
+    f = n(937615),
+    N = n(981631),
     O = n(474936),
     b = n(388032),
     x = n(22706);
@@ -77,14 +77,14 @@ function L(e) {
         { theme: A } = (0, u.TCT)(),
         k = (0, a.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         R = null == n || null == n.premiumSubscriptionType,
-        D = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
-        v = (0, N.T4)(D.amount, D.currency),
+        D = g.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
+        v = (0, f.T4)(D.amount, D.currency),
         w = (0, P.N)(),
         Z = null == w ? void 0 : w.trial_id,
         U = (null == w || null == (t = w.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_2;
     return (
         l.useEffect(() => {
-            y.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+            y.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: O.cd.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: C,
             });
@@ -163,7 +163,7 @@ function L(e) {
                                                         }
                                                         return e;
                                                     })({}, I)),
-                                                    (t = t = { section: g.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
+                                                    (t = t = { section: N.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(
                                                               e,

@@ -50,30 +50,37 @@ function f(e) {
     let {
             children: t,
             messageType: n,
-            className: i,
-            textColor: o = "text-default",
-            textVariant: c = "text-sm/medium",
+            action: i,
+            className: o,
+            textColor: c = "text-default",
+            textVariant: f = "text-sm/medium",
         } = e,
-        f = u(n),
-        _ = d(n);
+        _ = u(n),
+        p = d(n);
     return (0, r.jsxs)("div", {
-        className: a()(l.container, _, i),
+        className: a()(l.container, p, o),
         children: [
             (0, r.jsx)("div", {
                 className: l.iconDiv,
                 children:
-                    f &&
-                    (0, r.jsx)(f, {
+                    _ &&
+                    (0, r.jsx)(_, {
                         className: l.icon,
                         color: "currentColor",
                     }),
             }),
             (0, r.jsx)(s.x, {
                 className: l.text,
-                color: o,
-                variant: c,
+                color: c,
+                variant: f,
                 children: t,
             }),
+            null != i
+                ? (0, r.jsx)("div", {
+                      className: l.actionContainer,
+                      children: i,
+                  })
+                : null,
         ],
     });
 }

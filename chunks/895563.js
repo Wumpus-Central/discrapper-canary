@@ -1,74 +1,74 @@
 t.d(n, {
-    P: () => b,
-    l: () => O,
+    P: () => _,
+    l: () => b,
 }),
     t(388685);
 var i = t(951288);
 t(647438);
-var r = t(392711),
-    l = t.n(r),
+var l = t(392711),
+    r = t.n(l),
     a = t(442837),
     o = t(481060),
-    s = t(984933),
-    c = t(853856),
-    u = t(117984),
-    d = t(593214),
+    u = t(984933),
+    s = t(853856),
+    d = t(117984),
+    c = t(593214),
     f = t(362658),
-    h = t(981631),
-    p = t(388032);
-function g(e, n) {
-    return e.type === h.d4z.GROUP_DM
+    g = t(981631),
+    h = t(388032);
+function v(e, n) {
+    return e.type === g.d4z.GROUP_DM
         ? n
-            ? p.intl.string(p.t["0BWmSE"])
-            : p.intl.string(p.t.uuVTOD)
-        : e.type === h.d4z.DM
+            ? h.intl.string(h.t["0BWmSE"])
+            : h.intl.string(h.t.uuVTOD)
+        : e.type === g.d4z.DM
           ? n
-              ? p.intl.string(p.t["2wfKGh"])
-              : p.intl.string(p.t.wPbAsb)
+              ? h.intl.string(h.t["2wfKGh"])
+              : h.intl.string(h.t.wPbAsb)
           : n
-            ? p.intl.string(p.t.Bou7lZ)
-            : p.intl.string(p.t["4wcdEx"]);
+            ? h.intl.string(h.t.Bou7lZ)
+            : h.intl.string(h.t["4wcdEx"]);
 }
-function O(e) {
-    let n = (0, a.e7)([s.ZP], () => s.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
+function b(e) {
+    let n = (0, a.e7)([u.ZP], () => u.ZP.getChannels(g.I_8))[g.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: t } = (0, f.z)("58e21a_1"),
-        { notifyFavoriteAdded: r } = (0, d.up)();
-    if (!(0, d.li)(e)) return null;
-    let [[c], p] = l().partition(n, (e) => "null" === e.channel.id);
-    function O(n) {
-        r(), (0, u.kj)(e.id, n);
+        { notifyFavoriteAdded: l } = (0, c.up)();
+    if (!(0, c.li)(e)) return null;
+    let [[s], h] = r().partition(n, (e) => "null" === e.channel.id);
+    function b(n) {
+        l(), (0, d.kj)(e.id, n);
     }
-    return 0 === p.length
+    return 0 === h.length
         ? (0, i.jsx)(o.sNh, {
               id: "favorite-channel",
-              label: g(e, !1),
-              action: () => O(null),
+              label: v(e, !1),
+              action: () => b(null),
           })
         : (0, i.jsxs)(o.sNh, {
               id: "favorite-channel",
-              label: g(e, !1),
-              action: () => O(null),
+              label: v(e, !1),
+              action: () => b(null),
               children: [
                   t &&
                       (0, i.jsx)(o.kSQ, {
                           children: (0, i.jsx)(
                               o.sNh,
                               {
-                                  id: "favorite-".concat(c.channel.id),
-                                  label: c.channel.name,
-                                  action: () => O("null" === c.channel.id ? null : c.channel.id),
+                                  id: "favorite-".concat(s.channel.id),
+                                  label: s.channel.name,
+                                  action: () => b("null" === s.channel.id ? null : s.channel.id),
                               },
-                              c.channel.id,
+                              s.channel.id,
                           ),
                       }),
                   (0, i.jsx)(o.kSQ, {
-                      children: p.map((e) =>
+                      children: h.map((e) =>
                           (0, i.jsx)(
                               o.sNh,
                               {
                                   id: "favorite-".concat(e.channel.id),
                                   label: e.channel.name,
-                                  action: () => O(e.channel.id),
+                                  action: () => b(e.channel.id),
                               },
                               e.channel.id,
                           ),
@@ -77,23 +77,23 @@ function O(e) {
               ],
           });
 }
-function b(e) {
-    let n = (0, a.e7)([c.Z], () => c.Z.isFavorite(e.id));
+function _(e) {
+    let n = (0, a.e7)([s.Z], () => s.Z.isFavorite(e.id));
     return __OVERLAY__ || !n
         ? null
         : (0, i.jsx)(o.sNh, {
               id: "favorite-channel",
-              label: g(e, !0),
+              label: v(e, !0),
               color: "danger",
               action: () =>
-                  e.type === h.d4z.GUILD_CATEGORY
+                  e.type === g.d4z.GUILD_CATEGORY
                       ? (0, o.ZDy)(async () => {
                             let { default: n } = await t.e("37720").then(t.bind(t, 357632));
                             return (t) => {
-                                var r, l;
+                                var l, r;
                                 return (0, i.jsx)(
                                     n,
-                                    ((r = (function (e) {
+                                    ((l = (function (e) {
                                         for (var n = 1; n < arguments.length; n++) {
                                             var t = null != arguments[n] ? arguments[n] : {},
                                                 i = Object.keys(t);
@@ -118,15 +118,15 @@ function b(e) {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (l = l =
+                                    (r = r =
                                         {
                                             onConfirm: () => {
-                                                t.onClose(), (0, u.oC)(e.id);
+                                                t.onClose(), (0, d.oC)(e.id);
                                             },
                                             channel: e,
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, n) {
                                               var t = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -134,13 +134,13 @@ function b(e) {
                                                   t.push.apply(t, i);
                                               }
                                               return t;
-                                          })(Object(l)).forEach(function (e) {
-                                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                          })(Object(r)).forEach(function (e) {
+                                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
                                           }),
-                                    r),
+                                    l),
                                 );
                             };
                         })
-                      : (0, u.oC)(e.id),
+                      : (0, d.oC)(e.id),
           });
 }

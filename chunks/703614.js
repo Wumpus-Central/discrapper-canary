@@ -1,15 +1,15 @@
-t.d(n, { Z: () => i });
-var r = t(951288);
-t(647438);
+n.d(t, { Z: () => i });
+var r = n(951288);
+n(647438);
 let i = (e) => {
-    let { className: n, width: t = 83, height: i = 45 } = e;
+    let { className: t, width: n = 83, height: i = 45 } = e;
     return (0, r.jsxs)("svg", {
-        width: t,
+        width: n,
         height: i,
         viewBox: "0 0 83 45",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
-        className: n,
+        className: t,
         children: [
             (0, r.jsxs)("g", {
                 opacity: "0.4",
