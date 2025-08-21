@@ -31,7 +31,7 @@ function u(e) {
         })(e, ["widgetType"]);
     let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
         [g] = (0, i.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
-        b = l.useCallback(
+        p = l.useCallback(
             (e, r, n) => {
                 f(e),
                     (0, o.ES)(t, {
@@ -73,7 +73,7 @@ function u(e) {
                 games: u,
                 isGameFetching: d,
                 isSuggestedGamesLoading: g,
-                onClick: b,
+                onClick: p,
             },
             r,
         ),

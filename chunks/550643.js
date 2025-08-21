@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(49124);
+n.d(t, { Z: () => O }), n(388685), n(49124);
 var r = n(570140),
     i = n(147913),
     a = n(710845),
@@ -7,10 +7,9 @@ var r = n(570140),
     l = n(979651),
     c = n(458725),
     u = n(754142),
-    d = n(386146),
-    f = n(915525),
-    _ = n(990291);
-function p(e, t, n) {
+    d = n(915525),
+    f = n(990291);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,11 +22,11 @@ function p(e, t, n) {
         e
     );
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -35,7 +34,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -44,23 +43,20 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let g = new a.Z("AVErrorManager");
-function E(e, t) {
+let m = new a.Z("AVErrorManager");
+function g(e, t) {
     let n = new Set();
     for (let r of e) t.has(r) || n.add(r);
     return n;
 }
-function b(e) {
-    return _.C[e.type];
+function E(e) {
+    return f.C[e.type];
 }
-function y(e) {
-    let t = b(e);
+function b(e) {
+    let t = E(e);
     return "".concat(e.type, ":").concat(null == t ? void 0 : t.makeErrorContextKey(e));
 }
-class O extends i.Z {
-    _initialize() {
-        (0, d.H3)("AVErrorManager");
-    }
+class y extends i.Z {
     updateActiveErrors() {
         var e, t;
         if (__OVERLAY__) return;
@@ -68,35 +64,35 @@ class O extends i.Z {
             i = null != n && null != (t = l.Z.getVoiceStateForChannel(n)) ? t : null,
             a = o.Z.getAllActiveStreams(),
             u = new Map();
-        for (let e of Object.values(_.C)) {
+        for (let e of Object.values(f.C)) {
             let t = e.getActiveErrors({
                 voiceChannelId: n,
                 voiceState: i,
                 activeStreams: a,
             });
-            if (null != t) for (let e of t) u.set(y(e), e);
+            if (null != t) for (let e of t) u.set(b(e), e);
         }
-        let d = f.Z.getActiveErrors();
-        if (!(d instanceof Map))
-            return void g.error(
-                "existingErrors is not a Map: ".concat(d, " type: ").concat(Object.prototype.toString.call(d)),
+        let _ = d.Z.getActiveErrors();
+        if (!(_ instanceof Map))
+            return void m.error(
+                "existingErrors is not a Map: ".concat(_, " type: ").concat(Object.prototype.toString.call(_)),
             );
-        if (0 === u.size && 0 === d.size) return;
-        let p = new Set(u.keys()),
-            m = new Set(d.keys());
-        if (p.size > m.size)
-            for (let e of E(p, m)) {
+        if (0 === u.size && 0 === _.size) return;
+        let h = new Set(u.keys()),
+            E = new Set(_.keys());
+        if (h.size > E.size)
+            for (let e of g(h, E)) {
                 let t = u.get(e);
                 null != t && (0, c.kr)(t);
             }
-        if (m.size > p.size)
-            for (let e of E(m, p)) {
+        if (E.size > h.size)
+            for (let e of g(E, h)) {
                 let t = e,
-                    n = d.get(t);
+                    n = _.get(t);
                 if (null != n) {
                     let { type: e } = n,
-                        t = h(n, ["type"]);
-                    g.info("Error resolved: ".concat(e, " ").concat(JSON.stringify(t)));
+                        t = p(n, ["type"]);
+                    m.info("Error resolved: ".concat(e, " ").concat(JSON.stringify(t)));
                 }
             }
         r.Z.dispatch({
@@ -110,7 +106,7 @@ class O extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, "actions", {
+            _(this, "actions", {
                 MEDIA_ENGINE_SET_AUDIO_ENABLED: this.updateActiveErrors,
                 AUDIO_INPUT_DETECTED: this.updateActiveErrors,
                 AUDIO_SET_DISPLAY_SILENCE_WARNING: this.updateActiveErrors,
@@ -138,4 +134,4 @@ class O extends i.Z {
             });
     }
 }
-let v = new O();
+let O = new y();

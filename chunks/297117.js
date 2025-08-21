@@ -34,7 +34,7 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                     let t = i.exec(a[2]);
                     t && ((a[2] = t[1]), (a[3] = t[2]), (a[4] = t[3]));
                 }
-                let [t, e] = p(a[1] || r.Fi, a[2]);
+                let [t, e] = L(a[1] || r.Fi, a[2]);
                 return _(e, t, a[3] ? +a[3] : void 0, a[4] ? +a[4] : void 0);
             }
         },
@@ -53,7 +53,7 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                 }
                 let t = e[3],
                     a = e[1] || r.Fi;
-                return ([a, t] = p(a, t)), _(t, a, e[4] ? +e[4] : void 0, e[5] ? +e[5] : void 0);
+                return ([a, t] = L(a, t)), _(t, a, e[4] ? +e[4] : void 0, e[5] ? +e[5] : void 0);
             }
         },
     ],
@@ -83,7 +83,7 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
     ],
     f = [c, l],
     T = (0, r.pE)(...f),
-    p = (t, e) => {
+    L = (t, e) => {
         let a = -1 !== t.indexOf("safari-extension"),
             _ = -1 !== t.indexOf("safari-web-extension");
         return a || _

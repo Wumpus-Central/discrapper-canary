@@ -11,8 +11,8 @@ var l = r(481060),
     d = r(879877),
     f = r(533815),
     g = r(853072),
-    b = r(388032),
-    p = r(958461),
+    p = r(388032),
+    b = r(958461),
     O = r(932366),
     m = r(776385);
 function j(e) {
@@ -110,7 +110,7 @@ function x(e) {
                 color: l.TVs.colors.ICON_TERTIARY,
                 className: m.icon,
             }),
-            (0, n.jsx)(l.nn4, { children: b.intl.format(b.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
+            (0, n.jsx)(l.nn4, { children: p.intl.format(p.t.TM0XDQ, { name: c.ZP.getName(i, a, r) }) }),
             (0, n.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 color: "text-tertiary",
@@ -124,7 +124,7 @@ function h(e) {
         a = (0, g.Z)(t);
     return a.length > 0
         ? (0, n.jsx)(s.Z, {
-              label: b.intl.formatToPlainString(b.t.ujhJdH, { numFriends: a.length }),
+              label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: a.length }),
               className: i,
               users: a,
               guildId: r,
@@ -134,7 +134,7 @@ function h(e) {
 }
 function P(e) {
     let { user: t, guildId: r, channelId: i, game: a, widgetType: c, loading: s = !1, disableInteraction: g = !1 } = e,
-        { gameName: P = b.intl.string(b.t.GIWFlJ), imageSrc: E, applicationId: w, comment: S, tags: I } = a,
+        { gameName: P = p.intl.string(p.t.GIWFlJ), imageSrc: E, applicationId: w, comment: S, tags: I } = a,
         _ = {
             variant: "heading-sm/medium",
             color: "text-default",
@@ -149,10 +149,10 @@ function P(e) {
                   (0, n.jsx)("div", {
                       className: m.details,
                       children: (0, n.jsxs)("div", {
-                          className: p.placeholderText,
+                          className: b.placeholderText,
                           children: [
-                              (0, n.jsx)("div", { className: p.placeholderBar }),
-                              (0, n.jsx)("div", { className: p.placeholderBar }),
+                              (0, n.jsx)("div", { className: b.placeholderBar }),
+                              (0, n.jsx)("div", { className: b.placeholderBar }),
                           ],
                       }),
                   }),

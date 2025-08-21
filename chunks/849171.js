@@ -103,7 +103,7 @@ function L(e) {
             }),
             [g],
         ),
-        { submitting: V } = (0, Z.Z)({
+        { submitting: k } = (0, Z.Z)({
             applicationId: L,
             context: F,
             launchingComponentId: D,
@@ -154,7 +154,7 @@ function L(e) {
                                           componentId: D,
                                       });
                           },
-                          submitting: V,
+                          submitting: k,
                           size: (function (e) {
                               switch (e) {
                                   case 2:

@@ -16,8 +16,8 @@ var r = a(967752),
     A = a(112797),
     f = a(305625),
     T = a(820754),
-    p = a(822578);
-let L = "Not capturing exception because it's already been captured.";
+    L = a(822578);
+let p = "Not capturing exception because it's already been captured.";
 class h {
     constructor(t) {
         if (
@@ -41,7 +41,7 @@ class h {
     }
     captureException(t, e, a) {
         let r = (0, n.DM)();
-        if ((0, n.YO)(t)) return R.X && _.kg.log(L), r;
+        if ((0, n.YO)(t)) return R.X && _.kg.log(p), r;
         let o = {
             event_id: r,
             ...e,
@@ -59,7 +59,7 @@ class h {
     }
     captureEvent(t, e, a) {
         let r = (0, n.DM)();
-        if (e && e.originalException && (0, n.YO)(e.originalException)) return R.X && _.kg.log(L), r;
+        if (e && e.originalException && (0, n.YO)(e.originalException)) return R.X && _.kg.log(p), r;
         let o = {
                 event_id: r,
                 ...e,
@@ -191,7 +191,7 @@ class h {
             !e.integrations && n.length > 0 && (e.integrations = n),
             this.emit("preprocessEvent", t, e),
             t.type || r.setLastEventId(t.event_id || e.event_id),
-            (0, p.R)(_, t, e, a, this, r).then((t) => {
+            (0, L.R)(_, t, e, a, this, r).then((t) => {
                 if (null === t) return t;
                 let e = {
                     ...r.getPropagationContext(),

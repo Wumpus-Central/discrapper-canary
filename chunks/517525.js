@@ -114,7 +114,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             { location: M } = (0, p.O)(),
             L = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
             F = u && !v.ZP.isPremium(L, _.p9.TIER_1) && !v.ZP.canStreamQuality(v.ZP.StreamQuality.MID, L),
-            V = l.useCallback(() => {
+            k = l.useCallback(() => {
                 F &&
                     D &&
                     (0, f.ZDy)(async () => {
@@ -137,7 +137,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             null == x)
         )
             return null;
-        let k = (0, r.jsx)(f.ua7, {
+        let V = (0, r.jsx)(f.ua7, {
             text: T ? j.intl.string(j.t.q8TiVl) : D ? j.intl.string(j.t.IHgpEh) : j.intl.string(j.t.vLb0VV),
             position: "bottom",
             color: f.ua7.Colors.GREY,
@@ -145,7 +145,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, r.jsxs)(
                     f.P3F,
                     w(I({}, e), {
-                        onClick: V,
+                        onClick: k,
                         className: a()(
                             Z.qualityIndicator,
                             g,
@@ -171,7 +171,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 ),
         });
         return (0, r.jsx)(f.IGR, {
-            text: k,
+            text: V,
             className: a()(C, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: D && R }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: E.eE[d],

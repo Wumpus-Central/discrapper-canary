@@ -108,96 +108,96 @@ let W = (0, o.animated)(u.eTT),
             var t, n;
             let {
                     className: l,
-                    messageGroupSpacing: p,
-                    scrollerClassName: m,
-                    channel: g,
-                    messages: b,
-                    unreadCount: _,
-                    showNewMessagesBar: y,
-                    messageDisplayCompact: x,
-                    channelStream: v,
-                    uploads: O,
-                    hasUnreads: E,
-                    editingMessageId: S,
-                    fontSize: I,
-                    keyboardModeEnabled: Z,
-                    filterAfterTimestamp: T,
-                    showingQuarantineBanner: N,
-                    hideSummaries: w = !1,
-                    jumpBarClassName: R,
-                    typingGradient: D,
-                    isChatInputBottomAligned: Y,
+                    messageGroupSpacing: o,
+                    scrollerClassName: p,
+                    channel: m,
+                    messages: g,
+                    unreadCount: b,
+                    showNewMessagesBar: _,
+                    messageDisplayCompact: y,
+                    channelStream: x,
+                    uploads: v,
+                    hasUnreads: O,
+                    editingMessageId: E,
+                    fontSize: S,
+                    keyboardModeEnabled: I,
+                    filterAfterTimestamp: Z,
+                    showingQuarantineBanner: T,
+                    hideSummaries: N = !1,
+                    jumpBarClassName: w,
+                    typingGradient: R,
+                    isChatInputBottomAligned: D,
                 } = e,
-                [q, K] = i.useState(null != (n = j.Z.isAtBottom(g.id)) && n),
-                X = i.useMemo(
+                [Y, q] = i.useState(null != (n = j.Z.isAtBottom(m.id)) && n),
+                K = i.useMemo(
                     () =>
-                        x
+                        y
                             ? (0, M.aJ)({
                                   compact: !0,
                                   messageGroups: 30,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: I,
-                                  groupSpacing: p,
+                                  fontSize: S,
+                                  groupSpacing: o,
                               })
                             : (0, M.aJ)({
                                   compact: !1,
                                   messageGroups: 26,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: I,
-                                  groupSpacing: p,
+                                  fontSize: S,
+                                  groupSpacing: o,
                               }),
-                    [x, I, p],
+                    [y, S, o],
                 ),
-                Q = (0, k.ZP)({
-                    messages: b,
-                    channel: g,
-                    compact: x,
-                    hasUnreads: E,
-                    focusId: S,
-                    placeholderHeight: X.totalHeight,
-                    canLoadMore: null == T,
-                    handleScrollToBottom: i.useCallback(() => K(!0), [K]),
-                    handleScrollFromBottom: i.useCallback(() => K(!1), [K]),
-                    additionalMessagePadding: 48 * !!Y,
+                X = (0, k.ZP)({
+                    messages: g,
+                    channel: m,
+                    compact: y,
+                    hasUnreads: O,
+                    focusId: E,
+                    placeholderHeight: K.totalHeight,
+                    canLoadMore: null == Z,
+                    handleScrollToBottom: i.useCallback(() => q(!0), [q]),
+                    handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
+                    additionalMessagePadding: 48 * !!D,
                 }),
-                J = (0, L.Z)({
-                    scrollerRef: Q.ref,
-                    isEditing: null != S,
-                    keyboardModeEnabled: Z,
-                    hasMoreAfter: b.hasMoreAfter,
+                Q = (0, L.Z)({
+                    scrollerRef: X.ref,
+                    isEditing: null != E,
+                    keyboardModeEnabled: I,
+                    hasMoreAfter: g.hasMoreAfter,
                 }),
-                $ = (0, c.e7)([C.Z], () =>
-                    P.Z.can(B.Plq.READ_MESSAGE_HISTORY, g) ? null : C.Z.getViewingRolesTimestamp(g.getGuildId()),
+                J = (0, c.e7)([C.Z], () =>
+                    P.Z.can(B.Plq.READ_MESSAGE_HISTORY, m) ? null : C.Z.getViewingRolesTimestamp(m.getGuildId()),
                 ),
                 {
-                    channelStreamMarkup: ee,
-                    newMessagesBar: et,
-                    jumpToPresentBar: en,
-                    forumPostActionBar: er,
-                    safetyWarningBanner: ei,
+                    channelStreamMarkup: $,
+                    newMessagesBar: ee,
+                    jumpToPresentBar: et,
+                    forumPostActionBar: en,
+                    safetyWarningBanner: er,
                 } = (0, U.Z)({
-                    channel: g,
-                    messages: b,
-                    unreadCount: _,
-                    showNewMessagesBar: y,
-                    messageDisplayCompact: x,
-                    channelStream: v,
-                    uploads: O,
-                    loadMore: Q.loadMore,
-                    scrollManager: Q,
-                    specs: X,
-                    filterAfterTimestamp: null != T ? T : $,
-                    showingQuarantineBanner: N,
-                    hideSummaries: w,
+                    channel: m,
+                    messages: g,
+                    unreadCount: b,
+                    showNewMessagesBar: _,
+                    messageDisplayCompact: y,
+                    channelStream: x,
+                    uploads: v,
+                    loadMore: X.loadMore,
+                    scrollManager: X,
+                    specs: K,
+                    filterAfterTimestamp: null != Z ? Z : J,
+                    showingQuarantineBanner: T,
+                    hideSummaries: N,
                     jumpToPresent: () => {
-                        if (b.hasPresent()) {
+                        if (g.hasPresent()) {
                             var e;
-                            null == (e = Q.ref.current) || e.scrollToBottom({ animate: !f.Z.useReducedMotion });
-                        } else d.Z.jumpToPresent(g.id, B.AQB);
+                            null == (e = X.ref.current) || e.scrollToBottom({ animate: !f.Z.useReducedMotion });
+                        } else d.Z.jumpToPresent(m.id, B.AQB);
                     },
-                    jumpBarClassName: R,
+                    jumpBarClassName: w,
                 });
             !(function (e) {
                 let t = i.useCallback(() => {
@@ -224,80 +224,68 @@ let W = (0, o.animated)(u.eTT),
                         event: B.CkL.SCROLL_PAGE_DOWN,
                         handler: r,
                     });
-            })(Q.ref);
-            let el = (0, u.mFp)(),
-                ea = (0, s.l2)(J),
-                { ref: eo } = ea,
-                es = z(ea, ["ref"]),
-                ec = (0, h.Z)((e) => {
+            })(X.ref);
+            let ei = (0, u.mFp)(),
+                el = (0, s.l2)(Q),
+                { ref: ea } = el,
+                eo = z(el, ["ref"]),
+                es = (0, h.Z)((e) => {
                     var t;
-                    (Q.ref.current = e),
-                        (eo.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                    (X.ref.current = e),
+                        (ea.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
-                [{ fadeStart: eu, fadeEnd: ed }] = (0, u.q_F)(
-                    {
-                        fadeStart: D && !q ? 96 : D ? 32 : 16,
-                        fadeEnd: D && !q ? 24 : 24 * !!D,
-                        config: {
-                            tension: 150,
-                            friction: 15,
-                            clamp: !0,
-                        },
-                    },
-                    "respect-motion-settings",
-                    [D, q],
-                );
+                ec = i.useMemo(() => {
+                    let e = R && !Y ? 96 : R ? 32 : 16,
+                        t = R && !Y ? 24 : 24 * !!R;
+                    return {
+                        mask: "linear-gradient(180deg, black 0%, black calc(100% - "
+                            .concat(e, "px), rgba(0,0,0,0) calc(100% - ")
+                            .concat(t, "px), rgba(0,0,0,0) 100%)"),
+                    };
+                }, [R, Y]);
             return (0, r.jsxs)(s.bG, {
-                navigator: J,
+                navigator: Q,
                 children: [
-                    null != ei && ei,
+                    null != er && er,
                     (0, r.jsxs)("div", {
-                        className: a()(F.messagesWrapper, l, "group-spacing-".concat(p)),
+                        className: a()(F.messagesWrapper, l, "group-spacing-".concat(o)),
                         children: [
-                            null == ei && et,
+                            null == er && ee,
                             (0, r.jsxs)(
                                 W,
                                 V(
                                     H(
                                         {
-                                            style: Y
-                                                ? {
-                                                      mask: (0, o.to)([eu, ed], (e, t) =>
-                                                          "linear-gradient(180deg, black 0%, black calc(100% - "
-                                                              .concat(e, "px), rgba(0,0,0,0) calc(100% - ")
-                                                              .concat(t, "px), rgba(0,0,0,0) 100%)"),
-                                                      ),
-                                                  }
-                                                : void 0,
-                                            ref: ec,
+                                            style: D ? ec : void 0,
+                                            ref: es,
                                             customTheme: !0,
-                                            className: a()(m, F.scroller),
+                                            className: a()(p, F.scroller),
                                             contentClassName: F.scrollerContent,
-                                            onResize: Q.handleResize,
-                                            onScroll: Q.handleScroll,
-                                            onMouseDown: Q.handleMouseDown,
-                                            onMouseUp: Q.handleMouseUp,
+                                            onResize: X.handleResize,
+                                            onScroll: X.handleScroll,
+                                            onMouseDown: X.handleMouseDown,
+                                            onMouseUp: X.handleMouseUp,
                                         },
-                                        el,
+                                        ei,
                                     ),
                                     {
                                         tabIndex: -1,
                                         role: "group",
                                         children: [
-                                            er,
+                                            en,
                                             (0, r.jsxs)(
                                                 "ol",
                                                 V(
                                                     H(
                                                         {
                                                             className: a()(F.scrollerInner, {
-                                                                [F.scrollerAllowSticky]: g.isModeratorReportChannel(),
+                                                                [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
                                                             "aria-label": G.intl.formatToPlainString(G.t.XarRiI, {
-                                                                channelName: g.name,
+                                                                channelName: m.name,
                                                             }),
                                                         },
-                                                        es,
+                                                        eo,
                                                     ),
                                                     {
                                                         children: [
@@ -307,18 +295,18 @@ let W = (0, o.animated)(u.eTT),
                                                                 "aria-hidden": !0,
                                                                 children: G.intl.string(G.t.Spb3s7),
                                                             }),
-                                                            ee,
+                                                            $,
                                                             (0, r.jsx)("div", {
                                                                 className: a()({
-                                                                    [F.scrollerSpacer]: !N,
-                                                                    [F.empty]: 0 === b.length && !b.loadingMore,
+                                                                    [F.scrollerSpacer]: !T,
+                                                                    [F.empty]: 0 === g.length && !g.loadingMore,
                                                                     [F.emptyForum]:
-                                                                        1 === b.length &&
-                                                                        !b.loadingMore &&
-                                                                        g.isForumPost() &&
-                                                                        (null == (t = b.first())
+                                                                        1 === g.length &&
+                                                                        !g.loadingMore &&
+                                                                        m.isForumPost() &&
+                                                                        (null == (t = g.first())
                                                                             ? void 0
-                                                                            : t.isFirstMessageInForumPost(g)),
+                                                                            : t.isFirstMessageInForumPost(m)),
                                                                 }),
                                                             }),
                                                         ],
@@ -329,7 +317,7 @@ let W = (0, o.animated)(u.eTT),
                                     },
                                 ),
                             ),
-                            en,
+                            et,
                         ],
                     }),
                 ],

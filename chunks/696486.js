@@ -5,8 +5,8 @@ a.d(e, {
     HN: () => v,
     HR: () => d,
     Hb: () => A,
-    Tt: () => L,
-    XU: () => p,
+    Tt: () => p,
+    XU: () => L,
     _4: () => h,
     ed: () => D,
     i0: () => R,
@@ -29,7 +29,7 @@ let I = 0,
     R = 1;
 function d(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
-        { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
+        { data: _, op: n, parent_span_id: o, status: i, origin: c } = L(t);
     return (0, r.Jr)({
         parent_span_id: o,
         span_id: e,
@@ -42,7 +42,7 @@ function d(t) {
 }
 function N(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
-        { parent_span_id: _ } = p(t);
+        { parent_span_id: _ } = L(t);
     return (0, r.Jr)({
         parent_span_id: _,
         span_id: e,
@@ -51,7 +51,7 @@ function N(t) {
 }
 function A(t) {
     let { traceId: e, spanId: a } = t.spanContext(),
-        r = L(t);
+        r = p(t);
     return (0, _.$p)(e, a, r);
 }
 function f(t) {
@@ -66,7 +66,7 @@ function f(t) {
 function T(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
-function p(t) {
+function L(t) {
     if ("function" == typeof t.getSpanJSON) return t.getSpanJSON();
     try {
         var e;
@@ -95,7 +95,7 @@ function p(t) {
         return {};
     }
 }
-function L(t) {
+function p(t) {
     let { traceFlags: e } = t.spanContext();
     return e === R;
 }
@@ -115,7 +115,7 @@ function C(t) {
     let e = new Set();
     return (
         !(function t(a) {
-            if (!e.has(a) && L(a)) for (let r of (e.add(a), a[O] ? Array.from(a[O]) : [])) t(r);
+            if (!e.has(a) && p(a)) for (let r of (e.add(a), a[O] ? Array.from(a[O]) : [])) t(r);
         })(t),
         Array.from(e)
     );

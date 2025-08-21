@@ -1,13 +1,13 @@
-i.d(t, {
-    Rj: () => a,
-    Ws: () => o,
+r.d(t, {
+    Rj: () => s,
+    Ws: () => l,
 }),
-    i(539854),
-    i(388685);
-var r = i(647438),
-    n = i(979554),
-    l = i(388032);
-class s {
+    r(539854),
+    r(388685);
+var a = r(647438),
+    n = r(979554),
+    i = r(388032);
+class o {
     get firstAvatarDecoration() {
         return this.getFirstItemByType(n.Z.AVATAR_DECORATION);
     }
@@ -16,46 +16,46 @@ class s {
     }
     getFirstItemByType(e) {
         var t;
-        let i = (null != (t = this.itemsByTypes.get(e)) ? t : [])[0];
-        if (null != i) return i;
+        let r = (null != (t = this.itemsByTypes.get(e)) ? t : [])[0];
+        if (null != r) return r;
     }
     sortByTypes(e) {
         return e.reduce((e, t) => {
-            let i = e.get(t.type);
-            return null != i ? i.push(t) : e.set(t.type, [t]), e;
+            let r = e.get(t.type);
+            return null != r ? r.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
     constructor(e) {
-        !(function (e, t, i) {
+        !(function (e, t, r) {
             t in e
                 ? Object.defineProperty(e, t, {
-                      value: i,
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0,
                   })
-                : (e[t] = i);
+                : (e[t] = r);
         })(this, "itemsByTypes", void 0),
             (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let a = (e) => {
-        let { firstProfileEffect: t, firstAvatarDecoration: i } = r.useMemo(() => new s(e.items), [e]);
+let s = (e) => {
+        let { firstProfileEffect: t, firstAvatarDecoration: r } = a.useMemo(() => new o(e.items), [e]);
         return {
             firstProfileEffect: t,
-            firstAvatarDecoration: i,
+            firstAvatarDecoration: r,
         };
     },
-    o = (e) => {
-        let t = l.intl.string(l.t["7v0T9P"]),
-            i = l.intl.string(l.t.wR5wOj);
+    l = (e) => {
+        let t = i.intl.string(i.t["7v0T9P"]),
+            r = i.intl.string(i.t.wR5wOj);
         if (null != e.bundledProducts) {
-            var r, n;
-            e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name),
-                e.bundledProducts.length > 1 && (i = null == (n = e.bundledProducts[1]) ? void 0 : n.name);
+            var a, n;
+            e.bundledProducts.length > 0 && (t = null == (a = e.bundledProducts[0]) ? void 0 : a.name),
+                e.bundledProducts.length > 1 && (r = null == (n = e.bundledProducts[1]) ? void 0 : n.name);
         }
         return {
             itemOneName: t,
-            itemTwoName: i,
+            itemTwoName: r,
         };
     };

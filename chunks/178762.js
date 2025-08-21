@@ -1,9 +1,9 @@
 n.d(t, {
-    Ir: () => z,
-    J: () => K,
-    YN: () => V,
-    ZP: () => X,
-    iZ: () => H,
+    Ir: () => X,
+    J: () => q,
+    YN: () => F,
+    ZP: () => J,
+    iZ: () => Y,
 }),
     n(388685);
 var r = n(951288),
@@ -28,18 +28,19 @@ var r = n(951288),
     v = n(107062),
     I = n(91140),
     T = n(227172),
-    S = n(551228),
-    A = n(678869),
-    C = n(278399),
-    N = n(886217),
-    R = n(555672),
-    P = n(644548),
-    w = n(335326),
-    D = n(268010),
-    x = n(797342),
-    L = n(206583),
-    j = n(921944);
-function M(e, t, n) {
+    S = n(342998),
+    A = n(551228),
+    C = n(678869),
+    N = n(278399),
+    R = n(886217),
+    P = n(555672),
+    w = n(644548),
+    D = n(335326),
+    x = n(268010),
+    L = n(797342),
+    j = n(206583),
+    M = n(921944);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +53,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,12 +64,12 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
 }
-function U(e, t) {
+function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,22 +81,22 @@ function U(e, t) {
     }
     return n;
 }
-function G(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : U(Object(t)).forEach(function (n) {
+            : G(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function B(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = Z(e, t);
+        i = V(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -103,7 +104,7 @@ function B(e, t) {
     }
     return i;
 }
-function Z(e, t) {
+function V(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,39 +113,51 @@ function Z(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let V = 72,
-    F = 2000;
-function H(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? V : 0;
+let F = 72,
+    H = 2000;
+function Y(e) {
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? F : 0;
 }
-let Y = (e) => {
+let W = (e) => {
         var { entry: t } = e,
-            n = B(e, ["entry"]);
+            n = Z(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(I.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(I.Z, B(U({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(w.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(D.Z, B(U({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(R.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(P.ZP, B(U({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(C.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(N.ZP, B(U({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(S.ZP, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(A.ZP, B(U({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(O.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(O.Z, B(U({}, n), { entry: t }));
             case l.s.LEADERBOARD:
-                return (0, r.jsx)(g.Z, G(k({}, n), { entry: t }));
+                return (0, r.jsx)(g.Z, B(U({}, n), { entry: t }));
             default:
                 return null;
         }
     },
-    W = (e) => {
+    K = (e) => {
+        var t,
+            { entry: n, targetElementRef: i } = e,
+            a = Z(e, ["entry", "targetElementRef"]);
+        return n.content_type === l.s.PLAYED_GAME
+            ? (0, r.jsx)(S.Z, {
+                  entry: n,
+                  targetElementRef: i,
+                  isFirstApplicationOccurrence: null != (t = a.isFirstApplicationOccurrence) && t,
+              })
+            : null;
+    },
+    z = (e) => {
         var { closePopout: t } = e,
-            n = B(e, ["closePopout"]);
+            n = Z(e, ["closePopout"]);
         return (0, r.jsx)(
-            K,
-            k(
+            q,
+            U(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -155,7 +168,7 @@ let Y = (e) => {
                     },
                     closePopout: t,
                     onVoiceChannelPreview: (e) => {
-                        n.trackRankingItemInteraction(L.xP.VOICE_CHANNEL_PREVIEWED, {
+                        n.trackRankingItemInteraction(j.xP.VOICE_CHANNEL_PREVIEWED, {
                             destinationChannelId: e.id,
                             destinationGuildId: e.guild_id,
                         });
@@ -165,23 +178,23 @@ let Y = (e) => {
             ),
         );
     },
-    K = (e) => {
+    q = (e) => {
         var t,
             { entry: n } = e,
-            i = B(e, ["entry"]);
+            i = Z(e, ["entry"]);
         switch (n.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(T.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(T.Z, B(U({}, i), { entry: n }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(D.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(x.Z, B(U({}, i), { entry: n }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(P.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(w.Z, B(U({}, i), { entry: n }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(N.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(R.Z, B(U({}, i), { entry: n }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(A.Z, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(C.Z, B(U({}, i), { entry: n }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(v.ZP, G(k({}, i), { entry: n }));
+                return (0, r.jsx)(v.ZP, B(U({}, i), { entry: n }));
             case l.s.LEADERBOARD:
                 return (null == (t = i.channel) ? void 0 : t.guild_id) != null
                     ? (0, r.jsx)(m.Z, {
@@ -195,36 +208,40 @@ let Y = (e) => {
                 return null;
         }
     },
-    z = i.createContext(void 0),
-    q = (e) => {
+    X = i.createContext(void 0),
+    Q = (e) => {
         var t,
             { index: a, ref: p } = e,
-            m = B(e, ["index", "ref"]);
+            m = Z(e, ["index", "ref"]);
         let g = i.useRef(null),
             [E, O] = i.useState("default"),
-            v = (0, s.JA)("".concat(a)),
-            I = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: T, appName: S } = (0, x.n)(m.entry),
-            A = i.useMemo(
+            [v, I] = i.useState(!1),
+            T = (0, s.JA)("".concat(a)),
+            S = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
+            { isRich: A, appName: C } = (0, L.n)(m.entry),
+            N = i.useMemo(
                 () => ({
                     entry: m.entry,
                     channelId: m.channel.id,
                     guildId: m.channel.guild_id,
                     requestId: m.requestId,
-                    richPresenceName: T ? S : void 0,
+                    richPresenceName: A ? C : void 0,
                 }),
-                [S, m.channel.guild_id, m.channel.id, m.entry, m.requestId, T],
+                [C, m.channel.guild_id, m.channel.id, m.entry, m.requestId, A],
             ),
-            C = i.useRef(!1),
-            [N, R] = i.useState(!1),
+            R = i.useRef(!1),
             [P, w] = i.useState(!1),
-            D = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
+            [D, x] = i.useState(!1),
+            k = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            N && D && w(!0);
-        }, [N, D]);
-        let M = i.useCallback(
+            P && k && x(!0);
+        }, [P, k]),
+            i.useLayoutEffect(() => {
+                null != g.current && I(!0);
+            }, []);
+        let G = i.useCallback(
                 (e) => {
-                    I &&
+                    S &&
                         (0, f.jW)(e, async () => {
                             let { default: e } = await n.e("153").then(n.bind(n, 330150));
                             return () =>
@@ -234,25 +251,25 @@ let Y = (e) => {
                                 });
                         });
                 },
-                [m, I],
+                [m, S],
             ),
-            U = i.useCallback(() => {
+            V = i.useCallback(() => {
                 O(String(Date.now()));
             }, []),
-            Z = i.useCallback(
+            F = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, y.L)(e, k({}, A, t));
+                    (0, y.L)(e, U({}, N, t));
                 },
-                [A],
+                [N],
             ),
-            V = i.useMemo(
+            Y = i.useMemo(
                 () =>
                     o().throttle(
                         (e) => {
-                            (0, y.L)(L.xP.CARD_POPOUT_OPEN, e);
+                            (0, y.L)(j.xP.CARD_POPOUT_OPEN, e);
                         },
-                        F,
+                        H,
                         {
                             leading: !0,
                             trailing: !1,
@@ -260,80 +277,85 @@ let Y = (e) => {
                     ),
                 [],
             ),
-            H = () => {
-                (C.current = !1),
+            q = () => {
+                (R.current = !1),
                     setTimeout(() => {
-                        C.current || (R(!1), w(D));
+                        R.current || (w(!1), x(k));
                     }, 100);
             };
-        return (0, r.jsx)("div", {
-            ref: p,
-            onMouseEnter: () => {
-                m.entry.content_type !== l.s.LEADERBOARD ||
-                    (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) ||
-                    (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: j.L.SECONDARY }),
-                    (C.current = !0),
-                    setTimeout(() => {
-                        C.current && R(!0), V(A);
-                    }, 100);
-            },
-            onMouseLeave: H,
-            children: (0, r.jsx)(d.yRy, {
-                targetElementRef: g,
-                renderPopout: (e) => {
-                    let { closePopout: t } = e;
-                    return (0, r.jsx)(z.Provider, {
-                        value: H,
-                        children: (0, r.jsx)(
-                            W,
-                            k(
-                                {
-                                    closePopout: t,
-                                    updatePopoutPosition: U,
-                                    trackRankingItemInteraction: Z,
-                                },
-                                m,
-                            ),
-                        ),
-                    });
-                },
-                position: "left",
-                shouldShow: N,
-                positionKey: E,
-                onRequestOpen: () => V(A),
-                onRequestClose: () => {
-                    P && H();
-                },
-                spacing: 8,
-                children: (e, t) => {
-                    let { isShown: n } = t;
-                    return (0, r.jsx)(
-                        d.P3F,
-                        G(k({}, e, v), {
-                            innerRef: g,
-                            focusProps: {
-                                offset: {
-                                    top: 4,
-                                    bottom: 4,
-                                    left: 4,
-                                    right: 4,
-                                },
-                            },
-                            onClick: () => {
-                                N || R(!0);
-                            },
-                            onContextMenu: M,
-                            children: (0, r.jsx)(
-                                Y,
-                                G(k({}, m), {
-                                    selected: n,
-                                    hovered: C.current,
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                v && (0, r.jsx)(K, B(U({}, m), { targetElementRef: g })),
+                (0, r.jsx)("div", {
+                    ref: p,
+                    onMouseEnter: () => {
+                        m.entry.content_type !== l.s.LEADERBOARD ||
+                            (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) ||
+                            (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
+                            (R.current = !0),
+                            setTimeout(() => {
+                                R.current && w(!0), Y(N);
+                            }, 100);
+                    },
+                    onMouseLeave: q,
+                    children: (0, r.jsx)(d.yRy, {
+                        targetElementRef: g,
+                        renderPopout: (e) => {
+                            let { closePopout: t } = e;
+                            return (0, r.jsx)(X.Provider, {
+                                value: q,
+                                children: (0, r.jsx)(
+                                    z,
+                                    U(
+                                        {
+                                            closePopout: t,
+                                            updatePopoutPosition: V,
+                                            trackRankingItemInteraction: F,
+                                        },
+                                        m,
+                                    ),
+                                ),
+                            });
+                        },
+                        position: "left",
+                        shouldShow: P,
+                        positionKey: E,
+                        onRequestOpen: () => Y(N),
+                        onRequestClose: () => {
+                            D && q();
+                        },
+                        spacing: 8,
+                        children: (e, t) => {
+                            let { isShown: n } = t;
+                            return (0, r.jsx)(
+                                d.P3F,
+                                B(U({}, e, T), {
+                                    innerRef: g,
+                                    focusProps: {
+                                        offset: {
+                                            top: 4,
+                                            bottom: 4,
+                                            left: 4,
+                                            right: 4,
+                                        },
+                                    },
+                                    onClick: () => {
+                                        P || w(!0);
+                                    },
+                                    onContextMenu: G,
+                                    children: (0, r.jsx)(
+                                        W,
+                                        B(U({}, m), {
+                                            selected: n,
+                                            hovered: R.current,
+                                        }),
+                                    ),
                                 }),
-                            ),
-                        }),
-                    );
-                },
-            }),
+                            );
+                        },
+                    }),
+                }),
+            ],
         });
     },
-    X = i.memo(q);
+    J = i.memo(Q);

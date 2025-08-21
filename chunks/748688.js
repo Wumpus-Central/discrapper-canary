@@ -8,7 +8,7 @@ a.d(e, {
     dz: () => b,
     nm: () => v,
     ph: () => S,
-    x5: () => L,
+    x5: () => p,
 });
 var r = a(559508),
     _ = a(696486),
@@ -30,8 +30,8 @@ let I = String(0),
         (u.m9.navigator && u.m9.navigator.language) ||
         (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages["0"]) ||
         "",
-    p = u.m9.navigator && u.m9.navigator.userAgentData;
-function L(t) {
+    L = u.m9.navigator && u.m9.navigator.userAgentData;
+function p(t) {
     return "pageload" === (0, _.XU)(t).op;
 }
 function h(t, e) {
@@ -52,11 +52,10 @@ function O(t) {
         e
     );
 }
-"object" == typeof p &&
-    null !== p &&
-    "getHighEntropyValues" in p &&
-    p
-        .getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
+"object" == typeof L &&
+    null !== L &&
+    "getHighEntropyValues" in L &&
+    L.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
         .then((t) => {
             if (
                 ((R = t.platform || ""),
@@ -147,7 +146,7 @@ function v(t, e, a, _) {
         throw TypeError("Profiling events may only be attached to transactions, this should never occur.");
     if (null == a)
         throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${a} instead.`);
-    let p = (function (t) {
+    let L = (function (t) {
             let e = t && t.contexts && t.contexts.trace && t.contexts.trace.trace_id;
             return ("string" == typeof e &&
                 32 !== e.length &&
@@ -157,7 +156,7 @@ function v(t, e, a, _) {
                 ? ""
                 : e;
         })(_),
-        L =
+        p =
             "thread_metadata" in (E = a)
                 ? E
                 : (function (t) {
@@ -273,12 +272,12 @@ function v(t, e, a, _) {
                 return E;
             })(a.resources),
         },
-        profile: L,
+        profile: p,
         transactions: [
             {
                 name: _.transaction || "",
                 id: _.event_id || (0, c.DM)(),
-                trace_id: p,
+                trace_id: L,
                 active_thread_id: I,
                 relative_start_ns: "0",
                 relative_end_ns: ((O - h) * 1000000).toFixed(0),

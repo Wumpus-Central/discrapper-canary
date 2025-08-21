@@ -14,8 +14,8 @@ var n = r(951288),
     d = r(351402),
     f = r(206599),
     g = r(747101),
-    b = r(517157),
-    p = r(985748),
+    p = r(517157),
+    b = r(985748),
     O = r(566007),
     m = r(173951),
     j = r(455731),
@@ -75,7 +75,7 @@ function E(e) {
         case i.l.FAVORITE_GAMES:
             return (0, n.jsx)(O.Z, P({ widget: t }, r));
         case i.l.CURRENT_GAMES:
-            return (0, n.jsx)(p.Z, P({ widget: t }, r));
+            return (0, n.jsx)(b.Z, P({ widget: t }, r));
         case i.l.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(j.Z, P({ widget: t }, r));
         case i.l.PLAYED_GAMES:
@@ -100,8 +100,8 @@ function w() {
 }
 function S(e) {
     let { user: t, guildId: r, channelId: i } = e,
-        o = (0, b.Z)(t.id),
-        { widgets: p, isGameFetching: O } = (0, g.Z)(o),
+        o = (0, p.Z)(t.id),
+        { widgets: b, isGameFetching: O } = (0, g.Z)(o),
         m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
@@ -113,13 +113,13 @@ function S(e) {
                 "GB" === e && r
             );
         })(),
-        x = 0 === p.length && m;
-    return ((0, f.J)(m, p), x)
+        x = 0 === b.length && m;
+    return ((0, f.J)(m, b), x)
         ? (0, n.jsx)(v.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   j && (0, n.jsx)(w, {}),
-                  p.map((e) =>
+                  b.map((e) =>
                       (0, n.jsx)(
                           E,
                           {

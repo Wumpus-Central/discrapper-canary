@@ -23,10 +23,10 @@ function I(t, e, a, r, n = {}) {
         R = l && (0, c.XU)(l).description,
         { unit: d, tags: N, timestamp: A } = n,
         { release: f, environment: T } = E.getOptions(),
-        p = {};
-    f && (p.release = f),
-        T && (p.environment = T),
-        R && (p.transaction = R),
+        L = {};
+    f && (L.release = f),
+        T && (L.environment = T),
+        R && (L.transaction = R),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
         u(E, t).add(
             e,
@@ -34,7 +34,7 @@ function I(t, e, a, r, n = {}) {
             r,
             d,
             {
-                ...p,
+                ...L,
                 ...N,
             },
             A,

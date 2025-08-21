@@ -51,7 +51,7 @@ function g(e, t) {
         e
     );
 }
-function b(e) {
+function p(e) {
     let { imageSrc: t, gameName: r } = e,
         [i, a] = l.useState(!1),
         c = null != r ? r : u.intl.string(u.t.GIWFlJ);
@@ -75,8 +75,8 @@ function b(e) {
               onLoad: () => a(!1),
           });
 }
-function p(e) {
-    let { imageSrc: t, gameName: r, applicationId: l, userId: i, className: p, hideTooltip: O = !1 } = e,
+function b(e) {
+    let { imageSrc: t, gameName: r, applicationId: l, userId: i, className: b, hideTooltip: O = !1 } = e,
         m = (0, s.Z)({
             location: "GameCover",
             applicationId: l,
@@ -98,8 +98,8 @@ function p(e) {
             ? (e) =>
                   (0, n.jsx)(
                       "div",
-                      g(f({ className: p }, e), {
-                          children: (0, n.jsx)(b, {
+                      g(f({ className: b }, e), {
+                          children: (0, n.jsx)(p, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -111,8 +111,8 @@ function p(e) {
                       g(f({}, e), {
                           onClick: m,
                           "aria-label": y,
-                          className: a()(d.clickable, p),
-                          children: (0, n.jsx)(b, {
+                          className: a()(d.clickable, b),
+                          children: (0, n.jsx)(p, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -147,10 +147,10 @@ function O(e) {
     return i
         ? (0, n.jsx)("div", {
               className: s,
-              children: (0, n.jsx)(b, f({}, c)),
+              children: (0, n.jsx)(p, f({}, c)),
           })
         : (0, n.jsx)(
-              p,
+              b,
               f(
                   {
                       className: s,

@@ -28,7 +28,7 @@ let T = (0, o._I)((t = {}) => {
     return {
         name: "Breadcrumbs",
         setup(t) {
-            var a, o, T, p, L, h, O;
+            var a, o, T, L, p, h, O;
             e.console &&
                 (0, E.e)(
                     ((a = t),
@@ -101,9 +101,9 @@ let T = (0, o._I)((t = {}) => {
                     ),
                 e.xhr &&
                     (0, _.UK)(
-                        ((p = t),
+                        ((L = t),
                         function (t) {
-                            if ((0, i.s3)() !== p) return;
+                            if ((0, i.s3)() !== L) return;
                             let { startTimestamp: e, endTimestamp: a } = t,
                                 r = t.xhr[_.xU];
                             if (!e || !a || !r) return;
@@ -130,9 +130,9 @@ let T = (0, o._I)((t = {}) => {
                     ),
                 e.fetch &&
                     (0, s.Uf)(
-                        ((L = t),
+                        ((p = t),
                         function (t) {
-                            if ((0, i.s3)() !== L) return;
+                            if ((0, i.s3)() !== p) return;
                             let { startTimestamp: e, endTimestamp: a } = t;
                             if (a && (!t.fetchData.url.match(/sentry_key/) || "POST" !== t.fetchData.method))
                                 if (t.error) {

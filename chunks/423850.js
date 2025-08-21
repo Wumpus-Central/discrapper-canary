@@ -27,17 +27,17 @@ function d() {
                 A = a.getOptions(),
                 f = (0, u.XL)(i.Z1 + l.startTime),
                 T = (0, u.XL)(t.value),
-                p = (0, r.nZ)(),
-                L = (0, _.HN)(),
-                h = L ? (0, _.Gx)(L) : void 0,
+                L = (0, r.nZ)(),
+                p = (0, _.HN)(),
+                h = p ? (0, _.Gx)(p) : void 0,
                 O = (null != I ? R.get(I) : void 0) || h,
-                P = O ? (0, _.XU)(O).description : p.getScopeData().transactionName,
-                g = p.getUser(),
+                P = O ? (0, _.XU)(O).description : L.getScopeData().transactionName,
+                g = L.getUser(),
                 D = a.getIntegrationByName("Replay"),
                 C = D && D.getReplayId(),
                 m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
-                e = p.getScopeData().contexts.profile.profile_id;
+                e = L.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
             let v = (0, c.Rt)(l.target),
                 y = (0, E.Jr)({

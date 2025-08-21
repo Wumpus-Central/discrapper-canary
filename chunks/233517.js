@@ -13,9 +13,9 @@ a.d(e, {
     sU: () => d,
     uT: () => l,
     v: () => I,
-    xv: () => L,
+    xv: () => p,
     yj: () => P,
-    yl: () => p,
+    yl: () => L,
 });
 var r = a(622916),
     _ = a(899517),
@@ -56,11 +56,11 @@ function f(t) {
 function T() {
     return (0, o.aF)().lastEventId();
 }
-async function p(t) {
+async function L(t) {
     let e = (0, o.s3)();
     return e ? e.flush(t) : (i.X && r.kg.warn("Cannot flush events. No client defined."), Promise.resolve(!1));
 }
-async function L(t) {
+async function p(t) {
     let e = (0, o.s3)();
     return e
         ? e.close(t)

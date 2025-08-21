@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => p });
 var n = r(951288),
     l = r(647438),
     i = r(481060),
@@ -51,10 +51,10 @@ function g(e, t) {
         e
     );
 }
-function b(e) {
+function p(e) {
     let { widget: t } = e,
-        b = l.useRef(null),
-        p = (e) => {
+        p = l.useRef(null),
+        b = (e) => {
             if (e.shiftKey) {
                 (0, c.y8)(t.type), (0, s.L$)(u.qb.WIDGET_REMOVED);
                 return;
@@ -75,7 +75,7 @@ function b(e) {
             );
         };
     return (0, n.jsx)(i.yRy, {
-        targetElementRef: b,
+        targetElementRef: p,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -92,7 +92,7 @@ function b(e) {
                     children: (0, n.jsx)(i.sNh, {
                         id: "remove-widget",
                         label: d.intl.string(d.t.Mm07YW),
-                        action: p,
+                        action: b,
                         color: "danger",
                         icon: i.XHJ,
                     }),
@@ -103,7 +103,7 @@ function b(e) {
             (0, n.jsx)(
                 i.hU,
                 g(f({}, e), {
-                    buttonRef: b,
+                    buttonRef: p,
                     icon: i.xhG,
                     variant: "secondary",
                     "aria-label": d.intl.string(d.t.xpSHSk),

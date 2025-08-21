@@ -5243,6 +5243,7 @@ var nb = (function (e) {
             (e[(e.PROMOTED = 536870912)] = "PROMOTED"),
             (e[(e.PARTNER = 1073741824)] = "PARTNER"),
             (e[(e.PARENT = 8589934592)] = "PARENT"),
+            (e[(e.DISABLE_RELATIONSHIPS_ACCESS = 17179869184)] = "DISABLE_RELATIONSHIPS_ACCESS"),
             e
         );
     })({}),

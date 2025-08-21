@@ -1,4 +1,4 @@
-r.d(t, { Z: () => p }), r(388685);
+r.d(t, { Z: () => b }), r(388685);
 var n = r(951288),
     l = r(647438),
     i = r(120356),
@@ -10,9 +10,9 @@ var n = r(951288),
     d = r(86419),
     f = r(840367),
     g = r(272289),
-    b = r(415734);
-function p(e) {
-    let { userId: t, widget: r, children: i, disableInteraction: p, className: O } = e,
+    p = r(415734);
+function b(e) {
+    let { userId: t, widget: r, children: i, disableInteraction: b, className: O } = e,
         [m, j] = l.useState(!1),
         y = (0, s.Dt)(),
         v = (0, c.e7)([u.default], () => u.default.getId() === t),
@@ -21,21 +21,21 @@ function p(e) {
             j(!0);
         }, []);
     return (0, n.jsxs)("section", {
-        className: a()(b.container, O),
+        className: a()(p.container, O),
         "aria-labelledby": y,
         children: [
             (0, n.jsx)(f.Z, {
                 userId: t,
                 headingId: y,
                 widget: r,
-                disableInteraction: p,
+                disableInteraction: b,
             }),
             (0, n.jsxs)(o.y5, {
                 children: [
                     i,
                     v &&
                         !x &&
-                        !p &&
+                        !b &&
                         !m &&
                         (0, n.jsx)(g.Z, {
                             userId: t,

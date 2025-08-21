@@ -11,8 +11,8 @@ var l = r(624238),
     d = r(502587),
     f = r(825354),
     g = r(388032),
-    b = r(635318);
-let p = {
+    p = r(635318);
+let b = {
     [i.l.FAVORITE_GAMES]: () => g.intl.string(g.t.sUQar6),
     [i.l.CURRENT_GAMES]: () => g.intl.string(g.t.SqNnur),
     [i.l.WANT_TO_PLAY_GAMES]: () => g.intl.string(g.t.bWSQwc),
@@ -23,17 +23,17 @@ function O(e) {
     let { userId: r, headingId: i, widget: u, disableInteraction: d = !1 } = e,
         f = (0, a.e7)([c.default], () => c.default.getId() === r),
         O = (0, s.kQ)(u),
-        j = p[u.type](),
+        j = b[u.type](),
         y =
             f && u.games.length > 0
                 ? ((t = u.type),
                   1 === l.k[t] ? g.intl.string(g.t.wiXdER) : g.intl.format(g.t["zR1+09"], { numGames: l.k[t] }))
                 : void 0;
     return (0, n.jsxs)("div", {
-        className: b.headerRow,
+        className: p.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: b.title,
+                className: p.title,
                 children: [
                     (0, n.jsx)(o.X6q, {
                         variant: "heading-sm/medium",
@@ -66,7 +66,7 @@ function m(e) {
         ? null
         : o
           ? (0, n.jsxs)("div", {
-                className: b.actions,
+                className: p.actions,
                 children: [
                     (0, n.jsx)(u.Z, {
                         disabled: r,
@@ -78,11 +78,11 @@ function m(e) {
             })
           : g
             ? (0, n.jsx)("div", {
-                  className: b.actions,
+                  className: p.actions,
                   children: (0, n.jsx)(f.Z, {
                       widget: t,
                       userId: i,
-                      className: b.menuButton,
+                      className: p.menuButton,
                   }),
               })
             : null;

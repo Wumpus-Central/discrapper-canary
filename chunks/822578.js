@@ -14,8 +14,8 @@ var r = a(394798),
     u = a(396234);
 function I(t, e, a, I, d, N) {
     var A, f;
-    let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
-        L = {
+    let { normalizeDepth: T = 3, normalizeMaxBreadth: L = 1000 } = t,
+        p = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
             timestamp: e.timestamp || (0, _.yW)(),
@@ -31,8 +31,8 @@ function I(t, e, a, I, d, N) {
         i && i.value && (i.value = (0, n.$G)(i.value, o));
         let E = t.request;
         E && E.url && (E.url = (0, n.$G)(E.url, o));
-    })(L, t),
-        (A = L),
+    })(p, t),
+        (A = p),
         (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
         d && d.emit("applyFrameMetadata", e),
         void 0 === e.type &&
@@ -62,13 +62,13 @@ function I(t, e, a, I, d, N) {
                         });
                     });
                 } catch (t) {}
-            })(L, t.stackParser);
+            })(p, t.stackParser);
     let O = (function (t, e) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
         return a.update(e), a;
     })(I, a.captureContext);
-    a.mechanism && (0, r.EG)(L, a.mechanism);
+    a.mechanism && (0, r.EG)(p, a.mechanism);
     let P = d ? d.getEventProcessors() : [],
         g = (0, E.lW)().getScopeData();
     if (N) {
@@ -80,9 +80,9 @@ function I(t, e, a, I, d, N) {
         (0, u.yo)(g, t);
     }
     let D = [...(a.attachments || []), ...g.attachments];
-    D.length && (a.attachments = D), (0, u.gi)(L, g);
+    D.length && (a.attachments = D), (0, u.gi)(p, g);
     let C = [...P, ...g.eventProcessors];
-    return (0, s.R)(C, L, a).then((t) =>
+    return (0, s.R)(C, p, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -134,7 +134,7 @@ function I(t, e, a, I, d, N) {
                           }))),
                       r
                   );
-              })(t, T, p)
+              })(t, T, L)
             : t,
     );
 }

@@ -23,8 +23,8 @@ var r = a(370541),
     A = a(787659),
     f = a(789112),
     T = a(275689),
-    p = a(793373),
-    L = a(881243);
+    L = a(793373),
+    p = a(881243);
 let h = "__SENTRY_SUPPRESS_TRACING__";
 function O(t, e) {
     let a = S();
@@ -53,7 +53,7 @@ function O(t, e) {
                         o.isRecording() &&
                             (!t || "ok" === t) &&
                             o.setStatus({
-                                code: p.jt,
+                                code: L.jt,
                                 message: "internal_error",
                             });
                     },
@@ -93,7 +93,7 @@ function P(t, e) {
                         o.isRecording() &&
                             (!t || "ok" === t) &&
                             o.setStatus({
-                                code: p.jt,
+                                code: L.jt,
                                 message: "internal_error",
                             });
                     },
@@ -194,7 +194,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
         )),
             a && (0, d.Lh)(_, a);
     }
-    return (0, N.Z)(_), (0, L.YJ)(_, r, n), _;
+    return (0, N.Z)(_), (0, p.YJ)(_, r, n), _;
 }
 function y(t) {
     let e = {

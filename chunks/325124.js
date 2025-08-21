@@ -20,8 +20,8 @@ var r = a(650665),
     A = a(454463),
     f = a(163162),
     T = a(119128),
-    p = a(799033);
-let L = {
+    L = a(799033);
+let p = {
         ...o.A,
         instrumentNavigation: !0,
         instrumentPageLoad: !0,
@@ -30,7 +30,7 @@ let L = {
         enableLongAnimationFrame: !1,
         enableInp: !0,
         _experiments: {},
-        ...p.k3,
+        ...L.k3,
     },
     h = (t = {}) => {
         (0, i.a)();
@@ -51,7 +51,7 @@ let L = {
                 instrumentPageLoad: G,
                 instrumentNavigation: W,
             } = {
-                ...L,
+                ...p,
                 ...t,
             },
             w = (0, r.PR)();
@@ -95,7 +95,7 @@ let L = {
             name: "BrowserTracing",
             afterAllSetup(t) {
                 var a, r, i, d;
-                let L,
+                let p,
                     h,
                     w = f.m9.location && f.m9.location.href;
                 t.on("startNavigationSpan", (e) => {
@@ -182,7 +182,7 @@ let L = {
                                         return;
                                     }
                                     if (
-                                        (L && (L.setAttribute(c.ju, "interactionInterrupted"), L.end(), (L = void 0)),
+                                        (p && (p.setAttribute(c.ju, "interactionInterrupted"), p.end(), (p = void 0)),
                                         !d.name)
                                     ) {
                                         A.X &&
@@ -191,7 +191,7 @@ let L = {
                                             );
                                         return;
                                     }
-                                    L = (0, o.R)(
+                                    p = (0, o.R)(
                                         {
                                             name: d.name,
                                             op: t,
@@ -210,7 +210,7 @@ let L = {
                                 },
                             )),
                     e && (0, _.D)(),
-                    (0, p.L7)(t, {
+                    (0, L.L7)(t, {
                         traceFetch: y,
                         traceXHR: S,
                         tracePropagationTargets: t.getOptions().tracePropagationTargets,

@@ -90,7 +90,7 @@ class p extends r.EventEmitter {
                 noiseSuppression: this.noiseSuppression,
                 autoGainControl: this.automaticGainControl,
             };
-        e.some((e) => e.id === this.sourceId) && (t.deviceId = this.sourceId);
+        e.some((e) => e.id === this.sourceId) && (t.deviceId = { exact: this.sourceId });
         try {
             let e = await _.acquire({ audio: t });
             if (this.destroyed) throw (_.release(e), Error("AudioInput: Already destroyed"));

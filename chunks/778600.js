@@ -135,8 +135,8 @@ function f(...t) {
 function T(...t) {
     return A("setTimeout")(...t);
 }
-var p = (((n = p || {})[(n["2D"] = 0)] = "2D"), (n[(n.WebGL = 1)] = "WebGL"), (n[(n.WebGL2 = 2)] = "WebGL2"), n);
-let L = (t) =>
+var L = (((n = L || {})[(n["2D"] = 0)] = "2D"), (n[(n.WebGL = 1)] = "WebGL"), (n[(n.WebGL2 = 2)] = "WebGL2"), n);
+let p = (t) =>
     r
         ? (...e) => {
               try {
@@ -384,7 +384,7 @@ class U {
             t.enableManualSnapshot)
         )
             return;
-        L(() => {
+        p(() => {
             c && "all" === e && (this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher()),
                 c && "number" == typeof e && this.initCanvasFPSObserver(e, _, n, o, i, { dataURLOptions: E });
         })();
@@ -403,7 +403,7 @@ class U {
                 this.windowsSet.add(t), this.windows.push(new WeakRef(t));
                 return;
             }
-            L(() => {
+            p(() => {
                 if ((n && "all" === e && this.initCanvasMutationObserver(t, a, r, _), n && "number" == typeof e)) {
                     let e = y(t, a, r, _, !0);
                     this.restoreHandlers.push(() => {
@@ -438,7 +438,7 @@ class U {
                 let { base64: r, type: _, width: n, height: o } = e;
                 this.mutationCb({
                     id: a,
-                    type: p["2D"],
+                    type: L["2D"],
                     commands: [
                         {
                             property: "clearRect",
@@ -494,7 +494,7 @@ class U {
                                         T(() => {
                                             let a = m(i, e, this);
                                             t(this.canvas, {
-                                                type: p["2D"],
+                                                type: L["2D"],
                                                 property: o,
                                                 args: a,
                                             });
@@ -508,7 +508,7 @@ class U {
                         let a = I(e.CanvasRenderingContext2D.prototype, o, {
                             set(e) {
                                 t(this.canvas, {
-                                    type: p["2D"],
+                                    type: L["2D"],
                                     property: o,
                                     args: [e],
                                     setter: !0,
@@ -524,9 +524,9 @@ class U {
             o = (function (t, e, a, r, _, n) {
                 let o = [];
                 return (
-                    o.push(...S(e.WebGLRenderingContext.prototype, p.WebGL, t, a, r, _, n, e)),
+                    o.push(...S(e.WebGLRenderingContext.prototype, L.WebGL, t, a, r, _, n, e)),
                     void 0 !== e.WebGL2RenderingContext &&
-                        o.push(...S(e.WebGL2RenderingContext.prototype, p.WebGL2, t, a, r, _, n, e)),
+                        o.push(...S(e.WebGL2RenderingContext.prototype, L.WebGL2, t, a, r, _, n, e)),
                     () => {
                         o.forEach((t) => t());
                     }
@@ -621,7 +621,7 @@ class U {
                                         ]);
                                     })
                                     .catch((t) => {
-                                        L(() => {
+                                        p(() => {
                                             throw t;
                                         })();
                                     });

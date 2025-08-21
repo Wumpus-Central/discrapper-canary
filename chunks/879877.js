@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b }), r(388685);
+r.d(t, { Z: () => p }), r(388685);
 var n = r(951288),
     l = r(647438),
     i = r(481060),
@@ -10,9 +10,9 @@ var n = r(951288),
     d = r(286957),
     f = r(388032),
     g = r(44258);
-function b(e) {
+function p(e) {
     let { tags: t, isCurrentUser: r, widgetType: i, applicationId: a, disableInteraction: c = !1 } = e,
-        b = null == t ? void 0 : t.filter((e) => null != (0, d.zK)(e)),
+        p = null == t ? void 0 : t.filter((e) => null != (0, d.zK)(e)),
         y = (0, l.useRef)(new Map()),
         v = (0, l.useRef)(null),
         x = (0, l.useRef)(null),
@@ -20,7 +20,7 @@ function b(e) {
         [E, w] = (0, l.useState)(!1),
         { trackUserProfileAction: S } = (0, o.KZ)(),
         I = r && !c && (0, s.M8)(i),
-        _ = j(v, x, b, y, P);
+        _ = j(v, x, p, y, P);
     if (
         ((0, l.useEffect)(
             () => (
@@ -30,9 +30,9 @@ function b(e) {
                     window.removeEventListener("resize", _);
                 }
             ),
-            [_, null == b ? void 0 : b.join("")],
+            [_, null == p ? void 0 : p.join("")],
         ),
-        null == b || 0 === b.length)
+        null == p || 0 === p.length)
     )
         return I
             ? (0, n.jsx)("div", {
@@ -45,7 +45,7 @@ function b(e) {
                   }),
               })
             : null;
-    let T = E ? b : b.slice(0, b.length - h);
+    let T = E ? p : p.slice(0, p.length - h);
     return (0, n.jsxs)("div", {
         className: g.tagListContainer,
         children: [
@@ -54,7 +54,7 @@ function b(e) {
                 "aria-label": f.intl.string(f.t.EfjTi4),
                 children: T.map((e) =>
                     (0, n.jsx)(
-                        p,
+                        b,
                         {
                             tag: e,
                             isCurrentUser: r,
@@ -95,11 +95,11 @@ function b(e) {
         ],
     });
 }
-let p = (e) => {
+let b = (e) => {
         let { tag: t, isCurrentUser: r, applicationId: l, widgetType: a, disableInteraction: o, ref: u } = e,
-            b = (0, d.zK)(t);
-        if (null == b) return null;
-        let { getText: p, icon: O } = b,
+            p = (0, d.zK)(t);
+        if (null == p) return null;
+        let { getText: b, icon: O } = p,
             m = () => {
                 (0, s.RZ)(a, l, t), (0, c.pQ)({ action: "REMOVE_GAME_TAGS" });
             };
@@ -111,7 +111,7 @@ let p = (e) => {
                 (0, n.jsx)(i.Text, {
                     variant: "text-xxs/medium",
                     color: "text-secondary",
-                    children: p(),
+                    children: b(),
                 }),
                 r &&
                     !o &&
@@ -150,7 +150,7 @@ let p = (e) => {
                                     {
                                         onClick: m,
                                         className: g.removeButton,
-                                        "aria-label": f.intl.formatToPlainString(f.t.GCn1nZ, { tag: p() }),
+                                        "aria-label": f.intl.formatToPlainString(f.t.GCn1nZ, { tag: b() }),
                                         children: (0, n.jsx)(i.Dio, { size: "xxs" }),
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -226,9 +226,9 @@ let p = (e) => {
                 d = u > 0 ? 8 : 4,
                 f = 0,
                 g = 0,
-                b = n.current;
+                p = n.current;
             for (let e = 0; e < r.length; e++) {
-                let t = b.get(r[e]);
+                let t = p.get(r[e]);
                 if (null != t) {
                     if ((g += t.offsetWidth + 4) > 296) break;
                     f++;
@@ -236,7 +236,7 @@ let p = (e) => {
             }
             g = 0;
             for (let e = f; e < r.length; e++) {
-                let t = b.get(r[e]);
+                let t = p.get(r[e]);
                 if (null != t) {
                     if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
                     f++;

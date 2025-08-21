@@ -19,8 +19,8 @@ var r = a(157079),
     A = a(886115),
     f = a(370541),
     T = a(285883),
-    p = a(163162);
-let L = new WeakMap(),
+    L = a(163162);
+let p = new WeakMap(),
     h = new Map(),
     O = {
         traceFetch: !0,
@@ -42,7 +42,7 @@ function P(t, e) {
         m = "function" == typeof N ? N : (t) => !0,
         v = (t) =>
             (function (t, e) {
-                let a = p.m9.location && p.m9.location.href;
+                let a = L.m9.location && L.m9.location.href;
                 if (a) {
                     let r, _;
                     try {
@@ -75,13 +75,13 @@ function P(t, e) {
         ),
         (0, R.cf)((t) => {
             if (t.response) {
-                let e = L.get(t.response);
+                let e = p.get(t.response);
                 e && t.endTimestamp && h.set(e, t.endTimestamp);
             }
         }),
         (0, R.Uf)((t) => {
             let e = (0, n.m)(t, m, v, y);
-            if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
+            if ((t.response && t.fetchData.__span && p.set(t.response, t.fetchData.__span), e)) {
                 let a = C(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
                 e.setAttributes({
@@ -106,10 +106,10 @@ function P(t, e) {
                         return;
                     }
                     let A = C(R.url),
-                        p = A ? (0, d.en)(A).host : void 0,
-                        L = !!(0, o.HN)(),
+                        L = A ? (0, d.en)(A).host : void 0,
+                        p = !!(0, o.HN)(),
                         h =
-                            N && L
+                            N && p
                                 ? (0, E.qp)({
                                       name: `${R.method} ${R.url}`,
                                       attributes: {
@@ -117,7 +117,7 @@ function P(t, e) {
                                           "http.method": R.method,
                                           "http.url": A,
                                           url: R.url,
-                                          "server.address": p,
+                                          "server.address": L,
                                           [s.S3]: "auto.http.browser",
                                           [s.$J]: "http.client",
                                       },
@@ -147,7 +147,7 @@ function P(t, e) {
                                 try {
                                     l.setRequestHeader("sentry-trace", R), d && l.setRequestHeader(T.bU, d);
                                 } catch (t) {}
-                            })(n, O, (0, i.z)() && L ? h : void 0),
+                            })(n, O, (0, i.z)() && p ? h : void 0),
                         h
                     );
                 })(t, m, v, y);
@@ -214,7 +214,7 @@ function D(t = 0) {
 }
 function C(t) {
     try {
-        return new URL(t, p.m9.location.origin).href;
+        return new URL(t, L.m9.location.origin).href;
     } catch (t) {
         return;
     }

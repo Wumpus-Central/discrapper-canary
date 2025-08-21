@@ -1,37 +1,35 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var l = n(458725),
-    i = n(386146),
-    a = n(475674),
-    o = n(42326),
-    u = n(388032);
-function s(e) {
+    i = n(475674),
+    a = n(42326),
+    o = n(388032);
+function u(e) {
     let { participant: t, className: n } = e,
-        s = (0, a.Z)(t),
-        { avErrorUIEnabled: c } = (0, i.JN)({ location: "StreamWarning" });
-    if (null == s) return null;
-    let d = (function (e) {
+        u = (0, i.Z)(t);
+    if (null == u) return null;
+    let s = (function (e) {
         switch (e) {
             case l.u.STREAM_SEND_LOW_FPS:
             case l.u.STREAM_SEND_HIGH_PACKET_LOSS:
-                return u.intl.string(u.t["1f1LHh"]);
+                return o.intl.string(o.t["1f1LHh"]);
             case l.u.STREAM_BAD_NETWORK_QUALITY:
-                return u.intl.string(u.t.Ic588P);
+                return o.intl.string(o.t.Ic588P);
             case l.u.STREAM_SOUNDSHARE_FAILED:
-                return u.intl.string(u.t["9lcycn"]);
+                return o.intl.string(o.t["9lcycn"]);
             case l.u.STREAM_VIEW_HIGH_PACKET_LOSS:
             case l.u.STREAM_VIEW_LOW_FPS:
-                return u.intl.string(u.t.BcOif3);
+                return o.intl.string(o.t.BcOif3);
             default:
                 return;
         }
-    })(s);
-    return null != d
-        ? (0, r.jsx)(o.Z, {
+    })(u);
+    return null != s
+        ? (0, r.jsx)(a.Z, {
               className: n,
-              errorMessage: d,
-              avError: c ? s : null,
+              errorMessage: s,
+              avError: u,
           })
         : null;
 }

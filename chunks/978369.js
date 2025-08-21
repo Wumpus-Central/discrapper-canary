@@ -79,8 +79,8 @@ let d = l.memo(function (e) {
 });
 function f(e) {
     let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
-        b = (0, l.useRef)(null),
-        { trackUserProfileAction: p } = (0, a.KZ)(),
+        p = (0, l.useRef)(null),
+        { trackUserProfileAction: b } = (0, a.KZ)(),
         O = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         m = (0, l.useCallback)(
             function (e) {
@@ -93,14 +93,14 @@ function f(e) {
                             n.delete(e);
                         }),
                         n.add(e),
-                        p({ action: "ADD_GAME_TAGS" }));
+                        b({ action: "ADD_GAME_TAGS" }));
                 } else
                     n.has(e)
-                        ? (n.delete(e), p({ action: "REMOVE_GAME_TAGS" }))
-                        : (n.add(e), p({ action: "ADD_GAME_TAGS" }));
+                        ? (n.delete(e), b({ action: "REMOVE_GAME_TAGS" }))
+                        : (n.add(e), b({ action: "ADD_GAME_TAGS" }));
                 (0, o.n$)(r, f, Array.from(n));
             },
-            [O, p, r, f],
+            [O, b, r, f],
         ),
         j = (0, l.useCallback)(
             (e) => {
@@ -108,13 +108,13 @@ function f(e) {
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    p({ action: "REMOVE_GAME_TAGS" }),
+                    b({ action: "REMOVE_GAME_TAGS" }),
                     (0, o.n$)(r, f, Array.from(t));
             },
-            [O, p, r, f],
+            [O, b, r, f],
         );
     return (0, n.jsx)(i.yRy, {
-        targetElementRef: b,
+        targetElementRef: p,
         position: "right",
         align: "top",
         renderPopout: (e) => {
@@ -130,9 +130,9 @@ function f(e) {
             var t, r;
             return (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((b.current = e), (g.current = e)),
+                    null != e && ((p.current = e), (g.current = e)),
                     () => {
-                        (b.current = null), (g.current = null);
+                        (p.current = null), (g.current = null);
                     }
                 ),
                 children: (0, n.jsx)(

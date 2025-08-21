@@ -24,9 +24,9 @@ function d(t, e = {}) {
         A = !1,
         f = "externalFinish",
         T = !e.disableAutoFinish,
-        p = [],
+        L = [],
         {
-            idleTimeout: L = R.idleTimeout,
+            idleTimeout: p = R.idleTimeout,
             finalTimeout: h = R.finalTimeout,
             childSpanTimeout: O = R.childSpanTimeout,
             beforeSpanEnd: P,
@@ -46,7 +46,7 @@ function d(t, e = {}) {
         v(),
             (a = setTimeout(() => {
                 !A && 0 === N.size && T && ((f = "idleTimeout"), m.end(t));
-            }, L));
+            }, p));
     }
     function S(t) {
         a = setTimeout(() => {
@@ -54,7 +54,7 @@ function d(t, e = {}) {
         }, O);
     }
     function U(t) {
-        (A = !0), N.clear(), p.forEach((t) => t()), (0, E.D)(D, C);
+        (A = !0), N.clear(), L.forEach((t) => t()), (0, E.D)(D, C);
         let e = (0, s.XU)(m),
             { start_timestamp: a } = e;
         if (!a) return;
@@ -71,7 +71,7 @@ function d(t, e = {}) {
                 o.X && _.kg.log("[Tracing] Cancelling span since span ended early", JSON.stringify(e, void 0, 2)));
             let { timestamp: a = 0, start_timestamp: r = 0 } = (0, s.XU)(e),
                 i = r <= t,
-                c = a - r <= (h + L) / 1000;
+                c = a - r <= (h + p) / 1000;
             if (o.X) {
                 let t = JSON.stringify(e, void 0, 2);
                 i
@@ -98,7 +98,7 @@ function d(t, e = {}) {
                 return U(I), Reflect.apply(t, e, [I, ...n]);
             },
         })),
-        p.push(
+        L.push(
             g.on("spanStart", (t) => {
                 var e;
                 A ||
@@ -108,15 +108,15 @@ function d(t, e = {}) {
                         ((e = t.spanContext().spanId), v(), N.set(e, !0), S((0, r.ph)() + O / 1000)));
             }),
         ),
-        p.push(
+        L.push(
             g.on("spanEnd", (t) => {
                 if (!A) {
                     var e;
-                    (e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && y((0, r.ph)() + L / 1000);
+                    (e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && y((0, r.ph)() + p / 1000);
                 }
             }),
         ),
-        p.push(
+        L.push(
             g.on("idleSpanEnableAutoFinish", (t) => {
                 t === m && ((T = !0), y(), N.size && S());
             }),

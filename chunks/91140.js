@@ -21,20 +21,20 @@ var r = n(951288),
 let E = [_.OV, _.EE, _.Af, _.U9, _.wO, _.f, _.n8, _.v1, _.pQ],
     b = (e) => {
         var t;
-        let { entry: n, channel: i, selected: b, hovered: y } = e,
-            { largeImage: O } = (0, d.rv)({
+        let { entry: n, channel: i, selected: b, hovered: y, isFirstApplicationOccurrence: O } = e,
+            { largeImage: v } = (0, d.rv)({
                 entry: n,
                 showCoverImage: !1,
             }),
-            { data: v } = (0, l.IX)(n.extra.application_id),
-            I = (0, s.q)(v, "MemberListGamingContent"),
-            T = I ? [a.z.CLOUD_PLAY_NEW_BADGE] : [],
-            [S] = (0, u.US)(T),
-            A = I;
+            { data: I } = (0, l.IX)(n.extra.application_id),
+            T = (0, s.q)(I, "MemberListGamingContent") && O,
+            S = T ? [a.z.CLOUD_PLAY_NEW_BADGE] : [],
+            [A] = (0, u.US)(S),
+            C = T;
         return (0, r.jsxs)(p.Zb, {
             selected: b,
             usesCardRows: !0,
-            isAutoHeight: A,
+            isAutoHeight: C,
             children: [
                 (0, r.jsxs)(p.lS, {
                     children: [
@@ -62,15 +62,15 @@ let E = [_.OV, _.EE, _.Af, _.U9, _.wO, _.f, _.n8, _.v1, _.pQ],
                             ],
                         }),
                         (0, r.jsx)(f.f, {
-                            alt: null != (t = null == O ? void 0 : O.text) ? t : null == O ? void 0 : O.alt,
-                            src: null == O ? void 0 : O.src,
+                            alt: null != (t = null == v ? void 0 : v.text) ? t : null == v ? void 0 : v.alt,
+                            src: null == v ? void 0 : v.src,
                             size: 48,
                             className: g.thumbnail,
-                            showTooltip: (null == O ? void 0 : O.text) != null,
+                            showTooltip: (null == v ? void 0 : v.text) != null,
                         }),
                     ],
                 }),
-                I &&
+                T &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(p.xx, {}),
@@ -91,7 +91,7 @@ let E = [_.OV, _.EE, _.Af, _.U9, _.wO, _.f, _.n8, _.v1, _.pQ],
                                             }),
                                         ],
                                     }),
-                                    S === a.z.CLOUD_PLAY_NEW_BADGE &&
+                                    A === a.z.CLOUD_PLAY_NEW_BADGE &&
                                         (0, r.jsx)(o.IGR, {
                                             text: h.intl.string(h.t.y2b7CA),
                                             color: c.Z.BG_BRAND,

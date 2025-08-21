@@ -22,8 +22,8 @@ let E = n.n,
     A = "your.email@example.org",
     f = "Email",
     T = "What's the bug? What did you expect?",
-    p = "Description",
-    L = "Your Name",
+    L = "Description",
+    p = "Your Name",
     h = "Name",
     O = "Thank you for your report!",
     P = "(required)",
@@ -166,10 +166,10 @@ let W =
         emailPlaceholder: $ = A,
         formTitle: q = N,
         isRequiredLabel: z = P,
-        messageLabel: J = p,
+        messageLabel: J = L,
         messagePlaceholder: Z = T,
         nameLabel: Q = h,
-        namePlaceholder: tt = L,
+        namePlaceholder: tt = p,
         removeScreenshotButtonLabel: te = D,
         submitButtonLabel: ta = R,
         successMessageText: tr = O,
@@ -819,8 +819,8 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
         A,
         f,
         T,
-        p,
         L,
+        p,
         h,
         O,
         P,
@@ -873,11 +873,11 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                             e.__k.forEach(function (t) {
                                 t && (t.__ = e);
                             }),
-                            p = 0;
-                        p < l._sb.length;
-                        p++
+                            L = 0;
+                        L < l._sb.length;
+                        L++
                     )
-                        l.__h.push(l._sb[p]);
+                        l.__h.push(l._sb[L]);
                     (l._sb = []), l.__h.length && o.push(l);
                     break e;
                 }
@@ -892,19 +892,19 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                 (l.props = A),
                 (l.__P = t),
                 (l.__e = !1),
-                (L = B.__r),
+                (p = B.__r),
                 (h = 0),
                 "prototype" in g && g.prototype.render)
             ) {
                 for (
-                    l.state = l.__s, l.__d = !1, L && L(e), s = l.render(l.props, l.state, l.context), O = 0;
+                    l.state = l.__s, l.__d = !1, p && p(e), s = l.render(l.props, l.state, l.context), O = 0;
                     O < l._sb.length;
                     O++
                 )
                     l.__h.push(l._sb[O]);
                 l._sb = [];
             } else
-                do (l.__d = !1), L && L(e), (s = l.render(l.props, l.state, l.context)), (l.state = l.__s);
+                do (l.__d = !1), p && p(e), (s = l.render(l.props, l.state, l.context)), (l.state = l.__s);
                 while (l.__d && ++h < 25);
             (l.state = l.__s),
                 null != l.getChildContext && (r = $($({}, r), l.getChildContext())),
@@ -1107,15 +1107,15 @@ var tI,
     tA = 0,
     tf = [],
     tT = [],
-    tp = B,
-    tL = tp.__b,
-    th = tp.__r,
-    tO = tp.diffed,
-    tP = tp.__c,
-    tg = tp.unmount,
-    tD = tp.__;
+    tL = B,
+    tp = tL.__b,
+    th = tL.__r,
+    tO = tL.diffed,
+    tP = tL.__c,
+    tg = tL.unmount,
+    tD = tL.__;
 function tC(t, e) {
-    tp.__h && tp.__h(tR, t, tA || e), (tA = 0);
+    tL.__h && tL.__h(tR, t, tA || e), (tA = 0);
     var a =
         tR.__H ||
         (tR.__H = {
@@ -1181,7 +1181,7 @@ function tv(t, e, a) {
 }
 function ty(t, e) {
     var a = tC(tI++, 4);
-    !tp.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
+    !tL.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
 }
 function tS(t, e) {
     var a = tC(tI++, 7);
@@ -1201,16 +1201,16 @@ function tb() {
             try {
                 t.__H.__h.forEach(tW), t.__H.__h.forEach(tw), (t.__H.__h = []);
             } catch (e) {
-                (t.__H.__h = []), tp.__e(e, t.__v);
+                (t.__H.__h = []), tL.__e(e, t.__v);
             }
 }
-(tp.__b = function (t) {
-    (tR = null), tL && tL(t);
+(tL.__b = function (t) {
+    (tR = null), tp && tp(t);
 }),
-    (tp.__ = function (t, e) {
+    (tL.__ = function (t, e) {
         e.__k && e.__k.__m && (t.__m = e.__k.__m), tD && tD(t, e);
     }),
-    (tp.__r = function (t) {
+    (tL.__r = function (t) {
         th && th(t), (tI = 0);
         var e = (tR = t.__c).__H;
         e &&
@@ -1223,15 +1223,15 @@ function tb() {
                 : (e.__h.forEach(tW), e.__h.forEach(tw), (e.__h = []), (tI = 0))),
             (td = tR);
     }),
-    (tp.diffed = function (t) {
+    (tL.diffed = function (t) {
         tO && tO(t);
         var e = t.__c;
         e &&
             e.__H &&
             (e.__H.__h.length &&
-                ((1 !== tf.push(e) && tN === tp.requestAnimationFrame) ||
+                ((1 !== tf.push(e) && tN === tL.requestAnimationFrame) ||
                     (
-                        (tN = tp.requestAnimationFrame) ||
+                        (tN = tL.requestAnimationFrame) ||
                         function (t) {
                             var e,
                                 a = function () {
@@ -1246,7 +1246,7 @@ function tb() {
             })),
             (td = tR = null);
     }),
-    (tp.__c = function (t, e) {
+    (tL.__c = function (t, e) {
         e.some(function (t) {
             try {
                 t.__h.forEach(tW),
@@ -1258,12 +1258,12 @@ function tb() {
                     t.__h && (t.__h = []);
                 }),
                     (e = []),
-                    tp.__e(a, t.__v);
+                    tL.__e(a, t.__v);
             }
         }),
             tP && tP(t, e);
     }),
-    (tp.unmount = function (t) {
+    (tL.unmount = function (t) {
         tg && tg(t);
         var e,
             a = t.__c;
@@ -1277,7 +1277,7 @@ function tb() {
                 }
             }),
             (a.__H = void 0),
-            e && tp.__e(e, a.__v));
+            e && tL.__e(e, a.__v));
     });
 var tG = "function" == typeof requestAnimationFrame;
 function tW(t) {
@@ -1310,11 +1310,11 @@ let tY = {
             return (a.c = t), e ? (null == a.__ && ((a.__ = !0), e.sub(tR)), e.props.value) : t.__;
         },
         useDebugValue: function (t, e) {
-            tp.useDebugValue && tp.useDebugValue(e ? e(t) : t);
+            tL.useDebugValue && tL.useDebugValue(e ? e(t) : t);
         },
         useEffect: function (t, e) {
             var a = tC(tI++, 3);
-            !tp.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
+            !tL.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
         },
         useErrorBoundary: function (t) {
             var e = tC(tI++, 10),
@@ -1451,8 +1451,8 @@ function tF({
             isEmailRequired: A,
             isNameRequired: f,
             messageLabel: T,
-            messagePlaceholder: p,
-            nameLabel: L,
+            messagePlaceholder: L,
+            nameLabel: p,
             namePlaceholder: h,
             submitButtonLabel: O,
             isRequiredLabel: P,
@@ -1479,14 +1479,14 @@ function tF({
                     isEmailRequired: A,
                     isNameRequired: f,
                     messageLabel: T,
-                    nameLabel: L,
+                    nameLabel: p,
                 });
                 return (
                     e.length > 0 ? D(`Please enter in the following required fields: ${e.join(", ")}`) : D(null),
                     0 === e.length
                 );
             },
-            [d, A, f, T, L],
+            [d, A, f, T, p],
         );
     return z(
         "form",
@@ -1588,7 +1588,7 @@ function tF({
                               },
                           },
                           z(tV, {
-                              label: L,
+                              label: p,
                               isRequiredLabel: P,
                               isRequired: f,
                               __self: this,
@@ -1697,7 +1697,7 @@ function tF({
                         class: "form__input form__input--textarea",
                         id: "message",
                         name: "message",
-                        placeholder: p,
+                        placeholder: L,
                         required: !0,
                         rows: 5,
                         __self: this,
@@ -2531,7 +2531,7 @@ ${tZ}
                             }),
                             [N, A] = e.useState(!1),
                             [f, T] = e.useState(!1);
-                        function p() {
+                        function L() {
                             let t = I.current,
                                 e = t2(t3(a));
                             if (t) {
@@ -2551,7 +2551,7 @@ ${tZ}
                                     endY: e.height,
                                 });
                         }
-                        function L(t, e) {
+                        function p(t, e) {
                             A(!1), T(!0);
                             let a = h(e),
                                 r = () => {
@@ -2563,7 +2563,7 @@ ${tZ}
                             s.addEventListener("mouseup", r), s.addEventListener("mousemove", a);
                         }
                         e.useEffect(() => {
-                            E.addEventListener("resize", p, !1);
+                            E.addEventListener("resize", L, !1);
                         }, []),
                             e.useEffect(() => {
                                 let t = I.current;
@@ -2647,7 +2647,7 @@ ${tZ}
                                 onAfterScreenshot: e.useCallback(() => {
                                     r.el.style.display = "block";
                                     let t = l.current;
-                                    t && t.appendChild(a), p();
+                                    t && t.appendChild(a), L();
                                 }, []),
                                 onError: e.useCallback((t) => {
                                     (r.el.style.display = "block"), o(t);
@@ -2758,7 +2758,7 @@ ${tZ}
                                         t(c, {
                                             left: R.startX - 3,
                                             top: R.startY - 3,
-                                            onGrabButton: L,
+                                            onGrabButton: p,
                                             corner: "top-left",
                                             __self: this,
                                             __source: {
@@ -2769,7 +2769,7 @@ ${tZ}
                                         t(c, {
                                             left: R.endX - 30 + 3,
                                             top: R.startY - 3,
-                                            onGrabButton: L,
+                                            onGrabButton: p,
                                             corner: "top-right",
                                             __self: this,
                                             __source: {
@@ -2780,7 +2780,7 @@ ${tZ}
                                         t(c, {
                                             left: R.startX - 3,
                                             top: R.endY - 30 + 3,
-                                            onGrabButton: L,
+                                            onGrabButton: p,
                                             corner: "bottom-left",
                                             __self: this,
                                             __source: {
@@ -2791,7 +2791,7 @@ ${tZ}
                                         t(c, {
                                             left: R.endX - 30 + 3,
                                             top: R.endY - 30 + 3,
-                                            onGrabButton: L,
+                                            onGrabButton: p,
                                             corner: "bottom-right",
                                             __self: this,
                                             __source: {
@@ -2869,7 +2869,7 @@ ${tZ}
                                                                     (a.style.width = `${r.width}px`),
                                                                     (a.style.height = `${r.height}px`),
                                                                     n.drawImage(t, 0, 0),
-                                                                    p());
+                                                                    L());
                                                             })(),
                                                             A(!1);
                                                     },

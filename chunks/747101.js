@@ -52,26 +52,25 @@ function c(e, t) {
     );
 }
 function s(e) {
-    return (
-        n.useEffect(() => {
-            if (e.length > 0) {
-                let t = e.filter((e) => a.Z.canFetch(e));
-                t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
-            }
-        }, [e]),
-        {
-            gameDataMap: (0, l.cj)([a.Z], () => {
-                let t = {};
-                return (
-                    e.forEach((e) => {
-                        t[e] = a.Z.getGame(e);
-                    }),
-                    t
-                );
-            }),
-            isGameFetching: n.useCallback((e) => a.Z.isFetching(e), []),
+    n.useEffect(() => {
+        if (e.length > 0) {
+            let t = e.filter((e) => a.Z.canFetch(e));
+            t.length > 0 && i.Z.getDetectableGamesSupplemental(t);
         }
-    );
+    }, [e]);
+    let [t, r] = (0, l.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]);
+    return {
+        gameDataMap: n.useMemo(() => {
+            let t = {};
+            return (
+                e.forEach((e) => {
+                    t[e] = a.Z.getGame(e);
+                }),
+                t
+            );
+        }, [e, t, r]),
+        isGameFetching: n.useCallback((e) => a.Z.isFetching(e), []),
+    };
 }
 function u(e) {
     let { gameDataMap: t, isGameFetching: r } = s(

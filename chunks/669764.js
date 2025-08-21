@@ -111,6 +111,12 @@ class h extends (r = i.ZP.Store) {
     noDataAvailable(e) {
         return u.has(e);
     }
+    numNoDataAvailable() {
+        return u.size;
+    }
+    numSupplementalGames() {
+        return s.size;
+    }
 }
 o(h, "displayName", "DetectableGameSupplementalStore");
 let m = new h(a.Z, {

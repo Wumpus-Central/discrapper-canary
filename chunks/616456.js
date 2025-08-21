@@ -14,8 +14,8 @@ var E,
     A = a(505676),
     f = a(507690),
     T = a(572299),
-    p = a(263449),
-    L = a(946471),
+    L = a(263449),
+    p = a(946471),
     h = a(233517),
     O = a(822578),
     P = a(696486),
@@ -233,8 +233,8 @@ function tT(t, e) {
         return `url(${c}${E.join("/")}${c})`;
     });
 }
-let tp = /^[^ \t\n\r\u000c]+/,
-    tL = /^[, \t\n\r\u000c]+/;
+let tL = /^[^ \t\n\r\u000c]+/,
+    tp = /^[, \t\n\r\u000c]+/;
 function th(t, e) {
     if (!e || "" === e.trim()) return e;
     let a = t.createElement("a");
@@ -259,8 +259,8 @@ function tP(t, e, a, r, _, n) {
                 return _ ? ((r = _[0]), (a += r.length), r) : "";
             }
             let _ = [];
-            for (; r(tL), !(a >= e.length); ) {
-                let n = r(tp);
+            for (; r(tp), !(a >= e.length); ) {
+                let n = r(tL);
                 if ("," === n.slice(-1)) (n = th(t, n.substring(0, n.length - 1))), _.push(n);
                 else {
                     let r = "";
@@ -370,8 +370,8 @@ function ty(t, e) {
             inlineStylesheet: A = !0,
             maskInputOptions: f = {},
             maskAttributeFn: T,
-            maskTextFn: p,
-            maskInputFn: L,
+            maskTextFn: L,
+            maskInputFn: p,
             slimDOMOptions: h,
             dataURLOptions: O = {},
             inlineImages: P = !1,
@@ -402,8 +402,8 @@ function ty(t, e) {
                     maskInputOptions: A = {},
                     maskTextFn: f,
                     maskInputFn: T,
-                    dataURLOptions: p = {},
-                    inlineImages: L,
+                    dataURLOptions: L = {},
+                    inlineImages: p,
                     recordCanvas: h,
                     keepIframeSrcFn: O,
                     newlyAddedElement: P = !1,
@@ -451,8 +451,8 @@ function ty(t, e) {
                                 keepIframeSrcFn: A,
                                 newlyAddedElement: f = !1,
                                 rootId: T,
-                                maskAllText: p,
-                                maskTextClass: L,
+                                maskAllText: L,
+                                maskTextClass: p,
                                 unmaskTextClass: h,
                                 maskTextSelector: O,
                                 unmaskTextSelector: P,
@@ -498,7 +498,7 @@ function ty(t, e) {
                             if ("submit" !== e && "button" !== e && a) {
                                 let r = tm(
                                     t,
-                                    L,
+                                    p,
                                     O,
                                     h,
                                     P,
@@ -608,8 +608,8 @@ function ty(t, e) {
                         maskAttributeFn: s,
                         maskInputOptions: A,
                         maskInputFn: T,
-                        dataURLOptions: p,
-                        inlineImages: L,
+                        dataURLOptions: L,
+                        inlineImages: p,
                         recordCanvas: h,
                         keepIframeSrcFn: O,
                         newlyAddedElement: P,
@@ -728,8 +728,8 @@ function ty(t, e) {
             inlineStylesheet: A,
             maskInputOptions: f,
             maskAttributeFn: T,
-            maskTextFn: p,
-            maskInputFn: L,
+            maskTextFn: L,
+            maskInputFn: p,
             dataURLOptions: O,
             inlineImages: P,
             recordCanvas: g,
@@ -837,8 +837,8 @@ function ty(t, e) {
             inlineStylesheet: A,
             maskInputOptions: f,
             maskAttributeFn: T,
-            maskTextFn: p,
-            maskInputFn: L,
+            maskTextFn: L,
+            maskInputFn: p,
             slimDOMOptions: h,
             dataURLOptions: O,
             inlineImages: P,
@@ -908,8 +908,8 @@ function ty(t, e) {
                             inlineStylesheet: A,
                             maskInputOptions: f,
                             maskAttributeFn: T,
-                            maskTextFn: p,
-                            maskInputFn: L,
+                            maskTextFn: L,
+                            maskInputFn: p,
                             slimDOMOptions: h,
                             dataURLOptions: O,
                             inlineImages: P,
@@ -968,8 +968,8 @@ function ty(t, e) {
                             inlineStylesheet: A,
                             maskInputOptions: f,
                             maskAttributeFn: T,
-                            maskTextFn: p,
-                            maskInputFn: L,
+                            maskTextFn: L,
+                            maskInputFn: p,
                             slimDOMOptions: h,
                             dataURLOptions: O,
                             inlineImages: P,
@@ -2072,38 +2072,38 @@ function el(t, e = {}) {
                 let f = a;
                 if (f.classList.contains(o) || (i && f.matches(i))) return;
                 let T = tn(a),
-                    p = to(f, N, T),
-                    L = !1,
+                    L = to(f, N, T),
+                    p = !1,
                     h = tt({
                         maskInputOptions: c,
                         tagName: N,
                         type: T,
                     }),
                     O = tm(a, u, R, I, d, h);
-                ("radio" === T || "checkbox" === T) && (L = a.checked),
-                    (p = te({
+                ("radio" === T || "checkbox" === T) && (p = a.checked),
+                    (L = te({
                         isMasked: O,
                         element: a,
-                        value: p,
+                        value: L,
                         maskInputFn: E,
                     })),
                     A(
                         a,
                         l
                             ? {
-                                  text: p,
-                                  isChecked: L,
+                                  text: L,
+                                  isChecked: p,
                                   userTriggered: s,
                               }
                             : {
-                                  text: p,
-                                  isChecked: L,
+                                  text: L,
+                                  isChecked: p,
                               },
                     );
                 let P = a.name;
                 "radio" === T &&
                     P &&
-                    L &&
+                    p &&
                     e.querySelectorAll(`input[type="radio"][name="${P}"]`).forEach((t) => {
                         if (t !== a) {
                             let e = te({
@@ -2117,12 +2117,12 @@ function el(t, e = {}) {
                                 l
                                     ? {
                                           text: e,
-                                          isChecked: !L,
+                                          isChecked: !p,
                                           userTriggered: !1,
                                       }
                                     : {
                                           text: e,
-                                          isChecked: !L,
+                                          isChecked: !p,
                                       },
                             );
                         }
@@ -2145,8 +2145,8 @@ function el(t, e = {}) {
                 return () => {
                     f.forEach((t) => t());
                 };
-            let p = T.Object.getOwnPropertyDescriptor(T.HTMLInputElement.prototype, "value"),
-                L = [
+            let L = T.Object.getOwnPropertyDescriptor(T.HTMLInputElement.prototype, "value"),
+                p = [
                     [T.HTMLInputElement.prototype, "value"],
                     [T.HTMLInputElement.prototype, "checked"],
                     [T.HTMLSelectElement.prototype, "value"],
@@ -2155,10 +2155,10 @@ function el(t, e = {}) {
                     [T.HTMLOptionElement.prototype, "selected"],
                 ];
             return (
-                p &&
-                    p.set &&
+                L &&
+                    L.set &&
                     f.push(
-                        ...L.map((t) =>
+                        ...p.map((t) =>
                             (function t(e, a, r, _, n = window) {
                                 let o = n.Object.getOwnPropertyDescriptor(e, a);
                                 return (
@@ -2891,7 +2891,7 @@ class eT {
             this.bypassOptions.canvasManager.resetShadowRoots();
     }
 }
-class ep {
+class eL {
     reset() {}
     freeze() {}
     unfreeze() {}
@@ -2902,7 +2902,7 @@ class ep {
     addShadowRoot() {}
     resetShadowRoots() {}
 }
-class eL {
+class ep {
     constructor(t) {
         (this.trackedLinkElements = new WeakSet()),
             (this.styleMirror = new t$()),
@@ -3017,8 +3017,8 @@ function eP(t = {}) {
             maskTextSelector: N = null,
             unmaskTextSelector: A = null,
             inlineStylesheet: T = !0,
-            maskAllInputs: p,
-            maskInputOptions: L,
+            maskAllInputs: L,
+            maskInputOptions: p,
             slimDOMOptions: h,
             maskAttributeFn: O,
             maskInputFn: P,
@@ -3054,7 +3054,7 @@ function eP(t = {}) {
     if (F && !a) throw Error("emit function is required");
     void 0 !== y && void 0 === m.mousemove && (m.mousemove = y), eO.reset();
     let j =
-            !0 === p
+            !0 === L
                 ? {
                       color: !0,
                       date: !0,
@@ -3074,8 +3074,8 @@ function eP(t = {}) {
                       radio: !0,
                       checkbox: !0,
                   }
-                : void 0 !== L
-                  ? L
+                : void 0 !== p
+                  ? p
                   : {},
         X =
             !0 === h || "all" === h
@@ -3164,7 +3164,7 @@ function eP(t = {}) {
                     ...t,
                 },
             }),
-        tt = new eL({
+        tt = new ep({
             mutationCb: z,
             adoptedStyleSheetCb: (t) =>
                 o({
@@ -3195,9 +3195,9 @@ function eP(t = {}) {
     let ta = new eh(),
         tr = (function (t, e) {
             try {
-                return t ? t(e) : new ep();
+                return t ? t(e) : new eL();
             } catch (t) {
-                return console.warn("Unable to initialize CanvasManager"), new ep();
+                return console.warn("Unable to initialize CanvasManager"), new eL();
             }
         })(x, {
             mirror: eO,
@@ -3289,8 +3289,8 @@ function eP(t = {}) {
                     maskInputFn: A,
                     slimDOM: f = !1,
                     dataURLOptions: T,
-                    preserveWhiteSpace: p,
-                    onSerialize: L,
+                    preserveWhiteSpace: L,
+                    onSerialize: p,
                     onIframeLoad: h,
                     iframeLoadTimeout: O,
                     onStylesheetLoad: P,
@@ -3355,8 +3355,8 @@ function eP(t = {}) {
                     dataURLOptions: T,
                     inlineImages: u,
                     recordCanvas: I,
-                    preserveWhiteSpace: p,
-                    onSerialize: L,
+                    preserveWhiteSpace: L,
+                    onSerialize: p,
                     onIframeLoad: h,
                     iframeLoadTimeout: O,
                     onStylesheetLoad: P,
@@ -4302,7 +4302,7 @@ async function ae(t, e, a) {
     } catch (r) {
         let e = r && r instanceof ez ? "addEventSizeExceeded" : "addEvent";
         t.handleException(r), await t.stop({ reason: e });
-        let a = (0, p.s3)();
+        let a = (0, L.s3)();
         a && a.recordDroppedEvent("internal_sdk_error", "replay");
     }
 }
@@ -4352,7 +4352,7 @@ function ai(t, e) {
     t.isEnabled() &&
         null !== e &&
         ((a = e.name),
-        ((!ej || !t.getOptions()._experiments.traceInternals) && (0, L.W)(a, (0, p.s3)())) ||
+        ((!ej || !t.getOptions()._experiments.traceInternals) && (0, p.W)(a, (0, L.s3)())) ||
             t.addUpdate(() => (ao(t, [e]), !0)));
 }
 function ac(t) {
@@ -4512,14 +4512,14 @@ async function aT(t, e, a) {
                   return c ? al(E, c) : E;
               })(a, e.input, E)
             : aI(E),
-        response: await ap(l, a, e.response, s),
+        response: await aL(l, a, e.response, s),
     };
 }
-async function ap(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, _) {
+async function aL(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, _) {
     if (!t && void 0 !== _) return aI(_);
     let n = r ? aO(r.headers, a) : {};
     if (!r || (!e && void 0 !== _)) return aR(n, _, void 0);
-    let [o, i] = await aL(r),
+    let [o, i] = await ap(r),
         c = (function (t, { networkCaptureBodies: e, responseBodySize: a, captureDetails: r, headers: _ }) {
             try {
                 let n = t && t.length && void 0 === a ? ac(t) : a;
@@ -4537,7 +4537,7 @@ async function ap(t, { networkCaptureBodies: e, networkResponseHeaders: a }, r, 
         });
     return i ? al(c, i) : c;
 }
-async function aL(t) {
+async function ap(t) {
     let e = (function (t) {
         try {
             return t.clone();
@@ -4650,16 +4650,16 @@ async function aD(t, e, a) {
                               return ej && U.kg.warn("[Replay] Failed to get xhr response body", ...e), [void 0];
                           })(i)
                         : [void 0],
-                    p = aR(R, l, N),
-                    L = aR(d, u, f);
+                    L = aR(R, l, N),
+                    p = aR(d, u, f);
                 return {
                     startTimestamp: _,
                     endTimestamp: n,
                     url: c,
                     method: E,
                     statusCode: s,
-                    request: A ? al(p, A) : p,
-                    response: T ? al(L, T) : L,
+                    request: A ? al(L, A) : L,
+                    response: T ? al(p, T) : p,
                 };
             })(t, e, a),
             _ = au("resource.xhr", r);
@@ -4704,7 +4704,7 @@ async function am({ client: t, scope: e, replayId: a, event: r }) {
                 : Object.keys(t._integrations),
     };
     t.emit("preprocessEvent", r, _);
-    let n = await (0, O.R)(t.getOptions(), r, _, e, t, (0, p.aF)());
+    let n = await (0, O.R)(t.getOptions(), r, _, e, t, (0, L.aF)());
     if (!n) return null;
     n.platform = n.platform || "javascript";
     let o = t.getSdkMetadata(),
@@ -4736,8 +4736,8 @@ async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r
             headers: { segment_id: a },
         }),
         { urls: E, errorIds: s, traceIds: l, initialTimestamp: u } = r,
-        I = (0, p.s3)(),
-        R = (0, p.nZ)(),
+        I = (0, L.s3)(),
+        R = (0, L.nZ)(),
         d = I && I.getTransport(),
         N = I && I.getDsn();
     if (!I || !d || !N || !n.sampled) return (0, w.WD)({});
@@ -4787,8 +4787,8 @@ async function av({ recordingData: t, replayId: e, segmentId: a, eventContext: r
         throw t;
     }
     if ("number" == typeof i.statusCode && (i.statusCode < 200 || i.statusCode >= 300)) throw new ay(i.statusCode);
-    let L = (0, M.WG)({}, i);
-    if ((0, M.Q)(L, "replay")) throw new aS(L);
+    let p = (0, M.WG)({}, i);
+    if ((0, M.Q)(p, "replay")) throw new aS(p);
     return i;
 }
 class ay extends Error {
@@ -5325,7 +5325,7 @@ class aG {
                 this.clickDetector && this.clickDetector.addListeners(),
                 this._hasInitializedCoreListeners ||
                     (!(function (t) {
-                        let e = (0, p.s3)();
+                        let e = (0, L.s3)();
                         (0, k.O)((e) => {
                             var a, r;
                             if (!t.isEnabled()) return;
@@ -5382,7 +5382,7 @@ class aG {
                                     t.triggerUserActivity(),
                                     t.addUpdate(() => (ao(t, [a]), !1)));
                             });
-                        let a = (0, p.s3)();
+                        let a = (0, L.s3)();
                         a &&
                             a.on("beforeAddBreadcrumb", (e) =>
                                 (function (t, e) {
@@ -5432,7 +5432,7 @@ class aG {
                                     r && eC(t, r);
                                 })(t, e),
                             );
-                        let r = (0, p.s3)();
+                        let r = (0, L.s3)();
                         try {
                             let {
                                     networkDetailAllowUrls: e,
@@ -5802,7 +5802,7 @@ class aG {
                     });
                 } catch (e) {
                     this.handleException(e), this.stop({ reason: "sendReplay" });
-                    let t = (0, p.s3)();
+                    let t = (0, L.s3)();
                     t && t.recordDroppedEvent("send_error", "replay");
                 }
         }
@@ -5913,8 +5913,8 @@ class aH {
         networkCaptureBodies: A = !0,
         networkRequestHeaders: f = [],
         networkResponseHeaders: T = [],
-        mask: p = [],
-        maskAttributes: L = ["title", "placeholder"],
+        mask: L = [],
+        maskAttributes: p = ["title", "placeholder"],
         unmask: h = [],
         block: O = [],
         unblock: P = [],
@@ -5933,7 +5933,7 @@ class aH {
                 ignoreSelector: aW(_, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]']),
             };
         })({
-            mask: p,
+            mask: L,
             unmask: h,
             block: O,
             unblock: P,
@@ -5957,7 +5957,7 @@ class aH {
                               ? n.replace(/[\S]/g, "*")
                               : n;
                     })({
-                        maskAttributes: L,
+                        maskAttributes: p,
                         maskAllText: c,
                         privacyOptions: v,
                         key: t,
@@ -6081,7 +6081,7 @@ function aK(t) {
     return [...aM, ...t.map((t) => t.toLowerCase())];
 }
 function ak() {
-    let t = (0, p.s3)();
+    let t = (0, L.s3)();
     return t && t.getIntegrationByName("Replay");
 }
 aH.__initStatic();

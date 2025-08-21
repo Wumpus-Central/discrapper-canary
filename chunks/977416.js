@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => p });
 var n = r(951288);
 r(647438);
 var l = r(481060),
@@ -75,11 +75,11 @@ function g(e) {
             return l;
         })(e, ["gameName", "onClick", "loading"]);
     let g = null != t ? t : c.intl.string(c.t.GIWFlJ),
-        b = c.intl.formatToPlainString(c.t["3mb1s7"], { game: g });
+        p = c.intl.formatToPlainString(c.t["3mb1s7"], { game: g });
     return i
         ? (0, n.jsx)("div", { className: s.loadingCover })
         : (0, n.jsx)(l.ua7, {
-              text: b,
+              text: p,
               children: (e) =>
                   (0, n.jsxs)(
                       l.P3F,
@@ -109,12 +109,12 @@ function g(e) {
                   ),
           });
 }
-function b(e) {
+function p(e) {
     let { userId: t, games: r, isGameFetching: a, isSuggestedGamesLoading: s, onDismiss: d, onClick: f } = e,
-        b = (0, i.Dt)();
+        p = (0, i.Dt)();
     return (0, n.jsxs)("aside", {
         className: u.container,
-        "aria-labelledby": b,
+        "aria-labelledby": p,
         children: [
             (0, n.jsxs)("div", {
                 className: u.header,
@@ -129,7 +129,7 @@ function b(e) {
                         }),
                     }),
                     (0, n.jsx)(l.X6q, {
-                        id: b,
+                        id: p,
                         variant: "text-xs/medium",
                         color: "text-secondary",
                         children: c.intl.string(c.t.zMUr6e),

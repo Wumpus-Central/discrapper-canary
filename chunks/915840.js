@@ -1856,6 +1856,78 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
             },
+            ICON_FEEDBACK_CRITICAL: {
+                [r.DARK]: {
+                    raw: "RED_NEW_6",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_63",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_22",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_16",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_INFO: {
+                [r.DARK]: {
+                    raw: "BLUE_NEW_8",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_NEW_65",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_NEW_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_NEW_18",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_POSITIVE: {
+                [r.DARK]: {
+                    raw: "GREEN_NEW_10",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_NEW_64",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_NEW_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_NEW_19",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_WARNING: {
+                [r.DARK]: {
+                    raw: "YELLOW_NEW_7",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_NEW_64",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_NEW_24",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_NEW_17",
+                    opacity: 1,
+                },
+            },
             ICON_LINK: {
                 [r.DARK]: {
                     raw: "BLUE_NEW_18",

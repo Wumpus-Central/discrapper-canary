@@ -1,36 +1,34 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(46973),
     a = n(846027),
     o = n(878001),
     s = n(458725),
-    l = n(386146),
-    c = n(63063),
-    u = n(112560),
-    d = n(981631),
-    f = n(388032);
-let _ = n(66737);
-function p(e) {
+    l = n(63063),
+    c = n(112560),
+    u = n(981631),
+    d = n(388032);
+let f = n(66737);
+function _(e) {
     var t;
-    let { userId: n, width: p, avError: h, selected: m = !1, noArt: g = !1 } = e,
-        { avErrorUIEnabled: E } = (0, l.JN)({ location: "UserVideoFailed" }),
-        b = null == (t = (0, s.hp)(h)) ? void 0 : t.errorCode;
-    function y() {
+    let { userId: n, width: _, avError: p, selected: h = !1, noArt: m = !1 } = e,
+        g = null == (t = (0, s.hp)(p)) ? void 0 : t.errorCode;
+    function E() {
         (0, o.w)(i.Yn.DEFAULT, n),
-            a.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
+            a.Z.setDisableLocalVideo(n, u.ZUi.DISABLED, i.Yn.DEFAULT, !1),
             setTimeout(() => {
-                a.Z.setDisableLocalVideo(n, d.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
+                a.Z.setDisableLocalVideo(n, u.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
             }, 1000);
     }
-    return (0, r.jsx)(u.Z, {
-        artURL: _,
-        header: f.intl.string(f.t["z+mxvr"]),
-        size: (0, u.L)(p),
-        noArt: g,
-        selected: m,
-        description: f.intl.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
-        errorCodeMessage: E ? f.intl.formatToPlainString(f.t["ejOT9/"], { errorCode: b }) : void 0,
-        onCTAClick: y,
-        callToAction: f.intl.string(f.t["hxmQ/f"]),
+    return (0, r.jsx)(c.Z, {
+        artURL: f,
+        header: d.intl.string(d.t["z+mxvr"]),
+        size: (0, c.L)(_),
+        noArt: m,
+        selected: h,
+        description: d.intl.format(d.t.d486Wl, { helpUrl: l.Z.getArticleURL(u.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t["ejOT9/"], { errorCode: g }),
+        onCTAClick: E,
+        callToAction: d.intl.string(d.t["hxmQ/f"]),
     });
 }

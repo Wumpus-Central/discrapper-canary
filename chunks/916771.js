@@ -1,40 +1,38 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(46973),
     a = n(878001),
     o = n(458725),
-    s = n(386146),
-    l = n(803647),
-    c = n(63063),
-    u = n(112560),
-    d = n(981631),
-    f = n(388032);
-function _(e) {
+    s = n(803647),
+    l = n(63063),
+    c = n(112560),
+    u = n(981631),
+    d = n(388032);
+function f(e) {
     switch (null == e ? void 0 : e.type) {
         case o.u.SCREENSHARE_OS_ERROR:
-            return f.intl.format(f.t.e9LMur, { errorMessage: e.errorMessage });
+            return d.intl.format(d.t.e9LMur, { errorMessage: e.errorMessage });
         case o.u.STREAM_FAILED_TO_START:
         default:
-            return f.intl.string(f.t.rSlOen);
+            return d.intl.string(d.t.rSlOen);
     }
 }
-function p(e) {
+function _(e) {
     var t;
-    let { stream: n, width: p, avError: h, avErrorContext: m, selected: g = !1, noArt: E = !1 } = e,
-        { avErrorUIEnabled: b } = (0, s.JN)({ location: "StreamWarning" }),
-        y = _(m),
-        O = null == (t = (0, o.hp)(null != h ? h : o.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
-    return (0, r.jsx)(u.Z, {
-        header: y,
-        size: (0, u.L)(p),
-        noArt: E,
-        selected: g,
-        description: f.intl.format(f.t.sXsgsL, { helpUrl: c.Z.getArticleURL(d.BhN.STREAM_FAILED) }),
-        errorCodeMessage: b ? f.intl.formatToPlainString(f.t["ejOT9/"], { errorCode: O }) : void 0,
+    let { stream: n, width: _, avError: p, avErrorContext: h, selected: m = !1, noArt: g = !1 } = e,
+        E = f(h),
+        b = null == (t = (0, o.hp)(null != p ? p : o.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
+    return (0, r.jsx)(c.Z, {
+        header: E,
+        size: (0, c.L)(_),
+        noArt: g,
+        selected: m,
+        description: d.intl.format(d.t.sXsgsL, { helpUrl: l.Z.getArticleURL(u.BhN.STREAM_FAILED) }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t["ejOT9/"], { errorCode: b }),
         onCTAClick: () => {
-            (0, a.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n);
+            (0, a.w)(i.Yn.STREAM, n.ownerId), (0, s.Z)(n);
         },
-        callToAction: f.intl.string(f.t["4EGMWF"]),
+        callToAction: d.intl.string(d.t["4EGMWF"]),
     });
 }

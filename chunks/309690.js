@@ -1,58 +1,55 @@
-r.d(e, { default: () => c });
+r.d(e, { default: () => d });
 var l = r(951288);
 r(647438);
-var n = r(481060),
-    a = r(600164),
-    i = r(458725),
-    s = r(386146),
-    o = r(388032),
-    d = r(959862);
-function c(t) {
+var s = r(481060),
+    i = r(600164),
+    n = r(458725),
+    a = r(388032),
+    o = r(959862);
+function d(t) {
     var e;
-    let { onClose: r, transitionState: c } = t,
-        { avErrorUIEnabled: u } = (0, s.JN)({ location: "StreamWarning" }),
-        m = null == (e = (0, i.hp)(i.u.STREAM_FULL)) ? void 0 : e.errorCode,
-        x = o.intl.formatToPlainString(o.t["ejOT9/"], { errorCode: m });
-    return (0, l.jsxs)(n.Y0X, {
-        size: n.CgR.SMALL,
-        transitionState: c,
+    let { onClose: r, transitionState: d } = t,
+        c = null == (e = (0, n.hp)(n.u.STREAM_FULL)) ? void 0 : e.errorCode,
+        u = a.intl.formatToPlainString(a.t["ejOT9/"], { errorCode: c });
+    return (0, l.jsxs)(s.Y0X, {
+        size: s.CgR.SMALL,
+        transitionState: d,
         parentComponent: "StreamFullModal",
         children: [
-            (0, l.jsxs)(n.xBx, {
-                justify: a.Z.Justify.BETWEEN,
+            (0, l.jsxs)(s.xBx, {
+                justify: i.Z.Justify.BETWEEN,
                 children: [
-                    (0, l.jsx)(n.vwX, {
+                    (0, l.jsx)(s.vwX, {
                         tag: "h2",
-                        className: d.header,
-                        children: o.intl.string(o.t.GzjdOz),
+                        className: o.header,
+                        children: a.intl.string(a.t.GzjdOz),
                     }),
-                    (0, l.jsx)(n.olH, {
+                    (0, l.jsx)(s.olH, {
                         onClick: r,
-                        className: d.modalCloseButton,
+                        className: o.modalCloseButton,
                     }),
                 ],
             }),
-            (0, l.jsxs)(n.hzk, {
+            (0, l.jsxs)(s.hzk, {
                 children: [
-                    (0, l.jsx)(n.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: "text-md/medium",
-                        children: o.intl.string(o.t.VVZDBA),
+                        children: a.intl.string(a.t.VVZDBA),
                     }),
-                    u &&
-                        (0, l.jsx)(n.Text, {
-                            variant: "text-md/medium",
-                            selectable: !0,
-                            color: "text-muted",
-                            className: d.errorCode,
-                            children: x,
-                        }),
-                    (0, l.jsx)("div", { className: d.fullArt }),
+                    (0, l.jsx)(s.Text, {
+                        variant: "text-md/medium",
+                        selectable: !0,
+                        color: "text-muted",
+                        className: o.errorCode,
+                        children: u,
+                    }),
+                    (0, l.jsx)("div", { className: o.fullArt }),
                 ],
             }),
-            (0, l.jsx)(n.mzw, {
-                children: (0, l.jsx)(n.zxk, {
+            (0, l.jsx)(s.mzw, {
+                children: (0, l.jsx)(s.zxk, {
                     variant: "primary",
-                    text: o.intl.string(o.t.BddRzc),
+                    text: a.intl.string(a.t.BddRzc),
                     onClick: r,
                 }),
             }),

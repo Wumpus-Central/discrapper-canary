@@ -6372,6 +6372,82 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
             },
+            ICON_FEEDBACK_CRITICAL: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_22",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_54",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_37",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_32",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_INFO: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLUE_NEW_24",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_NEW_56",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_NEW_40",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_NEW_34",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_POSITIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_NEW_25",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_NEW_55",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_NEW_40",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_NEW_34",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_WARNING: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_NEW_22",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_NEW_54",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_NEW_38",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_NEW_32",
+                    opacity: 1,
+                },
+            },
             ICON_INVERT: {
                 category: "generic",
                 [r.DARK]: {

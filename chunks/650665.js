@@ -2,7 +2,7 @@ let r, _;
 a.d(e, {
     Fv: () => h,
     Jk: () => O,
-    PR: () => L,
+    PR: () => p,
     f7: () => g,
     sn: () => P,
 });
@@ -21,8 +21,8 @@ var n = a(696486),
     A = a(896247),
     f = a(416987);
 let T = 0,
-    p = {};
-function L() {
+    L = {};
+function p() {
     let t = (0, N.QV)();
     if (t && E.Z1) {
         t.mark && R.m.performance.mark("sentry-tracing-init");
@@ -32,11 +32,11 @@ function L() {
                 let a = (0, N.XL)(E.Z1),
                     r = (0, N.XL)(e.startTime);
                 I.X && l.kg.log("[Measurements] Adding FID"),
-                    (p.fid = {
+                    (L.fid = {
                         value: t.value,
                         unit: "millisecond",
                     }),
-                    (p["mark.fid"] = {
+                    (L["mark.fid"] = {
                         value: a + r,
                         unit: "second",
                     });
@@ -45,7 +45,7 @@ function L() {
                 let e = t.entries[t.entries.length - 1];
                 e &&
                     (I.X && l.kg.log("[Measurements] Adding CLS"),
-                    (p.cls = {
+                    (L.cls = {
                         value: t.value,
                         unit: "",
                     }),
@@ -55,7 +55,7 @@ function L() {
                 let e = t.entries[t.entries.length - 1];
                 e &&
                     (I.X && l.kg.log("[Measurements] Adding LCP"),
-                    (p.lcp = {
+                    (L.lcp = {
                         value: t.value,
                         unit: "millisecond",
                     }),
@@ -64,7 +64,7 @@ function L() {
             o = (0, d._4)(({ metric: t }) => {
                 t.entries[t.entries.length - 1] &&
                     (I.X && l.kg.log("[Measurements] Adding TTFB"),
-                    (p.ttfb = {
+                    (L.ttfb = {
                         value: t.value,
                         unit: "millisecond",
                     }));
@@ -147,12 +147,12 @@ function g(t) {
     I.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
     let a = (0, N.XL)(E.Z1),
         o = e.getEntries(),
-        { op: d, start_timestamp: L } = (0, n.XU)(t);
+        { op: d, start_timestamp: p } = (0, n.XU)(t);
     if (
         (o.slice(T).forEach((e) => {
             let r = (0, N.XL)(e.startTime),
                 _ = (0, N.XL)(Math.max(0, e.duration));
-            if ("navigation" !== d || !L || !(a + r < L))
+            if ("navigation" !== d || !p || !(a + r < p))
                 switch (e.entryType) {
                     case "navigation":
                         var n, o, c;
@@ -209,14 +209,14 @@ function g(t) {
                         "first-paint" === e.name &&
                             d &&
                             (I.X && l.kg.log("[Measurements] Adding FP"),
-                            (p.fp = {
+                            (L.fp = {
                                 value: e.startTime,
                                 unit: "millisecond",
                             })),
                             "first-contentful-paint" === e.name &&
                                 d &&
                                 (I.X && l.kg.log("[Measurements] Adding FCP"),
-                                (p.fcp = {
+                                (L.fcp = {
                                     value: e.startTime,
                                     unit: "millisecond",
                                 }));
@@ -253,7 +253,7 @@ function g(t) {
                 (a.effectiveType && t.setAttribute("effectiveConnectionType", a.effectiveType),
                 a.type && t.setAttribute("connectionType", a.type),
                 (0, N.nl)(a.rtt) &&
-                    (p["connection.rtt"] = {
+                    (L["connection.rtt"] = {
                         value: a.rtt,
                         unit: "millisecond",
                     })),
@@ -274,26 +274,26 @@ function g(t) {
                     value: a - r,
                     unit: "millisecond",
                 }));
-        })(p),
+        })(L),
             ["fcp", "fp", "lcp"].forEach((t) => {
-                let e = p[t];
-                if (!e || !L || a >= L) return;
+                let e = L[t];
+                if (!e || !p || a >= p) return;
                 let r = e.value,
-                    _ = Math.abs((a + (0, N.XL)(r) - L) * 1000),
+                    _ = Math.abs((a + (0, N.XL)(r) - p) * 1000),
                     n = _ - r;
                 I.X && l.kg.log(`[Measurements] Normalized ${t} from ${r} to ${_} (${n})`), (e.value = _);
             });
-        let e = p["mark.fid"];
+        let e = L["mark.fid"];
         e &&
-            p.fid &&
-            ((0, N.Y)(t, e.value, e.value + (0, N.XL)(p.fid.value), {
+            L.fid &&
+            ((0, N.Y)(t, e.value, e.value + (0, N.XL)(L.fid.value), {
                 name: "first input delay",
                 op: "ui.action",
                 attributes: { [i.S3]: "auto.ui.browser.metrics" },
             }),
-            delete p["mark.fid"]),
-            "fcp" in p || delete p.cls,
-            Object.entries(p).forEach(([t, e]) => {
+            delete L["mark.fid"]),
+            "fcp" in L || delete L.cls,
+            Object.entries(L).forEach(([t, e]) => {
                 (0, c.o)(t, e.value, e.unit);
             }),
             (h = t),
@@ -308,7 +308,7 @@ function g(t) {
                 (I.X && l.kg.log("[Measurements] Adding CLS Data"),
                 _.sources.forEach((t, e) => h.setAttribute(`cls.source.${e + 1}`, (0, s.Rt)(t.node))));
     }
-    (r = void 0), (_ = void 0), (p = {});
+    (r = void 0), (_ = void 0), (L = {});
 }
 function D(t, e, a, r, _, n) {
     let o = n ? e[n] : e[`${a}End`],
